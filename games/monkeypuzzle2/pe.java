@@ -65,7 +65,7 @@ final class pe {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              mf.a(true, param2, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluate(true, param2, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

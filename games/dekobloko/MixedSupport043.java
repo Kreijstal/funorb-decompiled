@@ -103,16 +103,16 @@ abstract class MixedSupport043 {
         integerLocal2 = 0;
         if (60 <= integerArgument5) {
           if (integerArgument5 < 80) {
-            integerLocal1 = integerLocal1 + MixedSupport141.computeInteger1754(23841, 80, integerArgument7 * 18 + 40);
+            integerLocal1 = integerLocal1 + Bzip2State.computeInteger1754(23841, 80, integerArgument7 * 18 + 40);
           } else {
             if (integerArgument5 < 93) {
-              integerLocal2 = MixedSupport141.computeInteger1754(23841, 80, 18 * SceneWidgetPart013.integerArrayState0239[1 + integerArgument5 - 80] + 40);
+              integerLocal2 = Bzip2State.computeInteger1754(23841, 80, 18 * SceneWidgetPart013.integerArrayState0239[1 + integerArgument5 - 80] + 40);
             } else {
               SoftwareRaster.fillRoundedRectangleAlpha(integerArgument2 - 36 - 3, integerArgument3 + 36 - 3, 78, 60, 4, 65280, 100);
             }
           }
         } else {
-          integerLocal1 = integerLocal1 + MixedSupport141.computeInteger1754(23841, 80, integerArgument4 * 18 + 40);
+          integerLocal1 = integerLocal1 + Bzip2State.computeInteger1754(23841, 80, integerArgument4 * 18 + 40);
         }
         RenderingSupport002.performAction0243(integerArgument1, 2, 5, integerArgument2 + 18, integerArgument3 + 73, -2, -2);
         RenderingSupport002.performAction0243(integerArgument1, 2, 12, 18 + integerArgument2, integerArgument3 + 55, -2, -1);

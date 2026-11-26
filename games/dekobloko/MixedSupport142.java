@@ -162,7 +162,7 @@ final class MixedSupport142 extends HashNode {
 
     final static void performAction1757(int integerArgument1, SceneWidgetPart005 sceneWidgetPart005Argument2) {
         try {
-          MixedSupport059.sceneWidgetState0055.performAction1768(sceneWidgetPart005Argument2, -16834);
+          FrameTimer.sceneWidgetState0055.performAction1768(sceneWidgetPart005Argument2, -16834);
           int integerLocal1 = 14 / ((55 - integerArgument1) / 49);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "vm.B(" + integerArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');

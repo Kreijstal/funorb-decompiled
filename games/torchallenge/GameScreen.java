@@ -98,7 +98,7 @@ final class GameScreen {
           }
           if (aj.field_c == ng.field_A) {
             boolean decompiledFrameRemainder1 = true;
-            bd.field_k = null;
+            NanoFrameTimer.field_k = null;
             dk.field_s.position = 0;
             if (null != param2) {
               var9 = 0;
@@ -122,7 +122,7 @@ final class GameScreen {
                 var11_ref_String = "";
               }
               dk.field_s.writeString(var11_ref_String, (byte) 97);
-              ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
+              ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, FrameTimer.field_f, dk.field_s);
               dk.field_s.patchShortLength(dk.field_s.position - var10, (byte) -40);
               decompiledFrameRemainder1 = (var13 != 0);
             }
@@ -149,7 +149,7 @@ final class GameScreen {
               dk.field_s.writeByte(16, (byte) 122);
               dk.field_s.position = dk.field_s.position + 1;
               var9 = dk.field_s.position;
-              ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
+              ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, FrameTimer.field_f, dk.field_s);
               dk.field_s.patchByteLength(-var9 + dk.field_s.position, -111);
             }
             nb.a(-1, -1);
@@ -174,7 +174,7 @@ final class GameScreen {
                 }
                 if (decompiledFrameRemainder0) {
                   pe.a((byte) 99, ra.c(-2));
-                  bd.field_k = new Boolean(jh.a((byte) 58, id.field_b));
+                  NanoFrameTimer.field_k = new Boolean(jh.a((byte) 58, id.field_b));
                   id.field_b.position = 0;
                 }
               }
@@ -2546,7 +2546,7 @@ final class GameScreen {
                   }
                 }
                 var2_int = ea.field_e;
-                var6 = ei.field_w[1 + ok.field_b];
+                var6 = Bzip2State.field_w[1 + ok.field_b];
                 var12Lifetime3 = mg.field_a;
                 var25 = 0;
                 var17 = oj.field_a;
@@ -3050,10 +3050,10 @@ final class GameScreen {
             return stackIn_11_0;
           }
           if (0 == var3_int) {
-            stackIn_16_0 = bd.field_m[this.screenId];
+            stackIn_16_0 = NanoFrameTimer.field_m[this.screenId];
             return stackIn_16_0;
           }
-          stackIn_18_0 = bd.field_m[this.screenId];
+          stackIn_18_0 = NanoFrameTimer.field_m[this.screenId];
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4619,8 +4619,8 @@ final class GameScreen {
           stackIn_8_0 = (ResourceArchive.field_n[param4].field_L != 17) ? 0 : 1;
           var9 = stackIn_8_0;
           var10 = 0;
-          var10Lifetime1 = bd.field_l ? 1 : 0;
-          bd.field_l = false;
+          var10Lifetime1 = NanoFrameTimer.field_l ? 1 : 0;
+          NanoFrameTimer.field_l = false;
           if (var8_int == 0 &&
             var9 == 0) {
             ResourceArchive.field_n[param4].field_L = 3;
@@ -4693,7 +4693,7 @@ final class GameScreen {
             }
           }
           if (!param5) {
-            bd.field_l = var10Lifetime1 != 0;
+            NanoFrameTimer.field_l = var10Lifetime1 != 0;
             return;
           }
           SectorCacheStore.field_f.bindAsTarget(-98);
@@ -4708,7 +4708,7 @@ final class GameScreen {
           param2 = var14Lifetime1 + param2;
           param6 = var13Lifetime1 + param6;
           jj.field_a[param4].drawTransparent(param2, param6);
-          bd.field_l = var10Lifetime1 != 0;
+          NanoFrameTimer.field_l = var10Lifetime1 != 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -6408,8 +6408,8 @@ final class GameScreen {
           var10 = ja.a((byte) 107, param3) ? 1 : 0;
           stackIn_7_0 = (ResourceArchive.field_n[param7].field_L != 17) ? 0 : 1;
           var11 = stackIn_7_0;
-          var12 = bd.field_l ? 1 : 0;
-          bd.field_l = false;
+          var12 = NanoFrameTimer.field_l ? 1 : 0;
+          NanoFrameTimer.field_l = false;
           vj.field_c = param7;
           if (var11 != 0 &&
             var9_int < 15) {
@@ -6520,7 +6520,7 @@ final class GameScreen {
             }
           }
           vj.field_c = ok.field_b;
-          bd.field_l = var12 != 0;
+          NanoFrameTimer.field_l = var12 != 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

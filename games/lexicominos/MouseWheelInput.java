@@ -118,7 +118,7 @@ abstract class MouseWheelInput {
               } else {
                 var5Lifetime6 = var8 + "; Expires=" + q.a(rf.correctedCurrentTimeMillis(0) + 94608000000L, (byte) 28) + "; Max-Age=" + 94608000L;
               }
-              oa.a("document.cookie=\"" + var5Lifetime6 + "\"", param2, param1 ^ 23345);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", param2, param1 ^ 23345);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

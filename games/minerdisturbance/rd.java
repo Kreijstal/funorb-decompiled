@@ -36,7 +36,7 @@ final class rd {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (lk.a((byte) 18, "getcookies", param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) 18, "getcookies", param1));
               var4 = h.a(';', true, var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

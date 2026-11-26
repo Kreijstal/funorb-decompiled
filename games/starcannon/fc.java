@@ -56,7 +56,7 @@ final class fc {
           ti.field_e = SecondaryNodeDequeIterator.a("frame_bottom", 122, "commonui", param3);
           jk.field_g = vk.a("commonui", 63, "jagex_logo_grey", param3);
           t.field_r = SecondaryNodeDequeIterator.a("button", 94, "commonui", param3);
-          fi.field_g = hb.a(-990, "commonui", param3, "validation");
+          FrameTimer.field_g = hb.a(-990, "commonui", param3, "validation");
           nb.field_b = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
           nb.field_c = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
           AwtRasterBuffer.field_a = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));

@@ -100,11 +100,11 @@ final class vl {
         if (SectorCacheStore.field_d == IsaacCipher.field_f) {
           return oe.field_a;
         }
-        if (!vc.field_a.a(-113)) {
-          return vc.field_a.b(-123);
+        if (!FrameTimer.field_a.a(-113)) {
+          return FrameTimer.field_a.b(-123);
         }
         if (pe.field_a == SectorCacheStore.field_d) {
-          return vc.field_a.b(-121);
+          return FrameTimer.field_a.b(-121);
         }
         return ol.field_Hb;
     }
@@ -527,7 +527,7 @@ final class vl {
                 BattleState.field_g.drawTransparentWithIntensity(57 + this.field_f, var4, 128);
               }
               SoftwareRasterizer.intersectClip(this.field_f + 59, 2 + var4, this.field_f + 321, var4 + 66);
-              kb.field_a[var6].a(0, 128, this.field_f + 190, 32 + (var4 + 2), (byte) 21);
+              Bzip2State.field_a[var6].a(0, 128, this.field_f + 190, 32 + (var4 + 2), (byte) 21);
               SoftwareRasterizer.setClip(this.field_f + 57, 84, 323 + this.field_f, 364);
               if (param1.field_I.field_d[var6] > 50) {
                 param1.field_I.field_d[var6] = 55;
@@ -710,7 +710,7 @@ final class vl {
           }
           if (null != param1.field_nb[param1.field_qb]) {
             PcmPlayerPump.field_g[param1.field_nb[param1.field_qb].field_d].b(10, -this.field_f + 9 + var4);
-            kb.a(120, 24, -this.field_f + 630, param1.field_nb[param1.field_qb].b(1), -this.field_f + 362, 88, 65280);
+            Bzip2State.a(120, 24, -this.field_f + 630, param1.field_nb[param1.field_qb].b(1), -this.field_f + 362, 88, 65280);
             if (param1.field_nb[param1.field_qb].field_b != null) {
               var16 = cc.field_i[param1.field_nb[param1.field_qb].field_b.field_g];
               var9_ref_ci = var16;
@@ -727,7 +727,7 @@ final class vl {
               AccountRequestState.field_f.c(param1.field_nb[param1.field_qb].field_A.field_d + " / " + od.field_c[param1.field_nb[param1.field_qb].field_A.field_g].field_o, -this.field_f + 593, 264, 65280, -1);
             }
             if (null != param1.field_nb[param1.field_qb].field_m) {
-              kb.field_a[param1.field_nb[param1.field_qb].field_m.field_f].drawScaled(-this.field_f + 453, 139, 87, 87);
+              Bzip2State.field_a[param1.field_nb[param1.field_qb].field_m.field_f].drawScaled(-this.field_f + 453, 139, 87, 87);
             }
             if (null != param1.field_nb[param1.field_qb].field_i) {
               var18 = cc.field_i[param1.field_nb[param1.field_qb].field_i.field_g].d();

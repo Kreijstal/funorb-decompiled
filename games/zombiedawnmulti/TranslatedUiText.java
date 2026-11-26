@@ -814,7 +814,7 @@ final class TranslatedUiText {
                 }
                 var2 = ChaseEvent.readTextResourceBytes("gameopt_notunlocked", (byte) 83);
                 if (null != var2) {
-                  PopupMenuBuilder.field_L = GameHud.decodeText(-2739, var2);
+                  Bzip2State.field_L = GameHud.decodeText(-2739, var2);
                 }
                 var2 = ChaseEvent.readTextResourceBytes("gameopt_cannotbecombined1", (byte) 83);
                 if (var2 != null) {
@@ -1672,7 +1672,7 @@ final class TranslatedUiText {
                 }
                 var2 = ChaseEvent.readTextResourceBytes("create_passwordvalid", (byte) 83);
                 if (var2 != null) {
-                  PopupMenuBuilder.field_y = GameHud.decodeText(-2739, var2);
+                  Bzip2State.field_y = GameHud.decodeText(-2739, var2);
                 }
                 var2 = ChaseEvent.readTextResourceBytes("create_emailvalid", (byte) 83);
                 if (null != var2) {

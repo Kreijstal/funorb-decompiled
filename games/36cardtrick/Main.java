@@ -155,7 +155,7 @@ public final class Main extends c {
           rj.field_p = af.field_ob - ByteArrayStore.field_b;
           ue.field_d = param0;
           dg.field_J = 0;
-          if (ec.field_f >= 2) {
+          if (NanoFrameTimer.field_f >= 2) {
             ImageProducerRasterBuffer.field_n = false;
           }
           q.field_i = 255;
@@ -905,7 +905,7 @@ public final class Main extends c {
               stackIn_49_0 = 118;
               break;
             }
-            mi.a(stackIn_49_0, BufferedSocket.field_c[9], 100 * lg.field_I[9] / this.field_ab, ca.field_c[9]);
+            mi.a(stackIn_49_0, BufferedSocket.field_c[9], 100 * Bzip2State.field_I[9] / this.field_ab, ca.field_c[9]);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1616,7 +1616,7 @@ public final class Main extends c {
                         var5 = 0;
                         while (var5 < 16) {
                           var6 = BufferedSocket.field_c[var5];
-                          stackIn_56_0 = lg.field_I;
+                          stackIn_56_0 = Bzip2State.field_I;
                           stackIn_56_1 = var5;
                           if (var6 != null) {
                             stackIn_57_2 = 1000 * var6.field_h.length / var6.field_l;
@@ -2095,7 +2095,7 @@ public final class Main extends c {
           gg.clearStaticReferences(false);
           ij.clearStaticReferences(3);
           bc.resetStaticState(false);
-          gk.resetStaticState(0);
+          FrameTimer.resetStaticState(0);
           AwtRasterBuffer.clearStaticReferences(192);
           gf.clearStaticReferences((byte) 103);
           FullscreenFocusCanvas.clearStaticReferences((byte) 127);
@@ -2154,7 +2154,7 @@ public final class Main extends c {
           ByteArrayStore.clearStaticReferences(-118);
           ri.clearStaticReferences(-2);
           dc.clearStaticReferences();
-          lg.clearStaticReferences(param0 + 18002);
+          Bzip2State.clearStaticReferences(param0 + 18002);
           a.resetStaticState(param0 ^ -14282);
           cd.clearStaticReferences((byte) 104);
           NetworkArchiveRequest.clearStaticReferences(false);
@@ -2203,7 +2203,7 @@ public final class Main extends c {
           ca.clearStaticReferences((byte) 127);
           tl.clearStaticReferences(80);
           ProxyAuthenticationRequiredException.a(param0 + 0);
-          ec.resetDeclaredStaticState(param0 ^ 10);
+          NanoFrameTimer.resetDeclaredStaticState(param0 ^ 10);
           ImageProducerRasterBuffer.resetStaticState(param0 ^ -14143);
           hi.clearStaticReferences(0);
           PcmOutputWorker.b(true);
@@ -2903,7 +2903,7 @@ public final class Main extends c {
                     }
                     hk.$cfr$intArgs$a$7ad285df57e9(125, 0, 700);
                   } else {
-                    hk.$cfr$intArgs$a$7ad285df57e9(127, 3, -lg.field_I[3] + 1000);
+                    hk.$cfr$intArgs$a$7ad285df57e9(127, 3, -Bzip2State.field_I[3] + 1000);
                     if (this.field_Q == 1) {
                       var3 = 10 + sj.a(10999, 3, uh.field_l);
                       hk.$cfr$intArgs$a$7ad285df57e9(124, var3, 1000);
@@ -2919,7 +2919,7 @@ public final class Main extends c {
                   rk.a(false, lc.field_a[2], false);
                 }
               }
-              if (!(2 > ec.field_f)) {
+              if (!(2 > NanoFrameTimer.field_f)) {
                 this.field_L = GzipInflater.field_c[66];
                 ImageProducerRasterBuffer.field_n = ImageProducerRasterBuffer.field_n | this.field_L;
                 if (GzipInflater.field_c[25]) {

@@ -255,23 +255,23 @@ final class r extends nb implements ag, jk {
         var5 = Lexicominos.field_L ? 1 : 0;
         try {
           for (var2_int = param1; var2_int < 3; var2_int++) {
-            ok.field_G[var2_int] = 0;
+            Bzip2State.field_G[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < pj.field_H; var2_intLifetime1++) {
             if (tf.field_d[var2_intLifetime1].field_g == param0.field_g) {
               dupTemp$3 = tf.field_d[var2_intLifetime1].a(-1);
-              ok.field_G[dupTemp$3] = ok.field_G[dupTemp$3] + 1;
+              Bzip2State.field_G[dupTemp$3] = Bzip2State.field_G[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param0.a(-1);
-          ok.field_G[dupTemp$0] = ok.field_G[dupTemp$0] + 1;
+          Bzip2State.field_G[dupTemp$0] = Bzip2State.field_G[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; pj.field_H > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_g == tf.field_d[var3].field_g) {
               var4 = tf.field_d[var3].a(-1);
-              if (ok.field_G[var4] > ArchiveRequest.field_s) {
-                ok.field_G[var4] = ok.field_G[var4] - 1;
+              if (Bzip2State.field_G[var4] > ArchiveRequest.field_s) {
+                Bzip2State.field_G[var4] = Bzip2State.field_G[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

@@ -273,12 +273,12 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (0 != kt.field_k) {
             lh.field_s = daa.c(68, OneAnimation.field_z);
           }
-          bv.field_B = StatusEffectInfo.a(1, false, 0, true, OneEvent.field_q);
+          Bzip2State.field_B = StatusEffectInfo.a(1, false, 0, true, OneEvent.field_q);
           fi.field_n = StatusEffectInfo.a(1, false, 0, true, mj.field_j);
           em.field_T = StatusEffectInfo.a(1, false, 0, true, GzipDecompressor.field_d);
           SuperSpeedAllEvent.field_r = 2;
           ClamsSpecial.field_p = fi.field_n;
-          ScavengerSpecial.field_p = bv.field_B;
+          ScavengerSpecial.field_p = Bzip2State.field_B;
         }
         if (SuperSpeedAllEvent.field_r == 2) {
           if (lh.field_s != null &&
@@ -298,13 +298,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (3 == SuperSpeedAllEvent.field_r &&
-          us.a(fi.field_n, bv.field_B, em.field_T, 76) &&
+          us.a(fi.field_n, Bzip2State.field_B, em.field_T, 76) &&
           WidgetContainer.a((byte) 89, em.field_T)) {
           sr.a(48);
           ut.d(-124);
           lia.field_i = false;
           MassPoisonSpecial.field_p = ema.field_Ab;
-          SauceOfFlameAnimation.a(vs.field_c, -12472, em.field_T, bv.field_B, fi.field_n);
+          SauceOfFlameAnimation.a(vs.field_c, -12472, em.field_T, Bzip2State.field_B, fi.field_n);
           if (FloodSpecial.field_p ||
             nj.field_i != null) {
             stackIn_103_0 = -6;
@@ -321,7 +321,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           re.a(de.field_E, dla.field_l, em.field_T, false);
           em.field_T = null;
-          bv.field_B = null;
+          Bzip2State.field_B = null;
           fi.field_n = null;
           rh.a(19007, (java.applet.Applet) (this));
           mia.b(32);

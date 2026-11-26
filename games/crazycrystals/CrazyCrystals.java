@@ -284,7 +284,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               decompiledFrameRemainder3 = false;
             }
             else {
-              if (uo.field_o == ke.field_b[jo.field_o]) {
+              if (uo.field_o == FrameTimer.field_b[jo.field_o]) {
                 ei.field_F = ei.field_F + 8;
                 sm.field_f = sm.field_f + 8;
                 MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n + 4;
@@ -302,9 +302,9 @@ public final class CrazyCrystals extends NetworkGameClient {
                 } else {
                   lj.a(5, var3_ref_we, -93);
                 }
-                ke.field_b[jo.field_o] = uo.field_o + 1;
+                FrameTimer.field_b[jo.field_o] = uo.field_o + 1;
               }
-              if (uo.field_o <= ke.field_b[jo.field_o]) {
+              if (uo.field_o <= FrameTimer.field_b[jo.field_o]) {
                 if (jo.field_o == 1) {
                   if (9 == uo.field_o) {
                     rc.a(1, we.field_h, b.field_a, 255, je.field_j, 0, fp.field_a);
@@ -570,7 +570,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           sn.clearStaticReferences((byte) -123);
           gf.clearStaticReferences(20);
           gm.clearStaticReferences(true);
-          ke.clearStaticReferences((byte) 127);
+          FrameTimer.clearStaticReferences((byte) 127);
           AwtRasterBuffer.clearStaticReferences(-26389);
           vm.b((byte) 119);
           FullscreenFocusCanvas.clearStaticReferences(param0 ^ -45);
@@ -710,7 +710,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           v.clearStaticReferences(114);
           ByteStorage.a((byte) 100);
           di.clearStaticReferences();
-          qn.clearStaticReferences(param0 + 169);
+          Bzip2State.clearStaticReferences(param0 + 169);
           pi.resetStaticState(102);
           h.clearStaticReferences(0);
           kf.resetStaticState(param0 ^ -90);
@@ -736,7 +736,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           wp.clearStaticReferences((byte) -98);
           tl.b(2);
           ProxyAuthenticationRequiredException.clearStaticReferences(true);
-          s.b((byte) 118);
+          NanoFrameTimer.b((byte) 118);
           ImageProducerRasterBuffer.clearStaticReferences((byte) -125);
           df.clearStaticReferences(-20012);
           al.a(param0 + 31664);
@@ -962,7 +962,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 uh.field_p.a((byte) 127);
               }
               if (r.field_m) {
-                var3 = qn.field_n;
+                var3 = Bzip2State.field_n;
                 if (640 > var3) {
                   var4_ref_int__ = ge.field_d.field_w;
                   var5_ref_int__ = SoftwareRasterizer.field_i;
@@ -1352,10 +1352,10 @@ public final class CrazyCrystals extends NetworkGameClient {
             vp.a(111);
             return;
           }
-          if (s.field_o == null) {
+          if (NanoFrameTimer.field_o == null) {
             td.a(32.0f, oi.field_b, false);
             this.a(-124);
-            s.field_o = bf.a(-1, "fgtiles_earth", "", l.field_d);
+            NanoFrameTimer.field_o = bf.a(-1, "fgtiles_earth", "", l.field_d);
             ByteStorage.field_b = ArchiveRequest.a("fgtiles_laserhub", l.field_d, 10, "");
             MouseWheelInput.field_i = ArchiveRequest.a("sprites_rock", l.field_d, 10, "");
             vp.field_i = new RgbSprite[2][];
@@ -1388,7 +1388,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             var3_array = bf.a(-1, "sprites_lasers", "", l.field_d);
             jl.field_b = var3_array[3];
             ai.field_b = var3_array[5];
-            qn.field_e = var3_array[1];
+            Bzip2State.field_e = var3_array[1];
             en.field_M = var3_array[2];
             ce.field_eb = var3_array[4];
             ac.field_j = var3_array[0];
@@ -1782,11 +1782,11 @@ public final class CrazyCrystals extends NetworkGameClient {
                         ti.field_o = false;
                       }
                       if (r.field_m &&
-                        qn.field_n < 640) {
-                        if (qn.field_n < 136) {
+                        Bzip2State.field_n < 640) {
+                        if (Bzip2State.field_n < 136) {
                           gh.field_C = gh.field_C + 1;
                         }
-                        qn.field_n = qn.field_n + gh.field_C;
+                        Bzip2State.field_n = Bzip2State.field_n + gh.field_C;
                       }
                       stackIn_69_1 = (ph.field_E != null);
                       var2_int = na.a((NetworkGameClient) (this), stackIn_69_1, 10);
@@ -1822,12 +1822,12 @@ public final class CrazyCrystals extends NetworkGameClient {
                     if ((decompiledFrameRemainder1) &&
                       (decompiledFrameRemainder1 = !(!r.field_m))) {
                       if (!uh.field_n &&
-                        qn.field_n < 640) {
-                        if (qn.field_n < 136) {
+                        Bzip2State.field_n < 640) {
+                        if (Bzip2State.field_n < 136) {
                           gh.field_C = gh.field_C + 1;
                         }
-                        qn.field_n = qn.field_n + gh.field_C;
-                        if (qn.field_n < 320 &&
+                        Bzip2State.field_n = Bzip2State.field_n + gh.field_C;
+                        if (Bzip2State.field_n < 320 &&
                           ca.field_j < 0) {
                           ca.field_j = ca.field_j - 1;
                         }
@@ -1835,11 +1835,11 @@ public final class CrazyCrystals extends NetworkGameClient {
                       this.g((byte) -128);
                       decompiledFrameRemainder1 = !(!uh.field_n);
                       if (decompiledFrameRemainder1) {
-                        qn.field_n = qn.field_n - gh.field_C;
-                        if (136 > qn.field_n) {
+                        Bzip2State.field_n = Bzip2State.field_n - gh.field_C;
+                        if (136 > Bzip2State.field_n) {
                           gh.field_C = gh.field_C - 1;
                         }
-                        decompiledFrameRemainder1 = (0 == qn.field_n);
+                        decompiledFrameRemainder1 = (0 == Bzip2State.field_n);
                         if (decompiledFrameRemainder1) {
                           vk.j(17);
                           decompiledFrameRemainder1 = (var5 != 0);
@@ -1851,13 +1851,13 @@ public final class CrazyCrystals extends NetworkGameClient {
                 if (decompiledFrameRemainder1) {
                   var2 = (re) (MouseInputHandler.field_b);
                   var3 = 0;
-                  if (s.field_l) {
+                  if (NanoFrameTimer.field_l) {
                     var3 = 40;
                   }
                   if (null != var2) {
                     var2.f(-88);
                     var2.b(-115, var3, 2);
-                    if (s.field_l) {
+                    if (NanoFrameTimer.field_l) {
                       if (!(0 >= cb.field_w)) {
                         cb.field_w = cb.field_w - 1;
                         if ((var5 != 0) &&
@@ -1872,7 +1872,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                     }
                   }
                   boolean decompiledFrameRemainder0 = true;
-                  if (!s.field_l) {
+                  if (!NanoFrameTimer.field_l) {
                     if (var2 != null) {
                       var2.c(-1);
                     }
@@ -1884,7 +1884,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                       q.a(false);
                     }
                     if (var4 == 4) {
-                      s.field_l = true;
+                      NanoFrameTimer.field_l = true;
                     }
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
@@ -1892,7 +1892,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                     (40 <= var2.field_f)) {
                     if (tp.field_e) {
                       tp.field_e = false;
-                      s.field_l = false;
+                      NanoFrameTimer.field_l = false;
                       dq.a(-32056, true);
                       if (var5 != 0) {
                         of.e((byte) -76);

@@ -1,0 +1,51 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class FrameTimer {
+    static int field_a;
+    static qk field_d;
+    static String field_e;
+    static String field_c;
+    static volatile int field_b;
+
+    public static void resetStaticState(int param0) {
+        field_e = null;
+        field_d = null;
+        if (param0 != 0) {
+          field_a = -93;
+          field_c = null;
+          return;
+        }
+        field_c = null;
+    }
+
+    abstract long getDelayMillis(int param0);
+
+    final int waitAndCountTicks(long param0, int param1) {
+        long var4 = 0L;
+        long var4Lifetime1;
+        if (param1 <= -124) {
+          var4 = this.getDelayMillis(0);
+          if (var4 > 0L) {
+            BoundedRandomAccessFile.sleepMillis((byte) -104, var4);
+          }
+          return this.advanceTicks(param0, false);
+        }
+        FrameTimer.resetStaticState(25);
+        var4Lifetime1 = this.getDelayMillis(0);
+        if (var4Lifetime1 > 0L) {
+          BoundedRandomAccessFile.sleepMillis((byte) -104, var4Lifetime1);
+        }
+        return this.advanceTicks(param0, false);
+    }
+
+    abstract int advanceTicks(long param0, boolean param1);
+
+    abstract void resetTiming(int param0);
+
+    static {
+        field_e = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
+        field_c = "Loading...";
+        field_b = 0;
+    }
+}

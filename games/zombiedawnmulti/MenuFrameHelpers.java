@@ -26,7 +26,7 @@ final class MenuFrameHelpers {
         if (!PendingDataRequest.isMessageBoxOpen((byte) -74)) {
           return;
         }
-        PopupMenuBuilder.buildPopupMenu(false, false, 4);
+        Bzip2State.buildPopupMenu(false, false, 4);
         if (param0 != -29507) {
           MenuFrameHelpers.releaseStatics(75);
         }

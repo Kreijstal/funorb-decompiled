@@ -524,7 +524,7 @@ final class IntrusiveDeque {
             if (!param0) {
               stackIn_8_0 = kg.field_c;
             } else {
-              stackIn_8_0 = fg.field_b;
+              stackIn_8_0 = FrameTimer.field_b;
             }
             var6 = stackIn_8_0;
             var7 = 0;
@@ -568,7 +568,7 @@ final class IntrusiveDeque {
             fj.field_E != null &&
             fj.field_E.field_j) {
             uk.field_r = fj.field_E.field_e;
-            fg.field_b = fg.field_b & ~uk.field_r;
+            FrameTimer.field_b = FrameTimer.field_b & ~uk.field_r;
             fj.field_E = null;
             k.field_i = true;
             kg.field_c = kg.field_c | uk.field_r;

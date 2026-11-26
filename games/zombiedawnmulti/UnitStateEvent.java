@@ -141,7 +141,7 @@ final class UnitStateEvent extends GameEvent {
         AccountServerResult.field_f[5] = MarkerSliderPainter.field_j;
         AccountServerResult.field_f[14] = FullscreenErrorDialog.field_jb;
         AccountServerResult.field_f[38] = LoginCredentials.field_b;
-        AccountServerResult.field_f[51] = PopupMenuBuilder.field_e;
+        AccountServerResult.field_f[51] = Bzip2State.field_e;
         AccountServerResult.field_f[34] = LoginCredentials.field_i;
         AccountServerResult.field_f[18] = QuickChatCategoryDefinition.field_u;
         AccountServerResult.field_f[59] = TextInputValidator.field_o;
@@ -173,7 +173,7 @@ final class UnitStateEvent extends GameEvent {
         MenuStyleHelpers.field_g[3][0] = SimHuman.field_jb;
         MenuStyleHelpers.field_g[4][0] = TextPopupHelpers.field_e;
         MenuStyleHelpers.field_g[5][0] = ChatMessage.field_c;
-        MenuStyleHelpers.field_g[6][0] = PopupMenuBuilder.field_i;
+        MenuStyleHelpers.field_g[6][0] = Bzip2State.field_i;
         MenuStyleHelpers.field_g[7][0] = StatusAndMeshHelpers.field_d;
         MenuStyleHelpers.field_g[8][0] = SimPortal.field_P;
         MenuStyleHelpers.field_g[9][0] = SoundCache.field_c;
@@ -397,8 +397,8 @@ final class UnitStateEvent extends GameEvent {
             var6 = GameKeyHandler.field_a;
             GameKeyHandler.field_a.field_z = 0;
             var6.field_zb = 0;
-            PopupMenuBuilder.field_B.field_z = 0;
-            var7 = PopupMenuBuilder.field_B;
+            Bzip2State.field_B.field_z = 0;
+            var7 = Bzip2State.field_B;
             var7.field_zb = 0;
             if (LobbyStateHelpers.isLocalPlayerGameHost(0)) {
               ArchiveLoadStep.field_m.field_wb = ClientException.field_l.toUpperCase();
@@ -720,16 +720,16 @@ final class UnitStateEvent extends GameEvent {
                 (var19 != 0)) {
                 var9_ref_String = JaggrabDownloader.field_c.field_Nb;
                 ArchiveLoadStep.field_m.field_wb = QueuedListRequest.substituteTemplateArguments(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
-                PopupMenuBuilder.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
-                PopupMenuBuilder.field_B.field_wb = QueuedListRequest.substituteTemplateArguments(TextLayout.field_a, new String[]{var9_ref_String}, 2);
-                var8 = PopupMenuBuilder.field_B;
+                Bzip2State.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
+                Bzip2State.field_B.field_wb = QueuedListRequest.substituteTemplateArguments(TextLayout.field_a, new String[]{var9_ref_String}, 2);
+                var8 = Bzip2State.field_B;
               }
             } else {
               var9_ref_String = JaggrabDownloader.field_c.field_Nb;
               ArchiveLoadStep.field_m.field_wb = QueuedListRequest.substituteTemplateArguments(GameEvent.field_g, new String[]{var9_ref_String}, 2).toUpperCase();
-              PopupMenuBuilder.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
-              PopupMenuBuilder.field_B.field_wb = QueuedListRequest.substituteTemplateArguments(TextLayout.field_a, new String[]{var9_ref_String}, 2);
-              var8 = PopupMenuBuilder.field_B;
+              Bzip2State.field_B.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb, 0, -3344);
+              Bzip2State.field_B.field_wb = QueuedListRequest.substituteTemplateArguments(TextLayout.field_a, new String[]{var9_ref_String}, 2);
+              var8 = Bzip2State.field_B;
             }
             if (decompiledFrameCompleted0) {
               if (LoginPacketHelpers.field_c != 0L) {

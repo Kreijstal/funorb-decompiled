@@ -70,7 +70,7 @@ final class kl extends UiPanel {
               kl.a((byte) 75, (String) null, (java.applet.Applet) null);
             }
             try {
-              var3 = (String) (je.a(param2, false, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param2, false, "getcookies"));
               var4 = PcmOutputWorker.a((byte) -9, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

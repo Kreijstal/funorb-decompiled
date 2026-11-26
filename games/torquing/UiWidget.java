@@ -332,7 +332,7 @@ class UiWidget extends IntrusiveNode {
 
     final static void c(int param0) {
         try {
-          ha.field_a = -1;
+          FrameTimer.field_a = -1;
           int var1_int = -127 % ((param0 - 73) / 47);
           ll.field_i = -1;
           lp.field_b = 0;
@@ -659,7 +659,7 @@ class UiWidget extends IntrusiveNode {
           }
           var5 = ud.b(0);
           if (null != var5) {
-            ah.field_c.a(ha.field_a, var5, ll.field_i, 105);
+            ah.field_c.a(FrameTimer.field_a, var5, ll.field_i, 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

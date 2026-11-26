@@ -152,7 +152,7 @@ class uf extends af {
         try {
           try {
             var4 = param3.getGraphics();
-            hj.field_e.a(param2, 0, param1, var4);
+            Bzip2State.field_e.a(param2, 0, param1, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

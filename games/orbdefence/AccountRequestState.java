@@ -326,7 +326,7 @@ final class AccountRequestState {
           }
           var2Lifetime2 = jk.a(1, "cannotdoithere");
           if (null != var2Lifetime2) {
-            aa.field_a = ProxyAuthenticationRequiredException.a(var2Lifetime2, -12465);
+            FrameTimer.field_a = ProxyAuthenticationRequiredException.a(var2Lifetime2, -12465);
           }
           var2Lifetime3 = jk.a(1, "barrierneedsedge");
           if (null != var2Lifetime3) {

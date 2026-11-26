@@ -51,7 +51,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, sc param1) {
-        this(param0, vc.field_c.field_t, param1);
+        this(param0, FrameTimer.field_c.field_t, param1);
     }
 
     boolean a(boolean param0, int param1, int param2, int param3, int param4, UiWidget param5, int param6) {
@@ -653,7 +653,7 @@ class UiWidget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        vc.field_c.b(lb.field_b, var5, ea.field_m, 4473924);
+        FrameTimer.field_c.b(lb.field_b, var5, ea.field_m, 4473924);
     }
 
     final static void c(byte param0) {

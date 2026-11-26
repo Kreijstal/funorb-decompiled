@@ -374,10 +374,10 @@ final class ei extends DualLinkNode {
           wi.field_j[17][0] = new fc(var17, 110, 1560, 10, -10, -5);
           var18 = Model.a(param0, "", "blocks/low_poly/blocking_block_lp");
           wi.field_j[17][1] = new fc(var18, 110, 1560, 10, -10, -5);
-          vq.field_i = Model.a(param0, "", "character/portal_block_purple");
-          wi.field_j[7][0] = new fc(vq.field_i, 110, 1560, 10, -10, -5);
-          vq.field_i = Model.a(param0, "", "character/portal_block_purple_lp");
-          wi.field_j[7][1] = new fc(vq.field_i, 110, 1560, 10, -10, -5);
+          Bzip2State.field_i = Model.a(param0, "", "character/portal_block_purple");
+          wi.field_j[7][0] = new fc(Bzip2State.field_i, 110, 1560, 10, -10, -5);
+          Bzip2State.field_i = Model.a(param0, "", "character/portal_block_purple_lp");
+          wi.field_j[7][1] = new fc(Bzip2State.field_i, 110, 1560, 10, -10, -5);
           var19 = Model.a(param0, "", "game_object_models/jetpack");
           dupTemp$55 = wi.field_j[18];
           dupTemp$56 = new fc(var19, 110, 1560, 10, -10, -5);

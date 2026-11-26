@@ -1780,7 +1780,7 @@ final class ActiveLevel extends LevelGrid {
         while (this.floorKind.length > var3) {
           var5 = this.field_a;
           for (var6 = 0; this.floorKind[0].length > var6; var6++) {
-            if (eb.a(var5, fg.mouseY, 10, 26, var2, kf.mouseX, 26)) {
+            if (NanoFrameTimer.a(var5, fg.mouseY, 10, 26, var2, kf.mouseX, 26)) {
               if (this.floorKind[var3][var6] != 1) {
                 if (this.floorKind[var3][var6] != 2) {
                   if (this.floorKind[var3][var6] >= 3 &&
@@ -1810,11 +1810,11 @@ final class ActiveLevel extends LevelGrid {
           var3++;
         }
         if (this.field_u == null) {
-          if (eb.a(467, fg.mouseY, 10, 156, 229, kf.mouseX, 208)) {
+          if (NanoFrameTimer.a(467, fg.mouseY, 10, 156, 229, kf.mouseX, 208)) {
             ak.field_b = 5;
           } else {
-            if (!eb.a(ai.field_a.field_r, fg.mouseY, 10, ai.field_a.field_t, ai.field_a.field_o, kf.mouseX, ai.field_a.field_q)) {
-              if (eb.a(WhirlpoolDigest.field_o.field_r, fg.mouseY, 10, WhirlpoolDigest.field_o.field_t, WhirlpoolDigest.field_o.field_o, kf.mouseX, WhirlpoolDigest.field_o.field_q)) {
+            if (!NanoFrameTimer.a(ai.field_a.field_r, fg.mouseY, 10, ai.field_a.field_t, ai.field_a.field_o, kf.mouseX, ai.field_a.field_q)) {
+              if (NanoFrameTimer.a(WhirlpoolDigest.field_o.field_r, fg.mouseY, 10, WhirlpoolDigest.field_o.field_t, WhirlpoolDigest.field_o.field_o, kf.mouseX, WhirlpoolDigest.field_o.field_q)) {
                 ak.field_b = 7;
               }
             } else {
@@ -1823,7 +1823,7 @@ final class ActiveLevel extends LevelGrid {
           }
           if (this.level.levelIndex != 1) {
             if (3 == this.level.levelIndex &&
-              eb.a(68, fg.mouseY, 10, 312, 386, kf.mouseX, 78)) {
+              NanoFrameTimer.a(68, fg.mouseY, 10, 312, 386, kf.mouseX, 78)) {
               var3Lifetime1 = 1;
               if (this.playerRow == -2) {
                 var4 = (MovingBlock) (this.movingBlocks.first(2));
@@ -1843,8 +1843,8 @@ final class ActiveLevel extends LevelGrid {
               }
             }
           } else {
-            if (!eb.a(68, fg.mouseY, 10, 312, 74, kf.mouseX, 52)) {
-              if (eb.a(120, fg.mouseY, 10, 208, 386, kf.mouseX, 78)) {
+            if (!NanoFrameTimer.a(68, fg.mouseY, 10, 312, 74, kf.mouseX, 52)) {
+              if (NanoFrameTimer.a(120, fg.mouseY, 10, 208, 386, kf.mouseX, 78)) {
                 ak.field_b = 11;
               }
             } else {
@@ -1852,9 +1852,9 @@ final class ActiveLevel extends LevelGrid {
             }
           }
         }
-        if (!eb.a(467, fg.mouseY, 10, 156, 20, kf.mouseX, 26)) {
-          if (!eb.a(467, fg.mouseY, 10, 156, 46, kf.mouseX, 26)) {
-            if (eb.a(467, fg.mouseY, 10, 156, 72, kf.mouseX, 26)) {
+        if (!NanoFrameTimer.a(467, fg.mouseY, 10, 156, 20, kf.mouseX, 26)) {
+          if (!NanoFrameTimer.a(467, fg.mouseY, 10, 156, 46, kf.mouseX, 26)) {
+            if (NanoFrameTimer.a(467, fg.mouseY, 10, 156, 72, kf.mouseX, 26)) {
               ak.field_b = 9;
             }
           } else {
@@ -1863,7 +1863,7 @@ final class ActiveLevel extends LevelGrid {
         } else {
           ak.field_b = 8;
         }
-        if (eb.a(467, fg.mouseY, 10, 156, 98, kf.mouseX, 26)) {
+        if (NanoFrameTimer.a(467, fg.mouseY, 10, 156, 98, kf.mouseX, 26)) {
           ak.field_b = 10;
         }
         if (vg.field_p ||

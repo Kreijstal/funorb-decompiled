@@ -218,9 +218,9 @@ final class HardwareAtlasBitmapFont extends RendererBitmapFont {
         this.field_f.a(this.field_e, -9135);
         if (!this.field_g &&
           !shadowPass) {
-          this.field_f.a(bd.field_C, true, bd.field_C);
+          this.field_f.a(Bzip2State.field_C, true, Bzip2State.field_C);
         } else {
-          this.field_f.a(bd.field_C, true, ru.field_a);
+          this.field_f.a(Bzip2State.field_C, true, ru.field_a);
           this.field_f.a((byte) 122, 0, GameKeyHandler.field_a);
           this.field_f.a((byte) -74, color);
         }

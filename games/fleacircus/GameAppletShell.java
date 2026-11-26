@@ -62,10 +62,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (o.field_l) {
+            if (NanoFrameTimer.field_l) {
               return;
             }
-            o.field_l = true;
+            NanoFrameTimer.field_l = true;
           }
           if (sd.field_j != null) {
             sd.field_j.destroy();
@@ -345,7 +345,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               di.field_c = param2;
               rg.field_p = 0;
               ki.field_a = param0;
-              o.field_m = param0;
+              NanoFrameTimer.field_m = param0;
               va.field_u = 0;
               pf.field_c = this;
               tb.field_d = BoundedRandomAccessFile.getApplet((byte) -61);
@@ -444,7 +444,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_i = true;
             System.out.println("error_game_" + param1);
             try {
-              eb.a("loggedout", BoundedRandomAccessFile.getApplet((byte) -80), -250);
+              JavaScriptBridge.callWithoutArguments("loggedout", BoundedRandomAccessFile.getApplet((byte) -80), -250);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -691,7 +691,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    w.field_r = l.field_b.b(0, NodeHashTableIterator.field_f);
+                    w.field_r = l.field_b.waitAndCountTicks(0, NodeHashTableIterator.field_f);
                     stackIn_101_0 = 0;
                   }
                   var3 = stackIn_101_0;
@@ -735,7 +735,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (pf.field_c == this &&
-            !o.field_l) {
+            !NanoFrameTimer.field_l) {
             dh.field_a = 0L;
             return;
           }
@@ -818,13 +818,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (pf.field_c == this &&
-            !o.field_l) {
+            !NanoFrameTimer.field_l) {
             j.field_e = true;
             if (tj.field_d &&
               1000L < lj.correctedCurrentTimeMillis((byte) -109) - cg.field_z) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (o.field_m > var2.width) {
+                if (NanoFrameTimer.field_m > var2.width) {
                   return;
                 }
                 if (var2.height < di.field_c) {
@@ -891,7 +891,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (pf.field_c == this &&
-            !o.field_l) {
+            !NanoFrameTimer.field_l) {
             dh.field_a = lj.correctedCurrentTimeMillis((byte) -20);
             vh.sleepMillis(5000L, -112);
             fg.field_i = null;
@@ -1043,7 +1043,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void stop() {
         if (pf.field_c != this ||
-          o.field_l) {
+          NanoFrameTimer.field_l) {
           return;
         }
         try {

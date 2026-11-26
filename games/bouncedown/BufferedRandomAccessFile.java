@@ -332,7 +332,7 @@ final class BufferedRandomAccessFile {
           } else {
             if (param2 >= 100 &&
               param2 <= 105) {
-              ci.field_L = qj.createAccountSuggestionsResult(false, param1);
+              ci.field_L = GzipDecompressor.createAccountSuggestionsResult(false, param1);
               return;
             }
             ci.field_L = wb.createAccountErrorResult(param2, 1, param3);

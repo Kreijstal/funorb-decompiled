@@ -152,14 +152,14 @@ final class mma {
               if (ProxySocketConnector.field_f <= 0 &&
                 !FlirtAnimation.field_y) {
                 try {
-                  ac.a(nia.d(-31768), "unzap", (byte) 64);
+                  JavaScriptBridge.callWithoutArguments(nia.d(-31768), "unzap", (byte) 64);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ac.a(nia.d(-31768), "zap", new Object[]{FullHealAnimation.a(DefaultWidgetRenderer.field_a, 48)}, (byte) 73);
+                  JavaScriptBridge.callWithArguments(nia.d(-31768), "zap", new Object[]{FullHealAnimation.a(DefaultWidgetRenderer.field_a, 48)}, (byte) 73);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

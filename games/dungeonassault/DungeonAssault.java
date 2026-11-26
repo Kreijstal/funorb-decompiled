@@ -112,7 +112,7 @@ public final class DungeonAssault extends NetworkGameClient {
                       i.field_A.requestCursorVisibility((java.awt.Component) ((Object) cm.field_R), (byte) 51, false);
                     }
                   }
-                  if (fc.a(dc.field_z, (byte) -120)) {
+                  if (fc.a(Bzip2State.field_z, (byte) -120)) {
                     AccountRequestState.a((byte) 114);
                   }
                 }
@@ -127,7 +127,7 @@ public final class DungeonAssault extends NetworkGameClient {
           if (param1 != -69) {
             this.c(true, (byte) -64);
           }
-          if (dc.field_z == -2) {
+          if (Bzip2State.field_z == -2) {
             var9 = new CombatState();
             var9.field_v = GzipDecompressor.a(0, new Random());
             for (var4 = 0; 49 > var4; var4++) {
@@ -157,7 +157,7 @@ public final class DungeonAssault extends NetworkGameClient {
             gd.a(stackIn_110_0, 0, -1, var5 != 0);
           }
           stackIn_112_0Lifetime1 = 2;
-          stackIn_112_1Lifetime1 = ~dc.field_z;
+          stackIn_112_1Lifetime1 = ~Bzip2State.field_z;
           if (stackIn_112_0Lifetime1 == stackIn_112_1Lifetime1) {
             var10 = new CombatState();
             if (!ed.c(true) &&
@@ -395,8 +395,8 @@ public final class DungeonAssault extends NetworkGameClient {
                 }
                 if (wh.field_d) {
                   var11 = var2;
-                  var12 = gj.field_c;
-                  var4_ref_int__ = gj.field_c;
+                  var12 = FrameTimer.field_c;
+                  var4_ref_int__ = FrameTimer.field_c;
                   for (var5Lifetime2 = 0; 8 > var5Lifetime2; var5Lifetime2++) {
                     var11[var5Lifetime2] = nb.a(var11[var5Lifetime2], ~var12[var5Lifetime2]);
                   }
@@ -407,7 +407,7 @@ public final class DungeonAssault extends NetworkGameClient {
                     }
                   }
                 }
-                var13 = gj.field_c;
+                var13 = FrameTimer.field_c;
                 var14 = var2;
                 var4_ref_int__Lifetime1 = var2;
                 for (var5Lifetime3 = 0; 8 > var5Lifetime3; var5Lifetime3++) {
@@ -426,19 +426,19 @@ public final class DungeonAssault extends NetworkGameClient {
                 var19 = gm.field_d;
                 gm.field_d = new lb(ra.field_c, 19);
                 if (mn.field_b == 4 ||
-                  dc.field_z == 4) {
+                  Bzip2State.field_z == 4) {
                   jk.j((byte) 59);
                 }
                 if (5 == mn.field_b ||
-                  dc.field_z == 5) {
+                  Bzip2State.field_z == 5) {
                   u.a(1, var19);
                 }
                 if (mn.field_b == 2 ||
-                  dc.field_z == 2) {
+                  Bzip2State.field_z == 2) {
                   sh.a(27886, var19);
                 }
                 if (mn.field_b != 3 &&
-                  dc.field_z != 3) {
+                  Bzip2State.field_z != 3) {
                   continue scanLoop1;
                 }
                 hi.b(1);
@@ -457,7 +457,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   var5Lifetime1 = ra.field_c.readInt(-111);
                   stackIn_220_0 = (ra.field_c.readUnsignedByte(true) != 1) ? 0 : 1;
                   var6Lifetime1 = stackIn_220_0;
-                  if (2 != dc.field_z) {
+                  if (2 != Bzip2State.field_z) {
                     continue scanLoop1;
                   }
                   ((bg) (bf.field_f[2])).a(var6Lifetime1 != 0, var4, 0, var5Lifetime1, var3Lifetime2, var20);
@@ -472,7 +472,7 @@ public final class DungeonAssault extends NetworkGameClient {
                   } else {
                     ik.field_e = new go(true, var21);
                   }
-                  gd.a(dc.field_z, 0, -1, false);
+                  gd.a(Bzip2State.field_z, 0, -1, false);
                   AccountNameAvailabilityValidator.field_s = false;
                   nf.field_A = true;
                   continue scanLoop1;
@@ -569,7 +569,7 @@ public final class DungeonAssault extends NetworkGameClient {
           AccountRequestState.a(true, var3, 22050, 22050, (java.awt.Component) ((Object) AwtRasterBuffer.field_h), -126, 2048, i.field_A);
           cm.a(1.600000023841858f, 0.9200000166893005f, -7788, 0.10000000149011612f, 25.0f);
           he.field_p = 16711680;
-          dc.field_l = 128;
+          Bzip2State.field_l = 128;
           ui.field_b = 4473924;
           il.field_a = 255;
           om.field_a = 16777215;
@@ -660,7 +660,7 @@ public final class DungeonAssault extends NetworkGameClient {
           op.clearStaticReferences((byte) -120);
           mp.clearStaticReferences((byte) 112);
           sl.clearStaticReferences(105);
-          gj.a((byte) 80);
+          FrameTimer.a((byte) 80);
           AwtRasterBuffer.clearStaticReferences(-9431);
           wk.b(false);
           FullscreenFocusCanvas.clearStaticReferences((byte) -115);
@@ -787,7 +787,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ra.a((byte) -114);
           ByteStorage.clearStaticReferences((byte) 23);
           ej.clearStaticReferences();
-          dc.a((byte) 108);
+          Bzip2State.a((byte) 108);
           oe.clearDeclaredStaticReferences(0);
           kn.a(0);
           nj.resetStaticState((byte) 84);
@@ -814,7 +814,7 @@ public final class DungeonAssault extends NetworkGameClient {
           no.resetStaticState((byte) -126);
           um.a(false);
           ProxyAuthenticationRequiredException.clearStaticReferences(98);
-          fg.clearStaticReferences(-102);
+          NanoFrameTimer.clearStaticReferences(-102);
           ImageProducerRasterBuffer.clearStaticReferences(false);
           ag.clearStaticReferences(16760896);
           ki.clearStaticReferences((byte) -35);
@@ -1009,7 +1009,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var2_int++;
           }
           mn.field_b = 13;
-          dc.field_z = 13;
+          Bzip2State.field_z = 13;
           bf.field_f[13].b(false);
           if (ed.c(true)) {
             gm.field_d = null;

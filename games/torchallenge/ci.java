@@ -158,7 +158,7 @@ final class ci extends ma {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!ei.a((byte) -117, var4)) {
+          if (!Bzip2State.a((byte) -117, var4)) {
             stackIn_2_0 = SpriteLoader.field_c;
             return stackIn_2_0;
           }

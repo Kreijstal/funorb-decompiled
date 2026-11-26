@@ -26,7 +26,7 @@ final class AccountCreationResultPanel extends rg implements sh {
     }
 
     AccountCreationResultPanel(hm param0, ik param1) {
-        super(param0, cn.field_g, vh.field_e, false, false);
+        super(param0, Bzip2State.field_g, vh.field_e, false, false);
         try {
           this.field_Ab = param1;
         } catch (RuntimeException runtimeException) {
@@ -89,7 +89,7 @@ final class AccountCreationResultPanel extends rg implements sh {
           } else {
             var4 = he.field_d;
           }
-          var5 = new fm((rg) (this), cn.field_g, var4);
+          var5 = new fm((rg) (this), Bzip2State.field_g, var4);
           if (param0.success) {
             if (param0.field_i) {
               this.a((byte) -53, (fe) (new ba(this)));

@@ -355,7 +355,7 @@ final class ce {
           stackIn_209_1 = !(param0);
           var2Lifetime46 = e.a(stackIn_208_0, stackIn_209_1);
           if (var2Lifetime46 != null) {
-            rk.field_k = ni.a((byte) -55, var2Lifetime46);
+            NanoFrameTimer.field_k = ni.a((byte) -55, var2Lifetime46);
           }
           var2Lifetime47 = e.a("_3of4", true);
           if (null != var2Lifetime47) {

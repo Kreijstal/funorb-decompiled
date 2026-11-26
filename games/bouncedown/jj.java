@@ -49,12 +49,12 @@ final class jj {
         }
     }
 
-    final static sg a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != 10000) {
           field_a = (PlatformTaskDispatcher) null;
-          return (sg) ((Object) new el());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (sg) ((Object) new el());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final synchronized static byte[] a(int param0, int param1) {

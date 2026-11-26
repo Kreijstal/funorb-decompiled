@@ -14,10 +14,10 @@ final class wea extends AnimationNode {
           return 0;
         }
         if (kt.field_k == 0) {
-          if (!bv.field_B.a(0)) {
+          if (!Bzip2State.field_B.a(0)) {
             return 20;
           }
-          if (!bv.field_B.a("commonui", 20637)) {
+          if (!Bzip2State.field_B.a("commonui", 20637)) {
             return 40;
           }
           if (!fi.field_n.a(0)) {
@@ -45,10 +45,10 @@ final class wea extends AnimationNode {
             return 29;
           }
         }
-        if (!bv.field_B.a(0)) {
+        if (!Bzip2State.field_B.a(0)) {
           return 43;
         }
-        if (!bv.field_B.a("commonui", 20637)) {
+        if (!Bzip2State.field_B.a("commonui", 20637)) {
           return 57;
         }
         if (!fi.field_n.a(0)) {

@@ -201,7 +201,7 @@ public final class Lexicominos extends nk {
             e.field_u = df.a("basic", "unachieved", th.field_p, (byte) -41);
             bi.field_a = hb.a(gg.field_d, 246, "roman20", "", th.field_p);
             mk.field_h = hb.a(gg.field_d, 246, "roman12", "", th.field_p);
-            tb.field_a = hb.a(SectorCacheStore.field_d, "scorefont", "", ci.field_e, -2569);
+            FrameTimer.field_a = hb.a(SectorCacheStore.field_d, "scorefont", "", ci.field_e, -2569);
             jh.field_d = hb.a(ci.field_e, 246, "", "lexfont", SectorCacheStore.field_d);
             th.field_p = null;
             gg.field_d = null;
@@ -403,7 +403,7 @@ public final class Lexicominos extends nk {
                 var14 = var9[var10_int];
                 var15 = var14 & 16711935;
                 var16 = 65280 & var14;
-                var9[var10_int] = tb.a(vg.a(var13 * var15 + var12 * 16711935 >> 8, 16711935), vg.a(65280, var13 * var16 + var12 * 65280 >> 8));
+                var9[var10_int] = FrameTimer.a(vg.a(var13 * var15 + var12 * 16711935 >> 8, 16711935), vg.a(65280, var13 * var16 + var12 * 65280 >> 8));
               }
               var10_int++;
               continue;
@@ -750,7 +750,7 @@ public final class Lexicominos extends nk {
                     var12 = param8[1 + param3];
                     var13 = param2 * (16711935 & var12) + (4 - param2) * (var11 & 16711935) >> 2;
                     var14 = (var11 & 65280) * (4 - param2) + param2 * (var12 & 65280) >> 2;
-                    param4[param5] = tb.a(vg.a(var14, 65280), vg.a(16711935, var13));
+                    param4[param5] = FrameTimer.a(vg.a(var14, 65280), vg.a(16711935, var13));
                   }
                   if (param2 == 0 ||
                     var17 != 0) {
@@ -761,7 +761,7 @@ public final class Lexicominos extends nk {
                         var12 = param1[1 + param3];
                         var13 = (4 - param2) * (var11 & 16711935) + (var12 & 16711935) * param2 >> 2;
                         var14 = (65280 & var12) * param2 + (4 - param2) * (var11 & 65280) >> 2;
-                        param4[param5] = tb.a(vg.a(16711935, var13), vg.a(65280, var14));
+                        param4[param5] = FrameTimer.a(vg.a(16711935, var13), vg.a(65280, var14));
                         param4[param5] = param1[param3];
                       } else {
                         param4[param5] = param1[param3];
@@ -773,7 +773,7 @@ public final class Lexicominos extends nk {
                     var12 = param1[1 + param3];
                     var13 = (4 - param2) * (var11 & 16711935) + (var12 & 16711935) * param2 >> 2;
                     var14 = (65280 & var12) * param2 + (4 - param2) * (var11 & 65280) >> 2;
-                    param4[param5] = tb.a(vg.a(16711935, var13), vg.a(65280, var14));
+                    param4[param5] = FrameTimer.a(vg.a(16711935, var13), vg.a(65280, var14));
                     if (var17 != 0) {
                       param4[param5] = param1[param3];
                     }
@@ -810,7 +810,7 @@ public final class Lexicominos extends nk {
                     var14Lifetime1 = param1[312 + param3];
                     var15 = param0 * ((16711935 & var14Lifetime1) * param2 + (-param2 + 4) * (var13Lifetime1 & 16711935)) + ((16711935 & var11Lifetime1) * (4 - param2) + param2 * (var12Lifetime1 & 16711935)) * (4 - param0) >> 4;
                     var16 = (4 - param0) * ((var11Lifetime1 & 65280) * (-param2 + 4) + param2 * (var12Lifetime1 & 65280)) + param0 * (param2 * (var14Lifetime1 & 65280) + (4 - param2) * (var13Lifetime1 & 65280)) >> 4;
-                    param4[param5] = tb.a(vg.a(65280, var16), vg.a(16711935, var15));
+                    param4[param5] = FrameTimer.a(vg.a(65280, var16), vg.a(16711935, var15));
                   } else {
                     if (param2 == 0) {
                       if (param0 == 0) {
@@ -820,14 +820,14 @@ public final class Lexicominos extends nk {
                         var12Lifetime1 = param1[param3 + 311];
                         var13Lifetime1 = (16711935 & var11Lifetime1) * (-param0 + 4) + param0 * (var12Lifetime1 & 16711935) >> 2;
                         var14Lifetime1 = param0 * (var12Lifetime1 & 65280) + (65280 & var11Lifetime1) * (-param0 + 4) >> 2;
-                        param4[param5] = tb.a(vg.a(var14Lifetime1, 65280), vg.a(var13Lifetime1, 16711935));
+                        param4[param5] = FrameTimer.a(vg.a(var14Lifetime1, 65280), vg.a(var13Lifetime1, 16711935));
                       }
                     } else {
                       var11Lifetime1 = param1[param3];
                       var12Lifetime1 = param1[param3 + 1];
                       var13Lifetime1 = (16711935 & var12Lifetime1) * param2 + (4 - param2) * (16711935 & var11Lifetime1) >> 2;
                       var14Lifetime1 = (65280 & var12Lifetime1) * param2 + (65280 & var11Lifetime1) * (4 - param2) >> 2;
-                      param4[param5] = tb.a(vg.a(var13Lifetime1, 16711935), vg.a(var14Lifetime1, 65280));
+                      param4[param5] = FrameTimer.a(vg.a(var13Lifetime1, 16711935), vg.a(var14Lifetime1, 65280));
                     }
                   }
                   decompiledFrameRemainder0 = false;
@@ -841,7 +841,7 @@ public final class Lexicominos extends nk {
                         var12Lifetime1Lifetime1 = param8[311 + param3];
                         var13Lifetime1Lifetime1 = (16711935 & var11Lifetime1Lifetime1) * (4 - param0) + (var12Lifetime1Lifetime1 & 16711935) * param0 >> 2;
                         var14Lifetime1Lifetime1 = (65280 & var11Lifetime1Lifetime1) * (-param0 + 4) + param0 * (65280 & var12Lifetime1Lifetime1) >> 2;
-                        param4[param5] = tb.a(vg.a(65280, var14Lifetime1Lifetime1), vg.a(16711935, var13Lifetime1Lifetime1));
+                        param4[param5] = FrameTimer.a(vg.a(65280, var14Lifetime1Lifetime1), vg.a(16711935, var13Lifetime1Lifetime1));
                       } else {
                         param4[param5] = param8[param3];
                       }
@@ -850,7 +850,7 @@ public final class Lexicominos extends nk {
                       var12Lifetime1Lifetime1 = param8[1 + param3];
                       var13Lifetime1Lifetime1 = param2 * (var12Lifetime1Lifetime1 & 16711935) + (16711935 & var11Lifetime1Lifetime1) * (-param2 + 4) >> 2;
                       var14Lifetime1Lifetime1 = (-param2 + 4) * (var11Lifetime1Lifetime1 & 65280) + param2 * (var12Lifetime1Lifetime1 & 65280) >> 2;
-                      param4[param5] = tb.a(vg.a(var14Lifetime1Lifetime1, 65280), vg.a(16711935, var13Lifetime1Lifetime1));
+                      param4[param5] = FrameTimer.a(vg.a(var14Lifetime1Lifetime1, 65280), vg.a(16711935, var13Lifetime1Lifetime1));
                     }
                     decompiledFrameRemainder0 = false;
                   }
@@ -861,7 +861,7 @@ public final class Lexicominos extends nk {
                     var14Lifetime1Lifetime2 = param8[311 + param3 + 1];
                     var15Lifetime1 = (4 - param0) * (param2 * (16711935 & var12Lifetime1Lifetime2) + (4 - param2) * (var11Lifetime1Lifetime2 & 16711935)) + param0 * ((16711935 & var13Lifetime1Lifetime2) * (4 - param2) + (16711935 & var14Lifetime1Lifetime2) * param2) >> 4;
                     var16Lifetime1 = ((var13Lifetime1Lifetime2 & 65280) * (4 - param2) + (65280 & var14Lifetime1Lifetime2) * param2) * param0 + ((4 - param2) * (65280 & var11Lifetime1Lifetime2) + param2 * (var12Lifetime1Lifetime2 & 65280)) * (-param0 + 4) >> 4;
-                    param4[param5] = tb.a(vg.a(var16Lifetime1, 65280), vg.a(var15Lifetime1, 16711935));
+                    param4[param5] = FrameTimer.a(vg.a(var16Lifetime1, 65280), vg.a(var15Lifetime1, 16711935));
                   }
                 }
               }
@@ -946,7 +946,7 @@ public final class Lexicominos extends nk {
           af.clearStaticReferences(param0 ^ 25);
           hi.clearStaticReferences(5);
           ig.clearStaticReferences(-71);
-          tb.a(255);
+          FrameTimer.a(255);
           AwtRasterBuffer.a(1);
           td.clearStaticReferences(0);
           FullscreenFocusCanvas.b(20);
@@ -1037,7 +1037,7 @@ public final class Lexicominos extends nk {
           el.clearStaticReferences(true);
           ByteStorage.clearStaticReferences((byte) -125);
           Bzip2Decoder.clearStaticReferences();
-          ok.clearStaticReferences((byte) 28);
+          Bzip2State.clearStaticReferences((byte) 28);
           pd.clearStaticReferences(118);
           lj.clearStaticReferences(0);
           fb.clearStaticReferences(2);
@@ -1063,7 +1063,7 @@ public final class Lexicominos extends nk {
           ni.clearStaticReferences((byte) 65);
           lg.clearStaticReferences(21745);
           ProxyAuthenticationRequiredException.clearStaticReferences((byte) -18);
-          rk.clearStaticReferences(true);
+          NanoFrameTimer.clearStaticReferences(true);
           ImageProducerRasterBuffer.clearStaticReferences((byte) -126);
           jd.resetStaticState((byte) -118);
           we.clearStaticReferences((byte) -128);

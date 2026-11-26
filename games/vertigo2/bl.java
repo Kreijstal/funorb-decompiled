@@ -46,11 +46,11 @@ final class bl extends l {
         field_o = null;
     }
 
-    final static ug c(boolean param0) {
+    final static FrameTimer c(boolean param0) {
         if (!param0) {
-          return (ug) null;
+          return (FrameTimer) null;
         }
-        return (ug) ((Object) new nl());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static void a(boolean param0, int param1, int param2) {

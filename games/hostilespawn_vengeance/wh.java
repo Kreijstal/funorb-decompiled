@@ -42,16 +42,16 @@ final class wh {
             ln.field_a.field_c[param1] = 0;
           }
           if (0 <= ln.field_a.field_o[param1]) {
-            if (ck.a(-62, -ln.field_a.field_d + param1)) {
+            if (Bzip2State.a(-62, -ln.field_a.field_d + param1)) {
               ln.field_a.field_o[param1 - ln.field_a.field_d] = 664;
             }
-            if (ck.a(-74, param1 - 1)) {
+            if (Bzip2State.a(-74, param1 - 1)) {
               ln.field_a.field_o[-1 + param1] = 679;
             }
-            if (ck.a(119, 1 + param1)) {
+            if (Bzip2State.a(119, 1 + param1)) {
               ln.field_a.field_o[1 + param1] = 681;
             }
-            if (ck.a(-87, ln.field_a.field_d + param1)) {
+            if (Bzip2State.a(-87, ln.field_a.field_d + param1)) {
               ln.field_a.field_o[param1 + ln.field_a.field_d] = 696;
             }
             ln.field_a.field_o[param1] = -1;

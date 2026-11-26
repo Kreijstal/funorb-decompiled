@@ -27,7 +27,7 @@ abstract class rl extends oh {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            ke.a(var1, -9129);
+            FrameTimer.a(var1, -9129);
             tp.field_f.backpatchByteLength((byte) 47, var1.position - var2);
           }
           if (param0 == 0) {
@@ -120,7 +120,7 @@ abstract class rl extends oh {
           mb.field_g = mb.field_g + var3;
           AccountCreationResultPanel.n(-26);
           MouseInputHandler.field_b = null;
-          qn.field_n = 0;
+          Bzip2State.field_n = 0;
           gh.field_C = 0;
           return;
         }

@@ -401,7 +401,7 @@ public final class OrbDefence extends NetworkGameClient {
         og.clearStaticReferences((byte) -123);
         wh.clearStaticReferences(-122);
         na.resetStaticState(-20008);
-        aa.clearStaticReferences((byte) -14);
+        FrameTimer.clearStaticReferences((byte) -14);
         RasterBuffer.resetStaticState((byte) -27);
         l.clearStaticReferences(124);
         FullscreenFocusCanvas.clearStaticReferences(29967);
@@ -501,7 +501,7 @@ public final class OrbDefence extends NetworkGameClient {
         bh.clearStaticReferences(-21000);
         ByteStorage.clearStaticReferences(14);
         ac.clearStaticReferences();
-        da.clearStaticReferences(16);
+        Bzip2State.clearStaticReferences(16);
         ud.clearStaticReferences(true);
         q.a(109);
         qk.clearStaticReferences((byte) -122);
@@ -527,7 +527,7 @@ public final class OrbDefence extends NetworkGameClient {
         mb.clearStaticReferences(114);
         pg.clearStaticReferences(-12150);
         ProxyAuthenticationRequiredException.clearStaticReferences(48);
-        g.clearDeclaredStaticReferences((byte) -22);
+        NanoFrameTimer.clearDeclaredStaticReferences((byte) -22);
         ImageProducerRasterBuffer.b((byte) 68);
         db.clearStaticReferences(-101);
         mc.c(12);
@@ -1112,7 +1112,7 @@ public final class OrbDefence extends NetworkGameClient {
                 if (null != il.field_f) {
                   il.field_f.c(-1);
                 }
-                kf.field_c = da.field_B;
+                kf.field_c = Bzip2State.field_B;
                 if (kf.field_c == -2) {
                   kf.field_c = 0;
                   ud.a(8, ProxyAuthenticationRequiredException.field_d, false, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);

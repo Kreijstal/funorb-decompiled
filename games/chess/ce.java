@@ -65,7 +65,7 @@ final class ce {
             !sb.j((byte) 78) &&
             null == pd.field_Rb &&
             null == ib.field_d) {
-            if (!kh.field_o) {
+            if (!NanoFrameTimer.field_o) {
               var5 = pi.field_d;
               var6 = sn.field_e;
               var5.field_b.a((byte) -12, var6, 14);
@@ -78,7 +78,7 @@ final class ce {
             !sb.j((byte) 78) &&
             pd.field_Rb != null &&
             param0.field_c == pd.field_Rb.g((byte) -105)) {
-            if (!kh.field_o) {
+            if (!NanoFrameTimer.field_o) {
               var9 = pi.field_d;
               var10 = be.field_e;
               var9.field_b.a((byte) -12, var10, 14);

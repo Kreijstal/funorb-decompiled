@@ -65,7 +65,7 @@ final class hp {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + km.a(f.correctedCurrentTimeMillis((byte) 73) + 94608000000L, -1) + "; Max-Age=" + 94608000L;
               }
-              ac.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, 119);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", param0, 119);
             } catch (Throwable throwable) {
             }
             InsanoSauceSpecial.a(-123, param0);

@@ -14,14 +14,14 @@ final class d {
         if (param0 >= -72) {
           d.a(48, -124, 86);
           if (param1 >= param2) {
-            return gj.a((param2 << 16) / param1, -106);
+            return FrameTimer.a((param2 << 16) / param1, -106);
           }
-          return 2048 - gj.a((param1 << 16) / param2, -111);
+          return 2048 - FrameTimer.a((param1 << 16) / param2, -111);
         }
         if (param1 >= param2) {
-          return gj.a((param2 << 16) / param1, -106);
+          return FrameTimer.a((param2 << 16) / param1, -106);
         }
-        return 2048 - gj.a((param1 << 16) / param2, -111);
+        return 2048 - FrameTimer.a((param1 << 16) / param2, -111);
     }
 
     final static la a(boolean param0, byte param1) {

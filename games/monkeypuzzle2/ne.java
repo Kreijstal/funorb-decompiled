@@ -3,7 +3,7 @@
  */
 final class ne {
     static ai[] field_a;
-    static fg field_c;
+    static FrameTimer field_c;
     static int field_b;
 
     final static am a(String param0, byte param1) {

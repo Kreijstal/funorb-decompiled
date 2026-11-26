@@ -45,23 +45,23 @@ final class ai {
               }
             }
             if (DiskArchiveRequest.field_A == param0) {
-              re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.result), MouseInputHandler.field_a);
+              Bzip2State.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.result), MouseInputHandler.field_a);
               var2 = new PacketBuffer(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
               var2.writeByte(param0 + 6387, 15);
               var2.writeInt(-109, dk.field_h);
-              re.field_y.a((byte) 9, var2.payload, 13, 0);
+              Bzip2State.field_y.a((byte) 9, var2.payload, 13, 0);
               DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
               ob.field_G = 30000L + lk.correctedCurrentTimeMillis(param0 ^ 2);
             }
             if (DiskArchiveRequest.field_A == 3) {
-              if (re.field_y.a((byte) -125) <= 0) {
+              if (Bzip2State.field_y.a((byte) -125) <= 0) {
                 if (ob.field_G < lk.correctedCurrentTimeMillis(0)) {
                   stackIn_32_0 = og.a(2, -2);
                   return stackIn_32_0;
                 }
               } else {
-                var1_int = re.field_y.c(1);
+                var1_int = Bzip2State.field_y.c(1);
                 if (var1_int != 0) {
                   stackIn_27_0 = og.a(param0 ^ 0, var1_int);
                   return stackIn_27_0;
@@ -73,8 +73,8 @@ final class ai {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            oh.field_h.a(ck.field_A, re.field_y, param0 + 18);
-            re.field_y = null;
+            oh.field_h.a(ck.field_A, Bzip2State.field_y, param0 + 18);
+            Bzip2State.field_y = null;
             DiskArchiveRequest.field_A = 0;
             wj.field_j = null;
             stackIn_35_0 = 0;

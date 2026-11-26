@@ -489,16 +489,16 @@ final class LevelEditor {
         int var3Lifetime1;
         int var3Lifetime2;
         var7 = Terraphoenix.field_V;
-        vc.field_f.b(ph.field_n[this.field_c], 24, 24, 0, -1);
+        FrameTimer.field_f.b(ph.field_n[this.field_c], 24, 24, 0, -1);
         if (this.map != null) {
-          vc.field_f.b("MAP: " + this.map.field_b + " x " + this.map.field_e, 24, 48, 16711935, -1);
-          vc.field_f.b("Level:" + tg.field_l, 24, 72, 16711935, -1);
+          FrameTimer.field_f.b("MAP: " + this.map.field_b + " x " + this.map.field_e, 24, 48, 16711935, -1);
+          FrameTimer.field_f.b("Level:" + tg.field_l, 24, 72, 16711935, -1);
           this.map.d(-125);
           if (var7 != 0) {
-            vc.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
+            FrameTimer.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
           }
         } else {
-          vc.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
+          FrameTimer.field_f.b("MAP IS NULL", 24, 48, 16711680, -1);
         }
         if (this.field_a < 0) {
           this.field_a = 0;
@@ -620,7 +620,7 @@ final class LevelEditor {
         this.a(false, "WISH TO KEEP", var3Lifetime2, 16711680, var2Lifetime2);
         var3Lifetime2 += 14;
         if (null != fg.field_c) {
-          vc.field_f.b(fg.field_c, 24, 456, j.field_R, -1);
+          FrameTimer.field_f.b(fg.field_c, 24, 456, j.field_R, -1);
         }
     }
 

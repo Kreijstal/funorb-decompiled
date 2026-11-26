@@ -52,7 +52,7 @@ final class od {
           if (param1 > -92) {
             field_b = (String) null;
           }
-          jd.a(param0, (byte) -119);
+          NanoFrameTimer.a(param0, (byte) -119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

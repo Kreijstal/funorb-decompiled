@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class l {
-    static wj field_b;
+    static FrameTimer field_b;
     static int[] field_c;
     static String field_a;
 

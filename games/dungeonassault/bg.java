@@ -808,7 +808,7 @@ final class bg extends qe {
           var3 = this.b(-119, AchievementIconEntry.field_k, lc.field_c);
         }
         if (hh.field_s == le.field_g) {
-          gd.a(dc.field_z, 0, 0, true);
+          gd.a(Bzip2State.field_z, 0, 0, true);
         } else {
           if (hh.field_s != wf.field_w) {
             if (ic.field_y == hh.field_s &&

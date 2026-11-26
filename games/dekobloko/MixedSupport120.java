@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MixedSupport120 {
-    private static MixedSupport141 mixedSupport141State0001;
+    private static Bzip2State mixedSupport141State0001;
 
-    private final static void performAction1581(MixedSupport141 mixedSupport141Argument1) {
+    private final static void performAction1581(Bzip2State mixedSupport141Argument1) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -135,7 +135,7 @@ final class MixedSupport120 {
         return;
     }
 
-    private final static void performAction1582(MixedSupport141 mixedSupport141Argument1) {
+    private final static void performAction1582(Bzip2State mixedSupport141Argument1) {
         int cachedIntegerLocal1 = 0;
         int cachedIntegerLocal2 = 0;
         int integerLocal3;
@@ -552,7 +552,7 @@ final class MixedSupport120 {
         }
     }
 
-    private final static void performAction1580(MixedSupport141 mixedSupport141Argument1) {
+    private final static void performAction1580(Bzip2State mixedSupport141Argument1) {
         int integerLocal1 = 0;
         mixedSupport141Argument1.integerState0872 = 0;
         for (integerLocal1 = 0; integerLocal1 < 256; integerLocal1++) {
@@ -567,11 +567,11 @@ final class MixedSupport120 {
         mixedSupport141State0001 = null;
     }
 
-    private final static byte computeByte1583(MixedSupport141 mixedSupport141Argument1) {
+    private final static byte computeByte1583(Bzip2State mixedSupport141Argument1) {
         return (byte)MixedSupport120.computeInteger1576(1, mixedSupport141Argument1);
     }
 
-    final static int computeInteger1578(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4, int integerArgument5) {
+    final static int decompress(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4, int integerArgument5) {
         int stackIntegerLocal1 = 0;
         Throwable caughtExceptionLocal2 = null;
         Object objectLocal3 = null;
@@ -595,11 +595,11 @@ final class MixedSupport120 {
         return stackIntegerLocal1;
     }
 
-    private final static byte computeByte1577(MixedSupport141 mixedSupport141Argument1) {
+    private final static byte computeByte1577(Bzip2State mixedSupport141Argument1) {
         return (byte)MixedSupport120.computeInteger1576(8, mixedSupport141Argument1);
     }
 
-    private final static int computeInteger1576(int integerArgument1, MixedSupport141 mixedSupport141Argument2) {
+    private final static int computeInteger1576(int integerArgument1, Bzip2State mixedSupport141Argument2) {
         int integerLocal1;
         while (mixedSupport141Argument2.integerState0868 < integerArgument1) {
           mixedSupport141Argument2.integerState0861 = mixedSupport141Argument2.integerState0861 << 8 | mixedSupport141Argument2.byteArrayState0037[mixedSupport141Argument2.integerState0863] & 255;
@@ -616,6 +616,6 @@ final class MixedSupport120 {
     }
 
     static {
-        mixedSupport141State0001 = new MixedSupport141();
+        mixedSupport141State0001 = new Bzip2State();
     }
 }

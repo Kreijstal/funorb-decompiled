@@ -111,8 +111,8 @@ final class ki extends vj {
               wa.a(wg.field_l[var7], 0, wg.field_l[var7].field_t, 69, 1, 0, 3, wg.field_l[var7].field_r);
             }
             vi.field_j = null;
-            kb.field_s = sb.field_p.d();
-            kb.field_s.a();
+            Bzip2State.field_s = sb.field_p.d();
+            Bzip2State.field_s.a();
             hh.a(SoftwareRasterizer.field_k, (byte) -2, 2 * SoftwareRasterizer.field_j / 3, 0, 64, 0);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(rb.field_a);
@@ -245,7 +245,7 @@ final class ki extends vj {
             lm.field_e.b(231, 390);
             var1 = sb.field_p;
             if (0 == si.field_ob.field_h) {
-              var1 = kb.field_s;
+              var1 = Bzip2State.field_s;
             }
             var1.b(0, 0);
             stackIn_51_0 = 40;
@@ -270,7 +270,7 @@ final class ki extends vj {
             stackIn_56_0 = sl.field_d;
             stackIn_56_1 = -106;
             stackIn_57_2 = (si.field_ob.field_h == 0);
-            jd.$cfr$intArgs$a$c79a3df4369d(stackIn_56_0, stackIn_56_1, stackIn_57_2, qk.field_i);
+            NanoFrameTimer.$cfr$intArgs$a$c79a3df4369d(stackIn_56_0, stackIn_56_1, stackIn_57_2, qk.field_i);
           }
           if (null != lm.field_e &&
             null != IntrusiveNode.field_f) {
@@ -282,7 +282,7 @@ final class ki extends vj {
             stackIn_65_0 = GameShell.field_C;
             stackIn_65_1 = -80;
             stackIn_66_2 = (si.field_ob.field_h == 1);
-            jd.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, DirectByteStorage.field_j);
+            NanoFrameTimer.$cfr$intArgs$a$c79a3df4369d(stackIn_65_0, stackIn_65_1, stackIn_66_2, DirectByteStorage.field_j);
           }
           if (null != ig.field_a) {
             var1_int = 357 - ig.field_a.field_u / 2;

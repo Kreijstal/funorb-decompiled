@@ -688,7 +688,7 @@ class eg implements ad, cf {
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
-              lk.a(param4, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -106);
+              JavaScriptBridge.evaluate(param4, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) -106);
               var8 = 39 / ((12 - param1) / 62);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

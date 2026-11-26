@@ -113,7 +113,7 @@ abstract class wm {
           bh.field_G = new ci(0L, (ci) null);
           hd.field_c = new ci(0L, bo.field_e, ei.field_s);
           uk.field_c = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
-          ib.field_c = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
+          ib.field_c = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
           bh.field_G.a((byte) 123, hd.field_c);
           if (bo.field_c) {
             bh.field_G.a((byte) 127, uk.field_c);
@@ -132,10 +132,10 @@ abstract class wm {
           ue.field_d = new ci(0L, bo.field_e, ql.field_b);
           in.field_b = new ci(0L, e.field_M, de.field_a);
           ca.field_g = new ci(0L, e.field_M, qj.field_h);
-          kh.field_l = new ci(0L, e.field_M, uj.field_l);
+          NanoFrameTimer.field_l = new ci(0L, e.field_M, uj.field_l);
           lg.field_c = new ci(0L, e.field_M, vh.field_d);
           vk.field_i = new ci(0L, DualLinkNode.field_j, ba.field_R);
-          ci.field_zb = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
+          ci.field_zb = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
           ImageProducerRasterBuffer.field_l = new ci(0L, nj.field_x, ae.field_c.toUpperCase());
           ImageProducerRasterBuffer.field_l.field_tb = bo.field_c;
           stackIn_6_0 = null;
@@ -159,7 +159,7 @@ abstract class wm {
           oh.field_a.a((byte) 126, in.field_b);
           oh.field_a.a((byte) 124, ca.field_g);
           if (bo.field_c) {
-            oh.field_a.a((byte) 126, kh.field_l);
+            oh.field_a.a((byte) 126, NanoFrameTimer.field_l);
           }
           oh.field_a.a((byte) 124, lg.field_c);
           oh.field_a.a((byte) 125, vk.field_i);
@@ -175,7 +175,7 @@ abstract class wm {
           la.field_c = new ci(0L, ki.field_P);
           la.field_c.a((byte) 127, qi.field_o);
           la.field_c.a((byte) 123, of.field_i);
-          ao.field_b = new ci(0L, gm.field_b);
+          ao.field_b = new ci(0L, FrameTimer.field_b);
           ao.field_b.a(qn.field_P, -2147483648);
           var16 = ao.field_b;
           ao.field_b.field_cb = 1;
@@ -185,7 +185,7 @@ abstract class wm {
           ec.field_j.field_fb = 1;
           ln.field_vc = new ci(0L, bo.field_e, ei.field_s);
           nb.field_Ib = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
-          se.field_S = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
+          se.field_S = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
           de.field_d.a((byte) 127, ec.field_j);
           de.field_d.a((byte) 124, ln.field_vc);
           if (bo.field_c) {
@@ -198,7 +198,7 @@ abstract class wm {
           s.field_M = new ci(0L, wc.field_B, ob.field_r.toUpperCase());
           ba.field_P = new tl[param6 + 4][];
           hm.field_c = new ci[4 + param6];
-          hm.field_c[0] = new ci(0L, r.field_Tb, ia.field_w);
+          hm.field_c[0] = new ci(0L, r.field_Tb, Bzip2State.field_w);
           ba.field_P[0] = new tl[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
             ba.field_P[0][1 + var17_int] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, sh.field_b[var17_int], gf.field_a[var17_int]);

@@ -14,7 +14,7 @@ final class NanoFrameTimer extends FrameTimer {
     static int field_m;
     private long field_n;
 
-    private final long b(byte param0) {
+    private final long sampleElapsedNanos(byte param0) {
         int var8 = 0;
         int var9 = stellarshard.field_B;
         long var2 = System.nanoTime();
@@ -33,7 +33,7 @@ final class NanoFrameTimer extends FrameTimer {
           var6 = var6 + this.field_o[(10 + this.field_l - var8) % 10];
         }
         if (param0 != 51) {
-          this.a(false, 51L);
+          this.advanceTicks(false, 51L);
         }
         return var6 / (long)this.field_i;
     }
@@ -48,7 +48,7 @@ final class NanoFrameTimer extends FrameTimer {
         }
     }
 
-    final int a(boolean param0, long param1) {
+    final int advanceTicks(boolean param0, long param1) {
         int var4;
         int var5;
         var5 = stellarshard.field_B;
@@ -84,8 +84,8 @@ final class NanoFrameTimer extends FrameTimer {
         return (15 & param1 >> 4) + ((param1 & 61440) >> 8);
     }
 
-    final long b(int param0) {
-        this.field_n = this.field_n + this.b((byte) 51);
+    final long getDelayMillis(int param0) {
+        this.field_n = this.field_n + this.sampleElapsedNanos((byte) 51);
         if (param0 != 30393) {
           String var3 = (String) null;
           NanoFrameTimer.a((String) null, (String) null, true);
@@ -96,7 +96,7 @@ final class NanoFrameTimer extends FrameTimer {
         return 0L;
     }
 
-    final void a(byte param0) {
+    final void resetTiming(byte param0) {
         if (this.field_n < this.field_g) {
           this.field_n = this.field_n + (this.field_g - this.field_n);
         }

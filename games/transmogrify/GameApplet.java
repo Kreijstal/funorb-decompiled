@@ -28,14 +28,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var2_int = -41 / ((-5 - param0) / 36);
           var3 = lk.correctedCurrentTimeMillis(0);
-          var5 = ik.field_ib[td.field_a];
-          ik.field_ib[td.field_a] = var3;
+          var5 = ik.field_ib[FrameTimer.field_a];
+          ik.field_ib[FrameTimer.field_a] = var3;
           if (var5 != 0L &&
             var3 > var5) {
             var7_int = (int)(-var5 + var3);
             oc.field_y = (32000 + (var7_int >> 1)) / var7_int;
           }
-          td.field_a = 1 + td.field_a & 31;
+          FrameTimer.field_a = 1 + FrameTimer.field_a & 31;
           var7 = this;
           synchronized (var7) {
             MouseWheelInput.field_b = bi.field_M;
@@ -644,7 +644,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ca.field_b = th.field_c.a((byte) -117, ImageProducerRasterBuffer.field_j);
+                    ca.field_b = th.field_c.waitAndCountTicks((byte) -117, ImageProducerRasterBuffer.field_j);
                     stackIn_105_0 = 0;
                   }
                   var3 = stackIn_105_0;
@@ -717,7 +717,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               field_i = (vd) null;
             }
             try {
-              kj.a(ha.b(74), false, "loggedout");
+              JavaScriptBridge.callWithoutArguments(ha.b(74), false, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -842,7 +842,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               fk.field_E = param6;
               ch.field_b = param6;
               gh.field_h = param3;
-              re.field_i = ha.b(108);
+              Bzip2State.field_i = ha.b(108);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param2, param4, true);
               lk.field_b = dupTemp$0;
               f.field_b = dupTemp$0;

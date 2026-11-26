@@ -46,9 +46,9 @@ final class ff extends nh {
         k.field_d = var9.readLong(0);
         if (ii.field_J != 2) {
           il.field_w = 0;
-          mg.field_y = 0;
+          Bzip2State.field_y = 0;
         } else {
-          mg.field_y = var9.readUnsignedShort((byte) 79);
+          Bzip2State.field_y = var9.readUnsignedShort((byte) 79);
           il.field_w = var9.readUnsignedMedium(true);
         }
         stackIn_9_0 = (var9.readUnsignedByte(4) != 1) ? 0 : 1;

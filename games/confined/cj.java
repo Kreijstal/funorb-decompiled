@@ -41,7 +41,7 @@ final class cj implements fe {
           if (!mc.a(param0, param1, param4, (byte) 119)) {
             return null;
           }
-          stackIn_6_0 = jg.a(2563, param2.a((byte) -2, param1, param0));
+          stackIn_6_0 = FrameTimer.a(2563, param2.a((byte) -2, param1, param0));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -213,7 +213,7 @@ final class ib implements ComponentLayout {
           }
           if (null == di.field_b) {
             di.field_b = new qk(128);
-            gk.field_A = 0;
+            Bzip2State.field_A = 0;
           }
           var3Lifetime1 = var1.readString(0);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -231,8 +231,8 @@ final class ib implements ComponentLayout {
           if (null == var6) {
             var6 = new gm();
             di.field_b.a(var6, -1, (long)uk.a(41, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
-            fieldTemp$0 = gk.field_A;
-            gk.field_A = gk.field_A + 1;
+            fieldTemp$0 = Bzip2State.field_A;
+            Bzip2State.field_A = Bzip2State.field_A + 1;
             var6.field_mb = fieldTemp$0;
             tf.field_E.addLast(false, var6);
           }

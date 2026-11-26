@@ -35,7 +35,7 @@ final class MixedSupport089 {
               if (integerArgument2 == ~stringArgument3.length()) {
                 stringLocal3 = stringLocal3 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              MixedSupport084.performAction1094((byte) -51, appletArgument1, "document.cookie=\"" + stringLocal3 + "\"");
+              JavaScriptBridge.evaluate((byte) -51, appletArgument1, "document.cookie=\"" + stringLocal3 + "\"");
             } catch (Throwable throwable) {
             }
             NetworkSupport007.performAction1037((byte) 121, appletArgument1);

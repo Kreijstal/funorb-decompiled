@@ -445,7 +445,7 @@ final class DiskCacheWorker implements Runnable {
               }
             }
           }
-          nl.field_k = 2;
+          NanoFrameTimer.field_k = 2;
           Archive.field_j = 2;
           Archive.field_f = 15;
           NetworkArchiveRequest.field_G = 4;

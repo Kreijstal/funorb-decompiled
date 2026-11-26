@@ -267,12 +267,12 @@ final class ji {
         int var16Lifetime2;
         var19 = Torquing.field_u;
         try {
-          var12 = ln.a(qk.field_p, j.field_q, param6, 103);
-          var13 = ln.a(qk.field_p, j.field_q, param3, 81);
+          var12 = ln.a(qk.field_p, Bzip2State.field_q, param6, 103);
+          var13 = ln.a(qk.field_p, Bzip2State.field_q, param3, 81);
           var14 = ln.a(qg.field_z, RasterBuffer.field_e, param0, 73);
           var15 = ln.a(qg.field_z, RasterBuffer.field_e, param2, 113);
-          var8_int = ln.a(qk.field_p, j.field_q, param6 + param7, 103);
-          var9 = ln.a(qk.field_p, j.field_q, param3 - param7, 111);
+          var8_int = ln.a(qk.field_p, Bzip2State.field_q, param6 + param7, 103);
+          var9 = ln.a(qk.field_p, Bzip2State.field_q, param3 - param7, 111);
           for (var16 = var12; var8_int > var16; var16++) {
             di.a(var14, (byte) -111, param1, qd.field_a[var16], var15);
           }

@@ -319,7 +319,7 @@ class qn extends fb {
               var6 = in.a(bd.field_e[var3_int], 71, true);
               var4 = var4 + mf.field_z;
               var7 = of.field_k - (var6 >> 1);
-              if (ve.a(var4, var7 - gm.field_e, var6 + (gm.field_e << 1), param2, (fh.field_e << 1) + ug.field_a, 2, param1)) {
+              if (ve.a(var4, var7 - FrameTimer.field_e, var6 + (FrameTimer.field_e << 1), param2, (fh.field_e << 1) + ug.field_a, 2, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

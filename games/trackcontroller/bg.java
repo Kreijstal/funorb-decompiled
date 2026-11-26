@@ -65,7 +65,7 @@ final class bg {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (sj.a((byte) -77, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments((byte) -77, "getcookies", param0));
               var5 = DelegatingCanvas.a(var4, ';', (byte) -64);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

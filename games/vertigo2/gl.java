@@ -54,7 +54,7 @@ final class gl {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              je.a(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 124);
+              JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var7Lifetime4 + "\"", (byte) 124);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,11 +95,11 @@ final class gl {
     final static void a(int param0) {
         kg.c((byte) 76);
         if (param0 == 26780) {
-          nn.a(1, NetworkArchiveRequest.field_G, Archive.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
+          nn.a(1, NetworkArchiveRequest.field_G, Archive.field_f, re.field_k, kb.field_d[0].field_x, NanoFrameTimer.field_k);
           return;
         }
         field_o = false;
-        nn.a(1, NetworkArchiveRequest.field_G, Archive.field_f, re.field_k, kb.field_d[0].field_x, nl.field_k);
+        nn.a(1, NetworkArchiveRequest.field_G, Archive.field_f, re.field_k, kb.field_d[0].field_x, NanoFrameTimer.field_k);
     }
 
     final static String a(int param0, boolean param1, boolean param2, int param3) {

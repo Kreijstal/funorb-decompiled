@@ -216,7 +216,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
             if (param1.length() == 0) {
               var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            sh.a(-13847, "document.cookie=\"" + var5Lifetime4 + "\"", param0);
+            JavaScriptBridge.evaluate(-13847, "document.cookie=\"" + var5Lifetime4 + "\"", param0);
             if (param2 < 109) {
               field_b = (int[]) null;
             }

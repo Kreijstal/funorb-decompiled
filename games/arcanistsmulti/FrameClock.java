@@ -9,7 +9,7 @@ abstract class FrameClock {
     static volatile int field_b;
 
     final int sleepAndCountTicks(long param0, int param1) {
-        long var4 = this.nanosUntilNextTick((byte) 52);
+        long var4 = this.getDelayMillis((byte) 52);
         if (var4 > 0L) {
           LobbyLayoutHelpers.sleepMillis(var4, 1);
         }
@@ -150,7 +150,7 @@ abstract class FrameClock {
         }
     }
 
-    abstract long nanosUntilNextTick(byte param0);
+    abstract long getDelayMillis(byte param0);
 
     abstract int waitForTicks(long param0, byte param1);
 

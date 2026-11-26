@@ -79,7 +79,7 @@ final class lb extends ld {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (fd.a(param0, "getcookies", (byte) 94));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param0, "getcookies", (byte) 94));
               var4 = b.$cfr$intArgs$a$25ae83805f84(var3, 59, true);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

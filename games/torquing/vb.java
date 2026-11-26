@@ -169,7 +169,7 @@ final class vb {
                 if (!(wp.field_w <= 0) ||
                   PacketBuffer.field_l) {
                   try {
-                    hp.a(ip.a(param2 - 18), new Object[]{kp.a((byte) -87, qd.field_e)}, 28989, "zap");
+                    JavaScriptBridge.callWithArguments(ip.a(param2 - 18), new Object[]{kp.a((byte) -87, qd.field_e)}, 28989, "zap");
                     decompiledRegionSelector0 = 0;
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class vb {
                   }
                 }
                 try {
-                  hp.a(ip.a(9), (byte) -85, "unzap");
+                  JavaScriptBridge.callWithoutArguments(ip.a(9), (byte) -85, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -37,10 +37,10 @@ final class NetworkSupport005 extends HashNode {
         MixedSupport121.integerState0777 = cipherPacketBufferLocal10.readUnsignedByte((byte) -71);
         MixedSupport036.longState0015 = cipherPacketBufferLocal10.readLong((byte) -108);
         if (UiComponentPart019.integerState0505 != 2) {
-          MixedSupport141.integerState0873 = 0;
+          Bzip2State.integerState0873 = 0;
           MixedSupport058.integerState0318 = 0;
         } else {
-          MixedSupport141.integerState0873 = cipherPacketBufferLocal10.readUnsignedShort(integerArgument1 + 3);
+          Bzip2State.integerState0873 = cipherPacketBufferLocal10.readUnsignedShort(integerArgument1 + 3);
           MixedSupport058.integerState0318 = cipherPacketBufferLocal10.readUnsignedMedium(integerArgument1 + 65280);
         }
         stackIntegerLocal2 = (1 != cipherPacketBufferLocal10.readUnsignedByte((byte) -32)) ? 0 : 1;

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j {
-    private static mg field_a;
+    private static Bzip2State field_a;
 
-    private final static byte c(mg param0) {
+    private final static byte c(Bzip2State param0) {
         return (byte)j.a(8, param0);
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -81,7 +81,7 @@ final class j {
         field_a = null;
     }
 
-    private final static void e(mg param0) {
+    private final static void e(Bzip2State param0) {
         int var1 = 0;
         param0.field_C = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -92,7 +92,7 @@ final class j {
         }
     }
 
-    private final static int a(int param0, mg param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_d < param0) {
           param1.field_w = param1.field_w << 8 | param1.field_D[param1.field_u] & 255;
@@ -108,7 +108,7 @@ final class j {
         return var2;
     }
 
-    private final static void b(mg param0) {
+    private final static void b(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -129,7 +129,7 @@ final class j {
         var3 = param0.field_q;
         var4 = param0.field_n;
         var5 = param0.field_m;
-        var15 = mg.field_h;
+        var15 = Bzip2State.field_h;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_K;
@@ -231,7 +231,7 @@ final class j {
         param0.field_q = var3;
         param0.field_n = var4;
         param0.field_m = var5;
-        mg.field_h = var6;
+        Bzip2State.field_h = var6;
         param0.field_K = var7;
         param0.field_H = var8;
         param0.field_r = var9;
@@ -239,7 +239,7 @@ final class j {
         return;
     }
 
-    private final static void d(mg param0) {
+    private final static void d(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -303,8 +303,8 @@ final class j {
         var24 = null;
         var25 = null;
         param0.field_F = 1;
-        if (mg.field_h == null) {
-          mg.field_h = new int[param0.field_F * 100000];
+        if (Bzip2State.field_h == null) {
+          Bzip2State.field_h = new int[param0.field_F * 100000];
         }
         var26 = 1;
         while (true) {
@@ -475,14 +475,14 @@ final class j {
                 param0.field_l[var4] = param0.field_l[var4] + param0.field_l[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(mg.field_h[var4] & 255);
+                var1 = (byte)(Bzip2State.field_h[var4] & 255);
                 dupTemp$1 = param0.field_l[var1 & 255];
-                mg.field_h[dupTemp$1] = mg.field_h[dupTemp$1] | var4 << 8;
+                Bzip2State.field_h[dupTemp$1] = Bzip2State.field_h[dupTemp$1] | var4 << 8;
                 param0.field_l[var1 & 255] = param0.field_l[var1 & 255] + 1;
               }
-              param0.field_K = mg.field_h[param0.field_j] >> 8;
+              param0.field_K = Bzip2State.field_h[param0.field_j] >> 8;
               param0.field_n = 0;
-              param0.field_K = mg.field_h[param0.field_K];
+              param0.field_K = Bzip2State.field_h[param0.field_K];
               param0.field_m = (byte)(param0.field_K & 255);
               param0.field_K = param0.field_K >> 8;
               param0.field_n = param0.field_n + 1;
@@ -546,7 +546,7 @@ final class j {
               }
               dupTemp$0 = param0.field_s[var1 & 255] & 255;
               param0.field_x[dupTemp$0] = param0.field_x[dupTemp$0] + 1;
-              mg.field_h[var14] = param0.field_s[var1 & 255] & 255;
+              Bzip2State.field_h[var14] = param0.field_s[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -603,7 +603,7 @@ final class j {
             var1 = param0.field_s[param0.field_z[param0.field_a[0]] & 255];
             param0.field_x[var1 & 255] = param0.field_x[var1 & 255] + var15;
             while (var15 > 0) {
-              mg.field_h[var14] = var1 & 255;
+              Bzip2State.field_h[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -611,11 +611,11 @@ final class j {
         }
     }
 
-    private final static byte a(mg param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)j.a(1, param0);
     }
 
     static {
-        field_a = new mg();
+        field_a = new Bzip2State();
     }
 }

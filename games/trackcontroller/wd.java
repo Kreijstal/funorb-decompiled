@@ -234,8 +234,8 @@ abstract class wd extends hl {
           var8Lifetime1++;
         }
         MusicPatchPcmStream.field_n.drawTransparent(param0 + this.field_x - 90, param2 + 10);
-        hc.a(param0 + 5, param2 + 35, this.field_x - 10, wj.field_a, -22081);
-        hc.a(param0, param2 + (this.field_u - 22), this.field_x, kf.field_d, param1 ^ -22101);
+        Bzip2State.a(param0 + 5, param2 + 35, this.field_x - 10, FrameTimer.field_a, -22081);
+        Bzip2State.a(param0, param2 + (this.field_u - 22), this.field_x, kf.field_d, param1 ^ -22101);
         var6Lifetime2 = 127;
         var4Lifetime2 = -79 + this.field_u;
         var5Lifetime2 = 169;

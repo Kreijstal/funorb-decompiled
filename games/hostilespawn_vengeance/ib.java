@@ -882,19 +882,19 @@ final class ib {
                 }
                 var2 = mk.b("ammoname,0", (byte) -124);
                 if (var2 != null) {
-                  lg.field_n[0] = PcmResampler.a(122, var2);
+                  NanoFrameTimer.field_n[0] = PcmResampler.a(122, var2);
                 }
                 var2 = mk.b("ammoname,1", (byte) -120);
                 if (null != var2) {
-                  lg.field_n[1] = PcmResampler.a(124, var2);
+                  NanoFrameTimer.field_n[1] = PcmResampler.a(124, var2);
                 }
                 var2 = mk.b("ammoname,2", (byte) -119);
                 if (null != var2) {
-                  lg.field_n[2] = PcmResampler.a(123, var2);
+                  NanoFrameTimer.field_n[2] = PcmResampler.a(123, var2);
                 }
                 var2 = mk.b("ammoname,3", (byte) -123);
                 if (null != var2) {
-                  lg.field_n[3] = PcmResampler.a(122, var2);
+                  NanoFrameTimer.field_n[3] = PcmResampler.a(122, var2);
                 }
                 var2 = mk.b("pistolname", (byte) -126);
                 if (null != var2) {

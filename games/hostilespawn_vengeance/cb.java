@@ -89,7 +89,7 @@ final class cb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          in.a(false);
+          FrameTimer.a(false);
           KeyboardInput.field_d.e((640 - KeyboardInput.field_d.field_z) / 2, -4 + (-KeyboardInput.field_d.field_A + 480));
           var2_int = (640 - gj.field_d.field_z) / 2;
           var3 = -gj.field_d.field_A + 478;

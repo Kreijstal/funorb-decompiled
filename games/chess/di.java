@@ -68,7 +68,7 @@ final class di extends ci {
         try {
           var1_int = ak.field_j;
           var2 = 0;
-          if (gm.field_f == 2) {
+          if (FrameTimer.field_f == 2) {
             var3_long = -jg.field_M + ud.correctedCurrentTimeMillis(2);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
@@ -87,7 +87,7 @@ final class di extends ci {
               var5 = le.field_f;
             }
             var6 = ka.field_g[var3];
-            if (gm.field_f == 2 &&
+            if (FrameTimer.field_f == 2 &&
               1 == var2) {
               if (hj.field_l.length > NodeHashTableIterator.field_a.length) {
                 stackIn_17_0 = hj.field_l.length;

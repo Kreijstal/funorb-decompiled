@@ -119,7 +119,7 @@ final class dj extends DualLinkNode {
                   nc.field_N.decompress(var14, (byte) -34, var10);
                 }
               } else {
-                en.a(var14, var6, param0, var5, 9);
+                en.decompress(var14, var6, param0, var5, 9);
               }
               stackIn_21_0 = var7;
               return stackIn_21_0;
@@ -147,11 +147,11 @@ final class dj extends DualLinkNode {
         ib.field_c.a(param0, bh.field_G.field_pb - 20, 20, -3, sc.field_e, 0, bh.field_G.field_M);
     }
 
-    final static gm h(int param0) {
+    final static FrameTimer h(int param0) {
         if (param0 != -13154) {
           dj.a(true);
         }
-        return (gm) ((Object) new kh());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static byte[] a(CharSequence param0, int param1) {

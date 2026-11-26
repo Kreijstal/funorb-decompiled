@@ -128,7 +128,7 @@ final class NoticeMenuHelpers {
           if (param1 != 2) {
             NoticeMenuHelpers.closeChatContext((byte) -33);
           }
-          PopupMenuBuilder.field_M = -(ArrayWidgetGroup.field_F >> 1) + TextInputWidget.field_Q;
+          Bzip2State.field_M = -(ArrayWidgetGroup.field_F >> 1) + TextInputWidget.field_Q;
           AlignedIconLabel.field_Jb.initializeSelection(0, param0, -31458, EffectResistedEvent.findMenuOptionAt(LoginMethod.field_d, false, MouseInputHandler.field_g));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

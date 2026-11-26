@@ -184,7 +184,7 @@ final class MixedSupport143 {
         int integerLocal2 = integerArgument7 >= 80 ? 54 : integerArgument7 / 20 * 18;
         int integerLocal3 = 0;
         if (integerArgument7 < 60) {
-          integerLocal2 = integerLocal2 + MixedSupport141.computeInteger1754(23841, 80, 40 + 18 * integerArgument1);
+          integerLocal2 = integerLocal2 + Bzip2State.computeInteger1754(23841, 80, 40 + 18 * integerArgument1);
           RenderingSupport002.performAction0243(integerArgument6, 2, 6, integerArgument4, 1 + (72 + integerArgument3), 2, -2);
           RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
           RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);
@@ -196,7 +196,7 @@ final class MixedSupport143 {
           return;
         }
         if (integerArgument7 < 80) {
-          integerLocal2 = integerLocal2 + MixedSupport141.computeInteger1754(23841, 80, 18 * integerArgument2 + 40);
+          integerLocal2 = integerLocal2 + Bzip2State.computeInteger1754(23841, 80, 18 * integerArgument2 + 40);
           RenderingSupport002.performAction0243(integerArgument6, 2, 6, integerArgument4, 1 + (72 + integerArgument3), 2, -2);
           RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
           RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);
@@ -208,7 +208,7 @@ final class MixedSupport143 {
           return;
         }
         if (93 > integerArgument7) {
-          integerLocal3 = MixedSupport141.computeInteger1754(23841, 80, SceneWidgetPart013.integerArrayState0239[1 + integerArgument7 - 80] * 18 + 40);
+          integerLocal3 = Bzip2State.computeInteger1754(23841, 80, SceneWidgetPart013.integerArrayState0239[1 + integerArgument7 - 80] * 18 + 40);
           RenderingSupport002.performAction0243(integerArgument6, 2, 6, integerArgument4, 1 + (72 + integerArgument3), 2, -2);
           RenderingSupport002.performAction0243(integerArgument6, 2, 12, integerArgument4, 1 + (integerArgument3 + 54), 2, integerArgument5);
           RenderingSupport002.performAction0243(integerArgument6, 2, 8, integerArgument4, 36 + (integerArgument3 + 1), 2, -1);

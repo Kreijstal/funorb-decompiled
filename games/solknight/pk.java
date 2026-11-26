@@ -517,7 +517,7 @@ final class pk extends kj {
     }
 
     pk(oe param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, hj.a((byte) -65));
+        super(param1, Bzip2State.a((byte) -65));
         try {
           this.field_V = param1;
           this.field_U = param0;

@@ -27,7 +27,7 @@ final class gk {
             return false;
           }
           dupTemp$1 = lk.correctedCurrentTimeMillis(0);
-          td.field_b = dupTemp$1;
+          FrameTimer.field_b = dupTemp$1;
           wi.field_q = dupTemp$1;
           if (fk.field_F.status != 1) {
             lj.field_z = ng.field_j;

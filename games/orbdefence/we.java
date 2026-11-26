@@ -118,7 +118,7 @@ final class we extends ta implements ai {
             var3_int = param0.length;
             this.field_D = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_D[var4_int] = g.a((CharSequence) ((Object) param0[var4_int]), (byte) -119).replace(' ', ' ');
+              this.field_D[var4_int] = NanoFrameTimer.a((CharSequence) ((Object) param0[var4_int]), (byte) -119).replace(' ', ' ');
             }
             var4 = new qc(lm.field_f, 0, 1);
             this.field_C = new s[1 + var3_int];

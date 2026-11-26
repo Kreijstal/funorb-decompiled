@@ -121,7 +121,7 @@ final class ni extends di {
             if (param0 > -115) {
               keyDown = (boolean[]) null;
             }
-            sj.a(CachedArchiveSource.b((byte) 77), new Object[]{new Integer(param1)}, 7648, "resizing");
+            JavaScriptBridge.callWithArguments(CachedArchiveSource.b((byte) 77), new Object[]{new Integer(param1)}, 7648, "resizing");
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

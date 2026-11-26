@@ -416,7 +416,7 @@ final class LobbyUpdateHandler {
           if (var3_int >= 12) {
             return false;
           }
-          if (!PopupMenuBuilder.isNameSeparator((byte) 64, param0)) {
+          if (!Bzip2State.isNameSeparator((byte) 64, param0)) {
             return true;
           }
           return (var3_int != 0);

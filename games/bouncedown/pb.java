@@ -129,10 +129,10 @@ final class pb {
             return;
           }
           if (kj.field_i < this.field_i) {
-            el.field_e = (-kj.field_i + this.field_i) / 2;
+            NanoFrameTimer.field_e = (-kj.field_i + this.field_i) / 2;
           } else {
             if (this.field_i > 0) {
-              el.field_e = 0;
+              NanoFrameTimer.field_e = 0;
             }
           }
           if (kj.field_i == this.field_q &&
@@ -158,10 +158,10 @@ final class pb {
           return;
         }
         if (kj.field_i < this.field_i) {
-          el.field_e = (-kj.field_i + this.field_i) / 2;
+          NanoFrameTimer.field_e = (-kj.field_i + this.field_i) / 2;
         } else {
           if (this.field_i > 0) {
-            el.field_e = 0;
+            NanoFrameTimer.field_e = 0;
           }
         }
         if (kj.field_i != this.field_q) {
@@ -235,7 +235,7 @@ final class pb {
             }
           }
           if (0 < this.field_i) {
-            el.field_e = (this.field_i - kj.field_i) / 2;
+            NanoFrameTimer.field_e = (this.field_i - kj.field_i) / 2;
           }
           return;
         }
@@ -251,7 +251,7 @@ final class pb {
             }
           }
           if (0 < this.field_i) {
-            el.field_e = (this.field_i - kj.field_i) / 2;
+            NanoFrameTimer.field_e = (this.field_i - kj.field_i) / 2;
           }
           return;
         }
@@ -271,7 +271,7 @@ final class pb {
           }
         }
         if (0 < this.field_i) {
-          el.field_e = (this.field_i - kj.field_i) / 2;
+          NanoFrameTimer.field_e = (this.field_i - kj.field_i) / 2;
         }
         return;
     }

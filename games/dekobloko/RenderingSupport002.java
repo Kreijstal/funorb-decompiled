@@ -151,7 +151,7 @@ final class RenderingSupport002 {
         }
         if ((!(RenderingSupport001.integerState0064 <= 0) ||
           !(MixedSupport121.integerState0778 <= 0)) &&
-          MixedSupport026.booleanState0028) {
+          NanoFrameTimer.booleanState0028) {
           SoftwareRaster.darkenRectangleHalf(0, 0, SoftwareRaster.integerState0285, RichTextLayout.sceneWidgetState0021.integerState0886);
           MixedSupport083.sceneWidgetState0087.performAction1767(1141039778, booleanArgument1);
         }
@@ -269,11 +269,11 @@ final class RenderingSupport002 {
           integerLocal10 = integerArgument5 * integerLocal5 + (integerArgument6 - integerArgument5) * (integerLocal1 - integerArgument3) + (integerArgument6 - integerArgument5 >> 1);
           integerLocal11 = integerArgument7 * integerLocal5 + (integerArgument8 - integerArgument7) * (integerLocal1 - integerArgument3) + (integerArgument8 - integerArgument7 >> 1);
           integerLocal12 = integerLocal11 - integerLocal10;
-          integerLocal13 = MixedSupport141.computeInteger1754(23841, integerLocal5, integerLocal10 + (integerLocal5 >> 1));
+          integerLocal13 = Bzip2State.computeInteger1754(23841, integerLocal5, integerLocal10 + (integerLocal5 >> 1));
           if (integerLocal13 < SoftwareRaster.integerState0280) {
             integerLocal13 = SoftwareRaster.integerState0280;
           }
-          integerLocal14 = MixedSupport141.computeInteger1754(23841, integerLocal5, integerLocal11 + (integerLocal5 >> 1));
+          integerLocal14 = Bzip2State.computeInteger1754(23841, integerLocal5, integerLocal11 + (integerLocal5 >> 1));
           if (integerLocal14 > SoftwareRaster.integerState0283) {
             integerLocal14 = SoftwareRaster.integerState0283;
           }

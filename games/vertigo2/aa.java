@@ -264,7 +264,7 @@ final class aa extends UiPanel {
               }
               var8 = (String) null;
               tf.a(ui.field_g, ea.field_b, 47, (String) null, param1, var5);
-              ug.a(ui.field_g, param2 - 32771, var5, ie.field_Nb, ea.field_b);
+              FrameTimer.a(ui.field_g, param2 - 32771, var5, ie.field_Nb, ea.field_b);
               bm.g(param2 - 32768);
               kk.a((byte) 43);
             }

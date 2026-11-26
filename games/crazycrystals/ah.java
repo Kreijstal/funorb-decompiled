@@ -366,7 +366,7 @@ final class ah {
           var7 = CrazyCrystals.field_B;
           try {
             try {
-              var3 = (String) (hi.a(param1, "getcookies", -92));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", -92));
               if (!param0) {
                 var8 = (java.applet.Applet) null;
                 ah.a(33, (String) null, (java.applet.Applet) null);
@@ -545,7 +545,7 @@ final class ah {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              hi.a("document.cookie=\"" + var5Lifetime6 + "\"", param2, (byte) -98);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", param2, (byte) -98);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

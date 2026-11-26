@@ -76,7 +76,7 @@ final class DiskCacheWorker implements Runnable {
               var3_int = 1;
               j.field_e = false;
             }
-            se.a(hl.d((byte) -85), ga.field_p, gk.a(-1917), var3_int != 0, (byte) -81);
+            se.a(hl.d((byte) -85), ga.field_p, Bzip2State.a(-1917), var3_int != 0, (byte) -81);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

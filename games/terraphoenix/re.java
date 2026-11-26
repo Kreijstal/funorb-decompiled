@@ -277,7 +277,7 @@ final class re {
                   this.field_o = 50;
                   this.field_l = 40;
                   this.field_g[0] = 80;
-                  this.field_r = vc.field_b;
+                  this.field_r = FrameTimer.field_b;
                   this.field_p = 2;
                   this.field_g[1] = 0;
                   this.field_b[0] = 70;

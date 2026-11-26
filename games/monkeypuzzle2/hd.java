@@ -20,7 +20,7 @@ final class hd extends a {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(uf.a(param1, (byte) 103, var2), "_top");
+              param1.getAppletContext().showDocument(NanoFrameTimer.a(param1, (byte) 103, var2), "_top");
               if (param0) {
                 return;
               }

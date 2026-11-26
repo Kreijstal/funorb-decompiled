@@ -60,7 +60,7 @@ final class dh extends IntrusiveNode {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + rb.a(qg.correctedCurrentTimeMillis(false) + 1000L * param1, (byte) -101) + "; Max-Age=" + param1;
               }
-              sj.a(param2, "document.cookie=\"" + var7Lifetime4 + "\"", param4 ^ -23611);
+              JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var7Lifetime4 + "\"", param4 ^ -23611);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;
@@ -189,7 +189,7 @@ final class dh extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              sj.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", -24531);
+              JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var5Lifetime6 + "\"", -24531);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

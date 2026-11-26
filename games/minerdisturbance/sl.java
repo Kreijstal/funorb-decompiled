@@ -171,7 +171,7 @@ final class sl extends IntrusiveNode {
               var32 = 65280 & var30;
               var33 = (var28 * var31 & -16711816) >>> 8 | (var28 * var32 & 16711867) >>> 8;
               var33 = var33 + var29 * 65793;
-              cn.a(var27, ~param0, var22, var25, var26, var23, var24, (16711422 & var33) >> 1);
+              Bzip2State.a(var27, ~param0, var22, var25, var26, var23, var24, (16711422 & var33) >> 1);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -221,23 +221,23 @@ final class sl extends IntrusiveNode {
     }
 
     final static vi e(int param0) {
-        if (cn.field_v == null) {
-          cn.field_v = new vi();
-          cn.field_v.a(65793, bn.field_d);
-          cn.field_v.field_n = 14;
-          cn.field_v.field_i = 0;
-          cn.field_v.field_l = 4;
-          cn.field_v.field_r = 6;
-          cn.field_v.field_g = 7697781;
-          cn.field_v.field_k = 2763306;
-          cn.field_v.field_p = field_q;
-          cn.field_v.field_d = 5;
+        if (Bzip2State.field_v == null) {
+          Bzip2State.field_v = new vi();
+          Bzip2State.field_v.a(65793, bn.field_d);
+          Bzip2State.field_v.field_n = 14;
+          Bzip2State.field_v.field_i = 0;
+          Bzip2State.field_v.field_l = 4;
+          Bzip2State.field_v.field_r = 6;
+          Bzip2State.field_v.field_g = 7697781;
+          Bzip2State.field_v.field_k = 2763306;
+          Bzip2State.field_v.field_p = field_q;
+          Bzip2State.field_v.field_d = 5;
         }
         if (param0 <= 91) {
           pb var2 = (pb) null;
           sl.a(24, -111, 101, 55, (pb) null, -25, -121, -35);
         }
-        return cn.field_v;
+        return Bzip2State.field_v;
     }
 
     final static hn a(byte param0, String param1, String param2, boolean param3) {

@@ -1818,7 +1818,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "waitingfor_extradata");
                 if (null != var2) {
-                  bd.field_I = ea.a(0, var2);
+                  Bzip2State.field_I = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "waitingfor_languages");
                 if (var2 != null) {

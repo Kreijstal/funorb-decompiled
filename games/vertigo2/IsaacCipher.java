@@ -8,7 +8,7 @@ final class IsaacCipher {
     private int field_c;
     private int field_k;
     private int field_j;
-    static ug field_i;
+    static FrameTimer field_i;
     static String field_g;
     static String[][] field_e;
     static String[] field_h;

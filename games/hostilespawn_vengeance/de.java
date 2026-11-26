@@ -53,7 +53,7 @@ final class de extends IntrusiveNode {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (a.a("getcookies", param1, -126));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, -126));
               var5 = cj.a(var4, -128, ';');
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

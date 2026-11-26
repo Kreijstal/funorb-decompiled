@@ -114,7 +114,7 @@ final class qe extends g implements cl, qh {
             try {
               var2 = "tuhstatbut";
               var4 = 75 / ((-12 - param1) / 46);
-              var3 = (String) (vh.a("getcookies", -12151, param0));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", -12151, param0));
               var5 = rh.a(';', var3, -44);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

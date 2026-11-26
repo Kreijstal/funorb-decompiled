@@ -133,7 +133,7 @@ class ih extends fd {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_28_0 = sg.field_c;
+                    stackIn_28_0 = FrameTimer.field_c;
                     return stackIn_28_0;
                   }
                 }

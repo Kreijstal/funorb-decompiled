@@ -210,7 +210,7 @@ final class ii extends IntrusiveNode {
             ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
             return;
           }
-          if (j.field_q > param0) {
+          if (Bzip2State.field_q > param0) {
             ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
             return;
           }
@@ -229,7 +229,7 @@ final class ii extends IntrusiveNode {
           ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
           return;
         }
-        if (j.field_q > param0) {
+        if (Bzip2State.field_q > param0) {
           ji.a(param4, param6, param1, param2, param7, 105, param0, param3);
           return;
         }

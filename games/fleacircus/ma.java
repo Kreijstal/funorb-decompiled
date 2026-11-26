@@ -34,7 +34,7 @@ final class ma {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (eb.a("getcookies", param1, -250));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, -250));
               var4 = m.a(';', 119, var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

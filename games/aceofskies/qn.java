@@ -38,7 +38,7 @@ final class qn {
           return ks.field_c + " - " + uj.field_b.a("commonui", (byte) -79) + "%";
         }
         if (!cf.field_f.b((byte) 106)) {
-          return bd.field_I;
+          return Bzip2State.field_I;
         }
         if (param0 >= -88) {
           qn.clearStaticReferences(82);

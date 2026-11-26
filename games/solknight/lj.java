@@ -1545,7 +1545,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_email_confirm", param0 ^ 26704);
                 if (var2 != null) {
-                  rj.field_a = Archive.a(true, var2);
+                  FrameTimer.field_a = Archive.a(true, var2);
                 }
                 var2 = vd.a("create_age", 4);
                 if (var2 != null) {
@@ -1716,7 +1716,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("create_username_available", 4);
                 if (var2 != null) {
-                  hj.field_o = Archive.a(true, var2);
+                  Bzip2State.field_o = Archive.a(true, var2);
                 }
                 var2 = vd.a("create_alert_namelength", 4);
                 if (null != var2) {
@@ -3242,7 +3242,7 @@ final class lj extends WidgetContainer implements ka {
           kb.field_f = param3;
           ke.field_H = param2;
           ProxySocketConnector.a(SoftwareRasterizer.field_a / 2, SoftwareRasterizer.field_d / 2, -120);
-          rj.a(param3.field_s + param3.field_m, param3.field_m, (byte) 81, param2.field_s + param2.field_m, param2.field_m);
+          FrameTimer.a(param3.field_s + param3.field_m, param3.field_m, (byte) 81, param2.field_s + param2.field_m, param2.field_m);
           if (param1 < 124) {
             lj.a(40, (byte) -107, (BitmapFont) null, (BitmapFont) null);
           }

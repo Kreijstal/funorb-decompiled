@@ -158,9 +158,9 @@ abstract class GameShell extends GameApplet {
           if (0 != np.field_Lb) {
             qc.field_B = BufferedSocket.a(eh.field_f, 125);
           }
-          ke.field_b = ug.a(mp.field_d, false, true, false, 1);
-          la.field_e = ug.a(rh.field_F, false, true, false, 1);
-          kb.field_b = ug.a(mk.field_G, false, true, false, 1);
+          ke.field_b = FrameTimer.a(mp.field_d, false, true, false, 1);
+          la.field_e = FrameTimer.a(rh.field_F, false, true, false, 1);
+          kb.field_b = FrameTimer.a(mk.field_G, false, true, false, 1);
           qc.field_A = 2;
           ac.field_G = la.field_e;
           ml.field_y = ke.field_b;
@@ -439,7 +439,7 @@ abstract class GameShell extends GameApplet {
           discarded$5 = this.a(stackIn_12_1, (byte) stackIn_12_2, stackIn_13_3);
         } else {
           if (10 <= qc.field_A) {
-            if (nl.a((byte) 107)) {
+            if (NanoFrameTimer.a((byte) 107)) {
               if (0 != hn.field_w) {
                 UiWidget.a((byte) -80, uo.field_h);
               } else {

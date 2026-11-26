@@ -176,7 +176,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               field_o = (RgbSprite[]) null;
             }
             try {
-              oa.a(true, kk.c(-14047), "loggedout");
+              JavaScriptBridge.callWithoutArguments(true, kk.c(-14047), "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -226,7 +226,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           var6 = this;
           synchronized (var6) {
-            vi.field_j = rk.field_m;
+            vi.field_j = NanoFrameTimer.field_m;
           }
           this.a(false);
           return;
@@ -352,7 +352,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rk.field_m = false;
+          NanoFrameTimer.field_m = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -426,7 +426,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (param0 != 467) {
             field_b = (int[]) null;
           }
-          rk.field_m = true;
+          NanoFrameTimer.field_m = true;
           vi.field_j = true;
           SectorCacheStore.field_b = true;
           rl.field_O = false;
@@ -542,7 +542,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rk.field_m = true;
+          NanoFrameTimer.field_m = true;
           SectorCacheStore.field_b = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -690,7 +690,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    jj.field_c = SecondaryNodeDeque.field_a.a((byte) 91, DualLinkNode.field_h);
+                    jj.field_c = SecondaryNodeDeque.field_a.waitAndCountTicks((byte) 91, DualLinkNode.field_h);
                     stackIn_102_0 = 0;
                   }
                   var3 = stackIn_102_0;

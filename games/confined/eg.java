@@ -209,7 +209,7 @@ final class eg {
             if ((decompiledFrameRemainder0) &&
               (2 == param1 ||
               var5 != 0)) {
-              var22 = ij.a(0, '#', eb.field_j);
+              var22 = ij.a(0, '#', Bzip2State.field_j);
               this.a(var22[2], 0, 320, 0, var22[0], var22[1]);
               this.a(0, 400, (RgbSprite) null, 0, 0);
               if (var5 != 0) {
@@ -930,7 +930,7 @@ final class eg {
             if (decompiledFrameRemainder1) {
               if (this.field_h != 7) {
                 if (this.field_h != 10) {
-                  var9_int = jg.field_f[this.field_h - 6];
+                  var9_int = FrameTimer.field_f[this.field_h - 6];
                   SoftwareRasterizer.clearRaster();
                   var10 = (int)(0.5 + 64.0 * uh.field_e[var9_int]);
                   var11_int = 64 - var10 >> 1;

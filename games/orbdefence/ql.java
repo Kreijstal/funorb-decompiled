@@ -117,11 +117,11 @@ final class ql {
         }
     }
 
-    final static aa a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != 65280) {
-          return (aa) null;
+          return (FrameTimer) null;
         }
-        return (aa) ((Object) new g());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     public static void clearStaticReferences(byte param0) {

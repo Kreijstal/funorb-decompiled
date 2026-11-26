@@ -80,7 +80,7 @@ final class ob {
               }
               var10 = param1.getParameter("cookieprefix");
               var3 = var10 + "settings";
-              var4 = (String) (pb.a("getcookies", param1, true));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, true));
               var5 = ki.a((byte) -115, ';', var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

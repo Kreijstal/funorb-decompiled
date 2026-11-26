@@ -11166,10 +11166,10 @@
     {
       "symbol": "M:hg.a(B)J",
       "originalName": "a",
-      "to": "nanosUntilNextTick",
-      "evidence": "Abstract remaining time before the next tick.",
+      "to": "getDelayMillis",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:FrameClock.nanosUntilNextTick(B)J"
+      "renamedSymbol": "M:FrameClock.getDelayMillis(B)J"
     },
     {
       "symbol": "M:hg.a(BI)I",
@@ -15734,10 +15734,10 @@
     {
       "symbol": "M:lj.a(B)J",
       "originalName": "a",
-      "to": "nanosUntilNextTick",
-      "evidence": "Abstract remaining time before the next tick. Resolved override family.",
+      "to": "getDelayMillis",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:NanoFrameClock.nanosUntilNextTick(B)J"
+      "renamedSymbol": "M:NanoFrameClock.getDelayMillis(B)J"
     },
     {
       "symbol": "M:lj.a(I)V",
@@ -182634,7 +182634,7 @@
     },
     {
       "symbol": "L:lj.a(B)J#0",
-      "renamedSymbol": "L:NanoFrameClock.nanosUntilNextTick(B)J#0",
+      "renamedSymbol": "L:NanoFrameClock.getDelayMillis(B)J#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -297694,9 +297694,9 @@
     },
     {
       "symbol": "M:hg.a(B)J",
-      "renamedSymbol": "M:FrameClock.nanosUntilNextTick(B)J",
+      "renamedSymbol": "M:FrameClock.getDelayMillis(B)J",
       "originalName": "a",
-      "renamedName": "nanosUntilNextTick",
+      "renamedName": "getDelayMillis",
       "declaration": {
         "file": "hg.java",
         "start": 5610,
@@ -304877,9 +304877,9 @@
     },
     {
       "symbol": "M:lj.a(B)J",
-      "renamedSymbol": "M:NanoFrameClock.nanosUntilNextTick(B)J",
+      "renamedSymbol": "M:NanoFrameClock.getDelayMillis(B)J",
       "originalName": "a",
-      "renamedName": "nanosUntilNextTick",
+      "renamedName": "getDelayMillis",
       "declaration": {
         "file": "lj.java",
         "start": 883,
@@ -346325,7 +346325,7 @@
     },
     {
       "symbol": "P:hg.a(B)J#0",
-      "renamedSymbol": "P:FrameClock.nanosUntilNextTick(B)J#0",
+      "renamedSymbol": "P:FrameClock.getDelayMillis(B)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -364563,7 +364563,7 @@
     },
     {
       "symbol": "P:lj.a(B)J#0",
-      "renamedSymbol": "P:NanoFrameClock.nanosUntilNextTick(B)J#0",
+      "renamedSymbol": "P:NanoFrameClock.getDelayMillis(B)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -520506,7 +520506,7 @@
       "original": "hg.java",
       "renamed": "FrameClock.java",
       "inputSha256": "31b0f21d04b57209eee5e4740229ce8ca4a340e539b3a75dcda1c676b60fb342",
-      "outputSha256": "26c56caafecef77bc82df17e9d66d9eddbfc778c3f1f4be8eaf8757e130594f7",
+      "outputSha256": "abc0e2186da58bec3a5776389967f2c5f0e3e700d00bf9decfd38cad848322d4",
       "edits": [
         {
           "start": 53,
@@ -520548,7 +520548,7 @@
           "end": 257,
           "symbol": "M:hg.a(B)J",
           "original": "a",
-          "renamed": "nanosUntilNextTick"
+          "renamed": "getDelayMillis"
         },
         {
           "start": 305,
@@ -521234,7 +521234,7 @@
           "end": 5611,
           "symbol": "M:hg.a(B)J",
           "original": "a",
-          "renamed": "nanosUntilNextTick"
+          "renamed": "getDelayMillis"
         },
         {
           "start": 5644,
@@ -617395,7 +617395,7 @@
       "original": "lj.java",
       "renamed": "NanoFrameClock.java",
       "inputSha256": "91bab20026ad71b401a781edaecaf5661a4705da6baff08df7747d2afd13cd0e",
-      "outputSha256": "13b06cad56234324d28b57d81d06d7c28d700319a079d72c98e35b2b5c47b38b",
+      "outputSha256": "53222010a3fd8fa6c969d8e9d90488acf02de682640addb73daf6d6b31e4835d",
       "edits": [
         {
           "start": 50,
@@ -617472,7 +617472,7 @@
           "end": 884,
           "symbol": "M:lj.a(B)J",
           "original": "a",
-          "renamed": "nanosUntilNextTick"
+          "renamed": "getDelayMillis"
         },
         {
           "start": 943,
@@ -929412,10 +929412,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/arcanistsmulti"
     },
-    "rulesSha256": "e99f2c28bae3479ac18cf08b4ab069bcd77949937c27c79c8afdfdc09223400a",
+    "rulesSha256": "21bc873dc5a4744a2628bbd2ebaabb61f9c10acd68dc128f1ceb7a8c1d9ab19d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "cb35eeeb97345181e40620f0f0948dfb771d6390b0699c56900b5f91559c8df0",
-    "outputTreeSha256": "adeb5d868f1c1f8796c1a2774609ad5aed79daa61c8fc3e8702dd3215268c2d8",
+    "outputTreeSha256": "9d9cd2db002289dd435f5b8dbfb6cee726658f8c1106d4a4a244dc8ed054de0d",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

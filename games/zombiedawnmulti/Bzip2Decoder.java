@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2Decoder {
-    private static PopupMenuBuilder field_a;
+    private static Bzip2State field_a;
 
-    private final static void buildSymbolMap(PopupMenuBuilder param0) {
+    private final static void buildSymbolMap(Bzip2State param0) {
         int var1 = 0;
         param0.field_x = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -60,11 +60,11 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static byte readBit(PopupMenuBuilder param0) {
+    private final static byte readBit(Bzip2State param0) {
         return (byte)Bzip2Decoder.readBits(1, param0);
     }
 
-    private final static void decodeBlocks(PopupMenuBuilder param0) {
+    private final static void decodeBlocks(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -436,7 +436,7 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static void emitBlock(PopupMenuBuilder param0) {
+    private final static void emitBlock(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -567,7 +567,7 @@ final class Bzip2Decoder {
         return;
     }
 
-    private final static byte readByte(PopupMenuBuilder param0) {
+    private final static byte readByte(Bzip2State param0) {
         return (byte)Bzip2Decoder.readBits(8, param0);
     }
 
@@ -599,7 +599,7 @@ final class Bzip2Decoder {
         field_a = null;
     }
 
-    private final static int readBits(int param0, PopupMenuBuilder param1) {
+    private final static int readBits(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_q < param0) {
           param1.field_o = param1.field_o << 8 | param1.field_r[param1.field_D] & 255;
@@ -616,6 +616,6 @@ final class Bzip2Decoder {
     }
 
     static {
-        field_a = new PopupMenuBuilder();
+        field_a = new Bzip2State();
     }
 }

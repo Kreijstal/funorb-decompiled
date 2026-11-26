@@ -37,7 +37,7 @@ final class h extends hl {
               if (param2.length() == 0) {
                 var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              vh.a(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -12300);
+              JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -12300);
             } catch (Throwable throwable) {
             }
             tj.a(true, param0);

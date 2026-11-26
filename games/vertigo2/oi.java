@@ -24,7 +24,7 @@ final class oi {
         if (param2 < 119) {
           return;
         }
-        SocketConnector.a(param3, NetworkArchiveRequest.field_G, 2, nl.field_k, param1, param0, Archive.field_f);
+        SocketConnector.a(param3, NetworkArchiveRequest.field_G, 2, NanoFrameTimer.field_k, param1, param0, Archive.field_f);
     }
 
     static {

@@ -128,7 +128,7 @@ final class dd extends rj {
         if (param1 != 8187) {
           field_C = (int[]) null;
         }
-        dc.field_x.h(this.field_D + var4 + 10, var5);
+        Bzip2State.field_x.h(this.field_D + var4 + 10, var5);
         ml.field_a.h(var4 + (10 + var6Lifetime3), 4 + var5);
     }
 

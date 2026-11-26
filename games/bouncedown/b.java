@@ -148,14 +148,14 @@ final class b {
               if (0 >= ui.field_m &&
                 !vk.field_a) {
                 try {
-                  ac.a(DiskCacheWorker.b(0), "unzap", -31185);
+                  JavaScriptBridge.callWithoutArguments(DiskCacheWorker.b(0), "unzap", -31185);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ac.a(true, new Object[]{pa.a(l.field_b, 7)}, DiskCacheWorker.b(0), "zap");
+                  JavaScriptBridge.callWithArguments(true, new Object[]{pa.a(l.field_b, 7)}, DiskCacheWorker.b(0), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

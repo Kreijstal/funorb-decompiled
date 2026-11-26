@@ -307,15 +307,15 @@ final class MixedSupport138 {
           }
           stackSceneWidgetLocal8 = MixedSupport030.sceneWidgetState0023;
           stackBooleanLocal9 = false;
-          stackBooleanLocal10 = (booleanArgument2) && (!booleanArgument3) && (!MixedSupport026.booleanState0028);
+          stackBooleanLocal10 = (booleanArgument2) && (!booleanArgument3) && (!NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal8).performAction1772(stackBooleanLocal9, stackBooleanLocal10);
           stackSceneWidgetLocal11 = NetworkSupport008.sceneWidgetState0093;
           stackBooleanLocal12 = false;
-          stackBooleanLocal13 = (booleanArgument2) && (!booleanArgument3) && (!MixedSupport026.booleanState0028);
+          stackBooleanLocal13 = (booleanArgument2) && (!booleanArgument3) && (!NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal11).performAction1772(stackBooleanLocal12, stackBooleanLocal13);
           stackSceneWidgetLocal14 = MixedSupport083.sceneWidgetState0087;
           stackBooleanLocal15 = false;
-          stackBooleanLocal16 = (booleanArgument2) && (!booleanArgument3) && (MixedSupport026.booleanState0028);
+          stackBooleanLocal16 = (booleanArgument2) && (!booleanArgument3) && (NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal14).performAction1772(stackBooleanLocal15, stackBooleanLocal16);
           PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1574(false);
           if (integerArgument4 != 48) {

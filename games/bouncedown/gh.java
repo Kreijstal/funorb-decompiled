@@ -27,7 +27,7 @@ final class gh extends lc implements ki, rc, rf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new hb(20, param2, param3 + param4, 25, param0, false, 120, 3, sg.field_a, 16777215, param1);
+          var6 = new hb(20, param2, param3 + param4, 25, param0, false, 120, 3, FrameTimer.field_a, 16777215, param1);
           this.b(var6, true);
           stackIn_1_0 = var6.field_m;
           return stackIn_1_0;
@@ -186,7 +186,7 @@ final class gh extends lc implements ki, rc, rf {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new hb(20, param6, 120 + param2, 25, param3, false, 120, 3, sg.field_a, 16777215, param1);
+          var10 = new hb(20, param6, 120 + param2, 25, param3, false, 120, 3, FrameTimer.field_a, 16777215, param1);
           this.b(var10, true);
           var9 = new s(((wc) ((Object) param3)).a(true), param0, 126, param6 + var10.field_m, param2 + 50, param5);
           if (param4 != -123) {
@@ -267,10 +267,10 @@ final class gh extends lc implements ki, rc, rf {
         var3 = var3 + (this.a(qh.field_d, ml.field_c, var3, (byte) -121, this.field_E, 170) + 5);
         var3 = var3 + (5 + this.a(Platform.field_i, pe.field_b, var3, (byte) -121, this.field_F, 170));
         var3 = var3 + this.a(this.field_J, var3, 170, true, rj.field_h);
-        hb var4 = new hb(46, var3, -90 + this.field_k, 25, this.field_G, true, -120 + this.field_k, 5, qj.field_d, 11579568, ll.field_D);
+        hb var4 = new hb(46, var3, -90 + this.field_k, 25, this.field_G, true, -120 + this.field_k, 5, GzipDecompressor.field_d, 11579568, ll.field_D);
         this.b(var4, true);
         var3 = var3 + var4.field_m;
-        jd var5 = new jd(sg.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, sg.field_a.field_s, -1, 2147483647, true);
+        jd var5 = new jd(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
         this.field_L = new vc(var2, var5);
         this.field_L.field_q = "";
         this.field_L.a(Slime.field_b, 0, (byte) -77);
@@ -447,7 +447,7 @@ final class gh extends lc implements ki, rc, rf {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = new hb(20, param1, 120 + param2, 25, param0, false, 120, 3, sg.field_a, 16777215, param4);
+          var8 = new hb(20, param1, 120 + param2, 25, param0, false, 120, 3, FrameTimer.field_a, 16777215, param4);
           this.b(var8, true);
           var7 = new la(((wc) ((Object) param0)).a(param3));
           this.b(var7, true);

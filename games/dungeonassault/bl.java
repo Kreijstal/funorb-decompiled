@@ -128,15 +128,15 @@ final class bl {
           qh.field_q = oh.a(hj.field_Z, "", 11091, "scrollbar_slider");
           tn.field_W = bo.field_Kb.d();
           tn.field_W.f();
-          dc.field_x = ud.field_y.d();
-          dc.field_x.f();
+          Bzip2State.field_x = ud.field_y.d();
+          Bzip2State.field_x.f();
           ml.field_a = qh.field_q.d();
           ml.field_a.f();
           AchievementIconEntry.field_q = dd.a((byte) -112, 4, bo.field_Kb);
           qf.field_f = dd.a((byte) -112, 4, ud.field_y);
           ji.field_G = dd.a((byte) -112, 4, qh.field_q);
           field_o = dd.a((byte) -112, 4, tn.field_W);
-          go.field_S = dd.a((byte) -112, 4, dc.field_x);
+          go.field_S = dd.a((byte) -112, 4, Bzip2State.field_x);
           im.field_m = dd.a((byte) -112, 4, ml.field_a);
           var19 = oh.a(hj.field_Z, "", 11091, "cracked_bar");
           var2 = var19.d();

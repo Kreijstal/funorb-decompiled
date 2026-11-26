@@ -1655,7 +1655,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_alert_invalidage");
                 if (null != var2) {
-                  ok.field_d = ni.a((byte) -55, var2);
+                  Bzip2State.field_d = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_alert_yearrange");
                 if (var2 != null) {
@@ -3096,7 +3096,7 @@ abstract class kb {
             stackIn_3_0 = el.field_b;
             return stackIn_3_0;
           }
-          var3 = ok.b((byte) -100);
+          var3 = Bzip2State.b((byte) -100);
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3.length <= var4))) {

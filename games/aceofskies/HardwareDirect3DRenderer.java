@@ -684,7 +684,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
     }
 
     private final static int a(as param0, boolean param1) {
-        if (param0 == bd.field_C) {
+        if (param0 == Bzip2State.field_C) {
           return 2;
         }
         if (param0 == ru.field_a) {

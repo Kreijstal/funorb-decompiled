@@ -243,7 +243,7 @@ final class ca {
                       if (var7.field_Lb != null &&
                         !am.a(false, pi.field_d.field_i) &&
                         !qf.field_b) {
-                        if (!kh.field_o) {
+                        if (!NanoFrameTimer.field_o) {
                           var17 = pi.field_d;
                           var18 = oc.a(bc.field_c, new String[]{var16}, (byte) -97);
                           var17.field_b.a((byte) -12, var18, 8);

@@ -295,7 +295,7 @@ final class p {
         if (null == field_d) {
           return false;
         }
-        if (da.field_r != dh.field_bb) {
+        if (Bzip2State.field_r != dh.field_bb) {
           return false;
         }
         return true;

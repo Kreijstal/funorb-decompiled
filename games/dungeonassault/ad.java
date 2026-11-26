@@ -263,7 +263,7 @@ final class ad {
               var37 = var37 + var31 * 65793;
               var38 = var38 + 65793 * var32;
               var39 = var39 + var33 * 65793;
-              fg.a(var27, var39 & 255, var25, var23, 255 & var37 >> 8, var39 >> 16, var38 >> 16, var39 >> 8 & 255, (var38 & 65466) >> 8, var37 >> 16, 255 & var38, var22, (byte) -86, 255 & var37, var24, var26);
+              NanoFrameTimer.a(var27, var39 & 255, var25, var23, 255 & var37 >> 8, var39 >> 16, var38 >> 16, var39 >> 8 & 255, (var38 & 65466) >> 8, var37 >> 16, 255 & var38, var22, (byte) -86, 255 & var37, var24, var26);
             }
             var44++;
           }

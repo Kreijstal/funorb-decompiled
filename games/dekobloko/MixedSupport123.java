@@ -89,7 +89,7 @@ final class MixedSupport123 {
     }
 
     final static void performAction1616(byte byteArgument1) {
-        UiComponentPart018.stringArrayState0021[4] = MixedSupport026.stringState0128;
+        UiComponentPart018.stringArrayState0021[4] = NanoFrameTimer.stringState0128;
         UiComponentPart018.stringArrayState0021[7] = UiComponentPart022.stringState0401;
         UiComponentPart018.stringArrayState0021[1] = UiComponentPart030.stringState0520;
         UiComponentPart018.stringArrayState0021[2] = MixedSupport124.stringState0545;

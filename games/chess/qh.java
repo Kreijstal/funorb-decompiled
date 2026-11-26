@@ -66,8 +66,8 @@ final class qh {
         var9 = Chess.field_G;
         try {
           kb.field_S = true;
-          gm.field_f = param2;
-          if (gm.field_f == 0) {
+          FrameTimer.field_f = param2;
+          if (FrameTimer.field_f == 0) {
             var3_int = vm.a(qi.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = 3 + var3_int;
             cb.field_k = new int[var4];
@@ -86,7 +86,7 @@ final class qh {
             ka.field_g[var4 - 1] = sj.field_m;
             cb.field_k[var4 - 1] = 1;
             fi.field_c[1] = 5;
-          } else if (gm.field_f == 1) {
+          } else if (FrameTimer.field_f == 1) {
             var3_int = vm.a(qi.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = var3_int + 2;
             cb.field_k = new int[var4];
@@ -102,8 +102,8 @@ final class qh {
             ka.field_g[var4 - 1] = sj.field_m;
             cb.field_k[var4 - 1] = 0;
             fi.field_c[0] = 5;
-          } else if (gm.field_f != 2) {
-            if (3 == gm.field_f) {
+          } else if (FrameTimer.field_f != 2) {
+            if (3 == FrameTimer.field_f) {
               if (oc.field_l.privilegedTasksEnabled) {
                 var3_int = vm.a(hl.field_a, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               } else {
@@ -123,7 +123,7 @@ final class qh {
               ka.field_g[-1 + var4] = sj.field_m;
               cb.field_k[-1 + var4] = 0;
               fi.field_c[0] = 5;
-            } else if (gm.field_f == 4) {
+            } else if (FrameTimer.field_f == 4) {
               var3_int = vm.a(le.field_c, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               var4 = var3_int + 2;
               cb.field_k = new int[var4];
@@ -140,7 +140,7 @@ final class qh {
               cb.field_k[var4 - 1] = 0;
               fi.field_c[0] = 5;
             } else {
-              if (gm.field_f != 5) {
+              if (FrameTimer.field_f != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = vm.a(AccountCreationResultPanel.field_Gb, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
@@ -262,7 +262,7 @@ final class qh {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (2 == gm.field_f) {
+          if (2 == FrameTimer.field_f) {
             var10 = NodeHashTableIterator.field_a;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -314,7 +314,7 @@ final class qh {
             }
             var4Lifetime3++;
           }
-          if (gm.field_f == 2) {
+          if (FrameTimer.field_f == 2) {
             ol.field_R.a(-1, -1, param1, 0);
           } else {
             ol.field_R.a(0, fe.a(BufferedSocket.field_k, 1, rf.field_b), param1, 0);

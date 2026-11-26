@@ -148,7 +148,7 @@ final class cg {
             stackIn_26_2 = !(ec.field_l[var8Lifetime1] < 0);
             var9Lifetime1 = in.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (-1 != ec.field_l[var8Lifetime1]) {
-              var9Lifetime1 = var9Lifetime1 + 2 * gm.field_e;
+              var9Lifetime1 = var9Lifetime1 + 2 * FrameTimer.field_e;
             }
             if (var7Lifetime1 < var9Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
@@ -189,7 +189,7 @@ final class cg {
     final static void a(int param0, java.awt.Canvas param1) {
         try {
           if (~rm.field_Q == param0) {
-            ia.b((byte) -72);
+            Bzip2State.b((byte) -72);
           }
           ag.a(param0 + 11831, gg.field_n, ka.field_o, ih.field_T);
           kf.a(0, (byte) 98, param1, 0);

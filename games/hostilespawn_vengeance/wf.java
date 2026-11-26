@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wf {
-    private static ck field_a;
+    private static Bzip2State field_a;
 
-    private final static byte d(ck param0) {
+    private final static byte d(Bzip2State param0) {
         return (byte)wf.a(1, param0);
     }
 
-    private final static byte b(ck param0) {
+    private final static byte b(Bzip2State param0) {
         return (byte)wf.a(8, param0);
     }
 
-    private final static int a(int param0, ck param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_F < param0) {
           param1.field_G = param1.field_G << 8 | param1.field_s[param1.field_x] & 255;
@@ -28,7 +28,7 @@ final class wf {
         return var2;
     }
 
-    private final static void a(ck param0) {
+    private final static void a(Bzip2State param0) {
         int var1 = 0;
         param0.field_c = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -43,7 +43,7 @@ final class wf {
         field_a = null;
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -112,7 +112,7 @@ final class wf {
         }
     }
 
-    private final static void e(ck param0) {
+    private final static void e(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -176,8 +176,8 @@ final class wf {
         var24 = null;
         var25 = null;
         param0.field_r = 1;
-        if (lg.field_g == null) {
-          lg.field_g = new int[param0.field_r * 100000];
+        if (NanoFrameTimer.field_g == null) {
+          NanoFrameTimer.field_g = new int[param0.field_r * 100000];
         }
         var26 = 1;
         while (true) {
@@ -348,14 +348,14 @@ final class wf {
                 param0.field_I[var4] = param0.field_I[var4] + param0.field_I[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(lg.field_g[var4] & 255);
+                var1 = (byte)(NanoFrameTimer.field_g[var4] & 255);
                 dupTemp$1 = param0.field_I[var1 & 255];
-                lg.field_g[dupTemp$1] = lg.field_g[dupTemp$1] | var4 << 8;
+                NanoFrameTimer.field_g[dupTemp$1] = NanoFrameTimer.field_g[dupTemp$1] | var4 << 8;
                 param0.field_I[var1 & 255] = param0.field_I[var1 & 255] + 1;
               }
-              param0.field_g = lg.field_g[param0.field_v] >> 8;
+              param0.field_g = NanoFrameTimer.field_g[param0.field_v] >> 8;
               param0.field_J = 0;
-              param0.field_g = lg.field_g[param0.field_g];
+              param0.field_g = NanoFrameTimer.field_g[param0.field_g];
               param0.field_l = (byte)(param0.field_g & 255);
               param0.field_g = param0.field_g >> 8;
               param0.field_J = param0.field_J + 1;
@@ -419,7 +419,7 @@ final class wf {
               }
               dupTemp$0 = param0.field_z[var1 & 255] & 255;
               param0.field_k[dupTemp$0] = param0.field_k[dupTemp$0] + 1;
-              lg.field_g[var14] = param0.field_z[var1 & 255] & 255;
+              NanoFrameTimer.field_g[var14] = param0.field_z[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -476,7 +476,7 @@ final class wf {
             var1 = param0.field_z[param0.field_f[param0.field_K[0]] & 255];
             param0.field_k[var1 & 255] = param0.field_k[var1 & 255] + var15;
             while (var15 > 0) {
-              lg.field_g[var14] = var1 & 255;
+              NanoFrameTimer.field_g[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -484,7 +484,7 @@ final class wf {
         }
     }
 
-    private final static void c(ck param0) {
+    private final static void c(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -505,7 +505,7 @@ final class wf {
         var3 = param0.field_L;
         var4 = param0.field_J;
         var5 = param0.field_l;
-        var15 = lg.field_g;
+        var15 = NanoFrameTimer.field_g;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_g;
@@ -607,7 +607,7 @@ final class wf {
         param0.field_L = var3;
         param0.field_J = var4;
         param0.field_l = var5;
-        lg.field_g = var6;
+        NanoFrameTimer.field_g = var6;
         param0.field_g = var7;
         param0.field_a = var8;
         param0.field_B = var9;
@@ -616,6 +616,6 @@ final class wf {
     }
 
     static {
-        field_a = new ck();
+        field_a = new Bzip2State();
     }
 }

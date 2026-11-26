@@ -297,7 +297,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
         int integerLocal17;
         integerLocal14 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         objectLocal2 = null;
-        MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.nodeDequeState0034.clear(115);
+        NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.nodeDequeState0034.clear(115);
         integerLocal3 = 0;
         integerLocal4 = 0;
         for (integerLocal5 = MixedSupport058.integerState0317 - 1; integerLocal5 >= 0; integerLocal5--) {
@@ -340,7 +340,7 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
         while (integerLocal6 < MixedSupport058.integerState0317) {
           mixedSupport056Local9 = MixedSupport097.mixedSupport056ArrayState0001[integerLocal6];
           if (null != mixedSupport056Local9.sceneWidgetState0049) {
-            MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.performAction1768(mixedSupport056Local9.sceneWidgetState0049, -16834);
+            NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.performAction1768(mixedSupport056Local9.sceneWidgetState0049, -16834);
             mixedSupport056Local9.sceneWidgetState0049.performAction1764(mixedSupport056Local9.sceneWidgetState0049.computeInteger1770(true), 0, integerLocal15, integerArgument2, integerArgument4);
             integerLocal15 = integerLocal15 + integerArgument2;
             if (mixedSupport056Local9.sceneWidgetState0049.integerState0891 != 0) {
@@ -349,29 +349,29 @@ final class UiComponentPart033 extends UiComponentPart012 implements CallbackCon
           }
           integerLocal6++;
         }
-        integerLocal16 = -integerLocal15 + integerLocal4 + (MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 + MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915);
-        MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 = MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 - integerLocal16;
-        MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 = MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 + integerLocal16;
+        integerLocal16 = -integerLocal15 + integerLocal4 + (NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 + NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915);
+        NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 = NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 - integerLocal16;
+        NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 = NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 + integerLocal16;
         if (MixedSupport109.booleanState0162) {
-          MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 = integerLocal15;
+          NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 = integerLocal15;
         }
         if (MixedSupport109.booleanState0162) {
           MixedSupport109.booleanState0162 = false;
           ProxySocketFactory.booleanState0169 = true;
-          MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 = MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0089.integerState0915 - MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915;
-          MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0904 = 0;
+          NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 = NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0089.integerState0915 - NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915;
+          NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0904 = 0;
         }
-        MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 = integerLocal15 - MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915;
+        NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 = integerLocal15 - NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915;
         if (LoginCredentials.booleanState0085 &&
           UiComponentPart031.sceneWidgetState0116 != null) {
           ProxySocketFactory.booleanState0169 = true;
         }
-        integerLocal17 = -MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 - (MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 - MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0089.integerState0915);
+        integerLocal17 = -NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0895 - (NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0915 - NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0089.integerState0915);
         if (ProxySocketFactory.booleanState0169) {
-          MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0904 = -MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 + integerLocal17;
+          NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0904 = -NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 + integerLocal17;
         }
-        MixedSupport026.sceneWidgetPart008State0001.performAction1125(2 * integerArgument2 * integerArgument3, true, true, integerArgument2);
-        stackBooleanLocal1 = (integerLocal17 == MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 + MixedSupport026.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0904);
+        NanoFrameTimer.sceneWidgetPart008State0001.performAction1125(2 * integerArgument2 * integerArgument3, true, true, integerArgument2);
+        stackBooleanLocal1 = (integerLocal17 == NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0903 + NanoFrameTimer.sceneWidgetPart008State0001.sceneWidgetState0090.integerState0904);
         ProxySocketFactory.booleanState0169 = stackBooleanLocal1;
         return (MixedSupport056) (objectLocal2);
     }

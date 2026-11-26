@@ -267,7 +267,7 @@ final class nd extends IntrusiveNode {
     }
 
     final static void c(byte param0) {
-        vc.field_c = je.a(param0 ^ -16);
+        FrameTimer.field_c = je.a(param0 ^ -16);
         jl.field_I = new d();
         if (param0 != -11) {
           return;

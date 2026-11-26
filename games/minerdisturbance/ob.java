@@ -478,7 +478,7 @@ abstract class ob extends GameAppletShell {
         int var4 = rj.field_d - 1;
         byte[] var5 = new byte[var4];
         kj.field_a.a(var5, 113, var4, param0);
-        cn.a(bm.c(-98), bh.a(var5, 88), 11050, var3 != 0);
+        Bzip2State.a(bm.c(-98), bh.a(var5, 88), 11050, var3 != 0);
     }
 
     final static boolean l(int param0) {
@@ -528,7 +528,7 @@ abstract class ob extends GameAppletShell {
     }
 
     private final void g(int param0) {
-        String var2 = ca.b((byte) -124);
+        String var2 = NanoFrameTimer.b((byte) -124);
         tk.a(var2, bm.c(-116), (byte) -15);
         if (param0 != -18) {
           this.c((byte) 99);

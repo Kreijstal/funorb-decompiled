@@ -128,7 +128,7 @@ final class ck extends r {
           var7 = fleas.field_A ? 1 : 0;
           try {
             try {
-              var3 = (String) (eb.a("getcookies", param2, -250));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param2, -250));
               var4 = m.a(';', 121, var3);
               if (param0 != -5174) {
                 ck.clearStaticReferences((byte) 90);

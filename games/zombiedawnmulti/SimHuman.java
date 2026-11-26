@@ -741,7 +741,7 @@ abstract class SimHuman extends SimUnit {
         if (2 != var3 &&
           var3 != 4 &&
           6 != var3) {
-          return PopupMenuBuilder.field_A;
+          return Bzip2State.field_A;
         }
         return PendingDataRequest.field_i;
     }

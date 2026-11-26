@@ -124,18 +124,18 @@ final class ba extends rg {
             var15 = gg.field_q[0];
             var9 = var15.field_t << 1;
             var10 = var15.field_x << 1;
-            if (jg.field_g != null &&
-              jg.field_g.field_u >= var9 &&
-              var10 <= jg.field_g.field_w) {
-              vm.a(jg.field_g, -8409);
+            if (FrameTimer.field_g != null &&
+              FrameTimer.field_g.field_u >= var9 &&
+              var10 <= FrameTimer.field_g.field_w) {
+              vm.a(FrameTimer.field_g, -8409);
               SoftwareRasterizer.clearRaster();
             } else {
-              jg.field_g = new RgbSprite(var9, var10);
-              vm.a(jg.field_g, -8409);
+              FrameTimer.field_g = new RgbSprite(var9, var10);
+              vm.a(FrameTimer.field_g, -8409);
             }
             var15.a(112, 144, var15.field_t << 4, var15.field_x << 4, -this.field_R << 10, 4096);
             ib.b(false);
-            jg.field_g.c(var5 - var15.field_t, -var15.field_x + var6, 256);
+            FrameTimer.field_g.c(var5 - var15.field_t, -var15.field_x + var6, 256);
             return;
           }
           if (qh.field_x != var8) {
@@ -155,26 +155,26 @@ final class ba extends rg {
           var14 = var16;
           var9Lifetime2 = var16.field_t << 1;
           var10Lifetime2 = var16.field_x << 1;
-          if (jg.field_g == null) {
-            jg.field_g = new RgbSprite(var9Lifetime2, var10Lifetime2);
-            vm.a(jg.field_g, -8409);
+          if (FrameTimer.field_g == null) {
+            FrameTimer.field_g = new RgbSprite(var9Lifetime2, var10Lifetime2);
+            vm.a(FrameTimer.field_g, -8409);
           } else {
-            if (jg.field_g.field_u < var9Lifetime2) {
-              jg.field_g = new RgbSprite(var9Lifetime2, var10Lifetime2);
-              vm.a(jg.field_g, -8409);
+            if (FrameTimer.field_g.field_u < var9Lifetime2) {
+              FrameTimer.field_g = new RgbSprite(var9Lifetime2, var10Lifetime2);
+              vm.a(FrameTimer.field_g, -8409);
             } else {
-              if (var10Lifetime2 <= jg.field_g.field_w) {
-                vm.a(jg.field_g, -8409);
+              if (var10Lifetime2 <= FrameTimer.field_g.field_w) {
+                vm.a(FrameTimer.field_g, -8409);
                 SoftwareRasterizer.clearRaster();
               } else {
-                jg.field_g = new RgbSprite(var9Lifetime2, var10Lifetime2);
-                vm.a(jg.field_g, -8409);
+                FrameTimer.field_g = new RgbSprite(var9Lifetime2, var10Lifetime2);
+                vm.a(FrameTimer.field_g, -8409);
               }
             }
           }
           var16.a(112, 144, var16.field_t << 4, var16.field_x << 4, -this.field_R << 10, 4096);
           ib.b(false);
-          jg.field_g.c(var5 - var16.field_t, -var16.field_x + var6, 256);
+          FrameTimer.field_g.c(var5 - var16.field_t, -var16.field_x + var6, 256);
           return;
         }
         var5Lifetime1 = (this.field_F >> 1) + (this.field_q + param3);
@@ -197,26 +197,26 @@ final class ba extends rg {
         var22 = gg.field_q[0];
         var9Lifetime1 = var22.field_t << 1;
         var10Lifetime1 = var22.field_x << 1;
-        if (jg.field_g == null) {
-          jg.field_g = new RgbSprite(var9Lifetime1, var10Lifetime1);
-          vm.a(jg.field_g, -8409);
+        if (FrameTimer.field_g == null) {
+          FrameTimer.field_g = new RgbSprite(var9Lifetime1, var10Lifetime1);
+          vm.a(FrameTimer.field_g, -8409);
         } else {
-          if (jg.field_g.field_u < var9Lifetime1) {
-            jg.field_g = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            vm.a(jg.field_g, -8409);
+          if (FrameTimer.field_g.field_u < var9Lifetime1) {
+            FrameTimer.field_g = new RgbSprite(var9Lifetime1, var10Lifetime1);
+            vm.a(FrameTimer.field_g, -8409);
           } else {
-            if (var10Lifetime1 <= jg.field_g.field_w) {
-              vm.a(jg.field_g, -8409);
+            if (var10Lifetime1 <= FrameTimer.field_g.field_w) {
+              vm.a(FrameTimer.field_g, -8409);
               SoftwareRasterizer.clearRaster();
             } else {
-              jg.field_g = new RgbSprite(var9Lifetime1, var10Lifetime1);
-              vm.a(jg.field_g, -8409);
+              FrameTimer.field_g = new RgbSprite(var9Lifetime1, var10Lifetime1);
+              vm.a(FrameTimer.field_g, -8409);
             }
           }
         }
         var22.a(112, 144, var22.field_t << 4, var22.field_x << 4, -this.field_R << 10, 4096);
         ib.b(false);
-        jg.field_g.c(var5Lifetime1 - var22.field_t, -var22.field_x + var6Lifetime1, 256);
+        FrameTimer.field_g.c(var5Lifetime1 - var22.field_t, -var22.field_x + var6Lifetime1, 256);
     }
 
     ba(dm param0) {

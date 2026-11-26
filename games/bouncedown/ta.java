@@ -133,10 +133,10 @@ final class ta {
               if (var3 != 1) {
                 var7 = wg.field_u;
                 synchronized (var7) {
-                  wg.field_u.a(var9, var13, (byte) 115);
+                  wg.field_u.decompress(var9, var13, (byte) 115);
                 }
               } else {
-                ad.a(var13, var5, param1, var4, 9);
+                ad.decompress(var13, var5, param1, var4, 9);
               }
               stackIn_24_0 = var6;
               return stackIn_24_0;

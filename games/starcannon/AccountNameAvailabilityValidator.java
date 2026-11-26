@@ -215,10 +215,10 @@ final class AccountNameAvailabilityValidator extends qf {
           if (param1 != -66) {
             field_p = (ue) null;
           }
-          var4 = (of) (fi.field_c.beginForward(param1 - 3839));
+          var4 = (of) (FrameTimer.field_c.beginForward(param1 - 3839));
           while (var4 != null) {
             bb.a(param1 + 68, param0, var4);
-            var4 = (of) (fi.field_c.nextForward(param1 ^ 16977));
+            var4 = (of) (FrameTimer.field_c.nextForward(param1 ^ 16977));
           }
           var2 = ab.field_H.beginForward(param1 - 3839);
           while (var2 != null) {

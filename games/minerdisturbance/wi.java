@@ -87,7 +87,7 @@ final class wi extends eg {
     private wi(int param0, int param1, int param2) {
         this.field_D = param2;
         this.field_E = r.field_a;
-        this.field_k = cn.field_g;
+        this.field_k = Bzip2State.field_g;
         this.field_y = param0;
         this.field_B = param1;
     }

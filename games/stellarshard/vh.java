@@ -64,7 +64,7 @@ final class vh {
             }
             try {
               var9 = "tuhstatbut";
-              var3 = (String) (sh.a("getcookies", param1, (byte) 78));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, (byte) 78));
               var4 = qj.a(';', var3, 10287);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

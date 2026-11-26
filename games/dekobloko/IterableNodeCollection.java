@@ -162,7 +162,7 @@ final class IterableNodeCollection implements Iterable {
                 integerLocal11 = MixedSupport057.integerState0296;
               }
             } else {
-              integerLocal11 = MixedSupport059.integerState0320;
+              integerLocal11 = FrameTimer.integerState0320;
             }
             stringLocal12 = UiComponentPart010.stringArrayState0012[integerLocal1];
             stackIntegerLocal2 = 0;

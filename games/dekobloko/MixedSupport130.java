@@ -34,9 +34,9 @@ final class MixedSupport130 {
           UiComponentPart033.sceneWidgetState0150.performAction1764(MixedSupport116.sceneWidgetState0111.integerState0896 - (integerArgument5 + DiagnosticSupport002.sceneWidgetState0057.integerState0896), 0, 0, integerArgument1, integerArgument5);
           integerLocal4 = integerLocal4 - (integerArgument1 + 2);
           DiagnosticSupport002.sceneWidgetState0057.performAction1764(DiagnosticSupport002.sceneWidgetState0057.integerState0896, 0, 0, integerArgument1, integerArgument5 + UiComponentPart033.sceneWidgetState0150.integerState0896);
-          MixedSupport026.sceneWidgetPart008State0001.performAction1122(6, 5, integerArgument2, 5, integerLocal4 - 5, 487 + integerArgument5 + integerArgument2, 2);
+          NanoFrameTimer.sceneWidgetPart008State0001.performAction1122(6, 5, integerArgument2, 5, integerLocal4 - 5, 487 + integerArgument5 + integerArgument2, 2);
           if (null != MixedSupport009.uiComponentPart019State0001) {
-            MixedSupport009.uiComponentPart019State0001.performAction0222(MixedSupport026.sceneWidgetPart008State0001.integerState0915, MixedSupport026.sceneWidgetPart008State0001.integerState0896, MixedSupport026.sceneWidgetPart008State0001.integerState0890, MixedSupport026.sceneWidgetPart008State0001.integerState0903, -16555);
+            MixedSupport009.uiComponentPart019State0001.performAction0222(NanoFrameTimer.sceneWidgetPart008State0001.integerState0915, NanoFrameTimer.sceneWidgetPart008State0001.integerState0896, NanoFrameTimer.sceneWidgetPart008State0001.integerState0890, NanoFrameTimer.sceneWidgetPart008State0001.integerState0903, -16555);
           }
           integerLocal5 = -integerLocal2 + (-integerArgument5 + RichTextLayout.sceneWidgetState0021.integerState0896);
           integerLocal6 = integerLocal5 / 2;

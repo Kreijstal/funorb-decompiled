@@ -187,7 +187,7 @@ final class nb extends am {
           var8 = Torquing.field_u;
           try {
             try {
-              var3 = (String) (hp.a(param1, (byte) -85, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, (byte) -85, "getcookies"));
               var4 = kc.a(';', var3, 0);
               var5 = -110 / ((param2 + 25) / 51);
               for (var6 = 0; var4.length > var6; var6++) {

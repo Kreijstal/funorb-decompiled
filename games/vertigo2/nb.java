@@ -142,7 +142,7 @@ final class nb extends TextureOperator {
         stackIn_5_0 = (0 != (var3 & 128));
         cb.field_Ib = stackIn_5_0;
         MusicPatchPcmStream.field_u = var8.readUnsignedByte(-11);
-        ug.field_a = var8.readLong(-31016);
+        FrameTimer.field_a = var8.readLong(-31016);
         if (ln.field_c == 2) {
           ck.field_J = var8.readUnsignedShort((byte) -11);
           qf.field_a = var8.readUnsignedMedium(0);

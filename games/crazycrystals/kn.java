@@ -10,7 +10,7 @@ final class kn extends bo implements Cloneable {
         if (!param0) {
           return;
         }
-        int var3 = -1 + s.field_o.length;
+        int var3 = -1 + NanoFrameTimer.field_o.length;
         int var4 = (int)(3.0 * ((double)var3 * Math.random()));
         if (var4 < 0) {
           return;
@@ -134,14 +134,14 @@ final class kn extends bo implements Cloneable {
     final void b(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7 = 122 % ((param0 - 74) / 41);
         if (param1 != 24) {
-          s.field_o[MouseWheelInput.field_j ? this.field_r : 0].b(param4, param5 - param2, param1 * 2, param2 * 3);
+          NanoFrameTimer.field_o[MouseWheelInput.field_j ? this.field_r : 0].b(param4, param5 - param2, param1 * 2, param2 * 3);
           return;
         }
         if (param2 == 24) {
-          s.field_o[!MouseWheelInput.field_j ? 0 : this.field_r].a(param4, param5 - param2);
+          NanoFrameTimer.field_o[!MouseWheelInput.field_j ? 0 : this.field_r].a(param4, param5 - param2);
           return;
         }
-        s.field_o[MouseWheelInput.field_j ? this.field_r : 0].b(param4, param5 - param2, param1 * 2, param2 * 3);
+        NanoFrameTimer.field_o[MouseWheelInput.field_j ? this.field_r : 0].b(param4, param5 - param2, param1 * 2, param2 * 3);
     }
 
     final int a(boolean param0, boolean param1) {

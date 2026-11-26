@@ -5,7 +5,7 @@ final class dg {
     static String field_a;
 
     final static void a(boolean param0, int param1) {
-        s.field_k = 1000000000L / (long)param1;
+        NanoFrameTimer.field_k = 1000000000L / (long)param1;
         if (param0) {
           field_a = (String) null;
         }
@@ -490,7 +490,7 @@ final class dg {
     final static void a(byte param0) {
         lo.field_b = null;
         ec.field_l.clear(22800);
-        ke.field_b[jo.field_o] = 0;
+        FrameTimer.field_b[jo.field_o] = 0;
         so.field_h.clear(22800);
         fk.field_s = 0;
         if (param0 <= -25) {

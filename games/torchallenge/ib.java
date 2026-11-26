@@ -358,7 +358,7 @@ final class ib extends kj implements tb, sg {
         this.field_P = new rf("", (gg) null, 12);
         bc var1 = new bc(GameApplet.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(kg.field_eb, var1, (gg) null);
-        this.field_J = new ng(jl.field_g, (gg) null);
+        this.field_J = new ng(FrameTimer.field_g, (gg) null);
         this.field_K = new ng(nh.field_fb, (gg) null);
         this.field_P.field_r = ci.field_o;
         this.field_P.a(-27997, new AccountNameAvailabilityValidator(this.field_P));
@@ -551,7 +551,7 @@ final class ib extends kj implements tb, sg {
           if (le.field_c != null) {
             dk.field_s.writePrefixedString((byte) 27, le.field_c);
           }
-          ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
+          ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, FrameTimer.field_f, dk.field_s);
           dk.field_s.patchShortLength(-var5_int + dk.field_s.position, (byte) -40);
           nb.a(-1, -1);
           return;

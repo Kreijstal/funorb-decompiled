@@ -57,7 +57,7 @@ final class fc extends IntrusiveNode {
                 var11 = (String) null;
                 MouseWheelInput.field_a = pb.a(false, param4, kc.field_P, 0, (String) null);
               } else {
-                MouseWheelInput.field_a = rj.a(param0, (byte) 102, param4, false);
+                MouseWheelInput.field_a = FrameTimer.a(param0, (byte) 102, param4, false);
               }
               id.field_c.position = 0;
               id.field_c.writeByte(param5 ^ -121, 14);
@@ -106,11 +106,11 @@ final class fc extends IntrusiveNode {
                 }
               }
               if (decompiledFrameRemainder0) {
-                AccountRequestState.field_e = dk.field_h;
+                AccountRequestState.field_e = NanoFrameTimer.field_h;
                 te.field_O = -1;
               }
             }
-            if (dk.field_h == AccountRequestState.field_e &&
+            if (NanoFrameTimer.field_h == AccountRequestState.field_e &&
               qd.b((byte) 127)) {
               kc.field_P = te.field_N.readLong(10526);
               MusicPatchPcmStream.field_s = te.field_N.readUnsignedByte(255);
@@ -134,9 +134,9 @@ final class fc extends IntrusiveNode {
                 te.field_N.readUnsignedByte(255);
                 te.field_N.readInt(true);
                 me.field_d = te.field_N.readUnsignedShort(param5 - 105);
-                dk.field_l = new byte[me.field_d];
+                NanoFrameTimer.field_l = new byte[me.field_d];
                 for (var8 = 0; var8 < me.field_d; var8++) {
-                  dk.field_l[var8] = te.field_N.readByte((byte) -14);
+                  NanoFrameTimer.field_l[var8] = te.field_N.readByte((byte) -14);
                 }
               }
               ne.field_g = te.field_N.readString(16);
@@ -158,14 +158,14 @@ final class fc extends IntrusiveNode {
               if (ob.field_l <= 0 &&
                 !lc.field_u) {
                 try {
-                  fd.a(ia.g(param5 + 110), "unzap", (byte) 101);
+                  JavaScriptBridge.callWithoutArguments(ia.g(param5 + 110), "unzap", (byte) 101);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  fd.a(param5 - 4476, ia.g(-63), "zap", new Object[]{ub.a(-62, kc.field_P)});
+                  JavaScriptBridge.callWithArguments(param5 - 4476, ia.g(-63), "zap", new Object[]{ub.a(-62, kc.field_P)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

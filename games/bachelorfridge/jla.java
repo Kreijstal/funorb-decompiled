@@ -1047,7 +1047,7 @@ class jla {
               if (!this.field_e.b((byte) -73)) {
                 break regionExit2;
               }
-              bv.b(16964);
+              Bzip2State.b(16964);
               if (var9 == 0) {
                 break regionExit2;
               }

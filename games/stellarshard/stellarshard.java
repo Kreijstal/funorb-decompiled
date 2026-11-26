@@ -703,7 +703,7 @@ public final class stellarshard extends rb implements cf {
           sf.field_b = 0;
           ua.field_d = 0;
           this.field_R = 255;
-          mg.field_t = qi.level;
+          Bzip2State.field_t = qi.level;
           nc.field_A = 0;
           tb.field_K = 0;
           ScorePopup.field_b = 0;
@@ -2974,7 +2974,7 @@ public final class stellarshard extends rb implements cf {
           vj.a((byte) 104);
           ByteStorage.b(64);
           j.clearStaticReferences();
-          mg.clearStaticReferences(true);
+          Bzip2State.clearStaticReferences(true);
           lb.clearStaticReferences((byte) 122);
           og.clearStaticReferences((byte) 78);
           bb.clearStaticReferences(false);
@@ -3739,7 +3739,7 @@ public final class stellarshard extends rb implements cf {
           if (e.field_e == -1) {
             field_U[0] = 5;
           }
-          if (qi.level > (-1 + mg.field_t)) {
+          if (qi.level > (-1 + Bzip2State.field_t)) {
             var2_int = of.field_A;
             of.field_A = Math.max(qi.level, of.field_A);
             if (of.field_A > 50) {

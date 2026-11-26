@@ -226,20 +226,20 @@ final class kk {
                     var5Lifetime1 = 4 + (var3_ref_vk.field_j + var3_ref_vk.field_D);
                     var3_ref_vk.a(f.field_f, 320, var4Lifetime1, 1, -1);
                     stackIn_60_0 = var3_ref_vk;
-                    stackIn_61_1 = (fg.field_b != 0);
+                    stackIn_61_1 = (FrameTimer.field_b != 0);
                     stackIn_63_2 = false;
                     stackIn_63_3 = 22890;
                     stackIn_64_4 = (hf.field_f.field_A != 0);
                     ((vk) (Object) stackIn_60_0).a(wa.a(stackIn_61_1, stackIn_63_2, stackIn_63_3, stackIn_64_4), 320, var4Lifetime1 + var5Lifetime1, 1, -1);
                     stackIn_66_0 = var3_ref_vk;
                     stackIn_66_1 = -88;
-                    stackIn_67_2 = (0 != fg.field_b);
+                    stackIn_67_2 = (0 != FrameTimer.field_b);
                     stackIn_70_3 = (hf.field_f.field_A != 0);
                     ((vk) (Object) stackIn_66_0).a(AccountRequestState.a(stackIn_66_1, stackIn_67_2, stackIn_70_3, false), 320, 20 + (var4Lifetime1 + var5Lifetime1 * 3), 1, -1);
                     stackIn_72_0 = var3_ref_vk;
                     stackIn_73_1 = (hf.field_f.field_A != 0);
                     stackIn_75_2 = 122;
-                    stackIn_76_3 = (fg.field_b != 0);
+                    stackIn_76_3 = (FrameTimer.field_b != 0);
                     ((vk) (Object) stackIn_72_0).a(ma.$cfr$intArgs$a$feb7e63b59d8(stackIn_73_1, stackIn_75_2, stackIn_76_3, false), 320, 20 + (var5Lifetime1 * 4 + var4Lifetime1 + 40), 1, -1);
                     decompiledFrameRemainder0 = (var6 != 0);
                   }
@@ -531,7 +531,7 @@ final class kk {
           if (this.field_i <= 0) {
             if (-1 == this.field_e) {
               ej.field_b = 50;
-              l.field_f = this.field_e;
+              Bzip2State.field_f = this.field_e;
               if (var4 == 0) {
                 return;
               }
@@ -563,7 +563,7 @@ final class kk {
               }} else {
               vl.field_g = this.field_g;
             }
-            l.field_f = this.field_e;
+            Bzip2State.field_f = this.field_e;
             qh.field_b = this.field_e;
           }
           return;
@@ -1260,7 +1260,7 @@ final class kk {
               regionExit1: {
                 if (ok.a(false)) {
                   if (hf.field_f.field_A <= 0 &&
-                    0 >= fg.field_b) {
+                    0 >= FrameTimer.field_b) {
                     this.field_e = 0;
                     if (var8 == 0) {
                       break regionExit1;
@@ -1273,7 +1273,7 @@ final class kk {
                 }
                 hf.field_f.c((byte) -108);
                 s.field_S = null;
-                if (fg.field_b != 0) {
+                if (FrameTimer.field_b != 0) {
                   if (0 >= hf.field_f.field_A) {
                     this.field_e = 10;
                     if (var8 == 0) {
@@ -1355,7 +1355,7 @@ final class kk {
                 }
               }
               if (7 == this.field_g) {
-                if (fg.field_b > 0) {
+                if (FrameTimer.field_b > 0) {
                   if (hf.field_f.field_A <= 0) {
                     var5 = 10;
                     if (var8 != 0) {

@@ -303,18 +303,18 @@ final class pa extends ab {
             if (var6 != cg.field_g &&
               cd.field_a != var6) {
               if (var6 == BufferedSocket.field_n) {
-                var20 = fi.field_g[2];
+                var20 = FrameTimer.field_g[2];
                 var20.f(var9, var10 - (var20.field_v >> 1), 256);
                 return;
               }
               if (bf.field_x != var6) {
                 return;
               }
-              var19 = fi.field_g[1];
+              var19 = FrameTimer.field_g[1];
               var19.f(var9, var10 - (var19.field_v >> 1), 256);
               return;
             }
-            var21 = fi.field_g[0];
+            var21 = FrameTimer.field_g[0];
             var11 = var21.field_x << 1;
             var12 = var21.field_q << 1;
             if (this.field_K != null &&
@@ -339,18 +339,18 @@ final class pa extends ab {
           if (var6 != cg.field_g &&
             cd.field_a != var6) {
             if (var6 == BufferedSocket.field_n) {
-              var24 = fi.field_g[2];
+              var24 = FrameTimer.field_g[2];
               var24.f(var9Lifetime3, var10Lifetime3 - (var24.field_v >> 1), 256);
               return;
             }
             if (bf.field_x != var6) {
               return;
             }
-            var23 = fi.field_g[1];
+            var23 = FrameTimer.field_g[1];
             var23.f(var9Lifetime3, var10Lifetime3 - (var23.field_v >> 1), 256);
             return;
           }
-          var25 = fi.field_g[0];
+          var25 = FrameTimer.field_g[0];
           var11Lifetime4 = var25.field_x << 1;
           var12Lifetime4 = var25.field_q << 1;
           if (this.field_K == null) {
@@ -392,18 +392,18 @@ final class pa extends ab {
           if (var6Lifetime1 != cg.field_g &&
             cd.field_a != var6Lifetime1) {
             if (var6Lifetime1 == BufferedSocket.field_n) {
-              var33 = fi.field_g[2];
+              var33 = FrameTimer.field_g[2];
               var33.f(var9Lifetime1, var10Lifetime1 - (var33.field_v >> 1), 256);
               return;
             }
             if (bf.field_x != var6Lifetime1) {
               return;
             }
-            var32 = fi.field_g[1];
+            var32 = FrameTimer.field_g[1];
             var32.f(var9Lifetime1, var10Lifetime1 - (var32.field_v >> 1), 256);
             return;
           }
-          var34 = fi.field_g[0];
+          var34 = FrameTimer.field_g[0];
           var11Lifetime1 = var34.field_x << 1;
           var12Lifetime1 = var34.field_q << 1;
           if (this.field_K == null) {
@@ -436,7 +436,7 @@ final class pa extends ab {
         var9Lifetime2 = this.field_s + param1;
         var10Lifetime2 = var37.a((byte) -95, (UiWidget) (this), param3) + (var37.a((UiWidget) (this), (byte) -38).a(param2 - 169) >> 1);
         if (var6Lifetime2 == cg.field_g) {
-          var27 = fi.field_g[0];
+          var27 = FrameTimer.field_g[0];
           var11Lifetime2 = var27.field_x << 1;
           var12Lifetime2 = var27.field_q << 1;
           if (this.field_K != null &&
@@ -455,18 +455,18 @@ final class pa extends ab {
         }
         if (cd.field_a != var6Lifetime2) {
           if (var6Lifetime2 == BufferedSocket.field_n) {
-            var29 = fi.field_g[2];
+            var29 = FrameTimer.field_g[2];
             var29.f(var9Lifetime2, var10Lifetime2 - (var29.field_v >> 1), 256);
             return;
           }
           if (bf.field_x != var6Lifetime2) {
             return;
           }
-          var28 = fi.field_g[1];
+          var28 = FrameTimer.field_g[1];
           var28.f(var9Lifetime2, var10Lifetime2 - (var28.field_v >> 1), 256);
           return;
         }
-        var30 = fi.field_g[0];
+        var30 = FrameTimer.field_g[0];
         var16 = var30;
         var11Lifetime3 = var30.field_x << 1;
         var12Lifetime3 = var30.field_q << 1;

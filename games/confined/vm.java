@@ -39,7 +39,7 @@ final class vm extends hf {
           oi var3 = (oi) null;
           this.a((PrimaryNodeDeque) null, -0.40409225463452153, 117, (vg) null, (oi) null);
         }
-        this.a((byte) -120, jg.field_e, 3.0);
+        this.a((byte) -120, FrameTimer.field_e, 3.0);
     }
 
     final void a(int param0, int param1) {
@@ -233,7 +233,7 @@ final class vm extends hf {
           var5 = var8.readUnsignedShort((byte) 25);
           try {
             var9 = wc.field_Ub.b(1, var5);
-            q.field_j = var9.e((byte) -114);
+            NanoFrameTimer.field_j = var9.e((byte) -114);
             if (!ej.field_d.equals(qc.field_m)) {
               stackIn_22_0 = var9.field_s;
             } else {
@@ -244,11 +244,11 @@ final class vm extends hf {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             mb.a("CC1", true, (Throwable) ((Object) var6));
-            q.field_j = null;
+            NanoFrameTimer.field_j = null;
             lk.field_b = null;
           }
         } else {
-          q.field_j = tb.a(80, var8, param0 - 119);
+          NanoFrameTimer.field_j = tb.a(80, var8, param0 - 119);
           lk.field_b = null;
         }
         return new oc(param1);

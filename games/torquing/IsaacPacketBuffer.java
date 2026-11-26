@@ -3,7 +3,7 @@
  */
 final class IsaacPacketBuffer extends PacketBuffer {
     static int field_u;
-    static ha field_q;
+    static FrameTimer field_q;
     private IsaacCipher field_t;
     private int field_s;
     static cd field_r;

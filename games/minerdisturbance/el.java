@@ -35,7 +35,7 @@ final class el {
           if (param3 != 2) {
             el.a(115, 46);
           }
-          if (cn.a(param0, param3 + 256, param1, param2)) {
+          if (Bzip2State.a(param0, param3 + 256, param1, param2)) {
             stackIn_6_0 = ti.a(0);
             return stackIn_6_0;
           }

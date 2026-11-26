@@ -216,7 +216,7 @@ final class pt implements WidgetRenderer {
                 var17 = param6[11];
                 var18 = 0;
                 while (!(param2.field_i <= var18)) {
-                  stackIn_68_0 = bv.field_G.length;
+                  stackIn_68_0 = Bzip2State.field_G.length;
                   stackIn_68_1 = var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -227,7 +227,7 @@ final class pt implements WidgetRenderer {
                   var19 = param2.field_f[var18];
                   var20 = param2.field_N[var18];
                   var21Lifetime2 = param2.field_b[var18];
-                  bv.field_G[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
+                  Bzip2State.field_G[var18] = var12 * var20 + var9 * var19 + var21Lifetime2 * var15 >> 16;
                   PetAttackAnimation.field_x[var18] = var19 * var10 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
                   ep.field_l[var18] = var21Lifetime2 * var17 + var19 * var11 + var14 * var20 >> 16;
                   var18++;

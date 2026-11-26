@@ -314,7 +314,7 @@ abstract class ag extends GameApplet {
             SecondaryNodeDequeIterator.a(-121);
             pd.a(sc.field_e, 2, (byte) -77);
             jc.b(0);
-            fi.field_h = true;
+            FrameTimer.field_h = true;
             wa.field_a = 15000L + dd.correctedCurrentTimeMillis(56);
           }
         }
@@ -374,7 +374,7 @@ abstract class ag extends GameApplet {
                   }
                 }
               }
-              fi.field_h = true;
+              FrameTimer.field_h = true;
             }
           }
         }
@@ -382,7 +382,7 @@ abstract class ag extends GameApplet {
           qb.field_j != 0 ||
           se.b((byte) -91)) &&
           dd.correctedCurrentTimeMillis(param1 ^ -59) >= wa.field_a) {
-          fi.field_h = false;
+          FrameTimer.field_h = false;
           if (qb.field_j != -1 &&
             qb.field_j != 0) {
             qb.field_j = -1;
@@ -402,11 +402,11 @@ abstract class ag extends GameApplet {
             kl.field_b = b.a(false, IntrusiveNode.field_c);
           }
           bf.field_y = BufferedSocket.a(1, true, false, r.field_a, (byte) 104);
-          fk.field_k = BufferedSocket.a(1, true, false, SecondaryNodeDequeIterator.field_j, (byte) 104);
+          Bzip2State.field_k = BufferedSocket.a(1, true, false, SecondaryNodeDequeIterator.field_j, (byte) 104);
           li.field_b = BufferedSocket.a(1, true, false, p.field_c, (byte) 103);
-          fi.field_f = bf.field_y;
+          FrameTimer.field_f = bf.field_y;
           IntrusiveDeque.field_d = 2;
-          lf.field_eb = fk.field_k;
+          lf.field_eb = Bzip2State.field_k;
         }
         if (IntrusiveDeque.field_d == 2) {
           if (kl.field_b != null &&
@@ -426,13 +426,13 @@ abstract class ag extends GameApplet {
           }
         }
         if (IntrusiveDeque.field_d == 3 &&
-          kb.a(li.field_b, fk.field_k, (byte) 107, bf.field_y) &&
+          kb.a(li.field_b, Bzip2State.field_k, (byte) 107, bf.field_y) &&
           pa.a(li.field_b, -206)) {
           eg.b((byte) -64);
           jg.clearStaticReferences((byte) 109);
           o.field_b = pa.field_J;
           sh.field_t = false;
-          StarCannon.a(li.field_b, ah.field_i, -20169, bf.field_y, fk.field_k);
+          StarCannon.a(li.field_b, ah.field_i, -20169, bf.field_y, Bzip2State.field_k);
           if (vj.field_X ||
             qb.field_g != null) {
             stackIn_104_0 = qb.field_g;
@@ -451,7 +451,7 @@ abstract class ag extends GameApplet {
           kg.a(DualLinkNode.field_l, param1 + 1, j.field_e, li.field_b);
           bf.field_y = null;
           li.field_b = null;
-          fk.field_k = null;
+          Bzip2State.field_k = null;
           PacketBuffer.a((java.applet.Applet) (this), 65);
           tc.j(param1 ^ -33);
           IntrusiveDeque.field_d = 10;
@@ -572,7 +572,7 @@ abstract class ag extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = fi.a(ByteStorage.b((byte) 123), this.field_x, ff.g(111), hc.a((byte) 96), dg.b((byte) -18), we.a(29084), (byte) -3);
+            var5_intLifetime1 = FrameTimer.a(ByteStorage.b((byte) 123), this.field_x, ff.g(111), hc.a((byte) 96), dg.b((byte) -18), we.a(29084), (byte) -3);
             if (var5_intLifetime1 != -1) {
               qa.a(var5_intLifetime1, ph.field_nb, UiWidget.field_r, (byte) 70);
               ph.field_nb = null;
@@ -586,7 +586,7 @@ abstract class ag extends GameApplet {
               lj.a(-30294);
             }
             if (param1) {
-              fi.field_h = false;
+              FrameTimer.field_h = false;
             } else {
               var5_intLifetime2 = FullscreenFocusCanvas.a(hc.a((byte) 117), this.field_r, this.field_x, false, -1, ff.g(9));
               if (var5_intLifetime2 != -1) {
@@ -775,7 +775,7 @@ abstract class ag extends GameApplet {
         if (!se.b((byte) -91)) {
           return -1;
         }
-        if (fi.field_h) {
+        if (FrameTimer.field_h) {
           return -1;
         }
         var2 = FullscreenFocusCanvas.a(hc.a((byte) 108), this.field_r, this.field_x, true, -1, ff.g(114));
@@ -790,7 +790,7 @@ abstract class ag extends GameApplet {
           SecondaryNodeDequeIterator.a(-88);
           var3 = 77 / ((param0 - 63) / 62);
           pd.a(UiWidget.field_r, var2, (byte) -77);
-          fi.field_h = true;
+          FrameTimer.field_h = true;
           wa.field_a = dd.correctedCurrentTimeMillis(103) + 15000L;
           return var2;
         }

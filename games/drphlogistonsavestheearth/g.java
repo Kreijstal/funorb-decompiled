@@ -62,8 +62,8 @@ final class g extends ei {
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           if (ClientException.field_c == -1 &&
-            oc.field_B == -1) {
-            oc.field_B = ob.field_g;
+            Bzip2State.field_B == -1) {
+            Bzip2State.field_B = ob.field_g;
             ClientException.field_c = ck.field_c;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -101,7 +101,7 @@ final class g extends ei {
               dd.field_l = 0;
             }
             oh.field_e = ClientException.field_c;
-            pi.field_Q = oc.field_B;
+            pi.field_Q = Bzip2State.field_B;
             if (param0 != null) {
               em.field_c = false;
             } else {
@@ -118,7 +118,7 @@ final class g extends ei {
             dd.field_l < BufferedSocket.field_c &&
             df.field_o) {
             oh.field_e = ClientException.field_c;
-            pi.field_Q = oc.field_B;
+            pi.field_Q = Bzip2State.field_B;
             dd.field_l = 0;
           }
           ClientException.field_c = -1;
@@ -127,7 +127,7 @@ final class g extends ei {
             dd.field_l = 0;
             em.field_c = false;
           }
-          oc.field_B = -1;
+          Bzip2State.field_B = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -850,7 +850,7 @@ public final class Vertigo2 extends GameShell {
           eb.clearStaticReferences((byte) 15);
           ja.clearStaticReferences(127);
           tn.clearStaticReferences(-101);
-          ug.clearStaticReferences(0);
+          FrameTimer.clearStaticReferences(0);
           RasterBuffer.clearStaticReferences(-18390);
           th.clearStaticReferences((byte) -123);
           FullscreenFocusCanvas.clearStaticReferences(8462);
@@ -970,7 +970,7 @@ public final class Vertigo2 extends GameShell {
           pq.clearStaticReferences(-1);
           ByteStorage.clearStaticReferences(-1);
           rj.clearStaticReferences();
-          vq.clearStaticReferences((byte) 111);
+          Bzip2State.clearStaticReferences((byte) 111);
           al.a(-1216);
           gl.clearStaticReferences(true);
           PcmOutputWorker.clearStaticReferences((byte) -100);
@@ -1027,7 +1027,7 @@ public final class Vertigo2 extends GameShell {
           lo.clearStaticReferences((byte) -102);
           SocketConnector.a(-1);
           ProxyAuthenticationRequiredException.clearStaticReferences((byte) 127);
-          nl.clearDeclaredStaticReferences(116);
+          NanoFrameTimer.clearDeclaredStaticReferences(116);
           ImageProducerRasterBuffer.clearDeclaredStaticReferences(-48);
           gb.a(19199);
           cl.clearStaticReferences((byte) 124);
@@ -1253,9 +1253,9 @@ public final class Vertigo2 extends GameShell {
             }
           }
           if (vl.field_c != 0 ||
-            0 != vq.field_r) {
+            0 != Bzip2State.field_r) {
             if (vl.field_c == 0) {
-              stackIn_53_0 = vq.field_r;
+              stackIn_53_0 = Bzip2State.field_r;
             } else {
               stackIn_53_0 = vl.field_c;
             }

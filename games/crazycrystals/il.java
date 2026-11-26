@@ -131,7 +131,7 @@ final class il extends l {
     private final void a(byte param0, int param1) {
         int var3 = 0;
         int var3Lifetime1;
-        if (uo.field_o <= ke.field_b[jo.field_o] &&
+        if (uo.field_o <= FrameTimer.field_b[jo.field_o] &&
           !(jo.field_o < 1)) {
           var3 = q.field_a[ma.field_n[param1]].field_i;
           if (1000 <= var3) {

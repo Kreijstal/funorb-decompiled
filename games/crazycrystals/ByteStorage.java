@@ -371,7 +371,7 @@ abstract class ByteStorage {
           }
           if (stackIn_247_0 == stackIn_247_1) {
             var2 = 70;
-            if (60 > ke.field_b[jo.field_o]) {
+            if (60 > FrameTimer.field_b[jo.field_o]) {
               var2 = 60;
             }
           }
@@ -1817,51 +1817,51 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("monthnames,0", 5236);
                 if (var2 != null) {
-                  qn.field_E[0] = fa.a((byte) -103, var2);
+                  Bzip2State.field_E[0] = fa.a((byte) -103, var2);
                 }
                 var2 = ah.a("monthnames,1", 5236);
                 if (null != var2) {
-                  qn.field_E[1] = fa.a((byte) -128, var2);
+                  Bzip2State.field_E[1] = fa.a((byte) -128, var2);
                 }
                 var2 = ah.a("monthnames,2", 5236);
                 if (var2 != null) {
-                  qn.field_E[2] = fa.a((byte) -65, var2);
+                  Bzip2State.field_E[2] = fa.a((byte) -65, var2);
                 }
                 var2 = ah.a("monthnames,3", 5236);
                 if (var2 != null) {
-                  qn.field_E[3] = fa.a((byte) -99, var2);
+                  Bzip2State.field_E[3] = fa.a((byte) -99, var2);
                 }
                 var2 = ah.a("monthnames,4", 5236);
                 if (null != var2) {
-                  qn.field_E[4] = fa.a((byte) -110, var2);
+                  Bzip2State.field_E[4] = fa.a((byte) -110, var2);
                 }
                 var2 = ah.a("monthnames,5", 5236);
                 if (var2 != null) {
-                  qn.field_E[5] = fa.a((byte) -113, var2);
+                  Bzip2State.field_E[5] = fa.a((byte) -113, var2);
                 }
                 var2 = ah.a("monthnames,6", 5236);
                 if (var2 != null) {
-                  qn.field_E[6] = fa.a((byte) -105, var2);
+                  Bzip2State.field_E[6] = fa.a((byte) -105, var2);
                 }
                 var2 = ah.a("monthnames,7", 5236);
                 if (null != var2) {
-                  qn.field_E[7] = fa.a((byte) -97, var2);
+                  Bzip2State.field_E[7] = fa.a((byte) -97, var2);
                 }
                 var2 = ah.a("monthnames,8", 5236);
                 if (var2 != null) {
-                  qn.field_E[8] = fa.a((byte) -74, var2);
+                  Bzip2State.field_E[8] = fa.a((byte) -74, var2);
                 }
                 var2 = ah.a("monthnames,9", 5236);
                 if (null != var2) {
-                  qn.field_E[9] = fa.a((byte) -122, var2);
+                  Bzip2State.field_E[9] = fa.a((byte) -122, var2);
                 }
                 var2 = ah.a("monthnames,10", 5236);
                 if (var2 != null) {
-                  qn.field_E[10] = fa.a((byte) -64, var2);
+                  Bzip2State.field_E[10] = fa.a((byte) -64, var2);
                 }
                 var2 = ah.a("monthnames,11", 5236);
                 if (null != var2) {
-                  qn.field_E[11] = fa.a((byte) -63, var2);
+                  Bzip2State.field_E[11] = fa.a((byte) -63, var2);
                 }
                 var2 = ah.a("create_welcome", 5236);
                 if (var2 != null) {
@@ -1941,7 +1941,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_optin_news", 5236);
                 if (var2 != null) {
-                  qn.field_j = fa.a((byte) -106, var2);
+                  Bzip2State.field_j = fa.a((byte) -106, var2);
                 }
                 var2 = ah.a("create_agreeterms", 5236);
                 if (var2 != null) {
@@ -3039,7 +3039,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("benefits_price", 5236);
                 if (var2 != null) {
-                  qn.field_C = fa.a((byte) -84, var2);
+                  Bzip2State.field_C = fa.a((byte) -84, var2);
                 }
                 var2 = ah.a("members_expansion_benefits,0", 5236);
                 if (null != var2) {
@@ -3222,7 +3222,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("mb_exclusive_1", 5236);
                 if (var2 != null) {
-                  s.field_f = fa.a((byte) -104, var2);
+                  NanoFrameTimer.field_f = fa.a((byte) -104, var2);
                 }
                 var2 = ah.a("mb_exclusive_2", 5236);
                 if (var2 != null) {
@@ -3306,7 +3306,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("serviceunavailable", 5236);
                 if (null != var2) {
-                  ke.field_a = fa.a((byte) -107, var2);
+                  FrameTimer.field_a = fa.a((byte) -107, var2);
                 }
                 var2 = ah.a("createtouse", 5236);
                 if (null != var2) {

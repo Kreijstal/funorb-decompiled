@@ -136,7 +136,7 @@ final class le {
           try {
             try {
               var3_int = -108 % ((param2 + 47) / 54);
-              var4 = (String) (pb.a("getcookies", param0, true));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, true));
               var5 = ki.a((byte) -113, ';', var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

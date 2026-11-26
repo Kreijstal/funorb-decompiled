@@ -392,7 +392,7 @@ class jd implements fc, sf {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ac.a((byte) 91, param1, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluate((byte) 91, param1, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
             kc.a(param1, 27477);

@@ -9,7 +9,7 @@ final class DirectByteStorage extends ByteStorage {
         IntrusiveDeque.field_a = ByteStorage.field_a;
         ag.field_o = 0;
         PcmOutputWorker.field_f = 0;
-        fk.field_a = param0;
+        Bzip2State.field_a = param0;
         ea.field_a = new n(2);
         ea.field_a.a(false, param1, -1, BufferedRandomAccessFile.a(pe.field_d, la.field_c, true));
     }

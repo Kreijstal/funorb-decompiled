@@ -132,7 +132,7 @@ final class pa {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (kf.a(75, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(75, "getcookies", param0));
               var5 = ij.a(param1 ^ 59, (char)param1, var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

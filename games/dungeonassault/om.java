@@ -41,7 +41,7 @@ final class om {
                 field_e = (String) null;
               }
               var2 = "tuhstatbut";
-              var3 = (String) (ee.a((byte) -21, param0, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) -21, param0, "getcookies"));
               var4 = ih.a(param1 + 121, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

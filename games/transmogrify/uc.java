@@ -22,13 +22,13 @@ final class uc {
         if (param0 >= 76) {
           NodeHashTableIterator.field_a = WordLanguage.field_l.readString(12248);
           var3 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
-          kf.field_e = hj.a((byte) -125, var3);
+          NanoFrameTimer.field_e = hj.a((byte) -125, var3);
           return;
         }
         uc.a(96, (byte) 96);
         NodeHashTableIterator.field_a = WordLanguage.field_l.readString(12248);
         CharSequence var2 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
-        kf.field_e = hj.a((byte) -125, var2);
+        NanoFrameTimer.field_e = hj.a((byte) -125, var2);
     }
 
     final static int a(String param0, boolean param1, boolean param2) {

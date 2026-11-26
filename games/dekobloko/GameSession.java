@@ -525,7 +525,7 @@ final class GameSession {
                     bucketBoardLocal32 = bucketBoardLocal57;
                     bucketBoardLocal30.performAction0974(this.returnedShapeCache, 125, false, bucketBoardLocal57);
                     if (MixedSupport011.booleanState0010 &&
-                      MixedSupport026.booleanState0029) {
+                      NanoFrameTimer.booleanState0029) {
                       this.performAction1326(0, -81, 255);
                     }
                     if (MixedSupport041.integerState0234 >= 2) {
@@ -1374,7 +1374,7 @@ final class GameSession {
             nodeDequeLocal14 = UiComponentPart026.computeNodeDeque1388(-integerLocal12 + bucketBoardArgument2.boardHeight + 1, integerLocal12, -1, 1000, 36, bucketBoardArgument2.boardWidth + 2, 36, integerArgument1 + 100);
             this.nodeDequeArrayState0001[integerArgument3] = nodeDequeLocal14;
             this.performAction1317(true, bucketBoardArgument2, 600, 450, 0, integerArgument3, false);
-            RenderingSupport003.performAction0571(bucketBoardArgument2.integerState0458, bucketBoardArgument2.integerState0446 / 2, (byte) 127, MixedSupport059.rawSoundState0011);
+            RenderingSupport003.performAction0571(bucketBoardArgument2.integerState0458, bucketBoardArgument2.integerState0446 / 2, (byte) 127, FrameTimer.rawSoundState0011);
             if (integerArgument3 == this.integerState0605) {
               RenderingSupport003.performAction0571(-1, bucketBoardArgument2.integerState0446, (byte) 127, LoginCredentials.rawSoundState0013);
             }
@@ -1914,8 +1914,8 @@ final class GameSession {
             integerLocal15 = animatedTileRegionArgument11.integerState0818 + animatedTileRegionArgument11.integerState0815;
           }
         }
-        integerLocal16 = MixedSupport141.computeInteger1754(23841, integerArgument7 * integerArgument7 + integerArgument9 * integerArgument9, -(integerArgument4 * integerArgument7 + integerArgument6 * integerArgument9) * bucketBoardArgument2.boardWidth);
-        integerLocal17 = MixedSupport141.computeInteger1754(23841, integerArgument8, -integerArgument5 * bucketBoardArgument2.boardHeight);
+        integerLocal16 = Bzip2State.computeInteger1754(23841, integerArgument7 * integerArgument7 + integerArgument9 * integerArgument9, -(integerArgument4 * integerArgument7 + integerArgument6 * integerArgument9) * bucketBoardArgument2.boardWidth);
+        integerLocal17 = Bzip2State.computeInteger1754(23841, integerArgument8, -integerArgument5 * bucketBoardArgument2.boardHeight);
         integerLocal18 = integerLocal16;
         if (integerLocal16 >= integerLocal8) {
           if (integerLocal16 > integerLocal9) {
@@ -3731,13 +3731,13 @@ final class GameSession {
                             if (this.integerState0628 >= 93) {
                               SoftwareRaster.fillRoundedRectangleAlpha(281, integerLocal176 + 54 - 2, 78, 40, 4, 65280, 100);
                             } else {
-                              integerLocal59 = MixedSupport141.computeInteger1754(23841, 80, SceneWidgetPart013.integerArrayState0239[this.integerState0628 - 80 + 1] * 18 + 40);
+                              integerLocal59 = Bzip2State.computeInteger1754(23841, 80, SceneWidgetPart013.integerArrayState0239[this.integerState0628 - 80 + 1] * 18 + 40);
                             }
                           } else {
-                            integerLocal57 = integerLocal57 + MixedSupport141.computeInteger1754(23841, 80, this.integerState0636 * 18 + 40);
+                            integerLocal57 = integerLocal57 + Bzip2State.computeInteger1754(23841, 80, this.integerState0636 * 18 + 40);
                           }
                         } else {
-                          integerLocal57 = integerLocal57 + MixedSupport141.computeInteger1754(23841, 80, this.integerState0632 * 18 + 40);
+                          integerLocal57 = integerLocal57 + Bzip2State.computeInteger1754(23841, 80, this.integerState0632 * 18 + 40);
                         }
                         for (integerLocal10 = 0; integerLocal10 < 3; integerLocal10++) {
                           MixedSupport035.rgbSpriteArrayArrayState0006[1][0].performAction0280(302 + integerLocal10 * 18, integerLocal176 + 72, 18, 18);
@@ -4791,10 +4791,10 @@ final class GameSession {
           integerLocal25 = ((-integerLocal22 + integerLocal24) * 176 + 702) / 1404;
           integerLocal26 = integerArgument3 - integerLocal25;
           integerLocal27 = integerLocal25 + integerArgument3;
-          integerLocal28 = 320 + MixedSupport141.computeInteger1754(23841, integerArgument2, integerLocal26 * 1000 + integerArgument2 / 2);
-          integerLocal29 = MixedSupport141.computeInteger1754(23841, integerArgument2, 1000 * integerLocal27 + integerArgument2 / 2) + 320;
-          integerLocal30 = integerArgument7 + MixedSupport141.computeInteger1754(23841, integerArgument2, 1000 * integerLocal22 + integerArgument2 / 2);
-          integerLocal31 = integerArgument7 + MixedSupport141.computeInteger1754(23841, integerArgument2, 1000 * integerLocal24 + integerArgument2 / 2);
+          integerLocal28 = 320 + Bzip2State.computeInteger1754(23841, integerArgument2, integerLocal26 * 1000 + integerArgument2 / 2);
+          integerLocal29 = Bzip2State.computeInteger1754(23841, integerArgument2, 1000 * integerLocal27 + integerArgument2 / 2) + 320;
+          integerLocal30 = integerArgument7 + Bzip2State.computeInteger1754(23841, integerArgument2, 1000 * integerLocal22 + integerArgument2 / 2);
+          integerLocal31 = integerArgument7 + Bzip2State.computeInteger1754(23841, integerArgument2, 1000 * integerLocal24 + integerArgument2 / 2);
           if (bucketBoardArgument1.booleanState0106) {
             stackIntegerLocal2 = (0 < bucketBoardArgument1.livesRemaining) ? 1 : 0;
           } else {

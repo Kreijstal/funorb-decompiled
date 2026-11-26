@@ -136,7 +136,7 @@ abstract class sg extends ta {
           if (param0 != -1326) {
             field_B = -11;
           }
-          var3 = g.a(-121, '.', param1);
+          var3 = NanoFrameTimer.a(-121, '.', param1);
           if (var3.length < 2) {
             stackIn_13_0 = oc.field_M;
             return stackIn_13_0;

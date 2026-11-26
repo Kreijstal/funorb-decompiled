@@ -247,7 +247,7 @@ final class bh extends wf implements sh {
           } else {
             if (od.field_k != param1) {
               if (param1 == ge.field_a) {
-                var3 = cn.field_F;
+                var3 = Bzip2State.field_F;
                 this.field_q = this.field_q + 30;
               }
             } else {

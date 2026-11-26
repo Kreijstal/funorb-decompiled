@@ -360,7 +360,7 @@ final class el extends fe {
                   var20 = param4.field_w[var18];
                   var21Lifetime2 = param4.field_r[var18];
                   oa.field_c[var18] = var9 * var19 - (-(var20 * var12) - var15 * var21Lifetime2) >> 16;
-                  in.field_c[var18] = var21Lifetime2 * var16 + (var13 * var20 + var10 * var19) >> 16;
+                  FrameTimer.field_c[var18] = var21Lifetime2 * var16 + (var13 * var20 + var10 * var19) >> 16;
                   MusicPatchPcmStream.field_o[var18] = var20 * var14 + var19 * var11 + var17 * var21Lifetime2 >> 16;
                   var18++;
                 }

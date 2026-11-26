@@ -211,7 +211,7 @@ final class bf extends IntrusiveNode {
     private final void d(int param0) {
         if (param0 == SpriteState.field_p &&
           ha.field_d > 0) {
-          fi.field_e.field_k = fi.field_e.field_k - 1;
+          FrameTimer.field_e.field_k = FrameTimer.field_e.field_k - 1;
         } else {
           ha.field_d = 512;
           if (0 == SpriteState.field_p) {
@@ -1526,7 +1526,7 @@ final class bf extends IntrusiveNode {
             bf.resetStaticState(-76);
           }
           if (r.field_c == ab.field_F &&
-            fk.a(false)) {
+            Bzip2State.a(false)) {
             if (255 == vh.field_t) {
               var9_ref_String = se.field_p.readNullableString((byte) -86);
               if (var9_ref_String != null) {
@@ -2256,7 +2256,7 @@ final class bf extends IntrusiveNode {
                         if (var9 != 6 &&
                           var9 != 14) {
                           if (var9 == 7) {
-                            if (!(fi.field_e.field_k <= 0)) {
+                            if (!(FrameTimer.field_e.field_k <= 0)) {
                               vc.field_m[1].e(var4 - 16, this.field_u - 16);
                             }
                           } else {
@@ -2297,7 +2297,7 @@ final class bf extends IntrusiveNode {
                                   FullscreenFocusCanvas.field_e[this.field_v].d(-48 + var4, -32 + this.field_u, 256);
                                   break regionExit1;
                                 case 13:
-                                  if (0 >= fi.field_e.field_k) {
+                                  if (0 >= FrameTimer.field_e.field_k) {
                                     break regionExit1;
                                   }
                                   vc.field_m[2].e(var4 - 16, -16 + this.field_u);
@@ -2344,13 +2344,13 @@ final class bf extends IntrusiveNode {
                                   break regionExit1;
                               }
                             }
-                            if (!(0 >= fi.field_e.field_k)) {
+                            if (!(0 >= FrameTimer.field_e.field_k)) {
                               vc.field_m[3 + this.field_v].e(-16 + var4, this.field_u - 16);
                             }
                           }
                           break regionExit1;
                         }
-                        if (fi.field_e.field_k > 0) {
+                        if (FrameTimer.field_e.field_k > 0) {
                           vc.field_m[0].e(var4 - 16, -16 + this.field_u);
                         }
                       }

@@ -22,7 +22,7 @@ final class vf {
             vf.a(false);
           }
           tj.field_y = param1;
-          kf.field_i = param0;
+          NanoFrameTimer.field_i = param0;
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "vf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

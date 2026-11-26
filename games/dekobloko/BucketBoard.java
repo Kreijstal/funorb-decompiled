@@ -1095,7 +1095,7 @@ final class BucketBoard {
           boolean frameRemainderLocal52 = true;
           boolean frameRemainderLocal53 = true;
           boolean frameRemainderLocal54 = true;
-          MixedSupport026.booleanState0029 = false;
+          NanoFrameTimer.booleanState0029 = false;
           MixedSupport041.integerState0234 = 0;
           MixedSupport011.booleanState0010 = false;
           UiComponentPart024.booleanState0137 = false;
@@ -1135,7 +1135,7 @@ final class BucketBoard {
                         MixedSupport011.booleanState0010 = true;
                       }
                       if (this.computeBoolean0986(integerLocal18, -15303)) {
-                        MixedSupport026.booleanState0029 = true;
+                        NanoFrameTimer.booleanState0029 = true;
                       }
                       if (this.computeBoolean0981(integerLocal18, -1)) {
                         UiComponentPart024.booleanState0137 = true;
@@ -1286,7 +1286,7 @@ final class BucketBoard {
                     MixedSupport011.booleanState0010 = true;
                   }
                   if (this.computeBoolean0986(integerLocal18, -15303)) {
-                    MixedSupport026.booleanState0029 = true;
+                    NanoFrameTimer.booleanState0029 = true;
                   }
                   if (this.computeBoolean0981(integerLocal18, -1)) {
                     UiComponentPart024.booleanState0137 = true;
@@ -2663,7 +2663,7 @@ final class BucketBoard {
               this.integerState0451 = UiComponentPart016.computeInteger0830((byte) 62, 7, UiComponentPart031.randomState0003) - 3;
               this.integerState0457 = UiComponentPart016.computeInteger0830((byte) 126, 7, UiComponentPart031.randomState0003) - 3;
               this.integerState0472 = 0;
-              integerArrayLocal19 = MixedSupport141.integerArrayState0252;
+              integerArrayLocal19 = Bzip2State.integerArrayState0252;
               integerLocal25 = integerLocal10 / 10;
               if (integerArrayLocal19.length <= integerLocal25) {
                 integerLocal25 = integerArrayLocal19.length - 1;

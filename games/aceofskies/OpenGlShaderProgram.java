@@ -5,7 +5,7 @@ final class OpenGlShaderProgram {
     private HardwareOpenGlRenderer field_b;
     static String field_e;
     long field_d;
-    static tf field_c;
+    static FrameTimer field_c;
     static String[] field_a;
 
     public static void clearStaticReferences(int param0) {

@@ -51,7 +51,7 @@ final class t {
         if (!(tj.field_a < nl.field_c[fleas.field_E].length)) {
           var5 = -1 + nl.field_c[fleas.field_E].length;
         }
-        tl.field_p.a(db.a(pk.field_G, new String[]{wj.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, tl.field_p.field_H);
+        tl.field_p.a(db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var5]}, true), 170, var2 - 27, 300, 320, var3, var4, 1, 0, tl.field_p.field_H);
         var2 += 90;
         tl.field_p.a(db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var5].field_f)}, true), 320, var2, var3, var4);
         var2 += 40;
@@ -809,7 +809,7 @@ final class t {
         if (this.field_b.b(120) &&
           var5 != 12 &&
           var5 != 13) {
-          ik.a(wj.field_b[0], (byte) -84);
+          ik.a(FrameTimer.field_b[0], (byte) -84);
         }
         regionExit1: {
           var6 = var5;
@@ -893,7 +893,7 @@ final class t {
                             }
                             if (var4 != CrossfadingMidiPcmStream.field_D) {
                               cb.field_w.field_A = CrossfadingMidiPcmStream.field_D;
-                              ik.a(wj.field_b[1], (byte) -84);
+                              ik.a(FrameTimer.field_b[1], (byte) -84);
                               break regionExit1;
                             }
                           } else {
@@ -1106,7 +1106,7 @@ final class t {
                           }
                           if (gf.field_d != var4) {
                             f.field_G.field_A = gf.field_d;
-                            ik.a(wj.field_b[1], (byte) -84);
+                            ik.a(FrameTimer.field_b[1], (byte) -84);
                             break regionExit1;
                           }
                         }
@@ -1364,7 +1364,7 @@ final class t {
         var9 = ve.field_d;
         var10 = var9;
         this.b(2, g.field_s);
-        var10.b(o.a((byte) 85, 1 + g.field_s, kb.field_k.length), 530, 110, 1, 16777215);
+        var10.b(NanoFrameTimer.a((byte) 85, 1 + g.field_s, kb.field_k.length), 530, 110, 1, 16777215);
         ga.field_s[6][3] = 310;
         tl.field_p.c(v.field_R[g.field_s], 95, 145, 0, -1);
         for (var3 = 0; var3 < kb.field_k[g.field_s].length; var3++) {

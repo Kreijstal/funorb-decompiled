@@ -23,7 +23,7 @@ final class jf {
         AccountServiceResult.field_g = md.a("validation", param0, 10, "commonui");
         sl.field_q = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0));
         bn.field_d = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0));
-        cn.field_g = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0));
+        Bzip2State.field_g = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0));
         Sprite var17 = new Sprite(param1.a("", param2 ^ 18, "button.gif"), (java.awt.Component) ((Object) ef.field_c));
         pb.a("commonui", param0, "dropdown", (byte) -77);
         ln[] var5 = tb.a("screen_options", "commonui", param0, 1);

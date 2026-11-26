@@ -96,7 +96,7 @@ final class ClientException extends RuntimeException {
                   cc.field_f.inflate(var9, 2, var12);
                 }
               } else {
-                dc.a(var12, var5_int, param1, var4, 9);
+                dc.decompress(var12, var5_int, param1, var4, 9);
               }
               stackIn_21_0 = var6;
               return stackIn_21_0;

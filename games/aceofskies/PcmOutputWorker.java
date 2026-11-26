@@ -36,7 +36,7 @@ final class PcmOutputWorker implements Runnable {
               byte[] var10 = var12;
               byte[] var6 = var10;
               if (var3 == 1) {
-                on.a(var12, var5_int, param0, var4, 9);
+                on.decompress(var12, var5_int, param0, var4, 9);
               } else {
                 Object var7 = vg.field_h;
                 synchronized (var7) {

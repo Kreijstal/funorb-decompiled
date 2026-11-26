@@ -160,14 +160,14 @@ final class oi extends IntrusiveNode {
               if (sg.field_x <= 0 &&
                 !ul.field_W) {
                 try {
-                  kf.a(93, "unzap", ii.b(false));
+                  JavaScriptBridge.callWithoutArguments(93, "unzap", ii.b(false));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  kf.a((byte) 53, "zap", ii.b(false), new Object[]{hd.a(vb.field_d, (byte) 62)});
+                  JavaScriptBridge.callWithArguments((byte) 53, "zap", ii.b(false), new Object[]{hd.a(vb.field_d, (byte) 62)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

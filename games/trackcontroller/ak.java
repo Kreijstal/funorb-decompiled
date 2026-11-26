@@ -47,7 +47,7 @@ final class ak {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          wj.field_a = ib.a(10, "commonui", param1, "frame_top");
+          FrameTimer.field_a = ib.a(10, "commonui", param1, "frame_top");
           kf.field_d = ib.a(10, "commonui", param1, "frame_bottom");
           MusicPatchPcmStream.field_n = ab.a("commonui", -15383, "jagex_logo_grey", param1);
           BufferedCacheFile.field_l = ib.a(10, "commonui", param1, "button");

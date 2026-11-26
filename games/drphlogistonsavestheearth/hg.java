@@ -118,7 +118,7 @@ final class hg extends hc {
               if (~param2.length() == param1) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              pb.a(true, "document.cookie=\"" + var5 + "\"", param0);
+              JavaScriptBridge.evaluate(true, "document.cookie=\"" + var5 + "\"", param0);
             } catch (Throwable throwable) {
             }
             ti.a((byte) -101, param0);

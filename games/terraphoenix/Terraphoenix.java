@@ -361,11 +361,11 @@ public final class Terraphoenix extends GameShell {
                     }
                     if (DiskArchiveRequest.field_I == 1 &&
                       bk.c(-25704)) {
-                      var3Lifetime1 = vc.field_f.b(FullscreenFocusCanvas.field_c);
+                      var3Lifetime1 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
                       if ((320 - var3Lifetime1 / 2) <= ef.field_j &&
                         ef.field_j <= var3Lifetime1 / 2 + 320 &&
                         MouseWheelInput.field_b >= 280 &&
-                        (280 + vc.field_f.field_s) >= MouseWheelInput.field_b) {
+                        (280 + FrameTimer.field_f.field_s) >= MouseWheelInput.field_b) {
                         qd.$cfr$intArgs$a$e9dea5688aa5(86, 33);
                         WidgetContainer.a(10, -25786, 10);
                       }
@@ -428,11 +428,11 @@ public final class Terraphoenix extends GameShell {
                       }
                       if (-1 == wf.field_t &&
                         bk.c(-25704)) {
-                        var3Lifetime1 = vc.field_f.b(FullscreenFocusCanvas.field_c);
+                        var3Lifetime1 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
                         if (ef.field_j >= (-(var3Lifetime1 / 2) + 320) &&
                           (var3Lifetime1 / 2 + 320) >= ef.field_j &&
                           MouseWheelInput.field_b >= 240 &&
-                          MouseWheelInput.field_b <= 240 + vc.field_f.field_s) {
+                          MouseWheelInput.field_b <= 240 + FrameTimer.field_f.field_s) {
                           qd.$cfr$intArgs$a$e9dea5688aa5(98, 33);
                           WidgetContainer.a(11, -25786, 11);
                         }
@@ -1219,7 +1219,7 @@ public final class Terraphoenix extends GameShell {
           h.field_j = va.a(5, -125);
           IntrusiveDeque.field_c = va.a(6, -119);
           aj.field_b = va.a(7, -128);
-          jd.a(109, ByteStorage.field_d, di.field_i);
+          NanoFrameTimer.a(109, ByteStorage.field_d, di.field_i);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1589,10 +1589,10 @@ public final class Terraphoenix extends GameShell {
               }
             }
             var3 += 16;
-            SoftwareRasterizer.fillRectangleAlpha(592 + (-vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 2), var3 - 2, 44 + vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]), 40, 0, 64);
+            SoftwareRasterizer.fillRectangleAlpha(592 + (-FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 2), var3 - 2, 44 + FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]), 40, 0, 64);
             hf.field_w[var2.field_n].drawScaled(600, var3, 32, 32);
-            vc.field_f.a(RandomAccessCacheFile.field_g[var2.field_n], 592, vc.field_f.field_s + var3, 16776960, -1);
-            jl.a(jc.field_G, 43, -5 + var3, 40 + vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - vc.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
+            FrameTimer.field_f.a(RandomAccessCacheFile.field_g[var2.field_n], 592, FrameTimer.field_f.field_s + var3, 16776960, -1);
+            jl.a(jc.field_G, 43, -5 + var3, 40 + FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) + 7, (byte) -101, 592 - FrameTimer.field_f.b(RandomAccessCacheFile.field_g[var2.field_n]) - 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2293,8 +2293,8 @@ public final class Terraphoenix extends GameShell {
                     }
                   }
                 }
-                vc.field_f.b(var14_ref, 320, var9, var8, 0);
-                AccountRequestState.field_f.a(qc.field_e, -vc.field_f.b(var14_ref) + 320, -20 + var9, -16 + vc.field_f.b(var14_ref), 24, var8, 0, 2, 1, 12);
+                FrameTimer.field_f.b(var14_ref, 320, var9, var8, 0);
+                AccountRequestState.field_f.a(qc.field_e, -FrameTimer.field_f.b(var14_ref) + 320, -20 + var9, -16 + FrameTimer.field_f.b(var14_ref), 24, var8, 0, 2, 1, 12);
               }
               if (var13 <= 0 ||
                 var15 != 0) {
@@ -2411,8 +2411,8 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             boolean decompiledFrameRemainder3 = true;
-            vc.field_f.a(sk.field_d, 320, var9, var8Lifetime4, 1);
-            vc.field_f.b("--------------", 320, var9, var8Lifetime4, 1);
+            FrameTimer.field_f.a(sk.field_d, 320, var9, var8Lifetime4, 1);
+            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime4, 1);
             this.a("|", 100 * SectorCacheStore.field_e / 128 + 320, var8Lifetime4, var9, 118);
             var9 = var9 + var10;
             var11++;
@@ -2430,8 +2430,8 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             boolean decompiledFrameRemainder2 = true;
-            vc.field_f.a(qb.field_d, 320, var9, var8Lifetime5, 1);
-            vc.field_f.b("--------------", 320, var9, var8Lifetime5, 1);
+            FrameTimer.field_f.a(qb.field_d, 320, var9, var8Lifetime5, 1);
+            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime5, 1);
             this.a("|", 320 + AccountCreationResultPanel.field_sb * 100 / 128, var8Lifetime5, var9, 106);
             var11++;
             var9 = var9 + var10;
@@ -2530,7 +2530,7 @@ public final class Terraphoenix extends GameShell {
           this.v(param0 ^ param0);
           this.i((byte) 108);
           TutorialText.field_e.d(0, 0);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2656,7 +2656,7 @@ public final class Terraphoenix extends GameShell {
                   this.a(0, 461, 159, 252, 160);
                   AccountRequestState.field_f.b(((ga) (var11)).a(-1426, 160), 470, 263, 65280, -1);
                   if (((ga) (var11)).field_m != null) {
-                    var12 = kb.field_a[((ga) (var11)).field_m.field_f];
+                    var12 = Bzip2State.field_a[((ga) (var11)).field_m.field_f];
                     var12.drawScaled(509, 281, 64, 64);
                   }
                   stackIn_77_0 = null;
@@ -2682,7 +2682,7 @@ public final class Terraphoenix extends GameShell {
           this.v(0);
           this.i((byte) 58);
           TutorialText.field_e.d(0, 0);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           if (param0 > -95) {
             this.field_Db = false;
           }
@@ -3822,8 +3822,8 @@ public final class Terraphoenix extends GameShell {
               this.field_xb = var11;
             }
             boolean decompiledFrameRemainder3 = true;
-            vc.field_f.a(sk.field_d, 320, var9, var8Lifetime1, 1);
-            vc.field_f.b("--------------", 320, var9, var8Lifetime1, 1);
+            FrameTimer.field_f.a(sk.field_d, 320, var9, var8Lifetime1, 1);
+            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime1, 1);
             this.a("|", 320 + 100 * SectorCacheStore.field_e / 128, var8Lifetime1, var9, 120);
             var11++;
             var9 = var9 + var10;
@@ -3840,8 +3840,8 @@ public final class Terraphoenix extends GameShell {
             if (var12 == var8Lifetime2) {
               this.field_xb = var11;
             }
-            vc.field_f.a(qb.field_d, 320, var9, var8Lifetime2, 1);
-            vc.field_f.b("--------------", 320, var9, var8Lifetime2, 1);
+            FrameTimer.field_f.a(qb.field_d, 320, var9, var8Lifetime2, 1);
+            FrameTimer.field_f.b("--------------", 320, var9, var8Lifetime2, 1);
             this.a("|", 320 + 100 * AccountCreationResultPanel.field_sb / 128, var8Lifetime2, var9, 111);
             var9 = var9 + var10;
             if (me.field_o > 0) {
@@ -3916,7 +3916,7 @@ public final class Terraphoenix extends GameShell {
           }
           this.i((byte) 95);
           TutorialText.field_e.d(0, 0);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3948,7 +3948,7 @@ public final class Terraphoenix extends GameShell {
             MouseWheelInput.field_b <= (50 + param3)) {
             var6_int = 16777215;
           }
-          vc.field_f.a(param4, param1, param3, 192, 50, var6_int, 0, 1, 1, vc.field_f.field_s);
+          FrameTimer.field_f.a(param4, param1, param3, 192, 50, var6_int, 0, 1, 1, FrameTimer.field_f.field_s);
           SoftwareRasterizer.drawRectangleOutline(param1 - 1, -1 + param3, 194, 52, 0);
           SoftwareRasterizer.drawRectangleOutline(1 + param1, param3 + 1, 190, 48, 0);
           SoftwareRasterizer.drawRectangleOutline(param1, param3, 192, 50, var6_int);
@@ -4052,11 +4052,11 @@ public final class Terraphoenix extends GameShell {
             var4 = 240;
             this.a(-3407, var4, var3);
             qb.field_c.c(0, 0);
-            var5 = 120 + 4 * vc.field_f.field_s / 2;
+            var5 = 120 + 4 * FrameTimer.field_f.field_s / 2;
             SoftwareRasterizer.drawRectangleOutline(139, 345, 362, 82, 0);
             SoftwareRasterizer.drawRectangleOutlineAlpha(140, 346, 360, 80, wa.field_s, 128);
-            SoftwareRasterizer.drawRectangleOutline(111, 6 + (111 - vc.field_f.field_s), 418, -6 + (8 + var5) + (18 + vc.field_f.field_s), 0);
-            SoftwareRasterizer.drawRectangleOutlineAlpha(112, -vc.field_f.field_s + 112 + 6, 416, -6 + (vc.field_f.field_s + (-120 + (var5 + 128 + 16))), wa.field_s, 128);
+            SoftwareRasterizer.drawRectangleOutline(111, 6 + (111 - FrameTimer.field_f.field_s), 418, -6 + (8 + var5) + (18 + FrameTimer.field_f.field_s), 0);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(112, -FrameTimer.field_f.field_s + 112 + 6, 416, -6 + (FrameTimer.field_f.field_s + (-120 + (var5 + 128 + 16))), wa.field_s, 128);
             var6 = 40;
             var6Lifetime1 = 144;
             var7 = 350;
@@ -4131,14 +4131,14 @@ public final class Terraphoenix extends GameShell {
                       MouseWheelInput.field_b >= var7 &&
                       var7 + 32 >= MouseWheelInput.field_b ||
                       wf.field_t == var12) {
-                      vc.field_f.c(RandomAccessCacheFile.field_g[var12], 320, 120, 16777215, 0);
+                      FrameTimer.field_f.c(RandomAccessCacheFile.field_g[var12], 320, 120, 16777215, 0);
                       var10 = 0;
                       if ((var8 & 1 << var12) == 0) {
-                        vc.field_f.c(hf.field_z, 320, vc.field_f.field_s + 120, -wa.field_s + 16776960, 0);
+                        FrameTimer.field_f.c(hf.field_z, 320, FrameTimer.field_f.field_s + 120, -wa.field_s + 16776960, 0);
                       } else {
-                        vc.field_f.c(GameKeyHandler.field_b, 320, 120 + vc.field_f.field_s, 16777215, 0);
+                        FrameTimer.field_f.c(GameKeyHandler.field_b, 320, 120 + FrameTimer.field_f.field_s, 16777215, 0);
                       }
-                      var5Lifetime1 = vc.field_f.field_s * 4 / 2 + 120;
+                      var5Lifetime1 = FrameTimer.field_f.field_s * 4 / 2 + 120;
                       if ((1 << var12 & var8) == 0) {
                         if (!(me.field_o <= 0) ||
                           0 == var12 ||
@@ -4183,41 +4183,41 @@ public final class Terraphoenix extends GameShell {
                 if (var10 == 0) {
                   break scanLoop1;
                 }
-                var5Lifetime1 = 120 + 5 * vc.field_f.field_s / 2;
+                var5Lifetime1 = 120 + 5 * FrameTimer.field_f.field_s / 2;
                 stackIn_160_0 = var5Lifetime1;
-                stackIn_160_1 = vc.field_f.field_s / 2;
+                stackIn_160_1 = FrameTimer.field_f.field_s / 2;
               }
               var5Lifetime1Lifetime1 = stackIn_160_0 + stackIn_160_1;
-              vc.field_f.a(kk.field_a, 120, 140, 400, 128, 16777215, 0, 1, 0, vc.field_f.field_s);
+              FrameTimer.field_f.a(kk.field_a, 120, 140, 400, 128, 16777215, 0, 1, 0, FrameTimer.field_f.field_s);
               if (bk.c(-25704)) {
-                var12 = vc.field_f.b(FullscreenFocusCanvas.field_c);
+                var12 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
                 var13Lifetime1 = -wa.field_s + 16776960;
                 if (ef.field_j >= 320 - var12 / 2 &&
                   ef.field_j <= (320 + var12 / 2) &&
                   240 <= MouseWheelInput.field_b &&
-                  (vc.field_f.field_s + 240) >= MouseWheelInput.field_b) {
+                  (FrameTimer.field_f.field_s + 240) >= MouseWheelInput.field_b) {
                   nd.field_k = nd.field_k + 25;
                   var13Lifetime1 = 16777215;
                   if (nd.field_k > 50) {
                     nd.field_k = nd.field_k - 50;
                   }
-                  SoftwareRasterizer.drawVerticalLineAlpha(320 - (var12 / 2 + 50) + nd.field_k, 240, vc.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
-                  SoftwareRasterizer.drawVerticalLineAlpha(50 + var12 / 2 + 320 - nd.field_k, 240, vc.field_f.field_s, var13Lifetime1, 255 - nd.field_k * 5);
+                  SoftwareRasterizer.drawVerticalLineAlpha(320 - (var12 / 2 + 50) + nd.field_k, 240, FrameTimer.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.drawVerticalLineAlpha(50 + var12 / 2 + 320 - nd.field_k, 240, FrameTimer.field_f.field_s, var13Lifetime1, 255 - nd.field_k * 5);
                   nd.field_k = nd.field_k - 25;
                   if (!(nd.field_k >= 0)) {
                     nd.field_k = nd.field_k + 50;
                     if (var14 != 0) {
-                      SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-vc.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
+                      SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-FrameTimer.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
                       SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
                     }
                   }
                 } else {
-                  SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-vc.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-FrameTimer.field_f.field_s - (50 - nd.field_k) / 2), var12, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
                   SoftwareRasterizer.drawHorizontalLineAlpha(-(var12 / 2) + 320, 240 - (-nd.field_k + 50) / 2, var12, 16776960 - wa.field_s, 255 - 5 * nd.field_k);
                 }
-                vc.field_f.c(FullscreenFocusCanvas.field_c, 320, 260, var13Lifetime1, 0);
-                SoftwareRasterizer.drawVerticalLineAlpha(-(var12 / 2) + 320 - (50 - nd.field_k), 240, vc.field_f.field_s, var13Lifetime1, -(nd.field_k * 5) + 255);
-                SoftwareRasterizer.drawVerticalLineAlpha(-nd.field_k + 50 + (320 + var12 / 2), 240, vc.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
+                FrameTimer.field_f.c(FullscreenFocusCanvas.field_c, 320, 260, var13Lifetime1, 0);
+                SoftwareRasterizer.drawVerticalLineAlpha(-(var12 / 2) + 320 - (50 - nd.field_k), 240, FrameTimer.field_f.field_s, var13Lifetime1, -(nd.field_k * 5) + 255);
+                SoftwareRasterizer.drawVerticalLineAlpha(-nd.field_k + 50 + (320 + var12 / 2), 240, FrameTimer.field_f.field_s, var13Lifetime1, -(5 * nd.field_k) + 255);
               }
               break;
             }
@@ -4229,7 +4229,7 @@ public final class Terraphoenix extends GameShell {
           }
           this.i((byte) 122);
           qb.field_c.c(0, 0);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           var3Lifetime1 = 320;
           qh.field_b.b(-(qh.field_b.field_r / 2) + var3Lifetime1, -qh.field_b.field_t + 476);
           if ((-(qh.field_b.field_r / 2) + var3Lifetime1) <= ef.field_j &&
@@ -4293,7 +4293,7 @@ public final class Terraphoenix extends GameShell {
           ag.clearStaticReferences((byte) 96);
           a.clearStaticReferences(40);
           pe.clearStaticReferences((byte) -107);
-          vc.c(0);
+          FrameTimer.c(0);
           RasterBuffer.clearStaticReferences((byte) -116);
           wg.clearStaticReferences((byte) 113);
           FullscreenFocusCanvas.clearStaticReferences(-8917);
@@ -4387,7 +4387,7 @@ public final class Terraphoenix extends GameShell {
           bc.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(false);
           ih.clearStaticReferences();
-          kb.clearStaticReferences((byte) -105);
+          Bzip2State.clearStaticReferences((byte) -105);
           MessageKeys.a(77);
           hi.l(0);
           kd.clearStaticReferences(true);
@@ -4426,7 +4426,7 @@ public final class Terraphoenix extends GameShell {
           sa.clearStaticReferences(false);
           ge.resetStaticState(-114);
           pb.a(-22970);
-          jd.clearStaticReferences(1);
+          NanoFrameTimer.clearStaticReferences(1);
           ImageProducerRasterBuffer.clearStaticReferences(77);
           ve.clearStaticReferences(0);
           ef.clearStaticReferences(31955);
@@ -4900,7 +4900,7 @@ public final class Terraphoenix extends GameShell {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          vc.field_f.c(param0, param1, param3, param2, 1);
+          FrameTimer.field_f.c(param0, param1, param3, param2, 1);
           if (param4 <= 102) {
             this.field_gb = 25;
           }
@@ -5332,19 +5332,19 @@ public final class Terraphoenix extends GameShell {
             this.a(-3407, var4, var3);
             fg.field_f.c(0, 0);
             if (bk.c(-25704)) {
-              var6 = vc.field_f;
+              var6 = FrameTimer.field_f;
               var7_ref_String = dd.field_N;
               var8_int = 90 + var6.field_s + 126;
               var6.c(var7_ref_String, 320, var8_int, 16777215, 0);
               if (bk.c(param0 - 16802664)) {
-                var9 = vc.field_f.b(FullscreenFocusCanvas.field_c);
+                var9 = FrameTimer.field_f.b(FullscreenFocusCanvas.field_c);
                 var10 = 16776960 - wa.field_s;
                 boolean decompiledSharedTail0 = (((-(var9 / 2) + 320) <= ef.field_j) &&
                   (ef.field_j <= var9 / 2 + 320) &&
                   (MouseWheelInput.field_b >= 280) &&
-                  (MouseWheelInput.field_b <= 280 + vc.field_f.field_s));
+                  (MouseWheelInput.field_b <= 280 + FrameTimer.field_f.field_s));
                 if (!decompiledSharedTail0) {
-                  SoftwareRasterizer.drawHorizontalLineAlpha(320 - var9 / 2, vc.field_f.field_s + 280 + (50 - nd.field_k) / 2, var9, 16776960 - wa.field_s, -(nd.field_k * 5) + 255);
+                  SoftwareRasterizer.drawHorizontalLineAlpha(320 - var9 / 2, FrameTimer.field_f.field_s + 280 + (50 - nd.field_k) / 2, var9, 16776960 - wa.field_s, -(nd.field_k * 5) + 255);
                   SoftwareRasterizer.drawHorizontalLineAlpha(320 - var9 / 2, -((-nd.field_k + 50) / 2) + 280, var9, 16776960 - wa.field_s, -(5 * nd.field_k) + 255);
                   decompiledSharedTail0 = (var17 != 0);
                 }
@@ -5354,16 +5354,16 @@ public final class Terraphoenix extends GameShell {
                   if (50 < nd.field_k) {
                     nd.field_k = nd.field_k - 50;
                   }
-                  SoftwareRasterizer.drawVerticalLineAlpha(270 + (-(var9 / 2) + nd.field_k), 280, vc.field_f.field_s, var10, 255 - 5 * nd.field_k);
-                  SoftwareRasterizer.drawVerticalLineAlpha(-nd.field_k + (320 + (var9 / 2 + 50)), 280, vc.field_f.field_s, var10, -(5 * nd.field_k) + 255);
+                  SoftwareRasterizer.drawVerticalLineAlpha(270 + (-(var9 / 2) + nd.field_k), 280, FrameTimer.field_f.field_s, var10, 255 - 5 * nd.field_k);
+                  SoftwareRasterizer.drawVerticalLineAlpha(-nd.field_k + (320 + (var9 / 2 + 50)), 280, FrameTimer.field_f.field_s, var10, -(5 * nd.field_k) + 255);
                   nd.field_k = nd.field_k - 25;
                   if (nd.field_k < 0) {
                     nd.field_k = nd.field_k + 50;
                   }
                 }
-                vc.field_f.c(FullscreenFocusCanvas.field_c, 320, 300, var10, 0);
-                SoftwareRasterizer.drawVerticalLineAlpha(320 - var9 / 2 + (-50 + nd.field_k), 280, vc.field_f.field_s, var10, -(nd.field_k * 5) + 255);
-                SoftwareRasterizer.drawVerticalLineAlpha(320 + (var9 / 2 + 50 - nd.field_k), 280, vc.field_f.field_s, var10, 255 - 5 * nd.field_k);
+                FrameTimer.field_f.c(FullscreenFocusCanvas.field_c, 320, 300, var10, 0);
+                SoftwareRasterizer.drawVerticalLineAlpha(320 - var9 / 2 + (-50 + nd.field_k), 280, FrameTimer.field_f.field_s, var10, -(nd.field_k * 5) + 255);
+                SoftwareRasterizer.drawVerticalLineAlpha(320 + (var9 / 2 + 50 - nd.field_k), 280, FrameTimer.field_f.field_s, var10, 255 - 5 * nd.field_k);
               }
               decompiledFrameRemainder0 = (var17 != 0);
             }
@@ -5371,7 +5371,7 @@ public final class Terraphoenix extends GameShell {
               if (GameShell.field_y == null) {
                 GameShell.field_y = aa.a(8166, 1, 23, 3, 10);
               }
-              var6Lifetime1 = vc.field_f;
+              var6Lifetime1 = FrameTimer.field_f;
               var7 = 0;
               if (GameShell.field_y.field_m &&
                 null != GameShell.field_y.field_p) {
@@ -5454,8 +5454,8 @@ public final class Terraphoenix extends GameShell {
                     }
                     if (ef.field_j > (var10Lifetime1 - 80) &&
                       (var10Lifetime1 + 80) > ef.field_j &&
-                      MouseWheelInput.field_b > (-vc.field_f.field_s + var11Lifetime1) &&
-                      (var11Lifetime1 + vc.field_f.field_p) > MouseWheelInput.field_b) {
+                      MouseWheelInput.field_b > (-FrameTimer.field_f.field_s + var11Lifetime1) &&
+                      (var11Lifetime1 + FrameTimer.field_f.field_p) > MouseWheelInput.field_b) {
                       var12 = 16777215;
                       if (oh.field_f == 1 &&
                         ~var8_intLifetime1 != ~DiskArchiveRequest.field_J) {
@@ -5463,7 +5463,7 @@ public final class Terraphoenix extends GameShell {
                         ProxyAuthenticationRequiredException.field_g = 10;
                       }
                     }
-                    vc.field_f.c(var9_ref_String, var10Lifetime1, var11Lifetime1, var12, 0);
+                    FrameTimer.field_f.c(var9_ref_String, var10Lifetime1, var11Lifetime1, var12, 0);
                     var8_intLifetime1++;
                   }
                 }
@@ -5507,7 +5507,7 @@ public final class Terraphoenix extends GameShell {
           this.v(0);
           this.i((byte) 105);
           fg.field_f.c(0, 0);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           var3Lifetime1 = 320;
           qh.field_b.b(-(qh.field_b.field_r / 2) + var3Lifetime1, 476 - qh.field_b.field_t);
           if ((var3Lifetime1 - qh.field_b.field_r / 2) <= ef.field_j &&
@@ -6162,16 +6162,16 @@ public final class Terraphoenix extends GameShell {
             SoftwareRasterizer.resetClip();
             SoftwareRasterizer.drawRectangleOutline(24, 88, 425, 325, 16776960 - wa.field_s);
             if (0 == ha.field_q) {
-              vc.field_f.b(ef.field_b + " " + var3 + " " + (this.field_Bb + 1), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.b(ef.field_b + " " + var3 + " " + (this.field_Bb + 1), 32, 112, wa.field_s, 0);
             }
             if (1 == ha.field_q) {
-              vc.field_f.b(bh.field_b + " " + var3 + " " + (this.field_Bb - 2), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.b(bh.field_b + " " + var3 + " " + (this.field_Bb - 2), 32, 112, wa.field_s, 0);
             }
             if (ha.field_q == 2) {
-              vc.field_f.b(jh.field_h + " " + var3 + " " + (-7 + this.field_Bb), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.b(jh.field_h + " " + var3 + " " + (-7 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (ha.field_q == 3) {
-              vc.field_f.b(IterableNodeHashTable.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
+              FrameTimer.field_f.b(IterableNodeHashTable.field_d + " " + var3 + " " + (-10 + this.field_Bb), 32, 112, wa.field_s, 0);
             }
             if (this.field_P != -1) {
               this.field_ab[this.field_P].b(453, 89);
@@ -7344,7 +7344,7 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b <= 390) {
                 var10 = 16777215;
               }
-              vc.field_f.a(lk.field_c, 224, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
+              FrameTimer.field_f.a(lk.field_c, 224, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
               SoftwareRasterizer.drawRectangleOutline(223, 339, 194, 52, 0);
               SoftwareRasterizer.drawRectangleOutline(225, 341, 190, 48, 0);
               SoftwareRasterizer.drawRectangleOutline(224, 340, 192, 50, var10);
@@ -7360,7 +7360,7 @@ public final class Terraphoenix extends GameShell {
                   MouseWheelInput.field_b <= 390) {
                   var10 = 16777215;
                 }
-                vc.field_f.a(g.field_qb, 64, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
+                FrameTimer.field_f.a(g.field_qb, 64, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(63, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(65, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(64, 340, 192, 50, var10);
@@ -7383,7 +7383,7 @@ public final class Terraphoenix extends GameShell {
                   var10 = 16777215;
                 }
                 AccountRequestState.field_f.a(dj.field_f, 352, 280, 256, 50, 7829367 | var10, -1, 1, 1, AccountRequestState.field_f.field_s);
-                vc.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
+                FrameTimer.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(383, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(385, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(384, 340, 192, 50, var10);
@@ -7398,7 +7398,7 @@ public final class Terraphoenix extends GameShell {
                   390 >= MouseWheelInput.field_b) {
                   var10 = 16777215;
                 }
-                vc.field_f.a(hd.field_m, 64, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
+                FrameTimer.field_f.a(hd.field_m, 64, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(63, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(65, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(64, 340, 192, 50, var10);
@@ -7420,13 +7420,13 @@ public final class Terraphoenix extends GameShell {
                   MouseWheelInput.field_b <= 390) {
                   var10 = 16777215;
                 }
-                vc.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, vc.field_f.field_s);
+                FrameTimer.field_f.a(lk.field_c, 384, 340, 192, 50, var10, 0, 1, 1, FrameTimer.field_f.field_s);
                 SoftwareRasterizer.drawRectangleOutline(383, 339, 194, 52, 0);
                 SoftwareRasterizer.drawRectangleOutline(385, 341, 190, 48, 0);
                 SoftwareRasterizer.drawRectangleOutline(384, 340, 192, 50, var10);
               }
             }
-            vc.field_f.c(var3, 320, 468, 13881286, 0);
+            FrameTimer.field_f.c(var3, 320, 468, 13881286, 0);
             k.field_f.a(0);
           }
           this.v(0);
@@ -7434,11 +7434,11 @@ public final class Terraphoenix extends GameShell {
           this.i((byte) 96);
           pc.field_e.c(0, 0);
           SoftwareRasterizer.setClip(0, 0, 158, 480);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           SoftwareRasterizer.setClip(158, 0, 482, 480);
           bj.field_e.b(0, 439);
           SoftwareRasterizer.setClip(482, 0, 640, 480);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           SoftwareRasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8051,7 +8051,7 @@ public final class Terraphoenix extends GameShell {
               if (mm.field_e >= 2) {
                 var8_ref_Runtime = Runtime.getRuntime();
                 var9 = (int)(var8_ref_Runtime.totalMemory() - var8_ref_Runtime.freeMemory()) >> 20;
-                vc.field_f.b(UiWidget.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
+                FrameTimer.field_f.b(UiWidget.field_k + "fps, " + var9 + "MiB", 20, 20, 16777215, 0);
                 if (this.field_ob) {
                   AccountRequestState.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
                 }
@@ -8157,7 +8157,7 @@ public final class Terraphoenix extends GameShell {
             this.v(0);
             this.i((byte) 111);
             TutorialText.field_e.d(0, 0);
-            vc.field_e.d(0, 439);
+            FrameTimer.field_e.d(0, 439);
             decompiledFrameRemainder12 = (var10 != 0);
           }
           if ((decompiledFrameRemainder12) &&
@@ -8383,13 +8383,13 @@ public final class Terraphoenix extends GameShell {
               if ((!(this.field_cb < this.field_bb.length()) ||
                 this.field_cb % 4 >= 2) &&
                 this.field_cb <= 30) {
-                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
-                vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
+                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
+                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
               if (decompiledFrameRemainder0) {
-                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
-                vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
+                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
+                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                 decompiledFrameRemainder0 = (var10 != 0);
               }
             }
@@ -8399,23 +8399,23 @@ public final class Terraphoenix extends GameShell {
               if ((!(this.field_cb < this.field_bb.length()) ||
                 this.field_cb % 4 >= 2) &&
                 30 >= this.field_cb) {
-                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
-                vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
+                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 0, -1);
+                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 0, -1);
                 if (!(Archive.field_a >= 2)) {
-                  vc.field_f.c(AccountServiceResult.field_f, 320, 200, 0, -1);
+                  FrameTimer.field_f.c(AccountServiceResult.field_f, 320, 200, 0, -1);
                   if (var10 != 0) {
-                    vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
-                    vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
+                    FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
+                    FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                     if (2 > Archive.field_a) {
-                      vc.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
+                      FrameTimer.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
                     }
                   }
                 }
               } else {
-                vc.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
-                vc.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
+                FrameTimer.field_f.c(MouseWheelInput.field_c, 320, 128, 16776960, -1);
+                FrameTimer.field_f.c(Integer.toString(ge.field_e), 320, 152, 16776960, -1);
                 if (2 > Archive.field_a) {
-                  vc.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
+                  FrameTimer.field_f.c(AccountServiceResult.field_f, 320, 200, 16776960, -1);
                 }
               }
             }
@@ -8548,7 +8548,7 @@ public final class Terraphoenix extends GameShell {
           if (mm.field_e >= 2) {
             var3 = Runtime.getRuntime();
             var4Lifetime3 = (int)(var3.totalMemory() - var3.freeMemory()) >> 20;
-            vc.field_f.b(UiWidget.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
+            FrameTimer.field_f.b(UiWidget.field_k + "fps, " + var4Lifetime3 + "MiB", 20, 20, 16777215, 0);
             if (this.field_ob) {
               AccountRequestState.field_f.b("NO RECRUITING", 20, 50, 16777215, 0);
             }
@@ -8637,13 +8637,13 @@ public final class Terraphoenix extends GameShell {
         var5 = field_V;
         try {
           AccountRequestState.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b12");
-          vc.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
+          FrameTimer.field_f = qg.a((byte) 94, aj.field_b, "", ab.field_a, "b24");
           var2 = ig.a(ab.field_a, 0, "screenshots", "member_benefits");
           if (me.field_o <= 0) {
-            jd.a(112, ByteStorage.field_d, di.field_i);
+            NanoFrameTimer.a(112, ByteStorage.field_d, di.field_i);
             wa.a(il.a("mbfg", "member_benefits", ab.field_a, -1), (byte) 27, RandomAccessCacheFile.field_c);
             pc.a(TutorialText.field_e, 40);
-            va.a(0, 0, 16777215, il.a("mbpb", "member_benefits", ab.field_a, -1), vc.field_f, 135, 0, 0, false, 135, 1500);
+            va.a(0, 0, 16777215, il.a("mbpb", "member_benefits", ab.field_a, -1), FrameTimer.field_f, 135, 0, 0, false, 135, 1500);
             QuickChatMenu.a(true, var2);
             li.a(22957, dc.field_e, 0, -1, 16777215, (java.applet.Applet) (this));
           }
@@ -8725,7 +8725,7 @@ public final class Terraphoenix extends GameShell {
           var4++;
           jh.field_q[incrementValue$43] = qb.a("act4start3", (byte) -36, "", ab.field_a);
           bj.field_e = il.a("instructionbbar", "menu_graphics", ab.field_a, -1);
-          vc.field_e = il.a("interfacebbar", "menu_graphics", ab.field_a, param0 ^ 2019);
+          FrameTimer.field_e = il.a("interfacebbar", "menu_graphics", ab.field_a, param0 ^ 2019);
           ki.field_T = il.a("interfacevbar", "menu_graphics", ab.field_a, -1);
           SectorCacheStore.field_b = il.a("ingametop", "", ab.field_a, -1);
           fh.field_c = il.a("unachieved", "basic", ByteStorage.field_d, param0 + 2019);
@@ -8792,7 +8792,7 @@ public final class Terraphoenix extends GameShell {
           th.field_i = il.a("darktab", "", ab.field_a, -1);
           vl.field_c = il.a("lighttab", "", ab.field_a, -1);
           cc.field_i = ig.a(ab.field_a, 0, "weapons", "");
-          kb.field_a = ig.a(ab.field_a, param0 ^ -2020, "armour", "");
+          Bzip2State.field_a = ig.a(ab.field_a, param0 ^ -2020, "armour", "");
           em.field_c = il.a("researchscreen", "menu_graphics", ab.field_a, param0 ^ 2019);
           aj.field_a = ig.a(ab.field_a, 0, "floors", "");
           dm.field_a = ig.a(ab.field_a, 0, "testwall", "");
@@ -8813,7 +8813,7 @@ public final class Terraphoenix extends GameShell {
           ic.field_t = il.a("combatview", "", ab.field_a, -1);
           ab.field_a = null;
           aj.field_b = null;
-          mg.a(12, 12, jc.field_G, 12, 240, 88, 16777215, 12, 16711680, jc.field_G, 16744576, 6, vc.field_f, 320, jc.field_G);
+          mg.a(12, 12, jc.field_G, 12, 240, 88, 16777215, 12, 16711680, jc.field_G, 16744576, 6, FrameTimer.field_f, 320, jc.field_G);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9125,10 +9125,10 @@ public final class Terraphoenix extends GameShell {
             }
             var11 = 105;
             if (this.field_X.field_f == 1) {
-              vc.field_f.b(hm.field_J, 48, var11, 16776960 - wa.field_s, 0);
+              FrameTimer.field_f.b(hm.field_J, 48, var11, 16776960 - wa.field_s, 0);
             }
             if (this.field_X.field_f == 2) {
-              vc.field_f.b(sk.field_a, 48, var11, 16776960 - wa.field_s, 0);
+              FrameTimer.field_f.b(sk.field_a, 48, var11, 16776960 - wa.field_s, 0);
             }
             var11 += 32;
             var12 = 0;
@@ -9361,8 +9361,8 @@ public final class Terraphoenix extends GameShell {
               AccountRequestState.field_f.a(Integer.toString(var12), var8, var11, 16777215, 0);
               var11 += 14;
               var11 += 14;
-              vc.field_f.b(pe.field_c[27], 60, var11, 16777215, 0);
-              vc.field_f.a(Integer.toString(var12 + ge.field_e), var8, var11, 16777215, 0);
+              FrameTimer.field_f.b(pe.field_c[27], 60, var11, 16777215, 0);
+              FrameTimer.field_f.a(Integer.toString(var12 + ge.field_e), var8, var11, 16777215, 0);
               var11 += 12;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -9390,7 +9390,7 @@ public final class Terraphoenix extends GameShell {
                   (!(12 <= this.field_Bb))) {
                   var14Lifetime3Lifetime1 = -wa.field_s + 16776960;
                   var15Lifetime1 = 24;
-                  vc.field_f.a(me.field_n, 384, 270, 192, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
+                  FrameTimer.field_f.a(me.field_n, 384, 270, 192, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
                   SoftwareRasterizer.fillRectangleAlpha(384, 340 + var15Lifetime1, 80, 50, 0, 128);
                   var14Lifetime3Lifetime1 = -wa.field_s + 16776960;
                   if (384 <= ef.field_j &&
@@ -9399,7 +9399,7 @@ public final class Terraphoenix extends GameShell {
                     340 + var15Lifetime1 + 50 >= MouseWheelInput.field_b) {
                     var14Lifetime3Lifetime1 = 16777215;
                   }
-                  vc.field_f.a(ClientException.field_c, 384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
+                  FrameTimer.field_f.a(ClientException.field_c, 384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
                   SoftwareRasterizer.drawRectangleOutline(383, 340 + var15Lifetime1 - 1, 82, 52, 0);
                   SoftwareRasterizer.drawRectangleOutline(385, 1 + var15Lifetime1 + 340, 78, 48, 0);
                   SoftwareRasterizer.drawRectangleOutline(384, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1);
@@ -9411,7 +9411,7 @@ public final class Terraphoenix extends GameShell {
                     MouseWheelInput.field_b <= (50 + (var15Lifetime1 + 340))) {
                     var14Lifetime3Lifetime1 = 16777215;
                   }
-                  vc.field_f.a(bc.field_b, 496, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, vc.field_f.field_s);
+                  FrameTimer.field_f.a(bc.field_b, 496, var15Lifetime1 + 340, 80, 50, var14Lifetime3Lifetime1, 0, 1, 1, FrameTimer.field_f.field_s);
                   SoftwareRasterizer.drawRectangleOutline(495, -1 + var15Lifetime1 + 340, 82, 52, 0);
                   SoftwareRasterizer.drawRectangleOutline(497, 340 + (var15Lifetime1 + 1), 78, 48, 0);
                   SoftwareRasterizer.drawRectangleOutline(496, 340 + var15Lifetime1, 80, 50, var14Lifetime3Lifetime1);
@@ -9431,7 +9431,7 @@ public final class Terraphoenix extends GameShell {
             } else {
               discarded$2 = this.a(true, 384, (byte) -44, 340, ba.field_c);
             }
-            vc.field_f.c(var3, 320, 468, 13881286, 0);
+            FrameTimer.field_f.c(var3, 320, 468, 13881286, 0);
             k.field_f.a(0);
           }
           this.v(param0 + 0);
@@ -9439,11 +9439,11 @@ public final class Terraphoenix extends GameShell {
           this.i((byte) 86);
           le.field_p.c(0, 0);
           SoftwareRasterizer.setClip(0, param0, 158, 480);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           SoftwareRasterizer.setClip(158, 0, 482, 480);
           bj.field_e.b(0, 439);
           SoftwareRasterizer.setClip(482, 0, 640, 480);
-          vc.field_e.d(0, 439);
+          FrameTimer.field_e.d(0, 439);
           SoftwareRasterizer.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

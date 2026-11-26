@@ -125,10 +125,10 @@ final class tg extends ga implements el {
     final static void a(byte param0) {
         if (param0 > -120) {
           field_H = 85;
-          eb.a((byte) -122);
+          Bzip2State.a((byte) -122);
           return;
         }
-        eb.a((byte) -122);
+        Bzip2State.a((byte) -122);
     }
 
     final void a(int param0, int param1, byte param2, int param3) {

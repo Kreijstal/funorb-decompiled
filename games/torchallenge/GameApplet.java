@@ -154,7 +154,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (ei.a((byte) -117, (CharSequence) ((Object) var4)) &&
+                      if (Bzip2State.a((byte) -117, (CharSequence) ((Object) var4)) &&
                         !(qh.a((CharSequence) ((Object) var4), (byte) -85) >= 10)) {
                         this.redirectToErrorPage((byte) -116, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -227,7 +227,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    k.field_g = hl.field_b.a((byte) -12, cj.field_i);
+                    k.field_g = hl.field_b.waitAndCountTicks((byte) -12, cj.field_i);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;

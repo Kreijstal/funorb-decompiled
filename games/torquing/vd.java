@@ -26,7 +26,7 @@ final class vd {
         try {
           var6_int = 72 % ((param1 + 9) / 50);
           if (qk.field_p >= param0 &&
-            j.field_q <= param5) {
+            Bzip2State.field_q <= param5) {
             if (param4 < RasterBuffer.field_e) {
               param4 = RasterBuffer.field_e;
               var7 = 0;
@@ -49,8 +49,8 @@ final class vd {
                 var8 = 1;
               }
             }
-            if (param0 < j.field_q) {
-              param0 = j.field_q;
+            if (param0 < Bzip2State.field_q) {
+              param0 = Bzip2State.field_q;
             } else {
               incrementValue$0 = param0;
               param0++;

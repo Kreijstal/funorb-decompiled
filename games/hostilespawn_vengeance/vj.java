@@ -3,7 +3,7 @@
  */
 final class vj extends ql {
     static RgbSprite field_p;
-    static in field_v;
+    static FrameTimer field_v;
     private oc field_f;
     private oc[] field_x;
     static RgbSprite[] field_h;

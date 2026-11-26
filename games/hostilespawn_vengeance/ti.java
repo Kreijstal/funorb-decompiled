@@ -52,7 +52,7 @@ final class ti implements nn {
         if (hb.a(param2, ArchiveProvider.field_c, false)) {
           return;
         }
-        q.field_n = q.field_n + lg.field_m;
+        q.field_n = q.field_n + NanoFrameTimer.field_m;
         fa.field_a = fa.field_a + 1;
         int[] var6 = ArchiveProvider.field_c;
         int[] var3 = var6;
@@ -65,11 +65,11 @@ final class ti implements nn {
         int var5 = 20 / ((-70 - param1) / 40);
         ac.field_i.addLast(new t(param2), 90);
         if (!ta.p(3)) {
-          ec.a(in.field_b, fa.field_a, true, 4, lg.field_m, param0, q.field_n, param2);
+          ec.a(FrameTimer.field_b, fa.field_a, true, 4, NanoFrameTimer.field_m, param0, q.field_n, param2);
           sg.field_j = wk.a(4, -2178);
           return;
         }
-        IntrusiveDeque.field_c.addLast(new hm(param2, param0, q.field_n, in.field_b, lg.field_m, fa.field_a), 89);
+        IntrusiveDeque.field_c.addLast(new hm(param2, param0, q.field_n, FrameTimer.field_b, NanoFrameTimer.field_m, fa.field_a), 89);
     }
 
     public final void a(int param0, int param1, int param2, ag param3, boolean param4) {

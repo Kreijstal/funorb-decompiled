@@ -1061,7 +1061,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("invaliduserorpass", 0);
                 if (null != var2) {
-                  o.field_g = ab.a(0, var2);
+                  NanoFrameTimer.field_g = ab.a(0, var2);
                 }
                 var2 = ad.a("pleasetryagain", 0);
                 if (null != var2) {
@@ -1823,7 +1823,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("waitingfor_levels", 0);
                 if (null != var2) {
-                  gk.field_G = ab.a(0, var2);
+                  Bzip2State.field_G = ab.a(0, var2);
                 }
                 var2 = ad.a("waitingfor_extradata", 0);
                 if (var2 != null) {
@@ -2817,11 +2817,11 @@ final class je extends bb {
                 }
                 var2 = ad.a("rating_mode_long_name,0", 0);
                 if (var2 != null) {
-                  gk.field_e[0] = ab.a(0, var2);
+                  Bzip2State.field_e[0] = ab.a(0, var2);
                 }
                 var2 = ad.a("rating_mode_long_name,1", 0);
                 if (var2 != null) {
-                  gk.field_e[1] = ab.a(0, var2);
+                  Bzip2State.field_e[1] = ab.a(0, var2);
                 }
                 var2 = ad.a("graphics_config_fixed_size", 0);
                 if (var2 != null) {

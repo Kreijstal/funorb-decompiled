@@ -35,21 +35,21 @@ final class qh {
             qg.field_z >= param9 &&
             RasterBuffer.field_e <= param0 &&
             qg.field_z >= param0 &&
-            j.field_q <= param4 &&
+            Bzip2State.field_q <= param4 &&
             qk.field_p >= param4) {
-            if (param6 < j.field_q) {
+            if (param6 < Bzip2State.field_q) {
               RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
             } else {
               if (qk.field_p < param6) {
                 RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
               } else {
-                if (param7 < j.field_q) {
+                if (param7 < Bzip2State.field_q) {
                   RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                 } else {
                   if (param7 > qk.field_p) {
                     RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                   } else {
-                    if (param3 < j.field_q) {
+                    if (param3 < Bzip2State.field_q) {
                       RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                     } else {
                       if (qk.field_p < param3) {
@@ -92,25 +92,25 @@ final class qh {
                       if (qg.field_z < param0) {
                         RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                       } else {
-                        if (j.field_q > param4) {
+                        if (Bzip2State.field_q > param4) {
                           RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                         } else {
                           if (qk.field_p < param4) {
                             RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                           } else {
-                            if (param6 < j.field_q) {
+                            if (param6 < Bzip2State.field_q) {
                               RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                             } else {
                               if (qk.field_p < param6) {
                                 RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                               } else {
-                                if (param7 < j.field_q) {
+                                if (param7 < Bzip2State.field_q) {
                                   RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                 } else {
                                   if (param7 > qk.field_p) {
                                     RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                   } else {
-                                    if (param3 < j.field_q) {
+                                    if (param3 < Bzip2State.field_q) {
                                       RasterBuffer.a(param7, param6, param3, param8, param2, param5, param9, param4, param0, -83);
                                     } else {
                                       if (qk.field_p < param3) {

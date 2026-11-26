@@ -27,7 +27,7 @@ abstract class nk extends GameAppletShell {
         sb.a(this.field_v, jh.field_a, this.field_q, 0, param2, param7, ri.field_e, this.field_s, param4, this.field_D, this.field_B, 5000, this.field_r, this.field_x);
         uk.a(this.field_D, this.field_s, ri.field_e, jh.field_a, this.field_r, (byte) -92, param7, this.field_q, this.field_B);
         li.g(false);
-        rk.field_c = bl.createMouseWheelInput(115);
+        NanoFrameTimer.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
         th.field_m = param6;
         BoundedRandomAccessFile.field_d = param0;
@@ -157,8 +157,8 @@ abstract class nk extends GameAppletShell {
           ta.field_g != 11) {
           MusicPatchPcmStream.a((byte) 22);
         }
-        if (null != rk.field_c) {
-          gd.field_l = rk.field_c.pollRotation(82);
+        if (null != NanoFrameTimer.field_c) {
+          gd.field_l = NanoFrameTimer.field_c.pollRotation(82);
         }
         if (bd.c(false)) {
           var3 = cl.p(param1 - 127) * 1200;

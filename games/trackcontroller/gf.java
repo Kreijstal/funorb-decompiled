@@ -57,7 +57,7 @@ final class gf {
           return;
         }
         this.field_i = this.field_m;
-        if (this.field_t > eb.field_i) {
+        if (this.field_t > NanoFrameTimer.field_i) {
           this.field_d = false;
         } else {
           this.a(false);
@@ -240,7 +240,7 @@ final class gf {
     final boolean a(int param0) {
         if (param0 != 32130) {
           this.c(98);
-          if (eb.field_i < this.field_t) {
+          if (NanoFrameTimer.field_i < this.field_t) {
             return false;
           }
           if (SocketConnector.field_d > 0) {
@@ -248,7 +248,7 @@ final class gf {
           }
           return false;
         }
-        if (eb.field_i < this.field_t) {
+        if (NanoFrameTimer.field_i < this.field_t) {
           return false;
         }
         if (SocketConnector.field_d > 0) {

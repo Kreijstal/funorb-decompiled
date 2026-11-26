@@ -272,7 +272,7 @@ final class PendingIntArrayRequest extends IntrusiveNode {
             var4 = ClockAndScreenHelpers.monotonicMillis((byte) 118) - UnitStateEvent.field_s;
             var6 = (int)((-var4 + 10999L) / 1000L);
             if (var6 <= 0) {
-              PopupMenuBuilder.buildPopupMenu(false, true, 5);
+              Bzip2State.buildPopupMenu(false, true, 5);
               var3 = 2;
             }
           }

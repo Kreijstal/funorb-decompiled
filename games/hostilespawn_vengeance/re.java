@@ -2485,7 +2485,7 @@ final class re {
                 }
                 al.field_Z.b(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
                 if (ka.a(var7, 0, 40, 40, var6)) {
-                  var11 = lg.field_n[var9].toUpperCase();
+                  var11 = NanoFrameTimer.field_n[var9].toUpperCase();
                   var12 = al.field_Z.a(var11);
                   var13 = 16 + var6;
                   if (var12 / 2 + var13 >= 640) {
@@ -2607,7 +2607,7 @@ final class re {
             }
             al.field_Z.b(Integer.toString(var10), var6 + 16, 38 + var7, 16776960, -1);
             if (ka.a(var7, 0, 40, 40, var6)) {
-              var11 = lg.field_n[var9].toUpperCase();
+              var11 = NanoFrameTimer.field_n[var9].toUpperCase();
               var12 = al.field_Z.a(var11);
               var13 = 16 + var6;
               if (var12 / 2 + var13 >= 640) {

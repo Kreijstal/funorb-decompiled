@@ -326,7 +326,7 @@ public final class TrackController extends GameShell {
         qd.a(106);
         he.resetStaticState((byte) -64);
         oj.a((byte) -116);
-        wj.clearStaticReferences(param0 ^ -6527);
+        FrameTimer.clearStaticReferences(param0 ^ -6527);
         sk.clearStaticReferences((byte) 111);
         gf.resetStaticState((byte) 46);
         jc.clearStaticReferences(-79);

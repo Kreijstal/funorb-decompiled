@@ -29,7 +29,7 @@ abstract class ByteStorage {
               return stackIn_3_0;
             }
             try {
-              var3 = (String) (ac.a(param1, "getcookies", -31185));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", -31185));
               var4 = SecondaryNodeDequeIterator.a(-122, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

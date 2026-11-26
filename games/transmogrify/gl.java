@@ -152,8 +152,8 @@ final class gl extends fi {
         if (param0 != 31107) {
           field_B = (pg) null;
         }
-        if (null != re.field_h) {
-          re.field_h.dispose();
+        if (null != Bzip2State.field_h) {
+          Bzip2State.field_h.dispose();
         }
         if (u.field_a != null) {
           u.field_a.dispose();

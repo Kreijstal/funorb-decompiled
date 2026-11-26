@@ -475,7 +475,7 @@ final class tl implements Runnable {
           return mp.field_c + " - " + GameAppletShell.field_b.b("commonui", param0 ^ 2) + "%";
         }
         if (!ib.field_b.a(param0 - 14351)) {
-          return fg.field_m;
+          return NanoFrameTimer.field_m;
         }
         if (!ib.field_b.a((byte) 59)) {
           return kj.field_m + " - " + ib.field_b.b(100) + "%";

@@ -322,7 +322,7 @@ final class co extends qm {
             } else {
               ah.a(vp.field_g, var4, 2, (byte) -94, 1);
               ah.a(rb.field_i, var4, 2, (byte) -67, 5);
-              ah.a(ke.field_c, var4, 12, (byte) 97, 12);
+              ah.a(FrameTimer.field_c, var4, 12, (byte) 97, 12);
               ah.a(fp.field_f, var4, 19, (byte) -38, 19);
               ah.a(cb.field_q, var4, 24, (byte) 122, 24);
               ah.a(oj.field_C, var4, 30, (byte) 103, 30);

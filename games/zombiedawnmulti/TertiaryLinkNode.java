@@ -16,13 +16,13 @@ class TertiaryLinkNode extends DualLinkNode {
         int var2Lifetime1;
         if (param0 == -4604) {
           var2 = TickClock.getContextMenuHeight((byte) -126);
-          TextPopupHelpers.field_c.drawFrame(-LoginCredentials.field_g + PopupMenuBuilder.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (LoginCredentials.field_g << 1), 12018);
+          TextPopupHelpers.field_c.drawFrame(-LoginCredentials.field_g + Bzip2State.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2 + (LoginCredentials.field_g << 1), 12018);
           NodeHashTableIterator.centreMessageMenu(-125);
           return;
         }
         field_t = (String) null;
         var2Lifetime1 = TickClock.getContextMenuHeight((byte) -126);
-        TextPopupHelpers.field_c.drawFrame(-LoginCredentials.field_g + PopupMenuBuilder.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (LoginCredentials.field_g << 1), 12018);
+        TextPopupHelpers.field_c.drawFrame(-LoginCredentials.field_g + Bzip2State.field_M, IntrusiveDequeCursor.field_i - SecondaryNodeDeque.field_a, (SecondaryNodeDeque.field_a << 1) + var1, var2Lifetime1 + (LoginCredentials.field_g << 1), 12018);
         NodeHashTableIterator.centreMessageMenu(-125);
     }
 

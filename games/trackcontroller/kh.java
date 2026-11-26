@@ -65,7 +65,7 @@ final class kh {
               if (param1 <= 55) {
                 field_a = (String) null;
               }
-              var3 = (String) (sj.a((byte) -92, "getcookies", param2));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) -92, "getcookies", param2));
               var4 = DelegatingCanvas.a(var3, ';', (byte) -98);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

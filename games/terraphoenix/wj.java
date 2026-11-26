@@ -102,7 +102,7 @@ final class wj {
               wj.a(-111);
             }
             if (mh.field_a == s.field_c &&
-              vc.a(-113, 1)) {
+              FrameTimer.a(-113, 1)) {
               var6_int = LevelEditor.field_j.readUnsignedByte(-16384);
               LevelEditor.field_j.position = 0;
               if (0 != var6_int) {
@@ -114,7 +114,7 @@ final class wj {
               }
             }
             if (mh.field_a == cb.field_J &&
-              vc.a(-110, 8)) {
+              FrameTimer.a(-110, 8)) {
               kd.field_c = LevelEditor.field_j.readLong((byte) 78);
               LevelEditor.field_j.position = 0;
               gj.a(param0, param4, 1, am.field_K, param5);
@@ -122,7 +122,7 @@ final class wj {
             }
             boolean decompiledFrameRemainder0 = true;
             if (mh.field_a == af.field_b &&
-              vc.a(-115, 1)) {
+              FrameTimer.a(-115, 1)) {
               var6_intLifetime1 = LevelEditor.field_j.readUnsignedByte(param1 - 45782);
               AccountRequestState.field_e = null;
               qk.field_b = var6_intLifetime1;
@@ -194,14 +194,14 @@ final class wj {
               if (0 >= me.field_o &&
                 !si.field_gb) {
                 try {
-                  cd.a((byte) -128, "unzap", dg.a(false));
+                  JavaScriptBridge.callWithoutArguments((byte) -128, "unzap", dg.a(false));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  cd.a(dg.a(false), "zap", new Object[]{hi.a(SpriteState.field_y, param1 - 41780)}, 10056);
+                  JavaScriptBridge.callWithArguments(dg.a(false), "zap", new Object[]{hi.a(SpriteState.field_y, param1 - 41780)}, 10056);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

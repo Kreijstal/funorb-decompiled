@@ -275,14 +275,14 @@ class aj extends UiWidget implements pb {
     final static void a(java.awt.Component param0, int param1, int param2, MidiPcmStream param3, boolean param4, int param5, PlatformTaskDispatcher param6, int param7) {
         try {
           AudioOutput.configureAudio(param5, param4, 10);
-          re.field_h = AudioOutput.createOutput(param6, param0, 0, param1);
+          Bzip2State.field_h = AudioOutput.createOutput(param6, param0, 0, param1);
           u.field_a = AudioOutput.createOutput(param6, param0, 1, param7);
           of.field_a = new PcmStreamMixer();
           pc.field_b = param7 * 1000 / param5;
           u.field_a.setRootStream(of.field_a);
           jk.field_D = param3;
           jk.field_D.a((byte) 107, lb.field_a);
-          re.field_h.setRootStream(jk.field_D);
+          Bzip2State.field_h.setRootStream(jk.field_D);
           if (param2 != 22290) {
             ci var9 = (ci) null;
             aj.a((ci) null, (ci) null, (ci) null, -25);
@@ -351,10 +351,10 @@ class aj extends UiWidget implements pb {
           var17 = new Sprite(param0.a("", (byte) 100, "button.gif"), (java.awt.Component) ((Object) AchievementNotice.field_k));
           gk.a("commonui", param3 ^ -2392393, param2, "dropdown");
           var5 = MusicPatchPcmStream.a((byte) -43, param2, "screen_options", "commonui");
-          kf.field_h = new IndexedSprite[4];
+          NanoFrameTimer.field_h = new IndexedSprite[4];
           fj.field_a = new IndexedSprite[4];
           eh.field_b = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{fj.field_a, kf.field_h, eh.field_b};
+          var6 = new IndexedSprite[][]{fj.field_a, NanoFrameTimer.field_h, eh.field_b};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

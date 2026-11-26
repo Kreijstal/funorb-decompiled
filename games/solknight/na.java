@@ -161,7 +161,7 @@ final class na implements Runnable {
               field_j = (String[]) null;
             }
             try {
-              var3 = (String) (fd.a(param1, "getcookies", (byte) 100));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", (byte) 100));
               var4 = b.$cfr$intArgs$a$25ae83805f84(var3, 59, true);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

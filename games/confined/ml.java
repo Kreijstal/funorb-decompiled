@@ -36,7 +36,7 @@ final class ml {
           var7 = Confined.field_J ? 1 : 0;
           try {
             try {
-              var3 = (String) (kf.a(122, "getcookies", param2));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(122, "getcookies", param2));
               var4 = ij.a(param1 ^ 79, ';', var3);
               if (param1 != 79) {
                 stackIn_3_0 = (String) null;

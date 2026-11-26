@@ -200,7 +200,7 @@ final class je extends vm {
         if (!AccountCreationResultPanel.p(-101)) {
           return true;
         }
-        if (gm.field_d <= 0) {
+        if (FrameTimer.field_d <= 0) {
           return false;
         }
         if (!tb.a((byte) 61)) {

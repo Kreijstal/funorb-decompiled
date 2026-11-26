@@ -589,7 +589,7 @@ final class qc extends qe {
         if (param0) {
           stackIn_34_0 = bp.field_e;
         } else {
-          stackIn_34_0 = gj.field_c;
+          stackIn_34_0 = FrameTimer.field_c;
         }
         var22 = stackIn_34_0;
         var20 = var22;
@@ -840,7 +840,7 @@ final class qc extends qe {
           if (var4 != 0) {
             stackIn_21_0 = bp.field_e;
           } else {
-            stackIn_21_0 = gj.field_c;
+            stackIn_21_0 = FrameTimer.field_c;
           }
           var17 = stackIn_21_0;
           var16 = var17;
@@ -946,10 +946,10 @@ final class qc extends qe {
             sf.openSubscriptionPage(false, m.c(true));
           }
           if (var2 == 1) {
-            gd.a(dc.field_z, 0, 0, false);
+            gd.a(Bzip2State.field_z, 0, 0, false);
           }
           if (var2 == 2) {
-            gd.a(dc.field_z, 0, 0, true);
+            gd.a(Bzip2State.field_z, 0, 0, true);
           }
           return;
         }

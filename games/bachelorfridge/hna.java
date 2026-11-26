@@ -96,7 +96,7 @@ final class hna extends aba {
             return stackIn_3_0;
           }
           if (this.a(param1, false) != FoodShopPanel.field_f) {
-            stackIn_8_0 = bv.field_j;
+            stackIn_8_0 = Bzip2State.field_j;
             return stackIn_8_0;
           }
           stackIn_6_0 = CranberrySpecial.field_p;

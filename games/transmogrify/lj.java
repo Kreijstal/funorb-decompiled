@@ -329,7 +329,7 @@ class lj extends UiWidget {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;
               }
-              var3 = (String) (kj.a(param2, false, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param2, false, "getcookies"));
               var4 = IterableNodeHashTable.a(';', var3, 0);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

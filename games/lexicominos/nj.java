@@ -26,7 +26,7 @@ final class nj {
           var7 = Lexicominos.field_L ? 1 : 0;
           try {
             try {
-              var3 = (String) (oa.a(true, param2, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(true, param2, "getcookies"));
               var4 = NetworkArchiveRequest.a(var3, ';', (byte) -125);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

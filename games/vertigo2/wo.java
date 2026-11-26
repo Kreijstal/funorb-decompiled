@@ -716,7 +716,7 @@ final class wo {
         ProxySocketConnector.field_f[cq.field_i] = param3;
         ac.field_I[cq.field_i] = cq.field_i;
         on.field_e[cq.field_i] = param0;
-        if (!(param0 <= ug.field_b)) {
+        if (!(param0 <= FrameTimer.field_b)) {
           id.field_d = param0;
         }
         if (!(param0 >= q.field_x)) {

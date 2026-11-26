@@ -69,7 +69,7 @@ final class NodeHashTableIterator implements Iterator {
                 }
               }
             }
-            ha.field_a = nd.field_a;
+            FrameTimer.field_a = nd.field_a;
             ll.field_i = ad.field_n;
             if (param0 == null) {
               if (var2_int != 0) {
@@ -85,7 +85,7 @@ final class NodeHashTableIterator implements Iterator {
             he.field_a) {
             ll.field_i = ad.field_n;
             lp.field_b = 0;
-            ha.field_a = nd.field_a;
+            FrameTimer.field_a = nd.field_a;
           }
           if (jd.field_E &&
             PacketBuffer.field_m == lp.field_b) {

@@ -322,7 +322,7 @@ final class gk extends ii implements mg, vg {
         hh var1 = new hh(ta.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
         lm var2 = new lm(vo.field_q, var1, (pg) null);
         this.field_M = new ck(m.field_g, (pg) null);
-        this.field_N = new ck(dc.field_v, (pg) null);
+        this.field_N = new ck(Bzip2State.field_v, (pg) null);
         this.field_R.field_i = ByteStorage.field_d;
         this.field_R.a(new AccountNameAvailabilityValidator(this.field_R), 10508);
         this.field_M.field_B = false;
@@ -375,7 +375,7 @@ final class gk extends ii implements mg, vg {
     final static void a(int param0, byte param1) {
         try {
           try {
-            ee.a("resizing", m.c(true), param1 + 15643, new Object[]{new Integer(param0)});
+            JavaScriptBridge.callWithArguments("resizing", m.c(true), param1 + 15643, new Object[]{new Integer(param0)});
           } catch (Throwable throwable) {
           }
           if (param1 == 4) {

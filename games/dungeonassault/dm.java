@@ -27,7 +27,7 @@ final class dm {
           var1 = wo.field_e.a(-16);
         }
         if (0 == var1.length()) {
-          var1 = dc.a(-118);
+          var1 = Bzip2State.a(-118);
         }
         int var2 = 28 % ((-38 - param0) / 38);
         if (0 == var1.length()) {

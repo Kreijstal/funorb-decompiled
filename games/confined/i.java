@@ -200,7 +200,7 @@ abstract class i extends GameAppletShell {
             if (IntrusiveNode.field_e >= 10) {
               vh.b(param0 ^ -4835);
               if (ch.field_c == 3) {
-                fh.a(256, (byte) -1, jg.field_a);
+                fh.a(256, (byte) -1, FrameTimer.field_a);
               } else {
                 if (ch.field_c == 4) {
                   fh.a(256, (byte) -1, wi.field_q);

@@ -19,7 +19,7 @@ final class td {
           if (nj.a(param2, (byte) 120)) {
             return false;
           }
-          if (ek.a(-123, param2)) {
+          if (FrameTimer.a(-123, param2)) {
             return false;
           }
           if (0 == param0.length()) {

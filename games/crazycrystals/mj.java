@@ -29,12 +29,12 @@ final class mj {
         if (param0 != 84) {
           field_f = (RgbSprite[]) null;
           if (this.field_e != 0) {
-            return qn.field_e;
+            return Bzip2State.field_e;
           }
           return ac.field_j;
         }
         if (this.field_e != 0) {
-          return qn.field_e;
+          return Bzip2State.field_e;
         }
         return ac.field_j;
     }

@@ -53,12 +53,12 @@ class PacketBuffer extends IntrusiveNode {
             try {
               var4 = param0.getCodeBase();
               var3 = bb.a((byte) 122, var4, param0).getFile();
-              cd.a(param0, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 10056);
-              cd.a(param0, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 10056);
-              cd.a(param0, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 10056);
-              cd.a(param0, "updatelinks", new Object[]{"options", var3 + "options.ws"}, 10056);
-              cd.a(param0, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, 10056);
-              cd.a(param0, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, 10056);
+              JavaScriptBridge.callWithArguments(param0, "updatelinks", new Object[]{"home", var3 + "home.ws"}, 10056);
+              JavaScriptBridge.callWithArguments(param0, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, 10056);
+              JavaScriptBridge.callWithArguments(param0, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, 10056);
+              JavaScriptBridge.callWithArguments(param0, "updatelinks", new Object[]{"options", var3 + "options.ws"}, 10056);
+              JavaScriptBridge.callWithArguments(param0, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, 10056);
+              JavaScriptBridge.callWithArguments(param0, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, 10056);
               if (!param1) {
                 field_l = -99;
               }

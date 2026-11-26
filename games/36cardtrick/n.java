@@ -50,7 +50,7 @@ final class n extends qg {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ec.field_j;
+            stackIn_3_0 = NanoFrameTimer.field_j;
             return stackIn_3_0;
           }
           if (255 < var2_int) {
@@ -60,7 +60,7 @@ final class n extends qg {
           var3 = rh.a('.', param0, -68);
           var4 = 17 % ((param1 + 44) / 33);
           if (2 > var3.length) {
-            stackIn_11_0 = ec.field_j;
+            stackIn_11_0 = NanoFrameTimer.field_j;
             return stackIn_11_0;
           }
           var5 = var3;

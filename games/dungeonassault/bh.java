@@ -267,14 +267,14 @@ class bh extends ck {
               if (pb.field_G <= 0 &&
                 !e.field_l) {
                 try {
-                  ee.a((byte) -21, m.c(true), "unzap");
+                  JavaScriptBridge.callWithoutArguments((byte) -21, m.c(true), "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ee.a("zap", m.c(true), 15647, new Object[]{uj.a(MusicPatchPcmStream.field_s, -1)});
+                  JavaScriptBridge.callWithArguments("zap", m.c(true), 15647, new Object[]{uj.a(MusicPatchPcmStream.field_s, -1)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

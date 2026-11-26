@@ -12,7 +12,7 @@ abstract class MouseWheelInput {
     static int field_c;
     static int field_b;
     static String field_f;
-    static ke field_h;
+    static FrameTimer field_h;
 
     final static jp a(String param0, boolean param1) {
         jp stackIn_3_0 = null;

@@ -177,7 +177,7 @@ final class qo extends am {
           if (param1 + param4 > qg.field_z) {
             v.a(param2, param4, param0, (byte) 77, param1);
           } else {
-            if (-param1 + param2 < j.field_q) {
+            if (-param1 + param2 < Bzip2State.field_q) {
               v.a(param2, param4, param0, (byte) 77, param1);
             } else {
               if (param2 + param1 > qk.field_p) {

@@ -159,8 +159,8 @@ final class he extends IntrusiveNode {
         try {
           this.field_q = param4;
           this.field_r = param1;
-          fieldTemp$0 = el.field_k;
-          el.field_k = el.field_k + 1;
+          fieldTemp$0 = NanoFrameTimer.field_k;
+          NanoFrameTimer.field_k = NanoFrameTimer.field_k + 1;
           this.field_j = 65535 & fieldTemp$0;
           this.field_t = param5;
           this.field_h = param3;

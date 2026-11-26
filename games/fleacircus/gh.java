@@ -99,7 +99,7 @@ final class gh extends r {
             return null;
           }
           var6 = var4;
-          if (o.a(false, var6)) {
+          if (NanoFrameTimer.a(false, var6)) {
             stackIn_6_0 = vh.field_k;
             return stackIn_6_0;
           }

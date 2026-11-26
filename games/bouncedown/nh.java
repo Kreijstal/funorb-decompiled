@@ -43,7 +43,7 @@ final class nh extends wk implements rc {
           var4.field_r = 0;
           var4.field_m = 80;
           var4.field_i = 50;
-          var4.field_j = (fc) ((Object) new jd(qj.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_j = (fc) ((Object) new jd(GzipDecompressor.field_d, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var4, true);
           this.field_Q = this.a(-20017, (sk) (this), uk.field_b);
           return;

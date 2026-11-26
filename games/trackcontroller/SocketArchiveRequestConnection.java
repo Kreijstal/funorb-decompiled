@@ -193,14 +193,14 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               if (SocketConnector.field_d <= 0 &&
                 !IndexedSpriteState.field_i) {
                 try {
-                  sj.a((byte) -128, "unzap", CachedArchiveSource.b((byte) 77));
+                  JavaScriptBridge.callWithoutArguments((byte) -128, "unzap", CachedArchiveSource.b((byte) 77));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  sj.a(CachedArchiveSource.b((byte) 77), new Object[]{IntrusiveDequeCursor.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
+                  JavaScriptBridge.callWithArguments(CachedArchiveSource.b((byte) 77), new Object[]{IntrusiveDequeCursor.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -27,7 +27,7 @@ final class DirectByteStorage extends ByteStorage {
     final static void a(boolean param0, String param1, int param2) {
         wc.field_b = true;
         oh.field_F = param0 ? true : false;
-        sj.field_h = new rg(mb.field_b, cn.field_g, param1, MusicPatchPcmStream.field_B, oh.field_F);
+        sj.field_h = new rg(mb.field_b, Bzip2State.field_g, param1, MusicPatchPcmStream.field_B, oh.field_F);
         if (param2 != 0) {
           return;
         }

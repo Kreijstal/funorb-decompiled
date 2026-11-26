@@ -93,16 +93,16 @@ final class InsanoSauceSpecial extends SpecialOrder {
             try {
               var5 = param1.getCodeBase();
               var3 = ow.a(var5, (byte) -105, param1).getFile();
-              ac.a(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, (byte) 73);
+              JavaScriptBridge.callWithArguments(param1, "updatelinks", new Object[]{"home", var3 + "home.ws"}, (byte) 73);
               if (param0 > -102) {
                 var4 = (java.applet.Applet) null;
                 InsanoSauceSpecial.a(4, (java.applet.Applet) null);
               }
-              ac.a(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, (byte) 73);
-              ac.a(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, (byte) 73);
-              ac.a(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, (byte) 73);
-              ac.a(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, (byte) 73);
-              ac.a(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, (byte) 73);
+              JavaScriptBridge.callWithArguments(param1, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, (byte) 73);
+              JavaScriptBridge.callWithArguments(param1, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, (byte) 73);
+              JavaScriptBridge.callWithArguments(param1, "updatelinks", new Object[]{"options", var3 + "options.ws"}, (byte) 73);
+              JavaScriptBridge.callWithArguments(param1, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, (byte) 73);
+              JavaScriptBridge.callWithArguments(param1, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, (byte) 73);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

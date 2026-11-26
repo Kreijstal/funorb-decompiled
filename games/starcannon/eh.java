@@ -1176,7 +1176,7 @@ abstract class eh {
                 }
                 var2 = rd.a("goback", -124);
                 if (null != var2) {
-                  fk.field_v = DualLinkNode.a(124, var2);
+                  Bzip2State.field_v = DualLinkNode.a(124, var2);
                 }
                 var2 = rd.a("otheroptions", param0 + 1);
                 if (var2 != null) {

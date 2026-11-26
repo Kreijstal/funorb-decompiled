@@ -53,9 +53,9 @@ final class ra {
             ra.a((byte) 101);
           }
           if (im.l(169)) {
-            w.field_G.a(true, ha.field_e, oe.field_a, false);
+            w.field_G.a(true, FrameTimer.field_e, oe.field_a, false);
             w.field_G.g((byte) -107);
-            while (np.a((byte) -13)) {
+            while (NanoFrameTimer.a((byte) -13)) {
               w.field_G.a(e.field_f, 24454, m.field_t);
             }
             return;

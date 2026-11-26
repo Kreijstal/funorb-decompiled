@@ -353,7 +353,7 @@ final class fc {
           }
           ((fa) (Object) stackIn_106_0).c(stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_110_4, -1);
           var11Lifetime2 = 100 % ((param0 - 66) / 60);
-          var10 = db.a(pk.field_G, new String[]{wj.field_c[fleas.field_E][var1_int]}, true);
+          var10 = db.a(pk.field_G, new String[]{FrameTimer.field_c[fleas.field_E][var1_int]}, true);
           var12 = db.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
           var13 = db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
           var14 = db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);

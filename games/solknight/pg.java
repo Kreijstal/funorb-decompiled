@@ -221,7 +221,7 @@ final class pg {
             if (SocketConnector.field_f == 2) {
               qf.field_a = new BufferedSocket((java.net.Socket) (SecondaryNodeDeque.field_b.result), NodeHashTableIterator.field_a);
               var2 = new PacketBuffer(13);
-              si.a(hj.field_x, (byte) 22, sa.field_o, q.field_a, var2);
+              si.a(Bzip2State.field_x, (byte) 22, sa.field_o, q.field_a, var2);
               var2.writeByte(param0 + 35, 15);
               var2.writeInt(IntrusiveDeque.field_a, false);
               qf.field_a.a(-28748, 0, 13, var2.payload);

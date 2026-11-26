@@ -154,7 +154,7 @@ final class nj {
 
     nj(boolean param0) {
         this.field_c = ha.field_t;
-        this.field_a = mg.field_y;
+        this.field_a = Bzip2State.field_y;
         if (param0) {
           this.field_k = NanoFrameTimer.field_k;
         } else {

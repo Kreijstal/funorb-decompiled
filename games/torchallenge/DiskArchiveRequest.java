@@ -57,8 +57,8 @@ final class DiskArchiveRequest extends ArchiveRequest {
     }
 
     final static Boolean d(byte param0) {
-        Boolean var1 = bd.field_k;
-        bd.field_k = null;
+        Boolean var1 = NanoFrameTimer.field_k;
+        NanoFrameTimer.field_k = null;
         if (param0 != -48) {
           return (Boolean) null;
         }

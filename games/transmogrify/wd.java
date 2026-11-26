@@ -32,8 +32,8 @@ final class wd extends IntrusiveNode {
     final static void d(int param0) {
         ql.field_b = null;
         BufferedSocket.field_j = null;
-        re.field_a = null;
-        re.field_K = (byte[][]) null;
+        Bzip2State.field_a = null;
+        Bzip2State.field_K = (byte[][]) null;
         int var1 = -77 % ((param0 - 71) / 46);
         rg.field_D = null;
         wk.field_b = null;

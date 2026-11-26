@@ -127,7 +127,7 @@ final class vb implements fc {
               hh.field_p.writeByte(18, (byte) 105);
               hh.field_p.position = hh.field_p.position + 2;
               var10 = hh.field_p.position;
-              var11_ref_StringLifetime4 = uj.a(true, DiskCacheWorker.b(0));
+              var11_ref_StringLifetime4 = Bzip2State.a(true, DiskCacheWorker.b(0));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }

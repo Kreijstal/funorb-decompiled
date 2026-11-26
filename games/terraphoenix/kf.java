@@ -62,7 +62,7 @@ final class kf {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (cd.a((byte) -128, "getcookies", param1));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments((byte) -128, "getcookies", param1));
               var5 = nc.a(14352, var4, ';');
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -113,10 +113,10 @@ final class kf {
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          return !vc.field_a.a(-121) ? true : false;
+          return !FrameTimer.field_a.a(-121) ? true : false;
         }
         field_f = -47;
-        return !vc.field_a.a(-121) ? true : false;
+        return !FrameTimer.field_a.a(-121) ? true : false;
     }
 
     final void a(java.applet.Applet param0, byte param1) {

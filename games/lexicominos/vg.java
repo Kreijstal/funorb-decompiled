@@ -24,12 +24,12 @@ final class vg {
               }
               var4 = param1.getCodeBase();
               var3 = gf.a(3, var4, param1).getFile();
-              oa.a(param1, 22347, "updatelinks", new Object[]{"home", var3 + "home.ws"});
-              oa.a(param1, 22347, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
-              oa.a(param1, 22347, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              oa.a(param1, 22347, "updatelinks", new Object[]{"options", var3 + "options.ws"});
-              oa.a(param1, 22347, "updatelinks", new Object[]{"terms", var3 + "terms.ws"});
-              oa.a(param1, 22347, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments(param1, 22347, "updatelinks", new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callWithArguments(param1, 22347, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments(param1, 22347, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments(param1, 22347, "updatelinks", new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.callWithArguments(param1, 22347, "updatelinks", new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callWithArguments(param1, 22347, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

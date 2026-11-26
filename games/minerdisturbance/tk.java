@@ -49,7 +49,7 @@ final class tk implements uj {
               if (param0.length() == 0) {
                 var6Lifetime4 = var6Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              lk.a(param1, "document.cookie=\"" + var6Lifetime4 + "\"", (byte) -106);
+              JavaScriptBridge.evaluate(param1, "document.cookie=\"" + var6Lifetime4 + "\"", (byte) -106);
             } catch (Throwable throwable) {
             }
             ie.a(param1, true);

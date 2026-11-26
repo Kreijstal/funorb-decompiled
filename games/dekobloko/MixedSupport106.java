@@ -201,7 +201,7 @@ final class MixedSupport106 {
     final static void performAction1385(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         MixedSupport053.integerState0271 = integerArgument3;
         int integerLocal1 = 22 % ((-8 - integerArgument2) / 37);
-        MixedSupport059.integerState0320 = integerArgument4;
+        FrameTimer.integerState0320 = integerArgument4;
         MixedSupport057.integerState0296 = integerArgument1;
     }
 

@@ -274,11 +274,11 @@ final class ik extends kn implements be, sh, f {
         field_N = null;
     }
 
-    final static ek f(byte param0) {
+    final static FrameTimer f(byte param0) {
         if (param0 != -2) {
-          return (ek) null;
+          return (FrameTimer) null;
         }
-        return (ek) ((Object) new ca());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final boolean a(char param0, fe param1, byte param2, int param3) {

@@ -88,7 +88,7 @@ final class ki extends IntrusiveNode {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cn.a(param0, param3 ^ -261, param2, param1)) {
+          if (!Bzip2State.a(param0, param3 ^ -261, param2, param1)) {
             return null;
           }
           if (param3 != -7) {

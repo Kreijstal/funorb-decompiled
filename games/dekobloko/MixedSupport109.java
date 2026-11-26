@@ -32,7 +32,7 @@ final class MixedSupport109 {
             }
             try {
               stringLocal2 = "tuhstatbut";
-              stringLocal3 = (String) (MixedSupport084.computeObject1096(true, "getcookies", appletArgument1));
+              stringLocal3 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", appletArgument1));
               stringArrayLocal4 = ResourceArchive.computeStringArray0801(';', (byte) 66, stringLocal3);
               if (byteArgument2 >= -55) {
                 MixedSupport109.clearStaticReferences(-124);

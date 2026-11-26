@@ -23,10 +23,10 @@ final class ol {
               if (0 == param0.length()) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              hp.a("document.cookie=\"" + var5 + "\"", 27476, param2);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5 + "\"", 27476, param2);
             } catch (Throwable throwable) {
             }
-            j.a(param1, param2);
+            Bzip2State.a(param1, param2);
           } catch (RuntimeException runtimeException) {
             throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

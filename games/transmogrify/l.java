@@ -326,12 +326,12 @@ final class l {
         oh var2 = new oh();
         if (param0 == 12) {
           oc.field_G.addLast(var2, -103);
-          re.a(param0 - 10, param1);
+          Bzip2State.a(param0 - 10, param1);
           return var2;
         }
         field_a = (ci) null;
         oc.field_G.addLast(var2, -103);
-        re.a(param0 - 10, param1);
+        Bzip2State.a(param0 - 10, param1);
         return var2;
     }
 

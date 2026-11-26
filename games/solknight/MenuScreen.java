@@ -809,11 +809,11 @@ final class MenuScreen {
             SoftwareRasterizer.fillCircleAlpha(320, 240, var2 * 56 / 64, 16777215, 128);
             SoftwareRasterizer.fillCircleAlpha(320, 240, 55 * var2 / 64, 16777215, 128);
             SoftwareRasterizer.fillCircleAlpha(320, 240, 54 * var2 / 64, 16777215, 128);
-            hj.field_n.drawScaled(320 - hj.field_n.field_q * 200 / hj.field_n.field_r, -440 + var3, hj.field_n.field_q * 400 / hj.field_n.field_r, 400);
+            Bzip2State.field_n.drawScaled(320 - Bzip2State.field_n.field_q * 200 / Bzip2State.field_n.field_r, -440 + var3, Bzip2State.field_n.field_q * 400 / Bzip2State.field_n.field_r, 400);
           } else {
             if (ClientException.field_b >= 250) {
-              hj.field_n.drawScaled(320 - 250 * hj.field_n.field_q / hj.field_n.field_r, -10, 500 * hj.field_n.field_q / hj.field_n.field_r, 500);
-              hj.field_p.d(320 - hj.field_p.field_q / 2, 3 * (480 - hj.field_p.field_r) / 5);
+              Bzip2State.field_n.drawScaled(320 - 250 * Bzip2State.field_n.field_q / Bzip2State.field_n.field_r, -10, 500 * Bzip2State.field_n.field_q / Bzip2State.field_n.field_r, 500);
+              Bzip2State.field_p.d(320 - Bzip2State.field_p.field_q / 2, 3 * (480 - Bzip2State.field_p.field_r) / 5);
               if (330 <= ClientException.field_b) {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
               }

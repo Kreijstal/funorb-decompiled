@@ -512,7 +512,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           we.clearStaticReferences((byte) 120);
           qh.clearStaticReferences(1);
           ab.clearStaticReferences(false);
-          m.clearStaticReferences(!param0);
+          FrameTimer.clearStaticReferences(!param0);
           AwtRasterBuffer.a((byte) -33);
           sb.a((byte) 33);
           FullscreenFocusCanvas.a(25270);
@@ -649,7 +649,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ph.clearStaticReferences(1);
           hj.clearStaticReferences(-20385);
           ProxyAuthenticationRequiredException.clearStaticReferences(65280);
-          bk.clearStaticReferences(66);
+          NanoFrameTimer.clearStaticReferences(66);
           ImageProducerRasterBuffer.clearStaticReferences(-57);
           ga.clearStaticReferences((byte) -4);
           wb.b(34);
@@ -1954,7 +1954,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           nl.field_n[2] = ij.a("scenery_tile_mothership_background_3", (byte) 107, kf.field_d, "");
           kc.field_l = ij.a("scenery_tile_mothership_antennae_yagi", (byte) 54, kf.field_d, "");
           ta.field_d = ij.a("scenery_tile_mothership_antennae_parabolic", (byte) 109, kf.field_d, "");
-          m.field_a = ij.a("scenery_tile_mothership_antennae_yagi_broken", (byte) 90, kf.field_d, "");
+          FrameTimer.field_a = ij.a("scenery_tile_mothership_antennae_yagi_broken", (byte) 90, kf.field_d, "");
           ki.field_a = ij.a("scenery_tile_mothership_antennae_parabolic_broken", (byte) 83, kf.field_d, "");
           hc.field_M[0] = ij.a("scenery_tile_mothership_platform_1", (byte) 110, kf.field_d, "");
           hc.field_M[1] = ij.a("scenery_tile_mothership_platform_2", (byte) 102, kf.field_d, "");
@@ -1997,7 +1997,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           this.a(118, nl.field_n[2]);
           this.a(118, kc.field_l);
           this.a(99, ta.field_d);
-          this.a(107, m.field_a);
+          this.a(107, FrameTimer.field_a);
           this.a(121, ki.field_a);
           this.a(82, hc.field_M[0]);
           this.a(98, hc.field_M[1]);
@@ -2346,10 +2346,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           eb.field_c = this.a(eh.a("", (byte) -61, kf.field_d, "scenery_tile_earth_8_fire_mask"), (byte) -28);
           ri.field_h = this.a(eh.a("", (byte) -53, kf.field_d, "scenery_tile_earth_9_fire_mask"), (byte) 119);
           el.field_vb = this.a(eh.a("", (byte) -25, kf.field_d, "scenery_tile_earth_10_fire_mask"), (byte) -126);
-          bk.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
-          bk.field_j[0].c();
+          NanoFrameTimer.field_j = ij.a("scenery_tile_earth_11_fire_mask", (byte) 73, kf.field_d, "");
+          NanoFrameTimer.field_j[0].c();
           SectorCacheStore.field_f = new he[1];
-          SectorCacheStore.field_f[0] = bk.field_j[0].e();
+          SectorCacheStore.field_f[0] = NanoFrameTimer.field_j[0].e();
           SectorCacheStore.field_f[0].g();
           ImageProducerRasterBuffer.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
           we.field_c = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_bath_02"), (byte) -7);
@@ -2360,7 +2360,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           mh.field_g = this.a(eh.a("", (byte) -58, kf.field_d, "scenery_tile_earth_bath_06"), (byte) 101);
           u.field_c = this.a(eh.a("", (byte) -93, kf.field_d, "scenery_tile_earth_bath_07"), (byte) 112);
           ai.field_y = this.a(eh.a("", (byte) -43, kf.field_d, "scenery_tile_earth_bath_08"), (byte) 117);
-          bk.field_d = this.a(eh.a("", (byte) -80, kf.field_d, "scenery_tile_earth_bath_09"), (byte) 23);
+          NanoFrameTimer.field_d = this.a(eh.a("", (byte) -80, kf.field_d, "scenery_tile_earth_bath_09"), (byte) 23);
           ek.field_t = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_10"), (byte) 103);
           hh.field_c = ij.a("scenery_tile_earth_bath_11", (byte) 71, kf.field_d, "");
           hh.field_c[0].c();

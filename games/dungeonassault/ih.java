@@ -821,11 +821,11 @@ final class ih extends qe {
               return;
             }
             mi.a(NetworkGameClient.field_y, ae.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
-            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(gj.a(-1704798751, var4), (byte) -111)}, t.field_c, 30496), (String) null));
+            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(FrameTimer.a(-1704798751, var4), (byte) -111)}, t.field_c, 30496), (String) null));
             NetworkGameClient.field_y.field_w = true;
           } else {
             mi.a(NetworkGameClient.field_y, sa.field_e, IntrusiveNode.field_c, 13195, jm.field_i);
-            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(gj.a(-1704798751, var4), (byte) -102)}, e.field_g, 30496), (String) null));
+            NetworkGameClient.field_y.field_n = (en) ((Object) new e((String) null, jk.a(new String[]{var4.field_F.toUpperCase(), gh.a(FrameTimer.a(-1704798751, var4), (byte) -102)}, e.field_g, 30496), (String) null));
             NetworkGameClient.field_y.field_w = true;
           }
         }

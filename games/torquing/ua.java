@@ -29,7 +29,7 @@ abstract class ua {
         try {
           var1_int = param0 ? 1 : 0;
           var2 = 0;
-          while (np.a((byte) -13)) {
+          while (NanoFrameTimer.a((byte) -13)) {
             kb.field_g.a(0);
             if (kb.field_g.f((byte) -60)) {
               var1_int = 1;

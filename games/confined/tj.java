@@ -527,7 +527,7 @@ final class tj extends tk {
         }
         if (null == gg.field_m &&
           eh.field_gb) {
-          q.a(var2, param0, (byte) -107);
+          NanoFrameTimer.a(var2, param0, (byte) -107);
         }
     }
 

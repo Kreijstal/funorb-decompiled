@@ -14,7 +14,7 @@ final class NodeHashTableIterator implements Iterator {
     static int[] integerArrayState0028;
     static String stringState0098;
     static String stringState0099;
-    static MixedSupport059 mixedSupport059State0001;
+    static FrameTimer mixedSupport059State0001;
 
     public final Object next() {
         int integerLocal1 = 0;

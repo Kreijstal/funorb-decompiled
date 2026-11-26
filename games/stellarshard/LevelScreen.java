@@ -1357,7 +1357,7 @@ final class LevelScreen extends ib {
               Math.sin(var4_double);
               if (var8 > 0) {
                 if (var8 > var9 &&
-                  mg.field_t <= var9) {
+                  Bzip2State.field_t <= var9) {
                   SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 256, 255 * var9 / var8, ei.field_I);
                 } else if (var8 == var9) {
                   SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 256, var9 * 255 / var8, ei.field_B);
@@ -1367,7 +1367,7 @@ final class LevelScreen extends ib {
                 var6 = var6 * 9 / 10;
                 var7 = 9 * var7 / 10;
                 if (var8 > var9 &&
-                  mg.field_t <= var9) {
+                  Bzip2State.field_t <= var9) {
                   SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 192, var9 * 255 / var8, ei.field_I);
                 }
                 if (var9 == var8) {
@@ -1376,7 +1376,7 @@ final class LevelScreen extends ib {
                 var7 = 9 * var7 / 10;
                 var6 = 9 * var6 / 10;
                 if (var8 > var9 &&
-                  var9 >= mg.field_t) {
+                  var9 >= Bzip2State.field_t) {
                   SoftwareRasterizer.addRadialGlow(320 + var6 << 4, 240 + var7 << 4, 128, var9 * 255 / var8, ei.field_I);
                 }
                 if (~var9 == ~var8) {
@@ -1385,7 +1385,7 @@ final class LevelScreen extends ib {
                 var6 = 9 * var6 / 10;
                 var7 = 9 * var7 / 10;
                 if (var8 > var9 &&
-                  mg.field_t <= var9) {
+                  Bzip2State.field_t <= var9) {
                   SoftwareRasterizer.addRadialGlow(var6 + 320 << 4, 240 + var7 << 4, 64, var9 * 255 / var8, ei.field_I);
                 }
                 if (~var8 == ~var9) {

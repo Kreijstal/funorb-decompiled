@@ -944,8 +944,8 @@ final class ja {
             if (!this.field_f.c((byte) 126)) {
               break regionExit1;
             }
-            var6Lifetime3 = aa.field_c + 128 + 9;
-            var7 = (-var6Lifetime3 + this.c(-29187, param0) + this.d(-118, param0) >> 1) + (aa.field_c + 8);
+            var6Lifetime3 = FrameTimer.field_c + 128 + 9;
+            var7 = (-var6Lifetime3 + this.c(-29187, param0) + this.d(-118, param0) >> 1) + (FrameTimer.field_c + 8);
             var8 = ua.field_a - var7 << 1;
             if (var8 <= 0) {
               ce.a(0, (byte) -118);
@@ -999,8 +999,8 @@ final class ja {
             if (!this.field_f.c((byte) -21)) {
               break regionExit1;
             }
-            var6Lifetime2 = 9 + (aa.field_c + 128);
-            var7Lifetime1 = 8 + (-var6Lifetime2 + (this.c(-29187, param0) + this.d(-95, param0)) >> 1) + aa.field_c;
+            var6Lifetime2 = 9 + (FrameTimer.field_c + 128);
+            var7Lifetime1 = 8 + (-var6Lifetime2 + (this.c(-29187, param0) + this.d(-95, param0)) >> 1) + FrameTimer.field_c;
             var8Lifetime1 = ua.field_a - var7Lifetime1 << 1;
             if (var8Lifetime1 > 0) {
               if (var8Lifetime1 < 256) {
@@ -1698,7 +1698,7 @@ final class ja {
         if (var7 == 12 ||
           var7 == 13 || var19 != 0) {
           var5 -= 8;
-          var14Lifetime1 = 128 + aa.field_c + 9;
+          var14Lifetime1 = 128 + FrameTimer.field_c + 9;
           var15Lifetime1 = var5 + (-var14Lifetime1 + var9 >> 1);
           var16 = 32;
           if (var11 != 16777215) {
@@ -1714,7 +1714,7 @@ final class ja {
             cc.field_t.a(var8.toLowerCase(), (var9 >> 1) + var5, ProxyAuthenticationRequiredException.field_d[0].field_t + cc.field_t.field_H + (var4 + (var13Lifetime1 >> 1)), 0, -1);
             vj.field_b.d();
           }
-          var15Lifetime1 = var15Lifetime1 + (aa.field_c + 16);
+          var15Lifetime1 = var15Lifetime1 + (FrameTimer.field_c + 16);
           var17 = 0;
           var18 = var15Lifetime1;
           while (true) {

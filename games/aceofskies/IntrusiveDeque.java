@@ -52,7 +52,7 @@ final class IntrusiveDeque {
         String stackIn_20_2 = null;
         try {
           int var2_int = 80 / ((-18 - param0) / 45);
-          if (param1 == bd.field_C) {
+          if (param1 == Bzip2State.field_C) {
             int stackIn_15_0 = 7681;
             return stackIn_15_0;
           }

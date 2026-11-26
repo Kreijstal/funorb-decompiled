@@ -109,9 +109,9 @@ final class me {
                   if (var7_int > var29Lifetime1) {
                     var7_int = var29Lifetime1;
                   }
-                  lg.field_c[var23Lifetime2] = var29Lifetime1;
+                  Bzip2State.field_c[var23Lifetime2] = var29Lifetime1;
                 } else {
-                  lg.field_c[var23Lifetime2] = -2147483648;
+                  Bzip2State.field_c[var23Lifetime2] = -2147483648;
                 }
                 if (param6) {
                   fd.field_g[var23Lifetime2] = var27Lifetime1 >> th.field_a;

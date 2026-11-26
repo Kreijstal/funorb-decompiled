@@ -251,7 +251,7 @@ final class jia extends k {
               if (param0.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ac.a("document.cookie=\"" + var5 + "\"", param2, 113);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5 + "\"", param2, 113);
             } catch (Throwable throwable) {
             }
             InsanoSauceSpecial.a(-119, param2);

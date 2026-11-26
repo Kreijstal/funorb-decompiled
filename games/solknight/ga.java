@@ -214,13 +214,13 @@ final class ga extends WidgetContainer implements ge, ka {
         if (!param2) {
           pb.field_b = param0;
           hc.field_d = param1;
-          rj.field_c = param3;
+          FrameTimer.field_c = param3;
           return;
         }
         field_E = (IntrusiveDeque) null;
         pb.field_b = param0;
         hc.field_d = param1;
-        rj.field_c = param3;
+        FrameTimer.field_c = param3;
     }
 
     private final boolean e(byte param0) {

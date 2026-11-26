@@ -23,15 +23,15 @@ final class fh extends ln {
             return;
           }
           li.field_c = 11;
-          s.field_h = new int[260];
+          NanoFrameTimer.field_h = new int[260];
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;
-            s.field_h[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
+            NanoFrameTimer.field_h[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           var5 = 256;
           var1_intLifetime1 = var5;
-          while (var5 < s.field_h.length) {
-            s.field_h[var5] = 255;
+          while (var5 < NanoFrameTimer.field_h.length) {
+            NanoFrameTimer.field_h[var5] = 255;
             var5++;
           }
           return;

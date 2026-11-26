@@ -43,7 +43,7 @@ final class on {
           aq.a(param12, (byte) -122, param19, param9);
           ni.a((byte) 107, param6, param2, param1, param7, param8);
           af.a(param11, param16, (byte) 122);
-          ug.a((byte) -113, param5, param14, param13);
+          FrameTimer.a((byte) -113, param5, param14, param13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

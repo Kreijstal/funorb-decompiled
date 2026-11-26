@@ -113,7 +113,7 @@ final class rl {
           if (param1 != 0) {
             return false;
           }
-          kf.a(var5, param1 ^ 108);
+          NanoFrameTimer.a(var5, param1 ^ 108);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

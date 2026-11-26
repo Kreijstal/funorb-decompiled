@@ -165,14 +165,14 @@ final class jj {
               if (mo.field_l <= 0 &&
                 !BufferedRandomAccessFile.field_j) {
                 try {
-                  hi.a(le.b((byte) -20), "unzap", -115);
+                  JavaScriptBridge.callWithoutArguments(le.b((byte) -20), "unzap", -115);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  hi.a(-3729, "zap", le.b((byte) -20), new Object[]{DiskCacheWorker.a(37, go.field_h)});
+                  JavaScriptBridge.callWithArguments(-3729, "zap", le.b((byte) -20), new Object[]{DiskCacheWorker.a(37, go.field_h)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

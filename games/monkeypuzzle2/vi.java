@@ -64,10 +64,10 @@ final class vi {
         if (!param0) {
           CharSequence var2 = (CharSequence) null;
           vi.a(97, (CharSequence) null);
-          fg.field_a = 0;
+          FrameTimer.field_a = 0;
           return;
         }
-        fg.field_a = 0;
+        FrameTimer.field_a = 0;
     }
 
     static {

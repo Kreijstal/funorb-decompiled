@@ -57,7 +57,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
                   mc.field_d.decompress(false, var14, var10);
                 }
               } else {
-                oa.a(var14, var6, param1, var5, 9);
+                oa.decompress(var14, var6, param1, var5, 9);
               }
               stackIn_21_0 = var7;
               return stackIn_21_0;

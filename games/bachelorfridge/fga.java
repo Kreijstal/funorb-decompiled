@@ -27,7 +27,7 @@ final class fga extends TileEffect {
             field_f = -112;
           }
           try {
-            ac.a(nia.d(param1 - 31766), "resizing", new Object[]{new Integer(param0)}, (byte) 73);
+            JavaScriptBridge.callWithArguments(nia.d(param1 - 31766), "resizing", new Object[]{new Integer(param0)}, (byte) 73);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

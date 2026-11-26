@@ -393,7 +393,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#0"
+      "renamedSymbol": "B:Bzip2Decoder.emitBlock(LBzip2State;)V#0"
     },
     {
       "symbol": "C:a",
@@ -1022,10 +1022,10 @@
     {
       "symbol": "C:eb",
       "originalName": "eb",
-      "to": "PopupMenuBuilder",
-      "evidence": "Grab-bag of statics dominated by buildPopupMenu; also formatSignedNumber and isNameSeparator.",
+      "to": "Bzip2State",
+      "evidence": "Source-purpose review:32owned instance fields hold Bzip2 byte/bit counters,buffers,selectors and6x258decode tables;all constructor operations,typed synchronized byte-array decoder entry,bit reader and singleton construction reviewed. Preserve exact per-game14array allocation order/dimensions and two explicit zero stores;multidimensional array allocation/partial effects unchanged. Decoder entry captures lock target then rereads global state field,sets source/target/offset/count/bit fields in original order,calls decoder,and nulls input/output only on normal return. Do not add finally cleanup,lock changes,caching,bounds/count clamps,or alter unused supplied int. Bit reader preserves signed int arithmetic/shift masking,byte&255,buffer-index/count overflow,read/update/exception order and all literals. No method/field leaf aliases changed. Full443line original ZDM class also read:popup building is an unrelated static helper;keep its existing method leaf names/evidence/behavior. Rename class for its instantiated decoder state.",
       "confidence": "reviewed",
-      "renamedSymbol": "C:PopupMenuBuilder"
+      "renamedSymbol": "C:Bzip2State"
     },
     {
       "symbol": "C:ec",
@@ -8793,7 +8793,7 @@
       "to": "isNameSeparator",
       "evidence": "True for space, non-breaking space, underscore and hyphen.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PopupMenuBuilder.isNameSeparator(BC)Z"
+      "renamedSymbol": "M:Bzip2State.isNameSeparator(BC)Z"
     },
     {
       "symbol": "M:eb.a(I)[Lja;",
@@ -8801,7 +8801,7 @@
       "to": "buildSprites",
       "evidence": "Creates Sprites from the decoded sprite buffers and frees them.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PopupMenuBuilder.buildSprites(I)[LSprite;"
+      "renamedSymbol": "M:Bzip2State.buildSprites(I)[LSprite;"
     },
     {
       "symbol": "M:eb.a(IZZ)Ljava/lang/String;",
@@ -8809,7 +8809,7 @@
       "to": "formatSignedNumber",
       "evidence": "Formats the number in base 10, with a plus sign for positive values when requested.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PopupMenuBuilder.formatSignedNumber(IZZ)Ljava/lang/String;"
+      "renamedSymbol": "M:Bzip2State.formatSignedNumber(IZZ)Ljava/lang/String;"
     },
     {
       "symbol": "M:eb.a(Z)V",
@@ -8817,7 +8817,7 @@
       "to": "releaseStatics",
       "evidence": "Static method that only nulls this class's static references (obfuscation guard calls are dead).",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PopupMenuBuilder.releaseStatics(Z)V"
+      "renamedSymbol": "M:Bzip2State.releaseStatics(Z)V"
     },
     {
       "symbol": "M:eb.a(ZZI)V",
@@ -8825,7 +8825,7 @@
       "to": "buildPopupMenu",
       "evidence": "Huge builder for the in-game popup menu rows and actions of the given menu type.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:PopupMenuBuilder.buildPopupMenu(ZZI)V"
+      "renamedSymbol": "M:Bzip2State.buildPopupMenu(ZZI)V"
     },
     {
       "symbol": "M:ec.a(B)V",
@@ -29105,7 +29105,7 @@
       "to": "readBits",
       "evidence": "Body is token-identical to bachelorfridge Bzip2Decoder.readBits.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Bzip2Decoder.readBits(ILPopupMenuBuilder;)I"
+      "renamedSymbol": "M:Bzip2Decoder.readBits(ILBzip2State;)I"
     },
     {
       "symbol": "M:wo.a(Leb;)B",
@@ -29113,7 +29113,7 @@
       "to": "readByte",
       "evidence": "Reads 8 bits from the bzip2 bit stream.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Bzip2Decoder.readByte(LPopupMenuBuilder;)B"
+      "renamedSymbol": "M:Bzip2Decoder.readByte(LBzip2State;)B"
     },
     {
       "symbol": "M:wo.a([BI[BII)I",
@@ -29137,7 +29137,7 @@
       "to": "readBit",
       "evidence": "Reads 1 bit from the bzip2 bit stream.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Bzip2Decoder.readBit(LPopupMenuBuilder;)B"
+      "renamedSymbol": "M:Bzip2Decoder.readBit(LBzip2State;)B"
     },
     {
       "symbol": "M:wo.c(Leb;)V",
@@ -29145,7 +29145,7 @@
       "to": "buildSymbolMap",
       "evidence": "Body is token-identical to bachelorfridge Bzip2Decoder.buildSymbolMap.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Bzip2Decoder.buildSymbolMap(LPopupMenuBuilder;)V"
+      "renamedSymbol": "M:Bzip2Decoder.buildSymbolMap(LBzip2State;)V"
     },
     {
       "symbol": "M:wo.d(Leb;)V",
@@ -29153,7 +29153,7 @@
       "to": "decodeBlocks",
       "evidence": "Body is token-identical (modulo identifiers) to the reviewed Tetra Link Bzip2Decoder.decodeBlocks; the classes pair by method shapes.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V"
+      "renamedSymbol": "M:Bzip2Decoder.decodeBlocks(LBzip2State;)V"
     },
     {
       "symbol": "M:wo.e(Leb;)V",
@@ -29161,7 +29161,7 @@
       "to": "emitBlock",
       "evidence": "Body is token-identical to bachelorfridge Bzip2Decoder.emitBlock.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V"
+      "renamedSymbol": "M:Bzip2Decoder.emitBlock(LBzip2State;)V"
     },
     {
       "symbol": "M:wp.a(B)V",
@@ -29919,7 +29919,7 @@
     },
     {
       "symbol": "B:wo.e(Leb;)V#0",
-      "renamedSymbol": "B:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "B:Bzip2Decoder.emitBlock(LBzip2State;)V#0",
       "originalName": "L0",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -30799,9 +30799,9 @@
     },
     {
       "symbol": "C:eb",
-      "renamedSymbol": "C:PopupMenuBuilder",
+      "renamedSymbol": "C:Bzip2State",
       "originalName": "eb",
-      "renamedName": "PopupMenuBuilder",
+      "renamedName": "Bzip2State",
       "declaration": {
         "file": "eb.java",
         "start": 50,
@@ -42052,7 +42052,7 @@
     },
     {
       "symbol": "F:eb.field_A:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_A:I",
+      "renamedSymbol": "F:Bzip2State.field_A:I",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -42063,7 +42063,7 @@
     },
     {
       "symbol": "F:eb.field_B:Lcj;",
-      "renamedSymbol": "F:PopupMenuBuilder.field_B:LUiComponent;",
+      "renamedSymbol": "F:Bzip2State.field_B:LUiComponent;",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -42074,7 +42074,7 @@
     },
     {
       "symbol": "F:eb.field_C:[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_C:[B",
+      "renamedSymbol": "F:Bzip2State.field_C:[B",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -42085,7 +42085,7 @@
     },
     {
       "symbol": "F:eb.field_D:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_D:I",
+      "renamedSymbol": "F:Bzip2State.field_D:I",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -42096,7 +42096,7 @@
     },
     {
       "symbol": "F:eb.field_E:[Z",
-      "renamedSymbol": "F:PopupMenuBuilder.field_E:[Z",
+      "renamedSymbol": "F:Bzip2State.field_E:[Z",
       "originalName": "field_E",
       "renamedName": "field_E",
       "declaration": {
@@ -42107,7 +42107,7 @@
     },
     {
       "symbol": "F:eb.field_F:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_F:I",
+      "renamedSymbol": "F:Bzip2State.field_F:I",
       "originalName": "field_F",
       "renamedName": "field_F",
       "declaration": {
@@ -42118,7 +42118,7 @@
     },
     {
       "symbol": "F:eb.field_G:[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_G:[I",
+      "renamedSymbol": "F:Bzip2State.field_G:[I",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -42129,7 +42129,7 @@
     },
     {
       "symbol": "F:eb.field_H:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_H:I",
+      "renamedSymbol": "F:Bzip2State.field_H:I",
       "originalName": "field_H",
       "renamedName": "field_H",
       "declaration": {
@@ -42140,7 +42140,7 @@
     },
     {
       "symbol": "F:eb.field_I:[Z",
-      "renamedSymbol": "F:PopupMenuBuilder.field_I:[Z",
+      "renamedSymbol": "F:Bzip2State.field_I:[Z",
       "originalName": "field_I",
       "renamedName": "field_I",
       "declaration": {
@@ -42151,7 +42151,7 @@
     },
     {
       "symbol": "F:eb.field_J:[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_J:[I",
+      "renamedSymbol": "F:Bzip2State.field_J:[I",
       "originalName": "field_J",
       "renamedName": "field_J",
       "declaration": {
@@ -42162,7 +42162,7 @@
     },
     {
       "symbol": "F:eb.field_K:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_K:I",
+      "renamedSymbol": "F:Bzip2State.field_K:I",
       "originalName": "field_K",
       "renamedName": "field_K",
       "declaration": {
@@ -42173,7 +42173,7 @@
     },
     {
       "symbol": "F:eb.field_L:Ljava/lang/String;",
-      "renamedSymbol": "F:PopupMenuBuilder.field_L:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_L:Ljava/lang/String;",
       "originalName": "field_L",
       "renamedName": "field_L",
       "declaration": {
@@ -42184,7 +42184,7 @@
     },
     {
       "symbol": "F:eb.field_M:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_M:I",
+      "renamedSymbol": "F:Bzip2State.field_M:I",
       "originalName": "field_M",
       "renamedName": "field_M",
       "declaration": {
@@ -42195,7 +42195,7 @@
     },
     {
       "symbol": "F:eb.field_N:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_N:I",
+      "renamedSymbol": "F:Bzip2State.field_N:I",
       "originalName": "field_N",
       "renamedName": "field_N",
       "declaration": {
@@ -42206,7 +42206,7 @@
     },
     {
       "symbol": "F:eb.field_O:[[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_O:[[I",
+      "renamedSymbol": "F:Bzip2State.field_O:[[I",
       "originalName": "field_O",
       "renamedName": "field_O",
       "declaration": {
@@ -42217,7 +42217,7 @@
     },
     {
       "symbol": "F:eb.field_P:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_P:I",
+      "renamedSymbol": "F:Bzip2State.field_P:I",
       "originalName": "field_P",
       "renamedName": "field_P",
       "declaration": {
@@ -42228,7 +42228,7 @@
     },
     {
       "symbol": "F:eb.field_a:[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_a:[I",
+      "renamedSymbol": "F:Bzip2State.field_a:[I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -42239,7 +42239,7 @@
     },
     {
       "symbol": "F:eb.field_b:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_b:I",
+      "renamedSymbol": "F:Bzip2State.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -42250,7 +42250,7 @@
     },
     {
       "symbol": "F:eb.field_c:[[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_c:[[I",
+      "renamedSymbol": "F:Bzip2State.field_c:[[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -42261,7 +42261,7 @@
     },
     {
       "symbol": "F:eb.field_d:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_d:I",
+      "renamedSymbol": "F:Bzip2State.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -42272,7 +42272,7 @@
     },
     {
       "symbol": "F:eb.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:PopupMenuBuilder.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -42283,7 +42283,7 @@
     },
     {
       "symbol": "F:eb.field_f:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_f:I",
+      "renamedSymbol": "F:Bzip2State.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -42294,7 +42294,7 @@
     },
     {
       "symbol": "F:eb.field_g:[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_g:[I",
+      "renamedSymbol": "F:Bzip2State.field_g:[I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -42305,7 +42305,7 @@
     },
     {
       "symbol": "F:eb.field_h:[[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_h:[[I",
+      "renamedSymbol": "F:Bzip2State.field_h:[[I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -42316,7 +42316,7 @@
     },
     {
       "symbol": "F:eb.field_i:Ljava/lang/String;",
-      "renamedSymbol": "F:PopupMenuBuilder.field_i:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_i:Ljava/lang/String;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -42327,7 +42327,7 @@
     },
     {
       "symbol": "F:eb.field_j:B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_j:B",
+      "renamedSymbol": "F:Bzip2State.field_j:B",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -42338,7 +42338,7 @@
     },
     {
       "symbol": "F:eb.field_k:[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_k:[B",
+      "renamedSymbol": "F:Bzip2State.field_k:[B",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -42349,7 +42349,7 @@
     },
     {
       "symbol": "F:eb.field_l:[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_l:[B",
+      "renamedSymbol": "F:Bzip2State.field_l:[B",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -42360,7 +42360,7 @@
     },
     {
       "symbol": "F:eb.field_m:[I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_m:[I",
+      "renamedSymbol": "F:Bzip2State.field_m:[I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -42371,7 +42371,7 @@
     },
     {
       "symbol": "F:eb.field_n:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_n:I",
+      "renamedSymbol": "F:Bzip2State.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -42382,7 +42382,7 @@
     },
     {
       "symbol": "F:eb.field_o:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_o:I",
+      "renamedSymbol": "F:Bzip2State.field_o:I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -42393,7 +42393,7 @@
     },
     {
       "symbol": "F:eb.field_p:Z",
-      "renamedSymbol": "F:PopupMenuBuilder.field_p:Z",
+      "renamedSymbol": "F:Bzip2State.field_p:Z",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -42404,7 +42404,7 @@
     },
     {
       "symbol": "F:eb.field_q:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_q:I",
+      "renamedSymbol": "F:Bzip2State.field_q:I",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -42415,7 +42415,7 @@
     },
     {
       "symbol": "F:eb.field_r:[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_r:[B",
+      "renamedSymbol": "F:Bzip2State.field_r:[B",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -42426,7 +42426,7 @@
     },
     {
       "symbol": "F:eb.field_s:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_s:I",
+      "renamedSymbol": "F:Bzip2State.field_s:I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -42437,7 +42437,7 @@
     },
     {
       "symbol": "F:eb.field_t:[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_t:[B",
+      "renamedSymbol": "F:Bzip2State.field_t:[B",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -42448,7 +42448,7 @@
     },
     {
       "symbol": "F:eb.field_u:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_u:I",
+      "renamedSymbol": "F:Bzip2State.field_u:I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -42459,7 +42459,7 @@
     },
     {
       "symbol": "F:eb.field_v:[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_v:[B",
+      "renamedSymbol": "F:Bzip2State.field_v:[B",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -42470,7 +42470,7 @@
     },
     {
       "symbol": "F:eb.field_w:Lao;",
-      "renamedSymbol": "F:PopupMenuBuilder.field_w:LQuickChatCommandType;",
+      "renamedSymbol": "F:Bzip2State.field_w:LQuickChatCommandType;",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -42481,7 +42481,7 @@
     },
     {
       "symbol": "F:eb.field_x:I",
-      "renamedSymbol": "F:PopupMenuBuilder.field_x:I",
+      "renamedSymbol": "F:Bzip2State.field_x:I",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -42492,7 +42492,7 @@
     },
     {
       "symbol": "F:eb.field_y:Ljava/lang/String;",
-      "renamedSymbol": "F:PopupMenuBuilder.field_y:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_y:Ljava/lang/String;",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -42503,7 +42503,7 @@
     },
     {
       "symbol": "F:eb.field_z:[[B",
-      "renamedSymbol": "F:PopupMenuBuilder.field_z:[[B",
+      "renamedSymbol": "F:Bzip2State.field_z:[[B",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -76042,7 +76042,7 @@
     },
     {
       "symbol": "F:wo.field_a:Leb;",
-      "renamedSymbol": "F:Bzip2Decoder.field_a:LPopupMenuBuilder;",
+      "renamedSymbol": "F:Bzip2Decoder.field_a:LBzip2State;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -109262,7 +109262,7 @@
     },
     {
       "symbol": "L:eb.a(BC)Z#0",
-      "renamedSymbol": "L:PopupMenuBuilder.isNameSeparator(BC)Z#0",
+      "renamedSymbol": "L:Bzip2State.isNameSeparator(BC)Z#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109273,7 +109273,7 @@
     },
     {
       "symbol": "L:eb.a(BC)Z#1",
-      "renamedSymbol": "L:PopupMenuBuilder.isNameSeparator(BC)Z#1",
+      "renamedSymbol": "L:Bzip2State.isNameSeparator(BC)Z#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -109284,7 +109284,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#0",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#0",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109295,7 +109295,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#1",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#1",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109306,7 +109306,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#2",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#2",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -109317,7 +109317,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#3",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#3",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -109328,7 +109328,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#4",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#4",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -109339,7 +109339,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#5",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#5",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -109350,7 +109350,7 @@
     },
     {
       "symbol": "L:eb.a(I)[Lja;#6",
-      "renamedSymbol": "L:PopupMenuBuilder.buildSprites(I)[LSprite;#6",
+      "renamedSymbol": "L:Bzip2State.buildSprites(I)[LSprite;#6",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -109361,7 +109361,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#0",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#0",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#0",
       "originalName": "stackIn_57_0",
       "renamedName": "stackIn_57_0",
       "declaration": {
@@ -109372,7 +109372,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#1",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#1",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#1",
       "originalName": "stackIn_60_0",
       "renamedName": "stackIn_60_0",
       "declaration": {
@@ -109383,7 +109383,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#10",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#10",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#10",
       "originalName": "stackIn_88_0",
       "renamedName": "stackIn_88_0",
       "declaration": {
@@ -109394,7 +109394,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#11",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#11",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#11",
       "originalName": "stackIn_88_1",
       "renamedName": "stackIn_88_1",
       "declaration": {
@@ -109405,7 +109405,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#12",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#12",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#12",
       "originalName": "stackIn_89_2",
       "renamedName": "stackIn_89_2",
       "declaration": {
@@ -109416,7 +109416,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#13",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#13",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#13",
       "originalName": "stackIn_111_0",
       "renamedName": "stackIn_111_0",
       "declaration": {
@@ -109427,7 +109427,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#14",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#14",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#14",
       "originalName": "stackIn_112_1",
       "renamedName": "stackIn_112_1",
       "declaration": {
@@ -109438,7 +109438,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#15",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#15",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109449,7 +109449,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#16",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#16",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#16",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -109460,7 +109460,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#17",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#17",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#17",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109471,7 +109471,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#18",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#18",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#18",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -109482,7 +109482,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#19",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#19",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#19",
       "originalName": "var4_ref_String__",
       "renamedName": "var4_ref_String__",
       "declaration": {
@@ -109493,7 +109493,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#2",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#2",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#2",
       "originalName": "stackIn_67_0",
       "renamedName": "stackIn_67_0",
       "declaration": {
@@ -109504,7 +109504,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#20",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#20",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#20",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -109515,7 +109515,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#21",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#21",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#21",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -109526,7 +109526,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#22",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#22",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#22",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -109537,7 +109537,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#23",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#23",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#23",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -109548,7 +109548,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#24",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#24",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#24",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -109559,7 +109559,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#25",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#25",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#25",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -109570,7 +109570,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#26",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#26",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#26",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -109581,7 +109581,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#27",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#27",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#27",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -109592,7 +109592,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#28",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#28",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#28",
       "originalName": "var4_ref_String__Lifetime1",
       "renamedName": "var4_ref_String__Lifetime1",
       "declaration": {
@@ -109603,7 +109603,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#29",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#29",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#29",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -109614,7 +109614,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#3",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#3",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#3",
       "originalName": "stackIn_67_1",
       "renamedName": "stackIn_67_1",
       "declaration": {
@@ -109625,7 +109625,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#30",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#30",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#30",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -109636,7 +109636,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#31",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#31",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#31",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -109647,7 +109647,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#32",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#32",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#32",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -109658,7 +109658,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#33",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#33",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#33",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -109669,7 +109669,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#34",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#34",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#34",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -109680,7 +109680,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#35",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#35",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#35",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -109691,7 +109691,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#36",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#36",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#36",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -109702,7 +109702,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#37",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#37",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#37",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -109713,7 +109713,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#38",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#38",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#38",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -109724,7 +109724,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#39",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#39",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#39",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -109735,7 +109735,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#4",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#4",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#4",
       "originalName": "stackIn_68_2",
       "renamedName": "stackIn_68_2",
       "declaration": {
@@ -109746,7 +109746,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#40",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#40",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#40",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -109757,7 +109757,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#41",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#41",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#41",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -109768,7 +109768,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#42",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#42",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#42",
       "originalName": "var5Lifetime2Lifetime1",
       "renamedName": "var5Lifetime2Lifetime1",
       "declaration": {
@@ -109779,7 +109779,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#43",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#43",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#43",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -109790,7 +109790,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#44",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#44",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#44",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109801,7 +109801,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#5",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#5",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#5",
       "originalName": "stackIn_72_0",
       "renamedName": "stackIn_72_0",
       "declaration": {
@@ -109812,7 +109812,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#6",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#6",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#6",
       "originalName": "stackIn_72_1",
       "renamedName": "stackIn_72_1",
       "declaration": {
@@ -109823,7 +109823,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#7",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#7",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#7",
       "originalName": "stackIn_72_2",
       "renamedName": "stackIn_72_2",
       "declaration": {
@@ -109834,7 +109834,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#8",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#8",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#8",
       "originalName": "stackIn_72_3",
       "renamedName": "stackIn_72_3",
       "declaration": {
@@ -109845,7 +109845,7 @@
     },
     {
       "symbol": "L:eb.a(ZZI)V#9",
-      "renamedSymbol": "L:PopupMenuBuilder.buildPopupMenu(ZZI)V#9",
+      "renamedSymbol": "L:Bzip2State.buildPopupMenu(ZZI)V#9",
       "originalName": "stackIn_75_2",
       "renamedName": "stackIn_75_2",
       "declaration": {
@@ -273602,7 +273602,7 @@
     },
     {
       "symbol": "L:wo.a(ILeb;)I#0",
-      "renamedSymbol": "L:Bzip2Decoder.readBits(ILPopupMenuBuilder;)I#0",
+      "renamedSymbol": "L:Bzip2Decoder.readBits(ILBzip2State;)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -273767,7 +273767,7 @@
     },
     {
       "symbol": "L:wo.c(Leb;)V#0",
-      "renamedSymbol": "L:Bzip2Decoder.buildSymbolMap(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "L:Bzip2Decoder.buildSymbolMap(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -273778,7 +273778,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#0",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -273789,7 +273789,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#1",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#1",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -273800,7 +273800,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#10",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#10",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -273811,7 +273811,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#11",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#11",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -273822,7 +273822,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#12",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#12",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -273833,7 +273833,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#13",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#13",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -273844,7 +273844,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#14",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#14",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -273855,7 +273855,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#15",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#15",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -273866,7 +273866,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#16",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#16",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -273877,7 +273877,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#17",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#17",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -273888,7 +273888,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#18",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#18",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -273899,7 +273899,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#19",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#19",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#19",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -273910,7 +273910,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#2",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#2",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -273921,7 +273921,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#20",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#20",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#20",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -273932,7 +273932,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#21",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#21",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#21",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -273943,7 +273943,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#22",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#22",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#22",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -273954,7 +273954,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#23",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#23",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#23",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -273965,7 +273965,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#24",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#24",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#24",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -273976,7 +273976,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#25",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#25",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#25",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -273987,7 +273987,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#26",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#26",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#26",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -273998,7 +273998,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#27",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#27",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#27",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -274009,7 +274009,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#28",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#28",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#28",
       "originalName": "var27_ref_byte__",
       "renamedName": "var27_ref_byte__",
       "declaration": {
@@ -274020,7 +274020,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#29",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#29",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#29",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -274031,7 +274031,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#3",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#3",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -274042,7 +274042,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#30",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#30",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#30",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -274053,7 +274053,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#31",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#31",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#31",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -274064,7 +274064,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#32",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#32",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#32",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -274075,7 +274075,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#33",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#33",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#33",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -274086,7 +274086,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#34",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#34",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#34",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -274097,7 +274097,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#35",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#35",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#35",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -274108,7 +274108,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#36",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#36",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#36",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -274119,7 +274119,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#37",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#37",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#37",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -274130,7 +274130,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#38",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#38",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#38",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -274141,7 +274141,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#39",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#39",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#39",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -274152,7 +274152,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#4",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#4",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -274163,7 +274163,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#5",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#5",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -274174,7 +274174,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#6",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#6",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274185,7 +274185,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#7",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#7",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274196,7 +274196,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#8",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#8",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -274207,7 +274207,7 @@
     },
     {
       "symbol": "L:wo.d(Leb;)V#9",
-      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#9",
+      "renamedSymbol": "L:Bzip2Decoder.decodeBlocks(LBzip2State;)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -274218,7 +274218,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#0",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -274229,7 +274229,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#1",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#1",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -274240,7 +274240,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#10",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#10",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -274251,7 +274251,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#11",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#11",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -274262,7 +274262,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#12",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#12",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -274273,7 +274273,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#13",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#13",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -274284,7 +274284,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#14",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#14",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#14",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -274295,7 +274295,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#15",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#15",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#15",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -274306,7 +274306,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#2",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#2",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -274317,7 +274317,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#3",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#3",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -274328,7 +274328,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#4",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#4",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -274339,7 +274339,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#5",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#5",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -274350,7 +274350,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#6",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#6",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -274361,7 +274361,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#7",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#7",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -274372,7 +274372,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#8",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#8",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -274383,7 +274383,7 @@
     },
     {
       "symbol": "L:wo.e(Leb;)V#9",
-      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#9",
+      "renamedSymbol": "L:Bzip2Decoder.emitBlock(LBzip2State;)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -281247,9 +281247,9 @@
     },
     {
       "symbol": "M:eb.<init>()V",
-      "renamedSymbol": "M:PopupMenuBuilder.<init>()V",
+      "renamedSymbol": "M:Bzip2State.<init>()V",
       "originalName": "eb",
-      "renamedName": "PopupMenuBuilder",
+      "renamedName": "Bzip2State",
       "declaration": {
         "file": "eb.java",
         "start": 15273,
@@ -281258,7 +281258,7 @@
     },
     {
       "symbol": "M:eb.a(BC)Z",
-      "renamedSymbol": "M:PopupMenuBuilder.isNameSeparator(BC)Z",
+      "renamedSymbol": "M:Bzip2State.isNameSeparator(BC)Z",
       "originalName": "a",
       "renamedName": "isNameSeparator",
       "declaration": {
@@ -281269,7 +281269,7 @@
     },
     {
       "symbol": "M:eb.a(I)[Lja;",
-      "renamedSymbol": "M:PopupMenuBuilder.buildSprites(I)[LSprite;",
+      "renamedSymbol": "M:Bzip2State.buildSprites(I)[LSprite;",
       "originalName": "a",
       "renamedName": "buildSprites",
       "declaration": {
@@ -281280,7 +281280,7 @@
     },
     {
       "symbol": "M:eb.a(IZZ)Ljava/lang/String;",
-      "renamedSymbol": "M:PopupMenuBuilder.formatSignedNumber(IZZ)Ljava/lang/String;",
+      "renamedSymbol": "M:Bzip2State.formatSignedNumber(IZZ)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "formatSignedNumber",
       "declaration": {
@@ -281291,7 +281291,7 @@
     },
     {
       "symbol": "M:eb.a(Z)V",
-      "renamedSymbol": "M:PopupMenuBuilder.releaseStatics(Z)V",
+      "renamedSymbol": "M:Bzip2State.releaseStatics(Z)V",
       "originalName": "a",
       "renamedName": "releaseStatics",
       "declaration": {
@@ -281302,7 +281302,7 @@
     },
     {
       "symbol": "M:eb.a(ZZI)V",
-      "renamedSymbol": "M:PopupMenuBuilder.buildPopupMenu(ZZI)V",
+      "renamedSymbol": "M:Bzip2State.buildPopupMenu(ZZI)V",
       "originalName": "a",
       "renamedName": "buildPopupMenu",
       "declaration": {
@@ -312641,7 +312641,7 @@
     },
     {
       "symbol": "M:wo.a(ILeb;)I",
-      "renamedSymbol": "M:Bzip2Decoder.readBits(ILPopupMenuBuilder;)I",
+      "renamedSymbol": "M:Bzip2Decoder.readBits(ILBzip2State;)I",
       "originalName": "a",
       "renamedName": "readBits",
       "declaration": {
@@ -312652,7 +312652,7 @@
     },
     {
       "symbol": "M:wo.a(Leb;)B",
-      "renamedSymbol": "M:Bzip2Decoder.readByte(LPopupMenuBuilder;)B",
+      "renamedSymbol": "M:Bzip2Decoder.readByte(LBzip2State;)B",
       "originalName": "a",
       "renamedName": "readByte",
       "declaration": {
@@ -312685,7 +312685,7 @@
     },
     {
       "symbol": "M:wo.b(Leb;)B",
-      "renamedSymbol": "M:Bzip2Decoder.readBit(LPopupMenuBuilder;)B",
+      "renamedSymbol": "M:Bzip2Decoder.readBit(LBzip2State;)B",
       "originalName": "b",
       "renamedName": "readBit",
       "declaration": {
@@ -312696,7 +312696,7 @@
     },
     {
       "symbol": "M:wo.c(Leb;)V",
-      "renamedSymbol": "M:Bzip2Decoder.buildSymbolMap(LPopupMenuBuilder;)V",
+      "renamedSymbol": "M:Bzip2Decoder.buildSymbolMap(LBzip2State;)V",
       "originalName": "c",
       "renamedName": "buildSymbolMap",
       "declaration": {
@@ -312707,7 +312707,7 @@
     },
     {
       "symbol": "M:wo.d(Leb;)V",
-      "renamedSymbol": "M:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V",
+      "renamedSymbol": "M:Bzip2Decoder.decodeBlocks(LBzip2State;)V",
       "originalName": "d",
       "renamedName": "decodeBlocks",
       "declaration": {
@@ -312718,7 +312718,7 @@
     },
     {
       "symbol": "M:wo.e(Leb;)V",
-      "renamedSymbol": "M:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V",
+      "renamedSymbol": "M:Bzip2Decoder.emitBlock(LBzip2State;)V",
       "originalName": "e",
       "renamedName": "emitBlock",
       "declaration": {
@@ -326886,7 +326886,7 @@
     },
     {
       "symbol": "P:eb.a(BC)Z#0",
-      "renamedSymbol": "P:PopupMenuBuilder.isNameSeparator(BC)Z#0",
+      "renamedSymbol": "P:Bzip2State.isNameSeparator(BC)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -326897,7 +326897,7 @@
     },
     {
       "symbol": "P:eb.a(BC)Z#1",
-      "renamedSymbol": "P:PopupMenuBuilder.isNameSeparator(BC)Z#1",
+      "renamedSymbol": "P:Bzip2State.isNameSeparator(BC)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -326908,7 +326908,7 @@
     },
     {
       "symbol": "P:eb.a(I)[Lja;#0",
-      "renamedSymbol": "P:PopupMenuBuilder.buildSprites(I)[LSprite;#0",
+      "renamedSymbol": "P:Bzip2State.buildSprites(I)[LSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -326919,7 +326919,7 @@
     },
     {
       "symbol": "P:eb.a(IZZ)Ljava/lang/String;#0",
-      "renamedSymbol": "P:PopupMenuBuilder.formatSignedNumber(IZZ)Ljava/lang/String;#0",
+      "renamedSymbol": "P:Bzip2State.formatSignedNumber(IZZ)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -326930,7 +326930,7 @@
     },
     {
       "symbol": "P:eb.a(IZZ)Ljava/lang/String;#1",
-      "renamedSymbol": "P:PopupMenuBuilder.formatSignedNumber(IZZ)Ljava/lang/String;#1",
+      "renamedSymbol": "P:Bzip2State.formatSignedNumber(IZZ)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -326941,7 +326941,7 @@
     },
     {
       "symbol": "P:eb.a(IZZ)Ljava/lang/String;#2",
-      "renamedSymbol": "P:PopupMenuBuilder.formatSignedNumber(IZZ)Ljava/lang/String;#2",
+      "renamedSymbol": "P:Bzip2State.formatSignedNumber(IZZ)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -326952,7 +326952,7 @@
     },
     {
       "symbol": "P:eb.a(Z)V#0",
-      "renamedSymbol": "P:PopupMenuBuilder.releaseStatics(Z)V#0",
+      "renamedSymbol": "P:Bzip2State.releaseStatics(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -326963,7 +326963,7 @@
     },
     {
       "symbol": "P:eb.a(ZZI)V#0",
-      "renamedSymbol": "P:PopupMenuBuilder.buildPopupMenu(ZZI)V#0",
+      "renamedSymbol": "P:Bzip2State.buildPopupMenu(ZZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -326974,7 +326974,7 @@
     },
     {
       "symbol": "P:eb.a(ZZI)V#1",
-      "renamedSymbol": "P:PopupMenuBuilder.buildPopupMenu(ZZI)V#1",
+      "renamedSymbol": "P:Bzip2State.buildPopupMenu(ZZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -326985,7 +326985,7 @@
     },
     {
       "symbol": "P:eb.a(ZZI)V#2",
-      "renamedSymbol": "P:PopupMenuBuilder.buildPopupMenu(ZZI)V#2",
+      "renamedSymbol": "P:Bzip2State.buildPopupMenu(ZZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -406064,7 +406064,7 @@
     },
     {
       "symbol": "P:wo.a(ILeb;)I#0",
-      "renamedSymbol": "P:Bzip2Decoder.readBits(ILPopupMenuBuilder;)I#0",
+      "renamedSymbol": "P:Bzip2Decoder.readBits(ILBzip2State;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406075,7 +406075,7 @@
     },
     {
       "symbol": "P:wo.a(ILeb;)I#1",
-      "renamedSymbol": "P:Bzip2Decoder.readBits(ILPopupMenuBuilder;)I#1",
+      "renamedSymbol": "P:Bzip2Decoder.readBits(ILBzip2State;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -406086,7 +406086,7 @@
     },
     {
       "symbol": "P:wo.a(Leb;)B#0",
-      "renamedSymbol": "P:Bzip2Decoder.readByte(LPopupMenuBuilder;)B#0",
+      "renamedSymbol": "P:Bzip2Decoder.readByte(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406229,7 +406229,7 @@
     },
     {
       "symbol": "P:wo.b(Leb;)B#0",
-      "renamedSymbol": "P:Bzip2Decoder.readBit(LPopupMenuBuilder;)B#0",
+      "renamedSymbol": "P:Bzip2Decoder.readBit(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406240,7 +406240,7 @@
     },
     {
       "symbol": "P:wo.c(Leb;)V#0",
-      "renamedSymbol": "P:Bzip2Decoder.buildSymbolMap(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "P:Bzip2Decoder.buildSymbolMap(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406251,7 +406251,7 @@
     },
     {
       "symbol": "P:wo.d(Leb;)V#0",
-      "renamedSymbol": "P:Bzip2Decoder.decodeBlocks(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "P:Bzip2Decoder.decodeBlocks(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406262,7 +406262,7 @@
     },
     {
       "symbol": "P:wo.e(Leb;)V#0",
-      "renamedSymbol": "P:Bzip2Decoder.emitBlock(LPopupMenuBuilder;)V#0",
+      "renamedSymbol": "P:Bzip2Decoder.emitBlock(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -406519,7 +406519,7 @@
       "original": "ZombieDawnMulti.java",
       "renamed": "ZombieDawnMulti.java",
       "inputSha256": "46e43ab989a823126f48f90eb4a2c5b3a6040796bb5b30c1590e15e83f7d0ab2",
-      "outputSha256": "c5e5fad55e4ab5bc85341c844ea0c207ca0ca3fe149dce14b17eec117955231d",
+      "outputSha256": "3a61288fcfc686314d70d84b7a3eb496ee66a6f5af437a3358f72a71a5c19e22",
       "edits": [
         {
           "start": 81,
@@ -425174,7 +425174,7 @@
           "end": 77502,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 77503,
@@ -431847,7 +431847,7 @@
       "original": "ah.java",
       "renamed": "TranslatedUiText.java",
       "inputSha256": "68e82857491f9933508d2ccd918312682997351865fb8ca9f071a9385cc4acff",
-      "outputSha256": "5b22106b7ca240b59b0fd22e655f91ac3228ef7254460e14ce499142cffaf78f",
+      "outputSha256": "d67fb67be93533b712f366fcd8d15a336893846af404172467e5a6172ebfa377",
       "edits": [
         {
           "start": 50,
@@ -438511,7 +438511,7 @@
           "end": 33326,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 33337,
@@ -445490,7 +445490,7 @@
           "end": 68128,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 68139,
@@ -458190,7 +458190,7 @@
       "original": "aj.java",
       "renamed": "EffectResistedEvent.java",
       "inputSha256": "222c3e635cf4da03495bb80c1491d9fe4f92e278715d6ccfb0e3b4a5c233a3a6",
-      "outputSha256": "562331e3bca0024bf71b2343aad16e344e8cf8ef019509f0cea6915ca2205e53",
+      "outputSha256": "9b8181b2836787137c6b0601fa330a6ac4c4ef06e6e9193e0042c9d6828dc7e7",
       "edits": [
         {
           "start": 50,
@@ -458407,7 +458407,7 @@
           "end": 4261,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4299,
@@ -461844,7 +461844,7 @@
       "original": "aq.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "87bb42d6e29328c07753442399bba6a25b5fccee629e46662d8371cc968dc79b",
-      "outputSha256": "4a3f557506f1d14fd8ddbcc47f45c5087eb360772080a3f741dc5b2f52279788",
+      "outputSha256": "49b102c7e976376191903406f2d78c637c7f1fb626b7277ee635a703ddcaef16",
       "edits": [
         {
           "start": 53,
@@ -464854,7 +464854,7 @@
           "end": 19991,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 20031,
@@ -487132,7 +487132,7 @@
       "original": "ck.java",
       "renamed": "LobbyUpdateHandler.java",
       "inputSha256": "23c6eb84056b288d3f008db04b2cdfbebc417ee28251d9174dd9d06bb910fc50",
-      "outputSha256": "5a12926fc72d2c88d1a9f83d3259b74f5dc4477c1e3864729f9a6b6bb7e327e3",
+      "outputSha256": "46a4aeec6a2167ff088b813e5067d660df719d511cb26d3720592536c32c50ce",
       "edits": [
         {
           "start": 50,
@@ -489008,7 +489008,7 @@
           "end": 15464,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 15465,
@@ -500441,16 +500441,16 @@
     },
     {
       "original": "eb.java",
-      "renamed": "PopupMenuBuilder.java",
+      "renamed": "Bzip2State.java",
       "inputSha256": "50a2283a32f2a77efbb25808fcb4302c1a8d48f6378fb8a848b4d9faba46a82a",
-      "outputSha256": "5d42a7d7e51473cee591c421f43de390ad3bbff422c385a0a4734556a098bfe6",
+      "outputSha256": "a3809bc348e1b08c5623ee76ccce870d2bd3f20b19d8117e028525ab6037ecc3",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 322,
@@ -500611,7 +500611,7 @@
           "end": 1924,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1925,
@@ -502417,7 +502417,7 @@
           "end": 15086,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 15087,
@@ -502431,7 +502431,7 @@
           "end": 15275,
           "symbol": "M:eb.<init>()V",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 16080,
@@ -507006,7 +507006,7 @@
       "original": "el.java",
       "renamed": "LabeledChildWidget.java",
       "inputSha256": "b30aa0a9e0e3f2366e1192b6807b65d07341cffc304bff56e8d813c4854298b0",
-      "outputSha256": "6c7af38040635310a4a9fe33cabb02834aa62870e9f70c059bdaf72921bd883b",
+      "outputSha256": "e5b5e84ed59bf435247ab85aa307b169e1c9f488ef06c604772e59f594cc7312",
       "edits": [
         {
           "start": 50,
@@ -507412,14 +507412,14 @@
           "end": 1901,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1935,
           "end": 1937,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1956,
@@ -507622,14 +507622,14 @@
           "end": 2824,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2860,
           "end": 2862,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2881,
@@ -507783,14 +507783,14 @@
           "end": 3609,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3645,
           "end": 3647,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3666,
@@ -508287,14 +508287,14 @@
           "end": 5972,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 6008,
           "end": 6010,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 6029,
@@ -508497,14 +508497,14 @@
           "end": 6955,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 6991,
           "end": 6993,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 7012,
@@ -508840,14 +508840,14 @@
           "end": 8571,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 8607,
           "end": 8609,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 8628,
@@ -509050,14 +509050,14 @@
           "end": 9540,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 9578,
           "end": 9580,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 9599,
@@ -509211,14 +509211,14 @@
           "end": 10363,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 10401,
           "end": 10403,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 10422,
@@ -523741,7 +523741,7 @@
       "original": "ff.java",
       "renamed": "TertiaryLinkNode.java",
       "inputSha256": "df385f2dfd5397c4276c57cdfcd131aa832d1e7dfd00a4886d09752da5e7e1e2",
-      "outputSha256": "ba5a87a4526e63216e03d368ace8ad728ccff2b1fec0262b70bd78f1bfe0ffa7",
+      "outputSha256": "fe9e72206015c9871872a6bd8a518b3dbcaf80366518475a521b2c0ad24cf477",
       "edits": [
         {
           "start": 44,
@@ -523853,7 +523853,7 @@
           "end": 444,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 454,
@@ -523937,7 +523937,7 @@
           "end": 700,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 710,
@@ -542700,7 +542700,7 @@
       "original": "gg.java",
       "renamed": "ArchiveLoadStep.java",
       "inputSha256": "6f926f8a1da1be481ab0f4b6bdf2211fb8ba5102152faed577f4bbc998b86b8e",
-      "outputSha256": "41e92c438987834e344bc3dfa29f0b735cbb07304bf0d1c7a91f011317479d58",
+      "outputSha256": "b6ed6b7fa127ec91f24b4673568abd8730ed182d2bb1f3bdc4a5926a14186539",
       "edits": [
         {
           "start": 50,
@@ -542854,14 +542854,14 @@
           "end": 1922,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1944,
           "end": 1946,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2030,
@@ -542882,7 +542882,7 @@
           "end": 2120,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2129,
@@ -543015,7 +543015,7 @@
           "end": 3652,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3670,
@@ -543029,7 +543029,7 @@
           "end": 3687,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3705,
@@ -543043,21 +543043,21 @@
           "end": 3729,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3765,
           "end": 3767,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3805,
           "end": 3807,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3855,
@@ -543085,7 +543085,7 @@
           "end": 4161,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4212,
@@ -543176,7 +543176,7 @@
           "end": 4915,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4935,
@@ -543842,7 +543842,7 @@
       "original": "gh.java",
       "renamed": "AccountServerResult.java",
       "inputSha256": "380104c3168bafa62dd188a6c1957a8b99b44f742ce2023a2ded578dd749d8f0",
-      "outputSha256": "27f7028dd92004df26e53862bd2d884fcd75a2287e9187a36e374998fe9726ec",
+      "outputSha256": "32af2c0faf50fa9716351358646f3fc9e0dd7f6d30965fbf55e7b8dad5c96767",
       "edits": [
         {
           "start": 50,
@@ -543975,7 +543975,7 @@
           "end": 2711,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2739,
@@ -544017,21 +544017,21 @@
           "end": 4172,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4404,
           "end": 4406,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4604,
           "end": 4606,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4837,
@@ -545021,7 +545021,7 @@
       "original": "gk.java",
       "renamed": "NoticeMenuHelpers.java",
       "inputSha256": "ca6614fd26d60f0e3d6eed54a8d44c0244b5a71d13bec48bf9fc039728998df4",
-      "outputSha256": "af85e3c54af2aa241d39508864ac3e9cca9077ae97cd049e4212c6c749bad11b",
+      "outputSha256": "341a46403bc485a604b4d1ebe5c756815f57326d051a3db39fb2ce2c8e7ad516",
       "edits": [
         {
           "start": 50,
@@ -545553,7 +545553,7 @@
           "end": 4316,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4329,
@@ -546374,7 +546374,7 @@
       "original": "gm.java",
       "renamed": "HumanView.java",
       "inputSha256": "7d237da1cdc5247d8e26b1ec954d5e10a4f3deb832fddfc75df0784b0983baf9",
-      "outputSha256": "ff25a961a32d97ee8c213a97308c878f250885775fe81d4043ad1acaea5a1f13",
+      "outputSha256": "4c8ec672fe320ee711b54a15c5b4681937f7fcc0413225e177bf5421ef4652c8",
       "edits": [
         {
           "start": 74,
@@ -546521,7 +546521,7 @@
           "end": 1246,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1281,
@@ -550548,7 +550548,7 @@
       "original": "h.java",
       "renamed": "PortalView.java",
       "inputSha256": "1f4e9941678e594c698a6ace161549d90ef8cf971ca732ca45e107db398b4dc2",
-      "outputSha256": "21db7402a3092bd150920f29c2fa0c14d3486d3f8a2801cfe4a0429185314961",
+      "outputSha256": "5a819bca86978bf4fd5702915f1a6ff94286983d6af27233fdcbed3f0ba19fb0",
       "edits": [
         {
           "start": 50,
@@ -559984,7 +559984,7 @@
           "end": 51205,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 51216,
@@ -560712,7 +560712,7 @@
           "end": 54641,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 54652,
@@ -579099,7 +579099,7 @@
       "original": "ia.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "5770079f13c454b40528a1fa82c96ee9e82764213d2608a5613e788ee89d7675",
-      "outputSha256": "074ece6f1245d8788caa83df582309d2d53ef03cb26ee1f15fa7be06c7bd83a4",
+      "outputSha256": "c785e0ac3127d374c6033129d30d2fa36227b28e72650e2664de7a941871334b",
       "edits": [
         {
           "start": 50,
@@ -579295,7 +579295,7 @@
           "end": 2170,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2239,
@@ -579611,7 +579611,7 @@
       "original": "ib.java",
       "renamed": "TickButtonPainter.java",
       "inputSha256": "a618cd0d188f3f266c9dfa6b67a9f23cd4a61744571c269c10ffc90c270eb0e3",
-      "outputSha256": "bbfca6c0acc2280e8af7d3c27d6c9b2e7f1ec7192b3c731e1892e618d572c7cd",
+      "outputSha256": "428de13976929b15c1d1fd6e8275d8c7ff56358f8cfdb953ce160d455acf7696",
       "edits": [
         {
           "start": 50,
@@ -579919,7 +579919,7 @@
           "end": 2844,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2885,
@@ -621945,7 +621945,7 @@
       "original": "ld.java",
       "renamed": "QuickChatMenu.java",
       "inputSha256": "f3a13737c08720ad8d1b2ab681b7f9c2d500b4a77a100336c56ccc30fcfb0f43",
-      "outputSha256": "7fc2044b7ac5974e981648d41f47eaf0b8a807befc77676847b00dcff9059571",
+      "outputSha256": "fcab3f4504f903648e0f7f52461f07a40e7df830a88f29075e79e7a43349c4f2",
       "edits": [
         {
           "start": 50,
@@ -623205,7 +623205,7 @@
           "end": 18118,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 18199,
@@ -627988,7 +627988,7 @@
       "original": "lm.java",
       "renamed": "SimHuman.java",
       "inputSha256": "db90ac38a22c2194cee3e0266469a5573008a890476a90b01e2fc652ab27ca9a",
-      "outputSha256": "a9caa5c6e88dc7d43e8b565251f196eecaae4204461a4b4b48a9ce59129c3763",
+      "outputSha256": "afb56524859954e23a5dd4511f72e558deef22cf840515aa1aed8c012db6d23e",
       "edits": [
         {
           "start": 74,
@@ -630257,7 +630257,7 @@
           "end": 24037,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 24072,
@@ -630575,7 +630575,7 @@
       "original": "lp.java",
       "renamed": "ReflectionCheckRequest.java",
       "inputSha256": "2fd4b4ff667a99dc0cc7a4d72de53b1356bc5c84ed55e4a69df9df19b1eeef48",
-      "outputSha256": "c9146cd3938781927ff547300300cb23d45d84431b4c5578b391fe7c36c80c84",
+      "outputSha256": "e898ad8c377f0f80b528453cb36a538c6b0c335be2a4f6a663664aefdeca8268",
       "edits": [
         {
           "start": 50,
@@ -631121,7 +631121,7 @@
           "end": 3763,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3764,
@@ -631219,7 +631219,7 @@
           "end": 4201,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4202,
@@ -631282,7 +631282,7 @@
           "end": 4499,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4500,
@@ -631310,7 +631310,7 @@
           "end": 4704,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4705,
@@ -631408,7 +631408,7 @@
           "end": 5142,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 5143,
@@ -631492,7 +631492,7 @@
           "end": 5585,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 5586,
@@ -633556,7 +633556,7 @@
       "original": "md.java",
       "renamed": "TriangleMesh.java",
       "inputSha256": "a0ed804f9187928ba29072aabf4157f963bc849c773ab8d92688c131146f53aa",
-      "outputSha256": "65a8aa65f41aa8f9ea7cac9f431dfb724e3f8737364846e5ab3d77a5b7bf4b1c",
+      "outputSha256": "8e50425cc0fedde24c1621bfa7098f49c22814b50afce275586c7b7f638b9e10",
       "edits": [
         {
           "start": 50,
@@ -636643,7 +636643,7 @@
           "end": 20515,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 20530,
@@ -636664,7 +636664,7 @@
           "end": 20562,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 20571,
@@ -636685,14 +636685,14 @@
           "end": 20610,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 20651,
           "end": 20653,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 20702,
@@ -636909,7 +636909,7 @@
           "end": 21591,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 21612,
@@ -656744,7 +656744,7 @@
       "original": "no.java",
       "renamed": "QuickChatHelpDialog.java",
       "inputSha256": "9d87713a7e2bc833c94763f968d3c7d1456d2f1b85bd8a6266f7c36503cbca35",
-      "outputSha256": "66a784e01c341312e399adb053981894101124ed8ae9b499e860c34d60d592ec",
+      "outputSha256": "0ed52b556ab43b958ea57ac7f46e3b3ba3e408f477960038d42972330b6b0797",
       "edits": [
         {
           "start": 50,
@@ -656877,7 +656877,7 @@
           "end": 1611,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1612,
@@ -656891,7 +656891,7 @@
           "end": 1665,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1666,
@@ -656905,7 +656905,7 @@
           "end": 2020,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2021,
@@ -716838,7 +716838,7 @@
       "original": "ra.java",
       "renamed": "PendingIntArrayReply.java",
       "inputSha256": "d9bae8ad97b72a437108a9ec9a06327a2b9524b057a76fa031e67616809aa0ca",
-      "outputSha256": "a8f3f0725333ef9d9344b438ecf06cd1266aa8ab64d4fba21555ab235163df45",
+      "outputSha256": "9e9dd17bbad1dcdee4741109112f7402050c7f1cece20cfa60d40441dcb47419",
       "edits": [
         {
           "start": 50,
@@ -716936,7 +716936,7 @@
           "end": 520,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 543,
@@ -739092,7 +739092,7 @@
       "original": "sa.java",
       "renamed": "ScreechAura.java",
       "inputSha256": "4f0fbaac2546d0d819803266927ad395846d727747ecf9754b255b21c1a38886",
-      "outputSha256": "7431200f3ab94aff1a3033fc66f969cb53fed19ab919a4731e4d9c2fc685fae2",
+      "outputSha256": "9d881a5ff23923f27e98275a8d009c970d760c114a927ec51c7d49983f3c748c",
       "edits": [
         {
           "start": 50,
@@ -739431,7 +739431,7 @@
           "end": 11275,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 11329,
@@ -739446,7 +739446,7 @@
           "end": 11520,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 11610,
@@ -739609,14 +739609,14 @@
           "end": 15091,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 15319,
           "end": 15321,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 15409,
@@ -743761,7 +743761,7 @@
       "original": "si.java",
       "renamed": "GameResultsScreen.java",
       "inputSha256": "6e307a7534dd8b7214af76a2a6c5ac9b10af4c9da76560e752f21fa33f0ad15f",
-      "outputSha256": "f32d5102f21d5cee7238b9de47ca06882013ad012d3f6420ddf642b85ec97aa7",
+      "outputSha256": "8825726ab9fccee279dbd2f6dbdf5fbd0dc80a0689c2f451653f401d01161883",
       "edits": [
         {
           "start": 50,
@@ -744923,7 +744923,7 @@
           "end": 20140,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 20141,
@@ -745546,7 +745546,7 @@
           "end": 25295,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 25296,
@@ -745609,7 +745609,7 @@
           "end": 26160,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 26161,
@@ -745833,7 +745833,7 @@
           "end": 28412,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 28413,
@@ -749626,7 +749626,7 @@
       "original": "so.java",
       "renamed": "UnitStateEvent.java",
       "inputSha256": "ee37a36322e77aef56a3cce4c8f407ee3830ad7bef34feddc4ce69e43eb66305",
-      "outputSha256": "f200b5b802325643957f7c42217e84ea104707789adf9c12b92381710b510625",
+      "outputSha256": "92f5f26dc29b9499923704ce559d79698b2c7517de0c58e539376b13403a17c2",
       "edits": [
         {
           "start": 50,
@@ -750669,7 +750669,7 @@
           "end": 4932,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 4950,
@@ -751110,7 +751110,7 @@
           "end": 6138,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 6156,
@@ -752545,14 +752545,14 @@
           "end": 14084,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 14125,
           "end": 14127,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 14184,
@@ -753425,7 +753425,7 @@
           "end": 27913,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 27922,
@@ -753453,7 +753453,7 @@
           "end": 28003,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 28023,
@@ -753481,7 +753481,7 @@
           "end": 28100,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 28179,
@@ -753523,7 +753523,7 @@
           "end": 28318,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 28327,
@@ -753551,7 +753551,7 @@
           "end": 28406,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 28426,
@@ -753579,7 +753579,7 @@
           "end": 28501,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 28588,
@@ -759553,7 +759553,7 @@
       "original": "tg.java",
       "renamed": "AudioPumpThread.java",
       "inputSha256": "50defaff2560523a19e4d9e5c39fc2ee2277bf68708d8e60cce144c37b71f8df",
-      "outputSha256": "b3065326a8200b3aaf59716203bafd39ac6270d4599ec21b9f32ff85b91ff68f",
+      "outputSha256": "72fa60e0a9e7ed604bcde29cecadbc1c99c4015c91b898f09ff8dd75a5baceae",
       "edits": [
         {
           "start": 50,
@@ -760239,7 +760239,7 @@
           "end": 10311,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 10312,
@@ -760253,7 +760253,7 @@
           "end": 10504,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 10505,
@@ -773788,7 +773788,7 @@
       "original": "u.java",
       "renamed": "PendingIntArrayRequest.java",
       "inputSha256": "372eaff6076192f3c94c3c409bfebdb865731c6ff118be3cfcc7223801ce59f2",
-      "outputSha256": "b289cce0b34e8a98983303384050353401120863aff91fac92b5e1f73e833676",
+      "outputSha256": "4f9bcb66cb2d6c4c81ddcc75bdadc240ec76c42b365441a643a149f171ddcb2b",
       "edits": [
         {
           "start": 50,
@@ -774579,7 +774579,7 @@
           "end": 7428,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 7429,
@@ -785347,7 +785347,7 @@
       "original": "up.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "16cbf78065d5750082958ed241879967cc76cefaacc8d0717025418bba0923e7",
-      "outputSha256": "f2aa8e193d6b813782620ee02dce7dca79f7c0608e84365e0a196edb68bf0337",
+      "outputSha256": "f75da19edfc11f26f9d17dca12b1e87274eec1f6ace4100f3d8f8031b5b45d7c",
       "edits": [
         {
           "start": 71,
@@ -785466,7 +785466,7 @@
           "end": 1166,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1177,
@@ -785487,7 +785487,7 @@
           "end": 1228,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1270,
@@ -787866,7 +787866,7 @@
       "original": "vd.java",
       "renamed": "SleepAndNameHelpers.java",
       "inputSha256": "03b69c605ba8b78d21e6dfa22a897ce6d0a8d9c2976d3ce4e2165898c3fe2a3b",
-      "outputSha256": "b4d95f9f54b937bacbb349a8447e57c71a2b2293f8f013f706f0d5a977fef426",
+      "outputSha256": "9e285af08bba39ba6d66f862d594679fe90ca3df56eb3f6d2dd17632fad3a342",
       "edits": [
         {
           "start": 50,
@@ -787908,7 +787908,7 @@
           "end": 1027,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1028,
@@ -787922,7 +787922,7 @@
           "end": 1079,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1080,
@@ -787936,7 +787936,7 @@
           "end": 1290,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1291,
@@ -794089,7 +794089,7 @@
       "original": "vk.java",
       "renamed": "DialogLayer.java",
       "inputSha256": "8b9dbbce6ad1c793224429c9c4c94f2d9aa5c3b30826eca8d388220254d38279",
-      "outputSha256": "59bfb42f5ff405af37d4258df7b301f89b4b222b2fb144246443d1ebd846ae3d",
+      "outputSha256": "f46e6cf7eae254f6917b8f811355f2743fb43767673de29aafd48ef935d026c9",
       "edits": [
         {
           "start": 50,
@@ -795020,7 +795020,7 @@
           "end": 8598,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 8599,
@@ -796185,7 +796185,7 @@
       "original": "vn.java",
       "renamed": "MenuFrameHelpers.java",
       "inputSha256": "b848f7c22798d76757c7a7b6b0613539ab63cc6a9933f1129a7ea0ff7ae9449b",
-      "outputSha256": "b742105f8bf7aca63bda997c42967538660e2c7bd711689cd6979da20fcac6b6",
+      "outputSha256": "ea3dd21ed9a1800985bf403b2202ed7c18552dd2f9d6b1b1a997c5eacb827e1d",
       "edits": [
         {
           "start": 50,
@@ -796241,7 +796241,7 @@
           "end": 591,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 592,
@@ -811410,7 +811410,7 @@
       "original": "wm.java",
       "renamed": "MarkerSliderWidget.java",
       "inputSha256": "29aafe16cd12d93d8f2193261ed00cf8150bcd1a1c1cc6609ee908557c3888da",
-      "outputSha256": "7eff62493630718c7c9e7878cd30bbd795963d429b2680113ff79ff2a804f020",
+      "outputSha256": "a7658fa02b9e97323da32d9938f92eb9ea2b124d8215a98a42d9c161f2ca2b24",
       "edits": [
         {
           "start": 69,
@@ -811592,7 +811592,7 @@
           "end": 1074,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1114,
@@ -811697,7 +811697,7 @@
           "end": 1278,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 1310,
@@ -812966,7 +812966,7 @@
       "original": "wo.java",
       "renamed": "Bzip2Decoder.java",
       "inputSha256": "4c32be272ed6e0db4e5f5e389e4759b0e979007b7d69aba8915f772127833c09",
-      "outputSha256": "21988cdd274747e6986bb4647518bd40171ba96ebca2c445f8b3461fc059131d",
+      "outputSha256": "007d57cf7478276bd85356b44a553e24f0642bd5983e7e5988e014a955b6befd",
       "edits": [
         {
           "start": 50,
@@ -812980,7 +812980,7 @@
           "end": 76,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 117,
@@ -812994,7 +812994,7 @@
           "end": 121,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 430,
@@ -813015,7 +813015,7 @@
           "end": 2133,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 2165,
@@ -813043,7 +813043,7 @@
           "end": 2223,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 3491,
@@ -813554,7 +813554,7 @@
           "end": 14491,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 14957,
@@ -813662,7 +813662,7 @@
           "end": 18019,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 18051,
@@ -813718,14 +813718,14 @@
           "end": 18948,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         },
         {
           "start": 19519,
           "end": 19521,
           "symbol": "C:eb",
           "original": "eb",
-          "renamed": "PopupMenuBuilder"
+          "renamed": "Bzip2State"
         }
       ]
     },
@@ -814538,10 +814538,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/zombiedawnmulti"
     },
-    "rulesSha256": "318381fe1539551b2c2c011753f18116462803b84e3050169857b98964593e73",
+    "rulesSha256": "9936637c6cd1eac3f9c68a0cd4d079967506eea02f86f95aac84c7e6e0b9d553",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db",
-    "outputTreeSha256": "821043410bac5e2a0d3b2a87148f1843f3d55bd2611212716d8eadbbf07c41f8",
+    "outputTreeSha256": "09687debf956155992bd5a411e81decd248fe780145867f41b5d92486879d560",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

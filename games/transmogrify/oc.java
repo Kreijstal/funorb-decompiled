@@ -100,12 +100,12 @@ final class oc extends fi {
         }
     }
 
-    final static td j(int param0) {
+    final static FrameTimer j(int param0) {
         if (param0 != 0) {
           field_G = (IntrusiveDeque) null;
-          return (td) ((Object) new kf());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (td) ((Object) new kf());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     public static void clearStaticReferences(int param0) {

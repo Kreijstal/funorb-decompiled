@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ad {
-    private static uj field_a;
+    private static Bzip2State field_a;
 
     public static void clearStaticReferences() {
         field_a = null;
     }
 
-    private final static int a(int param0, uj param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_i < param0) {
           param1.field_o = param1.field_o << 8 | param1.field_r[param1.field_t] & 255;
@@ -24,7 +24,7 @@ final class ad {
         return var2;
     }
 
-    private final static void e(uj param0) {
+    private final static void e(Bzip2State param0) {
         int var1 = 0;
         param0.field_b = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -35,7 +35,7 @@ final class ad {
         }
     }
 
-    private final static void b(uj param0) {
+    private final static void b(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -407,7 +407,7 @@ final class ad {
         }
     }
 
-    private final static byte a(uj param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)ad.a(1, param0);
     }
 
@@ -456,7 +456,7 @@ final class ad {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -480,11 +480,11 @@ final class ad {
         return stackIn_2_0;
     }
 
-    private final static byte d(uj param0) {
+    private final static byte d(Bzip2State param0) {
         return (byte)ad.a(8, param0);
     }
 
-    private final static void c(uj param0) {
+    private final static void c(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -616,6 +616,6 @@ final class ad {
     }
 
     static {
-        field_a = new uj();
+        field_a = new Bzip2State();
     }
 }

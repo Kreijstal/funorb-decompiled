@@ -111,7 +111,7 @@ final class pe extends WidgetContainer implements wm, ng {
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ha.field_c;
+              stackIn_19_3 = FrameTimer.field_c;
             }
             this.field_B = new lg(stackIn_19_3, (ca) null);
             if (this.field_I) {

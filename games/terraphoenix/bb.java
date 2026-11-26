@@ -106,7 +106,7 @@ final class bb {
           }
           ik.a(param0, (byte) 100);
           cg.f((byte) -75);
-          vc.a(true);
+          FrameTimer.a(true);
           kf.field_f = 0 - IntrusiveNode.field_e;
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "bb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

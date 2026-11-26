@@ -421,11 +421,11 @@ final class wl extends aj implements hl, df, tc {
 
     final static void a(boolean param0, boolean param1, int param2) {
         if (param2 == 170) {
-          td.a(param2 - 280, param0, (String) null, param1);
+          FrameTimer.a(param2 - 280, param0, (String) null, param1);
           return;
         }
         field_I = false;
-        td.a(param2 - 280, param0, (String) null, param1);
+        FrameTimer.a(param2 - 280, param0, (String) null, param1);
     }
 
     private final boolean l(int param0) {

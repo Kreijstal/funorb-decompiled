@@ -241,8 +241,8 @@ final class GzipDecompressor {
         var5 = StarCannon.field_A;
         try {
           PcmOutputWorker.field_f = PcmOutputWorker.field_f + 65536;
-          while (fk.a(PcmOutputWorker.field_f, ByteStorage.field_e, (byte) -117) >= 65536) {
-            fk.field_a = fk.field_a + 1;
+          while (Bzip2State.a(PcmOutputWorker.field_f, ByteStorage.field_e, (byte) -117) >= 65536) {
+            Bzip2State.field_a = Bzip2State.field_a + 1;
             PcmOutputWorker.field_f = PcmOutputWorker.field_f - ByteStorage.field_e;
           }
           var2_int = -1;

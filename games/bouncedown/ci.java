@@ -33,7 +33,7 @@ final class ci extends lc implements gl, rc {
 
     final void a(int param0, int param1, int param2, int param3) {
         if (null != this.field_E) {
-          sg.field_a.a(this.field_E, this.field_r + (param3 + 20), 15 + (param1 + this.field_i), -40 + this.field_k, this.field_m, 16777215, -1, 1, 0, sg.field_a.field_s);
+          FrameTimer.field_a.a(this.field_E, this.field_r + (param3 + 20), 15 + (param1 + this.field_i), -40 + this.field_k, this.field_m, 16777215, -1, 1, 0, FrameTimer.field_a.field_s);
         }
         if (this.field_H != null) {
           SoftwareRasterizer.drawHorizontalLine(10 + param3, 134 + param1, this.field_k - 20, 4210752);
@@ -252,7 +252,7 @@ final class ci extends lc implements gl, rc {
             }
           }
           this.field_i = 15;
-          var7 = sg.field_a;
+          var7 = FrameTimer.field_a;
           if (this.field_E != null) {
             this.field_i = this.field_i + (5 + var7.b(this.field_E, this.field_k - 40, var7.field_s));
           }

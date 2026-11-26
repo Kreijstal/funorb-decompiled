@@ -20,11 +20,11 @@ final class ac {
         }
     }
 
-    final static jl a(boolean param0) {
+    final static FrameTimer a(boolean param0) {
         if (!param0) {
-          return (jl) null;
+          return (FrameTimer) null;
         }
-        return (jl) ((Object) new bd());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static void a(int param0) {

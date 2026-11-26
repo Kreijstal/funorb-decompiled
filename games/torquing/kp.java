@@ -15,7 +15,7 @@ final class kp {
           if (param7) {
             field_d = 19;
           }
-          j.field_F = param0;
+          Bzip2State.field_F = param0;
           gi.field_d = param6;
           wh.field_w = param3;
           DiskArchiveRequest.field_y = param5;

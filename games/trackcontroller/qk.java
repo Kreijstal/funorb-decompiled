@@ -205,12 +205,12 @@ final class qk extends ButtonWidget {
         return -1;
     }
 
-    final static wj j(int param0) {
+    final static FrameTimer j(int param0) {
         if (param0 != -17514) {
           field_O = (String) null;
-          return (wj) ((Object) new eb());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (wj) ((Object) new eb());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final int c(boolean param0) {

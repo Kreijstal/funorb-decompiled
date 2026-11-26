@@ -3,7 +3,7 @@
  */
 abstract class ge {
     static String field_i;
-    static aa field_g;
+    static FrameTimer field_g;
     static k field_c;
     il field_d;
     static String field_o;

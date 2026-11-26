@@ -27,7 +27,7 @@ final class kd extends vk implements ga {
             var3_int = param1.length;
             this.field_z = new String[var3_int];
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
-              this.field_z[var4_int] = hf.a((CharSequence) ((Object) param1[var4_int]), false).replace(' ', ' ');
+              this.field_z[var4_int] = NanoFrameTimer.a((CharSequence) ((Object) param1[var4_int]), false).replace(' ', ' ');
             }
             var4 = new wa(nb.field_c, 0, 1);
             this.field_y = new dk[1 + var3_int];

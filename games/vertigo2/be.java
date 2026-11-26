@@ -113,7 +113,7 @@ final class be extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + uh.a((byte) -66, 94608000000L + gk.correctedCurrentTimeMillis(53)) + "; Max-Age=" + 94608000L;
               }
-              je.a(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 124);
+              JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) 124);
             } catch (Throwable throwable) {
             }
             op.a(~param1, param2);

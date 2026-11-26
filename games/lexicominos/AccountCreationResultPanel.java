@@ -367,7 +367,7 @@ final class AccountCreationResultPanel extends uc implements jk {
         try {
           var1 = AccountNameAvailabilityValidator.field_l;
           synchronized (var1) {
-            tb.field_b = tb.field_b + 1;
+            FrameTimer.field_b = FrameTimer.field_b + 1;
             tj.field_h = sh.field_f;
             if (vg.field_b < 0) {
               var5 = 0;

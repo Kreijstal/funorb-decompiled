@@ -97,8 +97,8 @@ final class bo extends ok {
           be.field_s.a(wo.field_h, 237, rl.field_k, DualLinkNode.field_r);
           be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, tl.field_k);
           be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, bl.field_t);
-          be.field_s.a(fg.field_m, 237, kj.field_m, SecondaryNodeDequeIterator.field_i);
-          be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
+          be.field_s.a(NanoFrameTimer.field_m, 237, kj.field_m, SecondaryNodeDequeIterator.field_i);
+          be.field_s.a(NanoFrameTimer.field_m, 237, kj.field_m, mi.field_e);
           return;
         }
         SecondaryNodeDequeIterator.field_i = mk.a(3, (byte) 34);
@@ -128,8 +128,8 @@ final class bo extends ok {
         be.field_s.a(wo.field_h, 237, rl.field_k, DualLinkNode.field_r);
         be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, tl.field_k);
         be.field_s.a(SecondaryNodeDequeIterator.field_f, 237, dg.field_P, bl.field_t);
-        be.field_s.a(fg.field_m, 237, kj.field_m, SecondaryNodeDequeIterator.field_i);
-        be.field_s.a(fg.field_m, 237, kj.field_m, mi.field_e);
+        be.field_s.a(NanoFrameTimer.field_m, 237, kj.field_m, SecondaryNodeDequeIterator.field_i);
+        be.field_s.a(NanoFrameTimer.field_m, 237, kj.field_m, mi.field_e);
     }
 
     public static void clearStaticReferences(byte param0) {

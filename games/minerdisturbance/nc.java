@@ -40,7 +40,7 @@ final class nc implements ad {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + e.a(sf.correctedCurrentTimeMillis((byte) -122) + 94608000000L, -127) + "; Max-Age=" + 94608000L;
               }
-              lk.a(param0, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -106);
+              JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5Lifetime6 + "\"", (byte) -106);
             } catch (Throwable throwable) {
             }
             ie.a(param0, true);

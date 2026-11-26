@@ -96,7 +96,7 @@ final class ri {
           if (!param2) {
             stackIn_4_0 = kg.field_c;
           } else {
-            stackIn_4_0 = fg.field_b;
+            stackIn_4_0 = FrameTimer.field_b;
           }
           var4 = stackIn_4_0;
           var5 = -1;
@@ -188,7 +188,7 @@ final class ri {
             if (var15 != 0) {
               var20.a(vj.field_e, 110, var14, 1, 16343907);
             } else {
-              var20.a(uf.field_e, 110, var14, 16711681, 16343907);
+              var20.a(NanoFrameTimer.field_e, 110, var14, 16711681, 16343907);
             }
             var14 = var14 + var13Lifetime1;
             var16 = new String[16];

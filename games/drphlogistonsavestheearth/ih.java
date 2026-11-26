@@ -22,7 +22,7 @@ final class ih extends pj implements ra, ke {
         for (var2 = 0; var2 < bd.field_M; var2++) {
           var1[var2] = new he(oe.field_b, field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], a.field_e[var2], MouseInput.field_a);
         }
-        oc.a((byte) -21);
+        Bzip2State.a((byte) -21);
         return var1;
     }
 

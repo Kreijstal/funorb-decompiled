@@ -148,11 +148,11 @@ final class eb extends lc implements ki, rc {
     final static void a(java.awt.Component param0, byte param1) {
         try {
           param0.setFocusTraversalKeysEnabled(false);
-          param0.addKeyListener(qj.field_c);
+          param0.addKeyListener(GzipDecompressor.field_c);
           if (param1 != -105) {
             field_D = (String) null;
           }
-          param0.addFocusListener(qj.field_c);
+          param0.addFocusListener(GzipDecompressor.field_c);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "eb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -171,7 +171,7 @@ final class eb extends lc implements ki, rc {
           this.field_H.field_j = (fc) ((Object) new jh());
           var7 = BufferedRandomAccessFile.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
           var3 = 20;
-          var4 = new jd(sg.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sg.field_a.field_s, -1, 2147483647, true);
+          var4 = new jd(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
           this.field_B = new vc(var7, var4);
           this.field_B.field_q = "";
           this.field_B.a(Slime.field_b, 0, (byte) 107);

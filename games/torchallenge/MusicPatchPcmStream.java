@@ -155,7 +155,7 @@ final class MusicPatchPcmStream extends PcmStream {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                nl.a(var12, var5_int, param1, var4, 9);
+                nl.decompress(var12, var5_int, param1, var4, 9);
               } else {
                 var7 = ClientException.field_b;
                 synchronized (var7) {

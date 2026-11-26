@@ -83,7 +83,7 @@ final class di {
           var8 = var41;
           var64 = new int[param2.field_L];
           var62 = oa.field_c;
-          var61 = in.field_c;
+          var61 = FrameTimer.field_c;
           var63 = MusicPatchPcmStream.field_o;
           for (var13 = 0; param2.field_L > var13; var13++) {
             var14 = param1 * var61[var13] + var62[var13] * param5 + var63[var13] * param0 >> 8;

@@ -45,7 +45,7 @@ public final class Confined extends i {
           ta.clearStaticReferences(27616);
           ab.resetStaticState((byte) -117);
           gb.resetStaticState((byte) 90);
-          jg.clearStaticReferences((byte) 1);
+          FrameTimer.clearStaticReferences((byte) 1);
           AwtRasterBuffer.clearStaticReferences((byte) -90);
           ad.clearStaticReferences((byte) -120);
           GameCanvas.clearStaticReferences((byte) -86);
@@ -176,7 +176,7 @@ public final class Confined extends i {
           ni.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(param0 ^ param0);
           oa.clearStaticReferences();
-          eb.clearStaticReferences(79);
+          Bzip2State.clearStaticReferences(79);
           jd.clearStaticReferences((byte) -38);
           ei.clearStaticReferences((byte) 122);
           ml.clearStaticReferences(param0 ^ -193);
@@ -219,7 +219,7 @@ public final class Confined extends i {
           qa.clearStaticReferences(param0 ^ -234);
           n.clearStaticReferences((byte) 122);
           ProxyAuthenticationRequiredException.resetStaticState((byte) -95);
-          q.clearStaticReferences(-93);
+          NanoFrameTimer.clearStaticReferences(-93);
           ImageProducerRasterBuffer.clearStaticReferences(-45);
           vl.clearStaticReferences(-14578);
           tl.clearStaticReferences((byte) 123);
@@ -842,14 +842,14 @@ public final class Confined extends i {
         try {
           if (IsaacRandom.field_d == null) {
             ca.a(il.field_cb, -1856653215);
-            eb.a((byte) -102);
+            Bzip2State.a((byte) -102);
             jc.a(ij.field_o, param0 ^ -10312, 50.0f);
             this.h(param0 ^ -51295);
             IsaacRandom.field_d = od.a(ka.field_N, "", "player/ship");
             var2_double = 0.3 / (double)IsaacRandom.field_d.b(153);
             jb.a((byte) -100, var2_double, me.field_J);
             jb.a((byte) -92, var2_double, ac.field_c);
-            jb.a((byte) -86, var2_double, jg.field_b);
+            jb.a((byte) -86, var2_double, FrameTimer.field_b);
             di.field_d = od.a(ka.field_N, "", "player/wingpod");
             var2_doubleLifetime2 = 0.1 / (double)di.field_d.b(51);
             jb.a((byte) -99, var2_doubleLifetime2, og.field_g);
@@ -1130,7 +1130,7 @@ public final class Confined extends i {
             an.field_q = fk.a(jd.field_b, "", "enemy-shield-lost").a();
             ih.field_e = fk.a(jd.field_b, "", "enemy-shot-fire").a();
             kh.field_fb = fk.a(jd.field_b, "", "enemy-shot-ambient").a();
-            jg.field_e = fk.a(jd.field_b, "", "enemy-shot-hit").a();
+            FrameTimer.field_e = fk.a(jd.field_b, "", "enemy-shot-hit").a();
             we.field_b = fk.a(jd.field_b, "", "enemy-laser-ambient").a();
             am.g(-4258);
             return;

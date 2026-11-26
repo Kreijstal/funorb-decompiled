@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wg extends tc {
-    static qj field_u;
+    static GzipDecompressor field_u;
     static IntrusiveDeque field_v;
 
     wg(int param0) {
-        this(sg.field_a, param0);
+        this(FrameTimer.field_a, param0);
     }
 
     final String a(boolean param0, lk param1) {
@@ -18,7 +18,7 @@ final class wg extends tc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            field_u = (qj) null;
+            field_u = (GzipDecompressor) null;
           }
           stackIn_3_0 = Platform.a(param1.field_h.length(), '*', -13810);
           return stackIn_3_0;
@@ -60,7 +60,7 @@ final class wg extends tc {
         field_u = null;
         field_v = null;
         if (param0 != 13922) {
-          field_u = (qj) null;
+          field_u = (GzipDecompressor) null;
         }
     }
 
@@ -69,6 +69,6 @@ final class wg extends tc {
     }
 
     static {
-        field_u = new qj();
+        field_u = new GzipDecompressor();
     }
 }

@@ -909,7 +909,7 @@ final class c extends sc {
           }
           var2Lifetime71 = wm.a("intro3_TheAliensHaveAdvancedTechnology", (byte) 109);
           if (var2Lifetime71 != null) {
-            eb.field_j = va.a(0, var2Lifetime71);
+            Bzip2State.field_j = va.a(0, var2Lifetime71);
           }
           var2Lifetime72 = wm.a("intro4_IfWeCouldGetWeCouldBecome", (byte) 121);
           if (var2Lifetime72 != null) {
@@ -1029,7 +1029,7 @@ final class c extends sc {
           }
           var2Lifetime101 = wm.a("arrowKeys3", (byte) 63);
           if (null != var2Lifetime101) {
-            q.field_k = va.a(0, var2Lifetime101);
+            NanoFrameTimer.field_k = va.a(0, var2Lifetime101);
           }
           var2Lifetime102 = wm.a("useKeyboardForUpgrades", (byte) 113);
           if (null != var2Lifetime102) {
@@ -1405,7 +1405,7 @@ final class c extends sc {
           }
           var2Lifetime195 = wm.a("extraLife", (byte) 98);
           if (null != var2Lifetime195) {
-            q.field_n = va.a(0, var2Lifetime195);
+            NanoFrameTimer.field_n = va.a(0, var2Lifetime195);
           }
           var2Lifetime196 = wm.a("wingPodLost", (byte) 84);
           if (null != var2Lifetime196) {

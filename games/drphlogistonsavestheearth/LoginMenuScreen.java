@@ -1025,7 +1025,7 @@ final class LoginMenuScreen extends pj implements ke {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  m.field_c = mj.a((byte) -123, var2);
+                  FrameTimer.field_c = mj.a((byte) -123, var2);
                 }
                 var2 = wg.a("pleasetryagain", 0);
                 if (null != var2) {

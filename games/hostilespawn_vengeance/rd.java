@@ -448,7 +448,7 @@ final class rd {
               }
               var6_ref_oc.field_g = var6_ref_oc.field_g + 1;
             }
-            lg.a(var4, 0, 0, var3);
+            NanoFrameTimer.a(var4, 0, 0, var3);
             bi.a(var4, -457, var41, var3);
             gn.a(var4, var8Lifetime1, var3, 101, var9Lifetime1, var42, var34);
             if (14 == ul.field_L ||
@@ -500,7 +500,7 @@ final class rd {
               lf.a((byte) -122);
             }
             vf.a(var1_int, var2, var11Lifetime1, 28, var12Lifetime1, var14Lifetime1, var13Lifetime1);
-            lg.a(var4, 0, 1, var3);
+            NanoFrameTimer.a(var4, 0, 1, var3);
             ih.a(-15587, var1_int);
             ByteStorage.a(11178);
             PcmResampler.a(var1_int, 3);
@@ -554,9 +554,9 @@ final class rd {
                   SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6, 512 - 2 * jf.field_c);
                 }
                 cb.a(631, var5);
-                if (!(0 >= lg.field_f)) {
+                if (!(0 >= NanoFrameTimer.field_f)) {
                   for (var7Lifetime3 = 0; 20 > var7Lifetime3; var7Lifetime3++) {
-                    SoftwareRasterizer.drawRectangleOutlineAlpha(0 + var7Lifetime3, 0 + var7Lifetime3, -(var7Lifetime3 * 2) + 640, -(var7Lifetime3 * 2) + 480, 16711680, lg.field_f * (20 - var7Lifetime3) / 4);
+                    SoftwareRasterizer.drawRectangleOutlineAlpha(0 + var7Lifetime3, 0 + var7Lifetime3, -(var7Lifetime3 * 2) + 640, -(var7Lifetime3 * 2) + 480, 16711680, NanoFrameTimer.field_f * (20 - var7Lifetime3) / 4);
                   }
                 }
                 decompiledFrameRemainder1 = false;
@@ -581,9 +581,9 @@ final class rd {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, var6Lifetime1, 512 - 2 * jf.field_c);
             }
             cb.a(631, var5);
-            if (0 < lg.field_f) {
+            if (0 < NanoFrameTimer.field_f) {
               for (var7Lifetime1 = 0; 20 > var7Lifetime1; var7Lifetime1++) {
-                SoftwareRasterizer.drawRectangleOutlineAlpha(0 + var7Lifetime1, 0 + var7Lifetime1, -(var7Lifetime1 * 2) + 640, -(var7Lifetime1 * 2) + 480, 16711680, lg.field_f * (20 - var7Lifetime1) / 4);
+                SoftwareRasterizer.drawRectangleOutlineAlpha(0 + var7Lifetime1, 0 + var7Lifetime1, -(var7Lifetime1 * 2) + 640, -(var7Lifetime1 * 2) + 480, 16711680, NanoFrameTimer.field_f * (20 - var7Lifetime1) / 4);
               }
             }
           }

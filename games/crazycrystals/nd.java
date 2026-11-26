@@ -102,9 +102,9 @@ final class nd {
           this.field_f = -1;
           var4.field_e = 15658734;
           this.field_c = 15658734;
-          var4.a((byte) -127, 0).b(15658734, -46).a(60, s.a(10066329, 7829367, 8947848, (byte) 127));
-          var4.a((byte) 61, 1).a(33, s.a(10066329, 13421772, 11184810, (byte) 127));
-          var4.a((byte) -13, 3).a(24, s.a(7829367, 10066329, 8947848, (byte) 127)).c(-123, 1).d(-64, 1);
+          var4.a((byte) -127, 0).b(15658734, -46).a(60, NanoFrameTimer.a(10066329, 7829367, 8947848, (byte) 127));
+          var4.a((byte) 61, 1).a(33, NanoFrameTimer.a(10066329, 13421772, 11184810, (byte) 127));
+          var4.a((byte) -13, 3).a(24, NanoFrameTimer.a(7829367, 10066329, 8947848, (byte) 127)).c(-123, 1).d(-64, 1);
           var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -126,7 +126,7 @@ final class nd {
           discarded$1 = new ip(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new fk();
           var17.a((byte) 119, var8);
-          var8.a((byte) 8, 0).a(105, s.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
+          var8.a((byte) 8, 0).a(105, NanoFrameTimer.a(7829367, 10066329, 15658734, (byte) 127)).b(1118481, -51).a(-1, 0);
           var8.a((byte) -3, 4).a(false, true).a(69, var5);
           this.field_q = (wo) ((Object) var8);
           var9 = new RgbSprite[9];

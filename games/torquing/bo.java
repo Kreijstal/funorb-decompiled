@@ -161,7 +161,7 @@ final class bo {
         if (65 != var5.length) {
           throw new RuntimeException();
         }
-        var15 = np.a(5, var10.payload, -5 + (var10.position - var13.length), -81);
+        var15 = NanoFrameTimer.a(5, var10.payload, -5 + (var10.position - var13.length), -81);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[var7 + 1] != var15[var7]) {
             throw new RuntimeException();

@@ -54,14 +54,14 @@ final class ha {
     }
 
     final static String a(long param0, int param1) {
-        jg.field_c.setTime(new Date(param0));
-        int var3 = jg.field_c.get(7);
-        int var4 = jg.field_c.get(5);
-        int var5 = jg.field_c.get(2);
-        int var6 = jg.field_c.get(1);
-        int var7 = jg.field_c.get(11);
-        int var8 = jg.field_c.get(12);
-        int var9 = jg.field_c.get(param1);
+        FrameTimer.field_c.setTime(new Date(param0));
+        int var3 = FrameTimer.field_c.get(7);
+        int var4 = FrameTimer.field_c.get(5);
+        int var5 = FrameTimer.field_c.get(2);
+        int var6 = FrameTimer.field_c.get(1);
+        int var7 = FrameTimer.field_c.get(11);
+        int var8 = FrameTimer.field_c.get(12);
+        int var9 = FrameTimer.field_c.get(param1);
         return nn.field_p[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + oi.field_s[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

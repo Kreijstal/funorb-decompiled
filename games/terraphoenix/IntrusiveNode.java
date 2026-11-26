@@ -42,13 +42,13 @@ class IntrusiveNode {
             qc.a(param1, var4, (byte) -110);
             var4 = (eg) (ic.field_s.nextBackward((byte) -119));
           }
-          var2 = vc.field_g.beginBackward(param0 ^ 30032);
+          var2 = FrameTimer.field_g.beginBackward(param0 ^ 30032);
           if (param0 != 20840) {
             field_f = (Sprite) null;
           }
           while (var2 != null) {
             eb.a(param1, (byte) 125);
-            var2 = vc.field_g.nextBackward((byte) -119);
+            var2 = FrameTimer.field_g.nextBackward((byte) -119);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

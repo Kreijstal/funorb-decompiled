@@ -329,7 +329,7 @@ final class hd extends vg {
           }
           var1[var2] = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var5);
         }
-        oc.a((byte) -21);
+        Bzip2State.a((byte) -21);
         return var1;
     }
 

@@ -159,7 +159,7 @@ final class cc {
           var41 = var49;
           var8 = var41;
           var64 = new int[param4.field_i];
-          var62 = bv.field_G;
+          var62 = Bzip2State.field_G;
           var63 = PetAttackAnimation.field_x;
           var61 = ep.field_l;
           for (var13 = 0; param4.field_i > var13; var13++) {
@@ -194,19 +194,19 @@ final class cc {
             var15Lifetime1 = param4.field_C[var14Lifetime1];
             var16 = param4.field_h[var14Lifetime1];
             var17 = param4.field_t[var14Lifetime1];
-            if (param4.field_F[var14Lifetime1] < bv.field_G.length) {
+            if (param4.field_F[var14Lifetime1] < Bzip2State.field_G.length) {
               stackIn_27_0 = param4.field_F[var14Lifetime1];
             } else {
               stackIn_27_0 = -1;
             }
             var18 = stackIn_27_0;
-            if (bv.field_G.length > param4.field_c[var14Lifetime1]) {
+            if (Bzip2State.field_G.length > param4.field_c[var14Lifetime1]) {
               stackIn_30_0 = param4.field_c[var14Lifetime1];
             } else {
               stackIn_30_0 = -1;
             }
             var19 = stackIn_30_0;
-            if (bv.field_G.length > param4.field_e[var14Lifetime1]) {
+            if (Bzip2State.field_G.length > param4.field_e[var14Lifetime1]) {
               stackIn_33_0 = param4.field_e[var14Lifetime1];
             } else {
               stackIn_33_0 = -1;

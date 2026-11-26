@@ -284,7 +284,7 @@ final class gn {
                     (!(rb.field_m < -24 + param4)) &&
                     (!(j.field_c > param1 + 24)) &&
                     (!(rb.field_m > 24 + param4))) {
-                    pf.field_I = lg.field_n[var10.field_h];
+                    pf.field_I = NanoFrameTimer.field_n[var10.field_h];
                     lh.field_a = param1;
                     aj.field_d = param4 + 8;
                   }

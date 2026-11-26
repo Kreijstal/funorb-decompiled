@@ -52,7 +52,7 @@ final class AccountNameAvailabilityValidator extends a {
             this.checkedName = param0;
           }
           if (this.nameAvailable) {
-            stackIn_17_0 = hj.field_o;
+            stackIn_17_0 = Bzip2State.field_o;
             return stackIn_17_0;
           }
           stackIn_15_0 = pc.field_d;

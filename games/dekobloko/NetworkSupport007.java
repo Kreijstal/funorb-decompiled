@@ -179,13 +179,13 @@ final class NetworkSupport007 extends DualNode {
             try {
               uRLLocal9 = appletArgument2.getCodeBase();
               stringLocal7 = NetworkSupport004.computeURL0599(uRLLocal9, -1, appletArgument2).getFile();
-              MixedSupport084.computeObject1095("updatelinks", -14541, appletArgument2, new Object[]{"home", stringLocal7 + "home.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", -14541, appletArgument2, new Object[]{"home", stringLocal7 + "home.ws"});
               integerLocal8 = -128 / ((byteArgument1 - 10) / 61);
-              MixedSupport084.computeObject1095("updatelinks", -14541, appletArgument2, new Object[]{"gamelist", stringLocal7 + "togamelist.ws"});
-              MixedSupport084.computeObject1095("updatelinks", -14541, appletArgument2, new Object[]{"serverlist", stringLocal7 + "toserverlist.ws"});
-              MixedSupport084.computeObject1095("updatelinks", -14541, appletArgument2, new Object[]{"options", stringLocal7 + "options.ws"});
-              MixedSupport084.computeObject1095("updatelinks", -14541, appletArgument2, new Object[]{"terms", stringLocal7 + "terms.ws"});
-              MixedSupport084.computeObject1095("updatelinks", -14541, appletArgument2, new Object[]{"privacy", stringLocal7 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", -14541, appletArgument2, new Object[]{"gamelist", stringLocal7 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", -14541, appletArgument2, new Object[]{"serverlist", stringLocal7 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", -14541, appletArgument2, new Object[]{"options", stringLocal7 + "options.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", -14541, appletArgument2, new Object[]{"terms", stringLocal7 + "terms.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", -14541, appletArgument2, new Object[]{"privacy", stringLocal7 + "privacy.ws"});
             } catch (java.lang.Throwable caughtParameterLocal10) {
               caughtExceptionLocal4 = caughtParameterLocal10;
               throwableLocal5 = caughtExceptionLocal4;

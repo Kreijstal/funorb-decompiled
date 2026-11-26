@@ -16,7 +16,7 @@ final class MixedSupport054 {
         try {
           if (booleanArgument1 ||
             null == MixedSupport016.sceneWidgetPart013State0001) {
-            MixedSupport026.booleanState0028 = false;
+            NanoFrameTimer.booleanState0028 = false;
           }
           if (booleanArgument1) {
             if (0 < UiComponentPart017.integerState0437) {
@@ -33,7 +33,7 @@ final class MixedSupport054 {
           } else {
             if (null == MixedSupport016.sceneWidgetPart013State0001) {
               if (null == UiComponentPart011.sceneWidgetPart013State0002) {
-                MixedSupport026.booleanState0028 = false;
+                NanoFrameTimer.booleanState0028 = false;
                 if (RenderingSupport001.integerState0064 > 0) {
                   RenderingSupport001.integerState0064 = RenderingSupport001.integerState0064 - 1;
                 } else {

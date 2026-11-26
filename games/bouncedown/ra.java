@@ -217,7 +217,7 @@ final class ra extends oa {
         int var5 = 0;
         var4 = Bounce.field_N;
         try {
-          var1 = qj.field_c;
+          var1 = GzipDecompressor.field_c;
           synchronized (var1) {
             if (param0 != 28282) {
               field_f = (String) null;

@@ -41,7 +41,7 @@ abstract class MouseWheelInput {
             MouseWheelInput.a(false, (String) null);
           }
           if (param1 != null &&
-            param1.length() >= lg.field_k &&
+            param1.length() >= Bzip2State.field_k &&
             param1.length() <= BufferedSocket.field_g) {
             return false;
           }

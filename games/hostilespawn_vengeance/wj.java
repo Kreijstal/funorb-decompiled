@@ -270,8 +270,8 @@ final class wj extends ph {
           if (0 < qh.field_u) {
             qh.field_u = qh.field_u - 1;
           }
-          if (lg.field_f > 0) {
-            lg.field_f = lg.field_f - 1;
+          if (NanoFrameTimer.field_f > 0) {
+            NanoFrameTimer.field_f = NanoFrameTimer.field_f - 1;
           }
           if (le.field_gb > 0) {
             le.field_gb = le.field_gb - 1;

@@ -116,7 +116,7 @@ final class rc {
               if (var4 == h.field_h.field_b) {
                 var5 = il.field_a;
               } else {
-                var5 = dc.field_l;
+                var5 = Bzip2State.field_l;
               }
             }
             var6 = uc.field_K[var3];

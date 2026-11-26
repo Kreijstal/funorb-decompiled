@@ -120,12 +120,12 @@ final class fn {
         }
         if (param1 != 23012) {
           field_f = (String) null;
-          if (!kh.field_o) {
+          if (!NanoFrameTimer.field_o) {
             return ba.b(param0, param2, -101);
           }
           return false;
         }
-        if (!kh.field_o) {
+        if (!NanoFrameTimer.field_o) {
           return ba.b(param0, param2, -101);
         }
         return false;

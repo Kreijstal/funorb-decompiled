@@ -399,7 +399,7 @@ final class ph extends di {
             return stackIn_31_0;
           }
           if (BufferedRandomAccessFile.a(var5, var7, false)) {
-            stackIn_21_0 = jd.field_i;
+            stackIn_21_0 = NanoFrameTimer.field_i;
             return stackIn_21_0;
           }
           if (a.a(var5, -19, var7)) {
@@ -409,7 +409,7 @@ final class ph extends di {
           if (!oh.a((byte) -85, var7, var5)) {
             return kh.field_M;
           }
-          stackIn_29_0 = jd.field_i;
+          stackIn_29_0 = NanoFrameTimer.field_i;
           return stackIn_29_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

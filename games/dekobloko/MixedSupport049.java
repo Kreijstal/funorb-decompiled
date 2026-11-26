@@ -46,7 +46,7 @@ final class MixedSupport049 {
     }
 
     final static void performAction0585(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int integerArgument6, byte byteArgument7) {
-        MixedSupport059.sceneWidgetState0055.performAction1764(integerArgument3, 0, integerArgument5, integerArgument1, integerArgument6);
+        FrameTimer.sceneWidgetState0055.performAction1764(integerArgument3, 0, integerArgument5, integerArgument1, integerArgument6);
         if (null != SceneWidgetPart007.sceneWidgetPart005State0002) {
           SceneWidgetPart007.sceneWidgetPart005State0002.performAction0713(integerArgument4, -MixedSupport073.integerState0416 + integerArgument4, integerArgument1, integerArgument2, (byte) -18, integerArgument1);
           if (byteArgument7 >= -83) {

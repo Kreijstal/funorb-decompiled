@@ -71,9 +71,9 @@ final class td implements j {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               eh.a((byte) 68, var16);
               if (var6_intLifetime1 != 0) {
-                sf.a(fh.field_a, false, var6_intLifetime1, vg.field_P, nf.field_S, dk.field_i);
+                sf.a(fh.field_a, false, var6_intLifetime1, vg.field_P, nf.field_S, NanoFrameTimer.field_i);
               } else {
-                sf.a(fh.field_a, false, var6_intLifetime1, vg.field_P, nf.field_S, dk.field_i);
+                sf.a(fh.field_a, false, var6_intLifetime1, vg.field_P, nf.field_S, NanoFrameTimer.field_i);
               }
             }
             ta.b((byte) 105, var5);

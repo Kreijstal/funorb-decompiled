@@ -61,15 +61,15 @@ final class PcmOutputWorker implements Runnable {
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           kb.field_c = kb.field_c + 1;
-          if (fg.field_a < (480 - param0) / 10 &&
-            20 > fg.field_a) {
-            ul.field_O[fg.field_a] = pf.a((byte) -110, 3);
-            AccountNameAvailabilityValidator.field_r[fg.field_a] = 0;
-            n.field_d[fg.field_a][0] = (float)(pf.a((byte) 60, 3) - 1);
-            n.field_d[fg.field_a][1] = -0.5f;
-            BoundedRandomAccessFile.field_f[fg.field_a][0] = (float)(pf.a((byte) -88, 480) + 80);
-            BoundedRandomAccessFile.field_f[fg.field_a][1] = 490.0f;
-            fg.field_a = fg.field_a + 1;
+          if (FrameTimer.field_a < (480 - param0) / 10 &&
+            20 > FrameTimer.field_a) {
+            ul.field_O[FrameTimer.field_a] = pf.a((byte) -110, 3);
+            AccountNameAvailabilityValidator.field_r[FrameTimer.field_a] = 0;
+            n.field_d[FrameTimer.field_a][0] = (float)(pf.a((byte) 60, 3) - 1);
+            n.field_d[FrameTimer.field_a][1] = -0.5f;
+            BoundedRandomAccessFile.field_f[FrameTimer.field_a][0] = (float)(pf.a((byte) -88, 480) + 80);
+            BoundedRandomAccessFile.field_f[FrameTimer.field_a][1] = 490.0f;
+            FrameTimer.field_a = FrameTimer.field_a + 1;
           }
           stackIn_7_0 = ((kb.field_c & 7) != 0) ? 0 : 1;
           var2_int = stackIn_7_0;
@@ -77,7 +77,7 @@ final class PcmOutputWorker implements Runnable {
             var10 = (ta) null;
             PcmOutputWorker.a((ta) null, (Sprite[]) null, 32, 126, -22, (Sprite[]) null, 21, -43, -22, true, -125, -11, 113, 78, 111, (ta) null);
           }
-          for (var3 = 0; var3 < fg.field_a; var3++) {
+          for (var3 = 0; var3 < FrameTimer.field_a; var3++) {
             if (var2_int != 0) {
               AccountNameAvailabilityValidator.field_r[var3] = AccountNameAvailabilityValidator.field_r[var3] + 1;
               if (AccountNameAvailabilityValidator.field_r[var3] == 4) {
@@ -99,7 +99,7 @@ final class PcmOutputWorker implements Runnable {
                 dupTemp$3[0] = (float)((double)dupTemp$3[0] + (Math.random() - 0.5) * 0.5);
               }
               var4 = var3 + 1;
-              if (var4 < fg.field_a) {
+              if (var4 < FrameTimer.field_a) {
                 var5 = BoundedRandomAccessFile.field_f[var3][0] - BoundedRandomAccessFile.field_f[var4][0];
                 var6 = -BoundedRandomAccessFile.field_f[var4][1] + BoundedRandomAccessFile.field_f[var3][1];
                 var7 = var5 * var5 + var6 * var6;

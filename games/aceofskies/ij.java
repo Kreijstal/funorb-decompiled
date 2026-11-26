@@ -67,13 +67,13 @@ final class ij extends hh {
         }
     }
 
-    final static tf c(int param0) {
+    final static FrameTimer c(int param0) {
         if (param0 == 8194) {
-          return (tf) ((Object) new cr());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
         String var2 = (String) null;
         ij.a((ResourceArchive) null, (String) null, (String) null, 105);
-        return (tf) ((Object) new cr());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final void a(byte param0, int param1, int param2) {

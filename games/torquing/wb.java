@@ -211,7 +211,7 @@ final class wb extends am {
           if (null == jd.field_D) {
             return;
           }
-          if (j.field_F != null &&
+          if (Bzip2State.field_F != null &&
             null != lh.field_O) {
             var28 = SoftwareRasterizer.field_e;
             var2Lifetime1 = SoftwareRasterizer.field_j;
@@ -230,49 +230,49 @@ final class wb extends am {
               var9_int = -var7Lifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_int;
               var5 = var5 + var9_int * 2;
-              j.field_F.field_w = j.field_F.field_w + var9_int * 2;
+              Bzip2State.field_F.field_w = Bzip2State.field_F.field_w + var9_int * 2;
               up.field_d = up.field_d + var9_int;
               gi.field_d = gi.field_d - var9_int;
-              j.field_F.field_v = j.field_F.field_v + var9_int;
+              Bzip2State.field_F.field_v = Bzip2State.field_F.field_v + var9_int;
             }
-            if (var5 + var7Lifetime1 > j.field_F.field_w) {
-              var9_intLifetime1 = var7Lifetime1 - (-var5 + j.field_F.field_w);
-              j.field_F.field_w = j.field_F.field_w + 2 * var9_intLifetime1;
+            if (var5 + var7Lifetime1 > Bzip2State.field_F.field_w) {
+              var9_intLifetime1 = var7Lifetime1 - (-var5 + Bzip2State.field_F.field_w);
+              Bzip2State.field_F.field_w = Bzip2State.field_F.field_w + 2 * var9_intLifetime1;
               var5 = var5 + 2 * var9_intLifetime1;
               up.field_d = up.field_d + var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               gi.field_d = gi.field_d - var9_intLifetime1;
-              j.field_F.field_v = j.field_F.field_v + var9_intLifetime1;
+              Bzip2State.field_F.field_v = Bzip2State.field_F.field_v + var9_intLifetime1;
             }
             if (var8 < 0) {
               var9_intLifetime2 = -var8;
               Torquing.field_x = Torquing.field_x - var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
               DiskArchiveRequest.field_y = DiskArchiveRequest.field_y + var9_intLifetime2;
-              j.field_F.field_u = j.field_F.field_u + var9_intLifetime2 * 2;
-              j.field_F.field_r = j.field_F.field_r + var9_intLifetime2;
+              Bzip2State.field_F.field_u = Bzip2State.field_F.field_u + var9_intLifetime2 * 2;
+              Bzip2State.field_F.field_r = Bzip2State.field_F.field_r + var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
             }
-            if (j.field_F.field_u < var8 + var6Lifetime1) {
-              var9_intLifetime3 = -j.field_F.field_u + (var6Lifetime1 + var8);
+            if (Bzip2State.field_F.field_u < var8 + var6Lifetime1) {
+              var9_intLifetime3 = -Bzip2State.field_F.field_u + (var6Lifetime1 + var8);
               DiskArchiveRequest.field_y = DiskArchiveRequest.field_y + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
-              j.field_F.field_r = j.field_F.field_r + var9_intLifetime3;
-              j.field_F.field_u = j.field_F.field_u + var9_intLifetime3 * 2;
+              Bzip2State.field_F.field_r = Bzip2State.field_F.field_r + var9_intLifetime3;
+              Bzip2State.field_F.field_u = Bzip2State.field_F.field_u + var9_intLifetime3 * 2;
               var8 = var8 + var9_intLifetime3;
               Torquing.field_x = Torquing.field_x - var9_intLifetime3;
             }
-            j.field_F.a();
-            var9 = new Sprite(j.field_F.field_w, j.field_F.field_u);
+            Bzip2State.field_F.a();
+            var9 = new Sprite(Bzip2State.field_F.field_w, Bzip2State.field_F.field_u);
             var9.e();
             lh.field_O.a(var14, up.field_d, DiskArchiveRequest.field_y, WidgetContainer.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
             hb.a(0, false, var9, var9.field_u, var9.field_w, 1, 0, 3);
-            j.field_F.e();
+            Bzip2State.field_F.e();
             var9.d(0, 0);
             MouseWheelInput.field_b = new Sprite(640, 480);
             MouseWheelInput.field_b.e();
-            j.field_F.a((j.field_F.field_w >> 1) + gi.field_d, Torquing.field_x + (j.field_F.field_u >> 1), tl.field_n, 4096);
-            j.field_F = null;
+            Bzip2State.field_F.a((Bzip2State.field_F.field_w >> 1) + gi.field_d, Torquing.field_x + (Bzip2State.field_F.field_u >> 1), tl.field_n, 4096);
+            Bzip2State.field_F = null;
             MouseWheelInput.field_b.d();
             SoftwareRasterizer.setRasterBuffer(var28, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(mo.field_w);

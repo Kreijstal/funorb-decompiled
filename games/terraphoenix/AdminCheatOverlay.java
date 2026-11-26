@@ -76,7 +76,7 @@ final class AdminCheatOverlay {
         var5 = this.field_b;
         if (0 == var5) {
           param0 = 320;
-          vc.field_f.c(qd.field_h[0], 320, 468, 13881286, 0);
+          FrameTimer.field_f.c(qd.field_h[0], 320, 468, 13881286, 0);
           param2 = 76;
           param2 += 64;
           pf.field_a[0].b(0, 0);
@@ -98,7 +98,7 @@ final class AdminCheatOverlay {
           sj.a(65280, 20, param2, 608, 14, 32, qd.field_h[6], 0);
         } else {
           if (var5 == 1) {
-            vc.field_f.c(nd.field_o[0], 320, 468, 13881286, -1);
+            FrameTimer.field_f.c(nd.field_o[0], 320, 468, 13881286, -1);
             param2 = 76;
             param0 = 320;
             param0 += 42;
@@ -119,7 +119,7 @@ final class AdminCheatOverlay {
             if (2 != var5) {
               if (var5 == 3) {
                 param0 = 320;
-                vc.field_f.c(dd.field_O[0], 320, 468, 13881286, -1);
+                FrameTimer.field_f.c(dd.field_O[0], 320, 468, 13881286, -1);
                 param2 = 76;
                 param2 += 32;
                 pf.field_a[3].b(0, 0);
@@ -142,7 +142,7 @@ final class AdminCheatOverlay {
               } else {
                 if (4 != var5) {
                   if (var5 == 5) {
-                    vc.field_f.c(oi.field_M[0], 320, 468, 13881286, -1);
+                    FrameTimer.field_f.c(oi.field_M[0], 320, 468, 13881286, -1);
                     param2 = 76;
                     param0 = 320;
                     param0 = 64;
@@ -160,7 +160,7 @@ final class AdminCheatOverlay {
                       if (7 != var5) {
                         if (8 == var5) {
                           param2 = 100;
-                          vc.field_f.c(vb.field_f[0], 320, 468, 13881286, -1);
+                          FrameTimer.field_f.c(vb.field_f[0], 320, 468, 13881286, -1);
                           param0 = 320;
                           param2 += 32;
                           param0 = 32;
@@ -228,7 +228,7 @@ final class AdminCheatOverlay {
                         }
                       } else {
                         param2 = 80;
-                        vc.field_f.c(o.field_a[0], 320, 468, 13881286, -1);
+                        FrameTimer.field_f.c(o.field_a[0], 320, 468, 13881286, -1);
                         param0 = 320;
                         param0 = 32;
                         param2 += 32;
@@ -243,7 +243,7 @@ final class AdminCheatOverlay {
                     } else {
                       param2 = 80;
                       param0 = 320;
-                      vc.field_f.c(k.field_d[0], 320, 468, 13881286, -1);
+                      FrameTimer.field_f.c(k.field_d[0], 320, 468, 13881286, -1);
                       param0 = 20;
                       pf.field_a[7].b(0, param2);
                       param2 += 125;
@@ -262,7 +262,7 @@ final class AdminCheatOverlay {
                 } else {
                   param0 = 320;
                   param2 = 76;
-                  vc.field_f.c(MessageKeys.field_a[0], 320, 468, 13881286, -1);
+                  FrameTimer.field_f.c(MessageKeys.field_a[0], 320, 468, 13881286, -1);
                   param0 = 96;
                   param2 += 48;
                   sj.a(16777215, 20, param2, 610, 14, param0, MessageKeys.field_a[1], 0);
@@ -289,7 +289,7 @@ final class AdminCheatOverlay {
             } else {
               param0 = 320;
               param2 = 76;
-              vc.field_f.c(mb.field_p[0], 320, 468, 13881286, -1);
+              FrameTimer.field_f.c(mb.field_p[0], 320, 468, 13881286, -1);
               pf.field_a[2].b(0, 0);
               param0 += 64;
               param2 += 32;

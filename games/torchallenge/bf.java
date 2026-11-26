@@ -40,7 +40,7 @@ final class bf {
     final int a(byte param0) {
         if (!this.field_i && (this.field_b != 2 ||
           0 >= this.field_h)) {
-          if (jl.field_h == this.field_e) {
+          if (FrameTimer.field_h == this.field_e) {
             return 1;
           }
           if (param0 != -116) {

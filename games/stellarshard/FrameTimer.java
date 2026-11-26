@@ -20,21 +20,21 @@ abstract class FrameTimer {
         field_a = null;
     }
 
-    final int a(long param0, int param1) {
+    final int waitAndCountTicks(long param0, int param1) {
         if (param1 != 1) {
           return 38;
         }
-        long var4 = this.b(30393);
+        long var4 = this.getDelayMillis(30393);
         if (var4 <= 0L) {
-          return this.a(true, param0);
+          return this.advanceTicks(true, param0);
         }
         jj.sleepMillis((byte) -114, var4);
-        return this.a(true, param0);
+        return this.advanceTicks(true, param0);
     }
 
-    abstract void a(byte param0);
+    abstract void resetTiming(byte param0);
 
-    abstract int a(boolean param0, long param1);
+    abstract int advanceTicks(boolean param0, long param1);
 
     final static String a(String param0, char param1, String param2, int param3) {
         StringBuilder discarded$3 = null;
@@ -155,7 +155,7 @@ abstract class FrameTimer {
         }
     }
 
-    abstract long b(int param0);
+    abstract long getDelayMillis(int param0);
 
     static {
         field_d = "Homes in";

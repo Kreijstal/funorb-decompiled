@@ -867,7 +867,7 @@ final class da extends ArchiveProvider {
                 if (null != this.field_n.field_t &&
                   this.field_n.field_t[param0] != null) {
                   var7_ref_byte__ = this.field_n.field_t[param0];
-                  var8 = kh.a(0, -2 + var5.length, (byte) -43, var5);
+                  var8 = NanoFrameTimer.a(0, -2 + var5.length, (byte) -43, var5);
                   var9 = 0;
                   while (64 > var9) {
                     stackOut_130_0 = var7_ref_byte__[var9];
@@ -934,7 +934,7 @@ final class da extends ArchiveProvider {
               if (null != this.field_n.field_t &&
                 null != this.field_n.field_t[param0]) {
                 var7_ref_byte__ = this.field_n.field_t[param0];
-                var8 = kh.a(0, var5.length - 2, (byte) 111, var5);
+                var8 = NanoFrameTimer.a(0, var5.length - 2, (byte) 111, var5);
                 var9 = 0;
                 while (var9 < 64) {
                   stackOut_81_0 = var8[var9];

@@ -118,7 +118,7 @@ final class tg {
             }
             var14Lifetime2 = stackIn_15_0;
             var15 = param4 * var64[var13] + (param7 * var62[var13] + param2 * var63[var13]) >> 8;
-            stackIn_17_0 = s.field_h;
+            stackIn_17_0 = NanoFrameTimer.field_h;
             if (var15 >= 0) {
               stackIn_18_1 = var15;
             } else {

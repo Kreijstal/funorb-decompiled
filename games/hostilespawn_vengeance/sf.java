@@ -63,7 +63,7 @@ final class sf extends ig implements sk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= 60) {
-            stackIn_4_0 = in.a(true, 10, -59, param1);
+            stackIn_4_0 = FrameTimer.a(true, 10, -59, param1);
             return stackIn_4_0;
           }
           return true;

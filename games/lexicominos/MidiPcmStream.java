@@ -439,7 +439,7 @@ final class MidiPcmStream extends PcmStream {
           switch (var5Lifetime1Lifetime3) {
             case 64:
               if (var6Lifetime1Lifetime2 >= 64) {
-                this.field_q[var4Lifetime1Lifetime3] = tb.a(this.field_q[var4Lifetime1Lifetime3], 1);
+                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 1);
                 if (var8 != 0) {
                   this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -2);
                 }
@@ -452,10 +452,10 @@ final class MidiPcmStream extends PcmStream {
                 this.a(var4Lifetime1Lifetime3, 16384);
                 this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -3);
                 if (var8 != 0) {
-                  this.field_q[var4Lifetime1Lifetime3] = tb.a(this.field_q[var4Lifetime1Lifetime3], 2);
+                  this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 2);
                 }
               } else {
-                this.field_q[var4Lifetime1Lifetime3] = tb.a(this.field_q[var4Lifetime1Lifetime3], 2);
+                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 2);
               }
               break;
             case 99:
@@ -499,7 +499,7 @@ final class MidiPcmStream extends PcmStream {
               break;
             case 81:
               if (var6Lifetime1Lifetime2 >= 64) {
-                this.field_q[var4Lifetime1Lifetime3] = tb.a(this.field_q[var4Lifetime1Lifetime3], 4);
+                this.field_q[var4Lifetime1Lifetime3] = FrameTimer.a(this.field_q[var4Lifetime1Lifetime3], 4);
                 if (var8 != 0) {
                   this.c(-785046068, var4Lifetime1Lifetime3);
                   this.field_q[var4Lifetime1Lifetime3] = vg.a(this.field_q[var4Lifetime1Lifetime3], -5);
@@ -785,7 +785,7 @@ final class MidiPcmStream extends PcmStream {
             }
             var3 = var28.readUnsignedShort(-1698573656);
             var4_long = var28.readLong((byte) -102);
-            var6_ref_nc = (nc) (ok.field_b.beginForward(true));
+            var6_ref_nc = (nc) (Bzip2State.field_b.beginForward(true));
             while (true) {
               boolean decompiledFrameRemainder0 = true;
               if (var6_ref_nc != null) {
@@ -793,7 +793,7 @@ final class MidiPcmStream extends PcmStream {
                 decompiledFrameRemainder0 = (var26 == 0);
                 if ((decompiledFrameRemainder0) &&
                   (stackIn_14_0 != ~var6_ref_nc.field_j)) {
-                  var6_ref_nc = (nc) (ok.field_b.nextForward(param0 + 2));
+                  var6_ref_nc = (nc) (Bzip2State.field_b.nextForward(param0 + 2));
                   continue;
                 }
               }

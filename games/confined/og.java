@@ -254,12 +254,12 @@ final class og extends n {
         return this.c(param0 ^ 30609);
     }
 
-    final static jg e(int param0) {
+    final static FrameTimer e(int param0) {
         if (param0 != 1) {
           field_g = (double[]) null;
-          return (jg) ((Object) new q());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (jg) ((Object) new q());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     private final java.net.Socket a(int param0, java.net.Proxy param1) throws IOException {

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class Bzip2Decoder {
-    private static bv field_a;
+    private static Bzip2State field_a;
 
-    private final static int readBits(int param0, bv param1) {
+    private final static int readBits(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_J < param0) {
           param1.field_b = param1.field_b << 8 | param1.field_F[param1.field_H] & 255;
@@ -20,7 +20,7 @@ final class Bzip2Decoder {
         return var2;
     }
 
-    private final static byte e(bv param0) {
+    private final static byte e(Bzip2State param0) {
         return (byte)Bzip2Decoder.readBits(1, param0);
     }
 
@@ -73,7 +73,7 @@ final class Bzip2Decoder {
         field_a = null;
     }
 
-    private final static void emitBlock(bv param0) {
+    private final static void emitBlock(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -204,7 +204,7 @@ final class Bzip2Decoder {
         return;
     }
 
-    private final static void d(bv param0) {
+    private final static void d(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -576,7 +576,7 @@ final class Bzip2Decoder {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -600,7 +600,7 @@ final class Bzip2Decoder {
         return stackIn_2_0;
     }
 
-    private final static void buildSymbolMap(bv param0) {
+    private final static void buildSymbolMap(Bzip2State param0) {
         int var1 = 0;
         param0.field_q = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -611,11 +611,11 @@ final class Bzip2Decoder {
         }
     }
 
-    private final static byte b(bv param0) {
+    private final static byte b(Bzip2State param0) {
         return (byte)Bzip2Decoder.readBits(8, param0);
     }
 
     static {
-        field_a = new bv();
+        field_a = new Bzip2State();
     }
 }

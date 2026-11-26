@@ -246,7 +246,7 @@ abstract class jh extends UiWidget implements cj {
           if (param1 != 0) {
             field_y = (IntrusiveDeque) null;
           }
-          np.a(param0, true, 126);
+          NanoFrameTimer.a(param0, true, 126);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

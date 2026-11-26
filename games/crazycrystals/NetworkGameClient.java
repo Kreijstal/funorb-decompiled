@@ -215,7 +215,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             qe.a(param1 ^ -94, le.b((byte) -20));
           }
           if (12 == var4) {
-            vo.a(31251, qn.a((byte) -114), le.b((byte) -20));
+            vo.a(31251, Bzip2State.a((byte) -114), le.b((byte) -20));
           }
           if (var4 == 13) {
             try {

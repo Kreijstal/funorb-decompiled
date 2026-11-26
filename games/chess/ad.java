@@ -235,7 +235,7 @@ final class ad {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param0.charAt(var6);
-            if (gm.a((char) var7, (byte) -84)) {
+            if (FrameTimer.a((char) var7, (byte) -84)) {
               var8 = uj.a((char) var7, (byte) 118);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

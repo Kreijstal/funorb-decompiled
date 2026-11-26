@@ -51,14 +51,14 @@ final class d {
             var9 = mg.a("@", false, "%40", var8);
             var10 = mg.a("&", false, "%26", var9);
             var11 = mg.a("#", false, "%23", var10);
-            if (re.field_i == null) {
+            if (Bzip2State.field_i == null) {
               return;
             }
             stackIn_12_0 = f.field_b;
             stackIn_12_1 = -21377;
             stackIn_12_2 = null;
             stackIn_12_3 = null;
-            stackIn_12_4 = re.field_i.getCodeBase();
+            stackIn_12_4 = Bzip2State.field_i.getCodeBase();
             stackIn_12_5 = new StringBuilder().append("clienterror.ws?c=").append(gh.field_h).append("&u=");
             if (null == mh.field_c) {
               stackIn_13_2 = null;

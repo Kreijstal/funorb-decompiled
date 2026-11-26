@@ -48,12 +48,12 @@ final class SecondaryNodeDeque implements Iterable {
               }
               var4 = param0.getCodeBase();
               var3 = of.a(param0, var4, false).getFile();
-              sj.a(param0, new Object[]{"home", var3 + "home.ws"}, 7648, "updatelinks");
-              sj.a(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, 7648, "updatelinks");
-              sj.a(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, 7648, "updatelinks");
-              sj.a(param0, new Object[]{"options", var3 + "options.ws"}, 7648, "updatelinks");
-              sj.a(param0, new Object[]{"terms", var3 + "terms.ws"}, 7648, "updatelinks");
-              sj.a(param0, new Object[]{"privacy", var3 + "privacy.ws"}, 7648, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, new Object[]{"home", var3 + "home.ws"}, 7648, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, new Object[]{"gamelist", var3 + "togamelist.ws"}, 7648, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, new Object[]{"serverlist", var3 + "toserverlist.ws"}, 7648, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, new Object[]{"options", var3 + "options.ws"}, 7648, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, new Object[]{"terms", var3 + "terms.ws"}, 7648, "updatelinks");
+              JavaScriptBridge.callWithArguments(param0, new Object[]{"privacy", var3 + "privacy.ws"}, 7648, "updatelinks");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

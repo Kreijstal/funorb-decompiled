@@ -32,38 +32,38 @@ final class AchievementIconEntry extends IntrusiveNode {
         } else {
           if (var4 == 4) {
             var4 = param2 ? 1 : 0;
-            gd.a(dc.field_z, 0, 3, var4 != 0);
+            gd.a(Bzip2State.field_z, 0, 3, var4 != 0);
           } else {
             if (var4 == 9) {
               var4 = param2 ? 1 : 0;
-              gd.a(dc.field_z, 0, 0, var4 != 0);
+              gd.a(Bzip2State.field_z, 0, 0, var4 != 0);
             } else {
               if (var4 == 17) {
                 var4 = param2 ? 1 : 0;
-                gd.a(dc.field_z, 0, 12, var4 != 0);
+                gd.a(Bzip2State.field_z, 0, 12, var4 != 0);
                 wa.field_a = true;
               } else {
                 if (var4 == 5) {
                   var4 = param2 ? 1 : 0;
-                  gd.a(dc.field_z, 0, 4, var4 != 0);
+                  gd.a(Bzip2State.field_z, 0, 4, var4 != 0);
                 } else {
                   if (var4 == 6) {
                     var4 = param2 ? 1 : 0;
-                    gd.a(dc.field_z, 0, 5, var4 != 0);
+                    gd.a(Bzip2State.field_z, 0, 5, var4 != 0);
                   } else {
                     if (var4 == 15) {
                       var4 = param2 ? 1 : 0;
-                      gd.a(dc.field_z, 0, 8, var4 != 0);
+                      gd.a(Bzip2State.field_z, 0, 8, var4 != 0);
                     } else {
                       if (7 != var4) {
                         if (var4 == 10) {
                           var4 = g.field_Hb;
                           var5 = param2 ? 1 : 0;
-                          gd.a(dc.field_z, 0, var4, var5 != 0);
+                          gd.a(Bzip2State.field_z, 0, var4, var5 != 0);
                         } else {
                           if (3 == var4) {
                             var4 = param2 ? 1 : 0;
-                            gd.a(dc.field_z, 0, 2, var4 != 0);
+                            gd.a(Bzip2State.field_z, 0, 2, var4 != 0);
                           } else {
                             if (var4 != 13 &&
                               14 != var4) {
@@ -100,7 +100,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                         } else {
                                           if (var4 != 20) {
                                             if (var4 == 21) {
-                                              gd.a(dc.field_z, 0, 13, false);
+                                              gd.a(Bzip2State.field_z, 0, 13, false);
                                             } else {
                                               if (var4 == 22) {
                                                 if (ak.field_o[0] <= gm.field_d.field_m) {
@@ -125,7 +125,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                               stackIn_67_0 = (!ve.a(false)) ? 0 : 12;
                                               gd.a(stackIn_67_0, 0, -3, false);
                                             } else {
-                                              bf.field_f[dc.field_z].field_b = (kl) ((Object) new pk(ub.field_k.toUpperCase(), ub.field_r, uo.field_e.toUpperCase(), hj.field_X, 0));
+                                              bf.field_f[Bzip2State.field_z].field_b = (kl) ((Object) new pk(ub.field_k.toUpperCase(), ub.field_r, uo.field_e.toUpperCase(), hj.field_X, 0));
                                             }
                                           }
                                         }
@@ -153,7 +153,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                       } else {
                         IntrusiveDeque.a(20631, 0);
                         var4 = param2 ? 1 : 0;
-                        gd.a(dc.field_z, 0, 7, var4 != 0);
+                        gd.a(Bzip2State.field_z, 0, 7, var4 != 0);
                       }
                     }
                   }

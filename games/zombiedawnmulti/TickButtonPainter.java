@@ -88,7 +88,7 @@ final class TickButtonPainter implements WidgetPainter {
         if (param0 > -37) {
           TickButtonPainter.advanceToLoginRequest(74);
         }
-        PopupMenuBuilder.field_p = true;
+        Bzip2State.field_p = true;
     }
 
     final static PlayingSound playSoundEffect(byte param0, PcmSample param1) {

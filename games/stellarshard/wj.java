@@ -205,14 +205,14 @@ final class wj extends fb {
               if (0 >= mk.field_k &&
                 !ta.field_n) {
                 try {
-                  sh.a("unzap", hf.a((byte) -24), (byte) 78);
+                  JavaScriptBridge.callWithoutArguments("unzap", hf.a((byte) -24), (byte) 78);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var9_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  sh.a(new Object[]{cj.a(we.field_a, (byte) -66)}, false, "zap", hf.a((byte) -62));
+                  JavaScriptBridge.callWithArguments(new Object[]{cj.a(we.field_a, (byte) -66)}, false, "zap", hf.a((byte) -62));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var9_ref_Throwable = decompiledCaughtException;

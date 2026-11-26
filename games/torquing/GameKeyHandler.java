@@ -11,7 +11,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != ha.field_b) {
+          if (null != FrameTimer.field_b) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
               fm.a((byte) 32, (char) var2_int)) {
@@ -46,7 +46,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ha.field_b == null) {
+          if (FrameTimer.field_b == null) {
             return;
           }
           hb.field_y = -1;
@@ -75,7 +75,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (ha.field_b == null) {
+          if (FrameTimer.field_b == null) {
             return;
           }
           po.field_w = 0;
@@ -138,7 +138,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ha.field_b != null) {
+          if (FrameTimer.field_b != null) {
             po.field_w = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&

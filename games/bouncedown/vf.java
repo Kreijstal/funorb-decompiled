@@ -103,7 +103,7 @@ final class vf {
             var6 = var6 | 16;
           }
           hh.field_p.writeByte(var6, (byte) 104);
-          var7 = uj.a(true, DiskCacheWorker.b(0));
+          var7 = Bzip2State.a(true, DiskCacheWorker.b(0));
           if (var7 == null) {
             var7 = "";
           }

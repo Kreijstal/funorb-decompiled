@@ -486,7 +486,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.booleanState0071 = true;
             System.out.println("error_game_" + stringArgument2);
             try {
-              MixedSupport084.computeObject1096(booleanArgument1, "loggedout", UiComponentPart029.computeApplet1485(25144));
+              JavaScriptBridge.callWithoutArguments(booleanArgument1, "loggedout", UiComponentPart029.computeApplet1485(25144));
             } catch (java.lang.Throwable caughtParameterLocal8) {
               caughtExceptionLocal4 = caughtParameterLocal8;
               throwableLocal5 = caughtExceptionLocal4;
@@ -700,7 +700,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (frameRemainderLocal20) {
-                    MixedSupport142.integerState0883 = NodeHashTableIterator.mixedSupport059State0001.computeInteger0708(MixedSupport131.longState0051, 4);
+                    MixedSupport142.integerState0883 = NodeHashTableIterator.mixedSupport059State0001.waitAndCountTicks(MixedSupport131.longState0051, 4);
                     stackIntegerLocal4 = 0;
                   }
                   integerLocal11 = stackIntegerLocal4;

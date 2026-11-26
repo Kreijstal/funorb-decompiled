@@ -100,11 +100,11 @@ final class qb {
         return this.field_f;
     }
 
-    final static fi a(boolean param0) {
+    final static FrameTimer a(boolean param0) {
         if (!param0) {
-          return (fi) null;
+          return (FrameTimer) null;
         }
-        return (fi) ((Object) new hf());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     qb(String param0) {

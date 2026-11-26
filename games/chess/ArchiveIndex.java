@@ -306,7 +306,7 @@ final class ArchiveIndex {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_r = kh.a(0, param0.length, (byte) 124, param0);
+            this.field_r = NanoFrameTimer.a(0, param0.length, (byte) 124, param0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_r[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

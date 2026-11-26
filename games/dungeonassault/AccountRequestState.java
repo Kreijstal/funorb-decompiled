@@ -58,7 +58,7 @@ final class AccountRequestState {
           }
           if (wa.field_a) {
             DualLinkNode.field_i = new IntrusiveDeque();
-            var4 = gj.field_c;
+            var4 = FrameTimer.field_c;
             var1 = var4;
             for (var2 = 0; var2 < 8; var2++) {
               var4[var2] = 0;

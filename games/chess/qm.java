@@ -222,7 +222,7 @@ final class qm {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (kh.field_m.indexOf(var5Lifetime1) == -1) {
+              if (NanoFrameTimer.field_m.indexOf(var5Lifetime1) == -1) {
                 stackIn_45_0 = wh.field_b;
                 return stackIn_45_0;
               }

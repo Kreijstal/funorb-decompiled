@@ -241,14 +241,14 @@ abstract class ByteStorage {
               if (q.field_y <= 0 &&
                 !df.field_m) {
                 try {
-                  je.a(ob.e((byte) 127), false, "unzap");
+                  JavaScriptBridge.callWithoutArguments(ob.e((byte) 127), false, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  je.a((byte) -63, "zap", ob.e((byte) -117), new Object[]{eq.a(0, tn.field_p)});
+                  JavaScriptBridge.callWithArguments((byte) -63, "zap", ob.e((byte) -117), new Object[]{eq.a(0, tn.field_p)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

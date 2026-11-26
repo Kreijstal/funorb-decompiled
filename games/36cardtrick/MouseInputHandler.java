@@ -6,7 +6,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     static int field_e;
     static String field_c;
     static int field_f;
-    static gk field_b;
+    static FrameTimer field_b;
     static int field_d;
     static int field_a;
 
@@ -136,7 +136,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (wc.field_B != null) {
             qd.field_a = 0;
             nl.field_d = param0.getX();
-            gk.field_b = param0.getY();
+            FrameTimer.field_b = param0.getY();
             id.correctedCurrentTimeMillis(39);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kk.field_b = 2;

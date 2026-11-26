@@ -1,0 +1,64 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class FrameTimer {
+    static byte[] field_c;
+    static int field_a;
+    static long field_b;
+
+    abstract void resetTiming(int param0);
+
+    abstract int advanceTicks(long param0, int param1);
+
+    abstract long getDelayMillis(int param0);
+
+    final int waitAndCountTicks(byte param0, long param1) {
+        int var4 = 27 / ((-40 - param0) / 61);
+        long var5 = this.getDelayMillis(0);
+        if (var5 <= 0L) {
+          return this.advanceTicks(param1, -122);
+        }
+        pg.sleepMillis(var5, -114);
+        return this.advanceTicks(param1, -122);
+    }
+
+    public static void clearStaticReferences(int param0) {
+        if (param0 != 0) {
+          field_c = (byte[]) null;
+          field_c = null;
+          return;
+        }
+        field_c = null;
+    }
+
+    final static void a(int param0, boolean param1, String param2, boolean param3) {
+        try {
+          he.b((byte) -87);
+          ci.field_f.k(31410);
+          ok.field_a = new ff(ob.field_F, (String) null, lb.field_d, param3, param1);
+          l.field_d = new rf(ci.field_f, ok.field_a);
+          ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
+          int var4_int = 70 % ((param0 - 41) / 32);
+        } catch (RuntimeException runtimeException) {
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
+        try {
+          if (param2.previous != null) {
+            param2.unlink(5);
+          }
+          int var3_int = 8 % ((param1 - 51) / 40);
+          param2.next = param0;
+          param2.previous = param0.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
+        } catch (RuntimeException runtimeException) {
+          throw ch.wrapClientException((Throwable) ((Object) runtimeException), "td.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+    }
+}

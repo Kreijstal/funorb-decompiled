@@ -197,7 +197,7 @@ final class di {
             param0.length() != 0) {
             var2_int = param0.indexOf((int) (char)param1);
             if (var2_int == -1) {
-              stackIn_8_0 = ec.field_j;
+              stackIn_8_0 = NanoFrameTimer.field_j;
               return stackIn_8_0;
             }
             var3 = param0.substring(0, var2_int);

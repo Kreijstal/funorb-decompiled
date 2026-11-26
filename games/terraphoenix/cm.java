@@ -36,21 +36,21 @@ final class cm {
           cm.clearStaticReferences((byte) 60);
         }
         if (qh.field_d == -1) {
-          if (!vc.a(-127, 1)) {
+          if (!FrameTimer.a(-127, 1)) {
             return false;
           }
           qh.field_d = LevelEditor.field_j.readUnsignedByte(-16384);
           LevelEditor.field_j.position = 0;
         }
         if (qh.field_d != -2) {
-          return vc.a(-122, qh.field_d);
+          return FrameTimer.a(-122, qh.field_d);
         }
-        if (!vc.a(-104, 2)) {
+        if (!FrameTimer.a(-104, 2)) {
           return false;
         }
         qh.field_d = LevelEditor.field_j.readUnsignedShort(-25578);
         LevelEditor.field_j.position = 0;
-        return vc.a(-122, qh.field_d);
+        return FrameTimer.a(-122, qh.field_d);
     }
 
     cm(int param0) {

@@ -201,7 +201,7 @@ abstract class UiComponentPart032 extends ComponentContainer implements Callback
             }
           }
           MixedSupport083.sceneWidgetState0087.performAction1764(360, integerArgument2 ^ -2, 10, -10 + (-120 + SoftwareRaster.integerState0284 - 14), SoftwareRaster.integerState0285 - 360 >> 1);
-          MixedSupport059.sceneWidgetState0054.performAction1764(MixedSupport083.sceneWidgetState0087.integerState0896, 0, 0, 24, 0);
+          FrameTimer.sceneWidgetState0054.performAction1764(MixedSupport083.sceneWidgetState0087.integerState0896, 0, 0, 24, 0);
           MixedSupport020.sceneWidgetState0013.performAction1764(MixedSupport083.sceneWidgetState0087.integerState0896, 0, 24, MixedSupport083.sceneWidgetState0087.integerState0915 - 24, 0);
           MixedSupport020.sceneWidgetState0013.rgbSpriteArrayState0033 = RichTextLayout.computeRgbSpriteArray0390(1, -20982, 3, MixedSupport020.sceneWidgetState0013.integerState0915, 8421504, 11579568);
           RenderingSupport004.sceneWidgetState0039.performAction1764(-10 + MixedSupport020.sceneWidgetState0013.integerState0896, 0, 5, -10 + MixedSupport020.sceneWidgetState0013.integerState0915 - 24 - 2, 5);

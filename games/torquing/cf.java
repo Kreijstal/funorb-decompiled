@@ -16,7 +16,7 @@ final class cf {
         int var1_int = 0;
         int var2 = Torquing.field_u;
         int var1_intLifetime1;
-        IsaacPacketBuffer.field_q.b(30752);
+        IsaacPacketBuffer.field_q.resetTiming(30752);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
           ui.field_l[var1_int] = 0L;
         }

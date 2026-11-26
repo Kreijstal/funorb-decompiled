@@ -18,7 +18,7 @@ final class df extends wj {
             df.f((byte) -8);
           }
           SoftwareRasterizer.setClip(80, 0, 560, 480);
-          for (var1_int = 0; fg.field_a > var1_int; var1_int++) {
+          for (var1_int = 0; FrameTimer.field_a > var1_int; var1_int++) {
             if (n.field_d[var1_int][0] > 0.0f) {
               MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].c((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
             } else {

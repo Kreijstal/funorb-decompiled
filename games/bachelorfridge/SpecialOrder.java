@@ -84,7 +84,7 @@ class SpecialOrder extends CreatureOrder {
               var11 = var13;
               var6 = var11;
               if (1 == var3) {
-                Bzip2Decoder.a(var13, var5, param1, var4, 9);
+                Bzip2Decoder.decompress(var13, var5, param1, var4, 9);
               } else {
                 var7 = kca.field_b;
                 synchronized (var7) {

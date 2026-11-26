@@ -284,7 +284,7 @@ final class el {
         int var2 = Transmogrify.field_A ? 1 : 0;
         int var1_intLifetime1;
         try {
-          th.field_c.a(0);
+          th.field_c.resetTiming(0);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             kd.field_b[var1_int] = 0L;
           }

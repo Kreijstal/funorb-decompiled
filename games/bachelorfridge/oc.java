@@ -48,7 +48,7 @@ final class oc extends pu {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + km.a(f.correctedCurrentTimeMillis((byte) 73) + param2 * 1000L, -1) + "; Max-Age=" + param2;
               }
-              ac.a("document.cookie=\"" + var7Lifetime4 + "\"", param0, 118);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var7Lifetime4 + "\"", param0, 118);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -117,7 +117,7 @@ final class ag {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (lk.a((byte) 18, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments((byte) 18, "getcookies", param0));
               var5 = h.a(';', param1, var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

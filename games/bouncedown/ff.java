@@ -3,7 +3,7 @@
  */
 final class ff extends wd {
     static double field_C;
-    static sg field_D;
+    static FrameTimer field_D;
 
     ff(String param0, sk param1, boolean param2) {
         this(param0, param1);
@@ -84,7 +84,7 @@ final class ff extends wd {
         if (param2 < -77) {
           return;
         }
-        field_D = (sg) null;
+        field_D = (FrameTimer) null;
     }
 
     private ff(String param0, sk param1) {

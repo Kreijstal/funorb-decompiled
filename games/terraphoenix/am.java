@@ -28,8 +28,8 @@ final class am extends WidgetContainer implements n {
 
     final static void a(Archive param0, boolean param1, Archive param2, Archive param3, byte param4) {
         try {
-          vc.field_a = UiWidget.b("", 20);
-          vc.field_a.a(false, param4 + 87);
+          FrameTimer.field_a = UiWidget.b("", 20);
+          FrameTimer.field_a.a(false, param4 + 87);
           if (param4 != -22) {
             java.awt.Canvas var6 = (java.awt.Canvas) null;
             am.a((byte) 119, (java.awt.Canvas) null);

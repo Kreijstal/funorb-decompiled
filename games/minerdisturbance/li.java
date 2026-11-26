@@ -2677,7 +2677,7 @@ final class li implements uj {
                 }
                 var2 = e.a(90, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  ca.field_f = bh.a(var2, -125);
+                  NanoFrameTimer.field_f = bh.a(var2, -125);
                 }
                 var2 = e.a(-107, "fs_button_accept");
                 if (null != var2) {
@@ -2733,7 +2733,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-123, "fs_timeout");
                 if (null != var2) {
-                  cn.field_F = bh.a(var2, 118);
+                  Bzip2State.field_F = bh.a(var2, 118);
                 }
                 var2 = e.a(47, "fs_button_tryagain");
                 if (var2 != null) {

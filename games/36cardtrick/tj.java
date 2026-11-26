@@ -90,7 +90,7 @@ final class tj extends g implements qh {
     final void a(int param0, int param1, int param2, int param3) {
         int var5 = this.field_o + param0;
         int var6 = this.field_i + param1;
-        j.field_C.a(gk.field_e, var5 + 20, 20 + var6, this.field_h - 40, -50 + this.field_q, 16777215, param2, 1, 0, j.field_C.field_s);
+        j.field_C.a(FrameTimer.field_e, var5 + 20, 20 + var6, this.field_h - 40, -50 + this.field_q, 16777215, param2, 1, 0, j.field_C.field_s);
         super.a(param0, param1, -1, param3);
     }
 
@@ -113,12 +113,12 @@ final class tj extends g implements qh {
                 var4 = (java.applet.Applet) null;
                 tj.a(false, (java.applet.Applet) null);
               }
-              vh.a(new Object[]{"home", var3 + "home.ws"}, "updatelinks", (byte) -30, param1);
-              vh.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", (byte) 121, param1);
-              vh.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", (byte) 117, param1);
-              vh.a(new Object[]{"options", var3 + "options.ws"}, "updatelinks", (byte) 118, param1);
-              vh.a(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", (byte) -43, param1);
-              vh.a(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", (byte) 119, param1);
+              JavaScriptBridge.callWithArguments(new Object[]{"home", var3 + "home.ws"}, "updatelinks", (byte) -30, param1);
+              JavaScriptBridge.callWithArguments(new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", (byte) 121, param1);
+              JavaScriptBridge.callWithArguments(new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", (byte) 117, param1);
+              JavaScriptBridge.callWithArguments(new Object[]{"options", var3 + "options.ws"}, "updatelinks", (byte) 118, param1);
+              JavaScriptBridge.callWithArguments(new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", (byte) -43, param1);
+              JavaScriptBridge.callWithArguments(new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", (byte) 119, param1);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

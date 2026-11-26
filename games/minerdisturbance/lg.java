@@ -452,7 +452,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "noAchievements");
                 if (var2 != null) {
-                  cn.field_K = bh.a(var2, -122);
+                  Bzip2State.field_K = bh.a(var2, -122);
                 }
                 var2 = lh.b(-1, "obscured");
                 if (null != var2) {
@@ -747,7 +747,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "rankingDiver");
                 if (null != var2) {
-                  ca.field_j = bh.a(var2, -118);
+                  NanoFrameTimer.field_j = bh.a(var2, -118);
                 }
                 var2 = lh.b(-1, "rankingBreaker");
                 if (var2 != null) {
@@ -1505,7 +1505,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialPoisoned,0,0");
                 if (null != var2) {
-                  ek.field_a[0][0] = bh.a(var2, -124);
+                  FrameTimer.field_a[0][0] = bh.a(var2, -124);
                 }
                 var2 = lh.b(-1, "tutorialInWater,0,0");
                 if (var2 != null) {

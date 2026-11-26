@@ -35,7 +35,7 @@ final class ul extends gj implements nk, da {
     }
 
     private final void e(byte param0) {
-        if (o.c((byte) 39) ||
+        if (NanoFrameTimer.c((byte) 39) ||
           !(this.field_H.field_i.length() <= 0) &&
           !(0 >= this.field_J.field_i.length())) {
           pc.a(false, this.field_H.field_i, this.field_J.field_i);

@@ -7,7 +7,7 @@ final class v {
     static String field_h;
     private int field_c;
     static String field_b;
-    static gm field_e;
+    static FrameTimer field_e;
     static c field_k;
     static int field_m;
     static int field_d;
@@ -174,7 +174,7 @@ final class v {
         try {
           MidiPcmStream.field_A = kn.field_D;
           if (param0 != 31689) {
-            field_e = (gm) null;
+            field_e = (FrameTimer) null;
           }
           if (param1 != 255) {
             if (100 > param1) {

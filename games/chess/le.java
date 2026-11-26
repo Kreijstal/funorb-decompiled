@@ -155,7 +155,7 @@ final class le {
               var8Lifetime1 = stackIn_65_0;
               var4 = var4 + var3 + var8Lifetime1;
               if (!qf.field_b) {
-                if (kh.field_o) {
+                if (NanoFrameTimer.field_o) {
                   var4 = "<col=999999>" + var4 + SecondaryNodeDeque.field_e + "</col>";
                   var5 = "";
                   if (var10 != 0) {
@@ -296,7 +296,7 @@ final class le {
                 var9 = stackIn_24_0;
                 var2 = var2 + mf.field_z;
                 if (var9 != null) {
-                  var9.a(-gm.field_e + var8, var7 + (gm.field_e << 1), (fh.field_e << 1) + ug.field_a, true, var2);
+                  var9.a(-FrameTimer.field_e + var8, var7 + (FrameTimer.field_e << 1), (fh.field_e << 1) + ug.field_a, true, var2);
                 }
                 var2 = var2 + fh.field_e;
               }

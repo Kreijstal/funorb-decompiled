@@ -74,7 +74,7 @@ abstract class RendererBitmapFont {
               CharSequence var6 = (CharSequence) ((Object) tag.substring(4));
               MouseWheelInput.rendererCurrentTextColor = -16777216 & MouseWheelInput.rendererCurrentTextColor | 16777215 & np.a(var6, 4, 16);
             } else if (tag.equals("/col")) {
-              MouseWheelInput.rendererCurrentTextColor = tf.rendererDefaultTextColor & 16777215 | MouseWheelInput.rendererCurrentTextColor & -16777216;
+              MouseWheelInput.rendererCurrentTextColor = FrameTimer.rendererDefaultTextColor & 16777215 | MouseWheelInput.rendererCurrentTextColor & -16777216;
             }
             if (obfuscationGuard != -16777216) {
               int[] var5 = (int[]) null;
@@ -84,7 +84,7 @@ abstract class RendererBitmapFont {
               CharSequence var10 = (CharSequence) ((Object) tag.substring(5));
               MouseWheelInput.rendererCurrentTextColor = np.a(var10, 4, 16);
             } else if (tag.equals("/argb")) {
-              MouseWheelInput.rendererCurrentTextColor = tf.rendererDefaultTextColor;
+              MouseWheelInput.rendererCurrentTextColor = FrameTimer.rendererDefaultTextColor;
             } else if (tag.startsWith("str=")) {
               CharSequence var9 = (CharSequence) ((Object) tag.substring(4));
               rs.rendererStrikethroughColor = MouseWheelInput.rendererCurrentTextColor & -16777216 | np.a(var9, 4, 16);
@@ -109,7 +109,7 @@ abstract class RendererBitmapFont {
             } else if (tag.equals("/shad")) {
               SecondaryKeyHashTable.rendererCurrentShadowColor = em.rendererDefaultShadowColor;
             } else if (tag.equals("br")) {
-              this.resetTextStyle(em.rendererDefaultShadowColor, -1, tf.rendererDefaultTextColor);
+              this.resetTextStyle(em.rendererDefaultShadowColor, -1, FrameTimer.rendererDefaultTextColor);
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -493,7 +493,7 @@ abstract class RendererBitmapFont {
 
     private final void resetTextStyle(int shadowColor, int underlineColor, int textColor) {
         rs.rendererStrikethroughColor = -1;
-        tf.rendererDefaultTextColor = textColor;
+        FrameTimer.rendererDefaultTextColor = textColor;
         MouseWheelInput.rendererCurrentTextColor = textColor;
         OpenGlRenderSprite.rendererSpaceExpansionQ8 = 0;
         PacketBuffer.rendererUnderlineColor = underlineColor;

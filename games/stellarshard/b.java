@@ -121,7 +121,7 @@ final class b extends id {
               if (param1 != 38) {
                 b.a(58, 43);
               }
-              sh.a(-13847, "document.cookie=\"" + var7Lifetime4 + "\"", param4);
+              JavaScriptBridge.evaluate(-13847, "document.cookie=\"" + var7Lifetime4 + "\"", param4);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

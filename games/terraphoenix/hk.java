@@ -167,7 +167,7 @@ final class hk {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              cd.a(param2, param1 ^ 13161, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluate(param2, param1 ^ 13161, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

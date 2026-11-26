@@ -8,7 +8,7 @@ final class p {
     static int field_g;
     static String field_e;
     static int[] field_f;
-    static fi field_d;
+    static FrameTimer field_d;
 
     final static void a(byte param0) {
         int var1_int = 0;

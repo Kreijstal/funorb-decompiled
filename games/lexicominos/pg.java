@@ -39,7 +39,7 @@ final class pg {
               if (param1 != -28) {
                 pg.resetStaticState(2);
               }
-              var4 = (String) (oa.a(true, param0, "getcookies"));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(true, param0, "getcookies"));
               var5 = NetworkArchiveRequest.a(var4, ';', (byte) -125);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

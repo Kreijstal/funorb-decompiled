@@ -222,8 +222,8 @@ final class vi {
           var11 = 1;
           if (var9 > var8 ||
             param3.indexOf("<br>") != -1) {
-            if (null == ek.field_b) {
-              ek.field_b = new String[16];
+            if (null == FrameTimer.field_b) {
+              FrameTimer.field_b = new String[16];
             }
             if (var9 <= var8) {
               var12 = var8;
@@ -231,11 +231,11 @@ final class vi {
               var13 = var9 / var8;
               var12 = (var9 % var8 + var13 - 1) / var13 * 2 + var8;
             }
-            var11Lifetime1 = this.field_p.a(param3, new int[]{var12}, ek.field_b);
+            var11Lifetime1 = this.field_p.a(param3, new int[]{var12}, FrameTimer.field_b);
             var10 = var10 + (-1 + var11Lifetime1) * var7;
             var9 = 0;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_p.a(ek.field_b[var13Lifetime2]);
+              var14 = this.field_p.a(FrameTimer.field_b[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

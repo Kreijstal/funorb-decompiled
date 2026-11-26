@@ -48,7 +48,7 @@ final class BoundedRandomAccessFile {
           return;
         }
         try {
-          gm.field_e = param0;
+          FrameTimer.field_e = param0;
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "eg.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

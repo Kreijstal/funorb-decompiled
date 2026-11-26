@@ -435,19 +435,19 @@ final class hj {
         try {
           if (ok.a(param0)) {
             if (this.field_A <= 0 &&
-              fg.field_b <= 0) {
-              l.field_f = 0;
+              FrameTimer.field_b <= 0) {
+              Bzip2State.field_f = 0;
             } else {
-              l.field_f = 7;
+              Bzip2State.field_f = 7;
             }
           } else {
-            if (fg.field_b <= 0) {
-              l.field_f = 2;
+            if (FrameTimer.field_b <= 0) {
+              Bzip2State.field_f = 2;
             } else {
               if (0 < this.field_A) {
-                l.field_f = 6;
+                Bzip2State.field_f = 6;
               } else {
-                l.field_f = 10;
+                Bzip2State.field_f = 10;
               }
             }
           }
@@ -613,7 +613,7 @@ final class hj {
           if (0 != kc.field_d &&
             13 == this.field_jb) {
             this.a(false);
-            ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) -87);
+            ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].c((byte) -87);
             ej.field_b = 0;
             return;
           }
@@ -709,12 +709,12 @@ final class hj {
             }
             if (oa.field_H == 13) {
               if (13 != this.field_jb) {
-                l.field_f = 1;
+                Bzip2State.field_f = 1;
               } else {
                 this.a(false);
               }
-              ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) 73);
-              ProxyAuthenticationRequiredException.field_d[l.field_f].a(false, false);
+              ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].c((byte) 73);
+              ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].a(false, false);
               ej.field_b = 0;
               return;
             }
@@ -990,19 +990,19 @@ final class hj {
                     if (ok.a(false)) {
                       if (0 >= this.field_P &&
                         this.field_A <= 0) {
-                        l.field_f = 0;
+                        Bzip2State.field_f = 0;
                         bl.a(50, uh.field_e);
                       } else {
-                        l.field_f = 7;
+                        Bzip2State.field_f = 7;
                       }
                     } else {
                       if (0 >= this.field_P) {
-                        l.field_f = 2;
+                        Bzip2State.field_f = 2;
                       } else {
-                        l.field_f = 6;
+                        Bzip2State.field_f = 6;
                       }
                     }
-                    ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) -98);
+                    ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].c((byte) -98);
                     ej.field_b = 0;
                   }
                   if ((this.field_d & 15) == 0) {
@@ -1083,16 +1083,16 @@ final class hj {
                           if (this.field_d > 1050) {
                             if (!ok.a(false)) {
                               if (0 < this.field_P) {
-                                l.field_f = 6;
+                                Bzip2State.field_f = 6;
                                 this.c((byte) -109);
                               } else {
-                                l.field_f = 2;
+                                Bzip2State.field_f = 2;
                                 this.c((byte) -115);
                               }
                             } else {
-                              l.field_f = 7;
+                              Bzip2State.field_f = 7;
                             }
-                            ProxyAuthenticationRequiredException.field_d[l.field_f].c((byte) 93);
+                            ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].c((byte) 93);
                             this.field_nb = 0;
                             ej.field_b = 0;
                             this.field_d = 0;
@@ -1806,7 +1806,7 @@ final class hj {
                         }
                         f.a(64 - this.field_d, (byte) 111);
                         if (600 < this.field_d) {
-                          l.field_D[4].c(0, 0, this.field_d - 600, -700 + this.field_d);
+                          Bzip2State.field_D[4].c(0, 0, this.field_d - 600, -700 + this.field_d);
                         }
                         if (!(this.field_d <= 1000)) {
                           f.a(this.field_d - 1000, (byte) 118);
@@ -1840,9 +1840,9 @@ final class hj {
                         if (var12 > 255) {
                           var12 = 255;
                         }
-                        ma.a(l.field_D[aa.field_a], 0, 0, 640, var12, var13_int);
+                        ma.a(Bzip2State.field_D[aa.field_a], 0, 0, 640, var12, var13_int);
                       } else {
-                        l.field_D[aa.field_a].a(0, 0);
+                        Bzip2State.field_D[aa.field_a].a(0, 0);
                       }
                     }
                     if (450 < this.field_d &&

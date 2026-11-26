@@ -120,7 +120,7 @@ abstract class af implements rc {
         if (!param0) {
           return;
         }
-        vc.field_a.a(param1, -125);
+        FrameTimer.field_a.a(param1, -125);
     }
 
     abstract im e(int param0);

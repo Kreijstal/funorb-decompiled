@@ -49,7 +49,7 @@ final class ae {
           Throwable var2 = null;
           try {
             var2_int = 31 / ((param1 + 46) / 45);
-            mb.a(new Object[]{new Integer(param0)}, ll.b(105), "resizing", -27504);
+            JavaScriptBridge.callWithArguments(new Object[]{new Integer(param0)}, ll.b(105), "resizing", -27504);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

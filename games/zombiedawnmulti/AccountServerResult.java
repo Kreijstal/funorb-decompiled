@@ -96,7 +96,7 @@ final class AccountServerResult {
           var41 = var49;
           var8 = var41;
           var64 = new int[param0.field_o];
-          var62 = PopupMenuBuilder.field_J;
+          var62 = Bzip2State.field_J;
           var61 = SectorCacheStore.field_g;
           var63 = AudioServiceHelpers.field_i;
           for (var13 = 0; param0.field_o > var13; var13++) {
@@ -131,19 +131,19 @@ final class AccountServerResult {
             var15Lifetime1 = param0.field_y[var14Lifetime1];
             var16 = param0.field_L[var14Lifetime1];
             var17 = param0.field_H[var14Lifetime1];
-            if (param0.field_F[var14Lifetime1] < PopupMenuBuilder.field_J.length) {
+            if (param0.field_F[var14Lifetime1] < Bzip2State.field_J.length) {
               stackIn_27_0 = param0.field_F[var14Lifetime1];
             } else {
               stackIn_27_0 = -1;
             }
             var18 = stackIn_27_0;
-            if (param0.field_K[var14Lifetime1] >= PopupMenuBuilder.field_J.length) {
+            if (param0.field_K[var14Lifetime1] >= Bzip2State.field_J.length) {
               stackIn_30_0 = -1;
             } else {
               stackIn_30_0 = param0.field_K[var14Lifetime1];
             }
             var19 = stackIn_30_0;
-            if (PopupMenuBuilder.field_J.length > param0.field_x[var14Lifetime1]) {
+            if (Bzip2State.field_J.length > param0.field_x[var14Lifetime1]) {
               stackIn_33_0 = param0.field_x[var14Lifetime1];
             } else {
               stackIn_33_0 = -1;

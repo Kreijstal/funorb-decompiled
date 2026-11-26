@@ -89,7 +89,7 @@ final class GzipDecompressor {
               var12 = var14;
               var6 = var12;
               if (var3 == 1) {
-                j.a(var14, var5, param1, var4, 9);
+                j.decompress(var14, var5, param1, var4, 9);
               } else {
                 var7 = field_e;
                 synchronized (var7) {

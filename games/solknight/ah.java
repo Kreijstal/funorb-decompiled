@@ -193,7 +193,7 @@ final class ah {
             if (var5 > 7) {
               var5 = 7;
             }
-            td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + rj.field_b));
+            td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + FrameTimer.field_b));
             if (param1 != 7) {
               ah.b(true);
             }
@@ -255,7 +255,7 @@ final class ah {
         if (var5 > 7) {
           var5 = 7;
         }
-        td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + rj.field_b));
+        td.field_e[var4Lifetime1 + var5].a(128, -si.field_E + ci.field_sb, 119, jj.field_t, 320 + (-ArchiveSource.field_c + FrameTimer.field_b));
         if (param1 == 7) {
           return;
         }

@@ -146,7 +146,7 @@ final class nd extends lc implements rc {
         if (param0 != 0) {
           return;
         }
-        tj var5 = sg.field_a;
+        tj var5 = FrameTimer.field_a;
         if (this.field_D != null) {
           var5.a(nk.field_e, param3 + this.field_r, param1 + this.field_i, this.field_k, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_x);
         }
@@ -179,7 +179,7 @@ final class nd extends lc implements rc {
             for (var4_int = 0; var3_int > var4_int; var4_int++) {
               this.field_D[var4_int] = qa.a((CharSequence) ((Object) param1[var4_int]), true).replace(' ', ' ');
             }
-            var4 = new r(sg.field_a, 0, 1);
+            var4 = new r(FrameTimer.field_a, 0, 1);
             this.field_z = new wd[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_z[var5] = new wd(this.field_D[var5], (sk) (this));
@@ -233,7 +233,7 @@ final class nd extends lc implements rc {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (ac.a(param1, "getcookies", -31185));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", -31185));
               var4 = SecondaryNodeDequeIterator.a(-112, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

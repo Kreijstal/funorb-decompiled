@@ -1161,7 +1161,7 @@ final class vg {
         var9 = de.field_c[var8];
         if (mg.field_d) {
           if (1 == var8) {
-            var9 = re.field_m;
+            var9 = Bzip2State.field_m;
           }
           if (var8 == 7) {
             var9 = ca.field_a;

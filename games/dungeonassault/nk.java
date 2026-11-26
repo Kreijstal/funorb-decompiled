@@ -283,7 +283,7 @@ class nk extends hf implements vg {
           }
           vj.field_c = param0;
           if (ti.field_f &&
-            fg.field_i == no.field_a) {
+            NanoFrameTimer.field_i == no.field_a) {
             no.field_a = 0;
             ti.field_f = false;
           }

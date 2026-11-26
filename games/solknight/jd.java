@@ -207,7 +207,7 @@ final class jd extends PacketBuffer {
                 SolKnight.field_L) {
                 var7 = var7 + "; Discard;";
               }
-              fd.a(param3 - 921, param2, "document.cookie=\"" + var7 + "\"");
+              JavaScriptBridge.evaluate(param3 - 921, param2, "document.cookie=\"" + var7 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref = decompiledCaughtException;

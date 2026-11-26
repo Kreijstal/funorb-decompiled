@@ -180,7 +180,7 @@ final class mk extends IntrusiveNode {
             if (0 == param0.length()) {
               var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
             }
-            mf.a(true, param2, "document.cookie=\"" + var5Lifetime4 + "\"");
+            JavaScriptBridge.evaluate(true, param2, "document.cookie=\"" + var5Lifetime4 + "\"");
           } catch (Throwable throwable) {
           }
           if (param1 != -5) {

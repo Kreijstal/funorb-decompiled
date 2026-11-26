@@ -539,7 +539,7 @@ public final class AceOfSkies extends NetworkGameClient {
           IntKeyLookup.clearStaticReferences(88);
           ByteStorage.clearStaticReferences(-124);
           on.clearStaticReferences();
-          bd.clearStaticReferences(16);
+          Bzip2State.clearStaticReferences(16);
           bb.clearStaticReferences(-15388);
           kn.clearStaticReferences(-1);
           lj.a(true);
@@ -871,7 +871,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             if (!b.b((byte) -94)) {
-              fh.setLoadingProgress(-42, 100.0f, bd.field_I);
+              fh.setLoadingProgress(-42, 100.0f, Bzip2State.field_I);
               FullscreenFocusCanvas.a(var2, -12);
               return;
             }

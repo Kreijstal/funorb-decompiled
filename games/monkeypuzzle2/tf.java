@@ -36,16 +36,16 @@ final class tf {
           try {
             try {
               var4 = param1.getCodeBase();
-              var3 = uf.a(param1, (byte) 113, var4).getFile();
-              mf.a(126, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
-              mf.a(124, "updatelinks", param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
-              mf.a(124, "updatelinks", param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              mf.a(123, "updatelinks", param1, new Object[]{"options", var3 + "options.ws"});
+              var3 = NanoFrameTimer.a(param1, (byte) 113, var4).getFile();
+              JavaScriptBridge.callWithArguments(126, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callWithArguments(124, "updatelinks", param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments(124, "updatelinks", param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments(123, "updatelinks", param1, new Object[]{"options", var3 + "options.ws"});
               if (param0 >= -1) {
                 field_a = (ai[]) null;
               }
-              mf.a(123, "updatelinks", param1, new Object[]{"terms", var3 + "terms.ws"});
-              mf.a(121, "updatelinks", param1, new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments(123, "updatelinks", param1, new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callWithArguments(121, "updatelinks", param1, new Object[]{"privacy", var3 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -168,7 +168,7 @@ final class rb {
               } else {
                 var10 = this.field_c[var9];
                 if (var10 > 0) {
-                  var11 = -(var8 >> 2) + ca.field_k;
+                  var11 = -(var8 >> 2) + NanoFrameTimer.field_k;
                   var12 = -(var6 >> 2) + hf.field_t;
                   var13 = var11 * var11 + var12 * var12;
                   if (sc.field_b &&
@@ -391,7 +391,7 @@ final class rb {
               var9Lifetime2 = oc.field_f;
             }
             var10Lifetime1 = 10;
-            var11Lifetime1 = (var8Lifetime1 >> 2) - ca.field_k;
+            var11Lifetime1 = (var8Lifetime1 >> 2) - NanoFrameTimer.field_k;
             if (-var10Lifetime1 > var11Lifetime1) {
               var11Lifetime1 = -var10Lifetime1;
             }
@@ -1236,7 +1236,7 @@ final class rb {
                   }
                   if (this.field_d[var13]) {
                     if (!this.field_b[var13]) {
-                      var14 = ca.field_k - (var12 >> 2);
+                      var14 = NanoFrameTimer.field_k - (var12 >> 2);
                       var15 = -(var9Lifetime1 >> 2) + hf.field_t;
                       var16 = var14 * var14 + var15 * var15;
                       for (var17 = 0; var17 < var7.length; var17++) {
@@ -1353,7 +1353,7 @@ final class rb {
                 var12Lifetime1Lifetime1 = oc.field_f;
               }
               var13Lifetime1 = 10;
-              var14Lifetime1 = (var11Lifetime2 >> 2) - ca.field_k;
+              var14Lifetime1 = (var11Lifetime2 >> 2) - NanoFrameTimer.field_k;
               if (var14Lifetime1 < -var13Lifetime1) {
                 var14Lifetime1 = -var13Lifetime1;
               }

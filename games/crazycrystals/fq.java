@@ -848,7 +848,7 @@ final class fq extends ea implements Cloneable {
 
     final static void a(int param0, String param1) {
         try {
-          qn.field_z = param1;
+          Bzip2State.field_z = param1;
           int var2_int = -64 / ((-73 - param0) / 44);
           rc.a(-25537, 12);
         } catch (RuntimeException runtimeException) {

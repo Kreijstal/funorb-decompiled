@@ -422,7 +422,7 @@ final class SectorCacheStore {
         int var2 = Lexicominos.field_L ? 1 : 0;
         int var1_intLifetime1;
         try {
-          SecondaryNodeDeque.field_a.a((byte) 50);
+          SecondaryNodeDeque.field_a.resetTiming((byte) 50);
           if (param0 != 5) {
             SectorCacheStore.b(114);
           }

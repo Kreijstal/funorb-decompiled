@@ -335,7 +335,7 @@ final class m extends ue {
                 }
               }
             } else {
-              var4 = ke.field_a;
+              var4 = FrameTimer.field_a;
             }
             if (var5 < 0 &&
               null != lo.field_b &&

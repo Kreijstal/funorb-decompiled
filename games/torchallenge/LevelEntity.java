@@ -1239,11 +1239,11 @@ final class LevelEntity {
                       if (!(BufferedSocket.field_p.field_db > 0)) {
                         wh.a(vj.field_c, 10, -125);
                         if (var11 != 0) {
-                          ei.a((byte) 66, BufferedSocket.field_p.field_db % 3 + 11, vj.field_c);
+                          Bzip2State.a((byte) 66, BufferedSocket.field_p.field_db % 3 + 11, vj.field_c);
                         }
                       }
                     } else {
-                      ei.a((byte) 66, BufferedSocket.field_p.field_db % 3 + 11, vj.field_c);
+                      Bzip2State.a((byte) 66, BufferedSocket.field_p.field_db % 3 + 11, vj.field_c);
                     }
                     jj.field_d = false;
                     BufferedSocket.field_p.field_L = 12;
@@ -1991,7 +1991,7 @@ final class LevelEntity {
           if (stackIn_80_0 == 0 &&
             this.y >= ol.field_g.field_a &&
             this.field_db <= 0) {
-            bd.field_l = true;
+            NanoFrameTimer.field_l = true;
           }
           this.field_z = 64 * this.field_u / 256 + this.y * 64;
           var5Lifetime1 = 7 / ((-12 - param0) / 59);
@@ -3571,7 +3571,7 @@ final class LevelEntity {
           }
           var17 = 0;
           var18 = 1;
-          if (bd.field_l) {
+          if (NanoFrameTimer.field_l) {
             return;
           }
           if (param3 != null && (2 == param7 ||
@@ -6131,7 +6131,7 @@ final class LevelEntity {
               BufferedSocket.field_p.field_db = BufferedSocket.field_p.field_db - var6;
               boolean decompiledSharedTail0 = !(BufferedSocket.field_p.field_db > 0);
               if (!decompiledSharedTail0) {
-                ei.a((byte) 66, 11 + BufferedSocket.field_p.field_db % 3, vj.field_c);
+                Bzip2State.a((byte) 66, 11 + BufferedSocket.field_p.field_db % 3, vj.field_c);
                 decompiledSharedTail0 = (TorChallenge.field_F);
               }
               if ((decompiledSharedTail0) &&
@@ -9064,7 +9064,7 @@ final class LevelEntity {
             if (decompiledFrameRemainder0) {
               this.y = ba.field_i.field_a - 1;
               if (this.type == 0) {
-                bd.field_l = true;
+                NanoFrameTimer.field_l = true;
               }
               this.field_u = 1024;
               this.field_Q = 0;
@@ -9145,7 +9145,7 @@ final class LevelEntity {
               }
               if (var11 >= 0 &&
                 var11 < 14) {
-                ei.a((byte) 66, var11, var2_int);
+                Bzip2State.a((byte) 66, var11, var2_int);
               }
             }
           }
@@ -9171,7 +9171,7 @@ final class LevelEntity {
               } else {
                 PacketBuffer.field_k = this.a(ea.field_g[var10Lifetime1], false, false);
                 if (PacketBuffer.field_k) {
-                  ei.a((byte) 66, 5, var2_int);
+                  Bzip2State.a((byte) 66, 5, var2_int);
                 }
               }
               if (var7 != 0) {
@@ -10078,8 +10078,8 @@ final class LevelEntity {
             tk.field_P = false;
             ti.field_d = 0;
           }
-          if (bd.field_l) {
-            bd.field_l = false;
+          if (NanoFrameTimer.field_l) {
+            NanoFrameTimer.field_l = false;
           }
           if (tk.field_P) {
             return;
@@ -10245,7 +10245,7 @@ final class LevelEntity {
           if (this.field_G <= 0 ||
             we.field_j == 7) {
             if (we.field_j == 7) {
-              jl.field_a[fh.field_e].d();
+              FrameTimer.field_a[fh.field_e].d();
               SoftwareRasterizer.clearRaster();
               if (var6_int != 0) {
                 vd.field_d[fh.field_e].drawScaled(0, 0, var8, var7);
@@ -10255,7 +10255,7 @@ final class LevelEntity {
                 g.field_i[we.field_j][fh.field_e][oa.field_g].drawScaled(0, 0, var8, var7);
               }
               SectorCacheStore.field_f.bindAsTarget(124);
-              this.a(jl.field_a[fh.field_e], param1, param0 + param4, 89);
+              this.a(FrameTimer.field_a[fh.field_e], param1, param0 + param4, 89);
               decompiledFrameRemainder0 = (var17 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -10291,7 +10291,7 @@ final class LevelEntity {
             }
             var16Lifetime1 = 16711680;
             SoftwareRasterizer.saveClip(bf.field_l);
-            jl.field_a[fh.field_e].d();
+            FrameTimer.field_a[fh.field_e].d();
             SoftwareRasterizer.clearRaster();
             if (var6_int == 0) {
               g.field_i[we.field_j][fh.field_e][oa.field_g].drawScaled(0, 0, var8, var7);
@@ -10302,7 +10302,7 @@ final class LevelEntity {
             }
             SectorCacheStore.field_f.bindAsTarget(106);
             SoftwareRasterizer.restoreClip(bf.field_l);
-            jl.field_a[fh.field_e].a(param0 + param4, param1, var14Lifetime1, var16Lifetime1);
+            FrameTimer.field_a[fh.field_e].a(param0 + param4, param1, var14Lifetime1, var16Lifetime1);
           }
           if (var10 != 0) {
             var11Lifetime2 = 192;

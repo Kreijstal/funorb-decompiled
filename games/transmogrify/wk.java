@@ -73,7 +73,7 @@ final class wk {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (kj.a(param0, false, "getcookies"));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(param0, false, "getcookies"));
               var5 = IterableNodeHashTable.a(';', var4, 0);
               var6 = 0;
               if (param1 != -45) {

@@ -86,7 +86,7 @@ final class cl extends ee {
           }
           try {
             if (0 == we.field_k) {
-              ol.field_a = ek.field_p.requestDirectSocket(fa.field_P, -96, eb.field_n);
+              ol.field_a = ek.field_p.requestDirectSocket(fa.field_P, -96, Bzip2State.field_n);
               we.field_k = we.field_k + 1;
             }
             if (we.field_k == 1) {
@@ -503,7 +503,7 @@ final class cl extends ee {
                                             }
                                           } else {
                                             if (var4 == 17) {
-                                              kc.a(q.field_n, (pm) (this), 123, true);
+                                              kc.a(NanoFrameTimer.field_n, (pm) (this), 123, true);
                                               param1.field_yb = param1.field_yb + 1;
                                               d.field_a = d.field_a - 1;
                                               this.d(10797);

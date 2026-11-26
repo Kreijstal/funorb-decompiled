@@ -243,7 +243,7 @@ final class eb {
             }
             var2_ref_hl.e(0, 0);
             stackIn_48_0 = 40;
-            stackIn_48_1 = fk.field_a;
+            stackIn_48_1 = Bzip2State.field_a;
             if (ea.field_a.field_k != 0) {
               stackIn_49_2 = 3;
             } else {
@@ -281,7 +281,7 @@ final class eb {
             ma.field_b.e(586, var2Lifetime4);
             if (var2Lifetime4 < la.field_c &&
               ge.field_b.field_v + var2Lifetime4 > la.field_c) {
-              var3Lifetime5 = (ti.b(fk.field_a << 4, 2047) * 40 >> 16) + 40;
+              var3Lifetime5 = (ti.b(Bzip2State.field_a << 4, 2047) * 40 >> 16) + 40;
               if (0 < var3Lifetime5) {
                 if (269 - ge.field_b.field_u < pe.field_d &&
                   pe.field_d < 269) {

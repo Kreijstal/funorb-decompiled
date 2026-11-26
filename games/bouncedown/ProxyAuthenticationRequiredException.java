@@ -122,7 +122,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     }
 
     final static void a(int param0) {
-        SpriteGeometry.field_m = qj.a((byte) 67);
+        SpriteGeometry.field_m = GzipDecompressor.a((byte) 67);
         q.field_N = new pf();
         l.a(true, true, 43);
         if (param0 < 72) {

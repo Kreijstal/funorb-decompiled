@@ -213,7 +213,7 @@ abstract class aa {
                 return;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(uf.a(param1, (byte) 107, var2), "_top");
+              param1.getAppletContext().showDocument(NanoFrameTimer.a(param1, (byte) 107, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

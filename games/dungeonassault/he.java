@@ -325,7 +325,7 @@ final class he extends ip {
             hp.field_b[3].field_F = var3_ref_StringLifetime2;
             hp.field_b[3].field_G = var4Lifetime2;
           }
-          var3_ref_StringLifetime3 = gj.field_a;
+          var3_ref_StringLifetime3 = FrameTimer.field_a;
           var4Lifetime3 = fm.field_d;
           if (null != hp.field_b[4]) {
             hp.field_b[4].field_G = var4Lifetime3;
@@ -361,7 +361,7 @@ final class he extends ip {
             hp.field_b[9].field_G = var4Lifetime8;
             hp.field_b[9].field_F = var3_ref_StringLifetime8;
           }
-          var3_ref_StringLifetime9 = dc.field_H;
+          var3_ref_StringLifetime9 = Bzip2State.field_H;
           var4Lifetime9 = tb.field_h;
           if (hp.field_b[10] != null) {
             hp.field_b[10].field_F = var3_ref_StringLifetime9;
@@ -618,7 +618,7 @@ final class he extends ip {
             gh.field_i[12].field_t = var4Lifetime46;
             gh.field_i[12].field_o = var5Lifetime12;
           }
-          var3_ref_StringLifetime47 = fg.field_o;
+          var3_ref_StringLifetime47 = NanoFrameTimer.field_o;
           var4Lifetime47 = nb.field_c;
           var5Lifetime13 = NodeHashTableIterator.field_e;
           if (null != gh.field_i[13]) {
@@ -786,8 +786,8 @@ final class he extends ip {
             gh.field_i[33].field_o = var5Lifetime33;
             gh.field_i[33].field_z = var3_ref_StringLifetime67;
           }
-          var3_ref_StringLifetime68 = gj.field_b;
-          var4Lifetime68 = fg.field_f;
+          var3_ref_StringLifetime68 = FrameTimer.field_b;
+          var4Lifetime68 = NanoFrameTimer.field_f;
           var5Lifetime34 = tk.field_b;
           if (null != gh.field_i[34]) {
             gh.field_i[34].field_o = var5Lifetime34;
@@ -827,7 +827,7 @@ final class he extends ip {
           ByteStorage.field_a[3] = bj.field_J;
           ByteStorage.field_a[2] = an.field_C;
           DiskCacheWorker.field_e = new String[254];
-          for (var3 = 0; var3 < dc.field_p.length; var3++) {
+          for (var3 = 0; var3 < Bzip2State.field_p.length; var3++) {
             DiskCacheWorker.field_e[var3 + wm.field_a] = od.field_b[var3];
             DiskCacheWorker.field_e[var3 + (rj.field_l + wm.field_a)] = FullscreenFocusCanvas.field_h[var3];
           }
@@ -1043,7 +1043,7 @@ final class he extends ip {
             lg.field_u = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "menu_text");
             MouseWheelInput.field_g = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "button_frame");
             DelegatingCanvas.field_c = oh.a(AccountCreationResultPanel.field_Qb, "benefits", 11091, "arrow");
-            dc.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
+            Bzip2State.field_e = (se) ((Object) ah.a(hf.field_pb, 200, "large_font", "benefits", AccountCreationResultPanel.field_Qb));
             tg.field_l = (se) ((Object) ah.a(hf.field_pb, 200, "small_font", "benefits", AccountCreationResultPanel.field_Qb));
             var27 = SoftwareRasterizer.field_b;
             var2 = SoftwareRasterizer.field_i;
@@ -1058,11 +1058,11 @@ final class he extends ip {
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.e();
-            dc.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
+            Bzip2State.field_e.c(jk.a(new String[]{mj.field_f}, IntrusiveDeque.field_a, 30496), var6, 40, 16777215, -1);
             tg.field_l.c(jk.a(new String[]{mj.field_f}, AchievementIconEntry.field_t, 30496), var6, 60, 16777215, -1);
-            dc.field_e.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
+            Bzip2State.field_e.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, bh.field_K, 30496), var6, 110, 16777215, -1);
             tg.field_l.c(jk.a(new String[]{SecondaryNodeDeque.field_f}, jm.field_b, 30496), var6, 130, 16777215, -1);
-            dc.field_e.c(je.field_l, var6, 180, 16777215, -1);
+            Bzip2State.field_e.c(je.field_l, var6, 180, 16777215, -1);
             tg.field_l.c(cg.field_c, var6, 200, 16777215, -1);
             uc.a(1, 3, var12.field_y, var12, 0, var12.field_v, 0, false);
             gn.field_c.e();
@@ -1088,14 +1088,14 @@ final class he extends ip {
             return;
           }
           if (qc.field_z != null &&
-            dc.field_e != null) {
+            Bzip2State.field_e != null) {
             var28 = SoftwareRasterizer.field_b;
             var2Lifetime1 = SoftwareRasterizer.field_i;
             var3Lifetime1 = SoftwareRasterizer.field_c;
             SoftwareRasterizer.saveClip(rp.field_e);
             var14 = jk.a(new String[]{kl.field_c[wo.field_g]}, rn.field_e, 30496);
-            var5 = dc.field_e.b(var14, wm.field_b);
-            var6Lifetime1 = dc.field_e.a(var14, wm.field_b, dc.field_e.field_E + dc.field_e.field_H);
+            var5 = Bzip2State.field_e.b(var14, wm.field_b);
+            var6Lifetime1 = Bzip2State.field_e.a(var14, wm.field_b, Bzip2State.field_e.field_E + Bzip2State.field_e.field_H);
             var7Lifetime1 = (-var5 + wm.field_b) / 2 + lj.field_m;
             var8 = (-var6Lifetime1 + e.field_d) / 2 + cb.field_b;
             var5 += 6;
@@ -1141,7 +1141,7 @@ final class he extends ip {
             qc.field_z.a();
             var9 = new RgbSprite(qc.field_z.field_E, qc.field_z.field_G);
             var9.e();
-            dc.field_e.a(var14, lj.field_m, cb.field_b, wm.field_b, e.field_d, 16777215, -1, 1, 1, dc.field_e.field_H + dc.field_e.field_E);
+            Bzip2State.field_e.a(var14, lj.field_m, cb.field_b, wm.field_b, e.field_d, 16777215, -1, 1, 1, Bzip2State.field_e.field_H + Bzip2State.field_e.field_E);
             uc.a(1, 3, var9.field_E, var9, 0, var9.field_G, 0, false);
             qc.field_z.e();
             var9.h(0, 0);

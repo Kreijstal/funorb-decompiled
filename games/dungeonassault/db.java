@@ -35,7 +35,7 @@ final class db extends qe {
         }
         regionExit1: {
           var11 = (int[]) null;
-          if (o.a(gj.field_c, (int[]) null, var3, gm.field_d, true)) {
+          if (o.a(FrameTimer.field_c, (int[]) null, var3, gm.field_d, true)) {
             var12 = jk.a(new String[]{CombatState.a((byte) 66, gm.field_d.field_w, CrossfadingMidiPcmStream.field_u)}, DungeonAssault.field_G, 30496);
             la.field_b.a(var12, 70, 338, 270, 180, 16760960, -1, 1, 0, la.field_b.field_H + la.field_b.field_E);
             if (var10 == 0) {
@@ -80,8 +80,8 @@ final class db extends qe {
                   }
                   if (!(wm.field_a > var6)) {
                     var7 = -wm.field_a + var6;
-                    if (var7 < dc.field_p.length) {
-                      var8_intLifetime1 = dc.field_p[var7];
+                    if (var7 < Bzip2State.field_p.length) {
+                      var8_intLifetime1 = Bzip2State.field_p[var7];
                       var9 = ib.a((byte) -125, 16760960, Integer.toString(var8_intLifetime1));
                       if (var8_intLifetime1 == 1) {
                         var5 = jk.a(new String[]{var9, var4}, be.field_m, 30496);
@@ -285,7 +285,7 @@ final class db extends qe {
               hh.field_s.field_u instanceof Integer) {
               var2_int = ((Integer) (hh.field_s.field_u)).intValue();
               var7 = (int[]) null;
-              if (o.a(gj.field_c, (int[]) null, var2_int, gm.field_d, true)) {
+              if (o.a(FrameTimer.field_c, (int[]) null, var2_int, gm.field_d, true)) {
                 gm.field_d.field_w = var2_int;
                 ac.field_B.d((byte) -106, 59);
                 ac.field_B.writeByte(6, var2_int);
@@ -346,11 +346,11 @@ final class db extends qe {
         }
         var3 = DualLinkNode.field_m[param0];
         if (param0 == 10 && (PacketBuffer.field_p == 0 ||
-          dc.field_z == 0 ||
+          Bzip2State.field_z == 0 ||
           12 == PacketBuffer.field_p ||
-          dc.field_z == 12 ||
+          Bzip2State.field_z == 12 ||
           PacketBuffer.field_p == 1 ||
-          dc.field_z == 1)) {
+          Bzip2State.field_z == 1)) {
           var3 = DualLinkNode.field_m[9];
         }
         return var3;
@@ -456,7 +456,7 @@ final class db extends qe {
         while (!(decompiledNaturalLoopExit1 = (!(bl.field_n.length > var5_int)))) {
           var6_int = ok.field_z + var5_int;
           var11 = (int[]) null;
-          stackIn_5_0 = (!o.a(gj.field_c, (int[]) null, var6_int, gm.field_d, true)) ? 0 : 1;
+          stackIn_5_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_int, gm.field_d, true)) ? 0 : 1;
           var7 = stackIn_5_0;
           var17 = this.a(var3, var6_int, 32, var7 != 0);
           var3 = var3 + (3 + var17.field_x);
@@ -481,10 +481,10 @@ final class db extends qe {
           field_u = (String) null;
         }
         scanLoop1: while (true) {
-          if (dc.field_p.length > var5_int) {
+          if (Bzip2State.field_p.length > var5_int) {
             var6_intLifetime1 = var5_int + wm.field_a;
             var12 = (int[]) null;
-            stackIn_16_0 = (!o.a(gj.field_c, (int[]) null, var6_intLifetime1, gm.field_d, true)) ? 0 : 1;
+            stackIn_16_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_intLifetime1, gm.field_d, true)) ? 0 : 1;
             var7Lifetime1 = stackIn_16_0;
             var19 = this.a(var3, var6_intLifetime1, 2, var7Lifetime1 != 0);
             var3 = var3 + (var19.field_x + 3);
@@ -511,7 +511,7 @@ final class db extends qe {
           if (Raider.field_m.length > var5_intLifetime1) {
             var6_intLifetime2 = uf.field_a + var5_intLifetime1;
             var13 = (int[]) null;
-            stackIn_29_0 = (!o.a(gj.field_c, (int[]) null, var6_intLifetime2, gm.field_d, true)) ? 0 : 1;
+            stackIn_29_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_intLifetime2, gm.field_d, true)) ? 0 : 1;
             var7Lifetime2 = stackIn_29_0;
             var21 = this.a(var3, var6_intLifetime2, -117, var7Lifetime2 != 0);
             var3 = var3 + (var21.field_x + 3);
@@ -538,7 +538,7 @@ final class db extends qe {
           if (var5_intLifetime2 < ci.field_s.length) {
             var6_intLifetime3 = var5_intLifetime2 + gn.field_d;
             var14 = (int[]) null;
-            stackIn_41_0 = (!o.a(gj.field_c, (int[]) null, var6_intLifetime3, gm.field_d, true)) ? 0 : 1;
+            stackIn_41_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_intLifetime3, gm.field_d, true)) ? 0 : 1;
             var7Lifetime3 = stackIn_41_0;
             var23 = this.a(var3, var6_intLifetime3, -112, var7Lifetime3 != 0);
             var3 = var3 + (var23.field_x + 3);
@@ -565,7 +565,7 @@ final class db extends qe {
         while (!(decompiledNaturalLoopExit0 = (!(SecondaryNodeDequeIterator.field_j.length > var5_intLifetime3)))) {
           var6_intLifetime4 = cp.field_R + var5_intLifetime3;
           var15 = (int[]) null;
-          stackIn_54_0 = (!o.a(gj.field_c, (int[]) null, var6_intLifetime4, gm.field_d, true)) ? 0 : 1;
+          stackIn_54_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_intLifetime4, gm.field_d, true)) ? 0 : 1;
           var7Lifetime4 = stackIn_54_0;
           var25 = this.a(var3, var6_intLifetime4, -121, var7Lifetime4 != 0);
           var3 = var3 + (3 + var25.field_x);

@@ -167,7 +167,7 @@ final class pi {
     final static void a(int param0, int param1, int param2) {
         lc.field_r = 1;
         dm.field_a = param2;
-        da.field_B = param0;
+        Bzip2State.field_B = param0;
         if (param1 != 19741) {
           field_g = (String) null;
         }

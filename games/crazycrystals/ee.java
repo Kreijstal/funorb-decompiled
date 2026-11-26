@@ -588,8 +588,8 @@ final class ee extends lk {
                 kd.field_n.payload[var5_int] = var4_ref_mo.field_g[var5_int];
               }
               fl.field_m = ea.field_n;
-              ea.field_n = qn.field_u;
-              qn.field_u = bf.field_b;
+              ea.field_n = Bzip2State.field_u;
+              Bzip2State.field_u = bf.field_b;
               bf.field_b = var4_ref_mo.field_j;
               return true;
             }
@@ -623,8 +623,8 @@ final class ee extends lk {
             }
             if (IntrusiveDeque.field_d == 0) {
               fl.field_m = ea.field_n;
-              ea.field_n = qn.field_u;
-              qn.field_u = bf.field_b;
+              ea.field_n = Bzip2State.field_u;
+              Bzip2State.field_u = bf.field_b;
               bf.field_b = sm.field_i;
               sm.field_i = -1;
               return true;

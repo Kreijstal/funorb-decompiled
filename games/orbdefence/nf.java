@@ -20,7 +20,7 @@ abstract class nf extends DualLinkNode {
           if (param0 != 32722) {
             field_l = (String) null;
           }
-          ob.field_K = g.field_g[md.field_g];
+          ob.field_K = NanoFrameTimer.field_g[md.field_g];
           od.field_k = ByteStorage.field_b[md.field_g];
           md.field_g = 1 + md.field_g & 127;
           stackIn_8_0 = true;
@@ -94,7 +94,7 @@ abstract class nf extends DualLinkNode {
                   tj.field_e.decompress(var13, 693, var9);
                 }
               } else {
-                ac.a(var13, var5, param0, var4, 9);
+                ac.decompress(var13, var5, param0, var4, 9);
               }
               stackIn_24_0 = var6;
               return stackIn_24_0;

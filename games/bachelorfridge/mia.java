@@ -10,7 +10,7 @@ final class mia extends cia {
         int var2 = BachelorFridge.field_y;
         int var1_intLifetime1;
         try {
-          ena.field_m.a(false);
+          ena.field_m.resetTiming(false);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             SectorCacheStore.field_d[var1_int] = 0L;
           }

@@ -52,7 +52,7 @@ abstract class ByteStorage {
         try {
           var3_int = param1.position;
           var5 = (CharSequence) ((Object) param0);
-          var4 = bv.a(18019, var5);
+          var4 = Bzip2State.a(18019, var5);
           param1.writeSmart(var4.length, true);
           if (param2 != -21840) {
             stackIn_2_0 = -15;

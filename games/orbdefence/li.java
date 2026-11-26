@@ -37,8 +37,8 @@ final class li {
           var7 = OrbDefence.field_D ? 1 : 0;
           try {
             try {
-              var3 = (String) (gm.a(-31183, "getcookies", param0));
-              var4 = g.a(-79, ';', var3);
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(-31183, "getcookies", param0));
+              var4 = NanoFrameTimer.a(-79, ';', var3);
               if (!param2) {
                 li.clearStaticReferences(true);
               }

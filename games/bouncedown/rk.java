@@ -143,7 +143,7 @@ final class rk {
           AccountRequestState.field_e = param0;
           fi.field_c = param5;
           pe.field_c = param1;
-          uj.field_s = param7;
+          Bzip2State.field_s = param7;
           fk.field_d = param8;
           tb.field_p = (v) ((Object) new tb());
           hb.field_F = new DiskCacheWorker(param6);

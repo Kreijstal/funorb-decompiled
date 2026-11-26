@@ -24,20 +24,20 @@ final class v {
         var3 = StarCannon.field_A;
         try {
           while (true) {
-            if (fi.field_d >= 4000) {
+            if (FrameTimer.field_d >= 4000) {
               if (param1 != -4001) {
                 field_c = (String) null;
               }
               return false;
             }
-            if (null != FullscreenFocusCanvas.field_c[fi.field_d]) {
-              fi.field_d = fi.field_d + 1;
+            if (null != FullscreenFocusCanvas.field_c[FrameTimer.field_d]) {
+              FrameTimer.field_d = FrameTimer.field_d + 1;
               continue;
             }
             break;
           }
-          FullscreenFocusCanvas.field_c[fi.field_d] = param0;
-          fi.field_d = fi.field_d + 1;
+          FullscreenFocusCanvas.field_c[FrameTimer.field_d] = param0;
+          FrameTimer.field_d = FrameTimer.field_d + 1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

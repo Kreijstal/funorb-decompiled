@@ -65,8 +65,8 @@ final class tl {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (gm.a(-31183, "getcookies", param0));
-              var4 = g.a(param1 ^ -90, ';', var3);
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(-31183, "getcookies", param0));
+              var4 = NanoFrameTimer.a(param1 ^ -90, ';', var3);
               if (param1 != 61) {
                 return false;
               }
@@ -107,7 +107,7 @@ final class tl {
         if (param0 != 74) {
           this.a((byte) -102);
         }
-        stackIn_8_0 = (this == da.field_m) || (this == lm.field_e) || (da.field_r == this);
+        stackIn_8_0 = (this == Bzip2State.field_m) || (this == lm.field_e) || (Bzip2State.field_r == this);
         return stackIn_8_0;
     }
 

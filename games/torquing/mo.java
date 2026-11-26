@@ -247,7 +247,7 @@ final class mo extends am {
             }
           }
           while (true) {
-            if (!np.a((byte) -13)) {
+            if (!NanoFrameTimer.a((byte) -13)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }

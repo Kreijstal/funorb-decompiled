@@ -162,7 +162,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    hf.field_a = MouseWheelInput.field_h.b(s.field_k, -1);
+                    hf.field_a = MouseWheelInput.field_h.waitAndCountTicks(NanoFrameTimer.field_k, -1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -334,7 +334,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_b = true;
             System.out.println("error_game_" + param1);
             try {
-              hi.a(le.b((byte) -20), "loggedout", 28);
+              JavaScriptBridge.callWithoutArguments(le.b((byte) -20), "loggedout", 28);
               if (param0 != 0) {
                 this.field_b = false;
               }

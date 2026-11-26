@@ -742,10 +742,10 @@ abstract class GameShell extends GameApplet {
         }
         if (13 == gl.field_I) {
           var4Lifetime2 = 1;
-          if (wj.field_b != null) {
-            stackIn_135_0 = (!wj.field_b.a(true)) ? 0 : 1;
+          if (FrameTimer.field_b != null) {
+            stackIn_135_0 = (!FrameTimer.field_b.a(true)) ? 0 : 1;
             var4Lifetime2 = stackIn_135_0;
-            ud.a(128, wj.field_b.field_i, wj.field_b.field_a);
+            ud.a(128, FrameTimer.field_b.field_i, FrameTimer.field_b.field_a);
           }
           if (var4Lifetime2 != 0) {
             gl.field_I = 20;
@@ -778,7 +778,7 @@ abstract class GameShell extends GameApplet {
           this.field_u = 81;
         }
         uj.a(this.field_t, this.field_w, this.field_p, param3, 5000, this.field_o, this.field_u, 5000, true, rg.field_c, param0, hl.field_F, this.field_q, this.field_r);
-        wj.a(this.field_u, rg.field_c, hl.field_F, this.field_q, this.field_t, this.field_o, param3, 101, this.field_p);
+        FrameTimer.a(this.field_u, rg.field_c, hl.field_F, this.field_q, this.field_t, this.field_o, param3, 101, this.field_p);
         kf.a(false);
         rd.field_l = lg.createMouseWheelInput(124);
         DelegatingCanvas.a(true, ki.field_f);

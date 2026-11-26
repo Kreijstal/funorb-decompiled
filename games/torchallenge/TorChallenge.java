@@ -184,13 +184,13 @@ public final class TorChallenge extends GameClientBase {
             pl.field_f[1] = qk.a("", "level_start_boss_1", ic.field_C, param0 - 1);
             pl.field_f[2] = qk.a("", "level_start_boss_2", ic.field_C, 0);
             pl.field_f[3] = qk.a("", "level_start_boss_3", ic.field_C, 0);
-            ei.field_w = new Sprite[4];
-            ei.field_w[0] = null;
+            Bzip2State.field_w = new Sprite[4];
+            Bzip2State.field_w[0] = null;
             lb.field_t = DiskCacheWorker.a(ic.field_C, "", (byte) -128, "game_over_scene_bg");
             hl.a(lb.field_t, false, 6831816);
-            ei.field_w[1] = qk.a("", "game_over_scene_henhui", ic.field_C, 0);
-            ei.field_w[2] = qk.a("", "game_over_scene_ziren", ic.field_C, param0 - 1);
-            ei.field_w[3] = qk.a("", "game_over_scene_damen", ic.field_C, 0);
+            Bzip2State.field_w[1] = qk.a("", "game_over_scene_henhui", ic.field_C, 0);
+            Bzip2State.field_w[2] = qk.a("", "game_over_scene_ziren", ic.field_C, param0 - 1);
+            Bzip2State.field_w[3] = qk.a("", "game_over_scene_damen", ic.field_C, 0);
             pf.field_a = new Sprite[5];
             pf.field_a[0] = null;
             mb.field_b = qc.field_c.b();
@@ -1876,7 +1876,7 @@ public final class TorChallenge extends GameClientBase {
           wh.resetStaticState(false);
           ve.clearStaticReferences(-126);
           gi.clearStaticReferences(10);
-          jl.clearStaticReferences(118);
+          FrameTimer.clearStaticReferences(118);
           RasterBuffer.clearStaticReferences(-15721);
           r.clearStaticReferences((byte) 96);
           FullscreenFocusCanvas.clearStaticReferences(0);
@@ -1951,7 +1951,7 @@ public final class TorChallenge extends GameClientBase {
           ByteStorage.a(8727);
           wc.clearStaticReferences((byte) -48);
           nl.clearStaticReferences();
-          ei.clearStaticReferences(-113);
+          Bzip2State.clearStaticReferences(-113);
           ed.resetStaticState(91);
           PcmOutputWorker.b(6);
           fl.clearStaticReferences(-25984);
@@ -2007,7 +2007,7 @@ public final class TorChallenge extends GameClientBase {
           ie.a((byte) 33);
           SocketConnector.clearStaticReferences(-26425);
           ProxyAuthenticationRequiredException.clearStaticReferences(-38);
-          bd.clearStaticReferences((byte) 126);
+          NanoFrameTimer.clearStaticReferences((byte) 126);
           ImageProducerRasterBuffer.d(15752);
           ja.clearStaticReferences(75);
           s.clearStaticReferences(2);

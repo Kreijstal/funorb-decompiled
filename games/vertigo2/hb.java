@@ -66,7 +66,7 @@ final class hb extends bg {
           return;
         }
         fh.field_t = null;
-        ug.field_c = null;
+        FrameTimer.field_c = null;
     }
 
     final void a(boolean param0, wo param1) {

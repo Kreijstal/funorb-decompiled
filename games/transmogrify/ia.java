@@ -180,7 +180,7 @@ final class ia extends IntrusiveNode {
             field_l = (String) null;
           }
           if ((n.submittedWordCount != 0 ||
-            !(6 > re.field_A)) &&
+            !(6 > Bzip2State.field_A)) &&
             (!(n.submittedWordCount >= 2) ||
             !mg.field_d &&
             !(n.submittedWordCount >= 10))) {
@@ -230,7 +230,7 @@ final class ia extends IntrusiveNode {
               wd.a(17099, false, bd.field_u[5]);
             }
           }
-          if (re.field_A < 6) {
+          if (Bzip2State.field_A < 6) {
             boolean decompiledFrameRemainder1 = true;
             if (0 <= jl.field_j) {
               if (-1 + n.submittedWordCount != jl.field_j &&
@@ -248,7 +248,7 @@ final class ia extends IntrusiveNode {
                 }
               }
             }
-            if (re.field_A == 0) {
+            if (Bzip2State.field_A == 0) {
               var4 = 1;
               var23 = si.newRack.tiles;
               var6 = 0;
@@ -274,10 +274,10 @@ final class ia extends IntrusiveNode {
               if (var4 == 0) {
                 return;
               }
-              re.field_A = 1;
+              Bzip2State.field_A = 1;
               return;
             }
-            if (re.field_A == 1) {
+            if (Bzip2State.field_A == 1) {
               var4Lifetime2 = 1;
               var14 = wk.carryoverRack.tiles;
               var6Lifetime2 = 0;
@@ -312,10 +312,10 @@ final class ia extends IntrusiveNode {
               if (var4Lifetime2 == 0) {
                 return;
               }
-              re.field_A = 2;
+              Bzip2State.field_A = 2;
               return;
             }
-            if (2 == re.field_A) {
+            if (2 == Bzip2State.field_A) {
               if (n.submittedWordCount != 10 && (!mg.field_d ||
                 2 != n.submittedWordCount)) {
                 var4Lifetime3 = 1;
@@ -352,7 +352,7 @@ final class ia extends IntrusiveNode {
                 if (var4Lifetime3 == 0) {
                   return;
                 }
-                re.field_A = 3;
+                Bzip2State.field_A = 3;
                 return;
               }
               var4Lifetime3 = 0;
@@ -395,8 +395,8 @@ final class ia extends IntrusiveNode {
               }
               return;
             }
-            if (3 != re.field_A) {
-              if (4 == re.field_A) {
+            if (3 != Bzip2State.field_A) {
+              if (4 == Bzip2State.field_A) {
                 var4Lifetime4 = 1;
                 var21 = si.newRack.tiles;
                 var6Lifetime4 = 0;
@@ -431,17 +431,17 @@ final class ia extends IntrusiveNode {
                 if (var4Lifetime4 == 0) {
                   return;
                 }
-                re.field_A = 5;
+                Bzip2State.field_A = 5;
                 return;
               }
-              if (re.field_A == 5) {
+              if (Bzip2State.field_A == 5) {
                 var13 = wk.carryoverRack;
                 var4_ref_j = var13;
                 wk.carryoverRack = od.submissionRack;
                 wk.carryoverRack.originX = 34;
                 od.submissionRack = var13;
                 wk.carryoverRack.originY = 190;
-                re.field_A = 6;
+                Bzip2State.field_A = 6;
                 od.submissionRack.originY = 114;
                 if (jl.field_j == 3) {
                   jl.field_j = jl.field_j + 1;
@@ -492,10 +492,10 @@ final class ia extends IntrusiveNode {
                 }
                 wk.carryoverRack.originY = 114;
                 wk.carryoverRack.originX = 34;
-                re.field_A = 4;
+                Bzip2State.field_A = 4;
                 return;
               }
-              re.field_A = 6;
+              Bzip2State.field_A = 6;
             }
             return;
           }

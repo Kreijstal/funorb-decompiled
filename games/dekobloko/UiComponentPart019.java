@@ -360,7 +360,7 @@ final class UiComponentPart019 extends UiComponentPart020 implements CallbackCon
           NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport039.sceneWidgetState0030, -16834);
           NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport087.sceneWidgetState0091, integerArgument5 - 7940);
           NetworkSupport008.sceneWidgetState0093.performAction1768(MixedSupport121.sceneWidgetState0117, -16834);
-          MixedSupport059.sceneWidgetState0054 = new SceneWidget(0L, MixedSupport121.sceneWidgetState0119, RichTextLayout.stringState0133.toUpperCase());
+          FrameTimer.sceneWidgetState0054 = new SceneWidget(0L, MixedSupport121.sceneWidgetState0119, RichTextLayout.stringState0133.toUpperCase());
           GameSession.sceneWidgetState0099 = new SceneWidget(0L, MixedSupport072.sceneWidgetState0072, MixedSupport067.stringState0299.toUpperCase());
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal52) {

@@ -86,7 +86,7 @@ final class hi {
           this.field_c = null;
         }
         this.field_g = pm.field_r;
-        this.field_a = np.field_m;
+        this.field_a = NanoFrameTimer.field_m;
     }
 
     static {

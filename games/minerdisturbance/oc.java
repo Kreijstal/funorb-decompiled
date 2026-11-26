@@ -187,7 +187,7 @@ final class oc extends hn {
                 0 == qd.field_R) {
                 try {
                   qd.field_R = 25;
-                  cn.a(bm.c(-125), "http://itunes.apple.com/us/app/miner-disturbance/id374275550?mt=8", 11050, true);
+                  Bzip2State.a(bm.c(-125), "http://itunes.apple.com/us/app/miner-disturbance/id374275550?mt=8", 11050, true);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var5 = (Exception) (Object) decompiledCaughtException;

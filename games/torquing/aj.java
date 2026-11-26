@@ -201,9 +201,9 @@ final class aj extends jh {
             if (255 < var6) {
               var6 = 255;
             }
-            np.a(var5_int, -32596, var6);
+            NanoFrameTimer.a(var5_int, -32596, var6);
           } else {
-            np.a(-1, param0 - 32540, 0);
+            NanoFrameTimer.a(-1, param0 - 32540, 0);
           }
           if (param0 == -56) {
             return;

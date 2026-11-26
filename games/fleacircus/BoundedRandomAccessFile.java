@@ -55,7 +55,7 @@ final class BoundedRandomAccessFile {
             var3_int = 1;
             if (8 == param1) {
               if (!MouseWheelInput.field_d) {
-                param0 = o.field_g;
+                param0 = NanoFrameTimer.field_g;
               } else {
                 param0 = me.field_c;
               }

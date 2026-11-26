@@ -186,7 +186,7 @@ final class fg extends kj implements cc, sg {
           var12 = dupTemp$0;
           this.a(0, dupTemp$0);
           this.field_i = this.field_i + (5 + ((UiComponent) ((Object) var12)).field_l);
-          dupTemp$1 = new bg(10, this.field_i, this.field_p - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, bd.field_n);
+          dupTemp$1 = new bg(10, this.field_i, this.field_p - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, NanoFrameTimer.field_n);
           var13 = dupTemp$1;
           this.a(0, dupTemp$1);
           this.field_i = this.field_i + (5 + ((UiComponent) ((Object) var13)).field_l);

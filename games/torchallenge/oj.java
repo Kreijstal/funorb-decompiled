@@ -68,7 +68,7 @@ final class oj {
                 }
                 var2 = dl.a("error_js5crc", false);
                 if (null != var2) {
-                  ei.field_y = re.a(18990, var2);
+                  Bzip2State.field_y = re.a(18990, var2);
                 }
                 var2 = dl.a("error_js5io", false);
                 if (var2 != null) {
@@ -124,7 +124,7 @@ final class oj {
                 }
                 var2 = dl.a("ticketing_gotowebsite", false);
                 if (var2 != null) {
-                  bd.field_j = re.a(18990, var2);
+                  NanoFrameTimer.field_j = re.a(18990, var2);
                 }
                 var2 = dl.a("ticketing_waitingformessages", false);
                 if (null != var2) {
@@ -1417,7 +1417,7 @@ final class oj {
                 }
                 var2 = dl.a("create_password", false);
                 if (var2 != null) {
-                  bd.field_n = re.a(18990, var2);
+                  NanoFrameTimer.field_n = re.a(18990, var2);
                 }
                 var2 = dl.a("create_password_confirm", false);
                 if (null != var2) {
@@ -2039,7 +2039,7 @@ final class oj {
                 }
                 var2 = dl.a("ok", false);
                 if (var2 != null) {
-                  jl.field_g = re.a(18990, var2);
+                  FrameTimer.field_g = re.a(18990, var2);
                 }
                 var2 = dl.a("on", false);
                 if (null != var2) {
@@ -2739,7 +2739,7 @@ final class oj {
                 }
                 var2 = dl.a("mb_full_access_2", false);
                 if (var2 != null) {
-                  jl.field_d = re.a(18990, var2);
+                  FrameTimer.field_d = re.a(18990, var2);
                 }
                 var2 = dl.a("mb_achievement_count_1", false);
                 if (var2 != null) {
@@ -3097,7 +3097,7 @@ final class oj {
           }
           var6 = param0.getParameter("currency");
           if (var6 != null &&
-            ei.a((byte) -117, (CharSequence) ((Object) var6))) {
+            Bzip2State.a((byte) -117, (CharSequence) ((Object) var6))) {
             di.field_A = qh.a((CharSequence) ((Object) var6), (byte) -102);
             if (var8 != 0) {
               di.field_A = 2;

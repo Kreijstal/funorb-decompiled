@@ -20,16 +20,16 @@ final class q extends lc implements rf, rc {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (qj.field_c == null) {
+        if (GzipDecompressor.field_c == null) {
           if (param0 == 8927) {
             return;
           }
           field_F = (RgbSprite) null;
           return;
         }
-        var1 = qj.field_c;
+        var1 = GzipDecompressor.field_c;
         synchronized (var1) {
-          qj.field_c = null;
+          GzipDecompressor.field_c = null;
         }
         if (param0 != 8927) {
           field_F = (RgbSprite) null;
@@ -173,7 +173,7 @@ final class q extends lc implements rf, rc {
     private final void e(byte param0) {
         if (this.k(7714)) {
           int var2 = 75 / ((param0 + 14) / 47);
-          el.a((byte) -95, this.field_E.field_h);
+          NanoFrameTimer.a((byte) -95, this.field_E.field_h);
           return;
         }
     }
@@ -181,7 +181,7 @@ final class q extends lc implements rf, rc {
     public q() {
         super(0, 0, 496, 0, (fc) null);
         this.field_E = new ti("", (sk) null, 12);
-        jd var1 = new jd(qj.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, sg.field_a.field_s, -1, 2147483647, true);
+        jd var1 = new jd(GzipDecompressor.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
         lk var2 = new lk(SectorCacheStore.field_d, var1, (sk) null);
         this.field_z = new wd(ClientException.field_b, (sk) null);
         this.field_D = new wd(qa.field_g, (sk) null);
@@ -259,7 +259,7 @@ final class q extends lc implements rf, rc {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new hb(20, param4, 120 + param3, 25, param0, false, 120, 3, sg.field_a, 16777215, param1);
+          var10 = new hb(20, param4, 120 + param3, 25, param0, false, 120, 3, FrameTimer.field_a, 16777215, param1);
           this.b(var10, true);
           var9 = new s(((wc) ((Object) param0)).a(true), param6, 126, param4 + var10.field_m, param3 + 25, param5);
           var9.field_n = (sk) (this);
@@ -301,7 +301,7 @@ final class q extends lc implements rf, rc {
         Throwable var2 = null;
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
-        var1 = qj.field_c;
+        var1 = GzipDecompressor.field_c;
         synchronized (var1) {
           if (ec.field_bb == oh.field_a) {
             return false;

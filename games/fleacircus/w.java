@@ -148,7 +148,7 @@ abstract class w {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (eb.a("getcookies", param1, param0 - 250));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param1, param0 - 250));
               var5 = m.a(';', 122, var4);
               for (var6 = param0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

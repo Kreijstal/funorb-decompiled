@@ -109,7 +109,7 @@ final class hf {
               var2 = new PacketBuffer(13);
               AppletShell.a(pe.field_c, 6, AccountRequestState.field_e, var2, fi.field_c);
               var2.writeByte(15, (byte) 98);
-              var2.writeInt(uj.field_s, (byte) 40);
+              var2.writeInt(Bzip2State.field_s, (byte) 40);
               AccountRequestState.field_a.queueWrite(13, var2.payload, 0, 0);
               ih.field_X = ih.field_X + 1;
               GameClient.field_B = 30000L + fa.correctedCurrentTimeMillis(76);

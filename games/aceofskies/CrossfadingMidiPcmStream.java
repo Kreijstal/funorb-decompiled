@@ -256,7 +256,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + bt.a(false, 1000L * param2 + kh.correctedCurrentTimeMillis(-83)) + "; Max-Age=" + param2;
               }
-              JavaScriptBridge.a(param3, -7012, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluate(param3, -7012, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var6 = decompiledCaughtException;

@@ -62,9 +62,9 @@ class IntrusiveNode {
           pm.a(param3, "commonui", "dropdown", (byte) 112);
           var6 = ql.a("commonui", (byte) 90, "screen_options", param3);
           qm.field_B = new bm[4];
-          jg.field_d = new bm[4];
+          FrameTimer.field_d = new bm[4];
           qd.field_b = new bm[4];
-          var7 = new bm[][]{qd.field_b, qm.field_B, jg.field_d};
+          var7 = new bm[][]{qd.field_b, qm.field_B, FrameTimer.field_d};
           var19 = new int[4][];
           var17 = var19;
           var8 = var17;

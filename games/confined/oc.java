@@ -154,7 +154,7 @@ final class oc {
         }
         this.field_f = ej.field_d;
         this.field_g = im.field_c;
-        this.field_c = q.field_j;
+        this.field_c = NanoFrameTimer.field_j;
         this.field_a = cc.field_m;
         this.field_d = ha.field_e;
         this.field_k = AccountRequestState.field_h;

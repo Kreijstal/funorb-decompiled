@@ -275,7 +275,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null != this.field_v.field_e &&
                 this.field_v.field_e[param0] != null) {
                 var27 = this.field_v.field_e[param0];
-                var28 = np.a(0, var5, var18.length - 2, -70);
+                var28 = NanoFrameTimer.a(0, var5, var18.length - 2, -70);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (~var27[var9] != ~var28[var9]) {
                     throw new RuntimeException();
@@ -325,7 +325,7 @@ final class CachedArchiveSource extends ArchiveSource {
             if (this.field_v.field_e != null &&
               this.field_v.field_e[param0] != null) {
               var29 = this.field_v.field_e[param0];
-              var30 = np.a(0, var5, -2 + var18.length, -107);
+              var30 = NanoFrameTimer.a(0, var5, -2 + var18.length, -107);
               var11 = 0;
               var9 = var11;
               while (64 > var11) {

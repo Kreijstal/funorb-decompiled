@@ -124,7 +124,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               } else {
                 var5Lifetime6 = var8 + "; Expires=" + hc.a(je.correctedCurrentTimeMillis(1) + 94608000000L, param2 - 44825) + "; Max-Age=" + 94608000L;
               }
-              fd.a(32, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluate(32, param0, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

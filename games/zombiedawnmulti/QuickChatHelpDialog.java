@@ -50,8 +50,8 @@ final class QuickChatHelpDialog extends UiComponent {
             var4 = AudioPumpThread.normalizePlayerName(param2, false);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!PopupMenuBuilder.isNameSeparator((byte) -104, var4.charAt(0)) &&
-                !PopupMenuBuilder.isNameSeparator((byte) -119, var4.charAt(-1 + var4.length()))) {
+              if (!Bzip2State.isNameSeparator((byte) -104, var4.charAt(0)) &&
+                !Bzip2State.isNameSeparator((byte) -119, var4.charAt(-1 + var4.length()))) {
                 var5 = 0;
                 if (param1 >= -11) {
                   stackIn_22_0 = (String) null;
@@ -59,7 +59,7 @@ final class QuickChatHelpDialog extends UiComponent {
                 }
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (PopupMenuBuilder.isNameSeparator((byte) 94, (char) var7)) {
+                  if (Bzip2State.isNameSeparator((byte) 94, (char) var7)) {
                     var5++;
                   } else {
                     var5 = 0;

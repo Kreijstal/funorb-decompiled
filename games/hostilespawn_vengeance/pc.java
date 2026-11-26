@@ -2899,7 +2899,7 @@ final class pc {
                 HostileSpawn.field_I) {
                 var7 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 1000L * param3 + hn.correctedCurrentTimeMillis((byte) 80)) + "; Max-Age=" + param3;
               }
-              a.a(param4, 17467, "document.cookie=\"" + var7 + "\"");
+              JavaScriptBridge.evaluate(param4, 17467, "document.cookie=\"" + var7 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6_ref = decompiledCaughtException;

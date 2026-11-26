@@ -1120,7 +1120,7 @@ final class bi {
         try {
           if (!jb.a(110) &&
             !this.field_J) {
-            np.a(ResourceArchive.field_k[this.field_q], false, 124);
+            NanoFrameTimer.a(ResourceArchive.field_k[this.field_q], false, 124);
           }
           this.field_j = this.field_j + 1;
           this.field_F = this.field_F - this.field_M;
@@ -1581,7 +1581,7 @@ final class bi {
           }
           if (jb.field_d == 10 &&
             !ResourceArchive.field_k[10].isLinked(17)) {
-            np.a(ResourceArchive.field_k[this.field_q], false, 127);
+            NanoFrameTimer.a(ResourceArchive.field_k[this.field_q], false, 127);
             return;
           }
           return;

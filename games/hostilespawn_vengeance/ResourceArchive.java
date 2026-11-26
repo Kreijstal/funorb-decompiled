@@ -223,7 +223,7 @@ final class ResourceArchive {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + DualLinkNode.a((byte) -41, 94608000000L + hn.correctedCurrentTimeMillis((byte) 80)) + "; Max-Age=" + 94608000L;
               }
-              a.a(param1, 17467, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluate(param1, 17467, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
             e.a(23148, param1);

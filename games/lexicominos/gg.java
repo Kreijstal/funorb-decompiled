@@ -52,7 +52,7 @@ final class gg {
               if (0 == param2.length()) {
                 var5Lifetime4 = var5Lifetime4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              oa.a("document.cookie=\"" + var5Lifetime4 + "\"", param1, -30196);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime4 + "\"", param1, -30196);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;

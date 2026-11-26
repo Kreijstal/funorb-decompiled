@@ -76,7 +76,7 @@ final class AccountCreationResultPanel extends ha implements ql {
                 this.c((byte) 46, var5);
                 return;
               }
-              var5.a((byte) -105, 9, uf.field_k);
+              var5.a((byte) -105, 9, NanoFrameTimer.field_k);
             } else {
               var5.a((byte) 115, 7, GameApplet.field_m);
             }
@@ -209,7 +209,7 @@ final class AccountCreationResultPanel extends ha implements ql {
           do {
             var4 = param2.nextInt();
           } while (var4 >= var3_int);
-          stackIn_13_0 = uf.a(-122, param1, var4);
+          stackIn_13_0 = NanoFrameTimer.a(-122, param1, var4);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

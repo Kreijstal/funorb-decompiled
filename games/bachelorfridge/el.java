@@ -112,7 +112,7 @@ final class el extends aba {
             return stackIn_2_0;
           }
           var3_int = 87 % ((param0 + 8) / 45);
-          stackIn_4_0 = bv.field_j;
+          stackIn_4_0 = Bzip2State.field_j;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

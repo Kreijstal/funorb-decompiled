@@ -207,7 +207,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    DiskCacheWorker.field_f = ena.field_m.a((byte) 109, fe.field_h);
+                    DiskCacheWorker.field_f = ena.field_m.waitAndCountTicks((byte) 109, fe.field_h);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
@@ -377,7 +377,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             System.out.println("error_game_" + param0);
             try {
-              ac.a(nia.d(param1 ^ 31800), "loggedout", (byte) 64);
+              JavaScriptBridge.callWithoutArguments(nia.d(param1 ^ 31800), "loggedout", (byte) 64);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

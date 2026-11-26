@@ -42,7 +42,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           var7 = HostileSpawn.field_I ? 1 : 0;
           try {
             try {
-              var3 = (String) (a.a("getcookies", param0, -120));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, -120));
               var4 = cj.a(var3, -84, ';');
               for (var5 = param2; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

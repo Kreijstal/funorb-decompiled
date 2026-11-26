@@ -3,7 +3,7 @@
  */
 final class kh extends dc {
     static PcmSample field_fb;
-    static jg field_gb;
+    static FrameTimer field_gb;
     static String field_W;
 
     final boolean a(int param0, boolean param1, pm param2) {

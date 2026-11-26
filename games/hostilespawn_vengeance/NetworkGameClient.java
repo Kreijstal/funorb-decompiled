@@ -86,7 +86,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           h.field_b = ti.createMouseWheelInput((byte) -55);
           ea.a(GameAppletShell.field_h, 0);
           PcmResampler.field_i = param6;
-          ck.field_e = param4;
+          Bzip2State.field_e = param4;
           tb.field_P = param7;
           ll.field_d = param2;
           uh.field_k = param0;
@@ -310,7 +310,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (rj.field_H != -1 &&
               rj.field_H != 0) {
               rj.field_H = -1;
-              lg.c(true);
+              NanoFrameTimer.c(true);
             }
             if (param0) {
               i.field_d = false;
@@ -640,7 +640,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (rj.field_H != -1 &&
             rj.field_H != 0) {
             rj.field_H = -1;
-            lg.c(true);
+            NanoFrameTimer.c(true);
           }
         }
         if (rj.field_H == 0 &&
@@ -655,7 +655,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (nl.field_c != 0) {
             GameCanvas.field_d = qm.b(1, tb.field_P);
           }
-          im.field_c = ByteStorage.a(param1 ^ 9811, ck.field_e, true, false, 1);
+          im.field_c = ByteStorage.a(param1 ^ 9811, Bzip2State.field_e, true, false, 1);
           mb.field_m = ByteStorage.a(96, uh.field_k, true, false, 1);
           ll.field_b = ByteStorage.a(114, PcmResampler.field_i, true, false, 1);
           wd.field_a = im.field_c;

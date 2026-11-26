@@ -56,7 +56,7 @@ final class oa extends jk {
             }
             try {
               var8 = "tuhstatbut";
-              var3 = (String) (mf.a(-26159, "getcookies", param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(-26159, "getcookies", param1));
               var4 = ma.a(126, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

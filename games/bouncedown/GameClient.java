@@ -579,11 +579,11 @@ abstract class GameClient extends AppletShell {
           }
           if (var4 == 13) {
             try {
-              if (uj.field_v == null) {
-                uj.field_v = new ha(ck.field_e, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+              if (Bzip2State.field_v == null) {
+                Bzip2State.field_v = new ha(ck.field_e, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (uj.field_v.a((byte) -53)) {
-                var12 = uj.field_v.a(11951);
+              if (Bzip2State.field_v.a((byte) -53)) {
+                var12 = Bzip2State.field_v.a(11951);
                 if (var12 != null) {
                   var7 = lh.a(0, -3789, var12.position, var12.payload);
                   MidiPcmStream.a((byte) 5, var7);
@@ -591,7 +591,7 @@ abstract class GameClient extends AppletShell {
                   var9 = (String) null;
                   MidiPcmStream.a((byte) -125, (String) null);
                 }
-                uj.field_v = null;
+                Bzip2State.field_v = null;
               }
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -599,7 +599,7 @@ abstract class GameClient extends AppletShell {
               ti.a((Throwable) ((Object) var5), (byte) 100, "S1");
               var10 = (String) null;
               MidiPcmStream.a((byte) -128, (String) null);
-              uj.field_v = null;
+              Bzip2State.field_v = null;
             }
           }
           if (var4 == 15) {

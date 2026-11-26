@@ -6,11 +6,11 @@ final class fd {
     static String field_a;
     int field_c;
 
-    final static gj b(byte param0) {
+    final static FrameTimer b(byte param0) {
         if (param0 != 108) {
-          return (gj) null;
+          return (FrameTimer) null;
         }
-        return (gj) ((Object) new fg());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     public final String toString() {

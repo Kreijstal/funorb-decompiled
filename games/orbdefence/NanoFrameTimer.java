@@ -1,0 +1,230 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NanoFrameTimer extends FrameTimer {
+    private int field_f;
+    private long field_j;
+    private int field_h;
+    private long field_i;
+    static int[] field_g;
+    private long field_k;
+    private long[] field_e;
+
+    final void resetTiming(int param0) {
+        if (this.field_i < this.field_j) {
+          this.field_i = this.field_i + (-this.field_i + this.field_j);
+        }
+        this.field_k = (long)param0;
+    }
+
+    public static void clearDeclaredStaticReferences(byte param0) {
+        field_g = null;
+        int var1 = 31 / ((48 - param0) / 47);
+    }
+
+    final int advanceTicks(int param0, long param1) {
+        int var4;
+        int var5;
+        var5 = OrbDefence.field_D ? 1 : 0;
+        if (param0 != -21342) {
+          this.field_h = 48;
+        }
+        if (this.field_j > this.field_i) {
+          this.field_k = this.field_k + (this.field_j - this.field_i);
+          this.field_i = this.field_i + (-this.field_i + this.field_j);
+          this.field_j = this.field_j + param1;
+          return 1;
+        }
+        var4 = 0;
+        do {
+          this.field_j = this.field_j + param1;
+          var4++;
+        } while (10 > var4 &&
+          this.field_i > this.field_j);
+        if (this.field_j < this.field_i) {
+          this.field_j = this.field_i;
+        }
+        return var4;
+    }
+
+    final long getDelayMillis(int param0) {
+        this.field_i = this.field_i + this.sampleElapsedNanos(false);
+        if (param0 != 17990) {
+          this.getDelayMillis(74);
+        }
+        if (this.field_i < this.field_j) {
+          return (this.field_j - this.field_i) / 1000000L;
+        }
+        return 0L;
+    }
+
+    final static String a(CharSequence param0, byte param1) {
+        String var2 = null;
+        RuntimeException var2_ref = null;
+        String stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -119) {
+            NanoFrameTimer.clearDeclaredStaticReferences((byte) 111);
+          }
+          var2 = jj.a(param1 + 14580, ProxyAuthenticationRequiredException.a(124, param0));
+          if (var2 == null) {
+            var2 = "";
+          }
+          stackIn_6_0 = var2;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_9_0 = var2_ref;
+          stackIn_9_1 = new StringBuilder().append("g.G(");
+          if (param0 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static String[] a(int param0, char param1, String param2) {
+        int var8 = 0;
+        int incrementValue$1 = 0;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        String[] var4 = null;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        CharSequence var11 = null;
+        String[] stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var10 = OrbDefence.field_D ? 1 : 0;
+        try {
+          var11 = (CharSequence) ((Object) param2);
+          var3_int = bi.a(var11, param1, 126);
+          var4 = new String[1 + var3_int];
+          var5 = 0;
+          var7 = 85 % ((param0 + 27) / 51);
+          var6 = 0;
+          for (var8 = 0; var3_int > var8; var8++) {
+            for (var9 = var6; param1 != param2.charAt(var9); var9++) {
+            }
+            incrementValue$1 = var5;
+            var5++;
+            var4[incrementValue$1] = param2.substring(var6, var9);
+            var6 = var9 + 1;
+          }
+          var4[var3_int] = param2.substring(var6);
+          stackIn_8_0 = var4;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("g.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw dd.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    private final long sampleElapsedNanos(boolean param0) {
+        int var8 = 0;
+        int var9 = OrbDefence.field_D ? 1 : 0;
+        long var2 = System.nanoTime();
+        long var4 = -this.field_k + var2;
+        this.field_k = var2;
+        if (var4 > -5000000000L &&
+          5000000000L > var4) {
+          this.field_e[this.field_f] = var4;
+          this.field_f = (this.field_f + 1) % 10;
+          if (1 > this.field_h) {
+            this.field_h = this.field_h + 1;
+          }
+        }
+        if (param0) {
+          return 29L;
+        }
+        long var6 = 0L;
+        for (var8 = 1; var8 <= this.field_h; var8++) {
+          var6 = var6 + this.field_e[(-var8 + this.field_f + 10) % 10];
+        }
+        return var6 / (long)this.field_h;
+    }
+
+    final static void a(int param0, java.applet.Applet param1) {
+        try {
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          Throwable var2 = null;
+          RuntimeException var2_ref = null;
+          String var3 = null;
+          String var4 = null;
+          java.net.URL var5 = null;
+          try {
+            try {
+              if (param0 != 1) {
+                var4 = (String) null;
+                NanoFrameTimer.a(16, 'L', (String) null);
+              }
+              var5 = param1.getCodeBase();
+              var3 = f.a(param1, var5, -123).getFile();
+              JavaScriptBridge.callWithArguments(true, "updatelinks", new Object[]{"home", var3 + "home.ws"}, param1);
+              JavaScriptBridge.callWithArguments(true, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
+              JavaScriptBridge.callWithArguments(true, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
+              JavaScriptBridge.callWithArguments(true, "updatelinks", new Object[]{"options", var3 + "options.ws"}, param1);
+              JavaScriptBridge.callWithArguments(true, "updatelinks", new Object[]{"terms", var3 + "terms.ws"}, param1);
+              JavaScriptBridge.callWithArguments(true, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param1);
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2 = decompiledCaughtException;
+            }
+            return;
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref;
+            stackIn_8_1 = new StringBuilder().append("g.D(").append(param0).append(',');
+            if (param1 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw dd.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    NanoFrameTimer() {
+        this.field_f = 0;
+        this.field_h = 1;
+        this.field_i = 0L;
+        this.field_k = 0L;
+        this.field_j = 0L;
+        this.field_e = new long[10];
+        this.field_i = System.nanoTime();
+        this.field_j = System.nanoTime();
+    }
+
+    static {
+        field_g = new int[128];
+    }
+}

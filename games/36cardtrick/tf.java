@@ -132,11 +132,11 @@ final class tf extends pd {
               }
               if (!stackIn_13_0 ||
                 !(0 <= -(var15 * var16) + var14 * var17)) {
-                var12Lifetime1 = lg.field_c[var9];
+                var12Lifetime1 = Bzip2State.field_c[var9];
                 if (var12Lifetime1 != -2147483648) {
-                  var13Lifetime1 = lg.field_c[var10];
+                  var13Lifetime1 = Bzip2State.field_c[var10];
                   if (var13Lifetime1 != -2147483648) {
-                    var14 = lg.field_c[var11];
+                    var14 = Bzip2State.field_c[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + var14 + (var12Lifetime1 + var13Lifetime1);
                       stackIn_33_0 = mb.field_c.length;

@@ -12,11 +12,11 @@ final class ji {
         int var3 = 127 % ((43 - param0) / 60);
         if (ck.field_e <= var1) {
           ck.field_e = var1;
-          return var1 + da.field_F;
+          return var1 + Bzip2State.field_F;
         }
-        da.field_F = da.field_F + (ck.field_e - var1);
+        Bzip2State.field_F = Bzip2State.field_F + (ck.field_e - var1);
         ck.field_e = var1;
-        return var1 + da.field_F;
+        return var1 + Bzip2State.field_F;
     }
 
     public static void resetStaticState(int param0) {

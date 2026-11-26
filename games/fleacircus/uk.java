@@ -124,7 +124,7 @@ final class uk {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              eb.a("document.cookie=\"" + var7Lifetime4 + "\"", -28924, param3);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var7Lifetime4 + "\"", -28924, param3);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

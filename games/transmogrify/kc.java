@@ -41,7 +41,7 @@ final class kc extends IntrusiveNode {
             if (param0 != -14226) {
               return;
             }
-            kj.a(param0 + 36328, "resizing", new Object[]{new Integer(param1)}, ha.b(param0 + 14293));
+            JavaScriptBridge.callWithArguments(param0 + 36328, "resizing", new Object[]{new Integer(param1)}, ha.b(param0 + 14293));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

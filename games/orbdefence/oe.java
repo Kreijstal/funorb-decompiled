@@ -69,7 +69,7 @@ final class oe extends DualLinkNode {
             oe.createAccountErrorResult(-30, (String) null, -63);
           }
           if (param1 == 1) {
-            this.field_n = g.a(87, '<', param0.readString(2));
+            this.field_n = NanoFrameTimer.a(87, '<', param0.readString(2));
           } else {
             if (param1 == 2) {
               var4_int = param0.readUnsignedByte((byte) 90);
@@ -191,7 +191,7 @@ final class oe extends DualLinkNode {
         if (param0) {
           var5 = var8.readUnsignedShort(98203176);
           try {
-            var9 = aa.field_d.b(-11244, var5);
+            var9 = FrameTimer.field_d.b(-11244, var5);
             vj.field_a = var9.e(-50);
             if (vk.field_v.equals(gb.field_h)) {
               stackIn_24_0 = null;

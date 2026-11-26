@@ -39,9 +39,9 @@ final class MarkerSliderWidget extends ButtonWidget {
     final static QuickChatCommandType[] listResponseTypes(boolean param0) {
         if (!param0) {
           MarkerSliderWidget.listResponseTypes(false);
-          return new QuickChatCommandType[]{EmailAvailabilityValidator.field_r, SocialRequestHelpers.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, DetonationTarget.field_i, CachedArchiveSource.field_j, EmailAvailabilityValidator.field_w, ClientTickHelpers.field_a, PopupMenuBuilder.field_w};
+          return new QuickChatCommandType[]{EmailAvailabilityValidator.field_r, SocialRequestHelpers.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, DetonationTarget.field_i, CachedArchiveSource.field_j, EmailAvailabilityValidator.field_w, ClientTickHelpers.field_a, Bzip2State.field_w};
         }
-        return new QuickChatCommandType[]{EmailAvailabilityValidator.field_r, SocialRequestHelpers.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, DetonationTarget.field_i, CachedArchiveSource.field_j, EmailAvailabilityValidator.field_w, ClientTickHelpers.field_a, PopupMenuBuilder.field_w};
+        return new QuickChatCommandType[]{EmailAvailabilityValidator.field_r, SocialRequestHelpers.field_d, UnitStateEvent.field_o, ValidationMessageWidget.field_W, WidgetStyleLayer.field_g, GameEvent.field_h, SectorCacheStore.field_i, ChatMessage.field_b, AlignedIconLabel.field_Lb, DetonationTarget.field_i, CachedArchiveSource.field_j, EmailAvailabilityValidator.field_w, ClientTickHelpers.field_a, Bzip2State.field_w};
     }
 
     final int getMaximumValue(byte param0) {

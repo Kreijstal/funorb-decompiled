@@ -98,7 +98,7 @@ final class lc implements ml {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (mf.a(-26159, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(-26159, "getcookies", param0));
               var5 = ma.a(param1 + 213, ';', var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

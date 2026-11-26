@@ -1935,7 +1935,7 @@ public final class ZombieDawnMulti extends NetworkGameClient {
           IntHashIndex.releaseStatics((byte) 21);
           ByteStorage.releaseStatics((byte) 4);
           Bzip2Decoder.releaseStatics();
-          PopupMenuBuilder.releaseStatics(true);
+          Bzip2State.releaseStatics(true);
           ReflectionCheckRequest.releaseStatics(-97);
           SpriteDecodeGlobals.releaseStatics(27964);
           LoginSuccessHelpers.releaseStatics(false);

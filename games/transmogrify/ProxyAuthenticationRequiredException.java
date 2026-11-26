@@ -280,8 +280,8 @@ final class ProxyAuthenticationRequiredException extends IOException {
               return stackIn_63_0;
             }
             var9Lifetime3 = lf.field_c;
-            lf.field_c = kf.field_p;
-            kf.field_p = var9Lifetime3;
+            lf.field_c = NanoFrameTimer.field_p;
+            NanoFrameTimer.field_p = var9Lifetime3;
             MusicPatchPcmStream.field_k = true;
           }
           stackIn_65_0 = -1;

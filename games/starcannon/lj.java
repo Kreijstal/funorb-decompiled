@@ -51,7 +51,7 @@ final class lj {
               } else {
                 var6Lifetime6 = var8 + "; Expires=" + ge.a((byte) -36, dd.correctedCurrentTimeMillis(88) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              mb.a("document.cookie=\"" + var6Lifetime6 + "\"", param2, 790);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var6Lifetime6 + "\"", param2, 790);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = decompiledCaughtException;
@@ -152,12 +152,12 @@ final class lj {
                 lj.a(16, -122);
               }
               var3 = NodeHashTableIterator.a(127, var4, param1).getFile();
-              mb.a(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", param0 ^ -816443192);
-              mb.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", param0 - 816443336);
-              mb.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", -27504);
-              mb.a(new Object[]{"options", var3 + "options.ws"}, param1, "updatelinks", -27504);
-              mb.a(new Object[]{"terms", var3 + "terms.ws"}, param1, "updatelinks", -27504);
-              mb.a(new Object[]{"privacy", var3 + "privacy.ws"}, param1, "updatelinks", -27504);
+              JavaScriptBridge.callWithArguments(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", param0 ^ -816443192);
+              JavaScriptBridge.callWithArguments(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", param0 - 816443336);
+              JavaScriptBridge.callWithArguments(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", -27504);
+              JavaScriptBridge.callWithArguments(new Object[]{"options", var3 + "options.ws"}, param1, "updatelinks", -27504);
+              JavaScriptBridge.callWithArguments(new Object[]{"terms", var3 + "terms.ws"}, param1, "updatelinks", -27504);
+              JavaScriptBridge.callWithArguments(new Object[]{"privacy", var3 + "privacy.ws"}, param1, "updatelinks", -27504);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

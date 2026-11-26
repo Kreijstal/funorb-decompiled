@@ -51,7 +51,7 @@ final class wl {
             var6 = var6 | 16;
           }
           uh.field_Wb.writeByte(var6, -127);
-          var7 = vq.a(ob.e((byte) 66), (byte) 114);
+          var7 = Bzip2State.a(ob.e((byte) 66), (byte) 114);
           if (null == var7) {
             var7 = "";
           }
@@ -121,7 +121,7 @@ final class wl {
           var5_int = d.bitLength(-110, 3 * (-param2 + param4));
           var6 = param2 * 3;
           var7 = -10 + var5_int;
-          vq.a(256);
+          Bzip2State.a(256);
           if (param0.field_G > 0 &&
             null != param0.field_x) {
             go.b(59);

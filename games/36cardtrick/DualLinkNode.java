@@ -28,7 +28,7 @@ class DualLinkNode extends IntrusiveNode {
           var7 = Main.field_T;
           try {
             try {
-              var3 = (String) (vh.a("getcookies", param0 + 12798, param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0 + 12798, param1));
               if (param0 != -24949) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;

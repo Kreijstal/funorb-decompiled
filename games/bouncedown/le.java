@@ -6,8 +6,8 @@ final class le {
 
     final static void a(int param0, java.awt.Component param1) {
         try {
-          param1.removeKeyListener(qj.field_c);
-          param1.removeFocusListener(qj.field_c);
+          param1.removeKeyListener(GzipDecompressor.field_c);
+          param1.removeFocusListener(GzipDecompressor.field_c);
           db.field_R = param0;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "le.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

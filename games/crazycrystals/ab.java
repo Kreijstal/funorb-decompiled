@@ -51,7 +51,7 @@ abstract class ab extends og {
               } else {
                 var8Lifetime4 = var10 + "; Expires=" + sm.a(lo.correctedCurrentTimeMillis((byte) -25) + param1 * 1000L, (byte) 121) + "; Max-Age=" + param1;
               }
-              hi.a("document.cookie=\"" + var8Lifetime4 + "\"", param0, (byte) -79);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var8Lifetime4 + "\"", param0, (byte) -79);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -116,7 +116,7 @@ final class ih extends kj implements sg {
         o.field_l = 0;
         FullscreenFocusCanvas.field_a = true;
         tk.field_P = false;
-        bd.field_l = false;
+        NanoFrameTimer.field_l = false;
         AccountNameAvailabilityValidator.field_r = 0;
         qk.field_lb = 0;
         rj.field_d = null;

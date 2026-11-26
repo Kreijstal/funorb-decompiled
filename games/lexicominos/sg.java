@@ -1565,7 +1565,7 @@ final class sg {
                           var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                           var3 = 40;
                           jh.field_d.a(TriangleMesh.field_D, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
-                          mk.field_h.c(rk.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
+                          mk.field_h.c(NanoFrameTimer.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                         } else {
                           if (this.field_d == 10) {
                             var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
@@ -1596,7 +1596,7 @@ final class sg {
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    mk.field_h.c(rk.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
+                    mk.field_h.c(NanoFrameTimer.field_k, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                   }
                 }
               } else {

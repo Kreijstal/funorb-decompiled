@@ -438,12 +438,12 @@ final class wf extends ma implements ha, mj {
             }
           } else {
             if (var2 != 0 &&
-              gm.field_f != 2) {
+              FrameTimer.field_f != 2) {
               mh.b(13);
             }
           }
           if (0 == var3 &&
-            gm.field_f == 2) {
+            FrameTimer.field_f == 2) {
             var4 = -jg.field_M + ud.correctedCurrentTimeMillis(2);
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {

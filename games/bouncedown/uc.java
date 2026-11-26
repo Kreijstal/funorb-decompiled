@@ -217,8 +217,8 @@ final class uc extends lc implements rc {
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
           ih.field_T = SectorCacheStore.a(param0, "commonui", (byte) 111, "button");
           la.field_E = ri.a("commonui", param0, false, "validation");
-          qj.field_d = (tj) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
-          sg.field_a = (tj) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));
+          GzipDecompressor.field_d = (tj) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
+          FrameTimer.field_a = (tj) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));
           ne.field_v = (tj) ((Object) eg.a(param2, "arezzo14bold", 117, param0, "commonui"));
           if (param1 <= 77) {
             field_E = (lj) null;

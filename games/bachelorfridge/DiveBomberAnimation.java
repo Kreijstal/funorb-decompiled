@@ -157,11 +157,11 @@ final class DiveBomberAnimation extends EventAnimation {
           }
           return rj.field_q;
         }
-        if (!bv.field_B.a(param0 ^ param0)) {
+        if (!Bzip2State.field_B.a(param0 ^ param0)) {
           return TileEffect.field_a;
         }
-        if (!bv.field_B.a("commonui", 20637)) {
-          return iea.field_b + " - " + bv.field_B.a(0, "commonui") + "%";
+        if (!Bzip2State.field_B.a("commonui", 20637)) {
+          return iea.field_b + " - " + Bzip2State.field_B.a(0, "commonui") + "%";
         }
         if (!fi.field_n.a(param0 + 10284)) {
           return is.field_d;

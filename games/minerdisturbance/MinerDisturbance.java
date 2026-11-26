@@ -919,7 +919,7 @@ public final class MinerDisturbance extends ob {
                 return;
               }
               lj.field_r = (int)((double)lj.field_r * 0.9);
-              var4Lifetime2 = sk.field_d / 10 + (-li.field_c + ca.field_k * 32);
+              var4Lifetime2 = sk.field_d / 10 + (-li.field_c + NanoFrameTimer.field_k * 32);
               break;
             }
             if (var8 == 0) {
@@ -955,7 +955,7 @@ public final class MinerDisturbance extends ob {
           if (pl.field_h == 3) {
             rg.field_wb = rg.field_wb / 2;
             AccountRequestState.field_k = AccountRequestState.field_k / 2;
-            if (je.e(ca.field_k, hf.field_t, 1, 1) >= 5) {
+            if (je.e(NanoFrameTimer.field_k, hf.field_t, 1, 1) >= 5) {
               var6 = 12;
               if (cm.field_r > 12) {
                 var6++;
@@ -973,7 +973,7 @@ public final class MinerDisturbance extends ob {
               }
             }
             if (decompiledFrameRemainder0) {
-              boolean decompiledSharedTail0 = !(0 >= je.e(ca.field_k, hf.field_t, 1, 1));
+              boolean decompiledSharedTail0 = !(0 >= je.e(NanoFrameTimer.field_k, hf.field_t, 1, 1));
               if (!decompiledSharedTail0) {
                 pl.field_h = 15;
                 cm.field_r = 0;
@@ -1325,7 +1325,7 @@ public final class MinerDisturbance extends ob {
               }
             }
           }
-          if ((cn.field_C <= -300 &&
+          if ((Bzip2State.field_C <= -300 &&
             1 == cm.field_o ||
             !(kn.field_E > 0)) &&
             (!ke.field_V &&
@@ -1337,15 +1337,15 @@ public final class MinerDisturbance extends ob {
           if (!il.e(param0 ^ 15079) ||
             !ke.field_V) {
             if (sc.field_b) {
-              if (mh.field_e[ca.field_k][hf.field_t].field_a &&
-                !mh.field_e[ca.field_k][hf.field_t].field_v) {
-                ag.a(true, 15, 32 * hf.field_t, 32 * ca.field_k);
+              if (mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a &&
+                !mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_v) {
+                ag.a(true, 15, 32 * hf.field_t, 32 * NanoFrameTimer.field_k);
                 decompiledFrameRemainder11 = (var21 != 0);
               }
               if ((decompiledFrameRemainder11) &&
-                (mh.field_e[ca.field_k][-1 + hf.field_t].field_a) &&
-                (mh.field_e[ca.field_k][hf.field_t - 1].field_S)) {
-                ag.a(true, 4, 32 * (-1 + hf.field_t), 32 * ca.field_k);
+                (mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].field_a) &&
+                (mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_S)) {
+                ag.a(true, 4, 32 * (-1 + hf.field_t), 32 * NanoFrameTimer.field_k);
                 if (var21 != 0) {
                   cm.field_r = cm.field_r + 1;
                   if (cm.field_r > 50) {
@@ -1409,8 +1409,8 @@ public final class MinerDisturbance extends ob {
                 if (pl.field_h != 15) {
                   break scanLoop1;
                 }
-                fieldTemp$1 = ca.field_g;
-                ca.field_g = ca.field_g + 1;
+                fieldTemp$1 = NanoFrameTimer.field_g;
+                NanoFrameTimer.field_g = NanoFrameTimer.field_g + 1;
                 if (9000 >= fieldTemp$1) {
                   break scanLoop1;
                 }
@@ -1459,10 +1459,10 @@ public final class MinerDisturbance extends ob {
               ClientException.field_d = ClientException.field_d + 1;
             }
           }
-          li.field_c = -304 + (sk.field_d / 10 + 32 * ca.field_k);
+          li.field_c = -304 + (sk.field_d / 10 + 32 * NanoFrameTimer.field_k);
           if ((!(a.field_c <= 0) ||
             ~je.field_u == ~je.field_N[cm.field_o] ||
-            !(hf.field_t >= 2)) && (ca.field_k == 16 &&
+            !(hf.field_t >= 2)) && (NanoFrameTimer.field_k == 16 &&
             hf.field_t <= 3 &&
             15 == pl.field_h &&
             ke.field_V)) {
@@ -1532,7 +1532,7 @@ public final class MinerDisturbance extends ob {
             rg.field_wb = 0;
             AccountRequestState.field_k = 0;
           }
-          if (!je.c(ca.field_k, hf.field_t, 1, 1)) {
+          if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
             pc.field_k = 0;
             if (var21 != 0) {
               ul.field_b = 0;
@@ -1545,7 +1545,7 @@ public final class MinerDisturbance extends ob {
           if (pc.field_k > 5) {
             if (tc.field_s > 0) {
               tc.field_s = tc.field_s - 1;
-              je.field_O.a((ca.field_k << 2) + 1, 88, (hf.field_t << 2) - 1, true);
+              je.field_O.a((NanoFrameTimer.field_k << 2) + 1, 88, (hf.field_t << 2) - 1, true);
             }
             pc.field_k = 0;
           }
@@ -1557,15 +1557,15 @@ public final class MinerDisturbance extends ob {
             }
             if (!qe.field_b[15]) {
               tc.field_s = tc.field_s + 1;
-              je.field_O.e(hf.field_t, ca.field_k, (byte) 83);
+              je.field_O.e(hf.field_t, NanoFrameTimer.field_k, (byte) 83);
             }
           }
           if (tc.field_s > 0) {
-            ag.a(true, 31, hf.field_t * 32, ca.field_k * 32);
+            ag.a(true, 31, hf.field_t * 32, NanoFrameTimer.field_k * 32);
           }
           if ((!qd.field_O[98] ||
             !qd.field_O[86]) &&
-            (!ca.c(-2302) &&
+            (!NanoFrameTimer.c(-2302) &&
             (dl.field_c & 7) == 0 &&
             100 > qd.field_K)) {
             qd.field_K = qd.field_K + 1;
@@ -1599,17 +1599,17 @@ public final class MinerDisturbance extends ob {
                   decompiledFrameRemainder26 = (var21 == 0);
                   if ((decompiledFrameRemainder26) &&
                     (stackIn_344_0 >= stackIn_344_1)) {
-                    if (mh.field_e[ca.field_k][hf.field_t - var7Lifetime1].field_a ||
-                      mh.field_e[-1 + ca.field_k][hf.field_t - var7Lifetime1].field_a ||
-                      mh.field_e[ca.field_k + 1][hf.field_t - var7Lifetime1].field_a) {
-                      if (mh.field_e[ca.field_k][-var7Lifetime1 + hf.field_t].field_S &&
-                        mh.field_e[ca.field_k][-var7Lifetime1 + hf.field_t].field_a) {
+                    if (mh.field_e[NanoFrameTimer.field_k][hf.field_t - var7Lifetime1].field_a ||
+                      mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - var7Lifetime1].field_a ||
+                      mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t - var7Lifetime1].field_a) {
+                      if (mh.field_e[NanoFrameTimer.field_k][-var7Lifetime1 + hf.field_t].field_S &&
+                        mh.field_e[NanoFrameTimer.field_k][-var7Lifetime1 + hf.field_t].field_a) {
                         stackIn_336_0 = 1;
                       } else {
                         stackIn_336_0 = 0;
                       }
                       var6Lifetime1 = stackIn_336_0;
-                      decompiledFrameRemainder25 = (!(mh.field_e[ca.field_k][hf.field_t - var7Lifetime1].field_a) ||
+                      decompiledFrameRemainder25 = (!(mh.field_e[NanoFrameTimer.field_k][hf.field_t - var7Lifetime1].field_a) ||
                         var21 != 0);
                     }
                     if (decompiledFrameRemainder25) {
@@ -1620,21 +1620,21 @@ public final class MinerDisturbance extends ob {
                 }
                 if (decompiledFrameRemainder26) {
                   stackIn_344_0 = 12;
-                  stackIn_344_1 = ca.field_k;
+                  stackIn_344_1 = NanoFrameTimer.field_k;
                 }
                 if (stackIn_344_0 > stackIn_344_1) {
                   this.field_E = 1;
                 }
                 if ((stackIn_344_0 <= stackIn_344_1 ||
                   var21 != 0) &&
-                  20 < ca.field_k) {
+                  20 < NanoFrameTimer.field_k) {
                   this.field_E = 2;
                 }
                 if (this.field_E == 1 ||
-                  mh.field_e[-1 + ca.field_k][hf.field_t].field_a &&
+                  mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a &&
                   sk.field_d <= -30 ||
                   this.field_U == 1) {
-                  if (mh.field_e[ca.field_k + 1][hf.field_t].field_a &&
+                  if (mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_a &&
                     30 <= sk.field_d ||
                     this.field_U == 4) {
                     this.field_E = 0;
@@ -1659,35 +1659,35 @@ public final class MinerDisturbance extends ob {
                   decompiledFrameRemainder8 = (var21 != 0);
                 }
                 if (decompiledFrameRemainder8) {
-                  if (mh.field_e[ca.field_k][1 + hf.field_t].field_a &&
-                    !mh.field_e[ca.field_k][1 + hf.field_t].field_b) {
+                  if (mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_a &&
+                    !mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_b) {
                     stackIn_399_0 = 1;
                   } else {
                     stackIn_399_0 = 0;
                   }
                   var7Lifetime1 = stackIn_399_0;
-                  if (mh.field_e[ca.field_k + 1][hf.field_t].field_a &&
-                    !mh.field_e[1 + ca.field_k][hf.field_t].field_b) {
+                  if (mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_a &&
+                    !mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_b) {
                     stackIn_406_0 = 1;
                   } else {
                     stackIn_406_0 = 0;
                   }
                   var8 = stackIn_406_0;
-                  if (mh.field_e[-1 + ca.field_k][hf.field_t].field_a &&
-                    !mh.field_e[ca.field_k - 1][hf.field_t].field_b) {
+                  if (mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a &&
+                    !mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_b) {
                     stackIn_413_0 = 1;
                   } else {
                     stackIn_413_0 = 0;
                   }
                   boolean decompiledFrameRemainder17 = true;
                   var9 = stackIn_413_0;
-                  if (mh.field_e[ca.field_k][hf.field_t - 1].field_a &&
-                    !mh.field_e[ca.field_k][hf.field_t - 1].field_b && (MidiPcmStream.field_K > 0 &&
-                    !mh.field_e[1 + ca.field_k][hf.field_t - 1].field_b &&
-                    !mh.field_e[ca.field_k + 1][hf.field_t].field_b ||
+                  if (mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_a &&
+                    !mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_b && (MidiPcmStream.field_K > 0 &&
+                    !mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t - 1].field_b &&
+                    !mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_b ||
                     !(0 <= MidiPcmStream.field_K) &&
-                    !mh.field_e[-1 + ca.field_k][hf.field_t - 1].field_b &&
-                    !mh.field_e[ca.field_k - 1][hf.field_t].field_b)) {
+                    !mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - 1].field_b &&
+                    !mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_b)) {
                     stackIn_438_0 = 1;
                     decompiledFrameRemainder17 = false;
                   }
@@ -1748,31 +1748,31 @@ public final class MinerDisturbance extends ob {
                   }
                 }
                 boolean decompiledFrameRemainder7 = true;
-                if ((!mh.field_e[-1 + ca.field_k][hf.field_t].field_b ||
-                  !mh.field_e[1 + ca.field_k][hf.field_t].field_b ||
-                  !mh.field_e[ca.field_k][1 + hf.field_t].field_b) &&
-                  (decompiledFrameRemainder7 = !(je.c(ca.field_k, hf.field_t, 3, 3))) &&
-                  (decompiledFrameRemainder7 = !(!mh.field_e[ca.field_k - 1][hf.field_t].field_b))) {
-                  stackIn_517_0 = mh.field_e[1 + ca.field_k][hf.field_t].field_b;
-                  stackIn_518_1 = !(mh.field_e[1 + ca.field_k][hf.field_t].field_a);
+                if ((!mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_b ||
+                  !mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_b ||
+                  !mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_b) &&
+                  (decompiledFrameRemainder7 = !(je.c(NanoFrameTimer.field_k, hf.field_t, 3, 3))) &&
+                  (decompiledFrameRemainder7 = !(!mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_b))) {
+                  stackIn_517_0 = mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_b;
+                  stackIn_518_1 = !(mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a);
                   decompiledFrameRemainder7 = !(stackIn_517_0 ^ !stackIn_518_1);
                   if ((decompiledFrameRemainder7) &&
-                    (decompiledFrameRemainder7 = !(mh.field_e[1 + ca.field_k][hf.field_t].field_a))) {
-                    uf.field_p[jf.b((byte) 108)] = new gf(ca.field_k, hf.field_t, 6);
+                    (decompiledFrameRemainder7 = !(mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a))) {
+                    uf.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
                     decompiledFrameRemainder7 = (var21 != 0);
                   }
                 }
                 if (decompiledFrameRemainder7) {
-                  if (mh.field_e[-1 + ca.field_k][-1 + hf.field_t].field_a &&
-                    !mh.field_e[-1 + ca.field_k][-1 + hf.field_t].field_b ||
-                    mh.field_e[ca.field_k + 1][hf.field_t - 1].field_a &&
-                    !mh.field_e[ca.field_k + 1][hf.field_t - 1].field_b) {
+                  if (mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].field_a &&
+                    !mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].field_b ||
+                    mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t - 1].field_a &&
+                    !mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t - 1].field_b) {
                     this.field_U = 5;
                     decompiledFrameRemainder7 = (var21 != 0);
                   }
                   if (decompiledFrameRemainder7) {
-                    if (!mh.field_e[ca.field_k - 1][-1 + hf.field_t].field_a) {
-                      if (!mh.field_e[ca.field_k + 1][-1 + hf.field_t].field_a) {
+                    if (!mh.field_e[NanoFrameTimer.field_k - 1][-1 + hf.field_t].field_a) {
+                      if (!mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].field_a) {
                         this.field_E = 5;
                         if (var21 != 0) {
                           this.field_E = 4;
@@ -1792,14 +1792,14 @@ public final class MinerDisturbance extends ob {
                 if (250 <= kn.field_E) {
                   break;
                 }
-                if (!je.c(ca.field_k, -1 + hf.field_t, 1, 1)) {
+                if (!je.c(NanoFrameTimer.field_k, -1 + hf.field_t, 1, 1)) {
                   break;
                 }
-                if (mh.field_e[ca.field_k][hf.field_t - 1].field_a) {
+                if (mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_a) {
                   break;
                 }
-                if (mh.field_e[-1 + ca.field_k][hf.field_t - 1].field_a) {
-                  if (!mh.field_e[ca.field_k + 1][-1 + hf.field_t].field_a) {
+                if (mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - 1].field_a) {
+                  if (!mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].field_a) {
                     this.field_E = 4;
                     if (var21 != 0) {
                       this.field_E = 5;
@@ -1866,9 +1866,9 @@ public final class MinerDisturbance extends ob {
                   if (qd.field_K > 0) {
                     qd.field_K = qd.field_K - 1;
                   }
-                  if (je.d(ca.field_k, hf.field_t, 1, 1)) {
-                    je.field_O.a(ca.field_k, -4, hf.field_t);
-                    uf.field_p[jf.b((byte) 108)] = new gf(ca.field_k, hf.field_t, 16);
+                  if (je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
+                    je.field_O.a(NanoFrameTimer.field_k, -4, hf.field_t);
+                    uf.field_p[jf.b((byte) 108)] = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
                   }
                   if (d.field_b &&
                     qd.field_O[96]) {
@@ -1884,7 +1884,7 @@ public final class MinerDisturbance extends ob {
                     rg.field_wb = 10;
                   }
                   if ((nf.field_e & 3) == 0) {
-                    var13_ref_gf = new gf(ca.field_k, hf.field_t, 16);
+                    var13_ref_gf = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
                     var13_ref_gf.field_g = 0;
                     var13_ref_gf.field_b = 240;
                     uf.field_p[jf.b((byte) 61)] = var13_ref_gf;
@@ -1893,49 +1893,49 @@ public final class MinerDisturbance extends ob {
                   IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
                   sk.field_d = sk.field_d + rg.field_wb;
                   if (IsaacRandom.field_i > 40 &&
-                    mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+                    mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                     IsaacRandom.field_i = 40;
                     AccountRequestState.field_k = 0;
                   }
                   if (IsaacRandom.field_i < -40 &&
-                    mh.field_e[ca.field_k][hf.field_t - 1].g()) {
+                    mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].g()) {
                     IsaacRandom.field_i = -40;
                     AccountRequestState.field_k = 0;
                   }
                   if (sk.field_d > 80 &&
                     IsaacRandom.field_i < -40 &&
-                    mh.field_e[ca.field_k + 1][hf.field_t - 1].g()) {
+                    mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t - 1].g()) {
                     sk.field_d = 80;
                   }
                   if (sk.field_d < -80 &&
                     -40 > IsaacRandom.field_i &&
-                    mh.field_e[ca.field_k - 1][-1 + hf.field_t].g()) {
+                    mh.field_e[NanoFrameTimer.field_k - 1][-1 + hf.field_t].g()) {
                     sk.field_d = -80;
                   }
                   if (sk.field_d > 80 &&
                     IsaacRandom.field_i > 40 &&
-                    mh.field_e[ca.field_k + 1][hf.field_t + 1].g()) {
+                    mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t + 1].g()) {
                     sk.field_d = 80;
                   }
                   if (sk.field_d < -80 &&
                     40 < IsaacRandom.field_i &&
-                    mh.field_e[ca.field_k - 1][hf.field_t + 1].g()) {
+                    mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].g()) {
                     sk.field_d = -80;
                   }
                   if (sk.field_d > 80 &&
-                    mh.field_e[1 + ca.field_k][hf.field_t].g()) {
+                    mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                     sk.field_d = 80;
                   }
                   if (-80 > sk.field_d &&
-                    mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
+                    mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                     sk.field_d = -80;
                   }
                   if (sk.field_d > 160) {
-                    ca.field_k = ca.field_k + 1;
+                    NanoFrameTimer.field_k = NanoFrameTimer.field_k + 1;
                     sk.field_d = sk.field_d - 320;
                   }
                   if (sk.field_d < -160) {
-                    ca.field_k = ca.field_k - 1;
+                    NanoFrameTimer.field_k = NanoFrameTimer.field_k - 1;
                     sk.field_d = sk.field_d + 320;
                   }
                   if (IsaacRandom.field_i > 160) {
@@ -1946,7 +1946,7 @@ public final class MinerDisturbance extends ob {
                     IsaacRandom.field_i = IsaacRandom.field_i + 320;
                     hf.field_t = hf.field_t - 1;
                   }
-                  if (!(!je.c(ca.field_k, hf.field_t, 1, 1))) {
+                  if (!(!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1))) {
                     rj.field_f = 2;
                   }
                   break regionExit2;
@@ -1989,18 +1989,18 @@ public final class MinerDisturbance extends ob {
                 this.field_E == 4 ||
                 this.field_E == 5)) {
                 var13 = 1;
-                if (mh.field_e[ca.field_k][hf.field_t].field_a) {
+                if (mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a) {
                   var13 = 0;
                 }
-                if (mh.field_e[ca.field_k][hf.field_t - 1].g()) {
+                if (mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].g()) {
                   var13 = 0;
                 }
                 if (sk.field_d + 10 * MidiPcmStream.field_K > 165 &&
-                  mh.field_e[1 + ca.field_k][-1 + hf.field_t].g()) {
+                  mh.field_e[1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   var13 = 0;
                 }
                 if (10 * MidiPcmStream.field_K + sk.field_d < -165 &&
-                  mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
+                  mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   var13 = 0;
                 }
                 if (var13 != 0) {
@@ -2021,11 +2021,11 @@ public final class MinerDisturbance extends ob {
               }
               boolean decompiledFrameRemainder15 = true;
               if (!qe.field_b[18] && (!(tc.field_s <= 0) ||
-                mh.field_e[ca.field_k][1 + hf.field_t].field_E ||
+                mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_E ||
                 sk.field_d < 0 &&
-                mh.field_e[ca.field_k - 1][hf.field_t + 1].field_E ||
+                mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].field_E ||
                 !(sk.field_d <= 0) &&
-                mh.field_e[1 + ca.field_k][hf.field_t + 1].field_E)) {
+                mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t + 1].field_E)) {
                 stackIn_731_0 = 1;
                 decompiledFrameRemainder15 = false;
               }
@@ -2075,12 +2075,12 @@ public final class MinerDisturbance extends ob {
               }
               if (ph.field_b == 0 &&
                 BoundedRandomAccessFile.field_f < 400 &&
-                mh.field_e[ca.field_k][hf.field_t + 1].field_q > 0) {
+                mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_q > 0) {
                 tf.field_b = 0;
                 ph.field_b = 4;
                 BoundedRandomAccessFile.field_f = 5;
               }
-              if (mh.field_e[ca.field_k][hf.field_t + 1].field_q > 150 &&
+              if (mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_q > 150 &&
                 ph.field_b != 5) {
                 tf.field_b = 0;
                 BoundedRandomAccessFile.field_f = 5;
@@ -2119,12 +2119,12 @@ public final class MinerDisturbance extends ob {
                   if (var14 < 1) {
                     var13 = 1;
                   }
-                  if (!mh.field_e[ca.field_k][var14].field_a) {
+                  if (!mh.field_e[NanoFrameTimer.field_k][var14].field_a) {
                     continue;
                   }
-                  if (mh.field_e[ca.field_k][var14].field_S) {
+                  if (mh.field_e[NanoFrameTimer.field_k][var14].field_S) {
                     tb.field_c = 29;
-                    if (mh.field_e[ca.field_k][var14].field_r > 950) {
+                    if (mh.field_e[NanoFrameTimer.field_k][var14].field_r > 950) {
                       tb.field_c = 30;
                     }
                   }
@@ -2145,25 +2145,25 @@ public final class MinerDisturbance extends ob {
               if (AccountRequestState.field_k >= 0 &&
                 !qd.field_O[99]) {
                 if (sk.field_d < -30 &&
-                  mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
+                  mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                   var2_int = 1;
                 }
                 if (sk.field_d > 30 &&
-                  mh.field_e[1 + ca.field_k][hf.field_t].g()) {
+                  mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                   var2_int = 1;
                 }
               }
               if (IsaacRandom.field_i >= 0 &&
                 AccountRequestState.field_k >= 0) {
-                if (mh.field_e[ca.field_k][1 + hf.field_t].g()) {
+                if (mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].g()) {
                   var2_int = 0;
                 }
                 if (sk.field_d < -80 &&
-                  mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].g()) {
                   var2_int = 0;
                 }
                 if (80 < sk.field_d &&
-                  mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
+                  mh.field_e[1 + NanoFrameTimer.field_k][1 + hf.field_t].g()) {
                   var2_int = 0;
                 }
               }
@@ -2195,11 +2195,11 @@ public final class MinerDisturbance extends ob {
               boolean decompiledFrameRemainder14 = true;
               var7Lifetime2 = 1;
               if (!qe.field_b[18] && (!(tc.field_s <= 0) ||
-                mh.field_e[ca.field_k][1 + hf.field_t].field_E ||
+                mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_E ||
                 sk.field_d < 0 &&
-                mh.field_e[ca.field_k - 1][hf.field_t + 1].field_E ||
+                mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].field_E ||
                 !(sk.field_d <= 0) &&
-                mh.field_e[ca.field_k + 1][1 + hf.field_t].field_E)) {
+                mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].field_E)) {
                 stackIn_906_0 = 1;
                 decompiledFrameRemainder14 = false;
               }
@@ -2233,7 +2233,7 @@ public final class MinerDisturbance extends ob {
                 var7Lifetime2 = 0;
                 if (qe.field_b[11] &&
                   sk.field_d < 0 &&
-                  mh.field_e[-1 + ca.field_k][hf.field_t].field_a) {
+                  mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a) {
                   boolean decompiledSharedTail5 = !(25 > tc.field_t);
                   if (!decompiledSharedTail5) {
                     tc.field_t = tc.field_t + 2;
@@ -2275,7 +2275,7 @@ public final class MinerDisturbance extends ob {
                 }
                 if (qe.field_b[11] &&
                   sk.field_d > 0 &&
-                  mh.field_e[ca.field_k + 1][hf.field_t].field_a) {
+                  mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_a) {
                   if (tc.field_t >= 25) {
                     AccountRequestState.field_k = -10;
                     tc.field_t = 0;
@@ -2327,18 +2327,18 @@ public final class MinerDisturbance extends ob {
                 qd.field_O[98] &&
                 !ag.field_c) {
                 var13 = 1;
-                if (mh.field_e[ca.field_k][hf.field_t].field_a) {
+                if (mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a) {
                   var13 = 0;
                 }
-                if (mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
+                if (mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   var13 = 0;
                 }
                 if (10 * MidiPcmStream.field_K + sk.field_d > 165 &&
-                  mh.field_e[1 + ca.field_k][-1 + hf.field_t].g()) {
+                  mh.field_e[1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   var13 = 0;
                 }
                 if (sk.field_d + 10 * MidiPcmStream.field_K < -165 &&
-                  mh.field_e[ca.field_k - 1][-1 + hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k - 1][-1 + hf.field_t].g()) {
                   var13 = 0;
                 }
                 if (var13 != 0) {
@@ -2352,8 +2352,8 @@ public final class MinerDisturbance extends ob {
               if (var2_int == 0) {
                 rj.field_f = 4;
               }
-              if ((je.c(ca.field_k, hf.field_t, 1, 1) ||
-                je.a(ca.field_k, hf.field_t, 1, 1)) &&
+              if ((je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) ||
+                je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1)) &&
                 var2_int == 0) {
                 rj.field_f = 2;
                 ne.a(30, 59);
@@ -2391,8 +2391,8 @@ public final class MinerDisturbance extends ob {
                 (this.field_E == 2 ||
                 this.field_E == 5)) && (qe.field_b[11] &&
                 0 > sk.field_d &&
-                mh.field_e[ca.field_k - 1][hf.field_t].field_a &&
-                mh.field_e[-1 + ca.field_k][hf.field_t].field_S)) {
+                mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_a &&
+                mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_S)) {
                 if (tc.field_t >= 25) {
                   rj.field_f = 10;
                   rg.field_wb = 50;
@@ -2410,8 +2410,8 @@ public final class MinerDisturbance extends ob {
                 (this.field_E == 1 ||
                 this.field_E == 4)) && (qe.field_b[11] &&
                 sk.field_d > 0 &&
-                mh.field_e[1 + ca.field_k][hf.field_t].field_a &&
-                mh.field_e[ca.field_k + 1][hf.field_t].field_S)) {
+                mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a &&
+                mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_S)) {
                 boolean decompiledSharedTail4 = !(25 > tc.field_t);
                 if (!decompiledSharedTail4) {
                   tc.field_t = tc.field_t + 2;
@@ -2484,7 +2484,7 @@ public final class MinerDisturbance extends ob {
                 !qd.field_O[99] ||
                 var5Lifetime1 != 0) &&
                 (!qd.field_O[98] &&
-                mh.field_e[ca.field_k][1 + hf.field_t].g() &&
+                mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].g() &&
                 var2_int == 0 &&
                 AccountRequestState.field_k < 40)) {
                 AccountRequestState.field_k = AccountRequestState.field_k + 1;
@@ -2512,20 +2512,20 @@ public final class MinerDisturbance extends ob {
               if (!qd.field_O[98] &&
                 this.field_E != 5) {
                 if (80 < sk.field_d &&
-                  mh.field_e[1 + ca.field_k][hf.field_t].g()) {
+                  mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if ((!(sk.field_d >= -80)) &&
-                  (mh.field_e[ca.field_k - 1][hf.field_t].g())) {
+                  (mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g())) {
                   sk.field_d = -80;
                   if (var21 != 0) {
                     if (IsaacRandom.field_i > 40 &&
-                      mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+                      mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                       IsaacRandom.field_i = 40;
                       AccountRequestState.field_k = 0;
                     }
                     if (IsaacRandom.field_i < -40 &&
-                      mh.field_e[ca.field_k][hf.field_t - 1].g()) {
+                      mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].g()) {
                       IsaacRandom.field_i = -40;
                       AccountRequestState.field_k = 0;
                     }
@@ -2533,52 +2533,52 @@ public final class MinerDisturbance extends ob {
                 }
               } else {
                 if (IsaacRandom.field_i > 40 &&
-                  mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+                  mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                   IsaacRandom.field_i = 40;
                   AccountRequestState.field_k = 0;
                 }
                 if (IsaacRandom.field_i < -40 &&
-                  mh.field_e[ca.field_k][hf.field_t - 1].g()) {
+                  mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].g()) {
                   IsaacRandom.field_i = -40;
                   AccountRequestState.field_k = 0;
                 }
               }
               if (sk.field_d > 80 &&
                 IsaacRandom.field_i < -40 &&
-                mh.field_e[1 + ca.field_k][hf.field_t - 1].g()) {
+                mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t - 1].g()) {
                 sk.field_d = 80;
               }
               if (-80 > sk.field_d &&
                 -40 > IsaacRandom.field_i &&
-                mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
+                mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                 sk.field_d = -80;
               }
               if (sk.field_d > 80 &&
                 IsaacRandom.field_i > 40 &&
-                mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
+                mh.field_e[1 + NanoFrameTimer.field_k][1 + hf.field_t].g()) {
                 sk.field_d = 80;
               }
               if (sk.field_d < -80 &&
                 40 < IsaacRandom.field_i &&
-                mh.field_e[-1 + ca.field_k][hf.field_t + 1].g()) {
+                mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                 sk.field_d = -80;
               }
               if (qd.field_O[98]) {
                 if (sk.field_d > 80 &&
-                  mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if ((!(sk.field_d >= -80)) &&
-                  (mh.field_e[ca.field_k - 1][hf.field_t].g())) {
+                  (mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g())) {
                   sk.field_d = -80;
                   if (var21 != 0) {
                     if (40 < IsaacRandom.field_i &&
-                      mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+                      mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                       AccountRequestState.field_k = 0;
                       IsaacRandom.field_i = 40;
                     }
                     if (-40 > IsaacRandom.field_i &&
-                      mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
+                      mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                       IsaacRandom.field_i = -40;
                       AccountRequestState.field_k = 0;
                     }
@@ -2586,19 +2586,19 @@ public final class MinerDisturbance extends ob {
                 }
               } else {
                 if (40 < IsaacRandom.field_i &&
-                  mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+                  mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                   AccountRequestState.field_k = 0;
                   IsaacRandom.field_i = 40;
                 }
                 if (-40 > IsaacRandom.field_i &&
-                  mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   IsaacRandom.field_i = -40;
                   AccountRequestState.field_k = 0;
                 }
               }
               if (160 < sk.field_d) {
                 sk.field_d = sk.field_d - 320;
-                ca.field_k = ca.field_k + 1;
+                NanoFrameTimer.field_k = NanoFrameTimer.field_k + 1;
               }
               if (160 < IsaacRandom.field_i) {
                 hf.field_t = hf.field_t + 1;
@@ -2606,20 +2606,20 @@ public final class MinerDisturbance extends ob {
               }
               if (-160 > sk.field_d) {
                 sk.field_d = sk.field_d + 320;
-                ca.field_k = ca.field_k - 1;
+                NanoFrameTimer.field_k = NanoFrameTimer.field_k - 1;
               }
               if (IsaacRandom.field_i < -160) {
                 hf.field_t = hf.field_t - 1;
                 IsaacRandom.field_i = IsaacRandom.field_i + 320;
               }
-              if (!je.c(ca.field_k, hf.field_t, 1, 1) &&
-                !je.c(ca.field_k, hf.field_t, 0, 1) &&
-                !je.c(ca.field_k, hf.field_t, 2, 1) &&
-                !je.c(ca.field_k, hf.field_t, 3, 1) &&
-                !je.a(ca.field_k, hf.field_t, 0, 1) &&
-                !je.a(ca.field_k, hf.field_t, 1, 1) &&
-                !je.a(ca.field_k, hf.field_t, 2, 1) &&
-                !je.a(ca.field_k, hf.field_t, 3, 1)) {
+              if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
+                !je.c(NanoFrameTimer.field_k, hf.field_t, 0, 1) &&
+                !je.c(NanoFrameTimer.field_k, hf.field_t, 2, 1) &&
+                !je.c(NanoFrameTimer.field_k, hf.field_t, 3, 1) &&
+                !je.a(NanoFrameTimer.field_k, hf.field_t, 0, 1) &&
+                !je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
+                !je.a(NanoFrameTimer.field_k, hf.field_t, 2, 1) &&
+                !je.a(NanoFrameTimer.field_k, hf.field_t, 3, 1)) {
                 rj.field_f = 3;
               }
               BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f - 1;
@@ -2695,10 +2695,10 @@ public final class MinerDisturbance extends ob {
               IsaacRandom.field_i = IsaacRandom.field_i + AccountRequestState.field_k;
               sk.field_d = sk.field_d + rg.field_wb;
               if (IsaacRandom.field_i > 0 &&
-                mh.field_e[ca.field_k][hf.field_t + 1].g()) {
-                if (!je.c(ca.field_k, hf.field_t + 1, 1, 0)) {
+                mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
+                if (!je.c(NanoFrameTimer.field_k, hf.field_t + 1, 1, 0)) {
                   if (cm.field_o == 0 ||
-                    mh.field_e[ca.field_k][hf.field_t + 1].field_E) {
+                    mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_E) {
                     ne.a(32, 94);
                     if ((var21 != 0) &&
                       (cm.field_o == 1)) {
@@ -2709,13 +2709,13 @@ public final class MinerDisturbance extends ob {
                       ne.a(41, 119);
                     }
                   }
-                  if (mh.field_e[ca.field_k][hf.field_t + 1].field_v &&
+                  if (mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_v &&
                     20 <= AccountRequestState.field_k &&
-                    !mh.field_e[ca.field_k][1 + hf.field_t].field_E) {
-                    mh.field_e[ca.field_k][1 + hf.field_t].field_S = true;
-                    mh.field_e[ca.field_k][1 + hf.field_t].field_r = 975;
+                    !mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_E) {
+                    mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_S = true;
+                    mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_r = 975;
                     if (sc.field_b) {
-                      ag.a(true, 28, hf.field_t + 1 << 5, ca.field_k << 5);
+                      ag.a(true, 28, hf.field_t + 1 << 5, NanoFrameTimer.field_k << 5);
                     }
                   }
                 }
@@ -2723,7 +2723,7 @@ public final class MinerDisturbance extends ob {
                 AccountRequestState.field_k = 0;
               }
               if (IsaacRandom.field_i < 0 &&
-                mh.field_e[ca.field_k][-1 + hf.field_t].g()) {
+                mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                 IsaacRandom.field_i = 0;
                 AccountRequestState.field_k = 0;
               }
@@ -2732,28 +2732,28 @@ public final class MinerDisturbance extends ob {
                 if (80 < sk.field_d &&
                   IsaacRandom.field_i < 0 &&
                   AccountRequestState.field_k <= 0 &&
-                  mh.field_e[1 + ca.field_k][-1 + hf.field_t].g()) {
+                  mh.field_e[1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   AccountRequestState.field_k = 0;
                   IsaacRandom.field_i = 0;
                 }
                 if (sk.field_d < -80 &&
                   0 > IsaacRandom.field_i &&
                   AccountRequestState.field_k <= 0 &&
-                  mh.field_e[-1 + ca.field_k][hf.field_t - 1].g()) {
+                  mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - 1].g()) {
                   IsaacRandom.field_i = 0;
                   AccountRequestState.field_k = 0;
                 }
                 if (80 < sk.field_d &&
                   IsaacRandom.field_i > 0 &&
                   AccountRequestState.field_k >= 0 &&
-                  mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
-                  if (mh.field_e[ca.field_k + 1][hf.field_t + 1].field_v &&
+                  mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].g()) {
+                  if (mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t + 1].field_v &&
                     AccountRequestState.field_k >= 20 &&
-                    !mh.field_e[ca.field_k + 1][1 + hf.field_t].field_E) {
-                    mh.field_e[ca.field_k + 1][1 + hf.field_t].field_S = true;
-                    mh.field_e[1 + ca.field_k][1 + hf.field_t].field_r = 975;
+                    !mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].field_E) {
+                    mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].field_S = true;
+                    mh.field_e[1 + NanoFrameTimer.field_k][1 + hf.field_t].field_r = 975;
                     if (sc.field_b) {
-                      ag.a(true, 28, 1 + hf.field_t << 5, 1 + ca.field_k << 5);
+                      ag.a(true, 28, 1 + hf.field_t << 5, 1 + NanoFrameTimer.field_k << 5);
                     }
                   }
                   AccountRequestState.field_k = 0;
@@ -2762,14 +2762,14 @@ public final class MinerDisturbance extends ob {
                 if ((!(sk.field_d >= -80)) &&
                   (!(IsaacRandom.field_i <= 0)) &&
                   (!(AccountRequestState.field_k < 0)) &&
-                  (mh.field_e[-1 + ca.field_k][hf.field_t + 1].g())) {
-                  if (mh.field_e[ca.field_k - 1][hf.field_t + 1].field_v &&
+                  (mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t + 1].g())) {
+                  if (mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].field_v &&
                     AccountRequestState.field_k >= 20 &&
-                    !mh.field_e[ca.field_k - 1][1 + hf.field_t].field_E) {
-                    mh.field_e[-1 + ca.field_k][hf.field_t + 1].field_S = true;
-                    mh.field_e[-1 + ca.field_k][hf.field_t + 1].field_r = 975;
+                    !mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].field_E) {
+                    mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t + 1].field_S = true;
+                    mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t + 1].field_r = 975;
                     if (sc.field_b) {
-                      ag.a(true, 28, 1 + hf.field_t << 5, -1 + ca.field_k << 5);
+                      ag.a(true, 28, 1 + hf.field_t << 5, -1 + NanoFrameTimer.field_k << 5);
                     }
                   }
                   AccountRequestState.field_k = 0;
@@ -2778,25 +2778,25 @@ public final class MinerDisturbance extends ob {
                     if (sk.field_d > 80 &&
                       IsaacRandom.field_i < 0 &&
                       rg.field_wb >= 0 &&
-                      mh.field_e[ca.field_k + 1][-1 + hf.field_t].g()) {
+                      mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].g()) {
                       sk.field_d = 80;
                     }
                     if (sk.field_d < -80 &&
                       IsaacRandom.field_i < 0 &&
                       0 >= rg.field_wb &&
-                      mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
+                      mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                       sk.field_d = -80;
                     }
                     if (sk.field_d > 80 &&
                       IsaacRandom.field_i > 0 &&
                       rg.field_wb >= 0 &&
-                      mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
+                      mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].g()) {
                       sk.field_d = 80;
                     }
                     if (sk.field_d < -80 &&
                       IsaacRandom.field_i > 0 &&
                       rg.field_wb <= 0 &&
-                      mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
+                      mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].g()) {
                       sk.field_d = -80;
                     }
                   }
@@ -2805,42 +2805,42 @@ public final class MinerDisturbance extends ob {
                 if (sk.field_d > 80 &&
                   IsaacRandom.field_i < 0 &&
                   rg.field_wb >= 0 &&
-                  mh.field_e[ca.field_k + 1][-1 + hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if (sk.field_d < -80 &&
                   IsaacRandom.field_i < 0 &&
                   0 >= rg.field_wb &&
-                  mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
+                  mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
                   sk.field_d = -80;
                 }
                 if (sk.field_d > 80 &&
                   IsaacRandom.field_i > 0 &&
                   rg.field_wb >= 0 &&
-                  mh.field_e[ca.field_k + 1][1 + hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].g()) {
                   sk.field_d = 80;
                 }
                 if (sk.field_d < -80 &&
                   IsaacRandom.field_i > 0 &&
                   rg.field_wb <= 0 &&
-                  mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
+                  mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].g()) {
                   sk.field_d = -80;
                 }
               }
               stackIn_1669_0 = (1 != cm.field_o) ? 0 : 1;
               var8Lifetime1 = stackIn_1669_0;
               if (sk.field_d > 40 &&
-                mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+                mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
                 sk.field_d = 40;
                 if (var8Lifetime1 != 0 &&
                   rg.field_wb > 28 &&
-                  mh.field_e[ca.field_k + 1][hf.field_t].field_v) {
-                  mh.field_e[ca.field_k + 1][hf.field_t].field_S = true;
-                  mh.field_e[ca.field_k + 1][hf.field_t].field_r = 975;
+                  mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_v) {
+                  mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_S = true;
+                  mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_r = 975;
                   rg.field_wb = -10;
                   AccountRequestState.field_k = AccountRequestState.field_k - 10;
                   if (sc.field_b) {
-                    ag.a(true, 28, hf.field_t << 5, 1 + ca.field_k << 5);
+                    ag.a(true, 28, hf.field_t << 5, 1 + NanoFrameTimer.field_k << 5);
                     if (var21 != 0) {
                       rg.field_wb = 0;
                     }
@@ -2851,17 +2851,17 @@ public final class MinerDisturbance extends ob {
               }
               var9Lifetime1 = 0;
               if (sk.field_d < -40 &&
-                mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
+                mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                 sk.field_d = -40;
                 if (var8Lifetime1 != 0 &&
                   rg.field_wb < -28 &&
-                  mh.field_e[-1 + ca.field_k][hf.field_t].field_v) {
-                  mh.field_e[-1 + ca.field_k][hf.field_t].field_S = true;
-                  mh.field_e[ca.field_k - 1][hf.field_t].field_r = 975;
+                  mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_v) {
+                  mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_S = true;
+                  mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_r = 975;
                   rg.field_wb = 10;
                   AccountRequestState.field_k = AccountRequestState.field_k - 10;
                   if (sc.field_b) {
-                    ag.a(true, 28, hf.field_t << 5, -1 + ca.field_k << 5);
+                    ag.a(true, 28, hf.field_t << 5, -1 + NanoFrameTimer.field_k << 5);
                     if (var21 != 0) {
                       rg.field_wb = 0;
                     }
@@ -2872,11 +2872,11 @@ public final class MinerDisturbance extends ob {
               }
               if (sk.field_d > 160) {
                 var9Lifetime1 = 1;
-                ca.field_k = ca.field_k + 1;
+                NanoFrameTimer.field_k = NanoFrameTimer.field_k + 1;
                 sk.field_d = sk.field_d - 320;
               }
               if (sk.field_d < -160) {
-                ca.field_k = ca.field_k - 1;
+                NanoFrameTimer.field_k = NanoFrameTimer.field_k - 1;
                 var9Lifetime1 = 1;
                 sk.field_d = sk.field_d + 320;
               }
@@ -2892,7 +2892,7 @@ public final class MinerDisturbance extends ob {
               }
               if (var9Lifetime1 != 0 &&
                 var4Lifetime3 == 0 &&
-                je.field_O.f(hf.field_t, 2, ca.field_k)) {
+                je.field_O.f(hf.field_t, 2, NanoFrameTimer.field_k)) {
                 ne.a(BufferedSocket.a((byte) -73, 4) + 57, 85);
               }
               boolean decompiledFrameRemainder2 = true;
@@ -2911,10 +2911,10 @@ public final class MinerDisturbance extends ob {
                   rg.field_wb = 15;
                 }
               }
-              if (var2_int == 0 && (je.c(ca.field_k, hf.field_t, 1, 1) ||
-                je.a(ca.field_k, hf.field_t, 1, 1))) {
+              if (var2_int == 0 && (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) ||
+                je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1))) {
                 if (sc.field_b) {
-                  ag.a(true, 17, hf.field_t * 32, ca.field_k * 32);
+                  ag.a(true, 17, hf.field_t * 32, NanoFrameTimer.field_k * 32);
                 }
                 rj.field_f = 2;
               }
@@ -2925,13 +2925,13 @@ public final class MinerDisturbance extends ob {
                 !qd.field_O[49] ||
                 !qe.field_b[20] ||
                 !(10 < qd.field_K)) {
-                if ((!je.c(ca.field_k, hf.field_t, 1, 3)) &&
+                if ((!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 3)) &&
                   (pl.field_h == 15)) {
                   var13 = (640 + IsaacRandom.field_i * 4) / 320;
                   if (var13 == 4) {
                     var13--;
                   }
-                  if (je.c(ca.field_k, hf.field_t + 1, 1, var13)) {
+                  if (je.c(NanoFrameTimer.field_k, hf.field_t + 1, 1, var13)) {
                     gm.b(100);
                   }
                   if (var21 != 0) {
@@ -3106,9 +3106,9 @@ public final class MinerDisturbance extends ob {
               }
               if (kj.field_d == 16) {
                 var13Lifetime2 = jf.b((byte) 52);
-                uf.field_p[var13Lifetime2] = new gf(ca.field_k, hf.field_t, 11);
+                uf.field_p[var13Lifetime2] = new gf(NanoFrameTimer.field_k, hf.field_t, 11);
                 uf.field_p[var13Lifetime2].field_i = MidiPcmStream.field_K;
-                if (je.c(ca.field_k, hf.field_t, 1, 1)) {
+                if (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
                   uf.field_p[var13Lifetime2].field_g = -1;
                 }
                 ne.a(0, param0 + 16391);
@@ -3140,7 +3140,7 @@ public final class MinerDisturbance extends ob {
             }
             if ((decompiledFrameRemainder24) &&
               (decompiledFrameRemainder23)) {
-              var10Lifetime1 = MidiPcmStream.field_K + ca.field_k;
+              var10Lifetime1 = MidiPcmStream.field_K + NanoFrameTimer.field_k;
               var11Lifetime1 = -16 + var10Lifetime1;
               if (var11Lifetime1 < 0) {
                 var11Lifetime1 = -var11Lifetime1;
@@ -3167,21 +3167,21 @@ public final class MinerDisturbance extends ob {
                 tb.field_c = 90;
               }
               if (18 == kj.field_d) {
-                boolean decompiledSharedTail1 = !(mh.field_e[ca.field_k + MidiPcmStream.field_K][hf.field_t].field_S);
+                boolean decompiledSharedTail1 = !(mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K][hf.field_t].field_S);
                 if (!decompiledSharedTail1) {
-                  boolean decompiledSharedTail0 = !(!mh.field_e[ca.field_k + 2 * MidiPcmStream.field_K][hf.field_t].field_a);
+                  boolean decompiledSharedTail0 = !(!mh.field_e[NanoFrameTimer.field_k + 2 * MidiPcmStream.field_K][hf.field_t].field_a);
                   if (!decompiledSharedTail0) {
-                    mh.field_e[MidiPcmStream.field_K * 2 + ca.field_k][hf.field_t].field_a = true;
-                    mh.field_e[MidiPcmStream.field_K * 1 + ca.field_k][hf.field_t].field_a = false;
-                    mh.field_e[ca.field_k + MidiPcmStream.field_K * 2][hf.field_t].field_U = mh.field_e[MidiPcmStream.field_K * 1 + ca.field_k][hf.field_t].field_U;
-                    mh.field_e[MidiPcmStream.field_K * 1 + ca.field_k][hf.field_t].field_U = -1;
-                    mh.field_e[MidiPcmStream.field_K * 2 + ca.field_k][hf.field_t].field_S = mh.field_e[1 * MidiPcmStream.field_K + ca.field_k][hf.field_t].field_S;
-                    mh.field_e[ca.field_k + MidiPcmStream.field_K * 2][hf.field_t].field_r = 1000;
-                    uf.field_p[jf.b((byte) 108)] = new gf(MidiPcmStream.field_K * 1 + ca.field_k, hf.field_t, 8);
+                    mh.field_e[MidiPcmStream.field_K * 2 + NanoFrameTimer.field_k][hf.field_t].field_a = true;
+                    mh.field_e[MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k][hf.field_t].field_a = false;
+                    mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K * 2][hf.field_t].field_U = mh.field_e[MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k][hf.field_t].field_U;
+                    mh.field_e[MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k][hf.field_t].field_U = -1;
+                    mh.field_e[MidiPcmStream.field_K * 2 + NanoFrameTimer.field_k][hf.field_t].field_S = mh.field_e[1 * MidiPcmStream.field_K + NanoFrameTimer.field_k][hf.field_t].field_S;
+                    mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K * 2][hf.field_t].field_r = 1000;
+                    uf.field_p[jf.b((byte) 108)] = new gf(MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k, hf.field_t, 8);
                     decompiledSharedTail0 = (var21 != 0);
                   }
                   if (decompiledSharedTail0) {
-                    mh.field_e[ca.field_k + 1 * MidiPcmStream.field_K][hf.field_t].field_a = false;
+                    mh.field_e[NanoFrameTimer.field_k + 1 * MidiPcmStream.field_K][hf.field_t].field_a = false;
                   }
                   rg.field_wb = 50 * MidiPcmStream.field_K;
                   rj.field_f = 3;
@@ -3189,10 +3189,10 @@ public final class MinerDisturbance extends ob {
                   decompiledSharedTail1 = (var21 != 0);
                 }
                 if (decompiledSharedTail1) {
-                  mh.field_e[ca.field_k + MidiPcmStream.field_K][hf.field_t].field_S = true;
-                  mh.field_e[ca.field_k + MidiPcmStream.field_K][hf.field_t].field_r = 1000;
+                  mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K][hf.field_t].field_S = true;
+                  mh.field_e[NanoFrameTimer.field_k + MidiPcmStream.field_K][hf.field_t].field_r = 1000;
                 }
-                uf.field_p[jf.b((byte) 60)] = new gf(MidiPcmStream.field_K * 1 + ca.field_k, hf.field_t, 8);
+                uf.field_p[jf.b((byte) 60)] = new gf(MidiPcmStream.field_K * 1 + NanoFrameTimer.field_k, hf.field_t, 8);
               }
               if (kj.field_d <= 20) {
                 break regionExit2;
@@ -3266,10 +3266,10 @@ public final class MinerDisturbance extends ob {
               rg.field_wb = 10;
               MidiPcmStream.field_K = 1;
             }
-            if (je.d(ca.field_k, hf.field_t, 1, 1)) {
-              je.field_O.a(ca.field_k, param0 ^ 16506, hf.field_t);
+            if (je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
+              je.field_O.a(NanoFrameTimer.field_k, param0 ^ 16506, hf.field_t);
               dupTemp$2 = jf.b((byte) 73);
-              dupTemp$3 = new gf(ca.field_k, hf.field_t, 16);
+              dupTemp$3 = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
               uf.field_p[dupTemp$2] = dupTemp$3;
               var13_ref_gfLifetime1 = dupTemp$3;
               var13_ref_gfLifetime1.field_b = 250;
@@ -3318,88 +3318,88 @@ public final class MinerDisturbance extends ob {
             }
             if (var12 != 0) {
               if (IsaacRandom.field_i > 40 &&
-                mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+                mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
                 IsaacRandom.field_i = 40;
                 AccountRequestState.field_k = 0;
               }
               if ((!(IsaacRandom.field_i >= -40)) &&
-                (mh.field_e[ca.field_k][hf.field_t - 1].g())) {
+                (mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].g())) {
                 AccountRequestState.field_k = 0;
                 IsaacRandom.field_i = -40;
                 if (var21 != 0) {
                   if (sk.field_d > 80 &&
-                    mh.field_e[1 + ca.field_k][hf.field_t].g()) {
+                    mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                     sk.field_d = 80;
                   }
                   if (sk.field_d < -80 &&
-                    mh.field_e[ca.field_k - 1][hf.field_t].g()) {
+                    mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g()) {
                     sk.field_d = -80;
                   }
                 }
               }
             } else {
               if (sk.field_d > 80 &&
-                mh.field_e[1 + ca.field_k][hf.field_t].g()) {
+                mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                 sk.field_d = 80;
               }
               if (sk.field_d < -80 &&
-                mh.field_e[ca.field_k - 1][hf.field_t].g()) {
+                mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g()) {
                 sk.field_d = -80;
               }
             }
             if (80 < sk.field_d &&
               -40 > IsaacRandom.field_i &&
-              mh.field_e[ca.field_k + 1][-1 + hf.field_t].g()) {
+              mh.field_e[NanoFrameTimer.field_k + 1][-1 + hf.field_t].g()) {
               sk.field_d = 80;
             }
             if (sk.field_d < -80 &&
               -40 > IsaacRandom.field_i &&
-              mh.field_e[-1 + ca.field_k][-1 + hf.field_t].g()) {
+              mh.field_e[-1 + NanoFrameTimer.field_k][-1 + hf.field_t].g()) {
               sk.field_d = -80;
             }
             if (sk.field_d > 80 &&
               IsaacRandom.field_i > 40 &&
-              mh.field_e[ca.field_k + 1][hf.field_t + 1].g()) {
+              mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t + 1].g()) {
               sk.field_d = 80;
             }
             if (sk.field_d < -80 &&
               IsaacRandom.field_i > 40 &&
-              mh.field_e[ca.field_k - 1][1 + hf.field_t].g()) {
+              mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].g()) {
               sk.field_d = -80;
             }
             if (var12 == 0) {
               if (40 < IsaacRandom.field_i &&
-                mh.field_e[ca.field_k][1 + hf.field_t].g()) {
+                mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].g()) {
                 IsaacRandom.field_i = 40;
                 AccountRequestState.field_k = 0;
               }
               if ((!(-40 <= IsaacRandom.field_i)) &&
-                (mh.field_e[ca.field_k][-1 + hf.field_t].g())) {
+                (mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].g())) {
                 IsaacRandom.field_i = -40;
                 AccountRequestState.field_k = 0;
                 if (var21 != 0) {
                   if (sk.field_d > 80 &&
-                    mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+                    mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
                     sk.field_d = 80;
                   }
                   if (sk.field_d < -80 &&
-                    mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
+                    mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                     sk.field_d = -80;
                   }
                 }
               }
             } else {
               if (sk.field_d > 80 &&
-                mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+                mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
                 sk.field_d = 80;
               }
               if (sk.field_d < -80 &&
-                mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
+                mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
                 sk.field_d = -80;
               }
             }
             if (sk.field_d > 160) {
-              ca.field_k = ca.field_k + 1;
+              NanoFrameTimer.field_k = NanoFrameTimer.field_k + 1;
               sk.field_d = sk.field_d - 320;
             }
             if (IsaacRandom.field_i > 160) {
@@ -3407,30 +3407,30 @@ public final class MinerDisturbance extends ob {
               hf.field_t = hf.field_t + 1;
             }
             if (sk.field_d < -160) {
-              ca.field_k = ca.field_k - 1;
+              NanoFrameTimer.field_k = NanoFrameTimer.field_k - 1;
               sk.field_d = sk.field_d + 320;
             }
             if (IsaacRandom.field_i < -160) {
               IsaacRandom.field_i = IsaacRandom.field_i + 320;
               hf.field_t = hf.field_t - 1;
             }
-            if (je.c(ca.field_k, hf.field_t, 1, 1)) {
+            if (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
               rj.field_f = 2;
             }
           }
           boolean decompiledFrameRemainder1 = true;
-          if (je.c(ca.field_k, hf.field_t, 1, 1) ||
-            je.a(ca.field_k, hf.field_t, 1, 1) ||
-            je.d(ca.field_k, hf.field_t, 1, 1) &&
+          if (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) ||
+            je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1) ||
+            je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
             !qe.field_b[3]) {
             boolean decompiledFrameRemainder0 = true;
-            if (!je.c(ca.field_k, hf.field_t, 1, 1) &&
-              je.d(ca.field_k, hf.field_t, 1, 1) &&
+            if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
+              je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1) &&
               kn.field_E > 300 &&
               !qe.field_b[3]) {
               if (sc.field_b &&
                 !ByteStorage.a(16, 11764)) {
-                var6Lifetime3 = 32 * ca.field_k + sk.field_d / 10;
+                var6Lifetime3 = 32 * NanoFrameTimer.field_k + sk.field_d / 10;
                 var7Lifetime3 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                 var8Lifetime2 = -GzipDecompressor.field_a.field_x + (var6Lifetime3 - 1);
                 var9Lifetime2 = -1 + var7Lifetime3;
@@ -3447,7 +3447,7 @@ public final class MinerDisturbance extends ob {
                 if ((!qe.field_b[2]) &&
                   (!(450 <= kn.field_E)) &&
                   (!ByteStorage.a(9, 11764))) {
-                  var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
+                  var6Lifetime3Lifetime1 = sk.field_d / 10 + NanoFrameTimer.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                   var8Lifetime2Lifetime1 = -1 - GzipDecompressor.field_a.field_x + var6Lifetime3Lifetime1;
                   var9Lifetime2Lifetime1 = -1 + var7Lifetime3Lifetime1;
@@ -3455,7 +3455,7 @@ public final class MinerDisturbance extends ob {
                 }
               } else {
                 if (!ByteStorage.a(9, 11764)) {
-                  var6Lifetime3Lifetime1 = sk.field_d / 10 + ca.field_k * 32;
+                  var6Lifetime3Lifetime1 = sk.field_d / 10 + NanoFrameTimer.field_k * 32;
                   var7Lifetime3Lifetime1 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                   var8Lifetime2Lifetime1 = -1 - GzipDecompressor.field_a.field_x + var6Lifetime3Lifetime1;
                   var9Lifetime2Lifetime1 = -1 + var7Lifetime3Lifetime1;
@@ -3471,13 +3471,13 @@ public final class MinerDisturbance extends ob {
             }
             if (decompiledFrameRemainder1) {
               tb.field_c = 55;
-              if (je.c(ca.field_k, hf.field_t, 1, 1)) {
+              if (je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
                 tb.field_c = 63;
               }
               if (!(kn.field_E >= 0)) {
-                if (!je.c(ca.field_k, hf.field_t, 1, 1)) {
-                  if ((!je.a(ca.field_k, hf.field_t, 1, 1)) &&
-                    (decompiledFrameRemainder1 = !(!je.d(ca.field_k, hf.field_t, 1, 1)))) {
+                if (!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) {
+                  if ((!je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1)) &&
+                    (decompiledFrameRemainder1 = !(!je.d(NanoFrameTimer.field_k, hf.field_t, 1, 1)))) {
                     rj.a((byte) -38, 2);
                     decompiledFrameRemainder1 = (var21 != 0);
                   }
@@ -3519,26 +3519,26 @@ public final class MinerDisturbance extends ob {
           }
           if (qe.field_b[16] ||
             1 != cm.field_o ||
-            !mh.field_e[ca.field_k][hf.field_t].field_A) {
-            if ((!je.c(ca.field_k, hf.field_t, 1, 1)) &&
-              (!je.a(ca.field_k, hf.field_t, 1, 1))) {
-              cn.field_C = cn.field_C + 1;
-              if (!(cn.field_C <= 0)) {
-                cn.field_C = 0;
+            !mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_A) {
+            if ((!je.c(NanoFrameTimer.field_k, hf.field_t, 1, 1)) &&
+              (!je.a(NanoFrameTimer.field_k, hf.field_t, 1, 1))) {
+              Bzip2State.field_C = Bzip2State.field_C + 1;
+              if (!(Bzip2State.field_C <= 0)) {
+                Bzip2State.field_C = 0;
                 if (var21 != 0) {
-                  cn.field_C = cn.field_C - 1;
+                  Bzip2State.field_C = Bzip2State.field_C - 1;
                   if (sc.field_b &&
                     !ByteStorage.a(29, 11764)) {
-                    var6Lifetime4 = 32 * ca.field_k + sk.field_d / 10;
+                    var6Lifetime4 = 32 * NanoFrameTimer.field_k + sk.field_d / 10;
                     var7Lifetime4 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
                     var8Lifetime3 = 28 + var6Lifetime4;
                     var9Lifetime3 = -1 + var7Lifetime4;
                     ag.a(true, 29, var9Lifetime3 + 8 - (ef.field_b[3].field_A >> 1), var8Lifetime3 - 2);
                   }
-                  if (-300 > cn.field_C &&
+                  if (-300 > Bzip2State.field_C &&
                     15 == pl.field_h) {
                     if (ke.field_V) {
-                      cn.field_C = -300;
+                      Bzip2State.field_C = -300;
                     }
                     rj.a((byte) -38, 8);
                   }
@@ -3546,25 +3546,25 @@ public final class MinerDisturbance extends ob {
               }
             }
           } else {
-            cn.field_C = cn.field_C - 1;
+            Bzip2State.field_C = Bzip2State.field_C - 1;
             if (sc.field_b &&
               !ByteStorage.a(29, 11764)) {
-              var6Lifetime4 = 32 * ca.field_k + sk.field_d / 10;
+              var6Lifetime4 = 32 * NanoFrameTimer.field_k + sk.field_d / 10;
               var7Lifetime4 = IsaacRandom.field_i / 10 + 32 * hf.field_t;
               var8Lifetime3 = 28 + var6Lifetime4;
               var9Lifetime3 = -1 + var7Lifetime4;
               ag.a(true, 29, var9Lifetime3 + 8 - (ef.field_b[3].field_A >> 1), var8Lifetime3 - 2);
             }
-            if (-300 > cn.field_C &&
+            if (-300 > Bzip2State.field_C &&
               15 == pl.field_h) {
               if (ke.field_V) {
-                cn.field_C = -300;
+                Bzip2State.field_C = -300;
               }
               rj.a((byte) -38, 8);
             }
           }
-          if (!(je.e(ca.field_k, hf.field_t, 1, 1) <= 0) ||
-            !(je.e(ca.field_k, hf.field_t, 2, 2) <= 0)) {
+          if (!(je.e(NanoFrameTimer.field_k, hf.field_t, 1, 1) <= 0) ||
+            !(je.e(NanoFrameTimer.field_k, hf.field_t, 2, 2) <= 0)) {
             rj.a((byte) -38, 3);
           }
           var6Lifetime5 = je.a() ? 1 : 0;
@@ -3573,13 +3573,13 @@ public final class MinerDisturbance extends ob {
             var6Lifetime5 != 0) {
             ul.field_b = 30;
           }
-          var7Lifetime5 = je.field_O.f(hf.field_t, 2, ca.field_k) ? 1 : 0;
+          var7Lifetime5 = je.field_O.f(hf.field_t, 2, NanoFrameTimer.field_k) ? 1 : 0;
           if (ul.field_b > 0 && (var2_int != 0 ||
             var6Lifetime5 != 0 ||
             var7Lifetime5 != 0)) {
             if (var6Lifetime5 == 0 &&
               var7Lifetime5 != 0) {
-              var8_ref_gf = new gf(ca.field_k, hf.field_t, 16);
+              var8_ref_gf = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
               var8_ref_gf.field_b = 250;
               uf.field_p[jf.b((byte) 53)] = var8_ref_gf;
               ul.field_b = 1;
@@ -3590,8 +3590,8 @@ public final class MinerDisturbance extends ob {
               rj.a((byte) -38, 12);
             }
           }
-          if (mh.field_e[ca.field_k][hf.field_t].field_a &&
-            !mh.field_e[ca.field_k][hf.field_t].field_v &&
+          if (mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a &&
+            !mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_v &&
             !qe.field_b[7]) {
             rj.a((byte) -38, 4);
           }
@@ -3631,7 +3631,7 @@ public final class MinerDisturbance extends ob {
               ch.field_h = -1;
             }
           }
-          stackIn_2601_0 = mh.field_e[ca.field_k][hf.field_t];
+          stackIn_2601_0 = mh.field_e[NanoFrameTimer.field_k][hf.field_t];
           if (!qe.field_b[6]) {
             stackIn_2602_1 = 180;
           } else {
@@ -3643,8 +3643,8 @@ public final class MinerDisturbance extends ob {
           mh.field_e[16][1].field_i = 255;
           mh.field_e[16][2].field_i = 255;
           mh.field_e[16][3].field_i = 255;
-          mh.field_e[ca.field_k][hf.field_t].field_V = true;
-          mh.field_e[ca.field_k][hf.field_t].field_e = true;
+          mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_V = true;
+          mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_e = true;
           var8Lifetime4 = qd.field_O[83] ? 1 : 0;
           var9Lifetime4 = -1;
           var10Lifetime2 = -1;
@@ -3755,55 +3755,55 @@ public final class MinerDisturbance extends ob {
           var19 = stackIn_2771_0;
           if ((var11Lifetime2 != 0 ||
             this.field_U == 5) && (var19 != 0 &&
-            mh.field_e[-1 + ca.field_k][hf.field_t].field_a &&
-            mh.field_e[ca.field_k][-1 + hf.field_t].field_a)) {
+            mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a &&
+            mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].field_a)) {
             rj.field_f = 7;
             kj.field_d = 0;
             var19 = 0;
-            var9Lifetime4 = ca.field_k - 1;
+            var9Lifetime4 = NanoFrameTimer.field_k - 1;
             var10Lifetime2 = hf.field_t;
             MidiPcmStream.field_K = -1;
           }
           if ((var14Lifetime1 != 0 ||
             this.field_U == 3) &&
             (var19 != 0 &&
-            mh.field_e[-1 + ca.field_k][hf.field_t].field_a &&
-            mh.field_e[ca.field_k][hf.field_t + 1].field_a)) {
+            mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a &&
+            mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_a)) {
             var10Lifetime2 = hf.field_t;
             kj.field_d = 0;
             MidiPcmStream.field_K = -1;
             var19 = 0;
-            var9Lifetime4 = ca.field_k - 1;
+            var9Lifetime4 = NanoFrameTimer.field_k - 1;
             rj.field_f = 7;
           }
           if ((var13Lifetime1 != 0 ||
             this.field_U == 5) &&
             (var19 != 0 &&
-            mh.field_e[ca.field_k + 1][hf.field_t].field_a &&
-            mh.field_e[ca.field_k][-1 + hf.field_t].field_a)) {
+            mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_a &&
+            mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].field_a)) {
             rj.field_f = 7;
             kj.field_d = 0;
             MidiPcmStream.field_K = 1;
             var19 = 0;
             var10Lifetime2 = hf.field_t;
-            var9Lifetime4 = ca.field_k + 1;
+            var9Lifetime4 = NanoFrameTimer.field_k + 1;
           }
           if (var16 != 0 &&
             var19 != 0 &&
-            mh.field_e[1 + ca.field_k][hf.field_t].field_a &&
-            mh.field_e[ca.field_k][hf.field_t + 1].field_a) {
+            mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a &&
+            mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_a) {
             var19 = 0;
             kj.field_d = 0;
             MidiPcmStream.field_K = 1;
-            var9Lifetime4 = ca.field_k + 1;
+            var9Lifetime4 = NanoFrameTimer.field_k + 1;
             rj.field_f = 7;
             var10Lifetime2 = hf.field_t;
           }
           if ((var11Lifetime2 != 0 ||
             5 == this.field_U) &&
             (var19 != 0 &&
-            mh.field_e[-1 + ca.field_k][hf.field_t - 1].field_a)) {
-            var9Lifetime4 = ca.field_k - 1;
+            mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - 1].field_a)) {
+            var9Lifetime4 = NanoFrameTimer.field_k - 1;
             kj.field_d = 0;
             MidiPcmStream.field_K = -1;
             var10Lifetime2 = -1 + hf.field_t;
@@ -3812,9 +3812,9 @@ public final class MinerDisturbance extends ob {
           if ((var17 != 0 ||
             4 == this.field_U) &&
             (var19 != 0 &&
-            mh.field_e[ca.field_k - 1][hf.field_t].field_a)) {
+            mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_a)) {
             MidiPcmStream.field_K = -1;
-            var9Lifetime4 = ca.field_k - 1;
+            var9Lifetime4 = NanoFrameTimer.field_k - 1;
             var10Lifetime2 = hf.field_t;
             rj.field_f = 7;
             kj.field_d = 0;
@@ -3822,8 +3822,8 @@ public final class MinerDisturbance extends ob {
           if ((var14Lifetime1 != 0 ||
             this.field_U == 3) &&
             (var19 != 0 &&
-            mh.field_e[ca.field_k - 1][hf.field_t + 1].field_a)) {
-            var9Lifetime4 = ca.field_k - 1;
+            mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].field_a)) {
+            var9Lifetime4 = NanoFrameTimer.field_k - 1;
             kj.field_d = 0;
             rj.field_f = 7;
             MidiPcmStream.field_K = -1;
@@ -3832,27 +3832,27 @@ public final class MinerDisturbance extends ob {
           if ((var13Lifetime1 != 0 ||
             this.field_U == 5) &&
             (var19 != 0 &&
-            mh.field_e[1 + ca.field_k][hf.field_t - 1].field_a)) {
+            mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t - 1].field_a)) {
             rj.field_f = 7;
             MidiPcmStream.field_K = 1;
             var10Lifetime2 = hf.field_t - 1;
             kj.field_d = 0;
-            var9Lifetime4 = 1 + ca.field_k;
+            var9Lifetime4 = 1 + NanoFrameTimer.field_k;
           }
           if ((var18 != 0 ||
             this.field_U == 1) &&
             (var19 != 0 &&
-            mh.field_e[ca.field_k + 1][hf.field_t].field_a)) {
+            mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_a)) {
             MidiPcmStream.field_K = 1;
             kj.field_d = 0;
-            var9Lifetime4 = 1 + ca.field_k;
+            var9Lifetime4 = 1 + NanoFrameTimer.field_k;
             var10Lifetime2 = hf.field_t;
             rj.field_f = 7;
           }
           if (var16 != 0 &&
             var19 != 0 &&
-            mh.field_e[1 + ca.field_k][hf.field_t + 1].field_a) {
-            var9Lifetime4 = ca.field_k + 1;
+            mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t + 1].field_a) {
+            var9Lifetime4 = NanoFrameTimer.field_k + 1;
             var10Lifetime2 = hf.field_t + 1;
             MidiPcmStream.field_K = 1;
             kj.field_d = 0;
@@ -3861,9 +3861,9 @@ public final class MinerDisturbance extends ob {
           if ((var12Lifetime1 != 0 ||
             5 == this.field_U) &&
             (var19 != 0 &&
-            mh.field_e[ca.field_k][hf.field_t - 1].field_a)) {
+            mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_a)) {
             var10Lifetime2 = hf.field_t - 1;
-            var9Lifetime4 = ca.field_k;
+            var9Lifetime4 = NanoFrameTimer.field_k;
             MidiPcmStream.field_K = 1;
             rj.field_f = 7;
             kj.field_d = 0;
@@ -3871,20 +3871,20 @@ public final class MinerDisturbance extends ob {
           if ((var15 != 0 ||
             this.field_U == 2) &&
             (var19 != 0 &&
-            mh.field_e[ca.field_k][hf.field_t + 1].field_a)) {
+            mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_a)) {
             var10Lifetime2 = 1 + hf.field_t;
             rj.field_f = 7;
             kj.field_d = 0;
-            var9Lifetime4 = ca.field_k;
+            var9Lifetime4 = NanoFrameTimer.field_k;
           }
           if (qe.field_b[5]) {
             stackIn_2934_0 = (4 < rj.field_f) ? 0 : 1;
             var20 = stackIn_2934_0;
             if (var17 != 0 &&
               var20 != 0 &&
-              mh.field_e[-1 + ca.field_k][hf.field_t].field_a) {
+              mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a) {
               ne.a(22, 30);
-              var9Lifetime4 = -1 + ca.field_k;
+              var9Lifetime4 = -1 + NanoFrameTimer.field_k;
               var10Lifetime2 = hf.field_t;
               kj.field_d = 0;
               rj.field_f = 8;
@@ -3892,11 +3892,11 @@ public final class MinerDisturbance extends ob {
             }
             if (var18 != 0 &&
               var20 != 0 &&
-              mh.field_e[1 + ca.field_k][hf.field_t].field_a) {
+              mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a) {
               ne.a(22, 33);
               kj.field_d = 0;
               rj.field_f = 8;
-              var9Lifetime4 = 1 + ca.field_k;
+              var9Lifetime4 = 1 + NanoFrameTimer.field_k;
               var10Lifetime2 = hf.field_t;
               MidiPcmStream.field_K = 1;
             }
@@ -4679,7 +4679,7 @@ public final class MinerDisturbance extends ob {
                 return;
               }
             }
-            ce.field_d.b(ca.field_j, param2, param3, param0, -1);
+            ce.field_d.b(NanoFrameTimer.field_j, param2, param3, param0, -1);
             var5[3].b(var6Lifetime1, 0);
           }
           return;
@@ -4734,7 +4734,7 @@ public final class MinerDisturbance extends ob {
           id.clearStaticReferences(8192);
           pa.clearStaticReferences(param0 ^ 2);
           fb.clearStaticReferences(true);
-          ek.clearStaticReferences((byte) 19);
+          FrameTimer.clearStaticReferences((byte) 19);
           AwtRasterBuffer.resetStaticState(0);
           dm.clearStaticReferences(20583);
           FullscreenFocusCanvas.clearStaticReferences((byte) 79);
@@ -4818,7 +4818,7 @@ public final class MinerDisturbance extends ob {
           nj.clearStaticReferences(-109);
           ByteStorage.clearStaticReferences((byte) -112);
           va.clearStaticReferences();
-          cn.resetStaticState(param0 - 129);
+          Bzip2State.resetStaticState(param0 - 129);
           qf.clearDeclaredStaticReferences(param0 - 28582);
           vc.clearDeclaredStaticReferences(param0 + 105);
           ng.a(-1);
@@ -4877,7 +4877,7 @@ public final class MinerDisturbance extends ob {
           a.clearStaticReferences(0);
           jh.clearStaticReferences((byte) 39);
           ProxyAuthenticationRequiredException.clearStaticReferences(92);
-          ca.b(param0 ^ 11);
+          NanoFrameTimer.b(param0 ^ 11);
           ImageProducerRasterBuffer.d(16711680);
           o.clearStaticReferences(param0 - 23642);
           vk.clearStaticReferences(119);
@@ -5034,15 +5034,15 @@ public final class MinerDisturbance extends ob {
               }
             }
             var4 = -ClientException.field_d + hf.field_t * 32;
-            var3 = -li.field_c + ca.field_k * 32;
+            var3 = -li.field_c + NanoFrameTimer.field_k * 32;
             var4 = -4 + var4 + (var6 >> 1);
             var3 = (var5 >> 1) + var3 - 4;
             var9 = (int)(80.0 * Math.sin(0.1 * (double)fb.field_f) + 100.0);
             var10 = 4281405;
             if (var2_int != 0 &&
-              !mh.field_e[-1 + ca.field_k][hf.field_t - 1].field_b &&
-              mh.field_e[-1 + ca.field_k][hf.field_t - 1].field_a && (!mh.field_e[ca.field_k - 1][hf.field_t].field_a ||
-              !mh.field_e[ca.field_k][-1 + hf.field_t].field_a)) {
+              !mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - 1].field_b &&
+              mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t - 1].field_a && (!mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_a ||
+              !mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].field_a)) {
               var8 = var4 - 32;
               var7 = var3 - 32;
               SoftwareRasterizer.fillRectangleAlpha(var7, var8, 32, 32, var10, var9);
@@ -5050,8 +5050,8 @@ public final class MinerDisturbance extends ob {
               ef.field_b[0].f(var7, var8);
             }
             if (var2_int != 0 &&
-              !mh.field_e[ca.field_k][hf.field_t - 1].field_b &&
-              mh.field_e[ca.field_k][hf.field_t - 1].field_a) {
+              !mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_b &&
+              mh.field_e[NanoFrameTimer.field_k][hf.field_t - 1].field_a) {
               var7Lifetime1 = var3;
               var8Lifetime1 = var4 - 32;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime1, var8Lifetime1, 32, 32, var10, var9);
@@ -5059,17 +5059,17 @@ public final class MinerDisturbance extends ob {
               ef.field_b[1].f(var7Lifetime1, var8Lifetime1);
             }
             if (var2_int != 0 &&
-              !mh.field_e[ca.field_k + 1][hf.field_t - 1].field_b &&
-              mh.field_e[1 + ca.field_k][-1 + hf.field_t].field_a && (!mh.field_e[1 + ca.field_k][hf.field_t].field_a ||
-              !mh.field_e[ca.field_k][-1 + hf.field_t].field_a)) {
+              !mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t - 1].field_b &&
+              mh.field_e[1 + NanoFrameTimer.field_k][-1 + hf.field_t].field_a && (!mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a ||
+              !mh.field_e[NanoFrameTimer.field_k][-1 + hf.field_t].field_a)) {
               var8Lifetime2 = -32 + var4;
               var7Lifetime2 = 32 + var3;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime2, var8Lifetime2, 32, 32, var10, var9);
               SoftwareRasterizer.drawRectangleOutline(var7Lifetime2, var8Lifetime2, 32, 32, var10);
               ef.field_b[2].f(var7Lifetime2, var8Lifetime2);
             }
-            if (!mh.field_e[param0 + ca.field_k][hf.field_t].field_b &&
-              mh.field_e[1 + ca.field_k][hf.field_t].field_a) {
+            if (!mh.field_e[param0 + NanoFrameTimer.field_k][hf.field_t].field_b &&
+              mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_a) {
               var8Lifetime3 = var4;
               var7Lifetime3 = var3 + 32;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime3, var8Lifetime3, 32, 32, var10, var9);
@@ -5077,9 +5077,9 @@ public final class MinerDisturbance extends ob {
               ef.field_b[3].f(var7Lifetime3 + (ef.field_b[3].field_x >> 2), var8Lifetime3 + (ef.field_b[3].field_A >> 2));
             }
             if (var2_int != 0 &&
-              !mh.field_e[1 + ca.field_k][1 + hf.field_t].field_b &&
-              mh.field_e[ca.field_k + 1][hf.field_t + 1].field_a && (!mh.field_e[ca.field_k + 1][hf.field_t].field_a ||
-              !mh.field_e[ca.field_k][hf.field_t + 1].field_a)) {
+              !mh.field_e[1 + NanoFrameTimer.field_k][1 + hf.field_t].field_b &&
+              mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t + 1].field_a && (!mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_a ||
+              !mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_a)) {
               var8Lifetime4 = 32 + var4;
               var7Lifetime4 = 32 + var3;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime4, var8Lifetime4, 32, 32, var10, var9);
@@ -5087,8 +5087,8 @@ public final class MinerDisturbance extends ob {
               ef.field_b[4].f(var7Lifetime4, var8Lifetime4);
             }
             if (var2_int != 0 &&
-              !mh.field_e[ca.field_k][1 + hf.field_t].field_b &&
-              mh.field_e[ca.field_k][hf.field_t + 1].field_a) {
+              !mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_b &&
+              mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_a) {
               var8Lifetime5 = 32 + var4;
               var7Lifetime5 = var3;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime5, var8Lifetime5, 32, 32, var10, var9);
@@ -5096,17 +5096,17 @@ public final class MinerDisturbance extends ob {
               ef.field_b[5].f(var7Lifetime5, var8Lifetime5);
             }
             if (var2_int != 0 &&
-              !mh.field_e[ca.field_k - 1][hf.field_t + 1].field_b &&
-              mh.field_e[ca.field_k - 1][1 + hf.field_t].field_a && (!mh.field_e[-1 + ca.field_k][hf.field_t].field_a ||
-              !mh.field_e[ca.field_k][1 + hf.field_t].field_a)) {
+              !mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].field_b &&
+              mh.field_e[NanoFrameTimer.field_k - 1][1 + hf.field_t].field_a && (!mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_a ||
+              !mh.field_e[NanoFrameTimer.field_k][1 + hf.field_t].field_a)) {
               var7Lifetime6 = var3 - 32;
               var8Lifetime6 = var4 + 32;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime6, var8Lifetime6, 32, 32, var10, var9);
               SoftwareRasterizer.drawRectangleOutline(var7Lifetime6, var8Lifetime6, 32, 32, var10);
               ef.field_b[6].f(var7Lifetime6, var8Lifetime6);
             }
-            if (!mh.field_e[ca.field_k - 1][hf.field_t].field_b &&
-              mh.field_e[ca.field_k - 1][hf.field_t].field_a) {
+            if (!mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_b &&
+              mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_a) {
               var8Lifetime7 = var4;
               var7Lifetime7 = var3 - 32;
               SoftwareRasterizer.fillRectangleAlpha(var7Lifetime7, var8Lifetime7, 32, 32, var10, var9);
@@ -5615,16 +5615,16 @@ public final class MinerDisturbance extends ob {
         try {
           sk.field_d = sk.field_d + rg.field_wb;
           if (80 < sk.field_d &&
-            mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+            mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
             sk.field_d = 80;
-            if (mh.field_e[ca.field_k + 1][hf.field_t].field_v &&
+            if (mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_v &&
               rg.field_wb > 28) {
-              mh.field_e[1 + ca.field_k][hf.field_t].field_S = true;
-              mh.field_e[ca.field_k + 1][hf.field_t].field_r = 975;
+              mh.field_e[1 + NanoFrameTimer.field_k][hf.field_t].field_S = true;
+              mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].field_r = 975;
               AccountRequestState.field_k = AccountRequestState.field_k + 10;
               rg.field_wb = -10;
               if (sc.field_b) {
-                ag.a(true, 28, hf.field_t << 5, ca.field_k + 1 << 5);
+                ag.a(true, 28, hf.field_t << 5, NanoFrameTimer.field_k + 1 << 5);
                 if ((var4 != 0) &&
                   (rg.field_wb > 1)) {
                   rg.field_wb = rg.field_wb - 1;
@@ -5637,16 +5637,16 @@ public final class MinerDisturbance extends ob {
             }
           }
           if (sk.field_d < -80 &&
-            mh.field_e[-1 + ca.field_k][hf.field_t].g()) {
+            mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].g()) {
             sk.field_d = -80;
-            if (mh.field_e[-1 + ca.field_k][hf.field_t].field_v &&
+            if (mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_v &&
               rg.field_wb < -28) {
-              mh.field_e[ca.field_k - 1][hf.field_t].field_S = true;
-              mh.field_e[-1 + ca.field_k][hf.field_t].field_r = 975;
+              mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].field_S = true;
+              mh.field_e[-1 + NanoFrameTimer.field_k][hf.field_t].field_r = 975;
               rg.field_wb = 10;
               AccountRequestState.field_k = AccountRequestState.field_k + 10;
               if (sc.field_b) {
-                ag.a(true, 28, hf.field_t << 5, -1 + ca.field_k << 5);
+                ag.a(true, 28, hf.field_t << 5, -1 + NanoFrameTimer.field_k << 5);
                 if ((var4 != 0) &&
                   (rg.field_wb < -1)) {
                   rg.field_wb = rg.field_wb + 1;
@@ -5660,20 +5660,20 @@ public final class MinerDisturbance extends ob {
           }
           if (sk.field_d > 160) {
             sk.field_d = sk.field_d - 320;
-            ca.field_k = ca.field_k + 1;
+            NanoFrameTimer.field_k = NanoFrameTimer.field_k + 1;
           }
           var2_int = -94 % ((2 - param0) / 61);
           if (-160 > sk.field_d) {
-            ca.field_k = ca.field_k - 1;
+            NanoFrameTimer.field_k = NanoFrameTimer.field_k - 1;
             sk.field_d = sk.field_d + 320;
           }
           boolean decompiledFrameRemainder0 = true;
           if (!qe.field_b[18] && (!(tc.field_s <= 0) ||
-            mh.field_e[ca.field_k][hf.field_t + 1].field_E ||
+            mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].field_E ||
             sk.field_d > 0 &&
-            mh.field_e[ca.field_k + 1][1 + hf.field_t].field_E ||
+            mh.field_e[NanoFrameTimer.field_k + 1][1 + hf.field_t].field_E ||
             !(sk.field_d >= 0) &&
-            mh.field_e[-1 + ca.field_k][1 + hf.field_t].field_E)) {
+            mh.field_e[-1 + NanoFrameTimer.field_k][1 + hf.field_t].field_E)) {
             stackIn_74_0 = 1;
             decompiledFrameRemainder0 = false;
           }
@@ -5922,7 +5922,7 @@ public final class MinerDisturbance extends ob {
           s.field_L[0].f(var3, -s.field_L[0].field_A + 76);
           SoftwareRasterizer.setClip(var3, 76, s.field_L[1].field_x + 580, 76 - (-this.field_G + this.field_W));
           var4 = 76 + this.field_G;
-          var5 = -li.field_c + (32 * ca.field_k + sk.field_d / 10);
+          var5 = -li.field_c + (32 * NanoFrameTimer.field_k + sk.field_d / 10);
           var6 = -ClientException.field_d + (hf.field_t * 32 + IsaacRandom.field_i / 10);
           if ((var3 - 96) < var5 &&
             var6 > -20 &&
@@ -6089,8 +6089,8 @@ public final class MinerDisturbance extends ob {
                   continue;
                 }
               } else {
-                SoftwareRasterizer.fillCircle(580 + (ca.field_k + 2), -this.field_W + (hf.field_t + 76), 2, 16777215);
-                SoftwareRasterizer.drawCircleOutline(ca.field_k + 580 + 2, 76 - this.field_W + hf.field_t, 3, 0);
+                SoftwareRasterizer.fillCircle(580 + (NanoFrameTimer.field_k + 2), -this.field_W + (hf.field_t + 76), 2, 16777215);
+                SoftwareRasterizer.drawCircleOutline(NanoFrameTimer.field_k + 580 + 2, 76 - this.field_W + hf.field_t, 3, 0);
                 SoftwareRasterizer.resetClip();
                 s.field_L[2].f(var3, Math.max(this.field_G - this.field_W, 0) + 76);
                 stackIn_112_0 = var7;
@@ -6381,14 +6381,14 @@ public final class MinerDisturbance extends ob {
               qd.field_K = 100;
               tc.field_s = 0;
               hf.field_t = 4;
-              ca.field_g = 0;
-              ca.field_k = 16;
+              NanoFrameTimer.field_g = 0;
+              NanoFrameTimer.field_k = 16;
               kj.field_d = 0;
               this.field_Y = false;
               IsaacRandom.field_i = 0;
               sk.field_d = 0;
               tb.field_c = 0;
-              cn.field_C = 0;
+              Bzip2State.field_C = 0;
               rj.field_f = 0;
               break;
             }
@@ -6957,15 +6957,15 @@ public final class MinerDisturbance extends ob {
               qe.field_b[0]) && ke.field_V) {
               gi.field_c = 25;
               if (sc.field_b) {
-                ag.a(true, 10, 32 * hf.field_t, ca.field_k * 32);
+                ag.a(true, 10, 32 * hf.field_t, NanoFrameTimer.field_k * 32);
               }
               if (qe.field_b[1]) {
                 var6Lifetime1Lifetime3 = jf.b((byte) 110);
-                uf.field_p[var6Lifetime1Lifetime3] = new gf(ca.field_k, hf.field_t, 7);
+                uf.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 7);
                 cc.a(var6Lifetime1Lifetime3, 136989569);
               } else {
                 var6Lifetime1Lifetime3 = jf.b((byte) 101);
-                uf.field_p[var6Lifetime1Lifetime3] = new gf(ca.field_k, hf.field_t, 6);
+                uf.field_p[var6Lifetime1Lifetime3] = new gf(NanoFrameTimer.field_k, hf.field_t, 6);
                 fn.b(var6Lifetime1Lifetime3, 100);
               }
             }
@@ -6976,10 +6976,10 @@ public final class MinerDisturbance extends ob {
               ke.field_V) {
               gi.field_c = 25;
               if (sc.field_b) {
-                ag.a(true, 26, 32 * hf.field_t, ca.field_k * 32);
+                ag.a(true, 26, 32 * hf.field_t, NanoFrameTimer.field_k * 32);
               }
               var6Lifetime1Lifetime4 = jf.b((byte) 88);
-              uf.field_p[var6Lifetime1Lifetime4] = new gf(ca.field_k, hf.field_t, 20);
+              uf.field_p[var6Lifetime1Lifetime4] = new gf(NanoFrameTimer.field_k, hf.field_t, 20);
               cc.a(var6Lifetime1Lifetime4, 136989569);
             }
             stackIn_402_0 = (rj.field_f > 1) ? 0 : 1;
@@ -6989,7 +6989,7 @@ public final class MinerDisturbance extends ob {
               var6Lifetime1Lifetime5 != 0 &&
               qe.field_b[8] &&
               ke.field_V) {
-              if (!je.c(ca.field_k, hf.field_t, 3, 3)) {
+              if (!je.c(NanoFrameTimer.field_k, hf.field_t, 3, 3)) {
                 rj.field_f = 9;
               } else {
                 rj.field_f = 11;
@@ -7004,7 +7004,7 @@ public final class MinerDisturbance extends ob {
                 gi.field_c = 25;
                 if (dg.field_b) {
                   ne.a(17, -126);
-                  uf.field_p[jf.b((byte) 78)] = new gf(ca.field_k, hf.field_t, 15);
+                  uf.field_p[jf.b((byte) 78)] = new gf(NanoFrameTimer.field_k, hf.field_t, 15);
                 }
               }
               if (d.field_b &&
@@ -7014,7 +7014,7 @@ public final class MinerDisturbance extends ob {
                 gi.field_c = 25;
                 if (rj.field_b) {
                   ne.a(17, 115);
-                  uf.field_p[jf.b((byte) 49)] = new gf(ca.field_k, hf.field_t, 18);
+                  uf.field_p[jf.b((byte) 49)] = new gf(NanoFrameTimer.field_k, hf.field_t, 18);
                 }
               }
               if (d.field_b &&
@@ -7024,18 +7024,18 @@ public final class MinerDisturbance extends ob {
                 gi.field_c = 25;
                 if (nk.field_p) {
                   ne.a(17, 93);
-                  uf.field_p[jf.b((byte) 52)] = new gf(ca.field_k, hf.field_t, 22);
+                  uf.field_p[jf.b((byte) 52)] = new gf(NanoFrameTimer.field_k, hf.field_t, 22);
                 }
               }
               if (~ByteStorage.field_a == ~lj.field_t) {
                 qm.field_f = true;
                 hf.field_t = hf.field_t + 4;
-                mh.field_e[ca.field_k][hf.field_t].field_a = false;
+                mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a = false;
               }
               if (~lj.field_t == ~ProxyAuthenticationRequiredException.field_a) {
                 qm.field_f = true;
                 hf.field_t = hf.field_t - 4;
-                mh.field_e[ca.field_k][hf.field_t].field_a = false;
+                mh.field_e[NanoFrameTimer.field_k][hf.field_t].field_a = false;
               }
               if (39 == lj.field_t) {
                 stackIn_488_1 = !(this.field_V);

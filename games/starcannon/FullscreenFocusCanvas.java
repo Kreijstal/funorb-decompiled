@@ -218,7 +218,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               }
             }
             if (r.field_c == dd.field_b &&
-              fk.a(false)) {
+              Bzip2State.a(false)) {
               BoundedRandomAccessFile.field_a = se.field_p.readLong((byte) 5);
               ad.field_y = se.field_p.readUnsignedByte(7909);
               se.field_p.readUnsignedByte(7909);
@@ -265,14 +265,14 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               if (u.field_d <= 0 &&
                 !jh.field_d) {
                 try {
-                  mb.a(ll.b(param4 + 89), "unzap", true);
+                  JavaScriptBridge.callWithoutArguments(ll.b(param4 + 89), "unzap", true);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  mb.a(new Object[]{ue.a(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
+                  JavaScriptBridge.callWithArguments(new Object[]{ue.a(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -290,7 +290,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               return stackIn_73_0;
             }
             if (ImageProducerRasterBuffer.field_i == r.field_c &&
-              fk.a(false)) {
+              Bzip2State.a(false)) {
               ec.a((byte) 27);
               if (vh.field_t == 7 &&
                 !eb.field_f) {

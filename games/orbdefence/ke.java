@@ -386,7 +386,7 @@ final class ke {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              gm.a((byte) -17, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
+              JavaScriptBridge.evaluate((byte) -17, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

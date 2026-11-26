@@ -42,12 +42,12 @@ final class lh {
               if (param1.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              gm.a((byte) -17, "document.cookie=\"" + var5 + "\"", param0);
+              JavaScriptBridge.evaluate((byte) -17, "document.cookie=\"" + var5 + "\"", param0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;
             }
-            g.a(1, param0);
+            NanoFrameTimer.a(1, param0);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

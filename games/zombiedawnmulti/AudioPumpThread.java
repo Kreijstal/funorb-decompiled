@@ -304,14 +304,14 @@ final class AudioPumpThread implements Runnable {
           var2_int = 0;
           var3 = param0.length();
           while (var2_int < var3) {
-            if (PopupMenuBuilder.isNameSeparator((byte) -126, param0.charAt(var2_int))) {
+            if (Bzip2State.isNameSeparator((byte) -126, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (PopupMenuBuilder.isNameSeparator((byte) 110, param0.charAt(var3 - 1))) {
+            if (Bzip2State.isNameSeparator((byte) 110, param0.charAt(var3 - 1))) {
               var3--;
               continue;
             }

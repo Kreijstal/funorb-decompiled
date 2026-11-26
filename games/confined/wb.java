@@ -55,7 +55,7 @@ final class wb {
           ByteStorage.field_c.writeInt(param3 - 25556, ha.field_c[1]);
           ByteStorage.field_c.writeInt(param3 ^ -25403, ha.field_c[2]);
           ByteStorage.field_c.writeInt(param3 ^ -25373, ha.field_c[3]);
-          jg.a(ByteStorage.field_c, param3 - 25420);
+          FrameTimer.a(ByteStorage.field_c, param3 - 25420);
           ByteStorage.field_c.writeShort(param0, 8);
           param1.a(ByteStorage.field_c, (byte) 108);
           vh.field_a.position = 0;
@@ -166,7 +166,7 @@ final class wb {
                 }
                 var2 = ha.a("error_js5crc", (byte) 50);
                 if (null != var2) {
-                  jg.field_a = va.a(0, var2);
+                  FrameTimer.field_a = va.a(0, var2);
                 }
                 var2 = ha.a("error_js5io", (byte) 37);
                 if (var2 != null) {

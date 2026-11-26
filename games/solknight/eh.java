@@ -6,9 +6,9 @@ final class eh {
     static int[] field_a;
 
     final static void a(byte param0, PacketBuffer param1) {
-        dk.field_i = param1.readUnsignedShort(31) << 5;
+        NanoFrameTimer.field_i = param1.readUnsignedShort(31) << 5;
         int var2_int = param1.readUnsignedByte(255);
-        dk.field_i = dk.field_i + (var2_int >> 3);
+        NanoFrameTimer.field_i = NanoFrameTimer.field_i + (var2_int >> 3);
         nf.field_S = (7 & var2_int) << 18;
         nf.field_S = nf.field_S + (param1.readUnsignedShort(-105) << 2);
         var2_int = param1.readUnsignedByte(255);

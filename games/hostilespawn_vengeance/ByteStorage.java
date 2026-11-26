@@ -177,7 +177,7 @@ abstract class ByteStorage {
                                         f.a(var2, var3, var8_ref_p, param0 ^ 11176);
                                         break regionExit1;
                                       case 33:
-                                        in.a(param0 ^ 11182, var8_ref_p, var3, var2);
+                                        FrameTimer.a(param0 ^ 11182, var8_ref_p, var3, var2);
                                         break regionExit1;
                                       case 12:
                                         var11 = var8_ref_p.field_e * ln.field_m.length / 128;

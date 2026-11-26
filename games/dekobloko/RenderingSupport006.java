@@ -437,8 +437,8 @@ final class RenderingSupport006 extends HashNode {
         integerArgument11 = integerArgument11 - integerArgument1;
         integerArgument9 = integerArgument9 - integerArgument13;
         integerArgument5 = integerArgument5 - integerArgument4;
-        integerLocal1 = MixedSupport141.computeInteger1754(23841, integerArgument5 * integerArgument5 + integerArgument9 * integerArgument9, this.rgbSpriteState0022.integerState0254 * -(integerArgument5 * integerArgument4 + integerArgument13 * integerArgument9));
-        integerLocal2 = MixedSupport141.computeInteger1754(23841, integerArgument11, this.rgbSpriteState0022.integerState0260 * -integerArgument1);
+        integerLocal1 = Bzip2State.computeInteger1754(23841, integerArgument5 * integerArgument5 + integerArgument9 * integerArgument9, this.rgbSpriteState0022.integerState0254 * -(integerArgument5 * integerArgument4 + integerArgument13 * integerArgument9));
+        integerLocal2 = Bzip2State.computeInteger1754(23841, integerArgument11, this.rgbSpriteState0022.integerState0260 * -integerArgument1);
         integerLocal3 = integerLocal1;
         if (integerLocal2 >= 0) {
           if (this.rgbSpriteState0022.integerState0260 < integerLocal2) {

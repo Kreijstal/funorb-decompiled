@@ -33,7 +33,7 @@ final class cc {
           return cf.field_r;
         }
         if (!mb.field_m.a(-8088, "commonui")) {
-          return in.field_a + " - " + mb.field_m.b(119, "commonui") + "%";
+          return FrameTimer.field_a + " - " + mb.field_m.b(119, "commonui") + "%";
         }
         if (!ll.field_b.a(-15879)) {
           return dg.field_qb;

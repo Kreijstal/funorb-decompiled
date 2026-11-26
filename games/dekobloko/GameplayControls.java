@@ -199,15 +199,15 @@ final class GameplayControls {
         integerLocal1 = stackIntegerLocal4;
         integerLocal2 = 0;
         if (60 > integerArgument5) {
-          integerLocal1 = integerLocal1 + MixedSupport141.computeInteger1754(integerArgument7 ^ -1254, 80, 40 + 18 * integerArgument4);
+          integerLocal1 = integerLocal1 + Bzip2State.computeInteger1754(integerArgument7 ^ -1254, 80, 40 + 18 * integerArgument4);
         } else {
           if (integerArgument5 < 80) {
-            integerLocal1 = integerLocal1 + MixedSupport141.computeInteger1754(23841, 80, 40 + 18 * integerArgument1);
+            integerLocal1 = integerLocal1 + Bzip2State.computeInteger1754(23841, 80, 40 + 18 * integerArgument1);
           } else {
             if (integerArgument5 >= 93) {
               SoftwareRaster.fillRoundedRectangleAlpha(-48 + integerArgument2, -2 + integerArgument6 + 54, 96, 40, 4, 65280, 100);
             } else {
-              integerLocal2 = MixedSupport141.computeInteger1754(23841, 80, 40 + 18 * SceneWidgetPart013.integerArrayState0239[-79 + integerArgument5]);
+              integerLocal2 = Bzip2State.computeInteger1754(23841, 80, 40 + 18 * SceneWidgetPart013.integerArrayState0239[-79 + integerArgument5]);
             }
           }
         }

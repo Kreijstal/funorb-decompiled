@@ -10,12 +10,12 @@ final class SecondaryNodeDeque implements Iterable {
     static String field_d;
     static ResourceArchive field_b;
 
-    final static wj c(int param0) {
+    final static FrameTimer c(int param0) {
         if (param0 != 0) {
           SecondaryNodeDeque.c(120);
-          return (wj) ((Object) new o());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (wj) ((Object) new o());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final void addLast(int param0, DualLinkNode param1) {

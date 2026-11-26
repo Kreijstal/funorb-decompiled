@@ -9,8 +9,8 @@ final class og extends IntrusiveNode {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeKeyListener(ha.field_b);
-          param0.removeFocusListener(ha.field_b);
+          param0.removeKeyListener(FrameTimer.field_b);
+          param0.removeFocusListener(FrameTimer.field_b);
           hb.field_y = param1;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "og.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

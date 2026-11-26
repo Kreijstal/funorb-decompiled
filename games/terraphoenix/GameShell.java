@@ -101,7 +101,7 @@ abstract class GameShell extends GameApplet {
             jh.b(5, -31890);
           }
           if (tg.field_c[5]) {
-            jd.a(false, 6);
+            NanoFrameTimer.a(false, 6);
           }
           if (tg.field_c[6]) {
             sa.a(-336, 7);

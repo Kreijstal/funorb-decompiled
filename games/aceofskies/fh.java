@@ -130,7 +130,7 @@ final class fh extends vo {
             String stackIn_27_0 = mr.field_a;
             return stackIn_27_0;
           }
-          if (cr.a(var5, var6, (byte) 52)) {
+          if (NanoFrameTimer.a(var5, var6, (byte) 52)) {
             String stackIn_30_0 = qa.field_c;
             return stackIn_30_0;
           }

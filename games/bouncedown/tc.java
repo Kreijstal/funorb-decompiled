@@ -50,7 +50,7 @@ class tc extends jd {
     }
 
     tc(int param0) {
-        this(sg.field_a, param0);
+        this(FrameTimer.field_a, param0);
     }
 
     public static void clearStaticReferences(boolean param0) {

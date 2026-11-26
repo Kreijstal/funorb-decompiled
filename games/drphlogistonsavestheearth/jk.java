@@ -467,7 +467,7 @@ final class jk extends si {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              pb.a(true, "document.cookie=\"" + var7Lifetime4 + "\"", param3);
+              JavaScriptBridge.evaluate(true, "document.cookie=\"" + var7Lifetime4 + "\"", param3);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

@@ -81,12 +81,12 @@ final class v {
             try {
               java.net.URL var4 = param1.getCodeBase();
               String var3 = jf.a(param1, var4, 70).getFile();
-              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"home", var3 + "home.ws"}, param1);
-              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
-              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
-              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"options", var3 + "options.ws"}, param1);
-              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"terms", var3 + "terms.ws"}, param1);
-              JavaScriptBridge.a("updatelinks", -15201, new Object[]{"privacy", var3 + "privacy.ws"}, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", -15201, new Object[]{"home", var3 + "home.ws"}, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", -15201, new Object[]{"gamelist", var3 + "togamelist.ws"}, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", -15201, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", -15201, new Object[]{"options", var3 + "options.ws"}, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", -15201, new Object[]{"terms", var3 + "terms.ws"}, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", -15201, new Object[]{"privacy", var3 + "privacy.ws"}, param1);
               if (param0) {
                 return;
               }

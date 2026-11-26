@@ -37,7 +37,7 @@ final class ProxySocketConnector extends SocketConnector {
               if (param1 != -15) {
                 return true;
               }
-              var3 = (String) (cd.a((byte) -128, "getcookies", param0));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) -128, "getcookies", param0));
               var4 = nc.a(14352, var3, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

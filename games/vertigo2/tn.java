@@ -268,7 +268,7 @@ final class tn {
         this.field_s = ln.field_c;
         this.field_h = MusicPatchPcmStream.field_u;
         this.field_m = qf.field_a;
-        this.field_b = ug.field_a;
+        this.field_b = FrameTimer.field_a;
         this.field_n = cb.field_Ib;
         this.field_a = fd.field_p;
         this.field_d = tj.field_a;

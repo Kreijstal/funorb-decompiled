@@ -26,7 +26,7 @@ final class ha {
             ha.a(-128, -24, 80);
           }
           var3_int = 0;
-          var4 = jl.field_e;
+          var4 = FrameTimer.field_e;
           while (gf.field_s.length > var3_int) {
             var5 = dl.field_s[var3_int];
             if (var5 < 0) {

@@ -399,12 +399,12 @@ final class il extends IntrusiveNode {
         qh.a(4, param0);
     }
 
-    final static fg a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != -20601) {
           field_g = (byte[]) null;
-          return (fg) ((Object) new uf());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (fg) ((Object) new uf());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final void a(int param0, ki param1, float param2, ki param3) {

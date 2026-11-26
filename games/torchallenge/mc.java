@@ -42,7 +42,7 @@ final class mc implements j {
             } else {
               jh.field_a = ni.a(new String[]{Integer.toString(var1)}, 0, gh.field_r);
             }
-            jh.field_a = qa.a(119, new CharSequence[]{(CharSequence) ((Object) jh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) bd.field_j)});
+            jh.field_a = qa.a(119, new CharSequence[]{(CharSequence) ((Object) jh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) NanoFrameTimer.field_j)});
           }
           IntrusiveNode.field_c.o(77);
           ba.c((byte) 15);

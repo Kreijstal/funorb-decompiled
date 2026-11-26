@@ -918,9 +918,9 @@ public final class Transmogrify extends SessionGameApplet {
           }
           if (rk.field_r[0] == null) {
             if (wl.a(false, 0)) {
-              rk.field_r[0] = kf.a(pc.a("halloween", "mainmenu_packed", oi.field_g, -125), false, (byte) 101);
+              rk.field_r[0] = NanoFrameTimer.a(pc.a("halloween", "mainmenu_packed", oi.field_g, -125), false, (byte) 101);
             } else {
-              rk.field_r[0] = kf.a(pc.a("", "mainmenu_packed", oi.field_g, -5), false, (byte) -93);
+              rk.field_r[0] = NanoFrameTimer.a(pc.a("", "mainmenu_packed", oi.field_g, -5), false, (byte) -93);
             }
             rk.field_r[0].e();
             SecondaryNodeDeque.field_d.c(219, 21);
@@ -949,7 +949,7 @@ public final class Transmogrify extends SessionGameApplet {
             gk.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 124, "", "intro_stars");
             ij.field_h = pc.a("", "intro_host", oi.field_g, -124);
             hc.field_r = pc.a("", "intro_hostess", oi.field_g, 95);
-            ArchiveRequest.field_s = kf.a(pc.a("", "intro_logo_packed", oi.field_g, param0 - 31), false, (byte) 126);
+            ArchiveRequest.field_s = NanoFrameTimer.a(pc.a("", "intro_logo_packed", oi.field_g, param0 - 31), false, (byte) 126);
             ArchiveRequest.field_s.b();
             kk.field_d = null;
             ck.field_C = null;
@@ -1168,7 +1168,7 @@ public final class Transmogrify extends SessionGameApplet {
           ok.clearStaticReferences(42);
           af.clearStaticReferences((byte) 22);
           of.clearStaticReferences(-21068);
-          td.clearStaticReferences(0);
+          FrameTimer.clearStaticReferences(0);
           RasterBuffer.clearStaticReferences((byte) 119);
           gg.c(127);
           FullscreenFocusCanvas.a(-1);
@@ -1247,7 +1247,7 @@ public final class Transmogrify extends SessionGameApplet {
           db.a(8192);
           ByteStorage.clearStaticReferences(48);
           gf.clearStaticReferences();
-          re.clearStaticReferences((byte) -37);
+          Bzip2State.clearStaticReferences((byte) -37);
           ch.resetStaticState(807);
           ll.releaseDeclaredStaticReferences(5);
           u.a((byte) 125);
@@ -1288,7 +1288,7 @@ public final class Transmogrify extends SessionGameApplet {
           pe.clearStaticReferences((byte) -102);
           rb.clearStaticReferences(-53);
           ha.clearStaticReferences(-19424);
-          kf.clearDeclaredStaticReferences(123);
+          NanoFrameTimer.clearDeclaredStaticReferences(123);
           ImageProducerRasterBuffer.resetStaticState((byte) 107);
           og.clearStaticReferences(false);
           nb.clearStaticReferences(param0 + 17);

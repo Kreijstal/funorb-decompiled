@@ -141,7 +141,7 @@ final class SceneWidgetPart002 extends SceneWidget {
         if (!GameDomainSupport004.booleanState0087) {
           return;
         }
-        MixedSupport059.sceneWidgetState0055.performAction1772(false, booleanArgument2);
+        FrameTimer.sceneWidgetState0055.performAction1772(false, booleanArgument2);
         int integerLocal1 = SceneWidgetPart007.sceneWidgetPart005State0002.computeBoolean0718(-1) ? 1 : 0;
         if (SceneWidgetPart005.integerState0328 != 0 &&
           integerLocal1 == 0) {
@@ -152,7 +152,7 @@ final class SceneWidgetPart002 extends SceneWidget {
           SceneWidgetPart007.sceneWidgetPart005State0002.performAction0710(integerArgument4, integerArgument1, -115);
         }
         if (integerLocal1 != 0) {
-          MixedSupport059.sceneWidgetState0055.performAction1772(false, booleanArgument2);
+          FrameTimer.sceneWidgetState0055.performAction1772(false, booleanArgument2);
         }
         int integerLocal2 = -27 % ((byteArgument3 + 66) / 56);
         int integerLocal3 = SceneWidgetPart007.sceneWidgetPart005State0002.computeInteger0719(-108) + SceneWidgetPart007.sceneWidgetPart005State0002.integerState0892;

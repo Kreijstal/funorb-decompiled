@@ -37,7 +37,7 @@ final class la extends ca {
             }
             if (var3_int != 0) {
               if (rj.field_K) {
-                param1 = vg.a(new String[]{param1}, 21, ck.field_o);
+                param1 = vg.a(new String[]{param1}, 21, Bzip2State.field_o);
               }
               if (DirectByteStorage.field_i) {
                 param1 = jm.field_h;
@@ -78,7 +78,7 @@ final class la extends ca {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (a.a("getcookies", param0, param1 - 10419));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, param1 - 10419));
               var4 = cj.a(var3, -44, ';');
               if (param1 != 10295) {
                 la.b(-103);

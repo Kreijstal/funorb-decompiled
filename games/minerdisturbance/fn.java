@@ -316,7 +316,7 @@ final class fn extends IntrusiveNode {
           byte[] var2 = (byte[]) null;
           fn.a((byte[]) null, false);
         }
-        return je.field_O.f(hf.field_t, 2, ca.field_k);
+        return je.field_O.f(hf.field_t, 2, NanoFrameTimer.field_k);
     }
 
     final static void b(int param0, int param1) {
@@ -361,7 +361,7 @@ final class fn extends IntrusiveNode {
         if (param0 != 0) {
           return (af) null;
         }
-        ca.a(param1, 1);
+        NanoFrameTimer.a(param1, 1);
         return var2;
     }
 

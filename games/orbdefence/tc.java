@@ -105,8 +105,8 @@ final class tc {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (gm.a(param0 - 31142, "getcookies", param1));
-              var5 = g.a(37, ';', var4);
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(param0 - 31142, "getcookies", param1));
+              var5 = NanoFrameTimer.a(37, ';', var4);
               if (param0 != -41) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;

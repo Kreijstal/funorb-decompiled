@@ -47,7 +47,7 @@ abstract class RasterBuffer {
             for (var7 = 0; var6 > var7; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) -107);
             }
-            var15 = (ok) (vc.field_g.beginBackward(9272));
+            var15 = (ok) (FrameTimer.field_g.beginBackward(9272));
             if (var15 == null) {
               WidgetContainer.g(-17464);
               return;
@@ -70,7 +70,7 @@ abstract class RasterBuffer {
               bd.reportClientError((Throwable) null, "A1: " + BattleUnit.i(-15465), -87);
               WidgetContainer.g(-17464);
             } else {
-              var13 = (ok) (vc.field_g.beginBackward(9272));
+              var13 = (ok) (FrameTimer.field_g.beginBackward(9272));
               if (var13 == null) {
                 WidgetContainer.g(param0 - 17531);
                 return;

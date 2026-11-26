@@ -176,7 +176,7 @@ final class wg extends IntrusiveNode {
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
-              mf.a(true, param1, "document.cookie=\"" + var7Lifetime4 + "\"");
+              JavaScriptBridge.evaluate(true, param1, "document.cookie=\"" + var7Lifetime4 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

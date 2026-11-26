@@ -214,7 +214,7 @@ final class IntrusiveDeque {
             var1[var2] = (RgbSprite) ((Object) new ArgbSprite(oe.field_b, ih.field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], var17));
           }
         }
-        oc.a((byte) -21);
+        Bzip2State.a((byte) -21);
         return var1;
     }
 

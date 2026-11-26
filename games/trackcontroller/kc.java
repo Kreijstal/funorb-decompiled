@@ -143,7 +143,7 @@ final class kc {
               if (param1 != 1263) {
                 kc.b(-38);
               }
-              sj.a(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -24531);
+              JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -24531);
             } catch (Throwable throwable) {
             }
             SecondaryNodeDeque.a(param0, (byte) -128);

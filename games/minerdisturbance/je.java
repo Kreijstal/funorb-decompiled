@@ -934,7 +934,7 @@ final class je {
                     uf.field_p[var4].field_p = param1 + 1;
                   }
                 }
-                if (param0 != ca.field_k) {
+                if (param0 != NanoFrameTimer.field_k) {
                   if ((!(!param2.field_b)) &&
                     (!(field_I[param0][param1 + 1].field_a)) &&
                     (!(param2.field_a))) {
@@ -1139,9 +1139,9 @@ final class je {
         Object var12;
         Sprite var12_ref;
         Sprite var13;
-        var3 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
+        var3 = NanoFrameTimer.field_k * 32 - li.field_c + sk.field_d / 10;
         var4 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
-        var5 = ca.c(-2302) ? 1 : 0;
+        var5 = NanoFrameTimer.c(-2302) ? 1 : 0;
         if (var5 == 0) {
           stackIn_6_0 = (tb.field_c >= 0) ? 1 : 0;
         } else {
@@ -1153,7 +1153,7 @@ final class je {
         var8 = stackIn_9_0;
         if (var8 != 0) {
           if (param2) {
-            stackIn_16_0 = (field_I[ca.field_k][hf.field_t].field_A) ? 1 : 0;
+            stackIn_16_0 = (field_I[NanoFrameTimer.field_k][hf.field_t].field_A) ? 1 : 0;
           } else {
             stackIn_16_0 = 0;
           }
@@ -1328,7 +1328,7 @@ final class je {
         if (var5 > field_t - 2) {
           var5 = field_t - 2;
         }
-        var6 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
+        var6 = NanoFrameTimer.field_k * 32 - li.field_c + sk.field_d / 10;
         var7 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
         if (!PcmResampler.field_e) {
           stackIn_14_0 = (!vi.field_h) ? 1 : 0;
@@ -1693,19 +1693,19 @@ final class je {
         int var11Lifetime3;
         stackIn_3_0 = (il.e(-31391)) ? 0 : 1;
         var3 = stackIn_3_0;
-        var4 = ca.c(-2302) ? 1 : 0;
+        var4 = NanoFrameTimer.c(-2302) ? 1 : 0;
         if (var4 == 0) {
           stackIn_9_0 = (tb.field_c >= 0) ? 1 : 0;
         } else {
           stackIn_9_0 = 0;
         }
         var5 = stackIn_9_0;
-        var6 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
+        var6 = NanoFrameTimer.field_k * 32 - li.field_c + sk.field_d / 10;
         var7 = hf.field_t * 32 - ClientException.field_d + IsaacRandom.field_i / 10;
         if (var3 != 0 &&
           var4 == 0) {
           if (fn.a(true)) {
-            var8 = ca.field_k * 4 + sk.field_d / 80 - 1;
+            var8 = NanoFrameTimer.field_k * 4 + sk.field_d / 80 - 1;
             var9 = hf.field_t * 4 + IsaacRandom.field_i / 80 - 1;
             var10 = var8 * 8 - li.field_c;
             var11 = var9 * 8 - ClientException.field_d;
@@ -1742,7 +1742,7 @@ final class je {
           } else {
             if (ch.field_h != 5 &&
               var5 != 0 &&
-              field_I[ca.field_k][hf.field_t].field_A) {
+              field_I[NanoFrameTimer.field_k][hf.field_t].field_A) {
               if (ch.field_h != 5) {
                 var8_ref_ea = pk.field_h[tb.field_c];
               } else {
@@ -1844,7 +1844,7 @@ final class je {
             }
           }
           if (!qe.field_b[16]) {
-            var11Lifetime2 = cn.field_C;
+            var11Lifetime2 = Bzip2State.field_C;
             if (var11Lifetime2 < 0) {
               var12Lifetime1 = var6 + 28;
               var13Lifetime1 = var7 - 1;
@@ -2011,7 +2011,7 @@ final class je {
     }
 
     final static boolean a() {
-        return field_O.c(121, (hf.field_t << 2) + (IsaacRandom.field_i + 160) / 80, (ca.field_k << 2) + (sk.field_d + 160) / 80);
+        return field_O.c(121, (hf.field_t << 2) + (IsaacRandom.field_i + 160) / 80, (NanoFrameTimer.field_k << 2) + (sk.field_d + 160) / 80);
     }
 
     private final void h() {
@@ -2873,7 +2873,7 @@ final class je {
           var4Lifetime1 = var2_ref_ea.field_A / 32;
           for (var5Lifetime1 = field_o; var5Lifetime1 < field_o + var3_intLifetime1; var5Lifetime1++) {
             for (var6Lifetime1 = field_f; var6Lifetime1 < field_f + var4Lifetime1; var6Lifetime1++) {
-              if (var5Lifetime1 == ca.field_k &&
+              if (var5Lifetime1 == NanoFrameTimer.field_k &&
                 var6Lifetime1 == hf.field_t) {
                 fn.a(22, 233, 3);
               }
@@ -2921,7 +2921,7 @@ final class je {
                   dupTemp$0.field_i = dupTemp$0.field_i - 1;
                   if (sc.field_b &&
                     field_I[var3_intLifetime2][var2Lifetime2].field_i > 160) {
-                    var4Lifetime2Lifetime1 = ca.field_k - var3_intLifetime2;
+                    var4Lifetime2Lifetime1 = NanoFrameTimer.field_k - var3_intLifetime2;
                     var5Lifetime2Lifetime1 = hf.field_t - var2Lifetime2;
                     if (var4Lifetime2Lifetime1 * var4Lifetime2Lifetime1 + var5Lifetime2Lifetime1 * var5Lifetime2Lifetime1 < 40) {
                       if (!field_I[var3_intLifetime2][var2Lifetime2].field_a) {

@@ -60,8 +60,8 @@ final class LabeledChildWidget extends SingleChildWidget {
             if (JaggrabDownloader.field_h > 0) {
               PowerupBar.updateLobbyButtons(param4, param7, false, param9);
             }
-            PopupMenuBuilder.field_B.field_R = 1;
-            PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+            Bzip2State.field_B.field_R = 1;
+            Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
             if (HotspotTextWidget.field_Q > 0) {
               ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
             }
@@ -83,8 +83,8 @@ final class LabeledChildWidget extends SingleChildWidget {
             MeltdownPuddleCell.advanceLobbyTransitions((byte) -109, param9);
             if (JaggrabDownloader.field_h > 0) {
               PowerupBar.updateLobbyButtons(param4, param7, false, param9);
-              PopupMenuBuilder.field_B.field_R = 1;
-              PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+              Bzip2State.field_B.field_R = 1;
+              Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
                 ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
               }
@@ -102,8 +102,8 @@ final class LabeledChildWidget extends SingleChildWidget {
                 LobbyGameListHelpers.layoutLobbyGameRows(param2, param7, (byte) 45, ConditionalTextValue.field_e, param6);
               }
             } else {
-              PopupMenuBuilder.field_B.field_R = 1;
-              PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+              Bzip2State.field_B.field_R = 1;
+              Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
                 ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
                 if (0 < InflaterDecompressor.field_a) {
@@ -162,8 +162,8 @@ final class LabeledChildWidget extends SingleChildWidget {
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.updateLobbyButtons(param4, param7, false, param9);
               }
-              PopupMenuBuilder.field_B.field_R = 1;
-              PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+              Bzip2State.field_B.field_R = 1;
+              Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
                 ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
               }
@@ -186,8 +186,8 @@ final class LabeledChildWidget extends SingleChildWidget {
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.updateLobbyButtons(param4, param7, false, param9);
               }
-              PopupMenuBuilder.field_B.field_R = 1;
-              PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+              Bzip2State.field_B.field_R = 1;
+              Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
                 ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
               }
@@ -229,8 +229,8 @@ final class LabeledChildWidget extends SingleChildWidget {
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.updateLobbyButtons(param4, param7, false, param9);
               }
-              PopupMenuBuilder.field_B.field_R = 1;
-              PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+              Bzip2State.field_B.field_R = 1;
+              Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
               if (HotspotTextWidget.field_Q > 0) {
                 ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
               }
@@ -252,8 +252,8 @@ final class LabeledChildWidget extends SingleChildWidget {
               MeltdownPuddleCell.advanceLobbyTransitions((byte) -109, param9);
               if (JaggrabDownloader.field_h > 0) {
                 PowerupBar.updateLobbyButtons(param4, param7, false, param9);
-                PopupMenuBuilder.field_B.field_R = 1;
-                PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+                Bzip2State.field_B.field_R = 1;
+                Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
                 if (HotspotTextWidget.field_Q > 0) {
                   ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
                 }
@@ -271,8 +271,8 @@ final class LabeledChildWidget extends SingleChildWidget {
                   LobbyGameListHelpers.layoutLobbyGameRows(param2, param7, (byte) 45, ConditionalTextValue.field_e, param6);
                 }
               } else {
-                PopupMenuBuilder.field_B.field_R = 1;
-                PopupMenuBuilder.field_B.field_V = ArchiveRequest.field_u.field_V;
+                Bzip2State.field_B.field_R = 1;
+                Bzip2State.field_B.field_V = ArchiveRequest.field_u.field_V;
                 if (HotspotTextWidget.field_Q > 0) {
                   ArchiveLoadStep.updateGameSetupPanel(param7, param4, param9, true);
                   if (0 < InflaterDecompressor.field_a) {

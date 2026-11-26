@@ -94,12 +94,12 @@ final class om {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              hp.a("document.cookie=\"" + var5Lifetime6 + "\"", 27476, param2);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", 27476, param2);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            j.a(true, param2);
+            Bzip2State.a(true, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -147,7 +147,7 @@ final class om {
           om.a((byte) 127, (String) null, (java.applet.Applet) null);
         }
         qg.field_z = param2;
-        j.field_q = param0;
+        Bzip2State.field_q = param0;
         RasterBuffer.field_e = param1;
         qk.field_p = param4;
     }

@@ -2744,7 +2744,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mb_caption_title");
                 if (var2 != null) {
-                  aa.field_b = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  FrameTimer.field_b = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "mb_including_gamename");
                 if (null != var2) {

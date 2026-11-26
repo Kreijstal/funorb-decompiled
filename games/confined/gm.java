@@ -143,7 +143,7 @@ final class gm extends ah {
         if (param0 != -29) {
           return;
         }
-        q.a(4, false, (byte) -101);
+        NanoFrameTimer.a(4, false, (byte) -101);
     }
 
     final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {

@@ -90,7 +90,7 @@ final class MixedSupport056 {
     }
 
     MixedSupport056(boolean booleanArgument1) {
-        this.integerState0291 = MixedSupport141.integerState0873;
+        this.integerState0291 = Bzip2State.integerState0873;
         this.longState0021 = MixedSupport036.longState0015;
         this.stringState0244 = MixedSupport106.stringState0456;
         this.stringState0243 = ResourceSupport001.stringState0012;

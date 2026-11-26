@@ -9,7 +9,7 @@ final class ng {
           hj.field_k = param1;
           wi.field_c = param4;
           ek.field_p = param6;
-          eb.field_n = param7;
+          Bzip2State.field_n = param7;
           tl.field_f = param3;
           fa.field_P = param0;
           hc.field_n = param8;

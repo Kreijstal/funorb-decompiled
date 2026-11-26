@@ -53,8 +53,8 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
         Object var6 = null;
         try {
           var2_long = fa.correctedCurrentTimeMillis(87);
-          var4 = qj.field_a[sh.field_hb];
-          qj.field_a[sh.field_hb] = var2_long;
+          var4 = GzipDecompressor.field_a[sh.field_hb];
+          GzipDecompressor.field_a[sh.field_hb] = var2_long;
           if (0L != var4 &&
             var2_long <= var4) {
           }
@@ -128,7 +128,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             var3_int = 37 / ((29 - param0) / 57);
             System.out.println("error_game_" + param1);
             try {
-              ac.a(DiskCacheWorker.b(0), "loggedout", -31185);
+              JavaScriptBridge.callWithoutArguments(DiskCacheWorker.b(0), "loggedout", -31185);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = decompiledCaughtException;
@@ -288,12 +288,12 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           ch.field_h.setVisible(true);
           boolean decompiledSharedTail0 = (var2 == i.field_h);
           if (!decompiledSharedTail0) {
-            ch.field_h.setLocation(el.field_e, ob.field_d);
+            ch.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = i.field_h.getInsets();
-            ch.field_h.setLocation(var3.left + el.field_e, ob.field_d + var3.top);
+            ch.field_h.setLocation(var3.left + NanoFrameTimer.field_e, ob.field_d + var3.top);
           }
           ch.field_h.addFocusListener((java.awt.event.FocusListener) (this));
           ch.field_h.requestFocus();
@@ -535,7 +535,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                 this.getAppletContext().showDocument(this.getDocumentBase(), "_self");
                 return;
               }
-              el.field_e = 0;
+              NanoFrameTimer.field_e = 0;
               if (param3 < 2) {
                 this.c((byte) -74);
               }
@@ -717,7 +717,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    nl.field_c = ff.field_D.b(0, hb.field_H);
+                    nl.field_c = ff.field_D.waitAndCountTicks(0, hb.field_H);
                     stackIn_103_0 = 0;
                   }
                   var3 = stackIn_103_0;
@@ -850,12 +850,12 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             boolean decompiledSharedTail0 = (null != i.field_h &&
               null == IntrusiveNode.field_b);
             if (!decompiledSharedTail0) {
-              ch.field_h.setLocation(el.field_e, ob.field_d);
+              ch.field_h.setLocation(NanoFrameTimer.field_e, ob.field_d);
               decompiledSharedTail0 = (Bounce.field_N != 0);
             }
             if (decompiledSharedTail0) {
               var6 = i.field_h.getInsets();
-              ch.field_h.setLocation(var6.left + el.field_e, ob.field_d + var6.top);
+              ch.field_h.setLocation(var6.left + NanoFrameTimer.field_e, ob.field_d + var6.top);
             }
           }
           this.e(4);

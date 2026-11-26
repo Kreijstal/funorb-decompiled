@@ -16,7 +16,7 @@ final class ea implements WidgetActionListener {
     private int field_g;
     private int field_f;
     static int field_o;
-    static vc field_k;
+    static FrameTimer field_k;
     private int field_q;
     static String field_n;
 
@@ -103,7 +103,7 @@ final class ea implements WidgetActionListener {
         int var2 = Terraphoenix.field_V;
         int var1_intLifetime1;
         try {
-          field_k.b(0);
+          field_k.resetTiming(0);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             bb.field_f[var1_int] = 0L;
           }
@@ -123,7 +123,7 @@ final class ea implements WidgetActionListener {
         field_k = null;
         field_n = null;
         if (!param0) {
-          field_k = (vc) null;
+          field_k = (FrameTimer) null;
         }
     }
 

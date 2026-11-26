@@ -1801,7 +1801,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_alert_nameleadingspace", false);
                 if (null != var2) {
-                  vq.field_p = in.a(0, var2);
+                  Bzip2State.field_p = in.a(0, var2);
                 }
                 var2 = tk.a("create_alert_doublespace", false);
                 if (var2 != null) {

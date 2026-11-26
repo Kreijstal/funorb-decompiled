@@ -50,7 +50,7 @@ final class db extends vk implements ga {
     public db() {
         super(0, 0, 476, 225, (de) null);
         this.field_y = new dk(qj.field_V, (qg) null);
-        this.field_A = new dk(fk.field_v, (qg) null);
+        this.field_A = new dk(Bzip2State.field_v, (qg) null);
         this.field_z = new dk(rg.field_E, (qg) null);
         gb var1 = new gb();
         this.field_y.field_o = (de) ((Object) var1);

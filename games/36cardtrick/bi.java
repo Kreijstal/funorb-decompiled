@@ -31,7 +31,7 @@ final class bi {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (vh.a("getcookies", -12151, param1));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", -12151, param1));
               var5 = rh.a(';', var4, -100);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

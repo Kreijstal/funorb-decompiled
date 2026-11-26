@@ -135,7 +135,7 @@ final class fi {
                   for (var27 = -var21; var27 < 0; var27++) {
                     var28 = var22 / 2 + var23;
                     if (var28 <= 470810624) {
-                      GameAppletShell.field_b[var24] = tb.a(var26, var28 >> 18);
+                      GameAppletShell.field_b[var24] = FrameTimer.a(var26, var28 >> 18);
                       var23 = var23 + var22;
                       var24 = var24 + SoftwareRasterizer.field_f;
                     }

@@ -115,7 +115,7 @@ final class MixedSupport083 {
                 }
                 MixedSupport039.sceneWidgetState0030.stringState0598 = MixedSupport039.sceneWidgetState0030.stringState0598 + "<br>" + stringLocal32;
                 if ((UiComponentPart020.integerState0552 & 16) == 0 &&
-                  !MixedSupport026.booleanState0028) {
+                  !NanoFrameTimer.booleanState0028) {
                   MixedSupport039.sceneWidgetState0030.rgbSpriteArrayState0033 = MixedSupport021.sceneWidgetState0015.rgbSpriteArrayState0035;
                 }
               }
@@ -427,15 +427,15 @@ final class MixedSupport083 {
           }
           stackSceneWidgetLocal14 = MixedSupport030.sceneWidgetState0023;
           stackBooleanLocal15 = false;
-          stackBooleanLocal16 = (booleanArgument3) && (!booleanArgument4) && (!MixedSupport026.booleanState0028);
+          stackBooleanLocal16 = (booleanArgument3) && (!booleanArgument4) && (!NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal14).performAction1772(stackBooleanLocal15, stackBooleanLocal16);
           stackSceneWidgetLocal17 = NetworkSupport008.sceneWidgetState0093;
           stackBooleanLocal18 = false;
-          stackBooleanLocal19 = (booleanArgument3) && (!booleanArgument4) && (!MixedSupport026.booleanState0028);
+          stackBooleanLocal19 = (booleanArgument3) && (!booleanArgument4) && (!NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal17).performAction1772(stackBooleanLocal18, stackBooleanLocal19);
           stackSceneWidgetLocal20 = (SceneWidget) (sceneWidgetState0087);
           stackBooleanLocal21 = false;
-          stackBooleanLocal22 = (booleanArgument3) && (!booleanArgument4) && (MixedSupport026.booleanState0028);
+          stackBooleanLocal22 = (booleanArgument3) && (!booleanArgument4) && (NanoFrameTimer.booleanState0028);
           ((SceneWidget) (Object) stackSceneWidgetLocal20).performAction1772(stackBooleanLocal21, stackBooleanLocal22);
           PcmResampler.mixedSupport006State0002.sceneWidgetPart011State0001.performAction1574(false);
           if (MixedSupport016.sceneWidgetPart013State0001 != null) {
@@ -446,10 +446,10 @@ final class MixedSupport083 {
               MixedSupport050.booleanState0064 = true;
             }
             if (MixedSupport039.sceneWidgetState0030.integerState0891 != 0) {
-              MixedSupport026.booleanState0028 = true;
+              NanoFrameTimer.booleanState0028 = true;
             }
             if (GameSession.sceneWidgetState0099.integerState0891 != 0) {
-              MixedSupport026.booleanState0028 = false;
+              NanoFrameTimer.booleanState0028 = false;
             }
             MixedSupport081.performAction1030(MixedSupport016.sceneWidgetPart013State0001, false, integerArgument5, (byte) -126);
           }

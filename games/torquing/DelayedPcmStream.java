@@ -71,22 +71,22 @@ final class DelayedPcmStream extends PcmStream {
           return;
         }
         if (param2 < RasterBuffer.field_e) {
-          ha.a(param2, param5, -126, param0, param3, param4);
+          FrameTimer.a(param2, param5, -126, param0, param3, param4);
           return;
         }
         if (qg.field_z < param0) {
-          ha.a(param2, param5, -126, param0, param3, param4);
+          FrameTimer.a(param2, param5, -126, param0, param3, param4);
           return;
         }
-        if (param3 < j.field_q) {
-          ha.a(param2, param5, -126, param0, param3, param4);
+        if (param3 < Bzip2State.field_q) {
+          FrameTimer.a(param2, param5, -126, param0, param3, param4);
           return;
         }
         if (qk.field_p >= param4) {
           DualLinkNode.a(0, param4, param3, param5, param2, param0);
           return;
         }
-        ha.a(param2, param5, -126, param0, param3, param4);
+        FrameTimer.a(param2, param5, -126, param0, param3, param4);
     }
 
     final int getSchedulingCost() {

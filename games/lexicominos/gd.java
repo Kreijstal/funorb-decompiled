@@ -17,7 +17,7 @@ final class gd extends IntrusiveNode {
           field_i = (td) null;
           fieldTemp$0 = this.field_h - 1;
           this.field_h = this.field_h - 1;
-          if (tb.field_a.field_E > fieldTemp$0) {
+          if (FrameTimer.field_a.field_E > fieldTemp$0) {
             this.unlink((byte) -123);
             return;
           }
@@ -25,14 +25,14 @@ final class gd extends IntrusiveNode {
         }
         int fieldTemp$1 = this.field_h - 1;
         this.field_h = this.field_h - 1;
-        if (tb.field_a.field_E <= fieldTemp$1) {
+        if (FrameTimer.field_a.field_E <= fieldTemp$1) {
           return;
         }
         this.unlink((byte) -123);
     }
 
     final void a(byte param0) {
-        tb.field_a.a(this.field_k, this.field_n, this.field_h, 0, -1);
+        FrameTimer.field_a.a(this.field_k, this.field_n, this.field_h, 0, -1);
         if (param0 != -34) {
           this.c((byte) -119);
         }

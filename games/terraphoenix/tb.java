@@ -68,7 +68,7 @@ final class tb extends uj {
           var8 = Terraphoenix.field_V;
           try {
             try {
-              var3 = (String) (cd.a((byte) -128, "getcookies", param2));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) -128, "getcookies", param2));
               var4 = nc.a(14352, var3, ';');
               var5 = 47 % ((param0 + 47) / 32);
               for (var6 = 0; var6 < var4.length; var6++) {
@@ -212,7 +212,7 @@ final class tb extends uj {
             mh.field_a = ha.field_n;
           }
           if (mh.field_a == ha.field_n &&
-            vc.a(param5 - 213, 1)) {
+            FrameTimer.a(param5 - 213, 1)) {
             var9Lifetime1 = LevelEditor.field_j.readUnsignedByte(-16384);
             LevelEditor.field_j.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -233,7 +233,7 @@ final class tb extends uj {
                 qh.field_d = -1;
                 qk.field_b = var9Lifetime1;
               } else {
-                vc.a(-111, dc.b((byte) 30));
+                FrameTimer.a(-111, dc.b((byte) 30));
                 ge.field_d = new Boolean(cb.a(LevelEditor.field_j, 102));
                 LevelEditor.field_j.position = 0;
               }
@@ -241,10 +241,10 @@ final class tb extends uj {
           }
           if (mh.field_a == SecondaryNodeDeque.field_f) {
             var9Lifetime2 = 2;
-            if (vc.a(-99, var9Lifetime2)) {
+            if (FrameTimer.a(-99, var9Lifetime2)) {
               var10Lifetime1 = LevelEditor.field_j.readUnsignedShort(-25578);
               LevelEditor.field_j.position = 0;
-              if (vc.a(param5 ^ -32, var10Lifetime1)) {
+              if (FrameTimer.a(param5 ^ -32, var10Lifetime1)) {
                 var11 = RasterBuffer.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   RasterBuffer.field_a[var12] = LevelEditor.field_j.readPrefixedString((byte) 46);

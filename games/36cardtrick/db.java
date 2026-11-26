@@ -143,7 +143,7 @@ final class db implements ci {
             var16 = (byte[]) null;
             db.a(false, (byte[]) null);
           }
-          gk.field_a = var18.readUnsignedShort((byte) 72);
+          FrameTimer.field_a = var18.readUnsignedShort((byte) 72);
           var3 = 1 + (255 & var18.readUnsignedByte(27));
           for (var4 = 0; var4 < cf.field_c; var4++) {
             kb.field_c[var4] = var17.readUnsignedShort((byte) 72);

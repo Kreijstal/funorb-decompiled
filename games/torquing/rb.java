@@ -78,7 +78,7 @@ class rb extends lg {
             try {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (hp.a(param1, (byte) -85, "getcookies"));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(param1, (byte) -85, "getcookies"));
               var5 = kc.a(';', var4, 0);
               if (param0 > -102) {
                 stackIn_3_0 = (String) null;

@@ -1174,7 +1174,7 @@ final class da extends ue {
         if (ol.field_z[this.field_r] != null) {
           this.field_g = ol.field_z[this.field_r].size();
         }
-        this.field_i = ke.field_b[this.field_r];
+        this.field_i = FrameTimer.field_b[this.field_r];
         if (this.field_r == 1 &&
           mo.field_l == 0) {
           this.field_g = 15;

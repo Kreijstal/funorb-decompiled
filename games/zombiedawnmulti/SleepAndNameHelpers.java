@@ -32,12 +32,12 @@ final class SleepAndNameHelpers {
             if (var4 != null &&
               var4.length() >= 1) {
               var5 = 76 % ((25 - param2) / 53);
-              if (!PopupMenuBuilder.isNameSeparator((byte) 56, var4.charAt(0)) &&
-                !PopupMenuBuilder.isNameSeparator((byte) 84, var4.charAt(-1 + var4.length()))) {
+              if (!Bzip2State.isNameSeparator((byte) 56, var4.charAt(0)) &&
+                !Bzip2State.isNameSeparator((byte) 84, var4.charAt(-1 + var4.length()))) {
                 var6 = 0;
                 for (var7 = 0; param1.length() > var7; var7++) {
                   var8 = param1.charAt(var7);
-                  if (PopupMenuBuilder.isNameSeparator((byte) -75, (char) var8)) {
+                  if (Bzip2State.isNameSeparator((byte) -75, (char) var8)) {
                     var6++;
                   } else {
                     var6 = 0;

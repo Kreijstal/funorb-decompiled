@@ -110,7 +110,7 @@ final class kb {
         if (UiWidget.field_o == this) {
           return true;
         }
-        if (dk.field_h == this) {
+        if (NanoFrameTimer.field_h == this) {
           return true;
         }
         if (this != jj.field_Y) {

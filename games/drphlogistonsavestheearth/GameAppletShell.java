@@ -220,7 +220,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    jj.field_b = BufferedSocket.field_e.b(ma.field_vb, 1);
+                    jj.field_b = BufferedSocket.field_e.waitAndCountTicks(ma.field_vb, 1);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -792,7 +792,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               field_d = (String) null;
             }
             try {
-              pb.a("loggedout", nb.a(param0 - 64), true);
+              JavaScriptBridge.callWithoutArguments("loggedout", nb.a(param0 - 64), true);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

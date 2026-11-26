@@ -85,7 +85,7 @@ final class dc {
               boolean decompiledFrameRemainder0 = true;
               n.submittedWordCount = n.submittedWordCount + 1;
               rb.field_a = rb.field_a + field_a;
-              re.field_A = 0;
+              Bzip2State.field_A = 0;
               eg.field_b = 0;
               field_a = 0;
               var6Lifetime1 = 0;

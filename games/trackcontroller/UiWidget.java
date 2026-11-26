@@ -61,7 +61,7 @@ class UiWidget extends IntrusiveNode {
               !(he.field_b < var5))) {
               var6 = new byte[var5];
               if (1 == var3) {
-                b.a(var6, var5, param1, var4, 9);
+                b.decompress(var6, var5, param1, var4, 9);
               } else {
                 var7 = bd.field_b;
                 synchronized (var7) {

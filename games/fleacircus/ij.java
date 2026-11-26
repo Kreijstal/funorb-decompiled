@@ -97,7 +97,7 @@ final class ij extends gj implements da {
             if (lc.field_r == 2) {
               jj.field_M = new BufferedSocket((java.net.Socket) (nj.field_a.result), mh.field_x);
               var2 = new PacketBuffer(13);
-              ob.a(wj.field_d, of.field_b, (byte) -19, b.field_a, var2);
+              ob.a(FrameTimer.field_d, of.field_b, (byte) -19, b.field_a, var2);
               var2.writeByte(-11, 15);
               var2.writeInt(tj.field_c, (byte) -28);
               jj.field_M.a((byte) -92, 13, 0, var2.payload);

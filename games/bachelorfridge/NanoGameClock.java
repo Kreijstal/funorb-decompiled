@@ -18,7 +18,7 @@ final class NanoGameClock extends GameClock {
         int var6 = 108 % ((param1 - 55) / 57);
     }
 
-    final int a(long param0, int param1) {
+    final int advanceTicks(long param0, int param1) {
         int var4;
         int var5;
         var5 = BachelorFridge.field_y;
@@ -52,8 +52,8 @@ final class NanoGameClock extends GameClock {
         field_l = null;
     }
 
-    final long a(byte param0) {
-        this.field_k = this.field_k + this.c(61);
+    final long getDelayMillis(byte param0) {
+        this.field_k = this.field_k + this.sampleElapsedNanos(61);
         if (param0 != 63) {
           field_c = -123;
         }
@@ -74,7 +74,7 @@ final class NanoGameClock extends GameClock {
         this.field_f = System.nanoTime();
     }
 
-    private final long c(int param0) {
+    private final long sampleElapsedNanos(int param0) {
         int var8 = 0;
         int var9 = BachelorFridge.field_y;
         long var2 = System.nanoTime();
@@ -98,7 +98,7 @@ final class NanoGameClock extends GameClock {
         return var6 / (long)this.field_g;
     }
 
-    final void a(boolean param0) {
+    final void resetTiming(boolean param0) {
         if (this.field_k < this.field_f) {
           this.field_k = this.field_k + (-this.field_k + this.field_f);
         }

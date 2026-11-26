@@ -34,11 +34,11 @@ final class j {
         if (!bf.field_y.a("commonui", -9883)) {
           return ae.field_a + " - " + bf.field_y.a("commonui", (byte) 98) + "%";
         }
-        if (!fk.field_k.b((byte) 106)) {
+        if (!Bzip2State.field_k.b((byte) 106)) {
           return s.field_g;
         }
-        if (!fk.field_k.a("commonui", -9883)) {
-          return sj.field_D + " - " + fk.field_k.a("commonui", (byte) 116) + "%";
+        if (!Bzip2State.field_k.a("commonui", -9883)) {
+          return sj.field_D + " - " + Bzip2State.field_k.a("commonui", (byte) 116) + "%";
         }
         if (!li.field_b.b((byte) 105)) {
           return q.field_i;

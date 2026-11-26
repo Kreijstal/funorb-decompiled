@@ -50,7 +50,7 @@ final class gf {
           if (var4 < this.field_d) {
             this.field_d = this.field_d - 1;
           }
-          var5 = this.field_k / 10 + (32 * this.field_n - 32 * ca.field_k) - sk.field_d / 10;
+          var5 = this.field_k / 10 + (32 * this.field_n - 32 * NanoFrameTimer.field_k) - sk.field_d / 10;
           var6 = -(hf.field_t * 32) - (IsaacRandom.field_i / 10 - this.field_p * 32 - this.field_f / 10);
           var7 = (int)Math.sqrt((double)(var6 * var6 + var5 * var5)) / this.field_d;
           var2_int = (int)((double)var2_int + (double)var7 * Math.sin((double)pa.field_d * 3.14 / 16384.0) / 3.0);
@@ -103,7 +103,7 @@ final class gf {
               return;
             }
             if (this.field_d > 0) {
-              var2_int = 32 * this.field_n + (this.field_k / 10 - sk.field_d / 10 - 32 * ca.field_k);
+              var2_int = 32 * this.field_n + (this.field_k / 10 - sk.field_d / 10 - 32 * NanoFrameTimer.field_k);
               var3 = this.field_f / 10 + (32 * this.field_p + (-(IsaacRandom.field_i / 10) - 32 * hf.field_t));
               var4 = (int)Math.sqrt((double)(var2_int * var2_int + var3 * var3)) / this.field_d;
               if (var4 > 100) {
@@ -515,7 +515,7 @@ final class gf {
             this.field_o = 0;
           }
           if (q.field_b[this.field_n][this.field_p].field_i > 120) {
-            if (ca.field_k > this.field_n &&
+            if (NanoFrameTimer.field_k > this.field_n &&
               this.field_i < 40) {
               this.field_i = this.field_i + 2;
             }
@@ -523,7 +523,7 @@ final class gf {
               param1) {
               this.field_m = -40;
             }
-            if (this.field_n > ca.field_k &&
+            if (this.field_n > NanoFrameTimer.field_k &&
               this.field_i > -40) {
               this.field_i = this.field_i - 2;
             }
@@ -531,7 +531,7 @@ final class gf {
               q.field_b[this.field_n][this.field_p].field_V) {
               ag.a(true, 1, 32 * this.field_p, 32 * this.field_n);
             }
-            if (ca.field_k == this.field_n &&
+            if (NanoFrameTimer.field_k == this.field_n &&
               this.field_p == hf.field_t &&
               !il.e(param0 ^ -10296)) {
               rj.a((byte) -38, 7);
@@ -782,11 +782,11 @@ final class gf {
               stackIn_121_0 = 0;
             }
             var8_int = stackIn_121_0;
-            stackIn_125_0 = (3 <= Math.abs(ca.field_k - this.field_n)) ? 0 : 1;
+            stackIn_125_0 = (3 <= Math.abs(NanoFrameTimer.field_k - this.field_n)) ? 0 : 1;
             var9 = stackIn_125_0;
-            stackIn_129_0 = (Math.abs(ca.field_k - this.field_n) < 5) ? 0 : 1;
+            stackIn_129_0 = (Math.abs(NanoFrameTimer.field_k - this.field_n) < 5) ? 0 : 1;
             var10 = stackIn_129_0;
-            if (ca.field_k > this.field_n &&
+            if (NanoFrameTimer.field_k > this.field_n &&
               this.field_i < var4Lifetime1) {
               if (var8_int == 0) {
                 this.field_i = this.field_i + var5Lifetime1;
@@ -796,7 +796,7 @@ final class gf {
                 }
               }
             }
-            if (this.field_n > ca.field_k &&
+            if (this.field_n > NanoFrameTimer.field_k &&
               this.field_i > -var4Lifetime1) {
               if (var8_int != 0) {
                 if (var9 != 0) {
@@ -809,21 +809,21 @@ final class gf {
             if (var8_int != 0 &&
               this.field_i == 0) {
               if (var10 != 0) {
-                if (this.field_n > ca.field_k &&
+                if (this.field_n > NanoFrameTimer.field_k &&
                   -var4Lifetime1 < this.field_i) {
                   this.field_i = this.field_i - var5Lifetime1;
                 }
-                if (ca.field_k > this.field_n &&
+                if (NanoFrameTimer.field_k > this.field_n &&
                   this.field_i < var4Lifetime1) {
                   this.field_i = this.field_i + var5Lifetime1;
                 }
               }
               if (var9 != 0) {
-                if (ca.field_k < this.field_n &&
+                if (NanoFrameTimer.field_k < this.field_n &&
                   this.field_i < var4Lifetime1) {
                   this.field_i = this.field_i + var5Lifetime1;
                 }
-                if (this.field_n < ca.field_k &&
+                if (this.field_n < NanoFrameTimer.field_k &&
                   -var4Lifetime1 < this.field_i) {
                   this.field_i = this.field_i - var5Lifetime1;
                 }
@@ -841,7 +841,7 @@ final class gf {
               this.field_m = this.field_m - 1;
               if (var7Lifetime1 == 0) {
                 if (-hf.field_t + this.field_p <= 2 &&
-                  Math.abs(ca.field_k - this.field_n) <= 3) {
+                  Math.abs(NanoFrameTimer.field_k - this.field_n) <= 3) {
                   this.field_m = 3 * -var4Lifetime1 / 2;
                 } else {
                   this.field_m = 0;
@@ -860,7 +860,7 @@ final class gf {
               q.field_b[this.field_n][this.field_p].field_V) {
               ag.a(true, 32, this.field_p * 32, 32 * this.field_n);
             }
-            if (this.field_n == ca.field_k &&
+            if (this.field_n == NanoFrameTimer.field_k &&
               hf.field_t == this.field_p &&
               !il.e(-31391)) {
               rj.a((byte) -38, 10);
@@ -1081,13 +1081,13 @@ final class gf {
             if (12 <= this.field_h &&
               15 != this.field_h &&
               !ByteStorage.a(13, 11764)) {
-              var4Lifetime1 = -this.field_n + ca.field_k;
+              var4Lifetime1 = -this.field_n + NanoFrameTimer.field_k;
               var5 = -this.field_p + hf.field_t;
               if (var4Lifetime1 * var4Lifetime1 + var5 * var5 < 25) {
                 ag.a(true, 13, 32 * this.field_p, this.field_n * 32);
               }
             }
-            if (this.field_n == ca.field_k &&
+            if (this.field_n == NanoFrameTimer.field_k &&
               hf.field_t == this.field_p) {
               cl.field_I = 0;
               if (!this.a((byte) 125)) {
@@ -1247,7 +1247,7 @@ final class gf {
               this.c(true);
             } else {
               if (this.field_h == 21) {
-                var4Lifetime2 = (hf.field_t - this.field_p) * (hf.field_t - this.field_p) + (-this.field_n + ca.field_k) * (ca.field_k - this.field_n);
+                var4Lifetime2 = (hf.field_t - this.field_p) * (hf.field_t - this.field_p) + (-this.field_n + NanoFrameTimer.field_k) * (NanoFrameTimer.field_k - this.field_n);
                 if (120 < q.field_b[this.field_n][this.field_p].field_i) {
                   stackIn_246_0 = (25 > var4Lifetime2) ? 1 : 0;
                 } else {
@@ -1313,14 +1313,14 @@ final class gf {
                     stackIn_271_0 = 0;
                   }
                   var10 = stackIn_271_0;
-                  stackIn_275_0 = (Math.abs(ca.field_k - this.field_n) > 4) ? 0 : 1;
+                  stackIn_275_0 = (Math.abs(NanoFrameTimer.field_k - this.field_n) > 4) ? 0 : 1;
                   var11_int = stackIn_275_0;
-                  if (this.field_n < ca.field_k &&
+                  if (this.field_n < NanoFrameTimer.field_k &&
                     this.field_i < var6Lifetime1 && (var10 != 0 ||
                     var11_int != 0)) {
                     this.field_i = this.field_i - var7Lifetime1;
                   }
-                  if (ca.field_k < this.field_n &&
+                  if (NanoFrameTimer.field_k < this.field_n &&
                     -var6Lifetime1 < this.field_i && (var10 != 0 ||
                     var11_int != 0)) {
                     this.field_i = this.field_i + var7Lifetime1;
@@ -1345,7 +1345,7 @@ final class gf {
                   if (-var6Lifetime1 * 4 > this.field_m) {
                     this.field_m = 4 * -var6Lifetime1;
                   }
-                  if (ca.field_k == this.field_n &&
+                  if (NanoFrameTimer.field_k == this.field_n &&
                     this.field_p == hf.field_t) {
                     fn.a(23, 232, 3);
                     var12 = 1000 * var3Lifetime1;
@@ -1489,11 +1489,11 @@ final class gf {
               }
               for (var5Lifetime2 = -var4Lifetime3Lifetime1 + this.field_n; var5Lifetime2 <= this.field_n + var4Lifetime3Lifetime1; var5Lifetime2++) {
                 for (var6Lifetime2 = this.field_p - var4Lifetime3Lifetime1; var4Lifetime3Lifetime1 + this.field_p >= var6Lifetime2; var6Lifetime2++) {
-                  if (~var5Lifetime2 == ~ca.field_k &&
+                  if (~var5Lifetime2 == ~NanoFrameTimer.field_k &&
                     hf.field_t == var6Lifetime2 &&
                     !il.e(-31391)) {
                     if (rf.a(13) &&
-                      ca.c(-2302)) {
+                      NanoFrameTimer.c(-2302)) {
                       rj.a((byte) -38, 13);
                     } else {
                       rj.a((byte) -38, 5);
@@ -1721,15 +1721,15 @@ final class gf {
               ne.a(33, -69);
               this.field_g = 1;
               this.field_b = 0;
-              var4Lifetime7 = ca.field_k - this.field_n;
+              var4Lifetime7 = NanoFrameTimer.field_k - this.field_n;
               var5Lifetime6 = -this.field_p + hf.field_t;
               if (var4Lifetime7 * var4Lifetime7 <= 1 &&
                 1 >= var5Lifetime6 * var5Lifetime6 &&
                 !il.e(-31391)) {
                 rj.a((byte) -38, 9);
-                q.field_b[ca.field_k][hf.field_t].field_a = true;
-                q.field_b[ca.field_k][hf.field_t].field_E = true;
-                q.field_b[ca.field_k][hf.field_t].field_q = -400;
+                q.field_b[NanoFrameTimer.field_k][hf.field_t].field_a = true;
+                q.field_b[NanoFrameTimer.field_k][hf.field_t].field_E = true;
+                q.field_b[NanoFrameTimer.field_k][hf.field_t].field_q = -400;
               }
               var6Lifetime6 = 0;
               for (var7Lifetime6 = 0; var7Lifetime6 < 1000; var7Lifetime6++) {
@@ -1818,7 +1818,7 @@ final class gf {
             }
             if (sc.field_b &&
               q.field_b[this.field_n][this.field_p].field_i == 0) {
-              var4Lifetime8 = ca.field_k - this.field_n;
+              var4Lifetime8 = NanoFrameTimer.field_k - this.field_n;
               var5Lifetime7 = -this.field_p + hf.field_t;
               if (64 > var4Lifetime8 * var4Lifetime8 + var5Lifetime7 * var5Lifetime7) {
                 ag.a(param0, 21, this.field_p * 32, this.field_n * 32);

@@ -42,7 +42,7 @@ class bi extends DualLinkNode {
               if (param2 != 61) {
                 field_t = (String) null;
               }
-              var3 = (String) (sh.a("getcookies", param0, (byte) 78));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, (byte) 78));
               var4 = qj.a(';', var3, param2 ^ 10258);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

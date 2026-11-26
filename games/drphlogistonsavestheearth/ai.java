@@ -92,7 +92,7 @@ final class ai extends DualLinkNode {
                 this.field_E = new int[var4_int];
                 for (var5 = 0; var4_int > var5; var5++) {
                   var6 = param0.readUnsignedShort(-788751192);
-                  var7 = m.a(var6, (byte) 46);
+                  var7 = FrameTimer.a(var6, (byte) 46);
                   if (var7 != null) {
                     this.field_E[var5] = var6;
                     array$0 = new int[var7.field_a];

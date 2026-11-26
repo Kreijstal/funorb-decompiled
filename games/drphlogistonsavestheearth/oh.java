@@ -28,7 +28,7 @@ final class oh {
           oh.clearStaticReferences(true);
         }
         ClientException.field_c = param2;
-        oc.field_B = param1;
+        Bzip2State.field_B = param1;
     }
 
     final static void a(PlatformTaskDispatcher param0, int param1, Object param2) {

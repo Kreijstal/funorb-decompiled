@@ -82,7 +82,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_c = true;
             System.out.println("error_game_" + param0);
             try {
-              fd.a(ia.g(99), "loggedout", (byte) 127);
+              JavaScriptBridge.callWithoutArguments(ia.g(99), "loggedout", (byte) 127);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;
@@ -457,7 +457,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 be.i(4);
                 this.a(true);
-                hj.field_e = IntrusiveDeque.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
+                Bzip2State.field_e = IntrusiveDeque.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
                 this.d(-31680);
                 fh.field_e = ee.e(-1);
                 do {
@@ -471,7 +471,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    mj.field_b = fh.field_e.a(0, ta.field_a);
+                    mj.field_b = fh.field_e.waitAndCountTicks(0, ta.field_a);
                     stackIn_99_0 = 0;
                   }
                   var3 = stackIn_99_0;

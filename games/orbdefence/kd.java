@@ -181,7 +181,7 @@ final class kd {
             var14Lifetime1 = this.field_s[var9Lifetime1] / this.field_c;
             var12Lifetime2 = DualLinkDequeIterator.field_e * var14Lifetime1 + (240 - param0);
             var11Lifetime1 = 320 + (DualLinkDequeIterator.field_e * var13Lifetime1 - param2);
-            var15 = -Math.abs(Math.sin(0.1 * (double)da.field_b + (double)var9Lifetime1));
+            var15 = -Math.abs(Math.sin(0.1 * (double)Bzip2State.field_b + (double)var9Lifetime1));
             SoftwareRasterizer.fillCircleAlpha(var11Lifetime1, (int)(var15 * 5.0 + (double)var12Lifetime2), 16, 16742399, 64);
             SoftwareRasterizer.fillCircleAlpha(var11Lifetime1, (int)((double)var12Lifetime2 + var15 * 4.0), 15, 16751103, 96);
             SoftwareRasterizer.fillCircleAlpha(var11Lifetime1, (int)(var15 * 3.0 + (double)var12Lifetime2), 14, 16759807, 128);
@@ -200,7 +200,7 @@ final class kd {
               if (this.field_j[var9Lifetime1Lifetime1] == 85) {
                 var12Lifetime2Lifetime1 = -(DualLinkDequeIterator.field_e / 2) + 240 + (var14Lifetime1Lifetime1 * DualLinkDequeIterator.field_e + (-param0 - 12));
                 var11Lifetime1Lifetime1 = -(DualLinkDequeIterator.field_e / 2) + 320 + (var13Lifetime1Lifetime1 * DualLinkDequeIterator.field_e - param2) + 4;
-                var15Lifetime1 = -Math.abs(Math.sin(0.1 * (double)da.field_b + (double)var9Lifetime1Lifetime1));
+                var15Lifetime1 = -Math.abs(Math.sin(0.1 * (double)Bzip2State.field_b + (double)var9Lifetime1Lifetime1));
                 SoftwareRasterizer.fillCircleAlpha(var11Lifetime1Lifetime1, (int)((double)var12Lifetime2Lifetime1 + var15Lifetime1 * 5.0), 16, 7799039, 64);
                 SoftwareRasterizer.fillCircleAlpha(var11Lifetime1Lifetime1, (int)(var15Lifetime1 * 4.0 + (double)var12Lifetime2Lifetime1), 15, 10027263, 96);
                 SoftwareRasterizer.fillCircleAlpha(var11Lifetime1Lifetime1, (int)((double)var12Lifetime2Lifetime1 + var15Lifetime1 * 3.0), 14, 12255487, 128);
@@ -212,7 +212,7 @@ final class kd {
                 SoftwareRasterizer.fillCircle(var11Lifetime1Lifetime1, (int)(5.0 * var15Lifetime1 + (double)var12Lifetime2Lifetime1), 3, 7799039);
                 var12Lifetime2Lifetime1Lifetime1 = -param0 + (-(DualLinkDequeIterator.field_e >> 1) + 240 + var14Lifetime1Lifetime1 * DualLinkDequeIterator.field_e);
                 var11Lifetime1Lifetime1Lifetime1 = 320 + (DualLinkDequeIterator.field_e * var13Lifetime1Lifetime1 - (DualLinkDequeIterator.field_e >> 1)) - param2;
-                var17 = (long)(100 * da.field_b);
+                var17 = (long)(100 * Bzip2State.field_b);
                 hg.field_ab.c(var11Lifetime1Lifetime1Lifetime1 - (hg.field_ab.field_s / 2 - 4), var12Lifetime2Lifetime1Lifetime1 - 64 - (int)(8.0 + 8.0 * Math.sin((double)var14Lifetime1Lifetime1 + ((double)var13Lifetime1Lifetime1 + (double)var17 * 0.001))));
               }
               var9Lifetime1Lifetime1++;

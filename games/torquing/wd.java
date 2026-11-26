@@ -168,7 +168,7 @@ final class wd extends DualLinkNode {
             if (qg.field_z < param2 + param5) {
               wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
             } else {
-              if (j.field_q > -param3 + param7) {
+              if (Bzip2State.field_q > -param3 + param7) {
                 wk.a(param1, param0, param6, param7, param2, param5, 0, param3);
               } else {
                 if (param3 + param7 > qk.field_p) {

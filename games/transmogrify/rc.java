@@ -64,7 +64,7 @@ final class rc {
           si.newRack.originY = 247;
           ac.field_n = new ld(1024, 8, 8);
           stackIn_15_0 = (!param0) ? 1 : 6;
-          re.field_A = stackIn_15_0;
+          Bzip2State.field_A = stackIn_15_0;
           if (dk.field_b) {
             DirectByteStorage.field_j = DirectByteStorage.field_j - 1;
             nc.field_t = nc.field_t - 1;

@@ -1308,7 +1308,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("connectionlost_withreason", 24);
                 if (var2 != null) {
-                  ck.field_o = PcmResampler.a(124, var2);
+                  Bzip2State.field_o = PcmResampler.a(124, var2);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
@@ -2006,7 +2006,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("loading_fonts", 24);
                 if (var2 != null) {
-                  in.field_a = PcmResampler.a(124, var2);
+                  FrameTimer.field_a = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("loading_soundeffects", 24);
                 if (null != var2) {
@@ -2102,7 +2102,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("highscores", 24);
                 if (null != var2) {
-                  lg.field_h = PcmResampler.a(123, var2);
+                  NanoFrameTimer.field_h = PcmResampler.a(123, var2);
                 }
                 var2 = vj.a("rankings", 24);
                 if (var2 != null) {
@@ -2174,7 +2174,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("startgame", 24);
                 if (var2 != null) {
-                  lg.field_l = PcmResampler.a(124, var2);
+                  NanoFrameTimer.field_l = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("newgame", 24);
                 if (var2 != null) {

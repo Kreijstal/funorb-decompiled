@@ -10,7 +10,7 @@ final class vd {
         if (ml.field_e != null) {
           return ml.field_e;
         }
-        ml.field_e = new jd(qj.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, qj.field_d.field_s, -1, 2147483647, true);
+        ml.field_e = new jd(GzipDecompressor.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, GzipDecompressor.field_d.field_s, -1, 2147483647, true);
         return ml.field_e;
     }
 

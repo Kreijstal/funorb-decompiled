@@ -5,21 +5,21 @@ abstract class GameClock {
     static AccountRequestState field_a;
     static String field_b;
 
-    final int a(byte param0, long param1) {
-        long var4 = this.a((byte) 63);
+    final int waitAndCountTicks(byte param0, long param1) {
+        long var4 = this.getDelayMillis((byte) 63);
         if (var4 > 0L) {
           gda.sleepMillis(false, var4);
           if (param0 != 109) {
-            this.a(-82L, 55);
-            return this.a(param1, 0);
+            this.advanceTicks(-82L, 55);
+            return this.advanceTicks(param1, 0);
           }
-          return this.a(param1, 0);
+          return this.advanceTicks(param1, 0);
         }
         if (param0 == 109) {
-          return this.a(param1, 0);
+          return this.advanceTicks(param1, 0);
         }
-        this.a(-82L, 55);
-        return this.a(param1, 0);
+        this.advanceTicks(-82L, 55);
+        return this.advanceTicks(param1, 0);
     }
 
     public static void releaseStatics(int param0) {
@@ -38,11 +38,11 @@ abstract class GameClock {
         return param0 >= 0 ? true : false;
     }
 
-    abstract void a(boolean param0);
+    abstract void resetTiming(boolean param0);
 
-    abstract int a(long param0, int param1);
+    abstract int advanceTicks(long param0, int param1);
 
-    abstract long a(byte param0);
+    abstract long getDelayMillis(byte param0);
 
     static {
         field_a = new AccountRequestState();

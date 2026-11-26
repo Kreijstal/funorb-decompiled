@@ -54,7 +54,7 @@ final class ll {
               se.field_p.position = 0;
               il.field_g = param0[t.field_C];
             }
-            if (!fk.a(false)) {
+            if (!Bzip2State.a(false)) {
               return false;
             }
             if (jl.field_h == 0) {

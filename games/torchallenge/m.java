@@ -71,7 +71,7 @@ final class m {
         int var8Lifetime1;
         var10 = TorChallenge.field_F ? 1 : 0;
         try {
-          var1_int = jl.field_e;
+          var1_int = FrameTimer.field_e;
           var2 = 0;
           if (RandomAccessCacheFile.field_c == 2) {
             var3_long = ol.correctedCurrentTimeMillis(256) - IterableNodeHashTable.field_e;
@@ -109,16 +109,16 @@ final class m {
                 }
                 var6 = stackIn_24_0;
               }
-              if (qi.field_b.length > jl.field_c.length) {
+              if (qi.field_b.length > FrameTimer.field_c.length) {
                 stackIn_28_0 = qi.field_b.length;
               } else {
-                stackIn_28_0 = jl.field_c.length;
+                stackIn_28_0 = FrameTimer.field_c.length;
               }
               var8 = stackIn_28_0;
               if (var3 >= 7 + var7 &&
                 var3 < var8 + var7 + 7) {
-                if (-var7 + (var3 - 7) < jl.field_c.length) {
-                  stackIn_33_0 = jl.field_c[-var7 + (-7 + var3)];
+                if (-var7 + (var3 - 7) < FrameTimer.field_c.length) {
+                  stackIn_33_0 = FrameTimer.field_c[-var7 + (-7 + var3)];
                 } else {
                   stackIn_33_0 = "";
                 }

@@ -200,7 +200,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_f = true;
             System.out.println("error_game_" + param1);
             try {
-              je.a(ob.e((byte) -121), false, "loggedout");
+              JavaScriptBridge.callWithoutArguments(ob.e((byte) -121), false, "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -282,9 +282,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         Object var7 = null;
         try {
           var2_long = gk.correctedCurrentTimeMillis(50);
-          var4 = hd.field_d[nl.field_d];
-          hd.field_d[nl.field_d] = var2_long;
-          nl.field_d = nl.field_d + 1 & 31;
+          var4 = hd.field_d[NanoFrameTimer.field_d];
+          hd.field_d[NanoFrameTimer.field_d] = var2_long;
+          NanoFrameTimer.field_d = NanoFrameTimer.field_d + 1 & 31;
           var6 = -101 % ((param0 - 59) / 36);
           if (0L != var4 &&
             var2_long <= var4) {
@@ -1030,7 +1030,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    tf.field_n = IsaacCipher.field_i.a(sl.field_w, true);
+                    tf.field_n = IsaacCipher.field_i.waitAndCountTicks(sl.field_w, true);
                     stackIn_101_0 = 0;
                   }
                   var3 = stackIn_101_0;

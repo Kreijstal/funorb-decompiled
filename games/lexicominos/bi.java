@@ -68,7 +68,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (AccountNameAvailabilityValidator.field_l != null) {
-            tb.field_b = 0;
+            FrameTimer.field_b = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < vc.field_K.length) {
@@ -112,7 +112,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = Lexicominos.field_G + 1 & 127;
               if (tj.field_h != var3) {
                 gj.field_x[Lexicominos.field_G] = -1;
-                ok.field_q[Lexicominos.field_G] = (char)var2_int;
+                Bzip2State.field_q[Lexicominos.field_G] = (char)var2_int;
                 Lexicominos.field_G = var3;
               }
             }
@@ -162,7 +162,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (AccountNameAvailabilityValidator.field_l == null) {
             return;
           }
-          tb.field_b = 0;
+          FrameTimer.field_b = 0;
           var2_int = param0.getKeyCode();
           if (var2_int >= 0 &&
             vc.field_K.length > var2_int) {
@@ -185,7 +185,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var3 = 127 & 1 + Lexicominos.field_G;
             if (tj.field_h != var3) {
               gj.field_x[Lexicominos.field_G] = var2_int;
-              ok.field_q[Lexicominos.field_G] = (char)0;
+              Bzip2State.field_q[Lexicominos.field_G] = (char)0;
               Lexicominos.field_G = var3;
             }
           }

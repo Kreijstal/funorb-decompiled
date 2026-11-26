@@ -82,14 +82,14 @@ abstract class bl extends DualLinkNode {
             return false;
           }
           if (sk.field_d < -30 &&
-            mh.field_e[ca.field_k - 1][hf.field_t].g()) {
+            mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g()) {
             if (MidiPcmStream.field_K == -1) {
               return true;
             }
             if (sk.field_d <= 30) {
               return false;
             }
-            if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+            if (!mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
               return false;
             }
             if (MidiPcmStream.field_K == 1) {
@@ -100,7 +100,7 @@ abstract class bl extends DualLinkNode {
           if (sk.field_d <= 30) {
             return false;
           }
-          if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+          if (!mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
             return false;
           }
           if (MidiPcmStream.field_K != 1) {
@@ -109,15 +109,15 @@ abstract class bl extends DualLinkNode {
           return true;
         }
         if (AccountRequestState.field_k >= 0) {
-          if (mh.field_e[ca.field_k][hf.field_t + 1].g()) {
+          if (mh.field_e[NanoFrameTimer.field_k][hf.field_t + 1].g()) {
             return true;
           }
           if (-80 > sk.field_d &&
-            mh.field_e[ca.field_k - 1][hf.field_t + 1].g()) {
+            mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t + 1].g()) {
             return true;
           }
           if (sk.field_d > 80 &&
-            mh.field_e[1 + ca.field_k][1 + hf.field_t].g()) {
+            mh.field_e[1 + NanoFrameTimer.field_k][1 + hf.field_t].g()) {
             return true;
           }
           if (AccountRequestState.field_k >= 0 &&
@@ -125,19 +125,19 @@ abstract class bl extends DualLinkNode {
             2 != rj.field_f &&
             qe.field_b[4]) {
             if (sk.field_d < -30 &&
-              mh.field_e[ca.field_k - 1][hf.field_t].g()) {
+              mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g()) {
               if (MidiPcmStream.field_K == -1) {
                 return true;
               }
               if (sk.field_d > 30 &&
-                mh.field_e[ca.field_k + 1][hf.field_t].g() &&
+                mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g() &&
                 MidiPcmStream.field_K == 1) {
                 return true;
               }
               return false;
             }
             if (sk.field_d > 30 &&
-              mh.field_e[ca.field_k + 1][hf.field_t].g() &&
+              mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g() &&
               MidiPcmStream.field_K == 1) {
               return true;
             }
@@ -160,7 +160,7 @@ abstract class bl extends DualLinkNode {
           if (sk.field_d <= 30) {
             return false;
           }
-          if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+          if (!mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
             return false;
           }
           if (MidiPcmStream.field_K != 1) {
@@ -168,11 +168,11 @@ abstract class bl extends DualLinkNode {
           }
           return true;
         }
-        if (!mh.field_e[ca.field_k - 1][hf.field_t].g()) {
+        if (!mh.field_e[NanoFrameTimer.field_k - 1][hf.field_t].g()) {
           if (sk.field_d <= 30) {
             return false;
           }
-          if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+          if (!mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
             return false;
           }
           if (MidiPcmStream.field_K != 1) {
@@ -186,7 +186,7 @@ abstract class bl extends DualLinkNode {
         if (sk.field_d <= 30) {
           return false;
         }
-        if (!mh.field_e[ca.field_k + 1][hf.field_t].g()) {
+        if (!mh.field_e[NanoFrameTimer.field_k + 1][hf.field_t].g()) {
           return false;
         }
         if (MidiPcmStream.field_K == 1) {
@@ -206,7 +206,7 @@ abstract class bl extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = -121 / ((-15 - param2) / 55);
-          if (cn.a(param0, 258, param3, param1)) {
+          if (Bzip2State.a(param0, 258, param3, param1)) {
             stackIn_4_0 = SecondaryNodeDeque.c(255);
             return stackIn_4_0;
           }

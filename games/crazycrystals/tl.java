@@ -1333,7 +1333,7 @@ abstract class tl {
           }
           var2Lifetime253 = we.a("tutorial_3_12", 1);
           if (var2Lifetime253 != null) {
-            ke.field_c = fa.a((byte) -119, var2Lifetime253);
+            FrameTimer.field_c = fa.a((byte) -119, var2Lifetime253);
           }
           var2Lifetime254 = we.a("tutorial_3_19", 1);
           if (var2Lifetime254 != null) {

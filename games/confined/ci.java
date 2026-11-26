@@ -99,7 +99,7 @@ final class ci {
               if (param1.length() == 0) {
                 var5 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              kf.a(param0, true, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluate(param0, true, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
             am.a(44, param0);

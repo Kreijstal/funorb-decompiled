@@ -321,7 +321,7 @@ final class dh {
             if (var5 != null) {
               if (!am.a(false, this.field_i) &&
                 !qf.field_b) {
-                if (!kh.field_o) {
+                if (!NanoFrameTimer.field_o) {
                   this.field_b.a((byte) -12, oc.a(bc.field_c, new String[]{var8}, (byte) -57), 8);
                 }
                 this.field_b.a((byte) -12, oc.a(nd.field_b, new String[]{var8}, (byte) -89), 18);
@@ -394,7 +394,7 @@ final class dh {
           var3 = var5.field_Gb;
           if (var5.field_dc) {
             this.field_b.a((byte) -12, oc.a(sj.field_p, new String[]{var3}, (byte) -76), 2);
-            this.field_b.a((byte) -12, oc.a(kh.field_p, new String[]{var3}, (byte) -101), 3);
+            this.field_b.a((byte) -12, oc.a(NanoFrameTimer.field_p, new String[]{var3}, (byte) -101), 3);
             return;
           }
           if (!var5.field_Pb) {

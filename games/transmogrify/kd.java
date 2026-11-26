@@ -183,7 +183,7 @@ final class kd implements WidgetRenderer {
           if (n.submittedWordCount != 10 && (!mg.field_d ||
             2 != n.submittedWordCount)) {
             if (var7Lifetime1 >= 0 &&
-              re.field_A >= 6) {
+              Bzip2State.field_A >= 6) {
               if (mg.field_d &&
                 n.submittedWordCount == 0 &&
                 var7Lifetime1 > 0) {
@@ -197,7 +197,7 @@ final class kd implements WidgetRenderer {
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (2 <= re.field_A) {
+            if (2 <= Bzip2State.field_A) {
               pa.a(376 + param1, AccountRequestState.field_c, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {
               pa.a(376 + param1, AccountRequestState.field_c, 39935, 8421504, 164, 8421504, 264, -10, 39935);
@@ -206,24 +206,24 @@ final class kd implements WidgetRenderer {
           stackIn_55_0 = param1 + 376;
           stackIn_55_1 = th.shuffleLabel;
           stackIn_55_2 = 16711680;
-          if (re.field_A != 6) {
+          if (Bzip2State.field_A != 6) {
             stackIn_56_3 = 8421504;
           } else {
             stackIn_56_3 = 16776867;
           }
           stackIn_58_4 = 108;
-          if (re.field_A != 6) {
+          if (Bzip2State.field_A != 6) {
             stackIn_59_5 = 8421504;
           } else {
             stackIn_59_5 = 16710412;
           }
           pa.a(stackIn_55_0, stackIn_55_1, stackIn_55_2, stackIn_56_3, stackIn_58_4, stackIn_59_5, 134, -10, 16711680);
-          if (3 != re.field_A &&
-            re.field_A != 4) {
-            if (re.field_A == 0) {
+          if (3 != Bzip2State.field_A &&
+            Bzip2State.field_A != 4) {
+            if (Bzip2State.field_A == 0) {
               var8 = DirectByteStorage.field_f;
             } else {
-              if (re.field_A < 6) {
+              if (Bzip2State.field_A < 6) {
                 var8 = hd.field_c;
               } else {
                 var8 = lb.field_g;
@@ -243,13 +243,13 @@ final class kd implements WidgetRenderer {
           }
           if (0 == n.submittedWordCount) {
             var8Lifetime1 = null;
-            if (re.field_A == 1) {
+            if (Bzip2State.field_A == 1) {
               var8Lifetime1 = tb.field_b[0];
             }
-            if (2 == re.field_A) {
+            if (2 == Bzip2State.field_A) {
               var8Lifetime1 = tb.field_b[1];
             }
-            if (re.field_A == 4) {
+            if (Bzip2State.field_A == 4) {
               var8Lifetime1 = tb.field_b[2];
             }
             if (var8Lifetime1 != null &&

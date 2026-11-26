@@ -70,12 +70,12 @@ final class v extends ik {
         this(2188450, 2591221, 9543);
     }
 
-    final static tb c(int param0) {
+    final static FrameTimer c(int param0) {
         if (param0 != 65476) {
           v.c(62);
-          return (tb) ((Object) new rk());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (tb) ((Object) new rk());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static lg a(String param0, int param1, byte param2) {

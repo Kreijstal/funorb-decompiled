@@ -302,7 +302,7 @@ final class ProxySocketConnector extends SocketConnector {
               fieldTemp$1 = fc.field_d;
               fc.field_d = fc.field_d + 1;
               var5_ref.field_hb = fieldTemp$1;
-              re.field_C.addLast(var5_ref, param0 - 84);
+              Bzip2State.field_C.addLast(var5_ref, param0 - 84);
             }
             var5_ref.field_eb = var4_ref_String;
             return;
@@ -379,7 +379,7 @@ final class ProxySocketConnector extends SocketConnector {
               return;
             }
           }
-          td.a(var7, (byte) 125, var6);
+          FrameTimer.a(var7, (byte) 125, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

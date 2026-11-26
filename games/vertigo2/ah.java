@@ -1396,7 +1396,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -15, "TIMEATTACK_UNLUCKY");
                 if (var2 != null) {
-                  vq.field_k = in.a(0, var2);
+                  Bzip2State.field_k = in.a(0, var2);
                 }
                 var2 = en.a((byte) -89, "TIMEATTACK_YOURTIME");
                 if (var2 != null) {

@@ -27,12 +27,12 @@ final class jg extends am {
         int var15Lifetime2;
         var17 = Torquing.field_u;
         try {
-          var11 = ln.a(qk.field_p, j.field_q, param4, 113);
-          var12 = ln.a(qk.field_p, j.field_q, param6, 69);
+          var11 = ln.a(qk.field_p, Bzip2State.field_q, param4, 113);
+          var12 = ln.a(qk.field_p, Bzip2State.field_q, param6, 69);
           var13 = ln.a(qg.field_z, RasterBuffer.field_e, param5, 96);
           var14 = ln.a(qg.field_z, RasterBuffer.field_e, param1, 113);
-          var7_int = ln.a(qk.field_p, j.field_q, param3 + param4, 99);
-          var8 = ln.a(qk.field_p, j.field_q, -param3 + param6, 71);
+          var7_int = ln.a(qk.field_p, Bzip2State.field_q, param3 + param4, 99);
+          var8 = ln.a(qk.field_p, Bzip2State.field_q, -param3 + param6, 71);
           for (var15 = var11; var7_int > var15; var15++) {
             di.a(var13, (byte) -92, param0, qd.field_a[var15], var14);
           }

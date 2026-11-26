@@ -286,7 +286,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime43 = GzipDecompressor.a(10, "resume_tutorial");
           if (var2Lifetime43 != null) {
-            re.field_m = eg.a(113, var2Lifetime43);
+            Bzip2State.field_m = eg.a(113, var2Lifetime43);
           }
           var2Lifetime44 = GzipDecompressor.a(10, "end_tutorial");
           if (null != var2Lifetime44) {

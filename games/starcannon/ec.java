@@ -28,10 +28,10 @@ final class ec {
           if (!bf.field_y.a("commonui", -9883)) {
             return 40;
           }
-          if (!fk.field_k.b((byte) 89)) {
+          if (!Bzip2State.field_k.b((byte) 89)) {
             return 50;
           }
-          if (!fk.field_k.a("commonui", -9883)) {
+          if (!Bzip2State.field_k.a("commonui", -9883)) {
             return 60;
           }
           if (!li.field_b.b((byte) 101)) {
@@ -59,10 +59,10 @@ final class ec {
         if (!bf.field_y.a("commonui", -9883)) {
           return 57;
         }
-        if (!fk.field_k.b((byte) 89)) {
+        if (!Bzip2State.field_k.b((byte) 89)) {
           return 71;
         }
-        if (!fk.field_k.a("commonui", -9883)) {
+        if (!Bzip2State.field_k.a("commonui", -9883)) {
           return 80;
         }
         if (!li.field_b.b((byte) 115)) {

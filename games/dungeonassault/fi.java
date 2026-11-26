@@ -623,7 +623,7 @@ final class fi extends qe {
     private final String a(int param0, int param1) {
         String var3 = DualLinkNode.field_m[param1];
         if (param1 == 10 &&
-          (hl.field_f == 0 || 0 == dc.field_z || hl.field_f == 12 || dc.field_z == 12 || hl.field_f == 1 || dc.field_z == 1)) {
+          (hl.field_f == 0 || 0 == Bzip2State.field_z || hl.field_f == 12 || Bzip2State.field_z == 12 || hl.field_f == 1 || Bzip2State.field_z == 1)) {
           var3 = DualLinkNode.field_m[9];
         }
         if (param0 != -13) {

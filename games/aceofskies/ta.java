@@ -40,7 +40,7 @@ final class ta extends RenderEffect {
         this.field_b.a(var3, -9135);
         this.field_b.a(ResourceArchive.field_g, false);
         this.field_b.a(1, (byte) 120);
-        this.field_b.a(du.field_l, true, bd.field_C);
+        this.field_b.a(du.field_l, true, Bzip2State.field_C);
         this.field_b.a(true, 2, true, ArchiveNetworkClient.field_i, false);
         this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
         ec var4 = this.field_b.d(12343);
@@ -73,7 +73,7 @@ final class ta extends RenderEffect {
     }
 
     final void a(boolean param0, boolean param1) {
-        this.field_b.a(ru.field_a, !param0 ? true : false, bd.field_C);
+        this.field_b.a(ru.field_a, !param0 ? true : false, Bzip2State.field_C);
         if (!param0) {
           return;
         }

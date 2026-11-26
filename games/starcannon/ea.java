@@ -58,10 +58,10 @@ final class ea {
           } else {
             if (1 == var2) {
               var3 = var9.readInt((byte) -91);
-              var4_ref_of = (of) (fi.field_c.beginForward(-3905));
+              var4_ref_of = (of) (FrameTimer.field_c.beginForward(-3905));
               while (var4_ref_of != null) {
                 if (var4_ref_of.field_h != var3) {
-                  var4_ref_of = (of) (fi.field_c.nextForward(-16913));
+                  var4_ref_of = (of) (FrameTimer.field_c.nextForward(-16913));
                   continue;
                 }
                 break;

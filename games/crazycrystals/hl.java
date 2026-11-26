@@ -36,7 +36,7 @@ final class hl extends l {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (hi.a(param0, "getcookies", 16));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param0, "getcookies", 16));
               var4 = ik.a(var3, (byte) -76, ';');
               if (param1 > -39) {
                 hl.a(-13, true);
@@ -137,7 +137,7 @@ final class hl extends l {
           }
         }
         if (!param1) {
-          fb.field_b = s.a(var9, 116, 80);
+          fb.field_b = NanoFrameTimer.a(var9, 116, 80);
           so.field_f = null;
         } else {
           var5 = var9.readUnsignedShort((byte) -7);

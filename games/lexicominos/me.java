@@ -240,7 +240,7 @@ final class me extends DualLinkNode {
         int var3 = Lexicominos.field_L ? 1 : 0;
         if (null != this.field_r) {
           for (var2 = 0; this.field_r.length > var2; var2++) {
-            this.field_r[var2] = tb.a(this.field_r[var2], 32768);
+            this.field_r[var2] = FrameTimer.a(this.field_r[var2], 32768);
           }
         }
         if (param0 > -66) {

@@ -690,7 +690,7 @@ final class ad {
         }
         try {
           mk.a("", (byte) -5, param0);
-          l.a(param0, -106);
+          Bzip2State.a(param0, -106);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ad.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -942,14 +942,14 @@ final class ad {
               if (af.field_c <= 0 &&
                 !fj.field_J) {
                 try {
-                  mf.a(-26159, "unzap", ii.a(false));
+                  JavaScriptBridge.callWithoutArguments(-26159, "unzap", ii.a(false));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  mf.a(126, "zap", ii.a(false), new Object[]{mk.a(ProxySocketConnector.field_f, 480)});
+                  JavaScriptBridge.callWithArguments(126, "zap", ii.a(false), new Object[]{mk.a(ProxySocketConnector.field_f, 480)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

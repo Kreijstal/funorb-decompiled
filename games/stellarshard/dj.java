@@ -84,7 +84,7 @@ final class dj {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              sh.a(-13847, "document.cookie=\"" + var5Lifetime6 + "\"", param1);
+              JavaScriptBridge.evaluate(-13847, "document.cookie=\"" + var5Lifetime6 + "\"", param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

@@ -344,7 +344,7 @@ abstract class am extends fj implements hi {
         int var2 = Confined.field_J ? 1 : 0;
         int var1_intLifetime1;
         try {
-          kh.field_gb.a((byte) 31);
+          kh.field_gb.resetTiming((byte) 31);
           if (param0 != -4258) {
             CharSequence var3 = (CharSequence) null;
             am.a(-36, (CharSequence) null);
@@ -425,15 +425,15 @@ abstract class am extends fj implements hi {
             try {
               var4 = param1.getCodeBase();
               var3 = pn.a(var4, (byte) -33, param1).getFile();
-              kf.a((byte) 53, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
-              kf.a((byte) 53, "updatelinks", param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
-              kf.a((byte) 53, "updatelinks", param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              kf.a((byte) 53, "updatelinks", param1, new Object[]{"options", var3 + "options.ws"});
-              kf.a((byte) 53, "updatelinks", param1, new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callWithArguments((byte) 53, "updatelinks", param1, new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callWithArguments((byte) 53, "updatelinks", param1, new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments((byte) 53, "updatelinks", param1, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments((byte) 53, "updatelinks", param1, new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.callWithArguments((byte) 53, "updatelinks", param1, new Object[]{"terms", var3 + "terms.ws"});
               if (param0 < 16) {
                 field_I = (int[]) null;
               }
-              kf.a((byte) 53, "updatelinks", param1, new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments((byte) 53, "updatelinks", param1, new Object[]{"privacy", var3 + "privacy.ws"});
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

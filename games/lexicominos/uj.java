@@ -72,10 +72,10 @@ final class uj implements rd {
               var3 = var3 + param0;
             }
             oe.a(var3, true);
-            var7 = tb.a(":", var3, true, "%3a");
-            var8 = tb.a("@", var7, true, "%40");
-            var9 = tb.a("&", var8, true, "%26");
-            var10 = tb.a("#", var9, true, "%23");
+            var7 = FrameTimer.a(":", var3, true, "%3a");
+            var8 = FrameTimer.a("@", var7, true, "%40");
+            var9 = FrameTimer.a("&", var8, true, "%26");
+            var10 = FrameTimer.a("#", var9, true, "%23");
             if (null == tg.field_i) {
               return;
             }

@@ -34,7 +34,7 @@ final class wd {
           var2_long = hn.correctedCurrentTimeMillis((byte) 80);
           if (bl.field_b != 0 &&
             tc.field_a < 0) {
-            var4_ref_ei = (ei) (ck.field_u.beginForward(-69));
+            var4_ref_ei = (ei) (Bzip2State.field_u.beginForward(-69));
             if (var4_ref_ei != null &&
               var4_ref_ei.field_j < var2_long) {
               var4_ref_ei.unlink(-115);
@@ -85,7 +85,7 @@ final class wd {
             for (var6 = 0; jd.field_q > var6; var6++) {
               var5.field_r[var6] = sc.field_g.field_n[var6];
             }
-            ck.field_u.addLast(var5, 111);
+            Bzip2State.field_u.addLast(var5, 111);
             tc.field_a = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

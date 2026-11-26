@@ -32,7 +32,7 @@ final class tc extends kf {
     final static void j(int param0) {
         int var1_int = 0;
         int var2 = StarCannon.field_A;
-        p.field_d.b((byte) -78);
+        p.field_d.resetTiming((byte) -78);
         for (var1_int = 0; 32 > var1_int; var1_int++) {
           jb.field_j[var1_int] = 0L;
         }

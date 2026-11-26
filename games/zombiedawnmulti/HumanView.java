@@ -47,7 +47,7 @@ abstract class HumanView extends UnitView {
         int var2 = this.field_C;
         if (var2 != 2 && var2 != 4 &&
           6 != var2) {
-          return PopupMenuBuilder.field_A;
+          return Bzip2State.field_A;
         }
         return PendingDataRequest.field_i;
     }

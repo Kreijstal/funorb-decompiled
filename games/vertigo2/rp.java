@@ -52,7 +52,7 @@ final class rp implements ef {
               if (param2.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              je.a(param0, "document.cookie=\"" + var5 + "\"", (byte) 124);
+              JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5 + "\"", (byte) 124);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;

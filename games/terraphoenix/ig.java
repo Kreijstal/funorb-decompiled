@@ -143,7 +143,7 @@ final class ig {
               var3 = (uc) null;
               ig.a(47, (uc) null);
             }
-            cd.a(dg.a(false), "resizing", new Object[]{new Integer(param0)}, 10056);
+            JavaScriptBridge.callWithArguments(dg.a(false), "resizing", new Object[]{new Integer(param0)}, 10056);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

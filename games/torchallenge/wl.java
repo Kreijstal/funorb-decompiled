@@ -677,7 +677,7 @@ final class wl {
         be.field_b = false;
         for (var7 = 0; 3 > var7; var7++) {
           vd.field_d[var7] = new Sprite(lh.field_C[var7], lh.field_q[var7]);
-          jl.field_a[var7] = new Sprite(lh.field_C[var7], lh.field_q[var7]);
+          FrameTimer.field_a[var7] = new Sprite(lh.field_C[var7], lh.field_q[var7]);
         }
         for (var7Lifetime1 = 0; var7Lifetime1 < 256; var7Lifetime1++) {
           LevelEntity.field_A[var7Lifetime1] = 65793 * var7Lifetime1;

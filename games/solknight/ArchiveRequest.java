@@ -52,7 +52,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           ProxySocketConnector.field_o = param8;
           vc.field_e = param4;
           NodeHashTableIterator.field_a = param3;
-          hj.field_x = param5;
+          Bzip2State.field_x = param5;
           sa.field_o = param7;
           if (param0 != -11400) {
             field_o = 5;

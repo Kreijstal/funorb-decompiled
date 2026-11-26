@@ -6,7 +6,7 @@ final class th {
     static String shuffleLabel;
     static String field_e;
     static String[] field_d;
-    static td field_c;
+    static FrameTimer field_c;
 
     final static void a(int param0, int param1, ng param2) {
         hj var3 = null;

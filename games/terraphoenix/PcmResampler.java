@@ -47,7 +47,7 @@ final class PcmResampler {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
-          if (!vc.field_a.a(-109)) {
+          if (!FrameTimer.field_a.a(-109)) {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }

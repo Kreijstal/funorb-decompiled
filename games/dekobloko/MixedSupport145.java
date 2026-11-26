@@ -42,7 +42,7 @@ final class MixedSupport145 {
           integerLocal5 = DekoBlokoClient.obfuscationControl ? 1 : 0;
           try {
             try {
-              stringLocal2 = (String) (MixedSupport084.computeObject1096(true, "getcookies", appletArgument1));
+              stringLocal2 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", appletArgument1));
               stringArrayLocal3 = ResourceArchive.computeStringArray0801(';', (byte) 66, stringLocal2);
               if (byteArgument2 != -1) {
                 stringState0610 = (String) null;

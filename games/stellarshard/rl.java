@@ -165,12 +165,12 @@ final class rl {
             try {
               var4 = param0.getCodeBase();
               var3 = lk.a(param0, var4, 118).getFile();
-              sh.a(new Object[]{"home", var3 + "home.ws"}, false, "updatelinks", param0);
-              sh.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, false, "updatelinks", param0);
-              sh.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, false, "updatelinks", param0);
-              sh.a(new Object[]{"options", var3 + "options.ws"}, false, "updatelinks", param0);
-              sh.a(new Object[]{"terms", var3 + "terms.ws"}, false, "updatelinks", param0);
-              sh.a(new Object[]{"privacy", var3 + "privacy.ws"}, false, "updatelinks", param0);
+              JavaScriptBridge.callWithArguments(new Object[]{"home", var3 + "home.ws"}, false, "updatelinks", param0);
+              JavaScriptBridge.callWithArguments(new Object[]{"gamelist", var3 + "togamelist.ws"}, false, "updatelinks", param0);
+              JavaScriptBridge.callWithArguments(new Object[]{"serverlist", var3 + "toserverlist.ws"}, false, "updatelinks", param0);
+              JavaScriptBridge.callWithArguments(new Object[]{"options", var3 + "options.ws"}, false, "updatelinks", param0);
+              JavaScriptBridge.callWithArguments(new Object[]{"terms", var3 + "terms.ws"}, false, "updatelinks", param0);
+              JavaScriptBridge.callWithArguments(new Object[]{"privacy", var3 + "privacy.ws"}, false, "updatelinks", param0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

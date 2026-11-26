@@ -512,7 +512,7 @@ final class vb extends qf {
           }
           var2Lifetime77 = BoundedRandomAccessFile.a("con2", (byte) -124);
           if (null != var2Lifetime77) {
-            fi.field_a = DualLinkNode.a(112, var2Lifetime77);
+            FrameTimer.field_a = DualLinkNode.a(112, var2Lifetime77);
           }
           var2Lifetime78 = BoundedRandomAccessFile.a("con1", (byte) -124);
           if (null != var2Lifetime78) {

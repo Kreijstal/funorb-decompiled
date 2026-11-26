@@ -168,7 +168,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_b = true;
             System.out.println("error_game_" + param0);
             try {
-              mb.a(ll.b(104), "loggedout", true);
+              JavaScriptBridge.callWithoutArguments(ll.b(104), "loggedout", true);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -304,7 +304,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   if (stackIn_79_0 > stackIn_79_1) {
                     break;
                   }
-                  fi.field_b = true;
+                  FrameTimer.field_b = true;
                   break;
                 }
               }
@@ -338,7 +338,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    sg.field_k = p.field_d.a(fd.field_c, 109);
+                    sg.field_k = p.field_d.waitAndCountTicks(fd.field_c, 109);
                     stackIn_98_0 = 0;
                   }
                   var3 = stackIn_98_0;
@@ -386,7 +386,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (ic.field_b == this &&
             !kd.field_E) {
             v.field_b = true;
-            if (fi.field_b &&
+            if (FrameTimer.field_b &&
               -nh.field_b + dd.correctedCurrentTimeMillis(82) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {

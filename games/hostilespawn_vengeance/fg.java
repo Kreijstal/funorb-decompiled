@@ -12,7 +12,7 @@ final class fg {
         try {
           var4_int = -(param3.field_e * 32) + 256;
           int var5 = -125 % ((-44 - param2) / 49);
-          lg.field_k.a(true, var4_int, (int)param3.field_c, param0, param1);
+          NanoFrameTimer.field_k.a(true, var4_int, (int)param3.field_c, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "fg.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

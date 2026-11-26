@@ -4,7 +4,7 @@
 final class eb {
     static IntrusiveDeque field_f;
     static int field_b;
-    static ek field_d;
+    static FrameTimer field_d;
     static String field_a;
     static String field_g;
     static String field_c;
@@ -27,7 +27,7 @@ final class eb {
           field_c = null;
           return;
         }
-        field_d = (ek) null;
+        field_d = (FrameTimer) null;
         field_c = null;
     }
 
@@ -42,7 +42,7 @@ final class eb {
           }
         }
         if (param0 > -2) {
-          field_d = (ek) null;
+          field_d = (FrameTimer) null;
         }
         ul.field_a = true;
     }

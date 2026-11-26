@@ -15,7 +15,7 @@ class bd extends DualLinkNode {
           if (mo.field_l == 0) {
             var2 = 15;
           } else {
-            var3 = ke.field_b[jo.field_o] + 1;
+            var3 = FrameTimer.field_b[jo.field_o] + 1;
             if (var2 <= var3) {
               if (var2 > uo.field_o) {
                 fl.field_g = fp.field_a;

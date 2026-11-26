@@ -613,7 +613,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           }
           var2 = oc.field_G.beginForward((byte) -95);
           while (var2 != null) {
-            re.a(2, param1);
+            Bzip2State.a(2, param1);
             var2 = oc.field_G.nextForward(true);
           }
           return;

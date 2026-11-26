@@ -205,12 +205,12 @@ final class fm {
             var2Lifetime3 = SoftwareRasterizer.field_f;
             var3Lifetime3 = SoftwareRasterizer.field_l;
             SoftwareRasterizer.saveClip(rh.field_e);
-            var4 = rc.field_a.c(aa.field_b, 640) + 6;
+            var4 = rc.field_a.c(FrameTimer.field_b, 640) + 6;
             var5Lifetime1 = 20 + (var4 + lc.field_w.field_s);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = lc.field_w.field_s + (var6Lifetime2 + 20);
             hc.field_l.d();
-            rc.field_a.b(aa.field_b, var7Lifetime2 - hc.field_l.field_p, rc.field_a.field_B + 155 - (hc.field_l.field_u - rc.field_a.field_H), 16777215, -1);
+            rc.field_a.b(FrameTimer.field_b, var7Lifetime2 - hc.field_l.field_p, rc.field_a.field_B + 155 - (hc.field_l.field_u - rc.field_a.field_H), 16777215, -1);
             ve.a(3, 50, hc.field_l, var4, 1, -hc.field_l.field_p + (var7Lifetime2 - 4), (byte) 64, 155 - hc.field_l.field_u);
             var8Lifetime1 = -hc.field_l.field_u + (155 - (-rc.field_a.field_B - rc.field_a.field_H - 3 + lc.field_w.field_t) / 2);
             lc.field_w.c(-hc.field_l.field_p + var6Lifetime2, var8Lifetime1);

@@ -29,7 +29,7 @@ final class NanoFrameClock extends FrameClock {
         }
     }
 
-    final long nanosUntilNextTick(byte param0) {
+    final long getDelayMillis(byte param0) {
         this.field_f = this.field_f + this.measureElapsedNanos((byte) 10);
         if (this.field_i > this.field_f) {
           return (-this.field_f + this.field_i) / 1000000L;

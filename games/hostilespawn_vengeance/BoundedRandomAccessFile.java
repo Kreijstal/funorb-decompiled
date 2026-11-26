@@ -257,14 +257,14 @@ final class BoundedRandomAccessFile {
               if (0 >= wb.field_S &&
                 !AccountCreationResultPanel.field_ub) {
                 try {
-                  a.a("unzap", BufferedRandomAccessFile.c(-1), -124);
+                  JavaScriptBridge.callWithoutArguments("unzap", BufferedRandomAccessFile.c(-1), -124);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  a.a(BufferedRandomAccessFile.c(-1), new Object[]{pm.a(ib.field_d, (byte) 100)}, "zap", -13730);
+                  JavaScriptBridge.callWithArguments(BufferedRandomAccessFile.c(-1), new Object[]{pm.a(ib.field_d, (byte) 100)}, "zap", -13730);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

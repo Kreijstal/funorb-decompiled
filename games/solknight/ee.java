@@ -8,11 +8,11 @@ final class ee extends IntrusiveNode {
     static boolean field_i;
     static PacketBuffer field_h;
 
-    final static rj e(int param0) {
+    final static FrameTimer e(int param0) {
         if (param0 != -1) {
           field_l = -11;
         }
-        return (rj) ((Object) new dk());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static void f(int param0) {
@@ -82,7 +82,7 @@ final class ee extends IntrusiveNode {
             var4 = ImageProducerRasterBuffer.field_l[var3];
             if (var4 >= 0) {
               if (bc.field_K.field_f != var4) {
-                var5 = rj.field_c;
+                var5 = FrameTimer.field_c;
               } else {
                 var5 = pb.field_b;
               }

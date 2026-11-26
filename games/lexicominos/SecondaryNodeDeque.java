@@ -8,7 +8,7 @@ final class SecondaryNodeDeque implements Iterable {
     static pj field_b;
     static int[][] field_f;
     static fh field_d;
-    static tb field_a;
+    static FrameTimer field_a;
     DualLinkNode sentinel;
 
     final static void a(boolean param0) {
@@ -17,7 +17,7 @@ final class SecondaryNodeDeque implements Iterable {
           di.field_x.b(117, field_b);
           return;
         }
-        field_a = (tb) null;
+        field_a = (FrameTimer) null;
         di.field_x.b(117, field_b);
     }
 
@@ -25,7 +25,7 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 == 482) {
           return;
         }
-        field_a = (tb) null;
+        field_a = (FrameTimer) null;
     }
 
     final void addLast(DualLinkNode param0, byte param1) {

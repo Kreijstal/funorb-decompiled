@@ -1073,7 +1073,7 @@ final class mh {
           if (decompiledFrameRemainder0) {
             boolean decompiledFrameCompleted2 = true;
             if (this.field_h != 11) {
-              while (np.a((byte) -13)) {
+              while (NanoFrameTimer.a((byte) -13)) {
                 stackIn_59_0 = 13;
                 stackIn_59_1 = e.field_f;
                 if (var8 != 0) {

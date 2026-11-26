@@ -260,7 +260,7 @@ final class ge extends k implements mj {
           if (gi.field_a == param1) {
             var3 = Chess.field_D;
           } else {
-            if (kh.field_k == param1) {
+            if (NanoFrameTimer.field_k == param1) {
               this.field_C = this.field_C + 10;
               var5 = le.field_c;
               if (!jj.d(124)) {

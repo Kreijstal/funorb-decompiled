@@ -192,7 +192,7 @@ abstract class gb extends GameAppletShell {
           if (SecondaryNodeHashTable.field_g) {
             ArchiveProvider.field_d.n(24528);
           } else {
-            var1 = gm.field_d;
+            var1 = FrameTimer.field_d;
             if (0 >= var1) {
             } else {
               if (var1 == 1) {
@@ -429,7 +429,7 @@ abstract class gb extends GameAppletShell {
             ImageProducerRasterBuffer.d(65280);
             dh.c(12);
             IntrusiveDeque.a(2, fe.field_e, (byte) 97);
-            ia.a((byte) -121);
+            Bzip2State.a((byte) -121);
             bg.field_ab = true;
             ma.field_E = 15000L + ud.correctedCurrentTimeMillis(2);
           }
@@ -532,7 +532,7 @@ abstract class gb extends GameAppletShell {
               qa.field_c = null;
             } else {
               if (qa.field_c.b("", 100)) {
-                gm.a(qa.field_c, -44);
+                FrameTimer.a(qa.field_c, -44);
                 qa.field_c = null;
                 ob.f(0);
               }
@@ -565,7 +565,7 @@ abstract class gb extends GameAppletShell {
             pe.field_f = IsaacCipher.a(-27212);
             qf.field_i = rb.a((byte) 46);
           }
-          kh.a((byte) -127, pe.field_f, qf.field_i, bi.field_a);
+          NanoFrameTimer.a((byte) -127, pe.field_f, qf.field_i, bi.field_a);
           bi.field_a = null;
           Chess.field_B = null;
           fl.field_m = null;

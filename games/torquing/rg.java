@@ -677,12 +677,12 @@ final class rg extends am {
               stackIn_32_0 = param2.field_F[var14Lifetime1];
             }
             var20 = stackIn_32_0;
-            if (null != ha.field_d &&
+            if (null != FrameTimer.field_d &&
               param2.field_c != null &&
               param2.field_c.length > var14Lifetime1 &&
               param2.field_c[var14Lifetime1] != -1 &&
-              ha.field_d.length > param2.field_c[var14Lifetime1]) {
-              stackIn_39_0 = ha.field_d[param2.field_c[var14Lifetime1]];
+              FrameTimer.field_d.length > param2.field_c[var14Lifetime1]) {
+              stackIn_39_0 = FrameTimer.field_d[param2.field_c[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }

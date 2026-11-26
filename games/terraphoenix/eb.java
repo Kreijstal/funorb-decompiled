@@ -215,7 +215,7 @@ class eb extends UiWidget {
     }
 
     eb(String param0, sc param1) {
-        this(param0, vc.field_c.field_n, param1);
+        this(param0, FrameTimer.field_c.field_n, param1);
     }
 
     final StringBuilder a(int param0, StringBuilder param1, int param2, Hashtable param3) {
@@ -286,7 +286,7 @@ class eb extends UiWidget {
         this.field_H = false;
         this.field_z = true;
         this.field_A = true;
-        this.listener = vc.field_c.field_e;
+        this.listener = FrameTimer.field_c.field_e;
     }
 
     void a(int param0, int param1, byte param2, int param3) {

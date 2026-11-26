@@ -230,10 +230,10 @@ final class vg extends pm {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param0, var7 + (304 - param0.length() * 6) / 2, var8 + 22);
             }
-            if (eb.field_b != null) {
+            if (Bzip2State.field_b != null) {
               var9.setFont(IntrusiveNodeHashTable.field_f);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(eb.field_b, wm.field_ab / 2 - eb.field_b.length() * 6 / 2, -26 + im.field_b / 2);
+              var9.drawString(Bzip2State.field_b, wm.field_ab / 2 - Bzip2State.field_b.length() * 6 / 2, -26 + im.field_b / 2);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -278,10 +278,10 @@ final class vg extends pm {
           this.field_T = this.field_E;
           this.field_W = this.field_X;
         } else {
-          this.field_L = this.field_A.field_B.field_t + this.field_ab * jg.field_b[0] + jg.field_b[1] * this.field_U + jg.field_b[2] * this.field_H;
+          this.field_L = this.field_A.field_B.field_t + this.field_ab * FrameTimer.field_b[0] + FrameTimer.field_b[1] * this.field_U + FrameTimer.field_b[2] * this.field_H;
           this.field_W = this.field_A.field_B.field_jb;
-          this.field_O = this.field_F * jg.field_b[1] + (this.field_A.field_B.field_D + this.field_M * jg.field_b[0]) + this.field_N * jg.field_b[2];
-          this.field_T = this.field_P * jg.field_b[2] + (this.field_A.field_B.field_E + this.field_R * jg.field_b[0] + jg.field_b[1] * this.field_V);
+          this.field_O = this.field_F * FrameTimer.field_b[1] + (this.field_A.field_B.field_D + this.field_M * FrameTimer.field_b[0]) + this.field_N * FrameTimer.field_b[2];
+          this.field_T = this.field_P * FrameTimer.field_b[2] + (this.field_A.field_B.field_E + this.field_R * FrameTimer.field_b[0] + FrameTimer.field_b[1] * this.field_V);
         }
     }
 

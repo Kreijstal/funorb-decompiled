@@ -220,14 +220,14 @@ final class pi extends mi {
               if (qr.field_a <= 0 &&
                 !g.field_k) {
                 try {
-                  JavaScriptBridge.a("unzap", (byte) -108, bm.m(115));
+                  JavaScriptBridge.callWithoutArguments("unzap", (byte) -108, bm.m(115));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.a("zap", -15201, new Object[]{BufferedSocket.a(as.field_b, 28304)}, bm.m(119));
+                  JavaScriptBridge.callWithArguments("zap", -15201, new Object[]{BufferedSocket.a(as.field_b, 28304)}, bm.m(119));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

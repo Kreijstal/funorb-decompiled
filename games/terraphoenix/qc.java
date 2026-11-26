@@ -168,11 +168,11 @@ final class qc {
         }
     }
 
-    final static vc a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != -1) {
-          return (vc) null;
+          return (FrameTimer) null;
         }
-        return (vc) ((Object) new jd());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static void a(boolean param0, boolean param1, int param2) {

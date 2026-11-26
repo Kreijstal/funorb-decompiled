@@ -29,7 +29,7 @@ final class u extends RenderEffect {
     }
 
     final void a(boolean param0, boolean param1) {
-        this.field_b.a(ru.field_a, true, bd.field_C);
+        this.field_b.a(ru.field_a, true, Bzip2State.field_C);
         if (param0) {
           this.d(6);
         }
@@ -37,7 +37,7 @@ final class u extends RenderEffect {
 
     final void a(boolean param0, byte param1) {
         this.field_b.a(1, (byte) 41);
-        this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
+        this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, Bzip2State.field_C);
         if (param1 < 2) {
           this.field_h = -0.11807350814342499f;
         }

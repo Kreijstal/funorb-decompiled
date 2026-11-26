@@ -193,7 +193,7 @@ final class JaggrabClient implements Runnable {
         RuntimeException decompiledCaughtException = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          fj.a(cq.field_i, 811497217, param0, q.field_x, ug.field_b, 0, true);
+          fj.a(cq.field_i, 811497217, param0, q.field_x, FrameTimer.field_b, 0, true);
           if (param1 != 2) {
             field_f = (Model[]) null;
           }

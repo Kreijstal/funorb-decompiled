@@ -351,7 +351,7 @@ final class SceneWidgetPart007 extends SceneWidget {
         MixedSupport030.sceneWidgetState0023.performAction1768(ComponentDecorator.sceneWidgetState0078, -16834);
         MixedSupport083.sceneWidgetState0087 = new SceneWidget((long)integerArgument1, MusicTrack.sceneWidgetState0127);
         MixedSupport020.sceneWidgetState0013 = new SceneWidget(0L, (SceneWidget) null);
-        MixedSupport083.sceneWidgetState0087.performAction1768(MixedSupport059.sceneWidgetState0054, -16834);
+        MixedSupport083.sceneWidgetState0087.performAction1768(FrameTimer.sceneWidgetState0054, -16834);
         MixedSupport083.sceneWidgetState0087.performAction1768(MixedSupport020.sceneWidgetState0013, -16834);
         MixedSupport020.sceneWidgetState0013.performAction1768(RenderingSupport004.sceneWidgetState0039, -16834);
         MixedSupport020.sceneWidgetState0013.performAction1768(GameSession.sceneWidgetState0099, -16834);

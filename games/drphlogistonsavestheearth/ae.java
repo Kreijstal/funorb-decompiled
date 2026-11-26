@@ -33,7 +33,7 @@ final class ae extends ca implements ke {
                 var3 = ei.field_j;
               }
             } else {
-              if (param1 == bk.field_e) {
+              if (param1 == NanoFrameTimer.field_e) {
                 var3 = de.field_z;
                 this.field_k = this.field_k + 30;
               }

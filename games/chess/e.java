@@ -127,7 +127,7 @@ final class e extends ma implements mj {
           ue.field_d.a(5, 68, -2147483648, 30, 5);
           in.field_b.a(75, 78, -2147483648, 30, 5);
           ca.field_g.a(155, 48, -2147483648, 30, 5);
-          kh.field_l.a(205, 48, -2147483648, 30, 5);
+          NanoFrameTimer.field_l.a(205, 48, -2147483648, 30, 5);
           var2 = !bo.field_c ? 200 : 250;
           lg.field_c.a(5 + var2, -var2 + 363, -2147483648, 30, 5);
           vk.field_i.a(370, -5 + rb.field_c.field_M - 370, -2147483648, 30, 5);
@@ -150,7 +150,7 @@ final class e extends ma implements mj {
         ue.field_d.a(5, 68, -2147483648, 30, 5);
         in.field_b.a(75, 78, -2147483648, 30, 5);
         ca.field_g.a(155, 48, -2147483648, 30, 5);
-        kh.field_l.a(205, 48, -2147483648, 30, 5);
+        NanoFrameTimer.field_l.a(205, 48, -2147483648, 30, 5);
         var2Lifetime1 = !bo.field_c ? 200 : 250;
         lg.field_c.a(5 + var2Lifetime1, -var2Lifetime1 + 363, -2147483648, 30, 5);
         vk.field_i.a(370, -5 + rb.field_c.field_M - 370, -2147483648, 30, 5);
@@ -203,7 +203,7 @@ final class e extends ma implements mj {
             if (rm.field_R != null &&
               rm.field_R.focusLost) {
               b.a(true);
-              ji.field_V.b(new ge(ji.field_V, kh.field_k), (byte) -86);
+              ji.field_V.b(new ge(ji.field_V, NanoFrameTimer.field_k), (byte) -86);
             }
             return;
           }

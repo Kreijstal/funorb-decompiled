@@ -24,7 +24,7 @@ final class le {
           var11 = var9;
           var3 = var11.readUnsignedByte((byte) -101);
           var11.j((byte) -100);
-          ha.field_d = pe.a((byte) -59, var11);
+          FrameTimer.field_d = pe.a((byte) -59, var11);
           db.field_a = new VertexMesh[var3];
           eo.field_d = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {

@@ -80,7 +80,7 @@ final class te extends kf {
               } else {
                 var7Lifetime4 = var10 + "; Expires=" + q.a(1000L * param1 + rf.correctedCurrentTimeMillis(0), (byte) 28) + "; Max-Age=" + param1;
               }
-              oa.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, param4 - 31196);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var7Lifetime4 + "\"", param2, param4 - 31196);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

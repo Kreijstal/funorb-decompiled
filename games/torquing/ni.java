@@ -211,7 +211,7 @@ final class ni extends IntrusiveNode {
               } else {
                 var7Lifetime4 = var10 + "; Discard;";
               }
-              hp.a("document.cookie=\"" + var7Lifetime4 + "\"", 27476, param1);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var7Lifetime4 + "\"", 27476, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

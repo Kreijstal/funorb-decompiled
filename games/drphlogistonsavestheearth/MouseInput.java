@@ -113,7 +113,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             } else {
               var5Lifetime6 = var7 + "; Expires=" + bf.a(la.correctedCurrentTimeMillis(false) + 94608000000L, (byte) -29) + "; Max-Age=" + 94608000L;
             }
-            pb.a(true, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
+            JavaScriptBridge.evaluate(true, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
             if (param1 <= 6) {
               MouseInput.a(true);
             }

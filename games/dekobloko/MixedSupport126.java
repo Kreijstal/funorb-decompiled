@@ -57,7 +57,7 @@ final class MixedSupport126 {
     final static void performAction1626(byte byteArgument1) {
         if (GameDomainSupport004.booleanState0087) {
           SoftwareRaster.darkenRectangleHalf(SoftwareRaster.integerState0282, SoftwareRaster.integerState0280, SoftwareRaster.integerState0281 - SoftwareRaster.integerState0282, SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280);
-          MixedSupport059.sceneWidgetState0055.performAction1767(1141039778, false);
+          FrameTimer.sceneWidgetState0055.performAction1767(1141039778, false);
           if (byteArgument1 != 54) {
             MixedSupport126.computeInteger1627(-56, (byte) 45, 35);
             return;

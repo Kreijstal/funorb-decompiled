@@ -7,7 +7,7 @@ final class fh {
     static boolean[] field_d;
     static boolean field_g;
     static Archive field_c;
-    static rj field_e;
+    static FrameTimer field_e;
     static int field_b;
 
     final static void openSubscriptionPage(int param0, java.applet.Applet param1) {

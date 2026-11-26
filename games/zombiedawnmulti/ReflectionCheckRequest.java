@@ -139,7 +139,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
             }
             if (ArchiveProvider.field_g == null &&
               PowerupProgressCard.field_o) {
-              PopupMenuBuilder.buildPopupMenu(false, param1, var2);
+              Bzip2State.buildPopupMenu(false, param1, var2);
               return;
             }
             return;
@@ -155,7 +155,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
             }
             if (ArchiveProvider.field_g == null &&
               PowerupProgressCard.field_o) {
-              PopupMenuBuilder.buildPopupMenu(false, param1, var2);
+              Bzip2State.buildPopupMenu(false, param1, var2);
             }
             return;
           }
@@ -166,7 +166,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
               var2 = 1;
               if (ArchiveProvider.field_g == null &&
                 PowerupProgressCard.field_o) {
-                PopupMenuBuilder.buildPopupMenu(false, param1, var2);
+                Bzip2State.buildPopupMenu(false, param1, var2);
                 return;
               }
               return;
@@ -174,7 +174,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
             var2 = 0;
             if (ArchiveProvider.field_g == null &&
               PowerupProgressCard.field_o) {
-              PopupMenuBuilder.buildPopupMenu(false, param1, var2);
+              Bzip2State.buildPopupMenu(false, param1, var2);
               return;
             }
             return;
@@ -190,7 +190,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
             }
             if (ArchiveProvider.field_g == null &&
               PowerupProgressCard.field_o) {
-              PopupMenuBuilder.buildPopupMenu(false, param1, var2);
+              Bzip2State.buildPopupMenu(false, param1, var2);
               return;
             }
             return;
@@ -209,7 +209,7 @@ final class ReflectionCheckRequest extends IntrusiveNode {
         if (!PowerupProgressCard.field_o) {
           return;
         }
-        PopupMenuBuilder.buildPopupMenu(false, param1, var2Lifetime1);
+        Bzip2State.buildPopupMenu(false, param1, var2Lifetime1);
     }
 
     final static void initializeChatHistory(int param0, int param1) {

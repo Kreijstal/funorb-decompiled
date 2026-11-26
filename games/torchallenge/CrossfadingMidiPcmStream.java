@@ -29,7 +29,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
         ji.field_n = null;
         qi.field_b = null;
-        jl.field_c = null;
+        FrameTimer.field_c = null;
     }
 
     final PcmStream firstSubstream() {

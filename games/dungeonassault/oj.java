@@ -136,7 +136,7 @@ final class oj {
               var10 = param0.getParameter("cookieprefix");
               var4 = -122 / ((param1 - 40) / 53);
               var3 = var10 + "settings";
-              var5 = (String) (ee.a((byte) -21, param0, "getcookies"));
+              var5 = (String) (JavaScriptBridge.callWithoutArguments((byte) -21, param0, "getcookies"));
               var6 = ih.a(115, ';', var5);
               for (var7 = 0; var7 < var6.length; var7++) {
                 var8 = var6[var7].indexOf('=');

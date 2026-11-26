@@ -230,7 +230,7 @@ final class ae {
           } else if (AccountNameAvailabilityValidator.field_t != 2) {
             if (AccountNameAvailabilityValidator.field_t == 3) {
               if (i.field_A.privilegedTasksEnabled) {
-                var3_int = KeyboardInput.a(n.field_c, (byte) 120, qj.field_e, wa.field_l, fg.field_g);
+                var3_int = KeyboardInput.a(n.field_c, (byte) 120, qj.field_e, wa.field_l, NanoFrameTimer.field_g);
               } else {
                 var3_int = KeyboardInput.a(n.field_c, (byte) -46, qj.field_e, wa.field_l, oh.field_a);
               }

@@ -104,11 +104,11 @@ final class ProxyAuthenticationRequiredException extends IOException {
         field_g = null;
     }
 
-    final static m a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != 65280) {
-          return (m) null;
+          return (FrameTimer) null;
         }
-        return (m) ((Object) new bk());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     static {

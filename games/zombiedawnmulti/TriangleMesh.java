@@ -532,10 +532,10 @@ final class TriangleMesh {
           }
           ChatPanelSetupHelpers.field_b = new UiComponent(0L, LinkButtonPainter.field_i);
           GameKeyHandler.field_a = new UiComponent(0L, LinkButtonPainter.field_i);
-          PopupMenuBuilder.field_B = new UiComponent(0L, ArchiveRequest.field_u);
-          PopupMenuBuilder.field_B.copyStyle((byte) -32, IntroScreen.field_m);
-          PopupMenuBuilder.field_B.field_lb = 1;
-          var17 = PopupMenuBuilder.field_B;
+          Bzip2State.field_B = new UiComponent(0L, ArchiveRequest.field_u);
+          Bzip2State.field_B.copyStyle((byte) -32, IntroScreen.field_m);
+          Bzip2State.field_B.field_lb = 1;
+          var17 = Bzip2State.field_B;
           var17.field_R = 1;
           LevelData.field_a = new UiComponent(0L, (UiComponent) null);
           LevelData.field_a.addChild((byte) 50, ArchiveLoadStep.field_m);
@@ -555,7 +555,7 @@ final class TriangleMesh {
           }
           LevelData.field_a.addChild((byte) 50, ChatPanelSetupHelpers.field_b);
           LevelData.field_a.addChild((byte) 50, GameKeyHandler.field_a);
-          LevelData.field_a.addChild((byte) 50, PopupMenuBuilder.field_B);
+          LevelData.field_a.addChild((byte) 50, Bzip2State.field_B);
           AchievementsScreen.field_l = new UiComponent(0L, ScreenSizeGlobals.field_c, ObjectFactoryHelpers.field_c.toUpperCase());
           ViewFactoryHelpers.field_a = new UiComponent(0L, GameWorld.field_n, IntHashIndex.field_d.toUpperCase());
           return;

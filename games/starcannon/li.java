@@ -97,7 +97,7 @@ final class li {
               kh.field_y.addLast(63, param1);
               return;
             }
-            var2 = fi.field_e;
+            var2 = FrameTimer.field_e;
             while (true) {
               if (var2.next instanceof bf) {
                 var3 = (bf) (var2.next);
@@ -115,7 +115,7 @@ final class li {
             ia.a(param1, var2, (byte) 57);
             return;
           }
-          ia.a(param1, fi.field_e, (byte) 57);
+          ia.a(param1, FrameTimer.field_e, (byte) 57);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

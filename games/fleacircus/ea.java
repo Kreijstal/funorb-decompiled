@@ -38,7 +38,7 @@ final class ea {
               } else {
                 var5Lifetime6 = var7 + "; Expires=" + wd.a((byte) -116, lj.correctedCurrentTimeMillis((byte) -75) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              eb.a("document.cookie=\"" + var5Lifetime6 + "\"", -28924, param1);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", -28924, param1);
             } catch (Throwable throwable) {
             }
             bf.a(32010, param1);

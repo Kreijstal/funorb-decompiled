@@ -3361,7 +3361,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(122, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  mg.field_k = se.a(param1 - 1, var2);
+                  Bzip2State.field_k = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(108, "mustlogin1");
                 if (var2 != null) {

@@ -54,7 +54,7 @@ final class ni {
                 break;
               }
               var7_ref_String = param2.substring(2 + var6_int, var5);
-              if (!ei.a((byte) -117, (CharSequence) ((Object) var7_ref_String))) {
+              if (!Bzip2State.a((byte) -117, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -88,7 +88,7 @@ final class ni {
               break;
             }
             var9 = param2.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!ei.a((byte) -117, (CharSequence) ((Object) var9))) {
+            if (!Bzip2State.a((byte) -117, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

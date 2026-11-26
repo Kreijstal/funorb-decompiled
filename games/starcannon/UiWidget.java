@@ -418,7 +418,7 @@ class UiWidget extends IntrusiveNode {
                 UiWidget.a((java.applet.Applet) null, -85);
               }
               var3 = var8 + "settings";
-              var4 = (String) (mb.a(param0, "getcookies", true));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(param0, "getcookies", true));
               var5 = UiWidget.a(param1 - 176, ';', var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');

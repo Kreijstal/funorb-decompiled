@@ -346,14 +346,14 @@ final class MixedSupport118 {
               if (Framebuffer.integerState0192 <= 0 &&
                 !MixedSupport094.booleanState0132) {
                 try {
-                  MixedSupport084.computeObject1096(true, "unzap", UiComponentPart029.computeApplet1485(25144));
+                  JavaScriptBridge.callWithoutArguments(true, "unzap", UiComponentPart029.computeApplet1485(25144));
                 } catch (java.lang.Throwable caughtParameterLocal32) {
                   caughtExceptionLocal18 = caughtParameterLocal32;
                   throwableLocal24 = caughtExceptionLocal18;
                 }
               } else {
                 try {
-                  MixedSupport084.computeObject1095("zap", -14541, UiComponentPart029.computeApplet1485(25144), new Object[]{TextLayout.computeString0234(0, GameAssets.longState0046)});
+                  JavaScriptBridge.callWithArguments("zap", -14541, UiComponentPart029.computeApplet1485(25144), new Object[]{TextLayout.computeString0234(0, GameAssets.longState0046)});
                 } catch (java.lang.Throwable caughtParameterLocal33) {
                   caughtExceptionLocal18 = caughtParameterLocal33;
                   throwableLocal24 = caughtExceptionLocal18;

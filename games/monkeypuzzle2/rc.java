@@ -106,7 +106,7 @@ final class rc extends kc {
                   oe.field_o.decompress(57, var12, var9);
                 }
               } else {
-                tg.a(var12, var5_int, param0, var4, 9);
+                tg.decompress(var12, var5_int, param0, var4, 9);
               }
               stackIn_21_0 = var6;
               return stackIn_21_0;

@@ -92,8 +92,8 @@ class DualNode extends HashNode {
             DualNode.performAction0127((byte) 85, (SceneWidgetPart005) null);
           }
           SceneWidgetPart007.sceneWidgetPart005State0002 = sceneWidgetPart005Argument2;
-          MixedSupport059.sceneWidgetState0055.nodeDequeState0034.clear(110);
-          MixedSupport059.sceneWidgetState0055.performAction1768(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
+          FrameTimer.sceneWidgetState0055.nodeDequeState0034.clear(110);
+          FrameTimer.sceneWidgetState0055.performAction1768(SceneWidgetPart007.sceneWidgetPart005State0002, -16834);
           GameDomainSupport004.booleanState0087 = true;
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "be.O(" + byteArgument1 + ',' + (sceneWidgetPart005Argument2 != null ? "{...}" : "null") + ')');

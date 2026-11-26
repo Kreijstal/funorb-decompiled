@@ -56,7 +56,7 @@ final class jg extends dk {
         var6 = this.field_j + (param3 + (this.field_f >> 1));
         var8 = this.field_D.b((byte) -126);
         if (cg.field_g == var8) {
-          var16 = fi.field_g[0];
+          var16 = FrameTimer.field_g[0];
           var9 = var16.field_x << 1;
           var10 = var16.field_q << 1;
           if (fe.field_H == null) {
@@ -83,18 +83,18 @@ final class jg extends dk {
         }
         if (var8 != cd.field_a) {
           if (var8 == BufferedSocket.field_n) {
-            var14 = fi.field_g[2];
+            var14 = FrameTimer.field_g[2];
             var14.f(var5 - (var14.field_u >> 1), var6 - (var14.field_v >> 1), 256);
             return;
           }
           if (var8 != bf.field_x) {
             return;
           }
-          var13 = fi.field_g[1];
+          var13 = FrameTimer.field_g[1];
           var13.f(-(var13.field_u >> 1) + var5, -(var13.field_v >> 1) + var6, 256);
           return;
         }
-        var15 = fi.field_g[0];
+        var15 = FrameTimer.field_g[0];
         var9Lifetime1 = var15.field_x << 1;
         var10Lifetime1 = var15.field_q << 1;
         if (fe.field_H == null) {

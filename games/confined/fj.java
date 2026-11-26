@@ -193,7 +193,7 @@ class fj extends IntrusiveNode {
             var6 += 20;
             pn.field_a.a(ue.field_s, 540, 12 + var6, 4243584, -1);
             var6 += 20;
-            pn.field_a.a(q.field_k, 540, var6 + 12, 4243584, -1);
+            pn.field_a.a(NanoFrameTimer.field_k, 540, var6 + 12, 4243584, -1);
             var6 += 20;
           }
           incrementValue$14 = param0;

@@ -21,7 +21,7 @@ final class og {
     final static int a(int param0, int param1) {
         int var3 = Transmogrify.field_A ? 1 : 0;
         DiskArchiveRequest.field_A = 0;
-        re.field_y = null;
+        Bzip2State.field_y = null;
         wj.field_j = null;
         int var2 = c.field_b;
         c.field_b = ne.field_b;
@@ -129,7 +129,7 @@ final class og {
     final static void b(boolean param0) {
         int var1 = jk.l(-889);
         int var2 = ba.a((byte) 101);
-        kf.field_i.a(var1 + (tj.field_y << 1), qa.field_u - FullscreenFocusCanvas.field_b, -tj.field_y + ic.field_b, (byte) 110, (FullscreenFocusCanvas.field_b << 1) + var2);
+        NanoFrameTimer.field_i.a(var1 + (tj.field_y << 1), qa.field_u - FullscreenFocusCanvas.field_b, -tj.field_y + ic.field_b, (byte) 110, (FullscreenFocusCanvas.field_b << 1) + var2);
         hd.a((byte) 8);
         if (!param0) {
           return;

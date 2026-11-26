@@ -181,7 +181,7 @@ final class r implements fc {
 
     public r() {
         this.field_e = 1;
-        this.field_b = sg.field_a;
+        this.field_b = FrameTimer.field_a;
         this.field_a = 1;
     }
 

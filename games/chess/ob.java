@@ -36,7 +36,7 @@ final class ob extends wm {
         int var2 = Chess.field_G;
         int var1_intLifetime1;
         try {
-          v.field_e.b((byte) 40);
+          v.field_e.resetTiming((byte) 40);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             AwtRasterBuffer.field_f[var1_int] = 0L;
           }

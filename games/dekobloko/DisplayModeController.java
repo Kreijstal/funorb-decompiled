@@ -333,16 +333,16 @@ final class DisplayModeController {
           integerLocal6 = 0;
           if (integerArgument2 >= 60) {
             if (integerArgument2 < 80) {
-              integerLocal4 = integerLocal4 + MixedSupport141.computeInteger1754(23841, 80, 40 + integerArgument6 * 18);
+              integerLocal4 = integerLocal4 + Bzip2State.computeInteger1754(23841, 80, 40 + integerArgument6 * 18);
             } else {
               if (integerArgument2 >= 93) {
                 SoftwareRaster.fillRoundedRectangleAlpha(-30 + integerArgument5, 54 + integerArgument1 - 2, 60, 40, 4, 65280, 100);
               } else {
-                integerLocal6 = MixedSupport141.computeInteger1754(23841, 80, 40 + SceneWidgetPart013.integerArrayState0239[1 + integerArgument2 - 80] * 18);
+                integerLocal6 = Bzip2State.computeInteger1754(23841, 80, 40 + SceneWidgetPart013.integerArrayState0239[1 + integerArgument2 - 80] * 18);
               }
             }
           } else {
-            integerLocal4 = integerLocal4 + MixedSupport141.computeInteger1754(23841, 80, integerArgument3 * 18 + 40);
+            integerLocal4 = integerLocal4 + Bzip2State.computeInteger1754(23841, 80, integerArgument3 * 18 + 40);
           }
           if (integerArgument4 >= -57) {
             integerState0700 = -11;

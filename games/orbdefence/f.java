@@ -1031,7 +1031,7 @@ final class f {
             var5.field_N = IntrusiveNode.a(var5.field_N, 16, false, param0);
           }
           if (eg.a(param0, param1 ^ 26662)) {
-            var5.field_t = aa.a(param0, var5.field_t, 16, 20783);
+            var5.field_t = FrameTimer.a(param0, var5.field_t, 16, 20783);
             var6 = 0;
             var7 = 0;
             while (true) {

@@ -107,15 +107,15 @@ final class la extends IntrusiveNode {
             try {
               var4 = param0.getCodeBase();
               var3 = kk.a(127, var4, param0).getFile();
-              fd.a(-4476, param0, "updatelinks", new Object[]{"home", var3 + "home.ws"});
-              fd.a(-4476, param0, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
-              fd.a(-4476, param0, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              fd.a(-4476, param0, "updatelinks", new Object[]{"options", var3 + "options.ws"});
-              fd.a(-4476, param0, "updatelinks", new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callWithArguments(-4476, param0, "updatelinks", new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callWithArguments(-4476, param0, "updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments(-4476, param0, "updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments(-4476, param0, "updatelinks", new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.callWithArguments(-4476, param0, "updatelinks", new Object[]{"terms", var3 + "terms.ws"});
               if (!param1) {
                 return;
               }
-              fd.a(-4476, param0, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments(-4476, param0, "updatelinks", new Object[]{"privacy", var3 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,7 +304,7 @@ final class la extends IntrusiveNode {
         RuntimeException var21 = null;
         try {
           lj.a(param14, (byte) 127, param12, param4);
-          rj.a(param17, param10, (byte) 106, param19, param0);
+          FrameTimer.a(param17, param10, (byte) 106, param19, param0);
           ProxySocketConnector.a(param1, param3, -102);
           SocketConnector.a(param18, param8, param20, param6, (byte) 117, param5);
           if (param11 > -89) {

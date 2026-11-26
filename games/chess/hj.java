@@ -121,7 +121,7 @@ final class hj {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = kh.a(5, -var13.length + var10.position - 5, (byte) -82, var10.data);
+        var15 = NanoFrameTimer.a(5, -var13.length + var10.position - 5, (byte) -82, var10.data);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var15[var7]) {
             throw new RuntimeException();

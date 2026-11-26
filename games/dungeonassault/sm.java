@@ -167,7 +167,7 @@ final class sm {
               if (param2.length() == 0) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ee.a("document.cookie=\"" + var5Lifetime6 + "\"", (byte) -46, param0);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", (byte) -46, param0);
             } catch (Throwable throwable) {
             }
             lm.a((byte) -106, param0);

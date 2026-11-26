@@ -176,7 +176,7 @@ final class GameScreen {
               var6 = ib.a(true, param1 ^ 10, sa.field_I[var3_int]);
               var7 = -(var6 >> 1) + sf.field_F;
               var4 = var4 + na.field_e;
-              if (eb.a(-mb.field_c + var7, param0, param1 ^ 10, (mb.field_c << 1) + var6, var4, param2, ArchiveIndex.field_m + (of.field_f << 1))) {
+              if (NanoFrameTimer.a(-mb.field_c + var7, param0, param1 ^ 10, (mb.field_c << 1) + var6, var4, param2, ArchiveIndex.field_m + (of.field_f << 1))) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

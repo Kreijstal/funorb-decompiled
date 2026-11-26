@@ -140,7 +140,7 @@ final class NodeDeque {
         int integerLocal6;
         integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          NodeHashTableIterator.mixedSupport059State0001.performAction0384(-30693);
+          NodeHashTableIterator.mixedSupport059State0001.resetTiming(-30693);
           for (integerLocal1 = 0; integerLocal1 < 32; integerLocal1++) {
             MixedSupport115.longArrayState0009[integerLocal1] = 0L;
           }
@@ -334,7 +334,7 @@ final class NodeDeque {
         if (integerArgument1 != -23521) {
           NodeDeque.performAction1737(false);
         }
-        return new MixedSupport106[]{BufferedFile.mixedSupport106State0005, MixedSupport119.mixedSupport106State0011, MixedSupport059.mixedSupport106State0004, MixedSupport047.mixedSupport106State0002, MixedSupport131.mixedSupport106State0012, ReturnedShapeCache.mixedSupport106State0007, SecondaryNodeHashTable.mixedSupport106State0006, GameplayControls.mixedSupport106State0013, MixedSupport109.mixedSupport106State0010, MouseInput.mixedSupport106State0014, UiComponentPart006.mixedSupport106State0001, MixedSupport106.mixedSupport106State0008, ReturnedShape.mixedSupport106State0009, MixedSupport048.mixedSupport106State0003};
+        return new MixedSupport106[]{BufferedFile.mixedSupport106State0005, MixedSupport119.mixedSupport106State0011, FrameTimer.mixedSupport106State0004, MixedSupport047.mixedSupport106State0002, MixedSupport131.mixedSupport106State0012, ReturnedShapeCache.mixedSupport106State0007, SecondaryNodeHashTable.mixedSupport106State0006, GameplayControls.mixedSupport106State0013, MixedSupport109.mixedSupport106State0010, MouseInput.mixedSupport106State0014, UiComponentPart006.mixedSupport106State0001, MixedSupport106.mixedSupport106State0008, ReturnedShape.mixedSupport106State0009, MixedSupport048.mixedSupport106State0003};
     }
 
     static {

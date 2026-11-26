@@ -93,7 +93,7 @@ final class hi {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + e.a(lk.correctedCurrentTimeMillis(0) + param1 * 1000L, (byte) -78) + "; Max-Age=" + param1;
               }
-              kj.a(12, "document.cookie=\"" + var7Lifetime4 + "\"", param4);
+              JavaScriptBridge.evaluate(12, "document.cookie=\"" + var7Lifetime4 + "\"", param4);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

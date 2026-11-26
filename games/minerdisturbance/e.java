@@ -61,7 +61,7 @@ final class e extends cb {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (ek.a(-78, var5)) {
+          if (FrameTimer.a(-78, var5)) {
             stackIn_6_0 = q.field_a;
             return stackIn_6_0;
           }

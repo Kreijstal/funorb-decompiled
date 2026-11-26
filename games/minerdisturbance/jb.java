@@ -87,7 +87,7 @@ final class jb extends IntrusiveNode {
           ArchiveIndex.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
           if (param0 &&
             !mh.a(var30, -1)) {
-            pk.field_b.a(cn.field_K, 110 + param3 + 60, 166, 16610816, -1);
+            pk.field_b.a(Bzip2State.field_K, 110 + param3 + 60, 166, 16610816, -1);
             return false;
           }
           stackIn_33_0 = (cm.field_o != 1) ? 0 : 1;
@@ -374,7 +374,7 @@ final class jb extends IntrusiveNode {
           ArchiveIndex.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
           if (param0 &&
             !mh.a(var30, -1)) {
-            pk.field_b.a(cn.field_K, 110 + param3 + 60, 166, 16610816, -1);
+            pk.field_b.a(Bzip2State.field_K, 110 + param3 + 60, 166, 16610816, -1);
             return false;
           }
           stackIn_33_0 = (cm.field_o != 1) ? 0 : 1;

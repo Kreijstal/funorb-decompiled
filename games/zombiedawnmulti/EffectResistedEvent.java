@@ -101,7 +101,7 @@ final class EffectResistedEvent extends GameEvent {
             return stackIn_3_0;
           }
           var3_int = 0;
-          var4 = PopupMenuBuilder.field_M;
+          var4 = Bzip2State.field_M;
           while (var3_int < KeyboardListenerHelpers.field_e.length) {
             var5 = PackedArrayHelpers.field_a[var3_int];
             if (var5 < 0) {

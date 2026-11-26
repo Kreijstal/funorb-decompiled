@@ -38,7 +38,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (hi.a(param0, "getcookies", -126));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(param0, "getcookies", -126));
               var5 = ik.a(var4, (byte) -76, ';');
               if (param1 != -28697) {
                 DiskArchiveRequest.releaseDeclaredStaticReferences(82);

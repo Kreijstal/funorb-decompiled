@@ -280,7 +280,7 @@ final class PcmResampler {
                                       }
                                     }
                                   } else {
-                                    var25 = ck.field_y[var8.field_w][var8.field_z % ck.field_y[var8.field_w].length];
+                                    var25 = Bzip2State.field_y[var8.field_w][var8.field_z % Bzip2State.field_y[var8.field_w].length];
                                     var25.a(true, 128, (int)var8.field_c, -12 + var3, var4 - 12);
                                   }
                                 }

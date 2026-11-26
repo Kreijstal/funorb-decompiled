@@ -479,7 +479,7 @@ final class wn {
               uh.field_Wb.writeByte(18, -93);
               uh.field_Wb.position = uh.field_Wb.position + 2;
               var10 = uh.field_Wb.position;
-              var11_ref_String = vq.a(ob.e((byte) 74), (byte) 114);
+              var11_ref_String = Bzip2State.a(ob.e((byte) 74), (byte) 114);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }

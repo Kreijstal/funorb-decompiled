@@ -20,7 +20,7 @@ final class gl {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new nc(param1, param0, param4, param2, param6, param8, param7);
-          ok.field_b.addLast(114, var9);
+          Bzip2State.field_b.addLast(114, var9);
           ga.a(var9, param3, 104);
           if (param5 != 56) {
             field_b = (String) null;

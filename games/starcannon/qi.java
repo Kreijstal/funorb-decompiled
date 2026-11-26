@@ -33,7 +33,7 @@ final class qi {
           if (decompiledFrameRemainder0) {
             if (!eg.field_h) {
               if (di.field_m >= ProxyAuthenticationRequiredException.field_a) {
-                stackIn_19_0 = (ProxyAuthenticationRequiredException.field_a + hf.field_l > di.field_m) ? 1 : 0;
+                stackIn_19_0 = (ProxyAuthenticationRequiredException.field_a + NanoFrameTimer.field_l > di.field_m) ? 1 : 0;
               } else {
                 stackIn_19_0 = 0;
               }

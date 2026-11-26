@@ -66,7 +66,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           var2 = ag.field_b.beginForward(param0 - 8);
           while (var2 != null) {
-            ca.a(param1, 1);
+            NanoFrameTimer.a(param1, 1);
             var2 = ag.field_b.nextForward((byte) 56);
           }
           return;

@@ -35,7 +35,7 @@ final class d {
             dc.field_n.a();
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.a(bb.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
-            hj.field_e.a(true);
+            Bzip2State.field_e.a(true);
             dc.field_n.a(ProxyAuthenticationRequiredException.field_a, 46, 107, 0, 125);
           }
           if (ci.field_ib > 0 &&
@@ -46,7 +46,7 @@ final class d {
             dc.field_n.a();
             SoftwareRasterizer.clearRaster();
             BufferedSocket.field_b.a(bb.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
-            hj.field_e.a(true);
+            Bzip2State.field_e.a(true);
             dc.field_n.a(ci.field_ib, 46, 109, 0, 475);
           }
           if (fg.field_a > 0) {

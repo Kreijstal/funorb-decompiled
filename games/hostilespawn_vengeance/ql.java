@@ -107,7 +107,7 @@ class ql {
         int var2 = HostileSpawn.field_I ? 1 : 0;
         int var1_intLifetime1;
         try {
-          vj.field_v.b(false);
+          vj.field_v.resetTiming(false);
           for (var1_int = 0; 32 > var1_int; var1_int++) {
             bm.field_d[var1_int] = 0L;
           }

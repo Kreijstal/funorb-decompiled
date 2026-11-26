@@ -440,7 +440,7 @@ final class tm extends IntrusiveNode {
           boolean decompiledFrameRemainder0 = true;
           var3 = -li.field_c + this.field_E;
           var4 = -ClientException.field_d + this.field_p;
-          var5 = ca.field_k * 32 - li.field_c + sk.field_d / 10;
+          var5 = NanoFrameTimer.field_k * 32 - li.field_c + sk.field_d / 10;
           var6 = -ClientException.field_d + 32 * hf.field_t + IsaacRandom.field_i / 10;
           var7 = 360;
           if (var5 > (-96 + (this.field_z + var3) - 32) &&
@@ -741,7 +741,7 @@ final class tm extends IntrusiveNode {
           }
           var8 = 20 + this.field_A;
           var9 = -var8 + (-64 + 32 * hf.field_t) - ClientException.field_d;
-          this.field_o = 32 * ca.field_k - li.field_c - 180;
+          this.field_o = 32 * NanoFrameTimer.field_k - li.field_c - 180;
           if (!(ClientException.field_d + var9 >= 32) ||
             this.field_B) {
             var9 = 64 + (32 * hf.field_t - ClientException.field_d);

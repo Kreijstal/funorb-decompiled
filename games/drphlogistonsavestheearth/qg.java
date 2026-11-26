@@ -394,7 +394,7 @@ final class qg extends kl implements ud {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (m.field_b.indexOf(var5Lifetime1) == -1) {
+              if (FrameTimer.field_b.indexOf(var5Lifetime1) == -1) {
                 stackIn_47_0 = dh.field_H;
                 return stackIn_47_0;
               }

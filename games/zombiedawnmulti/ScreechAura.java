@@ -311,13 +311,13 @@ final class ScreechAura extends IntrusiveNode {
               stackIn_60_1 = ~var29;
               if (var30 != 0) {
                 if (stackIn_60_0 < stackIn_60_1) {
-                  if (PopupMenuBuilder.field_J.length <= var18) {
+                  if (Bzip2State.field_J.length <= var18) {
                     break scanLoop1;
                   }
                   var19 = param0.field_A[var18];
                   var20 = param0.field_p[var18];
                   var21 = param0.field_b[var18];
-                  PopupMenuBuilder.field_J[var18] = var20 * var12 + (var19 * var9 + var21 * var15) >> 16;
+                  Bzip2State.field_J[var18] = var20 * var12 + (var19 * var9 + var21 * var15) >> 16;
                   SectorCacheStore.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
                   AudioServiceHelpers.field_i[var18] = var19 * var11 + var20 * var14 + var21 * var17 >> 16;
                   var18++;
@@ -398,13 +398,13 @@ final class ScreechAura extends IntrusiveNode {
                 if (stackIn_60_0 >= stackIn_60_1) {
                   break;
                 }
-                if (PopupMenuBuilder.field_J.length <= var18) {
+                if (Bzip2State.field_J.length <= var18) {
                   break;
                 }
                 var19 = param0.field_A[var18];
                 var20 = param0.field_p[var18];
                 var21 = param0.field_b[var18];
-                PopupMenuBuilder.field_J[var18] = var20 * var12 + (var19 * var9 + var21 * var15) >> 16;
+                Bzip2State.field_J[var18] = var20 * var12 + (var19 * var9 + var21 * var15) >> 16;
                 SectorCacheStore.field_g[var18] = var21 * var16 + var20 * var13 + var10 * var19 >> 16;
                 AudioServiceHelpers.field_i[var18] = var19 * var11 + var20 * var14 + var21 * var17 >> 16;
                 var18++;

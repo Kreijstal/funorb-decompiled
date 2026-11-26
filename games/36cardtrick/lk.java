@@ -389,7 +389,7 @@ class lk extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              vh.a(param0, "document.cookie=\"" + var5Lifetime6 + "\"", param1 ^ -12300);
+              JavaScriptBridge.evaluate(param0, "document.cookie=\"" + var5Lifetime6 + "\"", param1 ^ -12300);
             } catch (Throwable throwable) {
             }
             tj.a(true, param0);

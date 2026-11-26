@@ -25,7 +25,7 @@ final class gb {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
               int var6 = 110 % ((param1 + 58) / 60);
-              kj.a(-108, "document.cookie=\"" + var5 + "\"", param0);
+              JavaScriptBridge.evaluate(-108, "document.cookie=\"" + var5 + "\"", param0);
             } catch (Throwable throwable) {
             }
             ok.a(9507, param0);

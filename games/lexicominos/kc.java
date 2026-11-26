@@ -388,7 +388,7 @@ final class kc {
         int var8 = 0;
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
-          this.field_k[this.field_i] = (byte)tb.a((int) this.field_k[this.field_i], 128 >>> vg.a(7, this.field_b));
+          this.field_k[this.field_i] = (byte)FrameTimer.a((int) this.field_k[this.field_i], 128 >>> vg.a(7, this.field_b));
           this.field_i = this.field_i + 1;
           if (this.field_i > 32) {
             while (this.field_i < 64) {
@@ -476,7 +476,7 @@ final class kc {
             var8 = 255 & param1[var5_int] << var6 | (param1[1 + var5_int] & 255) >>> 8 - var6;
             if (0 <= var8 &&
               var8 < 256) {
-              this.field_k[this.field_i] = (byte)tb.a((int) this.field_k[this.field_i], var8 >>> var7);
+              this.field_k[this.field_i] = (byte)FrameTimer.a((int) this.field_k[this.field_i], var8 >>> var7);
               this.field_i = this.field_i + 1;
               this.field_b = this.field_b + (8 - var7);
               if (this.field_b == 512) {
@@ -496,7 +496,7 @@ final class kc {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param1[var5_int] << var6 & 255;
-            this.field_k[this.field_i] = (byte)tb.a((int) this.field_k[this.field_i], var8Lifetime1 >>> var7);
+            this.field_k[this.field_i] = (byte)FrameTimer.a((int) this.field_k[this.field_i], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param0 >= 8L) {
             param0 = param0 - (long)(-var7 + 8);

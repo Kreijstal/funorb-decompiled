@@ -248,8 +248,8 @@ final class gj {
             }
             ji.field_n = new String[var4];
             he.a(wf.field_e, 0, ji.field_n, 0, var4);
-            jl.field_c = new String[-1 + (var3_int - var4)];
-            he.a(wf.field_e, var4 + 1, jl.field_c, 0, -var4 + var3_int - 1);
+            FrameTimer.field_c = new String[-1 + (var3_int - var4)];
+            he.a(wf.field_e, var4 + 1, FrameTimer.field_c, 0, -var4 + var3_int - 1);
             var3_int = ga.a(~param0, pf.field_c, wf.field_e, aj.field_b, ni.a(new String[]{"<br><%0><br>"}, 0, BufferedSocket.field_q));
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
@@ -272,10 +272,10 @@ final class gj {
               stackIn_29_0 = ji.field_n.length;
             }
             var5 = stackIn_29_0;
-            if (qi.field_b.length > jl.field_c.length) {
+            if (qi.field_b.length > FrameTimer.field_c.length) {
               stackIn_32_0 = qi.field_b.length;
             } else {
-              stackIn_32_0 = jl.field_c.length;
+              stackIn_32_0 = FrameTimer.field_c.length;
             }
             var6 = stackIn_32_0;
             var7 = 7 + (var5 + var6);
@@ -341,7 +341,7 @@ final class gj {
                 var3_intLifetime1 = var7Lifetime1;
               }
             }
-            var4_ref_String__Lifetime1 = jl.field_c;
+            var4_ref_String__Lifetime1 = FrameTimer.field_c;
             for (var5Lifetime2Lifetime1 = 0; var4_ref_String__Lifetime1.length > var5Lifetime2Lifetime1; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
               var7Lifetime1Lifetime1 = ki.$cfr$intArgs$a$62abead39cee(-18, false, var12);
@@ -362,10 +362,10 @@ final class gj {
             }
             fh.field_c = stackIn_112_0 + stackIn_113_1;
           }
-          jl.field_e = -(fh.field_c >> 1) + ii.field_c;
+          FrameTimer.field_e = -(fh.field_c >> 1) + ii.field_c;
           r.field_h = new int[gf.field_s.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = jl.field_e;
+          var5Lifetime3 = FrameTimer.field_e;
           while (gf.field_s.length > var4Lifetime3) {
             var6Lifetime1 = dl.field_s[var4Lifetime3];
             if (0 > var6Lifetime1) {

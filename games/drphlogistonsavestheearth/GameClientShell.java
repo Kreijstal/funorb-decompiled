@@ -356,7 +356,7 @@ abstract class GameClientShell extends GameAppletShell {
           }
           var3 = 42 % ((18 - param0) / 48);
           var2 = new jb(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, a.field_e);
-          oc.a((byte) -21);
+          Bzip2State.a((byte) -21);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

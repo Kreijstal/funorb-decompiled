@@ -37,7 +37,7 @@ final class ol {
             AchievementUnlockEvent.field_h = param2;
             lf.field_c = param13;
             l.field_b = param4;
-            kf.field_p = param0;
+            NanoFrameTimer.field_p = param0;
             qb.field_k = param3;
             if (null == l.field_b.field_v) {
               return;

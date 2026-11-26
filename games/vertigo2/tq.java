@@ -500,10 +500,10 @@ final class tq {
               param0 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (null == ug.field_c) {
-                ug.field_c = ne.field_F.createImage(304, 34);
+              if (null == FrameTimer.field_c) {
+                FrameTimer.field_c = ne.field_F.createImage(304, 34);
               }
-              var10 = ug.field_c.getGraphics();
+              var10 = FrameTimer.field_c.getGraphics();
               var10.setColor(param0);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, param4 * 3, 30);
@@ -513,7 +513,7 @@ final class tq {
               var10.setFont(fh.field_t);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param2, (304 - param2.length() * 6) / 2, 22);
-              var9.drawImage(ug.field_c, -152 + op.field_c / 2, -18 + gh.field_a / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(FrameTimer.field_c, -152 + op.field_c / 2, -18 + gh.field_a / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

@@ -100,7 +100,7 @@ abstract class c extends GameApplet {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                gk.field_d = param1;
+                FrameTimer.field_d = param1;
                 var2 = SectorCacheStore.a("loginm3", (byte) -127);
                 if (null != var2) {
                   ImageProducerRasterBuffer.field_k = GzipInflater.a(var2, (byte) 81);
@@ -731,7 +731,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("loading", (byte) -127);
                 if (null != var2) {
-                  gk.field_c = GzipInflater.a(var2, (byte) 120);
+                  FrameTimer.field_c = GzipInflater.a(var2, (byte) 120);
                 }
                 var2 = SectorCacheStore.a("offline", (byte) -127);
                 if (null != var2) {
@@ -1445,7 +1445,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_welcome", (byte) -127);
                 if (null != var2) {
-                  gk.field_e = GzipInflater.a(var2, (byte) 105);
+                  FrameTimer.field_e = GzipInflater.a(var2, (byte) 105);
                 }
                 var2 = SectorCacheStore.a("create_u13_welcome", (byte) -127);
                 if (null != var2) {
@@ -3084,7 +3084,7 @@ abstract class c extends GameApplet {
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                gk.field_d = null;
+                FrameTimer.field_d = null;
                 finished = true; return;
             }
             void run() {
@@ -3560,7 +3560,7 @@ abstract class c extends GameApplet {
             sk.a((byte) 33, sg.field_a)) {
             sg.a((byte) -12);
             ad.a(51);
-            ck.field_G = gk.field_c;
+            ck.field_G = FrameTimer.field_c;
             tj.field_K = false;
             cj.a(aa.field_db, dg.field_F, sg.field_a, jk.field_c, 126);
             if (PacketBuffer.field_h ||

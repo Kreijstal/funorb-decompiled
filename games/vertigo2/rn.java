@@ -138,18 +138,18 @@ final class rn extends jg {
           if (var8 == null) {
             return;
           }
-          vq.field_q[2] = this.field_g + 64;
-          vq.field_q[0] = 64 + this.field_l;
+          Bzip2State.field_q[2] = this.field_g + 64;
+          Bzip2State.field_q[0] = 64 + this.field_l;
           if (!this.field_C && (param3 == null ||
             !(RandomAccessCacheFile.field_i[0] <= param3[0]))) {
             param3 = RandomAccessCacheFile.field_i;
           }
-          vq.field_q[1] = this.field_s;
+          Bzip2State.field_q[1] = this.field_s;
           if (this.field_p == 23 &&
             (this.field_s + (this.field_l + this.field_g) & 15) == 0) {
-            vq.field_q[0] = vq.field_q[0] + (-4 + be.a(9, (byte) 83));
-            vq.field_q[1] = vq.field_q[1] + (be.a(9, (byte) 83) - 4);
-            vq.field_q[2] = vq.field_q[2] + (-4 + be.a(9, (byte) 83));
+            Bzip2State.field_q[0] = Bzip2State.field_q[0] + (-4 + be.a(9, (byte) 83));
+            Bzip2State.field_q[1] = Bzip2State.field_q[1] + (be.a(9, (byte) 83) - 4);
+            Bzip2State.field_q[2] = Bzip2State.field_q[2] + (-4 + be.a(9, (byte) 83));
           }
           if (var6_int == 10 ||
             var6_int == 5 ||
@@ -181,19 +181,19 @@ final class rn extends jg {
             }
             var12 = ((fc) (var9)).field_R;
             ((fc) (var9)).field_R = param3;
-            ((fc) (var9)).a(param1, vq.field_q);
+            ((fc) (var9)).a(param1, Bzip2State.field_q);
             ((fc) (var9)).field_R = var12;
           }
           if (this.field_f < 0) {
             var14 = var8.field_R;
             var8.field_R = param3;
-            var8.a(param1, vq.field_q);
+            var8.a(param1, Bzip2State.field_q);
             var8.field_R = var14;
           } else {
             var15 = (fc) (this.field_n.a(true, true, false, var8));
             var13 = var15.field_R;
             var8.field_R = param3;
-            var15.a(param1, vq.field_q);
+            var15.a(param1, Bzip2State.field_q);
             var15.field_R = var13;
           }
           return;

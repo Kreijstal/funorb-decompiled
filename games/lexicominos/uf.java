@@ -56,7 +56,7 @@ final class uf extends tj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param0 ^ -126, param1) == ni.field_b) {
-            stackIn_2_0 = ok.field_d;
+            stackIn_2_0 = Bzip2State.field_d;
             return stackIn_2_0;
           }
           if (param0 == -126) {

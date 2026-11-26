@@ -83,7 +83,7 @@ abstract class sf extends IntrusiveNode {
             } else {
               var5Lifetime6 = var7 + "; Expires=" + bt.a(false, 94608000000L + kh.correctedCurrentTimeMillis(-125)) + "; Max-Age=" + 94608000L;
             }
-            JavaScriptBridge.a(param1, -7012, "document.cookie=\"" + var5Lifetime6 + "\"");
+            JavaScriptBridge.evaluate(param1, -7012, "document.cookie=\"" + var5Lifetime6 + "\"");
           } catch (Throwable throwable) {
           }
           if (param0 > -110) {

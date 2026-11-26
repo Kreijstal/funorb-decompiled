@@ -225,7 +225,7 @@ public final class SolKnight extends ab {
           k.a(-23354);
           uc.clearStaticReferences(99);
           wc.clearStaticReferences(false);
-          rj.clearDeclaredStaticReferences(0);
+          FrameTimer.clearDeclaredStaticReferences(0);
           RasterBuffer.clearStaticReferences(0);
           gl.clearStaticReferences((byte) 95);
           me.clearStaticReferences((byte) 56);
@@ -319,7 +319,7 @@ public final class SolKnight extends ab {
           int var2_int = -89 / ((-28 - param0) / 59);
           ByteStorage.clearStaticReferences((byte) 94);
           gi.clearStaticReferences();
-          hj.clearStaticReferences((byte) -37);
+          Bzip2State.clearStaticReferences((byte) -37);
           di.clearDeclaredStaticReferences(7);
           fl.a((byte) -108);
           bj.clearStaticReferences(50);
@@ -344,7 +344,7 @@ public final class SolKnight extends ab {
           fh.a((byte) 58);
           SocketConnector.b(100);
           ProxyAuthenticationRequiredException.clearStaticReferences(-107);
-          dk.clearStaticReferences(-108);
+          NanoFrameTimer.clearStaticReferences(-108);
           ImageProducerRasterBuffer.b(768);
           uj.clearStaticReferences(1);
           ee.clearDeclaredStaticReferences(-120);
@@ -640,8 +640,8 @@ public final class SolKnight extends ab {
           uh.field_l = SecondaryNodeDeque.a(fh.field_c, -18362, "stars", "");
           wi.field_i = SecondaryNodeDeque.a(fh.field_c, param0 - 18362, "asteroids", "");
           hf.field_c = SecondaryNodeDeque.a(fh.field_c, -18362, "ammo", "");
-          hj.field_n = Asteroid.a("sword", "", fh.field_c, (byte) -124);
-          hj.field_p = eb.a(false, Asteroid.a("shield_packed", "", fh.field_c, (byte) -127), 72);
+          Bzip2State.field_n = Asteroid.a("sword", "", fh.field_c, (byte) -124);
+          Bzip2State.field_p = eb.a(false, Asteroid.a("shield_packed", "", fh.field_c, (byte) -127), 72);
           qd.field_f = SecondaryNodeDeque.a(fh.field_c, -18362, "overlays", "");
           Asteroid.a("space", "", fh.field_c, (byte) -128);
           IterableNodeHashTable.field_g = SecondaryNodeDeque.a(fh.field_c, -18362, "explosion", "");
@@ -674,8 +674,8 @@ public final class SolKnight extends ab {
             var6_ref_o = var18[var5_int];
             AccountRequestState.a(param0 + 120, var6_ref_o);
           }
-          var21 = hj.field_p;
-          var5 = hj.field_n;
+          var21 = Bzip2State.field_p;
+          var5 = Bzip2State.field_n;
           var6 = 316 * var21.field_q / var5.field_r;
           dupTemp$0 = new Sprite(var6, 316);
           h.field_b = dupTemp$0;
@@ -706,7 +706,7 @@ public final class SolKnight extends ab {
             var15.c(-var15.field_s, -var15.field_n, 64);
             SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           }
-          hj.field_e.a(true);
+          Bzip2State.field_e.a(true);
           fh.field_c = null;
           field_I = null;
           stackIn_76_0 = fc.field_o;
@@ -728,7 +728,7 @@ public final class SolKnight extends ab {
           return;
         }
         try {
-          rj.field_c = 16776960;
+          FrameTimer.field_c = 16776960;
           pb.field_b = 16777215;
           this.a((byte) -38, true, false, false, false);
         } catch (RuntimeException runtimeException) {

@@ -515,9 +515,9 @@ final class vc {
               tg.field_a = NetworkArchiveRequest.field_t.readLong((byte) -89);
               NetworkArchiveRequest.field_t.position = 0;
               lg.a(3, param1, s.field_A, param4, param0);
-              dh.field_bb = da.field_m;
+              dh.field_bb = Bzip2State.field_m;
             }
-            if (da.field_m == dh.field_bb &&
+            if (Bzip2State.field_m == dh.field_bb &&
               AccountRequestState.a(true, 1)) {
               var6_intLifetime2 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
               NetworkArchiveRequest.field_t.position = 0;
@@ -585,7 +585,7 @@ final class vc {
                 gb.field_h = NetworkArchiveRequest.field_t.readString(2);
                 sg.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
                 BufferedSocket.field_j = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
-                dh.field_bb = da.field_r;
+                dh.field_bb = Bzip2State.field_r;
               }
               if (s.field_A.a(10277) != ci.field_b) {
                 if (s.field_A.a(10277) == oj.field_j) {
@@ -605,7 +605,7 @@ final class vc {
                 if (0 >= tc.field_b &&
                   !jd.field_b) {
                   try {
-                    gm.a(-31183, "unzap", uj.b((byte) -120));
+                    JavaScriptBridge.callWithoutArguments(-31183, "unzap", uj.b((byte) -120));
                     decompiledRegionSelector0 = 0;
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -621,7 +621,7 @@ final class vc {
                   }
                 }
                 try {
-                  gm.a(true, "zap", new Object[]{jj.a(14461, p.field_c)}, uj.b((byte) -120));
+                  JavaScriptBridge.callWithArguments(true, "zap", new Object[]{jj.a(14461, p.field_c)}, uj.b((byte) -120));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

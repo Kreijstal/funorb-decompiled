@@ -81,7 +81,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:di.d(Lqn;)V#0"
+      "renamedSymbol": "B:di.d(LBzip2State;)V#0"
     },
     {
       "symbol": "B:dl.b()V#0",
@@ -348,6 +348,14 @@
       "renamedSymbol": "C:DirectDrawFullscreenManager"
     },
     {
+      "symbol": "C:hi",
+      "originalName": "hi",
+      "to": "JavaScriptBridge",
+      "evidence": "JavaScriptBridge source-purpose review:all3static JSObject.getWindow/call/eval wrapper bodies and380incoming method refs in238human-read windows;preserve all primitive guard domains,null versus supplied Object[] arguments,array/cast/sentinel/arithmetic/exception paths,script literals,static/throws declarations and operation order. Preserve eval BEFORE83%((guard+7)/52);no-arguments call arithmetic54/((guard+38)/54) BEFOREgetWindow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:JavaScriptBridge"
+    },
+    {
       "symbol": "C:id",
       "originalName": "id",
       "to": "AudioOutput",
@@ -426,6 +434,14 @@
       "evidence": "PCM mixer for the parent MIDI synthesizer musical patch voices,with intrusive voice deque and auxiliary stream mixer for fading/retriggered streams. Constructor allocates deque then mixer and retains the parent with original exception wrapping;mix/skip preserve per-voice countdown,envelope update and retrigger crossfades. Reviewed constructor SHA256s 0af4fe4498e365c4fdc3e6799e808eda92db6d3a2c360b954650896ec04c138f. Naming only. Complete owning PCM API and directly supporting bodies,all91 candidate constructor bodies and independent selected native/class-name-literal scans reviewed. Preserve original fields and default/declaration state,constructor chaining,all JVM widths/domains,guards,literals,overflow,FP/casts,aliases,partial writes,allocation/call/exception ordering,visibility/modifiers and native/override binding identities. No intentional literal/native edits or whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "C:MusicPatchPcmStream"
+    },
+    {
+      "symbol": "C:ke",
+      "originalName": "ke",
+      "to": "FrameTimer",
+      "evidence": "FrameTimer source-purpose review: abstract timer contract or concrete System.nanoTime timestamps/sample buffer;all instance operations,typed factories and selected method callers reviewed;preserve existing behavior and full primitive parameter domains.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:FrameTimer"
     },
     {
       "symbol": "C:kg",
@@ -548,12 +564,28 @@
       "renamedSymbol": "C:ByteStorage"
     },
     {
+      "symbol": "C:qn",
+      "originalName": "qn",
+      "to": "Bzip2State",
+      "evidence": "Source-purpose review:32owned instance fields hold Bzip2 byte/bit counters,buffers,selectors and6x258decode tables;all constructor operations,typed synchronized byte-array decoder entry,bit reader and singleton construction reviewed. Preserve exact per-game14array allocation order/dimensions and two explicit zero stores;multidimensional array allocation/partial effects unchanged. Decoder entry captures lock target then rereads global state field,sets source/target/offset/count/bit fields in original order,calls decoder,and nulls input/output only on normal return. Do not add finally cleanup,lock changes,caching,bounds/count clamps,or alter unused supplied int. Bit reader preserves signed int arithmetic/shift masking,byte&255,buffer-index/count overflow,read/update/exception order and all literals. No method/field leaf aliases changed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Bzip2State"
+    },
+    {
       "symbol": "C:rp",
       "originalName": "rp",
       "to": "PcmOutputWorker",
       "evidence": "Source-purpose review: Runnable output worker with volatile two-slot PCM output array (existing AudioOutput/PcmPlayerService/AudioMixer names retained),two volatile running/stop flags,and retained system-task service. Package-visible constructor allocates two player slots and initializes both flags false;public final run services nonnull players through the already reviewed bound output serviceOutput method,sleeps via sleepMillis(10),and performs its original post-service helper call. All22run bodies,22constructors and22creation/task-registration contexts human read. Preserve run callback name,all field/method leaves,volatile declarations,flag placement,Exception/Throwable/finally routing,diagnostic wrappers,partial writes and call/allocation/exception order. Unrelated static helper bodies preserved without claiming their semantic review.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PcmOutputWorker"
+    },
+    {
+      "symbol": "C:s",
+      "originalName": "s",
+      "to": "NanoFrameTimer",
+      "evidence": "NanoFrameTimer source-purpose review: abstract timer contract or concrete System.nanoTime timestamps/sample buffer;all instance operations,typed factories and selected method callers reviewed;preserve existing behavior and full primitive parameter domains.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NanoFrameTimer"
     },
     {
       "symbol": "C:sa",
@@ -1500,6 +1532,14 @@
       "renamedSymbol": "M:di.clearStaticReferences()V"
     },
     {
+      "symbol": "M:di.a([BI[BII)I",
+      "originalName": "a",
+      "to": "decompress",
+      "evidence": "Source-purpose review: Source-reviewed Bzip2 byte-array decode entry;exact earlier human body review source4 reused by game/symbol/source/body SHA;all incoming caller contexts human-read. Bzip2 byte-array decode entry uses shared state under captured lock,repeatedly reads original global state field,sets input/output/offset/remaining/bit counters in exact original order,calls block decoder,returns original requested-minus-remaining int,and clears input/output only on normal return. Preserve unused supplied int,full primitive domains,all casts,locks,partial effects,reference/exception order and literals. Container caller retains format1 dispatch,output allocation,unused return,all arguments including source offset9,and adjacent gzip branch.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:di.decompress([BI[BII)I"
+    },
+    {
       "symbol": "M:dj.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2212,6 +2252,30 @@
       "renamedSymbol": "M:DirectDrawFullscreenManager.enterFullscreen(IIBILjava/awt/Frame;I)V"
     },
     {
+      "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "callWithArguments",
+      "evidence": "Source-purpose review: JavaScriptBridge source-purpose review:all3static JSObject.getWindow/call/eval wrapper bodies and380incoming method refs in238human-read windows;preserve all primitive guard domains,null versus supplied Object[] arguments,array/cast/sentinel/arithmetic/exception paths,script literals,static/throws declarations and operation order. Preserve eval BEFORE83%((guard+7)/52);no-arguments call arithmetic54/((guard+38)/54) BEFOREgetWindow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaScriptBridge.callWithArguments(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;"
+    },
+    {
+      "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+      "originalName": "a",
+      "to": "callWithoutArguments",
+      "evidence": "Source-purpose review: JavaScriptBridge source-purpose review:all3static JSObject.getWindow/call/eval wrapper bodies and380incoming method refs in238human-read windows;preserve all primitive guard domains,null versus supplied Object[] arguments,array/cast/sentinel/arithmetic/exception paths,script literals,static/throws declarations and operation order. Preserve eval BEFORE83%((guard+7)/52);no-arguments call arithmetic54/((guard+38)/54) BEFOREgetWindow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaScriptBridge.callWithoutArguments(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;"
+    },
+    {
+      "symbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+      "originalName": "a",
+      "to": "evaluate",
+      "evidence": "Source-purpose review: JavaScriptBridge source-purpose review:all3static JSObject.getWindow/call/eval wrapper bodies and380incoming method refs in238human-read windows;preserve all primitive guard domains,null versus supplied Object[] arguments,array/cast/sentinel/arithmetic/exception paths,script literals,static/throws declarations and operation order. Preserve eval BEFORE83%((guard+7)/52);no-arguments call arithmetic54/((guard+38)/54) BEFOREgetWindow.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:JavaScriptBridge.evaluate(Ljava/lang/String;Ljava/applet/Applet;B)V"
+    },
+    {
       "symbol": "M:hk.b(I)V",
       "originalName": "b",
       "to": "clearDeclaredStaticReferences",
@@ -2817,7 +2881,39 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 7fcbcf453fbdd14649b0e1101a59ce9c2059eb37a6d2c9695f56f03fdd59a83d.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ke.clearStaticReferences(B)V"
+      "renamedSymbol": "M:FrameTimer.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:ke.a(I)V",
+      "originalName": "a",
+      "to": "resetTiming",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.resetTiming(I)V"
+    },
+    {
+      "symbol": "M:ke.a(JI)I",
+      "originalName": "a",
+      "to": "advanceTicks",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.advanceTicks(JI)I"
+    },
+    {
+      "symbol": "M:ke.a(Z)J",
+      "originalName": "a",
+      "to": "getDelayMillis",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.getDelayMillis(Z)J"
+    },
+    {
+      "symbol": "M:ke.b(JI)I",
+      "originalName": "b",
+      "to": "waitAndCountTicks",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.waitAndCountTicks(JI)I"
     },
     {
       "symbol": "M:kf.a(I)V",
@@ -4361,7 +4457,7 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 6 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 dda9e4e863aa1103fd78dcf4501610c5f44017df7be68c63bff2c0a94288e4cb.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:qn.clearStaticReferences(I)V"
+      "renamedSymbol": "M:Bzip2State.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:qo.b(B)V",
@@ -4482,6 +4578,38 @@
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 5a1b44eee921a2ea087b16a31fe0d033abcca6a300a7465fe7cd45f3b0aed916.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmOutputWorker.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:s.a(I)V",
+      "originalName": "a",
+      "to": "resetTiming",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.resetTiming(I)V"
+    },
+    {
+      "symbol": "M:s.a(JI)I",
+      "originalName": "a",
+      "to": "advanceTicks",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.advanceTicks(JI)I"
+    },
+    {
+      "symbol": "M:s.a(Z)J",
+      "originalName": "a",
+      "to": "getDelayMillis",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.getDelayMillis(Z)J"
+    },
+    {
+      "symbol": "M:s.c(B)J",
+      "originalName": "c",
+      "to": "sampleElapsedNanos",
+      "evidence": "Source-purpose review: Frame timer source-purpose review: all selected-owner concrete bodies/abstract declarations,complete override families and incoming caller/construction contexts covered. Preserve full primitive domains,all original guards,global flags,recursive calls,arithmetic/sample/store/allocation/exception order and literals. Contracts catalog-frame-timers-1-method-contracts-12-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.sampleElapsedNanos(B)J"
     },
     {
       "symbol": "M:sa.a(IZLsi;)V",
@@ -5498,7 +5626,7 @@
     },
     {
       "symbol": "B:di.d(Lqn;)V#0",
-      "renamedSymbol": "B:di.d(Lqn;)V#0",
+      "renamedSymbol": "B:di.d(LBzip2State;)V#0",
       "originalName": "L0",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -7148,9 +7276,9 @@
     },
     {
       "symbol": "C:hi",
-      "renamedSymbol": "C:hi",
+      "renamedSymbol": "C:JavaScriptBridge",
       "originalName": "hi",
-      "renamedName": "hi",
+      "renamedName": "JavaScriptBridge",
       "declaration": {
         "file": "hi.java",
         "start": 50,
@@ -7654,9 +7782,9 @@
     },
     {
       "symbol": "C:ke",
-      "renamedSymbol": "C:ke",
+      "renamedSymbol": "C:FrameTimer",
       "originalName": "ke",
-      "renamedName": "ke",
+      "renamedName": "FrameTimer",
       "declaration": {
         "file": "ke.java",
         "start": 72,
@@ -8886,9 +9014,9 @@
     },
     {
       "symbol": "C:qn",
-      "renamedSymbol": "C:qn",
+      "renamedSymbol": "C:Bzip2State",
       "originalName": "qn",
-      "renamedName": "qn",
+      "renamedName": "Bzip2State",
       "declaration": {
         "file": "qn.java",
         "start": 50,
@@ -9106,9 +9234,9 @@
     },
     {
       "symbol": "C:s",
-      "renamedSymbol": "C:s",
+      "renamedSymbol": "C:NanoFrameTimer",
       "originalName": "s",
-      "renamedName": "s",
+      "renamedName": "NanoFrameTimer",
       "declaration": {
         "file": "s.java",
         "start": 50,
@@ -14419,7 +14547,7 @@
     },
     {
       "symbol": "F:di.field_a:Lqn;",
-      "renamedSymbol": "F:di.field_a:Lqn;",
+      "renamedSymbol": "F:di.field_a:LBzip2State;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -22262,7 +22390,7 @@
     },
     {
       "symbol": "F:jm.field_h:Lke;",
-      "renamedSymbol": "F:MouseWheelInput.field_h:Lke;",
+      "renamedSymbol": "F:MouseWheelInput.field_h:LFrameTimer;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -22801,7 +22929,7 @@
     },
     {
       "symbol": "F:ke.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ke.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:FrameTimer.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -22812,7 +22940,7 @@
     },
     {
       "symbol": "F:ke.field_b:[I",
-      "renamedSymbol": "F:ke.field_b:[I",
+      "renamedSymbol": "F:FrameTimer.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -22823,7 +22951,7 @@
     },
     {
       "symbol": "F:ke.field_c:Ljava/lang/String;",
-      "renamedSymbol": "F:ke.field_c:Ljava/lang/String;",
+      "renamedSymbol": "F:FrameTimer.field_c:Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -31315,7 +31443,7 @@
     },
     {
       "symbol": "F:qn.field_A:[B",
-      "renamedSymbol": "F:qn.field_A:[B",
+      "renamedSymbol": "F:Bzip2State.field_A:[B",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -31326,7 +31454,7 @@
     },
     {
       "symbol": "F:qn.field_B:I",
-      "renamedSymbol": "F:qn.field_B:I",
+      "renamedSymbol": "F:Bzip2State.field_B:I",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -31337,7 +31465,7 @@
     },
     {
       "symbol": "F:qn.field_C:Ljava/lang/String;",
-      "renamedSymbol": "F:qn.field_C:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_C:Ljava/lang/String;",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -31348,7 +31476,7 @@
     },
     {
       "symbol": "F:qn.field_D:[I",
-      "renamedSymbol": "F:qn.field_D:[I",
+      "renamedSymbol": "F:Bzip2State.field_D:[I",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -31359,7 +31487,7 @@
     },
     {
       "symbol": "F:qn.field_E:[Ljava/lang/String;",
-      "renamedSymbol": "F:qn.field_E:[Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_E:[Ljava/lang/String;",
       "originalName": "field_E",
       "renamedName": "field_E",
       "declaration": {
@@ -31370,7 +31498,7 @@
     },
     {
       "symbol": "F:qn.field_F:[[I",
-      "renamedSymbol": "F:qn.field_F:[[I",
+      "renamedSymbol": "F:Bzip2State.field_F:[[I",
       "originalName": "field_F",
       "renamedName": "field_F",
       "declaration": {
@@ -31381,7 +31509,7 @@
     },
     {
       "symbol": "F:qn.field_G:I",
-      "renamedSymbol": "F:qn.field_G:I",
+      "renamedSymbol": "F:Bzip2State.field_G:I",
       "originalName": "field_G",
       "renamedName": "field_G",
       "declaration": {
@@ -31392,7 +31520,7 @@
     },
     {
       "symbol": "F:qn.field_H:[B",
-      "renamedSymbol": "F:qn.field_H:[B",
+      "renamedSymbol": "F:Bzip2State.field_H:[B",
       "originalName": "field_H",
       "renamedName": "field_H",
       "declaration": {
@@ -31403,7 +31531,7 @@
     },
     {
       "symbol": "F:qn.field_I:I",
-      "renamedSymbol": "F:qn.field_I:I",
+      "renamedSymbol": "F:Bzip2State.field_I:I",
       "originalName": "field_I",
       "renamedName": "field_I",
       "declaration": {
@@ -31414,7 +31542,7 @@
     },
     {
       "symbol": "F:qn.field_J:I",
-      "renamedSymbol": "F:qn.field_J:I",
+      "renamedSymbol": "F:Bzip2State.field_J:I",
       "originalName": "field_J",
       "renamedName": "field_J",
       "declaration": {
@@ -31425,7 +31553,7 @@
     },
     {
       "symbol": "F:qn.field_K:[I",
-      "renamedSymbol": "F:qn.field_K:[I",
+      "renamedSymbol": "F:Bzip2State.field_K:[I",
       "originalName": "field_K",
       "renamedName": "field_K",
       "declaration": {
@@ -31436,7 +31564,7 @@
     },
     {
       "symbol": "F:qn.field_L:I",
-      "renamedSymbol": "F:qn.field_L:I",
+      "renamedSymbol": "F:Bzip2State.field_L:I",
       "originalName": "field_L",
       "renamedName": "field_L",
       "declaration": {
@@ -31447,7 +31575,7 @@
     },
     {
       "symbol": "F:qn.field_M:[B",
-      "renamedSymbol": "F:qn.field_M:[B",
+      "renamedSymbol": "F:Bzip2State.field_M:[B",
       "originalName": "field_M",
       "renamedName": "field_M",
       "declaration": {
@@ -31458,7 +31586,7 @@
     },
     {
       "symbol": "F:qn.field_O:I",
-      "renamedSymbol": "F:qn.field_O:I",
+      "renamedSymbol": "F:Bzip2State.field_O:I",
       "originalName": "field_O",
       "renamedName": "field_O",
       "declaration": {
@@ -31469,7 +31597,7 @@
     },
     {
       "symbol": "F:qn.field_a:I",
-      "renamedSymbol": "F:qn.field_a:I",
+      "renamedSymbol": "F:Bzip2State.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -31480,7 +31608,7 @@
     },
     {
       "symbol": "F:qn.field_b:I",
-      "renamedSymbol": "F:qn.field_b:I",
+      "renamedSymbol": "F:Bzip2State.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -31491,7 +31619,7 @@
     },
     {
       "symbol": "F:qn.field_c:[B",
-      "renamedSymbol": "F:qn.field_c:[B",
+      "renamedSymbol": "F:Bzip2State.field_c:[B",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -31502,7 +31630,7 @@
     },
     {
       "symbol": "F:qn.field_d:[[B",
-      "renamedSymbol": "F:qn.field_d:[[B",
+      "renamedSymbol": "F:Bzip2State.field_d:[[B",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -31513,7 +31641,7 @@
     },
     {
       "symbol": "F:qn.field_e:Ldl;",
-      "renamedSymbol": "F:qn.field_e:LRgbSprite;",
+      "renamedSymbol": "F:Bzip2State.field_e:LRgbSprite;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -31524,7 +31652,7 @@
     },
     {
       "symbol": "F:qn.field_f:B",
-      "renamedSymbol": "F:qn.field_f:B",
+      "renamedSymbol": "F:Bzip2State.field_f:B",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -31535,7 +31663,7 @@
     },
     {
       "symbol": "F:qn.field_g:Lsj;",
-      "renamedSymbol": "F:qn.field_g:Lsj;",
+      "renamedSymbol": "F:Bzip2State.field_g:Lsj;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -31546,7 +31674,7 @@
     },
     {
       "symbol": "F:qn.field_h:I",
-      "renamedSymbol": "F:qn.field_h:I",
+      "renamedSymbol": "F:Bzip2State.field_h:I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -31557,7 +31685,7 @@
     },
     {
       "symbol": "F:qn.field_i:[B",
-      "renamedSymbol": "F:qn.field_i:[B",
+      "renamedSymbol": "F:Bzip2State.field_i:[B",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -31568,7 +31696,7 @@
     },
     {
       "symbol": "F:qn.field_j:Ljava/lang/String;",
-      "renamedSymbol": "F:qn.field_j:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_j:Ljava/lang/String;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -31579,7 +31707,7 @@
     },
     {
       "symbol": "F:qn.field_k:I",
-      "renamedSymbol": "F:qn.field_k:I",
+      "renamedSymbol": "F:Bzip2State.field_k:I",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -31590,7 +31718,7 @@
     },
     {
       "symbol": "F:qn.field_l:[[I",
-      "renamedSymbol": "F:qn.field_l:[[I",
+      "renamedSymbol": "F:Bzip2State.field_l:[[I",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -31601,7 +31729,7 @@
     },
     {
       "symbol": "F:qn.field_m:I",
-      "renamedSymbol": "F:qn.field_m:I",
+      "renamedSymbol": "F:Bzip2State.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -31612,7 +31740,7 @@
     },
     {
       "symbol": "F:qn.field_n:I",
-      "renamedSymbol": "F:qn.field_n:I",
+      "renamedSymbol": "F:Bzip2State.field_n:I",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -31623,7 +31751,7 @@
     },
     {
       "symbol": "F:qn.field_o:[I",
-      "renamedSymbol": "F:qn.field_o:[I",
+      "renamedSymbol": "F:Bzip2State.field_o:[I",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -31634,7 +31762,7 @@
     },
     {
       "symbol": "F:qn.field_p:[Z",
-      "renamedSymbol": "F:qn.field_p:[Z",
+      "renamedSymbol": "F:Bzip2State.field_p:[Z",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -31645,7 +31773,7 @@
     },
     {
       "symbol": "F:qn.field_q:[B",
-      "renamedSymbol": "F:qn.field_q:[B",
+      "renamedSymbol": "F:Bzip2State.field_q:[B",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -31656,7 +31784,7 @@
     },
     {
       "symbol": "F:qn.field_r:I",
-      "renamedSymbol": "F:qn.field_r:I",
+      "renamedSymbol": "F:Bzip2State.field_r:I",
       "originalName": "field_r",
       "renamedName": "field_r",
       "declaration": {
@@ -31667,7 +31795,7 @@
     },
     {
       "symbol": "F:qn.field_s:I",
-      "renamedSymbol": "F:qn.field_s:I",
+      "renamedSymbol": "F:Bzip2State.field_s:I",
       "originalName": "field_s",
       "renamedName": "field_s",
       "declaration": {
@@ -31678,7 +31806,7 @@
     },
     {
       "symbol": "F:qn.field_t:I",
-      "renamedSymbol": "F:qn.field_t:I",
+      "renamedSymbol": "F:Bzip2State.field_t:I",
       "originalName": "field_t",
       "renamedName": "field_t",
       "declaration": {
@@ -31689,7 +31817,7 @@
     },
     {
       "symbol": "F:qn.field_u:I",
-      "renamedSymbol": "F:qn.field_u:I",
+      "renamedSymbol": "F:Bzip2State.field_u:I",
       "originalName": "field_u",
       "renamedName": "field_u",
       "declaration": {
@@ -31700,7 +31828,7 @@
     },
     {
       "symbol": "F:qn.field_v:[I",
-      "renamedSymbol": "F:qn.field_v:[I",
+      "renamedSymbol": "F:Bzip2State.field_v:[I",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -31711,7 +31839,7 @@
     },
     {
       "symbol": "F:qn.field_w:I",
-      "renamedSymbol": "F:qn.field_w:I",
+      "renamedSymbol": "F:Bzip2State.field_w:I",
       "originalName": "field_w",
       "renamedName": "field_w",
       "declaration": {
@@ -31722,7 +31850,7 @@
     },
     {
       "symbol": "F:qn.field_x:[[I",
-      "renamedSymbol": "F:qn.field_x:[[I",
+      "renamedSymbol": "F:Bzip2State.field_x:[[I",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -31733,7 +31861,7 @@
     },
     {
       "symbol": "F:qn.field_y:[Z",
-      "renamedSymbol": "F:qn.field_y:[Z",
+      "renamedSymbol": "F:Bzip2State.field_y:[Z",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -31744,7 +31872,7 @@
     },
     {
       "symbol": "F:qn.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:qn.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:Bzip2State.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -32954,7 +33082,7 @@
     },
     {
       "symbol": "F:s.field_d:[C",
-      "renamedSymbol": "F:s.field_d:[C",
+      "renamedSymbol": "F:NanoFrameTimer.field_d:[C",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -32965,7 +33093,7 @@
     },
     {
       "symbol": "F:s.field_e:J",
-      "renamedSymbol": "F:s.field_e:J",
+      "renamedSymbol": "F:NanoFrameTimer.field_e:J",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -32976,7 +33104,7 @@
     },
     {
       "symbol": "F:s.field_f:Ljava/lang/String;",
-      "renamedSymbol": "F:s.field_f:Ljava/lang/String;",
+      "renamedSymbol": "F:NanoFrameTimer.field_f:Ljava/lang/String;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -32987,7 +33115,7 @@
     },
     {
       "symbol": "F:s.field_g:I",
-      "renamedSymbol": "F:s.field_g:I",
+      "renamedSymbol": "F:NanoFrameTimer.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -32998,7 +33126,7 @@
     },
     {
       "symbol": "F:s.field_h:[I",
-      "renamedSymbol": "F:s.field_h:[I",
+      "renamedSymbol": "F:NanoFrameTimer.field_h:[I",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -33009,7 +33137,7 @@
     },
     {
       "symbol": "F:s.field_i:J",
-      "renamedSymbol": "F:s.field_i:J",
+      "renamedSymbol": "F:NanoFrameTimer.field_i:J",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -33020,7 +33148,7 @@
     },
     {
       "symbol": "F:s.field_j:I",
-      "renamedSymbol": "F:s.field_j:I",
+      "renamedSymbol": "F:NanoFrameTimer.field_j:I",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -33031,7 +33159,7 @@
     },
     {
       "symbol": "F:s.field_k:J",
-      "renamedSymbol": "F:s.field_k:J",
+      "renamedSymbol": "F:NanoFrameTimer.field_k:J",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -33042,7 +33170,7 @@
     },
     {
       "symbol": "F:s.field_l:Z",
-      "renamedSymbol": "F:s.field_l:Z",
+      "renamedSymbol": "F:NanoFrameTimer.field_l:Z",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -33053,7 +33181,7 @@
     },
     {
       "symbol": "F:s.field_m:J",
-      "renamedSymbol": "F:s.field_m:J",
+      "renamedSymbol": "F:NanoFrameTimer.field_m:J",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -33064,7 +33192,7 @@
     },
     {
       "symbol": "F:s.field_n:[J",
-      "renamedSymbol": "F:s.field_n:[J",
+      "renamedSymbol": "F:NanoFrameTimer.field_n:[J",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -33075,7 +33203,7 @@
     },
     {
       "symbol": "F:s.field_o:[Ldl;",
-      "renamedSymbol": "F:s.field_o:[LRgbSprite;",
+      "renamedSymbol": "F:NanoFrameTimer.field_o:[LRgbSprite;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -66581,7 +66709,7 @@
     },
     {
       "symbol": "L:di.a(ILqn;)I#0",
-      "renamedSymbol": "L:di.a(ILqn;)I#0",
+      "renamedSymbol": "L:di.a(ILBzip2State;)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -66592,7 +66720,7 @@
     },
     {
       "symbol": "L:di.a([BI[BII)I#0",
-      "renamedSymbol": "L:di.a([BI[BII)I#0",
+      "renamedSymbol": "L:di.decompress([BI[BII)I#0",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -66603,7 +66731,7 @@
     },
     {
       "symbol": "L:di.a([BI[BII)I#1",
-      "renamedSymbol": "L:di.a([BI[BII)I#1",
+      "renamedSymbol": "L:di.decompress([BI[BII)I#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -66614,7 +66742,7 @@
     },
     {
       "symbol": "L:di.a([BI[BII)I#2",
-      "renamedSymbol": "L:di.a([BI[BII)I#2",
+      "renamedSymbol": "L:di.decompress([BI[BII)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -66746,7 +66874,7 @@
     },
     {
       "symbol": "L:di.b(Lqn;)V#0",
-      "renamedSymbol": "L:di.b(Lqn;)V#0",
+      "renamedSymbol": "L:di.b(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -66757,7 +66885,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#0",
-      "renamedSymbol": "L:di.c(Lqn;)V#0",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -66768,7 +66896,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#1",
-      "renamedSymbol": "L:di.c(Lqn;)V#1",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -66779,7 +66907,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#10",
-      "renamedSymbol": "L:di.c(Lqn;)V#10",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -66790,7 +66918,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#11",
-      "renamedSymbol": "L:di.c(Lqn;)V#11",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -66801,7 +66929,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#12",
-      "renamedSymbol": "L:di.c(Lqn;)V#12",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -66812,7 +66940,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#13",
-      "renamedSymbol": "L:di.c(Lqn;)V#13",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -66823,7 +66951,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#14",
-      "renamedSymbol": "L:di.c(Lqn;)V#14",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -66834,7 +66962,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#15",
-      "renamedSymbol": "L:di.c(Lqn;)V#15",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -66845,7 +66973,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#16",
-      "renamedSymbol": "L:di.c(Lqn;)V#16",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -66856,7 +66984,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#17",
-      "renamedSymbol": "L:di.c(Lqn;)V#17",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -66867,7 +66995,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#18",
-      "renamedSymbol": "L:di.c(Lqn;)V#18",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -66878,7 +67006,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#19",
-      "renamedSymbol": "L:di.c(Lqn;)V#19",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#19",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -66889,7 +67017,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#2",
-      "renamedSymbol": "L:di.c(Lqn;)V#2",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -66900,7 +67028,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#20",
-      "renamedSymbol": "L:di.c(Lqn;)V#20",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#20",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -66911,7 +67039,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#21",
-      "renamedSymbol": "L:di.c(Lqn;)V#21",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#21",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -66922,7 +67050,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#22",
-      "renamedSymbol": "L:di.c(Lqn;)V#22",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#22",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -66933,7 +67061,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#23",
-      "renamedSymbol": "L:di.c(Lqn;)V#23",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#23",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -66944,7 +67072,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#24",
-      "renamedSymbol": "L:di.c(Lqn;)V#24",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#24",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -66955,7 +67083,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#25",
-      "renamedSymbol": "L:di.c(Lqn;)V#25",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#25",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -66966,7 +67094,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#26",
-      "renamedSymbol": "L:di.c(Lqn;)V#26",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#26",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -66977,7 +67105,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#27",
-      "renamedSymbol": "L:di.c(Lqn;)V#27",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#27",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -66988,7 +67116,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#28",
-      "renamedSymbol": "L:di.c(Lqn;)V#28",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#28",
       "originalName": "var27_ref_byte__",
       "renamedName": "var27_ref_byte__",
       "declaration": {
@@ -66999,7 +67127,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#29",
-      "renamedSymbol": "L:di.c(Lqn;)V#29",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#29",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -67010,7 +67138,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#3",
-      "renamedSymbol": "L:di.c(Lqn;)V#3",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -67021,7 +67149,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#30",
-      "renamedSymbol": "L:di.c(Lqn;)V#30",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#30",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -67032,7 +67160,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#31",
-      "renamedSymbol": "L:di.c(Lqn;)V#31",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#31",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -67043,7 +67171,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#32",
-      "renamedSymbol": "L:di.c(Lqn;)V#32",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#32",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -67054,7 +67182,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#33",
-      "renamedSymbol": "L:di.c(Lqn;)V#33",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#33",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -67065,7 +67193,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#34",
-      "renamedSymbol": "L:di.c(Lqn;)V#34",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#34",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -67076,7 +67204,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#35",
-      "renamedSymbol": "L:di.c(Lqn;)V#35",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#35",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -67087,7 +67215,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#36",
-      "renamedSymbol": "L:di.c(Lqn;)V#36",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#36",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -67098,7 +67226,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#37",
-      "renamedSymbol": "L:di.c(Lqn;)V#37",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#37",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -67109,7 +67237,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#38",
-      "renamedSymbol": "L:di.c(Lqn;)V#38",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#38",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -67120,7 +67248,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#39",
-      "renamedSymbol": "L:di.c(Lqn;)V#39",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#39",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -67131,7 +67259,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#4",
-      "renamedSymbol": "L:di.c(Lqn;)V#4",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67142,7 +67270,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#5",
-      "renamedSymbol": "L:di.c(Lqn;)V#5",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67153,7 +67281,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#6",
-      "renamedSymbol": "L:di.c(Lqn;)V#6",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67164,7 +67292,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#7",
-      "renamedSymbol": "L:di.c(Lqn;)V#7",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67175,7 +67303,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#8",
-      "renamedSymbol": "L:di.c(Lqn;)V#8",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67186,7 +67314,7 @@
     },
     {
       "symbol": "L:di.c(Lqn;)V#9",
-      "renamedSymbol": "L:di.c(Lqn;)V#9",
+      "renamedSymbol": "L:di.c(LBzip2State;)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67197,7 +67325,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#0",
-      "renamedSymbol": "L:di.d(Lqn;)V#0",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -67208,7 +67336,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#1",
-      "renamedSymbol": "L:di.d(Lqn;)V#1",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -67219,7 +67347,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#10",
-      "renamedSymbol": "L:di.d(Lqn;)V#10",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -67230,7 +67358,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#11",
-      "renamedSymbol": "L:di.d(Lqn;)V#11",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -67241,7 +67369,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#12",
-      "renamedSymbol": "L:di.d(Lqn;)V#12",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -67252,7 +67380,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#13",
-      "renamedSymbol": "L:di.d(Lqn;)V#13",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -67263,7 +67391,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#14",
-      "renamedSymbol": "L:di.d(Lqn;)V#14",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#14",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -67274,7 +67402,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#15",
-      "renamedSymbol": "L:di.d(Lqn;)V#15",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#15",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -67285,7 +67413,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#2",
-      "renamedSymbol": "L:di.d(Lqn;)V#2",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -67296,7 +67424,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#3",
-      "renamedSymbol": "L:di.d(Lqn;)V#3",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -67307,7 +67435,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#4",
-      "renamedSymbol": "L:di.d(Lqn;)V#4",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -67318,7 +67446,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#5",
-      "renamedSymbol": "L:di.d(Lqn;)V#5",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -67329,7 +67457,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#6",
-      "renamedSymbol": "L:di.d(Lqn;)V#6",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -67340,7 +67468,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#7",
-      "renamedSymbol": "L:di.d(Lqn;)V#7",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -67351,7 +67479,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#8",
-      "renamedSymbol": "L:di.d(Lqn;)V#8",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -67362,7 +67490,7 @@
     },
     {
       "symbol": "L:di.d(Lqn;)V#9",
-      "renamedSymbol": "L:di.d(Lqn;)V#9",
+      "renamedSymbol": "L:di.d(LBzip2State;)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -96622,7 +96750,7 @@
     },
     {
       "symbol": "L:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#0",
-      "renamedSymbol": "L:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#0",
+      "renamedSymbol": "L:JavaScriptBridge.callWithoutArguments(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -96633,7 +96761,7 @@
     },
     {
       "symbol": "L:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
-      "renamedSymbol": "L:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
+      "renamedSymbol": "L:JavaScriptBridge.evaluate(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109250,7 +109378,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#0",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#0",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109261,7 +109389,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#1",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#1",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109272,7 +109400,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#2",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#2",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#2",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -109283,7 +109411,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#3",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#3",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#3",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -109294,7 +109422,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#4",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#4",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#4",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -109305,7 +109433,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#5",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#5",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#5",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -109316,7 +109444,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#6",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#6",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109327,7 +109455,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;I)Le;#7",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;I)Le;#7",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;I)Le;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109338,7 +109466,7 @@
     },
     {
       "symbol": "L:ke.a(Ljava/lang/String;ZI)V#0",
-      "renamedSymbol": "L:ke.a(Ljava/lang/String;ZI)V#0",
+      "renamedSymbol": "L:FrameTimer.a(Ljava/lang/String;ZI)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -109349,7 +109477,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#0",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#0",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -109360,7 +109488,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#1",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#1",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#1",
       "originalName": "var10_int",
       "renamedName": "var10_int",
       "declaration": {
@@ -109371,7 +109499,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#10",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#10",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -109382,7 +109510,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#11",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#11",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#11",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -109393,7 +109521,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#12",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#12",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#12",
       "originalName": "var6_ref2",
       "renamedName": "var6_ref2",
       "declaration": {
@@ -109404,7 +109532,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#13",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#13",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#13",
       "originalName": "var6_ref3",
       "renamedName": "var6_ref3",
       "declaration": {
@@ -109415,7 +109543,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#14",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#14",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#14",
       "originalName": "var6_ref4",
       "renamedName": "var6_ref4",
       "declaration": {
@@ -109426,7 +109554,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#15",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#15",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#15",
       "originalName": "var6_ref5",
       "renamedName": "var6_ref5",
       "declaration": {
@@ -109437,7 +109565,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#16",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#16",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#16",
       "originalName": "var6_ref6",
       "renamedName": "var6_ref6",
       "declaration": {
@@ -109448,7 +109576,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#17",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#17",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#17",
       "originalName": "var6_ref7",
       "renamedName": "var6_ref7",
       "declaration": {
@@ -109459,7 +109587,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#18",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#18",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#18",
       "originalName": "var6_ref8",
       "renamedName": "var6_ref8",
       "declaration": {
@@ -109470,7 +109598,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#19",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#19",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#19",
       "originalName": "var6_ref9",
       "renamedName": "var6_ref9",
       "declaration": {
@@ -109481,7 +109609,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#2",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#2",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#2",
       "originalName": "stackIn_69_0",
       "renamedName": "stackIn_69_0",
       "declaration": {
@@ -109492,7 +109620,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#20",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#20",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#20",
       "originalName": "var6_ref10",
       "renamedName": "var6_ref10",
       "declaration": {
@@ -109503,7 +109631,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#21",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#21",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#21",
       "originalName": "var6_ref11",
       "renamedName": "var6_ref11",
       "declaration": {
@@ -109514,7 +109642,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#22",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#22",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#22",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -109525,7 +109653,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#23",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#23",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#23",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -109536,7 +109664,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#24",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#24",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#24",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -109547,7 +109675,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#25",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#25",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#25",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -109558,7 +109686,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#26",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#26",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#26",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -109569,7 +109697,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#27",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#27",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#27",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -109580,7 +109708,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#28",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#28",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#28",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -109591,7 +109719,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#29",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#29",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#29",
       "originalName": "var16_ref",
       "renamedName": "var16_ref",
       "declaration": {
@@ -109602,7 +109730,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#3",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#3",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#3",
       "originalName": "stackIn_69_1",
       "renamedName": "stackIn_69_1",
       "declaration": {
@@ -109613,7 +109741,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#30",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#30",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#30",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -109624,7 +109752,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#31",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#31",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#31",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -109635,7 +109763,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#32",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#32",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#32",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -109646,7 +109774,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#33",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#33",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#33",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -109657,7 +109785,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#34",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#34",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#34",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -109668,7 +109796,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#35",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#35",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#35",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -109679,7 +109807,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#36",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#36",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#36",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -109690,7 +109818,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#37",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#37",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#37",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -109701,7 +109829,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#38",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#38",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#38",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -109712,7 +109840,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#39",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#39",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#39",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -109723,7 +109851,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#4",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#4",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#4",
       "originalName": "stackIn_70_2",
       "renamedName": "stackIn_70_2",
       "declaration": {
@@ -109734,7 +109862,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#40",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#40",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#40",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -109745,7 +109873,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#41",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#41",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#41",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -109756,7 +109884,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#42",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#42",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#42",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -109767,7 +109895,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#43",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#43",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#43",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -109778,7 +109906,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#44",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#44",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#44",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -109789,7 +109917,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#45",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#45",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#45",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -109800,7 +109928,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#46",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#46",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#46",
       "originalName": "decompiledCaughtParameter4",
       "renamedName": "decompiledCaughtParameter4",
       "declaration": {
@@ -109811,7 +109939,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#47",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#47",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#47",
       "originalName": "decompiledCaughtParameter5",
       "renamedName": "decompiledCaughtParameter5",
       "declaration": {
@@ -109822,7 +109950,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#48",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#48",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#48",
       "originalName": "decompiledCaughtParameter6",
       "renamedName": "decompiledCaughtParameter6",
       "declaration": {
@@ -109833,7 +109961,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#49",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#49",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#49",
       "originalName": "decompiledCaughtParameter7",
       "renamedName": "decompiledCaughtParameter7",
       "declaration": {
@@ -109844,7 +109972,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#5",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#5",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -109855,7 +109983,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#50",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#50",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#50",
       "originalName": "decompiledCaughtParameter8",
       "renamedName": "decompiledCaughtParameter8",
       "declaration": {
@@ -109866,7 +109994,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#51",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#51",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#51",
       "originalName": "decompiledCaughtParameter9",
       "renamedName": "decompiledCaughtParameter9",
       "declaration": {
@@ -109877,7 +110005,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#52",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#52",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#52",
       "originalName": "decompiledCaughtParameter10",
       "renamedName": "decompiledCaughtParameter10",
       "declaration": {
@@ -109888,7 +110016,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#53",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#53",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#53",
       "originalName": "decompiledCaughtParameter11",
       "renamedName": "decompiledCaughtParameter11",
       "declaration": {
@@ -109899,7 +110027,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#54",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#54",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#54",
       "originalName": "decompiledCaughtParameter12",
       "renamedName": "decompiledCaughtParameter12",
       "declaration": {
@@ -109910,7 +110038,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#55",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#55",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#55",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -109921,7 +110049,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#56",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#56",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#56",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -109932,7 +110060,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#6",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#6",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -109943,7 +110071,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#7",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#7",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -109954,7 +110082,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#8",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#8",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#8",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -109965,7 +110093,7 @@
     },
     {
       "symbol": "L:ke.a(Lmd;I)V#9",
-      "renamedSymbol": "L:ke.a(LCipherPacketBuffer;I)V#9",
+      "renamedSymbol": "L:FrameTimer.a(LCipherPacketBuffer;I)V#9",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -109976,7 +110104,7 @@
     },
     {
       "symbol": "L:ke.b(JI)I#0",
-      "renamedSymbol": "L:ke.b(JI)I#0",
+      "renamedSymbol": "L:FrameTimer.waitAndCountTicks(JI)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -153096,7 +153224,7 @@
     },
     {
       "symbol": "L:qn.a(B)Ljava/lang/String;#0",
-      "renamedSymbol": "L:qn.a(B)Ljava/lang/String;#0",
+      "renamedSymbol": "L:Bzip2State.a(B)Ljava/lang/String;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -153107,7 +153235,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#0",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#0",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -153118,7 +153246,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#1",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#1",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -153129,7 +153257,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#2",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#2",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -153140,7 +153268,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#3",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#3",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#3",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -153151,7 +153279,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#4",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#4",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#4",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -153162,7 +153290,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#5",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#5",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#5",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -153173,7 +153301,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#6",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#6",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -153184,7 +153312,7 @@
     },
     {
       "symbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#7",
-      "renamedSymbol": "L:qn.a(BZLjava/lang/CharSequence;)Z#7",
+      "renamedSymbol": "L:Bzip2State.a(BZLjava/lang/CharSequence;)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -161027,7 +161155,7 @@
     },
     {
       "symbol": "L:s.a(JI)I#0",
-      "renamedSymbol": "L:s.a(JI)I#0",
+      "renamedSymbol": "L:NanoFrameTimer.advanceTicks(JI)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -161038,7 +161166,7 @@
     },
     {
       "symbol": "L:s.a(JI)I#1",
-      "renamedSymbol": "L:s.a(JI)I#1",
+      "renamedSymbol": "L:NanoFrameTimer.advanceTicks(JI)I#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -161049,7 +161177,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#0",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#0",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -161060,7 +161188,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#1",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#1",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -161071,7 +161199,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#10",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#10",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#10",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -161082,7 +161210,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#11",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#11",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -161093,7 +161221,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#12",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#12",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -161104,7 +161232,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#13",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#13",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#13",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -161115,7 +161243,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#2",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#2",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#2",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -161126,7 +161254,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#3",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#3",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -161137,7 +161265,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#4",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#4",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -161148,7 +161276,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#5",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#5",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -161159,7 +161287,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#6",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#6",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#6",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -161170,7 +161298,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#7",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#7",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#7",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -161181,7 +161309,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#8",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#8",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#8",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -161192,7 +161320,7 @@
     },
     {
       "symbol": "L:s.a(Lng;II)Ljava/lang/String;#9",
-      "renamedSymbol": "L:s.a(LPacketBuffer;II)Ljava/lang/String;#9",
+      "renamedSymbol": "L:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#9",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -161203,7 +161331,7 @@
     },
     {
       "symbol": "L:s.c(B)J#0",
-      "renamedSymbol": "L:s.c(B)J#0",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -161214,7 +161342,7 @@
     },
     {
       "symbol": "L:s.c(B)J#1",
-      "renamedSymbol": "L:s.c(B)J#1",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -161225,7 +161353,7 @@
     },
     {
       "symbol": "L:s.c(B)J#2",
-      "renamedSymbol": "L:s.c(B)J#2",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#2",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -161236,7 +161364,7 @@
     },
     {
       "symbol": "L:s.c(B)J#3",
-      "renamedSymbol": "L:s.c(B)J#3",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -161247,7 +161375,7 @@
     },
     {
       "symbol": "L:s.c(B)J#4",
-      "renamedSymbol": "L:s.c(B)J#4",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -161258,7 +161386,7 @@
     },
     {
       "symbol": "L:s.c(B)J#5",
-      "renamedSymbol": "L:s.c(B)J#5",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#5",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -161269,7 +161397,7 @@
     },
     {
       "symbol": "L:s.c(B)J#6",
-      "renamedSymbol": "L:s.c(B)J#6",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#6",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -161280,7 +161408,7 @@
     },
     {
       "symbol": "L:s.c(B)J#7",
-      "renamedSymbol": "L:s.c(B)J#7",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#7",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -161291,7 +161419,7 @@
     },
     {
       "symbol": "L:s.c(B)J#8",
-      "renamedSymbol": "L:s.c(B)J#8",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(B)J#8",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -197118,7 +197246,7 @@
     },
     {
       "symbol": "M:di.a(ILqn;)I",
-      "renamedSymbol": "M:di.a(ILqn;)I",
+      "renamedSymbol": "M:di.a(ILBzip2State;)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -197129,7 +197257,7 @@
     },
     {
       "symbol": "M:di.a(Lqn;)B",
-      "renamedSymbol": "M:di.a(Lqn;)B",
+      "renamedSymbol": "M:di.a(LBzip2State;)B",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -197140,9 +197268,9 @@
     },
     {
       "symbol": "M:di.a([BI[BII)I",
-      "renamedSymbol": "M:di.a([BI[BII)I",
+      "renamedSymbol": "M:di.decompress([BI[BII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "decompress",
       "declaration": {
         "file": "di.java",
         "start": 4217,
@@ -197162,7 +197290,7 @@
     },
     {
       "symbol": "M:di.b(Lqn;)V",
-      "renamedSymbol": "M:di.b(Lqn;)V",
+      "renamedSymbol": "M:di.b(LBzip2State;)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -197173,7 +197301,7 @@
     },
     {
       "symbol": "M:di.c(Lqn;)V",
-      "renamedSymbol": "M:di.c(Lqn;)V",
+      "renamedSymbol": "M:di.c(LBzip2State;)V",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -197184,7 +197312,7 @@
     },
     {
       "symbol": "M:di.d(Lqn;)V",
-      "renamedSymbol": "M:di.d(Lqn;)V",
+      "renamedSymbol": "M:di.d(LBzip2State;)V",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -197195,7 +197323,7 @@
     },
     {
       "symbol": "M:di.e(Lqn;)B",
-      "renamedSymbol": "M:di.e(Lqn;)B",
+      "renamedSymbol": "M:di.e(LBzip2State;)B",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -203289,9 +203417,9 @@
     },
     {
       "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
-      "renamedSymbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+      "renamedSymbol": "M:JavaScriptBridge.callWithArguments(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "callWithArguments",
       "declaration": {
         "file": "hi.java",
         "start": 298,
@@ -203300,9 +203428,9 @@
     },
     {
       "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
-      "renamedSymbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+      "renamedSymbol": "M:JavaScriptBridge.callWithoutArguments(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "callWithoutArguments",
       "declaration": {
         "file": "hi.java",
         "start": 578,
@@ -203311,9 +203439,9 @@
     },
     {
       "symbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
-      "renamedSymbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+      "renamedSymbol": "M:JavaScriptBridge.evaluate(Ljava/lang/String;Ljava/applet/Applet;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "evaluate",
       "declaration": {
         "file": "hi.java",
         "start": 77,
@@ -206457,7 +206585,7 @@
     },
     {
       "symbol": "M:ke.a(B)V",
-      "renamedSymbol": "M:ke.clearStaticReferences(B)V",
+      "renamedSymbol": "M:FrameTimer.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -206468,9 +206596,9 @@
     },
     {
       "symbol": "M:ke.a(I)V",
-      "renamedSymbol": "M:ke.a(I)V",
+      "renamedSymbol": "M:FrameTimer.resetTiming(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetTiming",
       "declaration": {
         "file": "ke.java",
         "start": 12610,
@@ -206479,9 +206607,9 @@
     },
     {
       "symbol": "M:ke.a(JI)I",
-      "renamedSymbol": "M:ke.a(JI)I",
+      "renamedSymbol": "M:FrameTimer.advanceTicks(JI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceTicks",
       "declaration": {
         "file": "ke.java",
         "start": 1447,
@@ -206490,7 +206618,7 @@
     },
     {
       "symbol": "M:ke.a(Ljava/lang/String;I)Le;",
-      "renamedSymbol": "M:ke.a(Ljava/lang/String;I)Le;",
+      "renamedSymbol": "M:FrameTimer.a(Ljava/lang/String;I)Le;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -206501,7 +206629,7 @@
     },
     {
       "symbol": "M:ke.a(Ljava/lang/String;ZI)V",
-      "renamedSymbol": "M:ke.a(Ljava/lang/String;ZI)V",
+      "renamedSymbol": "M:FrameTimer.a(Ljava/lang/String;ZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -206512,7 +206640,7 @@
     },
     {
       "symbol": "M:ke.a(Lmd;I)V",
-      "renamedSymbol": "M:ke.a(LCipherPacketBuffer;I)V",
+      "renamedSymbol": "M:FrameTimer.a(LCipherPacketBuffer;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -206523,9 +206651,9 @@
     },
     {
       "symbol": "M:ke.a(Z)J",
-      "renamedSymbol": "M:ke.a(Z)J",
+      "renamedSymbol": "M:FrameTimer.getDelayMillis(Z)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getDelayMillis",
       "declaration": {
         "file": "ke.java",
         "start": 2064,
@@ -206534,9 +206662,9 @@
     },
     {
       "symbol": "M:ke.b(JI)I",
-      "renamedSymbol": "M:ke.b(JI)I",
+      "renamedSymbol": "M:FrameTimer.waitAndCountTicks(JI)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "waitAndCountTicks",
       "declaration": {
         "file": "ke.java",
         "start": 2290,
@@ -216313,9 +216441,9 @@
     },
     {
       "symbol": "M:qn.<init>()V",
-      "renamedSymbol": "M:qn.<init>()V",
+      "renamedSymbol": "M:Bzip2State.<init>()V",
       "originalName": "qn",
-      "renamedName": "qn",
+      "renamedName": "Bzip2State",
       "declaration": {
         "file": "qn.java",
         "start": 2615,
@@ -216324,7 +216452,7 @@
     },
     {
       "symbol": "M:qn.a(B)Ljava/lang/String;",
-      "renamedSymbol": "M:qn.a(B)Ljava/lang/String;",
+      "renamedSymbol": "M:Bzip2State.a(B)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -216335,7 +216463,7 @@
     },
     {
       "symbol": "M:qn.a(BZLjava/lang/CharSequence;)Z",
-      "renamedSymbol": "M:qn.a(BZLjava/lang/CharSequence;)Z",
+      "renamedSymbol": "M:Bzip2State.a(BZLjava/lang/CharSequence;)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -216346,7 +216474,7 @@
     },
     {
       "symbol": "M:qn.a(I)V",
-      "renamedSymbol": "M:qn.clearStaticReferences(I)V",
+      "renamedSymbol": "M:Bzip2State.clearStaticReferences(I)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -217732,9 +217860,9 @@
     },
     {
       "symbol": "M:s.<init>()V",
-      "renamedSymbol": "M:s.<init>()V",
+      "renamedSymbol": "M:NanoFrameTimer.<init>()V",
       "originalName": "s",
-      "renamedName": "s",
+      "renamedName": "NanoFrameTimer",
       "declaration": {
         "file": "s.java",
         "start": 6476,
@@ -217743,9 +217871,9 @@
     },
     {
       "symbol": "M:s.a(I)V",
-      "renamedSymbol": "M:s.a(I)V",
+      "renamedSymbol": "M:NanoFrameTimer.resetTiming(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetTiming",
       "declaration": {
         "file": "s.java",
         "start": 1635,
@@ -217754,7 +217882,7 @@
     },
     {
       "symbol": "M:s.a(IIIB)[Ldl;",
-      "renamedSymbol": "M:s.a(IIIB)[LRgbSprite;",
+      "renamedSymbol": "M:NanoFrameTimer.a(IIIB)[LRgbSprite;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -217765,9 +217893,9 @@
     },
     {
       "symbol": "M:s.a(JI)I",
-      "renamedSymbol": "M:s.a(JI)I",
+      "renamedSymbol": "M:NanoFrameTimer.advanceTicks(JI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceTicks",
       "declaration": {
         "file": "s.java",
         "start": 394,
@@ -217776,7 +217904,7 @@
     },
     {
       "symbol": "M:s.a(Lng;II)Ljava/lang/String;",
-      "renamedSymbol": "M:s.a(LPacketBuffer;II)Ljava/lang/String;",
+      "renamedSymbol": "M:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -217787,9 +217915,9 @@
     },
     {
       "symbol": "M:s.a(Z)J",
-      "renamedSymbol": "M:s.a(Z)J",
+      "renamedSymbol": "M:NanoFrameTimer.getDelayMillis(Z)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getDelayMillis",
       "declaration": {
         "file": "s.java",
         "start": 3797,
@@ -217798,7 +217926,7 @@
     },
     {
       "symbol": "M:s.b(B)V",
-      "renamedSymbol": "M:s.b(B)V",
+      "renamedSymbol": "M:NanoFrameTimer.b(B)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -217809,9 +217937,9 @@
     },
     {
       "symbol": "M:s.c(B)J",
-      "renamedSymbol": "M:s.c(B)J",
+      "renamedSymbol": "M:NanoFrameTimer.sampleElapsedNanos(B)J",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "sampleElapsedNanos",
       "declaration": {
         "file": "s.java",
         "start": 4089,
@@ -218799,7 +218927,7 @@
     },
     {
       "symbol": "M:sn.a(I)Lke;",
-      "renamedSymbol": "M:sn.a(I)Lke;",
+      "renamedSymbol": "M:sn.a(I)LFrameTimer;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -236531,7 +236659,7 @@
     },
     {
       "symbol": "P:di.a(ILqn;)I#0",
-      "renamedSymbol": "P:di.a(ILqn;)I#0",
+      "renamedSymbol": "P:di.a(ILBzip2State;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236542,7 +236670,7 @@
     },
     {
       "symbol": "P:di.a(ILqn;)I#1",
-      "renamedSymbol": "P:di.a(ILqn;)I#1",
+      "renamedSymbol": "P:di.a(ILBzip2State;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -236553,7 +236681,7 @@
     },
     {
       "symbol": "P:di.a(Lqn;)B#0",
-      "renamedSymbol": "P:di.a(Lqn;)B#0",
+      "renamedSymbol": "P:di.a(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236564,7 +236692,7 @@
     },
     {
       "symbol": "P:di.a([BI[BII)I#0",
-      "renamedSymbol": "P:di.a([BI[BII)I#0",
+      "renamedSymbol": "P:di.decompress([BI[BII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236575,7 +236703,7 @@
     },
     {
       "symbol": "P:di.a([BI[BII)I#1",
-      "renamedSymbol": "P:di.a([BI[BII)I#1",
+      "renamedSymbol": "P:di.decompress([BI[BII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -236586,7 +236714,7 @@
     },
     {
       "symbol": "P:di.a([BI[BII)I#2",
-      "renamedSymbol": "P:di.a([BI[BII)I#2",
+      "renamedSymbol": "P:di.decompress([BI[BII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -236597,7 +236725,7 @@
     },
     {
       "symbol": "P:di.a([BI[BII)I#3",
-      "renamedSymbol": "P:di.a([BI[BII)I#3",
+      "renamedSymbol": "P:di.decompress([BI[BII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -236608,7 +236736,7 @@
     },
     {
       "symbol": "P:di.a([BI[BII)I#4",
-      "renamedSymbol": "P:di.a([BI[BII)I#4",
+      "renamedSymbol": "P:di.decompress([BI[BII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -236696,7 +236824,7 @@
     },
     {
       "symbol": "P:di.b(Lqn;)V#0",
-      "renamedSymbol": "P:di.b(Lqn;)V#0",
+      "renamedSymbol": "P:di.b(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236707,7 +236835,7 @@
     },
     {
       "symbol": "P:di.c(Lqn;)V#0",
-      "renamedSymbol": "P:di.c(Lqn;)V#0",
+      "renamedSymbol": "P:di.c(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236718,7 +236846,7 @@
     },
     {
       "symbol": "P:di.d(Lqn;)V#0",
-      "renamedSymbol": "P:di.d(Lqn;)V#0",
+      "renamedSymbol": "P:di.d(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236729,7 +236857,7 @@
     },
     {
       "symbol": "P:di.e(Lqn;)B#0",
-      "renamedSymbol": "P:di.e(Lqn;)B#0",
+      "renamedSymbol": "P:di.e(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255363,7 +255491,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:JavaScriptBridge.callWithArguments(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255374,7 +255502,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:JavaScriptBridge.callWithArguments(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -255385,7 +255513,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:JavaScriptBridge.callWithArguments(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -255396,7 +255524,7 @@
     },
     {
       "symbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#3",
-      "renamedSymbol": "P:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#3",
+      "renamedSymbol": "P:JavaScriptBridge.callWithArguments(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -255407,7 +255535,7 @@
     },
     {
       "symbol": "P:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#0",
-      "renamedSymbol": "P:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#0",
+      "renamedSymbol": "P:JavaScriptBridge.callWithoutArguments(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255418,7 +255546,7 @@
     },
     {
       "symbol": "P:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#1",
-      "renamedSymbol": "P:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#1",
+      "renamedSymbol": "P:JavaScriptBridge.callWithoutArguments(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -255429,7 +255557,7 @@
     },
     {
       "symbol": "P:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#2",
-      "renamedSymbol": "P:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#2",
+      "renamedSymbol": "P:JavaScriptBridge.callWithoutArguments(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -255440,7 +255568,7 @@
     },
     {
       "symbol": "P:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
-      "renamedSymbol": "P:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
+      "renamedSymbol": "P:JavaScriptBridge.evaluate(Ljava/lang/String;Ljava/applet/Applet;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255451,7 +255579,7 @@
     },
     {
       "symbol": "P:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
-      "renamedSymbol": "P:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
+      "renamedSymbol": "P:JavaScriptBridge.evaluate(Ljava/lang/String;Ljava/applet/Applet;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -255462,7 +255590,7 @@
     },
     {
       "symbol": "P:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
-      "renamedSymbol": "P:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
+      "renamedSymbol": "P:JavaScriptBridge.evaluate(Ljava/lang/String;Ljava/applet/Applet;B)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -262238,7 +262366,7 @@
     },
     {
       "symbol": "P:ke.a(B)V#0",
-      "renamedSymbol": "P:ke.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:FrameTimer.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262249,7 +262377,7 @@
     },
     {
       "symbol": "P:ke.a(I)V#0",
-      "renamedSymbol": "P:ke.a(I)V#0",
+      "renamedSymbol": "P:FrameTimer.resetTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262260,7 +262388,7 @@
     },
     {
       "symbol": "P:ke.a(JI)I#0",
-      "renamedSymbol": "P:ke.a(JI)I#0",
+      "renamedSymbol": "P:FrameTimer.advanceTicks(JI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262271,7 +262399,7 @@
     },
     {
       "symbol": "P:ke.a(JI)I#1",
-      "renamedSymbol": "P:ke.a(JI)I#1",
+      "renamedSymbol": "P:FrameTimer.advanceTicks(JI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262282,7 +262410,7 @@
     },
     {
       "symbol": "P:ke.a(Ljava/lang/String;I)Le;#0",
-      "renamedSymbol": "P:ke.a(Ljava/lang/String;I)Le;#0",
+      "renamedSymbol": "P:FrameTimer.a(Ljava/lang/String;I)Le;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262293,7 +262421,7 @@
     },
     {
       "symbol": "P:ke.a(Ljava/lang/String;I)Le;#1",
-      "renamedSymbol": "P:ke.a(Ljava/lang/String;I)Le;#1",
+      "renamedSymbol": "P:FrameTimer.a(Ljava/lang/String;I)Le;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262304,7 +262432,7 @@
     },
     {
       "symbol": "P:ke.a(Ljava/lang/String;ZI)V#0",
-      "renamedSymbol": "P:ke.a(Ljava/lang/String;ZI)V#0",
+      "renamedSymbol": "P:FrameTimer.a(Ljava/lang/String;ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262315,7 +262443,7 @@
     },
     {
       "symbol": "P:ke.a(Ljava/lang/String;ZI)V#1",
-      "renamedSymbol": "P:ke.a(Ljava/lang/String;ZI)V#1",
+      "renamedSymbol": "P:FrameTimer.a(Ljava/lang/String;ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262326,7 +262454,7 @@
     },
     {
       "symbol": "P:ke.a(Ljava/lang/String;ZI)V#2",
-      "renamedSymbol": "P:ke.a(Ljava/lang/String;ZI)V#2",
+      "renamedSymbol": "P:FrameTimer.a(Ljava/lang/String;ZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -262337,7 +262465,7 @@
     },
     {
       "symbol": "P:ke.a(Lmd;I)V#0",
-      "renamedSymbol": "P:ke.a(LCipherPacketBuffer;I)V#0",
+      "renamedSymbol": "P:FrameTimer.a(LCipherPacketBuffer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262348,7 +262476,7 @@
     },
     {
       "symbol": "P:ke.a(Lmd;I)V#1",
-      "renamedSymbol": "P:ke.a(LCipherPacketBuffer;I)V#1",
+      "renamedSymbol": "P:FrameTimer.a(LCipherPacketBuffer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -262359,7 +262487,7 @@
     },
     {
       "symbol": "P:ke.a(Z)J#0",
-      "renamedSymbol": "P:ke.a(Z)J#0",
+      "renamedSymbol": "P:FrameTimer.getDelayMillis(Z)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262370,7 +262498,7 @@
     },
     {
       "symbol": "P:ke.b(JI)I#0",
-      "renamedSymbol": "P:ke.b(JI)I#0",
+      "renamedSymbol": "P:FrameTimer.waitAndCountTicks(JI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -262381,7 +262509,7 @@
     },
     {
       "symbol": "P:ke.b(JI)I#1",
-      "renamedSymbol": "P:ke.b(JI)I#1",
+      "renamedSymbol": "P:FrameTimer.waitAndCountTicks(JI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -288363,7 +288491,7 @@
     },
     {
       "symbol": "P:qn.a(B)Ljava/lang/String;#0",
-      "renamedSymbol": "P:qn.a(B)Ljava/lang/String;#0",
+      "renamedSymbol": "P:Bzip2State.a(B)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288374,7 +288502,7 @@
     },
     {
       "symbol": "P:qn.a(BZLjava/lang/CharSequence;)Z#0",
-      "renamedSymbol": "P:qn.a(BZLjava/lang/CharSequence;)Z#0",
+      "renamedSymbol": "P:Bzip2State.a(BZLjava/lang/CharSequence;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288385,7 +288513,7 @@
     },
     {
       "symbol": "P:qn.a(BZLjava/lang/CharSequence;)Z#1",
-      "renamedSymbol": "P:qn.a(BZLjava/lang/CharSequence;)Z#1",
+      "renamedSymbol": "P:Bzip2State.a(BZLjava/lang/CharSequence;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -288396,7 +288524,7 @@
     },
     {
       "symbol": "P:qn.a(BZLjava/lang/CharSequence;)Z#2",
-      "renamedSymbol": "P:qn.a(BZLjava/lang/CharSequence;)Z#2",
+      "renamedSymbol": "P:Bzip2State.a(BZLjava/lang/CharSequence;)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -288407,7 +288535,7 @@
     },
     {
       "symbol": "P:qn.a(I)V#0",
-      "renamedSymbol": "P:qn.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:Bzip2State.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291355,7 +291483,7 @@
     },
     {
       "symbol": "P:s.a(I)V#0",
-      "renamedSymbol": "P:s.a(I)V#0",
+      "renamedSymbol": "P:NanoFrameTimer.resetTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291366,7 +291494,7 @@
     },
     {
       "symbol": "P:s.a(IIIB)[Ldl;#0",
-      "renamedSymbol": "P:s.a(IIIB)[LRgbSprite;#0",
+      "renamedSymbol": "P:NanoFrameTimer.a(IIIB)[LRgbSprite;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291377,7 +291505,7 @@
     },
     {
       "symbol": "P:s.a(IIIB)[Ldl;#1",
-      "renamedSymbol": "P:s.a(IIIB)[LRgbSprite;#1",
+      "renamedSymbol": "P:NanoFrameTimer.a(IIIB)[LRgbSprite;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291388,7 +291516,7 @@
     },
     {
       "symbol": "P:s.a(IIIB)[Ldl;#2",
-      "renamedSymbol": "P:s.a(IIIB)[LRgbSprite;#2",
+      "renamedSymbol": "P:NanoFrameTimer.a(IIIB)[LRgbSprite;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -291399,7 +291527,7 @@
     },
     {
       "symbol": "P:s.a(IIIB)[Ldl;#3",
-      "renamedSymbol": "P:s.a(IIIB)[LRgbSprite;#3",
+      "renamedSymbol": "P:NanoFrameTimer.a(IIIB)[LRgbSprite;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -291410,7 +291538,7 @@
     },
     {
       "symbol": "P:s.a(JI)I#0",
-      "renamedSymbol": "P:s.a(JI)I#0",
+      "renamedSymbol": "P:NanoFrameTimer.advanceTicks(JI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291421,7 +291549,7 @@
     },
     {
       "symbol": "P:s.a(JI)I#1",
-      "renamedSymbol": "P:s.a(JI)I#1",
+      "renamedSymbol": "P:NanoFrameTimer.advanceTicks(JI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291432,7 +291560,7 @@
     },
     {
       "symbol": "P:s.a(Lng;II)Ljava/lang/String;#0",
-      "renamedSymbol": "P:s.a(LPacketBuffer;II)Ljava/lang/String;#0",
+      "renamedSymbol": "P:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291443,7 +291571,7 @@
     },
     {
       "symbol": "P:s.a(Lng;II)Ljava/lang/String;#1",
-      "renamedSymbol": "P:s.a(LPacketBuffer;II)Ljava/lang/String;#1",
+      "renamedSymbol": "P:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -291454,7 +291582,7 @@
     },
     {
       "symbol": "P:s.a(Lng;II)Ljava/lang/String;#2",
-      "renamedSymbol": "P:s.a(LPacketBuffer;II)Ljava/lang/String;#2",
+      "renamedSymbol": "P:NanoFrameTimer.a(LPacketBuffer;II)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -291465,7 +291593,7 @@
     },
     {
       "symbol": "P:s.a(Z)J#0",
-      "renamedSymbol": "P:s.a(Z)J#0",
+      "renamedSymbol": "P:NanoFrameTimer.getDelayMillis(Z)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291476,7 +291604,7 @@
     },
     {
       "symbol": "P:s.b(B)V#0",
-      "renamedSymbol": "P:s.b(B)V#0",
+      "renamedSymbol": "P:NanoFrameTimer.b(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291487,7 +291615,7 @@
     },
     {
       "symbol": "P:s.c(B)J#0",
-      "renamedSymbol": "P:s.c(B)J#0",
+      "renamedSymbol": "P:NanoFrameTimer.sampleElapsedNanos(B)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -293753,7 +293881,7 @@
     },
     {
       "symbol": "P:sn.a(I)Lke;#0",
-      "renamedSymbol": "P:sn.a(I)Lke;#0",
+      "renamedSymbol": "P:sn.a(I)LFrameTimer;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -307045,7 +307173,7 @@
       "original": "CrazyCrystals.java",
       "renamed": "CrazyCrystals.java",
       "inputSha256": "a08d8042f0911171e4fb913fce01c42b4c66ebb601c47a17fe8740dcec639b80",
-      "outputSha256": "9462e1efb763379790e285e1b161f838f332b329db0f239cfb15d137081d0a87",
+      "outputSha256": "a0ad756ef6997aa5b67b2d73824ebb46d55065b634378d883f5dafde38c95ba7",
       "edits": [
         {
           "start": 79,
@@ -307122,6 +307250,13 @@
           "kind": "label"
         },
         {
+          "start": 10343,
+          "end": 10345,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 10475,
           "end": 10477,
           "symbol": "C:ka",
@@ -307141,6 +307276,20 @@
           "symbol": "M:wb.b(ILjb;)V",
           "original": "b",
           "renamed": "addLast"
+        },
+        {
+          "start": 11124,
+          "end": 11126,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
+          "start": 11213,
+          "end": 11215,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 12519,
@@ -307379,6 +307528,13 @@
           "symbol": "M:gm.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 21306,
+          "end": 21308,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 21309,
@@ -308347,6 +308503,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 24696,
+          "end": 24698,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 24699,
           "end": 24700,
           "symbol": "M:qn.a(I)V",
@@ -308499,6 +308662,13 @@
           "symbol": "M:va.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 25361,
+          "end": 25362,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 25388,
@@ -309334,6 +309504,13 @@
           "renamed": "ByteStorage"
         },
         {
+          "start": 31553,
+          "end": 31555,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 31689,
           "end": 31691,
           "symbol": "C:kh",
@@ -309616,6 +309793,20 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 47272,
+          "end": 47273,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 47375,
+          "end": 47376,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 47441,
           "end": 47443,
           "symbol": "C:qb",
@@ -309691,6 +309882,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 48746,
+          "end": 48748,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 48920,
@@ -310155,6 +310353,34 @@
           "renamed": "DualLinkNode"
         },
         {
+          "start": 64447,
+          "end": 64449,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 64495,
+          "end": 64497,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 64620,
+          "end": 64622,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 64633,
+          "end": 64635,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 64780,
           "end": 64782,
           "symbol": "C:eb",
@@ -310176,11 +310402,109 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 66143,
+          "end": 66145,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66191,
+          "end": 66193,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66316,
+          "end": 66318,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66329,
+          "end": 66331,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66382,
+          "end": 66384,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66739,
+          "end": 66741,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66752,
+          "end": 66754,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66811,
+          "end": 66813,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 66964,
+          "end": 66966,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 67327,
           "end": 67328,
           "symbol": "C:a",
           "original": "a",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 67389,
+          "end": 67390,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 67591,
+          "end": 67592,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 68176,
+          "end": 68177,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 68577,
+          "end": 68578,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 68897,
+          "end": 68898,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 69834,
@@ -310209,7 +310533,7 @@
       "original": "a.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "84d50a2d7110b35ada96aac7c3144347744d30a91edeaac2706a9cb4602b8d2c",
-      "outputSha256": "4efc127bf8d360ce4bc68b7edc84fcf2a88e0f36a9b3f680b6091a1e6f035c07",
+      "outputSha256": "9f526b2ac35591a5e8b7918154bfa2a8d906ced98241197d15a6170a4620f072",
       "edits": [
         {
           "start": 50,
@@ -310378,6 +310702,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 11700,
+          "end": 11702,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 12216,
@@ -310610,7 +310941,7 @@
       "original": "ab.java",
       "renamed": "ab.java",
       "inputSha256": "48f341653ecdeedd4f963dd3ad3543f92c0f0cd1152667fede7e68afce972f21",
-      "outputSha256": "d2e87d35319c62b023bc0f487f4af09f46fb63590dcdb8b9971bf4dc1dd78cf1",
+      "outputSha256": "5a7e129e22c89b27fc78560b4449fbdb8292a16551f22e378caea591f87cbc74",
       "edits": [
         {
           "start": 105,
@@ -310625,6 +310956,20 @@
           "symbol": "M:lo.a(B)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 1797,
+          "end": 1799,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 1800,
+          "end": 1801,
+          "symbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "evaluate"
         },
         {
           "start": 3144,
@@ -311050,7 +311395,7 @@
       "original": "ah.java",
       "renamed": "ah.java",
       "inputSha256": "27fefae26790033ffe301d68c54412febfdd5ac735ba362a4d930e1baea22895",
-      "outputSha256": "e7cd460dfc1131ec51b837fed9e73b01841adc9c33578980d8f880fd08f3a7d5",
+      "outputSha256": "8901a2bebf293ddb46ce9da010571ef59259e7b40adccfd51a2bb46cafb0d05b",
       "edits": [
         {
           "start": 357,
@@ -311340,6 +311685,20 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 15230,
+          "end": 15232,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 15233,
+          "end": 15234,
+          "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithoutArguments"
+        },
+        {
           "start": 16879,
           "end": 16880,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -311380,6 +311739,20 @@
           "symbol": "M:lo.a(B)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 22616,
+          "end": 22618,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 22619,
+          "end": 22620,
+          "symbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "evaluate"
         },
         {
           "start": 23701,
@@ -313569,7 +313942,7 @@
       "original": "b.java",
       "renamed": "b.java",
       "inputSha256": "f368052579f7fa3dbd2649f922bebd58e54d503e55e8aa0dddfde4369b2c12c8",
-      "outputSha256": "92b9b03a5415879bd2c56234ca38c53e33dec619550a04e92a6320e3bb6786e3",
+      "outputSha256": "b4e75e6e2cb41ee4c02d78ae60bbae8542b303d566e14fd83ac164b31ecd600d",
       "edits": [
         {
           "start": 129,
@@ -313796,6 +314169,13 @@
           "renamed": "readInt"
         },
         {
+          "start": 10406,
+          "end": 10407,
+          "symbol": "M:di.a([BI[BII)I",
+          "original": "a",
+          "renamed": "decompress"
+        },
+        {
           "start": 10564,
           "end": 10565,
           "symbol": "M:ih.a([BLng;I)V",
@@ -313829,7 +314209,7 @@
       "original": "ba.java",
       "renamed": "ba.java",
       "inputSha256": "8891be4a4f4b4ae18577e44fc2faa19241d9fce13a9621502f8a8854fd5fa45d",
-      "outputSha256": "f893f2c9949429a62d3bbfc186903b3e1b683ddf87ca763e78a8494a9ae9e4c5",
+      "outputSha256": "8ba4050d45a3a4c942f735bdea6052c7996f005307ccfed715e59e9894323050",
       "edits": [
         {
           "start": 77,
@@ -313858,6 +314238,13 @@
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2627,
+          "end": 2629,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 2632,
@@ -314189,7 +314576,7 @@
       "original": "bd.java",
       "renamed": "bd.java",
       "inputSha256": "2e707e4df86a6e0befac0cf840642bfdb2fcdbef37e3dae88251d66232ae0e95",
-      "outputSha256": "628da85ea6423f268d573f1efdbaca7c05861dbeb43bc38432a4a26e061ef0e4",
+      "outputSha256": "0d627255dd5c2f1355ad0f74603b0eadf1d72431e7679d56589b32058edbb36b",
       "edits": [
         {
           "start": 55,
@@ -314204,6 +314591,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 434,
+          "end": 436,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 2162,
@@ -317821,7 +318215,7 @@
       "original": "co.java",
       "renamed": "co.java",
       "inputSha256": "485cf69823e43bed43f6e7d30b01ad439fc03b60e8300124452156505e803647",
-      "outputSha256": "35a837019de56c599159a97ae990c94e696baadc07c4b183f073b24bc99f7731",
+      "outputSha256": "776ffa9d835fb2c71c6b4beeef0c62e03d32eb020de291cf8b79caf55b676fd4",
       "edits": [
         {
           "start": 122,
@@ -318179,6 +318573,13 @@
           "symbol": "C:wa",
           "original": "wa",
           "renamed": "GameAppletShell"
+        },
+        {
+          "start": 12005,
+          "end": 12007,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         }
       ]
     },
@@ -318222,7 +318623,7 @@
       "original": "d.java",
       "renamed": "d.java",
       "inputSha256": "b8fa97161dec7a3cd6524a98b05a6fa58cfe991acaf3eaa14e641d1713e9111f",
-      "outputSha256": "545d070f41d419bc4abd12da989036bfb6d32efb16b9f806bb55c8672b46acb9",
+      "outputSha256": "5ee7639e6598bff4fc673567cc8215ba148e91afd3227345244d309fd7843908",
       "edits": [
         {
           "start": 65,
@@ -318237,6 +318638,20 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 990,
+          "end": 992,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 993,
+          "end": 994,
+          "symbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "evaluate"
         },
         {
           "start": 1299,
@@ -318258,7 +318673,7 @@
       "original": "da.java",
       "renamed": "da.java",
       "inputSha256": "ed103909f4200ed3ba52ccef5e79b5d516f10511b138d8c188ed55783bef9bc8",
-      "outputSha256": "63197abefcebd5a3d782a93d0949e91cd1863910c43e65c27624585d162a793f",
+      "outputSha256": "eacd821fd52475c982518acd47dac83e1f8cf065a142394675059ad55e01012e",
       "edits": [
         {
           "start": 2650,
@@ -318688,6 +319103,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 36478,
+          "end": 36480,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 37407,
           "end": 37409,
           "symbol": "C:mf",
@@ -319044,7 +319466,7 @@
       "original": "dc.java",
       "renamed": "dc.java",
       "inputSha256": "e2ad376bd737d16e648f6165b12a488e3ff0f4145a8d34f114d18868826b6c98",
-      "outputSha256": "e58e5320d94ab4dfe9e69c84619c3752a253eb7c08d3942f4cccc2746952c299",
+      "outputSha256": "787741c4a0d5e89da7d54b76963e20ab51d4d351c5b0bd9d7d6c03028a9347fb",
       "edits": [
         {
           "start": 2096,
@@ -319066,6 +319488,13 @@
           "symbol": "C:si",
           "original": "si",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 4831,
+          "end": 4833,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 6339,
@@ -319531,8 +319960,15 @@
       "original": "dg.java",
       "renamed": "dg.java",
       "inputSha256": "e87d3c3b7fb907edc8cf91d3725e0feec8205e7c165f5177e123a1b3913690ab",
-      "outputSha256": "a5977c055e209c490349c0f1835f450530056af1500c34dfcae2145c1c5c192d",
+      "outputSha256": "8097111709a5ff5ecfcc997d2aff17ab2954a06acf243d236450cc43fcc8b096",
       "edits": [
+        {
+          "start": 145,
+          "end": 146,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
         {
           "start": 282,
           "end": 283,
@@ -319546,6 +319982,13 @@
           "symbol": "M:wb.a(I)V",
           "original": "a",
           "renamed": "clear"
+        },
+        {
+          "start": 22547,
+          "end": 22549,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 22594,
@@ -319778,8 +320221,29 @@
       "original": "di.java",
       "renamed": "di.java",
       "inputSha256": "cac841a74fed23c4dc68637b7a6d02e039d0c7be37af81f357cc8d0f51e29016",
-      "outputSha256": "a93001219472d042968e5f1e20bf59c6c2233a1c0c98b674a1c49e4ba6a13090",
+      "outputSha256": "6f9eb4cc319d5afbe5f52e3f48ed7aa12e7cc5c90d1692e5921435466cc25f29",
       "edits": [
+        {
+          "start": 74,
+          "end": 76,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 130,
+          "end": 132,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 700,
+          "end": 702,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
         {
           "start": 1417,
           "end": 1419,
@@ -319861,11 +320325,53 @@
           "kind": "label"
         },
         {
+          "start": 4217,
+          "end": 4218,
+          "symbol": "M:di.a([BI[BII)I",
+          "original": "a",
+          "renamed": "decompress"
+        },
+        {
           "start": 4987,
           "end": 4988,
           "symbol": "M:di.a()V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 5056,
+          "end": 5058,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 5146,
+          "end": 5148,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 5459,
+          "end": 5461,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 7248,
+          "end": 7250,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 19519,
+          "end": 19521,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         }
       ]
     },
@@ -323117,7 +323623,7 @@
       "original": "eb.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "b8838ff8722b9577664381bd7da2f1776cacaea9bd6f606b98eb4be167d94ec0",
-      "outputSha256": "c15ec7449910a6ee80d2630372853ad323c3328463feb3516e6a5a802025e5cf",
+      "outputSha256": "7066194fb76b58415687f6262045e6cf6d6ca6e6f490ba8d52a57b146cf4e262",
       "edits": [
         {
           "start": 53,
@@ -323181,6 +323687,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 6740,
+          "end": 6742,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 7283,
@@ -323589,7 +324102,7 @@
       "original": "ee.java",
       "renamed": "ee.java",
       "inputSha256": "3af033ce302631b5d6fff7674a8e0f66ad085ec03557ea6146d02f9e5bfe3bef",
-      "outputSha256": "1fb0ceb24f5d7682753d5aa700b73809f5dc0e7a73eef202f79625b91bfe8a7d",
+      "outputSha256": "7392eba1c2f02505c3981f5ca5bc46bc54cd2ab4339a58c49a80d99b784e556d",
       "edits": [
         {
           "start": 155,
@@ -324254,6 +324767,20 @@
           "renamed": "payload"
         },
         {
+          "start": 19883,
+          "end": 19885,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 19909,
+          "end": 19911,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 20465,
           "end": 20466,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -324280,6 +324807,20 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 21188,
+          "end": 21190,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 21214,
+          "end": 21216,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 21369,
@@ -326601,8 +327142,36 @@
       "original": "fh.java",
       "renamed": "fh.java",
       "inputSha256": "f0e2aa71334cdf860061fdabb8f9ccb34446afe57d61029c10658ebda147d0b2",
-      "outputSha256": "3fb91f6d77d5e43597a6c0dee4cfed3df5b31bab936ad30c59c83ff4c8cc07e3",
+      "outputSha256": "e944e243d014bb3f7e0c6a6971c5b1911187deedb6f4018d495bc57475dfb7a4",
       "edits": [
+        {
+          "start": 632,
+          "end": 633,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 754,
+          "end": 755,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 937,
+          "end": 938,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 969,
+          "end": 970,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
         {
           "start": 1245,
           "end": 1246,
@@ -327274,7 +327843,7 @@
       "original": "fq.java",
       "renamed": "fq.java",
       "inputSha256": "e8e17795ff1027d32c243e379ee78165d245e0446f28bc0b64aa513868e2f2d5",
-      "outputSha256": "03b0dc82d33dbba2552b315ec78cc7d0c071522c66d3884c1c370e5107e16222",
+      "outputSha256": "047dead87a07a9876f65f69ec04d12c58d3115d50612614ea1bbaa5e2db2af17",
       "edits": [
         {
           "start": 414,
@@ -327534,6 +328103,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 32300,
+          "end": 32302,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 32476,
@@ -329957,10 +330533,39 @@
     },
     {
       "original": "hi.java",
-      "renamed": "hi.java",
+      "renamed": "JavaScriptBridge.java",
       "inputSha256": "b89d9a284360d1e4e6e0a9d7ea1aa3cc0e7221322d884fc788483774bd9f185b",
-      "outputSha256": "b89d9a284360d1e4e6e0a9d7ea1aa3cc0e7221322d884fc788483774bd9f185b",
-      "edits": []
+      "outputSha256": "2a6b123f41129ff27e23b2c59170a5c8ed96368d26451855aa6cad7e859f25db",
+      "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "symbol": "M:hi.a(Ljava/lang/String;Ljava/applet/Applet;B)V",
+          "original": "a",
+          "renamed": "evaluate"
+        },
+        {
+          "start": 298,
+          "end": 299,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
+          "start": 578,
+          "end": 579,
+          "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithoutArguments"
+        }
+      ]
     },
     {
       "original": "hj.java",
@@ -330009,7 +330614,7 @@
       "original": "hk.java",
       "renamed": "hk.java",
       "inputSha256": "0329d8c04d5ec130fa14cb2a28dae6eda527ccdc3210965254978240ada5d5c4",
-      "outputSha256": "12a6f7c927289bc1b3252d8e5b6c472fcdf6f056496a24c4f95367c73630f796",
+      "outputSha256": "10be19a37f733da16c00935ac6f65ebfd7d3de9bd79c9558d55421a069cc8e71",
       "edits": [
         {
           "start": 124,
@@ -330089,6 +330694,90 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 2792,
+          "end": 2794,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 2795,
+          "end": 2796,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
+          "start": 2882,
+          "end": 2884,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 2885,
+          "end": 2886,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
+          "start": 2982,
+          "end": 2984,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 2985,
+          "end": 2986,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
+          "start": 3086,
+          "end": 3088,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 3089,
+          "end": 3090,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
+          "start": 3182,
+          "end": 3184,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 3185,
+          "end": 3186,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
+          "start": 3274,
+          "end": 3276,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 3277,
+          "end": 3278,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
+        },
+        {
           "start": 4114,
           "end": 4115,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -330101,7 +330790,7 @@
       "original": "hl.java",
       "renamed": "hl.java",
       "inputSha256": "0a367837dae1b80228e8c51aaed89246d5c6a348072423cdaa263d524494ee32",
-      "outputSha256": "0abf90189d834df652ce02df82620b27973231d603c8f995cfb5c4527b86b65f",
+      "outputSha256": "e8b46252f9ec2b34292b992200b9b6bee80f023309512108c5879ea1e86f70c2",
       "edits": [
         {
           "start": 943,
@@ -330109,6 +330798,20 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 1082,
+          "end": 1084,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 1085,
+          "end": 1086,
+          "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithoutArguments"
         },
         {
           "start": 2326,
@@ -330242,6 +330945,13 @@
           "symbol": "M:ng.i(I)Ljava/lang/String;",
           "original": "i",
           "renamed": "readString"
+        },
+        {
+          "start": 4600,
+          "end": 4601,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 4688,
@@ -332259,7 +332969,7 @@
       "original": "il.java",
       "renamed": "il.java",
       "inputSha256": "a5fee387895aca5d9ad873792ed528159f987f81dbe57f1c0101fdc3b20b5a07",
-      "outputSha256": "b96b886c60526d998f482994a8a3b78c3606588a7979e0644e6d6bc7b68b782e",
+      "outputSha256": "fb07c8783a7da0210093057b0a262a0dd757f4cccf8b69fb57d20f8aeaf5fa50",
       "edits": [
         {
           "start": 102,
@@ -332288,6 +332998,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "RawPcmStream"
+        },
+        {
+          "start": 4198,
+          "end": 4200,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 5821,
@@ -333932,7 +334649,7 @@
       "original": "jj.java",
       "renamed": "jj.java",
       "inputSha256": "957c424c6e5d36f8a9bebcfe7f310b5b33b860604a3e46f3c09e10ba1c1b0378",
-      "outputSha256": "91cab6cc44ecb47989a1edef645df036da2fd16be9f9d8df34367dba42a38228",
+      "outputSha256": "19701dc5ff1f73da4c91b8eb43392d5438af9a57ac80213e93cf95bdc2ff010e",
       "edits": [
         {
           "start": 113,
@@ -334192,6 +334909,34 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 5913,
+          "end": 5915,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 5916,
+          "end": 5917,
+          "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithoutArguments"
+        },
+        {
+          "start": 6248,
+          "end": 6250,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 6251,
+          "end": 6252,
+          "symbol": "M:hi.a(ILjava/lang/String;Ljava/applet/Applet;[Ljava/lang/Object;)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithArguments"
         },
         {
           "start": 6298,
@@ -334502,7 +335247,7 @@
       "original": "jm.java",
       "renamed": "MouseWheelInput.java",
       "inputSha256": "f153ecd5955f4ef73cb0e80c1ec3b6119a0e9b3dc1959cd8f8225cc69ca227f4",
-      "outputSha256": "784ed581d8d9f7a8327e905124728a1840ab0fb48dbf22a7ff4ad68189c4b927",
+      "outputSha256": "3733f7ed7d31325129c67b090f0c85fabb646ad5f24fc8e83d01fd04a098438e",
       "edits": [
         {
           "start": 53,
@@ -334524,6 +335269,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 320,
+          "end": 322,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 3448,
@@ -335584,7 +336336,7 @@
       "original": "kd.java",
       "renamed": "kd.java",
       "inputSha256": "a8fa809bfb2e5247c0d7c8af1b3b241e6231694125010a00b92d2cfae6e677e2",
-      "outputSha256": "eb329797321f6630d0735413030fb7edd70e90104fb8e6ad30f83057259fa898",
+      "outputSha256": "fe692ef10d45850a391e0f412a3d794a6e462a7d2fb6b038477fb237a95e0ada",
       "edits": [
         {
           "start": 104,
@@ -335643,6 +336395,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 2577,
+          "end": 2579,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 2876,
           "end": 2878,
           "symbol": "C:ih",
@@ -335667,10 +336426,17 @@
     },
     {
       "original": "ke.java",
-      "renamed": "ke.java",
+      "renamed": "FrameTimer.java",
       "inputSha256": "4eae7b94ee1a7dd16a66fcae8efe0bc6504ded6f318c3521363fa65233b5a763",
-      "outputSha256": "dbfbfba1b157d0546f426672f0dd727a391c5959b50151b66039ade68ef34343",
+      "outputSha256": "e97c9dfb6e1ee04efd84485f574514d04b4c405b56f9e6bfdc4bff6273c18b02",
       "edits": [
+        {
+          "start": 72,
+          "end": 74,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
         {
           "start": 254,
           "end": 256,
@@ -335686,6 +336452,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 573,
+          "end": 575,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 579,
           "end": 581,
           "symbol": "C:md",
@@ -335698,6 +336471,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1447,
+          "end": 1448,
+          "symbol": "M:ke.a(JI)I",
+          "original": "a",
+          "renamed": "advanceTicks"
         },
         {
           "start": 1629,
@@ -335721,6 +336501,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 2064,
+          "end": 2065,
+          "symbol": "M:ke.a(Z)J",
+          "original": "a",
+          "renamed": "getDelayMillis"
+        },
+        {
           "start": 2107,
           "end": 2108,
           "symbol": "M:ke.a(B)V",
@@ -335728,11 +336515,32 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 2290,
+          "end": 2291,
+          "symbol": "M:ke.b(JI)I",
+          "original": "b",
+          "renamed": "waitAndCountTicks"
+        },
+        {
+          "start": 2344,
+          "end": 2345,
+          "symbol": "M:ke.a(Z)J",
+          "original": "a",
+          "renamed": "getDelayMillis"
+        },
+        {
           "start": 2451,
           "end": 2452,
           "symbol": "M:fh.a(ZJ)V",
           "original": "a",
           "renamed": "sleepMillis"
+        },
+        {
+          "start": 2496,
+          "end": 2497,
+          "symbol": "M:ke.a(JI)I",
+          "original": "a",
+          "renamed": "advanceTicks"
         },
         {
           "start": 2551,
@@ -336027,6 +336835,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 12610,
+          "end": 12611,
+          "symbol": "M:ke.a(I)V",
+          "original": "a",
+          "renamed": "resetTiming"
         }
       ]
     },
@@ -337910,7 +338725,7 @@
       "original": "kn.java",
       "renamed": "kn.java",
       "inputSha256": "3b081646a1cfa03a017ea4677b5b5d1551ab28e685c2ad7b9ff82215acc0829c",
-      "outputSha256": "48fcd1317798c62d2e6eceb88395d36bb1cd48b0623f5894ab3fb114736d85f5",
+      "outputSha256": "94e4322953d9fd3a741af16787030e18faca2f45561042ceb0b8df81fc2b1faf",
       "edits": [
         {
           "start": 147,
@@ -337918,6 +338733,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 286,
+          "end": 287,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 1105,
@@ -337948,6 +338770,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 5443,
+          "end": 5444,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 5453,
           "end": 5455,
           "symbol": "C:jm",
@@ -337955,11 +338784,25 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 5602,
+          "end": 5603,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 5613,
           "end": 5615,
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 5708,
+          "end": 5709,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 5718,
@@ -338229,7 +339072,7 @@
       "original": "la.java",
       "renamed": "la.java",
       "inputSha256": "8dd8b29a04eae6769d8e0a254f266eb22c204f5c2c8fd1ffb11175e4eef6a008",
-      "outputSha256": "439c9d8166b53019fb39aa2ee1cf2bd7fe93ec794311cd0d5753826e94ca1763",
+      "outputSha256": "6ddbd81fb7004f488168f757a16eff1b02795d75fa687cad2870aa59d46fa98b",
       "edits": [
         {
           "start": 260,
@@ -338407,6 +339250,13 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 3602,
+          "end": 3603,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 3664,
           "end": 3666,
           "symbol": "C:jb",
@@ -338566,6 +339416,13 @@
           "symbol": "C:mc",
           "original": "mc",
           "renamed": "SpriteGeometry"
+        },
+        {
+          "start": 5203,
+          "end": 5205,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 5427,
@@ -340273,7 +341130,7 @@
       "original": "m.java",
       "renamed": "m.java",
       "inputSha256": "b1ad71816ab407da2dd5082b7e646630c52245229cf8b9d7a91710ea124a83f9",
-      "outputSha256": "dab49cc9a3f940e8a0212e7fe9e5e20c76308bfe40ebe22c70acc5044e37b510",
+      "outputSha256": "9774f2f3fd2c3006283dc51dd6088ef6c537b3194dc1a1a6d5b96efac598455b",
       "edits": [
         {
           "start": 629,
@@ -340330,6 +341187,13 @@
           "symbol": "M:kh.d(IIIIII)V",
           "original": "d",
           "renamed": "fillRectangleAlpha"
+        },
+        {
+          "start": 10809,
+          "end": 10811,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 12869,
@@ -341217,7 +342081,7 @@
       "original": "mf.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "8a0a2b687cf9b63080c69d9708250252f934f265e897647bb80d86a9ed33bfd0",
-      "outputSha256": "5713924b22db80d88137ff26c401ce87fd01da17718448ddc895efc962b0cc2b",
+      "outputSha256": "18b0769b903737f6226b43bf9e23999fd39afdb293989297c9a598fd63b5bb22",
       "edits": [
         {
           "start": 50,
@@ -341246,6 +342110,20 @@
           "symbol": "M:mf.e(I)[B",
           "original": "e",
           "renamed": "getData"
+        },
+        {
+          "start": 1182,
+          "end": 1184,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 1185,
+          "end": 1186,
+          "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithoutArguments"
         },
         {
           "start": 1321,
@@ -341711,7 +342589,7 @@
       "original": "mj.java",
       "renamed": "mj.java",
       "inputSha256": "4c67d3806bc5049cdae5c3a995932abaafc0b829748e7abd2ec4ae287f3cf89b",
-      "outputSha256": "20a29d975a1e338f19d2818570382ae754a636b9d2ccfedbef4b71dfd80bcff0",
+      "outputSha256": "e8cb72cd07a3ce8629bc188d20d085026e48e61e238ef7d270e873889b37e195",
       "edits": [
         {
           "start": 118,
@@ -341733,6 +342611,20 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 686,
+          "end": 688,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 799,
+          "end": 801,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 1053,
@@ -342561,7 +343453,7 @@
       "original": "nd.java",
       "renamed": "nd.java",
       "inputSha256": "3bbcf191df51ac0d100234386381ddf882f1677be53636f4b47fad93b79f4211",
-      "outputSha256": "1b298acddb1a3f4c09d721f7facffcc1c38f35e3950946677df9ce5605a00b67",
+      "outputSha256": "d1b17e41d0bfef5249a173037534b0fa55c045f609b6d4284837d19e06277d6e",
       "edits": [
         {
           "start": 953,
@@ -342676,6 +343568,27 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 3470,
+          "end": 3471,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 3553,
+          "end": 3554,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 3639,
+          "end": 3640,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 3727,
           "end": 3729,
           "symbol": "C:dl",
@@ -342695,6 +343608,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 4806,
+          "end": 4807,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 5005,
@@ -349233,7 +350153,7 @@
       "original": "pf.java",
       "renamed": "pf.java",
       "inputSha256": "d76da6be64a514be2954013da4876afe1be353ad4699187a9bcd4eed7ae525d1",
-      "outputSha256": "2e12dc41720a621b3b58db9300680af979fba48bd52127f39f855a6278a662a6",
+      "outputSha256": "bf6d71784a9f3d11a08187bc4805cf5375e01efda7849fcccee677bb929e3fcf",
       "edits": [
         {
           "start": 2154,
@@ -349318,6 +350238,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 14780,
+          "end": 14781,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 15467,
@@ -351038,7 +351965,7 @@
       "original": "qb.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "5d12b3c336bac989b625f5058755461e0fa9c36aff91892317994266a56fdf0f",
-      "outputSha256": "b0446dde114ee0f830c0a32a160ebc758acf53a999daebfa02ab5cc4e99d7e35",
+      "outputSha256": "fe9910f3391e42f2dd2f041c06a512ae729aec03307d9501e280c920c56440bc",
       "edits": [
         {
           "start": 53,
@@ -351393,6 +352320,13 @@
           "renamed": "resetClip"
         },
         {
+          "start": 14112,
+          "end": 14114,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 16171,
           "end": 16174,
           "symbol": "B:qb.b(I)V#1",
@@ -351528,6 +352462,90 @@
           "renamed": "AccountNameAvailabilityValidator"
         },
         {
+          "start": 70483,
+          "end": 70485,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 70647,
+          "end": 70649,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 70811,
+          "end": 70813,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 70974,
+          "end": 70976,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 71137,
+          "end": 71139,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 71301,
+          "end": 71303,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 71465,
+          "end": 71467,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 71629,
+          "end": 71631,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 71792,
+          "end": 71794,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 71955,
+          "end": 71957,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 72120,
+          "end": 72122,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
+          "start": 72285,
+          "end": 72287,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 72451,
           "end": 72452,
           "symbol": "C:j",
@@ -351547,6 +352565,13 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 75517,
+          "end": 75519,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 76988,
@@ -351633,6 +352658,13 @@
           "renamed": "NetworkArchiveRequest"
         },
         {
+          "start": 118875,
+          "end": 118877,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
+        {
           "start": 122424,
           "end": 122426,
           "symbol": "C:sa",
@@ -351668,6 +352700,13 @@
           "renamed": "CipherPacketBuffer"
         },
         {
+          "start": 126342,
+          "end": 126343,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 126504,
           "end": 126506,
           "symbol": "C:jb",
@@ -351687,6 +352726,13 @@
           "symbol": "C:ld",
           "original": "ld",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 129771,
+          "end": 129773,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 139092,
@@ -353063,10 +354109,17 @@
     },
     {
       "original": "qn.java",
-      "renamed": "qn.java",
+      "renamed": "Bzip2State.java",
       "inputSha256": "f4206c97c24a57bb69a9f32da83a05f380240b51403b63c088b96a4e89948301",
-      "outputSha256": "28a5e23530d1a2955022c2f8422bda6e8b966ae73ac1b408b2d044b02a88a038",
+      "outputSha256": "8dfe55196ec7efc9689debc85562ff082fd5d9614a86e05d39229a70cd45c15e",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
+        },
         {
           "start": 163,
           "end": 165,
@@ -353087,6 +354140,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2615,
+          "end": 2617,
+          "symbol": "M:qn.<init>()V",
+          "original": "qn",
+          "renamed": "Bzip2State"
         }
       ]
     },
@@ -353116,7 +354176,7 @@
       "original": "qp.java",
       "renamed": "qp.java",
       "inputSha256": "9b26a03c2842b1895d5ed492249f2a207674afbd03038cdf053959cf6822def5",
-      "outputSha256": "22225b001b425ad911face56a937c71e0a3aefb26c58a092089368239b980ba0",
+      "outputSha256": "a9a3daafa7fa91206253398623b7711cc0c399bd0f19583507c34418e6028186",
       "edits": [
         {
           "start": 61,
@@ -353173,6 +354233,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8414,
+          "end": 8416,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         }
       ]
     },
@@ -353627,7 +354694,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "fcd30da2308f240168584d9191a09c940c958843100a736da5c988508bd66406",
-      "outputSha256": "ba17096d67bc35d56118bb4590c4ac4c840c241c451651a8e80c01fc3adb9915",
+      "outputSha256": "7d6d12a6dfbfd51e54d15e7658ea03105f80a3aec15df2ae56b4f6daea0ca14d",
       "edits": [
         {
           "start": 146,
@@ -353775,6 +354842,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 18477,
+          "end": 18479,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 18891,
@@ -354292,7 +355366,7 @@
       "original": "rl.java",
       "renamed": "rl.java",
       "inputSha256": "bc3bce493573e2ece7ad24e2e73b4c41c60cf6a51b2165444490c970fdb6ff3d",
-      "outputSha256": "ddd0c2f55142f9e6736111b12a2b28c098c0922371548013e22f138ccdaa623d",
+      "outputSha256": "6262ced75f5948d5b0813b280ea29f35ee3920273c3d3c9d39a42b72643b5a55",
       "edits": [
         {
           "start": 344,
@@ -354321,6 +355395,13 @@
           "symbol": "F:ng.field_f:I",
           "original": "field_f",
           "renamed": "position"
+        },
+        {
+          "start": 725,
+          "end": 727,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 767,
@@ -354377,6 +355458,13 @@
           "symbol": "C:a",
           "original": "a",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 3336,
+          "end": 3338,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         }
       ]
     },
@@ -355850,7 +356938,7 @@
       "original": "rp.java",
       "renamed": "PcmOutputWorker.java",
       "inputSha256": "c2578a78fe7b99794798d9fdf45700cc3d167abd180fc28e59cd384abe3d35ae",
-      "outputSha256": "83da63d87a75ceda8cde73a184cb5c8e6755c2bcf90e05a5dd0dccea460d89a7",
+      "outputSha256": "759302ccce43e439e15d834a3efa2c6314d85cc61bb70bf06cc5958ff13ca43a",
       "edits": [
         {
           "start": 50,
@@ -355872,6 +356960,13 @@
           "symbol": "C:un",
           "original": "un",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 376,
+          "end": 378,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 424,
@@ -355933,16 +357028,44 @@
     },
     {
       "original": "s.java",
-      "renamed": "s.java",
+      "renamed": "NanoFrameTimer.java",
       "inputSha256": "31c21f209d5a58ff77119839c19ccc51a26a24d4e173e6f67f2249e31de611a1",
-      "outputSha256": "8872cd3c048db1361a8ebf4edc012194107143a329070201ce03217a76a79173",
+      "outputSha256": "b8c6eeefed4a07c9df7e2146d7909af57054b34ee7954fb5f00777337a22306b",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 60,
+          "end": 62,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
         {
           "start": 76,
           "end": 78,
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 394,
+          "end": 395,
+          "symbol": "M:s.a(JI)I",
+          "original": "a",
+          "renamed": "advanceTicks"
+        },
+        {
+          "start": 536,
+          "end": 537,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 1145,
@@ -355957,6 +357080,20 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 1534,
+          "end": 1535,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 1635,
+          "end": 1636,
+          "symbol": "M:s.a(I)V",
+          "original": "a",
+          "renamed": "resetTiming"
         },
         {
           "start": 1912,
@@ -356006,6 +357143,55 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3797,
+          "end": 3798,
+          "symbol": "M:s.a(Z)J",
+          "original": "a",
+          "renamed": "getDelayMillis"
+        },
+        {
+          "start": 3860,
+          "end": 3861,
+          "symbol": "M:s.c(B)J",
+          "original": "c",
+          "renamed": "sampleElapsedNanos"
+        },
+        {
+          "start": 4089,
+          "end": 4090,
+          "symbol": "M:s.c(B)J",
+          "original": "c",
+          "renamed": "sampleElapsedNanos"
+        },
+        {
+          "start": 4581,
+          "end": 4582,
+          "symbol": "M:s.a(I)V",
+          "original": "a",
+          "renamed": "resetTiming"
+        },
+        {
+          "start": 5268,
+          "end": 5269,
+          "symbol": "M:s.a(I)V",
+          "original": "a",
+          "renamed": "resetTiming"
+        },
+        {
+          "start": 5970,
+          "end": 5971,
+          "symbol": "M:s.a(I)V",
+          "original": "a",
+          "renamed": "resetTiming"
+        },
+        {
+          "start": 6476,
+          "end": 6477,
+          "symbol": "M:s.<init>()V",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         }
       ]
     },
@@ -357312,7 +358498,7 @@
       "original": "sm.java",
       "renamed": "sm.java",
       "inputSha256": "167c125c7416e57d46d79d8c293e2e4888b11740e306b96db59461ee3c5b25cc",
-      "outputSha256": "6cd4cf4399ab988995a7b5aaa215dd15ae5ff28f4064d739bbfff4087cdc1253",
+      "outputSha256": "e1367808a99ce36a75327db9f75116adc397cb14064403bd54a5167aed4a300c",
       "edits": [
         {
           "start": 258,
@@ -357334,6 +358520,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3957,
+          "end": 3958,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 4000,
@@ -357369,7 +358562,7 @@
       "original": "sn.java",
       "renamed": "sn.java",
       "inputSha256": "387880542dbc96de79800b07bd79935f340c6d0df04413281e2c1c5996f06092",
-      "outputSha256": "2516be0a2c6033c66903b2462392bc0ebf1a7e8dcc0ced3ea2687e72d262e502",
+      "outputSha256": "8f4c7e67eb637b538d1bc87383763c25721ea221cf787a99547d51baf7536742",
       "edits": [
         {
           "start": 669,
@@ -357400,11 +358593,46 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 4868,
+          "end": 4870,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 4931,
           "end": 4932,
           "symbol": "M:sn.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 4963,
+          "end": 4965,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
+          "start": 4981,
+          "end": 4982,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 5013,
+          "end": 5015,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
+          "start": 5031,
+          "end": 5032,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         }
       ]
     },
@@ -358891,7 +360119,7 @@
       "original": "te.java",
       "renamed": "te.java",
       "inputSha256": "b1602b462582f65784e91f733b2c89f9dc28ba6c0a7654e7710506a99f506d34",
-      "outputSha256": "b93c773dbd5e7dffc844194533da85b7ea66db5b2ecdfed265fdd275e70b9a67",
+      "outputSha256": "2a52f915d0a9dffa38509646b6285c6223c4f372b60cca2a1d734eb7dcca2e19",
       "edits": [
         {
           "start": 88,
@@ -358976,6 +360204,13 @@
           "symbol": "F:ng.field_f:I",
           "original": "field_f",
           "renamed": "position"
+        },
+        {
+          "start": 1127,
+          "end": 1129,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 1216,
@@ -359306,7 +360541,7 @@
       "original": "tg.java",
       "renamed": "tg.java",
       "inputSha256": "77e468aa5afd6035ca69b5e480e05bebab956ab336aa24cee077a80c7baf58eb",
-      "outputSha256": "7ecd90d89b1539648f6b36f9569e2f9c0b82678e683d38286a5c5f4a9a68f2cd",
+      "outputSha256": "8161b9428d40a6dfd76661fd25c489c542d063a16e5a2fd0ab47e120cba5d4cb",
       "edits": [
         {
           "start": 117,
@@ -359335,6 +360570,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3767,
+          "end": 3768,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
         },
         {
           "start": 8366,
@@ -360102,7 +361344,7 @@
       "original": "tl.java",
       "renamed": "tl.java",
       "inputSha256": "986e41eaff209da7c9baff041133827239172797a48e91dd6d2737c442775ca5",
-      "outputSha256": "7b100167c5c7ef261dcd321cdc8f9b2a6533f0a3d019a1627a0dccd0d8bfc4c3",
+      "outputSha256": "1766e5bba547c3b60fa574b608d1a049b60735c96da5d021659d394f04b66d71",
       "edits": [
         {
           "start": 125,
@@ -360411,6 +361653,13 @@
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "MidiPcmStream"
+        },
+        {
+          "start": 54245,
+          "end": 54247,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 56417,
@@ -361395,7 +362644,7 @@
       "original": "ug.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "8723cf64d9e1d7b0fb174c03bf34d350a4caaa49fe07ebeee00449a7f295bfc9",
-      "outputSha256": "c0c1d098963cea420076afaa51877e070e4b1dd2fed1364108b0bddd9642cd3c",
+      "outputSha256": "f1d37f4abe1ee99477e0ed90dfeccd0b0eb6a6d5a0b64adcfe7dccb23c06f277",
       "edits": [
         {
           "start": 89,
@@ -361466,6 +362715,13 @@
           "symbol": "M:ug.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2885,
+          "end": 2887,
+          "symbol": "C:qn",
+          "original": "qn",
+          "renamed": "Bzip2State"
         },
         {
           "start": 3185,
@@ -361812,7 +363068,7 @@
       "original": "uk.java",
       "renamed": "uk.java",
       "inputSha256": "dccff8536adb76ab1e2d49eee88c8782fc510c33ff4d3296dcfb9011a7210805",
-      "outputSha256": "928dbc5a9084bb8a9503f82931c6420fabb7403df04fbfec8dd7b0ee78ce1c65",
+      "outputSha256": "70361213b556cee13fe711de40300e2d292c5e086b82a81f0b4b922d8c20dc63",
       "edits": [
         {
           "start": 166,
@@ -361857,6 +363113,20 @@
           "renamed": "GameCanvas"
         },
         {
+          "start": 5132,
+          "end": 5134,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
+          "start": 5209,
+          "end": 5211,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 5247,
           "end": 5249,
           "symbol": "C:ka",
@@ -361869,6 +363139,13 @@
           "symbol": "C:ka",
           "original": "ka",
           "renamed": "MusicPatchPcmStream"
+        },
+        {
+          "start": 5411,
+          "end": 5413,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 5935,
@@ -365158,7 +366435,7 @@
       "original": "vk.java",
       "renamed": "vk.java",
       "inputSha256": "6364ef950fd92ccea77e2d0d2343a8568d1e946572b9cc6566e26a41926b54c2",
-      "outputSha256": "a42e202d113536e2089dfd4de26c81cdc5b4cc60b3b0647eb33d97d90c2e1215",
+      "outputSha256": "d77ac85f848e6770332e95f260b38429e6e2261b0c712b108f32f0fc7a9366e2",
       "edits": [
         {
           "start": 661,
@@ -365231,6 +366508,13 @@
           "renamed": "MouseInputHandler"
         },
         {
+          "start": 5635,
+          "end": 5637,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
+        },
+        {
           "start": 5911,
           "end": 5912,
           "symbol": "C:a",
@@ -365243,6 +366527,13 @@
           "symbol": "C:a",
           "original": "a",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 6337,
+          "end": 6339,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 6373,
@@ -365704,7 +366995,7 @@
       "original": "vp.java",
       "renamed": "vp.java",
       "inputSha256": "81bbb2cae4203aba46aaa082a3e10fc2bb492f833bf57822d3f440b688991589",
-      "outputSha256": "211e7a3bbb2f98edeadd266c4c92c84f85b45b7dd8127228f491fbcebdaa0b73",
+      "outputSha256": "c58488db60b5e0c4d95d0fa77c6800e01731a35dbafe09430d43bf38f6bdd449",
       "edits": [
         {
           "start": 93,
@@ -365833,6 +367124,13 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 2703,
+          "end": 2704,
+          "symbol": "M:ke.a(I)V",
+          "original": "a",
+          "renamed": "resetTiming"
+        },
+        {
           "start": 2779,
           "end": 2781,
           "symbol": "C:mc",
@@ -365916,7 +367214,7 @@
       "original": "wa.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "2e77bcf4c8d8f92e3e3f7a1f6ca096dec251e7660664476d8bc828e62a05defe",
-      "outputSha256": "bf2cd4237291dde6635f8b36c921c031c8af41cf38d7a626c37195cbf95b1a7e",
+      "outputSha256": "a5ff8bc6bdc88f43dd432b9751087d30141853573a888eabbc8473fe5f4a4c5f",
       "edits": [
         {
           "start": 60,
@@ -366045,6 +367343,20 @@
           "renamed": "MouseWheelInput"
         },
         {
+          "start": 6598,
+          "end": 6599,
+          "symbol": "M:ke.b(JI)I",
+          "original": "b",
+          "renamed": "waitAndCountTicks"
+        },
+        {
+          "start": 6600,
+          "end": 6601,
+          "symbol": "C:s",
+          "original": "s",
+          "renamed": "NanoFrameTimer"
+        },
+        {
           "start": 7682,
           "end": 7683,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -366120,6 +367432,20 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 12949,
+          "end": 12951,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "JavaScriptBridge"
+        },
+        {
+          "start": 12952,
+          "end": 12953,
+          "symbol": "M:hi.a(Ljava/applet/Applet;Ljava/lang/String;I)Ljava/lang/Object;",
+          "original": "a",
+          "renamed": "callWithoutArguments"
         },
         {
           "start": 14193,
@@ -368313,7 +369639,7 @@
       "original": "wk.java",
       "renamed": "SecondaryNodeDequeIterator.java",
       "inputSha256": "42a534975c38470ff6a91cd25b9a1eff45856aaf0d1d1ba68f8740fdcb4e6499",
-      "outputSha256": "58eb0a03868fe8ae308c063fb843316606f1bb26848fb458b3fb727671e49c72",
+      "outputSha256": "4046c444c87fd54941395248bfa91a4b7a857c5592c4d299a8af80ef4dacdc44",
       "edits": [
         {
           "start": 71,
@@ -368419,6 +369745,13 @@
           "symbol": "F:wk.field_a:Lij;",
           "original": "field_a",
           "renamed": "lastReturned"
+        },
+        {
+          "start": 928,
+          "end": 930,
+          "symbol": "C:ke",
+          "original": "ke",
+          "renamed": "FrameTimer"
         },
         {
           "start": 933,
@@ -369266,10 +370599,10 @@
       "commit": "67141d635b7060c02e01505325a82243446974c0",
       "subdirectory": "games/crazycrystals"
     },
-    "rulesSha256": "d4c1eac4e84e15062ecbdb61a1e2e9e132849d5fa0fcba18973e3d6dc766637a",
+    "rulesSha256": "9f209e100bec206353cc30543e69f8b9c6fbff5974a3b334339e97853f69284c",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
-    "outputTreeSha256": "03c689f7e3064240e0424b8d8926f3fc8bba5019276fba378e296e79dde28a74",
+    "outputTreeSha256": "22332a9009502ff5df8c81f65c82c4e817e25f5aebef58552d8a3a6b7c76d49e",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

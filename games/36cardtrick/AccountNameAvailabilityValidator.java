@@ -81,7 +81,7 @@ final class AccountNameAvailabilityValidator extends cg {
         int var2 = Main.field_T;
         int var1_intLifetime1;
         try {
-          MouseInputHandler.field_b.b(-127);
+          MouseInputHandler.field_b.resetTiming(-127);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             ak.field_P[var1_int] = 0L;
           }

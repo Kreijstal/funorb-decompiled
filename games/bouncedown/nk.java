@@ -660,7 +660,7 @@ final class nk {
           var8Lifetime2 = od.field_f.b(var20);
           var9Lifetime1 = var4Lifetime1;
           if (0 == qa.field_j) {
-            var7_ref_String = sg.field_b;
+            var7_ref_String = FrameTimer.field_b;
             var9Lifetime1 += 150;
           } else {
             var9Lifetime1 -= 150;

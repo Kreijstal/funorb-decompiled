@@ -164,12 +164,12 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
     final static void a(byte param0) {
         if (param0 < -52) {
           qf.field_b = false;
-          kh.field_o = tk.field_h.readUnsignedByte(-122) == 0 ? true : false;
+          NanoFrameTimer.field_o = tk.field_h.readUnsignedByte(-122) == 0 ? true : false;
           return;
         }
         field_n = -122;
         qf.field_b = false;
-        kh.field_o = tk.field_h.readUnsignedByte(-122) == 0 ? true : false;
+        NanoFrameTimer.field_o = tk.field_h.readUnsignedByte(-122) == 0 ? true : false;
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {

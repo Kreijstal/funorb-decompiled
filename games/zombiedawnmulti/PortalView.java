@@ -1287,7 +1287,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = GameHud.readRootTextFile(-127, "name_TRAIT_GENERAL");
                 if (null != var2) {
-                  PopupMenuBuilder.field_e = GameHud.decodeText(-2739, var2);
+                  Bzip2State.field_e = GameHud.decodeText(-2739, var2);
                 }
                 var2 = GameHud.readRootTextFile(-122, "name_TRAIT_READY");
                 if (var2 != null) {
@@ -1371,7 +1371,7 @@ final class PortalView extends SceneObject {
                 }
                 var2 = GameHud.readRootTextFile(-127, "teaser_POWERUP_TOUGH");
                 if (var2 != null) {
-                  PopupMenuBuilder.field_i = GameHud.decodeText(-2739, var2);
+                  Bzip2State.field_i = GameHud.decodeText(-2739, var2);
                 }
                 var2 = GameHud.readRootTextFile(-125, "teaser_POWERUP_CURSE");
                 if (var2 != null) {

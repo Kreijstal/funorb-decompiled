@@ -69,7 +69,7 @@ final class rj {
           while (true) {
             if (fg.field_d < 0) {
               LevelEditor.field_j.position = 0;
-              if (!vc.a(-125, 1)) {
+              if (!FrameTimer.a(-125, 1)) {
                 return false;
               }
               fg.field_d = LevelEditor.field_j.a(false);

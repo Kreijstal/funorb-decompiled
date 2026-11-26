@@ -27,7 +27,7 @@ class fh extends hd {
           RuntimeException var3_ref2 = null;
           try {
             try {
-              var3 = (String) (mb.a(param1, "getcookies", true));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", true));
               var4 = UiWidget.a(-89, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

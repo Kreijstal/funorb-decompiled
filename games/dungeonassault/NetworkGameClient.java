@@ -474,7 +474,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = qm.a(this.field_q, rn.a(-87), tp.c((byte) -73), NetworkArchiveRequest.e(7142), vl.c(-29455), 57, DiskArchiveRequest.e((byte) 57));
             if (-1 != var5_intLifetime1) {
-              gj.a(var5_intLifetime1, 29120, mf.field_c, tp.field_v);
+              FrameTimer.a(var5_intLifetime1, 29120, mf.field_c, tp.field_v);
               tp.field_v = null;
               mf.field_c = null;
             }

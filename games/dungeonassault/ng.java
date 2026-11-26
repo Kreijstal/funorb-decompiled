@@ -1071,7 +1071,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("cancel", 78);
                 if (null != var2) {
-                  dc.field_v = dj.a(var2, false);
+                  Bzip2State.field_v = dj.a(var2, false);
                 }
                 var2 = rp.a("pleaselogintoplay", 72);
                 if (var2 != null) {
@@ -1853,7 +1853,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("waitingfor_extradata", 46);
                 if (var2 != null) {
-                  fg.field_m = dj.a(var2, false);
+                  NanoFrameTimer.field_m = dj.a(var2, false);
                 }
                 var2 = rp.a("waitingfor_languages", 110);
                 if (var2 != null) {
@@ -2095,7 +2095,7 @@ final class ng extends ck {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  dc.field_k = dj.a(var2, false);
+                  Bzip2State.field_k = dj.a(var2, false);
                 }
                 var2 = rp.a("off", 47);
                 if (null != var2) {
@@ -2751,7 +2751,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("fs_unavailable", param0 ^ -27130);
                 if (null != var2) {
-                  fg.field_g = dj.a(var2, false);
+                  NanoFrameTimer.field_g = dj.a(var2, false);
                 }
                 var2 = rp.a("fs_unavailable_try_signed_applet", param0 ^ -27012);
                 if (null != var2) {

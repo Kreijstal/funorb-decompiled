@@ -244,7 +244,7 @@ abstract class db extends gj {
           do {
             var4 = param1.nextInt();
           } while (var4 >= var3_int);
-          stackIn_11_0 = gk.a(param2, true, var4);
+          stackIn_11_0 = Bzip2State.a(param2, true, var4);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

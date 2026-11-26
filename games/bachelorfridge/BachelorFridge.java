@@ -795,7 +795,7 @@ public final class BachelorFridge extends NetworkGameClient {
         cr.resetStaticState(21592);
         ByteStorage.releaseStatics(76);
         Bzip2Decoder.releaseStatics();
-        bv.releaseStatics(98);
+        Bzip2State.releaseStatics(98);
         rh.releaseStatics(0);
         oe.releaseStatics(false);
         nv.releaseStatics(20038);

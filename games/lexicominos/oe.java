@@ -267,7 +267,7 @@ final class oe {
     }
 
     final static void a(String param0, boolean param1) {
-        System.out.println("Error: " + tb.a("%0a", param0, param1, "\n"));
+        System.out.println("Error: " + FrameTimer.a("%0a", param0, param1, "\n"));
     }
 
     static {

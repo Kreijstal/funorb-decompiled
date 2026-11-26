@@ -84,7 +84,7 @@ final class e {
           bh.field_g = bh.field_g | 1 << var4;
           b.field_m = b.field_m - (1 << var4);
           hf.field_f.field_P = hf.field_f.field_P + 1;
-          fg.field_b = fg.field_b | var3;
+          FrameTimer.field_b = FrameTimer.field_b | var3;
           kg.field_c = kg.field_c | var3;
           if (param1 == 40) {
             var4 = mb.field_e.isEmpty(11253) ? 1 : 0;
@@ -109,7 +109,7 @@ final class e {
           return;
         }
         hf.field_f.field_P = hf.field_f.field_P + 1;
-        fg.field_b = fg.field_b | var3;
+        FrameTimer.field_b = FrameTimer.field_b | var3;
         kg.field_c = kg.field_c | var3;
         if (param1 != 40) {
           field_a = (ki[]) null;

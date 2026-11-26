@@ -13,7 +13,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (qj.field_c != null) {
+          if (GzipDecompressor.field_c != null) {
             ak.field_y = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -54,7 +54,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (null != qj.field_c) {
+          if (null != GzipDecompressor.field_c) {
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && var2_int != 65535 &&
               vf.a(-13891, (char) var2_int)) {
@@ -82,7 +82,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (qj.field_c == null) {
+          if (GzipDecompressor.field_c == null) {
             return;
           }
           ak.field_y = 0;
@@ -147,7 +147,7 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (qj.field_c != null) {
+          if (GzipDecompressor.field_c != null) {
             db.field_R = -1;
           }
         } catch (RuntimeException runtimeException) {

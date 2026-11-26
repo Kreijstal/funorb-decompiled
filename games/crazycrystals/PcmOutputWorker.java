@@ -10,7 +10,7 @@ final class PcmOutputWorker implements Runnable {
 
     final static sj[] a(int param0) {
         int var1 = -121 % ((param0 + 40) / 41);
-        return new sj[]{mn.field_j, og.field_x, cc.field_c, lm.field_e, jl.field_g, qn.field_g, sb.field_E, cm.field_a, tn.field_q, CipherPacketBuffer.field_u, vg.field_a, qj.field_a, cn.field_b, SectorCacheStore.field_f};
+        return new sj[]{mn.field_j, og.field_x, cc.field_c, lm.field_e, jl.field_g, Bzip2State.field_g, sb.field_E, cm.field_a, tn.field_q, CipherPacketBuffer.field_u, vg.field_a, qj.field_a, cn.field_b, SectorCacheStore.field_f};
     }
 
     PcmOutputWorker() {

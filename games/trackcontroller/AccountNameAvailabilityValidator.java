@@ -249,7 +249,7 @@ final class AccountNameAvailabilityValidator extends di {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (sj.a((byte) -29, "getcookies", param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) -29, "getcookies", param1));
               var4 = DelegatingCanvas.a(var3, ';', (byte) -46);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

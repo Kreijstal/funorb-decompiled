@@ -1,0 +1,25 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class JavaScriptBridge {
+    final static Object callWithArguments(java.applet.Applet param0, int param1, Object[] param2, String param3) throws Throwable {
+        if (param1 != -11455) {
+          return (Object) null;
+        }
+        return netscape.javascript.JSObject.getWindow(param0).call(param3, param2);
+    }
+
+    final static void evaluate(boolean param0, String param1, java.applet.Applet param2) throws Throwable {
+        if (!param0) {
+          return;
+        }
+        netscape.javascript.JSObject.getWindow(param2).eval(param1);
+    }
+
+    final static Object callWithoutArguments(String param0, java.applet.Applet param1, boolean param2) throws Throwable {
+        if (!param2) {
+          return (Object) null;
+        }
+        return netscape.javascript.JSObject.getWindow(param1).call(param0, (Object[]) null);
+    }
+}

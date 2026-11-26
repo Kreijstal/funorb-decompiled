@@ -106,15 +106,15 @@ class lm extends IntrusiveNode {
             try {
               var4 = param1.getCodeBase();
               var3 = j.a((byte) 116, var4, param1).getFile();
-              ee.a("updatelinks", param1, param0 ^ -15735, new Object[]{"home", var3 + "home.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", param1, param0 ^ -15735, new Object[]{"home", var3 + "home.ws"});
               if (param0 != -106) {
                 lm.a(true, (String) null, 27L, (java.applet.Applet) null, (String) null);
               }
-              ee.a("updatelinks", param1, 15647, new Object[]{"gamelist", var3 + "togamelist.ws"});
-              ee.a("updatelinks", param1, 15647, new Object[]{"serverlist", var3 + "toserverlist.ws"});
-              ee.a("updatelinks", param1, 15647, new Object[]{"options", var3 + "options.ws"});
-              ee.a("updatelinks", param1, 15647, new Object[]{"terms", var3 + "terms.ws"});
-              ee.a("updatelinks", param1, 15647, new Object[]{"privacy", var3 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", param1, 15647, new Object[]{"gamelist", var3 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", param1, 15647, new Object[]{"serverlist", var3 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", param1, 15647, new Object[]{"options", var3 + "options.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", param1, 15647, new Object[]{"terms", var3 + "terms.ws"});
+              JavaScriptBridge.callWithArguments("updatelinks", param1, 15647, new Object[]{"privacy", var3 + "privacy.ws"});
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -297,7 +297,7 @@ class lm extends IntrusiveNode {
                 DungeonAssault.field_K != 0) {
                 var7Lifetime2 = var7Lifetime2 + "; Discard;";
               }
-              ee.a("document.cookie=\"" + var7Lifetime2 + "\"", (byte) -46, param3);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var7Lifetime2 + "\"", (byte) -46, param3);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

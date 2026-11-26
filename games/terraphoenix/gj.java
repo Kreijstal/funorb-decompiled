@@ -183,7 +183,7 @@ final class gj {
           if (param2 != 0) {
             return;
           }
-          kb.a(param6, param20, param18, (byte) -83);
+          Bzip2State.a(param6, param20, param18, (byte) -83);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

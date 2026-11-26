@@ -196,8 +196,8 @@ final class sc implements Runnable {
         u.field_f[1] = hn.field_d;
         u.field_f[14] = ob.field_E;
         u.field_f[12] = na.field_q;
-        u.field_f[0] = lg.field_l;
-        u.field_f[2] = lg.field_h;
+        u.field_f[0] = NanoFrameTimer.field_l;
+        u.field_f[2] = NanoFrameTimer.field_h;
         u.field_f[6] = ej.field_o;
         u.field_f[3] = il.field_d;
         u.field_f[7] = jh.field_bb;

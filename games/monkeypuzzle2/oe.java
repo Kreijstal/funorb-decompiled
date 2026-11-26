@@ -108,7 +108,7 @@ final class oe {
         int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var1_intLifetime1;
         try {
-          ne.field_c.a(true);
+          ne.field_c.resetTiming(true);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             dl.field_a[var1_int] = 0L;
           }

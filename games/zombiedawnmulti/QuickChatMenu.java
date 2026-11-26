@@ -502,7 +502,7 @@ final class QuickChatMenu extends UiComponent {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = PopupMenuBuilder.field_L;
+                      var22 = Bzip2State.field_L;
                       if (var15 > 0 &&
                         null != SpriteHotspot.field_o &&
                         var15 <= SpriteHotspot.field_o.length &&

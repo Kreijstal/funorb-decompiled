@@ -14,11 +14,11 @@ final class ui {
         }
         var2 = DualLinkNode.field_m[param0];
         if (param0 == 10 && (g.field_Hb == 0 ||
-          dc.field_z == 0 ||
+          Bzip2State.field_z == 0 ||
           g.field_Hb == 12 ||
-          12 == dc.field_z ||
+          12 == Bzip2State.field_z ||
           g.field_Hb == 1 ||
-          dc.field_z == 1)) {
+          Bzip2State.field_z == 1)) {
           var2 = DualLinkNode.field_m[9];
         }
         if (param0 == 28) {

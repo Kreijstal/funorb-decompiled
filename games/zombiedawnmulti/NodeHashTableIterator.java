@@ -42,8 +42,8 @@ final class NodeHashTableIterator implements Iterator {
           var1_int = RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
           IntrusiveDequeCursor.field_i = NetworkGameClient.field_x - (var1_int >> 1);
           RandomAccessCacheFile.field_e = IntrusiveDequeCursor.field_i + var1_int;
-          PopupMenuBuilder.field_M = TextInputWidget.field_Q - (ArrayWidgetGroup.field_F >> 1);
-          var2 = PopupMenuBuilder.field_M;
+          Bzip2State.field_M = TextInputWidget.field_Q - (ArrayWidgetGroup.field_F >> 1);
+          var2 = Bzip2State.field_M;
           for (var3 = 0; var3 < KeyboardListenerHelpers.field_e.length; var3++) {
             var4 = PackedArrayHelpers.field_a[var3];
             if (var4 < 0) {

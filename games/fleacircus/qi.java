@@ -157,7 +157,7 @@ final class qi {
               var11 = var13;
               var6 = var11;
               if (var3 == 1) {
-                fe.a(var13, var5_int, param0, var4, 9);
+                fe.decompress(var13, var5_int, param0, var4, 9);
               } else {
                 var7 = se.field_c;
                 synchronized (var7) {

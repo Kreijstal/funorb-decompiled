@@ -866,7 +866,7 @@ abstract class bi extends GameApplet {
             SectorCacheStore.field_c.b(true, 17);
           }
           if (var4 == 11) {
-            l.a(ii.a(false), -120);
+            Bzip2State.a(ii.a(false), -120);
           }
           if (12 == var4) {
             k.a(ii.a(false), (byte) 91, IntrusiveDeque.b(true));

@@ -235,9 +235,9 @@ final class ji extends kn {
                 stackIn_46_0 = ((var8 & 4) != 0);
                 j.field_u = stackIn_46_0;
                 stackIn_49_0 = (0 != (var8 & 2));
-                kh.field_o = stackIn_49_0;
+                NanoFrameTimer.field_o = stackIn_49_0;
                 if (qf.field_b) {
-                  kh.field_o = true;
+                  NanoFrameTimer.field_o = true;
                 }
               }
               stackIn_55_0 = ((16 & var8) != 0);
@@ -255,7 +255,7 @@ final class ji extends kn {
               ci.field_J = tk.field_h.readString(0);
               var12 = (CharSequence) ((Object) ci.field_J);
               NetworkArchiveRequest.field_A = ad.a(var12, -2);
-              gm.field_d = tk.field_h.readUnsignedByte(-114);
+              FrameTimer.field_d = tk.field_h.readUnsignedByte(-114);
               tb.field_f = NodeHashTableIterator.field_e;
               if (eh.field_K.b((byte) 31) == ec.field_i) {
                 ph.field_g.a(25799, bh.i(81));
@@ -271,14 +271,14 @@ final class ji extends kn {
               if (cl.field_d <= 0 &&
                 !j.field_u) {
                 try {
-                  u.a(true, "unzap", bh.i(81));
+                  JavaScriptBridge.callWithoutArguments(true, "unzap", bh.i(81));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var9_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  u.a(bh.i(81), true, new Object[]{tf.a(37, sj.field_i)}, "zap");
+                  JavaScriptBridge.callWithArguments(bh.i(81), true, new Object[]{tf.a(37, sj.field_i)}, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var9_ref_Throwable = decompiledCaughtException;

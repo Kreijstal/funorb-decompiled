@@ -160,7 +160,7 @@ final class hh extends pj {
               if (param0) {
                 hh.clearStaticReferences((byte) -44);
               }
-              var4 = (String) (fd.a(param1, "getcookies", (byte) 116));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", (byte) 116));
               stackIn_5_0 = var4;
               stackIn_5_1 = 59;
               stackIn_6_2 = !(param0);

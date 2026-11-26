@@ -68,7 +68,7 @@ final class bu {
           if (ol.a(param2, -124, param1)) {
             return false;
           }
-          if (cr.a(param1, param2, (byte) 52)) {
+          if (NanoFrameTimer.a(param1, param2, (byte) 52)) {
             return false;
           }
           if (SoftwareFramebuffer.containsNameOrReverse(param2, param1, -103)) {

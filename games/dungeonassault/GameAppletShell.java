@@ -252,7 +252,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    nk.field_Kb = o.field_o.a(hk.field_e, -108);
+                    nk.field_Kb = o.field_o.waitAndCountTicks(hk.field_e, -108);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;
@@ -329,7 +329,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_i = true;
             System.out.println("error_game_" + param1);
             try {
-              ee.a((byte) -21, m.c(true), "loggedout");
+              JavaScriptBridge.callWithoutArguments((byte) -21, m.c(true), "loggedout");
               if (param0 != -112) {
                 this.c(116);
               }

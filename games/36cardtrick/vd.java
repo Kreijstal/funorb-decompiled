@@ -84,7 +84,7 @@ final class vd extends DualLinkNode {
     final static void a(int param0, int param1) {
         try {
           try {
-            vh.a(new Object[]{new Integer(param0)}, "resizing", (byte) 115, mk.g(-123));
+            JavaScriptBridge.callWithArguments(new Object[]{new Integer(param0)}, "resizing", (byte) 115, mk.g(-123));
           } catch (Throwable throwable) {
           }
           if (param1 != -1) {

@@ -91,12 +91,12 @@ abstract class hk extends pb {
               var2_int = -109 / ((59 - param0) / 33);
               var3 = param1.getCodeBase();
               var4 = gh.a(param1, var3, (byte) 67).getFile();
-              hi.a(-3729, "updatelinks", param1, new Object[]{"home", var4 + "home.ws"});
-              hi.a(-3729, "updatelinks", param1, new Object[]{"gamelist", var4 + "togamelist.ws"});
-              hi.a(-3729, "updatelinks", param1, new Object[]{"serverlist", var4 + "toserverlist.ws"});
-              hi.a(-3729, "updatelinks", param1, new Object[]{"options", var4 + "options.ws"});
-              hi.a(-3729, "updatelinks", param1, new Object[]{"terms", var4 + "terms.ws"});
-              hi.a(-3729, "updatelinks", param1, new Object[]{"privacy", var4 + "privacy.ws"});
+              JavaScriptBridge.callWithArguments(-3729, "updatelinks", param1, new Object[]{"home", var4 + "home.ws"});
+              JavaScriptBridge.callWithArguments(-3729, "updatelinks", param1, new Object[]{"gamelist", var4 + "togamelist.ws"});
+              JavaScriptBridge.callWithArguments(-3729, "updatelinks", param1, new Object[]{"serverlist", var4 + "toserverlist.ws"});
+              JavaScriptBridge.callWithArguments(-3729, "updatelinks", param1, new Object[]{"options", var4 + "options.ws"});
+              JavaScriptBridge.callWithArguments(-3729, "updatelinks", param1, new Object[]{"terms", var4 + "terms.ws"});
+              JavaScriptBridge.callWithArguments(-3729, "updatelinks", param1, new Object[]{"privacy", var4 + "privacy.ws"});
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

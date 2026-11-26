@@ -762,7 +762,7 @@ final class RenderingSupport007 {
                 }
               }
             } else {
-              objectLocal5 = MixedSupport026.stringState0127;
+              objectLocal5 = NanoFrameTimer.stringState0127;
             }
             if (0 > integerLocal4 &&
               MixedSupport048.mixedSupport072State0001 != null &&
@@ -909,7 +909,7 @@ final class RenderingSupport007 {
               frameRemainderLocal21 = false;
             }
             else {
-              objectLocal13 = MixedSupport026.stringState0127;
+              objectLocal13 = NanoFrameTimer.stringState0127;
             }
           } else {
             objectLocal13 = TextFieldValidator.stringState0633;
@@ -1585,7 +1585,7 @@ final class RenderingSupport007 {
                 }
               }
             } else {
-              objectLocal6 = MixedSupport026.stringState0127;
+              objectLocal6 = NanoFrameTimer.stringState0127;
             }
             if (integerLocal5 < 0 &&
               null != MixedSupport048.mixedSupport072State0001 &&

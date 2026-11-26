@@ -43,7 +43,7 @@ final class dl extends si {
               if (sg.field_a) {
                 param0 = tf.field_ib;
               } else {
-                param0 = m.field_c;
+                param0 = FrameTimer.field_c;
               }
               param1 = 2;
               pi.field_O.b((byte) 37, qf.field_c);

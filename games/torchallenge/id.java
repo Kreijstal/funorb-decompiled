@@ -128,7 +128,7 @@ final class id {
         int var2 = TorChallenge.field_F ? 1 : 0;
         int var1_intLifetime1;
         try {
-          hl.field_b.a(65280);
+          hl.field_b.resetTiming(65280);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             cj.field_l[var1_int] = 0L;
           }

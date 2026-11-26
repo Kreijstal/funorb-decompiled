@@ -149,7 +149,7 @@ final class IntrusiveDeque {
             var6 = var12.storedWidth / 2;
             var12.d();
             tk.field_R.a(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
-            ek.field_G.a(ni.a(new String[]{kg.field_db}, 0, jl.field_d), var6, 60, 16777215, -1);
+            ek.field_G.a(ni.a(new String[]{kg.field_db}, 0, FrameTimer.field_d), var6, 60, 16777215, -1);
             tk.field_R.a(ni.a(new String[]{LevelEntity.field_J}, 0, LocalizedStrings.field_t), var6, 110, 16777215, -1);
             ek.field_G.a(ni.a(new String[]{LevelEntity.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
             tk.field_R.a(ub.field_m, var6, 180, 16777215, -1);

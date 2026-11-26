@@ -84,7 +84,7 @@ final class lc extends ro {
         int var7;
         if (-param5 + param1 >= RasterBuffer.field_e &&
           qg.field_z >= param1 + param5 &&
-          j.field_q <= param3 - param5 &&
+          Bzip2State.field_q <= param3 - param5 &&
           param3 + param5 <= qk.field_p) {
           mh.a(param0, param1, param5, param6, param3, 15783, param4);
         } else {

@@ -60,9 +60,9 @@ final class ca {
           PacketBuffer.field_k = DelegatingCanvas.a(param3 ^ 25118, "jagex_logo_grey", "commonui", param1);
           eg.field_c = gl.a("button", param1, "commonui", -13244);
           gh.field_n = ProxyAuthenticationRequiredException.a("validation", "commonui", 0, param1);
-          me.field_c = (ee) ((Object) ec.a("commonui", param2, false, "arezzo12", param1));
-          j.field_C = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14", param1));
-          vd.field_p = (ee) ((Object) ec.a("commonui", param2, false, "arezzo14bold", param1));
+          me.field_c = (ee) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo12", param1));
+          j.field_C = (ee) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14", param1));
+          vd.field_p = (ee) ((Object) NanoFrameTimer.a("commonui", param2, false, "arezzo14bold", param1));
           var17 = new RgbSprite(param0.a((byte) 7, "", "button.gif"), (java.awt.Component) ((Object) tb.field_c));
           lh.a("dropdown", param1, "commonui", 105);
           var5 = lk.a("screen_options", "commonui", (byte) 98, param1);
@@ -112,11 +112,11 @@ final class ca {
         }
     }
 
-    final static gk a(boolean param0) {
+    final static FrameTimer a(boolean param0) {
         if (param0) {
-          return (gk) null;
+          return (FrameTimer) null;
         }
-        return (gk) ((Object) new ec());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     public static void clearStaticReferences(byte param0) {

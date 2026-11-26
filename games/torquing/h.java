@@ -25,8 +25,8 @@ final class h extends IntrusiveNode {
           if (param1 != -8662) {
             h.a(10);
           }
-          param0.addKeyListener(ha.field_b);
-          param0.addFocusListener(ha.field_b);
+          param0.addKeyListener(FrameTimer.field_b);
+          param0.addFocusListener(FrameTimer.field_b);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "h.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

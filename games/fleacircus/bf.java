@@ -79,15 +79,15 @@ final class bf {
             try {
               var4 = param1.getCodeBase();
               var3 = ib.a(param1, var4, param0 ^ -26699).getFile();
-              eb.a("updatelinks", new Object[]{"home", var3 + "home.ws"}, -11745, param1);
-              eb.a("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, -11745, param1);
-              eb.a("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0 - 43755, param1);
-              eb.a("updatelinks", new Object[]{"options", var3 + "options.ws"}, -11745, param1);
-              eb.a("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, -11745, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"home", var3 + "home.ws"}, -11745, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"gamelist", var3 + "togamelist.ws"}, -11745, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0 - 43755, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"options", var3 + "options.ws"}, -11745, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"terms", var3 + "terms.ws"}, -11745, param1);
               if (param0 != 32010) {
                 field_d = (PcmSample) null;
               }
-              eb.a("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 43755, param1);
+              JavaScriptBridge.callWithArguments("updatelinks", new Object[]{"privacy", var3 + "privacy.ws"}, param0 - 43755, param1);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

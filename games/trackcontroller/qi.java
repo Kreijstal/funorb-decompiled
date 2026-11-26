@@ -429,7 +429,7 @@ final class qi {
         int var2Lifetime1;
         try {
           int var1_int = -103 % ((-24 - param0) / 34);
-          wl.field_i.b(-19635);
+          wl.field_i.resetTiming(-19635);
           for (var2 = 0; var2 < 32; var2++) {
             BufferedSocket.field_a[var2] = 0L;
           }

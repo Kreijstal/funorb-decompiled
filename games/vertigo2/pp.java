@@ -163,7 +163,7 @@ final class pp extends IntrusiveNode {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (je.a(param0, false, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param0, false, "getcookies"));
               var4 = PcmOutputWorker.a((byte) -9, ';', var3);
               for (var5 = param1; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

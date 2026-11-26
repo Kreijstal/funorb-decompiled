@@ -16,7 +16,7 @@ class sd extends cn {
             field_v = (String) null;
           }
           try {
-            a.a(BufferedRandomAccessFile.c(param1 - 1), new Object[]{new Integer(param0)}, "resizing", -13730);
+            JavaScriptBridge.callWithArguments(BufferedRandomAccessFile.c(param1 - 1), new Object[]{new Integer(param0)}, "resizing", -13730);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

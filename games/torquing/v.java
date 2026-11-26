@@ -300,14 +300,14 @@ final class v {
               var7 = var7 - (var6 << 1);
               var11 = -var6 + param0;
               var12 = param0 + var6;
-              if (var12 >= j.field_q &&
+              if (var12 >= Bzip2State.field_q &&
                 var11 <= qk.field_p) {
                 var13 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + var5_int, param3 ^ 29);
                 var14 = ln.a(qg.field_z, RasterBuffer.field_e, param1 - var5_int, 92);
                 if (var12 <= qk.field_p) {
                   di.a(var14, (byte) -96, param2, qd.field_a[var12], var13);
                 }
-                if (j.field_q <= var11) {
+                if (Bzip2State.field_q <= var11) {
                   di.a(var14, (byte) -93, param2, qd.field_a[var11], var13);
                 }
               }
@@ -315,7 +315,7 @@ final class v {
             var5_int++;
             var11Lifetime1 = param0 - var5_int;
             var12Lifetime1 = param0 + var5_int;
-            if (j.field_q > var12Lifetime1) {
+            if (Bzip2State.field_q > var12Lifetime1) {
               continue;
             }
             if (qk.field_p < var11Lifetime1) {
@@ -326,7 +326,7 @@ final class v {
             if (qk.field_p >= var12Lifetime1) {
               di.a(var14Lifetime1, (byte) -119, param2, qd.field_a[var12Lifetime1], var13Lifetime1);
             }
-            if (var11Lifetime1 < j.field_q) {
+            if (var11Lifetime1 < Bzip2State.field_q) {
               continue;
             }
             di.a(var14Lifetime1, (byte) -120, param2, qd.field_a[var11Lifetime1], var13Lifetime1);

@@ -228,7 +228,7 @@ public final class HostileSpawn extends NetworkGameClient {
               id.field_p = ei.a(vd.field_C, 89, "", "impact_gun");
               fg.a("", "impact_rail", vd.field_C, false);
               MouseInput.a("", 116, "scorchmark_alpha", vd.field_C);
-              lg.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
+              NanoFrameTimer.field_k = fg.a("", "spatter_spawn", vd.field_C, false);
               break;
             }
             oa.field_m[1].field_D[var6] = 14342656;
@@ -383,7 +383,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[205] = j.field_a;
           ia.field_l[193] = cf.field_t;
           ia.field_l[144] = sj.field_b;
-          ia.field_l[139] = in.field_d;
+          ia.field_l[139] = FrameTimer.field_d;
           if (param0 <= 113) {
             this.o(-63);
           }
@@ -410,7 +410,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[155] = o.field_g;
           ia.field_l[59] = PacketBuffer.field_j;
           ia.field_l[169] = ld.field_o;
-          ia.field_l[117] = ck.field_C;
+          ia.field_l[117] = Bzip2State.field_C;
           ia.field_l[80] = qa.field_g[7];
           ia.field_l[85] = bl.field_c;
           ia.field_l[90] = NodeHashTableIterator.field_d;
@@ -1118,7 +1118,7 @@ public final class HostileSpawn extends NetworkGameClient {
           oa.clearStaticReferences(32);
           ln.clearStaticReferences(31311);
           nl.resetStaticState(false);
-          in.clearStaticReferences(-107);
+          FrameTimer.clearStaticReferences(-107);
           AwtRasterBuffer.clearStaticReferences((byte) -102);
           ja.a(26);
           FullscreenFocusCanvas.clearStaticReferences((byte) -27);
@@ -1247,7 +1247,7 @@ public final class HostileSpawn extends NetworkGameClient {
           rg.clearStaticReferences(1);
           ByteStorage.clearStaticReferences((byte) -93);
           wf.clearStaticReferences();
-          ck.clearStaticReferences(-665);
+          Bzip2State.clearStaticReferences(-665);
           ng.clearStaticReferences(10448);
           hf.clearStaticReferences(false);
           ve.clearStaticReferences(0);
@@ -1275,7 +1275,7 @@ public final class HostileSpawn extends NetworkGameClient {
           mj.clearStaticReferences((byte) 122);
           fe.clearStaticReferences((byte) -112);
           ProxyAuthenticationRequiredException.clearStaticReferences(-128);
-          lg.resetStaticState((byte) -121);
+          NanoFrameTimer.resetStaticState((byte) -121);
           ImageProducerRasterBuffer.resetStaticState((byte) 107);
           hg.clearStaticReferences(0);
           ak.clearStaticReferences(param0 - 15701);
@@ -1424,7 +1424,7 @@ public final class HostileSpawn extends NetworkGameClient {
           of.field_c = new RgbSprite[7][];
           cb.field_g = new RgbSprite[7][];
           ArchiveIndex.field_f = new RgbSprite[7][];
-          ck.field_y = new RgbSprite[7][];
+          Bzip2State.field_y = new RgbSprite[7][];
           lb.field_a = new RgbSprite[7][];
           pa.field_i = new RgbSprite[7][];
           bf.field_f = new RgbSprite[7][];
@@ -1885,7 +1885,7 @@ public final class HostileSpawn extends NetworkGameClient {
                           he.field_t.e(0)) {
                           if (te.field_J != null && (!te.field_J.a(-15879) ||
                             !te.field_J.e(param0 ^ 4))) {
-                            gj.a(param0 ^ 16, DirectByteStorage.a(in.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
+                            gj.a(param0 ^ 16, DirectByteStorage.a(FrameTimer.field_a, te.field_J, cf.field_r, (byte) -58), 50.0f);
                             return false;
                           }
                           if (wd.field_a.a(param0 - 15883) &&
@@ -1905,13 +1905,13 @@ public final class HostileSpawn extends NetworkGameClient {
                                   this.u(111);
                                   return false;
                                 }
-                                gj.a(param0 + 16, s.a(ResourceArchive.field_a, "kartika13", 84, cf.field_r, in.field_a), 17.0f);
+                                gj.a(param0 + 16, s.a(ResourceArchive.field_a, "kartika13", 84, cf.field_r, FrameTimer.field_a), 17.0f);
                                 return false;
                               }
                               gj.a(20, s.a(wd.field_a, "kartika13", 113, cl.field_h, lj.field_r), 11.0f);
                               return false;
                             }
-                            gj.a(20, s.a(ResourceArchive.field_a, "basicfont12", 125, cf.field_r, in.field_a), 15.0f);
+                            gj.a(20, s.a(ResourceArchive.field_a, "basicfont12", 125, cf.field_r, FrameTimer.field_a), 15.0f);
                             return false;
                           }
                           gj.a(20, s.a(wd.field_a, "basicfont12", param0 ^ 57, cl.field_h, lj.field_r), 14.0f);
@@ -2175,11 +2175,11 @@ public final class HostileSpawn extends NetworkGameClient {
         int var2_intLifetime1;
         try {
           q.field_n = q.field_n + j.field_c;
-          in.field_b = in.field_b - j.field_c;
+          FrameTimer.field_b = FrameTimer.field_b - j.field_c;
           if (ig.field_L != 0) {
-            lg.field_m = lg.field_m + 1;
+            NanoFrameTimer.field_m = NanoFrameTimer.field_m + 1;
             q.field_n = q.field_n + fa.field_a;
-            in.field_b = in.field_b - pf.field_o * lg.field_m;
+            FrameTimer.field_b = FrameTimer.field_b - pf.field_o * NanoFrameTimer.field_m;
             fa.field_a = fa.field_a - pf.field_o;
           }
           if (m.field_l) {
@@ -2491,7 +2491,7 @@ public final class HostileSpawn extends NetworkGameClient {
           rj.field_N = fg.a("", "Scenery_68", vd.field_C, false);
           BufferedSocket.field_f = fg.a("", "Scenery_69", vd.field_C, false);
           dd.field_j = fg.a("", "Scenery_70", vd.field_C, false);
-          ck.field_C = fg.a("", "Scenery_71", vd.field_C, false);
+          Bzip2State.field_C = fg.a("", "Scenery_71", vd.field_C, false);
           tb.field_L = fg.a("", "Scenery_72", vd.field_C, false);
           wd.field_b = fg.a("", "Scenery_73", vd.field_C, false);
           ub.field_c = fg.a("", "Scenery_74", vd.field_C, false);
@@ -2535,7 +2535,7 @@ public final class HostileSpawn extends NetworkGameClient {
           le.field_xb = fg.a("", "Scenery_87", vd.field_C, false);
           DiskArchiveRequest.field_C = fg.a("", "Scenery_88", vd.field_C, false);
           DiskArchiveRequest.field_z = fg.a("", "Scenery_89", vd.field_C, false);
-          in.field_d = fg.a("", "Scenery_90", vd.field_C, false);
+          FrameTimer.field_d = fg.a("", "Scenery_90", vd.field_C, false);
           IsaacGenerator.field_j = MouseInput.a("", param0 ^ -13180, "Scenery_91", vd.field_C);
           ln.field_g = MouseInput.a("", -91, "Scenery_92", vd.field_C);
           li.field_y = fg.a("", "Scenery_93", vd.field_C, false);

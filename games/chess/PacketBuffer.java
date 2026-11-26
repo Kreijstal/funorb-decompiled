@@ -124,7 +124,7 @@ class PacketBuffer extends IntrusiveNode {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!gm.a(param1, (byte) -86)) {
+          if (!FrameTimer.a(param1, (byte) -86)) {
             return false;
           }
           if (param0 == null) {

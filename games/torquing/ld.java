@@ -198,7 +198,7 @@ final class ld implements WidgetRenderer {
           var6_ref.unlink(param0 - 123);
           var7_ref = (ae) (SpriteState.field_x.beginBackward(0));
           while (null != var7_ref) {
-            if (ha.a((byte) 75, var6_ref, var7_ref)) {
+            if (FrameTimer.a((byte) 75, var6_ref, var7_ref)) {
               var7_ref = (ae) (SpriteState.field_x.nextBackward(-24059));
               if (var8 == 0) {
                 continue;

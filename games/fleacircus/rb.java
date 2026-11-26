@@ -197,14 +197,14 @@ final class rb extends gj implements da {
               if (0 >= wc.field_q &&
                 !ed.field_a) {
                 try {
-                  eb.a("unzap", BoundedRandomAccessFile.getApplet((byte) -65), -250);
+                  JavaScriptBridge.callWithoutArguments("unzap", BoundedRandomAccessFile.getApplet((byte) -65), -250);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  eb.a("zap", new Object[]{ResourceArchive.a((byte) -70, aj.field_w)}, -11745, BoundedRandomAccessFile.getApplet((byte) -126));
+                  JavaScriptBridge.callWithArguments("zap", new Object[]{ResourceArchive.a((byte) -70, aj.field_w)}, -11745, BoundedRandomAccessFile.getApplet((byte) -126));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -286,7 +286,7 @@ final class kb extends kn {
           var7 = Chess.field_G;
           try {
             try {
-              var3 = (String) (u.a(true, "getcookies", param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", param1));
               if (param0 != -2147483648) {
                 kb.j(11);
               }

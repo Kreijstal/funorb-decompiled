@@ -199,7 +199,7 @@ class ha extends pc implements ql {
           if (param2 != 3) {
             if (4 != param2) {
               if (param2 == 6) {
-                var6.a((byte) 108, 9, uf.field_k);
+                var6.a((byte) 108, 9, NanoFrameTimer.field_k);
               } else {
                 if (param2 == 9) {
                   var6.a(0, (of) (this), qa.field_b);

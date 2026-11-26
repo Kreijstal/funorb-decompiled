@@ -179,7 +179,7 @@ final class vk extends og implements ho, vd {
         if (param0 <= 4) {
           vk.j(-59);
         }
-        if (ke.field_b[jo.field_o] >= uo.field_o) {
+        if (FrameTimer.field_b[jo.field_o] >= uo.field_o) {
           if (var1 > 0 &&
             jo.field_o == 1) {
             wd.a(-111, 65535, uo.field_o - 1, dk.field_h, var1, 70, 0);
@@ -197,7 +197,7 @@ final class vk extends og implements ho, vd {
         }
         if (rc.a(-116) &&
           uo.field_o > 0 &&
-          uo.field_o <= ke.field_b[jo.field_o]) {
+          uo.field_o <= FrameTimer.field_b[jo.field_o]) {
           MouseInputHandler.field_b = (ue) ((Object) new nc((m) (var3), var2));
         } else {
           if (0 != pc.field_y) {

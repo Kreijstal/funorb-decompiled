@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ih {
-    private static kb field_a;
+    private static Bzip2State field_a;
 
-    private final static byte a(kb param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)ih.a(8, param0);
     }
 
-    private final static void b(kb param0) {
+    private final static void b(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -429,7 +429,7 @@ final class ih {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -453,7 +453,7 @@ final class ih {
         return stackIn_2_0;
     }
 
-    private final static int a(int param0, kb param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_H < param0) {
           param1.field_l = param1.field_l << 8 | param1.field_F[param1.field_q] & 255;
@@ -469,7 +469,7 @@ final class ih {
         return var2;
     }
 
-    private final static void c(kb param0) {
+    private final static void c(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -600,7 +600,7 @@ final class ih {
         return;
     }
 
-    private final static void d(kb param0) {
+    private final static void d(Bzip2State param0) {
         int var1 = 0;
         param0.field_t = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -611,11 +611,11 @@ final class ih {
         }
     }
 
-    private final static byte e(kb param0) {
+    private final static byte e(Bzip2State param0) {
         return (byte)ih.a(1, param0);
     }
 
     static {
-        field_a = new kb();
+        field_a = new Bzip2State();
     }
 }

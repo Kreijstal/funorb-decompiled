@@ -282,8 +282,8 @@ final class bb {
           jf.field_f.field_Bb = wk.a(param0, 1, "downbutton_mouseover", "lobby");
           jf.field_f.field_hb = wk.a(param0, 1, "downbutton_mouseheld", "lobby");
           jf.field_f.field_nb = wk.a(param0, 1, "downbutton_disabled", "lobby");
-          ia.field_o = new pd(0L, wk.field_f, jf.field_f, bj.field_ob, bf.field_K);
-          SecondaryNodeDeque.field_b = new ok(0L, (ci) null, gm.field_b, ia.field_o, pa.field_m, (String) null, (String) null);
+          Bzip2State.field_o = new pd(0L, wk.field_f, jf.field_f, bj.field_ob, bf.field_K);
+          SecondaryNodeDeque.field_b = new ok(0L, (ci) null, FrameTimer.field_b, Bzip2State.field_o, pa.field_m, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -263,7 +263,7 @@ final class aj {
                 null != hf.field_d) {
                 vl.a(eb.field_l.field_q, 10);
                 if (null != hf.field_d) {
-                  jl.a((byte) 121);
+                  FrameTimer.a((byte) 121);
                 }
                 if (!bh.field_p &&
                   !GameClientBase.p(param0 ^ -99)) {
@@ -275,7 +275,7 @@ final class aj {
               } else if (SocketConnector.field_a &&
                 null == eb.field_l.field_q &&
                 hf.field_d != null) {
-                jl.a((byte) 123);
+                FrameTimer.a((byte) 123);
                 if (!bh.field_p &&
                   !GameClientBase.p(-86)) {
                   wj.field_b.addLast(new eh(hf.field_d), -82);
@@ -289,7 +289,7 @@ final class aj {
                   SocketConnector.field_a = false;
                 }
                 if (null != hf.field_d) {
-                  jl.a((byte) 114);
+                  FrameTimer.a((byte) 114);
                   if (vh.field_d == null) {
                     MouseInputHandler.b((byte) 109);
                   }

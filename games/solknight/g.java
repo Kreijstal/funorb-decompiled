@@ -95,7 +95,7 @@ final class g {
               if (param1.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              fd.a(57, param0, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluate(57, param0, "document.cookie=\"" + var5 + "\"");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = decompiledCaughtException;

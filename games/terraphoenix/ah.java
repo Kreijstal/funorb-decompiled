@@ -64,10 +64,10 @@ final class ah extends ng {
           if (param0 != 48) {
             field_E = (char[]) null;
           }
-          var4 = (ji) (vc.field_d.beginBackward(9272));
+          var4 = (ji) (FrameTimer.field_d.beginBackward(9272));
           while (var4 != null) {
             nc.a(var4, 75, param1);
-            var4 = (ji) (vc.field_d.nextBackward((byte) -119));
+            var4 = (ji) (FrameTimer.field_d.nextBackward((byte) -119));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

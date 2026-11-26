@@ -480,11 +480,11 @@ final class dd extends ql {
         }
     }
 
-    final static in c(boolean param0) {
+    final static FrameTimer c(boolean param0) {
         if (param0) {
           field_i = (ja) null;
         }
-        return (in) ((Object) new lg());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final void c(int param0) {

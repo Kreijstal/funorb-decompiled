@@ -1653,7 +1653,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  bv.field_d = qq.a(var2, false);
+                  Bzip2State.field_d = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_age_tooltip");
                 if (null != var2) {
@@ -1769,7 +1769,7 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "create_emailvalid");
                 if (var2 != null) {
-                  bv.field_j = qq.a(var2, false);
+                  Bzip2State.field_j = qq.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_account_success");
                 if (var2 != null) {

@@ -45,7 +45,7 @@ abstract class ByteArrayStore {
         RuntimeException decompiledCaughtException = null;
         var2 = Main.field_T;
         try {
-          sd.field_c.a((byte) -116, lg.field_E, MouseWheelInput.field_a, true);
+          sd.field_c.a((byte) -116, Bzip2State.field_E, MouseWheelInput.field_a, true);
           sd.field_c.l(-2054);
           while (GzipInflater.b((byte) -114)) {
             sd.field_c.a(fd.field_n, 34, tb.field_d);

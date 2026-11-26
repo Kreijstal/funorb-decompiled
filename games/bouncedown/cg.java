@@ -1606,7 +1606,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 106, "create_alert_doublespace");
                 if (null != var2) {
-                  sg.field_c = c.a(0, var2);
+                  FrameTimer.field_c = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 109, "create_alert_passchars");
                 if (null != var2) {
@@ -2052,7 +2052,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 89, "next");
                 if (null != var2) {
-                  sg.field_b = c.a(0, var2);
+                  FrameTimer.field_b = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 118, "graphics_colon");
                 if (var2 != null) {

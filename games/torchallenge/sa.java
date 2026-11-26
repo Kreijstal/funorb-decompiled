@@ -37,11 +37,11 @@ final class sa {
         if (!gf.field_p.b(5, "commonui")) {
           return ij.field_x + " - " + gf.field_p.a(125, "commonui") + "%";
         }
-        if (!jl.field_b.b(-7957)) {
+        if (!FrameTimer.field_b.b(-7957)) {
           return wa.field_qb;
         }
-        if (!jl.field_b.b((byte) 79)) {
-          return bk.field_l + " - " + jl.field_b.c(126) + "%";
+        if (!FrameTimer.field_b.b((byte) 79)) {
+          return bk.field_l + " - " + FrameTimer.field_b.c(126) + "%";
         }
         return lh.field_y;
     }

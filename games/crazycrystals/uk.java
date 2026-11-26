@@ -124,12 +124,12 @@ final class uk extends nf {
               for (var2 = 0; var2 < 5; var2++) {
                 if (pc.field_u[var2] != null &&
                   pc.field_u[var2].field_h) {
-                  if (pc.field_u[var2].field_g[0] > ke.field_b[var2]) {
-                    var3 = pc.field_u[var2].field_g[0] - ke.field_b[var2];
+                  if (pc.field_u[var2].field_g[0] > FrameTimer.field_b[var2]) {
+                    var3 = pc.field_u[var2].field_g[0] - FrameTimer.field_b[var2];
                     MusicPatchPcmStream.field_n = MusicPatchPcmStream.field_n - var3;
                     ei.field_F = ei.field_F - 2 * var3;
                     sm.field_f = sm.field_f - var3 * 2;
-                    ke.field_b[var2] = pc.field_u[var2].field_g[0];
+                    FrameTimer.field_b[var2] = pc.field_u[var2].field_g[0];
                   }
                   pc.field_u[var2] = null;
                 }

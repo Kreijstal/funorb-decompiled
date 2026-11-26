@@ -47,7 +47,7 @@ final class kg {
           nb.a(param3, (byte) 124);
           lc.a(false, param3);
           p.a((byte) -68);
-          fi.c((byte) -96);
+          FrameTimer.c((byte) -96);
           qb.field_h = -mh.field_k + param1;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "kg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

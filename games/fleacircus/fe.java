@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fe {
-    private static gk field_a;
+    private static Bzip2State field_a;
 
     private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
@@ -49,7 +49,7 @@ final class fe {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -73,7 +73,7 @@ final class fe {
         return stackIn_2_0;
     }
 
-    private final static void d(gk param0) {
+    private final static void d(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -445,7 +445,7 @@ final class fe {
         }
     }
 
-    private final static void e(gk param0) {
+    private final static void e(Bzip2State param0) {
         int var1 = 0;
         param0.field_H = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -456,7 +456,7 @@ final class fe {
         }
     }
 
-    private final static int a(int param0, gk param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_z < param0) {
           param1.field_y = param1.field_y << 8 | param1.field_c[param1.field_p] & 255;
@@ -476,7 +476,7 @@ final class fe {
         field_a = null;
     }
 
-    private final static void b(gk param0) {
+    private final static void b(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -607,15 +607,15 @@ final class fe {
         return;
     }
 
-    private final static byte c(gk param0) {
+    private final static byte c(Bzip2State param0) {
         return (byte)fe.a(1, param0);
     }
 
-    private final static byte a(gk param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)fe.a(8, param0);
     }
 
     static {
-        field_a = new gk();
+        field_a = new Bzip2State();
     }
 }

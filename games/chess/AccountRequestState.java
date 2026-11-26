@@ -36,7 +36,7 @@ final class AccountRequestState {
             field_b = 26;
           }
           while (var2_int < param0.length()) {
-            if (!gm.a(param0.charAt(var2_int), (byte) -68)) {
+            if (!FrameTimer.a(param0.charAt(var2_int), (byte) -68)) {
               return false;
             }
             var2_int++;

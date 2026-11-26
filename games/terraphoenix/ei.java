@@ -406,11 +406,11 @@ abstract class ei extends kh {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -124 % ((param0 - 26) / 49);
-          if (vc.field_a.a(-71) &&
-            !param1.equals(vc.field_a.b(-110))) {
-            vc.field_a = UiWidget.b(param1, 20);
+          if (FrameTimer.field_a.a(-71) &&
+            !param1.equals(FrameTimer.field_a.b(-110))) {
+            FrameTimer.field_a = UiWidget.b(param1, 20);
           }
-          stackIn_5_0 = vc.field_a;
+          stackIn_5_0 = FrameTimer.field_a;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1558,7 +1558,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 96, "MODELNAME_LMG");
                 if (null != var2) {
-                  vc.field_b = ll.a(0, var2);
+                  FrameTimer.field_b = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 74, "MODELNAME_RPG");
                 if (null != var2) {

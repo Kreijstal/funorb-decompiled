@@ -12,7 +12,7 @@ final class ka {
             if (param1 != -27844) {
               ka.a(-22);
             }
-            oa.a(kk.c(-14047), 22347, "resizing", new Object[]{new Integer(param0)});
+            JavaScriptBridge.callWithArguments(kk.c(-14047), 22347, "resizing", new Object[]{new Integer(param0)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -42,7 +42,7 @@ final class ka {
         RuntimeException decompiledCaughtException = null;
         var2 = Lexicominos.field_L ? 1 : 0;
         try {
-          ug.field_A.a(rk.field_g, true, mk.field_m, (byte) 124);
+          ug.field_A.a(NanoFrameTimer.field_g, true, mk.field_m, (byte) 124);
           ug.field_A.f(true);
           while (IterableNodeHashTable.a((byte) -72)) {
             ug.field_A.a((byte) 86, pe.field_b, da.field_b);

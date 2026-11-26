@@ -38,17 +38,17 @@ final class be extends pj {
             !(kb.field_b >= 7))) {
             if (var5 <= kd.field_b[kb.field_b]) {
               var4 = ea.field_p[kb.field_b] - 720 + ci.field_sb;
-              var3 = rj.field_b;
+              var3 = FrameTimer.field_b;
               var5 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4));
             }
-            rj.field_b = (32 + kd.field_b[kb.field_b]) * var3 / var5;
+            FrameTimer.field_b = (32 + kd.field_b[kb.field_b]) * var3 / var5;
             ci.field_sb = -ea.field_p[kb.field_b] + 720 + (32 + kd.field_b[kb.field_b]) * var4 / var5;
             jj.field_t = (int)(Math.atan2((double)(-var3), (double)(-var4)) * 128.0 / 3.141592653589793);
-            var3 = rj.field_b;
+            var3 = FrameTimer.field_b;
             var4 = ci.field_sb + (ea.field_p[kb.field_b] - 720);
             break regionExit1;
           }
-          var3 = rj.field_b;
+          var3 = FrameTimer.field_b;
           var4 = ci.field_sb + ea.field_p[kb.field_b] - 720;
         }
         var5 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4));
@@ -80,12 +80,12 @@ final class be extends pj {
                   wb.field_b = 13;
                 }
                 if (2 > SectorCacheStore.field_h) {
-                  m.a(0, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
+                  m.a(0, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
                 } else {
                   var6 = var3 * 128 / var5;
                   var7 = 128 * var4 / var5;
-                  m.a(0, (ci.field_sb << 4) + var6, -var7 + (rj.field_b << 4), (byte) -6, var7, var6);
-                  m.a(0, -var6 + (ci.field_sb << 4), var7 + (rj.field_b << 4), (byte) -6, var7, var6);
+                  m.a(0, (ci.field_sb << 4) + var6, -var7 + (FrameTimer.field_b << 4), (byte) -6, var7, var6);
+                  m.a(0, -var6 + (ci.field_sb << 4), var7 + (FrameTimer.field_b << 4), (byte) -6, var7, var6);
                 }
               }
             }
@@ -110,12 +110,12 @@ final class be extends pj {
                     wb.field_b = 18;
                   }
                   if (SectorCacheStore.field_h < 2) {
-                    m.a(1, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 32 / var5, 32 * var3 / var5);
+                    m.a(1, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 32 / var5, 32 * var3 / var5);
                   } else {
                     var6 = 32 * (var4 + var3) / var5;
                     var7 = (-var3 + var4) * 32 / var5;
-                    m.a(1, (ci.field_sb << 4) + var6 * 4, -(var7 * 4) + (rj.field_b << 4), (byte) -6, var7, var6);
-                    m.a(1, (ci.field_sb << 4) + var7 * 4, (rj.field_b << 4) + 4 * var6, (byte) -6, var6, -var7);
+                    m.a(1, (ci.field_sb << 4) + var6 * 4, -(var7 * 4) + (FrameTimer.field_b << 4), (byte) -6, var7, var6);
+                    m.a(1, (ci.field_sb << 4) + var7 * 4, (FrameTimer.field_b << 4) + 4 * var6, (byte) -6, var6, -var7);
                   }
                 }
               }
@@ -140,7 +140,7 @@ final class be extends pj {
                 if (SectorCacheStore.field_h > 0) {
                   wb.field_b = 25;
                 }
-                m.a(2, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 96 / var5, var3 * 96 / var5);
+                m.a(2, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 96 / var5, var3 * 96 / var5);
                 break;
               case 3:
                 if (wb.field_b > 0) {
@@ -160,7 +160,7 @@ final class be extends pj {
                 if (SectorCacheStore.field_h > 0) {
                   wb.field_b = 37;
                 }
-                m.a(3, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 96 / var5, var3 * 96 / var5);
+                m.a(3, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 96 / var5, var3 * 96 / var5);
                 break;
               case 4:
                 if (wb.field_b > 0) {
@@ -174,15 +174,15 @@ final class be extends pj {
                   mb.a(true, 11, 256);
                   wb.field_b = 8;
                   if (SectorCacheStore.field_h >= 0) {
-                    m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 256 / var5, var3 * 256 / var5);
+                    m.a(4, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 256 / var5, var3 * 256 / var5);
                   }
                   if (SectorCacheStore.field_h >= 1) {
-                    m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 256 * var4 / var5 - var3 * 32 / var5, 256 * var3 / var5 + var4 * 32 / var5);
-                    m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 256 * var4 / var5 + 32 * var3 / var5, -(var4 * 32 / var5) + var3 * 256 / var5);
+                    m.a(4, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, 256 * var4 / var5 - var3 * 32 / var5, 256 * var3 / var5 + var4 * 32 / var5);
+                    m.a(4, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, 256 * var4 / var5 + 32 * var3 / var5, -(var4 * 32 / var5) + var3 * 256 / var5);
                   }
                   if (2 <= SectorCacheStore.field_h) {
-                    m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 192 * var4 / var5 - 48 * var3 / var5, 192 * var3 / var5 + var4 * 48 / var5);
-                    m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 192 * var4 / var5 + 48 * var3 / var5, -(48 * var4 / var5) + 192 * var3 / var5);
+                    m.a(4, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, 192 * var4 / var5 - 48 * var3 / var5, 192 * var3 / var5 + var4 * 48 / var5);
+                    m.a(4, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, 192 * var4 / var5 + 48 * var3 / var5, -(48 * var4 / var5) + 192 * var3 / var5);
                   }
                 }
                 break;
@@ -198,7 +198,7 @@ final class be extends pj {
                 }
                 mb.a(true, 5, 256);
                 wb.field_b = 8;
-                m.a(5, ci.field_sb << 4, rj.field_b << 4, (byte) -6, (128 - SectorCacheStore.field_h * 32) * var4 / var5, (128 - 32 * SectorCacheStore.field_h) * var3 / var5);
+                m.a(5, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, (128 - SectorCacheStore.field_h * 32) * var4 / var5, (128 - 32 * SectorCacheStore.field_h) * var3 / var5);
                 break;
               default:
                 break;
@@ -224,7 +224,7 @@ final class be extends pj {
                   if (wb.field_b >= 50) {
                     break;
                   }
-                  m.a(7, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
+                  m.a(7, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
                 }
                 break;
               case 6:
@@ -247,7 +247,7 @@ final class be extends pj {
                   wb.field_b == 70 ||
                   wb.field_b == 50) {
                   mb.a(true, 17, 256);
-                  m.a(6, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
+                  m.a(6, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
                 }
                 if (80 == wb.field_b ||
                   wb.field_b == 60 ||
@@ -256,8 +256,8 @@ final class be extends pj {
                   wb.field_b == 70 ||
                   85 == wb.field_b)) {
                   mb.a(true, 17, 256);
-                  m.a(6, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5 + var3 * 64 / var5, var3 * 128 / var5 - var4 * 64 / var5);
-                  m.a(6, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5 - var3 * 64 / var5, var4 * 64 / var5 + 128 * var3 / var5);
+                  m.a(6, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 128 / var5 + var3 * 64 / var5, var3 * 128 / var5 - var4 * 64 / var5);
+                  m.a(6, ci.field_sb << 4, FrameTimer.field_b << 4, (byte) -6, var4 * 128 / var5 - var3 * 64 / var5, var4 * 64 / var5 + 128 * var3 / var5);
                 }
                 if (wb.field_b == 50) {
                   if (SectorCacheStore.field_h != 2) {

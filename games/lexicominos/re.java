@@ -26,7 +26,7 @@ abstract class re extends ql {
           }
           return super.f((byte) -102);
         }
-        if (this.field_R == ok.field_k) {
+        if (this.field_R == Bzip2State.field_k) {
           fieldTemp$0 = this.field_V + 1;
           this.field_V = this.field_V + 1;
           if (fieldTemp$0 != this.field_S) {
@@ -142,7 +142,7 @@ abstract class re extends ql {
     }
 
     final void h(byte param0) {
-        if (ok.field_k == this.field_R) {
+        if (Bzip2State.field_k == this.field_R) {
           return;
         }
         if (param0 == 38) {
@@ -210,10 +210,10 @@ abstract class re extends ql {
             this.field_V = 0;
             return;
           }
-          if (this.field_R == ok.field_k) {
+          if (this.field_R == Bzip2State.field_k) {
             return;
           }
-          this.field_R = ok.field_k;
+          this.field_R = Bzip2State.field_k;
           this.field_V = 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

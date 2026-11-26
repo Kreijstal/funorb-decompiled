@@ -285,7 +285,7 @@ public final class Chess extends gb {
                   if (n.field_e == n.field_f) {
                     var2 = kg.b(true);
                     if (var2 == 1) {
-                      ia.field_l = true;
+                      Bzip2State.field_l = true;
                       hj.a(0, -2, false);
                     }
                     this.a(true, 12);
@@ -441,7 +441,7 @@ public final class Chess extends gb {
           }
           if (wg.field_B == 10 &&
             pk.field_j) {
-            kh.c(17);
+            NanoFrameTimer.c(17);
             continue;
           }
           if (wg.field_B == 67) {
@@ -1337,7 +1337,7 @@ public final class Chess extends gb {
                 if (FullscreenFocusCanvas.field_d) {
                   SpriteGeometry.a(false, 15);
                 }
-                if (ia.field_l) {
+                if (Bzip2State.field_l) {
                   uk.a(qk.field_h, false, 28333, -4);
                 }
                 if (da.a(qk.field_h, true)) {
@@ -1580,7 +1580,7 @@ public final class Chess extends gb {
         vk.clearStaticReferences((byte) -14);
         wk.a(-26815);
         ca.a((byte) -102);
-        gm.a(6);
+        FrameTimer.a(6);
         AwtRasterBuffer.clearStaticReferences(-97);
         rh.a(104);
         FullscreenFocusCanvas.a(-9);
@@ -1709,7 +1709,7 @@ public final class Chess extends gb {
         qh.clearStaticReferences(-99);
         ByteStorage.clearStaticReferences(-24420);
         en.clearStaticReferences();
-        ia.clearStaticReferences(256);
+        Bzip2State.clearStaticReferences(256);
         ql.clearStaticReferences((byte) 109);
         vh.a(102);
         nd.clearStaticReferences(84);
@@ -1738,7 +1738,7 @@ public final class Chess extends gb {
         v.clearStaticReferences((byte) -117);
         wn.clearStaticReferences(false);
         ProxyAuthenticationRequiredException.a(17);
-        kh.clearStaticReferences(64);
+        NanoFrameTimer.clearStaticReferences(64);
         ImageProducerRasterBuffer.clearDeclaredStaticReferences(23);
         de.clearStaticReferences((byte) -120);
         tm.resetStaticState((byte) 76);

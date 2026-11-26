@@ -177,7 +177,7 @@ final class qc extends mf {
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              kf.a(param1, true, "document.cookie=\"" + var5Lifetime6 + "\"");
+              JavaScriptBridge.evaluate(param1, true, "document.cookie=\"" + var5Lifetime6 + "\"");
             } catch (Throwable throwable) {
             }
             am.a(param2 + 73, param1);

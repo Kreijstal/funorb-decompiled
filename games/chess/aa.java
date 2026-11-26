@@ -444,7 +444,7 @@ final class aa {
               } else {
                 var5Lifetime6 = var5Lifetime6 + "; Expires=" + sk.a(5, 94608000000L + ud.correctedCurrentTimeMillis(2)) + "; Max-Age=" + 94608000L;
               }
-              u.a((byte) -81, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
+              JavaScriptBridge.evaluate((byte) -81, "document.cookie=\"" + var5Lifetime6 + "\"", param0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               throwable = decompiledCaughtException;

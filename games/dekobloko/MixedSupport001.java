@@ -318,7 +318,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
               } else {
                 stringLocal18 = stringLocal4 + "; Expires=" + CipherPacketBuffer.computeString1636((byte) 60, MixedSupport062.correctedCurrentTimeMillis(4) + 94608000000L) + "; Max-Age=" + 94608000L;
               }
-              MixedSupport084.performAction1094((byte) -51, appletArgument3, "document.cookie=\"" + stringLocal18 + "\"");
+              JavaScriptBridge.evaluate((byte) -51, appletArgument3, "document.cookie=\"" + stringLocal18 + "\"");
             } catch (java.lang.Throwable caughtParameterLocal19) {
               caughtExceptionLocal10 = caughtParameterLocal19;
               throwableLocal11 = caughtExceptionLocal10;
@@ -709,7 +709,7 @@ class MixedSupport001 implements CallbackContract004, CallbackContract012 {
               }
               stringLocal8 = appletArgument1.getParameter("cookieprefix");
               stringLocal2 = stringLocal8 + "settings";
-              stringLocal3 = (String) (MixedSupport084.computeObject1096(true, "getcookies", appletArgument1));
+              stringLocal3 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", appletArgument1));
               stringArrayLocal4 = ResourceArchive.computeStringArray0801(';', (byte) 66, stringLocal3);
               for (integerLocal1 = 0; stringArrayLocal4.length > integerLocal1; integerLocal1++) {
                 integerLocal5 = stringArrayLocal4[integerLocal1].indexOf('=');

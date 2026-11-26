@@ -246,7 +246,7 @@ final class of {
                 of.a((String) null, 68, (String) null, 35);
               }
               var2 = "tuhstatbut";
-              var3 = (String) (u.a(true, "getcookies", param0));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", param0));
               var4 = gl.a((byte) -118, ';', var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

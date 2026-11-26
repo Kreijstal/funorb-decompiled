@@ -107,7 +107,7 @@ abstract class GameClientBase extends GameApplet {
           ah.field_b == 0) {
           stackIn_23_0 = (-1 != ah.field_b) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          ah.field_b = bd.e(0);
+          ah.field_b = NanoFrameTimer.e(0);
           if (var3Lifetime1 != 0 &&
             ah.field_b == 0 &&
             gj.field_c == 11 &&
@@ -157,7 +157,7 @@ abstract class GameClientBase extends GameApplet {
                   }
                 }
               } else {
-                te.a(-1, 256, ei.field_y);
+                te.a(-1, 256, Bzip2State.field_y);
               }
               dj.field_Z = true;
             }
@@ -188,7 +188,7 @@ abstract class GameClientBase extends GameApplet {
           }
           IntrusiveDeque.field_a = ProxySocketConnector.a(false, 1, 88, a.field_a, true);
           gf.field_p = ProxySocketConnector.a(false, 1, -116, qh.field_P, true);
-          jl.field_b = ProxySocketConnector.a(false, 1, -20, gh.field_w, true);
+          FrameTimer.field_b = ProxySocketConnector.a(false, 1, -20, gh.field_w, true);
           aj.field_f = IntrusiveDeque.field_a;
           FullscreenFocusCanvas.field_g = gf.field_p;
           li.field_K = 2;
@@ -211,13 +211,13 @@ abstract class GameClientBase extends GameApplet {
           }
         }
         if (li.field_K == 3 &&
-          pl.a(gf.field_p, jl.field_b, (byte) -100, IntrusiveDeque.field_a) &&
-          de.a(30, jl.field_b)) {
+          pl.a(gf.field_p, FrameTimer.field_b, (byte) -100, IntrusiveDeque.field_a) &&
+          de.a(30, FrameTimer.field_b)) {
           ch.a(76);
           sa.a(0);
           sa.field_b = BufferedSocket.field_m;
           fh.field_g = false;
-          rf.a(IntrusiveDeque.field_a, (byte) -23, fg.field_S, jl.field_b, gf.field_p);
+          rf.a(IntrusiveDeque.field_a, (byte) -23, fg.field_S, FrameTimer.field_b, gf.field_p);
           if (qc.field_j ||
             LevelEntity.field_bb != null) {
             stackIn_102_0 = !(qc.field_j);
@@ -232,8 +232,8 @@ abstract class GameClientBase extends GameApplet {
             o.field_k = IntrusiveDeque.b(-944);
             ja.field_a = gb.b(38);
           }
-          v.a((byte) 127, o.field_k, ja.field_a, jl.field_b);
-          jl.field_b = null;
+          v.a((byte) 127, o.field_k, ja.field_a, FrameTimer.field_b);
+          FrameTimer.field_b = null;
           gf.field_p = null;
           IntrusiveDeque.field_a = null;
           ca.a((java.applet.Applet) (this), -109);

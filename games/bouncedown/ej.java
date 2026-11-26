@@ -36,7 +36,7 @@ final class ej {
               param0 <= 105) {
               var4 = param1;
               oh.a((byte) -29, var4);
-              oa.field_c = qj.createAccountSuggestionsResult(false, param1);
+              oa.field_c = GzipDecompressor.createAccountSuggestionsResult(false, param1);
               return;
             }
             oa.field_c = wb.createAccountErrorResult(param0, param3 - 254, param2);

@@ -188,7 +188,7 @@ abstract class v extends b {
         if (jc.field_c > 200) {
           var5 = (-jc.field_c + 250 << 8) / 50;
         }
-        FullscreenFocusCanvas.a(123, bd.field_t);
+        FullscreenFocusCanvas.a(123, NanoFrameTimer.field_t);
         oc.c();
         SoftwareRasterizer.clearRaster();
         AccountServiceResult.a(3);
@@ -203,7 +203,7 @@ abstract class v extends b {
         if (jc.field_c >= 150) {
           hf.field_a.drawTransparentWithOpacity(var3 + 15, var4 + 10, var5);
         } else {
-          bd.field_t.drawHalfSize(var3, var4);
+          NanoFrameTimer.field_t.drawHalfSize(var3, var4);
         }
         var6 = -125 + jc.field_c;
         if (var6 > 0 &&

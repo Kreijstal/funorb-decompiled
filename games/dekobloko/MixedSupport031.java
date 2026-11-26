@@ -114,12 +114,12 @@ final class MixedSupport031 {
         }
     }
 
-    final static MixedSupport059 computeMixedSupport0590417(byte byteArgument1) {
+    final static FrameTimer computeMixedSupport0590417(byte byteArgument1) {
         if (byteArgument1 != 63) {
           MixedSupport031.computeMixedSupport0590417((byte) 127);
-          return (MixedSupport059) ((Object) new MixedSupport026());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (MixedSupport059) ((Object) new MixedSupport026());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     public static void clearStaticReferences(int integerArgument1) {

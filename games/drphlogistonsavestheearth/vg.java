@@ -922,7 +922,7 @@ class vg extends IntrusiveNode {
           var9 = var8;
           var3 = var9.readUnsignedByte(31760);
           var9.d((byte) 65);
-          dm.field_B = m.a(103, var9);
+          dm.field_B = FrameTimer.a(103, var9);
           FullscreenFocusCanvas.field_b = new int[var3][];
           r.field_c = new ja[var3];
           var4 = 0;

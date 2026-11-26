@@ -131,7 +131,7 @@ final class Direct3DUnderwaterEffect extends RenderEffect {
         if (param1 >= 2) {
           this.field_b.a(1, (byte) 123);
           this.field_b.a(this.field_k, -9135);
-          this.field_b.a(du.field_l, true, bd.field_C);
+          this.field_b.a(du.field_l, true, Bzip2State.field_C);
           this.field_b.a((byte) 125, 0, GameKeyHandler.field_a);
           this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
           this.field_b.a(ArchiveNetworkClient.field_i, 0, 0);
@@ -142,7 +142,7 @@ final class Direct3DUnderwaterEffect extends RenderEffect {
         this.field_q = true;
         this.field_b.a(1, (byte) 123);
         this.field_b.a(this.field_k, -9135);
-        this.field_b.a(du.field_l, true, bd.field_C);
+        this.field_b.a(du.field_l, true, Bzip2State.field_C);
         this.field_b.a((byte) 125, 0, GameKeyHandler.field_a);
         this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
         this.field_b.a(ArchiveNetworkClient.field_i, 0, 0);

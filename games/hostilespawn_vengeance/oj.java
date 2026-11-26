@@ -74,7 +74,7 @@ class oj extends p {
           return jh.field_eb[this.field_w][this.field_z % jh.field_eb[this.field_w].length];
         }
         if (23 == var2) {
-          return ck.field_y[this.field_w][this.field_z % ck.field_y[this.field_w].length];
+          return Bzip2State.field_y[this.field_w][this.field_z % Bzip2State.field_y[this.field_w].length];
         }
         if (var2 == 25) {
           return vd.field_y[this.field_w][this.field_z % vd.field_y[this.field_w].length];
@@ -1344,7 +1344,7 @@ class oj extends p {
           return jh.field_eb;
         }
         if (var2 == 23) {
-          return ck.field_y;
+          return Bzip2State.field_y;
         }
         if (var2 == 25) {
           return vd.field_y;

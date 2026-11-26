@@ -12,7 +12,7 @@ final class jk {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           try {
-            kf.a((byte) 53, "resizing", ii.b(param1), new Object[]{new Integer(param0)});
+            JavaScriptBridge.callWithArguments((byte) 53, "resizing", ii.b(param1), new Object[]{new Integer(param0)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

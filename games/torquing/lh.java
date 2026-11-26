@@ -42,11 +42,11 @@ final class lh {
     int[][] field_g;
     int[] field_G;
 
-    final static ha a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != -24858) {
           lh.a(5);
         }
-        return (ha) ((Object) new np());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     public static void clearStaticReferences(int param0) {

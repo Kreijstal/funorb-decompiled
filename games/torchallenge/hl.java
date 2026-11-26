@@ -4,7 +4,7 @@
 final class hl {
     static boolean field_e;
     static GameKeyHandler field_d;
-    static jl field_b;
+    static FrameTimer field_b;
     static boolean[][] field_c;
     static String field_a;
 

@@ -208,7 +208,7 @@ final class di extends TextureOperator {
         int var3 = Vertigo2.field_L ? 1 : 0;
         int var1_intLifetime1;
         try {
-          IsaacCipher.field_i.b(-1);
+          IsaacCipher.field_i.resetTiming(-1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             l.field_b[var1_int] = 0L;
           }

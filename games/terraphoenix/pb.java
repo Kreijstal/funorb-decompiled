@@ -46,7 +46,7 @@ final class pb {
         if (pe.field_a == SectorCacheStore.field_d) {
           return DualLinkNode.field_l;
         }
-        if (vc.field_a.a(param0 ^ 78)) {
+        if (FrameTimer.field_a.a(param0 ^ 78)) {
           return ol.field_Hb;
         }
         return DualLinkNode.field_l;

@@ -894,7 +894,7 @@ final class go extends qe {
         this.field_s = this.field_R.b(hj.field_S, param0 + 19089, eh.field_h);
         if (hh.field_s != null) {
           if (this.field_J == hh.field_s) {
-            gd.a(dc.field_z, param0 - 2, 1, false);
+            gd.a(Bzip2State.field_z, param0 - 2, 1, false);
           }
           if (this.field_K == hh.field_s) {
             AchievementIconEntry.a(11, -1, true, -23);
@@ -1142,7 +1142,7 @@ final class go extends qe {
               if (!this.field_Y.field_p.a(var8_int, (byte) 83)) {
                 this.b(false, var8_int);
               }
-              je.a(param0 ^ -67, dc.field_q);
+              je.a(param0 ^ -67, Bzip2State.field_q);
               param1.position = var6;
             } else if (var5 != ob.field_nc &&
               ob.field_Ib != var5 &&
@@ -1181,7 +1181,7 @@ final class go extends qe {
               this.b(false, var7);
             }
             if (ob.field_dc == var5) {
-              je.a(0, dc.field_q);
+              je.a(0, Bzip2State.field_q);
             }
             param1.position = var6;
           }
@@ -1257,7 +1257,7 @@ final class go extends qe {
         int var2Lifetime1;
         var4 = DungeonAssault.field_K;
         if (13 == mm.field_t) {
-          gd.a(dc.field_z, 0, 1, false);
+          gd.a(Bzip2State.field_z, 0, 1, false);
         } else {
           if (DualLinkNode.field_k) {
             if (this.field_Y.field_u != null &&
@@ -1573,7 +1573,7 @@ final class go extends qe {
             param0 = this.field_Y.field_A[0];
           }
           if (!this.field_Y.field_p.a(param1, (byte) 89)) {
-            je.a(0, dc.field_q);
+            je.a(0, Bzip2State.field_q);
           }
           if (this.field_w) {
             if (!this.h(51)) {

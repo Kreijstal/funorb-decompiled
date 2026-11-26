@@ -317,8 +317,8 @@ final class jl {
             stackIn_146_0 = var17;
             stackIn_146_1 = 1;
             if (stackIn_146_0 < stackIn_146_1) {
-              hf.field_i.e(-hf.field_i.field_x + (hf.field_i.field_x + 10) * param1 / 100, 1);
-              hf.field_i.g(-(param1 * (hf.field_i.field_x + 10) / 100) + 640, 1);
+              NanoFrameTimer.field_i.e(-NanoFrameTimer.field_i.field_x + (NanoFrameTimer.field_i.field_x + 10) * param1 / 100, 1);
+              NanoFrameTimer.field_i.g(-(param1 * (NanoFrameTimer.field_i.field_x + 10) / 100) + 640, 1);
               break;
             }
             var12Lifetime2 = var8Lifetime2 * var17 / var11Lifetime3;
@@ -383,7 +383,7 @@ final class jl {
             var3 += 30;
             var3 = var3 + (14 + af.field_y.a(s.field_a, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14);
             af.field_w[4 + pd.field_a * 8].c(var4, -6 + var3);
-            var3 = var3 + (14 + 14 * af.field_y.a(fi.field_a, var4 + 40, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
+            var3 = var3 + (14 + 14 * af.field_y.a(FrameTimer.field_a, var4 + 40, var3, -40 + var5, var6, 49407, -1, 0, 0, 14));
             var3 = var3 + (14 + 14 * af.field_y.a(ac.field_c, var4, var3, var5, var6, 49407, -1, 0, 0, 14));
             var3 = var3 + (af.field_y.a(qd.field_y, var4, var3, var5, var6, 49407, -1, 0, 0, 14) * 14 + 14);
             var3 += 14;
@@ -796,7 +796,7 @@ final class jl {
                             if (this.field_e.h(-84)) {
                               if (n.field_a == null) {
                                 var5 = param1 ? 1 : 0;
-                                hf.a(240, 12, 22, jk.field_f, 18, 320, jk.field_f, 12, a.field_b, -11, 12, var5 != 0);
+                                NanoFrameTimer.a(240, 12, 22, jk.field_f, 18, 320, jk.field_f, 12, a.field_b, -11, 12, var5 != 0);
                               } else {
                                 re.a(0);
                               }
@@ -809,7 +809,7 @@ final class jl {
                                   break;
                                 }
                                 if (MouseWheelSource.field_c >= 0) {
-                                  fi.field_e.field_k = 0;
+                                  FrameTimer.field_e.field_k = 0;
                                   MouseWheelSource.field_c = 0;
                                   tj.field_G = 0;
                                   if (null != ah.field_a) {
@@ -968,21 +968,21 @@ final class jl {
               il.field_i = il.field_i + rj.field_h;
               gf.field_b = 2;
               rj.field_h = 0;
-              fi.field_e.field_f = 320;
+              FrameTimer.field_e.field_f = 320;
               eg.field_l = 128;
-              fi.field_e.field_z = 0;
+              FrameTimer.field_e.field_z = 0;
               SpriteState.field_p = 0;
               stackIn_51_0 = (rj.field_h == 0);
               q.field_j = stackIn_51_0;
-              fi.field_e.field_k = 1;
-              fi.field_e.field_n = 0;
+              FrameTimer.field_e.field_k = 1;
+              FrameTimer.field_e.field_n = 0;
               tj.field_G = 0;
               ie.field_C = 0;
-              fi.field_e.field_u = 580;
+              FrameTimer.field_e.field_u = 580;
               ha.field_d = 0;
               var5_ref_bf = (bf) (kh.field_y.beginForward(-3905));
               while (var5_ref_bf != null) {
-                if (var5_ref_bf != fi.field_e) {
+                if (var5_ref_bf != FrameTimer.field_e) {
                   var5_ref_bf.unlink(4);
                 }
                 var5_ref_bf = (bf) (kh.field_y.nextForward(-16913));

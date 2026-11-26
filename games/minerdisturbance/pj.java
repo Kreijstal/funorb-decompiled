@@ -283,7 +283,7 @@ final class pj implements uj {
           if (param0 != -10) {
             field_a = 81;
           }
-          if (!cn.a(param3, 258, param1, param2)) {
+          if (!Bzip2State.a(param3, 258, param1, param2)) {
             return null;
           }
           stackIn_6_0 = lg.a(param4.a(false, param1, param3), param0 - 6623);

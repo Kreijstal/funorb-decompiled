@@ -276,7 +276,7 @@ class rc extends DualLinkNode {
             var3 = var1.readString(false);
             me.field_d = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(-108);
-            bd.a(-116, var4);
+            NanoFrameTimer.a(-116, var4);
             return;
           }
           if (SocketConnector.field_e == null) {

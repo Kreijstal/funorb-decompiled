@@ -44,7 +44,7 @@ final class te extends IntrusiveNode {
     final static void resetFrameTiming(int obfuscationGuard) {
         int var2 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
-          OpenGlShaderProgram.field_c.a(0);
+          OpenGlShaderProgram.field_c.resetTiming(0);
           for (int var1_int = 0; 32 > var1_int; var1_int++) {
             PcmOutputWorker.field_b[var1_int] = 0L;
           }
@@ -73,7 +73,7 @@ final class te extends IntrusiveNode {
         try {
           int var2 = 112 % ((param1 - 8) / 34);
           try {
-            JavaScriptBridge.a("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
+            JavaScriptBridge.callWithArguments("resizing", -15201, new Object[]{new Integer(param0)}, bm.m(110));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             Throwable decompiledCaughtException = decompiledCaughtParameter0;
             Throwable var3 = decompiledCaughtException;

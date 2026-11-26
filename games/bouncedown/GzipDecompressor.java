@@ -1,0 +1,106 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class GzipDecompressor {
+    private java.util.zip.Inflater field_b;
+    static long[] field_a;
+    static nf field_c;
+    static tj field_d;
+
+    public GzipDecompressor() {
+        this(-1, 1000000, 1000000);
+    }
+
+    final void decompress(PacketBuffer param0, byte[] param1, byte param2) {
+        try {
+          try {
+            if (param0.payload[param0.position] != 31 ||
+              -117 != param0.payload[1 + param0.position]) {
+              throw new RuntimeException("");
+            }
+            if (null == this.field_b) {
+              this.field_b = new java.util.zip.Inflater(true);
+            }
+            int var4_int = 61 / ((param2 + 40) / 55);
+            try {
+              this.field_b.setInput(param0.payload, param0.position + 10, -10 + (-param0.position - 8) + param0.payload.length);
+              this.field_b.inflate(param1);
+            } catch (Exception exception) {
+              this.field_b.reset();
+              throw new RuntimeException("");
+            }
+            this.field_b.reset();
+          } catch (RuntimeException runtimeException) {
+            throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "qj.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_c = null;
+        field_d = null;
+        field_a = null;
+        int var1 = -29 % ((43 - param0) / 38);
+    }
+
+    private GzipDecompressor(int param0, int param1, int param2) {
+    }
+
+    final static AccountServiceResult createAccountSuggestionsResult(boolean param0, String[] param1) {
+        AccountServiceResult var2 = null;
+        RuntimeException var2_ref = null;
+        AccountServiceResult stackIn_1_0 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2 = new AccountServiceResult(param0);
+          var2.suggestions = param1;
+          stackIn_1_0 = var2;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_4_0 = var2_ref;
+          stackIn_4_1 = new StringBuilder().append("qj.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+        }
+    }
+
+    final static fe a(byte param0) {
+        if (null == ca.field_b) {
+          ca.field_b = new fe();
+          ca.field_b.a(32, FrameTimer.field_a);
+          ca.field_b.field_m = 2763306;
+          ca.field_b.field_f = 5;
+          ca.field_b.field_n = 14;
+          ca.field_b.field_q = 7697781;
+          ca.field_b.field_d = field_d;
+          ca.field_b.field_k = 6;
+          ca.field_b.field_o = 0;
+          ca.field_b.field_h = 4;
+        }
+        if (param0 == 67) {
+          return ca.field_b;
+        }
+        field_a = (long[]) null;
+        return ca.field_b;
+    }
+
+    static {
+        field_a = new long[32];
+        field_c = new nf();
+    }
+}

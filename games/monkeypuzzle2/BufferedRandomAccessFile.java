@@ -52,7 +52,7 @@ final class BufferedRandomAccessFile {
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           em.field_B = 480;
-          fg.field_b = 0;
+          FrameTimer.field_b = 0;
           while (mb.field_e.size(127) > 0) {
             mb.field_e.removeLast(4011);
           }

@@ -1583,7 +1583,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orc_warrior", false);
                 if (null != var2) {
-                  gj.field_a = dj.a(var2, false);
+                  FrameTimer.field_a = dj.a(var2, false);
                 }
                 var2 = gm.a("witch", false);
                 if (var2 != null) {
@@ -1607,7 +1607,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orc_blademaster", false);
                 if (null != var2) {
-                  dc.field_H = dj.a(var2, false);
+                  Bzip2State.field_H = dj.a(var2, false);
                 }
                 var2 = gm.a("goblin_scout", false);
                 if (null != var2) {
@@ -1761,7 +1761,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("whirling_blades", false);
                 if (null != var2) {
-                  fg.field_o = dj.a(var2, false);
+                  NanoFrameTimer.field_o = dj.a(var2, false);
                 }
                 var2 = gm.a("poison_gas", false);
                 if (null != var2) {
@@ -1845,7 +1845,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("demon_lord", false);
                 if (var2 != null) {
-                  gj.field_b = dj.a(var2, false);
+                  FrameTimer.field_b = dj.a(var2, false);
                 }
                 var2 = gm.a("tripwire_bell", param1);
                 if (var2 != null) {
@@ -2125,7 +2125,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_demon_lord", param1);
                 if (null != var2) {
-                  fg.field_f = dj.a(var2, param1);
+                  NanoFrameTimer.field_f = dj.a(var2, param1);
                 }
                 var2 = gm.a("desc_tripwire_bell", param1);
                 if (null != var2) {

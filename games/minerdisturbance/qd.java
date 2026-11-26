@@ -256,7 +256,7 @@ final class qd extends kn implements sh {
               if (ti.field_M != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, cn.field_F);
+              var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, Bzip2State.field_F);
               var4 = 3 + var3_int;
               ne.field_K = new String[var4];
               IsaacRandom.field_m = new int[var4];
@@ -327,7 +327,7 @@ final class qd extends kn implements sh {
               IsaacRandom.field_m[var8] = -1;
             }
             IsaacRandom.field_m[1] = 0;
-            ne.field_K[0] = ca.field_f;
+            ne.field_K[0] = NanoFrameTimer.field_f;
             ne.field_K[1] = tb.field_b;
             wf.field_P = new int[2];
             IsaacRandom.field_m[3] = 1;
@@ -527,7 +527,7 @@ final class qd extends kn implements sh {
         e.field_i[23] = nd.field_c;
         e.field_i[6] = kd.field_b;
         e.field_i[22] = wf.field_Q;
-        e.field_i[16] = ek.field_a;
+        e.field_i[16] = FrameTimer.field_a;
         e.field_i[9] = wi.field_x;
         e.field_i[13] = oj.field_M;
         e.field_i[12] = qm.field_g;

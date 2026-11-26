@@ -82,7 +82,7 @@ final class ba extends ln {
     final static void a(byte param0, String param1) {
         try {
           PacketBuffer.a(param1, 21815);
-          ke.a(AccountNameAvailabilityValidator.field_i, false, -13);
+          FrameTimer.a(AccountNameAvailabilityValidator.field_i, false, -13);
           int var2_int = 119 % ((param0 - 6) / 49);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ba.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

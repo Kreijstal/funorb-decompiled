@@ -27,7 +27,7 @@ final class gk {
             return stackIn_2_0;
           }
           var5 = param0.a(var4_int, param2, 106);
-          stackIn_4_0 = nl.a(var5, var4_int, param0, 13416);
+          stackIn_4_0 = NanoFrameTimer.a(var5, var4_int, param0, 13416);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

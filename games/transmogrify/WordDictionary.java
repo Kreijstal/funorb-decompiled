@@ -399,7 +399,7 @@ final class WordDictionary {
     final static void a(PcmStreamMixer param0, int param1, int param2, ci param3) {
         try {
           tf.field_a = wi.b(-125) * param1 / 1000;
-          kf.a(param3, (byte) -80);
+          NanoFrameTimer.a(param3, (byte) -80);
           sd.a(param3, true);
           v.a((byte) 118, param3);
           if (param2 != 22313) {

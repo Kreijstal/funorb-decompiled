@@ -10,7 +10,7 @@ final class ih {
             var1.indexOf('@') >= 0) {
             var1 = "";
           }
-          return new mb(rg.a(0), hj.a(true));
+          return new mb(rg.a(0), Bzip2State.a(true));
         }
         return (mb) null;
     }

@@ -54,7 +54,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
         if (param0 != -28617) {
           return -26;
         }
-        return tb.field_b;
+        return FrameTimer.field_b;
     }
 
     public final boolean hasNext() {

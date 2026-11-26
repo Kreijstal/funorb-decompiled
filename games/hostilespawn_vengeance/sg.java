@@ -290,7 +290,7 @@ final class sg {
                                             he.a(var19, var25, (byte) 110, var16, var14);
                                             break regionExit1;
                                           case 15:
-                                            in.a(var14, var19, (byte) 29, var29, var3, var16);
+                                            FrameTimer.a(var14, var19, (byte) 29, var29, var3, var16);
                                             break regionExit1;
                                           case 16:
                                             ei.a(var19, (byte) -116, var33, var3, var29, var31);

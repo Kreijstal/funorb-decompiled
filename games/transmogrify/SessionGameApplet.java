@@ -428,7 +428,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (!rd.b(70) &&
           11 != gl.field_y) {
-          kf.d(param0 ^ 10019);
+          NanoFrameTimer.d(param0 ^ 10019);
         }
         if (null != ga.field_a) {
           f.field_a = ga.field_a.pollRotation(-126);
@@ -568,7 +568,7 @@ abstract class SessionGameApplet extends GameApplet {
             stackIn_104_1 = !(BoundedRandomAccessFile.field_b);
             stackIn_106_2 = lb.field_h;
             stackIn_107_3 = !(BoundedRandomAccessFile.field_b);
-            td.a(stackIn_103_0, stackIn_104_1, stackIn_106_2, stackIn_107_3);
+            FrameTimer.a(stackIn_103_0, stackIn_104_1, stackIn_106_2, stackIn_107_3);
           }
           if (ProxySocketConnector.field_h) {
             gg.b(4);

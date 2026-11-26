@@ -82,7 +82,7 @@ final class oba extends k {
 
     final static void d(int param0) {
         int var1 = pfa.c(26858);
-        int var2 = bv.a((byte) -71);
+        int var2 = Bzip2State.a((byte) -71);
         if (param0 != -1488922239) {
           return;
         }

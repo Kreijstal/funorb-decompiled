@@ -284,7 +284,7 @@ final class kl extends IntrusiveNode {
           var1 = of.i(195);
         }
         if (var1.length() == 0) {
-          var1 = mg.field_k;
+          var1 = Bzip2State.field_k;
         }
         return var1;
     }

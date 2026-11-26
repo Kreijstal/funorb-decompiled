@@ -111,7 +111,7 @@ final class sc {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (mb.a(param0, "getcookies", param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param0, "getcookies", param1));
               var4 = UiWidget.a(-57, ';', var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');

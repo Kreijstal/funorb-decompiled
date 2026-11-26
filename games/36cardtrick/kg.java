@@ -12,7 +12,7 @@ final class kg {
           if (!g.j(7)) {
             return;
           }
-          if (ec.field_f >= 2) {
+          if (NanoFrameTimer.field_f >= 2) {
             qa.field_b.b(AccountCreationResultPanel.a((byte) -124, (CharSequence[]) ((Object) new String[]{cd.field_f, Integer.toString(ma.field_c)})), 20, 60, 16711680, -1);
             return;
           }
@@ -21,7 +21,7 @@ final class kg {
         if (!g.j(7)) {
           return;
         }
-        if (ec.field_f >= 2) {
+        if (NanoFrameTimer.field_f >= 2) {
           qa.field_b.b(AccountCreationResultPanel.a((byte) -124, (CharSequence[]) ((Object) new String[]{cd.field_f, Integer.toString(ma.field_c)})), 20, 60, 16711680, -1);
           return;
         }

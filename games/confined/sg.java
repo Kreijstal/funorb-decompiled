@@ -120,7 +120,7 @@ final class sg extends DualLinkNode {
             try {
               var2 = "tuhstatbut";
               var4 = -38 % ((18 - param0) / 56);
-              var3 = (String) (kf.a(114, "getcookies", param1));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(114, "getcookies", param1));
               var5 = ij.a(0, ';', var3);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');

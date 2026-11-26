@@ -81,7 +81,7 @@ final class kd extends se {
             return stackIn_3_0;
           }
           if (!param0.equals(this.field_p)) {
-            var3 = ke.a(param0, 28515);
+            var3 = FrameTimer.a(param0, 28515);
             if (!var3.b(param1 ^ 82)) {
               stackIn_7_0 = ec.field_h;
               return stackIn_7_0;

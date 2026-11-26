@@ -531,7 +531,7 @@ class kn extends fe implements rk {
           var7 = MinerDisturbance.field_ab;
           try {
             try {
-              var3 = (String) (lk.a((byte) 18, "getcookies", param2));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments((byte) 18, "getcookies", param2));
               var4 = h.a(';', true, var3);
               if (param1 != 114) {
                 field_D = (String[][]) null;

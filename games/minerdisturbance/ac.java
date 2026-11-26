@@ -31,7 +31,7 @@ final class ac {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cn.a(param3, 258, param2, param1)) {
+          if (!Bzip2State.a(param3, 258, param2, param1)) {
             return null;
           }
           if (param0 == 23917) {

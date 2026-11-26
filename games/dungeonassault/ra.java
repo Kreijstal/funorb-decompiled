@@ -179,7 +179,7 @@ final class ra {
         BufferedRandomAccessFile.a(false, 30, "menu_select");
         sa.field_v = sh.a(-77, "da_ambience_drip", new int[]{110, 110, 110, 110, 140});
         hp.field_c = sh.a(-95, "da_ambience_insect", new int[]{256, 256, 168});
-        dc.field_q = sh.a(param0 ^ -92, "da_door_open", new int[]{110, 100});
+        Bzip2State.field_q = sh.a(param0 ^ -92, "da_door_open", new int[]{110, 100});
         om.field_b = BufferedRandomAccessFile.a(false, 140, "da_ambience_burning_torches_loop_4000ms");
         k.field_f = BufferedRandomAccessFile.a(false, 256, "da_ambience_running_water_loop_1000ms");
         MouseInput.field_f = BufferedRandomAccessFile.a(false, 51, "da_menu_fire");

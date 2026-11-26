@@ -31,7 +31,7 @@ abstract class wf extends cc {
           if (param0 != 4462) {
             field_Q = (String[][]) null;
           }
-          eb.field_d.a(true);
+          eb.field_d.resetTiming(true);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             fb.field_e[var1_int] = 0L;
           }

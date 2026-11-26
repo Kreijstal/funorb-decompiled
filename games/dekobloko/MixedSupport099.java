@@ -337,7 +337,7 @@ final class MixedSupport099 {
               } else {
                 stringLocal17 = stringLocal13 + "; Discard;";
               }
-              MixedSupport084.performAction1094((byte) -51, appletArgument1, "document.cookie=\"" + stringLocal17 + "\"");
+              JavaScriptBridge.evaluate((byte) -51, appletArgument1, "document.cookie=\"" + stringLocal17 + "\"");
               return;
             } catch (java.lang.Throwable caughtParameterLocal18) {
               caughtExceptionLocal8 = caughtParameterLocal18;

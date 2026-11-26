@@ -2837,7 +2837,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("serviceunavailable", -15192);
                 if (null != byteArrayState0015) {
-                  MixedSupport026.stringState0127 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  NanoFrameTimer.stringState0127 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("createtouse", -15192);
                 if (byteArrayState0015 != null) {

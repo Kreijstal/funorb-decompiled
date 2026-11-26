@@ -149,12 +149,12 @@ final class sn {
         field_b = null;
     }
 
-    final static ke a(int param0) {
+    final static FrameTimer a(int param0) {
         if (param0 != 27801) {
           sn.clearStaticReferences((byte) 15);
-          return (ke) ((Object) new s());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (ke) ((Object) new s());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     static {

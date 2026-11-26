@@ -701,7 +701,7 @@ final class ResourceArchive {
     final static void a(int param0, int param1, int param2, int param3, int param4, String param5, int param6, int param7, PlatformTaskDispatcher param8) {
         try {
           fh.field_g = param5;
-          wj.field_d = param1;
+          FrameTimer.field_d = param1;
           il.field_g = param4;
           of.field_b = param3;
           pg.field_c = param6;

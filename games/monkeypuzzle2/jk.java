@@ -603,7 +603,7 @@ abstract class jk extends UiWidget implements ga {
             bi.field_B[1] = 2;
             BoundedRandomAccessFile.field_k[2] = WidgetContainer.field_y;
             bi.field_B[0] = 5;
-            BoundedRandomAccessFile.field_k[3] = uf.field_c;
+            BoundedRandomAccessFile.field_k[3] = NanoFrameTimer.field_c;
             BoundedRandomAccessFile.field_k[5] = "";
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_77_0 = BoundedRandomAccessFile.field_k;

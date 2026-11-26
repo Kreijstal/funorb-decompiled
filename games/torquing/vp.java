@@ -141,7 +141,7 @@ final class vp extends WidgetContainer implements ng {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           try {
-            hp.a(ip.a(9), new Object[]{new Integer(param0)}, 28989, "resizing");
+            JavaScriptBridge.callWithArguments(ip.a(9), new Object[]{new Integer(param0)}, 28989, "resizing");
             if (param1 >= -57) {
               field_G = (String) null;
             }

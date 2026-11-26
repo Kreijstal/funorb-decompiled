@@ -97,7 +97,7 @@ final class la {
             rn.field_k.c(ci.a(new String[]{pb.field_b}, fj.field_a, 3), var6, 60, 16777215, -1);
             ra.field_c.c(ci.a(new String[]{fp.field_b}, fq.field_z, 3), var6, 110, 16777215, -1);
             rn.field_k.c(ci.a(new String[]{fp.field_b}, ro.field_s, 3), var6, 130, 16777215, -1);
-            ra.field_c.c(s.field_f, var6, 180, 16777215, -1);
+            ra.field_c.c(NanoFrameTimer.field_f, var6, 180, 16777215, -1);
             rn.field_k.c(IntrusiveNode.field_c, var6, 200, 16777215, -1);
             hb.a(3, var12.field_u, 0, var12.field_l, var12, -35, 1, 0);
             uh.field_q.a();
@@ -128,7 +128,7 @@ final class la {
             var2Lifetime1 = SoftwareRasterizer.field_l;
             var3Lifetime1 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(SpriteGeometry.field_m);
-            var14 = ci.a(new String[]{qf.field_t[v.field_d]}, qn.field_C, 3);
+            var14 = ci.a(new String[]{qf.field_t[v.field_d]}, Bzip2State.field_C, 3);
             var5 = ra.field_c.c(var14, wn.field_c);
             var6Lifetime1 = ra.field_c.b(var14, wn.field_c, ra.field_c.field_u + ra.field_c.field_o);
             var7Lifetime1 = (wn.field_c - var5) / 2 + SecondaryIntrusiveDeque.field_e;

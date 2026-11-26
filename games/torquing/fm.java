@@ -183,7 +183,7 @@ final class fm extends WidgetContainer implements ng {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_C = new lg(qh.field_e, (ca) null);
         this.field_D = new lg(cm.field_k, (ca) null);
-        this.field_B = new lg(ha.field_c, (ca) null);
+        this.field_B = new lg(FrameTimer.field_c, (ca) null);
         rf var1 = new rf();
         this.field_C.renderer = (WidgetRenderer) ((Object) var1);
         this.field_D.renderer = (WidgetRenderer) ((Object) var1);

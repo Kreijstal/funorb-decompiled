@@ -119,7 +119,7 @@ class IntrusiveNode {
           if (hg.a(param0, 1)) {
             return false;
           }
-          if (o.a(false, param0)) {
+          if (NanoFrameTimer.a(false, param0)) {
             return false;
           }
           if (~param1.length() == param2) {

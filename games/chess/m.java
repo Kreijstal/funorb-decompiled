@@ -42,7 +42,7 @@ final class m {
             try {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
-              var4 = (String) (u.a(true, "getcookies", param0));
+              var4 = (String) (JavaScriptBridge.callWithoutArguments(true, "getcookies", param0));
               if (param1 != 87) {
                 stackIn_3_0 = (String) null;
                 return stackIn_3_0;

@@ -173,18 +173,18 @@ final class um extends gf {
             var10 = var13 + (var12 * RasterBuffer.field_e >> 12);
             var8 = RasterBuffer.field_e;
           }
-          if (j.field_q <= var11) {
+          if (Bzip2State.field_q <= var11) {
             if (var11 > qk.field_p) {
               var9 = (qk.field_p - var13 << 12) / var12;
               var11 = qk.field_p;
             }
           } else {
-            var11 = j.field_q;
-            var9 = (j.field_q - var13 << 12) / var12;
+            var11 = Bzip2State.field_q;
+            var9 = (Bzip2State.field_q - var13 << 12) / var12;
           }
-          if (var10 < j.field_q) {
-            var8 = (j.field_q - var13 << 12) / var12;
-            var10 = j.field_q;
+          if (var10 < Bzip2State.field_q) {
+            var8 = (Bzip2State.field_q - var13 << 12) / var12;
+            var10 = Bzip2State.field_q;
           } else {
             if (qk.field_p < var10) {
               var8 = (-var13 + qk.field_p << 12) / var12;
@@ -209,18 +209,18 @@ final class um extends gf {
             var10Lifetime1 = var13 + (var12 * RasterBuffer.field_e >> 12);
             var8Lifetime1 = RasterBuffer.field_e;
           }
-          if (j.field_q > var11Lifetime1) {
-            var11Lifetime1 = j.field_q;
-            var9Lifetime1 = (j.field_q - var13 << 12) / var12;
+          if (Bzip2State.field_q > var11Lifetime1) {
+            var11Lifetime1 = Bzip2State.field_q;
+            var9Lifetime1 = (Bzip2State.field_q - var13 << 12) / var12;
           } else {
             if (var11Lifetime1 > qk.field_p) {
               var9Lifetime1 = (qk.field_p - var13 << 12) / var12;
               var11Lifetime1 = qk.field_p;
             }
           }
-          if (var10Lifetime1 < j.field_q) {
-            var8Lifetime1 = (j.field_q - var13 << 12) / var12;
-            var10Lifetime1 = j.field_q;
+          if (var10Lifetime1 < Bzip2State.field_q) {
+            var8Lifetime1 = (Bzip2State.field_q - var13 << 12) / var12;
+            var10Lifetime1 = Bzip2State.field_q;
           } else {
             if (qk.field_p < var10Lifetime1) {
               var8Lifetime1 = (-var13 + qk.field_p << 12) / var12;
@@ -239,18 +239,18 @@ final class um extends gf {
           if (qg.field_z < param0) {
             var10Lifetime2 = var13 + (qg.field_z * var12 >> 12);
             var8Lifetime2 = qg.field_z;
-            if (j.field_q > var11Lifetime2) {
-              var11Lifetime2 = j.field_q;
-              var9Lifetime2 = (j.field_q - var13 << 12) / var12;
+            if (Bzip2State.field_q > var11Lifetime2) {
+              var11Lifetime2 = Bzip2State.field_q;
+              var9Lifetime2 = (Bzip2State.field_q - var13 << 12) / var12;
             } else {
               if (var11Lifetime2 > qk.field_p) {
                 var9Lifetime2 = (qk.field_p - var13 << 12) / var12;
                 var11Lifetime2 = qk.field_p;
               }
             }
-            if (var10Lifetime2 < j.field_q) {
-              var8Lifetime2 = (j.field_q - var13 << 12) / var12;
-              var10Lifetime2 = j.field_q;
+            if (var10Lifetime2 < Bzip2State.field_q) {
+              var8Lifetime2 = (Bzip2State.field_q - var13 << 12) / var12;
+              var10Lifetime2 = Bzip2State.field_q;
             } else {
               if (qk.field_p < var10Lifetime2) {
                 var8Lifetime2 = (-var13 + qk.field_p << 12) / var12;
@@ -263,18 +263,18 @@ final class um extends gf {
           var8Lifetime2 = param0;
           var10Lifetime2 = param2;
         }
-        if (j.field_q > var11Lifetime2) {
-          var11Lifetime2 = j.field_q;
-          var9Lifetime2 = (j.field_q - var13 << 12) / var12;
+        if (Bzip2State.field_q > var11Lifetime2) {
+          var11Lifetime2 = Bzip2State.field_q;
+          var9Lifetime2 = (Bzip2State.field_q - var13 << 12) / var12;
         } else {
           if (var11Lifetime2 > qk.field_p) {
             var9Lifetime2 = (qk.field_p - var13 << 12) / var12;
             var11Lifetime2 = qk.field_p;
           }
         }
-        if (var10Lifetime2 < j.field_q) {
-          var8Lifetime2 = (j.field_q - var13 << 12) / var12;
-          var10Lifetime2 = j.field_q;
+        if (var10Lifetime2 < Bzip2State.field_q) {
+          var8Lifetime2 = (Bzip2State.field_q - var13 << 12) / var12;
+          var10Lifetime2 = Bzip2State.field_q;
         } else {
           if (qk.field_p < var10Lifetime2) {
             var8Lifetime2 = (-var13 + qk.field_p << 12) / var12;

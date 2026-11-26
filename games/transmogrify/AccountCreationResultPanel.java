@@ -108,7 +108,7 @@ final class AccountCreationResultPanel extends ik implements df {
         od var1Lifetime1;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          re.field_h.serviceOutput();
+          Bzip2State.field_h.serviceOutput();
           u.field_a.serviceOutput();
           bd.field_q = bd.field_q - 1;
           if (param0 < 106) {

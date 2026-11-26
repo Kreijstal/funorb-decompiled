@@ -190,7 +190,7 @@ public final class MonkeyPuzzle2 extends bi {
           ie.clearStaticReferences((byte) -107);
           ByteStorage.clearStaticReferences(-123);
           tg.clearStaticReferences();
-          l.resetStaticState(0);
+          Bzip2State.resetStaticState(0);
           i.clearStaticReferences(true);
           nj.clearStaticReferences(-151);
           vi.a(0);
@@ -217,7 +217,7 @@ public final class MonkeyPuzzle2 extends bi {
           di.clearStaticReferences(false);
           ek.clearStaticReferences(-114);
           ProxyAuthenticationRequiredException.clearStaticReferences((byte) 114);
-          uf.clearStaticReferences((byte) -107);
+          NanoFrameTimer.clearStaticReferences((byte) -107);
           ImageProducerRasterBuffer.b((byte) 74);
           tj.a(89);
           eg.clearStaticReferences((byte) -108);
@@ -356,13 +356,13 @@ public final class MonkeyPuzzle2 extends bi {
             }
           }
           boolean decompiledFrameRemainder0 = true;
-          if (l.field_f != qh.field_b && (-1 == qh.field_b ||
-            l.field_f == -1)) {
+          if (Bzip2State.field_f != qh.field_b && (-1 == qh.field_b ||
+            Bzip2State.field_f == -1)) {
             if (qh.field_b != -1) {
               ProxyAuthenticationRequiredException.field_d[qh.field_b].b((byte) 124);
             } else {
-              if (-1 != l.field_f) {
-                ProxyAuthenticationRequiredException.field_d[l.field_f].b((byte) 125);
+              if (-1 != Bzip2State.field_f) {
+                ProxyAuthenticationRequiredException.field_d[Bzip2State.field_f].b((byte) 125);
               }
             }
             gl.a(SoftwareRasterizer.field_i, 0, lb.field_H.field_s, 0, 307200);
@@ -478,16 +478,16 @@ public final class MonkeyPuzzle2 extends bi {
               else {
                 if (sc.field_e == 0) {
                   boolean decompiledFrameRemainder0 = true;
-                  if (qh.field_b != l.field_f && (qh.field_b == -1 ||
-                    l.field_f == -1)) {
-                    if (-1 == l.field_f) {
+                  if (qh.field_b != Bzip2State.field_f && (qh.field_b == -1 ||
+                    Bzip2State.field_f == -1)) {
+                    if (-1 == Bzip2State.field_f) {
                       if (ej.field_b == 50) {
                         AccountServiceResult.a((byte) -28, ke.field_h[13]);
                       }
                       ej.field_b = ej.field_b - 1;
                       if ((ej.field_b == 0)) {
                         ej.field_b = 0;
-                        qh.field_b = l.field_f;
+                        qh.field_b = Bzip2State.field_f;
                       }
                     } else {
                       if (ej.field_b == 0) {
@@ -498,7 +498,7 @@ public final class MonkeyPuzzle2 extends bi {
                         if (qh.field_b == 2) {
                           s.field_S = null;
                         }
-                        qh.field_b = l.field_f;
+                        qh.field_b = Bzip2State.field_f;
                         if ((qh.field_b == 2 ||
                           qh.field_b == 6 ||
                           qh.field_b == 10)) {
@@ -527,7 +527,7 @@ public final class MonkeyPuzzle2 extends bi {
                     }
                   }
                   if (!re.field_f && (-1 != qh.field_b ||
-                    l.field_f != -1)) {
+                    Bzip2State.field_f != -1)) {
                     vb.f(param0 ^ 15323);
                   }
                 } else {
@@ -561,7 +561,7 @@ public final class MonkeyPuzzle2 extends bi {
                         }
                       }
                       sc.field_e = 3;
-                      l.field_f = qh.field_b;
+                      Bzip2State.field_f = qh.field_b;
                     } else {
                       ej.field_b = ej.field_b - 1;
                       if (ej.field_b == 0) {
@@ -575,7 +575,7 @@ public final class MonkeyPuzzle2 extends bi {
               cg.a(false);
               IntrusiveDeque.a(false, 31645);
               if (this.m(0) &&
-                fg.field_b <= 0) {
+                FrameTimer.field_b <= 0) {
                 if (dh.field_c == 6) {
                   dh.field_c = 2;
                 } else {

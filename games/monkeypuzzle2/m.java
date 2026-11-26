@@ -100,7 +100,7 @@ final class m extends IntrusiveNode {
               if (param0 > -15) {
                 field_h = 14;
               }
-              param1.getAppletContext().showDocument(uf.a(param1, (byte) 115, var2), "_top");
+              param1.getAppletContext().showDocument(NanoFrameTimer.a(param1, (byte) 115, var2), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

@@ -28,7 +28,7 @@ final class nf extends DualLinkNode {
         int var2 = DungeonAssault.field_K;
         int var1_intLifetime1;
         try {
-          o.field_o.b(-92);
+          o.field_o.resetTiming(-92);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             SecondaryNodeDequeIterator.field_b[var1_int] = 0L;
           }

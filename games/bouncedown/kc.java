@@ -21,15 +21,15 @@ final class kc {
             try {
               var4 = param0.getCodeBase();
               var3 = ag.a(param0, var4, false).getFile();
-              ac.a(true, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
-              ac.a(true, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
-              ac.a(true, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
+              JavaScriptBridge.callWithArguments(true, new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks");
+              JavaScriptBridge.callWithArguments(true, new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks");
+              JavaScriptBridge.callWithArguments(true, new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks");
               if (param1 != 27477) {
                 return;
               }
-              ac.a(true, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
-              ac.a(true, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
-              ac.a(true, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
+              JavaScriptBridge.callWithArguments(true, new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks");
+              JavaScriptBridge.callWithArguments(true, new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks");
+              JavaScriptBridge.callWithArguments(true, new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks");
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

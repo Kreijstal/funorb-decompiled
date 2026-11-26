@@ -438,7 +438,7 @@ class ej extends eb {
         this.field_O = false;
         this.field_Q = 0L;
         try {
-          this.listener = vc.field_c.field_i;
+          this.listener = FrameTimer.field_c.field_i;
           this.field_U = param2;
           this.a(true, (byte) -120, param0);
           this.field_W = true;

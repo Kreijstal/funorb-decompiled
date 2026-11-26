@@ -135,7 +135,7 @@ final class dl {
           var7 = MonkeyPuzzle2.field_F ? 1 : 0;
           try {
             try {
-              var3 = (String) (mf.a(param1 ^ -20969, "getcookies", param0));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1 ^ -20969, "getcookies", param0));
               var4 = ma.a(127, ';', var3);
               var5 = 0;
               if (param1 != 14278) {

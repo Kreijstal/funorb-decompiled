@@ -219,7 +219,7 @@ final class sf {
             var1_int = SecondaryNodeDequeIterator.field_d;
           }
           if (~SecondaryNodeDequeIterator.field_d != ~var1_int) {
-            bd.d(1);
+            NanoFrameTimer.d(1);
             if (var1_int != -1) {
               MusicPatchPcmStream.field_q = 10;
             }

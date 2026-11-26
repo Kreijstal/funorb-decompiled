@@ -427,7 +427,7 @@ final class MidiPcmStream extends PcmStream {
         String var5 = db.a(wh.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var6 = db.a(jk.field_q, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var7 = db.a(ga.field_r, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0);
-        String var8 = db.a(wj.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
+        String var8 = db.a(FrameTimer.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var9 = db.a(of.field_g, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var10 = db.a(ca.field_O, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var11 = db.a(fh.field_f, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);

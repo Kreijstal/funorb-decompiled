@@ -55,14 +55,14 @@ abstract class hh {
         ce.field_u = param1;
         if (param2 < -52) {
           ke.field_b = param3;
-          tf.field_b = param4;
+          FrameTimer.field_b = param4;
           lp.field_h = param0;
           return;
         }
         GraphicsRenderer var6 = (GraphicsRenderer) null;
         hh.a(-76, (GraphicsRenderer) null);
         ke.field_b = param3;
-        tf.field_b = param4;
+        FrameTimer.field_b = param4;
         lp.field_h = param0;
     }
 

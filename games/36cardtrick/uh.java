@@ -189,7 +189,7 @@ final class uh extends IntrusiveNode {
               } else {
                 var7Lifetime4 = var9 + "; Discard;";
               }
-              vh.a(param4, "document.cookie=\"" + var7Lifetime4 + "\"", -12300);
+              JavaScriptBridge.evaluate(param4, "document.cookie=\"" + var7Lifetime4 + "\"", -12300);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

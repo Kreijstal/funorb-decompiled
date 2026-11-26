@@ -177,7 +177,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           return -uf.field_a + param1 < Raider.field_m.length ? true : false;
         }
         if (wm.field_a <= param1) {
-          return dc.field_p.length > -wm.field_a + param1 ? true : false;
+          return Bzip2State.field_p.length > -wm.field_a + param1 ? true : false;
         }
         return false;
     }

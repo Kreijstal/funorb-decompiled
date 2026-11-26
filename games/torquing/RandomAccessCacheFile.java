@@ -97,7 +97,7 @@ final class RandomAccessCacheFile {
           var11 = var8;
           var12 = -var8;
           var13 = -1;
-          if (j.field_q <= param2 &&
+          if (Bzip2State.field_q <= param2 &&
             param2 <= qk.field_p) {
             var39 = qd.field_a[param2];
             var16 = ln.a(qg.field_z, RasterBuffer.field_e, -param4 + param1, 97);
@@ -129,7 +129,7 @@ final class RandomAccessCacheFile {
               var10 = var10 - (var9 << 1);
               var15 = param2 - var9;
               var16Lifetime1 = param2 + var9;
-              if (var16Lifetime1 >= j.field_q &&
+              if (var16Lifetime1 >= Bzip2State.field_q &&
                 qk.field_p >= var15) {
                 if (var8 <= var9) {
                   var17Lifetime1 = ln.a(qg.field_z, RasterBuffer.field_e, param1 + var7_int, param0 ^ -15853);
@@ -137,7 +137,7 @@ final class RandomAccessCacheFile {
                   if (qk.field_p >= var16Lifetime1) {
                     di.a(var18Lifetime1, (byte) 76, param3, qd.field_a[var16Lifetime1], var17Lifetime1);
                   }
-                  if (j.field_q <= var15) {
+                  if (Bzip2State.field_q <= var15) {
                     di.a(var18Lifetime1, (byte) 15, param3, qd.field_a[var15], var17Lifetime1);
                   }
                 } else {
@@ -152,7 +152,7 @@ final class RandomAccessCacheFile {
                     di.a(var21, (byte) -94, param6, var40, var20);
                     di.a(var20, (byte) 33, param3, var40, var18Lifetime1);
                   }
-                  if (var15 >= j.field_q) {
+                  if (var15 >= Bzip2State.field_q) {
                     var41 = qd.field_a[var15];
                     di.a(var19Lifetime1, (byte) -93, param3, var41, var21);
                     di.a(var21, (byte) 107, param6, var41, var20);
@@ -163,7 +163,7 @@ final class RandomAccessCacheFile {
             }
             var15Lifetime1 = param2 - var7_int;
             var16Lifetime1Lifetime1 = var7_int + param2;
-            if (var16Lifetime1Lifetime1 < j.field_q) {
+            if (var16Lifetime1Lifetime1 < Bzip2State.field_q) {
               continue;
             }
             if (qk.field_p < var15Lifetime1) {
@@ -183,7 +183,7 @@ final class RandomAccessCacheFile {
               if (qk.field_p >= var16Lifetime1Lifetime1) {
                 di.a(var18Lifetime1Lifetime1, (byte) 51, param3, qd.field_a[var16Lifetime1Lifetime1], var17Lifetime1Lifetime1);
               }
-              if (j.field_q > var15Lifetime1) {
+              if (Bzip2State.field_q > var15Lifetime1) {
                 continue;
               }
               di.a(var18Lifetime1Lifetime1, (byte) 71, param3, qd.field_a[var15Lifetime1], var17Lifetime1Lifetime1);
@@ -203,7 +203,7 @@ final class RandomAccessCacheFile {
               di.a(var21Lifetime1, (byte) -115, param6, var42, var20Lifetime1);
               di.a(var20Lifetime1, (byte) -116, param3, var42, var17Lifetime1Lifetime1);
             }
-            if (j.field_q > var15Lifetime1) {
+            if (Bzip2State.field_q > var15Lifetime1) {
               continue;
             }
             var43 = qd.field_a[var15Lifetime1];

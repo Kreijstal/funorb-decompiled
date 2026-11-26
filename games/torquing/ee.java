@@ -255,10 +255,10 @@ final class ee extends am {
         byte[] var3 = null;
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        if (ha.field_b != null) {
-          var1 = ha.field_b;
+        if (FrameTimer.field_b != null) {
+          var1 = FrameTimer.field_b;
           synchronized (var1) {
-            ha.field_b = null;
+            FrameTimer.field_b = null;
           }
         }
         if (!param0) {

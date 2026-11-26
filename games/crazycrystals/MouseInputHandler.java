@@ -298,7 +298,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -38 / ((45 - param0) / 48);
-          stackIn_1_0 = qn.a((byte) -123, false, param1);
+          stackIn_1_0 = Bzip2State.a((byte) -123, false, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -533,7 +533,7 @@ final class mk {
                 if (!var12.field_ac) {
                   stackIn_165_0 = li.field_c;
                 } else {
-                  stackIn_165_0 = gm.field_a;
+                  stackIn_165_0 = FrameTimer.field_a;
                 }
               } else {
                 stackIn_165_0 = SecondaryNodeHashTable.field_l;

@@ -75,7 +75,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
           if (0 < MixedSupport121.integerState0778) {
             MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
           }
-          if (MixedSupport026.booleanState0028 &&
+          if (NanoFrameTimer.booleanState0028 &&
             MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
             RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
             GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
@@ -102,7 +102,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
               if (0 < MixedSupport121.integerState0778) {
                 MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
-              if (MixedSupport026.booleanState0028 &&
+              if (NanoFrameTimer.booleanState0028 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
@@ -126,7 +126,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
               if (0 < MixedSupport121.integerState0778) {
                 MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
-              if (MixedSupport026.booleanState0028 &&
+              if (NanoFrameTimer.booleanState0028 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
@@ -164,7 +164,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
                 if (0 < MixedSupport121.integerState0778) {
                   MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
                 }
-                if (MixedSupport026.booleanState0028 &&
+                if (NanoFrameTimer.booleanState0028 &&
                   MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                   RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                   GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
@@ -198,7 +198,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
             if (0 < MixedSupport121.integerState0778) {
               MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
             }
-            if (MixedSupport026.booleanState0028 &&
+            if (NanoFrameTimer.booleanState0028 &&
               MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
               RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
               GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
@@ -221,7 +221,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
               if (0 < MixedSupport121.integerState0778) {
                 MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
-              if (MixedSupport026.booleanState0028 &&
+              if (NanoFrameTimer.booleanState0028 &&
                 MixedSupport016.sceneWidgetPart013State0001.integerState0840 <= MixedSupport016.sceneWidgetPart013State0001.integerState0843) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = false;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = MixedSupport014.stringState0066;
@@ -240,7 +240,7 @@ final class UiComponentPart023 extends UiComponentPart004 {
               if (0 < MixedSupport121.integerState0778) {
                 MixedSupport083.performAction1088(0, booleanArgument7, booleanArgument5, booleanArgument6, integerArgument10);
               }
-              if (!MixedSupport026.booleanState0028) {
+              if (!NanoFrameTimer.booleanState0028) {
                 RenderingSupport004.sceneWidgetState0039.booleanState0212 = true;
                 GameDomainSupport002.sceneWidgetPart008State0002.sceneWidgetState0089.stringState0598 = null;
                 MixedSupport020.performAction0296(integerArgument2, -17339, integerArgument10, GameDomainSupport002.sceneWidgetPart008State0002, booleanArgument1);

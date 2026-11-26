@@ -94,7 +94,7 @@ final class mc extends IntrusiveNode {
               if (param0 != 2126) {
                 return false;
               }
-              var3 = (String) (hp.a(param1, (byte) -85, "getcookies"));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, (byte) -85, "getcookies"));
               var4 = kc.a(';', var3, 0);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

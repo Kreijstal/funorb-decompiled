@@ -141,7 +141,7 @@ final class uj implements Runnable {
         int var8 = 0;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (da.field_r != dh.field_bb) {
+          if (Bzip2State.field_r != dh.field_bb) {
             return false;
           }
           var2_int = 28 / ((param1 - 65) / 36);

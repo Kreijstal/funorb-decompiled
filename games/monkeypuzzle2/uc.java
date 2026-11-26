@@ -53,7 +53,7 @@ final class uc {
         vh.field_I = (var13 - param1) * var8;
         nc.field_e = (var13 - param1) * var9;
         cg.field_h = (var12 - param0) * var8;
-        l.field_u = (var12 - param0) * var9;
+        Bzip2State.field_u = (var12 - param0) * var9;
         ak.field_u = param7;
         uc.a(param0, param1, param4, param5, 0, 0, var10, SoftwareRasterizer.field_i, var13 * SoftwareRasterizer.field_h + var12, param6, var8, var9, var13 - var15, var12 - var14, SoftwareRasterizer.field_h - (var14 - var12));
     }
@@ -79,7 +79,7 @@ final class uc {
         int var16Lifetime2;
         while (param12 < 0) {
           ti.field_a = cg.field_h;
-          gi.field_c = l.field_u;
+          gi.field_c = Bzip2State.field_u;
           var15 = param13;
           while (var15 < 0) {
             param1 = gi.field_c - vh.field_I >> 16;

@@ -63,7 +63,7 @@ final class ol extends TextureOperator {
             var4 = param0.substring(var2_int + 1);
             var5 = qn.a(var3, 0);
             if (var5 == null) {
-              return ug.a(var4, (byte) -77);
+              return FrameTimer.a(var4, (byte) -77);
             }
             stackIn_14_0 = var5;
             return stackIn_14_0;

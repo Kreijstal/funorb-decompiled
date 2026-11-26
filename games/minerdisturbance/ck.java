@@ -27,7 +27,7 @@ final class ck {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cn.a(param0, 258, param2, param3)) {
+          if (!Bzip2State.a(param0, 258, param2, param3)) {
             return null;
           }
           if (param1 != 64) {

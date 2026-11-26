@@ -25,7 +25,7 @@ final class af {
             return null;
           }
           var3 = new bm(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, MouseInput.field_a, a.field_e);
-          oc.a((byte) -21);
+          Bzip2State.a((byte) -21);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

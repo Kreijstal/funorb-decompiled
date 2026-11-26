@@ -41,7 +41,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           a.a(param5, param1, param4, (byte) 123, param3, param2);
           return;
         }
-        if (j.field_q > -param2 + param3) {
+        if (Bzip2State.field_q > -param2 + param3) {
           a.a(param5, param1, param4, (byte) 123, param3, param2);
           return;
         }

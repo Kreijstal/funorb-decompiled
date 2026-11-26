@@ -4574,7 +4574,7 @@ final class BattleState {
             if (((decompiledFrameCompleted5) && (decompiledFrameCompleted3) && (decompiledFrameCompleted2)) &&
               (decompiledFrameRemainder2 = !(!g.field_tb)) &&
               (decompiledFrameRemainder2 = !(mm.field_e < 2))) {
-              vc.field_f.b("QA MODE", 10, 70, 16711823, 0);
+              FrameTimer.field_f.b("QA MODE", 10, 70, 16711823, 0);
               stackIn_573_0 = this.map.a(-111, vf.field_a, eg.field_p, IntrusiveNode.field_c);
             }
           }
@@ -4805,15 +4805,15 @@ final class BattleState {
             if (stackIn_732_0 == this.field_K &&
               !this.field_J) {
               this.field_K = LevelEditor.field_f;
-              var8 = vc.field_f.b(this.field_K);
+              var8 = FrameTimer.field_f.b(this.field_K);
               var9 = 24;
               if (var8 >= 320) {
                 var8 = 320;
               }
-              var9 = 24 * vc.field_f.c(this.field_K, var8);
+              var9 = 24 * FrameTimer.field_f.c(this.field_K, var8);
               SoftwareRasterizer.fillRectangle(320 - var8 / 2 - 10, 237 - (var9 / 2 - 122), var8 + 20, 8 + var9, 8388608);
               jl.a(jc.field_G, 6 + var9 + 8, 116 + (-(var9 / 2) + 240), 20 + var8 + 6, (byte) -115, -13 + (-(var8 / 2) + 320));
-              kb.a(116, 24, var8 + (-(var8 / 2) + 320), this.field_K, -(var8 / 2) + 320, 50 + (240 - var9 + 105), 16777215);
+              Bzip2State.a(116, 24, var8 + (-(var8 / 2) + 320), this.field_K, -(var8 / 2) + 320, 50 + (240 - var9 + 105), 16777215);
               this.field_K = null;
             }
             decompiledFrameRemainder0 = (null != this.field_K);
@@ -4832,7 +4832,7 @@ final class BattleState {
               DelegatingCanvas.field_h = 0;
               eg.field_p = this.field_E;
             }
-            var8 = vc.field_f.b(this.field_K);
+            var8 = FrameTimer.field_f.b(this.field_K);
             var9 = 24;
             if (var8 >= 320) {
               var8 = 320;
@@ -4840,7 +4840,7 @@ final class BattleState {
             if (var8 < AccountRequestState.field_f.b(jc.field_B)) {
               var8 = AccountRequestState.field_f.b(jc.field_B);
             }
-            var9 = 24 + 24 * vc.field_f.c(this.field_K, var8);
+            var9 = 24 + 24 * FrameTimer.field_f.c(this.field_K, var8);
             SoftwareRasterizer.fillRectangle(-10 - var8 / 2 + 320, 50 + (-28 - var9 / 2 + 240), var8 + 20, 8 + var9, 8388608);
             stackIn_753_0 = jc.field_G;
             stackIn_753_1 = var9 + 14;
@@ -4848,7 +4848,7 @@ final class BattleState {
           }
           if (decompiledFrameRemainder0) {
             jl.a(stackIn_753_0, stackIn_753_1, stackIn_753_2, var8 + 26, (byte) 103, -3 + (310 - var8 / 2));
-            vc.field_f.a(this.field_K, -(var8 / 2) + 320, 24 + (240 - var9 / 2), var8, var9, 16777215, 0, 1, 0, vc.field_f.field_s);
+            FrameTimer.field_f.a(this.field_K, -(var8 / 2) + 320, 24 + (240 - var9 / 2), var8, var9, 16777215, 0, 1, 0, FrameTimer.field_f.field_s);
             AccountRequestState.field_f.c(jc.field_B, 320, 24 + (var9 / 2 + 240), 16777215, -1);
           }
           vb.field_i = 25;

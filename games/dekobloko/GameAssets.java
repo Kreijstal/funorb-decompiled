@@ -652,7 +652,7 @@ final class GameAssets {
           }
           byteArrayLocal58 = MixedSupport067.computeByteArray0840(-24, "flowers");
           if (byteArrayLocal58 != null) {
-            MixedSupport026.stringState0128 = MixedSupport105.computeString1370(byteArrayLocal58, 2);
+            NanoFrameTimer.stringState0128 = MixedSupport105.computeString1370(byteArrayLocal58, 2);
           }
           byteArrayLocal59 = MixedSupport067.computeByteArray0840(-16, "undersea");
           if (byteArrayLocal59 != null) {
@@ -1156,7 +1156,7 @@ final class GameAssets {
           }
           byteArrayLocal184 = MixedSupport067.computeByteArray0840(-42, "instructions_matchthepieces");
           if (null != byteArrayLocal184) {
-            MixedSupport026.stringState0129 = MixedSupport105.computeString1370(byteArrayLocal184, 2);
+            NanoFrameTimer.stringState0129 = MixedSupport105.computeString1370(byteArrayLocal184, 2);
           }
           byteArrayLocal185 = MixedSupport067.computeByteArray0840(-121, "instructions_machinetransforms");
           if (byteArrayLocal185 != null) {

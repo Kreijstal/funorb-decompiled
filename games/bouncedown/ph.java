@@ -71,7 +71,7 @@ final class ph {
               if (param0.length() == 0) {
                 var5 = var5 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ac.a((byte) 91, param1, "document.cookie=\"" + var5 + "\"");
+              JavaScriptBridge.evaluate((byte) 91, param1, "document.cookie=\"" + var5 + "\"");
             } catch (Throwable throwable) {
             }
             kc.a(param1, 27477);

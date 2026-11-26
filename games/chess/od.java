@@ -31,17 +31,17 @@ final class od extends fb {
             try {
               var4 = param1.getCodeBase();
               var3 = rh.a(var4, param1, (byte) -87).getFile();
-              u.a(param1, true, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
-              u.a(param1, true, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param1, true, new Object[]{"home", var3 + "home.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param1, true, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks");
               stackIn_2_0 = (java.applet.Applet) (param1);
               stackIn_3_1 = !(param0);
-              u.a(stackIn_2_0, stackIn_3_1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(stackIn_2_0, stackIn_3_1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks");
               if (param0) {
                 od.clearStaticReferences(false);
               }
-              u.a(param1, true, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
-              u.a(param1, true, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
-              u.a(param1, true, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param1, true, new Object[]{"options", var3 + "options.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param1, true, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks");
+              JavaScriptBridge.callWithArguments(param1, true, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

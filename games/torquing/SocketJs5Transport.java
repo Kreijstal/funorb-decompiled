@@ -1559,7 +1559,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "justplay");
                 if (null != var2) {
-                  ha.field_c = SecondaryNodeDeque.a(var2, false);
+                  FrameTimer.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "justplay_excl");
                 if (null != var2) {

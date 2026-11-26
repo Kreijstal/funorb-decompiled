@@ -202,7 +202,7 @@ class fd implements WidgetActionListener, w {
               stackIn_20_0 = var18.a(var9, 0);
             }
             var15 = stackIn_20_0;
-            vc.field_c.a(this.field_r, this.a(var14, param3, param2, (byte) 126), var13.field_e + param3.field_v + (this.field_b + param1) + param3.y, this.field_r >>> 24, param0 ^ 2, var13.field_a, var15 - var14);
+            FrameTimer.field_c.a(this.field_r, this.a(var14, param3, param2, (byte) 126), var13.field_e + param3.field_v + (this.field_b + param1) + param3.y, this.field_r >>> 24, param0 ^ 2, var13.field_a, var15 - var14);
           }
           MessageKeys.a(false);
           return;
@@ -293,7 +293,7 @@ class fd implements WidgetActionListener, w {
             }
             var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
             di.a(param2.x + (param3 + param2.width), param1 + param2.y, param4 ^ -17264, param2.height + (param2.y + param1), param3 + param2.x);
-            vc.field_c.a(this.field_g, var10, var10, var12, var11, true);
+            FrameTimer.field_c.a(this.field_g, var10, var10, var12, var11, true);
             MessageKeys.a(false);
           }
           if (param4 == -32135) {

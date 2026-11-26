@@ -64,12 +64,12 @@ final class ArchiveLoadStep {
             var5 = GameKeyHandler.field_a;
             GameKeyHandler.field_a.field_z = 0;
             var5.field_zb = 0;
-            var6 = PopupMenuBuilder.field_B;
-            PopupMenuBuilder.field_B.field_z = 0;
+            var6 = Bzip2State.field_B;
+            Bzip2State.field_B.field_z = 0;
             var6.field_zb = 0;
             field_m.field_wb = WidgetStyleLayer.field_l.toUpperCase();
             var7 = (2 + LevelData.field_a.field_zb) / 2;
-            PopupMenuBuilder.field_B.setBounds(40, -40 + LevelData.field_a.field_z, -2 + var7, 0, -3344);
+            Bzip2State.field_B.setBounds(40, -40 + LevelData.field_a.field_z, -2 + var7, 0, -3344);
             GameKeyHandler.field_a.setBounds(40, LevelData.field_a.field_z - 40, LevelData.field_a.field_zb - var7, var7, -3344);
             if (UiComponentNode.field_r.length == 1 &&
               UiComponentNode.field_r[0] == 2) {
@@ -113,9 +113,9 @@ final class ArchiveLoadStep {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = PopupMenuBuilder.field_B.field_yb.textWidth(var16) + 3 * PopupMenuBuilder.field_B.field_yb.charWidth('.');
-              PopupMenuBuilder.field_B.field_R = 0;
-              PopupMenuBuilder.field_B.field_V = (-var10Lifetime1 + PopupMenuBuilder.field_B.field_zb) / 2;
+              var10Lifetime1 = Bzip2State.field_B.field_yb.textWidth(var16) + 3 * Bzip2State.field_B.field_yb.charWidth('.');
+              Bzip2State.field_B.field_R = 0;
+              Bzip2State.field_B.field_V = (-var10Lifetime1 + Bzip2State.field_B.field_zb) / 2;
               if ((48 & PowerupCommand.field_i) == 16) {
                 var9 = var16 + ".";
               }
@@ -125,7 +125,7 @@ final class ArchiveLoadStep {
               if ((48 & PowerupCommand.field_i) == 48) {
                 var9 = (String) (var9) + "...";
               }
-              PopupMenuBuilder.field_B.field_wb = (String) (var9);
+              Bzip2State.field_B.field_wb = (String) (var9);
               GameKeyHandler.field_a.field_wb = NoticeMenuHelpers.field_a.toUpperCase();
             } else {
               stackIn_24_0 = GameKeyHandler.field_a;
@@ -143,7 +143,7 @@ final class ArchiveLoadStep {
               }
               stackIn_27_0.field_wb = QueuedListRequest.substituteTemplateArguments(stackIn_28_1, new String[]{GameKeyHandler.field_a.field_wb}, 2);
               ChatPromptHelpers.field_b.field_Z = true;
-              PopupMenuBuilder.field_B.field_wb = QuickChatCategoryDefinition.field_t;
+              Bzip2State.field_B.field_wb = QuickChatCategoryDefinition.field_t;
               BirthDateValidator.field_l = true;
               if (null != TutorialAndMenuHelpers.field_b) {
                 ReflectionCheckRequest.field_p = false;

@@ -11,7 +11,7 @@ final class ij {
 
     final static void a(ResourceArchive param0, boolean param1, ResourceArchive param2, byte param3) {
         try {
-          da.a(fi.field_b, r.field_Tb, ic.field_c, bj.field_eb, ia.field_o, qn.field_P, af.field_o, tk.field_d, param1, false, sj.field_k, pk.field_a);
+          da.a(fi.field_b, r.field_Tb, ic.field_c, bj.field_eb, Bzip2State.field_o, qn.field_P, af.field_o, tk.field_d, param1, false, sj.field_k, pk.field_a);
           el.field_z = ao.a(param2, "chatfilter", 2993, "lobby");
           nk.field_x[2] = ii.field_K;
           nk.field_x[1] = gg.field_g;

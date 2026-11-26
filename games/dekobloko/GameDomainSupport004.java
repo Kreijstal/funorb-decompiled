@@ -117,7 +117,7 @@ final class GameDomainSupport004 {
         integerLocal13 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
           integerLocal8 = AgeValidator.integerState0360;
-          MixedSupport059.sceneWidgetState0055 = new SceneWidget(0L, (SceneWidget) null);
+          FrameTimer.sceneWidgetState0055 = new SceneWidget(0L, (SceneWidget) null);
           if (resourceArchiveArgument3 == null) {
             throwableLocal14 = (Throwable) null;
             NetworkArchiveRequestManager.performAction1289((Throwable) null, 16408, "QC1");
@@ -127,7 +127,7 @@ final class GameDomainSupport004 {
           resourceArchiveArgument3.integerState0350 = 0;
           ReturnedShapeCache.mixedSupport032State0001 = new MixedSupport032(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3);
           UiComponentPart033.networkSupport012State0001 = new NetworkSupport012(integerLocal8, resourceArchiveArgument3, resourceArchiveArgument3, new MixedSupport045());
-          mixedSupport003Local10 = MixedSupport026.computeMixedSupport0030383((byte) 124);
+          mixedSupport003Local10 = NanoFrameTimer.computeMixedSupport0030383((byte) 124);
           if (mixedSupport003Local10 == null) {
             throwableLocal15 = (Throwable) null;
             NetworkArchiveRequestManager.performAction1289((Throwable) null, 16408, "QC2");
@@ -151,7 +151,7 @@ final class GameDomainSupport004 {
           if (byteArgument1 <= 61) {
             return;
           }
-          MixedSupport059.sceneWidgetState0055.nodeDequeState0034 = new NodeDeque();
+          FrameTimer.sceneWidgetState0055.nodeDequeState0034 = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal18) {
           caughtExceptionLocal7 = caughtParameterLocal18;

@@ -130,7 +130,7 @@ final class PcmOutputWorker implements Runnable {
                 ri.a((byte) -125, bm.c(-99));
                 nf.field_g = d.field_a;
                 si.a(-98);
-                ek.field_c = false;
+                FrameTimer.field_c = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
               }
@@ -156,7 +156,7 @@ final class PcmOutputWorker implements Runnable {
                   vh.field_i[var12] = kj.field_a.readPrefixedString(-1);
                 }
                 si.a(-34);
-                ek.field_c = false;
+                FrameTimer.field_c = false;
                 stackIn_44_0 = var11 + 100;
                 return stackIn_44_0;
               }
@@ -173,24 +173,24 @@ final class PcmOutputWorker implements Runnable {
               }
             }
             si.a(-82);
-            ek.field_c = false;
+            FrameTimer.field_c = false;
             stackIn_53_0 = oj.field_K;
             return stackIn_53_0;
           }
           if (AwtRasterBuffer.field_i == null) {
-            if (ek.field_c) {
+            if (FrameTimer.field_c) {
               if (qa.a(-112) > 30000L) {
                 nf.field_g = oi.field_K;
               } else {
                 nf.field_g = FullscreenFocusCanvas.field_a;
               }
-              ek.field_c = false;
+              FrameTimer.field_c = false;
               stackIn_61_0 = 249;
               return stackIn_61_0;
             }
             var9Lifetime3 = jc.field_E;
             jc.field_E = ic.field_h;
-            ek.field_c = true;
+            FrameTimer.field_c = true;
             ic.field_h = var9Lifetime3;
           }
           stackIn_64_0 = -1;

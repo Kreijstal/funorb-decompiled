@@ -261,7 +261,7 @@ final class DialogLayer extends SingleChildWidget {
           if (param0 < 32) {
             DialogLayer.isBlinkPhaseVisible((byte) -118);
           }
-          stackIn_6_0 = PopupMenuBuilder.buildSprites(33);
+          stackIn_6_0 = Bzip2State.buildSprites(33);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

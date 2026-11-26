@@ -97,7 +97,7 @@ final class jh {
                   g.field_k.decompress((byte) 97, var9, var13);
                 }
               } else {
-                gi.a(var13, var5, param0, var4, 9);
+                gi.decompress(var13, var5, param0, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;
@@ -144,7 +144,7 @@ final class jh {
     final static void a(int param0, int param1) {
         try {
           try {
-            fd.a(-4476, ia.g(-115), "resizing", new Object[]{new Integer(param0)});
+            JavaScriptBridge.callWithArguments(-4476, ia.g(-115), "resizing", new Object[]{new Integer(param0)});
           } catch (Throwable throwable) {
           }
           if (param1 <= 44) {

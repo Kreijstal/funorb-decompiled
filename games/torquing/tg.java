@@ -28,7 +28,7 @@ abstract class tg extends GameApplet {
         mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, ArchiveRequest.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
         wb.field_u = ResourceArchive.createMouseWheelInput(26);
-        j.a(k.field_d, (byte) -125);
+        Bzip2State.a(k.field_d, (byte) -125);
         b.field_w = param6;
         TooltipPanel.field_p = param1;
         gf.field_k = param5;
@@ -46,7 +46,7 @@ abstract class tg extends GameApplet {
         RuntimeException var1_ref = null;
         var4 = Torquing.field_u;
         try {
-          var1 = ha.field_b;
+          var1 = FrameTimer.field_b;
           synchronized (var1) {
             IntrusiveNode.field_g = mj.field_d;
             po.field_w = po.field_w + 1;
@@ -297,7 +297,7 @@ abstract class tg extends GameApplet {
           b.field_v) {
           tf.a(-101, k.field_d);
           this.a(false);
-          j.a(k.field_d, (byte) -118);
+          Bzip2State.a(k.field_d, (byte) -118);
         }
         if (hh.field_d[8]) {
           kj.a(8);

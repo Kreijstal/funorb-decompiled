@@ -65,7 +65,7 @@ final class kh extends vk implements dc, ga, qk {
         int var1 = 1;
         this.field_D = new gh("", (qg) null, var1 != 0);
         this.field_M = new dk(MouseInput.field_a, (qg) null);
-        this.field_I = new dk(fk.field_v, (qg) null);
+        this.field_I = new dk(Bzip2State.field_v, (qg) null);
         this.field_J.field_p = ld.field_jb;
         this.field_z.field_p = q.field_h;
         this.field_E.field_p = ca.field_M;

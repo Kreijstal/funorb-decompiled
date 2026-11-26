@@ -133,7 +133,7 @@ final class nj {
                 return false;
               }
               var2 = "tuhstatbut";
-              var3 = (String) (pb.a("getcookies", param0, true));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, true));
               var4 = ki.a((byte) -95, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

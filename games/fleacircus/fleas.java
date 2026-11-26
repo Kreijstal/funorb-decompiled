@@ -980,7 +980,7 @@ public final class fleas extends NetworkGameClient {
           fb.clearStaticReferences(3);
           b.clearStaticReferences(2);
           ud.clearStaticReferences((byte) 85);
-          wj.clearStaticReferences(param0 - 95);
+          FrameTimer.clearStaticReferences(param0 - 95);
           AwtRasterBuffer.clearStaticReferences((byte) -118);
           of.clearStaticReferences(71);
           FullscreenFocusCanvas.a(-29039);
@@ -1090,7 +1090,7 @@ public final class fleas extends NetworkGameClient {
           fl.clearStaticReferences(26113);
           ByteStorage.clearStaticReferences((byte) -75);
           fe.clearStaticReferences();
-          gk.a(true);
+          Bzip2State.a(true);
           fg.clearDeclaredStaticReferences(-5);
           gf.clearStaticReferences(-46);
           bg.b((byte) -120);
@@ -1115,7 +1115,7 @@ public final class fleas extends NetworkGameClient {
           lg.clearStaticReferences(-106);
           hm.clearStaticReferences(2067);
           ProxyAuthenticationRequiredException.clearStaticReferences(3505);
-          o.clearStaticReferences((byte) 82);
+          NanoFrameTimer.clearStaticReferences((byte) 82);
           ImageProducerRasterBuffer.clearStaticReferences(0);
           hf.clearStaticReferences(-124);
           wa.clearStaticReferences(param0 ^ 1730);
@@ -1212,7 +1212,7 @@ public final class fleas extends NetworkGameClient {
         int var1_intLifetime1;
         var3 = field_A ? 1 : 0;
         try {
-          l.field_b.c(12445);
+          l.field_b.resetTiming(12445);
           var1_int = 0;
           while (var1_int < 32) {
             bh.field_q[var1_int] = 0L;
@@ -1294,8 +1294,8 @@ public final class fleas extends NetworkGameClient {
                               wh.a(-128);
                               this.d(true);
                               field_K = new ng(pb.field_a, ib.field_f);
-                              wj.field_b[0] = qf.a(pb.field_a, "", "menu_select").b();
-                              wj.field_b[1] = ia.a(882, 2500, 1);
+                              FrameTimer.field_b[0] = qf.a(pb.field_a, "", "menu_select").b();
+                              FrameTimer.field_b[1] = ia.a(882, 2500, 1);
                               this.j((byte) 87);
                               pb.field_a = null;
                               fleas.h((byte) -110);
@@ -1316,7 +1316,7 @@ public final class fleas extends NetworkGameClient {
                     jj.a(18.0f, re.a((byte) 127, 0, ob.field_d, kk.field_c, cf.field_b), true);
                     return false;
                   }
-                  jj.a(15.0f, sa.a(DualLinkNode.field_l, "", gk.field_G, sc.field_c, (byte) 46), true);
+                  jj.a(15.0f, sa.a(DualLinkNode.field_l, "", Bzip2State.field_G, sc.field_c, (byte) 46), true);
                   return false;
                 }
                 jj.a(10.0f, sa.a(ib.field_f, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
@@ -2328,7 +2328,7 @@ public final class fleas extends NetworkGameClient {
             mh.field_u = 3;
           }
           if (mh.field_u != var15) {
-            ik.a(wj.field_b[0], (byte) -84);
+            ik.a(FrameTimer.field_b[0], (byte) -84);
           }
           boolean decompiledFrameRemainder0 = true;
           var16 = ia.field_m[field_E][var2_int];
@@ -2464,12 +2464,12 @@ public final class fleas extends NetworkGameClient {
           si.field_y.b(true);
           if (lk.field_D.field_g) {
             oa.a(10, true, 91);
-            ik.a(wj.field_b[0], (byte) -84);
+            ik.a(FrameTimer.field_b[0], (byte) -84);
           }
           if (si.field_y.field_g && (!(0 < qg.field_c) ||
             0 != nb.field_b)) {
             cf.a(-25319);
-            ik.a(wj.field_b[0], (byte) -84);
+            ik.a(FrameTimer.field_b[0], (byte) -84);
           }
           if (var17 != 0) {
             if (120 > pg.field_f) {

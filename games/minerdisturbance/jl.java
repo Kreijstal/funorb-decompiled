@@ -80,7 +80,7 @@ final class jl extends wf {
         try {
           this.field_ab = param1;
           if (null != this.field_ab) {
-            var3_int = cn.field_g.b(this.field_ab, 260, cn.field_g.field_I);
+            var3_int = Bzip2State.field_g.b(this.field_ab, 260, Bzip2State.field_g.field_I);
             this.a(150 + var3_int, 300, (byte) 55);
           }
           this.field_cb = new oi(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -95,10 +95,10 @@ final class jl extends wf {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        cn.field_g.b(this.field_db, (this.field_v >> 1) + param2, 103 + param1, 16777215, -1);
+        Bzip2State.field_g.b(this.field_db, (this.field_v >> 1) + param2, 103 + param1, 16777215, -1);
         if (this.field_ab != null) {
           SoftwareRasterizer.drawHorizontalLine(20 + param2, 120 + param1 - 7, 260, 8421504);
-          cn.field_g.a(this.field_ab, param2 + 20, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, cn.field_g.field_I);
+          Bzip2State.field_g.a(this.field_ab, param2 + 20, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, Bzip2State.field_g.field_I);
         }
     }
 

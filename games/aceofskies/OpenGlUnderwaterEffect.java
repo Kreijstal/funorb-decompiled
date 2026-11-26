@@ -223,7 +223,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
           this.field_f = param0 ? true : false;
           this.field_b.a(1, (byte) 81);
           this.field_b.a(this.field_n, -9135);
-          this.field_b.a(du.field_l, true, bd.field_C);
+          this.field_b.a(du.field_l, true, Bzip2State.field_C);
           this.field_b.a((byte) 127, 0, GameKeyHandler.field_a);
           this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
           this.field_b.a(ArchiveNetworkClient.field_i, 0, 0);
@@ -235,7 +235,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
         this.field_f = param0 ? true : false;
         this.field_b.a(1, (byte) 81);
         this.field_b.a(this.field_n, -9135);
-        this.field_b.a(du.field_l, true, bd.field_C);
+        this.field_b.a(du.field_l, true, Bzip2State.field_C);
         this.field_b.a((byte) 127, 0, GameKeyHandler.field_a);
         this.field_b.a(true, 2, true, CipherPacketBuffer.field_p, false);
         this.field_b.a(ArchiveNetworkClient.field_i, 0, 0);

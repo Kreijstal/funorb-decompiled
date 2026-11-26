@@ -112,7 +112,7 @@ final class sm extends l {
 
     final static int d(byte param0) {
         int var1 = -39 / ((param0 + 26) / 39);
-        return (int)(1000000000L / s.field_k);
+        return (int)(1000000000L / NanoFrameTimer.field_k);
     }
 
     final static byte[] copyBytes(int param0, byte[] param1) {

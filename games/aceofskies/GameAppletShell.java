@@ -406,7 +406,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (param0 >= -102) {
                 field_l = (AccountServiceResult) null;
               }
-              JavaScriptBridge.a("loggedout", (byte) -108, bm.m(107));
+              JavaScriptBridge.callWithoutArguments("loggedout", (byte) -108, bm.m(107));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               Throwable var3 = decompiledCaughtException;
@@ -614,7 +614,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    Bullet.field_g = OpenGlShaderProgram.field_c.a(ld.field_b, (byte) -18);
+                    Bullet.field_g = OpenGlShaderProgram.field_c.waitAndCountTicks(ld.field_b, (byte) -18);
                     stackIn_100_0 = 0;
                   }
                   var3 = stackIn_100_0;

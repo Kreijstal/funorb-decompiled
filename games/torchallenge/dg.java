@@ -499,7 +499,7 @@ final class dg extends kj implements tl, sg, tb {
         int var3 = 20;
         var3 = var3 + this.a((byte) -110, var3, SocketConnector.field_j, 170, this.field_cb);
         var3 = var3 + (5 + this.a(20, 60, "", var3, this.field_P, 170, FullscreenFocusCanvas.field_f));
-        var3 = var3 + this.a((byte) 127, var3, bd.field_n, 170, this.field_X);
+        var3 = var3 + this.a((byte) 127, var3, NanoFrameTimer.field_n, 170, this.field_X);
         var3 = var3 + (5 + this.a(false, this.field_K, var3, ri.field_k, 170, ua.field_b));
         var3 = var3 + (this.a(false, this.field_Q, var3, pa.field_t, 170, te.field_a) + 5);
         var3 = var3 + this.a(var3, this.field_S, ab.field_m, 170, 124);

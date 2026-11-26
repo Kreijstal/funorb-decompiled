@@ -27,14 +27,14 @@ final class am extends IntrusiveNode {
             ff.a(param2, param0, param1, 1048576, (byte) 40);
           }
           if (null != jk.field_D) {
-            var4 = re.field_h;
+            var4 = Bzip2State.field_h;
             synchronized (var4) {
               jk.field_D.c(-1, param1, 0);
               if (d.field_e == param2) {
                 return;
               }
               jk.field_D.stopPlayback(16);
-              re.field_h.flushAndMarkDrainCheck();
+              Bzip2State.field_h.flushAndMarkDrainCheck();
               d.field_e = param2;
               if (d.field_e != null) {
                 jk.field_D.a(-63, param0, d.field_e);

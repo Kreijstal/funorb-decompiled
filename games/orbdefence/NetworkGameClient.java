@@ -181,7 +181,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             bm.a(param1 + 12980, uj.b((byte) -120));
           }
           if (var4 == 12) {
-            jj.a(da.a(-103), (byte) 53, uj.b((byte) -120));
+            jj.a(Bzip2State.a(-103), (byte) 53, uj.b((byte) -120));
           }
           if (var4 == 13) {
             try {

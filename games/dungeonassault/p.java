@@ -1267,8 +1267,8 @@ final class p extends qe {
     }
 
     private final void a(byte param0) {
-        this.a(this.field_w, dc.field_k, (byte) 125, ob.field_Kb, mm.field_s);
-        this.a(this.field_t, dc.field_k, (byte) 122, ob.field_Kb, cf.field_d);
+        this.a(this.field_w, Bzip2State.field_k, (byte) 125, ob.field_Kb, mm.field_s);
+        this.a(this.field_t, Bzip2State.field_k, (byte) 122, ob.field_Kb, cf.field_d);
         if (param0 > -65) {
           this.c();
         }
@@ -1325,10 +1325,10 @@ final class p extends qe {
         this.field_s = false;
         this.field_M.a(this.field_A, -256);
         this.a((byte) -124, 0);
-        this.field_w = this.a(ob.field_Kb, mm.field_s, 491, param0 ^ -18240, 438, dc.field_k);
+        this.field_w = this.a(ob.field_Kb, mm.field_s, 491, param0 ^ -18240, 438, Bzip2State.field_k);
         this.field_w.field_B = true;
         this.field_p.addFirst(this.field_w, false);
-        this.field_t = this.a(ob.field_Kb, cf.field_d, 491, -1, 401, dc.field_k);
+        this.field_t = this.a(ob.field_Kb, cf.field_d, 491, -1, 401, Bzip2State.field_k);
         this.field_t.field_B = !gl.field_Lb ? true : false;
         this.field_p.addFirst(this.field_t, false);
         if (param0 == 18239) {

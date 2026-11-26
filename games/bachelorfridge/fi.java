@@ -826,7 +826,7 @@ final class fi extends BoardChange {
               if (param1 != 61) {
                 field_o = (String) null;
               }
-              var3 = (String) (ac.a(param2, "getcookies", (byte) 64));
+              var3 = (String) (JavaScriptBridge.callWithoutArguments(param2, "getcookies", (byte) 64));
               var4 = fda.a(-1, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');

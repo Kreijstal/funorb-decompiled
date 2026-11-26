@@ -1054,7 +1054,7 @@ final class ll {
                 }
                 var2 = te.a("tocustomersupport", -22);
                 if (var2 != null) {
-                  uf.field_k = be.a(var2, (byte) 76);
+                  NanoFrameTimer.field_k = be.a(var2, (byte) 76);
                 }
                 var2 = te.a("changedisplayname", -80);
                 if (var2 != null) {
@@ -2268,7 +2268,7 @@ final class ll {
                 }
                 var2 = te.a("notyetachieved", -123);
                 if (var2 != null) {
-                  uf.field_e = be.a(var2, (byte) -63);
+                  NanoFrameTimer.field_e = be.a(var2, (byte) -63);
                 }
                 var2 = te.a("achieved", -96);
                 if (var2 != null) {
@@ -2528,7 +2528,7 @@ final class ll {
                 }
                 var2 = te.a("keychar_the_character_under_questionmark", -104);
                 if (null != var2) {
-                  fg.a(param0 + 14, var2[0]);
+                  FrameTimer.a(param0 + 14, var2[0]);
                 }
                 var2 = te.a("rating_noratings", param0 ^ -86);
                 if (var2 != null) {
@@ -2664,7 +2664,7 @@ final class ll {
                 }
                 var2 = te.a("fs_button_cancel", -84);
                 if (null != var2) {
-                  uf.field_c = be.a(var2, (byte) 124);
+                  NanoFrameTimer.field_c = be.a(var2, (byte) 124);
                 }
                 var2 = te.a("fs_accept_aftercancel", -98);
                 if (var2 != null) {

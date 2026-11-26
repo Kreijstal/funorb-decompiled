@@ -127,7 +127,7 @@ final class tb implements uj {
             return stackIn_2_0;
           }
           var5 = param2.a(param0, var4_int, -120);
-          stackIn_4_0 = ek.a(var4_int, param2, param3 ^ 20838, var5);
+          stackIn_4_0 = FrameTimer.a(var4_int, param2, param3 ^ 20838, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -367,7 +367,7 @@ final class pf extends pn implements Cloneable {
               return true;
             }
           }
-          var2Lifetime1 = s.field_d;
+          var2Lifetime1 = NanoFrameTimer.field_d;
           var3Lifetime1 = 0;
           while (var3Lifetime1 < var2Lifetime1.length) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];

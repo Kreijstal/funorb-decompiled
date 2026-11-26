@@ -215,14 +215,14 @@ abstract class ve {
               if (0 >= jd.field_c &&
                 !jl.field_c) {
                 try {
-                  oa.a(true, kk.c(-14047), "unzap");
+                  JavaScriptBridge.callWithoutArguments(true, kk.c(-14047), "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  oa.a(kk.c(-14047), 22347, "zap", new Object[]{jd.a(rc.field_f, param1 + 62)});
+                  JavaScriptBridge.callWithArguments(kk.c(-14047), 22347, "zap", new Object[]{jd.a(rc.field_f, param1 + 62)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

@@ -154,7 +154,7 @@ final class ha {
             if (ra.field_b == vg.field_a &&
               gl.a(false)) {
               cd.field_a = rd.field_j.readLong(true);
-              ec.field_f = rd.field_j.readUnsignedByte(-109);
+              NanoFrameTimer.field_f = rd.field_j.readUnsignedByte(-109);
               rd.field_j.readUnsignedByte(-103);
               d.field_c = rd.field_j.readUnsignedShort((byte) 72);
               var11 = rd.field_j.readNullableString((byte) 29);
@@ -199,14 +199,14 @@ final class ha {
               if (d.field_c <= 0 &&
                 !bi.field_c) {
                 try {
-                  vh.a("unzap", -12151, mk.g(-125));
+                  JavaScriptBridge.callWithoutArguments("unzap", -12151, mk.g(-125));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  vh.a(new Object[]{eh.a(0, cd.field_a)}, "zap", (byte) 111, mk.g(-125));
+                  JavaScriptBridge.callWithArguments(new Object[]{eh.a(0, cd.field_a)}, "zap", (byte) 111, mk.g(-125));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

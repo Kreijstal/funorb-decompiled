@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class on {
-    private static bd field_a;
+    private static Bzip2State field_a;
 
-    private final static byte e(bd param0) {
+    private final static byte e(Bzip2State param0) {
         return (byte)on.a(8, param0);
     }
 
@@ -42,7 +42,7 @@ final class on {
         }
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = field_a;
@@ -65,11 +65,11 @@ final class on {
         return stackIn_2_0;
     }
 
-    private final static byte a(bd param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)on.a(1, param0);
     }
 
-    private final static void d(bd param0) {
+    private final static void d(Bzip2State param0) {
         int var2 = param0.field_f;
         int var3 = param0.field_k;
         int var4 = param0.field_h;
@@ -184,7 +184,7 @@ final class on {
         return;
     }
 
-    private final static int a(int param0, bd param1) {
+    private final static int a(int param0, Bzip2State param1) {
         while (param1.field_y < param0) {
           param1.field_z = param1.field_z << 8 | param1.field_p[param1.field_i] & 255;
           param1.field_y = param1.field_y + 8;
@@ -199,7 +199,7 @@ final class on {
         return var2;
     }
 
-    private final static void b(bd param0) {
+    private final static void b(Bzip2State param0) {
         param0.field_w = 0;
         for (int var1 = 0; var1 < 256; var1++) {
           if (param0.field_r[var1]) {
@@ -213,7 +213,7 @@ final class on {
         field_a = null;
     }
 
-    private final static void c(bd param0) {
+    private final static void c(Bzip2State param0) {
         int var27;
         int var28;
         int var30;
@@ -533,6 +533,6 @@ final class on {
     }
 
     static {
-        field_a = new bd();
+        field_a = new Bzip2State();
     }
 }

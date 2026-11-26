@@ -144,14 +144,14 @@ final class wc {
                 WordLanguage.field_l.readUnsignedByte((byte) 33);
                 WordLanguage.field_l.readInt((byte) -119);
                 ai.field_c = WordLanguage.field_l.readUnsignedShort((byte) -119);
-                td.field_c = new byte[ai.field_c];
+                FrameTimer.field_c = new byte[ai.field_c];
                 for (var9 = 0; var9 < ai.field_c; var9++) {
-                  td.field_c[var9] = WordLanguage.field_l.readByte(true);
+                  FrameTimer.field_c[var9] = WordLanguage.field_l.readByte(true);
                 }
               }
               NodeHashTableIterator.field_a = WordLanguage.field_l.readString(12248);
               var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
-              kf.field_e = hj.a((byte) -128, var12);
+              NanoFrameTimer.field_e = hj.a((byte) -128, var12);
               db.field_d = WordLanguage.field_l.readUnsignedByte((byte) 123);
               lj.field_z = ll.field_Q;
               if (ll.field_V.a(-184) != wh.field_I) {
@@ -168,14 +168,14 @@ final class wc {
               if (0 >= wj.field_o &&
                 !el.field_g) {
                 try {
-                  kj.a(ha.b(87), false, "unzap");
+                  JavaScriptBridge.callWithoutArguments(ha.b(87), false, "unzap");
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var9_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  kj.a(22102, "zap", new Object[]{tl.a(11468, ac.field_j)}, ha.b(106));
+                  JavaScriptBridge.callWithArguments(22102, "zap", new Object[]{tl.a(11468, ac.field_j)}, ha.b(106));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var9_ref_Throwable = decompiledCaughtException;
@@ -221,8 +221,8 @@ final class wc {
                 return stackIn_92_0;
               }
               var7Lifetime1 = lf.field_c;
-              lf.field_c = kf.field_p;
-              kf.field_p = var7Lifetime1;
+              lf.field_c = NanoFrameTimer.field_p;
+              NanoFrameTimer.field_p = var7Lifetime1;
               MusicPatchPcmStream.field_k = true;
             }
             stackIn_94_0 = -1;
@@ -369,10 +369,10 @@ final class wc {
           var14 = WordLanguage.field_l;
           var16 = var14;
           var2 = var16.readUnsignedByte((byte) 108);
-          var3 = (ng) (kf.field_o.beginForward((byte) -95));
+          var3 = (ng) (NanoFrameTimer.field_o.beginForward((byte) -95));
           while (var3 != null) {
             if (var2 != var3.field_m) {
-              var3 = (ng) (kf.field_o.nextForward(true));
+              var3 = (ng) (NanoFrameTimer.field_o.nextForward(true));
               continue;
             }
             break;
@@ -385,9 +385,9 @@ final class wc {
           var4 = var16.readUnsignedByte((byte) 78);
           if (0 != var4) {
             var6 = var3.field_k;
-            kf.field_k[0] = NodeHashTableIterator.field_a;
+            NanoFrameTimer.field_k[0] = NodeHashTableIterator.field_a;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
-              kf.field_k[var7_int] = var14.readString(12248);
+              NanoFrameTimer.field_k[var7_int] = var14.readString(12248);
             }
             he.a(var6, var4, 24070);
             for (var7_intLifetime1 = 0; var7_intLifetime1 < var4; var7_intLifetime1++) {
@@ -406,12 +406,12 @@ final class wc {
             var11 = 0;
             while (var9 > var10) {
               var12 = lk.field_d[var10];
-              var7[0][var11] = kf.field_k[var12];
+              var7[0][var11] = NanoFrameTimer.field_k[var12];
               var20[0][var11 * 4] = dk.field_k[var12];
               var20[0][1 + var11 * 4] = bh.field_a[var12];
               var20[0][2 + 4 * var11] = AccountRequestState.field_a[var12];
               var20[0][var11 * 4 + 3] = bg.field_j[var12];
-              if (UiWidget.a(kf.field_k[var12], (byte) -128) &&
+              if (UiWidget.a(NanoFrameTimer.field_k[var12], (byte) -128) &&
                 AccountRequestState.field_a[var12] + bh.field_a[var12] + bg.field_j[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
@@ -424,12 +424,12 @@ final class wc {
             var11Lifetime1 = var15;
             while (var10Lifetime1 < var9) {
               var12Lifetime1 = lk.field_d[var10Lifetime1 + var6];
-              var7[1][var15] = kf.field_k[var12Lifetime1];
+              var7[1][var15] = NanoFrameTimer.field_k[var12Lifetime1];
               var20[1][var15 * 4] = dk.field_k[var12Lifetime1];
               var20[1][var15 * 4 + 1] = bh.field_a[var12Lifetime1];
               var20[1][2 + var15 * 4] = AccountRequestState.field_a[var12Lifetime1];
               var20[1][3 + var15 * 4] = bg.field_j[var12Lifetime1];
-              if (UiWidget.a(kf.field_k[var12Lifetime1], (byte) -111) &&
+              if (UiWidget.a(NanoFrameTimer.field_k[var12Lifetime1], (byte) -111) &&
                 bg.field_j[var12Lifetime1] + (bh.field_a[var12Lifetime1] + AccountRequestState.field_a[var12Lifetime1]) == 0) {
                 var7[1][var15] = null;
                 var15--;

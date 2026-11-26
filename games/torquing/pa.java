@@ -56,14 +56,14 @@ abstract class pa {
           field_c = -78;
         }
         if (!param1) {
-          np.field_m = Torquing.a(26657, 80, var8);
+          NanoFrameTimer.field_m = Torquing.a(26657, 80, var8);
           DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
         var5 = var8.readUnsignedShort(param0 ^ -13616);
         try {
           var9 = qg.field_C.a(var5, 32767);
-          np.field_m = var9.c((byte) -127);
+          NanoFrameTimer.field_m = var9.c((byte) -127);
           if (!dg.field_m.equals(re.field_e)) {
             stackIn_25_0 = var9.field_v;
           } else {
@@ -74,7 +74,7 @@ abstract class pa {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           nn.a("CC1", (Throwable) ((Object) var6), -9958);
-          np.field_m = null;
+          NanoFrameTimer.field_m = null;
           DelegatingCanvas.field_a = null;
           return new hi(param1);
         }

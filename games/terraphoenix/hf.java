@@ -120,7 +120,7 @@ final class hf extends fd {
 
     final static ok a(int param0, byte param1) {
         ok var2 = new ok();
-        vc.field_g.addFirst(var2, -16611);
+        FrameTimer.field_g.addFirst(var2, -16611);
         eb.a(param0, (byte) 126);
         int var3 = 116 % ((param1 + 59) / 35);
         return var2;

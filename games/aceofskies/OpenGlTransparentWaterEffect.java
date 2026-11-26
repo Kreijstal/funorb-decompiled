@@ -17,7 +17,7 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
     }
 
     final void a(boolean param0, boolean param1) {
-        this.field_b.a(bd.field_C, true, OpenGlEnvironmentWaterEffect.field_j);
+        this.field_b.a(Bzip2State.field_C, true, OpenGlEnvironmentWaterEffect.field_j);
         if (param0) {
           this.e(-33);
         }

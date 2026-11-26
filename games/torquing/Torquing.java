@@ -74,7 +74,7 @@ public final class Torquing extends tg {
               vp.b(2, -111);
             }
             if (dg.field_i != null) {
-              j.a(dg.field_i, (byte) 63);
+              Bzip2State.a(dg.field_i, (byte) 63);
               var2_int = 2;
             } else {
               var2_int = 3;
@@ -129,7 +129,7 @@ public final class Torquing extends tg {
           vd.clearStaticReferences(false);
           hl.clearStaticReferences((byte) -77);
           rh.clearStaticReferences((byte) -47);
-          ha.clearStaticReferences(param0 - 132);
+          FrameTimer.clearStaticReferences(param0 - 132);
           RasterBuffer.a((byte) 84);
           vf.a(param0 ^ 41);
           FullscreenFocusCanvas.resetStaticState(4);
@@ -247,7 +247,7 @@ public final class Torquing extends tg {
           vb.a(param0 ^ 41);
           ByteStorage.clearStaticReferences(param0 - 110);
           fc.clearStaticReferences();
-          j.a((byte) 44);
+          Bzip2State.a((byte) 44);
           pm.clearStaticReferences(0);
           DelayedPcmStream.clearStaticReferences(-125);
           mg.a(-62);
@@ -273,7 +273,7 @@ public final class Torquing extends tg {
           ob.clearStaticReferences((byte) -12);
           SocketConnector.clearStaticReferences(23116);
           ProxyAuthenticationRequiredException.clearStaticReferences((byte) -102);
-          np.clearDeclaredStaticReferences(0);
+          NanoFrameTimer.clearDeclaredStaticReferences(0);
           mk.a(115);
           qm.clearStaticReferences(param0 ^ 35);
           ja.clearStaticReferences();
@@ -1300,7 +1300,7 @@ public final class Torquing extends tg {
           oo.field_b = oo.field_b + 1;
           ed.a(0);
           var4 = 0;
-          while (np.a((byte) -13)) {
+          while (NanoFrameTimer.a((byte) -13)) {
             if (e.field_f != 13 &&
               e.field_f != 84 &&
               83 != e.field_f) {
@@ -1601,7 +1601,7 @@ public final class Torquing extends tg {
           if (!param0) {
             return;
           }
-          np.a(-1, -32596, 0);
+          NanoFrameTimer.a(-1, -32596, 0);
           oo.field_b = 0;
           bn.field_h = param2;
           this.field_t = null;
@@ -1934,7 +1934,7 @@ public final class Torquing extends tg {
                   stackIn_127_0 = vo.field_f[fn.field_c];
                   stackIn_128_1 = (bn.field_h == -1);
                   ((mh) (Object) stackIn_127_0).a(stackIn_128_1, -22807);
-                  np.a(-1, -32596, 0);
+                  NanoFrameTimer.a(-1, -32596, 0);
                 }
               } else {
                 this.f((byte) -108);

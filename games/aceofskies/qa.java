@@ -105,7 +105,7 @@ final class qa {
               FlightSession.field_e.drawText(var6, var8Lifetime1, ke.field_b + var1_int, var5, -1);
               var1_int = var1_int + (pp.field_a + as.field_c + lp.field_h);
             } else {
-              nh.field_c.drawText(var6, var8Lifetime1, tf.field_b + var1_int, var5, -1);
+              nh.field_c.drawText(var6, var8Lifetime1, FrameTimer.field_b + var1_int, var5, -1);
               var1_int = var1_int + ce.field_u;
             }
           }

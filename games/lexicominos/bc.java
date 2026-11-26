@@ -210,7 +210,7 @@ class bc extends kf {
           }
           stackIn_4_0 = 10;
           stackIn_5_1 = !(param0);
-          stackIn_6_0 = rk.a(stackIn_4_0, stackIn_5_1, param1, true);
+          stackIn_6_0 = NanoFrameTimer.a(stackIn_4_0, stackIn_5_1, param1, true);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

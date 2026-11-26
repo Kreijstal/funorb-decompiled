@@ -627,7 +627,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (AccountServerResult.field_a == 0 &&
           !AccountServerResult.isLoggedInWithAccount(119)) {
-          PopupMenuBuilder.field_p = false;
+          Bzip2State.field_p = false;
         }
         if (ClientException.field_i == 0 &&
           TertiaryLinkDeque.pollMasterIndex((byte) 98)) {

@@ -41,7 +41,7 @@ final class we {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = ec.field_j;
+            stackIn_3_0 = NanoFrameTimer.field_j;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

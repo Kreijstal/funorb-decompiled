@@ -218,7 +218,7 @@ class vc extends wd {
         int var1_int = 0;
         int var2 = Bounce.field_N;
         int var1_intLifetime1;
-        ff.field_D.a(false);
+        ff.field_D.resetTiming(false);
         if (param0 != -44) {
           return;
         }
@@ -227,7 +227,7 @@ class vc extends wd {
             l.field_d[var1_int] = 0L;
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
-            qj.field_a[var1_intLifetime1] = 0L;
+            GzipDecompressor.field_a[var1_intLifetime1] = 0L;
           }
           nl.field_c = 0;
         } catch (RuntimeException runtimeException) {

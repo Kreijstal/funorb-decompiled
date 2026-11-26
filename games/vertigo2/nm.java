@@ -98,7 +98,7 @@ abstract class nm extends WidgetContainer {
             nm.k(-53);
           }
           try {
-            je.a((byte) 49, "resizing", ob.e((byte) 71), new Object[]{new Integer(param1)});
+            JavaScriptBridge.callWithArguments((byte) 49, "resizing", ob.e((byte) 71), new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

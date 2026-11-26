@@ -50,16 +50,16 @@ final class km {
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {
         long var1 = System.currentTimeMillis();
-        if (var1 < j.field_p) {
-          ResourceArchive.field_g = ResourceArchive.field_g + (-var1 + j.field_p);
+        if (var1 < Bzip2State.field_p) {
+          ResourceArchive.field_g = ResourceArchive.field_g + (-var1 + Bzip2State.field_p);
           if (param0 == -1) {
-            j.field_p = var1;
+            Bzip2State.field_p = var1;
             return var1 + ResourceArchive.field_g;
           }
           return -53L;
         }
         if (param0 == -1) {
-          j.field_p = var1;
+          Bzip2State.field_p = var1;
           return var1 + ResourceArchive.field_g;
         }
         return -53L;

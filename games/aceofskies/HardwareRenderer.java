@@ -400,11 +400,11 @@ abstract class HardwareRenderer extends GraphicsRenderer {
     final void b(int param0, boolean param1) {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         if (param0 == 1) {
-          this.a(bd.field_C, true, bd.field_C);
+          this.a(Bzip2State.field_C, true, Bzip2State.field_C);
         } else if (param0 == 0) {
           this.a(ru.field_a, true, ru.field_a);
         } else if (param0 == 2) {
-          this.a(du.field_l, true, bd.field_C);
+          this.a(du.field_l, true, Bzip2State.field_C);
         } else if (param0 == 3) {
           this.a(OpenGlEnvironmentWaterEffect.field_j, true, ru.field_a);
         } else if (4 == param0) {

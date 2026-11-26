@@ -101,7 +101,7 @@ class rg extends ig {
         int var1_int = 0;
         int var2 = stellarshard.field_B;
         int var1_intLifetime1;
-        rb.field_u.a((byte) -115);
+        rb.field_u.resetTiming((byte) -115);
         if (param0 != -33) {
           return;
         }

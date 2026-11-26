@@ -516,7 +516,7 @@ final class re extends ue {
           if (rb.field_h >= 2 &&
             cp.field_k[12]) {
             for (var2_int = 0; var2_int < 5; var2_int++) {
-              ke.field_b[var2_int] = jl.field_c[var2_int];
+              FrameTimer.field_b[var2_int] = jl.field_c[var2_int];
             }
             ll.field_a = "All levels considered reached - free player restrictions may apply";
           }

@@ -67,7 +67,7 @@ final class m {
         if (!param1) {
           return;
         }
-        var4 = fk.field_a % KeyboardInput.field_c.field_u * 2;
+        var4 = Bzip2State.field_a % KeyboardInput.field_c.field_u * 2;
         if (var4 >= KeyboardInput.field_c.field_u) {
           var4 = -var4 + (KeyboardInput.field_c.field_u + KeyboardInput.field_c.field_u);
         }
@@ -97,7 +97,7 @@ final class m {
         if (!param1) {
           return;
         }
-        var4 = fk.field_a % KeyboardInput.field_c.field_u * 2;
+        var4 = Bzip2State.field_a % KeyboardInput.field_c.field_u * 2;
         if (var4 >= KeyboardInput.field_c.field_u) {
           var4 = -var4 + (KeyboardInput.field_c.field_u + KeyboardInput.field_c.field_u);
         }

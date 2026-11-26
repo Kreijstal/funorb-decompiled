@@ -153,12 +153,12 @@ final class nj extends hl {
           DualLinkNode.field_o = (7 & var2_int) << 18;
           DualLinkNode.field_o = DualLinkNode.field_o + (param1.readUnsignedShort(674914976) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(-96);
-          gm.field_c = 2064384 & var2_intLifetime1 << 15;
+          FrameTimer.field_c = 2064384 & var2_intLifetime1 << 15;
           DualLinkNode.field_o = DualLinkNode.field_o + (var2_intLifetime1 >> 6);
-          gm.field_c = gm.field_c + (param1.readUnsignedByte(-106) << 7);
+          FrameTimer.field_c = FrameTimer.field_c + (param1.readUnsignedByte(-106) << 7);
           var2_intLifetime2 = param1.readUnsignedByte(-120);
           sl.field_e = var2_intLifetime2 << 16 & 65536;
-          gm.field_c = gm.field_c + (var2_intLifetime2 >> 1);
+          FrameTimer.field_c = FrameTimer.field_c + (var2_intLifetime2 >> 1);
           sl.field_e = sl.field_e + param1.readUnsignedShort(param0 ^ 674914996);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "nj.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

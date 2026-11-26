@@ -194,14 +194,14 @@ class jg extends bg {
           if (null == var8) {
             return;
           }
-          vq.field_q[0] = this.field_l + 64;
-          vq.field_q[1] = this.field_s;
-          vq.field_q[2] = this.field_g + 64;
+          Bzip2State.field_q[0] = this.field_l + 64;
+          Bzip2State.field_q[1] = this.field_s;
+          Bzip2State.field_q[2] = this.field_g + 64;
           if (this.field_p == 23 &&
             (15 & this.field_k) == 0) {
-            vq.field_q[0] = vq.field_q[0] + (-4 + be.a(9, (byte) 83));
-            vq.field_q[1] = vq.field_q[1] + (-4 + be.a(9, (byte) 83));
-            vq.field_q[2] = vq.field_q[2] + (-4 + be.a(9, (byte) 83));
+            Bzip2State.field_q[0] = Bzip2State.field_q[0] + (-4 + be.a(9, (byte) 83));
+            Bzip2State.field_q[1] = Bzip2State.field_q[1] + (-4 + be.a(9, (byte) 83));
+            Bzip2State.field_q[2] = Bzip2State.field_q[2] + (-4 + be.a(9, (byte) 83));
           }
           var9 = null;
           if (!this.field_i) {
@@ -239,7 +239,7 @@ class jg extends bg {
             param1[1] < this.field_s) {
             var10 = ((fc) (var9)).field_R;
             ((fc) (var9)).field_R = param3;
-            ((fc) (var9)).a(param1, vq.field_q);
+            ((fc) (var9)).a(param1, Bzip2State.field_q);
             ((fc) (var9)).field_R = var10;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -255,19 +255,19 @@ class jg extends bg {
               var10_ref = (fc) (this.field_n.a(true, true, false, var8));
               var11 = var10_ref.field_R;
               var10_ref.field_R = param3;
-              var10_ref.a(param1, vq.field_q);
+              var10_ref.a(param1, Bzip2State.field_q);
               var10_ref.field_R = var11;
               decompiledFrameRemainder0 = (var12 != 0);
             }
             if (decompiledFrameRemainder0) {
               var10Lifetime1 = var8.field_R;
               var8.field_R = param3;
-              var8.a(param1, vq.field_q);
+              var8.a(param1, Bzip2State.field_q);
               var8.field_R = var10Lifetime1;
               if (var12 != 0) {
-                ke.field_e[2] = vq.field_q[2];
-                ke.field_e[0] = vq.field_q[0];
-                ke.field_e[1] = vq.field_q[1];
+                ke.field_e[2] = Bzip2State.field_q[2];
+                ke.field_e[0] = Bzip2State.field_q[0];
+                ke.field_e[1] = Bzip2State.field_q[1];
                 var10Lifetime1 = var8.field_R;
                 var8.field_R = param3;
                 var8.a(param1, ke.field_e);
@@ -275,9 +275,9 @@ class jg extends bg {
               }
             }
           } else {
-            ke.field_e[2] = vq.field_q[2];
-            ke.field_e[0] = vq.field_q[0];
-            ke.field_e[1] = vq.field_q[1];
+            ke.field_e[2] = Bzip2State.field_q[2];
+            ke.field_e[0] = Bzip2State.field_q[0];
+            ke.field_e[1] = Bzip2State.field_q[1];
             var10Lifetime1 = var8.field_R;
             var8.field_R = param3;
             var8.a(param1, ke.field_e);
@@ -287,7 +287,7 @@ class jg extends bg {
             this.field_s <= param1[1]) {
             var10Lifetime2 = ((fc) (var9)).field_R;
             ((fc) (var9)).field_R = param3;
-            ((fc) (var9)).a(param1, vq.field_q);
+            ((fc) (var9)).a(param1, Bzip2State.field_q);
             ((fc) (var9)).field_R = var10Lifetime2;
           }
           return;

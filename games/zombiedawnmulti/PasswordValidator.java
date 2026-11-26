@@ -67,7 +67,7 @@ final class PasswordValidator extends TextInputValidator {
             return stackIn_18_0;
           }
           if (var6.length() <= 0) {
-            stackIn_32_0 = PopupMenuBuilder.field_y;
+            stackIn_32_0 = Bzip2State.field_y;
             return stackIn_32_0;
           }
           if (PendingStatusRequest.containsNameVariant(var6, var5, param1 + 1276425039)) {

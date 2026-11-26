@@ -214,15 +214,15 @@ final class e {
             try {
               var4 = param1.getCodeBase();
               var3 = ByteStorage.a(param1, true, var4).getFile();
-              a.a(param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks", -13730);
-              a.a(param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param0 ^ -28622);
-              a.a(param1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", -13730);
-              a.a(param1, new Object[]{"options", var3 + "options.ws"}, "updatelinks", -13730);
+              JavaScriptBridge.callWithArguments(param1, new Object[]{"home", var3 + "home.ws"}, "updatelinks", -13730);
+              JavaScriptBridge.callWithArguments(param1, new Object[]{"gamelist", var3 + "togamelist.ws"}, "updatelinks", param0 ^ -28622);
+              JavaScriptBridge.callWithArguments(param1, new Object[]{"serverlist", var3 + "toserverlist.ws"}, "updatelinks", -13730);
+              JavaScriptBridge.callWithArguments(param1, new Object[]{"options", var3 + "options.ws"}, "updatelinks", -13730);
               if (param0 != 23148) {
                 field_z = 29;
               }
-              a.a(param1, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", -13730);
-              a.a(param1, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", param0 - 36878);
+              JavaScriptBridge.callWithArguments(param1, new Object[]{"terms", var3 + "terms.ws"}, "updatelinks", -13730);
+              JavaScriptBridge.callWithArguments(param1, new Object[]{"privacy", var3 + "privacy.ws"}, "updatelinks", param0 - 36878);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;

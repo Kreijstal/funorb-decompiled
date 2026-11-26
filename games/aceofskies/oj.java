@@ -100,14 +100,14 @@ final class oj extends RenderEffect {
           var6.a(1024, 1);
           this.field_b.a(qn.field_a, (byte) -127);
           if (this.field_i) {
-            this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
+            this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, Bzip2State.field_C);
             this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
             this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
           } else {
-            this.field_b.a(bd.field_C, true, ru.field_a);
+            this.field_b.a(Bzip2State.field_C, true, ru.field_a);
             this.field_b.a((byte) 119, 0, ArchiveNetworkClient.field_i);
             this.field_b.a(2, (byte) 79);
-            this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
+            this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, Bzip2State.field_C);
             this.field_b.a((byte) 120, 0, ArchiveNetworkClient.field_i);
             this.field_b.a(true, 1, true, ArchiveNetworkClient.field_i, false);
             this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
@@ -190,7 +190,7 @@ final class oj extends RenderEffect {
     }
 
     final void a(boolean param0, boolean param1) {
-        this.field_b.a(ru.field_a, true, bd.field_C);
+        this.field_b.a(ru.field_a, true, Bzip2State.field_C);
         if (param0) {
           this.a(false);
         }

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ej {
-    private static dc field_a;
+    private static Bzip2State field_a;
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
@@ -28,7 +28,7 @@ final class ej {
         return stackIn_2_0;
     }
 
-    private final static void d(dc param0) {
+    private final static void d(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -163,7 +163,7 @@ final class ej {
         field_a = null;
     }
 
-    private final static void e(dc param0) {
+    private final static void e(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -535,7 +535,7 @@ final class ej {
         }
     }
 
-    private final static byte c(dc param0) {
+    private final static byte c(Bzip2State param0) {
         return (byte)ej.a(1, param0);
     }
 
@@ -584,11 +584,11 @@ final class ej {
         }
     }
 
-    private final static byte a(dc param0) {
+    private final static byte a(Bzip2State param0) {
         return (byte)ej.a(8, param0);
     }
 
-    private final static void b(dc param0) {
+    private final static void b(Bzip2State param0) {
         int var1 = 0;
         param0.field_M = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -599,7 +599,7 @@ final class ej {
         }
     }
 
-    private final static int a(int param0, dc param1) {
+    private final static int a(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_F < param0) {
           param1.field_j = param1.field_j << 8 | param1.field_d[param1.field_h] & 255;
@@ -616,6 +616,6 @@ final class ej {
     }
 
     static {
-        field_a = new dc();
+        field_a = new Bzip2State();
     }
 }

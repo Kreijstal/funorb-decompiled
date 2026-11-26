@@ -231,7 +231,7 @@ class UiComponent extends IntrusiveNode {
     final static void a(byte param0, int param1) {
         try {
           try {
-            eb.a("resizing", new Object[]{new Integer(param1)}, -11745, BoundedRandomAccessFile.getApplet((byte) -116));
+            JavaScriptBridge.callWithArguments("resizing", new Object[]{new Integer(param1)}, -11745, BoundedRandomAccessFile.getApplet((byte) -116));
           } catch (Throwable throwable) {
           }
           int var2 = -46 % ((43 - param0) / 61);

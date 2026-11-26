@@ -951,7 +951,7 @@ final class nk {
           if (0 <= this.field_a &&
             this.field_a <= 11) {
             var15 = PacketBuffer.a(this.field_a, (byte) -114);
-            ab.field_g[var15 * 12 + da.field_b / 10 % wh.field_a[var15]].c(hi.field_m + 43, 363);
+            ab.field_g[var15 * 12 + Bzip2State.field_b / 10 % wh.field_a[var15]].c(hi.field_m + 43, 363);
           }
           var15_ref = null;
           if (var3_int > 0) {
@@ -2046,7 +2046,7 @@ final class nk {
           ProxyAuthenticationRequiredException.field_e = stackIn_110_0;
           return;
         }
-        da.field_b = da.field_b + 1;
+        Bzip2State.field_b = Bzip2State.field_b + 1;
         if ((!df.field_f ||
           this.field_b != 0 &&
           this.field_m < 16) && this.field_m != -1) {
@@ -2504,7 +2504,7 @@ final class nk {
                           (decompiledFrameRemainder0 = !(!this.b(var4Lifetime3Lifetime1, var7_intLifetime1Lifetime1, 1)))) {
                           wl.field_a = ua.field_a;
                           if (this.field_f != 6) {
-                            hd.field_j = aa.field_a;
+                            hd.field_j = FrameTimer.field_a;
                             if (var19 != 0) {
                               hd.field_j = ue.field_J;
                             }

@@ -48,12 +48,12 @@ final class of {
             var3 = uc.field_ab[ij.field_q.field_i];
             if (2 == var3 ||
               var3 == 5) {
-              jg.b(15229);
+              FrameTimer.b(15229);
             }
           } else {
             if (var2 != 0 &&
               2 != ea.field_a) {
-              jg.b(15229);
+              FrameTimer.b(15229);
             }
           }
           if (var3 == 0 &&
@@ -62,7 +62,7 @@ final class of {
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
-              q.a(5, true, (byte) -98);
+              NanoFrameTimer.a(5, true, (byte) -98);
             }
           }
           stackIn_26_0 = var3;

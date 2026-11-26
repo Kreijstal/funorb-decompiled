@@ -57,20 +57,20 @@ final class fg extends IntrusiveNode {
                 ck.field_o = 16 + var3 * 16;
               }
               if (8 == var4) {
-                gk.a(var3, 125, 9, var2, 8);
+                Bzip2State.a(var3, 125, 9, var2, 8);
                 ok.field_s[-1 + oe.field_a] = 1;
               }
               if (13 == var4 ||
                 var4 == 27) {
-                gk.a(var3, 124, 27, var2, 13);
+                Bzip2State.a(var3, 124, 27, var2, 13);
               }
               if (var4 == 12 ||
                 var4 == 32) {
-                gk.a(var3, 127, 32, var2, 12);
+                Bzip2State.a(var3, 127, 32, var2, 12);
               }
               if (var4 == 14 ||
                 var4 == 28) {
-                gk.a(var3, 126, 28, var2, 14);
+                Bzip2State.a(var3, 126, 28, var2, 14);
                 rk.field_u[qi.field_f] = var2;
                 kk.field_a[qi.field_f] = var3;
                 me.field_i[qi.field_f] = 0;
@@ -87,11 +87,11 @@ final class fg extends IntrusiveNode {
                   pc.field_b = var2;
                   lb.field_m = var3;
                 }
-                gk.a(var3, 127, 29, var2, 16);
+                Bzip2State.a(var3, 127, 29, var2, 16);
               }
               if (var4 == 17 ||
                 var4 == 31) {
-                gk.a(var3, 126, 31, var2, 17);
+                Bzip2State.a(var3, 126, 31, var2, 17);
               }
               var5 = fl.field_c[var2][var3];
               for (var6 = 0; var6 < 4; var6++) {

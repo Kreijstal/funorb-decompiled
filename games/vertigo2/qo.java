@@ -85,7 +85,7 @@ final class qo extends TextureOperator {
               var6 = var5;
               if (var6 != 0) {
                 if (var6 == 1) {
-                  this.field_z[var4_int] = (jq) ((Object) ug.a(param2, 46));
+                  this.field_z[var4_int] = (jq) ((Object) FrameTimer.a(param2, 46));
                 } else {
                   if (var6 == 2) {
                     this.field_z[var4_int] = (jq) ((Object) td.a(false, param2));

@@ -85,7 +85,7 @@ final class pk {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cn.a(param0, 258, param3, param1)) {
+          if (!Bzip2State.a(param0, 258, param3, param1)) {
             stackIn_2_0 = null;
             return (ih) (stackIn_2_0);
           }

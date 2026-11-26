@@ -569,7 +569,7 @@ final class GameResultsScreen extends MenuScreen {
             if (this.field_z.field_i) {
               MatchingTextValidator.field_w.drawCenteredAlpha(Integer.toString(var20Lifetime1), var8_int, 15 + var10, 16777215, 1, var6);
               stackIn_65_0 = MatchingTextValidator.field_w;
-              stackIn_65_1 = PopupMenuBuilder.formatSignedNumber(var20Lifetime1 - var19Lifetime1, true, param0);
+              stackIn_65_1 = Bzip2State.formatSignedNumber(var20Lifetime1 - var19Lifetime1, true, param0);
               stackIn_65_2 = var8_int - 2;
               stackIn_65_3 = 30 + var10;
               if (var19Lifetime1 < var20Lifetime1) {
@@ -675,7 +675,7 @@ final class GameResultsScreen extends MenuScreen {
               incrementValue$1 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
               stackIn_116_0 = MatchingTextValidator.field_w;
-              stackIn_116_1 = PopupMenuBuilder.formatSignedNumber(this.field_r[incrementValue$1], true, true);
+              stackIn_116_1 = Bzip2State.formatSignedNumber(this.field_r[incrementValue$1], true, true);
               stackIn_116_2 = CipherPacketBuffer.field_v[var11Lifetime1] - 50;
               stackIn_116_3 = 123;
               if (var14Lifetime1Lifetime2 < var15Lifetime1) {
@@ -691,7 +691,7 @@ final class GameResultsScreen extends MenuScreen {
                 incrementValue$2 = var9Lifetime1Lifetime3;
                 var9Lifetime1Lifetime3++;
                 stackIn_125_0 = MatchingTextValidator.field_w;
-                stackIn_125_1 = PopupMenuBuilder.formatSignedNumber(this.field_r[incrementValue$2], true, true);
+                stackIn_125_1 = Bzip2State.formatSignedNumber(this.field_r[incrementValue$2], true, true);
                 stackIn_125_2 = -73 + CipherPacketBuffer.field_v[var11Lifetime1];
                 stackIn_125_3 = 111;
                 if (var14Lifetime1Lifetime3 >= var15Lifetime1Lifetime1) {
@@ -724,7 +724,7 @@ final class GameResultsScreen extends MenuScreen {
               incrementValue$0 = var9Lifetime1Lifetime3;
               var9Lifetime1Lifetime3++;
               stackIn_144_0 = MatchingTextValidator.field_w;
-              stackIn_144_1 = PopupMenuBuilder.formatSignedNumber(this.field_r[incrementValue$0], true, true);
+              stackIn_144_1 = Bzip2State.formatSignedNumber(this.field_r[incrementValue$0], true, true);
               stackIn_144_2 = 209 * var11Lifetime1Lifetime1 + 166;
               stackIn_144_3 = 295;
               if (var13Lifetime1Lifetime1Lifetime2 < var14Lifetime1Lifetime1) {

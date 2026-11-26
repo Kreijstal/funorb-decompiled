@@ -21,7 +21,7 @@ final class PendingIntArrayReply extends IntrusiveNode {
           if (11 == LoginSuccessHelpers.field_b) {
             ScoreUpdateEvent.emptyStaticHook(-29956);
           }
-          TertiaryLinkDeque.showLoadingProgress(PopupMenuBuilder.field_p, (byte) -100, ArchiveLoadSequence.field_i, SimArmedHuman.field_Bb);
+          TertiaryLinkDeque.showLoadingProgress(Bzip2State.field_p, (byte) -100, ArchiveLoadSequence.field_i, SimArmedHuman.field_Bb);
           ByteStorage.drawRasterToCanvas(false, 0, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw ReportAbuseDialog.addExceptionContext((Throwable) ((Object) runtimeException), "ra.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

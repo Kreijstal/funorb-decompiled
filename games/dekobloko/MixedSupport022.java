@@ -88,7 +88,7 @@ final class MixedSupport022 {
         MixedSupport035.rgbSpriteArrayArrayState0006[0][0].performAction0280(82 + integerArgument1, integerLocal2, 18, 18);
         integerLocal2 = integerLocal2 + (MixedSupport045.computeInteger0552(188, 0, integerLocal2, MixedSupport015.stringState0072, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -124, 0, 110 + integerArgument1) * 16 + 16);
         MixedSupport035.rgbSpriteArrayArrayState0006[1][3].performAction0280(integerArgument1 + 82, integerLocal2, 18, 18);
-        integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, MixedSupport026.stringState0129, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -125, 0, 110 + integerArgument1) * 16);
+        integerLocal2 = integerLocal2 + (16 + MixedSupport045.computeInteger0552(188, 0, integerLocal2, NanoFrameTimer.stringState0129, 16, 64, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -125, 0, 110 + integerArgument1) * 16);
         DisplayModeController.performAction1439(integerLocal2, MixedSupport070.integerState0396, MixedSupport049.integerState0264, -115, 190 + integerArgument1, TextLineMetrics.integerState0534, 0);
         SoftwareRaster.drawVerticalLine(309 + integerArgument1, 117, 242, 263172);
         integerLocal1 = 116;

@@ -230,10 +230,10 @@ class gd extends rj {
         te.b();
         DiskArchiveRequest.field_G = new vj(0, param1, 640, 480, 64);
         mn.field_b = param2;
-        dc.field_z = param2;
+        Bzip2State.field_z = param2;
         bd.field_f = 0;
-        if (!fc.a(dc.field_z, (byte) -123)) {
-          if (dc.field_z != -1) {
+        if (!fc.a(Bzip2State.field_z, (byte) -123)) {
+          if (Bzip2State.field_z != -1) {
             return;
           }
           if (null == ik.field_e) {
@@ -243,8 +243,8 @@ class gd extends rj {
           return;
         }
         System.gc();
-        bf.field_f[dc.field_z].b(param3);
-        if (dc.field_z == 12) {
+        bf.field_f[Bzip2State.field_z].b(param3);
+        if (Bzip2State.field_z == 12) {
           m.a(param1 ^ 115, param3);
           return;
         }

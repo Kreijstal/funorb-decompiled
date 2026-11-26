@@ -71,7 +71,7 @@ abstract class vm extends jb implements ha {
               if (param1 != 11440) {
                 field_h = (IntrusiveDeque) null;
               }
-              u.a((byte) -81, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
+              JavaScriptBridge.evaluate((byte) -81, "document.cookie=\"" + var7Lifetime4 + "\"", param2);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = decompiledCaughtException;

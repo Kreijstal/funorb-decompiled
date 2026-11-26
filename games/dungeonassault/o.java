@@ -10,7 +10,7 @@ final class o extends IntrusiveNode {
     static ae field_i;
     static String field_q;
     static int field_m;
-    static gj field_o;
+    static FrameTimer field_o;
 
     final static void a(int param0, int param1, jd param2) {
         CipherPacketBuffer var3 = null;
@@ -150,7 +150,7 @@ final class o extends IntrusiveNode {
             if (wm.field_a > param2) {
               return false;
             }
-            stackIn_42_0 = !(dc.field_p[-wm.field_a + param2] > param3.field_f);
+            stackIn_42_0 = !(Bzip2State.field_p[-wm.field_a + param2] > param3.field_f);
             return stackIn_42_0;
           }
           var5_int = 0;

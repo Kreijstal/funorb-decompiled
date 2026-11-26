@@ -134,7 +134,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             this.field_g = true;
             System.out.println("error_game_" + param1);
             try {
-              sh.a("loggedout", hf.a((byte) -7), (byte) 78);
+              JavaScriptBridge.callWithoutArguments("loggedout", hf.a((byte) -7), (byte) 78);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -506,7 +506,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ol.field_c = rb.field_u.a(NetworkArchiveRequest.field_B, 1);
+                    ol.field_c = rb.field_u.waitAndCountTicks(NetworkArchiveRequest.field_B, 1);
                     stackIn_96_0 = 0;
                   }
                   var3 = stackIn_96_0;

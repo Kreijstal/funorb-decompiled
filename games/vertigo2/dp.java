@@ -204,10 +204,10 @@ final class dp extends TextureOperator {
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_35_0 = vq.field_p;
+                stackIn_35_0 = Bzip2State.field_p;
                 return stackIn_35_0;
               }
-              stackIn_18_0 = vq.field_p;
+              stackIn_18_0 = Bzip2State.field_p;
               return stackIn_18_0;
             }
             stackIn_13_0 = jn.field_d;

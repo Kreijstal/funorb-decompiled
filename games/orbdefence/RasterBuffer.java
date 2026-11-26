@@ -51,7 +51,7 @@ abstract class RasterBuffer {
             if (param0 != 17489) {
               return;
             }
-            gm.a(true, "resizing", new Object[]{new Integer(param1)}, uj.b((byte) -120));
+            JavaScriptBridge.callWithArguments(true, "resizing", new Object[]{new Integer(param1)}, uj.b((byte) -120));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

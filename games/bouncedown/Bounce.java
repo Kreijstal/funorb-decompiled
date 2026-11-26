@@ -123,7 +123,7 @@ public final class Bounce extends GameClient {
           ej.clearStaticReferences(-64);
           bb.clearStaticReferences((byte) 25);
           pg.clearStaticReferences(false);
-          sg.clearStaticReferences((byte) -112);
+          FrameTimer.clearStaticReferences((byte) -112);
           AwtRasterBuffer.clearStaticReferences(-10);
           gi.clearStaticReferences(72);
           FullscreenFocusCanvas.clearStaticReferences(false);
@@ -163,7 +163,7 @@ public final class Bounce extends GameClient {
           ve.clearStaticReferences((byte) 85);
           fk.resetStaticState((byte) 118);
           g.a(6623);
-          qj.clearStaticReferences(-112);
+          GzipDecompressor.clearStaticReferences(-112);
           PcmResampler.clearStaticReferences(0);
           gg.clearStaticReferences();
           te.clearStaticReferences();
@@ -215,7 +215,7 @@ public final class Bounce extends GameClient {
           fi.clearStaticReferences(-14935);
           da.clearStaticReferences(-87);
           ad.clearStaticReferences();
-          uj.resetStaticState((byte) 105);
+          Bzip2State.resetStaticState((byte) 105);
           hh.resetStaticState(false);
           jj.clearStaticReferences(true);
           dl.clearStaticReferences((byte) 94);

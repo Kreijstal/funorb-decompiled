@@ -195,7 +195,7 @@ final class re implements uj {
                 }
                 else {
                   si.a(-67);
-                  ek.field_c = false;
+                  FrameTimer.field_c = false;
                   stackIn_29_0 = var6_intLifetime1;
                   return stackIn_29_0;
                 }
@@ -246,21 +246,21 @@ final class re implements uj {
                   hj.field_e.a(bm.c(-116), 447616545);
                 }
               }
-              ek.field_c = false;
+              FrameTimer.field_c = false;
               if (var11 != null) {
                 nc.a(bm.c(-93), var11, (byte) 78);
               }
               if (0 >= pj.field_a &&
                 !fa.field_b) {
                 try {
-                  lk.a((byte) 18, "unzap", bm.c(-96));
+                  JavaScriptBridge.callWithoutArguments((byte) 18, "unzap", bm.c(-96));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  lk.a("zap", bm.c(-111), 16715, new Object[]{oh.a(ne.field_Q, 95)});
+                  JavaScriptBridge.callWithArguments("zap", bm.c(-111), 16715, new Object[]{oh.a(ne.field_Q, 95)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -285,8 +285,8 @@ final class re implements uj {
               kj.b(-9319)) {
               si.a(-110);
               if (7 == oj.field_K &&
-                !ek.field_c) {
-                ek.field_c = true;
+                !FrameTimer.field_c) {
+                FrameTimer.field_c = true;
                 stackIn_81_0 = -1;
                 return stackIn_81_0;
               }
@@ -294,24 +294,24 @@ final class re implements uj {
                 oj.field_K = 3;
               }
               nf.field_g = kj.field_a.readString(false);
-              ek.field_c = false;
+              FrameTimer.field_c = false;
               stackIn_86_0 = oj.field_K;
               return stackIn_86_0;
             }
             if (null == AwtRasterBuffer.field_i) {
-              if (ek.field_c) {
+              if (FrameTimer.field_c) {
                 if (qa.a(-125) > 30000L) {
                   nf.field_g = oi.field_K;
                 } else {
                   nf.field_g = FullscreenFocusCanvas.field_a;
                 }
-                ek.field_c = false;
+                FrameTimer.field_c = false;
                 stackIn_94_0 = 3;
                 return stackIn_94_0;
               }
               var6_intLifetime2 = jc.field_E;
               jc.field_E = ic.field_h;
-              ek.field_c = true;
+              FrameTimer.field_c = true;
               ic.field_h = var6_intLifetime2;
             }
             stackIn_97_0 = -1;

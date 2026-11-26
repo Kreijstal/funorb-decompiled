@@ -35,7 +35,7 @@ abstract class jk extends wf {
               }
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var3 = nn.a(105, param0, var3);
-              cn.a(param0, var3.toString(), 11050, true);
+              Bzip2State.a(param0, var3.toString(), 11050, true);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

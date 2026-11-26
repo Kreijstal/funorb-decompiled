@@ -86,10 +86,10 @@ final class ra {
           if (!gf.field_p.b(param0 ^ 4, "commonui")) {
             return 60;
           }
-          if (!jl.field_b.b(-7957)) {
+          if (!FrameTimer.field_b.b(-7957)) {
             return 70;
           }
-          if (!jl.field_b.b((byte) 79)) {
+          if (!FrameTimer.field_b.b((byte) 79)) {
             return 80;
           }
         } else {
@@ -116,10 +116,10 @@ final class ra {
           if (!gf.field_p.b(5, "commonui")) {
             return 80;
           }
-          if (!jl.field_b.b(-7957)) {
+          if (!FrameTimer.field_b.b(-7957)) {
             return 82;
           }
-          if (!jl.field_b.b((byte) 79)) {
+          if (!FrameTimer.field_b.b((byte) 79)) {
             return 86;
           }
         }

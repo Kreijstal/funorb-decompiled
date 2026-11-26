@@ -86,7 +86,7 @@ final class dl {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!cn.a(param1, 258, param2, param4)) {
+          if (!Bzip2State.a(param1, 258, param2, param4)) {
             stackIn_2_0 = null;
             return (vm) (stackIn_2_0);
           }

@@ -114,7 +114,7 @@ final class AccountCreationResultPanel extends nk implements vg {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              ee.a("document.cookie=\"" + var5Lifetime6 + "\"", (byte) -46, param2);
+              JavaScriptBridge.evaluate("document.cookie=\"" + var5Lifetime6 + "\"", (byte) -46, param2);
               if (!param0) {
                 var6 = (java.applet.Applet) null;
                 AccountCreationResultPanel.a(true, (String) null, (java.applet.Applet) null);

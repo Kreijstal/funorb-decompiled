@@ -229,7 +229,7 @@ final class qp extends IntrusiveNode {
         int var1 = 91 % ((-59 - param0) / 58);
         ne.field_d = true;
         qe.field_g.g((byte) -122);
-        ke.a(gg.field_b, false, -13);
+        FrameTimer.a(gg.field_b, false, -13);
     }
 
     static {

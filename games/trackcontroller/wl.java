@@ -5,7 +5,7 @@ final class wl extends IntrusiveNode {
     static Archive field_l;
     byte[] field_k;
     static int field_j;
-    static wj field_i;
+    static FrameTimer field_i;
 
     final static void sleepMillis(long param0, boolean param1) {
         if (param1) {
