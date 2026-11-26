@@ -28,7 +28,7 @@ final class rd {
         if (param1 != 10066329) {
           return;
         }
-        SoftwareRasterizer.c(param6, param0, param2, param5, param4, param3);
+        SoftwareRasterizer.fillRectangleAlpha(param6, param0, param2, param5, param4, param3);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -102,8 +102,8 @@ final class rd {
           if (var6 + var13Lifetime1 + var10 > SoftwareRasterizer.field_k) {
             var13Lifetime1 = -var6 - var10 + param2;
           }
-          SoftwareRasterizer.f(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_a);
-          SoftwareRasterizer.c(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_t);
+          SoftwareRasterizer.drawRectangleOutline(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_a);
+          SoftwareRasterizer.fillRectangle(1 + var12, var13Lifetime1 + 1, var5_int + (var9 - 2), var10 + (var6 - 2), this.field_t);
           this.field_c.a(param0, var12 + this.field_p, this.field_m + var13Lifetime1, var9, var10, this.field_n, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -271,8 +271,8 @@ final class rd {
           if (6 + var6 + var8 > SoftwareRasterizer.field_k) {
             var8 = -var6 + SoftwareRasterizer.field_k - 6;
           }
-          SoftwareRasterizer.f(var7, var8, var5_int + 6, 6 + var6, this.field_n);
-          SoftwareRasterizer.c(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_t);
+          SoftwareRasterizer.drawRectangleOutline(var7, var8, var5_int + 6, 6 + var6, this.field_n);
+          SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_t);
           if (param0) {
             field_l = (MouseWheelInput) null;
           }

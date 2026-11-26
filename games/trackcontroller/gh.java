@@ -45,7 +45,7 @@ final class gh implements t {
         double var9Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
-        SoftwareRasterizer.c(param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, this.field_h);
+        SoftwareRasterizer.fillRectangle(param4 + param1.field_p, param1.field_m + param2, param1.field_x, param1.field_u, this.field_h);
         if (var14 == null) {
         }
         int var7 = var14.field_S + param1.field_p + param4;

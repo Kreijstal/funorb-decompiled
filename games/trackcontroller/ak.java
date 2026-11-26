@@ -86,7 +86,7 @@ final class ak {
             field_a = (String) null;
           }
           var17.a();
-          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k);
+          SoftwareRasterizer.grayscaleRectangle(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.a();

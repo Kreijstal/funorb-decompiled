@@ -85,7 +85,7 @@ final class ma implements t {
             return stackIn_6_0;
           }
           var44 = new int[4];
-          SoftwareRasterizer.a(var44);
+          SoftwareRasterizer.saveClip(var44);
           for (var16_int = 0; 256 > var16_int; var16_int++) {
             var6[var16_int] = param3[var16_int].field_b - param2;
             var7[var16_int] = -param2 + param3[var16_int].field_a;
@@ -99,7 +99,7 @@ final class ma implements t {
             var20 = param3[var16_int].field_j;
             var21 = var36[var16_int];
             var22 = -var19 + var21;
-            SoftwareRasterizer.a(new int[var37[var16_int] * var36[var16_int]], var36[var16_int], var37[var16_int]);
+            SoftwareRasterizer.setRasterBuffer(new int[var37[var16_int] * var36[var16_int]], var36[var16_int], var37[var16_int]);
             var23 = 0;
             for (var24 = 0; var24 < var20; var24++) {
               for (var25 = 0; var19 > var25; var25++) {
@@ -132,8 +132,8 @@ final class ma implements t {
           var16.field_u = var16.field_u - param2;
           var16.field_H = var16.field_H - param2;
           var16.field_G = var16.field_G - param2;
-          SoftwareRasterizer.a(var45, var13, var14);
-          SoftwareRasterizer.b(var44);
+          SoftwareRasterizer.setRasterBuffer(var45, var13, var14);
+          SoftwareRasterizer.restoreClip(var44);
           stackIn_32_0 = var16;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

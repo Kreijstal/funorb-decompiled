@@ -255,7 +255,7 @@ final class cj extends rb {
           var1 = new Sprite(540, 140);
           mb.a((byte) 124, var1);
           ig.a();
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           fb.field_a = 0;
           PacketBuffer.a((byte) -108);
           var2 = var1.b();
@@ -264,7 +264,7 @@ final class cj extends rb {
           }
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawMask(-2, -2, 16777215);
-            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           ha.field_E.a();
           var1.drawHalfSize(0, 0);

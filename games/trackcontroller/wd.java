@@ -163,7 +163,7 @@ abstract class wd extends hl {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = TrackController.field_F ? 1 : 0;
-        SoftwareRasterizer.b(6 + param0, param2 + 35, this.field_x - 12, -40 + this.field_u, 2105376, 0);
+        SoftwareRasterizer.fillRectangleVerticalGradient(6 + param0, param2 + 35, this.field_x - 12, -40 + this.field_u, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;

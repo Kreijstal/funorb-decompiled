@@ -98,7 +98,7 @@ final class ua extends ButtonWidget {
             } else {
               if (bl.field_a.field_q >= var10) {
                 mb.a((byte) -103, bl.field_a);
-                SoftwareRasterizer.a();
+                SoftwareRasterizer.clearRaster();
               } else {
                 bl.field_a = new Sprite(var9, var10);
                 mb.a((byte) 122, bl.field_a);
@@ -136,7 +136,7 @@ final class ua extends ButtonWidget {
           } else {
             if (bl.field_a.field_q >= var10Lifetime1) {
               mb.a((byte) -103, bl.field_a);
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.clearRaster();
             } else {
               bl.field_a = new Sprite(var9Lifetime1, var10Lifetime1);
               mb.a((byte) 122, bl.field_a);

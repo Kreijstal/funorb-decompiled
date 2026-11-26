@@ -51,7 +51,7 @@ final class dg extends UiWidget {
                 var6 = Math.sqrt(-var6 + 1.0);
                 var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
               }
-              SoftwareRasterizer.a(var5, var4, var8 | var8 << 8 | var8 << 16);
+              SoftwareRasterizer.setPixel(var5, var4, var8 | var8 << 8 | var8 << 16);
             }
           }
           GameShell.m(96);
@@ -66,7 +66,7 @@ final class dg extends UiWidget {
               var6Lifetime1 = Math.sqrt(-var6Lifetime1 + 1.0);
               var8Lifetime1 = !(1.0 <= var6Lifetime1) ? (int)(255.0 * var6Lifetime1) : 255;
             }
-            SoftwareRasterizer.a(var5Lifetime1, var4Lifetime1, var8Lifetime1 | var8Lifetime1 << 8 | var8Lifetime1 << 16);
+            SoftwareRasterizer.setPixel(var5Lifetime1, var4Lifetime1, var8Lifetime1 | var8Lifetime1 << 8 | var8Lifetime1 << 16);
           }
         }
         GameShell.m(96);

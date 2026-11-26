@@ -257,8 +257,8 @@ abstract class LevelGrid {
           return;
         }
         nd.field_L[4] = var11;
-        SoftwareRasterizer.a(nd.field_F);
-        SoftwareRasterizer.b(param0, param2, param0 + 156, param2 + 208);
+        SoftwareRasterizer.saveClip(nd.field_F);
+        SoftwareRasterizer.intersectClip(param0, param2, param0 + 156, param2 + 208);
         cl.a(nd.field_L, param0 - 10, 228, -10 + param2, 176, 4);
         var5 = this.field_c + param2;
         for (var6 = 0; 8 > var6; var6++) {
@@ -273,7 +273,7 @@ abstract class LevelGrid {
           }
           var5 += 26;
         }
-        SoftwareRasterizer.b(nd.field_F);
+        SoftwareRasterizer.restoreClip(nd.field_F);
     }
 
     LevelGrid(boolean param0, int param1, int param2) {

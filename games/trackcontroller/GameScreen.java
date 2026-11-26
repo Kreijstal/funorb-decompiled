@@ -249,7 +249,7 @@ final class GameScreen {
                 var6_int = ii.field_o / 5 % ActiveLevel.field_H.length;
                 var5 = ActiveLevel.field_H[var6_int];
               }
-              SoftwareRasterizer.f(46, -1 + var3, 28, 28, 16763904);
+              SoftwareRasterizer.drawRectangleOutline(46, -1 + var3, 28, 28, 16763904);
               var6 = ii.tileSprites[var5];
               var6.drawOpaque(47, var3);
               var7 = 86;
@@ -301,7 +301,7 @@ final class GameScreen {
           } else {
             stackIn_5_4 = 6048056;
           }
-          SoftwareRasterizer.c(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4);
+          SoftwareRasterizer.fillRectangle(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4);
           stackIn_7_0 = 385;
           stackIn_7_1 = 26 * (var2_int + 1) + 48;
           stackIn_7_2 = 104;
@@ -311,10 +311,10 @@ final class GameScreen {
           } else {
             stackIn_8_4 = 6048056;
           }
-          SoftwareRasterizer.c(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4);
+          SoftwareRasterizer.fillRectangle(stackIn_7_0, stackIn_7_1, stackIn_7_2, stackIn_7_3, stackIn_8_4);
         }
-        SoftwareRasterizer.f(152, 75, 206, 284, 3352864);
-        SoftwareRasterizer.f(386, 75, 102, 284, 3352864);
+        SoftwareRasterizer.drawRectangleOutline(152, 75, 206, 284, 3352864);
+        SoftwareRasterizer.drawRectangleOutline(386, 75, 102, 284, 3352864);
         if (jj.s(23)) {
           var2 = nd.field_I;
           bk.font.b(SecondaryNodeDequeIterator.field_b, 320, 406, 0, -1);
@@ -483,7 +483,7 @@ final class GameScreen {
             stackIn_42_0 = (param0) ? 8110658 : 15252224;
           }
           var10_int = stackIn_42_0;
-          SoftwareRasterizer.c(param1 + 78, param2 + 13, 64, 2, var10_int);
+          SoftwareRasterizer.fillRectangle(param1 + 78, param2 + 13, 64, 2, var10_int);
           if (var6 == 2) {
             stackIn_45_0 = qd.field_d;
           } else {
@@ -493,7 +493,7 @@ final class GameScreen {
           if (var11 < 0) {
             var11 = 0;
           }
-          SoftwareRasterizer.c(param1 + (78 - (-var11 + 1)), -6 + param2 + 13, 3, 14, 8110658);
+          SoftwareRasterizer.fillRectangle(param1 + (78 - (-var11 + 1)), -6 + param2 + 13, 3, 14, 8110658);
           SoftwareRasterizer.drawVerticalLine(var11 + (78 + param1) - 2, 13 + param2, 2, 16580608);
           SoftwareRasterizer.drawVerticalLine(2 + (param1 + 78 + var11), param2 + 13, 2, 16580608);
         }
@@ -868,7 +868,7 @@ final class GameScreen {
                 fg.mouseY >= var4 &&
                 fg.mouseY <= (32 + var4)) {
                 var7 = var8;
-                SoftwareRasterizer.d(-2 + var3, var4 - 2, 36, 36, 6, 16711680);
+                SoftwareRasterizer.drawRoundedRectangleOutline(-2 + var3, var4 - 2, 36, 36, 6, 16711680);
               }
               if (-1 != this.field_h &&
                 var3 <= this.field_h &&
@@ -883,7 +883,7 @@ final class GameScreen {
                 }
               }
               if (var8 == this.field_d) {
-                SoftwareRasterizer.d(var3 - 2, -2 + var4, 36, 36, 6, 15252224);
+                SoftwareRasterizer.drawRoundedRectangleOutline(var3 - 2, -2 + var4, 36, 36, 6, 15252224);
               }
               incrementValue$0 = var6Lifetime1;
               var6Lifetime1++;
@@ -1092,7 +1092,7 @@ final class GameScreen {
                   this.field_c == 11) {
                   SoftwareRasterizer.setClip(19, 384, 621, 466);
                   cl.a(nd.field_L, 11, 436, 38, 618, param0 ^ -5);
-                  SoftwareRasterizer.d();
+                  SoftwareRasterizer.resetClip();
                 }
               }
             } else {
@@ -1221,7 +1221,7 @@ final class GameScreen {
                         bk.font.a(var11.levelIndex + ". ", 390, var6, var13, -1);
                         var6 += 26;
                       }
-                      SoftwareRasterizer.d();
+                      SoftwareRasterizer.resetClip();
                       break scanLoop1;
                     }
                     this.c((byte) -114);

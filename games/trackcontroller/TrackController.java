@@ -254,9 +254,9 @@ public final class TrackController extends GameShell {
           } else {
             vd.b(-1, 2, 23636);
           }
-          SoftwareRasterizer.d();
+          SoftwareRasterizer.resetClip();
           if (ag.b(param0 - 142)) {
-            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k);
+            SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k);
             var3Lifetime2 = GameApplet.g(48);
             var4Lifetime1 = var3Lifetime2 % 26;
             if (var4Lifetime1 != 0) {
@@ -269,7 +269,7 @@ public final class TrackController extends GameShell {
           if (0 != dd.field_o) {
             var3Lifetime3 = NodeHashTable.field_g << 3;
             if (var3Lifetime3 > 0) {
-              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, var3Lifetime3);
+              SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, var3Lifetime3);
             }
           }
           if (ob.g(-26998) &&
@@ -310,7 +310,7 @@ public final class TrackController extends GameShell {
         GameApplet.b((byte) -91);
         ej.clearStaticReferences(17);
         MouseWheelInput.b(-31279);
-        SoftwareRasterizer.c();
+        SoftwareRasterizer.clearStaticReferences();
         BitmapFont.clearStaticReferences();
         e.clearStaticReferences(-1102);
         qf.clearStaticReferences((byte) 98);
@@ -1026,8 +1026,8 @@ public final class TrackController extends GameShell {
               na.field_c.drawOpaque(var5, var4);
             }
           }
-          SoftwareRasterizer.b(20, 30, 600, 383, 3894145, 11980506);
-          SoftwareRasterizer.f(0, 0, 640, 480, 0);
+          SoftwareRasterizer.fillRectangleVerticalGradient(20, 30, 600, 383, 3894145, 11980506);
+          SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 0);
           ab.a("", -15383, "titlescreen2", sg.field_a).drawTransparent(0, 0);
           ia.field_b.a(-91);
           nd.field_L = ib.a(10, "", sg.field_a, "frame");
@@ -1066,7 +1066,7 @@ public final class TrackController extends GameShell {
                 5 == var4) {
                 var8 = SoftwareRasterizer.field_k;
               }
-              SoftwareRasterizer.c(var5, var6, var7_intLifetime1, var8, 9073738);
+              SoftwareRasterizer.fillRectangle(var5, var6, var7_intLifetime1, var8, 9073738);
             }
             var4++;
           }

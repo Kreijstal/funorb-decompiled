@@ -42,7 +42,7 @@ final class ji {
             fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
           } else {
             if (!ic.a(false)) {
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.clearRaster();
               hi.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
@@ -97,7 +97,7 @@ final class ji {
             fb.a(var3_int != 0, ie.a(122), dg.field_E, ei.a((byte) 116), (byte) -103);
           } else {
             if (!ic.a(false)) {
-              SoftwareRasterizer.a();
+              SoftwareRasterizer.clearRaster();
               hi.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {

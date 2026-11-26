@@ -163,14 +163,14 @@ final class ij implements t {
             return;
           }
           var7 = 5592405;
-          SoftwareRasterizer.c(param1.field_p + param4, param2 + param1.field_m, param1.field_x, param1.field_u, this.field_a);
+          SoftwareRasterizer.fillRectangle(param1.field_p + param4, param2 + param1.field_m, param1.field_x, param1.field_u, this.field_a);
           if (param3) {
             var7 = 16777215;
           }
           var8 = param1.field_p + param4 + this.field_c;
           var9 = this.field_e + (param2 + param1.field_m);
-          SoftwareRasterizer.a(var8, var9, this.field_l, this.field_m, 5592405);
-          SoftwareRasterizer.c(var8, var9, this.field_l, this.field_m, var7);
+          SoftwareRasterizer.drawRectangleShadow(var8, var9, this.field_l, this.field_m, 5592405);
+          SoftwareRasterizer.fillRectangle(var8, var9, this.field_l, this.field_m, var7);
           if (var11.field_G) {
             SoftwareRasterizer.drawLine(var8, var9, var8 + this.field_l, var9 + this.field_m, 1);
             SoftwareRasterizer.drawLine(var8 + this.field_l, var9, var8, var9 + this.field_m, 1);

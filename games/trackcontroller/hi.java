@@ -36,10 +36,10 @@ final class hi extends AsyncRequest {
         }
         mb.a((byte) -35, kj.field_l);
         ig.a();
-        SoftwareRasterizer.a();
+        SoftwareRasterizer.clearRaster();
         PacketBuffer.a((byte) -78);
         if (256 > var5) {
-          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, -var5 + 256);
+          SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, -var5 + 256);
           GameShell.m(119);
           if (150 <= fb.field_a) {
             ej.field_d.drawTransparentWithOpacity(var3 + 15, 10 + var4, var5);

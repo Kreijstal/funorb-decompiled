@@ -35,7 +35,7 @@ final class jd implements t {
             stackIn_4_0 = null;
           }
           var12 = (qk) (stackIn_4_0);
-          SoftwareRasterizer.c(param1.field_p + param4, param1.field_m + param2, param1.field_x, param1.field_u, this.field_a);
+          SoftwareRasterizer.fillRectangle(param1.field_p + param4, param1.field_m + param2, param1.field_x, param1.field_u, this.field_a);
           if (var12 == null) {
           }
           var7 = -(2 * var12.field_I) + param1.field_x;

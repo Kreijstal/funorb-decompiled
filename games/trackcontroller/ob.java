@@ -173,7 +173,7 @@ final class ob extends DualLinkNode {
             gl.field_E.d((byte) -97, ib.field_e);
           }
           ib.field_e.a(param3, (byte) 88, param0, param2);
-          SoftwareRasterizer.a();
+          SoftwareRasterizer.clearRaster();
           lh.a(true, 66);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ob.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

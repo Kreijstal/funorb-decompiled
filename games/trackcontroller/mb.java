@@ -128,7 +128,7 @@ final class mb {
 
     final static void a(int param0, int param1, int param2, byte param3, int param4) {
         nk.b(false);
-        SoftwareRasterizer.b(param0, param1, param4, param2);
+        SoftwareRasterizer.intersectClip(param0, param1, param4, param2);
         int var5 = -22 % ((param3 - 51) / 54);
     }
 
@@ -136,7 +136,7 @@ final class mb {
         try {
           int var2_int = 45 / ((64 - param0) / 53);
           nk.b(false);
-          SoftwareRasterizer.a(param1.pixels, param1.field_s, param1.field_v);
+          SoftwareRasterizer.setRasterBuffer(param1.pixels, param1.field_s, param1.field_v);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "mb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

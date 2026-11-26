@@ -526,7 +526,7 @@ abstract class GameShell extends GameApplet {
         vg var1 = (vg) (cj.field_j.removeLast((byte) -82));
         if (var1 != null) {
           int var2 = -73 % ((-24 - param0) / 38);
-          SoftwareRasterizer.a(var1.field_l, var1.field_j, var1.field_n);
+          SoftwareRasterizer.setRasterBuffer(var1.field_l, var1.field_j, var1.field_n);
           SoftwareRasterizer.setClip(var1.field_q, var1.field_m, var1.field_k, var1.field_i);
           var1.field_l = null;
           CachedArchiveSource.field_q.addLast((byte) -111, var1);

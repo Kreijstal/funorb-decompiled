@@ -230,7 +230,7 @@ abstract class RasterBuffer {
           java.awt.Graphics var3 = (java.awt.Graphics) null;
           this.a(-118, (java.awt.Graphics) null, -61, 99);
         }
-        SoftwareRasterizer.a(this.pixels, this.field_c, this.field_a);
+        SoftwareRasterizer.setRasterBuffer(this.pixels, this.field_c, this.field_a);
     }
 
     final static boolean a(int param0, Archive param1) {

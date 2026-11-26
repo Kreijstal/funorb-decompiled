@@ -124,7 +124,7 @@ final class mi extends el {
             var11 <= this.field_P.field_t &&
             var12 <= this.field_P.field_q) {
             mb.a((byte) 126, this.field_P);
-            SoftwareRasterizer.a();
+            SoftwareRasterizer.clearRaster();
           } else {
             this.field_P = new Sprite(var11, var12);
             mb.a((byte) -110, this.field_P);
