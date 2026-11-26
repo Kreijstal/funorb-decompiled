@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jf extends d {
-    static fe field_M;
+    static ArgbSprite field_M;
     int field_K;
     static int[] field_N;
     private re field_I;

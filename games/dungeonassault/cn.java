@@ -628,7 +628,7 @@ class cn extends rd {
         return;
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitGrayModulated(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$14 = 0;
         int var12;
         int var13;
@@ -655,7 +655,7 @@ class cn extends rd {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKey(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -819,7 +819,7 @@ class cn extends rd {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitColorKeyScaledAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -912,7 +912,7 @@ class cn extends rd {
           if (var5 <= 0) {
             return;
           }
-          cn.c(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          cn.blitColorKeyReverse(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -958,7 +958,7 @@ class cn extends rd {
           if (var6 <= 0) {
             return;
           }
-          cn.a(SoftwareRasterizer.field_b, this.field_B, param2, var5, var4, var7, var6, var8, var9);
+          cn.blitSilhouette(SoftwareRasterizer.field_b, this.field_B, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1028,7 +1028,7 @@ class cn extends rd {
           if (var6 <= 0) {
             return;
           }
-          cn.a(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          cn.blitColorKeyAlpha(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1245,7 +1245,7 @@ class cn extends rd {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          cn.b(SoftwareRasterizer.field_b, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          cn.blitColorKeyScaled(SoftwareRasterizer.field_b, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1291,7 +1291,7 @@ class cn extends rd {
           if (var5 <= 0) {
             return;
           }
-          cn.a(SoftwareRasterizer.field_b, this.field_B, var4, var3, var6, var5, var7, var8);
+          cn.blitUnmasked(SoftwareRasterizer.field_b, this.field_B, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1337,7 +1337,7 @@ class cn extends rd {
           if (var6 <= 0) {
             return;
           }
-          cn.c(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          cn.blitGrayTinted(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1383,7 +1383,7 @@ class cn extends rd {
           if (var5 <= 0) {
             return;
           }
-          cn.c(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          cn.blitColorKeyReverse(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1395,7 +1395,7 @@ class cn extends rd {
         int var4 = param0 + (this.field_y >> 1) > SoftwareRasterizer.field_h ? SoftwareRasterizer.field_h - param0 << 1 : this.field_y;
         int var5 = param1 < SoftwareRasterizer.field_f ? SoftwareRasterizer.field_f - param1 << 1 : 0;
         int var6 = param1 + (this.field_v >> 1) > SoftwareRasterizer.field_e ? SoftwareRasterizer.field_e - param1 << 1 : this.field_v;
-        cn.a(this.field_B, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_i + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), SoftwareRasterizer.field_i - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
+        cn.blitHalfSize(this.field_B, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_i + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), SoftwareRasterizer.field_i - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -1535,7 +1535,7 @@ class cn extends rd {
         throw new IllegalArgumentException();
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitColorKeyScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1557,7 +1557,7 @@ class cn extends rd {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKeyReverse(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -2060,12 +2060,12 @@ class cn extends rd {
           if (var5 <= 0) {
             return;
           }
-          cn.b(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          cn.blitColorKey(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveIntensity(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -2130,7 +2130,7 @@ class cn extends rd {
           if (var5 <= 0) {
             return;
           }
-          cn.a(0, SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          cn.blitMultiply(0, SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2176,7 +2176,7 @@ class cn extends rd {
           if (var5 <= 0) {
             return;
           }
-          cn.b(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          cn.blitColorKey(SoftwareRasterizer.field_b, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2223,15 +2223,15 @@ class cn extends rd {
             return;
           }
           if (param2 == 256) {
-            cn.a(0, 0, 0, SoftwareRasterizer.field_b, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
+            cn.blitAdditive(0, 0, 0, SoftwareRasterizer.field_b, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            cn.a(0, 0, 0, SoftwareRasterizer.field_b, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            cn.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_b, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitColorKeyAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -2322,12 +2322,12 @@ class cn extends rd {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          cn.a(SoftwareRasterizer.field_b, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          cn.blitColorKeyScaledAlpha(SoftwareRasterizer.field_b, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -2358,7 +2358,7 @@ class cn extends rd {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -2378,7 +2378,7 @@ class cn extends rd {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -2611,7 +2611,7 @@ class cn extends rd {
         this.field_B = var2;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIntensity(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -2635,7 +2635,7 @@ class cn extends rd {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitScaledSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -2748,7 +2748,7 @@ class cn extends rd {
         return;
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -2841,12 +2841,12 @@ class cn extends rd {
           if (var6 <= 0) {
             return;
           }
-          cn.c(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          cn.blitGrayModulated(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -2955,12 +2955,12 @@ class cn extends rd {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          cn.a(SoftwareRasterizer.field_b, this.field_B, param4, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6);
+          cn.blitScaledSilhouette(SoftwareRasterizer.field_b, this.field_B, param4, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -3027,7 +3027,7 @@ class cn extends rd {
           if (var6 <= 0) {
             return;
           }
-          cn.b(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          cn.blitIntensity(SoftwareRasterizer.field_b, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }

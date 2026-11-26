@@ -49,8 +49,8 @@ final class sf {
         var4.a((byte) 112, 1).a(eg.a((byte) 70, 10066329, 13421772, 11184810), -123);
         var4.a((byte) 74, 3).a(eg.a((byte) 98, 7829367, 10066329, 8947848), -87).a((byte) 92, 1).a(-4130, 1);
         nh[] var5 = new nh[9];
-        pg var16 = new pg(32, 32);
-        pg var18 = var16;
+        ArgbSprite var16 = new ArgbSprite(32, 32);
+        ArgbSprite var18 = var16;
         for (var7_int = 0; var18.field_B.length > var7_int; var7_int++) {
           var16.field_B[var7_int] = 1077952576;
         }

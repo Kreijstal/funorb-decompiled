@@ -111,7 +111,7 @@ final class ge extends jc {
         ge.blitIndexedAlpha(SoftwareRasterizer.pixels, this.field_k, this.field_l, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitPaletteTinted(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$11 = 0;
@@ -216,7 +216,7 @@ final class ge extends jc {
           var7 <= 0) {
           return;
         }
-        ge.a(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+        ge.blitPaletteTinted(SoftwareRasterizer.pixels, this.field_k, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
     }
 
     ge(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {

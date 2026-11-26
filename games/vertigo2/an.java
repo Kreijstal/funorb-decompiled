@@ -501,7 +501,7 @@ final class an {
     final void a(int param0) {
         int var11 = 0;
         int var12;
-        fe var2;
+        ArgbSprite var2;
         int var3;
         int var4;
         int var5;
@@ -510,7 +510,7 @@ final class an {
         int var8;
         int var9;
         int var10;
-        fe var13;
+        ArgbSprite var13;
         var12 = Vertigo2.field_L ? 1 : 0;
         this.field_i.a((byte) 40, lc.field_g, 0.0, 0.0, 1.0);
         this.field_b.a((byte) 40, fq.field_j, (double)param0, 1.0, 0.0);

@@ -63,7 +63,7 @@ final class mn extends pd {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hm.a(gh.field_z[pf.b((int) var21[var7], 255)], pf.b((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (dl) ((Object) new vi(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
+            var1[var2] = (dl) ((Object) new ArgbSprite(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], MouseWheelInput.field_a[var2], uo.field_l[var2], je.field_c[var2], var17));
           }
         }
         ok.a(param0 ^ 2188450);

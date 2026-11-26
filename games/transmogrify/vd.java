@@ -495,8 +495,8 @@ final class vd {
     }
 
     final void a(int param0, kg param1) {
-        jf var16 = null;
-        jf var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         ki var6 = null;
         ki var7 = null;
@@ -538,7 +538,7 @@ final class vd {
           return;
         }
         try {
-          var16 = new jf(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_w.length > var7_int; var7_int++) {
             var16.field_w[var7_int] = 1077952576;

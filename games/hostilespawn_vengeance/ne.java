@@ -110,11 +110,11 @@ final class ne extends IntrusiveNode {
     }
 
     final static bd a(bd param0, byte param1) {
-        gk var2 = null;
+        ArgbSprite var2 = null;
         RuntimeException var2_ref = null;
-        gk var3 = null;
+        ArgbSprite var3 = null;
         bd stackIn_5_0 = null;
-        gk stackIn_7_0 = null;
+        ArgbSprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -123,11 +123,11 @@ final class ne extends IntrusiveNode {
           if (param1 > -4) {
             field_j = (vh) null;
           }
-          if (!(param0 instanceof gk)) {
+          if (!(param0 instanceof ArgbSprite)) {
             stackIn_5_0 = param0.d();
             return stackIn_5_0;
           }
-          var2 = (gk) (param0);
+          var2 = (ArgbSprite) (param0);
           var3 = var2.i();
           var3.g();
           stackIn_7_0 = var3;

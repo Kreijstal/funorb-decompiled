@@ -4,7 +4,7 @@
 final class am {
     private bg[] field_a;
     private int[][] field_u;
-    static fe field_o;
+    static ArgbSprite field_o;
     static int field_n;
     static int field_t;
     private cn field_s;
@@ -236,7 +236,7 @@ final class am {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        fe var11_ref_fe = null;
+        ArgbSprite var11_ref_fe = null;
         int var11 = 0;
         int var12_int = 0;
         jg[] var12 = null;
@@ -646,7 +646,7 @@ final class am {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        fe var18_ref_fe = null;
+        ArgbSprite var18_ref_fe = null;
         int var18 = 0;
         int var19 = 0;
         int var20_int = 0;
@@ -1401,7 +1401,7 @@ final class am {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        fe var13_ref_fe = null;
+        ArgbSprite var13_ref_fe = null;
         int var13 = 0;
         int var14_int = 0;
         jg[] var14 = null;

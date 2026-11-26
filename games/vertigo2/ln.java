@@ -4,7 +4,7 @@
 final class ln {
     static int field_c;
     static String field_a;
-    static fe field_f;
+    static ArgbSprite field_f;
     static String field_e;
     static int[] field_g;
     static GameplayScreen field_d;

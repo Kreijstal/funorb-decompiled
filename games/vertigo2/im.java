@@ -7,7 +7,7 @@ final class im {
     private long field_a;
     private byte[] field_o;
     private long field_d;
-    static fe[] field_c;
+    static ArgbSprite[] field_c;
     static int field_h;
     private long field_e;
     private RandomAccessCacheFile field_f;

@@ -3,7 +3,7 @@
  */
 final class ie extends UiPanel {
     static String field_Rb;
-    static fe field_Hb;
+    static ArgbSprite field_Hb;
     private UiPanel field_Mb;
     static String field_Sb;
     private UiPanel field_Ib;

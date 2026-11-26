@@ -6,7 +6,7 @@ final class eq extends TextureOperator {
     private int field_A;
     static UiPanel field_z;
     static String field_E;
-    static fe field_F;
+    static ArgbSprite field_F;
     static String field_B;
     static String field_C;
 

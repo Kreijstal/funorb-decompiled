@@ -92,8 +92,8 @@ final class NetworkSupport002 {
         MixedSupport001 mixedSupport001Local1 = null;
         MixedSupport009 mixedSupport009Local2 = null;
         RgbSprite[] rgbSpriteArrayLocal3 = null;
-        RenderingSupport008 renderingSupport008Local4 = null;
-        RenderingSupport008 renderingSupport008Local5 = null;
+        ArgbSprite renderingSupport008Local4 = null;
+        ArgbSprite renderingSupport008Local5 = null;
         int integerLocal6 = 0;
         MixedSupport009 mixedSupport009Local7 = null;
         MixedSupport009 mixedSupport009Local8 = null;
@@ -132,7 +132,7 @@ final class NetworkSupport002 {
           mixedSupport009Local2.computeMixedSupport1180099(1, integerArgument1 ^ 13421780).computeMixedSupport1181543(-50, MixedSupport042.computeRgbSpriteArray0535(13421772, 11184810, 10066329, 32140));
           mixedSupport009Local2.computeMixedSupport1180099(3, 101).computeMixedSupport1181543(121, MixedSupport042.computeRgbSpriteArray0535(10066329, 8947848, 7829367, 32140)).computeMixedSupport1181552(-1, 1).computeMixedSupport1181540(1, -2147483648);
           rgbSpriteArrayLocal3 = new RgbSprite[9];
-          renderingSupport008Local4 = new RenderingSupport008(32, 32);
+          renderingSupport008Local4 = new ArgbSprite(32, 32);
           renderingSupport008Local5 = renderingSupport008Local4;
           for (integerLocal6 = 0; renderingSupport008Local5.integerArrayState0024.length > integerLocal6; integerLocal6++) {
             renderingSupport008Local4.integerArrayState0024[integerLocal6] = 1077952576;

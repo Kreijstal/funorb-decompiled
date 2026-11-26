@@ -213,7 +213,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, byte[] param11) {
+    private final static void blitColorKeyMasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, byte[] param11) {
         int var13 = 0;
         int var12;
         int var14;
@@ -692,7 +692,7 @@ class Sprite extends SpriteState {
         return;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitColorKeyScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -802,7 +802,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.blitGrayTinted(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -966,7 +966,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.blitGrayModulated(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1012,12 +1012,12 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.c(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.blitColorKeyAlpha(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -1048,7 +1048,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitGrayModulated(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$14 = 0;
         int var12;
         int var13;
@@ -1083,7 +1083,7 @@ class Sprite extends SpriteState {
         this.b(var5, var6, param0, param1, param2, param3);
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveIntensity(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -1224,7 +1224,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKey(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1278,10 +1278,10 @@ class Sprite extends SpriteState {
         int var4 = param0 + (this.field_y >> 1) > SoftwareRasterizer.field_k ? SoftwareRasterizer.field_k - param0 << 1 : this.field_y;
         int var5 = param1 < SoftwareRasterizer.field_d ? SoftwareRasterizer.field_d - param1 << 1 : 0;
         int var6 = param1 + (this.field_C >> 1) > SoftwareRasterizer.field_e ? SoftwareRasterizer.field_e - param1 << 1 : this.field_C;
-        Sprite.a(this.field_D, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_g + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), SoftwareRasterizer.field_g - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.blitHalfSize(this.field_D, var5 * this.field_y + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_g + (param0 + (var3 >> 1)), (this.field_y << 1) - (var4 - var3) + (this.field_y & 1), SoftwareRasterizer.field_g - (var4 - var3 >> 1), this.field_y, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -1344,7 +1344,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_f, this.field_D, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.blitSilhouette(SoftwareRasterizer.field_f, this.field_D, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1390,7 +1390,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.c(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitColorKey(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1659,7 +1659,7 @@ class Sprite extends SpriteState {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          Sprite.b(SoftwareRasterizer.field_f, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.blitColorKeyScaled(SoftwareRasterizer.field_f, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -1810,7 +1810,7 @@ class Sprite extends SpriteState {
         return var1;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -1958,7 +1958,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -2054,7 +2054,7 @@ class Sprite extends SpriteState {
         this.field_B = this.field_x - this.field_y - this.field_B;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -2789,7 +2789,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.c(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitColorKey(SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2835,7 +2835,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.field_f, this.field_D, var4, var3, var6, var5, var7, var8);
+          Sprite.blitUnmasked(SoftwareRasterizer.field_f, this.field_D, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2880,7 +2880,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -2942,15 +2942,15 @@ class Sprite extends SpriteState {
             return;
           }
           if (param2 == 256) {
-            Sprite.a(0, 0, 0, SoftwareRasterizer.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.blitAdditive(0, 0, 0, SoftwareRasterizer.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            Sprite.a(0, 0, 0, SoftwareRasterizer.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_f, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitColorKeyAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -3023,7 +3023,7 @@ class Sprite extends SpriteState {
           }
           var10Lifetime3 = param1 - SoftwareRasterizer.field_a + (param2 - SoftwareRasterizer.field_d) * param0.field_a;
           var11 = param0.field_a - var7;
-          Sprite.a(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var10Lifetime3, var7, var6, var8, var9, var11, param0.field_m);
+          Sprite.blitColorKeyMasked(SoftwareRasterizer.field_f, this.field_D, 0, var5, var4, var10Lifetime3, var7, var6, var8, var9, var11, param0.field_m);
           return;
         }
     }
@@ -3069,7 +3069,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(0, SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitMultiply(0, SoftwareRasterizer.field_f, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

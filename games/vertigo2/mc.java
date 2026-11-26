@@ -156,8 +156,8 @@ final class mc {
         va var17 = null;
         mq var4 = null;
         Sprite[] var5 = null;
-        fe var16 = null;
-        fe var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         mq var6 = null;
         mq var7 = null;
@@ -199,7 +199,7 @@ final class mc {
           var4.a(1, 6216).a(param1 - 115, wp.a(10066329, (byte) 120, 13421772, 11184810));
           var4.a(3, 6216).a(-121, wp.a(7829367, (byte) 77, 10066329, 8947848)).c(param1 ^ 32350, 1).a(97, 1);
           var5 = new Sprite[9];
-          var16 = new fe(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_F.length; var7_int++) {
             var16.field_F[var7_int] = 1077952576;

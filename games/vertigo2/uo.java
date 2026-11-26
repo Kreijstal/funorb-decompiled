@@ -9,7 +9,7 @@ final class uo {
     static int field_h;
     static GzipDecompressor field_g;
     static String field_c;
-    static fe field_e;
+    static ArgbSprite field_e;
     static byte[][] field_f;
     static String field_j;
 

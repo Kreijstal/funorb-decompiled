@@ -11,7 +11,7 @@ class IntrusiveNode {
     static co field_e;
     static String field_h;
     static String field_b;
-    static fe[] field_i;
+    static ArgbSprite[] field_i;
     static int field_d;
     static Sprite field_m;
     static int[] field_l;

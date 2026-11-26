@@ -148,7 +148,7 @@ final class td implements WidgetListener {
           for (var6 = 0; var1 > var6; var6++) {
             var5[var6] = om.a(b.a((int) var17[var6], 255) << 24, in.field_c[b.a(255, (int) var16[var6])]);
           }
-          var3 = new fe(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var13);
+          var3 = new ArgbSprite(ql.field_M, vj.field_c, ca.field_a[0], pc.field_a[0], mh.field_c[0], vi.field_w[0], var13);
         }
         la.a((byte) 37);
         return (Sprite) (var3);

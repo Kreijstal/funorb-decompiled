@@ -205,8 +205,8 @@ final class jd {
         e var17 = null;
         hb var4 = null;
         dd[] var5 = null;
-        sj var16 = null;
-        sj var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         hb var6 = null;
         hb var7 = null;
@@ -245,7 +245,7 @@ final class jd {
           var4.a(1, -17562).a(true, IntrusiveNode.a(13421772, 11184810, (byte) 66, 10066329));
           var4.a(3, -17562).a(param1, IntrusiveNode.a(10066329, 8947848, (byte) -99, 7829367)).a(param1, 1).c(124, 1);
           var5 = new dd[9];
-          var16 = new sj(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_B.length; var7_int++) {
             var16.field_B[var7_int] = 1077952576;

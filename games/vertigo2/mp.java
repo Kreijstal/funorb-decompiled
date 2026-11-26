@@ -4,7 +4,7 @@
 final class mp {
     private Sprite[] field_e;
     static String field_c;
-    static fe field_a;
+    static ArgbSprite field_a;
     static UiPanel field_g;
     static AccountServiceResult field_f;
     static int field_d;

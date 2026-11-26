@@ -49,7 +49,7 @@ final class pg extends aj {
         pg.blitIndexedAlpha(SoftwareRasterizer.field_i, this.field_j, this.field_k, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitIndexedOpaque(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -141,7 +141,7 @@ final class pg extends aj {
           var5 <= 0) {
           return;
         }
-        pg.a(SoftwareRasterizer.field_i, this.field_j, this.field_k, var4, var3, var6, var5, var7, var8);
+        pg.blitIndexedOpaque(SoftwareRasterizer.field_i, this.field_j, this.field_k, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void blitIndexed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -277,7 +277,7 @@ final class pg extends aj {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -357,7 +357,7 @@ final class pg extends aj {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        pg.a(SoftwareRasterizer.field_i, this.field_j, this.field_k, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        pg.blitIndexedScaled(SoftwareRasterizer.field_i, this.field_j, this.field_k, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     private final static void blitIndexedAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

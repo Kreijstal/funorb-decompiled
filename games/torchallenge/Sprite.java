@@ -204,7 +204,7 @@ class Sprite extends SpriteState {
         this.fullWidth = var3Lifetime3;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -312,7 +312,7 @@ class Sprite extends SpriteState {
         int var4 = param0 + (this.storedWidth >> 1) > SoftwareRasterizer.field_c ? SoftwareRasterizer.field_c - param0 << 1 : this.storedWidth;
         int var5 = param1 < SoftwareRasterizer.field_k ? SoftwareRasterizer.field_k - param1 << 1 : 0;
         int var6 = param1 + (this.storedHeight >> 1) > SoftwareRasterizer.field_l ? SoftwareRasterizer.field_l - param1 << 1 : this.storedHeight;
-        Sprite.a(this.pixels, var5 * this.storedWidth + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.width + (param0 + (var3 >> 1)), (this.storedWidth << 1) - (var4 - var3) + (this.storedWidth & 1), SoftwareRasterizer.width - (var4 - var3 >> 1), this.storedWidth, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.blitHalfSize(this.pixels, var5 * this.storedWidth + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.width + (param0 + (var3 >> 1)), (this.storedWidth << 1) - (var4 - var3) + (this.storedWidth & 1), SoftwareRasterizer.width - (var4 - var3 >> 1), this.storedWidth, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void drawMask(int param0, int param1, int param2) {
@@ -356,12 +356,12 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.b(SoftwareRasterizer.pixels, this.pixels, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.blitSilhouette(SoftwareRasterizer.pixels, this.pixels, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -403,7 +403,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -1390,7 +1390,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
+          Sprite.blitUnmasked(SoftwareRasterizer.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1806,7 +1806,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(0, SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitMultiply(0, SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -3191,7 +3191,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {

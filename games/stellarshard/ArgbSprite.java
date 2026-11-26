@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends Sprite {
+final class ArgbSprite extends Sprite {
     final void d(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
@@ -43,16 +43,16 @@ final class jc extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          jc.b(0, 0, 0, SoftwareRasterizer.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.field_a, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    jc(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -75,7 +75,7 @@ final class jc extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$6 = 0;
@@ -129,7 +129,7 @@ final class jc extends Sprite {
         }
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitArgbAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         int var14;
         for (param8 = -param10; param8 < 0; param8++) {
@@ -295,7 +295,7 @@ final class jc extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          jc.d(SoftwareRasterizer.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbAlpha(SoftwareRasterizer.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -341,7 +341,7 @@ final class jc extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          jc.c(SoftwareRasterizer.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blitArgb(SoftwareRasterizer.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -413,12 +413,12 @@ final class jc extends Sprite {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          jc.c(SoftwareRasterizer.field_a, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.blitArgbScaled(SoftwareRasterizer.field_a, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitArgbScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1095,12 +1095,12 @@ final class jc extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          jc.c(SoftwareRasterizer.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.field_a, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitArgb(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;
@@ -1128,7 +1128,7 @@ final class jc extends Sprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitArgbGrayModulated(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$1 = 0;
         int var12;
         int var13;
@@ -1207,12 +1207,12 @@ final class jc extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          jc.c(SoftwareRasterizer.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.blitArgb(SoftwareRasterizer.field_a, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    jc(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -1353,7 +1353,7 @@ final class jc extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          jc.d(SoftwareRasterizer.field_a, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbGrayModulated(SoftwareRasterizer.field_a, this.field_z, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }

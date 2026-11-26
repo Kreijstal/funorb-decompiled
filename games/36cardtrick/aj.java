@@ -157,8 +157,8 @@ final class aj {
         ek var17 = null;
         nd var4 = null;
         kc[] var5 = null;
-        si var16 = null;
-        si var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         nd var6 = null;
         nd var7 = null;
@@ -197,7 +197,7 @@ final class aj {
           var4.a((byte) -1, 1).a(fb.a(18457, 11184810, 10066329, 13421772), true);
           var4.a((byte) -1, 3).a(fb.a(18457, 8947848, 7829367, 10066329), true).b(1, (byte) -51).a(1, -99);
           var5 = new kc[9];
-          var16 = new si(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_r.length > var7_int; var7_int++) {
             var16.field_r[var7_int] = 1077952576;

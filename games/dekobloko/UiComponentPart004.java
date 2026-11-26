@@ -306,7 +306,7 @@ abstract class UiComponentPart004 extends UiComponentPart030 {
                 integerArrayLocal8[integerLocal9] = UiComponentPart006.bitwiseOr(MixedSupport075.computeInteger0930((int) byteArrayLocal15[integerLocal9], 255) << 24, NetworkSupport006.integerArrayState0152[MixedSupport075.computeInteger0930((int) byteArrayLocal14[integerLocal9], 255)]);
                 integerLocal9++;
               }
-              rgbSpriteArrayLocal4[integerLocal5] = (RgbSprite) ((Object) new RenderingSupport008(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal5], MixedSupport039.integerArrayState0047[integerLocal5], MixedSupport123.integerArrayState0208[integerLocal5], MixedSupport052.integerArrayState0054[integerLocal5], integerArrayLocal13));
+              rgbSpriteArrayLocal4[integerLocal5] = (RgbSprite) ((Object) new ArgbSprite(MixedSupport029.integerState0181, MixedSupport057.integerState0297, InputAdapter003.integerArrayState0206[integerLocal5], MixedSupport039.integerArrayState0047[integerLocal5], MixedSupport123.integerArrayState0208[integerLocal5], MixedSupport052.integerArrayState0054[integerLocal5], integerArrayLocal13));
             }
             integerLocal5++;
             continue;

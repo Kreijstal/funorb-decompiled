@@ -102,7 +102,7 @@ final class ai extends bh {
           if (var5 <= 0) {
             return;
           }
-          ai.a(0, this.field_n, var4, var3, 0, SoftwareRasterizer.field_i, this.field_m, var6, var7, var8, 0, var5);
+          ai.blitIndexedSkipRuns(0, this.field_n, var4, var3, 0, SoftwareRasterizer.field_i, this.field_m, var6, var7, var8, 0, var5);
           return;
         }
     }
@@ -385,7 +385,7 @@ final class ai extends bh {
         this.field_m = param7;
     }
 
-    private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedSkipRuns(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param10 = -param11;

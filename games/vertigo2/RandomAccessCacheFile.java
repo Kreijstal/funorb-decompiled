@@ -10,7 +10,7 @@ final class RandomAccessCacheFile {
     private long field_e;
     static tj field_f;
     static ve field_g;
-    static fe field_j;
+    static ArgbSprite field_j;
     static byte[] field_i;
     static la field_c;
     static String field_b;

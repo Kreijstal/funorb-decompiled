@@ -108,7 +108,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var5 <= 0) {
           return;
         }
-        IndexedSprite.a(SoftwareRasterizer.field_h, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
+        IndexedSprite.blitIndexedOpaque(SoftwareRasterizer.field_h, this.field_i, this.field_j, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1) {
@@ -181,7 +181,7 @@ final class IndexedSprite extends IndexedSpriteState {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitIndexedOpaque(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

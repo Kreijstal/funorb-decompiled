@@ -10,7 +10,7 @@ abstract class MouseWheelInput {
     static String field_i;
     static boolean field_a;
     static double field_e;
-    static fe field_c;
+    static ArgbSprite field_c;
     static int[][] field_b;
     static int field_d;
     private static String field_z;

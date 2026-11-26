@@ -419,7 +419,7 @@ class db extends ed {
         return;
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -475,7 +475,7 @@ class db extends ed {
         return var1;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitGrayModulated(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$14 = 0;
         int var12;
         int var13;
@@ -502,7 +502,7 @@ class db extends ed {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -522,7 +522,7 @@ class db extends ed {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -658,7 +658,7 @@ class db extends ed {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -730,7 +730,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.a(SoftwareRasterizer.field_b, this.field_y, var4, var3, var6, var5, var7, var8);
+          db.blitUnmasked(SoftwareRasterizer.field_b, this.field_y, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -776,12 +776,12 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.a(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          db.blitGrayModulated(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -860,7 +860,7 @@ class db extends ed {
         int var4 = param0 + (this.field_p >> 1) > SoftwareRasterizer.field_e ? SoftwareRasterizer.field_e - param0 << 1 : this.field_p;
         int var5 = param1 < SoftwareRasterizer.field_c ? SoftwareRasterizer.field_c - param1 << 1 : 0;
         int var6 = param1 + (this.field_u >> 1) > SoftwareRasterizer.field_h ? SoftwareRasterizer.field_h - param1 << 1 : this.field_u;
-        db.a(this.field_y, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
+        db.blitHalfSize(this.field_y, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_f + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), SoftwareRasterizer.field_f - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void a() {
@@ -933,9 +933,9 @@ class db extends ed {
             return;
           }
           if (param2 == 256) {
-            db.a(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9);
+            db.blitAdditive(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            db.a(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            db.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_b, this.field_y, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -961,7 +961,7 @@ class db extends ed {
         this.field_w = 0;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitColorKeyAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -1122,7 +1122,7 @@ class db extends ed {
         throw new IllegalArgumentException();
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveIntensity(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -1203,7 +1203,7 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.c(SoftwareRasterizer.field_b, this.field_y, param2, var5, var4, var7, var6, var8, var9);
+          db.blitSilhouette(SoftwareRasterizer.field_b, this.field_y, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1269,7 +1269,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.a(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          db.blitColorKeyReverse(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1315,7 +1315,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.b(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          db.blitColorKey(SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1361,7 +1361,7 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.b(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          db.blitColorKeyAlpha(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1453,7 +1453,7 @@ class db extends ed {
         this.a(var5, var6, param0, param1, param2, param3);
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKey(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1541,12 +1541,12 @@ class db extends ed {
           if (var6 <= 0) {
             return;
           }
-          db.a(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
+          db.blitGrayTinted(SoftwareRasterizer.field_b, this.field_y, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKeyReverse(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1593,7 +1593,7 @@ class db extends ed {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -1707,7 +1707,7 @@ class db extends ed {
           if (var5 <= 0) {
             return;
           }
-          db.a(0, SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
+          db.blitMultiply(0, SoftwareRasterizer.field_b, this.field_y, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

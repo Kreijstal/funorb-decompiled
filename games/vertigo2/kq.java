@@ -5,7 +5,7 @@ final class kq extends UiPanel {
     private int field_Yb;
     static String field_Vb;
     static int field_Jb;
-    static fe field_Kb;
+    static ArgbSprite field_Kb;
     private UiPanel field_Nb;
     private Sprite[] field_Pb;
     private int[] field_Mb;
@@ -79,7 +79,7 @@ final class kq extends UiPanel {
         var9 = dm.a(param0, param2 + 1220, var7Lifetime1, param1);
         this.a(param2 + 1335, var6, var7Lifetime1, var9, var8Lifetime1);
         if (param2 != -1220) {
-          field_Kb = (fe) null;
+          field_Kb = (ArgbSprite) null;
         }
         for (var10 = 0; var10 < this.field_Tb; var10++) {
           this.field_Wb[var10].a(this.field_Yb + this.field_Hb * var10, var6 - 2 * this.field_Xb, this.field_Qb, this.field_Hb, this.field_Ob, 1, this.field_Xb);

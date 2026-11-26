@@ -59,7 +59,7 @@ class ag extends IntrusiveNode {
                 }
                 break;
               }
-              var3 = new gk(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
+              var3 = new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
               if (var7 == 0) {
                 break regionExit1;
               }
@@ -92,7 +92,7 @@ class ag extends IntrusiveNode {
                 }
                 break;
               }
-              var3 = new gk(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
+              var3 = new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[0], nh.field_O[0], sf.field_X[0], hd.field_r[0], var5_ref_int__);
               if (var7 == 0) {
                 break regionExit2;
               }

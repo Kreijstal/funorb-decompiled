@@ -24,8 +24,8 @@ final class fh {
         ik var18 = null;
         lh var4 = null;
         db[] var5 = null;
-        pi var17 = null;
-        pi var19 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         lh var6 = null;
         lh var7 = null;
@@ -64,7 +64,7 @@ final class fh {
           var4.a(false, 1).a((byte) -123, gj.a(10066329, 11184810, false, 13421772));
           var4.a(false, 3).a((byte) -126, gj.a(7829367, 8947848, false, 10066329)).a(1, -94).b((byte) 68, 1);
           var5 = new db[9];
-          var17 = new pi(32, 32);
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var19.field_y.length > var7_int; var7_int++) {
             var17.field_y[var7_int] = 1077952576;

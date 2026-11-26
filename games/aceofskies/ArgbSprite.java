@@ -40,7 +40,7 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitArgbGrayTinted(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
     final void d(int param0, int param1, int param2) {
@@ -81,7 +81,7 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.b(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+        ArgbSprite.blitArgbAdditive(0, 0, 0, SoftwareRasterizer.framebuffer, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
     }
 
     final void b(int param0, int param1) {
@@ -122,7 +122,7 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 
     ArgbSprite(int fullWidth, int fullHeight, int trimX, int trimY, int width, int height, int[] pixels) {
@@ -133,7 +133,7 @@ final class ArgbSprite extends Sprite {
         super(width, height);
     }
 
-    private final static void b(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitArgbAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
             param0 = param4[param5++];
@@ -232,7 +232,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void d(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         for (int var10 = -param6; var10 < 0; var10++) {
           for (int var11 = -param5; var11 < 0; var11++) {
             int var12 = (param1[param3] >>> 24) * param9 >> 8;
@@ -286,10 +286,10 @@ final class ArgbSprite extends Sprite {
           var6 <= 0) {
           return;
         }
-        ArgbSprite.d(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
+        ArgbSprite.blitArgbAlpha(SoftwareRasterizer.framebuffer, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitArgb(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = -param5;
         for (int var10 = -param6; var10 < 0; var10++) {
           for (int var11 = var9; var11 < 0; var11++) {
@@ -310,7 +310,7 @@ final class ArgbSprite extends Sprite {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var18;
         int var10 = param9 >> 16 & 255;
         int var11 = param9 >> 8 & 255;
@@ -386,6 +386,6 @@ final class ArgbSprite extends Sprite {
           var5 <= 0) {
           return;
         }
-        ArgbSprite.c(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+        ArgbSprite.blitArgb(SoftwareRasterizer.framebuffer, this.pixels, 0, var4, var3, var6, var5, var7, var8);
     }
 }

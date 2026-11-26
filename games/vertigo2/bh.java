@@ -9,7 +9,7 @@ final class bh {
     private int[] field_x;
     private int[] field_k;
     wo[] field_f;
-    static fe[] field_y;
+    static ArgbSprite[] field_y;
     private int[] field_q;
     int field_p;
     static int field_c;
@@ -2524,12 +2524,12 @@ final class bh {
     private final int b(int param0, boolean param1) {
         int var3;
         int var4;
-        fe[] var5;
+        ArgbSprite[] var5;
         int stackIn_13_0 = 0;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (param1) {
-          var5 = (fe[]) null;
-          bh.a(56, -78, -92, (String[]) null, 72, (BitmapFont) null, -2, 117, (String[]) null, 127, 35, (fe[]) null, 56);
+          var5 = (ArgbSprite[]) null;
+          bh.a(56, -78, -92, (String[]) null, 72, (BitmapFont) null, -2, 117, (String[]) null, 127, 35, (ArgbSprite[]) null, 56);
         }
         var3 = param0;
         if (var3 == 3) {
@@ -2570,7 +2570,7 @@ final class bh {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, String[] param3, int param4, BitmapFont param5, int param6, int param7, String[] param8, int param9, int param10, fe[] param11, int param12) {
+    final static void a(int param0, int param1, int param2, String[] param3, int param4, BitmapFont param5, int param6, int param7, String[] param8, int param9, int param10, ArgbSprite[] param11, int param12) {
         int var16 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -2587,7 +2587,7 @@ final class bh {
         int var14 = 0;
         int var15 = 0;
         int var17 = 0;
-        fe[] var18 = null;
+        ArgbSprite[] var18 = null;
         int var14Lifetime1;
         var17 = Vertigo2.field_L ? 1 : 0;
         try {
@@ -2598,8 +2598,8 @@ final class bh {
           var14Lifetime1 = (param6 - var13_int) / (param4 - param0 - 1);
           var15 = param9;
           if (param10 != 128) {
-            var18 = (fe[]) null;
-            bh.a(100, 111, -35, (String[]) null, -77, (BitmapFont) null, -38, -114, (String[]) null, 20, 47, (fe[]) null, 8);
+            var18 = (ArgbSprite[]) null;
+            bh.a(100, 111, -35, (String[]) null, -77, (BitmapFont) null, -38, -114, (String[]) null, 20, 47, (ArgbSprite[]) null, 8);
           }
           for (var16 = param0; var16 < param4; var16++) {
             param11[var16].e(param7, var15 - param12 / 2);

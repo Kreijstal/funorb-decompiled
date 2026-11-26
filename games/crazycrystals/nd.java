@@ -66,8 +66,8 @@ final class nd {
         lb var17 = null;
         fk var4 = null;
         dl[] var5 = null;
-        vi var16 = null;
-        vi var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         fk var6 = null;
         fk var7 = null;
@@ -106,7 +106,7 @@ final class nd {
           var4.a((byte) 61, 1).a(33, s.a(10066329, 13421772, 11184810, (byte) 127));
           var4.a((byte) -13, 3).a(24, s.a(7829367, 10066329, 8947848, (byte) 127)).c(-123, 1).d(-64, 1);
           var5 = new dl[9];
-          var16 = new vi(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_w.length; var7_int++) {
             var16.field_w[var7_int] = 1077952576;

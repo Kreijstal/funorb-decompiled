@@ -62,7 +62,7 @@ final class IsaacCipher {
             for (var8 = 0; var8 < var4; var8++) {
               var7_ref_int__[var8] = om.a(b.a(var16[var8] << 24, -16777216), in.field_c[b.a(255, (int) var22[var8])]);
             }
-            var1[var2] = (Sprite) ((Object) new fe(ql.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var18));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(ql.field_M, vj.field_c, ca.field_a[var2], pc.field_a[var2], mh.field_c[var2], vi.field_w[var2], var18));
           }
           var2++;
         }

@@ -82,7 +82,7 @@ final class dl extends dg {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = vf.b(gj.field_w[DirectByteStorage.a(255, (int) var20[var7])], DirectByteStorage.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (Sprite) ((Object) new jc(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(nc.field_G, wd.field_b, ak.field_c[var2], RasterBuffer.field_c[var2], vc.field_b[var2], ih.field_d[var2], var16));
           }
         }
         if (param0 <= 85) {

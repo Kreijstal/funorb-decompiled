@@ -116,8 +116,8 @@ final class kc {
         vf var17 = null;
         qh var4 = null;
         nf[] var5 = null;
-        pd var16 = null;
-        pd var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         qh var6 = null;
         qh var7 = null;
@@ -156,7 +156,7 @@ final class kc {
           var4.b(1, -57).a(-1, en.a(!param0 ? true : false, 11184810, 13421772, 10066329));
           var4.b(3, -62).a(-1, en.a(true, 8947848, 10066329, 7829367)).b(1, -2147483648).d(1, -2);
           var5 = new nf[9];
-          var16 = new pd(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_z.length > var7_int; var7_int++) {
             var16.field_z[var7_int] = 1077952576;

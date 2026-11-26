@@ -6,7 +6,7 @@ import java.util.*;
 final class be extends IntrusiveNode {
     boolean field_p;
     static int field_t;
-    static fe field_n;
+    static ArgbSprite field_n;
     int field_r;
     static boolean field_q;
     static String field_s;

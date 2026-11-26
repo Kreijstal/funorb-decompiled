@@ -876,6 +876,70 @@
       "renamedSymbol": "M:ad.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ae.b(III[I[IIIIIIIIII)V",
+      "originalName": "b",
+      "to": "blitArgbAdditive",
+      "evidence": "Source-purpose review: Skip full source0,derive intensity from supplied gain times source high-byte alpha with original signed shift and&255,scale RGB,then saturating packed addition to destination. Original body SHA256 70d8e2f443120f7e5a7bbe252680bb44215b20730c53366053322aeaf48747c6. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:ae.c([I[IIIIIIIII)V",
+      "originalName": "c",
+      "to": "blitArgbAlpha",
+      "evidence": "Source-purpose review: Unconditionally read/write each destination;effective alpha=(sourceHighByte*suppliedAlpha)>>8,then packed RGB blend with inverse256 and unsigned result shift. Original body SHA256 c273a2163fdcfb07fc1b08ec7c491cfc7d347c9705a3f29537658de88146643f. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V"
+    },
+    {
+      "symbol": "M:ae.c([I[IIIIIIIIIII)V",
+      "originalName": "c",
+      "to": "blitArgbScaled",
+      "evidence": "Source-purpose review: 16.16nearest-neighbor sampling and high-byte source-alpha blend;skip alpha0 and preserve original unsigned right shift/inverse256. Original body SHA256 f8e8fa110f90508937c8dbddec3bba2d8201534b84dce93cd5adbe175c672064. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:ae.d([I[IIIIIIII)V",
+      "originalName": "d",
+      "to": "blitArgb",
+      "evidence": "Source-purpose review: Use source high-byte alpha;skip alpha0,blend remaining pixels with inverse256-minus-alpha and unsigned right shift. Preserve that alpha255still retains destination contribution under original denominator256. Original body SHA256 c528f63dbf1397bb1e314b30ecc78ee149b0f462730361598ec7a827a6a69efc. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgb([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:ae.d([I[IIIIIIIII)V",
+      "originalName": "d",
+      "to": "blitArgbGrayTinted",
+      "evidence": "Source-purpose review: Use source alpha0skip;apply original piecewise tint to grayscale RGB only,retain nongrayscale RGB,then source-alpha blend over destination with unsigned right shift. Original body SHA256 fa1ddbcbdf8d6b458e7d4fd5fbfb63469ddd9d6d3181c9f1267e3a7471eb2767. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V"
+    },
+    {
+      "symbol": "M:ae.d([I[IIIIIIIIIII)V",
+      "originalName": "d",
+      "to": "blitArgbGrayModulated",
+      "evidence": "Source-purpose review: Skip source alpha0;mask RGB24bits,modulate grayscale low-byte brightness with supplied color using original grayscale test/masks/+1;nongrayRGB unchanged,then source-alpha blend with unsigned shift. Original body SHA256 d0797af45a1de02c23988c8d2d90744027d4829a29a2a98dc68115ab7798b089. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:ae.e([I[IIIIIIII)V",
+      "originalName": "e",
+      "to": "blitArgbReverse",
+      "evidence": "Source-purpose review: Read source ARGB in descending index order;skip alpha0 and otherwise blend via source alpha and256-minus-alpha with unsigned result shift. Destination advances and original row skips retained. Original body SHA256 2374b412e3df251df6afef98c3a97f9b9adb1a7ac1d781dab6b9d7fdfba8fcb4. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArgbSprite.blitArgbReverse([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:ai.a(I[BIII[I[IIIIII)V",
+      "originalName": "a",
+      "to": "blitIndexedSkipRuns",
+      "evidence": "Source-purpose review: Copy nonzero source byte indices via palette;source byte -1 is a run-skip control followed by unsigned count doubled and clamped. Preserve initial previous-byte -1 branch,source/destination skip asymmetry,loop order,partial writes and exceptions. Original body SHA256 079cb0e8790ac3688cf40ec589b55f35414f4fa97ff1a928203a8491b1a05773. Naming only;preserve full JVM integer domains,byte signedness,parameter slots,array aliases,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V"
+    },
+    {
       "symbol": "M:ai.a([I[B[IIIIIIII)V",
       "originalName": "a",
       "to": "blitIndexedAlpha",
@@ -2124,12 +2188,100 @@
       "renamedSymbol": "M:Sprite.blitScaledAdditiveIntensityRows(IIII[I[IIIIIIIIIIII)V"
     },
     {
+      "symbol": "M:le.a(III[I[IIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitAdditive",
+      "evidence": "Source-purpose review: Skip source RGB0,then saturating packed RGB addition to destination with original carry-mask expression and source/destination row skips. Original body SHA256 f18d4c0b141a7ede404b2e18c9017bec95841941339a5c8aa31366107c75da0a. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitAdditive(III[I[IIIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a(III[I[IIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitAdditiveIntensity",
+      "evidence": "Source-purpose review: Skip source RGB0;scale packed source RGB by supplied full-int intensity using original masks/unsigned shift,then saturating RGB addition to destination. Original body SHA256 dfa027fca7e614e21e9b0ee19ed499f370b9e65e2b39187df8ceed24f0713044. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a(I[I[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitMultiply",
+      "evidence": "Source-purpose review: Skip source RGB0 and destination RGB0;otherwise multiply each RGB pair with original component-specific unsigned shifts and write the recombined RGB. Original body SHA256 301dc2dfb2a04980822eb9966bfd0a8c28dde853a33e7e9c9cb1ccc6c51b164d. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitMultiply(I[I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a([IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitHalfSize",
+      "evidence": "Source-purpose review: For each output pixel read a2x2source block;replace each zero source color with the original destination RGB,average four packed RGB values,and write the global software framebuffer. Preserve all repeated framebuffer reads and signed right shift. Original body SHA256 28a19081b781d7172b3ad8a999b205ab74e4ef17fecb7df605ec9b739acff8fd. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitHalfSize([IIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a([I[IIIIIII)V",
+      "originalName": "a",
+      "to": "blitUnmasked",
+      "evidence": "Source-purpose review: Unconditional RGB array copy including zero;four-pixel unroll and tail with original end-index arithmetic and separate row skips. Original body SHA256 afdaa36151ba9d6ec811cb32bce8785f32b8aab0b89cb3eddf8ee772a3292c1f. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitUnmasked([I[IIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a([I[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitColorKey",
+      "evidence": "Source-purpose review: Copy nonzero source RGB and skip RGB0;four-pixel unroll and tail with independent source/destination row skips. Original body SHA256 83086c1d00f7e032f938fecb7a834e94b9a4da9e0b91fb4df22061737615f8fb. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitColorKey([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a([I[IIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitGrayTinted",
+      "evidence": "Source-purpose review: Skip source0;for grayscale RGB use supplied tint at level128,black below andwhite above with exact signed-shift arithmetic;non-grayscale source colors copy unchanged. Original body SHA256 0c188f0eb690efe3493bf9ea9ccebae722055438a84183c6fb3b7d2e62548513. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitGrayTinted([I[IIIIIIIII)V"
+    },
+    {
       "symbol": "M:le.a([I[IIIIIIIIII)V",
       "originalName": "a",
       "to": "blendNonzeroPixelsTowardColour",
       "evidence": "Source-purpose review: Nonzero source RGB blended toward supplied colour,not destinationcolour;precompute complementary colour and addscaledsource. Zero leaves destination untouched. Original identity M:le.a([I[IIIIIIIIII)V. Pinned original body SHA256 0f6c70556e7881303687ec573ffb91acd9927e8045309bf48ec1b4c77306d040. Resolved parameter/field/helper bindings checked;matching shape alone is not semantic or runtime equivalence. Keep every original descriptor,modifier,guard,literal,operation,evaluation/exception order,allocation and dispatch;rename identifiers only.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.blendNonzeroPixelsTowardColour([I[IIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.a([I[IIIIIIIIIII)V",
+      "originalName": "a",
+      "to": "blitGrayModulated",
+      "evidence": "Source-purpose review: Skip source0;copy nongrayscale colors unchanged;grayscale test uses original signed source>>8 comparison with source&65535,then modulate low-byte brightness by supplied color with original forced-low-bit+1. Original body SHA256 5eae23f8bcfd96f67d5a0748b69c8e60b83325b3284d9697da1765208c94b1c0. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitGrayModulated([I[IIIIIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.b([I[IIIIIIII)V",
+      "originalName": "b",
+      "to": "blitSilhouette",
+      "evidence": "Source-purpose review: For every nonzero source pixel write the supplied solid color;source0 leaves destination untouched. Preserve four-pixel unroll and tail. Original body SHA256 37f211dcd1e43b942ad76482af4d62d23dac04ae5593affb8dd8f3f47fc2f5f9. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitSilhouette([I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.b([I[IIIIIIIII)V",
+      "originalName": "b",
+      "to": "blitColorKeyAlpha",
+      "evidence": "Source-purpose review: Blend nonzero source RGB over destination with supplied alpha and256-minus-alpha using original packed masks and signed right shift;source0 skips destination. Original body SHA256 dce4141e5fddbb2792100aeb948ccd560c80834cb12804b077d5e0bc248fd28e. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V"
+    },
+    {
+      "symbol": "M:le.b([I[IIIIIIIIIII)V",
+      "originalName": "b",
+      "to": "blitColorKeyScaled",
+      "evidence": "Source-purpose review: 16.16nearest-neighbor source sampling;copy nonzero RGB pixels,leave destination for source0. Preserve signed coordinate shifts,source stride and row reset/steps. Original body SHA256 fe57f2b791e479b01c94badab699b5af3aae5bf54cc14df4938d163a8fc414b7. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V"
     },
     {
       "symbol": "M:le.c([I[IIIIIIII)V",
@@ -38304,7 +38456,7 @@
     },
     {
       "symbol": "L:ae.b(III[I[IIIIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.b(III[I[IIIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#0",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -38315,7 +38467,7 @@
     },
     {
       "symbol": "L:ae.b(III[I[IIIIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.b(III[I[IIIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -38689,7 +38841,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -38700,7 +38852,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -38711,7 +38863,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#2",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -38722,7 +38874,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#3",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -38733,7 +38885,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#4",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -38744,7 +38896,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#5",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#5",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -38755,7 +38907,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIII)V#6",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#6",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -38766,7 +38918,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#0",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -38777,7 +38929,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -38788,7 +38940,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#2",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -38799,7 +38951,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#3",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -38810,7 +38962,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#4",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -38821,7 +38973,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#5",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -38832,7 +38984,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#6",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -38843,7 +38995,7 @@
     },
     {
       "symbol": "L:ae.c([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "L:ArgbSprite.c([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "L:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -38953,7 +39105,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -38964,7 +39116,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -38975,7 +39127,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -38986,7 +39138,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -38997,7 +39149,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#4",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -39008,7 +39160,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#5",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -39019,7 +39171,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIII)V#6",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.blitArgb([I[IIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -39030,7 +39182,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -39041,7 +39193,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -39052,7 +39204,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#10",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#10",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#10",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -39063,7 +39215,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#11",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#11",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#11",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -39074,7 +39226,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#12",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#12",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#12",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -39085,7 +39237,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#13",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#13",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#13",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -39096,7 +39248,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#14",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#14",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#14",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -39107,7 +39259,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$6",
       "renamedName": "incrementValue$6",
       "declaration": {
@@ -39118,7 +39270,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -39129,7 +39281,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#4",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -39140,7 +39292,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#5",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -39151,7 +39303,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#6",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -39162,7 +39314,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#7",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#7",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -39173,7 +39325,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#8",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#8",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#8",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -39184,7 +39336,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIII)V#9",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIII)V#9",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#9",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -39195,7 +39347,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#0",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -39206,7 +39358,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -39217,7 +39369,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#2",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -39228,7 +39380,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#3",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -39239,7 +39391,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#4",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -39250,7 +39402,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#5",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -39261,7 +39413,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#6",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -39272,7 +39424,7 @@
     },
     {
       "symbol": "L:ae.d([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "L:ArgbSprite.d([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "L:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#7",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -39602,7 +39754,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -39613,7 +39765,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -39624,7 +39776,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -39635,7 +39787,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -39646,7 +39798,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#4",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#4",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -39657,7 +39809,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#5",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#5",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#5",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -39668,7 +39820,7 @@
     },
     {
       "symbol": "L:ae.e([I[IIIIIIII)V#6",
-      "renamedSymbol": "L:ArgbSprite.e([I[IIIIIIII)V#6",
+      "renamedSymbol": "L:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#6",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -40130,7 +40282,7 @@
     },
     {
       "symbol": "L:ai.a(I[BIII[I[IIIIII)V#0",
-      "renamedSymbol": "L:ai.a(I[BIII[I[IIIIII)V#0",
+      "renamedSymbol": "L:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#0",
       "originalName": "incrementValue$13",
       "renamedName": "incrementValue$13",
       "declaration": {
@@ -40141,7 +40293,7 @@
     },
     {
       "symbol": "L:ai.a(I[BIII[I[IIIIII)V#1",
-      "renamedSymbol": "L:ai.a(I[BIII[I[IIIIII)V#1",
+      "renamedSymbol": "L:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#1",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -93997,7 +94149,7 @@
     },
     {
       "symbol": "L:le.a(III[I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(III[I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitAdditive(III[I[IIIIIIIII)V#0",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -94008,7 +94160,7 @@
     },
     {
       "symbol": "L:le.a(III[I[IIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(III[I[IIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#0",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -94019,7 +94171,7 @@
     },
     {
       "symbol": "L:le.a(I[I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -94030,7 +94182,7 @@
     },
     {
       "symbol": "L:le.a(I[I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -94041,7 +94193,7 @@
     },
     {
       "symbol": "L:le.a(I[I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -94052,7 +94204,7 @@
     },
     {
       "symbol": "L:le.a(I[I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -94063,7 +94215,7 @@
     },
     {
       "symbol": "L:le.a(I[I[IIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -94074,7 +94226,7 @@
     },
     {
       "symbol": "L:le.a(I[I[IIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -94085,7 +94237,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -94096,7 +94248,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -94107,7 +94259,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#10",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#10",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#10",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -94118,7 +94270,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#11",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#11",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#11",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -94129,7 +94281,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#12",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#12",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#12",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -94140,7 +94292,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#13",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#13",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#13",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -94151,7 +94303,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#14",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#14",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#14",
       "originalName": "var10Lifetime3",
       "renamedName": "var10Lifetime3",
       "declaration": {
@@ -94162,7 +94314,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -94173,7 +94325,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#3",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -94184,7 +94336,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#4",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -94195,7 +94347,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -94206,7 +94358,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#6",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#6",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -94217,7 +94369,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#7",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#7",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -94228,7 +94380,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#8",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#8",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -94239,7 +94391,7 @@
     },
     {
       "symbol": "L:le.a([IIIIIIII)V#9",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#9",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -94250,7 +94402,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitUnmasked([I[IIIIIII)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -94261,7 +94413,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitUnmasked([I[IIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -94272,7 +94424,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitColorKey([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -94283,7 +94435,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitColorKey([I[IIIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -94294,7 +94446,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitColorKey([I[IIIIIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -94305,7 +94457,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitColorKey([I[IIIIIIII)V#3",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -94316,7 +94468,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#0",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -94327,7 +94479,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#1",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -94338,7 +94490,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#10",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#10",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#10",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -94349,7 +94501,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#11",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#11",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#11",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -94360,7 +94512,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#12",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#12",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -94371,7 +94523,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$1",
       "renamedName": "incrementValue$1",
       "declaration": {
@@ -94382,7 +94534,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#3",
       "originalName": "incrementValue$2",
       "renamedName": "incrementValue$2",
       "declaration": {
@@ -94393,7 +94545,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -94404,7 +94556,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#5",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -94415,7 +94567,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#6",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#6",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -94426,7 +94578,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#7",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#7",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#7",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -94437,7 +94589,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#8",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#8",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#8",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -94448,7 +94600,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIII)V#9",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIII)V#9",
+      "renamedSymbol": "L:Sprite.blitGrayTinted([I[IIIIIIIII)V#9",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -94547,7 +94699,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#0",
       "originalName": "incrementValue$14",
       "renamedName": "incrementValue$14",
       "declaration": {
@@ -94558,7 +94710,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -94569,7 +94721,7 @@
     },
     {
       "symbol": "L:le.a([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#2",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -95977,7 +96129,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -95988,7 +96140,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -95999,7 +96151,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -96010,7 +96162,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#3",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -96021,7 +96173,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -96032,7 +96184,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#1",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -96043,7 +96195,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#2",
       "originalName": "incrementValue$12",
       "renamedName": "incrementValue$12",
       "declaration": {
@@ -96054,7 +96206,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -96065,7 +96217,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -96076,7 +96228,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#0",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -96087,7 +96239,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#1",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -96098,7 +96250,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#2",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -96109,7 +96261,7 @@
     },
     {
       "symbol": "L:le.b([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.b([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -149701,9 +149853,9 @@
     },
     {
       "symbol": "M:ae.b(III[I[IIIIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.b(III[I[IIIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitArgbAdditive",
       "declaration": {
         "file": "ae.java",
         "start": 47467,
@@ -149745,9 +149897,9 @@
     },
     {
       "symbol": "M:ae.c([I[IIIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.c([I[IIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "blitArgbAlpha",
       "declaration": {
         "file": "ae.java",
         "start": 55219,
@@ -149756,9 +149908,9 @@
     },
     {
       "symbol": "M:ae.c([I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.c([I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "blitArgbScaled",
       "declaration": {
         "file": "ae.java",
         "start": 8522,
@@ -149778,9 +149930,9 @@
     },
     {
       "symbol": "M:ae.d([I[IIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.d([I[IIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgb([I[IIIIIIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "blitArgb",
       "declaration": {
         "file": "ae.java",
         "start": 48646,
@@ -149789,9 +149941,9 @@
     },
     {
       "symbol": "M:ae.d([I[IIIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.d([I[IIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "blitArgbGrayTinted",
       "declaration": {
         "file": "ae.java",
         "start": 9722,
@@ -149800,9 +149952,9 @@
     },
     {
       "symbol": "M:ae.d([I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.d([I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "blitArgbGrayModulated",
       "declaration": {
         "file": "ae.java",
         "start": 52270,
@@ -149822,9 +149974,9 @@
     },
     {
       "symbol": "M:ae.e([I[IIIIIIII)V",
-      "renamedSymbol": "M:ArgbSprite.e([I[IIIIIIII)V",
+      "renamedSymbol": "M:ArgbSprite.blitArgbReverse([I[IIIIIIII)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "blitArgbReverse",
       "declaration": {
         "file": "ae.java",
         "start": 57803,
@@ -149954,9 +150106,9 @@
     },
     {
       "symbol": "M:ai.a(I[BIII[I[IIIIII)V",
-      "renamedSymbol": "M:ai.a(I[BIII[I[IIIIII)V",
+      "renamedSymbol": "M:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitIndexedSkipRuns",
       "declaration": {
         "file": "ai.java",
         "start": 12619,
@@ -160602,9 +160754,9 @@
     },
     {
       "symbol": "M:le.a(III[I[IIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(III[I[IIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitAdditive(III[I[IIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitAdditive",
       "declaration": {
         "file": "le.java",
         "start": 35974,
@@ -160613,9 +160765,9 @@
     },
     {
       "symbol": "M:le.a(III[I[IIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(III[I[IIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitAdditiveIntensity",
       "declaration": {
         "file": "le.java",
         "start": 98368,
@@ -160624,9 +160776,9 @@
     },
     {
       "symbol": "M:le.a(I[I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(I[I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitMultiply(I[I[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitMultiply",
       "declaration": {
         "file": "le.java",
         "start": 89300,
@@ -160635,9 +160787,9 @@
     },
     {
       "symbol": "M:le.a([IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitHalfSize([IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitHalfSize",
       "declaration": {
         "file": "le.java",
         "start": 7610,
@@ -160646,9 +160798,9 @@
     },
     {
       "symbol": "M:le.a([I[IIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitUnmasked([I[IIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitUnmasked",
       "declaration": {
         "file": "le.java",
         "start": 40207,
@@ -160657,9 +160809,9 @@
     },
     {
       "symbol": "M:le.a([I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitColorKey([I[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitColorKey",
       "declaration": {
         "file": "le.java",
         "start": 32820,
@@ -160668,9 +160820,9 @@
     },
     {
       "symbol": "M:le.a([I[IIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitGrayTinted([I[IIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitGrayTinted",
       "declaration": {
         "file": "le.java",
         "start": 92719,
@@ -160690,9 +160842,9 @@
     },
     {
       "symbol": "M:le.a([I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitGrayModulated([I[IIIIIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitGrayModulated",
       "declaration": {
         "file": "le.java",
         "start": 97343,
@@ -160767,9 +160919,9 @@
     },
     {
       "symbol": "M:le.b([I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.b([I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitSilhouette([I[IIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitSilhouette",
       "declaration": {
         "file": "le.java",
         "start": 40919,
@@ -160778,9 +160930,9 @@
     },
     {
       "symbol": "M:le.b([I[IIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.b([I[IIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitColorKeyAlpha",
       "declaration": {
         "file": "le.java",
         "start": 75633,
@@ -160789,9 +160941,9 @@
     },
     {
       "symbol": "M:le.b([I[IIIIIIIIIII)V",
-      "renamedSymbol": "M:Sprite.b([I[IIIIIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "blitColorKeyScaled",
       "declaration": {
         "file": "le.java",
         "start": 87332,
@@ -174693,7 +174845,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -174704,7 +174856,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -174715,7 +174867,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#10",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#10",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -174726,7 +174878,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#11",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#11",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -174737,7 +174889,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#12",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#12",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -174748,7 +174900,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#13",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#13",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -174759,7 +174911,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -174770,7 +174922,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -174781,7 +174933,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -174792,7 +174944,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -174803,7 +174955,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -174814,7 +174966,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -174825,7 +174977,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -174836,7 +174988,7 @@
     },
     {
       "symbol": "P:ae.b(III[I[IIIIIIIIII)V#9",
-      "renamedSymbol": "P:ArgbSprite.b(III[I[IIIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAdditive(III[I[IIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -174946,7 +175098,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -174957,7 +175109,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -174968,7 +175120,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -174979,7 +175131,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -174990,7 +175142,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175001,7 +175153,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175012,7 +175164,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175023,7 +175175,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175034,7 +175186,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175045,7 +175197,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.blitArgbAlpha([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -175056,7 +175208,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175067,7 +175219,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175078,7 +175230,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -175089,7 +175241,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -175100,7 +175252,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175111,7 +175263,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175122,7 +175274,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175133,7 +175285,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175144,7 +175296,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175155,7 +175307,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175166,7 +175318,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175177,7 +175329,7 @@
     },
     {
       "symbol": "P:ae.c([I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:ArgbSprite.c([I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.blitArgbScaled([I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -175221,7 +175373,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175232,7 +175384,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175243,7 +175395,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175254,7 +175406,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175265,7 +175417,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175276,7 +175428,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175287,7 +175439,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175298,7 +175450,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175309,7 +175461,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgb([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175320,7 +175472,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175331,7 +175483,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175342,7 +175494,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175353,7 +175505,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175364,7 +175516,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175375,7 +175527,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175386,7 +175538,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175397,7 +175549,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175408,7 +175560,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175419,7 +175571,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayTinted([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -175430,7 +175582,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175441,7 +175593,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175452,7 +175604,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -175463,7 +175615,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -175474,7 +175626,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175485,7 +175637,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175496,7 +175648,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175507,7 +175659,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175518,7 +175670,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175529,7 +175681,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175540,7 +175692,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175551,7 +175703,7 @@
     },
     {
       "symbol": "P:ae.d([I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:ArgbSprite.d([I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:ArgbSprite.blitArgbGrayModulated([I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -175584,7 +175736,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175595,7 +175747,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -175606,7 +175758,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -175617,7 +175769,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -175628,7 +175780,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -175639,7 +175791,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -175650,7 +175802,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -175661,7 +175813,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -175672,7 +175824,7 @@
     },
     {
       "symbol": "P:ae.e([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:ArgbSprite.e([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:ArgbSprite.blitArgbReverse([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -175980,7 +176132,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#0",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#0",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -175991,7 +176143,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#1",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#1",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -176002,7 +176154,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#10",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#10",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -176013,7 +176165,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#11",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#11",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -176024,7 +176176,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#2",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#2",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -176035,7 +176187,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#3",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#3",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -176046,7 +176198,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#4",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#4",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -176057,7 +176209,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#5",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#5",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -176068,7 +176220,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#6",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#6",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -176079,7 +176231,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#7",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#7",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -176090,7 +176242,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#8",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#8",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -176101,7 +176253,7 @@
     },
     {
       "symbol": "P:ai.a(I[BIII[I[IIIIII)V#9",
-      "renamedSymbol": "P:ai.a(I[BIII[I[IIIIII)V#9",
+      "renamedSymbol": "P:ai.blitIndexedSkipRuns(I[BIII[I[IIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -199982,7 +200134,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -199993,7 +200145,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200004,7 +200156,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -200015,7 +200167,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -200026,7 +200178,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -200037,7 +200189,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200048,7 +200200,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200059,7 +200211,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200070,7 +200222,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200081,7 +200233,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200092,7 +200244,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200103,7 +200255,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -200114,7 +200266,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitAdditive(III[I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -200125,7 +200277,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200136,7 +200288,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200147,7 +200299,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -200158,7 +200310,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -200169,7 +200321,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#12",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#12",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -200180,7 +200332,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#13",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#13",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -200191,7 +200343,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200202,7 +200354,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200213,7 +200365,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200224,7 +200376,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200235,7 +200387,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200246,7 +200398,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200257,7 +200409,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -200268,7 +200420,7 @@
     },
     {
       "symbol": "P:le.a(III[I[IIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(III[I[IIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitAdditiveIntensity(III[I[IIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -200279,7 +200431,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200290,7 +200442,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200301,7 +200453,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200312,7 +200464,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200323,7 +200475,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200334,7 +200486,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200345,7 +200497,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200356,7 +200508,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200367,7 +200519,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -200378,7 +200530,7 @@
     },
     {
       "symbol": "P:le.a(I[I[IIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -200389,7 +200541,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200400,7 +200552,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200411,7 +200563,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200422,7 +200574,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200433,7 +200585,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200444,7 +200596,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200455,7 +200607,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200466,7 +200618,7 @@
     },
     {
       "symbol": "P:le.a([IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200477,7 +200629,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200488,7 +200640,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200499,7 +200651,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200510,7 +200662,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200521,7 +200673,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200532,7 +200684,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200543,7 +200695,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200554,7 +200706,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200565,7 +200717,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200576,7 +200728,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200587,7 +200739,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200598,7 +200750,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200609,7 +200761,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200620,7 +200772,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200631,7 +200783,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200642,7 +200794,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200653,7 +200805,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitColorKey([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -200664,7 +200816,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200675,7 +200827,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200686,7 +200838,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200697,7 +200849,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200708,7 +200860,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200719,7 +200871,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200730,7 +200882,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200741,7 +200893,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -200752,7 +200904,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -200763,7 +200915,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitGrayTinted([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -200895,7 +201047,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -200906,7 +201058,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -200917,7 +201069,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -200928,7 +201080,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -200939,7 +201091,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -200950,7 +201102,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -200961,7 +201113,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -200972,7 +201124,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -200983,7 +201135,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -200994,7 +201146,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -201005,7 +201157,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -201016,7 +201168,7 @@
     },
     {
       "symbol": "P:le.a([I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitGrayModulated([I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -201247,7 +201399,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201258,7 +201410,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201269,7 +201421,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -201280,7 +201432,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -201291,7 +201443,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -201302,7 +201454,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -201313,7 +201465,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -201324,7 +201476,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -201335,7 +201487,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -201346,7 +201498,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201357,7 +201509,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201368,7 +201520,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -201379,7 +201531,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -201390,7 +201542,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -201401,7 +201553,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -201412,7 +201564,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -201423,7 +201575,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -201434,7 +201586,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -201445,7 +201597,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitColorKeyAlpha([I[IIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -201456,7 +201608,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -201467,7 +201619,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -201478,7 +201630,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#10",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#10",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -201489,7 +201641,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#11",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#11",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -201500,7 +201652,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -201511,7 +201663,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -201522,7 +201674,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -201533,7 +201685,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -201544,7 +201696,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -201555,7 +201707,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -201566,7 +201718,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -201577,7 +201729,7 @@
     },
     {
       "symbol": "P:le.b([I[IIIIIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.b([I[IIIIIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitColorKeyScaled([I[IIIIIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -230505,7 +230657,7 @@
       "original": "ae.java",
       "renamed": "ArgbSprite.java",
       "inputSha256": "b96e973b91d72988cfd6859f9816fedabc5b452751b52019e9066e11226e08da",
-      "outputSha256": "e3d84193d6358b4f0dc3ff72657d41fac6b9c26e2309ca38e3481ef1db25ee5c",
+      "outputSha256": "3d46c03c337f045a6e68d74be6b552c30f68cea6615723fbf47ad907990bf923",
       "edits": [
         {
           "start": 50,
@@ -230618,6 +230770,13 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "ArgbSprite"
+        },
+        {
+          "start": 1486,
+          "end": 1487,
+          "symbol": "M:ae.e([I[IIIIIIII)V",
+          "original": "e",
+          "renamed": "blitArgbReverse"
         },
         {
           "start": 1488,
@@ -230851,6 +231010,13 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 5105,
+          "end": 5106,
+          "symbol": "M:ae.d([I[IIIIIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgbGrayModulated"
+        },
+        {
           "start": 5107,
           "end": 5109,
           "symbol": "C:ge",
@@ -230933,6 +231099,20 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8522,
+          "end": 8523,
+          "symbol": "M:ae.c([I[IIIIIIIIIII)V",
+          "original": "c",
+          "renamed": "blitArgbScaled"
+        },
+        {
+          "start": 9722,
+          "end": 9723,
+          "symbol": "M:ae.d([I[IIIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgbGrayTinted"
         },
         {
           "start": 17939,
@@ -231285,6 +231465,13 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 41094,
+          "end": 41095,
+          "symbol": "M:ae.c([I[IIIIIIIII)V",
+          "original": "c",
+          "renamed": "blitArgbAlpha"
+        },
+        {
           "start": 41096,
           "end": 41098,
           "symbol": "C:ge",
@@ -231388,6 +231575,13 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "ArgbSprite"
+        },
+        {
+          "start": 42597,
+          "end": 42598,
+          "symbol": "M:ae.b(III[I[IIIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitArgbAdditive"
         },
         {
           "start": 42608,
@@ -231495,6 +231689,13 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 44112,
+          "end": 44113,
+          "symbol": "M:ae.d([I[IIIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgbGrayTinted"
+        },
+        {
           "start": 44114,
           "end": 44116,
           "symbol": "C:ge",
@@ -231577,6 +231778,20 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 47467,
+          "end": 47468,
+          "symbol": "M:ae.b(III[I[IIIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitArgbAdditive"
+        },
+        {
+          "start": 48646,
+          "end": 48647,
+          "symbol": "M:ae.d([I[IIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgb"
         },
         {
           "start": 49638,
@@ -231670,11 +231885,25 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 52102,
+          "end": 52103,
+          "symbol": "M:ae.c([I[IIIIIIIIIII)V",
+          "original": "c",
+          "renamed": "blitArgbScaled"
+        },
+        {
           "start": 52104,
           "end": 52106,
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 52270,
+          "end": 52271,
+          "symbol": "M:ae.d([I[IIIIIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgbGrayModulated"
         },
         {
           "start": 53959,
@@ -231775,11 +232004,25 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 55086,
+          "end": 55087,
+          "symbol": "M:ae.d([I[IIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgb"
+        },
+        {
           "start": 55088,
           "end": 55090,
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 55219,
+          "end": 55220,
+          "symbol": "M:ae.c([I[IIIIIIIII)V",
+          "original": "c",
+          "renamed": "blitArgbAlpha"
         },
         {
           "start": 56138,
@@ -231887,11 +232130,25 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 57670,
+          "end": 57671,
+          "symbol": "M:ae.d([I[IIIIIIII)V",
+          "original": "d",
+          "renamed": "blitArgb"
+        },
+        {
           "start": 57672,
           "end": 57674,
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 57803,
+          "end": 57804,
+          "symbol": "M:ae.e([I[IIIIIIII)V",
+          "original": "e",
+          "renamed": "blitArgbReverse"
         }
       ]
     },
@@ -231991,7 +232248,7 @@
       "original": "ai.java",
       "renamed": "ai.java",
       "inputSha256": "421730d0c33237781b33157264fcec92403abcf10884e361f3941e078387d5f6",
-      "outputSha256": "37cf81bbe7e296b10036c38023cdb2e2c0dfa66ea18fc88a3dd809bbbd41fee6",
+      "outputSha256": "c535ebeec93a96e0461095fe714d83cf8fa9702f5578d1c3a5f4e0d38afd9023",
       "edits": [
         {
           "start": 342,
@@ -232202,6 +232459,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 3313,
+          "end": 3314,
+          "symbol": "M:ai.a(I[BIII[I[IIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexedSkipRuns"
         },
         {
           "start": 3347,
@@ -232426,6 +232690,13 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 12619,
+          "end": 12620,
+          "symbol": "M:ai.a(I[BIII[I[IIIIII)V",
+          "original": "a",
+          "renamed": "blitIndexedSkipRuns"
         }
       ]
     },
@@ -251952,7 +252223,7 @@
       "original": "le.java",
       "renamed": "Sprite.java",
       "inputSha256": "df8566c5a64448201db8b4fa77457f349840ca0f08d9982b07e63cf7e7804e8b",
-      "outputSha256": "71b3c3bcb782d6cc25d30d477bec3132cfcb1f62ce1cae2ee95beb08d4cc89c3",
+      "outputSha256": "90b6dc492b6529238344a4e7c9f6d572a056c0a2a87ac9e78d8e0f5dbd7847be",
       "edits": [
         {
           "start": 44,
@@ -252067,6 +252338,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 1472,
+          "end": 1473,
+          "symbol": "M:le.b([I[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitSilhouette"
+        },
+        {
           "start": 1474,
           "end": 1476,
           "symbol": "C:ge",
@@ -252170,6 +252448,13 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2937,
+          "end": 2938,
+          "symbol": "M:le.a([I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitColorKey"
         },
         {
           "start": 2939,
@@ -252319,6 +252604,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 5822,
+          "end": 5823,
+          "symbol": "M:le.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitHalfSize"
+        },
+        {
           "start": 5891,
           "end": 5893,
           "symbol": "C:ge",
@@ -252431,11 +252723,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 7463,
+          "end": 7464,
+          "symbol": "M:le.a([I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGrayModulated"
+        },
+        {
           "start": 7465,
           "end": 7467,
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7610,
+          "end": 7611,
+          "symbol": "M:le.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitHalfSize"
         },
         {
           "start": 8193,
@@ -252690,6 +252996,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 14216,
+          "end": 14217,
+          "symbol": "M:le.b([I[IIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitColorKeyAlpha"
+        },
+        {
           "start": 14218,
           "end": 14220,
           "symbol": "C:ge",
@@ -252781,6 +253094,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 32820,
+          "end": 32821,
+          "symbol": "M:le.a([I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitColorKey"
+        },
+        {
           "start": 34243,
           "end": 34245,
           "symbol": "C:le",
@@ -252807,6 +253127,13 @@
           "symbol": "M:le.a(IIII[I[IIIIIIIIIIII)V",
           "original": "a",
           "renamed": "blitScaledAdditiveIntensityRows"
+        },
+        {
+          "start": 35974,
+          "end": 35975,
+          "symbol": "M:le.a(III[I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitAdditive"
         },
         {
           "start": 37134,
@@ -252907,6 +253234,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 38308,
+          "end": 38309,
+          "symbol": "M:le.a(III[I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitAdditive"
+        },
+        {
           "start": 38319,
           "end": 38321,
           "symbol": "C:ge",
@@ -252919,6 +253253,13 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "Sprite"
+        },
+        {
+          "start": 38422,
+          "end": 38423,
+          "symbol": "M:le.a(III[I[IIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitAdditiveIntensity"
         },
         {
           "start": 38433,
@@ -253038,6 +253379,20 @@
           "symbol": "C:ge",
           "original": "ge",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 40207,
+          "end": 40208,
+          "symbol": "M:le.a([I[IIIIIII)V",
+          "original": "a",
+          "renamed": "blitUnmasked"
+        },
+        {
+          "start": 40919,
+          "end": 40920,
+          "symbol": "M:le.b([I[IIIIIIII)V",
+          "original": "b",
+          "renamed": "blitSilhouette"
         },
         {
           "start": 42191,
@@ -253474,6 +253829,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 72866,
+          "end": 72867,
+          "symbol": "M:le.a(I[I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitMultiply"
+        },
+        {
           "start": 72871,
           "end": 72873,
           "symbol": "C:ge",
@@ -253579,6 +253941,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 74358,
+          "end": 74359,
+          "symbol": "M:le.a([I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGrayTinted"
+        },
+        {
           "start": 74360,
           "end": 74362,
           "symbol": "C:ge",
@@ -253591,6 +253960,13 @@
           "symbol": "M:le.a(IIII[I[IIIIIIIIIII)V",
           "original": "a",
           "renamed": "blitScaledAdditiveRows"
+        },
+        {
+          "start": 75633,
+          "end": 75634,
+          "symbol": "M:le.b([I[IIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitColorKeyAlpha"
         },
         {
           "start": 77645,
@@ -253887,6 +254263,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 84408,
+          "end": 84409,
+          "symbol": "M:le.a([I[IIIIIII)V",
+          "original": "a",
+          "renamed": "blitUnmasked"
+        },
+        {
           "start": 84410,
           "end": 84412,
           "symbol": "C:ge",
@@ -253978,6 +254361,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 86899,
+          "end": 86900,
+          "symbol": "M:le.b([I[IIIIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitColorKeyScaled"
+        },
+        {
           "start": 86901,
           "end": 86903,
           "symbol": "C:ge",
@@ -253992,11 +254382,25 @@
           "renamed": "Sprite"
         },
         {
+          "start": 87332,
+          "end": 87333,
+          "symbol": "M:le.b([I[IIIIIIIIIII)V",
+          "original": "b",
+          "renamed": "blitColorKeyScaled"
+        },
+        {
           "start": 88113,
           "end": 88114,
           "symbol": "M:le.a([I[IIIIIIIIII)V",
           "original": "a",
           "renamed": "blendNonzeroPixelsTowardColour"
+        },
+        {
+          "start": 89300,
+          "end": 89301,
+          "symbol": "M:le.a(I[I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitMultiply"
         },
         {
           "start": 90420,
@@ -254027,6 +254431,13 @@
           "renamed": "addOutline"
         },
         {
+          "start": 92719,
+          "end": 92720,
+          "symbol": "M:le.a([I[IIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGrayTinted"
+        },
+        {
           "start": 94650,
           "end": 94651,
           "symbol": "M:le.c([I[IIIIIIII)V",
@@ -254039,6 +254450,20 @@
           "symbol": "M:le.<init>([BLjava/awt/Component;)V",
           "original": "le",
           "renamed": "Sprite"
+        },
+        {
+          "start": 97343,
+          "end": 97344,
+          "symbol": "M:le.a([I[IIIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitGrayModulated"
+        },
+        {
+          "start": 98368,
+          "end": 98369,
+          "symbol": "M:le.a(III[I[IIIIIIIIII)V",
+          "original": "a",
+          "renamed": "blitAdditiveIntensity"
         }
       ]
     },
@@ -274644,10 +275069,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/monkeypuzzle2"
     },
-    "rulesSha256": "c47f4405339a30c95260ae18e4e88b994eddef3bd3c1bdad920586444815b416",
+    "rulesSha256": "99dbc91fcc410ce3d29827b80d79a3416d0f2cdff7fd71cd7f860a7caa8ee26f",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "93725a16c404bfa404f75b5318d7a2eb01b9193f74e7452660d253489b58f680",
-    "outputTreeSha256": "75719cdae7050f410085e8b37a55316dc621c9e4b997cc3954373fa7a50e3ec0",
+    "outputTreeSha256": "4cfd4ec68eeeca676f3ffc0b98f04efd3eceb7ddf70a9cb2177ced58e5c0fce3",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -95,7 +95,7 @@ final class kc {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = ge.a(he.field_k[da.b((int) var21[var7], 255)], da.b(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (tg) ((Object) new bg(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var17));
+            var1[var2] = (tg) ((Object) new ArgbSprite(se.field_C, fk.field_e, cl.field_n[var2], ae.field_c[var2], ih.field_V[var2], qh.field_i[var2], var17));
           }
         }
         if (!param0) {

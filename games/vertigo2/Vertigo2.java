@@ -9,7 +9,7 @@ public final class Vertigo2 extends GameShell {
     static String field_D;
     static String[] field_I;
     static String field_F;
-    static fe field_C;
+    static ArgbSprite field_C;
     static UiPanel field_M;
     static String[] field_G;
     public static boolean field_L;
@@ -582,7 +582,7 @@ public final class Vertigo2 extends GameShell {
         try {
           FullscreenFocusCanvas.field_d = new bl(40, 100, 260, 300, va.field_s, qr.field_h, IntrusiveNode.field_m, tb.field_d, pc.field_c);
           if (param0 < 80) {
-            field_C = (fe) null;
+            field_C = (ArgbSprite) null;
           }
           FullscreenFocusCanvas.field_d.field_F = 16777215;
           FullscreenFocusCanvas.field_d.field_P = 16777215;
@@ -701,8 +701,8 @@ public final class Vertigo2 extends GameShell {
           IsaacCipher.field_f = tn.a("orbcoin", ml.field_y, -83, "basic");
           uh.a(false, IntrusiveDequeCursor.field_b);
           uh.a(false, IsaacCipher.field_f);
-          uq.field_a = (fe) (MusicPatchPcmStream.a(rn.field_u, "menu_base", "", (byte) 98));
-          ie.field_Hb = (fe) (MusicPatchPcmStream.a(rn.field_u, "game_complete", "", (byte) 98));
+          uq.field_a = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "menu_base", "", (byte) 98));
+          ie.field_Hb = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "game_complete", "", (byte) 98));
           la.field_a = (BitmapFont) ((Object) rl.a(rn.field_u, 12, vi.field_n, "", "title_font"));
           va.field_s = new wn(w.a(vi.field_n, rn.field_u, "interface_font", "", param0 + 96));
           cd.field_b = tn.a("options_brush_01", rn.field_u, -94, "");
@@ -711,9 +711,9 @@ public final class Vertigo2 extends GameShell {
           qr.field_h = tn.a("levelselect_arrow_normal", rn.field_u, -126, "");
           IntrusiveNode.field_m = tn.a("levelselect_arrow_pressed", rn.field_u, -121, "");
           pc.field_c = null;
-          qp.field_h = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_box_mid", "", (byte) 98));
-          qe.field_W = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_box_end", "", (byte) 98));
-          ln.field_f = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_box_rend", "", (byte) 98));
+          qp.field_h = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_box_mid", "", (byte) 98));
+          qe.field_W = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_box_end", "", (byte) 98));
+          ln.field_f = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_box_rend", "", (byte) 98));
           var3 = tk.field_c.field_z + tk.field_c.field_M;
           GzipDecompressor.field_c = new Sprite(var3, var3);
           GzipDecompressor.field_c.d();
@@ -728,38 +728,38 @@ public final class Vertigo2 extends GameShell {
           for (var4_intLifetime1 = 0; var4_intLifetime1 < td.field_l.length; var4_intLifetime1++) {
             ea.field_d[var4_intLifetime1] = an.b(119, td.field_l[var4_intLifetime1]);
           }
-          tn.field_i = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_lives", "", (byte) 98));
-          RandomAccessCacheFile.field_j = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_jetpack", "", (byte) 98));
-          be.field_n = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_dynamite", "", (byte) 98));
-          uo.field_e = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_6", "", (byte) 98));
-          oj.field_L = (fe) (MusicPatchPcmStream.a(rn.field_u, "lobby_logo", "", (byte) 98));
-          im.field_c = new fe[5];
-          bh.field_y = new fe[5];
+          tn.field_i = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_lives", "", (byte) 98));
+          RandomAccessCacheFile.field_j = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_jetpack", "", (byte) 98));
+          be.field_n = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_dynamite", "", (byte) 98));
+          uo.field_e = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_6", "", (byte) 98));
+          oj.field_L = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "lobby_logo", "", (byte) 98));
+          im.field_c = new ArgbSprite[5];
+          bh.field_y = new ArgbSprite[5];
           for (var4_intLifetime2 = 0; 5 > var4_intLifetime2; var4_intLifetime2++) {
-            im.field_c[var4_intLifetime2] = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_" + (-var4_intLifetime2 + 5), "", (byte) 98));
+            im.field_c[var4_intLifetime2] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_" + (-var4_intLifetime2 + 5), "", (byte) 98));
           }
           for (var4_intLifetime3 = 0; var4_intLifetime3 < 5; var4_intLifetime3++) {
-            bh.field_y[var4_intLifetime3] = (fe) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_blue_" + (-var4_intLifetime3 + 5), "", (byte) 98));
+            bh.field_y[var4_intLifetime3] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_blue_" + (-var4_intLifetime3 + 5), "", (byte) 98));
           }
-          sf.field_b = (fe) (MusicPatchPcmStream.a(rn.field_u, "star", "", (byte) 98));
-          am.field_o = (fe) (MusicPatchPcmStream.a(rn.field_u, "cloud", "", (byte) 98));
-          field_C = (fe) (MusicPatchPcmStream.a(rn.field_u, "planet1", "", (byte) 98));
-          TextureOperator.field_p = (fe) (MusicPatchPcmStream.a(rn.field_u, "planet2", "", (byte) 98));
-          jf.field_M = (fe) (MusicPatchPcmStream.a(rn.field_u, "nebula", "", (byte) 98));
-          mp.field_a = (fe) (MusicPatchPcmStream.a(rn.field_u, "instructions_how_to_play", "", (byte) 98));
-          IntrusiveNode.field_i = new fe[aa.field_Sb.length];
+          sf.field_b = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "star", "", (byte) 98));
+          am.field_o = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "cloud", "", (byte) 98));
+          field_C = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "planet1", "", (byte) 98));
+          TextureOperator.field_p = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "planet2", "", (byte) 98));
+          jf.field_M = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "nebula", "", (byte) 98));
+          mp.field_a = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "instructions_how_to_play", "", (byte) 98));
+          IntrusiveNode.field_i = new ArgbSprite[aa.field_Sb.length];
           for (var4_intLifetime4 = 0; aa.field_Sb.length > var4_intLifetime4; var4_intLifetime4++) {
-            IntrusiveNode.field_i[var4_intLifetime4] = (fe) (MusicPatchPcmStream.a(rn.field_u, "instructions_block_" + var4_intLifetime4, "", (byte) 98));
+            IntrusiveNode.field_i[var4_intLifetime4] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "instructions_block_" + var4_intLifetime4, "", (byte) 98));
           }
-          vj.field_g = new fe[bg.field_e.length];
+          vj.field_g = new ArgbSprite[bg.field_e.length];
           for (var4_intLifetime5 = 0; bg.field_e.length > var4_intLifetime5; var4_intLifetime5++) {
-            vj.field_g[var4_intLifetime5] = (fe) (MusicPatchPcmStream.a(rn.field_u, "instructions_item_" + var4_intLifetime5, "", (byte) 98));
+            vj.field_g[var4_intLifetime5] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "instructions_item_" + var4_intLifetime5, "", (byte) 98));
           }
-          eq.field_F = (fe) (MusicPatchPcmStream.a(rn.field_u, "maintitle", "", (byte) 98));
+          eq.field_F = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "maintitle", "", (byte) 98));
           MusicPatchPcmStream.a(rn.field_u, "timeattack_complete", "", (byte) 98);
-          hh.field_a = (fe) (MusicPatchPcmStream.a(rn.field_u, "timeattack_bronze", "", (byte) 98));
-          kq.field_Kb = (fe) (MusicPatchPcmStream.a(rn.field_u, "timeattack_silver", "", (byte) 98));
-          MouseWheelInput.field_c = (fe) (MusicPatchPcmStream.a(rn.field_u, "timeattack_gold", "", (byte) 98));
+          hh.field_a = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "timeattack_bronze", "", (byte) 98));
+          kq.field_Kb = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "timeattack_silver", "", (byte) 98));
+          MouseWheelInput.field_c = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "timeattack_gold", "", (byte) 98));
           var4 = new Sprite[][]{new Sprite[]{tn.a("coop_icon", rn.field_u, -79, ""), tn.a("versus_icon", rn.field_u, -108, "")}, gk.a(rn.field_u, "", "start_icon", true), gk.a(rn.field_u, "", "end_icon", true)};
           mh.a(true, var4, fd.field_q, 3, ac.field_G, m.field_z, true, ho.field_e, wo.field_V, IsaacCipher.field_e, var4, 2, IsaacCipher.field_e, rm.field_A, ml.field_y);
           jl.field_g = (Sprite) ((Object) oj.field_L);

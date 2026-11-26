@@ -109,8 +109,8 @@ final class lh {
         hh var18 = null;
         an var4 = null;
         cn[] var5 = null;
-        ei var17 = null;
-        ei var19 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var8_int = 0;
         an var7 = null;
         an var8 = null;
@@ -150,7 +150,7 @@ final class lh {
           var4.a(3, (byte) -97).a(bb.a(8947848, false, 10066329, 7829367), true).b(1, -114).c(1, -33);
           int var6 = -31 / ((param0 + 69) / 45);
           var5 = new cn[9];
-          var17 = new ei(32, 32);
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var8_int = 0; var8_int < var19.field_B.length; var8_int++) {
             var17.field_B[var8_int] = 1077952576;

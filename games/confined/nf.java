@@ -45,12 +45,12 @@ class nf extends pl {
           if (var5 <= 0) {
             return;
           }
-          nf.a(0, SoftwareRasterizer.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          nf.blitMultiply(0, SoftwareRasterizer.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitScaledIntensity(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -120,7 +120,7 @@ class nf extends pl {
           if (var5 <= 0) {
             return;
           }
-          nf.b(SoftwareRasterizer.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
+          nf.blitColorKey(SoftwareRasterizer.field_h, this.field_z, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -132,10 +132,10 @@ class nf extends pl {
         int var4 = param0 + (this.field_u >> 1) > SoftwareRasterizer.field_i ? SoftwareRasterizer.field_i - param0 << 1 : this.field_u;
         int var5 = param1 < SoftwareRasterizer.field_b ? SoftwareRasterizer.field_b - param1 << 1 : 0;
         int var6 = param1 + (this.field_w >> 1) > SoftwareRasterizer.field_j ? SoftwareRasterizer.field_j - param1 << 1 : this.field_w;
-        nf.a(this.field_z, var5 * this.field_u + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_g + (param0 + (var3 >> 1)), (this.field_u << 1) - (var4 - var3) + (this.field_u & 1), SoftwareRasterizer.field_g - (var4 - var3 >> 1), this.field_u, var4 - var3 >> 1, var6 - var5 >> 1);
+        nf.blitHalfSize(this.field_z, var5 * this.field_u + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_g + (param0 + (var3 >> 1)), (this.field_u << 1) - (var4 - var3) + (this.field_u & 1), SoftwareRasterizer.field_g - (var4 - var3 >> 1), this.field_u, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -384,9 +384,9 @@ class nf extends pl {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            nf.a(0, 0, 0, var8, this.field_z, SoftwareRasterizer.field_h, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            nf.blitAdditiveScaled(0, 0, 0, var8, this.field_z, SoftwareRasterizer.field_h, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            nf.a(0, 0, 0, var8, this.field_z, SoftwareRasterizer.field_h, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            nf.blitAdditiveScaledIntensity(0, 0, 0, var8, this.field_z, SoftwareRasterizer.field_h, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -587,12 +587,12 @@ class nf extends pl {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          nf.a(SoftwareRasterizer.field_h, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          nf.blitColorKeyScaled(SoftwareRasterizer.field_h, this.field_z, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;
@@ -644,7 +644,7 @@ class nf extends pl {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -798,17 +798,17 @@ class nf extends pl {
           var22 = var8 + (var18 - param0) * var12;
           var23 = var9 + (var20 - param1) * var13;
           if (param4 != 256) {
-            nf.a(0, 0, 0, var22, this.field_z, SoftwareRasterizer.field_h, 0, 0, -1, var23, var21, 0, var19 - var18, var12, var13, var6, param4);
+            nf.blitAdditiveScaledIntensity(0, 0, 0, var22, this.field_z, SoftwareRasterizer.field_h, 0, 0, -1, var23, var21, 0, var19 - var18, var12, var13, var6, param4);
             continue;
           }
-          nf.a(0, 0, 0, var22, this.field_z, SoftwareRasterizer.field_h, 0, 0, -1, var23, var21, 0, var19 - var18, var12, var13, var6);
+          nf.blitAdditiveScaled(0, 0, 0, var22, this.field_z, SoftwareRasterizer.field_h, 0, 0, -1, var23, var21, 0, var19 - var18, var12, var13, var6);
         }
         SoftwareRasterizer.field_b = var14Lifetime2;
         SoftwareRasterizer.field_j = var15;
         return;
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitColorKeyAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -873,12 +873,12 @@ class nf extends pl {
           if (var5 <= 0) {
             return;
           }
-          nf.a(SoftwareRasterizer.field_h, this.field_z, var4, var3, var6, var5, var7, var8);
+          nf.blitUnmasked(SoftwareRasterizer.field_h, this.field_z, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -961,7 +961,7 @@ class nf extends pl {
           if (var6 <= 0) {
             return;
           }
-          nf.b(SoftwareRasterizer.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          nf.blitColorKeyAlpha(SoftwareRasterizer.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1008,9 +1008,9 @@ class nf extends pl {
             return;
           }
           if (param2 == 256) {
-            nf.a(0, 0, 0, SoftwareRasterizer.field_h, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
+            nf.blitAdditive(0, 0, 0, SoftwareRasterizer.field_h, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            nf.a(0, 0, 0, SoftwareRasterizer.field_h, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            nf.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_h, this.field_z, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1568,7 +1568,7 @@ class nf extends pl {
         throw new IllegalArgumentException();
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final static void blitAdditiveScaledIntensity(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
@@ -1597,7 +1597,7 @@ class nf extends pl {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -1669,12 +1669,12 @@ class nf extends pl {
           if (var6 <= 0) {
             return;
           }
-          nf.a(SoftwareRasterizer.field_h, this.field_z, param2, var5, var4, var7, var6, var8, var9);
+          nf.blitSilhouette(SoftwareRasterizer.field_h, this.field_z, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKey(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1762,7 +1762,7 @@ class nf extends pl {
           if (var6 <= 0) {
             return;
           }
-          nf.a(SoftwareRasterizer.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
+          nf.blitGrayTinted(SoftwareRasterizer.field_h, this.field_z, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1821,7 +1821,7 @@ class nf extends pl {
         this.field_s = 0;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -1841,7 +1841,7 @@ class nf extends pl {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitColorKeyScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -1889,7 +1889,7 @@ class nf extends pl {
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    private final static void blitAdditiveScaled(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
@@ -1987,12 +1987,12 @@ class nf extends pl {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          nf.a(SoftwareRasterizer.field_h, this.field_z, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          nf.blitScaledIntensity(SoftwareRasterizer.field_h, this.field_z, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveIntensity(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {

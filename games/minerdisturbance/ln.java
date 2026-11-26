@@ -72,7 +72,7 @@ final class ln extends hd {
           if (var5 <= 0) {
             return;
           }
-          ln.a(SoftwareRasterizer.field_f, this.field_m, this.field_n, var4, var3, var6, var5, var7, var8);
+          ln.blitIndexedOpaque(SoftwareRasterizer.field_f, this.field_m, this.field_n, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -169,7 +169,7 @@ final class ln extends hd {
         }
     }
 
-    private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedSkipRuns(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param10 = -param11;
@@ -219,7 +219,7 @@ final class ln extends hd {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitIndexedOpaque(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -342,7 +342,7 @@ final class ln extends hd {
           if (var5 <= 0) {
             return;
           }
-          ln.a(0, this.field_m, var4, var3, 0, SoftwareRasterizer.field_f, this.field_n, var6, var7, var8, 0, var5);
+          ln.blitIndexedSkipRuns(0, this.field_m, var4, var3, 0, SoftwareRasterizer.field_f, this.field_n, var6, var7, var8, 0, var5);
           return;
         }
     }

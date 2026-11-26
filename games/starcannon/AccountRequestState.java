@@ -94,7 +94,7 @@ final class AccountRequestState {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = cl.a(w.a(255, (int) var22[var7]) << 24, of.field_g[w.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new pj(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var16));
           }
         }
         rc.b((byte) -104);

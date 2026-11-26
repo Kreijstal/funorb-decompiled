@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uq {
-    static fe field_a;
+    static ArgbSprite field_a;
     static String field_b;
     static int field_d;
     int field_e;
@@ -216,7 +216,7 @@ final class uq {
             }
           }
           if (param2 != 20473) {
-            field_a = (fe) null;
+            field_a = (ArgbSprite) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

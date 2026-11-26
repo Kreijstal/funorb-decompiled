@@ -187,8 +187,8 @@ final class sg {
         hd var18 = null;
         w var4 = null;
         Sprite[] var5 = null;
-        pj var17 = null;
-        pj var19 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         w var6 = null;
         w var7 = null;
@@ -231,7 +231,7 @@ final class sg {
           var4.a(1, (byte) -76).a(el.b(10066329, 22396, 13421772, 11184810), (byte) -74);
           var4.a(3, (byte) -76).a(el.b(7829367, 22396, 10066329, 8947848), (byte) -74).b(1, -86).a(256, 1);
           var5 = new Sprite[9];
-          var17 = new pj(32, 32);
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_B.length; var7_int++) {
             var17.field_B[var7_int] = 1077952576;

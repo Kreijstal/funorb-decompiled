@@ -227,7 +227,7 @@ final class wo {
             }
           }
           if (var10 != null) {
-            ((fe) (var10)).e(-((fe) (var10)).field_x + 625, -((fe) (var10)).field_B + var8 - 12);
+            ((ArgbSprite) (var10)).e(-((ArgbSprite) (var10)).field_x + 625, -((ArgbSprite) (var10)).field_B + var8 - 12);
           }
           if (this.field_g > 0) {
             var11_int = 25;

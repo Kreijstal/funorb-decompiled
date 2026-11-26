@@ -71,7 +71,7 @@ final class df {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = tb.a(vg.a(255, (int) var22[var7]) << 24, ci.field_b[vg.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (db) ((Object) new pi(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
+            var1[var2] = (db) ((Object) new ArgbSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], var16));
           }
         }
         GzipDecompressor.a(12428);

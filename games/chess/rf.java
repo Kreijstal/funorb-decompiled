@@ -59,7 +59,7 @@ final class rf {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = s.a(ce.a((int) var15[var7], 255) << 24, AccountNameAvailabilityValidator.field_r[ce.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (km) ((Object) new wi(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
+            var1[var2] = (km) ((Object) new ArgbSprite(cd.field_p, MouseWheelInput.field_a, be.field_a[var2], FullscreenFocusCanvas.field_c[var2], wm.field_b[var2], b.field_c[var2], var17));
           }
         }
         if (param0 != 8) {

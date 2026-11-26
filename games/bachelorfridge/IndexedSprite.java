@@ -76,7 +76,7 @@ final class IndexedSprite extends IndexedSpriteState {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        IndexedSprite.a(SoftwareRasterizer.field_e, this.field_g, this.field_h, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        IndexedSprite.blitIndexedScaled(SoftwareRasterizer.field_e, this.field_g, this.field_h, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void a(int param0, int param1) {
@@ -994,7 +994,7 @@ final class IndexedSprite extends IndexedSpriteState {
         return var1;
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;

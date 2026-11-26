@@ -25,8 +25,8 @@ final class bl {
         jc var18 = null;
         sj var4 = null;
         hj[] var5 = null;
-        ra var17 = null;
-        ra var19 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         sj var6 = null;
         sj var7 = null;
@@ -65,7 +65,7 @@ final class bl {
           var4.a(1, true).a(vf.a(13421772, 10066329, 11184810, (byte) -118), 0);
           var4.a(3, true).a(vf.a(10066329, 7829367, 8947848, (byte) -90), 0).a(1, 0).b(1, 2);
           var5 = new hj[9];
-          var17 = new ra(32, 32);
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_v.length; var7_int++) {
             var17.field_v[var7_int] = 1077952576;

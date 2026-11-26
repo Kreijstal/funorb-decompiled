@@ -1503,12 +1503,12 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.e(SoftwareRasterizer.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.blitArgbIntensity(SoftwareRasterizer.field_e, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void e(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitArgbIntensity(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;

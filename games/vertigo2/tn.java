@@ -5,7 +5,7 @@ final class tn {
     String field_k;
     int field_h;
     boolean field_n;
-    static fe field_i;
+    static ArgbSprite field_i;
     String field_d;
     static String field_r;
     static int field_c;

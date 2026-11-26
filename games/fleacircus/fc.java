@@ -41,7 +41,7 @@ final class fc {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = ne.a(rd.field_d[sc.a(255, (int) var20[var7])], sc.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (dd) ((Object) new sj(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var16));
+            var1[var2] = (dd) ((Object) new ArgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], ij.field_H[var2], ob.field_a[var2], var16));
           }
         }
         if (param0 >= -127) {

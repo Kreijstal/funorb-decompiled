@@ -3972,6 +3972,30 @@
       "renamedSymbol": "M:Sprite.blitAdditiveIntensityRows(III[I[IIIIIIIIII)V"
     },
     {
+      "symbol": "M:qj.a(I[I[IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitMultiply",
+      "evidence": "Source-purpose review: Skip source RGB0 and destination RGB0;otherwise multiply each RGB pair with original component-specific unsigned shifts and write the recombined RGB. Original body SHA256 301dc2dfb2a04980822eb9966bfd0a8c28dde853a33e7e9c9cb1ccc6c51b164d. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitMultiply(I[I[IIIIIIII)V"
+    },
+    {
+      "symbol": "M:qj.a([IIIIIIII)V",
+      "originalName": "a",
+      "to": "blitHalfSize",
+      "evidence": "Source-purpose review: For each output pixel read a2x2source block;replace each zero source color with the original destination RGB,average four packed RGB values,and write the global software framebuffer. Preserve all repeated framebuffer reads and signed right shift. Original body SHA256 6540c12e7e762bd8f5f304bbb80c19f1a3fbb034e71a49b6e210f48f0fab5cde. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitHalfSize([IIIIIIII)V"
+    },
+    {
+      "symbol": "M:qj.a([I[IIIIIII)V",
+      "originalName": "a",
+      "to": "blitUnmasked",
+      "evidence": "Source-purpose review: Unconditional RGB array copy including zero;four-pixel unroll and tail with original end-index arithmetic and separate row skips. Original body SHA256 afdaa36151ba9d6ec811cb32bce8785f32b8aab0b89cb3eddf8ee772a3292c1f. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitUnmasked([I[IIIIIII)V"
+    },
+    {
       "symbol": "M:qj.a([I[IIIIIIII)V",
       "originalName": "a",
       "to": "copyNonzeroPixelsReversed",
@@ -4042,6 +4066,14 @@
       "evidence": "Source-purpose review: Tint grayscale source pixels by the supplied RGB color with the original plus-one adjustment, retaining non-grayscale pixels and original ARGB coverage. Preserve every original guard, allocation, literal, descriptor, modifier, exception boundary and full primitive domain. Original body SHA256 614695204245c7235c08ee113313d379023ceef2de10545aabb5e5e1da0337d1.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Sprite.drawTinted(III)V"
+    },
+    {
+      "symbol": "M:qj.c([I[IIIIIIII)V",
+      "originalName": "c",
+      "to": "blitSilhouette",
+      "evidence": "Source-purpose review: For every nonzero source pixel write the supplied solid color;source0 leaves destination untouched. Preserve four-pixel unroll and tail. Original body SHA256 37f211dcd1e43b942ad76482af4d62d23dac04ae5593affb8dd8f3f47fc2f5f9. Naming only;preserve full JVM integer domains,parameter slots,array aliases,packed RGB/alpha arithmetic,modifiers,all partial-write/evaluation/allocation/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Sprite.blitSilhouette([I[IIIIIIII)V"
     },
     {
       "symbol": "M:qj.d(II)V",
@@ -110748,7 +110780,7 @@
     },
     {
       "symbol": "L:qj.a(I[I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -110759,7 +110791,7 @@
     },
     {
       "symbol": "L:qj.a(I[I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#1",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -110770,7 +110802,7 @@
     },
     {
       "symbol": "L:qj.a(I[I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#2",
       "originalName": "incrementValue$5",
       "renamedName": "incrementValue$5",
       "declaration": {
@@ -110781,7 +110813,7 @@
     },
     {
       "symbol": "L:qj.a(I[I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#3",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -110792,7 +110824,7 @@
     },
     {
       "symbol": "L:qj.a(I[I[IIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -110803,7 +110835,7 @@
     },
     {
       "symbol": "L:qj.a(I[I[IIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a(I[I[IIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitMultiply(I[I[IIIIIIII)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -110814,7 +110846,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -110825,7 +110857,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -110836,7 +110868,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#10",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#10",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#10",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -110847,7 +110879,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#11",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#11",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#11",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -110858,7 +110890,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#12",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#12",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#12",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -110869,7 +110901,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#13",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#13",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#13",
       "originalName": "var10Lifetime2",
       "renamedName": "var10Lifetime2",
       "declaration": {
@@ -110880,7 +110912,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#14",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#14",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#14",
       "originalName": "var10Lifetime3",
       "renamedName": "var10Lifetime3",
       "declaration": {
@@ -110891,7 +110923,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -110902,7 +110934,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#3",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -110913,7 +110945,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#4",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#4",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#4",
       "originalName": "incrementValue$4",
       "renamedName": "incrementValue$4",
       "declaration": {
@@ -110924,7 +110956,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#5",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#5",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -110935,7 +110967,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#6",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#6",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -110946,7 +110978,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#7",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#7",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -110957,7 +110989,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#8",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#8",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -110968,7 +111000,7 @@
     },
     {
       "symbol": "L:qj.a([IIIIIIII)V#9",
-      "renamedSymbol": "L:Sprite.a([IIIIIIII)V#9",
+      "renamedSymbol": "L:Sprite.blitHalfSize([IIIIIIII)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -110979,7 +111011,7 @@
     },
     {
       "symbol": "L:qj.a([I[IIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitUnmasked([I[IIIIIII)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -110990,7 +111022,7 @@
     },
     {
       "symbol": "L:qj.a([I[IIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.a([I[IIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitUnmasked([I[IIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -111903,7 +111935,7 @@
     },
     {
       "symbol": "L:qj.c([I[IIIIIIII)V#0",
-      "renamedSymbol": "L:Sprite.c([I[IIIIIIII)V#0",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -111914,7 +111946,7 @@
     },
     {
       "symbol": "L:qj.c([I[IIIIIIII)V#1",
-      "renamedSymbol": "L:Sprite.c([I[IIIIIIII)V#1",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#1",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -111925,7 +111957,7 @@
     },
     {
       "symbol": "L:qj.c([I[IIIIIIII)V#2",
-      "renamedSymbol": "L:Sprite.c([I[IIIIIIII)V#2",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#2",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -111936,7 +111968,7 @@
     },
     {
       "symbol": "L:qj.c([I[IIIIIIII)V#3",
-      "renamedSymbol": "L:Sprite.c([I[IIIIIIII)V#3",
+      "renamedSymbol": "L:Sprite.blitSilhouette([I[IIIIIIII)V#3",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -159885,9 +159917,9 @@
     },
     {
       "symbol": "M:qj.a(I[I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a(I[I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitMultiply(I[I[IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitMultiply",
       "declaration": {
         "file": "qj.java",
         "start": 17951,
@@ -159896,9 +159928,9 @@
     },
     {
       "symbol": "M:qj.a([IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitHalfSize([IIIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitHalfSize",
       "declaration": {
         "file": "qj.java",
         "start": 6251,
@@ -159907,9 +159939,9 @@
     },
     {
       "symbol": "M:qj.a([I[IIIIIII)V",
-      "renamedSymbol": "M:Sprite.a([I[IIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitUnmasked([I[IIIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "blitUnmasked",
       "declaration": {
         "file": "qj.java",
         "start": 40853,
@@ -160039,9 +160071,9 @@
     },
     {
       "symbol": "M:qj.c([I[IIIIIIII)V",
-      "renamedSymbol": "M:Sprite.c([I[IIIIIIII)V",
+      "renamedSymbol": "M:Sprite.blitSilhouette([I[IIIIIIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "blitSilhouette",
       "declaration": {
         "file": "qj.java",
         "start": 14985,
@@ -206932,7 +206964,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206943,7 +206975,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -206954,7 +206986,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -206965,7 +206997,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -206976,7 +207008,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -206987,7 +207019,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -206998,7 +207030,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -207009,7 +207041,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -207020,7 +207052,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -207031,7 +207063,7 @@
     },
     {
       "symbol": "P:qj.a(I[I[IIIIIIII)V#9",
-      "renamedSymbol": "P:Sprite.a(I[I[IIIIIIII)V#9",
+      "renamedSymbol": "P:Sprite.blitMultiply(I[I[IIIIIIII)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -207042,7 +207074,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207053,7 +207085,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207064,7 +207096,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207075,7 +207107,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207086,7 +207118,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -207097,7 +207129,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -207108,7 +207140,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -207119,7 +207151,7 @@
     },
     {
       "symbol": "P:qj.a([IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitHalfSize([IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -207130,7 +207162,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207141,7 +207173,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207152,7 +207184,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207163,7 +207195,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207174,7 +207206,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -207185,7 +207217,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -207196,7 +207228,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -207207,7 +207239,7 @@
     },
     {
       "symbol": "P:qj.a([I[IIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.a([I[IIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitUnmasked([I[IIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -207878,7 +207910,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#0",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#0",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -207889,7 +207921,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#1",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#1",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -207900,7 +207932,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#2",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#2",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -207911,7 +207943,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#3",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#3",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -207922,7 +207954,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#4",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#4",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -207933,7 +207965,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#5",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#5",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -207944,7 +207976,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#6",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#6",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -207955,7 +207987,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#7",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#7",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -207966,7 +207998,7 @@
     },
     {
       "symbol": "P:qj.c([I[IIIIIIII)V#8",
-      "renamedSymbol": "P:Sprite.c([I[IIIIIIII)V#8",
+      "renamedSymbol": "P:Sprite.blitSilhouette([I[IIIIIIII)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -278706,7 +278738,7 @@
       "original": "qj.java",
       "renamed": "Sprite.java",
       "inputSha256": "eb39c29f81ea8730b221cae115af5d383cada98afa4fc383288279a70f3010c3",
-      "outputSha256": "5a407a537746104aee220c07caff928f2729ee131415798bb5d3470e6c7743c4",
+      "outputSha256": "5845b0272bb7eb9a2cac4087e8d4d5b3ca2573d51125b2b61e65ef9bc0960819",
       "edits": [
         {
           "start": 44,
@@ -279169,6 +279201,13 @@
           "symbol": "F:ll.field_i:[I",
           "original": "field_i",
           "renamed": "pixels"
+        },
+        {
+          "start": 6251,
+          "end": 6252,
+          "symbol": "M:qj.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitHalfSize"
         },
         {
           "start": 6834,
@@ -279654,6 +279693,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 14765,
+          "end": 14766,
+          "symbol": "M:qj.a(I[I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitMultiply"
+        },
+        {
           "start": 14770,
           "end": 14772,
           "symbol": "C:ll",
@@ -279694,6 +279740,13 @@
           "symbol": "F:qj.field_z:[I",
           "original": "field_z",
           "renamed": "pixels"
+        },
+        {
+          "start": 14985,
+          "end": 14986,
+          "symbol": "M:qj.c([I[IIIIIIII)V",
+          "original": "c",
+          "renamed": "blitSilhouette"
         },
         {
           "start": 16262,
@@ -279953,6 +280006,13 @@
           "symbol": "F:qj.field_z:[I",
           "original": "field_z",
           "renamed": "pixels"
+        },
+        {
+          "start": 17951,
+          "end": 17952,
+          "symbol": "M:qj.a(I[I[IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitMultiply"
         },
         {
           "start": 20122,
@@ -280310,6 +280370,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "Sprite"
+        },
+        {
+          "start": 25074,
+          "end": 25075,
+          "symbol": "M:qj.a([I[IIIIIII)V",
+          "original": "a",
+          "renamed": "blitUnmasked"
         },
         {
           "start": 25076,
@@ -280991,6 +281058,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 35577,
+          "end": 35578,
+          "symbol": "M:qj.a([IIIIIIII)V",
+          "original": "a",
+          "renamed": "blitHalfSize"
+        },
+        {
           "start": 35584,
           "end": 35591,
           "symbol": "F:qj.field_z:[I",
@@ -281227,6 +281301,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "Sprite"
+        },
+        {
+          "start": 38328,
+          "end": 38329,
+          "symbol": "M:qj.c([I[IIIIIIII)V",
+          "original": "c",
+          "renamed": "blitSilhouette"
         },
         {
           "start": 38330,
@@ -281521,6 +281602,13 @@
           "symbol": "F:qj.field_z:[I",
           "original": "field_z",
           "renamed": "pixels"
+        },
+        {
+          "start": 40853,
+          "end": 40854,
+          "symbol": "M:qj.a([I[IIIIIII)V",
+          "original": "a",
+          "renamed": "blitUnmasked"
         },
         {
           "start": 45225,
@@ -302741,10 +302829,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "447986ba15318bf1e66183ea69cace0da5a659a497b3a41188512509efe55ff9",
+    "rulesSha256": "e65f8d8156c90db8743015384c15f726027b533adeefa33ecf72b41028f23478",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "1fcba2f00797ebdfe50c5465be89c9cb70077b87f7048549a1c72b9e7d0c184c",
+    "outputTreeSha256": "9a04f5d44d6463b96f83b24dc9b25a0a0d16cb8425210f741f116e848e90ae23",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

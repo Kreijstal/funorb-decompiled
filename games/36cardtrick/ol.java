@@ -217,7 +217,7 @@ final class ol extends jc implements qh {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = fj.a(bc.a(255, (int) var15[var7]) << 24, jf.field_i[bc.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (kc) ((Object) new si(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var17));
+            var1[var2] = (kc) ((Object) new ArgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var17));
           }
         }
         rh.d(79);

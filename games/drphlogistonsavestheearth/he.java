@@ -5,7 +5,7 @@ final class he extends pe {
     int[] field_l;
     byte[] field_m;
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -93,7 +93,7 @@ final class he extends pe {
         }
     }
 
-    private final static void c(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteReverse(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -205,7 +205,7 @@ final class he extends pe {
         return new nh(this.field_h, this.field_c, this.field_a, this.field_f, this.field_d, this.field_k, var2);
     }
 
-    private final static void a(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedSkipRuns(int param0, byte[] param1, int param2, int param3, int param4, int[] param5, int[] param6, int param7, int param8, int param9, int param10, int param11) {
         int incrementValue$13 = 0;
         int incrementValue$14 = 0;
         param10 = -param11;
@@ -515,7 +515,7 @@ final class he extends pe {
           if (var5 <= 0) {
             return;
           }
-          he.c(SoftwareRasterizer.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
+          he.blitPaletteReverse(SoftwareRasterizer.field_l, this.field_m, this.field_l, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -628,12 +628,12 @@ final class he extends pe {
           if (var7 <= 0) {
             return;
           }
-          he.b(SoftwareRasterizer.field_l, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+          he.blitPaletteTinted(SoftwareRasterizer.field_l, this.field_m, this.field_l, 0, var6, var5, var8, var7, var9, var10, param2, param3);
           return;
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitIndexedOpaque(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -738,7 +738,7 @@ final class he extends pe {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        he.a(SoftwareRasterizer.field_l, this.field_m, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        he.blitIndexedScaled(SoftwareRasterizer.field_l, this.field_m, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void g() {
@@ -854,7 +854,7 @@ final class he extends pe {
         }
     }
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitPaletteTinted(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$11 = 0;
@@ -929,7 +929,7 @@ final class he extends pe {
           if (var5 <= 0) {
             return;
           }
-          he.a(0, this.field_m, var4, var3, 0, SoftwareRasterizer.field_l, this.field_l, var6, var7, var8, 0, var5);
+          he.blitIndexedSkipRuns(0, this.field_m, var4, var3, 0, SoftwareRasterizer.field_l, this.field_l, var6, var7, var8, 0, var5);
           return;
         }
     }
@@ -975,7 +975,7 @@ final class he extends pe {
           if (var5 <= 0) {
             return;
           }
-          he.a(SoftwareRasterizer.field_l, this.field_m, this.field_l, var4, var3, var6, var5, var7, var8);
+          he.blitIndexedOpaque(SoftwareRasterizer.field_l, this.field_m, this.field_l, var4, var3, var6, var5, var7, var8);
           return;
         }
     }

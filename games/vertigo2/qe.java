@@ -9,7 +9,7 @@ final class qe extends pn {
     static String field_X;
     static String field_V;
     private Sprite field_bb;
-    static fe field_W;
+    static ArgbSprite field_W;
     static long field_cb;
     private String field_ab;
     static GameApplet field_T;

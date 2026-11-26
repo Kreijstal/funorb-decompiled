@@ -189,8 +189,8 @@ final class fe {
         jd var17 = null;
         qi var4 = null;
         tg[] var5 = null;
-        bg var16 = null;
-        bg var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         qi var6 = null;
         qi var7 = null;
@@ -229,7 +229,7 @@ final class fe {
           var4.b(-1, 1).a(ed.a(11184810, 13421772, 73, 10066329), -1);
           var4.b(param0 - 33, 3).a(ed.a(8947848, 10066329, param0 ^ 78, 7829367), param0 - 33).a((byte) 74, 1).b(1, (byte) -54);
           var5 = new tg[9];
-          var16 = new bg(32, param0);
+          var16 = new ArgbSprite(32, param0);
           var18 = var16;
           for (var7_int = 0; var18.field_v.length > var7_int; var7_int++) {
             var16.field_v[var7_int] = 1077952576;

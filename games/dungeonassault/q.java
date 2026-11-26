@@ -59,7 +59,7 @@ final class q extends lo {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        q.a(SoftwareRasterizer.field_b, this.field_j, this.field_i, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        q.blitIndexedScaled(SoftwareRasterizer.field_b, this.field_j, this.field_i, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     final void b(int param0, int param1) {
@@ -103,7 +103,7 @@ final class q extends lo {
           var5 <= 0) {
           return;
         }
-        q.a(SoftwareRasterizer.field_b, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        q.blitPaletteReverse(SoftwareRasterizer.field_b, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
     }
 
     final void a(int param0, int param1) {
@@ -288,7 +288,7 @@ final class q extends lo {
         return var1;
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -335,7 +335,7 @@ final class q extends lo {
         return var1;
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitPaletteReverse(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;

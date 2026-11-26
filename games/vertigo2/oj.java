@@ -8,7 +8,7 @@ final class oj extends WidgetContainer implements ij {
     static int[][] field_O;
     private nc field_J;
     static int[] field_H;
-    static fe field_L;
+    static ArgbSprite field_L;
     private d[] field_G;
     static int[] field_I;
     private String[] field_E;

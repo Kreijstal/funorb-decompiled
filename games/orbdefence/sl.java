@@ -120,7 +120,7 @@ final class sl extends sf {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ge.a(vc.field_g[vi.a(255, (int) var22[var7])], vi.a(-16777216, var17[var7] << 24));
             }
-            var1[var2] = (hj) ((Object) new ra(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var18));
+            var1[var2] = (hj) ((Object) new ArgbSprite(sg.field_B, he.field_r, jd.field_g[var2], wc.field_a[var2], wh.field_b[var2], m.field_a[var2], var18));
           }
           var2++;
         }

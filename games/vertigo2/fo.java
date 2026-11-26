@@ -487,7 +487,7 @@ final class fo {
             if (var9 == 0) {
               IntrusiveDequeCursor.field_b.e(80, var10);
             } else {
-              ((fe) (vj.field_b[var7Lifetime1])).e(80, var10);
+              ((ArgbSprite) (vj.field_b[var7Lifetime1])).e(80, var10);
             }
             var10 = var10 + (va.field_s.field_j + var8Lifetime1);
             var11 = var10;

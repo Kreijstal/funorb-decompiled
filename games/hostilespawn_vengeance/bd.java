@@ -197,12 +197,12 @@ class bd extends qc {
           if (var5 <= 0) {
             return;
           }
-          bd.b(SoftwareRasterizer.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          bd.blitColorKey(SoftwareRasterizer.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -300,12 +300,12 @@ class bd extends qc {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          bd.a(SoftwareRasterizer.field_i, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          bd.blitColorKeyScaled(SoftwareRasterizer.field_i, this.field_D, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitColorKeyAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -329,7 +329,7 @@ class bd extends qc {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitColorKeyScaled(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -392,12 +392,12 @@ class bd extends qc {
           if (var5 <= 0) {
             return;
           }
-          bd.c(SoftwareRasterizer.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          bd.blitColorKeyReverse(SoftwareRasterizer.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKey(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -883,7 +883,7 @@ class bd extends qc {
         return;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -939,7 +939,7 @@ class bd extends qc {
         return var1;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
+    private final static void blitAdditiveScaledIntensity(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
         int incrementValue$0 = 0;
         int var17 = param3;
         while (param8 < 0) {
@@ -968,7 +968,7 @@ class bd extends qc {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitColorKeyScaledAlpha(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -996,7 +996,7 @@ class bd extends qc {
         }
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitColorKeyReverse(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -1084,7 +1084,7 @@ class bd extends qc {
           if (var6 <= 0) {
             return;
           }
-          bd.a(SoftwareRasterizer.field_i, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          bd.blitColorKeyAlpha(SoftwareRasterizer.field_i, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1254,7 +1254,7 @@ class bd extends qc {
         this.field_u = var3Lifetime3;
     }
 
-    private final static void a(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
+    private final static void blitAdditiveScaled(int param0, int param1, int param2, int param3, int[] param4, int[] param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int incrementValue$0 = 0;
         int var16 = param3;
         while (param8 < 0) {
@@ -1436,7 +1436,7 @@ class bd extends qc {
           if (var6 <= 0) {
             return;
           }
-          bd.a(SoftwareRasterizer.field_i, this.field_D, param2, var5, var4, var7, var6, var8, var9);
+          bd.blitSilhouette(SoftwareRasterizer.field_i, this.field_D, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1483,9 +1483,9 @@ class bd extends qc {
             return;
           }
           if (param2 == 256) {
-            bd.a(0, 0, 0, SoftwareRasterizer.field_i, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
+            bd.blitAdditive(0, 0, 0, SoftwareRasterizer.field_i, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            bd.a(0, 0, 0, SoftwareRasterizer.field_i, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            bd.blitAdditiveIntensity(0, 0, 0, SoftwareRasterizer.field_i, this.field_D, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -1583,7 +1583,7 @@ class bd extends qc {
         return;
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    private final static void blitAdditive(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -1632,7 +1632,7 @@ class bd extends qc {
         int var4 = param0 + (this.field_z >> 1) > SoftwareRasterizer.field_l ? SoftwareRasterizer.field_l - param0 << 1 : this.field_z;
         int var5 = param1 < SoftwareRasterizer.field_j ? SoftwareRasterizer.field_j - param1 << 1 : 0;
         int var6 = param1 + (this.field_A >> 1) > SoftwareRasterizer.field_a ? SoftwareRasterizer.field_a - param1 << 1 : this.field_A;
-        bd.a(this.field_D, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_e + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), SoftwareRasterizer.field_e - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
+        bd.blitHalfSize(this.field_D, var5 * this.field_z + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.field_e + (param0 + (var3 >> 1)), (this.field_z << 1) - (var4 - var3) + (this.field_z & 1), SoftwareRasterizer.field_e - (var4 - var3 >> 1), this.field_z, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     final void g() {
@@ -2318,12 +2318,12 @@ class bd extends qc {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          bd.a(SoftwareRasterizer.field_i, this.field_D, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          bd.blitColorKeyScaledAlpha(SoftwareRasterizer.field_i, this.field_D, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
 
-    private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
+    private final static void blitAdditiveIntensity(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
         int incrementValue$12 = 0;
         for (param8 = -param10; param8 < 0; param8++) {
           for (param6 = -param9; param6 < 0; param6++) {
@@ -2388,12 +2388,12 @@ class bd extends qc {
           if (var6 <= 0) {
             return;
           }
-          bd.b(SoftwareRasterizer.field_i, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
+          bd.blitGrayTinted(SoftwareRasterizer.field_i, this.field_D, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -2469,7 +2469,7 @@ class bd extends qc {
         SoftwareRasterizer.setRasterBuffer(this.field_D, this.field_z, this.field_A);
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {
@@ -2530,7 +2530,7 @@ class bd extends qc {
           if (var5 <= 0) {
             return;
           }
-          bd.a(SoftwareRasterizer.field_i, this.field_D, var4, var3, var6, var5, var7, var8);
+          bd.blitUnmasked(SoftwareRasterizer.field_i, this.field_D, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2576,7 +2576,7 @@ class bd extends qc {
           if (var5 <= 0) {
             return;
           }
-          bd.a(0, SoftwareRasterizer.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
+          bd.blitMultiply(0, SoftwareRasterizer.field_i, this.field_D, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2649,9 +2649,9 @@ class bd extends qc {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            bd.a(0, 0, 0, var8, this.field_D, SoftwareRasterizer.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            bd.blitAdditiveScaled(0, 0, 0, var8, this.field_D, SoftwareRasterizer.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            bd.a(0, 0, 0, var8, this.field_D, SoftwareRasterizer.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            bd.blitAdditiveScaledIntensity(0, 0, 0, var8, this.field_D, SoftwareRasterizer.field_i, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -2703,7 +2703,7 @@ class bd extends qc {
         }
     }
 
-    private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitGrayTinted(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var15 = 0;
         int var16 = 0;
         int incrementValue$1 = 0;

@@ -9,7 +9,7 @@ final class qp {
     String field_e;
     static int field_d;
     String field_f;
-    static fe field_h;
+    static ArgbSprite field_h;
     int field_b;
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte[] param2, int param3, int param4, byte param5, PacketBuffer param6) {

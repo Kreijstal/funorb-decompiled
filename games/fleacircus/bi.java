@@ -19,7 +19,7 @@ final class bi extends cm {
         return this.field_k[param3 * this.field_c + param2] != 0 ? true : false;
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
+    private final static void blitIndexedScaled(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -275,7 +275,7 @@ final class bi extends cm {
           var7 = var7 + var11 * var15Lifetime2;
           var14 = var14 + var15Lifetime2;
         }
-        bi.a(SoftwareRasterizer.field_a, this.field_k, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+        bi.blitIndexedScaled(SoftwareRasterizer.field_a, this.field_k, this.field_l, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
     }
 
     bi(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {

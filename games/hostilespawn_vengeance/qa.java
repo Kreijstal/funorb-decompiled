@@ -50,7 +50,7 @@ final class qa {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ll.a(ua.a(-16777216, var15[var7] << 24), bf.field_d[ua.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (bd) ((Object) new gk(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
+            var1[var2] = (bd) ((Object) new ArgbSprite(ra.field_a, GameCanvas.field_e, th.field_Jb[var2], nh.field_O[var2], sf.field_X[var2], hd.field_r[var2], var17));
           }
         }
         if (param0 != 26627) {

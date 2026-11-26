@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hh {
-    static fe field_a;
+    static ArgbSprite field_a;
     static String field_d;
     static PacketBuffer field_b;
     static boolean field_c;

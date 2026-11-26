@@ -42,8 +42,8 @@ final class tg {
         hl var17 = null;
         nj var4 = null;
         km[] var5 = null;
-        wi var16 = null;
-        wi var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         nj var6 = null;
         nj var7 = null;
@@ -82,7 +82,7 @@ final class tg {
           var4.a(param1 - 7829289, 1).a((byte) 108, hk.a(11184810, param1 ^ 7829366, 13421772, 10066329));
           var4.a(113, 3).a((byte) 126, hk.a(8947848, 1, 10066329, param1)).a(1, param1 ^ 7806832).a((byte) -128, 1);
           var5 = new km[9];
-          var16 = new wi(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_x.length; var7_int++) {
             var16.field_x[var7_int] = 1077952576;

@@ -104,8 +104,8 @@ final class na {
         cn var17 = null;
         ha var4 = null;
         bd[] var5 = null;
-        gk var16 = null;
-        gk var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         ha var6 = null;
         ha var7 = null;
@@ -144,7 +144,7 @@ final class na {
           var4.a(1, true).a(false, pm.a(13421772, 11184810, (byte) -117, 10066329));
           var4.a(3, true).a(false, pm.a(10066329, 8947848, (byte) -117, 7829367)).b(1, 16802).a((byte) 92, 1);
           var5 = new bd[9];
-          var16 = new gk(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var7_int < var18.field_D.length; var7_int++) {
             var16.field_D[var7_int] = 1077952576;

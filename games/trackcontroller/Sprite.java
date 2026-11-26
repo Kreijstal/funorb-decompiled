@@ -191,7 +191,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitHalfSize(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -443,7 +443,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(0, SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.blitMultiply(0, SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -452,7 +452,7 @@ class Sprite extends SpriteState {
         SoftwareRasterizer.setRasterBuffer(this.pixels, this.field_t, this.field_q);
     }
 
-    private final static void c(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitSilhouette(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -544,7 +544,7 @@ class Sprite extends SpriteState {
         }
     }
 
-    private final static void a(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitMultiply(int param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$5 = 0;
@@ -753,7 +753,7 @@ class Sprite extends SpriteState {
           if (var5 <= 0) {
             return;
           }
-          Sprite.a(SoftwareRasterizer.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
+          Sprite.blitUnmasked(SoftwareRasterizer.pixels, this.pixels, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1073,7 +1073,7 @@ class Sprite extends SpriteState {
         int var4 = param0 + (this.field_t >> 1) > SoftwareRasterizer.clipRight ? SoftwareRasterizer.clipRight - param0 << 1 : this.field_t;
         int var5 = param1 < SoftwareRasterizer.clipTop ? SoftwareRasterizer.clipTop - param1 << 1 : 0;
         int var6 = param1 + (this.field_q >> 1) > SoftwareRasterizer.clipBottom ? SoftwareRasterizer.clipBottom - param1 << 1 : this.field_q;
-        Sprite.a(this.pixels, var5 * this.field_t + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.stride + (param0 + (var3 >> 1)), (this.field_t << 1) - (var4 - var3) + (this.field_t & 1), SoftwareRasterizer.stride - (var4 - var3 >> 1), this.field_t, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.blitHalfSize(this.pixels, var5 * this.field_t + var3, (param1 + (var5 >> 1)) * SoftwareRasterizer.stride + (param0 + (var3 >> 1)), (this.field_t << 1) - (var4 - var3) + (this.field_t & 1), SoftwareRasterizer.stride - (var4 - var3 >> 1), this.field_t, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void blitAdditiveIntensityRows(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -1141,7 +1141,7 @@ class Sprite extends SpriteState {
           if (var6 <= 0) {
             return;
           }
-          Sprite.c(SoftwareRasterizer.pixels, this.pixels, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.blitSilhouette(SoftwareRasterizer.pixels, this.pixels, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1218,7 +1218,7 @@ class Sprite extends SpriteState {
         return var1;
     }
 
-    private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blitUnmasked(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8 = 0;
         int var9 = 0;
         for (var8 = -param5; var8 < 0; var8++) {

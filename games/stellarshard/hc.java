@@ -213,8 +213,8 @@ final class hc {
         id var17 = null;
         tc var4 = null;
         Sprite[] var5 = null;
-        jc var16 = null;
-        jc var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         tc var6 = null;
         tc var7 = null;
@@ -253,7 +253,7 @@ final class hc {
           var4.a((byte) 10, 1).a((byte) 104, cj.a(13421772, 10066329, 11184810, -17768));
           var4.a((byte) 115, 3).a((byte) 100, cj.a(10066329, 7829367, 8947848, -17768)).a(1, false).b(-2147483648, 1);
           var5 = new Sprite[9];
-          var16 = new jc(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_z.length > var7_int; var7_int++) {
             var16.field_z[var7_int] = 1077952576;
