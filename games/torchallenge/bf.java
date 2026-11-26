@@ -72,7 +72,7 @@ final class bf {
           }
           var3 = nk.field_h;
         } else {
-          var3 = sh.field_r;
+          var3 = ArchiveRequest.field_r;
         }
         if (var3 > param0 >> 3) {
           var5 = var3 % (param0 >> 3);

@@ -7,7 +7,7 @@ final class rl {
     static String field_c;
 
     final static boolean b(int param0) {
-        rf.field_r = true;
+        ArchiveRequest.field_r = true;
         if (param0 == 0) {
           ah.field_z = 15000L + ll.correctedCurrentTimeMillis(param0 + 1000);
           return q.field_Jb == 11 ? true : false;

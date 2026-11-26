@@ -10,10 +10,10 @@ final class om {
 
     final static cd a(boolean param0) {
         if (param0) {
-          return new cd(co.e((byte) 92), f.a((byte) -75));
+          return new cd(DiskArchiveRequest.e((byte) 92), f.a((byte) -75));
         }
         om.b(-113);
-        return new cd(co.e((byte) 92), f.a((byte) -75));
+        return new cd(DiskArchiveRequest.e((byte) 92), f.a((byte) -75));
     }
 
     final static boolean a(java.applet.Applet param0, int param1) {

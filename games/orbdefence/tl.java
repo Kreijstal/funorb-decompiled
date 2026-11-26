@@ -181,9 +181,9 @@ final class tl {
           !(field_d.length >= param0)) {
           field_d = new int[param0 * 2];
         }
-        if (null == vl.field_g ||
-          !(param0 <= vl.field_g.length)) {
-          vl.field_g = new int[param0 * 2];
+        if (null == DiskCacheWorker.field_g ||
+          !(param0 <= DiskCacheWorker.field_g.length)) {
+          DiskCacheWorker.field_g = new int[param0 * 2];
         }
         if (null == th.field_f ||
           !(th.field_f.length >= param0)) {

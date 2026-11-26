@@ -191,18 +191,18 @@ final class vk extends jf {
             var1_int = 0;
           }
           if (0 <= ClientException.field_b) {
-            ic.field_t = ic.field_t - (lc.field_h >>> 17) * ud.field_k;
-            bi.field_i = bi.field_i - ud.field_k;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - (lc.field_h >>> 17) * ud.field_k;
+            SectorCacheStore.field_i = SectorCacheStore.field_i - ud.field_k;
             ud.field_k = 0;
           }
           if (ud.field_k > GameKeyHandler.field_a[7]) {
             var4 = ud.field_k - GameKeyHandler.field_a[7];
-            ic.field_t = ic.field_t - (lc.field_h >>> 17) * var4;
-            bi.field_i = bi.field_i - var4;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - (lc.field_h >>> 17) * var4;
+            SectorCacheStore.field_i = SectorCacheStore.field_i - var4;
             ud.field_k = GameKeyHandler.field_a[7];
           }
           AccountServiceResult.field_e = (AccountServiceResult.field_e * 9 + var2) / 10;
-          sk.field_o = (sk.field_o * 9 + var1_int) / 10;
+          ArchiveRequest.field_o = (ArchiveRequest.field_o * 9 + var1_int) / 10;
           if (1 * GameKeyHandler.field_a[7] / 10 > var3 &&
             ud.field_k >= GameKeyHandler.field_a[7] * 1 / 10) {
             vk.a(250, (byte) 89, 5);
@@ -249,7 +249,7 @@ final class vk extends jf {
         SecondaryNodeDequeIterator.field_d = SecondaryNodeDequeIterator.field_d | var3;
         lc.field_t.addFirst(new la(param2), -7044);
         if (!ImageProducerRasterBuffer.field_n) {
-          w.field_a.addFirst(new bl(param2, param0, bi.field_i, ic.field_t, lc.field_h, lk.field_e), -7044);
+          w.field_a.addFirst(new bl(param2, param0, SectorCacheStore.field_i, NetworkArchiveRequest.field_t, lc.field_h, lk.field_e), -7044);
           if (param1 != 89) {
             vk.b((byte) 46);
             return;

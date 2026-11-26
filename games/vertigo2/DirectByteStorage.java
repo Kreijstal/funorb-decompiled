@@ -47,7 +47,7 @@ final class DirectByteStorage extends ByteStorage {
               kb.field_e.b((byte) 9);
             }
             if (null != ap.field_a) {
-              ap.field_a.a(-82);
+              ap.field_a.shutdown(-82);
             }
             if (null != ad.field_g) {
               try {

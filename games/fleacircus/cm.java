@@ -52,16 +52,16 @@ abstract class cm {
         int var2_intLifetime1;
         var3 = fleas.field_A ? 1 : 0;
         try {
-          gi.a(true, 0, qh.field_D, -3300, lc.field_u, param0, ea.field_a);
-          for (var2_int = 0; qh.field_D > var2_int; var2_int++) {
+          gi.a(true, 0, DiskArchiveRequest.field_D, -3300, lc.field_u, param0, ea.field_a);
+          for (var2_int = 0; DiskArchiveRequest.field_D > var2_int; var2_int++) {
             mh.field_y[param0 + var2_int] = var2_int;
           }
           var2_intLifetime1 = -9 % ((79 - param1) / 38);
-          gi.a(false, param0, qh.field_D + param0, -3300, ok.field_L, param0 + param0, ak.field_f);
-          if (param0 >= qh.field_D) {
+          gi.a(false, param0, DiskArchiveRequest.field_D + param0, -3300, ok.field_L, param0 + param0, ak.field_f);
+          if (param0 >= DiskArchiveRequest.field_D) {
             return;
           }
-          qh.field_D = param0;
+          DiskArchiveRequest.field_D = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -186,7 +186,7 @@ final class tq {
               stackIn_53_0.field_Zb = stackIn_54_1;
               var8_ref_bs.field_Ib = ((PacketBuffer) ((Object) var1)).readUnsignedByte(param0 + 55);
               var8_ref_bs.field_Kb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-11);
-              ia.a((byte) 77, var8_ref_bs);
+              NetworkArchiveRequest.a((byte) 77, var8_ref_bs);
               return;
             }
             if (var2 == 6) {
@@ -360,7 +360,7 @@ final class tq {
                       kk.field_j = kk.field_j - 1;
                     }
                   }
-                  ia.a((byte) 77, var25);
+                  NetworkArchiveRequest.a((byte) 77, var25);
                 }
                 return;
               }
@@ -375,7 +375,7 @@ final class tq {
                 } else {
                   var29.field_Yb = true;
                 }
-                ia.a((byte) 77, var29);
+                NetworkArchiveRequest.a((byte) 77, var29);
               }
               return;
             }
@@ -407,7 +407,7 @@ final class tq {
                 var3_ref_bsLifetime1.field_Ob = false;
               }
               var3_ref_bsLifetime1.field_Yb = false;
-              ia.a((byte) 77, var3_ref_bsLifetime1);
+              NetworkArchiveRequest.a((byte) 77, var3_ref_bsLifetime1);
             }
             var3_ref_bsLifetime1 = (bs) (GameShell.field_l.next((byte) -60));
           }

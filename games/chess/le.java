@@ -114,7 +114,7 @@ final class le {
             fj.a((String) (var2), 0, -1, (String) null, AccountNameAvailabilityValidator.field_l);
           } else {
             var3 = ci.field_J;
-            var3 = on.a(-11307, var3);
+            var3 = DiskCacheWorker.a(-11307, var3);
             var4 = "";
             var5 = "|";
             var6 = vk.field_g;

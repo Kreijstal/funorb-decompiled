@@ -33,7 +33,7 @@ final class mn extends IntrusiveNode {
           im.field_g = false;
         }
         if (param0) {
-          if (rk.field_y <= 0) {
+          if (ArchiveRequest.field_y <= 0) {
             if (ko.field_P > 0) {
               ko.field_P = ko.field_P - 1;
             } else {
@@ -42,11 +42,11 @@ final class mn extends IntrusiveNode {
               }
             }
           } else {
-            rk.field_y = rk.field_y - 1;
+            ArchiveRequest.field_y = ArchiveRequest.field_y - 1;
           }
         } else {
           if (null != gd.field_j) {
-            if (0 >= rk.field_y) {
+            if (0 >= ArchiveRequest.field_y) {
               if (ko.field_P > 0) {
                 ko.field_P = ko.field_P - 1;
               } else {
@@ -58,11 +58,11 @@ final class mn extends IntrusiveNode {
                 }
               }
             } else {
-              rk.field_y = rk.field_y - 1;
+              ArchiveRequest.field_y = ArchiveRequest.field_y - 1;
             }
           } else {
             if (sj.field_d != null) {
-              if (rk.field_y <= 0) {
+              if (ArchiveRequest.field_y <= 0) {
                 if (0 < mp.field_b) {
                   mp.field_b = mp.field_b - 1;
                 } else {
@@ -74,17 +74,17 @@ final class mn extends IntrusiveNode {
                   }
                 }
               } else {
-                rk.field_y = rk.field_y - 1;
+                ArchiveRequest.field_y = ArchiveRequest.field_y - 1;
               }
             } else {
               im.field_g = false;
               if (0 >= ko.field_P) {
                 if (0 >= mp.field_b) {
-                  if (rk.field_y < ld.field_b) {
-                    if (rk.field_y == 0) {
+                  if (ArchiveRequest.field_y < ld.field_b) {
+                    if (ArchiveRequest.field_y == 0) {
                       ne.c(false);
                     }
-                    rk.field_y = rk.field_y + 1;
+                    ArchiveRequest.field_y = ArchiveRequest.field_y + 1;
                   }
                 } else {
                   mp.field_b = mp.field_b - 1;

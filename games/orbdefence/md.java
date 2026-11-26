@@ -238,7 +238,7 @@ final class md extends rg {
           }
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
-            if (!cd.a(param0 + 20676, (char) var3) &&
+            if (!NetworkArchiveRequest.a(param0 + 20676, (char) var3) &&
               !hm.a(-20625, (char) var3)) {
               return true;
             }

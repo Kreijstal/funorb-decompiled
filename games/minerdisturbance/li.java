@@ -12,8 +12,8 @@ final class li implements uj {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          stackIn_4_0 = !(uh.field_e);
-          uh.field_e = stackIn_4_0;
+          stackIn_4_0 = !(SectorCacheStore.field_e);
+          SectorCacheStore.field_e = stackIn_4_0;
           if (param0) {
             field_a = (int[]) null;
           }
@@ -1484,7 +1484,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-126, "create_select_alternative");
                 if (null != var2) {
-                  vl.field_I = bh.a(var2, -118);
+                  DiskArchiveRequest.field_I = bh.a(var2, -118);
                 }
                 var2 = e.a(90, "create_optin_news");
                 if (null != var2) {
@@ -1947,7 +1947,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-125, "achievements");
                 if (var2 != null) {
-                  em.field_u = bh.a(var2, -119);
+                  ArchiveRequest.field_u = bh.a(var2, -119);
                 }
                 var2 = e.a(param0 - 9385, "achievementsthisgame");
                 if (var2 != null) {
@@ -2097,7 +2097,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-116, "returntogame");
                 if (var2 != null) {
-                  ee.field_K = bh.a(var2, 52);
+                  NetworkArchiveRequest.field_K = bh.a(var2, 52);
                 }
                 var2 = e.a(48, "endgameresign");
                 if (var2 != null) {
@@ -2933,35 +2933,35 @@ final class li implements uj {
                 }
                 var2 = e.a(88, "discard");
                 if (var2 != null) {
-                  ee.field_E = bh.a(var2, 28);
+                  NetworkArchiveRequest.field_E = bh.a(var2, 28);
                 }
                 var2 = e.a(-119, "mustlogin4,1");
                 if (null != var2) {
-                  nm.field_f[1] = bh.a(var2, -128);
+                  DiskCacheWorker.field_f[1] = bh.a(var2, -128);
                 }
                 var2 = e.a(-128, "mustlogin4,2");
                 if (var2 != null) {
-                  nm.field_f[2] = bh.a(var2, 19);
+                  DiskCacheWorker.field_f[2] = bh.a(var2, 19);
                 }
                 var2 = e.a(33, "mustlogin4,3");
                 if (null != var2) {
-                  nm.field_f[3] = bh.a(var2, -124);
+                  DiskCacheWorker.field_f[3] = bh.a(var2, -124);
                 }
                 var2 = e.a(param0 - 9213, "mustlogin4,4");
                 if (null != var2) {
-                  nm.field_f[4] = bh.a(var2, -125);
+                  DiskCacheWorker.field_f[4] = bh.a(var2, -125);
                 }
                 var2 = e.a(116, "mustlogin4,5");
                 if (var2 != null) {
-                  nm.field_f[5] = bh.a(var2, -122);
+                  DiskCacheWorker.field_f[5] = bh.a(var2, -122);
                 }
                 var2 = e.a(41, "mustlogin4,6");
                 if (null != var2) {
-                  nm.field_f[6] = bh.a(var2, -126);
+                  DiskCacheWorker.field_f[6] = bh.a(var2, -126);
                 }
                 var2 = e.a(param0 - 9380, "mustlogin4,7");
                 if (var2 != null) {
-                  nm.field_f[7] = bh.a(var2, eg.a(param0, 9228));
+                  DiskCacheWorker.field_f[7] = bh.a(var2, eg.a(param0, 9228));
                 }
                 var2 = e.a(param0 - 9365, "mustlogin_notloggedin");
                 if (var2 != null) {

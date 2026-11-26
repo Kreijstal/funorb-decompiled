@@ -98,7 +98,7 @@ final class go extends qe {
             if (ob.field_dc != var3_int &&
               ob.field_Nb != var3_int) {
               if (ob.field_nc == var3_int) {
-                this.a(em.field_F, -8963);
+                this.a(NetworkArchiveRequest.field_F, -8963);
                 return;
               }
               if (ob.field_Ib == var3_int) {
@@ -334,10 +334,10 @@ final class go extends qe {
         vo.a(82, 82, 398, 336, 152);
         vo.a(118, 72, 408, 185, 0);
         vo.a(57, 72, 408, 185, 455);
-        vf.a(32, true, 164, 106, 8);
-        vf.a(32, true, 468, 115, 8);
-        vf.a(352, true, 32, -39, 48);
-        vf.a(352, true, 600, 103, 48);
+        ArchiveRequest.a(32, true, 164, 106, 8);
+        ArchiveRequest.a(32, true, 468, 115, 8);
+        ArchiveRequest.a(352, true, 32, -39, 48);
+        ArchiveRequest.a(352, true, 600, 103, 48);
         je.a((byte) -99, 352, 48, pi.field_b, 0, 32);
         je.a((byte) -113, 352, 48, pi.field_b, 608, 32);
         AwtRasterBuffer.a(0, 640, 0, (byte) 118);
@@ -442,10 +442,10 @@ final class go extends qe {
               var2 = var2 | 1 << var5_ref_hb.field_j;
             }
           }
-          if (0 != (~cc.field_d & var2)) {
+          if (0 != (~DiskCacheWorker.field_d & var2)) {
             gh.a(15, 11);
           }
-          cc.field_d = var2;
+          DiskCacheWorker.field_d = var2;
           var3 = 0;
           var4 = this.field_Y.field_A;
           for (var5 = 0; var4.length > var5; var5++) {
@@ -1668,8 +1668,8 @@ final class go extends qe {
 
     final void c() {
         super.c();
-        ln.a(this.field_D, -28711);
-        ln.a(this.field_L, -28711);
+        SectorCacheStore.a(this.field_D, -28711);
+        SectorCacheStore.a(this.field_L, -28711);
         AccountCreationResultPanel.field_Pb = null;
         this.field_R = null;
         AccountNameAvailabilityValidator.field_u = null;
@@ -2945,7 +2945,7 @@ final class go extends qe {
               this.a(rn.field_d, -8963);
             } else {
               if (this.field_Y.field_k == 32) {
-                this.a(co.field_E, -8963);
+                this.a(DiskArchiveRequest.field_E, -8963);
               }
             }
           } else {
@@ -3012,7 +3012,7 @@ final class go extends qe {
           this.c(7872);
           this.l(18014);
           if (kn.field_g) {
-            cc.field_d = 0;
+            DiskCacheWorker.field_d = 0;
             qa.field_a = new int[this.field_Y.field_A.length][];
             var10 = this.field_Y.field_A;
             for (var4Lifetime1 = 0; var10.length > var4Lifetime1; var4Lifetime1++) {

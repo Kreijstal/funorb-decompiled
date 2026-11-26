@@ -11,7 +11,7 @@ final class ea {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.a("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) n.field_g));
+          var2 = new RgbSprite(param1.a("final_frame.jpg", "", 24874), (java.awt.Component) ((Object) DiskCacheWorker.field_g));
           var3 = var2.field_y;
           var4 = var2.field_w;
           MouseInput.a(true);

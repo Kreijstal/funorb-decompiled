@@ -163,7 +163,7 @@ final class AccountServiceResult {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_e == rl.field_C[var3].field_e) {
               var4 = rl.field_C[var3].a((byte) -123);
-              if (hi.field_y < rk.field_T[var4]) {
+              if (NetworkArchiveRequest.field_y < rk.field_T[var4]) {
                 rk.field_T[var4] = rk.field_T[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

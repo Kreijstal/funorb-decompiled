@@ -232,7 +232,7 @@ abstract class cb extends ok implements wg {
               stackIn_63_2 = -73;
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
-                (vl.a(stackIn_63_0, stackIn_63_1, stackIn_63_2))) {
+                (DiskArchiveRequest.a(stackIn_63_0, stackIn_63_1, stackIn_63_2))) {
                 var7 = (pe) (pe.field_qb.nextForward((byte) 56));
                 continue;
               }

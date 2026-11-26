@@ -107,7 +107,7 @@ abstract class SessionGameApplet extends GameApplet {
         if (wi.field_p) {
           return -1;
         }
-        var2 = wc.a(this.field_n, 56, mc.a((byte) 102), this.field_x, true, cd.b(param0 ^ -73));
+        var2 = wc.a(this.field_n, 56, mc.a((byte) 102), this.field_x, true, DiskCacheWorker.b(param0 ^ -73));
         if (var2 == -1) {
           return -1;
         }
@@ -681,7 +681,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ProxySocketConnector.a(this.field_n, le.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(param0 ^ 2616), cd.b(76));
+            var5_intLifetime1 = ProxySocketConnector.a(this.field_n, le.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(param0 ^ 2616), DiskCacheWorker.b(76));
             if (var5_intLifetime1 != -1) {
               el.a(var5_intLifetime1, (byte) 33, Transmogrify.field_B, wh.field_F);
               Transmogrify.field_B = null;
@@ -697,7 +697,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (param2) {
               wi.field_p = false;
             } else {
-              var5_intLifetime2 = wc.a(this.field_n, -122, mc.a((byte) 102), this.field_x, false, cd.b(param0 ^ -2582));
+              var5_intLifetime2 = wc.a(this.field_n, -122, mc.a((byte) 102), this.field_x, false, DiskCacheWorker.b(param0 ^ -2582));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   gb.a(var5_intLifetime2, param0 ^ -2617, Transmogrify.field_B);

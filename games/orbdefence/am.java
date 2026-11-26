@@ -30,22 +30,22 @@ final class am {
     final static void a(int param0) {
         if (param0 != -4062) {
           am.a(-120);
-          if (null == cd.field_w) {
+          if (null == NetworkArchiveRequest.field_w) {
             if (null == wf.field_b) {
               return;
             }
             wf.field_b.dispose();
             return;
           }
-          cd.field_w.dispose();
+          NetworkArchiveRequest.field_w.dispose();
           if (null != wf.field_b) {
             wf.field_b.dispose();
             return;
           }
           return;
         }
-        if (null != cd.field_w) {
-          cd.field_w.dispose();
+        if (null != NetworkArchiveRequest.field_w) {
+          NetworkArchiveRequest.field_w.dispose();
           if (null == wf.field_b) {
             return;
           }

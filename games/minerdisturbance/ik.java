@@ -557,7 +557,7 @@ final class ik extends kn implements be, sh, f {
               var1_int = var1_int + sn.field_d;
             }
             if (var4 >= 0) {
-              IntrusiveDeque.field_b.a(var6, var8Lifetime1, nm.field_e + var1_int, var5, -1);
+              IntrusiveDeque.field_b.a(var6, var8Lifetime1, DiskCacheWorker.field_e + var1_int, var5, -1);
               var1_int = var1_int + (SpriteState.field_z + (sn.field_d + nk.field_u));
             } else {
               gh.field_b.a(var6, var8Lifetime1, var1_int + he.field_a, var5, -1);

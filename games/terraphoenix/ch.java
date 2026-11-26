@@ -89,7 +89,7 @@ final class ch {
                 if (param0 == 14) {
                   var7_intLifetime1 = var7_intLifetime1 * 2 / 3;
                 }
-                AccountRequestState.field_f.a(wh.field_g + var7_intLifetime1 + "%", 319 + this.field_i, 16 + param5 + 28, param1, -1);
+                AccountRequestState.field_f.a(DiskCacheWorker.field_g + var7_intLifetime1 + "%", 319 + this.field_i, 16 + param5 + 28, param1, -1);
                 if (0 == od.field_c[param0].field_b[2]) {
                   AccountRequestState.field_f.a(di.field_h[4], this.field_i + 319, 42 + (16 + param5), param1, -1);
                 }
@@ -199,7 +199,7 @@ final class ch {
         if (param0 > -35) {
           return (rh[]) null;
         }
-        return new rh[]{vj.field_K, rf.field_z, lf.field_f, rf.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
+        return new rh[]{vj.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, uc.field_p, uc.field_n, oe.field_d, GameApplet.field_f, fi.field_p, ai.field_b, BattleState.field_l, le.field_n, wg.field_b};
     }
 
     final void a(int param0, Terraphoenix param1) {
@@ -732,7 +732,7 @@ final class ch {
                   if (var6_int == 14) {
                     var8 = 2 * var8 / 3;
                   }
-                  AccountRequestState.field_f.b(wh.field_g + var8 + "%", 362 - this.field_i, 347, 0, -1);
+                  AccountRequestState.field_f.b(DiskCacheWorker.field_g + var8 + "%", 362 - this.field_i, 347, 0, -1);
                   AccountRequestState.field_f.b(kh.field_K + od.field_c[var6_int].field_b[0] + "%", -this.field_i + 512, 347, 0, -1);
                   AccountRequestState.field_f.b(ai.field_e + od.field_c[var6_int].field_s, -this.field_i + 362, 362, 0, -1);
                   return;

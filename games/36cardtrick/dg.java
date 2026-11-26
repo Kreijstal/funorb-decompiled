@@ -130,7 +130,7 @@ class dg extends hl {
           var7 = var5.a(param0, (byte) 90, (lk) (this));
           var8 = var5.a((lk) (this), -1815612287, param1);
           do {
-            na.a(var8 + (var6.field_n - 2), 51, var6.field_j + 2, 2 + var6.field_k, -2 + (var7 + var6.field_i));
+            NetworkArchiveRequest.a(var8 + (var6.field_n - 2), 51, var6.field_j + 2, 2 + var6.field_k, -2 + (var7 + var6.field_i));
             var6 = var6.field_m;
           } while (var6 != null);
         }

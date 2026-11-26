@@ -106,7 +106,7 @@ abstract class me extends wb {
               var2 = sc.field_g;
               stackIn_11_0 = (param0) ? -2 : -1;
               bj.field_f = stackIn_11_0;
-              ae.field_u = stackIn_11_0;
+              ArchiveRequest.field_u = stackIn_11_0;
               ne.field_o = stackIn_11_0;
               rc.field_a = sa.field_c;
               var2.field_i = 0;

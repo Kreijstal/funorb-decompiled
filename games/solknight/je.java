@@ -65,7 +65,7 @@ final class je {
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -125 % ((param1 - 30) / 35);
-        return md.a(param2, param3, param0, param4, 1, -1, 1, 3, 1);
+        return DiskArchiveRequest.a(param2, param3, param0, param4, 1, -1, 1, 3, 1);
     }
 
     final synchronized static long correctedCurrentTimeMillis(int param0) {

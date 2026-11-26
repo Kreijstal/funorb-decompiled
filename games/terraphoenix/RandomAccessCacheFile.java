@@ -302,7 +302,7 @@ final class RandomAccessCacheFile {
           ha.field_s = new int[kf.field_b];
           aa.field_k = new boolean[kf.field_b];
           qc.field_b = new byte[kf.field_b][];
-          rf.field_p = new int[kf.field_b];
+          ArchiveRequest.field_p = new int[kf.field_b];
           var18.position = param0.length + (-7 - kf.field_b * 8);
           ah.field_A = var18.readUnsignedShort(-25578);
           sb.field_j = var18.readUnsignedShort(-25578);
@@ -321,7 +321,7 @@ final class RandomAccessCacheFile {
             sb.field_m[var4Lifetime2] = var18.readUnsignedShort(-25578);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < kf.field_b; var4Lifetime3++) {
-            rf.field_p[var4Lifetime3] = var18.readUnsignedShort(-25578);
+            ArchiveRequest.field_p[var4Lifetime3] = var18.readUnsignedShort(-25578);
           }
           var18.position = -((-1 + var3) * 3) + (-7 + param0.length) - kf.field_b * 8;
           ProxyAuthenticationRequiredException.field_a = new int[var3];
@@ -334,7 +334,7 @@ final class RandomAccessCacheFile {
           var18.position = 0;
           for (var4Lifetime5 = 0; kf.field_b > var4Lifetime5; var4Lifetime5++) {
             var5 = sb.field_m[var4Lifetime5];
-            var6 = rf.field_p[var4Lifetime5];
+            var6 = ArchiveRequest.field_p[var4Lifetime5];
             var7 = var6 * var5;
             var21 = new byte[var7];
             var19 = var21;

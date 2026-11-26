@@ -97,7 +97,7 @@ final class kh extends vk implements dc, ga, qk {
         var3 = var3 + (this.a((byte) 33, var3, ph.field_mb, "", 20, 170, this.field_E) + 5);
         var3 = var3 + this.a(170, tj.field_y, false, var3, this.field_L);
         var3 = var3 + (5 + this.a(this.field_G, 170, sk.field_a, 37, mc.field_d, var3));
-        var3 = var3 + (this.a(this.field_J, 170, tg.field_w, 119, d.field_c, var3) + 5);
+        var3 = var3 + (this.a(this.field_J, 170, DiskArchiveRequest.field_w, 119, d.field_c, var3) + 5);
         var3 = var3 + this.a(var3, this.field_K, lj.field_f, -113, 170);
         ad var4 = new ad(46, var3, this.field_i - 90, 25, this.field_D, true, -120 + this.field_i, 5, nb.field_b, 11579568, hc.field_d);
         this.a(true, var4);

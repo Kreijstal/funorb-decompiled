@@ -264,7 +264,7 @@ final class fh {
               if (jd.field_c) {
                 param2 = b.a(new String[]{param2}, cg.field_c, param1 + 1178);
               }
-              if (pc.field_f) {
+              if (DiskCacheWorker.field_f) {
                 param2 = GameCanvas.field_c;
               }
               ki.field_c.a(param2, param0, false);

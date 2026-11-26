@@ -43,8 +43,8 @@ final class wd {
               for (var5_int = 0; var5_int < jd.field_q; var5_int++) {
                 sc.field_g.field_n[var5_int] = var4_ref_ei.field_r[var5_int];
               }
-              bj.field_f = ae.field_u;
-              ae.field_u = ne.field_o;
+              bj.field_f = ArchiveRequest.field_u;
+              ArchiveRequest.field_u = ne.field_o;
               ne.field_o = ImageProducerRasterBuffer.field_k;
               ImageProducerRasterBuffer.field_k = var4_ref_ei.field_s;
               return true;
@@ -67,8 +67,8 @@ final class wd {
               return false;
             }
             if (bl.field_b == 0) {
-              bj.field_f = ae.field_u;
-              ae.field_u = ne.field_o;
+              bj.field_f = ArchiveRequest.field_u;
+              ArchiveRequest.field_u = ne.field_o;
               ne.field_o = ImageProducerRasterBuffer.field_k;
               ImageProducerRasterBuffer.field_k = tc.field_a;
               tc.field_a = -1;

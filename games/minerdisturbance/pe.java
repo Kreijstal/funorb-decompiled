@@ -71,7 +71,7 @@ final class pe extends fd {
           mj.field_p = param2 * 1000 / param7;
           im.field_b.setRootStream(hj.field_f);
           km.field_a = param6;
-          km.field_a.a((byte) -127, ee.field_J);
+          km.field_a.a((byte) -127, NetworkArchiveRequest.field_J);
           mj.field_o.setRootStream(km.field_a);
           int var8_int = -122 % ((param3 + 69) / 50);
         } catch (RuntimeException runtimeException) {

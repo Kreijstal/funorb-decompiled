@@ -89,7 +89,7 @@ final class gf {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (oa.a(true, param1, "getcookies"));
-              var4 = dc.a(var3, ';', (byte) -125);
+              var4 = NetworkArchiveRequest.a(var3, ';', (byte) -125);
               for (var5 = param0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

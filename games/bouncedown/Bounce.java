@@ -130,7 +130,7 @@ public final class Bounce extends GameClient {
           pb.clearDeclaredStaticReferences(-19);
           MidiPcmStream.clearStaticReferences(-112);
           v.clearStaticReferences(-8217);
-          vi.clearStaticReferences((byte) 74);
+          DiskCacheWorker.clearStaticReferences((byte) 74);
           jf.e(-18695);
           BufferedSocket.clearStaticReferences(-14582);
           Platform.clearStaticReferences((byte) 64);
@@ -188,9 +188,9 @@ public final class Bounce extends GameClient {
           qb.a((byte) -30);
           tb.clearStaticReferences((byte) 68);
           ml.clearStaticReferences(-1);
-          lf.a(false);
-          vh.resetStaticState(11826);
-          md.clearStaticReferences(-94);
+          NetworkArchiveRequest.a(false);
+          SectorCacheStore.resetStaticState(11826);
+          DiskArchiveRequest.clearStaticReferences(-94);
           ce.clearStaticReferences((byte) -49);
           ok.c(114);
           wb.clearStaticReferences((byte) 65);
@@ -376,13 +376,13 @@ public final class Bounce extends GameClient {
         try {
           if (~this.field_J != ~uc.field_C ||
             ll.field_y != this.field_M ||
-            0 != vh.field_e) {
+            0 != SectorCacheStore.field_e) {
             this.field_J = uc.field_C;
             qf.field_b = -1;
             this.field_M = ll.field_y;
             this.field_L = true;
           }
-          if (vh.field_e != 0) {
+          if (SectorCacheStore.field_e != 0) {
             this.field_K = 1;
             if (var10 != 0) {
               this.field_K = 0;
@@ -422,7 +422,7 @@ public final class Bounce extends GameClient {
               ta.field_c = ta.field_c - 0.01;
             }
           }
-          if (vh.field_e != 0) {
+          if (SectorCacheStore.field_e != 0) {
             l.field_c = l.field_c - jd.field_e;
             vd.field_a = vd.field_a + 1;
           }
@@ -486,7 +486,7 @@ public final class Bounce extends GameClient {
                   dk.a(false, 2, 253);
                 }
                 if (5000 == fa.field_c &&
-                  vh.a(0, (byte) 88)) {
+                  SectorCacheStore.a(0, (byte) 88)) {
                   dk.a(false, 9, 246);
                 }
                 if (he.field_n[0].field_o < 95.0 &&
@@ -562,7 +562,7 @@ public final class Bounce extends GameClient {
               (var7 - 8 - gk.field_e.field_s) < ll.field_y &&
               ll.field_y <= 16 + var7 &&
               this.field_L &&
-              1 == vh.field_e) {
+              1 == SectorCacheStore.field_e) {
               ProxyAuthenticationRequiredException.d(-6144);
               rj.field_j = 2;
             }
@@ -574,7 +574,7 @@ public final class Bounce extends GameClient {
               (-8 + var7Lifetime1 - gk.field_e.field_s) < ll.field_y &&
               ll.field_y <= var7Lifetime1 + 16 &&
               this.field_L &&
-              vh.field_e == 1) {
+              SectorCacheStore.field_e == 1) {
               MusicPatchPcmStream.field_o.field_l = false;
               if (!this.field_L) {
                 MusicPatchPcmStream.field_o.field_n = 0;
@@ -679,7 +679,7 @@ public final class Bounce extends GameClient {
             !(vk.field_b <= 1)) &&
             (ng.field_a[13] ||
             jk.field_q != -1 &&
-            (vh.field_e != 0 ||
+            (SectorCacheStore.field_e != 0 ||
             ng.field_a[83] ||
             ng.field_a[84])) && (PcmResampler.field_g &&
             MusicPatchPcmStream.field_o == null)) {
@@ -937,7 +937,7 @@ public final class Bounce extends GameClient {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0)) {
               if (vc.d((byte) 122)) {
-                var2_int = vi.c(param0 + 88);
+                var2_int = DiskCacheWorker.c(param0 + 88);
                 if (var2_int == 2 &&
                   sj.field_f != null) {
                   mh.a(sj.field_f, (byte) 111);
@@ -970,7 +970,7 @@ public final class Bounce extends GameClient {
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
-                    tc.a(vi.b(param0 ^ 37), 6091);
+                    tc.a(DiskCacheWorker.b(param0 ^ 37), 6091);
                     if ((var3 != 0) &&
                       (null != sj.field_f)) {
                       mh.a(sj.field_f, (byte) 121);
@@ -1191,7 +1191,7 @@ public final class Bounce extends GameClient {
         int var5 = 0;
         var5 = field_N;
         try {
-          vh.a(32459);
+          SectorCacheStore.a(32459);
           qe.a((byte) -37, va.field_a);
           if (ca.field_e != null) {
             if (null != pa.field_c && (!pa.field_c.c(-79) ||
@@ -1319,7 +1319,7 @@ public final class Bounce extends GameClient {
               jl.field_d.flushAndMarkDrainCheck();
             }
             if (!jh.b(767564065)) {
-              bh.field_d = lf.a(-97, 4);
+              bh.field_d = NetworkArchiveRequest.a(-97, 4);
             }
             AwtRasterBuffer.field_c = true;
             vc.e((byte) -44);
@@ -1334,13 +1334,13 @@ public final class Bounce extends GameClient {
           ej.field_a = nc.a("title_achievements", ub.field_a, "", param1 - 3134);
           AccountRequestState.field_b = nc.a("title_highscores", ub.field_a, "", 0);
           mi.field_k = nc.a("title_instructions", ub.field_a, "", 0);
-          cl.field_p = vh.a(ub.field_a, "", (byte) -13, "frame");
-          ig.field_d = vh.a(ub.field_a, "", (byte) 117, "frame_50");
+          cl.field_p = SectorCacheStore.a(ub.field_a, "", (byte) -13, "frame");
+          ig.field_d = SectorCacheStore.a(ub.field_a, "", (byte) 117, "frame_50");
           jc.field_n = nc.a("welldone", ub.field_a, "", param1 ^ 3134);
           ph.field_b = nc.a("betterluck", ub.field_a, "", 0);
-          if (vh.a(0, (byte) 88)) {
+          if (SectorCacheStore.a(0, (byte) 88)) {
             mb.field_q = nc.a("bg_halloween", ub.field_a, "", 0);
-            uk.field_f = vh.a(ub.field_a, "", (byte) 118, "bats");
+            uk.field_f = SectorCacheStore.a(ub.field_a, "", (byte) 118, "bats");
             if (var5 != 0) {
               mb.field_q = nc.a("background", ub.field_a, "", 0);
             }
@@ -1349,38 +1349,38 @@ public final class Bounce extends GameClient {
           }
           BufferedSocket.field_o = nc.a("wall", ub.field_a, "", param1 - 3134);
           PacketBuffer.field_j = nc.a("topspikes", ub.field_a, "", param1 ^ 3134);
-          vb.field_m = vh.a(ub.field_a, "", (byte) -68, "squish");
+          vb.field_m = SectorCacheStore.a(ub.field_a, "", (byte) -68, "squish");
           se.field_A = nc.a("spikes", ub.field_a, "", param1 ^ 3134);
           nc.a("scorebox", ub.field_a, "", 0);
-          hd.field_a = vh.a(ub.field_a, "", (byte) -115, "pupils");
-          ci.field_G = vh.a(ub.field_a, "", (byte) 111, "pops");
-          Platform.field_a = vh.a(ub.field_a, "", (byte) 119, "players");
-          va.field_d = vh.a(ub.field_a, "", (byte) -38, "newhighscore");
+          hd.field_a = SectorCacheStore.a(ub.field_a, "", (byte) -115, "pupils");
+          ci.field_G = SectorCacheStore.a(ub.field_a, "", (byte) 111, "pops");
+          Platform.field_a = SectorCacheStore.a(ub.field_a, "", (byte) 119, "players");
+          va.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -38, "newhighscore");
           re.field_a = nc.a("plat1", ub.field_a, "", 0);
           a.field_f = nc.a("plat1b", ub.field_a, "", 0);
           q.field_F = nc.a("plat2", ub.field_a, "", 0);
           ge.field_b = nc.a("eye", ub.field_a, "", 0);
-          wj.field_d = vh.a(ub.field_a, "", (byte) -63, "mouths");
-          ld.field_h = vh.a(ub.field_a, "", (byte) -116, "fire");
-          w.field_c = vh.a(ub.field_a, "", (byte) -81, "burns");
+          wj.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -63, "mouths");
+          ld.field_h = SectorCacheStore.a(ub.field_a, "", (byte) -116, "fire");
+          w.field_c = SectorCacheStore.a(ub.field_a, "", (byte) -81, "burns");
           kc.field_c = nc.a("plat0", ub.field_a, "", 0);
-          fd.field_n = vh.a(ub.field_a, "", (byte) 125, "plat3");
-          nk.field_h = vh.a(ub.field_a, "", (byte) 117, "plat4");
-          bd.field_j = vh.a(ub.field_a, "", (byte) 120, "plat4grw");
-          wb.field_e = vh.a(ub.field_a, "", (byte) 10, "plat4shr");
-          nl.field_d = vh.a(ub.field_a, "", (byte) -15, "plat4spi");
+          fd.field_n = SectorCacheStore.a(ub.field_a, "", (byte) 125, "plat3");
+          nk.field_h = SectorCacheStore.a(ub.field_a, "", (byte) 117, "plat4");
+          bd.field_j = SectorCacheStore.a(ub.field_a, "", (byte) 120, "plat4grw");
+          wb.field_e = SectorCacheStore.a(ub.field_a, "", (byte) 10, "plat4shr");
+          nl.field_d = SectorCacheStore.a(ub.field_a, "", (byte) -15, "plat4spi");
           nc.a("clickme", ub.field_a, "", param1 - 3134);
-          DualLinkNode.field_h = vh.a(ub.field_a, "", (byte) 108, "achievements");
+          DualLinkNode.field_h = SectorCacheStore.a(ub.field_a, "", (byte) 108, "achievements");
           cf.field_c = nc.a("unachieved", j.field_j, "basic", 0);
           nc.a("orbcoin", j.field_j, "basic", 0);
-          pe.field_a = vh.a(ub.field_a, "", (byte) 114, "wins");
-          mc.field_b = vh.a(ub.field_a, "", (byte) -94, "draw");
+          pe.field_a = SectorCacheStore.a(ub.field_a, "", (byte) 114, "wins");
+          mc.field_b = SectorCacheStore.a(ub.field_a, "", (byte) -94, "draw");
           nc.a("instructions", ub.field_a, "", 0);
           nc.a("highscorebutton", ub.field_a, "", 0);
           nc.a("1player", ub.field_a, "", 0);
           nc.a("2player", ub.field_a, "", param1 - 3134);
           nc.a("3player", ub.field_a, "", param1 - 3134);
-          vh.a(ub.field_a, "", (byte) 114, "arrows");
+          SectorCacheStore.a(ub.field_a, "", (byte) 114, "arrows");
           nc.a("fullscreen", ub.field_a, "", param1 ^ 3134);
           nc.a("musicon", ub.field_a, "", 0);
           nc.a("musicoff", ub.field_a, "", 0);
@@ -1848,7 +1848,7 @@ public final class Bounce extends GameClient {
                 }
               }
               if (decompiledFrameRemainder0) {
-                bh.field_d = lf.a(-77, 4);
+                bh.field_d = NetworkArchiveRequest.a(-77, 4);
                 rj.field_j = -1;
                 this.c(false, fa.field_c);
                 decompiledFrameRemainder0 = (var9 != 0);

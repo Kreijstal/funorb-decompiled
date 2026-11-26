@@ -96,7 +96,7 @@ final class jj {
               fq.a(1, (byte) -70)) {
               var6_intLifetime1 = kd.field_n.readUnsignedByte(255);
               bf.field_b = var6_intLifetime1;
-              ld.field_r = null;
+              NetworkArchiveRequest.field_r = null;
               kd.field_n.position = 0;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -172,7 +172,7 @@ final class jj {
                 }
               } else {
                 try {
-                  hi.a(-3729, "zap", le.b((byte) -20), new Object[]{ni.a(37, go.field_h)});
+                  hi.a(-3729, "zap", le.b((byte) -20), new Object[]{DiskCacheWorker.a(37, go.field_h)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

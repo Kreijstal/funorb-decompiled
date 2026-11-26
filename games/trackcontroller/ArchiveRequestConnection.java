@@ -13,7 +13,7 @@ abstract class ArchiveRequestConnection {
     byte field_i;
     PacketBuffer field_a;
     volatile int field_e;
-    hi field_l;
+    NetworkArchiveRequest field_l;
 
     final static int a(byte param0, int param1) {
         int var2 = -94 / ((55 - param0) / 54);
@@ -56,18 +56,18 @@ abstract class ArchiveRequestConnection {
 
     abstract boolean b(int param0);
 
-    final hi a(int param0, boolean param1, boolean param2, int param3, byte param4) {
-        hi stackIn_3_0 = null;
+    final NetworkArchiveRequest a(int param0, boolean param1, boolean param2, int param3, byte param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        hi stackIn_16_0 = null;
+        NetworkArchiveRequest stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         long var6;
-        hi var8;
+        NetworkArchiveRequest var8;
         long var6Lifetime1;
-        hi var8Lifetime1;
+        NetworkArchiveRequest var8Lifetime1;
         if (!param2) {
           var6 = (long)param3 + ((long)param0 << 32);
-          var8 = new hi();
+          var8 = new NetworkArchiveRequest();
           var8.field_m = var6;
           stackIn_16_0 = var8;
           stackIn_17_1 = (!param1) ? false : true;
@@ -88,7 +88,7 @@ abstract class ArchiveRequestConnection {
         }
         this.field_i = (byte) -39;
         var6Lifetime1 = (long)param3 + ((long)param0 << 32);
-        var8Lifetime1 = new hi();
+        var8Lifetime1 = new NetworkArchiveRequest();
         var8Lifetime1.field_m = var6Lifetime1;
         stackIn_3_0 = var8Lifetime1;
         stackIn_4_1 = (!param1) ? false : true;

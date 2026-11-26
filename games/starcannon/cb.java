@@ -158,9 +158,9 @@ final class cb {
           var4 = var15.readUnsignedByte(7909);
           if (0 != var4) {
             var5 = var3.field_h;
-            ef.field_f[0] = we.field_i;
+            DiskCacheWorker.field_f[0] = we.field_i;
             for (var6_int = 1; var6_int < var4; var6_int++) {
-              ef.field_f[var6_int] = var12.readString(-103);
+              DiskCacheWorker.field_f[var6_int] = var12.readString(-103);
             }
             ai.a(var5, false, var4);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -179,12 +179,12 @@ final class cb {
             var10 = 0;
             while (var9 < var8) {
               var11 = jk.field_c[var9];
-              var6[0][var10] = ef.field_f[var11];
+              var6[0][var10] = DiskCacheWorker.field_f[var11];
               var19[0][var10 * 4] = AwtRasterBuffer.field_f[var11];
               var19[0][1 + var10 * 4] = nf.field_b[var11];
               var19[0][2 + 4 * var10] = MouseWheelSource.field_f[var11];
               var19[0][4 * var10 + 3] = ab.field_G[var11];
-              if (mc.a(ef.field_f[var11], 0) &&
+              if (mc.a(DiskCacheWorker.field_f[var11], 0) &&
                 0 == nf.field_b[var11] + (MouseWheelSource.field_f[var11] + ab.field_G[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -198,12 +198,12 @@ final class cb {
             var10Lifetime1 = var14;
             while (var8 > var13) {
               var11Lifetime1 = jk.field_c[var13 + var5];
-              var6[1][var14] = ef.field_f[var11Lifetime1];
+              var6[1][var14] = DiskCacheWorker.field_f[var11Lifetime1];
               var19[1][4 * var14] = AwtRasterBuffer.field_f[var11Lifetime1];
               var19[1][1 + 4 * var14] = nf.field_b[var11Lifetime1];
               var19[1][2 + 4 * var14] = MouseWheelSource.field_f[var11Lifetime1];
               var19[1][4 * var14 + 3] = ab.field_G[var11Lifetime1];
-              if (mc.a(ef.field_f[var11Lifetime1], 0) &&
+              if (mc.a(DiskCacheWorker.field_f[var11Lifetime1], 0) &&
                 nf.field_b[var11Lifetime1] + MouseWheelSource.field_f[var11Lifetime1] + ab.field_G[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;

@@ -19,7 +19,7 @@ final class w {
     final static void a(int param0, int param1, de param2) {
         hb var3 = null;
         try {
-          var3 = gf.field_c;
+          var3 = SectorCacheStore.field_c;
           var3.b(true, param1);
           if (param0 > -69) {
             field_b = (Sprite[]) null;

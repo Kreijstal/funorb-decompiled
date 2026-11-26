@@ -469,7 +469,7 @@ final class md {
             return;
           }
           if (1 == var2) {
-            var12 = (sf) (sm.field_y.beginForward(-125));
+            var12 = (sf) (DiskArchiveRequest.field_y.beginForward(-125));
             if (var12 == null) {
               dc.d(118);
               return;

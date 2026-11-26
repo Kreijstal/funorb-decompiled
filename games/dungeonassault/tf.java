@@ -62,7 +62,7 @@ final class tf {
           if (ImageProducerRasterBuffer.field_p != null) {
             tp.a(param1 ^ 1041792331, 92.0f, he.field_n);
             g.a(fi.d(false), param1 ^ 1041775506);
-            vf.c((byte) 117);
+            ArchiveRequest.c((byte) 117);
             ImageProducerRasterBuffer.field_p = null;
             nf.d(0);
             return false;

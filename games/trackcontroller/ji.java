@@ -43,7 +43,7 @@ final class ji {
           } else {
             if (!ic.a(false)) {
               SoftwareRasterizer.clearRaster();
-              hi.b(320, -122, 240);
+              NetworkArchiveRequest.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
               if (rl.field_N == 0) {
@@ -98,7 +98,7 @@ final class ji {
           } else {
             if (!ic.a(false)) {
               SoftwareRasterizer.clearRaster();
-              hi.b(320, -122, 240);
+              NetworkArchiveRequest.b(320, -122, 240);
               qd.a(param2, 0, 0, 2901);
             } else {
               if (rl.field_N == 0) {

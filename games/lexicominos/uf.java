@@ -103,7 +103,7 @@ final class uf extends tj {
             return stackIn_4_0;
           }
           var5 = (CharSequence) ((Object) param1);
-          var3_int = si.a((byte) 123, var5);
+          var3_int = ArchiveRequest.a((byte) 123, var5);
           if (var3_int > 0 &&
             130 >= var3_int) {
             return rh.field_p;

@@ -114,7 +114,7 @@ final class th {
             th.a(-70, false, 43, (CharSequence) null);
           }
           IntrusiveNode.field_d = param2;
-          ki.a(SoftwareRasterizer.field_i / 2, SoftwareRasterizer.field_b / 2, -116);
+          ArchiveRequest.a(SoftwareRasterizer.field_i / 2, SoftwareRasterizer.field_b / 2, -116);
           GameEntity.a(param0.field_x, -29770, param1.field_r + param1.field_x, param1.field_x, param0.field_r + param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "th.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

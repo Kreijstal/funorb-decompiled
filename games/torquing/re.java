@@ -145,10 +145,10 @@ final class re {
         int var9Lifetime1;
         var13 = Torquing.field_u;
         try {
-          hh.field_b = pb.a("frame_top", -1, "commonui", param3);
-          vf.field_i = pb.a("frame_bottom", -1, "commonui", param3);
+          hh.field_b = SectorCacheStore.a("frame_top", -1, "commonui", param3);
+          vf.field_i = SectorCacheStore.a("frame_bottom", -1, "commonui", param3);
           rp.field_h = mn.a(param3, "commonui", "jagex_logo_grey", 114);
-          dg.field_g = pb.a("button", -1, "commonui", param3);
+          dg.field_g = SectorCacheStore.a("button", -1, "commonui", param3);
           wj.field_h = jb.a(0, param3, "validation", "commonui");
           stackIn_3_0 = "commonui";
           stackIn_3_1 = (ResourceArchive) (param3);

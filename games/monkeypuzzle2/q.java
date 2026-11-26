@@ -114,7 +114,7 @@ final class q {
           if (param1 != -36) {
             field_c = (sd) null;
           }
-          var4 = fb.field_k;
+          var4 = ArchiveRequest.field_k;
           while (pl.field_k.length > var3_int) {
             var5 = gh.field_a[var3_int];
             if (var5 >= 0) {

@@ -38,7 +38,7 @@ final class ig {
             return stackIn_6_0;
           }
           for (var5 = 0; var3 > var5; var5++) {
-            if (!ma.a(param1, (byte) 98)) {
+            if (!DiskArchiveRequest.a(param1, (byte) 98)) {
               var6 = param1.a(false, fb.b(2, var5 - 1));
               var4[var5] = var4[var6];
             } else {

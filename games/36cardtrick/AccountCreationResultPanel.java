@@ -105,7 +105,7 @@ final class AccountCreationResultPanel extends af implements qh {
               if (param0.statusCode != 5) {
                 var5.a(uc.field_r, -1, param2 ^ -121);
               } else {
-                var5.a(na.field_p, 11, -14);
+                var5.a(NetworkArchiveRequest.field_p, 11, -14);
                 var5.a(pg.field_f, 17, -14);
               }
             } else {

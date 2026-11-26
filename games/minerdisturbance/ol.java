@@ -11,20 +11,20 @@ final class ol {
         int var1 = 0;
         int var1Lifetime1;
         if (param0 == -94) {
-          if (ee.field_J >= 224) {
+          if (NetworkArchiveRequest.field_J >= 224) {
             fc.a(256, (byte) 72);
           } else {
-            var1 = ee.field_J % 32;
-            fc.a(-var1 + (ee.field_J + 32), (byte) 52);
+            var1 = NetworkArchiveRequest.field_J % 32;
+            fc.a(-var1 + (NetworkArchiveRequest.field_J + 32), (byte) 52);
           }
           return;
         }
         field_d = (String) null;
-        if (ee.field_J >= 224) {
+        if (NetworkArchiveRequest.field_J >= 224) {
           fc.a(256, (byte) 72);
         } else {
-          var1Lifetime1 = ee.field_J % 32;
-          fc.a(-var1Lifetime1 + (ee.field_J + 32), (byte) 52);
+          var1Lifetime1 = NetworkArchiveRequest.field_J % 32;
+          fc.a(-var1Lifetime1 + (NetworkArchiveRequest.field_J + 32), (byte) 52);
         }
     }
 

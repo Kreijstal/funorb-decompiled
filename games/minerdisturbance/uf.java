@@ -6,7 +6,7 @@ import java.io.*;
 final class uf extends ch {
     static char[] field_q;
     static String[] field_w;
-    static nm field_r;
+    static DiskCacheWorker field_r;
     static String field_t;
     static gf[] field_p;
     static String field_v;
@@ -68,7 +68,7 @@ final class uf extends ch {
           int stackIn_59_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ee var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -83,11 +83,11 @@ final class uf extends ch {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ee var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          ee var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           int var3_intLifetime1;
           var16 = MinerDisturbance.field_ab;
           if (this.field_s != null) {
@@ -117,23 +117,23 @@ final class uf extends ch {
           }
           try {
             this.field_s.checkWriteError((byte) 124);
-            var2 = (ee) (this.field_n.a(87));
+            var2 = (NetworkArchiveRequest) (this.field_n.a(87));
             while (var2 != null) {
               this.field_k.position = 0;
               this.field_k.writeByte(1, 25564);
               this.field_k.writeLong40(-107, var2.field_p);
               this.field_s.queueWrite((byte) 100, this.field_k.payload, this.field_k.payload.length, 0);
               this.field_i.a(var2, false);
-              var2 = (ee) (this.field_n.d(-68));
+              var2 = (NetworkArchiveRequest) (this.field_n.d(-68));
             }
-            var2Lifetime1 = (ee) (this.field_l.a(117));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_l.a(117));
             while (var2Lifetime1 != null) {
               this.field_k.position = 0;
               this.field_k.writeByte(0, 25564);
               this.field_k.writeLong40(-82, var2Lifetime1.field_p);
               this.field_s.queueWrite((byte) 93, this.field_k.payload, this.field_k.payload.length, 0);
               this.field_m.a(var2Lifetime1, false);
-              var2Lifetime1 = (ee) (this.field_l.d(126));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_l.d(126));
             }
             var3_int = 96 / ((param0 - 52) / 60);
             for (var2_int = 0; var2_int < 100; var2_int++) {
@@ -217,24 +217,24 @@ final class uf extends ch {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (ee) (this.field_m.a(-123));
+                        var14_ref = (NetworkArchiveRequest) (this.field_m.a(-123));
                         while (var14_ref != null) {
                           if (var14_ref.field_p == var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (ee) (this.field_m.d(-128));
+                          var14_ref = (NetworkArchiveRequest) (this.field_m.d(-128));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (ee) (this.field_i.a(-78));
+                        var14_ref = (NetworkArchiveRequest) (this.field_i.a(-78));
                         while (var14_ref != null) {
                           if (var14_ref.field_p == var12) {
                             break;
                           }
-                          var14_ref = (ee) (this.field_i.d(126));
+                          var14_ref = (NetworkArchiveRequest) (this.field_i.d(126));
                         }
                       }
                       if (var14_ref == null) {
@@ -398,12 +398,12 @@ final class uf extends ch {
           String stackIn_29_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ee var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ee var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = MinerDisturbance.field_ab;
           try {
             if (this.field_s != null) {
@@ -424,7 +424,7 @@ final class uf extends ch {
             this.field_c = null;
             this.field_a.position = 0;
             while (true) {
-              var4_ref = (ee) (this.field_i.c(8192));
+              var4_ref = (NetworkArchiveRequest) (this.field_i.c(8192));
               if (var4_ref != null) {
                 this.field_n.a(var4_ref, false);
                 continue;
@@ -432,7 +432,7 @@ final class uf extends ch {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (ee) (this.field_m.c(8192));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_m.c(8192));
               if (var4_refLifetime1 != null) {
                 this.field_l.a(var4_refLifetime1, false);
                 continue;

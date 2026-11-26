@@ -310,14 +310,14 @@ final class cl extends kn implements wg, sh {
 
     final static void p(int param0) {
         int var1 = 0;
-        if (ee.field_J <= 32) {
+        if (NetworkArchiveRequest.field_J <= 32) {
           fc.a(0, (byte) 44);
         } else {
-          var1 = ee.field_J % 32;
+          var1 = NetworkArchiveRequest.field_J % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          fc.a(-var1 + ee.field_J, (byte) 112);
+          fc.a(-var1 + NetworkArchiveRequest.field_J, (byte) 112);
         }
         if (param0 < 1) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
@@ -428,7 +428,7 @@ final class cl extends kn implements wg, sh {
                   IntrusiveDeque.f((byte) 67);
                 } else {
                   if (!this.field_O) {
-                    nm.a(-6145);
+                    DiskCacheWorker.a(-6145);
                   } else {
                     hk.c(-121);
                   }

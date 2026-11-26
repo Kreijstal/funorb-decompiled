@@ -157,7 +157,7 @@ final class oe extends DualLinkNode {
         se var8 = null;
         oe var9 = null;
         var7 = OrbDefence.field_D ? 1 : 0;
-        var8 = cd.field_t;
+        var8 = NetworkArchiveRequest.field_t;
         var2 = var8;
         var3 = var8.readUnsignedByte((byte) 90);
         stackIn_3_0 = ((128 & var3) != 0);

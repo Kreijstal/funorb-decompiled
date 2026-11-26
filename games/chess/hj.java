@@ -7,9 +7,9 @@ final class hj {
     static String field_j;
     private wm field_d;
     private java.math.BigInteger field_f;
-    private cc field_g;
+    private NetworkArchiveRequest field_g;
     static String field_k;
-    private on field_m;
+    private DiskCacheWorker field_m;
     private da[] field_h;
     private java.math.BigInteger field_c;
     private PacketBuffer field_e;
@@ -17,7 +17,7 @@ final class hj {
     static boolean field_i;
     static char[] field_a;
 
-    final da a(byte param0, boolean param1, int param2, gd param3, gd param4) {
+    final da a(byte param0, boolean param1, int param2, SectorCacheStore param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -102,7 +102,7 @@ final class hj {
         if (this.field_g.field_s) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_g.a(param0));
+        var10 = new PacketBuffer(this.field_g.getData(param0));
         var10.position = 5;
         var3 = var10.readUnsignedByte(-87);
         var10.position = var10.position + 72 * var3;
@@ -139,7 +139,7 @@ final class hj {
         return da.b((byte) -114);
     }
 
-    hj(wm param0, on param1) {
+    hj(wm param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -172,7 +172,7 @@ final class hj {
         }
         ge.field_bb = param1;
         n.field_e = ka.field_h;
-        cc.field_z = param0;
+        NetworkArchiveRequest.field_z = param0;
     }
 
     public static void clearStaticReferences(int param0) {
@@ -187,7 +187,7 @@ final class hj {
         field_k = null;
     }
 
-    private hj(wm param0, on param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private hj(wm param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

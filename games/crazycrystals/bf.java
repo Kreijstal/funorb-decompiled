@@ -56,7 +56,7 @@ final class bf {
         try {
           var4_int = param3.a(param2, param0);
           var5 = param3.a(param0 ^ 2861, param1, var4_int);
-          stackIn_1_0 = wl.a(var5, var4_int, param3, 100);
+          stackIn_1_0 = ArchiveRequest.a(var5, var4_int, param3, 100);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

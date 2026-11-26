@@ -17,7 +17,7 @@ final class eg extends tk {
           int stackIn_66_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ia var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -32,11 +32,11 @@ final class eg extends tk {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ia var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          ia var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = Vertigo2.field_L ? 1 : 0;
           if (param0 != -3599) {
             field_q = (String) null;
@@ -70,23 +70,23 @@ final class eg extends tk {
           }
           try {
             this.field_u.c(-26206);
-            var2 = (ia) (this.field_b.b((byte) -50));
+            var2 = (NetworkArchiveRequest) (this.field_b.b((byte) -50));
             while (var2 != null) {
               this.field_f.position = 0;
               this.field_f.writeByte(1, param0 ^ -3703);
               this.field_f.b((byte) 90, var2.secondaryKey);
               this.field_u.a(0, this.field_f.payload.length, param0 ^ -3646, this.field_f.payload);
               this.field_a.a(false, var2);
-              var2 = (ia) (this.field_b.a(true));
+              var2 = (NetworkArchiveRequest) (this.field_b.a(true));
             }
-            var2Lifetime1 = (ia) (this.field_d.b((byte) -50));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.b((byte) -50));
             while (var2Lifetime1 != null) {
               this.field_f.position = 0;
               this.field_f.writeByte(0, 93);
               this.field_f.b((byte) 125, var2Lifetime1.secondaryKey);
               this.field_u.a(0, this.field_f.payload.length, -93, this.field_f.payload);
               this.field_g.a(false, var2Lifetime1);
-              var2Lifetime1 = (ia) (this.field_d.a(true));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.a(true));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_u.a(15166);
@@ -169,24 +169,24 @@ final class eg extends tk {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (ia) (this.field_a.b((byte) -50));
+                        var14_ref = (NetworkArchiveRequest) (this.field_a.b((byte) -50));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (ia) (this.field_a.a(true));
+                          var14_ref = (NetworkArchiveRequest) (this.field_a.a(true));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (ia) (this.field_g.b((byte) -50));
+                        var14_ref = (NetworkArchiveRequest) (this.field_g.b((byte) -50));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.secondaryKey) {
                             break;
                           }
-                          var14_ref = (ia) (this.field_g.a(true));
+                          var14_ref = (NetworkArchiveRequest) (this.field_g.a(true));
                         }
                       }
                       if (var14_ref == null) {
@@ -240,13 +240,13 @@ final class eg extends tk {
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ia var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           int var4_int = 0;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ia var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Vertigo2.field_L ? 1 : 0;
           try {
             if (this.field_u != null) {
@@ -264,7 +264,7 @@ final class eg extends tk {
             this.field_h = null;
             this.field_i.position = 0;
             while (true) {
-              var4_ref = (ia) (this.field_a.a(-67));
+              var4_ref = (NetworkArchiveRequest) (this.field_a.a(-67));
               if (var4_ref != null) {
                 this.field_b.a(false, var4_ref);
                 continue;
@@ -272,7 +272,7 @@ final class eg extends tk {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (ia) (this.field_g.a(-75));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_g.a(-75));
               if (var4_refLifetime1 != null) {
                 this.field_d.a(false, var4_refLifetime1);
                 continue;

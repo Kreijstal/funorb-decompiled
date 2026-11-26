@@ -26,7 +26,7 @@ final class mc {
         if (param0 != 102) {
           field_c = (IntrusiveDeque) null;
         }
-        if (rh.field_v == of.field_d) {
+        if (ArchiveRequest.field_v == of.field_d) {
           return ta.field_h;
         }
         return kk.field_c;

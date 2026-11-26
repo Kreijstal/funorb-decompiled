@@ -11,7 +11,7 @@ final class fh {
     static char[] field_e;
 
     final static void a(int param0) {
-        ah.field_c = false;
+        SectorCacheStore.field_c = false;
         MouseWheelInput.field_d = false;
         cg.a((byte) -105, -1);
         if (param0 == -55) {

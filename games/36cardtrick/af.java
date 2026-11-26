@@ -288,7 +288,7 @@ class af extends ta implements qh {
           this.field_kb.a(param1 + 109, 4210752, 8405024);
           var6 = new ui(this, this.field_pb, param0);
           if (param2 == 5) {
-            var6.a(na.field_p, 11, -14);
+            var6.a(NetworkArchiveRequest.field_p, 11, -14);
             var6.a(pg.field_f, 17, -14);
           } else {
             if (param2 != 256) {

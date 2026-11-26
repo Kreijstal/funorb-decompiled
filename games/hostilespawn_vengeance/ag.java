@@ -178,12 +178,12 @@ class ag extends IntrusiveNode {
             return param2;
           }
           this.a(j.field_c, param0, param3, rb.field_m, this, param1 - 8799);
-          var11 = rh.field_D;
+          var11 = DiskArchiveRequest.field_D;
           if (var11 != null) {
             if (var11.field_p instanceof k) {
               ((k) (var11.field_p)).a(var11, false, (od) null);
             }
-            rh.field_D = null;
+            DiskArchiveRequest.field_D = null;
           }
           mn.field_c = ig.field_L;
           IntrusiveNode.a(this.e(34), (byte) -82);
@@ -215,12 +215,12 @@ class ag extends IntrusiveNode {
               return param2;
             }
             this.a(j.field_c, param0, param3, rb.field_m, this, param1 - 8799);
-            var8 = rh.field_D;
+            var8 = DiskArchiveRequest.field_D;
             if (var8 != null) {
               if (var8.field_p instanceof k) {
                 ((k) (var8.field_p)).a(var8, false, (od) null);
               }
-              rh.field_D = null;
+              DiskArchiveRequest.field_D = null;
             }
             mn.field_c = ig.field_L;
             IntrusiveNode.a(this.e(34), (byte) -82);
@@ -236,11 +236,11 @@ class ag extends IntrusiveNode {
           if (ig.field_L == 0 &&
             mn.field_c != 0) {
             this.a(j.field_c, param0, param3, rb.field_m, this, param1 - 8799);
-            var10 = rh.field_D;
+            var10 = DiskArchiveRequest.field_D;
             if (var10 != null) {
               if (var10.field_p instanceof k) {
                 ((k) (var10.field_p)).a(var10, false, (od) null);
-                rh.field_D = null;
+                DiskArchiveRequest.field_D = null;
                 mn.field_c = ig.field_L;
                 IntrusiveNode.a(this.e(34), (byte) -82);
                 if (param1 != 8799) {
@@ -248,7 +248,7 @@ class ag extends IntrusiveNode {
                 }
                 return param2;
               }
-              rh.field_D = null;
+              DiskArchiveRequest.field_D = null;
             }
           }
           mn.field_c = ig.field_L;
@@ -278,12 +278,12 @@ class ag extends IntrusiveNode {
           return param2;
         }
         this.a(j.field_c, param0, param3, rb.field_m, this, param1 - 8799);
-        var9 = rh.field_D;
+        var9 = DiskArchiveRequest.field_D;
         if (var9 != null) {
           if (var9.field_p instanceof k) {
             ((k) (var9.field_p)).a(var9, false, (od) null);
           }
-          rh.field_D = null;
+          DiskArchiveRequest.field_D = null;
         }
         mn.field_c = ig.field_L;
         IntrusiveNode.a(this.e(34), (byte) -82);

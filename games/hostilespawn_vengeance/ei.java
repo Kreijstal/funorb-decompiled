@@ -139,7 +139,7 @@ final class ei extends IntrusiveNode {
           var21 = stackIn_33_0;
           if (19 == param9.field_i && (!param8 ||
             var20 != 0)) {
-            stackIn_40_0 = (!lm.a(var17, param9, -62)) ? 0 : 1;
+            stackIn_40_0 = (!NetworkArchiveRequest.a(var17, param9, -62)) ? 0 : 1;
             var20 = stackIn_40_0;
             if (var20 == 0 &&
               param9.field_w == 4) {

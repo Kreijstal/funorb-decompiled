@@ -271,14 +271,14 @@ class lk extends IntrusiveNode {
         var5 = this.e(1) ? 1 : 0;
         if (!param2) {
           if (var5 != 0 &&
-            vh.field_e != 0) {
+            SectorCacheStore.field_e != 0) {
             this.c((byte) 114);
             if (var7 != 0) {
               if (0 != va.field_a) {
                 this.a(param0, ll.field_y, va.field_a, uc.field_C, param3, this, true);
               }
-              if (vh.field_e != 0) {
-                if (!this.a(vh.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
+              if (SectorCacheStore.field_e != 0) {
+                if (!this.a(SectorCacheStore.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
                   this.c((byte) 114);
                 }
                 param2 = false;
@@ -299,8 +299,8 @@ class lk extends IntrusiveNode {
         } else {
           if (0 != va.field_a) {
             if (var5 == 0) {
-              if (vh.field_e != 0 &&
-                this.a(vh.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
+              if (SectorCacheStore.field_e != 0 &&
+                this.a(SectorCacheStore.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
                 param2 = false;
               }
               if (0 != n.field_m) {
@@ -336,8 +336,8 @@ class lk extends IntrusiveNode {
             }
             this.a(param0, ll.field_y, va.field_a, uc.field_C, param3, this, true);
           }
-          if (vh.field_e != 0) {
-            if (this.a(vh.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
+          if (SectorCacheStore.field_e != 0) {
+            if (this.a(SectorCacheStore.field_e, this, param0, og.field_a, 28455, rk.field_a, param3)) {
               param2 = false;
             } else {
               if (var5 != 0) {

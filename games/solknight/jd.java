@@ -130,7 +130,7 @@ final class jd extends PacketBuffer {
                         if (param3.field_j > 0 &&
                           null != param3.field_k) {
                           dupTemp$0 = param3.field_k[var8];
-                          md.field_t[dupTemp$0] = md.field_t[dupTemp$0] + 1;
+                          DiskArchiveRequest.field_t[dupTemp$0] = DiskArchiveRequest.field_t[dupTemp$0] + 1;
                         }
                         cf.field_c = cf.field_c + 1;
                         break;
@@ -151,9 +151,9 @@ final class jd extends PacketBuffer {
             param3.field_k != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(var9Lifetime1 >= md.field_t.length)) {
-              var10Lifetime1 = md.field_t[var9Lifetime1];
-              md.field_t[var9Lifetime1] = var8Lifetime1;
+            while (!(var9Lifetime1 >= DiskArchiveRequest.field_t.length)) {
+              var10Lifetime1 = DiskArchiveRequest.field_t[var9Lifetime1];
+              DiskArchiveRequest.field_t[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

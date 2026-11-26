@@ -19,7 +19,7 @@ final class ng {
             ng.a((mi) null, 105, (mi) null);
           }
           om.field_s = (jf) ((Object) new kd());
-          oc.field_l = new pc(param6);
+          oc.field_l = new DiskCacheWorker(param6);
           dh.field_vb = new ja(om.field_s, oc.field_l);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');

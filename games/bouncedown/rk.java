@@ -146,7 +146,7 @@ final class rk {
           uj.field_s = param7;
           fk.field_d = param8;
           tb.field_p = (v) ((Object) new tb());
-          hb.field_F = new vi(param6);
+          hb.field_F = new DiskCacheWorker(param6);
           ih.field_Q = new oj(tb.field_p, hb.field_F);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');

@@ -41,7 +41,7 @@ abstract class rf extends ii {
 
     final void b(int param0, int param1, int param2) {
         int var4 = -125 % ((param0 - 70) / 48);
-        this.b(0, param2, -param1 + vf.field_x >> 1, -param2 + hn.field_t >> 1, param1);
+        this.b(0, param2, -param1 + ArchiveRequest.field_x >> 1, -param2 + hn.field_t >> 1, param1);
     }
 
     final static q[] a(int param0, byte param1, ResourceArchive param2, int param3) {
@@ -77,7 +77,7 @@ abstract class rf extends ii {
     }
 
     rf(ji param0, int param1, int param2) {
-        super(hn.field_t - param1 >> 1, -param2 + vf.field_x >> 1, param1, param2, (ca) null);
+        super(hn.field_t - param1 >> 1, -param2 + ArchiveRequest.field_x >> 1, param1, param2, (ca) null);
         try {
           this.field_R = param0;
           this.field_U = 0;

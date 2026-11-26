@@ -51,7 +51,7 @@ final class ei extends kn implements sh {
             for (var6 = 0; var6 < var3_int; var6++) {
               this.field_N[var6] = new hc(this.field_O[var6], (rm) (this));
               this.field_N[var6].field_A = (ad) ((Object) var4);
-              this.field_N[var6].field_n = vl.field_I;
+              this.field_N[var6].field_n = DiskArchiveRequest.field_I;
               this.field_N[var6].a(15, -52, 0, 80, 20 + var6 * 16);
               this.a(-1, this.field_N[var6]);
             }

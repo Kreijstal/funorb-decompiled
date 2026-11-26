@@ -1391,10 +1391,10 @@ final class CombatState {
           return;
         }
         if (param1 % 10L != 0L) {
-          ln.sleepIgnoringInterrupts(param1, (byte) -113);
+          SectorCacheStore.sleepIgnoringInterrupts(param1, (byte) -113);
         } else {
-          ln.sleepIgnoringInterrupts(param1 - 1L, (byte) -107);
-          ln.sleepIgnoringInterrupts(1L, (byte) -73);
+          SectorCacheStore.sleepIgnoringInterrupts(param1 - 1L, (byte) -107);
+          SectorCacheStore.sleepIgnoringInterrupts(1L, (byte) -73);
         }
     }
 
@@ -1517,7 +1517,7 @@ final class CombatState {
           }
           param2 = stackIn_5_0;
           if (MouseInput.a(125, param1)) {
-            stackIn_9_0 = ln.a(param1, param2, 255);
+            stackIn_9_0 = SectorCacheStore.a(param1, param2, 255);
             return stackIn_9_0;
           }
           stackIn_7_0 = (String) (param2);
@@ -1853,25 +1853,25 @@ final class CombatState {
         var5 = DungeonAssault.field_K;
         this.field_m.a(1);
         this.field_b.a(1);
-        co.field_I.clear(-4);
-        co.field_I.addFirst(new a(param0), false);
+        DiskArchiveRequest.field_I.clear(-4);
+        DiskArchiveRequest.field_I.addFirst(new a(param0), false);
         this.field_m.a(param0, -63);
         var3 = 116 / ((10 - param1) / 60);
-        while (!co.field_I.isEmpty((byte) -69)) {
-          var4 = ((a) (co.field_I.removeLast((byte) -124))).field_j;
+        while (!DiskArchiveRequest.field_I.isEmpty((byte) -69)) {
+          var4 = ((a) (DiskArchiveRequest.field_I.removeLast((byte) -124))).field_j;
           if (var4 % 7 > 0) {
-            this.a(co.field_I, 49, var4 - 1, var4 - 1 - var4 / 7, true);
+            this.a(DiskArchiveRequest.field_I, 49, var4 - 1, var4 - 1 - var4 / 7, true);
           }
           if (6 > var4 % 7) {
-            this.a(co.field_I, 49, 1 + var4, -(var4 / 7) + var4, false);
+            this.a(DiskArchiveRequest.field_I, 49, 1 + var4, -(var4 / 7) + var4, false);
           }
           if (var4 > 6) {
-            this.a(co.field_I, 49, var4 - 7, var4 - 7 + 42, false);
+            this.a(DiskArchiveRequest.field_I, 49, var4 - 7, var4 - 7 + 42, false);
           }
           if (var4 >= 42) {
             continue;
           }
-          this.a(co.field_I, 49, 7 + var4, var4 + 42, true);
+          this.a(DiskArchiveRequest.field_I, 49, 7 + var4, var4 + 42, true);
         }
     }
 

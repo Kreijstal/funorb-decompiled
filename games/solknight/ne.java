@@ -5,12 +5,12 @@ final class ne {
     static int field_j;
     static ff field_f;
     private va field_h;
-    private ae field_l;
+    private DiskCacheWorker field_l;
     private java.math.BigInteger field_e;
     static boolean field_d;
     private java.math.BigInteger field_c;
     private PacketBuffer field_b;
-    private ic field_m;
+    private NetworkArchiveRequest field_m;
     static String field_g;
     static ng field_i;
     private CachedArchiveSource[] field_k;
@@ -52,7 +52,7 @@ final class ne {
         if (this.field_m.field_m) {
           return false;
         }
-        var11 = new PacketBuffer(this.field_m.f(0));
+        var11 = new PacketBuffer(this.field_m.getData(0));
         var11.position = 5;
         var3 = var11.readUnsignedByte(255);
         var11.position = var11.position + 72 * var3;
@@ -83,7 +83,7 @@ final class ne {
         return true;
     }
 
-    final CachedArchiveSource a(int param0, bi param1, boolean param2, bi param3, int param4) {
+    final CachedArchiveSource a(int param0, SectorCacheStore param1, boolean param2, SectorCacheStore param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -274,11 +274,11 @@ final class ne {
         }
     }
 
-    ne(va param0, ae param1) {
+    ne(va param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private ne(va param0, ae param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ne(va param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_h = param0;
           this.field_l = param1;

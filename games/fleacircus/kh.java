@@ -132,7 +132,7 @@ final class kh {
         ok.field_L = -2147483648;
         ak.field_f = 2147483647;
         ea.field_a = 2147483647;
-        qh.field_D = 0;
+        DiskArchiveRequest.field_D = 0;
     }
 
     static {

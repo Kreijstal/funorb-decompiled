@@ -69,17 +69,17 @@ abstract class jc extends qf {
           bj.a(gh.field_h, -25);
           gh.field_h.writeShort(param0, 26040);
           param3.a(-1, gh.field_h);
-          na.field_r.position = 0;
+          NetworkArchiveRequest.field_r.position = 0;
           if (param2) {
-            na.field_r.writeByte(-9469, 18);
+            NetworkArchiveRequest.field_r.writeByte(-9469, 18);
           } else {
-            na.field_r.writeByte(-9469, 16);
+            NetworkArchiveRequest.field_r.writeByte(-9469, 16);
           }
           var5_int = -40 % ((param1 - 14) / 58);
-          na.field_r.position = na.field_r.position + 2;
-          var6 = na.field_r.position;
-          na.field_r.writeInt(-246, nf.field_c);
-          na.field_r.writeLong(wk.field_d, (byte) 98);
+          NetworkArchiveRequest.field_r.position = NetworkArchiveRequest.field_r.position + 2;
+          var6 = NetworkArchiveRequest.field_r.position;
+          NetworkArchiveRequest.field_r.writeInt(-246, nf.field_c);
+          NetworkArchiveRequest.field_r.writeLong(wk.field_d, (byte) 98);
           var7 = 0;
           if (dg.field_F) {
             var7 = var7 | 1;
@@ -93,17 +93,17 @@ abstract class jc extends qf {
           if (null != ia.field_b) {
             var7 = var7 | 16;
           }
-          na.field_r.writeByte(-9469, var7);
+          NetworkArchiveRequest.field_r.writeByte(-9469, var7);
           var8 = bi.a((byte) 95, mk.g(-128));
           if (var8 == null) {
             var8 = "";
           }
-          na.field_r.writeString(var8, 19235);
+          NetworkArchiveRequest.field_r.writeString(var8, 19235);
           if (null != ia.field_b) {
-            na.field_r.writePrefixedString(744825352, ia.field_b);
+            NetworkArchiveRequest.field_r.writePrefixedString(744825352, ia.field_b);
           }
-          lf.a(wd.field_c, na.field_r, id.field_c, (byte) -75, gh.field_h);
-          na.field_r.backpatchShortLength(na.field_r.position - var6, -27308);
+          lf.a(wd.field_c, NetworkArchiveRequest.field_r, id.field_c, (byte) -75, gh.field_h);
+          NetworkArchiveRequest.field_r.backpatchShortLength(NetworkArchiveRequest.field_r.position - var6, -27308);
           fe.a((byte) -75, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -626,7 +626,7 @@ class ul extends rg {
           var3 = param0.g(12, param1 ^ param1);
           var4 = new he[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!sm.a(param1 - 31570, param0)) {
+            if (!DiskArchiveRequest.a(param1 - 31570, param0)) {
               var6 = param0.g(ic.a(var5 - 1, (byte) 68), 0);
               var4[var5] = var4[var6];
             } else {

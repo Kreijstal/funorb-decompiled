@@ -33,17 +33,17 @@ final class sg {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -9 / ((-76 - param0) / 46);
-          if (dj.field_a == el.field_E) {
+          if (dj.field_a == DiskArchiveRequest.field_E) {
             stackIn_2_0 = null;
             return (AccountServiceResult) (stackIn_2_0);
           }
-          if (ta.field_m == el.field_E &&
+          if (ta.field_m == DiskArchiveRequest.field_E &&
             param1.equals(gk.field_c)) {
-            el.field_E = ok.field_a;
+            DiskArchiveRequest.field_E = ok.field_a;
             stackIn_9_0 = ed.field_d;
             return stackIn_9_0;
           }
-          el.field_E = dj.field_a;
+          DiskArchiveRequest.field_E = dj.field_a;
           gk.field_c = param1;
           ed.field_d = null;
           stackIn_7_0 = null;

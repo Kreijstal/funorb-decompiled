@@ -73,7 +73,7 @@ abstract class ag extends GameApplet {
                 var2_int = -se.field_p.position + param1;
               }
               m.field_b.a(se.field_p.position, 32498, var2_int, se.field_p.payload);
-              ik.field_p = dd.correctedCurrentTimeMillis(115);
+              ArchiveRequest.field_p = dd.correctedCurrentTimeMillis(115);
               se.field_p.position = se.field_p.position + var2_int;
               if (param1 > se.field_p.position) {
                 return false;
@@ -210,7 +210,7 @@ abstract class ag extends GameApplet {
             return;
           }
           if (var2 == 1) {
-            ef.b((byte) -57);
+            DiskCacheWorker.b((byte) -57);
           } else {
             if (var2 != 2) {
               if (var2 == 3) {
@@ -560,7 +560,7 @@ abstract class ag extends GameApplet {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5_int = AccountCreationResultPanel.a((byte) -49, tg.d((byte) 10), AccountServiceResult.b(-1006263007));
+            var5_int = AccountCreationResultPanel.a((byte) -49, DiskArchiveRequest.d((byte) 10), AccountServiceResult.b(-1006263007));
             if (var5_int != -1) {
               ie.a(-111, UiWidget.field_r, ph.field_nb, var5_int);
               UiWidget.field_r = null;
@@ -633,7 +633,7 @@ abstract class ag extends GameApplet {
             wj.a(ll.b(86), 0);
           }
           if (12 == var4) {
-            ef.a(uc.c((byte) 114), ll.b(115), param0 + 91);
+            DiskCacheWorker.a(uc.c((byte) 114), ll.b(115), param0 + 91);
           }
           if (var4 == 13) {
             try {

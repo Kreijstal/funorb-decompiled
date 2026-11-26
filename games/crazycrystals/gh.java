@@ -887,8 +887,8 @@ final class gh extends ea implements Cloneable {
     }
 
     final static void f(byte param0) {
-        if (null != sp.field_a) {
-          sp.field_a.i((byte) -45);
+        if (null != SectorCacheStore.field_a) {
+          SectorCacheStore.field_a.i((byte) -45);
         }
         oh.field_d = new qk();
         MouseWheelInput.field_d.a((qm) (oh.field_d), (byte) -50);

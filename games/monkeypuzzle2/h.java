@@ -21,7 +21,7 @@ final class h {
           return;
         }
         fd.field_o[param0] = param1;
-        uj.field_h = 1;
+        DiskCacheWorker.field_h = 1;
         DequeCursor.field_b = param0;
         jk.field_u = 0;
     }

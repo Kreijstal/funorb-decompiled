@@ -15,7 +15,7 @@ abstract class va {
     volatile int field_c;
     PacketBuffer field_h;
     volatile int field_l;
-    ic field_a;
+    NetworkArchiveRequest field_a;
 
     abstract void c(byte param0);
 
@@ -56,13 +56,13 @@ abstract class va {
 
     abstract boolean d(byte param0);
 
-    final ic a(int param0, boolean param1, int param2, int param3, byte param4) {
-        ic stackIn_2_0 = null;
+    final NetworkArchiveRequest a(int param0, boolean param1, int param2, int param3, byte param4) {
+        NetworkArchiveRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         long var6;
-        ic var8;
+        NetworkArchiveRequest var8;
         var6 = (long)param2 + ((long)param0 << 32);
-        var8 = new ic();
+        var8 = new NetworkArchiveRequest();
         var8.secondaryKey = var6;
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param1) ? false : true;

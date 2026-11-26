@@ -371,14 +371,14 @@ abstract class GameClientBase extends GameApplet {
                             pi.a((byte) 7);
                           }
                         } else {
-                          bg.a(PcmOutputWorker.field_i, (byte) 121, sh.field_u, id.field_b);
+                          bg.a(PcmOutputWorker.field_i, (byte) 121, ArchiveRequest.field_u, id.field_b);
                         }
                       }
                     } else {
                       aj.c(5427);
                     }
                   } else {
-                    db.i(-123);
+                    NetworkArchiveRequest.i(-123);
                   }
                 } else {
                   wj.b(260);
@@ -419,8 +419,8 @@ abstract class GameClientBase extends GameApplet {
         this.setBackground(java.awt.Color.black);
         kf.field_b = this.field_v;
         rd.a(kf.field_b, (byte) 121);
-        rj.a(this.field_u, 5000, this.field_B, this.field_C, param4, 5000, this.field_D, this.field_x, this.field_w, kf.field_b, this.field_q, param0, param7, sh.field_u);
-        GzipDecoder.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, sh.field_u);
+        rj.a(this.field_u, 5000, this.field_B, this.field_C, param4, 5000, this.field_D, this.field_x, this.field_w, kf.field_b, this.field_q, param0, param7, ArchiveRequest.field_u);
+        GzipDecoder.a(7, this.field_w, this.field_D, this.field_u, this.field_C, kf.field_b, this.field_x, param7, ArchiveRequest.field_u);
         kk.e(-79);
         AccountServiceResult.field_l = dj.createMouseWheelInput((byte) 96);
         SpriteLoader.a(bg.field_P, param0);
@@ -516,7 +516,7 @@ abstract class GameClientBase extends GameApplet {
               ra.field_d = null;
               SecondaryNodeDequeIterator.field_c = null;
             }
-            var10 = al.d((byte) -48);
+            var10 = DiskArchiveRequest.d((byte) -48);
             if (var10 != null) {
               be.a(var10.booleanValue(), (byte) 86);
             }
@@ -591,7 +591,7 @@ abstract class GameClientBase extends GameApplet {
           if (var4 == 13) {
             try {
               if (tc.field_o == null) {
-                tc.field_o = new we(sh.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                tc.field_o = new we(ArchiveRequest.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (tc.field_o.a(true)) {
                 var11 = tc.field_o.b(120);

@@ -26,7 +26,7 @@ final class sj extends jc {
           var1 = var6 + ":";
           for (var2 = 0; GameAppletShell.field_c > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & cd.field_t.payload[var2];
+            var3 = 255 & NetworkArchiveRequest.field_t.payload[var2];
             var4 = var3 >> 4;
             if (var4 < 10) {
               var4 += 48;

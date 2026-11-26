@@ -6,7 +6,7 @@ final class AccountCreationResultPanel extends uc implements jk {
     private boolean field_ub;
     static boolean field_tb;
     private pj field_rb;
-    static kl field_pb;
+    static DiskCacheWorker field_pb;
     static int field_sb;
 
     final static void b(int param0, int param1) {

@@ -134,7 +134,7 @@ final class ci {
 
     final static String a(byte param0) {
         int var1 = 59 % ((param0 - 71) / 45);
-        return rl.field_s;
+        return ArchiveRequest.field_s;
     }
 
     static {

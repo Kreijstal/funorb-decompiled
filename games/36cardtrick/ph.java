@@ -66,7 +66,7 @@ final class ph {
           kf.d(param0 ^ param0);
           ui.d((byte) -122);
           if (wk.b((byte) -112)) {
-            na.field_r.h(1, 0);
+            NetworkArchiveRequest.field_r.h(1, 0);
             fe.a((byte) -38, 0);
             mc.a((byte) -126);
             return;
@@ -81,7 +81,7 @@ final class ph {
           mc.a((byte) -126);
           return;
         }
-        na.field_r.h(1, 0);
+        NetworkArchiveRequest.field_r.h(1, 0);
         fe.a((byte) -38, 0);
         mc.a((byte) -126);
     }

@@ -37,13 +37,13 @@ final class pb {
     }
 
     final static String a(byte param0) {
-        if (IsaacCipher.field_f == ua.field_d) {
+        if (IsaacCipher.field_f == SectorCacheStore.field_d) {
           return ra.field_m;
         }
         if (param0 != -47) {
           return (String) null;
         }
-        if (pe.field_a == ua.field_d) {
+        if (pe.field_a == SectorCacheStore.field_d) {
           return DualLinkNode.field_l;
         }
         if (vc.field_a.a(param0 ^ 78)) {

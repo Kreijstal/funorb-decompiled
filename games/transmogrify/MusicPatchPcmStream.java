@@ -413,13 +413,13 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param4) {
             MusicPatchPcmStream.a((wl) null, (String) null, (String) null, false, true, (String) null, 27);
           }
-          if (jh.field_n != rh.field_v) {
+          if (jh.field_n != ArchiveRequest.field_v) {
             return false;
           }
           var7 = new AccountCreationResultPanel(ci.field_f, param0);
           ci.field_f.b((UiWidget) (var7), (byte) -71);
           if (!PacketBuffer.f((byte) 105)) {
-            rh.field_v = of.field_d;
+            ArchiveRequest.field_v = of.field_d;
             q.field_h = null;
             c.field_d = param3;
             ab.field_j = param6;
@@ -651,7 +651,7 @@ final class MusicPatchPcmStream extends PcmStream {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          cd.field_f = param5;
+          DiskCacheWorker.field_f = param5;
           ee.field_D = param3;
           if (param1 < 105) {
             MusicPatchPcmStream.a((byte) 62, (ci) null, (String) null, (String) null);

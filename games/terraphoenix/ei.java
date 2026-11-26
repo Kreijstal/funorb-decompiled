@@ -112,7 +112,7 @@ abstract class ei extends kh {
           if (ig.field_a != null) {
             var3 = 357 - ig.field_a.field_u / 2;
             var4 = 0;
-            if (ma.field_I != 0 &&
+            if (DiskArchiveRequest.field_I != 0 &&
               lm.field_c > var3 &&
               lm.field_c < var3 + ig.field_a.field_t) {
               if (-ig.field_a.field_r + 269 < mm.field_c &&
@@ -550,7 +550,7 @@ abstract class ei extends kh {
           if (ig.field_a != null) {
             var3 = 357 - ig.field_a.field_u / 2;
             var4 = 0;
-            if (ma.field_I != 0 &&
+            if (DiskArchiveRequest.field_I != 0 &&
               lm.field_c > var3 &&
               lm.field_c < var3 + ig.field_a.field_t) {
               if (-ig.field_a.field_r + 269 < mm.field_c &&

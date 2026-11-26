@@ -38,7 +38,7 @@ final class ta {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (pe.field_a == ua.field_d) {
+          if (pe.field_a == SectorCacheStore.field_d) {
             return null;
           }
           if (!param0) {
@@ -53,7 +53,7 @@ final class ta {
           }
           h.field_c = null;
           DualLinkNode.field_l = param1;
-          pe.field_a = ua.field_d;
+          pe.field_a = SectorCacheStore.field_d;
           stackIn_11_0 = null;
           return (AccountServiceResult) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -49,7 +49,7 @@ final class we {
             if (ek.field_p.field_t != null) {
               gd.field_q = new pf(ek.field_p.field_t, 5200, 0);
               ek.field_p.field_t = null;
-              var6 = new ae(255, gd.field_q, new pf(ek.field_p.field_v, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, gd.field_q, new pf(ek.field_p.field_v, 12000, 0), 2097152);
             }
             if (null != gd.field_q) {
               if (vh.field_e == null) {
@@ -59,9 +59,9 @@ final class we {
                 vh.field_e[param0] = new pf(ek.field_p.field_d[param0], 12000, 0);
                 ek.field_p.field_d[param0] = null;
               }
-              var7 = new ae(param0, gd.field_q, vh.field_e[param0], 2097152);
+              var7 = new SectorCacheStore(param0, gd.field_q, vh.field_e[param0], 2097152);
             }
-            var8 = dh.field_vb.a((ae) (var6), (byte) -60, param1, param0, (ae) (var7));
+            var8 = dh.field_vb.a((SectorCacheStore) (var6), (byte) -60, param1, param0, (SectorCacheStore) (var7));
             if (param5) {
               var8.b(-2);
             }

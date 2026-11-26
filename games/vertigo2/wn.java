@@ -35,7 +35,7 @@ final class wn {
     }
 
     final static void c(int param0) {
-        qh.a(-32739);
+        SectorCacheStore.a(-32739);
         if (param0 != -2618) {
           field_i = (String) null;
         }

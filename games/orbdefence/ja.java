@@ -311,7 +311,7 @@ final class ja {
         if (this.field_f.field_h != -1) {
           param1 = this.field_f.field_h;
         }
-        this.field_f.a(param1, this.a(vl.field_d, -21016, ua.field_a), 0, param2);
+        this.field_f.a(param1, this.a(DiskCacheWorker.field_d, -21016, ua.field_a), 0, param2);
         int var4 = 14 % ((param0 + 59) / 40);
     }
 
@@ -386,7 +386,7 @@ final class ja {
           break;
         }
         if (decompiledNaturalLoopExit0) {
-          this.field_f.a(this.a(bg.field_c, -21016, AccountCreationResultPanel.field_fb), -1, this.a(vl.field_d, -21016, ua.field_a));
+          this.field_f.a(this.a(bg.field_c, -21016, AccountCreationResultPanel.field_fb), -1, this.a(DiskCacheWorker.field_d, -21016, ua.field_a));
           stackIn_37_0 = this.field_f.field_h;
           stackIn_37_1 = -1;
         }
@@ -1222,7 +1222,7 @@ final class ja {
         if (3 == this.field_a) {
           var3 = 2;
         }
-        this.field_f.a(var3, this.a(vl.field_d, -21016, ua.field_a), 0, param0);
+        this.field_f.a(var3, this.a(DiskCacheWorker.field_d, -21016, ua.field_a), 0, param0);
         this.field_h = -1;
         if (this.field_a == 7) {
           vk.a(0, param0);
@@ -1283,12 +1283,12 @@ final class ja {
         var4 = 123;
         var5 = 108;
         var6 = 394;
-        if (wj.field_m == 2) {
+        if (ArchiveRequest.field_m == 2) {
           var6 += 20;
           var4 -= 10;
         }
         var7 = 280;
-        if (wj.field_m == 3) {
+        if (ArchiveRequest.field_m == 3) {
           var4 -= 10;
           var6 += 20;
         }
@@ -1368,9 +1368,9 @@ final class ja {
             if (~n.field_a != ~var9_int) {
               hi.field_g[var9_int].e(var10, var11_int, 80, 60, 255);
               if (!(var10 > ua.field_a) &&
-                !(vl.field_d < var11_int) &&
+                !(DiskCacheWorker.field_d < var11_int) &&
                 !(ua.field_a >= (var10 + 80)) &&
-                !((60 + var11_int) <= vl.field_d) &&
+                !((60 + var11_int) <= DiskCacheWorker.field_d) &&
                 of.field_G == 1) {
                 kj.field_x = null;
                 n.field_a = var9_int;
@@ -2442,7 +2442,7 @@ final class ja {
               }
             } else {
               fk.field_b.e(10, lc.field_o - 65, 255 * lc.field_o / 100);
-              wj.b((byte) 124);
+              ArchiveRequest.b((byte) 124);
             }
             break;
           }
@@ -2478,7 +2478,7 @@ final class ja {
             }
             break;
           }
-          wj.b((byte) 124);
+          ArchiveRequest.b((byte) 124);
         }
         boolean decompiledFrameRemainder0 = true;
         vj.field_b.d();
@@ -2704,8 +2704,8 @@ final class ja {
               }
               if (var22 <= ua.field_a &&
                 (var22 + 32) >= ua.field_a &&
-                vl.field_d >= var23 &&
-                vl.field_d <= (32 + var23)) {
+                DiskCacheWorker.field_d >= var23 &&
+                DiskCacheWorker.field_d <= (32 + var23)) {
                 SoftwareRasterizer.addRadialGlow(var22 + 16 << 4, 16 + var23 << 4, 384, 255, ki.field_f);
                 var17 = var20_int;
               }

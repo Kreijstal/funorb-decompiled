@@ -225,7 +225,7 @@ class IntrusiveNode {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (of.field_d != rh.field_v) {
+          if (of.field_d != ArchiveRequest.field_v) {
             stackIn_24_0 = -1;
             return stackIn_24_0;
           }

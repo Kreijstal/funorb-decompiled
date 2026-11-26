@@ -136,8 +136,8 @@ final class wd {
             }
             if (var4 == 0 &&
               h.field_A > og.field_b &&
-              vl.field_d > var3 &&
-              fm.field_b.field_k + var3 > vl.field_d) {
+              DiskCacheWorker.field_d > var3 &&
+              fm.field_b.field_k + var3 > DiskCacheWorker.field_d) {
               if (ua.field_a > 269 - fm.field_b.field_o &&
                 ua.field_a < 269) {
                 h.field_A = og.field_b;
@@ -149,25 +149,25 @@ final class wd {
             }
           }
           if (param0) {
-            wj.field_k.a(ka.a(24316, AccountCreationResultPanel.field_fb, bg.field_c), -1, ka.a(24316, ua.field_a, vl.field_d));
-            if (wj.field_k.a((byte) -1)) {
-              if (wj.field_k.field_h == 0) {
+            ArchiveRequest.field_k.a(ka.a(24316, AccountCreationResultPanel.field_fb, bg.field_c), -1, ka.a(24316, ua.field_a, DiskCacheWorker.field_d));
+            if (ArchiveRequest.field_k.a((byte) -1)) {
+              if (ArchiveRequest.field_k.field_h == 0) {
                 stackIn_60_0 = 3;
                 return stackIn_60_0;
               }
-              if (wj.field_k.field_h == 1) {
+              if (ArchiveRequest.field_k.field_h == 1) {
                 stackIn_64_0 = 2;
                 return stackIn_64_0;
               }
             }
             while (nf.e(32722)) {
-              wj.field_k.b(27163, 0);
-              if (wj.field_k.a((byte) -1)) {
-                if (wj.field_k.field_h == 0) {
+              ArchiveRequest.field_k.b(27163, 0);
+              if (ArchiveRequest.field_k.a((byte) -1)) {
+                if (ArchiveRequest.field_k.field_h == 0) {
                   stackIn_71_0 = 3;
                   return stackIn_71_0;
                 }
-                if (wj.field_k.field_h == 1) {
+                if (ArchiveRequest.field_k.field_h == 1) {
                   stackIn_75_0 = 1;
                   return stackIn_75_0;
                 }

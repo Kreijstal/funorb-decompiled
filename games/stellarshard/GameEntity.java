@@ -238,8 +238,8 @@ final class GameEntity {
           if (ff.field_k > 256) {
             ff.field_k = 0;
           }
-          if (el.field_I > 0) {
-            el.field_I = el.field_I - 1;
+          if (DiskArchiveRequest.field_I > 0) {
+            DiskArchiveRequest.field_I = DiskArchiveRequest.field_I - 1;
           }
           if (0 > this.field_j) {
             this.field_j = this.field_j + 1;
@@ -1168,23 +1168,23 @@ final class GameEntity {
             16 != this.field_c &&
             qi.level == 1 &&
             null == na.field_j) {
-            SoftwareRasterizer.drawRectangleOutline(24 + var2 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, ki.field_s + 48, 48 + ki.field_s, 65535);
+            SoftwareRasterizer.drawRectangleOutline(24 + var2 - ArchiveRequest.field_s / 2, -(ArchiveRequest.field_s / 2) + var3 + 24, ArchiveRequest.field_s + 48, 48 + ArchiveRequest.field_s, 65535);
             stackIn_176_0 = qj.field_a;
             stackIn_176_1 = cd.field_P;
             stackIn_176_2 = 48 + var2;
             stackIn_176_3 = 24 + var3;
-            stackIn_177_4 = (ki.field_s >= 5) ? 65535 : 16777215;
+            stackIn_177_4 = (ArchiveRequest.field_s >= 5) ? 65535 : 16777215;
             ((ub) (Object) stackIn_176_0).c(stackIn_176_1, stackIn_176_2, stackIn_176_3, stackIn_177_4, 0);
           }
           if (this.kind == 13 &&
             4 == qi.level &&
             na.field_j == null) {
-            SoftwareRasterizer.drawRectangleOutline(24 + (var2 - ki.field_s / 2), -(ki.field_s / 2) + 24 + var3, 48 + ki.field_s, ki.field_s + 48, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(24 + (var2 - ArchiveRequest.field_s / 2), -(ArchiveRequest.field_s / 2) + 24 + var3, 48 + ArchiveRequest.field_s, ArchiveRequest.field_s + 48, 16711680);
             stackIn_184_0 = qj.field_a;
             stackIn_184_1 = FrameTimer.field_d;
             stackIn_184_2 = 48 + var2;
             stackIn_184_3 = 24 + var3;
-            stackIn_185_4 = (ki.field_s >= 5) ? 16711680 : 16777215;
+            stackIn_185_4 = (ArchiveRequest.field_s >= 5) ? 16711680 : 16777215;
             ((ub) (Object) stackIn_184_0).c(stackIn_184_1, stackIn_184_2, stackIn_184_3, stackIn_185_4, 0);
           }
           if (this.kind == 12 &&
@@ -1196,57 +1196,57 @@ final class GameEntity {
             }
             if (qi.level == 5 &&
               null == na.field_j) {
-              SoftwareRasterizer.drawRectangleOutline(var2 - (-24 + ki.field_s / 2), -(ki.field_s / 2) + (24 + var3), 48 + ki.field_s, 48 + ki.field_s, 16711680);
+              SoftwareRasterizer.drawRectangleOutline(var2 - (-24 + ArchiveRequest.field_s / 2), -(ArchiveRequest.field_s / 2) + (24 + var3), 48 + ArchiveRequest.field_s, 48 + ArchiveRequest.field_s, 16711680);
               stackIn_197_0 = qj.field_a;
               stackIn_197_1 = mc.field_b;
               stackIn_197_2 = var2 + 48;
               stackIn_197_3 = var3 + 24;
-              stackIn_198_4 = (5 > ki.field_s) ? 16777215 : 16711680;
+              stackIn_198_4 = (5 > ArchiveRequest.field_s) ? 16777215 : 16711680;
               ((ub) (Object) stackIn_197_0).c(stackIn_197_1, stackIn_197_2, stackIn_197_3, stackIn_198_4, 0);
             }
           }
           if (this.kind == 15 &&
             7 == qi.level &&
             null == na.field_j) {
-            SoftwareRasterizer.drawRectangleOutline(var2 + 24 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, 48 + ki.field_s, 48 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(var2 + 24 - ArchiveRequest.field_s / 2, -(ArchiveRequest.field_s / 2) + var3 + 24, 48 + ArchiveRequest.field_s, 48 + ArchiveRequest.field_s, 16711680);
             stackIn_206_0 = qj.field_a;
             stackIn_206_1 = he.field_k;
             stackIn_206_2 = 48 + var2;
             stackIn_206_3 = var3 + 24;
-            stackIn_207_4 = (ki.field_s < 5) ? 16777215 : 16711680;
+            stackIn_207_4 = (ArchiveRequest.field_s < 5) ? 16777215 : 16711680;
             ((ub) (Object) stackIn_206_0).c(stackIn_206_1, stackIn_206_2, stackIn_206_3, stackIn_207_4, 0);
           }
           if (this.kind == 7 &&
             qi.level == 8 &&
             null == na.field_j) {
-            SoftwareRasterizer.drawRectangleOutline(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(-(ArchiveRequest.field_s / 2) + var2, var3 - ArchiveRequest.field_s / 2, 96 + ArchiveRequest.field_s, 96 + ArchiveRequest.field_s, 16711680);
             stackIn_215_0 = qj.field_a;
             stackIn_215_1 = hc.field_h;
             stackIn_215_2 = var2 + 48;
             stackIn_215_3 = var3;
-            stackIn_216_4 = (5 <= ki.field_s) ? 16711680 : 16777215;
+            stackIn_216_4 = (5 <= ArchiveRequest.field_s) ? 16711680 : 16777215;
             ((ub) (Object) stackIn_215_0).c(stackIn_215_1, stackIn_215_2, stackIn_215_3, stackIn_216_4, 0);
           }
           if (this.kind == 6 &&
             qi.level == 9 &&
             na.field_j == null) {
-            SoftwareRasterizer.drawRectangleOutline(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(-(ArchiveRequest.field_s / 2) + var2, var3 - ArchiveRequest.field_s / 2, 96 + ArchiveRequest.field_s, 96 + ArchiveRequest.field_s, 16711680);
             stackIn_223_0 = qj.field_a;
             stackIn_223_1 = hc.field_h;
             stackIn_223_2 = var2 + 48;
             stackIn_223_3 = var3;
-            stackIn_224_4 = (ki.field_s < 5) ? 16777215 : 16711680;
+            stackIn_224_4 = (ArchiveRequest.field_s < 5) ? 16777215 : 16711680;
             ((ub) (Object) stackIn_223_0).c(stackIn_223_1, stackIn_223_2, stackIn_223_3, stackIn_224_4, 0);
           }
           if (this.kind == 14 &&
             qi.level == 10 &&
             null == na.field_j) {
-            SoftwareRasterizer.drawRectangleOutline(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, ki.field_s + 96, 96 + ki.field_s, 16711680);
+            SoftwareRasterizer.drawRectangleOutline(-(ArchiveRequest.field_s / 2) + var2, var3 - ArchiveRequest.field_s / 2, ArchiveRequest.field_s + 96, 96 + ArchiveRequest.field_s, 16711680);
             stackIn_230_0 = qj.field_a;
             stackIn_230_1 = jf.field_l;
             stackIn_230_2 = 48 + var2;
             stackIn_230_3 = var3;
-            stackIn_231_4 = (ki.field_s < 5) ? 16777215 : 16711680;
+            stackIn_231_4 = (ArchiveRequest.field_s < 5) ? 16777215 : 16711680;
             ((ub) (Object) stackIn_230_0).c(stackIn_230_1, stackIn_230_2, stackIn_230_3, stackIn_231_4, 0);
           }
         } else {
@@ -1297,8 +1297,8 @@ final class GameEntity {
           var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
           pd.field_h.a((byte) -107);
           if (0 == nc.field_H) {
-            if (el.field_I > 0 &&
-              (15 & el.field_I) >= 7) {
+            if (DiskArchiveRequest.field_I > 0 &&
+              (15 & DiskArchiveRequest.field_I) >= 7) {
               this.currentSprite(640).b(var2, var3, 16777215);
             } else {
               this.currentSprite(640).e(var2, var3);
@@ -1322,8 +1322,8 @@ final class GameEntity {
                 var10 = 16744576;
               }
               nd.a(128, var3 + 48, var10, 48 + var2, (byte) -54, 32);
-              if (el.field_I > 0 &&
-                7 <= (el.field_I & 15)) {
+              if (DiskArchiveRequest.field_I > 0 &&
+                7 <= (DiskArchiveRequest.field_I & 15)) {
                 this.currentSprite(640).b(var2, var3, 16777215);
               } else {
                 this.currentSprite(640).e(var2, var3);
@@ -1395,7 +1395,7 @@ final class GameEntity {
             this.currentSprite(640).e(var2, var3);
           }
         }
-        if (ph.field_D >= 2 &&
+        if (NetworkArchiveRequest.field_D >= 2 &&
           this.kind != -1 &&
           !this.a((byte) -59)) {
           qj.field_a.c("" + this.field_g, var2 + 30, 34 + var3, 16711680, -1);
@@ -1403,7 +1403,7 @@ final class GameEntity {
         if (param0 <= 96) {
           return;
         }
-        if (ph.field_D >= 2 &&
+        if (NetworkArchiveRequest.field_D >= 2 &&
           this.kind == 14) {
           qj.field_a.c("" + this.field_i, var2 + 30, 50 + var3, 255, -1);
         }
@@ -1572,10 +1572,10 @@ final class GameEntity {
                         var3.field_i = var3.field_i + 50;
                       }
                       if (this.kind != -1 ||
-                        !(0 < el.field_I)) {
+                        !(0 < DiskArchiveRequest.field_I)) {
                         this.field_g = this.field_g - 1;
                         if (this.kind == -1) {
-                          el.field_I = 50;
+                          DiskArchiveRequest.field_I = 50;
                         }
                       }
                     }
@@ -1585,10 +1585,10 @@ final class GameEntity {
                         this.field_i = this.field_i + 50;
                       }
                       if (var3.kind != -1 ||
-                        !(0 < el.field_I)) {
+                        !(0 < DiskArchiveRequest.field_I)) {
                         var3.field_g = var3.field_g - 1;
                         if (var3.kind == -1) {
-                          el.field_I = 50;
+                          DiskArchiveRequest.field_I = 50;
                         }
                       }
                     }
@@ -1969,7 +1969,7 @@ final class GameEntity {
           if (var7_int <= -1) {
             if (pk.a(-12663, 0)) {
               if ((qi.level < q.field_a) &&
-                (decompiledFrameRemainder0 = !(ph.field_D < 2))) {
+                (decompiledFrameRemainder0 = !(NetworkArchiveRequest.field_D < 2))) {
                 decompiledFrameRemainder0 = !(!si.field_jb[52]);
               }
               if (decompiledFrameRemainder0) {
@@ -1985,7 +1985,7 @@ final class GameEntity {
                 }
                 if (var8 != 0) {
                   if (var9_int <= 30) {
-                    if ((!(ph.field_D < 2)) &&
+                    if ((!(NetworkArchiveRequest.field_D < 2)) &&
                       (si.field_jb[52])) {
                       q.field_a = q.field_a + 1;
                       stackIn_147_0 = new GameEntity(11);

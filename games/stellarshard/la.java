@@ -362,7 +362,7 @@ final class la extends WidgetContainer implements ec, oi {
               if (param2 == this.field_J) {
                 if (!this.field_P) {
                   if (!this.field_N) {
-                    rk.a(3);
+                    DiskCacheWorker.a(3);
                   } else {
                     cg.a((byte) 57);
                   }

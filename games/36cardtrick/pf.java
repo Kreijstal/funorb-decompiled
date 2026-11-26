@@ -51,13 +51,13 @@ final class pf extends IntrusiveNode {
         RgbSprite[] var1 = new RgbSprite[cf.field_c];
         int var3 = -56 / ((param0 - 69) / 40);
         for (var2 = 0; var2 < cf.field_c; var2++) {
-          var4 = na.field_q[var2] * hb.field_a[var2];
+          var4 = NetworkArchiveRequest.field_q[var2] * hb.field_a[var2];
           var5 = rd.field_k[var2];
           var6 = new int[var4];
           for (var7 = 0; var7 < var4; var7++) {
             var6[var7] = ImageProducerRasterBuffer.field_i[bc.a((int) var5[var7], 255)];
           }
-          var1[var2] = new RgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var6);
+          var1[var2] = new RgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], var6);
         }
         rh.d(77);
         return var1;

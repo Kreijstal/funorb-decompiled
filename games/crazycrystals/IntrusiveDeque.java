@@ -97,7 +97,7 @@ final class IntrusiveDeque {
     final static void a(int param0, RgbSprite param1, String param2) {
         try {
           gh.field_A = param2;
-          wl.field_o = param1;
+          ArchiveRequest.field_o = param1;
           if (param0 != 0) {
             String var4 = (String) null;
             IntrusiveDeque.a(21, (RgbSprite) null, (String) null);

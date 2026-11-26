@@ -44,14 +44,14 @@ final class md {
               cb.field_j = new BufferedSocket((java.net.Socket) (fe.field_c.result), td.field_b);
               var4 = rd.field_j;
               var5 = var4;
-              na.field_r.position = 0;
+              NetworkArchiveRequest.field_r.position = 0;
               var5.position = 0;
               stackIn_13_0 = (param1) ? -2 : -1;
               ni.field_d = stackIn_13_0;
-              hc.field_f = stackIn_13_0;
+              SectorCacheStore.field_f = stackIn_13_0;
               sb.field_a = stackIn_13_0;
               ra.field_b = ByteArrayStore.field_a;
-              nf.a(na.field_r, false, MouseInputHandler.field_d, AwtRasterBuffer.field_g, kj.field_t);
+              nf.a(NetworkArchiveRequest.field_r, false, MouseInputHandler.field_d, AwtRasterBuffer.field_g, kj.field_t);
               fe.a((byte) -36, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

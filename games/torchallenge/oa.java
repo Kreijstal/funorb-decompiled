@@ -6,17 +6,17 @@ import java.util.*;
 final class oa {
     private di[] field_b;
     private PacketBuffer field_f;
-    private rb field_j;
+    private DiskCacheWorker field_j;
     static Sprite field_e;
     private java.math.BigInteger field_h;
     private java.math.BigInteger field_i;
     static int field_g;
     static pe field_k;
     private vb field_c;
-    private db field_d;
+    private NetworkArchiveRequest field_d;
     static int[] field_a;
 
-    oa(vb param0, rb param1) {
+    oa(vb param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -224,7 +224,7 @@ final class oa {
         if (this.field_d.field_v) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_d.e(2));
+        var10 = new PacketBuffer(this.field_d.getData(2));
         var10.position = 5;
         var3 = var10.readUnsignedByte(-87);
         var10.position = var10.position + 72 * var3;
@@ -339,7 +339,7 @@ final class oa {
         }
     }
 
-    private oa(vb param0, rb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private oa(vb param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

@@ -93,12 +93,12 @@ abstract class NetworkGameClient extends GameAppletShell {
         aj.g(28003);
         if (!mc.b((byte) -112) &&
           bh.field_t != 11) {
-          ah.a(-1);
+          SectorCacheStore.a(-1);
         }
         if (ui.field_pb != null) {
           al.field_f = ui.field_pb.pollRotation(0);
         }
-        if (qh.j(32391)) {
+        if (DiskArchiveRequest.j(32391)) {
           var3 = bm.f((byte) 85) * 1200;
           if (this.field_v ||
             !(var3 >= BufferedSocket.a(true)) &&
@@ -675,7 +675,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (var4 == 1) {
             var5_int = tg.a(ol.a(-125), param1 ^ 0, fc.d(64));
             if (var5_int != -1) {
-              fk.a(fh.field_a, var5_int, false, tc.field_e);
+              NetworkArchiveRequest.a(fh.field_a, var5_int, false, tc.field_e);
               tc.field_e = null;
               fh.field_a = null;
             }
@@ -749,7 +749,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             df.a(BoundedRandomAccessFile.getApplet((byte) -88), 10245);
           }
           if (12 == var4) {
-            qg.a(qh.i(-114), BoundedRandomAccessFile.getApplet((byte) -56), 0);
+            qg.a(DiskArchiveRequest.i(-114), BoundedRandomAccessFile.getApplet((byte) -56), 0);
           }
           if (var4 == 13) {
             try {

@@ -80,7 +80,7 @@ final class fa extends wl {
           int stackIn_79_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ob var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -95,10 +95,10 @@ final class fa extends wl {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ob var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          ob var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = MonkeyPuzzle2.field_F ? 1 : 0;
           if (this.field_o != null) {
             var2_long = pf.correctedCurrentTimeMillis(0);
@@ -127,23 +127,23 @@ final class fa extends wl {
           }
           try {
             this.field_o.b((byte) 86);
-            var2 = (ob) (this.field_n.a(true));
+            var2 = (NetworkArchiveRequest) (this.field_n.a(true));
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(1, -49152);
               this.field_l.writeLong40(var2.field_f, -1268490168);
               this.field_o.a(this.field_l.payload, 0, (byte) 80, this.field_l.payload.length);
               this.field_j.a(var2, (byte) 95);
-              var2 = (ob) (this.field_n.c((byte) -75));
+              var2 = (NetworkArchiveRequest) (this.field_n.c((byte) -75));
             }
-            var2Lifetime1 = (ob) (this.field_i.a(true));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_i.a(true));
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(0, -49152);
               this.field_l.writeLong40(var2Lifetime1.field_f, -1268490168);
               this.field_o.a(this.field_l.payload, 0, (byte) 83, this.field_l.payload.length);
               this.field_c.a(var2Lifetime1, (byte) 127);
-              var2Lifetime1 = (ob) (this.field_i.c((byte) -75));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_i.c((byte) -75));
             }
             if (param0 >= -33) {
               this.b((byte) -60);
@@ -192,24 +192,24 @@ final class fa extends wl {
                     var12 = ((long)var6 << 32) + (long)var7;
                     var14 = null;
                     if (var11 != 0) {
-                      var14_ref = (ob) (this.field_c.a(true));
+                      var14_ref = (NetworkArchiveRequest) (this.field_c.a(true));
                       while (var14_ref != null) {
                         if (var12 == var14_ref.field_f) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        var14_ref = (ob) (this.field_c.c((byte) -75));
+                        var14_ref = (NetworkArchiveRequest) (this.field_c.c((byte) -75));
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameCompleted0)) {
-                      var14_ref = (ob) (this.field_j.a(true));
+                      var14_ref = (NetworkArchiveRequest) (this.field_j.a(true));
                       while (var14_ref != null) {
                         if (~var12 == ~var14_ref.field_f) {
                           break;
                         }
-                        var14_ref = (ob) (this.field_j.c((byte) -75));
+                        var14_ref = (NetworkArchiveRequest) (this.field_j.c((byte) -75));
                       }
                     }
                     if (var14_ref == null) {
@@ -296,12 +296,12 @@ final class fa extends wl {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ob var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ob var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = MonkeyPuzzle2.field_F ? 1 : 0;
           try {
             if (this.field_o != null) {
@@ -319,7 +319,7 @@ final class fa extends wl {
             this.field_k = null;
             this.field_g.position = 0;
             while (true) {
-              var4_ref = (ob) (this.field_j.a((byte) -120));
+              var4_ref = (NetworkArchiveRequest) (this.field_j.a((byte) -120));
               if (var4_ref != null) {
                 this.field_n.a(var4_ref, (byte) -108);
                 continue;
@@ -327,7 +327,7 @@ final class fa extends wl {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (ob) (this.field_c.a((byte) -120));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_c.a((byte) -120));
               if (var4_refLifetime1 != null) {
                 this.field_i.a(var4_refLifetime1, (byte) -9);
                 continue;

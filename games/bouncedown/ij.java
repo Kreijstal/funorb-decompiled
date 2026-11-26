@@ -197,7 +197,7 @@ final class ij {
           }
           var2Lifetime23 = AccountNameAvailabilityValidator.a((byte) 48, "sound");
           if (null != var2Lifetime23) {
-            md.field_u = c.a(0, var2Lifetime23);
+            DiskArchiveRequest.field_u = c.a(0, var2Lifetime23);
           }
           var2Lifetime24 = AccountNameAvailabilityValidator.a((byte) 48, "threeplayer");
           if (null != var2Lifetime24) {

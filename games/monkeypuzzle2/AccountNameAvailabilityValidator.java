@@ -238,7 +238,7 @@ final class AccountNameAvailabilityValidator extends wj {
             return;
           }
           if (var2 == 1) {
-            var12 = (vl) (ob.field_s.beginBackward((byte) -117));
+            var12 = (vl) (NetworkArchiveRequest.field_s.beginBackward((byte) -117));
             if (var12 == null) {
               PacketBuffer.a(-1);
               return;

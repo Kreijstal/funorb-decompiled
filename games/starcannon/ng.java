@@ -131,7 +131,7 @@ final class ng extends fe implements ub {
             stackIn_14_0 = var5;
             return stackIn_14_0;
           }
-          stackIn_4_0 = tg.field_x;
+          stackIn_4_0 = DiskArchiveRequest.field_x;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

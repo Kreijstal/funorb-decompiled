@@ -219,7 +219,7 @@ final class vg {
             }
             if (aa.field_g.field_L != 0) {
               if (!ud.field_b) {
-                cc.a((byte) 81, param1);
+                NetworkArchiveRequest.a((byte) 81, param1);
               } else {
                 dn.a((byte) 72, param1);
               }

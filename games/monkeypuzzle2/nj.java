@@ -125,20 +125,20 @@ final class nj {
         int var6Lifetime1;
         int var7Lifetime1;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
-        if (uj.field_i < 0) {
+        if (DiskCacheWorker.field_i < 0) {
           return;
         }
         var3 = param1 - 135;
         var4 = -35 + param2;
         var5 = 256;
-        if (uj.field_i < 75) {
-          var5 = (uj.field_i << 8) / 75;
+        if (DiskCacheWorker.field_i < 75) {
+          var5 = (DiskCacheWorker.field_i << 8) / 75;
         }
         if (param0 != -21639) {
           field_c = (String[]) null;
         }
-        if (uj.field_i > 200) {
-          var5 = (-uj.field_i + 250 << 8) / 50;
+        if (DiskCacheWorker.field_i > 200) {
+          var5 = (-DiskCacheWorker.field_i + 250 << 8) / 50;
         }
         mc.a(-8497, rj.field_H);
         ig.b();
@@ -148,12 +148,12 @@ final class nj {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_g, 0, 256 - var5);
         }
         tj.b(653);
-        if (uj.field_i >= 150) {
+        if (DiskCacheWorker.field_i >= 150) {
           ki.field_H.b(15 + var3, var4 + 10, var5);
         } else {
           rj.field_H.e(var3, var4);
         }
-        var6 = uj.field_i - 125;
+        var6 = DiskCacheWorker.field_i - 125;
         if (var6 > 0 &&
           50 > var6) {
           if (var6 < 20) {
@@ -168,7 +168,7 @@ final class nj {
             }
           }
         }
-        var6Lifetime1 = -140 + uj.field_i;
+        var6Lifetime1 = -140 + DiskCacheWorker.field_i;
         if (0 < var6Lifetime1) {
           var7Lifetime1 = 256;
           if (var6Lifetime1 < 20) {

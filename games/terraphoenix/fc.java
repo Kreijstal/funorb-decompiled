@@ -334,7 +334,7 @@ final class fc {
           MouseWheelInput.field_b = ch.mouseY;
           ja.field_l = sj.field_c;
           sj.field_c = false;
-          ma.field_I = sh.field_z;
+          DiskArchiveRequest.field_I = sh.field_z;
           mm.field_c = IsaacCipher.field_l;
           lm.field_c = qd.field_i;
           sh.field_z = 0;
@@ -443,8 +443,8 @@ final class fc {
           if (param0 != 11043) {
             field_g = (String) null;
           }
-          var3 = ma.a(param1, (byte) 98) ? 1 : 0;
-          var4 = ma.a(param1, (byte) 98) ? 1 : 0;
+          var3 = DiskArchiveRequest.a(param1, (byte) 98) ? 1 : 0;
+          var4 = DiskArchiveRequest.a(param1, (byte) 98) ? 1 : 0;
           var5 = new ee();
           var5.field_m = (short)param1.a(false, 16);
           var5.field_D = dc.a(-25076, var5.field_D, 16, param1);
@@ -471,10 +471,10 @@ final class fc {
             var5.field_y = dc.a(param0 - 36119, var5.field_y, 16, param1);
             var5.field_J = dc.a(-25076, var5.field_J, 16, param1);
           }
-          if (ma.a(param1, (byte) 98)) {
+          if (DiskArchiveRequest.a(param1, (byte) 98)) {
             var5.field_x = dc.a(param0 ^ -19153, var5.field_x, 16, param1);
           }
-          if (ma.a(param1, (byte) 98)) {
+          if (DiskArchiveRequest.a(param1, (byte) 98)) {
             var5.field_f = ig.a(16, 125, param1, var5.field_f);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_f.length; var7++) {

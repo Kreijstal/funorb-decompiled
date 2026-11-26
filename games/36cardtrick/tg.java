@@ -149,7 +149,7 @@ final class tg implements ci {
           if (!param1.d(82)) {
             return;
           }
-          na.a(2 + var7, 71, -4 + param1.field_h, -4 + param1.field_q, var6_int + 2);
+          NetworkArchiveRequest.a(2 + var7, 71, -4 + param1.field_h, -4 + param1.field_q, var6_int + 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

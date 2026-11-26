@@ -72,7 +72,7 @@ abstract class rh extends WidgetContainer {
     }
 
     rh(kj param0, int param1, int param2) {
-        super(tf.field_b - param1 >> 1, uj.field_l - param2 >> 1, param1, param2, (ml) null);
+        super(tf.field_b - param1 >> 1, DiskCacheWorker.field_l - param2 >> 1, param1, param2, (ml) null);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -216,7 +216,7 @@ abstract class rh extends WidgetContainer {
         byte[] var2Lifetime37;
         byte[] var2Lifetime38;
         try {
-          gf.field_b = param1;
+          SectorCacheStore.field_b = param1;
           var2 = PcmResampler.a((byte) 76, "score_colon_space");
           if (null != var2) {
             be.a(var2, (byte) 112);
@@ -376,7 +376,7 @@ abstract class rh extends WidgetContainer {
           if (null != var2Lifetime38) {
             ki.field_r[9] = be.a(var2Lifetime38, (byte) 95);
           }
-          gf.field_b = null;
+          SectorCacheStore.field_b = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -394,7 +394,7 @@ abstract class rh extends WidgetContainer {
 
     final void a(int param0, byte param1, int param2) {
         try {
-          this.a(param0, 13361, tf.field_b - param2 >> 1, param2, -param0 + uj.field_l >> 1);
+          this.a(param0, 13361, tf.field_b - param2 >> 1, param2, -param0 + DiskCacheWorker.field_l >> 1);
           int var4_int = -46 / ((60 - param1) / 49);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "rh.AB(" + param0 + ',' + param1 + ',' + param2 + ')');

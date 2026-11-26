@@ -315,7 +315,7 @@ final class el {
           if (param1 != 33) {
             el.clearStaticReferences((byte) -81);
           }
-          rh.field_v = AchievementNotice.field_l;
+          ArchiveRequest.field_v = AchievementNotice.field_l;
           if (param0 != 255) {
             if (param0 >= 100 &&
               param0 <= 105) {

@@ -22,7 +22,7 @@ final class dl extends si {
 
     final static RgbSprite[] a(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = -126 % ((-80 - param0) / 37);
-        return n.a(123, 3, param4, param3, param1, 1, param2, 1, 1);
+        return DiskCacheWorker.a(123, 3, param4, param3, param1, 1, param2, 1, 1);
     }
 
     final static void a(String param0, int param1, int param2) {

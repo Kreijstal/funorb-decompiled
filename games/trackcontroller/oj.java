@@ -135,7 +135,7 @@ final class oj {
                   var26Lifetime1 = param3.field_t[var23Lifetime2];
                   vj.field_c[var23Lifetime2] = (var25Lifetime1 * var15 + var24Lifetime1 * var12 + var26Lifetime1 * var18 >> 16) + var9;
                   NodeHashTable.field_k[var23Lifetime2] = (var25Lifetime1 * var16 + (var24Lifetime1 * var13 + var19 * var26Lifetime1) >> 16) + var10;
-                  sd.field_d[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var20 * var26Lifetime1) >> 16) + var11;
+                  DiskCacheWorker.field_d[var23Lifetime2] = (var14 * var24Lifetime1 - (-(var17 * var25Lifetime1) - var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param3.field_f[var23Lifetime2];
                   var25Lifetime1 = param3.field_D[var23Lifetime2];
                   var26Lifetime1 = param3.field_B[var23Lifetime2];

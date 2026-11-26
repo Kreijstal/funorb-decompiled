@@ -1837,13 +1837,13 @@ final class MapTile {
         int stackIn_117_3 = 0;
         this.field_e = 0;
         if (0 <= this.field_g) {
-          if (1 == nh.field_E[this.field_g]) {
+          if (1 == NetworkArchiveRequest.field_E[this.field_g]) {
             this.a(1, true, param0 ^ 106);
           }
-          if (nh.field_E[this.field_g] == 2) {
+          if (NetworkArchiveRequest.field_E[this.field_g] == 2) {
             this.a(1, false, -68);
           }
-          if (3 == nh.field_E[this.field_g]) {
+          if (3 == NetworkArchiveRequest.field_E[this.field_g]) {
             this.a(1, true, 110);
             this.field_i = this.field_i | 1;
             dupTemp$0 = this.map.a(92, this.field_n, this.field_r, -1 + this.field_A);
@@ -1851,13 +1851,13 @@ final class MapTile {
           }
         }
         if (0 <= this.field_k) {
-          if (nh.field_E[this.field_k] == 1) {
+          if (NetworkArchiveRequest.field_E[this.field_k] == 1) {
             this.a(2, true, -71);
           }
-          if (nh.field_E[this.field_k] == 2) {
+          if (NetworkArchiveRequest.field_E[this.field_k] == 2) {
             this.a(2, false, param0 ^ 89);
           }
-          if (nh.field_E[this.field_k] == 3) {
+          if (NetworkArchiveRequest.field_E[this.field_k] == 3) {
             this.a(2, true, 92);
             this.field_i = this.field_i | 2;
             dupTemp$1 = this.map.a(111, this.field_n - 1, this.field_r, this.field_A);

@@ -269,7 +269,7 @@ final class aj {
         if (param0 != 92) {
           return (String) null;
         }
-        var6 = "(" + ni.field_d + " " + hc.field_f + " " + sb.field_a + ") " + pd.field_l;
+        var6 = "(" + ni.field_d + " " + SectorCacheStore.field_f + " " + sb.field_a + ") " + pd.field_l;
         var1 = var6;
         if (al.field_a > 0) {
           var1 = var6 + ":";

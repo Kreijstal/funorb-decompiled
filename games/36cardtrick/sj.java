@@ -97,14 +97,14 @@ final class sj {
     final static RgbSprite b(byte param0) {
         int var5_int = 0;
         int var6 = Main.field_T;
-        int var1 = hb.field_a[0] * na.field_q[0];
+        int var1 = hb.field_a[0] * NetworkArchiveRequest.field_q[0];
         byte[] var2 = rd.field_k[0];
         int[] var3 = new int[var1];
         int var4 = -87 % ((-29 - param0) / 59);
         for (var5_int = 0; var5_int < var1; var5_int++) {
           var3[var5_int] = ImageProducerRasterBuffer.field_i[bc.a(255, (int) var2[var5_int])];
         }
-        RgbSprite var5 = new RgbSprite(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[0], na.field_q[0], hb.field_a[0], var3);
+        RgbSprite var5 = new RgbSprite(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[0], NetworkArchiveRequest.field_q[0], hb.field_a[0], var3);
         rh.d(-128);
         return var5;
     }

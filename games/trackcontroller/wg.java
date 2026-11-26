@@ -4,12 +4,12 @@
 final class wg {
     static int clickY;
     private PacketBuffer field_i;
-    private sd field_f;
+    private DiskCacheWorker field_f;
     private CachedArchiveSource[] field_g;
     private ArchiveRequestConnection field_a;
     static String field_h;
     private java.math.BigInteger field_b;
-    private hi field_c;
+    private NetworkArchiveRequest field_c;
     private java.math.BigInteger field_d;
 
     final static void b(int param0) {
@@ -45,7 +45,7 @@ final class wg {
         }
     }
 
-    wg(ArchiveRequestConnection param0, sd param1) {
+    wg(ArchiveRequestConnection param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -81,7 +81,7 @@ final class wg {
         if (this.field_c.field_w) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_c.g(512));
+        var10 = new PacketBuffer(this.field_c.getData(512));
         var10.position = 5;
         var3 = var10.readUnsignedByte(16383);
         var10.position = var10.position + 72 * var3;
@@ -151,7 +151,7 @@ final class wg {
         }
     }
 
-    private wg(ArchiveRequestConnection param0, sd param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private wg(ArchiveRequestConnection param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_f = param1;
           this.field_b = param3;

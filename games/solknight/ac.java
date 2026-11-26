@@ -30,8 +30,8 @@ final class ac {
           SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (null == jb.field_d) {
-            if (sk.field_n != null) {
-              sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (ArchiveRequest.field_n != null) {
+              ArchiveRequest.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -39,8 +39,8 @@ final class ac {
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
-            if (null != sk.field_n) {
-              sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != ArchiveRequest.field_n) {
+              ArchiveRequest.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.d(245, 199);
@@ -57,7 +57,7 @@ final class ac {
               }
             }
           }
-          if (sk.field_n != null) {
+          if (ArchiveRequest.field_n != null) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -74,7 +74,7 @@ final class ac {
               var5++;
             }
             if (var2 != null) {
-              sk.field_n.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+              ArchiveRequest.field_n.a("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
             }
           }
           if (param0 >= -110) {

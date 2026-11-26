@@ -300,14 +300,14 @@ final class MidiPcmStream extends PcmStream {
         }
         if (var6Lifetime4 == 64) {
           if (var7Lifetime3 >= 64) {
-            this.field_v[var5Lifetime4] = cl.b(this.field_v[var5Lifetime4], 1);
+            this.field_v[var5Lifetime4] = DiskArchiveRequest.b(this.field_v[var5Lifetime4], 1);
           } else {
             this.field_v[var5Lifetime4] = vg.c(this.field_v[var5Lifetime4], -2);
           }
         }
         if (var6Lifetime4 == 65) {
           if (var7Lifetime3 >= 64) {
-            this.field_v[var5Lifetime4] = cl.b(this.field_v[var5Lifetime4], 2);
+            this.field_v[var5Lifetime4] = DiskArchiveRequest.b(this.field_v[var5Lifetime4], 2);
           } else {
             this.a(-60, var5Lifetime4);
             this.field_v[var5Lifetime4] = vg.c(this.field_v[var5Lifetime4], -3);
@@ -357,7 +357,7 @@ final class MidiPcmStream extends PcmStream {
             this.c(var5Lifetime4, 42);
             this.field_v[var5Lifetime4] = vg.c(this.field_v[var5Lifetime4], -5);
           } else {
-            this.field_v[var5Lifetime4] = cl.b(this.field_v[var5Lifetime4], 4);
+            this.field_v[var5Lifetime4] = DiskArchiveRequest.b(this.field_v[var5Lifetime4], 4);
           }
         }
         if (var6Lifetime4 == 17) {
@@ -468,7 +468,7 @@ final class MidiPcmStream extends PcmStream {
             return;
           }
           if (var2 == 1) {
-            var11 = (AchievementNotice) (rh.field_r.beginForward((byte) -95));
+            var11 = (AchievementNotice) (ArchiveRequest.field_r.beginForward((byte) -95));
             if (var11 == null) {
               pc.a(1);
               return;

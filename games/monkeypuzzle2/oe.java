@@ -35,7 +35,7 @@ final class oe {
           return;
         }
         try {
-          var3 = gf.field_c;
+          var3 = SectorCacheStore.field_c;
           var3.b(true, param1);
           var3.writeByte(param0.field_g, -49152);
           var3.writeByte(param0.field_j, -49152);

@@ -616,7 +616,7 @@ class vi extends s {
           if (this.field_v == 1) {
             if (this.field_j instanceof rj) {
               var5 = (rj) ((Object) this.field_j);
-              var6 = var5.a(vl.field_d, param3, 2147483647, ua.field_a, (pj) (this), param2);
+              var6 = var5.a(DiskCacheWorker.field_d, param3, 2147483647, ua.field_a, (pj) (this), param2);
               if (var6 != -1) {
                 if (this.field_J &&
                   this.field_K > var6 &&
@@ -646,7 +646,7 @@ class vi extends s {
         try {
           if (super.a((byte) -116, param1, param2, param3, param4, param5, param6) &&
             this.field_j instanceof rj) {
-            var8_int = ((rj) ((Object) this.field_j)).a(vl.field_d, param6, 2147483647, ua.field_a, (pj) (this), param3);
+            var8_int = ((rj) ((Object) this.field_j)).a(DiskCacheWorker.field_d, param6, 2147483647, ua.field_a, (pj) (this), param3);
             if (var8_int != -1) {
               stackIn_6_1 = var8_int;
             } else {

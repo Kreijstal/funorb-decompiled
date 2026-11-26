@@ -65,10 +65,10 @@ final class ub {
 
     final static boolean b(boolean param0) {
         if (param0) {
-          return uj.field_i > 250 ? true : false;
+          return DiskCacheWorker.field_i > 250 ? true : false;
         }
         field_b = 104;
-        return uj.field_i > 250 ? true : false;
+        return DiskCacheWorker.field_i > 250 ? true : false;
     }
 
     public static void a(boolean param0) {

@@ -22,7 +22,7 @@ final class mb extends ka {
             return false;
           }
           long dupTemp$0 = ri.correctedCurrentTimeMillis(param1 - 20);
-          pc.field_a = dupTemp$0;
+          DiskCacheWorker.field_a = dupTemp$0;
           m.field_b = dupTemp$0;
           if (mg.field_a.status != 1) {
             lk.field_d = i.field_q;
@@ -403,16 +403,16 @@ final class mb extends ka {
                     if (var18 == 0) {
                       if (var17 >= 0 &&
                         var17 < ti.field_e) {
-                        sm.a(param5, param1, var16Lifetime2 + var17, var18, 87);
+                        DiskArchiveRequest.a(param5, param1, var16Lifetime2 + var17, var18, 87);
                       }
                     } else {
                       if (var17 + var18 >= ti.field_e) {
                         var18 = ti.field_e - (var17 + 1);
                       }
                       if (0 > var17) {
-                        sm.a(param5, param1, var16Lifetime2, var18 + var17, 87);
+                        DiskArchiveRequest.a(param5, param1, var16Lifetime2, var18 + var17, 87);
                       } else {
-                        sm.a(param5, param1, var17 + var16Lifetime2, var18, 87);
+                        DiskArchiveRequest.a(param5, param1, var17 + var16Lifetime2, var18, 87);
                       }
                     }
                   }
@@ -454,16 +454,16 @@ final class mb extends ka {
                 if (0 == var17Lifetime1) {
                   if (0 <= var16Lifetime1 &&
                     ti.field_e > var16Lifetime1) {
-                    sm.a(param5, param1, var15Lifetime1 + var16Lifetime1, var17Lifetime1, 87);
+                    DiskArchiveRequest.a(param5, param1, var15Lifetime1 + var16Lifetime1, var17Lifetime1, 87);
                   }
                 } else {
                   if (ti.field_e <= var17Lifetime1 + var16Lifetime1) {
                     var17Lifetime1 = ti.field_e - var16Lifetime1 - 1;
                   }
                   if (var16Lifetime1 < 0) {
-                    sm.a(param5, param1, var15Lifetime1, var17Lifetime1 + var16Lifetime1, 87);
+                    DiskArchiveRequest.a(param5, param1, var15Lifetime1, var17Lifetime1 + var16Lifetime1, 87);
                   } else {
-                    sm.a(param5, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8 - 25);
+                    DiskArchiveRequest.a(param5, param1, var16Lifetime1 + var15Lifetime1, var17Lifetime1, param8 - 25);
                   }
                 }
               }

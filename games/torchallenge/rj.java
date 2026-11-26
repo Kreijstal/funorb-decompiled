@@ -293,7 +293,7 @@ final class rj {
             mh.field_a = param7;
             ae.field_x = param3;
             na.field_c = param0;
-            db.field_y = param12;
+            NetworkArchiveRequest.field_y = param12;
             ph.field_e = param9;
             sd.field_h = param6;
             if (param11) {

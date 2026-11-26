@@ -723,7 +723,7 @@ final class un {
                 qh.field_b.field_q = be.field_c;
               }
             } else {
-              qh.field_b.field_q = oc.a(gd.field_d, new String[]{Integer.toString(s.field_O)}, (byte) -67);
+              qh.field_b.field_q = oc.a(SectorCacheStore.field_d, new String[]{Integer.toString(s.field_O)}, (byte) -67);
             }
           }
           qh.field_b.field_q = qh.field_b.field_q.toUpperCase();

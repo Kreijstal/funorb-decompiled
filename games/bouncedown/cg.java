@@ -116,7 +116,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 110, "ticketing_xunread");
                 if (null != var2) {
-                  md.field_v = c.a(param0 + 99, var2);
+                  DiskArchiveRequest.field_v = c.a(param0 + 99, var2);
                 }
                 var2 = hg.a((byte) 119, "ticketing_gotowebsite");
                 if (null != var2) {
@@ -1514,7 +1514,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 125, "login_no_displayname");
                 if (null != var2) {
-                  vh.field_d = c.a(0, var2);
+                  SectorCacheStore.field_d = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 86, "create_username_tooltip");
                 if (var2 != null) {
@@ -2480,27 +2480,27 @@ final class cg {
                 }
                 var2 = hg.a((byte) 110, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  vi.field_f[0] = c.a(0, var2);
+                  DiskCacheWorker.field_f[0] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 98, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  vi.field_f[1] = c.a(0, var2);
+                  DiskCacheWorker.field_f[1] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 102, "quickchat_shortcut_help,2");
                 if (null != var2) {
-                  vi.field_f[2] = c.a(0, var2);
+                  DiskCacheWorker.field_f[2] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 94, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  vi.field_f[3] = c.a(0, var2);
+                  DiskCacheWorker.field_f[3] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 102, "quickchat_shortcut_help,4");
                 if (var2 != null) {
-                  vi.field_f[4] = c.a(0, var2);
+                  DiskCacheWorker.field_f[4] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 94, "quickchat_shortcut_help,5");
                 if (var2 != null) {
-                  vi.field_f[5] = c.a(0, var2);
+                  DiskCacheWorker.field_f[5] = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 105, "quickchat_shortcut_keys,0");
                 if (null != var2) {

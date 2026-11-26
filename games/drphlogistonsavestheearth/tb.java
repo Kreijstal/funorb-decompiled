@@ -21,8 +21,8 @@ final class tb {
         if (hj.field_f < 2) {
           return a.field_c;
         }
-        if (bi.field_I != null) {
-          if (!bi.field_I.a(0)) {
+        if (DiskArchiveRequest.field_I != null) {
+          if (!DiskArchiveRequest.field_I.a(0)) {
             return mi.field_d;
           }
           return dh.field_J;

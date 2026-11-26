@@ -46,7 +46,7 @@ final class AccountNameAvailabilityValidator extends qf {
             this.checkedName = (String) null;
           }
           if (!param0.equals(this.checkedName)) {
-            var3 = tg.pollAccountNameCheck(param1 + 26118, param0);
+            var3 = DiskArchiveRequest.pollAccountNameCheck(param1 + 26118, param0);
             if (var3 != null &&
               null == var3.message) {
               this.nameAvailable = var3.success;
@@ -142,7 +142,7 @@ final class AccountNameAvailabilityValidator extends qf {
             return stackIn_5_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var4 = tg.pollAccountNameCheck(-58, param0);
+            var4 = DiskArchiveRequest.pollAccountNameCheck(-58, param0);
             if (var4 == null) {
               return null;
             }

@@ -183,7 +183,7 @@ final class ib {
                 }
                 var2 = mk.b("completedstring", (byte) -119);
                 if (null != var2) {
-                  ae.field_r = PcmResampler.a(124, var2);
+                  ArchiveRequest.field_r = PcmResampler.a(124, var2);
                 }
                 var2 = mk.b("parcolon", (byte) -120);
                 if (var2 != null) {

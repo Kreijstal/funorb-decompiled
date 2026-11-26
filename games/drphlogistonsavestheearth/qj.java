@@ -61,7 +61,7 @@ final class qj {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           if (null != uj.field_j && (param0 < 0 ||
-            tl.field_O == ik.field_d)) {
+            tl.field_O == SectorCacheStore.field_d)) {
             if (param1 != 14656) {
               field_b = (sa) null;
             }

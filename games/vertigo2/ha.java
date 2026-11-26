@@ -79,18 +79,18 @@ final class ha {
           mj.field_c = gk.a(param14, "lobby", "opentome", true);
           sf.field_a = gk.a(param14, "lobby", "allowspectators", true);
           gm.field_c = new String[5];
-          gm.field_c[1] = t.field_k;
+          gm.field_c[1] = DiskCacheWorker.field_k;
           gm.field_c[0] = fh.field_x;
           gm.field_c[2] = fa.field_q;
           gm.field_c[4] = pq.field_g;
           gm.field_c[3] = ve.field_b;
           im.field_j = new UiPanel(0L, (UiPanel) null);
           hr.field_C = new UiPanel((long)param9, MidiPcmStream.field_t, kc.field_c);
-          rk.field_v = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
+          ArchiveRequest.field_v = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
           ja.field_f = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
           im.field_j.b(hr.field_C, 118);
           if (MidiPcmStream.field_S) {
-            im.field_j.b(rk.field_v, 121);
+            im.field_j.b(ArchiveRequest.field_v, 121);
           }
           im.field_j.b(ja.field_f, 123);
           ja.field_f.field_Lb.a(AccountRequestState.field_b, param9 - 27);
@@ -343,8 +343,8 @@ final class ha {
     final static void a(byte param0) {
         int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
-        if (rk.field_y > 0) {
-          rk.field_y = rk.field_y - 1;
+        if (ArchiveRequest.field_y > 0) {
+          ArchiveRequest.field_y = ArchiveRequest.field_y - 1;
         } else {
           if (0 < ko.field_P) {
             ko.field_P = ko.field_P - 1;
@@ -354,7 +354,7 @@ final class ha {
             }
           }
         }
-        if (rk.field_y > 0) {
+        if (ArchiveRequest.field_y > 0) {
           km.i(202);
         }
         if (ko.field_P > 0) {

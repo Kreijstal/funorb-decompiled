@@ -50,7 +50,7 @@ class cf extends DualLinkNode {
         if (param0 != 32) {
           return (String) null;
         }
-        return si.field_q;
+        return ArchiveRequest.field_q;
     }
 
     cf() {

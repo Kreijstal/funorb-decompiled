@@ -458,7 +458,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var4 == 1) {
             stackIn_7_0 = param0;
-            stackIn_7_1 = ln.a((byte) -120);
+            stackIn_7_1 = SectorCacheStore.a((byte) -120);
             stackIn_8_2 = (param0) ? false : true;
             var5_int = qh.a(stackIn_7_0, stackIn_7_1, om.a(stackIn_8_2));
             if (-1 != var5_int) {
@@ -472,7 +472,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = qm.a(this.field_q, rn.a(-87), tp.c((byte) -73), em.e(7142), vl.c(-29455), 57, co.e((byte) 57));
+            var5_intLifetime1 = qm.a(this.field_q, rn.a(-87), tp.c((byte) -73), NetworkArchiveRequest.e(7142), vl.c(-29455), 57, DiskArchiveRequest.e((byte) 57));
             if (-1 != var5_intLifetime1) {
               gj.a(var5_intLifetime1, 29120, mf.field_c, tp.field_v);
               tp.field_v = null;
@@ -488,7 +488,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param2) {
               hh.field_c = false;
             } else {
-              var5_intLifetime2 = bh.a(this.field_u, em.e(7142), 106, this.field_q, false, vl.c(-29455));
+              var5_intLifetime2 = bh.a(this.field_u, NetworkArchiveRequest.e(7142), 106, this.field_q, false, vl.c(-29455));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
                   IntrusiveNode.field_g = MusicPatchPcmStream.field_s;
@@ -725,7 +725,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           u.field_O = false;
         }
         if (0 == dk.field_c &&
-          ln.a(255)) {
+          SectorCacheStore.a(255)) {
           dk.field_c = 1;
         }
         if (dk.field_c == 1) {
@@ -845,7 +845,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (hh.field_c) {
           return -1;
         }
-        var2 = bh.a(this.field_u, em.e(7142), 116, this.field_q, true, vl.c(-29455));
+        var2 = bh.a(this.field_u, NetworkArchiveRequest.e(7142), 116, this.field_q, true, vl.c(-29455));
         if (var2 == -1) {
           return -1;
         }

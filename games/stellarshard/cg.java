@@ -49,8 +49,8 @@ final class cg {
             return;
           }
           GameEntity.a(param4, -29770, param10, param12, param5);
-          ki.a(param0, param3, -126);
-          ph.a(14835, param13, param20, param11, param2, param7);
+          ArchiveRequest.a(param0, param3, -126);
+          NetworkArchiveRequest.a(14835, param13, param20, param11, param2, param7);
           jb.a(param16, param6, param1, -100);
           uh.a(11130, param18, param14, param15);
           return;

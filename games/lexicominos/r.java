@@ -95,7 +95,7 @@ final class r extends nb implements ag, jk {
             this.a((String) null, (byte) 106);
           }
           if (this.field_B == param4) {
-            dc.c(255);
+            NetworkArchiveRequest.c(255);
           } else {
             if (this.field_G == param4) {
               this.g(126);
@@ -270,7 +270,7 @@ final class r extends nb implements ag, jk {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_g == tf.field_d[var3].field_g) {
               var4 = tf.field_d[var3].a(-1);
-              if (ok.field_G[var4] > si.field_s) {
+              if (ok.field_G[var4] > ArchiveRequest.field_s) {
                 ok.field_G[var4] = ok.field_G[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

@@ -78,7 +78,7 @@ final class ja {
         RuntimeException var1_ref = null;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
-          var5 = md.field_t;
+          var5 = DiskArchiveRequest.field_t;
           var1 = var5;
           var2 = param0;
           var3 = var5.length;

@@ -1173,7 +1173,7 @@ final class c extends sc {
           }
           var2Lifetime137 = wm.a("dataSheet_Shield", (byte) 94);
           if (null != var2Lifetime137) {
-            ae.field_c = va.a(0, var2Lifetime137);
+            SectorCacheStore.field_c = va.a(0, var2Lifetime137);
           }
           var2Lifetime138 = wm.a("dataSheet_EnergyWeapons", (byte) 112);
           if (var2Lifetime138 != null) {
@@ -1201,7 +1201,7 @@ final class c extends sc {
           }
           var2Lifetime144 = wm.a("viewInternal", (byte) 105);
           if (null != var2Lifetime144) {
-            pc.field_k = va.a(0, var2Lifetime144);
+            DiskCacheWorker.field_k = va.a(0, var2Lifetime144);
           }
           var2Lifetime145 = wm.a("viewExternal", (byte) 92);
           if (null != var2Lifetime145) {
@@ -1249,7 +1249,7 @@ final class c extends sc {
           }
           var2Lifetime156 = wm.a("youAlreadyHaveSpreadFire", (byte) 31);
           if (null != var2Lifetime156) {
-            ae.field_e = va.a(0, var2Lifetime156);
+            SectorCacheStore.field_e = va.a(0, var2Lifetime156);
           }
           var2Lifetime157 = wm.a("lasers", (byte) 95);
           if (null != var2Lifetime157) {
@@ -1257,7 +1257,7 @@ final class c extends sc {
           }
           var2Lifetime158 = wm.a("howToFireLasers", (byte) 66);
           if (null != var2Lifetime158) {
-            tn.field_D = va.a(0, var2Lifetime158);
+            NetworkArchiveRequest.field_D = va.a(0, var2Lifetime158);
           }
           var2Lifetime159 = wm.a("youAlreadyHaveLasers", (byte) 75);
           if (null != var2Lifetime159) {
@@ -1369,7 +1369,7 @@ final class c extends sc {
           }
           var2Lifetime186 = wm.a("howToFireNuclearMissiles", (byte) 37);
           if (null != var2Lifetime186) {
-            ae.field_b = va.a(0, var2Lifetime186);
+            SectorCacheStore.field_b = va.a(0, var2Lifetime186);
           }
           var2Lifetime187 = wm.a("youAlreadyHave4NuclearMissiles", (byte) 56);
           if (null != var2Lifetime187) {

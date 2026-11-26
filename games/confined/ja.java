@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    private pc field_c;
+    private DiskCacheWorker field_c;
     private PacketBuffer field_j;
     private java.math.BigInteger field_h;
-    private tn field_i;
+    private NetworkArchiveRequest field_i;
     private jf field_f;
     private tj[] field_a;
     private java.math.BigInteger field_e;
@@ -62,7 +62,7 @@ final class ja {
         if (this.field_i.field_v) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_i.e((byte) 118));
+        var10 = new PacketBuffer(this.field_i.getData((byte) 118));
         var10.position = 5;
         var3 = var10.readUnsignedByte(32);
         var10.position = var10.position + 72 * var3;
@@ -101,7 +101,7 @@ final class ja {
         int var1 = 104 % ((43 - param0) / 52);
     }
 
-    private ja(jf param0, pc param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ja(jf param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -154,7 +154,7 @@ final class ja {
         }
     }
 
-    ja(jf param0, pc param1) {
+    ja(jf param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -191,7 +191,7 @@ final class ja {
         return true;
     }
 
-    final tj a(ae param0, byte param1, boolean param2, int param3, ae param4) {
+    final tj a(SectorCacheStore param0, byte param1, boolean param2, int param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

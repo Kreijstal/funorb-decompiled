@@ -61,7 +61,7 @@ abstract class ByteStorage {
           return;
         }
         try {
-          ik.field_q = param2;
+          ArchiveRequest.field_q = param2;
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "kk.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

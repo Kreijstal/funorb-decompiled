@@ -27,7 +27,7 @@ final class bi {
 
     final static void a(int param0) {
         int var2 = 0;
-        int var1 = gd.a(5);
+        int var1 = SectorCacheStore.a(5);
         if (param0 > 87) {
           var2 = rb.a(0);
           IterableNodeHashTable.field_d.a(ai.field_j - tn.field_m, (tn.field_m << 1) + var1, var2 + (tm.field_d << 1), true, -tm.field_d + ak.field_j);

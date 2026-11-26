@@ -202,7 +202,7 @@ final class pa extends PacketBuffer {
               gb.field_d.a(param0 - 19424);
             }
             if (gi.field_a != null) {
-              gi.field_a.a(4);
+              gi.field_a.shutdown(4);
             }
             if (null != jj.field_b) {
               try {

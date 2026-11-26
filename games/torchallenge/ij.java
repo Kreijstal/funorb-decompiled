@@ -50,7 +50,7 @@ final class ij extends fk {
         }
         BufferedCacheFile.a((byte) 116, gi.field_d);
         if (param0 < -77) {
-          gi.field_d.a(sh.field_u, -69);
+          gi.field_d.a(ArchiveRequest.field_u, -69);
           gi.field_d = null;
           if (tf.field_h != null) {
             tf.field_h.d(-1);
@@ -59,7 +59,7 @@ final class ij extends fk {
           return;
         }
         field_w = (k) null;
-        gi.field_d.a(sh.field_u, -69);
+        gi.field_d.a(ArchiveRequest.field_u, -69);
         gi.field_d = null;
         if (tf.field_h != null) {
           tf.field_h.d(-1);

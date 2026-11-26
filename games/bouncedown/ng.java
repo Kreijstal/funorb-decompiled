@@ -108,7 +108,7 @@ abstract class ng {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (md.a(106, param1)) {
+          if (DiskArchiveRequest.a(106, param1)) {
             return true;
           }
           var6 = a.field_b;

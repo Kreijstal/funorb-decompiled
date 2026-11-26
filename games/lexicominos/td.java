@@ -114,7 +114,7 @@ final class td {
               ig.field_a.position = 0;
               a.field_c = param0[kk.field_r];
             }
-            if (!dc.d(2)) {
+            if (!NetworkArchiveRequest.d(2)) {
               return false;
             }
             if (sc.field_f == 0) {

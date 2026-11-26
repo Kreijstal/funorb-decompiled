@@ -103,7 +103,7 @@ final class AccountCreationResultPanel extends bd implements da {
         if (param0 >= -3) {
           return;
         }
-        this.showAccountCreationResult((byte) 58, af.createAccountErrorResult((byte) 36, 248, al.field_a), true);
+        this.showAccountCreationResult((byte) 58, DiskCacheWorker.createAccountErrorResult((byte) 36, 248, al.field_a), true);
     }
 
     final boolean a(int param0) {

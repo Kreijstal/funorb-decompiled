@@ -113,7 +113,7 @@ public final class TorChallenge extends GameClientBase {
               ie.field_f[2][0] = ba.field_d[0];
               ie.field_f[2][1] = ba.field_d[1];
               dh.field_Y = qk.a("", "menu_slider", ic.field_C, 0);
-              wa.field_xb = rb.a(ic.field_C, "", (byte) -127, "intro4_bg");
+              wa.field_xb = DiskCacheWorker.a(ic.field_C, "", (byte) -127, "intro4_bg");
               hl.a(wa.field_xb, false, gf.field_m[3][0]);
               break;
             }
@@ -170,7 +170,7 @@ public final class TorChallenge extends GameClientBase {
             wa.field_xb = null;
             we.field_m = new Sprite[4];
             we.field_m[0] = null;
-            qc.field_c = rb.a(ic.field_C, "", (byte) -116, "game_start_bg");
+            qc.field_c = DiskCacheWorker.a(ic.field_C, "", (byte) -116, "game_start_bg");
             we.field_m[1] = qk.a("", "game_start_henhui", ic.field_C, 0);
             we.field_m[2] = qk.a("", "game_start_ziren", ic.field_C, 0);
             we.field_m[3] = qk.a("", "game_start_damen", ic.field_C, 0);
@@ -179,14 +179,14 @@ public final class TorChallenge extends GameClientBase {
             eb.field_p[1] = qk.a("", "level_start_tower_1", ic.field_C, 0);
             pl.field_f = new Sprite[4];
             pl.field_f[0] = null;
-            FullscreenFocusCanvas.field_e = rb.a(ic.field_C, "", (byte) -115, "level_start_boss_bg");
+            FullscreenFocusCanvas.field_e = DiskCacheWorker.a(ic.field_C, "", (byte) -115, "level_start_boss_bg");
             hl.a(FullscreenFocusCanvas.field_e, false, 15245826);
             pl.field_f[1] = qk.a("", "level_start_boss_1", ic.field_C, param0 - 1);
             pl.field_f[2] = qk.a("", "level_start_boss_2", ic.field_C, 0);
             pl.field_f[3] = qk.a("", "level_start_boss_3", ic.field_C, 0);
             ei.field_w = new Sprite[4];
             ei.field_w[0] = null;
-            lb.field_t = rb.a(ic.field_C, "", (byte) -128, "game_over_scene_bg");
+            lb.field_t = DiskCacheWorker.a(ic.field_C, "", (byte) -128, "game_over_scene_bg");
             hl.a(lb.field_t, false, 6831816);
             ei.field_w[1] = qk.a("", "game_over_scene_henhui", ic.field_C, 0);
             ei.field_w[2] = qk.a("", "game_over_scene_ziren", ic.field_C, param0 - 1);
@@ -293,11 +293,11 @@ public final class TorChallenge extends GameClientBase {
                   while (true) {
                     stackIn_93_0 = 20;
                     if (stackIn_93_0 > var7_int) {
-                      array$1 = new Sprite[db.field_x[var7_int][var6_int]];
+                      array$1 = new Sprite[NetworkArchiveRequest.field_x[var7_int][var6_int]];
                       c.field_c[var7_int][var6_int] = array$1;
                       stackIn_89_0 = 0;
                       var8 = stackIn_89_0;
-                      while (db.field_x[var7_int][var6_int] > var8) {
+                      while (NetworkArchiveRequest.field_x[var7_int][var6_int] > var8) {
                         stackIn_93_0 = var6_int;
                         if (stackIn_93_0 == 0) {
                           c.field_c[var7_int][var6_int][var8] = ve.field_b[var8 + var7_int * 6];
@@ -338,11 +338,11 @@ public final class TorChallenge extends GameClientBase {
                       stackIn_119_0 = ~var7_int;
                       stackIn_119_1 = -21;
                       if (stackIn_119_0 > stackIn_119_1) {
-                        array$2 = new Sprite[db.field_x[var7_int][var6_int]];
+                        array$2 = new Sprite[NetworkArchiveRequest.field_x[var7_int][var6_int]];
                         PacketBuffer.field_o[var7_int][var6_int] = array$2;
                         stackIn_115_0 = 0;
                         var8 = stackIn_115_0;
-                        while (var8 < db.field_x[var7_int][var6_int]) {
+                        while (var8 < NetworkArchiveRequest.field_x[var7_int][var6_int]) {
                           stackIn_119_0 = 0;
                           stackIn_119_1 = var6_int;
                           if (stackIn_119_0 == stackIn_119_1) {
@@ -702,7 +702,7 @@ public final class TorChallenge extends GameClientBase {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
             si.a(true, ui.field_i, ui.field_i[0].storedHeight + 16, 16 + ui.field_i[0].storedWidth);
           }
-          if (rb.field_b != 0) {
+          if (DiskCacheWorker.field_b != 0) {
             var3 = 256 * hk.field_e / 32;
             if (0 < var3) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, var3);
@@ -736,7 +736,7 @@ public final class TorChallenge extends GameClientBase {
           this.a(false, 11, 2, 3, false, 0, 1, 39);
           var2 = new MidiPcmStream();
           var2.b(128, -122, 9);
-          MidiPcmStream.a(22050, 16239, sh.field_u, true, (java.awt.Component) ((Object) bg.field_P), var2);
+          MidiPcmStream.a(22050, 16239, ArchiveRequest.field_u, true, (java.awt.Component) ((Object) bg.field_P), var2);
           lg.field_f = 1;
           qa.field_f = 0;
           ai.field_d = 0;
@@ -1003,7 +1003,7 @@ public final class TorChallenge extends GameClientBase {
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (rb.field_b != 0) {
+                if (DiskCacheWorker.field_b != 0) {
                   this.u(0);
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -1410,20 +1410,20 @@ public final class TorChallenge extends GameClientBase {
           if (null != fh.field_f) {
             mh.a(wc.field_a, (byte) -125, 75.0f);
             this.drawFrame(7808);
-            al.field_x[0] = ej.a(fh.field_f, "", "TOR_Lvl_1");
-            al.field_x[1] = ej.a(fh.field_f, "", "TOR_Lvl_2");
-            al.field_x[2] = ej.a(fh.field_f, "", "TOR_Lvl_3");
-            al.field_x[3] = ej.a(fh.field_f, "", "TOR_Lvl_4");
-            al.field_x[4] = ej.a(fh.field_f, "", "TOR_Lvl_5");
-            al.field_x[5] = ej.a(fh.field_f, "", "TOR_Lvl_6");
-            al.field_x[6] = ej.a(fh.field_f, "", "TOR_Boss_Fight");
-            al.field_x[7] = ej.a(fh.field_f, "", "TOR_Title");
-            al.field_x[8] = ej.a(fh.field_f, "", "TOR_Menu");
-            al.field_x[9] = ej.a(fh.field_f, "", "TOR_lvl_start_jingle");
-            al.field_x[10] = ej.a(fh.field_f, "", "TOR_lvl_complete_jingle");
-            al.field_x[11] = ej.a(fh.field_f, "", "TOR_boss_complete_jingle");
-            al.field_x[12] = ej.a(fh.field_f, "", "TOR_game_over_jingle");
-            al.field_x[13] = ej.a(fh.field_f, "", "TOR_Complete");
+            DiskArchiveRequest.field_x[0] = ej.a(fh.field_f, "", "TOR_Lvl_1");
+            DiskArchiveRequest.field_x[1] = ej.a(fh.field_f, "", "TOR_Lvl_2");
+            DiskArchiveRequest.field_x[2] = ej.a(fh.field_f, "", "TOR_Lvl_3");
+            DiskArchiveRequest.field_x[3] = ej.a(fh.field_f, "", "TOR_Lvl_4");
+            DiskArchiveRequest.field_x[4] = ej.a(fh.field_f, "", "TOR_Lvl_5");
+            DiskArchiveRequest.field_x[5] = ej.a(fh.field_f, "", "TOR_Lvl_6");
+            DiskArchiveRequest.field_x[6] = ej.a(fh.field_f, "", "TOR_Boss_Fight");
+            DiskArchiveRequest.field_x[7] = ej.a(fh.field_f, "", "TOR_Title");
+            DiskArchiveRequest.field_x[8] = ej.a(fh.field_f, "", "TOR_Menu");
+            DiskArchiveRequest.field_x[9] = ej.a(fh.field_f, "", "TOR_lvl_start_jingle");
+            DiskArchiveRequest.field_x[10] = ej.a(fh.field_f, "", "TOR_lvl_complete_jingle");
+            DiskArchiveRequest.field_x[11] = ej.a(fh.field_f, "", "TOR_boss_complete_jingle");
+            DiskArchiveRequest.field_x[12] = ej.a(fh.field_f, "", "TOR_game_over_jingle");
+            DiskArchiveRequest.field_x[13] = ej.a(fh.field_f, "", "TOR_Complete");
             fh.field_f = null;
             id.a(126);
             return false;
@@ -1434,8 +1434,8 @@ public final class TorChallenge extends GameClientBase {
             while (!(decompiledNaturalLoopExit0 = (14 <= var3_int))) {
               stackIn_99_0 = null;
               if (var4 == 0) {
-                if (stackIn_99_0 != al.field_x[var3_int] &&
-                  !SectorCacheStore.field_a.a(false, ub.field_d, al.field_x[var3_int], cl.field_y, 176400)) {
+                if (stackIn_99_0 != DiskArchiveRequest.field_x[var3_int] &&
+                  !SectorCacheStore.field_a.a(false, ub.field_d, DiskArchiveRequest.field_x[var3_int], cl.field_y, 176400)) {
                   return false;
                 }
                 var3_int++;
@@ -1487,7 +1487,7 @@ public final class TorChallenge extends GameClientBase {
                 PcmOutputWorker.activeScreenId = 12;
                 bc.field_o = 12;
                 GameApplet.screens[12].a(3, true);
-                al.b(50, true);
+                DiskArchiveRequest.b(50, true);
                 u.a((byte) 102, 50);
                 o.a(-126, 50);
               }
@@ -1524,9 +1524,9 @@ public final class TorChallenge extends GameClientBase {
           if (param0 != 0) {
             field_H = (si) null;
           }
-          if (rb.field_b != 0) {
-            if (rb.field_b != 1) {
-              if (rb.field_b != 2) {
+          if (DiskCacheWorker.field_b != 0) {
+            if (DiskCacheWorker.field_b != 1) {
+              if (DiskCacheWorker.field_b != 2) {
                 if (hk.field_e > 0) {
                   hk.field_e = hk.field_e - 1;
                 }
@@ -1536,7 +1536,7 @@ public final class TorChallenge extends GameClientBase {
                 if (hk.field_e != 0) {
                   return;
                 }
-                rb.field_b = 0;
+                DiskCacheWorker.field_b = 0;
                 if (var3 == 0) {
                   return;
                 }
@@ -1566,7 +1566,7 @@ public final class TorChallenge extends GameClientBase {
                   il.a(false, 0);
                 }
               }
-              rb.field_b = 3;
+              DiskCacheWorker.field_b = 3;
               hk.field_e = 31;
               PcmOutputWorker.activeScreenId = bc.field_o;
               if (var3 == 0) {
@@ -1585,7 +1585,7 @@ public final class TorChallenge extends GameClientBase {
             } else {
               dj.f((byte) -83);
             }
-            rb.field_b = 2;
+            DiskCacheWorker.field_b = 2;
             if (var3 == 0) {
               return;
             }
@@ -1888,7 +1888,7 @@ public final class TorChallenge extends GameClientBase {
           qb.a(2316);
           vd.clearStaticReferences(-38);
           vb.resetStaticState(0);
-          rb.clearStaticReferences(-98);
+          DiskCacheWorker.clearStaticReferences(-98);
           oa.clearStaticReferences(122);
           BufferedCacheFile.clearStaticReferences(true);
           BufferedSocket.resetStaticState(true);
@@ -1956,13 +1956,13 @@ public final class TorChallenge extends GameClientBase {
           PcmOutputWorker.b(6);
           fl.clearStaticReferences(-25984);
           ii.b(16711680);
-          db.clearStaticReferences(117);
+          NetworkArchiveRequest.clearStaticReferences(117);
           SectorCacheStore.clearStaticReferences((byte) -64);
-          al.clearDeclaredStaticReferences((byte) 99);
+          DiskArchiveRequest.clearDeclaredStaticReferences((byte) 99);
           di.clearStaticReferences(false);
           RandomAccessCacheFile.clearStaticReferences(0);
           ai.resetStaticState(2048);
-          sh.b(true);
+          ArchiveRequest.b(true);
           cb.clearStaticReferences(-9386);
           nh.releaseDeclaredStaticReferences(-25725);
           te.a((byte) -50);

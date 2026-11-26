@@ -30,7 +30,7 @@ final class dj {
           return ed.field_a + " - " + fj.field_B.a("commonui", (byte) -81) + "%";
         }
         if (!hf.field_a.a(102)) {
-          return uj.field_b;
+          return DiskCacheWorker.field_b;
         }
         if (!hf.field_a.a(0, "commonui")) {
           return ek.field_e + " - " + hf.field_a.a("commonui", (byte) -81) + "%";

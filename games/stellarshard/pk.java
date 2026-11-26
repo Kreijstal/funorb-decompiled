@@ -76,11 +76,11 @@ final class pk {
 
     final static void a(int param0) {
         if (10 == eg.field_d) {
-          ki.f(107);
+          ArchiveRequest.f(107);
           eg.field_d = 11;
         } else {
           if (!fa.a(-72)) {
-            ki.f(107);
+            ArchiveRequest.f(107);
             eg.field_d = 11;
           }
         }

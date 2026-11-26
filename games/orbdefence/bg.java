@@ -197,7 +197,7 @@ final class bg {
                   var25Lifetime1 = param1.field_j[var23Lifetime2];
                   var26Lifetime1 = param1.field_g[var23Lifetime2];
                   a.field_s[var23Lifetime2] = var9 + (var24Lifetime1 * var12 - (-(var15 * var25Lifetime1) - var26Lifetime1 * var18) >> 16);
-                  cd.field_q[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var19 * var26Lifetime1 >> 16);
+                  NetworkArchiveRequest.field_q[var23Lifetime2] = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var19 * var26Lifetime1 >> 16);
                   ia.field_j[var23Lifetime2] = (var17 * var25Lifetime1 + (var14 * var24Lifetime1 + var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param1.field_A[var23Lifetime2];
                   var25Lifetime1 = param1.field_L[var23Lifetime2];

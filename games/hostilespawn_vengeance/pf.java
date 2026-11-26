@@ -265,7 +265,7 @@ final class pf {
           field_j = (int[]) null;
         }
         na.field_b = true;
-        dh.field_c = 15000L + hn.correctedCurrentTimeMillis((byte) 80);
+        DiskCacheWorker.field_c = 15000L + hn.correctedCurrentTimeMillis((byte) 80);
         return 11 == fa.field_c ? true : false;
     }
 

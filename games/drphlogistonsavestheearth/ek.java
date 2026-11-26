@@ -72,7 +72,7 @@ final class ek extends IntrusiveNode {
               field_h = stackIn_10_0;
               var5.position = 0;
               tl.field_O = hh.field_b;
-              FullscreenFocusCanvas.a(ci.field_W, lb.field_v, 26800, dc.field_e, nj.field_p);
+              FullscreenFocusCanvas.a(ci.field_W, ArchiveRequest.field_v, 26800, dc.field_e, nj.field_p);
               qj.a(-1, 14656);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

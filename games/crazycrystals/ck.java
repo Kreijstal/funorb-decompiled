@@ -70,7 +70,7 @@ final class ck extends ud {
         co.field_F = false;
         cl.field_o = param0;
         rf.field_G = -1;
-        ni.field_b = -1;
+        DiskCacheWorker.field_b = -1;
     }
 
     final static long a(byte param0, CharSequence param1) {

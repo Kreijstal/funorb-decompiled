@@ -37,9 +37,9 @@ final class qa extends IntrusiveNode {
           if (var1 != 1) {
             bi.field_u = ff.a(new String[]{Integer.toString(var1)}, 0, up.field_h);
           } else {
-            bi.field_u = nk.field_q;
+            bi.field_u = ArchiveRequest.field_q;
           }
-          bi.field_u = ac.a(-115, new CharSequence[]{(CharSequence) ((Object) bi.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tf.field_b)});
+          bi.field_u = NetworkArchiveRequest.a(-115, new CharSequence[]{(CharSequence) ((Object) bi.field_u), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) tf.field_b)});
         }
         IsaacCipher.field_m.b(true);
         gp.j((byte) -34);

@@ -69,7 +69,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (ba.field_c == this &&
-            !cc.field_c) {
+            !DiskCacheWorker.field_c) {
             nj.field_e = 4000L + kd.correctedCurrentTimeMillis(-2456);
             return;
           }
@@ -108,7 +108,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void destroy() {
         if (ba.field_c != this ||
-          cc.field_c) {
+          DiskCacheWorker.field_c) {
           return;
         }
         try {
@@ -492,7 +492,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == ba.field_c &&
-            !cc.field_c) {
+            !DiskCacheWorker.field_c) {
             nj.field_e = 0L;
             return;
           }
@@ -513,7 +513,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (ba.field_c == this &&
-            !cc.field_c) {
+            !DiskCacheWorker.field_c) {
             im.field_d = true;
             if (ia.field_O &&
               -CombatState.field_z + kd.correctedCurrentTimeMillis(-2456) > 1000L) {
@@ -708,10 +708,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3 = this;
           synchronized (var3) {
-            if (cc.field_c) {
+            if (DiskCacheWorker.field_c) {
               return;
             }
-            cc.field_c = true;
+            DiskCacheWorker.field_c = true;
           }
           if (null != rc.field_b) {
             rc.field_b.destroy();

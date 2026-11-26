@@ -18,7 +18,7 @@ final class pc {
 
     final static void a(boolean param0, String param1, String param2) {
         try {
-          af.a(param2, param0, param1, (byte) 50);
+          DiskCacheWorker.a(param2, param0, param1, (byte) 50);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

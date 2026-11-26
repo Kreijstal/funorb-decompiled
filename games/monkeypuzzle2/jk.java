@@ -572,12 +572,12 @@ abstract class jk extends UiWidget implements ga {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            uj.field_c = new String[var4];
-            gl.a(vi.field_b, 0, uj.field_c, 0, var4);
+            DiskCacheWorker.field_c = new String[var4];
+            gl.a(vi.field_b, 0, DiskCacheWorker.field_c, 0, var4);
             re.field_a = new String[var3_int - (var4 + 1)];
             gl.a(vi.field_b, 1 + var4, re.field_a, 0, -1 + var3_int - var4);
-            if (uj.field_c.length > wi.field_b.length) {
-              stackIn_67_0 = uj.field_c.length;
+            if (DiskCacheWorker.field_c.length > wi.field_b.length) {
+              stackIn_67_0 = DiskCacheWorker.field_c.length;
             } else {
               stackIn_67_0 = wi.field_b.length;
             }
@@ -608,8 +608,8 @@ abstract class jk extends UiWidget implements ga {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_77_0 = pl.field_k;
               stackIn_77_1 = var8Lifetime2 + 6;
-              if (0 <= -var5 + var8Lifetime2 + uj.field_c.length) {
-                stackIn_78_2 = uj.field_c[uj.field_c.length + var8Lifetime2 - var5];
+              if (0 <= -var5 + var8Lifetime2 + DiskCacheWorker.field_c.length) {
+                stackIn_78_2 = DiskCacheWorker.field_c[DiskCacheWorker.field_c.length + var8Lifetime2 - var5];
               } else {
                 stackIn_78_2 = "";
               }
@@ -629,7 +629,7 @@ abstract class jk extends UiWidget implements ga {
               }
               stackIn_82_0[stackIn_82_1] = stackIn_85_2;
             }
-            fb.field_n = pf.correctedCurrentTimeMillis(0);
+            ArchiveRequest.field_n = pf.correctedCurrentTimeMillis(0);
           }
           sj.field_f.field_i = bi.field_B.length;
           var3_intLifetime1 = 0;
@@ -676,10 +676,10 @@ abstract class jk extends UiWidget implements ga {
             }
             fd.field_s = stackIn_118_0 + stackIn_119_1;
           }
-          fb.field_k = -(fd.field_s >> 1) + fl.field_b;
+          ArchiveRequest.field_k = -(fd.field_s >> 1) + fl.field_b;
           ja.field_A = new int[pl.field_k.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = fb.field_k;
+          var5Lifetime3 = ArchiveRequest.field_k;
           while (pl.field_k.length > var4Lifetime3) {
             var6Lifetime1 = gh.field_a[var4Lifetime3];
             if (var6Lifetime1 < 0) {

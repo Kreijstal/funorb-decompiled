@@ -3,8 +3,8 @@
  */
 final class eb {
     private java.math.BigInteger field_a;
-    private gj field_j;
-    private na field_k;
+    private DiskCacheWorker field_j;
+    private NetworkArchiveRequest field_k;
     static de field_l;
     private ch field_b;
     static int field_f;
@@ -41,9 +41,9 @@ final class eb {
           return false;
         }
         if (param0 != 2) {
-          this.field_j = (gj) null;
+          this.field_j = (DiskCacheWorker) null;
         }
-        var10 = new PacketBuffer(this.field_k.b(true));
+        var10 = new PacketBuffer(this.field_k.getData(true));
         var10.position = 5;
         var3 = var10.readUnsignedByte(56);
         var10.position = var10.position + var3 * 72;
@@ -73,7 +73,7 @@ final class eb {
         return true;
     }
 
-    final uc a(int param0, int param1, boolean param2, hc param3, hc param4) {
+    final uc a(int param0, int param1, boolean param2, SectorCacheStore param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -224,18 +224,18 @@ final class eb {
             eb.clearStaticReferences(true);
           }
           dg.field_H = (ch) ((Object) new a());
-          AccountRequestState.field_b = new gj(param0);
+          AccountRequestState.field_b = new DiskCacheWorker(param0);
           ja.field_b = new eb(dg.field_H, AccountRequestState.field_b);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "eb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    private eb(ch param0, gj param1) {
+    private eb(ch param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private eb(ch param0, gj param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private eb(ch param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

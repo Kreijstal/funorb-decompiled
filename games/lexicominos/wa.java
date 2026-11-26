@@ -47,7 +47,7 @@ final class wa extends IntrusiveNode {
               field_k = (String) null;
             }
             if (null != AccountCreationResultPanel.field_pb) {
-              AccountCreationResultPanel.field_pb.a((byte) -114);
+              AccountCreationResultPanel.field_pb.shutdown((byte) -114);
             }
             if (wj.field_s != null) {
               try {

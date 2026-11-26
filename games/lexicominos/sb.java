@@ -14,7 +14,7 @@ final class sb {
     final static void a(int param0) {
         wj.c(-6399);
         DualLinkNode.field_k = true;
-        dl.field_g = true;
+        SectorCacheStore.field_g = true;
         ug.field_A.h(0);
         if (param0 >= -121) {
           return;

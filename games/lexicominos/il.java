@@ -68,7 +68,7 @@ final class il {
             if (sa.field_g.field_t != null) {
               wj.field_s = new be(sa.field_g.field_t, 5200, 0);
               sa.field_g.field_t = null;
-              var6 = new dl(255, wj.field_s, new be(sa.field_g.field_o, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, wj.field_s, new be(sa.field_g.field_o, 12000, 0), 2097152);
             }
             if (null != wj.field_s) {
               if (bd.field_i == null) {
@@ -78,9 +78,9 @@ final class il {
                 bd.field_i[param3] = new be(sa.field_g.field_c[param3], 12000, 0);
                 sa.field_g.field_c[param3] = null;
               }
-              var7 = new dl(param3, wj.field_s, bd.field_i[param3], 2097152);
+              var7 = new SectorCacheStore(param3, wj.field_s, bd.field_i[param3], 2097152);
             }
-            var8 = nh.field_a.a(param3, 3510, (dl) (var7), (dl) (var6), param2);
+            var8 = nh.field_a.a(param3, 3510, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param2);
             if (param1 != 12317) {
               il.a(false, -117, false, -23, true, 38);
             }

@@ -17,7 +17,7 @@ abstract class ge {
     PacketBuffer field_m;
     volatile int field_n;
     byte field_h;
-    cd field_a;
+    NetworkArchiveRequest field_a;
 
     abstract void c(int param0);
 
@@ -117,12 +117,12 @@ abstract class ge {
 
     abstract void a(Object param0, int param1, boolean param2);
 
-    final cd a(int param0, int param1, boolean param2, int param3, byte param4) {
+    final NetworkArchiveRequest a(int param0, int param1, boolean param2, int param3, byte param4) {
         long var6 = (long)param1 + ((long)param3 << 32);
-        cd var8 = new cd();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_n = param2 ? true : false;
         if (param0 != 15937) {
-          return (cd) null;
+          return (NetworkArchiveRequest) null;
         }
         var8.field_h = var6;
         var8.field_s = param4;

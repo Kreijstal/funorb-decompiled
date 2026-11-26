@@ -66,13 +66,13 @@ final class ce {
           if (!AccountRequestState.a(true, 1)) {
             return false;
           }
-          GameAppletShell.field_c = cd.field_t.readUnsignedByte((byte) 90);
-          cd.field_t.position = 0;
+          GameAppletShell.field_c = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+          NetworkArchiveRequest.field_t.position = 0;
         }
         if (GameAppletShell.field_c == -2) {
           if (AccountRequestState.a(true, 2)) {
-            GameAppletShell.field_c = cd.field_t.readUnsignedShort(98203176);
-            cd.field_t.position = 0;
+            GameAppletShell.field_c = NetworkArchiveRequest.field_t.readUnsignedShort(98203176);
+            NetworkArchiveRequest.field_t.position = 0;
             return AccountRequestState.a(true, GameAppletShell.field_c);
           }
           return false;

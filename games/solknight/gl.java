@@ -91,7 +91,7 @@ final class gl {
             return;
           }
           this.field_r = this.field_a;
-          if (bi.field_a >= this.field_j) {
+          if (SectorCacheStore.field_a >= this.field_j) {
             this.b(-110);
           } else {
             this.field_m = false;
@@ -259,7 +259,7 @@ final class gl {
         if (param0 != -91) {
           this.field_n = -40;
         }
-        stackIn_6_0 = (bi.field_a >= this.field_j) && (ob.field_l > 0);
+        stackIn_6_0 = (SectorCacheStore.field_a >= this.field_j) && (ob.field_l > 0);
         return stackIn_6_0;
     }
 

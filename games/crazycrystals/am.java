@@ -153,8 +153,8 @@ final class am {
         int var8 = 0;
         var8 = CrazyCrystals.field_B;
         try {
-          ge.field_d = wl.a("menuback", param0, 10, "");
-          ee.field_m = wl.a("menulogo", param0, 10, "");
+          ge.field_d = ArchiveRequest.a("menuback", param0, 10, "");
+          ee.field_m = ArchiveRequest.a("menulogo", param0, 10, "");
           me.field_b = ee.field_m.field_n / 2 - ee.field_m.field_v;
           kf.field_c = ee.field_m.field_n / 2 - ee.field_m.field_v;
           var3_int = -30 + ee.field_m.field_o;

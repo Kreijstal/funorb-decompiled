@@ -624,7 +624,7 @@ final class re {
                           } else {
                             if (var8 == 12) {
                               if ((param2)) {
-                                if (null != gj.field_a) {
+                                if (null != DiskCacheWorker.field_a) {
                                   PcmOutputWorker.a(true);
                                 }
                                 PacketBuffer.a((byte) -124, mk.g(-119));
@@ -825,7 +825,7 @@ final class re {
                         }
                       } else {
                         if (param2) {
-                          if (gj.field_a != null) {
+                          if (DiskCacheWorker.field_a != null) {
                             PcmOutputWorker.a(true);
                           } else {
                             var8 = param0 ? 1 : 0;

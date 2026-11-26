@@ -858,7 +858,7 @@ abstract class kc extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_m = cd.a(var7, 16, -10);
+                                field_m = NetworkArchiveRequest.a(var7, 16, -10);
                               }
                             } else {
                               field_C = -1;
@@ -868,7 +868,7 @@ abstract class kc extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_C = cd.a(var6, 16, -10);
+                          field_C = NetworkArchiveRequest.a(var6, 16, -10);
                         }
                       } else {
                         field_p = -1;
@@ -878,7 +878,7 @@ abstract class kc extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_p = cd.a(var5, 16, -10);
+                    field_p = NetworkArchiveRequest.a(var5, 16, -10);
                   }
                 } else {
                   field_u = field_x;
@@ -892,7 +892,7 @@ abstract class kc extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_l = cd.a(var3, 16, -10);
+            field_l = NetworkArchiveRequest.a(var3, 16, -10);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

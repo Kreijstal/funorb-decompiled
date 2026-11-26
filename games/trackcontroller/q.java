@@ -102,7 +102,7 @@ final class q {
         if (!param0) {
           this.field_i = null;
         } else {
-          this.field_i = hi.field_A;
+          this.field_i = NetworkArchiveRequest.field_A;
         }
         this.field_l = ClientException.field_b;
         this.field_g = lg.field_a;

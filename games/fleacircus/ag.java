@@ -72,7 +72,7 @@ final class ag {
             if (null != mh.field_x.field_q) {
               rd.field_c = new k(mh.field_x.field_q, 5200, 0);
               mh.field_x.field_q = null;
-              var6 = new ah(255, rd.field_c, new k(mh.field_x.field_t, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, rd.field_c, new k(mh.field_x.field_t, 12000, 0), 2097152);
             }
             if (rd.field_c != null) {
               if (mc.field_c == null) {
@@ -82,12 +82,12 @@ final class ag {
                 mc.field_c[param1] = new k(mh.field_x.field_l[param1], 12000, 0);
                 mh.field_x.field_l[param1] = null;
               }
-              var7 = new ah(param1, rd.field_c, mc.field_c[param1], 2097152);
+              var7 = new SectorCacheStore(param1, rd.field_c, mc.field_c[param1], 2097152);
             }
             if (param5 != 1) {
               ag.resetStaticState(7);
             }
-            var8 = gf.field_e.a(28742, param2, (ah) (var7), (ah) (var6), param1);
+            var8 = gf.field_e.a(28742, param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param1);
             if (param0) {
               var8.c(param5 - 78);
             }

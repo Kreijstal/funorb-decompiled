@@ -147,7 +147,7 @@ abstract class me extends ca implements fb {
           dk.field_h = param5;
           uh.field_f = param7;
           oh.field_h = (uh) ((Object) new tj());
-          fd.field_d = new cd(param8);
+          fd.field_d = new DiskCacheWorker(param8);
           we.field_j = new dk(oh.field_h, fd.field_d);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "me.U(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

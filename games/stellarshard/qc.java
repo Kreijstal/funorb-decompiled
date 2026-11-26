@@ -139,7 +139,7 @@ final class qc {
                 return stackIn_81_0;
               }
             }
-            if (gi.field_f != 13) {
+            if (SectorCacheStore.field_f != 13) {
               stackIn_72_0 = 107;
               continue;
             }

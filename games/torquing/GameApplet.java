@@ -658,7 +658,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(oi.field_b > var3)) {
                       this.d(-18222);
-                      oe.a(nk.field_u, 0, k.field_d);
+                      oe.a(ArchiveRequest.field_u, 0, k.field_d);
                       break;
                     }
                     this.e(-1);
@@ -992,10 +992,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               aq.field_d = 0;
               lg.field_B = ip.a(9);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param2, param6, true);
-              nk.field_u = dupTemp$0;
+              ArchiveRequest.field_u = dupTemp$0;
               FullscreenFocusCanvas.field_f = dupTemp$0;
               var8_int = 117 % ((param1 - 76) / 34);
-              var9 = nk.field_u.requestThreadStart((byte) -91, 1, (Runnable) (this));
+              var9 = ArchiveRequest.field_u.requestThreadStart((byte) -91, 1, (Runnable) (this));
               while (true) {
                 if (var9.status == 0) {
                   ub.sleepMillis(1976, 10L);
@@ -1070,9 +1070,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          if (nk.field_u != null) {
+          if (ArchiveRequest.field_u != null) {
             try {
-              nk.field_u.shutdown(6);
+              ArchiveRequest.field_u.shutdown(6);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

@@ -83,7 +83,7 @@ final class ui extends g implements qh {
               ui.clearDeclaredStaticReferences(-66);
             }
             if (null != AccountRequestState.field_b) {
-              AccountRequestState.field_b.b(124);
+              AccountRequestState.field_b.shutdown(124);
             }
             if (ni.field_c != null) {
               try {

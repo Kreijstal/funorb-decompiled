@@ -228,7 +228,7 @@ class gd extends rj {
         }
         gd.a(64, MouseInput.field_f);
         te.b();
-        co.field_G = new vj(0, param1, 640, 480, 64);
+        DiskArchiveRequest.field_G = new vj(0, param1, 640, 480, 64);
         mn.field_b = param2;
         dc.field_z = param2;
         bd.field_f = 0;

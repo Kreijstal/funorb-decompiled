@@ -120,13 +120,13 @@ final class PcmResampler {
             return stackIn_5_0;
           }
           if (wg.field_u == lc.field_h &&
-            param0.equals(cm.field_I)) {
+            param0.equals(NetworkArchiveRequest.field_I)) {
             lc.field_h = pj.field_D;
             stackIn_9_0 = kf.field_a;
             return stackIn_9_0;
           }
           kf.field_a = null;
-          cm.field_I = param0;
+          NetworkArchiveRequest.field_I = param0;
           lc.field_h = hg.field_ub;
           stackIn_11_0 = null;
           return (AccountServiceResult) (stackIn_11_0);

@@ -107,7 +107,7 @@ final class lf {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = gf.field_c;
+        hb var2 = SectorCacheStore.field_c;
         var2.b(true, param1);
         var2.writeByte(1, -49152);
         var2.writeByte(0, param0 - 74349);

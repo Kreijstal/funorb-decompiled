@@ -500,7 +500,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime77 = NodeHashTableIterator.a("MEDIUM", 126);
           if (var2Lifetime77 != null) {
-            ik.field_h = mj.a((byte) -94, var2Lifetime77);
+            SectorCacheStore.field_h = mj.a((byte) -94, var2Lifetime77);
           }
           var2Lifetime78 = NodeHashTableIterator.a("BEST", 125);
           if (null != var2Lifetime78) {
@@ -512,7 +512,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime80 = NodeHashTableIterator.a("DIFF_MEDIUM", 125);
           if (null != var2Lifetime80) {
-            n.field_f = mj.a((byte) 26, var2Lifetime80);
+            DiskCacheWorker.field_f = mj.a((byte) 26, var2Lifetime80);
           }
           var2Lifetime81 = NodeHashTableIterator.a("DIFF_HARD", param1 ^ 131);
           if (null != var2Lifetime81) {
@@ -720,7 +720,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime132 = NodeHashTableIterator.a("keycode_bomb", 125);
           if (var2Lifetime132 != null) {
-            lb.field_A = 255 & var2Lifetime132[0];
+            ArchiveRequest.field_A = 255 & var2Lifetime132[0];
           }
           var2Lifetime133 = NodeHashTableIterator.a("keycode_coil", 122);
           if (var2Lifetime133 != null) {

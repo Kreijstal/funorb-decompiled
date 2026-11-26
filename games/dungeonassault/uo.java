@@ -157,7 +157,7 @@ final class uo {
             if (null != kn.field_f.field_x) {
               sa.field_x = new hd(kn.field_f.field_x, 5200, 0);
               kn.field_f.field_x = null;
-              var6 = new ln(255, sa.field_x, new hd(kn.field_f.field_q, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, sa.field_x, new hd(kn.field_f.field_q, 12000, 0), 2097152);
             }
             if (sa.field_x != null) {
               if (null == cf.field_c) {
@@ -167,9 +167,9 @@ final class uo {
                 cf.field_c[param3] = new hd(kn.field_f.field_v[param3], 12000, 0);
                 kn.field_f.field_v[param3] = null;
               }
-              var7 = new ln(param3, sa.field_x, cf.field_c[param3], 2097152);
+              var7 = new SectorCacheStore(param3, sa.field_x, cf.field_c[param3], 2097152);
             }
-            var8 = bl.field_r.a(param5, 4210752, param3, (ln) (var6), (ln) (var7));
+            var8 = bl.field_r.a(param5, 4210752, param3, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param4 != 27847) {
               stackIn_12_0 = (ResourceArchive) null;
               return stackIn_12_0;

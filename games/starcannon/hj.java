@@ -21,7 +21,7 @@ final class hj {
           DirectByteStorage.field_f = param2;
           SecondaryNodeDequeIterator.field_b = param3;
           jh.field_b = (eh) ((Object) new vh());
-          bc.field_j = new ef(param2);
+          bc.field_j = new DiskCacheWorker(param2);
           bl.field_b = new jc(jh.field_b, bc.field_j);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "hj.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');

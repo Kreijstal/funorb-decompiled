@@ -24,7 +24,7 @@ abstract class hi extends wb implements jb {
           if (param1 != 2) {
             field_h = (String) null;
           }
-          var6 = cd.field_w;
+          var6 = NetworkArchiveRequest.field_w;
           synchronized (var6) {
             if (ByteStorage.field_a == param0) {
               return;
@@ -223,7 +223,7 @@ abstract class hi extends wb implements jb {
             }
             var2 = 1;
           }
-          ab.field_j.a(jc.a(AccountCreationResultPanel.field_fb, (byte) 81, bg.field_c), ~param0, jc.a(ua.field_a, (byte) 37, vl.field_d));
+          ab.field_j.a(jc.a(AccountCreationResultPanel.field_fb, (byte) 81, bg.field_c), ~param0, jc.a(ua.field_a, (byte) 37, DiskCacheWorker.field_d));
           if (ab.field_j.a((byte) -1)) {
             var1_int = 1;
           }

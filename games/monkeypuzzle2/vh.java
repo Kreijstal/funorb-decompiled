@@ -224,7 +224,7 @@ final class vh extends ButtonWidget {
         if (param0 >= -23) {
           field_C = (float[]) null;
         }
-        stackIn_6_0 = (si.field_o != null) && (null != si.field_o.j(-50));
+        stackIn_6_0 = (DiskArchiveRequest.field_o != null) && (null != DiskArchiveRequest.field_o.j(-50));
         return stackIn_6_0;
     }
 

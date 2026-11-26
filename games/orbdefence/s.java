@@ -200,11 +200,11 @@ class s extends pj {
             if (this.field_v == of.field_G) {
               return;
             }
-            if (this.a((byte) 3, ua.field_a, vl.field_d, param3, param2) &&
+            if (this.a((byte) 3, ua.field_a, DiskCacheWorker.field_d, param3, param2) &&
               0 == of.field_G) {
-              this.b(84, vl.field_d - param3, this.field_v, -param2 + ua.field_a);
+              this.b(84, DiskCacheWorker.field_d - param3, this.field_v, -param2 + ua.field_a);
             }
-            this.a(param3, ua.field_a, (byte) -103, param1, param2, vl.field_d);
+            this.a(param3, ua.field_a, (byte) -103, param1, param2, DiskCacheWorker.field_d);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "s.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');

@@ -120,9 +120,9 @@ final class DirectByteStorage extends ByteStorage {
               } else {
                 var12 = var12 << ra.field_p[ea.field_e][var14];
               }
-              var12 = al.field_A[ea.field_e][var14] & var12;
+              var12 = DiskArchiveRequest.field_A[ea.field_e][var14] & var12;
               var10 = (0 != lc.field_p[ea.field_e][var14]) ? var7 : var6;
-              var10 = var10 & al.field_A[ea.field_e][var14];
+              var10 = var10 & DiskArchiveRequest.field_A[ea.field_e][var14];
               if ((var12 ^ var10) != 0) {
                 var11 = 1;
               }

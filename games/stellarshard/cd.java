@@ -478,7 +478,7 @@ final class cd extends rg {
     }
 
     final static String h(int param0) {
-        if (rk.field_f < 2) {
+        if (DiskCacheWorker.field_f < 2) {
           return IntrusiveDequeCursor.field_d;
         }
         if (null != pg.field_db) {

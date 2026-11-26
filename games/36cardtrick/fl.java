@@ -39,7 +39,7 @@ final class fl {
     }
 
     final static void b(int param0, int param1) {
-        w var2 = na.field_r;
+        w var2 = NetworkArchiveRequest.field_r;
         if (param0 != 1) {
           fl.clearStaticReferences(-53);
         }

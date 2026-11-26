@@ -29,12 +29,12 @@ final class vl extends hl {
         if (param0 != -29455) {
           vl.a(32, (byte) 15);
           if (im.field_b.b(36)) {
-            return co.field_C;
+            return DiskArchiveRequest.field_C;
           }
           return bf.field_o;
         }
         if (im.field_b.b(36)) {
-          return co.field_C;
+          return DiskArchiveRequest.field_C;
         }
         return bf.field_o;
     }

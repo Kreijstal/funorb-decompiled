@@ -49,10 +49,10 @@ abstract class NetworkGameClient extends GameAppletShell {
           String var10 = (String) null;
           this.a(114, (String) null, (byte) 126);
         }
-        wj.field_m = this.field_A;
-        wg.a(wj.field_m, (byte) -108);
-        ec.a(this.field_n, 5000, this.field_t, this.field_s, param0, param7, this.field_q, 5000, this.field_p, this.field_w, wj.field_m, wc.field_c, this.field_y, 49);
-        nc.a(wj.field_m, this.field_y, param7, this.field_n, (byte) 93, this.field_q, this.field_s, wc.field_c, this.field_p);
+        ArchiveRequest.field_m = this.field_A;
+        wg.a(ArchiveRequest.field_m, (byte) -108);
+        ec.a(this.field_n, 5000, this.field_t, this.field_s, param0, param7, this.field_q, 5000, this.field_p, this.field_w, ArchiveRequest.field_m, wc.field_c, this.field_y, 49);
+        nc.a(ArchiveRequest.field_m, this.field_y, param7, this.field_n, (byte) 93, this.field_q, this.field_s, wc.field_c, this.field_p);
         k.a(0);
         mj.field_i = de.createMouseWheelInput((byte) -112);
         l.a(GameAppletShell.field_f, 59);
@@ -66,14 +66,14 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void l(int param0) {
-        int var2 = cd.field_t.readUnsignedByte((byte) 90);
+        int var2 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 >= -108) {
           this.i(-72);
         }
         int var4 = GameAppletShell.field_c - 1;
         byte[] var5 = new byte[var4];
-        cd.field_t.a(-29, 0, var5, var4);
+        NetworkArchiveRequest.field_t.a(-29, 0, var5, var4);
         ke.a(ProxyAuthenticationRequiredException.a(var5, -12465), var3 != 0, (byte) -94, uj.b((byte) -120));
     }
 
@@ -100,7 +100,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = OrbDefence.field_D ? 1 : 0;
-          var4 = tl.a(of.field_K, wj.field_m, param2, (byte) -67);
+          var4 = tl.a(of.field_K, ArchiveRequest.field_m, param2, (byte) -67);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -307,7 +307,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             gb.b(-122);
                           }
                         } else {
-                          fb.a(cd.field_t, GameAppletShell.field_c, -31, wc.field_c);
+                          fb.a(NetworkArchiveRequest.field_t, GameAppletShell.field_c, -31, wc.field_c);
                         }
                       } else {
                         this.i(-22);
@@ -557,7 +557,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           vh.field_n = 1;
         }
         if (vh.field_n == 1) {
-          if (wj.field_m != 0) {
+          if (ArchiveRequest.field_m != 0) {
             lf.field_a = qk.a(BufferedSocket.field_e, -32585);
           }
           og.field_g = hm.a(48, true, false, oc.field_V, 1);
@@ -616,7 +616,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           vh.field_n = 10;
         }
         if (vh.field_n == 10) {
-          if (wj.field_m != 0) {
+          if (ArchiveRequest.field_m != 0) {
             eg.field_x = qk.a(pj.field_p, -32585);
           }
           vh.field_n = 11;

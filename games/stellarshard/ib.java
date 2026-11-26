@@ -5,7 +5,7 @@ abstract class ib {
     static String field_d;
     int field_a;
     int field_j;
-    static rk field_k;
+    static DiskCacheWorker field_k;
     private boolean field_n;
     int field_e;
     int field_l;

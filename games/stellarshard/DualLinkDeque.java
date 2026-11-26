@@ -156,7 +156,7 @@ final class DualLinkDeque implements Iterable {
             DualLinkDeque.a(7, (byte[]) null, -15);
           }
           od.field_v = (fb) ((Object) new wj());
-          ib.field_k = new rk(param4);
+          ib.field_k = new DiskCacheWorker(param4);
           mc.field_c = new vh(od.field_v, ib.field_k);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "bg.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');

@@ -673,7 +673,7 @@ final class q {
             stackIn_36_0 = bj.field_jb;
           }
           if (stackIn_36_0.field_L != 0) {
-            GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
+            GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, qn.field_P, kj.field_g, sj.field_k, (String) null, 0L);
           }
           var4 = fj.a(ri.field_g, param1, fe.field_g, param0 ^ -6836);
           if (var4 != null) {

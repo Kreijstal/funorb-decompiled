@@ -15,7 +15,7 @@ final class CachedArchiveSource extends ArchiveSource {
     private byte[] field_d;
     private AsyncRequest field_t;
     private ArchiveIndex field_e;
-    private sd field_i;
+    private DiskCacheWorker field_i;
     private byte[] field_u;
     private DiskArchiveStore field_n;
     private boolean field_j;
@@ -34,7 +34,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (var3 == null) {
           return 0;
         }
-        return var3.a((byte) 43);
+        return var3.getProgressPercent((byte) 43);
     }
 
     final void a(byte param0) {
@@ -109,7 +109,7 @@ final class CachedArchiveSource extends ArchiveSource {
         if (var3 == null) {
           return null;
         }
-        byte[] var4 = var3.g(param0 + 513);
+        byte[] var4 = var3.getData(param0 + 513);
         var3.unlink(-86);
         if (param0 != -1) {
           this.field_n = (DiskArchiveStore) null;
@@ -147,11 +147,11 @@ final class CachedArchiveSource extends ArchiveSource {
         if (this.field_t.field_w) {
           return null;
         }
-        var7 = this.field_t.g(512);
+        var7 = this.field_t.getData(512);
         var6 = var7;
         var5 = var6;
         var2 = var5;
-        if (!(this.field_t instanceof lh)) {
+        if (!(this.field_t instanceof DiskArchiveRequest)) {
           try {
             if (var5 == null) {
               throw new RuntimeException();
@@ -170,7 +170,7 @@ final class CachedArchiveSource extends ArchiveSource {
             return null;
           }
           if (null != this.field_n) {
-            this.field_i.a(this.field_m, var7, this.field_n, (byte) 117);
+            this.field_i.requestWrite(this.field_m, var7, this.field_n, (byte) 117);
           }
         } else {
           try {
@@ -239,7 +239,7 @@ final class CachedArchiveSource extends ArchiveSource {
           if (0 == param0) {
             if (this.field_w != null &&
               this.field_d[param2] != -1) {
-              var4 = this.field_i.a((byte) 93, param2, this.field_w);
+              var4 = this.field_i.readNow((byte) 93, param2, this.field_w);
             } else {
               if (this.field_g.d(-18316)) {
                 return null;
@@ -265,7 +265,7 @@ final class CachedArchiveSource extends ArchiveSource {
               if (null == this.field_w) {
                 throw new RuntimeException();
               }
-              var4 = this.field_i.a(true, param2, this.field_w);
+              var4 = this.field_i.requestRead(true, param2, this.field_w);
             }
           }
           this.field_v.put(false, (long)param2, (IntrusiveNode) (var4));
@@ -274,10 +274,10 @@ final class CachedArchiveSource extends ArchiveSource {
           return null;
         }
         var6 = 72 % ((-59 - param1) / 50);
-        var19 = ((AsyncRequest) (var4)).g(512);
+        var19 = ((AsyncRequest) (var4)).getData(512);
         var14 = var19;
         var5 = var14;
-        if (var4 instanceof lh) {
+        if (var4 instanceof DiskArchiveRequest) {
           try {
             if (var5 != null &&
               var19.length > 2) {
@@ -372,7 +372,7 @@ final class CachedArchiveSource extends ArchiveSource {
         var5[-2 + var19.length] = (byte)(this.field_e.field_d[param2] >>> 8);
         var5[var19.length - 1] = (byte)this.field_e.field_d[param2];
         if (null != this.field_w) {
-          this.field_i.a(param2, var19, this.field_w, (byte) 92);
+          this.field_i.requestWrite(param2, var19, this.field_w, (byte) 92);
           stackIn_92_0 = this.field_d[param2];
           stackIn_92_1 = 1;
           if (stackIn_92_0 != stackIn_92_1) {
@@ -559,7 +559,7 @@ final class CachedArchiveSource extends ArchiveSource {
 
     }
 
-    CachedArchiveSource(int param0, DiskArchiveStore param1, DiskArchiveStore param2, ArchiveRequestConnection param3, sd param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveSource(int param0, DiskArchiveStore param1, DiskArchiveStore param2, ArchiveRequestConnection param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -596,7 +596,7 @@ final class CachedArchiveSource extends ArchiveSource {
           this.field_g = param3;
           this.field_i = param4;
           if (null != this.field_n) {
-            this.field_t = (AsyncRequest) ((Object) this.field_i.a((byte) -113, this.field_m, this.field_n));
+            this.field_t = (AsyncRequest) ((Object) this.field_i.readNow((byte) -113, this.field_m, this.field_n));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

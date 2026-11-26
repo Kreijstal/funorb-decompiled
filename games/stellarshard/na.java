@@ -212,7 +212,7 @@ final class na {
             if (null != fa.field_p.field_f) {
               ma.field_s = new pc(fa.field_p.field_f, 5200, 0);
               fa.field_p.field_f = null;
-              var6 = new gi(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != ma.field_s) {
@@ -223,12 +223,12 @@ final class na {
                 df.field_d[param2] = new pc(fa.field_p.field_l[param2], 12000, 0);
                 fa.field_p.field_l[param2] = null;
               }
-              var7 = new gi(param2, ma.field_s, df.field_d[param2], 2097152);
+              var7 = new SectorCacheStore(param2, ma.field_s, df.field_d[param2], 2097152);
             }
             if (param1 != 255) {
               field_e = (Sprite) null;
             }
-            var8 = mc.field_c.a(64, (gi) (var7), (gi) (var6), param4, param2);
+            var8 = mc.field_c.a(64, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param4, param2);
             if (param3) {
               var8.d(2);
             }

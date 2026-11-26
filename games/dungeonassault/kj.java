@@ -63,7 +63,7 @@ final class kj extends IntrusiveNode {
         RuntimeException var2 = null;
         var3 = DungeonAssault.field_K;
         try {
-          ii.a(ln.field_d, (byte) 93, ib.field_e, param1, param0, lc.field_d, true);
+          ii.a(SectorCacheStore.field_d, (byte) 93, ib.field_e, param1, param0, lc.field_d, true);
           for (var2_int = 0; var2_int < lc.field_d; var2_int++) {
             ol.field_k[param0 + var2_int] = var2_int;
           }

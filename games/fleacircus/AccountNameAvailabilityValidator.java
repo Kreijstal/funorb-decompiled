@@ -118,7 +118,7 @@ final class AccountNameAvailabilityValidator extends r {
             var2 = hj.field_a[fleas.field_E] >= var1_int ? 1 : 0;
             ResourceArchive.field_c.field_z[var1_int] = var2 == 0 ? ik.field_C : wj.field_c[fleas.field_E][var1_int];
             if (0 == fleas.field_E && var1_int >= 15 &&
-              (qh.c((byte) 107) || 0 >= wc.field_q)) {
+              (DiskArchiveRequest.c((byte) 107) || 0 >= wc.field_q)) {
               ResourceArchive.field_c.field_z[var1_int] = nb.field_e;
               var2 = 0;
             }

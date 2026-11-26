@@ -45,7 +45,7 @@ final class ei {
         if (param1 >= 0 &&
           14 > param1) {
           if (param0 == 66) {
-            var3 = rb.field_c[param1];
+            var3 = DiskCacheWorker.field_c[param1];
             if (var3 < 0) {
               return;
             }
@@ -63,7 +63,7 @@ final class ei {
             return;
           }
           field_y = (String) null;
-          var3Lifetime1 = rb.field_c[param1];
+          var3Lifetime1 = DiskCacheWorker.field_c[param1];
           if (var3Lifetime1 < 0) {
             return;
           }

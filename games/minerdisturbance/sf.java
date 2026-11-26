@@ -16,12 +16,12 @@ final class sf {
     final synchronized static long correctedCurrentTimeMillis(byte param0) {
         int var3 = -9 / ((47 - param0) / 49);
         long var1 = System.currentTimeMillis();
-        if (em.field_A <= var1) {
-          em.field_A = var1;
+        if (ArchiveRequest.field_A <= var1) {
+          ArchiveRequest.field_A = var1;
           return var1 + fc.field_u;
         }
-        fc.field_u = fc.field_u + (-var1 + em.field_A);
-        em.field_A = var1;
+        fc.field_u = fc.field_u + (-var1 + ArchiveRequest.field_A);
+        ArchiveRequest.field_A = var1;
         return var1 + fc.field_u;
     }
 

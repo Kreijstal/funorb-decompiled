@@ -246,7 +246,7 @@ final class gh extends r {
             stackIn_39_1 = var7;
             stackIn_40_2 = !(var5 < 0);
             var8Lifetime1 = se.a(stackIn_39_0, stackIn_39_1, stackIn_40_2);
-            var9Lifetime1 = -(var8Lifetime1 >> 1) + af.field_b;
+            var9Lifetime1 = -(var8Lifetime1 >> 1) + DiskCacheWorker.field_b;
             if (var5 >= 0) {
               var1_int = var1_int + id.field_c;
               if (bk.field_a.field_k == var5) {

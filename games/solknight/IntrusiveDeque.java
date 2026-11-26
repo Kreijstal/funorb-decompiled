@@ -267,7 +267,7 @@ final class IntrusiveDeque {
               wa.field_b = false;
               var3_int = 1;
             }
-            la.a(ak.a(true), ae.field_e, 82, var3_int != 0, mc.a(-100));
+            la.a(ak.a(true), DiskCacheWorker.field_e, 82, var3_int != 0, mc.a(-100));
             return;
           }
           if (!uk.h(250)) {

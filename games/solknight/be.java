@@ -25,7 +25,7 @@ final class be extends pj {
         var1 = -ArchiveSource.field_c + 320;
         var2 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
         if (ClientException.field_b >= 0) {
-          var3 = -var1 - ArchiveSource.field_c + ((sk.field_o >> 4) + 320);
+          var3 = -var1 - ArchiveSource.field_c + ((ArchiveRequest.field_o >> 4) + 320);
           var4 = -var2 - si.field_E + (AccountServiceResult.field_e >> 4);
         } else {
           var4 = -var2 + BufferedSocket.field_m;
@@ -70,16 +70,16 @@ final class be extends pj {
               if (wb.field_c == 1 &&
                 FullscreenFocusCanvas.field_b == 0 ||
                 !(0 > ClientException.field_b)) {
-                if (bi.field_h != 1) {
+                if (SectorCacheStore.field_h != 1) {
                   mb.a(!param0, 3, 256);
                 } else {
                   mb.a(!param0, 3, 128);
                 }
                 wb.field_b = 25;
-                if (bi.field_h > 0) {
+                if (SectorCacheStore.field_h > 0) {
                   wb.field_b = 13;
                 }
-                if (2 > bi.field_h) {
+                if (2 > SectorCacheStore.field_h) {
                   m.a(0, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5, var3 * 128 / var5);
                 } else {
                   var6 = var3 * 128 / var5;
@@ -100,16 +100,16 @@ final class be extends pj {
                 if (((wb.field_c == 1 &&
                   0 == FullscreenFocusCanvas.field_b) ||
                   !(ClientException.field_b < 0))) {
-                  if (bi.field_h != 1) {
+                  if (SectorCacheStore.field_h != 1) {
                     mb.a(true, 8, 256);
                   } else {
                     mb.a(true, 8, 128);
                   }
                   wb.field_b = 37;
-                  if (0 < bi.field_h) {
+                  if (0 < SectorCacheStore.field_h) {
                     wb.field_b = 18;
                   }
-                  if (bi.field_h < 2) {
+                  if (SectorCacheStore.field_h < 2) {
                     m.a(1, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 32 / var5, 32 * var3 / var5);
                   } else {
                     var6 = 32 * (var4 + var3) / var5;
@@ -137,7 +137,7 @@ final class be extends pj {
                 }
                 mb.a(true, 15, 256);
                 wb.field_b = 50;
-                if (bi.field_h > 0) {
+                if (SectorCacheStore.field_h > 0) {
                   wb.field_b = 25;
                 }
                 m.a(2, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 96 / var5, var3 * 96 / var5);
@@ -157,7 +157,7 @@ final class be extends pj {
                 }
                 mb.a(true, 10, 256);
                 wb.field_b = 75;
-                if (bi.field_h > 0) {
+                if (SectorCacheStore.field_h > 0) {
                   wb.field_b = 37;
                 }
                 m.a(3, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 96 / var5, var3 * 96 / var5);
@@ -173,14 +173,14 @@ final class be extends pj {
                   }
                   mb.a(true, 11, 256);
                   wb.field_b = 8;
-                  if (bi.field_h >= 0) {
+                  if (SectorCacheStore.field_h >= 0) {
                     m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 256 / var5, var3 * 256 / var5);
                   }
-                  if (bi.field_h >= 1) {
+                  if (SectorCacheStore.field_h >= 1) {
                     m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 256 * var4 / var5 - var3 * 32 / var5, 256 * var3 / var5 + var4 * 32 / var5);
                     m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 256 * var4 / var5 + 32 * var3 / var5, -(var4 * 32 / var5) + var3 * 256 / var5);
                   }
-                  if (2 <= bi.field_h) {
+                  if (2 <= SectorCacheStore.field_h) {
                     m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 192 * var4 / var5 - 48 * var3 / var5, 192 * var3 / var5 + var4 * 48 / var5);
                     m.a(4, ci.field_sb << 4, rj.field_b << 4, (byte) -6, 192 * var4 / var5 + 48 * var3 / var5, -(48 * var4 / var5) + 192 * var3 / var5);
                   }
@@ -198,7 +198,7 @@ final class be extends pj {
                 }
                 mb.a(true, 5, 256);
                 wb.field_b = 8;
-                m.a(5, ci.field_sb << 4, rj.field_b << 4, (byte) -6, (128 - bi.field_h * 32) * var4 / var5, (128 - 32 * bi.field_h) * var3 / var5);
+                m.a(5, ci.field_sb << 4, rj.field_b << 4, (byte) -6, (128 - SectorCacheStore.field_h * 32) * var4 / var5, (128 - 32 * SectorCacheStore.field_h) * var3 / var5);
                 break;
               default:
                 break;
@@ -251,7 +251,7 @@ final class be extends pj {
                 }
                 if (80 == wb.field_b ||
                   wb.field_b == 60 ||
-                  !(bi.field_h < 1) &&
+                  !(SectorCacheStore.field_h < 1) &&
                   (wb.field_b == 55 ||
                   wb.field_b == 70 ||
                   85 == wb.field_b)) {
@@ -260,7 +260,7 @@ final class be extends pj {
                   m.a(6, ci.field_sb << 4, rj.field_b << 4, (byte) -6, var4 * 128 / var5 - var3 * 64 / var5, var4 * 64 / var5 + 128 * var3 / var5);
                 }
                 if (wb.field_b == 50) {
-                  if (bi.field_h != 2) {
+                  if (SectorCacheStore.field_h != 2) {
                     break;
                   }
                   wb.field_b = 0;
@@ -292,7 +292,7 @@ final class be extends pj {
           var8_int = -this.field_m + (-param1 - this.field_N) + param3;
           var9 = -this.field_P - this.field_j - param5 + param4;
           if (var8_int * var8_int + var9 * var9 < this.field_O * this.field_O) {
-            var10 = Math.atan2((double)var9, (double)var8_int) - ic.field_w;
+            var10 = Math.atan2((double)var9, (double)var8_int) - NetworkArchiveRequest.field_w;
             if (var10 < 0.0) {
               var10 = var10 - 3.141592653589793 / (double)this.field_L;
             } else {
@@ -402,7 +402,7 @@ final class be extends pj {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
-                bi.field_a = (int)(var3.longValue() / 1048576L) + 1;
+                SectorCacheStore.field_a = (int)(var3.longValue() / 1048576L) + 1;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;

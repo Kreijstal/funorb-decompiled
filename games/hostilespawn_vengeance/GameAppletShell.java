@@ -207,7 +207,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             ig.field_L = mk.field_I;
             j.field_c = lc.field_d;
             rb.field_m = cm.field_b;
-            um.field_d = rg.field_e;
+            SectorCacheStore.field_d = rg.field_e;
             rg.field_e = param0;
             pf.field_o = dc.field_d;
             ec.field_a = rf.field_o;

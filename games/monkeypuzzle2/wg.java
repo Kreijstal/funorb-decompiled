@@ -29,7 +29,7 @@ final class wg extends IntrusiveNode {
               th.field_o[var2] = 137;
             }
             ImageProducerRasterBuffer.field_k[var2] = -(m.field_e[var2] / 2) + 320;
-            si.field_v[var2] = 240 - th.field_o[var2] / 2;
+            DiskArchiveRequest.field_v[var2] = 240 - th.field_o[var2] / 2;
             vh.field_E[var2] = new Sprite(m.field_e[var2], th.field_o[var2]);
             vh.field_E[var2].e();
             lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, th.field_o[var2]);

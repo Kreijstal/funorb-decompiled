@@ -8,7 +8,7 @@ final class vg extends wi {
     int field_C;
     private fa field_G;
     int field_w;
-    static af field_r;
+    static DiskCacheWorker field_r;
     static sg[] field_H;
     static String[] field_u;
     private boolean field_s;
@@ -45,18 +45,18 @@ final class vg extends wi {
     }
 
     final static void b(byte param0) {
-        ah.field_g[93] = 43;
-        ah.field_g[59] = 57;
-        ah.field_g[47] = 73;
-        ah.field_g[44] = 71;
-        ah.field_g[92] = 74;
-        ah.field_g[192] = 28;
-        ah.field_g[520] = 59;
-        ah.field_g[222] = 58;
-        ah.field_g[46] = 72;
-        ah.field_g[45] = 26;
-        ah.field_g[61] = 27;
-        ah.field_g[91] = 42;
+        SectorCacheStore.field_g[93] = 43;
+        SectorCacheStore.field_g[59] = 57;
+        SectorCacheStore.field_g[47] = 73;
+        SectorCacheStore.field_g[44] = 71;
+        SectorCacheStore.field_g[92] = 74;
+        SectorCacheStore.field_g[192] = 28;
+        SectorCacheStore.field_g[520] = 59;
+        SectorCacheStore.field_g[222] = 58;
+        SectorCacheStore.field_g[46] = 72;
+        SectorCacheStore.field_g[45] = 26;
+        SectorCacheStore.field_g[61] = 27;
+        SectorCacheStore.field_g[91] = 42;
         if (param0 != 32) {
           vg.clearStaticReferences((byte) -26);
         }

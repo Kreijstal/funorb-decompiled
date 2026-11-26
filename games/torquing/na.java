@@ -202,7 +202,7 @@ final class na extends jh {
               }
               if (var9Lifetime1 == 99) {
                 BufferedSocket.a(ol.b(-92), param2 ^ -25978);
-                jl.field_T = new Boolean(ac.a(kj.field_d, 28066));
+                jl.field_T = new Boolean(NetworkArchiveRequest.a(kj.field_d, 28066));
                 kj.field_d.position = 0;
               } else {
                 fa.field_e = var9Lifetime1;

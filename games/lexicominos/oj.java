@@ -301,7 +301,7 @@ final class oj {
           var8 = -1;
           if (var7 != null) {
             try {
-              var8 = si.a((byte) 115, (CharSequence) (var7));
+              var8 = ArchiveRequest.a((byte) 115, (CharSequence) (var7));
             } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var9 = (NumberFormatException) (Object) decompiledCaughtException;

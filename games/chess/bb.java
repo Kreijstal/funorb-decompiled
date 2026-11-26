@@ -100,7 +100,7 @@ final class bb {
               }
             }
           }
-          on.field_e = 2;
+          DiskCacheWorker.field_e = 2;
           ri.field_g = 4;
           jg.field_I = 11;
           fe.field_g = 15;
@@ -141,9 +141,9 @@ final class bb {
           var14 = rh.a(ao.a(param0, "tab_active", 2993, "lobby"), param3 - 9463);
           dc.field_s = new ci(0L, var8);
           dc.field_s.field_Ab = var14;
-          gd.field_b = new ci(0L, (ci) null);
-          gd.field_b.field_jb = wk.a(param0, param3 + 106, "closebutton", "lobby");
-          gd.field_b.field_Bb = wk.a(param0, 1, "closebutton_mouseover", "lobby");
+          SectorCacheStore.field_b = new ci(0L, (ci) null);
+          SectorCacheStore.field_b.field_jb = wk.a(param0, param3 + 106, "closebutton", "lobby");
+          SectorCacheStore.field_b.field_Bb = wk.a(param0, 1, "closebutton_mouseover", "lobby");
           wc.field_B = new ci(0L, var8);
           wc.field_B.field_Ab = il.a(param3 + 105, 2039583, 40, true, true, 3815994);
           bo.field_e = new ci(0L, var10);

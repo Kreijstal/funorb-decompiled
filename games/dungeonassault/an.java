@@ -80,7 +80,7 @@ final class an extends hh {
             stackIn_5_0 = (String) (param3);
           }
           param3 = stackIn_5_0;
-          stackIn_6_0 = ln.a(param2, ib.a((byte) -126, param0, param3), 255);
+          stackIn_6_0 = SectorCacheStore.a(param2, ib.a((byte) -126, param0, param3), 255);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ final class an extends hh {
           j.field_J = param5;
           CombatState.field_a = param7;
           Raider.field_a = (bb) ((Object) new tp());
-          na.field_y = new cc(param8);
+          na.field_y = new DiskCacheWorker(param8);
           bl.field_r = new je(Raider.field_a, na.field_y);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "an.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

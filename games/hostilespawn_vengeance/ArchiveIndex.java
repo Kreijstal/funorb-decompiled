@@ -46,7 +46,7 @@ final class ArchiveIndex {
           RuntimeException var4_ref = null;
           try {
             if (PlatformTaskDispatcher.field_c.startsWith("win") &&
-              lm.a(26, param1)) {
+              NetworkArchiveRequest.a(26, param1)) {
               return;
             }
             try {

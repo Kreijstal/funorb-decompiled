@@ -344,7 +344,7 @@ final class ob extends WidgetContainer implements ih, ij {
             if (param1 != this.field_K) {
               if (this.field_G == param1) {
                 if (this.field_N) {
-                  rk.h(-128);
+                  ArchiveRequest.h(-128);
                 } else {
                   if (this.field_R) {
                     sg.b((byte) 81);

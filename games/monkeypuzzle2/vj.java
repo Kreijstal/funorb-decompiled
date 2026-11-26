@@ -11,7 +11,7 @@ final class vj {
     final static void a(byte param0) {
         int var1 = pf.b(1);
         int var2 = SocketConnector.a((byte) 113);
-        AccountNameAvailabilityValidator.field_u.a(var1 + (rb.field_cb << 1), -rb.field_cb + sc.field_g, false, -wg.field_h + fb.field_k, (wg.field_h << 1) + var2);
+        AccountNameAvailabilityValidator.field_u.a(var1 + (rb.field_cb << 1), -rb.field_cb + sc.field_g, false, -wg.field_h + ArchiveRequest.field_k, (wg.field_h << 1) + var2);
         ne.a((byte) -107);
         if (param0 == -123) {
           return;

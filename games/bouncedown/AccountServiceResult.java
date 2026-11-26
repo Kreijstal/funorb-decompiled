@@ -21,7 +21,7 @@ final class AccountServiceResult {
     }
 
     final static void b(byte param0) {
-        ta.a((byte) -118, vi.b(0));
+        ta.a((byte) -118, DiskCacheWorker.b(0));
         if (param0 >= -60) {
           field_e = (String) null;
         }

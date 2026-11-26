@@ -270,18 +270,18 @@ final class AccountServiceResult {
             }
           }
           kl.field_d = ee.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
-          ef.field_b = ja.field_c.field_b * (mc.field_h + kc.field_S << 1);
+          DiskCacheWorker.field_b = ja.field_c.field_b * (mc.field_h + kc.field_S << 1);
           p.field_g = -(var3_intLifetime1 >> 1) + ee.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < DualLinkNode.field_h.length; var4Lifetime2++) {
-            stackIn_113_0 = ef.field_b;
+            stackIn_113_0 = DiskCacheWorker.field_b;
             if (eg.field_a[var4Lifetime2] >= 0) {
               stackIn_114_1 = pk.field_c;
             } else {
               stackIn_114_1 = sg.field_e;
             }
-            ef.field_b = stackIn_113_0 + stackIn_114_1;
+            DiskCacheWorker.field_b = stackIn_113_0 + stackIn_114_1;
           }
-          AccountNameAvailabilityValidator.field_m = GameApplet.field_c - (ef.field_b >> 1);
+          AccountNameAvailabilityValidator.field_m = GameApplet.field_c - (DiskCacheWorker.field_b >> 1);
           oh.field_e = new int[DualLinkNode.field_h.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = AccountNameAvailabilityValidator.field_m;

@@ -969,7 +969,7 @@ final class MidiPcmStream extends PcmStream {
         hf var1Lifetime1;
         var2 = OrbDefence.field_D ? 1 : 0;
         try {
-          cd.field_w.serviceOutput();
+          NetworkArchiveRequest.field_w.serviceOutput();
           wf.field_b.serviceOutput();
           kg.field_f = kg.field_f - 1;
           if (kg.field_f == 0) {

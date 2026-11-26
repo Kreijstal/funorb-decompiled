@@ -15,7 +15,7 @@ final class fh {
         if (param1 != 7284) {
           return;
         }
-        rb.field_b = 1;
+        DiskCacheWorker.field_b = 1;
         ResourceArchive.field_e = param2;
         m.field_h = param0;
     }

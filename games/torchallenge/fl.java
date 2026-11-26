@@ -77,13 +77,13 @@ final class fl extends vb {
           String stackIn_28_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          db var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
           pa var7 = null;
-          db var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = TorChallenge.field_F ? 1 : 0;
           try {
             if (null != this.field_u) {
@@ -105,7 +105,7 @@ final class fl extends vb {
               fl.a((pa) null, (byte) 59);
             }
             while (true) {
-              var4_ref = (db) (this.field_l.c(-1));
+              var4_ref = (NetworkArchiveRequest) (this.field_l.c(-1));
               if (var4_ref != null) {
                 this.field_c.a(var4_ref, 3329);
                 continue;
@@ -113,7 +113,7 @@ final class fl extends vb {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (db) (this.field_i.c(-1));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_i.c(-1));
               if (var4_refLifetime1 != null) {
                 this.field_k.a(var4_refLifetime1, param2 + 3214);
                 continue;
@@ -268,7 +268,7 @@ final class fl extends vb {
           int stackIn_80_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          db var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -283,10 +283,10 @@ final class fl extends vb {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          db var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          db var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = TorChallenge.field_F ? 1 : 0;
           if (this.field_u != null) {
             var2_long = ol.correctedCurrentTimeMillis(256);
@@ -315,26 +315,26 @@ final class fl extends vb {
           }
           try {
             this.field_u.b(127);
-            var2 = (db) (this.field_c.a(25777));
+            var2 = (NetworkArchiveRequest) (this.field_c.a(25777));
             while (var2 != null) {
               this.field_d.position = 0;
               this.field_d.writeByte(1, (byte) 122);
               this.field_d.writeFiveByteValue(var2.field_l, -1709073240);
               this.field_u.a(this.field_d.payload.length, 0, (byte) 101, this.field_d.payload);
               this.field_l.a(var2, 3329);
-              var2 = (db) (this.field_c.d(49));
+              var2 = (NetworkArchiveRequest) (this.field_c.d(49));
             }
             if (param0 > -44) {
               field_v = -12;
             }
-            var2Lifetime1 = (db) (this.field_k.a(25777));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_k.a(25777));
             while (var2Lifetime1 != null) {
               this.field_d.position = 0;
               this.field_d.writeByte(0, (byte) 122);
               this.field_d.writeFiveByteValue(var2Lifetime1.field_l, -1709073240);
               this.field_u.a(this.field_d.payload.length, 0, (byte) 76, this.field_d.payload);
               this.field_i.a(var2Lifetime1, 3329);
-              var2Lifetime1 = (db) (this.field_k.d(118));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_k.d(118));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_u.a(0);
@@ -380,24 +380,24 @@ final class fl extends vb {
                     var12 = ((long)var6 << 32) + (long)var7;
                     var14 = null;
                     if (var11 != 0) {
-                      var14_ref = (db) (this.field_i.a(25777));
+                      var14_ref = (NetworkArchiveRequest) (this.field_i.a(25777));
                       while (var14_ref != null) {
                         if (var14_ref.field_l == var12) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        var14_ref = (db) (this.field_i.d(116));
+                        var14_ref = (NetworkArchiveRequest) (this.field_i.d(116));
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameCompleted0)) {
-                      var14_ref = (db) (this.field_l.a(25777));
+                      var14_ref = (NetworkArchiveRequest) (this.field_l.a(25777));
                       while (var14_ref != null) {
                         if (var14_ref.field_l == var12) {
                           break;
                         }
-                        var14_ref = (db) (this.field_l.d(121));
+                        var14_ref = (NetworkArchiveRequest) (this.field_l.d(121));
                       }
                     }
                     if (var14_ref == null) {

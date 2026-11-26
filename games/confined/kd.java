@@ -72,12 +72,12 @@ final class kd extends jf {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          tn var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          tn var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Confined.field_J ? 1 : 0;
           try {
             if (this.field_p != null) {
@@ -98,7 +98,7 @@ final class kd extends jf {
             this.field_m.position = 0;
             this.field_f = null;
             while (true) {
-              var4_ref = (tn) (this.field_j.c(false));
+              var4_ref = (NetworkArchiveRequest) (this.field_j.c(false));
               if (var4_ref != null) {
                 this.field_o.a(var4_ref, (byte) -101);
                 continue;
@@ -106,7 +106,7 @@ final class kd extends jf {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (tn) (this.field_n.c(false));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_n.c(false));
               if (var4_refLifetime1 != null) {
                 this.field_g.a(var4_refLifetime1, (byte) 127);
                 continue;
@@ -244,7 +244,7 @@ final class kd extends jf {
           int stackIn_75_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          tn var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -259,10 +259,10 @@ final class kd extends jf {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          tn var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          tn var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = Confined.field_J ? 1 : 0;
           if (this.field_p != null) {
             var2_long = ri.correctedCurrentTimeMillis(-3);
@@ -294,23 +294,23 @@ final class kd extends jf {
             if (param0 < 11) {
               field_q = (String) null;
             }
-            var2 = (tn) (this.field_o.d(92));
+            var2 = (NetworkArchiveRequest) (this.field_o.d(92));
             while (var2 != null) {
               this.field_i.position = 0;
               this.field_i.writeByte(95, 1);
               this.field_i.writeLong40(var2.field_r, 8850);
               this.field_p.queueWrite(this.field_i.payload.length, false, this.field_i.payload, 0);
               this.field_j.a(var2, (byte) -114);
-              var2 = (tn) (this.field_o.a((byte) -113));
+              var2 = (NetworkArchiveRequest) (this.field_o.a((byte) -113));
             }
-            var2Lifetime1 = (tn) (this.field_g.d(-94));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_g.d(-94));
             while (var2Lifetime1 != null) {
               this.field_i.position = 0;
               this.field_i.writeByte(90, 0);
               this.field_i.writeLong40(var2Lifetime1.field_r, 8850);
               this.field_p.queueWrite(this.field_i.payload.length, false, this.field_i.payload, 0);
               this.field_n.a(var2Lifetime1, (byte) 117);
-              var2Lifetime1 = (tn) (this.field_g.a((byte) -119));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_g.a((byte) -119));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_p.availableBytes((byte) -99);
@@ -356,24 +356,24 @@ final class kd extends jf {
                     var12 = ((long)var6 << 32) + (long)var7;
                     var14 = null;
                     if (var11 == 0) {
-                      var14_ref = (tn) (this.field_j.d(-97));
+                      var14_ref = (NetworkArchiveRequest) (this.field_j.d(-97));
                       while (var14_ref != null) {
                         if (~var14_ref.field_r == ~var12) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        var14_ref = (tn) (this.field_j.a((byte) -117));
+                        var14_ref = (NetworkArchiveRequest) (this.field_j.a((byte) -117));
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameCompleted0)) {
-                      var14_ref = (tn) (this.field_n.d(-103));
+                      var14_ref = (NetworkArchiveRequest) (this.field_n.d(-103));
                       while (var14_ref != null) {
                         if (var14_ref.field_r == var12) {
                           break;
                         }
-                        var14_ref = (tn) (this.field_n.a((byte) -7));
+                        var14_ref = (NetworkArchiveRequest) (this.field_n.a((byte) -7));
                       }
                     }
                     if (var14_ref == null) {

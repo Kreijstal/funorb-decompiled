@@ -88,7 +88,7 @@ final class ih extends kj implements sg {
         jj.field_d = false;
         cl.field_z = false;
         s.field_m = false;
-        db.field_B = 0;
+        NetworkArchiveRequest.field_B = 0;
         ra.field_q = false;
         dk.field_a = 0;
         ah.field_i = false;

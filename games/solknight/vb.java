@@ -72,19 +72,19 @@ final class vb extends il {
             id.field_c.position = 0;
             if (param3 != null) {
               var9 = 0;
-              ic.field_z.position = 0;
+              NetworkArchiveRequest.field_z.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
-              ic.field_z.writeInt(ib.field_i.nextInt(), false);
-              ic.field_z.writeInt(ib.field_i.nextInt(), false);
-              ic.field_z.writePrefixedString(-1955895016, var14);
-              ic.field_z.writePrefixedString(param6 - 1955873256, var8);
+              NetworkArchiveRequest.field_z.writeInt(ib.field_i.nextInt(), false);
+              NetworkArchiveRequest.field_z.writeInt(ib.field_i.nextInt(), false);
+              NetworkArchiveRequest.field_z.writePrefixedString(-1955895016, var14);
+              NetworkArchiveRequest.field_z.writePrefixedString(param6 - 1955873256, var8);
               var15 = (CharSequence) ((Object) param3);
-              ic.field_z.writePrefixedString(-1955895016, sa.a(var15, true));
-              ic.field_z.writeShort(true, param1);
-              ic.field_z.writeByte(-112, param0);
-              ic.field_z.writeByte(105, var9);
+              NetworkArchiveRequest.field_z.writePrefixedString(-1955895016, sa.a(var15, true));
+              NetworkArchiveRequest.field_z.writeShort(true, param1);
+              NetworkArchiveRequest.field_z.writeByte(-112, param0);
+              NetworkArchiveRequest.field_z.writeByte(105, var9);
               id.field_c.writeByte(-112, 18);
               id.field_c.position = id.field_c.position + 2;
               var10 = id.field_c.position;
@@ -93,13 +93,13 @@ final class vb extends il {
                 var11_ref_StringLifetime2 = "";
               }
               id.field_c.writeString(var11_ref_StringLifetime2, 0);
-              al.a(ic.field_z, id.field_c, (byte) 76, IntrusiveDeque.field_d, qa.field_p);
+              al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 76, IntrusiveDeque.field_d, qa.field_p);
               id.field_c.backpatchShortLength(id.field_c.position - var10, true);
             } else {
-              ic.field_z.position = 0;
-              ic.field_z.writeInt(ib.field_i.nextInt(), false);
-              ic.field_z.writeInt(ib.field_i.nextInt(), false);
-              stackIn_11_0 = ic.field_z;
+              NetworkArchiveRequest.field_z.position = 0;
+              NetworkArchiveRequest.field_z.writeInt(ib.field_i.nextInt(), false);
+              NetworkArchiveRequest.field_z.writeInt(ib.field_i.nextInt(), false);
+              stackIn_11_0 = NetworkArchiveRequest.field_z;
               stackIn_11_1 = -1955895016;
               if (param5.a(true)) {
                 stackIn_12_2 = var14;
@@ -107,7 +107,7 @@ final class vb extends il {
                 stackIn_12_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_11_0).writePrefixedString(stackIn_11_1, stackIn_12_2);
-              stackIn_14_0 = ic.field_z;
+              stackIn_14_0 = NetworkArchiveRequest.field_z;
               stackIn_14_1 = -1955895016;
               if (param4.a(true)) {
                 stackIn_15_2 = var8;
@@ -118,7 +118,7 @@ final class vb extends il {
               id.field_c.writeByte(-110, 16);
               id.field_c.position = id.field_c.position + 1;
               var9 = id.field_c.position;
-              al.a(ic.field_z, id.field_c, (byte) 75, IntrusiveDeque.field_d, qa.field_p);
+              al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 75, IntrusiveDeque.field_d, qa.field_p);
               id.field_c.backpatchByteLength(param6 + 21761, id.field_c.position - var9);
             }
             qf.a(0, -1);
@@ -135,7 +135,7 @@ final class vb extends il {
             } else {
               if (var9Lifetime1 == 248) {
                 wb.a(ia.g(-103), (byte) -79);
-                md.field_v = fi.field_j;
+                DiskArchiveRequest.field_v = fi.field_j;
                 je.a(false);
                 je.field_c = false;
                 stackIn_32_0 = var9Lifetime1;
@@ -146,7 +146,7 @@ final class vb extends il {
                 ob.field_h = var9Lifetime1;
                 AccountRequestState.field_e = bj.field_a;
               } else {
-                bf.c(54, sk.g(-9917));
+                bf.c(54, ArchiveRequest.g(-9917));
                 NodeHashTableIterator.field_b = new Boolean(lj.a(te.field_N, -2));
                 te.field_N.position = 0;
               }
@@ -172,7 +172,7 @@ final class vb extends il {
           if (bj.field_a == AccountRequestState.field_e &&
             qd.b((byte) 125)) {
             if (ob.field_h != 255) {
-              md.field_v = te.field_N.readString(15);
+              DiskArchiveRequest.field_v = te.field_N.readString(15);
             } else {
               var9_ref_String = te.field_N.readNullableString(86);
               if (var9_ref_String != null) {
@@ -187,9 +187,9 @@ final class vb extends il {
           if (MouseWheelInput.field_d == null) {
             if (je.field_c) {
               if (30000L < GameApplet.b(-1)) {
-                md.field_v = il.field_d;
+                DiskArchiveRequest.field_v = il.field_d;
               } else {
-                md.field_v = cl.field_j;
+                DiskArchiveRequest.field_v = cl.field_j;
               }
               je.field_c = false;
               stackIn_58_0 = 249;

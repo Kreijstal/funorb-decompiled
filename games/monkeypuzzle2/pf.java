@@ -38,7 +38,7 @@ final class pf {
         hb var6 = null;
         int var5 = 0;
         try {
-          var6 = gf.field_c;
+          var6 = SectorCacheStore.field_c;
           int var4 = 95 / ((param0 + 41) / 42);
           var6.b(true, param2);
           var6.position = var6.position + 1;

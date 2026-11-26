@@ -581,7 +581,7 @@ final class sg {
                                           if (this.field_c.d(0)) {
                                             if (null == ff.field_b) {
                                               var4_int = param1 ? 1 : 0;
-                                              kl.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -33, nh.field_c, var4_int != 0, 1 + bi.field_a.field_E, 240);
+                                              DiskCacheWorker.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -33, nh.field_c, var4_int != 0, 1 + bi.field_a.field_E, 240);
                                             } else {
                                               af.a(-85);
                                             }
@@ -1786,10 +1786,10 @@ final class sg {
                 var9 = 16777215;
               }
               if (16777215 == var9) {
-                dc.field_z[var7].d(95 * var7, var4_int);
+                NetworkArchiveRequest.field_z[var7].d(95 * var7, var4_int);
               } else {
                 if (var9 != 0) {
-                  dc.field_z[var7].b(95 * var7, var4_int, 128);
+                  NetworkArchiveRequest.field_z[var7].b(95 * var7, var4_int, 128);
                 }
               }
             }
@@ -1890,9 +1890,9 @@ final class sg {
             if (param3 > -26) {
               field_l = (dg) null;
             }
-            for (var6 = 0; dc.field_z.length > var6; var6++) {
-              if (dc.field_z[var6].field_s + var6 * 95 <= param2 &&
-                param2 < dc.field_z[var6].field_p + dc.field_z[var6].field_s + 95 * var6) {
+            for (var6 = 0; NetworkArchiveRequest.field_z.length > var6; var6++) {
+              if (NetworkArchiveRequest.field_z[var6].field_s + var6 * 95 <= param2 &&
+                param2 < NetworkArchiveRequest.field_z[var6].field_p + NetworkArchiveRequest.field_z[var6].field_s + 95 * var6) {
                 if (var6 != 3) {
                   stackIn_34_0 = var6;
                   return stackIn_34_0;

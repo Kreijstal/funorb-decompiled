@@ -7,12 +7,12 @@ final class pd {
     static double field_a;
     static Random field_c;
     static int field_b;
-    static n field_d;
+    static DiskCacheWorker field_d;
 
     public static void clearStaticReferences(boolean param0) {
         field_c = null;
         if (param0) {
-          field_d = (n) null;
+          field_d = (DiskCacheWorker) null;
           field_d = null;
           return;
         }

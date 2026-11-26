@@ -70,7 +70,7 @@ final class e {
             stackIn_10_0 = (tf) null;
             return stackIn_10_0;
           }
-          var3 = dc.a(param0, '.', (byte) -125);
+          var3 = NetworkArchiveRequest.a(param0, '.', (byte) -125);
           if (2 > var3.length) {
             stackIn_14_0 = w.field_k;
             return stackIn_14_0;
@@ -363,7 +363,7 @@ final class e {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_v = si.a(0, param0, -110, param0.length);
+            this.field_v = ArchiveRequest.a(0, param0, -110, param0.length);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (this.field_v[var4_int] != param2[var4_int]) {
                 throw new RuntimeException();

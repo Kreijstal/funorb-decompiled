@@ -389,11 +389,11 @@ class jg extends bg {
             var13.field_T = 0;
             var14.field_w = 0;
             if (var8 + var6 > 128) {
-              ia.a(en.field_a, (byte) -25, var5, 0, 0, 128 - var6 - (var8 - var8), 0, -1, 0, on.field_a);
+              NetworkArchiveRequest.a(en.field_a, (byte) -25, var5, 0, 0, 128 - var6 - (var8 - var8), 0, -1, 0, on.field_a);
               AccountServiceResult.field_c.a(en.field_a);
               if (var16 != 0) {
                 if (var6 - var8 < 0) {
-                  ia.a(en.field_a, (byte) -113, var5, 0, 0, -var8 + (var8 - var6), 0, 1, 0, on.field_a);
+                  NetworkArchiveRequest.a(en.field_a, (byte) -113, var5, 0, 0, -var8 + (var8 - var6), 0, 1, 0, on.field_a);
                   AccountServiceResult.field_c.a(en.field_a);
                   AccountServiceResult.field_c.a(var5);
                 } else {
@@ -402,7 +402,7 @@ class jg extends bg {
               }
             } else {
               if (var6 - var8 < 0) {
-                ia.a(en.field_a, (byte) -113, var5, 0, 0, -var8 + (var8 - var6), 0, 1, 0, on.field_a);
+                NetworkArchiveRequest.a(en.field_a, (byte) -113, var5, 0, 0, -var8 + (var8 - var6), 0, 1, 0, on.field_a);
                 AccountServiceResult.field_c.a(en.field_a);
                 if (var16 != 0) {
                   AccountServiceResult.field_c.a(var5);
@@ -413,13 +413,13 @@ class jg extends bg {
             }
             if (var8 + var7 <= 128) {
               if (!(-var8 + var7 >= 0)) {
-                ia.a(en.field_a, (byte) -93, AccountServiceResult.field_c, 0, -var8 + var8 - var7, 0, 0, 0, 1, on.field_a);
+                NetworkArchiveRequest.a(en.field_a, (byte) -93, AccountServiceResult.field_c, 0, -var8 + var8 - var7, 0, 0, 0, 1, on.field_a);
                 if (var16 != 0) {
-                  ia.a(en.field_a, (byte) -66, AccountServiceResult.field_c, 0, var8 - var8 - var7 + 128, 0, 0, 0, -1, on.field_a);
+                  NetworkArchiveRequest.a(en.field_a, (byte) -66, AccountServiceResult.field_c, 0, var8 - var8 - var7 + 128, 0, 0, 0, -1, on.field_a);
                 }
               }
             } else {
-              ia.a(en.field_a, (byte) -66, AccountServiceResult.field_c, 0, var8 - var8 - var7 + 128, 0, 0, 0, -1, on.field_a);
+              NetworkArchiveRequest.a(en.field_a, (byte) -66, AccountServiceResult.field_c, 0, var8 - var8 - var7 + 128, 0, 0, 0, -1, on.field_a);
             }
             boolean decompiledFrameCompleted0 = true;
             if (be.field_q) {

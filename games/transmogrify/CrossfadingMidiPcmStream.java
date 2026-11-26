@@ -305,11 +305,11 @@ final class CrossfadingMidiPcmStream extends PcmStream {
     }
 
     final static AccountServiceResult pollAccountCreationResult(byte param0) {
-        if (jh.field_n == rh.field_v) {
+        if (jh.field_n == ArchiveRequest.field_v) {
           throw new IllegalStateException();
         }
-        if (rh.field_v == AchievementNotice.field_l) {
-          rh.field_v = jh.field_n;
+        if (ArchiveRequest.field_v == AchievementNotice.field_l) {
+          ArchiveRequest.field_v = jh.field_n;
           return q.field_h;
         }
         if (param0 == 32) {

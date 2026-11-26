@@ -74,7 +74,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             hb.a(-5, df.field_l);
             df.field_l.exitFullscreen(sb.field_d, true);
             df.field_l = null;
-            n.field_g.requestFocus();
+            DiskCacheWorker.field_g.requestFocus();
             return;
           }
           return;
@@ -85,7 +85,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
         hb.a(-5, df.field_l);
         df.field_l.exitFullscreen(sb.field_d, true);
         df.field_l = null;
-        n.field_g.requestFocus();
+        DiskCacheWorker.field_g.requestFocus();
     }
 
     public static void clearStaticReferences(int param0) {

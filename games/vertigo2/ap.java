@@ -8,7 +8,7 @@ final class ap {
     static int field_c;
     static go[] field_b;
     static String field_g;
-    static t field_a;
+    static DiskCacheWorker field_a;
 
     final static void a(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;

@@ -491,7 +491,7 @@ final class he extends IntrusiveNode {
         lb.field_d = false;
         ba.a(121, -1);
         int var1 = -100 % ((44 - param0) / 47);
-        rh.field_v = jh.field_n;
+        ArchiveRequest.field_v = jh.field_n;
         db.field_a = jh.field_n;
     }
 

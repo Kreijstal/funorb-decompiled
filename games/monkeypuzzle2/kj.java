@@ -28,19 +28,19 @@ final class kj extends jk {
     }
 
     public kj() {
-        super(0, 0, tf.field_b, uj.field_l, (ml) null, (of) null);
+        super(0, 0, tf.field_b, DiskCacheWorker.field_l, (ml) null, (of) null);
         this.field_D = new IntrusiveDeque();
     }
 
     final static void a(boolean param0, int param1) {
-        jk.field_u = jk.field_u + uj.field_h;
+        jk.field_u = jk.field_u + DiskCacheWorker.field_h;
         if (!(~jk.field_u <= param1)) {
           DequeCursor.field_b = -1;
         }
         if (jk.field_u > 30 &&
           0 <= DequeCursor.field_b &&
           param0) {
-          uj.field_h = uj.field_h * -1;
+          DiskCacheWorker.field_h = DiskCacheWorker.field_h * -1;
           jk.field_u = 30;
         }
     }
@@ -206,7 +206,7 @@ final class kj extends jk {
           RuntimeException var15_ref = null;
           try {
             MonkeyPuzzle2.field_D = new hb(param9);
-            gf.field_c = new hb(param3);
+            SectorCacheStore.field_c = new hb(param3);
             IntrusiveDeque.field_g = param13;
             j.field_a = param10;
             mb.field_c = param2;

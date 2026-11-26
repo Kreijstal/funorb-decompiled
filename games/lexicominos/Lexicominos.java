@@ -101,8 +101,8 @@ public final class Lexicominos extends nk {
                       ga.field_a.a((byte) -118)) {
                       if (SecondaryNodeDequeIterator.field_b.c(113) &&
                         SecondaryNodeDequeIterator.field_b.a((byte) 70)) {
-                        if (dl.field_d.c(87) &&
-                          dl.field_d.a((byte) -118)) {
+                        if (SectorCacheStore.field_d.c(87) &&
+                          SectorCacheStore.field_d.a((byte) -118)) {
                           if (ci.field_e.c(param0 ^ -5) &&
                             ci.field_e.a((byte) 55)) {
                             if (hh.field_L.c(99) &&
@@ -129,7 +129,7 @@ public final class Lexicominos extends nk {
                                 vb.field_r = new ja(hc.field_gb, gl.field_a);
                                 kc.field_m[9] = vb.field_r.a((byte) -80, "drum_075_claves");
                                 th.field_o[9] = PcmSampleStream.a(kc.field_m[9], 100, 128);
-                                dl.b(5);
+                                SectorCacheStore.b(5);
                                 return false;
                               }
                               al.a(16, rh.a(ci.field_a, (byte) 97, "index", fg.field_a, sg.field_f), 86.0f);
@@ -141,13 +141,13 @@ public final class Lexicominos extends nk {
                           al.a(16, rh.a(ci.field_e, (byte) 113, "", v.field_t, li.field_P), 10.0f);
                           return false;
                         }
-                        al.a(16, rh.a(dl.field_d, (byte) 98, "", pe.field_e, qf.field_s), 9.0f);
+                        al.a(16, rh.a(SectorCacheStore.field_d, (byte) 98, "", pe.field_e, qf.field_s), 9.0f);
                         return false;
                       }
-                      al.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, fj.field_y), 6.0f);
+                      al.a(16, rh.a(SecondaryNodeDequeIterator.field_b, (byte) 42, "", ni.field_d, DiskArchiveRequest.field_y), 6.0f);
                       return false;
                     }
-                    al.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, fj.field_y), 5.0f);
+                    al.a(16, qg.a((byte) 100, ga.field_a, ni.field_d, 0, DiskArchiveRequest.field_y), 5.0f);
                     return false;
                   }
                   al.a(param0 + 102, rh.a(hc.field_gb, (byte) 37, "", MusicPatchPcmStream.field_p, e.field_h), 4.0f);
@@ -192,7 +192,7 @@ public final class Lexicominos extends nk {
               ga.field_a = null;
               vb.field_r = null;
               SecondaryNodeDequeIterator.field_b = null;
-              dl.b(5);
+              SectorCacheStore.b(5);
             }
             return false;
           }
@@ -201,8 +201,8 @@ public final class Lexicominos extends nk {
             e.field_u = df.a("basic", "unachieved", th.field_p, (byte) -41);
             bi.field_a = hb.a(gg.field_d, 246, "roman20", "", th.field_p);
             mk.field_h = hb.a(gg.field_d, 246, "roman12", "", th.field_p);
-            tb.field_a = hb.a(dl.field_d, "scorefont", "", ci.field_e, -2569);
-            jh.field_d = hb.a(ci.field_e, 246, "", "lexfont", dl.field_d);
+            tb.field_a = hb.a(SectorCacheStore.field_d, "scorefont", "", ci.field_e, -2569);
+            jh.field_d = hb.a(ci.field_e, 246, "", "lexfont", SectorCacheStore.field_d);
             th.field_p = null;
             gg.field_d = null;
           }
@@ -220,13 +220,13 @@ public final class Lexicominos extends nk {
               if (qc.field_d == null) {
                 qc.field_d = el.a(0, ia.field_H);
                 v.field_B.setAsRasterTarget(1);
-                dl.b(5);
+                SectorCacheStore.b(5);
                 return false;
               }
               if (null == ne.field_b) {
                 ne.field_b = el.a(0, lg.field_c);
                 v.field_B.setAsRasterTarget(1);
-                dl.b(param0 ^ -81);
+                SectorCacheStore.b(param0 ^ -81);
                 return false;
               }
               var3_int = 0;
@@ -289,7 +289,7 @@ public final class Lexicominos extends nk {
               id.field_w = new oj[stackIn_251_0.length];
               var6Lifetime1 = 0;
               while (!(id.field_w.length <= var6Lifetime1)) {
-                id.field_w[var6Lifetime1] = new oj(dl.field_d, ci.field_e, var5[var6Lifetime1]);
+                id.field_w[var6Lifetime1] = new oj(SectorCacheStore.field_d, ci.field_e, var5[var6Lifetime1]);
                 stackOut_253_0 = ug.field_s.equals(id.field_w[var6Lifetime1].field_k);
                 stackIn_261_0 = stackOut_253_0;
                 stackIn_254_0 = stackOut_253_0;
@@ -304,20 +304,20 @@ public final class Lexicominos extends nk {
               }
             }
             if (decompiledFrameCompleted0) {
-              dl.field_d = null;
+              SectorCacheStore.field_d = null;
               ci.field_a = null;
               ci.field_e = null;
-              dl.b(5);
+              SectorCacheStore.b(5);
               stackIn_261_0 = false;
             }
             return stackIn_261_0;
           }
           al.a(param0 ^ -70, gf.field_q, 92.0f);
           this.d(18380);
-          cb.field_n = df.a("", "bookbg", dl.field_d, (byte) -69);
-          pa.field_a = df.a("", "leftpage", dl.field_d, (byte) -83);
-          va.field_m = df.a("", "rightpage", dl.field_d, (byte) -64);
-          var3_array = td.a("", "frame", dl.field_d, 22306);
+          cb.field_n = df.a("", "bookbg", SectorCacheStore.field_d, (byte) -69);
+          pa.field_a = df.a("", "leftpage", SectorCacheStore.field_d, (byte) -83);
+          va.field_m = df.a("", "rightpage", SectorCacheStore.field_d, (byte) -64);
+          var3_array = td.a("", "frame", SectorCacheStore.field_d, 22306);
           var4 = 150;
           var5_int = 100;
           var6_ref_db = new RgbSprite(var4, var5_int);
@@ -361,7 +361,7 @@ public final class Lexicominos extends nk {
               }
             }
             if (decompiledFrameRemainder0) {
-              var3_array = td.a("", "frame2", dl.field_d, param0 + 22392);
+              var3_array = td.a("", "frame2", SectorCacheStore.field_d, param0 + 22392);
               jh.field_b = new RgbSprite[9];
               var7_int = 0;
               while (true) {
@@ -383,10 +383,10 @@ public final class Lexicominos extends nk {
                 var7_int++;
               }
             }
-            ef.field_d = td.a("", "achievements_lrg", dl.field_d, 22306);
+            ef.field_d = td.a("", "achievements_lrg", SectorCacheStore.field_d, 22306);
             break;
           }
-          var7 = df.a("", "glass_case", dl.field_d, (byte) -54);
+          var7 = df.a("", "glass_case", SectorCacheStore.field_d, (byte) -54);
           var7.e();
           var8_ref_int__ = var7.field_y;
           ef.field_d[10].e();
@@ -474,24 +474,24 @@ public final class Lexicominos extends nk {
             do {
               if (!(var7_int < fg.field_e.length)) {
                 v.field_B.setAsRasterTarget(1);
-                ia.field_H = df.a("", "letterBkgnd", dl.field_d, (byte) -47);
-                lg.field_c = df.a("", "letterBkgndGrey", dl.field_d, (byte) -56);
-                jj.field_f = td.a("", "highlight", dl.field_d, 22306);
-                th.field_l = td.a("", "multipliers", dl.field_d, 22306);
-                ob.field_d = df.a("", "ingameleft", dl.field_d, (byte) -108);
-                kf.field_A = td.a("", "ingameright", dl.field_d, 22306);
-                wc.field_c = td.a("", "deleasy", dl.field_d, 22306);
-                ij.field_n[0] = df.a("", "mmleft", dl.field_d, (byte) -53);
-                ij.field_n[2] = df.a("", "pauseleft", dl.field_d, (byte) -97);
+                ia.field_H = df.a("", "letterBkgnd", SectorCacheStore.field_d, (byte) -47);
+                lg.field_c = df.a("", "letterBkgndGrey", SectorCacheStore.field_d, (byte) -56);
+                jj.field_f = td.a("", "highlight", SectorCacheStore.field_d, 22306);
+                th.field_l = td.a("", "multipliers", SectorCacheStore.field_d, 22306);
+                ob.field_d = df.a("", "ingameleft", SectorCacheStore.field_d, (byte) -108);
+                kf.field_A = td.a("", "ingameright", SectorCacheStore.field_d, 22306);
+                wc.field_c = td.a("", "deleasy", SectorCacheStore.field_d, 22306);
+                ij.field_n[0] = df.a("", "mmleft", SectorCacheStore.field_d, (byte) -53);
+                ij.field_n[2] = df.a("", "pauseleft", SectorCacheStore.field_d, (byte) -97);
                 ij.field_n[14] = ij.field_n[2];
-                ij.field_n[1] = df.a("", "hsleft", dl.field_d, (byte) -117);
-                dupTemp$2 = df.a("", "instleft", dl.field_d, (byte) -104);
+                ij.field_n[1] = df.a("", "hsleft", SectorCacheStore.field_d, (byte) -117);
+                dupTemp$2 = df.a("", "instleft", SectorCacheStore.field_d, (byte) -104);
                 ij.field_n[3] = dupTemp$2;
                 ij.field_n[12] = dupTemp$2;
-                ij.field_n[5] = df.a("", "achleft", dl.field_d, (byte) -91);
-                ij.field_n[7] = df.a("", "achgameleft", dl.field_d, (byte) -93);
+                ij.field_n[5] = df.a("", "achleft", SectorCacheStore.field_d, (byte) -91);
+                ij.field_n[7] = df.a("", "achgameleft", SectorCacheStore.field_d, (byte) -93);
                 ij.field_n[6] = ij.field_n[0];
-                dupTemp$3 = df.a("", "instright", dl.field_d, (byte) -40);
+                dupTemp$3 = df.a("", "instright", SectorCacheStore.field_d, (byte) -40);
                 na.field_a[3] = dupTemp$3;
                 na.field_a[12] = dupTemp$3;
                 break;
@@ -502,7 +502,7 @@ public final class Lexicominos extends nk {
               fg.field_e[var7_int].f();
               var7_int++;
             } while (var17 == 0);
-            var7_array2 = td.a("", "mmoutlined", dl.field_d, 22306);
+            var7_array2 = td.a("", "mmoutlined", SectorCacheStore.field_d, 22306);
             gg.field_a = new RgbSprite[var7_array2.length];
             ej.field_b = new RgbSprite[var7_array2.length];
             var8Lifetime1 = 0;
@@ -533,9 +533,9 @@ public final class Lexicominos extends nk {
                   continue;
                 }
               } else {
-                var7_array2 = td.a("", "hsmodeconcise", dl.field_d, 22306);
+                var7_array2 = td.a("", "hsmodeconcise", SectorCacheStore.field_d, 22306);
                 hi.field_b = new RgbSprite[var7_array2.length];
-                dc.field_z = new RgbSprite[var7_array2.length];
+                NetworkArchiveRequest.field_z = new RgbSprite[var7_array2.length];
                 stackIn_203_0 = 0;
               }
               var8Lifetime1 = stackIn_203_0;
@@ -544,10 +544,10 @@ public final class Lexicominos extends nk {
                 stackIn_205_1 = ~var8Lifetime1;
                 if (stackIn_205_0 < stackIn_205_1) {
                   hi.field_b[var8Lifetime1] = var7_array2[var8Lifetime1].c();
-                  dc.field_z[var8Lifetime1] = var7_array2[var8Lifetime1].c();
+                  NetworkArchiveRequest.field_z[var8Lifetime1] = var7_array2[var8Lifetime1].c();
                   var9 = var7_array2[var8Lifetime1].field_y;
                   var10Lifetime1 = hi.field_b[var8Lifetime1].field_y;
-                  var11Lifetime1 = dc.field_z[var8Lifetime1].field_y;
+                  var11Lifetime1 = NetworkArchiveRequest.field_z[var8Lifetime1].field_y;
                   stackIn_219_0 = var9.length - 1;
                   if (var17 == 0) {
                     var12 = stackIn_219_0;
@@ -566,9 +566,9 @@ public final class Lexicominos extends nk {
                     continue;
                   }
                 } else {
-                  jf.field_N = df.a("", "slider", dl.field_d, (byte) -121);
-                  ia.field_G = df.a("", "cursors", dl.field_d, (byte) -43);
-                  dl.b(5);
+                  jf.field_N = df.a("", "slider", SectorCacheStore.field_d, (byte) -121);
+                  ia.field_G = df.a("", "cursors", SectorCacheStore.field_d, (byte) -43);
+                  SectorCacheStore.b(5);
                   stackIn_219_0 = 0;
                 }
                 return stackIn_219_0 != 0;
@@ -1013,12 +1013,12 @@ public final class Lexicominos extends nk {
           pe.clearStaticReferences((byte) -81);
           qf.e((byte) -15);
           ci.clearStaticReferences((byte) -127);
-          dc.clearStaticReferences((byte) -63);
-          dl.resetStaticState(param0 ^ 72);
-          fj.f((byte) -12);
+          NetworkArchiveRequest.clearStaticReferences((byte) -63);
+          SectorCacheStore.resetStaticState(param0 ^ 72);
+          DiskArchiveRequest.f((byte) -12);
           ug.clearStaticReferences(64);
           vh.a((byte) 119);
-          si.clearStaticReferences(false);
+          ArchiveRequest.clearStaticReferences(false);
           ce.a(-5602);
           ef.a(param0 ^ 79);
           ik.b((byte) -108);
@@ -1269,9 +1269,9 @@ public final class Lexicominos extends nk {
           if (null != eg.field_C) {
             ce.a(false, eg.field_C);
             eg.field_C = null;
-            dl.b(5);
+            SectorCacheStore.b(5);
           }
-          dl.field_d = oj.a(false, 1);
+          SectorCacheStore.field_d = oj.a(false, 1);
           ci.field_a = oj.a(false, 2);
           gl.field_a = oj.a(false, 3);
           hh.field_L = oj.a(false, 5);
@@ -1600,7 +1600,7 @@ public final class Lexicominos extends nk {
                         break;
                       }
                     case 3:
-                      kl.a(bi.field_a.field_E * 3 >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -103, nh.field_c, true, 1 + bi.field_a.field_E, 240);
+                      DiskCacheWorker.a(bi.field_a.field_E * 3 >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) -103, nh.field_c, true, 1 + bi.field_a.field_E, 240);
                       break;
                   }
                   if (!FullscreenFocusCanvas.a(-17977)) {
@@ -1633,7 +1633,7 @@ public final class Lexicominos extends nk {
                     if (this.a((byte) -86, true)) {
                       MusicPatchPcmStream.c(!param0);
                       this.g((byte) -83);
-                      dl.b(5);
+                      SectorCacheStore.b(5);
                       oj.field_g = true;
                     }
                   }
@@ -1644,7 +1644,7 @@ public final class Lexicominos extends nk {
                     if (this.a((byte) -86, true)) {
                       MusicPatchPcmStream.c(!param0);
                       this.g((byte) -83);
-                      dl.b(5);
+                      SectorCacheStore.b(5);
                       oj.field_g = true;
                     }
                   }
@@ -1656,7 +1656,7 @@ public final class Lexicominos extends nk {
             if (this.a((byte) -86, true)) {
               MusicPatchPcmStream.c(!param0);
               this.g((byte) -83);
-              dl.b(5);
+              SectorCacheStore.b(5);
               oj.field_g = true;
             }
           }
@@ -1714,7 +1714,7 @@ public final class Lexicominos extends nk {
                 }
                 if (ImageProducerRasterBuffer.field_j == -3) {
                   ImageProducerRasterBuffer.field_j = 0;
-                  kl.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) 86, nh.field_c, false, 1 + bi.field_a.field_E, 240);
+                  DiskCacheWorker.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) 86, nh.field_c, false, 1 + bi.field_a.field_E, 240);
                 }
                 je.field_a = 3;
                 th.field_r = ImageProducerRasterBuffer.field_j;

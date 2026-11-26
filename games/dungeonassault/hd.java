@@ -178,7 +178,7 @@ final class hd {
     final static void a(int param0, boolean param1, String param2, boolean param3) {
         tn.a(-1);
         lg.field_w.h(1);
-        wo.field_e = new dn(co.field_C, (String) null, qc.field_t, param3, param1);
+        wo.field_e = new dn(DiskArchiveRequest.field_C, (String) null, qc.field_t, param3, param1);
         if (param0 != 8192) {
           return;
         }
@@ -214,7 +214,7 @@ final class hd {
           var2 = var9.readUnsignedByte(true);
           var3 = var9.readUnsignedByte(true);
           if (var2 == 0) {
-            var4_ref_kj = (kj) (cc.field_i.beginBackward(-24172));
+            var4_ref_kj = (kj) (DiskCacheWorker.field_i.beginBackward(-24172));
             if (var4_ref_kj == null) {
               tl.a(-21);
               return;

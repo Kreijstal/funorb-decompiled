@@ -149,7 +149,7 @@ final class fc extends IntrusiveNode {
                   bb.field_I.a((byte) 104, ia.g(-78));
                 }
               } else {
-                sk.field_p.a((byte) 82, ia.g(-55));
+                ArchiveRequest.field_p.a((byte) 82, ia.g(-55));
               }
               je.field_c = false;
               if (var12 != null) {
@@ -194,7 +194,7 @@ final class fc extends IntrusiveNode {
               if (ob.field_h == 7) {
                 ob.field_h = 3;
               }
-              md.field_v = te.field_N.readString(param5 + 121);
+              DiskArchiveRequest.field_v = te.field_N.readString(param5 + 121);
               je.field_c = false;
               stackIn_85_0 = ob.field_h;
               return stackIn_85_0;
@@ -206,9 +206,9 @@ final class fc extends IntrusiveNode {
             if (null == MouseWheelInput.field_d) {
               if (je.field_c) {
                 if (GameApplet.b(-1) > 30000L) {
-                  md.field_v = il.field_d;
+                  DiskArchiveRequest.field_v = il.field_d;
                 } else {
-                  md.field_v = cl.field_j;
+                  DiskArchiveRequest.field_v = cl.field_j;
                 }
                 je.field_c = false;
                 stackIn_98_0 = 3;

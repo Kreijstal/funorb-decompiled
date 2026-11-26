@@ -65,7 +65,7 @@ final class uc extends sa {
           return;
         }
         try {
-          this.a(sm.field_A, this.field_S, param4, (byte) 64, param1, param0, param3, 128);
+          this.a(DiskArchiveRequest.field_A, this.field_S, param4, (byte) 64, param1, param0, param3, 128);
           if (param2 >= -5) {
             this.g(118);
           }

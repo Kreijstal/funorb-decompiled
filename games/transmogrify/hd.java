@@ -214,7 +214,7 @@ final class hd {
               if (var4 != bk.field_c.field_d) {
                 stackIn_46_0 = gl.field_B;
               } else {
-                stackIn_46_0 = cd.field_f;
+                stackIn_46_0 = DiskCacheWorker.field_f;
               }
               var9 = stackIn_46_0;
               var1_int = var1_int + ee.field_D;

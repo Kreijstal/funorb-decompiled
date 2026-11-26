@@ -1016,7 +1016,7 @@ final class pc {
                 case 102: {
                     try {
                         var4[var23] = 0;
-                        if (rh.a(var22_ref_oj.field_i, true)) {
+                        if (DiskArchiveRequest.a(var22_ref_oj.field_i, true)) {
                             statePc = 132;
                             continue scanLoop1;
                         } else {
@@ -1917,7 +1917,7 @@ final class pc {
                         }
                         {
                             var23 = var22_ref_oj.field_j.b(-4);
-                            if (rh.a(var22_ref_oj.field_i, true)) {
+                            if (DiskArchiveRequest.a(var22_ref_oj.field_i, true)) {
                                 /* Inlined CFG state: 237. */
                                 {
                                     stackIn_238_0 = -ln.field_a.field_d;

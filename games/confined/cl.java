@@ -324,7 +324,7 @@ final class cl extends ee {
           if (var4 != 0) {
             if (var4 == 1) {
               if (param1.field_Eb) {
-                this.a(ae.field_e, -88);
+                this.a(SectorCacheStore.field_e, -88);
               } else {
                 param1.field_Eb = true;
                 kc.a(ii.field_i, (pm) (this), 125, param1.field_Rb);
@@ -339,7 +339,7 @@ final class cl extends ee {
                   param1.field_Sb = true;
                   kc.a(mg.field_c, (pm) (this), 119, param1.field_sb);
                   if (param1.field_sb) {
-                    pk.a((byte) 16, b.a(new String[]{r.field_b}, tn.field_D, 1177));
+                    pk.a((byte) 16, b.a(new String[]{r.field_b}, NetworkArchiveRequest.field_D, 1177));
                     param1.field_sb = false;
                     this.d(10797);
                   } else {
@@ -526,7 +526,7 @@ final class cl extends ee {
                                       } else {
                                         param1.field_ab = 1;
                                         kc.a(ah.field_W, (pm) (this), 121, true);
-                                        pk.a((byte) 126, b.a(new String[]{cf.field_db}, ae.field_b, 1177));
+                                        pk.a((byte) 126, b.a(new String[]{cf.field_db}, SectorCacheStore.field_b, 1177));
                                       }
                                       this.d(10797);
                                     }

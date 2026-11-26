@@ -134,7 +134,7 @@ abstract class ro {
         sl.field_q[13] = pb.field_a;
         sl.field_q[1] = no.field_a;
         sl.field_q[4] = rr.field_A;
-        sl.field_q[7] = rk.field_x;
+        sl.field_q[7] = ArchiveRequest.field_x;
         sl.field_q[0] = rh.field_E;
         sl.field_q[22] = rb.field_a;
         sl.field_q[16] = bq.field_G[2];
@@ -175,7 +175,7 @@ abstract class ro {
         mb.field_q[22] = po.field_d.toLowerCase();
         mb.field_q[4] = po.field_d.toLowerCase();
         mb.field_q[3] = po.field_d.toLowerCase();
-        mb.field_q[13] = t.field_i.toLowerCase();
+        mb.field_q[13] = DiskCacheWorker.field_i.toLowerCase();
         mb.field_q[15] = ByteStorage.field_e.toLowerCase();
         mb.field_q[14] = lr.field_I.toLowerCase();
         mb.field_q[19] = ek.field_C.toLowerCase();

@@ -82,14 +82,14 @@ final class ia extends ln {
               }
             }
             rf.field_G = ce.field_gb;
-            ni.field_b = pe.field_i;
+            DiskCacheWorker.field_b = pe.field_i;
           }
           kf.field_f = param1;
           if (!co.field_F &&
             cl.field_o < GzipDecompressor.field_a &&
             DualLinkNode.field_h) {
             rf.field_G = ce.field_gb;
-            ni.field_b = pe.field_i;
+            DiskCacheWorker.field_b = pe.field_i;
             cl.field_o = 0;
           }
           pe.field_i = -1;

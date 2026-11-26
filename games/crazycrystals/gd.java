@@ -65,7 +65,7 @@ final class gd extends qc {
             var3 = (CharSequence) null;
             gd.a((byte) 51, (CharSequence) null);
           }
-          var2 = ni.a(37, ck.a((byte) 95, param1));
+          var2 = DiskCacheWorker.a(37, ck.a((byte) 95, param1));
           if (var2 == null) {
             var2 = "";
           }

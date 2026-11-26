@@ -19,7 +19,7 @@ final class fi {
           PacketBuffer.a(-1);
           return;
         }
-        gf.field_c.b(true, 1);
+        SectorCacheStore.field_c.b(true, 1);
         SocketConnector.a((byte) -71, 0);
         PacketBuffer.a(-1);
     }

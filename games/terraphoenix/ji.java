@@ -212,7 +212,7 @@ final class ji extends IntrusiveNode {
           } else {
             var6 = param1;
           }
-          stackIn_4_0 = nh.a(var4_long, param2, -63, param3, (String) (var6));
+          stackIn_4_0 = NetworkArchiveRequest.a(var4_long, param2, -63, param3, (String) (var6));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

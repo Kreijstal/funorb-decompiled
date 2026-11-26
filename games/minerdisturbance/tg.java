@@ -143,7 +143,7 @@ final class tg {
         mb.field_c = null;
         if (param1 >= -44) {
           field_f = 31;
-          em.field_B = null;
+          ArchiveRequest.field_B = null;
           var2 = kb.field_a;
           kb.field_a = sc.field_c;
           sc.field_c = var2;
@@ -170,7 +170,7 @@ final class tg {
           }
           return -1;
         }
-        em.field_B = null;
+        ArchiveRequest.field_B = null;
         var2Lifetime1 = kb.field_a;
         kb.field_a = sc.field_c;
         sc.field_c = var2Lifetime1;

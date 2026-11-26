@@ -1,0 +1,341 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DiskCacheWorker implements Runnable {
+    static s field_e;
+    private jh field_a;
+    private Thread field_g;
+    private boolean field_c;
+    int field_h;
+    static int field_b;
+    static int field_d;
+    static String[] field_f;
+
+    final DiskArchiveRequest requestRead(byte param0, int param1, SectorCacheStore param2) {
+        DiskArchiveRequest var4 = null;
+        RuntimeException var4_ref = null;
+        DiskArchiveRequest stackIn_2_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new DiskArchiveRequest();
+          var4.field_j = (long)param1;
+          var4.field_v = 3;
+          var4.field_o = false;
+          var4.field_t = param2;
+          if (param0 != 16) {
+            stackIn_2_0 = (DiskArchiveRequest) null;
+            return stackIn_2_0;
+          }
+          this.enqueue(89, var4);
+          stackIn_4_0 = var4;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_7_0 = var4_ref;
+          stackIn_7_1 = new StringBuilder().append("ef.H(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    public static void resetStaticState(byte param0) {
+        if (param0 != 27) {
+          field_b = 10;
+          field_f = null;
+          field_e = null;
+          return;
+        }
+        field_f = null;
+        field_e = null;
+    }
+
+    final void shutdown(int param0) {
+        try {
+          this.field_c = true;
+          synchronized (this.field_a) {
+            this.field_a.notifyAll();
+          }
+          try {
+            this.field_g.join();
+          } catch (InterruptedException interruptedException) {
+          }
+          this.field_g = null;
+          if (param0 == 6843) {
+            return;
+          }
+          field_e = (s) null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static void b(byte param0) {
+        rh var1 = (rh) (a.field_f.beginForward(param0 - 3848));
+        if (var1 == null) {
+          ec.a((byte) 27);
+          return;
+        }
+        ia var2 = se.field_p;
+        var2.readInt((byte) -118);
+        var2.readInt((byte) -93);
+        var2.readInt((byte) -104);
+        if (param0 == -57) {
+          var2.readInt((byte) -110);
+          var1.unlink(4);
+          return;
+        }
+    }
+
+    public final void run() {
+        try {
+          InterruptedException interruptedException = null;
+          int var5 = 0;
+          DiskArchiveRequest var7 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          Object var2 = null;
+          Exception var2_ref = null;
+          String var6 = null;
+          var5 = StarCannon.field_A;
+          while (!this.field_c) {
+            var2 = this.field_a;
+            synchronized (var2) {
+              var7 = (DiskArchiveRequest) (this.field_a.c(8));
+              if (var7 != null) {
+                this.field_h = this.field_h - 1;
+                decompiledRegionSelector0 = 1;
+              } else {
+                try {
+                  this.field_a.wait();
+                } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                  decompiledCaughtException = decompiledCaughtParameter0;
+                  interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                }
+                decompiledRegionSelector0 = 0;
+              }
+            }
+            if (decompiledRegionSelector0 == 0) {
+              continue;
+            }
+            try {
+              if (var7.field_v == 2) {
+                var7.field_t.write(-1, var7.field_u.length, var7.field_u, (int)var7.field_j);
+                var7.field_r = false;
+              } else {
+                if (var7.field_v == 3) {
+                  var7.field_u = var7.field_t.read((int)var7.field_j, (byte) 114);
+                  var7.field_r = false;
+                } else {
+                  var7.field_r = false;
+                }
+              }
+            } catch (java.lang.Exception decompiledCaughtParameter1) {
+              decompiledCaughtException = decompiledCaughtParameter1;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var6 = (String) null;
+              hc.a((Throwable) ((Object) var2_ref), (String) null, (byte) 127);
+              var7.field_r = false;
+            }
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    private final void enqueue(int param0, DiskArchiveRequest param1) {
+        synchronized (this.field_a) {
+          this.field_a.a(22197, param1);
+          this.field_h = this.field_h + 1;
+          this.field_a.notifyAll();
+          if (param0 <= 11) {
+            field_b = -1;
+          }
+        }
+    }
+
+    final DiskArchiveRequest requestWrite(byte[] param0, SectorCacheStore param1, boolean param2, int param3) {
+        DiskArchiveRequest var5 = null;
+        RuntimeException var5_ref = null;
+        DiskArchiveRequest stackIn_2_0 = null;
+        boolean stackIn_3_1 = false;
+        DiskArchiveRequest stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5 = new DiskArchiveRequest();
+          var5.field_j = (long)param3;
+          var5.field_u = param0;
+          var5.field_v = 2;
+          var5.field_t = param1;
+          stackIn_2_0 = var5;
+          stackIn_3_1 = (param2);
+          stackIn_2_0.field_o = stackIn_3_1;
+          this.enqueue(77, var5);
+          stackIn_4_0 = var5;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          stackIn_7_0 = var5_ref;
+          stackIn_7_1 = new StringBuilder().append("ef.E(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final DiskArchiveRequest readNow(SectorCacheStore param0, int param1, int param2) {
+        DiskArchiveRequest var4 = null;
+        RuntimeException var4_ref = null;
+        Object var5 = null;
+        DiskArchiveRequest var6 = null;
+        int var8 = 0;
+        DiskArchiveRequest stackIn_8_0 = null;
+        DiskArchiveRequest stackIn_16_0 = null;
+        DiskArchiveRequest stackIn_18_0 = null;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        Throwable decompiledCaughtException = null;
+        var8 = StarCannon.field_A;
+        try {
+          var4 = new DiskArchiveRequest();
+          var4.field_v = 1;
+          var5 = this.field_a;
+          synchronized (var5) {
+            var6 = (DiskArchiveRequest) (this.field_a.a((byte) 122));
+            while (var6 != null) {
+              if ((long)param2 == var6.field_j &&
+                var6.field_t == param0 &&
+                var6.field_v == 2) {
+                var4.field_u = var6.field_u;
+                var4.field_r = false;
+                stackIn_8_0 = var4;
+                return stackIn_8_0;
+              }
+              var6 = (DiskArchiveRequest) (this.field_a.a(-14));
+            }
+          }
+          var4.field_u = param0.read(param2, (byte) 114);
+          if (param1 >= -61) {
+            stackIn_16_0 = (DiskArchiveRequest) null;
+            return stackIn_16_0;
+          }
+          var4.field_o = true;
+          var4.field_r = false;
+          stackIn_18_0 = var4;
+          return stackIn_18_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_21_0 = var4_ref;
+          stackIn_21_1 = new StringBuilder().append("ef.D(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw sd.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    final static void a(String param0, java.applet.Applet param1, int param2) {
+        try {
+          int var3_int = 0;
+          Exception var3 = null;
+          RuntimeException var3_ref = null;
+          java.net.URL var4 = null;
+          RuntimeException stackIn_6_0 = null;
+          StringBuilder stackIn_6_1 = null;
+          String stackIn_7_2 = null;
+          StringBuilder stackIn_9_1 = null;
+          String stackIn_10_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            try {
+              var3_int = -20 / ((param2 - 8) / 58);
+              var4 = new java.net.URL(param1.getCodeBase(), param0);
+              var4 = NodeHashTableIterator.a(127, var4, param1);
+              ag.a(true, var4.toString(), 64, param1);
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var3 = (Exception) (Object) decompiledCaughtException;
+              var3.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_6_0 = var3_ref;
+            stackIn_6_1 = new StringBuilder().append("ef.B(");
+            if (param0 == null) {
+              stackIn_7_2 = "null";
+            } else {
+              stackIn_7_2 = "{...}";
+            }
+            stackIn_9_1 = ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',');
+            if (param1 == null) {
+              stackIn_10_2 = "null";
+            } else {
+              stackIn_10_2 = "{...}";
+            }
+            throw sd.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    DiskCacheWorker(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
+        this.field_a = new jh();
+        this.field_h = 0;
+        this.field_c = false;
+        try {
+          var2 = param0.requestThreadStart(5, 118, (Runnable) (this));
+          while (var2.status == 0) {
+            uc.sleepMillis(-119, 10L);
+          }
+          if (var2.status == 2) {
+            throw new RuntimeException();
+          }
+          this.field_g = (Thread) (var2.result);
+        } catch (RuntimeException runtimeException) {
+          throw sd.wrapClientException((Throwable) ((Object) runtimeException), "ef.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_e = new s(0);
+        field_f = new String[255];
+    }
+}

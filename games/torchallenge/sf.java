@@ -229,7 +229,7 @@ final class sf {
               MusicPatchPcmStream.field_q = -1;
               if (SecondaryNodeDequeIterator.field_d != -1) {
                 var5 = ImageProducerRasterBuffer.field_n[var1_int] ? 1 : 0;
-                lg.a(var5 != 0, (byte) -79, al.field_x[var1_int]);
+                lg.a(var5 != 0, (byte) -79, DiskArchiveRequest.field_x[var1_int]);
                 return;
               }
             }

@@ -26,7 +26,7 @@ final class bj {
           for (var2_int = param0; var2_int < oe.field_c; var2_int++) {
             lf.field_Y[param1 + var2_int] = var2_int;
           }
-          ij.a((byte) 119, mj.field_d, param1 + param1, sd.field_b, param1 + oe.field_c, false, param1);
+          ij.a((byte) 119, mj.field_d, param1 + param1, DiskCacheWorker.field_b, param1 + oe.field_c, false, param1);
           if (oe.field_c > param1) {
             oe.field_c = param1;
           }

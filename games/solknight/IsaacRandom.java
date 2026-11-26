@@ -244,7 +244,7 @@ final class IsaacRandom {
     final static void a(Archive param0, int param1, int param2, PcmStreamMixer param3) {
         try {
           a.field_i = param1 * l.a((byte) 96) / 1000;
-          ae.a(26197, param0);
+          DiskCacheWorker.a(26197, param0);
           pb.a(param0, param2 ^ -89);
           pj.a(param2 + 2, param0);
           ProxySocketConnector.e(param2 ^ param2);

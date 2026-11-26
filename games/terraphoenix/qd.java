@@ -61,7 +61,7 @@ final class qd extends IntrusiveNode {
           return;
         }
         if (GameApplet.field_g[param1] != null) {
-          WidgetContainer.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
+          WidgetContainer.field_E.a(GameApplet.field_g[param1], 100, SectorCacheStore.field_e * pe.field_f[param1] / 128);
         }
     }
 
@@ -730,7 +730,7 @@ final class qd extends IntrusiveNode {
           return;
         }
         if (GameApplet.field_g[param1] != null) {
-          WidgetContainer.field_E.a(GameApplet.field_g[param1], 100, ua.field_e * pe.field_f[param1] / 128);
+          WidgetContainer.field_E.a(GameApplet.field_g[param1], 100, SectorCacheStore.field_e * pe.field_f[param1] / 128);
         }
     }
 }

@@ -51,7 +51,7 @@ final class lp extends TextureOperator {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (ia.field_C == de.field_f) {
+          if (NetworkArchiveRequest.field_C == de.field_f) {
             stackIn_9_0 = !(wq.field_H);
             wq.field_H = stackIn_9_0;
           }

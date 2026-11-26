@@ -442,14 +442,14 @@ abstract class fi extends UiWidget implements pb {
           return false;
         }
         int var3 = 1 << param2;
-        if (param0 != (var3 & rh.unlockedAchievementMask)) {
+        if (param0 != (var3 & ArchiveRequest.unlockedAchievementMask)) {
           return false;
         }
-        rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
+        ArchiveRequest.unlockedAchievementMask = ArchiveRequest.unlockedAchievementMask | var3;
         hc.field_u = hc.field_u | var3;
         CrossfadingMidiPcmStream.field_u.addLast(new AchievementUnlockEvent(param2), -99);
         if (IntrusiveDeque.b((byte) 78)) {
-          rh.unlockedAchievementMask = rh.unlockedAchievementMask | var3;
+          ArchiveRequest.unlockedAchievementMask = ArchiveRequest.unlockedAchievementMask | var3;
         }
         if (dk.field_b) {
           return true;

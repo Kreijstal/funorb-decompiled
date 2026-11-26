@@ -27,7 +27,7 @@ final class vd {
             if (ua.field_i.c(-107)) {
               var1_int = 1;
             }
-            if (gi.field_f != 13) {
+            if (SectorCacheStore.field_f != 13) {
               continue;
             }
             var2 = 1;
@@ -115,7 +115,7 @@ final class vd {
           if (param1 != -128) {
             field_c = (String) null;
           }
-          for (var2_intLifetime1 = 0; gi.field_g > var2_intLifetime1; var2_intLifetime1++) {
+          for (var2_intLifetime1 = 0; SectorCacheStore.field_g > var2_intLifetime1; var2_intLifetime1++) {
             if (IterableNodeHashTable.field_d[var2_intLifetime1].field_p == param0.field_p) {
               dupTemp$3 = IterableNodeHashTable.field_d[var2_intLifetime1].a((byte) 95);
               cg.field_d[dupTemp$3] = cg.field_d[dupTemp$3] + 1;
@@ -124,7 +124,7 @@ final class vd {
           dupTemp$0 = param0.a((byte) 90);
           cg.field_d[dupTemp$0] = cg.field_d[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; var3 < gi.field_g; var3++) {
+          for (var3 = 0; var3 < SectorCacheStore.field_g; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_p == IterableNodeHashTable.field_d[var3].field_p) {
               var4 = IterableNodeHashTable.field_d[var3].a((byte) 105);
@@ -139,9 +139,9 @@ final class vd {
               IterableNodeHashTable.field_d[incrementValue$2] = IterableNodeHashTable.field_d[var3];
             }
           }
-          gi.field_g = var2_intLifetime2;
-          fieldTemp$1 = gi.field_g;
-          gi.field_g = gi.field_g + 1;
+          SectorCacheStore.field_g = var2_intLifetime2;
+          fieldTemp$1 = SectorCacheStore.field_g;
+          SectorCacheStore.field_g = SectorCacheStore.field_g + 1;
           IterableNodeHashTable.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

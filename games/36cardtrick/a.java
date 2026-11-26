@@ -52,9 +52,9 @@ final class a extends ch {
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
           int var2_int = 0;
-          na var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
-          na var3 = null;
+          NetworkArchiveRequest var3 = null;
           int var3_int = 0;
           Exception var3_ref = null;
           int var4 = 0;
@@ -68,7 +68,7 @@ final class a extends ch {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          na var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var2_intLifetime1;
@@ -103,23 +103,23 @@ final class a extends ch {
           try {
             this.field_m.checkWriteError((byte) -44);
             var2_int = -9 / ((-82 - param0) / 34);
-            var3 = (na) (this.field_g.c((byte) -112));
+            var3 = (NetworkArchiveRequest) (this.field_g.c((byte) -112));
             while (var3 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(-9469, 1);
               this.field_c.writeLong40(var3.field_j, 101);
               this.field_m.queueWrite(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
               this.field_h.a((byte) -90, var3);
-              var3 = (na) (this.field_g.b((byte) -122));
+              var3 = (NetworkArchiveRequest) (this.field_g.b((byte) -122));
             }
-            var2 = (na) (this.field_a.c((byte) -107));
+            var2 = (NetworkArchiveRequest) (this.field_a.c((byte) -107));
             while (var2 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(-9469, 0);
               this.field_c.writeLong40(var2.field_j, 100);
               this.field_m.queueWrite(0, (byte) -89, this.field_c.payload.length, this.field_c.payload);
               this.field_e.a((byte) -96, var2);
-              var2 = (na) (this.field_a.b((byte) -122));
+              var2 = (NetworkArchiveRequest) (this.field_a.b((byte) -122));
             }
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 100; var2_intLifetime1++) {
               var3_int = this.field_m.availableBytes(-125);
@@ -199,24 +199,24 @@ final class a extends ch {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (na) (this.field_e.c((byte) -109));
+                        var14_ref = (NetworkArchiveRequest) (this.field_e.c((byte) -109));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_j) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (na) (this.field_e.b((byte) -122));
+                          var14_ref = (NetworkArchiveRequest) (this.field_e.b((byte) -122));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (na) (this.field_h.c((byte) -128));
+                        var14_ref = (NetworkArchiveRequest) (this.field_h.c((byte) -128));
                         while (var14_ref != null) {
                           if (~var14_ref.field_j == ~var12) {
                             break;
                           }
-                          var14_ref = (na) (this.field_h.b((byte) -122));
+                          var14_ref = (NetworkArchiveRequest) (this.field_h.b((byte) -122));
                         }
                       }
                       if (var14_ref == null) {
@@ -298,12 +298,12 @@ final class a extends ch {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          na var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          na var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Main.field_T;
           try {
             if (param2) {
@@ -324,7 +324,7 @@ final class a extends ch {
             this.field_i.position = 0;
             this.field_j = null;
             while (true) {
-              var4_ref = (na) (this.field_h.a(-99));
+              var4_ref = (NetworkArchiveRequest) (this.field_h.a(-99));
               if (var4_ref != null) {
                 this.field_g.a((byte) -124, var4_ref);
                 continue;
@@ -332,7 +332,7 @@ final class a extends ch {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (na) (this.field_e.a(121));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_e.a(121));
               if (var4_refLifetime1 != null) {
                 this.field_a.a((byte) -120, var4_refLifetime1);
                 continue;

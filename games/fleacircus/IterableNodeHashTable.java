@@ -76,7 +76,7 @@ final class IterableNodeHashTable implements Iterable {
           }
           return;
         }
-        if (!qh.c((byte) 71)) {
+        if (!DiskArchiveRequest.c((byte) 71)) {
           var2Lifetime1 = 1;
           if (param1 != -74) {
             return;

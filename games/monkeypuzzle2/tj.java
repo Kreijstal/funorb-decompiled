@@ -80,7 +80,7 @@ final class tj {
 
     final static void a(byte param0) {
         ud.field_e = null;
-        uj.field_c = null;
+        DiskCacheWorker.field_c = null;
         re.field_a = null;
         wi.field_b = null;
         wd.field_g = false;

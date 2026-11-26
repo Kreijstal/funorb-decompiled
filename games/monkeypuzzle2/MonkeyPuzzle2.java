@@ -93,7 +93,7 @@ public final class MonkeyPuzzle2 extends bi {
           kk.clearStaticReferences((byte) -104);
           hj.c(1903697041);
           wl.clearStaticReferences((byte) 126);
-          uj.resetStaticState(10);
+          DiskCacheWorker.resetStaticState(10);
           c.clearStaticReferences(true);
           ch.clearStaticReferences((byte) -73);
           BufferedSocket.clearStaticReferences(1);
@@ -162,11 +162,11 @@ public final class MonkeyPuzzle2 extends bi {
           DelegatingCanvas.clearStaticReferences(-101);
           ec.clearStaticReferences((byte) 123);
           ol.clearStaticReferences(120);
-          ob.clearDeclaredStaticReferences(8364);
-          gf.clearStaticReferences(-4435);
-          si.b((byte) 20);
+          NetworkArchiveRequest.clearDeclaredStaticReferences(8364);
+          SectorCacheStore.clearStaticReferences(-4435);
+          DiskArchiveRequest.b((byte) 20);
           ca.clearStaticReferences(-1);
-          fb.clearStaticReferences((byte) -61);
+          ArchiveRequest.clearStaticReferences((byte) -61);
           cg.resetStaticState((byte) -115);
           tl.clearStaticReferences((byte) -17);
           s.releaseDeclaredStaticReferences(7993);
@@ -723,7 +723,7 @@ public final class MonkeyPuzzle2 extends bi {
                       }
                     }
                     if (decompiledFrameRemainder0) {
-                      ad.a(tk.a(ha.field_fb, "", ek.field_e, 1, uj.field_b), param0 - 24155, 51.0f);
+                      ad.a(tk.a(ha.field_fb, "", ek.field_e, 1, DiskCacheWorker.field_b), param0 - 24155, 51.0f);
                       return false;
                     }
                   }

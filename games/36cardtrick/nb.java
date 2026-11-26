@@ -58,7 +58,7 @@ final class nb implements ci {
             } else {
               var10 = var10 + (param1.field_q - var8);
             }
-            na.a(2 + var10, 51, 4 + var7, var8, var9 - 2);
+            NetworkArchiveRequest.a(2 + var10, 51, 4 + var7, var8, var9 - 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

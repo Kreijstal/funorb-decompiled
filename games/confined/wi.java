@@ -51,10 +51,10 @@ final class wi {
           if (param1 >= -39) {
             wi.a(41, 111);
           }
-          var4 = (sf) (sm.field_y.beginForward(-128));
+          var4 = (sf) (DiskArchiveRequest.field_y.beginForward(-128));
           while (var4 != null) {
             nh.a(var4, 0, param0);
-            var4 = (sf) (sm.field_y.nextForward(2123));
+            var4 = (sf) (DiskArchiveRequest.field_y.nextForward(2123));
           }
           var2 = ra.field_d.beginForward(107);
           while (var2 != null) {

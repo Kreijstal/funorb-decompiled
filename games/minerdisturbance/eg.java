@@ -128,7 +128,7 @@ class eg implements ad, cf {
             if (jl.field_fb.field_k != null) {
               fe.field_z = new me(jl.field_fb.field_k, 5200, 0);
               jl.field_fb.field_k = null;
-              var6 = new uh(255, fe.field_z, new me(jl.field_fb.field_f, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, fe.field_z, new me(jl.field_fb.field_f, 12000, 0), 2097152);
             }
             var7 = null;
             var8 = -4 / ((param0 - 18) / 41);
@@ -140,9 +140,9 @@ class eg implements ad, cf {
                 aa.field_h[param1] = new me(jl.field_fb.field_e[param1], 12000, 0);
                 jl.field_fb.field_e[param1] = null;
               }
-              var7 = new uh(param1, fe.field_z, aa.field_h[param1], 2097152);
+              var7 = new SectorCacheStore(param1, fe.field_z, aa.field_h[param1], 2097152);
             }
-            var9 = ke.field_U.a(param1, (uh) (var7), param2, 0, (uh) (var6));
+            var9 = ke.field_U.a(param1, (SectorCacheStore) (var7), param2, 0, (SectorCacheStore) (var6));
             if (param3) {
               var9.b(-37);
             }

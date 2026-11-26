@@ -636,7 +636,7 @@ final class GameplayScreen {
                   UiPanel.field_eb[pn.field_O]) {
                   var5 = var5 | lp.field_B[(5 + var6) % 4];
                 }
-                if (UiPanel.field_eb[t.field_g] ||
+                if (UiPanel.field_eb[DiskCacheWorker.field_g] ||
                   UiPanel.field_eb[ii.field_E]) {
                   var5 = var5 | lp.field_B[(var6 + 3) % 4];
                 }
@@ -655,7 +655,7 @@ final class GameplayScreen {
                 UiPanel.field_eb[pn.field_O]) {
                 var5 = var5 | lp.field_B[(5 + var6) % 4];
               }
-              if (UiPanel.field_eb[t.field_g] ||
+              if (UiPanel.field_eb[DiskCacheWorker.field_g] ||
                 UiPanel.field_eb[ii.field_E]) {
                 var5 = var5 | lp.field_B[(var6 + 3) % 4];
               }
@@ -2073,12 +2073,12 @@ final class GameplayScreen {
           gi.field_u = 8768;
           df.field_k = 2127;
           ca.field_g = 1220;
-          var9_int = t.field_l;
-          t.field_l = 0;
+          var9_int = DiskCacheWorker.field_l;
+          DiskCacheWorker.field_l = 0;
           var10 = var9_int;
           var11 = ProxyAuthenticationRequiredException.field_f % 4;
-          var12 = (-t.field_l + var10) * 4;
-          t.field_l = var10;
+          var12 = (-DiskCacheWorker.field_l + var10) * 4;
+          DiskCacheWorker.field_l = var10;
           switch (var11) {
             case 1:
               var13 = var12 / 3;

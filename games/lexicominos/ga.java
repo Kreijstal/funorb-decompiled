@@ -63,8 +63,8 @@ final class ga {
             }
           } else {
             var3_int = 0;
-            if (dl.field_b) {
-              dl.field_b = false;
+            if (SectorCacheStore.field_b) {
+              SectorCacheStore.field_b = false;
               var3_int = 1;
             }
             hd.a(ImageProducerRasterBuffer.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
@@ -135,8 +135,8 @@ final class ga {
             }
           } else {
             var3_int = 0;
-            if (dl.field_b) {
-              dl.field_b = false;
+            if (SectorCacheStore.field_b) {
+              SectorCacheStore.field_b = false;
               var3_int = 1;
             }
             hd.a(ImageProducerRasterBuffer.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);

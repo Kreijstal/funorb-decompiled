@@ -13,7 +13,7 @@ final class ha extends um {
     static String[] field_l;
 
     final static void d(int param0) {
-        vf.field_w = 620;
+        ArchiveRequest.field_w = 620;
         qc.field_w = 240;
         kn.field_g = true;
         SecondaryNodeDequeIterator.field_l = null;

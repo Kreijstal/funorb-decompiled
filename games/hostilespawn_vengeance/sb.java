@@ -15,7 +15,7 @@ final class sb {
         try {
           var1 = ByteStorage.field_c;
           synchronized (var1) {
-            ae.field_s = ae.field_s + 1;
+            ArchiveRequest.field_s = ArchiveRequest.field_s + 1;
             ee.field_e = PcmResampler.field_j;
             if (uc.field_b < 0) {
               for (var2 = 0; var2 < 112; var2++) {

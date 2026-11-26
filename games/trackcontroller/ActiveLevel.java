@@ -1340,7 +1340,7 @@ final class ActiveLevel extends LevelGrid {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (sd.a(param1, (byte) 89)) {
+          if (DiskCacheWorker.a(param1, (byte) 89)) {
             return false;
           }
           if (ba.a(param1, false)) {
@@ -1733,7 +1733,7 @@ final class ActiveLevel extends LevelGrid {
         if (!jj.s(51) &&
           rk.field_bb == null) {
           SpriteState.field_w = null;
-          rk.field_bb = sd.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.score}, this.field_E);
+          rk.field_bb = DiskCacheWorker.a(this.field_cb, 3, 65525, 10, true, this.field_R, this.field_bb, new int[]{this.score}, this.field_E);
           return;
         }
     }

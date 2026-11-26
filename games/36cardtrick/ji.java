@@ -59,9 +59,9 @@ final class ji {
         int var17 = 0;
         int var18 = 0;
         try {
-          ab.field_p = new cf(param1);
+          DiskArchiveRequest.field_p = new cf(param1);
           jb.b();
-          jb.a(ab.field_p);
+          jb.a(DiskArchiveRequest.field_p);
           jb.b(1.0f);
           var19 = new bb(16, 8, 4);
           var3 = ml.a(var19, 0, 0, 0, (byte) -72);

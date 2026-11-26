@@ -55,7 +55,7 @@ final class nd {
               }
             } else {
               SoftwareRasterizer.clearRaster();
-              cd.a(320, false, 240);
+              NetworkArchiveRequest.a(320, false, 240);
               kg.a(0, (byte) -83, 0, param1);
             }
           }

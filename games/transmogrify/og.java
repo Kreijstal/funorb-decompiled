@@ -20,7 +20,7 @@ final class og {
 
     final static int a(int param0, int param1) {
         int var3 = Transmogrify.field_A ? 1 : 0;
-        cl.field_A = 0;
+        DiskArchiveRequest.field_A = 0;
         re.field_y = null;
         wj.field_j = null;
         int var2 = c.field_b;

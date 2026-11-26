@@ -24,7 +24,7 @@ final class ok {
           }
           if (0 != param1.field_a ||
             0 != param1.field_i) {
-            for (var3 = 0; var3 < gi.field_g; var3++) {
+            for (var3 = 0; var3 < SectorCacheStore.field_g; var3++) {
               var4 = IterableNodeHashTable.field_d[var3];
               if (var4.field_p == 2 &&
                 var4.field_a == param1.field_a &&

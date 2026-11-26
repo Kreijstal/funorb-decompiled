@@ -122,7 +122,7 @@ final class hc {
             }
             var3 = "";
             if (param0 != null) {
-              var3 = uf.a(param0, -17490);
+              var3 = SectorCacheStore.a(param0, -17490);
             }
             if (param1 != null) {
               if (param0 != null) {

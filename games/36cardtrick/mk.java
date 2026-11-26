@@ -98,7 +98,7 @@ final class mk extends cg {
             stackIn_23_0 = qi.field_F;
             return stackIn_23_0;
           }
-          if (la.a(var6, (byte) -115, var5)) {
+          if (ArchiveRequest.a(var6, (byte) -115, var5)) {
             stackIn_27_0 = i.field_b;
             return stackIn_27_0;
           }

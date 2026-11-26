@@ -38,7 +38,7 @@ final class DirectByteStorage extends ByteStorage {
         try {
           if (qa.field_a.b(false) &&
             !param0.equals(qa.field_a.a((byte) 2))) {
-            qa.field_a = uf.a(param0, 17);
+            qa.field_a = SectorCacheStore.a(param0, 17);
           }
           if (param1 == -51) {
             stackIn_7_0 = qa.field_a;

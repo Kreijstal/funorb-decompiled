@@ -31,7 +31,7 @@ final class PcmResampler {
             return stackIn_3_0;
           }
           while (fd.d(1)) {
-            jl.field_I.a(lf.field_c, ua.field_g, (byte) -121);
+            jl.field_I.a(lf.field_c, SectorCacheStore.field_g, (byte) -121);
           }
           if (ga.field_c != -1) {
             var1_int = ga.field_c;
@@ -43,7 +43,7 @@ final class PcmResampler {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (pe.field_a == ua.field_d) {
+          if (pe.field_a == SectorCacheStore.field_d) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
@@ -51,7 +51,7 @@ final class PcmResampler {
             stackIn_19_0 = 1;
             return stackIn_19_0;
           }
-          if (ua.field_d != IsaacCipher.field_f) {
+          if (SectorCacheStore.field_d != IsaacCipher.field_f) {
             return -1;
           }
           stackIn_23_0 = 2;

@@ -59,8 +59,8 @@ final class ti {
         ig.field_k = param1;
         la.field_b = rd.field_F;
         k.field_L = 0;
-        lb.field_w = new ql(2);
-        lb.field_w.a(-1, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), param0, -76);
+        ArchiveRequest.field_w = new ql(2);
+        ArchiveRequest.field_w.a(-1, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), param0, -76);
     }
 
     final static boolean a(lh param0, boolean param1) {

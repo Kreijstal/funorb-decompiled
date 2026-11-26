@@ -51,7 +51,7 @@ final class rj extends fc {
           }
           if (param6 == 1) {
             this.field_L = -this.field_v + param0 - param1;
-            rh.field_D = this;
+            DiskArchiveRequest.field_D = this;
             this.field_I = -param2 + (param3 - this.field_m);
           }
           this.field_r = param6;

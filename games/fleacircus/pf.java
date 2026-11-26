@@ -371,8 +371,8 @@ final class pf {
             }
           }
           ProxyAuthenticationRequiredException.field_d = bk.field_a.field_m * (id.field_c + ge.field_h << 1);
-          bm.field_K = af.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
-          MidiPcmStream.field_M = -(var3_intLifetime1 >> 1) + af.field_b;
+          bm.field_K = DiskCacheWorker.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
+          MidiPcmStream.field_M = -(var3_intLifetime1 >> 1) + DiskCacheWorker.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < fb.field_d.length; var4Lifetime2++) {
             stackIn_115_0 = ProxyAuthenticationRequiredException.field_d;
             if (0 > m.field_c[var4Lifetime2]) {
@@ -391,7 +391,7 @@ final class pf {
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = se.a(3, fb.field_d[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + id.field_c;
-              var8Lifetime1 = af.field_b - (var7Lifetime2 >> 1);
+              var8Lifetime1 = DiskCacheWorker.field_b - (var7Lifetime2 >> 1);
               vh.field_j[var4Lifetime3] = new int[4];
               vh.field_j[var4Lifetime3][0] = -AccountRequestState.field_c + var8Lifetime1;
               vh.field_j[var4Lifetime3][1] = var5Lifetime3;

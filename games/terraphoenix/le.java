@@ -13,14 +13,14 @@ final class le extends di {
     static IndexedSprite field_p;
 
     final static String a(boolean param0) {
-        if (IsaacCipher.field_f == ua.field_d) {
+        if (IsaacCipher.field_f == SectorCacheStore.field_d) {
           return cg.field_H;
         }
         if (param0) {
           field_m = (String) null;
-          return nh.field_D;
+          return NetworkArchiveRequest.field_D;
         }
-        return nh.field_D;
+        return NetworkArchiveRequest.field_D;
     }
 
     final im b(String param0, int param1) {
@@ -298,7 +298,7 @@ final class le extends di {
             hk.a(ae.field_G, (byte) 6);
           }
           ab.a((byte) -128);
-          rf.d((byte) 93);
+          ArchiveRequest.d((byte) 93);
           lf.a(param0);
           if (od.b(255)) {
             di.field_l.k(-17410, 1);
@@ -314,7 +314,7 @@ final class le extends di {
           hk.a(ae.field_G, (byte) 6);
         }
         ab.a((byte) -128);
-        rf.d((byte) 93);
+        ArchiveRequest.d((byte) 93);
         lf.a(param0);
         if (!od.b(255)) {
           WidgetContainer.g(-17464);

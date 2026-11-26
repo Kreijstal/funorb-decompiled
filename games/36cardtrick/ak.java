@@ -169,7 +169,7 @@ final class ak extends g implements pi, qh {
             var8 = ja.field_d;
           } else {
             if (oj.field_e == var9) {
-              var8 = ab.field_q;
+              var8 = DiskArchiveRequest.field_q;
             }
           }
           dupTemp$0 = new ck(10, this.field_i, this.field_h - 20, 25, this.field_J, false, 80, 3, var7, 16777215, var8);

@@ -11,7 +11,7 @@ final class pe {
 
     final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, PlatformTaskDispatcher param7, int param8) {
         try {
-          rf.field_v = param0;
+          ArchiveRequest.field_v = param0;
           mc.field_b = param7;
           ml.field_s = param3;
           ng.field_y = param2;
@@ -23,7 +23,7 @@ final class pe {
             field_d = (long[]) null;
           }
           jg.field_kb = (h) ((Object) new kg());
-          GzipDecompressor.field_c = new wh(param7);
+          GzipDecompressor.field_c = new DiskCacheWorker(param7);
           i.field_a = new qi(jg.field_kb, GzipDecompressor.field_c);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "pe.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');

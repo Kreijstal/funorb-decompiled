@@ -354,7 +354,7 @@ final class fc {
           ((fa) (Object) stackIn_106_0).c(stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_110_4, -1);
           var11Lifetime2 = 100 % ((param0 - 66) / 60);
           var10 = db.a(pk.field_G, new String[]{wj.field_c[fleas.field_E][var1_int]}, true);
-          var12 = db.a(fb.field_f, new String[]{Integer.toString(qh.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
+          var12 = db.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
           var13 = db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
           var14 = db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);
           var15 = db.a(pd.field_i, new String[]{Integer.toString(j.field_f ^ wi.field_p.field_b)}, true);
@@ -401,7 +401,7 @@ final class fc {
             var23 = (int)(ma.a((double)PacketBuffer.field_j / 25.0, 116) * 64.0 + 64.0);
             var24_int = (int)(64.0 + nb.a((double)PacketBuffer.field_j / 25.0, -128) * 64.0);
             SoftwareRasterizer.addRectangleVerticalGradient(4 + lk.field_D.field_l, lk.field_D.field_a + 1, lk.field_D.field_n - 7, lk.field_D.field_d - 2, 65793 * var23, var24_int * 65793);
-            if (qh.field_z == 0) {
+            if (DiskArchiveRequest.field_z == 0) {
               SoftwareRasterizer.saveClip(si.field_R);
               SoftwareRasterizer.setClip(0, 0, 640, 336);
               var25 = pg.field_f;

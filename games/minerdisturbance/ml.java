@@ -1511,7 +1511,7 @@ final class ml {
           SoftwareRasterizer.drawHorizontalLine(var10 + var17Lifetime1, var11 + 30, 144, 1);
           SoftwareRasterizer.fillRectangle(var17Lifetime1 + var10, 23 + var11, 144, 7, var15Lifetime3);
           SoftwareRasterizer.drawHorizontalLine(var17Lifetime1 + var10, 22 + var11, 144, 1);
-          var18Lifetime1 = -2 + var17Lifetime1 + (var10 + ee.field_J * 144 / 256);
+          var18Lifetime1 = -2 + var17Lifetime1 + (var10 + NetworkArchiveRequest.field_J * 144 / 256);
           SoftwareRasterizer.drawRectangleOutline(var18Lifetime1 - 1, 18 + var11, 6, 18, 1);
           SoftwareRasterizer.fillRectangle(var18Lifetime1, var11 + 19, 4, 16, var15Lifetime3);
         }

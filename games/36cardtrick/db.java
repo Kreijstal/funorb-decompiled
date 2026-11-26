@@ -133,7 +133,7 @@ final class db implements ci {
           hb.field_a = new int[cf.field_c];
           kb.field_c = new int[cf.field_c];
           rd.field_k = new byte[cf.field_c][];
-          na.field_q = new int[cf.field_c];
+          NetworkArchiveRequest.field_q = new int[cf.field_c];
           ml.field_b = new int[cf.field_c];
           hl.field_y = new boolean[cf.field_c];
           vd.field_r = new byte[cf.field_c][];
@@ -152,7 +152,7 @@ final class db implements ci {
             ml.field_b[var4Lifetime1] = var18.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime2 = 0; cf.field_c > var4Lifetime2; var4Lifetime2++) {
-            na.field_q[var4Lifetime2] = var18.readUnsignedShort((byte) 72);
+            NetworkArchiveRequest.field_q[var4Lifetime2] = var18.readUnsignedShort((byte) 72);
           }
           for (var4Lifetime3 = 0; cf.field_c > var4Lifetime3; var4Lifetime3++) {
             hb.field_a[var4Lifetime3] = var18.readUnsignedShort((byte) 72);
@@ -168,7 +168,7 @@ final class db implements ci {
           var18.position = 0;
           for (var4Lifetime5 = 0; cf.field_c > var4Lifetime5; var4Lifetime5++) {
             regionExit1: {
-              var5 = na.field_q[var4Lifetime5];
+              var5 = NetworkArchiveRequest.field_q[var4Lifetime5];
               var6 = hb.field_a[var4Lifetime5];
               var7 = var5 * var6;
               var21 = new byte[var7];

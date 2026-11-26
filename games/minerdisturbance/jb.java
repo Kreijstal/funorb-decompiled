@@ -64,7 +64,7 @@ final class jb extends IntrusiveNode {
           }
           var8 = 0;
           for (var9 = 33; var9 >= 0; var9--) {
-            stackIn_12_0 = (!nm.a(var9, var30, -827843803)) ? 0 : 1;
+            stackIn_12_0 = (!DiskCacheWorker.a(var9, var30, -827843803)) ? 0 : 1;
             var10 = stackIn_12_0;
             if (var10 != 0 ||
               !param0 &&
@@ -95,7 +95,7 @@ final class jb extends IntrusiveNode {
           var17 = 0;
           for (var18 = 0; CipherPacketBuffer.field_A.length > var18; var18++) {
             boolean decompiledFrameRemainder0 = true;
-            if (nm.a(var18, var33, -827843803)) {
+            if (DiskCacheWorker.a(var18, var33, -827843803)) {
               nj.field_c[var18].drawQuarterSize(var12, var13);
             } else {
               decompiledFrameRemainder0 = !(param0);
@@ -162,7 +162,7 @@ final class jb extends IntrusiveNode {
             ce.field_d.b(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
             var20 = ce.field_d.field_G + 3;
             var21 = 30 + (278 - var11);
-            var22 = nm.a(var15, var33, -827843803) ? 1 : 0;
+            var22 = DiskCacheWorker.a(var15, var33, -827843803) ? 1 : 0;
             if (var22 == 0) {
               ha.field_c.f(30 + var19, var21 + 7);
               var21 += 30;
@@ -198,24 +198,24 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -119, en.field_a[var15], new String[]{ab.a(0, kb.field_c, true, (long)a.field_c, true)});
                 }
                 if (var15 == 4) {
-                  var25_ref = oa.a((byte) -73, en.field_a[var15], new String[]{"" + nm.field_g[0]});
+                  var25_ref = oa.a((byte) -73, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[0]});
                 }
                 if (5 == var15) {
-                  var25_ref = oa.a((byte) -95, en.field_a[var15], new String[]{"" + nm.field_g[1]});
+                  var25_ref = oa.a((byte) -95, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[1]});
                 }
                 if (var15 == 6) {
-                  var25_ref = oa.a((byte) -84, en.field_a[var15], new String[]{"" + nm.field_g[2]});
+                  var25_ref = oa.a((byte) -84, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[2]});
                 }
                 if (var15 == 7) {
-                  var25_ref = oa.a((byte) -77, en.field_a[var15], new String[]{"" + nm.field_g[3]});
+                  var25_ref = oa.a((byte) -77, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[3]});
                 }
                 if (8 == var15 ||
                   13 == var15) {
-                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{"" + nm.field_g[4]});
+                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[4]});
                 }
                 if (var16 != 0 &&
                   var15 == 18) {
-                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + nm.field_g[5]});
+                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[5]});
                 }
                 if (var15 == 9) {
                   var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + qf.field_p});
@@ -351,7 +351,7 @@ final class jb extends IntrusiveNode {
           }
           var8 = 0;
           for (var9 = 33; var9 >= 0; var9--) {
-            stackIn_12_0 = (!nm.a(var9, var30, -827843803)) ? 0 : 1;
+            stackIn_12_0 = (!DiskCacheWorker.a(var9, var30, -827843803)) ? 0 : 1;
             var10 = stackIn_12_0;
             if (var10 != 0 ||
               !param0 &&
@@ -382,7 +382,7 @@ final class jb extends IntrusiveNode {
           var17 = 0;
           for (var18 = 0; CipherPacketBuffer.field_A.length > var18; var18++) {
             boolean decompiledFrameRemainder0 = true;
-            if (nm.a(var18, var33, -827843803)) {
+            if (DiskCacheWorker.a(var18, var33, -827843803)) {
               nj.field_c[var18].drawQuarterSize(var12, var13);
             } else {
               decompiledFrameRemainder0 = !(param0);
@@ -449,7 +449,7 @@ final class jb extends IntrusiveNode {
             ce.field_d.b(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
             var20 = ce.field_d.field_G + 3;
             var21 = 30 + (278 - var11);
-            var22 = nm.a(var15, var33, -827843803) ? 1 : 0;
+            var22 = DiskCacheWorker.a(var15, var33, -827843803) ? 1 : 0;
             if (var22 == 0) {
               ha.field_c.f(30 + var19, var21 + 7);
               var21 += 30;
@@ -485,24 +485,24 @@ final class jb extends IntrusiveNode {
                   var25_ref = oa.a((byte) -119, en.field_a[var15], new String[]{ab.a(0, kb.field_c, true, (long)a.field_c, true)});
                 }
                 if (var15 == 4) {
-                  var25_ref = oa.a((byte) -73, en.field_a[var15], new String[]{"" + nm.field_g[0]});
+                  var25_ref = oa.a((byte) -73, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[0]});
                 }
                 if (5 == var15) {
-                  var25_ref = oa.a((byte) -95, en.field_a[var15], new String[]{"" + nm.field_g[1]});
+                  var25_ref = oa.a((byte) -95, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[1]});
                 }
                 if (var15 == 6) {
-                  var25_ref = oa.a((byte) -84, en.field_a[var15], new String[]{"" + nm.field_g[2]});
+                  var25_ref = oa.a((byte) -84, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[2]});
                 }
                 if (var15 == 7) {
-                  var25_ref = oa.a((byte) -77, en.field_a[var15], new String[]{"" + nm.field_g[3]});
+                  var25_ref = oa.a((byte) -77, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[3]});
                 }
                 if (8 == var15 ||
                   13 == var15) {
-                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{"" + nm.field_g[4]});
+                  var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[4]});
                 }
                 if (var16 != 0 &&
                   var15 == 18) {
-                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + nm.field_g[5]});
+                  var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + DiskCacheWorker.field_g[5]});
                 }
                 if (var15 == 9) {
                   var25_ref = oa.a((byte) -113, en.field_a[var15], new String[]{"" + qf.field_p});

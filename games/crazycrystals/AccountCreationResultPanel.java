@@ -79,7 +79,7 @@ final class AccountCreationResultPanel extends na implements vd {
           int var2 = 110 % ((param0 - 27) / 50);
           sm.field_e = we.field_h;
           ll.a(-84, true, true);
-          ld.field_y = 0;
+          NetworkArchiveRequest.field_y = 0;
           ue.field_c = true;
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "sa.T(" + param0 + ')');

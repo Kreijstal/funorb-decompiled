@@ -20,10 +20,10 @@ final class hk {
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           var4 = -1;
-          if (sh.field_r == 0) {
+          if (ArchiveRequest.field_r == 0) {
             return;
           }
-          db.g(-56);
+          NetworkArchiveRequest.g(-56);
           for (var5 = 0; var5 < 2; var5++) {
             if (fk.field_u[var5] > 0) {
               fk.field_u[var5] = fk.field_u[var5] - 1;

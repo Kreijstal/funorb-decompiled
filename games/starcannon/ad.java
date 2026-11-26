@@ -101,7 +101,7 @@ final class ad extends kf {
           }
           var2 = -107 % ((11 - param0) / 48);
           lb.field_B = pe.field_e[wg.field_b];
-          StarCannon.field_E = ik.field_s[wg.field_b];
+          StarCannon.field_E = ArchiveRequest.field_s[wg.field_b];
           wg.field_b = 127 & wg.field_b + 1;
           stackIn_6_0 = true;
         }
@@ -284,12 +284,12 @@ final class ad extends kf {
             if (45 == var4) {
               if (var3 == 0 ||
                 -1 + var2_int == var3) {
-                stackIn_19_0 = ra.field_t;
+                stackIn_19_0 = NetworkArchiveRequest.field_t;
                 return stackIn_19_0;
               }
             } else {
               if (sg.field_o.indexOf(var4) == -1) {
-                stackIn_22_0 = ra.field_t;
+                stackIn_22_0 = NetworkArchiveRequest.field_t;
                 return stackIn_22_0;
               }
             }

@@ -21,10 +21,10 @@ class ko extends DualLinkNode {
             oj.a(param1, var4, true);
             var4 = (mm) (m.field_a.nextBackward(4));
           }
-          var5 = (kj) (cc.field_i.beginBackward(-24172));
+          var5 = (kj) (DiskCacheWorker.field_i.beginBackward(-24172));
           while (var5 != null) {
             ta.a((byte) 11, param1, var5);
-            var5 = (kj) (cc.field_i.nextBackward(4));
+            var5 = (kj) (DiskCacheWorker.field_i.nextBackward(4));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

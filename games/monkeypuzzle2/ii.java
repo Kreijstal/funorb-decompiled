@@ -58,7 +58,7 @@ class ii extends vb {
           rb.field_eb = param3;
           mk.field_f = param6;
           lg.field_n = (wl) ((Object) new fa());
-          jc.field_c = new uj(param0);
+          jc.field_c = new DiskCacheWorker(param0);
           if (param8 != -2045) {
             ii.clearStaticReferences((byte) 62);
           }

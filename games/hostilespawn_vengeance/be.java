@@ -44,7 +44,7 @@ final class be {
                 return;
               }
               if (!this.field_c &&
-                !um.field_d) {
+                !SectorCacheStore.field_d) {
                 return;
               }
               decompiledFrameRemainder0 = false;
@@ -58,7 +58,7 @@ final class be {
               return;
             }
             if (!this.field_c &&
-              !um.field_d) {
+              !SectorCacheStore.field_d) {
               return;
             }
           }
@@ -98,7 +98,7 @@ final class be {
           }
           if (this.field_h == 0) {
             if (!this.field_c &&
-              !um.field_d) {
+              !SectorCacheStore.field_d) {
               return;
             }
             if (0 > param1) {
@@ -124,7 +124,7 @@ final class be {
           }
           if (this.field_h == 0) {
             if (!this.field_c &&
-              !um.field_d) {
+              !SectorCacheStore.field_d) {
               return;
             }
             if (0 > param1) {
@@ -155,7 +155,7 @@ final class be {
           return;
         }
         if (!this.field_c &&
-          !um.field_d) {
+          !SectorCacheStore.field_d) {
           return;
         }
         if (0 > param1) {

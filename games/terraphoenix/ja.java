@@ -346,7 +346,7 @@ final class ja extends IntrusiveNode {
             }
             ak.field_e = stackIn_112_0 + stackIn_113_1;
           }
-          jh.field_m = -(ak.field_e >> 1) + ma.field_E;
+          jh.field_m = -(ak.field_e >> 1) + DiskArchiveRequest.field_E;
           ll.field_d = new int[rb.field_d.length][];
           var5Lifetime3 = 0;
           var6Lifetime3 = jh.field_m;

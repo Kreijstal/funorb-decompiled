@@ -89,19 +89,19 @@ final class cp {
         dc.field_L = null;
         if (param0 <= 122) {
           field_a = (String) null;
-          if (null != t.field_m) {
-            t.field_m.b((byte) 118);
+          if (null != DiskCacheWorker.field_m) {
+            DiskCacheWorker.field_m.b((byte) 118);
             ne.field_F.requestFocus();
             return;
           }
           ne.field_F.requestFocus();
           return;
         }
-        if (null == t.field_m) {
+        if (null == DiskCacheWorker.field_m) {
           ne.field_F.requestFocus();
           return;
         }
-        t.field_m.b((byte) 118);
+        DiskCacheWorker.field_m.b((byte) 118);
         ne.field_F.requestFocus();
     }
 

@@ -312,7 +312,7 @@ final class pa extends ql {
               if (uj.field_l != 1) {
                 break;
               }
-              eh.field_c.a(lm.field_A[11], 100, uh.field_i);
+              eh.field_c.a(NetworkArchiveRequest.field_A[11], 100, uh.field_i);
               break;
             }
           }
@@ -565,7 +565,7 @@ final class pa extends ql {
                   } else {
                     var4Lifetime1 = ih.a(var3, (byte) -115, var7.field_j);
                     if (var4Lifetime1 < 4) {
-                      if (rh.a(var7.field_i, true)) {
+                      if (DiskArchiveRequest.a(var7.field_i, true)) {
                         if (var7.field_j.field_e < var3.field_e) {
                           this.field_g[var8].field_l = -this.field_g[var8].field_m - 24 + var7.field_j.field_e * 24;
                         } else {

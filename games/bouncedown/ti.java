@@ -225,7 +225,7 @@ final class ti extends ba implements wc {
             if (-2 == var4) {
               var6 = Integer.toString(var2);
             }
-            var7Lifetime1 = vh.a(!(var4 < 0), var6, true);
+            var7Lifetime1 = SectorCacheStore.a(!(var4 < 0), var6, true);
             var8Lifetime1 = bi.field_h - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               var1_int = var1_int + hj.field_a;

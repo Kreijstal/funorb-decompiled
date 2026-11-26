@@ -1,0 +1,100 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NetworkArchiveRequest extends ArchiveRequest {
+    PacketBuffer field_D;
+    static volatile int field_C;
+    byte field_E;
+    static String field_F;
+    int field_G;
+
+    public static void resetStaticState(boolean param0) {
+        field_F = null;
+        if (!param0) {
+          field_C = 45;
+        }
+    }
+
+    final static String e(int param0) {
+        if (ol.field_i == DelegatingCanvas.field_f) {
+          return td.field_d;
+        }
+        if (param0 != 7142) {
+          NetworkArchiveRequest.e(-19);
+          return FullscreenFocusCanvas.field_i;
+        }
+        return FullscreenFocusCanvas.field_i;
+    }
+
+    final int getProgressPercent(byte param0) {
+        if (param0 < 98) {
+          this.field_G = -32;
+          if (this.field_D != null) {
+            return 100 * this.field_D.position / (-this.field_E + this.field_D.payload.length);
+          }
+          return 0;
+        }
+        if (this.field_D != null) {
+          return 100 * this.field_D.position / (-this.field_E + this.field_D.payload.length);
+        }
+        return 0;
+    }
+
+    final static AccountServiceResult createAccountSuggestionsResult(String[] args, int param1) {
+        AccountServiceResult var2 = null;
+        RuntimeException var2_ref = null;
+        AccountServiceResult stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var2 = new AccountServiceResult(false);
+          var2.suggestions = args;
+          if (param1 != 8082) {
+            NetworkArchiveRequest.e(7);
+          }
+          stackIn_3_0 = var2;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2_ref = decompiledCaughtException;
+          stackIn_6_0 = var2_ref;
+          stackIn_6_1 = new StringBuilder().append("em.A(");
+          if (args == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw AccountServiceResult.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final byte[] getData(boolean param0) {
+        if (!param0) {
+          NetworkArchiveRequest.resetStaticState(false);
+          if (this.field_v) {
+            throw new RuntimeException();
+          }
+          if (this.field_D.position >= this.field_D.payload.length - this.field_E) {
+            return this.field_D.payload;
+          }
+          throw new RuntimeException();
+        }
+        if (this.field_v) {
+          throw new RuntimeException();
+        }
+        if (this.field_D.position >= this.field_D.payload.length - this.field_E) {
+          return this.field_D.payload;
+        }
+        throw new RuntimeException();
+    }
+
+    NetworkArchiveRequest() {
+    }
+
+    static {
+        field_C = 0;
+        field_F = "Select a goblin to sacrifice";
+    }
+}

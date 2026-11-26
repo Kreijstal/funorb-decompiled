@@ -17,12 +17,12 @@ final class tb extends v {
           String stackIn_30_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          lf var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          lf var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Bounce.field_N;
           try {
             if (null != this.field_q) {
@@ -40,7 +40,7 @@ final class tb extends v {
             this.field_c.position = 0;
             this.field_b = null;
             while (true) {
-              var4_ref = (lf) (this.field_e.a(param0 + 113));
+              var4_ref = (NetworkArchiveRequest) (this.field_e.a(param0 + 113));
               if (var4_ref != null) {
                 this.field_i.a((byte) -78, var4_ref);
                 continue;
@@ -48,7 +48,7 @@ final class tb extends v {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (lf) (this.field_m.a(-1));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_m.a(-1));
               if (var4_refLifetime1 != null) {
                 this.field_h.a((byte) -78, var4_refLifetime1);
                 continue;
@@ -191,7 +191,7 @@ final class tb extends v {
           int stackIn_64_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          lf var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -206,10 +206,10 @@ final class tb extends v {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          lf var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          lf var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = Bounce.field_N;
           if (null != this.field_q) {
             var2_long = fa.correctedCurrentTimeMillis(param0 ^ -54);
@@ -241,23 +241,23 @@ final class tb extends v {
             if (param0 != 71) {
               field_o = (String) null;
             }
-            var2 = (lf) (this.field_i.d(-80));
+            var2 = (NetworkArchiveRequest) (this.field_i.d(-80));
             while (var2 != null) {
               this.field_a.position = 0;
               this.field_a.writeByte(1, (byte) 87);
               this.field_a.writeLong40(var2.field_j, (byte) -29);
               this.field_q.queueWrite(this.field_a.payload.length, this.field_a.payload, 0, param0 ^ 71);
               this.field_e.a((byte) -78, var2);
-              var2 = (lf) (this.field_i.b(0));
+              var2 = (NetworkArchiveRequest) (this.field_i.b(0));
             }
-            var2Lifetime1 = (lf) (this.field_h.d(-122));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_h.d(-122));
             while (var2Lifetime1 != null) {
               this.field_a.position = 0;
               this.field_a.writeByte(0, (byte) 78);
               this.field_a.writeLong40(var2Lifetime1.field_j, (byte) -29);
               this.field_q.queueWrite(this.field_a.payload.length, this.field_a.payload, 0, 0);
               this.field_m.a((byte) -78, var2Lifetime1);
-              var2Lifetime1 = (lf) (this.field_h.b(param0 ^ 71));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_h.b(param0 ^ 71));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_int = this.field_q.availableBytes(0);
@@ -339,24 +339,24 @@ final class tb extends v {
                     var12 = (long)var7 + ((long)var6 << 32);
                     var14 = null;
                     if (var11 == 0) {
-                      var14_ref = (lf) (this.field_e.d(param0 ^ -47));
+                      var14_ref = (NetworkArchiveRequest) (this.field_e.d(param0 ^ -47));
                       while (var14_ref != null) {
                         if (var12 == var14_ref.field_j) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        var14_ref = (lf) (this.field_e.b(0));
+                        var14_ref = (NetworkArchiveRequest) (this.field_e.b(0));
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameCompleted0)) {
-                      var14_ref = (lf) (this.field_m.d(-92));
+                      var14_ref = (NetworkArchiveRequest) (this.field_m.d(-92));
                       while (var14_ref != null) {
                         if (~var12 == ~var14_ref.field_j) {
                           break;
                         }
-                        var14_ref = (lf) (this.field_m.b(param0 ^ 71));
+                        var14_ref = (NetworkArchiveRequest) (this.field_m.b(param0 ^ 71));
                       }
                     }
                     if (var14_ref == null) {

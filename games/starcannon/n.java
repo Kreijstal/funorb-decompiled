@@ -181,7 +181,7 @@ final class n {
               return;
             }
             if (!this.field_i &&
-              !uf.field_d) {
+              !SectorCacheStore.field_d) {
               return;
             }
           } else {
@@ -192,7 +192,7 @@ final class n {
                 return;
               }
               if (!this.field_i &&
-                !uf.field_d) {
+                !SectorCacheStore.field_d) {
                 return;
               }
             } else {
@@ -213,7 +213,7 @@ final class n {
                 this.field_k = param1;
                 return;
               }
-              if (!uf.field_d) {
+              if (!SectorCacheStore.field_d) {
                 return;
               }
             }
@@ -244,7 +244,7 @@ final class n {
               return;
             }
             if (!this.field_i &&
-              !uf.field_d) {
+              !SectorCacheStore.field_d) {
               return;
             }
           } else {
@@ -265,7 +265,7 @@ final class n {
               this.field_k = param1;
               return;
             }
-            if (!uf.field_d) {
+            if (!SectorCacheStore.field_d) {
               return;
             }
           }
@@ -292,7 +292,7 @@ final class n {
               return;
             }
             if (!this.field_i &&
-              !uf.field_d) {
+              !SectorCacheStore.field_d) {
               return;
             }
             if (param1 < 0) {
@@ -318,7 +318,7 @@ final class n {
             return;
           }
           if (!this.field_i &&
-            !uf.field_d) {
+            !SectorCacheStore.field_d) {
             return;
           }
         } else {
@@ -330,7 +330,7 @@ final class n {
             return;
           }
           if (!this.field_i &&
-            !uf.field_d) {
+            !SectorCacheStore.field_d) {
             return;
           }
         }

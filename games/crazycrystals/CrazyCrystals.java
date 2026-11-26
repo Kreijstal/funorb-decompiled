@@ -332,8 +332,8 @@ public final class CrazyCrystals extends NetworkGameClient {
                   if (uo.field_o == 24) {
                     rc.a(1, we.field_h, b.field_a, 248, je.field_j, 7, fp.field_a);
                   }
-                  ld.field_y = ld.field_y + q.field_a[2].field_d;
-                  if (ld.field_y >= 30) {
+                  NetworkArchiveRequest.field_y = NetworkArchiveRequest.field_y + q.field_a[2].field_d;
+                  if (NetworkArchiveRequest.field_y >= 30) {
                     rc.a(1, we.field_h, b.field_a, 243, je.field_j, 12, fp.field_a);
                   }
                   if (uo.field_o == 11 &&
@@ -683,13 +683,13 @@ public final class CrazyCrystals extends NetworkGameClient {
           wm.clearStaticReferences(-1);
           IsaacRandom.clearStaticReferences((byte) -66);
           SecondaryIntrusiveDeque.clearStaticReferences(0);
-          ld.releaseDeclaredStaticReferences(100);
-          sp.clearStaticReferences((byte) 113);
-          mf.releaseDeclaredStaticReferences(param0 - 20);
+          NetworkArchiveRequest.releaseDeclaredStaticReferences(100);
+          SectorCacheStore.clearStaticReferences((byte) 113);
+          DiskArchiveRequest.releaseDeclaredStaticReferences(param0 - 20);
           ee.clearStaticReferences(0);
           BoundedRandomAccessFile.resetStaticState((byte) -117);
           rk.clearStaticReferences((byte) 54);
-          wl.c((byte) -89);
+          ArchiveRequest.c((byte) -89);
           cm.clearStaticReferences(-121);
           gn.clearStaticReferences(false);
           rc.clearStaticReferences(false);
@@ -1181,7 +1181,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    td.a(12.0f, kp.a(ld.field_w, jn.field_k, "", 3, CipherPacketBuffer.field_p), false);
+                    td.a(12.0f, kp.a(NetworkArchiveRequest.field_w, jn.field_k, "", 3, CipherPacketBuffer.field_p), false);
                     return;
                   }
                 }
@@ -1356,8 +1356,8 @@ public final class CrazyCrystals extends NetworkGameClient {
             td.a(32.0f, oi.field_b, false);
             this.a(-124);
             s.field_o = bf.a(-1, "fgtiles_earth", "", l.field_d);
-            ByteStorage.field_b = wl.a("fgtiles_laserhub", l.field_d, 10, "");
-            MouseWheelInput.field_i = wl.a("sprites_rock", l.field_d, 10, "");
+            ByteStorage.field_b = ArchiveRequest.a("fgtiles_laserhub", l.field_d, 10, "");
+            MouseWheelInput.field_i = ArchiveRequest.a("sprites_rock", l.field_d, 10, "");
             vp.field_i = new RgbSprite[2][];
             vp.field_i[0] = bf.a(-1, "sprites_crystal1", "", l.field_d);
             vp.field_i[1] = bf.a(-1, "sprites_crystal2", "", l.field_d);
@@ -1392,9 +1392,9 @@ public final class CrazyCrystals extends NetworkGameClient {
             en.field_M = var3_array[2];
             ce.field_eb = var3_array[4];
             ac.field_j = var3_array[0];
-            de.field_k = wl.a("sprites_ledge", l.field_d, 10, "");
-            qj.field_b = wl.a("sprites_stickyball", l.field_d, 10, "");
-            il.field_e = wl.a("sprites_pingpongball", l.field_d, 10, "");
+            de.field_k = ArchiveRequest.a("sprites_ledge", l.field_d, 10, "");
+            qj.field_b = ArchiveRequest.a("sprites_stickyball", l.field_d, 10, "");
+            il.field_e = ArchiveRequest.a("sprites_pingpongball", l.field_d, 10, "");
             var3_array = bf.a(-1, "sprites_ball_indicators", "", l.field_d);
             na.field_eb = var3_array[1];
             qi.field_a = var3_array[5];
@@ -1447,20 +1447,20 @@ public final class CrazyCrystals extends NetworkGameClient {
           if (null == pa.field_H) {
             td.a(40.0f, oi.field_b, false);
             this.a(-127);
-            pa.field_H = wl.a("sprites_spider_bright", l.field_d, 10, "");
-            wl.field_p = new RgbSprite[4][4];
+            pa.field_H = ArchiveRequest.a("sprites_spider_bright", l.field_d, 10, "");
+            ArchiveRequest.field_p = new RgbSprite[4][4];
             var3_array = bf.a(-1, "sprites_spider_web", "", l.field_d);
             var4 = 0;
             do {
               if (16 <= var4) {
-                jd.field_A = wl.a("sprites_grave", l.field_d, 10, "");
+                jd.field_A = ArchiveRequest.a("sprites_grave", l.field_d, 10, "");
                 fl.field_i = bf.a(-1, "sprites_key", "", l.field_d);
                 v.field_b = bf.a(-1, "sprites_safe", "", l.field_d);
                 bb.field_y = new RgbSprite[12];
                 var3_array = bf.a(-1, "sprites_safe_base", "", l.field_d);
                 break;
               }
-              wl.field_p[var4 >> 2][pf.b(3, var4)] = var3_array[var4];
+              ArchiveRequest.field_p[var4 >> 2][pf.b(3, var4)] = var3_array[var4];
               var4++;
             } while (var13 == 0);
             var4 = 1;
@@ -1471,7 +1471,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                 return;
               }
             }
-            al.field_a = wl.a("sprites_bomb", l.field_d, 10, "");
+            al.field_a = ArchiveRequest.a("sprites_bomb", l.field_d, 10, "");
             vp.a(104);
             return;
           }
@@ -1520,9 +1520,9 @@ public final class CrazyCrystals extends NetworkGameClient {
             ln.a(0, l.field_d);
             am.a(l.field_d, uf.field_e, -88);
             d.field_c = bf.a(-1, "achievements", "", l.field_d);
-            ro.field_q = wl.a("unachieved", dj.field_ab, 10, "basic");
-            ah.field_b = wl.a("locked", dj.field_ab, 10, "basic");
-            var3_ref = wl.a("orbcoin", dj.field_ab, 10, "basic");
+            ro.field_q = ArchiveRequest.a("unachieved", dj.field_ab, 10, "basic");
+            ah.field_b = ArchiveRequest.a("locked", dj.field_ab, 10, "basic");
+            var3_ref = ArchiveRequest.a("orbcoin", dj.field_ab, 10, "basic");
             KeyboardInputHandler.field_b = new RgbSprite[d.field_c.length];
             cn.field_c = new RgbSprite[d.field_c.length];
             var4 = 0;

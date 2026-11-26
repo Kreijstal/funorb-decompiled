@@ -17,7 +17,7 @@ abstract class ob {
     volatile int field_j;
     byte field_d;
     volatile int field_p;
-    ld field_h;
+    NetworkArchiveRequest field_h;
 
     abstract void a(boolean param0, Object param1, boolean param2);
 
@@ -56,19 +56,19 @@ abstract class ob {
         return this.field_m.c(param0 - 20) + this.field_f.c(0);
     }
 
-    final ld a(boolean param0, int param1, int param2, int param3, byte param4) {
-        ld stackIn_3_0 = null;
+    final NetworkArchiveRequest a(boolean param0, int param1, int param2, int param3, byte param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        ld stackIn_16_0 = null;
+        NetworkArchiveRequest stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         long var6;
-        ld var8;
+        NetworkArchiveRequest var8;
         Object var9;
         long var6Lifetime1;
-        ld var8Lifetime1;
+        NetworkArchiveRequest var8Lifetime1;
         if (param1 == 18303) {
           var6 = (long)param2 + ((long)param3 << 32);
-          var8 = new ld();
+          var8 = new NetworkArchiveRequest();
           var8.field_u = param4;
           var8.field_k = var6;
           stackIn_16_0 = var8;
@@ -90,7 +90,7 @@ abstract class ob {
         var9 = (Object) null;
         this.a(true, (Object) null, false);
         var6Lifetime1 = (long)param2 + ((long)param3 << 32);
-        var8Lifetime1 = new ld();
+        var8Lifetime1 = new NetworkArchiveRequest();
         var8Lifetime1.field_u = param4;
         var8Lifetime1.field_k = var6Lifetime1;
         stackIn_3_0 = var8Lifetime1;

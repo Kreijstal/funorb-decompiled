@@ -100,17 +100,17 @@ final class nl {
     final static void a(int param0) {
         SoftwareRasterizer.fillRectangleAlpha(0, 74, 640, 406, 0, 192);
         if (param0 >= 72) {
-          rf.field_B[bk.d(23196)].a(0, 0, 102);
+          ArchiveRequest.field_B[bk.d(23196)].a(0, 0, 102);
           SoftwareRasterizer.drawRectangleOutline(0, 74, 640, 406, 16777215);
           aa.field_j.b(120, 76);
           if (ef.field_j >= 120 &&
             MouseWheelInput.field_b >= 76 &&
             220 >= ef.field_j) {
             if (MouseWheelInput.field_b > 104) {
-              if (!rf.field_B[7].field_d) {
+              if (!ArchiveRequest.field_B[7].field_d) {
                 return;
               }
-              wh.field_e.b(20, 76);
+              DiskCacheWorker.field_e.b(20, 76);
               if (ef.field_j >= 20 &&
                 MouseWheelInput.field_b >= 76 &&
                 120 >= ef.field_j &&
@@ -138,10 +138,10 @@ final class nl {
             }
             SoftwareRasterizer.fillRectangleAlpha(120, 76, 100, 28, 16777215, 128);
           }
-          if (!rf.field_B[7].field_d) {
+          if (!ArchiveRequest.field_B[7].field_d) {
             return;
           }
-          wh.field_e.b(20, 76);
+          DiskCacheWorker.field_e.b(20, 76);
           if (ef.field_j >= 20 &&
             MouseWheelInput.field_b >= 76 &&
             120 >= ef.field_j) {
@@ -179,12 +179,12 @@ final class nl {
           return;
         }
         nl.a(105);
-        rf.field_B[bk.d(23196)].a(0, 0, 102);
+        ArchiveRequest.field_B[bk.d(23196)].a(0, 0, 102);
         SoftwareRasterizer.drawRectangleOutline(0, 74, 640, 406, 16777215);
         aa.field_j.b(120, 76);
         if (ef.field_j < 120) {
-          if (rf.field_B[7].field_d) {
-            wh.field_e.b(20, 76);
+          if (ArchiveRequest.field_B[7].field_d) {
+            DiskCacheWorker.field_e.b(20, 76);
             if (ef.field_j >= 20 &&
               MouseWheelInput.field_b >= 76 &&
               120 >= ef.field_j &&
@@ -203,8 +203,8 @@ final class nl {
           return;
         }
         if (MouseWheelInput.field_b < 76) {
-          if (rf.field_B[7].field_d) {
-            wh.field_e.b(20, 76);
+          if (ArchiveRequest.field_B[7].field_d) {
+            DiskCacheWorker.field_e.b(20, 76);
             if (ef.field_j >= 20 &&
               MouseWheelInput.field_b >= 76 &&
               120 >= ef.field_j &&
@@ -224,8 +224,8 @@ final class nl {
         }
         if (220 >= ef.field_j) {
           if (MouseWheelInput.field_b > 104) {
-            if (rf.field_B[7].field_d) {
-              wh.field_e.b(20, 76);
+            if (ArchiveRequest.field_B[7].field_d) {
+              DiskCacheWorker.field_e.b(20, 76);
               if (ef.field_j >= 20 &&
                 MouseWheelInput.field_b >= 76 &&
                 120 >= ef.field_j &&
@@ -245,10 +245,10 @@ final class nl {
           }
           SoftwareRasterizer.fillRectangleAlpha(120, 76, 100, 28, 16777215, 128);
         }
-        if (!rf.field_B[7].field_d) {
+        if (!ArchiveRequest.field_B[7].field_d) {
           return;
         }
-        wh.field_e.b(20, 76);
+        DiskCacheWorker.field_e.b(20, 76);
         if (ef.field_j >= 20 &&
           MouseWheelInput.field_b >= 76 &&
           120 >= ef.field_j) {

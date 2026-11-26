@@ -33,7 +33,7 @@ class d extends UiWidget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (0 < rk.field_y &&
+          if (0 < ArchiveRequest.field_y &&
             ce.field_c) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_e, td.field_c.field_C);
             oc.field_v.b(param1, 0);

@@ -98,12 +98,12 @@ final class ih extends PacketBuffer {
 
     final static void l(int param0) {
         if (param0 == 255) {
-          af.a(ef.field_j, true, oa.field_o, (byte) 54);
+          DiskCacheWorker.a(ef.field_j, true, oa.field_o, (byte) 54);
           ud.field_c = true;
           return;
         }
         field_l = (PcmSample) null;
-        af.a(ef.field_j, true, oa.field_o, (byte) 54);
+        DiskCacheWorker.a(ef.field_j, true, oa.field_o, (byte) 54);
         ud.field_c = true;
     }
 

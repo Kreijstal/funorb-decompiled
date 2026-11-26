@@ -56,7 +56,7 @@ final class me extends DualLinkNode {
               }
             }
           } else {
-            this.field_p = dc.a(param1.readString(false), '<', (byte) -125);
+            this.field_p = NetworkArchiveRequest.a(param1.readString(false), '<', (byte) -125);
           }
           if (param2 != 10601) {
             field_w = (boolean[]) null;

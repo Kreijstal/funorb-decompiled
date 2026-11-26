@@ -58,7 +58,7 @@ final class wd {
         var6 = Lexicominos.field_L ? 1 : 0;
         try {
           var4 = -81 / ((param2 + 41) / 45);
-          var3 = fj.a(param1, 100, param0);
+          var3 = DiskArchiveRequest.a(param1, 100, param0);
           if (var3 != null) {
             stackIn_4_0 = var3;
             return stackIn_4_0;

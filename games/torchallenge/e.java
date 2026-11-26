@@ -84,7 +84,7 @@ final class e extends IntrusiveNode {
           this.field_n = param0;
           this.field_l = param0.f();
           this.field_k = param1;
-          this.field_n.f(128 + this.field_l * sh.field_r >> 8);
+          this.field_n.f(128 + this.field_l * ArchiveRequest.field_r >> 8);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

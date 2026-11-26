@@ -19,7 +19,7 @@ abstract class eh {
     PacketBuffer field_f;
     volatile int field_d;
     volatile int field_p;
-    ra field_a;
+    NetworkArchiveRequest field_a;
 
     final int c(byte param0) {
         RuntimeException var2 = null;
@@ -77,15 +77,15 @@ abstract class eh {
         }
     }
 
-    final ra a(int param0, int param1, int param2, boolean param3, byte param4) {
+    final NetworkArchiveRequest a(int param0, int param1, int param2, boolean param3, byte param4) {
         long var6_long = 0L;
-        ra var8 = null;
-        ra stackIn_17_0 = null;
+        NetworkArchiveRequest var8 = null;
+        NetworkArchiveRequest stackIn_17_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
           var6_long = ((long)param0 << 32) + (long)param1;
-          var8 = new ra();
+          var8 = new NetworkArchiveRequest();
           var8.field_w = param4;
           var8.field_o = param3;
           if (param2 != -28612) {
@@ -1628,7 +1628,7 @@ abstract class eh {
                 }
                 var2 = rd.a("create_displayname_hint", -77);
                 if (null != var2) {
-                  tg.field_w = DualLinkNode.a(118, var2);
+                  DiskArchiveRequest.field_w = DualLinkNode.a(118, var2);
                 }
                 var2 = rd.a("create_password_tooltip", 103);
                 if (var2 != null) {
@@ -2826,7 +2826,7 @@ abstract class eh {
                 }
                 var2 = rd.a("mb_full_access_1", -114);
                 if (var2 != null) {
-                  ra.field_x = DualLinkNode.a(122, var2);
+                  NetworkArchiveRequest.field_x = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("mb_full_access_2", param0 - 100);
                 if (null != var2) {

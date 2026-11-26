@@ -172,10 +172,10 @@ final class fi extends qe {
         kn.field_e = false;
         AwtRasterBuffer.a(0, 640, 0, (byte) 44);
         AwtRasterBuffer.a(0, 640, 40, (byte) 44);
-        vf.a(432, true, 33, 125, 48);
-        vf.a(432, true, 599, 117, 48);
-        vf.a(32, true, 164, -110, 8);
-        vf.a(32, true, 468, -2, 8);
+        ArchiveRequest.a(432, true, 33, 125, 48);
+        ArchiveRequest.a(432, true, 599, 117, 48);
+        ArchiveRequest.a(32, true, 164, -110, 8);
+        ArchiveRequest.a(32, true, 468, -2, 8);
         ByteStorage.a(41, (byte) -98, 558, 416, true);
         ad.field_e.h(41, 48);
         ad.field_e.j(-ad.field_e.field_d + 599, 48);

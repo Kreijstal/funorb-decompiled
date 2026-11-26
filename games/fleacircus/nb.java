@@ -23,7 +23,7 @@ final class nb {
           if (param0) {
             nb.clearStaticReferences((byte) -101);
           }
-          if (!qh.c((byte) 65)) {
+          if (!DiskArchiveRequest.c((byte) 65)) {
             if (!IntrusiveDeque.field_b) {
               if (fg.field_x == null) {
                 fg.field_x = ed.a(16777215, 4);

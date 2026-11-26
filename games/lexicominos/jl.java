@@ -20,7 +20,7 @@ final class jl {
     final static void a(String param0, byte param1) {
         try {
           int var2_int = -48 / ((0 - param1) / 37);
-          si.field_q = param0;
+          ArchiveRequest.field_q = param0;
           ni.a(-124, 12);
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "jl.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

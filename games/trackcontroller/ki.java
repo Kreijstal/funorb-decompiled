@@ -17,20 +17,20 @@ final class ki {
           ki.a(false, -67, false);
           if (param0) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, 192);
-            lh.a(param0, -94);
+            DiskArchiveRequest.a(param0, -94);
             return;
           }
           SoftwareRasterizer.clearRaster();
-          lh.a(param0, -94);
+          DiskArchiveRequest.a(param0, -94);
           return;
         }
         if (param0) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.stride, SoftwareRasterizer.field_k, 0, 192);
-          lh.a(param0, -94);
+          DiskArchiveRequest.a(param0, -94);
           return;
         }
         SoftwareRasterizer.clearRaster();
-        lh.a(param0, -94);
+        DiskArchiveRequest.a(param0, -94);
     }
 
     public static void clearStaticReferences(int param0) {

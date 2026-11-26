@@ -331,7 +331,7 @@ final class nj extends al {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < se.field_E.length; var4Lifetime1++) {
             stackIn_91_0 = !(IterableNodeHashTable.field_a[var4Lifetime1] < 0);
-            var5Lifetime1 = vh.a(stackIn_91_0, se.field_E[var4Lifetime1], true);
+            var5Lifetime1 = SectorCacheStore.a(stackIn_91_0, se.field_E[var4Lifetime1], true);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -341,7 +341,7 @@ final class nj extends al {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var10.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = vh.a(false, var11, true);
+              var7Lifetime1 = SectorCacheStore.a(false, var11, true);
               if (var3_intLifetime1 < var7Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -349,7 +349,7 @@ final class nj extends al {
             var4_ref_String__Lifetime1 = ll.field_E;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = vh.a(false, var12, true);
+              var7Lifetime1Lifetime1 = SectorCacheStore.a(false, var12, true);
               if (var3_intLifetime1 < var7Lifetime1Lifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -368,20 +368,20 @@ final class nj extends al {
             AwtRasterBuffer.field_a = stackIn_115_0 + stackIn_116_1;
           }
           jl.field_a = uf.field_a - (AwtRasterBuffer.field_a >> 1);
-          lf.field_r = new int[se.field_E.length][];
+          NetworkArchiveRequest.field_r = new int[se.field_E.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = jl.field_a;
           while (se.field_E.length > var4Lifetime3) {
             var6Lifetime1 = IterableNodeHashTable.field_a[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = vh.a(true, se.field_E[var4Lifetime3], true);
+              var7Lifetime2 = SectorCacheStore.a(true, se.field_E[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + hj.field_a;
               var8Lifetime1 = -(var7Lifetime2 >> 1) + bi.field_h;
-              lf.field_r[var4Lifetime3] = new int[4];
-              lf.field_r[var4Lifetime3][0] = -GameClient.field_z + var8Lifetime1;
-              lf.field_r[var4Lifetime3][1] = var5Lifetime3;
-              lf.field_r[var4Lifetime3][2] = (GameClient.field_z << 1) + var7Lifetime2;
-              lf.field_r[var4Lifetime3][3] = pb.field_j + (cl.field_m << 1);
+              NetworkArchiveRequest.field_r[var4Lifetime3] = new int[4];
+              NetworkArchiveRequest.field_r[var4Lifetime3][0] = -GameClient.field_z + var8Lifetime1;
+              NetworkArchiveRequest.field_r[var4Lifetime3][1] = var5Lifetime3;
+              NetworkArchiveRequest.field_r[var4Lifetime3][2] = (GameClient.field_z << 1) + var7Lifetime2;
+              NetworkArchiveRequest.field_r[var4Lifetime3][3] = pb.field_j + (cl.field_m << 1);
               var5Lifetime3 = var5Lifetime3 + (pb.field_j + (hj.field_a + (cl.field_m << 1)));
             } else {
               var5Lifetime3 = var5Lifetime3 + k.field_D;

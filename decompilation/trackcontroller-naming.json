@@ -25,7 +25,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:DiskArchiveStore.a([BIIZZ)Z#0"
+      "renamedSymbol": "B:DiskArchiveStore.writeSectorChain([BIIZZ)Z#0"
     },
     {
       "symbol": "B:mg.b(I)V#0",
@@ -348,6 +348,14 @@
       "renamedSymbol": "C:SecondaryNodeDequeIterator"
     },
     {
+      "symbol": "C:hi",
+      "originalName": "hi",
+      "to": "NetworkArchiveRequest",
+      "evidence": "Source-purpose review: Network archive-request subtype owns signed-byte padding,int transfer counter and packet-buffer reference;construction sites populate composite archive/group key,padding and flags. Payload getter returns original buffer array when complete;progress uses original int arithmetic over buffer position and length minus signed padding. Preserve aliases,int overflow/division,all guards/sentinels,constructor visibility and full override-family bindings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NetworkArchiveRequest"
+    },
+    {
       "symbol": "C:hj",
       "originalName": "hj",
       "to": "PcmOutputWorker",
@@ -426,6 +434,14 @@
       "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
       "confidence": "reviewed",
       "renamedSymbol": "C:AccountRequestState"
+    },
+    {
+      "symbol": "C:lh",
+      "originalName": "lh",
+      "to": "DiskArchiveRequest",
+      "evidence": "Source-purpose review: Archive-request subtype with operation int,aliased byte-array payload and sector-store reference. Worker factories and run/readNow paths bind the same key/store/opcode/payload/pending fields. Constructor/getter bodies and incoming contexts reviewed. Preserve empty package constructor,inherited pending/flags,original aliases,all guard-dependent sentinels/helper calls and error behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DiskArchiveRequest"
     },
     {
       "symbol": "C:lj",
@@ -658,6 +674,14 @@
       "evidence": "Iterable over DualLinkNode secondary links.",
       "confidence": "reviewed",
       "renamedSymbol": "C:SecondaryNodeDeque"
+    },
+    {
+      "symbol": "C:sd",
+      "originalName": "sd",
+      "to": "DiskCacheWorker",
+      "evidence": "Source-purpose review: Runnable disk-cache worker owns ordinary queue/thread/stop/count state,starts a platform-service thread task,and services opcode2 writes/opcode3 reads outside the queue monitor. Source bodies,queue/stop/thread/counter/pending-field links and all bound incoming method contexts/construction sites reviewed. Keep run ABI,constructor visibility,nonvolatile fields,queue and IO order,ignored write bool,completion-on-error paths,all primitive domains/guards/partial effects and diagnostic wrapping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:DiskCacheWorker"
     },
     {
       "symbol": "C:sl",
@@ -2740,12 +2764,36 @@
       "renamedSymbol": "M:DiskArchiveStore.write(II[BI)Z"
     },
     {
+      "symbol": "M:hf.a([BIIZZ)Z",
+      "originalName": "a",
+      "to": "writeSectorChain",
+      "evidence": "Source-purpose review: Writes original index and sector-chain header/payload operations,reusing or allocating sectors according to the original boolean. Preserve all int/boolean roles including chunk-counter/scratch-index/helper/result parameters,512next-link condition with510large-key payload,EOF exit/result paths,index-before-payload partial effects,guards/recursion and exception order. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveStore.writeSectorChain([BIIZZ)Z"
+    },
+    {
+      "symbol": "M:hi.a(B)I",
+      "originalName": "a",
+      "to": "getProgressPercent",
+      "evidence": "Source-purpose review: Reports original disk pending0/complete100 or network int progress using buffer position and length minus signed-byte padding. Preserve arithmetic order/overflow/division,nullable buffer behavior,guard-specific sentinels/mutations/recursion and parameter widths. Rename the complete disk/root/network family together. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.getProgressPercent(B)I"
+    },
+    {
       "symbol": "M:hi.c(B)V",
       "originalName": "c",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 eeaab6a34995fb6240808329c7e4fa698b956fc019532aab418bfb565a5c0533.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:hi.clearStaticReferences(B)V"
+      "renamedSymbol": "M:NetworkArchiveRequest.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:hi.g(I)[B",
+      "originalName": "g",
+      "to": "getData",
+      "evidence": "Source-purpose review: Returns the original disk payload or network buffer array on the original ready path. Preserve pending/incomplete RuntimeException/null behavior,all aliases,guard-triggered mutations/recursion/helper calls and full parameter domains. Rename the complete disk/root/network family together. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NetworkArchiveRequest.getData(I)[B"
     },
     {
       "symbol": "M:hj.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -3276,12 +3324,28 @@
       "renamedSymbol": "M:lg.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:lh.a(B)I",
+      "originalName": "a",
+      "to": "getProgressPercent",
+      "evidence": "Source-purpose review: Reports original disk pending0/complete100 or network int progress using buffer position and length minus signed-byte padding. Preserve arithmetic order/overflow/division,nullable buffer behavior,guard-specific sentinels/mutations/recursion and parameter widths. Rename the complete disk/root/network family together. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.getProgressPercent(B)I"
+    },
+    {
       "symbol": "M:lh.c(B)V",
       "originalName": "c",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 743fdb24dc6a3780b5de9c9df96cb5fa46ab7e895dae8d24f0aff8bbb0da3d34.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:lh.clearStaticReferences(B)V"
+      "renamedSymbol": "M:DiskArchiveRequest.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:lh.g(I)[B",
+      "originalName": "g",
+      "to": "getData",
+      "evidence": "Source-purpose review: Returns the original disk payload or network buffer array on the original ready path. Preserve pending/incomplete RuntimeException/null behavior,all aliases,guard-triggered mutations/recursion/helper calls and full parameter domains. Rename the complete disk/root/network family together. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskArchiveRequest.getData(I)[B"
     },
     {
       "symbol": "M:li.a(B)V",
@@ -4873,7 +4937,47 @@
       "to": "resetStaticState",
       "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:sd.resetStaticState(B)V"
+      "renamedSymbol": "M:DiskCacheWorker.resetStaticState(B)V"
+    },
+    {
+      "symbol": "M:sd.a(BILhf;)Llh;",
+      "originalName": "a",
+      "to": "readNow",
+      "evidence": "Source-purpose review: Scans queued writes by key/store identity under the original queue monitor and returns the queued payload alias when present;otherwise reads backing store synchronously after monitor release. Preserve per-game opcode/flag parameters,null/guard/global-field paths,aliases,completion flags,IO/allocation and exception order. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:sd.a(I)V",
+      "originalName": "a",
+      "to": "shutdown",
+      "evidence": "Source-purpose review: Sets the original stop flag,wakes the queue and joins the worker thread on the original paths. Preserve supplied stop boolean in FleaCircus/MonkeyPuzzle2,guards that skip joins or invoke helpers/run/recursion,monitor identity,interruption behavior and thread clearing order. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.shutdown(I)V"
+    },
+    {
+      "symbol": "M:sd.a(I[BLhf;B)Llh;",
+      "originalName": "a",
+      "to": "requestWrite",
+      "evidence": "Source-purpose review: Creates a disk-write request using original byte-array alias,key,store,opcode and flags,and enqueues it. Preserve input-derived opcode/flag fields,all guard domains and ordering,including exceptions after enqueue and early null returns during partial initialization. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:sd.a(ZILhf;)Llh;",
+      "originalName": "a",
+      "to": "requestRead",
+      "evidence": "Source-purpose review: Creates and enqueues a disk-read request on the ordinary caller path. Preserve original per-game opcode/flag parameters,allocation/field-store/enqueue order,sign-extended key,guards,null returns,helper/recursive calls and diagnostic exceptions;do not discard parameters that callers often pass as constants. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;"
+    },
+    {
+      "symbol": "M:sd.a(ZLlh;)V",
+      "originalName": "a",
+      "to": "enqueue",
+      "evidence": "Source-purpose review: Inserts request under the original queue monitor,increments pending count and notifies on the original paths. Preserve guards that return before insertion or after insertion before count/notify,all side effects and exception order. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V"
     },
     {
       "symbol": "M:sg.a(I)V",
@@ -5004,12 +5108,28 @@
       "renamedSymbol": "M:ti.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:tk.a(B)I",
+      "originalName": "a",
+      "to": "getProgressPercent",
+      "evidence": "Source-purpose review: Reports original disk pending0/complete100 or network int progress using buffer position and length minus signed-byte padding. Preserve arithmetic order/overflow/division,nullable buffer behavior,guard-specific sentinels/mutations/recursion and parameter widths. Rename the complete disk/root/network family together. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AsyncRequest.getProgressPercent(B)I"
+    },
+    {
       "symbol": "M:tk.f(I)V",
       "originalName": "f",
       "to": "clearStaticReferences",
       "evidence": "Source-purpose review: Clears 6 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (1 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AsyncRequest.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:tk.g(I)[B",
+      "originalName": "g",
+      "to": "getData",
+      "evidence": "Source-purpose review: Returns the original disk payload or network buffer array on the original ready path. Preserve pending/incomplete RuntimeException/null behavior,all aliases,guard-triggered mutations/recursion/helper calls and full parameter domains. Rename the complete disk/root/network family together. Owning body/abstract declaration and bound incoming contexts reviewed;preserve modifiers,descriptors,unselected leaves and all literal values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AsyncRequest.getData(I)[B"
     },
     {
       "symbol": "M:u.a(B)V",
@@ -5509,7 +5629,7 @@
     },
     {
       "symbol": "B:hf.a([BIIZZ)Z#0",
-      "renamedSymbol": "B:DiskArchiveStore.a([BIIZZ)Z#0",
+      "renamedSymbol": "B:DiskArchiveStore.writeSectorChain([BIIZZ)Z#0",
       "originalName": "L3",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -6763,9 +6883,9 @@
     },
     {
       "symbol": "C:hi",
-      "renamedSymbol": "C:hi",
+      "renamedSymbol": "C:NetworkArchiveRequest",
       "originalName": "hi",
-      "renamedName": "hi",
+      "renamedName": "NetworkArchiveRequest",
       "declaration": {
         "file": "hi.java",
         "start": 50,
@@ -7313,9 +7433,9 @@
     },
     {
       "symbol": "C:lh",
-      "renamedSymbol": "C:lh",
+      "renamedSymbol": "C:DiskArchiveRequest",
       "originalName": "lh",
-      "renamedName": "lh",
+      "renamedName": "DiskArchiveRequest",
       "declaration": {
         "file": "lh.java",
         "start": 50,
@@ -8270,9 +8390,9 @@
     },
     {
       "symbol": "C:sd",
-      "renamedSymbol": "C:sd",
+      "renamedSymbol": "C:DiskCacheWorker",
       "originalName": "sd",
-      "renamedName": "sd",
+      "renamedName": "DiskCacheWorker",
       "declaration": {
         "file": "sd.java",
         "start": 50,
@@ -9238,7 +9358,7 @@
     },
     {
       "symbol": "F:ae.field_l:Lhi;",
-      "renamedSymbol": "F:ArchiveRequestConnection.field_l:Lhi;",
+      "renamedSymbol": "F:ArchiveRequestConnection.field_l:LNetworkArchiveRequest;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -14397,7 +14517,7 @@
     },
     {
       "symbol": "F:gd.field_i:Lsd;",
-      "renamedSymbol": "F:CachedArchiveSource.field_i:Lsd;",
+      "renamedSymbol": "F:CachedArchiveSource.field_i:LDiskCacheWorker;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -16289,7 +16409,7 @@
     },
     {
       "symbol": "F:hi.field_A:[I",
-      "renamedSymbol": "F:hi.field_A:[I",
+      "renamedSymbol": "F:NetworkArchiveRequest.field_A:[I",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -16300,7 +16420,7 @@
     },
     {
       "symbol": "F:hi.field_B:B",
-      "renamedSymbol": "F:hi.field_B:B",
+      "renamedSymbol": "F:NetworkArchiveRequest.field_B:B",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -16311,7 +16431,7 @@
     },
     {
       "symbol": "F:hi.field_x:Lbe;",
-      "renamedSymbol": "F:hi.field_x:LPacketBuffer;",
+      "renamedSymbol": "F:NetworkArchiveRequest.field_x:LPacketBuffer;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -16322,7 +16442,7 @@
     },
     {
       "symbol": "F:hi.field_y:I",
-      "renamedSymbol": "F:hi.field_y:I",
+      "renamedSymbol": "F:NetworkArchiveRequest.field_y:I",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -16333,7 +16453,7 @@
     },
     {
       "symbol": "F:hi.field_z:I",
-      "renamedSymbol": "F:hi.field_z:I",
+      "renamedSymbol": "F:NetworkArchiveRequest.field_z:I",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -19391,7 +19511,7 @@
     },
     {
       "symbol": "F:lh.field_A:Lhf;",
-      "renamedSymbol": "F:lh.field_A:LDiskArchiveStore;",
+      "renamedSymbol": "F:DiskArchiveRequest.field_A:LDiskArchiveStore;",
       "originalName": "field_A",
       "renamedName": "field_A",
       "declaration": {
@@ -19402,7 +19522,7 @@
     },
     {
       "symbol": "F:lh.field_B:[[J",
-      "renamedSymbol": "F:lh.field_B:[[J",
+      "renamedSymbol": "F:DiskArchiveRequest.field_B:[[J",
       "originalName": "field_B",
       "renamedName": "field_B",
       "declaration": {
@@ -19413,7 +19533,7 @@
     },
     {
       "symbol": "F:lh.field_C:Lkk;",
-      "renamedSymbol": "F:lh.field_C:LArchive;",
+      "renamedSymbol": "F:DiskArchiveRequest.field_C:LArchive;",
       "originalName": "field_C",
       "renamedName": "field_C",
       "declaration": {
@@ -19424,7 +19544,7 @@
     },
     {
       "symbol": "F:lh.field_D:[J",
-      "renamedSymbol": "F:lh.field_D:[J",
+      "renamedSymbol": "F:DiskArchiveRequest.field_D:[J",
       "originalName": "field_D",
       "renamedName": "field_D",
       "declaration": {
@@ -19435,7 +19555,7 @@
     },
     {
       "symbol": "F:lh.field_x:Lud;",
-      "renamedSymbol": "F:lh.field_x:Lud;",
+      "renamedSymbol": "F:DiskArchiveRequest.field_x:Lud;",
       "originalName": "field_x",
       "renamedName": "field_x",
       "declaration": {
@@ -19446,7 +19566,7 @@
     },
     {
       "symbol": "F:lh.field_y:I",
-      "renamedSymbol": "F:lh.field_y:I",
+      "renamedSymbol": "F:DiskArchiveRequest.field_y:I",
       "originalName": "field_y",
       "renamedName": "field_y",
       "declaration": {
@@ -19457,7 +19577,7 @@
     },
     {
       "symbol": "F:lh.field_z:[B",
-      "renamedSymbol": "F:lh.field_z:[B",
+      "renamedSymbol": "F:DiskArchiveRequest.field_z:[B",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -25397,7 +25517,7 @@
     },
     {
       "symbol": "F:rb.field_a:Lsd;",
-      "renamedSymbol": "F:rb.field_a:Lsd;",
+      "renamedSymbol": "F:rb.field_a:LDiskCacheWorker;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -27069,7 +27189,7 @@
     },
     {
       "symbol": "F:sd.field_a:I",
-      "renamedSymbol": "F:sd.field_a:I",
+      "renamedSymbol": "F:DiskCacheWorker.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -27080,7 +27200,7 @@
     },
     {
       "symbol": "F:sd.field_b:I",
-      "renamedSymbol": "F:sd.field_b:I",
+      "renamedSymbol": "F:DiskCacheWorker.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -27091,7 +27211,7 @@
     },
     {
       "symbol": "F:sd.field_c:Lil;",
-      "renamedSymbol": "F:sd.field_c:LBufferedCacheFile;",
+      "renamedSymbol": "F:DiskCacheWorker.field_c:LBufferedCacheFile;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -27102,7 +27222,7 @@
     },
     {
       "symbol": "F:sd.field_d:[I",
-      "renamedSymbol": "F:sd.field_d:[I",
+      "renamedSymbol": "F:DiskCacheWorker.field_d:[I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -27113,7 +27233,7 @@
     },
     {
       "symbol": "F:sd.field_e:Ljava/lang/Thread;",
-      "renamedSymbol": "F:sd.field_e:Ljava/lang/Thread;",
+      "renamedSymbol": "F:DiskCacheWorker.field_e:Ljava/lang/Thread;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -27124,7 +27244,7 @@
     },
     {
       "symbol": "F:sd.field_f:Lmb;",
-      "renamedSymbol": "F:sd.field_f:Lmb;",
+      "renamedSymbol": "F:DiskCacheWorker.field_f:Lmb;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -27135,7 +27255,7 @@
     },
     {
       "symbol": "F:sd.field_g:Z",
-      "renamedSymbol": "F:sd.field_g:Z",
+      "renamedSymbol": "F:DiskCacheWorker.field_g:Z",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -30787,7 +30907,7 @@
     },
     {
       "symbol": "F:wg.field_c:Lhi;",
-      "renamedSymbol": "F:wg.field_c:Lhi;",
+      "renamedSymbol": "F:wg.field_c:LNetworkArchiveRequest;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -30820,7 +30940,7 @@
     },
     {
       "symbol": "F:wg.field_f:Lsd;",
-      "renamedSymbol": "F:wg.field_f:Lsd;",
+      "renamedSymbol": "F:wg.field_f:LDiskCacheWorker;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -32360,7 +32480,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#0",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#0",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -32371,7 +32491,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#1",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#1",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#1",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -32382,7 +32502,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#2",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#2",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#2",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -32393,7 +32513,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#3",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#3",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#3",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -32404,7 +32524,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#4",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#4",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#4",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -32415,7 +32535,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#5",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#5",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -32426,7 +32546,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#6",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#6",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#6",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -32437,7 +32557,7 @@
     },
     {
       "symbol": "L:ae.a(IZZIB)Lhi;#7",
-      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)Lhi;#7",
+      "renamedSymbol": "L:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#7",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -59530,7 +59650,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#0",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#0",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#0",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -59541,7 +59661,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#1",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#1",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#1",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -59552,7 +59672,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#10",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#10",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#10",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -59563,7 +59683,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#11",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#11",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#11",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -59574,7 +59694,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#12",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#12",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -59585,7 +59705,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#13",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#13",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#13",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -59596,7 +59716,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#14",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#14",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#14",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -59607,7 +59727,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#2",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#2",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#2",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -59618,7 +59738,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#3",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#3",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#3",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -59629,7 +59749,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#4",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#4",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#4",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -59640,7 +59760,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#5",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#5",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#5",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -59651,7 +59771,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#6",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#6",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#6",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -59662,7 +59782,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#7",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#7",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#7",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -59673,7 +59793,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#8",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#8",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#8",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -59684,7 +59804,7 @@
     },
     {
       "symbol": "L:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#9",
-      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#9",
+      "renamedSymbol": "L:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#9",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -64942,7 +65062,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#0",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#0",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#0",
       "originalName": "stackIn_60_0",
       "renamedName": "stackIn_60_0",
       "declaration": {
@@ -64953,7 +65073,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#1",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#1",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#1",
       "originalName": "stackIn_60_1",
       "renamedName": "stackIn_60_1",
       "declaration": {
@@ -64964,7 +65084,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#10",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#10",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#10",
       "originalName": "var6_ref",
       "renamedName": "var6_ref",
       "declaration": {
@@ -64975,7 +65095,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#11",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#11",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#11",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -64986,7 +65106,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#12",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#12",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -64997,7 +65117,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#13",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#13",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -65008,7 +65128,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#14",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#14",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -65019,7 +65139,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#15",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#15",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -65030,7 +65150,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#16",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#16",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#16",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -65041,7 +65161,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#17",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#17",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#17",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -65052,7 +65172,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#18",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#18",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#18",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -65063,7 +65183,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#19",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#19",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#19",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -65074,7 +65194,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#2",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#2",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#2",
       "originalName": "stackIn_61_2",
       "renamedName": "stackIn_61_2",
       "declaration": {
@@ -65085,7 +65205,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#20",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#20",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#20",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -65096,7 +65216,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#21",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#21",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#21",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -65107,7 +65227,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#22",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#22",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#22",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -65118,7 +65238,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#23",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#23",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#23",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -65129,7 +65249,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#24",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#24",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#24",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -65140,7 +65260,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#25",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#25",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#25",
       "originalName": "decompiledCaughtParameter3",
       "renamedName": "decompiledCaughtParameter3",
       "declaration": {
@@ -65151,7 +65271,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#26",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#26",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#26",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -65162,7 +65282,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#27",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#27",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#27",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -65173,7 +65293,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#3",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#3",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#3",
       "originalName": "stackIn_75_0",
       "renamedName": "stackIn_75_0",
       "declaration": {
@@ -65184,7 +65304,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#4",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#4",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#4",
       "originalName": "stackIn_75_1",
       "renamedName": "stackIn_75_1",
       "declaration": {
@@ -65195,7 +65315,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#5",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#5",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#5",
       "originalName": "stackIn_76_2",
       "renamedName": "stackIn_76_2",
       "declaration": {
@@ -65206,7 +65326,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#6",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#6",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#6",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -65217,7 +65337,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#7",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#7",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#7",
       "originalName": "decompiledRegionSelector1",
       "renamedName": "decompiledRegionSelector1",
       "declaration": {
@@ -65228,7 +65348,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#8",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#8",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -65239,7 +65359,7 @@
     },
     {
       "symbol": "L:hf.a([BIIZZ)Z#9",
-      "renamedSymbol": "L:DiskArchiveStore.a([BIIZZ)Z#9",
+      "renamedSymbol": "L:DiskArchiveStore.writeSectorChain([BIIZZ)Z#9",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -66075,7 +66195,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#0",
-      "renamedSymbol": "L:hi.b(III)V#0",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -66086,7 +66206,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#1",
-      "renamedSymbol": "L:hi.b(III)V#1",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -66097,7 +66217,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#10",
-      "renamedSymbol": "L:hi.b(III)V#10",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#10",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -66108,7 +66228,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#11",
-      "renamedSymbol": "L:hi.b(III)V#11",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#11",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -66119,7 +66239,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#2",
-      "renamedSymbol": "L:hi.b(III)V#2",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -66130,7 +66250,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#3",
-      "renamedSymbol": "L:hi.b(III)V#3",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -66141,7 +66261,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#4",
-      "renamedSymbol": "L:hi.b(III)V#4",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -66152,7 +66272,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#5",
-      "renamedSymbol": "L:hi.b(III)V#5",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -66163,7 +66283,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#6",
-      "renamedSymbol": "L:hi.b(III)V#6",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -66174,7 +66294,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#7",
-      "renamedSymbol": "L:hi.b(III)V#7",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#7",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -66185,7 +66305,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#8",
-      "renamedSymbol": "L:hi.b(III)V#8",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#8",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -66196,7 +66316,7 @@
     },
     {
       "symbol": "L:hi.b(III)V#9",
-      "renamedSymbol": "L:hi.b(III)V#9",
+      "renamedSymbol": "L:NetworkArchiveRequest.b(III)V#9",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -81156,7 +81276,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#0",
-      "renamedSymbol": "L:lh.<initializer>()V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -81167,7 +81287,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#1",
-      "renamedSymbol": "L:lh.<initializer>()V#1",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -81178,7 +81298,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#2",
-      "renamedSymbol": "L:lh.<initializer>()V#2",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -81189,7 +81309,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#3",
-      "renamedSymbol": "L:lh.<initializer>()V#3",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -81200,7 +81320,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#4",
-      "renamedSymbol": "L:lh.<initializer>()V#4",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#4",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -81211,7 +81331,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#5",
-      "renamedSymbol": "L:lh.<initializer>()V#5",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#5",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -81222,7 +81342,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#6",
-      "renamedSymbol": "L:lh.<initializer>()V#6",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#6",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -81233,7 +81353,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#7",
-      "renamedSymbol": "L:lh.<initializer>()V#7",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -81244,7 +81364,7 @@
     },
     {
       "symbol": "L:lh.<initializer>()V#8",
-      "renamedSymbol": "L:lh.<initializer>()V#8",
+      "renamedSymbol": "L:DiskArchiveRequest.<initializer>()V#8",
       "originalName": "var0",
       "renamedName": "var0",
       "declaration": {
@@ -81255,7 +81375,7 @@
     },
     {
       "symbol": "L:lh.a(ZI)V#0",
-      "renamedSymbol": "L:lh.a(ZI)V#0",
+      "renamedSymbol": "L:DiskArchiveRequest.a(ZI)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -124452,7 +124572,7 @@
     },
     {
       "symbol": "L:sd.<init>(Luf;)V#0",
-      "renamedSymbol": "L:sd.<init>(LPlatformTaskDispatcher;)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.<init>(LPlatformTaskDispatcher;)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -124463,7 +124583,7 @@
     },
     {
       "symbol": "L:sd.<init>(Luf;)V#1",
-      "renamedSymbol": "L:sd.<init>(LPlatformTaskDispatcher;)V#1",
+      "renamedSymbol": "L:DiskCacheWorker.<init>(LPlatformTaskDispatcher;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -124474,7 +124594,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#0",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#0",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -124485,7 +124605,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#1",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#1",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -124496,7 +124616,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#10",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#10",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#10",
       "originalName": "stackIn_20_2",
       "renamedName": "stackIn_20_2",
       "declaration": {
@@ -124507,7 +124627,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#11",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#11",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -124518,7 +124638,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#12",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#12",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -124529,7 +124649,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#2",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#2",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -124540,7 +124660,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#3",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#3",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -124551,7 +124671,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#4",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#4",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -124562,7 +124682,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#5",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#5",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -124573,7 +124693,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#6",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#6",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#6",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -124584,7 +124704,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#7",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#7",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#7",
       "originalName": "stackIn_16_0",
       "renamedName": "stackIn_16_0",
       "declaration": {
@@ -124595,7 +124715,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#8",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#8",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#8",
       "originalName": "stackIn_19_0",
       "renamedName": "stackIn_19_0",
       "declaration": {
@@ -124606,7 +124726,7 @@
     },
     {
       "symbol": "L:sd.a(BILhf;)Llh;#9",
-      "renamedSymbol": "L:sd.a(BILDiskArchiveStore;)Llh;#9",
+      "renamedSymbol": "L:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#9",
       "originalName": "stackIn_19_1",
       "renamedName": "stackIn_19_1",
       "declaration": {
@@ -124617,7 +124737,7 @@
     },
     {
       "symbol": "L:sd.a(I)V#0",
-      "renamedSymbol": "L:sd.a(I)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(I)V#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -124628,7 +124748,7 @@
     },
     {
       "symbol": "L:sd.a(I)V#1",
-      "renamedSymbol": "L:sd.a(I)V#1",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(I)V#1",
       "originalName": "interruptedException",
       "renamedName": "interruptedException",
       "declaration": {
@@ -124639,7 +124759,7 @@
     },
     {
       "symbol": "L:sd.a(I)V#2",
-      "renamedSymbol": "L:sd.a(I)V#2",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(I)V#2",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -124650,7 +124770,7 @@
     },
     {
       "symbol": "L:sd.a(I)V#3",
-      "renamedSymbol": "L:sd.a(I)V#3",
+      "renamedSymbol": "L:DiskCacheWorker.shutdown(I)V#3",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -124661,7 +124781,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#0",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#0",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -124672,7 +124792,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#1",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#1",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#1",
       "originalName": "var9_ref",
       "renamedName": "var9_ref",
       "declaration": {
@@ -124683,7 +124803,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#2",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#2",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -124694,7 +124814,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#3",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#3",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -124705,7 +124825,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#4",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#4",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -124716,7 +124836,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#5",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#5",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -124727,7 +124847,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#6",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#6",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -124738,7 +124858,7 @@
     },
     {
       "symbol": "L:sd.a(IIIIZII[II)Laj;#7",
-      "renamedSymbol": "L:sd.a(IIIIZII[II)Laj;#7",
+      "renamedSymbol": "L:DiskCacheWorker.a(IIIIZII[II)Laj;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -124749,7 +124869,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#0",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#0",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -124760,7 +124880,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#1",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#1",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -124771,7 +124891,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#10",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#10",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -124782,7 +124902,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#2",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#2",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#2",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -124793,7 +124913,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#3",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#3",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#3",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -124804,7 +124924,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#4",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#4",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#4",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -124815,7 +124935,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#5",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#5",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#5",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -124826,7 +124946,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#6",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#6",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#6",
       "originalName": "stackIn_8_2",
       "renamedName": "stackIn_8_2",
       "declaration": {
@@ -124837,7 +124957,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#7",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#7",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#7",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -124848,7 +124968,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#8",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#8",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#8",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -124859,7 +124979,7 @@
     },
     {
       "symbol": "L:sd.a(I[BLhf;B)Llh;#9",
-      "renamedSymbol": "L:sd.a(I[BLDiskArchiveStore;B)Llh;#9",
+      "renamedSymbol": "L:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -124870,7 +124990,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -124881,7 +125001,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -124892,7 +125012,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#2",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#2",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -124903,7 +125023,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#3",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#3",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -124914,7 +125034,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#4",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#4",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#4",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -124925,7 +125045,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#5",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#5",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#5",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -124936,7 +125056,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#6",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#6",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#6",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -124947,7 +125067,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#7",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#7",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -124958,7 +125078,7 @@
     },
     {
       "symbol": "L:sd.a(Ljava/lang/String;B)Z#8",
-      "renamedSymbol": "L:sd.a(Ljava/lang/String;B)Z#8",
+      "renamedSymbol": "L:DiskCacheWorker.a(Ljava/lang/String;B)Z#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -124969,7 +125089,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#0",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#0",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -124980,7 +125100,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#1",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#1",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -124991,7 +125111,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#2",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#2",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -125002,7 +125122,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#3",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#3",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -125013,7 +125133,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#4",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#4",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -125024,7 +125144,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#5",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#5",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -125035,7 +125155,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#6",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#6",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -125046,7 +125166,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#7",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#7",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -125057,7 +125177,7 @@
     },
     {
       "symbol": "L:sd.a(ZILhf;)Llh;#8",
-      "renamedSymbol": "L:sd.a(ZILDiskArchiveStore;)Llh;#8",
+      "renamedSymbol": "L:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -125068,7 +125188,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#0",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#0",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -125079,7 +125199,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#1",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#1",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#1",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -125090,7 +125210,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#10",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#10",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#10",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -125101,7 +125221,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#2",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#2",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#2",
       "originalName": "stackIn_3_1",
       "renamedName": "stackIn_3_1",
       "declaration": {
@@ -125112,7 +125232,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#3",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#3",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#3",
       "originalName": "stackIn_4_2",
       "renamedName": "stackIn_4_2",
       "declaration": {
@@ -125123,7 +125243,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#4",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#4",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#4",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -125134,7 +125254,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#5",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#5",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#5",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -125145,7 +125265,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#6",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#6",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#6",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -125156,7 +125276,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#7",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#7",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -125167,7 +125287,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#8",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#8",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#8",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -125178,7 +125298,7 @@
     },
     {
       "symbol": "L:sd.a(ZLlh;)V#9",
-      "renamedSymbol": "L:sd.a(ZLlh;)V#9",
+      "renamedSymbol": "L:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#9",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -125189,7 +125309,7 @@
     },
     {
       "symbol": "L:sd.run()V#0",
-      "renamedSymbol": "L:sd.run()V#0",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#0",
       "originalName": "interruptedException",
       "renamedName": "interruptedException",
       "declaration": {
@@ -125200,7 +125320,7 @@
     },
     {
       "symbol": "L:sd.run()V#1",
-      "renamedSymbol": "L:sd.run()V#1",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -125211,7 +125331,7 @@
     },
     {
       "symbol": "L:sd.run()V#10",
-      "renamedSymbol": "L:sd.run()V#10",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#10",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -125222,7 +125342,7 @@
     },
     {
       "symbol": "L:sd.run()V#11",
-      "renamedSymbol": "L:sd.run()V#11",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#11",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -125233,7 +125353,7 @@
     },
     {
       "symbol": "L:sd.run()V#2",
-      "renamedSymbol": "L:sd.run()V#2",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -125244,7 +125364,7 @@
     },
     {
       "symbol": "L:sd.run()V#3",
-      "renamedSymbol": "L:sd.run()V#3",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -125255,7 +125375,7 @@
     },
     {
       "symbol": "L:sd.run()V#4",
-      "renamedSymbol": "L:sd.run()V#4",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#4",
       "originalName": "decompiledRegionSelector0",
       "renamedName": "decompiledRegionSelector0",
       "declaration": {
@@ -125266,7 +125386,7 @@
     },
     {
       "symbol": "L:sd.run()V#5",
-      "renamedSymbol": "L:sd.run()V#5",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#5",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -125277,7 +125397,7 @@
     },
     {
       "symbol": "L:sd.run()V#6",
-      "renamedSymbol": "L:sd.run()V#6",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#6",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -125288,7 +125408,7 @@
     },
     {
       "symbol": "L:sd.run()V#7",
-      "renamedSymbol": "L:sd.run()V#7",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -125299,7 +125419,7 @@
     },
     {
       "symbol": "L:sd.run()V#8",
-      "renamedSymbol": "L:sd.run()V#8",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -125310,7 +125430,7 @@
     },
     {
       "symbol": "L:sd.run()V#9",
-      "renamedSymbol": "L:sd.run()V#9",
+      "renamedSymbol": "L:DiskCacheWorker.run()V#9",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -143284,7 +143404,7 @@
     },
     {
       "symbol": "L:wg.<init>(Lae;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
-      "renamedSymbol": "L:wg.<init>(LArchiveRequestConnection;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "renamedSymbol": "L:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -144175,7 +144295,7 @@
     },
     {
       "symbol": "M:ae.a(IZZIB)Lhi;",
-      "renamedSymbol": "M:ArchiveRequestConnection.a(IZZIB)Lhi;",
+      "renamedSymbol": "M:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -150522,7 +150642,7 @@
     },
     {
       "symbol": "M:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V",
-      "renamedSymbol": "M:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V",
+      "renamedSymbol": "M:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V",
       "originalName": "gd",
       "renamedName": "CachedArchiveSource",
       "declaration": {
@@ -151523,9 +151643,9 @@
     },
     {
       "symbol": "M:hf.a([BIIZZ)Z",
-      "renamedSymbol": "M:DiskArchiveStore.a([BIIZZ)Z",
+      "renamedSymbol": "M:DiskArchiveStore.writeSectorChain([BIIZZ)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "writeSectorChain",
       "declaration": {
         "file": "hf.java",
         "start": 10728,
@@ -151699,9 +151819,9 @@
     },
     {
       "symbol": "M:hi.<init>()V",
-      "renamedSymbol": "M:hi.<init>()V",
+      "renamedSymbol": "M:NetworkArchiveRequest.<init>()V",
       "originalName": "hi",
-      "renamedName": "hi",
+      "renamedName": "NetworkArchiveRequest",
       "declaration": {
         "file": "hi.java",
         "start": 5318,
@@ -151710,9 +151830,9 @@
     },
     {
       "symbol": "M:hi.a(B)I",
-      "renamedSymbol": "M:hi.a(B)I",
+      "renamedSymbol": "M:NetworkArchiveRequest.getProgressPercent(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getProgressPercent",
       "declaration": {
         "file": "hi.java",
         "start": 4622,
@@ -151721,7 +151841,7 @@
     },
     {
       "symbol": "M:hi.b(III)V",
-      "renamedSymbol": "M:hi.b(III)V",
+      "renamedSymbol": "M:NetworkArchiveRequest.b(III)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -151732,7 +151852,7 @@
     },
     {
       "symbol": "M:hi.c(B)V",
-      "renamedSymbol": "M:hi.clearStaticReferences(B)V",
+      "renamedSymbol": "M:NetworkArchiveRequest.clearStaticReferences(B)V",
       "originalName": "c",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -151743,9 +151863,9 @@
     },
     {
       "symbol": "M:hi.g(I)[B",
-      "renamedSymbol": "M:hi.g(I)[B",
+      "renamedSymbol": "M:NetworkArchiveRequest.getData(I)[B",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "getData",
       "declaration": {
         "file": "hi.java",
         "start": 4972,
@@ -155296,9 +155416,9 @@
     },
     {
       "symbol": "M:lh.<init>()V",
-      "renamedSymbol": "M:lh.<init>()V",
+      "renamedSymbol": "M:DiskArchiveRequest.<init>()V",
       "originalName": "lh",
-      "renamedName": "lh",
+      "renamedName": "DiskArchiveRequest",
       "declaration": {
         "file": "lh.java",
         "start": 970,
@@ -155307,9 +155427,9 @@
     },
     {
       "symbol": "M:lh.a(B)I",
-      "renamedSymbol": "M:lh.a(B)I",
+      "renamedSymbol": "M:DiskArchiveRequest.getProgressPercent(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getProgressPercent",
       "declaration": {
         "file": "lh.java",
         "start": 665,
@@ -155318,7 +155438,7 @@
     },
     {
       "symbol": "M:lh.a(ZI)V",
-      "renamedSymbol": "M:lh.a(ZI)V",
+      "renamedSymbol": "M:DiskArchiveRequest.a(ZI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -155329,7 +155449,7 @@
     },
     {
       "symbol": "M:lh.c(B)V",
-      "renamedSymbol": "M:lh.clearStaticReferences(B)V",
+      "renamedSymbol": "M:DiskArchiveRequest.clearStaticReferences(B)V",
       "originalName": "c",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -155340,9 +155460,9 @@
     },
     {
       "symbol": "M:lh.g(I)[B",
-      "renamedSymbol": "M:lh.g(I)[B",
+      "renamedSymbol": "M:DiskArchiveRequest.getData(I)[B",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "getData",
       "declaration": {
         "file": "lh.java",
         "start": 239,
@@ -163029,9 +163149,9 @@
     },
     {
       "symbol": "M:sd.<init>(Luf;)V",
-      "renamedSymbol": "M:sd.<init>(LPlatformTaskDispatcher;)V",
+      "renamedSymbol": "M:DiskCacheWorker.<init>(LPlatformTaskDispatcher;)V",
       "originalName": "sd",
-      "renamedName": "sd",
+      "renamedName": "DiskCacheWorker",
       "declaration": {
         "file": "sd.java",
         "start": 12881,
@@ -163040,7 +163160,7 @@
     },
     {
       "symbol": "M:sd.a(B)V",
-      "renamedSymbol": "M:sd.resetStaticState(B)V",
+      "renamedSymbol": "M:DiskCacheWorker.resetStaticState(B)V",
       "originalName": "a",
       "renamedName": "resetStaticState",
       "declaration": {
@@ -163051,9 +163171,9 @@
     },
     {
       "symbol": "M:sd.a(BILhf;)Llh;",
-      "renamedSymbol": "M:sd.a(BILDiskArchiveStore;)Llh;",
+      "renamedSymbol": "M:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readNow",
       "declaration": {
         "file": "sd.java",
         "start": 9382,
@@ -163062,9 +163182,9 @@
     },
     {
       "symbol": "M:sd.a(I)V",
-      "renamedSymbol": "M:sd.a(I)V",
+      "renamedSymbol": "M:DiskCacheWorker.shutdown(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "sd.java",
         "start": 7193,
@@ -163073,7 +163193,7 @@
     },
     {
       "symbol": "M:sd.a(IIIIZII[II)Laj;",
-      "renamedSymbol": "M:sd.a(IIIIZII[II)Laj;",
+      "renamedSymbol": "M:DiskCacheWorker.a(IIIIZII[II)Laj;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -163084,9 +163204,9 @@
     },
     {
       "symbol": "M:sd.a(I[BLhf;B)Llh;",
-      "renamedSymbol": "M:sd.a(I[BLDiskArchiveStore;B)Llh;",
+      "renamedSymbol": "M:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestWrite",
       "declaration": {
         "file": "sd.java",
         "start": 5468,
@@ -163095,7 +163215,7 @@
     },
     {
       "symbol": "M:sd.a(Ljava/lang/String;B)Z",
-      "renamedSymbol": "M:sd.a(Ljava/lang/String;B)Z",
+      "renamedSymbol": "M:DiskCacheWorker.a(Ljava/lang/String;B)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -163106,9 +163226,9 @@
     },
     {
       "symbol": "M:sd.a(ZILhf;)Llh;",
-      "renamedSymbol": "M:sd.a(ZILDiskArchiveStore;)Llh;",
+      "renamedSymbol": "M:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestRead",
       "declaration": {
         "file": "sd.java",
         "start": 260,
@@ -163117,9 +163237,9 @@
     },
     {
       "symbol": "M:sd.a(ZLlh;)V",
-      "renamedSymbol": "M:sd.a(ZLlh;)V",
+      "renamedSymbol": "M:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueue",
       "declaration": {
         "file": "sd.java",
         "start": 7839,
@@ -163128,7 +163248,7 @@
     },
     {
       "symbol": "M:sd.run()V",
-      "renamedSymbol": "M:sd.run()V",
+      "renamedSymbol": "M:DiskCacheWorker.run()V",
       "originalName": "run",
       "renamedName": "run",
       "declaration": {
@@ -164360,9 +164480,9 @@
     },
     {
       "symbol": "M:tk.a(B)I",
-      "renamedSymbol": "M:AsyncRequest.a(B)I",
+      "renamedSymbol": "M:AsyncRequest.getProgressPercent(B)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getProgressPercent",
       "declaration": {
         "file": "tk.java",
         "start": 741,
@@ -164393,9 +164513,9 @@
     },
     {
       "symbol": "M:tk.g(I)[B",
-      "renamedSymbol": "M:AsyncRequest.g(I)[B",
+      "renamedSymbol": "M:AsyncRequest.getData(I)[B",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "getData",
       "declaration": {
         "file": "tk.java",
         "start": 314,
@@ -166736,7 +166856,7 @@
     },
     {
       "symbol": "M:wg.<init>(Lae;Lsd;)V",
-      "renamedSymbol": "M:wg.<init>(LArchiveRequestConnection;Lsd;)V",
+      "renamedSymbol": "M:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;)V",
       "originalName": "wg",
       "renamedName": "wg",
       "declaration": {
@@ -166747,7 +166867,7 @@
     },
     {
       "symbol": "M:wg.<init>(Lae;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
-      "renamedSymbol": "M:wg.<init>(LArchiveRequestConnection;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
+      "renamedSymbol": "M:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V",
       "originalName": "wg",
       "renamedName": "wg",
       "declaration": {
@@ -167550,7 +167670,7 @@
     },
     {
       "symbol": "P:ae.a(IZZIB)Lhi;#0",
-      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)Lhi;#0",
+      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -167561,7 +167681,7 @@
     },
     {
       "symbol": "P:ae.a(IZZIB)Lhi;#1",
-      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)Lhi;#1",
+      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -167572,7 +167692,7 @@
     },
     {
       "symbol": "P:ae.a(IZZIB)Lhi;#2",
-      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)Lhi;#2",
+      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -167583,7 +167703,7 @@
     },
     {
       "symbol": "P:ae.a(IZZIB)Lhi;#3",
-      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)Lhi;#3",
+      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -167594,7 +167714,7 @@
     },
     {
       "symbol": "P:ae.a(IZZIB)Lhi;#4",
-      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)Lhi;#4",
+      "renamedSymbol": "P:ArchiveRequestConnection.a(IZZIB)LNetworkArchiveRequest;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -184116,7 +184236,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#0",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#0",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -184127,7 +184247,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#1",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#1",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -184138,7 +184258,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#2",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#2",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -184149,7 +184269,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#3",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#3",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -184160,7 +184280,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#4",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#4",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -184171,7 +184291,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#5",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#5",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -184182,7 +184302,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#6",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#6",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -184193,7 +184313,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#7",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#7",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -184204,7 +184324,7 @@
     },
     {
       "symbol": "P:gd.<init>(ILhf;Lhf;Lae;Lsd;I[BIZ)V#8",
-      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;Lsd;I[BIZ)V#8",
+      "renamedSymbol": "P:CachedArchiveSource.<init>(ILDiskArchiveStore;LDiskArchiveStore;LArchiveRequestConnection;LDiskCacheWorker;I[BIZ)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -186635,7 +186755,7 @@
     },
     {
       "symbol": "P:hf.a([BIIZZ)Z#0",
-      "renamedSymbol": "P:DiskArchiveStore.a([BIIZZ)Z#0",
+      "renamedSymbol": "P:DiskArchiveStore.writeSectorChain([BIIZZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -186646,7 +186766,7 @@
     },
     {
       "symbol": "P:hf.a([BIIZZ)Z#1",
-      "renamedSymbol": "P:DiskArchiveStore.a([BIIZZ)Z#1",
+      "renamedSymbol": "P:DiskArchiveStore.writeSectorChain([BIIZZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -186657,7 +186777,7 @@
     },
     {
       "symbol": "P:hf.a([BIIZZ)Z#2",
-      "renamedSymbol": "P:DiskArchiveStore.a([BIIZZ)Z#2",
+      "renamedSymbol": "P:DiskArchiveStore.writeSectorChain([BIIZZ)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -186668,7 +186788,7 @@
     },
     {
       "symbol": "P:hf.a([BIIZZ)Z#3",
-      "renamedSymbol": "P:DiskArchiveStore.a([BIIZZ)Z#3",
+      "renamedSymbol": "P:DiskArchiveStore.writeSectorChain([BIIZZ)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -186679,7 +186799,7 @@
     },
     {
       "symbol": "P:hf.a([BIIZZ)Z#4",
-      "renamedSymbol": "P:DiskArchiveStore.a([BIIZZ)Z#4",
+      "renamedSymbol": "P:DiskArchiveStore.writeSectorChain([BIIZZ)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -187328,7 +187448,7 @@
     },
     {
       "symbol": "P:hi.a(B)I#0",
-      "renamedSymbol": "P:hi.a(B)I#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.getProgressPercent(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187339,7 +187459,7 @@
     },
     {
       "symbol": "P:hi.b(III)V#0",
-      "renamedSymbol": "P:hi.b(III)V#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.b(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187350,7 +187470,7 @@
     },
     {
       "symbol": "P:hi.b(III)V#1",
-      "renamedSymbol": "P:hi.b(III)V#1",
+      "renamedSymbol": "P:NetworkArchiveRequest.b(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -187361,7 +187481,7 @@
     },
     {
       "symbol": "P:hi.b(III)V#2",
-      "renamedSymbol": "P:hi.b(III)V#2",
+      "renamedSymbol": "P:NetworkArchiveRequest.b(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -187372,7 +187492,7 @@
     },
     {
       "symbol": "P:hi.c(B)V#0",
-      "renamedSymbol": "P:hi.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -187383,7 +187503,7 @@
     },
     {
       "symbol": "P:hi.g(I)[B#0",
-      "renamedSymbol": "P:hi.g(I)[B#0",
+      "renamedSymbol": "P:NetworkArchiveRequest.getData(I)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194841,7 +194961,7 @@
     },
     {
       "symbol": "P:lh.a(B)I#0",
-      "renamedSymbol": "P:lh.a(B)I#0",
+      "renamedSymbol": "P:DiskArchiveRequest.getProgressPercent(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194852,7 +194972,7 @@
     },
     {
       "symbol": "P:lh.a(ZI)V#0",
-      "renamedSymbol": "P:lh.a(ZI)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.a(ZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194863,7 +194983,7 @@
     },
     {
       "symbol": "P:lh.a(ZI)V#1",
-      "renamedSymbol": "P:lh.a(ZI)V#1",
+      "renamedSymbol": "P:DiskArchiveRequest.a(ZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -194874,7 +194994,7 @@
     },
     {
       "symbol": "P:lh.c(B)V#0",
-      "renamedSymbol": "P:lh.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:DiskArchiveRequest.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -194885,7 +195005,7 @@
     },
     {
       "symbol": "P:lh.g(I)[B#0",
-      "renamedSymbol": "P:lh.g(I)[B#0",
+      "renamedSymbol": "P:DiskArchiveRequest.getData(I)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213310,7 +213430,7 @@
     },
     {
       "symbol": "P:sd.<init>(Luf;)V#0",
-      "renamedSymbol": "P:sd.<init>(LPlatformTaskDispatcher;)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.<init>(LPlatformTaskDispatcher;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213321,7 +213441,7 @@
     },
     {
       "symbol": "P:sd.a(B)V#0",
-      "renamedSymbol": "P:sd.resetStaticState(B)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213332,7 +213452,7 @@
     },
     {
       "symbol": "P:sd.a(BILhf;)Llh;#0",
-      "renamedSymbol": "P:sd.a(BILDiskArchiveStore;)Llh;#0",
+      "renamedSymbol": "P:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213343,7 +213463,7 @@
     },
     {
       "symbol": "P:sd.a(BILhf;)Llh;#1",
-      "renamedSymbol": "P:sd.a(BILDiskArchiveStore;)Llh;#1",
+      "renamedSymbol": "P:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213354,7 +213474,7 @@
     },
     {
       "symbol": "P:sd.a(BILhf;)Llh;#2",
-      "renamedSymbol": "P:sd.a(BILDiskArchiveStore;)Llh;#2",
+      "renamedSymbol": "P:DiskCacheWorker.readNow(BILDiskArchiveStore;)LDiskArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213365,7 +213485,7 @@
     },
     {
       "symbol": "P:sd.a(I)V#0",
-      "renamedSymbol": "P:sd.a(I)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.shutdown(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213376,7 +213496,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#0",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#0",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213387,7 +213507,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#1",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#1",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213398,7 +213518,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#2",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#2",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213409,7 +213529,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#3",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#3",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213420,7 +213540,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#4",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#4",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -213431,7 +213551,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#5",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#5",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -213442,7 +213562,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#6",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#6",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -213453,7 +213573,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#7",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#7",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -213464,7 +213584,7 @@
     },
     {
       "symbol": "P:sd.a(IIIIZII[II)Laj;#8",
-      "renamedSymbol": "P:sd.a(IIIIZII[II)Laj;#8",
+      "renamedSymbol": "P:DiskCacheWorker.a(IIIIZII[II)Laj;#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -213475,7 +213595,7 @@
     },
     {
       "symbol": "P:sd.a(I[BLhf;B)Llh;#0",
-      "renamedSymbol": "P:sd.a(I[BLDiskArchiveStore;B)Llh;#0",
+      "renamedSymbol": "P:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213486,7 +213606,7 @@
     },
     {
       "symbol": "P:sd.a(I[BLhf;B)Llh;#1",
-      "renamedSymbol": "P:sd.a(I[BLDiskArchiveStore;B)Llh;#1",
+      "renamedSymbol": "P:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213497,7 +213617,7 @@
     },
     {
       "symbol": "P:sd.a(I[BLhf;B)Llh;#2",
-      "renamedSymbol": "P:sd.a(I[BLDiskArchiveStore;B)Llh;#2",
+      "renamedSymbol": "P:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213508,7 +213628,7 @@
     },
     {
       "symbol": "P:sd.a(I[BLhf;B)Llh;#3",
-      "renamedSymbol": "P:sd.a(I[BLDiskArchiveStore;B)Llh;#3",
+      "renamedSymbol": "P:DiskCacheWorker.requestWrite(I[BLDiskArchiveStore;B)LDiskArchiveRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213519,7 +213639,7 @@
     },
     {
       "symbol": "P:sd.a(Ljava/lang/String;B)Z#0",
-      "renamedSymbol": "P:sd.a(Ljava/lang/String;B)Z#0",
+      "renamedSymbol": "P:DiskCacheWorker.a(Ljava/lang/String;B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213530,7 +213650,7 @@
     },
     {
       "symbol": "P:sd.a(Ljava/lang/String;B)Z#1",
-      "renamedSymbol": "P:sd.a(Ljava/lang/String;B)Z#1",
+      "renamedSymbol": "P:DiskCacheWorker.a(Ljava/lang/String;B)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213541,7 +213661,7 @@
     },
     {
       "symbol": "P:sd.a(ZILhf;)Llh;#0",
-      "renamedSymbol": "P:sd.a(ZILDiskArchiveStore;)Llh;#0",
+      "renamedSymbol": "P:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213552,7 +213672,7 @@
     },
     {
       "symbol": "P:sd.a(ZILhf;)Llh;#1",
-      "renamedSymbol": "P:sd.a(ZILDiskArchiveStore;)Llh;#1",
+      "renamedSymbol": "P:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213563,7 +213683,7 @@
     },
     {
       "symbol": "P:sd.a(ZILhf;)Llh;#2",
-      "renamedSymbol": "P:sd.a(ZILDiskArchiveStore;)Llh;#2",
+      "renamedSymbol": "P:DiskCacheWorker.requestRead(ZILDiskArchiveStore;)LDiskArchiveRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213574,7 +213694,7 @@
     },
     {
       "symbol": "P:sd.a(ZLlh;)V#0",
-      "renamedSymbol": "P:sd.a(ZLlh;)V#0",
+      "renamedSymbol": "P:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213585,7 +213705,7 @@
     },
     {
       "symbol": "P:sd.a(ZLlh;)V#1",
-      "renamedSymbol": "P:sd.a(ZLlh;)V#1",
+      "renamedSymbol": "P:DiskCacheWorker.enqueue(ZLDiskArchiveRequest;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -216368,7 +216488,7 @@
     },
     {
       "symbol": "P:tk.a(B)I#0",
-      "renamedSymbol": "P:AsyncRequest.a(B)I#0",
+      "renamedSymbol": "P:AsyncRequest.getProgressPercent(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -216423,7 +216543,7 @@
     },
     {
       "symbol": "P:tk.g(I)[B#0",
-      "renamedSymbol": "P:AsyncRequest.g(I)[B#0",
+      "renamedSymbol": "P:AsyncRequest.getData(I)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -221450,7 +221570,7 @@
     },
     {
       "symbol": "P:wg.<init>(Lae;Lsd;)V#0",
-      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;Lsd;)V#0",
+      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -221461,7 +221581,7 @@
     },
     {
       "symbol": "P:wg.<init>(Lae;Lsd;)V#1",
-      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;Lsd;)V#1",
+      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -221472,7 +221592,7 @@
     },
     {
       "symbol": "P:wg.<init>(Lae;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
-      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
+      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -221483,7 +221603,7 @@
     },
     {
       "symbol": "P:wg.<init>(Lae;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
-      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
+      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -221494,7 +221614,7 @@
     },
     {
       "symbol": "P:wg.<init>(Lae;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
-      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
+      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -221505,7 +221625,7 @@
     },
     {
       "symbol": "P:wg.<init>(Lae;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
-      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;Lsd;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
+      "renamedSymbol": "P:wg.<init>(LArchiveRequestConnection;LDiskCacheWorker;Ljava/math/BigInteger;Ljava/math/BigInteger;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -222070,7 +222190,7 @@
       "original": "TrackController.java",
       "renamed": "TrackController.java",
       "inputSha256": "49d744ca886e6641bafaca916524c2cb5d5fa26126d63ff119698b88cb016b28",
-      "outputSha256": "ab7b51aa49e8139eae0428f5d3bb5988b094eeaf698323ee2fd2fed9d382d797",
+      "outputSha256": "0d4749e4c66a570b67e09bb2e1db945816c39ce252e61927740ffea9499ee1b7",
       "edits": [
         {
           "start": 100,
@@ -222962,6 +223082,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 10487,
+          "end": 10489,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 10490,
           "end": 10491,
           "symbol": "M:sd.a(B)V",
@@ -223480,6 +223607,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 11880,
+          "end": 11882,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 11883,
           "end": 11884,
           "symbol": "M:hi.c(B)V",
@@ -223492,6 +223626,13 @@
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 11923,
+          "end": 11925,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 11926,
@@ -224677,6 +224818,13 @@
           "renamed": "GameStringTable"
         },
         {
+          "start": 19565,
+          "end": 19567,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 19785,
           "end": 19786,
           "symbol": "M:TrackController.c(B)V",
@@ -224950,6 +225098,20 @@
           "renamed": "IndexedSpriteState"
         },
         {
+          "start": 23968,
+          "end": 23970,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 24024,
+          "end": 24026,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 24420,
           "end": 24421,
           "symbol": "M:TrackController.a(I)V",
@@ -225011,6 +225173,13 @@
           "symbol": "M:TrackController.a(I)V",
           "original": "a",
           "renamed": "drawFrame"
+        },
+        {
+          "start": 28469,
+          "end": 28471,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 29575,
@@ -225911,7 +226080,7 @@
       "original": "ae.java",
       "renamed": "ArchiveRequestConnection.java",
       "inputSha256": "a3bc967cd202c14132f1545a80a26d0d16659f1f7ddf2d043d3d942a823d0a59",
-      "outputSha256": "9d49006f156c5c77acddbd1b17f5de20b61fe626ed136dafc4e4cad74ca438cd",
+      "outputSha256": "0f70e34bbc27f6c61ff35739fb725abcb13b4f3ec72b188df94834f700e5ddf2",
       "edits": [
         {
           "start": 53,
@@ -225933,6 +226102,62 @@
           "symbol": "C:be",
           "original": "be",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 263,
+          "end": 265,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1391,
+          "end": 1393,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1475,
+          "end": 1477,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1543,
+          "end": 1545,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1632,
+          "end": 1634,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1677,
+          "end": 1679,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 1793,
+          "end": 1795,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 2478,
+          "end": 2480,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 3281,
@@ -230884,7 +231109,7 @@
       "original": "bf.java",
       "renamed": "WhirlpoolDigest.java",
       "inputSha256": "c281933608012fc5383a5da7f045f50a9ab1a832b7a2f96a463d242aef6f3e4b",
-      "outputSha256": "164567929fa9508510c5a7c464606313fcecd78b0a4feaafb57fb37a0659dec1",
+      "outputSha256": "efecec0c1745c1dcfa37da3ccd291feb388e84287dccc1195fbab8a111c74c24",
       "edits": [
         {
           "start": 69,
@@ -231111,6 +231336,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 9860,
+          "end": 9862,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 9877,
           "end": 9879,
           "symbol": "C:tc",
@@ -231123,6 +231355,20 @@
           "symbol": "C:tc",
           "original": "tc",
           "renamed": "RandomAccessCacheFile"
+        },
+        {
+          "start": 10274,
+          "end": 10276,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 10705,
+          "end": 10707,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 10722,
@@ -232281,7 +232527,7 @@
       "original": "bj.java",
       "renamed": "bj.java",
       "inputSha256": "b270dcbab5a9e9912eb134f78b9f6de866b1806a49218b6de12ec0af5e1c8004",
-      "outputSha256": "a06c6658b5b570b2c430bc15a6a6d1bfd29048221f52e551f5d9cc96179242e8",
+      "outputSha256": "733199e9fa3d658ac63120d180bfb7e934afc9439d70cd74d110d8445626c130",
       "edits": [
         {
           "start": 120,
@@ -232310,6 +232556,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 865,
+          "end": 867,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 1214,
@@ -238836,7 +239089,7 @@
       "original": "da.java",
       "renamed": "SocketArchiveRequestConnection.java",
       "inputSha256": "a7b71151284e1c1226adce764b06eaf7dec7fc8bf88231b269bd446c1392b393",
-      "outputSha256": "b13c9ec894b4a6764338e7960cc2597b35b91eeba13ff59095ae775fd1741510",
+      "outputSha256": "0d1bb11ed279330b21fbb36482111c22864197e72334782d9699a2d30b0ac471",
       "edits": [
         {
           "start": 69,
@@ -239602,6 +239855,20 @@
           "renamed": "Sprite"
         },
         {
+          "start": 16086,
+          "end": 16088,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 16258,
+          "end": 16260,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 16757,
           "end": 16759,
           "symbol": "C:bc",
@@ -239614,6 +239881,20 @@
           "symbol": "F:be.field_k:I",
           "original": "field_k",
           "renamed": "position"
+        },
+        {
+          "start": 16958,
+          "end": 16960,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 17210,
+          "end": 17212,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 17585,
@@ -239679,11 +239960,39 @@
           "renamed": "toClientException"
         },
         {
+          "start": 19790,
+          "end": 19792,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 20215,
+          "end": 20217,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 20296,
+          "end": 20298,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 20430,
           "end": 20431,
           "symbol": "M:qg.a(Z)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 21456,
+          "end": 21458,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 21544,
@@ -239721,6 +240030,20 @@
           "renamed": "payload"
         },
         {
+          "start": 21806,
+          "end": 21808,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 21883,
+          "end": 21885,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 21980,
           "end": 21987,
           "symbol": "F:be.field_k:I",
@@ -239754,6 +240077,13 @@
           "symbol": "F:be.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 22269,
+          "end": 22271,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 22902,
@@ -239873,6 +240203,34 @@
           "symbol": "M:be.e(B)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 24712,
+          "end": 24714,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 25015,
+          "end": 25017,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 25330,
+          "end": 25332,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 25572,
+          "end": 25574,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 25976,
@@ -245664,7 +246022,7 @@
       "original": "fh.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "ac84913b274693ac7bcaf9295ed92a6da3dea690d516a8eb72862ebc5c6f3c6f",
-      "outputSha256": "605a401d1186a0156cba3e927d7bbe330600ca140eb09bc8c06f898932abc6c7",
+      "outputSha256": "22280fae0bb772c8d8f7b0383164508e091adba575b760bc0820bdc826a3918f",
       "edits": [
         {
           "start": 72,
@@ -245709,6 +246067,13 @@
           "renamed": "Archive"
         },
         {
+          "start": 647,
+          "end": 649,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 664,
           "end": 666,
           "symbol": "C:il",
@@ -245723,11 +246088,25 @@
           "renamed": "DiskArchiveStore"
         },
         {
+          "start": 771,
+          "end": 773,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 787,
           "end": 789,
           "symbol": "C:il",
           "original": "il",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 869,
+          "end": 871,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 956,
@@ -245749,6 +246128,13 @@
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 1237,
+          "end": 1239,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 1339,
@@ -246973,7 +247359,7 @@
       "original": "gd.java",
       "renamed": "CachedArchiveSource.java",
       "inputSha256": "7b5b457da91282158125d6d362af27a9bd3f2f637082137d255e7bab5612362d",
-      "outputSha256": "adca6af5de6aae801e36b28a884aa07610aca8754cd0375309179938d9523fab",
+      "outputSha256": "f846f43b2615bb6e6514d89891ad86e38925a00bf483cd0eea81b7e269235527",
       "edits": [
         {
           "start": 50,
@@ -247039,6 +247425,13 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 398,
+          "end": 400,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 450,
           "end": 452,
           "symbol": "C:hf",
@@ -247086,6 +247479,13 @@
           "symbol": "M:id.a(IJ)Lfc;",
           "original": "a",
           "renamed": "get"
+        },
+        {
+          "start": 908,
+          "end": 909,
+          "symbol": "M:tk.a(B)I",
+          "original": "a",
+          "renamed": "getProgressPercent"
         },
         {
           "start": 969,
@@ -247186,6 +247586,13 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 2865,
+          "end": 2866,
+          "symbol": "M:tk.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
           "start": 2895,
           "end": 2896,
           "symbol": "M:fc.a(I)V",
@@ -247221,6 +247628,20 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 3893,
+          "end": 3894,
+          "symbol": "M:tk.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
+          "start": 4002,
+          "end": 4004,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 4146,
           "end": 4148,
           "symbol": "C:pc",
@@ -247233,6 +247654,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 4772,
+          "end": 4773,
+          "symbol": "M:sd.a(I[BLhf;B)Llh;",
+          "original": "a",
+          "renamed": "requestWrite"
         },
         {
           "start": 4987,
@@ -247284,6 +247712,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 7003,
+          "end": 7004,
+          "symbol": "M:sd.a(BILhf;)Llh;",
+          "original": "a",
+          "renamed": "readNow"
+        },
+        {
+          "start": 7935,
+          "end": 7936,
+          "symbol": "M:sd.a(ZILhf;)Llh;",
+          "original": "a",
+          "renamed": "requestRead"
+        },
+        {
           "start": 8015,
           "end": 8016,
           "symbol": "M:id.a(ZJLfc;)V",
@@ -247310,6 +247752,20 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 8205,
+          "end": 8206,
+          "symbol": "M:tk.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
+          "start": 8286,
+          "end": 8288,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 8830,
@@ -247422,6 +247878,13 @@
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 12094,
+          "end": 12095,
+          "symbol": "M:sd.a(I[BLhf;B)Llh;",
+          "original": "a",
+          "renamed": "requestWrite"
         },
         {
           "start": 12340,
@@ -247739,6 +248202,13 @@
           "renamed": "ArchiveRequestConnection"
         },
         {
+          "start": 18658,
+          "end": 18660,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 19329,
           "end": 19331,
           "symbol": "C:id",
@@ -247765,6 +248235,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 20039,
+          "end": 20040,
+          "symbol": "M:sd.a(BILhf;)Llh;",
+          "original": "a",
+          "renamed": "readNow"
         },
         {
           "start": 21534,
@@ -250257,7 +250734,7 @@
       "original": "hf.java",
       "renamed": "DiskArchiveStore.java",
       "inputSha256": "9501e03a28c16d4d48c4520500fea77a5dd8e06e9481e9d02f32ed8fa6103138",
-      "outputSha256": "2d6589608edcf3ed907be0bdf7a91982d2c978aed525ff5362773ce675370589",
+      "outputSha256": "13652cf2e7195c4a75696c3999460b59a0f05e5dcff868440cbc17518e1f2d06",
       "edits": [
         {
           "start": 69,
@@ -250657,6 +251134,13 @@
           "symbol": "C:oh",
           "original": "oh",
           "renamed": "BitmapFont"
+        },
+        {
+          "start": 10728,
+          "end": 10729,
+          "symbol": "M:hf.a([BIIZZ)Z",
+          "original": "a",
+          "renamed": "writeSectorChain"
         },
         {
           "start": 10827,
@@ -251108,6 +251592,20 @@
           "symbol": "M:hf.a(II[BI)Z",
           "original": "a",
           "renamed": "write"
+        },
+        {
+          "start": 21116,
+          "end": 21117,
+          "symbol": "M:hf.a([BIIZZ)Z",
+          "original": "a",
+          "renamed": "writeSectorChain"
+        },
+        {
+          "start": 21223,
+          "end": 21224,
+          "symbol": "M:hf.a([BIIZZ)Z",
+          "original": "a",
+          "renamed": "writeSectorChain"
         },
         {
           "start": 21977,
@@ -252011,10 +252509,17 @@
     },
     {
       "original": "hi.java",
-      "renamed": "hi.java",
+      "renamed": "NetworkArchiveRequest.java",
       "inputSha256": "92a10cf5ce73514455b0a15bad0140b4bb884bc8761fa87515e030d990e359fe",
-      "outputSha256": "7138ca2db81504cdc33d0540528a7ad6a72ce2caf9c25e7233f9f02f405a5318",
+      "outputSha256": "95d44298121057bd01902e179440f1d9c527301376bfc75095eaa1d62e53b9a9",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
         {
           "start": 61,
           "end": 63,
@@ -252219,6 +252724,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 4622,
+          "end": 4623,
+          "symbol": "M:hi.a(B)I",
+          "original": "a",
+          "renamed": "getProgressPercent"
+        },
+        {
           "start": 4763,
           "end": 4770,
           "symbol": "F:be.field_k:I",
@@ -252247,6 +252759,13 @@
           "renamed": "payload"
         },
         {
+          "start": 4972,
+          "end": 4973,
+          "symbol": "M:hi.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
           "start": 5178,
           "end": 5185,
           "symbol": "F:be.field_j:[B",
@@ -252266,6 +252785,13 @@
           "symbol": "F:be.field_j:[B",
           "original": "field_j",
           "renamed": "payload"
+        },
+        {
+          "start": 5318,
+          "end": 5320,
+          "symbol": "M:hi.<init>()V",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         }
       ]
     },
@@ -257083,7 +257609,7 @@
       "original": "ji.java",
       "renamed": "ji.java",
       "inputSha256": "a1e32d87acee997a11a8bc51382ff7185b1210fa254d1539892cbe31177f37a8",
-      "outputSha256": "bcb6db540df5c04cde05e287d64edaf23a77114f8b59b80b8eb5406d8d589706",
+      "outputSha256": "f3b6cadecd363b09e5e602e050c9e6577fd69e990ffc7359ea7ff274a6d81a0d",
       "edits": [
         {
           "start": 224,
@@ -257114,6 +257640,13 @@
           "renamed": "clearRaster"
         },
         {
+          "start": 1238,
+          "end": 1240,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 2101,
           "end": 2103,
           "symbol": "C:sl",
@@ -257140,6 +257673,13 @@
           "symbol": "M:ll.a()V",
           "original": "a",
           "renamed": "clearRaster"
+        },
+        {
+          "start": 3256,
+          "end": 3258,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 4119,
@@ -259231,7 +259771,7 @@
       "original": "ki.java",
       "renamed": "ki.java",
       "inputSha256": "0276e595e2b0e4851792ff14f7777e641a76d7c973ce994a68052d26124b39d7",
-      "outputSha256": "8a71ae5b059381bafcff019781186fdad9fea9d6526df31c3c29a31f7705bcdd",
+      "outputSha256": "46c98eb60cd9aa0daa99d20d50778fa83453b46a5842721261ef44fb71e23370",
       "edits": [
         {
           "start": 88,
@@ -259283,6 +259823,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 491,
+          "end": 493,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 552,
           "end": 554,
           "symbol": "C:ll",
@@ -259295,6 +259842,13 @@
           "symbol": "M:ll.a()V",
           "original": "a",
           "renamed": "clearRaster"
+        },
+        {
+          "start": 570,
+          "end": 572,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 649,
@@ -259332,6 +259886,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 703,
+          "end": 705,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 758,
           "end": 760,
           "symbol": "C:ll",
@@ -259344,6 +259905,13 @@
           "symbol": "M:ll.a()V",
           "original": "a",
           "renamed": "clearRaster"
+        },
+        {
+          "start": 774,
+          "end": 776,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 823,
@@ -261286,10 +261854,17 @@
     },
     {
       "original": "lh.java",
-      "renamed": "lh.java",
+      "renamed": "DiskArchiveRequest.java",
       "inputSha256": "9ab98e093dfe51f0a6bcdbe7dd8dfe883c857e8b4302e7cc0070c317ca20fce7",
-      "outputSha256": "f241464d51b726f31bce9d7162edc5fa7fadee2bcb70b215cf0f5f1911475754",
+      "outputSha256": "85378800e15385f39b093eb78b33acf2ebb608fbeb2177f5ffbbf83ba7830d8f",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
         {
           "start": 61,
           "end": 63,
@@ -261312,11 +261887,39 @@
           "renamed": "Archive"
         },
         {
+          "start": 239,
+          "end": 240,
+          "symbol": "M:lh.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
           "start": 463,
           "end": 464,
           "symbol": "M:lh.c(B)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 665,
+          "end": 666,
+          "symbol": "M:lh.a(B)I",
+          "original": "a",
+          "renamed": "getProgressPercent"
+        },
+        {
+          "start": 783,
+          "end": 784,
+          "symbol": "M:lh.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
+          "start": 970,
+          "end": 972,
+          "symbol": "M:lh.<init>()V",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 2513,
@@ -269901,7 +270504,7 @@
       "original": "mi.java",
       "renamed": "mi.java",
       "inputSha256": "e0f8d1d7604ef6dc6b80d5be4e9179053f05ea232e22aa63fbd0f616e6e82b81",
-      "outputSha256": "29b828a80913d8a36bf6d75bf2fed64b4a4a842dd5552c9f279b553c7eb0c51e",
+      "outputSha256": "996129e6d7c99db145298ebbc42ee1209a1fc57797b0c09ddd4015466aef5a7f",
       "edits": [
         {
           "start": 121,
@@ -269923,6 +270526,27 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 920,
+          "end": 921,
+          "symbol": "M:sd.a(I)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 965,
+          "end": 967,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 1015,
+          "end": 1017,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 1543,
@@ -269984,6 +270608,13 @@
           "kind": "label"
         },
         {
+          "start": 2405,
+          "end": 2407,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 2451,
           "end": 2453,
           "symbol": "C:tk",
@@ -270042,6 +270673,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 3314,
+          "end": 3316,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 3355,
@@ -273225,7 +273863,7 @@
       "original": "nj.java",
       "renamed": "AccountServiceResult.java",
       "inputSha256": "6b5f3b4079c377008923cae332ae4c2ee0784225ebdf4c22a8f74b4f7349f83c",
-      "outputSha256": "624229177894f0fedb847cf08abbed11ea375744d4f7fe90f706db94bc0f8ddf",
+      "outputSha256": "f376d565a16b59f07ff5c0b6b2045fd4c6be623d47219969938ba42c56d20bef",
       "edits": [
         {
           "start": 50,
@@ -273310,6 +273948,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 5333,
+          "end": 5335,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 6335,
@@ -274856,7 +275501,7 @@
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "0cb8803ff1acfebdf33d07cf087a552c3ab9f513be8337a765e06085b983c0e4",
-      "outputSha256": "2a4752d791ae2b9bf926a6dd14cc0211e637b7901e4e76ffbf2b24ba84f7dacd",
+      "outputSha256": "81de4c3d0170dc79eacdec78ecbb3c8c0f276bbf0956f3c1907cf5252b159ae9",
       "edits": [
         {
           "start": 61,
@@ -275018,6 +275663,13 @@
           "symbol": "M:ll.a()V",
           "original": "a",
           "renamed": "clearRaster"
+        },
+        {
+          "start": 5954,
+          "end": 5956,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 6040,
@@ -276348,7 +277000,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "831ed33b6e794b60ae5ec549442df06add34ad0368649400f37e7bc75d2e4651",
-      "outputSha256": "ddd0cb8287e955e4711d9cc580bad23015b91ed38d35a40b290414348836f77f",
+      "outputSha256": "784e425d7ed2d63270e843c98ba9f50ba5f2eff1b09dd088e9f13c3bc88aa602",
       "edits": [
         {
           "start": 113,
@@ -276420,6 +277072,13 @@
           "symbol": "C:id",
           "original": "id",
           "renamed": "NodeHashTable"
+        },
+        {
+          "start": 6196,
+          "end": 6198,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 7155,
@@ -278588,7 +279247,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "8f61c5b49967c9e6e29e151006b0fea81eec33457b300e9709ac0ca0e633f3fa",
-      "outputSha256": "a939da206b10d20714f9b4357e5020d518687e1b04bea7afbea736325d42764e",
+      "outputSha256": "6169bd2bd0846c70eba66e635f1b0131025a6c9ce0696873a1d497da2b574f54",
       "edits": [
         {
           "start": 646,
@@ -278717,6 +279376,13 @@
           "renamed": "readString"
         },
         {
+          "start": 1552,
+          "end": 1554,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 1633,
           "end": 1634,
           "symbol": "M:be.d(B)I",
@@ -278731,11 +279397,25 @@
           "renamed": "IntrusiveDequeCursor"
         },
         {
+          "start": 1905,
+          "end": 1907,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
+        },
+        {
           "start": 2143,
           "end": 2144,
           "symbol": "M:hb.a(Ljava/lang/Throwable;ILjava/lang/String;)V",
           "original": "a",
           "renamed": "reportClientError"
+        },
+        {
+          "start": 2237,
+          "end": 2239,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 2353,
@@ -279333,7 +280013,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "39db76e4e8d9d1576685c6e0fcb71c64f835f247cc1b0131e2503469b1550b9d",
-      "outputSha256": "61757ac0aa27d65ed32ac52c5426cca26643392feabdce906a7b675f33cbedae",
+      "outputSha256": "84b3c9732f1d85ee4043f0ee244aa40518bde38208c9692d35dd2e7f8314c4b4",
       "edits": [
         {
           "start": 706,
@@ -279439,6 +280119,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "IndexedSpriteState"
+        },
+        {
+          "start": 2662,
+          "end": 2664,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 2707,
@@ -284903,8 +285590,15 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "dbf7c1c7b728495b6cb5c5c44fb745784cb563f0dab0a6bd2a948aa133993391",
-      "outputSha256": "e08cc80a4e93db828dec9eb8bbcf5b1c442682249f0a824957594cd781f407d3",
+      "outputSha256": "b682788862fbed89c7079e9191ca3d4afda649e65b4372d8e545f206d375804e",
       "edits": [
+        {
+          "start": 162,
+          "end": 164,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
         {
           "start": 1205,
           "end": 1207,
@@ -284934,6 +285628,13 @@
           "renamed": "toClientException"
         },
         {
+          "start": 3527,
+          "end": 3529,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 5938,
           "end": 5940,
           "symbol": "C:sl",
@@ -284946,6 +285647,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 6248,
+          "end": 6250,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 7590,
@@ -287416,7 +288124,7 @@
       "original": "ri.java",
       "renamed": "ActiveLevel.java",
       "inputSha256": "edabddc46b2e6a2367a80c44d28b3fdaca9b91c3c81158c5ccacf75c054d42b8",
-      "outputSha256": "12f259e360a09fb32ffc003a537d89af432013aecf9ac49b596428ca2dcff9ba",
+      "outputSha256": "ce23e850a111fb23d6821dad68b718675fe5193f3e5272cd1b9e33cf6beec06a",
       "edits": [
         {
           "start": 50,
@@ -290209,6 +290917,13 @@
           "renamed": "addLast"
         },
         {
+          "start": 44943,
+          "end": 44945,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 45276,
           "end": 45278,
           "symbol": "C:ri",
@@ -291189,6 +291904,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 58926,
+          "end": 58928,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 59010,
@@ -292790,10 +293512,17 @@
     },
     {
       "original": "sd.java",
-      "renamed": "sd.java",
+      "renamed": "DiskCacheWorker.java",
       "inputSha256": "d3a5493dbf362d7be11c6e2b1e0538d5f1f37b5615a08486c308edf642a5468d",
-      "outputSha256": "8100b42c1a17774d328b9fdb617073e71c56e4f02317bd44e4b45fe12004839f",
+      "outputSha256": "61ab550bdd9011aeb518dc0074101969a2048b438071878f13573deac05b43e2",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
         {
           "start": 134,
           "end": 136,
@@ -292802,11 +293531,60 @@
           "renamed": "BufferedCacheFile"
         },
         {
+          "start": 257,
+          "end": 259,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 260,
+          "end": 261,
+          "symbol": "M:sd.a(ZILhf;)Llh;",
+          "original": "a",
+          "renamed": "requestRead"
+        },
+        {
           "start": 290,
           "end": 292,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 311,
+          "end": 313,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 405,
+          "end": 407,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 644,
+          "end": 646,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 821,
+          "end": 823,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 913,
+          "end": 914,
+          "symbol": "M:sd.a(ZLlh;)V",
+          "original": "a",
+          "renamed": "enqueue"
         },
         {
           "start": 1474,
@@ -292821,6 +293599,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 2083,
+          "end": 2085,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 2086,
@@ -292858,6 +293643,20 @@
           "renamed": "toClientException"
         },
         {
+          "start": 3296,
+          "end": 3298,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 3651,
+          "end": 3653,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 4421,
           "end": 4422,
           "symbol": "M:hf.a(II[BI)Z",
@@ -292879,11 +293678,67 @@
           "renamed": "reportClientError"
         },
         {
+          "start": 5465,
+          "end": 5467,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 5468,
+          "end": 5469,
+          "symbol": "M:sd.a(I[BLhf;B)Llh;",
+          "original": "a",
+          "renamed": "requestWrite"
+        },
+        {
           "start": 5497,
           "end": 5499,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 5531,
+          "end": 5533,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 5597,
+          "end": 5599,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 5628,
+          "end": 5630,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 5946,
+          "end": 5948,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 6074,
+          "end": 6076,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 6242,
+          "end": 6243,
+          "symbol": "M:sd.a(ZLlh;)V",
+          "original": "a",
+          "renamed": "enqueue"
         },
         {
           "start": 7007,
@@ -292900,6 +293755,27 @@
           "renamed": "toClientException"
         },
         {
+          "start": 7193,
+          "end": 7194,
+          "symbol": "M:sd.a(I)V",
+          "original": "a",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 7839,
+          "end": 7840,
+          "symbol": "M:sd.a(ZLlh;)V",
+          "original": "a",
+          "renamed": "enqueue"
+        },
+        {
+          "start": 7857,
+          "end": 7859,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 7878,
           "end": 7880,
           "symbol": "C:hf",
@@ -292907,11 +293783,32 @@
           "renamed": "DiskArchiveStore"
         },
         {
+          "start": 7933,
+          "end": 7935,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 8384,
+          "end": 8386,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
           "start": 8635,
           "end": 8637,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 8664,
+          "end": 8665,
+          "symbol": "M:sd.a(ZILhf;)Llh;",
+          "original": "a",
+          "renamed": "requestRead"
         },
         {
           "start": 8679,
@@ -292935,11 +293832,74 @@
           "renamed": "toClientException"
         },
         {
+          "start": 9379,
+          "end": 9381,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9382,
+          "end": 9383,
+          "symbol": "M:sd.a(BILhf;)Llh;",
+          "original": "a",
+          "renamed": "readNow"
+        },
+        {
           "start": 9409,
           "end": 9411,
           "symbol": "C:hf",
           "original": "hf",
           "renamed": "DiskArchiveStore"
+        },
+        {
+          "start": 9430,
+          "end": 9432,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9546,
+          "end": 9548,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9592,
+          "end": 9594,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9623,
+          "end": 9625,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 9907,
+          "end": 9909,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 10072,
+          "end": 10074,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 10455,
+          "end": 10457,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 10546,
@@ -292996,6 +293956,13 @@
           "symbol": "M:sd.a(B)V",
           "original": "a",
           "renamed": "resetStaticState"
+        },
+        {
+          "start": 12881,
+          "end": 12883,
+          "symbol": "M:sd.<init>(Luf;)V",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 12884,
@@ -293872,7 +294839,7 @@
       "original": "sg.java",
       "renamed": "sg.java",
       "inputSha256": "8c52bd1f2c0b901dd4042fdc3751a579a1e26edf8728f7fbd2f4b3eccc545b6c",
-      "outputSha256": "db86620abd76c07be94a43d8c95409d10e2b38cb708408c267746f5adbc50873",
+      "outputSha256": "9c3d9a0508c49a68f331d45018734ff3e22c1f7b75cb759607d9570e342d628b",
       "edits": [
         {
           "start": 79,
@@ -293964,6 +294931,27 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 2341,
+          "end": 2343,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 2846,
+          "end": 2848,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
+          "start": 2870,
+          "end": 2872,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 3552,
@@ -296764,7 +297752,7 @@
       "original": "tk.java",
       "renamed": "AsyncRequest.java",
       "inputSha256": "7c66f02ea51012060da455ec841f4fc5fdda093fec5df3a6bec5df5ce140f5a2",
-      "outputSha256": "41371b166d666ebbebf29ecd1d04b399c9647725cb12f10c1a48c826461cb674",
+      "outputSha256": "1f136d5307e69e389513564b80c68cf34e426963532beed0c5abe935b05fae09",
       "edits": [
         {
           "start": 53,
@@ -296788,6 +297776,13 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 314,
+          "end": 315,
+          "symbol": "M:tk.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
+        },
+        {
           "start": 353,
           "end": 354,
           "symbol": "M:tk.f(I)V",
@@ -296807,6 +297802,13 @@
           "symbol": "M:tk.f(I)V",
           "original": "f",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 741,
+          "end": 742,
+          "symbol": "M:tk.a(B)I",
+          "original": "a",
+          "renamed": "getProgressPercent"
         },
         {
           "start": 964,
@@ -296891,6 +297893,13 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 6980,
+          "end": 6982,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 7050,
@@ -296983,7 +297992,7 @@
       "original": "ua.java",
       "renamed": "ua.java",
       "inputSha256": "84cdf2f728e82668ef85c89c0c2b31fcc1fc9c9ec3cd76e46f7b90d72b164b46",
-      "outputSha256": "cee72a40e4d65f2a557a0dadde8080113e57953c9c0cf78b0d304a3c861a7c0f",
+      "outputSha256": "2fa7d3feb443608e67eb184e386892dbee22b7720d526ba5141dfb926927c6a2",
       "edits": [
         {
           "start": 61,
@@ -297082,6 +298091,13 @@
           "symbol": "C:qj",
           "original": "qj",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2613,
+          "end": 2615,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 2821,
@@ -299861,7 +300877,7 @@
       "original": "ui.java",
       "renamed": "ui.java",
       "inputSha256": "8929dc574eb4ef18a6f7645201883c7337eabc59bae44d88be113a4a0a3eee17",
-      "outputSha256": "e38595fae193b6aa02532ce2265449485731255750227645d9b2cc034aa72452",
+      "outputSha256": "a85601aa110b9aed9c3e47038aefbc4d244e735b82689b86c1bb7af067b1a2fd",
       "edits": [
         {
           "start": 201,
@@ -299946,6 +300962,13 @@
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "ClientException"
+        },
+        {
+          "start": 8577,
+          "end": 8579,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 8869,
@@ -300257,7 +301280,7 @@
       "original": "v.java",
       "renamed": "v.java",
       "inputSha256": "78c8694a6629408a6288b1f35f424c8824e3c309a1d81496d9b804a4e9ac6d86",
-      "outputSha256": "c06377f430c01d8687a86457f421229e7af3a21147c2eba502b40c6f69c550e5",
+      "outputSha256": "6caa1dc7338489cb3876d30d672fd95f6b3412d1365fd7c023472920e742924a",
       "edits": [
         {
           "start": 383,
@@ -300293,6 +301316,13 @@
           "symbol": "M:qg.a(Z)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 3621,
+          "end": 3623,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 3746,
@@ -300422,7 +301452,7 @@
       "original": "vd.java",
       "renamed": "vd.java",
       "inputSha256": "5a7c0f9d4b50fbc2a66da3ab8f2fb238712c3150c012980d2c35f82a45007746",
-      "outputSha256": "4d8b69cefb38fdfbf40e637cc2527045e79a887847f04dbb80bbd767df369685",
+      "outputSha256": "2dd030ff1eeec939a45230e3bdd34d263f86d57c0b4b73d596a7b883d1d8d9d3",
       "edits": [
         {
           "start": 98,
@@ -300577,6 +301607,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 8822,
+          "end": 8824,
+          "symbol": "C:lh",
+          "original": "lh",
+          "renamed": "DiskArchiveRequest"
         },
         {
           "start": 9413,
@@ -304716,7 +305753,7 @@
       "original": "wg.java",
       "renamed": "wg.java",
       "inputSha256": "256580c6e33b21bba73add57adb52639011e3b6e576cf6c89e7444ac1029fc7e",
-      "outputSha256": "e86d84fcfc32f3894b8bf8c7bf122f4d7479449d6d7e63df1b6bd90e1493b042",
+      "outputSha256": "8e570c42df7b14eb708c8ad6bc7586558aa76ac05b02d332268125bdf928dc38",
       "edits": [
         {
           "start": 70,
@@ -304733,6 +305770,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 115,
+          "end": 117,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 139,
           "end": 141,
           "symbol": "C:gd",
@@ -304745,6 +305789,13 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "ArchiveRequestConnection"
+        },
+        {
+          "start": 258,
+          "end": 260,
+          "symbol": "C:hi",
+          "original": "hi",
+          "renamed": "NetworkArchiveRequest"
         },
         {
           "start": 433,
@@ -304782,6 +305833,13 @@
           "renamed": "ArchiveRequestConnection"
         },
         {
+          "start": 1250,
+          "end": 1252,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
+        },
+        {
           "start": 1721,
           "end": 1723,
           "symbol": "C:be",
@@ -304794,6 +305852,13 @@
           "symbol": "C:be",
           "original": "be",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 2254,
+          "end": 2255,
+          "symbol": "M:hi.g(I)[B",
+          "original": "g",
+          "renamed": "getData"
         },
         {
           "start": 2277,
@@ -304941,6 +306006,13 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "ArchiveRequestConnection"
+        },
+        {
+          "start": 4693,
+          "end": 4695,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 5109,
@@ -305237,7 +306309,7 @@
       "original": "wj.java",
       "renamed": "wj.java",
       "inputSha256": "d0ce499a117249a2cf9b9b1df4c0675253625bc08550bf850ceda8501f219957",
-      "outputSha256": "7c724e9e211c6d432b0e2df6dcab9ec775154d783aae2bb09c665a99bd08667c",
+      "outputSha256": "649b2cfbd7e57b0625b61104536a2a9497800f6138e2a75105ff703751eb7a70",
       "edits": [
         {
           "start": 92,
@@ -305294,6 +306366,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "SocketArchiveRequestConnection"
+        },
+        {
+          "start": 714,
+          "end": 716,
+          "symbol": "C:sd",
+          "original": "sd",
+          "renamed": "DiskCacheWorker"
         },
         {
           "start": 756,
@@ -305601,10 +306680,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "7fbf95a37364746a19165f3e8f3fb4dde26972d0bd6972a5c31d4dd1aa5f126b",
+    "rulesSha256": "444303be72e311dfdd3f1131818bf6098b25724d15b59d7173366b22df353d5b",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "3c32e33843b57c4ae38cd1e2bc56302a5ea4a36401d3bf45f380174279cd35c4",
+    "outputTreeSha256": "d90e7830e2e0b9ed8e2935c015dffc6c0ab4a36b2a7eab0d8be461bebacd8541",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

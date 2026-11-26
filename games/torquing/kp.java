@@ -18,7 +18,7 @@ final class kp {
           j.field_F = param0;
           gi.field_d = param6;
           wh.field_w = param3;
-          lb.field_y = param5;
+          DiskArchiveRequest.field_y = param5;
           up.field_d = param2;
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');

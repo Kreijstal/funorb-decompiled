@@ -177,7 +177,7 @@ final class fc extends DualLinkNode {
         if (param1 <= 35) {
           fc.a(-84, (byte) 24);
         }
-        ee.field_J = param0;
+        NetworkArchiveRequest.field_J = param0;
         if (null != km.field_a) {
           km.field_a.a((byte) -95, param0);
         }

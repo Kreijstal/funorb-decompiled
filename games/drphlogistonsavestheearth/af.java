@@ -54,7 +54,7 @@ final class af {
           if (null != pi.field_V) {
             pi.field_V.b((byte) -7);
           }
-          n.field_g.requestFocus();
+          DiskCacheWorker.field_g.requestFocus();
           return;
         }
         if (null == df.field_l) {
@@ -66,7 +66,7 @@ final class af {
         if (null != pi.field_V) {
           pi.field_V.b((byte) -7);
         }
-        n.field_g.requestFocus();
+        DiskCacheWorker.field_g.requestFocus();
     }
 
     public static void clearStaticReferences(int param0) {

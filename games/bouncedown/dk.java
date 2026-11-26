@@ -136,7 +136,7 @@ final class dk {
                 return stackIn_17_0;
               }
             } else {
-              if (vh.field_g.indexOf(var4) == -1) {
+              if (SectorCacheStore.field_g.indexOf(var4) == -1) {
                 stackIn_21_0 = mh.field_R;
                 return stackIn_21_0;
               }

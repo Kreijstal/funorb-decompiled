@@ -187,23 +187,23 @@ final class lh {
         var5 = Main.field_T;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            ab.field_u[var2_int] = 0;
+            DiskArchiveRequest.field_u[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < jh.field_c; var2_intLifetime1++) {
             if (param1.field_k == me.field_b[var2_intLifetime1].field_k) {
               dupTemp$3 = me.field_b[var2_intLifetime1].b(2);
-              ab.field_u[dupTemp$3] = ab.field_u[dupTemp$3] + 1;
+              DiskArchiveRequest.field_u[dupTemp$3] = DiskArchiveRequest.field_u[dupTemp$3] + 1;
             }
           }
           dupTemp$0 = param1.b(2);
-          ab.field_u[dupTemp$0] = ab.field_u[dupTemp$0] + 1;
+          DiskArchiveRequest.field_u[dupTemp$0] = DiskArchiveRequest.field_u[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; var3 < jh.field_c; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (me.field_b[var3].field_k == param1.field_k) {
               var4 = me.field_b[var3].b(2);
-              if (mj.field_e < ab.field_u[var4]) {
-                ab.field_u[var4] = ab.field_u[var4] - 1;
+              if (mj.field_e < DiskArchiveRequest.field_u[var4]) {
+                DiskArchiveRequest.field_u[var4] = DiskArchiveRequest.field_u[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

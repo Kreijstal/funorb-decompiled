@@ -7,7 +7,7 @@ abstract class rb {
     static String field_c;
     static String field_d;
     va[] field_b;
-    static sd field_a;
+    static DiskCacheWorker field_a;
 
     final static boolean a(boolean param0, String param1) {
         RuntimeException var2 = null;
@@ -101,7 +101,7 @@ abstract class rb {
         ki.field_e.setTime(new Date(param0));
         int var3 = ki.field_e.get(7);
         if (param1 > -95) {
-          field_a = (sd) null;
+          field_a = (DiskCacheWorker) null;
         }
         int var4 = ki.field_e.get(5);
         int var5 = ki.field_e.get(2);
@@ -178,7 +178,7 @@ abstract class rb {
     final int a(int param0) {
         int stackIn_6_0 = 0;
         if (param0 != 12323) {
-          field_a = (sd) null;
+          field_a = (DiskCacheWorker) null;
         }
         if (this.field_b != null &&
           this.field_b.length > 0) {

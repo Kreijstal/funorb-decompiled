@@ -250,7 +250,7 @@ final class sf {
           dc.field_o = param0;
         }
         if (bb.field_G > param0) {
-          bi.field_e = param0;
+          SectorCacheStore.field_e = param0;
         }
         eh.field_a[GzipDecompressor.field_c] = param5;
         ld.field_M[GzipDecompressor.field_c] = param4;
@@ -262,8 +262,8 @@ final class sf {
         if (!(dc.field_o >= var7)) {
           dc.field_o = var7;
         }
-        if (bi.field_e > var7) {
-          bi.field_e = var7;
+        if (SectorCacheStore.field_e > var7) {
+          SectorCacheStore.field_e = var7;
         }
     }
 

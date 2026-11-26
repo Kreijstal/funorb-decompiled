@@ -102,7 +102,7 @@ final class hh extends mg {
             return true;
           }
           this.field_C = -this.field_t + (param6 - param5);
-          si.field_t = this;
+          ArchiveRequest.field_t = this;
           this.field_K = -param4 + param3 - this.field_o;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

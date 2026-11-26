@@ -18,7 +18,7 @@ abstract class SocketConnector {
           if (q.field_y <= 0) {
             if (!ag.b(49)) {
               var2 = 1;
-              if (t.field_m == null) {
+              if (DiskCacheWorker.field_m == null) {
                 if (!rr.field_C) {
                   return;
                 }
@@ -27,7 +27,7 @@ abstract class SocketConnector {
               return;
             }
             var2 = 0;
-            if (t.field_m == null) {
+            if (DiskCacheWorker.field_m == null) {
               if (!rr.field_C) {
                 return;
               }
@@ -35,7 +35,7 @@ abstract class SocketConnector {
             }
             return;
           }
-          if (null == t.field_m) {
+          if (null == DiskCacheWorker.field_m) {
             dc.field_L = id.a(0, 0, (byte) 94, 640, gi.field_s, 480);
             if (null == dc.field_L) {
               var2 = 3;
@@ -43,7 +43,7 @@ abstract class SocketConnector {
               ap.a(dc.field_L, -8228);
               var2 = 2;
             }
-            if (t.field_m != null) {
+            if (DiskCacheWorker.field_m != null) {
               return;
             }
             if (rr.field_C) {
@@ -51,11 +51,11 @@ abstract class SocketConnector {
             }
             return;
           }
-          dc.field_L = t.field_m.c((byte) 115);
+          dc.field_L = DiskCacheWorker.field_m.c((byte) 115);
           nm.b(false, 2);
           if (null == dc.field_L) {
             var2 = 3;
-            if (t.field_m == null) {
+            if (DiskCacheWorker.field_m == null) {
               if (!rr.field_C) {
                 return;
               }
@@ -73,7 +73,7 @@ abstract class SocketConnector {
               var2 = 0;
             }
           } else {
-            if (null == t.field_m) {
+            if (null == DiskCacheWorker.field_m) {
               dc.field_L = id.a(0, 0, (byte) 94, 640, gi.field_s, 480);
               if (null == dc.field_L) {
                 var2 = 3;
@@ -81,13 +81,13 @@ abstract class SocketConnector {
                 ap.a(dc.field_L, -8228);
                 var2 = 2;
               }
-              if (t.field_m == null &&
+              if (DiskCacheWorker.field_m == null &&
                 rr.field_C) {
                 bl.a(param1, var2, param0 ^ -24272);
               }
               return;
             }
-            dc.field_L = t.field_m.c((byte) 115);
+            dc.field_L = DiskCacheWorker.field_m.c((byte) 115);
             nm.b(false, 2);
             if (null == dc.field_L) {
               var2 = 3;
@@ -97,7 +97,7 @@ abstract class SocketConnector {
             }
           }
         }
-        if (t.field_m != null) {
+        if (DiskCacheWorker.field_m != null) {
           return;
         }
         if (!rr.field_C) {

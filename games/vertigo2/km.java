@@ -43,7 +43,7 @@ final class km extends DualLinkNode {
     final static void i(int param0) {
         int var1 = (qg.field_G - 640) / 2;
         int var2 = ld.field_b * ld.field_b;
-        int var3 = var2 - rk.field_y * rk.field_y;
+        int var3 = var2 - ArchiveRequest.field_y * ArchiveRequest.field_y;
         ca.field_h.a(param0 - 100, 199, SoftwareRasterizer.field_j - 214, 90, -(var3 * 199 / var2) + var1);
         ud.field_A.a(80, 438, -124 + SoftwareRasterizer.field_j, 0, 438 * var3 / var2 + (var1 + param0));
     }

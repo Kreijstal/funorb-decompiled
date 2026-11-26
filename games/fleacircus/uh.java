@@ -998,11 +998,11 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime171 = tf.a(0, "INSTRUCTIONS_BODIES_3_3");
           if (null != var2Lifetime171) {
-            af.field_a = ab.a(0, var2Lifetime171);
+            DiskCacheWorker.field_a = ab.a(0, var2Lifetime171);
           }
           var2Lifetime172 = tf.a(0, "INSTRUCTIONS_BODIES_3_4");
           if (var2Lifetime172 != null) {
-            dl.field_u = ab.a(0, var2Lifetime172);
+            ArchiveRequest.field_u = ab.a(0, var2Lifetime172);
           }
           var2Lifetime173 = tf.a(0, "INSTRUCTIONS_BODIES_3_5");
           if (var2Lifetime173 != null) {

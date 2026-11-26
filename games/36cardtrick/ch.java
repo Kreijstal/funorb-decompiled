@@ -13,7 +13,7 @@ abstract class ch {
     volatile int field_b;
     byte field_f;
     PacketBuffer field_i;
-    na field_j;
+    NetworkArchiveRequest field_j;
 
     abstract void c(byte param0);
 
@@ -51,12 +51,12 @@ abstract class ch {
 
     abstract boolean b(byte param0);
 
-    final na a(boolean param0, int param1, int param2, byte param3, int param4) {
+    final NetworkArchiveRequest a(boolean param0, int param1, int param2, byte param3, int param4) {
         long var6 = ((long)param4 << 32) + (long)param2;
         if (param1 != -1640279264) {
-          return (na) null;
+          return (NetworkArchiveRequest) null;
         }
-        na var8 = new na();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_o = param0 ? true : false;
         var8.field_j = var6;
         var8.field_u = param3;

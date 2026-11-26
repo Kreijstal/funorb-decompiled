@@ -37,12 +37,12 @@ final class bi {
             var4 = param1.substring(1 + var2_int);
             var5 = jh.a((byte) 42, var3);
             if (var5 == null) {
-              return ma.a(var4, 46);
+              return DiskArchiveRequest.a(var4, 46);
             }
             stackIn_14_0 = var5;
             return stackIn_14_0;
           }
-          stackIn_4_0 = rf.field_w;
+          stackIn_4_0 = ArchiveRequest.field_w;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

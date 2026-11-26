@@ -102,7 +102,7 @@ final class ci implements de {
             }
             if (param3) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, eh.field_n, ef.field_d);
+              var10.fillRect(0, 0, eh.field_n, DiskCacheWorker.field_d);
             }
             if (param1 == null) {
               param1 = new java.awt.Color(140, 17, 17);
@@ -121,12 +121,12 @@ final class ci implements de {
               var11.setFont(jb.field_c);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var10.drawImage(nh.field_h, -152 + eh.field_n / 2, -18 + ef.field_d / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(nh.field_h, -152 + eh.field_n / 2, -18 + DiskCacheWorker.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               var7 = -152 + eh.field_n / 2;
-              var8 = ef.field_d / 2 - 18;
+              var8 = DiskCacheWorker.field_d / 2 - 18;
               var10.setColor(param1);
               var10.drawRect(var7, var8, 303, 33);
               var10.fillRect(var7 + 2, var8 + 2, param0 * 3, 30);
@@ -142,7 +142,7 @@ final class ci implements de {
             }
             var10.setFont(jb.field_c);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(DelegatingCanvas.field_a, eh.field_n / 2 - DelegatingCanvas.field_a.length() * 6 / 2, -26 + ef.field_d / 2);
+            var10.drawString(DelegatingCanvas.field_a, eh.field_n / 2 - DelegatingCanvas.field_a.length() * 6 / 2, -26 + DiskCacheWorker.field_d / 2);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

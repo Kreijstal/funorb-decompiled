@@ -88,7 +88,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = si.a((byte) 121, var18);
+                                    var16_int = ArchiveRequest.a((byte) 121, var18);
                                     var4 = var4 + this.field_H[var16_int].field_h;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -392,7 +392,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = si.a((byte) 122, var10);
+                                  var9_int = ArchiveRequest.a((byte) 122, var10);
                                   var4 = var4 + this.field_H[var9_int].field_h;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -622,7 +622,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = si.a((byte) 118, var13);
+                                  var10 = ArchiveRequest.a((byte) 118, var13);
                                   var11_ref_q = this.field_H[var10];
                                   if (this.field_v == null) {
                                     stackIn_27_0 = var11_ref_q.field_g;
@@ -773,7 +773,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_I = si.a((byte) 122, var4);
+                field_I = ArchiveRequest.a((byte) 122, var4);
               }
             } else {
               field_F = field_A;

@@ -153,9 +153,9 @@ final class uj implements Runnable {
               var5_ref_hc.field_h < var3) {
               var5_ref_hc.unlink(57);
               GameAppletShell.field_c = var5_ref_hc.field_m.length;
-              cd.field_t.position = 0;
+              NetworkArchiveRequest.field_t.position = 0;
               for (var6_int = 0; var6_int < GameAppletShell.field_c; var6_int++) {
-                cd.field_t.payload[var6_int] = var5_ref_hc.field_m[var6_int];
+                NetworkArchiveRequest.field_t.payload[var6_int] = var5_ref_hc.field_m[var6_int];
               }
               lh.field_c = fe.field_b;
               fe.field_b = ce.field_d;
@@ -166,12 +166,12 @@ final class uj implements Runnable {
           }
           while (true) {
             if (vb.field_i < 0) {
-              cd.field_t.position = 0;
+              NetworkArchiveRequest.field_t.position = 0;
               if (!AccountRequestState.a(true, 1)) {
                 return false;
               }
-              vb.field_i = cd.field_t.o(-75);
-              cd.field_t.position = 0;
+              vb.field_i = NetworkArchiveRequest.field_t.o(-75);
+              NetworkArchiveRequest.field_t.position = 0;
               GameAppletShell.field_c = param0[vb.field_i];
             }
             if (!ce.a(-106)) {
@@ -194,7 +194,7 @@ final class uj implements Runnable {
             }
             var6 = new hc(var3 + (long)var5, vb.field_i, new byte[GameAppletShell.field_c]);
             for (var7 = 0; var7 < GameAppletShell.field_c; var7++) {
-              var6.field_m[var7] = cd.field_t.payload[var7];
+              var6.field_m[var7] = NetworkArchiveRequest.field_t.payload[var7];
             }
             CrossfadingMidiPcmStream.field_q.addLast(-97, var6);
             vb.field_i = -1;

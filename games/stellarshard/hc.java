@@ -170,7 +170,7 @@ final class hc {
           BufferedSocket.a(param0, param2, param1, (byte) -108);
           int var5_int = 37 % ((param4 + 36) / 42);
           pe.b(4);
-          el.field_E = ok.field_a;
+          DiskArchiveRequest.field_E = ok.field_a;
           o.field_l = ok.field_a;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "hc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');

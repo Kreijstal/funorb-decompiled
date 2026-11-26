@@ -41,11 +41,11 @@ final class AccountRequestState {
         int var3 = DungeonAssault.field_K;
         int[] var1Lifetime1;
         int var2Lifetime1;
-        if (co.field_G == null) {
+        if (DiskArchiveRequest.field_G == null) {
           return;
         }
         try {
-          co.field_G = null;
+          DiskArchiveRequest.field_G = null;
           bd.field_f = 0;
           if (param0 < 5) {
             AccountRequestState.clearStaticReferences(37);

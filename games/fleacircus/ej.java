@@ -61,7 +61,7 @@ final class ej {
         try {
           j.field_f = wi.field_p.field_b;
           if (fleas.field_E == 0 &&
-            tj.field_a >= 15 && (qh.c((byte) 55) ||
+            tj.field_a >= 15 && (DiskArchiveRequest.c((byte) 55) ||
             !(wc.field_q > 0))) {
             ImageProducerRasterBuffer.field_m = bc.field_V;
             oa.a(7, false, -72);
@@ -85,7 +85,7 @@ final class ej {
           fb.field_e = new int[100];
           oa.field_n = true;
           pg.field_f = -60;
-          qh.field_y = -250;
+          DiskArchiveRequest.field_y = -250;
           jk.field_l = 0;
           lj.field_c = new int[100];
           GzipDecompressor.field_d = -1;

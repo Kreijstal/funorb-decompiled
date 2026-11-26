@@ -226,19 +226,19 @@ final class hd extends hi {
                     var36 = Math.abs(var36);
                     if (dn.field_i != of.field_d && (!(hf.field_i < 0) ||
                       j.field_c != GameCanvas.field_g ||
-                      rh.field_A != rb.field_m ||
+                      DiskArchiveRequest.field_A != rb.field_m ||
                       32.0 < Math.abs(var36))) {
                       var39Lifetime2.a(param0 + 164, var34, 8);
                       if (var36 > 1.0) {
                         GameCanvas.field_g = -2;
                       } else {
                         GameCanvas.field_g = j.field_c;
-                        rh.field_A = rb.field_m;
+                        DiskArchiveRequest.field_A = rb.field_m;
                       }
                       decompiledFrameRemainder1 = false;
                     }
                     else {
-                      rh.field_A = rb.field_m;
+                      DiskArchiveRequest.field_A = rb.field_m;
                       GameCanvas.field_g = j.field_c;
                     }
                     if (nh.field_H != 2 &&
@@ -685,7 +685,7 @@ final class hd extends hi {
               if (null != ec.field_b) {
                 ec.field_b.g(uh.field_i * jh.field_db / 400);
               } else {
-                ec.field_b = RawPcmStream.a(lm.field_A[5], 100, uh.field_i * jh.field_db / 400);
+                ec.field_b = RawPcmStream.a(NetworkArchiveRequest.field_A[5], 100, uh.field_i * jh.field_db / 400);
                 ec.field_b.d(-1);
                 eh.field_c.b(ec.field_b);
               }
@@ -1200,15 +1200,15 @@ final class hd extends hi {
             }
             nd.a(ln.field_a.field_h[param3], param2, param4 + 18459);
           }
-          if (um.field_e > 0 &&
+          if (SectorCacheStore.field_e > 0 &&
             mc.field_I != 4) {
-            um.field_e = um.field_e - 1;
+            SectorCacheStore.field_e = SectorCacheStore.field_e - 1;
             var6Lifetime1 = ba.a((byte) 87);
             if (var6Lifetime1 > eh.field_g) {
               eh.field_g = eh.field_g + 1;
             }
-            if (-eh.field_g + var6Lifetime1 > um.field_e) {
-              eh.field_g = eh.field_g + (-eh.field_g + var6Lifetime1) / Math.max(um.field_e, 1);
+            if (-eh.field_g + var6Lifetime1 > SectorCacheStore.field_e) {
+              eh.field_g = eh.field_g + (-eh.field_g + var6Lifetime1) / Math.max(SectorCacheStore.field_e, 1);
             }
           }
           if (0 > ri.field_h) {

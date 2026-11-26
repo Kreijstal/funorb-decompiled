@@ -19,16 +19,16 @@ class vb extends DualLinkNode {
         int var4 = 0;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          fieldTemp$0 = si.field_r;
-          si.field_r = si.field_r + 1;
+          fieldTemp$0 = DiskArchiveRequest.field_r;
+          DiskArchiveRequest.field_r = DiskArchiveRequest.field_r + 1;
           if ((3 & fieldTemp$0) == 0) {
             bc.field_a = bc.field_a + 1;
             if (5 == bc.field_a) {
               bc.field_a = 0;
             }
-            ob.field_r = ob.field_r + 1;
-            if (ob.field_r == 5) {
-              ob.field_r = 0;
+            NetworkArchiveRequest.field_r = NetworkArchiveRequest.field_r + 1;
+            if (NetworkArchiveRequest.field_r == 5) {
+              NetworkArchiveRequest.field_r = 0;
             }
           }
           ClientException.field_e = ClientException.field_e + 6;
@@ -126,7 +126,7 @@ class vb extends DualLinkNode {
     final static void a(int param0, bk param1, boolean param2) {
         hb var3 = null;
         try {
-          var3 = gf.field_c;
+          var3 = SectorCacheStore.field_c;
           var3.b(param2, param0);
           var3.writeByte(2, -49152);
           var3.writeByte(0, -49152);

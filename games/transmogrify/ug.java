@@ -33,11 +33,11 @@ final class ug {
           sh.field_c = null;
           return;
         }
-        if (rh.field_t != null) {
+        if (ArchiveRequest.field_t != null) {
           sh.field_c = null;
           return;
         }
-        rh.field_t = tl.a(bc.field_b, 36, new int[]{(eh.totalScore << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, DirectByteStorage.field_j);
+        ArchiveRequest.field_t = tl.a(bc.field_b, 36, new int[]{(eh.totalScore << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, DirectByteStorage.field_j);
         sh.field_c = null;
     }
 

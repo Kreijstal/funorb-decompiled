@@ -19,17 +19,17 @@ abstract class ej {
     byte field_r;
     static RgbSprite field_d;
     PacketBuffer field_i;
-    lm field_p;
+    NetworkArchiveRequest field_p;
 
-    final lm a(byte param0, int param1, int param2, int param3, boolean param4) {
+    final NetworkArchiveRequest a(byte param0, int param1, int param2, int param3, boolean param4) {
         long var6 = 0L;
-        lm var8 = null;
-        lm var8Lifetime1;
+        NetworkArchiveRequest var8 = null;
+        NetworkArchiveRequest var8Lifetime1;
         long var6Lifetime1;
         if (param3 != -18986) {
           ej.d((byte) -61);
           var6 = (long)param2 + ((long)param1 << 32);
-          var8 = new lm();
+          var8 = new NetworkArchiveRequest();
           var8.field_h = var6;
           var8.field_w = param4 ? true : false;
           var8.field_B = param0;
@@ -47,7 +47,7 @@ abstract class ej {
           return var8;
         }
         var6Lifetime1 = (long)param2 + ((long)param1 << 32);
-        var8Lifetime1 = new lm();
+        var8Lifetime1 = new NetworkArchiveRequest();
         var8Lifetime1.field_h = var6Lifetime1;
         var8Lifetime1.field_w = param4 ? true : false;
         var8Lifetime1.field_B = param0;

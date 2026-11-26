@@ -2040,7 +2040,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("resumetutorial", (byte) 113);
                 if (null != var2) {
-                  ak.field_c = eg.a(125, var2);
+                  SectorCacheStore.field_c = eg.a(125, var2);
                 }
                 var2 = kb.a("skip", (byte) 112);
                 if (null != var2) {
@@ -2524,7 +2524,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_help,1", (byte) 120);
                 if (null != var2) {
-                  qf.field_a[1] = eg.a(ak.a(param0, 115), var2);
+                  qf.field_a[1] = eg.a(SectorCacheStore.a(param0, 115), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_help,2", (byte) 117);
                 if (null != var2) {
@@ -2540,7 +2540,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_help,5", (byte) 127);
                 if (null != var2) {
-                  qf.field_a[5] = eg.a(ak.a(param0, 102), var2);
+                  qf.field_a[5] = eg.a(SectorCacheStore.a(param0, 102), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,0", (byte) 119);
                 if (null != var2) {
@@ -2552,7 +2552,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_keys,2", (byte) 107);
                 if (var2 != null) {
-                  nj.field_k[2] = eg.a(ak.a(param0, 120), var2);
+                  nj.field_k[2] = eg.a(SectorCacheStore.a(param0, 120), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,3", (byte) 117);
                 if (var2 != null) {
@@ -2608,7 +2608,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("members_expansion_benefits,0", (byte) 118);
                 if (var2 != null) {
-                  ng.field_l[0] = eg.a(ak.a(param0, 122), var2);
+                  ng.field_l[0] = eg.a(SectorCacheStore.a(param0, 122), var2);
                 }
                 var2 = kb.a("members_expansion_benefits,1", (byte) 118);
                 if (var2 != null) {
@@ -2900,11 +2900,11 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("mustlogin2,3", (byte) 127);
                 if (var2 != null) {
-                  rf.field_cb[3] = eg.a(ak.a(param0, 124), var2);
+                  rf.field_cb[3] = eg.a(SectorCacheStore.a(param0, 124), var2);
                 }
                 var2 = kb.a("mustlogin2,4", (byte) 106);
                 if (var2 != null) {
-                  rf.field_cb[4] = eg.a(ak.a(param0, 126), var2);
+                  rf.field_cb[4] = eg.a(SectorCacheStore.a(param0, 126), var2);
                 }
                 var2 = kb.a("mustlogin2,5", (byte) 106);
                 if (null != var2) {
@@ -2934,15 +2934,15 @@ final class ContextualRuntimeException extends RuntimeException {
             void runChunk3() throws java.lang.RuntimeException {
                 var2 = kb.a("mustlogin3,4", (byte) 116);
                 if (var2 != null) {
-                  ba.field_l[4] = eg.a(ak.a(param0, 113), var2);
+                  ba.field_l[4] = eg.a(SectorCacheStore.a(param0, 113), var2);
                 }
                 var2 = kb.a("mustlogin3,5", (byte) 109);
                 if (var2 != null) {
-                  ba.field_l[5] = eg.a(ak.a(param0, 119), var2);
+                  ba.field_l[5] = eg.a(SectorCacheStore.a(param0, 119), var2);
                 }
                 var2 = kb.a("mustlogin3,6", (byte) 126);
                 if (var2 != null) {
-                  ba.field_l[6] = eg.a(ak.a(param0, 125), var2);
+                  ba.field_l[6] = eg.a(SectorCacheStore.a(param0, 125), var2);
                 }
                 var2 = kb.a("mustlogin3,7", (byte) 107);
                 if (null != var2) {
@@ -2994,7 +2994,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("mustlogin_alternate,3", (byte) 108);
                 if (null != var2) {
-                  qf.field_c[3] = eg.a(ak.a(param0, 103), var2);
+                  qf.field_c[3] = eg.a(SectorCacheStore.a(param0, 103), var2);
                 }
                 var2 = kb.a("mustlogin_alternate,4", (byte) 116);
                 if (null != var2) {
@@ -3030,7 +3030,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("subscription_cost_monthly,4", (byte) 118);
                 if (var2 != null) {
-                  LetterTile.field_w[4] = eg.a(ak.a(param0, 83), var2);
+                  LetterTile.field_w[4] = eg.a(SectorCacheStore.a(param0, 83), var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,5", (byte) 107);
                 if (var2 != null) {
@@ -3058,7 +3058,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("subscription_cost_monthly,11", (byte) 116);
                 if (var2 != null) {
-                  LetterTile.field_w[11] = eg.a(ak.a(param0, 83), var2);
+                  LetterTile.field_w[11] = eg.a(SectorCacheStore.a(param0, 83), var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,12", (byte) 110);
                 if (var2 != null) {

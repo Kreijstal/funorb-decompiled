@@ -37,7 +37,7 @@ final class uj {
           do {
             var4 = param0.nextInt();
           } while (var3_int <= var4);
-          stackIn_12_0 = cc.a(param2, var4, (byte) -122);
+          stackIn_12_0 = DiskCacheWorker.a(param2, var4, (byte) -122);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

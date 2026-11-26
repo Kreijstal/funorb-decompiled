@@ -127,7 +127,7 @@ final class vb implements fc {
               hh.field_p.writeByte(18, (byte) 105);
               hh.field_p.position = hh.field_p.position + 2;
               var10 = hh.field_p.position;
-              var11_ref_StringLifetime4 = uj.a(true, vi.b(0));
+              var11_ref_StringLifetime4 = uj.a(true, DiskCacheWorker.b(0));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
@@ -148,7 +148,7 @@ final class vb implements fc {
               pj.field_a = kb.field_b;
             } else {
               if (var9Lifetime1 == 248) {
-                ta.a((byte) -118, vi.b(0));
+                ta.a((byte) -118, DiskCacheWorker.b(0));
                 ImageProducerRasterBuffer.field_o = vf.field_a;
                 kc.a((byte) 18);
                 fa.field_a = false;
@@ -191,7 +191,7 @@ final class vb implements fc {
             } else {
               var10_ref_String = jc.field_g.readNullableString((byte) 57);
               if (var10_ref_String != null) {
-                jd.a(0, vi.b(0), var10_ref_String);
+                jd.a(0, DiskCacheWorker.b(0), var10_ref_String);
               }
             }
             kc.a((byte) 18);

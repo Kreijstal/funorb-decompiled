@@ -15,7 +15,7 @@ abstract class wl {
     PacketBuffer field_g;
     byte field_m;
     volatile int field_b;
-    ob field_k;
+    NetworkArchiveRequest field_k;
 
     final boolean a(int param0) {
         if (param0 != 20) {
@@ -46,17 +46,17 @@ abstract class wl {
         return this.field_i.a(param0 - 82) + this.field_c.a(-112);
     }
 
-    final ob a(int param0, int param1, int param2, boolean param3, byte param4) {
-        ob stackIn_3_0 = null;
+    final NetworkArchiveRequest a(int param0, int param1, int param2, boolean param3, byte param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        ob stackIn_15_0 = null;
+        NetworkArchiveRequest stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         long var6;
-        ob var8;
-        ob var8Lifetime1;
+        NetworkArchiveRequest var8;
+        NetworkArchiveRequest var8Lifetime1;
         var6 = (long)param1 + ((long)param0 << 32);
         if (param2 >= 74) {
-          var8 = new ob();
+          var8 = new NetworkArchiveRequest();
           var8.field_q = param4;
           stackIn_15_0 = var8;
           stackIn_16_1 = (!param3) ? false : true;
@@ -76,7 +76,7 @@ abstract class wl {
           return var8;
         }
         field_d = (IntrusiveDeque) null;
-        var8Lifetime1 = new ob();
+        var8Lifetime1 = new NetworkArchiveRequest();
         var8Lifetime1.field_q = param4;
         stackIn_3_0 = var8Lifetime1;
         stackIn_4_1 = (!param3) ? false : true;

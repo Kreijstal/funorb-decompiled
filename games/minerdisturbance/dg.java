@@ -6,7 +6,7 @@ final class dg {
     static bg field_a;
 
     final static void a(byte param0) {
-        vl.h(-1);
+        DiskArchiveRequest.h(-1);
         wi.field_C = true;
         MusicPatchPcmStream.field_B = true;
         if (param0 == 117) {

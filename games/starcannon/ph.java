@@ -90,7 +90,7 @@ class ph extends qj implements ga {
             fd.a(3, 0);
             this.n(125);
           } else {
-            ef.a("tochangedisplayname.ws", ll.b(90), 100);
+            DiskCacheWorker.a("tochangedisplayname.ws", ll.b(90), 100);
           }
           if (!param2) {
             return;

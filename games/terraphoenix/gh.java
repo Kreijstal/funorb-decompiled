@@ -84,7 +84,7 @@ final class gh extends eb {
           }
           var1_int = 0;
           for (var2 = 0; var2 < 9; var2++) {
-            if (rf.field_B[var2].field_c) {
+            if (ArchiveRequest.field_B[var2].field_c) {
               var1_int++;
             }
           }

@@ -86,7 +86,7 @@ final class m extends IntrusiveNode {
               return;
             }
             if (pf.field_d != null) {
-              pf.field_d.a(5);
+              pf.field_d.shutdown(5);
             }
             if (null != hc.field_c) {
               try {

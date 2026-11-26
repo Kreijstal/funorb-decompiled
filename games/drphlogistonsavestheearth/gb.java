@@ -16,7 +16,7 @@ abstract class gb {
     volatile int field_h;
     volatile int field_c;
     byte field_a;
-    cm field_d;
+    NetworkArchiveRequest field_d;
 
     abstract void b(byte param0);
 
@@ -60,11 +60,11 @@ abstract class gb {
         return param0 | param1;
     }
 
-    final cm a(int param0, int param1, byte param2, int param3, boolean param4) {
+    final NetworkArchiveRequest a(int param0, int param1, byte param2, int param3, boolean param4) {
         long var6 = ((long)param0 << 32) + (long)param3;
-        cm var8 = new cm();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         if (param1 != 11259) {
-          return (cm) null;
+          return (NetworkArchiveRequest) null;
         }
         var8.field_y = param4 ? true : false;
         var8.field_N = param2;
@@ -127,20 +127,20 @@ abstract class gb {
             if (LevelSession.field_K == null) {
               return;
             }
-            stackIn_13_0 = n.field_h;
+            stackIn_13_0 = DiskCacheWorker.field_h;
             stackIn_13_1 = 107;
             stackIn_13_2 = null;
             stackIn_13_3 = null;
             stackIn_13_4 = LevelSession.field_K.getCodeBase();
             stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(vb.field_o).append("&u=");
-            if (null == bi.field_J) {
+            if (null == DiskArchiveRequest.field_J) {
               stackIn_14_2 = null;
               stackIn_14_3 = null;
               stackIn_14_6 = "" + sf.field_l;
             } else {
               stackIn_14_2 = null;
               stackIn_14_3 = null;
-              stackIn_14_6 = bi.field_J;
+              stackIn_14_6 = DiskArchiveRequest.field_J;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).requestUrlStream(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_n).append("&v2=").append(PlatformTaskDispatcher.field_t).append("&e=").append(var10).toString()));
             while (var4.status == 0) {

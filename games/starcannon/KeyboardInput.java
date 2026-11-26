@@ -21,7 +21,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var3 = 127 & pd.field_b + 1;
               if (wg.field_b != var3) {
                 pe.field_e[pd.field_b] = -1;
-                ik.field_s[pd.field_b] = (char)var2_int;
+                ArchiveRequest.field_s[pd.field_b] = (char)var2_int;
                 pd.field_b = var3;
               }
             }
@@ -116,7 +116,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var3 = 127 & pd.field_b + 1;
               if (wg.field_b != var3) {
                 pe.field_e[pd.field_b] = var2_int;
-                ik.field_s[pd.field_b] = (char)0;
+                ArchiveRequest.field_s[pd.field_b] = (char)0;
                 pd.field_b = var3;
               }
             }

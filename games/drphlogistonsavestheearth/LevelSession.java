@@ -505,7 +505,7 @@ final class LevelSession {
         }
         bc.field_d.c();
         SoftwareRasterizer.clearRaster();
-        lb.field_C.setAsRasterTarget(119);
+        ArchiveRequest.field_C.setAsRasterTarget(119);
         fc.field_a = 0;
         this.field_b = 0;
         bc.field_f = 0;
@@ -872,7 +872,7 @@ final class LevelSession {
           this.field_T = -118;
         }
         var11.c(var10, 0, var11.field_x, 16777215, -1);
-        lb.field_C.setAsRasterTarget(116);
+        ArchiveRequest.field_C.setAsRasterTarget(116);
         var12.b(-(var12.field_y / 2) + 503, var12.field_w / 2 + 443);
         if (this.field_Z > 0) {
           stackIn_40_0 = (this.field_Z % 20 < 10) ? 16711680 : 0;
@@ -1201,7 +1201,7 @@ final class LevelSession {
               }
               rh.field_b.c();
               be.a(0, 0, 640, 480, 22070844, 255);
-              lb.field_C.setAsRasterTarget(117);
+              ArchiveRequest.field_C.setAsRasterTarget(117);
               ek.a(-78, false, 1);
               return;
             }
@@ -1661,7 +1661,7 @@ final class LevelSession {
           decompiledFrameRemainder3 = (var3 != 0);
         }
         if (decompiledFrameRemainder3) {
-          if (!ck.field_f[lb.field_A] ||
+          if (!ck.field_f[ArchiveRequest.field_A] ||
             ib.field_t == 1) {
             if ((!ck.field_f[IntrusiveDeque.field_f] ||
               2 == ib.field_t) &&
@@ -2469,7 +2469,7 @@ final class LevelSession {
         if (decompiledNaturalLoopExit0) {
           bc.field_d.c();
           SoftwareRasterizer.fillRectangle(0, 0, bc.field_d.field_y, bc.field_d.field_w, 0);
-          lb.field_C.setAsRasterTarget(124);
+          ArchiveRequest.field_C.setAsRasterTarget(124);
           stackIn_20_0 = this.levelNumber;
         }
         ab.field_b = stackIn_20_0;

@@ -60,7 +60,7 @@ final class lg {
         }
         cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) cl.field_e);
-        uj.field_f = pl.a((byte) 112, var2);
+        DiskCacheWorker.field_f = pl.a((byte) 112, var2);
     }
 
     private final void a(int param0) {

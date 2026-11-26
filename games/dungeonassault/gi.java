@@ -40,7 +40,7 @@ final class gi extends ii implements vg {
             for (var6 = 0; var3_int > var6; var6++) {
               this.field_O[var6] = new ck(this.field_M[var6], (pg) (this));
               this.field_O[var6].field_o = (ca) ((Object) var5);
-              this.field_O[var6].field_i = ln.field_c;
+              this.field_O[var6].field_i = SectorCacheStore.field_c;
               this.field_O[var6].b(0, 80, var6 * 16 + 20, 0, 15);
               this.b((byte) -123, this.field_O[var6]);
             }

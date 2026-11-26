@@ -238,13 +238,13 @@ final class fm {
             bl.field_n != null) {
             rl.field_a.c(231, 390);
             var1 = rh.field_b;
-            if (wj.field_k.field_h == 0) {
+            if (ArchiveRequest.field_k.field_h == 0) {
               var1 = ke.field_c;
             }
             var1.c(0, 0);
             stackIn_49_0 = 40;
             stackIn_49_1 = GzipDecompressor.field_c;
-            if (0 != wj.field_k.field_h) {
+            if (0 != ArchiveRequest.field_k.field_h) {
               stackIn_50_2 = 3;
             } else {
               stackIn_50_2 = 4;
@@ -262,27 +262,27 @@ final class fm {
             }
             stackIn_55_0 = 8;
             stackIn_55_1 = ua.field_c;
-            stackIn_56_2 = (wj.field_k.field_h == 0);
+            stackIn_56_2 = (ArchiveRequest.field_k.field_h == 0);
             RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_55_0, stackIn_55_1, stackIn_56_2, gb.field_d);
           }
           if (null != rl.field_a &&
             bl.field_n != null) {
             rl.field_a.c(434, 390);
             hd.field_e.c(0, 0);
-            if (wj.field_k.field_h == 1) {
+            if (ArchiveRequest.field_k.field_h == 1) {
               ld.a(-4 + rl.field_a.field_o, param0 - 155, 64, 392, 436, 7 * rl.field_a.field_k / 12);
             }
             stackIn_64_0 = 8;
             stackIn_64_1 = ug.field_q;
-            stackIn_65_2 = (wj.field_k.field_h == 1);
+            stackIn_65_2 = (ArchiveRequest.field_k.field_h == 1);
             RasterBuffer.$cfr$intArgs$a$a1440e9a5aa4(stackIn_64_0, stackIn_64_1, stackIn_65_2, ce.field_a);
           }
           if (null != field_b) {
             var1_int = 357 - field_b.field_t / 2;
             field_b.c(269 - field_b.field_s, var1_int);
             oh.field_a.c(586, var1_int);
-            if (vl.field_d > var1_int &&
-              vl.field_d < field_b.field_k + var1_int) {
+            if (DiskCacheWorker.field_d > var1_int &&
+              DiskCacheWorker.field_d < field_b.field_k + var1_int) {
               var2Lifetime5 = (40 * fm.a(GzipDecompressor.field_c << 4, 2047) >> 16) + 40;
               if (var2Lifetime5 > 0) {
                 if (269 - field_b.field_o < ua.field_a &&

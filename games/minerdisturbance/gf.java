@@ -1185,7 +1185,7 @@ final class gf {
               if (this.field_h >= 0 &&
                 5 >= this.field_h) {
                 if (ke.field_V) {
-                  nm.field_g[this.field_h] = nm.field_g[this.field_h] + 1;
+                  DiskCacheWorker.field_g[this.field_h] = DiskCacheWorker.field_g[this.field_h] + 1;
                 }
                 if (je.c(this.field_n, this.field_p, 1, 1)) {
                   vi.field_q = vi.field_q + 1;
@@ -1195,32 +1195,32 @@ final class gf {
                   }
                 }
                 if (ke.field_V &&
-                  25 == nm.field_g[this.field_h] &&
+                  25 == DiskCacheWorker.field_g[this.field_h] &&
                   0 == this.field_h) {
                   fn.a(4, 251, 3);
                 }
                 if (ke.field_V &&
-                  nm.field_g[this.field_h] == 25 &&
+                  DiskCacheWorker.field_g[this.field_h] == 25 &&
                   this.field_h == 1) {
                   fn.a(5, 250, 3);
                 }
                 if (ke.field_V &&
-                  nm.field_g[this.field_h] == 25 &&
+                  DiskCacheWorker.field_g[this.field_h] == 25 &&
                   this.field_h == 2) {
                   fn.a(6, 249, 3);
                 }
                 if (ke.field_V &&
-                  nm.field_g[this.field_h] == 25 &&
+                  DiskCacheWorker.field_g[this.field_h] == 25 &&
                   3 == this.field_h) {
                   fn.a(7, 248, 3);
                 }
                 if (ke.field_V &&
-                  nm.field_g[this.field_h] == 25 &&
+                  DiskCacheWorker.field_g[this.field_h] == 25 &&
                   this.field_h == 5) {
                   fn.a(18, 237, 3);
                 }
                 if (ke.field_V &&
-                  10 == nm.field_g[this.field_h] &&
+                  10 == DiskCacheWorker.field_g[this.field_h] &&
                   this.field_h == 4) {
                   fn.a(8, 247, 3);
                 }

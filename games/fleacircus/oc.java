@@ -241,7 +241,7 @@ final class oc {
             BoundedRandomAccessFile.field_b = ha.createAccountSuggestionsResult(param1, -21916);
             return;
           }
-          BoundedRandomAccessFile.field_b = af.createAccountErrorResult((byte) 36, param2, param3);
+          BoundedRandomAccessFile.field_b = DiskCacheWorker.createAccountErrorResult((byte) 36, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -68,11 +68,11 @@ final class cl extends gb {
           int var4_int = 0;
           RuntimeException var4 = null;
           Exception var5 = null;
-          cm var5_ref = null;
+          NetworkArchiveRequest var5_ref = null;
           IOException var5_ref2 = null;
           Exception var6 = null;
           int var7 = 0;
-          cm var5_refLifetime1;
+          NetworkArchiveRequest var5_refLifetime1;
           var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           try {
             var4_int = 2 % ((param2 + 59) / 40);
@@ -91,7 +91,7 @@ final class cl extends gb {
             this.field_g.position = 0;
             this.field_d = null;
             while (true) {
-              var5_ref = (cm) (this.field_m.d(5518));
+              var5_ref = (NetworkArchiveRequest) (this.field_m.d(5518));
               if (var5_ref != null) {
                 this.field_i.a(var5_ref, 0);
                 continue;
@@ -99,7 +99,7 @@ final class cl extends gb {
               break;
             }
             while (true) {
-              var5_refLifetime1 = (cm) (this.field_b.d(5518));
+              var5_refLifetime1 = (NetworkArchiveRequest) (this.field_b.d(5518));
               if (var5_refLifetime1 != null) {
                 this.field_f.a(var5_refLifetime1, 0);
                 continue;
@@ -175,7 +175,7 @@ final class cl extends gb {
           int stackIn_84_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          cm var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -190,11 +190,11 @@ final class cl extends gb {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          cm var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           String var17 = null;
-          cm var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
           if (null != this.field_r) {
             var2_long = la.correctedCurrentTimeMillis(param0);
@@ -225,23 +225,23 @@ final class cl extends gb {
           }
           try {
             this.field_r.checkWriteError((byte) -13);
-            var2 = (cm) (this.field_i.a(true));
+            var2 = (NetworkArchiveRequest) (this.field_i.a(true));
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(1, (byte) -117);
               this.field_l.writeLong40(1992910808, var2.secondaryKey);
               this.field_r.queueWrite(this.field_l.payload.length, -30537, this.field_l.payload, 0);
               this.field_m.a(var2, 0);
-              var2 = (cm) (this.field_i.c(91));
+              var2 = (NetworkArchiveRequest) (this.field_i.c(91));
             }
-            var2Lifetime1 = (cm) (this.field_f.a(true));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_f.a(true));
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(0, (byte) -90);
               this.field_l.writeLong40(1992910808, var2Lifetime1.secondaryKey);
               this.field_r.queueWrite(this.field_l.payload.length, -30537, this.field_l.payload, 0);
               this.field_b.a(var2Lifetime1, 0);
-              var2Lifetime1 = (cm) (this.field_f.c(-124));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_f.c(-124));
             }
             if (param0) {
               var17 = (String) null;
@@ -299,13 +299,13 @@ final class cl extends gb {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (cm) (this.field_b.a(true));
+                        var14_ref = (NetworkArchiveRequest) (this.field_b.a(true));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (cm) (this.field_b.c(114));
+                          var14_ref = (NetworkArchiveRequest) (this.field_b.c(114));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
@@ -313,12 +313,12 @@ final class cl extends gb {
                         (decompiledFrameCompleted0)) {
                         stackIn_68_0 = this.field_m;
                         stackIn_69_1 = !(param0);
-                        var14_ref = (cm) (((hl) (Object) stackIn_68_0).a(stackIn_69_1));
+                        var14_ref = (NetworkArchiveRequest) (((hl) (Object) stackIn_68_0).a(stackIn_69_1));
                         while (var14_ref != null) {
                           if (var14_ref.secondaryKey == var12) {
                             break;
                           }
-                          var14_ref = (cm) (this.field_m.c(89));
+                          var14_ref = (NetworkArchiveRequest) (this.field_m.c(89));
                         }
                       }
                       if (var14_ref == null) {

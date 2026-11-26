@@ -30,7 +30,7 @@ final class cb {
           } else {
             try {
               ol.field_g = new BufferedSocket((java.net.Socket) (qg.field_a.result), IntrusiveDeque.field_g);
-              gf.field_c.position = 0;
+              SectorCacheStore.field_c.position = 0;
               var2_ref_hb = MonkeyPuzzle2.field_D;
               stackIn_10_0 = (!param1) ? -1 : -2;
               bk.field_f = stackIn_10_0;
@@ -38,7 +38,7 @@ final class cb {
               hk.field_l = stackIn_10_0;
               dk.field_h = ii.field_r;
               var2_ref_hb.position = 0;
-              qi.a(j.field_a, gf.field_c, kc.field_c, false, rl.field_a);
+              qi.a(j.field_a, SectorCacheStore.field_c, kc.field_c, false, rl.field_a);
               SocketConnector.a((byte) -71, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

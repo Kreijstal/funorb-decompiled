@@ -100,9 +100,9 @@ final class ha {
               } else {
                 sh.field_k = tb.a(param1, param5, (byte) -18, false);
               }
-              na.field_r.position = 0;
-              na.field_r.writeByte(-9469, 14);
-              na.field_r.writeByte(-9469, sh.field_k.a((byte) -24).field_b);
+              NetworkArchiveRequest.field_r.position = 0;
+              NetworkArchiveRequest.field_r.writeByte(-9469, 14);
+              NetworkArchiveRequest.field_r.writeByte(-9469, sh.field_k.a((byte) -24).field_b);
               fe.a((byte) -118, -1);
               ra.field_b = vd.field_q;
             }
@@ -110,7 +110,7 @@ final class ha {
               r.a(1, (byte) 122)) {
               var6_int = rd.field_j.readUnsignedByte(94);
               if (var6_int == 0) {
-                ra.field_b = ab.field_w;
+                ra.field_b = DiskArchiveRequest.field_w;
               } else {
                 ra.field_b = field_a;
                 al.field_a = -1;
@@ -118,7 +118,7 @@ final class ha {
               }
               rd.field_j.position = 0;
             }
-            if (ab.field_w == ra.field_b &&
+            if (DiskArchiveRequest.field_w == ra.field_b &&
               r.a(8, (byte) 127)) {
               hb.field_b = rd.field_j.readLong(true);
               rd.field_j.position = 0;
@@ -186,7 +186,7 @@ final class ha {
               IntrusiveNode.field_b = rd.field_j.readUnsignedByte(-117);
               ra.field_b = ad.field_q;
               if (sh.field_k.a((byte) -24) != tf.field_o) {
-                if (sh.field_k.a((byte) -24) == hc.field_h) {
+                if (sh.field_k.a((byte) -24) == SectorCacheStore.field_h) {
                   oj.field_e.a(mk.g(-120), 0);
                 }
               } else {
@@ -215,7 +215,7 @@ final class ha {
               if (d.field_c > 0) {
                 dg.field_F = true;
               }
-              na.field_r.b(kb.field_e, 8);
+              NetworkArchiveRequest.field_r.b(kb.field_e, 8);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 kb.field_e[var8Lifetime1] = kb.field_e[var8Lifetime1] + 50;
               }

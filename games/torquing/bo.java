@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bo {
-    private ac field_b;
+    private NetworkArchiveRequest field_b;
     private Js5Transport field_g;
-    private co field_c;
+    private DiskCacheWorker field_c;
     private java.math.BigInteger field_a;
     private CachedArchiveSource[] field_f;
     private java.math.BigInteger field_j;
@@ -24,7 +24,7 @@ final class bo {
         field_l = null;
     }
 
-    bo(Js5Transport param0, co param1) {
+    bo(Js5Transport param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -56,7 +56,7 @@ final class bo {
         return;
     }
 
-    final CachedArchiveSource a(pb param0, byte param1, int param2, pb param3, boolean param4) {
+    final CachedArchiveSource a(SectorCacheStore param0, byte param1, int param2, SectorCacheStore param3, boolean param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -139,7 +139,7 @@ final class bo {
         if (this.field_b.field_r) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_b.c((byte) 119));
+        var10 = new PacketBuffer(this.field_b.getData((byte) 119));
         if (param0 != -74) {
           field_l = (IntrusiveDeque) null;
         }
@@ -172,7 +172,7 @@ final class bo {
         return true;
     }
 
-    private bo(Js5Transport param0, co param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private bo(Js5Transport param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_c = param1;
           this.field_a = param3;

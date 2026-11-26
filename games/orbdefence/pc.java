@@ -279,7 +279,7 @@ final class pc extends hl {
         byte[] var14 = null;
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
-          var10 = cd.field_t;
+          var10 = NetworkArchiveRequest.field_t;
           var2 = var10.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var9 = (vb) (e.field_b.beginForward((byte) -28));

@@ -160,7 +160,7 @@ abstract class ByteStorage {
           var6 = (byte)param1.k(8, 1522829539);
           if (var5 > 0) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param2[var7] = (byte)(param1.k(var5, ak.a(param0, -1522829510)) + var6);
+              param2[var7] = (byte)(param1.k(var5, SectorCacheStore.a(param0, -1522829510)) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

@@ -697,7 +697,7 @@ abstract class bi extends GameApplet {
                               return;
                             }
                             stackIn_32_0 = (var2 == 12);
-                            var3 = si.a(stackIn_32_0, 0);
+                            var3 = DiskArchiveRequest.a(stackIn_32_0, 0);
                             cd.a(var3, (byte) 20);
                           } else {
                             lg.a((byte) 122);
@@ -863,7 +863,7 @@ abstract class bi extends GameApplet {
             m.a((byte) -79, ii.a(false));
           }
           if (var4 == 10) {
-            gf.field_c.b(true, 17);
+            SectorCacheStore.field_c.b(true, 17);
           }
           if (var4 == 11) {
             l.a(ii.a(false), -120);

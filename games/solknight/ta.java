@@ -33,7 +33,7 @@ final class ta {
           for (var3 = 0; GzipDecompressor.field_c > var3; var3++) {
             RasterBuffer.field_e[param1 + var3] = var3;
           }
-          ri.a(dc.field_o, param1 + param1, false, param1 + GzipDecompressor.field_c, (byte) -81, bi.field_e, param1);
+          ri.a(dc.field_o, param1 + param1, false, param1 + GzipDecompressor.field_c, (byte) -81, SectorCacheStore.field_e, param1);
           if (param1 >= GzipDecompressor.field_c) {
             return;
           }

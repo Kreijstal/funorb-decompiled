@@ -130,7 +130,7 @@ final class GzipDecompressor {
         RuntimeException decompiledCaughtException = null;
         var5 = stellarshard.field_B;
         try {
-          el.field_E = ta.field_m;
+          DiskArchiveRequest.field_E = ta.field_m;
           if (param2 >= -15) {
             return;
           }

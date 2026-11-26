@@ -322,11 +322,11 @@ final class QuickChatMenu {
         }
         this.field_e = 0;
         this.field_i = 0;
-        if (0 != ma.field_I) {
-          this.field_e = ma.field_I;
+        if (0 != DiskArchiveRequest.field_I) {
+          this.field_e = DiskArchiveRequest.field_I;
           this.field_c = true;
           this.field_h = param2;
-          this.field_j = ma.field_I;
+          this.field_j = DiskArchiveRequest.field_I;
           this.field_b = UiWidget.field_m;
         }
         if (this.field_j != 0 &&
@@ -336,7 +336,7 @@ final class QuickChatMenu {
           }
           this.field_b = this.field_b - 1;
         }
-        if (ma.field_I == 0 &&
+        if (DiskArchiveRequest.field_I == 0 &&
           oh.field_f == 0) {
           this.field_j = 0;
         }

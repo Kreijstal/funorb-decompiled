@@ -36,10 +36,10 @@ final class dd extends eb {
 
     final static boolean f(byte param0) {
         if (param0 == 105) {
-          return pe.field_a == ua.field_d ? true : false;
+          return pe.field_a == SectorCacheStore.field_d ? true : false;
         }
         dd.clearDeclaredStaticReferences((byte) -23);
-        return pe.field_a == ua.field_d ? true : false;
+        return pe.field_a == SectorCacheStore.field_d ? true : false;
     }
 
     final String f(int param0) {

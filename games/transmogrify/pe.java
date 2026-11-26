@@ -23,7 +23,7 @@ final class pe {
             return stackIn_2_0;
           }
           if (rl.a(param4, 0, param2, param1)) {
-            stackIn_7_0 = ak.a(param3.a((byte) -93, param4, param2), 21725);
+            stackIn_7_0 = SectorCacheStore.a(param3.a((byte) -93, param4, param2), 21725);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

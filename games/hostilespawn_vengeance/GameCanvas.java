@@ -11,7 +11,7 @@ final class GameCanvas extends java.awt.Canvas {
     static ResourceArchive field_d;
     static String field_f;
     static RgbSprite field_h;
-    static dh field_c;
+    static DiskCacheWorker field_c;
     static int field_b;
     static float field_a;
 

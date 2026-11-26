@@ -117,14 +117,14 @@ final class ld implements WidgetRenderer {
             if (var3_int != 0) {
               var1.readString((byte) 120);
             }
-            var5 = ac.a(var4_ref_String, 0);
+            var5 = NetworkArchiveRequest.a(var4_ref_String, 0);
             var6 = var1.readString((byte) 116);
             var7 = hf.a((CharSequence) ((Object) var4_ref_String), 121);
             if (null == var7) {
               var7 = var4_ref_String;
             }
             if (var5 == null) {
-              var5 = ac.a(var6, 0);
+              var5 = NetworkArchiveRequest.a(var6, 0);
               if (null != var5) {
                 ed.field_c.a(var5, (long)var7.hashCode(), 0);
               }

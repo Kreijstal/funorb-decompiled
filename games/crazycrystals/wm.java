@@ -28,8 +28,8 @@ final class wm {
         if (!ne.field_d) {
           throw new IllegalStateException();
         }
-        if (null != sp.field_a) {
-          sp.field_a.i((byte) -99);
+        if (null != SectorCacheStore.field_a) {
+          SectorCacheStore.field_a.i((byte) -99);
         }
         String var1 = vg.c((byte) 104);
         mk.field_b = new vk(var1, (String) null, true, false, false);

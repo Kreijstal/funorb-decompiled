@@ -41,7 +41,7 @@ final class GameScreen {
           this.field_k.a((byte) -121, param1, var3_int, this.a(param0 ^ -29803, ph.field_d, LocalizedStrings.field_u));
           this.field_b = -1;
           if (this.screenId == 7) {
-            sh.a(param0 + 84, param1);
+            ArchiveRequest.a(param0 + 84, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,10 +153,10 @@ final class GameScreen {
               dk.field_s.patchByteLength(-var9 + dk.field_s.position, -111);
             }
             nb.a(-1, -1);
-            aj.field_c = sh.field_t;
+            aj.field_c = ArchiveRequest.field_t;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (aj.field_c == sh.field_t &&
+          if (aj.field_c == ArchiveRequest.field_t &&
             pe.a((byte) 117, 1)) {
             var9 = id.field_b.readUnsignedByte(-89);
             id.field_b.position = 0;
@@ -370,8 +370,8 @@ final class GameScreen {
           if (220 < nk.field_h) {
             nk.field_h = 220;
           }
-          if (sh.field_r > 256) {
-            sh.field_r = 256;
+          if (ArchiveRequest.field_r > 256) {
+            ArchiveRequest.field_r = 256;
           }
           sf.a(-49);
           if (vc.field_e) {
@@ -557,18 +557,18 @@ final class GameScreen {
           var3 = stackIn_230_0;
           if (this.screenId == 10) {
             if (0 <= this.field_k.field_j &&
-              ~db.field_z != ~this.field_k.field_j) {
+              ~NetworkArchiveRequest.field_z != ~this.field_k.field_j) {
               ByteStorage.field_e = 50;
-              db.field_z = this.field_k.field_j;
+              NetworkArchiveRequest.field_z = this.field_k.field_j;
             }
-            if (~db.field_z != ~qb.field_h) {
+            if (~NetworkArchiveRequest.field_z != ~qb.field_h) {
               if (ByteStorage.field_e > 0) {
                 ByteStorage.field_e = ByteStorage.field_e - 1;
               }
               if (ByteStorage.field_e <= 0) {
                 ByteStorage.field_e = 0;
                 fa.field_j = 25;
-                qb.field_h = db.field_z;
+                qb.field_h = NetworkArchiveRequest.field_z;
               }
             }
             if (0 < fa.field_j) {
@@ -2604,7 +2604,7 @@ final class GameScreen {
           var11Lifetime1 = RandomAccessCacheFile.field_e;
           var13Lifetime1 = je.field_h[ok.field_b];
           var17Lifetime1 = u.field_c;
-          var12Lifetime1 = sh.field_q;
+          var12Lifetime1 = ArchiveRequest.field_q;
           var10Lifetime1 = 100;
           var6Lifetime1 = we.field_m[ok.field_b + 1];
           var5Lifetime1 = 15245826;
@@ -2748,7 +2748,7 @@ final class GameScreen {
                                 var4_int = -var2_int + lg.field_d[1][2];
                                 var5 = -var3_int + lg.field_d[1][4];
                                 if (UiComponent.field_o > 0 &&
-                                  ol.a((byte) -119, sh.field_u)) {
+                                  ol.a((byte) -119, ArchiveRequest.field_u)) {
                                   var5 = var5 * 7 / 6;
                                 }
                                 var3_int = -GzipDecoder.field_a[0].fullHeight + var3_int;
@@ -3811,7 +3811,7 @@ final class GameScreen {
                                               if (var6Lifetime1 == 0) {
                                                 return;
                                               }
-                                              rb.a(-86, 10, 2);
+                                              DiskCacheWorker.a(-86, 10, 2);
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -3868,7 +3868,7 @@ final class GameScreen {
                                               if (var6Lifetime1Lifetime1 == 0) {
                                                 return;
                                               }
-                                              rb.a(-104, 10, 2);
+                                              DiskCacheWorker.a(-104, 10, 2);
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -4631,8 +4631,8 @@ final class GameScreen {
             vj.field_c = param4;
             ResourceArchive.field_n[param4].b(false, false);
             ResourceArchive.field_n[param4].a(jj.field_a[param4], 32, 128, (int[]) null, 0, -20861, 64, 0);
-            if (db.field_x[AccountNameAvailabilityValidator.field_r][param4] - 1 <= ResourceArchive.field_n[param4].field_kb) {
-              ResourceArchive.field_n[param4].field_kb = db.field_x[AccountNameAvailabilityValidator.field_r][param4] - 1;
+            if (NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][param4] - 1 <= ResourceArchive.field_n[param4].field_kb) {
+              ResourceArchive.field_n[param4].field_kb = NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][param4] - 1;
             }
             var11 = pl.field_e[ResourceArchive.field_n[param4].field_L];
             var12 = a.field_d[param4][var11][ResourceArchive.field_n[param4].field_kb][0];
@@ -6017,7 +6017,7 @@ final class GameScreen {
             if (var10 != 12) {
               stackIn_80_0 = nk.field_h;
             } else {
-              stackIn_80_0 = sh.field_r;
+              stackIn_80_0 = ArchiveRequest.field_r;
             }
             var24 = stackIn_80_0;
             var24 = var24 * 128;
@@ -6902,8 +6902,8 @@ final class GameScreen {
           if (stackIn_21_0 >= -80) {
             this.field_j = -65;
           }
-          while (db.field_D.first((byte) 113) != null) {
-            db.field_D.pollFirst((byte) 60);
+          while (NetworkArchiveRequest.field_D.first((byte) 113) != null) {
+            NetworkArchiveRequest.field_D.pollFirst((byte) 60);
             if (var4 != 0) {
               return;
             }

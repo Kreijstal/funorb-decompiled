@@ -416,7 +416,7 @@ final class jl {
                 af.field_w[pd.field_a * 8 + 7].c(var4, var3 - 6);
                 var3 = var3 + (14 + af.field_y.a(oi.field_i, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) * 14);
                 af.field_w[8 * pd.field_a + 3].c(var4, var3 - 6);
-                var3 = var3 + (14 + 14 * af.field_y.a(ra.field_y, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
+                var3 = var3 + (14 + 14 * af.field_y.a(NetworkArchiveRequest.field_y, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
                 af.field_y.a(ab.field_B, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
               }
             }
@@ -963,7 +963,7 @@ final class jl {
               ia.field_k = 0;
               ua.field_c = -3;
               field_j = 5;
-              tg.field_y = 10;
+              DiskArchiveRequest.field_y = 10;
               DelayedPcmStream.field_n = 0;
               il.field_i = il.field_i + rj.field_h;
               gf.field_b = 2;

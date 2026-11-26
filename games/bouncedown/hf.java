@@ -24,7 +24,7 @@ final class hf {
         RuntimeException var2_ref = null;
         var5 = Bounce.field_N;
         try {
-          if (lf.field_q == null) {
+          if (NetworkArchiveRequest.field_q == null) {
             return null;
           }
           if (param0 == null) {
@@ -39,7 +39,7 @@ final class hf {
             stackIn_10_0 = null;
             return (fb) (stackIn_10_0);
           }
-          var3 = (fb) (lf.field_q.a((long)var2.hashCode(), 0));
+          var3 = (fb) (NetworkArchiveRequest.field_q.a((long)var2.hashCode(), 0));
           if (!param1) {
             field_b = false;
           }
@@ -50,7 +50,7 @@ final class hf {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (fb) (lf.field_q.b(0));
+            var3 = (fb) (NetworkArchiveRequest.field_q.b(0));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -89,15 +89,15 @@ final class hf {
           }
           try {
             if (ih.field_X == 0) {
-              md.field_q = vc.field_G.requestDirectSocket(bd.field_l, a.field_a, 0);
+              DiskArchiveRequest.field_q = vc.field_G.requestDirectSocket(bd.field_l, a.field_a, 0);
               ih.field_X = ih.field_X + 1;
             }
             if (ih.field_X == 1) {
-              if (md.field_q.status == 2) {
+              if (DiskArchiveRequest.field_q.status == 2) {
                 stackIn_14_0 = qg.a(-23888, -1);
                 return stackIn_14_0;
               }
-              if (md.field_q.status == 1) {
+              if (DiskArchiveRequest.field_q.status == 1) {
                 ih.field_X = ih.field_X + 1;
               }
             }
@@ -105,7 +105,7 @@ final class hf {
               hf.a(true);
             }
             if (ih.field_X == 2) {
-              AccountRequestState.field_a = new BufferedSocket((java.net.Socket) (md.field_q.result), vc.field_G);
+              AccountRequestState.field_a = new BufferedSocket((java.net.Socket) (DiskArchiveRequest.field_q.result), vc.field_G);
               var2 = new PacketBuffer(13);
               AppletShell.a(pe.field_c, 6, AccountRequestState.field_e, var2, fi.field_c);
               var2.writeByte(15, (byte) 98);
@@ -135,7 +135,7 @@ final class hf {
             }
             tb.field_p.a((byte) -114, AccountRequestState.field_a, ke.field_p);
             ih.field_X = 0;
-            md.field_q = null;
+            DiskArchiveRequest.field_q = null;
             AccountRequestState.field_a = null;
             stackIn_34_0 = 0;
             return stackIn_34_0;

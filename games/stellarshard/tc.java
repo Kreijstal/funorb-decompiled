@@ -16,7 +16,7 @@ final class tc extends id {
         if (dj.field_a == o.field_l) {
           return lc.field_p;
         }
-        if (dj.field_a == el.field_E) {
+        if (dj.field_a == DiskArchiveRequest.field_E) {
           return gk.field_c;
         }
         if (param0 != -5) {

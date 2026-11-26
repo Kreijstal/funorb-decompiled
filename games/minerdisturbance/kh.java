@@ -15,7 +15,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (lb.field_y != null) {
             DirectByteStorage.field_c = 0;
             DualLinkNode.field_n = param0.getX();
-            vl.field_G = param0.getY();
+            DiskArchiveRequest.field_G = param0.getY();
             sf.correctedCurrentTimeMillis((byte) -42);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               ic.field_n = 1;
@@ -79,7 +79,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (lb.field_y != null) {
             DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
-            nm.field_a = param0.getY();
+            DiskCacheWorker.field_a = param0.getY();
             kk.field_d = true;
           }
           return;
@@ -105,7 +105,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (lb.field_y != null) {
             DirectByteStorage.field_c = 0;
             sa.field_o = -1;
-            nm.field_a = -1;
+            DiskCacheWorker.field_a = -1;
             kk.field_d = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -180,7 +180,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (lb.field_y != null) {
             DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
-            nm.field_a = param0.getY();
+            DiskCacheWorker.field_a = param0.getY();
             kk.field_d = true;
           }
           return;
@@ -310,7 +310,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null != lb.field_y) {
             DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
-            nm.field_a = param0.getY();
+            DiskCacheWorker.field_a = param0.getY();
             kk.field_d = true;
           }
         } catch (RuntimeException runtimeException) {

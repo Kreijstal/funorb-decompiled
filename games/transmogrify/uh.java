@@ -19,7 +19,7 @@ abstract class uh {
     PacketBuffer field_g;
     volatile int field_k;
     volatile int field_p;
-    pj field_e;
+    NetworkArchiveRequest field_e;
 
     abstract void d(int param0);
 
@@ -71,14 +71,14 @@ abstract class uh {
         }
     }
 
-    final pj a(int param0, boolean param1, boolean param2, byte param3, int param4) {
-        pj stackIn_2_0 = null;
+    final NetworkArchiveRequest a(int param0, boolean param1, boolean param2, byte param3, int param4) {
+        NetworkArchiveRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         long var6;
-        pj var8;
+        NetworkArchiveRequest var8;
         MidiPcmStream var9;
         var6 = (long)param4 + ((long)param0 << 32);
-        var8 = new pj();
+        var8 = new NetworkArchiveRequest();
         var8.field_z = param3;
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param2) ? false : true;

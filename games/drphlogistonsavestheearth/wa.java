@@ -510,25 +510,25 @@ final class wa extends pj implements kd, ke {
             }
           }
           if (param1) {
-            lb.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
-            if (lb.field_w.c((byte) -82)) {
-              if (lb.field_w.field_f == 0) {
+            ArchiveRequest.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
+            if (ArchiveRequest.field_w.c((byte) -82)) {
+              if (ArchiveRequest.field_w.field_f == 0) {
                 stackIn_62_0 = 3;
                 return stackIn_62_0;
               }
-              if (1 == lb.field_w.field_f) {
+              if (1 == ArchiveRequest.field_w.field_f) {
                 stackIn_65_0 = 2;
                 return stackIn_65_0;
               }
             }
             while (th.a(83)) {
-              lb.field_w.a(0, (byte) 123);
-              if (lb.field_w.c((byte) -82)) {
-                if (lb.field_w.field_f == 0) {
+              ArchiveRequest.field_w.a(0, (byte) 123);
+              if (ArchiveRequest.field_w.c((byte) -82)) {
+                if (ArchiveRequest.field_w.field_f == 0) {
                   stackIn_72_0 = 3;
                   return stackIn_72_0;
                 }
-                if (lb.field_w.field_f == 1) {
+                if (ArchiveRequest.field_w.field_f == 1) {
                   stackIn_75_0 = 1;
                   return stackIn_75_0;
                 }
@@ -669,25 +669,25 @@ final class wa extends pj implements kd, ke {
             }
           }
           if (param1) {
-            lb.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
-            if (lb.field_w.c((byte) -82)) {
-              if (lb.field_w.field_f == 0) {
+            ArchiveRequest.field_w.a(0, DelegatingCanvas.a(ob.field_g, -13412, ck.field_c), DelegatingCanvas.a(ih.field_R, -13412, ae.field_gb));
+            if (ArchiveRequest.field_w.c((byte) -82)) {
+              if (ArchiveRequest.field_w.field_f == 0) {
                 stackIn_62_0 = 3;
                 return stackIn_62_0;
               }
-              if (1 == lb.field_w.field_f) {
+              if (1 == ArchiveRequest.field_w.field_f) {
                 stackIn_65_0 = 2;
                 return stackIn_65_0;
               }
             }
             while (th.a(83)) {
-              lb.field_w.a(0, (byte) 123);
-              if (lb.field_w.c((byte) -82)) {
-                if (lb.field_w.field_f == 0) {
+              ArchiveRequest.field_w.a(0, (byte) 123);
+              if (ArchiveRequest.field_w.c((byte) -82)) {
+                if (ArchiveRequest.field_w.field_f == 0) {
                   stackIn_72_0 = 3;
                   return stackIn_72_0;
                 }
-                if (lb.field_w.field_f == 1) {
+                if (ArchiveRequest.field_w.field_f == 1) {
                   stackIn_75_0 = 1;
                   return stackIn_75_0;
                 }

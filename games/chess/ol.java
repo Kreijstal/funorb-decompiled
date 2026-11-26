@@ -461,7 +461,7 @@ final class ol extends ma implements nn, mj, wl {
         this.field_T.field_j = vc.field_a;
         this.field_Q.field_j = MusicPatchPcmStream.field_o;
         this.field_L.field_j = hl.field_q;
-        this.field_U.field_j = tc.field_A;
+        this.field_U.field_j = DiskArchiveRequest.field_A;
         this.field_Z.field_j = wk.field_a;
         this.field_W.field_j = fm.field_P;
         this.field_P.field_j = pa.field_k;

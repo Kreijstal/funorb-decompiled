@@ -145,13 +145,13 @@ final class bf {
           SoftwareRasterizer.restoreClip(kd.field_g);
           AwtRasterBuffer.a(0, 640, 0, (byte) 80);
           AwtRasterBuffer.a(0, 640, 40, (byte) 46);
-          vf.a(432, true, 33, -75, 48);
-          vf.a(432, true, 599, 113, 48);
-          vf.a(32, true, 164, -113, 8);
+          ArchiveRequest.a(432, true, 33, -75, 48);
+          ArchiveRequest.a(432, true, 599, 113, 48);
+          ArchiveRequest.a(32, true, 164, -113, 8);
           if (param1 > -127) {
             field_m = (tf) null;
           }
-          vf.a(32, true, 468, 108, 8);
+          ArchiveRequest.a(32, true, 468, 108, 8);
           ByteStorage.a(41, (byte) 77, 558, 416, true);
           ad.field_e.h(41, 48);
           ad.field_e.j(-ad.field_e.field_d + 599, 48);
@@ -267,9 +267,9 @@ final class bf {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               dj.a(var15, (byte) 123);
               if (var6_intLifetime1 != 0) {
-                oc.a(var6_intLifetime1, (byte) -59, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, ln.field_e);
+                oc.a(var6_intLifetime1, (byte) -59, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, SectorCacheStore.field_e);
               } else {
-                oc.a(var6_intLifetime1, (byte) -66, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, ln.field_e);
+                oc.a(var6_intLifetime1, (byte) -66, SecondaryNodeDeque.field_g, cm.field_P, fm.field_g, SectorCacheStore.field_e);
               }
             }
             kj.a(var5, 0);

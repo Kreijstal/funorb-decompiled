@@ -30,7 +30,7 @@ final class q {
           sc.field_c = param4;
           i.field_a = param0;
           aj.field_c = (ch) ((Object) new uf());
-          uf.field_r = new nm(param1);
+          uf.field_r = new DiskCacheWorker(param1);
           ke.field_U = new bk(aj.field_c, uf.field_r);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "q.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');

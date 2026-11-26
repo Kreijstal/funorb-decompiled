@@ -1,0 +1,153 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NetworkArchiveRequest extends ArchiveRequest {
+    int field_C;
+    static long field_B;
+    static int field_D;
+    PacketBuffer field_G;
+    byte field_F;
+    static String field_E;
+
+    final int getProgressPercent(boolean param0) {
+        if (null == this.field_G) {
+          return 0;
+        }
+        if (param0) {
+          return 100 * this.field_G.position / (-this.field_F + this.field_G.payload.length);
+        }
+        this.field_F = (byte) 65;
+        return 100 * this.field_G.position / (-this.field_F + this.field_G.payload.length);
+    }
+
+    final static void a(int param0, qc param1, int param2, int param3, int param4, qc param5) {
+        le.field_k = param3;
+        nh.field_h = param2;
+        if (param0 != 14835) {
+          return;
+        }
+        try {
+          nh.field_f = param4;
+          ld.field_y = param5;
+          pk.field_a = param1;
+        } catch (RuntimeException runtimeException) {
+          throw ma.a((Throwable) ((Object) runtimeException), "ph.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(String param0, int param1, java.awt.Color param2, int param3, boolean param4) {
+        Exception exception = null;
+        Exception var5 = null;
+        RuntimeException var5_ref = null;
+        int var7 = 0;
+        int var8 = 0;
+        java.awt.Graphics var9 = null;
+        java.awt.Graphics var10 = null;
+        RuntimeException stackIn_20_0 = null;
+        StringBuilder stackIn_20_1 = null;
+        String stackIn_21_2 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        Throwable decompiledCaughtException = null;
+        try {
+          try {
+            var9 = qd.field_j.getGraphics();
+            if (null == sj.field_F) {
+              sj.field_F = new java.awt.Font("Helvetica", 1, 13);
+            }
+            if (param4) {
+              var9.setColor(java.awt.Color.black);
+              var9.fillRect(0, 0, lk.field_j, td.field_d);
+            }
+            if (param2 == null) {
+              param2 = new java.awt.Color(140, 17, 17);
+            }
+            try {
+              if (null == wc.field_C) {
+                wc.field_C = qd.field_j.createImage(304, 34);
+              }
+              var10 = wc.field_C.getGraphics();
+              var10.setColor(param2);
+              var10.drawRect(0, 0, 303, 33);
+              var10.fillRect(2, 2, 3 * param3, 30);
+              var10.setColor(java.awt.Color.black);
+              var10.drawRect(1, 1, 301, 31);
+              var10.fillRect(3 * param3 + 2, param1, -(3 * param3) + 300, 30);
+              var10.setFont(sj.field_F);
+              var10.setColor(java.awt.Color.white);
+              var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
+              var9.drawImage(wc.field_C, lk.field_j / 2 - 152, -18 + td.field_d / 2, (java.awt.image.ImageObserver) null);
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              exception = (Exception) (Object) decompiledCaughtException;
+              var7 = lk.field_j / 2 - 152;
+              var8 = -18 + td.field_d / 2;
+              var9.setColor(param2);
+              var9.drawRect(var7, var8, 303, 33);
+              var9.fillRect(2 + var7, 2 + var8, 3 * param3, 30);
+              var9.setColor(java.awt.Color.black);
+              var9.drawRect(1 + var7, var8 + 1, 301, 31);
+              var9.fillRect(var7 + 2 + param3 * 3, 2 + var8, -(3 * param3) + 300, 30);
+              var9.setFont(sj.field_F);
+              var9.setColor(java.awt.Color.white);
+              var9.drawString(param0, var7 + (-(6 * param0.length()) + 304) / 2, var8 + 22);
+            }
+            if (hf.field_j == null) {
+              return;
+            }
+            var9.setFont(sj.field_F);
+            var9.setColor(java.awt.Color.white);
+            var9.drawString(hf.field_j, lk.field_j / 2 - hf.field_j.length() * 6 / 2, -26 + td.field_d / 2);
+            return;
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var5 = (Exception) (Object) decompiledCaughtException;
+            qd.field_j.repaint();
+            return;
+          }
+        } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
+          decompiledCaughtException = decompiledCaughtParameter2;
+          var5_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_20_0 = var5_ref;
+          stackIn_20_1 = new StringBuilder().append("ph.C(");
+          if (param0 == null) {
+            stackIn_21_2 = "null";
+          } else {
+            stackIn_21_2 = "{...}";
+          }
+          stackIn_23_1 = ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw ma.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    final byte[] getData(int param0) {
+        if (param0 != -27203) {
+          return (byte[]) null;
+        }
+        if (this.field_w) {
+          throw new RuntimeException();
+        }
+        if (this.field_G.position >= -this.field_F + this.field_G.payload.length) {
+          return this.field_G.payload;
+        }
+        throw new RuntimeException();
+    }
+
+    public static void clearStaticReferences(int param0) {
+        int var1 = -69 % ((param0 - 44) / 32);
+        field_E = null;
+    }
+
+    NetworkArchiveRequest() {
+    }
+
+    static {
+        field_B = 20000000L;
+        field_E = "FULL ACCESS";
+    }
+}

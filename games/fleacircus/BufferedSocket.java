@@ -50,7 +50,7 @@ final class BufferedSocket implements Runnable {
         var2 = fleas.field_A ? 1 : 0;
         tj.field_a = tj.field_a + 1;
         if ((!(wc.field_q > 0) ||
-          qh.c((byte) 68)) && (fleas.field_E == 0 &&
+          DiskArchiveRequest.c((byte) 68)) && (fleas.field_E == 0 &&
           tj.field_a >= 15)) {
           oa.a(9, true, 15);
           decompiledFrameRemainder0 = false;
@@ -84,7 +84,7 @@ final class BufferedSocket implements Runnable {
             } else {
               hj.field_a[fleas.field_E] = Math.max(tj.field_a, hj.field_a[fleas.field_E]);
               var3 = new ql(fleas.field_E, -1 + hj.field_a[fleas.field_E], 0, 0, 0, 0);
-              if (!qh.c((byte) 38)) {
+              if (!DiskArchiveRequest.c((byte) 38)) {
                 rd.a(var3, 79, 5);
                 ej.a((byte) -39);
               } else {
@@ -250,7 +250,7 @@ final class BufferedSocket implements Runnable {
         }
         stackIn_9_0 = ((IntrusiveDeque.field_b &&
           mf.field_a == null) ||
-          qh.c((byte) 33));
+          DiskArchiveRequest.c((byte) 33));
         return stackIn_9_0;
     }
 

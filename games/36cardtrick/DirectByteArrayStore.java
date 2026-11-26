@@ -62,7 +62,7 @@ final class DirectByteArrayStore extends ByteArrayStore {
           if (param0 >= -40) {
             field_d = (AccountRequestState) null;
           }
-          var3 = na.field_r;
+          var3 = NetworkArchiveRequest.field_r;
           var3.h(param2, 0);
           var3.writeByte(-9469, 5);
           var3.writeByte(-9469, 0);

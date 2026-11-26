@@ -243,7 +243,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
             if (lh.field_b.field_u != null) {
               vg.field_q = new dj(lh.field_b.field_u, 5200, 0);
               lh.field_b.field_u = null;
-              var6 = new eh(255, vg.field_q, new dj(lh.field_b.field_g, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, vg.field_q, new dj(lh.field_b.field_g, 12000, 0), 2097152);
             }
             if (null != vg.field_q) {
               if (null == ok.field_a) {
@@ -253,9 +253,9 @@ final class DelegatingCanvas extends java.awt.Canvas {
                 ok.field_a[param2] = new dj(lh.field_b.field_p[param2], 12000, 0);
                 lh.field_b.field_p[param2] = null;
               }
-              var7 = new eh(param2, vg.field_q, ok.field_a[param2], 2097152);
+              var7 = new SectorCacheStore(param2, vg.field_q, ok.field_a[param2], 2097152);
             }
-            var8 = ed.field_b.a(param5, param2, false, (eh) (var6), (eh) (var7));
+            var8 = ed.field_b.a(param5, param2, false, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param4) {
               var8.d((byte) 111);
             }

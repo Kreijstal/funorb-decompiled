@@ -30,7 +30,7 @@ final class gf {
           te.field_b = DualLinkNode.field_i;
           pe.field_d = hj.field_d;
           la.field_c = wj.field_a;
-          uf.field_d = vj.field_Y;
+          SectorCacheStore.field_d = vj.field_Y;
           vj.field_Y = false;
           kg.field_a = na.field_c;
           if (!param0) {

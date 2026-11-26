@@ -195,7 +195,7 @@ final class bg extends WidgetContainer implements u, ql, sh {
         int var5Lifetime3;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         var2 = 0;
-        var3 = uj.field_i;
+        var3 = DiskCacheWorker.field_i;
         if (5 > var3) {
           var2 = var3 * (var3 * 8192) / 1100;
           if (param1 < 77) {

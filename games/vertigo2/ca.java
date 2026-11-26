@@ -91,7 +91,7 @@ final class ca {
         }
         if (null == AccountCreationResultPanel.field_pb) {
           va.field_s.b(119);
-          if (qh.field_g) {
+          if (SectorCacheStore.field_g) {
             if (!lc.field_d) {
               return;
             }
@@ -114,7 +114,7 @@ final class ca {
         }
         AccountCreationResultPanel.field_pb.a(param0, (byte) -28);
         va.field_s.b(119);
-        if (!qh.field_g) {
+        if (!SectorCacheStore.field_g) {
           return;
         }
         if (!lc.field_d) {

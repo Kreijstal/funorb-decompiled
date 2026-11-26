@@ -35,7 +35,7 @@ final class vf {
             var6 = (PacketBuffer) null;
             vf.a((PacketBuffer) null, -44);
           }
-          stackIn_13_0 = ra.field_t;
+          stackIn_13_0 = NetworkArchiveRequest.field_t;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -66,7 +66,7 @@ final class vf {
               jh.field_b.a(-4628);
             }
             if (bc.field_j != null) {
-              bc.field_j.a(6843);
+              bc.field_j.shutdown(6843);
             }
             if (param0 < 52) {
               var4 = (String) null;

@@ -32,7 +32,7 @@ final class ke {
           lj.field_g = false;
           no.field_d = wm.field_g;
           lc.field_c = ak.field_k;
-          AchievementIconEntry.field_k = em.field_C;
+          AchievementIconEntry.field_k = NetworkArchiveRequest.field_C;
           wm.field_g = param0;
         }
     }

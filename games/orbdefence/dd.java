@@ -44,7 +44,7 @@ final class dd extends kj {
             ((s) (this.field_y)).field_F) &&
             this.field_v == 1) {
             var5_int = -this.field_C + (ua.field_a - param2);
-            var6 = vl.field_d + (-this.field_F - param3);
+            var6 = DiskCacheWorker.field_d + (-this.field_F - param3);
             if (this.field_s != var5_int ||
               this.field_n != var6) {
               this.field_s = var5_int;

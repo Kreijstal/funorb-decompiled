@@ -19,7 +19,7 @@ abstract class vb {
     PacketBuffer field_o;
     byte field_f;
     volatile int field_h;
-    db field_p;
+    NetworkArchiveRequest field_p;
 
     abstract void a(boolean param0, Object param1, byte param2);
 
@@ -83,18 +83,18 @@ abstract class vb {
         return this.field_c.a(true) + this.field_l.a(true);
     }
 
-    final db a(boolean param0, int param1, int param2, byte param3, int param4) {
-        db stackIn_3_0 = null;
+    final NetworkArchiveRequest a(boolean param0, int param1, int param2, byte param3, int param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        db stackIn_15_0 = null;
+        NetworkArchiveRequest stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         long var6;
-        db var8;
+        NetworkArchiveRequest var8;
         long var6Lifetime1;
-        db var8Lifetime1;
+        NetworkArchiveRequest var8Lifetime1;
         if (param4 > 30) {
           var6 = ((long)param1 << 32) + (long)param2;
-          var8 = new db();
+          var8 = new NetworkArchiveRequest();
           stackIn_15_0 = var8;
           stackIn_16_1 = (!param0) ? false : true;
           stackIn_15_0.field_s = stackIn_16_1;
@@ -115,7 +115,7 @@ abstract class vb {
         }
         field_r = -38;
         var6Lifetime1 = ((long)param1 << 32) + (long)param2;
-        var8Lifetime1 = new db();
+        var8Lifetime1 = new NetworkArchiveRequest();
         stackIn_3_0 = var8Lifetime1;
         stackIn_4_1 = (!param0) ? false : true;
         stackIn_3_0.field_s = stackIn_4_1;

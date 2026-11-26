@@ -86,7 +86,7 @@ class DualLinkNode extends IntrusiveNode {
         rf.field_K = new fm(ck.field_H);
         le.field_b = new gn[25][];
         le.field_b[0] = lc.a(-27711, new String[][]{bh.field_J, nf.field_C});
-        le.field_b[1] = lc.a(-27711, new String[][]{rl.field_e, co.field_J});
+        le.field_b[1] = lc.a(-27711, new String[][]{rl.field_e, DiskArchiveRequest.field_J});
         int var1 = -50 % ((30 - param0) / 40);
         le.field_b[2] = lc.a(-27711, new String[][]{p.field_J, je.field_f, KeyboardInput.field_a, h.field_y});
         le.field_b[3] = lc.a(-27711, new String[][]{pp.field_E, np.field_C});
@@ -109,7 +109,7 @@ class DualLinkNode extends IntrusiveNode {
         le.field_b[20] = lc.a(-27711, new String[][]{hh.field_n, fj.field_a, k.field_a});
         le.field_b[21] = lc.a(-27711, new String[][]{rn.field_g});
         le.field_b[22] = lc.a(-27711, new String[][]{GameAppletShell.field_e});
-        le.field_b[23] = lc.a(-27711, new String[][]{vf.field_A, qd.field_e, BufferedSocket.field_k, ByteStorage.field_b});
+        le.field_b[23] = lc.a(-27711, new String[][]{ArchiveRequest.field_A, qd.field_e, BufferedSocket.field_k, ByteStorage.field_b});
         le.field_b[24] = lc.a(-27711, new String[][]{tp.field_A});
         if (!(kd.field_c <= 25)) {
           kd.field_c = 0;

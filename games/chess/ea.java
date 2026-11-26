@@ -91,7 +91,7 @@ final class ea extends se {
         }
         var6 = this.field_fb.a(21314);
         if (in.field_g == var6) {
-          var17 = cc.field_v;
+          var17 = NetworkArchiveRequest.field_v;
           if (!var17.equals(this.field_v)) {
             this.field_v = var17;
             this.f((byte) 105);
@@ -141,7 +141,7 @@ final class ea extends se {
           return;
         }
         if (var6 == MouseWheelInput.field_d) {
-          var22 = cc.field_v;
+          var22 = NetworkArchiveRequest.field_v;
           if (!var22.equals(this.field_v)) {
             this.field_v = var22;
             this.f((byte) 105);

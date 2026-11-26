@@ -52,7 +52,7 @@ final class h {
         if (ob.field_l <= 0) {
           return;
         }
-        if (md.a((byte) -124, wh.field_c)) {
+        if (DiskArchiveRequest.a((byte) -124, wh.field_c)) {
           fj.a(32, new int[]{1, 12, 13, 4, 3, 7}, 288, (byte) -127, 149, 1, 50);
           vd.screens[1] = new MenuScreen(1);
           return;

@@ -116,7 +116,7 @@ class vn extends bj implements mj {
     final void n(int param0) {
         this.field_wb.b(2121792, 15016, 4210752);
         e var2 = new e(this, this.field_Fb, gg.field_q);
-        var2.a(15, 87, tc.field_y);
+        var2.a(15, 87, DiskArchiveRequest.field_y);
         if (param0 == 24528) {
           this.c(var2, 127);
           return;
@@ -179,7 +179,7 @@ class vn extends bj implements mj {
                 var6.a(9, 31, gg.field_e);
               }
             } else {
-              var6.a(8, 101, gd.field_f);
+              var6.a(8, 101, SectorCacheStore.field_f);
             }
           } else {
             var6.a(7, 81, ki.field_Q);

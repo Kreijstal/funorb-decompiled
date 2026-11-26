@@ -25,7 +25,7 @@ final class j extends IntrusiveNode {
             if (null != vc.field_G.field_j) {
               jg.field_C = new jf(vc.field_G.field_j, 5200, 0);
               vc.field_G.field_j = null;
-              var6 = new vh(255, jg.field_C, new jf(vc.field_G.field_m, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, jg.field_C, new jf(vc.field_G.field_m, 12000, 0), 2097152);
             }
             if (null != jg.field_C) {
               if (pd.field_a == null) {
@@ -35,9 +35,9 @@ final class j extends IntrusiveNode {
                 pd.field_a[param3] = new jf(vc.field_G.field_u[param3], 12000, 0);
                 vc.field_G.field_u[param3] = null;
               }
-              var7 = new vh(param3, jg.field_C, pd.field_a[param3], 2097152);
+              var7 = new SectorCacheStore(param3, jg.field_C, pd.field_a[param3], 2097152);
             }
-            var8 = ih.field_Q.a(param2, (vh) (var7), (vh) (var6), param3, -18023);
+            var8 = ih.field_Q.a(param2, (SectorCacheStore) (var7), (SectorCacheStore) (var6), param3, -18023);
             if (param0) {
               var8.b((byte) -124);
             }

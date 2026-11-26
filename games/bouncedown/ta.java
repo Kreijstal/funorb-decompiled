@@ -75,7 +75,7 @@ final class ta {
           var1 = nb.field_d;
           if (var1 > 0) {
             if (var1 != 1) {
-              ej.field_c = jf.a(md.field_v, new String[]{Integer.toString(var1)}, (byte) -126);
+              ej.field_c = jf.a(DiskArchiveRequest.field_v, new String[]{Integer.toString(var1)}, (byte) -126);
             } else {
               ej.field_c = pg.field_d;
             }

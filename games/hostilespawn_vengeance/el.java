@@ -328,7 +328,7 @@ final class el extends fe {
                   var25Lifetime1 = param4.field_l[var23Lifetime2];
                   var26Lifetime1 = param4.field_F[var23Lifetime2];
                   GameAppletShell.field_d[var23Lifetime2] = (var18 * var26Lifetime1 + var25Lifetime1 * var15 + var12 * var24Lifetime1 >> 16) + var9;
-                  ae.field_q[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
+                  ArchiveRequest.field_q[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var13 * var24Lifetime1 + var16 * var25Lifetime1 >> 16);
                   IsaacGenerator.field_l[var23Lifetime2] = (var24Lifetime1 * var14 + (var17 * var25Lifetime1 + var20 * var26Lifetime1) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -518,7 +518,7 @@ final class el extends fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 9) {
-            stackIn_4_0 = ae.field_s;
+            stackIn_4_0 = ArchiveRequest.field_s;
             return stackIn_4_0;
           }
           stackIn_2_0 = 47;

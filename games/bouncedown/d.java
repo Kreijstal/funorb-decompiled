@@ -283,8 +283,8 @@ final class d extends wd {
             kc.a((byte) 18);
             return;
           }
-          if (null == lf.field_q) {
-            lf.field_q = new hc(128);
+          if (null == NetworkArchiveRequest.field_q) {
+            NetworkArchiveRequest.field_q = new hc(128);
             kc.field_a = 0;
           }
           var3Lifetime1 = var1.readString(true);
@@ -297,12 +297,12 @@ final class d extends wd {
           if (null == var6_ref) {
             var6_ref = hf.a(var5_ref, true);
             if (var6_ref != null) {
-              lf.field_q.a((long)ce.a((CharSequence) ((Object) var4_ref_StringLifetime1), 0).hashCode(), var6_ref, -127);
+              NetworkArchiveRequest.field_q.a((long)ce.a((CharSequence) ((Object) var4_ref_StringLifetime1), 0).hashCode(), var6_ref, -127);
             }
           }
           if (var6_ref == null) {
             var6_ref = new fb();
-            lf.field_q.a((long)ce.a((CharSequence) ((Object) var4_ref_StringLifetime1), 0).hashCode(), var6_ref, -121);
+            NetworkArchiveRequest.field_q.a((long)ce.a((CharSequence) ((Object) var4_ref_StringLifetime1), 0).hashCode(), var6_ref, -121);
             fieldTemp$1 = kc.field_a;
             kc.field_a = kc.field_a + 1;
             var6_ref.field_mb = fieldTemp$1;
@@ -330,7 +330,7 @@ final class d extends wd {
             break;
           }
           if (stackIn_62_0 != null) {
-            lf.a(var7_ref, var6_ref, -17957);
+            NetworkArchiveRequest.a(var7_ref, var6_ref, -17957);
             if (var8 == 0) {
               return;
             }

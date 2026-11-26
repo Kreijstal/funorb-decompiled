@@ -8,7 +8,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static PacketBuffer field_b;
 
     final static wb b(int param0) {
-        wb var1 = new wb(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[param0], na.field_q[0], hb.field_a[0], rd.field_k[0], ImageProducerRasterBuffer.field_i);
+        wb var1 = new wb(p.field_l, gk.field_a, kb.field_c[0], ml.field_b[param0], NetworkArchiveRequest.field_q[0], hb.field_a[0], rd.field_k[0], ImageProducerRasterBuffer.field_i);
         rh.d(-123);
         return var1;
     }

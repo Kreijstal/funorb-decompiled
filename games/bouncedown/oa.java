@@ -33,7 +33,7 @@ abstract class oa {
         if (null != i.field_h) {
           return (java.awt.Container) ((Object) i.field_h);
         }
-        return (java.awt.Container) ((Object) vi.b(0));
+        return (java.awt.Container) ((Object) DiskCacheWorker.b(0));
     }
 
     abstract java.net.Socket b(int param0) throws IOException;

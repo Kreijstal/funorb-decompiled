@@ -10,7 +10,7 @@ final class ip {
             String var4 = (String) null;
             ip.a((byte) 87, (String) null, -2);
           }
-          t.field_f = no.field_c;
+          DiskCacheWorker.field_f = no.field_c;
           lp.field_C = param2;
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "ip.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

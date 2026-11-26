@@ -51,17 +51,17 @@ final class d {
           }
           if (fg.field_a > 0) {
             if (fg.field_a >= 500) {
-              if (bi.field_h == 1) {
+              if (SectorCacheStore.field_h == 1) {
                 BufferedSocket.field_b.a(kc.field_M, 320, 32, 16711680, 8421504);
               }
-              if (2 == bi.field_h) {
+              if (2 == SectorCacheStore.field_h) {
                 BufferedSocket.field_b.a(IterableNodeHashTable.field_a, 320, 32, 16776960, 8421504);
               }
             } else {
-              if (1 == bi.field_h) {
+              if (1 == SectorCacheStore.field_h) {
                 BufferedSocket.field_b.a(bb.a(pk.field_T, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16711680, 8421504);
               }
-              if (bi.field_h == 2) {
+              if (SectorCacheStore.field_h == 2) {
                 BufferedSocket.field_b.a(bb.a(og.field_i, new String[]{Integer.toString(fg.field_a / 50)}, -63), 320, 32, 16776960, 8421504);
               }
             }

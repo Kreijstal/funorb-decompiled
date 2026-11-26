@@ -64,10 +64,10 @@ final class sa {
             var11 = var7;
             var9 = var11;
             var2 = var9;
-            if (null != tc.field_z) {
+            if (null != DiskArchiveRequest.field_z) {
               try {
-                tc.field_z.a(0L, 0);
-                tc.field_z.a(0, var10);
+                DiskArchiveRequest.field_z.a(0L, 0);
+                DiskArchiveRequest.field_z.a(0, var10);
                 for (var4_int = 0; 24 > var4_int; var4_int++) {
                   if (0 == var11[var4_int]) {
                     continue;

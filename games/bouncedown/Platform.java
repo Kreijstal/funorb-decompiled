@@ -81,7 +81,7 @@ final class Platform {
               if (this.field_b < 16) {
                 q.field_F.d((int)(-64.0 + (this.field_c + (double)param1)), (int)this.field_h, -(this.field_b * 16) + 256);
               }
-              if (vh.a(0, (byte) 88)) {
+              if (SectorCacheStore.a(0, (byte) 88)) {
                 for (var4 = 0; 2 > var4; var4++) {
                   var5 = 3.14 * (double)var4 + (0.05 * this.field_h + this.field_c);
                   var7 = (int)(Math.abs(this.field_h) / 10.0 + (double)var4) % 4;

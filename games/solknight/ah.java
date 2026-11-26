@@ -326,8 +326,8 @@ final class ah {
         if (ImageProducerRasterBuffer.field_n) {
           return;
         }
-        if (bi.field_b == null) {
-          bi.field_b = tk.a(bi.field_i, 15, new int[]{100 * ud.field_k / GameKeyHandler.field_a[7] + 101 * lk.field_e}, 65520, 3, lc.field_h, (byte) -115, ic.field_t, lk.field_e);
+        if (SectorCacheStore.field_b == null) {
+          SectorCacheStore.field_b = tk.a(SectorCacheStore.field_i, 15, new int[]{100 * ud.field_k / GameKeyHandler.field_a[7] + 101 * lk.field_e}, 65520, 3, lc.field_h, (byte) -115, NetworkArchiveRequest.field_t, lk.field_e);
           return;
         }
     }

@@ -75,7 +75,7 @@ final class jh {
           }
           dupTemp$1 = dd.correctedCurrentTimeMillis(71);
           ca.field_Y = dupTemp$1;
-          ik.field_p = dupTemp$1;
+          ArchiveRequest.field_p = dupTemp$1;
           if (ah.field_e.status != 1) {
             r.field_c = PacketBuffer.field_h;
           } else {

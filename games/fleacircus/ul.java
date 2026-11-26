@@ -117,10 +117,10 @@ final class ul extends gj implements nk, da {
           nf.field_K = 2;
         }
         if (param0 == 18398) {
-          fk.field_C = (param1 & 13) >> 2;
+          NetworkArchiveRequest.field_C = (param1 & 13) >> 2;
           oj.field_k = param1 & 3;
-          if (2 < fk.field_C) {
-            fk.field_C = 2;
+          if (2 < NetworkArchiveRequest.field_C) {
+            NetworkArchiveRequest.field_C = 2;
           }
           if (oj.field_k > 2) {
             oj.field_k = 2;

@@ -6,7 +6,7 @@ final class gh {
     private ResourceArchive field_e;
     static String field_b;
     private al field_c;
-    static co field_a;
+    static DiskCacheWorker field_a;
 
     final static void b(int param0) {
         ah.field_c = AudioService.a((byte) 35);

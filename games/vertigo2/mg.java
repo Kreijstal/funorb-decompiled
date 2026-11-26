@@ -428,9 +428,9 @@ final class mg extends WidgetWrapper {
                     var10 = 1;
                   }
                 }
-                if (null != qh.field_e &&
-                  null != qh.field_e[var7]) {
-                  var16Lifetime2 = qh.field_e[var7][var9];
+                if (null != SectorCacheStore.field_e &&
+                  null != SectorCacheStore.field_e[var7]) {
+                  var16Lifetime2 = SectorCacheStore.field_e[var7][var9];
                   if (0 != var16Lifetime2 &&
                     !DirectByteStorage.field_g &&
                     q.field_y <= 0) {
@@ -552,7 +552,7 @@ final class mg extends WidgetWrapper {
                 if (var13 == 0) {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = qh.field_e[var7][var9] - qn.field_w;
+                      var22_int = SectorCacheStore.field_e[var7][var9] - qn.field_w;
                       if (var22_int == 1) {
                         var21 = jm.field_D;
                       } else {

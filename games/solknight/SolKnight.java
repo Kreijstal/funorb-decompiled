@@ -39,7 +39,7 @@ public final class SolKnight extends ab {
           fh.field_c = IsaacRandom.a(param0, 89);
           AccountServiceResult.field_g = IsaacRandom.a(2, 74);
           ProxySocketConnector.field_h = IsaacRandom.a(3, 125);
-          ic.field_u = IsaacRandom.a(4, 109);
+          NetworkArchiveRequest.field_u = IsaacRandom.a(4, 109);
           qb.field_cb = IsaacRandom.a(5, 90);
           field_I = IsaacRandom.a(7, 124);
           nf.a(ai.field_b, -111, pl.field_d);
@@ -233,7 +233,7 @@ public final class SolKnight extends ab {
           ek.clearStaticReferences(117);
           IntrusiveDeque.resetStaticState((byte) -128);
           va.clearStaticReferences((byte) 0);
-          ae.clearStaticReferences(3);
+          DiskCacheWorker.clearStaticReferences(3);
           ne.clearStaticReferences(30731);
           BufferedCacheFile.clearStaticReferences(true);
           BufferedSocket.clearStaticReferences((byte) 84);
@@ -291,13 +291,13 @@ public final class SolKnight extends ab {
           PcmOutputWorker.clearStaticReferences((byte) -90);
           ea.d(false);
           hl.a((byte) -113);
-          ic.resetStaticState(-74);
-          bi.resetStaticState((byte) 102);
-          md.releaseDeclaredStaticReferences(80);
+          NetworkArchiveRequest.resetStaticState(-74);
+          SectorCacheStore.resetStaticState((byte) 102);
+          DiskArchiveRequest.releaseDeclaredStaticReferences(80);
           CachedArchiveSource.clearStaticReferences((byte) 0);
           RandomAccessCacheFile.resetStaticState(119);
           qj.a(-126);
-          sk.clearDeclaredStaticReferences(-106);
+          ArchiveRequest.clearDeclaredStaticReferences(-106);
           pf.clearStaticReferences((byte) -104);
           nf.discardDeclaredStaticReferences(-1);
           af.clearStaticReferences(0);
@@ -489,8 +489,8 @@ public final class SolKnight extends ab {
                 AccountServiceResult.field_g.b(true)) {
                 if (ProxySocketConnector.field_h.c((byte) -121) &&
                   ProxySocketConnector.field_h.b(true)) {
-                  if (ic.field_u.c((byte) -121) &&
-                    ic.field_u.b(true)) {
+                  if (NetworkArchiveRequest.field_u.c((byte) -121) &&
+                    NetworkArchiveRequest.field_u.b(true)) {
                     if (qb.field_cb.c((byte) -121) &&
                       qb.field_cb.b(true)) {
                       if (fh.field_c.c((byte) -121) &&
@@ -558,7 +558,7 @@ public final class SolKnight extends ab {
                     stackIn_29_0 = pb.field_c;
                     return stackIn_29_0;
                   }
-                  a.a((byte) 102, ok.a(0, -18884, je.field_b, ic.field_u, th.field_L), 30.0f);
+                  a.a((byte) 102, ok.a(0, -18884, je.field_b, NetworkArchiveRequest.field_u, th.field_L), 30.0f);
                   stackIn_24_0 = pb.field_c;
                   return stackIn_24_0;
                 }
@@ -587,16 +587,16 @@ public final class SolKnight extends ab {
             stackIn_49_0 = fc.field_o;
             return stackIn_49_0;
           }
-          if (null != ic.field_u) {
+          if (null != NetworkArchiveRequest.field_u) {
             for (var3_int = 0; 6 > var3_int; var3_int++) {
               if (null != c.field_M[var3_int] &&
-                !ua.field_I.a(176400, c.field_M[var3_int], qc.field_s, ic.field_u, -122)) {
+                !ua.field_I.a(176400, c.field_M[var3_int], qc.field_s, NetworkArchiveRequest.field_u, -122)) {
                 stackIn_56_0 = fc.field_o;
                 return stackIn_56_0;
               }
             }
             ua.field_I.b(true);
-            ic.field_u = null;
+            NetworkArchiveRequest.field_u = null;
             qc.field_s = null;
             stackIn_59_0 = fc.field_o;
             return stackIn_59_0;
@@ -749,13 +749,13 @@ public final class SolKnight extends ab {
         int var2_intLifetime1;
         var3 = field_L ? 1 : 0;
         try {
-          if (0 == (bi.field_i & 1073741824)) {
-            bi.field_i = bi.field_i + 2048;
-            ic.field_t = ic.field_t + fa.field_f;
+          if (0 == (SectorCacheStore.field_i & 1073741824)) {
+            SectorCacheStore.field_i = SectorCacheStore.field_i + 2048;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + fa.field_f;
           } else {
-            var2_int = bk.a(bi.field_i >>> 11, jb.field_g, (byte) -102);
-            bi.field_i = bi.field_i - (var2_int << 11);
-            ic.field_t = ic.field_t - fa.field_f * var2_int;
+            var2_int = bk.a(SectorCacheStore.field_i >>> 11, jb.field_g, (byte) -102);
+            SectorCacheStore.field_i = SectorCacheStore.field_i - (var2_int << 11);
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - fa.field_f * var2_int;
           }
           if (param0 != -108) {
             return;
@@ -763,9 +763,9 @@ public final class SolKnight extends ab {
           if (wb.field_c != 0) {
             if (0 < (PacketBuffer.field_j << 17) + lc.field_h) {
               lc.field_h = lc.field_h + (PacketBuffer.field_j << 17);
-              ic.field_t = ic.field_t + PacketBuffer.field_j * ud.field_k;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + PacketBuffer.field_j * ud.field_k;
             } else {
-              ic.field_t = ic.field_t - PacketBuffer.field_j * ud.field_k;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - PacketBuffer.field_j * ud.field_k;
               lc.field_h = lc.field_h - (PacketBuffer.field_j << 17);
             }
           }

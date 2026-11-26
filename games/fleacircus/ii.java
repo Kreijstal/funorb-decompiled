@@ -172,7 +172,7 @@ final class ii {
         int var2;
         var2 = fleas.field_A ? 1 : 0;
         ResourceArchive.field_e = null;
-        ah.field_c = false;
+        SectorCacheStore.field_c = false;
         if (!MouseWheelInput.field_d) {
           var1 = nb.field_h;
           if (var1 > 0) {

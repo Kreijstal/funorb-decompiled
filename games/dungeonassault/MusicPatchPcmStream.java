@@ -328,7 +328,7 @@ final class MusicPatchPcmStream extends PcmStream {
             }
           }
         }
-        ln.field_d = -2147483648;
+        SectorCacheStore.field_d = -2147483648;
         n.field_d = -2147483648;
         ib.field_e = 2147483647;
         da.field_B = 2147483647;

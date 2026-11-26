@@ -232,7 +232,7 @@ final class gm extends hf {
             var25 = new RgbSprite(var6_int, var7);
             var25.c();
             param0.a(0, 0);
-            lb.field_C.setAsRasterTarget(114);
+            ArchiveRequest.field_C.setAsRasterTarget(114);
             param0 = var25;
           }
           var26 = param0;

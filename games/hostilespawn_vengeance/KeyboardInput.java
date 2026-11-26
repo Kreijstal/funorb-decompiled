@@ -24,7 +24,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         RuntimeException var2 = null;
         try {
           if (null != ByteStorage.field_c) {
-            ae.field_s = 0;
+            ArchiveRequest.field_s = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               var2_int < GameCanvas.field_i.length) {
@@ -78,7 +78,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         int var3Lifetime1;
         try {
           if (null != ByteStorage.field_c) {
-            ae.field_s = 0;
+            ArchiveRequest.field_s = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               GameCanvas.field_i.length > var2_int) {

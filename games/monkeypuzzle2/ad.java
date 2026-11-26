@@ -105,7 +105,7 @@ final class ad {
             throw new RuntimeException("");
           }
           if (this.field_i[param2][param0] != null) {
-            var7 = uj.extractBytes(43, this.field_i[param2][param0], false);
+            var7 = DiskCacheWorker.extractBytes(43, this.field_i[param2][param0], false);
             var5 = var7;
             if (var7 == null) {
               throw new RuntimeException("");
@@ -414,7 +414,7 @@ final class ad {
             param1[1] != 0 ||
             param1[2] != 0 ||
             0 != param1[3])) {
-            var35 = uj.extractBytes(59, this.field_h[param3], true);
+            var35 = DiskCacheWorker.extractBytes(59, this.field_h[param3], true);
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
@@ -422,7 +422,7 @@ final class ad {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var9 = uj.extractBytes(67, this.field_h[param3], false);
+            var9 = DiskCacheWorker.extractBytes(67, this.field_h[param3], false);
           }
           try {
             var36 = rc.a(var9, 120);
@@ -843,9 +843,9 @@ final class ad {
                 var11 = (String) null;
                 IntrusiveDeque.field_b = sk.a(param4, ProxySocketConnector.field_f, false, true, (String) null);
               }
-              gf.field_c.position = 0;
-              gf.field_c.writeByte(14, -49152);
-              gf.field_c.writeByte(IntrusiveDeque.field_b.a(false).field_b, -49152);
+              SectorCacheStore.field_c.position = 0;
+              SectorCacheStore.field_c.writeByte(14, -49152);
+              SectorCacheStore.field_c.writeByte(IntrusiveDeque.field_b.a(false).field_b, -49152);
               SocketConnector.a((byte) -71, -1);
               dk.field_h = kh.field_a;
             }
@@ -925,7 +925,7 @@ final class ad {
               }
               cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
               var12 = (CharSequence) ((Object) cl.field_e);
-              uj.field_f = pl.a((byte) 109, var12);
+              DiskCacheWorker.field_f = pl.a((byte) 109, var12);
               ue.field_G = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               dk.field_h = wh.field_b;
               if (IntrusiveDeque.field_b.a(false) != te.field_a) {
@@ -958,7 +958,7 @@ final class ad {
               if (af.field_c > 0) {
                 mb.field_c = true;
               }
-              gf.field_c.a(e.field_b, param1 ^ 650);
+              SectorCacheStore.field_c.a(e.field_b, param1 ^ 650);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 e.field_b[var8Lifetime1] = e.field_b[var8Lifetime1] + 50;
               }

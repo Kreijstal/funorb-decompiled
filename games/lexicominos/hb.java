@@ -34,7 +34,7 @@ final class hb {
             return stackIn_2_0;
           }
           var6 = param4.a(param3, -27964, var5_int);
-          stackIn_4_0 = dl.a(var5_int, param4, (byte) -44, param0, var6);
+          stackIn_4_0 = SectorCacheStore.a(var5_int, param4, (byte) -44, param0, var6);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

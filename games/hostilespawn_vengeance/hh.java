@@ -327,7 +327,7 @@ final class hh {
           ik.field_a = param3;
           mm.field_s = param5;
           ig.field_N = (ej) ((Object) new ih());
-          GameCanvas.field_c = new dh(param2);
+          GameCanvas.field_c = new DiskCacheWorker(param2);
           sj.field_a = new sg(ig.field_N, GameCanvas.field_c);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "hh.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
@@ -464,7 +464,7 @@ final class hh {
                     if (var13Lifetime1 == var9) {
                       var12Lifetime1 = 1;
                     } else {
-                      if (rh.a(var11.field_i, true)) {
+                      if (DiskArchiveRequest.a(var11.field_i, true)) {
                         if ((var9 == -ln.field_a.field_d + var13Lifetime1)) {
                           var12Lifetime1 = 1;
                         }

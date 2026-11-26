@@ -54,7 +54,7 @@ final class bi {
                           var9 = tb.field_I;
                         }
                       } else {
-                        var9 = rh.field_x;
+                        var9 = DiskArchiveRequest.field_x;
                       }
                     } else {
                       var9 = AccountRequestState.field_c;
@@ -63,7 +63,7 @@ final class bi {
                     var9 = NetworkGameClient.field_s;
                   }
                 } else {
-                  var9 = lm.field_y;
+                  var9 = NetworkArchiveRequest.field_y;
                 }
               } else {
                 var9 = ee.field_g;

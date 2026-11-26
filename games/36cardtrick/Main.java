@@ -459,7 +459,7 @@ public final class Main extends c {
         RuntimeException var2 = null;
         try {
           jl.b((byte) 22);
-          if (null != gj.field_a) {
+          if (null != DiskCacheWorker.field_a) {
             PcmOutputWorker.a(true);
           }
           ph.c(1);
@@ -588,13 +588,13 @@ public final class Main extends c {
         var3 = field_T;
         try {
           h.e((byte) -84);
-          if (null != gj.field_a &&
-            gj.field_a.focusLost) {
+          if (null != DiskCacheWorker.field_a &&
+            DiskCacheWorker.field_a.focusLost) {
             PcmOutputWorker.a(!param0);
             g.k(4);
           }
           stackIn_15_1 = -71;
-          stackIn_16_2 = (gj.field_a != null);
+          stackIn_16_2 = (DiskCacheWorker.field_a != null);
           this.a((byte) stackIn_15_1, stackIn_16_2);
           if (kj.field_P) {
             this.n((byte) 7);
@@ -678,11 +678,11 @@ public final class Main extends c {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    stackIn_89_1 = (null != gj.field_a);
+                    stackIn_89_1 = (null != DiskCacheWorker.field_a);
                     var2_int = this.a(stackIn_89_1, (byte) 104);
                     if (var2_int == 1 ||
                       var2_int == 2) {
-                      if (null != gj.field_a) {
+                      if (null != DiskCacheWorker.field_a) {
                         PcmOutputWorker.a(true);
                       }
                       if (2 == var2_int) {
@@ -1565,7 +1565,7 @@ public final class Main extends c {
         int var14Lifetime1;
         var46 = field_T;
         try {
-          hc.a(true);
+          SectorCacheStore.a(true);
           if (null == BufferedSocket.field_c[0]) {
             if (hf.field_H.b(4) &&
               hf.field_H.b(4, "basic")) {
@@ -1704,8 +1704,8 @@ public final class Main extends c {
               var3_int++;
             } while (var46 == 0);
             var3_ref = ia.field_c[15];
-            la.field_k = new RgbSprite(var3_ref.field_p, var3_ref.field_o);
-            la.field_k.c();
+            ArchiveRequest.field_k = new RgbSprite(var3_ref.field_p, var3_ref.field_o);
+            ArchiveRequest.field_k.c();
             var4 = 40 / ((param1 - 23) / 52);
             var3_ref.c(0, 0, 4405028);
             gf.field_e.setAsRasterTarget(200);
@@ -2103,7 +2103,7 @@ public final class Main extends c {
           ah.clearStaticReferences(param0 ^ -38);
           uf.clearStaticReferences();
           re.clearStaticReferences(-4);
-          gj.clearStaticReferences((byte) 14);
+          DiskCacheWorker.clearStaticReferences((byte) 14);
           eb.clearStaticReferences(true);
           tk.resetStaticState(~param0);
           BufferedSocket.resetStaticState((byte) 23);
@@ -2157,12 +2157,12 @@ public final class Main extends c {
           lg.clearStaticReferences(param0 + 18002);
           a.resetStaticState(param0 ^ -14282);
           cd.clearStaticReferences((byte) 104);
-          na.clearStaticReferences(false);
-          hc.clearStaticReferences(true);
-          ab.clearStaticReferences(-78);
+          NetworkArchiveRequest.clearStaticReferences(false);
+          SectorCacheStore.clearStaticReferences(true);
+          DiskArchiveRequest.clearStaticReferences(-78);
           uc.b(param0 ^ 0);
           ud.clearStaticReferences(21316);
-          la.clearStaticReferences((byte) 103);
+          ArchiveRequest.clearStaticReferences((byte) 103);
           kk.clearStaticReferences(false);
           eg.clearStaticReferences((byte) 38);
           ek.clearStaticReferences((byte) 61);
@@ -2315,16 +2315,16 @@ public final class Main extends c {
           if (param0 != 59) {
             return;
           }
-          if (null == gj.field_a) {
+          if (null == DiskCacheWorker.field_a) {
             stackIn_7_0 = tb.field_c;
           } else {
-            stackIn_7_0 = gj.field_a;
+            stackIn_7_0 = DiskCacheWorker.field_a;
           }
           var2 = stackIn_7_0;
           if (th.a(true)) {
             stackIn_13_0 = var2;
             stackIn_13_1 = false;
-            if (gj.field_a == null) {
+            if (DiskCacheWorker.field_a == null) {
               stackIn_14_2 = r.field_q;
             } else {
               stackIn_14_2 = true;
@@ -2364,7 +2364,7 @@ public final class Main extends c {
           }
           if (!eh.d(19314)) {
             if (MouseInputHandler.b(-128)) {
-              if (null == gj.field_a) {
+              if (null == DiskCacheWorker.field_a) {
                 stackIn_48_0 = r.field_q;
               } else {
                 stackIn_48_0 = true;
@@ -2492,7 +2492,7 @@ public final class Main extends c {
               var8 == 0) {
               this.field_E[rk.field_X].a(0, 0, 0);
               td.field_c[-5 + dj.field_a].e(198, 33, -hb.field_d + 32 << 3);
-              la.field_k.b(347, 401);
+              ArchiveRequest.field_k.b(347, 401);
               decompiledFrameRemainder5 = false;
             } else if (var3 != 4 ||
               var8 != 0) {
@@ -2539,7 +2539,7 @@ public final class Main extends c {
               }
               var3_ref_kc = td.field_c[-5 + rk.field_X];
               var3_ref_kc.b(198 + hb.field_d * var3_ref_kc.field_p / 64, 33 + var3_ref_kc.field_o * hb.field_d / 64, var3_ref_kc.field_p * (-hb.field_d + 32) / 32, (-hb.field_d + 32) * var3_ref_kc.field_o / 32);
-              la.field_k.b(198 + (-hb.field_d + 32) * (-var3_ref_kc.field_p + 298) / 64 + var3_ref_kc.field_p / 2, 33 + (32 - hb.field_d) * (-var3_ref_kc.field_o + 736) / 64 + var3_ref_kc.field_o / 2, (32 - hb.field_d) * la.field_k.field_p / 32, (32 - hb.field_d) * la.field_k.field_o / 32);
+              ArchiveRequest.field_k.b(198 + (-hb.field_d + 32) * (-var3_ref_kc.field_p + 298) / 64 + var3_ref_kc.field_p / 2, 33 + (32 - hb.field_d) * (-var3_ref_kc.field_o + 736) / 64 + var3_ref_kc.field_o / 2, (32 - hb.field_d) * ArchiveRequest.field_k.field_p / 32, (32 - hb.field_d) * ArchiveRequest.field_k.field_o / 32);
               decompiledFrameRemainder5 = false;
             }
           }
@@ -2588,7 +2588,7 @@ public final class Main extends c {
             this.b(0, 2);
             var3_ref_kcLifetime1 = td.field_c[-5 + rk.field_X];
             var3_ref_kcLifetime1.b(198 + (32 - hb.field_d) * var3_ref_kcLifetime1.field_p / 64, 33 + var3_ref_kcLifetime1.field_o * (-hb.field_d + 32) / 64, hb.field_d * var3_ref_kcLifetime1.field_p / 32, var3_ref_kcLifetime1.field_o * hb.field_d / 32);
-            la.field_k.b(var3_ref_kcLifetime1.field_p / 2 + (-var3_ref_kcLifetime1.field_p + 298) * hb.field_d / 64 + 198, 33 + ((-var3_ref_kcLifetime1.field_o + 736) * hb.field_d / 64 + var3_ref_kcLifetime1.field_o / 2), hb.field_d * la.field_k.field_p / 32, hb.field_d * la.field_k.field_o / 32);
+            ArchiveRequest.field_k.b(var3_ref_kcLifetime1.field_p / 2 + (-var3_ref_kcLifetime1.field_p + 298) * hb.field_d / 64 + 198, 33 + ((-var3_ref_kcLifetime1.field_o + 736) * hb.field_d / 64 + var3_ref_kcLifetime1.field_o / 2), hb.field_d * ArchiveRequest.field_k.field_p / 32, hb.field_d * ArchiveRequest.field_k.field_o / 32);
           }
           stackIn_86_0Lifetime1 = param0;
           if (stackIn_86_0Lifetime1 >= -98) {
@@ -2611,14 +2611,14 @@ public final class Main extends c {
         int var3 = 0;
         var3 = field_T;
         try {
-          var1 = na.field_r;
+          var1 = NetworkArchiveRequest.field_r;
           while (gl.b(true)) {
             var1.h(8, 0);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             fl.a(var1, false);
-            na.field_r.backpatchByteLength(-var2 + var1.position, 8049);
+            NetworkArchiveRequest.field_r.backpatchByteLength(-var2 + var1.position, 8049);
             if (var3 != 0) {
               return;
             }
@@ -2667,8 +2667,8 @@ public final class Main extends c {
               var6_int = 0;
               do {
                 if (!(var6_int < al.field_a)) {
-                  ni.field_d = hc.field_f;
-                  hc.field_f = sb.field_a;
+                  ni.field_d = SectorCacheStore.field_f;
+                  SectorCacheStore.field_f = sb.field_a;
                   sb.field_a = pd.field_l;
                   pd.field_l = var5_ref_kf.field_h;
                   break;
@@ -2729,8 +2729,8 @@ public final class Main extends c {
             }
             break;
           }
-          ni.field_d = hc.field_f;
-          hc.field_f = sb.field_a;
+          ni.field_d = SectorCacheStore.field_f;
+          SectorCacheStore.field_f = sb.field_a;
           sb.field_a = pd.field_l;
           pd.field_l = vd.field_u;
           vd.field_u = -1;

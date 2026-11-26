@@ -104,12 +104,12 @@ final class PcmOutputWorker implements Runnable {
         if (!param0) {
           field_b = (ha[]) null;
         }
-        if (gj.field_a == null) {
+        if (DiskCacheWorker.field_a == null) {
           return;
         }
-        AccountCreationResultPanel.a(gj.field_a, (byte) -111);
-        gj.field_a.exitFullscreen((byte) -81, jk.field_a);
-        gj.field_a = null;
+        AccountCreationResultPanel.a(DiskCacheWorker.field_a, (byte) -111);
+        DiskCacheWorker.field_a.exitFullscreen((byte) -81, jk.field_a);
+        DiskCacheWorker.field_a = null;
         if (null != wc.field_A) {
           wc.field_A.a((byte) 10);
         }

@@ -48,12 +48,12 @@ final class k extends cb {
           CipherPacketBuffer.field_B = qd.field_J;
           DirectByteStorage.field_c = DirectByteStorage.field_c + 1;
           nk.field_w = sa.field_o;
-          NodeHashTableIterator.field_e = nm.field_a;
+          NodeHashTableIterator.field_e = DiskCacheWorker.field_a;
           field_i = kk.field_d;
           kk.field_d = false;
           jk.field_ab = ic.field_n;
           wi.field_w = DualLinkNode.field_n;
-          GameAppletShell.field_e = vl.field_G;
+          GameAppletShell.field_e = DiskArchiveRequest.field_G;
           if (param0 != 10525) {
             return;
           }

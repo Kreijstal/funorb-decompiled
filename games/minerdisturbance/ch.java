@@ -16,7 +16,7 @@ abstract class ch {
     PacketBuffer field_a;
     byte field_b;
     volatile int field_j;
-    ee field_c;
+    NetworkArchiveRequest field_c;
 
     abstract void b(byte param0);
 
@@ -37,9 +37,9 @@ abstract class ch {
         return this.b(1461895584) >= 20 ? true : false;
     }
 
-    final ee a(byte param0, int param1, boolean param2, int param3, int param4) {
+    final NetworkArchiveRequest a(byte param0, int param1, boolean param2, int param3, int param4) {
         long var6 = (long)param3 + ((long)param4 << 32);
-        ee var8 = new ee();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         if (param1 != -21) {
           this.field_d = -79;
           var8.field_I = param0;

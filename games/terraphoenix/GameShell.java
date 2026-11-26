@@ -135,7 +135,7 @@ abstract class GameShell extends GameApplet {
           }
           return var2;
         }
-        if (!rf.field_r) {
+        if (!ArchiveRequest.field_r) {
           this.a("reconnect", true);
         }
         UiWidget.c((byte) 120);
@@ -461,7 +461,7 @@ abstract class GameShell extends GameApplet {
           }
         }
         if (uh.field_H == 3 &&
-          nh.a(ph.field_q, ch.field_g, false, bi.field_d) &&
+          NetworkArchiveRequest.a(ph.field_q, ch.field_g, false, bi.field_d) &&
           GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
           hj.clearStaticReferences(-7958);

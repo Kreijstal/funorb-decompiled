@@ -59,7 +59,7 @@ class f extends kc {
             f.a(-28, (String) null);
           }
           var4 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = uj.field_f.equals(pl.a((byte) 104, var4));
+          stackIn_3_0 = DiskCacheWorker.field_f.equals(pl.a((byte) 104, var4));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -95,7 +95,7 @@ class f extends kc {
     }
 
     final static void a(int param0, int param1) {
-        hb var2 = gf.field_c;
+        hb var2 = SectorCacheStore.field_c;
         var2.b(true, param0);
         if (param1 != 22492) {
           field_i = (AccountRequestState) null;

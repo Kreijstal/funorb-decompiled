@@ -8,7 +8,7 @@ final class nc extends sf {
     static ja[] field_cb;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        vl.field_f = param1;
+        DiskCacheWorker.field_f = param1;
         fe.field_c = param3;
         int var5 = 79 % ((52 - param0) / 57);
         el.field_D = param4;
@@ -30,8 +30,8 @@ final class nc extends sf {
           }
           hf.field_k = param8;
           kg.field_h = (ge) ((Object) new a());
-          wj.field_o = new vl(param7);
-          ed.field_b = new pi(kg.field_h, wj.field_o);
+          ArchiveRequest.field_o = new DiskCacheWorker(param7);
+          ed.field_b = new pi(kg.field_h, ArchiveRequest.field_o);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

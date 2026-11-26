@@ -9,10 +9,10 @@ final class df {
     static he[] field_f;
     static boolean field_o;
     static he[] field_k;
-    private n field_d;
+    private DiskCacheWorker field_d;
     private PacketBuffer field_c;
     private java.math.BigInteger field_n;
-    private cm field_i;
+    private NetworkArchiveRequest field_i;
     private gb field_j;
     static vj field_m;
     private java.math.BigInteger field_g;
@@ -46,7 +46,7 @@ final class df {
         return;
     }
 
-    final de a(int param0, boolean param1, ik param2, ik param3, byte param4) {
+    final de a(int param0, boolean param1, SectorCacheStore param2, SectorCacheStore param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -106,7 +106,7 @@ final class df {
         }
     }
 
-    df(gb param0, n param1) {
+    df(gb param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -141,7 +141,7 @@ final class df {
         if (this.field_i.field_u) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_i.i(13095));
+        var10 = new PacketBuffer(this.field_i.getData(13095));
         var10.position = 5;
         var3 = var10.readUnsignedByte(31760);
         var10.position = var10.position + var3 * 72;
@@ -184,7 +184,7 @@ final class df {
         field_m = null;
     }
 
-    private df(gb param0, n param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private df(gb param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_j = param0;
           this.field_d = param1;

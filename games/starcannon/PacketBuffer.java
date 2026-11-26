@@ -135,7 +135,7 @@ class PacketBuffer extends IntrusiveNode {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var4 = (CharSequence) ((Object) var2);
-            if (0L != ik.a(var4, (byte) 109)) {
+            if (0L != ArchiveRequest.a(var4, (byte) 109)) {
               return;
             }
           }

@@ -68,7 +68,7 @@ final class sg {
         }
         SpriteState.field_u[oe.field_c] = param4;
         if (GzipDecompressor.field_d < param4) {
-          sd.field_b = param4;
+          DiskCacheWorker.field_b = param4;
         }
         if (!(fj.field_U <= param4)) {
           mj.field_d = param4;
@@ -83,8 +83,8 @@ final class sg {
           mj.field_d = var7;
         }
         oe.field_c = oe.field_c + 1;
-        if (var7 > sd.field_b) {
-          sd.field_b = var7;
+        if (var7 > DiskCacheWorker.field_b) {
+          DiskCacheWorker.field_b = var7;
         }
     }
 

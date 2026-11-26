@@ -88,7 +88,7 @@ final class wj {
             if (va.field_e == mh.field_a) {
               if (param0) {
                 var10 = (String) null;
-                am.field_K = nh.a(SpriteState.field_y, false, -95, param2, (String) null);
+                am.field_K = NetworkArchiveRequest.a(SpriteState.field_y, false, -95, param2, (String) null);
               } else {
                 am.field_K = ji.a(-1, param3, false, param2);
               }
@@ -155,7 +155,7 @@ final class wj {
               var6 = LevelEditor.field_j.readNullableString(param1 ^ -1915102434);
               var7 = LevelEditor.field_j.readUnsignedByte(param1 ^ -19754);
               if (0 != (var7 & 1)) {
-                wh.b(96);
+                DiskCacheWorker.b(96);
               }
               if (!param0) {
                 stackIn_45_0 = ((4 & var7) != 0);

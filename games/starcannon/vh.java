@@ -237,12 +237,12 @@ final class vh extends eh {
           String stackIn_42_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ra var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ra var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = StarCannon.field_A;
           try {
             if (null != this.field_r) {
@@ -260,7 +260,7 @@ final class vh extends eh {
             this.field_a = null;
             this.field_f.position = 0;
             scanLoop1: while (true) {
-              var4_ref = (ra) (this.field_i.c(8));
+              var4_ref = (NetworkArchiveRequest) (this.field_i.c(8));
               if (var4_ref == null) {
                 if (var6 == 0) {
                   break scanLoop1;
@@ -274,7 +274,7 @@ final class vh extends eh {
               break;
             }
             scanLoop2: while (true) {
-              var4_refLifetime1 = (ra) (this.field_k.c(8));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_k.c(8));
               if (null == var4_refLifetime1) {
                 if (var6 == 0) {
                   break scanLoop2;
@@ -555,7 +555,7 @@ final class vh extends eh {
           int stackIn_151_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ra var2 = null;
+          NetworkArchiveRequest var2 = null;
           int var2_int = 0;
           IOException var2_ref = null;
           RuntimeException var2_ref2 = null;
@@ -572,7 +572,7 @@ final class vh extends eh {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ra var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var5Lifetime1;
@@ -608,7 +608,7 @@ final class vh extends eh {
             }
             try {
               this.field_r.a((byte) 126);
-              var2 = (ra) (this.field_m.a((byte) 127));
+              var2 = (NetworkArchiveRequest) (this.field_m.a((byte) 127));
               scanLoop1: while (true) {
                 if (var2 != null) {
                   this.field_g.position = 0;
@@ -616,7 +616,7 @@ final class vh extends eh {
                   this.field_g.writeLong40((byte) -50, var2.field_j);
                   this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
                   this.field_i.a(22197, var2);
-                  var2 = (ra) (this.field_m.a(-99));
+                  var2 = (NetworkArchiveRequest) (this.field_m.a(-99));
                   if (var16 != 0) {
                     break scanLoop1;
                   }
@@ -624,7 +624,7 @@ final class vh extends eh {
                     continue;
                   }
                 }
-                var2 = (ra) (this.field_o.a((byte) 120));
+                var2 = (NetworkArchiveRequest) (this.field_o.a((byte) 120));
                 break;
               }
               scanLoop2: while (true) {
@@ -634,7 +634,7 @@ final class vh extends eh {
                   this.field_g.writeLong40((byte) -78, var2.field_j);
                   this.field_r.a(0, this.field_g.payload, (byte) 87, this.field_g.payload.length);
                   this.field_k.a(22197, var2);
-                  var2 = (ra) (this.field_o.a(-88));
+                  var2 = (NetworkArchiveRequest) (this.field_o.a(-88));
                   if (var16 != 0) {
                     break scanLoop2;
                   }
@@ -716,7 +716,7 @@ final class vh extends eh {
                           var12 = (long)var7 + ((long)var6Lifetime2 << 32);
                           var14 = null;
                           if (var11 == 0) {
-                            var14_ref = (ra) (this.field_i.a((byte) 125));
+                            var14_ref = (NetworkArchiveRequest) (this.field_i.a((byte) 125));
                             while (var14_ref != null) {
                               stackIn_105_0 = compareLongs(var14_ref.field_j, var12);
                               if (var16 != 0) {
@@ -728,7 +728,7 @@ final class vh extends eh {
                                 decompiledFrameCompleted2 = false;
                                 break;
                               }
-                              var14_ref = (ra) (this.field_i.a(-112));
+                              var14_ref = (NetworkArchiveRequest) (this.field_i.a(-112));
                             }
                             if (decompiledFrameCompleted3) {
                               decompiledFrameRemainder0 = !(decompiledFrameCompleted2);
@@ -737,7 +737,7 @@ final class vh extends eh {
                           if ((decompiledFrameRemainder0) &&
                             (decompiledFrameCompleted3) &&
                             (decompiledFrameCompleted2)) {
-                            var14_ref = (ra) (this.field_k.a((byte) 124));
+                            var14_ref = (NetworkArchiveRequest) (this.field_k.a((byte) 124));
                             while (var14_ref != null) {
                               stackIn_105_0 = compareLongs(var12, var14_ref.field_j);
                               if (var16 != 0) {
@@ -747,7 +747,7 @@ final class vh extends eh {
                               if (stackIn_105_0 == 0) {
                                 break;
                               }
-                              var14_ref = (ra) (this.field_k.a(-93));
+                              var14_ref = (NetworkArchiveRequest) (this.field_k.a(-93));
                               if (var16 == 0) {
                                 continue;
                               }

@@ -72,11 +72,11 @@ final class lj {
         if (!this.field_B &&
           this.field_j != 2 &&
           0 == this.field_j &&
-          var3 >= t.field_l) {
+          var3 >= DiskCacheWorker.field_l) {
           var4Lifetime1 = df.field_k;
           var8 = var3;
           var9 = ProxyAuthenticationRequiredException.field_f % 4;
-          var10 = 4 * (var8 - t.field_l);
+          var10 = 4 * (var8 - DiskCacheWorker.field_l);
           if (var9 == 0) {
             var11 = var10 / 2;
             f.field_B = f.field_B + var11;
@@ -96,7 +96,7 @@ final class lj {
               }
             }
           }
-          t.field_l = var8;
+          DiskCacheWorker.field_l = var8;
           var5 = f.field_B;
           var6 = hj.field_c;
           var7 = ca.field_g;

@@ -19,7 +19,7 @@ final class ni {
           if (param0 != -55) {
             field_a = (int[]) null;
           }
-          stackIn_3_0 = dc.a(param1.length, param1, (byte) 16, 0);
+          stackIn_3_0 = NetworkArchiveRequest.a(param1.length, param1, (byte) 16, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

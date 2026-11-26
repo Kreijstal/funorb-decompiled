@@ -184,7 +184,7 @@ final class kf implements uk {
           var44 = 0;
           var13Lifetime1 = var44;
           while (var44 < ld.field_A) {
-            var14Lifetime2 = ki.field_z[var44];
+            var14Lifetime2 = ArchiveRequest.field_z[var44];
             var15Lifetime1 = param6.field_l[var14Lifetime2];
             var16 = param6.field_z[var14Lifetime2];
             var17 = param6.field_m[var14Lifetime2];

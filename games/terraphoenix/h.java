@@ -16,7 +16,7 @@ abstract class h {
     PacketBuffer field_o;
     volatile int field_i;
     volatile int field_l;
-    nh field_k;
+    NetworkArchiveRequest field_k;
 
     abstract void b(int param0);
 
@@ -36,9 +36,9 @@ abstract class h {
         return this.c(-115) >= 20 ? true : false;
     }
 
-    final nh a(int param0, boolean param1, int param2, byte param3, byte param4) {
+    final NetworkArchiveRequest a(int param0, boolean param1, int param2, byte param3, byte param4) {
         long var6 = (long)param0 + ((long)param2 << 32);
-        nh var8 = new nh();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_G = param4;
         var8.secondaryKey = var6;
         if (param3 < 55) {

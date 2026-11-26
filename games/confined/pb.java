@@ -120,7 +120,7 @@ final class pb {
         try {
           ti.b();
           oj.field_D = new int[260];
-          pc.field_h = 11;
+          DiskCacheWorker.field_h = 11;
           for (var1_int = 0; 256 > var1_int; var1_int++) {
             var2 = 15.0;
             oj.field_D[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));

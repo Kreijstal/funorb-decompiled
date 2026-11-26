@@ -43,7 +43,7 @@ final class sd {
         mb.field_a = gd.a(0);
         bm.field_d = new sk();
         int var1 = 113 / ((param0 - 25) / 55);
-        wj.a(-118, true, true);
+        ArchiveRequest.a(-118, true, true);
     }
 
     final static int computeCrc32(int param0, byte[] param1, int param2, int param3) {

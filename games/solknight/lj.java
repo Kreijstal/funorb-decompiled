@@ -2822,7 +2822,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("fs_unavailable_try_signed_applet", 4);
                 if (null != var2) {
-                  ic.field_x = Archive.a(true, var2);
+                  NetworkArchiveRequest.field_x = Archive.a(true, var2);
                 }
                 var2 = vd.a("fs_focus", 4);
                 if (var2 != null) {

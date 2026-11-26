@@ -47,7 +47,7 @@ final class lp extends IntrusiveNode {
     final static void a(String param0, int param1, boolean param2, String param3) {
         try {
           FullscreenFocusCanvas.field_i = param0;
-          co.field_C = param3;
+          DiskArchiveRequest.field_C = param3;
           gh.a(23321, sl.field_a, param2);
           if (param1 > -31) {
             field_q = (String[]) null;

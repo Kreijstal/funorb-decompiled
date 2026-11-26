@@ -53,7 +53,7 @@ final class hb {
         int[] var11 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          var9 = cd.field_t;
+          var9 = NetworkArchiveRequest.field_t;
           if (param0 != 554553416) {
             field_b = (String) null;
           }

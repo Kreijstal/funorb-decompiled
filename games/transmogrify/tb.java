@@ -39,7 +39,7 @@ final class tb {
           }
           ff.field_D.position = ff.field_D.position + 2;
           var5_int = ff.field_D.position;
-          ff.field_D.writeInt(-102, cl.field_w);
+          ff.field_D.writeInt(-102, DiskArchiveRequest.field_w);
           ff.field_D.writeLong(1908720528, qb.field_k);
           var6 = 0;
           if (wd.field_g) {

@@ -22,7 +22,7 @@ final class fm {
           if (param1 <= 25) {
             fm.clearStaticReferences(-84);
           }
-          var2 = new ud(param0, ha.field_s, hj.field_K, sb.field_m, rf.field_p, qc.field_b);
+          var2 = new ud(param0, ha.field_s, hj.field_K, sb.field_m, ArchiveRequest.field_p, qc.field_b);
           SocketConnector.a((byte) 101);
           stackIn_6_0 = var2;
           return stackIn_6_0;

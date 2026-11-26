@@ -22,11 +22,11 @@ abstract class ByteStorage {
             var6 = null;
             var7 = null;
             if (null != kb.field_d.field_t) {
-              sd.field_c = new BufferedCacheFile(kb.field_d.field_t, 5200, 0);
+              DiskCacheWorker.field_c = new BufferedCacheFile(kb.field_d.field_t, 5200, 0);
               kb.field_d.field_t = null;
-              var6 = new DiskArchiveStore(255, sd.field_c, new BufferedCacheFile(kb.field_d.field_v, 12000, 0), 2097152);
+              var6 = new DiskArchiveStore(255, DiskCacheWorker.field_c, new BufferedCacheFile(kb.field_d.field_v, 12000, 0), 2097152);
             }
-            if (null != sd.field_c) {
+            if (null != DiskCacheWorker.field_c) {
               if (null == kh.field_e) {
                 kh.field_e = new BufferedCacheFile[kb.field_d.field_q.length];
               }
@@ -34,7 +34,7 @@ abstract class ByteStorage {
                 kh.field_e[param1] = new BufferedCacheFile(kb.field_d.field_q[param1], 12000, 0);
                 kb.field_d.field_q[param1] = null;
               }
-              var7 = new DiskArchiveStore(param1, sd.field_c, kh.field_e[param1], 2097152);
+              var7 = new DiskArchiveStore(param1, DiskCacheWorker.field_c, kh.field_e[param1], 2097152);
             }
             var8 = ij.field_d.a(103, param1, (DiskArchiveStore) (var6), param3, (DiskArchiveStore) (var7));
             var9 = 71 % ((param5 + 49) / 56);

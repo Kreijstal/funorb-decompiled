@@ -206,12 +206,12 @@ abstract class ByteStorage {
           }
           var8 = stackIn_17_0;
           if (var8 != 0) {
-            SoftwareRasterizer.saveClip(sh.field_w);
+            SoftwareRasterizer.saveClip(ArchiveRequest.field_w);
             SoftwareRasterizer.intersectClip(0, 0, 320, 240);
           }
           od.a(param0, param1, 1, 7, 6, ResourceArchive.field_o[0]);
           if (var8 != 0) {
-            SoftwareRasterizer.restoreClip(sh.field_w);
+            SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
           }
           od.a(param0, param1 + (479 - ResourceArchive.field_o[1].fullHeight), 1, 7, 6, ResourceArchive.field_o[1]);
           uk.field_N.drawTransparent(param0, param1);
@@ -347,7 +347,7 @@ abstract class ByteStorage {
             var12Lifetime2 = ed.field_i[2];
             var10Lifetime2 = -(ec.field_a[1].fullWidth >> 2) + ed.field_i[0] + 1;
             for (var20Lifetime3 = 0; 10 > var20Lifetime3; var20Lifetime3++) {
-              if (db.field_B <= var20Lifetime3) {
+              if (NetworkArchiveRequest.field_B <= var20Lifetime3) {
                 ec.field_a[2].drawTransparent(var10Lifetime2, var11Lifetime2);
               } else {
                 ec.field_a[1].drawTransparent(var10Lifetime2, var11Lifetime2);
@@ -385,7 +385,7 @@ abstract class ByteStorage {
               }
             }
             var25 = var10Lifetime3Lifetime1;
-            SoftwareRasterizer.saveClip(sh.field_w);
+            SoftwareRasterizer.saveClip(ArchiveRequest.field_w);
             var26 = var22Lifetime1 + (var20Lifetime4 - 1 + var12Lifetime3Lifetime1) * var23Lifetime1 / var24Lifetime1;
             SoftwareRasterizer.intersectClip(var25, var11Lifetime3Lifetime1, var26, var11Lifetime3Lifetime1 + var13Lifetime1);
             for (var27 = 0; var27 < var20Lifetime4; var27++) {
@@ -399,16 +399,16 @@ abstract class ByteStorage {
               var22Lifetime1 = var22Lifetime1 + (1 + var21Lifetime1);
             }
             var25Lifetime1 = var26;
-            SoftwareRasterizer.restoreClip(sh.field_w);
+            SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
             var26Lifetime1 = var20Lifetime4 - 1 + (var12Lifetime3Lifetime1 + var22Lifetime1);
-            SoftwareRasterizer.saveClip(sh.field_w);
+            SoftwareRasterizer.saveClip(ArchiveRequest.field_w);
             SoftwareRasterizer.intersectClip(var25Lifetime1, var11Lifetime3Lifetime1, var26Lifetime1, var13Lifetime1 + var11Lifetime3Lifetime1);
             var22Lifetime1Lifetime1 = var10Lifetime3Lifetime1 + 1;
             for (var27Lifetime1 = 0; var27Lifetime1 < var20Lifetime4; var27Lifetime1++) {
               mb.field_d[2].drawTransparent(var22Lifetime1Lifetime1, var11Lifetime3Lifetime1);
               var22Lifetime1Lifetime1 = var22Lifetime1Lifetime1 + (var21Lifetime1 + 1);
             }
-            SoftwareRasterizer.restoreClip(sh.field_w);
+            SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
           }
           var12Lifetime4 = oj.field_e[2];
           var11Lifetime4 = oj.field_e[1];

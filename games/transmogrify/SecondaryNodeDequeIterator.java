@@ -48,7 +48,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
               pc.a(1);
             }
           } else {
-            var3_ref_he = (he) (pj.field_A.beginForward((byte) -95));
+            var3_ref_he = (he) (NetworkArchiveRequest.field_A.beginForward((byte) -95));
             if (var3_ref_he == null) {
               pc.a(param0 ^ 5);
               return;

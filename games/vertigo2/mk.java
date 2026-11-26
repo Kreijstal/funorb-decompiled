@@ -316,7 +316,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         this.field_T = new br("", (uf) null, 3);
         int var1 = 1;
         this.field_R = new ck("", (uf) null, var1 != 0);
-        this.field_I = new d(nq.field_K, (uf) null);
+        this.field_I = new d(DiskArchiveRequest.field_K, (uf) null);
         this.field_O = new d(tc.field_a, (uf) null);
         this.field_H.field_q = ho.field_d;
         this.field_F.field_q = ak.field_f;

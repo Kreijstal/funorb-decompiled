@@ -53,10 +53,10 @@ final class IntrusiveDeque {
           return ue.field_d;
         }
         if (lc.field_h == hg.field_ub) {
-          return cm.field_I;
+          return NetworkArchiveRequest.field_I;
         }
         if (!ib.field_f.a(false)) {
-          return cm.field_I;
+          return NetworkArchiveRequest.field_I;
         }
         return qf.field_c;
     }

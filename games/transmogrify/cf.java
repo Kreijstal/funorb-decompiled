@@ -67,7 +67,7 @@ final class cf extends IntrusiveNode {
           aj.a(param0, param1, param2, 2394342);
           eg.a(81);
           db.field_a = jh.field_n;
-          rh.field_v = jh.field_n;
+          ArchiveRequest.field_v = jh.field_n;
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "cf.A(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

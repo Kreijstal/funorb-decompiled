@@ -229,8 +229,8 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             lg.field_d = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < ah.field_g.length) {
-              var2_int = -129 & ah.field_g[var2_int];
+              var2_int < SectorCacheStore.field_g.length) {
+              var2_int = -129 & SectorCacheStore.field_g[var2_int];
               if (fleas.field_A) {
                 var2_int = -1;
               }
@@ -460,8 +460,8 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
             lg.field_d = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              ah.field_g.length > var2_int) {
-              var2_int = ah.field_g[var2_int];
+              SectorCacheStore.field_g.length > var2_int) {
+              var2_int = SectorCacheStore.field_g[var2_int];
               if ((var2_int & 128) != 0) {
                 var2_int = -1;
                 if (fleas.field_A) {

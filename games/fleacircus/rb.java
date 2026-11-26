@@ -9,7 +9,7 @@ final class rb extends gj implements da {
     private bb field_F;
 
     final static void a(int param0, int param1, byte param2) {
-        af.field_b = param0;
+        DiskCacheWorker.field_b = param0;
         IntrusiveDeque.field_f = param1;
         if (param2 < 61) {
           rb.a(-16, 15, (byte) 71);
@@ -121,10 +121,10 @@ final class rb extends gj implements da {
               ug.field_a = AccountRequestState.field_a.readLong(-71);
               AccountRequestState.field_a.position = 0;
               wd.a(param2, -120, cf.field_c, param4, param0);
-              ResourceArchive.field_k = dl.field_w;
+              ResourceArchive.field_k = ArchiveRequest.field_w;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (dl.field_w == ResourceArchive.field_k &&
+            if (ArchiveRequest.field_w == ResourceArchive.field_k &&
               gi.a(1, true)) {
               var6_intLifetime1 = AccountRequestState.field_a.readUnsignedByte(false);
               be.field_a = var6_intLifetime1;

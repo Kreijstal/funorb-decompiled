@@ -30,7 +30,7 @@ final class le extends ln {
           }
           var2 = var12.readUnsignedByte(255);
           if (var2 == 0) {
-            var10 = wl.a((byte) -93);
+            var10 = ArchiveRequest.a((byte) -93);
             var16 = var10;
             var14 = var16;
             var3 = var14;
@@ -66,7 +66,7 @@ final class le extends ln {
                 jj.a(param0 - 15291);
                 return;
               }
-              var13.field_g = wl.a((byte) -117);
+              var13.field_g = ArchiveRequest.a((byte) -117);
               var13.field_k = true;
               var13.field_f = var13.field_g[0];
               var13.unlink(false);

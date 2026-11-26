@@ -56,7 +56,7 @@ final class bb {
                 if (var2 != eh.field_n) {
                   this.field_s.a((byte) 61, var2, var3);
                 } else {
-                  if (ef.field_d != var3) {
+                  if (DiskCacheWorker.field_d != var3) {
                     this.field_s.a((byte) 61, var2, var3);
                     if (this.field_b > 0) {
                       k.field_a = (this.field_b - eh.field_n) / 2;
@@ -69,7 +69,7 @@ final class bb {
                 if (var2 != eh.field_n) {
                   this.field_s.a((byte) 61, var2, var3);
                 } else {
-                  if (ef.field_d != var3) {
+                  if (DiskCacheWorker.field_d != var3) {
                     this.field_s.a((byte) 61, var2, var3);
                   }
                 }
@@ -82,7 +82,7 @@ final class bb {
               if (var2 != eh.field_n) {
                 this.field_s.a((byte) 61, var2, var3);
               } else {
-                if (ef.field_d != var3) {
+                if (DiskCacheWorker.field_d != var3) {
                   this.field_s.a((byte) 61, var2, var3);
                 }
               }
@@ -101,7 +101,7 @@ final class bb {
         if (var2 != eh.field_n) {
           this.field_s.a((byte) 61, var2, var3);
         } else {
-          if (ef.field_d != var3) {
+          if (DiskCacheWorker.field_d != var3) {
             this.field_s.a((byte) 61, var2, var3);
           }
         }
@@ -164,7 +164,7 @@ final class bb {
           }
         }
         if (this.field_g == eh.field_n &&
-          ef.field_d == this.field_h) {
+          DiskCacheWorker.field_d == this.field_h) {
           return;
         }
         this.field_s.a((byte) 61, this.field_g, this.field_h);
@@ -228,7 +228,7 @@ final class bb {
           return (FullscreenFocusCanvas) null;
         }
         this.field_n = eh.field_n;
-        this.field_o = ef.field_d;
+        this.field_o = DiskCacheWorker.field_d;
         this.field_s.a((byte) 61, this.field_p, this.field_f);
         jj.field_E = false;
         FullscreenFocusCanvas var2 = re.createFullscreenCanvas(0, nb.field_e, 0, true, this.field_p, this.field_f);

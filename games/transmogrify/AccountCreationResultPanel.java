@@ -57,7 +57,7 @@ final class AccountCreationResultPanel extends ik implements df {
               }
             }
           }
-          var5 = new ee((ik) (this), rh.field_q, var4);
+          var5 = new ee((ik) (this), ArchiveRequest.field_q, var4);
           if (param2.success) {
             if (param2.field_a) {
               this.b(param0 + 109, new ge(this));
@@ -202,7 +202,7 @@ final class AccountCreationResultPanel extends ik implements df {
     }
 
     AccountCreationResultPanel(da param0, wl param1) {
-        super(param0, rh.field_q, IterableNodeHashTable.field_i, false, false);
+        super(param0, ArchiveRequest.field_q, IterableNodeHashTable.field_i, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {

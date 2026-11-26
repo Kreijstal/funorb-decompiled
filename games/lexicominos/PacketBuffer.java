@@ -662,7 +662,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return dc.a(var3, this.payload, (byte) 16, var2);
+        return NetworkArchiveRequest.a(var3, this.payload, (byte) 16, var2);
     }
 
     final static IndexedSprite[] a(sh param0, String param1, boolean param2, String param3) {
@@ -739,7 +739,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (this.payload[fieldTemp$1] != 0);
         var4 = this.position + (-var3 - 1);
         if (var4 != 0) {
-          return dc.a(var4, this.payload, (byte) 16, var3);
+          return NetworkArchiveRequest.a(var4, this.payload, (byte) 16, var3);
         }
         return "";
     }

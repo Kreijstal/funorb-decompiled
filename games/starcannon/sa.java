@@ -18,7 +18,7 @@ final class sa {
         }
         if (!MouseInput.a(80)) {
           kd.field_C = param0;
-          m.field_f = ra.a(1, na.field_d, jl.field_d, (ia.field_k << 2) + nf.field_l, new int[]{param0}, param1 - 23899, fc.field_e, 65534, 3);
+          m.field_f = NetworkArchiveRequest.a(1, na.field_d, jl.field_d, (ia.field_k << 2) + nf.field_l, new int[]{param0}, param1 - 23899, fc.field_e, 65534, 3);
           return;
         }
         kd.field_C = 0;

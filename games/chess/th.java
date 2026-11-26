@@ -23,7 +23,7 @@ final class th implements ui {
     final static void c(int param0) {
         jb.a((byte) -89);
         int var1 = -107 % ((param0 + 14) / 54);
-        rn.a(sc.field_e, -128, el.field_z[0].field_v, ri.field_g, on.field_e, fe.field_g);
+        rn.a(sc.field_e, -128, el.field_z[0].field_v, ri.field_g, DiskCacheWorker.field_e, fe.field_g);
     }
 
     final static rk b(int param0) {

@@ -182,7 +182,7 @@ final class bf extends ga implements pg, el {
 
     private final static void b(int param0, String param1) {
         try {
-          ae.a(param1, 0);
+          SectorCacheStore.a(param1, 0);
           if (param0 >= -14) {
             field_L = (int[][]) null;
           }

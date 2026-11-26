@@ -46,7 +46,7 @@ final class ai {
           }
           dupTemp$1 = je.correctedCurrentTimeMillis(1);
           gf.field_Y = dupTemp$1;
-          md.field_y = dupTemp$1;
+          DiskArchiveRequest.field_y = dupTemp$1;
           if (bk.field_a.status != 1) {
             AccountRequestState.field_e = wc.field_f;
           } else {

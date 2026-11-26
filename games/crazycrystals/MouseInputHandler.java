@@ -13,7 +13,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             aq.field_s = 0;
             fq.field_C = param0.getX();
             tn.field_s = param0.getY();
-            wl.field_m = true;
+            ArchiveRequest.field_m = true;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "a.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
@@ -41,7 +41,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
               uc.field_b = 1;
             }
             var2_int = param0.getModifiers();
-            wl.field_m = true;
+            ArchiveRequest.field_m = true;
             if ((var2_int & 4) != 0) {
             }
             if (0 == (16 & var2_int)) {
@@ -78,7 +78,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             aq.field_s = 0;
             fq.field_C = -1;
             tn.field_s = -1;
-            wl.field_m = true;
+            ArchiveRequest.field_m = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             aq.field_s = 0;
             fq.field_C = param0.getX();
             tn.field_s = param0.getY();
-            wl.field_m = true;
+            ArchiveRequest.field_m = true;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "a.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
@@ -114,7 +114,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             aq.field_s = 0;
             fq.field_C = param0.getX();
             tn.field_s = param0.getY();
-            wl.field_m = true;
+            ArchiveRequest.field_m = true;
           }
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "a.mouseDragged(" + (param0 != null ? "{...}" : "null") + ')');
@@ -132,7 +132,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null != tm.field_b) {
             aq.field_s = 0;
             uc.field_b = 0;
-            wl.field_m = true;
+            ArchiveRequest.field_m = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 4) == 0) {
             }
@@ -272,7 +272,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           MouseInputHandler.a(-70, (CharSequence) null);
         }
         if (ne.field_d) {
-          sp.field_a.l(126);
+          SectorCacheStore.field_a.l(126);
         } else {
           var1 = kl.field_V;
           if (var1 > 0) {
@@ -283,7 +283,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             sd.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) sd.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
           }
-          sp.field_a.i((byte) -78);
+          SectorCacheStore.field_a.i((byte) -78);
           rf.a(param0 - 60);
         }
     }

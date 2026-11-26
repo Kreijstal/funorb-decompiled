@@ -281,38 +281,38 @@ final class ai implements Runnable {
               if (param1) {
                 var9 = var9 | 1;
               }
-              sp.field_c.position = 0;
-              sp.field_c.writeInt(og.field_w.nextInt(), -16384);
-              sp.field_c.writeInt(og.field_w.nextInt(), -16384);
-              sp.field_c.writePrefixedString(var14, (byte) -103);
-              sp.field_c.writePrefixedString(var8, (byte) -99);
+              SectorCacheStore.field_c.position = 0;
+              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writePrefixedString(var14, (byte) -103);
+              SectorCacheStore.field_c.writePrefixedString(var8, (byte) -99);
               var15 = (CharSequence) ((Object) param2);
-              sp.field_c.writePrefixedString(ba.a(48, var15), (byte) -120);
-              sp.field_c.writeShort(-161478600, param3);
-              sp.field_c.writeByte(true, param6);
-              sp.field_c.writeByte(true, var9);
+              SectorCacheStore.field_c.writePrefixedString(ba.a(48, var15), (byte) -120);
+              SectorCacheStore.field_c.writeShort(-161478600, param3);
+              SectorCacheStore.field_c.writeByte(true, param6);
+              SectorCacheStore.field_c.writeByte(true, var9);
               tp.field_f.writeByte(true, 18);
               tp.field_f.position = tp.field_f.position + 2;
               var10 = tp.field_f.position;
-              var11_ref_String = mf.a(le.b((byte) -20), -28697);
+              var11_ref_String = DiskArchiveRequest.a(le.b((byte) -20), -28697);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               tp.field_f.writeString(var11_ref_String, (byte) -23);
-              tg.a(sp.field_c, tp.field_f, gn.field_S, -105, lm.field_j);
+              tg.a(SectorCacheStore.field_c, tp.field_f, gn.field_S, -105, lm.field_j);
               tp.field_f.backpatchShortLength(977272835, -var10 + tp.field_f.position);
             } else {
-              sp.field_c.position = 0;
-              sp.field_c.writeInt(og.field_w.nextInt(), -16384);
-              sp.field_c.writeInt(og.field_w.nextInt(), -16384);
-              stackIn_13_0 = sp.field_c;
+              SectorCacheStore.field_c.position = 0;
+              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
+              SectorCacheStore.field_c.writeInt(og.field_w.nextInt(), -16384);
+              stackIn_13_0 = SectorCacheStore.field_c;
               if (!param0.a(-124)) {
                 stackIn_14_1 = "";
               } else {
                 stackIn_14_1 = var14;
               }
               ((PacketBuffer) (Object) stackIn_13_0).writePrefixedString(stackIn_14_1, (byte) -93);
-              stackIn_16_0 = sp.field_c;
+              stackIn_16_0 = SectorCacheStore.field_c;
               if (param4.a(-113)) {
                 stackIn_17_1 = var8;
               } else {
@@ -322,7 +322,7 @@ final class ai implements Runnable {
               tp.field_f.writeByte(true, 16);
               tp.field_f.position = tp.field_f.position + 1;
               var9 = tp.field_f.position;
-              tg.a(sp.field_c, tp.field_f, gn.field_S, -122, lm.field_j);
+              tg.a(SectorCacheStore.field_c, tp.field_f, gn.field_S, -122, lm.field_j);
               tp.field_f.backpatchByteLength((byte) 46, tp.field_f.position - var9);
             }
             ak.a(-1, (byte) -48);

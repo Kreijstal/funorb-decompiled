@@ -11,17 +11,17 @@ final class da extends ArchiveProvider {
     private ArchiveIndex field_n;
     private int field_v;
     static bn[] field_w;
-    private gd field_z;
+    private SectorCacheStore field_z;
     static int field_F;
-    private gd field_h;
+    private SectorCacheStore field_h;
     private int field_l;
     private byte[] field_E;
     static String[] field_m;
     static rk field_y;
     static String[] field_A;
     static int field_p;
-    private on field_f;
-    private ab field_q;
+    private DiskCacheWorker field_f;
+    private ArchiveRequest field_q;
     private boolean field_x;
     private IntrusiveDeque field_t;
     private IntrusiveDeque field_i;
@@ -278,7 +278,7 @@ final class da extends ArchiveProvider {
           var7 = param1.a((byte) -64);
           var8 = param3.a((byte) -64);
           if (ArchiveIndex.field_a == null) {
-            var9 = gd.a((byte) 68, false) ? 1 : 0;
+            var9 = SectorCacheStore.a((byte) 68, false) ? 1 : 0;
             if (var9 == 0) {
               stackIn_9_0 = -1;
               return stackIn_9_0;
@@ -470,7 +470,7 @@ final class da extends ArchiveProvider {
     }
 
     final byte[] c(int param0, int param1) {
-        ab var3 = null;
+        ArchiveRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_4_0 = null;
@@ -487,7 +487,7 @@ final class da extends ArchiveProvider {
             stackIn_7_0 = (byte[]) null;
             return stackIn_7_0;
           }
-          var4 = var3.a(false);
+          var4 = var3.getData(false);
           var3.unlink(-2193);
           stackIn_9_0 = var4;
           return stackIn_9_0;
@@ -522,7 +522,7 @@ final class da extends ArchiveProvider {
               stackIn_13_0 = null;
               return (ArchiveIndex) (stackIn_13_0);
             }
-            this.field_q = (ab) ((Object) this.field_s.a(107, 255, (byte) 0, true, this.field_v));
+            this.field_q = (ArchiveRequest) ((Object) this.field_s.a(107, 255, (byte) 0, true, this.field_v));
           }
           if (this.field_q.field_s) {
             stackIn_19_0 = null;
@@ -532,8 +532,8 @@ final class da extends ArchiveProvider {
             stackIn_22_0 = (ArchiveIndex) null;
             return stackIn_22_0;
           }
-          var2 = this.field_q.a(false);
-          if (!(this.field_q instanceof tc)) {
+          var2 = this.field_q.getData(false);
+          if (!(this.field_q instanceof DiskArchiveRequest)) {
             try {
               if (null == var2) {
                 throw new RuntimeException();
@@ -545,7 +545,7 @@ final class da extends ArchiveProvider {
               this.field_s.c(0);
               this.field_n = null;
               if (!this.field_s.a(true)) {
-                this.field_q = (ab) ((Object) this.field_s.a(109, 255, (byte) 0, true, this.field_v));
+                this.field_q = (ArchiveRequest) ((Object) this.field_s.a(109, 255, (byte) 0, true, this.field_v));
                 if (var4 != 0) {
                   this.field_q = null;
                 }
@@ -556,7 +556,7 @@ final class da extends ArchiveProvider {
               return (ArchiveIndex) (stackIn_53_0);
             }
             if (null != this.field_h) {
-              this.field_f.a(var2, this.field_v, 2, this.field_h);
+              this.field_f.requestWrite(var2, this.field_v, 2, this.field_h);
             }
           } else {
             try {
@@ -577,7 +577,7 @@ final class da extends ArchiveProvider {
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
-                this.field_q = (ab) ((Object) this.field_s.a(115, 255, (byte) 0, true, this.field_v));
+                this.field_q = (ArchiveRequest) ((Object) this.field_s.a(115, 255, (byte) 0, true, this.field_v));
               }
               stackIn_39_0 = null;
               return (ArchiveIndex) (stackIn_39_0);
@@ -638,8 +638,8 @@ final class da extends ArchiveProvider {
     }
 
     final void d(int param0) {
-        ab discarded$0 = null;
-        ab discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
@@ -756,7 +756,7 @@ final class da extends ArchiveProvider {
         }
     }
 
-    private final ab a(int param0, int param1, byte param2) {
+    private final ArchiveRequest a(int param0, int param1, byte param2) {
         Object stackIn_46_0 = null;
         Object stackIn_57_0 = null;
         Object stackIn_64_0 = null;
@@ -788,15 +788,15 @@ final class da extends ArchiveProvider {
         int var10 = 0;
         var10 = Chess.field_G;
         try {
-          var4 = (ab) (this.field_j.a(-127, (long)param0));
+          var4 = (ArchiveRequest) (this.field_j.a(-127, (long)param0));
           if (param2 < 50) {
             this.field_o = -55L;
           }
           if (null != var4 &&
             0 == param1 &&
-            !((ab) (var4)).field_u &&
-            ((ab) (var4)).field_s) {
-            ((ab) (var4)).unlink(-2193);
+            !((ArchiveRequest) (var4)).field_u &&
+            ((ArchiveRequest) (var4)).field_s) {
+            ((ArchiveRequest) (var4)).unlink(-2193);
             var4 = null;
           }
           if (null == var4) {
@@ -804,7 +804,7 @@ final class da extends ArchiveProvider {
             if (0 == param1) {
               if (this.field_z != null &&
                 this.field_E[param0] != -1) {
-                var4 = this.field_f.a((byte) -111, param0, this.field_z);
+                var4 = this.field_f.readNow((byte) -111, param0, this.field_z);
                 decompiledFrameRemainder2 = false;
               }
               else {
@@ -814,7 +814,7 @@ final class da extends ArchiveProvider {
                 }
                 if (decompiledFrameRemainder2) {
                   stackIn_57_0 = null;
-                  return (ab) (stackIn_57_0);
+                  return (ArchiveRequest) (stackIn_57_0);
                 }
               }
             }
@@ -823,7 +823,7 @@ final class da extends ArchiveProvider {
                 if (null == this.field_z) {
                   throw new RuntimeException();
                 }
-                var4 = this.field_f.a(this.field_z, param0, (byte) -45);
+                var4 = this.field_f.requestRead(this.field_z, param0, (byte) -45);
               }
               if (param1 != 1 ||
                 var10 != 0) {
@@ -842,18 +842,18 @@ final class da extends ArchiveProvider {
                 }
                 if (decompiledFrameRemainder2) {
                   stackIn_46_0 = null;
-                  return (ab) (stackIn_46_0);
+                  return (ArchiveRequest) (stackIn_46_0);
                 }
               }
             }
             this.field_j.a(-125, (long)param0, (IntrusiveNode) (var4));
           }
-          if (((ab) (var4)).field_s) {
+          if (((ArchiveRequest) (var4)).field_s) {
             stackIn_64_0 = null;
-            return (ab) (stackIn_64_0);
+            return (ArchiveRequest) (stackIn_64_0);
           }
-          var5 = ((ab) (var4)).a(false);
-          if (var4 instanceof tc) {
+          var5 = ((ArchiveRequest) (var4)).getData(false);
+          if (var4 instanceof DiskArchiveRequest) {
             try {
               if (var5 != null &&
                 2 < var5.length) {
@@ -899,25 +899,25 @@ final class da extends ArchiveProvider {
                   }
                   this.field_E[param0] = (byte) 1;
                 }
-                if (!((ab) (var4)).field_u) {
-                  ((ab) (var4)).unlink(-2193);
+                if (!((ArchiveRequest) (var4)).field_u) {
+                  ((ArchiveRequest) (var4)).unlink(-2193);
                 }
                 stackIn_150_0 = var4;
-                return (ab) (stackIn_150_0);
+                return (ArchiveRequest) (stackIn_150_0);
               }
               throw new RuntimeException();
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
               this.field_E[param0] = (byte) -1;
-              ((ab) (var4)).unlink(-2193);
-              if (((ab) (var4)).field_u &&
+              ((ArchiveRequest) (var4)).unlink(-2193);
+              if (((ArchiveRequest) (var4)).field_u &&
                 !this.field_s.a(true)) {
                 var4 = this.field_s.a(96, this.field_v, (byte) 2, true, param0);
                 this.field_j.a(-117, (long)param0, (IntrusiveNode) (var4));
               }
               stackIn_159_0 = null;
-              return (ab) (stackIn_159_0);
+              return (ArchiveRequest) (stackIn_159_0);
             }
           }
           try {
@@ -967,14 +967,14 @@ final class da extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (RuntimeException) (Object) decompiledCaughtException;
             this.field_s.c(0);
-            ((ab) (var4)).unlink(-2193);
-            if (((ab) (var4)).field_u &&
+            ((ArchiveRequest) (var4)).unlink(-2193);
+            if (((ArchiveRequest) (var4)).field_u &&
               !this.field_s.a(true)) {
               var4 = this.field_s.a(118, this.field_v, (byte) 2, true, param0);
               this.field_j.a(92, (long)param0, (IntrusiveNode) (var4));
             }
             stackIn_98_0 = null;
-            return (ab) (stackIn_98_0);
+            return (ArchiveRequest) (stackIn_98_0);
           }
           boolean decompiledFrameRemainder0 = true;
           if (decompiledRegionSelector0 != 0) {
@@ -982,7 +982,7 @@ final class da extends ArchiveProvider {
             var5[-1 + var5.length] = (byte)this.field_n.field_b[param0];
             decompiledFrameRemainder0 = (null != this.field_z);
             if (decompiledFrameRemainder0) {
-              this.field_f.a(var5, param0, 2, this.field_z);
+              this.field_f.requestWrite(var5, param0, 2, this.field_z);
               stackIn_103_0 = 1;
               stackIn_103_1 = this.field_E[param0];
             }
@@ -991,11 +991,11 @@ final class da extends ArchiveProvider {
             (stackIn_103_0 != stackIn_103_1)) {
             this.field_E[param0] = (byte) 1;
           }
-          if (!((ab) (var4)).field_u) {
-            ((ab) (var4)).unlink(-2193);
+          if (!((ArchiveRequest) (var4)).field_u) {
+            ((ArchiveRequest) (var4)).unlink(-2193);
           }
           stackIn_111_0 = var4;
-          return (ab) (stackIn_111_0);
+          return (ArchiveRequest) (stackIn_111_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
@@ -1124,16 +1124,16 @@ final class da extends ArchiveProvider {
     }
 
     final int b(int param0, int param1) {
-        ab var3 = null;
+        ArchiveRequest var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = (ab) (this.field_j.a(-121, (long)param1));
+          var3 = (ArchiveRequest) (this.field_j.a(-121, (long)param1));
           if (null != var3) {
-            stackIn_2_0 = var3.f(89);
+            stackIn_2_0 = var3.getProgressPercent(89);
             return stackIn_2_0;
           }
           var4 = -18 % ((-1 - param0) / 45);
@@ -1164,10 +1164,10 @@ final class da extends ArchiveProvider {
     }
 
     final void c(int param0) {
-        ab discarded$1 = null;
-        ab discarded$3 = null;
-        ab discarded$0 = null;
-        ab discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$3 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$2 = null;
         int stackIn_23_0 = 0;
         int stackIn_23_1 = 0;
         int stackIn_67_0 = 0;
@@ -1176,7 +1176,7 @@ final class da extends ArchiveProvider {
         int stackIn_96_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        ab var2 = null;
+        ArchiveRequest var2 = null;
         RuntimeException var2_ref = null;
         IntrusiveNode var3 = null;
         int var4 = 0;
@@ -1341,7 +1341,7 @@ final class da extends ArchiveProvider {
           }
           if (this.field_D &&
             ud.correctedCurrentTimeMillis(2) >= this.field_o) {
-            var2 = (ab) (this.field_j.a(true));
+            var2 = (ArchiveRequest) (this.field_j.a(true));
             while (var2 != null) {
               if (var5 != 0) {
                 return;
@@ -1357,7 +1357,7 @@ final class da extends ArchiveProvider {
                   var2.unlink(-2193);
                 }
               }
-              var2 = (ab) (this.field_j.b((byte) 124));
+              var2 = (ArchiveRequest) (this.field_j.b((byte) 124));
             }
             this.field_o = ud.correctedCurrentTimeMillis(2) + 1000L;
             return;
@@ -1418,7 +1418,7 @@ final class da extends ArchiveProvider {
         }
     }
 
-    da(int param0, gd param1, gd param2, wm param3, on param4, int param5, byte[] param6, int param7, boolean param8) {
+    da(int param0, SectorCacheStore param1, SectorCacheStore param2, wm param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -1457,7 +1457,7 @@ final class da extends ArchiveProvider {
           this.field_u = param6;
           this.field_l = param5;
           if (null != this.field_h) {
-            this.field_q = (ab) ((Object) this.field_f.a((byte) -111, this.field_v, this.field_h));
+            this.field_q = (ArchiveRequest) ((Object) this.field_f.readNow((byte) -111, this.field_v, this.field_h));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

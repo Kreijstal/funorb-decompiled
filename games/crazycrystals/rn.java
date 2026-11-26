@@ -186,7 +186,7 @@ final class rn extends rd {
           return dp.field_j + " - " + rb.field_k.b("commonui", -38) + "%";
         }
         if (!ok.field_c.a((byte) 102)) {
-          return ld.field_w;
+          return NetworkArchiveRequest.field_w;
         }
         if (!ok.field_c.a(param0 ^ 20403, "commonui")) {
           return jn.field_k + " - " + ok.field_c.b("commonui", -60) + "%";

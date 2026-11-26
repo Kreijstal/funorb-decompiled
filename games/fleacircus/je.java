@@ -1811,7 +1811,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("waitingfor_soundeffects", 0);
                 if (null != var2) {
-                  fk.field_x = ab.a(0, var2);
+                  NetworkArchiveRequest.field_x = ab.a(0, var2);
                 }
                 var2 = ad.a("waitingfor_music", 0);
                 if (var2 != null) {
@@ -1975,7 +1975,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("login_createaccount", 0);
                 if (null != var2) {
-                  qh.field_C = ab.a(0, var2);
+                  DiskArchiveRequest.field_C = ab.a(0, var2);
                 }
                 var2 = ad.a("tohighscores", 0);
                 if (null != var2) {
@@ -2757,7 +2757,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("mb_including_gamename", 0);
                 if (var2 != null) {
-                  fk.field_B = ab.a(0, var2);
+                  NetworkArchiveRequest.field_B = ab.a(0, var2);
                 }
                 var2 = ad.a("mb_full_access_1", 0);
                 if (null != var2) {

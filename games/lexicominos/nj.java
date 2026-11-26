@@ -27,7 +27,7 @@ final class nj {
           try {
             try {
               var3 = (String) (oa.a(true, param2, "getcookies"));
-              var4 = dc.a(var3, ';', (byte) -125);
+              var4 = NetworkArchiveRequest.a(var3, ';', (byte) -125);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

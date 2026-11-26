@@ -128,7 +128,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
             var3_int = 37 / ((29 - param0) / 57);
             System.out.println("error_game_" + param1);
             try {
-              ac.a(vi.b(0), "loggedout", -31185);
+              ac.a(DiskCacheWorker.b(0), "loggedout", -31185);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = decompiledCaughtException;
@@ -546,7 +546,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               ob.field_d = 0;
               nd.field_E = param4;
               og.field_c = this;
-              gk.field_j = vi.b(0);
+              gk.field_j = DiskCacheWorker.b(0);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param1, param2, true);
               ck.field_e = dupTemp$0;
               jj.field_a = dupTemp$0;

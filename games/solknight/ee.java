@@ -270,7 +270,7 @@ final class ee extends IntrusiveNode {
               qf.field_e[var18] = qf.field_e[var18] + bg.field_v[var15][var18];
             }
             mb.a(var17Lifetime1, false, aj.field_m, qf.field_e, true, false, 5);
-            bi.a((byte) 77, var12Lifetime1, var14, var9Lifetime1, var17Lifetime1, var13Lifetime1, var8Lifetime1, var7Lifetime1);
+            SectorCacheStore.a((byte) 77, var12Lifetime1, var14, var9Lifetime1, var17Lifetime1, var13Lifetime1, var8Lifetime1, var7Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

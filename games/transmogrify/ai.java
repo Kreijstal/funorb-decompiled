@@ -31,30 +31,30 @@ final class ai {
             return 4;
           }
           try {
-            if (0 == cl.field_A) {
+            if (0 == DiskArchiveRequest.field_A) {
               wj.field_j = MouseInputHandler.field_a.requestDirectSocket(60, WordLanguage.field_i, c.field_b);
-              cl.field_A = cl.field_A + 1;
+              DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
             }
-            if (cl.field_A == 1) {
+            if (DiskArchiveRequest.field_A == 1) {
               if (wj.field_j.status == 2) {
                 stackIn_16_0 = og.a(2, -1);
                 return stackIn_16_0;
               }
               if (1 == wj.field_j.status) {
-                cl.field_A = cl.field_A + 1;
+                DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
               }
             }
-            if (cl.field_A == param0) {
+            if (DiskArchiveRequest.field_A == param0) {
               re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.result), MouseInputHandler.field_a);
               var2 = new PacketBuffer(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
               var2.writeByte(param0 + 6387, 15);
               var2.writeInt(-109, dk.field_h);
               re.field_y.a((byte) 9, var2.payload, 13, 0);
-              cl.field_A = cl.field_A + 1;
+              DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
               ob.field_G = 30000L + lk.correctedCurrentTimeMillis(param0 ^ 2);
             }
-            if (cl.field_A == 3) {
+            if (DiskArchiveRequest.field_A == 3) {
               if (re.field_y.a((byte) -125) <= 0) {
                 if (ob.field_G < lk.correctedCurrentTimeMillis(0)) {
                   stackIn_32_0 = og.a(2, -2);
@@ -66,16 +66,16 @@ final class ai {
                   stackIn_27_0 = og.a(param0 ^ 0, var1_int);
                   return stackIn_27_0;
                 }
-                cl.field_A = cl.field_A + 1;
+                DiskArchiveRequest.field_A = DiskArchiveRequest.field_A + 1;
               }
             }
-            if (4 != cl.field_A) {
+            if (4 != DiskArchiveRequest.field_A) {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
             oh.field_h.a(ck.field_A, re.field_y, param0 + 18);
             re.field_y = null;
-            cl.field_A = 0;
+            DiskArchiveRequest.field_A = 0;
             wj.field_j = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;

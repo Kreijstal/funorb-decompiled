@@ -4,18 +4,18 @@
 final class t extends ti {
     static String field_q;
     static Sprite[] field_r;
-    private uf field_v;
+    private SectorCacheStore field_v;
     private int field_n;
     static int field_C;
     private int field_k;
     private ak field_t;
     static String field_x;
     private byte[] field_j;
-    private ef field_y;
-    private uf field_p;
+    private DiskCacheWorker field_y;
+    private SectorCacheStore field_p;
     private ih field_w;
     private byte[] field_i;
-    private ik field_m;
+    private ArchiveRequest field_m;
     static int field_u;
     static lc field_h;
     private int field_A;
@@ -28,7 +28,7 @@ final class t extends ti {
     private boolean field_z;
     private long field_o;
 
-    private final ik a(int param0, int param1, boolean param2) {
+    private final ArchiveRequest a(int param0, int param1, boolean param2) {
         Object stackIn_62_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -40,7 +40,7 @@ final class t extends ti {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        ik var12 = null;
+        ArchiveRequest var12 = null;
         byte[] var13 = null;
         byte[] var18 = null;
         byte[] var27 = null;
@@ -51,7 +51,7 @@ final class t extends ti {
         if (!param2) {
           this.b((byte) -92);
         }
-        var12 = (ik) (this.field_w.a((long)param0, (byte) 88));
+        var12 = (ArchiveRequest) (this.field_w.a((long)param0, (byte) 88));
         var4 = var12;
         if (var12 != null &&
           0 == param1 &&
@@ -64,7 +64,7 @@ final class t extends ti {
           if (0 == param1) {
             if (this.field_p != null &&
               this.field_j[param0] != -1) {
-              var4 = this.field_y.a(this.field_p, -118, param0);
+              var4 = this.field_y.readNow(this.field_p, -118, param0);
             } else {
               if (this.field_s.b((byte) -79)) {
                 return null;
@@ -90,18 +90,18 @@ final class t extends ti {
               if (this.field_p == null) {
                 throw new RuntimeException();
               }
-              var4 = this.field_y.a((byte) 16, param0, this.field_p);
+              var4 = this.field_y.requestRead((byte) 16, param0, this.field_p);
             }
           }
           this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
         }
-        if (((ik) (var4)).field_r) {
+        if (((ArchiveRequest) (var4)).field_r) {
           return null;
         }
-        var18 = ((ik) (var4)).f(0);
+        var18 = ((ArchiveRequest) (var4)).getData(0);
         var13 = var18;
         var5 = var13;
-        if (var4 instanceof tg) {
+        if (var4 instanceof DiskArchiveRequest) {
           try {
             if (var5 != null &&
               2 < var18.length) {
@@ -130,19 +130,19 @@ final class t extends ti {
                 }
                 this.field_j[param0] = (byte) 1;
               }
-              if (!((ik) (var4)).field_o) {
-                ((ik) (var4)).unlink(4);
+              if (!((ArchiveRequest) (var4)).field_o) {
+                ((ArchiveRequest) (var4)).unlink(4);
               }
               stackIn_62_0 = var4;
-              return (ik) (stackIn_62_0);
+              return (ArchiveRequest) (stackIn_62_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_j[param0] = (byte)-1;
-            ((ik) (var4)).unlink(4);
-            if (((ik) (var4)).field_o &&
+            ((ArchiveRequest) (var4)).unlink(4);
+            if (((ArchiveRequest) (var4)).field_o &&
               !this.field_s.b((byte) -124)) {
               var4 = this.field_s.a(this.field_k, param0, -28612, true, (byte) 2);
               this.field_w.a((long)param0, (byte) -100, (IntrusiveNode) (var4));
@@ -181,8 +181,8 @@ final class t extends ti {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_s.a((byte) 126);
-          ((ik) (var4)).unlink(4);
-          if (((ik) (var4)).field_o) {
+          ((ArchiveRequest) (var4)).unlink(4);
+          if (((ArchiveRequest) (var4)).field_o) {
             if (this.field_s.b((byte) -119)) {
               return null;
             }
@@ -194,15 +194,15 @@ final class t extends ti {
         var5[-2 + var18.length] = (byte)(this.field_t.field_d[param0] >>> 8);
         var5[-1 + var18.length] = (byte)this.field_t.field_d[param0];
         if (this.field_p != null) {
-          this.field_y.a(var18, this.field_p, false, param0);
+          this.field_y.requestWrite(var18, this.field_p, false, param0);
           if (1 != this.field_j[param0]) {
             this.field_j[param0] = (byte) 1;
           }
         }
-        if (!((ik) (var4)).field_o) {
-          ((ik) (var4)).unlink(4);
+        if (!((ArchiveRequest) (var4)).field_o) {
+          ((ArchiveRequest) (var4)).unlink(4);
         }
-        return (ik) (var4);
+        return (ArchiveRequest) (var4);
     }
 
     final void a(int param0) {
@@ -219,11 +219,11 @@ final class t extends ti {
     }
 
     final byte[] b(int param0, boolean param1) {
-        ik var3 = this.a(param0, 0, true);
+        ArchiveRequest var3 = this.a(param0, 0, true);
         if (var3 == null) {
           return null;
         }
-        byte[] var4 = var3.f(0);
+        byte[] var4 = var3.getData(0);
         var3.unlink(4);
         if (param1) {
           this.b((byte) 60);
@@ -250,19 +250,19 @@ final class t extends ti {
           if (this.field_s.b((byte) -106)) {
             return null;
           }
-          this.field_m = (ik) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
+          this.field_m = (ArchiveRequest) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
         }
         if (this.field_m.field_r) {
           return null;
         }
-        var9 = this.field_m.f(0);
+        var9 = this.field_m.getData(0);
         var7 = var9;
         var6 = var7;
         var10 = var6;
         var8 = var10;
         var2 = var8;
         var3 = -97 / ((50 - param0) / 55);
-        if (this.field_m instanceof tg) {
+        if (this.field_m instanceof DiskArchiveRequest) {
           try {
             if (var2 == null) {
               throw new RuntimeException();
@@ -276,7 +276,7 @@ final class t extends ti {
             var4 = decompiledCaughtException;
             this.field_t = null;
             if (!this.field_s.b((byte) -66)) {
-              this.field_m = (ik) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
+              this.field_m = (ArchiveRequest) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
             } else {
               this.field_m = null;
             }
@@ -296,12 +296,12 @@ final class t extends ti {
             if (this.field_s.b((byte) -128)) {
               this.field_m = null;
             } else {
-              this.field_m = (ik) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
+              this.field_m = (ArchiveRequest) ((Object) this.field_s.a(255, this.field_k, -28612, true, (byte) 0));
             }
             return null;
           }
           if (null != this.field_v) {
-            this.field_y.a(var9, this.field_v, false, this.field_k);
+            this.field_y.requestWrite(var9, this.field_v, false, this.field_k);
           }
         }
         if (null != this.field_p) {
@@ -320,12 +320,12 @@ final class t extends ti {
     }
 
     final void d(byte param0) {
-        ik discarded$3 = null;
-        ik discarded$2 = null;
-        ik discarded$1 = null;
-        ik discarded$0 = null;
+        ArchiveRequest discarded$3 = null;
+        ArchiveRequest discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
         int var2_int;
-        ik var2;
+        ArchiveRequest var2;
         IntrusiveNode var3;
         int var4;
         int var5;
@@ -436,7 +436,7 @@ final class t extends ti {
         }
         if (this.field_z &&
           this.field_o <= dd.correctedCurrentTimeMillis(119)) {
-          var2 = (ik) (this.field_w.a(-1));
+          var2 = (ArchiveRequest) (this.field_w.a(-1));
           while (var2 != null) {
             if (!var2.field_r) {
               if (!var2.field_n) {
@@ -448,7 +448,7 @@ final class t extends ti {
                 var2.unlink(4);
               }
             }
-            var2 = (ik) (this.field_w.a((byte) -64));
+            var2 = (ArchiveRequest) (this.field_w.a((byte) -64));
           }
           this.field_o = dd.correctedCurrentTimeMillis(114) + 1000L;
         }
@@ -456,8 +456,8 @@ final class t extends ti {
 
     final void b(int param0) {
         int var3 = 0;
-        ik discarded$0 = null;
-        ik discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         int var4 = StarCannon.field_A;
         if (null == this.field_B) {
           return;
@@ -497,17 +497,17 @@ final class t extends ti {
     }
 
     final int a(int param0, boolean param1) {
-        ik var3 = (ik) (this.field_w.a((long)param0, (byte) 120));
+        ArchiveRequest var3 = (ArchiveRequest) (this.field_w.a((long)param0, (byte) 120));
         if (!param1) {
           this.d((byte) -101);
         }
         if (var3 != null) {
-          return var3.e(-29144);
+          return var3.getProgressPercent(-29144);
         }
         return 0;
     }
 
-    t(int param0, uf param1, uf param2, eh param3, ef param4, int param5, byte[] param6, int param7, boolean param8) {
+    t(int param0, SectorCacheStore param1, SectorCacheStore param2, eh param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -544,7 +544,7 @@ final class t extends ti {
           this.field_A = param7;
           this.field_y = param4;
           if (null != this.field_v) {
-            this.field_m = (ik) ((Object) this.field_y.a(this.field_v, -80, this.field_k));
+            this.field_m = (ArchiveRequest) ((Object) this.field_y.readNow(this.field_v, -80, this.field_k));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

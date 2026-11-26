@@ -43,7 +43,7 @@ final class ClientException extends RuntimeException {
         try {
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_3_0 = si.field_s;
+            stackIn_3_0 = DiskArchiveRequest.field_s;
             return stackIn_3_0;
           }
           if (var2_int > 64) {

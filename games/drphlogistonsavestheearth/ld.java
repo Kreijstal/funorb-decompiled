@@ -889,7 +889,7 @@ final class ld {
         ul.field_h.a(50, var4);
         AccountRequestState.field_d.a(83, var4);
         lk.field_k.a(116, var4);
-        lb.field_D.a(149, var4);
+        ArchiveRequest.field_D.a(149, var4);
         cb.field_b.c(ch.field_w, var5, var6 + var4, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;
@@ -1125,12 +1125,12 @@ final class ld {
           }
           if (var8 == 10 ||
             11 == var8) {
-            n.field_c = cb.field_b.b(hg.field_ob[10]);
+            DiskCacheWorker.field_c = cb.field_b.b(hg.field_ob[10]);
             var15 = cb.field_b.b(hg.field_ob[11]);
-            if (var15 > n.field_c) {
-              n.field_c = var15;
+            if (var15 > DiskCacheWorker.field_c) {
+              DiskCacheWorker.field_c = var15;
             }
-            var16 = n.field_c + ul.field_b[this.field_c] + cb.field_b.b(" ");
+            var16 = DiskCacheWorker.field_c + ul.field_b[this.field_c] + cb.field_b.b(" ");
             if (var8 != 10) {
               stackIn_63_0 = SecondaryNodeDequeIterator.field_b;
             } else {

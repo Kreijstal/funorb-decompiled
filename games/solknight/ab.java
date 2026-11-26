@@ -142,7 +142,7 @@ abstract class ab extends GameApplet {
             if (null != NodeHashTableIterator.field_a.field_c) {
               hc.field_c = new BufferedCacheFile(NodeHashTableIterator.field_a.field_c, 5200, 0);
               NodeHashTableIterator.field_a.field_c = null;
-              var6 = new bi(255, hc.field_c, new BufferedCacheFile(NodeHashTableIterator.field_a.field_s, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, hc.field_c, new BufferedCacheFile(NodeHashTableIterator.field_a.field_s, 12000, 0), 2097152);
             }
             if (hc.field_c != null) {
               if (null == tk.field_p) {
@@ -152,9 +152,9 @@ abstract class ab extends GameApplet {
                 tk.field_p[param1] = new BufferedCacheFile(NodeHashTableIterator.field_a.field_v[param1], 12000, 0);
                 NodeHashTableIterator.field_a.field_v[param1] = null;
               }
-              var7 = new bi(param1, hc.field_c, tk.field_p[param1], 2097152);
+              var7 = new SectorCacheStore(param1, hc.field_c, tk.field_p[param1], 2097152);
             }
-            var8 = d.field_b.a(-65, (bi) (var7), param3, (bi) (var6), param1);
+            var8 = d.field_b.a(-65, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6), param1);
             if (param5) {
               var8.a((byte) 0);
             }
@@ -364,9 +364,9 @@ abstract class ab extends GameApplet {
           if (var4 == 1) {
             var5_int = si.a(ua.h(0), ih.a(true), -120);
             if (var5_int != -1) {
-              fb.a(12239, ke.field_O, var5_int, md.field_v);
+              fb.a(12239, ke.field_O, var5_int, DiskArchiveRequest.field_v);
               ke.field_O = null;
-              md.field_v = null;
+              DiskArchiveRequest.field_v = null;
             }
             var11 = sf.d(-123);
             if (var11 != null) {
@@ -376,9 +376,9 @@ abstract class ab extends GameApplet {
           if (2 == var4) {
             var5_intLifetime1 = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), this.field_r, RandomAccessCacheFile.b(-1), lc.b(false));
             if (-1 != var5_intLifetime1) {
-              ff.a(var5_intLifetime1, -114, ke.field_O, md.field_v);
+              ff.a(var5_intLifetime1, -114, ke.field_O, DiskArchiveRequest.field_v);
               ke.field_O = null;
-              md.field_v = null;
+              DiskArchiveRequest.field_v = null;
             }
           }
           if (var4 == 3) {
@@ -391,8 +391,8 @@ abstract class ab extends GameApplet {
               var5_intLifetime2 = fc.a(rg.a(0), this.field_r, false, this.field_o, fi.a((byte) 84), 0);
               if (-1 != var5_intLifetime2) {
                 if (0 != var5_intLifetime2) {
-                  dd.a((byte) 83, md.field_v, var5_intLifetime2);
-                  md.field_v = null;
+                  dd.a((byte) 83, DiskArchiveRequest.field_v, var5_intLifetime2);
+                  DiskArchiveRequest.field_v = null;
                 } else {
                   d.field_c = kc.field_P;
                   ee.f(0);
@@ -500,7 +500,7 @@ abstract class ab extends GameApplet {
         vd.field_b = this.field_v;
         aa.a((byte) 30, vd.field_b);
         ff.a(this.field_z, wh.field_c, param1, (byte) 110, this.field_C, this.field_m, this.field_y, 5000, this.field_x, this.field_n, param5, 5000, vd.field_b, this.field_w);
-        sk.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
+        ArchiveRequest.a(-11400, this.field_C, this.field_y, wh.field_c, this.field_m, this.field_z, param5, vd.field_b, this.field_x);
         Archive.a(0);
         ah.field_d = ld.createMouseWheelInput(0);
         th.a((byte) -63, dc.field_q);
@@ -945,7 +945,7 @@ abstract class ab extends GameApplet {
             this.a("reconnect", -1);
           }
           sf.b(false);
-          dd.a((byte) 8, md.field_v, var2);
+          dd.a((byte) 8, DiskArchiveRequest.field_v, var2);
           ee.field_i = true;
           kj.field_I = je.correctedCurrentTimeMillis(param0 ^ -2) + 15000L;
           return var2;

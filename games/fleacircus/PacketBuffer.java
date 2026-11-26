@@ -306,7 +306,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + af.a(0, this.payload, param1.length(), var5, -109, this.position);
+          this.position = this.position + DiskCacheWorker.a(0, this.payload, param1.length(), var5, -109, this.position);
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -500,7 +500,7 @@ class PacketBuffer extends IntrusiveNode {
           this.payload[fieldTemp$0] = (byte) 0;
           int var4 = -40 % ((-3 - param1) / 39);
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + af.a(0, this.payload, param0.length(), var5, -111, this.position);
+          this.position = this.position + DiskCacheWorker.a(0, this.payload, param0.length(), var5, -111, this.position);
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

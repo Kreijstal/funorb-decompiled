@@ -30,7 +30,7 @@ final class ri {
             if (DirectByteStorage.field_f.field_e != null) {
               ne.field_l = new td(DirectByteStorage.field_f.field_e, 5200, 0);
               DirectByteStorage.field_f.field_e = null;
-              var6 = new uf(255, ne.field_l, new td(DirectByteStorage.field_f.field_t, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ne.field_l, new td(DirectByteStorage.field_f.field_t, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != ne.field_l) {
@@ -41,13 +41,13 @@ final class ri {
                 fe.field_J[param3] = new td(DirectByteStorage.field_f.field_q[param3], 12000, 0);
                 DirectByteStorage.field_f.field_q[param3] = null;
               }
-              var7 = new uf(param3, ne.field_l, fe.field_J[param3], 2097152);
+              var7 = new SectorCacheStore(param3, ne.field_l, fe.field_J[param3], 2097152);
             }
             if (!param0) {
               stackIn_11_0 = (ue) null;
               return stackIn_11_0;
             }
-            var8 = bl.field_b.a(param4, -72, (uf) (var7), param3, (uf) (var6));
+            var8 = bl.field_b.a(param4, -72, (SectorCacheStore) (var7), param3, (SectorCacheStore) (var6));
             if (param1) {
               var8.a(-126);
             }

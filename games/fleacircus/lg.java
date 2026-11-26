@@ -29,22 +29,22 @@ final class lg {
         if (param4 > -86) {
           lg.a(80, -23, -25, 98, -100, -103);
         }
-        BoundedRandomAccessFile.field_e[qh.field_D] = param1;
-        mh.field_y[qh.field_D] = qh.field_D;
-        jl.field_b[qh.field_D] = param2;
+        BoundedRandomAccessFile.field_e[DiskArchiveRequest.field_D] = param1;
+        mh.field_y[DiskArchiveRequest.field_D] = DiskArchiveRequest.field_D;
+        jl.field_b[DiskArchiveRequest.field_D] = param2;
         if (ea.field_a > param2) {
           ak.field_f = param2;
         }
         if (!(lc.field_u >= param2)) {
           ok.field_L = param2;
         }
-        kk.field_b[qh.field_D] = param0;
-        hg.field_q[qh.field_D] = param3;
-        vh.field_i[qh.field_D] = param5;
+        kk.field_b[DiskArchiveRequest.field_D] = param0;
+        hg.field_q[DiskArchiveRequest.field_D] = param3;
+        vh.field_i[DiskArchiveRequest.field_D] = param5;
         int var6 = param5 + param0 + param3;
         int var7 = var6 != 0 ? param0 * 1000 / var6 : 0;
-        uj.field_a[qh.field_D] = var7;
-        qh.field_D = qh.field_D + 1;
+        uj.field_a[DiskArchiveRequest.field_D] = var7;
+        DiskArchiveRequest.field_D = DiskArchiveRequest.field_D + 1;
         if (!(ok.field_L >= var7)) {
           ok.field_L = var7;
         }

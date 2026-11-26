@@ -121,7 +121,7 @@ final class od {
         var11 = OrbDefence.field_D ? 1 : 0;
         var3 = -120 + 2 * lc.field_o;
         this.field_g = 75;
-        if (wj.field_m == 3) {
+        if (ArchiveRequest.field_m == 3) {
           this.field_g = this.field_g + 370;
         }
         var4 = 108;

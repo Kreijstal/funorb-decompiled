@@ -137,19 +137,19 @@ class g extends wa {
         var12 = 0;
         if (!mm.field_b &&
           param4 &&
-          ma.field_I != 0 &&
+          DiskArchiveRequest.field_I != 0 &&
           mm.field_c >= SoftwareRasterizer.field_b &&
           mm.field_c < SoftwareRasterizer.field_f &&
           SoftwareRasterizer.field_d <= lm.field_c &&
           SoftwareRasterizer.field_c > lm.field_c) {
-          this.field_pb = ma.field_I;
+          this.field_pb = DiskArchiveRequest.field_I;
           var12 = 1;
           this.field_Y = -this.field_Bb + lm.field_c;
           this.field_Q = -this.field_vb + mm.field_c;
-          this.field_N = ma.field_I;
+          this.field_N = DiskArchiveRequest.field_I;
         } else {
           this.field_pb = 0;
-          if (ma.field_I != 0) {
+          if (DiskArchiveRequest.field_I != 0) {
             this.field_N = 0;
           }
         }

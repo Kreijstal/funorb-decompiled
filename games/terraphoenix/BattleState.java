@@ -1245,7 +1245,7 @@ final class BattleState {
                   var5_ref.field_g != 6 &&
                   var5_ref.field_g != 7) {
                   param0.field_Eb = new String[1];
-                  param0.field_Eb[0] = rf.field_q + od.field_c[var5_ref.field_g].field_j + hi.field_Y;
+                  param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_ref.field_g].field_j + hi.field_Y;
                   decompiledFrameRemainder0 = (1 == this.field_N);
                   if (decompiledFrameRemainder0) {
                     var6Lifetime2 = 14;
@@ -1378,7 +1378,7 @@ final class BattleState {
                     qd.$cfr$intArgs$a$e9dea5688aa5(stackIn_927_0, stackIn_928_1);
                     if (var9 != 0) {
                       param0.field_Eb = new String[1];
-                      param0.field_Eb[0] = rf.field_q + od.field_c[var5_refLifetime1.field_g].field_j + hi.field_Y;
+                      param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + hi.field_Y;
                       if (this.field_N == 1) {
                         var6Lifetime3 = 14;
                         if (this.field_q.field_jb >= var6Lifetime3) {
@@ -1393,7 +1393,7 @@ final class BattleState {
                   }
                 } else {
                   param0.field_Eb = new String[1];
-                  param0.field_Eb[0] = rf.field_q + od.field_c[var5_refLifetime1.field_g].field_j + hi.field_Y;
+                  param0.field_Eb[0] = ArchiveRequest.field_q + od.field_c[var5_refLifetime1.field_g].field_j + hi.field_Y;
                   if (this.field_N == 1) {
                     var6Lifetime3 = 14;
                     if (this.field_q.field_jb >= var6Lifetime3) {
@@ -4904,7 +4904,7 @@ final class BattleState {
           if (this.field_J) {
             SoftwareRasterizer.fillRectangleAlpha(162, 7, 364, 33, 0, 128);
             SoftwareRasterizer.addHorizontalLine(162, 39, 364, 4473924);
-            ua.field_b.b(0, 0);
+            SectorCacheStore.field_b.b(0, 0);
             if (null != this.client.field_Eb) {
               boolean decompiledSharedTail0 = (this.client.field_Eb.length != 1);
               if (!decompiledSharedTail0) {
@@ -6657,7 +6657,7 @@ final class BattleState {
                             /* Inlined CFG state: 128. */
                             {
                                 this.a(29518, 2);
-                                this.a(-1, rf.field_s, -41);
+                                this.a(-1, ArchiveRequest.field_s, -41);
                                 this.field_b = true;
                                 statePc = 129;
                                 continue scanLoop1;
@@ -7884,7 +7884,7 @@ final class BattleState {
                             /* Inlined CFG state: 306. */
                             {
                                 this.a(29518, 2);
-                                this.a(-1, rf.field_s, -8);
+                                this.a(-1, ArchiveRequest.field_s, -8);
                                 this.field_b = true;
                                 statePc = 307;
                                 continue scanLoop1;
@@ -9344,7 +9344,7 @@ final class BattleState {
                             /* Inlined CFG state: 535. */
                             {
                                 this.a(29518, 8);
-                                this.a(-1, rf.field_s, -104);
+                                this.a(-1, ArchiveRequest.field_s, -104);
                                 this.field_b = true;
                                 this.field_r = true;
                                 statePc = 536;

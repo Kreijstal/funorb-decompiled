@@ -242,7 +242,7 @@ abstract class nk extends GameAppletShell {
           if (nc.field_r != -1 &&
             nc.field_r != 0) {
             nc.field_r = -1;
-            si.e((byte) 13);
+            ArchiveRequest.e((byte) 13);
           }
         }
         if (nc.field_r == 0 &&
@@ -273,7 +273,7 @@ abstract class nk extends GameAppletShell {
               if (eh.field_d.a("", 10762)) {
                 kb.a(-119, eh.field_d);
                 eh.field_d = null;
-                dl.b(5);
+                SectorCacheStore.b(5);
               }
             }
           }
@@ -308,7 +308,7 @@ abstract class nk extends GameAppletShell {
           we.field_h = null;
           ej.field_d = null;
           mc.a(-116, (java.applet.Applet) (this));
-          dl.b(5);
+          SectorCacheStore.b(5);
           PacketBuffer.field_i = 10;
         }
         if (PacketBuffer.field_i == 10) {
@@ -567,7 +567,7 @@ abstract class nk extends GameAppletShell {
             if (nc.field_r != -1 &&
               0 != nc.field_r) {
               nc.field_r = -1;
-              si.e((byte) 86);
+              ArchiveRequest.e((byte) 86);
             }
             if (!param0) {
               var5_intLifetime2 = ve.a(el.b(1), (byte) -25, this.field_y, false, dg.a(false), this.field_A);
@@ -627,7 +627,7 @@ abstract class nk extends GameAppletShell {
               if (g.field_m.a(74)) {
                 var12 = g.field_m.a((byte) -65);
                 if (var12 != null) {
-                  var7 = dc.a(var12.position, var12.payload, (byte) 16, 0);
+                  var7 = NetworkArchiveRequest.a(var12.position, var12.payload, (byte) 16, 0);
                   hf.a(var7, (byte) 110);
                 } else {
                   var9 = (String) null;

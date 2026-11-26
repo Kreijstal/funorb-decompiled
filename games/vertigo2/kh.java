@@ -16,7 +16,7 @@ final class kh {
     }
 
     final static void a(int param0, byte param1) {
-        rk.field_A = hn.field_u[param0];
+        ArchiveRequest.field_A = hn.field_u[param0];
         if (param1 != -84) {
           kh.a((byte) 115);
         }

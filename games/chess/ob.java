@@ -65,12 +65,12 @@ final class ob extends wm {
           String stackIn_29_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          cc var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          cc var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Chess.field_G;
           try {
             if (null != this.field_s) {
@@ -88,7 +88,7 @@ final class ob extends wm {
             this.field_h = null;
             this.field_a.position = 0;
             while (true) {
-              var4_ref = (cc) (this.field_e.a((byte) -75));
+              var4_ref = (NetworkArchiveRequest) (this.field_e.a((byte) -75));
               if (var4_ref != null) {
                 this.field_o.a(0, var4_ref);
                 continue;
@@ -96,7 +96,7 @@ final class ob extends wm {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (cc) (this.field_p.a((byte) -75));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_p.a((byte) -75));
               if (var4_refLifetime1 != null) {
                 this.field_f.a(0, var4_refLifetime1);
                 continue;
@@ -267,7 +267,7 @@ final class ob extends wm {
           int stackIn_66_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          cc var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -282,10 +282,10 @@ final class ob extends wm {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          cc var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          cc var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = Chess.field_G;
           if (this.field_s != null) {
             var2_long = ud.correctedCurrentTimeMillis(2);
@@ -316,7 +316,7 @@ final class ob extends wm {
           }
           try {
             this.field_s.checkWriteError((byte) -41);
-            var2 = (cc) (this.field_o.b(-22585));
+            var2 = (NetworkArchiveRequest) (this.field_o.b(-22585));
             if (param0 != -31259) {
               return true;
             }
@@ -326,16 +326,16 @@ final class ob extends wm {
               this.field_l.writeLong40(var2.secondaryKey, 1392038664);
               this.field_s.queueWrite(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               this.field_e.a(0, var2);
-              var2 = (cc) (this.field_o.b((byte) -73));
+              var2 = (NetworkArchiveRequest) (this.field_o.b((byte) -73));
             }
-            var2Lifetime1 = (cc) (this.field_f.b(-22585));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_f.b(-22585));
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(0, (byte) -110);
               this.field_l.writeLong40(var2Lifetime1.secondaryKey, 1392038664);
               this.field_s.queueWrite(0, this.field_l.data.length, (byte) -92, this.field_l.data);
               this.field_p.a(0, var2Lifetime1);
-              var2Lifetime1 = (cc) (this.field_f.b((byte) -93));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_f.b((byte) -93));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_s.availableBytes(0);
@@ -405,24 +405,24 @@ final class ob extends wm {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (cc) (this.field_e.b(-22585));
+                        var14_ref = (NetworkArchiveRequest) (this.field_e.b(-22585));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (cc) (this.field_e.b((byte) -106));
+                          var14_ref = (NetworkArchiveRequest) (this.field_e.b((byte) -106));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (cc) (this.field_p.b(-22585));
+                        var14_ref = (NetworkArchiveRequest) (this.field_p.b(-22585));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             break;
                           }
-                          var14_ref = (cc) (this.field_p.b((byte) -73));
+                          var14_ref = (NetworkArchiveRequest) (this.field_p.b((byte) -73));
                         }
                       }
                       if (var14_ref == null) {

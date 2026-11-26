@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
         si.field_V = (BitmapFont) ((Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63));
         DualLinkDequeIterator.field_c = (BitmapFont) ((Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63));
         Sprite var17 = new Sprite(param0.a("button.gif", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
-        el.a("dropdown", param2, (byte) -89, "commonui");
+        DiskArchiveRequest.a("dropdown", param2, (byte) -89, "commonui");
         ek[] var5 = bf.a("screen_options", (byte) 37, "commonui", param2);
         nc.field_F = new ek[4];
         ua.field_c = new ek[4];

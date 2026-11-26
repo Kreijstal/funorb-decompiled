@@ -58,14 +58,14 @@ final class tf {
           pj.field_r[1] = og.field_w.nextInt();
           pj.field_r[2] = (int)(CipherPacketBuffer.field_m >> 32);
           pj.field_r[3] = (int)CipherPacketBuffer.field_m;
-          sp.field_c.position = 0;
-          sp.field_c.writeInt(pj.field_r[0], -16384);
-          sp.field_c.writeInt(pj.field_r[1], -16384);
-          sp.field_c.writeInt(pj.field_r[2], param1 - 16459);
-          sp.field_c.writeInt(pj.field_r[3], -16384);
-          lo.a(param1 - 51, sp.field_c);
-          sp.field_c.writeShort(-161478600, param3);
-          param2.a(sp.field_c, (byte) 124);
+          SectorCacheStore.field_c.position = 0;
+          SectorCacheStore.field_c.writeInt(pj.field_r[0], -16384);
+          SectorCacheStore.field_c.writeInt(pj.field_r[1], -16384);
+          SectorCacheStore.field_c.writeInt(pj.field_r[2], param1 - 16459);
+          SectorCacheStore.field_c.writeInt(pj.field_r[3], -16384);
+          lo.a(param1 - 51, SectorCacheStore.field_c);
+          SectorCacheStore.field_c.writeShort(-161478600, param3);
+          param2.a(SectorCacheStore.field_c, (byte) 124);
           tp.field_f.position = 0;
           if (!param0) {
             tp.field_f.writeByte(true, 16);
@@ -86,11 +86,11 @@ final class tf {
           if (param4) {
             var6 = var6 | 8;
           }
-          if (ld.field_r != null) {
+          if (NetworkArchiveRequest.field_r != null) {
             var6 = var6 | 16;
           }
           tp.field_f.writeByte(true, var6);
-          var7 = mf.a(le.b((byte) -20), -28697);
+          var7 = DiskArchiveRequest.a(le.b((byte) -20), -28697);
           if (param1 != 75) {
             field_a = (String) null;
           }
@@ -98,10 +98,10 @@ final class tf {
             var7 = "";
           }
           tp.field_f.writeString(var7, (byte) -23);
-          if (null != ld.field_r) {
-            tp.field_f.writePrefixedString(ld.field_r, (byte) -117);
+          if (null != NetworkArchiveRequest.field_r) {
+            tp.field_f.writePrefixedString(NetworkArchiveRequest.field_r, (byte) -117);
           }
-          tg.a(sp.field_c, tp.field_f, gn.field_S, -107, lm.field_j);
+          tg.a(SectorCacheStore.field_c, tp.field_f, gn.field_S, -107, lm.field_j);
           tp.field_f.backpatchShortLength(977272835, -var5_int + tp.field_f.position);
           ak.a(-1, (byte) -48);
           return;

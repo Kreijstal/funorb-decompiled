@@ -506,7 +506,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ol.field_c = rb.field_u.a(ph.field_B, 1);
+                    ol.field_c = rb.field_u.a(NetworkArchiveRequest.field_B, 1);
                     stackIn_96_0 = 0;
                   }
                   var3 = stackIn_96_0;

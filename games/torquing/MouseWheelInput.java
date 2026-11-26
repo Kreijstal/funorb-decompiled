@@ -93,10 +93,10 @@ abstract class MouseWheelInput {
 
     final static k[] c(int param0) {
         if (param0 == 0) {
-          return new k[]{SocketJs5Transport.field_t, np.field_k, cc.field_a, Js5Transport.field_p, eo.field_b, mc.field_k, gp.field_L, lb.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
+          return new k[]{SocketJs5Transport.field_t, np.field_k, cc.field_a, Js5Transport.field_p, eo.field_b, mc.field_k, gp.field_L, DiskArchiveRequest.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
         }
         field_d = -64;
-        return new k[]{SocketJs5Transport.field_t, np.field_k, cc.field_a, Js5Transport.field_p, eo.field_b, mc.field_k, gp.field_L, lb.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
+        return new k[]{SocketJs5Transport.field_t, np.field_k, cc.field_a, Js5Transport.field_p, eo.field_b, mc.field_k, gp.field_L, DiskArchiveRequest.field_z, da.field_d, qk.field_r, ag.field_a, aq.field_a, ip.field_a, qd.field_f};
     }
 
     abstract void attach(byte param0, java.awt.Component param1);

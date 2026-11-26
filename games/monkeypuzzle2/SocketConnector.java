@@ -91,24 +91,24 @@ abstract class SocketConnector {
           }
           if (null != ol.field_g && (0 > param1 ||
             dk.field_h == wh.field_b)) {
-            if (gf.field_c.position == 0 &&
+            if (SectorCacheStore.field_c.position == 0 &&
               10000L + qg.field_d < pf.correctedCurrentTimeMillis(0)) {
-              gf.field_c.b(true, param1);
+              SectorCacheStore.field_c.b(true, param1);
             }
-            if (0 < gf.field_c.position) {
+            if (0 < SectorCacheStore.field_c.position) {
               try {
-                ol.field_g.a(gf.field_c.payload, 0, (byte) 122, gf.field_c.position);
+                ol.field_g.a(SectorCacheStore.field_c.payload, 0, (byte) 122, SectorCacheStore.field_c.position);
                 qg.field_d = pf.correctedCurrentTimeMillis(param0 + 71);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 PacketBuffer.a(-1);
               }
-              gf.field_c.position = 0;
+              SectorCacheStore.field_c.position = 0;
             }
             return;
           }
-          gf.field_c.position = 0;
+          SectorCacheStore.field_c.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

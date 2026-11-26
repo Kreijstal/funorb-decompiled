@@ -15,7 +15,7 @@ final class i {
         try {
           var1 = sj.field_d;
           synchronized (var1) {
-            ab.field_t = DelegatingCanvas.field_b;
+            DiskArchiveRequest.field_t = DelegatingCanvas.field_b;
             mh.field_b = mh.field_b + 1;
             if (AccountCreationResultPanel.field_rb < 0) {
               for (var2 = 0; 112 > var2; var2++) {

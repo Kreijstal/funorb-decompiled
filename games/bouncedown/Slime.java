@@ -283,7 +283,7 @@ final class Slime {
                     param0[var10].field_j < 1.0 + (this.field_q + this.field_j + param4)) {
                     this.field_t = var10;
                     if (wd.field_x) {
-                      param1.a(param3[7], 100, md.field_w * 48 / 256);
+                      param1.a(param3[7], 100, DiskArchiveRequest.field_w * 48 / 256);
                     }
                     this.field_j = param0[this.field_t].field_j;
                     this.field_q = 0.0;
@@ -295,7 +295,7 @@ final class Slime {
                     this.field_j + this.field_q + param4 + 1.0 > param0[var10].field_j) {
                     this.field_t = var10;
                     if (wd.field_x) {
-                      param1.a(param3[14], 100, 96 * md.field_w / 256);
+                      param1.a(param3[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                     }
                     this.field_j = param0[this.field_t].field_j;
                     this.field_q = 0.0;
@@ -317,16 +317,16 @@ final class Slime {
                 this.field_t = -1;
                 if (wd.field_x &&
                   91.0 > this.field_o) {
-                  param1.a(param3[5], 100, 96 * md.field_w / 256);
+                  param1.a(param3[5], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 if (wd.field_x &&
                   91.0 <= this.field_o &&
                   this.field_o <= 101.0) {
-                  param1.a(param3[4], 100, md.field_w * 96 / 256);
+                  param1.a(param3[4], 100, DiskArchiveRequest.field_w * 96 / 256);
                 }
                 if (wd.field_x &&
                   this.field_o > 101.0) {
-                  param1.a(param3[6], 100, 96 * md.field_w / 256);
+                  param1.a(param3[6], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 if (vk.field_b == 1 &&
                   null == MusicPatchPcmStream.field_o) {
@@ -350,7 +350,7 @@ final class Slime {
                 91.0 < this.field_o) {
                 param0[this.field_t].field_b = 1;
                 if (wd.field_x) {
-                  param1.a(param3[0], 100, 96 * md.field_w / 256);
+                  param1.a(param3[0], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 if (vk.field_b == 1 &&
                   MusicPatchPcmStream.field_o == null) {
@@ -403,7 +403,7 @@ final class Slime {
                   } else {
                     if (160 > this.field_s) {
                       this.field_s = this.field_s + 10;
-                      this.field_r.c(param3[8].field_k / 50, md.field_w * this.field_s / 256);
+                      this.field_r.c(param3[8].field_k / 50, DiskArchiveRequest.field_w * this.field_s / 256);
                     }
                   }
                   var8_int = 1;
@@ -418,7 +418,7 @@ final class Slime {
                   if (this.field_g != null) {
                     if (this.field_m < 160) {
                       this.field_m = this.field_m + 10;
-                      this.field_g.c(param3[3].field_k / 50, md.field_w * this.field_m / 256);
+                      this.field_g.c(param3[3].field_k / 50, DiskArchiveRequest.field_w * this.field_m / 256);
                     }
                   } else {
                     if (126.0 > this.field_o) {
@@ -445,7 +445,7 @@ final class Slime {
                 this.field_d < 50.0) {
                 if (wd.field_x &&
                   this.field_d <= 0.0) {
-                  param1.a(param3[13], 100, 96 * md.field_w / 256);
+                  param1.a(param3[13], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 this.field_d = this.field_d + 1.0;
                 var10 = 0;
@@ -458,11 +458,11 @@ final class Slime {
                   this.field_q = -(576.0 / this.field_o);
                   if (this.field_i > 0) {
                     if (wd.field_x) {
-                      param1.a(param3[14], 100, 96 * md.field_w / 256);
+                      param1.a(param3[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                     }
                   } else {
                     if (wd.field_x) {
-                      param1.a(param3[15], 100, md.field_w * 96 / 256);
+                      param1.a(param3[15], 100, DiskArchiveRequest.field_w * 96 / 256);
                     }
                     this.field_p = 3;
                     this.field_f = 10;
@@ -498,11 +498,11 @@ final class Slime {
               this.field_j = this.field_e + (double)eg.field_n + 30.0;
               if (this.field_i > 0) {
                 if (wd.field_x) {
-                  param1.a(param3[14], 100, 96 * md.field_w / 256);
+                  param1.a(param3[14], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
               } else {
                 if (wd.field_x) {
-                  param1.a(param3[15], 100, 96 * md.field_w / 256);
+                  param1.a(param3[15], 100, 96 * DiskArchiveRequest.field_w / 256);
                 }
                 this.field_p = 3;
                 this.field_f = 10;
@@ -514,13 +514,13 @@ final class Slime {
               this.field_j = -10.0;
               if (this.field_i <= 0) {
                 if (wd.field_x) {
-                  param1.a(param3[12], 100, md.field_w * 96 / 256);
+                  param1.a(param3[12], 100, DiskArchiveRequest.field_w * 96 / 256);
                 }
                 this.field_f = 50;
                 this.field_p = 1;
               } else {
                 if (wd.field_x) {
-                  param1.a(param3[14], 100, md.field_w * 96 / 256);
+                  param1.a(param3[14], 100, DiskArchiveRequest.field_w * 96 / 256);
                 }
                 this.field_p = 0;
               }

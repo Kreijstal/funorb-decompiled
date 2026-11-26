@@ -130,10 +130,10 @@ final class bg extends qe {
         jh.a(this.field_e);
         AwtRasterBuffer.a(0, 640, 0, (byte) 64);
         AwtRasterBuffer.a(0, 640, 40, (byte) 75);
-        vf.a(432, true, 33, 114, 48);
-        vf.a(432, true, 599, 115, 48);
-        vf.a(32, true, 164, -54, 8);
-        vf.a(32, true, 468, 107, 8);
+        ArchiveRequest.a(432, true, 33, 114, 48);
+        ArchiveRequest.a(432, true, 599, 115, 48);
+        ArchiveRequest.a(32, true, 164, -54, 8);
+        ArchiveRequest.a(32, true, 468, 107, 8);
         ByteStorage.a(41, (byte) 63, 558, 416, true);
         this.a(40, 70, 117);
         jh.b();

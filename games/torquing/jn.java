@@ -81,7 +81,7 @@ final class jn {
             if (var3_int >= param0.length()) {
               return true;
             }
-            if (co.a(47, param0.charAt(var3_int))) {
+            if (DiskCacheWorker.a(47, param0.charAt(var3_int))) {
               var3_int++;
               continue;
             }

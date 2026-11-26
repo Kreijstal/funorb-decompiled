@@ -159,7 +159,7 @@ final class ij extends vd implements kn, qk {
             return 0;
           }
         } else {
-          if (um.field_e > 0) {
+          if (SectorCacheStore.field_e > 0) {
             if (var2 < AccountNameAvailabilityValidator.field_s) {
               return 0;
             }
@@ -174,7 +174,7 @@ final class ij extends vd implements kn, qk {
                   return 0;
                 }
               } else {
-                um.field_e = 100;
+                SectorCacheStore.field_e = 100;
                 AccountNameAvailabilityValidator.field_s = AccountNameAvailabilityValidator.field_s + 1;
                 if (AccountNameAvailabilityValidator.field_s == 10) {
                   ti.a(252, (byte) -110, 3);

@@ -1528,7 +1528,7 @@ final class MidiPcmStream extends PcmStream {
         if (param0 != -23) {
           field_m = (Random) null;
         }
-        return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, cm.field_P, lb.field_z, bc.field_a, vj.field_d};
+        return new sa[]{oh.field_c, ei.field_n, cd.field_c, pi.field_N, vb.field_q, qj.field_b, db.field_d, b.field_i, wd.field_d, sc.field_d, NetworkArchiveRequest.field_P, ArchiveRequest.field_z, bc.field_a, vj.field_d};
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

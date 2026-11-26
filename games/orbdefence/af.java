@@ -14,8 +14,8 @@ final class af {
             if (kg.field_h != null) {
               kg.field_h.c(1);
             }
-            if (wj.field_o != null) {
-              wj.field_o.a(-31973);
+            if (ArchiveRequest.field_o != null) {
+              ArchiveRequest.field_o.shutdown(-31973);
             }
             if (vg.field_q != null) {
               try {

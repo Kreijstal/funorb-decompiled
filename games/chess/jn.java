@@ -271,13 +271,13 @@ final class jn extends fb {
             fn.field_b = param12;
             am.field_d = param2;
             re.field_n = param1;
-            on.field_a = param10;
+            DiskCacheWorker.field_a = param10;
             qc.field_a = param7;
             ln.field_Kb = param0;
             bk.field_n = param11;
             if (null != re.field_n.field_d) {
               try {
-                tc.field_z = new lc(re.field_n.field_d, 64, 0);
+                DiskArchiveRequest.field_z = new lc(re.field_n.field_d, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

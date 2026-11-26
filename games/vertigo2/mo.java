@@ -41,10 +41,10 @@ class mo {
           if (!param0) {
             mo.clearStaticReferences(38);
           }
-          while (rk.field_A.length > var2) {
-            var3 = tk.field_c.c(rk.field_A[var2]);
+          while (ArchiveRequest.field_A.length > var2) {
+            var3 = tk.field_c.c(ArchiveRequest.field_A[var2]);
             FullscreenFocusCanvas.a(false, -var3 + 620, var3, var1_int);
-            tk.field_c.b(rk.field_A[var2], -var3 + 620, -2 + var1_int + (tk.field_c.field_D + 30) / 2, 16777215, -1);
+            tk.field_c.b(ArchiveRequest.field_A[var2], -var3 + 620, -2 + var1_int + (tk.field_c.field_D + 30) / 2, 16777215, -1);
             var1_int += 50;
             var2++;
           }

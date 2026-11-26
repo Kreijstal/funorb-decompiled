@@ -21,10 +21,10 @@ final class td {
         RuntimeException decompiledCaughtException = null;
         var2 = stellarshard.field_B;
         try {
-          na.field_d.a(true, (byte) -123, ll.field_d, gi.field_c);
+          na.field_d.a(true, (byte) -123, ll.field_d, SectorCacheStore.field_c);
           na.field_d.f((byte) -127);
           while (PcmResampler.c(123)) {
-            na.field_d.a(gi.field_f, AccountRequestState.field_b, true);
+            na.field_d.a(SectorCacheStore.field_f, AccountRequestState.field_b, true);
           }
           if (-1 != ee.field_a) {
             var1_int = ee.field_a;
@@ -39,7 +39,7 @@ final class td {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
-          if (dj.field_a == el.field_E) {
+          if (dj.field_a == DiskArchiveRequest.field_E) {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }

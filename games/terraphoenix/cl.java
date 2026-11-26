@@ -19,7 +19,7 @@ final class cl extends WidgetContainer implements jf, n {
           this.field_H = param0;
           this.field_G = new eb(rj.field_e, (sc) null);
           this.field_G.listener = (WidgetActionListener) ((Object) new ic());
-          var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, rf.field_y);
+          var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, ArchiveRequest.field_y);
           var3 = 20;
           var4 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
           this.field_F = new vj(var7, var4);

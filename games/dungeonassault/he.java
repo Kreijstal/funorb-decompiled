@@ -235,7 +235,7 @@ final class he extends ip {
           DualLinkNode.field_m[18] = lb.field_E.toUpperCase();
           DualLinkNode.field_m[19] = bl.field_a.toUpperCase();
           DualLinkNode.field_m[20] = ub.field_k.toUpperCase();
-          DualLinkNode.field_m[21] = vf.field_y.toUpperCase();
+          DualLinkNode.field_m[21] = ArchiveRequest.field_y.toUpperCase();
           DualLinkNode.field_m[22] = ag.field_b.toUpperCase();
           DualLinkNode.field_m[23] = uj.field_e.toUpperCase();
           DualLinkNode.field_m[24] = SecondaryNodeDequeIterator.field_k.toUpperCase();
@@ -738,7 +738,7 @@ final class he extends ip {
             gh.field_i[27].field_z = var3_ref_StringLifetime61;
             gh.field_i[27].field_t = var4Lifetime61;
           }
-          var3_ref_StringLifetime62 = cc.field_a;
+          var3_ref_StringLifetime62 = DiskCacheWorker.field_a;
           var4Lifetime62 = mj.field_c;
           var5Lifetime28 = eb.field_L;
           if (gh.field_i[28] != null) {
@@ -826,26 +826,26 @@ final class he extends ip {
           ByteStorage.field_a[0] = da.field_E;
           ByteStorage.field_a[3] = bj.field_J;
           ByteStorage.field_a[2] = an.field_C;
-          cc.field_e = new String[254];
+          DiskCacheWorker.field_e = new String[254];
           for (var3 = 0; var3 < dc.field_p.length; var3++) {
-            cc.field_e[var3 + wm.field_a] = od.field_b[var3];
-            cc.field_e[var3 + (rj.field_l + wm.field_a)] = FullscreenFocusCanvas.field_h[var3];
+            DiskCacheWorker.field_e[var3 + wm.field_a] = od.field_b[var3];
+            DiskCacheWorker.field_e[var3 + (rj.field_l + wm.field_a)] = FullscreenFocusCanvas.field_h[var3];
           }
           for (var3Lifetime1 = 0; Raider.field_m.length > var3Lifetime1; var3Lifetime1++) {
-            cc.field_e[var3Lifetime1 + uf.field_a] = j.field_O[var3Lifetime1];
-            cc.field_e[rj.field_l + uf.field_a + var3Lifetime1] = ff.field_f[var3Lifetime1];
+            DiskCacheWorker.field_e[var3Lifetime1 + uf.field_a] = j.field_O[var3Lifetime1];
+            DiskCacheWorker.field_e[rj.field_l + uf.field_a + var3Lifetime1] = ff.field_f[var3Lifetime1];
           }
           for (var3Lifetime2 = 0; var3Lifetime2 < ci.field_s.length; var3Lifetime2++) {
-            cc.field_e[gn.field_d + var3Lifetime2] = hd.field_m[var3Lifetime2];
-            cc.field_e[var3Lifetime2 + (gn.field_d + rj.field_l)] = ki.field_h[var3Lifetime2];
+            DiskCacheWorker.field_e[gn.field_d + var3Lifetime2] = hd.field_m[var3Lifetime2];
+            DiskCacheWorker.field_e[var3Lifetime2 + (gn.field_d + rj.field_l)] = ki.field_h[var3Lifetime2];
           }
           for (var3Lifetime3 = 0; var3Lifetime3 < bl.field_n.length; var3Lifetime3++) {
-            cc.field_e[var3Lifetime3 + ok.field_z] = nj.field_c[var3Lifetime3];
-            cc.field_e[ok.field_z + (rj.field_l + var3Lifetime3)] = lh.field_n[var3Lifetime3];
+            DiskCacheWorker.field_e[var3Lifetime3 + ok.field_z] = nj.field_c[var3Lifetime3];
+            DiskCacheWorker.field_e[ok.field_z + (rj.field_l + var3Lifetime3)] = lh.field_n[var3Lifetime3];
           }
           for (var3Lifetime4 = 0; var3Lifetime4 < SecondaryNodeDequeIterator.field_j.length; var3Lifetime4++) {
-            cc.field_e[cp.field_R + var3Lifetime4] = wm.field_i[var3Lifetime4];
-            cc.field_e[var3Lifetime4 + (rj.field_l + cp.field_R)] = wm.field_d[var3Lifetime4];
+            DiskCacheWorker.field_e[cp.field_R + var3Lifetime4] = wm.field_i[var3Lifetime4];
+            DiskCacheWorker.field_e[var3Lifetime4 + (rj.field_l + cp.field_R)] = wm.field_d[var3Lifetime4];
           }
           ck.field_H = new fm();
           ck.field_H.a("<col=FF0000>" + qk.field_d + "</col>", -111, "attack");

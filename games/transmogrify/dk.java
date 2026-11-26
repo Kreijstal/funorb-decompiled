@@ -5,17 +5,17 @@ final class dk {
     private uh field_e;
     static boolean field_b;
     private PacketBuffer field_l;
-    private pj field_f;
+    private NetworkArchiveRequest field_f;
     static int field_h;
     private java.math.BigInteger field_g;
     private be[] field_d;
     private java.math.BigInteger field_j;
     static int[] field_k;
-    private cd field_c;
+    private DiskCacheWorker field_c;
     static int field_i;
     static String field_a;
 
-    dk(uh param0, cd param1) {
+    dk(uh param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -230,7 +230,7 @@ final class dk {
         }
     }
 
-    final be a(int param0, boolean param1, int param2, ak param3, ak param4) {
+    final be a(int param0, boolean param1, int param2, SectorCacheStore param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -288,7 +288,7 @@ final class dk {
         }
     }
 
-    private dk(uh param0, cd param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private dk(uh param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_j = param3;
           this.field_e = param0;
@@ -327,7 +327,7 @@ final class dk {
         if (this.field_f.field_m) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_f.e(256));
+        var10 = new PacketBuffer(this.field_f.getData(256));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) 30);
         var10.position = var10.position + var3 * 72;
@@ -369,13 +369,13 @@ final class dk {
     final void a(boolean param0) {
         int var2;
         int var3;
-        ak var4;
+        SectorCacheStore var4;
         be stackIn_18_0 = null;
         int var2Lifetime1;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (param0) {
-          var4 = (ak) null;
-          this.a(-91, false, 38, (ak) null, (ak) null);
+          var4 = (SectorCacheStore) null;
+          this.a(-91, false, 38, (SectorCacheStore) null, (SectorCacheStore) null);
         }
         if (this.field_d == null) {
           return;

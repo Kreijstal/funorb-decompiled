@@ -1324,9 +1324,9 @@ public final class Chess extends gb {
         var8 = field_G;
         if (n.field_e != n.field_f) {
           if (n.field_e != ka.field_h) {
-            if (n.field_e == on.field_d) {
+            if (n.field_e == DiskCacheWorker.field_d) {
               if (PcmOutputWorker.a(-3)) {
-                IntrusiveDeque.field_f = cc.field_z;
+                IntrusiveDeque.field_f = NetworkArchiveRequest.field_z;
               } else {
                 gf.field_d = vc.a(-127, 4);
                 if (cb.field_e != null) {
@@ -1362,7 +1362,7 @@ public final class Chess extends gb {
               } else {
                 db.h(12082);
               }
-              n.field_e = on.field_d;
+              n.field_e = DiskCacheWorker.field_d;
             }
           }
         } else {
@@ -1687,12 +1687,12 @@ public final class Chess extends gb {
         ig.clearStaticReferences(-49);
         ob.clearStaticReferences(false);
         ad.clearStaticReferences(-82);
-        cc.resetStaticState((byte) 109);
-        gd.clearStaticReferences((byte) 84);
-        tc.clearDeclaredStaticReferences(-7588);
+        NetworkArchiveRequest.resetStaticState((byte) 109);
+        SectorCacheStore.clearStaticReferences((byte) 84);
+        DiskArchiveRequest.clearDeclaredStaticReferences(-7588);
         da.e(16);
         jh.clearStaticReferences((byte) -93);
-        ab.clearStaticReferences(-115);
+        ArchiveRequest.clearStaticReferences(-115);
         sl.clearStaticReferences((byte) 59);
         ge.k(0);
         hl.clearStaticReferences(true);
@@ -1843,7 +1843,7 @@ public final class Chess extends gb {
         RgbSprite[][] var6;
         int var3Lifetime1;
         var4 = field_G;
-        ab.h(param0 - 19759);
+        ArchiveRequest.h(param0 - 19759);
         if (null == lc.field_m) {
           if (null != tk.field_g) {
             nj.a(param0 ^ -19745, ae.field_a, 70.0f);

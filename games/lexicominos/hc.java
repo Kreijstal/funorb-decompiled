@@ -163,7 +163,7 @@ final class hc extends ui {
             }
           }
           if (bc.field_F == uf.field_m &&
-            dc.d(2)) {
+            NetworkArchiveRequest.d(2)) {
             if (pg.field_d == 255) {
               var9_ref_String = ig.field_a.readNullableString((byte) -49);
               if (var9_ref_String != null) {

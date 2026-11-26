@@ -137,7 +137,7 @@ final class fg {
           if (of.field_v != 2) {
             return 0;
           }
-          if (!ik.a(this.field_b, (byte) -119)) {
+          if (!SectorCacheStore.a(this.field_b, (byte) -119)) {
             return 0;
           }
           return 1;
@@ -149,7 +149,7 @@ final class fg {
         if (of.field_v != 2) {
           return 0;
         }
-        if (!ik.a(this.field_b, (byte) -119)) {
+        if (!SectorCacheStore.a(this.field_b, (byte) -119)) {
           return 0;
         }
         return 1;

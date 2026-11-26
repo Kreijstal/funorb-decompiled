@@ -57,7 +57,7 @@ class wa extends n implements sg {
             return;
           }
           if (this.field_ob) {
-            al.c(false);
+            DiskArchiveRequest.c(false);
             return;
           }
           return;
@@ -69,7 +69,7 @@ class wa extends n implements sg {
         if (!this.field_ob) {
           return;
         }
-        al.c(false);
+        DiskArchiveRequest.c(false);
     }
 
     final void m(int param0) {

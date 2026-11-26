@@ -3,7 +3,7 @@
  */
 final class uf {
     private cg[] field_g;
-    private af field_a;
+    private DiskCacheWorker field_a;
     private java.math.BigInteger field_i;
     static RgbSprite field_f;
     static int[] field_b;
@@ -14,7 +14,7 @@ final class uf {
     private PacketBuffer field_c;
     static int field_k;
     static int field_h;
-    private fk field_j;
+    private NetworkArchiveRequest field_j;
 
     final void a(int param0) {
         int var2;
@@ -104,7 +104,7 @@ final class uf {
         if (this.field_j.field_q) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_j.g(100));
+        var10 = new PacketBuffer(this.field_j.getData(100));
         var10.position = 5;
         if (param0 >= -127) {
           field_k = 85;
@@ -137,7 +137,7 @@ final class uf {
         return true;
     }
 
-    final cg a(int param0, boolean param1, ah param2, ah param3, int param4) {
+    final cg a(int param0, boolean param1, SectorCacheStore param2, SectorCacheStore param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -197,7 +197,7 @@ final class uf {
         }
     }
 
-    uf(w param0, af param1) {
+    uf(w param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -211,7 +211,7 @@ final class uf {
         field_f = null;
     }
 
-    private uf(w param0, af param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private uf(w param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_i = param3;
           this.field_a = param1;

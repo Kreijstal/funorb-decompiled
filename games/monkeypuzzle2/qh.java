@@ -160,7 +160,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           if (ii.field_r == dk.field_h) {
             kc.field_b = null;
-            gf.field_c.position = 0;
+            SectorCacheStore.field_c.position = 0;
             if (param6 == null) {
               uc.field_a.position = 0;
               uc.field_a.writeInt(-803539344, pi.field_l.nextInt());
@@ -179,11 +179,11 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 stackIn_23_1 = var8;
               }
               ((PacketBuffer) (Object) stackIn_22_0).writePrefixedString(stackIn_23_1, 116);
-              gf.field_c.writeByte(16, param2 - 49151);
-              gf.field_c.position = gf.field_c.position + 1;
-              var9 = gf.field_c.position;
-              e.a(sd.field_a, fj.field_F, (byte) 113, gf.field_c, uc.field_a);
-              gf.field_c.backpatchByteLength(gf.field_c.position - var9, (byte) -114);
+              SectorCacheStore.field_c.writeByte(16, param2 - 49151);
+              SectorCacheStore.field_c.position = SectorCacheStore.field_c.position + 1;
+              var9 = SectorCacheStore.field_c.position;
+              e.a(sd.field_a, fj.field_F, (byte) 113, SectorCacheStore.field_c, uc.field_a);
+              SectorCacheStore.field_c.backpatchByteLength(SectorCacheStore.field_c.position - var9, (byte) -114);
             } else {
               var9 = 0;
               uc.field_a.position = 0;
@@ -199,16 +199,16 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               uc.field_a.writeShort(param0, 127);
               uc.field_a.writeByte(param5, param2 - 49151);
               uc.field_a.writeByte(var9, -49152);
-              gf.field_c.writeByte(18, param2 - 49151);
-              gf.field_c.position = gf.field_c.position + 2;
-              var10 = gf.field_c.position;
+              SectorCacheStore.field_c.writeByte(18, param2 - 49151);
+              SectorCacheStore.field_c.position = SectorCacheStore.field_c.position + 2;
+              var10 = SectorCacheStore.field_c.position;
               var11_ref_StringLifetime4 = lc.a(ii.a(false), (byte) -89);
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              gf.field_c.writeString(param2 + 69, var11_ref_StringLifetime4);
-              e.a(sd.field_a, fj.field_F, (byte) -112, gf.field_c, uc.field_a);
-              gf.field_c.backpatchShortLength(6903, gf.field_c.position - var10);
+              SectorCacheStore.field_c.writeString(param2 + 69, var11_ref_StringLifetime4);
+              e.a(sd.field_a, fj.field_F, (byte) -112, SectorCacheStore.field_c, uc.field_a);
+              SectorCacheStore.field_c.backpatchShortLength(6903, SectorCacheStore.field_c.position - var10);
             }
             SocketConnector.a((byte) -71, -1);
             dk.field_h = vd.field_e;
@@ -351,7 +351,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             boolean decompiledFrameRemainder0 = true;
             if (~param0.field_i == ~ProxyAuthenticationRequiredException.field_e[var3].field_i) {
               var4 = ProxyAuthenticationRequiredException.field_e[var3].a(2147483647);
-              if (uj.field_g < ek.field_d[var4]) {
+              if (DiskCacheWorker.field_g < ek.field_d[var4]) {
                 ek.field_d[var4] = ek.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

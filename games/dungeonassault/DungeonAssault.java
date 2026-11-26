@@ -50,7 +50,7 @@ public final class DungeonAssault extends NetworkGameClient {
         try {
           if (~fm.field_e == ~fm.field_a) {
             if (!param0) {
-              if (co.field_G == null) {
+              if (DiskArchiveRequest.field_G == null) {
                 if (mn.field_b == -1) {
                   if (ik.field_e != null) {
                     ik.field_e.c(true);
@@ -760,7 +760,7 @@ public final class DungeonAssault extends NetworkGameClient {
           PcmOutputWorker.a(param0);
           il.clearStaticReferences((byte) 111);
           bb.clearStaticReferences((byte) 127);
-          cc.clearStaticReferences(-86);
+          DiskCacheWorker.clearStaticReferences(-86);
           je.clearStaticReferences(true);
           tm.clearStaticReferences(-107);
           GzipDecompressor.clearStaticReferences(0);
@@ -828,12 +828,12 @@ public final class DungeonAssault extends NetworkGameClient {
           dl.a(51);
           tp.clearStaticReferences(35);
           up.a(false);
-          em.resetStaticState(true);
-          ln.clearStaticReferences(1148357992);
-          co.clearDeclaredStaticReferences(96);
+          NetworkArchiveRequest.resetStaticState(true);
+          SectorCacheStore.clearStaticReferences(1148357992);
+          DiskArchiveRequest.clearDeclaredStaticReferences(96);
           ti.clearStaticReferences(true);
           sh.clearStaticReferences(false);
-          vf.d(21);
+          ArchiveRequest.d(21);
           dg.clearStaticReferences(false);
           uh.clearDeclaredStaticReferences((byte) -41);
           rm.resetStaticState(4);
@@ -1094,8 +1094,8 @@ public final class DungeonAssault extends NetworkGameClient {
           li.field_k = li.field_k + 1;
           if (~fm.field_a != ~bn.field_n) {
             BoundedRandomAccessFile.a((byte) -24, mn.field_b, true);
-            if (co.field_G != null) {
-              co.field_G.a(true, bd.field_f);
+            if (DiskArchiveRequest.field_G != null) {
+              DiskArchiveRequest.field_G.a(true, bd.field_f);
               bd.field_f = bd.field_f + 1;
               if (bd.field_f == 64) {
                 AccountRequestState.a((byte) 127);

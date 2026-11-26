@@ -602,7 +602,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(105, "create_ineligible");
                 if (var2 != null) {
-                  ki.field_r = se.a(0, var2);
+                  ArchiveRequest.field_r = se.a(0, var2);
                 }
                 var2 = ca.a(101, "usernameprompt");
                 if (null != var2) {
@@ -2143,7 +2143,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(122, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  el.field_H = se.a(0, var2);
+                  DiskArchiveRequest.field_H = se.a(0, var2);
                 }
                 var2 = ca.a(108, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -2503,7 +2503,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(105, "startgame");
                 if (null != var2) {
-                  rk.field_b = se.a(param1 ^ 1, var2);
+                  DiskCacheWorker.field_b = se.a(param1 ^ 1, var2);
                 }
                 var2 = ca.a(114, "newgame");
                 if (null != var2) {
@@ -3245,7 +3245,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(98, "mb_full_access_1");
                 if (null != var2) {
-                  ph.field_E = se.a(0, var2);
+                  NetworkArchiveRequest.field_E = se.a(0, var2);
                 }
                 var2 = ca.a(91, "mb_full_access_2");
                 if (var2 != null) {

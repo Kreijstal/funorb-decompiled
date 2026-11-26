@@ -47,7 +47,7 @@ final class em extends ButtonWidget {
             if (null != rk.field_g.field_t) {
               ah.field_f = new ch(rk.field_g.field_t, 5200, 0);
               rk.field_g.field_t = null;
-              var6 = new gf(255, ah.field_f, new ch(rk.field_g.field_i, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ah.field_f, new ch(rk.field_g.field_i, 12000, 0), 2097152);
             }
             var7 = null;
             if (ah.field_f != null) {
@@ -58,9 +58,9 @@ final class em extends ButtonWidget {
                 bl.field_o[param1] = new ch(rk.field_g.field_e[param1], 12000, 0);
                 rk.field_g.field_e[param1] = null;
               }
-              var7 = new gf(param1, ah.field_f, bl.field_o[param1], 2097152);
+              var7 = new SectorCacheStore(param1, ah.field_f, bl.field_o[param1], 2097152);
             }
-            var8 = c.field_h.a(-24559, (gf) (var6), param1, (gf) (var7), param0);
+            var8 = c.field_h.a(-24559, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7), param0);
             if (param5 != 50) {
               stackIn_12_0 = (ad) null;
               return stackIn_12_0;

@@ -16,7 +16,7 @@ final class dh {
 
     private final boolean b(int param0, int param1, int param2) {
         if (17 == param1) {
-          GzipInflater.field_h = new pc(this.field_k.field_U, this.field_k.field_wb, this.field_k.field_M, this.field_k.field_pb, param0, ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k, this.field_i, this.field_j);
+          GzipInflater.field_h = new pc(this.field_k.field_U, this.field_k.field_wb, this.field_k.field_M, this.field_k.field_pb, param0, ki.field_P, dc.field_s, SectorCacheStore.field_b, qn.field_P, kj.field_g, sj.field_k, this.field_i, this.field_j);
           return true;
         }
         if (param2 == 13563) {
@@ -631,7 +631,7 @@ final class dh {
           return true;
         }
         if (5 == param1) {
-          var9 = ab.a(param2, 21250, this.field_i);
+          var9 = ArchiveRequest.a(param2, 21250, this.field_i);
           if (var9 != null) {
             var5Lifetime1 = (String) null;
             lc.a(this.field_i, (String) null, 2, 0, var9, false);

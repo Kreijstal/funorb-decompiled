@@ -188,11 +188,11 @@ final class DirectByteStorage extends ByteStorage {
             if (var19 == 0) {
               if (stackIn_14_0) {
                 var12 = qm.field_c[var9];
-                var13 = tc.field_w[var9];
+                var13 = DiskArchiveRequest.field_w[var9];
                 var14 = qm.field_c[var10] - var12;
                 var15 = -var12 + qm.field_c[var11];
-                var16 = tc.field_w[var10] - var13;
-                var17 = -var13 + tc.field_w[var11];
+                var16 = DiskArchiveRequest.field_w[var10] - var13;
+                var17 = -var13 + DiskArchiveRequest.field_w[var11];
               }
               if (!stackIn_14_0 ||
                 !(-(var16 * var15) + var14 * var17 >= 0)) {

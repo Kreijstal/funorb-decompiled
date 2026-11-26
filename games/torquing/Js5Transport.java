@@ -17,7 +17,7 @@ abstract class Js5Transport {
     byte field_f;
     PacketBuffer field_c;
     volatile int field_k;
-    ac field_j;
+    NetworkArchiveRequest field_j;
 
     abstract boolean b(int param0);
 
@@ -46,15 +46,15 @@ abstract class Js5Transport {
         return 20 <= this.c((byte) 0) ? true : false;
     }
 
-    final ac a(byte param0, int param1, boolean param2, byte param3, int param4) {
-        ac stackIn_3_0 = null;
+    final NetworkArchiveRequest a(byte param0, int param1, boolean param2, byte param3, int param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        ac stackIn_15_0 = null;
+        NetworkArchiveRequest stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         long var6;
-        ac var8;
+        NetworkArchiveRequest var8;
         var6 = ((long)param1 << 32) + (long)param4;
-        var8 = new ac();
+        var8 = new NetworkArchiveRequest();
         var8.field_l = var6;
         var8.field_y = param0;
         if (param3 == -51) {

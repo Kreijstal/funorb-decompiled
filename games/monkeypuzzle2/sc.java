@@ -27,7 +27,7 @@ final class sc {
               lg.field_n.b((byte) 7);
             }
             if (null != jc.field_c) {
-              jc.field_c.a(true);
+              jc.field_c.shutdown(true);
             }
             if (null != ah.field_f) {
               try {

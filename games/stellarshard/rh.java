@@ -121,7 +121,7 @@ final class rh {
                         stackIn_43_0Lifetime1 = var16 << 4;
                         stackIn_43_1Lifetime1 = var17;
                         var18 = stackIn_43_0Lifetime1 + stackIn_43_1Lifetime1;
-                        ki.field_z[var18] = var8;
+                        ArchiveRequest.field_z[var18] = var8;
                         IntrusiveNode.field_h[var16] = var17 + 1;
                         if (0 < param1.field_N &&
                           param1.field_g != null) {

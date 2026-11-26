@@ -91,7 +91,7 @@ final class dc {
               if (cf.field_f) {
                 param1 = ff.a(new String[]{param1}, param2 ^ 2, jg.field_w);
               }
-              if (nk.field_t) {
+              if (ArchiveRequest.field_t) {
                 param1 = pn.field_a;
               }
               IsaacCipher.field_m.a(param0, param1, param2 ^ -259);

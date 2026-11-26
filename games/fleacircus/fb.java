@@ -34,7 +34,7 @@ final class fb {
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
-          if (ah.field_c) {
+          if (SectorCacheStore.field_c) {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }

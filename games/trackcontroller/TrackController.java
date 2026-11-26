@@ -335,7 +335,7 @@ public final class TrackController extends GameShell {
         gj.clearStaticReferences((byte) -103);
         LevelData.clearStaticReferences((byte) 96);
         md.a(false);
-        sd.resetStaticState((byte) -108);
+        DiskCacheWorker.resetStaticState((byte) -108);
         wg.c(param0 + 6778);
         BufferedCacheFile.clearStaticReferences(-1);
         BufferedSocket.clearStaticReferences(32);
@@ -397,9 +397,9 @@ public final class TrackController extends GameShell {
         nf.clearStaticReferences(261211);
         SocketArchiveRequestConnection.clearStaticReferences(80);
         mb.clearStaticReferences((byte) -36);
-        hi.clearStaticReferences((byte) -81);
+        NetworkArchiveRequest.clearStaticReferences((byte) -81);
         DiskArchiveStore.a(6);
-        lh.clearStaticReferences((byte) -44);
+        DiskArchiveRequest.clearStaticReferences((byte) -44);
         CachedArchiveSource.c(-3);
         RandomAccessCacheFile.clearStaticReferences((byte) -121);
         rg.clearStaticReferences(17883);
@@ -695,7 +695,7 @@ public final class TrackController extends GameShell {
         sk.field_j = mf.a(2, (byte) 94);
         j.field_h = mf.a(3, (byte) 80);
         wl.field_l = mf.a(4, (byte) -36);
-        lh.field_C = mf.a(5, (byte) 86);
+        DiskArchiveRequest.field_C = mf.a(5, (byte) 86);
         si.field_c = mf.a(6, (byte) -77);
         rl.field_D = mf.a(8, (byte) -29);
         if (param0 >= -8) {
@@ -815,8 +815,8 @@ public final class TrackController extends GameShell {
                         j.field_h.a((byte) 48)) {
                         if (wl.field_l.c(121) &&
                           wl.field_l.a((byte) 48) &&
-                          lh.field_C.c(param0 - 357) &&
-                          lh.field_C.a((byte) 48)) {
+                          DiskArchiveRequest.field_C.c(param0 - 357) &&
+                          DiskArchiveRequest.field_C.a((byte) 48)) {
                           if (sk.field_j.c(-73) &&
                             sk.field_j.a((byte) 48)) {
                             ud.a(param0 ^ 339, 70.0f, cg.field_d);
@@ -891,7 +891,7 @@ public final class TrackController extends GameShell {
             if (null != j.field_h) {
               ud.a(param0 ^ 339, 75.0f, ld.field_a);
               this.drawFrame(160);
-              od.field_d = new jc(j.field_h, lh.field_C);
+              od.field_d = new jc(j.field_h, DiskArchiveRequest.field_C);
               va.field_d[0] = cc.a(j.field_h, "", "track_wrong_password").b();
               va.field_d[1] = cc.a(j.field_h, "", "track_correct_password").b();
               va.field_d[2] = cc.a(j.field_h, "", "track_train_loop").b();

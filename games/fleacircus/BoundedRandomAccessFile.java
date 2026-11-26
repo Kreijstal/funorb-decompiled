@@ -43,8 +43,8 @@ final class BoundedRandomAccessFile {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          ah.field_c = false;
-          fk.field_D = false;
+          SectorCacheStore.field_c = false;
+          NetworkArchiveRequest.field_D = false;
           if (param2 < 85) {
             return;
           }
@@ -67,7 +67,7 @@ final class BoundedRandomAccessFile {
               var3_int = 0;
             }
             if (var3_int != 0) {
-              if (fk.field_D) {
+              if (NetworkArchiveRequest.field_D) {
                 param0 = db.a(ud.field_a, new String[]{param0}, true);
               }
               if (ud.field_c) {

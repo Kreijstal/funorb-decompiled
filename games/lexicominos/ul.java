@@ -461,10 +461,10 @@ final class ul extends IntrusiveNode {
           var18 = new RgbSprite(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
           var5 = PacketBuffer.a(param0, "commonui", true, "screen_options");
-          si.field_u = new IndexedSprite[4];
+          ArchiveRequest.field_u = new IndexedSprite[4];
           oc.field_d = new IndexedSprite[4];
           uj.field_a = new IndexedSprite[4];
-          var6 = new IndexedSprite[][]{uj.field_a, si.field_u, oc.field_d};
+          var6 = new IndexedSprite[][]{uj.field_a, ArchiveRequest.field_u, oc.field_d};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;

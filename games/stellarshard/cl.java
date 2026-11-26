@@ -31,7 +31,7 @@ final class cl {
         int var3 = 0;
         var3 = stellarshard.field_B;
         try {
-          ki.field_v = ki.field_v + 1;
+          ArchiveRequest.field_v = ArchiveRequest.field_v + 1;
           if (vk.field_b == -1 &&
             -1 == ClientException.field_c) {
             ClientException.field_c = KeyHandler.field_a;
@@ -45,8 +45,8 @@ final class cl {
           }
           if (decompiledFrameRemainder0) {
             if (!wk.field_c) {
-              if (pc.field_g <= ki.field_v) {
-                stackIn_17_0 = (ki.field_v < pc.field_g + ul.field_D) ? 1 : 0;
+              if (pc.field_g <= ArchiveRequest.field_v) {
+                stackIn_17_0 = (ArchiveRequest.field_v < pc.field_g + ul.field_D) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -55,15 +55,15 @@ final class cl {
             }
             var2_int = stackIn_17_0;
             if (param0 == null) {
-              ki.field_v = 0;
+              ArchiveRequest.field_v = 0;
             } else {
               if (wk.field_c) {
-                ki.field_v = pc.field_g;
+                ArchiveRequest.field_v = pc.field_g;
               } else {
                 if (var2_int == 0) {
-                  ki.field_v = 0;
+                  ArchiveRequest.field_v = 0;
                 } else {
-                  ki.field_v = pc.field_g;
+                  ArchiveRequest.field_v = pc.field_g;
                 }
               }
             }
@@ -78,16 +78,16 @@ final class cl {
             h.field_c = ClientException.field_c;
           }
           if (!wk.field_c &&
-            pc.field_g > ki.field_v &&
+            pc.field_g > ArchiveRequest.field_v &&
             qc.field_a) {
             am.field_f = vk.field_b;
-            ki.field_v = 0;
+            ArchiveRequest.field_v = 0;
             h.field_c = ClientException.field_c;
           }
           hk.field_m = param0;
           if (wk.field_c &&
-            ki.field_v == td.field_b) {
-            ki.field_v = 0;
+            ArchiveRequest.field_v == td.field_b) {
+            ArchiveRequest.field_v = 0;
             wk.field_c = false;
           }
           vk.field_b = -1;

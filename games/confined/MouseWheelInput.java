@@ -124,8 +124,8 @@ abstract class MouseWheelInput {
           var21Lifetime1 = param3[0] - param0[0];
           var22Lifetime1 = -param0[1] + param3[1];
           var23Lifetime1 = -param0[2] + param3[2];
-          var9 = var22Lifetime1 * param0[4] + var21Lifetime1 * param0[3] + param0[5] * var23Lifetime1 >> 16 - pc.field_h;
-          var10 = var23Lifetime1 * param0[8] + var21Lifetime1 * param0[6] + param0[7] * var22Lifetime1 >> -pc.field_h + 16;
+          var9 = var22Lifetime1 * param0[4] + var21Lifetime1 * param0[3] + param0[5] * var23Lifetime1 >> 16 - DiskCacheWorker.field_h;
+          var10 = var23Lifetime1 * param0[8] + var21Lifetime1 * param0[6] + param0[7] * var22Lifetime1 >> -DiskCacheWorker.field_h + 16;
           var11 = param0[10] * var22Lifetime1 + (var21Lifetime1 * param0[9] + param0[11] * var23Lifetime1) >> 16;
           var21Lifetime2 = ti.field_k;
           var22Lifetime2 = ti.field_f;
@@ -136,8 +136,8 @@ abstract class MouseWheelInput {
               var24Lifetime1 = param6.field_x[var23Lifetime2];
               var25Lifetime1 = param6.field_v[var23Lifetime2];
               var26Lifetime1 = param6.field_F[var23Lifetime2];
-              var27Lifetime1 = (var24Lifetime1 * var12 - (-(var15 * var25Lifetime1) - var26Lifetime1 * var18) >> 16 - pc.field_h) + var9;
-              var28Lifetime1 = (var26Lifetime1 * var19 + var16 * var25Lifetime1 + var13 * var24Lifetime1 >> -pc.field_h + 16) + var10;
+              var27Lifetime1 = (var24Lifetime1 * var12 - (-(var15 * var25Lifetime1) - var26Lifetime1 * var18) >> 16 - DiskCacheWorker.field_h) + var9;
+              var28Lifetime1 = (var26Lifetime1 * var19 + var16 * var25Lifetime1 + var13 * var24Lifetime1 >> -DiskCacheWorker.field_h + 16) + var10;
               var29Lifetime1 = var11 + (var24Lifetime1 * var14 + var25Lifetime1 * var17 + var20 * var26Lifetime1 >> 16);
               stackIn_59_0 = -51;
               stackIn_59_1 = ~var29Lifetime1;
@@ -164,8 +164,8 @@ abstract class MouseWheelInput {
                   cj.field_b[var23Lifetime2] = -2147483648;
                 }
                 if (param2) {
-                  tg.field_T[var23Lifetime2] = var27Lifetime1 >> pc.field_h;
-                  wl.field_d[var23Lifetime2] = var28Lifetime1 >> pc.field_h;
+                  tg.field_T[var23Lifetime2] = var27Lifetime1 >> DiskCacheWorker.field_h;
+                  wl.field_d[var23Lifetime2] = var28Lifetime1 >> DiskCacheWorker.field_h;
                   nm.field_C[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

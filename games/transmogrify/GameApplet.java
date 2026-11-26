@@ -446,11 +446,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var6_int = (int)(var2_long - var4);
             ub.field_a = ((var6_int >> 1) + 32000) / var6_int;
           }
-          fieldTemp$1 = ak.field_a;
-          ak.field_a = ak.field_a + 1;
+          fieldTemp$1 = SectorCacheStore.field_a;
+          SectorCacheStore.field_a = SectorCacheStore.field_a + 1;
           if (50 < fieldTemp$1) {
             kb.field_l = true;
-            ak.field_a = ak.field_a - 50;
+            SectorCacheStore.field_a = SectorCacheStore.field_a - 50;
             AchievementNotice.field_k.setSize(fk.field_E, mk.field_x);
             AchievementNotice.field_k.setVisible(true);
             boolean decompiledSharedTail0 = (null != aj.field_t &&

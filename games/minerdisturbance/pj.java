@@ -265,7 +265,7 @@ final class pj implements uj {
           return;
         }
         if (ij.field_o == null &&
-          em.field_w) {
+          ArchiveRequest.field_w) {
           qd.a(126, param0, var2);
         }
     }

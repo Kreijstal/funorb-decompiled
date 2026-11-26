@@ -44,7 +44,7 @@ final class hf extends fi {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = ue.a(ik.a(param0, (byte) -113), 16778);
+          var2 = ue.a(ArchiveRequest.a(param0, (byte) -113), 16778);
           if (var2 == null) {
             var2 = "";
           }

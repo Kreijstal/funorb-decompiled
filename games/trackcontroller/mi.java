@@ -32,11 +32,11 @@ final class mi extends el {
           }
           try {
             if (rb.field_a != null) {
-              rb.field_a.a(83);
+              rb.field_a.shutdown(83);
             }
-            if (null != sd.field_c) {
+            if (null != DiskCacheWorker.field_c) {
               try {
-                sd.field_c.d(0);
+                DiskCacheWorker.field_c.d(0);
               } catch (IOException iOException) {
               }
             }
@@ -81,7 +81,7 @@ final class mi extends el {
           regionExit2: {
             regionExit3: {
               var6 = this.field_S.a((byte) -61);
-              if (lh.field_x != var6 &&
+              if (DiskArchiveRequest.field_x != var6 &&
                 var6 != AsyncRequest.field_t) {
                 var5 = this.field_S.c(param3 ^ 19471);
                 if (var5 == null) {
@@ -107,7 +107,7 @@ final class mi extends el {
         var8 = (dl) ((Object) this.field_y);
         var9 = param1 + this.field_p;
         var10 = var8.a((UiWidget) (this), param3 ^ -29188, param2) + (var8.a((byte) 124, (UiWidget) (this)).a(12323) >> 1);
-        if (var6Lifetime1 != lh.field_x &&
+        if (var6Lifetime1 != DiskArchiveRequest.field_x &&
           var6Lifetime1 != AsyncRequest.field_t) {
           if (ef.field_b == var6Lifetime1) {
             var16 = TrackController.field_D[2];

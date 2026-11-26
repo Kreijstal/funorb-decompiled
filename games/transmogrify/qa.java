@@ -14,11 +14,11 @@ final class qa extends h {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
         if (param0 > 59) {
-          var3[4] = cd.a(param1, 64, (byte) -51);
+          var3[4] = DiskCacheWorker.a(param1, 64, (byte) -51);
           return var2;
         }
         qa.b(126);
-        var3[4] = cd.a(param1, 64, (byte) -51);
+        var3[4] = DiskCacheWorker.a(param1, 64, (byte) -51);
         return var2;
     }
 
@@ -54,7 +54,7 @@ final class qa extends h {
 
     private qa(int param0, int param1, int param2) {
         this.field_t = param1;
-        this.field_i = rh.field_q;
+        this.field_i = ArchiveRequest.field_q;
         this.field_q = mc.field_b;
         this.field_s = param0;
         this.field_o = param2;

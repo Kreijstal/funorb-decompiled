@@ -279,7 +279,7 @@ final class jb {
           }
           var2 = this.field_d;
         }
-        var3 = pc.a(h.field_W, var2, 113, lc.field_J);
+        var3 = DiskCacheWorker.a(h.field_W, var2, 113, lc.field_J);
         pn.field_a.c(IntrusiveNodeHashTable.field_b, 125, 29 + this.field_c, 4243584, -1);
         pn.field_a.a(tk.field_d, 400, 29 + this.field_c, 4243584, -1);
         pn.field_a.a(e.field_d, 545, this.field_c + 29, 4243584, -1);
@@ -505,7 +505,7 @@ final class jb {
           if (!(this.field_p.field_i < 0)) {
             var2 = 256 * (this.field_h[this.field_p.field_i].field_f / 2 + this.field_h[this.field_p.field_i].field_j) / 640;
           }
-          cj.a(12, 50, 2, ae.field_f, var2);
+          cj.a(12, 50, 2, SectorCacheStore.field_f, var2);
         }
     }
 
@@ -663,7 +663,7 @@ final class jb {
           }
           if (var7.field_d == 5 ||
             var7.field_d == 6) {
-            var9Lifetime1 = pn.field_a.c(pc.field_k);
+            var9Lifetime1 = pn.field_a.c(DiskCacheWorker.field_k);
             var10Lifetime1 = pn.field_a.c(DelegatingCanvas.field_c);
             if (var10Lifetime1 > var9Lifetime1) {
               var9Lifetime1 = var10Lifetime1;
@@ -899,7 +899,7 @@ final class jb {
               } else {
                 var8 = pn.field_a.c(qa.field_e);
                 var10 = pn.field_a.c(cc.field_p);
-                var9 = pn.field_a.c(pc.field_k);
+                var9 = pn.field_a.c(DiskCacheWorker.field_k);
                 if (var10 > var8) {
                   var8 = var10;
                 }
@@ -921,7 +921,7 @@ final class jb {
               if (var3.field_d != 4) {
                 if (var3.field_d == 5) {
                   if (qc.field_n) {
-                    stackIn_48_0 = pc.field_k;
+                    stackIn_48_0 = DiskCacheWorker.field_k;
                   } else {
                     stackIn_48_0 = DelegatingCanvas.field_c;
                   }

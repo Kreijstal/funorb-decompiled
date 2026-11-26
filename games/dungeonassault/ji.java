@@ -117,7 +117,7 @@ final class ji extends da {
     }
 
     public ji() {
-        super(0, 0, hn.field_t, vf.field_x, (ca) null, (pg) null);
+        super(0, 0, hn.field_t, ArchiveRequest.field_x, (ca) null, (pg) null);
         this.field_I = new IntrusiveDeque();
     }
 

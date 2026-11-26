@@ -10,7 +10,7 @@ class mi extends ff {
         if (param0 != -24) {
           return (fe) null;
         }
-        return hc.field_h;
+        return SectorCacheStore.field_h;
     }
 
     public static void clearStaticReferences(int param0) {

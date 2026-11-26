@@ -3,16 +3,16 @@
  */
 final class qi {
     private h field_i;
-    private nh field_d;
+    private NetworkArchiveRequest field_d;
     private tb[] field_c;
     private java.math.BigInteger field_e;
     static boolean field_b;
     private java.math.BigInteger field_g;
     static boolean field_f;
     private PacketBuffer field_h;
-    private wh field_a;
+    private DiskCacheWorker field_a;
 
-    qi(h param0, wh param1) {
+    qi(h param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -61,7 +61,7 @@ final class qi {
         if (this.field_d.field_A) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_d.b(param0));
+        var10 = new PacketBuffer(this.field_d.getData(param0));
         var10.position = 5;
         var3 = var10.readUnsignedByte(-16384);
         var10.position = var10.position + var3 * 72;
@@ -91,7 +91,7 @@ final class qi {
         return true;
     }
 
-    private qi(h param0, wh param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private qi(h param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_i = param0;
           this.field_g = param2;
@@ -105,7 +105,7 @@ final class qi {
         }
     }
 
-    final tb a(boolean param0, int param1, ua param2, ua param3, int param4) {
+    final tb a(boolean param0, int param1, SectorCacheStore param2, SectorCacheStore param3, int param4) {
         tb stackIn_9_0 = null;
         tb stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;

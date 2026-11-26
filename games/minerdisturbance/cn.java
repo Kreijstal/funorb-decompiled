@@ -104,7 +104,7 @@ final class cn {
               return;
             }
             if (PlatformTaskDispatcher.field_j.startsWith("win") &&
-              uh.a((byte) 115, param1)) {
+              SectorCacheStore.a((byte) 115, param1)) {
               return;
             }
             try {

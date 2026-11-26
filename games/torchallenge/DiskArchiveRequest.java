@@ -1,0 +1,115 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DiskArchiveRequest extends ArchiveRequest {
+    int field_C;
+    SectorCacheStore field_D;
+    static ej[] field_x;
+    static int[][] field_A;
+    byte[] field_y;
+    static int field_z;
+
+    final byte[] getData(int param0) {
+        if (this.field_v) {
+          throw new RuntimeException();
+        }
+        if (param0 == 2) {
+          return this.field_y;
+        }
+        this.getProgressPercent(34);
+        return this.field_y;
+    }
+
+    final int getProgressPercent(int param0) {
+        if (param0 != 100) {
+          return -32;
+        }
+        if (this.field_v) {
+          return 0;
+        }
+        return 100;
+    }
+
+    public static void clearDeclaredStaticReferences(byte param0) {
+        if (param0 < 3) {
+          DiskArchiveRequest.clearDeclaredStaticReferences((byte) 59);
+          field_A = (int[][]) null;
+          field_x = null;
+          return;
+        }
+        field_A = (int[][]) null;
+        field_x = null;
+    }
+
+    final static void b(int param0, boolean param1) {
+        cj.field_i = 1000000000L / (long)param0;
+        if (!param1) {
+          field_x = (ej[]) null;
+        }
+    }
+
+    final static void c(boolean param0) {
+        String var2 = (String) null;
+        wk.a((String) null, -105, GameKeyHandler.field_d);
+        if (param0) {
+          field_A = (int[][]) null;
+        }
+    }
+
+    final static Boolean d(byte param0) {
+        Boolean var1 = bd.field_k;
+        bd.field_k = null;
+        if (param0 != -48) {
+          return (Boolean) null;
+        }
+        return var1;
+    }
+
+    final static nf a(ResourceArchive param0, int param1, int param2, ResourceArchive param3, int param4) {
+        int var5_int = 0;
+        RuntimeException var5 = null;
+        Object stackIn_2_0 = null;
+        nf stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (!SpriteLoader.a(160, param0, param2, param1)) {
+            stackIn_2_0 = null;
+            return (nf) (stackIn_2_0);
+          }
+          var5_int = 69 / ((param4 + 78) / 40);
+          stackIn_4_0 = SocketConnector.a(param3.c(param2, param1, 0), (byte) 110);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("al.D(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    DiskArchiveRequest() {
+    }
+
+    static {
+        field_A = new int[][]{new int[]{31}, new int[]{1984}, new int[]{126976}, new int[]{8126464}, new int[]{520093696}, new int[]{-1073741824, 7}};
+        field_x = new ej[14];
+        field_z = -2;
+    }
+}

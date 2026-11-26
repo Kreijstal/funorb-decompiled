@@ -273,7 +273,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 != -1) {
             field_f = (Sprite[]) null;
           }
-          stackIn_4_0 = -md.field_y + je.correctedCurrentTimeMillis(param0 ^ -2);
+          stackIn_4_0 = -DiskArchiveRequest.field_y + je.correctedCurrentTimeMillis(param0 ^ -2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

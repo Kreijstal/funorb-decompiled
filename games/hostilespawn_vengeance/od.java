@@ -337,7 +337,7 @@ final class od extends fc {
         RuntimeException var7_ref = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
-          var7 = rh.field_D;
+          var7 = DiskArchiveRequest.field_D;
           if (var7 != null) {
             if (!this.b(param3, param0, 255, param1, param2)) {
               return;
@@ -347,13 +347,13 @@ final class od extends fc {
                 return;
               }
               ((k) (var7.field_p)).a(var7, false, this);
-              rh.field_D = null;
+              DiskArchiveRequest.field_D = null;
               if (!HostileSpawn.field_I) {
                 return;
               }
             }
             ((k) (this.field_p)).a(var7, false, this);
-            rh.field_D = null;
+            DiskArchiveRequest.field_D = null;
             return;
           }
           return;

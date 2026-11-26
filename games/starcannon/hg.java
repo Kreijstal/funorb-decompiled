@@ -253,7 +253,7 @@ final class hg extends vk implements qk, ga {
         var2.a(20, 270, (byte) 121, 50, var3);
         this.a(true, var2);
         var3 += 50;
-        var3 = var3 + (5 + this.a(var3, (byte) 27, this.field_A, d.field_c, 170, tg.field_w));
+        var3 = var3 + (5 + this.a(var3, (byte) 27, this.field_A, d.field_c, 170, DiskArchiveRequest.field_w));
         this.field_E.a(496 - var5 >> 1, var5, (byte) 127, 40, var3);
         this.field_C.a(var4 + 3, 60, (byte) 119, 40, var3 + 15);
         this.field_C.field_g = (qg) (this);

@@ -123,7 +123,7 @@ final class hb {
                   var20 = param5.field_f[var18];
                   var21 = param5.field_F[var18];
                   lk.field_c[var18] = var20 * var12 + (var9 * var19 + var15 * var21) >> 16;
-                  ab.field_r[var18] = var19 * var10 + var20 * var13 + var16 * var21 >> 16;
+                  ArchiveRequest.field_r[var18] = var19 * var10 + var20 * var13 + var16 * var21 >> 16;
                   pa.field_o[var18] = var21 * var17 + var14 * var20 + var19 * var11 >> 16;
                   var18++;
                   break scanLoop1;
@@ -132,7 +132,7 @@ final class hb {
               }
               if (stackIn_63_0 <= stackIn_63_1) {
                 qm.field_c[var23] = var27 / var29 + var21;
-                tc.field_w[var23] = var28 / var29 + var22;
+                DiskArchiveRequest.field_w[var23] = var28 / var29 + var22;
                 jd.field_i[var23] = var29;
                 if (var29 < var7_int) {
                   var7_int = var29;
@@ -216,7 +216,7 @@ final class hb {
               var20 = param5.field_f[var18];
               var21 = param5.field_F[var18];
               lk.field_c[var18] = var20 * var12 + (var9 * var19 + var15 * var21) >> 16;
-              ab.field_r[var18] = var19 * var10 + var20 * var13 + var16 * var21 >> 16;
+              ArchiveRequest.field_r[var18] = var19 * var10 + var20 * var13 + var16 * var21 >> 16;
               pa.field_o[var18] = var21 * var17 + var14 * var20 + var19 * var11 >> 16;
               var18++;
             } while (var30 == 0);

@@ -104,7 +104,7 @@ final class cb {
           ec.a(7, 472, false, al.field_Z, 631 - var6 - 5, 16776960, Integer.toString(cf.field_s));
           stackIn_2_0 = -11003;
           stackIn_2_1 = Math.max(eh.field_g, 0);
-          if (0 >= um.field_e) {
+          if (0 >= SectorCacheStore.field_e) {
             stackIn_3_2 = ba.a((byte) 61);
           } else {
             stackIn_3_2 = Math.max(eh.field_g, qi.field_J);

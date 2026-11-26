@@ -24,7 +24,7 @@ final class fc {
           if (!param3) {
             field_e = 29;
           }
-          stackIn_6_0 = el.i(96);
+          stackIn_6_0 = DiskArchiveRequest.i(96);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

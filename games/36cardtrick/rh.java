@@ -156,7 +156,7 @@ final class rh extends IntrusiveNode {
         try {
           ml.field_b = null;
           hb.field_a = null;
-          na.field_q = null;
+          NetworkArchiveRequest.field_q = null;
           rd.field_k = (byte[][]) null;
           ImageProducerRasterBuffer.field_i = null;
           int var1_int = 5 / ((-88 - param0) / 33);

@@ -89,7 +89,7 @@ final class DirectByteStorage extends ByteStorage {
               ig.field_N.a((byte) -128);
             }
             if (GameCanvas.field_c != null) {
-              GameCanvas.field_c.a(3);
+              GameCanvas.field_c.shutdown(3);
             }
             if (null != mk.field_K) {
               try {

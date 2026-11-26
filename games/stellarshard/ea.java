@@ -46,7 +46,7 @@ final class ea extends lk {
 
     final static int f(byte param0) {
         int var1 = -76 % ((param0 - 48) / 43);
-        return (int)(1000000000L / ph.field_B);
+        return (int)(1000000000L / NetworkArchiveRequest.field_B);
     }
 
     final String b(byte param0, String param1) {

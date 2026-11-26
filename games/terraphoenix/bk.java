@@ -65,7 +65,7 @@ final class bk {
           }
           var1_int = 0;
           for (var2 = 0; 9 > var2; var2++) {
-            if (rf.field_B[var2].field_c) {
+            if (ArchiveRequest.field_B[var2].field_c) {
               if (var1_int == ea.field_o) {
                 stackIn_9_0 = var2;
                 return stackIn_9_0;

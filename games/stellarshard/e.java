@@ -16,10 +16,10 @@ final class e {
           if (wk.field_c) {
             return null;
           }
-          if (pc.field_g > ki.field_v) {
+          if (pc.field_g > ArchiveRequest.field_v) {
             return null;
           }
-          if (pc.field_g + ul.field_D > ki.field_v) {
+          if (pc.field_g + ul.field_D > ArchiveRequest.field_v) {
             return hk.field_m;
           }
           return null;
@@ -27,10 +27,10 @@ final class e {
         if (wk.field_c) {
           return null;
         }
-        if (pc.field_g > ki.field_v) {
+        if (pc.field_g > ArchiveRequest.field_v) {
           return null;
         }
-        if (pc.field_g + ul.field_D > ki.field_v) {
+        if (pc.field_g + ul.field_D > ArchiveRequest.field_v) {
           return hk.field_m;
         }
         return null;

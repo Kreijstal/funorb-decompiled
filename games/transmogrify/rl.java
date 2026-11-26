@@ -174,7 +174,7 @@ final class rl {
             var8 = 255 & param2[var5_int] << var6 | (255 & param2[1 + var5_int]) >>> -var6 + 8;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_j[this.field_a] = (byte)cl.b((int) this.field_j[this.field_a], var8 >>> var7);
+              this.field_j[this.field_a] = (byte)DiskArchiveRequest.b((int) this.field_j[this.field_a], var8 >>> var7);
               this.field_h = this.field_h + (-var7 + 8);
               this.field_a = this.field_a + 1;
               if (this.field_h == 512) {
@@ -192,7 +192,7 @@ final class rl {
           }
           if (param1 > 0L) {
             var8Lifetime1 = param2[var5_int] << var6 & 255;
-            this.field_j[this.field_a] = (byte)cl.b((int) this.field_j[this.field_a], var8Lifetime1 >>> var7);
+            this.field_j[this.field_a] = (byte)DiskArchiveRequest.b((int) this.field_j[this.field_a], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -239,7 +239,7 @@ final class rl {
         int var8 = 0;
         var8 = Transmogrify.field_A ? 1 : 0;
         try {
-          this.field_j[this.field_a] = (byte)cl.b((int) this.field_j[this.field_a], 128 >>> vg.c(this.field_h, 7));
+          this.field_j[this.field_a] = (byte)DiskArchiveRequest.b((int) this.field_j[this.field_a], 128 >>> vg.c(this.field_h, 7));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {

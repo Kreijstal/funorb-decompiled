@@ -88,7 +88,7 @@ final class e {
         try {
           gk.field_d = bf.a(param0 - 5, "frame_top", "commonui", param2);
           lm.field_g = bf.a(-1, "frame_bottom", "commonui", param2);
-          p.field_f = wl.a("jagex_logo_grey", param2, 10, "commonui");
+          p.field_f = ArchiveRequest.a("jagex_logo_grey", param2, 10, "commonui");
           sb.field_B = bf.a(-1, "button", "commonui", param2);
           ao.field_b = we.a("validation", "commonui", param2, false);
           ba.field_i = (vc) ((Object) lj.a(param2, "commonui", param3, "arezzo12", 17153));

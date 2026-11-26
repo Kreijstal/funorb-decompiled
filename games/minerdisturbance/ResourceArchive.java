@@ -49,7 +49,7 @@ final class ResourceArchive {
           0 != this.field_f.field_f[param0]) {
           return true;
         }
-        if (!em.field_x) {
+        if (!ArchiveRequest.field_x) {
           return false;
         }
         throw new IllegalArgumentException(Integer.toString(param0));
@@ -625,7 +625,7 @@ final class ResourceArchive {
           param0 < this.field_f.field_f[param1]) {
           return true;
         }
-        if (em.field_x) {
+        if (ArchiveRequest.field_x) {
           throw new IllegalArgumentException(param1 + " " + param0);
         }
         return false;

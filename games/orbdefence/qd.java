@@ -10,10 +10,10 @@ final class qd {
     final static void a(int param0, boolean param1) {
         if (param0 <= 1) {
           qd.a(-55, true);
-          wj.a(-100, param1, false);
+          ArchiveRequest.a(-100, param1, false);
           return;
         }
-        wj.a(-100, param1, false);
+        ArchiveRequest.a(-100, param1, false);
     }
 
     public final String toString() {

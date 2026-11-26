@@ -23,7 +23,7 @@ final class t {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var9 = n.field_g.getGraphics();
+            var9 = DiskCacheWorker.field_g.getGraphics();
             if (bd.field_S == null) {
               bd.field_S = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -36,7 +36,7 @@ final class t {
             }
             try {
               if (ac.field_h == null) {
-                ac.field_h = n.field_g.createImage(304, 34);
+                ac.field_h = DiskCacheWorker.field_g.createImage(304, 34);
               }
               var10 = ac.field_h.getGraphics();
               var10.setColor(param4);
@@ -74,7 +74,7 @@ final class t {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            n.field_g.repaint();
+            DiskCacheWorker.field_g.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

@@ -9,7 +9,7 @@ final class hb extends ak {
     private String field_J;
     private boolean field_I;
     private int field_K;
-    static vi field_F;
+    static DiskCacheWorker field_F;
     static volatile int field_B;
     private int field_G;
 

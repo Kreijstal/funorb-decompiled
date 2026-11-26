@@ -147,7 +147,7 @@ abstract class mk extends aj {
     }
 
     mk(da param0, int param1, int param2) {
-        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (WidgetRenderer) null);
+        super(-param1 + DiskCacheWorker.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_D = 0;
           this.field_A = false;
@@ -158,7 +158,7 @@ abstract class mk extends aj {
     }
 
     final void a(int param0, int param1, boolean param2) {
-        this.a(87, -param1 + wj.field_h >> 1, cd.field_b - param0 >> 1, param0, param1);
+        this.a(87, -param1 + wj.field_h >> 1, DiskCacheWorker.field_b - param0 >> 1, param0, param1);
         if (param2) {
           field_B = (Sprite[]) null;
         }

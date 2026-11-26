@@ -113,17 +113,17 @@ final class dm extends UiPanel {
             var5 = var27.readUnsignedByte(-11);
             if (var5 != 0) {
               var6 = var4.field_q;
-              rk.field_w[0].field_m = false;
+              ArchiveRequest.field_w[0].field_m = false;
               var7 = var4.field_o;
-              rk.field_w[0].field_i = null;
-              rk.field_w[0].field_l = qe.field_V;
+              ArchiveRequest.field_w[0].field_i = null;
+              ArchiveRequest.field_w[0].field_l = qe.field_V;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                rk.field_w[var8_int].field_l = var27.readString(param0 + 128);
-                rk.field_w[var8_int].field_m = false;
+                ArchiveRequest.field_w[var8_int].field_l = var27.readString(param0 + 128);
+                ArchiveRequest.field_w[var8_int].field_m = false;
                 if (var27.readUnsignedByte(-11) != 1) {
-                  rk.field_w[var8_int].field_i = null;
+                  ArchiveRequest.field_w[var8_int].field_i = null;
                 } else {
-                  rk.field_w[var8_int].field_i = var27.readString(128);
+                  ArchiveRequest.field_w[var8_int].field_i = var27.readString(128);
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -146,12 +146,12 @@ final class dm extends UiPanel {
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte(-11);
-                  var21 = rk.field_w[var20].field_l;
+                  var21 = ArchiveRequest.field_w[var20].field_l;
                   var22 = var27.readLong(param0 ^ -31016);
                   var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = rk.field_w[var20].field_i;
+                    var9[0][var12] = ArchiveRequest.field_w[var20].field_i;
                     var10[0][var12] = var22;
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
@@ -174,10 +174,10 @@ final class dm extends UiPanel {
                     }
                   }
                   if (var6 > var14 &&
-                    !rk.field_w[var20].field_m) {
-                    rk.field_w[var20].field_m = true;
+                    !ArchiveRequest.field_w[var20].field_m) {
+                    ArchiveRequest.field_w[var20].field_m = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = rk.field_w[var20].field_i;
+                    var9[2][var14] = ArchiveRequest.field_w[var20].field_i;
                     var10[2][var14] = var22;
                     var27.position = var24;
                     var14++;

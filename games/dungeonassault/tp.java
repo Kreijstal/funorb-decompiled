@@ -65,7 +65,7 @@ final class tp extends bb {
           int stackIn_80_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          em var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -80,10 +80,10 @@ final class tp extends bb {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          em var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          em var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = DungeonAssault.field_K;
           if (null != this.field_D) {
             var2_long = kd.correctedCurrentTimeMillis(-2456);
@@ -115,23 +115,23 @@ final class tp extends bb {
               return true;
             }
             this.field_D.checkWriteError(-89);
-            var2 = (em) (this.field_g.c(13395));
+            var2 = (NetworkArchiveRequest) (this.field_g.c(13395));
             while (var2 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(6, 1);
               this.field_o.writeLong40(var2.field_o, 836);
               this.field_D.queueWrite(this.field_o.payload, false, 0, this.field_o.payload.length);
               this.field_p.a(var2, -32711);
-              var2 = (em) (this.field_g.a((byte) 111));
+              var2 = (NetworkArchiveRequest) (this.field_g.a((byte) 111));
             }
-            var2Lifetime1 = (em) (this.field_d.c(13395));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.c(13395));
             while (var2Lifetime1 != null) {
               this.field_o.position = 0;
               this.field_o.writeByte(6, 0);
               this.field_o.writeLong40(var2Lifetime1.field_o, 836);
               this.field_D.queueWrite(this.field_o.payload, false, 0, this.field_o.payload.length);
               this.field_s.a(var2Lifetime1, -32711);
-              var2Lifetime1 = (em) (this.field_d.a((byte) 102));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.a((byte) 102));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_D.availableBytes(0);
@@ -185,24 +185,24 @@ final class tp extends bb {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (em) (this.field_p.c(13395));
+                        var14_ref = (NetworkArchiveRequest) (this.field_p.c(13395));
                         while (var14_ref != null) {
                           if (~var14_ref.field_o == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (em) (this.field_p.a((byte) 117));
+                          var14_ref = (NetworkArchiveRequest) (this.field_p.a((byte) 117));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (em) (this.field_s.c(13395));
+                        var14_ref = (NetworkArchiveRequest) (this.field_s.c(13395));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_o) {
                             break;
                           }
-                          var14_ref = (em) (this.field_s.a((byte) 66));
+                          var14_ref = (NetworkArchiveRequest) (this.field_s.a((byte) 66));
                         }
                       }
                       if (var14_ref == null) {
@@ -335,12 +335,12 @@ final class tp extends bb {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          em var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          em var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = DungeonAssault.field_K;
           try {
             if (null != this.field_D) {
@@ -361,7 +361,7 @@ final class tp extends bb {
             this.field_i = null;
             this.field_m.position = 0;
             while (true) {
-              var4_ref = (em) (this.field_p.a(-8));
+              var4_ref = (NetworkArchiveRequest) (this.field_p.a(-8));
               if (var4_ref != null) {
                 this.field_g.a(var4_ref, -32711);
                 continue;
@@ -369,7 +369,7 @@ final class tp extends bb {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (em) (this.field_s.a(121));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_s.a(121));
               if (var4_refLifetime1 != null) {
                 this.field_d.a(var4_refLifetime1, -32711);
                 continue;

@@ -23,7 +23,7 @@ final class gf {
         String var7;
         String var8;
         var5 = HostileSpawn.field_I ? 1 : 0;
-        var6 = "(" + bj.field_f + " " + ae.field_u + " " + ne.field_o + ") " + ImageProducerRasterBuffer.field_k;
+        var6 = "(" + bj.field_f + " " + ArchiveRequest.field_u + " " + ne.field_o + ") " + ImageProducerRasterBuffer.field_k;
         var1 = var6;
         if (jd.field_q > 0) {
           var1 = var6 + ":";

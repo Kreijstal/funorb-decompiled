@@ -137,7 +137,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListenerByDeadline(IntrusiveNode param0, oi param1) {
         while (true) {
           if (param0 == this.field_l.sentinel) {
-            lf.a(param0, param1, -17957);
+            NetworkArchiveRequest.a(param0, param1, -17957);
             this.field_k = ((oi) (this.field_l.sentinel.field_c)).field_g;
             return;
           }
@@ -147,7 +147,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        lf.a(param0, param1, -17957);
+        NetworkArchiveRequest.a(param0, param1, -17957);
         this.field_k = ((oi) (this.field_l.sentinel.field_c)).field_g;
         return;
     }

@@ -270,7 +270,7 @@ final class ne extends hc {
         if (param0 != 10) {
           return false;
         }
-        return nm.a(param1, sj.field_d, -827843803);
+        return DiskCacheWorker.a(param1, sj.field_d, -827843803);
     }
 
     final int a(int param0, boolean param1) {

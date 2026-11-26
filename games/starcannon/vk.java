@@ -500,7 +500,7 @@ class vk extends UiWidget implements ch {
           }
           if (34 == param1.charAt(0)) {
             if (34 != param1.charAt(-1 + var2_int)) {
-              stackIn_12_0 = ra.field_t;
+              stackIn_12_0 = NetworkArchiveRequest.field_t;
               return stackIn_12_0;
             }
             var3 = 0;
@@ -515,7 +515,7 @@ class vk extends UiWidget implements ch {
                 var6 != 0) {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_30_0 = ra.field_t;
+                  stackIn_30_0 = NetworkArchiveRequest.field_t;
                   return stackIn_30_0;
                 }
                 var3 = 0;
@@ -545,13 +545,13 @@ class vk extends UiWidget implements ch {
                 var3Lifetime1 = 1;
                 decompiledFrameRemainder0 = (var6 != 0);
               } else {
-                stackIn_53_0 = ra.field_t;
+                stackIn_53_0 = NetworkArchiveRequest.field_t;
                 return stackIn_53_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (-1 == oj.field_k.indexOf(var5Lifetime1)) {
-                stackIn_61_0 = ra.field_t;
+                stackIn_61_0 = NetworkArchiveRequest.field_t;
                 return stackIn_61_0;
               }
               var3Lifetime1 = 0;

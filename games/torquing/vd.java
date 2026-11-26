@@ -211,7 +211,7 @@ final class vd {
             if (var4 >= param1.length()) {
               return null;
             }
-            if (co.a(-112, param1.charAt(var4))) {
+            if (DiskCacheWorker.a(-112, param1.charAt(var4))) {
               var4++;
               continue;
             }

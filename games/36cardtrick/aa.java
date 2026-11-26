@@ -19,7 +19,7 @@ final class aa extends kj {
         int var5 = 0;
         int var6 = Main.field_T;
         try {
-          var7 = na.field_r;
+          var7 = NetworkArchiveRequest.field_r;
           var8 = var7;
           var8.h(param2, 0);
           var8.position = var8.position + 1;

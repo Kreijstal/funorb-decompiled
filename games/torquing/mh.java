@@ -2056,7 +2056,7 @@ final class mh {
                 } else {
                   var7_int = 2;
                 }
-                pb.field_e = var7_int;
+                SectorCacheStore.field_e = var7_int;
                 oo.field_b = 0;
                 th.a(100, th.field_F[23]);
                 if (var11 == 0) {

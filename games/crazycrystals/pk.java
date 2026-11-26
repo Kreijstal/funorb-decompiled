@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pk {
-    private ld field_e;
+    private NetworkArchiveRequest field_e;
     private ee[] field_a;
     private java.math.BigInteger field_h;
     private PacketBuffer field_i;
     static String field_f;
-    private ni field_d;
+    private DiskCacheWorker field_d;
     private java.math.BigInteger field_g;
     static int field_c;
     private ob field_b;
@@ -36,11 +36,11 @@ final class pk {
           }
         }
         if (!param0) {
-          this.field_d = (ni) null;
+          this.field_d = (DiskCacheWorker) null;
         }
     }
 
-    final ee a(int param0, sp param1, boolean param2, int param3, sp param4) {
+    final ee a(int param0, SectorCacheStore param1, boolean param2, int param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -102,7 +102,7 @@ final class pk {
         return ch.field_d.b(true);
     }
 
-    pk(ob param0, ni param1) {
+    pk(ob param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -229,7 +229,7 @@ final class pk {
         if (this.field_e.field_n) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_e.e(113));
+        var10 = new PacketBuffer(this.field_e.getData(113));
         var10.position = 5;
         var3 = var10.readUnsignedByte(255);
         var10.position = var10.position + var3 * 72;
@@ -262,7 +262,7 @@ final class pk {
         return true;
     }
 
-    private pk(ob param0, ni param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private pk(ob param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

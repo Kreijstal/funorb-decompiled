@@ -16,12 +16,12 @@ final class ea extends va {
           String stackIn_29_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ic var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ic var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = SolKnight.field_L ? 1 : 0;
           try {
             if (this.field_r != null) {
@@ -42,7 +42,7 @@ final class ea extends va {
             this.field_a = null;
             this.field_h.position = 0;
             while (true) {
-              var4_ref = (ic) (this.field_i.c(param1 ^ 106));
+              var4_ref = (NetworkArchiveRequest) (this.field_i.c(param1 ^ 106));
               if (var4_ref != null) {
                 this.field_m.a(var4_ref, 0);
                 continue;
@@ -50,7 +50,7 @@ final class ea extends va {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (ic) (this.field_k.c(0));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_k.c(0));
               if (var4_refLifetime1 != null) {
                 this.field_d.a(var4_refLifetime1, 0);
                 continue;
@@ -168,7 +168,7 @@ final class ea extends va {
           int stackIn_63_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ic var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -183,11 +183,11 @@ final class ea extends va {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ic var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          ic var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = SolKnight.field_L ? 1 : 0;
           if (null != this.field_r) {
             var2_long = je.correctedCurrentTimeMillis(1);
@@ -216,26 +216,26 @@ final class ea extends va {
           }
           try {
             this.field_r.a(true);
-            var2 = (ic) (this.field_m.d(122));
+            var2 = (NetworkArchiveRequest) (this.field_m.d(122));
             while (var2 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(param0 ^ 71, 1);
               this.field_e.writeLong40(var2.secondaryKey, param0 ^ 25576);
               this.field_r.a(-28748, 0, this.field_e.payload.length, this.field_e.payload);
               this.field_i.a(var2, 0);
-              var2 = (ic) (this.field_m.b(~param0));
+              var2 = (NetworkArchiveRequest) (this.field_m.b(~param0));
             }
             if (param0 != 0) {
               ea.d(false);
             }
-            var2Lifetime1 = (ic) (this.field_d.d(123));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.d(123));
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(117, 0);
               this.field_e.writeLong40(var2Lifetime1.secondaryKey, 25576);
               this.field_r.a(param0 ^ -28748, 0, this.field_e.payload.length, this.field_e.payload);
               this.field_k.a(var2Lifetime1, 0);
-              var2Lifetime1 = (ic) (this.field_d.b(-1));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.b(-1));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_r.b(-30119);
@@ -320,24 +320,24 @@ final class ea extends va {
                     var12 = (long)var7 + ((long)var6 << 32);
                     var14 = null;
                     if (var11 == 0) {
-                      var14_ref = (ic) (this.field_i.d(124));
+                      var14_ref = (NetworkArchiveRequest) (this.field_i.d(124));
                       while (var14_ref != null) {
                         if (~var14_ref.secondaryKey == ~var12) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        var14_ref = (ic) (this.field_i.b(-1));
+                        var14_ref = (NetworkArchiveRequest) (this.field_i.b(-1));
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameCompleted0)) {
-                      var14_ref = (ic) (this.field_k.d(122));
+                      var14_ref = (NetworkArchiveRequest) (this.field_k.d(122));
                       while (var14_ref != null) {
                         if (~var12 == ~var14_ref.secondaryKey) {
                           break;
                         }
-                        var14_ref = (ic) (this.field_k.b(-1));
+                        var14_ref = (NetworkArchiveRequest) (this.field_k.b(-1));
                       }
                     }
                     if (var14_ref == null) {

@@ -61,7 +61,7 @@ final class bj {
 
     final void b(int param0) {
         int fieldTemp$1 = 0;
-        if (gj.field_a != null) {
+        if (DiskCacheWorker.field_a != null) {
           return;
         }
         if (d.field_c <= 0) {

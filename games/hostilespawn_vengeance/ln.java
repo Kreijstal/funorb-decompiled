@@ -81,7 +81,7 @@ final class ln {
           if (fl.field_b != null) {
             s.field_b.a(122, fl.field_b);
           }
-          ml.a(s.field_b, nb.field_L, 0, lm.field_z, ob.field_s);
+          ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
           s.field_b.a(true, -var5_int + s.field_b.field_i);
           mb.d(-1, -22370);
           return;
@@ -334,7 +334,7 @@ final class ln {
             ln.clearStaticReferences(-93);
           }
           if (bj.field_b == 2 &&
-            dh.a(this.field_r, (byte) 111)) {
+            DiskCacheWorker.a(this.field_r, (byte) 111)) {
             return 1;
           }
           return 0;

@@ -241,7 +241,7 @@ final class oc extends vi implements ib {
         if (null == this.field_i) {
           return null;
         }
-        dm.a(1, this.field_m - this.field_T + ua.field_a, vl.field_d);
+        dm.a(1, this.field_m - this.field_T + ua.field_a, DiskCacheWorker.field_d);
         return this.field_i;
     }
 

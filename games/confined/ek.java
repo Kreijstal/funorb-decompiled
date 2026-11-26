@@ -550,7 +550,7 @@ final class ek {
                   if (!this.field_h) {
                     stackIn_19_0 = uc.field_U;
                   } else {
-                    stackIn_19_0 = pc.field_e;
+                    stackIn_19_0 = DiskCacheWorker.field_e;
                   }
                 } else {
                   stackIn_19_0 = ei.field_mb;

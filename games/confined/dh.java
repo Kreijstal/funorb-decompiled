@@ -65,7 +65,7 @@ class dh extends sj implements el {
         this.field_wb.a(2121792, false, 4210752);
         jn var2 = new jn(this, this.field_xb, ne.field_d);
         if (param0 >= 73) {
-          var2.a(0, tn.field_C, 15);
+          var2.a(0, NetworkArchiveRequest.field_C, 15);
           this.a((fj) (var2), (byte) -72);
           return;
         }
@@ -182,7 +182,7 @@ class dh extends sj implements el {
               var6.a(0, mm.field_hb, 8);
             } else {
               if (param1 == 6) {
-                var6.a(0, tn.field_y, 9);
+                var6.a(0, NetworkArchiveRequest.field_y, 9);
               } else {
                 if (param1 == 9) {
                   var6.a(ai.field_g, (uk) (this), param2);

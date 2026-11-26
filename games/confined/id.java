@@ -159,24 +159,24 @@ abstract class id extends ee {
           jf.field_b.writeBytes(param6, param3, param4, 109);
           jf.field_b.padZerosTo(var7_int, (byte) 25);
           jf.field_b.encryptXtea(65280, var13);
-          if (null == pc.field_j ||
-            !(100 <= pc.field_j.payload.length)) {
-            pc.field_j = new PacketBuffer(100);
+          if (null == DiskCacheWorker.field_j ||
+            !(100 <= DiskCacheWorker.field_j.payload.length)) {
+            DiskCacheWorker.field_j = new PacketBuffer(100);
           }
-          pc.field_j.position = 0;
-          pc.field_j.writeByte(117, 10);
+          DiskCacheWorker.field_j.position = 0;
+          DiskCacheWorker.field_j.writeByte(117, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            pc.field_j.writeInt(-126, var13[var11]);
+            DiskCacheWorker.field_j.writeInt(-126, var13[var11]);
             var11++;
           }
-          pc.field_j.writeShort(param6, 8);
-          pc.field_j.applyRsa(param1, 0, param5);
+          DiskCacheWorker.field_j.writeShort(param6, 8);
+          DiskCacheWorker.field_j.applyRsa(param1, 0, param5);
           if (param2 <= 29) {
             field_rb = 41;
           }
-          param0.writeBytes(pc.field_j.position, 0, pc.field_j.payload, 93);
+          param0.writeBytes(DiskCacheWorker.field_j.position, 0, DiskCacheWorker.field_j.payload, 93);
           param0.writeBytes(jf.field_b.position, 0, jf.field_b.payload, 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

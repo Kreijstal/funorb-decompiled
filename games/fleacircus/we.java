@@ -78,7 +78,7 @@ final class we {
     }
 
     final static void a(int param0) {
-        uh var1 = (uh) (fk.field_z.removeLast((byte) -60));
+        uh var1 = (uh) (NetworkArchiveRequest.field_z.removeLast((byte) -60));
         if (var1 == null) {
           var1 = new uh();
         }

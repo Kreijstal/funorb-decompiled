@@ -30,26 +30,26 @@ final class ab {
           if (param0 != 0) {
             return;
           }
-          SecondaryNodeDeque.a(32, vf.field_w, wi.field_kb, qc.field_w);
+          SecondaryNodeDeque.a(32, ArchiveRequest.field_w, wi.field_kb, qc.field_w);
           SoftwareRasterizer.saveClip(ib.field_a);
-          SoftwareRasterizer.setClip(vf.field_w, qc.field_w, vf.field_w + 200, wi.field_kb + qc.field_w + 3);
+          SoftwareRasterizer.setClip(ArchiveRequest.field_w, qc.field_w, ArchiveRequest.field_w + 200, wi.field_kb + qc.field_w + 3);
           if (-1 == ce.field_p) {
-            bo.a(param0 ^ 5, gk.field_L, qc.field_w, vf.field_w);
+            bo.a(param0 ^ 5, gk.field_L, qc.field_w, ArchiveRequest.field_w);
           } else {
             if (!bl.field_k) {
               var1_intLifetime1 = fa.a((byte) 8, 0, -(20 + ui.field_a));
               if (gk.field_L == null) {
                 var1_intLifetime1 = 0;
               }
-              bo.a(5, jn.field_l, var1_intLifetime1 + qc.field_w, vf.field_w);
-              bo.a(param0 ^ 5, gk.field_L, 20 + (qc.field_w + var1_intLifetime1 + ui.field_a), vf.field_w);
+              bo.a(5, jn.field_l, var1_intLifetime1 + qc.field_w, ArchiveRequest.field_w);
+              bo.a(param0 ^ 5, gk.field_L, 20 + (qc.field_w + var1_intLifetime1 + ui.field_a), ArchiveRequest.field_w);
             } else {
               var1_intLifetime1 = fa.a((byte) -37, -(20 + hc.field_b), 0);
               if (null == gk.field_L) {
                 var1_intLifetime1 = 0;
               }
-              bo.a(param0 ^ 5, gk.field_L, var1_intLifetime1 + qc.field_w, vf.field_w);
-              bo.a(5, jn.field_l, 20 + qc.field_w - (-var1_intLifetime1 - hc.field_b), vf.field_w);
+              bo.a(param0 ^ 5, gk.field_L, var1_intLifetime1 + qc.field_w, ArchiveRequest.field_w);
+              bo.a(5, jn.field_l, 20 + qc.field_w - (-var1_intLifetime1 - hc.field_b), ArchiveRequest.field_w);
             }
           }
           SoftwareRasterizer.restoreClip(ib.field_a);

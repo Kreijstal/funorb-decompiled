@@ -48,7 +48,7 @@ final class mj {
             var21 = (int[]) null;
             mj.a(-31, 4, 18, -94, (int[]) null, (byte) 4, 49);
           }
-          t.a(param1, param16, param19, param9, false);
+          DiskCacheWorker.a(param1, param16, param19, param9, false);
           bs.a(param9, -52);
           ha.a(param0, param6, param5, param12, param8, param7, param15, param18, param3, param17 + 23161, param10, param13, param4, param11, param9);
           ti.a(param14, param9, 4, param2);

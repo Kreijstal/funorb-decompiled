@@ -22,7 +22,7 @@ final class nf extends ld implements ka {
         try {
           var3 = null;
           if (te.field_L == param1) {
-            var3 = ic.field_x;
+            var3 = NetworkArchiveRequest.field_x;
           } else {
             if (param1 == ne.field_i) {
               var3 = ak.field_c;

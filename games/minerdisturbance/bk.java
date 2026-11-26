@@ -6,14 +6,14 @@ import java.io.*;
 final class bk {
     static String field_b;
     private ij[] field_a;
-    private nm field_e;
+    private DiskCacheWorker field_e;
     private PacketBuffer field_d;
     private java.math.BigInteger field_f;
-    private ee field_h;
+    private NetworkArchiveRequest field_h;
     private java.math.BigInteger field_g;
     private ch field_c;
 
-    final ij a(int param0, uh param1, boolean param2, int param3, uh param4) {
+    final ij a(int param0, SectorCacheStore param1, boolean param2, int param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -68,7 +68,7 @@ final class bk {
         }
     }
 
-    bk(ch param0, nm param1) {
+    bk(ch param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -97,7 +97,7 @@ final class bk {
         if (this.field_h.field_C) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_h.c((byte) -115));
+        var10 = new PacketBuffer(this.field_h.getData((byte) -115));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) -54);
         var10.position = var10.position + var3 * 72;
@@ -190,7 +190,7 @@ final class bk {
         }
     }
 
-    private bk(ch param0, nm param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private bk(ch param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_g = param2;
           this.field_c = param0;

@@ -1774,7 +1774,7 @@ final class ll {
                 }
                 var2 = te.a("waitingfor_fonts", param0 ^ -31);
                 if (var2 != null) {
-                  uj.field_b = be.a(var2, (byte) -93);
+                  DiskCacheWorker.field_b = be.a(var2, (byte) -93);
                 }
                 var2 = te.a("waitingfor_soundeffects", param0 ^ -126);
                 if (null != var2) {

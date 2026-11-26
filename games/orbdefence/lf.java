@@ -37,10 +37,10 @@ final class lf {
           if (kf.field_d == tg.field_c &&
             param0.equals(pg.field_a)) {
             tg.field_c = tl.field_h;
-            stackIn_9_0 = uc.field_q;
+            stackIn_9_0 = DiskArchiveRequest.field_q;
             return stackIn_9_0;
           }
-          uc.field_q = null;
+          DiskArchiveRequest.field_q = null;
           pg.field_a = param0;
           tg.field_c = PacketBuffer.field_m;
           stackIn_11_0 = null;

@@ -1,5 +1,5 @@
 # Reading Vertigo 2
 
-This pass names 70 reviewed classes in 437 source files. Unresolved roles keep their original names.
+This pass names 75 reviewed classes in 437 source files. Unresolved roles keep their original names.
 
 Start at `Vertigo2`; the shared engine (nodes, deques, packet buffer, sockets, input, rasterizer) uses the same role names as other FunOrb games.

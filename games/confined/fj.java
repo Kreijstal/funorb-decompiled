@@ -326,7 +326,7 @@ class fj extends IntrusiveNode {
             kc.a(false, 64, 2, 96);
             kc.a(false, 129, 8, 76);
             kc.a(false, 194, 16, 96);
-            lb.a(259, 42, 128, 76, 0.2, sm.field_A);
+            lb.a(259, 42, 128, 76, 0.2, DiskArchiveRequest.field_A);
             pn.field_a.a(b.a(new String[]{r.field_b}, qm.field_A, 1177), 152, 58, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(kd.field_q, 132, 123, 412, 40, 4243584, -1, 3, 1, 20);
             pn.field_a.a(bf.field_S, 152, 168, 412, 80, 4243584, -1, 3, 1, 20);
@@ -373,7 +373,7 @@ class fj extends IntrusiveNode {
             var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.a(aj.field_b, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
             var2_intLifetime3 = var2_intLifetime3 + 18 * pn.field_a.a(af.field_bb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18);
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(bk.field_i, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
-            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(ae.field_c, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
+            var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(SectorCacheStore.field_c, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(qi.field_d, 76, var2_intLifetime3 - 4, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             var2_intLifetime3 = var2_intLifetime3 + pn.field_a.a(hm.field_rb, 76, -4 + var2_intLifetime3, 488, 1000, 9805732, -1, 3, 0, 18) * 18;
             pn.field_a.c(lk.field_c, 76, 12 + var2_intLifetime3, 4243584, -1);

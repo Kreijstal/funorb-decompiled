@@ -1125,7 +1125,7 @@ abstract class gm {
                 }
                 var2 = cd.a("playfreeversion", -107);
                 if (null != var2) {
-                  gd.field_f = ad.a(-29410, var2);
+                  SectorCacheStore.field_f = ad.a(-29410, var2);
                 }
                 var2 = cd.a("reloadgame", -102);
                 if (null != var2) {
@@ -1325,7 +1325,7 @@ abstract class gm {
                 }
                 var2 = cd.a("checking", -105);
                 if (null != var2) {
-                  cc.field_v = ad.a(-29410, var2);
+                  NetworkArchiveRequest.field_v = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_namealreadytaken", -112);
                 if (null != var2) {
@@ -1617,7 +1617,7 @@ abstract class gm {
                 }
                 var2 = cd.a("create_password_tooltip", -107);
                 if (null != var2) {
-                  tc.field_A = ad.a(-29410, var2);
+                  DiskArchiveRequest.field_A = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_password_hint", -79);
                 if (null != var2) {
@@ -1705,7 +1705,7 @@ abstract class gm {
                 }
                 var2 = cd.a("create_alert_passcontainsname", -106);
                 if (null != var2) {
-                  ab.field_t = ad.a(-29410, var2);
+                  ArchiveRequest.field_t = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_alert_passcontainsemail", -123);
                 if (null != var2) {
@@ -2158,7 +2158,7 @@ abstract class gm {
                 }
                 var2 = cd.a("returntogame", -101);
                 if (var2 != null) {
-                  tc.field_y = ad.a(-29410, var2);
+                  DiskArchiveRequest.field_y = ad.a(-29410, var2);
                 }
                 var2 = cd.a("endgameresign", -101);
                 if (null != var2) {
@@ -2546,7 +2546,7 @@ abstract class gm {
                 }
                 var2 = cd.a("mp_showchat_unread2", -107);
                 if (null != var2) {
-                  gd.field_d = ad.a(-29410, var2);
+                  SectorCacheStore.field_d = ad.a(-29410, var2);
                 }
                 var2 = cd.a("click_to_quickchat", -81);
                 if (var2 != null) {

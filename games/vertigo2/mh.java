@@ -33,7 +33,7 @@ final class mh {
             }
             var5 = null;
             if (AccountNameAvailabilityValidator.field_n == 0) {
-              var5 = ia.a(-113, param2, var4);
+              var5 = NetworkArchiveRequest.a(-113, param2, var4);
             }
             if (AccountNameAvailabilityValidator.field_n == 1) {
               var5 = RasterBuffer.a((byte) 96, param2, var4);

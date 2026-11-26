@@ -5,7 +5,7 @@ final class ba extends ma implements nn, mj {
     static String field_M;
     private se field_S;
     static java.applet.Applet field_L;
-    static on field_O;
+    static DiskCacheWorker field_O;
     private fb field_T;
     private AccountCreationResultPanel field_K;
     static byte[] field_Q;
@@ -153,7 +153,7 @@ final class ba extends ma implements nn, mj {
         discarded$0 = sg.field_c.append((char) var5);
         var6Lifetime1 = 485;
         var18 = ci.field_J;
-        var17 = on.a(-11307, var18);
+        var17 = DiskCacheWorker.a(-11307, var18);
         var19 = var17;
         if (2 == vk.field_g) {
           var33 = (CharSequence) ((Object) ij.field_c);

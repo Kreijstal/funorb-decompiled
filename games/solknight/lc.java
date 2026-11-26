@@ -95,7 +95,7 @@ final class lc extends IntrusiveNode {
           }
           var5_int = param0.c(74, param3);
           var6 = param0.a(param2, -1, var5_int);
-          stackIn_3_0 = sk.a((byte) -105, param0, var6, var5_int, param4);
+          stackIn_3_0 = ArchiveRequest.a((byte) -105, param0, var6, var5_int, param4);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

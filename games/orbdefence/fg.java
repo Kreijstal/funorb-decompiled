@@ -39,7 +39,7 @@ class fg extends jc {
           } else {
             try {
               p.field_d = new BufferedSocket((java.net.Socket) (ia.field_f.result), ef.field_i);
-              var4 = cd.field_t;
+              var4 = NetworkArchiveRequest.field_t;
               var5 = var4;
               uk.field_b.position = 0;
               stackIn_13_0 = (param0) ? -2 : -1;
@@ -76,7 +76,7 @@ class fg extends jc {
     final static void a(int param0, int param1, int param2, java.awt.Component param3, PlatformTaskDispatcher param4, boolean param5, MidiPcmStream param6, boolean param7) {
         try {
           AudioOutput.configureAudio(param2, param7, 10);
-          cd.field_w = AudioOutput.createOutput(param4, param3, 0, param0);
+          NetworkArchiveRequest.field_w = AudioOutput.createOutput(param4, param3, 0, param0);
           wf.field_b = AudioOutput.createOutput(param4, param3, 1, param1);
           vb.field_f = new PcmStreamMixer();
           h.field_H = param1 * 1000 / param2;
@@ -86,7 +86,7 @@ class fg extends jc {
           if (!param5) {
             field_u = -24;
           }
-          cd.field_w.setRootStream(ml.field_c);
+          NetworkArchiveRequest.field_w.setRootStream(ml.field_c);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "fg.BA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -121,7 +121,7 @@ class fg extends jc {
           if (kf.field_e == -1 &&
             lm.field_a == -1) {
             kf.field_e = ua.field_a;
-            lm.field_a = vl.field_d;
+            lm.field_a = DiskCacheWorker.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {

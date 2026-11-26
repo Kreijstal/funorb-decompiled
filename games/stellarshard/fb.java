@@ -19,7 +19,7 @@ abstract class fb {
     PacketBuffer field_a;
     byte field_p;
     volatile int field_i;
-    ph field_r;
+    NetworkArchiveRequest field_r;
 
     final int b(byte param0) {
         if (param0 > -77) {
@@ -101,12 +101,12 @@ abstract class fb {
         return 20 <= this.b((byte) -87) ? true : false;
     }
 
-    final ph a(byte param0, int param1, boolean param2, int param3, boolean param4) {
+    final NetworkArchiveRequest a(byte param0, int param1, boolean param2, int param3, boolean param4) {
         long var6 = ((long)param3 << 32) + (long)param1;
         if (!param4) {
-          return (ph) null;
+          return (NetworkArchiveRequest) null;
         }
-        ph var8 = new ph();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_F = param0;
         var8.field_u = param2 ? true : false;
         var8.field_o = var6;
@@ -312,9 +312,9 @@ abstract class fb {
               ic.field_a = pf.a((CharSequence) ((Object) var6), (byte) 125);
             }
           }
-          ki.field_x = param5;
+          ArchiveRequest.field_x = param5;
           jb.field_a = param0;
-          ki.field_t = param2;
+          ArchiveRequest.field_t = param2;
           dl.field_C = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
             dl.field_C[var7] = new Sprite(317, 34);

@@ -63,7 +63,7 @@ final class ai {
             var5 = hf.a(param2, 79, var4);
           }
           if (pk.field_b == 1) {
-            var5 = ab.a(param2, param1 + 21247, var4);
+            var5 = ArchiveRequest.a(param2, param1 + 21247, var4);
           }
           if (pk.field_b == 2) {
             var5 = FullscreenFocusCanvas.a(param2, var4, (byte) 64);

@@ -80,13 +80,13 @@ final class DelegatingCanvas extends java.awt.Canvas {
             nj.field_p = new lh(param4);
             ci.field_W = param13;
             ei.field_o = param3;
-            lb.field_v = param1;
+            ArchiveRequest.field_v = param1;
             ia.field_c = param10;
             var15_int = 42 % ((param2 + 70) / 44);
             bd.field_N = param0;
             wg.field_d = param11;
             ml.field_n = param8;
-            n.field_i = param12;
+            DiskCacheWorker.field_i = param12;
             nf.field_t = param9;
             dc.field_e = param6;
             pi.field_I = param5;

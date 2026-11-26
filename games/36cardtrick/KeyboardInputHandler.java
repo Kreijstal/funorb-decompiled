@@ -37,7 +37,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             }
             if (var2_int >= 0) {
               var3 = 1 + sa.field_b & 127;
-              if (ab.field_t != var3) {
+              if (DiskArchiveRequest.field_t != var3) {
                 db.field_c[sa.field_b] = var2_int;
                 e.field_b[sa.field_b] = (char)0;
                 sa.field_b = var3;
@@ -152,7 +152,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
             if (0 != var2_int && 65535 != var2_int &&
               cg.a(111, (char) var2_int)) {
               var3 = sa.field_b + 1 & 127;
-              if (var3 != ab.field_t) {
+              if (var3 != DiskArchiveRequest.field_t) {
                 db.field_c[sa.field_b] = -1;
                 e.field_b[sa.field_b] = (char)var2_int;
                 sa.field_b = var3;

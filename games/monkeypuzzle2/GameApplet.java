@@ -725,7 +725,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = gf.field_c;
+          var3 = SectorCacheStore.field_c;
           var3.b(true, param2);
           var3.position = var3.position + 1;
           var4 = var3.position;
@@ -779,7 +779,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           dl.a(param1 ^ 11490, param2);
           MouseWheelInput.b(true);
           cm.a(15);
-          uj.field_i = -ea.field_b + 0;
+          DiskCacheWorker.field_i = -ea.field_b + 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

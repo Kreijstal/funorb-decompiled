@@ -42,12 +42,12 @@ final class ap extends ob {
           String stackIn_44_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ld var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          ld var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = CrazyCrystals.field_B;
           try {
             if (null != this.field_q) {
@@ -68,7 +68,7 @@ final class ap extends ob {
               return;
             }
             scanLoop1: while (true) {
-              var4_ref = (ld) (this.field_f.d(-4425));
+              var4_ref = (NetworkArchiveRequest) (this.field_f.d(-4425));
               if (var4_ref == null) {
                 if (var6 == 0) {
                   break scanLoop1;
@@ -82,7 +82,7 @@ final class ap extends ob {
               break;
             }
             scanLoop2: while (true) {
-              var4_refLifetime1 = (ld) (this.field_a.d(-4425));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_a.d(-4425));
               if (var4_refLifetime1 == null) {
                 if (var6 == 0) {
                   break scanLoop2;
@@ -324,7 +324,7 @@ final class ap extends ob {
             var3 = var1.readString(111);
             nh.field_z = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte(255);
-            wl.a(7, var4);
+            ArchiveRequest.a(7, var4);
             return;
           }
           if (null == me.field_f) {
@@ -399,7 +399,7 @@ final class ap extends ob {
           int stackIn_137_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ld var2 = null;
+          NetworkArchiveRequest var2 = null;
           int var2_int = 0;
           IOException var2_ref = null;
           RuntimeException var2_ref2 = null;
@@ -416,7 +416,7 @@ final class ap extends ob {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ld var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var5Lifetime1;
@@ -452,7 +452,7 @@ final class ap extends ob {
             }
             try {
               this.field_q.checkWriteError(-128);
-              var2 = (ld) (this.field_m.b(120));
+              var2 = (NetworkArchiveRequest) (this.field_m.b(120));
               scanLoop1: while (true) {
                 if (null != var2) {
                   this.field_n.position = 0;
@@ -460,7 +460,7 @@ final class ap extends ob {
                   this.field_n.writeLong40(var2.field_k, false);
                   this.field_q.queueWrite(0, 106, this.field_n.payload, this.field_n.payload.length);
                   this.field_f.a((byte) 113, var2);
-                  var2 = (ld) (this.field_m.a(127));
+                  var2 = (NetworkArchiveRequest) (this.field_m.a(127));
                   if (var16 != 0) {
                     break scanLoop1;
                   }
@@ -468,7 +468,7 @@ final class ap extends ob {
                     continue;
                   }
                 }
-                var2 = (ld) (this.field_k.b(124));
+                var2 = (NetworkArchiveRequest) (this.field_k.b(124));
                 break;
               }
               while (var2 != null) {
@@ -477,7 +477,7 @@ final class ap extends ob {
                 this.field_n.writeLong40(var2.field_k, false);
                 this.field_q.queueWrite(0, 116, this.field_n.payload, this.field_n.payload.length);
                 this.field_a.a((byte) 111, var2);
-                var2 = (ld) (this.field_k.a(104));
+                var2 = (NetworkArchiveRequest) (this.field_k.a(104));
                 if (var16 == 0) {
                   continue;
                 }
@@ -596,7 +596,7 @@ final class ap extends ob {
                           var12 = (long)var7Lifetime1 + ((long)var6Lifetime1Lifetime1 << 32);
                           var14 = null;
                           if (var11 != 0) {
-                            var14_ref = (ld) (this.field_a.b(120));
+                            var14_ref = (NetworkArchiveRequest) (this.field_a.b(120));
                             while (var14_ref != null) {
                               stackIn_116_0 = compareLongs(~var14_ref.field_k, ~var12);
                               if (var16 != 0) {
@@ -607,7 +607,7 @@ final class ap extends ob {
                                 decompiledFrameCompleted1 = false;
                                 break;
                               }
-                              var14_ref = (ld) (this.field_a.a(93));
+                              var14_ref = (NetworkArchiveRequest) (this.field_a.a(93));
                             }
                             if (decompiledFrameCompleted2) {
                               decompiledFrameRemainder0 = !(decompiledFrameCompleted1);
@@ -616,7 +616,7 @@ final class ap extends ob {
                           if ((decompiledFrameRemainder0) &&
                             (decompiledFrameCompleted2) &&
                             (decompiledFrameCompleted1)) {
-                            var14_ref = (ld) (this.field_f.b(114));
+                            var14_ref = (NetworkArchiveRequest) (this.field_f.b(114));
                             while (var14_ref != null) {
                               stackIn_116_0 = compareLongs(var14_ref.field_k, var12);
                               if (var16 != 0) {
@@ -626,7 +626,7 @@ final class ap extends ob {
                               if (stackIn_116_0 == 0) {
                                 break;
                               }
-                              var14_ref = (ld) (this.field_f.a(96));
+                              var14_ref = (NetworkArchiveRequest) (this.field_f.a(96));
                               if (var16 == 0) {
                                 continue;
                               }

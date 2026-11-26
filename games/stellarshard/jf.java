@@ -95,7 +95,7 @@ final class jf extends IntrusiveNode {
         ck.field_db = false;
         gk.field_a = false;
         rh.a(param0, (byte) -72);
-        el.field_E = ok.field_a;
+        DiskArchiveRequest.field_E = ok.field_a;
         o.field_l = ok.field_a;
     }
 

@@ -51,9 +51,9 @@ final class MusicPatchPcmStream extends PcmStream {
             return;
           }
           pe.a(var4, 97);
-          mp.field_g = nq.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (BitmapFont) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
-          fo.field_c = nq.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
-          va.field_h = nq.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
+          mp.field_g = DiskArchiveRequest.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (BitmapFont) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
+          fo.field_c = DiskArchiveRequest.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
+          va.field_h = DiskArchiveRequest.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
           var5 = SoftwareRasterizer.field_e;
           var6 = SoftwareRasterizer.field_j;
           var15 = SoftwareRasterizer.field_l;

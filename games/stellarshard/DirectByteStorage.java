@@ -18,11 +18,11 @@ final class DirectByteStorage extends ByteStorage {
 
     final static boolean a(byte param0) {
         if (param0 >= 72) {
-          return el.field_E == dj.field_a ? true : false;
+          return DiskArchiveRequest.field_E == dj.field_a ? true : false;
         }
         byte[] var2 = (byte[]) null;
         DirectByteStorage.a(53, (byte[]) null);
-        return el.field_E == dj.field_a ? true : false;
+        return DiskArchiveRequest.field_E == dj.field_a ? true : false;
     }
 
     public static void c(int param0) {

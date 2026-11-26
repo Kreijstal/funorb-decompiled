@@ -109,7 +109,7 @@ final class uc extends lc implements rc {
         if (Character.isISOControl(param1)) {
           return false;
         }
-        if (md.a(param0 + 108, param1)) {
+        if (DiskArchiveRequest.a(param0 + 108, param1)) {
           return true;
         }
         if (param1 == 45) {
@@ -212,10 +212,10 @@ final class uc extends lc implements rc {
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ij.field_c = vh.a(param0, "commonui", (byte) -38, "frame_top");
-          DirectByteStorage.field_d = vh.a(param0, "commonui", (byte) 114, "frame_bottom");
+          ij.field_c = SectorCacheStore.a(param0, "commonui", (byte) -38, "frame_top");
+          DirectByteStorage.field_d = SectorCacheStore.a(param0, "commonui", (byte) 114, "frame_bottom");
           fd.field_m = nc.a("jagex_logo_grey", param0, "commonui", 0);
-          ih.field_T = vh.a(param0, "commonui", (byte) 111, "button");
+          ih.field_T = SectorCacheStore.a(param0, "commonui", (byte) 111, "button");
           la.field_E = ri.a("commonui", param0, false, "validation");
           qj.field_d = (tj) ((Object) eg.a(param2, "arezzo12", 127, param0, "commonui"));
           sg.field_a = (tj) ((Object) eg.a(param2, "arezzo14", 122, param0, "commonui"));

@@ -271,7 +271,7 @@ class mf extends IntrusiveNode {
               if (var5 == 0) {
                 if (0 == th.field_d) {
                   if (((wh.field_f == 0)) &&
-                    ((on.field_h != 0))) {
+                    ((DiskCacheWorker.field_h != 0))) {
                     this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                     var8 = AwtRasterBuffer.field_a;
                     if (var8 != null) {
@@ -293,7 +293,7 @@ class mf extends IntrusiveNode {
                     param3 = false;
                   }
                   if (((wh.field_f == 0)) &&
-                    ((on.field_h != 0))) {
+                    ((DiskCacheWorker.field_h != 0))) {
                     this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                     var9 = AwtRasterBuffer.field_a;
                     if (var9 != null) {
@@ -312,7 +312,7 @@ class mf extends IntrusiveNode {
             }
             if (0 == th.field_d) {
               if (((wh.field_f == 0)) &&
-                ((on.field_h != 0))) {
+                ((DiskCacheWorker.field_h != 0))) {
                 this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                 var11 = AwtRasterBuffer.field_a;
                 if (var11 == null) {
@@ -345,7 +345,7 @@ class mf extends IntrusiveNode {
             if (!this.a(th.field_d, re.field_m, ag.field_f, (byte) 88, this, param1, param2)) {
               if (var5 == 0) {
                 if (((wh.field_f == 0)) &&
-                  ((on.field_h != 0))) {
+                  ((DiskCacheWorker.field_h != 0))) {
                   this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
                   var12 = AwtRasterBuffer.field_a;
                   if (var12 == null) {
@@ -379,7 +379,7 @@ class mf extends IntrusiveNode {
               param3 = false;
             }
             if ((wh.field_f == 0) &&
-              (on.field_h != 0)) {
+              (DiskCacheWorker.field_h != 0)) {
               this.a(rf.field_b, this, param2, BufferedSocket.field_k, 0, param1);
               var19 = AwtRasterBuffer.field_a;
               if (var19 != null) {
@@ -415,7 +415,7 @@ class mf extends IntrusiveNode {
             }
           }
         }
-        on.field_h = wh.field_f;
+        DiskCacheWorker.field_h = wh.field_f;
         sb.a(this.g(0), true);
         return param3;
     }

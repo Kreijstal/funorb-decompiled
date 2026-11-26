@@ -30,11 +30,11 @@ final class th {
         try {
           ia.field_j = param1.readUnsignedShort((byte) -116) << 5;
           var2_int = param1.readUnsignedByte((byte) 41);
-          cl.field_x = (var2_int & 7) << 18;
+          DiskArchiveRequest.field_x = (var2_int & 7) << 18;
           ia.field_j = ia.field_j + (var2_int >> 3);
-          cl.field_x = cl.field_x + (param1.readUnsignedShort((byte) -112) << 2);
+          DiskArchiveRequest.field_x = DiskArchiveRequest.field_x + (param1.readUnsignedShort((byte) -112) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) 64);
-          cl.field_x = cl.field_x + (var2_intLifetime1 >> 6);
+          DiskArchiveRequest.field_x = DiskArchiveRequest.field_x + (var2_intLifetime1 >> 6);
           ug.field_b = 2064384 & var2_intLifetime1 << 15;
           ug.field_b = ug.field_b + (param1.readUnsignedByte((byte) 41) << 7);
           if (param0 < 91) {

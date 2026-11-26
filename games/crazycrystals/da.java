@@ -587,8 +587,8 @@ final class da extends ue {
           if (nl.field_f != null) {
             var2_int = nl.field_f.length;
           } else {
-            if (ld.field_v != null) {
-              var2_int = ld.field_v.length;
+            if (NetworkArchiveRequest.field_v != null) {
+              var2_int = NetworkArchiveRequest.field_v.length;
             }
           }
           if (var2_int != -1) {
@@ -1042,8 +1042,8 @@ final class da extends ue {
     }
 
     final static void a(String param0, int param1, String param2) {
-        if (sp.field_a != null) {
-          sp.field_a.i((byte) -18);
+        if (SectorCacheStore.field_a != null) {
+          SectorCacheStore.field_a.i((byte) -18);
         }
         mk.field_b = new vk(param0, param2, false, true, true);
         if (param1 <= 57) {
@@ -1202,7 +1202,7 @@ final class da extends ue {
             var4 = var11;
             var4 = var11;
             if (this.field_i == var3) {
-              var4 = var11 + mf.field_r;
+              var4 = var11 + DiskArchiveRequest.field_r;
             }
             if (this.field_i < var3) {
               var4 = var4 + pe.field_n;

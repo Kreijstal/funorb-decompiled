@@ -28,7 +28,7 @@ final class ne {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_4_0 = si.field_s;
+            stackIn_4_0 = DiskArchiveRequest.field_s;
             return stackIn_4_0;
           }
           if (255 < var2_int) {
@@ -37,7 +37,7 @@ final class ne {
           }
           var3 = ma.a(126, '.', param0);
           if (var3.length < 2) {
-            stackIn_11_0 = si.field_s;
+            stackIn_11_0 = DiskArchiveRequest.field_s;
             return stackIn_11_0;
           }
           if (param1 >= -61) {
@@ -94,10 +94,10 @@ final class ne {
         int var8Lifetime1;
         var10 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1_int = fb.field_k;
+          var1_int = ArchiveRequest.field_k;
           var2 = 0;
           if (ud.field_b == 2) {
-            var3_long = -fb.field_n + pf.correctedCurrentTimeMillis(0);
+            var3_long = -ArchiveRequest.field_n + pf.correctedCurrentTimeMillis(0);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -120,10 +120,10 @@ final class ne {
             var6 = pl.field_k[var3];
             if (ud.field_b == 2 &&
               var2 == 1) {
-              if (uj.field_c.length <= wi.field_b.length) {
+              if (DiskCacheWorker.field_c.length <= wi.field_b.length) {
                 stackIn_19_0 = wi.field_b.length;
               } else {
-                stackIn_19_0 = uj.field_c.length;
+                stackIn_19_0 = DiskCacheWorker.field_c.length;
               }
               var7 = stackIn_19_0;
               if (re.field_a.length <= ud.field_e.length) {

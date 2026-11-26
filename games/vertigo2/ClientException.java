@@ -149,7 +149,7 @@ final class ClientException extends RuntimeException {
           var8 = 0;
           if (gd.field_j != null && (null != sf.field_f ||
             te.field_D != null ||
-            null != qh.field_e ||
+            null != SectorCacheStore.field_e ||
             MouseWheelInput.field_b != null)) {
             for (var9 = 0; ol.field_A > var9; var9++) {
               var10_int = gd.field_j.field_fc[var9] & 255;
@@ -169,9 +169,9 @@ final class ClientException extends RuntimeException {
                   var5_int = 1;
                 }
               }
-              if (null != qh.field_e &&
-                null != qh.field_e[var9]) {
-                var11_intLifetime1 = qh.field_e[var9][var10_int];
+              if (null != SectorCacheStore.field_e &&
+                null != SectorCacheStore.field_e[var9]) {
+                var11_intLifetime1 = SectorCacheStore.field_e[var9][var10_int];
                 if (var7 < var11_intLifetime1) {
                   var7 = var11_intLifetime1;
                 }
@@ -302,13 +302,13 @@ final class ClientException extends RuntimeException {
                 cn.b(false) &&
                 ao.field_N != var13.field_Pb) {
                 if (var13.field_Tb.field_S != null) {
-                  var27 = var13.field_Tb.j(-21391) + ia.field_G * 2;
+                  var27 = var13.field_Tb.j(-21391) + NetworkArchiveRequest.field_G * 2;
                   var13.field_Tb.a(113, var27, Archive.field_f, var20, var26_int);
                   var26_int = var26_int + var27;
                 }
                 if (var13.field_Lb.field_S != null) {
                   if (param1 != vd.field_d) {
-                    var27Lifetime2 = var13.field_Lb.j(-21391) + ia.field_G * 2;
+                    var27Lifetime2 = var13.field_Lb.j(-21391) + NetworkArchiveRequest.field_G * 2;
                   } else {
                     var27Lifetime2 = 40;
                   }
@@ -350,10 +350,10 @@ final class ClientException extends RuntimeException {
             var26 = var31;
             var25Lifetime1 = var24;
             if (var24 != null) {
-              var25_intLifetime1 = var13.field_Qb.field_z.b(var24, var13.field_Fb + (-ia.field_G - ia.field_G));
+              var25_intLifetime1 = var13.field_Qb.field_z.b(var24, var13.field_Fb + (-NetworkArchiveRequest.field_G - NetworkArchiveRequest.field_G));
               var13.field_Qb.field_U = var13.field_Ub * 256 / lp.field_D;
               var13.field_Qb.field_S = var24;
-              var13.field_Qb.a(125, -(ia.field_G * 2) + var13.field_Fb, Archive.field_f * var25_intLifetime1, var20, ia.field_G);
+              var13.field_Qb.a(125, -(NetworkArchiveRequest.field_G * 2) + var13.field_Fb, Archive.field_f * var25_intLifetime1, var20, NetworkArchiveRequest.field_G);
               var20 = var20 + Archive.field_f * var25_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
@@ -473,9 +473,9 @@ final class ClientException extends RuntimeException {
                       var30 = 1;
                     }
                   }
-                  if (qh.field_e != null &&
-                    null != qh.field_e[var28_int]) {
-                    var31_intLifetime1 = qh.field_e[var28_int][var29];
+                  if (SectorCacheStore.field_e != null &&
+                    null != SectorCacheStore.field_e[var28_int]) {
+                    var31_intLifetime1 = SectorCacheStore.field_e[var28_int][var29];
                     if (var31_intLifetime1 != 0 &&
                       !DirectByteStorage.field_g &&
                       !var13.field_Zb) {

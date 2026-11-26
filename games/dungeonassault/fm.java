@@ -169,8 +169,8 @@ final class fm {
           var7 = PcmOutputWorker.field_e.field_b / 2;
           ByteStorage.a(var4_int, (byte) 41, param1, var5Lifetime1 - var7, true);
           ByteStorage.a(var4_int, (byte) 81, param1, -var7 + var5Lifetime1 + param2, true);
-          vf.a(param2, true, var4_int - var6, 118, var5Lifetime1);
-          vf.a(param2, true, var4_int - (var6 - param1), 101, var5Lifetime1);
+          ArchiveRequest.a(param2, true, var4_int - var6, 118, var5Lifetime1);
+          ArchiveRequest.a(param2, true, var4_int - (var6 - param1), 101, var5Lifetime1);
           var8 = 37;
           var9 = 20;
           var10 = -var9 + var4_int;

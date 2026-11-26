@@ -127,9 +127,9 @@ final class nk {
           }
           break;
         }
-        var3_int = -this.field_t + DualLinkDequeIterator.field_e * eh.field_a + (320 - DualLinkDequeIterator.field_e / 2);
+        var3_int = -this.field_t + DualLinkDequeIterator.field_e * SectorCacheStore.field_a + (320 - DualLinkDequeIterator.field_e / 2);
         var4 = uh.field_b * DualLinkDequeIterator.field_e + 240 - DualLinkDequeIterator.field_e / 2 - this.field_h;
-        var5 = eh.field_a + wf.field_c.field_f.field_c * uh.field_b;
+        var5 = SectorCacheStore.field_a + wf.field_c.field_f.field_c * uh.field_b;
         var6 = 16724787;
         var7 = oj.a((byte) 47, this.field_f);
         if (var5 >= 0 &&
@@ -227,25 +227,25 @@ final class nk {
             var10 = this.a(var5, var7, (byte) -64);
             var11 = 255 & var10;
             if (0 < var11) {
-              var12 = 320 + (DualLinkDequeIterator.field_e * (var11 + eh.field_a) + (-(DualLinkDequeIterator.field_e / 2) - this.field_t));
+              var12 = 320 + (DualLinkDequeIterator.field_e * (var11 + SectorCacheStore.field_a) + (-(DualLinkDequeIterator.field_e / 2) - this.field_t));
               var13 = -this.field_h + (DualLinkDequeIterator.field_e * uh.field_b + (240 - DualLinkDequeIterator.field_e / 2));
               var26.c(-32 + var12, var13 - 32);
             }
             var12 = (65280 & var10) >> 8;
             if (var12 > 0) {
-              var13 = (-var12 + eh.field_a) * DualLinkDequeIterator.field_e + (320 - (DualLinkDequeIterator.field_e / 2 + this.field_t));
+              var13 = (-var12 + SectorCacheStore.field_a) * DualLinkDequeIterator.field_e + (320 - (DualLinkDequeIterator.field_e / 2 + this.field_t));
               var14_int = -this.field_h + (-(DualLinkDequeIterator.field_e / 2) + 240 + uh.field_b * DualLinkDequeIterator.field_e);
               var26.c(-32 + var13, var14_int - 32);
             }
             var13 = var10 >> 16 & 255;
             if (var13 > 0) {
-              var14_int = -this.field_t + (-(DualLinkDequeIterator.field_e / 2) + DualLinkDequeIterator.field_e * eh.field_a) + 320;
+              var14_int = -this.field_t + (-(DualLinkDequeIterator.field_e / 2) + DualLinkDequeIterator.field_e * SectorCacheStore.field_a) + 320;
               var15 = -this.field_h + ((var13 + uh.field_b) * DualLinkDequeIterator.field_e + 240) - DualLinkDequeIterator.field_e / 2;
               var26.c(-32 + var14_int, -32 + var15);
             }
             var14_int = (var10 & -16777216) >> 24;
             if (var14_int > 0) {
-              var15 = DualLinkDequeIterator.field_e * eh.field_a + 320 - DualLinkDequeIterator.field_e / 2 - this.field_t;
+              var15 = DualLinkDequeIterator.field_e * SectorCacheStore.field_a + 320 - DualLinkDequeIterator.field_e / 2 - this.field_t;
               var16 = -this.field_h + 240 + ((-var14_int + uh.field_b) * DualLinkDequeIterator.field_e - DualLinkDequeIterator.field_e / 2);
               var26.c(-32 + var15, -32 + var16);
             }
@@ -524,7 +524,7 @@ final class nk {
           ob.field_I.b(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
           var4 = 32;
           var5 = 526;
-          if (wj.field_m == 1) {
+          if (ArchiveRequest.field_m == 1) {
             var5 = 465;
             var4 = 48;
           }
@@ -534,10 +534,10 @@ final class nk {
         if (decompiledSharedTail3) {
           ob.field_I.b(CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(wf.field_c.field_e[0].field_d)}, ke.field_a), 400, 32, 16777215, -1);
         }
-        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", ug.field_o, cd.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", b.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{gl.field_c, gl.field_c, gl.field_c + " II", gl.field_c + " III", MidiPcmStream.field_B, ob.field_E}};
+        var31 = new String[][]{new String[]{MusicPatchPcmStream.field_l, MusicPatchPcmStream.field_l + " I", MusicPatchPcmStream.field_l + " II", MusicPatchPcmStream.field_l + " III", nd.field_f, ob.field_L}, new String[]{am.field_g, am.field_g + " I", am.field_g + " II", am.field_g + " III", p.field_e, kd.field_b}, new String[]{oj.field_o, oj.field_o + " I", oj.field_o + " II", oj.field_o + " III", ug.field_o, NetworkArchiveRequest.field_r}, new String[]{fd.field_g, fd.field_g + " I", fd.field_g + " II", fd.field_g + " III", b.field_q, ua.field_b}, new String[]{q.field_c, q.field_c + " I", q.field_c + " II", q.field_c + " III", MidiPcmStream.field_B, ob.field_E}, new String[]{kg.field_l, kg.field_l + " I", kg.field_l + " II", kg.field_l + " III", de.field_c, ua.field_d}, new String[]{gl.field_c, gl.field_c, gl.field_c + " II", gl.field_c + " III", MidiPcmStream.field_B, ob.field_E}};
         var5 = this.field_f;
         var6 = 0;
-        var7 = uh.field_b * wf.field_c.field_f.field_c + eh.field_a;
+        var7 = uh.field_b * wf.field_c.field_f.field_c + SectorCacheStore.field_a;
         if (var7 >= 0 &&
           var7 < wf.field_c.field_f.field_i &&
           wf.field_c.field_f.field_o[var7] == 7) {
@@ -576,9 +576,9 @@ final class nk {
                 SoftwareRasterizer.drawRectangleBorderAlpha(var11, var12, var10, var10, 3, 16777215, 128);
               }
               if (!(ua.field_a < var11) &&
-                !(var12 > vl.field_d) &&
+                !(var12 > DiskCacheWorker.field_d) &&
                 !(ua.field_a >= var10 + var11) &&
-                !(vl.field_d >= (var12 + var10))) {
+                !(DiskCacheWorker.field_d >= (var12 + var10))) {
                 SoftwareRasterizer.fillRectangleAlpha(var11 + 6, var12 + 6, var10 - 12, var10 - 12, 16777215, 128);
                 var6 = 0;
                 var5 = var8;
@@ -1080,9 +1080,9 @@ final class nk {
             SoftwareRasterizer.fillCircleAlpha(614, 26, 16, 0, 128);
           }
           if (ua.field_a >= 598 &&
-            vl.field_d >= 10 &&
+            DiskCacheWorker.field_d >= 10 &&
             ua.field_a <= 630 &&
-            vl.field_d <= 42) {
+            DiskCacheWorker.field_d <= 42) {
             ob.field_I.a(MusicPatchPcmStream.field_n[25], 635, 49, 0, 0);
             ob.field_I.a(MusicPatchPcmStream.field_n[25], 634, 50, 0, 0);
             ob.field_I.a(MusicPatchPcmStream.field_n[25], 635, 50, 16777215, -1);
@@ -1103,9 +1103,9 @@ final class nk {
             ug.a(101, -(2 * var19) + var18, -(2 * var19) + var17, var16 + 2 * var19, var15 + var19 * 2);
             jd.field_c.a(sa.field_d[this.field_m], var17 - var19, -var19 + var18, var15, var16, 16777215, 0, 0, 1, 16);
             if (ua.field_a >= var17 - 2 * var19 &&
-              vl.field_d >= (-(var19 * 2) + var18) &&
+              DiskCacheWorker.field_d >= (-(var19 * 2) + var18) &&
               ua.field_a < (var15 + var17) &&
-              var16 + var18 > vl.field_d) {
+              var16 + var18 > DiskCacheWorker.field_d) {
               this.field_j = true;
             }
             decompiledSharedTail1 = (var20 != 0);
@@ -1932,9 +1932,9 @@ final class nk {
         if ((stackIn_37_0 == stackIn_37_1 ||
           3 < this.field_b) &&
           (ua.field_a >= 598 &&
-          vl.field_d >= 10 &&
+          DiskCacheWorker.field_d >= 10 &&
           ua.field_a <= 630 &&
-          vl.field_d <= 42 &&
+          DiskCacheWorker.field_d <= 42 &&
           1 == gi.field_e)) {
           stackIn_48_0 = !(df.field_f);
           df.field_f = stackIn_48_0;
@@ -2391,9 +2391,9 @@ final class nk {
             bl.field_p = var4Lifetime2;
           }
         }
-        mm.field_C = mm.field_C - (vl.field_d - ua.field_a);
+        mm.field_C = mm.field_C - (DiskCacheWorker.field_d - ua.field_a);
         AccountNameAvailabilityValidator.field_r = AccountNameAvailabilityValidator.field_r - ua.field_a;
-        a.field_r = a.field_r - vl.field_d;
+        a.field_r = a.field_r - DiskCacheWorker.field_d;
         if (param1) {
           while (nf.e(32722)) {
             this.a(true);
@@ -2423,7 +2423,7 @@ final class nk {
             }
             if ((lg.field_a & 4) != 0) {
               var4Lifetime3 = (-ua.field_a + this.field_e) / 4;
-              var5Lifetime1 = (-vl.field_d + this.field_p) / 4;
+              var5Lifetime1 = (-DiskCacheWorker.field_d + this.field_p) / 4;
               var6 = var4Lifetime3 * 4;
               var7_intLifetime1 = var5Lifetime1 * 4;
               if (var4Lifetime3 != 0 ||
@@ -2435,11 +2435,11 @@ final class nk {
               }
               this.a(param0 - 28713);
               if (var19 != 0) {
-                this.field_p = vl.field_d;
+                this.field_p = DiskCacheWorker.field_d;
                 this.field_e = ua.field_a;
               }
             } else {
-              this.field_p = vl.field_d;
+              this.field_p = DiskCacheWorker.field_d;
               this.field_e = ua.field_a;
             }
             BufferedSocket.field_a.a(param0 - 28843);
@@ -2457,18 +2457,18 @@ final class nk {
             }
             boolean decompiledFrameCompleted0 = true;
             if (null != this.field_s) {
-              eh.field_a = (-320 + (ua.field_a + DualLinkDequeIterator.field_e / 2 + this.field_t)) / DualLinkDequeIterator.field_e;
-              uh.field_b = (this.field_h + (DualLinkDequeIterator.field_e / 2 + (vl.field_d - 240))) / DualLinkDequeIterator.field_e;
+              SectorCacheStore.field_a = (-320 + (ua.field_a + DualLinkDequeIterator.field_e / 2 + this.field_t)) / DualLinkDequeIterator.field_e;
+              uh.field_b = (this.field_h + (DualLinkDequeIterator.field_e / 2 + (DiskCacheWorker.field_d - 240))) / DualLinkDequeIterator.field_e;
               if (gi.field_e == 2 &&
                 !this.field_j &&
                 null != this.field_s) {
-                var4Lifetime3Lifetime1 = eh.field_a + uh.field_b * wf.field_c.field_f.field_c;
+                var4Lifetime3Lifetime1 = SectorCacheStore.field_a + uh.field_b * wf.field_c.field_f.field_c;
                 if (var4Lifetime3Lifetime1 >= 0 &&
                   var4Lifetime3Lifetime1 < wf.field_c.field_f.field_i &&
                   wf.field_c.field_f.field_o[var4Lifetime3Lifetime1] == 7) {
                   l.field_c = -1;
                   var23 = wf.field_c.a(var4Lifetime3Lifetime1, param0 - 28908);
-                  eh.field_a = var23.field_g;
+                  SectorCacheStore.field_a = var23.field_g;
                   uh.field_b = var23.field_h;
                   if (var23 != null) {
                   }
@@ -2481,15 +2481,15 @@ final class nk {
               }
               if (of.field_G == 1 &&
                 !this.field_j &&
-                vl.field_d < 360 &&
-                vl.field_d > 60) {
+                DiskCacheWorker.field_d < 360 &&
+                DiskCacheWorker.field_d > 60) {
                 this.a(85);
                 if (null != this.field_s) {
                   boolean decompiledFrameCompleted1 = true;
                   regionExit2: {
                     regionExit3: {
                       boolean decompiledFrameRemainder0 = true;
-                      var4Lifetime3Lifetime1 = eh.field_a + wf.field_c.field_f.field_c * uh.field_b;
+                      var4Lifetime3Lifetime1 = SectorCacheStore.field_a + wf.field_c.field_f.field_c * uh.field_b;
                       var5Lifetime1Lifetime1 = this.field_s.b(true);
                       var6Lifetime1 = ui.field_a[this.field_f][0];
                       var7_intLifetime1Lifetime1 = oj.a((byte) 47, this.field_f);
@@ -2511,7 +2511,7 @@ final class nk {
                           } else {
                             hd.field_j = ue.field_J;
                           }
-                          md.field_f = vl.field_d;
+                          md.field_f = DiskCacheWorker.field_d;
                           if (wl.field_a < 128) {
                             wl.field_a = 128;
                           }
@@ -2524,7 +2524,7 @@ final class nk {
                         if (decompiledFrameRemainder0) {
                           if ((var5Lifetime1Lifetime1 < var6Lifetime1) &&
                             (decompiledFrameRemainder0 = (gi.field_e == 1))) {
-                            md.field_f = vl.field_d;
+                            md.field_f = DiskCacheWorker.field_d;
                             wl.field_a = ua.field_a;
                             hd.field_j = ih.field_b;
                             if (wl.field_a < 128) {
@@ -2546,7 +2546,7 @@ final class nk {
                               System.out.println("Oops");
                             }
                             boolean decompiledFrameCompleted2 = true;
-                            var11_ref_kb = new kb(eh.field_a, uh.field_b, this.field_f, 0, this.field_s, wf.field_c);
+                            var11_ref_kb = new kb(SectorCacheStore.field_a, uh.field_b, this.field_f, 0, this.field_s, wf.field_c);
                             if (this.field_f == 6) {
                               boolean decompiledFrameCompleted5 = true;
                               var12 = this.a(var4Lifetime3Lifetime1, var7_intLifetime1Lifetime1, (byte) -74);
@@ -2569,7 +2569,7 @@ final class nk {
                                   var14_int++;
                                 }
                                 if (decompiledFrameCompleted5) {
-                                  var14 = new kb(var13_int + eh.field_a, uh.field_b, this.field_f, 0, this.field_s, wf.field_c);
+                                  var14 = new kb(var13_int + SectorCacheStore.field_a, uh.field_b, this.field_f, 0, this.field_s, wf.field_c);
                                   ((kb) (var14)).field_s = var11_ref_kb;
                                   wf.field_c.field_o.addLast(-96, (IntrusiveNode) (var14));
                                 }
@@ -2597,7 +2597,7 @@ final class nk {
                                   var15_int++;
                                 }
                                 if (decompiledFrameCompleted4) {
-                                  var15 = new kb(eh.field_a - var14_int, uh.field_b, this.field_f, 0, this.field_s, wf.field_c);
+                                  var15 = new kb(SectorCacheStore.field_a - var14_int, uh.field_b, this.field_f, 0, this.field_s, wf.field_c);
                                   var15.field_s = var11_ref_kb;
                                   wf.field_c.field_o.addLast(param0 - 28887, var15);
                                 }
@@ -2625,7 +2625,7 @@ final class nk {
                                   var16++;
                                 }
                                 if (decompiledFrameCompleted3) {
-                                  var16_ref_kb = new kb(eh.field_a, uh.field_b + var15_int, this.field_f, 0, this.field_s, wf.field_c);
+                                  var16_ref_kb = new kb(SectorCacheStore.field_a, uh.field_b + var15_int, this.field_f, 0, this.field_s, wf.field_c);
                                   var16_ref_kb.field_s = var11_ref_kb;
                                   wf.field_c.field_o.addLast(-128, var16_ref_kb);
                                 }
@@ -2652,7 +2652,7 @@ final class nk {
                                   var17_intLifetime1++;
                                 }
                                 if (decompiledFrameCompleted2) {
-                                  var17 = new kb(eh.field_a, uh.field_b - var16, this.field_f, 0, this.field_s, wf.field_c);
+                                  var17 = new kb(SectorCacheStore.field_a, uh.field_b - var16, this.field_f, 0, this.field_s, wf.field_c);
                                   var17.field_s = var11_ref_kb;
                                   wf.field_c.field_o.addLast(param0 ^ -28908, var17);
                                 }
@@ -2764,7 +2764,7 @@ final class nk {
                       uh.field_b = var26.field_h;
                       stackIn_498_0 = var26;
                     }
-                    eh.field_a = stackIn_498_0.field_g;
+                    SectorCacheStore.field_a = stackIn_498_0.field_g;
                     if (this.field_s == var9_ref_kb.field_p &&
                       var9_ref_kb.field_F < jk.field_j[var9_ref_kb.field_C]) {
                       var10 = ui.field_a[var9_ref_kb.field_C];
@@ -2774,7 +2774,7 @@ final class nk {
                         var5Lifetime1Lifetime1 >= var10[var12Lifetime1]) {
                         var5Lifetime1Lifetime1 = var5Lifetime1Lifetime1 - var10[var12Lifetime1];
                         MouseInputListener.a(mh.field_a[3], (byte) -11);
-                        wf.field_c.field_o.addLast(-125, new kb(eh.field_a, uh.field_b, var9_ref_kb.field_C, var12Lifetime1, this.field_s, wf.field_c));
+                        wf.field_c.field_o.addLast(-125, new kb(SectorCacheStore.field_a, uh.field_b, var9_ref_kb.field_C, var12Lifetime1, this.field_s, wf.field_c));
                         var9_ref_kb.field_C = -1;
                         var28 = new IntrusiveDeque();
                         while (!wf.field_c.field_o.isEmpty(-3088)) {
@@ -3039,7 +3039,7 @@ final class nk {
             mm.field_A = new vg(5, 65530, AccountNameAvailabilityValidator.field_r, mm.field_C, a.field_r, nh.field_b, new int[]{wf.field_c.field_e[0].field_d * 105 + wf.field_c.field_x});
           }
           if (!n.b((byte) 31)) {
-            vl.a(3, 10, mm.field_A);
+            DiskCacheWorker.a(3, 10, mm.field_A);
           }
         }
         if (param0 != -1) {

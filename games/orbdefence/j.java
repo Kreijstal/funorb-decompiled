@@ -107,7 +107,7 @@ final class j {
               var1_int = var1_int + DualLinkDequeIterator.field_b;
             }
             if (var4 >= 0) {
-              ck.field_g.b(var6, var8Lifetime1, vl.field_f + var1_int, var5, -1);
+              ck.field_g.b(var6, var8Lifetime1, DiskCacheWorker.field_f + var1_int, var5, -1);
               var1_int = var1_int + (DualLinkDequeIterator.field_b - (-gg.field_N - el.field_D));
             } else {
               jd.field_a.b(var6, var8Lifetime1, var1_int + fe.field_c, var5, -1);

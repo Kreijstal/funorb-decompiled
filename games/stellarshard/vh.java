@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vh {
-    private rk field_j;
-    private ph field_f;
+    private DiskCacheWorker field_j;
+    private NetworkArchiveRequest field_f;
     private PacketBuffer field_d;
     private java.math.BigInteger field_b;
     private wc[] field_a;
@@ -28,7 +28,7 @@ final class vh {
           }
         }
         if (param0 != -123) {
-          this.field_f = (ph) null;
+          this.field_f = (NetworkArchiveRequest) null;
         }
         var4 = 0;
         var2Lifetime1 = var4;
@@ -102,7 +102,7 @@ final class vh {
         }
     }
 
-    final wc a(int param0, gi param1, gi param2, boolean param3, int param4) {
+    final wc a(int param0, SectorCacheStore param1, SectorCacheStore param2, boolean param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -217,7 +217,7 @@ final class vh {
         }
     }
 
-    vh(fb param0, rk param1) {
+    vh(fb param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -254,7 +254,7 @@ final class vh {
         if (this.field_f.field_w) {
           return false;
         }
-        var11 = new PacketBuffer(this.field_f.g(-27203));
+        var11 = new PacketBuffer(this.field_f.getData(-27203));
         var11.position = 5;
         var3 = var11.readUnsignedByte(4);
         var11.position = var11.position + 72 * var3;
@@ -285,7 +285,7 @@ final class vh {
         return true;
     }
 
-    private vh(fb param0, rk param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private vh(fb param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_g = param0;
           this.field_j = param1;

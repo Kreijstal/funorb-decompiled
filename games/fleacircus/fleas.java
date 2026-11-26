@@ -208,7 +208,7 @@ public final class fleas extends NetworkGameClient {
             3 != param4) {
             cl.field_d[param2] = 1;
             c.field_U = true;
-            fh.$cfr$intArgs$a$cb0bc10e6b69(-59, ah.field_a, 100, 63);
+            fh.$cfr$intArgs$a$cb0bc10e6b69(-59, SectorCacheStore.field_a, 100, 63);
           }
           if (16 == fl.field_c[param3][param0] ||
             fl.field_c[param3][param0] == 29) {
@@ -840,7 +840,7 @@ public final class fleas extends NetworkGameClient {
             } else {
               stackIn_12_1 = true;
             }
-            af.a((java.awt.Canvas) (stackIn_11_0), stackIn_12_1, param0);
+            DiskCacheWorker.a((java.awt.Canvas) (stackIn_11_0), stackIn_12_1, param0);
             return;
           }
           if (!md.field_T) {
@@ -854,8 +854,8 @@ public final class fleas extends NetworkGameClient {
           }
           boolean decompiledFrameRemainder0 = true;
           if (~bc.field_V != ~ab.field_b) {
-            if (af.field_g >= 16) {
-              if (af.field_g == 16 &&
+            if (DiskCacheWorker.field_g >= 16) {
+              if (DiskCacheWorker.field_g == 16 &&
                 bc.field_V == 10) {
                 fh.$cfr$intArgs$a$cb0bc10e6b69(114, jd.field_q, 100, 63);
               }
@@ -869,7 +869,7 @@ public final class fleas extends NetworkGameClient {
               } else {
                 pi.field_b[bc.field_V].f(2);
               }
-              var3 = -af.field_g + 32 + 1;
+              var3 = -DiskCacheWorker.field_g + 32 + 1;
               var3 = var3 * 16;
               if (var3 > 255) {
                 var3 = 255;
@@ -886,7 +886,7 @@ public final class fleas extends NetworkGameClient {
               } else {
                 pi.field_b[ab.field_b].f(2);
               }
-              var3Lifetime2 = 1 + af.field_g;
+              var3Lifetime2 = 1 + DiskCacheWorker.field_g;
               var3Lifetime2 = var3Lifetime2 * 16;
               if (var3Lifetime2 > 255) {
                 var3Lifetime2 = 255;
@@ -929,7 +929,7 @@ public final class fleas extends NetworkGameClient {
             lf.a(pd.field_k, pd.field_k[0].field_w, pd.field_k[0].field_t, (byte) 100);
           }
           if (vk.field_L != 0) {
-            var3Lifetime1 = af.field_g * 256 / 32;
+            var3Lifetime1 = DiskCacheWorker.field_g * 256 / 32;
             if (var3Lifetime1 > 0) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_d, SoftwareRasterizer.field_k, 0, var3Lifetime1);
             }
@@ -987,7 +987,7 @@ public final class fleas extends NetworkGameClient {
           va.b((byte) 126);
           ng.clearStaticReferences(0);
           w.clearStaticReferences(5);
-          af.a(105);
+          DiskCacheWorker.a(105);
           uf.resetStaticState(true);
           k.a(-40);
           BufferedSocket.clearStaticReferences(123167272);
@@ -1062,13 +1062,13 @@ public final class fleas extends NetworkGameClient {
           de.clearStaticReferences(0);
           g.resetStaticState(false);
           bf.a(false);
-          fk.i(105);
-          ah.a(true);
-          qh.resetStaticState(false);
+          NetworkArchiveRequest.i(105);
+          SectorCacheStore.a(true);
+          DiskArchiveRequest.resetStaticState(false);
           cg.b(1);
           BoundedRandomAccessFile.clearStaticReferences(-930374320);
           u.resetStaticState(-2355);
-          dl.releaseDeclaredStaticReferences(2);
+          ArchiveRequest.releaseDeclaredStaticReferences(2);
           ek.clearStaticReferences((byte) -42);
           ic.discardDeclaredStaticReferences(-101);
           mc.clearStaticReferences((byte) 87);
@@ -1319,10 +1319,10 @@ public final class fleas extends NetworkGameClient {
                   jj.a(15.0f, sa.a(DualLinkNode.field_l, "", gk.field_G, sc.field_c, (byte) 46), true);
                   return false;
                 }
-                jj.a(10.0f, sa.a(ib.field_f, "", fk.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
+                jj.a(10.0f, sa.a(ib.field_f, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
                 return false;
               }
-              jj.a(5.0f, sa.a(pb.field_a, "", fk.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
+              jj.a(5.0f, sa.a(pb.field_a, "", NetworkArchiveRequest.field_x, AccountNameAvailabilityValidator.field_n, (byte) 46), true);
               return false;
             }
             jj.a(3.0f, sa.a(a.field_a, "basic", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
@@ -1685,7 +1685,7 @@ public final class fleas extends NetworkGameClient {
               md.field_T = true;
             }
           }
-          if (!qh.c((byte) 79)) {
+          if (!DiskArchiveRequest.c((byte) 79)) {
             do {
               var2 = (hi) (a.field_e.removeFirst(-22033));
               if (null == var2) {
@@ -1738,29 +1738,29 @@ public final class fleas extends NetworkGameClient {
               }
             }
             if (decompiledFrameRemainder0) {
-              af.field_g = af.field_g + 1;
-              if (af.field_g == 16 &&
+              DiskCacheWorker.field_g = DiskCacheWorker.field_g + 1;
+              if (DiskCacheWorker.field_g == 16 &&
                 ab.field_b == 10) {
                 BufferedSocket.b(94);
               }
               if (ab.field_b >= 0) {
                 pi.field_b[ab.field_b].e(-400);
               }
-              decompiledFrameRemainder0 = (af.field_g == 32);
+              decompiledFrameRemainder0 = (DiskCacheWorker.field_g == 32);
               if (decompiledFrameRemainder0) {
                 if (ab.field_b == 2) {
                   m.field_b = null;
                 }
                 ab.field_b = bc.field_V;
-                af.field_g = 0;
+                DiskCacheWorker.field_g = 0;
                 decompiledFrameRemainder0 = (var3 != 0);
               }
             }
           }
           if (decompiledFrameRemainder0) {
             if (vk.field_L == 1) {
-              af.field_g = af.field_g + 1;
-              decompiledFrameRemainder0 = (32 == af.field_g);
+              DiskCacheWorker.field_g = DiskCacheWorker.field_g + 1;
+              decompiledFrameRemainder0 = (32 == DiskCacheWorker.field_g);
               if (decompiledFrameRemainder0) {
                 if (hi.a((byte) -72)) {
                   ml.d((byte) 106);
@@ -1776,15 +1776,15 @@ public final class fleas extends NetworkGameClient {
             }
             if (decompiledFrameRemainder0) {
               if (2 != vk.field_L) {
-                af.field_g = af.field_g - 1;
-                decompiledFrameRemainder0 = (af.field_g == 0);
+                DiskCacheWorker.field_g = DiskCacheWorker.field_g - 1;
+                decompiledFrameRemainder0 = (DiskCacheWorker.field_g == 0);
                 if (decompiledFrameRemainder0) {
                   vk.field_L = 0;
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!qh.c((byte) 123)) {
+                if (!DiskArchiveRequest.c((byte) 123)) {
                   fg.field_x = ed.a(16777215, 4);
                   if (null != wi.field_p) {
                     wi.field_p.a(param0 + 84);
@@ -1904,7 +1904,7 @@ public final class fleas extends NetworkGameClient {
           me.field_k = qf.a(pb.field_a, "", "FLEA_spring").b().resample(var2);
           bf.field_d = qf.a(pb.field_a, "", "FLEA_spinplatform").b().resample(var2);
           ab.field_a = qf.a(pb.field_a, "", "FLEA_bomb").b().resample(var2);
-          ah.field_a = qf.a(pb.field_a, "", "FLEA_drowning").b().resample(var2);
+          SectorCacheStore.field_a = qf.a(pb.field_a, "", "FLEA_drowning").b().resample(var2);
           ResourceArchive.field_n = qf.a(pb.field_a, "", "FLEA_fanloop").b().resample(var2);
           hi.field_p = qf.a(pb.field_a, "", "FLEA_spider").b().resample(var2);
           uh.field_s = qf.a(pb.field_a, "", "FLEA_teleport_in").b().resample(var2);
@@ -2106,7 +2106,7 @@ public final class fleas extends NetworkGameClient {
               decompiledSharedTail0 = (var7 != 0);
             }
             if (decompiledSharedTail0) {
-              var6 = param0.b(qh.a(3, -1 + var5), (byte) -87);
+              var6 = param0.b(DiskArchiveRequest.a(3, -1 + var5), (byte) -87);
               var4[var5] = var4[var6];
             }
             var5++;
@@ -2287,7 +2287,7 @@ public final class fleas extends NetworkGameClient {
           if (DualLinkNode.field_o == 1) {
             return;
           }
-          qh.field_z = 0;
+          DiskArchiveRequest.field_z = 0;
           MouseWheelInput.field_e = 0;
           var3Lifetime1 = 0;
           boolean decompiledNaturalLoopExit1 = false;
@@ -2295,7 +2295,7 @@ public final class fleas extends NetworkGameClient {
             stackIn_61_0 = cl.field_d[var3Lifetime1];
             if (var24 == 0) {
               if (stackIn_61_0 == 0) {
-                qh.field_z = qh.field_z + 1;
+                DiskArchiveRequest.field_z = DiskArchiveRequest.field_z + 1;
               } else {
                 MouseWheelInput.field_e = MouseWheelInput.field_e + 1;
               }
@@ -2306,7 +2306,7 @@ public final class fleas extends NetworkGameClient {
           }
           if (decompiledNaturalLoopExit1) {
             MouseWheelInput.field_e = MouseWheelInput.field_e - pl.field_f;
-            stackIn_61_0 = ~qh.field_z;
+            stackIn_61_0 = ~DiskArchiveRequest.field_z;
           }
           if (stackIn_61_0 != -1) {
             ProxyAuthenticationRequiredException.field_b = ProxyAuthenticationRequiredException.field_b - 1;
@@ -2478,7 +2478,7 @@ public final class fleas extends NetworkGameClient {
             if (jk.field_l == 10 &&
               pg.field_f < 360 &&
               ProxyAuthenticationRequiredException.field_b == 0 &&
-              qh.field_y == 0) {
+              DiskArchiveRequest.field_y == 0) {
               pg.field_f = pg.field_f + 1;
             }
           }
@@ -2608,8 +2608,8 @@ public final class fleas extends NetworkGameClient {
                       }
                       var19Lifetime1++;
                       var14 = 1;
-                      if (~var19Lifetime1 == ~qh.field_z &&
-                        ~ia.field_m[field_E][var2_int].field_f == ~qh.field_z) {
+                      if (~var19Lifetime1 == ~DiskArchiveRequest.field_z &&
+                        ~ia.field_m[field_E][var2_int].field_f == ~DiskArchiveRequest.field_z) {
                         hg.a(-25389, 11, 244, var2_int);
                       }
                     }

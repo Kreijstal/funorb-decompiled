@@ -89,8 +89,8 @@ final class vl {
                   this.field_j = (-(this.field_a * var12) + var26Lifetime1) / var10;
                   var3.velocityX = (var28Lifetime1 - var12 * var3.velocityY) / var10;
                   if (a.entities[var2].kind == -1) {
-                    if (el.field_I <= 0) {
-                      el.field_I = 50;
+                    if (DiskArchiveRequest.field_I <= 0) {
+                      DiskArchiveRequest.field_I = 50;
                       this.field_p = this.field_p - 1;
                     }
                   } else {

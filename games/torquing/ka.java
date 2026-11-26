@@ -92,7 +92,7 @@ final class ka extends IntrusiveNode {
             di.field_e[0] = 5;
           } else if (go.field_x != 2) {
             if (go.field_x == 3) {
-              if (!nk.field_u.privilegedTasksEnabled) {
+              if (!ArchiveRequest.field_u.privilegedTasksEnabled) {
                 var3_int = rf.a(dd.field_e, bo.field_e, field_j, 115, ak.field_h);
               } else {
                 var3_int = rf.a(dd.field_e, bo.field_e, field_j, 84, hj.field_a);
@@ -462,7 +462,7 @@ final class ka extends IntrusiveNode {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (pb.field_g.indexOf(var5Lifetime1) == -1) {
+              if (SectorCacheStore.field_g.indexOf(var5Lifetime1) == -1) {
                 stackIn_46_0 = va.field_H;
                 return stackIn_46_0;
               }

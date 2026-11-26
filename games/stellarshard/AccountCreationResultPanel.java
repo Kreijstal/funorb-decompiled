@@ -9,7 +9,7 @@ final class AccountCreationResultPanel extends ck implements oi {
     private boolean field_mb;
 
     final void p(int param0) {
-        this.showAccountCreationResult(fb.createAccountErrorResult(248, true, ki.field_r), -8895, true);
+        this.showAccountCreationResult(fb.createAccountErrorResult(248, true, ArchiveRequest.field_r), -8895, true);
         if (param0 < 77) {
           this.field_nb = (mj) null;
         }
@@ -75,7 +75,7 @@ final class AccountCreationResultPanel extends ck implements oi {
                   di.a(1);
                 }
                 this.field_lb = true;
-                var4 = ki.field_r;
+                var4 = ArchiveRequest.field_r;
               }
             } else {
               var4 = jb.field_p;

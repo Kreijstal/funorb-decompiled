@@ -226,13 +226,13 @@ final class ak extends a {
     }
 
     final static void a(byte param0) {
-        if (uj.field_i != -ea.field_b + 0 &&
-          uj.field_i == -ea.field_b + 250) {
+        if (DiskCacheWorker.field_i != -ea.field_b + 0 &&
+          DiskCacheWorker.field_i == -ea.field_b + 250) {
         }
         if (param0 != 99) {
           return;
         }
-        uj.field_i = uj.field_i + 1;
+        DiskCacheWorker.field_i = DiskCacheWorker.field_i + 1;
     }
 
     final hc a(byte param0, int param1) {

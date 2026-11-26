@@ -82,7 +82,7 @@ final class pc extends tj {
             return stackIn_2_0;
           }
           if (this.a(0, param1) != ni.field_b) {
-            stackIn_7_0 = fj.field_x;
+            stackIn_7_0 = DiskArchiveRequest.field_x;
             return stackIn_7_0;
           }
           stackIn_5_0 = gd.field_j;

@@ -47,8 +47,8 @@ final class kc {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = sm.a(37, param1) ? 1 : 0;
-          var4 = sm.a(-128, param1) ? 1 : 0;
+          var3 = DiskArchiveRequest.a(37, param1) ? 1 : 0;
+          var4 = DiskArchiveRequest.a(-128, param1) ? 1 : 0;
           var5 = new rm();
           var5.field_b = (short)param1.g(16, 0);
           var5.field_x = bn.a(param0 ^ 30035, param1, var5.field_x, 16);
@@ -75,15 +75,15 @@ final class kc {
             var5.field_G = bn.a(0, param1, var5.field_G, 16);
             var5.field_C = bn.a(0, param1, var5.field_C, 16);
           }
-          if (sm.a(-127, param1)) {
+          if (DiskArchiveRequest.a(-127, param1)) {
             var5.field_a = bn.a(param0 - 30035, param1, var5.field_a, 16);
           }
           if (param0 != 30035) {
             stackIn_13_0 = (rm) null;
             return stackIn_13_0;
           }
-          if (sm.a(119, param1)) {
-            var5.field_P = pc.a(var5.field_P, (byte) -126, param1, 16);
+          if (DiskArchiveRequest.a(119, param1)) {
+            var5.field_P = DiskCacheWorker.a(var5.field_P, (byte) -126, param1, 16);
             var6 = 0;
             for (var7 = 0; var5.field_P.length > var7; var7++) {
               if ((var5.field_P[var7] & 255) > var6) {

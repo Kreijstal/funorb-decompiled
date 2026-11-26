@@ -136,26 +136,26 @@ final class b {
               pj.field_a = field_b;
               if (bj.field_E.b((byte) -124) != jf.field_h) {
                 if (bj.field_E.b((byte) -113) == pg.field_b) {
-                  w.field_g.a(1, vi.b(0));
+                  w.field_g.a(1, DiskCacheWorker.b(0));
                 }
               } else {
-                nj.field_k.a(1, vi.b(0));
+                nj.field_k.a(1, DiskCacheWorker.b(0));
               }
               fa.field_a = false;
               if (var11 != null) {
-                jd.a(0, vi.b(0), var11);
+                jd.a(0, DiskCacheWorker.b(0), var11);
               }
               if (0 >= ui.field_m &&
                 !vk.field_a) {
                 try {
-                  ac.a(vi.b(0), "unzap", -31185);
+                  ac.a(DiskCacheWorker.b(0), "unzap", -31185);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  ac.a(true, new Object[]{pa.a(l.field_b, 7)}, vi.b(0), "zap");
+                  ac.a(true, new Object[]{pa.a(l.field_b, 7)}, DiskCacheWorker.b(0), "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

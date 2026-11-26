@@ -582,7 +582,7 @@ class ci extends ei {
             if (null != ol.field_N.field_a) {
               kj.field_a = new lc(ol.field_N.field_a, 5200, 0);
               ol.field_N.field_a = null;
-              var6 = new gd(255, kj.field_a, new lc(ol.field_N.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, kj.field_a, new lc(ol.field_N.field_n, 12000, 0), 2097152);
             }
             if (null != kj.field_a) {
               if (hj.field_n == null) {
@@ -592,12 +592,12 @@ class ci extends ei {
                 hj.field_n[param1] = new lc(ol.field_N.field_r[param1], 12000, 0);
                 ol.field_N.field_r[param1] = null;
               }
-              var7 = new gd(param1, kj.field_a, hj.field_n[param1], 2097152);
+              var7 = new SectorCacheStore(param1, kj.field_a, hj.field_n[param1], 2097152);
             }
             if (param0 != -17288) {
               field_J = (String) null;
             }
-            var8 = ge.field_fb.a((byte) 14, param4, param1, (gd) (var6), (gd) (var7));
+            var8 = ge.field_fb.a((byte) 14, param4, param1, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param3) {
               var8.a((byte) 108);
             }
@@ -708,7 +708,7 @@ class ci extends ei {
           }
           this.field_L = 0;
         }
-        stackIn_32_1 = (!gd.field_e) && (SoftwareRasterizer.field_i <= BufferedSocket.field_k) && (SoftwareRasterizer.field_j > BufferedSocket.field_k) && (rf.field_b >= SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_b > rf.field_b);
+        stackIn_32_1 = (!SectorCacheStore.field_e) && (SoftwareRasterizer.field_i <= BufferedSocket.field_k) && (SoftwareRasterizer.field_j > BufferedSocket.field_k) && (rf.field_b >= SoftwareRasterizer.field_a) && (SoftwareRasterizer.field_b > rf.field_b);
         this.field_Db = stackIn_32_1;
         if (wh.field_f == 0) {
           this.field_kb = 0;
@@ -726,7 +726,7 @@ class ci extends ei {
           fg.field_b = true;
         }
         if (this.field_Db) {
-          gd.field_e = true;
+          SectorCacheStore.field_e = true;
         }
         SoftwareRasterizer.setClip(var8, var9, var10, var11);
         if (this.field_kb != 0 &&
@@ -804,7 +804,7 @@ class ci extends ei {
     }
 
     final void a(boolean param0, byte param1) {
-        gd.field_e = !param0 ? true : false;
+        SectorCacheStore.field_e = !param0 ? true : false;
         if (param1 != 88) {
           this.field_I = (IntrusiveDeque) null;
         }

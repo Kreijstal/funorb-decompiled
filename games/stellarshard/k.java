@@ -83,11 +83,11 @@ final class k {
               }
               incrementValue$1 = var6;
               var6++;
-              param4 = ki.field_z[incrementValue$1];
+              param4 = ArchiveRequest.field_z[incrementValue$1];
               dupTemp$2 = param0[param4];
               dupTemp$3 = param2[dupTemp$2];
               param2[dupTemp$2] = dupTemp$3 + 1;
-              ki.field_z[dupTemp$3] = param4;
+              ArchiveRequest.field_z[dupTemp$3] = param4;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1156,7 +1156,7 @@ final class wb {
                 }
                 var2 = ha.a("tocustomersupport", (byte) 126);
                 if (null != var2) {
-                  tn.field_y = va.a(param0 - 6, var2);
+                  NetworkArchiveRequest.field_y = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("changedisplayname", (byte) 103);
                 if (null != var2) {
@@ -2174,7 +2174,7 @@ final class wb {
                 }
                 var2 = ha.a("returntogame", (byte) 84);
                 if (null != var2) {
-                  tn.field_C = va.a(0, var2);
+                  NetworkArchiveRequest.field_C = va.a(0, var2);
                 }
                 var2 = ha.a("endgameresign", (byte) 34);
                 if (var2 != null) {

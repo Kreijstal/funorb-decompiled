@@ -50,7 +50,7 @@ class pj extends IntrusiveNode {
           if (param0 != -77) {
             return;
           }
-          var5_int = this.a((byte) 3, ua.field_a, vl.field_d, param3, param2) ? 1 : 0;
+          var5_int = this.a((byte) 3, ua.field_a, DiskCacheWorker.field_d, param3, param2) ? 1 : 0;
           stackIn_5_0 = (var5_int != 0) ? 0 : 1;
           if (stackIn_5_0 == (this.field_t ? 1 : 0)) {
             stackIn_9_1 = (var5_int != 0);
@@ -92,7 +92,7 @@ class pj extends IntrusiveNode {
           }
           break;
         }
-        var5 = wj.g(param0 ^ -16392);
+        var5 = ArchiveRequest.g(param0 ^ -16392);
         if (var5 != null) {
           mb.field_a.a(sl.field_ab, uk.field_c, 0, var5);
         }
@@ -484,7 +484,7 @@ class pj extends IntrusiveNode {
               fg.a(101, this.g(-8235));
               return param2;
             }
-            this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+            this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
             var8 = DelegatingCanvas.field_c;
             if (var8 != null) {
               if (var8.field_h instanceof wk) {
@@ -518,7 +518,7 @@ class pj extends IntrusiveNode {
                   fg.a(101, this.g(-8235));
                   return param2;
                 }
-                this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+                this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
                 var9 = DelegatingCanvas.field_c;
                 if (var9 != null) {
                   if (var9.field_h instanceof wk) {
@@ -545,7 +545,7 @@ class pj extends IntrusiveNode {
             fg.a(101, this.g(-8235));
             return param2;
           }
-          this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+          this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
           var10 = DelegatingCanvas.field_c;
           if (var10 != null) {
             if (var10.field_h instanceof wk) {
@@ -563,11 +563,11 @@ class pj extends IntrusiveNode {
           return param2;
         }
         if (var5 != 0) {
-          this.a(param1, param3, param0, of.field_K, ua.field_a, vl.field_d, this);
+          this.a(param1, param3, param0, of.field_K, ua.field_a, DiskCacheWorker.field_d, this);
           if (gi.field_e == 0) {
             if (of.field_G == 0 &&
               ud.field_j != 0) {
-              this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+              this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
               var15 = DelegatingCanvas.field_c;
               var6 = var15;
               if (var15 != null) {
@@ -593,7 +593,7 @@ class pj extends IntrusiveNode {
               param2 = false;
               if (of.field_G == 0 &&
                 ud.field_j != 0) {
-                this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+                this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
                 var16 = DelegatingCanvas.field_c;
                 var6Lifetime1 = var16;
                 if (var16 != null) {
@@ -621,7 +621,7 @@ class pj extends IntrusiveNode {
             fg.a(101, this.g(-8235));
             return param2;
           }
-          this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+          this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
           var17 = DelegatingCanvas.field_c;
           var6Lifetime2 = var17;
           if (var17 != null) {
@@ -649,7 +649,7 @@ class pj extends IntrusiveNode {
             fg.a(101, this.g(-8235));
             return param2;
           }
-          this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+          this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
           var11 = DelegatingCanvas.field_c;
           if (var11 != null) {
             if (var11.field_h instanceof wk) {
@@ -680,7 +680,7 @@ class pj extends IntrusiveNode {
           fg.a(101, this.g(-8235));
           return param2;
         }
-        this.a(param0, ua.field_a, (byte) -98, this, param3, vl.field_d);
+        this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
         var14 = DelegatingCanvas.field_c;
         if (var14 != null) {
           if (var14.field_h instanceof wk) {

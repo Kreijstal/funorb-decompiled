@@ -70,7 +70,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                           ah.a(kd.field_n, rk.field_b, -126, te.field_a);
                         } else {
                           if (var2 == 16) {
-                            ld.g(-1266);
+                            NetworkArchiveRequest.g(-1266);
                           } else {
                             if (var2 != 11 &&
                               var2 != 12) {

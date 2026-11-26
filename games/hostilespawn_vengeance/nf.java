@@ -577,7 +577,7 @@ final class nf extends IntrusiveNode {
               var31 = var15[var29Lifetime3Lifetime1 + 1];
               var32 = (var30 - var27Lifetime6Lifetime1) / 2 + var28_int * (var30 - var27Lifetime6Lifetime1);
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
-                var34 = um.a(var30 - var27Lifetime6Lifetime1, var32, 10179);
+                var34 = SectorCacheStore.a(var30 - var27Lifetime6Lifetime1, var32, 10179);
                 var32 = var32 + (-var28_int + var31);
                 this.field_i[var33] = (byte)(var34 * this.field_i[var33] + 32 >> 6);
               }
@@ -616,7 +616,7 @@ final class nf extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = um.a(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, 10179);
+                var34Lifetime1 = SectorCacheStore.a(-var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, var32Lifetime1, 10179);
                 var35 = var34Lifetime1 + (255 & this.field_l[var37]);
                 if (var35 < 0) {
                   var35 = 0;

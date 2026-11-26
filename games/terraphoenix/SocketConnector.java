@@ -45,7 +45,7 @@ abstract class SocketConnector {
         if (param0 <= 68) {
           return;
         }
-        rf.field_p = null;
+        ArchiveRequest.field_p = null;
     }
 
     final java.net.Socket createDirectSocket(boolean obfuscationGuard) throws IOException {

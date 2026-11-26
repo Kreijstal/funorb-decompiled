@@ -26,7 +26,7 @@ final class jg extends al {
             if (mc.field_b.field_r != null) {
               TutorialController.field_x = new ak(mc.field_b.field_r, 5200, 0);
               mc.field_b.field_r = null;
-              var6 = new ua(255, TutorialController.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, TutorialController.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
             }
             if (TutorialController.field_x != null) {
               if (null == ProxyAuthenticationRequiredException.field_b) {
@@ -36,9 +36,9 @@ final class jg extends al {
                 ProxyAuthenticationRequiredException.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
                 mc.field_b.field_s[param4] = null;
               }
-              var7 = new ua(param4, TutorialController.field_x, ProxyAuthenticationRequiredException.field_b[param4], 2097152);
+              var7 = new SectorCacheStore(param4, TutorialController.field_x, ProxyAuthenticationRequiredException.field_b[param4], 2097152);
             }
-            var8 = i.field_a.a(param2, param4, (ua) (var6), (ua) (var7), 115);
+            var8 = i.field_a.a(param2, param4, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 115);
             if (param3) {
               var8.c((byte) 2);
             }

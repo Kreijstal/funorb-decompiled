@@ -5,7 +5,7 @@ final class fd {
     static int[] field_a;
     static int[][] field_h;
     static int field_f;
-    static cd field_d;
+    static DiskCacheWorker field_d;
     static int[] field_c;
     static int[] field_b;
     static int[] field_e;
@@ -153,7 +153,7 @@ final class fd {
                   var7 = new StringBuilder(var6);
                   discarded$0 = var7.append(var5.substring(0, var6));
                   if (param2 != 130) {
-                    field_d = (cd) null;
+                    field_d = (DiskCacheWorker) null;
                   }
                   if (param0 > 0) {
                     discarded$1 = var7.append("/l=");

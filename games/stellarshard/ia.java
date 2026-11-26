@@ -63,7 +63,7 @@ final class ia extends tb implements oi {
     }
 
     final static int l(int param0) {
-        if (rk.field_f < 2) {
+        if (DiskCacheWorker.field_f < 2) {
           return 0;
         }
         if (bb.field_d == 0) {

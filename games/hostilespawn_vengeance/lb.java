@@ -169,7 +169,7 @@ final class lb {
                 var11_ref_StringLifetime3 = "";
               }
               s.field_b.a(var11_ref_StringLifetime3, 0);
-              ml.a(s.field_b, nb.field_L, 0, lm.field_z, ob.field_s);
+              ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
               s.field_b.a(true, s.field_b.field_i - var10);
             } else {
               ob.field_s.field_i = 0;
@@ -194,7 +194,7 @@ final class lb {
               s.field_b.d(86, 16);
               s.field_b.field_i = s.field_b.field_i + 1;
               var9 = s.field_b.field_i;
-              ml.a(s.field_b, nb.field_L, 0, lm.field_z, ob.field_s);
+              ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
               s.field_b.a(-var9 + s.field_b.field_i, -19720);
             }
             mb.d(-1, -22370);

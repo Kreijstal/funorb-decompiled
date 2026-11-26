@@ -23,7 +23,7 @@ final class ve {
         var7 = TorChallenge.field_F ? 1 : 0;
         if (param0 > 49) {
           if (0 == param1) {
-            var3 = sh.field_r;
+            var3 = ArchiveRequest.field_r;
           } else {
             if (1 != param1) {
               return;
@@ -59,7 +59,7 @@ final class ve {
         }
         ve.a(34, 8, 89);
         if (0 == param1) {
-          var3Lifetime1 = sh.field_r;
+          var3Lifetime1 = ArchiveRequest.field_r;
           if (param2 * 7 >> 3 <= var3Lifetime1) {
             if (0 == param1) {
               vk.a(param2, (byte) 87);

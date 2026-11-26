@@ -405,7 +405,7 @@ final class gb {
           if (kg.field_m == 2) {
             ab.field_j.a(-1, -1, 0, param2);
           } else {
-            ab.field_j.a(0, jc.a(ua.field_a, (byte) 71, vl.field_d), 0, param2);
+            ab.field_j.a(0, jc.a(ua.field_a, (byte) 71, DiskCacheWorker.field_d), 0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -425,7 +425,7 @@ final class gb {
     }
 
     final static void b(int param0) {
-        field_h = cd.field_t.readString(2);
+        field_h = NetworkArchiveRequest.field_t.readString(2);
         CharSequence var2 = (CharSequence) ((Object) field_h);
         sg.field_E = ua.a(-88, var2);
         if (param0 > -27) {

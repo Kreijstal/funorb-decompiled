@@ -135,7 +135,7 @@ final class ec {
           var3Lifetime1 = ma.field_c[9] >> 8;
           var4 = ma.field_c[10] >> 8;
           var5Lifetime1 = ma.field_c[11] >> 8;
-          var6Lifetime1 = uj.field_i << 4;
+          var6Lifetime1 = DiskCacheWorker.field_i << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = sb.a((byte) 79, var6Lifetime1) >> 8;
           var9Lifetime1 = FullscreenFocusCanvas.a((byte) 71, var6Lifetime1) >> 8;

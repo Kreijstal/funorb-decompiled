@@ -751,7 +751,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("players_x_of_y", false);
                 if (null != var2) {
-                  nq.field_I = in.a(0, var2);
+                  DiskArchiveRequest.field_I = in.a(0, var2);
                 }
                 var2 = tk.a("message_lobby", false);
                 if (var2 != null) {
@@ -847,7 +847,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("you_cannot_join_in_progress", false);
                 if (var2 != null) {
-                  ia.field_E = in.a(param0 ^ 0, var2);
+                  NetworkArchiveRequest.field_E = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("you_can_spectate", false);
                 if (var2 != null) {
@@ -887,7 +887,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("multiconst_clan", false);
                 if (var2 != null) {
-                  t.field_k = in.a(0, var2);
+                  DiskCacheWorker.field_k = in.a(0, var2);
                 }
                 var2 = tk.a("multiconst_friends", false);
                 if (var2 != null) {
@@ -1091,7 +1091,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("gameopt_pleaseselectoption2", false);
                 if (null != var2) {
-                  ia.field_H = in.a(0, var2);
+                  NetworkArchiveRequest.field_H = in.a(0, var2);
                 }
                 var2 = tk.a("gameopt_badnumplayers", false);
                 if (var2 != null) {
@@ -1497,7 +1497,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create", false);
                 if (null != var2) {
-                  nq.field_K = in.a(param0 ^ 0, var2);
+                  DiskArchiveRequest.field_K = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("create_pleasechooseapassword", false);
                 if (var2 != null) {
@@ -1893,7 +1893,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("unable_to_delete_ignore", false);
                 if (var2 != null) {
-                  t.field_n = in.a(0, var2);
+                  DiskCacheWorker.field_n = in.a(0, var2);
                 }
                 var2 = tk.a("friendlistfull", false);
                 if (var2 != null) {
@@ -2163,7 +2163,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mainmenu", false);
                 if (null != var2) {
-                  rk.field_x = in.a(0, var2);
+                  ArchiveRequest.field_x = in.a(0, var2);
                 }
                 var2 = tk.a("pausemenu", false);
                 if (var2 != null) {
@@ -2770,15 +2770,15 @@ final class wc extends da {
                 }
                 var2 = tk.a("members_expansion_benefits,0", false);
                 if (var2 != null) {
-                  nq.field_J[0] = in.a(0, var2);
+                  DiskArchiveRequest.field_J[0] = in.a(0, var2);
                 }
                 var2 = tk.a("members_expansion_benefits,1", false);
                 if (null != var2) {
-                  nq.field_J[1] = in.a(tk.a(param0, 0), var2);
+                  DiskArchiveRequest.field_J[1] = in.a(tk.a(param0, 0), var2);
                 }
                 var2 = tk.a("members_expansion_benefits,2", false);
                 if (var2 != null) {
-                  nq.field_J[2] = in.a(0, var2);
+                  DiskArchiveRequest.field_J[2] = in.a(0, var2);
                 }
                 var2 = tk.a("members_expansion_price_top", false);
                 if (null != var2) {

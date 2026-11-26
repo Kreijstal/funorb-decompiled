@@ -100,7 +100,7 @@ final class g {
         }
         if (al.a(lc.field_b, (byte) -94)) {
           fh.field_y[lc.field_b].c(20);
-          qh.field_g = lc.field_d;
+          SectorCacheStore.field_g = lc.field_d;
           vl.field_c = 0;
           lc.field_b = am.field_n;
           if (lc.field_b == -1) {
@@ -173,19 +173,19 @@ final class g {
           if (param0 != 7) {
             g.a((byte) 107);
           }
-          if (qh.field_f) {
+          if (SectorCacheStore.field_f) {
             j.field_n = null;
             mb.field_y = null;
             uh.field_Xb = null;
             fg.field_eb.clear(0);
             ml.field_z = 0;
             jq.field_e = 0;
-            t.field_l = 0;
+            DiskCacheWorker.field_l = 0;
             WidgetWrapper.field_D.clear(0);
-            qh.field_f = false;
+            SectorCacheStore.field_f = false;
           }
         } else {
-          qh.field_g = lc.field_d;
+          SectorCacheStore.field_g = lc.field_d;
           vl.field_c = 0;
           lc.field_b = am.field_n;
           if (lc.field_b != -1 &&
@@ -219,16 +219,16 @@ final class g {
               if (param0 != 7) {
                 g.a((byte) 107);
               }
-              if (qh.field_f) {
+              if (SectorCacheStore.field_f) {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
                 fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
-                t.field_l = 0;
+                DiskCacheWorker.field_l = 0;
                 WidgetWrapper.field_D.clear(0);
-                qh.field_f = false;
+                SectorCacheStore.field_f = false;
               }
               if (sk.field_g) {
                 ki.a((byte) -107);
@@ -246,19 +246,19 @@ final class g {
             }
             if (param0 != 7) {
               g.a((byte) 107);
-              if (qh.field_f) {
+              if (SectorCacheStore.field_f) {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
                 fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
-                t.field_l = 0;
+                DiskCacheWorker.field_l = 0;
                 WidgetWrapper.field_D.clear(0);
-                qh.field_f = false;
+                SectorCacheStore.field_f = false;
               }
             } else {
-              if (!qh.field_f) {
+              if (!SectorCacheStore.field_f) {
                 if (!sk.field_g) {
                   return;
                 }
@@ -274,9 +274,9 @@ final class g {
               fg.field_eb.clear(0);
               ml.field_z = 0;
               jq.field_e = 0;
-              t.field_l = 0;
+              DiskCacheWorker.field_l = 0;
               WidgetWrapper.field_D.clear(0);
-              qh.field_f = false;
+              SectorCacheStore.field_f = false;
             }
             if (sk.field_g) {
               ki.a((byte) -107);
@@ -308,16 +308,16 @@ final class g {
               if (param0 != 7) {
                 g.a((byte) 107);
               }
-              if (qh.field_f) {
+              if (SectorCacheStore.field_f) {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
                 fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
-                t.field_l = 0;
+                DiskCacheWorker.field_l = 0;
                 WidgetWrapper.field_D.clear(0);
-                qh.field_f = false;
+                SectorCacheStore.field_f = false;
               }
               if (sk.field_g) {
                 ki.a((byte) -107);
@@ -338,16 +338,16 @@ final class g {
             if (param0 != 7) {
               g.a((byte) 107);
             }
-            if (qh.field_f) {
+            if (SectorCacheStore.field_f) {
               j.field_n = null;
               mb.field_y = null;
               uh.field_Xb = null;
               fg.field_eb.clear(0);
               ml.field_z = 0;
               jq.field_e = 0;
-              t.field_l = 0;
+              DiskCacheWorker.field_l = 0;
               WidgetWrapper.field_D.clear(0);
-              qh.field_f = false;
+              SectorCacheStore.field_f = false;
             }
           } else {
             if (an.field_c) {
@@ -356,16 +356,16 @@ final class g {
               AccountCreationResultPanel.field_pb = null;
             }
             if (param0 == 7) {
-              if (qh.field_f) {
+              if (SectorCacheStore.field_f) {
                 j.field_n = null;
                 mb.field_y = null;
                 uh.field_Xb = null;
                 fg.field_eb.clear(0);
                 ml.field_z = 0;
                 jq.field_e = 0;
-                t.field_l = 0;
+                DiskCacheWorker.field_l = 0;
                 WidgetWrapper.field_D.clear(0);
-                qh.field_f = false;
+                SectorCacheStore.field_f = false;
               }
               if (!sk.field_g) {
                 return;
@@ -377,7 +377,7 @@ final class g {
               return;
             }
             g.a((byte) 107);
-            if (!qh.field_f) {
+            if (!SectorCacheStore.field_f) {
               if (!sk.field_g) {
                 return;
               }
@@ -393,9 +393,9 @@ final class g {
             fg.field_eb.clear(0);
             ml.field_z = 0;
             jq.field_e = 0;
-            t.field_l = 0;
+            DiskCacheWorker.field_l = 0;
             WidgetWrapper.field_D.clear(0);
-            qh.field_f = false;
+            SectorCacheStore.field_f = false;
           }
         }
         if (sk.field_g) {

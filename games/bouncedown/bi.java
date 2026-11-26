@@ -30,7 +30,7 @@ final class bi extends IntrusiveNode {
           Throwable decompiledCaughtException = null;
           Throwable var2 = null;
           try {
-            ac.a(true, new Object[]{new Integer(param1)}, vi.b(param0 ^ param0), "resizing");
+            ac.a(true, new Object[]{new Integer(param1)}, DiskCacheWorker.b(param0 ^ param0), "resizing");
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

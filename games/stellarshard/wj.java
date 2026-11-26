@@ -160,7 +160,7 @@ final class wj extends fb {
             if (GzipDecompressor.field_d == AccountNameAvailabilityValidator.field_m &&
               cd.e((byte) 125)) {
               we.field_a = ae.field_N.readLong(0);
-              ph.field_D = ae.field_N.readUnsignedByte(4);
+              NetworkArchiveRequest.field_D = ae.field_N.readUnsignedByte(4);
               ae.field_N.readUnsignedByte(4);
               mk.field_k = ae.field_N.readUnsignedShort((byte) 56);
               var7_ref_String = ae.field_N.readNullableString(0);
@@ -296,7 +296,7 @@ final class wj extends fb {
           int stackIn_78_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ph var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -311,10 +311,10 @@ final class wj extends fb {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ph var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          ph var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = stellarshard.field_B;
           if (null != this.field_s) {
             var2_long = ih.correctedCurrentTimeMillis((byte) -98);
@@ -345,26 +345,26 @@ final class wj extends fb {
           }
           try {
             this.field_s.c(param0 + 32614);
-            var2 = (ph) (this.field_o.a(false));
+            var2 = (NetworkArchiveRequest) (this.field_o.a(false));
             while (var2 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(false, 1);
               this.field_c.writeLong40(116, var2.field_o);
               this.field_s.a(this.field_c.payload, 0, 107, this.field_c.payload.length);
               this.field_q.a((byte) 125, var2);
-              var2 = (ph) (this.field_o.a(-116));
+              var2 = (NetworkArchiveRequest) (this.field_o.a(-116));
             }
             if (param0 != 26348) {
               wj.clearStaticReferences((byte) 71);
             }
-            var2Lifetime1 = (ph) (this.field_j.a(false));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_j.a(false));
             while (var2Lifetime1 != null) {
               this.field_c.position = 0;
               this.field_c.writeByte(false, 0);
               this.field_c.writeLong40(param0 - 26250, var2Lifetime1.field_o);
               this.field_s.a(this.field_c.payload, 0, 114, this.field_c.payload.length);
               this.field_k.a((byte) 126, var2Lifetime1);
-              var2Lifetime1 = (ph) (this.field_j.a(-121));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_j.a(-121));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_s.b(-93);
@@ -418,24 +418,24 @@ final class wj extends fb {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (ph) (this.field_k.a(false));
+                        var14_ref = (NetworkArchiveRequest) (this.field_k.a(false));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_o) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (ph) (this.field_k.a(-102));
+                          var14_ref = (NetworkArchiveRequest) (this.field_k.a(-102));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (ph) (this.field_q.a(false));
+                        var14_ref = (NetworkArchiveRequest) (this.field_q.a(false));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_o) {
                             break;
                           }
-                          var14_ref = (ph) (this.field_q.a(param0 ^ -26262));
+                          var14_ref = (NetworkArchiveRequest) (this.field_q.a(param0 ^ -26262));
                         }
                       }
                       if (var14_ref == null) {
@@ -564,13 +564,13 @@ final class wj extends fb {
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ph var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           int var4_int = 0;
           RuntimeException var4_ref2 = null;
           IOException var5 = null;
           Exception var6 = null;
           int var7 = 0;
-          ph var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var7 = stellarshard.field_B;
           try {
             if (this.field_s != null) {
@@ -588,7 +588,7 @@ final class wj extends fb {
             this.field_r = null;
             this.field_a.position = 0;
             while (true) {
-              var4_ref = (ph) (this.field_q.a((byte) 110));
+              var4_ref = (NetworkArchiveRequest) (this.field_q.a((byte) 110));
               if (var4_ref != null) {
                 this.field_o.a((byte) 124, var4_ref);
                 continue;
@@ -596,7 +596,7 @@ final class wj extends fb {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (ph) (this.field_k.a((byte) 61));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_k.a((byte) 61));
               if (var4_refLifetime1 != null) {
                 this.field_j.a((byte) 125, var4_refLifetime1);
                 continue;
@@ -732,14 +732,14 @@ final class wj extends fb {
             SoftwareRasterizer.saveClip(pk.field_i);
             var11 = new Sprite(ea.field_l.field_v + 4, ea.field_l.field_y + 4);
             var11.e();
-            ea.field_l.c(2, 2, ki.field_x);
+            ea.field_l.c(2, 2, ArchiveRequest.field_x);
             IntrusiveDeque.a(var11, 1, 0, var11.field_y, 2, 0, var11.field_v, true);
             ea.field_l = var11;
             bk.field_b = ea.field_l.f();
             var12 = new Sprite(195, 221);
             var6 = var12.field_v / 2;
             var12.e();
-            o.field_h.c(h.a(ph.field_E, 0, new String[]{vd.field_d}), var6, 40, 16777215, -1);
+            o.field_h.c(h.a(NetworkArchiveRequest.field_E, 0, new String[]{vd.field_d}), var6, 40, 16777215, -1);
             fj.field_f.c(h.a(ch.field_c, 0, new String[]{vd.field_d}), var6, 60, 16777215, -1);
             o.field_h.c(h.a(vd.field_a, 0, new String[]{vg.field_r}), var6, 110, 16777215, -1);
             fj.field_f.c(h.a(rb.field_t, 0, new String[]{vg.field_r}), var6, 130, 16777215, -1);
@@ -750,7 +750,7 @@ final class wj extends fb {
             var12.e(-pl.field_T.field_t + 18, 241 - pl.field_T.field_s);
             for (var7 = 0; pk.field_d.length > var7; var7++) {
               dl.field_C[var7].e();
-              fj.field_f.a(pk.field_d[var7], 3, 3, -6 + dl.field_C[var7].field_v, dl.field_C[var7].field_y - 6, ki.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
+              fj.field_f.a(pk.field_d[var7], 3, 3, -6 + dl.field_C[var7].field_v, dl.field_C[var7].field_y - 6, ArchiveRequest.field_x, -1, 1, 1, fj.field_f.field_N + fj.field_f.field_r);
               IntrusiveDeque.a(dl.field_C[var7], 1, 0, dl.field_C[var7].field_y, 3, 0, dl.field_C[var7].field_v, true);
             }
             pk.field_d = null;
@@ -871,8 +871,8 @@ final class wj extends fb {
             eh.field_f = null;
           }
           SoftwareRasterizer.saveClip(pk.field_i);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ki.field_t, jb.field_a);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ki.field_t, jb.field_a);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, ArchiveRequest.field_t, jb.field_a);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, ArchiveRequest.field_t, jb.field_a);
           if (null != tk.field_c) {
             tk.field_c.e(0, 0);
           }

@@ -75,7 +75,7 @@ final class ci {
               nn.field_c.b((byte) -101);
             }
             if (null != gh.field_a) {
-              gh.field_a.a((byte) -95);
+              gh.field_a.shutdown((byte) -95);
             }
             if (null != jd.field_F) {
               try {

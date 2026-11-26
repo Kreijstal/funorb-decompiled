@@ -69,16 +69,16 @@ final class wp {
         if (param0 == hn.field_w) {
           or.b(4);
           hn.field_w = 11;
-          nq.field_E = true;
+          DiskArchiveRequest.field_E = true;
           return;
         }
         if (!ne.j(param0 - 10)) {
           or.b(4);
           hn.field_w = 11;
-          nq.field_E = true;
+          DiskArchiveRequest.field_E = true;
           return;
         }
-        nq.field_E = true;
+        DiskArchiveRequest.field_E = true;
     }
 
     static {

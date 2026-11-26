@@ -23,8 +23,8 @@ final class lm {
           aq.field_s = aq.field_s + 1;
           qh.field_i = fq.field_C;
           IsaacRandom.field_h = tn.field_s;
-          DualLinkNode.field_h = wl.field_m;
-          wl.field_m = false;
+          DualLinkNode.field_h = ArchiveRequest.field_m;
+          ArchiveRequest.field_m = false;
           pj.field_v = th.field_y;
           to.field_a = kk.field_g;
           dp.field_h = sb.field_I;

@@ -18,7 +18,7 @@ final class cl extends od {
           int[] var3 = (int[]) null;
           cl.a(-8, (Sprite) null, false, true, (int[]) null, -126);
         }
-        return ef.field_e;
+        return DiskCacheWorker.field_e;
     }
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {

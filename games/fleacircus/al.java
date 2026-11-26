@@ -54,10 +54,10 @@ final class al {
 
     final static fh[] b(boolean param0) {
         if (param0) {
-          return new fh[]{ne.field_d, PcmOutputWorker.field_b, AccountRequestState.field_d, cg.field_h, lk.field_A, hf.field_h, qi.field_b, hc.field_b, dl.field_t, tg.field_f, kb.field_l, gg.field_b, kc.field_a, ek.field_a};
+          return new fh[]{ne.field_d, PcmOutputWorker.field_b, AccountRequestState.field_d, cg.field_h, lk.field_A, hf.field_h, qi.field_b, hc.field_b, ArchiveRequest.field_t, tg.field_f, kb.field_l, gg.field_b, kc.field_a, ek.field_a};
         }
         field_f = -27;
-        return new fh[]{ne.field_d, PcmOutputWorker.field_b, AccountRequestState.field_d, cg.field_h, lk.field_A, hf.field_h, qi.field_b, hc.field_b, dl.field_t, tg.field_f, kb.field_l, gg.field_b, kc.field_a, ek.field_a};
+        return new fh[]{ne.field_d, PcmOutputWorker.field_b, AccountRequestState.field_d, cg.field_h, lk.field_A, hf.field_h, qi.field_b, hc.field_b, ArchiveRequest.field_t, tg.field_f, kb.field_l, gg.field_b, kc.field_a, ek.field_a};
     }
 
     final static boolean a(int param0) {

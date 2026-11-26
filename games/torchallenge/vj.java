@@ -46,7 +46,7 @@ final class vj {
           RasterBuffer.field_g = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14", param2 ^ param2));
           dl.field_H = (BitmapFont) ((Object) qi.a(param0, "commonui", param3, "arezzo14bold", param2 - 23081));
           var17 = new Sprite(param1.a(-2, "", "button.gif"), (java.awt.Component) ((Object) bg.field_P));
-          rb.a(param3, "commonui", (byte) -114, "dropdown");
+          DiskCacheWorker.a(param3, "commonui", (byte) -114, "dropdown");
           var5 = mh.a(32, param3, "screen_options", "commonui");
           c.field_d = new ge[4];
           we.field_o = new ge[4];

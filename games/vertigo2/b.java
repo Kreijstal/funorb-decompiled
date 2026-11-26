@@ -399,7 +399,7 @@ final class b {
         String var14;
         var4 = null;
         if (param1 == 4) {
-          var5 = ia.a(-96, param0, this.field_k);
+          var5 = NetworkArchiveRequest.a(-96, param0, this.field_k);
           if (var5 == null) {
             if (param2 == 0) {
               return true;

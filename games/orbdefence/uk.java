@@ -111,7 +111,7 @@ final class uk {
           if (param0 != 68) {
             return;
           }
-          var27 = cd.field_t;
+          var27 = NetworkArchiveRequest.field_t;
           var2 = var27.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var3 = var27.readUnsignedShort(98203176);

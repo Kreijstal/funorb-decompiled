@@ -165,10 +165,10 @@ final class ua {
             nb.a(param1, var5, 0);
             var5 = (gh) (mf.field_b.nextForward(true));
           }
-          var2 = pj.field_A.beginForward((byte) -95);
+          var2 = NetworkArchiveRequest.field_A.beginForward((byte) -95);
           while (var2 != null) {
             ki.a(false, param1);
-            var2 = pj.field_A.nextForward(true);
+            var2 = NetworkArchiveRequest.field_A.nextForward(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -327,7 +327,7 @@ final class ua {
                   }
                   var18.field_j[var5] = var6_int;
                   var18.field_h[var5] = var9;
-                  var18.field_m[var5] = param1.requestDeclaredField(ak.a(param2, 22529), var15, ek.a(ak.a(param2, -3264187), var16));
+                  var18.field_m[var5] = param1.requestDeclaredField(SectorCacheStore.a(param2, 22529), var15, ek.a(SectorCacheStore.a(param2, -3264187), var16));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

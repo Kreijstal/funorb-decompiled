@@ -78,10 +78,10 @@ final class bj extends s {
           var8Lifetime1 = lm.a(var6Lifetime1, (byte) -118) >> 8;
           var9Lifetime1 = mf.a(var6Lifetime1, -126) >> 8;
           if (-1 != ua.field_a &&
-            -1 != vl.field_d) {
+            -1 != DiskCacheWorker.field_d) {
             var7Lifetime1 = -320 + ua.field_a;
             var9Lifetime1 = -128;
-            var8Lifetime1 = -vl.field_d + 240;
+            var8Lifetime1 = -DiskCacheWorker.field_d + 240;
           }
           var10 = 256.0 / Math.sqrt((double)(var7Lifetime1 * var7Lifetime1 + (var8Lifetime1 * var8Lifetime1 + var9Lifetime1 * var9Lifetime1)));
           var9Lifetime1 = (int)((double)var9Lifetime1 * var10);

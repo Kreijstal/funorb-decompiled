@@ -712,7 +712,7 @@ final class ResourceArchive {
           mh.field_x = param8;
           tj.field_c = param7;
           BufferedSocket.field_k = (w) ((Object) new g());
-          vg.field_r = new af(param8);
+          vg.field_r = new DiskCacheWorker(param8);
           gf.field_e = new uf(BufferedSocket.field_k, vg.field_r);
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "rh.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

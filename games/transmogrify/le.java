@@ -226,7 +226,7 @@ class le extends lj {
     }
 
     final static String h(int param0) {
-        if (rh.field_v == of.field_d) {
+        if (ArchiveRequest.field_v == of.field_d) {
           return DirectByteStorage.field_g;
         }
         if (!dl.field_l.b(-26753)) {

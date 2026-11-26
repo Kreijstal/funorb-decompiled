@@ -113,7 +113,7 @@ final class fi extends IntrusiveNode {
             fi.a((ResourceArchive) null, (ResourceArchive) null, (String) null, (String) null, (byte) 26);
           }
           var6 = param0.a(param3, (byte) -15, var5_int);
-          stackIn_3_0 = dl.a(var6, 2, var5_int, param1, param0);
+          stackIn_3_0 = ArchiveRequest.a(var6, 2, var5_int, param1, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

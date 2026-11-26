@@ -150,7 +150,7 @@ final class vc {
         var9 = OrbDefence.field_D ? 1 : 0;
         try {
           var3 = 50 / ((23 - param0) / 46);
-          var1 = cd.field_t;
+          var1 = NetworkArchiveRequest.field_t;
           var2 = var1.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             if (qb.field_a == null) {
@@ -206,7 +206,7 @@ final class vc {
             }
             ob.field_H = 1;
             var4 = var1.readString(2);
-            uc.field_r = ((String) (var4)).intern();
+            DiskArchiveRequest.field_r = ((String) (var4)).intern();
             var5 = var1.readUnsignedByte((byte) 90);
             lb.a(true, var5);
             return;
@@ -498,7 +498,7 @@ final class vc {
             }
             if (nh.field_c == dh.field_bb &&
               AccountRequestState.a(true, 1)) {
-              var6_intLifetime1 = cd.field_t.readUnsignedByte((byte) 90);
+              var6_intLifetime1 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
               if (0 == var6_intLifetime1) {
                 dh.field_bb = wh.field_c;
               }
@@ -508,19 +508,19 @@ final class vc {
                 GameAppletShell.field_c = -1;
                 dh.field_bb = hf.field_l;
               }
-              cd.field_t.position = 0;
+              NetworkArchiveRequest.field_t.position = 0;
             }
             if (wh.field_c == dh.field_bb &&
               AccountRequestState.a(true, 8)) {
-              tg.field_a = cd.field_t.readLong((byte) -89);
-              cd.field_t.position = 0;
+              tg.field_a = NetworkArchiveRequest.field_t.readLong((byte) -89);
+              NetworkArchiveRequest.field_t.position = 0;
               lg.a(3, param1, s.field_A, param4, param0);
               dh.field_bb = da.field_m;
             }
             if (da.field_m == dh.field_bb &&
               AccountRequestState.a(true, 1)) {
-              var6_intLifetime2 = cd.field_t.readUnsignedByte((byte) 90);
-              cd.field_t.position = 0;
+              var6_intLifetime2 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+              NetworkArchiveRequest.field_t.position = 0;
               ug.field_r = null;
               ab.field_l = var6_intLifetime2;
               if (var6_intLifetime2 == 0 ||
@@ -547,12 +547,12 @@ final class vc {
             }
             if (dh.field_bb == lm.field_e &&
               ce.a(-60)) {
-              p.field_c = cd.field_t.readLong((byte) -89);
-              AccountRequestState.field_d = cd.field_t.readUnsignedByte((byte) 90);
-              cd.field_t.readUnsignedByte((byte) 90);
-              tc.field_b = cd.field_t.readUnsignedShort(98203176);
-              var6 = cd.field_t.readNullableString(-1);
-              var7 = cd.field_t.readUnsignedByte((byte) 90);
+              p.field_c = NetworkArchiveRequest.field_t.readLong((byte) -89);
+              AccountRequestState.field_d = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+              NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+              tc.field_b = NetworkArchiveRequest.field_t.readUnsignedShort(98203176);
+              var6 = NetworkArchiveRequest.field_t.readNullableString(-1);
+              var7 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
               if ((var7 & 1) != 0) {
                 gd.a((byte) 124);
               }
@@ -566,14 +566,14 @@ final class vc {
               }
               boolean decompiledFrameCompleted0 = true;
               if (PacketBuffer.field_g) {
-                cd.field_t.readUnsignedByte((byte) 90);
-                cd.field_t.readUnsignedByte((byte) 90);
-                cd.field_t.readInt(0);
-                cf.field_c = cd.field_t.readUnsignedShort(98203176);
+                NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+                NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+                NetworkArchiveRequest.field_t.readInt(0);
+                cf.field_c = NetworkArchiveRequest.field_t.readUnsignedShort(98203176);
                 ImageProducerRasterBuffer.field_h = new byte[cf.field_c];
                 var8 = 0;
                 while (!(cf.field_c <= var8)) {
-                  ImageProducerRasterBuffer.field_h[var8] = cd.field_t.readByte(-20398);
+                  ImageProducerRasterBuffer.field_h[var8] = NetworkArchiveRequest.field_t.readByte(-20398);
                   var8++;
                   if (var9 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -582,9 +582,9 @@ final class vc {
                 }
               }
               if (decompiledFrameCompleted0) {
-                gb.field_h = cd.field_t.readString(2);
+                gb.field_h = NetworkArchiveRequest.field_t.readString(2);
                 sg.field_E = ua.a(90, (CharSequence) ((Object) gb.field_h));
-                BufferedSocket.field_j = cd.field_t.readUnsignedByte((byte) 90);
+                BufferedSocket.field_j = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
                 dh.field_bb = da.field_r;
               }
               if (s.field_A.a(10277) != ci.field_b) {
@@ -634,7 +634,7 @@ final class vc {
               var8 = 0;
               do {
                 if (4 <= var8) {
-                  cd.field_t.b(og.field_n, 3777);
+                  NetworkArchiveRequest.field_t.b(og.field_n, 3777);
                   break;
                 }
                 og.field_n[var8] = og.field_n[var8] + 50;
@@ -655,7 +655,7 @@ final class vc {
               if (ab.field_l == 7) {
                 ab.field_l = 3;
               }
-              kk.field_Y = cd.field_t.readString(2);
+              kk.field_Y = NetworkArchiveRequest.field_t.readString(2);
               FullscreenFocusCanvas.field_a = false;
               stackIn_142_0 = ab.field_l;
               return stackIn_142_0;

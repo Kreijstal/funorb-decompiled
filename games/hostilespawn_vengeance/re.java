@@ -511,13 +511,13 @@ final class re {
           if (param2 >= -114) {
             this.a(-24, 74, -79, 78, -101);
           }
-          param0 = um.a(20, param0, 10179);
+          param0 = SectorCacheStore.a(20, param0, 10179);
           var8 = de.a(19926, 11, param0);
-          var9 = um.a(11, param0, 10179);
+          var9 = SectorCacheStore.a(11, param0, 10179);
           var10 = null;
           var11 = bm.field_c;
           if (var8 >= 10) {
-            var10_ref = ae.field_r;
+            var10_ref = ArchiveRequest.field_r;
           } else {
             var10_ref = VolumeRampingMidiPcmStream.field_fb[var11][var8];
           }
@@ -2044,7 +2044,7 @@ final class re {
             (decompiledFrameRemainder22) &&
             (decompiledFrameCompleted1)) {
             this.field_j = 1;
-            dh.field_a.a((byte) -48, true);
+            DiskCacheWorker.field_a.a((byte) -48, true);
             this.field_s = 3;
             if (var7 == 0) {
               break regionExit1;
@@ -2345,7 +2345,7 @@ final class re {
               }
               if (stackIn_25_0 >= stackIn_25_1 &&
                 var3 != li.field_s) {
-                eh.field_c.a(lm.field_A[3], 100, uh.field_i);
+                eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
               }
               if (var9 == 0) {
                 decompiledFrameCompleted0 = false;
@@ -2421,7 +2421,7 @@ final class re {
               if (((stackIn_64_0 != stackIn_64_1 ||
                 bm.field_c != var4Lifetime1)) && (!(rl.field_c < 0))) {
                 this.i(104);
-                eh.field_c.a(lm.field_A[4], 100, uh.field_i);
+                eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
               }
               break;
             }
@@ -3166,8 +3166,8 @@ final class re {
             decompiledFrameRemainder12 = (var19 != 0);
           }
           if (((decompiledFrameRemainder12) && (decompiledFrameRemainder11) && (decompiledFrameRemainder10) && (decompiledFrameRemainder9) && (decompiledFrameRemainder8) && (decompiledFrameRemainder7) && (decompiledFrameRemainder6) && (decompiledFrameRemainder5) && (decompiledFrameRemainder4)) &&
-            (decompiledFrameRemainder12 = (dh.field_a != null))) {
-            dh.field_a.a((byte) -67);
+            (decompiledFrameRemainder12 = (DiskCacheWorker.field_a != null))) {
+            DiskCacheWorker.field_a.a((byte) -67);
             decompiledFrameRemainder12 = (var19 != 0);
           }
           if ((decompiledFrameRemainder12) &&
@@ -3594,7 +3594,7 @@ final class re {
         }
         if (stackIn_310_0 != stackIn_310_1 &&
           0 <= this.field_t) {
-          eh.field_c.a(lm.field_A[3], 100, uh.field_i);
+          eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
         }
         var8 = 35 % ((param2 - 3) / 48);
         SoftwareRasterizer.resetClip();
@@ -4224,7 +4224,7 @@ final class re {
         if (stackIn_24_0 == pf.field_o) {
           if (this.field_x >= 0 ||
             0 <= this.field_J) {
-            eh.field_c.a(lm.field_A[4], 100, uh.field_i);
+            eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
           }
           if (~this.field_J != ~this.field_x) {
             this.field_x = this.field_J;
@@ -4237,7 +4237,7 @@ final class re {
         }
         if (((decompiledFrameRemainder1) && (decompiledFrameRemainder0) && (this.field_J >= 0)) &&
           (decompiledFrameRemainder1 = (var3 != this.field_J))) {
-          eh.field_c.a(lm.field_A[3], 100, uh.field_i);
+          eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
         }
 
     }
@@ -4265,7 +4265,7 @@ final class re {
         var5 = this.field_t;
         if (this.field_t != var5 &&
           this.field_t >= 0) {
-          eh.field_c.a(lm.field_A[3], 100, uh.field_i);
+          eh.field_c.a(NetworkArchiveRequest.field_A[3], 100, uh.field_i);
         }
         if (this.field_d == param0) {
           boolean decompiledFrameRemainder10 = true;
@@ -4389,7 +4389,7 @@ final class re {
           if (decompiledFrameRemainder10) {
             stackIn_57_0 = (pf.a(-124)) ? 0 : 1;
             var6 = stackIn_57_0;
-            var7 = dh.field_a.a(-1, var6 != 0);
+            var7 = DiskCacheWorker.field_a.a(-1, var6 != 0);
             if (3 == var7) {
               this.field_s = 0;
               this.field_j = 1;
@@ -4761,7 +4761,7 @@ final class re {
           this.field_f > -1 &&
           this.field_u) {
           if (uj.field_l == 1) {
-            eh.field_c.a(lm.field_A[4], 100, uh.field_i);
+            eh.field_c.a(NetworkArchiveRequest.field_A[4], 100, uh.field_i);
           }
           this.a((byte) 111, true);
           if (var9 == 0) {

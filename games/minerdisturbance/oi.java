@@ -125,7 +125,7 @@ final class oi extends fe {
           }
           gh.field_b = param1;
           ti.a((byte) 88, SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_g / 2);
-          vl.a(param1.field_E + param1.field_N, param1.field_N, false, param0.field_N + param0.field_E, param0.field_N);
+          DiskArchiveRequest.a(param1.field_E + param1.field_N, param1.field_N, false, param0.field_N + param0.field_E, param0.field_N);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "oi.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }

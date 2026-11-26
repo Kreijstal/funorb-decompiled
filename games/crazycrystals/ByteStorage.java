@@ -2249,7 +2249,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("waitingfor_fonts", 5236);
                 if (var2 != null) {
-                  ld.field_w = fa.a((byte) -128, var2);
+                  NetworkArchiveRequest.field_w = fa.a((byte) -128, var2);
                 }
                 var2 = ah.a("waitingfor_soundeffects", 5236);
                 if (var2 != null) {
@@ -2667,7 +2667,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("latestlevel_suffix", 5236);
                 if (null != var2) {
-                  mf.field_r = fa.a((byte) -77, var2);
+                  DiskArchiveRequest.field_r = fa.a((byte) -77, var2);
                 }
                 var2 = ah.a("unreachedlevel_name", 5236);
                 if (var2 != null) {
@@ -3003,7 +3003,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("keychar_the_character_under_questionmark", 5236);
                 if (null != var2) {
-                  ld.a(-35, var2[0]);
+                  NetworkArchiveRequest.a(-35, var2[0]);
                 }
                 var2 = ah.a("rating_noratings", 5236);
                 if (null != var2) {
@@ -3262,11 +3262,11 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("rating_mode_long_name,0", 5236);
                 if (null != var2) {
-                  ld.field_x[0] = fa.a((byte) -96, var2);
+                  NetworkArchiveRequest.field_x[0] = fa.a((byte) -96, var2);
                 }
                 var2 = ah.a("rating_mode_long_name,1", 5236);
                 if (var2 != null) {
-                  ld.field_x[1] = fa.a((byte) -112, var2);
+                  NetworkArchiveRequest.field_x[1] = fa.a((byte) -112, var2);
                 }
                 var2 = ah.a("graphics_config_fixed_size", 5236);
                 if (var2 != null) {

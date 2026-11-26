@@ -59,7 +59,7 @@ final class mg {
             }
           } else {
             var12 = var11 & 255;
-            var14[var10] = cl.b(vg.c(var12 * var8 >> 8, 16711935), vg.c(var9 * var12, 65280));
+            var14[var10] = DiskArchiveRequest.b(vg.c(var12 * var8 >> 8, 16711935), vg.c(var9 * var12, 65280));
           }
         }
         if (param2 == 3) {

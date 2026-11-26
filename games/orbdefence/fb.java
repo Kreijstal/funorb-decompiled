@@ -19,7 +19,7 @@ final class fb extends IntrusiveNode {
         if (param0 > -44) {
           field_i = (ba) null;
         }
-        return cd.field_t.readString(2);
+        return NetworkArchiveRequest.field_t.readString(2);
     }
 
     final static PcmStreamMixer c(boolean param0) {

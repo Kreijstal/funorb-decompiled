@@ -97,7 +97,7 @@ final class bg extends IntrusiveNode {
             sc.field_c.d(2, 2, rh.field_e);
             p.a(var11.field_y, 2, 0, var11.field_w, 1, 0, 0, var11);
             sc.field_c = var11;
-            lb.field_x = sc.field_c.e();
+            ArchiveRequest.field_x = sc.field_c.e();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_y / 2;
             var12.c();
@@ -252,14 +252,14 @@ final class bg extends IntrusiveNode {
             null != DualLinkNode.field_r) {
             r.field_b.d(231, 390);
             var1 = eg.field_d;
-            if (lb.field_w.field_f == 0) {
+            if (ArchiveRequest.field_w.field_f == 0) {
               var1 = ul.field_c;
             }
             var1.d(0, 0);
             stackIn_51_0 = 40;
             stackIn_51_1 = 0;
             stackIn_51_2 = k.field_L;
-            if (lb.field_w.field_f == 0) {
+            if (ArchiveRequest.field_w.field_f == 0) {
               stackIn_52_3 = 4;
             } else {
               stackIn_52_3 = 3;
@@ -275,23 +275,23 @@ final class bg extends IntrusiveNode {
               var1.a(1, -1, var2Lifetime4);
               var1.a(-1, -1, var2Lifetime4);
             }
-            stackIn_58_0 = (lb.field_w.field_f == 0);
+            stackIn_58_0 = (ArchiveRequest.field_w.field_f == 0);
             qj.a(stackIn_58_0, tb.field_c, ka.field_o, true);
           }
           if (null != r.field_b &&
             DualLinkNode.field_r != null) {
             r.field_b.d(434, 390);
             nj.field_f.d(0, 0);
-            if (lb.field_w.field_f == 1) {
+            if (ArchiveRequest.field_w.field_f == 1) {
               fk.a(7 * r.field_b.field_w / 12, -4 + r.field_b.field_y, 392, 64, (byte) -73, 436);
             }
-            stackIn_67_0 = (1 == lb.field_w.field_f);
+            stackIn_67_0 = (1 == ArchiveRequest.field_w.field_f);
             qj.a(stackIn_67_0, v.field_N, ch.field_A, true);
           }
           if (sc.field_c != null) {
             var1_int = -(sc.field_c.field_C / 2) + 357;
             sc.field_c.d(-sc.field_c.field_z + 269, var1_int);
-            lb.field_x.d(586, var1_int);
+            ArchiveRequest.field_x.d(586, var1_int);
             if (ob.field_g > var1_int &&
               var1_int + sc.field_c.field_w > ob.field_g) {
               var2Lifetime5 = 40 + (k.b(0, k.field_L << 4) * 40 >> 16);
@@ -309,10 +309,10 @@ final class bg extends IntrusiveNode {
               } else {
                 if (ck.field_c > 586 &&
                   sc.field_c.field_y + 586 > ck.field_c) {
-                  lb.field_x.a(585, -1 + var1_int, var2Lifetime5);
-                  lb.field_x.a(587, var1_int - 1, var2Lifetime5);
-                  lb.field_x.a(585, 1 + var1_int, var2Lifetime5);
-                  lb.field_x.a(587, var1_int + 1, var2Lifetime5);
+                  ArchiveRequest.field_x.a(585, -1 + var1_int, var2Lifetime5);
+                  ArchiveRequest.field_x.a(587, var1_int - 1, var2Lifetime5);
+                  ArchiveRequest.field_x.a(585, 1 + var1_int, var2Lifetime5);
+                  ArchiveRequest.field_x.a(587, var1_int + 1, var2Lifetime5);
                 }
               }
             }

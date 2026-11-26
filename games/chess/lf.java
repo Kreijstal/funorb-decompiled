@@ -122,7 +122,7 @@ final class lf extends kn {
           var8 = var41;
           var64 = new int[param1.field_t];
           var62 = lk.field_c;
-          var63 = ab.field_r;
+          var63 = ArchiveRequest.field_r;
           var61 = pa.field_o;
           if (param4 != 29521) {
             lf.i(-127);
@@ -188,11 +188,11 @@ final class lf extends kn {
             }
             var21 = stackIn_40_0;
             var22 = qm.field_c[var15Lifetime1];
-            var23 = tc.field_w[var15Lifetime1];
+            var23 = DiskArchiveRequest.field_w[var15Lifetime1];
             var24 = qm.field_c[var16];
-            var25 = tc.field_w[var16];
+            var25 = DiskArchiveRequest.field_w[var16];
             var26 = qm.field_c[var17];
-            var27 = tc.field_w[var17];
+            var27 = DiskArchiveRequest.field_w[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var54[var18];

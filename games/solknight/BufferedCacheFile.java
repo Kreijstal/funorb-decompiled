@@ -243,7 +243,7 @@ final class BufferedCacheFile {
         try {
           if (vk.field_p >= 10 &&
             0 == (1 << kb.field_b & fa.field_f)) {
-            ic.field_t = ic.field_t + (bi.field_i >>> 11 << kb.field_b);
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (SectorCacheStore.field_i >>> 11 << kb.field_b);
             fa.field_f = fa.field_f | 1 << kb.field_b;
             lc.field_h = lc.field_h | 1 << kb.field_b;
             var1_int = IterableNodeHashTable.countSetBits(fa.field_f & 255, 126);
@@ -257,7 +257,7 @@ final class BufferedCacheFile {
           }
           if (25 <= vk.field_p &&
             0 == (1 << 8 + kb.field_b & fa.field_f)) {
-            ic.field_t = ic.field_t + (bi.field_i >>> 11 << kb.field_b + 8);
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (SectorCacheStore.field_i >>> 11 << kb.field_b + 8);
             fa.field_f = fa.field_f | 1 << kb.field_b + 8;
             lc.field_h = lc.field_h | 1 << kb.field_b + 8;
             var1_intLifetime1 = IterableNodeHashTable.countSetBits(fa.field_f & 65280, 127);
@@ -273,7 +273,7 @@ final class BufferedCacheFile {
             (fa.field_f & 65536) == 0) {
             lc.field_h = lc.field_h | 65536;
             fa.field_f = fa.field_f | 65536;
-            ic.field_t = ic.field_t + (bi.field_i >>> 11 << 16);
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (SectorCacheStore.field_i >>> 11 << 16);
             vk.a(240, (byte) 89, 15);
           }
           if (vk.field_p > ImageProducerRasterBuffer.field_m) {
@@ -309,10 +309,10 @@ final class BufferedCacheFile {
               }
               else {
                 lk.field_e = lk.field_e + ImageProducerRasterBuffer.field_m * 100;
-                ic.field_t = ic.field_t - 100 * ImageProducerRasterBuffer.field_m;
+                NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 100 * ImageProducerRasterBuffer.field_m;
                 if (kb.field_b == 7) {
                   lk.field_e = lk.field_e + 5000;
-                  ic.field_t = ic.field_t - 5000;
+                  NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 5000;
                 }
                 me.a(false);
                 PacketBuffer.a(true, 6, -128);
@@ -351,7 +351,7 @@ final class BufferedCacheFile {
           }
           if (pl.field_a > 0) {
             ci.field_ib = 256;
-            ic.field_t = ic.field_t - pl.field_a;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - pl.field_a;
             lk.field_e = lk.field_e + pl.field_a;
             pl.field_a = 0;
             me.a(false);
@@ -363,8 +363,8 @@ final class BufferedCacheFile {
           if (0 < fg.field_a) {
             fg.field_a = fg.field_a - 1;
             if (0 >= fg.field_a) {
-              bi.field_h = bi.field_h - 1;
-              if (bi.field_h > 0) {
+              SectorCacheStore.field_h = SectorCacheStore.field_h - 1;
+              if (SectorCacheStore.field_h > 0) {
                 fg.field_a = 500;
               }
             }
@@ -373,18 +373,18 @@ final class BufferedCacheFile {
             ci.field_ib = 128;
           }
           if (vk.field_p >= 25 &&
-            bi.field_h < 2) {
+            SectorCacheStore.field_h < 2) {
             fg.field_a = 500;
-            bi.field_h = 2;
+            SectorCacheStore.field_h = 2;
             mb.a(param0, 1, 256);
           }
           if (vk.field_p >= 10) {
             fg.field_a = 500;
           }
           if (vk.field_p >= 10 &&
-            bi.field_h < 1) {
+            SectorCacheStore.field_h < 1) {
             fg.field_a = 1500;
-            bi.field_h = 1;
+            SectorCacheStore.field_h = 1;
             mb.a(param0, 0, 256);
           }
           if (pg.field_e) {
@@ -615,18 +615,18 @@ final class BufferedCacheFile {
             kh.field_d = 255;
             PacketBuffer.a(false, 5, -127);
             lc.field_p = lc.field_p + 1;
-            ic.field_t = ic.field_t - 1;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 1;
             vk.field_p = 0;
             ImageProducerRasterBuffer.field_n = true;
             if (1 + kb.field_b < 8) {
               lk.field_b = GameKeyHandler.field_a[kb.field_b];
               var2Lifetime4 = -ud.field_k + (-100 + GameKeyHandler.field_a[1 + kb.field_b]);
-              bi.field_i = bi.field_i + var2Lifetime4;
+              SectorCacheStore.field_i = SectorCacheStore.field_i + var2Lifetime4;
               lc.field_p = lc.field_p + var2Lifetime4 * (lc.field_h >>> 17);
               ud.field_k = GameKeyHandler.field_a[1 + kb.field_b] - 100;
             } else {
               lk.field_e = lk.field_e + ImageProducerRasterBuffer.field_m * 100;
-              ic.field_t = ic.field_t - (ImageProducerRasterBuffer.field_m * 100 + 5000);
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - (ImageProducerRasterBuffer.field_m * 100 + 5000);
               lk.field_e = lk.field_e + 5000;
               me.a(false);
               if (!il.b(507)) {
@@ -640,18 +640,18 @@ final class BufferedCacheFile {
           }
           if (2 <= MusicPatchPcmStream.field_s &&
             fh.field_d[32]) {
-            ic.field_t = ic.field_t - 1;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 1;
             fg.field_a = 500;
             lc.field_p = lc.field_p + 1;
             ImageProducerRasterBuffer.field_n = true;
-            bi.field_h = 1;
+            SectorCacheStore.field_h = 1;
           }
           if (MusicPatchPcmStream.field_s >= 2 &&
             fh.field_d[33]) {
-            bi.field_h = 2;
+            SectorCacheStore.field_h = 2;
             ImageProducerRasterBuffer.field_n = true;
             fg.field_a = 500;
-            ic.field_t = ic.field_t - 1;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 1;
             lc.field_p = lc.field_p + 1;
             return;
           }

@@ -222,7 +222,7 @@ final class wb extends am {
             var6Lifetime1 = lh.field_O.a(var14, WidgetContainer.field_x, lh.field_O.field_x + lh.field_O.field_t);
             var7Lifetime1 = (-var5 + WidgetContainer.field_x) / 2 + up.field_d;
             var5 += 6;
-            var8 = lb.field_y + (-var6Lifetime1 + wh.field_w) / 2;
+            var8 = DiskArchiveRequest.field_y + (-var6Lifetime1 + wh.field_w) / 2;
             var7Lifetime1 -= 3;
             var6Lifetime1 += 6;
             var8 -= 3;
@@ -248,14 +248,14 @@ final class wb extends am {
               var9_intLifetime2 = -var8;
               Torquing.field_x = Torquing.field_x - var9_intLifetime2;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime2;
-              lb.field_y = lb.field_y + var9_intLifetime2;
+              DiskArchiveRequest.field_y = DiskArchiveRequest.field_y + var9_intLifetime2;
               j.field_F.field_u = j.field_F.field_u + var9_intLifetime2 * 2;
               j.field_F.field_r = j.field_F.field_r + var9_intLifetime2;
               var8 = var8 + var9_intLifetime2;
             }
             if (j.field_F.field_u < var8 + var6Lifetime1) {
               var9_intLifetime3 = -j.field_F.field_u + (var6Lifetime1 + var8);
-              lb.field_y = lb.field_y + var9_intLifetime3;
+              DiskArchiveRequest.field_y = DiskArchiveRequest.field_y + var9_intLifetime3;
               var6Lifetime1 = var6Lifetime1 + 2 * var9_intLifetime3;
               j.field_F.field_r = j.field_F.field_r + var9_intLifetime3;
               j.field_F.field_u = j.field_F.field_u + var9_intLifetime3 * 2;
@@ -265,7 +265,7 @@ final class wb extends am {
             j.field_F.a();
             var9 = new Sprite(j.field_F.field_w, j.field_F.field_u);
             var9.e();
-            lh.field_O.a(var14, up.field_d, lb.field_y, WidgetContainer.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
+            lh.field_O.a(var14, up.field_d, DiskArchiveRequest.field_y, WidgetContainer.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
             hb.a(0, false, var9, var9.field_u, var9.field_w, 1, 0, 3);
             j.field_F.e();
             var9.d(0, 0);
@@ -284,7 +284,7 @@ final class wb extends am {
             var3Lifetime2 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(mo.field_w);
             var16 = new Sprite(412, 43);
-            var5_ref_String = ff.a(new String[]{hf.field_a}, 0, co.field_d);
+            var5_ref_String = ff.a(new String[]{hf.field_a}, 0, DiskCacheWorker.field_d);
             hf.field_a = null;
             var16.e();
             DelayedPcmStream.field_o.a(var5_ref_String, 3, 3, var16.field_s - 6, -6 + var16.field_t, 16777215, -1, 0, 1, DelayedPcmStream.field_o.field_t + DelayedPcmStream.field_o.field_x);

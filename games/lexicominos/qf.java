@@ -146,7 +146,7 @@ final class qf extends wb {
           int stackIn_74_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          dc var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -161,10 +161,10 @@ final class qf extends wb {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          dc var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          dc var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           int var3_intLifetime1;
           var16 = Lexicominos.field_L ? 1 : 0;
           if (this.field_r != null) {
@@ -194,16 +194,16 @@ final class qf extends wb {
           }
           try {
             this.field_r.checkWriteError(0);
-            var2 = (dc) (this.field_l.a(true));
+            var2 = (NetworkArchiveRequest) (this.field_l.a(true));
             while (var2 != null) {
               this.field_b.position = 0;
               this.field_b.writeByte(1, -1);
               this.field_b.writeLong40(var2.field_j, 687419600);
               this.field_r.queueWrite(this.field_b.payload, this.field_b.payload.length, 58, 0);
               this.field_k.a(85, var2);
-              var2 = (dc) (this.field_l.a(-256));
+              var2 = (NetworkArchiveRequest) (this.field_l.a(-256));
             }
-            var2Lifetime1 = (dc) (this.field_d.a(true));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.a(true));
             var3_int = 98 % ((-74 - param0) / 48);
             while (var2Lifetime1 != null) {
               this.field_b.position = 0;
@@ -211,7 +211,7 @@ final class qf extends wb {
               this.field_b.writeLong40(var2Lifetime1.field_j, 687419600);
               this.field_r.queueWrite(this.field_b.payload, this.field_b.payload.length, -124, 0);
               this.field_f.a(82, var2Lifetime1);
-              var2Lifetime1 = (dc) (this.field_d.a(-256));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_d.a(-256));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_intLifetime1 = this.field_r.availableBytes(-6448);
@@ -265,24 +265,24 @@ final class qf extends wb {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (dc) (this.field_k.a(true));
+                        var14_ref = (NetworkArchiveRequest) (this.field_k.a(true));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_j) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (dc) (this.field_k.a(-256));
+                          var14_ref = (NetworkArchiveRequest) (this.field_k.a(-256));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (dc) (this.field_f.a(true));
+                        var14_ref = (NetworkArchiveRequest) (this.field_f.a(true));
                         while (var14_ref != null) {
                           if (var14_ref.field_j == var12) {
                             break;
                           }
-                          var14_ref = (dc) (this.field_f.a(-256));
+                          var14_ref = (NetworkArchiveRequest) (this.field_f.a(-256));
                         }
                       }
                       if (var14_ref == null) {
@@ -460,12 +460,12 @@ final class qf extends wb {
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          dc var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          dc var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Lexicominos.field_L ? 1 : 0;
           try {
             if (null != this.field_r) {
@@ -483,7 +483,7 @@ final class qf extends wb {
             this.field_o = null;
             this.field_h.position = 0;
             while (true) {
-              var4_ref = (dc) (this.field_k.a((byte) 100));
+              var4_ref = (NetworkArchiveRequest) (this.field_k.a((byte) 100));
               if (var4_ref != null) {
                 this.field_l.a(-72, var4_ref);
                 continue;
@@ -491,7 +491,7 @@ final class qf extends wb {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (dc) (this.field_f.a((byte) 100));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_f.a((byte) 100));
               if (var4_refLifetime1 != null) {
                 this.field_d.a(-74, var4_refLifetime1);
                 continue;

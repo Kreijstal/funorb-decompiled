@@ -316,7 +316,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 87, "objectivefailed");
                 if (var2 != null) {
-                  rf.field_s = ll.a(param0 ^ 96, var2);
+                  ArchiveRequest.field_s = ll.a(param0 ^ 96, var2);
                 }
                 var2 = il.a((byte) 113, "clearenemies");
                 if (var2 != null) {
@@ -480,7 +480,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 117, "reload");
                 if (null != var2) {
-                  rf.field_q = ll.a(0, var2);
+                  ArchiveRequest.field_q = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 117, "cost14");
                 if (var2 != null) {
@@ -572,7 +572,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 79, "accuracycolon");
                 if (var2 != null) {
-                  wh.field_g = ll.a(0, var2);
+                  DiskCacheWorker.field_g = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 125, "throwtq");
                 if (var2 != null) {
@@ -2460,7 +2460,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 85, "undoplacement");
                 if (null != var2) {
-                  rf.field_t = ll.a(0, var2);
+                  ArchiveRequest.field_t = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 124, "landtroops");
                 if (var2 != null) {

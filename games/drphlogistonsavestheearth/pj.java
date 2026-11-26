@@ -315,8 +315,8 @@ class pj extends vg implements ba {
               if (param6) {
                 var9 = var9 | 1;
               }
-              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) -30);
-              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) 119);
+              MusicPatchPcmStream.field_n.writeInt(NetworkArchiveRequest.field_M.nextInt(), (byte) -30);
+              MusicPatchPcmStream.field_n.writeInt(NetworkArchiveRequest.field_M.nextInt(), (byte) 119);
               MusicPatchPcmStream.field_n.writePrefixedString(-23805, var14);
               MusicPatchPcmStream.field_n.writePrefixedString(param4 ^ -23805, var8);
               var15 = (CharSequence) ((Object) param0);
@@ -336,8 +336,8 @@ class pj extends vg implements ba {
               nj.field_p.backpatchShortLength(-2, -var10 + nj.field_p.position);
             } else {
               MusicPatchPcmStream.field_n.position = 0;
-              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) -77);
-              MusicPatchPcmStream.field_n.writeInt(cm.field_M.nextInt(), (byte) 126);
+              MusicPatchPcmStream.field_n.writeInt(NetworkArchiveRequest.field_M.nextInt(), (byte) -77);
+              MusicPatchPcmStream.field_n.writeInt(NetworkArchiveRequest.field_M.nextInt(), (byte) 126);
               stackIn_12_0 = MusicPatchPcmStream.field_n;
               stackIn_12_1 = -23805;
               if (!param3.a((byte) -128)) {

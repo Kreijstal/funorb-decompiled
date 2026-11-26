@@ -49,7 +49,7 @@ final class nc extends IntrusiveNode {
                 return stackIn_16_0;
               }
             } else {
-              if (-1 == dc.field_y.indexOf(var4)) {
+              if (-1 == NetworkArchiveRequest.field_y.indexOf(var4)) {
                 stackIn_20_0 = ll.field_a;
                 return stackIn_20_0;
               }

@@ -14,7 +14,7 @@ final class na extends ei {
 
     final static void a(boolean param0, String param1, int param2, String param3) {
         try {
-          nh.field_D = param3;
+          NetworkArchiveRequest.field_D = param3;
           ol.field_Hb = param1;
           int var4_int = -26 / ((32 - param2) / 55);
           ta.a(fh.field_x, param0, 10);

@@ -239,7 +239,7 @@ final class tj {
         RuntimeException decompiledCaughtException = null;
         var4 = OrbDefence.field_D ? 1 : 0;
         try {
-          if (!vl.a(param0, param2, -125)) {
+          if (!DiskCacheWorker.a(param0, param2, -125)) {
             return false;
           }
           for (var3_int = param1; var3_int < param2.length(); var3_int++) {

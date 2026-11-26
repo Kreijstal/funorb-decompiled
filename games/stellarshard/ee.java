@@ -125,7 +125,7 @@ final class ee {
         boolean stackIn_7_0 = false;
         boolean decompiledFrameRemainder0 = true;
         var1 = -125 / ((-2 - param0) / 47);
-        if (rk.field_f >= 20 &&
+        if (DiskCacheWorker.field_f >= 20 &&
           vj.a(25424) && (!(ag.field_c > 0) ||
           fa.a(-54))) {
           stackIn_7_0 = false;

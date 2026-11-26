@@ -1,0 +1,532 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class DiskCacheWorker implements Runnable {
+    static PlatformTaskDispatcher field_h;
+    static String field_f;
+    static java.awt.Canvas field_g;
+    private hl field_b;
+    static int field_c;
+    static long field_i;
+    private Thread field_d;
+    private boolean field_a;
+    int field_e;
+
+    public final void run() {
+        try {
+          InterruptedException interruptedException = null;
+          Object var2 = null;
+          int var5 = 0;
+          DiskArchiveRequest var6 = null;
+          int decompiledRegionSelector0 = 0;
+          Throwable decompiledCaughtException = null;
+          Object var2_ref = null;
+          Exception var2_ref2 = null;
+          var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+          while (true) {
+            if (!this.field_a) {
+              var2_ref = this.field_b;
+              synchronized (var2_ref) {
+                regionExit1: {
+                  var6 = (DiskArchiveRequest) (this.field_b.d(5518));
+                  if (var5 != 0) {
+                    decompiledRegionSelector0 = 0;
+                  } else {
+                    if (var6 != null) {
+                      this.field_e = this.field_e - 1;
+                    } else {
+                      try {
+                        this.field_b.wait();
+                      } catch (java.lang.InterruptedException decompiledCaughtParameter0) {
+                        decompiledCaughtException = decompiledCaughtParameter0;
+                        interruptedException = (InterruptedException) (Object) decompiledCaughtException;
+                      }
+                      decompiledRegionSelector0 = 1;
+                      break regionExit1;
+                    }
+                    decompiledRegionSelector0 = 2;
+                  }
+                }
+              }
+              if (decompiledRegionSelector0 == 0) {
+                return;
+              }
+              if (decompiledRegionSelector0 == 1) {
+                continue;
+              }
+              try {
+                if (var6.field_G != 2) {
+                  if (var6.field_G == 3) {
+                    var6.field_F = var6.field_H.read((int)var6.secondaryKey, 3);
+                    if (var5 != 0) {
+                      var6.field_H.write((byte) 107, var6.field_F.length, var6.field_F, (int)var6.secondaryKey);
+                    }
+                  }
+                } else {
+                  var6.field_H.write((byte) 107, var6.field_F.length, var6.field_F, (int)var6.secondaryKey);
+                }
+              } catch (java.lang.Exception decompiledCaughtParameter1) {
+                decompiledCaughtException = decompiledCaughtParameter1;
+                var2_ref2 = (Exception) (Object) decompiledCaughtException;
+                gb.a((Throwable) ((Object) var2_ref2), (String) null, 10);
+              }
+              var6.field_u = false;
+              if (var5 == 0) {
+                continue;
+              }
+            }
+            break;
+          }
+          return;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    final static RgbSprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+        int stackIn_11_0 = 0;
+        int stackIn_22_0 = 0;
+        int stackIn_24_0 = 0;
+        int stackIn_24_1 = 0;
+        int stackIn_34_0 = 0;
+        int stackIn_45_0 = 0;
+        int var9 = 0;
+        RgbSprite[] var10 = null;
+        RgbSprite[] var11_ref_nh__ = null;
+        int var11 = 0;
+        int var12 = 0;
+        RgbSprite var13_ref_nh = null;
+        int var13 = 0;
+        int var14 = 0;
+        int var15 = 0;
+        int var11Lifetime1;
+        int var12Lifetime1;
+        int var12Lifetime2;
+        int var12Lifetime2Lifetime1;
+        int var12Lifetime2Lifetime2;
+        var15 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        var9 = param5 + param7 + param8;
+        var10 = new RgbSprite[]{new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9), new RgbSprite(var9, param1), new RgbSprite(64, 64), new RgbSprite(var9, param1), new RgbSprite(var9, var9), new RgbSprite(param1, var9), new RgbSprite(var9, var9)};
+        var11_ref_nh__ = var10;
+        var12 = 0;
+        scanLoop1: while (true) {
+          if (var11_ref_nh__.length > var12) {
+            var13_ref_nh = var11_ref_nh__[var12];
+            stackIn_11_0 = 0;
+            if (var15 != 0) {
+              break scanLoop1;
+            }
+            var14 = stackIn_11_0;
+            while (var13_ref_nh.field_B.length > var14) {
+              var13_ref_nh.field_B[var14] = param2;
+              var14++;
+            }
+            var12++;
+            continue scanLoop1;
+          }
+          stackIn_11_0 = 0;
+          break;
+        }
+        var11 = stackIn_11_0;
+        scanLoop2: while (true) {
+          if (var11 < param7) {
+            stackIn_22_0 = 0;
+            if (var15 != 0) {
+              break scanLoop2;
+            }
+            var12Lifetime1 = stackIn_22_0;
+            while (var12Lifetime1 < var9) {
+              var10[6].field_B[(-var11 + (var9 - 1)) * var9 + var12Lifetime1] = param3;
+              var10[8].field_B[(var9 - (var11 + 1)) * var9 + var12Lifetime1] = param3;
+              var10[2].field_B[-var11 + (var9 - 1 + var9 * var12Lifetime1)] = param3;
+              var10[8].field_B[var9 * var12Lifetime1 - 1 - (-var9 + var11)] = param3;
+              var12Lifetime1++;
+            }
+            var11++;
+            continue scanLoop2;
+          }
+          stackIn_22_0 = 0;
+          break;
+        }
+        var11Lifetime1 = stackIn_22_0;
+        while (true) {
+          stackIn_24_0 = param7;
+          stackIn_24_1 = var11Lifetime1;
+          if (stackIn_24_0 > stackIn_24_1) {
+            stackIn_34_0 = 0;
+            if (var15 == 0) {
+              var12Lifetime2 = stackIn_34_0;
+              while (var12Lifetime2 < var9) {
+                var10[0].field_B[var12Lifetime2 + var9 * var11Lifetime1] = param4;
+                var10[0].field_B[var12Lifetime2 * var9 + var11Lifetime1] = param4;
+                stackIn_24_0 = -var11Lifetime1 + var9;
+                stackIn_24_1 = var12Lifetime2;
+                if (stackIn_24_0 > stackIn_24_1) {
+                  var10[2].field_B[var12Lifetime2 + var9 * var11Lifetime1] = param4;
+                  var10[6].field_B[var11Lifetime1 + var9 * var12Lifetime2] = param4;
+                }
+                var12Lifetime2++;
+              }
+              var11Lifetime1++;
+              continue;
+            }
+          } else {
+            var11Lifetime1 = -122 % ((param0 - 24) / 62);
+            stackIn_34_0 = 0;
+          }
+          var12Lifetime2Lifetime1 = stackIn_34_0;
+          scanLoop3: while (true) {
+            if (var12Lifetime2Lifetime1 < param1) {
+              stackIn_45_0 = 0;
+              if (var15 != 0) {
+                break scanLoop3;
+              }
+              var13 = stackIn_45_0;
+              while (param7 > var13) {
+                var10[7].field_B[param1 * (-1 + (-var13 + var9)) + var12Lifetime2Lifetime1] = param3;
+                var10[5].field_B[var12Lifetime2Lifetime1 * var9 - 1 - (-var9 + var13)] = param3;
+                var10[1].field_B[param1 * var13 + var12Lifetime2Lifetime1] = param4;
+                var10[3].field_B[var13 + var12Lifetime2Lifetime1 * var9] = param4;
+                var13++;
+              }
+              var12Lifetime2Lifetime1++;
+              continue scanLoop3;
+            }
+            stackIn_45_0 = 0;
+            break;
+          }
+          var11Lifetime1 = stackIn_45_0;
+          scanLoop4: while (var11Lifetime1 < param1 >> 1) {
+            var12Lifetime2Lifetime2 = 0;
+            while (true) {
+              if (param5 > var12Lifetime2Lifetime2) {
+                var10[1].field_B[var11Lifetime1 + (-1 + var9 - var12Lifetime2Lifetime2) * param1] = param6;
+                var10[3].field_B[var11Lifetime1 * var9 - 1 + (var9 - var12Lifetime2Lifetime2)] = param6;
+                var10[7].field_B[param1 * var12Lifetime2Lifetime2 + var11Lifetime1] = param6;
+                var10[5].field_B[var11Lifetime1 * var9 + var12Lifetime2Lifetime2] = param6;
+                var12Lifetime2Lifetime2++;
+                if (var15 == 0) {
+                  continue;
+                }
+              } else {
+                var11Lifetime1++;
+              }
+              break;
+            }
+            if (var15 == 0) {
+              continue scanLoop4;
+            }
+            break;
+          }
+          return var10;
+        }
+    }
+
+    private final void enqueue(DiskArchiveRequest param0, byte param1) {
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        Throwable decompiledCaughtException = null;
+        Object var3 = null;
+        RuntimeException var3_ref = null;
+        try {
+          var3 = this.field_b;
+          synchronized (var3) {
+            if (param1 >= -112) {
+              this.readNow(62, 59, (SectorCacheStore) null);
+            }
+            this.field_b.a(param0, 0);
+            this.field_e = this.field_e + 1;
+            this.field_b.notifyAll();
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_10_0 = var3_ref;
+          stackIn_10_1 = new StringBuilder().append("n.G(");
+          if (param0 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final static boolean a(int param0) {
+        boolean stackIn_6_0 = false;
+        if (param0 != 64) {
+          DiskCacheWorker.createFullscreenCanvas(31, (PlatformTaskDispatcher) null, -33, -104, -11, -95);
+        }
+        stackIn_6_0 = (null != uj.field_j) && (tl.field_O == SectorCacheStore.field_d);
+        return stackIn_6_0;
+    }
+
+    final DiskArchiveRequest requestRead(SectorCacheStore param0, int param1, int param2) {
+        DiskArchiveRequest var4 = null;
+        RuntimeException var4_ref = null;
+        DiskArchiveRequest stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var4 = new DiskArchiveRequest();
+          var4.field_H = param0;
+          if (param2 != 7) {
+            field_g = (java.awt.Canvas) null;
+          }
+          var4.field_y = false;
+          var4.secondaryKey = (long)param1;
+          var4.field_G = 3;
+          this.enqueue(var4, (byte) -117);
+          stackIn_3_0 = var4;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_6_0 = var4_ref;
+          stackIn_6_1 = new StringBuilder().append("n.F(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public static void b(int param0) {
+        if (param0 != -31553) {
+          DiskCacheWorker.a(-17);
+        }
+        field_g = null;
+        field_h = null;
+        field_f = null;
+    }
+
+    final DiskArchiveRequest readNow(int param0, int param1, SectorCacheStore param2) {
+        DiskArchiveRequest var4 = null;
+        RuntimeException var4_ref = null;
+        Object var5 = null;
+        DiskArchiveRequest var6 = null;
+        int var8 = 0;
+        DiskArchiveRequest stackIn_10_0 = null;
+        int stackIn_17_0 = 0;
+        DiskArchiveRequest stackIn_20_0 = null;
+        RuntimeException stackIn_23_0 = null;
+        StringBuilder stackIn_23_1 = null;
+        String stackIn_24_2 = null;
+        int decompiledRegionSelector0 = 0;
+        Throwable decompiledCaughtException = null;
+        var8 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        try {
+          var4 = new DiskArchiveRequest();
+          var4.field_G = 1;
+          var5 = this.field_b;
+          synchronized (var5) {
+            boolean decompiledFrameCompleted0 = true;
+            var6 = (DiskArchiveRequest) (this.field_b.a(true));
+            while (var6 != null) {
+              stackIn_17_0 = compareLongs(~var6.secondaryKey, ~(long)param1);
+              if (var8 != 0) {
+                decompiledRegionSelector0 = 0;
+                decompiledFrameCompleted0 = false;
+                break;
+              }
+              if (stackIn_17_0 == 0 &&
+                var6.field_H == param2 &&
+                var6.field_G == 2) {
+                var4.field_u = false;
+                var4.field_F = var6.field_F;
+                stackIn_10_0 = var4;
+                return stackIn_10_0;
+              }
+              var6 = (DiskArchiveRequest) (this.field_b.c(97));
+            }
+            if (decompiledFrameCompleted0) {
+              decompiledRegionSelector0 = 1;
+            }
+          }
+          if (decompiledRegionSelector0 != 0) {
+            var4.field_F = param2.read(param1, 3);
+            var4.field_u = false;
+            var4.field_y = true;
+            stackIn_17_0 = param0;
+          }
+          if (stackIn_17_0 != 6) {
+            this.field_a = false;
+          }
+          stackIn_20_0 = var4;
+          return stackIn_20_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = (RuntimeException) (Object) decompiledCaughtException;
+          stackIn_23_0 = var4_ref;
+          stackIn_23_1 = new StringBuilder().append("n.A(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_24_2 = "null";
+          } else {
+            stackIn_24_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+        }
+    }
+
+    final static FullscreenFocusCanvas createFullscreenCanvas(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
+        java.awt.Frame var6 = null;
+        RuntimeException var6_ref = null;
+        FullscreenFocusCanvas var7 = null;
+        java.awt.Frame var8 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
+        RuntimeException stackIn_9_0 = null;
+        StringBuilder stackIn_9_1 = null;
+        String stackIn_10_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var8 = nj.a(param0, param5, param1, false, param2, param4);
+          var6 = var8;
+          if (var8 == null) {
+            return null;
+          }
+          var7 = new FullscreenFocusCanvas();
+          var7.fullscreenFrame = var8;
+          var7.fullscreenFrame.add((java.awt.Component) ((Object) var7));
+          var7.setBounds(0, 0, param2, param4);
+          var7.addFocusListener(var7);
+          var7.requestFocus();
+          if (param3 != 9764) {
+            field_f = (String) null;
+          }
+          stackIn_6_0 = var7;
+          return stackIn_6_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6_ref = decompiledCaughtException;
+          stackIn_9_0 = var6_ref;
+          stackIn_9_1 = new StringBuilder().append("n.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_10_2 = "null";
+          } else {
+            stackIn_10_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    final DiskArchiveRequest requestWrite(int param0, SectorCacheStore param1, byte[] param2, int param3) {
+        DiskArchiveRequest var5 = null;
+        RuntimeException var5_ref = null;
+        int var6 = 0;
+        DiskArchiveRequest stackIn_1_0 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var5 = new DiskArchiveRequest();
+          var5.secondaryKey = (long)param0;
+          var6 = -73 % ((-42 - param3) / 51);
+          var5.field_H = param1;
+          var5.field_y = false;
+          var5.field_F = param2;
+          var5.field_G = 2;
+          this.enqueue(var5, (byte) -124);
+          stackIn_1_0 = var5;
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5_ref = decompiledCaughtException;
+          stackIn_4_0 = var5_ref;
+          stackIn_4_1 = new StringBuilder().append("n.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          stackIn_7_1 = ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final void shutdown(byte param0) {
+        try {
+          int var3 = 0;
+          this.field_a = true;
+          synchronized (this.field_b) {
+            var3 = -87 / ((param0 + 9) / 47);
+            this.field_b.notifyAll();
+          }
+          try {
+            this.field_d.join();
+          } catch (InterruptedException interruptedException) {
+          }
+          this.field_d = null;
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    DiskCacheWorker(PlatformTaskDispatcher param0) {
+        RuntimeException runtimeException = null;
+        PlatformTask var2 = null;
+        int var3 = 0;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
+        this.field_b = new hl();
+        this.field_a = false;
+        this.field_e = 0;
+        try {
+          var2 = param0.requestThreadStart((Runnable) (this), 5, (byte) 127);
+          while (true) {
+            if (var2.status == 0) {
+              kk.sleepMillis(10L, true);
+              if (var3 != 0) {
+                return;
+              }
+              continue;
+            }
+            break;
+          }
+          if (var2.status == 2) {
+            throw new RuntimeException();
+          }
+          this.field_d = (Thread) (var2.result);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          runtimeException = decompiledCaughtException;
+          stackIn_11_0 = runtimeException;
+          stackIn_11_1 = new StringBuilder().append("n.<init>(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_f = "Medium";
+    }
+
+    private static int compareLongs(long left, long right) {
+        return left < right ? -1 : (left == right ? 0 : 1);
+    }
+}

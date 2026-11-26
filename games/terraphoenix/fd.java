@@ -33,7 +33,7 @@ class fd implements WidgetActionListener, w {
             return false;
           }
           lf.field_c = ll.field_b[BattleUnit.field_V];
-          ua.field_g = ah.field_E[BattleUnit.field_V];
+          SectorCacheStore.field_g = ah.field_E[BattleUnit.field_V];
           BattleUnit.field_V = param0 + BattleUnit.field_V & 127;
           stackIn_5_0 = true;
         }

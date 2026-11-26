@@ -78,7 +78,7 @@ public final class Transmogrify extends SessionGameApplet {
               return;
             }
             if (!IntrusiveDeque.b((byte) 99)) {
-              sh.field_c = pj.a(29, (byte) -76, 3, 10, 1);
+              sh.field_c = NetworkArchiveRequest.a(29, (byte) -76, 3, 10, 1);
             }
           }
           boolean decompiledFrameRemainder0 = true;
@@ -95,7 +95,7 @@ public final class Transmogrify extends SessionGameApplet {
               if (kb.field_n != null &&
                 kb.field_n.field_i) {
                 hc.field_u = hc.field_u & ~kb.field_n.field_k;
-                rh.unlockedAchievementMask = rh.unlockedAchievementMask | kb.field_n.field_k;
+                ArchiveRequest.unlockedAchievementMask = ArchiveRequest.unlockedAchievementMask | kb.field_n.field_k;
                 kb.field_n = null;
                 cg.b((byte) -27);
                 GzipDecompressor.a(-117);
@@ -299,7 +299,7 @@ public final class Transmogrify extends SessionGameApplet {
                 } else {
                   kb.field_n = l.a((byte) 12, 4);
                   ug.b(true);
-                  sh.field_c = pj.a(29, (byte) 114, 3, 10, 1);
+                  sh.field_c = NetworkArchiveRequest.a(29, (byte) 114, 3, 10, 1);
                   be.field_q = vl.field_y;
                 }
                 if (be.field_q == -2) {
@@ -438,7 +438,7 @@ public final class Transmogrify extends SessionGameApplet {
                 }
                 if (be.field_q == 5 &&
                   IntrusiveDeque.b((byte) 99)) {
-                  rh.unlockedAchievementMask = 0;
+                  ArchiveRequest.unlockedAchievementMask = 0;
                   hc.field_u = 0;
                   mc.field_c.clear(-1);
                   SecondaryNodeDeque.field_g = 0;
@@ -560,7 +560,7 @@ public final class Transmogrify extends SessionGameApplet {
                   }
                   var3 = -10 + tl.field_d;
                   if (var3 >= 0) {
-                    rh.field_s.c(0, (int)(Math.exp((double)(-var3) * 0.06) * -160.0 * Math.cos((double)var3 * 0.12)));
+                    ArchiveRequest.field_s.c(0, (int)(Math.exp((double)(-var3) * 0.06) * -160.0 * Math.cos((double)var3 * 0.12)));
                   }
                   var3 = tl.field_d - 50;
                   if (var3 >= 0) {
@@ -949,8 +949,8 @@ public final class Transmogrify extends SessionGameApplet {
             gk.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 124, "", "intro_stars");
             ij.field_h = pc.a("", "intro_host", oi.field_g, -124);
             hc.field_r = pc.a("", "intro_hostess", oi.field_g, 95);
-            rh.field_s = kf.a(pc.a("", "intro_logo_packed", oi.field_g, param0 - 31), false, (byte) 126);
-            rh.field_s.b();
+            ArchiveRequest.field_s = kf.a(pc.a("", "intro_logo_packed", oi.field_g, param0 - 31), false, (byte) 126);
+            ArchiveRequest.field_s.b();
             kk.field_d = null;
             ck.field_C = null;
             SecondaryNodeDeque.field_d = null;
@@ -1141,7 +1141,7 @@ public final class Transmogrify extends SessionGameApplet {
           ub.clearStaticReferences(-31455);
           i.clearStaticReferences(true);
           uh.c(-21);
-          cd.clearStaticReferences(107);
+          DiskCacheWorker.clearStaticReferences(107);
           dk.clearStaticReferences((byte) 127);
           we.clearStaticReferences(-11509);
           BufferedSocket.clearStaticReferences(-102);
@@ -1236,12 +1236,12 @@ public final class Transmogrify extends SessionGameApplet {
           DelayedPcmStream.clearStaticReferences(0);
           tj.clearStaticReferences((byte) 107);
           bk.clearStaticReferences(-123);
-          pj.clearStaticReferences(124);
-          ak.clearStaticReferences((byte) 116);
+          NetworkArchiveRequest.clearStaticReferences(124);
+          SectorCacheStore.clearStaticReferences((byte) 116);
           be.c((byte) 113);
           di.clearStaticReferences(54);
           eg.a((byte) 66);
-          rh.clearStaticReferences(true);
+          ArchiveRequest.clearStaticReferences(true);
           SocketConnector.clearStaticReferences(0);
           rl.clearStaticReferences(7);
           db.a(8192);

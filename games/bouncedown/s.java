@@ -101,7 +101,7 @@ final class s extends vc {
             return false;
           }
           var2_long = fa.correctedCurrentTimeMillis(-94);
-          if (0 != vi.field_c &&
+          if (0 != DiskCacheWorker.field_c &&
             bh.field_c < 0) {
             var4_ref_j = (j) (ih.field_w.beginForward((byte) -99));
             if (var4_ref_j != null &&
@@ -135,7 +135,7 @@ final class s extends vc {
             if (!va.b(1)) {
               return false;
             }
-            if (vi.field_c == 0) {
+            if (DiskCacheWorker.field_c == 0) {
               ak.field_z = i.field_f;
               i.field_f = ck.field_b;
               ck.field_b = wa.field_d;
@@ -143,7 +143,7 @@ final class s extends vc {
               bh.field_c = -1;
               return true;
             }
-            var4 = vi.field_c;
+            var4 = DiskCacheWorker.field_c;
             if (oj.field_c != 0.0) {
               var4 = (int)((double)var4 + la.field_C.nextGaussian() * oj.field_c);
               if (var4 < 0) {

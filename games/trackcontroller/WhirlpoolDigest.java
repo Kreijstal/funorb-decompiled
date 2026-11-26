@@ -273,7 +273,7 @@ final class WhirlpoolDigest {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_b[var3Lifetime1] = ib.a(this.field_b[var3Lifetime1], lh.field_B[var4][RandomAccessCacheFile.a(255, (int)(this.field_j[RandomAccessCacheFile.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_b[var3Lifetime1] = ib.a(this.field_b[var3Lifetime1], DiskArchiveRequest.field_B[var4][RandomAccessCacheFile.a(255, (int)(this.field_j[RandomAccessCacheFile.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -281,14 +281,14 @@ final class WhirlpoolDigest {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_j[var3Lifetime1Lifetime1] = this.field_b[var3Lifetime1Lifetime1];
           }
-          this.field_j[0] = ib.a(this.field_j[0], lh.field_D[var2Lifetime2]);
+          this.field_j[0] = ib.a(this.field_j[0], DiskArchiveRequest.field_D[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_b[var3Lifetime1Lifetime2] = this.field_j[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (8 > var7) {
-              this.field_b[var3Lifetime1Lifetime2] = ib.a(this.field_b[var3Lifetime1Lifetime2], lh.field_B[var7][RandomAccessCacheFile.a((int)(this.field_m[RandomAccessCacheFile.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_b[var3Lifetime1Lifetime2] = ib.a(this.field_b[var3Lifetime1Lifetime2], DiskArchiveRequest.field_B[var7][RandomAccessCacheFile.a((int)(this.field_m[RandomAccessCacheFile.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }

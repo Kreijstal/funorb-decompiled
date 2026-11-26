@@ -123,11 +123,11 @@ final class ll {
           var6 = null;
           if (-1 == param2.indexOf('@')) {
             var7 = (CharSequence) ((Object) param2);
-            var4_long = ik.a(var7, (byte) -83);
+            var4_long = ArchiveRequest.a(var7, (byte) -83);
           } else {
             var6 = param2;
           }
-          stackIn_6_0 = ik.a(param3, -66, var4_long, (String) (var6), param0);
+          stackIn_6_0 = ArchiveRequest.a(param3, -66, var4_long, (String) (var6), param0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

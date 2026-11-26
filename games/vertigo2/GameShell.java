@@ -41,13 +41,13 @@ abstract class GameShell extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = Vertigo2.field_L ? 1 : 0;
-        if (null != t.field_m) {
+        if (null != DiskCacheWorker.field_m) {
           if (null == dc.field_L) {
             var6 = CrossfadingMidiPcmStream.a((byte) 87);
             var4 = var6.getSize();
-            t.field_m.a(~param1, var4.height, var4.width);
+            DiskCacheWorker.field_m.a(~param1, var4.height, var4.width);
           }
-          t.field_m.a(16671);
+          DiskCacheWorker.field_m.a(16671);
         }
         dp.b((byte) 124);
         mr.b(false);
@@ -79,7 +79,7 @@ abstract class GameShell extends GameApplet {
           0 == GameplayScreen.field_f) {
           stackIn_24_0 = (GameplayScreen.field_f != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          GameplayScreen.field_f = qh.b(32);
+          GameplayScreen.field_f = SectorCacheStore.b(32);
           if (var3Lifetime1 != 0 &&
             GameplayScreen.field_f == 0 &&
             11 == hn.field_w &&
@@ -148,7 +148,7 @@ abstract class GameShell extends GameApplet {
         }
         if (GameplayScreen.field_f == 0 &&
           !va.b((byte) -81)) {
-          nq.field_E = false;
+          DiskArchiveRequest.field_E = false;
         }
         if (qc.field_A == 0 &&
           sf.a(1)) {
@@ -205,7 +205,7 @@ abstract class GameShell extends GameApplet {
             oq.field_E = rc.b(param1 + 130);
             AccountRequestState.field_c = UiWidget.e(param1 + 12349);
           }
-          t.a(oq.field_E, param1 + 1513245, AccountRequestState.field_c, kb.field_b);
+          DiskCacheWorker.a(oq.field_E, param1 + 1513245, AccountRequestState.field_c, kb.field_b);
           la.field_e = null;
           ke.field_b = null;
           kb.field_b = null;
@@ -370,7 +370,7 @@ abstract class GameShell extends GameApplet {
             pd.a(ob.e((byte) -95), 1000000);
           }
           if (var4 == 12) {
-            gg.a(qh.d(0), true, ob.e((byte) 68));
+            gg.a(SectorCacheStore.d(0), true, ob.e((byte) 68));
           }
           if (var4 == 13) {
             try {

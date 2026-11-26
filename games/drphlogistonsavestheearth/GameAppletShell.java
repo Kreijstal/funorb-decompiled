@@ -67,17 +67,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             eh.field_a = true;
             qh.field_b = qh.field_b - 50;
-            n.field_g.setSize(fg.field_h, ByteStorage.field_a);
-            n.field_g.setVisible(true);
+            DiskCacheWorker.field_g.setSize(fg.field_h, ByteStorage.field_a);
+            DiskCacheWorker.field_g.setVisible(true);
             if (bb.field_a != null &&
               null == AccountCreationResultPanel.field_Gb) {
               var6 = bb.field_a.getInsets();
-              n.field_g.setLocation(tg.field_b + var6.left, hg.field_pb + var6.top);
+              DiskCacheWorker.field_g.setLocation(tg.field_b + var6.left, hg.field_pb + var6.top);
               if (DrPhlogistonSavesTheEarth.field_D) {
-                n.field_g.setLocation(tg.field_b, hg.field_pb);
+                DiskCacheWorker.field_g.setLocation(tg.field_b, hg.field_pb);
               }
             } else {
-              n.field_g.setLocation(tg.field_b, hg.field_pb);
+              DiskCacheWorker.field_g.setLocation(tg.field_b, hg.field_pb);
             }
           }
           this.h(0);
@@ -134,7 +134,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_66_0 = lb.a(var2.charAt(var3), true);
+                      stackIn_66_0 = ArchiveRequest.a(var2.charAt(var3), true);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -206,7 +206,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 b.e(-117);
                 this.f(118);
-                lb.field_C = al.a((byte) -73, fg.field_h, (java.awt.Component) ((Object) n.field_g), ByteStorage.field_a);
+                ArchiveRequest.field_C = al.a((byte) -73, fg.field_h, (java.awt.Component) ((Object) DiskCacheWorker.field_g), ByteStorage.field_a);
                 this.a(32);
                 BufferedSocket.field_e = ProxyAuthenticationRequiredException.a(65280);
                 do {
@@ -227,7 +227,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < jj.field_b)) {
                       this.g(31180);
-                      oh.a(sb.field_d, 1, n.field_g);
+                      oh.a(sb.field_d, 1, DiskCacheWorker.field_g);
                       break;
                     }
                     this.d((byte) -17);
@@ -274,7 +274,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          cm.field_J = true;
+          NetworkArchiveRequest.field_J = true;
           eh.field_a = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -581,7 +581,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          cm.field_J = false;
+          NetworkArchiveRequest.field_J = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -624,10 +624,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (n.field_g != null) {
+          if (DiskCacheWorker.field_g != null) {
             try {
-              n.field_g.removeFocusListener((java.awt.event.FocusListener) (this));
-              n.field_g.getParent().remove((java.awt.Component) ((Object) n.field_g));
+              DiskCacheWorker.field_g.removeFocusListener((java.awt.event.FocusListener) (this));
+              DiskCacheWorker.field_g.getParent().remove((java.awt.Component) ((Object) DiskCacheWorker.field_g));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -666,10 +666,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (n.field_g != null) {
-            n.field_g.removeFocusListener((java.awt.event.FocusListener) (this));
-            n.field_g.getParent().setBackground(java.awt.Color.black);
-            n.field_g.getParent().remove((java.awt.Component) ((Object) n.field_g));
+          if (DiskCacheWorker.field_g != null) {
+            DiskCacheWorker.field_g.removeFocusListener((java.awt.event.FocusListener) (this));
+            DiskCacheWorker.field_g.getParent().setBackground(java.awt.Color.black);
+            DiskCacheWorker.field_g.getParent().remove((java.awt.Component) ((Object) DiskCacheWorker.field_g));
           }
           boolean decompiledFrameRemainder0 = true;
           if (AccountCreationResultPanel.field_Gb == null) {
@@ -695,23 +695,23 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             var2 = AccountCreationResultPanel.field_Gb;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          n.field_g = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) n.field_g));
-          n.field_g.setSize(fg.field_h, ByteStorage.field_a);
-          n.field_g.setVisible(true);
+          DiskCacheWorker.field_g = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) DiskCacheWorker.field_g));
+          DiskCacheWorker.field_g.setSize(fg.field_h, ByteStorage.field_a);
+          DiskCacheWorker.field_g.setVisible(true);
           boolean decompiledSharedTail0 = (bb.field_a == var2);
           if (!decompiledSharedTail0) {
-            n.field_g.setLocation(tg.field_b, hg.field_pb);
+            DiskCacheWorker.field_g.setLocation(tg.field_b, hg.field_pb);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = bb.field_a.getInsets();
-            n.field_g.setLocation(tg.field_b + var3.left, hg.field_pb + var3.top);
+            DiskCacheWorker.field_g.setLocation(tg.field_b + var3.left, hg.field_pb + var3.top);
           }
-          n.field_g.addFocusListener((java.awt.event.FocusListener) (this));
-          n.field_g.requestFocus();
+          DiskCacheWorker.field_g.addFocusListener((java.awt.event.FocusListener) (this));
+          DiskCacheWorker.field_g.requestFocus();
           pj.field_C = true;
-          cm.field_J = true;
+          NetworkArchiveRequest.field_J = true;
           eh.field_a = true;
           ci.field_U = false;
           if (param0 <= 108) {
@@ -842,7 +842,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ge.field_f = 31 & 1 + ge.field_f;
           var6 = this;
           synchronized (var6) {
-            pj.field_C = cm.field_J;
+            pj.field_C = NetworkArchiveRequest.field_J;
             if (param0 != -17) {
               field_i = (RgbSprite) null;
             }
@@ -864,7 +864,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           sf.field_j = la.correctedCurrentTimeMillis(false);
           kk.sleepMillis(5000L, true);
-          n.field_h = null;
+          DiskCacheWorker.field_h = null;
           this.a(0, false);
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "li.destroy()");
@@ -912,7 +912,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               LevelSession.field_K = nb.a(-84);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param5, param1, true);
               sb.field_d = dupTemp$0;
-              n.field_h = dupTemp$0;
+              DiskCacheWorker.field_h = dupTemp$0;
               var8 = sb.field_d.requestThreadStart((Runnable) (this), 1, (byte) -128);
               while (true) {
                 if (var8.status == 0) {

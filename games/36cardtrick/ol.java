@@ -20,7 +20,7 @@ final class ol extends jc implements qh {
           if (!tc.a(param0, param2, param3 ^ 505429695, param1)) {
             return null;
           }
-          stackIn_6_0 = hc.a(param3 - 502094224);
+          stackIn_6_0 = SectorCacheStore.a(param3 - 502094224);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,7 +197,7 @@ final class ol extends jc implements qh {
         var8 = Main.field_T;
         var1 = new RgbSprite[cf.field_c];
         for (var2 = 0; var2 < cf.field_c; var2++) {
-          var3 = na.field_q[var2] * hb.field_a[var2];
+          var3 = NetworkArchiveRequest.field_q[var2] * hb.field_a[var2];
           var21 = rd.field_k[var2];
           if (!hl.field_y[var2]) {
             var10 = new int[var3];
@@ -205,7 +205,7 @@ final class ol extends jc implements qh {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = ImageProducerRasterBuffer.field_i[bc.a((int) var21[var6], 255)];
             }
-            var1[var2] = new RgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var22);
+            var1[var2] = new RgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], var22);
           } else {
             var15 = vd.field_r[var2];
             var11 = var15;
@@ -217,7 +217,7 @@ final class ol extends jc implements qh {
             for (var7 = 0; var3 > var7; var7++) {
               var6_ref_int__[var7] = GameApplet.a(bc.a(255, (int) var15[var7]) << 24, ImageProducerRasterBuffer.field_i[bc.a((int) var21[var7], 255)]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var17));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], NetworkArchiveRequest.field_q[var2], hb.field_a[var2], var17));
           }
         }
         rh.d(79);

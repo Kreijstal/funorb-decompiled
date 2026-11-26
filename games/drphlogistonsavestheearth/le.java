@@ -49,8 +49,8 @@ final class le {
         int var6 = 0;
         String var7 = null;
         try {
-          PcmOutputWorker.field_b[0] = cm.field_M.nextInt();
-          PcmOutputWorker.field_b[1] = cm.field_M.nextInt();
+          PcmOutputWorker.field_b[0] = NetworkArchiveRequest.field_M.nextInt();
+          PcmOutputWorker.field_b[1] = NetworkArchiveRequest.field_M.nextInt();
           MusicPatchPcmStream.field_n.position = 0;
           PcmOutputWorker.field_b[2] = (int)(s.field_c >> 32);
           PcmOutputWorker.field_b[3] = (int)s.field_c;
@@ -70,7 +70,7 @@ final class le {
           nj.field_p.position = nj.field_p.position + 2;
           var5_int = nj.field_p.position;
           nj.field_p.writeInt(nf.field_t, (byte) 113);
-          nj.field_p.writeLong(n.field_i, (byte) -25);
+          nj.field_p.writeLong(DiskCacheWorker.field_i, (byte) -25);
           var6 = 0;
           if (bd.field_N) {
             var6 = var6 | 1;

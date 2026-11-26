@@ -519,13 +519,13 @@ class w extends IntrusiveNode {
               if (0 == ul.field_o &&
                 0 != pg.field_f) {
                 this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
-                var8 = si.field_t;
+                var8 = ArchiveRequest.field_t;
                 var6 = var8;
                 if (var8 != null) {
                   if (var8.field_r instanceof wk) {
                     ((wk) (var8.field_r)).a(16797, (l) null, var8);
                   }
-                  si.field_t = null;
+                  ArchiveRequest.field_t = null;
                 }
               }
               pg.field_f = ul.field_o;
@@ -547,13 +547,13 @@ class w extends IntrusiveNode {
               return param1;
             }
             this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
-            var10 = si.field_t;
+            var10 = ArchiveRequest.field_t;
             var6Lifetime2 = var10;
             if (var10 != null) {
               if (var10.field_r instanceof wk) {
                 ((wk) (var10.field_r)).a(16797, (l) null, var10);
               }
-              si.field_t = null;
+              ArchiveRequest.field_t = null;
             }
             pg.field_f = ul.field_o;
             sj.a(0, this.b(param3 - 2));
@@ -573,13 +573,13 @@ class w extends IntrusiveNode {
             return param1;
           }
           this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
-          var11 = si.field_t;
+          var11 = ArchiveRequest.field_t;
           var6Lifetime1 = var11;
           if (var11 != null) {
             if (var11.field_r instanceof wk) {
               ((wk) (var11.field_r)).a(16797, (l) null, var11);
             }
-            si.field_t = null;
+            ArchiveRequest.field_t = null;
           }
           pg.field_f = ul.field_o;
           sj.a(0, this.b(param3 - 2));
@@ -603,12 +603,12 @@ class w extends IntrusiveNode {
                 return param1;
               }
               this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
-              var12 = si.field_t;
+              var12 = ArchiveRequest.field_t;
               if (var12 != null) {
                 if (var12.field_r instanceof wk) {
                   ((wk) (var12.field_r)).a(16797, (l) null, var12);
                 }
-                si.field_t = null;
+                ArchiveRequest.field_t = null;
               }
               pg.field_f = ul.field_o;
               sj.a(0, this.b(param3 - 2));
@@ -627,12 +627,12 @@ class w extends IntrusiveNode {
           return param1;
         }
         this.a(this, bk.field_b, param2, 0, param0, sh.field_e);
-        var13 = si.field_t;
+        var13 = ArchiveRequest.field_t;
         if (var13 != null) {
           if (var13.field_r instanceof wk) {
             ((wk) (var13.field_r)).a(16797, (l) null, var13);
           }
-          si.field_t = null;
+          ArchiveRequest.field_t = null;
         }
         pg.field_f = ul.field_o;
         sj.a(0, this.b(param3 - 2));

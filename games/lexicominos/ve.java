@@ -110,7 +110,7 @@ abstract class ve {
               if (param3) {
                 fa.field_b = ef.a(rc.field_f, param1 ^ 27988, (String) null, false, param0);
               } else {
-                fa.field_b = fj.a(param0, param4, false, param1 ^ 118);
+                fa.field_b = DiskArchiveRequest.a(param0, param4, false, param1 ^ 118);
               }
               SpriteGeometry.field_q.position = 0;
               SpriteGeometry.field_q.writeByte(14, param1 + 24);
@@ -168,7 +168,7 @@ abstract class ve {
               }
             }
             if (uf.field_m == ug.field_q &&
-              dc.d(param1 ^ -27)) {
+              NetworkArchiveRequest.d(param1 ^ -27)) {
               rc.field_f = ig.field_a.readLong((byte) -110);
               vb.field_i = ig.field_a.readUnsignedByte(true);
               ig.field_a.readUnsignedByte(true);
@@ -240,7 +240,7 @@ abstract class ve {
               return stackIn_73_0;
             }
             if (uf.field_m == CrossfadingMidiPcmStream.field_l &&
-              dc.d(param1 + 27)) {
+              NetworkArchiveRequest.d(param1 + 27)) {
               ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-96);
               if (7 == pg.field_d &&
                 !fb.field_p) {

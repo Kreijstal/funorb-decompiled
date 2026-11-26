@@ -91,7 +91,7 @@ final class qj extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var6 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var2 = ae.a(param0, "jagex-last-login-method", 0);
+          var2 = ArchiveRequest.a(param0, "jagex-last-login-method", 0);
           if (var2 == null) {
             stackIn_3_0 = MidiPcmStream.field_S;
             return stackIn_3_0;

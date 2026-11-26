@@ -25,7 +25,7 @@ final class qc extends rj implements ag {
     final static void a(me param0, byte param1, int param2) {
         hb var3 = null;
         try {
-          var3 = gf.field_c;
+          var3 = SectorCacheStore.field_c;
           if (param1 <= 100) {
             me var4 = (me) null;
             qc.a((me) null, (byte) 35, -2);

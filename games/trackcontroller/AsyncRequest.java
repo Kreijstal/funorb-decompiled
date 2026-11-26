@@ -12,7 +12,7 @@ abstract class AsyncRequest extends DualLinkNode {
     static char[] field_o;
     static GameScreen[] field_p;
 
-    abstract byte[] g(int param0);
+    abstract byte[] getData(int param0);
 
     public static void clearStaticReferences(int param0) {
         field_t = null;
@@ -32,7 +32,7 @@ abstract class AsyncRequest extends DualLinkNode {
         field_s = null;
     }
 
-    abstract int a(byte param0);
+    abstract int getProgressPercent(byte param0);
 
     final static void a(int param0, int param1, int param2) {
         if (null == ti.field_j ||
@@ -201,7 +201,7 @@ abstract class AsyncRequest extends DualLinkNode {
         GzipDecompressor.field_d = -2147483648;
         oe.field_c = 0;
         fj.field_U = 2147483647;
-        sd.field_b = -2147483648;
+        DiskCacheWorker.field_b = -2147483648;
         mj.field_d = 2147483647;
     }
 

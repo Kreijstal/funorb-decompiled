@@ -72,7 +72,7 @@ final class SocketJs5Transport extends Js5Transport {
           int stackIn_146_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          ac var2 = null;
+          NetworkArchiveRequest var2 = null;
           int var2_int = 0;
           IOException var2_ref = null;
           RuntimeException var2_ref2 = null;
@@ -89,7 +89,7 @@ final class SocketJs5Transport extends Js5Transport {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          ac var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var5Lifetime1;
@@ -128,7 +128,7 @@ final class SocketJs5Transport extends Js5Transport {
               if (param0 != 20) {
                 field_r = -12;
               }
-              var2 = (ac) (this.field_a.a((byte) -101));
+              var2 = (NetworkArchiveRequest) (this.field_a.a((byte) -101));
               scanLoop1: while (true) {
                 if (null != var2) {
                   this.field_d.position = 0;
@@ -136,7 +136,7 @@ final class SocketJs5Transport extends Js5Transport {
                   this.field_d.writeLong40(var2.field_l, -19642);
                   this.field_q.a(0, this.field_d.payload, (byte) 77, this.field_d.payload.length);
                   this.field_h.a((byte) 122, var2);
-                  var2 = (ac) (this.field_a.c(param0 + 24522));
+                  var2 = (NetworkArchiveRequest) (this.field_a.c(param0 + 24522));
                   if (var16 != 0) {
                     break scanLoop1;
                   }
@@ -144,7 +144,7 @@ final class SocketJs5Transport extends Js5Transport {
                     continue;
                   }
                 }
-                var2 = (ac) (this.field_m.a((byte) -49));
+                var2 = (NetworkArchiveRequest) (this.field_m.a((byte) -49));
                 break;
               }
               while (null != var2) {
@@ -153,7 +153,7 @@ final class SocketJs5Transport extends Js5Transport {
                 this.field_d.writeLong40(var2.field_l, param0 ^ -19630);
                 this.field_q.a(0, this.field_d.payload, (byte) -101, this.field_d.payload.length);
                 this.field_b.a((byte) 119, var2);
-                var2 = (ac) (this.field_m.c(24542));
+                var2 = (NetworkArchiveRequest) (this.field_m.c(24542));
                 if (var16 == 0) {
                   continue;
                 }
@@ -271,7 +271,7 @@ final class SocketJs5Transport extends Js5Transport {
                           var12 = (long)var7Lifetime1 + ((long)var6Lifetime1Lifetime1 << 32);
                           var14 = null;
                           if (var11 != 0) {
-                            var14_ref = (ac) (this.field_b.a((byte) -127));
+                            var14_ref = (NetworkArchiveRequest) (this.field_b.a((byte) -127));
                             while (null != var14_ref) {
                               stackIn_125_0 = compareLongs(var14_ref.field_l, var12);
                               if (var16 != 0) {
@@ -283,7 +283,7 @@ final class SocketJs5Transport extends Js5Transport {
                                 decompiledFrameCompleted1 = false;
                                 break;
                               }
-                              var14_ref = (ac) (this.field_b.c(24542));
+                              var14_ref = (NetworkArchiveRequest) (this.field_b.c(24542));
                             }
                             if (decompiledFrameCompleted2) {
                               decompiledFrameRemainder0 = !(decompiledFrameCompleted1);
@@ -292,7 +292,7 @@ final class SocketJs5Transport extends Js5Transport {
                           if ((decompiledFrameRemainder0) &&
                             (decompiledFrameCompleted2) &&
                             (decompiledFrameCompleted1)) {
-                            var14_ref = (ac) (this.field_h.a((byte) -63));
+                            var14_ref = (NetworkArchiveRequest) (this.field_h.a((byte) -63));
                             while (null != var14_ref) {
                               stackIn_125_0 = compareLongs(var14_ref.field_l, var12);
                               if (var16 != 0) {
@@ -303,7 +303,7 @@ final class SocketJs5Transport extends Js5Transport {
                                 var16 == 0) {
                                 break;
                               }
-                              var14_ref = (ac) (this.field_h.c(24542));
+                              var14_ref = (NetworkArchiveRequest) (this.field_h.c(24542));
                               if (var16 == 0) {
                                 continue;
                               }
@@ -418,7 +418,7 @@ final class SocketJs5Transport extends Js5Transport {
           String stackIn_39_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          ac var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           int var4_int = 0;
           RuntimeException var4_ref2 = null;
           IOException var5 = null;
@@ -441,7 +441,7 @@ final class SocketJs5Transport extends Js5Transport {
             this.field_j = null;
             this.field_c.position = 0;
             scanLoop1: while (true) {
-              var4_ref = (ac) (this.field_h.a(-4));
+              var4_ref = (NetworkArchiveRequest) (this.field_h.a(-4));
               if (var4_ref != null) {
                 this.field_a.a((byte) 118, var4_ref);
                 if (var7 != 0) {
@@ -457,7 +457,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
               }
               do {
-                var4_ref = (ac) (this.field_b.a(127));
+                var4_ref = (NetworkArchiveRequest) (this.field_b.a(127));
                 if (var4_ref == null) {
                   if (var7 == 0) {
                     break;
@@ -605,7 +605,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "ticketing_oneunread");
                 if (var2 != null) {
-                  nk.field_q = SecondaryNodeDeque.a(var2, false);
+                  ArchiveRequest.field_q = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "ticketing_xunread");
                 if (var2 != null) {
@@ -2322,7 +2322,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "loading_music");
                 if (var2 != null) {
-                  ac.field_A = SecondaryNodeDeque.a(var2, false);
+                  NetworkArchiveRequest.field_A = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "loading_instruments");
                 if (null != var2) {
@@ -2362,7 +2362,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "unpacking_music");
                 if (null != var2) {
-                  pb.field_c = SecondaryNodeDeque.a(var2, false);
+                  SectorCacheStore.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "unpacking_levels");
                 if (null != var2) {
@@ -3220,7 +3220,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "mb_including_gamename");
                 if (null != var2) {
-                  co.field_d = SecondaryNodeDeque.a(var2, false);
+                  DiskCacheWorker.field_d = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "mb_full_access_1");
                 if (var2 != null) {

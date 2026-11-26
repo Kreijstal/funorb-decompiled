@@ -196,7 +196,7 @@ final class fb extends ql {
             ln.field_a.field_c[-ln.field_a.field_d + var4Lifetime3 + 1] = 0;
             if (uj.field_l == 1 &&
               ej.d((byte) 86)) {
-              eh.field_c.a(lm.field_A[17], 100, uh.field_i);
+              eh.field_c.a(NetworkArchiveRequest.field_A[17], 100, uh.field_i);
             }
             for (var5Lifetime2 = 1; var5Lifetime2 < 5; var5Lifetime2++) {
               for (var6Lifetime1 = 0; 256 >= var6Lifetime1; var6Lifetime1 += 16) {

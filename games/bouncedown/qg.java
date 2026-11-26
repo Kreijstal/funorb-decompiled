@@ -19,7 +19,7 @@ final class qg extends IntrusiveNode {
         if (param0 != -23888) {
           field_g = (AccountRequestState) null;
         }
-        md.field_q = null;
+        DiskArchiveRequest.field_q = null;
         AccountRequestState.field_a = null;
         int var2 = a.field_a;
         a.field_a = fk.field_d;

@@ -186,7 +186,7 @@ class te extends s {
           this.field_H = null;
           if (this.field_t) {
             var5_int = ua.field_a - param2 - this.field_s;
-            var6 = vl.field_d - param3 - this.field_n;
+            var6 = DiskCacheWorker.field_d - param3 - this.field_n;
             this.field_H = this.a(-2, var6, var5_int);
           }
         } catch (RuntimeException runtimeException) {

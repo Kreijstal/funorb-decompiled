@@ -27,7 +27,7 @@ final class vk {
           }
           cl.field_J.i((byte) 126);
           while (fd.d(1)) {
-            cl.field_J.a(lf.field_c, ua.field_g, (byte) -116);
+            cl.field_J.a(lf.field_c, SectorCacheStore.field_g, (byte) -116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

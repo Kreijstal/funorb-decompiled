@@ -76,7 +76,7 @@ final class ul extends IntrusiveNode {
             var61 = var45.field_z;
             mh.a(0, var61, m.field_i, 0, false);
           } else {
-            db.j(2);
+            NetworkArchiveRequest.j(2);
           }
           var55 = new int[param5.field_c];
           var50 = var55;

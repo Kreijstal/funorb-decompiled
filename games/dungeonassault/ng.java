@@ -1521,7 +1521,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("create_select_alternative", 77);
                 if (null != var2) {
-                  ln.field_c = dj.a(var2, false);
+                  SectorCacheStore.field_c = dj.a(var2, false);
                 }
                 var2 = rp.a("create_optin_news", 45);
                 if (null != var2) {
@@ -1993,7 +1993,7 @@ final class ng extends ck {
                 }
                 var2 = rp.a("watchintroduction", param0 + 27157);
                 if (null != var2) {
-                  vf.field_y = dj.a(var2, false);
+                  ArchiveRequest.field_y = dj.a(var2, false);
                 }
                 var2 = rp.a("quit", 117);
                 if (null != var2) {

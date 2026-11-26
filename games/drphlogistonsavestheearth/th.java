@@ -203,7 +203,7 @@ final class th {
         int var7 = 0;
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (tl.field_O != ik.field_d) {
+          if (tl.field_O != SectorCacheStore.field_d) {
             return false;
           }
           var2_long = la.correctedCurrentTimeMillis(param0);
@@ -247,8 +247,8 @@ final class th {
               return true;
             }
             var4 = lc.field_v;
-            if (0.0 != cm.field_G) {
-              var4 = (int)((double)var4 + cm.field_M.nextGaussian() * cm.field_G);
+            if (0.0 != NetworkArchiveRequest.field_G) {
+              var4 = (int)((double)var4 + NetworkArchiveRequest.field_M.nextGaussian() * NetworkArchiveRequest.field_G);
               if (var4 < 0) {
                 var4 = 0;
               }

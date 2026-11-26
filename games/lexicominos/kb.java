@@ -1671,7 +1671,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_emailvalid");
                 if (var2 != null) {
-                  fj.field_x = ni.a((byte) -55, var2);
+                  DiskArchiveRequest.field_x = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_account_success");
                 if (null != var2) {
@@ -1787,7 +1787,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "waitingfor_music");
                 if (null != var2) {
-                  fj.field_y = ni.a((byte) -55, var2);
+                  DiskArchiveRequest.field_y = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "waitingfor_instruments");
                 if (var2 != null) {

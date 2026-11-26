@@ -212,7 +212,7 @@ final class vd extends td implements jg, ButtonListener, a {
           if (var4 == ef.field_b) {
             return false;
           }
-          if (lh.field_x == var4) {
+          if (DiskArchiveRequest.field_x == var4) {
             return false;
           }
           if (var4 != c.field_a) {

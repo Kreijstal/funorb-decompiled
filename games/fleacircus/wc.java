@@ -121,16 +121,16 @@ final class wc extends IntrusiveNode {
             pc.field_j = param13;
             j.field_g = param1;
             bk.field_e = param3;
-            af.field_f = param4;
+            DiskCacheWorker.field_f = param4;
             a.field_d = param6;
             va.field_m = param7;
             bb.field_E = param2;
             ab.field_d = param5;
             c.field_P = param11;
             cj.field_b = param10;
-            if (null != af.field_f.field_k) {
+            if (null != DiskCacheWorker.field_f.field_k) {
               try {
-                ge.field_d = new k(af.field_f.field_k, 64, 0);
+                ge.field_d = new k(DiskCacheWorker.field_f.field_k, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

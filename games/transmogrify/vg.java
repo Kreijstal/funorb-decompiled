@@ -59,7 +59,7 @@ final class vg {
         if (param1 >= -25) {
           this.a(true, -9, -1, 116);
         }
-        IntrusiveNode.field_d.a(rh.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
+        IntrusiveNode.field_d.a(ArchiveRequest.a((byte) 117, 1 + ra.field_a), 548, param0 + 142, 0, -1);
         SpriteState.field_t.c(166, param0);
     }
 
@@ -142,7 +142,7 @@ final class vg {
         var4 = 283;
         var5 = 112;
         if (!param0) {
-          stackIn_3_0 = rh.unlockedAchievementMask;
+          stackIn_3_0 = ArchiveRequest.unlockedAchievementMask;
         } else {
           stackIn_3_0 = hc.field_u;
         }
@@ -615,7 +615,7 @@ final class vg {
               if (var4 != 0) {
                 vk.a((byte) 105, FullscreenFocusCanvas.field_d[0]);
                 sh.field_c = null;
-                rh.field_t = null;
+                ArchiveRequest.field_t = null;
                 rc.a(true, (byte) -13);
                 wc.field_d = 0;
                 qf.field_d = -1;
@@ -629,7 +629,7 @@ final class vg {
               if (var4 != 0) {
                 vk.a((byte) 91, FullscreenFocusCanvas.field_d[0]);
                 sh.field_c = null;
-                rh.field_t = null;
+                ArchiveRequest.field_t = null;
                 rc.a(false, (byte) -13);
                 wc.field_d = 0;
                 qf.field_d = -1;
@@ -812,7 +812,7 @@ final class vg {
             var3 = tj.field_t;
           } else {
             if (sh.field_c == null) {
-              sh.field_c = pj.a(29, (byte) -10, 3, 10, 1);
+              sh.field_c = NetworkArchiveRequest.a(29, (byte) -10, 3, 10, 1);
             }
             var5_ref_mi = IntrusiveNode.field_d;
             var6 = sh.field_c;
@@ -833,8 +833,8 @@ final class vg {
                     var17 = var9[var13_int];
                     if (UiWidget.a(var17, (byte) 106) &&
                       var8 == 0 &&
-                      rh.field_t != null &&
-                      var27[var13_int] == rh.field_t.field_o &&
+                      ArchiveRequest.field_t != null &&
+                      var27[var13_int] == ArchiveRequest.field_t.field_o &&
                       SecondaryNodeDeque.field_g == var15 &&
                       MouseInputHandler.field_c.field_o == var16) {
                       var8 = 1;

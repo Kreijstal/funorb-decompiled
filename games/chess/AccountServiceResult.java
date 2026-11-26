@@ -49,12 +49,12 @@ final class AccountServiceResult {
         ci.field_J = tk.field_h.readString(param0 ^ 49);
         if (param0 == 49) {
           var3 = (CharSequence) ((Object) ci.field_J);
-          cc.field_A = ad.a(var3, -2);
+          NetworkArchiveRequest.field_A = ad.a(var3, -2);
           return;
         }
         field_d = (String) null;
         CharSequence var2 = (CharSequence) ((Object) ci.field_J);
-        cc.field_A = ad.a(var2, -2);
+        NetworkArchiveRequest.field_A = ad.a(var2, -2);
     }
 
     final static ci a(boolean param0) {

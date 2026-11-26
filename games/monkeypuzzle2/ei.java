@@ -28,7 +28,7 @@ final class ei {
             stackIn_4_0 = jf.field_k;
             return stackIn_4_0;
           }
-          var4 = si.f(0);
+          var4 = DiskArchiveRequest.f(0);
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
             if (var6.a(var2, -1)) {
@@ -72,14 +72,14 @@ final class ei {
           if (param0 != 8) {
             field_a = 33;
           }
-          var1 = gf.field_c;
+          var1 = SectorCacheStore.field_c;
           while (kj.m(0)) {
             var1.b(true, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             nf.a(param0 ^ -93, var1);
-            gf.field_c.backpatchByteLength(var1.position - var2, (byte) 31);
+            SectorCacheStore.field_c.backpatchByteLength(var1.position - var2, (byte) 31);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

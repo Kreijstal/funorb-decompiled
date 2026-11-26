@@ -130,7 +130,7 @@ final class a {
             var6_int = param1.indexOf("<%", var5);
             if (0 <= var6_int) {
               for (var5 = 2 + var6_int; var3_int > var5; var5++) {
-                if (lb.a(param1.charAt(var5), true)) {
+                if (ArchiveRequest.a(param1.charAt(var5), true)) {
                   continue;
                 }
                 break;
@@ -163,7 +163,7 @@ final class a {
               return stackIn_26_0;
             }
             for (var5Lifetime1 = 2 + var8Lifetime1; var5Lifetime1 < var3_int; var5Lifetime1++) {
-              if (lb.a(param1.charAt(var5Lifetime1), true)) {
+              if (ArchiveRequest.a(param1.charAt(var5Lifetime1), true)) {
                 continue;
               }
               break;

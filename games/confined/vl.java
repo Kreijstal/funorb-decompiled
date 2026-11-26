@@ -29,7 +29,7 @@ final class vl {
           if (param1 != -182) {
             field_c = (double[][]) null;
           }
-          stackIn_3_0 = sm.a(param0, false, 10, true);
+          stackIn_3_0 = DiskArchiveRequest.a(param0, false, 10, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

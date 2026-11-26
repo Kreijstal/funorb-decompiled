@@ -114,7 +114,7 @@ final class pa extends dg {
           }
           if (ByteArrayStore.field_a == ra.field_b) {
             ni.field_f = null;
-            na.field_r.position = 0;
+            NetworkArchiveRequest.field_r.position = 0;
             if (param0 != null) {
               var9 = 0;
               gh.field_h.position = 0;
@@ -130,16 +130,16 @@ final class pa extends dg {
               gh.field_h.writeShort(param3, 26040);
               gh.field_h.writeByte(param5 ^ -9455, param4);
               gh.field_h.writeByte(-9469, var9);
-              na.field_r.writeByte(-9469, 18);
-              na.field_r.position = na.field_r.position + 2;
-              var10 = na.field_r.position;
+              NetworkArchiveRequest.field_r.writeByte(-9469, 18);
+              NetworkArchiveRequest.field_r.position = NetworkArchiveRequest.field_r.position + 2;
+              var10 = NetworkArchiveRequest.field_r.position;
               var11_ref_String = bi.a((byte) -27, mk.g(-119));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
-              na.field_r.writeString(var11_ref_String, 19235);
-              lf.a(wd.field_c, na.field_r, id.field_c, (byte) -75, gh.field_h);
-              na.field_r.backpatchShortLength(na.field_r.position - var10, -27308);
+              NetworkArchiveRequest.field_r.writeString(var11_ref_String, 19235);
+              lf.a(wd.field_c, NetworkArchiveRequest.field_r, id.field_c, (byte) -75, gh.field_h);
+              NetworkArchiveRequest.field_r.backpatchShortLength(NetworkArchiveRequest.field_r.position - var10, -27308);
             } else {
               gh.field_h.position = 0;
               gh.field_h.writeInt(-246, pg.field_a.nextInt());
@@ -160,11 +160,11 @@ final class pa extends dg {
                 stackIn_14_2 = "";
               }
               ((PacketBuffer) (Object) stackIn_13_0).writePrefixedString(stackIn_13_1, stackIn_14_2);
-              na.field_r.writeByte(-9469, 16);
-              na.field_r.position = na.field_r.position + 1;
-              var9 = na.field_r.position;
-              lf.a(wd.field_c, na.field_r, id.field_c, (byte) -75, gh.field_h);
-              na.field_r.backpatchByteLength(na.field_r.position - var9, 8049);
+              NetworkArchiveRequest.field_r.writeByte(-9469, 16);
+              NetworkArchiveRequest.field_r.position = NetworkArchiveRequest.field_r.position + 1;
+              var9 = NetworkArchiveRequest.field_r.position;
+              lf.a(wd.field_c, NetworkArchiveRequest.field_r, id.field_c, (byte) -75, gh.field_h);
+              NetworkArchiveRequest.field_r.backpatchByteLength(NetworkArchiveRequest.field_r.position - var9, 8049);
             }
             fe.a((byte) -97, -1);
             ra.field_b = kg.field_c;
@@ -293,7 +293,7 @@ final class pa extends dg {
           if (param1 != -1) {
             field_N = (String) null;
           }
-          var2 = new ic(param0, kb.field_c, ml.field_b, na.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, rd.field_k);
+          var2 = new ic(param0, kb.field_c, ml.field_b, NetworkArchiveRequest.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, rd.field_k);
           rh.d(-41);
           stackIn_6_0 = var2;
           return stackIn_6_0;

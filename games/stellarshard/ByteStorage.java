@@ -57,7 +57,7 @@ abstract class ByteStorage {
             stackIn_11_0 = var5;
             return stackIn_11_0;
           }
-          stackIn_4_0 = rk.field_c;
+          stackIn_4_0 = DiskCacheWorker.field_c;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

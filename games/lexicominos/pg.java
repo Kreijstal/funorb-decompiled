@@ -4,9 +4,9 @@
 final class pg {
     static java.applet.Applet field_b;
     private ug[] field_j;
-    private dc field_g;
+    private NetworkArchiveRequest field_g;
     private java.math.BigInteger field_a;
-    private kl field_c;
+    private DiskCacheWorker field_c;
     static int field_f;
     private wb field_i;
     private java.math.BigInteger field_h;
@@ -40,7 +40,7 @@ final class pg {
                 pg.resetStaticState(2);
               }
               var4 = (String) (oa.a(true, param0, "getcookies"));
-              var5 = dc.a(var4, ';', (byte) -125);
+              var5 = NetworkArchiveRequest.a(var4, ';', (byte) -125);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&
@@ -161,7 +161,7 @@ final class pg {
         }
     }
 
-    pg(wb param0, kl param1) {
+    pg(wb param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -199,7 +199,7 @@ final class pg {
         if (this.field_g.field_v) {
           return false;
         }
-        var11 = new PacketBuffer(this.field_g.d((byte) 76));
+        var11 = new PacketBuffer(this.field_g.getData((byte) 76));
         var11.position = 5;
         var3 = var11.readUnsignedByte(true);
         var11.position = var11.position + var3 * 72;
@@ -212,7 +212,7 @@ final class pg {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var18 = si.a(5, var11.payload, -86, -5 + var11.position - var14.length);
+          var18 = ArchiveRequest.a(5, var11.payload, -86, -5 + var11.position - var14.length);
           for (var7 = 0; var7 < 64; var7++) {
             if (var5[1 + var7] != var18[var7]) {
               throw new RuntimeException();
@@ -228,7 +228,7 @@ final class pg {
           if (var5Lifetime1.length != 65) {
             throw new RuntimeException();
           }
-          var19 = si.a(5, var11.payload, -86, -5 + var11.position - var14.length);
+          var19 = ArchiveRequest.a(5, var11.payload, -86, -5 + var11.position - var14.length);
           for (var7Lifetime1 = 0; var7Lifetime1 < 64; var7Lifetime1++) {
             if (var5Lifetime1[1 + var7Lifetime1] != var19[var7Lifetime1]) {
               throw new RuntimeException();
@@ -245,7 +245,7 @@ final class pg {
         if (var5Lifetime2.length != 65) {
           throw new RuntimeException();
         }
-        var20 = si.a(5, var11.payload, -86, -5 + var11.position - var14.length);
+        var20 = ArchiveRequest.a(5, var11.payload, -86, -5 + var11.position - var14.length);
         for (var7Lifetime2 = 0; var7Lifetime2 < 64; var7Lifetime2++) {
           if (var5Lifetime2[1 + var7Lifetime2] != var20[var7Lifetime2]) {
             throw new RuntimeException();
@@ -257,7 +257,7 @@ final class pg {
         return true;
     }
 
-    private pg(wb param0, kl param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private pg(wb param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_i = param0;
           this.field_h = param2;
@@ -303,7 +303,7 @@ final class pg {
         return;
     }
 
-    final ug a(int param0, int param1, dl param2, dl param3, boolean param4) {
+    final ug a(int param0, int param1, SectorCacheStore param2, SectorCacheStore param3, boolean param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

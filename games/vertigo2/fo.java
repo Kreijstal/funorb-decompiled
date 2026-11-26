@@ -158,11 +158,11 @@ final class fo {
               for (var2 = 0; var2 < FullscreenFocusCanvas.field_d.field_k.length; var2++) {
                 stackIn_78_0 = FullscreenFocusCanvas.field_d.field_y;
                 stackIn_78_1 = var2;
-                stackIn_79_2 = !(t.field_l < var2);
+                stackIn_79_2 = !(DiskCacheWorker.field_l < var2);
                 stackIn_78_0[stackIn_78_1] = stackIn_79_2;
               }
               if (0 <= FullscreenFocusCanvas.field_d.field_t) {
-                if (t.field_l >= FullscreenFocusCanvas.field_d.field_t &&
+                if (DiskCacheWorker.field_l >= FullscreenFocusCanvas.field_d.field_t &&
                   wi.field_f != FullscreenFocusCanvas.field_d.field_t) {
                   lb.field_d.a((byte) 99, FullscreenFocusCanvas.field_d.field_t, kn.field_h[0][FullscreenFocusCanvas.field_d.field_t]);
                   wi.field_f = FullscreenFocusCanvas.field_d.field_t;
@@ -190,7 +190,7 @@ final class fo {
                   uh.field_Wb.writeByte(0, 101);
                   mh.field_a = true;
                 }
-                var2Lifetime1 = t.field_l;
+                var2Lifetime1 = DiskCacheWorker.field_l;
                 for (var3 = 0; var3 < ap.field_d.field_k.length; var3++) {
                   stackIn_57_0 = ap.field_d.field_y;
                   stackIn_57_1 = var3;
@@ -248,7 +248,7 @@ final class fo {
           va.field_s.a(go.field_d, 16777215, -1, 320, 350, 2);
         } else {
           if (var5.b(-6133) >= kn.field_h[1].length - 1) {
-            va.field_s.a(ia.field_I, 16777215, -1, 320, 380, param0 ^ 382);
+            va.field_s.a(NetworkArchiveRequest.field_I, 16777215, -1, 320, 380, param0 ^ 382);
           } else {
             va.field_s.a(Vertigo2.a(new String[]{Integer.toString(1 + var5.b(-6133))}, uh.field_lc, 105), 16777215, -1, 320, 380, 2);
           }
@@ -1380,7 +1380,7 @@ final class fo {
                   if (this.field_a.a(84)) {
                     var8 = param2 ? 1 : 0;
                     gj.a((byte) 114, var8 != 0, am.field_n, 0);
-                    qh.field_f = true;
+                    SectorCacheStore.field_f = true;
                   }
                 } else {
                   if (var8 != 22) {

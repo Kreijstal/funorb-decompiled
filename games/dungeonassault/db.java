@@ -152,7 +152,7 @@ final class db extends qe {
           db.clearStaticReferences((byte) 98);
         }
         ga.field_r = rb.a(8, var7, 16760960, (byte) 109);
-        co.field_F = rb.a(16, var7, 6307840, (byte) -111);
+        DiskArchiveRequest.field_F = rb.a(16, var7, 6307840, (byte) -111);
         nf.field_y = param0;
     }
 
@@ -230,7 +230,7 @@ final class db extends qe {
           if (var13 > 256) {
             var13 = 256;
           }
-          co.field_F.b(var10, var9, var13);
+          DiskArchiveRequest.field_F.b(var10, var9, var13);
         }
     }
 

@@ -69,7 +69,7 @@ final class ci extends lc implements gl, rc {
           li.field_e = new int[var3][];
           q.field_G = new jk[var3];
           for (var4 = 0; var3 > var4; var4++) {
-            q.field_G[var4] = lf.a(var8, (byte) -111);
+            q.field_G[var4] = NetworkArchiveRequest.a(var8, (byte) -111);
           }
           var10.m(-91);
           var9 = 0;
@@ -257,7 +257,7 @@ final class ci extends lc implements gl, rc {
             this.field_i = this.field_i + (5 + var7.b(this.field_E, this.field_k - 40, var7.field_s));
           }
           var8 = wj.field_b;
-          var9 = ImageProducerRasterBuffer.a(vi.b(0), (byte) -90);
+          var9 = ImageProducerRasterBuffer.a(DiskCacheWorker.b(0), (byte) -90);
           if (nj.field_k != var9) {
             if (w.field_g == var9) {
               var8 = dl.field_a;

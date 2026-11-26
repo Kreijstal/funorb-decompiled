@@ -3138,14 +3138,14 @@ final class LevelEntity {
               if (!ja.a((byte) 104, this.field_L) && (this.field_L != 0 ||
                 AccountNameAvailabilityValidator.field_r != 17)) {
                 n.field_jb = (-this.field_p + AccountServiceResult.field_k) / PcmOutputWorker.field_k[AccountNameAvailabilityValidator.field_r][var3_int];
-                if (n.field_jb >= -1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int] &&
+                if (n.field_jb >= -1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int] &&
                   !ue.field_i[AccountNameAvailabilityValidator.field_r][var3_int]) {
-                  n.field_jb = db.field_x[AccountNameAvailabilityValidator.field_r][var3_int] - 1;
+                  n.field_jb = NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int] - 1;
                   if (var7 != 0) {
-                    n.field_jb = n.field_jb % db.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
+                    n.field_jb = n.field_jb % NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                   }
                 } else {
-                  n.field_jb = n.field_jb % db.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
+                  n.field_jb = n.field_jb % NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                 }
                 decompiledFrameRemainder1 = (AccountNameAvailabilityValidator.field_r == 1);
                 if ((decompiledFrameRemainder1) &&
@@ -3157,8 +3157,8 @@ final class LevelEntity {
               }
               if (decompiledFrameRemainder1) {
                 n.field_jb = this.field_kb;
-                if (n.field_jb >= (-1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int])) {
-                  n.field_jb = -1 + db.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
+                if (n.field_jb >= (-1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int])) {
+                  n.field_jb = -1 + NetworkArchiveRequest.field_x[AccountNameAvailabilityValidator.field_r][var3_int];
                 }
                 if ((AccountNameAvailabilityValidator.field_r == 17) &&
                   (0 == this.field_D) &&
@@ -4734,7 +4734,7 @@ final class LevelEntity {
             0 < BufferedSocket.field_p.field_db &&
             0 <= this.field_h) {
             if (13 == this.type &&
-              db.field_B >= 10) {
+              NetworkArchiveRequest.field_B >= 10) {
               return;
             }
             if (this.A(-16)) {
@@ -4875,8 +4875,8 @@ final class LevelEntity {
                         decompiledFrameRemainder0 = (var5 != 0);
                       }
                       if (decompiledFrameRemainder0) {
-                        db.field_B = db.field_B + 1;
-                        if (!(db.field_B < 10)) {
+                        NetworkArchiveRequest.field_B = NetworkArchiveRequest.field_B + 1;
+                        if (!(NetworkArchiveRequest.field_B < 10)) {
                           if (SocketConnector.field_k < 9) {
                             SocketConnector.field_k = SocketConnector.field_k + 1;
                           }
@@ -4889,7 +4889,7 @@ final class LevelEntity {
                                 df.field_O = true;
                                 ii.field_k = this;
                                 GameApplet.field_o = 2;
-                                db.field_B = 0;
+                                NetworkArchiveRequest.field_B = 0;
                                 o.field_l = 500;
                                 this.field_L = 0;
                               } else {
@@ -4905,7 +4905,7 @@ final class LevelEntity {
                       df.field_O = true;
                       ii.field_k = this;
                       GameApplet.field_o = 2;
-                      db.field_B = 0;
+                      NetworkArchiveRequest.field_B = 0;
                       o.field_l = 500;
                       if (var5 != 0) {
                         this.field_L = 0;
@@ -6600,13 +6600,13 @@ final class LevelEntity {
             }
           }
           if (param0 == 13 &&
-            db.field_B >= 10) {
+            NetworkArchiveRequest.field_B >= 10) {
             var3_int = ab.field_d * 500;
           }
           tf.field_o = tf.field_o + var3_int;
           GameScreen.field_c = GameScreen.field_c - var3_int;
           ub.field_j = ub.field_j - 1;
-          pi.field_f = pi.field_f - al.field_z;
+          pi.field_f = pi.field_f - DiskArchiveRequest.field_z;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9839,7 +9839,7 @@ final class LevelEntity {
           this.field_db = 3 + var2_int / var3;
           this.field_K = bf.field_f[vj.field_c];
           this.field_M = eb.field_s[vj.field_c];
-          qf.field_f = db.field_E[vj.field_c];
+          qf.field_f = NetworkArchiveRequest.field_E[vj.field_c];
           we.a(qf.field_f, this.field_M, 73);
           this.field_C = UiComponent.field_n[vj.field_c];
           return;

@@ -281,8 +281,8 @@ final class jk {
           }
           if (dh.field_bb == FullscreenFocusCanvas.field_f &&
             AccountRequestState.a(true, 1)) {
-            var9Lifetime1 = cd.field_t.readUnsignedByte((byte) 90);
-            cd.field_t.position = 0;
+            var9Lifetime1 = NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
+            NetworkArchiveRequest.field_t.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               vd.field_e = new String[var9Lifetime1 - 100];
@@ -302,20 +302,20 @@ final class jk {
                 ab.field_l = var9Lifetime1;
               } else {
                 AccountRequestState.a(true, ue.b((byte) 123));
-                ci.field_h = new Boolean(af.a(cd.field_t, true));
-                cd.field_t.position = 0;
+                ci.field_h = new Boolean(af.a(NetworkArchiveRequest.field_t, true));
+                NetworkArchiveRequest.field_t.position = 0;
               }
             }
           }
           if (dh.field_bb == fd.field_h) {
             var9Lifetime2 = 2;
             if (AccountRequestState.a(true, var9Lifetime2)) {
-              var10Lifetime1 = cd.field_t.readUnsignedShort(98203176);
-              cd.field_t.position = 0;
+              var10Lifetime1 = NetworkArchiveRequest.field_t.readUnsignedShort(98203176);
+              NetworkArchiveRequest.field_t.position = 0;
               if (AccountRequestState.a(true, var10Lifetime1)) {
                 var11 = vd.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  vd.field_e[var12] = cd.field_t.readPrefixedString(gi.a(param6, -23760));
+                  vd.field_e[var12] = NetworkArchiveRequest.field_t.readPrefixedString(gi.a(param6, -23760));
                 }
                 th.a(108);
                 FullscreenFocusCanvas.field_a = false;
@@ -327,12 +327,12 @@ final class jk {
           if (dh.field_bb == nk.field_w &&
             ce.a(-68)) {
             if (ab.field_l == 255) {
-              var9_ref_String = cd.field_t.readNullableString(-1);
+              var9_ref_String = NetworkArchiveRequest.field_t.readNullableString(-1);
               if (var9_ref_String != null) {
                 kb.a(uj.b((byte) -120), false, var9_ref_String);
               }
             } else {
-              kk.field_Y = cd.field_t.readString(2);
+              kk.field_Y = NetworkArchiveRequest.field_t.readString(2);
             }
             th.a(126);
             FullscreenFocusCanvas.field_a = false;

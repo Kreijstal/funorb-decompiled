@@ -47,7 +47,7 @@ final class ce {
           var5 = 0;
           var6 = 0;
           for (var7 = 33; var7 >= 0; var7--) {
-            stackIn_11_0 = (!nm.a(var7, var18, -827843803)) ? 0 : 1;
+            stackIn_11_0 = (!DiskCacheWorker.a(var7, var18, -827843803)) ? 0 : 1;
             var8 = stackIn_11_0;
             if (param3) {
               stackIn_21_0 = 0;
@@ -77,7 +77,7 @@ final class ce {
           var10 = (var7Lifetime1 * 9 + (-var6 + 9)) * 20;
           var11 = 0;
           for (var12 = 0; var12 < CipherPacketBuffer.field_A.length; var12++) {
-            if (nm.a(var12, var21, -827843803) ||
+            if (DiskCacheWorker.a(var12, var21, -827843803) ||
               !IntrusiveNode.field_k[var12] &&
               !param3 &&
               (!(0 >= pj.field_a) ||

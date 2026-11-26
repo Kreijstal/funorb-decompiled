@@ -387,7 +387,7 @@ final class bf {
             vg.field_r[this.field_Q] != -1) {
             var3 = 0;
             while (this.field_i.length > var3) {
-              this.field_i[var3].a(lb.field_B[this.field_Q], 30, (double)vg.field_r[this.field_Q], (double)(int)((double)dd.field_h[this.field_Q] + this.field_N), 0, -1.0, 1.0, (double)(int)((double)nc.field_L[this.field_Q] + this.field_o), 64);
+              this.field_i[var3].a(ArchiveRequest.field_B[this.field_Q], 30, (double)vg.field_r[this.field_Q], (double)(int)((double)dd.field_h[this.field_Q] + this.field_N), 0, -1.0, 1.0, (double)(int)((double)nc.field_L[this.field_Q] + this.field_o), 64);
               var3++;
               if (var6 != 0) {
                 decompiledFrameCompleted0 = false;

@@ -25,7 +25,7 @@ abstract class bl extends DualLinkNode {
               aj.field_c.b((byte) 35);
             }
             if (uf.field_r != null) {
-              uf.field_r.a((byte) -32);
+              uf.field_r.shutdown((byte) -32);
             }
             if (null != fe.field_z) {
               try {

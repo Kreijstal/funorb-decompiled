@@ -25,7 +25,7 @@ abstract class rb extends GameApplet {
         if (vj.a(25424)) {
           discarded$1 = this.a(pd.field_f != null ? true : false, false, true);
         } else {
-          if (rk.field_f >= 10) {
+          if (DiskCacheWorker.field_f >= 10) {
             if (!gh.b((byte) 82)) {
               hf.c(param0 ^ -241);
             } else {
@@ -253,7 +253,7 @@ abstract class rb extends GameApplet {
         nc.a(qd.field_j, (byte) 123);
         nk.field_b = param1;
         ck.field_hb = param3;
-        ki.field_A = param0;
+        ArchiveRequest.field_A = param0;
         vd.field_b = param2;
         int var10 = 11 / ((param6 - 30) / 36);
         wd.field_d = param7;
@@ -377,7 +377,7 @@ abstract class rb extends GameApplet {
         }
         if (-1 != ei.field_F &&
           ei.field_F != 0) {
-          if (rk.field_f < 10) {
+          if (DiskCacheWorker.field_f < 10) {
             if (ei.field_F == 3) {
               this.a(1, "js5crc");
             } else {
@@ -434,22 +434,22 @@ abstract class rb extends GameApplet {
           !il.e(32525)) {
           b.field_v = false;
         }
-        if (0 == rk.field_f &&
+        if (0 == DiskCacheWorker.field_f &&
           tg.a((byte) 49)) {
-          rk.field_f = 1;
+          DiskCacheWorker.field_f = 1;
         }
-        if (rk.field_f == 1) {
+        if (DiskCacheWorker.field_f == 1) {
           if (bb.field_d != 0) {
-            pg.field_db = wl.a(1, ki.field_A);
+            pg.field_db = wl.a(1, ArchiveRequest.field_A);
           }
           lk.field_i = o.a(1, 2, nk.field_b, false, true);
           wf.field_e = o.a(1, 2, ck.field_hb, false, true);
           am.field_g = o.a(1, 2, vd.field_b, false, true);
-          rk.field_f = 2;
+          DiskCacheWorker.field_f = 2;
           fc.field_a = lk.field_i;
           SpriteState.field_u = wf.field_e;
         }
-        if (rk.field_f == 2) {
+        if (DiskCacheWorker.field_f == 2) {
           if (pg.field_db != null &&
             pg.field_db.a((byte) -36)) {
             if (!pg.field_db.c("", (byte) -116)) {
@@ -463,10 +463,10 @@ abstract class rb extends GameApplet {
             }
           }
           if (null == pg.field_db) {
-            rk.field_f = 3;
+            DiskCacheWorker.field_f = 3;
           }
         }
-        if (rk.field_f == 3 &&
+        if (DiskCacheWorker.field_f == 3 &&
           ni.a(wf.field_e, am.field_g, lk.field_i, (byte) -104) &&
           dj.a(am.field_g, (byte) -126)) {
           ol.b(-114);
@@ -495,31 +495,31 @@ abstract class rb extends GameApplet {
           am.field_g = null;
           aa.a((java.applet.Applet) (this), -106);
           rg.g(-33);
-          rk.field_f = 10;
+          DiskCacheWorker.field_f = 10;
         }
-        if (rk.field_f == 10) {
+        if (DiskCacheWorker.field_f == 10) {
           if (bb.field_d != 0) {
             ld.field_G = wl.a(1, wd.field_d);
           }
-          rk.field_f = 11;
+          DiskCacheWorker.field_f = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (rk.field_f == 11) {
+        if (DiskCacheWorker.field_f == 11) {
           if (ld.field_G != null && (!ld.field_G.a((byte) -36) ||
             !ld.field_G.c((byte) -111))) {
             rd.a((byte) -76, 0.0f, Quaternion.a(kf.field_d, ld.field_G, rg.field_I, 1));
             decompiledFrameRemainder0 = false;
           }
           else {
-            rk.field_f = 12;
+            DiskCacheWorker.field_f = 12;
             qd.field_h = true;
           }
         }
-        if (rk.field_f == 12 &&
+        if (DiskCacheWorker.field_f == 12 &&
           !qd.field_h) {
-          rk.field_f = 13;
+          DiskCacheWorker.field_f = 13;
         }
-        if (rk.field_f == 13) {
+        if (DiskCacheWorker.field_f == 13) {
           var3Lifetime2 = 1;
           if (fa.field_n != null) {
             stackIn_133_0 = (!fa.field_n.a(true)) ? 0 : 1;
@@ -527,7 +527,7 @@ abstract class rb extends GameApplet {
             rd.a((byte) -83, fa.field_n.field_a, fa.field_n.field_g);
           }
           if (var3Lifetime2 != 0) {
-            rk.field_f = 20;
+            DiskCacheWorker.field_f = 20;
           }
         }
         if (!param1 &&
@@ -603,7 +603,7 @@ abstract class rb extends GameApplet {
         if (!al.field_f.a(true)) {
           return al.field_f.c(-112);
         }
-        if (dj.field_a == el.field_E) {
+        if (dj.field_a == DiskArchiveRequest.field_E) {
           return al.field_f.c(param0 - 122);
         }
         return FullscreenFocusCanvas.field_a;

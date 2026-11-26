@@ -199,7 +199,7 @@ final class ve {
           ll.field_y = q.field_H;
           mi.field_j = cl.field_o;
           cl.field_o = false;
-          vh.field_e = ta.field_a;
+          SectorCacheStore.field_e = ta.field_a;
           og.field_a = hb.field_B;
           rk.field_a = nc.field_b;
           if (param0 != -91) {

@@ -217,9 +217,9 @@ abstract class ByteStorage {
                 id.field_f.readUnsignedByte(-11);
                 id.field_f.readInt(true);
                 ao.field_H = id.field_f.readUnsignedShort((byte) -11);
-                qh.field_d = new byte[ao.field_H];
+                SectorCacheStore.field_d = new byte[ao.field_H];
                 for (var8 = 0; var8 < ao.field_H; var8++) {
-                  qh.field_d[var8] = id.field_f.readSignedByte(96);
+                  SectorCacheStore.field_d[var8] = id.field_f.readSignedByte(96);
                 }
               }
               qe.field_V = id.field_f.readString(128);

@@ -323,8 +323,8 @@ final class dj {
           fm.field_g = fm.field_g + (param0.readUnsignedByte(true) << 7);
           var2_intLifetime2 = param0.readUnsignedByte(true);
           fm.field_g = fm.field_g + (var2_intLifetime2 >> 1);
-          ln.field_e = 65536 & var2_intLifetime2 << 16;
-          ln.field_e = ln.field_e + param0.readUnsignedShort(0);
+          SectorCacheStore.field_e = 65536 & var2_intLifetime2 << 16;
+          SectorCacheStore.field_e = SectorCacheStore.field_e + param0.readUnsignedShort(0);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "dj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -5,7 +5,7 @@ import java.util.*;
 
 final class GzipDecompressor {
     private java.util.zip.Inflater field_d;
-    static wh field_c;
+    static DiskCacheWorker field_c;
     static java.awt.Font field_e;
     static int[] field_a;
     static long field_b;

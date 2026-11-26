@@ -11,7 +11,7 @@ final class oc {
     int field_i;
     private boolean field_g;
     static int[] field_m;
-    static pc field_l;
+    static DiskCacheWorker field_l;
     private long field_j;
     static int field_e;
     private int field_k;
@@ -146,7 +146,7 @@ final class oc {
 
     oc(boolean param0) {
         this.field_i = qd.field_d;
-        this.field_j = rl.field_x;
+        this.field_j = ArchiveRequest.field_x;
         if (!param0) {
           this.field_h = null;
         } else {

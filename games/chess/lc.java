@@ -93,7 +93,7 @@ final class lc {
     }
 
     final static void a(int param0) {
-        cd.field_x = new w(ki.field_P, dc.field_s, gd.field_b, qn.field_P, kj.field_g, sj.field_k);
+        cd.field_x = new w(ki.field_P, dc.field_s, SectorCacheStore.field_b, qn.field_P, kj.field_g, sj.field_k);
         int var1 = -28 % ((param0 - 15) / 59);
     }
 

@@ -79,7 +79,7 @@ abstract class tl {
           }
         }
         if (!param1) {
-          hi.field_b = ab.a(var8, param0 ^ 24921, 80);
+          hi.field_b = DiskArchiveRequest.a(var8, param0 ^ 24921, 80);
           bl.field_c = null;
           return new vk(param1);
         }

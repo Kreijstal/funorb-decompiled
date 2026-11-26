@@ -115,7 +115,7 @@ final class dj {
           }
           qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
           var18 = new RgbSprite(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
-          uc.a(false, "commonui", param2, "dropdown");
+          DiskArchiveRequest.a(false, "commonui", param2, "dropdown");
           var5 = fl.a(-9945, param2, "commonui", "screen_options");
           kk.field_P = new qg[4];
           dc.field_h = new qg[4];

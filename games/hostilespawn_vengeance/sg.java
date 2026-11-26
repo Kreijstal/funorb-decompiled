@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sg {
-    private lm field_n;
+    private NetworkArchiveRequest field_n;
     static ll field_d;
     static ri field_j;
-    private dh field_f;
+    private DiskCacheWorker field_f;
     private ej field_p;
     private java.math.BigInteger field_k;
     private rb[] field_h;
@@ -55,7 +55,7 @@ final class sg {
         }
     }
 
-    sg(ej param0, dh param1) {
+    sg(ej param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -401,7 +401,7 @@ final class sg {
         if (param0 != -26720) {
           return true;
         }
-        var10 = new PacketBuffer(this.field_n.c((byte) 127));
+        var10 = new PacketBuffer(this.field_n.getData((byte) 127));
         var10.field_i = 5;
         var3 = var10.readUnsignedByte(32270);
         var10.field_i = var10.field_i + var3 * 72;
@@ -431,7 +431,7 @@ final class sg {
         return true;
     }
 
-    final rb a(boolean param0, int param1, um param2, um param3, int param4) {
+    final rb a(boolean param0, int param1, SectorCacheStore param2, SectorCacheStore param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -538,7 +538,7 @@ final class sg {
         }
     }
 
-    private sg(ej param0, dh param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private sg(ej param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_p = param0;
           this.field_f = param1;

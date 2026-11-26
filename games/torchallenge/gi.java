@@ -5,7 +5,7 @@ final class gi {
     static boolean field_c;
     static java.awt.Frame field_b;
     static int field_e;
-    static rb field_a;
+    static DiskCacheWorker field_a;
     static Sprite[] field_f;
     static FullscreenFocusCanvas field_d;
 

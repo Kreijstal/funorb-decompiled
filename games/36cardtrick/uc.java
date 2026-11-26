@@ -5,16 +5,16 @@ final class uc extends pe {
     static String field_r;
     private int field_q;
     private int field_k;
-    private gj field_m;
+    private DiskCacheWorker field_m;
     private int field_d;
     private ch field_v;
-    private hc field_p;
+    private SectorCacheStore field_p;
     private byte[] field_t;
-    private la field_u;
+    private ArchiveRequest field_u;
     private byte[] field_f;
     private d field_l;
     static String field_o;
-    private hc field_h;
+    private SectorCacheStore field_h;
     private vb field_n;
     private int field_c;
     private boolean field_s;
@@ -24,7 +24,7 @@ final class uc extends pe {
     private long field_i;
     private boolean field_g;
 
-    private final la a(byte param0, int param1, int param2) {
+    private final ArchiveRequest a(byte param0, int param1, int param2) {
         Object stackIn_15_0 = null;
         Object stackIn_35_0 = null;
         Object stackIn_40_0 = null;
@@ -42,7 +42,7 @@ final class uc extends pe {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        la var12 = null;
+        ArchiveRequest var12 = null;
         byte[] var13 = null;
         byte[] var18 = null;
         byte[] var27 = null;
@@ -51,7 +51,7 @@ final class uc extends pe {
         byte[] var30 = null;
         var10 = Main.field_T;
         try {
-          var12 = (la) (this.field_n.a(false, (long)param1));
+          var12 = (ArchiveRequest) (this.field_n.a(false, (long)param1));
           var4 = var12;
           if (var12 != null &&
             0 == param2 &&
@@ -74,40 +74,40 @@ final class uc extends pe {
                 }
                 if (this.field_v.c(param0 - 170)) {
                   stackIn_35_0 = null;
-                  return (la) (stackIn_35_0);
+                  return (ArchiveRequest) (stackIn_35_0);
                 }
                 var4 = this.field_v.a(false, -1640279264, param1, (byte) 2, this.field_d);
               } else {
                 if (null == this.field_p) {
                   throw new RuntimeException();
                 }
-                var4 = this.field_m.a(param1, -3, this.field_p);
+                var4 = this.field_m.requestRead(param1, -3, this.field_p);
               }
             } else {
               if (this.field_p != null &&
                 this.field_t[param1] != -1) {
-                var4 = this.field_m.a(param0 ^ 125, this.field_p, param1);
+                var4 = this.field_m.readNow(param0 ^ 125, this.field_p, param1);
               } else {
                 if (this.field_v.a(false)) {
                   stackIn_15_0 = null;
-                  return (la) (stackIn_15_0);
+                  return (ArchiveRequest) (stackIn_15_0);
                 }
                 var4 = this.field_v.a(true, -1640279264, param1, (byte) 2, this.field_d);
               }
             }
             this.field_n.a((long)param1, (byte) 69, (IntrusiveNode) (var4));
           }
-          if (((la) (var4)).field_n) {
+          if (((ArchiveRequest) (var4)).field_n) {
             stackIn_40_0 = null;
-            return (la) (stackIn_40_0);
+            return (ArchiveRequest) (stackIn_40_0);
           }
-          var18 = ((la) (var4)).b(true);
+          var18 = ((ArchiveRequest) (var4)).getData(true);
           var13 = var18;
           var5 = var13;
           if (param0 != 124) {
             this.field_f = (byte[]) null;
           }
-          if (var4 instanceof ab) {
+          if (var4 instanceof DiskArchiveRequest) {
             try {
               if (var5 != null &&
                 var18.length > 2) {
@@ -136,25 +136,25 @@ final class uc extends pe {
                   }
                   this.field_t[param1] = (byte) 1;
                 }
-                if (!((la) (var4)).field_o) {
-                  ((la) (var4)).unlink(param0 ^ 34);
+                if (!((ArchiveRequest) (var4)).field_o) {
+                  ((ArchiveRequest) (var4)).unlink(param0 ^ 34);
                 }
                 stackIn_77_0 = var4;
-                return (la) (stackIn_77_0);
+                return (ArchiveRequest) (stackIn_77_0);
               }
               throw new RuntimeException();
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var6_ref = (Exception) (Object) decompiledCaughtException;
               this.field_t[param1] = (byte)-1;
-              ((la) (var4)).unlink(param0 ^ 7);
-              if (((la) (var4)).field_o &&
+              ((ArchiveRequest) (var4)).unlink(param0 ^ 7);
+              if (((ArchiveRequest) (var4)).field_o &&
                 !this.field_v.a(false)) {
                 var4 = this.field_v.a(true, -1640279264, param1, (byte) 2, this.field_d);
                 this.field_n.a((long)param1, (byte) 79, (IntrusiveNode) (var4));
               }
               stackIn_86_0 = null;
-              return (la) (stackIn_86_0);
+              return (ArchiveRequest) (stackIn_86_0);
             }
           }
           try {
@@ -188,28 +188,28 @@ final class uc extends pe {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (RuntimeException) (Object) decompiledCaughtException;
             this.field_v.c((byte) 0);
-            ((la) (var4)).unlink(82);
-            if (((la) (var4)).field_o &&
+            ((ArchiveRequest) (var4)).unlink(82);
+            if (((ArchiveRequest) (var4)).field_o &&
               !this.field_v.a(false)) {
               var4 = this.field_v.a(true, -1640279264, param1, (byte) 2, this.field_d);
               this.field_n.a((long)param1, (byte) 110, (IntrusiveNode) (var4));
             }
             stackIn_117_0 = null;
-            return (la) (stackIn_117_0);
+            return (ArchiveRequest) (stackIn_117_0);
           }
           var5[-2 + var18.length] = (byte)(this.field_l.field_n[param1] >>> 8);
           var5[-1 + var18.length] = (byte)this.field_l.field_n[param1];
           if (null != this.field_p) {
-            this.field_m.a(this.field_p, var18, param1, param0 ^ -23043);
+            this.field_m.requestWrite(this.field_p, var18, param1, param0 ^ -23043);
             if (this.field_t[param1] != 1) {
               this.field_t[param1] = (byte) 1;
             }
           }
-          if (!((la) (var4)).field_o) {
-            ((la) (var4)).unlink(83);
+          if (!((ArchiveRequest) (var4)).field_o) {
+            ((ArchiveRequest) (var4)).unlink(83);
           }
           stackIn_127_0 = var4;
-          return (la) (stackIn_127_0);
+          return (ArchiveRequest) (stackIn_127_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
           decompiledCaughtException = decompiledCaughtParameter2;
           var4 = (RuntimeException) (Object) decompiledCaughtException;
@@ -244,17 +244,17 @@ final class uc extends pe {
               stackIn_7_0 = null;
               return (d) (stackIn_7_0);
             }
-            this.field_u = (la) ((Object) this.field_v.a(true, -1640279264, this.field_d, (byte) 0, 255));
+            this.field_u = (ArchiveRequest) ((Object) this.field_v.a(true, -1640279264, this.field_d, (byte) 0, 255));
           }
           if (this.field_u.field_n) {
             stackIn_11_0 = null;
             return (d) (stackIn_11_0);
           }
-          var7 = this.field_u.b(true);
+          var7 = this.field_u.getData(true);
           var6 = var7;
           var5 = var6;
           var2 = var5;
-          if (!(this.field_u instanceof ab)) {
+          if (!(this.field_u instanceof DiskArchiveRequest)) {
             try {
               if (var5 == null) {
                 throw new RuntimeException();
@@ -268,13 +268,13 @@ final class uc extends pe {
               if (this.field_v.a(false)) {
                 this.field_u = null;
               } else {
-                this.field_u = (la) ((Object) this.field_v.a(true, -1640279264, this.field_d, (byte) 0, 255));
+                this.field_u = (ArchiveRequest) ((Object) this.field_v.a(true, -1640279264, this.field_d, (byte) 0, 255));
               }
               stackIn_36_0 = null;
               return (d) (stackIn_36_0);
             }
             if (null != this.field_h) {
-              this.field_m.a(this.field_h, var7, this.field_d, -23167);
+              this.field_m.requestWrite(this.field_h, var7, this.field_d, -23167);
             }
           } else {
             try {
@@ -292,7 +292,7 @@ final class uc extends pe {
               if (this.field_v.a(false)) {
                 this.field_u = null;
               } else {
-                this.field_u = (la) ((Object) this.field_v.a(true, -1640279264, this.field_d, (byte) 0, 255));
+                this.field_u = (ArchiveRequest) ((Object) this.field_v.a(true, -1640279264, this.field_d, (byte) 0, 255));
               }
               stackIn_25_0 = null;
               return (d) (stackIn_25_0);
@@ -316,8 +316,8 @@ final class uc extends pe {
     }
 
     final void c(byte param0) {
-        la discarded$0 = null;
-        la discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         RuntimeException decompiledCaughtException = null;
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
@@ -369,14 +369,14 @@ final class uc extends pe {
     }
 
     final void c(int param0) {
-        la discarded$1 = null;
-        la discarded$0 = null;
-        la discarded$3 = null;
-        la discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$3 = null;
+        ArchiveRequest discarded$2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var2 = null;
         int var2_int = 0;
-        la var2_ref = null;
+        ArchiveRequest var2_ref = null;
         RuntimeException var2_ref2 = null;
         IntrusiveNode var3 = null;
         int var4 = 0;
@@ -486,7 +486,7 @@ final class uc extends pe {
           }
           if (this.field_g &&
             id.correctedCurrentTimeMillis(36) >= this.field_i) {
-            var2_ref = (la) (this.field_n.b(-119));
+            var2_ref = (ArchiveRequest) (this.field_n.b(-119));
             while (var2_ref != null) {
               if (!var2_ref.field_n) {
                 if (var2_ref.field_l) {
@@ -498,7 +498,7 @@ final class uc extends pe {
                   var2_ref.field_l = true;
                 }
               }
-              var2_ref = (la) (this.field_n.a(true));
+              var2_ref = (ArchiveRequest) (this.field_n.a(true));
             }
             this.field_i = 1000L + id.correctedCurrentTimeMillis(109);
           }
@@ -633,16 +633,16 @@ final class uc extends pe {
     }
 
     final int a(int param0, int param1) {
-        la var3 = null;
+        ArchiveRequest var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         try {
-          var3 = (la) (this.field_n.a(false, (long)param0));
+          var3 = (ArchiveRequest) (this.field_n.a(false, (long)param0));
           if (var3 != null) {
-            stackIn_4_0 = var3.a(false);
+            stackIn_4_0 = var3.getProgressPercent(false);
             return stackIn_4_0;
           }
           var4 = 10 / ((-27 - param1) / 58);
@@ -667,7 +667,7 @@ final class uc extends pe {
             this.field_j = new IntrusiveDeque();
           }
           if (param0 != -25350) {
-            this.field_m = (gj) null;
+            this.field_m = (DiskCacheWorker) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -678,7 +678,7 @@ final class uc extends pe {
     }
 
     final byte[] a(int param0, boolean param1) {
-        la var3 = null;
+        ArchiveRequest var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         Object stackIn_2_0 = null;
@@ -690,7 +690,7 @@ final class uc extends pe {
             stackIn_2_0 = null;
             return (byte[]) (stackIn_2_0);
           }
-          var4 = var3.b(param1);
+          var4 = var3.getData(param1);
           var3.unlink(109);
           stackIn_4_0 = var4;
           return stackIn_4_0;
@@ -701,7 +701,7 @@ final class uc extends pe {
         }
     }
 
-    uc(int param0, hc param1, hc param2, ch param3, gj param4, int param5, byte[] param6, int param7, boolean param8) {
+    uc(int param0, SectorCacheStore param1, SectorCacheStore param2, ch param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -746,7 +746,7 @@ final class uc extends pe {
           this.field_q = param7;
           this.field_v = param3;
           if (this.field_h != null) {
-            this.field_u = (la) ((Object) this.field_m.a(1, this.field_h, this.field_d));
+            this.field_u = (ArchiveRequest) ((Object) this.field_m.readNow(1, this.field_h, this.field_d));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

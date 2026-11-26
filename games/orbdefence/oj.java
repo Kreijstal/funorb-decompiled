@@ -135,14 +135,14 @@ final class oj extends IntrusiveNode {
           if (param1 != 100) {
             return true;
           }
-          if (param0.field_Z == uc.field_r) {
+          if (param0.field_Z == DiskArchiveRequest.field_r) {
             var3_int -= 200;
           } else {
             if (null == param0.field_Z) {
               var3_int += 200;
             }
           }
-          if (param2.field_Z != uc.field_r) {
+          if (param2.field_Z != DiskArchiveRequest.field_r) {
             if (param2.field_Z == null) {
               var3_int -= 200;
             }

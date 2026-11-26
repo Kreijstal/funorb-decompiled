@@ -17,7 +17,7 @@ abstract class wb {
     byte field_a;
     PacketBuffer field_h;
     volatile int field_j;
-    dc field_o;
+    NetworkArchiveRequest field_o;
 
     final int c(byte param0) {
         if (param0 == 67) {
@@ -109,12 +109,12 @@ abstract class wb {
         return 20 <= this.c((byte) 67) ? true : false;
     }
 
-    final dc a(int param0, int param1, int param2, byte param3, boolean param4) {
+    final NetworkArchiveRequest a(int param0, int param1, int param2, byte param3, boolean param4) {
         if (param0 != 5) {
-          return (dc) null;
+          return (NetworkArchiveRequest) null;
         }
         long var6 = (long)param2 + ((long)param1 << 32);
-        dc var8 = new dc();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_j = var6;
         var8.field_p = param4 ? true : false;
         var8.field_A = param3;

@@ -15,8 +15,8 @@ final class vk extends jc {
         SpriteGeometry.field_n = 0;
         h.field_A = og.field_b;
         GzipDecompressor.field_c = param0;
-        wj.field_k = new ml(2);
-        wj.field_k.a(-1, ka.a(24316, ua.field_a, vl.field_d), 0, param1);
+        ArchiveRequest.field_k = new ml(2);
+        ArchiveRequest.field_k.a(-1, ka.a(24316, ua.field_a, DiskCacheWorker.field_d), 0, param1);
     }
 
     public static void clearStaticReferences(byte param0) {

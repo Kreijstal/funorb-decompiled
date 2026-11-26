@@ -70,7 +70,7 @@ final class qi {
           sc.field_c = param1;
           if (!eg.field_h &&
             ProxyAuthenticationRequiredException.field_a > di.field_m &&
-            uf.field_d) {
+            SectorCacheStore.field_d) {
             ua.field_a = dg.field_n;
             ti.field_c = a.field_e;
             di.field_m = 0;

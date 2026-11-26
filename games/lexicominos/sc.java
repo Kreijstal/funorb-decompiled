@@ -14,7 +14,7 @@ final class sc {
         int var4 = 0;
         try {
           gb.field_d = false;
-          dl.field_g = false;
+          SectorCacheStore.field_g = false;
           int var3_int = 38 / ((-9 - param1) / 61);
           if (null != jj.field_a &&
             jj.field_a.field_D) {
@@ -34,7 +34,7 @@ final class sc {
               qf.g(-94);
             }
             if (var4 != 0) {
-              if (dl.field_g) {
+              if (SectorCacheStore.field_g) {
                 param2 = da.a(new String[]{param2}, Lexicominos.field_F, false);
               }
               if (lh.field_w) {

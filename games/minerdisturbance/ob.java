@@ -268,7 +268,7 @@ abstract class ob extends GameAppletShell {
           eg.a(pb.field_r, 4, hj.field_i, oh.field_C) &&
           eb.a(oh.field_C, (byte) 124)) {
           bh.h((byte) 123);
-          em.g(-1719110238);
+          ArchiveRequest.g(-1719110238);
           ResourceArchive.field_c = BufferedSocket.field_e;
           jb.field_q = false;
           mj.a(v.field_e, hj.field_i, 43, oh.field_C, pb.field_r);
@@ -596,7 +596,7 @@ abstract class ob extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = dn.a(lm.n(-124), fa.a(true), mb.b((byte) -95), fc.b((byte) 123), ii.b((byte) 63), this.field_A, -14543);
             if (-1 != var5_intLifetime1) {
-              ee.a(nf.field_g, vh.field_i, (byte) -98, var5_intLifetime1);
+              NetworkArchiveRequest.a(nf.field_g, vh.field_i, (byte) -98, var5_intLifetime1);
               nf.field_g = null;
               vh.field_i = null;
             }
@@ -728,7 +728,7 @@ abstract class ob extends GameAppletShell {
             } else {
               if (3 != var2) {
                 if (var2 == 4) {
-                  em.d((byte) -67);
+                  ArchiveRequest.d((byte) -67);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {

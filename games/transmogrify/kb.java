@@ -15,7 +15,7 @@ class kb extends DualLinkNode {
         int var4;
         tf[] var5;
         var4 = Transmogrify.field_A ? 1 : 0;
-        var5 = rh.d(-26481);
+        var5 = ArchiveRequest.d(-26481);
         var2 = var5;
         if (!param1) {
           return (tf) null;

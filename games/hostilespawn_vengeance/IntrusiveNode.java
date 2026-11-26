@@ -100,7 +100,7 @@ class IntrusiveNode {
           eb.field_d = param0;
           if (!re.field_k &&
             fb.field_l < DualLinkDeque.field_e &&
-            um.field_d) {
+            SectorCacheStore.field_d) {
             qh.field_q = hn.field_b;
             l.field_d = qh.field_s;
             fb.field_l = 0;

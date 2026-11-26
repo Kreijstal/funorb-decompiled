@@ -71,13 +71,13 @@ final class la {
             MusicPatchPcmStream.field_m != null &&
             MusicPatchPcmStream.field_m.a((byte) 102) &&
             MusicPatchPcmStream.field_m.a(-20402, "benefits")) {
-            so.field_d = wl.a("headline", oj.field_H, 10, "benefits");
-            uh.field_q = wl.a("blurbpane", oj.field_H, 10, "benefits");
-            ad.field_h = wl.a("button", oj.field_H, 10, "benefits");
-            ga.field_E = wl.a("signup_text", oj.field_H, 10, "benefits");
-            el.field_g = wl.a("menu_text", oj.field_H, 10, "benefits");
-            fl.field_a = wl.a("button_frame", oj.field_H, 10, "benefits");
-            qk.field_H = wl.a("arrow", oj.field_H, 10, "benefits");
+            so.field_d = ArchiveRequest.a("headline", oj.field_H, 10, "benefits");
+            uh.field_q = ArchiveRequest.a("blurbpane", oj.field_H, 10, "benefits");
+            ad.field_h = ArchiveRequest.a("button", oj.field_H, 10, "benefits");
+            ga.field_E = ArchiveRequest.a("signup_text", oj.field_H, 10, "benefits");
+            el.field_g = ArchiveRequest.a("menu_text", oj.field_H, 10, "benefits");
+            fl.field_a = ArchiveRequest.a("button_frame", oj.field_H, 10, "benefits");
+            qk.field_H = ArchiveRequest.a("arrow", oj.field_H, 10, "benefits");
             ra.field_c = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "large_font", oj.field_H, "benefits"));
             rn.field_k = (vc) ((Object) hp.a(MusicPatchPcmStream.field_m, 0, "small_font", oj.field_H, "benefits"));
             var28 = SoftwareRasterizer.field_i;
@@ -103,9 +103,9 @@ final class la {
             uh.field_q.a();
             var12.a(-uh.field_q.field_v + 18, -uh.field_q.field_t + 241);
             for (var7 = 0; var7 < hf.field_c.length; var7++) {
-              ld.field_v[var7].a();
-              rn.field_k.a(hf.field_c[var7], 3, 3, ld.field_v[var7].field_l - 6, -6 + ld.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
-              hb.a(3, ld.field_v[var7].field_u, 0, ld.field_v[var7].field_l, ld.field_v[var7], -76, 1, 0);
+              NetworkArchiveRequest.field_v[var7].a();
+              rn.field_k.a(hf.field_c[var7], 3, 3, NetworkArchiveRequest.field_v[var7].field_l - 6, -6 + NetworkArchiveRequest.field_v[var7].field_u, qm.field_n, -1, 1, 1, rn.field_k.field_u + rn.field_k.field_o);
+              hb.a(3, NetworkArchiveRequest.field_v[var7].field_u, 0, NetworkArchiveRequest.field_v[var7].field_l, NetworkArchiveRequest.field_v[var7], -76, 1, 0);
             }
             hf.field_c = null;
             kp.field_n = ga.field_E.d();
@@ -119,7 +119,7 @@ final class la {
             CipherPacketBuffer.field_q = 434 + (-fl.field_a.field_l + ad.field_h.field_l) / 2;
             gf.field_a = (-fl.field_a.field_u + ad.field_h.field_u) / 2 + 390;
           }
-          if (wl.field_o == null) {
+          if (ArchiveRequest.field_o == null) {
             return;
           }
           if (MouseInputHandler.field_c != null &&
@@ -200,8 +200,8 @@ final class la {
             var16.a();
             rn.field_k.a(var17, 3, 3, var16.field_l - 6, var16.field_u - 6, 16777215, -1, 0, 1, rn.field_k.field_o + rn.field_k.field_u);
             hb.a(3, var16.field_u, 0, var16.field_l, var16, -38, 1, 0);
-            wl.field_o.a();
-            var16.a(-wl.field_o.field_v + 199, -wl.field_o.field_t + 83);
+            ArchiveRequest.field_o.a();
+            var16.a(-ArchiveRequest.field_o.field_v + 199, -ArchiveRequest.field_o.field_t + 83);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
           }
@@ -215,11 +215,11 @@ final class la {
             var5Lifetime1 = var4 + (mb.field_b.field_n + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (var6Lifetime2 + mb.field_b.field_n);
-            wl.field_o.a();
-            rn.field_k.a(fp.field_d, var7Lifetime2 - wl.field_o.field_v, -wl.field_o.field_t + 155 + rn.field_k.field_o + rn.field_k.field_u, 16777215, -1);
-            hb.a(3, 50, 155 - wl.field_o.field_t, var4, wl.field_o, -91, 1, -wl.field_o.field_v + var7Lifetime2 - 4);
-            var8Lifetime1 = 155 - wl.field_o.field_t - (-rn.field_k.field_o + (mb.field_b.field_o - 3 - rn.field_k.field_u)) / 2;
-            mb.field_b.a(var6Lifetime2 - wl.field_o.field_v, var8Lifetime1);
+            ArchiveRequest.field_o.a();
+            rn.field_k.a(fp.field_d, var7Lifetime2 - ArchiveRequest.field_o.field_v, -ArchiveRequest.field_o.field_t + 155 + rn.field_k.field_o + rn.field_k.field_u, 16777215, -1);
+            hb.a(3, 50, 155 - ArchiveRequest.field_o.field_t, var4, ArchiveRequest.field_o, -91, 1, -ArchiveRequest.field_o.field_v + var7Lifetime2 - 4);
+            var8Lifetime1 = 155 - ArchiveRequest.field_o.field_t - (-rn.field_k.field_o + (mb.field_b.field_o - 3 - rn.field_k.field_u)) / 2;
+            mb.field_b.a(var6Lifetime2 - ArchiveRequest.field_o.field_v, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(SpriteGeometry.field_m);
             mb.field_b = null;
@@ -236,7 +236,7 @@ final class la {
           if (param0 > -45) {
             field_a = (hj) null;
           }
-          wl.field_o.a(0, 0);
+          ArchiveRequest.field_o.a(0, 0);
           if (null != em.field_m) {
             em.field_m.a(0, 0);
           }
@@ -294,7 +294,7 @@ final class la {
               var2Lifetime5 = 40 + (40 * ProxyAuthenticationRequiredException.a(2047, hl.field_g << 4) >> 16);
               if (var2Lifetime5 <= 0) {
                 rh.a(false);
-                ld.field_v[ue.field_a].a(269, 340);
+                NetworkArchiveRequest.field_v[ue.field_a].a(269, 340);
                 return;
               }
               if (qh.field_i > 269 - qk.field_H.field_l &&
@@ -315,7 +315,7 @@ final class la {
             }
           }
           rh.a(false);
-          ld.field_v[ue.field_a].a(269, 340);
+          NetworkArchiveRequest.field_v[ue.field_a].a(269, 340);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

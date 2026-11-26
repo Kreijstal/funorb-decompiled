@@ -28,7 +28,7 @@ final class ol {
             dh.field_x = param12;
             ua.field_c = param8;
             kc.field_D = param10;
-            cl.field_w = param5;
+            DiskArchiveRequest.field_w = param5;
             ai.field_d = param9;
             if (param11 != 64) {
               return;

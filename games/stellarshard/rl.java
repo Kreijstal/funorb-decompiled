@@ -108,13 +108,13 @@ final class rl {
         RuntimeException var3 = null;
         var4 = stellarshard.field_B;
         try {
-          if (param1 < ~rk.field_f) {
+          if (param1 < ~DiskCacheWorker.field_f) {
             var3_int = 0;
             if (of.field_F) {
               of.field_F = false;
               var3_int = 1;
             }
-            ph.a(cd.h(-1064120735), 2, PcmOutputWorker.field_a, ia.l(50), var3_int != 0);
+            NetworkArchiveRequest.a(cd.h(-1064120735), 2, PcmOutputWorker.field_a, ia.l(50), var3_int != 0);
           } else {
             if (gh.b((byte) 105)) {
               if (eg.field_d == 0) {

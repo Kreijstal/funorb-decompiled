@@ -517,7 +517,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -112, "INTRO_MULTIPLAYER_LEVEL");
                 if (null != var2) {
-                  qh.field_c = in.a(0, var2);
+                  SectorCacheStore.field_c = in.a(0, var2);
                 }
                 var2 = en.a((byte) -92, "INTRO_MULTIPLAYER_MODE_COOP");
                 if (var2 != null) {
@@ -1268,7 +1268,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -22, "YOUFINISHEDCOOP");
                 if (var2 != null) {
-                  ia.field_I = in.a(0, var2);
+                  NetworkArchiveRequest.field_I = in.a(0, var2);
                 }
                 var2 = en.a((byte) -70, "YOUCOMPLETEDCOOP");
                 if (null != var2) {
@@ -1360,7 +1360,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -102, "TITLE_LEVEL_SELECT");
                 if (var2 != null) {
-                  t.field_i = in.a(0, var2);
+                  DiskCacheWorker.field_i = in.a(0, var2);
                 }
                 var2 = en.a((byte) -19, "INGAME_SCORE");
                 if (var2 != null) {
@@ -1444,7 +1444,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -103, "keycode_backwards");
                 if (null != var2) {
-                  t.field_g = var2[0] & 255;
+                  DiskCacheWorker.field_g = var2[0] & 255;
                 }
                 var2 = en.a((byte) -93, "keycode_forwards");
                 if (var2 != null) {
@@ -1525,7 +1525,7 @@ class ah extends mo {
                 var2 = en.a((byte) -83, "keycode_debughelp");
                 po.field_e = null;
                 if (null != var2) {
-                  ia.field_C = 255 & var2[0];
+                  NetworkArchiveRequest.field_C = 255 & var2[0];
                 }
             }
             void run() {

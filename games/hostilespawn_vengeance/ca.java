@@ -79,7 +79,7 @@ abstract class ca {
           of.field_d = dn.field_i;
           PacketBuffer.field_h = param0;
           qi.field_N = param4;
-          eh.field_c.a(lm.field_A[23], 100, wj.field_O);
+          eh.field_c.a(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
           HostileSpawn.field_F = 1 == param1 ? true : false;
           return;
         }
@@ -89,7 +89,7 @@ abstract class ca {
         of.field_d = dn.field_i;
         PacketBuffer.field_h = param0;
         qi.field_N = param4;
-        eh.field_c.a(lm.field_A[23], 100, wj.field_O);
+        eh.field_c.a(NetworkArchiveRequest.field_A[23], 100, wj.field_O);
         HostileSpawn.field_F = 1 == param1 ? true : false;
     }
 

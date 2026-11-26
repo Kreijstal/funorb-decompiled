@@ -69,7 +69,7 @@ final class lf {
               jg.field_kb.a(-103);
             }
             if (null != GzipDecompressor.field_c) {
-              GzipDecompressor.field_c.a(-109);
+              GzipDecompressor.field_c.shutdown(-109);
             }
             if (!param0) {
               lf.a(true);

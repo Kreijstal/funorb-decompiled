@@ -58,7 +58,7 @@ final class ld extends gj {
         h.field_c = -1;
         am.field_f = -1;
         hk.field_m = null;
-        ki.field_v = 0;
+        ArchiveRequest.field_v = 0;
     }
 
     static {

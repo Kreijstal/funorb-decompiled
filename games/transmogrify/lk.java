@@ -13,10 +13,10 @@ final class lk {
           field_b = (PlatformTaskDispatcher) null;
         }
         long var1 = System.currentTimeMillis();
-        if (var1 < cl.field_y) {
-          vl.field_B = vl.field_B + (cl.field_y - var1);
+        if (var1 < DiskArchiveRequest.field_y) {
+          vl.field_B = vl.field_B + (DiskArchiveRequest.field_y - var1);
         }
-        cl.field_y = var1;
+        DiskArchiveRequest.field_y = var1;
         return var1 + vl.field_B;
     }
 
@@ -125,7 +125,7 @@ final class lk {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
         }
-        Sprite var4 = new Sprite(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
         wd.d(126);
         return var4;
     }

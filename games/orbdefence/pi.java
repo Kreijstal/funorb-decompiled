@@ -3,14 +3,14 @@
  */
 final class pi {
     static uh field_j;
-    private cd field_i;
+    private NetworkArchiveRequest field_i;
     private PacketBuffer field_f;
     private ge field_h;
     private java.math.BigInteger field_a;
     private java.math.BigInteger field_e;
     static String field_g;
     static String field_c;
-    private vl field_d;
+    private DiskCacheWorker field_d;
     private ak[] field_b;
 
     public static void clearStaticReferences(boolean param0) {
@@ -47,7 +47,7 @@ final class pi {
         if (this.field_i.field_l) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_i.f(0));
+        var10 = new PacketBuffer(this.field_i.getData(0));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) 90);
         var10.position = var10.position + var3 * 72;
@@ -77,11 +77,11 @@ final class pi {
         return true;
     }
 
-    pi(ge param0, vl param1) {
+    pi(ge param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final ak a(boolean param0, int param1, boolean param2, eh param3, eh param4) {
+    final ak a(boolean param0, int param1, boolean param2, SectorCacheStore param3, SectorCacheStore param4) {
         ak stackIn_8_0 = null;
         ak stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
@@ -173,7 +173,7 @@ final class pi {
         }
     }
 
-    private pi(ge param0, vl param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private pi(ge param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

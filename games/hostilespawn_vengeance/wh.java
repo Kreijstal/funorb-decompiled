@@ -21,10 +21,10 @@ final class wh {
     }
 
     final static void b(int param0) {
-        int var1 = lm.e(0);
+        int var1 = NetworkArchiveRequest.e(0);
         int var2 = ti.a((byte) -1);
         ne.field_j.a(var1 + (ac.field_a << 1), s.field_g - ac.field_g, var2 + (ac.field_g << 1), hg.field_f - ac.field_a, 5);
-        rh.d((byte) -93);
+        DiskArchiveRequest.d((byte) -93);
         if (param0 <= 99) {
           field_e = (RgbSprite) null;
         }

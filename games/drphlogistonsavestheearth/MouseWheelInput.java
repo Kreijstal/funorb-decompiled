@@ -97,7 +97,7 @@ abstract class MouseWheelInput {
               p.field_a.a((byte) -82);
             }
             if (pd.field_d != null) {
-              pd.field_d.a((byte) 104);
+              pd.field_d.shutdown((byte) 104);
             }
             var1_int = 35 / ((param0 + 45) / 48);
             if (null != uj.field_h) {
@@ -163,7 +163,7 @@ abstract class MouseWheelInput {
           for (var2_int = 0; var2_int < param1.length(); var2_int++) {
             var3 = param1.charAt(var2_int);
             if (!MidiPcmStream.a(-1, (char) var3) &&
-              !lb.a((char) var3, true)) {
+              !ArchiveRequest.a((char) var3, true)) {
               return true;
             }
           }

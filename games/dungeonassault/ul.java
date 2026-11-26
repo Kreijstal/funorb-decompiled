@@ -46,7 +46,7 @@ final class ul {
             boolean decompiledFrameRemainder0 = true;
             if (nb.field_a[var3].field_n == param0.field_n) {
               var4 = nb.field_a[var3].b((byte) 104);
-              if (nn.field_j[var4] > co.field_H) {
+              if (nn.field_j[var4] > DiskArchiveRequest.field_H) {
                 nn.field_j[var4] = nn.field_j[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

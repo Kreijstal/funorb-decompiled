@@ -267,7 +267,7 @@ final class DiskArchiveStore {
         field_f = null;
     }
 
-    private final boolean a(byte[] param0, int param1, int param2, boolean param3, boolean param4) {
+    private final boolean writeSectorChain(byte[] param0, int param1, int param2, boolean param3, boolean param4) {
         try {
           BufferedCacheFile stackIn_60_0 = null;
           long stackIn_60_1 = 0L;
@@ -493,9 +493,9 @@ final class DiskArchiveStore {
               if (param0 != -1023648016) {
                 return true;
               }
-              var6 = this.a(param2, param1, param3, true, false) ? 1 : 0;
+              var6 = this.writeSectorChain(param2, param1, param3, true, false) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param2, param1, param3, false, false) ? 1 : 0;
+                var6 = this.writeSectorChain(param2, param1, param3, false, false) ? 1 : 0;
               }
               stackIn_11_0 = var6;
             } else {

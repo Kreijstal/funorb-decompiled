@@ -188,7 +188,7 @@ final class kd implements WidgetRenderer {
                 n.submittedWordCount == 0 &&
                 var7Lifetime1 > 0) {
                 var8_int = 128 + (int)(Math.sin(3.141592653589793 * (double)dc.field_a / 50.0) * 64.0);
-                ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, jk.field_x.a(true) - 10, pj.field_x, var8_int);
+                ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, jk.field_x.a(true) - 10, NetworkArchiveRequest.field_x, var8_int);
               }
               pa.a(param1 + 376, tj.field_z + var7Lifetime1, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {

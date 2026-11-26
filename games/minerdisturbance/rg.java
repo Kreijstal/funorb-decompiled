@@ -96,7 +96,7 @@ class rg extends jk implements sh {
           return;
         }
         fm var2 = new fm(this, this.field_vb, pn.field_f);
-        var2.a(15, ee.field_K, param0 ^ 54);
+        var2.a(15, NetworkArchiveRequest.field_K, param0 ^ 54);
         this.a((byte) -56, (fe) (var2));
     }
 

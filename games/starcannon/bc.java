@@ -8,7 +8,7 @@ final class bc extends IntrusiveNode {
     static String[] field_h;
     int field_n;
     int[] field_m;
-    static ef field_j;
+    static DiskCacheWorker field_j;
     static String field_l;
     int field_g;
     int field_o;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class c {
-    private uj field_c;
+    private DiskCacheWorker field_c;
     private ca[] field_g;
     private java.math.BigInteger field_d;
     private PacketBuffer field_f;
@@ -11,7 +11,7 @@ final class c {
     static String field_j;
     private java.math.BigInteger field_i;
     static int field_b;
-    private ob field_a;
+    private NetworkArchiveRequest field_a;
 
     final boolean a(byte param0) {
         int stackIn_22_0 = 0;
@@ -39,7 +39,7 @@ final class c {
         if (this.field_a.field_j) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_a.e(100));
+        var10 = new PacketBuffer(this.field_a.getData(100));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) 114);
         var10.position = var10.position + var3 * 72;
@@ -261,7 +261,7 @@ final class c {
         }
     }
 
-    c(wl param0, uj param1) {
+    c(wl param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -273,7 +273,7 @@ final class c {
         field_h = null;
     }
 
-    final ca a(int param0, gf param1, int param2, gf param3, boolean param4) {
+    final ca a(int param0, SectorCacheStore param1, int param2, SectorCacheStore param3, boolean param4) {
         ca stackIn_9_0 = null;
         ca stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -286,7 +286,7 @@ final class c {
         RuntimeException var6 = null;
         int var7 = 0;
         ca var9 = null;
-        gf var10 = null;
+        SectorCacheStore var10 = null;
         byte[] var14 = null;
         try {
           if (null == this.field_f) {
@@ -302,8 +302,8 @@ final class c {
             var6_int = this.field_f.readInt(126);
             var7 = this.field_f.readInt(-61);
             if (param0 != -24559) {
-              var10 = (gf) null;
-              this.a(-126, (gf) null, 30, (gf) null, false);
+              var10 = (SectorCacheStore) null;
+              this.a(-126, (SectorCacheStore) null, 30, (SectorCacheStore) null, false);
             }
             var14 = new byte[64];
             this.field_f.readBytes(var14, 64, -86, 0);
@@ -333,7 +333,7 @@ final class c {
         }
     }
 
-    private c(wl param0, uj param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private c(wl param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_e = param0;
           this.field_i = param3;

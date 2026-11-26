@@ -59,7 +59,7 @@ final class jd {
               qh.field_c.a((byte) -103);
             }
             if (null != ba.field_O) {
-              ba.field_O.a(3);
+              ba.field_O.shutdown(3);
             }
             if (param0 != -91) {
               field_e = (String) null;

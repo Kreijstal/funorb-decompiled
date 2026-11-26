@@ -5,9 +5,9 @@ final class kr {
     private PacketBuffer field_d;
     private java.math.BigInteger field_i;
     private uk[] field_b;
-    private t field_a;
+    private DiskCacheWorker field_a;
     static PlatformTaskDispatcher field_g;
-    private ia field_e;
+    private NetworkArchiveRequest field_e;
     private tk field_f;
     static byte[] field_c;
     private java.math.BigInteger field_h;
@@ -44,7 +44,7 @@ final class kr {
         }
     }
 
-    final uk a(int param0, qh param1, boolean param2, int param3, qh param4) {
+    final uk a(int param0, SectorCacheStore param1, boolean param2, int param3, SectorCacheStore param4) {
         uk stackIn_10_0 = null;
         uk stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -139,11 +139,11 @@ final class kr {
         }
     }
 
-    kr(tk param0, t param1) {
+    kr(tk param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private kr(tk param0, t param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private kr(tk param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_f = param0;
           this.field_i = param2;
@@ -183,7 +183,7 @@ final class kr {
         if (this.field_e.field_z) {
           return false;
         }
-        var11 = new PacketBuffer(this.field_e.a((byte) -106));
+        var11 = new PacketBuffer(this.field_e.getData((byte) -106));
         var11.position = 5;
         var3 = var11.readUnsignedByte(-11);
         var11.position = var11.position + var3 * 72;

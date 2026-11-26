@@ -216,8 +216,8 @@ abstract class hl extends ej {
           if (param1 >= -91) {
             return true;
           }
-          var4 = vl.field_g[param3] + th.field_f[param3] + ld.field_b[param3];
-          var5 = th.field_f[param2] + (vl.field_g[param2] + ld.field_b[param2]);
+          var4 = DiskCacheWorker.field_g[param3] + th.field_f[param3] + ld.field_b[param3];
+          var5 = th.field_f[param2] + (DiskCacheWorker.field_g[param2] + ld.field_b[param2]);
           if (var5 > var4) {
             return true;
           }
@@ -241,8 +241,8 @@ abstract class hl extends ej {
         if (param1 >= -91) {
           return true;
         }
-        var4Lifetime1 = vl.field_g[param3] + th.field_f[param3] + ld.field_b[param3];
-        var5Lifetime1 = th.field_f[param2] + (vl.field_g[param2] + ld.field_b[param2]);
+        var4Lifetime1 = DiskCacheWorker.field_g[param3] + th.field_f[param3] + ld.field_b[param3];
+        var5Lifetime1 = th.field_f[param2] + (DiskCacheWorker.field_g[param2] + ld.field_b[param2]);
         if (var5Lifetime1 > var4Lifetime1) {
           return true;
         }

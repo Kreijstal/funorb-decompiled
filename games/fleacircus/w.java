@@ -19,7 +19,7 @@ abstract class w {
     byte field_g;
     volatile int field_b;
     volatile int field_c;
-    fk field_p;
+    NetworkArchiveRequest field_p;
 
     abstract boolean b(byte param0);
 
@@ -83,13 +83,13 @@ abstract class w {
         }
     }
 
-    final fk a(int param0, boolean param1, int param2, int param3, byte param4) {
-        fk stackIn_2_0 = null;
+    final NetworkArchiveRequest a(int param0, boolean param1, int param2, int param3, byte param4) {
+        NetworkArchiveRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         long var6;
-        fk var8;
+        NetworkArchiveRequest var8;
         var6 = (long)param2 + ((long)param3 << 32);
-        var8 = new fk();
+        var8 = new NetworkArchiveRequest();
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param1) ? false : true;
         stackIn_2_0.field_v = stackIn_3_1;

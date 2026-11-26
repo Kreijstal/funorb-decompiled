@@ -218,7 +218,7 @@ final class we implements j {
             GameApplet.field_j = Asteroid.a("button_frame", "benefits", kc.field_Q, (byte) -121);
             kj.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
             GzipDecompressor.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
-            sk.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
+            ArchiveRequest.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
             var28 = SoftwareRasterizer.field_f;
             var2 = SoftwareRasterizer.field_a;
             var3 = SoftwareRasterizer.field_d;
@@ -233,17 +233,17 @@ final class we implements j {
             var6 = var12.field_p / 2;
             var12.a();
             GzipDecompressor.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
-            sk.field_n.a(bb.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
+            ArchiveRequest.field_n.a(bb.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
             GzipDecompressor.field_a.a(bb.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
-            sk.field_n.a(bb.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
+            ArchiveRequest.field_n.a(bb.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
             GzipDecompressor.field_a.a(le.field_b, var6, 180, 16777215, -1);
-            sk.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
+            ArchiveRequest.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
             pf.field_b.a();
             var12.d(18 - pf.field_b.field_s, 241 - pf.field_b.field_n);
             for (var7 = 0; ba.field_s.length > var7; var7++) {
               qd.field_e[var7].a();
-              sk.field_n.a(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, sk.field_n.field_F + sk.field_n.field_s);
+              ArchiveRequest.field_n.a(ba.field_s[var7], 3, 3, qd.field_e[var7].field_p - 6, -6 + qd.field_e[var7].field_t, ea.field_o, -1, 1, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
               UiWidget.a(qd.field_e[var7].field_p, 0, qd.field_e[var7].field_t, 3, qd.field_e[var7], 0, 1, (byte) 21);
             }
             ba.field_s = null;
@@ -331,7 +331,7 @@ final class we implements j {
             SoftwareRasterizer.restoreClip(lj.field_D);
           }
           if (null != ProxySocketConnector.field_n &&
-            null != sk.field_n) {
+            null != ArchiveRequest.field_n) {
             var30 = SoftwareRasterizer.field_f;
             var2Lifetime2 = SoftwareRasterizer.field_a;
             var3Lifetime2 = SoftwareRasterizer.field_d;
@@ -340,7 +340,7 @@ final class we implements j {
             var17 = bb.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
             var16.a();
-            sk.field_n.a(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, sk.field_n.field_F + sk.field_n.field_s);
+            ArchiveRequest.field_n.a(var17, 3, 3, var16.field_p - 6, -6 + var16.field_t, 16777215, -1, 0, 1, ArchiveRequest.field_n.field_F + ArchiveRequest.field_n.field_s);
             UiWidget.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
             va.field_g.a();
             var16.d(199 - va.field_g.field_s, -va.field_g.field_n + 83);
@@ -348,19 +348,19 @@ final class we implements j {
             SoftwareRasterizer.restoreClip(lj.field_D);
           }
           if (dc.field_j != null &&
-            null != sk.field_n) {
+            null != ArchiveRequest.field_n) {
             var31 = SoftwareRasterizer.field_f;
             var2Lifetime3 = SoftwareRasterizer.field_a;
             var3Lifetime3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
-            var4 = sk.field_n.c(dc.field_p, 640) + 6;
+            var4 = ArchiveRequest.field_n.c(dc.field_p, 640) + 6;
             var5Lifetime1 = dc.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
             var7Lifetime2 = 20 + (dc.field_j.field_q + var6Lifetime2);
             va.field_g.a();
-            sk.field_n.c(dc.field_p, -va.field_g.field_s + var7Lifetime2, sk.field_n.field_s + (sk.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
+            ArchiveRequest.field_n.c(dc.field_p, -va.field_g.field_s + var7Lifetime2, ArchiveRequest.field_n.field_s + (ArchiveRequest.field_n.field_F + (-va.field_g.field_n + 155)), 16777215, -1);
             UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
-            var8Lifetime1 = -va.field_g.field_n + 155 - (-sk.field_n.field_F - 3 + dc.field_j.field_r - sk.field_n.field_s) / 2;
+            var8Lifetime1 = -va.field_g.field_n + 155 - (-ArchiveRequest.field_n.field_F - 3 + dc.field_j.field_r - ArchiveRequest.field_n.field_s) / 2;
             dc.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var31, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(lj.field_D);

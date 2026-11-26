@@ -112,7 +112,7 @@ final class SecondaryNodeDeque implements Iterable {
 
     final static void a(String param0, boolean param1, boolean param2) {
         try {
-          ah.field_c = true;
+          SectorCacheStore.field_c = true;
           ud.field_c = param2 ? true : false;
           ok.field_x = new bd(nb.field_a, rg.field_o, param0, MouseWheelInput.field_d, ud.field_c);
           nb.field_a.b(ok.field_x, (byte) -35);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AccountRequestState {
-    static gj field_b;
+    static DiskCacheWorker field_b;
     static byte field_a;
     static String field_c;
 

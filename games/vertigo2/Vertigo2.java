@@ -117,14 +117,14 @@ public final class Vertigo2 extends GameShell {
             }
           } else {
             if (!SpriteState.i(11)) {
-              t.a((byte) 44);
+              DiskCacheWorker.a((byte) 44);
             } else {
               if (!kg.h(114)) {
                 if (!pq.b(0)) {
                   if (!rh.e((byte) 99)) {
                     this.d(false, -97);
                   } else {
-                    if (t.field_a != t.field_f) {
+                    if (DiskCacheWorker.field_a != DiskCacheWorker.field_f) {
                       this.d(false, -104);
                     } else {
                       var3 = Vertigo2.p((byte) -78);
@@ -150,7 +150,7 @@ public final class Vertigo2 extends GameShell {
                   this.d(true, -107);
                 }
               } else {
-                if (t.field_a != t.field_f) {
+                if (DiskCacheWorker.field_a != DiskCacheWorker.field_f) {
                   this.d(false, -111);
                 } else {
                   var3 = lr.e((byte) -116);
@@ -555,7 +555,7 @@ public final class Vertigo2 extends GameShell {
           up.field_B[2] = si.a(le.field_f, "", "vertigo2_level_3");
           kc.field_b = si.a(le.field_f, "", "vertigo2_lvl_complete_jingle");
           rf.field_o = si.a(le.field_f, "", "vertigo2_lvl_start_jingle");
-          nq.field_D = si.a(le.field_f, "", "vertigo2_game_over_jingle");
+          DiskArchiveRequest.field_D = si.a(le.field_f, "", "vertigo2_game_over_jingle");
           si.a(le.field_f, "", "vertigo2_multiplayer_lvl_lost_jingle");
           si.a(le.field_f, "", "vertigo2_time_running_out_jingle");
           qc.field_v.a(0, jk.field_b, op.field_d, re.field_d, (byte) 75);
@@ -611,7 +611,7 @@ public final class Vertigo2 extends GameShell {
           var3 = new MidiPcmStream();
           var3.a(9, true, 128);
           nr.a(true, var3, 22050, gi.field_s, 1024, (java.awt.Component) ((Object) ne.field_F));
-          t.field_c = 4473924;
+          DiskCacheWorker.field_c = 4473924;
           oi.field_b = 16777215;
           SecondaryNodeDeque.field_a = 16777215;
           vg.field_d = 128;
@@ -879,7 +879,7 @@ public final class Vertigo2 extends GameShell {
           BitPacketBuffer.releaseDeclaredStaticReferences(116);
           jd.clearStaticReferences(-109);
           tk.clearStaticReferences((byte) 95);
-          t.a(false);
+          DiskCacheWorker.a(false);
           kr.c(5);
           im.clearStaticReferences(33);
           ff.resetStaticState((byte) 120);
@@ -956,14 +956,14 @@ public final class Vertigo2 extends GameShell {
           tm.clearStaticReferences(127);
           eg.clearStaticReferences(3);
           ak.clearStaticReferences(-56);
-          ia.resetStaticState(-20657);
-          qh.clearStaticReferences(115);
-          nq.j(-124);
+          NetworkArchiveRequest.resetStaticState(-20657);
+          SectorCacheStore.clearStaticReferences(115);
+          DiskArchiveRequest.j(-124);
           uk.clearStaticReferences((byte) -101);
           RandomAccessCacheFile.clearStaticReferences(false);
           ln.clearStaticReferences(-47);
           vj.a(-11590);
-          rk.resetStaticState(false);
+          ArchiveRequest.resetStaticState(false);
           DelegatingCanvas.resetStaticState(4);
           ce.clearStaticReferences(true);
           TextureOperator.clearStaticReferences(true);
@@ -1270,7 +1270,7 @@ public final class Vertigo2 extends GameShell {
             SoftwareRasterizer.blurRectangle(var4_int, var4_int, 0, 0, 640, 480);
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 1, var4_int << 2);
           }
-          if (!qh.field_g ||
+          if (!SectorCacheStore.field_g ||
             !lc.field_d) {
             ff.a(m.h(-124), 11182);
           }
@@ -1311,7 +1311,7 @@ public final class Vertigo2 extends GameShell {
               }
             }
           }
-          if (t.field_a != t.field_f) {
+          if (DiskCacheWorker.field_a != DiskCacheWorker.field_f) {
             var5Lifetime2 = 256 * ok.field_c / 16;
             if (0 < var5Lifetime2) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_j, 0, var5Lifetime2);
@@ -1690,8 +1690,8 @@ public final class Vertigo2 extends GameShell {
         try {
           wn.field_b.b(8);
           var3_int = 0;
-          if (t.field_f != t.field_a) {
-            if (t.field_f == no.field_c) {
+          if (DiskCacheWorker.field_f != DiskCacheWorker.field_a) {
+            if (DiskCacheWorker.field_f == no.field_c) {
               ok.field_c = ok.field_c + 1;
               if (16 == ok.field_c) {
                 if (!jo.field_d) {
@@ -1699,10 +1699,10 @@ public final class Vertigo2 extends GameShell {
                 } else {
                   ho.a(-106);
                 }
-                t.field_f = go.field_h;
+                DiskCacheWorker.field_f = go.field_h;
               }
             } else {
-              if (go.field_h == t.field_f) {
+              if (go.field_h == DiskCacheWorker.field_f) {
                 if (!ag.b(49)) {
                   if (uh.field_Xb != null) {
                     nr.a(3, -22754, uh.field_Xb);
@@ -1722,11 +1722,11 @@ public final class Vertigo2 extends GameShell {
                     g.b(7);
                   }
                 }
-                t.field_f = ak.field_e;
+                DiskCacheWorker.field_f = ak.field_e;
               } else {
                 ok.field_c = ok.field_c - 1;
                 if (ok.field_c == 0) {
-                  t.field_f = t.field_a;
+                  DiskCacheWorker.field_f = DiskCacheWorker.field_a;
                 }
               }
             }

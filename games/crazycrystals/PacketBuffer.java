@@ -153,7 +153,7 @@ class PacketBuffer extends IntrusiveNode {
           if (param1 != 21815) {
             PacketBuffer.e((byte) 24);
           }
-          ld.field_r = param0;
+          NetworkArchiveRequest.field_r = param0;
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ng.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

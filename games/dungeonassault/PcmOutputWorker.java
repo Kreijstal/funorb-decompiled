@@ -188,7 +188,7 @@ final class PcmOutputWorker implements Runnable {
           var5 = 1;
           var4 = 1;
         }
-        CombatState.field_e = vf.a(var5 * var2, var2 * var4, (byte) 84);
+        CombatState.field_e = ArchiveRequest.a(var5 * var2, var2 * var4, (byte) 84);
     }
 
     public final void run() {

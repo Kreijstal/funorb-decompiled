@@ -45,7 +45,7 @@ final class ue implements cg {
           if (param1 <= 63) {
             field_d = (String) null;
           }
-          var12 = cm.field_S;
+          var12 = NetworkArchiveRequest.field_S;
           var10 = var12;
           var7 = var10;
           var2Lifetime1 = var7;

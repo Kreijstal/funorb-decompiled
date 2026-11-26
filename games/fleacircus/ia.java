@@ -145,7 +145,7 @@ final class ia extends IntrusiveNode {
             SoftwareRasterizer.setRasterBuffer(var1.field_r, var1.field_i, var1.field_p);
             SoftwareRasterizer.setClip(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
             var1.field_r = null;
-            fk.field_z.addLast(false, var1);
+            NetworkArchiveRequest.field_z.addLast(false, var1);
             return;
           }
           throw new IllegalStateException();
@@ -154,7 +154,7 @@ final class ia extends IntrusiveNode {
           SoftwareRasterizer.setRasterBuffer(var1.field_r, var1.field_i, var1.field_p);
           SoftwareRasterizer.setClip(var1.field_j, var1.field_l, var1.field_q, var1.field_u);
           var1.field_r = null;
-          fk.field_z.addLast(false, var1);
+          NetworkArchiveRequest.field_z.addLast(false, var1);
           return;
         }
         throw new IllegalStateException();

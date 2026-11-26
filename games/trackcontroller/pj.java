@@ -53,7 +53,7 @@ final class pj extends db {
         }
         if (!param0) {
           li.field_l = nd.a(-101, var8, 80);
-          hi.field_A = null;
+          NetworkArchiveRequest.field_A = null;
           return new q(param0);
         }
         var5 = var8.readUnsignedShort((byte) -67);
@@ -65,13 +65,13 @@ final class pj extends db {
           } else {
             stackIn_24_0 = var9.field_r;
           }
-          hi.field_A = stackIn_24_0;
+          NetworkArchiveRequest.field_A = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           hb.reportClientError((Throwable) ((Object) var6), param1 ^ 21552, "CC1");
           li.field_l = null;
-          hi.field_A = null;
+          NetworkArchiveRequest.field_A = null;
           return new q(param0);
         }
         return new q(param0);

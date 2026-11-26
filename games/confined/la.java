@@ -42,7 +42,7 @@ final class la extends am {
 
     final static void j(int param0) {
         bj.a(true, kc.field_n, 14451, rd.field_Jb);
-        pc.field_f = true;
+        DiskCacheWorker.field_f = true;
         if (param0 < 23) {
           la.j(106);
         }

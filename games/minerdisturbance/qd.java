@@ -492,7 +492,7 @@ final class qd extends kn implements sh {
         ff.field_e = oa.a((byte) -81, ff.field_e, new String[]{"<br><shad=000001><%0></shad><br>"});
         fb.field_h = oa.a((byte) -72, fb.field_h, new String[]{"<br><shad=000001><%0></shad><br>"});
         GameAppletShell.field_g[0] = mn.field_v;
-        GameAppletShell.field_g[3] = em.field_u;
+        GameAppletShell.field_g[3] = ArchiveRequest.field_u;
         GameAppletShell.field_g[1] = vc.field_w;
         GameAppletShell.field_g[6] = cc.field_M;
         GameAppletShell.field_g[2] = ka.field_c;
@@ -500,7 +500,7 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[5] = ng.field_i;
         GameAppletShell.field_g[21] = md.field_a;
         GameAppletShell.field_g[19] = MusicPatchPcmStream.field_t;
-        GameAppletShell.field_g[18] = ee.field_H;
+        GameAppletShell.field_g[18] = NetworkArchiveRequest.field_H;
         GameAppletShell.field_g[20] = ri.field_b;
         GameAppletShell.field_g[16] = dn.field_n;
         GameAppletShell.field_g[13] = te.field_a;
@@ -509,7 +509,7 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[8] = ck.field_c[1];
         GameAppletShell.field_g[23] = ProxyAuthenticationRequiredException.field_d;
         GameAppletShell.field_g[14] = IterableNodeHashTable.field_e;
-        GameAppletShell.field_g[15] = ee.field_E;
+        GameAppletShell.field_g[15] = NetworkArchiveRequest.field_E;
         GameAppletShell.field_g[22] = jc.field_D;
         GameAppletShell.field_g[24] = IterableNodeHashTable.field_e;
         e.field_i = new String[35][][];

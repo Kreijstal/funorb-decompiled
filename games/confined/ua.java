@@ -6,7 +6,7 @@ final class ua {
 
     final static void a(sf param0, int param1, int param2) {
         try {
-          sm.field_y.addLast((IntrusiveNode) (param0), (byte) -77);
+          DiskArchiveRequest.field_y.addLast((IntrusiveNode) (param0), (byte) -77);
           nh.a(param0, param2 - 8795, param1);
           if (param2 != 8795) {
             String var4 = (String) null;

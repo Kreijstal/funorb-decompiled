@@ -47,7 +47,7 @@ final class id {
             if (1 == var1) {
               bm.field_a = gi.field_d;
             } else {
-              bm.field_a = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(var1)}, cd.field_x);
+              bm.field_a = CrossfadingMidiPcmStream.a(-415993727, new String[]{Integer.toString(var1)}, NetworkArchiveRequest.field_x);
             }
             bm.field_a = wb.a(new CharSequence[]{(CharSequence) ((Object) bm.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ci.field_p)}, (byte) -123);
           }

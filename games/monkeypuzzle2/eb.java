@@ -394,7 +394,7 @@ final class eb extends WidgetContainer implements sh, ql {
                     }
                     var4.field_n = 1;
                     gb.field_o = gb.field_o - 1;
-                    ob.b((byte) -19);
+                    NetworkArchiveRequest.b((byte) -19);
                     decompiledFrameCompleted7 = false;
                     break;
                   }

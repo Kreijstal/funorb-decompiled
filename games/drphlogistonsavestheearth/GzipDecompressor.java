@@ -34,14 +34,14 @@ final class GzipDecompressor {
             return 80;
           }
         } else {
-          if (bi.field_I != null) {
-            if (!bi.field_I.a(0)) {
+          if (DiskArchiveRequest.field_I != null) {
+            if (!DiskArchiveRequest.field_I.a(0)) {
               return 14;
             }
-            if (!bi.field_I.a((byte) 12, "")) {
+            if (!DiskArchiveRequest.field_I.a((byte) 12, "")) {
               return 29;
             }
-            if (!bi.field_I.a(255, "")) {
+            if (!DiskArchiveRequest.field_I.a(255, "")) {
               return 29;
             }
           }

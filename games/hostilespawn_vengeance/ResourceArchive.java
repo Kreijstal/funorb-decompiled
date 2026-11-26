@@ -28,7 +28,7 @@ final class ResourceArchive {
           0 != this.field_g.field_p[param1]) {
           return true;
         }
-        if (um.field_f) {
+        if (SectorCacheStore.field_f) {
           throw new IllegalArgumentException(Integer.toString(param1));
         }
         return false;
@@ -45,7 +45,7 @@ final class ResourceArchive {
           0 > param2 ||
           param0 >= this.field_g.field_p.length ||
           param2 >= this.field_g.field_p[param0]) {
-          if (!um.field_f) {
+          if (!SectorCacheStore.field_f) {
             return false;
           }
           throw new IllegalArgumentException(param0 + " " + param2);

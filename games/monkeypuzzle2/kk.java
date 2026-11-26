@@ -142,7 +142,7 @@ final class kk {
         var2_int = 0;
         do {
           if (var2_int >= 480) {
-            df.field_q[ob.field_r].f(-(df.field_q[0].field_m >> 1) + 560, ClientException.field_e);
+            df.field_q[NetworkArchiveRequest.field_r].f(-(df.field_q[0].field_m >> 1) + 560, ClientException.field_e);
             break;
           }
           kj.field_F.c(560 - (kj.field_F.field_m >> 1), var2_int);
@@ -333,7 +333,7 @@ final class kk {
         lb.a(0, var3, (byte) -124, NodeHashTableIterator.field_e, 0, var4);
         var5 = pl.field_e;
         var6 = 0;
-        var7_int = si.field_r / 8;
+        var7_int = DiskArchiveRequest.field_r / 8;
         if (param0 != 1) {
           return;
         }
@@ -359,7 +359,7 @@ final class kk {
           }
           var8 = 0;
           stackIn_15_0 = -33;
-          stackIn_15_1 = ~(si.field_r + var7_int * 6 & 63);
+          stackIn_15_1 = ~(DiskArchiveRequest.field_r + var7_int * 6 & 63);
           if (var9 == 0) {
             if (stackIn_15_0 <= stackIn_15_1) {
               var8 = var7_int % 4;

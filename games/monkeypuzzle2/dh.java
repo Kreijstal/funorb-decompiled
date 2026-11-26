@@ -28,7 +28,7 @@ final class dh {
             field_b = 88;
           }
           if (var2_int == 0) {
-            stackIn_5_0 = si.field_s;
+            stackIn_5_0 = DiskArchiveRequest.field_s;
             return stackIn_5_0;
           }
           if (var2_int > 63) {
@@ -44,7 +44,7 @@ final class dh {
                 return stackIn_19_0;
               }
             } else {
-              if (fb.field_i.indexOf(var4) == -1) {
+              if (ArchiveRequest.field_i.indexOf(var4) == -1) {
                 stackIn_23_0 = lh.field_c;
                 return stackIn_23_0;
               }

@@ -149,7 +149,7 @@ final class me {
                   var25Lifetime1 = param4.field_F[var23Lifetime2];
                   var26Lifetime1 = param4.field_y[var23Lifetime2];
                   IterableNodeHashTable.field_e[var23Lifetime2] = (var26Lifetime1 * var18 + (var24Lifetime1 * var12 + var15 * var25Lifetime1) >> 16) + var9;
-                  la.field_m[var23Lifetime2] = (var19 * var26Lifetime1 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> 16) + var10;
+                  ArchiveRequest.field_m[var23Lifetime2] = (var19 * var26Lifetime1 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> 16) + var10;
                   ii.field_b[var23Lifetime2] = (var25Lifetime1 * var17 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16) + var11;
                   var23Lifetime2++;
                   if (var30 != 0) {

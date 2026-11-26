@@ -20,9 +20,9 @@ final class wc {
     final static int d(int param0) {
         if (param0 != 20) {
           wc.a(-3, 'E');
-          return ef.field_b;
+          return DiskCacheWorker.field_b;
         }
-        return ef.field_b;
+        return DiskCacheWorker.field_b;
     }
 
     final static boolean a(int param0, char param1) {

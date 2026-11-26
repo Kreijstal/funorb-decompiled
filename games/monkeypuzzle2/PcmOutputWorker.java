@@ -91,8 +91,8 @@ final class PcmOutputWorker implements Runnable {
             if (pl.field_f[var3][1] < (float)(5 + param0)) {
               pl.field_f[var3][1] = (float)(5 + param0);
             }
-            dupTemp$2 = uj.field_k[var3];
-            uj.field_k[var3] = dupTemp$2 + 1;
+            dupTemp$2 = DiskCacheWorker.field_k[var3];
+            DiskCacheWorker.field_k[var3] = dupTemp$2 + 1;
             if (dupTemp$2 >= 40) {
               if (Math.random() > 0.8) {
                 dupTemp$3 = n.field_d[var3];
@@ -140,7 +140,7 @@ final class PcmOutputWorker implements Runnable {
                 dupTemp$12[0] = (float)((double)dupTemp$12[0] * (Math.random() + -1.0));
                 dupTemp$13 = n.field_d[var3];
                 dupTemp$13[1] = (float)((double)dupTemp$13[1] + (-0.5 + Math.random()));
-                uj.field_k[var3] = 0;
+                DiskCacheWorker.field_k[var3] = 0;
               }
               if ((float)(param0 + 20) > pl.field_f[var3][1] &&
                 0.0f > n.field_d[var3][1]) {
@@ -148,7 +148,7 @@ final class PcmOutputWorker implements Runnable {
                 dupTemp$14[1] = (float)((double)dupTemp$14[1] * (-1.0 + Math.random()));
                 dupTemp$15 = n.field_d[var3];
                 dupTemp$15[0] = (float)((double)dupTemp$15[0] + (Math.random() - 0.5));
-                uj.field_k[var3] = 0;
+                DiskCacheWorker.field_k[var3] = 0;
               } else {
                 if (490.0f < pl.field_f[var3][1] &&
                   n.field_d[var3][1] > 0.0f) {
@@ -156,7 +156,7 @@ final class PcmOutputWorker implements Runnable {
                   dupTemp$16[1] = (float)((double)dupTemp$16[1] * (Math.random() + -1.0));
                   dupTemp$17 = n.field_d[var3];
                   dupTemp$17[0] = (float)((double)dupTemp$17[0] + (Math.random() - 0.5));
-                  uj.field_k[var3] = 0;
+                  DiskCacheWorker.field_k[var3] = 0;
                 }
               }
             }

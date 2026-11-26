@@ -17,7 +17,7 @@ final class a extends ge {
           int stackIn_79_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          cd var2 = null;
+          NetworkArchiveRequest var2 = null;
           int var2_int = 0;
           IOException var2_ref = null;
           int var3_int = 0;
@@ -33,10 +33,10 @@ final class a extends ge {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          cd var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          cd var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = OrbDefence.field_D ? 1 : 0;
           if (null != this.field_q) {
             var2_long = ji.correctedCurrentTimeMillis(param0 - 278);
@@ -65,23 +65,23 @@ final class a extends ge {
           }
           try {
             this.field_q.checkWriteError(-120);
-            var2 = (cd) (this.field_d.b((byte) 46));
+            var2 = (NetworkArchiveRequest) (this.field_d.b((byte) 46));
             while (var2 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(1, -41);
               this.field_l.writeLong40(123, var2.field_h);
               this.field_q.queueWrite((byte) 30, this.field_l.payload, 0, this.field_l.payload.length);
               this.field_p.a(param0 ^ -143, var2);
-              var2 = (cd) (this.field_d.b(0));
+              var2 = (NetworkArchiveRequest) (this.field_d.b(0));
             }
-            var2Lifetime1 = (cd) (this.field_k.b((byte) 46));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_k.b((byte) 46));
             while (var2Lifetime1 != null) {
               this.field_l.position = 0;
               this.field_l.writeByte(0, -74);
               this.field_l.writeLong40(115, var2Lifetime1.field_h);
               this.field_q.queueWrite((byte) 30, this.field_l.payload, 0, this.field_l.payload.length);
               this.field_f.a(-90, var2Lifetime1);
-              var2Lifetime1 = (cd) (this.field_k.b(0));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_k.b(0));
             }
             var2_int = 0;
             if (param0 != 255) {
@@ -131,24 +131,24 @@ final class a extends ge {
                     var12 = ((long)var6 << 32) + (long)var7;
                     var14 = null;
                     if (var11 == 0) {
-                      var14_ref = (cd) (this.field_p.b((byte) 46));
+                      var14_ref = (NetworkArchiveRequest) (this.field_p.b((byte) 46));
                       while (var14_ref != null) {
                         if (~var14_ref.field_h == ~var12) {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        var14_ref = (cd) (this.field_p.b(0));
+                        var14_ref = (NetworkArchiveRequest) (this.field_p.b(0));
                       }
                       decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                     }
                     if ((decompiledFrameRemainder0) &&
                       (decompiledFrameCompleted0)) {
-                      var14_ref = (cd) (this.field_f.b((byte) 46));
+                      var14_ref = (NetworkArchiveRequest) (this.field_f.b((byte) 46));
                       while (var14_ref != null) {
                         if (~var14_ref.field_h == ~var12) {
                           break;
                         }
-                        var14_ref = (cd) (this.field_f.b(0));
+                        var14_ref = (NetworkArchiveRequest) (this.field_f.b(0));
                       }
                     }
                     if (var14_ref == null) {
@@ -443,12 +443,12 @@ final class a extends ge {
           String stackIn_29_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          cd var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          cd var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = OrbDefence.field_D ? 1 : 0;
           try {
             if (null != this.field_q) {
@@ -466,7 +466,7 @@ final class a extends ge {
             this.field_a = null;
             this.field_m.position = 0;
             while (true) {
-              var4_ref = (cd) (this.field_p.c(30664));
+              var4_ref = (NetworkArchiveRequest) (this.field_p.c(30664));
               if (var4_ref != null) {
                 this.field_d.a(-79, var4_ref);
                 continue;
@@ -474,7 +474,7 @@ final class a extends ge {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (cd) (this.field_f.c(30664));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_f.c(30664));
               if (var4_refLifetime1 != null) {
                 this.field_k.a(-63, var4_refLifetime1);
                 continue;
@@ -540,7 +540,7 @@ final class a extends ge {
         if (am.field_e > param3) {
           KeyboardListener.field_a = param3;
         }
-        vl.field_g[rc.field_d] = param5;
+        DiskCacheWorker.field_g[rc.field_d] = param5;
         th.field_f[rc.field_d] = param1;
         ld.field_b[rc.field_d] = param4;
         int var6 = param4 + (param5 + param1);

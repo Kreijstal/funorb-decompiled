@@ -1049,26 +1049,26 @@ final class gi {
             }
             if ((decompiledFrameRemainder0) && ((28 != param0.field_g ||
               13 != param0.map.state.client.field_Bb) && 0 <= param0.field_g)) {
-              if (nh.field_E[param0.field_g] == 1) {
+              if (NetworkArchiveRequest.field_E[param0.field_g] == 1) {
                 param0.a(1, true, 111);
               }
-              if (nh.field_E[param0.field_g] == 2) {
+              if (NetworkArchiveRequest.field_E[param0.field_g] == 2) {
                 param0.a(1, false, param2 ^ -29687);
               }
-              if (3 == nh.field_E[param0.field_g]) {
+              if (3 == NetworkArchiveRequest.field_E[param0.field_g]) {
                 param0.a(1, true, 96);
                 param0.field_i = 0;
                 this.field_u.a(122, param0.field_n, param0.field_r, -1 + param0.field_A).field_i = 0;
               }
               param0.field_g = le.field_s[param0.field_g];
               if (param0.field_g >= 0) {
-                if (1 == nh.field_E[param0.field_g]) {
+                if (1 == NetworkArchiveRequest.field_E[param0.field_g]) {
                   param0.a(1, true, -82);
                 }
-                if (2 == nh.field_E[param0.field_g]) {
+                if (2 == NetworkArchiveRequest.field_E[param0.field_g]) {
                   param0.a(1, false, param2 + 29671);
                 }
-                if (nh.field_E[param0.field_g] == 3) {
+                if (NetworkArchiveRequest.field_E[param0.field_g] == 3) {
                   param0.a(1, true, param2 + 29485);
                   param0.field_i = 1;
                   this.field_u.a(-88, param0.field_n, param0.field_r, -1 + param0.field_A).field_i = 1;
@@ -1118,26 +1118,26 @@ final class gi {
             }
             if ((decompiledFrameRemainder0) && ((28 != param2.field_k ||
               param2.map.state.client.field_Bb != 13) && param2.field_k >= 0)) {
-              if (1 == nh.field_E[param2.field_k]) {
+              if (1 == NetworkArchiveRequest.field_E[param2.field_k]) {
                 param2.a(2, true, -95);
               }
-              if (nh.field_E[param2.field_k] == 2) {
+              if (NetworkArchiveRequest.field_E[param2.field_k] == 2) {
                 param2.a(2, false, 87);
               }
-              if (3 == nh.field_E[param2.field_k]) {
+              if (3 == NetworkArchiveRequest.field_E[param2.field_k]) {
                 param2.a(2, true, -75);
                 param2.field_i = 0;
                 this.field_u.a(82, -1 + param2.field_n, param2.field_r, param2.field_A).field_i = 0;
               }
               param2.field_k = le.field_s[param2.field_k];
               if (param2.field_k >= 0) {
-                if (1 == nh.field_E[param2.field_k]) {
+                if (1 == NetworkArchiveRequest.field_E[param2.field_k]) {
                   param2.a(2, true, param0 ^ 54);
                 }
-                if (2 == nh.field_E[param2.field_k]) {
+                if (2 == NetworkArchiveRequest.field_E[param2.field_k]) {
                   param2.a(2, false, 93);
                 }
-                if (nh.field_E[param2.field_k] == 3) {
+                if (NetworkArchiveRequest.field_E[param2.field_k] == 3) {
                   param2.a(2, true, -108);
                   param2.field_i = 1;
                   this.field_u.a(-91, param2.field_n - 1, param2.field_r, param2.field_A).field_i = 1;

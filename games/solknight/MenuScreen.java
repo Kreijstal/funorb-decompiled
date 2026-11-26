@@ -111,7 +111,7 @@ final class MenuScreen {
                           pg.field_e = false;
                           lk.field_f = 0;
                           vk.field_p = 0;
-                          bi.field_h = 0;
+                          SectorCacheStore.field_h = 0;
                           for (var5 = 0; var5 < nf.field_W.length; var5 += 2) {
                             nf.field_W[var5] = bk.a(1280, jb.field_g, (byte) -116) - 640;
                             nf.field_W[var5 + 1] = bk.a(720, jb.field_g, (byte) 83);
@@ -342,8 +342,8 @@ final class MenuScreen {
             if (this.field_f.f(0)) {
               ImageProducerRasterBuffer.field_n = false;
               ClientException.field_b = -1;
-              ic.field_t = ic.field_t + lc.field_p;
-              bi.field_b = null;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + lc.field_p;
+              SectorCacheStore.field_b = null;
               kh.field_c = null;
               wc.field_c = 0;
               SecondaryNodeDequeIterator.field_d = 0;
@@ -351,18 +351,18 @@ final class MenuScreen {
               lc.field_h = lc.field_h - fa.field_f;
               ImageProducerRasterBuffer.field_m = 0;
               k.field_c = 0;
-              ic.field_t = ic.field_t - (bi.field_i >>> 11) * fa.field_f;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - (SectorCacheStore.field_i >>> 11) * fa.field_f;
               uf.field_p = 2;
               FullscreenFocusCanvas.field_b = 10;
               kb.field_b = 0;
               pg.field_e = false;
               fg.field_a = 0;
               fa.field_f = 0;
-              bi.field_h = 0;
+              SectorCacheStore.field_h = 0;
               pl.field_a = 0;
-              ic.field_t = ic.field_t + lk.field_e;
-              ic.field_t = ic.field_t - (lc.field_h >>> 17) * ud.field_k;
-              bi.field_i = bi.field_i - ud.field_k;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + lk.field_e;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - (lc.field_h >>> 17) * ud.field_k;
+              SectorCacheStore.field_i = SectorCacheStore.field_i - ud.field_k;
               ib.field_h = 0;
               MidiPcmStream.field_A = 0;
               ProxyAuthenticationRequiredException.field_a = 0;
@@ -1027,7 +1027,7 @@ final class MenuScreen {
                 var2 = og.field_k;
                 var5 = var4_ref_sd.field_n[rg.field_c];
                 var17 = var4_ref_sd.field_i[rg.field_c];
-                var7 = ti.a(bi.field_b, rg.field_c, var4_ref_sd, 0);
+                var7 = ti.a(SectorCacheStore.field_b, rg.field_c, var4_ref_sd, 0);
                 var8 = var3.field_F + 127;
                 for (var9 = 0; 10 > var9; var9++) {
                   if (var5[var9] != null) {
@@ -1045,11 +1045,11 @@ final class MenuScreen {
                   }
                   var8 += 21;
                 }
-                if (bi.field_b != null &&
+                if (SectorCacheStore.field_b != null &&
                   var7 == -1) {
                   var3.c(ne.field_g, 73, var8, 16776960, -1);
-                  var3.b(bb.a("<%0>%", new String[]{Integer.toString(bi.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
-                  var3.b(Integer.toString(bi.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
+                  var3.b(bb.a("<%0>%", new String[]{Integer.toString(SectorCacheStore.field_b.field_r[0] % 101)}, -63), 380, var8, 16776960, -1);
+                  var3.b(Integer.toString(SectorCacheStore.field_b.field_r[0] / 101), 582, var8, 16776960, -1);
                 }
                 if ((var2.length() == 0)) {
                   var8Lifetime1 = 106 + var3.field_F;

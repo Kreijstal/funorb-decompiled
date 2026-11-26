@@ -122,15 +122,15 @@ final class GzipInflater {
         Throwable decompiledCaughtException = null;
         var1_ref = sj.field_d;
         synchronized (var1_ref) {
-          if (DelegatingCanvas.field_b == ab.field_t) {
+          if (DelegatingCanvas.field_b == DiskArchiveRequest.field_t) {
             return false;
           }
-          tb.field_d = db.field_c[ab.field_t];
-          fd.field_n = e.field_b[ab.field_t];
+          tb.field_d = db.field_c[DiskArchiveRequest.field_t];
+          fd.field_n = e.field_b[DiskArchiveRequest.field_t];
           if (param0 != -114) {
             return false;
           }
-          ab.field_t = ab.field_t + 1 & 127;
+          DiskArchiveRequest.field_t = DiskArchiveRequest.field_t + 1 & 127;
           stackIn_8_0 = true;
         }
         return stackIn_8_0;

@@ -37,7 +37,7 @@ final class ad {
           if (param0 <= 73) {
             return;
           }
-          var13 = cd.field_t;
+          var13 = NetworkArchiveRequest.field_t;
           var15 = var13;
           var2 = var15.readUnsignedByte((byte) 90);
           var3 = (d) (md.field_h.beginForward((byte) -66));
@@ -78,11 +78,11 @@ final class ad {
               var11 = AccountNameAvailabilityValidator.field_o[var9];
               var6[0][var10] = qd.field_c[var11];
               var19[0][4 * var10] = tl.field_d[var11];
-              var19[0][1 + 4 * var10] = vl.field_g[var11];
+              var19[0][1 + 4 * var10] = DiskCacheWorker.field_g[var11];
               var19[0][var10 * 4 + 2] = th.field_f[var11];
               var19[0][var10 * 4 + 3] = ld.field_b[var11];
               if (DirectByteStorage.a((byte) -125, qd.field_c[var11]) &&
-                ld.field_b[var11] + (th.field_f[var11] + vl.field_g[var11]) == 0) {
+                ld.field_b[var11] + (th.field_f[var11] + DiskCacheWorker.field_g[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -96,11 +96,11 @@ final class ad {
               var11Lifetime1 = AccountNameAvailabilityValidator.field_o[var9Lifetime1 + var5];
               var6[1][var14] = qd.field_c[var11Lifetime1];
               var19[1][var14 * 4] = tl.field_d[var11Lifetime1];
-              var19[1][1 + 4 * var14] = vl.field_g[var11Lifetime1];
+              var19[1][1 + 4 * var14] = DiskCacheWorker.field_g[var11Lifetime1];
               var19[1][var14 * 4 + 2] = th.field_f[var11Lifetime1];
               var19[1][var14 * 4 + 3] = ld.field_b[var11Lifetime1];
               if (DirectByteStorage.a((byte) 124, qd.field_c[var11Lifetime1]) &&
-                ld.field_b[var11Lifetime1] + (vl.field_g[var11Lifetime1] + th.field_f[var11Lifetime1]) == 0) {
+                ld.field_b[var11Lifetime1] + (DiskCacheWorker.field_g[var11Lifetime1] + th.field_f[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

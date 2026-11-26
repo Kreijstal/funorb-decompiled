@@ -20,7 +20,7 @@ final class ih extends ej {
           int stackIn_64_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          lm var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -35,11 +35,11 @@ final class ih extends ej {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          lm var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
           int var17 = 0;
-          lm var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = HostileSpawn.field_I ? 1 : 0;
           if (null != this.field_t) {
             var2_long = hn.correctedCurrentTimeMillis((byte) 80);
@@ -71,23 +71,23 @@ final class ih extends ej {
           }
           try {
             this.field_t.checkWriteError((byte) -55);
-            var2 = (lm) (this.field_b.d((byte) -35));
+            var2 = (NetworkArchiveRequest) (this.field_b.d((byte) -35));
             while (var2 != null) {
               this.field_m.field_i = 0;
               this.field_m.d(124, 1);
               this.field_m.a(-113, var2.field_h);
               this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) -63, 0);
               this.field_j.a(var2, -126);
-              var2 = (lm) (this.field_b.b((byte) -59));
+              var2 = (NetworkArchiveRequest) (this.field_b.b((byte) -59));
             }
-            var2Lifetime1 = (lm) (this.field_l.d((byte) -35));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_l.d((byte) -35));
             while (var2Lifetime1 != null) {
               this.field_m.field_i = 0;
               this.field_m.d(100, 0);
               this.field_m.a(-127, var2Lifetime1.field_h);
               this.field_t.queueWrite(this.field_m.field_n.length, this.field_m.field_n, (byte) -127, 0);
               this.field_a.a(var2Lifetime1, 56);
-              var2Lifetime1 = (lm) (this.field_l.b((byte) -114));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_l.b((byte) -114));
             }
             for (var2_int = 0; 100 > var2_int; var2_int++) {
               var3_int = this.field_t.availableBytes((byte) 59);
@@ -160,24 +160,24 @@ final class ih extends ej {
                       var12 = ((long)var6 << 32) + (long)var7;
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (lm) (this.field_a.d((byte) -35));
+                        var14_ref = (NetworkArchiveRequest) (this.field_a.d((byte) -35));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_h) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (lm) (this.field_a.b((byte) -18));
+                          var14_ref = (NetworkArchiveRequest) (this.field_a.b((byte) -18));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (lm) (this.field_j.d((byte) -35));
+                        var14_ref = (NetworkArchiveRequest) (this.field_j.d((byte) -35));
                         while (var14_ref != null) {
                           if (var14_ref.field_h == var12) {
                             break;
                           }
-                          var14_ref = (lm) (this.field_j.b((byte) -52));
+                          var14_ref = (NetworkArchiveRequest) (this.field_j.b((byte) -52));
                         }
                       }
                       if (var14_ref == null) {
@@ -299,12 +299,12 @@ final class ih extends ej {
           String stackIn_29_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          lm var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          lm var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = HostileSpawn.field_I ? 1 : 0;
           try {
             if (null != this.field_t) {
@@ -322,7 +322,7 @@ final class ih extends ej {
             this.field_p = null;
             this.field_i.field_i = 0;
             while (true) {
-              var4_ref = (lm) (this.field_j.a((byte) 27));
+              var4_ref = (NetworkArchiveRequest) (this.field_j.a((byte) 27));
               if (var4_ref != null) {
                 this.field_b.a(var4_ref, 40);
                 continue;
@@ -330,7 +330,7 @@ final class ih extends ej {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (lm) (this.field_a.a((byte) 27));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_a.a((byte) 27));
               if (var4_refLifetime1 != null) {
                 this.field_l.a(var4_refLifetime1, -127);
                 continue;

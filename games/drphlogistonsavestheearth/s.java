@@ -73,7 +73,7 @@ final class s {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (hb.field_g > 0) {
-            df.field_l = n.createFullscreenCanvas(0, sb.field_d, 640, 9764, 480, 0);
+            df.field_l = DiskCacheWorker.createFullscreenCanvas(0, sb.field_d, 640, 9764, 480, 0);
             if (df.field_l != null) {
               var2_int = 2;
               ej.a(df.field_l, (byte) 57);
@@ -409,13 +409,13 @@ final class s {
           hg.field_ob[24] = db.field_g;
           hg.field_ob[36] = ni.field_r[1];
           hg.field_ob[27] = rk.field_f;
-          kk.field_c[1] = ik.field_h;
+          kk.field_c[1] = SectorCacheStore.field_h;
           kk.field_c[2] = v.field_U;
           kk.field_c[0] = we.field_h;
           field_d = new String[3];
           field_d[0] = mj.field_t;
           field_d[2] = hb.field_m;
-          field_d[1] = n.field_f;
+          field_d[1] = DiskCacheWorker.field_f;
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "s.E(" + param0 + ')');
         }

@@ -109,7 +109,7 @@ final class bb {
 
     final static void a(int param0, boolean param1, String param2, boolean param3) {
         try {
-          vl.h(param0 ^ -19932);
+          DiskArchiveRequest.h(param0 ^ -19932);
           mb.field_b.n(21974);
           if (param0 != 19931) {
             field_a = (IntrusiveDeque) null;

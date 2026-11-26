@@ -13,13 +13,13 @@ abstract class ug {
     final static void a(byte param0, int param1, int param2, int param3) {
         if (param0 < -46) {
           vm.field_b = param2;
-          t.field_c = param1;
+          DiskCacheWorker.field_c = param1;
           vg.field_d = param3;
           return;
         }
         field_c = (java.awt.Image) null;
         vm.field_b = param2;
-        t.field_c = param1;
+        DiskCacheWorker.field_c = param1;
         vg.field_d = param3;
     }
 

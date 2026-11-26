@@ -68,7 +68,7 @@ public final class Torquing extends tg {
           }
           if (wp.field_w > 0) {
             if (ki.field_D == null) {
-              dg.field_i = je.createFullscreenCanvas(640, 480, nk.field_u, 0, 0, -62);
+              dg.field_i = je.createFullscreenCanvas(640, 480, ArchiveRequest.field_u, 0, 0, -62);
             } else {
               dg.field_i = ki.field_D.b((byte) -73);
               vp.b(2, -111);
@@ -145,7 +145,7 @@ public final class Torquing extends tg {
           nc.clearStaticReferences(param0 ^ 56);
           hj.clearStaticReferences((byte) 114);
           Js5Transport.clearStaticReferences((byte) -77);
-          co.a(param0 ^ 6);
+          DiskCacheWorker.a(param0 ^ 6);
           bo.clearStaticReferences(21384);
           o.clearStaticReferences(-1);
           BufferedSocket.clearStaticReferences(param0 - 4);
@@ -220,13 +220,13 @@ public final class Torquing extends tg {
           am.clearStaticReferences((byte) -123);
           IsaacCipher.clearStaticReferences((byte) 126);
           SocketJs5Transport.d(param0 - 1);
-          ac.clearStaticReferences(param0 ^ 4);
-          pb.clearStaticReferences(false);
-          lb.clearStaticReferences(0);
+          NetworkArchiveRequest.clearStaticReferences(param0 ^ 4);
+          SectorCacheStore.clearStaticReferences(false);
+          DiskArchiveRequest.clearStaticReferences(0);
           CachedArchiveSource.clearStaticReferences(-96);
           RandomAccessCacheFile.clearStaticReferences(param0 - 82);
           pd.a(false);
-          nk.releaseDeclaredStaticReferences(param0 + 252);
+          ArchiveRequest.releaseDeclaredStaticReferences(param0 + 252);
           ra.resetStaticState(376);
           i.clearDeclaredStaticReferences(50);
           ip.clearStaticReferences(108);
@@ -459,8 +459,8 @@ public final class Torquing extends tg {
         try {
           this.a(11, 11, false, param0 + 477, 9, 15, 10, 0);
           AudioOutput.configureAudio(22050, true, 10);
-          qd.field_b = AudioOutput.createOutput(nk.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
-          ResourceArchive.field_c = AudioOutput.createOutput(nk.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
+          qd.field_b = AudioOutput.createOutput(ArchiveRequest.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
+          ResourceArchive.field_c = AudioOutput.createOutput(ArchiveRequest.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
           var2 = new PcmStreamMixer();
           ResourceArchive.field_c.setRootStream(var2);
           var3 = new PcmStreamMixer();
@@ -675,7 +675,7 @@ public final class Torquing extends tg {
                                   IsaacPacketBuffer.a(28.0f, 101, c.a(17, pa.field_a, "", pd.field_a, he.field_b));
                                   return false;
                                 }
-                                IsaacPacketBuffer.a(27.0f, -72, c.a(17, tf.field_a, "", ac.field_A, th.field_C));
+                                IsaacPacketBuffer.a(27.0f, -72, c.a(17, tf.field_a, "", NetworkArchiveRequest.field_A, th.field_C));
                                 return false;
                               }
                               IsaacPacketBuffer.a(26.0f, param1 ^ 59, c.a(17, fn.field_a, "", WidgetContainer.field_A, vd.field_e));
@@ -848,8 +848,8 @@ public final class Torquing extends tg {
             dd.field_i.drawScaledAveraged(0, 0, var3_int, var3_int);
             dd.field_i = null;
             mk.field_b.a(param1 + 4);
-            s.field_t = pb.a("frame", -1, "", rg.field_v);
-            lb.a(16777215, pb.a("frame2col", -1, "", rg.field_v), pb.a("frame2alpha", -1, "", rg.field_v), param1 ^ -98);
+            s.field_t = SectorCacheStore.a("frame", -1, "", rg.field_v);
+            DiskArchiveRequest.a(16777215, SectorCacheStore.a("frame2col", -1, "", rg.field_v), SectorCacheStore.a("frame2alpha", -1, "", rg.field_v), param1 ^ -98);
             var35 = ip.a(rg.field_v, -123, "", "intro_components");
             var42 = ip.a(rg.field_v, -109, "", "intro_components_shadows");
             var43 = var35[1];
@@ -900,8 +900,8 @@ public final class Torquing extends tg {
             pm.field_m = ip.a(rg.field_v, -114, "", "world_title");
             wh.field_t = ip.a(rg.field_v, param1 ^ 23, "", "world_title_shadows");
             wj.field_k = DelegatingCanvas.a("getready", 31094, rg.field_v, "");
-            sg.field_e = pb.a("sprite_textures", param1 ^ 101, "", rg.field_v);
-            sg.field_a = pb.a("auras", -1, "", rg.field_v);
+            sg.field_e = SectorCacheStore.a("sprite_textures", param1 ^ 101, "", rg.field_v);
+            sg.field_a = SectorCacheStore.a("auras", -1, "", rg.field_v);
             var40 = sg.field_a;
             for (var11_int = 0; var40.length > var11_int; var11_int++) {
               var41 = var40[var11_int];
@@ -918,7 +918,7 @@ public final class Torquing extends tg {
             bd.field_w = mn.a(rg.field_v, "", "dashboard", 106);
             VolumeScaledPcmStream.field_n = mn.a(rg.field_v, "", "shieldIcon", 105);
             ia.field_f = mn.a(rg.field_v, "", "gyroIcon", 104);
-            hq.field_h = pb.a("countdown", -1, "", rg.field_v);
+            hq.field_h = SectorCacheStore.a("countdown", -1, "", rg.field_v);
             hi.field_h = new sm[8];
             UiWidget.field_r = new sm[8];
             for (var10Lifetime2 = 0; 8 > var10Lifetime2; var10Lifetime2++) {
@@ -927,7 +927,7 @@ public final class Torquing extends tg {
                 hi.field_h[var10Lifetime2] = DelegatingCanvas.a("mg" + var10Lifetime2 + "b", 31094, rg.field_v, "");
               }
             }
-            RandomAccessCacheFile.field_c = pb.a("skins", param1 + 101, "", rg.field_v);
+            RandomAccessCacheFile.field_c = SectorCacheStore.a("skins", param1 + 101, "", rg.field_v);
             bl.field_d = 7;
             qo.field_t = 2;
             for (var10Lifetime3 = 0; var10Lifetime3 < 8; var10Lifetime3++) {
@@ -953,7 +953,7 @@ public final class Torquing extends tg {
             nn.field_a[7] = new af[]{(af) ((Object) new ia(35, 144, 573, 223)), (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], 115)};
             nn.field_a[10] = new af[]{(af) ((Object) qc.field_cb), (af) ((Object) new dg(var42[0], 0, 0, 76)), bi.a(var35[0], param1 + 41), (af) ((Object) new dg(mh.field_d[1], 0, 0, 76)), bi.a(GameKeyHandler.field_a[1], 108)};
             nn.field_a[11] = new af[]{(af) ((Object) new ia(11, 11, 618, 122)), (af) ((Object) new ia(11, 139, 209, 330)), (af) ((Object) new ia(226, 139, 403, 242))};
-            dj.field_a = pb.a("menu_items_recol", -1, "", rg.field_v);
+            dj.field_a = SectorCacheStore.a("menu_items_recol", -1, "", rg.field_v);
             bj.field_L = ip.a(rg.field_v, param1 ^ 31, "", "death_text");
             qd.field_c = new sm[3];
             qd.field_c[1] = DelegatingCanvas.a("death_time", 31094, rg.field_v, "");
@@ -962,7 +962,7 @@ public final class Torquing extends tg {
             DelayedPcmStream.field_p = mn.a(rg.field_v, "", "scrolled_instructions_keys", param1 + 186);
             AccountRequestState.field_a = ip.a(rg.field_v, -116, "", "mb_screenshots");
             be.a(new op(vp.field_D, n.field_q, rg.field_v, 6, false));
-            tj.field_n = pb.a("achievements_lrg", param1 + 101, "", rg.field_v);
+            tj.field_n = SectorCacheStore.a("achievements_lrg", param1 + 101, "", rg.field_v);
             var46 = mn.a(rg.field_v, "", "glass", 89);
             var46.a();
             var68 = var46.field_y;
@@ -1044,7 +1044,7 @@ public final class Torquing extends tg {
             return false;
           }
           if (th.field_C != null) {
-            IsaacPacketBuffer.a(39.0f, -87, pb.field_c);
+            IsaacPacketBuffer.a(39.0f, -87, SectorCacheStore.field_c);
             this.b((byte) 73);
             ResourceArchive.field_k[0] = new wl(ih.a(i.c((int) param1, -7922), "", id.field_a, th.field_C, "music/Torquing_Titlescreen"));
             ResourceArchive.field_k[1] = new wl(ih.a(7828, "", id.field_a, th.field_C, "music/torquing_nursery_slopes"));
@@ -1726,7 +1726,7 @@ public final class Torquing extends tg {
               SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
               qk.a(14, 14, s.field_t, (byte) -4);
             }
-            if (pb.field_e != -1) {
+            if (SectorCacheStore.field_e != -1) {
               var3 = oo.field_b << 3;
               if (var3 > 0) {
                 SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3);
@@ -1838,12 +1838,12 @@ public final class Torquing extends tg {
               if (null == kg.field_c) {
                 if (kb.field_f == null) {
                   if (on.b(160)) {
-                    if (pb.field_e == -1) {
+                    if (SectorCacheStore.field_e == -1) {
                       var3 = ua.a(false);
                       if (var3 != 3) {
                         if (var3 != 2) {
                           if (var3 == 4) {
-                            pb.field_e = 4;
+                            SectorCacheStore.field_e = 4;
                             oo.field_b = 0;
                           }
                         } else {
@@ -1923,7 +1923,7 @@ public final class Torquing extends tg {
             field_v = (VolumeScaledPcmStream) null;
           }
           if (var2_int != 0) {
-            if (pb.field_e == -1) {
+            if (SectorCacheStore.field_e == -1) {
               sg.field_o = sg.field_o + 1;
               if (-1 == bn.field_h) {
                 if (fn.field_c == -1) {
@@ -1940,7 +1940,7 @@ public final class Torquing extends tg {
                 this.f((byte) -108);
               }
             } else {
-              if (0 == (1073741824 & pb.field_e)) {
+              if (0 == (1073741824 & SectorCacheStore.field_e)) {
                 fieldTemp$2 = oo.field_b + 1;
                 oo.field_b = oo.field_b + 1;
                 if (32 == fieldTemp$2) {
@@ -1949,17 +1949,17 @@ public final class Torquing extends tg {
                   } else {
                     eb.a(-124);
                   }
-                  pb.field_e = pb.field_e | 1073741824;
+                  SectorCacheStore.field_e = SectorCacheStore.field_e | 1073741824;
                 }
               } else {
                 fieldTemp$3 = oo.field_b;
                 oo.field_b = oo.field_b - 1;
                 if (32 != fieldTemp$3) {
                   if (oo.field_b == 0) {
-                    pb.field_e = -1;
+                    SectorCacheStore.field_e = -1;
                   }
                 } else {
-                  var3Lifetime1 = pb.field_e ^ 1073741824;
+                  var3Lifetime1 = SectorCacheStore.field_e ^ 1073741824;
                   if (!je.a((byte) 67)) {
                     if (var3Lifetime1 != 0) {
                       if (1 == var3Lifetime1) {
@@ -1997,7 +1997,7 @@ public final class Torquing extends tg {
               ie.field_b.field_B.removeLast((byte) -86);
             }
           }
-          while (kg.a(nk.field_s, (byte) 21)) {
+          while (kg.a(ArchiveRequest.field_s, (byte) 21)) {
             this.e((byte) -117);
           }
           jd.a((byte) -115, 0);

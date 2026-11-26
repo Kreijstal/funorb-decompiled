@@ -116,11 +116,11 @@ final class wc {
                 }
               }
               if (decompiledFrameRemainder0) {
-                lj.field_z = pj.field_w;
+                lj.field_z = NetworkArchiveRequest.field_w;
                 tg.field_a = -1;
               }
             }
-            if (lj.field_z == pj.field_w &&
+            if (lj.field_z == NetworkArchiveRequest.field_w &&
               GameKeyHandler.a(0)) {
               ac.field_j = WordLanguage.field_l.readLong((byte) 117);
               va.field_j = WordLanguage.field_l.readUnsignedByte((byte) 58);
@@ -393,9 +393,9 @@ final class wc {
             for (var7_intLifetime1 = 0; var7_intLifetime1 < var4; var7_intLifetime1++) {
               th.a(101, var16);
               if (0 != var7_intLifetime1) {
-                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_intLifetime1, false);
+                vh.a(di.field_e, ug.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
               } else {
-                vh.a(di.field_e, ug.field_b, cl.field_x, ia.field_j, var7_intLifetime1, false);
+                vh.a(di.field_e, ug.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
               }
             }
             jj.a((byte) -93, var6);

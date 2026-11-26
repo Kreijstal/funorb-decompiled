@@ -27,11 +27,11 @@ final class IterableNodeHashTable implements Iterable {
     final static void c(int param0) {
         pc.field_Z = false;
         if (param0 > 110) {
-          cd.field_t.readUnsignedByte((byte) 90);
+          NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
           return;
         }
         IterableNodeHashTable.a(28, 69);
-        cd.field_t.readUnsignedByte((byte) 90);
+        NetworkArchiveRequest.field_t.readUnsignedByte((byte) 90);
     }
 
     public static void clearStaticReferences(int param0) {

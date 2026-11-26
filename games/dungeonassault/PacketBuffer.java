@@ -1311,11 +1311,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_raiding2,0", param1);
                 if (null != var2) {
-                  co.field_J[0] = dj.a(var2, param1);
+                  DiskArchiveRequest.field_J[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_raiding2,1", false);
                 if (var2 != null) {
-                  co.field_J[1] = dj.a(var2, false);
+                  DiskArchiveRequest.field_J[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_raiders1,1", false);
                 if (var2 != null) {
@@ -1543,11 +1543,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_dragonsofrenown1,0", false);
                 if (var2 != null) {
-                  vf.field_A[0] = dj.a(var2, false);
+                  ArchiveRequest.field_A[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_dragonsofrenown1,1", param1);
                 if (var2 != null) {
-                  vf.field_A[1] = dj.a(var2, false);
+                  ArchiveRequest.field_A[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_dragonsofrenown2,1", false);
                 if (var2 != null) {
@@ -1821,7 +1821,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("banshee", false);
                 if (var2 != null) {
-                  cc.field_a = dj.a(var2, param1);
+                  DiskCacheWorker.field_a = dj.a(var2, param1);
                 }
                 var2 = gm.a("raging_beast", param1);
                 if (null != var2) {
@@ -3411,7 +3411,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_status_postcombat", param1);
                 if (null != var2) {
-                  co.field_E = dj.a(var2, param1);
+                  DiskArchiveRequest.field_E = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_status_pregame", false);
                 if (null != var2) {
@@ -3885,7 +3885,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_hint_sacrifice_goblin", param1);
                 if (var2 != null) {
-                  em.field_F = dj.a(var2, false);
+                  NetworkArchiveRequest.field_F = dj.a(var2, false);
                 }
                 var2 = gm.a("text_hint_scout_room", false);
                 if (var2 != null) {

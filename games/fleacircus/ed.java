@@ -192,7 +192,7 @@ final class ed {
             var3Lifetime2 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
             var16 = new RgbSprite(412, 43);
-            var5_ref_String = db.a(fk.field_B, new String[]{DualLinkNode.field_k}, true);
+            var5_ref_String = db.a(NetworkArchiveRequest.field_B, new String[]{DualLinkNode.field_k}, true);
             DualLinkNode.field_k = null;
             var16.f();
             qj.field_H.a(var5_ref_String, 3, 3, var16.field_w - 6, var16.field_t - 6, 16777215, -1, 0, 1, qj.field_H.field_H + qj.field_H.field_K);
@@ -202,24 +202,24 @@ final class ed {
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime2, var3Lifetime2);
             SoftwareRasterizer.restoreClip(ab.field_c);
           }
-          if (dl.field_s != null &&
+          if (ArchiveRequest.field_s != null &&
             qj.field_H != null) {
             var30 = SoftwareRasterizer.field_a;
             var2Lifetime3 = SoftwareRasterizer.field_d;
             var3Lifetime3 = SoftwareRasterizer.field_k;
             SoftwareRasterizer.saveClip(ab.field_c);
             var4 = qj.field_H.c(ContextualRuntimeException.field_d, 640) + 6;
-            var5Lifetime1 = var4 + dl.field_s.field_x + 20;
+            var5Lifetime1 = var4 + ArchiveRequest.field_s.field_x + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
-            var7Lifetime2 = 20 + (dl.field_s.field_x + var6Lifetime2);
+            var7Lifetime2 = 20 + (ArchiveRequest.field_s.field_x + var6Lifetime2);
             GameAppletShell.field_b.f();
             qj.field_H.c(ContextualRuntimeException.field_d, -GameAppletShell.field_b.field_q + var7Lifetime2, qj.field_H.field_K + qj.field_H.field_H + (-GameAppletShell.field_b.field_v + 155), 16777215, -1);
             rg.a(-GameAppletShell.field_b.field_q + (var7Lifetime2 - 4), GameAppletShell.field_b, var4, 50, 1, -90, 3, 155 - GameAppletShell.field_b.field_v);
-            var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + dl.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
-            dl.field_s.d(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
+            var8Lifetime1 = -((-qj.field_H.field_K + (-qj.field_H.field_H - 3) + ArchiveRequest.field_s.field_r) / 2) + 155 - GameAppletShell.field_b.field_v;
+            ArchiveRequest.field_s.d(var6Lifetime2 - GameAppletShell.field_b.field_q, var8Lifetime1);
             SoftwareRasterizer.setRasterBuffer(var30, var2Lifetime3, var3Lifetime3);
             SoftwareRasterizer.restoreClip(ab.field_c);
-            dl.field_s = null;
+            ArchiveRequest.field_s = null;
           }
           SoftwareRasterizer.saveClip(ab.field_c);
           SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, fi.field_j, pb.field_i);
@@ -346,7 +346,7 @@ final class ed {
         if (param0 != 0) {
           return false;
         }
-        stackIn_8_0 = (this == dl.field_w) || (this == ll.field_r) || (this == fh.field_b);
+        stackIn_8_0 = (this == ArchiveRequest.field_w) || (this == ll.field_r) || (this == fh.field_b);
         return stackIn_8_0;
     }
 

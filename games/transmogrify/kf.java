@@ -118,7 +118,7 @@ final class kf extends td {
           cc.field_e = new boolean[ih.field_b];
           re.field_K = new byte[ih.field_b][];
           var17.position = param0.length - (7 + ih.field_b * 8);
-          pj.field_y = var17.readUnsignedShort((byte) -122);
+          NetworkArchiveRequest.field_y = var17.readUnsignedShort((byte) -122);
           ll.field_U = var17.readUnsignedShort((byte) -100);
           var3 = (var17.readUnsignedByte((byte) 102) & 255) + 1;
           for (var4 = 0; ih.field_b > var4; var4++) {

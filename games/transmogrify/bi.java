@@ -160,7 +160,7 @@ abstract class bi extends mk {
         }
         vf.field_a.c(-90 + (this.field_l + param2), 10 + param0);
         IndexedSpriteState.a(35 + param0, true, 5 + param2, ua.field_f, -10 + this.field_l);
-        IndexedSpriteState.a(-22 + (this.field_h + param0), true, param2, rh.field_l, this.field_l);
+        IndexedSpriteState.a(-22 + (this.field_h + param0), true, param2, ArchiveRequest.field_l, this.field_l);
         if (param1 > -79) {
           this.a(64, -46, 111, -124);
         }

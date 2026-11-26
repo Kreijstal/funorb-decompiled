@@ -73,9 +73,9 @@ final class bm {
         var4 = stackIn_11_0;
         ge.field_c = var8.readString(-1);
         if (var4 != 0) {
-          wh.field_a = var8.readString(-1);
+          DiskCacheWorker.field_a = var8.readString(-1);
         } else {
-          wh.field_a = ge.field_c;
+          DiskCacheWorker.field_a = ge.field_c;
         }
         if (im.field_c == 1) {
           var8.readUnsignedShort(-25578);
@@ -95,7 +95,7 @@ final class bm {
         try {
           var9 = fl.field_c.a(true, var5);
           ea.field_n = var9.a(false);
-          if (!wh.field_a.equals(kj.field_f)) {
+          if (!DiskCacheWorker.field_a.equals(kj.field_f)) {
             stackIn_24_0 = var9.field_r;
           } else {
             stackIn_24_0 = null;

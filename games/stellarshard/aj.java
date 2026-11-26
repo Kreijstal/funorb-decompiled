@@ -15,7 +15,7 @@ final class aj {
     }
 
     final static void a(int param0, int param1) {
-        ph.field_B = 1000000000L / (long)param0;
+        NetworkArchiveRequest.field_B = 1000000000L / (long)param0;
         if (param1 == 11236) {
           return;
         }

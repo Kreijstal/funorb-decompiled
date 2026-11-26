@@ -11,7 +11,7 @@ final class re {
           return;
         }
         MouseWheelInput.field_d = true;
-        fk.field_D = true;
+        NetworkArchiveRequest.field_D = true;
         nb.field_a.i(-106);
         SecondaryNodeDeque.a(dh.field_c, false, false);
     }

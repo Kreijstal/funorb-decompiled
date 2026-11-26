@@ -43,14 +43,14 @@ final class wl {
             be.field_b = true;
           }
           if (ub.field_i) {
-            SoftwareRasterizer.saveClip(sh.field_w);
+            SoftwareRasterizer.saveClip(ArchiveRequest.field_w);
           }
           ba.field_i.a(true, 18, true, (Sprite) null, 3, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
           NodeHashTableIterator.field_j = null;
           ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
           ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
           if (ub.field_i) {
-            SoftwareRasterizer.restoreClip(sh.field_w);
+            SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
           }
           if (param0 != 48) {
             this.c((byte) -13);
@@ -239,7 +239,7 @@ final class wl {
           ac.field_d = ac.field_d ^ 1 << tf.field_o;
           pi.field_a = pi.field_a - ub.field_j;
           ae.field_z = ae.field_z ^ 1 << tf.field_o;
-          al.field_z = al.field_z - 1;
+          DiskArchiveRequest.field_z = DiskArchiveRequest.field_z - 1;
           if (this.field_f &&
             nj.field_c[82] &&
             b.field_J == 11) {
@@ -256,7 +256,7 @@ final class wl {
           }
           if (this.field_f &&
             1 == b.field_J) {
-            al.field_z = al.field_z + 256;
+            DiskArchiveRequest.field_z = DiskArchiveRequest.field_z + 256;
             if (aj.field_h) {
               aj.field_h = false;
             } else {
@@ -310,7 +310,7 @@ final class wl {
           nj.field_c[21] &&
           null != BufferedSocket.field_p) {
           bh.field_p = true;
-          al.field_z = al.field_z - 256;
+          DiskArchiveRequest.field_z = DiskArchiveRequest.field_z - 256;
           if (MusicPatchPcmStream.field_s) {
             BufferedSocket.field_p.field_d = BufferedSocket.field_p.field_d + 1;
             MusicPatchPcmStream.field_s = false;
@@ -350,7 +350,7 @@ final class wl {
           rc.field_u &&
           nj.field_a) {
           nj.field_a = false;
-          al.field_z = al.field_z - 256;
+          DiskArchiveRequest.field_z = DiskArchiveRequest.field_z - 256;
           ac.field_d = ac.field_d + 128;
           hk.field_b = true;
           bh.field_p = true;
@@ -504,7 +504,7 @@ final class wl {
         Object var20 = null;
         int var19 = TorChallenge.field_F ? 1 : 0;
         int var4 = 112 % ((param0 + 31) / 32);
-        ul var20_ref = (ul) (db.field_D.first((byte) 106));
+        ul var20_ref = (ul) (NetworkArchiveRequest.field_D.first((byte) 106));
         ul var2 = var20_ref;
         int var13 = tf.field_j[0].storedHeight >> 2;
         Sprite[] var14 = ng.field_L;
@@ -547,12 +547,12 @@ final class wl {
     final void a(byte param0) {
         int fieldTemp$0 = 0;
         int var2 = -62 % ((-15 - param0) / 35);
-        if (null != db.field_D.first((byte) 124)) {
+        if (null != NetworkArchiveRequest.field_D.first((byte) 124)) {
           fieldTemp$0 = fk.field_t + 1;
           fk.field_t = fk.field_t + 1;
           if (fieldTemp$0 == 335) {
             fk.field_t = 0;
-            db.field_D.pollFirst((byte) 93);
+            NetworkArchiveRequest.field_D.pollFirst((byte) 93);
           }
           return;
         }
@@ -703,8 +703,8 @@ final class wl {
           }
         }
         ProxyAuthenticationRequiredException.a((byte) 71);
-        while (null != db.field_D.first((byte) -69)) {
-          db.field_D.pollFirst((byte) 101);
+        while (null != NetworkArchiveRequest.field_D.first((byte) -69)) {
+          NetworkArchiveRequest.field_D.pollFirst((byte) 101);
         }
         qh.field_J = 0;
         fk.field_t = 0;

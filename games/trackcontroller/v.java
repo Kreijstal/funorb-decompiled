@@ -110,7 +110,7 @@ abstract class v implements eh {
           return c.field_a;
         }
         if (!(qg.correctedCurrentTimeMillis(false) >= this.field_b + 350L)) {
-          return lh.field_x;
+          return DiskArchiveRequest.field_x;
         }
         int var2 = 35 / ((param0 - 55) / 49);
         return this.f(38);

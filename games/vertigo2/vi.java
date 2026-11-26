@@ -47,7 +47,7 @@ final class vi extends IntrusiveNode {
           rf.field_l = param2;
           od.field_Kb = param4;
           kb.field_e = (tk) ((Object) new eg());
-          ap.field_a = new t(param6);
+          ap.field_a = new DiskCacheWorker(param6);
           pd.field_c = new kr(kb.field_e, ap.field_a);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "vi.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');

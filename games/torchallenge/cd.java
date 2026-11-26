@@ -163,7 +163,7 @@ final class cd {
         this.field_t.a(this.field_A, -77, this.field_u);
         if (param0 < -74) {
           sa.field_c = false;
-          var2 = ImageProducerRasterBuffer.a(0, sh.field_u, 124, this.field_u, 0, this.field_A);
+          var2 = ImageProducerRasterBuffer.a(0, ArchiveRequest.field_u, 124, this.field_u, 0, this.field_A);
           if (var2 == null) {
             this.d(-1);
           }

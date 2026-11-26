@@ -390,7 +390,7 @@ final class sb extends aa {
             0 != param1.length()) {
             var2_int = param1.indexOf('@');
             if (var2_int == -1) {
-              stackIn_7_0 = si.field_s;
+              stackIn_7_0 = DiskArchiveRequest.field_s;
               return stackIn_7_0;
             }
             var3 = param1.substring(0, var2_int);

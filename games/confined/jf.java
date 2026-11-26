@@ -16,7 +16,7 @@ abstract class jf {
     byte field_d;
     PacketBuffer field_m;
     volatile int field_e;
-    tn field_f;
+    NetworkArchiveRequest field_f;
 
     final boolean c(int param0) {
         int var2 = -97 % ((31 - param0) / 58);
@@ -42,13 +42,13 @@ abstract class jf {
         field_c = null;
     }
 
-    final tn a(int param0, boolean param1, int param2, int param3, byte param4) {
-        tn stackIn_2_0 = null;
+    final NetworkArchiveRequest a(int param0, boolean param1, int param2, int param3, byte param4) {
+        NetworkArchiveRequest stackIn_2_0 = null;
         boolean stackIn_3_1 = false;
         long var6;
-        tn var8;
+        NetworkArchiveRequest var8;
         var6 = (long)param3 + ((long)param0 << 32);
-        var8 = new tn();
+        var8 = new NetworkArchiveRequest();
         stackIn_2_0 = var8;
         stackIn_3_1 = (!param1) ? false : true;
         stackIn_2_0.field_t = stackIn_3_1;

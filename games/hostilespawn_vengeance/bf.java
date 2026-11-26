@@ -194,7 +194,7 @@ final class bf {
             if (AccountServiceResult.field_k.field_l != null) {
               mk.field_K = new bn(AccountServiceResult.field_k.field_l, 5200, 0);
               AccountServiceResult.field_k.field_l = null;
-              var6 = new um(255, mk.field_K, new bn(AccountServiceResult.field_k.field_f, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, mk.field_K, new bn(AccountServiceResult.field_k.field_f, 12000, 0), 2097152);
             }
             if (null != mk.field_K) {
               if (NodeHashTableIterator.field_a == null) {
@@ -204,9 +204,9 @@ final class bf {
                 NodeHashTableIterator.field_a[param2] = new bn(AccountServiceResult.field_k.field_v[param2], 12000, 0);
                 AccountServiceResult.field_k.field_v[param2] = null;
               }
-              var7 = new um(param2, mk.field_K, NodeHashTableIterator.field_a[param2], 2097152);
+              var7 = new SectorCacheStore(param2, mk.field_K, NodeHashTableIterator.field_a[param2], 2097152);
             }
-            var9 = sj.field_a.a(param0, param2, (um) (var6), (um) (var7), 0);
+            var9 = sj.field_a.a(param0, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), 0);
             if (param4) {
               var9.a((byte) -50);
             }

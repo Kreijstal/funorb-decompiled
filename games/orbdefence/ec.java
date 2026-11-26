@@ -166,7 +166,7 @@ final class ec extends ta implements ai {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            cd.field_t = new se(param1);
+            NetworkArchiveRequest.field_t = new se(param1);
             uk.field_b = new se(param7);
             gi.field_a = param12;
             j.field_e = param3;

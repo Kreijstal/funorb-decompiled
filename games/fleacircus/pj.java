@@ -77,7 +77,7 @@ final class pj extends cb {
             cm.a(var5, (byte) 118);
             var6 = new String[2][var5];
             var19 = new int[2][4 * var5];
-            var8 = qh.field_D;
+            var8 = DiskArchiveRequest.field_D;
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
@@ -196,7 +196,7 @@ final class pj extends cb {
               BufferedSocket.field_k.d(param0 - 14895);
             }
             if (null != vg.field_r) {
-              vg.field_r.a(true);
+              vg.field_r.shutdown(true);
             }
             if (rd.field_c != null) {
               try {

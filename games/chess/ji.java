@@ -155,7 +155,7 @@ final class ji extends kn {
           try {
             var6_int = -87 % ((20 - param4) / 61);
             if (null == ArchiveIndex.field_a &&
-              !gd.a((byte) 68, param1)) {
+              !SectorCacheStore.a((byte) 68, param1)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
             }
@@ -242,7 +242,7 @@ final class ji extends kn {
               }
               stackIn_55_0 = ((16 & var8) != 0);
               ej.field_f = stackIn_55_0;
-              if (on.field_a) {
+              if (DiskCacheWorker.field_a) {
                 tk.field_h.readUnsignedByte(-87);
                 tk.field_h.readUnsignedByte(-86);
                 tk.field_h.readInt((byte) -106);
@@ -254,7 +254,7 @@ final class ji extends kn {
               }
               ci.field_J = tk.field_h.readString(0);
               var12 = (CharSequence) ((Object) ci.field_J);
-              cc.field_A = ad.a(var12, -2);
+              NetworkArchiveRequest.field_A = ad.a(var12, -2);
               gm.field_d = tk.field_h.readUnsignedByte(-114);
               tb.field_f = NodeHashTableIterator.field_e;
               if (eh.field_K.b((byte) 31) == ec.field_i) {

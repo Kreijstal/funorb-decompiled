@@ -170,7 +170,7 @@ final class ui {
           if (param0 > -100) {
             ui.a(-32, -26, -60, -33, 84, -75, 106, 100, 13);
           }
-          stackIn_10_0 = (null != t.field_m) && (t.field_m.a(false));
+          stackIn_10_0 = (null != DiskCacheWorker.field_m) && (DiskCacheWorker.field_m.a(false));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

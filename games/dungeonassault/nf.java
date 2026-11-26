@@ -258,7 +258,7 @@ final class nf extends DualLinkNode {
               } else {
                 param2 = d.field_b;
               }
-              wo.field_e.a(-12349, co.field_C);
+              wo.field_e.a(-12349, DiskArchiveRequest.field_C);
             }
             var3_int = 1;
             if (10 == param0) {

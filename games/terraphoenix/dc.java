@@ -118,7 +118,7 @@ final class dc {
         this.field_f = ProxyAuthenticationRequiredException.field_c;
         this.field_h = ea.field_n;
         this.field_k = pl.field_Q;
-        this.field_d = wh.field_a;
+        this.field_d = DiskCacheWorker.field_a;
         this.field_j = ji.field_k;
         if (!param0) {
           this.field_i = null;

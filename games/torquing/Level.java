@@ -1061,7 +1061,7 @@ final class Level {
             if (hq.field_a.field_t != null) {
               jd.field_F = new o(hq.field_a.field_t, 5200, 0);
               hq.field_a.field_t = null;
-              var6 = new pb(255, jd.field_F, new o(hq.field_a.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, jd.field_F, new o(hq.field_a.field_n, 12000, 0), 2097152);
             }
             var7 = null;
             if (jd.field_F != null) {
@@ -1072,9 +1072,9 @@ final class Level {
                 uj.field_b[param2] = new o(hq.field_a.field_w[param2], 12000, 0);
                 hq.field_a.field_w[param2] = null;
               }
-              var7 = new pb(param2, jd.field_F, uj.field_b[param2], 2097152);
+              var7 = new SectorCacheStore(param2, jd.field_F, uj.field_b[param2], 2097152);
             }
-            var8 = BufferedSocket.field_n.a((pb) (var7), (byte) 101, param2, (pb) (var6), param0);
+            var8 = BufferedSocket.field_n.a((SectorCacheStore) (var7), (byte) 101, param2, (SectorCacheStore) (var6), param0);
             if (param4) {
               var8.d(-118);
             }

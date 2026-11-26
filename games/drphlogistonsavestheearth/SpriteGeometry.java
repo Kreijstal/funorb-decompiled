@@ -113,11 +113,11 @@ abstract class SpriteGeometry extends DualLinkNode {
               if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
               }
-              if (bi.field_K.length <= sd.field_a.levelNumber) {
+              if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
               }
               BufferedSocket.field_a = -150;
               sd.field_a.field_J = 0;
@@ -143,11 +143,11 @@ abstract class SpriteGeometry extends DualLinkNode {
               if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
               }
-              if (bi.field_K.length <= sd.field_a.levelNumber) {
+              if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
               }
               decompiledFrameRemainder0 = false;
             }
@@ -157,11 +157,11 @@ abstract class SpriteGeometry extends DualLinkNode {
                 if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                   ib.field_t = 0;
                 }
-                if (bi.field_K.length <= sd.field_a.levelNumber) {
+                if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                   sc.a(param0 ^ 8371, false, ml.field_l);
                   sd.field_a.d((byte) 98);
                 } else {
-                  sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                  sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -170,15 +170,15 @@ abstract class SpriteGeometry extends DualLinkNode {
           if (decompiledFrameRemainder0) {
             if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
               ib.field_t = 0;
-              if (bi.field_K.length <= sd.field_a.levelNumber) {
+              if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
               }
             } else {
-              if (bi.field_K.length > sd.field_a.levelNumber) {
-                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+              if (DiskArchiveRequest.field_K.length > sd.field_a.levelNumber) {
+                sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
               } else {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
@@ -223,11 +223,11 @@ abstract class SpriteGeometry extends DualLinkNode {
                   if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                     ib.field_t = 0;
                   }
-                  if (bi.field_K.length <= sd.field_a.levelNumber) {
+                  if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                     sc.a(param0 ^ 8371, false, ml.field_l);
                     sd.field_a.d((byte) 98);
                   } else {
-                    sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                    sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
                   }
                   BufferedSocket.field_a = -150;
                   sd.field_a.field_J = 0;
@@ -239,11 +239,11 @@ abstract class SpriteGeometry extends DualLinkNode {
                   if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                     ib.field_t = 0;
                   }
-                  if (bi.field_K.length <= sd.field_a.levelNumber) {
+                  if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                     sc.a(param0 ^ 8371, false, ml.field_l);
                     sd.field_a.d((byte) 98);
                   } else {
-                    sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                    sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
                   }
                   BufferedSocket.field_a = -150;
                   sd.field_a.field_J = 0;
@@ -253,19 +253,19 @@ abstract class SpriteGeometry extends DualLinkNode {
               }
               if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
-                if (bi.field_K.length <= sd.field_a.levelNumber) {
+                if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                   sc.a(param0 ^ 8371, false, ml.field_l);
                   sd.field_a.d((byte) 98);
                 } else {
-                  sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                  sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
                 }
                 BufferedSocket.field_a = -150;
                 sd.field_a.field_J = 0;
                 sd.field_a.s(86);
                 return;
               }
-              if (bi.field_K.length > sd.field_a.levelNumber) {
-                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+              if (DiskArchiveRequest.field_K.length > sd.field_a.levelNumber) {
+                sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
                 BufferedSocket.field_a = -150;
                 sd.field_a.field_J = 0;
                 sd.field_a.s(86);
@@ -298,11 +298,11 @@ abstract class SpriteGeometry extends DualLinkNode {
               if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
                 ib.field_t = 0;
               }
-              if (bi.field_K.length <= sd.field_a.levelNumber) {
+              if (DiskArchiveRequest.field_K.length <= sd.field_a.levelNumber) {
                 sc.a(param0 ^ 8371, false, ml.field_l);
                 sd.field_a.d((byte) 98);
               } else {
-                sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+                sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
               }
               BufferedSocket.field_a = -150;
               sd.field_a.field_J = 0;
@@ -333,8 +333,8 @@ abstract class SpriteGeometry extends DualLinkNode {
           if (!nc.field_J[sd.field_a.levelNumber][ib.field_t]) {
             ib.field_t = 0;
           }
-          if (bi.field_K.length > sd.field_a.levelNumber) {
-            sd.field_a.field_G = bi.field_K[sd.field_a.levelNumber];
+          if (DiskArchiveRequest.field_K.length > sd.field_a.levelNumber) {
+            sd.field_a.field_G = DiskArchiveRequest.field_K[sd.field_a.levelNumber];
           } else {
             sc.a(param0 ^ 8371, false, ml.field_l);
             sd.field_a.d((byte) 98);

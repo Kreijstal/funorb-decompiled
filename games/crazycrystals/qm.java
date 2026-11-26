@@ -39,7 +39,7 @@ class qm extends IntrusiveNode {
         }
         var5 = SpriteGeometry.a((byte) 6);
         if (var5 != null) {
-          pi.field_j.a(var5, 3370, ni.field_b, rf.field_G);
+          pi.field_j.a(var5, 3370, DiskCacheWorker.field_b, rf.field_G);
         }
         var6 = 8 % ((param0 - 66) / 48);
     }

@@ -74,7 +74,7 @@ final class AccountRequestState {
           Throwable decompiledCaughtException = null;
           IOException var2_ref = null;
           try {
-            if (cd.field_t.position >= param1) {
+            if (NetworkArchiveRequest.field_t.position >= param1) {
               return true;
             }
             if (null == p.field_d) {
@@ -86,16 +86,16 @@ final class AccountRequestState {
               }
               var2_int = p.field_d.availableBytes((byte) 101);
               if (0 < var2_int) {
-                if (var2_int > -cd.field_t.position + param1) {
-                  var2_int = param1 - cd.field_t.position;
+                if (var2_int > -NetworkArchiveRequest.field_t.position + param1) {
+                  var2_int = param1 - NetworkArchiveRequest.field_t.position;
                 }
-                p.field_d.readFully(cd.field_t.position, var2_int, -24, cd.field_t.payload);
+                p.field_d.readFully(NetworkArchiveRequest.field_t.position, var2_int, -24, NetworkArchiveRequest.field_t.payload);
                 of.field_L = ji.correctedCurrentTimeMillis(-19);
-                cd.field_t.position = cd.field_t.position + var2_int;
-                if (cd.field_t.position < param1) {
+                NetworkArchiveRequest.field_t.position = NetworkArchiveRequest.field_t.position + var2_int;
+                if (NetworkArchiveRequest.field_t.position < param1) {
                   return false;
                 }
-                cd.field_t.position = 0;
+                NetworkArchiveRequest.field_t.position = 0;
                 return true;
               }
               if (var2_int < 0 ||
@@ -737,7 +737,7 @@ final class AccountRequestState {
           }
           var2Lifetime104 = jk.a(1, "bs5");
           if (var2Lifetime104 != null) {
-            cd.field_r = ProxyAuthenticationRequiredException.a(var2Lifetime104, -12465);
+            NetworkArchiveRequest.field_r = ProxyAuthenticationRequiredException.a(var2Lifetime104, -12465);
           }
           var2Lifetime105 = jk.a(1, "bs4");
           if (null != var2Lifetime105) {

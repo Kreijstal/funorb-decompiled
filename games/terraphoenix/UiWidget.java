@@ -293,7 +293,7 @@ class UiWidget extends IntrusiveNode {
         var5 = this.d(-113) ? 1 : 0;
         if (!param0) {
           if (var5 != 0 &&
-            ma.field_I != 0) {
+            DiskArchiveRequest.field_I != 0) {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
@@ -302,8 +302,8 @@ class UiWidget extends IntrusiveNode {
         }
         if (vj.field_P == 0) {
           regionExit1: {
-            if (ma.field_I != 0) {
-              if (this.a(false, mm.field_c, param2, param1, ma.field_I, this, lm.field_c)) {
+            if (DiskArchiveRequest.field_I != 0) {
+              if (this.a(false, mm.field_c, param2, param1, DiskArchiveRequest.field_I, this, lm.field_c)) {
                 param0 = false;
                 if (var7 == 0) {
                   break regionExit1;
@@ -324,7 +324,7 @@ class UiWidget extends IntrusiveNode {
                     }
                   }
                   if (var7 != 0 &&
-                    ma.field_I != 0) {
+                    DiskArchiveRequest.field_I != 0) {
                     this.e(-31);
                   }
                 }
@@ -354,7 +354,7 @@ class UiWidget extends IntrusiveNode {
           }
           if (var7 != 0 &&
             var5 != 0 &&
-            ma.field_I != 0) {
+            DiskArchiveRequest.field_I != 0) {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
@@ -363,8 +363,8 @@ class UiWidget extends IntrusiveNode {
         }
         if (var5 != 0) {
           this.a(this, param1, vj.field_P, ef.field_j, param2, MouseWheelInput.field_b, (byte) 37);
-          if (ma.field_I != 0) {
-            if (this.a(false, mm.field_c, param2, param1, ma.field_I, this, lm.field_c)) {
+          if (DiskArchiveRequest.field_I != 0) {
+            if (this.a(false, mm.field_c, param2, param1, DiskArchiveRequest.field_I, this, lm.field_c)) {
               param0 = false;
               if (var7 != 0) {
                 this.e(-23);
@@ -392,15 +392,15 @@ class UiWidget extends IntrusiveNode {
             SpriteState.field_w = null;
           }
           if (var7 != 0 &&
-            ma.field_I != 0) {
+            DiskArchiveRequest.field_I != 0) {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
           RandomAccessCacheFile.a((byte) 16, this.f(105));
           return param0;
         }
-        if (ma.field_I != 0 &&
-          this.a(false, mm.field_c, param2, param1, ma.field_I, this, lm.field_c)) {
+        if (DiskArchiveRequest.field_I != 0 &&
+          this.a(false, mm.field_c, param2, param1, DiskArchiveRequest.field_I, this, lm.field_c)) {
           param0 = false;
           if (var7 == 0) {
           }
@@ -425,7 +425,7 @@ class UiWidget extends IntrusiveNode {
         }
         if (var7 != 0 &&
           var5 != 0 &&
-          ma.field_I != 0) {
+          DiskArchiveRequest.field_I != 0) {
           this.e(-31);
         }
         ab.field_k = oh.field_f;

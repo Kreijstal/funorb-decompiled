@@ -68,7 +68,7 @@ final class qd extends IntrusiveNode {
             return false;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_4_0 = cc.field_A.equals(ad.a(var3, param0 - 15));
+          stackIn_4_0 = NetworkArchiveRequest.field_A.equals(ad.a(var3, param0 - 15));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

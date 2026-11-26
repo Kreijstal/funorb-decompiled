@@ -32,7 +32,7 @@ final class l extends mg {
         RuntimeException decompiledCaughtException = null;
         try {
           super.a(param0, param1, param2, param3 ^ param3, param4, param5);
-          var8 = si.field_t;
+          var8 = ArchiveRequest.field_t;
           var7 = var8;
           if (var8 != null) {
             if (!this.a(param5, param1, param4, param2, (byte) -117)) {
@@ -40,12 +40,12 @@ final class l extends mg {
             }
             if (this.field_r instanceof wk) {
               ((wk) (this.field_r)).a(16797, this, var8);
-              si.field_t = null;
+              ArchiveRequest.field_t = null;
               return;
             }
             if (var8.field_r instanceof wk) {
               ((wk) (var8.field_r)).a(16797, this, var8);
-              si.field_t = null;
+              ArchiveRequest.field_t = null;
               return;
             }
           }

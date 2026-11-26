@@ -249,7 +249,7 @@ final class bb extends WidgetContainer implements pi, ka {
           }
           var8 = hh.field_J;
           var9 = MouseWheelInput.a((byte) 120, ia.g(116));
-          if (sk.field_p == var9) {
+          if (ArchiveRequest.field_p == var9) {
             var8 = UiWidget.field_y;
           } else {
             if (field_I == var9) {

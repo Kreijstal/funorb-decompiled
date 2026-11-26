@@ -196,7 +196,7 @@ public final class Terraphoenix extends GameShell {
               var4 <= MouseWheelInput.field_b &&
               (var3 + var5_int) >= ef.field_j &&
               MouseWheelInput.field_b <= var4 + var6_int &&
-              1 == ma.field_I &&
+              1 == DiskArchiveRequest.field_I &&
               ProxyAuthenticationRequiredException.field_g < 10) {
               qd.$cfr$intArgs$a$e9dea5688aa5(48, 24);
               ProxyAuthenticationRequiredException.field_g = 20;
@@ -205,7 +205,7 @@ public final class Terraphoenix extends GameShell {
                 ea.field_o = ea.field_o - gh.g(-125);
               }
             }
-            if (rf.field_B[7].field_d) {
+            if (ArchiveRequest.field_B[7].field_d) {
               var3Lifetime4 = 127;
               var4Lifetime3 = 447;
               var5_intLifetime1 = 29;
@@ -214,7 +214,7 @@ public final class Terraphoenix extends GameShell {
                 var4Lifetime3 <= MouseWheelInput.field_b &&
                 ef.field_j <= (var5_intLifetime1 + var3Lifetime4) &&
                 (var6_intLifetime1 + var4Lifetime3) >= MouseWheelInput.field_b &&
-                1 == ma.field_I &&
+                1 == DiskArchiveRequest.field_I &&
                 ProxyAuthenticationRequiredException.field_g < 10) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(94, 25);
                 ProxyAuthenticationRequiredException.field_g = 20;
@@ -231,7 +231,7 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b >= var4Lifetime3 &&
                 (var3Lifetime4 + var5_intLifetime1Lifetime1) >= ef.field_j &&
                 MouseWheelInput.field_b <= var6_intLifetime1Lifetime1 + var4Lifetime3 &&
-                ma.field_I == 1) {
+                DiskArchiveRequest.field_I == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(26, 34);
                 ProxyAuthenticationRequiredException.field_g = 20;
                 ld.field_b = false;
@@ -258,7 +258,7 @@ public final class Terraphoenix extends GameShell {
           if (this.field_wb != null) {
             this.field_wb.field_c = MouseWheelInput.field_b;
             this.field_wb.field_g = ef.field_j;
-            this.field_wb.field_z = ma.field_I;
+            this.field_wb.field_z = DiskArchiveRequest.field_I;
           }
           if (this.field_N != null) {
             this.field_N = this.field_N.a(this, 11803);
@@ -359,7 +359,7 @@ public final class Terraphoenix extends GameShell {
                       }
                       GameShell.field_y = null;
                     }
-                    if (ma.field_I == 1 &&
+                    if (DiskArchiveRequest.field_I == 1 &&
                       bk.c(-25704)) {
                       var3Lifetime1 = vc.field_f.b(FullscreenFocusCanvas.field_c);
                       if ((320 - var3Lifetime1 / 2) <= ef.field_j &&
@@ -370,7 +370,7 @@ public final class Terraphoenix extends GameShell {
                         WidgetContainer.a(10, -25786, 10);
                       }
                     }
-                    if (1 == ma.field_I) {
+                    if (1 == DiskArchiveRequest.field_I) {
                       var3Lifetime1 = 320;
                       if (var3Lifetime1 - qh.field_b.field_r / 2 <= ef.field_j &&
                         ef.field_j <= (var3Lifetime1 + qh.field_b.field_r / 2) &&
@@ -396,20 +396,20 @@ public final class Terraphoenix extends GameShell {
                       GameShell.field_y = null;
                     }
                     if (bh.field_e[96] &&
-                      ma.field_J > 0) {
+                      DiskArchiveRequest.field_J > 0) {
                       qd.$cfr$intArgs$a$e9dea5688aa5(22, 33);
-                      ma.field_J = ma.field_J - 1;
+                      DiskArchiveRequest.field_J = DiskArchiveRequest.field_J - 1;
                       ProxyAuthenticationRequiredException.field_g = 10;
                     }
                     if (!bh.field_e[97]) {
                       return;
                     }
-                    if (ma.field_J >= 2) {
+                    if (DiskArchiveRequest.field_J >= 2) {
                       return;
                     }
                     qd.$cfr$intArgs$a$e9dea5688aa5(114, 33);
                     ProxyAuthenticationRequiredException.field_g = 10;
-                    ma.field_J = ma.field_J + 1;
+                    DiskArchiveRequest.field_J = DiskArchiveRequest.field_J + 1;
                     return;
                   } else {
                     if (var3Lifetime1 != 11) {
@@ -418,7 +418,7 @@ public final class Terraphoenix extends GameShell {
                     decompiledFrameRemainder1 = (var8 == 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    if (ma.field_I == 1) {
+                    if (DiskArchiveRequest.field_I == 1) {
                       if (ab.field_i != -1) {
                         if (~ab.field_i != ~wf.field_t) {
                           wf.field_t = ab.field_i;
@@ -499,13 +499,13 @@ public final class Terraphoenix extends GameShell {
               var3Lifetime1 = stackIn_272_0 + ((ud) (Object) stackIn_272_1).c(((StringBuilder) (Object) stackIn_272_2).append(oe.$cfr$intArgs$a$feb7e63b59d8(stackIn_273_3, stackIn_276_4, stackIn_277_5, false)).toString(), 310) * 14;
               var3Lifetime1 += 24;
               if (this.a(false, 224, (byte) -44, var3Lifetime1, FullscreenFocusCanvas.field_c) &&
-                1 == ma.field_I) {
+                1 == DiskArchiveRequest.field_I) {
                 WidgetContainer.a(14, -25786, 16);
               }
               var3Lifetime1 += 80;
               var3Lifetime1 += 24;
               if (this.a(false, 224, (byte) -44, var3Lifetime1, vf.field_b) &&
-                ma.field_I == 1) {
+                DiskArchiveRequest.field_I == 1) {
                 oe.field_c = oe.field_c - ge.field_e;
                 TutorialText.field_a = 0;
                 ge.field_e = 0;
@@ -675,7 +675,7 @@ public final class Terraphoenix extends GameShell {
                 if (0 == this.field_Bb) {
                   this.field_Eb[0] = g.field_qb;
                 }
-                if (ma.field_I == 1) {
+                if (DiskArchiveRequest.field_I == 1) {
                   ProxyAuthenticationRequiredException.field_g = 20;
                   ja.field_i = 1;
                   if (this.field_X != null) {
@@ -702,7 +702,7 @@ public final class Terraphoenix extends GameShell {
               }
               this.field_Eb = new String[1];
               this.field_Eb[0] = od.field_f;
-              if (ma.field_I != 1) {
+              if (DiskArchiveRequest.field_I != 1) {
                 return;
               }
               qd.$cfr$intArgs$a$e9dea5688aa5(92, 33);
@@ -754,7 +754,7 @@ public final class Terraphoenix extends GameShell {
             }
             this.field_Eb = new String[1];
             this.field_Eb[0] = od.field_f;
-            if (ma.field_I != 1) {
+            if (DiskArchiveRequest.field_I != 1) {
               return;
             }
             qd.$cfr$intArgs$a$e9dea5688aa5(63, 33);
@@ -1002,7 +1002,7 @@ public final class Terraphoenix extends GameShell {
               }
             }
           }
-          if (ma.field_I != 0) {
+          if (DiskArchiveRequest.field_I != 0) {
             if (532 <= ef.field_j &&
               (488 - PcmResampler.field_g.field_t) <= MouseWheelInput.field_b &&
               632 > ef.field_j &&
@@ -1299,7 +1299,7 @@ public final class Terraphoenix extends GameShell {
           }
           var2_int = -1;
           var3 = 0;
-          if (ma.field_I == 1) {
+          if (DiskArchiveRequest.field_I == 1) {
             var2_int = this.field_xb;
           }
           var4 = 0;
@@ -1419,24 +1419,24 @@ public final class Terraphoenix extends GameShell {
           }
           if (~var5 == ~var2_int) {
             if (var3 == 0) {
-              if ((328 + ua.field_e * 100 / 128) < ef.field_j) {
+              if ((328 + SectorCacheStore.field_e * 100 / 128) < ef.field_j) {
                 stackIn_175_0 = 1;
               } else {
-                stackIn_175_0 = ((320 + ua.field_e * 100 / 128 - 8) > ef.field_j) ? -1 : 0;
+                stackIn_175_0 = ((320 + SectorCacheStore.field_e * 100 / 128 - 8) > ef.field_j) ? -1 : 0;
               }
               var3 = stackIn_175_0;
             }
             if (var3 == -1) {
-              ua.field_e = ua.field_e - 16;
+              SectorCacheStore.field_e = SectorCacheStore.field_e - 16;
             }
             if (var3 == 1) {
-              ua.field_e = ua.field_e + 16;
+              SectorCacheStore.field_e = SectorCacheStore.field_e + 16;
             }
-            if (ua.field_e < 0) {
-              ua.field_e = 0;
+            if (SectorCacheStore.field_e < 0) {
+              SectorCacheStore.field_e = 0;
             }
-            if (128 < ua.field_e) {
-              ua.field_e = 128;
+            if (128 < SectorCacheStore.field_e) {
+              SectorCacheStore.field_e = 128;
             }
             if (ai.field_g <= 0) {
               qd.$cfr$intArgs$a$e9dea5688aa5(31, 70);
@@ -2413,7 +2413,7 @@ public final class Terraphoenix extends GameShell {
             boolean decompiledFrameRemainder3 = true;
             vc.field_f.a(sk.field_d, 320, var9, var8Lifetime4, 1);
             vc.field_f.b("--------------", 320, var9, var8Lifetime4, 1);
-            this.a("|", 100 * ua.field_e / 128 + 320, var8Lifetime4, var9, 118);
+            this.a("|", 100 * SectorCacheStore.field_e / 128 + 320, var8Lifetime4, var9, 118);
             var9 = var9 + var10;
             var11++;
             if (~this.field_xb != ~var11 && (!(MouseWheelInput.field_b >= var9 - var10 + 4) ||
@@ -3180,7 +3180,7 @@ public final class Terraphoenix extends GameShell {
             MouseWheelInput.field_b <= 464 - this.field_N.field_f) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = nd.field_h;
-            if (ma.field_I == 1) {
+            if (DiskArchiveRequest.field_I == 1) {
               this.field_N.field_b = true;
               ja.field_i = 1;
               qd.$cfr$intArgs$a$e9dea5688aa5(70, 27);
@@ -3313,7 +3313,7 @@ public final class Terraphoenix extends GameShell {
                 } else {
                   this.field_Eb[0] = SecondaryNodeDequeIterator.field_b + this.field_nb[var7_int].b(1);
                 }
-                if (1 == ma.field_I) {
+                if (1 == DiskArchiveRequest.field_I) {
                   qd.$cfr$intArgs$a$e9dea5688aa5(80, 33);
                   if (null != this.field_nb[var7_int]) {
                     this.field_qb = var7_int;
@@ -3347,7 +3347,7 @@ public final class Terraphoenix extends GameShell {
             var2_intLifetime3 = -1 + this.field_gb;
             var7 = this.field_I;
             if ((!this.field_yb) &&
-              (decompiledFrameRemainder1 = (ma.field_I != 0)) &&
+              (decompiledFrameRemainder1 = (DiskArchiveRequest.field_I != 0)) &&
               (decompiledFrameRemainder1 = (null != this.field_nb[this.field_qb]))) {
               if (var2_intLifetime3 != 0 &&
                 3 != var2_intLifetime3 &&
@@ -3427,7 +3427,7 @@ public final class Terraphoenix extends GameShell {
             if (decompiledFrameRemainder1) {
               this.field_Eb = new String[1];
               this.field_Eb[0] = NodeHashTableIterator.field_b + od.field_c[var2_intLifetime3].field_j;
-              if (ma.field_I != 0 &&
+              if (DiskArchiveRequest.field_I != 0 &&
                 this.field_Fb > 0 &&
                 this.field_I.field_a[var2_intLifetime3] <= 50) {
                 this.field_Fb = this.field_Fb - 1;
@@ -3478,7 +3478,7 @@ public final class Terraphoenix extends GameShell {
             if (this.field_yb) {
               this.field_Eb = new String[1];
               this.field_Eb[0] = NodeHashTableIterator.field_b + sj.field_a[var2_intLifetime4].field_m;
-              decompiledFrameRemainder0 = (ma.field_I != 0);
+              decompiledFrameRemainder0 = (DiskArchiveRequest.field_I != 0);
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameRemainder0 = !(0 >= this.field_Fb))) {
                 this.field_Fb = this.field_Fb - 1;
@@ -3501,7 +3501,7 @@ public final class Terraphoenix extends GameShell {
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (ma.field_I != 0)) {
+              (DiskArchiveRequest.field_I != 0)) {
               if (null == this.field_nb[this.field_qb].field_m) {
                 this.field_nb[this.field_qb].field_m = new pc();
                 if (var9 != 0) {
@@ -3534,7 +3534,7 @@ public final class Terraphoenix extends GameShell {
               this.field_Eb = new String[1];
               this.field_Eb[0] = gi.field_q + od.field_c[this.field_nb[this.field_qb].field_b.field_g].field_j;
             }
-            if (ma.field_I != 0) {
+            if (DiskArchiveRequest.field_I != 0) {
               dupTemp$7 = this.field_nb[this.field_qb].field_b.field_g;
               this.field_I.field_a[dupTemp$7] = this.field_I.field_a[dupTemp$7] + 1;
               this.field_nb[this.field_qb].field_b = null;
@@ -3550,7 +3550,7 @@ public final class Terraphoenix extends GameShell {
               this.field_Eb = new String[1];
               this.field_Eb[0] = gi.field_q + od.field_c[this.field_nb[this.field_qb].field_A.field_g].field_j;
             }
-            if (ma.field_I != 0) {
+            if (DiskArchiveRequest.field_I != 0) {
               dupTemp$8 = this.field_nb[this.field_qb].field_A.field_g;
               this.field_I.field_a[dupTemp$8] = this.field_I.field_a[dupTemp$8] + 1;
               this.field_nb[this.field_qb].field_A = null;
@@ -3571,7 +3571,7 @@ public final class Terraphoenix extends GameShell {
               this.field_Eb = new String[1];
               this.field_Eb[0] = gi.field_q + sj.field_a[this.field_nb[this.field_qb].field_m.field_f].field_m;
             }
-            if (ma.field_I != 0) {
+            if (DiskArchiveRequest.field_I != 0) {
               dupTemp$10 = this.field_nb[this.field_qb].field_m.field_f;
               this.field_I.field_d[dupTemp$10] = this.field_I.field_d[dupTemp$10] + 1;
               this.field_nb[this.field_qb].field_m.field_f = 0;
@@ -3590,7 +3590,7 @@ public final class Terraphoenix extends GameShell {
               this.field_Eb = new String[1];
               this.field_Eb[0] = gi.field_q + od.field_c[this.field_nb[this.field_qb].field_i.field_g].field_j;
             }
-            if (ma.field_I != 0) {
+            if (DiskArchiveRequest.field_I != 0) {
               dupTemp$11 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$11] = this.field_I.field_a[dupTemp$11] + this.field_nb[this.field_qb].field_i.field_d;
               this.field_nb[this.field_qb].field_i = null;
@@ -3604,7 +3604,7 @@ public final class Terraphoenix extends GameShell {
             this.field_nb[this.field_qb].field_i != null) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = lf.field_b;
-            if (0 != ma.field_I) {
+            if (0 != DiskArchiveRequest.field_I) {
               qd.$cfr$intArgs$a$e9dea5688aa5(65, 25);
               dupTemp$12 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$12] = this.field_I.field_a[dupTemp$12] + 1;
@@ -3625,7 +3625,7 @@ public final class Terraphoenix extends GameShell {
             8 > this.field_nb[this.field_qb].field_i.field_d) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = PcmResampler.field_a;
-            if (ma.field_I != 0) {
+            if (DiskArchiveRequest.field_I != 0) {
               qd.$cfr$intArgs$a$e9dea5688aa5(23, 24);
               dupTemp$15 = this.field_nb[this.field_qb].field_i.field_g;
               this.field_I.field_a[dupTemp$15] = this.field_I.field_a[dupTemp$15] - 1;
@@ -3824,7 +3824,7 @@ public final class Terraphoenix extends GameShell {
             boolean decompiledFrameRemainder3 = true;
             vc.field_f.a(sk.field_d, 320, var9, var8Lifetime1, 1);
             vc.field_f.b("--------------", 320, var9, var8Lifetime1, 1);
-            this.a("|", 320 + 100 * ua.field_e / 128, var8Lifetime1, var9, 120);
+            this.a("|", 320 + 100 * SectorCacheStore.field_e / 128, var8Lifetime1, var9, 120);
             var11++;
             var9 = var9 + var10;
             if (var11 != this.field_xb && (!(4 + (var9 - var10) <= MouseWheelInput.field_b) ||
@@ -4269,7 +4269,7 @@ public final class Terraphoenix extends GameShell {
           ie.a((byte) -15);
           lb.clearStaticReferences((byte) -22);
           h.clearStaticReferences(true);
-          wh.a((byte) 110);
+          DiskCacheWorker.a((byte) 110);
           ak.clearStaticReferences(false);
           BufferedSocket.resetStaticState((byte) 102);
           Archive.clearStaticReferences(127);
@@ -4375,11 +4375,11 @@ public final class Terraphoenix extends GameShell {
           VorbisFloor.clearStaticReferences();
           kg.clearStaticReferences(7087);
           hl.clearStaticReferences(54);
-          nh.d(30937);
-          ua.clearStaticReferences(8);
+          NetworkArchiveRequest.d(30937);
+          SectorCacheStore.clearStaticReferences(8);
           tb.clearStaticReferences(-18440);
           mc.b((byte) 53);
-          rf.a(true);
+          ArchiveRequest.a(true);
           IsaacCipher.a(true);
           SocketConnector.clearStaticReferences(11147);
           ProxyAuthenticationRequiredException.clearStaticReferences(-122);
@@ -4561,7 +4561,7 @@ public final class Terraphoenix extends GameShell {
             (decompiledFrameRemainder1 = !(MouseWheelInput.field_b < 340)) &&
             (decompiledFrameRemainder1 = !(MouseWheelInput.field_b > 390))) {
             this.field_Eb = new String[1];
-            if (ma.field_I == 1) {
+            if (DiskArchiveRequest.field_I == 1) {
               var3 = 1;
             }
             this.field_Eb[0] = qa.field_b;
@@ -4575,7 +4575,7 @@ public final class Terraphoenix extends GameShell {
                 (decompiledFrameRemainder1 = !(340 > MouseWheelInput.field_b)) &&
                 (decompiledFrameRemainder1 = !(MouseWheelInput.field_b > 390))) {
                 this.field_Eb = new String[1];
-                if (ma.field_I == 1) {
+                if (DiskArchiveRequest.field_I == 1) {
                   var3 = 1;
                 }
                 this.field_Eb[0] = qa.field_b;
@@ -4588,7 +4588,7 @@ public final class Terraphoenix extends GameShell {
                   364 <= MouseWheelInput.field_b &&
                   MouseWheelInput.field_b <= 414) {
                   this.field_Eb = new String[1];
-                  if (ma.field_I == 1) {
+                  if (DiskArchiveRequest.field_I == 1) {
                     var3 = 1;
                     var4 = 1;
                   }
@@ -4599,7 +4599,7 @@ public final class Terraphoenix extends GameShell {
                   (!(364 > MouseWheelInput.field_b)) &&
                   (!(MouseWheelInput.field_b > 414))) {
                   this.field_Eb = new String[1];
-                  if (ma.field_I == 1) {
+                  if (DiskArchiveRequest.field_I == 1) {
                     var3 = 1;
                   }
                   this.field_Eb[0] = rj.field_c;
@@ -4608,7 +4608,7 @@ public final class Terraphoenix extends GameShell {
                       ef.field_j <= 256 &&
                       370 <= MouseWheelInput.field_b &&
                       MouseWheelInput.field_b <= 420 &&
-                      ma.field_I == 1) {
+                      DiskArchiveRequest.field_I == 1) {
                       WidgetContainer.a(7, -25786, 7);
                     }
                     if (ef.field_j >= 384 &&
@@ -4617,7 +4617,7 @@ public final class Terraphoenix extends GameShell {
                       MouseWheelInput.field_b <= 420) {
                       this.field_Eb = new String[1];
                       this.field_Eb[0] = rj.field_c;
-                      if (ma.field_I == 1) {
+                      if (DiskArchiveRequest.field_I == 1) {
                         var3 = 1;
                       }
                     }
@@ -4629,7 +4629,7 @@ public final class Terraphoenix extends GameShell {
                 ef.field_j <= 256 &&
                 370 <= MouseWheelInput.field_b &&
                 MouseWheelInput.field_b <= 420 &&
-                ma.field_I == 1) {
+                DiskArchiveRequest.field_I == 1) {
                 WidgetContainer.a(7, -25786, 7);
               }
               if (ef.field_j >= 384 &&
@@ -4638,7 +4638,7 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b <= 420) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = rj.field_c;
-                if (ma.field_I == 1) {
+                if (DiskArchiveRequest.field_I == 1) {
                   var3 = 1;
                 }
               }
@@ -4938,7 +4938,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (!this.field_X.field_u) {
             this.field_X.field_j = MouseWheelInput.field_b;
-            this.field_X.field_N = ma.field_I;
+            this.field_X.field_N = DiskArchiveRequest.field_I;
             this.field_X.field_y = ef.field_j;
             var2_int = 1;
             var3 = 0;
@@ -4988,8 +4988,8 @@ public final class Terraphoenix extends GameShell {
                   (decompiledFrameRemainder0 = !((this.field_lb.field_t + 386) <= MouseWheelInput.field_b))) {
                   this.field_Eb = new String[1];
                   this.field_X.field_N = 0;
-                  this.field_Eb[0] = rf.field_t;
-                  decompiledFrameRemainder0 = (ma.field_I == 1);
+                  this.field_Eb[0] = ArchiveRequest.field_t;
+                  decompiledFrameRemainder0 = (DiskArchiveRequest.field_I == 1);
                   if (decompiledFrameRemainder0) {
                     qd.$cfr$intArgs$a$e9dea5688aa5(46, 34);
                     var4 = 11;
@@ -5023,7 +5023,7 @@ public final class Terraphoenix extends GameShell {
                 this.field_X.field_N = 0;
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = j.field_K;
-                if (1 == ma.field_I) {
+                if (1 == DiskArchiveRequest.field_I) {
                   this.field_X.field_u = true;
                   this.field_X.c((byte) -76);
                   while (fd.d(param0 ^ 254)) {
@@ -5100,7 +5100,7 @@ public final class Terraphoenix extends GameShell {
         int var3 = 0;
         var3 = field_V;
         try {
-          this.field_Cb.field_g = ma.field_I;
+          this.field_Cb.field_g = DiskArchiveRequest.field_I;
           this.field_Cb.field_k = ef.field_j;
           this.field_Cb.field_e = oh.field_f;
           if (param0 != 0) {
@@ -5220,7 +5220,7 @@ public final class Terraphoenix extends GameShell {
             MouseWheelInput.field_b < var6 + var3) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = IndexedSpriteState.field_h;
-            if (ma.field_I == 1) {
+            if (DiskArchiveRequest.field_I == 1) {
               this.field_zb = new ch();
               this.field_D = 0;
               this.field_hb = 0;
@@ -5233,7 +5233,7 @@ public final class Terraphoenix extends GameShell {
             var3 + var6 > MouseWheelInput.field_b) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = j.field_I;
-            if (1 == ma.field_I) {
+            if (1 == DiskArchiveRequest.field_I) {
               this.field_hb = 0;
               this.field_N = new vl();
             }
@@ -5250,7 +5250,7 @@ public final class Terraphoenix extends GameShell {
               this.field_Eb[1] = nl.field_c;
               this.field_Eb[0] = lb.field_e;
             }
-            if (ma.field_I == 1 &&
+            if (DiskArchiveRequest.field_I == 1 &&
               this.field_Db) {
               ProxyAuthenticationRequiredException.field_g = 20;
               ja.field_i = 2;
@@ -5375,9 +5375,9 @@ public final class Terraphoenix extends GameShell {
               var7 = 0;
               if (GameShell.field_y.field_m &&
                 null != GameShell.field_y.field_p) {
-                var8 = GameShell.field_y.field_p[ma.field_J];
-                var9_ref_long__ = GameShell.field_y.field_l[ma.field_J];
-                var10_ref_int__ = GameShell.field_y.field_q[ma.field_J];
+                var8 = GameShell.field_y.field_p[DiskArchiveRequest.field_J];
+                var9_ref_long__ = GameShell.field_y.field_l[DiskArchiveRequest.field_J];
+                var10_ref_int__ = GameShell.field_y.field_q[DiskArchiveRequest.field_J];
                 var11 = 0;
                 var12_ref_fb = hd.field_q;
                 var13 = 90 + var6Lifetime1.field_s;
@@ -5444,7 +5444,7 @@ public final class Terraphoenix extends GameShell {
                     var11Lifetime1 = 432;
                     var12 = 16776960 - wa.field_s;
                     stackIn_128_0 = var8_intLifetime1;
-                    stackIn_128_1 = ma.field_J;
+                    stackIn_128_1 = DiskArchiveRequest.field_J;
                     if (var17 != 0) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -5458,8 +5458,8 @@ public final class Terraphoenix extends GameShell {
                       (var11Lifetime1 + vc.field_f.field_p) > MouseWheelInput.field_b) {
                       var12 = 16777215;
                       if (oh.field_f == 1 &&
-                        ~var8_intLifetime1 != ~ma.field_J) {
-                        ma.field_J = var8_intLifetime1;
+                        ~var8_intLifetime1 != ~DiskArchiveRequest.field_J) {
+                        DiskArchiveRequest.field_J = var8_intLifetime1;
                         ProxyAuthenticationRequiredException.field_g = 10;
                       }
                     }
@@ -5652,15 +5652,15 @@ public final class Terraphoenix extends GameShell {
             var3++;
           } while (var4 == 0);
           if (Archive.field_a == 0) {
-            rf.field_B[0].field_d = false;
-            rf.field_B[1].field_d = false;
-            rf.field_B[2].field_d = false;
-            rf.field_B[3].field_d = true;
-            rf.field_B[4].field_d = true;
-            rf.field_B[5].field_d = false;
-            rf.field_B[6].field_d = true;
-            rf.field_B[7].field_d = true;
-            rf.field_B[8].field_d = false;
+            ArchiveRequest.field_B[0].field_d = false;
+            ArchiveRequest.field_B[1].field_d = false;
+            ArchiveRequest.field_B[2].field_d = false;
+            ArchiveRequest.field_B[3].field_d = true;
+            ArchiveRequest.field_B[4].field_d = true;
+            ArchiveRequest.field_B[5].field_d = false;
+            ArchiveRequest.field_B[6].field_d = true;
+            ArchiveRequest.field_B[7].field_d = true;
+            ArchiveRequest.field_B[8].field_d = false;
           }
           this.field_vb = 0;
           if (ha.field_q == 0) {
@@ -5674,14 +5674,14 @@ public final class Terraphoenix extends GameShell {
             this.field_jb = 0;
             this.field_vb = 0;
             this.s((byte) 39);
-            rf.field_B[0].field_d = true;
-            rf.field_B[1].field_d = true;
-            rf.field_B[2].field_d = true;
-            rf.field_B[3].field_d = true;
-            rf.field_B[4].field_d = true;
-            rf.field_B[6].field_d = true;
-            rf.field_B[7].field_d = true;
-            rf.field_B[8].field_d = true;
+            ArchiveRequest.field_B[0].field_d = true;
+            ArchiveRequest.field_B[1].field_d = true;
+            ArchiveRequest.field_B[2].field_d = true;
+            ArchiveRequest.field_B[3].field_d = true;
+            ArchiveRequest.field_B[4].field_d = true;
+            ArchiveRequest.field_B[6].field_d = true;
+            ArchiveRequest.field_B[7].field_d = true;
+            ArchiveRequest.field_B[8].field_d = true;
           }
           if (ha.field_q >= 2) {
             this.field_I.field_a[6] = this.field_I.field_a[6] + 1;
@@ -5698,7 +5698,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (ha.field_q >= 3) {
             this.field_nb[0].field_m.field_f = 1;
-            rf.field_B[5].field_d = true;
+            ArchiveRequest.field_B[5].field_d = true;
             this.field_nb[1].field_m.field_f = 1;
             this.field_nb[2].field_m.field_f = 1;
             this.field_nb[3].field_m.field_f = 1;
@@ -5762,9 +5762,9 @@ public final class Terraphoenix extends GameShell {
             if (null != le.field_q) {
               le.field_q.field_g = ef.field_j;
               le.field_q.field_c = MouseWheelInput.field_b;
-              le.field_q.field_z = ma.field_I;
+              le.field_q.field_z = DiskArchiveRequest.field_I;
             }
-            if (0 != ma.field_I) {
+            if (0 != DiskArchiveRequest.field_I) {
               this.field_X.field_M = true;
             }
             lg.field_c = (lg.field_c * 9 + var3) / 10;
@@ -5863,7 +5863,7 @@ public final class Terraphoenix extends GameShell {
             }
             this.field_X.field_y = ef.field_j;
             this.field_X.field_j = MouseWheelInput.field_b;
-            this.field_X.field_N = ma.field_I;
+            this.field_X.field_N = DiskArchiveRequest.field_I;
             this.field_X.b(param0 - 127, this);
             while (fd.d(param0 ^ 127)) {
               stackIn_163_0 = lf.field_c;
@@ -5895,7 +5895,7 @@ public final class Terraphoenix extends GameShell {
               if (BufferedSocket.a(70, (byte) -110, 7, 7, false, 28)) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = ee.field_z;
-                if (ma.field_I == 1) {
+                if (DiskArchiveRequest.field_I == 1) {
                   ProxyAuthenticationRequiredException.field_g = 20;
                   ld.field_b = true;
                   hh.field_m.a();
@@ -5915,7 +5915,7 @@ public final class Terraphoenix extends GameShell {
                 } else {
                   this.field_Eb[0] = pf.field_d;
                 }
-                if (ma.field_I == 1) {
+                if (DiskArchiveRequest.field_I == 1) {
                   stackIn_141_0 = this.field_X;
                   stackIn_142_1 = !(this.field_X.field_w);
                   stackIn_141_0.field_w = stackIn_142_1;
@@ -5932,7 +5932,7 @@ public final class Terraphoenix extends GameShell {
               if (BufferedSocket.a(100, (byte) -123, 7, 533, false, 28)) {
                 this.field_Eb = new String[1];
                 this.field_Eb[0] = ja.field_h;
-                if (ma.field_I == 1) {
+                if (DiskArchiveRequest.field_I == 1) {
                   TutorialText.field_c = ja.field_i;
                   ja.field_i = 12;
                   hh.field_m.a();
@@ -7683,7 +7683,7 @@ public final class Terraphoenix extends GameShell {
         try {
           var2_int = -1;
           var3 = 0;
-          if (ma.field_I == 1) {
+          if (DiskArchiveRequest.field_I == 1) {
             var2_int = this.field_xb;
           }
           var4 = 0;
@@ -7738,24 +7738,24 @@ public final class Terraphoenix extends GameShell {
           }
           if (var5 == var2_int) {
             if (0 == var3) {
-              if ((320 + 100 * ua.field_e / 128 + 8) >= ef.field_j) {
-                stackIn_52_0 = (ef.field_j < (320 + ua.field_e * 100 / 128 - 8)) ? -1 : 0;
+              if ((320 + 100 * SectorCacheStore.field_e / 128 + 8) >= ef.field_j) {
+                stackIn_52_0 = (ef.field_j < (320 + SectorCacheStore.field_e * 100 / 128 - 8)) ? -1 : 0;
               } else {
                 stackIn_52_0 = 1;
               }
               var3 = stackIn_52_0;
             }
             if (var3 == -1) {
-              ua.field_e = ua.field_e - 16;
+              SectorCacheStore.field_e = SectorCacheStore.field_e - 16;
             }
             if (1 == var3) {
-              ua.field_e = ua.field_e + 16;
+              SectorCacheStore.field_e = SectorCacheStore.field_e + 16;
             }
-            if (ua.field_e < 0) {
-              ua.field_e = 0;
+            if (SectorCacheStore.field_e < 0) {
+              SectorCacheStore.field_e = 0;
             }
-            if (128 < ua.field_e) {
-              ua.field_e = 128;
+            if (128 < SectorCacheStore.field_e) {
+              SectorCacheStore.field_e = 128;
             }
             if (0 >= ai.field_g) {
               qd.$cfr$intArgs$a$e9dea5688aa5(34, 70);
@@ -8025,7 +8025,7 @@ public final class Terraphoenix extends GameShell {
                 MouseWheelInput.field_b <= (var7 + var5Lifetime3)) {
                 SoftwareRasterizer.fillRectangleAlpha(var4Lifetime4, var5Lifetime3, var6, var7, 16777215, 128);
               }
-              if (rf.field_B[7].field_d) {
+              if (ArchiveRequest.field_B[7].field_d) {
                 var6Lifetime3 = 29;
                 var5Lifetime4 = 447;
                 var7Lifetime2 = 29;
@@ -8655,7 +8655,7 @@ public final class Terraphoenix extends GameShell {
           wg.field_f = il.a("options", "", ab.field_a, -1);
           il.a("help", "", ab.field_a, -1);
           aa.field_j = il.a("next", "", ab.field_a, param0 + 2019);
-          wh.field_e = il.a("prev", "", ab.field_a, -1);
+          DiskCacheWorker.field_e = il.a("prev", "", ab.field_a, -1);
           jh.field_q = new IndexedSprite[22];
           var4 = 0;
           incrementValue$22 = var4;
@@ -8727,7 +8727,7 @@ public final class Terraphoenix extends GameShell {
           bj.field_e = il.a("instructionbbar", "menu_graphics", ab.field_a, -1);
           vc.field_e = il.a("interfacebbar", "menu_graphics", ab.field_a, param0 ^ 2019);
           ki.field_T = il.a("interfacevbar", "menu_graphics", ab.field_a, -1);
-          ua.field_b = il.a("ingametop", "", ab.field_a, -1);
+          SectorCacheStore.field_b = il.a("ingametop", "", ab.field_a, -1);
           fh.field_c = il.a("unachieved", "basic", ByteStorage.field_d, param0 + 2019);
           ByteStorage.field_b = il.a("locked", "basic", ByteStorage.field_d, param0 + 2019);
           IsaacCipher.field_k = il.a("orbcoin", "basic", ByteStorage.field_d, param0 ^ 2019);
@@ -9501,7 +9501,7 @@ public final class Terraphoenix extends GameShell {
             this.field_jb <= 0) {
             this.field_Eb = new String[1];
             this.field_Eb[0] = AccountNameAvailabilityValidator.field_n;
-            if (ma.field_I == 1) {
+            if (DiskArchiveRequest.field_I == 1) {
               ja.field_i = 1;
               qd.$cfr$intArgs$a$e9dea5688aa5(33, 27);
               this.field_zb.field_a = true;
@@ -9534,7 +9534,7 @@ public final class Terraphoenix extends GameShell {
               }
               stackIn_69_0[stackIn_69_1] = ((StringBuilder) (Object) stackIn_69_2).append(stackIn_70_3).toString();
             }
-            if (ma.field_I == 1) {
+            if (DiskArchiveRequest.field_I == 1) {
               this.field_D = this.field_gb;
               qd.$cfr$intArgs$a$e9dea5688aa5(84, 33);
             }
@@ -9545,7 +9545,7 @@ public final class Terraphoenix extends GameShell {
             this.field_Eb = new String[1];
             this.field_Eb[0] = sb.field_k;
           }
-          if (1 == ma.field_I &&
+          if (1 == DiskArchiveRequest.field_I &&
             this.field_zb.field_b &&
             this.field_jb > 0) {
             var3 = 0;
@@ -9638,7 +9638,7 @@ public final class Terraphoenix extends GameShell {
           if (param0 >= -18) {
             return;
           }
-          if (ma.field_I == 1 &&
+          if (DiskArchiveRequest.field_I == 1 &&
             ef.field_j > 540 &&
             MouseWheelInput.field_b <= 28) {
             boolean decompiledFrameCompleted0 = true;

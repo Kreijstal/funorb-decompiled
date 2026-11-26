@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hc {
-    static ni field_a;
+    static DiskCacheWorker field_a;
     static IntrusiveDeque field_b;
     static String field_c;
 

@@ -21,7 +21,7 @@ final class sb {
           return false;
         }
         if (!gf.field_G) {
-          return !n.a(param0 + 75) ? true : false;
+          return !DiskCacheWorker.a(param0 + 75) ? true : false;
         }
         return false;
     }
@@ -117,8 +117,8 @@ final class sb {
 
     final static void b(byte param0) {
         af.b(6);
-        if (n.field_g != null) {
-          hb.a(param0 ^ -72, n.field_g);
+        if (DiskCacheWorker.field_g != null) {
+          hb.a(param0 ^ -72, DiskCacheWorker.field_g);
           oe.b(-19495);
           de.e(-86);
           MouseWheelInput.b((byte) -120);

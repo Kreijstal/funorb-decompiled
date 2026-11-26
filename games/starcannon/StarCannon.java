@@ -1961,7 +1961,7 @@ public final class StarCannon extends ag {
         fi.field_f = null;
         ia.field_k = 0;
         jg.field_F = null;
-        tg.field_y = 10;
+        DiskArchiveRequest.field_y = 10;
         tj.field_G = 0;
         AccountRequestState.field_d = 1;
         bf.field_w = 0;
@@ -2571,18 +2571,18 @@ public final class StarCannon extends ag {
             kh.field_y.addLast(69, var3_ref_bfLifetime1);
           }
         }
-        if (ia.field_k >= tg.field_y) {
-          if (tg.field_y < 1000) {
-            if (tg.field_y <= 0) {
-              var3Lifetime2 = tg.field_y + 10;
+        if (ia.field_k >= DiskArchiveRequest.field_y) {
+          if (DiskArchiveRequest.field_y < 1000) {
+            if (DiskArchiveRequest.field_y <= 0) {
+              var3Lifetime2 = DiskArchiveRequest.field_y + 10;
             } else {
-              var3Lifetime2 = tg.field_y + (tg.field_y << 1) / 3;
+              var3Lifetime2 = DiskArchiveRequest.field_y + (DiskArchiveRequest.field_y << 1) / 3;
             }
           } else {
-            var3Lifetime2 = 500 + tg.field_y;
+            var3Lifetime2 = 500 + DiskArchiveRequest.field_y;
           }
           var4Lifetime2 = sh.b(-128, 640);
-          tg.field_y = var3Lifetime2;
+          DiskArchiveRequest.field_y = var3Lifetime2;
           kh.field_y.addLast(60, new bf(var4Lifetime2, -32, var4Lifetime2, 10));
         }
         if ((rj.field_h == 2 ||
@@ -3229,7 +3229,7 @@ public final class StarCannon extends ag {
         wd.clearStaticReferences();
         AudioOutput.clearStaticReferences();
         eh.g((byte) 101);
-        ef.resetStaticState((byte) 27);
+        DiskCacheWorker.resetStaticState((byte) 27);
         td.clearStaticReferences(-12539);
         BufferedSocket.resetStaticState(105);
         DelayedPcmStream.clearStaticReferences((byte) -61);
@@ -3281,12 +3281,12 @@ public final class StarCannon extends ag {
         hh.a((byte) -22);
         vh.h((byte) -98);
         jh.b(126);
-        ra.clearDeclaredStaticReferences((byte) 108);
-        tg.clearDeclaredStaticReferences(-64);
+        NetworkArchiveRequest.clearDeclaredStaticReferences((byte) 108);
+        DiskArchiveRequest.clearDeclaredStaticReferences(-64);
         t.clearStaticReferences((byte) 113);
         cb.clearStaticReferences(0);
         la.clearStaticReferences((byte) 1);
-        ik.clearStaticReferences(0);
+        ArchiveRequest.clearStaticReferences(0);
         jb.clearStaticReferences(-730625660);
         pd.resetStaticState((byte) 98);
         vj.resetStaticState(true);
@@ -3756,7 +3756,7 @@ public final class StarCannon extends ag {
 
     final static void a(ue param0, boolean param1, int param2, ue param3, ue param4) {
         try {
-          qa.field_a = uf.a("", 15);
+          qa.field_a = SectorCacheStore.a("", 15);
           if (param2 != -20169) {
             field_E = 's';
           }

@@ -84,7 +84,7 @@ final class ua extends ButtonWidget {
         var5 = param1 + this.field_p + (this.field_x >> 1);
         var6 = (this.field_u >> 1) + this.field_m + param2;
         var8 = this.field_I.a((byte) -58);
-        if (lh.field_x == var8) {
+        if (DiskArchiveRequest.field_x == var8) {
           var16 = TrackController.field_D[0];
           var9 = var16.field_s << 1;
           var10 = var16.field_v << 1;

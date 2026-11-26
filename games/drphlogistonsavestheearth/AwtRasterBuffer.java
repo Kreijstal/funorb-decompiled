@@ -90,7 +90,7 @@ abstract class AwtRasterBuffer {
             if (null != MouseWheelInput.field_e.field_d) {
               uj.field_h = new ge(MouseWheelInput.field_e.field_d, 5200, 0);
               MouseWheelInput.field_e.field_d = null;
-              var6 = new ik(255, uj.field_h, new ge(MouseWheelInput.field_e.field_b, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, uj.field_h, new ge(MouseWheelInput.field_e.field_b, 12000, 0), 2097152);
             }
             if (uj.field_h != null) {
               if (rc.field_d == null) {
@@ -100,9 +100,9 @@ abstract class AwtRasterBuffer {
                 rc.field_d[param1] = new ge(MouseWheelInput.field_e.field_c[param1], 12000, 0);
                 MouseWheelInput.field_e.field_c[param1] = null;
               }
-              var7 = new ik(param1, uj.field_h, rc.field_d[param1], 2097152);
+              var7 = new SectorCacheStore(param1, uj.field_h, rc.field_d[param1], 2097152);
             }
-            var8 = fl.field_a.a(param1, param2, (ik) (var6), (ik) (var7), (byte) 75);
+            var8 = fl.field_a.a(param1, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), (byte) 75);
             if (param3) {
               var8.f(107);
             }

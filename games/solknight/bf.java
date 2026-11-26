@@ -76,7 +76,7 @@ final class bf {
               var2_int = param1 - te.field_N.position;
             }
             MouseWheelInput.field_d.a((byte) 59, te.field_N.position, var2_int, te.field_N.payload);
-            md.field_y = je.correctedCurrentTimeMillis(1);
+            DiskArchiveRequest.field_y = je.correctedCurrentTimeMillis(1);
             te.field_N.position = te.field_N.position + var2_int;
             if (te.field_N.position < param1) {
               return false;

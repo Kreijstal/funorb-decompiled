@@ -168,7 +168,7 @@ final class eh {
             oh.field_h.a(-2025316960);
           }
           if (fd.field_d != null) {
-            fd.field_d.c(-20444);
+            fd.field_d.shutdown(-20444);
           }
           if (kk.field_b != null) {
             try {

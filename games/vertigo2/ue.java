@@ -62,7 +62,7 @@ final class ue extends WidgetContainer implements cm, ij {
           param1 = param1 + (-param1 + ce.field_b) * var3 / var2;
         }
         td.field_c.a(91, 640, 120, param1, ml.field_w);
-        ProxyAuthenticationRequiredException.a(640, Archive.field_j, 0, -24 + ce.field_b, param0 - 4880, ia.field_G, 5);
+        ProxyAuthenticationRequiredException.a(640, Archive.field_j, 0, -24 + ce.field_b, param0 - 4880, NetworkArchiveRequest.field_G, 5);
     }
 
     ue(AccountCreationResultPanel param0) {

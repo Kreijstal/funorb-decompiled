@@ -358,10 +358,10 @@ class ci extends gf implements ka {
           var18 = new Sprite(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
           ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
-          md.field_s = new od[4];
+          DiskArchiveRequest.field_s = new od[4];
           IsaacRandom.field_i = new od[4];
           SecondaryNodeDequeIterator.field_g = new od[4];
-          var6 = new od[][]{md.field_s, IsaacRandom.field_i, SecondaryNodeDequeIterator.field_g};
+          var6 = new od[][]{DiskArchiveRequest.field_s, IsaacRandom.field_i, SecondaryNodeDequeIterator.field_g};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -528,15 +528,15 @@ class ci extends gf implements ka {
           ed.field_a[0] = ib.field_i.nextInt();
           ed.field_a[1] = ib.field_i.nextInt();
           ed.field_a[2] = (int)(i.field_H >> 32);
-          ic.field_z.position = 0;
+          NetworkArchiveRequest.field_z.position = 0;
           ed.field_a[3] = (int)i.field_H;
-          ic.field_z.writeInt(ed.field_a[0], false);
-          ic.field_z.writeInt(ed.field_a[1], false);
-          ic.field_z.writeInt(ed.field_a[2], false);
-          ic.field_z.writeInt(ed.field_a[3], false);
-          vh.a(ic.field_z, 107);
-          ic.field_z.writeShort(true, param2);
-          param3.a(-12518, ic.field_z);
+          NetworkArchiveRequest.field_z.writeInt(ed.field_a[0], false);
+          NetworkArchiveRequest.field_z.writeInt(ed.field_a[1], false);
+          NetworkArchiveRequest.field_z.writeInt(ed.field_a[2], false);
+          NetworkArchiveRequest.field_z.writeInt(ed.field_a[3], false);
+          vh.a(NetworkArchiveRequest.field_z, 107);
+          NetworkArchiveRequest.field_z.writeShort(true, param2);
+          param3.a(-12518, NetworkArchiveRequest.field_z);
           id.field_c.position = 0;
           if (param1) {
             id.field_c.writeByte(param0 ^ -25840, 18);
@@ -572,7 +572,7 @@ class ci extends gf implements ka {
           if (null != ri.field_a) {
             id.field_c.writePrefixedString(param0 ^ 1955918408, ri.field_a);
           }
-          al.a(ic.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, qa.field_p);
+          al.a(NetworkArchiveRequest.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, qa.field_p);
           id.field_c.backpatchShortLength(id.field_c.position - var5_int, true);
           qf.a(0, -1);
           return;

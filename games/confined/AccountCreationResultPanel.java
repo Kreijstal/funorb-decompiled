@@ -58,7 +58,7 @@ final class AccountCreationResultPanel extends dh implements el {
               var5.a(0, ui.field_d, 7);
             } else {
               if (6 == param2.statusCode) {
-                var5.a(0, tn.field_y, 9);
+                var5.a(0, NetworkArchiveRequest.field_y, 9);
               }
             }
           } else {

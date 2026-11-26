@@ -137,7 +137,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "ticketing_xunread");
                 if (null != var2) {
-                  cd.field_x = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  NetworkArchiveRequest.field_x = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "ticketing_gotowebsite");
                 if (null != var2) {

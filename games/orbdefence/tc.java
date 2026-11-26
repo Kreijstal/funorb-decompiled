@@ -70,7 +70,7 @@ final class tc {
           th.a(109);
           return;
         }
-        se var2 = cd.field_t;
+        se var2 = NetworkArchiveRequest.field_t;
         var2.readInt(0);
         var2.readInt(0);
         var2.readInt(0);

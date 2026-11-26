@@ -72,7 +72,7 @@ final class ga {
               var2 = new PacketBuffer(13);
               ej.a(ng.field_y, -25563, var2, AccountCreationResultPanel.field_wb, ai.field_c);
               var2.writeByte(15, -121);
-              var2.writeInt(rf.field_v, 8959);
+              var2.writeInt(ArchiveRequest.field_v, 8959);
               gi.field_l.a(13, 0, (byte) -97, var2.payload);
               hm.field_N = hm.field_N + 1;
               GzipDecompressor.field_b = 30000L + ll.correctedCurrentTimeMillis(1000);

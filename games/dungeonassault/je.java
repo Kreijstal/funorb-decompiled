@@ -3,10 +3,10 @@
  */
 final class je {
     private PacketBuffer field_n;
-    private em field_m;
+    private NetworkArchiveRequest field_m;
     static int[] field_d;
     private java.math.BigInteger field_j;
-    private cc field_g;
+    private DiskCacheWorker field_g;
     static String[] field_f;
     private ti[] field_k;
     private bb field_h;
@@ -110,7 +110,7 @@ final class je {
         if (this.field_m.field_v) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_m.b(true));
+        var10 = new PacketBuffer(this.field_m.getData(true));
         var10.position = 5;
         var3 = var10.readUnsignedByte(true);
         var10.position = var10.position + 72 * var3;
@@ -140,7 +140,7 @@ final class je {
         return true;
     }
 
-    final ti a(boolean param0, int param1, int param2, ln param3, ln param4) {
+    final ti a(boolean param0, int param1, int param2, SectorCacheStore param3, SectorCacheStore param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -200,7 +200,7 @@ final class je {
         }
     }
 
-    je(bb param0, cc param1) {
+    je(bb param0, DiskCacheWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
@@ -225,7 +225,7 @@ final class je {
         }
     }
 
-    private je(bb param0, cc param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private je(bb param0, DiskCacheWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.field_h = param0;
           this.field_g = param1;

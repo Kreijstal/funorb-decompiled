@@ -388,7 +388,7 @@ final class rg extends vk implements si, ga {
                     vk.e(-59);
                   }
                 } else {
-                  ik.g(17);
+                  ArchiveRequest.g(17);
                 }
               }
             } else {

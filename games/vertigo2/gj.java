@@ -403,7 +403,7 @@ final class gj extends TextureOperator {
               if ((var10 >= 2) &&
                 (decompiledFrameRemainder3 = (sf.field_f != null ||
                 te.field_D != null ||
-                qh.field_e != null ||
+                SectorCacheStore.field_e != null ||
                 null != MouseWheelInput.field_b))) {
                 var11_int = 0;
                 var12 = 0;
@@ -435,9 +435,9 @@ final class gj extends TextureOperator {
                       null != MouseWheelInput.field_b[var16]) {
                       var15 = var15 | MouseWheelInput.field_b[var16][var17_int];
                     }
-                    if (null != qh.field_e &&
-                      null != qh.field_e[var16]) {
-                      var18_intLifetime1 = qh.field_e[var16][var17_int];
+                    if (null != SectorCacheStore.field_e &&
+                      null != SectorCacheStore.field_e[var16]) {
+                      var18_intLifetime1 = SectorCacheStore.field_e[var16][var17_int];
                       if (var18_intLifetime1 != 0 &&
                         !DirectByteStorage.field_g) {
                         var11_int = 1;
@@ -594,10 +594,10 @@ final class gj extends TextureOperator {
                   if (var12 == 0) {
                     var14 = Vertigo2.a(new String[]{(String) (var11)}, fa.field_t, 14);
                     if (var19 != 0) {
-                      var14 = ia.field_H + (String) (var11);
+                      var14 = NetworkArchiveRequest.field_H + (String) (var11);
                     }
                   } else {
-                    var14 = ia.field_H + (String) (var11);
+                    var14 = NetworkArchiveRequest.field_H + (String) (var11);
                   }
                 }
                 ko.field_S = "<col=A00000>" + var13_ref + "<br>" + var14;
@@ -611,7 +611,7 @@ final class gj extends TextureOperator {
               }
               var8.field_S = Vertigo2.a(new String[]{Integer.toString(var9)}, me.field_a, param3 ^ 89);
             }
-            nb.field_D.field_S = Vertigo2.a(new String[]{Integer.toString(gd.field_j.field_Qb), Integer.toString(gd.field_j.field_uc)}, nq.field_I, 9);
+            nb.field_D.field_S = Vertigo2.a(new String[]{Integer.toString(gd.field_j.field_Qb), Integer.toString(gd.field_j.field_uc)}, DiskArchiveRequest.field_I, 9);
           }
           stackIn_178_0 = AccountNameAvailabilityValidator.field_o;
           stackIn_178_1 = 0;

@@ -455,7 +455,7 @@ final class an {
           if (hn.field_w == 11) {
             pc.clearStaticReferences((byte) -111);
           }
-          mg.a(param0 + 1244, nq.field_E, d.field_C, IntrusiveNode.field_h);
+          mg.a(param0 + 1244, DiskArchiveRequest.field_E, d.field_C, IntrusiveNode.field_h);
           ByteStorage.a(0, (byte) -99, param1, 0);
           if (param0 != -1243) {
             var3 = (String) null;

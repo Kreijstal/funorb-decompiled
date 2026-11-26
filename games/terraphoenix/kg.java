@@ -56,12 +56,12 @@ final class kg extends h {
           String stackIn_26_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          nh var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          nh var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = Terraphoenix.field_V;
           try {
             if (null != this.field_p) {
@@ -79,7 +79,7 @@ final class kg extends h {
             this.field_k = null;
             this.field_o.position = 0;
             while (true) {
-              var4_ref = (nh) (this.field_m.a((byte) -66));
+              var4_ref = (NetworkArchiveRequest) (this.field_m.a((byte) -66));
               if (var4_ref != null) {
                 this.field_b.a(param0 + 1456354992, var4_ref);
                 continue;
@@ -87,7 +87,7 @@ final class kg extends h {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (nh) (this.field_g.a((byte) -61));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_g.a((byte) -61));
               if (var4_refLifetime1 != null) {
                 this.field_a.a(param0 ^ -1456349328, var4_refLifetime1);
                 continue;
@@ -207,7 +207,7 @@ final class kg extends h {
           int stackIn_59_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          nh var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -222,10 +222,10 @@ final class kg extends h {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          nh var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          nh var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = Terraphoenix.field_V;
           if (null != this.field_p) {
             var2_long = ll.correctedCurrentTimeMillis(1000);
@@ -254,23 +254,23 @@ final class kg extends h {
           }
           try {
             this.field_p.throwPendingError(10509);
-            var2 = (nh) (this.field_b.c(8192));
+            var2 = (NetworkArchiveRequest) (this.field_b.c(8192));
             while (var2 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(1, -115);
               this.field_e.writeLong40(var2.secondaryKey, -2108648176);
               this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_m.a(11152, var2);
-              var2 = (nh) (this.field_b.a(6273));
+              var2 = (NetworkArchiveRequest) (this.field_b.a(6273));
             }
-            var2Lifetime1 = (nh) (this.field_a.c(8192));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_a.c(8192));
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(0, -124);
               this.field_e.writeLong40(var2Lifetime1.secondaryKey, -2108648176);
               this.field_p.a(this.field_e.payload.length, 0, (byte) -97, this.field_e.payload);
               this.field_g.a(11152, var2Lifetime1);
-              var2Lifetime1 = (nh) (this.field_a.a(6273));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_a.a(6273));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_p.available(0);
@@ -350,24 +350,24 @@ final class kg extends h {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 != 0) {
-                        var14_ref = (nh) (this.field_g.c(8192));
+                        var14_ref = (NetworkArchiveRequest) (this.field_g.c(8192));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (nh) (this.field_g.a(6273));
+                          var14_ref = (NetworkArchiveRequest) (this.field_g.a(6273));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (nh) (this.field_m.c(8192));
+                        var14_ref = (NetworkArchiveRequest) (this.field_m.c(8192));
                         while (var14_ref != null) {
                           if (var14_ref.secondaryKey == var12) {
                             break;
                           }
-                          var14_ref = (nh) (this.field_m.a(6273));
+                          var14_ref = (NetworkArchiveRequest) (this.field_m.a(6273));
                         }
                       }
                       if (var14_ref == null) {

@@ -56,7 +56,7 @@ final class je extends vm {
             return stackIn_23_0;
           }
           if (ml.a(var6, var5, 0)) {
-            stackIn_27_0 = ab.field_t;
+            stackIn_27_0 = ArchiveRequest.field_t;
             return stackIn_27_0;
           }
           if (ma.a(var6, param1 ^ -9279, var5)) {
@@ -66,7 +66,7 @@ final class je extends vm {
           if (!oc.a(var5, -125, var6)) {
             return kg.field_T;
           }
-          stackIn_34_0 = ab.field_t;
+          stackIn_34_0 = ArchiveRequest.field_t;
           return stackIn_34_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

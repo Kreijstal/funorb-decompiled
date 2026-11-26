@@ -630,7 +630,7 @@ final class MidiPcmStream extends PcmStream {
           } while (var3 == 0);
           var5 = (mc) (vh.field_a.beginForward(true));
           while (var5 != null) {
-            fj.a(param0, var5, false);
+            DiskArchiveRequest.a(param0, var5, false);
             var5 = (mc) (vh.field_a.nextForward(param1 ^ -2210));
             if (var3 != 0) {
               return;

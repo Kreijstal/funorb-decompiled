@@ -252,7 +252,7 @@ final class ui extends di {
             stackIn_8_0 = ClientException.field_c;
             return stackIn_8_0;
           }
-          if (sd.a(var5, (byte) 115)) {
+          if (DiskCacheWorker.a(var5, (byte) 115)) {
             stackIn_11_0 = kh.field_a;
             return stackIn_11_0;
           }

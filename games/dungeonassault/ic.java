@@ -99,7 +99,7 @@ final class ic extends mc {
           if (param1 != -444136767) {
             field_A = (String) null;
           }
-          stackIn_3_0 = cc.a('*', param0.field_w.length(), 10854);
+          stackIn_3_0 = DiskCacheWorker.a('*', param0.field_w.length(), 10854);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

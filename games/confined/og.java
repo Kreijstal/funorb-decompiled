@@ -380,7 +380,7 @@ final class og extends n {
         stackIn_3_1 = (!param0) ? false : true;
         stackIn_2_0.field_a = stackIn_3_1;
         if (param0) {
-          var12.a((byte) -78, new bd(14, tn.field_C, pn.field_a));
+          var12.a((byte) -78, new bd(14, NetworkArchiveRequest.field_C, pn.field_a));
           if (!param0) {
             var12.a((byte) -116, new bd(2, mk.field_k, pn.field_a));
             var12.a((byte) -53, new bd(3, ea.field_e, pn.field_a));

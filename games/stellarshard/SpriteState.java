@@ -36,7 +36,7 @@ abstract class SpriteState extends DualLinkNode {
           }
           dg.field_z.f((byte) -127);
           while (PcmResampler.c(119)) {
-            dg.field_z.a(gi.field_f, AccountRequestState.field_b, true);
+            dg.field_z.a(SectorCacheStore.field_f, AccountRequestState.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

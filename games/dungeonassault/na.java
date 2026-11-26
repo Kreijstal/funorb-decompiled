@@ -4,7 +4,7 @@
 final class na extends hh {
     static ji field_D;
     static RgbSprite field_A;
-    static cc field_y;
+    static DiskCacheWorker field_y;
     private int field_F;
     private RgbSprite[] field_x;
     private int field_z;

@@ -43,7 +43,7 @@ final class hh extends IntrusiveNode {
               tb.field_p.a(param0 - 134);
             }
             if (hb.field_F != null) {
-              hb.field_F.d(-1);
+              hb.field_F.shutdown(-1);
             }
             if (jg.field_C != null) {
               try {

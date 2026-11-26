@@ -194,7 +194,7 @@ final class uo {
               var12.b(var12.field_pc, 124);
               var12.field_Zb = new UiPanel[ol.field_A];
               var12.field_jc = new UiPanel(0L, (UiPanel) null);
-              if ((1 << t.field_b & var14) != 0) {
+              if ((1 << DiskCacheWorker.field_b & var14) != 0) {
                 var12.field_pc.b(var12.field_jc, param6 + 124);
               }
               var12.field_ec = new UiPanel(0L, (UiPanel) null);
@@ -388,7 +388,7 @@ final class uo {
               var33_intLifetime1 = stackIn_66_0;
               var12.field_pc.a(83, -2 + (-var33_intLifetime1 + 365), Archive.field_f, var31, var33_intLifetime1);
               var34_int = Archive.field_j;
-              if ((var14Lifetime1 & 1 << t.field_b) != 0) {
+              if ((var14Lifetime1 & 1 << DiskCacheWorker.field_b) != 0) {
                 var50_ref = eg.field_r[var12.field_Ub];
                 var12.field_jc.field_Db = var50_ref;
                 var12.field_jc.a(92, var50_ref.field_x, var12.field_pc.field_db, 0, var34_int);
@@ -488,21 +488,21 @@ final class uo {
               }
               if (var12.field_Sb) {
                 var12.field_Ib.field_S = Vertigo2.a(new String[]{var32}, g.field_e, 111);
-                var12.field_Ib.a(101, var12.field_Fb - 2 * ia.field_G, Archive.field_f, var31, ia.field_G);
+                var12.field_Ib.a(101, var12.field_Fb - 2 * NetworkArchiveRequest.field_G, Archive.field_f, var31, NetworkArchiveRequest.field_G);
                 var31 = var31 + Archive.field_f;
               }
               if (var12.field_qc) {
                 var12.field_bc.field_S = Vertigo2.a(new String[]{var32}, kg.field_I, 81);
-                var12.field_bc.a(117, -(ia.field_G * 2) + var12.field_Fb, Archive.field_f, var31, ia.field_G);
+                var12.field_bc.a(117, -(NetworkArchiveRequest.field_G * 2) + var12.field_Fb, Archive.field_f, var31, NetworkArchiveRequest.field_G);
                 var31 = var31 + Archive.field_f;
               }
             }
-            var33 = rk.a((byte) -27, var32, var12.field_Lb);
+            var33 = ArchiveRequest.a((byte) -27, var32, var12.field_Lb);
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Rb.field_z.b(var33, -ia.field_G + var12.field_Fb - ia.field_G);
+              var34_intLifetime1 = var12.field_Rb.field_z.b(var33, -NetworkArchiveRequest.field_G + var12.field_Fb - NetworkArchiveRequest.field_G);
               var12.field_Rb.field_U = 256 * var12.field_ic / lp.field_D;
               var12.field_Rb.field_S = var33;
-              var12.field_Rb.a(param6 + 100, var12.field_Fb - ia.field_G * 2, var34_intLifetime1 * Archive.field_f, var31, ia.field_G);
+              var12.field_Rb.a(param6 + 100, var12.field_Fb - NetworkArchiveRequest.field_G * 2, var34_intLifetime1 * Archive.field_f, var31, NetworkArchiveRequest.field_G);
               var31 = var31 + var34_intLifetime1 * Archive.field_f;
             }
             if (var7_int == 0) {
@@ -551,7 +551,7 @@ final class uo {
                 if (var12.field_vc) {
                   stackIn_162_0 = to.field_a;
                 } else {
-                  stackIn_162_0 = ia.field_E;
+                  stackIn_162_0 = NetworkArchiveRequest.field_E;
                 }
               } else {
                 stackIn_162_0 = rm.field_E;

@@ -473,7 +473,7 @@ class id implements uk, pj {
               od.field_v.a((byte) 112);
             }
             if (ib.field_k != null) {
-              ib.field_k.a((byte) -103);
+              ib.field_k.shutdown((byte) -103);
             }
             if (!param0) {
               id.a(true);

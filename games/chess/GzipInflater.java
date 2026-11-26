@@ -77,7 +77,7 @@ final class GzipInflater {
           if (ln.field_Kb) {
             var6 = var6 | 1;
           }
-          if (on.field_a) {
+          if (DiskCacheWorker.field_a) {
             var6 = var6 | 4;
           }
           if (param0) {

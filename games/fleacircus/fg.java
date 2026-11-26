@@ -34,7 +34,7 @@ final class fg extends IntrusiveNode {
         try {
           pl.field_f = 0;
           var1_int = 61 % ((param0 + 43) / 47);
-          qh.field_z = 0;
+          DiskArchiveRequest.field_z = 0;
           qi.field_f = 0;
           kb.field_i = 0;
           DualLinkNode.field_o = 0;

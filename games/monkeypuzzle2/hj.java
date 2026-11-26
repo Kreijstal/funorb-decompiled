@@ -752,7 +752,7 @@ final class hj {
                 this.field_M = 320;
                 this.field_k = 480;
                 this.field_O = -14 + this.field_k;
-                uj.b(0);
+                DiskCacheWorker.b(0);
                 IterableNodeHashTable.field_c = IterableNodeHashTable.field_c - 1;
                 rb.a(IterableNodeHashTable.field_c, (byte) -58);
                 this.field_o = true;
@@ -771,7 +771,7 @@ final class hj {
                 this.field_M = 320;
                 this.field_k = 480;
                 this.field_O = -14 + this.field_k;
-                uj.b(0);
+                DiskCacheWorker.b(0);
                 IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
                 rb.a(IterableNodeHashTable.field_c, (byte) -58);
                 this.field_o = true;
@@ -1046,7 +1046,7 @@ final class hj {
                           this.field_M = 320;
                           this.field_I = -1;
                           this.field_O = -14 + this.field_k;
-                          uj.b(0);
+                          DiskCacheWorker.b(0);
                           vi.a(true);
                           IterableNodeHashTable.field_c = IterableNodeHashTable.field_c + 1;
                           rb.a(IterableNodeHashTable.field_c, (byte) -58);
@@ -1961,7 +1961,7 @@ final class hj {
           this.field_k = 480;
           this.field_nb = 0;
           this.field_O = this.field_k - 14;
-          uj.b(0);
+          DiskCacheWorker.b(0);
           IterableNodeHashTable.field_c = 0;
           rb.a(IterableNodeHashTable.field_c, (byte) -58);
           if (aa.field_a != 0) {

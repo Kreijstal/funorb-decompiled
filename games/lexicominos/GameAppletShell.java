@@ -309,7 +309,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (this == c.field_j &&
             !MouseWheelInput.field_d) {
-            dl.field_b = true;
+            SectorCacheStore.field_b = true;
             if (eh.field_a &&
               -mk.field_j + rf.correctedCurrentTimeMillis(0) > 1000L) {
               var2 = param0.getClipBounds();
@@ -428,7 +428,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           rk.field_m = true;
           vi.field_j = true;
-          dl.field_b = true;
+          SectorCacheStore.field_b = true;
           rl.field_O = false;
           mk.field_j = rf.correctedCurrentTimeMillis(0);
           return;
@@ -543,7 +543,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           rk.field_m = true;
-          dl.field_b = true;
+          SectorCacheStore.field_b = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +618,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (bc.a(false, (CharSequence) ((Object) var4)) &&
-                        !(si.a((byte) 117, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(ArchiveRequest.a((byte) 117, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a("wrongjava", 68);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -782,7 +782,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           fieldTemp$1 = wj.field_o;
           wj.field_o = wj.field_o + 1;
           if (fieldTemp$1 > 50) {
-            dl.field_b = true;
+            SectorCacheStore.field_b = true;
             wj.field_o = wj.field_o - 50;
             ug.field_y.setSize(AccountCreationResultPanel.field_sb, bk.field_d);
             ug.field_y.setVisible(true);

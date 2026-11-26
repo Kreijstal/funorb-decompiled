@@ -35,20 +35,20 @@ final class fn extends IntrusiveNode {
           }
           try {
             if (tl.field_m == 0) {
-              em.field_B = jl.field_fb.requestDirectSocket(fb.field_a, kb.field_a, (byte) 60);
+              ArchiveRequest.field_B = jl.field_fb.requestDirectSocket(fb.field_a, kb.field_a, (byte) 60);
               tl.field_m = tl.field_m + 1;
             }
             if (1 == tl.field_m) {
-              if (em.field_B.status == 2) {
+              if (ArchiveRequest.field_B.status == 2) {
                 stackIn_15_0 = tg.a(-1, -106);
                 return stackIn_15_0;
               }
-              if (em.field_B.status == 1) {
+              if (ArchiveRequest.field_B.status == 1) {
                 tl.field_m = tl.field_m + 1;
               }
             }
             if (tl.field_m == 2) {
-              mb.field_c = new BufferedSocket((java.net.Socket) (em.field_B.result), jl.field_fb);
+              mb.field_c = new BufferedSocket((java.net.Socket) (ArchiveRequest.field_B.result), jl.field_fb);
               var2 = new PacketBuffer(13);
               le.a(da.field_a, var2, ph.field_f, i.field_a, -91);
               var2.writeByte(15, 25564);
@@ -78,7 +78,7 @@ final class fn extends IntrusiveNode {
             }
             aj.field_c.a(mb.field_c, gl.field_o, 24458);
             tl.field_m = 0;
-            em.field_B = null;
+            ArchiveRequest.field_B = null;
             mb.field_c = null;
             stackIn_33_0 = 0;
             return stackIn_33_0;
@@ -278,7 +278,7 @@ final class fn extends IntrusiveNode {
           sj.field_d = hk.b(param2 ^ 3);
           MidiPcmStream.field_x = hk.b(0);
         }
-        if (nm.a(param0, sj.field_d, -827843803)) {
+        if (DiskCacheWorker.a(param0, sj.field_d, -827843803)) {
           return;
         }
         var3_int = param0;

@@ -340,7 +340,7 @@ final class GzipDecoder {
           return;
         }
         try {
-          gi.field_a = new rb(param8);
+          gi.field_a = new DiskCacheWorker(param8);
           wf.field_i = new oa(gb.field_d, gi.field_a);
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "hd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');

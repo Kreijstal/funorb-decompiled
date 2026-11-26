@@ -250,13 +250,13 @@ class PacketBuffer extends IntrusiveNode {
           if (param0 >= -13) {
             PacketBuffer.a(-118, (byte) -31);
           }
-          vl.field_d = ic.field_g;
+          DiskCacheWorker.field_d = ic.field_g;
           kd.field_d = GameAppletShell.field_m;
           GameAppletShell.field_m = false;
-          gi.field_e = eh.field_c;
+          gi.field_e = SectorCacheStore.field_c;
           AccountCreationResultPanel.field_fb = vg.field_p;
           bg.field_c = id.field_b;
-          eh.field_c = 0;
+          SectorCacheStore.field_c = 0;
           lg.field_a = sd.field_c;
         }
     }

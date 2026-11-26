@@ -31,7 +31,7 @@ final class il {
           }
           me.field_e = param0.field_I;
           cl.field_e = param1.field_I;
-          ab.d((byte) -42);
+          ArchiveRequest.d((byte) -42);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "il.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

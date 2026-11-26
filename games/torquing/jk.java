@@ -60,9 +60,9 @@ final class jk {
           if (param1 != -79) {
             jk.resetStaticState(81);
           }
-          nk.field_t = param2;
+          ArchiveRequest.field_t = param2;
           aq.field_c = true;
-          IsaacCipher.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, nk.field_t);
+          IsaacCipher.field_m = new mn(dc.field_a, pe.field_E, param0, ff.field_a, ArchiveRequest.field_t);
           dc.field_a.a(IsaacCipher.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

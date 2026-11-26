@@ -55,7 +55,7 @@ final class in {
           ml.field_w = on.field_c;
         }
         mn.b(param9, -127);
-        if (rk.field_y > 0) {
+        if (ArchiveRequest.field_y > 0) {
           ClientException.a(0, param5, param9, param3);
         }
         if (param8 != -66) {

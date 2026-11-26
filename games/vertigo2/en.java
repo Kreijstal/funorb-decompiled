@@ -125,7 +125,7 @@ final class en {
             return stackIn_3_0;
           }
           if (ba.field_d != 2) {
-            stackIn_7_0 = t.field_n;
+            stackIn_7_0 = DiskCacheWorker.field_n;
             return stackIn_7_0;
           }
           var8 = or.a(90, param2);

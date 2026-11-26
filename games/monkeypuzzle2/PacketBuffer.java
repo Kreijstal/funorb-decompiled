@@ -59,7 +59,7 @@ class PacketBuffer extends IntrusiveNode {
             throw new IllegalArgumentException("");
           }
           var5 = (CharSequence) ((Object) param1);
-          this.position = this.position + ob.a(-124, var5, this.payload, 0, this.position, param1.length());
+          this.position = this.position + NetworkArchiveRequest.a(-124, var5, this.payload, 0, this.position, param1.length());
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
@@ -476,7 +476,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte) 0;
           var5 = (CharSequence) ((Object) param0);
-          this.position = this.position + ob.a(-80, var5, this.payload, 0, this.position, param0.length());
+          this.position = this.position + NetworkArchiveRequest.a(-80, var5, this.payload, 0, this.position, param0.length());
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte) 0;

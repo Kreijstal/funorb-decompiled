@@ -29,7 +29,7 @@ final class ik {
           var2 = 1;
         } else {
           if (tf.field_h == null) {
-            gi.field_d = ImageProducerRasterBuffer.a(0, sh.field_u, param1 + 27137, 640, 0, 480);
+            gi.field_d = ImageProducerRasterBuffer.a(0, ArchiveRequest.field_u, param1 + 27137, 640, 0, 480);
           } else {
             gi.field_d = tf.field_h.a((byte) -88);
             nb.a(2, true);

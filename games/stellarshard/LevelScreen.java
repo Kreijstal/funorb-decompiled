@@ -54,19 +54,19 @@ final class LevelScreen extends ib {
             var3 = 10;
           }
           if (param0 == ProxyAuthenticationRequiredException.field_c &&
-            gi.field_f == 96) {
+            SectorCacheStore.field_f == 96) {
             this.field_l = 1;
             if ((var4 != 0) && (ProxyAuthenticationRequiredException.field_c == 8 &&
-              gi.field_f == 97)) {
+              SectorCacheStore.field_f == 97)) {
               this.field_l = 0;
             }
           } else {
             if (ProxyAuthenticationRequiredException.field_c == 8 &&
-              gi.field_f == 97) {
+              SectorCacheStore.field_f == 97) {
               this.field_l = 0;
             }
           }
-          if (gi.field_f == 98) {
+          if (SectorCacheStore.field_f == 98) {
             if (ProxyAuthenticationRequiredException.field_c != 0 &&
               ProxyAuthenticationRequiredException.field_c != 4 &&
               ProxyAuthenticationRequiredException.field_c != 1 &&
@@ -95,7 +95,7 @@ final class LevelScreen extends ib {
               return;
             }
           }
-          if (gi.field_f == 99) {
+          if (SectorCacheStore.field_f == 99) {
             if (ProxyAuthenticationRequiredException.field_c != 0 &&
               ProxyAuthenticationRequiredException.field_c != 4 &&
               ProxyAuthenticationRequiredException.field_c != 1 &&
@@ -895,7 +895,7 @@ final class LevelScreen extends ib {
                   return;
                 }
               }
-              ic.a(rk.field_b, param2, -1, false, 320, var5_int, param3);
+              ic.a(DiskCacheWorker.field_b, param2, -1, false, 320, var5_int, param3);
               if (var6 == 0) {
                 return;
               }
@@ -1054,10 +1054,10 @@ final class LevelScreen extends ib {
           if (param1 != -3) {
             this.c(-34, 99);
           }
-          if (gi.field_f != 96 ||
+          if (SectorCacheStore.field_f != 96 ||
             param0 != 8 &&
             ProxyAuthenticationRequiredException.field_c == 2) {
-            if (97 == gi.field_f && (param0 == 8 ||
+            if (97 == SectorCacheStore.field_f && (param0 == 8 ||
               ProxyAuthenticationRequiredException.field_c != 2)) {
               si.field_X = si.field_X + 1;
               if (si.field_X >= 3) {
@@ -1068,8 +1068,8 @@ final class LevelScreen extends ib {
                 return;
               }
             }
-            if (gi.field_f != 84 &&
-              83 != gi.field_f) {
+            if (SectorCacheStore.field_f != 84 &&
+              83 != SectorCacheStore.field_f) {
               return;
             }
             this.a(param1 ^ -427, param0);

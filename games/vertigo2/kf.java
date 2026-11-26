@@ -59,7 +59,7 @@ final class kf {
         java.applet.Applet var3;
         jb.a(0, SoftwareRasterizer.field_e + 640 >> 1, -640 + SoftwareRasterizer.field_e >> 1, -30486, SoftwareRasterizer.field_j);
         if (param0 == -7393) {
-          if (rk.field_y <= 0) {
+          if (ArchiveRequest.field_y <= 0) {
             if (!(0 >= ko.field_P) ||
               !(0 >= mp.field_b)) {
               if (null == jl.field_g) {
@@ -116,7 +116,7 @@ final class kf {
         }
         var3 = (java.applet.Applet) null;
         kf.a((byte) -91, (java.applet.Applet) null);
-        if (rk.field_y > 0) {
+        if (ArchiveRequest.field_y > 0) {
           if (jl.field_g == null) {
             stackIn_6_0 = ca.field_h;
             stackIn_7_1 = (param1) && (!ce.field_c);

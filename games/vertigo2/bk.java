@@ -47,7 +47,7 @@ final class bk {
           for (var3 = 0; al.field_y.length > var3; var3++) {
             var4 = ClientException.field_f[var3];
             if (var4 < 0) {
-              var5 = t.field_c;
+              var5 = DiskCacheWorker.field_c;
             } else {
               if (var4 == kg.field_G.selectedIndex) {
                 var5 = vm.field_b;

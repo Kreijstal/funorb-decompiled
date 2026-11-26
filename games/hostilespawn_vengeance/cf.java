@@ -57,7 +57,7 @@ class cf extends DualLinkNode {
             sc.a((byte) 118);
           }
           if (wb.field_S <= 0) {
-            ae.a(wd.field_a, 110, ResourceArchive.field_a);
+            ArchiveRequest.a(wd.field_a, 110, ResourceArchive.field_a);
           }
           return;
         }
@@ -78,7 +78,7 @@ class cf extends DualLinkNode {
           sc.a((byte) 118);
         }
         if (wb.field_S <= 0) {
-          ae.a(wd.field_a, 110, ResourceArchive.field_a);
+          ArchiveRequest.a(wd.field_a, 110, ResourceArchive.field_a);
         }
     }
 

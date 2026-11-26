@@ -37,7 +37,7 @@ final class lh {
           IntrusiveDeque.field_c = (ta) ((Object) cb.a("commonui", param0, -75, param1, "arezzo14bold"));
           var18 = new Sprite(param2.a("", "button.gif", -128), (java.awt.Component) ((Object) ie.field_e));
           df.a("commonui", param1, (byte) 118, "dropdown");
-          var5 = uj.a("commonui", "screen_options", param1, false);
+          var5 = DiskCacheWorker.a("commonui", "screen_options", param1, false);
           vj.field_d = new ai[4];
           oa.field_D = new ai[4];
           tf.field_a = new ai[4];

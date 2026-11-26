@@ -468,7 +468,7 @@ final class bl {
         } else {
           stackIn_8_0 = hh.field_p - 100;
         }
-        vf.field_w = stackIn_8_0;
+        ArchiveRequest.field_w = stackIn_8_0;
         if (null != gk.field_L) {
           stackIn_11_0 = ed.field_P - (wi.field_kb >> 1);
         } else {
@@ -488,12 +488,12 @@ final class bl {
             stackIn_19_0 = 480 - wi.field_kb >> 1;
           }
           var2 = stackIn_19_0;
-          vf.field_w = fa.a((byte) -127, var1, vf.field_w);
+          ArchiveRequest.field_w = fa.a((byte) -127, var1, ArchiveRequest.field_w);
           qc.field_w = fa.a((byte) -128, var2, qc.field_w);
         }
-        ti.field_A.b(204 + vf.field_w, qc.field_w - 28, (byte) 4);
-        tk.field_k.b(vf.field_w - 7, 20 + qc.field_w + wi.field_kb, (byte) 4);
-        PacketBuffer.field_n.b(7 + (vf.field_w + 200), qc.field_w + (wi.field_kb + 22), (byte) 4);
+        ti.field_A.b(204 + ArchiveRequest.field_w, qc.field_w - 28, (byte) 4);
+        tk.field_k.b(ArchiveRequest.field_w - 7, 20 + qc.field_w + wi.field_kb, (byte) 4);
+        PacketBuffer.field_n.b(7 + (ArchiveRequest.field_w + 200), qc.field_w + (wi.field_kb + 22), (byte) 4);
         stackIn_22_0 = ti.field_A;
         stackIn_23_1 = (null == gk.field_L) ? false : true;
         stackIn_22_0.field_w = stackIn_23_1;

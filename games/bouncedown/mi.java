@@ -26,18 +26,18 @@ final class mi {
         }
         this.field_a = 0;
         this.field_h = 0;
-        if (vh.field_e != 0) {
+        if (SectorCacheStore.field_e != 0) {
           this.field_d = pj.field_b;
           this.field_b = param1;
           this.field_g = true;
-          this.field_i = vh.field_e;
-          this.field_h = vh.field_e;
+          this.field_i = SectorCacheStore.field_e;
+          this.field_h = SectorCacheStore.field_e;
         }
         if (this.field_i == 0) {
           if (param2 != -798) {
             var5 = (he) null;
             mi.a(-29, -13, (he) null);
-            if (0 == vh.field_e &&
+            if (0 == SectorCacheStore.field_e &&
               n.field_m == 0) {
               this.field_i = 0;
             }
@@ -63,7 +63,7 @@ final class mi {
             }
             return;
           }
-          if (0 == vh.field_e &&
+          if (0 == SectorCacheStore.field_e &&
             n.field_m == 0) {
             this.field_i = 0;
             if (this.field_i != 0) {
@@ -124,7 +124,7 @@ final class mi {
           if (param2 != -798) {
             var5Lifetime1 = (he) null;
             mi.a(-29, -13, (he) null);
-            if (0 == vh.field_e &&
+            if (0 == SectorCacheStore.field_e &&
               n.field_m == 0) {
               this.field_i = 0;
             }
@@ -150,7 +150,7 @@ final class mi {
             }
             return;
           }
-          if (0 == vh.field_e &&
+          if (0 == SectorCacheStore.field_e &&
             n.field_m == 0) {
             this.field_i = 0;
             if (this.field_i != 0) {
@@ -212,7 +212,7 @@ final class mi {
         }
         this.field_d = this.field_d - 1;
         if (param2 == -798) {
-          if (0 == vh.field_e &&
+          if (0 == SectorCacheStore.field_e &&
             n.field_m == 0) {
             this.field_i = 0;
             if (this.field_i != 0) {
@@ -273,7 +273,7 @@ final class mi {
         }
         var5Lifetime2 = (he) null;
         mi.a(-29, -13, (he) null);
-        if (0 != vh.field_e) {
+        if (0 != SectorCacheStore.field_e) {
           if (this.field_i != 0) {
             return;
           }

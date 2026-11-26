@@ -18,7 +18,7 @@ final class bb {
             return true;
           }
           if (this != sg.field_d) {
-            return this == ik.field_d ? true : false;
+            return this == SectorCacheStore.field_d ? true : false;
           }
           return true;
         }
@@ -28,7 +28,7 @@ final class bb {
         if (this == sg.field_d) {
           return true;
         }
-        if (this != ik.field_d) {
+        if (this != SectorCacheStore.field_d) {
           return false;
         }
         return true;

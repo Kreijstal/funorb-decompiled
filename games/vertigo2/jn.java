@@ -56,7 +56,7 @@ final class jn {
 
     final static void a(int param0) {
         ga.a(nl.field_e, param0, param0 ^ 82);
-        ga.a(nq.field_G, 6, 86);
+        ga.a(DiskArchiveRequest.field_G, 6, 86);
         ga.a(ir.field_e, 8, param0 ^ 126);
         ga.a(aa.field_Jb, 13, 80);
         if (!mm.b(-12942)) {

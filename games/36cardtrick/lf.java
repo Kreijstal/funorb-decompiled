@@ -59,7 +59,7 @@ final class lf {
             if (null != bi.field_b.field_t) {
               ni.field_c = new tk(bi.field_b.field_t, 5200, 0);
               bi.field_b.field_t = null;
-              var6 = new hc(255, ni.field_c, new tk(bi.field_b.field_d, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ni.field_c, new tk(bi.field_b.field_d, 12000, 0), 2097152);
             }
             var7 = null;
             if (ni.field_c != null) {
@@ -70,9 +70,9 @@ final class lf {
                 rk.field_Z[param3] = new tk(bi.field_b.field_o[param3], 12000, 0);
                 bi.field_b.field_o[param3] = null;
               }
-              var7 = new hc(param3, ni.field_c, rk.field_Z[param3], 2097152);
+              var7 = new SectorCacheStore(param3, ni.field_c, rk.field_Z[param3], 2097152);
             }
-            var8 = ja.field_b.a(param3, 72, param5, (hc) (var6), (hc) (var7));
+            var8 = ja.field_b.a(param3, 72, param5, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param1) {
               var8.a(param4 ^ 25408);
             }

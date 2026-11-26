@@ -110,16 +110,16 @@ final class lb extends DualLinkNode {
         int var7_int = (int)(Math.cos((double)(qn.field_r & 511) * 0.03681553890925539) * 65536.0);
         int var8 = (int)(65536.0 * Math.sin(0.03681553890925539 * (double)(511 & qn.field_r)));
         sk var9 = (sk) (param5.a(96, 455, -var8 / 256, -192, var7_int / 256));
-        rl.field_u[11] = -var7_int;
-        rl.field_u[9] = -var8;
+        ArchiveRequest.field_u[11] = -var7_int;
+        ArchiveRequest.field_u[9] = -var8;
         if (param1 < 32) {
           return;
         }
         try {
-          rl.field_u[2] = (int)(param4 * (16.666666666666668 * (double)param2));
-          rl.field_u[3] = -var7_int;
-          rl.field_u[5] = var8;
-          var9.a(tj.field_A, rl.field_u);
+          ArchiveRequest.field_u[2] = (int)(param4 * (16.666666666666668 * (double)param2));
+          ArchiveRequest.field_u[3] = -var7_int;
+          ArchiveRequest.field_u[5] = var8;
+          var9.a(tj.field_A, ArchiveRequest.field_u);
           ti.a();
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "lb.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');

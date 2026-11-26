@@ -473,7 +473,7 @@ final class wj extends ph {
                 if (var19Lifetime1 != 0 &&
                   uj.field_l == 1) {
                   stackIn_133_0 = eh.field_c;
-                  stackIn_133_1 = lm.field_A;
+                  stackIn_133_1 = NetworkArchiveRequest.field_A;
                   if (var18Lifetime1 != 0) {
                     stackIn_134_2 = 21;
                   } else {
@@ -539,7 +539,7 @@ final class wj extends ph {
             if (stackIn_162_0Lifetime1 == -2) {
               if (uj.field_l == 1 &&
                 ej.d((byte) 57)) {
-                eh.field_c.a(lm.field_A[8], 100, uh.field_i);
+                eh.field_c.a(NetworkArchiveRequest.field_A[8], 100, uh.field_i);
               }
               mf.a(false, 5);
             }

@@ -6,7 +6,7 @@ final class jc {
     static int field_b;
     static pe field_d;
     static int field_e;
-    static uj field_c;
+    static DiskCacheWorker field_c;
     static int[] field_a;
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {

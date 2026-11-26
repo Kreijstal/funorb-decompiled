@@ -1602,7 +1602,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_password_confirm", 24);
                 if (var2 != null) {
-                  um.field_h = PcmResampler.a(124, var2);
+                  SectorCacheStore.field_h = PcmResampler.a(124, var2);
                 }
                 var2 = vj.a("create_email", 24);
                 if (var2 != null) {

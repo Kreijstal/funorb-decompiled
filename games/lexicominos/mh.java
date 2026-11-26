@@ -110,7 +110,7 @@ final class mh extends nb implements jk {
               }
             }
           } else {
-            dc.c(255);
+            NetworkArchiveRequest.c(255);
           }
           if (param2 == 215535458) {
             return;

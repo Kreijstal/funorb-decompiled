@@ -430,12 +430,12 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           String stackIn_29_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          hi var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          hi var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = TrackController.field_F ? 1 : 0;
           try {
             if (null != this.field_q) {
@@ -453,7 +453,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             this.field_l = null;
             this.field_a.position = 0;
             while (true) {
-              var4_ref = (hi) (this.field_c.a(-58));
+              var4_ref = (NetworkArchiveRequest) (this.field_c.a(-58));
               if (var4_ref != null) {
                 this.field_f.a(var4_ref, true);
                 continue;
@@ -461,7 +461,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (hi) (this.field_k.a(-58));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_k.a(-58));
               if (var4_refLifetime1 != null) {
                 this.field_h.a(var4_refLifetime1, true);
                 continue;
@@ -521,7 +521,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           int stackIn_78_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          hi var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -536,10 +536,10 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          hi var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          hi var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = TrackController.field_F ? 1 : 0;
           if (null != this.field_q) {
             var2_long = qg.correctedCurrentTimeMillis(false);
@@ -573,23 +573,23 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
           }
           try {
             this.field_q.a(true);
-            var2 = (hi) (this.field_f.b(48));
+            var2 = (NetworkArchiveRequest) (this.field_f.b(48));
             while (var2 != null) {
               this.field_g.position = 0;
               this.field_g.writeByte(1, (byte) -96);
               this.field_g.writeLong40(2488, var2.field_m);
               this.field_q.a(-124, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_c.a(var2, true);
-              var2 = (hi) (this.field_f.a((byte) 108));
+              var2 = (NetworkArchiveRequest) (this.field_f.a((byte) 108));
             }
-            var2Lifetime1 = (hi) (this.field_h.b(48));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_h.b(48));
             while (var2Lifetime1 != null) {
               this.field_g.position = 0;
               this.field_g.writeByte(0, (byte) -74);
               this.field_g.writeLong40(2488, var2Lifetime1.field_m);
               this.field_q.a(-106, this.field_g.payload, this.field_g.payload.length, 0);
               this.field_k.a(var2Lifetime1, true);
-              var2Lifetime1 = (hi) (this.field_h.a((byte) 113));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_h.a((byte) 113));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
               var3_int = this.field_q.b(0);
@@ -643,24 +643,24 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (hi) (this.field_c.b(48));
+                        var14_ref = (NetworkArchiveRequest) (this.field_c.b(48));
                         while (var14_ref != null) {
                           if (var12 == var14_ref.field_m) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (hi) (this.field_c.a((byte) 118));
+                          var14_ref = (NetworkArchiveRequest) (this.field_c.a((byte) 118));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (hi) (this.field_k.b(48));
+                        var14_ref = (NetworkArchiveRequest) (this.field_k.b(48));
                         while (var14_ref != null) {
                           if (~var12 == ~var14_ref.field_m) {
                             break;
                           }
-                          var14_ref = (hi) (this.field_k.a((byte) 109));
+                          var14_ref = (NetworkArchiveRequest) (this.field_k.a((byte) 109));
                         }
                       }
                       if (var14_ref == null) {

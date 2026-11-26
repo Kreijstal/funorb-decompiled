@@ -108,7 +108,7 @@ final class f {
           if (gi.a(param0, -123, param2)) {
             return false;
           }
-          if (la.a(param2, (byte) -115, param0)) {
+          if (ArchiveRequest.a(param2, (byte) -115, param0)) {
             return false;
           }
           if (!g.a(param2, param0, -1)) {

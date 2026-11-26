@@ -29,7 +29,7 @@ final class oc extends kl {
         kc.field_Q[lc.field_d] = param0;
         ol.field_k[lc.field_d] = lc.field_d;
         i.field_t[lc.field_d] = param5;
-        if (!(param5 <= ln.field_d)) {
+        if (!(param5 <= SectorCacheStore.field_d)) {
           n.field_d = param5;
         }
         if (param1 >= -48) {

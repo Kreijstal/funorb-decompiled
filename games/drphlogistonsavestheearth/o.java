@@ -35,7 +35,7 @@ final class o extends em {
           } else {
             if (!s.a((byte) -81)) {
               SoftwareRasterizer.clearRaster();
-              ik.a(param1 + 11435, 320, 240);
+              SectorCacheStore.a(param1 + 11435, 320, 240);
               DrPhlogistonSavesTheEarth.a(0, param1 - 423, param2, 0);
             } else {
               if (af.field_b != 0) {

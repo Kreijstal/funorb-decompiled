@@ -81,8 +81,8 @@ final class rg {
         }
         try {
           qd.field_q = false;
-          if (sp.field_a != null &&
-            sp.field_a.field_C) {
+          if (SectorCacheStore.field_a != null &&
+            SectorCacheStore.field_a.field_C) {
             if (param1 != 8) {
             } else {
               param1 = 2;
@@ -105,7 +105,7 @@ final class rg {
               if (ud.field_U) {
                 param0 = SecondaryNodeDeque.field_a;
               }
-              sp.field_a.a(param1, 1833, param0);
+              SectorCacheStore.field_a.a(param1, 1833, param0);
             }
             if (param1 != 256 &&
               param1 != 10) {

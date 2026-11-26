@@ -94,7 +94,7 @@ final class sf extends hl {
             }
           }
           var7 = stackIn_16_0;
-          ab.a(var7, param4.field_y, param1 + param4.field_u, (param4.field_C - this.field_x[0].field_u >> 1) + param4.field_r + param2, -104, this.field_x);
+          ArchiveRequest.a(var7, param4.field_y, param1 + param4.field_u, (param4.field_C - this.field_x[0].field_u >> 1) + param4.field_r + param2, -104, this.field_x);
           stackIn_19_0 = (param3) ? 16777215 : 7105644;
           var8 = stackIn_19_0;
           this.field_e.a(param4.field_v, param1 + param4.field_u, param2 - (-param4.field_r + 2), param4.field_y, param4.field_C, var8, -1, 1, 1, this.field_e.field_C);

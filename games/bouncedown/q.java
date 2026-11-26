@@ -182,7 +182,7 @@ final class q extends lc implements rf, rc {
         super(0, 0, 496, 0, (fc) null);
         this.field_E = new ti("", (sk) null, 12);
         jd var1 = new jd(qj.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, sg.field_a.field_s, -1, 2147483647, true);
-        lk var2 = new lk(vh.field_d, var1, (sk) null);
+        lk var2 = new lk(SectorCacheStore.field_d, var1, (sk) null);
         this.field_z = new wd(ClientException.field_b, (sk) null);
         this.field_D = new wd(qa.field_g, (sk) null);
         this.field_E.field_q = ej.field_e;

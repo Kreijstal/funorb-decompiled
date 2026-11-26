@@ -565,9 +565,9 @@ final class pf extends pn implements Cloneable {
         }
         if (param1 == 24 &&
           param2 == 24) {
-          wl.field_p[this.field_s][this.field_o].d(param4, param5, var7);
+          ArchiveRequest.field_p[this.field_s][this.field_o].d(param4, param5, var7);
         } else {
-          wl.field_p[this.field_s][this.field_o].a(param4, param5, 2 * param1, 2 * param2, var7);
+          ArchiveRequest.field_p[this.field_s][this.field_o].a(param4, param5, 2 * param1, 2 * param2, var7);
         }
         var8 = 76 % ((74 - param0) / 41);
     }

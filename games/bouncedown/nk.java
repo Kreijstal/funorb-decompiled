@@ -144,12 +144,12 @@ final class nk {
                       wd.field_x = stackIn_89_0;
                       break regionExit2;
                     }
-                    md.field_w = md.field_w + param0;
-                    if (0 > md.field_w) {
-                      md.field_w = 0;
+                    DiskArchiveRequest.field_w = DiskArchiveRequest.field_w + param0;
+                    if (0 > DiskArchiveRequest.field_w) {
+                      DiskArchiveRequest.field_w = 0;
                     }
-                    if (md.field_w > 256) {
-                      md.field_w = 256;
+                    if (DiskArchiveRequest.field_w > 256) {
+                      DiskArchiveRequest.field_w = 256;
                       break regionExit2;
                     }
                     var4 = -114 / ((36 - param1) / 33);
@@ -227,7 +227,7 @@ final class nk {
                       sj.field_f = null;
                       ch.field_h.requestFocus();
                     }
-                    tc.a(vi.b(0), 6091);
+                    tc.a(DiskCacheWorker.b(0), 6091);
                     break regionExit2;
                   case 11:
                   case 14:
@@ -819,7 +819,7 @@ final class nk {
             this.a(this.field_g + 2, var5Lifetime1, var6Lifetime1, od.field_f.b(var21) / 2 + (var4Lifetime1 - 35), 21641);
             var22 = "l";
             var6Lifetime1 = var22;
-            var7Lifetime2 = md.field_w / 2 + var4Lifetime1;
+            var7Lifetime2 = DiskArchiveRequest.field_w / 2 + var4Lifetime1;
             this.a(this.field_g, var5Lifetime1, var6Lifetime1, -35 + var7Lifetime2 + od.field_f.b(var22) / 2, param1 - 16720247);
           }
         }
@@ -841,7 +841,7 @@ final class nk {
           }
           var9Lifetime3 = stackIn_180_0;
           var8Lifetime4 -= 24;
-          if (!vh.a(0, (byte) 88) &&
+          if (!SectorCacheStore.a(0, (byte) 88) &&
             (var9Lifetime3 & 512) <= 0) {
             this.a(-6 + (var8Lifetime4 - 4), -4 + var7Lifetime3Lifetime1 - 6, 53, 4, 373);
           } else {
@@ -862,7 +862,7 @@ final class nk {
             var12Lifetime2 = 1;
             if (var11 == 9 &&
               (var9Lifetime3 & 1 << var11) == 0 &&
-              !vh.a(0, (byte) 88)) {
+              !SectorCacheStore.a(0, (byte) 88)) {
               var12Lifetime2 = 0;
             }
             regionExit2: {
@@ -1031,7 +1031,7 @@ final class nk {
           this.field_j) {
           if (this.field_i != 5 &&
             this.field_i != 6) {
-            if ((vh.field_e == 1)) {
+            if ((SectorCacheStore.field_e == 1)) {
               this.a(0, (byte) 114, true);
             }
             decompiledFrameRemainder2 = false;
@@ -1060,11 +1060,11 @@ final class nk {
               if (this.field_i != 5) {
                 stackIn_74_1 = jd.field_a;
               } else {
-                stackIn_74_1 = md.field_w;
+                stackIn_74_1 = DiskArchiveRequest.field_w;
               }
               if (stackIn_73_0 < stackIn_74_1 / 2) {
                 if (this.field_i == 5) {
-                  stackIn_78_1 = md.field_w;
+                  stackIn_78_1 = DiskArchiveRequest.field_w;
                 } else {
                   stackIn_78_1 = jd.field_a;
                 }
@@ -1074,11 +1074,11 @@ final class nk {
               if (this.field_i != 5) {
                 stackIn_82_1 = jd.field_a;
               } else {
-                stackIn_82_1 = md.field_w;
+                stackIn_82_1 = DiskArchiveRequest.field_w;
               }
               if (stackIn_81_0 > stackIn_82_1 / 2) {
                 if (this.field_i == 5) {
-                  stackIn_86_1 = md.field_w;
+                  stackIn_86_1 = DiskArchiveRequest.field_w;
                 } else {
                   stackIn_86_1 = jd.field_a;
                 }

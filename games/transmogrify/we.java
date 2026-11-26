@@ -76,7 +76,7 @@ final class we {
                 var19 = var17 & 65280;
                 incrementValue$1 = param10;
                 param10++;
-                param8[incrementValue$1] = cl.b(vg.c(16711708, var19 * var16 + var12 * var15) >> 8, vg.c(var15 * var11_int + var18 * var16 >> 8, 16711935));
+                param8[incrementValue$1] = DiskArchiveRequest.b(vg.c(16711708, var19 * var16 + var12 * var15) >> 8, vg.c(var15 * var11_int + var18 * var16 >> 8, 16711935));
               }
             }
             param0 = param0 + param4;

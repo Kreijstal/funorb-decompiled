@@ -149,7 +149,7 @@ class DualLinkNode extends IntrusiveNode {
           return;
         }
         try {
-          dl.field_s = param1;
+          ArchiveRequest.field_s = param1;
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "pa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

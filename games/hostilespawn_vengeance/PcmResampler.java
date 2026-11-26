@@ -159,8 +159,8 @@ final class PcmResampler {
                 var10 = -12 + var3;
                 var11 = var4 - 12;
                 gl.a(var10 << 4, var11 << 4, 384, 128, ni.field_c);
-                if (um.field_e > 0) {
-                  SoftwareRasterizer.addRadialGlow(var10 << 4, var11 << 4, Math.abs(-um.field_e + 50) + 24 << 4, um.field_e, VolumeRampingMidiPcmStream.field_bb);
+                if (SectorCacheStore.field_e > 0) {
+                  SoftwareRasterizer.addRadialGlow(var10 << 4, var11 << 4, Math.abs(-SectorCacheStore.field_e + 50) + 24 << 4, SectorCacheStore.field_e, VolumeRampingMidiPcmStream.field_bb);
                 }
                 if (0 < eh.field_g) {
                   var12_ref_bd__ = ng.field_p[nh.field_H];

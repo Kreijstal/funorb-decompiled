@@ -89,7 +89,7 @@ final class eb {
             var12 = new Sprite(195, 221);
             var6 = var12.field_u / 2;
             var12.e();
-            gi.field_b.b(fb.a(ra.field_x, -103, new String[]{t.field_q}), var6, 40, 16777215, -1);
+            gi.field_b.b(fb.a(NetworkArchiveRequest.field_x, -103, new String[]{t.field_q}), var6, 40, 16777215, -1);
             ah.field_d.b(fb.a(ic.field_c, 118, new String[]{t.field_q}), var6, 60, 16777215, -1);
             gi.field_b.b(fb.a(vk.field_t, 118, new String[]{ClientException.field_c}), var6, 110, 16777215, -1);
             ah.field_d.b(fb.a(vg.field_a, -15, new String[]{ClientException.field_c}), var6, 130, 16777215, -1);
@@ -184,15 +184,15 @@ final class eb {
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(wc.field_b);
           }
-          if (ik.field_q != null &&
+          if (ArchiveRequest.field_q != null &&
             null != ah.field_d) {
             var30 = SoftwareRasterizer.field_a;
             var2Lifetime2 = SoftwareRasterizer.field_j;
             var3Lifetime2 = SoftwareRasterizer.field_f;
             SoftwareRasterizer.saveClip(wc.field_b);
             var16 = new Sprite(412, 43);
-            var17 = fb.a(jh.field_f, -115, new String[]{ik.field_q});
-            ik.field_q = null;
+            var17 = fb.a(jh.field_f, -115, new String[]{ArchiveRequest.field_q});
+            ArchiveRequest.field_q = null;
             var16.e();
             ah.field_d.a(var17, 3, 3, var16.field_u - 6, var16.field_v - 6, 16777215, -1, 0, 1, ah.field_d.field_q + ah.field_d.field_p);
             hh.a(0, 0, 3, var16.field_v, false, 1, var16, var16.field_u);

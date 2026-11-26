@@ -35,27 +35,27 @@ abstract class c extends GameApplet {
                   if (var3 != 0) {
                     AccountNameAvailabilityValidator.a(2, eg.field_f);
                     AccountRequestState.a((byte) 20);
-                    stackIn_26_1 = (null != gj.field_a);
+                    stackIn_26_1 = (null != DiskCacheWorker.field_a);
                     discarded$3 = this.a(stackIn_26_1, false, 10);
                   }
                 } else {
                   AccountNameAvailabilityValidator.a(2, eg.field_f);
                   if (var3 != 0) {
                     AccountRequestState.a((byte) 20);
-                    stackIn_26_1 = (null != gj.field_a);
+                    stackIn_26_1 = (null != DiskCacheWorker.field_a);
                     discarded$3 = this.a(stackIn_26_1, false, 10);
                   }
                 }
               } else {
                 AccountRequestState.a((byte) 20);
                 if (var3 != 0) {
-                  stackIn_26_1 = (null != gj.field_a);
+                  stackIn_26_1 = (null != DiskCacheWorker.field_a);
                   discarded$3 = this.a(stackIn_26_1, false, 10);
                 }
               }
             }
           } else {
-            stackIn_26_1 = (null != gj.field_a);
+            stackIn_26_1 = (null != DiskCacheWorker.field_a);
             discarded$3 = this.a(stackIn_26_1, false, 10);
           }
           var2_int = -98 % ((param0 + 32) / 51);
@@ -101,2986 +101,2986 @@ abstract class c extends GameApplet {
             }
             void runChunk0() throws java.lang.RuntimeException {
                 gk.field_d = param1;
-                var2 = hc.a("loginm3", (byte) -127);
+                var2 = SectorCacheStore.a("loginm3", (byte) -127);
                 if (null != var2) {
                   ImageProducerRasterBuffer.field_k = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("loginm2", (byte) -127);
+                var2 = SectorCacheStore.a("loginm2", (byte) -127);
                 if (var2 != null) {
                   e.field_f = GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("loginm1", (byte) -127);
+                var2 = SectorCacheStore.a("loginm1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("idlemessage20min", (byte) -127);
+                var2 = SectorCacheStore.a("idlemessage20min", (byte) -127);
                 if (null != var2) {
                   jc.field_S = GzipInflater.a(var2, (byte) 113);
                 }
-                var2 = hc.a("error_js5crc", (byte) -127);
+                var2 = SectorCacheStore.a("error_js5crc", (byte) -127);
                 if (null != var2) {
                   kk.field_a = GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("error_js5io", (byte) -127);
+                var2 = SectorCacheStore.a("error_js5io", (byte) -127);
                 if (var2 != null) {
                   ma.field_b = GzipInflater.a(var2, (byte) 126);
                 }
-                var2 = hc.a("error_js5connect_full", (byte) -127);
+                var2 = SectorCacheStore.a("error_js5connect_full", (byte) -127);
                 if (var2 != null) {
                   rh.field_g = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("error_js5connect", (byte) -127);
+                var2 = SectorCacheStore.a("error_js5connect", (byte) -127);
                 if (null != var2) {
                   ClientException.field_c = GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("login_gameupdated", (byte) -127);
+                var2 = SectorCacheStore.a("login_gameupdated", (byte) -127);
                 if (var2 != null) {
                   ve.field_b = GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("create_unable", (byte) -127);
+                var2 = SectorCacheStore.a("create_unable", (byte) -127);
                 if (var2 != null) {
                   qk.field_i = GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("create_ineligible", (byte) -127);
+                var2 = SectorCacheStore.a("create_ineligible", (byte) -127);
                 if (var2 != null) {
                   pa.field_N = GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("usernameprompt", (byte) -127);
+                var2 = SectorCacheStore.a("usernameprompt", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("passwordprompt", (byte) -127);
+                var2 = SectorCacheStore.a("passwordprompt", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("andagainprompt", (byte) -127);
+                var2 = SectorCacheStore.a("andagainprompt", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("ticketing_read", (byte) -127);
+                var2 = SectorCacheStore.a("ticketing_read", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("ticketing_ignore", (byte) -127);
+                var2 = SectorCacheStore.a("ticketing_ignore", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("ticketing_oneunread", (byte) -127);
+                var2 = SectorCacheStore.a("ticketing_oneunread", (byte) -127);
                 if (var2 != null) {
                   dh.field_g = GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("ticketing_xunread", (byte) -127);
+                var2 = SectorCacheStore.a("ticketing_xunread", (byte) -127);
                 if (null != var2) {
                   nc.field_a = GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("ticketing_gotowebsite", (byte) -127);
+                var2 = SectorCacheStore.a("ticketing_gotowebsite", (byte) -127);
                 if (null != var2) {
                   fk.field_l = GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("ticketing_waitingformessages", (byte) -127);
+                var2 = SectorCacheStore.a("ticketing_waitingformessages", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("mu_chat_on", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_on", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("mu_chat_friends", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_friends", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("mu_chat_off", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_off", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("mu_chat_lobby", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_lobby", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("mu_chat_public", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_public", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("mu_chat_ignore", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_ignore", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("mu_chat_tips", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_tips", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("mu_chat_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("mu_chat_private", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_private", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("mu_x_entered_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_entered_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("mu_x_joined_your_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_joined_your_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("mu_x_entered_other_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_entered_other_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("mu_x_left_lobby", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_left_lobby", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("mu_x_lost_con", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_lost_con", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("mu_x_cannot_join_full", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_cannot_join_full", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("mu_x_cannot_join_inprogress", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_cannot_join_inprogress", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("mu_x_declined_invite", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_declined_invite", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("mu_x_withdrew_request", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_withdrew_request", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("mu_x_removed", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_removed", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("mu_x_dropped_out", (byte) -127);
+                var2 = SectorCacheStore.a("mu_x_dropped_out", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("mu_entered_other_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_entered_other_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("mu_game_is_full", (byte) -127);
+                var2 = SectorCacheStore.a("mu_game_is_full", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("mu_game_has_started", (byte) -127);
+                var2 = SectorCacheStore.a("mu_game_has_started", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("mu_you_declined_invite", (byte) -127);
+                var2 = SectorCacheStore.a("mu_you_declined_invite", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("mu_invite_withdrawn", (byte) -127);
+                var2 = SectorCacheStore.a("mu_invite_withdrawn", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("mu_request_declined", (byte) -127);
+                var2 = SectorCacheStore.a("mu_request_declined", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("mu_request_withdrawn", (byte) -127);
+                var2 = SectorCacheStore.a("mu_request_withdrawn", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("mu_all_players_have_left", (byte) -127);
+                var2 = SectorCacheStore.a("mu_all_players_have_left", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("mu_lobby_name", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_name", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("mu_lobby_rating", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_rating", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("mu_lobby_friend_add", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_friend_add", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("mu_lobby_friend_rm", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_friend_rm", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("mu_lobby_name_add", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_name_add", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("mu_lobby_name_rm", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_name_rm", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("mu_lobby_location", (byte) -127);
+                var2 = SectorCacheStore.a("mu_lobby_location", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("mu_gamelist_all_games", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_all_games", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("mu_gamelist_status", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_status", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 113);
                 }
-                var2 = hc.a("mu_gamelist_owner", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_owner", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("mu_gamelist_players", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_players", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("mu_gamelist_avg_rating", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_avg_rating", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("mu_gamelist_options", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_options", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("mu_gamelist_elapsed_time", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gamelist_elapsed_time", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("mu_play_rated", (byte) -127);
+                var2 = SectorCacheStore.a("mu_play_rated", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 113);
                 }
-                var2 = hc.a("mu_create_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mu_create_unrated", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("mu_options", (byte) -127);
+                var2 = SectorCacheStore.a("mu_options", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("mu_options_whocanjoin", (byte) -127);
+                var2 = SectorCacheStore.a("mu_options_whocanjoin", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("mu_options_players", (byte) -127);
+                var2 = SectorCacheStore.a("mu_options_players", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("mu_options_dontmind", (byte) -127);
+                var2 = SectorCacheStore.a("mu_options_dontmind", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("mu_options_allow_spectate", (byte) -127);
+                var2 = SectorCacheStore.a("mu_options_allow_spectate", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("mu_options_ratedgametype", (byte) -127);
+                var2 = SectorCacheStore.a("mu_options_ratedgametype", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("yes", (byte) -127);
+                var2 = SectorCacheStore.a("yes", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("no", (byte) -127);
+                var2 = SectorCacheStore.a("no", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("mu_invite_players", (byte) -127);
+                var2 = SectorCacheStore.a("mu_invite_players", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("close", (byte) -127);
+                var2 = SectorCacheStore.a("close", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("add_x_to_friends", (byte) -127);
+                var2 = SectorCacheStore.a("add_x_to_friends", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("add_x_to_ignore", (byte) -127);
+                var2 = SectorCacheStore.a("add_x_to_ignore", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("rm_x_from_friends", (byte) -127);
+                var2 = SectorCacheStore.a("rm_x_from_friends", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("rm_x_from_ignore", (byte) -127);
+                var2 = SectorCacheStore.a("rm_x_from_ignore", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("send_pm_to_x", (byte) -127);
+                var2 = SectorCacheStore.a("send_pm_to_x", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("send_qc_to_x", (byte) -127);
+                var2 = SectorCacheStore.a("send_qc_to_x", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("send_pm", (byte) -127);
+                var2 = SectorCacheStore.a("send_pm", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("invite_accept_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("invite_accept_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("invite_decline_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("invite_decline_xs_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("join_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("join_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("join_request_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("join_request_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("join_withdraw_request_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("join_withdraw_request_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mu_gameopt_kick_x_from_this_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gameopt_kick_x_from_this_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("mu_gameopt_withdraw_invite_to_x", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gameopt_withdraw_invite_to_x", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("mu_gameopt_accept_x_into_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gameopt_accept_x_into_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("mu_gameopt_reject_x_from_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gameopt_reject_x_from_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("mu_gameopt_invite_x_to_game", (byte) -127);
+                var2 = SectorCacheStore.a("mu_gameopt_invite_x_to_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("report_x_for_abuse", (byte) -127);
+                var2 = SectorCacheStore.a("report_x_for_abuse", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("unable_to_send_message_password_a", (byte) -127);
+                var2 = SectorCacheStore.a("unable_to_send_message_password_a", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("unable_to_send_message_password_b", (byte) -127);
+                var2 = SectorCacheStore.a("unable_to_send_message_password_b", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("mu_chat_lobby_show_all", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_lobby_show_all", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("mu_chat_lobby_friends_only", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_lobby_friends_only", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("mu_chat_lobby_friends", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_lobby_friends", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("mu_chat_lobby_hide", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_lobby_hide", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("mu_chat_game_show_all", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_game_show_all", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("mu_chat_game_friends_only", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_game_friends_only", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("mu_chat_game_friends", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_game_friends", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("mu_chat_game_hide", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_game_hide", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("mu_chat_pm_show_all", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_pm_show_all", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("mu_chat_pm_friends_only", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_pm_friends_only", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("mu_chat_pm_friends", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_pm_friends", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mu_chat_invisible_and_silent_mode", (byte) -127);
+                var2 = SectorCacheStore.a("mu_chat_invisible_and_silent_mode", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("you_have_been_removed_from_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("you_have_been_removed_from_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("your_rating_is_x", (byte) -127);
+                var2 = SectorCacheStore.a("your_rating_is_x", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("you_are_on_x_server", (byte) -127);
+                var2 = SectorCacheStore.a("you_are_on_x_server", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("rated_game", (byte) -127);
+                var2 = SectorCacheStore.a("rated_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("unrated_game", (byte) -127);
+                var2 = SectorCacheStore.a("unrated_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("rated_game_tips", (byte) -127);
+                var2 = SectorCacheStore.a("rated_game_tips", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("searching_for_opponent_singular", (byte) -127);
+                var2 = SectorCacheStore.a("searching_for_opponent_singular", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("searching_for_opponents_plural", (byte) -127);
+                var2 = SectorCacheStore.a("searching_for_opponents_plural", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("find_opponent_singular", (byte) -127);
+                var2 = SectorCacheStore.a("find_opponent_singular", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("find_opponents_plural", (byte) -127);
+                var2 = SectorCacheStore.a("find_opponents_plural", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("rated_game_tips_setup_singular", (byte) -127);
+                var2 = SectorCacheStore.a("rated_game_tips_setup_singular", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("rated_game_tips_setup_plural", (byte) -127);
+                var2 = SectorCacheStore.a("rated_game_tips_setup_plural", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("waiting_to_start_hint", (byte) -127);
+                var2 = SectorCacheStore.a("waiting_to_start_hint", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("your_game", (byte) -127);
+                var2 = SectorCacheStore.a("your_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("game_full", (byte) -127);
+                var2 = SectorCacheStore.a("game_full", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("join_requests_one", (byte) -127);
+                var2 = SectorCacheStore.a("join_requests_one", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("join_requests_many", (byte) -127);
+                var2 = SectorCacheStore.a("join_requests_many", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 126);
                 }
-                var2 = hc.a("xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("xs_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("waiting_for_x_to_start_game", (byte) -127);
+                var2 = SectorCacheStore.a("waiting_for_x_to_start_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("game_options_changed", (byte) -127);
+                var2 = SectorCacheStore.a("game_options_changed", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("players_x_of_y", (byte) -127);
+                var2 = SectorCacheStore.a("players_x_of_y", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("message_lobby", (byte) -127);
+                var2 = SectorCacheStore.a("message_lobby", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("quickchat_lobby", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_lobby", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("message_game", (byte) -127);
+                var2 = SectorCacheStore.a("message_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("message_team", (byte) -127);
+                var2 = SectorCacheStore.a("message_team", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("quickchat_game", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("kick", (byte) -127);
+                var2 = SectorCacheStore.a("kick", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("inviting_x", (byte) -127);
+                var2 = SectorCacheStore.a("inviting_x", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("x_wants_to_join", (byte) -127);
+                var2 = SectorCacheStore.a("x_wants_to_join", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("accept", (byte) -127);
+                var2 = SectorCacheStore.a("accept", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("reject", (byte) -127);
+                var2 = SectorCacheStore.a("reject", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("invite", (byte) -127);
+                var2 = SectorCacheStore.a("invite", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("status_concluded", (byte) -127);
+                var2 = SectorCacheStore.a("status_concluded", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("status_spectate", (byte) -127);
+                var2 = SectorCacheStore.a("status_spectate", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("status_playing", (byte) -127);
+                var2 = SectorCacheStore.a("status_playing", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("status_join", (byte) -127);
+                var2 = SectorCacheStore.a("status_join", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("status_private", (byte) -127);
+                var2 = SectorCacheStore.a("status_private", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("status_full", (byte) -127);
+                var2 = SectorCacheStore.a("status_full", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("players_in_game", (byte) -127);
+                var2 = SectorCacheStore.a("players_in_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("you_are_invited_to_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("you_are_invited_to_xs_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("asking_to_join_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("asking_to_join_xs_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("who_can_join", (byte) -127);
+                var2 = SectorCacheStore.a("who_can_join", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("you_can_join", (byte) -127);
+                var2 = SectorCacheStore.a("you_can_join", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("you_can_ask_to_join", (byte) -127);
+                var2 = SectorCacheStore.a("you_can_ask_to_join", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("you_cannot_join_in_progress", (byte) -127);
+                var2 = SectorCacheStore.a("you_cannot_join_in_progress", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("you_can_spectate", (byte) -127);
+                var2 = SectorCacheStore.a("you_can_spectate", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("you_can_not_spectate", (byte) -127);
+                var2 = SectorCacheStore.a("you_can_not_spectate", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("spectate_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("spectate_xs_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("hide_players_in_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("hide_players_in_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("show_players_in_xs_game", (byte) -127);
+                var2 = SectorCacheStore.a("show_players_in_xs_game", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("connecting_to_friend_server_twoline", (byte) -127);
+                var2 = SectorCacheStore.a("connecting_to_friend_server_twoline", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("loading", (byte) -127);
+                var2 = SectorCacheStore.a("loading", (byte) -127);
                 if (null != var2) {
                   gk.field_c = GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("offline", (byte) -127);
+                var2 = SectorCacheStore.a("offline", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("multiconst_invite_only", (byte) -127);
+                var2 = SectorCacheStore.a("multiconst_invite_only", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("multiconst_clan", (byte) -127);
+                var2 = SectorCacheStore.a("multiconst_clan", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("multiconst_friends", (byte) -127);
+                var2 = SectorCacheStore.a("multiconst_friends", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("multiconst_similar_rating", (byte) -127);
+                var2 = SectorCacheStore.a("multiconst_similar_rating", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("multiconst_open", (byte) -127);
+                var2 = SectorCacheStore.a("multiconst_open", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("no_options_available", (byte) -127);
+                var2 = SectorCacheStore.a("no_options_available", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("reportabuse", (byte) -127);
+                var2 = SectorCacheStore.a("reportabuse", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("presstabtochat", (byte) -127);
+                var2 = SectorCacheStore.a("presstabtochat", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("pressf10toquickchat", (byte) -127);
+                var2 = SectorCacheStore.a("pressf10toquickchat", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("dob_chatdisabled", (byte) -127);
+                var2 = SectorCacheStore.a("dob_chatdisabled", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("dob_enterforchat", (byte) -127);
+                var2 = SectorCacheStore.a("dob_enterforchat", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("tab_hidechattemporarily", (byte) -127);
+                var2 = SectorCacheStore.a("tab_hidechattemporarily", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("esc_cancelprivatemessage", (byte) -127);
+                var2 = SectorCacheStore.a("esc_cancelprivatemessage", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("esc_cancelthisline", (byte) -127);
+                var2 = SectorCacheStore.a("esc_cancelthisline", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("privatequickchat_from_x", (byte) -127);
+                var2 = SectorCacheStore.a("privatequickchat_from_x", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("privatequickchat_to_x", (byte) -127);
+                var2 = SectorCacheStore.a("privatequickchat_to_x", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("privatechat_blankarea_explanation", (byte) -127);
+                var2 = SectorCacheStore.a("privatechat_blankarea_explanation", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("publicchat_unavailable_ratedgame", (byte) -127);
+                var2 = SectorCacheStore.a("publicchat_unavailable_ratedgame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("privatechat_friend_offline", (byte) -127);
+                var2 = SectorCacheStore.a("privatechat_friend_offline", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("privatechat_friend_notlisted", (byte) -127);
+                var2 = SectorCacheStore.a("privatechat_friend_notlisted", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("chatviewscrolledup", (byte) -127);
+                var2 = SectorCacheStore.a("chatviewscrolledup", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("thisisrunescapeclan", (byte) -127);
+                var2 = SectorCacheStore.a("thisisrunescapeclan", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("thisisrunescapeclan_notowner", (byte) -127);
+                var2 = SectorCacheStore.a("thisisrunescapeclan_notowner", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("runescapeclan", (byte) -127);
+                var2 = SectorCacheStore.a("runescapeclan", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("rated_membersonly", (byte) -127);
+                var2 = SectorCacheStore.a("rated_membersonly", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("gameopt_membersonly", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_membersonly", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("gameopt_1moreratedgame", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_1moreratedgame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("gameopt_moreratedgames", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_moreratedgames", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("gameopt_needrating", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_needrating", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("gameopt_unratedonly", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_unratedonly", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("gameopt_notunlocked", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_notunlocked", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("gameopt_cannotbecombined1", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_cannotbecombined1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("gameopt_cannotbecombined2", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_cannotbecombined2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("gameopt_playernotmember", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playernotmember", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("gameopt_younotmember", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_younotmember", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("gameopt_playerneedsrating", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playerneedsrating", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("gameopt_youneedrating", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_youneedrating", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("gameopt_playerneedsratedgames", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playerneedsratedgames", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("gameopt_youneedratedgames", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_youneedratedgames", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("gameopt_playerneeds1ratedgame", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playerneeds1ratedgame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("gameopt_youneed1ratedgame", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_youneed1ratedgame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("gameopt_playerhasntunlocked", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playerhasntunlocked", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("gameopt_youhaventunlocked", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_youhaventunlocked", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("gameopt_trychanging1", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_trychanging1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("gameopt_trychanging2", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_trychanging2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("gameopt_needchanging1", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_needchanging1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("gameopt_needchanging2", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_needchanging2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("gameopt_mightchange", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_mightchange", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("gameopt_playersdontqualify", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playersdontqualify", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("gameopt_playersdontqualify_selectgametab", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_playersdontqualify_selectgametab", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("gameopt_unselectedoptions", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_unselectedoptions", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("gameopt_pleaseselectoption1", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_pleaseselectoption1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("gameopt_pleaseselectoption2", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_pleaseselectoption2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("gameopt_badnumplayers", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_badnumplayers", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("gameopt_inviteplayers_or_trychanging1", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_inviteplayers_or_trychanging1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("gameopt_inviteplayers_or_trychanging2", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_inviteplayers_or_trychanging2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("gameopt_novalidcombos", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_novalidcombos", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("gameopt_pleasetrychanging", (byte) -127);
+                var2 = SectorCacheStore.a("gameopt_pleasetrychanging", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("ra_title", (byte) -127);
+                var2 = SectorCacheStore.a("ra_title", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("ra_mutethisplayer", (byte) -127);
+                var2 = SectorCacheStore.a("ra_mutethisplayer", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("ra_suggestmute", (byte) -127);
+                var2 = SectorCacheStore.a("ra_suggestmute", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("ra_intro", (byte) -127);
+                var2 = SectorCacheStore.a("ra_intro", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("ra_intro_no_name", (byte) -127);
+                var2 = SectorCacheStore.a("ra_intro_no_name", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("ra_explanation", (byte) -127);
+                var2 = SectorCacheStore.a("ra_explanation", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("rule_pillar_0", (byte) -127);
+                var2 = SectorCacheStore.a("rule_pillar_0", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("rule_0_0", (byte) -127);
+                var2 = SectorCacheStore.a("rule_0_0", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("rule_0_1", (byte) -127);
+                var2 = SectorCacheStore.a("rule_0_1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("rule_0_2", (byte) -127);
+                var2 = SectorCacheStore.a("rule_0_2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("rule_0_3", (byte) -127);
+                var2 = SectorCacheStore.a("rule_0_3", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("rule_0_4", (byte) -127);
+                var2 = SectorCacheStore.a("rule_0_4", (byte) -127);
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("rule_0_5", (byte) -127);
+                var2 = SectorCacheStore.a("rule_0_5", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("rule_pillar_1", (byte) -127);
+                var2 = SectorCacheStore.a("rule_pillar_1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("rule_1_0", (byte) -127);
+                var2 = SectorCacheStore.a("rule_1_0", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("rule_1_1", (byte) -127);
+                var2 = SectorCacheStore.a("rule_1_1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("rule_1_2", (byte) -127);
+                var2 = SectorCacheStore.a("rule_1_2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("rule_1_3", (byte) -127);
+                var2 = SectorCacheStore.a("rule_1_3", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("rule_1_4", (byte) -127);
+                var2 = SectorCacheStore.a("rule_1_4", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("rule_pillar_2", (byte) -127);
+                var2 = SectorCacheStore.a("rule_pillar_2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("rule_2_0", (byte) -127);
+                var2 = SectorCacheStore.a("rule_2_0", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("rule_2_1", (byte) -127);
+                var2 = SectorCacheStore.a("rule_2_1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("rule_2_2", (byte) -127);
+                var2 = SectorCacheStore.a("rule_2_2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("createafreeaccount", (byte) -127);
+                var2 = SectorCacheStore.a("createafreeaccount", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("cancel", (byte) -127);
+                var2 = SectorCacheStore.a("cancel", (byte) -127);
                 if (null != var2) {
                   cj.field_m = GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("pleaselogintoplay", (byte) -127);
+                var2 = SectorCacheStore.a("pleaselogintoplay", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("pleaselogin", (byte) -127);
+                var2 = SectorCacheStore.a("pleaselogin", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("pleaselogin_member", (byte) -127);
+                var2 = SectorCacheStore.a("pleaselogin_member", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("invaliduserorpass", (byte) -127);
+                var2 = SectorCacheStore.a("invaliduserorpass", (byte) -127);
                 if (null != var2) {
                   jh.field_d = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("pleasetryagain", (byte) -127);
+                var2 = SectorCacheStore.a("pleasetryagain", (byte) -127);
                 if (var2 != null) {
                   ph.field_a = GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("pleasereenterpass", (byte) -127);
+                var2 = SectorCacheStore.a("pleasereenterpass", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("playfreeversion", (byte) -127);
+                var2 = SectorCacheStore.a("playfreeversion", (byte) -127);
                 if (null != var2) {
                   s.field_a = GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("reloadgame", (byte) -127);
+                var2 = SectorCacheStore.a("reloadgame", (byte) -127);
                 if (var2 != null) {
-                  na.field_p = GzipInflater.a(var2, (byte) 90);
+                  NetworkArchiveRequest.field_p = GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("toserverlist", (byte) -127);
+                var2 = SectorCacheStore.a("toserverlist", (byte) -127);
                 if (null != var2) {
                   sk.field_a = GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("tocustomersupport", (byte) -127);
+                var2 = SectorCacheStore.a("tocustomersupport", (byte) -127);
                 if (null != var2) {
                   jh.field_a = GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("changedisplayname", (byte) -127);
+                var2 = SectorCacheStore.a("changedisplayname", (byte) -127);
                 if (null != var2) {
                   wf.field_a = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("returntohomepage", (byte) -127);
+                var2 = SectorCacheStore.a("returntohomepage", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("justplay", (byte) -127);
+                var2 = SectorCacheStore.a("justplay", (byte) -127);
                 if (null != var2) {
                   oa.field_b = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("justplay_excl", (byte) -127);
+                var2 = SectorCacheStore.a("justplay_excl", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("login", (byte) -127);
+                var2 = SectorCacheStore.a("login", (byte) -127);
                 if (var2 != null) {
                   q.field_f = GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("goback", (byte) -127);
+                var2 = SectorCacheStore.a("goback", (byte) -127);
                 if (var2 != null) {
                   dl.field_j = GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("otheroptions", (byte) -127);
+                var2 = SectorCacheStore.a("otheroptions", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("proceed", (byte) -127);
+                var2 = SectorCacheStore.a("proceed", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("connectingtoserver", (byte) -127);
+                var2 = SectorCacheStore.a("connectingtoserver", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("pleasewait", (byte) -127);
+                var2 = SectorCacheStore.a("pleasewait", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("logging_in", (byte) -127);
+                var2 = SectorCacheStore.a("logging_in", (byte) -127);
                 if (var2 != null) {
                   kj.field_q = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("reconnect", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("backtoerror", (byte) -127);
+                var2 = SectorCacheStore.a("backtoerror", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("pleasecheckinternet", (byte) -127);
+                var2 = SectorCacheStore.a("pleasecheckinternet", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("attemptingtoreconnect", (byte) -127);
+                var2 = SectorCacheStore.a("attemptingtoreconnect", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("connectionlost_reconnecting", (byte) -127);
+                var2 = SectorCacheStore.a("connectionlost_reconnecting", (byte) -127);
                 if (null != var2) {
                   ni.field_e = GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("connectionlost_withreason", (byte) -127);
+                var2 = SectorCacheStore.a("connectionlost_withreason", (byte) -127);
                 if (var2 != null) {
                   lk.field_p = GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("passwordverificationrequired", (byte) -127);
+                var2 = SectorCacheStore.a("passwordverificationrequired", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("invalidpass", (byte) -127);
+                var2 = SectorCacheStore.a("invalidpass", (byte) -127);
                 if (null != var2) {
                   rl.field_t = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("retry", (byte) -127);
+                var2 = SectorCacheStore.a("retry", (byte) -127);
                 if (var2 != null) {
                   tc.field_c = GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("back", (byte) -127);
+                var2 = SectorCacheStore.a("back", (byte) -127);
                 if (var2 != null) {
                   uc.field_r = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("exitfullscreenmode", (byte) -127);
+                var2 = SectorCacheStore.a("exitfullscreenmode", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("quittowebsite", (byte) -127);
+                var2 = SectorCacheStore.a("quittowebsite", (byte) -127);
                 if (var2 != null) {
                   pg.field_f = GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("connectionrestored", (byte) -127);
+                var2 = SectorCacheStore.a("connectionrestored", (byte) -127);
                 if (var2 != null) {
                   dg.field_E = GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("warning_ifyouquit", (byte) -127);
+                var2 = SectorCacheStore.a("warning_ifyouquit", (byte) -127);
                 if (null != var2) {
                   vg.field_c = GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("warning_ifyouquitorleavepage", (byte) -127);
+                var2 = SectorCacheStore.a("warning_ifyouquitorleavepage", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("resubscribe_withoutlosing_fs", (byte) -127);
+                var2 = SectorCacheStore.a("resubscribe_withoutlosing_fs", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("resubscribe_withoutlosing", (byte) -127);
+                var2 = SectorCacheStore.a("resubscribe_withoutlosing", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("customersupport_withoutlosing_fs", (byte) -127);
+                var2 = SectorCacheStore.a("customersupport_withoutlosing_fs", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("customersupport_withoutlosing", (byte) -127);
+                var2 = SectorCacheStore.a("customersupport_withoutlosing", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("js5help_withoutlosing_fs", (byte) -127);
+                var2 = SectorCacheStore.a("js5help_withoutlosing_fs", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("js5help_withoutlosing", (byte) -127);
+                var2 = SectorCacheStore.a("js5help_withoutlosing", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("checkinternet_withoutlosing_fs", (byte) -127);
+                var2 = SectorCacheStore.a("checkinternet_withoutlosing_fs", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("checkinternet_withoutlosing", (byte) -127);
+                var2 = SectorCacheStore.a("checkinternet_withoutlosing", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("create_intro", (byte) -127);
+                var2 = SectorCacheStore.a("create_intro", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("create_sameaccounttip_unnamed", (byte) -127);
+                var2 = SectorCacheStore.a("create_sameaccounttip_unnamed", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("dateofbirthprompt", (byte) -127);
+                var2 = SectorCacheStore.a("dateofbirthprompt", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("fetchingcountrylist", (byte) -127);
+                var2 = SectorCacheStore.a("fetchingcountrylist", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("countryprompt", (byte) -127);
+                var2 = SectorCacheStore.a("countryprompt", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("countrylisterror", (byte) -127);
+                var2 = SectorCacheStore.a("countrylisterror", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("theonlypersonalquestions", (byte) -127);
+                var2 = SectorCacheStore.a("theonlypersonalquestions", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("create_submittingdata", (byte) -127);
+                var2 = SectorCacheStore.a("create_submittingdata", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("check", (byte) -127);
+                var2 = SectorCacheStore.a("check", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("create_pleasechooseausername", (byte) -127);
+                var2 = SectorCacheStore.a("create_pleasechooseausername", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("create_usernameblurb", (byte) -127);
+                var2 = SectorCacheStore.a("create_usernameblurb", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("checkingavailability", (byte) -127);
+                var2 = SectorCacheStore.a("checkingavailability", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("checking", (byte) -127);
+                var2 = SectorCacheStore.a("checking", (byte) -127);
                 if (null != var2) {
                   n.field_C = GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("create_namealreadytaken", (byte) -127);
+                var2 = SectorCacheStore.a("create_namealreadytaken", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("create_sameaccounttip_named", (byte) -127);
+                var2 = SectorCacheStore.a("create_sameaccounttip_named", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("create_nosuggestions", (byte) -127);
+                var2 = SectorCacheStore.a("create_nosuggestions", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("create_alternativelygoback", (byte) -127);
+                var2 = SectorCacheStore.a("create_alternativelygoback", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("create_available", (byte) -127);
+                var2 = SectorCacheStore.a("create_available", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("create_willnowshowtermsandconditions", (byte) -127);
+                var2 = SectorCacheStore.a("create_willnowshowtermsandconditions", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("fetchingterms", (byte) -127);
+                var2 = SectorCacheStore.a("fetchingterms", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("termserror", (byte) -127);
+                var2 = SectorCacheStore.a("termserror", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("create_iagree", (byte) -127);
+                var2 = SectorCacheStore.a("create_iagree", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("create_idisagree", (byte) -127);
+                var2 = SectorCacheStore.a("create_idisagree", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("create_pleasescrolldowntoaccept", (byte) -127);
+                var2 = SectorCacheStore.a("create_pleasescrolldowntoaccept", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("create_linkaddress", (byte) -127);
+                var2 = SectorCacheStore.a("create_linkaddress", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("openinpopupwindow", (byte) -127);
+                var2 = SectorCacheStore.a("openinpopupwindow", (byte) -127);
                 if (var2 != null) {
                   ni.field_b = GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("create", (byte) -127);
+                var2 = SectorCacheStore.a("create", (byte) -127);
                 if (null != var2) {
                   qk.field_h = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("create_pleasechooseapassword", (byte) -127);
+                var2 = SectorCacheStore.a("create_pleasechooseapassword", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("create_passwordblurb", (byte) -127);
+                var2 = SectorCacheStore.a("create_passwordblurb", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("create_nevergivepassword", (byte) -127);
+                var2 = SectorCacheStore.a("create_nevergivepassword", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("creatingyouraccount", (byte) -127);
+                var2 = SectorCacheStore.a("creatingyouraccount", (byte) -127);
                 if (var2 != null) {
                   jc.field_R = GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("create_youmustaccept", (byte) -127);
+                var2 = SectorCacheStore.a("create_youmustaccept", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("create_passwordsdifferent", (byte) -127);
+                var2 = SectorCacheStore.a("create_passwordsdifferent", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("create_success", (byte) -127);
+                var2 = SectorCacheStore.a("create_success", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("day", (byte) -127);
+                var2 = SectorCacheStore.a("day", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("month", (byte) -127);
+                var2 = SectorCacheStore.a("month", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("year", (byte) -127);
+                var2 = SectorCacheStore.a("year", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("monthnames,0", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,0", (byte) -127);
                 if (var2 != null) {
                   se.field_O[0] = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("monthnames,1", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,1", (byte) -127);
                 if (var2 != null) {
                   se.field_O[1] = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("monthnames,2", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,2", (byte) -127);
                 if (var2 != null) {
                   se.field_O[2] = GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("monthnames,3", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,3", (byte) -127);
                 if (null != var2) {
                   se.field_O[3] = GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("monthnames,4", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,4", (byte) -127);
                 if (null != var2) {
                   se.field_O[4] = GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("monthnames,5", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,5", (byte) -127);
                 if (var2 != null) {
                   se.field_O[5] = GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("monthnames,6", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,6", (byte) -127);
                 if (var2 != null) {
                   se.field_O[6] = GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("monthnames,7", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,7", (byte) -127);
                 if (var2 != null) {
                   se.field_O[7] = GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("monthnames,8", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,8", (byte) -127);
                 if (null != var2) {
                   se.field_O[8] = GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("monthnames,9", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,9", (byte) -127);
                 if (null != var2) {
                   se.field_O[9] = GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("monthnames,10", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,10", (byte) -127);
                 if (null != var2) {
                   se.field_O[10] = GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("monthnames,11", (byte) -127);
+                var2 = SectorCacheStore.a("monthnames,11", (byte) -127);
                 if (null != var2) {
                   se.field_O[11] = GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("create_welcome", (byte) -127);
+                var2 = SectorCacheStore.a("create_welcome", (byte) -127);
                 if (null != var2) {
                   gk.field_e = GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("create_u13_welcome", (byte) -127);
+                var2 = SectorCacheStore.a("create_u13_welcome", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("create_createanaccount", (byte) -127);
+                var2 = SectorCacheStore.a("create_createanaccount", (byte) -127);
                 if (var2 != null) {
                   mg.field_K = GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("create_username", (byte) -127);
+                var2 = SectorCacheStore.a("create_username", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("create_displayname", (byte) -127);
+                var2 = SectorCacheStore.a("create_displayname", (byte) -127);
                 if (null != var2) {
                   mj.field_a = GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("create_password", (byte) -127);
+                var2 = SectorCacheStore.a("create_password", (byte) -127);
                 if (null != var2) {
                   fl.field_b = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("create_password_confirm", (byte) -127);
+                var2 = SectorCacheStore.a("create_password_confirm", (byte) -127);
                 if (null != var2) {
                   hk.field_c = GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("create_email", (byte) -127);
+                var2 = SectorCacheStore.a("create_email", (byte) -127);
                 if (var2 != null) {
                   cf.field_a = GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("create_email_confirm", (byte) -127);
+                var2 = SectorCacheStore.a("create_email_confirm", (byte) -127);
                 if (null != var2) {
                   mb.field_b = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("create_age", (byte) -127);
+                var2 = SectorCacheStore.a("create_age", (byte) -127);
                 if (var2 != null) {
                   th.field_b = GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("create_u13_email", (byte) -127);
+                var2 = SectorCacheStore.a("create_u13_email", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("create_u13_email_confirm", (byte) -127);
+                var2 = SectorCacheStore.a("create_u13_email_confirm", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("create_dob", (byte) -127);
+                var2 = SectorCacheStore.a("create_dob", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("create_country", (byte) -127);
+                var2 = SectorCacheStore.a("create_country", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("create_alternatives_header", (byte) -127);
+                var2 = SectorCacheStore.a("create_alternatives_header", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("create_alternatives_select", (byte) -127);
+                var2 = SectorCacheStore.a("create_alternatives_select", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("create_suggestions", (byte) -127);
+                var2 = SectorCacheStore.a("create_suggestions", (byte) -127);
                 if (null != var2) {
                   cb.field_h = GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("create_more_suggestions", (byte) -127);
+                var2 = SectorCacheStore.a("create_more_suggestions", (byte) -127);
                 if (null != var2) {
                   sh.field_f = GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("create_select_alternative", (byte) -127);
+                var2 = SectorCacheStore.a("create_select_alternative", (byte) -127);
                 if (null != var2) {
                   lb.field_e = GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("create_optin_news", (byte) -127);
+                var2 = SectorCacheStore.a("create_optin_news", (byte) -127);
                 if (var2 != null) {
                   Main.field_M = GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("create_agreeterms", (byte) -127);
+                var2 = SectorCacheStore.a("create_agreeterms", (byte) -127);
                 if (null != var2) {
                   lk.field_t = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("create_u13terms", (byte) -127);
+                var2 = SectorCacheStore.a("create_u13terms", (byte) -127);
                 if (null != var2) {
                   dd.field_h = GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("login_username_email", (byte) -127);
+                var2 = SectorCacheStore.a("login_username_email", (byte) -127);
                 if (var2 != null) {
                   ck.field_F = GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("login_username", (byte) -127);
+                var2 = SectorCacheStore.a("login_username", (byte) -127);
                 if (null != var2) {
-                  ab.field_q = GzipInflater.a(var2, (byte) 100);
+                  DiskArchiveRequest.field_q = GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("login_email", (byte) -127);
+                var2 = SectorCacheStore.a("login_email", (byte) -127);
                 if (null != var2) {
                   ja.field_d = GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("login_username_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("login_username_tooltip", (byte) -127);
                 if (null != var2) {
                   sl.field_c = GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("login_password_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("login_password_tooltip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("login_login_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("login_login_tooltip", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("login_create_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("login_create_tooltip", (byte) -127);
                 if (var2 != null) {
                   bl.field_b = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("login_justplay_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("login_justplay_tooltip", (byte) -127);
                 if (null != var2) {
                   w.field_m = GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("login_back_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("login_back_tooltip", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("login_no_displayname", (byte) -127);
+                var2 = SectorCacheStore.a("login_no_displayname", (byte) -127);
                 if (var2 != null) {
                   ui.field_F = GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("create_username_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_username_tooltip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("create_username_hint", (byte) -127);
+                var2 = SectorCacheStore.a("create_username_hint", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("create_displayname_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_displayname_tooltip", (byte) -127);
                 if (var2 != null) {
                   re.field_h = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("create_displayname_hint", (byte) -127);
+                var2 = SectorCacheStore.a("create_displayname_hint", (byte) -127);
                 if (var2 != null) {
                   pk.field_c = GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("create_password_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_password_tooltip", (byte) -127);
                 if (null != var2) {
                   db.field_f = GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("create_password_hint", (byte) -127);
+                var2 = SectorCacheStore.a("create_password_hint", (byte) -127);
                 if (var2 != null) {
                   mc.field_a = GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("create_password_confirm_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_password_confirm_tooltip", (byte) -127);
                 if (null != var2) {
                   ja.field_c = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("create_email_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_email_tooltip", (byte) -127);
                 if (null != var2) {
                   pf.field_g = GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("create_email_confirm_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_email_confirm_tooltip", (byte) -127);
                 if (var2 != null) {
                   MouseWheelInput.field_b = GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("create_age_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_age_tooltip", (byte) -127);
                 if (var2 != null) {
                   cc.field_b = GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("create_optin_news_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_optin_news_tooltip", (byte) -127);
                 if (var2 != null) {
                   nc.field_c = GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("create_u13_email_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_u13_email_tooltip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("create_u13_email_confirm_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_u13_email_confirm_tooltip", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("create_dob_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_dob_tooltip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("create_country_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_country_tooltip", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("create_optin_tooltip", (byte) -127);
+                var2 = SectorCacheStore.a("create_optin_tooltip", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("create_continue", (byte) -127);
+                var2 = SectorCacheStore.a("create_continue", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("create_username_unavailable", (byte) -127);
+                var2 = SectorCacheStore.a("create_username_unavailable", (byte) -127);
                 if (null != var2) {
                   ui.field_K = GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("create_username_available", (byte) -127);
+                var2 = SectorCacheStore.a("create_username_available", (byte) -127);
                 if (null != var2) {
                   vd.field_k = GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("create_alert_namelength", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_namelength", (byte) -127);
                 if (var2 != null) {
                   ke.field_b = GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("create_alert_namechars", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_namechars", (byte) -127);
                 if (null != var2) {
                   nf.field_a = GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("create_alert_nameleadingspace", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_nameleadingspace", (byte) -127);
                 if (var2 != null) {
                   kl.field_P = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("create_alert_doublespace", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_doublespace", (byte) -127);
                 if (null != var2) {
                   g.field_B = GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("create_alert_passchars", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_passchars", (byte) -127);
                 if (null != var2) {
                   hl.field_C = GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("create_alert_passrepeated", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_passrepeated", (byte) -127);
                 if (null != var2) {
                   ta.field_fb = GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("create_alert_passlength", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_passlength", (byte) -127);
                 if (var2 != null) {
                   s.field_b = GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("create_alert_passcontainsname", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_passcontainsname", (byte) -127);
                 if (null != var2) {
                   qi.field_F = GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("create_alert_passcontainsemail", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_passcontainsemail", (byte) -127);
                 if (null != var2) {
                   bj.field_u = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("create_alert_passcontainsname_partial", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_passcontainsname_partial", (byte) -127);
                 if (var2 != null) {
                   i.field_b = GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("create_alert_checkname", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_checkname", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("create_alert_invalidemail", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_invalidemail", (byte) -127);
                 if (var2 != null) {
                   ha.field_c = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("create_alert_email_unavailable", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_email_unavailable", (byte) -127);
                 if (var2 != null) {
                   IntrusiveDeque.field_b = GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("create_alert_invaliddate", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_invaliddate", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("create_alert_invalidage", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_invalidage", (byte) -127);
                 if (var2 != null) {
                   d.field_j = GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("create_alert_yearrange", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_yearrange", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("create_alert_mismatch", (byte) -127);
+                var2 = SectorCacheStore.a("create_alert_mismatch", (byte) -127);
                 if (null != var2) {
                   r.field_r = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("create_passwordvalid", (byte) -127);
+                var2 = SectorCacheStore.a("create_passwordvalid", (byte) -127);
                 if (null != var2) {
                   ll.field_g = GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("create_emailvalid", (byte) -127);
+                var2 = SectorCacheStore.a("create_emailvalid", (byte) -127);
                 if (var2 != null) {
                   gi.field_g = GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("create_account_success", (byte) -127);
+                var2 = SectorCacheStore.a("create_account_success", (byte) -127);
                 if (null != var2) {
                   IntrusiveDeque.field_e = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("invalid_name", (byte) -127);
+                var2 = SectorCacheStore.a("invalid_name", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("cannot_add_yourself", (byte) -127);
+                var2 = SectorCacheStore.a("cannot_add_yourself", (byte) -127);
                 var3 = 22 / ((-14 - param0) / 59);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("unable_to_add_friend", (byte) -127);
+                var2 = SectorCacheStore.a("unable_to_add_friend", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("unable_to_add_ignore", (byte) -127);
+                var2 = SectorCacheStore.a("unable_to_add_ignore", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("unable_to_delete_friend", (byte) -127);
+                var2 = SectorCacheStore.a("unable_to_delete_friend", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("unable_to_delete_ignore", (byte) -127);
+                var2 = SectorCacheStore.a("unable_to_delete_ignore", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("friendlistfull", (byte) -127);
+                var2 = SectorCacheStore.a("friendlistfull", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("friendlistdupe", (byte) -127);
+                var2 = SectorCacheStore.a("friendlistdupe", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("friendnotfound", (byte) -127);
+                var2 = SectorCacheStore.a("friendnotfound", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("ignorelistfull", (byte) -127);
+                var2 = SectorCacheStore.a("ignorelistfull", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("ignorelistdupe", (byte) -127);
+                var2 = SectorCacheStore.a("ignorelistdupe", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("ignorenotfound", (byte) -127);
+                var2 = SectorCacheStore.a("ignorenotfound", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("removeignorefirst", (byte) -127);
+                var2 = SectorCacheStore.a("removeignorefirst", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("removefriendfirst", (byte) -127);
+                var2 = SectorCacheStore.a("removefriendfirst", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("enterfriend_add", (byte) -127);
+                var2 = SectorCacheStore.a("enterfriend_add", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("enterfriend_del", (byte) -127);
+                var2 = SectorCacheStore.a("enterfriend_del", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("enterignore_add", (byte) -127);
+                var2 = SectorCacheStore.a("enterignore_add", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("enterignore_del", (byte) -127);
+                var2 = SectorCacheStore.a("enterignore_del", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("text_removed_from_game", (byte) -127);
+                var2 = SectorCacheStore.a("text_removed_from_game", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("text_lobby_pleaselogin_free", (byte) -127);
+                var2 = SectorCacheStore.a("text_lobby_pleaselogin_free", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("opengl", (byte) -127);
+                var2 = SectorCacheStore.a("opengl", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("sse", (byte) -127);
+                var2 = SectorCacheStore.a("sse", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("purejava", (byte) -127);
+                var2 = SectorCacheStore.a("purejava", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("waitingfor_graphics", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_graphics", (byte) -127);
                 if (var2 != null) {
                   kf.field_j = GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("waitingfor_models", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_models", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("waitingfor_fonts", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_fonts", (byte) -127);
                 if (var2 != null) {
                   ak.field_L = GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("waitingfor_soundeffects", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_soundeffects", (byte) -127);
                 if (null != var2) {
                   eg.field_e = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("waitingfor_music", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_music", (byte) -127);
                 if (null != var2) {
                   ah.field_a = GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("waitingfor_instruments", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_instruments", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("waitingfor_levels", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_levels", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("waitingfor_extradata", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_extradata", (byte) -127);
                 if (var2 != null) {
                   tb.field_e = GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("waitingfor_languages", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_languages", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("waitingfor_textures", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_textures", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("waitingfor_animations", (byte) -127);
+                var2 = SectorCacheStore.a("waitingfor_animations", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("loading_graphics", (byte) -127);
+                var2 = SectorCacheStore.a("loading_graphics", (byte) -127);
                 if (var2 != null) {
                   IntrusiveDeque.field_f = GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("loading_models", (byte) -127);
+                var2 = SectorCacheStore.a("loading_models", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 126);
                 }
-                var2 = hc.a("loading_fonts", (byte) -127);
+                var2 = SectorCacheStore.a("loading_fonts", (byte) -127);
                 if (var2 != null) {
                   nc.field_b = GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("loading_soundeffects", (byte) -127);
+                var2 = SectorCacheStore.a("loading_soundeffects", (byte) -127);
                 if (var2 != null) {
                   wd.field_a = GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("loading_music", (byte) -127);
+                var2 = SectorCacheStore.a("loading_music", (byte) -127);
                 if (null != var2) {
                   dh.field_o = GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("loading_instruments", (byte) -127);
+                var2 = SectorCacheStore.a("loading_instruments", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("loading_levels", (byte) -127);
+                var2 = SectorCacheStore.a("loading_levels", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("loading_extradata", (byte) -127);
+                var2 = SectorCacheStore.a("loading_extradata", (byte) -127);
                 if (var2 != null) {
                   rj.field_w = GzipInflater.a(var2, (byte) 93);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
-                var2 = hc.a("loading_languages", (byte) -127);
+                var2 = SectorCacheStore.a("loading_languages", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("loading_textures", (byte) -127);
+                var2 = SectorCacheStore.a("loading_textures", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("loading_animations", (byte) -127);
+                var2 = SectorCacheStore.a("loading_animations", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("unpacking_graphics", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_graphics", (byte) -127);
                 if (var2 != null) {
                   lb.field_f = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("unpacking_models", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_models", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("unpacking_soundeffects", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_soundeffects", (byte) -127);
                 if (var2 != null) {
                   AccountRequestState.field_c = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("unpacking_music", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_music", (byte) -127);
                 if (null != var2) {
                   j.field_A = GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("unpacking_levels", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_levels", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("unpacking_languages", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_languages", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("unpacking_animations", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_animations", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("unpacking_toolkit", (byte) -127);
+                var2 = SectorCacheStore.a("unpacking_toolkit", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("instructions", (byte) -127);
+                var2 = SectorCacheStore.a("instructions", (byte) -127);
                 if (null != var2) {
-                  hc.field_e = GzipInflater.a(var2, (byte) 113);
+                  SectorCacheStore.field_e = GzipInflater.a(var2, (byte) 113);
                 }
-                var2 = hc.a("tutorial", (byte) -127);
+                var2 = SectorCacheStore.a("tutorial", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("playtutorial", (byte) -127);
+                var2 = SectorCacheStore.a("playtutorial", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("sound_colon", (byte) -127);
+                var2 = SectorCacheStore.a("sound_colon", (byte) -127);
                 if (null != var2) {
                   td.field_a = GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("music_colon", (byte) -127);
+                var2 = SectorCacheStore.a("music_colon", (byte) -127);
                 if (null != var2) {
                   lf.field_d = GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("fullscreen", (byte) -127);
+                var2 = SectorCacheStore.a("fullscreen", (byte) -127);
                 if (var2 != null) {
                   pg.field_b = GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("screensize", (byte) -127);
+                var2 = SectorCacheStore.a("screensize", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("highscores", (byte) -127);
+                var2 = SectorCacheStore.a("highscores", (byte) -127);
                 if (var2 != null) {
                   n.field_D = GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("rankings", (byte) -127);
+                var2 = SectorCacheStore.a("rankings", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("achievements", (byte) -127);
+                var2 = SectorCacheStore.a("achievements", (byte) -127);
                 if (null != var2) {
-                  hc.field_a = GzipInflater.a(var2, (byte) 92);
+                  SectorCacheStore.field_a = GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("achievementsthisgame", (byte) -127);
+                var2 = SectorCacheStore.a("achievementsthisgame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("achievementsthissession", (byte) -127);
+                var2 = SectorCacheStore.a("achievementsthissession", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("watchintroduction", (byte) -127);
+                var2 = SectorCacheStore.a("watchintroduction", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("quit", (byte) -127);
+                var2 = SectorCacheStore.a("quit", (byte) -127);
                 if (null != var2) {
                   ii.field_f = GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("login_createaccount", (byte) -127);
+                var2 = SectorCacheStore.a("login_createaccount", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("tohighscores", (byte) -127);
+                var2 = SectorCacheStore.a("tohighscores", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("returntomainmenu", (byte) -127);
+                var2 = SectorCacheStore.a("returntomainmenu", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("returntopausemenu", (byte) -127);
+                var2 = SectorCacheStore.a("returntopausemenu", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("returntooptionsmenu_notpaused", (byte) -127);
+                var2 = SectorCacheStore.a("returntooptionsmenu_notpaused", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("mainmenu", (byte) -127);
+                var2 = SectorCacheStore.a("mainmenu", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("pausemenu", (byte) -127);
+                var2 = SectorCacheStore.a("pausemenu", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("optionsmenu_notpaused", (byte) -127);
+                var2 = SectorCacheStore.a("optionsmenu_notpaused", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("menu", (byte) -127);
+                var2 = SectorCacheStore.a("menu", (byte) -127);
                 if (null != var2) {
                   db.field_b = GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("selectlevel", (byte) -127);
+                var2 = SectorCacheStore.a("selectlevel", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("nextlevel", (byte) -127);
+                var2 = SectorCacheStore.a("nextlevel", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("startgame", (byte) -127);
+                var2 = SectorCacheStore.a("startgame", (byte) -127);
                 if (var2 != null) {
                   tj.field_J = GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("newgame", (byte) -127);
+                var2 = SectorCacheStore.a("newgame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("resumegame", (byte) -127);
+                var2 = SectorCacheStore.a("resumegame", (byte) -127);
                 if (null != var2) {
                   id.field_f = GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("resumetutorial", (byte) -127);
+                var2 = SectorCacheStore.a("resumetutorial", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("skip", (byte) -127);
+                var2 = SectorCacheStore.a("skip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("skiptutorial", (byte) -127);
+                var2 = SectorCacheStore.a("skiptutorial", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("skipending", (byte) -127);
+                var2 = SectorCacheStore.a("skipending", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("restartlevel", (byte) -127);
+                var2 = SectorCacheStore.a("restartlevel", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("endtest", (byte) -127);
+                var2 = SectorCacheStore.a("endtest", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("endgame", (byte) -127);
+                var2 = SectorCacheStore.a("endgame", (byte) -127);
                 if (null != var2) {
                   tf.field_m = GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("endtutorial", (byte) -127);
+                var2 = SectorCacheStore.a("endtutorial", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("ok", (byte) -127);
+                var2 = SectorCacheStore.a("ok", (byte) -127);
                 if (var2 != null) {
                   bl.field_g = GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("on", (byte) -127);
+                var2 = SectorCacheStore.a("on", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("off", (byte) -127);
+                var2 = SectorCacheStore.a("off", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("previous", (byte) -127);
+                var2 = SectorCacheStore.a("previous", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 101);
                 }
-                var2 = hc.a("prev", (byte) -127);
+                var2 = SectorCacheStore.a("prev", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("next", (byte) -127);
+                var2 = SectorCacheStore.a("next", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("graphics_colon", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_colon", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("hotseatmultiplayer", (byte) -127);
+                var2 = SectorCacheStore.a("hotseatmultiplayer", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("entermultiplayerlobby", (byte) -127);
+                var2 = SectorCacheStore.a("entermultiplayerlobby", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("singleplayergame", (byte) -127);
+                var2 = SectorCacheStore.a("singleplayergame", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("returntogame", (byte) -127);
+                var2 = SectorCacheStore.a("returntogame", (byte) -127);
                 if (var2 != null) {
                   sh.field_h = GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("endgameresign", (byte) -127);
+                var2 = SectorCacheStore.a("endgameresign", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("offerdraw", (byte) -127);
+                var2 = SectorCacheStore.a("offerdraw", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("canceldraw", (byte) -127);
+                var2 = SectorCacheStore.a("canceldraw", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("acceptdraw", (byte) -127);
+                var2 = SectorCacheStore.a("acceptdraw", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("resign", (byte) -127);
+                var2 = SectorCacheStore.a("resign", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("returntolobby", (byte) -127);
+                var2 = SectorCacheStore.a("returntolobby", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("cont", (byte) -127);
+                var2 = SectorCacheStore.a("cont", (byte) -127);
                 if (null != var2) {
                   bj.field_b = GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("continue_spectating", (byte) -127);
+                var2 = SectorCacheStore.a("continue_spectating", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("messages", (byte) -127);
+                var2 = SectorCacheStore.a("messages", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("graphics_fastest", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_fastest", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("graphics_medium", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_medium", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("graphics_best", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_best", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("graphics_directx", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_directx", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("graphics_opengl", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_opengl", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("graphics_java", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_java", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("graphics_quality_high", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_quality_high", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("graphics_quality_low", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_quality_low", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("graphics_mode", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_mode", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("graphics_quality", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_quality", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("mode", (byte) -127);
+                var2 = SectorCacheStore.a("mode", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("quality", (byte) -127);
+                var2 = SectorCacheStore.a("quality", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("keys", (byte) -127);
+                var2 = SectorCacheStore.a("keys", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("objective", (byte) -127);
+                var2 = SectorCacheStore.a("objective", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("currentobjective", (byte) -127);
+                var2 = SectorCacheStore.a("currentobjective", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("pressescforpausemenu", (byte) -127);
+                var2 = SectorCacheStore.a("pressescforpausemenu", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("pressescforpausemenuortoskiptutorial", (byte) -127);
+                var2 = SectorCacheStore.a("pressescforpausemenuortoskiptutorial", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("pressescforoptionsmenu_doesntpause", (byte) -127);
+                var2 = SectorCacheStore.a("pressescforoptionsmenu_doesntpause", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("pressescforoptionsmenu_doesntpause_short", (byte) -127);
+                var2 = SectorCacheStore.a("pressescforoptionsmenu_doesntpause_short", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("powerups", (byte) -127);
+                var2 = SectorCacheStore.a("powerups", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("latestlevel_suffix", (byte) -127);
+                var2 = SectorCacheStore.a("latestlevel_suffix", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("unreachedlevel_name", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_name", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("unreachedlevel_cannotplayreason", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_cannotplayreason", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("unreachedlevel_cannotplayreason_shorter", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_cannotplayreason_shorter", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("unreachedworld_cannotplayreason", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedworld_cannotplayreason", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("memberslevel_name", (byte) -127);
+                var2 = SectorCacheStore.a("memberslevel_name", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("memberslevel_cannotplayreason", (byte) -127);
+                var2 = SectorCacheStore.a("memberslevel_cannotplayreason", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("membersworld_cannotplayreason", (byte) -127);
+                var2 = SectorCacheStore.a("membersworld_cannotplayreason", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("unreachedlevel_createtip", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_createtip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("unreachedlevel_createtip_line1", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_createtip_line1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("unreachedlevel_createtip_line2", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_createtip_line2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("unreachedlevel_logintip", (byte) -127);
+                var2 = SectorCacheStore.a("unreachedlevel_logintip", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("memberslevel_logintip", (byte) -127);
+                var2 = SectorCacheStore.a("memberslevel_logintip", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("displayname_none", (byte) -127);
+                var2 = SectorCacheStore.a("displayname_none", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("levelxofy1", (byte) -127);
+                var2 = SectorCacheStore.a("levelxofy1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("levelxofy2", (byte) -127);
+                var2 = SectorCacheStore.a("levelxofy2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("levelxofy", (byte) -127);
+                var2 = SectorCacheStore.a("levelxofy", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("ingame_level", (byte) -127);
+                var2 = SectorCacheStore.a("ingame_level", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("mouseoveranicon", (byte) -127);
+                var2 = SectorCacheStore.a("mouseoveranicon", (byte) -127);
                 if (var2 != null) {
                   id.field_d = GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("notyetachieved", (byte) -127);
+                var2 = SectorCacheStore.a("notyetachieved", (byte) -127);
                 if (var2 != null) {
                   vd.field_n = GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("achieved", (byte) -127);
+                var2 = SectorCacheStore.a("achieved", (byte) -127);
                 if (null != var2) {
                   pk.field_b = GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("orbpoints", (byte) -127);
+                var2 = SectorCacheStore.a("orbpoints", (byte) -127);
                 if (null != var2) {
                   eg.field_a = GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("orbcoins", (byte) -127);
+                var2 = SectorCacheStore.a("orbcoins", (byte) -127);
                 if (var2 != null) {
                   nl.field_a = GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("orbpoints_colon", (byte) -127);
+                var2 = SectorCacheStore.a("orbpoints_colon", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("orbcoins_colon", (byte) -127);
+                var2 = SectorCacheStore.a("orbcoins_colon", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("achieved_colon_description", (byte) -127);
+                var2 = SectorCacheStore.a("achieved_colon_description", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("secretachievement", (byte) -127);
+                var2 = SectorCacheStore.a("secretachievement", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("no_highscores", (byte) -127);
+                var2 = SectorCacheStore.a("no_highscores", (byte) -127);
                 if (null != var2) {
                   j.field_F = GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("hs_name", (byte) -127);
+                var2 = SectorCacheStore.a("hs_name", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("hs_level", (byte) -127);
+                var2 = SectorCacheStore.a("hs_level", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("hs_fromlevel", (byte) -127);
+                var2 = SectorCacheStore.a("hs_fromlevel", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("hs_tolevel", (byte) -127);
+                var2 = SectorCacheStore.a("hs_tolevel", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("hs_score", (byte) -127);
+                var2 = SectorCacheStore.a("hs_score", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("hs_end", (byte) -127);
+                var2 = SectorCacheStore.a("hs_end", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("ingame_score", (byte) -127);
+                var2 = SectorCacheStore.a("ingame_score", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("score_colon", (byte) -127);
+                var2 = SectorCacheStore.a("score_colon", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("mp_leavegame", (byte) -127);
+                var2 = SectorCacheStore.a("mp_leavegame", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("mp_offerrematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_offerrematch", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("mp_offerrematch_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mp_offerrematch_unrated", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("mp_acceptrematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_acceptrematch", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("mp_acceptrematch_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mp_acceptrematch_unrated", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("mp_cancelrematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_cancelrematch", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("mp_cancelrematch_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mp_cancelrematch_unrated", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("mp_rematchnewgame", (byte) -127);
+                var2 = SectorCacheStore.a("mp_rematchnewgame", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("mp_rematchnewgame_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mp_rematchnewgame_unrated", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("mp_x_wantstodraw", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_wantstodraw", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("mp_x_offersrematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_offersrematch", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("mp_x_offersrematch_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_offersrematch_unrated", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 87);
                 }
-                var2 = hc.a("mp_youofferrematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_youofferrematch", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("mp_youofferrematch_unrated", (byte) -127);
+                var2 = SectorCacheStore.a("mp_youofferrematch_unrated", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("mp_youofferdraw", (byte) -127);
+                var2 = SectorCacheStore.a("mp_youofferdraw", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("mp_youresigned", (byte) -127);
+                var2 = SectorCacheStore.a("mp_youresigned", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("mp_youresigned_rematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_youresigned_rematch", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("mp_x_hasresignedandleft", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_hasresignedandleft", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("mp_x_hasresigned_rematch", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_hasresigned_rematch", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("mp_x_hasresigned", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_hasresigned", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("mp_x_hasleft", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_hasleft", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("mp_x_haswon", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_haswon", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mp_youhavewon", (byte) -127);
+                var2 = SectorCacheStore.a("mp_youhavewon", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("mp_gamedrawn", (byte) -127);
+                var2 = SectorCacheStore.a("mp_gamedrawn", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("mp_timeremaining", (byte) -127);
+                var2 = SectorCacheStore.a("mp_timeremaining", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 108);
                 }
-                var2 = hc.a("mp_x_turn", (byte) -127);
+                var2 = SectorCacheStore.a("mp_x_turn", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("mp_yourturn", (byte) -127);
+                var2 = SectorCacheStore.a("mp_yourturn", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("gameover", (byte) -127);
+                var2 = SectorCacheStore.a("gameover", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("mp_hidechat", (byte) -127);
+                var2 = SectorCacheStore.a("mp_hidechat", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("mp_showchat_nounread", (byte) -127);
+                var2 = SectorCacheStore.a("mp_showchat_nounread", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("mp_showchat_unread1", (byte) -127);
+                var2 = SectorCacheStore.a("mp_showchat_unread1", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("mp_showchat_unread2", (byte) -127);
+                var2 = SectorCacheStore.a("mp_showchat_unread2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("click_to_quickchat", (byte) -127);
+                var2 = SectorCacheStore.a("click_to_quickchat", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("autorespond", (byte) -127);
+                var2 = SectorCacheStore.a("autorespond", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("quickchat_help", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_help", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 92);
                 }
-                var2 = hc.a("quickchat_help_title", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_help_title", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 107);
                 }
-                var2 = hc.a("quickchat_shortcut_help,0", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_help,0", (byte) -127);
                 if (var2 != null) {
                   jc.field_L[0] = GzipInflater.a(var2, (byte) 90);
                 }
-                var2 = hc.a("quickchat_shortcut_help,1", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_help,1", (byte) -127);
                 if (null != var2) {
                   jc.field_L[1] = GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("quickchat_shortcut_help,2", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_help,2", (byte) -127);
                 if (null != var2) {
                   jc.field_L[2] = GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("quickchat_shortcut_help,3", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_help,3", (byte) -127);
                 if (var2 != null) {
                   jc.field_L[3] = GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("quickchat_shortcut_help,4", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_help,4", (byte) -127);
                 if (null != var2) {
                   jc.field_L[4] = GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("quickchat_shortcut_help,5", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_help,5", (byte) -127);
                 if (null != var2) {
                   jc.field_L[5] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("quickchat_shortcut_keys,0", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_keys,0", (byte) -127);
                 if (null != var2) {
                   AccountServiceResult.field_f[0] = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("quickchat_shortcut_keys,1", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_keys,1", (byte) -127);
                 if (var2 != null) {
                   AccountServiceResult.field_f[1] = GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("quickchat_shortcut_keys,2", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_keys,2", (byte) -127);
                 if (var2 != null) {
                   AccountServiceResult.field_f[2] = GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("quickchat_shortcut_keys,3", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_keys,3", (byte) -127);
                 if (var2 != null) {
                   AccountServiceResult.field_f[3] = GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("quickchat_shortcut_keys,4", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_keys,4", (byte) -127);
                 if (var2 != null) {
                   AccountServiceResult.field_f[4] = GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("quickchat_shortcut_keys,5", (byte) -127);
+                var2 = SectorCacheStore.a("quickchat_shortcut_keys,5", (byte) -127);
                 if (var2 != null) {
                   AccountServiceResult.field_f[5] = GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("keychar_the_character_under_questionmark", (byte) -127);
+                var2 = SectorCacheStore.a("keychar_the_character_under_questionmark", (byte) -127);
                 if (var2 != null) {
                   cc.a(var2[0], 63);
                 }
-                var2 = hc.a("rating_noratings", (byte) -127);
+                var2 = SectorCacheStore.a("rating_noratings", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("rating_rating", (byte) -127);
+                var2 = SectorCacheStore.a("rating_rating", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("rating_played", (byte) -127);
+                var2 = SectorCacheStore.a("rating_played", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("rating_won", (byte) -127);
+                var2 = SectorCacheStore.a("rating_won", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("rating_lost", (byte) -127);
+                var2 = SectorCacheStore.a("rating_lost", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("rating_drawn", (byte) -127);
+                var2 = SectorCacheStore.a("rating_drawn", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("benefits_fullscreen", (byte) -127);
+                var2 = SectorCacheStore.a("benefits_fullscreen", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("benefits_noadverts", (byte) -127);
+                var2 = SectorCacheStore.a("benefits_noadverts", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("benefits_price", (byte) -127);
+                var2 = SectorCacheStore.a("benefits_price", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("members_expansion_benefits,0", (byte) -127);
+                var2 = SectorCacheStore.a("members_expansion_benefits,0", (byte) -127);
                 if (var2 != null) {
                   n.field_B[0] = GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("members_expansion_benefits,1", (byte) -127);
+                var2 = SectorCacheStore.a("members_expansion_benefits,1", (byte) -127);
                 if (var2 != null) {
                   n.field_B[1] = GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("members_expansion_benefits,2", (byte) -127);
+                var2 = SectorCacheStore.a("members_expansion_benefits,2", (byte) -127);
                 if (var2 != null) {
                   n.field_B[2] = GzipInflater.a(var2, (byte) 121);
                 }
-                var2 = hc.a("members_expansion_price_top", (byte) -127);
+                var2 = SectorCacheStore.a("members_expansion_price_top", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("members_expansion_price_bottom", (byte) -127);
+                var2 = SectorCacheStore.a("members_expansion_price_bottom", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("reconnect_lost_seq,0", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_lost_seq,0", (byte) -127);
                 if (null != var2) {
                   me.field_d[0] = GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("reconnect_lost_seq,1", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_lost_seq,1", (byte) -127);
                 if (null != var2) {
                   me.field_d[1] = GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("reconnect_lost_seq,2", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_lost_seq,2", (byte) -127);
                 if (null != var2) {
                   me.field_d[2] = GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("reconnect_lost_seq,3", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_lost_seq,3", (byte) -127);
                 if (null != var2) {
                   me.field_d[3] = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("reconnect_lost", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_lost", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("reconnect_restored", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_restored", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 114);
                 }
-                var2 = hc.a("reconnect_please_check", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_please_check", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("reconnect_wait", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_wait", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("reconnect_retry", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_retry", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 83);
                 }
-                var2 = hc.a("reconnect_resume", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_resume", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("reconnect_or", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_or", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 82);
                 }
-                var2 = hc.a("reconnect_exitfs", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_exitfs", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 118);
                 }
-                var2 = hc.a("reconnect_exitfs_quit", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_exitfs_quit", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("reconnect_quit", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_quit", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("reconnect_check_fs", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_check_fs", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 112);
                 }
-                var2 = hc.a("reconnect_check_nonfs", (byte) -127);
+                var2 = SectorCacheStore.a("reconnect_check_nonfs", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("fs_accept_beforeaccept", (byte) -127);
+                var2 = SectorCacheStore.a("fs_accept_beforeaccept", (byte) -127);
                 if (var2 != null) {
                   oa.field_c = GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("fs_button_accept", (byte) -127);
+                var2 = SectorCacheStore.a("fs_button_accept", (byte) -127);
                 if (var2 != null) {
                   qd.field_b = GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("fs_accept_afteraccept", (byte) -127);
+                var2 = SectorCacheStore.a("fs_accept_afteraccept", (byte) -127);
                 if (null != var2) {
                   ai.field_l = GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("fs_button_cancel", (byte) -127);
+                var2 = SectorCacheStore.a("fs_button_cancel", (byte) -127);
                 if (var2 != null) {
                   gf.field_a = GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("fs_accept_aftercancel", (byte) -127);
+                var2 = SectorCacheStore.a("fs_accept_aftercancel", (byte) -127);
                 if (var2 != null) {
                   ll.field_b = GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("fs_accept_countdown_sing", (byte) -127);
+                var2 = SectorCacheStore.a("fs_accept_countdown_sing", (byte) -127);
                 if (null != var2) {
                   rf.field_g = GzipInflater.a(var2, (byte) 116);
                 }
-                var2 = hc.a("fs_accept_countdown_pl", (byte) -127);
+                var2 = SectorCacheStore.a("fs_accept_countdown_pl", (byte) -127);
                 if (null != var2) {
                   bf.field_b = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("fs_nonmember", (byte) -127);
+                var2 = SectorCacheStore.a("fs_nonmember", (byte) -127);
                 if (var2 != null) {
                   tk.field_l = GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("fs_button_close", (byte) -127);
+                var2 = SectorCacheStore.a("fs_button_close", (byte) -127);
                 if (var2 != null) {
                   gh.field_i = GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("fs_button_members", (byte) -127);
+                var2 = SectorCacheStore.a("fs_button_members", (byte) -127);
                 if (null != var2) {
                   ck.field_I = GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("fs_unavailable", (byte) -127);
+                var2 = SectorCacheStore.a("fs_unavailable", (byte) -127);
                 if (null != var2) {
                   oj.field_b = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("fs_unavailable_try_signed_applet", (byte) -127);
+                var2 = SectorCacheStore.a("fs_unavailable_try_signed_applet", (byte) -127);
                 if (var2 != null) {
                   ll.field_a = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("fs_focus", (byte) -127);
+                var2 = SectorCacheStore.a("fs_focus", (byte) -127);
                 if (null != var2) {
                   fe.field_d = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("fs_focus_or_resolution", (byte) -127);
+                var2 = SectorCacheStore.a("fs_focus_or_resolution", (byte) -127);
                 if (var2 != null) {
                   GameApplet.field_f = GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("fs_timeout", (byte) -127);
+                var2 = SectorCacheStore.a("fs_timeout", (byte) -127);
                 if (var2 != null) {
                   ij.field_b = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("fs_button_tryagain", (byte) -127);
+                var2 = SectorCacheStore.a("fs_button_tryagain", (byte) -127);
                 if (null != var2) {
                   fh.field_D = GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("graphics_ui_fs_countdown", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_ui_fs_countdown", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("mb_caption_title", (byte) -127);
+                var2 = SectorCacheStore.a("mb_caption_title", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 91);
                 }
-                var2 = hc.a("mb_including_gamename", (byte) -127);
+                var2 = SectorCacheStore.a("mb_including_gamename", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("mb_full_access_1", (byte) -127);
+                var2 = SectorCacheStore.a("mb_full_access_1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 103);
                 }
-                var2 = hc.a("mb_full_access_2", (byte) -127);
+                var2 = SectorCacheStore.a("mb_full_access_2", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("mb_achievement_count_1", (byte) -127);
+                var2 = SectorCacheStore.a("mb_achievement_count_1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("mb_achievement_count_2", (byte) -127);
+                var2 = SectorCacheStore.a("mb_achievement_count_2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("mb_exclusive_1", (byte) -127);
+                var2 = SectorCacheStore.a("mb_exclusive_1", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("mb_exclusive_2", (byte) -127);
+                var2 = SectorCacheStore.a("mb_exclusive_2", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("me_extra_benefits", (byte) -127);
+                var2 = SectorCacheStore.a("me_extra_benefits", (byte) -127);
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("hs_friend_tip", (byte) -127);
+                var2 = SectorCacheStore.a("hs_friend_tip", (byte) -127);
                 if (var2 != null) {
                   ij.field_d = GzipInflater.a(var2, (byte) 126);
                 }
-                var2 = hc.a("hs_friend_tip_multi", (byte) -127);
+                var2 = SectorCacheStore.a("hs_friend_tip_multi", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("hs_mode_name,0", (byte) -127);
+                var2 = SectorCacheStore.a("hs_mode_name,0", (byte) -127);
                 if (var2 != null) {
                   jk.field_d[0] = GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("hs_mode_name,1", (byte) -127);
+                var2 = SectorCacheStore.a("hs_mode_name,1", (byte) -127);
                 if (null != var2) {
                   jk.field_d[1] = GzipInflater.a(var2, (byte) 97);
                 }
-                var2 = hc.a("hs_mode_name,2", (byte) -127);
+                var2 = SectorCacheStore.a("hs_mode_name,2", (byte) -127);
                 if (var2 != null) {
                   jk.field_d[2] = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("rating_mode_name,0", (byte) -127);
+                var2 = SectorCacheStore.a("rating_mode_name,0", (byte) -127);
                 if (null != var2) {
                   fg.field_m[0] = GzipInflater.a(var2, (byte) 122);
                 }
-                var2 = hc.a("rating_mode_name,1", (byte) -127);
+                var2 = SectorCacheStore.a("rating_mode_name,1", (byte) -127);
                 if (var2 != null) {
                   fg.field_m[1] = GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("rating_mode_long_name,0", (byte) -127);
+                var2 = SectorCacheStore.a("rating_mode_long_name,0", (byte) -127);
                 if (var2 != null) {
                   mj.field_c[0] = GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("rating_mode_long_name,1", (byte) -127);
+                var2 = SectorCacheStore.a("rating_mode_long_name,1", (byte) -127);
                 if (null != var2) {
                   mj.field_c[1] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("graphics_config_fixed_size", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_fixed_size", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 78);
                 }
-                var2 = hc.a("graphics_config_resizable", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_resizable", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("graphics_config_fullscreen", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_fullscreen", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 89);
                 }
-                var2 = hc.a("graphics_config_done", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_done", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("graphics_config_apply", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_apply", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("graphics_config_title", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_title", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("graphics_config_instruction", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_instruction", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("graphics_config_need_memory", (byte) -127);
+                var2 = SectorCacheStore.a("graphics_config_need_memory", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 111);
                 }
-                var2 = hc.a("pleasewait_dotdotdot", (byte) -127);
+                var2 = SectorCacheStore.a("pleasewait_dotdotdot", (byte) -127);
                 if (var2 != null) {
                   tj.field_H = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("serviceunavailable", (byte) -127);
+                var2 = SectorCacheStore.a("serviceunavailable", (byte) -127);
                 if (var2 != null) {
                   t.field_f = GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("createtouse", (byte) -127);
+                var2 = SectorCacheStore.a("createtouse", (byte) -127);
                 if (null != var2) {
                   MouseInputHandler.field_g = GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("achievementsoffline", (byte) -127);
+                var2 = SectorCacheStore.a("achievementsoffline", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 100);
                 }
-                var2 = hc.a("warning", (byte) -127);
+                var2 = SectorCacheStore.a("warning", (byte) -127);
                 if (null != var2) {
                   GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("DEFAULT_PLAYER_NAME", (byte) -127);
+                var2 = SectorCacheStore.a("DEFAULT_PLAYER_NAME", (byte) -127);
                 if (var2 != null) {
                   vd.field_l = GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("mustlogin1", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin1", (byte) -127);
                 if (var2 != null) {
                   d.field_e = GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("mustlogin2,1", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,1", (byte) -127);
                 if (var2 != null) {
                   ek.field_a[1] = GzipInflater.a(var2, (byte) 126);
                 }
-                var2 = hc.a("mustlogin2,2", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,2", (byte) -127);
                 if (null != var2) {
                   ek.field_a[2] = GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("mustlogin2,3", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,3", (byte) -127);
                 if (null != var2) {
                   ek.field_a[3] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("mustlogin2,4", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,4", (byte) -127);
                 if (null != var2) {
                   ek.field_a[4] = GzipInflater.a(var2, (byte) 115);
                 }
-                var2 = hc.a("mustlogin2,5", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,5", (byte) -127);
                 if (var2 != null) {
                   ek.field_a[5] = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mustlogin2,6", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,6", (byte) -127);
                 if (var2 != null) {
                   ek.field_a[6] = GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("mustlogin2,7", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin2,7", (byte) -127);
                 if (null != var2) {
                   ek.field_a[7] = GzipInflater.a(var2, (byte) 84);
                 }
-                var2 = hc.a("mustlogin3,1", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,1", (byte) -127);
                 if (null != var2) {
                   bf.field_d[1] = GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("mustlogin3,2", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,2", (byte) -127);
                 if (null != var2) {
                   bf.field_d[2] = GzipInflater.a(var2, (byte) 102);
                 }
-                var2 = hc.a("mustlogin3,3", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,3", (byte) -127);
                 if (var2 != null) {
                   bf.field_d[3] = GzipInflater.a(var2, (byte) 113);
                 }
-                var2 = hc.a("mustlogin3,4", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,4", (byte) -127);
                 if (null != var2) {
                   bf.field_d[4] = GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("mustlogin3,5", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,5", (byte) -127);
                 if (null != var2) {
                   bf.field_d[5] = GzipInflater.a(var2, (byte) 119);
                 }
-                var2 = hc.a("mustlogin3,6", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,6", (byte) -127);
                 if (null != var2) {
                   bf.field_d[6] = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mustlogin3,7", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin3,7", (byte) -127);
                 if (var2 != null) {
                   bf.field_d[7] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("discard", (byte) -127);
+                var2 = SectorCacheStore.a("discard", (byte) -127);
                 if (null != var2) {
                   gg.field_c = GzipInflater.a(var2, (byte) 86);
                 }
-                var2 = hc.a("mustlogin4,1", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,1", (byte) -127);
                 if (var2 != null) {
                   sb.field_b[1] = GzipInflater.a(var2, (byte) 88);
                 }
-                var2 = hc.a("mustlogin4,2", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,2", (byte) -127);
                 if (var2 != null) {
                   sb.field_b[2] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("mustlogin4,3", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,3", (byte) -127);
                 if (var2 != null) {
                   sb.field_b[3] = GzipInflater.a(var2, (byte) 81);
                 }
-                var2 = hc.a("mustlogin4,4", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,4", (byte) -127);
                 if (var2 != null) {
                   sb.field_b[4] = GzipInflater.a(var2, (byte) 94);
                 }
-                var2 = hc.a("mustlogin4,5", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,5", (byte) -127);
                 if (null != var2) {
                   sb.field_b[5] = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mustlogin4,6", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,6", (byte) -127);
                 if (var2 != null) {
                   sb.field_b[6] = GzipInflater.a(var2, (byte) 124);
                 }
-                var2 = hc.a("mustlogin4,7", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin4,7", (byte) -127);
                 if (var2 != null) {
                   sb.field_b[7] = GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("mustlogin_notloggedin", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_notloggedin", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("mustlogin_alternate,1", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,1", (byte) -127);
                 if (var2 != null) {
                   ak.field_N[1] = GzipInflater.a(var2, (byte) 109);
                 }
-                var2 = hc.a("mustlogin_alternate,2", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,2", (byte) -127);
                 if (null != var2) {
                   ak.field_N[2] = GzipInflater.a(var2, (byte) 105);
                 }
-                var2 = hc.a("mustlogin_alternate,3", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,3", (byte) -127);
                 if (null != var2) {
                   ak.field_N[3] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("mustlogin_alternate,4", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,4", (byte) -127);
                 if (null != var2) {
                   ak.field_N[4] = GzipInflater.a(var2, (byte) 96);
                 }
-                var2 = hc.a("mustlogin_alternate,5", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,5", (byte) -127);
                 if (var2 != null) {
                   ak.field_N[5] = GzipInflater.a(var2, (byte) 79);
                 }
-                var2 = hc.a("mustlogin_alternate,6", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,6", (byte) -127);
                 if (var2 != null) {
                   ak.field_N[6] = GzipInflater.a(var2, (byte) 117);
                 }
-                var2 = hc.a("mustlogin_alternate,7", (byte) -127);
+                var2 = SectorCacheStore.a("mustlogin_alternate,7", (byte) -127);
                 if (var2 != null) {
                   ak.field_N[7] = GzipInflater.a(var2, (byte) 98);
                 }
-                var2 = hc.a("subscription_cost_monthly,0", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,0", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[0] = GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("subscription_cost_monthly,1", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,1", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[1] = GzipInflater.a(var2, (byte) 95);
                 }
-                var2 = hc.a("subscription_cost_monthly,2", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,2", (byte) -127);
                 if (null != var2) {
                   ta.field_ib[2] = GzipInflater.a(var2, (byte) 93);
                 }
-                var2 = hc.a("subscription_cost_monthly,3", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,3", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[3] = GzipInflater.a(var2, (byte) 80);
                 }
-                var2 = hc.a("subscription_cost_monthly,4", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,4", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[4] = GzipInflater.a(var2, (byte) 85);
                 }
-                var2 = hc.a("subscription_cost_monthly,5", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,5", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[5] = GzipInflater.a(var2, (byte) 125);
                 }
-                var2 = hc.a("subscription_cost_monthly,6", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,6", (byte) -127);
                 if (null != var2) {
                   ta.field_ib[6] = GzipInflater.a(var2, (byte) 120);
                 }
-                var2 = hc.a("subscription_cost_monthly,7", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,7", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[7] = GzipInflater.a(var2, (byte) 104);
                 }
-                var2 = hc.a("subscription_cost_monthly,8", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,8", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[8] = GzipInflater.a(var2, (byte) 99);
                 }
-                var2 = hc.a("subscription_cost_monthly,9", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,9", (byte) -127);
                 if (null != var2) {
                   ta.field_ib[9] = GzipInflater.a(var2, (byte) 123);
                 }
-                var2 = hc.a("subscription_cost_monthly,10", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,10", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[10] = GzipInflater.a(var2, (byte) 106);
                 }
-                var2 = hc.a("subscription_cost_monthly,11", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,11", (byte) -127);
                 if (var2 != null) {
                   ta.field_ib[11] = GzipInflater.a(var2, (byte) 127);
                 }
-                var2 = hc.a("subscription_cost_monthly,12", (byte) -127);
+                var2 = SectorCacheStore.a("subscription_cost_monthly,12", (byte) -127);
                 if (null != var2) {
                   ta.field_ib[12] = GzipInflater.a(var2, (byte) 110);
                 }
-                var2 = hc.a("sentence_separator", (byte) -127);
+                var2 = SectorCacheStore.a("sentence_separator", (byte) -127);
                 if (var2 != null) {
                   GzipInflater.a(var2, (byte) 109);
                 }
@@ -3239,7 +3239,7 @@ abstract class c extends GameApplet {
                         return;
                       }
                     }
-                    gj.a(-124);
+                    DiskCacheWorker.a(-124);
                     if (var4 == 0) {
                       return;
                     }
@@ -3390,7 +3390,7 @@ abstract class c extends GameApplet {
         var5 = Main.field_T;
         try {
           if (wc.field_A != null) {
-            if (null == gj.field_a) {
+            if (null == DiskCacheWorker.field_a) {
               var3 = af.t(3);
               var4_ref_java_awt_Dimension = var3.getSize();
               wc.field_A.a(var4_ref_java_awt_Dimension.height, (byte) 115, var4_ref_java_awt_Dimension.width);
@@ -4004,7 +4004,7 @@ abstract class c extends GameApplet {
               rk.a(mk.g(-127), (byte) -85);
             }
             if (param2 == var4_int) {
-              na.field_r.h(17, 0);
+              NetworkArchiveRequest.field_r.h(17, 0);
             }
             if (var4_int == 11) {
               wh.a(mk.g(-125), 63);

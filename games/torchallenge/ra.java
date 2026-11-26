@@ -297,7 +297,7 @@ final class ra {
                     this.field_o[var20][0][0] = SocketConnector.field_l[var19][var20][0][0];
                     this.field_o[var20][0][1] = SocketConnector.field_l[var19][var20][0][1];
                     var15 = 1 & vb.field_a[var19][var20];
-                    sh.a(var15, -100, this.field_f, var20, this.field_s, this.field_t, var18);
+                    ArchiveRequest.a(var15, -100, this.field_f, var20, this.field_s, this.field_t, var18);
                     if (param3 != null) {
                       param3.d();
                     }

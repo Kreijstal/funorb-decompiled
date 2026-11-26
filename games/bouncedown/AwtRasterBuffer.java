@@ -13,7 +13,7 @@ abstract class AwtRasterBuffer {
     int[] field_g;
 
     final static void a(byte param0) {
-        qa var1 = (qa) (md.field_t.beginForward((byte) -71));
+        qa var1 = (qa) (DiskArchiveRequest.field_t.beginForward((byte) -71));
         if (var1 == null) {
           kc.a((byte) 18);
           return;

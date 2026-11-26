@@ -31,7 +31,7 @@ class bh extends ck {
         if (param1 == FullscreenFocusCanvas.field_c) {
           return null;
         }
-        return cc.field_e[param1];
+        return DiskCacheWorker.field_e[param1];
     }
 
     public static void clearDeclaredStaticReferences(byte param0) {

@@ -17,7 +17,7 @@ abstract class tk {
     byte field_l;
     PacketBuffer field_i;
     volatile int field_m;
-    ia field_h;
+    NetworkArchiveRequest field_h;
 
     final static int c(int param0) {
         if (param0 != 1) {
@@ -224,18 +224,18 @@ abstract class tk {
         return param0 ^ param1;
     }
 
-    final ia a(int param0, int param1, boolean param2, byte param3, boolean param4) {
-        ia stackIn_3_0 = null;
+    final NetworkArchiveRequest a(int param0, int param1, boolean param2, byte param3, boolean param4) {
+        NetworkArchiveRequest stackIn_3_0 = null;
         boolean stackIn_4_1 = false;
-        ia stackIn_16_0 = null;
+        NetworkArchiveRequest stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         long var6;
-        ia var8;
+        NetworkArchiveRequest var8;
         long var6Lifetime1;
-        ia var8Lifetime1;
+        NetworkArchiveRequest var8Lifetime1;
         if (!param4) {
           var6 = ((long)param1 << 32) + (long)param0;
-          var8 = new ia();
+          var8 = new NetworkArchiveRequest();
           var8.field_B = param3;
           var8.secondaryKey = var6;
           stackIn_16_0 = var8;
@@ -256,7 +256,7 @@ abstract class tk {
         }
         field_c = (BitmapFont) null;
         var6Lifetime1 = ((long)param1 << 32) + (long)param0;
-        var8Lifetime1 = new ia();
+        var8Lifetime1 = new NetworkArchiveRequest();
         var8Lifetime1.field_B = param3;
         var8Lifetime1.secondaryKey = var6Lifetime1;
         stackIn_3_0 = var8Lifetime1;

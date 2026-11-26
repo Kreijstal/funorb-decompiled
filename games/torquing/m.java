@@ -108,7 +108,7 @@ final class m {
         if (param0 >= -51) {
           return;
         }
-        nk.field_t = true;
+        ArchiveRequest.field_t = true;
     }
 
     final FullscreenFocusCanvas b(byte param0) {
@@ -119,7 +119,7 @@ final class m {
         this.field_u = wk.field_d;
         this.field_p.a(this.field_b, -6714, this.field_r);
         b.field_v = false;
-        FullscreenFocusCanvas var2 = je.createFullscreenCanvas(this.field_r, this.field_b, nk.field_u, 0, 0, -116);
+        FullscreenFocusCanvas var2 = je.createFullscreenCanvas(this.field_r, this.field_b, ArchiveRequest.field_u, 0, 0, -116);
         if (var2 == null) {
           this.b(false);
         }

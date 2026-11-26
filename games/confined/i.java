@@ -312,11 +312,11 @@ abstract class i extends GameAppletShell {
           }
           else {
             we.field_c = 12;
-            pc.field_d = true;
+            DiskCacheWorker.field_d = true;
           }
         }
         if (we.field_c == 12 &&
-          !pc.field_d) {
+          !DiskCacheWorker.field_d) {
           we.field_c = 13;
         }
         if (we.field_c == 13) {

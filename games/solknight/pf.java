@@ -3,7 +3,7 @@
  */
 final class pf {
     static int field_a;
-    static ae field_d;
+    static DiskCacheWorker field_d;
     static Sprite field_b;
     static String field_c;
     private static String field_z;

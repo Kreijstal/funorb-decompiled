@@ -27,7 +27,7 @@ final class oa extends IntrusiveNode {
         int var3;
         int var3Lifetime1;
         if (param0 == 7 &&
-          !qh.c((byte) 57) &&
+          !DiskArchiveRequest.c((byte) 57) &&
           0 < wc.field_q) {
           param0 = 0;
         }
@@ -36,7 +36,7 @@ final class oa extends IntrusiveNode {
         }
         pg.field_f = -60;
         bc.field_V = param0;
-        af.field_g = 0;
+        DiskCacheWorker.field_g = 0;
         if (bc.field_V == 0) {
           ImageProducerRasterBuffer.field_m = bc.field_V;
           k.a(0, BufferedSocket.field_j);

@@ -369,11 +369,11 @@ final class pk extends kj {
         try {
           if (0 < (param1.field_b << 17) + lc.field_h) {
             lc.field_h = lc.field_h + (param1.field_b << 17);
-            ic.field_t = ic.field_t + ud.field_k * param1.field_b;
+            NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + ud.field_k * param1.field_b;
           } else {
             if (param1.field_b < lc.field_h >>> 17) {
               lc.field_h = lc.field_h - (param1.field_b << 17);
-              ic.field_t = ic.field_t - ud.field_k * param1.field_b;
+              NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - ud.field_k * param1.field_b;
             }
           }
           boolean decompiledFrameCompleted0 = true;
@@ -536,9 +536,9 @@ final class pk extends kj {
             MusicPatchPcmStream.field_q = 2;
           }
           if (param0 == -48) {
-            bi.field_d = 3 & param1;
-            if (bi.field_d > 2) {
-              bi.field_d = 2;
+            SectorCacheStore.field_d = 3 & param1;
+            if (SectorCacheStore.field_d > 2) {
+              SectorCacheStore.field_d = 2;
             }
             return;
           }
@@ -551,11 +551,11 @@ final class pk extends kj {
             pk.d(true);
           }
         }
-        bi.field_d = 3 & param1;
-        if (bi.field_d <= 2) {
+        SectorCacheStore.field_d = 3 & param1;
+        if (SectorCacheStore.field_d <= 2) {
           return;
         }
-        bi.field_d = 2;
+        SectorCacheStore.field_d = 2;
     }
 
     final static void d(boolean param0) {

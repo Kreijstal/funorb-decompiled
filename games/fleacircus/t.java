@@ -34,7 +34,7 @@ final class t {
         }
         if ((fleas.field_E != 0 ||
           !(ResourceArchive.field_c.field_x >= 15) ||
-          !qh.c((byte) 62) &&
+          !DiskArchiveRequest.c((byte) 62) &&
           !(0 >= wc.field_q)) && ResourceArchive.field_c.a(ResourceArchive.field_c.field_x, 98)) {
           return true;
         }
@@ -84,7 +84,7 @@ final class t {
         this.field_b.a(this.a(ag.field_f, kc.field_b, (byte) -57), var3, param0, -60);
         this.field_f = -1;
         if (this.field_i == 7) {
-          qh.a(param0, false);
+          DiskArchiveRequest.a(param0, false);
         }
     }
 
@@ -107,7 +107,7 @@ final class t {
           var14 = fleas.field_A ? 1 : 0;
           var3 = lk.field_Q;
           this.b(2, nb.field_g);
-          if (!qh.c((byte) 122)) {
+          if (!DiskArchiveRequest.c((byte) 122)) {
             if (m.field_b == null) {
               m.field_b = bm.a(false, 3, 1, 10, 40);
             }
@@ -157,7 +157,7 @@ final class t {
         if (param0 != -1) {
           this.d(73);
         }
-        if (!qh.c((byte) 32)) {
+        if (!DiskArchiveRequest.c((byte) 32)) {
           ve.field_d.a(qi.field_a, 195, -31 + ia.field_j[2], 250, 100, 0, -1, 1, 0, ve.field_d.field_N);
         } else {
           var3.a(sc.field_b, 190, ia.field_j[2] - 120, 260, 100, 0, -1, 1, 0, var3.field_N);
@@ -207,7 +207,7 @@ final class t {
 
     private final int b(byte param0, int param1) {
         if (2 == this.field_i &&
-          !qh.c((byte) 73)) {
+          !DiskArchiveRequest.c((byte) 73)) {
           if (param1 < 3) {
             return ia.field_t[this.field_i] + 180 * param1;
           }
@@ -226,7 +226,7 @@ final class t {
         int discarded$0 = 0;
         int var2 = 150;
         tl.field_p.b(bh.field_u[0], 320, var2 + 2 * tl.field_p.field_N, 0, -1, PacketBuffer.field_j / 3);
-        tl.field_p.b(qh.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)tl.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
+        tl.field_p.b(DiskArchiveRequest.c((byte) 111) ? nc.field_b : bh.field_u[1], 320, var2 + (int)((double)tl.field_p.field_N * 3.5), 0, -1, PacketBuffer.field_j / 3);
         jj.field_P.d((640 - jj.field_P.field_w) / 2, var2 + tl.field_p.field_N * 4);
         tl.field_p.a(hm.field_h + wi.field_b, 320, 200 + var2, 0, -1);
         ca.field_L.a(50, 100, 0, -4575, 380);
@@ -262,7 +262,7 @@ final class t {
         if (param0 != 2758) {
           this.field_e = -80;
         }
-        if (qh.c((byte) 94)) {
+        if (DiskArchiveRequest.c((byte) 94)) {
           var3 = 150 + var10.field_N;
           var4 = var10.field_K + (var10.field_y + 4);
           stackIn_7_0 = (fleas.field_L == 0) ? 0 : 1;
@@ -444,7 +444,7 @@ final class t {
           }
         } else {
           var15.a(al.field_d, 165, 200, 310, 100, 0, -1, 1, 0, var15.field_N);
-          if (qh.c((byte) 90)) {
+          if (DiskArchiveRequest.c((byte) 90)) {
             var15.a(sc.field_b, 165, 280, 310, 100, 0, -1, 1, 0, var15.field_N);
           }
         }
@@ -584,7 +584,7 @@ final class t {
 
     private final int a(int param0, int param1) {
         if (this.field_i == 2 &&
-          !qh.c((byte) 32)) {
+          !DiskArchiveRequest.c((byte) 32)) {
           return 165 + this.b((byte) -13, param0);
         }
         if (param1 != -19631) {
@@ -628,7 +628,7 @@ final class t {
         var2 = stackIn_6_0;
         var3 = 0;
         if (fleas.field_E == 0 &&
-          ResourceArchive.field_c.field_x >= 15 && (qh.c((byte) 36) ||
+          ResourceArchive.field_c.field_x >= 15 && (DiskArchiveRequest.c((byte) 36) ||
           !(wc.field_q > 0))) {
           var2 = 0;
           var3 = 1;
@@ -680,7 +680,7 @@ final class t {
             var10 = ri.field_u;
           }
           ve.field_d.a(var10, var4 + 5, var5, -10 + var6Lifetime1, var7, 1, -1, 0, 0, ve.field_d.field_N);
-          if (qh.c((byte) 125)) {
+          if (DiskArchiveRequest.c((byte) 125)) {
             var5 = var5 + ve.field_d.field_N * 3;
             ve.field_d.a(pc.field_m, var4 + 5, var5, -10 + var6Lifetime1, var7, 1, -1, 0, 0, ve.field_d.field_N);
           }
@@ -995,13 +995,13 @@ final class t {
                                         oa.a(-1, param0, 101);
                                         break regionExit1;
                                       }
-                                      if (!qh.c((byte) 109)) {
+                                      if (!DiskArchiveRequest.c((byte) 109)) {
                                         wi.field_p.a(-1);
                                       }
                                       m.field_b = null;
                                       oa.a(9, param0, -93);
                                     } else {
-                                      if (qh.c((byte) 64)) {
+                                      if (DiskArchiveRequest.c((byte) 64)) {
                                         oa.a(6, param0, 81);
                                       } else {
                                         if (fleas.field_L == 0) {
@@ -1044,8 +1044,8 @@ final class t {
                                   break;
                                 case 7:
                                   if (this.field_b.b(-80)) {
-                                    if (qh.c((byte) 68)) {
-                                      if ((qh.c((byte) 72) ||
+                                    if (DiskArchiveRequest.c((byte) 68)) {
+                                      if ((DiskArchiveRequest.c((byte) 72) ||
                                         !(wc.field_q > 0)) &&
                                         pc.a(true)) {
                                         stackIn_124_0 = 6;
@@ -1204,7 +1204,7 @@ final class t {
             wi.field_p.a(-116, 30);
           }
           wi.field_p.a(false);
-          qh.field_y = qh.field_y + 1;
+          DiskArchiveRequest.field_y = DiskArchiveRequest.field_y + 1;
         }
         while (SecondaryNodeDeque.b(-97)) {
           if (ji.field_a != 13) {
@@ -1257,7 +1257,7 @@ final class t {
         int var4;
         var4 = fleas.field_A ? 1 : 0;
         if (2 == this.field_i &&
-          !qh.c((byte) 34)) {
+          !DiskArchiveRequest.c((byte) 34)) {
           if (96 == ji.field_a) {
             if (this.field_b.field_k > 0) {
               if (this.field_b.field_k != 3) {
@@ -1481,7 +1481,7 @@ final class t {
 
     private final int a(int param0, byte param1) {
         if (this.field_i == 2 &&
-          !qh.c((byte) 97)) {
+          !DiskArchiveRequest.c((byte) 97)) {
           if (param0 < 3) {
             return ia.field_j[this.field_i];
           }

@@ -71,7 +71,7 @@ abstract class wj extends hf implements vc {
         hb var5 = null;
         int var4 = 0;
         try {
-          var5 = gf.field_c;
+          var5 = SectorCacheStore.field_c;
           var5.b(true, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;

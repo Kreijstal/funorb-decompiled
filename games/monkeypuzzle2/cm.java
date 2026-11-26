@@ -208,7 +208,7 @@ final class cm extends WidgetContainer implements ql {
           mc.a(param0 - 8512, var1);
           ig.b();
           SoftwareRasterizer.clearRaster();
-          uj.field_i = 0;
+          DiskCacheWorker.field_i = 0;
           ec.b(-128);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {

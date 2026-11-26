@@ -24,8 +24,8 @@ abstract class tg extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ImageProducerRasterBuffer.field_i = this.field_k;
         AccountNameAvailabilityValidator.a((byte) 52, ImageProducerRasterBuffer.field_i);
-        in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, nk.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
-        mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, nk.field_u, this.field_l, this.field_i, this.field_p, param0);
+        in.a(this.field_l, this.field_o, this.field_i, param0, ImageProducerRasterBuffer.field_i, 5000, this.field_r, ArchiveRequest.field_u, param2, this.field_p, 0, this.field_s, 5000, this.field_m);
+        mg.a(-1, ImageProducerRasterBuffer.field_i, this.field_r, this.field_m, ArchiveRequest.field_u, this.field_l, this.field_i, this.field_p, param0);
         qg.d(-125);
         wb.field_u = ResourceArchive.createMouseWheelInput(26);
         j.a(k.field_d, (byte) -125);
@@ -113,7 +113,7 @@ abstract class tg extends GameApplet {
           var3 = n.c((byte) 57) * 1200;
           if (this.field_n ||
             !(var3 >= k.b(124)) &&
-            !(var3 >= ac.d((byte) -97))) {
+            !(var3 >= NetworkArchiveRequest.d((byte) -97))) {
             this.field_n = false;
             ih.b(true);
             lg.h(-101);
@@ -308,22 +308,22 @@ abstract class tg extends GameApplet {
     }
 
     private final void h(int param0) {
-        nk.field_s[6] = -2;
-        nk.field_s[7] = -1;
-        nk.field_s[17] = -1;
-        nk.field_s[4] = -1;
-        nk.field_s[16] = -1;
-        nk.field_s[2] = -2;
-        nk.field_s[8] = -2;
-        nk.field_s[13] = -1;
-        nk.field_s[1] = 16;
-        nk.field_s[3] = -1;
-        nk.field_s[10] = -1;
-        nk.field_s[param0] = -1;
-        nk.field_s[5] = -1;
-        nk.field_s[12] = -1;
-        nk.field_s[9] = -1;
-        nk.field_s[18] = 1;
+        ArchiveRequest.field_s[6] = -2;
+        ArchiveRequest.field_s[7] = -1;
+        ArchiveRequest.field_s[17] = -1;
+        ArchiveRequest.field_s[4] = -1;
+        ArchiveRequest.field_s[16] = -1;
+        ArchiveRequest.field_s[2] = -2;
+        ArchiveRequest.field_s[8] = -2;
+        ArchiveRequest.field_s[13] = -1;
+        ArchiveRequest.field_s[1] = 16;
+        ArchiveRequest.field_s[3] = -1;
+        ArchiveRequest.field_s[10] = -1;
+        ArchiveRequest.field_s[param0] = -1;
+        ArchiveRequest.field_s[5] = -1;
+        ArchiveRequest.field_s[12] = -1;
+        ArchiveRequest.field_s[9] = -1;
+        ArchiveRequest.field_s[18] = 1;
     }
 
     private final void c(byte param0) {
@@ -371,7 +371,7 @@ abstract class tg extends GameApplet {
                     if (6 != var2) {
                       if (var2 != 7) {
                         if (var2 == 8) {
-                          nh.a(nk.field_u, oo.field_a, kj.field_d, (byte) -126);
+                          nh.a(ArchiveRequest.field_u, oo.field_a, kj.field_d, (byte) -126);
                         } else {
                           if (var2 == 16) {
                             ti.b(1);
@@ -759,7 +759,7 @@ abstract class tg extends GameApplet {
           if (var4 == 13) {
             try {
               if (null == ub.field_G) {
-                ub.field_G = new UrlRequest(nk.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                ub.field_G = new UrlRequest(ArchiveRequest.field_u, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (ub.field_G.a(3)) {
                 var12 = ub.field_G.a(true);

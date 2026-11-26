@@ -12,7 +12,7 @@ final class SectorCacheStore {
     static CrossfadingMidiPcmStream field_d;
     private int field_g;
 
-    private final boolean a(int param0, int param1, int param2, byte[] param3, boolean param4) {
+    private final boolean writeSectorChain(int param0, int param1, int param2, byte[] param3, boolean param4) {
         try {
           RuntimeException stackIn_74_0 = null;
           StringBuilder stackIn_74_1 = null;
@@ -199,7 +199,7 @@ final class SectorCacheStore {
         }
     }
 
-    final byte[] a(int param0, int param1) {
+    final byte[] read(int param0, int param1) {
         try {
           int var17 = 0;
           int incrementValue$2 = 0;
@@ -416,7 +416,7 @@ final class SectorCacheStore {
         }
     }
 
-    final boolean a(int param0, byte[] param1, int param2, byte param3) {
+    final boolean write(int param0, byte[] param1, int param2, byte param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -434,9 +434,9 @@ final class SectorCacheStore {
           synchronized (var5) {
             if (param2 >= 0 &&
               param2 <= this.field_g) {
-              var6 = this.a(param2, -6, param0, param1, true) ? 1 : 0;
+              var6 = this.writeSectorChain(param2, -6, param0, param1, true) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param2, -6, param0, param1, false) ? 1 : 0;
+                var6 = this.writeSectorChain(param2, -6, param0, param1, false) ? 1 : 0;
               }
               stackIn_9_0 = var6;
             } else {

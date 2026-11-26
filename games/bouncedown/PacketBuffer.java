@@ -815,7 +815,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 <= 32) {
           return true;
         }
-        return nd.a(false, vi.b(0));
+        return nd.a(false, DiskCacheWorker.b(0));
     }
 
     final void writePrefixedString(String param0, byte param1) {

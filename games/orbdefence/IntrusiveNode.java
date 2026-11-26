@@ -84,7 +84,7 @@ class IntrusiveNode {
         if (param0) {
           field_b = false;
         }
-        if (wj.field_m == 0) {
+        if (ArchiveRequest.field_m == 0) {
           if (!og.field_g.b(-1)) {
             return 20;
           }

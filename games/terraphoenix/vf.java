@@ -39,7 +39,7 @@ final class vf {
           ra.field_m = param5;
           cg.field_H = param6;
           PcmPlayerPump.field_c = param2;
-          IsaacCipher.field_f = ua.field_d;
+          IsaacCipher.field_f = SectorCacheStore.field_d;
           wf.field_q = param3;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

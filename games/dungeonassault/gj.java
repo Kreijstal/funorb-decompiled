@@ -51,7 +51,7 @@ abstract class gj {
               MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);
             } else {
               if (105 >= param0) {
-                MouseInput.field_b = em.createAccountSuggestionsResult(param2, 8082);
+                MouseInput.field_b = NetworkArchiveRequest.createAccountSuggestionsResult(param2, 8082);
               } else {
                 MouseInput.field_b = p.createAccountErrorResult(param0, param3, -28323);
               }

@@ -25,7 +25,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               oi.field_d.a((byte) 43);
             }
             if (null != hc.field_a) {
-              hc.field_a.a(-3);
+              hc.field_a.shutdown(-3);
             }
             if (null != fj.field_c) {
               try {

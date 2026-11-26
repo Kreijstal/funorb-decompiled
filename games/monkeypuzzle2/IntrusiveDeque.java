@@ -173,7 +173,7 @@ final class IntrusiveDeque {
         int var5 = 0;
         int var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var7 = gf.field_c;
+          var7 = SectorCacheStore.field_c;
           var8 = var7;
           var8.b(param2, param0);
           var8.position = var8.position + 1;

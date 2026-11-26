@@ -1073,7 +1073,7 @@ final class eg {
                   if (4 > var25Lifetime2) {
                     var34 = uc.field_U[var25Lifetime2];
                   } else {
-                    var34 = pc.field_e[-4 + var25Lifetime2];
+                    var34 = DiskCacheWorker.field_e[-4 + var25Lifetime2];
                   }
                 } else {
                   var34 = ei.field_mb[-3 + var25Lifetime2];

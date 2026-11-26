@@ -44,7 +44,7 @@ final class AccountCreationResultPanel extends dh implements ai {
 
     public final void a(byte param0, int param1, int param2, s param3, int param4) {
         if (this.field_kb) {
-          wj.a(-108, false, true);
+          ArchiveRequest.a(-108, false, true);
           return;
         }
         try {

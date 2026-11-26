@@ -160,7 +160,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 jh.field_h = ll.a(false, (byte) -49, param5, param0);
               } else {
                 var10 = (String) null;
-                jh.field_h = ik.a(param0, -66, cb.field_a, (String) null, false);
+                jh.field_h = ArchiveRequest.a(param0, -66, cb.field_a, (String) null, false);
               }
               d.field_b.position = 0;
               d.field_b.writeByte(14, -51);

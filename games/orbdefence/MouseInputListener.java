@@ -256,10 +256,10 @@ final class MouseInputListener implements java.awt.event.MouseListener, java.awt
             id.field_b = param0.getY();
             ji.correctedCurrentTimeMillis(108);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              eh.field_c = 1;
+              SectorCacheStore.field_c = 1;
               db.field_f = 1;
             } else {
-              eh.field_c = 2;
+              SectorCacheStore.field_c = 2;
               db.field_f = 2;
             }
             var2_int = param0.getModifiers();

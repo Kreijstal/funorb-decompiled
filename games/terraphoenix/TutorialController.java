@@ -321,11 +321,11 @@ final class TutorialController {
         var3Lifetime1 = 260;
         var4 = 40;
         if (1 == this.field_p) {
-          var2Lifetime1 = 640 - wh.field_e.field_r;
+          var2Lifetime1 = 640 - DiskCacheWorker.field_e.field_r;
           var4 = 77;
         }
         if (this.field_p == 2) {
-          var2Lifetime1 = -wh.field_e.field_r + 640;
+          var2Lifetime1 = -DiskCacheWorker.field_e.field_r + 640;
           var4 = 53;
         }
         var5 = AccountRequestState.field_f.field_s * (AccountRequestState.field_f.c(this.field_b, var3Lifetime1) + 1) + 32;
@@ -334,9 +334,9 @@ final class TutorialController {
             if (this.field_w == 0 &&
               this.field_z == 1 &&
               this.field_g >= var2Lifetime1 &&
-              wh.field_e.field_r + var2Lifetime1 > this.field_g &&
+              DiskCacheWorker.field_e.field_r + var2Lifetime1 > this.field_g &&
               this.field_c >= var5 + var4 &&
-              wh.field_e.field_t + var5 + var4 > this.field_c) {
+              DiskCacheWorker.field_e.field_t + var5 + var4 > this.field_c) {
               this.field_B = 1 + this.field_l;
               this.field_w = 5;
             }
@@ -458,13 +458,13 @@ final class TutorialController {
         if (this.field_g < var2Lifetime2) {
           return true;
         }
-        if (this.field_g > wh.field_e.field_r + var2Lifetime2) {
+        if (this.field_g > DiskCacheWorker.field_e.field_r + var2Lifetime2) {
           return true;
         }
         if (this.field_c < var5 - 16) {
           return true;
         }
-        stackIn_262_0 = !(this.field_c <= -16 + var5 + wh.field_e.field_t);
+        stackIn_262_0 = !(this.field_c <= -16 + var5 + DiskCacheWorker.field_e.field_t);
         return stackIn_262_0;
     }
 
@@ -595,15 +595,15 @@ final class TutorialController {
             var7 -= 3;
           }
           if (0 < this.field_p) {
-            var5 = 640 - wh.field_e.field_r;
+            var5 = 640 - DiskCacheWorker.field_e.field_r;
           }
           if (this.field_a) {
             aa.field_j.b(var5, var3 + var2);
             if (this.field_g >= var5 &&
-              this.field_g < wh.field_e.field_r + var5 &&
+              this.field_g < DiskCacheWorker.field_e.field_r + var5 &&
               var3 + var2 <= this.field_c &&
-              this.field_c < wh.field_e.field_t + (var3 + var2)) {
-              SoftwareRasterizer.fillRectangleAlpha(var5, var3 + var2, wh.field_e.field_r, wh.field_e.field_t, 16777215, 128);
+              this.field_c < DiskCacheWorker.field_e.field_t + (var3 + var2)) {
+              SoftwareRasterizer.fillRectangleAlpha(var5, var3 + var2, DiskCacheWorker.field_e.field_r, DiskCacheWorker.field_e.field_t, 16777215, 128);
             }
             if (this.field_s) {
               var8 = 6250335 + 1052688 * this.field_j;

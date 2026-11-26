@@ -460,7 +460,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "resetTips");
                 if (null != var2) {
-                  ee.field_H = bh.a(var2, 105);
+                  NetworkArchiveRequest.field_H = bh.a(var2, 105);
                 }
                 var2 = lh.b(-1, "tips");
                 if (null != var2) {
@@ -1369,7 +1369,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "multi");
                 if (var2 != null) {
-                  uh.field_f = bh.a(var2, -128);
+                  SectorCacheStore.field_f = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "escaped");
                 if (var2 != null) {
@@ -1605,7 +1605,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "getRich");
                 if (null != var2) {
-                  nm.field_c = bh.a(var2, -119);
+                  DiskCacheWorker.field_c = bh.a(var2, -119);
                 }
                 var2 = lh.b(-1, "getFlag");
                 if (var2 != null) {
@@ -1841,7 +1841,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "times100");
                 if (var2 != null) {
-                  uh.field_c = bh.a(var2, 77);
+                  SectorCacheStore.field_c = bh.a(var2, 77);
                 }
                 var2 = lh.b(-1, "times250");
                 if (null != var2) {

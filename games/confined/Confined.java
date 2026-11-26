@@ -103,7 +103,7 @@ public final class Confined extends i {
           uh.clearStaticReferences((byte) -56);
           p.clearStaticReferences(101);
           jf.b((byte) -88);
-          pc.clearStaticReferences((byte) -119);
+          DiskCacheWorker.clearStaticReferences((byte) -119);
           ja.clearStaticReferences((byte) -35);
           pf.clearStaticReferences(param0 ^ -172);
           BufferedSocket.clearStaticReferences(116);
@@ -165,13 +165,13 @@ public final class Confined extends i {
           kn.resetStaticState(-126);
           lh.clearStaticReferences(0);
           kd.clearStaticReferences((byte) 104);
-          tn.clearStaticReferences(false);
-          ae.a(param0 ^ 128);
-          sm.clearStaticReferences((byte) 81);
+          NetworkArchiveRequest.clearStaticReferences(false);
+          SectorCacheStore.a(param0 ^ 128);
+          DiskArchiveRequest.clearStaticReferences((byte) 81);
           tj.clearDeclaredStaticReferences(-125);
           BoundedRandomAccessFile.clearStaticReferences(param0 - 191);
           im.clearStaticReferences(false);
-          rl.clearStaticReferences(-114);
+          ArchiveRequest.clearStaticReferences(-114);
           IsaacRandom.resetStaticState(-1);
           ni.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(param0 ^ param0);
@@ -361,9 +361,9 @@ public final class Confined extends i {
           stackIn_11_1 = 110;
           stackIn_12_2 = (dn.field_d != null);
           this.b(stackIn_11_1, stackIn_12_2);
-          if (pc.field_d) {
+          if (DiskCacheWorker.field_d) {
             aa.a(false);
-            pc.field_d = false;
+            DiskCacheWorker.field_d = false;
           }
           boolean decompiledFrameRemainder0 = true;
           if (ga.g(15214)) {
@@ -375,10 +375,10 @@ public final class Confined extends i {
               this.f((byte) -95);
             }
             if (qa.field_a) {
-              if (!pc.a(false)) {
+              if (!DiskCacheWorker.a(false)) {
                 a.a(0);
               }
-              if (pc.a(false)) {
+              if (DiskCacheWorker.a(false)) {
                 this.c(false);
               }
             }
@@ -496,7 +496,7 @@ public final class Confined extends i {
             wb.a((java.awt.Canvas) (var2), 0);
             return;
           }
-          if (!pc.a(false)) {
+          if (!DiskCacheWorker.a(false)) {
             jc.a(bd.field_c, 10265, 100.0f);
             wb.a((java.awt.Canvas) (var2), 0);
             return;
@@ -884,8 +884,8 @@ public final class Confined extends i {
             u.field_T.b(256);
             ri.field_c = od.a(ka.field_N, "", "mines/basic");
             ri.field_c.b(25);
-            sm.field_A = od.a(ka.field_N, "", "mines/cluster");
-            sm.field_A.b(25);
+            DiskArchiveRequest.field_A = od.a(ka.field_N, "", "mines/cluster");
+            DiskArchiveRequest.field_A.b(25);
             jk.field_c[0] = od.a(ka.field_N, "", "aliens/flying-saucer");
             jk.field_c[1] = od.a(ka.field_N, "", "aliens/flying-saucer-2");
             jk.field_c[2] = od.a(ka.field_N, "", "aliens/flying-saucer-3");
@@ -1027,7 +1027,7 @@ public final class Confined extends i {
             ei.field_mb = nm.a(ih.field_d, "shields_friend_small", param0 + 96, "");
             IntrusiveNodeHashTable.field_h = f.a(8364, ei.field_mb, 96);
             uc.field_U = nm.a(ih.field_d, "shields_enemy_small", 1, "");
-            pc.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
+            DiskCacheWorker.field_e = nm.a(ih.field_d, "shields_enemy_large", param0 + 96, "");
             jc.a(wl.field_a, 10265, 63.0f);
             this.h(51200);
             pn.field_l = nm.a(ih.field_d, "shields_invincible_state", 1, "");
@@ -1227,9 +1227,9 @@ public final class Confined extends i {
           ni.field_a = RawPcmStream.b(rj.field_b, 100, 0);
           ni.field_a.c(-1);
           cb.field_a.a(ni.field_a);
-          ae.field_f = RawPcmStream.b(rj.field_b, 47, 0);
-          ae.field_f.c(-1);
-          cb.field_a.a(ae.field_f);
+          SectorCacheStore.field_f = RawPcmStream.b(rj.field_b, 47, 0);
+          SectorCacheStore.field_f.c(-1);
+          cb.field_a.a(SectorCacheStore.field_f);
           da.field_j = RawPcmStream.b(rj.field_b, 29, 0);
           da.field_j.c(-1);
           cb.field_a.a(da.field_j);

@@ -79,7 +79,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               eh.field_n = param5;
               cg.field_b = param5;
               ic.field_b = this;
-              ef.field_d = param4;
+              DiskCacheWorker.field_d = param4;
               AccountServiceResult.field_i = param4;
               IterableNodeHashTable.field_b = ll.b(125);
               if (param0 <= 125) {
@@ -324,7 +324,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 mi.e((byte) -6);
                 this.e(-121);
-                hg.field_y = mf.a(eh.field_n, (java.awt.Component) ((Object) kj.field_E), ef.field_d, -21880);
+                hg.field_y = mf.a(eh.field_n, (java.awt.Component) ((Object) kj.field_E), DiskCacheWorker.field_d, -21880);
                 this.f(-108);
                 p.field_d = qb.a(true);
                 do {
@@ -553,7 +553,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (fieldTemp$1 > 50) {
             ue.field_f = ue.field_f - 50;
             v.field_b = true;
-            kj.field_E.setSize(eh.field_n, ef.field_d);
+            kj.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
             kj.field_E.setVisible(true);
             if (ic.field_d != null &&
               null == sg.field_i) {
@@ -660,7 +660,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           kj.field_E = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) kj.field_E));
-          kj.field_E.setSize(eh.field_n, ef.field_d);
+          kj.field_E.setSize(eh.field_n, DiskCacheWorker.field_d);
           kj.field_E.setVisible(true);
           if (ic.field_d == var2) {
             var3_ref_java_awt_Insets = ic.field_d.getInsets();

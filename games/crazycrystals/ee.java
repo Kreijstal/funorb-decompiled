@@ -5,12 +5,12 @@ final class ee extends lk {
     static long field_e;
     private int field_u;
     static String field_q;
-    private ni field_v;
-    private wl field_k;
+    private DiskCacheWorker field_v;
+    private ArchiveRequest field_k;
     private int field_r;
     private qg field_p;
-    private sp field_l;
-    private sp field_i;
+    private SectorCacheStore field_l;
+    private SectorCacheStore field_i;
     private byte[] field_x;
     private ob field_w;
     static RgbSprite field_m;
@@ -26,12 +26,12 @@ final class ee extends lk {
     private long field_c;
 
     final void e(int param0) {
-        wl discarded$3 = null;
-        wl discarded$2 = null;
-        wl discarded$1 = null;
-        wl discarded$0 = null;
+        ArchiveRequest discarded$3 = null;
+        ArchiveRequest discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
         int var2;
-        wl var2_ref_wl;
+        ArchiveRequest var2_ref_wl;
         IntrusiveNode var3;
         int var4;
         int var5;
@@ -141,7 +141,7 @@ final class ee extends lk {
         }
         if (this.field_t &&
           this.field_c <= lo.correctedCurrentTimeMillis((byte) 110)) {
-          var2_ref_wl = (wl) (this.field_g.a((byte) -92));
+          var2_ref_wl = (ArchiveRequest) (this.field_g.a((byte) -92));
           while (var2_ref_wl != null) {
             if (!var2_ref_wl.field_n) {
               if (var2_ref_wl.field_l) {
@@ -153,7 +153,7 @@ final class ee extends lk {
                 var2_ref_wl.field_l = true;
               }
             }
-            var2_ref_wl = (wl) (this.field_g.a(105));
+            var2_ref_wl = (ArchiveRequest) (this.field_g.a(105));
           }
           this.field_c = 1000L + lo.correctedCurrentTimeMillis((byte) -30);
         }
@@ -208,25 +208,25 @@ final class ee extends lk {
     }
 
     final int a(int param0, int param1) {
-        wl var3 = (wl) (this.field_g.a((long)param0, 0));
+        ArchiveRequest var3 = (ArchiveRequest) (this.field_g.a((long)param0, 0));
         if (param1 != 486289953) {
           this.e(-120);
         }
         if (var3 == null) {
           return 0;
         }
-        return var3.b((byte) 95);
+        return var3.getProgressPercent((byte) 95);
     }
 
     final byte[] a(int param0, boolean param1) {
-        wl var3 = this.a(true, 0, param0);
+        ArchiveRequest var3 = this.a(true, 0, param0);
         if (param1) {
           this.field_c = -78L;
         }
         if (var3 == null) {
           return null;
         }
-        byte[] var4 = var3.e(-27);
+        byte[] var4 = var3.getData(-27);
         var3.unlink(param1);
         return var4;
     }
@@ -239,7 +239,7 @@ final class ee extends lk {
         }
     }
 
-    private final wl a(boolean param0, int param1, int param2) {
+    private final ArchiveRequest a(boolean param0, int param1, int param2) {
         Object stackIn_58_0 = null;
         boolean stackIn_59_1 = false;
         Object stackIn_61_0 = null;
@@ -257,7 +257,7 @@ final class ee extends lk {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        wl var12 = null;
+        ArchiveRequest var12 = null;
         byte[] var13 = null;
         byte[] var18 = null;
         byte[] var27 = null;
@@ -265,7 +265,7 @@ final class ee extends lk {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = CrazyCrystals.field_B;
-        var12 = (wl) (this.field_g.a((long)param2, 0));
+        var12 = (ArchiveRequest) (this.field_g.a((long)param2, 0));
         var4 = var12;
         if (var12 != null &&
           param1 == 0 &&
@@ -281,7 +281,7 @@ final class ee extends lk {
           if (0 == param1) {
             if (this.field_l != null &&
               this.field_h[param2] != -1) {
-              var4 = this.field_v.a(param0, param2, this.field_l);
+              var4 = this.field_v.readNow(param0, param2, this.field_l);
             } else {
               if (this.field_w.c((byte) -123)) {
                 return null;
@@ -307,18 +307,18 @@ final class ee extends lk {
               if (null == this.field_l) {
                 throw new RuntimeException();
               }
-              var4 = this.field_v.a(-4, param2, this.field_l);
+              var4 = this.field_v.requestRead(-4, param2, this.field_l);
             }
           }
           this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
         }
-        if (((wl) (var4)).field_n) {
+        if (((ArchiveRequest) (var4)).field_n) {
           return null;
         }
-        var18 = ((wl) (var4)).e(-5);
+        var18 = ((ArchiveRequest) (var4)).getData(-5);
         var13 = var18;
         var5 = var13;
-        if (var4 instanceof mf) {
+        if (var4 instanceof DiskArchiveRequest) {
           try {
             if (var5 != null &&
               2 < var18.length) {
@@ -347,21 +347,21 @@ final class ee extends lk {
                 }
                 this.field_h[param2] = (byte) 1;
               }
-              if (!((wl) (var4)).field_q) {
+              if (!((ArchiveRequest) (var4)).field_q) {
                 stackIn_58_0 = var4;
                 stackIn_59_1 = !(param0);
-                ((wl) stackIn_58_0).unlink(stackIn_59_1);
+                ((ArchiveRequest) stackIn_58_0).unlink(stackIn_59_1);
               }
               stackIn_61_0 = var4;
-              return (wl) (stackIn_61_0);
+              return (ArchiveRequest) (stackIn_61_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_h[param2] = (byte)-1;
-            ((wl) (var4)).unlink(false);
-            if (((wl) (var4)).field_q &&
+            ((ArchiveRequest) (var4)).unlink(false);
+            if (((ArchiveRequest) (var4)).field_q &&
               !this.field_w.c((byte) -72)) {
               var4 = this.field_w.a(true, 18303, param2, this.field_r, (byte) 2);
               this.field_g.a(-22072, (long)param2, (IntrusiveNode) (var4));
@@ -402,8 +402,8 @@ final class ee extends lk {
           this.field_w.e(20406);
           stackIn_85_0 = var4;
           stackIn_86_1 = !(param0);
-          ((wl) stackIn_85_0).unlink(stackIn_86_1);
-          if (((wl) (var4)).field_q) {
+          ((ArchiveRequest) stackIn_85_0).unlink(stackIn_86_1);
+          if (((ArchiveRequest) (var4)).field_q) {
             if (this.field_w.c((byte) -73)) {
               return null;
             }
@@ -415,17 +415,17 @@ final class ee extends lk {
         var5[var18.length - 2] = (byte)(this.field_p.field_g[param2] >>> 8);
         var5[var18.length - 1] = (byte)this.field_p.field_g[param2];
         if (null != this.field_l) {
-          this.field_v.a(param2, this.field_l, var18, (byte) 116);
+          this.field_v.requestWrite(param2, this.field_l, var18, (byte) 116);
           stackIn_94_0 = 1;
           stackIn_94_1 = this.field_h[param2];
           if (stackIn_94_0 != stackIn_94_1) {
             this.field_h[param2] = (byte) 1;
           }
         }
-        if (!((wl) (var4)).field_q) {
-          ((wl) (var4)).unlink(false);
+        if (!((ArchiveRequest) (var4)).field_q) {
+          ((ArchiveRequest) (var4)).unlink(false);
         }
-        return (wl) (var4);
+        return (ArchiveRequest) (var4);
     }
 
     final qg a(int param0) {
@@ -449,18 +449,18 @@ final class ee extends lk {
           if (this.field_w.c((byte) -54)) {
             return null;
           }
-          this.field_k = (wl) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
+          this.field_k = (ArchiveRequest) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
         }
         if (this.field_k.field_n) {
           return null;
         }
-        var8 = this.field_k.e(115);
+        var8 = this.field_k.getData(115);
         var6 = var8;
         var5 = var6;
         var9 = var5;
         var7 = var9;
         var2 = var7;
-        if (this.field_k instanceof mf) {
+        if (this.field_k instanceof DiskArchiveRequest) {
           try {
             if (var2 == null) {
               throw new RuntimeException();
@@ -476,7 +476,7 @@ final class ee extends lk {
             if (this.field_w.c((byte) -90)) {
               this.field_k = null;
             } else {
-              this.field_k = (wl) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
+              this.field_k = (ArchiveRequest) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
             }
             return null;
           }
@@ -492,14 +492,14 @@ final class ee extends lk {
             this.field_w.e(20406);
             this.field_p = null;
             if (!this.field_w.c((byte) -82)) {
-              this.field_k = (wl) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
+              this.field_k = (ArchiveRequest) ((Object) this.field_w.a(true, 18303, this.field_r, 255, (byte) 0));
             } else {
               this.field_k = null;
             }
             return null;
           }
           if (null != this.field_i) {
-            this.field_v.a(this.field_r, this.field_i, var8, (byte) 116);
+            this.field_v.requestWrite(this.field_r, this.field_i, var8, (byte) 116);
           }
         }
         if (null != this.field_l) {
@@ -510,8 +510,8 @@ final class ee extends lk {
     }
 
     final void c(int param0) {
-        wl discarded$0 = null;
-        wl discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         IntrusiveNode var2;
         int var3;
         int var4;
@@ -669,7 +669,7 @@ final class ee extends lk {
         int var2 = 42 % ((param0 - 7) / 45);
     }
 
-    ee(int param0, sp param1, sp param2, ob param3, ni param4, int param5, byte[] param6, int param7, boolean param8) {
+    ee(int param0, SectorCacheStore param1, SectorCacheStore param2, ob param3, DiskCacheWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -706,7 +706,7 @@ final class ee extends lk {
           this.field_v = param4;
           this.field_x = param6;
           if (null != this.field_i) {
-            this.field_k = (wl) ((Object) this.field_v.a(true, this.field_r, this.field_i));
+            this.field_k = (ArchiveRequest) ((Object) this.field_v.readNow(true, this.field_r, this.field_i));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

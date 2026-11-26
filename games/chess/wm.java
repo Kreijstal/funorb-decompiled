@@ -18,7 +18,7 @@ abstract class wm {
     volatile int field_c;
     PacketBuffer field_a;
     volatile int field_g;
-    cc field_h;
+    NetworkArchiveRequest field_h;
 
     final int d(int param0) {
         if (param0 != 14562) {
@@ -539,11 +539,11 @@ abstract class wm {
 
     abstract void a(byte param0, Object param1, boolean param2);
 
-    final cc a(int param0, int param1, byte param2, boolean param3, int param4) {
+    final NetworkArchiveRequest a(int param0, int param1, byte param2, boolean param3, int param4) {
         long var6 = ((long)param1 << 32) + (long)param4;
-        cc var8 = new cc();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         if (param0 <= 84) {
-          return (cc) null;
+          return (NetworkArchiveRequest) null;
         }
         var8.secondaryKey = var6;
         var8.field_u = param3 ? true : false;

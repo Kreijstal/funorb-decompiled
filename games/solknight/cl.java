@@ -107,7 +107,7 @@ final class cl extends a {
 
     final static fg[] d(byte param0) {
         if (param0 == -30) {
-          return new fg[]{sk.field_p, bb.field_I, SolKnight.field_D};
+          return new fg[]{ArchiveRequest.field_p, bb.field_I, SolKnight.field_D};
         }
         return (fg[]) null;
     }

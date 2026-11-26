@@ -142,7 +142,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (var3_int > var5 &&
                 param1.charAt(var5) == 62) {
                 var5++;
-                var8 = si.a((byte) 120, (CharSequence) ((Object) var7_ref_String));
+                var8 = ArchiveRequest.a((byte) 120, (CharSequence) ((Object) var7_ref_String));
                 var4 = var4 + (args[var8].length() + var6_int - var5);
               }
               if (var11 == 0) {
@@ -182,7 +182,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 if (var3_int > var5Lifetime1 &&
                   param1.charAt(var5Lifetime1) == 62) {
                   var5Lifetime1++;
-                  var10 = si.a((byte) 114, (CharSequence) ((Object) var9));
+                  var10 = ArchiveRequest.a((byte) 114, (CharSequence) ((Object) var9));
                   discarded$0 = var6.append(param1.substring(var7, var8Lifetime1));
                   discarded$1 = var6.append(args[var10]);
                   var7 = var5Lifetime1;

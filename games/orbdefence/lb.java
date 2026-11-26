@@ -64,7 +64,7 @@ final class lb {
         int[] var16 = null;
         var8 = OrbDefence.field_D ? 1 : 0;
         try {
-          var12 = cd.field_t;
+          var12 = NetworkArchiveRequest.field_t;
           var2 = var12.readUnsignedByte((byte) 90);
           if (var2 == 0) {
             var10 = KeyboardListener.b(8);

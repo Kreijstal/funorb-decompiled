@@ -127,7 +127,7 @@ class sh extends mh implements rc {
             return;
           }
           if (!this.field_fb) {
-            qc.a(vi.b(0), 24, "tochangedisplayname.ws");
+            qc.a(DiskCacheWorker.b(0), 24, "tochangedisplayname.ws");
           } else {
             oh.a(-52, 3);
             this.a(true);

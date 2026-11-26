@@ -21,7 +21,7 @@ abstract class bb {
     volatile int field_c;
     PacketBuffer field_m;
     byte field_j;
-    em field_i;
+    NetworkArchiveRequest field_i;
 
     public static void clearStaticReferences(byte param0) {
         field_q = null;
@@ -86,9 +86,9 @@ abstract class bb {
         return this.field_d.b((byte) 53) + this.field_s.b((byte) 53);
     }
 
-    final em a(boolean param0, int param1, byte param2, int param3, byte param4) {
+    final NetworkArchiveRequest a(boolean param0, int param1, byte param2, int param3, byte param4) {
         long var6 = (long)param3 + ((long)param1 << 32);
-        em var8 = new em();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_E = param2;
         var8.field_o = var6;
         var8.field_B = param0 ? true : false;

@@ -61,15 +61,15 @@ final class cd {
             if (null != AwtRasterBuffer.field_f &&
               AwtRasterBuffer.field_f.focusLost) {
               wl.e((byte) 120);
-              si.field_o.b((byte) -56, new s(si.field_o, cg.field_c));
+              DiskArchiveRequest.field_o.b((byte) -56, new s(DiskArchiveRequest.field_o, cg.field_c));
             }
             return;
           }
           var1_int = 63 / ((59 - param0) / 47);
-          si.field_o.a(mb.field_a, mb.field_d, true, true);
-          si.field_o.l(-43);
+          DiskArchiveRequest.field_o.a(mb.field_a, mb.field_d, true, true);
+          DiskArchiveRequest.field_o.l(-43);
           while (AwtRasterBuffer.a(-1)) {
-            si.field_o.a(oa.field_H, 121, rd.field_p);
+            DiskArchiveRequest.field_o.a(oa.field_H, 121, rd.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

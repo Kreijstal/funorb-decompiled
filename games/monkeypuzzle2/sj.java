@@ -118,11 +118,11 @@ final class sj {
           pl.field_e = vd.a(true, "kartika13", param2, param1, "");
           ke.field_i = ma.a(param3, "background", param4 + 16711680, "");
           fi.field_a = lb.a(false, "", param3, "river_background");
-          var13 = uj.a("", "jungle_background", param3, false);
+          var13 = DiskCacheWorker.a("", "jungle_background", param3, false);
           m.field_k = var13[0];
           m.field_k.b();
           ib.field_b = var13[1].a();
-          ne.field_a = uj.a("", "waterfall_background", param3, false);
+          ne.field_a = DiskCacheWorker.a("", "waterfall_background", param3, false);
           for (var6_int = 0; var6_int < ne.field_a.length; var6_int++) {
             ne.field_a[var6_int].b();
           }

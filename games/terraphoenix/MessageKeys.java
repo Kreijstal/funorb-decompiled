@@ -1634,7 +1634,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_u13terms", false);
                 if (var2 != null) {
-                  rf.field_y = ll.a(param0 - 3, var2);
+                  ArchiveRequest.field_y = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("login_username_email", false);
                 if (var2 != null) {
@@ -2728,15 +2728,15 @@ final class MessageKeys {
                 }
                 var2 = bc.a("members_expansion_benefits,0", false);
                 if (var2 != null) {
-                  ua.field_c[0] = ll.a(0, var2);
+                  SectorCacheStore.field_c[0] = ll.a(0, var2);
                 }
                 var2 = bc.a("members_expansion_benefits,1", false);
                 if (var2 != null) {
-                  ua.field_c[1] = ll.a(0, var2);
+                  SectorCacheStore.field_c[1] = ll.a(0, var2);
                 }
                 var2 = bc.a("members_expansion_benefits,2", false);
                 if (null != var2) {
-                  ua.field_c[2] = ll.a(0, var2);
+                  SectorCacheStore.field_c[2] = ll.a(0, var2);
                 }
                 var2 = bc.a("members_expansion_price_top", false);
                 if (null != var2) {

@@ -44,7 +44,7 @@ abstract class GameClient extends AppletShell {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              vi.a(1);
+              DiskCacheWorker.a(1);
             } else {
               if (var2 != 3) {
                 if (var2 != 4) {
@@ -127,7 +127,7 @@ abstract class GameClient extends AppletShell {
         if (param0 <= 42) {
           this.a(false);
         }
-        AccountNameAvailabilityValidator.a(true, vi.b(0), c.a(0, var5), var3 != 0);
+        AccountNameAvailabilityValidator.a(true, DiskCacheWorker.b(0), c.a(0, var5), var3 != 0);
     }
 
     private final void i(int param0) {
@@ -546,36 +546,36 @@ abstract class GameClient extends AppletShell {
           }
           if (4 == var4) {
             if (ba.field_B) {
-              fl.a(8192, vi.b(0));
+              fl.a(8192, DiskCacheWorker.b(0));
             } else {
               mh.field_U = 10;
               pg.field_c = true;
             }
           }
           if (var4 == 5) {
-            tc.a(vi.b(0), 6091);
+            tc.a(DiskCacheWorker.b(0), 6091);
           }
           if (var4 == 6 &&
             pa.field_e) {
             mh.field_U = 10;
           }
           if (7 == var4) {
-            nd.a(vi.b(0), 8192);
+            nd.a(DiskCacheWorker.b(0), 8192);
           }
           if (8 == var4) {
-            fl.a(8192, vi.b(0));
+            fl.a(8192, DiskCacheWorker.b(0));
           }
           if (var4 == 9) {
-            hb.a((byte) -117, vi.b(0));
+            hb.a((byte) -117, DiskCacheWorker.b(0));
           }
           if (var4 == 10) {
             hh.field_p.a(true, 17);
           }
           if (11 == var4) {
-            lg.a(0, vi.b(0));
+            lg.a(0, DiskCacheWorker.b(0));
           }
           if (var4 == 12) {
-            qc.a(vi.b(0), 24, hd.a(-124));
+            qc.a(DiskCacheWorker.b(0), 24, hd.a(-124));
           }
           if (var4 == 13) {
             try {
@@ -716,7 +716,7 @@ abstract class GameClient extends AppletShell {
 
     private final void h(byte param0) {
         String var2 = jj.a((byte) -54);
-        ph.a(var2, vi.b(0), (byte) 51);
+        ph.a(var2, DiskCacheWorker.b(0), (byte) 51);
         if (param0 <= 99) {
           this.a(-59, true);
         }

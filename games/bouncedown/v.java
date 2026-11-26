@@ -14,7 +14,7 @@ abstract class v {
     byte field_j;
     volatile int field_d;
     volatile int field_l;
-    lf field_b;
+    NetworkArchiveRequest field_b;
 
     final int c(int param0) {
         if (param0 != -8217) {
@@ -196,9 +196,9 @@ abstract class v {
         return 20 <= this.a(true) ? true : false;
     }
 
-    final lf a(int param0, byte param1, int param2, boolean param3, int param4) {
+    final NetworkArchiveRequest a(int param0, byte param1, int param2, boolean param3, int param4) {
         long var6 = (long)param0 + ((long)param4 << 32);
-        lf var8 = new lf();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.field_s = param1;
         var8.field_j = var6;
         int var9 = 25 % ((param2 + 13) / 49);

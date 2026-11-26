@@ -23,10 +23,10 @@ final class d extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var4 = (vl) (ob.field_s.beginBackward((byte) -117));
+          var4 = (vl) (NetworkArchiveRequest.field_s.beginBackward((byte) -117));
           while (var4 != null) {
             pf.a((byte) -104, var4, param0);
-            var4 = (vl) (ob.field_s.nextBackward((byte) 63));
+            var4 = (vl) (NetworkArchiveRequest.field_s.nextBackward((byte) 63));
           }
           if (param1 != 5) {
             field_e = 54;

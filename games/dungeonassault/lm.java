@@ -40,7 +40,7 @@ class lm extends IntrusiveNode {
               Raider.field_a.a(-1016);
             }
             if (null != na.field_y) {
-              na.field_y.a(-65);
+              na.field_y.shutdown(-65);
             }
             if (null != sa.field_x) {
               try {

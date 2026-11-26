@@ -39,7 +39,7 @@ final class on {
           }
           hd.field_f = param0;
           oc.field_s = param15;
-          t.a(param17, param3, param4, param18, (byte) 89);
+          DiskCacheWorker.a(param17, param3, param4, param18, (byte) 89);
           aq.a(param12, (byte) -122, param19, param9);
           ni.a((byte) 107, param6, param2, param1, param7, param8);
           af.a(param11, param16, (byte) 122);

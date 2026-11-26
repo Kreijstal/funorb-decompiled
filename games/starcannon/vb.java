@@ -448,7 +448,7 @@ final class vb extends qf {
           }
           var2Lifetime61 = cb.a("sideguntext", (byte) -124);
           if (null != var2Lifetime61) {
-            ra.field_y = DualLinkNode.a(124, var2Lifetime61);
+            NetworkArchiveRequest.field_y = DualLinkNode.a(124, var2Lifetime61);
           }
           var2Lifetime62 = cb.a("backguntext", (byte) -124);
           if (null != var2Lifetime62) {

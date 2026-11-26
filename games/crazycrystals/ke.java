@@ -47,11 +47,11 @@ abstract class ke {
         try {
           ud.field_U = param1;
           dj.field_t = true;
-          sp.field_a = new na(qe.field_g, mo.field_m, param0, ne.field_d, ud.field_U);
+          SectorCacheStore.field_a = new na(qe.field_g, mo.field_m, param0, ne.field_d, ud.field_U);
           if (param2 != -13) {
             field_a = (String) null;
           }
-          qe.field_g.b(-3264, sp.field_a);
+          qe.field_g.b(-3264, SectorCacheStore.field_a);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ke.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

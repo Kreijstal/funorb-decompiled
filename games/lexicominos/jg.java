@@ -39,7 +39,7 @@ final class jg extends tj {
           if (param0 != -126) {
             this.field_n = (String) null;
           }
-          stackIn_10_0 = fj.field_x;
+          stackIn_10_0 = DiskArchiveRequest.field_x;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

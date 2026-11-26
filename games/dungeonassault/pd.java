@@ -65,7 +65,7 @@ final class pd extends rj {
         int var3;
         boolean stackIn_6_0 = false;
         var3 = -8 / ((param2 - 14) / 43);
-        stackIn_6_0 = (vf.field_w - 16 <= param1) && (16 + (vf.field_w + 200) > param1) && (param0 >= -32 + qc.field_w) && (32 + (wi.field_kb + qc.field_w) > param0);
+        stackIn_6_0 = (ArchiveRequest.field_w - 16 <= param1) && (16 + (ArchiveRequest.field_w + 200) > param1) && (param0 >= -32 + qc.field_w) && (32 + (wi.field_kb + qc.field_w) > param0);
         return stackIn_6_0;
     }
 

@@ -234,7 +234,7 @@ public final class stellarshard extends rb implements cf {
               var22 = og.field_d[var20];
               var23 = wd.field_e[var20];
               var24 = th.field_a[var20];
-              var25 = el.field_F[var20];
+              var25 = DiskArchiveRequest.field_F[var20];
               var26 = lg.field_a[var20];
               if (var42 != 0) {
                 return;
@@ -869,15 +869,15 @@ public final class stellarshard extends rb implements cf {
             ld.field_F = 1;
             v.field_e = false;
           }
-          ki.field_s = ki.field_s + 1;
+          ArchiveRequest.field_s = ArchiveRequest.field_s + 1;
           if (si.field_jb[84]) {
             v.field_e = false;
           }
           qb.field_k = qb.field_k + 1;
           lg.field_f = lg.field_f - 1;
           hk.field_p = hk.field_p + 1;
-          if (10 < ki.field_s) {
-            ki.field_s = 0;
+          if (10 < ArchiveRequest.field_s) {
+            ArchiveRequest.field_s = 0;
           }
           if (qi.level > 1 &&
             this.field_J > 0) {
@@ -1003,7 +1003,7 @@ public final class stellarshard extends rb implements cf {
                   }
                 } else {
                   stackIn_134_0 = -3;
-                  stackIn_134_1 = ~ph.field_D;
+                  stackIn_134_1 = ~NetworkArchiveRequest.field_D;
                 }
                 if (stackIn_134_0 < stackIn_134_1) {
                   break;
@@ -1155,7 +1155,7 @@ public final class stellarshard extends rb implements cf {
             DualLinkDequeIterator.field_i) {
             boolean decompiledNaturalLoopExit1 = false;
             while (!(decompiledNaturalLoopExit1 = (!PcmResampler.c(103)))) {
-              stackIn_270_0 = gi.field_f;
+              stackIn_270_0 = SectorCacheStore.field_f;
               stackIn_270_1 = 13;
               if (var15 == 0) {
                 if (stackIn_270_0 == stackIn_270_1 &&
@@ -1163,7 +1163,7 @@ public final class stellarshard extends rb implements cf {
                   na.field_j = null;
                 }
                 if (na.field_j != null &&
-                  gi.field_f == 13 && (ProxyAuthenticationRequiredException.field_c == 2 ||
+                  SectorCacheStore.field_f == 13 && (ProxyAuthenticationRequiredException.field_c == 2 ||
                   ProxyAuthenticationRequiredException.field_c == 1 ||
                   ProxyAuthenticationRequiredException.field_c == 3)) {
                   n.field_L = 256;
@@ -2243,23 +2243,23 @@ public final class stellarshard extends rb implements cf {
                       (decompiledFrameCompleted6)) {
                       while (true) {
                         if (stackIn_993_0 == stackIn_993_1 &&
-                          ph.field_D >= 2) {
+                          NetworkArchiveRequest.field_D >= 2) {
                           e.field_e = e.field_e + 1;
                           e.field_c = true;
                           if (e.field_e > 10) {
                             e.field_e = -1;
                           }
                         }
-                        if (41 == gi.field_f &&
-                          ph.field_D >= 2) {
+                        if (41 == SectorCacheStore.field_f &&
+                          NetworkArchiveRequest.field_D >= 2) {
                           stackIn_1012_0 = !(hd.field_b);
                           hd.field_b = stackIn_1012_0;
                         }
-                        if (gi.field_f == 48 &&
-                          ph.field_D >= 2) {
+                        if (SectorCacheStore.field_f == 48 &&
+                          NetworkArchiveRequest.field_D >= 2) {
                           hj.a(255, 0, 1);
                         }
-                        if (gi.field_f == 13) {
+                        if (SectorCacheStore.field_f == 13) {
                           decompiledFrameCompleted5 = false;
                           break;
                         }
@@ -2267,7 +2267,7 @@ public final class stellarshard extends rb implements cf {
                           decompiledFrameCompleted4 = false;
                           break;
                         }
-                        stackIn_1026_0 = ~gi.field_f;
+                        stackIn_1026_0 = ~SectorCacheStore.field_f;
                         if (var15 != 0) {
                           decompiledFrameCompleted3 = false;
                           break;
@@ -2324,7 +2324,7 @@ public final class stellarshard extends rb implements cf {
             if ((decompiledFrameRemainder17) &&
               (decompiledFrameRemainder17 = (na.field_j == null))) {
               while (PcmResampler.c(89)) {
-                stackIn_1026_0 = ~gi.field_f;
+                stackIn_1026_0 = ~SectorCacheStore.field_f;
                 if (var15 != 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -2332,23 +2332,23 @@ public final class stellarshard extends rb implements cf {
                 stackIn_993_0Lifetime1 = stackIn_1026_0;
                 stackIn_993_1Lifetime1 = -34;
                 if (stackIn_993_0Lifetime1 == stackIn_993_1Lifetime1 &&
-                  ph.field_D >= 2) {
+                  NetworkArchiveRequest.field_D >= 2) {
                   e.field_e = e.field_e + 1;
                   e.field_c = true;
                   if (e.field_e > 10) {
                     e.field_e = -1;
                   }
                 }
-                if (41 == gi.field_f &&
-                  ph.field_D >= 2) {
+                if (41 == SectorCacheStore.field_f &&
+                  NetworkArchiveRequest.field_D >= 2) {
                   stackIn_1012_0Lifetime1 = !(hd.field_b);
                   hd.field_b = stackIn_1012_0Lifetime1;
                 }
-                if (gi.field_f == 48 &&
-                  ph.field_D >= 2) {
+                if (SectorCacheStore.field_f == 48 &&
+                  NetworkArchiveRequest.field_D >= 2) {
                   hj.a(255, 0, 1);
                 }
-                if (gi.field_f == 13) {
+                if (SectorCacheStore.field_f == 13) {
                   decompiledFrameCompleted1 = false;
                   break;
                 }
@@ -2697,7 +2697,7 @@ public final class stellarshard extends rb implements cf {
             stackIn_1305_1 = na.field_j;
             if (var15 == 0) {
               if (stackIn_1305_0 != stackIn_1305_1 &&
-                gi.field_f == 13 && (ProxyAuthenticationRequiredException.field_c == 2 ||
+                SectorCacheStore.field_f == 13 && (ProxyAuthenticationRequiredException.field_c == 2 ||
                 ProxyAuthenticationRequiredException.field_c == 1 ||
                 ProxyAuthenticationRequiredException.field_c == 3)) {
                 n.field_L = 256;
@@ -2887,7 +2887,7 @@ public final class stellarshard extends rb implements cf {
           ag.resetStaticState((byte) 126);
           IntrusiveNode.resetStaticState((byte) -127);
           fb.c(-2918);
-          rk.clearStaticReferences(true);
+          DiskCacheWorker.clearStaticReferences(true);
           vh.resetStaticState((byte) 48);
           BufferedSocket.clearStaticReferences((byte) 89);
           jf.a(-15917);
@@ -2950,12 +2950,12 @@ public final class stellarshard extends rb implements cf {
           kc.clearStaticReferences(true);
           wj.clearStaticReferences((byte) 92);
           al.clearStaticReferences(param0 + 128);
-          ph.clearStaticReferences(param0 ^ -15);
-          el.clearStaticReferences(param0 + 186);
+          NetworkArchiveRequest.clearStaticReferences(param0 ^ -15);
+          DiskArchiveRequest.clearStaticReferences(param0 + 186);
           wc.clearStaticReferences(true);
           kb.a((byte) 37);
           rh.a(param0 + 26);
-          ki.e(param0 + 16512);
+          ArchiveRequest.e(param0 + 16512);
           na.clearStaticReferences(124);
           tg.clearStaticReferences((byte) 0);
           dj.clearStaticReferences(4);
@@ -3569,13 +3569,13 @@ public final class stellarshard extends rb implements cf {
                 return;
               }
             }
-            var4_array[0] = el.a("keyboard_up", bh.field_a, (byte) -90, "");
-            var4_array[1] = el.a("keyboard_space", bh.field_a, (byte) -74, "");
-            var4_array[2] = el.a("keyboard_ctrl", bh.field_a, (byte) -123, "");
-            var4_array[3] = el.a("keyboard_esc", bh.field_a, (byte) 127, "");
-            var4_array[4] = el.a("keyboard_left", bh.field_a, (byte) -82, "");
-            var4_array[5] = el.a("keyboard_right", bh.field_a, (byte) -116, "");
-            var4_array[6] = el.a("keyboard_down", bh.field_a, (byte) 126, "");
+            var4_array[0] = DiskArchiveRequest.a("keyboard_up", bh.field_a, (byte) -90, "");
+            var4_array[1] = DiskArchiveRequest.a("keyboard_space", bh.field_a, (byte) -74, "");
+            var4_array[2] = DiskArchiveRequest.a("keyboard_ctrl", bh.field_a, (byte) -123, "");
+            var4_array[3] = DiskArchiveRequest.a("keyboard_esc", bh.field_a, (byte) 127, "");
+            var4_array[4] = DiskArchiveRequest.a("keyboard_left", bh.field_a, (byte) -82, "");
+            var4_array[5] = DiskArchiveRequest.a("keyboard_right", bh.field_a, (byte) -116, "");
+            var4_array[6] = DiskArchiveRequest.a("keyboard_down", bh.field_a, (byte) 126, "");
             qj.field_a.a(var4_array, var5_ref_int__);
             l.field_f = ae.a("", "b122", bh.field_a, -117, MouseHandler.field_d);
             rg.g(-33);
@@ -4117,11 +4117,11 @@ public final class stellarshard extends rb implements cf {
           }
           this.p(param0 ^ -20914);
           if (null != this.field_F &&
-            el.field_I > 0 &&
+            DiskArchiveRequest.field_I > 0 &&
             na.field_j == null) {
-            this.field_F.e(0, 0, 5 * el.field_I);
+            this.field_F.e(0, 0, 5 * DiskArchiveRequest.field_I);
             if (!DualLinkDequeIterator.field_i) {
-              el.field_I = el.field_I - 1;
+              DiskArchiveRequest.field_I = DiskArchiveRequest.field_I - 1;
             }
           }
           var3 = 0;
@@ -4134,7 +4134,7 @@ public final class stellarshard extends rb implements cf {
               var3 = 0;
               break;
             }
-            ei.field_D[var4].d((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 + 1] >> 4) - 128, 128 - el.field_I * 2);
+            ei.field_D[var4].d((fk.field_k[var3] >> 4) - 128, (fk.field_k[var3 + 1] >> 4) - 128, 128 - DiskArchiveRequest.field_I * 2);
             var3 += 8;
             var4 += 2;
           } while (var20 == 0);
@@ -4288,7 +4288,7 @@ public final class stellarshard extends rb implements cf {
             var6_intLifetime1 = 1;
             while (true) {
               if (var6_intLifetime1 < 12) {
-                ei.field_D[var6_intLifetime1].d(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(el.field_I * 2) + 128);
+                ei.field_D[var6_intLifetime1].d(-128 + (fk.field_k[var5_int] >> 4), -128 + (fk.field_k[1 + var5_int] >> 4), -(DiskArchiveRequest.field_I * 2) + 128);
                 var5_int += 8;
                 var6_intLifetime1 += 2;
                 if (var20 == 0) {
@@ -4615,12 +4615,12 @@ public final class stellarshard extends rb implements cf {
                   var17 = var17 << 4;
                   var19 = 0;
                   while (var19 < var15) {
-                    var18 = (ki.field_s + var19) % 10;
+                    var18 = (ArchiveRequest.field_s + var19) % 10;
                     stackIn_438_0 = ~var18;
                     stackIn_438_1 = -6;
                     if (var20 != 0) {
                       if (stackIn_438_0 > stackIn_438_1) {
-                        var18 = (var19 + ki.field_s) % 10;
+                        var18 = (var19 + ArchiveRequest.field_s) % 10;
                         stackIn_447_0 = ~var18;
                         stackIn_447_1 = -6;
                         decompiledFrameCompleted2 = false;
@@ -4648,7 +4648,7 @@ public final class stellarshard extends rb implements cf {
                       if (stackIn_438_0Lifetime1 <= stackIn_438_1Lifetime1) {
                         break;
                       }
-                      var18Lifetime1 = (var19 + ki.field_s) % 10;
+                      var18Lifetime1 = (var19 + ArchiveRequest.field_s) % 10;
                       stackIn_447_0 = ~var18Lifetime1;
                       stackIn_447_1 = -6;
                       if (var20 != 0) {

@@ -411,7 +411,7 @@ public final class OrbDefence extends NetworkGameClient {
         nk.clearStaticReferences((byte) 15);
         ql.clearStaticReferences((byte) 50);
         ge.clearStaticReferences(1);
-        vl.b(-122);
+        DiskCacheWorker.b(-122);
         pi.clearStaticReferences(param0);
         dj.c((byte) 78);
         BufferedSocket.clearStaticReferences((byte) -95);
@@ -475,12 +475,12 @@ public final class OrbDefence extends NetworkGameClient {
         PcmOutputWorker.clearStaticReferences((byte) 90);
         a.clearStaticReferences((byte) 29);
         il.resetStaticState(0);
-        cd.clearStaticReferences((byte) 61);
-        uc.clearStaticReferences((byte) -99);
+        NetworkArchiveRequest.clearStaticReferences((byte) 61);
+        DiskArchiveRequest.clearStaticReferences((byte) -99);
         ak.c((byte) -102);
         gl.clearStaticReferences(128);
         fl.clearStaticReferences(-128);
-        wj.releaseDeclaredStaticReferences((byte) -90);
+        ArchiveRequest.releaseDeclaredStaticReferences((byte) -90);
         jd.clearStaticReferences(0);
         gg.resetStaticState(true);
         jc.clearStaticReferences(true);

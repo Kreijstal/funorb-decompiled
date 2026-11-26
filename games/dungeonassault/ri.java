@@ -56,7 +56,7 @@ final class ri {
             }
             var4 = param1;
             ok.a(2, var4);
-            DualLinkNode.field_p = em.createAccountSuggestionsResult(param1, 8082);
+            DualLinkNode.field_p = NetworkArchiveRequest.createAccountSuggestionsResult(param1, 8082);
             return;
           }
           stackIn_11_0 = -49;

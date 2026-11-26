@@ -28,7 +28,7 @@ final class vo extends va {
             if (null != or.field_f.field_o) {
               ad.field_g = new im(or.field_f.field_o, 5200, 0);
               or.field_f.field_o = null;
-              var6 = new qh(255, ad.field_g, new im(or.field_f.field_r, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ad.field_g, new im(or.field_f.field_r, 12000, 0), 2097152);
             }
             if (ad.field_g != null) {
               if (null == ProxyAuthenticationRequiredException.field_g) {
@@ -38,9 +38,9 @@ final class vo extends va {
                 ProxyAuthenticationRequiredException.field_g[param3] = new im(or.field_f.field_n[param3], 12000, 0);
                 or.field_f.field_n[param3] = null;
               }
-              var7 = new qh(param3, ad.field_g, ProxyAuthenticationRequiredException.field_g[param3], 2097152);
+              var7 = new SectorCacheStore(param3, ad.field_g, ProxyAuthenticationRequiredException.field_g[param3], 2097152);
             }
-            var8 = pd.field_c.a(18162, (qh) (var6), param0, param3, (qh) (var7));
+            var8 = pd.field_c.a(18162, (SectorCacheStore) (var6), param0, param3, (SectorCacheStore) (var7));
             if (param4) {
               var8.a((byte) 81);
             }

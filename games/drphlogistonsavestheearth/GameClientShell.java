@@ -52,7 +52,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (sc.field_e != null) {
           ma.field_sb = sc.field_e.pollRotation(0);
         }
-        if (n.a(64)) {
+        if (DiskCacheWorker.a(64)) {
           var3 = 1200 * AccountNameAvailabilityValidator.d((byte) 9);
           if (this.field_r ||
             !(nf.c(false) <= var3) &&
@@ -147,7 +147,7 @@ abstract class GameClientShell extends GameAppletShell {
         }
         if (hj.field_f == 1) {
           if (0 != ob.field_c) {
-            bi.field_I = al.a(3, md.field_d);
+            DiskArchiveRequest.field_I = al.a(3, md.field_d);
           }
           AccountCreationResultPanel.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
           sb.field_i = lk.a(false, true, field_q, 1, 8);
@@ -157,19 +157,19 @@ abstract class GameClientShell extends GameAppletShell {
           ph.field_b = AccountCreationResultPanel.field_Jb;
         }
         if (hj.field_f == 2) {
-          if (null != bi.field_I &&
-            bi.field_I.a(0)) {
-            if (bi.field_I.a((byte) 12, "")) {
-              if (bi.field_I.a(255, "")) {
-                LoginMenuScreen.a(7, bi.field_I);
-                bi.field_I = null;
+          if (null != DiskArchiveRequest.field_I &&
+            DiskArchiveRequest.field_I.a(0)) {
+            if (DiskArchiveRequest.field_I.a((byte) 12, "")) {
+              if (DiskArchiveRequest.field_I.a(255, "")) {
+                LoginMenuScreen.a(7, DiskArchiveRequest.field_I);
+                DiskArchiveRequest.field_I = null;
                 IterableNodeHashTable.a((byte) 86);
               }
             } else {
-              bi.field_I = null;
+              DiskArchiveRequest.field_I = null;
             }
           }
-          if (bi.field_I == null) {
+          if (DiskArchiveRequest.field_I == null) {
             hj.field_f = 3;
           }
         }
@@ -238,9 +238,9 @@ abstract class GameClientShell extends GameAppletShell {
         }
         if (!param0 &&
           ci.field_U) {
-          hb.a(-5, n.field_g);
+          hb.a(-5, DiskCacheWorker.field_g);
           this.f(118);
-          ej.a(n.field_g, (byte) 95);
+          ej.a(DiskCacheWorker.field_g, (byte) 95);
         }
         if (g.field_p[8]) {
           vg.b((byte) 75);
@@ -258,7 +258,7 @@ abstract class GameClientShell extends GameAppletShell {
         wi.a(this.field_v, param1, ob.field_c, this.field_m, this.field_z, this.field_p, sb.field_d, this.field_A, 111);
         rg.a(param3 ^ -11603);
         sc.field_e = vb.createMouseWheelInput((byte) 65);
-        ej.a(n.field_g, (byte) 71);
+        ej.a(DiskCacheWorker.field_g, (byte) 71);
         md.field_d = param7;
         p.field_f = param6;
         if (param3 != 7320) {
