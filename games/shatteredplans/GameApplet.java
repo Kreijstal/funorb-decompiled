@@ -360,7 +360,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    DerelictVictoryChecker.field_p = ClientRuntimeState.field_d.a(UiWidget.field_i, -1);
+                    DerelictVictoryChecker.field_p = ClientRuntimeState.field_d.waitAndCountFrames(UiWidget.field_i, -1);
                     stackIn_97_0 = 0;
                   }
                   var3 = stackIn_97_0;

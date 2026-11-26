@@ -264,7 +264,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
           if (param0 <= 95) {
             field_K = 59;
           }
-          NodeHashTableIterator.a(0, "endturn");
+          NodeHashTableIterator.addTutorialFlag(0, "endturn");
           if (2 == TextReplacementEntry.field_a.field_P.field_g.field_e.length) {
             if (QuickChatHelpSupport.field_d == TextReplacementEntry.field_a.field_P.field_g.field_e[1].field_y) {
               if (SocketArchiveNetworkClient.markTutorialEventSeen("combatSuccess", -116)) {

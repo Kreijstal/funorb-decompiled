@@ -103,7 +103,7 @@ final class ValidationState {
         int var1_int = 0;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1_intLifetime1;
-        ClientRuntimeState.field_d.b(-1432175600);
+        ClientRuntimeState.field_d.resetTiming(-1432175600);
         for (var1_int = 0; var1_int < 32; var1_int++) {
           PairedIntSortSupport.field_b[var1_int] = 0L;
         }

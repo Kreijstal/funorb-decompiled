@@ -229,7 +229,7 @@ final class StatusMessagePanel extends WidgetContainer implements ButtonListener
     }
 
     final static void updateChatInputOverlay(int param0, int param1, int param2, boolean param3) {
-        NanoFrameTimer.a(param0, param3, param2, -77, UniformNineSliceFactory.field_c, MusicVoiceMixer.field_l, DateValidationSupport.field_a);
+        NanoFrameTimer.updateChatInputOverlay(param0, param3, param2, -77, UniformNineSliceFactory.field_c, MusicVoiceMixer.field_l, DateValidationSupport.field_a);
         if (param1 != 8) {
           Archive var5 = (Archive) null;
           StatusMessagePanel.loadBinaryBitmapFont((Archive) null, -64, (Archive) null, 13, 77);

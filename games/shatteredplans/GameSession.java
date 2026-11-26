@@ -617,7 +617,7 @@ final class GameSession implements AiHost {
           var8 = -104 % ((param2 + 36) / 56);
           while (var7 < var6.length) {
             var9 = var6[var7];
-            NodeHashTableIterator.a(var9, (byte) 49);
+            NodeHashTableIterator.sortIncomingFleetsByDistance(var9, (byte) 49);
             InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) -127, var9);
             var7++;
             if (var10 != 0) {
@@ -1256,13 +1256,13 @@ final class GameSession implements AiHost {
           var7 = stackIn_98_0Lifetime1 % stackIn_98_1Lifetime1;
           if (this.field_W &&
             (this.field_P.field_w & 1) != 0) {
-            NodeHashTableIterator.a(0, "losegame");
+            NodeHashTableIterator.addTutorialFlag(0, "losegame");
           }
           if (this.field_W) {
             var8_array = this.field_P.field_x.getWinners((byte) -23);
             if (var8_array != null &&
               this.field_n == var8_array[0]) {
-              NodeHashTableIterator.a(0, "wingame");
+              NodeHashTableIterator.addTutorialFlag(0, "wingame");
             }
           }
           return;
@@ -1540,7 +1540,7 @@ final class GameSession implements AiHost {
           stackIn_18_0.field_J = stackIn_18_1.field_J - param1;
           this.field_C[param3.field_p] = this.field_C[param3.field_p] - param1;
           InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) 83, param3);
-          NodeHashTableIterator.a(param2, (byte) 75);
+          NodeHashTableIterator.sortIncomingFleetsByDistance(param2, (byte) 75);
           this.updateProjectedGarrisons(this.field_n, -95);
           if (this.field_f) {
             this.field_v.addLast((byte) 9, var5);
@@ -2787,7 +2787,7 @@ final class GameSession implements AiHost {
                 break;
               }
               var7 = var5[var6];
-              NodeHashTableIterator.a(var7, (byte) 96);
+              NodeHashTableIterator.sortIncomingFleetsByDistance(var7, (byte) 96);
               InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) -99, var7);
               var6++;
             } while (var8 == 0);
@@ -3413,7 +3413,7 @@ final class GameSession implements AiHost {
             }
           }
           if (this.field_W) {
-            NodeHashTableIterator.a(0, "signtreaty");
+            NodeHashTableIterator.addTutorialFlag(0, "signtreaty");
           }
           this.updateProjectedGarrisons(this.field_n, param1 + 27510);
           if (null != this.field_s[param0.field_x]) {
@@ -3486,23 +3486,23 @@ final class GameSession implements AiHost {
                 regionExit2: {
                   switch (var4) {
                     case 2:
-                      NodeHashTableIterator.a(0, "stellarbomb");
+                      NodeHashTableIterator.addTutorialFlag(0, "stellarbomb");
                       break;
                     default:
                       break;
                     case 3:
                       break regionExit2;
                     case 0:
-                      NodeHashTableIterator.a(0, "defensivenet");
+                      NodeHashTableIterator.addTutorialFlag(0, "defensivenet");
                       break;
                     case 1:
-                      NodeHashTableIterator.a(0, "terraforming");
+                      NodeHashTableIterator.addTutorialFlag(0, "terraforming");
                       break;
                   }
 
                   break regionExit1;
                 }
-                NodeHashTableIterator.a(0, "tannhauser");
+                NodeHashTableIterator.addTutorialFlag(0, "tannhauser");
               }
               var3 = (ProjectUse) (this.field_P.field_i.nextForward((byte) -71));
             }
@@ -3545,7 +3545,7 @@ final class GameSession implements AiHost {
               stackIn_46_0 = var4;
               if (var6 != 0) {
                 while (true) {
-                  NodeHashTableIterator.a(stackIn_46_0, (byte) 73);
+                  NodeHashTableIterator.sortIncomingFleetsByDistance(stackIn_46_0, (byte) 73);
                   InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) 65, var4);
                   var3_int++;
                   break scanLoop1;
@@ -3616,7 +3616,7 @@ final class GameSession implements AiHost {
               while (var3_int < var2.length) {
                 var4 = var2[var3_int];
                 stackIn_46_0Lifetime1 = var4;
-                NodeHashTableIterator.a(stackIn_46_0Lifetime1, (byte) 73);
+                NodeHashTableIterator.sortIncomingFleetsByDistance(stackIn_46_0Lifetime1, (byte) 73);
                 InvalidMapConnectionException.sortOutgoingFleetMovesByAngle((byte) 65, var4);
                 var3_int++;
                 if (var6 != 0) {
@@ -3884,7 +3884,7 @@ final class GameSession implements AiHost {
           if (param0 >= -114) {
             this.field_Q = (TurnEventLog) null;
           }
-          AchievementProgress.writeOrders(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), BirthDateConfirmationForm.createTertiaryListSequence(25, this.field_P.field_p), var2);
+          AchievementProgress.writeOrders(FrameTimer.createDequeSequence(this.field_P.field_q, -71), -256, FrameTimer.createDequeSequence(this.field_P.field_i, -88), BirthDateConfirmationForm.createTertiaryListSequence(25, this.field_P.field_p), var2);
           this.field_ab.clear((byte) 108);
           this.field_o.clear((byte) 127);
           this.field_v.clear((byte) 112);
@@ -4004,7 +4004,7 @@ final class GameSession implements AiHost {
                     stackIn_58_0 = this.field_W ? 1 : 0;
                   }
                   if (stackIn_58_0 != 0) {
-                    NodeHashTableIterator.a(0, "buildships");
+                    NodeHashTableIterator.addTutorialFlag(0, "buildships");
                   }
                   this.field_Y.setInteractionMode(-86, 0);
                   break;
@@ -4182,7 +4182,7 @@ final class GameSession implements AiHost {
           param0.field_w = param0.field_w & ~(1 << this.field_n.field_x);
           this.handleAllianceFormed(param0, -27584, this.field_n);
           if (this.field_W) {
-            NodeHashTableIterator.a(0, "signtreaty");
+            NodeHashTableIterator.addTutorialFlag(0, "signtreaty");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

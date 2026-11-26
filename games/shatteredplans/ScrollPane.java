@@ -142,7 +142,7 @@ final class ScrollPane extends AnimatedPanel {
           if (param9 != 0) {
             field_Cb = (String) null;
           }
-          Player.a(param16, param4, false);
+          Player.setMenuAnchor(param16, param4, false);
           RasterTargetSupport.setMenuHighlightColors(param13, param8, param14, (byte) 102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

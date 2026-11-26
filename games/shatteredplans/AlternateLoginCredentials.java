@@ -9,7 +9,7 @@ final class AlternateLoginCredentials extends TargetedChatMessage {
 
     final static void openLoginForm(String param0, boolean param1, byte param2, boolean param3) {
         try {
-          MenuButton.f(-1);
+          MenuButton.beginAccountUiAction(-1);
           ByteArrayStorage.field_e.deactivateAll(104);
           TutorialStageSupport.field_e = new LoginForm(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {
@@ -48,7 +48,7 @@ final class AlternateLoginCredentials extends TargetedChatMessage {
     /* Full JVM integer arguments; original narrow signature preserved. */
     final static void openLoginFormFullInts(String param0, boolean param1, int param2, boolean param3) {
         try {
-          MenuButton.f(-1);
+          MenuButton.beginAccountUiAction(-1);
           ByteArrayStorage.field_e.deactivateAll(104);
           TutorialStageSupport.field_e = new LoginForm(MenuWindow.field_B, (String) null, TertiaryNodeList.field_b, param3, param1);
           if (param2 > -50) {

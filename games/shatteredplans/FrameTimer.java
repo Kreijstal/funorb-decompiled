@@ -6,9 +6,9 @@ abstract class FrameTimer {
     static IntrusiveDeque field_b;
     static String field_a;
 
-    abstract long a(int param0);
+    abstract long getSleepMillis(int param0);
 
-    final static NodeSequence a(IntrusiveDeque param0, int param1) {
+    final static NodeSequence createDequeSequence(IntrusiveDeque param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         IntrusiveDequeSequence stackIn_3_0 = null;
@@ -19,7 +19,7 @@ abstract class FrameTimer {
         try {
           if (param1 >= -39) {
             var3 = (int[]) null;
-            FrameTimer.a(-79, 121, 76, -123, 0, -125, (int[]) null, -35, -114);
+            FrameTimer.fillHalfBlendedTriangle(-79, 121, 76, -123, 0, -125, (int[]) null, -35, -114);
           }
           stackIn_3_0 = new IntrusiveDequeSequence(param0);
           return (NodeSequence) ((Object) stackIn_3_0);
@@ -37,20 +37,20 @@ abstract class FrameTimer {
         }
     }
 
-    final int a(long param0, int param1) {
-        long var4 = this.a(0);
+    final int waitAndCountFrames(long param0, int param1) {
+        long var4 = this.getSleepMillis(0);
         if (var4 > 0L) {
           ClientOverlayDrawSupport.sleep((byte) -115, var4);
         }
         if (param1 == -1) {
-          return this.a(18907, param0);
+          return this.advanceSchedule(18907, param0);
         }
         return 113;
     }
 
-    abstract int a(int param0, long param1);
+    abstract int advanceSchedule(int param0, long param1);
 
-    abstract void b(int param0);
+    abstract void resetTiming(int param0);
 
     public static void clearStatics(byte param0) {
         field_b = null;
@@ -60,7 +60,7 @@ abstract class FrameTimer {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8) {
+    final static void fillHalfBlendedTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6, int param7, int param8) {
         RuntimeException stackIn_78_0 = null;
         StringBuilder stackIn_78_1 = null;
         String stackIn_79_2 = null;
@@ -100,7 +100,7 @@ abstract class FrameTimer {
             }
             if (param2 >= -90) {
               var20 = (IntrusiveDeque) null;
-              FrameTimer.a((IntrusiveDeque) null, 68);
+              FrameTimer.createDequeSequence((IntrusiveDeque) null, 68);
             }
             var14 = -param7 + param8;
             if (param5 == param7) {

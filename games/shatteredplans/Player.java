@@ -30,7 +30,7 @@ final class Player {
     static String field_j;
     static int[] field_y;
 
-    final static boolean a(int param0, String param1) {
+    final static boolean isPrivateChatInputFor(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         CharSequence var3 = null;
@@ -65,7 +65,7 @@ final class Player {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearPlayerStatics(int param0) {
         if (param0 == 4) {
           field_y = null;
           field_j = null;
@@ -74,21 +74,21 @@ final class Player {
           return;
         }
         String var2 = (String) null;
-        Player.a(-14, (String) null);
+        Player.isPrivateChatInputFor(-14, (String) null);
         field_y = null;
         field_j = null;
         field_l = null;
         field_a = null;
     }
 
-    final static void a(byte param0, boolean param1) {
+    final static void drawDialogsWithBackdrop(byte param0, boolean param1) {
         PlayerRankingRequest.drawDialogsWithBackdrop(true, param1, 0);
         if (param0 <= 85) {
           field_l = (AccountConnectionPhase) null;
         }
     }
 
-    final static void a(int param0, int param1, boolean param2) {
+    final static void setMenuAnchor(int param0, int param1, boolean param2) {
         WeightedLruCache.field_e = param0;
         LoginForm.field_O = param1;
         if (param2) {
@@ -122,7 +122,7 @@ final class Player {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$7ffe4b125357(int param0, boolean param1) {
+    final static void drawDialogsWithBackdropFullInts(int param0, boolean param1) {
         PlayerRankingRequest.drawDialogsWithBackdrop(true, param1, 0);
         if (param0 <= 85) {
           field_l = (AccountConnectionPhase) null;

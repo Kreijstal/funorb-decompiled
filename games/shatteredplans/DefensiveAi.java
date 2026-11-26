@@ -53,7 +53,7 @@ final class DefensiveAi extends StandardAi {
           return;
         }
         if (TextReplacementEntry.field_j == 84) {
-          NodeHashTableIterator.a(0, "enter");
+          NodeHashTableIterator.addTutorialFlag(0, "enter");
           return;
         }
     }

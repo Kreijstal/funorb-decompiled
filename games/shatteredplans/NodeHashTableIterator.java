@@ -18,7 +18,7 @@ final class NodeHashTableIterator implements Iterator {
         field_b = null;
         if (param0 != -1) {
           Star var2 = (Star) null;
-          NodeHashTableIterator.a((Star) null, (byte) -77);
+          NodeHashTableIterator.sortIncomingFleetsByDistance((Star) null, (byte) -77);
         }
     }
 
@@ -30,12 +30,12 @@ final class NodeHashTableIterator implements Iterator {
         this.lastReturned = null;
     }
 
-    final static AnimatedPanel a(int param0) {
+    final static AnimatedPanel getIgnoreListContent(int param0) {
         int var1 = -56 % ((-22 - param0) / 48);
         return ClientLobbyResources.field_a.field_Eb;
     }
 
-    final static void a(Star param0, byte param1) {
+    final static void sortIncomingFleetsByDistance(Star param0, byte param1) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -58,7 +58,7 @@ final class NodeHashTableIterator implements Iterator {
           }
           if (param1 < 35) {
             var10 = (Star) null;
-            NodeHashTableIterator.a((Star) null, (byte) -17);
+            NodeHashTableIterator.sortIncomingFleetsByDistance((Star) null, (byte) -17);
           }
           var11 = new DualLinkDeque();
           var11.addLast(param0.field_s.pollFirst(-123), 32);
@@ -125,12 +125,12 @@ final class NodeHashTableIterator implements Iterator {
         return true;
     }
 
-    final static void a(int param0, String param1) {
+    final static void addTutorialFlag(int param0, String param1) {
         try {
           ClientContextMenuSupport.field_a.addLast((byte) -113, new StringNode(param1));
           if (param0 != 0) {
             Star var3 = (Star) null;
-            NodeHashTableIterator.a((Star) null, (byte) 103);
+            NodeHashTableIterator.sortIncomingFleetsByDistance((Star) null, (byte) 103);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "fl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -133,7 +133,7 @@ class MenuLabel extends MenuComponent {
     }
 
     final static void showReconnectStatusDialog(int param0) {
-        MenuButton.f(-1);
+        MenuButton.beginAccountUiAction(-1);
         ClientRuntimeState.field_f = true;
         TertiaryNodeList.field_b = true;
         ByteArrayStorage.field_e.deactivateAll(99);

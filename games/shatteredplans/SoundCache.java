@@ -220,7 +220,7 @@ final class SoundCache {
           }
           var9 = (VorbisSample) (this.field_a.get(var6, -25064));
           if (var9 == null) {
-            var9 = VorbisSample.a(this.field_e, param2, param1);
+            var9 = VorbisSample.load(this.field_e, param2, param1);
             if (var9 == null) {
               return null;
             }

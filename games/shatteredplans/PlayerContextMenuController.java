@@ -258,7 +258,7 @@ final class PlayerContextMenuController {
               }
             }
             if (var5 != null) {
-              if (!Player.a(-68, this.field_k) &&
+              if (!Player.isPrivateChatInputFor(-68, this.field_k) &&
                 !LoginMethodPreference.field_g) {
                 if (!HighscoreResponseSupport.field_b) {
                   this.field_j.addItem(1, 8, QuickChatPhraseRegistry.replaceNumberedPlaceholders(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));

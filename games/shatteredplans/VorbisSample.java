@@ -214,7 +214,7 @@ final class VorbisSample extends IntrusiveNode {
         float var30Lifetime1Lifetime3;
         int var18_intLifetime1;
         int var18_intLifetime2;
-        VorbisSample.a(this.field_v[param0], 0);
+        VorbisSample.setBitInput(this.field_v[param0], 0);
         VorbisSample.readBit();
         var2 = VorbisSample.readBits(RecklessAi.bitLength(99, field_J.length - 1));
         var3 = field_t[var2] ? 1 : 0;
@@ -512,7 +512,7 @@ final class VorbisSample extends IntrusiveNode {
         int var4Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
-        VorbisSample.a(param0, 0);
+        VorbisSample.setBitInput(param0, 0);
         field_E = 1 << VorbisSample.readBits(4);
         field_r = 1 << VorbisSample.readBits(4);
         field_k = new float[field_r];
@@ -600,7 +600,7 @@ final class VorbisSample extends IntrusiveNode {
     final static VorbisSample load(Archive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetupLoaded(param0)) {
             param0.isFileReadyByName(param1, (byte) 5, param2);
             return null;
           }
@@ -622,7 +622,7 @@ final class VorbisSample extends IntrusiveNode {
         }
     }
 
-    private final void a(byte[] param0) throws IOException {
+    private final void readSampleData(byte[] param0) throws IOException {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
@@ -688,7 +688,7 @@ final class VorbisSample extends IntrusiveNode {
         return new PcmSample(this.field_B, var1, this.field_H, this.field_G, this.field_I);
     }
 
-    private final static boolean a(Archive param0) {
+    private final static boolean ensureSetupLoaded(Archive param0) {
         byte[] var1 = null;
         if (!field_x) {
           var1 = param0.getFile(0, -1, 0);
@@ -700,7 +700,7 @@ final class VorbisSample extends IntrusiveNode {
         return true;
     }
 
-    private final static void a(byte[] param0, int param1) {
+    private final static void setBitInput(byte[] param0, int param1) {
         field_w = param0;
         field_p = param1;
         field_K = 0;
@@ -729,10 +729,10 @@ final class VorbisSample extends IntrusiveNode {
         return var1;
     }
 
-    final static VorbisSample a(Archive param0, int param1, int param2) {
+    final static VorbisSample load(Archive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
-          if (!VorbisSample.a(param0)) {
+          if (!VorbisSample.ensureSetupLoaded(param0)) {
             param0.isFileReady((byte) 125, param2, param1);
             return null;
           }
@@ -755,7 +755,7 @@ final class VorbisSample extends IntrusiveNode {
     }
 
     private VorbisSample(byte[] param0) throws IOException {
-        this.a(param0);
+        this.readSampleData(param0);
     }
 
     static {

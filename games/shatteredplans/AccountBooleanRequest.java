@@ -39,12 +39,12 @@ final class AccountBooleanRequest {
             if (WeightedLruCache.field_g != PanelNode.field_q) {
               LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
               if (BattleSnapshot.a(0)) {
-                NodeHashTableIterator.a(0, "enter");
+                NodeHashTableIterator.addTutorialFlag(0, "enter");
               }
               return true;
             }
             if (BattleSnapshot.a(0)) {
-              NodeHashTableIterator.a(0, "enter");
+              NodeHashTableIterator.addTutorialFlag(0, "enter");
               return true;
             }
             return true;
@@ -69,13 +69,13 @@ final class AccountBooleanRequest {
               if (WeightedLruCache.field_g != PanelNode.field_q) {
                 LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
                 if (BattleSnapshot.a(0)) {
-                  NodeHashTableIterator.a(0, "enter");
+                  NodeHashTableIterator.addTutorialFlag(0, "enter");
                   return true;
                 }
                 return true;
               }
               if (BattleSnapshot.a(0)) {
-                NodeHashTableIterator.a(0, "enter");
+                NodeHashTableIterator.addTutorialFlag(0, "enter");
                 return true;
               }
             }
@@ -102,13 +102,13 @@ final class AccountBooleanRequest {
               if (WeightedLruCache.field_g != PanelNode.field_q) {
                 LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
                 if (BattleSnapshot.a(0)) {
-                  NodeHashTableIterator.a(0, "enter");
+                  NodeHashTableIterator.addTutorialFlag(0, "enter");
                   return true;
                 }
                 return true;
               }
               if (BattleSnapshot.a(0)) {
-                NodeHashTableIterator.a(0, "enter");
+                NodeHashTableIterator.addTutorialFlag(0, "enter");
                 return true;
               }
             }
@@ -129,13 +129,13 @@ final class AccountBooleanRequest {
             if (WeightedLruCache.field_g != PanelNode.field_q) {
               LobbyOptionSupport.commitTutorialSceneTransition((byte) -10);
               if (BattleSnapshot.a(0)) {
-                NodeHashTableIterator.a(0, "enter");
+                NodeHashTableIterator.addTutorialFlag(0, "enter");
                 return true;
               }
               return true;
             }
             if (BattleSnapshot.a(0)) {
-              NodeHashTableIterator.a(0, "enter");
+              NodeHashTableIterator.addTutorialFlag(0, "enter");
               return true;
             }
           }
@@ -166,7 +166,7 @@ final class AccountBooleanRequest {
             field_c = (String) null;
           }
           if (RasterBuffer.field_a >= 18) {
-            NanoFrameTimer.a(var3, true);
+            NanoFrameTimer.prependNotification(var3, true);
           } else {
             ByteArrayReadRequest.field_p.addLast((byte) -113, var3);
           }

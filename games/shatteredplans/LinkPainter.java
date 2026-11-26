@@ -287,7 +287,7 @@ final class LinkPainter implements WidgetPainter {
                       var16 = var7.field_Ab;
                       SliderPainter.createContextMenuController((int[]) null, 0L, (String) null, var16, 293, ClientPacketFlushSupport.field_a.field_Db, var7, -1, -1);
                       if (null != var7.field_xb &&
-                        !Player.a(62, DerelictVictoryChecker.field_m.field_k) &&
+                        !Player.isPrivateChatInputFor(62, DerelictVictoryChecker.field_m.field_k) &&
                         !LoginMethodPreference.field_g) {
                         if (!HighscoreResponseSupport.field_b) {
                           var17 = DerelictVictoryChecker.field_m;

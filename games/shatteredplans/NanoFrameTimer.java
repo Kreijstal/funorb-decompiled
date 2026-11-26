@@ -14,7 +14,7 @@ final class NanoFrameTimer extends FrameTimer {
     static String field_m;
     private long[] field_e;
 
-    final void b(int param0) {
+    final void resetTiming(int param0) {
         if (param0 != -1432175600) {
           this.field_n = 67L;
           if (this.field_n > this.field_l) {
@@ -33,10 +33,10 @@ final class NanoFrameTimer extends FrameTimer {
         this.field_h = 0L;
     }
 
-    final long a(int param0) {
-        this.field_l = this.field_l + this.c(1);
+    final long getSleepMillis(int param0) {
+        this.field_l = this.field_l + this.sampleElapsedNanos(1);
         if (param0 != 0) {
-          this.a(-15, -125L);
+          this.advanceSchedule(-15, -125L);
           if (this.field_l < this.field_n) {
             return (-this.field_l + this.field_n) / 1000000L;
           }
@@ -59,7 +59,7 @@ final class NanoFrameTimer extends FrameTimer {
         field_i = null;
     }
 
-    private final long c(int param0) {
+    private final long sampleElapsedNanos(int param0) {
         long var2;
         long var4;
         long var6;
@@ -107,7 +107,7 @@ final class NanoFrameTimer extends FrameTimer {
         return var6Lifetime3 / (long)this.field_g;
     }
 
-    final int a(int param0, long param1) {
+    final int advanceSchedule(int param0, long param1) {
         int var4;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -150,7 +150,7 @@ final class NanoFrameTimer extends FrameTimer {
         return var4;
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void updateChatInputOverlay(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         String var7 = null;
         if (ProductionContent.field_h == 2) {
           var7 = StatusContent.field_d;
@@ -162,11 +162,11 @@ final class NanoFrameTimer extends FrameTimer {
           return;
         }
         NotificationEntry var8 = (NotificationEntry) null;
-        NanoFrameTimer.a((NotificationEntry) null, false);
+        NanoFrameTimer.prependNotification((NotificationEntry) null, false);
         WhirlpoolHasher.updateChatInputDialog(param4, param6, var7, param0, (byte) 122, param1, param2, param5);
     }
 
-    final static void a(NotificationEntry param0, boolean param1) {
+    final static void prependNotification(NotificationEntry param0, boolean param1) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2_int = PlacementEvent.field_l.length - 1;
         if (!param1) {

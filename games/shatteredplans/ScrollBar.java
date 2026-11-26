@@ -297,7 +297,7 @@ final class ScrollBar extends AnimatedPanel {
         String[] var20 = null;
         try {
           var20 = (String[]) null;
-          MenuButton.a(param3, param2, param10, param18, param5, param7, param1, param4, param11, param16, param12, param0, (String[]) null, param6, param14, param13, -128, param17, param8, 1);
+          MenuButton.initializeLobbyUi(param3, param2, param10, param18, param5, param7, param1, param4, param11, param16, param12, param0, (String[]) null, param6, param14, param13, -128, param17, param8, 1);
           if (param9 > -55) {
             field_Db = (String) null;
           }

@@ -5017,7 +5017,7 @@ final class GameScreen {
             var5.field_e.setSprite(-2948, this.field_t);
             var5.field_f.moveTo((byte) 122, 55, var5.field_f.field_t);
             if (this.field_s.field_W) {
-              NodeHashTableIterator.a(0, "unplaced");
+              NodeHashTableIterator.addTutorialFlag(0, "unplaced");
             }
           }
           var5_ref = param1.firstStar(18229);

@@ -10612,12 +10612,44 @@
       "renamedSymbol": "M:VorbisSample.readBits(I)I"
     },
     {
+      "symbol": "M:fd.a(Lbc;)Z",
+      "originalName": "a",
+      "to": "ensureSetupLoaded",
+      "evidence": "Load original Vorbis setup archive group0/file0unless retained setup flag already true. Complete setup and two sample loaders read. Preserve missing false,shared setup publication and archive argument order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.ensureSetupLoaded(LArchive;)Z"
+    },
+    {
+      "symbol": "M:fd.a(Lbc;II)Lfd;",
+      "originalName": "a",
+      "to": "load",
+      "evidence": "Load original indexed Vorbis sample after setup readiness,request readiness and return null while setup unavailable. Complete named loader/cache consumer/constructor read. Preserve group/file order,raw byte-array identity,IOException printing/null result and outer exception boundaries. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.load(LArchive;II)LVorbisSample;"
+    },
+    {
       "symbol": "M:fd.a(Lbc;Ljava/lang/String;Ljava/lang/String;)Lfd;",
       "originalName": "a",
       "to": "load",
       "evidence": "Loads the named sample bytes from the archive and builds a VorbisSample.",
       "confidence": "reviewed",
       "renamedSymbol": "M:VorbisSample.load(LArchive;Ljava/lang/String;Ljava/lang/String;)LVorbisSample;"
+    },
+    {
+      "symbol": "M:fd.a([B)V",
+      "originalName": "a",
+      "to": "readSampleData",
+      "evidence": "Read original sample header/loop metadata and packet byte arrays using255continued lengths. Complete constructor/cache consumer and setup roles read. Preserve complemented negative loop end,negative packet-count IOException,allocation/publication order,signed overflow and partial packet reads. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.readSampleData([B)V"
+    },
+    {
+      "symbol": "M:fd.a([BI)V",
+      "originalName": "a",
+      "to": "setBitInput",
+      "evidence": "Retain exact supplied Vorbis bit-input byte array and byte offset,then reset bit offset0. Complete setup and packet decode caller windows read. Preserve array alias,unrestricted signed offset and assignment order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:VorbisSample.setBitInput([BI)V"
     },
     {
       "symbol": "M:fd.a([I)Lkk;",
@@ -10682,6 +10714,22 @@
       "evidence": "Visible optional background/icon/text button; guard after background/icon before text. Preserve exact partial render failures. Complete additional override body read; same name across all13 menu implementations. Preserve descriptors/modifiers, dispatch and every clip/guard/overflow/read/call order. Identifier-only change: preserve descriptors/modifiers, full primitive domains, guards, literals, aliases, allocations, locks, overflow/casts, partial mutations and exception/call order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MenuButton.drawComponent(I)V"
+    },
+    {
+      "symbol": "M:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V",
+      "originalName": "a",
+      "to": "initializeLobbyUi",
+      "evidence": "Initialize retained lobby styles/social panels/widgets/chat/report labels and chat layout from supplied archives/tables. Complete styles/report helpers and incoming wrapper read. Preserve array/archive aliases,late guard cleanup,original setup order and partial shared publication. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V"
+    },
+    {
+      "symbol": "M:fe.f(I)V",
+      "originalName": "f",
+      "to": "beginAccountUiAction",
+      "evidence": "Reset original two account flags,set supplied pending UI action,and reset creation/name-availability request kinds to retained default. Complete login/reconnect consumers read. Preserve writes/order,int action domain and no added request/network behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MenuButton.beginAccountUiAction(I)V"
     },
     {
       "symbol": "M:fe.g(I)V",
@@ -10884,6 +10932,30 @@
       "renamedSymbol": "M:ByteArrayNode.showAccountStatusDialog(Ljava/lang/String;IZ)V"
     },
     {
+      "symbol": "M:fl.a(I)Lqr;",
+      "originalName": "a",
+      "to": "getIgnoreListContent",
+      "evidence": "Return retained ignore-list content panel used by social-list initialization. Actual caller and previously verified ignore-panel role read. Preserve pre-read guard remainder,null chain failure and exact reference identity. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.getIgnoreListContent(I)LAnimatedPanel;"
+    },
+    {
+      "symbol": "M:fl.a(ILjava/lang/String;)V",
+      "originalName": "a",
+      "to": "addTutorialFlag",
+      "evidence": "Append new StringNode with exact supplied flag to retained tutorial condition queue. All flag producers and complete case-insensitive consumer read. Preserve null String alias,allocation/append before invalid-int fleet-sort call and partial publication. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.addTutorialFlag(ILjava/lang/String;)V"
+    },
+    {
+      "symbol": "M:fl.a(Lln;B)V",
+      "originalName": "a",
+      "to": "sortIncomingFleetsByDistance",
+      "evidence": "Reorder original incoming fleet moves by squared vector distance using temporary secondary deque/insertion before longer entry. Complete comparator and all fleet-order caller windows read. Preserve signed32bit products/overflow,tie order,node aliases,destructive secondary unlink/relink,cursor order and invalid-byte recursion. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V"
+    },
+    {
       "symbol": "M:fl.b(I)V",
       "originalName": "b",
       "to": "clearStatics",
@@ -10972,6 +11044,54 @@
       "renamedSymbol": "M:FrameTimer.clearStatics(B)V"
     },
     {
+      "symbol": "M:fp.a(I)J",
+      "originalName": "a",
+      "to": "getSleepMillis",
+      "evidence": "Abstract frame-timer operation returning original pending sleep delay in milliseconds after time sampling. Complete sole implementation/base wrapper and override family read. Preserve descriptor/visibility,int guard domain and all original virtual dispatch. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.getSleepMillis(I)J"
+    },
+    {
+      "symbol": "M:fp.a(IIIIII[III)V",
+      "originalName": "a",
+      "to": "fillHalfBlendedTriangle",
+      "evidence": "Rasterize original y-ordered triangle scanlines with half-background span blending. Complete sorting wrapper/span helper read. Preserve16bit edge slopes,integer overflow/division,row/column clipping,last-column behavior,degenerate/zero spans and invalid-int sequence call. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V"
+    },
+    {
+      "symbol": "M:fp.a(IJ)I",
+      "originalName": "a",
+      "to": "advanceSchedule",
+      "evidence": "Abstract frame-timer operation advancing schedule by supplied nanosecond frame interval and returning update count. Complete sole implementation/wrapper and frame loop read. Preserve original long/int domains,descriptor and override closure. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.advanceSchedule(IJ)I"
+    },
+    {
+      "symbol": "M:fp.a(JI)I",
+      "originalName": "a",
+      "to": "waitAndCountFrames",
+      "evidence": "Sample pending delay,sleep original milliseconds if positive,then advance virtual schedule/count for int -1. Complete frame loop and sleep helper read. Preserve virtual call/side-effect order,sleep helper split at multiples10,other-int113return and arbitrary long interval. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.waitAndCountFrames(JI)I"
+    },
+    {
+      "symbol": "M:fp.a(Lpf;I)Lhb;",
+      "originalName": "a",
+      "to": "createDequeSequence",
+      "evidence": "Create original IntrusiveDequeSequence adapter retaining supplied deque and return NodeSequence interface. Complete constructor and order serializer caller windows read. Preserve nullable alias,allocation and invalid-int triangle callback before construction. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;"
+    },
+    {
+      "symbol": "M:fp.b(I)V",
+      "originalName": "b",
+      "to": "resetTiming",
+      "evidence": "Abstract frame-timer reset operation used by shared frame-history reset helper. Complete sole implementation and caller read. Preserve int descriptor,original guard domain and override family. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:FrameTimer.resetTiming(I)V"
+    },
+    {
       "symbol": "M:fr.a(BLjava/util/Hashtable;ILjava/lang/StringBuilder;)Ljava/lang/StringBuilder;",
       "originalName": "a",
       "to": "describeTree",
@@ -11042,6 +11162,46 @@
       "evidence": "For int0return retained nullable account-response Boolean and clear slot;other ints return null without reading/clearing. Producer response99and login consumer excerpts read. Preserve object identity,nullable value and consume order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DraggableWidget.takeAccountResponseFlag(I)Ljava/lang/Boolean;"
+    },
+    {
+      "symbol": "M:fs.$cfr$intArgs$a$7ffe4b125357(IZ)V",
+      "originalName": "$cfr$intArgs$a$7ffe4b125357",
+      "to": "drawDialogsWithBackdropFullInts",
+      "evidence": "Full signed32bit-int companion of byte drawDialogsWithBackdrop with identical6line body. Original draw caller and backdrop delegate read. Preserve full first-int domain,second Boolean,post-draw <=85guard,no cast/delegation or renderer changes. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Player.drawDialogsWithBackdropFullInts(IZ)V"
+    },
+    {
+      "symbol": "M:fs.a(BZ)V",
+      "originalName": "a",
+      "to": "drawDialogsWithBackdrop",
+      "evidence": "Delegate original dimmed-backdrop dialog draw with true/Boolean/0arguments,then clear phase field when byte<=85. Complete delegate and int companion read. Preserve argument roles,unused delegate flag behavior,late guard mutation and byte descriptor. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Player.drawDialogsWithBackdrop(BZ)V"
+    },
+    {
+      "symbol": "M:fs.a(I)V",
+      "originalName": "a",
+      "to": "clearPlayerStatics",
+      "evidence": "Clear retained Player static menu/account references in original order. Cleanup and guard-predicate contexts read. Preserve int4normal path,wrong-int private-chat predicate before clears and all partial failures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Player.clearPlayerStatics(I)V"
+    },
+    {
+      "symbol": "M:fs.a(IIZ)V",
+      "originalName": "a",
+      "to": "setMenuAnchor",
+      "evidence": "Retain original shared menu anchor coordinates and optionally overwrite original Player sentinel. Complete style caller and account-choice coordinate consumers previously read. Preserve int domains,assignment order and Boolean guard. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Player.setMenuAnchor(IIZ)V"
+    },
+    {
+      "symbol": "M:fs.a(ILjava/lang/String;)Z",
+      "originalName": "a",
+      "to": "isPrivateChatInputFor",
+      "evidence": "Test whether retained chat text input is open for channel2and supplied normalized recipient matches current private target. Complete social-actions consumer and all callers read. Preserve initial gates,normalization/String equality,nullable target and int-derived remainder only after match. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Player.isPrivateChatInputFor(ILjava/lang/String;)Z"
     },
     {
       "symbol": "M:ga.a()I",
@@ -12244,12 +12404,60 @@
       "renamedSymbol": "M:PlayerRankingRequest.drawDialogsWithBackdrop(ZZI)V"
     },
     {
+      "symbol": "M:gs.a(I)J",
+      "originalName": "a",
+      "to": "getSleepMillis",
+      "evidence": "Add original sampled elapsed nanoseconds to timer clock,then return nonnegative pending delay divided by1000000. Whole class/base declaration/wrapper read. Preserve long overflow,truncation,other-int schedule side effect and all virtual family signatures. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.getSleepMillis(I)J"
+    },
+    {
+      "symbol": "M:gs.a(IJ)I",
+      "originalName": "a",
+      "to": "advanceSchedule",
+      "evidence": "Advance original target by supplied nanosecond interval,count up to10updates and resynchronize clock/target after lag. Whole class/base declaration/frame loop read. Preserve pre-target single update adjustment,bad-int sampling-count write,long overflow and do-while/return order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.advanceSchedule(IJ)I"
+    },
+    {
+      "symbol": "M:gs.a(IZIIIII)V",
+      "originalName": "a",
+      "to": "updateChatInputOverlay",
+      "evidence": "Choose retained private/public chat input caption and delegate original dialog interaction/layout arguments. Complete wrapper and whole timer class read. Preserve constant byte/int arguments,argument permutation,invalid-int false notification hook and call order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V"
+    },
+    {
+      "symbol": "M:gs.a(Ltm;Z)V",
+      "originalName": "a",
+      "to": "prependNotification",
+      "evidence": "On true shift retained notification history toward tail,reset notification animation and store supplied entry at head. Whole class and incoming notification contexts read. Preserve exact alias,array length/empty failures,reverse iteration,false no-op and reset-before-publication order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V"
+    },
+    {
       "symbol": "M:gs.b(B)V",
       "originalName": "b",
       "to": "clearStatics",
       "evidence": "Assigns null to 5 static fields of the class.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NanoFrameTimer.clearStatics(B)V"
+    },
+    {
+      "symbol": "M:gs.b(I)V",
+      "originalName": "b",
+      "to": "resetTiming",
+      "evidence": "Reset original nano timer sampling anchor and advance clock to retained target if behind. Whole class,base declaration and shared reset caller read. Preserve wrong-int target67write,conditional long arithmetic and final anchor clear order. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.resetTiming(I)V"
+    },
+    {
+      "symbol": "M:gs.c(I)J",
+      "originalName": "c",
+      "to": "sampleElapsedNanos",
+      "evidence": "Sample System.nanoTime,retain original bounded elapsed delta in10slot history and return original average from supplied start index. Whole class/constructor and getSleepMillis consumer read. Preserve5second rejection bounds,history counters/index order,long overflow,zero/negative division domains and full int guard behavior. Identifier-only: preserve descriptors/modifiers and override closure, full primitive domains and int companions, guards/recursion, literals, aliases, allocations, RNG/clock/locks, raster state, integer overflow/casts/FP, partial state and call/exception order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NanoFrameTimer.sampleElapsedNanos(I)J"
     },
     {
       "symbol": "M:h.a()I",
@@ -133755,7 +133963,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;)Z#0",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;)Z#0",
+      "renamedSymbol": "L:VorbisSample.ensureSetupLoaded(LArchive;)Z#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -133766,7 +133974,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;II)Lfd;#0",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;II)LVorbisSample;#0",
+      "renamedSymbol": "L:VorbisSample.load(LArchive;II)LVorbisSample;#0",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -133777,7 +133985,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;II)Lfd;#1",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;II)LVorbisSample;#1",
+      "renamedSymbol": "L:VorbisSample.load(LArchive;II)LVorbisSample;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -133788,7 +133996,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;II)Lfd;#2",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;II)LVorbisSample;#2",
+      "renamedSymbol": "L:VorbisSample.load(LArchive;II)LVorbisSample;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -133799,7 +134007,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;II)Lfd;#3",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;II)LVorbisSample;#3",
+      "renamedSymbol": "L:VorbisSample.load(LArchive;II)LVorbisSample;#3",
       "originalName": "iOException",
       "renamedName": "iOException",
       "declaration": {
@@ -133810,7 +134018,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;II)Lfd;#4",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;II)LVorbisSample;#4",
+      "renamedSymbol": "L:VorbisSample.load(LArchive;II)LVorbisSample;#4",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -133821,7 +134029,7 @@
     },
     {
       "symbol": "L:fd.a(Lbc;II)Lfd;#5",
-      "renamedSymbol": "L:VorbisSample.a(LArchive;II)LVorbisSample;#5",
+      "renamedSymbol": "L:VorbisSample.load(LArchive;II)LVorbisSample;#5",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -133898,7 +134106,7 @@
     },
     {
       "symbol": "L:fd.a([B)V#0",
-      "renamedSymbol": "L:VorbisSample.a([B)V#0",
+      "renamedSymbol": "L:VorbisSample.readSampleData([B)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -133909,7 +134117,7 @@
     },
     {
       "symbol": "L:fd.a([B)V#1",
-      "renamedSymbol": "L:VorbisSample.a([B)V#1",
+      "renamedSymbol": "L:VorbisSample.readSampleData([B)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -133920,7 +134128,7 @@
     },
     {
       "symbol": "L:fd.a([B)V#2",
-      "renamedSymbol": "L:VorbisSample.a([B)V#2",
+      "renamedSymbol": "L:VorbisSample.readSampleData([B)V#2",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -133931,7 +134139,7 @@
     },
     {
       "symbol": "L:fd.a([B)V#3",
-      "renamedSymbol": "L:VorbisSample.a([B)V#3",
+      "renamedSymbol": "L:VorbisSample.readSampleData([B)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -133942,7 +134150,7 @@
     },
     {
       "symbol": "L:fd.a([B)V#4",
-      "renamedSymbol": "L:VorbisSample.a([B)V#4",
+      "renamedSymbol": "L:VorbisSample.readSampleData([B)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -133953,7 +134161,7 @@
     },
     {
       "symbol": "L:fd.a([B)V#5",
-      "renamedSymbol": "L:VorbisSample.a([B)V#5",
+      "renamedSymbol": "L:VorbisSample.readSampleData([B)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -135878,7 +136086,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#0",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#0",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#0",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -135889,7 +136097,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#1",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#1",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#1",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -135900,7 +136108,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#10",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#10",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#10",
       "originalName": "stackIn_19_2",
       "renamedName": "stackIn_19_2",
       "declaration": {
@@ -135911,7 +136119,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#11",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#11",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#11",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -135922,7 +136130,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#12",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#12",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#12",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -135933,7 +136141,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#13",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#13",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#13",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -135944,7 +136152,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#14",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#14",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#14",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -135955,7 +136163,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#15",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#15",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#15",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -135966,7 +136174,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#16",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#16",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#16",
       "originalName": "stackIn_28_2",
       "renamedName": "stackIn_28_2",
       "declaration": {
@@ -135977,7 +136185,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#17",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#17",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#17",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -135988,7 +136196,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#18",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#18",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#18",
       "originalName": "stackIn_31_2",
       "renamedName": "stackIn_31_2",
       "declaration": {
@@ -135999,7 +136207,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#19",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#19",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#19",
       "originalName": "stackIn_33_1",
       "renamedName": "stackIn_33_1",
       "declaration": {
@@ -136010,7 +136218,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#2",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#2",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#2",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -136021,7 +136229,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#20",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#20",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#20",
       "originalName": "stackIn_34_2",
       "renamedName": "stackIn_34_2",
       "declaration": {
@@ -136032,7 +136240,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#21",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#21",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#21",
       "originalName": "stackIn_36_1",
       "renamedName": "stackIn_36_1",
       "declaration": {
@@ -136043,7 +136251,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#22",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#22",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#22",
       "originalName": "stackIn_37_2",
       "renamedName": "stackIn_37_2",
       "declaration": {
@@ -136054,7 +136262,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#23",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#23",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#23",
       "originalName": "stackIn_39_1",
       "renamedName": "stackIn_39_1",
       "declaration": {
@@ -136065,7 +136273,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#24",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#24",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#24",
       "originalName": "stackIn_40_2",
       "renamedName": "stackIn_40_2",
       "declaration": {
@@ -136076,7 +136284,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#25",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#25",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#25",
       "originalName": "stackIn_42_1",
       "renamedName": "stackIn_42_1",
       "declaration": {
@@ -136087,7 +136295,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#26",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#26",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#26",
       "originalName": "stackIn_43_2",
       "renamedName": "stackIn_43_2",
       "declaration": {
@@ -136098,7 +136306,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#27",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#27",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#27",
       "originalName": "stackIn_45_1",
       "renamedName": "stackIn_45_1",
       "declaration": {
@@ -136109,7 +136317,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#28",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#28",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#28",
       "originalName": "stackIn_46_2",
       "renamedName": "stackIn_46_2",
       "declaration": {
@@ -136120,7 +136328,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#29",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#29",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#29",
       "originalName": "stackIn_48_1",
       "renamedName": "stackIn_48_1",
       "declaration": {
@@ -136131,7 +136339,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#3",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#3",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#3",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -136142,7 +136350,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#30",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#30",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#30",
       "originalName": "stackIn_49_2",
       "renamedName": "stackIn_49_2",
       "declaration": {
@@ -136153,7 +136361,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#31",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#31",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#31",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -136164,7 +136372,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#32",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#32",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#32",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -136175,7 +136383,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#33",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#33",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#33",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -136186,7 +136394,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#4",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#4",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#4",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -136197,7 +136405,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#5",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#5",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#5",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -136208,7 +136416,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#6",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#6",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#6",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -136219,7 +136427,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#7",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#7",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#7",
       "originalName": "stackIn_15_1",
       "renamedName": "stackIn_15_1",
       "declaration": {
@@ -136230,7 +136438,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#8",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#8",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#8",
       "originalName": "stackIn_16_2",
       "renamedName": "stackIn_16_2",
       "declaration": {
@@ -136241,7 +136449,7 @@
     },
     {
       "symbol": "L:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#9",
-      "renamedSymbol": "L:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#9",
+      "renamedSymbol": "L:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#9",
       "originalName": "stackIn_18_1",
       "renamedName": "stackIn_18_1",
       "declaration": {
@@ -137495,7 +137703,7 @@
     },
     {
       "symbol": "L:fl.a(I)Lqr;#0",
-      "renamedSymbol": "L:NodeHashTableIterator.a(I)LAnimatedPanel;#0",
+      "renamedSymbol": "L:NodeHashTableIterator.getIgnoreListContent(I)LAnimatedPanel;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -137506,7 +137714,7 @@
     },
     {
       "symbol": "L:fl.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "L:NodeHashTableIterator.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "L:NodeHashTableIterator.addTutorialFlag(ILjava/lang/String;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137517,7 +137725,7 @@
     },
     {
       "symbol": "L:fl.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "L:NodeHashTableIterator.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "L:NodeHashTableIterator.addTutorialFlag(ILjava/lang/String;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -137528,7 +137736,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#0",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#0",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#0",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -137539,7 +137747,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#1",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#1",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#1",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -137550,7 +137758,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#10",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#10",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -137561,7 +137769,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#11",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#11",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -137572,7 +137780,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#12",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#12",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -137583,7 +137791,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#13",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#13",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#13",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -137594,7 +137802,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#14",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#14",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#14",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -137605,7 +137813,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#15",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#15",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -137616,7 +137824,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#2",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#2",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#2",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -137627,7 +137835,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#3",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#3",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -137638,7 +137846,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#4",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#4",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -137649,7 +137857,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#5",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#5",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -137660,7 +137868,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#6",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#6",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -137671,7 +137879,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#7",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#7",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -137682,7 +137890,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#8",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#8",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -137693,7 +137901,7 @@
     },
     {
       "symbol": "L:fl.a(Lln;B)V#9",
-      "renamedSymbol": "L:NodeHashTableIterator.a(LStar;B)V#9",
+      "renamedSymbol": "L:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -138848,7 +139056,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#0",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#0",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#0",
       "originalName": "stackIn_78_0",
       "renamedName": "stackIn_78_0",
       "declaration": {
@@ -138859,7 +139067,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#1",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#1",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#1",
       "originalName": "stackIn_78_1",
       "renamedName": "stackIn_78_1",
       "declaration": {
@@ -138870,7 +139078,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#10",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#10",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#10",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -138881,7 +139089,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#11",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#11",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#11",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -138892,7 +139100,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#12",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#12",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -138903,7 +139111,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#13",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#13",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -138914,7 +139122,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#14",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#14",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -138925,7 +139133,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#15",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#15",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -138936,7 +139144,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#16",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#16",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#16",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -138947,7 +139155,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#17",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#17",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#17",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -138958,7 +139166,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#18",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#18",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#18",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -138969,7 +139177,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#19",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#19",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#19",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -138980,7 +139188,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#2",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#2",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#2",
       "originalName": "stackIn_79_2",
       "renamedName": "stackIn_79_2",
       "declaration": {
@@ -138991,7 +139199,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#20",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#20",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#20",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -139002,7 +139210,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#21",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#21",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#21",
       "originalName": "var16Lifetime3",
       "renamedName": "var16Lifetime3",
       "declaration": {
@@ -139013,7 +139221,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#22",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#22",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#22",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -139024,7 +139232,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#23",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#23",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#23",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -139035,7 +139243,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#24",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#24",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#24",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -139046,7 +139254,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#3",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#3",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -139057,7 +139265,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#4",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#4",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#4",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -139068,7 +139276,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#5",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#5",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -139079,7 +139287,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#6",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#6",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -139090,7 +139298,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#7",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#7",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#7",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -139101,7 +139309,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#8",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#8",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -139112,7 +139320,7 @@
     },
     {
       "symbol": "L:fp.a(IIIIII[III)V#9",
-      "renamedSymbol": "L:FrameTimer.a(IIIIII[III)V#9",
+      "renamedSymbol": "L:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#9",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -139123,7 +139331,7 @@
     },
     {
       "symbol": "L:fp.a(JI)I#0",
-      "renamedSymbol": "L:FrameTimer.a(JI)I#0",
+      "renamedSymbol": "L:FrameTimer.waitAndCountFrames(JI)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -139134,7 +139342,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#0",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#0",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -139145,7 +139353,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#1",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#1",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -139156,7 +139364,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#2",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#2",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#2",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -139167,7 +139375,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#3",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#3",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#3",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -139178,7 +139386,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#4",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#4",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#4",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -139189,7 +139397,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#5",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#5",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#5",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -139200,7 +139408,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#6",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#6",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -139211,7 +139419,7 @@
     },
     {
       "symbol": "L:fp.a(Lpf;I)Lhb;#7",
-      "renamedSymbol": "L:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#7",
+      "renamedSymbol": "L:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -139882,7 +140090,7 @@
     },
     {
       "symbol": "L:fs.a(I)V#0",
-      "renamedSymbol": "L:Player.a(I)V#0",
+      "renamedSymbol": "L:Player.clearPlayerStatics(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -139893,7 +140101,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#0",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#0",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#0",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -139904,7 +140112,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#1",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#1",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -139915,7 +140123,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#2",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#2",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -139926,7 +140134,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#3",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#3",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#3",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -139937,7 +140145,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#4",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#4",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#4",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -139948,7 +140156,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#5",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#5",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#5",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -139959,7 +140167,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#6",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#6",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -139970,7 +140178,7 @@
     },
     {
       "symbol": "L:fs.a(ILjava/lang/String;)Z#7",
-      "renamedSymbol": "L:Player.a(ILjava/lang/String;)Z#7",
+      "renamedSymbol": "L:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -155293,7 +155501,7 @@
     },
     {
       "symbol": "L:gs.a(IJ)I#0",
-      "renamedSymbol": "L:NanoFrameTimer.a(IJ)I#0",
+      "renamedSymbol": "L:NanoFrameTimer.advanceSchedule(IJ)I#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -155304,7 +155512,7 @@
     },
     {
       "symbol": "L:gs.a(IJ)I#1",
-      "renamedSymbol": "L:NanoFrameTimer.a(IJ)I#1",
+      "renamedSymbol": "L:NanoFrameTimer.advanceSchedule(IJ)I#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -155315,7 +155523,7 @@
     },
     {
       "symbol": "L:gs.a(IZIIIII)V#0",
-      "renamedSymbol": "L:NanoFrameTimer.a(IZIIIII)V#0",
+      "renamedSymbol": "L:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -155326,7 +155534,7 @@
     },
     {
       "symbol": "L:gs.a(IZIIIII)V#1",
-      "renamedSymbol": "L:NanoFrameTimer.a(IZIIIII)V#1",
+      "renamedSymbol": "L:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#1",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -155337,7 +155545,7 @@
     },
     {
       "symbol": "L:gs.a(Ltm;Z)V#0",
-      "renamedSymbol": "L:NanoFrameTimer.a(LNotificationEntry;Z)V#0",
+      "renamedSymbol": "L:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -155348,7 +155556,7 @@
     },
     {
       "symbol": "L:gs.a(Ltm;Z)V#1",
-      "renamedSymbol": "L:NanoFrameTimer.a(LNotificationEntry;Z)V#1",
+      "renamedSymbol": "L:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V#1",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -155359,7 +155567,7 @@
     },
     {
       "symbol": "L:gs.a(Ltm;Z)V#2",
-      "renamedSymbol": "L:NanoFrameTimer.a(LNotificationEntry;Z)V#2",
+      "renamedSymbol": "L:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -155370,7 +155578,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#0",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#0",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -155381,7 +155589,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#1",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#1",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -155392,7 +155600,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#10",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#10",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#10",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -155403,7 +155611,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#2",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#2",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -155414,7 +155622,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#3",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#3",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -155425,7 +155633,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#4",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#4",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#4",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -155436,7 +155644,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#5",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#5",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#5",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -155447,7 +155655,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#6",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#6",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#6",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -155458,7 +155666,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#7",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#7",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#7",
       "originalName": "var6Lifetime3",
       "renamedName": "var6Lifetime3",
       "declaration": {
@@ -155469,7 +155677,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#8",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#8",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#8",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -155480,7 +155688,7 @@
     },
     {
       "symbol": "L:gs.c(I)J#9",
-      "renamedSymbol": "L:NanoFrameTimer.c(I)J#9",
+      "renamedSymbol": "L:NanoFrameTimer.sampleElapsedNanos(I)J#9",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -334263,9 +334471,9 @@
     },
     {
       "symbol": "M:fd.a(Lbc;)Z",
-      "renamedSymbol": "M:VorbisSample.a(LArchive;)Z",
+      "renamedSymbol": "M:VorbisSample.ensureSetupLoaded(LArchive;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "ensureSetupLoaded",
       "declaration": {
         "file": "fd.java",
         "start": 26827,
@@ -334274,9 +334482,9 @@
     },
     {
       "symbol": "M:fd.a(Lbc;II)Lfd;",
-      "renamedSymbol": "M:VorbisSample.a(LArchive;II)LVorbisSample;",
+      "renamedSymbol": "M:VorbisSample.load(LArchive;II)LVorbisSample;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "load",
       "declaration": {
         "file": "fd.java",
         "start": 27906,
@@ -334296,9 +334504,9 @@
     },
     {
       "symbol": "M:fd.a([B)V",
-      "renamedSymbol": "M:VorbisSample.a([B)V",
+      "renamedSymbol": "M:VorbisSample.readSampleData([B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readSampleData",
       "declaration": {
         "file": "fd.java",
         "start": 24827,
@@ -334307,9 +334515,9 @@
     },
     {
       "symbol": "M:fd.a([BI)V",
-      "renamedSymbol": "M:VorbisSample.a([BI)V",
+      "renamedSymbol": "M:VorbisSample.setBitInput([BI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setBitInput",
       "declaration": {
         "file": "fd.java",
         "start": 27089,
@@ -334417,9 +334625,9 @@
     },
     {
       "symbol": "M:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V",
-      "renamedSymbol": "M:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V",
+      "renamedSymbol": "M:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initializeLobbyUi",
       "declaration": {
         "file": "fe.java",
         "start": 2107,
@@ -334428,9 +334636,9 @@
     },
     {
       "symbol": "M:fe.f(I)V",
-      "renamedSymbol": "M:MenuButton.f(I)V",
+      "renamedSymbol": "M:MenuButton.beginAccountUiAction(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "beginAccountUiAction",
       "declaration": {
         "file": "fe.java",
         "start": 1496,
@@ -334802,9 +335010,9 @@
     },
     {
       "symbol": "M:fl.a(I)Lqr;",
-      "renamedSymbol": "M:NodeHashTableIterator.a(I)LAnimatedPanel;",
+      "renamedSymbol": "M:NodeHashTableIterator.getIgnoreListContent(I)LAnimatedPanel;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getIgnoreListContent",
       "declaration": {
         "file": "fl.java",
         "start": 710,
@@ -334813,9 +335021,9 @@
     },
     {
       "symbol": "M:fl.a(ILjava/lang/String;)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(ILjava/lang/String;)V",
+      "renamedSymbol": "M:NodeHashTableIterator.addTutorialFlag(ILjava/lang/String;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "addTutorialFlag",
       "declaration": {
         "file": "fl.java",
         "start": 4030,
@@ -334824,9 +335032,9 @@
     },
     {
       "symbol": "M:fl.a(Lln;B)V",
-      "renamedSymbol": "M:NodeHashTableIterator.a(LStar;B)V",
+      "renamedSymbol": "M:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sortIncomingFleetsByDistance",
       "declaration": {
         "file": "fl.java",
         "start": 839,
@@ -335022,9 +335230,9 @@
     },
     {
       "symbol": "M:fp.a(I)J",
-      "renamedSymbol": "M:FrameTimer.a(I)J",
+      "renamedSymbol": "M:FrameTimer.getSleepMillis(I)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSleepMillis",
       "declaration": {
         "file": "fp.java",
         "start": 151,
@@ -335033,9 +335241,9 @@
     },
     {
       "symbol": "M:fp.a(IIIIII[III)V",
-      "renamedSymbol": "M:FrameTimer.a(IIIIII[III)V",
+      "renamedSymbol": "M:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fillHalfBlendedTriangle",
       "declaration": {
         "file": "fp.java",
         "start": 1832,
@@ -335044,9 +335252,9 @@
     },
     {
       "symbol": "M:fp.a(IJ)I",
-      "renamedSymbol": "M:FrameTimer.a(IJ)I",
+      "renamedSymbol": "M:FrameTimer.advanceSchedule(IJ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceSchedule",
       "declaration": {
         "file": "fp.java",
         "start": 1596,
@@ -335055,9 +335263,9 @@
     },
     {
       "symbol": "M:fp.a(JI)I",
-      "renamedSymbol": "M:FrameTimer.a(JI)I",
+      "renamedSymbol": "M:FrameTimer.waitAndCountFrames(JI)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "waitAndCountFrames",
       "declaration": {
         "file": "fp.java",
         "start": 1344,
@@ -335066,9 +335274,9 @@
     },
     {
       "symbol": "M:fp.a(Lpf;I)Lhb;",
-      "renamedSymbol": "M:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;",
+      "renamedSymbol": "M:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createDequeSequence",
       "declaration": {
         "file": "fp.java",
         "start": 187,
@@ -335077,9 +335285,9 @@
     },
     {
       "symbol": "M:fp.b(I)V",
-      "renamedSymbol": "M:FrameTimer.b(I)V",
+      "renamedSymbol": "M:FrameTimer.resetTiming(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetTiming",
       "declaration": {
         "file": "fp.java",
         "start": 1643,
@@ -335209,9 +335417,9 @@
     },
     {
       "symbol": "M:fs.$cfr$intArgs$a$7ffe4b125357(IZ)V",
-      "renamedSymbol": "M:Player.$cfr$intArgs$a$7ffe4b125357(IZ)V",
+      "renamedSymbol": "M:Player.drawDialogsWithBackdropFullInts(IZ)V",
       "originalName": "$cfr$intArgs$a$7ffe4b125357",
-      "renamedName": "$cfr$intArgs$a$7ffe4b125357",
+      "renamedName": "drawDialogsWithBackdropFullInts",
       "declaration": {
         "file": "fs.java",
         "start": 3536,
@@ -335231,9 +335439,9 @@
     },
     {
       "symbol": "M:fs.a(BZ)V",
-      "renamedSymbol": "M:Player.a(BZ)V",
+      "renamedSymbol": "M:Player.drawDialogsWithBackdrop(BZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawDialogsWithBackdrop",
       "declaration": {
         "file": "fs.java",
         "start": 2271,
@@ -335242,9 +335450,9 @@
     },
     {
       "symbol": "M:fs.a(I)V",
-      "renamedSymbol": "M:Player.a(I)V",
+      "renamedSymbol": "M:Player.clearPlayerStatics(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearPlayerStatics",
       "declaration": {
         "file": "fs.java",
         "start": 1900,
@@ -335253,9 +335461,9 @@
     },
     {
       "symbol": "M:fs.a(IIZ)V",
-      "renamedSymbol": "M:Player.a(IIZ)V",
+      "renamedSymbol": "M:Player.setMenuAnchor(IIZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setMenuAnchor",
       "declaration": {
         "file": "fs.java",
         "start": 2433,
@@ -335264,9 +335472,9 @@
     },
     {
       "symbol": "M:fs.a(ILjava/lang/String;)Z",
-      "renamedSymbol": "M:Player.a(ILjava/lang/String;)Z",
+      "renamedSymbol": "M:Player.isPrivateChatInputFor(ILjava/lang/String;)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isPrivateChatInputFor",
       "declaration": {
         "file": "fs.java",
         "start": 581,
@@ -337321,9 +337529,9 @@
     },
     {
       "symbol": "M:gs.a(I)J",
-      "renamedSymbol": "M:NanoFrameTimer.a(I)J",
+      "renamedSymbol": "M:NanoFrameTimer.getSleepMillis(I)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getSleepMillis",
       "declaration": {
         "file": "gs.java",
         "start": 905,
@@ -337332,9 +337540,9 @@
     },
     {
       "symbol": "M:gs.a(IJ)I",
-      "renamedSymbol": "M:NanoFrameTimer.a(IJ)I",
+      "renamedSymbol": "M:NanoFrameTimer.advanceSchedule(IJ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "advanceSchedule",
       "declaration": {
         "file": "gs.java",
         "start": 3392,
@@ -337343,9 +337551,9 @@
     },
     {
       "symbol": "M:gs.a(IZIIIII)V",
-      "renamedSymbol": "M:NanoFrameTimer.a(IZIIIII)V",
+      "renamedSymbol": "M:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateChatInputOverlay",
       "declaration": {
         "file": "gs.java",
         "start": 4775,
@@ -337354,9 +337562,9 @@
     },
     {
       "symbol": "M:gs.a(Ltm;Z)V",
-      "renamedSymbol": "M:NanoFrameTimer.a(LNotificationEntry;Z)V",
+      "renamedSymbol": "M:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "prependNotification",
       "declaration": {
         "file": "gs.java",
         "start": 5320,
@@ -337376,9 +337584,9 @@
     },
     {
       "symbol": "M:gs.b(I)V",
-      "renamedSymbol": "M:NanoFrameTimer.b(I)V",
+      "renamedSymbol": "M:NanoFrameTimer.resetTiming(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetTiming",
       "declaration": {
         "file": "gs.java",
         "start": 363,
@@ -337387,9 +337595,9 @@
     },
     {
       "symbol": "M:gs.c(I)J",
-      "renamedSymbol": "M:NanoFrameTimer.c(I)J",
+      "renamedSymbol": "M:NanoFrameTimer.sampleElapsedNanos(I)J",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "sampleElapsedNanos",
       "declaration": {
         "file": "gs.java",
         "start": 1574,
@@ -388757,7 +388965,7 @@
     },
     {
       "symbol": "P:fd.a(Lbc;)Z#0",
-      "renamedSymbol": "P:VorbisSample.a(LArchive;)Z#0",
+      "renamedSymbol": "P:VorbisSample.ensureSetupLoaded(LArchive;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -388768,7 +388976,7 @@
     },
     {
       "symbol": "P:fd.a(Lbc;II)Lfd;#0",
-      "renamedSymbol": "P:VorbisSample.a(LArchive;II)LVorbisSample;#0",
+      "renamedSymbol": "P:VorbisSample.load(LArchive;II)LVorbisSample;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -388779,7 +388987,7 @@
     },
     {
       "symbol": "P:fd.a(Lbc;II)Lfd;#1",
-      "renamedSymbol": "P:VorbisSample.a(LArchive;II)LVorbisSample;#1",
+      "renamedSymbol": "P:VorbisSample.load(LArchive;II)LVorbisSample;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -388790,7 +388998,7 @@
     },
     {
       "symbol": "P:fd.a(Lbc;II)Lfd;#2",
-      "renamedSymbol": "P:VorbisSample.a(LArchive;II)LVorbisSample;#2",
+      "renamedSymbol": "P:VorbisSample.load(LArchive;II)LVorbisSample;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -388834,7 +389042,7 @@
     },
     {
       "symbol": "P:fd.a([B)V#0",
-      "renamedSymbol": "P:VorbisSample.a([B)V#0",
+      "renamedSymbol": "P:VorbisSample.readSampleData([B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -388845,7 +389053,7 @@
     },
     {
       "symbol": "P:fd.a([BI)V#0",
-      "renamedSymbol": "P:VorbisSample.a([BI)V#0",
+      "renamedSymbol": "P:VorbisSample.setBitInput([BI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -388856,7 +389064,7 @@
     },
     {
       "symbol": "P:fd.a([BI)V#1",
-      "renamedSymbol": "P:VorbisSample.a([BI)V#1",
+      "renamedSymbol": "P:VorbisSample.setBitInput([BI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -389043,7 +389251,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#0",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#0",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389054,7 +389262,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#1",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#1",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -389065,7 +389273,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#10",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#10",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#10",
       "originalName": "param10",
       "renamedName": "param10",
       "declaration": {
@@ -389076,7 +389284,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#11",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#11",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#11",
       "originalName": "param11",
       "renamedName": "param11",
       "declaration": {
@@ -389087,7 +389295,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#12",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#12",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#12",
       "originalName": "param12",
       "renamedName": "param12",
       "declaration": {
@@ -389098,7 +389306,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#13",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#13",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#13",
       "originalName": "param13",
       "renamedName": "param13",
       "declaration": {
@@ -389109,7 +389317,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#14",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#14",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#14",
       "originalName": "param14",
       "renamedName": "param14",
       "declaration": {
@@ -389120,7 +389328,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#15",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#15",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#15",
       "originalName": "param15",
       "renamedName": "param15",
       "declaration": {
@@ -389131,7 +389339,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#16",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#16",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#16",
       "originalName": "param16",
       "renamedName": "param16",
       "declaration": {
@@ -389142,7 +389350,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#17",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#17",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#17",
       "originalName": "param17",
       "renamedName": "param17",
       "declaration": {
@@ -389153,7 +389361,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#18",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#18",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#18",
       "originalName": "param18",
       "renamedName": "param18",
       "declaration": {
@@ -389164,7 +389372,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#19",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#19",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#19",
       "originalName": "param19",
       "renamedName": "param19",
       "declaration": {
@@ -389175,7 +389383,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#2",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#2",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -389186,7 +389394,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#3",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#3",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -389197,7 +389405,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#4",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#4",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -389208,7 +389416,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#5",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#5",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -389219,7 +389427,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#6",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#6",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -389230,7 +389438,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#7",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#7",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -389241,7 +389449,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#8",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#8",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -389252,7 +389460,7 @@
     },
     {
       "symbol": "P:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V#9",
-      "renamedSymbol": "P:MenuButton.a(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#9",
+      "renamedSymbol": "P:MenuButton.initializeLobbyUi(Z[B[BI[I[Ljava/lang/String;ILArchive;LArchive;[[Ljava/lang/String;LArchive;[[LSprite;[Ljava/lang/String;[[LSprite;[[Ljava/lang/String;[LIndexedSprite;I[I[Ljava/lang/String;I)V#9",
       "originalName": "param9",
       "renamedName": "param9",
       "declaration": {
@@ -389263,7 +389471,7 @@
     },
     {
       "symbol": "P:fe.f(I)V#0",
-      "renamedSymbol": "P:MenuButton.f(I)V#0",
+      "renamedSymbol": "P:MenuButton.beginAccountUiAction(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389901,7 +390109,7 @@
     },
     {
       "symbol": "P:fl.a(I)Lqr;#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(I)LAnimatedPanel;#0",
+      "renamedSymbol": "P:NodeHashTableIterator.getIgnoreListContent(I)LAnimatedPanel;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389912,7 +390120,7 @@
     },
     {
       "symbol": "P:fl.a(ILjava/lang/String;)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(ILjava/lang/String;)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.addTutorialFlag(ILjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389923,7 +390131,7 @@
     },
     {
       "symbol": "P:fl.a(ILjava/lang/String;)V#1",
-      "renamedSymbol": "P:NodeHashTableIterator.a(ILjava/lang/String;)V#1",
+      "renamedSymbol": "P:NodeHashTableIterator.addTutorialFlag(ILjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -389934,7 +390142,7 @@
     },
     {
       "symbol": "P:fl.a(Lln;B)V#0",
-      "renamedSymbol": "P:NodeHashTableIterator.a(LStar;B)V#0",
+      "renamedSymbol": "P:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -389945,7 +390153,7 @@
     },
     {
       "symbol": "P:fl.a(Lln;B)V#1",
-      "renamedSymbol": "P:NodeHashTableIterator.a(LStar;B)V#1",
+      "renamedSymbol": "P:NodeHashTableIterator.sortIncomingFleetsByDistance(LStar;B)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390297,7 +390505,7 @@
     },
     {
       "symbol": "P:fp.a(I)J#0",
-      "renamedSymbol": "P:FrameTimer.a(I)J#0",
+      "renamedSymbol": "P:FrameTimer.getSleepMillis(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390308,7 +390516,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#0",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#0",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390319,7 +390527,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#1",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#1",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390330,7 +390538,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#2",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#2",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -390341,7 +390549,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#3",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#3",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -390352,7 +390560,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#4",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#4",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -390363,7 +390571,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#5",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#5",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -390374,7 +390582,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#6",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#6",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -390385,7 +390593,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#7",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#7",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#7",
       "originalName": "param7",
       "renamedName": "param7",
       "declaration": {
@@ -390396,7 +390604,7 @@
     },
     {
       "symbol": "P:fp.a(IIIIII[III)V#8",
-      "renamedSymbol": "P:FrameTimer.a(IIIIII[III)V#8",
+      "renamedSymbol": "P:FrameTimer.fillHalfBlendedTriangle(IIIIII[III)V#8",
       "originalName": "param8",
       "renamedName": "param8",
       "declaration": {
@@ -390407,7 +390615,7 @@
     },
     {
       "symbol": "P:fp.a(IJ)I#0",
-      "renamedSymbol": "P:FrameTimer.a(IJ)I#0",
+      "renamedSymbol": "P:FrameTimer.advanceSchedule(IJ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390418,7 +390626,7 @@
     },
     {
       "symbol": "P:fp.a(IJ)I#1",
-      "renamedSymbol": "P:FrameTimer.a(IJ)I#1",
+      "renamedSymbol": "P:FrameTimer.advanceSchedule(IJ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390429,7 +390637,7 @@
     },
     {
       "symbol": "P:fp.a(JI)I#0",
-      "renamedSymbol": "P:FrameTimer.a(JI)I#0",
+      "renamedSymbol": "P:FrameTimer.waitAndCountFrames(JI)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390440,7 +390648,7 @@
     },
     {
       "symbol": "P:fp.a(JI)I#1",
-      "renamedSymbol": "P:FrameTimer.a(JI)I#1",
+      "renamedSymbol": "P:FrameTimer.waitAndCountFrames(JI)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390451,7 +390659,7 @@
     },
     {
       "symbol": "P:fp.a(Lpf;I)Lhb;#0",
-      "renamedSymbol": "P:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#0",
+      "renamedSymbol": "P:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390462,7 +390670,7 @@
     },
     {
       "symbol": "P:fp.a(Lpf;I)Lhb;#1",
-      "renamedSymbol": "P:FrameTimer.a(LIntrusiveDeque;I)LNodeSequence;#1",
+      "renamedSymbol": "P:FrameTimer.createDequeSequence(LIntrusiveDeque;I)LNodeSequence;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390473,7 +390681,7 @@
     },
     {
       "symbol": "P:fp.b(I)V#0",
-      "renamedSymbol": "P:FrameTimer.b(I)V#0",
+      "renamedSymbol": "P:FrameTimer.resetTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390902,7 +391110,7 @@
     },
     {
       "symbol": "P:fs.$cfr$intArgs$a$7ffe4b125357(IZ)V#0",
-      "renamedSymbol": "P:Player.$cfr$intArgs$a$7ffe4b125357(IZ)V#0",
+      "renamedSymbol": "P:Player.drawDialogsWithBackdropFullInts(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390913,7 +391121,7 @@
     },
     {
       "symbol": "P:fs.$cfr$intArgs$a$7ffe4b125357(IZ)V#1",
-      "renamedSymbol": "P:Player.$cfr$intArgs$a$7ffe4b125357(IZ)V#1",
+      "renamedSymbol": "P:Player.drawDialogsWithBackdropFullInts(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -390979,7 +391187,7 @@
     },
     {
       "symbol": "P:fs.a(BZ)V#0",
-      "renamedSymbol": "P:Player.a(BZ)V#0",
+      "renamedSymbol": "P:Player.drawDialogsWithBackdrop(BZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -390990,7 +391198,7 @@
     },
     {
       "symbol": "P:fs.a(BZ)V#1",
-      "renamedSymbol": "P:Player.a(BZ)V#1",
+      "renamedSymbol": "P:Player.drawDialogsWithBackdrop(BZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -391001,7 +391209,7 @@
     },
     {
       "symbol": "P:fs.a(I)V#0",
-      "renamedSymbol": "P:Player.a(I)V#0",
+      "renamedSymbol": "P:Player.clearPlayerStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391012,7 +391220,7 @@
     },
     {
       "symbol": "P:fs.a(IIZ)V#0",
-      "renamedSymbol": "P:Player.a(IIZ)V#0",
+      "renamedSymbol": "P:Player.setMenuAnchor(IIZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391023,7 +391231,7 @@
     },
     {
       "symbol": "P:fs.a(IIZ)V#1",
-      "renamedSymbol": "P:Player.a(IIZ)V#1",
+      "renamedSymbol": "P:Player.setMenuAnchor(IIZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -391034,7 +391242,7 @@
     },
     {
       "symbol": "P:fs.a(IIZ)V#2",
-      "renamedSymbol": "P:Player.a(IIZ)V#2",
+      "renamedSymbol": "P:Player.setMenuAnchor(IIZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -391045,7 +391253,7 @@
     },
     {
       "symbol": "P:fs.a(ILjava/lang/String;)Z#0",
-      "renamedSymbol": "P:Player.a(ILjava/lang/String;)Z#0",
+      "renamedSymbol": "P:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -391056,7 +391264,7 @@
     },
     {
       "symbol": "P:fs.a(ILjava/lang/String;)Z#1",
-      "renamedSymbol": "P:Player.a(ILjava/lang/String;)Z#1",
+      "renamedSymbol": "P:Player.isPrivateChatInputFor(ILjava/lang/String;)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397040,7 +397248,7 @@
     },
     {
       "symbol": "P:gs.a(I)J#0",
-      "renamedSymbol": "P:NanoFrameTimer.a(I)J#0",
+      "renamedSymbol": "P:NanoFrameTimer.getSleepMillis(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397051,7 +397259,7 @@
     },
     {
       "symbol": "P:gs.a(IJ)I#0",
-      "renamedSymbol": "P:NanoFrameTimer.a(IJ)I#0",
+      "renamedSymbol": "P:NanoFrameTimer.advanceSchedule(IJ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397062,7 +397270,7 @@
     },
     {
       "symbol": "P:gs.a(IJ)I#1",
-      "renamedSymbol": "P:NanoFrameTimer.a(IJ)I#1",
+      "renamedSymbol": "P:NanoFrameTimer.advanceSchedule(IJ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397073,7 +397281,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#0",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#0",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397084,7 +397292,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#1",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#1",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397095,7 +397303,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#2",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#2",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -397106,7 +397314,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#3",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#3",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -397117,7 +397325,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#4",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#4",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -397128,7 +397336,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#5",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#5",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -397139,7 +397347,7 @@
     },
     {
       "symbol": "P:gs.a(IZIIIII)V#6",
-      "renamedSymbol": "P:NanoFrameTimer.a(IZIIIII)V#6",
+      "renamedSymbol": "P:NanoFrameTimer.updateChatInputOverlay(IZIIIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -397150,7 +397358,7 @@
     },
     {
       "symbol": "P:gs.a(Ltm;Z)V#0",
-      "renamedSymbol": "P:NanoFrameTimer.a(LNotificationEntry;Z)V#0",
+      "renamedSymbol": "P:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397161,7 +397369,7 @@
     },
     {
       "symbol": "P:gs.a(Ltm;Z)V#1",
-      "renamedSymbol": "P:NanoFrameTimer.a(LNotificationEntry;Z)V#1",
+      "renamedSymbol": "P:NanoFrameTimer.prependNotification(LNotificationEntry;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -397183,7 +397391,7 @@
     },
     {
       "symbol": "P:gs.b(I)V#0",
-      "renamedSymbol": "P:NanoFrameTimer.b(I)V#0",
+      "renamedSymbol": "P:NanoFrameTimer.resetTiming(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -397194,7 +397402,7 @@
     },
     {
       "symbol": "P:gs.c(I)J#0",
-      "renamedSymbol": "P:NanoFrameTimer.c(I)J#0",
+      "renamedSymbol": "P:NanoFrameTimer.sampleElapsedNanos(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -462560,7 +462768,7 @@
       "original": "ShatteredPlansClient.java",
       "renamed": "ShatteredPlansClient.java",
       "inputSha256": "3facaf978b2107c1326858fb3d9c0f844e86ad94c0450976215f937042346941",
-      "outputSha256": "9b23944f24d4a7d43e6adc9682004e4d15be416cfdd4ba5651f16a5fc36de3cb",
+      "outputSha256": "033cb59a4f8996add78c35661a588daed7daa0499a648bd77fea2ca1e034517e",
       "edits": [
         {
           "start": 86,
@@ -464200,6 +464408,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 9896,
+          "end": 9897,
+          "symbol": "M:fl.a(I)Lqr;",
+          "original": "a",
+          "renamed": "getIgnoreListContent"
         },
         {
           "start": 9918,
@@ -469493,6 +469708,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 30264,
+          "end": 30265,
+          "symbol": "M:fs.a(I)V",
+          "original": "a",
+          "renamed": "clearPlayerStatics"
         },
         {
           "start": 30292,
@@ -475800,6 +476022,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 47522,
+          "end": 47549,
+          "symbol": "M:fs.$cfr$intArgs$a$7ffe4b125357(IZ)V",
+          "original": "$cfr$intArgs$a$7ffe4b125357",
+          "renamed": "drawDialogsWithBackdropFullInts"
         },
         {
           "start": 47615,
@@ -503225,7 +503454,7 @@
       "original": "cf.java",
       "renamed": "StatusMessagePanel.java",
       "inputSha256": "e453a8ac352a05cd7fbe855212bb01977d3dfbebdfec9536c2e915ddc6a7f69b",
-      "outputSha256": "3aa8eaca60adb4c50897c8bb4384709965730990dc297d2877923ca453989bdb",
+      "outputSha256": "a0a46b4b748ed5a6346488d04d0914d7c574420241a42fd48d5d9b541e32aee0",
       "edits": [
         {
           "start": 50,
@@ -504199,6 +504428,13 @@
           "symbol": "C:gs",
           "original": "gs",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 8445,
+          "end": 8446,
+          "symbol": "M:gs.a(IZIIIII)V",
+          "original": "a",
+          "renamed": "updateChatInputOverlay"
         },
         {
           "start": 8476,
@@ -561492,7 +561728,7 @@
       "original": "fc.java",
       "renamed": "PlayerContextMenuController.java",
       "inputSha256": "444e7285b57f0940a014e8c7d64bf6342e77edff17f1517860a86a0342c2b8d1",
-      "outputSha256": "12cb9b0d6125ad2a028c1dd550b5ebede5c182b6a6f5dcc42991dd51dacd1575",
+      "outputSha256": "a64120396adf2d1aafcfa08f5062280060ddcfee0526392c525e387b3cc060de",
       "edits": [
         {
           "start": 50,
@@ -562326,6 +562562,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 7964,
+          "end": 7965,
+          "symbol": "M:fs.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isPrivateChatInputFor"
         },
         {
           "start": 8005,
@@ -563516,7 +563759,7 @@
       "original": "fd.java",
       "renamed": "VorbisSample.java",
       "inputSha256": "88e0ac6479a7b3b469c8ba4ffd941a1e9bf1539018e65a692b376fa661f04648",
-      "outputSha256": "38ef8154bb903347429c60b3564e2c9eb88c54a78d6f025fd157b26fc61cb0dc",
+      "outputSha256": "e5ab61fc828675e741acb22e16f1c6088f46493ab213991b225fc622a590a3d4",
       "edits": [
         {
           "start": 69,
@@ -563622,6 +563865,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 5988,
+          "end": 5989,
+          "symbol": "M:fd.a([BI)V",
+          "original": "a",
+          "renamed": "setBitInput"
         },
         {
           "start": 6024,
@@ -563741,6 +563991,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 20550,
+          "end": 20551,
+          "symbol": "M:fd.a([BI)V",
+          "original": "a",
+          "renamed": "setBitInput"
         },
         {
           "start": 20587,
@@ -564044,6 +564301,13 @@
           "renamed": "VorbisSample"
         },
         {
+          "start": 24112,
+          "end": 24113,
+          "symbol": "M:fd.a(Lbc;)Z",
+          "original": "a",
+          "renamed": "ensureSetupLoaded"
+        },
+        {
           "start": 24144,
           "end": 24145,
           "symbol": "M:bc.a(Ljava/lang/String;BLjava/lang/String;)Z",
@@ -564063,6 +564327,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 24827,
+          "end": 24828,
+          "symbol": "M:fd.a([B)V",
+          "original": "a",
+          "renamed": "readSampleData"
         },
         {
           "start": 24971,
@@ -564156,6 +564427,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 26827,
+          "end": 26828,
+          "symbol": "M:fd.a(Lbc;)Z",
+          "original": "a",
+          "renamed": "ensureSetupLoaded"
+        },
+        {
           "start": 26829,
           "end": 26831,
           "symbol": "C:bc",
@@ -564184,6 +564462,13 @@
           "renamed": "readSetup"
         },
         {
+          "start": 27089,
+          "end": 27090,
+          "symbol": "M:fd.a([BI)V",
+          "original": "a",
+          "renamed": "setBitInput"
+        },
+        {
           "start": 27221,
           "end": 27222,
           "symbol": "M:fd.a(I)I",
@@ -564196,6 +564481,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 27906,
+          "end": 27907,
+          "symbol": "M:fd.a(Lbc;II)Lfd;",
+          "original": "a",
+          "renamed": "load"
         },
         {
           "start": 27908,
@@ -564217,6 +564509,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 28007,
+          "end": 28008,
+          "symbol": "M:fd.a(Lbc;)Z",
+          "original": "a",
+          "renamed": "ensureSetupLoaded"
         },
         {
           "start": 28039,
@@ -564245,6 +564544,13 @@
           "symbol": "M:fd.<init>([B)V",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 28763,
+          "end": 28764,
+          "symbol": "M:fd.a([B)V",
+          "original": "a",
+          "renamed": "readSampleData"
         }
       ]
     },
@@ -564252,7 +564558,7 @@
       "original": "fe.java",
       "renamed": "MenuButton.java",
       "inputSha256": "38b55f05036f70827b9faf99d2bb4da1c6281b6ac1f51b6e8a1aa2e27f0aa27e",
-      "outputSha256": "e81406bf5e3002146d99706dc7fc33fac4f95b12956a28f851b221472907af45",
+      "outputSha256": "d46c15ac3fb39b57d3ab7adad69c915ac2d2017a4d7d2b82acc1e668a3ba23fb",
       "edits": [
         {
           "start": 50,
@@ -564367,6 +564673,13 @@
           "renamed": "IconTextPanel"
         },
         {
+          "start": 1496,
+          "end": 1497,
+          "symbol": "M:fe.f(I)V",
+          "original": "f",
+          "renamed": "beginAccountUiAction"
+        },
+        {
           "start": 1520,
           "end": 1522,
           "symbol": "C:mg",
@@ -564442,6 +564755,13 @@
           "symbol": "M:r.a(Ljava/lang/Throwable;Ljava/lang/String;)Lrg;",
           "original": "a",
           "renamed": "wrapThrowable"
+        },
+        {
+          "start": 2107,
+          "end": 2108,
+          "symbol": "M:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "initializeLobbyUi"
         },
         {
           "start": 2210,
@@ -566128,7 +566448,7 @@
       "original": "fl.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "5df3ee5fade094cf5260624fd3b491694632c5dff5adec5eda5a9534cbfee473",
-      "outputSha256": "d3ae7295f4dcbc6a2d63b0476dfccb335af5d14532e0ba7dd4a62ed3789781bd",
+      "outputSha256": "1a7333e6f86d72b918e3e3284380b44372d8fdaeb253607efe9ef4abd6635f23",
       "edits": [
         {
           "start": 71,
@@ -566222,6 +566542,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 451,
+          "end": 452,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
+        },
+        {
           "start": 454,
           "end": 456,
           "symbol": "C:ln",
@@ -566264,11 +566591,25 @@
           "renamed": "AnimatedPanel"
         },
         {
+          "start": 710,
+          "end": 711,
+          "symbol": "M:fl.a(I)Lqr;",
+          "original": "a",
+          "renamed": "getIgnoreListContent"
+        },
+        {
           "start": 789,
           "end": 791,
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "ClientLobbyResources"
+        },
+        {
+          "start": 839,
+          "end": 840,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 841,
@@ -566332,6 +566673,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 1545,
+          "end": 1546,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 1548,
@@ -566635,6 +566983,13 @@
           "renamed": "next"
         },
         {
+          "start": 4030,
+          "end": 4031,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 4085,
           "end": 4087,
           "symbol": "C:aj",
@@ -566675,6 +567030,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 4205,
+          "end": 4206,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 4208,
@@ -567365,7 +567727,7 @@
       "original": "fp.java",
       "renamed": "FrameTimer.java",
       "inputSha256": "cbae3e8da976aaca8c46b652a0564adb88db572febef556265166b029f06d3b4",
-      "outputSha256": "5bbc5bfaa8c142619f1cb16124a343bfc55e4ac91076fc1aa46e64c0b6314d04",
+      "outputSha256": "0ee402962edc78073b2511fdec3807c0fe3e5ff09d6948f0ae9c906906dbe9a4",
       "edits": [
         {
           "start": 53,
@@ -567382,11 +567744,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 151,
+          "end": 152,
+          "symbol": "M:fp.a(I)J",
+          "original": "a",
+          "renamed": "getSleepMillis"
+        },
+        {
           "start": 184,
           "end": 186,
           "symbol": "C:hb",
           "original": "hb",
           "renamed": "NodeSequence"
+        },
+        {
+          "start": 187,
+          "end": 188,
+          "symbol": "M:fp.a(Lpf;I)Lhb;",
+          "original": "a",
+          "renamed": "createDequeSequence"
         },
         {
           "start": 189,
@@ -567408,6 +567784,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "FrameTimer"
+        },
+        {
+          "start": 584,
+          "end": 585,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
         },
         {
           "start": 681,
@@ -567438,6 +567821,20 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1344,
+          "end": 1345,
+          "symbol": "M:fp.a(JI)I",
+          "original": "a",
+          "renamed": "waitAndCountFrames"
+        },
+        {
+          "start": 1398,
+          "end": 1399,
+          "symbol": "M:fp.a(I)J",
+          "original": "a",
+          "renamed": "getSleepMillis"
+        },
+        {
           "start": 1439,
           "end": 1441,
           "symbol": "C:jb",
@@ -567452,11 +567849,39 @@
           "renamed": "sleep"
         },
         {
+          "start": 1524,
+          "end": 1525,
+          "symbol": "M:fp.a(IJ)I",
+          "original": "a",
+          "renamed": "advanceSchedule"
+        },
+        {
+          "start": 1596,
+          "end": 1597,
+          "symbol": "M:fp.a(IJ)I",
+          "original": "a",
+          "renamed": "advanceSchedule"
+        },
+        {
+          "start": 1643,
+          "end": 1644,
+          "symbol": "M:fp.b(I)V",
+          "original": "b",
+          "renamed": "resetTiming"
+        },
+        {
           "start": 1682,
           "end": 1683,
           "symbol": "M:fp.a(B)V",
           "original": "a",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 1832,
+          "end": 1833,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
         },
         {
           "start": 2432,
@@ -567506,6 +567931,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "FrameTimer"
+        },
+        {
+          "start": 3106,
+          "end": 3107,
+          "symbol": "M:fp.a(Lpf;I)Lhb;",
+          "original": "a",
+          "renamed": "createDequeSequence"
         },
         {
           "start": 3109,
@@ -568299,7 +568731,7 @@
       "original": "fs.java",
       "renamed": "Player.java",
       "inputSha256": "e316cffd9f19d30a619de69037ee57ea761466ce5d57cb1c23271525a82ae9c9",
-      "outputSha256": "4f57e24c20c4df505b10aefab947d2b014f8f8d97304cda7aa79ec51a2a1d58a",
+      "outputSha256": "79287e9b5b881f8da2e304c6b92556ddecfe9c66cb7efda27c782dfbbd919f6a",
       "edits": [
         {
           "start": 50,
@@ -568414,6 +568846,13 @@
           "renamed": "name"
         },
         {
+          "start": 581,
+          "end": 582,
+          "symbol": "M:fs.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isPrivateChatInputFor"
+        },
+        {
           "start": 923,
           "end": 925,
           "symbol": "C:sr",
@@ -568470,11 +568909,32 @@
           "renamed": "wrapThrowable"
         },
         {
+          "start": 1900,
+          "end": 1901,
+          "symbol": "M:fs.a(I)V",
+          "original": "a",
+          "renamed": "clearPlayerStatics"
+        },
+        {
           "start": 2120,
           "end": 2122,
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 2123,
+          "end": 2124,
+          "symbol": "M:fs.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isPrivateChatInputFor"
+        },
+        {
+          "start": 2271,
+          "end": 2272,
+          "symbol": "M:fs.a(BZ)V",
+          "original": "a",
+          "renamed": "drawDialogsWithBackdrop"
         },
         {
           "start": 2312,
@@ -568496,6 +568956,13 @@
           "symbol": "C:fg",
           "original": "fg",
           "renamed": "AccountConnectionPhase"
+        },
+        {
+          "start": 2433,
+          "end": 2434,
+          "symbol": "M:fs.a(IIZ)V",
+          "original": "a",
+          "renamed": "setMenuAnchor"
         },
         {
           "start": 2485,
@@ -568552,6 +569019,13 @@
           "symbol": "C:fg",
           "original": "fg",
           "renamed": "AccountConnectionPhase"
+        },
+        {
+          "start": 3536,
+          "end": 3563,
+          "symbol": "M:fs.$cfr$intArgs$a$7ffe4b125357(IZ)V",
+          "original": "$cfr$intArgs$a$7ffe4b125357",
+          "renamed": "drawDialogsWithBackdropFullInts"
         },
         {
           "start": 3602,
@@ -583641,7 +584115,7 @@
       "original": "gs.java",
       "renamed": "NanoFrameTimer.java",
       "inputSha256": "e2da3dc0360be03e794c809424e83ffc22d74f714ba99aa73692acd38b5ca156",
-      "outputSha256": "e8944e089ac4dd3c58e77b272a5a5c305ca0951e225be2d12058d0c0b5a21a19",
+      "outputSha256": "cdb56892b7ac92fb5cc6da0197700ad3e477fe2ae1ddcdfdee9d026732b92988",
       "edits": [
         {
           "start": 50,
@@ -583665,11 +584139,60 @@
           "renamed": "ContentTransitionPhase"
         },
         {
+          "start": 363,
+          "end": 364,
+          "symbol": "M:gs.b(I)V",
+          "original": "b",
+          "renamed": "resetTiming"
+        },
+        {
+          "start": 905,
+          "end": 906,
+          "symbol": "M:gs.a(I)J",
+          "original": "a",
+          "renamed": "getSleepMillis"
+        },
+        {
+          "start": 964,
+          "end": 965,
+          "symbol": "M:gs.c(I)J",
+          "original": "c",
+          "renamed": "sampleElapsedNanos"
+        },
+        {
+          "start": 1012,
+          "end": 1013,
+          "symbol": "M:gs.a(IJ)I",
+          "original": "a",
+          "renamed": "advanceSchedule"
+        },
+        {
           "start": 1339,
           "end": 1340,
           "symbol": "M:gs.b(B)V",
           "original": "b",
           "renamed": "clearStatics"
+        },
+        {
+          "start": 1574,
+          "end": 1575,
+          "symbol": "M:gs.c(I)J",
+          "original": "c",
+          "renamed": "sampleElapsedNanos"
+        },
+        {
+          "start": 3392,
+          "end": 3393,
+          "symbol": "M:gs.a(IJ)I",
+          "original": "a",
+          "renamed": "advanceSchedule"
+        },
+        {
+          "start": 4775,
+          "end": 4776,
+          "symbol": "M:gs.a(IZIIIII)V",
+          "original": "a",
+          "renamed": "updateChatInputOverlay"
         },
         {
           "start": 4907,
@@ -583728,6 +584251,13 @@
           "renamed": "NanoFrameTimer"
         },
         {
+          "start": 5190,
+          "end": 5191,
+          "symbol": "M:gs.a(Ltm;Z)V",
+          "original": "a",
+          "renamed": "prependNotification"
+        },
+        {
           "start": 5193,
           "end": 5195,
           "symbol": "C:tm",
@@ -583747,6 +584277,13 @@
           "symbol": "M:er.a(IILjava/lang/String;IBZII)V",
           "original": "a",
           "renamed": "updateChatInputDialog"
+        },
+        {
+          "start": 5320,
+          "end": 5321,
+          "symbol": "M:gs.a(Ltm;Z)V",
+          "original": "a",
+          "renamed": "prependNotification"
         },
         {
           "start": 5322,
@@ -604129,7 +604666,7 @@
       "original": "io.java",
       "renamed": "SoundCache.java",
       "inputSha256": "4ad7292d266e9962b7e5c8443775c53c50cdb0109a3efff3683f6d339f3ab272",
-      "outputSha256": "7112591500e08ed6c72580fde4f09b6d68b6a8021dc3fe797fde1c471e4f3449",
+      "outputSha256": "1bd29b0a12bf987e790de166c042d142d78a2c3b01327307969b7b70f9370729",
       "edits": [
         {
           "start": 50,
@@ -604606,6 +605143,13 @@
           "symbol": "C:fd",
           "original": "fd",
           "renamed": "VorbisSample"
+        },
+        {
+          "start": 8368,
+          "end": 8369,
+          "symbol": "M:fd.a(Lbc;II)Lfd;",
+          "original": "a",
+          "renamed": "load"
         },
         {
           "start": 8499,
@@ -611905,7 +612449,7 @@
       "original": "jm.java",
       "renamed": "AlternateLoginCredentials.java",
       "inputSha256": "18ebac0cf9539180a41962209e5dbea663222065d0a52a1533368321fe3f5ee7",
-      "outputSha256": "b6c9298c9702d328dc1ce50caf48aacf2b82f8133a5a1a187d6127fbc5e99f63",
+      "outputSha256": "84c511a81c94bbe5f8c5cd1e6ff5a5e9337b20e8fb9d2b86bdae17812dec3f20",
       "edits": [
         {
           "start": 50,
@@ -611941,6 +612485,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 281,
+          "end": 282,
+          "symbol": "M:fe.f(I)V",
+          "original": "f",
+          "renamed": "beginAccountUiAction"
         },
         {
           "start": 298,
@@ -612102,6 +612653,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 1503,
+          "end": 1504,
+          "symbol": "M:fe.f(I)V",
+          "original": "f",
+          "renamed": "beginAccountUiAction"
         },
         {
           "start": 1520,
@@ -623825,7 +624383,7 @@
       "original": "kf.java",
       "renamed": "GameApplet.java",
       "inputSha256": "a4098c3daad888d3277bbb28abdc6623e2cd1f5d96da28762e1d8698913bb778",
-      "outputSha256": "1b2b11e8c0eb06d25511e55a224a8574d094038167541c3e915d4335fea54ccb",
+      "outputSha256": "cf9d46b91b54ec02d240dc9a1c6a7887f98afadba42515bf185e1d31016868d7",
       "edits": [
         {
           "start": 60,
@@ -624386,6 +624944,13 @@
           "symbol": "C:oe",
           "original": "oe",
           "renamed": "ClientRuntimeState"
+        },
+        {
+          "start": 13381,
+          "end": 13382,
+          "symbol": "M:fp.a(JI)I",
+          "original": "a",
+          "renamed": "waitAndCountFrames"
         },
         {
           "start": 13383,
@@ -629063,7 +629628,7 @@
       "original": "km.java",
       "renamed": "GameSession.java",
       "inputSha256": "2613ce56192b9588fbc22f000fd3d8864cc56fda0106e11183d35df9d0747703",
-      "outputSha256": "e0c3768f555c4aa68d1bb2f4b9be33d27120cf2628004229af43ba3fb89132ae",
+      "outputSha256": "0e73e9332c1de547fc05bad7ff647abcfd287d8b3d70183de6b40920f332e9dc",
       "edits": [
         {
           "start": 50,
@@ -630031,6 +630596,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 24229,
+          "end": 24230,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 24261,
@@ -631843,6 +632415,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 49505,
+          "end": 49506,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 49611,
           "end": 49612,
           "symbol": "M:me.a(B)[Lfs;",
@@ -631855,6 +632434,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 49728,
+          "end": 49729,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 49993,
@@ -632361,6 +632947,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 60126,
+          "end": 60127,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 60163,
@@ -634715,6 +635308,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 108418,
+          "end": 108419,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
+        },
+        {
           "start": 108452,
           "end": 108454,
           "symbol": "C:kr",
@@ -636166,6 +636766,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 131451,
+          "end": 131452,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 131498,
           "end": 131499,
           "symbol": "M:km.a(Lfs;I)V",
@@ -636287,6 +636894,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 134027,
+          "end": 134028,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 134191,
           "end": 134193,
           "symbol": "B:km.b(Z)V#1",
@@ -636302,11 +636916,25 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 134248,
+          "end": 134249,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 134349,
           "end": 134351,
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 134352,
+          "end": 134353,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 134448,
@@ -636322,6 +636950,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 134489,
+          "end": 134490,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 134547,
@@ -636428,6 +637063,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 135947,
+          "end": 135948,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 135993,
@@ -636555,6 +637197,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 138989,
+          "end": 138990,
+          "symbol": "M:fl.a(Lln;B)V",
+          "original": "a",
+          "renamed": "sortIncomingFleetsByDistance"
         },
         {
           "start": 139042,
@@ -637233,11 +637882,25 @@
           "renamed": "FrameTimer"
         },
         {
+          "start": 148812,
+          "end": 148813,
+          "symbol": "M:fp.a(Lpf;I)Lhb;",
+          "original": "a",
+          "renamed": "createDequeSequence"
+        },
+        {
           "start": 148848,
           "end": 148850,
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "FrameTimer"
+        },
+        {
+          "start": 148851,
+          "end": 148852,
+          "symbol": "M:fp.a(Lpf;I)Lhb;",
+          "original": "a",
+          "renamed": "createDequeSequence"
         },
         {
           "start": 148881,
@@ -637558,6 +638221,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 153588,
+          "end": 153589,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 153659,
@@ -637885,6 +638555,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 160220,
+          "end": 160221,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 160706,
@@ -638814,7 +639491,7 @@
       "original": "kq.java",
       "renamed": "GameScreen.java",
       "inputSha256": "515a7382bbed90794e3b5e8869ade3adea7bb0ab1543e74e8d6a9e61594271f7",
-      "outputSha256": "44c8f75e69974ecd49efa75844df87e675db1f72529e5e0b20e6302e85188bba",
+      "outputSha256": "c775336b44c8e3bfc882bb0379ac66b589bf6ea3a46604d5cc658ceaff2fc2e7",
       "edits": [
         {
           "start": 50,
@@ -651183,6 +651860,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 193817,
+          "end": 193818,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 193889,
           "end": 193890,
           "symbol": "M:sd.j(I)Lln;",
@@ -654096,7 +654780,7 @@
       "original": "ks.java",
       "renamed": "AccountBooleanRequest.java",
       "inputSha256": "1d65cff926ff95ef9c7e0dada53990f50621f9e26c892bd53e04715a563af666",
-      "outputSha256": "822da74e87fc4de932fece5c4a4360563ba87e69f6a18d04f4f508f0821f31d5",
+      "outputSha256": "5688161e1c6bad347ee9f7dbb67d8f48ba38591f724982e405d4e75f4f555b79",
       "edits": [
         {
           "start": 50,
@@ -654281,6 +654965,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 1111,
+          "end": 1112,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 1199,
           "end": 1201,
           "symbol": "C:vn",
@@ -654293,6 +654984,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 1227,
+          "end": 1228,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 1342,
@@ -654407,6 +655105,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 1921,
+          "end": 1922,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 2048,
           "end": 2050,
           "symbol": "C:vn",
@@ -654419,6 +655124,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 2078,
+          "end": 2079,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 2235,
@@ -654540,6 +655252,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 2817,
+          "end": 2818,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 2944,
           "end": 2946,
           "symbol": "C:vn",
@@ -654552,6 +655271,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 2974,
+          "end": 2975,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 3131,
@@ -654659,6 +655385,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 3538,
+          "end": 3539,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
+        },
+        {
           "start": 3655,
           "end": 3657,
           "symbol": "C:vn",
@@ -654671,6 +655404,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 3683,
+          "end": 3684,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 3831,
@@ -654734,6 +655474,13 @@
           "symbol": "C:gs",
           "original": "gs",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 4505,
+          "end": 4506,
+          "symbol": "M:gs.a(Ltm;Z)V",
+          "original": "a",
+          "renamed": "prependNotification"
         },
         {
           "start": 4551,
@@ -668739,7 +669486,7 @@
       "original": "ma.java",
       "renamed": "DefensiveAi.java",
       "inputSha256": "9190025e1513d4f1f319a9242865fb33e3cb2a5ef9e94c5796df2ebbccf4cb39",
-      "outputSha256": "becdbcae2477f46a3de62bd35807ec5515d7b53df68cf7562e1cb8f1d300a3c0",
+      "outputSha256": "fc6974d5cf8fc89bcd9f6fa0766abdcccb3a52b0965c221959ee0e8b4c87bbfa",
       "edits": [
         {
           "start": 50,
@@ -668831,6 +669578,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 1808,
+          "end": 1809,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 1879,
@@ -697692,7 +698446,7 @@
       "original": "oo.java",
       "renamed": "ClientRasterSupport.java",
       "inputSha256": "8d9f8124e80a08bd389e486daf00b42940ec1d42a2f16aa5deb9eefe8ba65e94",
-      "outputSha256": "8a385f58f9c5ffe69de680440d55636c11c2a8c2416adb6d87ceccaad7311858",
+      "outputSha256": "6e4b75cffe942f07980e79aaea327c82e48d1fe83ac460ab0cadbe482b98de07",
       "edits": [
         {
           "start": 50,
@@ -697835,6 +698589,13 @@
           "renamed": "FrameTimer"
         },
         {
+          "start": 1079,
+          "end": 1080,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
+        },
+        {
           "start": 1126,
           "end": 1128,
           "symbol": "C:gf",
@@ -697847,6 +698608,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "FrameTimer"
+        },
+        {
+          "start": 1226,
+          "end": 1227,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
         },
         {
           "start": 1274,
@@ -697863,6 +698631,13 @@
           "renamed": "FrameTimer"
         },
         {
+          "start": 1341,
+          "end": 1342,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
+        },
+        {
           "start": 1388,
           "end": 1390,
           "symbol": "C:gf",
@@ -697875,6 +698650,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "FrameTimer"
+        },
+        {
+          "start": 1508,
+          "end": 1509,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
         },
         {
           "start": 1556,
@@ -697891,6 +698673,13 @@
           "renamed": "FrameTimer"
         },
         {
+          "start": 1657,
+          "end": 1658,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
+        },
+        {
           "start": 1704,
           "end": 1706,
           "symbol": "C:gf",
@@ -697903,6 +698692,13 @@
           "symbol": "C:fp",
           "original": "fp",
           "renamed": "FrameTimer"
+        },
+        {
+          "start": 1771,
+          "end": 1772,
+          "symbol": "M:fp.a(IIIIII[III)V",
+          "original": "a",
+          "renamed": "fillHalfBlendedTriangle"
         },
         {
           "start": 1819,
@@ -702758,7 +703554,7 @@
       "original": "pe.java",
       "renamed": "UnderageAccountInfoPanel.java",
       "inputSha256": "a4a5152f8cc51eb372158637f2a67b697aae86b5aefab5afc739b4f89a8568fc",
-      "outputSha256": "26835068a739b89fa2e761319a80225c933521eea290c42a56a3a278b052e945",
+      "outputSha256": "50c1f891dde8086b936b1055ccc7f3d4d56ea5257c43e6597772dfb474959b5a",
       "edits": [
         {
           "start": 50,
@@ -703445,6 +704241,13 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 10157,
+          "end": 10158,
+          "symbol": "M:fl.a(ILjava/lang/String;)V",
+          "original": "a",
+          "renamed": "addTutorialFlag"
         },
         {
           "start": 10193,
@@ -714275,7 +715078,7 @@
       "original": "qk.java",
       "renamed": "MenuLabel.java",
       "inputSha256": "ea725ad9dd4d835d69f9987dba3caed34bcfbf27f9f8d7bd388c5ce464c8562f",
-      "outputSha256": "3ff040da0f91aa11db45fbcd8dc03d7f43d6be3c0c58c6eb7e1895c063339bda",
+      "outputSha256": "21c7f8d6d6ced67fd4f158ec315043c6554eb07f17b134571965c8248c744639",
       "edits": [
         {
           "start": 44,
@@ -714549,6 +715352,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 4689,
+          "end": 4690,
+          "symbol": "M:fe.f(I)V",
+          "original": "f",
+          "renamed": "beginAccountUiAction"
         },
         {
           "start": 4704,
@@ -725275,7 +726085,7 @@
       "original": "rh.java",
       "renamed": "ProjectsContent.java",
       "inputSha256": "e0b0865ee838e95015363a6e5eabcbb3805579f6c7543a5759f5fe03d4e784fc",
-      "outputSha256": "12cbd3b113a6bb265a2daaaf8450af7c78a10ed41556db6a3fd9c963aa859134",
+      "outputSha256": "8bd94b4feae7bb98c04f07288f3a0393aa5a26c1b4dc6eef53e36e698ac21915",
       "edits": [
         {
           "start": 50,
@@ -725444,6 +726254,13 @@
           "symbol": "C:gs",
           "original": "gs",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 964,
+          "end": 965,
+          "symbol": "M:gs.a(Ltm;Z)V",
+          "original": "a",
+          "renamed": "prependNotification"
         },
         {
           "start": 1066,
@@ -732333,7 +733150,7 @@
       "original": "rq.java",
       "renamed": "LinkPainter.java",
       "inputSha256": "8e61072f3a33239667a0d782b76701b00119a418b9fe10f6fbe54fc7be1404e9",
-      "outputSha256": "526b934ab568a2e85dc12f2d2a91f53cee5ce1dbd72cb43af23caa8e834bd5d4",
+      "outputSha256": "3a360d52ed717712dc435ea97036a8d6d2178e913301b5ae1f72b4aac541f287",
       "edits": [
         {
           "start": 50,
@@ -733170,6 +733987,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 11206,
+          "end": 11207,
+          "symbol": "M:fs.a(ILjava/lang/String;)Z",
+          "original": "a",
+          "renamed": "isPrivateChatInputFor"
         },
         {
           "start": 11212,
@@ -784387,7 +785211,7 @@
       "original": "u.java",
       "renamed": "ValidationState.java",
       "inputSha256": "8a7c71dba6689d49699ae0350b71e1d8fc6f9ac6cbb5c0c88f338b610509927b",
-      "outputSha256": "bec3fb0cdf591bf56eb83bb202e2207f24957d30fa63eea16dfda8c69ac7dcdb",
+      "outputSha256": "fda07af90bbedc5c4c0fb74cf0c25cb8aceffbe3fb51497e1737ab50397f33e9",
       "edits": [
         {
           "start": 50,
@@ -784647,6 +785471,13 @@
           "symbol": "C:oe",
           "original": "oe",
           "renamed": "ClientRuntimeState"
+        },
+        {
+          "start": 2610,
+          "end": 2611,
+          "symbol": "M:fp.b(I)V",
+          "original": "b",
+          "renamed": "resetTiming"
         },
         {
           "start": 2692,
@@ -785694,7 +786525,7 @@
       "original": "ub.java",
       "renamed": "ScrollPane.java",
       "inputSha256": "e85d5edaafb0cb3f84bc0792bf14ffbcb883b7238aeacfc1907d864218644651",
-      "outputSha256": "a54d7e482f2633afa4dd3458f5792361386a0ea0867f3339b72658522315aabc",
+      "outputSha256": "f70aaf9b8c68105cbb184f35bcca2d198d9172660b7b3227395b2d89ea09c5de",
       "edits": [
         {
           "start": 50,
@@ -785996,6 +786827,13 @@
           "symbol": "C:fs",
           "original": "fs",
           "renamed": "Player"
+        },
+        {
+          "start": 5696,
+          "end": 5697,
+          "symbol": "M:fs.a(IIZ)V",
+          "original": "a",
+          "renamed": "setMenuAnchor"
         },
         {
           "start": 5733,
@@ -794717,7 +795555,7 @@
       "original": "ur.java",
       "renamed": "ScrollBar.java",
       "inputSha256": "ae98ecfb82700717c3d52b07051b37be3cda74b7a0b7c35db28c1959790e426b",
-      "outputSha256": "cacf7393349dccb6ecd35a388e3443925b53d5a220f4d2779ab4aefea5b3f4ac",
+      "outputSha256": "5a71c4befb1e95b279c408e6e7347613e54cdb41780d73a4c0911a04e7fc9835",
       "edits": [
         {
           "start": 50,
@@ -795145,6 +795983,13 @@
           "symbol": "C:fe",
           "original": "fe",
           "renamed": "MenuButton"
+        },
+        {
+          "start": 9279,
+          "end": 9280,
+          "symbol": "M:fe.a(Z[B[BI[I[Ljava/lang/String;ILbc;Lbc;[[Ljava/lang/String;Lbc;[[Lbi;[Ljava/lang/String;[[Lbi;[[Ljava/lang/String;[Lnk;I[I[Ljava/lang/String;I)V",
+          "original": "a",
+          "renamed": "initializeLobbyUi"
         },
         {
           "start": 13114,
@@ -834655,10 +835500,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/shatteredplans"
     },
-    "rulesSha256": "068ac9a286ff27776eee9f72cacfa4e6c87e2c527d843d87cc6aef0ced2532ca",
+    "rulesSha256": "c3a6d8ef3ca66d1c5b17a35c84038ea35629c38aeae3b82f91053d89722aa1e4",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "96475c1083c70637b8a14e92d4ae7442726e88e1754d1482689a80f46c2931f2",
-    "outputTreeSha256": "59bbb827f79a438f9ff59f932d91717355899743a6e9728cc01086fe67fd527b",
+    "outputTreeSha256": "a60399686f1d1d4599cb975f1c502eec333dbc0b8aabe37c96026fc90d36afcf",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

@@ -288,7 +288,7 @@ public final class ShatteredPlansClient extends GameClientShell {
             if (BufferedCacheFile.field_e == 14) {
               DiskCacheWorker.commitMenuTransition(1048576);
               BytePayloadNode.initializeLobbySessionState(HitRegion.getLobbyRoomListContent(20605), LobbyOptionSupport.nextPowerOfTwo(2000, (byte) 122), UnderageAccountInfoPanel.getRoomPlayerListContent(42), 1024, LobbyOptionSupport.nextPowerOfTwo(6, (byte) 122), (byte) -122, IntList.field_j.length, LobbyRoomControlsSupport.getLobbyScrollContent((byte) 100), LabeledChildWidget.field_C, 150);
-              SocialListSetupSupport.initializeSocialLists((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.a(83));
+              SocialListSetupSupport.initializeSocialLists((byte) 77, LobbyOptionSupport.getFriendListContent((byte) 121), NodeHashTableIterator.getIgnoreListContent(83));
               EmailValidator.field_p = true;
               StripedProgressWidget.field_Q = false;
               PlayerRankingRequest.field_o = -2;
@@ -833,7 +833,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         WidgetStyle.clearStatics(3);
         AdditiveSpriteWipeSupport.clearStatics(-23092);
         IsaacBackedRandom.clearStatics((byte) -109);
-        Player.a(param0 ^ -24065);
+        Player.clearPlayerStatics(param0 ^ -24065);
         QuickChatHelpSupport.releaseQuickChatHelpSupportStatics(520);
         GameState.clearStatics((byte) -67);
         Star.clearStatics(param0 ^ -24069);
@@ -1453,7 +1453,7 @@ public final class ShatteredPlansClient extends GameClientShell {
           if (PlayerReportPanel.refreshClientActivityDeadline((byte) -67)) {
             stackIn_69_0 = 95;
             stackIn_71_1 = (null != NameSuggestionsPanel.field_K) || (MusicPatch.field_i);
-            Player.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_71_1);
+            Player.drawDialogsWithBackdropFullInts(stackIn_69_0, stackIn_71_1);
           } else {
             if (!DialPainter.isAccountChoiceMenuOpen(0)) {
               if (!this.field_G.isEmpty(27)) {
