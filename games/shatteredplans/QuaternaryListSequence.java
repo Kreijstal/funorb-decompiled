@@ -228,7 +228,7 @@ final class QuaternaryListSequence extends NodeSequence {
               var4.unlink((byte) -122);
               return;
             }
-            GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
+            GameKeyHandler.reportClientError(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
             TabbedPanel.closeClientSocket(-108);
           } else {
             var3_ref_ld = (ByteArrayReadRequest) (SectorCacheStore.field_d.startForward(0));

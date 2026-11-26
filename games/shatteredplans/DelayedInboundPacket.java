@@ -77,7 +77,7 @@ final class DelayedInboundPacket extends IntrusiveNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          GameKeyHandler.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
+          GameKeyHandler.reportClientError(param1 - 29900, (Throwable) ((Object) var6), "CC1");
           BufferedSocket.field_h = null;
           AgeValidator.field_p = null;
           return new ChatHistoryEntry(param0);

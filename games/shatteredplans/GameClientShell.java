@@ -158,7 +158,7 @@ abstract class GameClientShell extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              GameKeyHandler.a(-29901, (Throwable) ((Object) var5), "S1");
+              GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var5), "S1");
               var10 = (String) null;
               AccountCreationForm.handleCountryListResponse((String) null, true);
               GraphicsSettings.field_g = null;
@@ -191,7 +191,7 @@ abstract class GameClientShell extends GameApplet {
         this.setBackground(java.awt.Color.black);
         LeaderboardSortSupport.field_e = this.field_v;
         ObjectList.setLoadingTextLanguage(0, LeaderboardSortSupport.field_e);
-        GameKeyHandler.a(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, LeaderboardSortSupport.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
+        GameKeyHandler.initializeNetworkSessionState(0, ValidatedTextInputWidget.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, LeaderboardSortSupport.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
         IntrusiveNodeHashTable.initializeArchiveServices(param3, this.field_q, this.field_r, this.field_A, LeaderboardSortSupport.field_e, 1491341222, ValidatedTextInputWidget.field_W, this.field_s, this.field_x);
         TutorialConditionalText.initializePunctuationKeyMap((byte) 100);
         ClientContextMenuSupport.field_b = OpacityWidget.createMouseWheelHandler(true);
@@ -260,7 +260,7 @@ abstract class GameClientShell extends GameApplet {
                                 SolMapReader.readChatRestrictionFlags(-1);
                                 return;
                               }
-                              GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + Dialog.a(16738));
+                              GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGS1: " + Dialog.a(16738));
                               TabbedPanel.closeClientSocket(-107);
                               return;
                             }
@@ -286,7 +286,7 @@ abstract class GameClientShell extends GameApplet {
           }
           return;
         }
-        GameKeyHandler.a(-29901, (Throwable) null, "MGS2: " + Dialog.a(16738));
+        GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGS2: " + Dialog.a(16738));
         TabbedPanel.closeClientSocket(-127);
     }
 
@@ -711,7 +711,7 @@ abstract class GameClientShell extends GameApplet {
         String var10 = null;
         try {
           try {
-            if (!this.b((byte) -106)) {
+            if (!this.allowAppletStartup((byte) -106)) {
               return;
             }
             this.field_s = this.getCodeBase().getHost();
@@ -747,7 +747,7 @@ abstract class GameClientShell extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            GameKeyHandler.a(-29901, (Throwable) ((Object) var6_ref), (String) null);
+            GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var6_ref), (String) null);
             this.fail((byte) -95, "crash");
           }
           return;

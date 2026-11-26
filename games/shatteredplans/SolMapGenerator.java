@@ -23,7 +23,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         field_q = null;
     }
 
-    final int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws MapGenerationException {
+    final int[] selectStartingStarIndices(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws MapGenerationException {
         int[] stackIn_8_0 = null;
         int[] stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
@@ -152,7 +152,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         StatefulWidgetTheme.field_u = (BitmapFont) ((Object) LoginForm.loadCoverageBitmapFontByName("arezzo14", "commonui", param1, param2, (byte) 90));
         CipherPacketBuffer.field_p = (BitmapFont) ((Object) LoginForm.loadCoverageBitmapFontByName("arezzo14bold", "commonui", param1, param2, (byte) 111));
         Sprite var17 = new Sprite(param3.getFileByName(true, "", "button.gif"), (java.awt.Component) ((Object) NotificationEntry.field_i));
-        GameApplet.a("commonui", -108, param1, "dropdown");
+        GameApplet.loadIndexedSpriteByName("commonui", -108, param1, "dropdown");
         IndexedSprite[] var5 = SliderPainter.loadIndexedSpritesByName("commonui", param1, "screen_options", (byte) -118);
         ValidationIndicator.field_E = new IndexedSprite[4];
         EmailValidator.field_o = new IndexedSprite[4];

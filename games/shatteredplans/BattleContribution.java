@@ -150,7 +150,7 @@ final class BattleContribution extends IntrusiveNode {
           SectorCacheStore.field_f = new AnimatedPanel(0L, (AnimatedPanel) null);
           if (param0 == null) {
             var10 = (Throwable) null;
-            GameKeyHandler.a(-29901, (Throwable) null, "QC1");
+            GameKeyHandler.reportClientError(-29901, (Throwable) null, "QC1");
             return;
           }
           param0.field_k = 0;
@@ -159,7 +159,7 @@ final class BattleContribution extends IntrusiveNode {
           ClientCapabilitySupport.field_c = new QuickChatPhraseRegistry(var3_int, param0, param0, new RoundedFrameSupport());
           var4 = MeshMaterial.findFirstEnabledQuickChatCategory(false);
           if (var4 == null) {
-            GameKeyHandler.a(-29901, (Throwable) null, "QC2");
+            GameKeyHandler.reportClientError(-29901, (Throwable) null, "QC2");
             return;
           }
           BufferedSocket.setQuickChatPlaceholder(param1 - 5, var4);

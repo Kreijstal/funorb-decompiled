@@ -55,7 +55,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void c(GalaxyMap param0, int param1) {
+    private final void chooseStarTypes(GalaxyMap param0, int param1) {
         int var4 = 0;
         Star[] var3 = null;
         Star var5 = null;
@@ -186,7 +186,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    final static void a(CipherPacketBuffer param0, byte param1) {
+    final static void writeReflectionCheckResponse(CipherPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -401,30 +401,30 @@ class StandardMapGenerator implements MapGenerator {
         int var6Lifetime1;
         this.placeStars(false, var8);
         this.finishMap(var8, 0);
-        int[] var14 = this.a(var8.field_j, var8.field_e, var8.field_c, 4, (byte) -84, 4, 4, (int[]) null, this.field_a);
-        int[] var5 = this.a(var8.field_j, var8.field_e, var8.field_c, 2, (byte) -126, 16, 2, var14, this.field_e + this.field_a);
+        int[] var14 = this.selectStartingStarIndices(var8.field_j, var8.field_e, var8.field_c, 4, (byte) -84, 4, 4, (int[]) null, this.field_a);
+        int[] var5 = this.selectStartingStarIndices(var8.field_j, var8.field_e, var8.field_c, 2, (byte) -126, 16, 2, var14, this.field_e + this.field_a);
         int[] var12 = new int[this.field_e];
         int[] var10 = var12;
         int[] var4 = var10;
         for (var6 = 0; var6 < this.field_e; var6++) {
           var4[var6] = var5[this.field_a + var6];
         }
-        this.a(3, var8, -126, var14);
-        this.a(2, var8, 102, var12);
+        this.setStarCategories(3, var8, -126, var14);
+        this.setStarCategories(2, var8, 102, var12);
         var6Lifetime1 = 127 % ((param0 + 67) / 44);
-        this.a((byte) 95, var14, var12, var8);
-        this.a((byte) -108, var8);
-        this.c(var8, 5);
+        this.populateMapResources((byte) 95, var14, var12, var8);
+        this.assignInitialGarrisons((byte) -108, var8);
+        this.chooseStarTypes(var8, 5);
         return var8;
     }
 
-    private final void a(byte param0, int[] param1, int[] param2, GalaxyMap param3) throws MapGenerationException {
+    private final void populateMapResources(byte param0, int[] param1, int[] param2, GalaxyMap param3) throws MapGenerationException {
         try {
           if (param0 != 95) {
             Random var6 = (Random) null;
             this.assignRichResources((Star) null, (byte) 67, (Random) null);
           }
-          this.a(param1, param3, 4);
+          this.populateStartingAreaResources(param1, param3, 4);
           this.assignStarResources(param3, param2, 0);
           this.fillMissingResources(param3, param0 ^ 92);
         } catch (RuntimeException runtimeException) {
@@ -432,7 +432,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(int param0, GalaxyMap param1, int param2, int[] param3) {
+    private final void setStarCategories(int param0, GalaxyMap param1, int param2, int[] param3) {
         int var5_int = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var5_intLifetime1;
@@ -684,7 +684,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(int[] param0, GalaxyMap param1, int param2) throws MapGenerationException {
+    private final void populateStartingAreaResources(int[] param0, GalaxyMap param1, int param2) throws MapGenerationException {
         int var4_int = 0;
         int var5 = 0;
         Star var6 = null;
@@ -695,14 +695,14 @@ class StandardMapGenerator implements MapGenerator {
             var6 = param1.field_e[var5];
             this.assignRichResources(var6, (byte) 84, param1.field_j);
           }
-          this.a(1, 0, param0, param1, 2, (byte) 96, param2);
-          this.a(4, 4, param0, param1, 4, (byte) 105, 12);
+          this.distributeStartingAreaResources(1, 0, param0, param1, 2, (byte) 96, param2);
+          this.distributeStartingAreaResources(4, 4, param0, param1, 4, (byte) 105, 12);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "hs.N(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private final void a(int param0, int param1, int[] param2, GalaxyMap param3, int param4, byte param5, int param6) throws MapGenerationException {
+    private final void distributeStartingAreaResources(int param0, int param1, int[] param2, GalaxyMap param3, int param4, byte param5, int param6) throws MapGenerationException {
         int dupTemp$1 = 0;
         int var11_int = 0;
         int var14_int = 0;
@@ -948,7 +948,7 @@ class StandardMapGenerator implements MapGenerator {
         }
     }
 
-    private final void a(byte param0, GalaxyMap param1) {
+    private final void assignInitialGarrisons(byte param0, GalaxyMap param1) {
         int var4 = 0;
         Star var5 = null;
         int var6 = 0;
@@ -1009,7 +1009,7 @@ class StandardMapGenerator implements MapGenerator {
         return new Star(param4, var9, var10, var11);
     }
 
-    int[] a(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws MapGenerationException {
+    int[] selectStartingStarIndices(Random param0, Star[] param1, int[][] param2, int param3, byte param4, int param5, int param6, int[] param7, int param8) throws MapGenerationException {
         int var12_int = 0;
         int incrementValue$0 = 0;
         int var20 = 0;
@@ -1189,7 +1189,7 @@ class StandardMapGenerator implements MapGenerator {
     public static void clearStatics(int param0) {
         if (param0 != 0) {
           CipherPacketBuffer var2 = (CipherPacketBuffer) null;
-          StandardMapGenerator.a((CipherPacketBuffer) null, (byte) 120);
+          StandardMapGenerator.writeReflectionCheckResponse((CipherPacketBuffer) null, (byte) 120);
         }
         field_i = null;
         field_j = null;

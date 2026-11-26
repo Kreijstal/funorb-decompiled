@@ -160,7 +160,7 @@ final class AudioService implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var6 = (String) null;
-            GameKeyHandler.a(-29901, (Throwable) ((Object) var1), (String) null);
+            GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var1), (String) null);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

@@ -54,7 +54,7 @@ final class IntroGlowPoint {
               var6 = null;
             } else {
               var5 = Territory.field_t.substring(1, var4);
-              var6 = GameApplet.a(Territory.field_t.substring(var4), (byte) 125, ',');
+              var6 = GameApplet.splitNonEmptyTrimmed(Territory.field_t.substring(var4), (byte) 125, ',');
             }
             if (!var5.equalsIgnoreCase("topleft")) {
               var8 = var1;

@@ -391,7 +391,7 @@ final class DialWidget extends FocusableWidget {
                     UsernameAvailabilityValidator.field_p = ((PacketBuffer) ((Object) var1)).readLong(65);
                     return;
                   }
-                  GameKeyHandler.a(-29901, (Throwable) null, "L1: " + Dialog.a(16738));
+                  GameKeyHandler.reportClientError(-29901, (Throwable) null, "L1: " + Dialog.a(16738));
                   TabbedPanel.closeClientSocket(-115);
                   return;
                 }

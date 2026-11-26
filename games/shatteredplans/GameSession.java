@@ -1248,7 +1248,7 @@ final class GameSession implements AiHost {
             break;
           }
           if (stackIn_94_0 != 0) {
-            GameKeyHandler.a(-29901, (Throwable) null, var6.toString());
+            GameKeyHandler.reportClientError(-29901, (Throwable) null, var6.toString());
             TabbedPanel.closeClientSocket(-118);
           }
           stackIn_98_0Lifetime1 = -13;
@@ -3599,7 +3599,7 @@ final class GameSession implements AiHost {
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
-                GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), "AI has errored in single player game");
+                GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var2_ref), "AI has errored in single player game");
               }
               this.updateProjectedGarrisons(this.field_n, -84);
               this.advanceLocalPlayerTurn((byte) -81);

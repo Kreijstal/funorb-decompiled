@@ -58,7 +58,7 @@ abstract class ArchiveNetworkClient {
           InvalidMapConnectionException.drawXMajorAntialiasedLineQ4(param2, (byte) -55, param1, param0, param5, param4);
           return;
         }
-        SecondaryNodeHashTable.a(param5, param4, 80, param2, param1, param0);
+        SecondaryNodeHashTable.drawYMajorAntialiasedLineQ4(param5, param4, 80, param2, param1, param0);
     }
 
     final NetworkArchiveRequest enqueueRequest(boolean param0, int param1, byte param2, int param3, int param4) {
@@ -147,6 +147,6 @@ abstract class ArchiveNetworkClient {
           InvalidMapConnectionException.drawXMajorAntialiasedLineQ4(param2, (byte) -55, param1, param0, param5, param4);
           return;
         }
-        SecondaryNodeHashTable.a(param5, param4, 80, param2, param1, param0);
+        SecondaryNodeHashTable.drawYMajorAntialiasedLineQ4(param5, param4, 80, param2, param1, param0);
     }
 }

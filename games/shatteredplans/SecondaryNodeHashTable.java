@@ -43,7 +43,7 @@ final class SecondaryNodeHashTable {
         return var2;
     }
 
-    final static CoverageBitmapFont a(int param0, byte[] param1) {
+    final static CoverageBitmapFont createCoverageFontFromDecodedSprites(int param0, byte[] param1) {
         CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         CoverageBitmapFont stackIn_6_0 = null;
@@ -76,7 +76,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawYMajorAntialiasedLineQ4(int param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
         RuntimeException var6 = null;
@@ -447,7 +447,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final static MenuWindow a(int param0, boolean param1) {
+    final static MenuWindow createVictoryWindow(int param0, boolean param1) {
         MenuButton var2 = null;
         MenuList var3 = null;
         StringList.field_j = new MenuWindow(320, -param0 + 479 - 28, 200, param0 + 28, AccountNoticeKind.field_a.toUpperCase());
@@ -498,7 +498,7 @@ final class SecondaryNodeHashTable {
         }
     }
 
-    final static RasterBuffer a(java.awt.Component param0, int param1, int param2, int param3) {
+    final static RasterBuffer createRasterBuffer(java.awt.Component param0, int param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -577,7 +577,7 @@ final class SecondaryNodeHashTable {
         return var4;
     }
 
-    final static void a(byte param0) {
+    final static void initializeLobbyPanels(byte param0) {
         CanvasResizeController.field_a = new AnimatedPanel(0L, (AnimatedPanel) null);
         if (AccountStatusDialog.field_pb) {
           CanvasResizeController.field_a.addChild(4, PairedIntSortSupport.field_c);
@@ -608,7 +608,7 @@ final class SecondaryNodeHashTable {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_d = param1;
         if (param0 != 65280) {
-          SecondaryNodeHashTable.a(20, 67, -77, 2, 1, -87);
+          SecondaryNodeHashTable.drawYMajorAntialiasedLineQ4(20, 67, -77, 2, 1, -87);
         }
         var4 = this.field_b[(int)(param1 & (long)(-1 + this.field_k))];
         this.field_j = var4.field_h;

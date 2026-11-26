@@ -92,11 +92,11 @@ final class SocialListPanel extends AnimatedPanel {
           if (param2 >= -14) {
             return;
           }
-          GameKeyHandler.a(96, 127, param0, 96 - var7, param4, param5, false, param1);
+          GameKeyHandler.drawHexagonPatternStrip(96, 127, param0, 96 - var7, param4, param5, false, param1);
           var8 = 96;
           for (var9 = 1; var9 < var6_int; var9++) {
             var8 = var8 - var7;
-            GameKeyHandler.a(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
+            GameKeyHandler.drawHexagonPatternStrip(var8, 78, param0, -var7 + var8, param4, var9 * 10 + param5, true, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

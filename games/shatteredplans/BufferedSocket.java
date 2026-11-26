@@ -250,7 +250,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            GameKeyHandler.a(-29901, (Throwable) ((Object) var1_ref), (String) null);
+            GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var1_ref), (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

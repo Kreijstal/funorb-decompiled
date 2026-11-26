@@ -48,7 +48,7 @@ final class ExternalLinkSupport {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              GameKeyHandler.a(-29901, (Throwable) null, "MGR1: " + param2);
+              GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGR1: " + param2);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

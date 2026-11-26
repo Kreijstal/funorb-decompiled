@@ -148,7 +148,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static String[] a(String param0, byte param1, char param2) {
+    final static String[] splitNonEmptyTrimmed(String param0, byte param1, char param2) {
         int incrementValue$1 = 0;
         String[] var3 = null;
         RuntimeException var3_ref = null;
@@ -346,7 +346,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 GameState.detectMaximumHeapSize(22943);
                 this.createCanvas(0);
-                BattleExplosionVisual.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) NotificationEntry.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
+                BattleExplosionVisual.field_q = SecondaryNodeHashTable.createRasterBuffer((java.awt.Component) ((Object) NotificationEntry.field_i), 16, VictoryChecker.field_e, AccountNameValidationSupport.field_b);
                 this.initialise(-1);
                 ClientRuntimeState.field_d = ProjectsWindowSupport.createFrameTimer(115);
                 do {
@@ -378,7 +378,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var1 = decompiledCaughtException;
-              GameKeyHandler.a(-29901, (Throwable) (var1), (String) null);
+              GameKeyHandler.reportClientError(-29901, (Throwable) (var1), (String) null);
               this.fail((byte) -105, "crash");
             }
             this.terminate(-78, true);
@@ -395,14 +395,14 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    public static void b(int param0) {
+    public static void clearGameAppletStatics(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           field_f = null;
           field_a = null;
           if (param0 <= 113) {
-            GameApplet.a((String) null, 22, (Archive) null, (String) null);
+            GameApplet.loadIndexedSpriteByName((String) null, 22, (Archive) null, (String) null);
           }
           field_h = null;
           field_c = null;
@@ -429,7 +429,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
     public final void windowOpened(java.awt.event.WindowEvent param0) {
     }
 
-    final static int[] a(int[] param0, int param1) {
+    final static int[] invertPermutation(int[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int[] var3 = null;
@@ -613,7 +613,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var8_ref = decompiledCaughtException;
-              GameKeyHandler.a(-29901, var8_ref, (String) null);
+              GameKeyHandler.reportClientError(-29901, var8_ref, (String) null);
               this.fail((byte) -95, "crash");
             }
             return;
@@ -700,7 +700,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static IndexedSprite a(String param0, int param1, Archive param2, String param3) {
+    final static IndexedSprite loadIndexedSpriteByName(String param0, int param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -799,7 +799,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     abstract void initialise(int param0);
 
-    final boolean b(byte param0) {
+    final boolean allowAppletStartup(byte param0) {
         return true;
     }
 
@@ -866,7 +866,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static PlayerRankingRequest a(byte param0, int param1, int param2, int param3) {
+    final static PlayerRankingRequest getOrRequestPlayerRankings(byte param0, int param1, int param2, int param3) {
         PlayerRankingRequest var4 = null;
         int var5 = 0;
         PlayerRankingRequest stackIn_9_0 = null;
@@ -902,7 +902,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_12_1 = 29;
           }
           if (stackIn_12_0 < stackIn_12_1) {
-            GameApplet.a((String) null, -57, (Archive) null, (String) null);
+            GameApplet.loadIndexedSpriteByName((String) null, -57, (Archive) null, (String) null);
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;

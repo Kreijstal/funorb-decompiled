@@ -574,7 +574,7 @@ final class BufferedCacheFile {
                 return;
               }
             }
-            GameKeyHandler.a(-29901, (Throwable) null, "LR1: " + Dialog.a(16738));
+            GameKeyHandler.reportClientError(-29901, (Throwable) null, "LR1: " + Dialog.a(16738));
             TabbedPanel.closeClientSocket(-113);
             if (var8 == 0) {
               return;

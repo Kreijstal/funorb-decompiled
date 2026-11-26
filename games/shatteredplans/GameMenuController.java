@@ -776,7 +776,7 @@ final class GameMenuController {
           return;
         }
         if (LoginForm.field_I == null) {
-          LoginForm.field_I = GameApplet.a((byte) 85, 0, 7, 10);
+          LoginForm.field_I = GameApplet.getOrRequestPlayerRankings((byte) 85, 0, 7, 10);
         }
         var2 = QuickChatPhraseRegistry.interpolateSmoothStep(0, 32, GameTextResources.field_a, 560, param0 ^ -23);
         var3 = 200;
@@ -2198,7 +2198,7 @@ final class GameMenuController {
         int var8 = 20;
         int var9 = 5;
         int var10 = -77 % ((param1 - 63) / 63);
-        GameKeyHandler.a(2 + var9, param5, 4 + var8, -2 + param6 + (param2 - param4), -2 + param0, (byte) -126, 4 + param4);
+        GameKeyHandler.drawRoundedGradientFrame(2 + var9, param5, 4 + var8, -2 + param6 + (param2 - param4), -2 + param0, (byte) -126, 4 + param4);
         if (0 < param3) {
           var11 = param2 * param3 / 15 + 2 * var9;
           SoftwareRasterizer.fillRoundedRect(param0, param2 + (param6 - var11), var8, var11, var9, param5);

@@ -2492,7 +2492,7 @@ final class MapView extends MapViewState {
             param6.field_o.field_u) {
             SoftwareRasterizer.drawRoundedRect(-(var10 / 2) + param2 / 2 + param5 - 2, param1 - var13 - 2, 4 + var10, var13 + 4, 2 + var11, SoundPlayback.field_k[0]);
           } else {
-            GameKeyHandler.a(2 + var11, var14, 4 + var10, param1 - var13 - 2, -2 + (param2 / 2 + param5 - var10 / 2), (byte) -126, 4 + var13);
+            GameKeyHandler.drawRoundedGradientFrame(2 + var11, var14, 4 + var10, param1 - var13 - 2, -2 + (param2 / 2 + param5 - var10 / 2), (byte) -126, 4 + var13);
           }
           var15 = var12 * var9 / param6.field_z;
           if (var15 == 0) {

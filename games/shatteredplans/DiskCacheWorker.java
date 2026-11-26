@@ -219,7 +219,7 @@ final class DiskCacheWorker implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), (String) null);
+              GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var2_ref), (String) null);
               var7.field_u = false;
             }
           }

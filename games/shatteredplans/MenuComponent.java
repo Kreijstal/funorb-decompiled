@@ -398,7 +398,7 @@ class MenuComponent extends IntrusiveNode {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            StandardMapGenerator.a(var1, (byte) -128);
+            StandardMapGenerator.writeReflectionCheckResponse(var1, (byte) -128);
             LobbyOptionSupport.field_f.patchLengthByte(-var2 + var1.position, (byte) 118);
           }
           if (param0 != 2147483647) {

@@ -142,7 +142,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearKeyHandlerStatics(byte param0) {
         field_b = null;
         field_e = null;
         field_c = null;
@@ -151,21 +151,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           field_a = null;
           return;
         }
-        GameKeyHandler.a(115, 98, 0, 80, -77, 117, false, 103);
+        GameKeyHandler.drawHexagonPatternStrip(115, 98, 0, 80, -77, 117, false, 103);
         field_d = null;
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final static void drawRoundedGradientFrame(int param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         if (param5 < -125) {
           RoundedFrameSupport.drawRoundedGradientFrame(20, param1, param0, param2, param4, param3, 0, param6);
           return;
         }
-        GameKeyHandler.a(-32, 98, 121, 31, -39, (byte) -98, 83);
+        GameKeyHandler.drawRoundedGradientFrame(-32, 98, 121, 31, -39, (byte) -98, 83);
         RoundedFrameSupport.drawRoundedGradientFrame(20, param1, param0, param2, param4, param3, 0, param6);
     }
 
-    final static void a(int param0, Throwable param1, String param2) {
+    final static void reportClientError(int param0, Throwable param1, String param2) {
         try {
           PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
@@ -229,7 +229,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               var5.close();
             }
             if (param0 != -29901) {
-              GameKeyHandler.a(-48, 12, 85, -13, -5, -119, true, 2);
+              GameKeyHandler.drawHexagonPatternStrip(-48, 12, 85, -13, -5, -119, true, 2);
               return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -269,7 +269,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final static void drawHexagonPatternStrip(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -322,7 +322,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, int param10, int param11, String param12, long param13) {
+    final static void initializeNetworkSessionState(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, int param10, int param11, String param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -340,7 +340,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             AccountInputSupport.field_f = param3;
             StarAbandonedEvent.field_l = param1;
             if (param0 != 0) {
-              GameKeyHandler.a((byte) 38);
+              GameKeyHandler.clearKeyHandlerStatics((byte) 38);
             }
             BytePayloadNode.field_l = param13;
             LobbyRoomControlsSupport.field_c = param5;

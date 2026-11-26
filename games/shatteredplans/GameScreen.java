@@ -1396,7 +1396,7 @@ final class GameScreen {
               return;
             }
           }
-          var15 = GameApplet.a(this.field_G[param4], 117);
+          var15 = GameApplet.invertPermutation(this.field_G[param4], 117);
           var16 = 0;
           while (var6_int > var16) {
             var17 = (var6_int * var14 - (var15[var16] * var14 >> 1)) / var6_int;
@@ -5081,7 +5081,7 @@ final class GameScreen {
           this.field_y.addLast((byte) -113, this.field_cb);
           var2_int = this.field_s.field_P.field_x.resultsPanelHeight(false);
           if (var2_int > 0) {
-            this.field_nb = SecondaryNodeHashTable.a(var2_int, true);
+            this.field_nb = SecondaryNodeHashTable.createVictoryWindow(var2_int, true);
             this.field_y.addLast((byte) -113, this.field_nb);
           }
           this.field_k = WeightedLruCache.createStatusBar((byte) 69);

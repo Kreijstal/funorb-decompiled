@@ -111,7 +111,7 @@ final class MenuButton extends MenuComponent {
           LobbyUiSetupSupport.initializeLobbyWidgets(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
           DiskArchiveRequest.initializeLobbyChat(param7, (byte) -81, param0, param8);
           DisplayNameForm.initializeReportReasonLabels(1062);
-          SecondaryNodeHashTable.a((byte) -83);
+          SecondaryNodeHashTable.initializeLobbyPanels((byte) -83);
           ChatAreaLayoutSupport.layoutChatPanels(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

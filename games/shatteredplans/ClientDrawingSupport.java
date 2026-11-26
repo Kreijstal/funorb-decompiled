@@ -384,7 +384,7 @@ final class ClientDrawingSupport {
               var16_ref.field_l = true;
               var16_ref.unlink((byte) -89);
             } else {
-              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
+              GameKeyHandler.reportClientError(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
               TabbedPanel.closeClientSocket(-125);
             }
           }

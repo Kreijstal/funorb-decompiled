@@ -32,7 +32,7 @@ final class EmailValidator extends TextFieldValidator {
           if (param4 > -83) {
             EmailValidator.clearFacePriorityCounts(87);
           }
-          stackIn_7_0 = SecondaryNodeHashTable.a(15, param3.getFile(param1, -1, param0));
+          stackIn_7_0 = SecondaryNodeHashTable.createCoverageFontFromDecodedSprites(15, param3.getFile(param1, -1, param0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -210,7 +210,7 @@ final class EmailValidator extends TextFieldValidator {
                   if (0 >= PrivateChatMessage.field_k) {
                     if (MouseInputHandler.field_f > PlacementOrder.field_t) {
                       if (PlacementOrder.field_t == 0) {
-                        SecondaryNodeHashTable.a((byte) -83);
+                        SecondaryNodeHashTable.initializeLobbyPanels((byte) -83);
                       }
                       PlacementOrder.field_t = PlacementOrder.field_t + 1;
                     }

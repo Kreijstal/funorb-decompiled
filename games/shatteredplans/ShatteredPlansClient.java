@@ -410,19 +410,19 @@ public final class ShatteredPlansClient extends GameClientShell {
             } catch (MapGenerationException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var15 = (MapGenerationException) (Object) decompiledCaughtException;
-              GameKeyHandler.a(-29901, (Throwable) ((Object) var15), "Map Generation failed when receiving initial game state from server.");
+              GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var15), "Map Generation failed when receiving initial game state from server.");
               TabbedPanel.closeClientSocket(-96);
               decompiledRegionSelector0 = 1;
             } catch (InvalidMapConnectionException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var15_ref = (InvalidMapConnectionException) (Object) decompiledCaughtException;
-              GameKeyHandler.a(-29901, (Throwable) ((Object) var15_ref), "Gamestate received from server is invalid.");
+              GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var15_ref), "Gamestate received from server is invalid.");
               TabbedPanel.closeClientSocket(-96);
               decompiledRegionSelector0 = 1;
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var15_ref2 = (Exception) (Object) decompiledCaughtException;
-              GameKeyHandler.a(-29901, (Throwable) ((Object) var15_ref2), "Error receiving gamestate from server.");
+              GameKeyHandler.reportClientError(-29901, (Throwable) ((Object) var15_ref2), "Error receiving gamestate from server.");
               TabbedPanel.closeClientSocket(-119);
               decompiledRegionSelector0 = 1;
             }
@@ -738,14 +738,14 @@ public final class ShatteredPlansClient extends GameClientShell {
         GameRules.clearStatics(true);
         GalaxyMap.clearStatics((byte) -98);
         TextReplacementContext.clearStatics(param0 ^ -24069);
-        GameKeyHandler.a((byte) -102);
+        GameKeyHandler.clearKeyHandlerStatics((byte) -102);
         LobbyRoomInteractionSupport.clearStatics(true);
         SettingsCookieSupport.releaseSettingsCookieStatics((byte) -23);
         LoginResultSupport.clearStatics((byte) -103);
         GameSoundSetupSupport.clearStatics(256);
         GameClientShell.clearStatics(-38);
         ClientException.clearStatics(108);
-        GameApplet.b(param0 ^ -24187);
+        GameApplet.clearGameAppletStatics(param0 ^ -24187);
         UrlLoader.clearStatics(0);
         MouseInputHandler.clearMouseInputStatics(param0 ^ -24150);
         MouseWheelInput.clearStatics(param0 ^ -24163);
