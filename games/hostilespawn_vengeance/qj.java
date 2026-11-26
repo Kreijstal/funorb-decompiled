@@ -207,11 +207,11 @@ final class qj extends IntrusiveNode {
         try {
           hf.field_a = param0.readUnsignedShort(8) << 5;
           var2_int = param0.readUnsignedByte(32270);
-          sm.field_g = (7 & var2_int) << 18;
+          AwtRasterBuffer.field_g = (7 & var2_int) << 18;
           hf.field_a = hf.field_a + (var2_int >> 3);
-          sm.field_g = sm.field_g + (param0.readUnsignedShort(8) << 2);
+          AwtRasterBuffer.field_g = AwtRasterBuffer.field_g + (param0.readUnsignedShort(8) << 2);
           var2_intLifetime1 = param0.readUnsignedByte(32270);
-          sm.field_g = sm.field_g + (var2_intLifetime1 >> 6);
+          AwtRasterBuffer.field_g = AwtRasterBuffer.field_g + (var2_intLifetime1 >> 6);
           jn.field_J = var2_intLifetime1 << 15 & 2064384;
           jn.field_J = jn.field_J + (param0.readUnsignedByte(32270) << 7);
           if (param1 != -12) {

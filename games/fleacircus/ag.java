@@ -85,7 +85,7 @@ final class ag {
               var7 = new ah(param1, rd.field_c, mc.field_c[param1], 2097152);
             }
             if (param5 != 1) {
-              ag.a(7);
+              ag.resetStaticState(7);
             }
             var8 = gf.field_e.a(28742, param2, (ah) (var7), (ah) (var6), param1);
             if (param0) {
@@ -133,7 +133,7 @@ final class ag {
         return null;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_f = 5;
           field_e = null;

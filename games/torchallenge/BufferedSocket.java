@@ -22,7 +22,7 @@ final class BufferedSocket implements Runnable {
     static String field_q;
     static int field_j;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_q = null;
           field_p = null;
@@ -133,7 +133,7 @@ final class BufferedSocket implements Runnable {
             }
             this.notifyAll();
             if (param2 < 57) {
-              BufferedSocket.a(true);
+              BufferedSocket.resetStaticState(true);
             }
           }
           return;

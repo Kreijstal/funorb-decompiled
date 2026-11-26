@@ -310,7 +310,7 @@ final class nl {
         return (byte) var2;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_a = null;
         if (param0) {
           field_c = -99;

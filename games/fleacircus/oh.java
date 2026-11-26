@@ -34,8 +34,8 @@ abstract class oh extends jj {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, byte param3, ResourceArchive param4) {
         try {
-          uc.field_c = pk.a((byte) 68, "");
-          uc.field_c.a(false, 10518);
+          AwtRasterBuffer.field_c = pk.a((byte) 68, "");
+          AwtRasterBuffer.field_c.a(false, 10518);
           j.a(param4, param1, param3 ^ 31756, param0);
           if (param3 != 28) {
             oh.c(2, -119, 119);

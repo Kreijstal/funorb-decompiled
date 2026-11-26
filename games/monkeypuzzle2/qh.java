@@ -224,7 +224,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             } else {
               if (var9Lifetime1 == 248) {
                 nh.a((byte) 99, ii.a(false));
-                sl.field_n = sb.field_q;
+                ImageProducerRasterBuffer.field_n = sb.field_q;
                 PacketBuffer.a(-1);
                 DequeCursor.field_e = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -261,7 +261,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (dk.field_h == ma.field_d &&
             gb.a(true)) {
             if (wk.field_a != 255) {
-              sl.field_n = MonkeyPuzzle2.field_D.readString(-1);
+              ImageProducerRasterBuffer.field_n = MonkeyPuzzle2.field_D.readString(-1);
             } else {
               var9_ref_String = MonkeyPuzzle2.field_D.readNullableString(-1185292952);
               if (var9_ref_String != null) {
@@ -276,9 +276,9 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (ol.field_g == null) {
             if (DequeCursor.field_e) {
               if (wf.a(114) > 30000L) {
-                sl.field_n = kj.field_E;
+                ImageProducerRasterBuffer.field_n = kj.field_E;
               } else {
-                sl.field_n = AccountNameAvailabilityValidator.field_p;
+                ImageProducerRasterBuffer.field_n = AccountNameAvailabilityValidator.field_p;
               }
               DequeCursor.field_e = false;
               stackIn_65_0 = 249;

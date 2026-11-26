@@ -16,7 +16,7 @@ final class wm extends hf {
 
     final void a(PrimaryNodeDeque param0, double param1, int param2, vg param3, oi param4) {
         try {
-          this.a(-116, cd.field_o[(this.field_eb & 15) >> 1], param1, param3);
+          this.a(-116, ImageProducerRasterBuffer.field_o[(this.field_eb & 15) >> 1], param1, param3);
           if (param2 >= -5) {
             field_bb = 59;
           }

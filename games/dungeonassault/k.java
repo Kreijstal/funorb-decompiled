@@ -11,7 +11,7 @@ final class k {
     static eh field_c;
     String field_i;
     static String field_b;
-    static c field_h;
+    static AwtRasterBuffer field_h;
     static String[] field_a;
 
     k(String param0, String param1, k param2) {

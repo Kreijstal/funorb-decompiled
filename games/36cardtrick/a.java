@@ -15,7 +15,7 @@ final class a extends ch {
         return new jk(ja.a(-7705), oj.a(104));
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_n = null;
         if (param0 != -14282) {
           field_o = -16;

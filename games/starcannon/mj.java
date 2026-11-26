@@ -73,10 +73,10 @@ final class mj {
         int var4;
         int var5;
         if (param1) {
-          if (tk.field_f[param3] > tk.field_f[param0]) {
+          if (AwtRasterBuffer.field_f[param3] > AwtRasterBuffer.field_f[param0]) {
             return true;
           }
-          if (tk.field_f[param3] < tk.field_f[param0]) {
+          if (AwtRasterBuffer.field_f[param3] < AwtRasterBuffer.field_f[param0]) {
             return false;
           }
           if (fg.field_b[param0] < fg.field_b[param3]) {
@@ -92,10 +92,10 @@ final class mj {
           if (fg.field_b[param0] > fg.field_b[param3]) {
             return false;
           }
-          if (tk.field_f[param3] > tk.field_f[param0]) {
+          if (AwtRasterBuffer.field_f[param3] > AwtRasterBuffer.field_f[param0]) {
             return true;
           }
-          if (tk.field_f[param0] > tk.field_f[param3]) {
+          if (AwtRasterBuffer.field_f[param0] > AwtRasterBuffer.field_f[param3]) {
             return false;
           }
         }

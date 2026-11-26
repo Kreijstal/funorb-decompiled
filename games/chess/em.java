@@ -100,7 +100,7 @@ final class em {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_k = null;
         field_m = null;
         field_M = null;

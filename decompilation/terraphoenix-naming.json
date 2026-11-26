@@ -1412,6 +1412,14 @@
       "renamedSymbol": "C:BattleUnit"
     },
     {
+      "symbol": "C:ri",
+      "originalName": "ri",
+      "to": "BufferedImageRasterBuffer",
+      "evidence": "AWT raster buffer backed by inherited int pixel storage through DataBufferInt/DirectColorModel/WritableRaster/BufferedImage,and drawn through Graphics.drawImage using retained Component observer. Complete class,public empty no-argument constructor,and both initialization/drawing bodies reviewed;exactly one own nonstatic Component field and four inherited dimension/pixel/image fields verified with bound platform APIs. Preserve finality/visibility,all method/field leaves except constructor class-name display,full primitive domains,guard paths,int overflow and pixel-array size,Lexicominos supplied premultiplication boolean,aliases,partial writes and allocation/call/exception order. Exactly one bound Class.forName string must follow this class rename;other literals unchanged. Deko already has provisional RenderingSupport013 alias,so its existing literal edit is refined rather than counted twice.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BufferedImageRasterBuffer"
+    },
+    {
       "symbol": "C:sd",
       "originalName": "sd",
       "to": "QuickChatMenu",
@@ -2868,6 +2876,14 @@
       "renamedSymbol": "M:di.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:dj.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:dj.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:dk.$cfr$dcmpg(DD)I",
       "originalName": "$cfr$dcmpg",
       "to": "compareDoublesNaNResultPositive",
@@ -2938,6 +2954,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 5101e8153669369be53f1cddd7deb5f2ee877a0baafb6128578ede56b77a978c.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ef.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:eg.c(B)V",
+      "originalName": "c",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:eg.resetStaticState(B)V"
     },
     {
       "symbol": "M:eh.$cfr$lcmp(JJ)I",
@@ -3020,12 +3044,28 @@
       "renamedSymbol": "M:SoundFilter.interpolateMagnitude(IIF)F"
     },
     {
+      "symbol": "M:el.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ClientException.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:em.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 bb4597bdc76715cb22272e57aba85276c7df64d4ecc4f241179da3f92e4ff536.",
       "confidence": "reviewed",
       "renamedSymbol": "M:em.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:f.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:f.resetStaticState(I)V"
     },
     {
       "symbol": "M:fa.b(I)V",
@@ -3052,12 +3092,28 @@
       "renamedSymbol": "M:fc.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:fd.b(I)V",
+      "originalName": "b",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 4 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fd.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:fg.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 dd8a5e73167d277d4c5373b859e8f0c2fefc6bc33f878fb6e275369d7b0223d5.",
       "confidence": "reviewed",
       "renamedSymbol": "M:fg.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:fh.a(B)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 5 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:fh.resetStaticState(B)V"
     },
     {
       "symbol": "M:fi.a(Z)V",
@@ -3108,6 +3164,14 @@
       "renamedSymbol": "M:fm.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:g.d(I)V",
+      "originalName": "d",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:g.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:ga.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3130,6 +3194,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 6d9d7ebf360c6a0648785ee6c2effd21c5d75f4208208f4921ef0a64e2a9e8ca.",
       "confidence": "reviewed",
       "renamedSymbol": "M:gd.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ge.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 4 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ge.resetStaticState(I)V"
     },
     {
       "symbol": "M:ge.a(III)I",
@@ -3180,6 +3252,14 @@
       "renamedSymbol": "M:gj.computeCrc32(III[B)I"
     },
     {
+      "symbol": "M:gl.a(Z)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 5 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiWidget.resetStaticState(Z)V"
+    },
+    {
       "symbol": "M:gm.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3194,6 +3274,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a6d74eb32a9d0565871fc257e780b24cd518f4eff72655c85ad99558fc10feac.",
       "confidence": "reviewed",
       "renamedSymbol": "M:h.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:hb.d(I)V",
+      "originalName": "d",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 4 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:hb.resetStaticState(I)V"
     },
     {
       "symbol": "M:hd.c(B)V",
@@ -3492,6 +3580,14 @@
       "renamedSymbol": "M:im.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:j.g(I)V",
+      "originalName": "g",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 5 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:j.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:ja.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3522,6 +3618,14 @@
       "evidence": "Calls removeMouseWheelListener on the component. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MouseWheelInput.unregister(Ljava/awt/Component;B)V"
+    },
+    {
+      "symbol": "M:jb.a(Z)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseWheelInput.resetStaticState(Z)V"
     },
     {
       "symbol": "M:jc.f(B)V",
@@ -3740,6 +3844,14 @@
       "renamedSymbol": "M:jl.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:jm.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 6 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DelegatingCanvas.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:k.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3850,6 +3962,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 c5d799a1c1fb863ca05ec919aea4ffc004d2a66a2ce9a62986a88cee818140d9.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TutorialText.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:km.a(B)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ArchiveIndex.resetStaticState(B)V"
     },
     {
       "symbol": "M:l.a()V",
@@ -4148,6 +4268,14 @@
       "renamedSymbol": "M:le.clearDeclaredStaticReferences(B)V"
     },
     {
+      "symbol": "M:lg.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:lg.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:lh.a()Llj;",
       "originalName": "a",
       "to": "nextChildStream",
@@ -4356,6 +4484,14 @@
       "renamedSymbol": "M:mb.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:me.a(Z)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 6 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:me.resetStaticState(Z)V"
+    },
+    {
       "symbol": "M:mh.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -4426,6 +4562,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 b3a60da45048bc4c5db8da4740a84aa1083bbe505001adabd4a3425b1a17dab2.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mm.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:na.d(Z)V",
+      "originalName": "d",
+      "to": "resetDeclaredStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 5 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:na.resetDeclaredStaticState(Z)V"
     },
     {
       "symbol": "M:nc.a(I)V",
@@ -4620,6 +4764,14 @@
       "renamedSymbol": "M:nl.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:o.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:o.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:oa.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -4786,6 +4938,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 0390edc9c36ba7a9a4ac5aef31f0954e5f0e9221351f64dbb145da2423486130.",
       "confidence": "reviewed",
       "renamedSymbol": "M:pl.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:q.e(I)V",
+      "originalName": "e",
+      "to": "resetDeclaredStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 8 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:q.resetDeclaredStaticState(I)V"
     },
     {
       "symbol": "M:qa.a(I)V",
@@ -5204,6 +5364,14 @@
       "renamedSymbol": "M:BufferedSocket.available(I)I"
     },
     {
+      "symbol": "M:tf.b(B)V",
+      "originalName": "b",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.resetStaticState(B)V"
+    },
+    {
       "symbol": "M:tf.c(I)V",
       "originalName": "c",
       "to": "throwPendingError",
@@ -5346,6 +5514,14 @@
       "evidence": "Source-purpose review: Clears 3 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (1 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:uj.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:uk.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:uk.resetStaticState(I)V"
     },
     {
       "symbol": "M:ul.a()I",
@@ -10254,9 +10430,9 @@
     },
     {
       "symbol": "C:ri",
-      "renamedSymbol": "C:ri",
+      "renamedSymbol": "C:BufferedImageRasterBuffer",
       "originalName": "ri",
-      "renamedName": "ri",
+      "renamedName": "BufferedImageRasterBuffer",
       "declaration": {
         "file": "ri.java",
         "start": 71,
@@ -34333,7 +34509,7 @@
     },
     {
       "symbol": "F:ri.field_h:Ljava/awt/Component;",
-      "renamedSymbol": "F:ri.field_h:Ljava/awt/Component;",
+      "renamedSymbol": "F:BufferedImageRasterBuffer.field_h:Ljava/awt/Component;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -165904,7 +166080,7 @@
     },
     {
       "symbol": "L:ri.a(IIBLjava/awt/Component;)V#0",
-      "renamedSymbol": "L:ri.a(IIBLjava/awt/Component;)V#0",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -165915,7 +166091,7 @@
     },
     {
       "symbol": "L:ri.a(IIBLjava/awt/Component;)V#1",
-      "renamedSymbol": "L:ri.a(IIBLjava/awt/Component;)V#1",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#1",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -165926,7 +166102,7 @@
     },
     {
       "symbol": "L:ri.a(IIBLjava/awt/Component;)V#2",
-      "renamedSymbol": "L:ri.a(IIBLjava/awt/Component;)V#2",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -165937,7 +166113,7 @@
     },
     {
       "symbol": "L:ri.a(IIBLjava/awt/Component;)V#3",
-      "renamedSymbol": "L:ri.a(IIBLjava/awt/Component;)V#3",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -165948,7 +166124,7 @@
     },
     {
       "symbol": "L:ri.a(IILjava/awt/Graphics;I)V#0",
-      "renamedSymbol": "L:ri.a(IILjava/awt/Graphics;I)V#0",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.a(IILjava/awt/Graphics;I)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -197551,9 +197727,9 @@
     },
     {
       "symbol": "M:dj.a(I)V",
-      "renamedSymbol": "M:dj.a(I)V",
+      "renamedSymbol": "M:dj.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "dj.java",
         "start": 1188,
@@ -198827,9 +199003,9 @@
     },
     {
       "symbol": "M:eg.c(B)V",
-      "renamedSymbol": "M:eg.c(B)V",
+      "renamedSymbol": "M:eg.resetStaticState(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "eg.java",
         "start": 294,
@@ -199751,9 +199927,9 @@
     },
     {
       "symbol": "M:el.a(I)V",
-      "renamedSymbol": "M:ClientException.a(I)V",
+      "renamedSymbol": "M:ClientException.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "el.java",
         "start": 222,
@@ -199817,9 +199993,9 @@
     },
     {
       "symbol": "M:f.a(I)V",
-      "renamedSymbol": "M:f.a(I)V",
+      "renamedSymbol": "M:f.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "f.java",
         "start": 393,
@@ -200521,9 +200697,9 @@
     },
     {
       "symbol": "M:fd.b(I)V",
-      "renamedSymbol": "M:fd.b(I)V",
+      "renamedSymbol": "M:fd.resetStaticState(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "fd.java",
         "start": 19338,
@@ -200708,9 +200884,9 @@
     },
     {
       "symbol": "M:fh.a(B)V",
-      "renamedSymbol": "M:fh.a(B)V",
+      "renamedSymbol": "M:fh.resetStaticState(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "fh.java",
         "start": 575,
@@ -201258,9 +201434,9 @@
     },
     {
       "symbol": "M:g.d(I)V",
-      "renamedSymbol": "M:g.d(I)V",
+      "renamedSymbol": "M:g.resetStaticState(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "g.java",
         "start": 1775,
@@ -201775,9 +201951,9 @@
     },
     {
       "symbol": "M:ge.a(I)V",
-      "renamedSymbol": "M:ge.a(I)V",
+      "renamedSymbol": "M:ge.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "ge.java",
         "start": 232,
@@ -202545,9 +202721,9 @@
     },
     {
       "symbol": "M:gl.a(Z)V",
-      "renamedSymbol": "M:UiWidget.a(Z)V",
+      "renamedSymbol": "M:UiWidget.resetStaticState(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "gl.java",
         "start": 6643,
@@ -202919,9 +203095,9 @@
     },
     {
       "symbol": "M:hb.d(I)V",
-      "renamedSymbol": "M:hb.d(I)V",
+      "renamedSymbol": "M:hb.resetStaticState(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "hb.java",
         "start": 4569,
@@ -204646,9 +204822,9 @@
     },
     {
       "symbol": "M:j.g(I)V",
-      "renamedSymbol": "M:j.g(I)V",
+      "renamedSymbol": "M:j.resetStaticState(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "j.java",
         "start": 1902,
@@ -204789,9 +204965,9 @@
     },
     {
       "symbol": "M:jb.a(Z)V",
-      "renamedSymbol": "M:MouseWheelInput.a(Z)V",
+      "renamedSymbol": "M:MouseWheelInput.resetStaticState(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "jb.java",
         "start": 3175,
@@ -205735,9 +205911,9 @@
     },
     {
       "symbol": "M:jm.a(I)V",
-      "renamedSymbol": "M:DelegatingCanvas.a(I)V",
+      "renamedSymbol": "M:DelegatingCanvas.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "jm.java",
         "start": 944,
@@ -206527,9 +206703,9 @@
     },
     {
       "symbol": "M:km.a(B)V",
-      "renamedSymbol": "M:ArchiveIndex.a(B)V",
+      "renamedSymbol": "M:ArchiveIndex.resetStaticState(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "km.java",
         "start": 516,
@@ -207297,9 +207473,9 @@
     },
     {
       "symbol": "M:lg.a(I)V",
-      "renamedSymbol": "M:lg.a(I)V",
+      "renamedSymbol": "M:lg.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "lg.java",
         "start": 343,
@@ -208430,9 +208606,9 @@
     },
     {
       "symbol": "M:me.a(Z)V",
-      "renamedSymbol": "M:me.a(Z)V",
+      "renamedSymbol": "M:me.resetStaticState(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "me.java",
         "start": 1978,
@@ -208925,9 +209101,9 @@
     },
     {
       "symbol": "M:na.d(Z)V",
-      "renamedSymbol": "M:na.d(Z)V",
+      "renamedSymbol": "M:na.resetDeclaredStaticState(Z)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "resetDeclaredStaticState",
       "declaration": {
         "file": "na.java",
         "start": 4328,
@@ -209629,9 +209805,9 @@
     },
     {
       "symbol": "M:o.a(I)V",
-      "renamedSymbol": "M:o.a(I)V",
+      "renamedSymbol": "M:o.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "o.java",
         "start": 1637,
@@ -211477,9 +211653,9 @@
     },
     {
       "symbol": "M:q.e(I)V",
-      "renamedSymbol": "M:q.e(I)V",
+      "renamedSymbol": "M:q.resetDeclaredStaticState(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "resetDeclaredStaticState",
       "declaration": {
         "file": "q.java",
         "start": 2777,
@@ -212951,9 +213127,9 @@
     },
     {
       "symbol": "M:ri.<init>()V",
-      "renamedSymbol": "M:ri.<init>()V",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.<init>()V",
       "originalName": "ri",
-      "renamedName": "ri",
+      "renamedName": "BufferedImageRasterBuffer",
       "declaration": {
         "file": "ri.java",
         "start": 1704,
@@ -212962,7 +213138,7 @@
     },
     {
       "symbol": "M:ri.a(IIBLjava/awt/Component;)V",
-      "renamedSymbol": "M:ri.a(IIBLjava/awt/Component;)V",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -212973,7 +213149,7 @@
     },
     {
       "symbol": "M:ri.a(IILjava/awt/Graphics;I)V",
-      "renamedSymbol": "M:ri.a(IILjava/awt/Graphics;I)V",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.a(IILjava/awt/Graphics;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -214392,9 +214568,9 @@
     },
     {
       "symbol": "M:tf.b(B)V",
-      "renamedSymbol": "M:BufferedSocket.b(B)V",
+      "renamedSymbol": "M:BufferedSocket.resetStaticState(B)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "tf.java",
         "start": 8794,
@@ -215624,9 +215800,9 @@
     },
     {
       "symbol": "M:uk.a(I)V",
-      "renamedSymbol": "M:uk.a(I)V",
+      "renamedSymbol": "M:uk.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "uk.java",
         "start": 2641,
@@ -231310,7 +231486,7 @@
     },
     {
       "symbol": "P:dj.a(I)V#0",
-      "renamedSymbol": "P:dj.a(I)V#0",
+      "renamedSymbol": "P:dj.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -234995,7 +235171,7 @@
     },
     {
       "symbol": "P:eg.c(B)V#0",
-      "renamedSymbol": "P:eg.c(B)V#0",
+      "renamedSymbol": "P:eg.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236436,7 +236612,7 @@
     },
     {
       "symbol": "P:el.a(I)V#0",
-      "renamedSymbol": "P:ClientException.a(I)V#0",
+      "renamedSymbol": "P:ClientException.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -236612,7 +236788,7 @@
     },
     {
       "symbol": "P:f.a(I)V#0",
-      "renamedSymbol": "P:f.a(I)V#0",
+      "renamedSymbol": "P:f.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238548,7 +238724,7 @@
     },
     {
       "symbol": "P:fd.b(I)V#0",
-      "renamedSymbol": "P:fd.b(I)V#0",
+      "renamedSymbol": "P:fd.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -238933,7 +239109,7 @@
     },
     {
       "symbol": "P:fh.a(B)V#0",
-      "renamedSymbol": "P:fh.a(B)V#0",
+      "renamedSymbol": "P:fh.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -240077,7 +240253,7 @@
     },
     {
       "symbol": "P:g.d(I)V#0",
-      "renamedSymbol": "P:g.d(I)V#0",
+      "renamedSymbol": "P:g.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -241320,7 +241496,7 @@
     },
     {
       "symbol": "P:ge.a(I)V#0",
-      "renamedSymbol": "P:ge.a(I)V#0",
+      "renamedSymbol": "P:ge.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -243652,7 +243828,7 @@
     },
     {
       "symbol": "P:gl.a(Z)V#0",
-      "renamedSymbol": "P:UiWidget.a(Z)V#0",
+      "renamedSymbol": "P:UiWidget.resetStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -244345,7 +244521,7 @@
     },
     {
       "symbol": "P:hb.d(I)V#0",
-      "renamedSymbol": "P:hb.d(I)V#0",
+      "renamedSymbol": "P:hb.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248206,7 +248382,7 @@
     },
     {
       "symbol": "P:j.g(I)V#0",
-      "renamedSymbol": "P:j.g(I)V#0",
+      "renamedSymbol": "P:j.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248470,7 +248646,7 @@
     },
     {
       "symbol": "P:jb.a(Z)V#0",
-      "renamedSymbol": "P:MouseWheelInput.a(Z)V#0",
+      "renamedSymbol": "P:MouseWheelInput.resetStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -250725,7 +250901,7 @@
     },
     {
       "symbol": "P:jm.a(I)V#0",
-      "renamedSymbol": "P:DelegatingCanvas.a(I)V#0",
+      "renamedSymbol": "P:DelegatingCanvas.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -252419,7 +252595,7 @@
     },
     {
       "symbol": "P:km.a(B)V#0",
-      "renamedSymbol": "P:ArchiveIndex.a(B)V#0",
+      "renamedSymbol": "P:ArchiveIndex.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -254938,7 +255114,7 @@
     },
     {
       "symbol": "P:lg.a(I)V#0",
-      "renamedSymbol": "P:lg.a(I)V#0",
+      "renamedSymbol": "P:lg.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258953,7 +259129,7 @@
     },
     {
       "symbol": "P:me.a(Z)V#0",
-      "renamedSymbol": "P:me.a(Z)V#0",
+      "renamedSymbol": "P:me.resetStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -259954,7 +260130,7 @@
     },
     {
       "symbol": "P:na.d(Z)V#0",
-      "renamedSymbol": "P:na.d(Z)V#0",
+      "renamedSymbol": "P:na.resetDeclaredStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260988,7 +261164,7 @@
     },
     {
       "symbol": "P:o.a(I)V#0",
-      "renamedSymbol": "P:o.a(I)V#0",
+      "renamedSymbol": "P:o.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -265674,7 +265850,7 @@
     },
     {
       "symbol": "P:q.e(I)V#0",
-      "renamedSymbol": "P:q.e(I)V#0",
+      "renamedSymbol": "P:q.resetDeclaredStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -268897,7 +269073,7 @@
     },
     {
       "symbol": "P:ri.a(IIBLjava/awt/Component;)V#0",
-      "renamedSymbol": "P:ri.a(IIBLjava/awt/Component;)V#0",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -268908,7 +269084,7 @@
     },
     {
       "symbol": "P:ri.a(IIBLjava/awt/Component;)V#1",
-      "renamedSymbol": "P:ri.a(IIBLjava/awt/Component;)V#1",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -268919,7 +269095,7 @@
     },
     {
       "symbol": "P:ri.a(IIBLjava/awt/Component;)V#2",
-      "renamedSymbol": "P:ri.a(IIBLjava/awt/Component;)V#2",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -268930,7 +269106,7 @@
     },
     {
       "symbol": "P:ri.a(IIBLjava/awt/Component;)V#3",
-      "renamedSymbol": "P:ri.a(IIBLjava/awt/Component;)V#3",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IIBLjava/awt/Component;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -268941,7 +269117,7 @@
     },
     {
       "symbol": "P:ri.a(IILjava/awt/Graphics;I)V#0",
-      "renamedSymbol": "P:ri.a(IILjava/awt/Graphics;I)V#0",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IILjava/awt/Graphics;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -268952,7 +269128,7 @@
     },
     {
       "symbol": "P:ri.a(IILjava/awt/Graphics;I)V#1",
-      "renamedSymbol": "P:ri.a(IILjava/awt/Graphics;I)V#1",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IILjava/awt/Graphics;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -268963,7 +269139,7 @@
     },
     {
       "symbol": "P:ri.a(IILjava/awt/Graphics;I)V#2",
-      "renamedSymbol": "P:ri.a(IILjava/awt/Graphics;I)V#2",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IILjava/awt/Graphics;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -268974,7 +269150,7 @@
     },
     {
       "symbol": "P:ri.a(IILjava/awt/Graphics;I)V#3",
-      "renamedSymbol": "P:ri.a(IILjava/awt/Graphics;I)V#3",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.a(IILjava/awt/Graphics;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -272978,7 +273154,7 @@
     },
     {
       "symbol": "P:tf.b(B)V#0",
-      "renamedSymbol": "P:BufferedSocket.b(B)V#0",
+      "renamedSymbol": "P:BufferedSocket.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275673,7 +275849,7 @@
     },
     {
       "symbol": "P:uk.a(I)V#0",
-      "renamedSymbol": "P:uk.a(I)V#0",
+      "renamedSymbol": "P:uk.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -279879,7 +280055,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "017260a0a5e275181e09c962b2611e183cf1ee07298fe4c3a82381c3be723209",
+      "outputSha256": "9be7c267bcb01a7dd44ff8cf08d1cae1e631cece9e4c39df9514f0054d915e91",
       "edits": [
         {
           "start": 78,
@@ -283236,6 +283412,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 163337,
+          "end": 163338,
+          "symbol": "M:lg.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 163357,
           "end": 163358,
           "symbol": "M:hd.c(B)V",
@@ -283348,6 +283531,13 @@
           "renamed": "BufferedSocket"
         },
         {
+          "start": 163720,
+          "end": 163721,
+          "symbol": "M:tf.b(B)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 163745,
           "end": 163747,
           "symbol": "C:fa",
@@ -283383,6 +283573,13 @@
           "renamed": "ClientException"
         },
         {
+          "start": 163791,
+          "end": 163792,
+          "symbol": "M:el.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 163807,
           "end": 163809,
           "symbol": "C:eh",
@@ -283409,6 +283606,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 163886,
+          "end": 163887,
+          "symbol": "M:jb.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 163906,
@@ -283838,6 +284042,13 @@
           "renamed": "AccountCreationResultPanel"
         },
         {
+          "start": 165209,
+          "end": 165210,
+          "symbol": "M:na.d(Z)V",
+          "original": "d",
+          "renamed": "resetDeclaredStaticState"
+        },
+        {
           "start": 165231,
           "end": 165232,
           "symbol": "M:jg.d(Z)V",
@@ -283880,11 +284091,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 165385,
+          "end": 165386,
+          "symbol": "M:fh.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 165409,
           "end": 165411,
           "symbol": "C:km",
           "original": "km",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 165412,
+          "end": 165413,
+          "symbol": "M:km.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 165436,
@@ -284011,6 +284236,13 @@
           "symbol": "M:je.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 165886,
+          "end": 165887,
+          "symbol": "M:g.d(I)V",
+          "original": "d",
+          "renamed": "resetStaticState"
         },
         {
           "start": 165906,
@@ -284209,6 +284441,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 166475,
+          "end": 166476,
+          "symbol": "M:fd.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 166495,
           "end": 166496,
           "symbol": "M:ob.a()V",
@@ -284223,6 +284462,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 166535,
+          "end": 166536,
+          "symbol": "M:dj.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 166583,
           "end": 166584,
           "symbol": "M:aj.a(Z)V",
@@ -284235,6 +284481,13 @@
           "symbol": "M:ik.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 166634,
+          "end": 166635,
+          "symbol": "M:uk.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 166654,
@@ -284265,6 +284518,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 166754,
+          "end": 166755,
+          "symbol": "M:jm.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 166798,
           "end": 166799,
           "symbol": "M:ea.a(Z)V",
@@ -284279,6 +284539,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 166846,
+          "end": 166847,
+          "symbol": "M:f.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 166874,
           "end": 166875,
           "symbol": "M:sk.a(Z)V",
@@ -284291,6 +284558,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 166925,
+          "end": 166926,
+          "symbol": "M:gl.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 166947,
@@ -284370,6 +284644,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 167240,
+          "end": 167241,
+          "symbol": "M:ge.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 167286,
           "end": 167287,
           "symbol": "M:jd.d(I)V",
@@ -284403,6 +284684,13 @@
           "symbol": "M:ef.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 167366,
+          "end": 167367,
+          "symbol": "M:j.g(I)V",
+          "original": "g",
+          "renamed": "resetStaticState"
         },
         {
           "start": 167435,
@@ -284636,11 +284924,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 168275,
+          "end": 168276,
+          "symbol": "M:q.e(I)V",
+          "original": "e",
+          "renamed": "resetDeclaredStaticState"
+        },
+        {
           "start": 168294,
           "end": 168295,
           "symbol": "M:ja.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 168333,
+          "end": 168334,
+          "symbol": "M:eg.c(B)V",
+          "original": "c",
+          "renamed": "resetStaticState"
         },
         {
           "start": 168389,
@@ -284685,6 +284987,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 168515,
+          "end": 168516,
+          "symbol": "M:o.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 168534,
           "end": 168535,
           "symbol": "M:ra.a(I)V",
@@ -284706,6 +285015,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 168612,
+          "end": 168613,
+          "symbol": "M:hb.d(I)V",
+          "original": "d",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 168634,
           "end": 168635,
           "symbol": "M:ml.a(B)V",
@@ -284725,6 +285041,13 @@
           "symbol": "M:aa.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 168733,
+          "end": 168734,
+          "symbol": "M:me.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 168755,
@@ -297403,7 +297726,7 @@
       "original": "bi.java",
       "renamed": "bi.java",
       "inputSha256": "055fbdbe7b27f137f68414bfd0bdf9ee779f7b658e4ba0341bc6f861b606d170",
-      "outputSha256": "33baa6b1a171a0689e8214fefb858e0fa9bff32ff10fd0143cd29fe7ea97aa92",
+      "outputSha256": "51db5fa97a314dbeed43609ac9e3af2b7d294da1d8b92bfa3ae6a14f5fcce4ac",
       "edits": [
         {
           "start": 66,
@@ -297565,6 +297888,14 @@
           "symbol": "C:of",
           "original": "of",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 5093,
+          "end": 5095,
+          "symbol": "C:ri",
+          "original": "ri",
+          "renamed": "BufferedImageRasterBuffer",
+          "kind": "class-name-literal"
         },
         {
           "start": 5165,
@@ -309982,8 +310313,15 @@
       "original": "dj.java",
       "renamed": "dj.java",
       "inputSha256": "221020eb63b719d68b3296b4ba912307625a29d88e5559444b8c675e92dfe5c3",
-      "outputSha256": "c9938c1b38f3128eeaf3d57ad39df2fd2321bd493fe78c9b0d2cba05c1aeae2f",
+      "outputSha256": "2959841452b43aff2f281e536268932ea9d0c4a4acaeef2ca0e4956dea0c4629",
       "edits": [
+        {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:dj.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 387,
           "end": 389,
@@ -310018,6 +310356,13 @@
           "symbol": "C:mj",
           "original": "mj",
           "renamed": "SocketConnector"
+        },
+        {
+          "start": 1188,
+          "end": 1189,
+          "symbol": "M:dj.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -342735,7 +343080,7 @@
       "original": "eg.java",
       "renamed": "eg.java",
       "inputSha256": "58350cedbd7149ed73d824e211e1d1dc040b9079b4245a035f55c597e8797e7e",
-      "outputSha256": "c3a8a607d6c588e9bf8ded12bdc9e38bd62e249a451a9541215d85bf3bebd2a8",
+      "outputSha256": "da2eb60c79e9931db5bf1ca7ea8adac1818e66a06c180b74248d93d296f3387f",
       "edits": [
         {
           "start": 61,
@@ -342743,6 +343088,13 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 294,
+          "end": 295,
+          "symbol": "M:eg.c(B)V",
+          "original": "c",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -344833,7 +345185,7 @@
       "original": "el.java",
       "renamed": "ClientException.java",
       "inputSha256": "b911664d348d21356775083ac6c8109da39d809e4520f2b202204a93d5fd70d8",
-      "outputSha256": "737b22bfd15ff8118e79540632971694325e4835d7d5088d3b1573e14ba9d1db",
+      "outputSha256": "6b924279952817908efa7070e9192bfc11d5720740ba4cefd5e2de6dc44bdac0",
       "edits": [
         {
           "start": 50,
@@ -344855,6 +345207,13 @@
           "symbol": "F:el.field_a:Ljava/lang/Throwable;",
           "original": "field_a",
           "renamed": "cause"
+        },
+        {
+          "start": 222,
+          "end": 223,
+          "symbol": "M:el.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 378,
@@ -344919,7 +345278,7 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "d236ea89ea43d4323b29967c837fd9aa8d46c140a0b1a1dd7d72a09418a8cfaa",
-      "outputSha256": "8fb0e71625cf0d145583494df398a8bfca1efc09261f56ac0bbd820995ffb9f6",
+      "outputSha256": "8d65f16b1df27d285e233cf41d8cb1bcaa5a9aba64870eb00cea872be5aa5d2c",
       "edits": [
         {
           "start": 63,
@@ -344941,6 +345300,13 @@
           "symbol": "C:bg",
           "original": "bg",
           "renamed": "IndexedSprite"
+        },
+        {
+          "start": 393,
+          "end": 394,
+          "symbol": "M:f.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 596,
@@ -345903,7 +346269,7 @@
       "original": "fd.java",
       "renamed": "fd.java",
       "inputSha256": "ca000a2d3a10f2e86e329400fe4053377c95d581f9ae459d99f4a0c817fea9d6",
-      "outputSha256": "c0cc1979de33abfc341aa8a481b4d2e4f59803a969abcffe4412359ddeed55a8",
+      "outputSha256": "e16d6d54de5e4979a307242262fd757e7a3213746ffdb639a7842ce31fec8229",
       "edits": [
         {
           "start": 58,
@@ -346298,6 +346664,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 19338,
+          "end": 19339,
+          "symbol": "M:fd.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 19576,
           "end": 19578,
           "symbol": "C:gl",
@@ -346528,7 +346901,7 @@
       "original": "fh.java",
       "renamed": "fh.java",
       "inputSha256": "cfb0723320e7b6ffd7fa0aa5868d2c8dc6b6a17784b7b224854e98000934e4f7",
-      "outputSha256": "33bf76944e4fbe7524aac12f98508355883c091870fa2eda597955304ae79214",
+      "outputSha256": "c00540dcd93f361bf671dc8439669a6d942b4d7cf50ce61905f5b50a9a7f74a3",
       "edits": [
         {
           "start": 59,
@@ -346592,6 +346965,13 @@
           "symbol": "C:cj",
           "original": "cj",
           "renamed": "WidgetActionListener"
+        },
+        {
+          "start": 575,
+          "end": 576,
+          "symbol": "M:fh.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1140,
@@ -346949,6 +347329,13 @@
           "symbol": "M:l.d(IIIIII)V",
           "original": "d",
           "renamed": "fillRectangleAlpha"
+        },
+        {
+          "start": 10948,
+          "end": 10949,
+          "symbol": "M:fh.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 11204,
@@ -347542,7 +347929,7 @@
       "original": "g.java",
       "renamed": "g.java",
       "inputSha256": "3d40c83bc4f2f686409f8f436a679761ef54b280276ef523b0203461755b2ba5",
-      "outputSha256": "4c75c10352ebe2e0a6fff4a6da2bb6c1a1bd071721820aa5e3d000012fb8bebe",
+      "outputSha256": "19c16362442e77394251678ec1d5e92ec02f19260da118b73c7c26118cd9301c",
       "edits": [
         {
           "start": 88,
@@ -347641,6 +348028,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1775,
+          "end": 1776,
+          "symbol": "M:g.d(I)V",
+          "original": "d",
+          "renamed": "resetStaticState"
         },
         {
           "start": 3621,
@@ -347900,6 +348294,13 @@
           "symbol": "M:l.i(IIII)V",
           "original": "i",
           "renamed": "intersectClip"
+        },
+        {
+          "start": 12983,
+          "end": 12984,
+          "symbol": "M:g.d(I)V",
+          "original": "d",
+          "renamed": "resetStaticState"
         },
         {
           "start": 18101,
@@ -349189,8 +349590,15 @@
       "original": "ge.java",
       "renamed": "ge.java",
       "inputSha256": "905666619d368f05df650d236448a1f7578c692986df425fb11deb4ecb6cf6fc",
-      "outputSha256": "e9f073e662e4bd0a53a1f91a3fc70e387f04b121f291b29d5bb7b30fc3846ef5",
+      "outputSha256": "e9c93873d165bb6b93f2d451fc06e4e108803c296381bef6566079205bfc7e40",
       "edits": [
+        {
+          "start": 232,
+          "end": 233,
+          "symbol": "M:ge.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 453,
           "end": 454,
@@ -351575,7 +351983,7 @@
       "original": "gl.java",
       "renamed": "UiWidget.java",
       "inputSha256": "c4cc557eef02c940ab04d9f27a0513990045ce6213ce980cdbd3bb3027262ca3",
-      "outputSha256": "4106cf383cba30b2437abfdd1c81475b47795d42b8c8c44abffd792185d107be",
+      "outputSha256": "affb34e6b9201f0bf7adf31c3451fcbf79e08c9adf768d7b66fbdc3169dda459",
       "edits": [
         {
           "start": 65,
@@ -351646,6 +352054,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 799,
+          "end": 800,
+          "symbol": "M:gl.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1317,
@@ -351737,6 +352152,13 @@
           "symbol": "F:gl.field_n:I",
           "original": "field_n",
           "renamed": "height"
+        },
+        {
+          "start": 6643,
+          "end": 6644,
+          "symbol": "M:gl.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 8407,
@@ -352040,6 +352462,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 16934,
+          "end": 16935,
+          "symbol": "M:gl.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 17863,
@@ -352659,7 +353088,7 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "04b4d294d4bba09abf845fd7c0ac950773b5fc4c14314ba935447bd3bac3186c",
-      "outputSha256": "e79621dc2a1a4b90df957c57ca129ca1ee1b953f288810af837c805af2915876",
+      "outputSha256": "fbd2dbb2902f5e8d3fbc976b890358e8377ac899ddacfb3f5e683216c59e6948",
       "edits": [
         {
           "start": 121,
@@ -352772,6 +353201,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4569,
+          "end": 4570,
+          "symbol": "M:hb.d(I)V",
+          "original": "d",
+          "renamed": "resetStaticState"
         },
         {
           "start": 4943,
@@ -358459,7 +358895,7 @@
       "original": "j.java",
       "renamed": "j.java",
       "inputSha256": "024d2707812027c61eeb552bee8e49d6a18fe02ba986be7e8865c6fd25e834eb",
-      "outputSha256": "bb239b38ebbf61375007bd5ac9813469b88610fd5635b96b0f75b1006c152492",
+      "outputSha256": "edb3958dc4108a9c33c06abcbb1130376d396f8c9bdd6083bd93541751d68d4e",
       "edits": [
         {
           "start": 179,
@@ -358481,6 +358917,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1902,
+          "end": 1903,
+          "symbol": "M:j.g(I)V",
+          "original": "g",
+          "renamed": "resetStaticState"
         },
         {
           "start": 2185,
@@ -358909,7 +359352,7 @@
       "original": "jb.java",
       "renamed": "MouseWheelInput.java",
       "inputSha256": "cdb77e2e210af0c64d57fe2be142135ece1e7b782d412f79b034728aafef657b",
-      "outputSha256": "57ec836708294e5831ab153240ce519ef94fd4b1c9a52cced440e9e4a235554a",
+      "outputSha256": "598ad681960d31ed2dcba225c193a01ccc6d7f4063b7e73f780a9789b3b1bb33",
       "edits": [
         {
           "start": 53,
@@ -359029,6 +359472,13 @@
           "symbol": "P:jb.a(I)I#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 3175,
+          "end": 3176,
+          "symbol": "M:jb.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 3430,
@@ -362242,7 +362692,7 @@
       "original": "jm.java",
       "renamed": "DelegatingCanvas.java",
       "inputSha256": "87dd259da1ee909064bc6b6837dc959bb1c06a585f02430dbc28cac103fddeef",
-      "outputSha256": "2bc7e6153e688835904c3d1b5778669f8d3d265cfa12d245c9a41bc65188fc50",
+      "outputSha256": "330277891d48f7ede2b4e92a9d2496644076fdb3c2804ab39f1ff694acf2aa7a",
       "edits": [
         {
           "start": 69,
@@ -362264,6 +362714,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 944,
+          "end": 945,
+          "symbol": "M:jm.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1201,
@@ -365728,7 +366185,7 @@
       "original": "km.java",
       "renamed": "ArchiveIndex.java",
       "inputSha256": "8b233ee80874f20bcfb9d34c597f49b85e5a287bc7d83bc619e57a4bf31dbbbe",
-      "outputSha256": "c7f3d2cbce92d61ae1e550b2847aaf9181c0c24de5aca984d69e5f5529c92de2",
+      "outputSha256": "cb24a59d792c5edec5bafc8d26c42322c995a6a4eb0783af9340154637d180cc",
       "edits": [
         {
           "start": 50,
@@ -365736,6 +366193,13 @@
           "symbol": "C:km",
           "original": "km",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 516,
+          "end": 517,
+          "symbol": "M:km.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 690,
@@ -365750,6 +366214,13 @@
           "symbol": "C:km",
           "original": "km",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 750,
+          "end": 751,
+          "symbol": "M:km.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 782,
@@ -367373,8 +367844,15 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "139c405c9551054c2c16aa402e5f284b76580a5ee320e332a25dd060107ec97f",
-      "outputSha256": "c96c2e36d5d8788d760b9e038dd9b2bc363f5bb732a8b285379264b2cb06ba88",
+      "outputSha256": "b63b720a524fc0757e2d8a387c65647ee49f1e9e700b80ffc0e32f27ced218a8",
       "edits": [
+        {
+          "start": 343,
+          "end": 344,
+          "symbol": "M:lg.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 1197,
           "end": 1199,
@@ -369471,7 +369949,7 @@
       "original": "me.java",
       "renamed": "me.java",
       "inputSha256": "7f0ee9c78b40f4918bafc48f87d2a1127d063847c17561218d5bf53250d6d262",
-      "outputSha256": "da25848ea23ae89182d2f5927ac7a45ff3c72ad766721d7f1626887bb54423d6",
+      "outputSha256": "1f03bf408f00f012e11b6a614592df50f033e31efebeb49b1c8af1068651da03",
       "edits": [
         {
           "start": 61,
@@ -369507,6 +369985,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1978,
+          "end": 1979,
+          "symbol": "M:me.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -371015,7 +371500,7 @@
       "original": "na.java",
       "renamed": "na.java",
       "inputSha256": "d3ffd3ddb70f398b5fd0009ea701aa419aba0575616aa0d0d9c8e99b48a60f22",
-      "outputSha256": "1dc69556da224e000d3246d27e4983595b217b263126462207a1ef470965eee8",
+      "outputSha256": "d5b63bd5568a5b5393c58b1f4db80b3352733594be281fac5d7b506c228a8608",
       "edits": [
         {
           "start": 646,
@@ -371058,6 +371543,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 4328,
+          "end": 4329,
+          "symbol": "M:na.d(Z)V",
+          "original": "d",
+          "renamed": "resetDeclaredStaticState"
         }
       ]
     },
@@ -373124,7 +373616,7 @@
       "original": "o.java",
       "renamed": "o.java",
       "inputSha256": "a68e8408dbb2832ce22863896a9a41ed747c743610297a743ac1de093e441ec8",
-      "outputSha256": "52f443751cbaf0ad73530585a002cfc883a60e01a389705375d0ca6fa2b8a83a",
+      "outputSha256": "f2ec008b00acd3f34100775fb743192489a113e1a259eeaeecae5f60671899cd",
       "edits": [
         {
           "start": 118,
@@ -373209,6 +373701,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1637,
+          "end": 1638,
+          "symbol": "M:o.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1986,
@@ -376149,14 +376648,28 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "2b5d7f434d312940436ad2e3a22409d11e7b8e251404e3edf298f10d473cc6c0",
-      "outputSha256": "c14c3fb64faa80a20ee00c94b77a605ef624442b5e95ce041e22e4b37786b929",
+      "outputSha256": "2b793a7cbf7e901077a45b5ccce185e101d08693b7bbb738f025502facd90261",
       "edits": [
+        {
+          "start": 1811,
+          "end": 1812,
+          "symbol": "M:q.e(I)V",
+          "original": "e",
+          "renamed": "resetDeclaredStaticState"
+        },
         {
           "start": 2612,
           "end": 2613,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2777,
+          "end": 2778,
+          "symbol": "M:q.e(I)V",
+          "original": "e",
+          "renamed": "resetDeclaredStaticState"
         }
       ]
     },
@@ -383630,10 +384143,17 @@
     },
     {
       "original": "ri.java",
-      "renamed": "ri.java",
+      "renamed": "BufferedImageRasterBuffer.java",
       "inputSha256": "4e8cd9ed6dc0394bf7aa28622bfdf03885ddb7f5de7cc8f3e58759b9ad1ffd6b",
-      "outputSha256": "ff5daabb97b4a368678338255af08ca77b465bd1284c5cb85f7bf3abee845c51",
+      "outputSha256": "0925a7ecf3916921da32d390683904b59207bfa2d5d30f73e392068743f224b5",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:ri",
+          "original": "ri",
+          "renamed": "BufferedImageRasterBuffer"
+        },
         {
           "start": 82,
           "end": 84,
@@ -383661,6 +384181,13 @@
           "symbol": "F:te.field_c:[I",
           "original": "field_c",
           "renamed": "pixels"
+        },
+        {
+          "start": 1704,
+          "end": 1706,
+          "symbol": "M:ri.<init>()V",
+          "original": "ri",
+          "renamed": "BufferedImageRasterBuffer"
         }
       ]
     },
@@ -388451,7 +388978,7 @@
       "original": "tf.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "e124f98cd76d1b38e10f8159172fe3617ca076b5478e9d83f8759189f3983e5c",
-      "outputSha256": "75c41481d7ce523f7ab70300c81640fea3468188144eb98f315e505eb07ba1e9",
+      "outputSha256": "5879ba2ba08ded64dc39adcdc973ed0342c92faa40c2491942713947f8674819",
       "edits": [
         {
           "start": 69,
@@ -388613,6 +389140,13 @@
           "symbol": "M:bd.a(Ljava/lang/Throwable;Ljava/lang/String;I)V",
           "original": "a",
           "renamed": "reportClientError"
+        },
+        {
+          "start": 8794,
+          "end": 8795,
+          "symbol": "M:tf.b(B)V",
+          "original": "b",
+          "renamed": "resetStaticState"
         },
         {
           "start": 9232,
@@ -393364,7 +393898,7 @@
       "original": "uk.java",
       "renamed": "uk.java",
       "inputSha256": "29dd24897a988a1c7850c10e65872104d3049bcb3b2e38d49250e276cd0a71fa",
-      "outputSha256": "0b280ed158e041ac006fbdcaa2dcf43ecc0b664dbe8f19a23cd68fd13abace29",
+      "outputSha256": "179cad07358d5b763df5c6bf9d1afa7f46448366aebebfb4ff0f3dd80bb915a7",
       "edits": [
         {
           "start": 66,
@@ -393507,11 +394041,25 @@
           "renamed": "unlink"
         },
         {
+          "start": 2316,
+          "end": 2317,
+          "symbol": "M:uk.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 2545,
           "end": 2546,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 2641,
+          "end": 2642,
+          "symbol": "M:uk.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -399996,10 +400544,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "d72cc451cb25f76130fe2d04e05b09b938efd9a629996f3065913e74fd2ea308",
+    "rulesSha256": "159201aacefc3ed223b35e0a497c8f286d1746c1de408e16274a01b342fc29fa",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "c1a17641ddd78f6ae5c61ebb49a348d25420bdb317d621b78958bf47c52b513c",
+    "outputTreeSha256": "46b1273796365a4d36342c79a5f0c5290c46868bdbf57cca3a8fa4e8d03058eb",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -400014,7 +400562,7 @@
       "overrideFamiliesChecked": 373,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
-      "classNameLiteralEdits": 1,
+      "classNameLiteralEdits": 2,
       "labelBindingsCompared": 1086,
       "labelEdits": 1086,
       "runtimeEquivalenceVerified": false,

@@ -238,7 +238,7 @@ final class nb extends ci {
             }
             var15 = (bk) (bh.field_D.beginBackward(-18110));
             if (var15 == null) {
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
               return;
             }
             var15.field_j = var16[0];
@@ -251,7 +251,7 @@ final class nb extends ci {
             if (var2 == 2) {
               var13 = (bk) (bh.field_D.beginBackward(-18110));
               if (var13 == null) {
-                si.d(65280);
+                ImageProducerRasterBuffer.d(65280);
                 return;
               }
               var13.field_o = in.a((byte) 20);
@@ -260,12 +260,12 @@ final class nb extends ci {
               var13.unlink(-2193);
             } else {
               fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -122));
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
             }
           } else {
             var11 = (ac) (vn.field_vb.beginBackward(-18110));
             if (var11 == null) {
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
               return;
             }
             var11.unlink(-2193);

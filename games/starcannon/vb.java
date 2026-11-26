@@ -476,7 +476,7 @@ final class vb extends qf {
           }
           var2Lifetime68 = cb.a("lancetext", (byte) -124);
           if (var2Lifetime68 != null) {
-            mg.field_k = DualLinkNode.a(118, var2Lifetime68);
+            ImageProducerRasterBuffer.field_k = DualLinkNode.a(118, var2Lifetime68);
           }
           var2Lifetime69 = cb.a("helixtext", (byte) -124);
           if (null != var2Lifetime69) {

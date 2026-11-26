@@ -125,7 +125,7 @@ final class ml extends dk {
         }
     }
 
-    public static void j(int param0) {
+    public static void resetStaticState(int param0) {
         field_K = null;
         if (param0 == 1) {
           field_N = null;

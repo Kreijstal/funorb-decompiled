@@ -91,7 +91,7 @@ final class jn extends IntrusiveNode {
               var18[0][4 * var10 + 1] = jk.field_db[var11];
               var18[0][2 + 4 * var10] = qa.field_c[var11];
               var18[0][var10 * 4 + 3] = li.field_a[var11];
-              if (ci.a(-27933, fl.field_b[var11]) &&
+              if (AwtRasterBuffer.a(-27933, fl.field_b[var11]) &&
                 li.field_a[var11] + (jk.field_db[var11] + qa.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -109,7 +109,7 @@ final class jn extends IntrusiveNode {
               var18[1][4 * var13 + 1] = jk.field_db[var11Lifetime1];
               var18[1][var13 * 4 + 2] = qa.field_c[var11Lifetime1];
               var18[1][3 + var13 * 4] = li.field_a[var11Lifetime1];
-              if (ci.a(-27933, fl.field_b[var11Lifetime1]) &&
+              if (AwtRasterBuffer.a(-27933, fl.field_b[var11Lifetime1]) &&
                 li.field_a[var11Lifetime1] + qa.field_c[var11Lifetime1] + jk.field_db[var11Lifetime1] == 0) {
                 var6[1][var13] = null;
                 var13--;

@@ -7,7 +7,7 @@ final class w extends wd implements ButtonListener {
     static double field_U;
     static PlatformTask field_V;
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_U = 0.7922077777637492;
           field_V = null;

@@ -335,7 +335,7 @@ final class kh extends gm {
                     return;
                   }
                   fg.a((Throwable) null, (byte) -77, "L1: " + tm.b((byte) -123));
-                  si.d(param0 ^ 65297);
+                  ImageProducerRasterBuffer.d(param0 ^ 65297);
                   return;
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong((byte) -84);

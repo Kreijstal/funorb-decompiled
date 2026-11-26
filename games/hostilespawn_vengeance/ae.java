@@ -12,7 +12,7 @@ abstract class ae extends DualLinkNode {
 
     abstract byte[] c(byte param0);
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_r = null;
         if (!param0) {
           field_u = 115;

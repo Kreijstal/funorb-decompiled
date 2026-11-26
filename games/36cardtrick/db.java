@@ -158,11 +158,11 @@ final class db implements ci {
             hb.field_a[var4Lifetime3] = var18.readUnsignedShort((byte) 72);
           }
           var18.position = param1.length + (-7 - cf.field_c * 8 - 3 * (var3 - 1));
-          jf.field_i = new int[var3];
+          ImageProducerRasterBuffer.field_i = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
-            jf.field_i[var4Lifetime4] = var18.readUnsignedMedium(true);
-            if (jf.field_i[var4Lifetime4] == 0) {
-              jf.field_i[var4Lifetime4] = 1;
+            ImageProducerRasterBuffer.field_i[var4Lifetime4] = var18.readUnsignedMedium(true);
+            if (ImageProducerRasterBuffer.field_i[var4Lifetime4] == 0) {
+              ImageProducerRasterBuffer.field_i[var4Lifetime4] = 1;
             }
           }
           var18.position = 0;

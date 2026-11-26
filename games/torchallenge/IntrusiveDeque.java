@@ -49,7 +49,7 @@ final class IntrusiveDeque {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         field_a = null;
         if (param0 != 25840) {

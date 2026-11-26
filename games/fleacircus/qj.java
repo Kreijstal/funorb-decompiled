@@ -104,7 +104,7 @@ final class qj extends dk {
         }
     }
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_I = null;
         field_E = null;
         field_H = null;

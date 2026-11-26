@@ -72,7 +72,7 @@ final class kl {
         var4 = fleas.field_A ? 1 : 0;
         try {
           bl.b();
-          bj.field_l = 11;
+          ImageProducerRasterBuffer.field_l = 11;
           ContextualRuntimeException.field_b = new int[260];
           var1_int = 0;
           if (param0 != 31207) {

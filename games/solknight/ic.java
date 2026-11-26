@@ -35,7 +35,7 @@ final class ic extends sk {
         return this.field_v.payload;
     }
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_u = null;
         field_x = null;
         if (param0 >= -69) {

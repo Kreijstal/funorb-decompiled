@@ -9,7 +9,7 @@ final class ud extends IntrusiveNode {
     static String field_j;
     static int field_k;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 5010) {
           field_k = -79;
           field_j = null;

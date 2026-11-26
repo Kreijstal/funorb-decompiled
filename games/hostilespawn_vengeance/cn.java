@@ -404,13 +404,13 @@ class cn implements nn, mi {
           var2 = (ta.p(3)) ? 0 : 1;
         } else {
           if (null != ie.field_c) {
-            wa.field_q = ie.field_c.d(16776960);
+            ImageProducerRasterBuffer.field_q = ie.field_c.d(16776960);
             sd.a(2, 0);
           } else {
-            wa.field_q = KeyboardInput.createFullscreenCanvas(640, (byte) -114, gf.field_b, 0, 480, 0);
+            ImageProducerRasterBuffer.field_q = KeyboardInput.createFullscreenCanvas(640, (byte) -114, gf.field_b, 0, 480, 0);
           }
-          if (wa.field_q != null) {
-            ea.a(wa.field_q, 0);
+          if (ImageProducerRasterBuffer.field_q != null) {
+            ea.a(ImageProducerRasterBuffer.field_q, 0);
             var2 = 2;
           } else {
             var2 = 3;

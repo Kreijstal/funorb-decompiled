@@ -1154,7 +1154,7 @@ final class ll {
                 }
                 var2 = te.a("warning_ifyouquit", -121);
                 if (null != var2) {
-                  ba.field_c = be.a(var2, (byte) -77);
+                  AwtRasterBuffer.field_c = be.a(var2, (byte) -77);
                 }
                 var2 = te.a("warning_ifyouquitorleavepage", -35);
                 if (var2 != null) {
@@ -1638,7 +1638,7 @@ final class ll {
                 }
                 var2 = te.a("create_alert_invalidemail", -24);
                 if (null != var2) {
-                  ba.field_d = be.a(var2, (byte) 121);
+                  AwtRasterBuffer.field_d = be.a(var2, (byte) 121);
                 }
                 var2 = te.a("create_alert_email_unavailable", -36);
                 if (null != var2) {

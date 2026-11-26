@@ -38,7 +38,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != lg.field_d) {
-            si.field_o = 0;
+            ImageProducerRasterBuffer.field_o = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
               IntrusiveNode.field_a.length > var2_int) {
@@ -85,7 +85,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
         int var3Lifetime1;
         try {
           if (null != lg.field_d) {
-            si.field_o = 0;
+            ImageProducerRasterBuffer.field_o = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < IntrusiveNode.field_a.length) {

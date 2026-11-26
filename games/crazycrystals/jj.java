@@ -89,10 +89,10 @@ final class jj {
               CipherPacketBuffer.field_m = ((CipherPacketBuffer) (Object) stackIn_24_0).readLong(stackIn_25_1);
               kd.field_n.position = 0;
               tf.a(param4, (byte) 75, mk.field_c, param3, param5);
-              gj.field_k = tk.field_k;
+              gj.field_k = ImageProducerRasterBuffer.field_k;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (tk.field_k == gj.field_k &&
+            if (ImageProducerRasterBuffer.field_k == gj.field_k &&
               fq.a(1, (byte) -70)) {
               var6_intLifetime1 = kd.field_n.readUnsignedByte(255);
               bf.field_b = var6_intLifetime1;

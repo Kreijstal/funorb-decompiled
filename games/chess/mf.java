@@ -273,13 +273,13 @@ class mf extends IntrusiveNode {
                   if (((wh.field_f == 0)) &&
                     ((on.field_h != 0))) {
                     this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
-                    var8 = vj.field_a;
+                    var8 = AwtRasterBuffer.field_a;
                     if (var8 != null) {
                       if (!(var8.field_p instanceof cj)) {
-                        vj.field_a = null;
+                        AwtRasterBuffer.field_a = null;
                       } else {
                         ((cj) (var8.field_p)).a(var8, -10925, (ji) null);
-                        vj.field_a = null;
+                        AwtRasterBuffer.field_a = null;
                       }
                     }
                     if (var7 != 0 &&
@@ -295,13 +295,13 @@ class mf extends IntrusiveNode {
                   if (((wh.field_f == 0)) &&
                     ((on.field_h != 0))) {
                     this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
-                    var9 = vj.field_a;
+                    var9 = AwtRasterBuffer.field_a;
                     if (var9 != null) {
                       if (!(var9.field_p instanceof cj)) {
-                        vj.field_a = null;
+                        AwtRasterBuffer.field_a = null;
                       } else {
                         ((cj) (var9.field_p)).a(var9, -10925, (ji) null);
-                        vj.field_a = null;
+                        AwtRasterBuffer.field_a = null;
                       }
                     }
                   }
@@ -314,7 +314,7 @@ class mf extends IntrusiveNode {
               if (((wh.field_f == 0)) &&
                 ((on.field_h != 0))) {
                 this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
-                var11 = vj.field_a;
+                var11 = AwtRasterBuffer.field_a;
                 if (var11 == null) {
                   if (((var7 != 0)) &&
                     ((var5 != 0)) &&
@@ -323,7 +323,7 @@ class mf extends IntrusiveNode {
                   }
                 } else {
                   if (!(var11.field_p instanceof cj)) {
-                    vj.field_a = null;
+                    AwtRasterBuffer.field_a = null;
                     if (((var7 != 0)) &&
                       ((var5 != 0)) &&
                       ((th.field_d != 0))) {
@@ -331,7 +331,7 @@ class mf extends IntrusiveNode {
                     }
                   } else {
                     ((cj) (var11.field_p)).a(var11, -10925, (ji) null);
-                    vj.field_a = null;
+                    AwtRasterBuffer.field_a = null;
                     if (((var7 != 0)) &&
                       ((var5 != 0)) &&
                       ((th.field_d != 0))) {
@@ -347,7 +347,7 @@ class mf extends IntrusiveNode {
                 if (((wh.field_f == 0)) &&
                   ((on.field_h != 0))) {
                   this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
-                  var12 = vj.field_a;
+                  var12 = AwtRasterBuffer.field_a;
                   if (var12 == null) {
                     if (var7 != 0 &&
                       var5 != 0 &&
@@ -357,7 +357,7 @@ class mf extends IntrusiveNode {
                     }
                   } else {
                     if (!(var12.field_p instanceof cj)) {
-                      vj.field_a = null;
+                      AwtRasterBuffer.field_a = null;
                       if (var7 != 0 &&
                         var5 != 0 &&
                         th.field_d != 0) {
@@ -365,7 +365,7 @@ class mf extends IntrusiveNode {
                       }
                     } else {
                       ((cj) (var12.field_p)).a(var12, -10925, (ji) null);
-                      vj.field_a = null;
+                      AwtRasterBuffer.field_a = null;
                     }
                   }
                 }
@@ -381,10 +381,10 @@ class mf extends IntrusiveNode {
             if ((wh.field_f == 0) &&
               (on.field_h != 0)) {
               this.a(rf.field_b, this, param2, hn.field_k, 0, param1);
-              var19 = vj.field_a;
+              var19 = AwtRasterBuffer.field_a;
               if (var19 != null) {
                 if (!(var19.field_p instanceof cj)) {
-                  vj.field_a = null;
+                  AwtRasterBuffer.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&
                     th.field_d != 0) {
@@ -393,7 +393,7 @@ class mf extends IntrusiveNode {
                   }
                 } else {
                   ((cj) (var19.field_p)).a(var19, -10925, (ji) null);
-                  vj.field_a = null;
+                  AwtRasterBuffer.field_a = null;
                   if (var7 != 0 &&
                     var5 != 0 &&
                     th.field_d != 0) {

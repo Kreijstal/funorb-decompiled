@@ -48,7 +48,7 @@ final class pi {
             break;
           }
           if (var3 == null) {
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
             return;
           }
           var4 = var15.readUnsignedByte(-89);

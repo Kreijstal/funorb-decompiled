@@ -28,7 +28,7 @@ final class sd {
         return s.field_E[var4];
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_e = null;
         field_a = null;
         field_b = null;
@@ -87,7 +87,7 @@ final class sd {
     final static void a(boolean param0, int param1) {
         bd.field_u.a(param0, (byte) -89);
         if (param1 <= 15) {
-          sd.a((byte) 74);
+          sd.resetStaticState((byte) 74);
         }
     }
 

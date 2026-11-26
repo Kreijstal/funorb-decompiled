@@ -23,7 +23,7 @@ final class ArchiveIndex {
     static int field_e;
     bc field_g;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_q = null;
         field_c = null;
         if (param0 != 13) {
@@ -34,7 +34,7 @@ final class ArchiveIndex {
 
     final static IndexedSprite a(int param0) {
         if (param0 < 111) {
-          ArchiveIndex.a((byte) 11);
+          ArchiveIndex.resetStaticState((byte) 11);
         }
         IndexedSprite var1 = new IndexedSprite(ah.field_A, sb.field_j, ha.field_s[0], hj.field_K[0], sb.field_m[0], rf.field_p[0], qc.field_b[0], wb.field_a);
         SocketConnector.a((byte) 79);

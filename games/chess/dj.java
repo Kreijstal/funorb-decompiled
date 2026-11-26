@@ -11,7 +11,7 @@ final class dj extends DualLinkNode {
     private int[][] field_r;
 
     final static void a(boolean param0) {
-        vj.field_c = new IntrusiveDeque();
+        AwtRasterBuffer.field_c = new IntrusiveDeque();
         if (!param0) {
           field_q = (String) null;
         }

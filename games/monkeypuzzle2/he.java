@@ -20,7 +20,7 @@ final class he extends IntrusiveNode {
           }
           SecondaryNodeDequeIterator.field_b.e();
           SoftwareRasterizer.fillCircle(SecondaryNodeDequeIterator.field_b.field_m >> 1, SecondaryNodeDequeIterator.field_b.field_n >> 1, (SecondaryNodeDequeIterator.field_b.field_m >> 1) - 1, 16711680);
-          ac.field_a.a((byte) 115);
+          ac.field_a.setAsRasterTarget((byte) 115);
           ek.field_b = 0;
           IterableNodeHashTable.field_e = 0;
           ok.field_d = false;

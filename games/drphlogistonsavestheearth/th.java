@@ -288,7 +288,7 @@ final class th {
           }
           var2 = 96 / ((param0 + 57) / 37);
           di.field_c = ac.field_f[rc.field_g];
-          sj.field_g = na.field_a[rc.field_g];
+          sj.field_g = AwtRasterBuffer.field_a[rc.field_g];
           rc.field_g = rc.field_g + 1 & 127;
           stackIn_5_0 = true;
         }

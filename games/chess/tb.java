@@ -83,7 +83,7 @@ final class tb {
           if (ln.field_cc.field_L != 0) {
             tg.field_p = true;
           }
-          if (0 != si.field_l.field_L && (lf.field_U ||
+          if (0 != ImageProducerRasterBuffer.field_l.field_L && (lf.field_U ||
             !(0 >= cl.field_d) ||
             !(sk.field_t < 2) &&
             ok.field_Jb[12])) {
@@ -115,7 +115,7 @@ final class tb {
         if (ln.field_cc.field_L != 0) {
           tg.field_p = true;
         }
-        if (0 != si.field_l.field_L) {
+        if (0 != ImageProducerRasterBuffer.field_l.field_L) {
           if (lf.field_U) {
             rh.a(0, param0);
           } else {

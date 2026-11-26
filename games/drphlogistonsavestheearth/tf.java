@@ -275,7 +275,7 @@ final class tf extends ca {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_ib = null;
         field_pb = null;
         field_kb = null;

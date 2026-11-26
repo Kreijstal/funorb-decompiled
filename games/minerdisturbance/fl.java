@@ -68,7 +68,7 @@ final class fl implements ad {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         field_j = null;
         if (param0 != -1) {

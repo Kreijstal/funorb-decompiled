@@ -272,7 +272,7 @@ final class wc {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("dd");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (param0 != 4) {
                 stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;

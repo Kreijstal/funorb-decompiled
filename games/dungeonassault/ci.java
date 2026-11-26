@@ -186,7 +186,7 @@ final class ci extends IntrusiveNode {
           var4 = param0.length();
           var5 = 0;
           if (param1 != 2) {
-            ci.a(-61);
+            ci.resetStaticState(-61);
           }
           while (var4 > var5) {
             var2_long = var2_long * 37L;
@@ -232,7 +232,7 @@ final class ci extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_n = null;
         field_s = null;
         field_q = null;

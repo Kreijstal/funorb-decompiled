@@ -351,7 +351,7 @@ final class ga extends bc {
         }
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_s = (int[][]) null;
         field_w = null;
         field_x = (int[][][]) null;

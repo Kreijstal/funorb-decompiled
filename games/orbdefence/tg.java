@@ -74,7 +74,7 @@ final class tg {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == 2) {
           field_d = null;
           field_c = null;

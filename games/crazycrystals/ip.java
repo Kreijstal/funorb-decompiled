@@ -78,8 +78,8 @@ final class ip implements wo {
         mb.field_f = h.field_b;
         ue.field_a = 0;
         wn.field_b = 0;
-        bc.field_f = new jh(2);
-        bc.field_f.a((byte) 41, param1, og.a(param0, IsaacRandom.field_h, qh.field_i), -1);
+        AwtRasterBuffer.field_f = new jh(2);
+        AwtRasterBuffer.field_f.a((byte) 41, param1, og.a(param0, IsaacRandom.field_h, qh.field_i), -1);
     }
 
     final static void a(int param0, RgbSprite[] param1, int param2, int param3, int param4, int param5, int param6) {

@@ -53,7 +53,7 @@ final class ge {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_g = null;
         field_d = null;
         field_a = null;

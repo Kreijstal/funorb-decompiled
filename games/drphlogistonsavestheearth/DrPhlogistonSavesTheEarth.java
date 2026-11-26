@@ -71,15 +71,15 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           hb.field_a = new RgbSprite(15, 15);
           hb.field_a.c();
           SoftwareRasterizer.fillCircle(7, 7, 7, 8388608);
-          lb.field_C.a(123);
+          lb.field_C.setAsRasterTarget(123);
           MouseWheelInput.field_d = new RgbSprite(20, 20);
           MouseWheelInput.field_d.c();
           SoftwareRasterizer.fillCircle(9, 9, 6, 61568);
-          lb.field_C.a(119);
+          lb.field_C.setAsRasterTarget(119);
           GameAppletShell.field_i = new RgbSprite(10, 10);
           GameAppletShell.field_i.c();
           SoftwareRasterizer.fillCircle(5, 5, 5, 8421504);
-          lb.field_C.a(122);
+          lb.field_C.setAsRasterTarget(122);
           al.field_b = new RgbSprite(800, 32);
           al.field_b.c();
           SoftwareRasterizer.drawHorizontalLine(0, 7, 800, 16711680);
@@ -88,13 +88,13 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           SoftwareRasterizer.drawHorizontalLine(0, 10, 800, 16777215);
           SoftwareRasterizer.drawHorizontalLine(0, 11, 800, 16776960);
           SoftwareRasterizer.drawHorizontalLine(0, 12, 800, 16711680);
-          lb.field_C.a(101);
+          lb.field_C.setAsRasterTarget(101);
           kc.field_p = new RgbSprite(32, 430);
           kc.field_p.c();
           var2_int = 0;
           do {
             if (var2_int >= 16) {
-              lb.field_C.a(98);
+              lb.field_C.setAsRasterTarget(98);
               kc.field_q = new RgbSprite(800, 20);
               kc.field_q.c();
               SoftwareRasterizer.drawHorizontalLine(0, 6, 800, 65280);
@@ -105,19 +105,19 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               SoftwareRasterizer.drawHorizontalLine(0, 11, 800, 65535);
               SoftwareRasterizer.drawHorizontalLine(0, 12, 800, 65280);
               SoftwareRasterizer.drawHorizontalLine(0, 13, 800, 65280);
-              lb.field_C.a(127);
+              lb.field_C.setAsRasterTarget(127);
               qa.field_M = new RgbSprite(20, 20);
               qa.field_M.c();
               SoftwareRasterizer.fillCircle(9, 9, 6, 8421376);
-              lb.field_C.a(104);
+              lb.field_C.setAsRasterTarget(104);
               nd.field_L = new RgbSprite(20, 20);
               nd.field_L.c();
               SoftwareRasterizer.fillCircle(9, 9, 6, 8421376);
-              lb.field_C.a(97);
+              lb.field_C.setAsRasterTarget(97);
               sa.field_c = new RgbSprite(20, 20);
               sa.field_c.c();
               SoftwareRasterizer.fillCircle(9, 9, 6, 8388736);
-              lb.field_C.a(110);
+              lb.field_C.setAsRasterTarget(110);
               field_J = sa.field_c;
               mh.field_c = nd.field_L;
               jj.field_c = new RgbSprite(800, 32);
@@ -138,17 +138,17 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           SoftwareRasterizer.drawHorizontalLine(0, 16, 800, 16777215);
-          lb.field_C.a(117);
+          lb.field_C.setAsRasterTarget(117);
           MusicPatchPcmStream.field_o = new RgbSprite(8, 8);
           MusicPatchPcmStream.field_o.c();
           SoftwareRasterizer.fillCircle(4, 4, 4, 65535);
-          lb.field_C.a(111);
+          lb.field_C.setAsRasterTarget(111);
           ik.field_b = new RgbSprite(3, 3);
           ik.field_b.c();
           SoftwareRasterizer.fillCircle(1, 1, 1, 65408);
-          lb.field_C.a(105);
+          lb.field_C.setAsRasterTarget(105);
           cj.field_d = new RgbSprite(256, 256);
-          lb.field_C.a(111);
+          lb.field_C.setAsRasterTarget(111);
           db.field_e = new RgbSprite(1, 1);
           ii.field_b = ij.a("playerfxspawn", (byte) 78, kf.field_d, "");
           ub.a(0);
@@ -466,7 +466,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 2897296, 0);
           cb.field_b.b("?", 32, 32, 16777215, 1);
           ge.field_d.b(32, 32);
-          lb.field_C.a(103);
+          lb.field_C.setAsRasterTarget(103);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -492,7 +492,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ClientException.clearStaticReferences(false);
           GameAppletShell.c(-1);
           fi.clearStaticReferences(125);
-          KeyboardInput.a((byte) 119);
+          KeyboardInput.resetStaticState((byte) 119);
           MouseInput.clearStaticReferences(45);
           MouseWheelInput.clearStaticReferences((byte) 86);
           SoftwareRasterizer.clearStaticReferences();
@@ -513,7 +513,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           qh.clearStaticReferences(1);
           ab.clearStaticReferences(false);
           m.clearStaticReferences(!param0);
-          na.a((byte) -33);
+          AwtRasterBuffer.a((byte) -33);
           sb.a((byte) 33);
           FullscreenFocusCanvas.a(25270);
           wg.clearStaticReferences(2);
@@ -560,15 +560,15 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           qj.clearStaticReferences((byte) -126);
           k.clearStaticReferences((byte) 52);
           AccountCreationResultPanel.releaseDeclaredStaticReferences(9791);
-          tf.c(false);
+          tf.resetStaticState(false);
           el.releaseDeclaredStaticReferences(20);
-          ma.n(19678);
+          ma.resetStaticState(19678);
           v.releaseDeclaredStaticReferences(3);
           ff.i(-1);
           wa.j(-11179);
-          ah.k(-988);
+          ah.resetStaticState(-988);
           a.clearStaticReferences(2);
-          sf.a(param0);
+          sf.resetStaticState(param0);
           ub.clearStaticReferences((byte) -119);
           s.a(7);
           fb.clearStaticReferences(256);
@@ -576,7 +576,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           SpriteGeometry.g(-62);
           DualLinkNode.d(-24338);
           lh.releaseDeclaredStaticReferences(0);
-          jj.a(111);
+          jj.resetStaticState(111);
           nk.clearStaticReferences();
           sg.clearStaticReferences((byte) -57);
           tk.clearStaticReferences();
@@ -584,9 +584,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ha.clearStaticReferences((byte) 69);
           pe.clearStaticReferences(0);
           be.clearStaticReferences();
-          hi.b(109);
+          hi.resetStaticState(109);
           aa.clearStaticReferences(1);
-          ee.a(1);
+          ee.resetStaticState(1);
           ii.clearStaticReferences(110);
           db.clearStaticReferences((byte) 89);
           u.clearStaticReferences((byte) 50);
@@ -601,7 +601,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           BoundedRandomAccessFile.clearStaticReferences(-79);
           c.clearStaticReferences((byte) -58);
           lb.clearDeclaredStaticReferences(30);
-          fl.a(118);
+          fl.resetStaticState(118);
           qc.clearStaticReferences(24937);
           ae.n(1);
           kk.clearStaticReferences((byte) 44);
@@ -623,12 +623,12 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           qf.clearStaticReferences((byte) 64);
           ByteStorage.clearStaticReferences(67);
           gh.clearStaticReferences();
-          lc.b((byte) 111);
+          lc.resetStaticState((byte) 111);
           sc.a(-63);
           ki.clearStaticReferences(true);
           hb.clearStaticReferences((byte) 101);
           ch.clearStaticReferences((byte) 94);
-          lg.a((byte) -119);
+          lg.resetStaticState((byte) -119);
           fm.clearStaticReferences(-109);
           vg.clearDeclaredStaticReferences((byte) -102);
           hf.clearDeclaredStaticReferences(7966);
@@ -650,14 +650,14 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           hj.clearStaticReferences(-20385);
           qk.clearStaticReferences(65280);
           bk.clearStaticReferences(66);
-          fa.clearStaticReferences(-57);
+          ImageProducerRasterBuffer.clearStaticReferences(-57);
           ga.clearStaticReferences((byte) -4);
           wb.b(34);
           gg.b(-339514552);
           nj.b(0);
           ig.clearDeclaredStaticReferences(-15877);
           ri.clearStaticReferences(param0);
-          dh.j(3);
+          dh.resetStaticState(3);
           qg.n(-1);
           kl.clearStaticReferences((byte) 78);
           jf.clearStaticReferences((byte) 127);
@@ -665,17 +665,17 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           LoginMenuScreen.a((byte) 108);
           qa.clearStaticReferences((byte) 122);
           gm.releaseDeclaredStaticReferences(-112);
-          ci.i(-76);
+          ci.resetStaticState(-76);
           nc.clearStaticReferences((byte) 126);
           ei.clearStaticReferences(1);
           md.clearStaticReferences(75);
           ih.releaseDeclaredStaticReferences(288);
-          nd.b(true);
+          nd.resetStaticState(true);
           tl.clearStaticReferences((byte) -39);
           SoundFilter.clearStaticReferences();
           hh.a(false);
           o.clearStaticReferences((byte) 99);
-          DirectByteStorage.c((byte) 56);
+          DirectByteStorage.resetStaticState((byte) 56);
           rb.clearStaticReferences(0);
           pi.clearDeclaredStaticReferences(2147483647);
           jk.clearDeclaredStaticReferences(7624);
@@ -685,11 +685,11 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           wh.c((byte) -86);
           rd.g(-125);
           ka.clearDeclaredStaticReferences(26713);
-          pa.a(-1);
+          pa.resetStaticState(-1);
           NodeHashTableIterator.clearStaticReferences(967);
           SecondaryNodeDequeIterator.a(71);
-          vb.d(4);
-          bg.a((byte) 102);
+          vb.resetStaticState(4);
+          bg.resetStaticState((byte) 102);
           sj.a(true);
           kc.a((byte) -1);
           ie.c(78);
@@ -703,13 +703,13 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           uf.clearStaticReferences((byte) -60);
           f.d(-1);
           je.a((byte) 19);
-          nl.a((byte) -106);
+          nl.resetStaticState((byte) -106);
           vc.clearStaticReferences(0);
           bb.clearStaticReferences(param0);
           wk.clearDeclaredStaticReferences(80);
           AccountRequestState.clearStaticReferences(false);
           AccountServiceResult.clearStaticReferences(120);
-          sd.a(2);
+          sd.resetStaticState(2);
           lk.clearStaticReferences(-27996);
           ll.d((byte) 104);
           dd.clearStaticReferences(false);
@@ -1184,7 +1184,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           dc.field_a = new RgbSprite(al.field_c.field_h / 4, al.field_c.field_c / 4);
           dc.field_a.c();
           al.field_c.b(0, 0);
-          lb.field_C.a(98);
+          lb.field_C.setAsRasterTarget(98);
           rh.field_h = hh.field_d[2];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1249,7 +1249,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         try {
           try {
             var4 = param2.getGraphics();
-            lb.field_C.a(var4, param3, param0, 255);
+            lb.field_C.drawImage(var4, param3, param0, 255);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -1659,7 +1659,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           nj.field_o.h();
           cc.field_w.h();
           b.field_k.h();
-          lb.field_C.a(107);
+          lb.field_C.setAsRasterTarget(107);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1805,7 +1805,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           tb.field_d.g();
           jl.field_h = eh.a("", (byte) -89, kf.field_d, "help_key_shift");
           wg.field_c = eh.a("", (byte) -49, kf.field_d, "help_key_ctrl");
-          na.field_c = eh.a("", (byte) -33, kf.field_d, "help_key_space");
+          AwtRasterBuffer.field_c = eh.a("", (byte) -33, kf.field_d, "help_key_space");
           ul.field_h = eh.a("", (byte) -82, kf.field_d, "help_key_z");
           AccountRequestState.field_d = eh.a("", (byte) -72, kf.field_d, "help_key_x");
           lk.field_k = eh.a("", (byte) -98, kf.field_d, "help_key_c");
@@ -1851,7 +1851,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               dh.field_S = ij.a("aliendeathglider", (byte) 113, kf.field_d, "");
               mj.field_w = this.a((byte) -105, dh.field_S);
               wd.field_f = ij.a("aliendoomglider", (byte) 114, kf.field_d, "");
-              fa.field_n = ij.a("alienshredder", (byte) 118, kf.field_d, "");
+              ImageProducerRasterBuffer.field_n = ij.a("alienshredder", (byte) 118, kf.field_d, "");
               t.field_c = ij.a("alienassaultbot", (byte) 127, kf.field_d, "");
               cm.field_Q = ij.a("aliendropship", (byte) 58, kf.field_d, "");
               PacketBuffer.field_i = ij.a("alienspacemine", (byte) 101, kf.field_d, "");
@@ -1865,10 +1865,10 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               ad.field_s = ij.a("alienbattlecarrier", (byte) 54, kf.field_d, "");
               ib.field_r = ij.a("alienbattlecarrier_side_arms", (byte) 85, kf.field_d, "");
               mi.field_i = ij.a("alienbattlecarrier_middle_arms", (byte) 90, kf.field_d, "");
-              fa.field_k = ij.a("alienbunker", (byte) 123, kf.field_d, "");
-              ub.field_a = be.a(eh.a("", (byte) -111, kf.field_d, "alienbunker_rubble"), fa.field_k.length);
-              ib.field_j = new he[fa.field_k.length];
-              rh.field_l = new he[fa.field_k.length];
+              ImageProducerRasterBuffer.field_k = ij.a("alienbunker", (byte) 123, kf.field_d, "");
+              ub.field_a = be.a(eh.a("", (byte) -111, kf.field_d, "alienbunker_rubble"), ImageProducerRasterBuffer.field_k.length);
+              ib.field_j = new he[ImageProducerRasterBuffer.field_k.length];
+              rh.field_l = new he[ImageProducerRasterBuffer.field_k.length];
               break;
             }
             ph.field_a[var2_int].c();
@@ -1878,14 +1878,14 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           var2_int = 0;
           do {
             if (!(var2_int < ib.field_j.length)) {
-              lb.field_C.a(100);
+              lb.field_C.setAsRasterTarget(100);
               wk.field_m = ij.a("alienbunker_big", (byte) 123, kf.field_d, "");
               this.a(99, wk.field_m);
               break;
             }
-            fa.field_k[var2_int].c();
+            ImageProducerRasterBuffer.field_k[var2_int].c();
             ub.field_a[var2_int].c();
-            ib.field_j[var2_int] = fa.field_k[var2_int].e();
+            ib.field_j[var2_int] = ImageProducerRasterBuffer.field_k[var2_int].e();
             ib.field_j[var2_int].c(128);
             rh.field_l[var2_int] = ub.field_a[var2_int].e();
             rh.field_l[var2_int].c(128);
@@ -2243,7 +2243,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           } while (var6 == 0);
           do {
             if (430 <= var5) {
-              lb.field_C.a(125);
+              lb.field_C.setAsRasterTarget(125);
               nb.field_b = new RgbSprite(640, 430);
               nb.field_b.c();
               break;
@@ -2270,7 +2270,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           } while (var6 == 0);
           do {
             if (var5 >= 500) {
-              lb.field_C.a(96);
+              lb.field_C.setAsRasterTarget(96);
               sg.field_e = eh.a("", (byte) -103, kf.field_d, "background_bath");
               uk.field_h = eh.a("", (byte) -52, kf.field_d, "background_london");
               MouseWheelInput.field_f = eh.a("", (byte) -121, kf.field_d, "background_brighton");
@@ -2351,7 +2351,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ik.field_f = new he[1];
           ik.field_f[0] = bk.field_j[0].e();
           ik.field_f[0].g();
-          fa.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
+          ImageProducerRasterBuffer.field_m = this.a(eh.a("", (byte) -30, kf.field_d, "scenery_tile_earth_bath_01"), (byte) -35);
           we.field_c = this.a(eh.a("", (byte) -107, kf.field_d, "scenery_tile_earth_bath_02"), (byte) -7);
           d.field_c = ij.a("scenery_tile_earth_bath_03", (byte) 115, kf.field_d, "");
           d.field_c[0].c();

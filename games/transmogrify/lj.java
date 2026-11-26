@@ -51,7 +51,7 @@ class lj extends UiWidget {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void resetDeclaredStaticState(boolean param0) {
         if (!param0) {
           field_x = -1.0687482226304967;
           field_z = null;

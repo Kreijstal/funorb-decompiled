@@ -107,7 +107,7 @@ final class ae extends IntrusiveNode {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_v = null;
         field_A = null;
         field_s = null;

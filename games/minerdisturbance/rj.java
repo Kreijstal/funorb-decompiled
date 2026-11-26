@@ -9,7 +9,7 @@ final class rj implements uj {
     static boolean field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 3) {
           field_f = 89;
           field_a = null;
@@ -20,7 +20,7 @@ final class rj implements uj {
 
     public final void a(boolean param0) {
         if (param0) {
-          rj.a(50);
+          rj.resetStaticState(50);
           tb.field_a = 2;
           SecondaryNodeDequeIterator.field_a = 1;
           return;

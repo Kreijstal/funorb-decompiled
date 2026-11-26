@@ -174,7 +174,7 @@ final class cd {
         return this.field_f == 97 ? true : false;
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         field_h = null;
         if (param0 != 11352) {

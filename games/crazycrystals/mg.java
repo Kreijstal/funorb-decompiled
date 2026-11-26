@@ -15,7 +15,7 @@ abstract class mg {
 
     abstract wh a(int param0);
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < -86) {
           field_d = null;
           field_g = null;
@@ -55,7 +55,7 @@ abstract class mg {
             cd.field_v[9] = 12;
           }
           if (param0 >= -99) {
-            mg.b(-23);
+            mg.resetStaticState(-23);
           }
           for (var2_int = 0; var2_int < 4; var2_int++) {
             if (null == le.field_g[var2_int]) {

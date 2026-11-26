@@ -73,7 +73,7 @@ final class wf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_a = null;
         if (param0 >= -43) {
           pendingClick = 72;

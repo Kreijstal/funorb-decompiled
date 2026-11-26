@@ -105,7 +105,7 @@ final class fe extends l {
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
             if (pf.a((byte) -96, (char) var7)) {
-              var8 = tk.a(235, (char) var7);
+              var8 = ImageProducerRasterBuffer.a(235, (char) var7);
               if (0 != var8) {
                 discarded$0 = var5.append((char) var8);
               }
@@ -159,7 +159,7 @@ final class fe extends l {
         try {
           AccountServiceResult.field_e = new am(RawPcmStream.a(rn.field_p, 100, 0));
           td.field_e = new am(RawPcmStream.a(ti.field_l, 100, 0));
-          bc.field_a = new am(RawPcmStream.a(mg.field_d, 100, 0));
+          AwtRasterBuffer.field_a = new am(RawPcmStream.a(mg.field_d, 100, 0));
           dn.field_d = new am(RawPcmStream.a(io.field_H, 100, 0));
           wp.field_b = new am(RawPcmStream.a(cf.field_f, 100, 0));
           bn.field_h = new am(RawPcmStream.a(lm.field_a, 100, 0));

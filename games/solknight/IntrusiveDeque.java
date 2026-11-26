@@ -91,7 +91,7 @@ final class IntrusiveDeque {
         return var2;
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 >= -105) {
           field_f = 59L;
@@ -213,7 +213,7 @@ final class IntrusiveDeque {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("vf");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               if (param2 != -35) {
                 field_b = (String) null;

@@ -35,7 +35,7 @@ final class SuperSpeedEvent extends SpecialEvent {
             hba.a(param7, param1, tj.field_b[var12], 7, param6);
           }
           if (param4 != -1) {
-            SuperSpeedEvent.d(62);
+            SuperSpeedEvent.resetStaticState(62);
           }
           var10 = param1 + param0;
           for (var12Lifetime1 = param3; var12Lifetime1 > var9; var12Lifetime1--) {
@@ -122,7 +122,7 @@ final class SuperSpeedEvent extends SpecialEvent {
         super(param0, param1);
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -17509) {
           field_r = false;
           field_q = null;

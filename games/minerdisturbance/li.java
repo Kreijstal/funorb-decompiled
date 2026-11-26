@@ -1548,7 +1548,7 @@ final class li implements uj {
                 }
                 var2 = e.a(-115, "create_displayname_tooltip");
                 if (var2 != null) {
-                  vj.field_l = bh.a(var2, -120);
+                  ImageProducerRasterBuffer.field_l = bh.a(var2, -120);
                 }
                 var2 = e.a(127, "create_displayname_hint");
                 if (var2 != null) {

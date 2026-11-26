@@ -8,7 +8,7 @@ final class MixedSupport137 {
     static int integerState0848;
     static String stringState0590;
 
-    public static void performAction1714(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         if (integerArgument1 == 27067) {
           stringState0589 = null;
           stringState0590 = null;

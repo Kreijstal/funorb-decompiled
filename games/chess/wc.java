@@ -44,7 +44,7 @@ class wc extends hl {
             wc.b(false);
           }
           if (param3) {
-            vj.a(param4.field_r + param2, param4.field_C, param4.field_y, (byte) 120, param4.field_u + param1);
+            AwtRasterBuffer.a(param4.field_r + param2, param4.field_C, param4.field_y, (byte) 120, param4.field_u + param1);
           }
           super.a((byte) 127, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -198,7 +198,7 @@ class wc extends hl {
               break;
             }
             if (var4_ref == null) {
-              si.d(param0 ^ -65325);
+              ImageProducerRasterBuffer.d(param0 ^ -65325);
               return;
             }
             var5 = var27.readUnsignedByte(-110);
@@ -293,13 +293,13 @@ class wc extends hl {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                si.d(65280);
+                ImageProducerRasterBuffer.d(65280);
                 return;
               }
             }
             if (decompiledFrameRemainder0) {
               fg.a((Throwable) null, (byte) -77, "HS1: " + tm.b((byte) -123));
-              si.d(param0 + 65325);
+              ImageProducerRasterBuffer.d(param0 + 65325);
             }
           }
           if (param0 != -45) {

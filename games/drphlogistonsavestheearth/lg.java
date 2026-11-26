@@ -15,7 +15,7 @@ final class lg implements cg {
     static int field_f;
     private int field_k;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 > -84) {
           field_i = 80;
           field_a = null;
@@ -30,7 +30,7 @@ final class lg implements cg {
         RuntimeException decompiledCaughtException = null;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (!fa.d(0)) {
+          if (!ImageProducerRasterBuffer.d(0)) {
             if (null != df.field_l &&
               df.field_l.focusLost) {
               af.b(6);

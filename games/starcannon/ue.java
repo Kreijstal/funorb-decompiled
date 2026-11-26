@@ -577,7 +577,7 @@ final class ue {
             stackIn_35_0 = var11_ref_RuntimeException;
             stackIn_35_1 = new StringBuilder();
             stackIn_36_2 = (param3 != null);
-            throw sd.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(mg.a(var9.length, var9, (byte) -69)).append(" ").append(mg.a(-2 + var9.length, var9, (byte) -110)).append(" ").append(this.field_b.field_c[param0]).append(" ").append(this.field_b.field_b).toString());
+            throw sd.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(" ").append(param0).append(" ").append(var9.length).append(" ").append(ImageProducerRasterBuffer.a(var9.length, var9, (byte) -69)).append(" ").append(ImageProducerRasterBuffer.a(-2 + var9.length, var9, (byte) -110)).append(" ").append(this.field_b.field_c[param0]).append(" ").append(this.field_b.field_b).toString());
           }
           if (this.field_d) {
             this.field_h[param0] = null;

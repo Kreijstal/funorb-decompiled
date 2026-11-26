@@ -7,7 +7,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
     static int[] field_c;
     static byte[][] field_b;
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         field_b = (byte[][]) null;
         field_c = null;

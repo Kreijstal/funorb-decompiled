@@ -215,7 +215,7 @@ final class ri {
               sb.field_r.a(el.field_c, 20, 15, -40 + ke.field_f[1].field_k, ke.field_f[1].field_j - 40, 9330743, -1, 1, 1, 0);
             }
           }
-          ac.field_a.a((byte) 109);
+          ac.field_a.setAsRasterTarget((byte) 109);
           var13Lifetime2 = param1 * var7 / 20;
           if (var13Lifetime2 > var7) {
             var13Lifetime2 = var7;

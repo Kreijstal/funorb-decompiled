@@ -191,14 +191,14 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               -jc.field_k + fa.correctedCurrentTimeMillis(125) > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < ib.field_k) {
+                if (var2.width < ImageProducerRasterBuffer.field_k) {
                   return;
                 }
                 if (var2.height < ej.field_d) {
                   return;
                 }
               }
-              ef.field_f = true;
+              AwtRasterBuffer.field_f = true;
             }
             return;
           }
@@ -300,7 +300,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
           gk.field_f = true;
           k.field_H = true;
           ae.field_b = true;
-          ef.field_f = false;
+          AwtRasterBuffer.field_f = false;
           jc.field_k = fa.correctedCurrentTimeMillis(-73);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -542,7 +542,7 @@ public abstract class AppletShell extends java.applet.Applet implements Runnable
               jc.field_i = param5;
               ej.field_d = param5;
               kj.field_i = param6;
-              ib.field_k = param6;
+              ImageProducerRasterBuffer.field_k = param6;
               ob.field_d = 0;
               nd.field_E = param4;
               og.field_c = this;

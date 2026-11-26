@@ -38,7 +38,7 @@ final class ob extends wm {
         try {
           v.field_e.b((byte) 40);
           for (var1_int = 0; var1_int < 32; var1_int++) {
-            vj.field_f[var1_int] = 0L;
+            AwtRasterBuffer.field_f[var1_int] = 0L;
           }
           for (var1_intLifetime1 = param0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             fi.field_d[var1_intLifetime1] = 0L;

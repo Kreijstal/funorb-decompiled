@@ -43,7 +43,7 @@ final class bh {
         return nj.a(1, param4, param2, 3, 1, param3, 103, 1, param0);
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         field_b = null;
         if (param0 <= 88) {

@@ -53,13 +53,13 @@ abstract class ByteStorage {
           if (20 <= var6) {
             if (var6 >= 30) {
               var7 = 256 * (-var6 + 50) / 20;
-              uc.field_d.a(var3, var4, var7);
+              AwtRasterBuffer.field_d.a(var3, var4, var7);
             } else {
-              uc.field_d.a(var3, var4, 256);
+              AwtRasterBuffer.field_d.a(var3, var4, 256);
             }
           } else {
             var7 = var6 * 256 / 20;
-            uc.field_d.a(var3, var4, var7);
+            AwtRasterBuffer.field_d.a(var3, var4, var7);
           }
         }
         if (param2 != -27794) {

@@ -58,8 +58,8 @@ final class cd {
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (!vh.c((byte) -93)) {
-            if (null != ba.field_f &&
-              ba.field_f.focusLost) {
+            if (null != AwtRasterBuffer.field_f &&
+              AwtRasterBuffer.field_f.focusLost) {
               wl.e((byte) 120);
               si.field_o.b((byte) -56, new s(si.field_o, cg.field_c));
             }
@@ -68,7 +68,7 @@ final class cd {
           var1_int = 63 / ((59 - param0) / 47);
           si.field_o.a(mb.field_a, mb.field_d, true, true);
           si.field_o.l(-43);
-          while (ba.a(-1)) {
+          while (AwtRasterBuffer.a(-1)) {
             si.field_o.a(oa.field_H, 121, rd.field_p);
           }
           return;

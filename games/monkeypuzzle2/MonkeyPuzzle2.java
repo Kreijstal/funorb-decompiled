@@ -40,9 +40,9 @@ public final class MonkeyPuzzle2 extends bi {
         RuntimeException var2 = null;
         try {
           aa.a(-11449);
-          if (ba.field_f != null) {
-            vh.a(ba.field_f, (byte) -117);
-            ba.field_f.exitFullscreen((byte) -107, rc.field_k);
+          if (AwtRasterBuffer.field_f != null) {
+            vh.a(AwtRasterBuffer.field_f, (byte) -117);
+            AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
           }
           if (param0) {
             MonkeyPuzzle2.g((byte) -20);
@@ -71,7 +71,7 @@ public final class MonkeyPuzzle2 extends bi {
           MouseWheelInput.clearStaticReferences(256);
           SoftwareRasterizer.clearStaticReferences();
           ad.clearStaticReferences((byte) 123);
-          el.a(true);
+          el.resetStaticState(true);
           vj.a(17812);
           PacketBuffer.clearBufferStatics(-74);
           pf.clearStaticReferences((byte) -118);
@@ -85,19 +85,19 @@ public final class MonkeyPuzzle2 extends bi {
           hl.clearStaticReferences(2);
           re.clearStaticReferences(9050);
           qb.clearStaticReferences(203);
-          ne.b((byte) -17);
-          ba.clearStaticReferences(false);
+          ne.resetStaticState((byte) -17);
+          AwtRasterBuffer.clearStaticReferences(false);
           pd.clearStaticReferences((byte) 105);
           FullscreenFocusCanvas.clearStaticReferences((byte) -124);
-          oe.d(-12248);
+          oe.resetStaticState(-12248);
           kk.clearStaticReferences((byte) -104);
           hj.c(1903697041);
           wl.clearStaticReferences((byte) 126);
-          uj.a(10);
+          uj.resetStaticState(10);
           c.clearStaticReferences(true);
           ch.clearStaticReferences((byte) -73);
           BufferedSocket.clearStaticReferences(1);
-          IntrusiveDeque.a(83);
+          IntrusiveDeque.resetStaticState(83);
           SpriteState.clearStaticReferences((byte) -69);
           IntrusiveNode.clearStaticReferences(-1733);
           hk.clearStaticReferences((byte) 85);
@@ -129,7 +129,7 @@ public final class MonkeyPuzzle2 extends bi {
           AccountCreationResultPanel.releaseDeclaredStaticReferences(-249);
           ul.releaseDeclaredStaticReferences(-105);
           ra.clearStaticReferences((byte) -96);
-          ha.f((byte) -128);
+          ha.resetStaticState((byte) -128);
           bg.releaseDeclaredStaticReferences(20660);
           lb.clearStaticReferences((byte) 86);
           qi.d((byte) 98);
@@ -149,7 +149,7 @@ public final class MonkeyPuzzle2 extends bi {
           fk.clearStaticReferences((byte) -113);
           kc.clearStaticReferences(4);
           hb.d((byte) 126);
-          ea.a(0);
+          ea.resetStaticState(0);
           cf.clearStaticReferences((byte) 126);
           da.clearStaticReferences(-119);
           he.clearDeclaredStaticReferences(4);
@@ -157,7 +157,7 @@ public final class MonkeyPuzzle2 extends bi {
           v.clearStaticReferences(false);
           bh.clearStaticReferences(-8765);
           lf.clearStaticReferences(false);
-          ef.a(true);
+          ef.resetStaticState(true);
           pl.b((byte) -77);
           DelegatingCanvas.clearStaticReferences(-101);
           ec.clearStaticReferences((byte) 123);
@@ -167,7 +167,7 @@ public final class MonkeyPuzzle2 extends bi {
           si.b((byte) 20);
           ca.clearStaticReferences(-1);
           fb.clearStaticReferences((byte) -61);
-          cg.b((byte) -115);
+          cg.resetStaticState((byte) -115);
           tl.clearStaticReferences((byte) -17);
           s.releaseDeclaredStaticReferences(7993);
           wk.clearStaticReferences(false);
@@ -184,13 +184,13 @@ public final class MonkeyPuzzle2 extends bi {
           ah.clearStaticReferences(0);
           af.a((byte) 122);
           ej.clearStaticReferences((byte) -99);
-          q.a((byte) 74);
+          q.resetStaticState((byte) 74);
           ii.clearStaticReferences((byte) 120);
           vd.clearStaticReferences(112);
           ie.clearStaticReferences((byte) -107);
           ByteStorage.clearStaticReferences(-123);
           tg.clearStaticReferences();
-          l.a(0);
+          l.resetStaticState(0);
           i.clearStaticReferences(true);
           nj.clearStaticReferences(-151);
           vi.a(0);
@@ -198,8 +198,8 @@ public final class MonkeyPuzzle2 extends bi {
           ak.c(-1);
           db.clearStaticReferences((byte) -36);
           mc.a(-74);
-          aa.c(-1);
-          UiWidget.h(0);
+          aa.resetStaticState(-1);
+          UiWidget.resetStaticState(0);
           ButtonWidget.j(-64);
           jk.clearStaticReferences((byte) 77);
           nf.o(-4110);
@@ -218,7 +218,7 @@ public final class MonkeyPuzzle2 extends bi {
           ek.clearStaticReferences(-114);
           ProxyAuthenticationRequiredException.clearStaticReferences((byte) 114);
           uf.clearStaticReferences((byte) -107);
-          sl.b((byte) 74);
+          ImageProducerRasterBuffer.b((byte) 74);
           tj.a(89);
           eg.clearStaticReferences((byte) -108);
           oh.a((byte) 4);
@@ -233,13 +233,13 @@ public final class MonkeyPuzzle2 extends bi {
           mh.clearDeclaredStaticReferences((byte) 99);
           qc.releaseDeclaredStaticReferences(125);
           rj.clearDeclaredStaticReferences(0);
-          pc.c(true);
+          pc.resetStaticState(true);
           jh.clearDeclaredStaticReferences(7434);
           cm.clearStaticReferences((byte) 111);
           jj.d((byte) 117);
           vh.clearDeclaredStaticReferences(-9473);
           vg.clearDeclaredStaticReferences(-3114);
-          em.a(-27714);
+          em.resetDeclaredStaticState(-27714);
           wj.e((byte) -95);
           fl.clearStaticReferences((byte) -45);
           ja.clearStaticReferences(false);
@@ -260,15 +260,15 @@ public final class MonkeyPuzzle2 extends bi {
           NodeHashTableIterator.clearStaticReferences((byte) 67);
           SecondaryNodeDequeIterator.clearStaticReferences(127);
           de.clearDeclaredStaticReferences(-6742);
-          d.a(true);
+          d.resetStaticState(true);
           me.clearStaticReferences(true);
           hd.clearStaticReferences(0);
-          lc.a(-115);
+          lc.resetStaticState(-115);
           mg.clearStaticReferences(-1);
           ve.clearStaticReferences((byte) 15);
           wi.a(256);
           ue.clearDeclaredStaticReferences(8443);
-          rb.i(-121);
+          rb.resetStaticState(-121);
           m.clearDeclaredStaticReferences(49);
           rk.clearStaticReferences(10);
           AccountRequestState.clearStaticReferences(true);
@@ -294,7 +294,7 @@ public final class MonkeyPuzzle2 extends bi {
           uk.clearDeclaredStaticReferences(98);
           fd.clearDeclaredStaticReferences(-28970);
           th.clearStaticReferences((byte) -107);
-          rd.e(10396);
+          rd.resetStaticState(10396);
           sd.clearStaticReferences((byte) 122);
           bl.clearDeclaredStaticReferences(0);
           hf.clearStaticReferences(-122);
@@ -319,10 +319,10 @@ public final class MonkeyPuzzle2 extends bi {
         Object var5 = null;
         var4 = field_F ? 1 : 0;
         try {
-          if (null == ba.field_f) {
+          if (null == AwtRasterBuffer.field_f) {
             stackIn_5_0 = ie.field_e;
           } else {
-            stackIn_5_0 = ba.field_f;
+            stackIn_5_0 = AwtRasterBuffer.field_f;
           }
           var5 = stackIn_5_0;
           var2 = var5;
@@ -337,7 +337,7 @@ public final class MonkeyPuzzle2 extends bi {
             if (wj.d(109)) {
               stackIn_14_0 = var5;
               stackIn_14_1 = 44;
-              if (ba.field_f == null) {
+              if (AwtRasterBuffer.field_f == null) {
                 stackIn_15_2 = ke.field_a;
               } else {
                 stackIn_15_2 = true;
@@ -386,7 +386,7 @@ public final class MonkeyPuzzle2 extends bi {
           } else {
             if (kg.a((byte) 90)) {
               stackIn_50_0 = param0 + 25905;
-              if (null != ba.field_f) {
+              if (null != AwtRasterBuffer.field_f) {
                 stackIn_51_1 = true;
               } else {
                 stackIn_51_1 = ke.field_a;
@@ -427,13 +427,13 @@ public final class MonkeyPuzzle2 extends bi {
         var3 = field_F ? 1 : 0;
         try {
           ld.a(false);
-          if (ba.field_f != null &&
-            ba.field_f.focusLost) {
+          if (AwtRasterBuffer.field_f != null &&
+            AwtRasterBuffer.field_f.focusLost) {
             rb.h(3591);
             cm.k(param0 - 15241);
           }
           stackIn_9_1 = 99;
-          stackIn_10_2 = (null != ba.field_f);
+          stackIn_10_2 = (null != AwtRasterBuffer.field_f);
           this.a((byte) stackIn_9_1, stackIn_10_2);
           if (pl.field_d) {
             this.h((byte) -32);
@@ -456,17 +456,17 @@ public final class MonkeyPuzzle2 extends bi {
             if (this.m(param0 ^ 15245)) {
               if (ek.a((byte) 25) &&
                 !ad.a(false)) {
-                stackIn_33_0 = (null != ba.field_f);
+                stackIn_33_0 = (null != AwtRasterBuffer.field_f);
                 var2_int = ff.a(stackIn_33_0, -32323, (bi) (this));
                 if (var2_int == 2364824) {
                   DirectByteStorage.e(-18753);
                 } else {
                   if ((var2_int == 1 ||
                     var2_int == 2)) {
-                    if (ba.field_f != null) {
-                      vh.a(ba.field_f, (byte) 47);
-                      ba.field_f.exitFullscreen((byte) -107, rc.field_k);
-                      ba.field_f = null;
+                    if (AwtRasterBuffer.field_f != null) {
+                      vh.a(AwtRasterBuffer.field_f, (byte) 47);
+                      AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
+                      AwtRasterBuffer.field_f = null;
                     }
                     if ((var2_int == 2)) {
                       hd.a(true, ii.a(false));

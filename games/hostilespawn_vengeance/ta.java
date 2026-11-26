@@ -107,7 +107,7 @@ final class ta extends me {
               }
             }
             vj.field_e[0].a(true, 128, 192, 36, 36);
-            o.field_n.b((byte) 125);
+            o.field_n.setAsRasterTarget((byte) 125);
           } else {
             if (rl.field_c == hh.field_d ||
               3 == rl.field_c) {
@@ -132,7 +132,7 @@ final class ta extends me {
                 }
               }
               vj.field_e[0].a(true, 128, 192, 36, 36);
-              o.field_n.b((byte) 127);
+              o.field_n.setAsRasterTarget((byte) 127);
             } else {
               jf.field_d = 50;
               MusicPatchPcmStream.field_n = null;
@@ -141,13 +141,13 @@ final class ta extends me {
           tg.field_a = false;
           bj.field_a = false;
           if (hh.field_d == rl.field_c) {
-            wa.field_p = 0;
+            ImageProducerRasterBuffer.field_p = 0;
             kf.clearInts(al.field_U, 0, 6);
             sg.field_i = 0;
           }
           ad.field_a = ng.field_u;
           ng.field_u = 0;
-          o.field_n.b((byte) -20);
+          o.field_n.setAsRasterTarget((byte) -20);
           r.field_a = 1;
           el.field_j = 0;
           if (bm.field_c == 0 &&
@@ -191,7 +191,7 @@ final class ta extends me {
               }
             }
           }
-          o.field_n.b((byte) -111);
+          o.field_n.setAsRasterTarget((byte) -111);
           le.field_D = 0;
           if (!om.field_b) {
             if (bm.field_c == 0 &&

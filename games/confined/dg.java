@@ -26,7 +26,7 @@ final class dg extends IntrusiveNode {
           return (char)var2;
         }
         if (var2 < 160) {
-          var3 = cd.field_m[var2 - 128];
+          var3 = ImageProducerRasterBuffer.field_m[var2 - 128];
           if (var3 == 0) {
             var3 = 63;
           }

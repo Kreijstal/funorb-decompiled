@@ -104,7 +104,7 @@ final class uh {
         this.field_G = var4;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -18662) {
           field_d = -118;
         }

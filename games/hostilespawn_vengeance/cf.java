@@ -92,7 +92,7 @@ class cf extends DualLinkNode {
           tf.field_d = param0;
           return;
         }
-        if (!wa.b(0)) {
+        if (!ImageProducerRasterBuffer.b(0)) {
           pf.b((byte) -64);
           fa.field_c = 11;
           tf.field_d = param0;

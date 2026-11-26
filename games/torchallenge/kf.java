@@ -38,7 +38,7 @@ final class kf {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_e = null;
         field_a = null;
         if (param0 >= -69) {

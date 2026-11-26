@@ -22,7 +22,7 @@ class lk extends u {
         if (param4 != 8) {
           field_k = (he) null;
         }
-        return na.a(param1, param2, false, param0, true, param3);
+        return AwtRasterBuffer.a(param1, param2, false, param0, true, param3);
     }
 
     db b(byte param0) {

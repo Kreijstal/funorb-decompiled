@@ -8,7 +8,7 @@ final class em extends vf {
     static String field_F;
     int field_G;
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_F = null;
         if (!param0) {
           field_C = 45;
@@ -72,7 +72,7 @@ final class em extends vf {
 
     final byte[] b(boolean param0) {
         if (!param0) {
-          em.c(false);
+          em.resetStaticState(false);
           if (this.field_v) {
             throw new RuntimeException();
           }

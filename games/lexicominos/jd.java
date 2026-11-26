@@ -7,7 +7,7 @@ final class jd {
     static int field_c;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_d = null;
         field_b = null;
         if (param0 >= -96) {
@@ -54,7 +54,7 @@ final class jd {
           rb.a((String) null, param1, param0, 14635);
           return;
         }
-        jd.a((byte) 55);
+        jd.resetStaticState((byte) 55);
         var4Lifetime1 = (String) null;
         rb.a((String) null, param1, param0, 14635);
     }

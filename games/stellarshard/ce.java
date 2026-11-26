@@ -11,7 +11,7 @@ final class ce {
     static Sprite field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_f = null;
         field_c = null;
         if (param0 > 123) {

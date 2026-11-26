@@ -7,7 +7,7 @@ final class pe extends k {
     static String field_n;
     static String field_l;
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_n = null;
         if (param0 >= -18) {
           field_m = -104;

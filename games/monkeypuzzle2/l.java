@@ -38,7 +38,7 @@ final class l {
     int field_E;
     int[] field_e;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_D = null;
         if (param0 != 0) {
           field_f = -53;

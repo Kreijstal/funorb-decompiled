@@ -258,7 +258,7 @@ class rg extends jk implements sh {
         }
     }
 
-    public static void r(int param0) {
+    public static void resetStaticState(int param0) {
         field_ub = null;
         field_tb = null;
         if (param0 != 28776) {

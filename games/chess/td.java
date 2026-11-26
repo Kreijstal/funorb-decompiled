@@ -15,7 +15,7 @@ final class td extends IntrusiveNode {
     final static void a(le param0, int param1, int param2, int param3) {
         try {
           if (param3 != 200) {
-            td.a(40);
+            td.resetStaticState(40);
           }
           tm.field_d = param2;
           tn.field_m = param1;
@@ -46,7 +46,7 @@ final class td extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_j = null;
         field_n = null;
         if (param0 == 5239) {

@@ -24,7 +24,7 @@ class uh extends ca {
         return ln.field_l;
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_l = null;
         if (param0 == 64) {
           field_m = null;

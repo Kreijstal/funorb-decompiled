@@ -235,7 +235,7 @@ final class kb extends kn {
           if (1 == param0) {
             this.field_W = -param6 + (param1 - this.field_u);
             this.field_V = param2 + (-this.field_r - param5);
-            vj.field_a = this;
+            AwtRasterBuffer.field_a = this;
           }
           this.field_q = param0;
           return true;

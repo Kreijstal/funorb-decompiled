@@ -304,7 +304,7 @@ final class la {
               stackIn_58_2 = var6_ref;
               decompiledFrameRemainder0 = (var8 == 0);
               if ((decompiledFrameRemainder0) &&
-                (na.$cfr$intArgs$a$0163a84c1fcf(stackIn_58_0, stackIn_58_1, stackIn_58_2))) {
+                (AwtRasterBuffer.$cfr$intArgs$a$0163a84c1fcf(stackIn_58_0, stackIn_58_1, stackIn_58_2))) {
                 var7_ref = (hg) (sh.field_a.nextForward(0));
                 continue;
               }

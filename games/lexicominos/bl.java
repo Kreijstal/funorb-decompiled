@@ -56,7 +56,7 @@ class bl {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 106) {
           field_b = -126;
           field_a = null;

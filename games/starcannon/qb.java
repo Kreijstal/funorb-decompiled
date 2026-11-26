@@ -70,7 +70,7 @@ final class qb {
         DualLinkNode.field_k = cl.field_k;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_g = null;
         if (param0 < -49) {
           field_b = null;

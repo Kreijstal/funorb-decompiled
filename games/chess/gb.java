@@ -105,11 +105,11 @@ abstract class gb extends GameAppletShell {
                                 return;
                               }
                               if (var2 == 18) {
-                                si.a((byte) -121);
+                                ImageProducerRasterBuffer.a((byte) -121);
                                 return;
                               }
                               fg.a((Throwable) null, (byte) -77, "MGS1: " + tm.b((byte) -124));
-                              si.d(65280);
+                              ImageProducerRasterBuffer.d(65280);
                               return;
                             }
                             stackIn_30_0 = 0;
@@ -134,7 +134,7 @@ abstract class gb extends GameAppletShell {
           return;
         }
         fg.a((Throwable) null, (byte) -77, "MGS2: " + tm.b((byte) -125));
-        si.d(65280);
+        ImageProducerRasterBuffer.d(65280);
         return;
     }
 
@@ -158,7 +158,7 @@ abstract class gb extends GameAppletShell {
         if (bg.field_ab) {
           return -1;
         }
-        var2 = ji.a(this.field_y, true, si.f(1633075718), ob.d((byte) -99), (byte) 113, this.field_z);
+        var2 = ji.a(this.field_y, true, ImageProducerRasterBuffer.f(1633075718), ob.d((byte) -99), (byte) 113, this.field_z);
         if (var2 == -1) {
           return -1;
         }
@@ -426,7 +426,7 @@ abstract class gb extends GameAppletShell {
             !(ea.h((byte) -16) <= var3) &&
             !(var3 >= ib.a(true))) {
             this.field_n = false;
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
             dh.c(12);
             IntrusiveDeque.a(2, fe.field_e, (byte) 97);
             ia.a((byte) -121);
@@ -691,7 +691,7 @@ abstract class gb extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = nj.a(true, ob.d((byte) -126), this.field_y, od.a(-5), jb.f(-127), Chess.t(0), si.f(1633075718));
+            var5_intLifetime1 = nj.a(true, ob.d((byte) -126), this.field_y, od.a(-5), jb.f(-127), Chess.t(0), ImageProducerRasterBuffer.f(1633075718));
             if (var5_intLifetime1 != -1) {
               lk.a(sa.field_b, 255, var5_intLifetime1, n.field_c);
               n.field_c = null;
@@ -707,7 +707,7 @@ abstract class gb extends GameAppletShell {
             if (param2) {
               bg.field_ab = false;
             } else {
-              var5_intLifetime2 = ji.a(this.field_y, false, si.f(1633075718), ob.d((byte) -119), (byte) 82, this.field_z);
+              var5_intLifetime2 = ji.a(this.field_y, false, ImageProducerRasterBuffer.f(1633075718), ob.d((byte) -119), (byte) 82, this.field_z);
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   IntrusiveDeque.a(var5_intLifetime2, n.field_c, (byte) 81);

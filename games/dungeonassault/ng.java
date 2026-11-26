@@ -3357,7 +3357,7 @@ final class ng extends ck {
             }
           }
           if (var8 != pd.field_J) {
-            if (c.field_d != var8) {
+            if (AwtRasterBuffer.field_d != var8) {
               return;
             }
             var7Lifetime1 = sl.field_c[1];

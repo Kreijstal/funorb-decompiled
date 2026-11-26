@@ -56,7 +56,7 @@ final class wa extends pj implements kd, ke {
     }
 
     private final void g(byte param0) {
-        if (na.b(-1) ||
+        if (AwtRasterBuffer.b(-1) ||
           !(0 >= this.field_L.field_p.length()) &&
           !(this.field_M.field_p.length() <= 0)) {
           pc.a(param0 ^ 32, this.field_L.field_p, this.field_M.field_p);

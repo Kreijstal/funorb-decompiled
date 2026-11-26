@@ -12,7 +12,7 @@ final class ec extends gk {
     private int field_l;
     private long field_h;
 
-    public static void d(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         field_j = null;
         if (param0 != 10) {
           field_f = 74;

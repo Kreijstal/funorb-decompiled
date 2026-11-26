@@ -30,7 +30,7 @@ final class he extends IntrusiveNode {
     int field_j;
     static int[] field_u;
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_y = null;
         field_u = null;
         field_p = null;
@@ -51,7 +51,7 @@ final class he extends IntrusiveNode {
           this.field_l = null;
           return;
         }
-        he.c(48);
+        he.resetStaticState(48);
         this.field_l = null;
     }
 

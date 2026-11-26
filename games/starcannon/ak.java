@@ -752,7 +752,7 @@ final class ak {
     ak(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_b = mg.a(param0.length, param0, (byte) -67);
+          this.field_b = ImageProducerRasterBuffer.a(param0.length, param0, (byte) -67);
           if (param1 != this.field_b) {
             throw new RuntimeException();
           }

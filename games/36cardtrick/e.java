@@ -23,7 +23,7 @@ final class e {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -560430640) {
           field_i = -7;
         }

@@ -57,7 +57,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var2_int >= 0) {
             ProxySocketConnector.field_g[vf.field_a] = var2_int;
             vf.field_a = 1 + vf.field_a & 127;
-            if (vf.field_a == sl.field_j) {
+            if (vf.field_a == ImageProducerRasterBuffer.field_j) {
               vf.field_a = -1;
             }
           }
@@ -112,7 +112,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var2_int >= 0) {
               ProxySocketConnector.field_g[vf.field_a] = ~var2_int;
               vf.field_a = 127 & vf.field_a + 1;
-              if (vf.field_a == sl.field_j) {
+              if (vf.field_a == ImageProducerRasterBuffer.field_j) {
                 vf.field_a = -1;
               }
             }

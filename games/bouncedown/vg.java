@@ -41,10 +41,10 @@ final class vg implements fc {
         DirectByteStorage.field_c = var8.readUnsignedByte((byte) -65);
         ek.field_f = var8.readLong((byte) -121);
         if (2 != eg.field_o) {
-          ib.field_n = 0;
+          ImageProducerRasterBuffer.field_n = 0;
           MusicPatchPcmStream.field_n = 0;
         } else {
-          ib.field_n = var8.readUnsignedShort(-1640531527);
+          ImageProducerRasterBuffer.field_n = var8.readUnsignedShort(-1640531527);
           MusicPatchPcmStream.field_n = var8.readUnsignedMedium((byte) -83);
         }
         stackIn_11_0 = (1 != var8.readUnsignedByte((byte) -76)) ? 0 : 1;

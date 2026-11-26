@@ -81,35 +81,35 @@ final class ad {
         field_d = null;
     }
 
-    final static vj a(java.awt.Component param0, byte param1, int param2, int param3) {
+    final static AwtRasterBuffer a(java.awt.Component param0, byte param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          vj var5 = null;
-          si var5_ref = null;
+          AwtRasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
           int var6 = 0;
-          vj stackIn_1_0 = null;
-          si stackIn_3_0 = null;
+          AwtRasterBuffer stackIn_1_0 = null;
+          ImageProducerRasterBuffer stackIn_3_0 = null;
           RuntimeException stackIn_6_0 = null;
           StringBuilder stackIn_6_1 = null;
           String stackIn_7_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("mb");
-              var5 = (vj) (var4.newInstance());
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (AwtRasterBuffer) (var4.newInstance());
               var6 = 99 % ((param1 - 68) / 40);
-              var5.a(param0, 84, param2, param3);
+              var5.initialize(param0, 84, param2, param3);
               stackIn_1_0 = var5;
               return stackIn_1_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new si();
-              ((vj) ((Object) var5_ref)).a(param0, 107, param2, param3);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((AwtRasterBuffer) ((Object) var5_ref)).initialize(param0, 107, param2, param3);
               stackIn_3_0 = var5_ref;
-              return (vj) ((Object) stackIn_3_0);
+              return (AwtRasterBuffer) ((Object) stackIn_3_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

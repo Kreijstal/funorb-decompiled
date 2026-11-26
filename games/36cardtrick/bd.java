@@ -127,7 +127,7 @@ final class bd extends g implements qh {
         }
     }
 
-    public static void l(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -10790) {
           field_F = -70;
           field_H = null;

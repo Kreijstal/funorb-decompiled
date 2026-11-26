@@ -51,7 +51,7 @@ final class hm {
         RuntimeException var21 = null;
         try {
           fj.a(param7, param12, (byte) 114, param5);
-          fa.a(param14, param1, param15, param20, param8);
+          ImageProducerRasterBuffer.a(param14, param1, param15, param20, param8);
           a.a(param0, param4, (byte) 103);
           la.a(param16, 2, param9, param17, param11, param18);
           ia.a(param2, 0, param13, param10);

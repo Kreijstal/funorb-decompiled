@@ -9,14 +9,14 @@ final class ti {
         if (cb.field_v == wi.field_f) {
           return oa.field_o;
         }
-        if (!uc.field_c.a(-117)) {
-          return uc.field_c.c(-16955);
+        if (!AwtRasterBuffer.field_c.a(-117)) {
+          return AwtRasterBuffer.field_c.c(-16955);
         }
         int var1 = 76 % ((param0 + 86) / 33);
         if (wi.field_f != ui.field_kb) {
           return aa.field_s;
         }
-        return uc.field_c.c(-16955);
+        return AwtRasterBuffer.field_c.c(-16955);
     }
 
     final static boolean b(int param0) {

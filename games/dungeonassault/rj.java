@@ -260,24 +260,24 @@ abstract class rj extends IntrusiveNode {
         try {
           CipherPacketBuffer var5 = null;
           CipherPacketBuffer var6 = null;
-          if (kf.field_m == null) {
-            kf.field_m = sc.field_q.requestDirectSocket(-74, an.field_E, ii.field_D);
+          if (ImageProducerRasterBuffer.field_m == null) {
+            ImageProducerRasterBuffer.field_m = sc.field_q.requestDirectSocket(-74, an.field_E, ii.field_D);
           }
           if (param0 <= 23) {
             byte[] var3 = (byte[]) null;
             rj.a((CipherPacketBuffer) null, false, -48, (byte[]) null);
           }
-          if (0 == kf.field_m.status) {
+          if (0 == ImageProducerRasterBuffer.field_m.status) {
             return false;
           }
           long dupTemp$0 = kd.correctedCurrentTimeMillis(-2456);
           wh.field_e = dupTemp$0;
           qm.field_o = dupTemp$0;
-          if (kf.field_m.status != 1) {
+          if (ImageProducerRasterBuffer.field_m.status != 1) {
             pd.field_A = tp.field_B;
           } else {
             try {
-              sp.field_c = new rk((java.net.Socket) (kf.field_m.result), sc.field_q);
+              sp.field_c = new rk((java.net.Socket) (ImageProducerRasterBuffer.field_m.result), sc.field_q);
               ac.field_B.position = 0;
               var5 = ra.field_c;
               var6 = var5;
@@ -292,7 +292,7 @@ abstract class rj extends IntrusiveNode {
               pd.field_A = tp.field_B;
             }
           }
-          kf.field_m = null;
+          ImageProducerRasterBuffer.field_m = null;
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

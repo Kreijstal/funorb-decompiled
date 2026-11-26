@@ -9,14 +9,14 @@ abstract class lb extends DualLinkNode {
     static ql field_w;
     static he field_D;
     static sa field_z;
-    static na field_C;
+    static AwtRasterBuffer field_C;
     static int field_A;
     static RgbSprite field_x;
     static int field_v;
 
     final static boolean a(char param0, boolean param1) {
         if (!param1) {
-          field_C = (na) null;
+          field_C = (AwtRasterBuffer) null;
           if (param0 < 48) {
             return false;
           }

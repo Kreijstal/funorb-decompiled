@@ -9,7 +9,7 @@ final class ClientException extends RuntimeException {
     Throwable field_c;
     static byte[][] field_b;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 61) {
           field_d = -89;
           field_b = (byte[][]) null;

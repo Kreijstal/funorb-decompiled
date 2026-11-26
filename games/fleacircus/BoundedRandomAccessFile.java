@@ -25,7 +25,7 @@ final class BoundedRandomAccessFile {
         if (!param0) {
           field_g = (PcmSample) null;
         }
-        return !uc.field_c.a(-19) ? true : false;
+        return !AwtRasterBuffer.field_c.a(-19) ? true : false;
     }
 
     protected final void finalize() throws Throwable {

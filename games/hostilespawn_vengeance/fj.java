@@ -97,7 +97,7 @@ final class fj extends le {
         return var1;
     }
 
-    public static void i(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         field_Sb = null;
         field_Tb = null;
         if (param0 != -24510) {

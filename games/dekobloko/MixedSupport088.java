@@ -11,7 +11,7 @@ final class MixedSupport088 {
     static int integerState0546;
     static String stringState0371;
 
-    public static void performAction1137(boolean booleanArgument1) {
+    public static void resetStaticState(boolean booleanArgument1) {
         if (!booleanArgument1) {
           stringState0370 = null;
           integerArrayState0172 = null;

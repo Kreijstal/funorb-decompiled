@@ -54,7 +54,7 @@ final class tf {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 != 24044) {
           field_b = 66;

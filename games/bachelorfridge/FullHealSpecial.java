@@ -10,7 +10,7 @@ final class FullHealSpecial extends SpecialOrder {
         super(param0, param1);
     }
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_q = -19;
         }

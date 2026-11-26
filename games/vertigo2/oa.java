@@ -48,7 +48,7 @@ final class oa extends da {
         }
     }
 
-    public static void g(int param0) {
+    public static void resetStaticState(int param0) {
         field_o = null;
         if (param0 > -107) {
           field_l = -41;

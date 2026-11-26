@@ -90,7 +90,7 @@ final class ba extends kn implements be, sh {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_K = null;
         if (param0 < 49) {
           field_M = false;
@@ -147,7 +147,7 @@ final class ba extends kn implements be, sh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 6) {
-            ba.a((byte) 20);
+            ba.resetStaticState((byte) 20);
           }
           if (this.field_I != param2) {
             return;

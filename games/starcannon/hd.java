@@ -256,7 +256,7 @@ class hd implements de, lg {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_g = null;
         field_i = null;
         if (param0 != 125) {

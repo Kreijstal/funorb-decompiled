@@ -27,7 +27,7 @@ final class sc {
               } else {
                 param2 = l.field_C;
               }
-              eb.field_b.a(3, dd.field_d);
+              eb.field_b.a(3, AwtRasterBuffer.field_d);
             }
             if (param0 == 10) {
               var4 = 0;

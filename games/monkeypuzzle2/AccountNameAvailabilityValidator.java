@@ -14,7 +14,7 @@ final class AccountNameAvailabilityValidator extends wj {
     final static void f(int param0) {
         ub.field_a = lc.field_f;
         lc.field_f = false;
-        sl.b(true);
+        ImageProducerRasterBuffer.b(true);
         oa.j(-118);
         oi.c(106);
         if (param0 == 8500) {
@@ -96,7 +96,7 @@ final class AccountNameAvailabilityValidator extends wj {
             stackIn_4_0 = fe.field_a.a(param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = sl.field_o.a(param1);
+          stackIn_2_0 = ImageProducerRasterBuffer.field_o.a(param1);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -292,7 +292,7 @@ final class AccountNameAvailabilityValidator extends wj {
             stackIn_4_0 = fe.field_a.a(param1);
             return stackIn_4_0;
           }
-          stackIn_2_0 = sl.field_o.a(param1);
+          stackIn_2_0 = ImageProducerRasterBuffer.field_o.a(param1);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

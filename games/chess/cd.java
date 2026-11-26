@@ -241,7 +241,7 @@ final class cd extends pk {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 1570) {
           field_p = -20;
           field_x = null;
@@ -278,7 +278,7 @@ final class cd extends pk {
         this.d((byte) 34);
         this.field_u = wh.field_f == 1 ? true : false;
         if (param0 > -70) {
-          cd.a(18);
+          cd.resetStaticState(18);
           return;
         }
     }

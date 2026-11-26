@@ -72,7 +72,7 @@ final class cr {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 != 21592) {
           field_b = true;

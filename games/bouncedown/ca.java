@@ -6,7 +6,7 @@ final class ca {
     static gk field_e;
     static int[] field_c;
     static fe field_b;
-    static ef field_d;
+    static AwtRasterBuffer field_d;
 
     final static void a(boolean param0) {
         Slime dupTemp$4 = null;

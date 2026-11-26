@@ -819,7 +819,7 @@ final class t {
               if (!(!this.field_b.b(-17))) {
                 oa.a(-1, param0, -86);
                 stackIn_54_0 = (0 < wc.field_q) ? 0 : 7;
-                bj.field_m = stackIn_54_0;
+                ImageProducerRasterBuffer.field_m = stackIn_54_0;
               }
             } else {
               if (var6 == 5) {
@@ -841,7 +841,7 @@ final class t {
                   if (var6 == 14) {
                     if (!(!this.field_b.b(109))) {
                       oa.a(4, param0, 99);
-                      bj.field_m = this.field_i;
+                      ImageProducerRasterBuffer.field_m = this.field_i;
                       AccountRequestState.field_e = db.a((byte) -115, fleas.field_F, je.field_O.length);
                     }
                   } else {
@@ -849,12 +849,12 @@ final class t {
                       if (!(!this.field_b.b(103))) {
                         g.field_s = 0;
                         oa.a(3, param0, 75);
-                        bj.field_m = this.field_i;
+                        ImageProducerRasterBuffer.field_m = this.field_i;
                       }
                     } else {
                       if (var6 == 6) {
                         if (this.field_b.b(-64)) {
-                          oa.a(bj.field_m, param0, 14);
+                          oa.a(ImageProducerRasterBuffer.field_m, param0, 14);
                           break regionExit1;
                         }
                       } else {
@@ -954,7 +954,7 @@ final class t {
                                       cf.a(-25319);
                                       oa.a(-1, param0, -126);
                                       stackIn_175_0 = (wc.field_q > 0) ? 0 : 7;
-                                      bj.field_m = stackIn_175_0;
+                                      ImageProducerRasterBuffer.field_m = stackIn_175_0;
                                     }
                                     break regionExit1;
                                   }
@@ -974,13 +974,13 @@ final class t {
                                     tg.field_g = stackIn_187_0;
                                     oa.a(-1, param0, 45);
                                     stackIn_190_0 = (wc.field_q > 0) ? 0 : 7;
-                                    bj.field_m = stackIn_190_0;
+                                    ImageProducerRasterBuffer.field_m = stackIn_190_0;
                                     break regionExit1;
                                   }
                                   if (nb.field_e != ResourceArchive.field_c.field_z[ResourceArchive.field_c.field_x]) {
                                     break regionExit1;
                                   }
-                                  bj.field_m = this.field_i;
+                                  ImageProducerRasterBuffer.field_m = this.field_i;
                                   oa.a(7, param0, 43);
                                   break regionExit1;
                                 default:
@@ -1063,13 +1063,13 @@ final class t {
                                       }
                                     }
                                     if (wc.field_q > 0) {
-                                      bj.field_m = 0;
+                                      ImageProducerRasterBuffer.field_m = 0;
                                     } else {
                                       if (!pc.a(true)) {
-                                        bj.field_m = 0;
+                                        ImageProducerRasterBuffer.field_m = 0;
                                       } else {
                                         stackIn_131_0 = 7;
-                                        bj.field_m = stackIn_131_0;
+                                        ImageProducerRasterBuffer.field_m = stackIn_131_0;
                                       }
                                     }
                                     break regionExit1;
@@ -1218,13 +1218,13 @@ final class t {
           if (1 == this.field_i) {
             oa.a(-1, false, -96);
             stackIn_42_0 = (wc.field_q <= 0) ? 7 : 0;
-            bj.field_m = stackIn_42_0;
+            ImageProducerRasterBuffer.field_m = stackIn_42_0;
             continue;
           }
           if (6 == this.field_i) {
             continue;
           }
-          oa.a(bj.field_m, false, 126);
+          oa.a(ImageProducerRasterBuffer.field_m, false, 126);
         }
         this.field_b.b(112, this.a(pb.field_d, ob.field_e, (byte) 41), this.a(ag.field_f, kc.field_b, (byte) 103));
         if (param0 != 26) {

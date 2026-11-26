@@ -55,7 +55,7 @@ final class pf extends IntrusiveNode {
           var5 = rd.field_k[var2];
           var6 = new int[var4];
           for (var7 = 0; var7 < var4; var7++) {
-            var6[var7] = jf.field_i[bc.a((int) var5[var7], 255)];
+            var6[var7] = ImageProducerRasterBuffer.field_i[bc.a((int) var5[var7], 255)];
           }
           var1[var2] = new RgbSprite(p.field_l, gk.field_a, kb.field_c[var2], ml.field_b[var2], na.field_q[var2], hb.field_a[var2], var6);
         }

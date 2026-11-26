@@ -221,7 +221,7 @@ final class SceneWidgetPart002 extends SceneWidget {
         }
     }
 
-    public static void performAction0563(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         stringState0193 = null;
         integerArrayState0049 = null;
         stringState0194 = null;

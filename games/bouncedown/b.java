@@ -184,7 +184,7 @@ final class b {
               if (wa.field_d == 7) {
                 wa.field_d = 3;
               }
-              ib.field_o = jc.field_g.readString(true);
+              ImageProducerRasterBuffer.field_o = jc.field_g.readString(true);
               fa.field_a = false;
               stackIn_86_0 = wa.field_d;
               return stackIn_86_0;
@@ -195,9 +195,9 @@ final class b {
             if (null == NodeHashTableIterator.field_a) {
               if (fa.field_a) {
                 if (ph.a((byte) -110) > 30000L) {
-                  ib.field_o = jh.field_t;
+                  ImageProducerRasterBuffer.field_o = jh.field_t;
                 } else {
-                  ib.field_o = Platform.field_k;
+                  ImageProducerRasterBuffer.field_o = Platform.field_k;
                 }
                 fa.field_a = false;
                 stackIn_96_0 = 3;
@@ -235,7 +235,7 @@ final class b {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         field_c = null;
         if (param0 < 17) {

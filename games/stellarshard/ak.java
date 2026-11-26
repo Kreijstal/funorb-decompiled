@@ -8,7 +8,7 @@ final class ak {
     static int[] field_c;
     static String field_b;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_d = null;
         field_b = null;
         field_c = null;

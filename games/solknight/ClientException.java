@@ -23,7 +23,7 @@ final class ClientException extends RuntimeException {
         try {
           var4_int = param0.c(103, param3);
           if (param1 >= -62) {
-            ClientException.a((byte) -74);
+            ClientException.resetStaticState((byte) -74);
           }
           var5 = param0.a(param2, -1, var4_int);
           stackIn_3_0 = AccountServiceResult.a((byte) 47, param0, var4_int, var5);
@@ -102,7 +102,7 @@ final class ClientException extends RuntimeException {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != 125) {
           field_b = 2;
           field_a = null;

@@ -383,7 +383,7 @@ abstract class jc extends fe implements rk {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_D = null;
         field_F = null;
         field_G = null;

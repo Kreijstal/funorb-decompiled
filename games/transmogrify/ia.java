@@ -804,7 +804,7 @@ final class ia extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_l = null;
         if (param0 != -4) {
           field_j = -4;

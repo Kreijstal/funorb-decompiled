@@ -134,8 +134,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               if (decompiledFrameRemainder3) {
                 var1 = BoundedRandomAccessFile.field_h;
-                if (null != tk.field_i) {
-                  var1 = tk.field_i;
+                if (null != ImageProducerRasterBuffer.field_i) {
+                  var1 = ImageProducerRasterBuffer.field_i;
                 }
                 var2_ref = PlatformTaskDispatcher.field_l;
                 if (var2_ref != null) {
@@ -211,9 +211,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_2_0 = null;
             return (String) (stackIn_2_0);
           }
-          if (null != tk.field_i &&
-            tk.field_i != this) {
-            stackIn_8_0 = tk.field_i.getParameter(param0);
+          if (null != ImageProducerRasterBuffer.field_i &&
+            ImageProducerRasterBuffer.field_i != this) {
+            stackIn_8_0 = ImageProducerRasterBuffer.field_i.getParameter(param0);
             return stackIn_8_0;
           }
           stackIn_10_0 = super.getParameter(param0);
@@ -395,8 +395,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
             kf.field_g = true;
           }
-          if (tk.field_i != null) {
-            tk.field_i.destroy();
+          if (ImageProducerRasterBuffer.field_i != null) {
+            ImageProducerRasterBuffer.field_i.destroy();
           }
           try {
             this.c(241);
@@ -465,14 +465,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           }
           if (decompiledFrameRemainder0) {
             if (null == uc.field_d) {
-              if (null == tk.field_i) {
+              if (null == ImageProducerRasterBuffer.field_i) {
                 var2 = BoundedRandomAccessFile.field_h;
                 if (var4 != 0) {
-                  var2 = tk.field_i;
+                  var2 = ImageProducerRasterBuffer.field_i;
                   var2 = uc.field_d;
                 }
               } else {
-                var2 = tk.field_i;
+                var2 = ImageProducerRasterBuffer.field_i;
                 if (var4 != 0) {
                   var2 = uc.field_d;
                 }
@@ -743,9 +743,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         if (uc.field_d != null) {
           return null;
         }
-        if (null != tk.field_i &&
-          tk.field_i != this) {
-          return tk.field_i.getCodeBase();
+        if (null != ImageProducerRasterBuffer.field_i &&
+          ImageProducerRasterBuffer.field_i != this) {
+          return ImageProducerRasterBuffer.field_i.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -757,7 +757,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          tk.field_i = param0;
+          ImageProducerRasterBuffer.field_i = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -831,9 +831,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (tk.field_i != null &&
-            tk.field_i != this) {
-            stackIn_12_0 = tk.field_i.getAppletContext();
+          if (ImageProducerRasterBuffer.field_i != null &&
+            ImageProducerRasterBuffer.field_i != this) {
+            stackIn_12_0 = ImageProducerRasterBuffer.field_i.getAppletContext();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getAppletContext();
@@ -856,9 +856,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (tk.field_i != null &&
-            tk.field_i != this) {
-            stackIn_12_0 = tk.field_i.getDocumentBase();
+          if (ImageProducerRasterBuffer.field_i != null &&
+            ImageProducerRasterBuffer.field_i != this) {
+            stackIn_12_0 = ImageProducerRasterBuffer.field_i.getDocumentBase();
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getDocumentBase();

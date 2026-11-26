@@ -12,7 +12,7 @@ final class oj extends nd {
     static mi field_C;
     static int field_x;
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == 20) {
           field_w = null;
           field_y = null;
@@ -47,7 +47,7 @@ final class oj extends nd {
 
     final Object d(int param0) {
         if (param0 != -4) {
-          oj.e(-107);
+          oj.resetStaticState(-107);
           return this.field_v;
         }
         return this.field_v;

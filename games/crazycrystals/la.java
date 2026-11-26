@@ -244,7 +244,7 @@ final class la {
             fl.field_a != null) {
             ad.field_h.a(231, 390);
             var1 = ga.field_E;
-            if (bc.field_f.field_c == 0) {
+            if (AwtRasterBuffer.field_f.field_c == 0) {
               var1 = kp.field_n;
             }
             var1.a(0, 0);
@@ -252,7 +252,7 @@ final class la {
             stackIn_51_1 = 40;
             stackIn_51_2 = 2047;
             stackIn_51_3 = hl.field_g;
-            if (bc.field_f.field_c != 0) {
+            if (AwtRasterBuffer.field_f.field_c != 0) {
               stackIn_52_4 = 3;
             } else {
               stackIn_52_4 = 4;
@@ -270,19 +270,19 @@ final class la {
             }
             stackIn_56_0 = kb.field_a;
             stackIn_56_1 = -1;
-            stackIn_57_2 = (bc.field_f.field_c == 0);
+            stackIn_57_2 = (AwtRasterBuffer.field_f.field_c == 0);
             qf.a(stackIn_56_0, stackIn_56_1, stackIn_57_2, pa.field_F);
           }
           if (null != ad.field_h &&
             null != fl.field_a) {
             ad.field_h.a(434, 390);
             el.field_g.a(0, 0);
-            if (1 == bc.field_f.field_c) {
+            if (1 == AwtRasterBuffer.field_f.field_c) {
               ne.a(392, ad.field_h.field_l - 4, -122, 64, 436, 7 * ad.field_h.field_u / 12);
             }
             stackIn_65_0 = gf.field_a;
             stackIn_65_1 = -1;
-            stackIn_66_2 = (bc.field_f.field_c == 1);
+            stackIn_66_2 = (AwtRasterBuffer.field_f.field_c == 1);
             qf.a(stackIn_65_0, stackIn_65_1, stackIn_66_2, CipherPacketBuffer.field_q);
           }
           if (null != qk.field_H) {

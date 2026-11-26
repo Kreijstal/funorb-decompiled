@@ -66,7 +66,7 @@ final class pl extends IntrusiveNode {
           }
           if (!ji.f(250)) {
             SoftwareRasterizer.clearRaster();
-            bc.a(240, param2 ^ -72, 320);
+            AwtRasterBuffer.a(240, param2 ^ -72, 320);
             bq.a(param1, 0, 0, 4);
             return;
           }

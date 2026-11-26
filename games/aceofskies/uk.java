@@ -20,7 +20,7 @@ final class uk extends IntrusiveNode {
         return 250 < it.field_c ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_j = null;
         if (param0 != 250) {
           field_e = -101;

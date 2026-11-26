@@ -9,7 +9,7 @@ final class wd extends IntrusiveNode {
     byte[] field_h;
     static String field_i;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_i = null;
         field_k = null;
         field_l = null;

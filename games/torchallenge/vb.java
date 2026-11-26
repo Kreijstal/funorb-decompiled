@@ -71,7 +71,7 @@ abstract class vb {
         if (param0 == 99) {
           return this.field_k.a(true) + this.field_i.a(true);
         }
-        vb.d(50);
+        vb.resetStaticState(50);
         return this.field_k.a(true) + this.field_i.a(true);
     }
 
@@ -79,7 +79,7 @@ abstract class vb {
         if (param0 > 74) {
           return this.field_c.a(true) + this.field_l.a(true);
         }
-        vb.d(93);
+        vb.resetStaticState(93);
         return this.field_c.a(true) + this.field_l.a(true);
     }
 
@@ -135,7 +135,7 @@ abstract class vb {
         return var8Lifetime1;
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_m = null;
         field_e = null;
         field_a = (int[][]) null;

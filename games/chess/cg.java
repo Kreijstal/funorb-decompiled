@@ -47,7 +47,7 @@ final class cg {
         try {
           mk.field_a = param1;
           ce.field_a = param3;
-          vj.field_d = param2;
+          AwtRasterBuffer.field_d = param2;
           if (param0 != 0) {
             lh var5 = (lh) null;
             cg.a(-72, -128, (lh) null, (lh) null);

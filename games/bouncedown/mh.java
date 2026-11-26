@@ -89,7 +89,7 @@ abstract class mh extends wk {
         }
     }
 
-    public static void m(int param0) {
+    public static void resetStaticState(int param0) {
         field_R = null;
         field_W = null;
         if (param0 != -16167) {
@@ -309,7 +309,7 @@ abstract class mh extends wk {
           this.field_X = null;
           return;
         }
-        mh.m(-111);
+        mh.resetStaticState(-111);
         this.field_V = vb.field_g;
         this.b(this.field_X, param0 + 4999);
         this.field_S.field_E = 0;

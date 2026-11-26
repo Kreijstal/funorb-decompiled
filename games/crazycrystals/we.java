@@ -11,7 +11,7 @@ final class we extends IntrusiveNode {
     int field_m;
     int field_j;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -22523) {
           field_h = 88;
           field_l = null;

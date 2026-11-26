@@ -9,7 +9,7 @@ final class kg {
     static int[] field_b;
     static int field_c;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         field_e = null;
         if (param0 != -1) {

@@ -1610,7 +1610,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 109, "create_alert_passchars");
                 if (null != var2) {
-                  ef.field_d = c.a(0, var2);
+                  AwtRasterBuffer.field_d = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 125, "create_alert_passrepeated");
                 if (var2 != null) {

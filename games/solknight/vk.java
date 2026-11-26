@@ -229,7 +229,7 @@ final class vk extends jf {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -14275) {
           field_g = 28;
           field_e = null;

@@ -199,7 +199,7 @@ final class fn extends IntrusiveNode {
                     var12++;
                   }
                   if (var21 != null &&
-                    ci.a(-27933, var21)) {
+                    AwtRasterBuffer.a(-27933, var21)) {
                     var8[1][var13] = ti.field_J;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;

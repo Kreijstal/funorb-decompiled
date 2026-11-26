@@ -5,7 +5,7 @@ final class pt {
     static SystemTaskService field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_a = 24;
@@ -22,7 +22,7 @@ final class pt {
         if (param0 == -126) {
           return new String(var3);
         }
-        pt.a(54);
+        pt.resetStaticState(54);
         return new String(var3);
     }
 

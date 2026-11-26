@@ -40,7 +40,7 @@ final class me {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_f = null;
         field_d = null;
         if (param0 < 92) {

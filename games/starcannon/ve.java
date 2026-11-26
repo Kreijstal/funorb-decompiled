@@ -10,7 +10,7 @@ final class ve {
     static boolean field_d;
     private boolean field_b;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         field_g = null;
         if (param0 != 32729) {

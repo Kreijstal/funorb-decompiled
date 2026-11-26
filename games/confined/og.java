@@ -401,7 +401,7 @@ final class og extends n {
               var12.a((byte) -87, var16);
             }
           }
-          var17 = new bd(7, rb.field_h, pn.field_a);
+          var17 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
           var18 = new bd(8, mg.field_d, pn.field_a);
           var19 = new bd(9, pm.field_u, pn.field_a);
           var6 = var17.field_f;
@@ -441,7 +441,7 @@ final class og extends n {
             var12.a((byte) -116, new bd(2, mk.field_k, pn.field_a));
             var12.a((byte) -53, new bd(3, ea.field_e, pn.field_a));
             var12.a((byte) -80, new bd(4, ef.field_ub, pn.field_a));
-            var31 = new bd(7, rb.field_h, pn.field_a);
+            var31 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
             var32 = new bd(8, mg.field_d, pn.field_a);
             var33 = new bd(9, pm.field_u, pn.field_a);
             var6 = var31.field_f;
@@ -485,7 +485,7 @@ final class og extends n {
             }
           } else {
             if (of.field_a) {
-              var20 = new bd(7, rb.field_h, pn.field_a);
+              var20 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
               var21 = new bd(8, mg.field_d, pn.field_a);
               var22 = new bd(9, pm.field_u, pn.field_a);
               var6 = var20.field_f;
@@ -540,7 +540,7 @@ final class og extends n {
                 var26.field_f = var5;
                 var12.a((byte) -70, var26);
                 var12.a((byte) -87, var27);
-                var28 = new bd(7, rb.field_h, pn.field_a);
+                var28 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
                 var29 = new bd(8, mg.field_d, pn.field_a);
                 var30 = new bd(9, pm.field_u, pn.field_a);
                 var6 = var28.field_f;
@@ -575,7 +575,7 @@ final class og extends n {
                   var12.a((byte) -78, new bd(13, w.field_Q, pn.field_a));
                 }
               } else {
-                var23 = new bd(7, rb.field_h, pn.field_a);
+                var23 = new bd(7, AwtRasterBuffer.field_h, pn.field_a);
                 var24 = new bd(8, mg.field_d, pn.field_a);
                 var25 = new bd(9, pm.field_u, pn.field_a);
                 var6 = var23.field_f;

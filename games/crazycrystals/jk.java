@@ -16,7 +16,7 @@ final class jk extends fb {
         return null;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_g = null;
         if (!param0) {
           field_f = 69;

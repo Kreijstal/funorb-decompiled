@@ -11,7 +11,7 @@ final class jc extends IntrusiveNode {
     int field_j;
     int field_l;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_m = null;
         field_h = null;
         if (param0) {

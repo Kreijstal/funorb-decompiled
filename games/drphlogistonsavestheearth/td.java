@@ -114,9 +114,9 @@ final class td {
         this.field_a = param2;
         this.field_l = param1;
         this.field_n = param0;
-        int var5 = fa.field_l[this.field_n] >> 16;
-        int var6 = 255 & fa.field_l[this.field_n] >> 8;
-        int var7 = fa.field_l[this.field_n] & 255;
+        int var5 = ImageProducerRasterBuffer.field_l[this.field_n] >> 16;
+        int var6 = 255 & ImageProducerRasterBuffer.field_l[this.field_n] >> 8;
+        int var7 = ImageProducerRasterBuffer.field_l[this.field_n] & 255;
         for (var8 = 0; var8 < 250; var8++) {
           var9 = 1 + (var8 >> 5);
           this.field_p[var8] = var7 / var9 + (var5 / var9 << 16) + (var6 / var9 << 8);

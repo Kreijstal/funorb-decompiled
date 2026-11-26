@@ -977,7 +977,7 @@ final class mc {
                 stackIn_74_1 = 16777215;
               }
               ((Sprite) (Object) stackIn_73_0).addOutline(stackIn_74_1);
-              ResourceArchive.field_e.a((byte) -45);
+              ResourceArchive.field_e.setAsRasterTarget((byte) -45);
               this.field_h.drawScaled(var18, var17, var12, var2Lifetime1);
             } else {
               NodeHashTableIterator.field_a.drawScaled(var18, var17, var12, var2Lifetime1);
@@ -1036,7 +1036,7 @@ final class mc {
           var9.a(var8, 0, 0, kd.field_r.field_x, kd.field_r.field_A, 16437248, -1, 1, 1, var10Lifetime2);
         }
         var11Lifetime2 = -101 / ((-70 - param0) / 32);
-        ResourceArchive.field_e.a((byte) -45);
+        ResourceArchive.field_e.setAsRasterTarget((byte) -45);
         this.field_r.drawScaled(39 + (var7Lifetime2 - (this.field_p[21] >> 1)), 315, kd.field_r.field_x + this.field_p[21], kd.field_r.field_A);
         ArchiveIndex.a(316, 113, var7Lifetime2 + 190, 414, (byte) 83, he.field_b);
         ArchiveIndex.a(391, 38, var7Lifetime2 + 39, 142, (byte) 109, he.field_b);

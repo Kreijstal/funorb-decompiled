@@ -112,7 +112,7 @@ final class pc {
         return stackIn_6_0;
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 != 1) {
           field_b = -120;

@@ -352,7 +352,7 @@ final class da extends ArchiveProvider {
               if (var9 == 248) {
                 bo.a(bh.i(81), (byte) -12);
                 n.field_c = rb.field_d;
-                si.d(param5 + 65350);
+                ImageProducerRasterBuffer.d(param5 + 65350);
                 DirectByteStorage.field_f = false;
                 stackIn_49_0 = var9;
                 return stackIn_49_0;
@@ -392,7 +392,7 @@ final class da extends ArchiveProvider {
                 var12 = 0;
                 do {
                   if (var12 >= var11) {
-                    si.d(65280);
+                    ImageProducerRasterBuffer.d(65280);
                     DirectByteStorage.field_f = false;
                     break;
                   }
@@ -417,7 +417,7 @@ final class da extends ArchiveProvider {
                 aa.a(bh.i(81), -1, var9_ref_String);
               }
             }
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
             DirectByteStorage.field_f = false;
             stackIn_91_0 = wg.field_B;
             return stackIn_91_0;

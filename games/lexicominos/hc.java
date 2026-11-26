@@ -71,7 +71,7 @@ final class hc extends ui {
               of.field_a.writePrefixedString((byte) -38, var14);
               of.field_a.writePrefixedString((byte) -38, var8);
               var15 = (CharSequence) ((Object) param5);
-              of.field_a.writePrefixedString((byte) -38, aa.a(var15, param3 + 30742));
+              of.field_a.writePrefixedString((byte) -38, ImageProducerRasterBuffer.a(var15, param3 + 30742));
               of.field_a.writeShort(param3 + 30884, param1);
               of.field_a.writeByte(param0, -1);
               of.field_a.writeByte(var9, param3 + 30761);

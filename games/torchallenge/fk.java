@@ -9,7 +9,7 @@ class fk extends bc {
     static int[][] field_s;
     static int field_t;
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 == -88) {
           field_s = (int[][]) null;
           field_v = null;

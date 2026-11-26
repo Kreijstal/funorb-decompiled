@@ -42,7 +42,7 @@ final class fb {
             stackIn_14_0 = 1;
             return stackIn_14_0;
           }
-          if (!uc.field_c.a(-45)) {
+          if (!AwtRasterBuffer.field_c.a(-45)) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

@@ -259,7 +259,7 @@ final class qi extends WidgetContainer implements vc, ql {
             this.field_D.field_m = wd.field_s;
           }
           if (this.field_z) {
-            this.field_C.field_m = ba.field_c;
+            this.field_C.field_m = AwtRasterBuffer.field_c;
           } else {
             if (!this.field_F) {
               this.field_C.field_h = (ml) ((Object) new lc());

@@ -71,7 +71,7 @@ class g extends wa {
         this.a(SoftwareRasterizer.field_k, 0, false, true, SoftwareRasterizer.field_j, true, param1, false, 0, false, false);
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_ab = null;
         field_nb = null;
         if (param0 != -1) {
@@ -402,7 +402,7 @@ class g extends wa {
           param7 = this.field_mb;
         }
         if (!param3) {
-          g.d(120);
+          g.resetStaticState(120);
         }
         var16 = this.field_X;
         var17 = this.field_ob;

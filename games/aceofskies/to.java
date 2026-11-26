@@ -318,7 +318,7 @@ abstract class to extends ea implements vm {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         lastScoreSubmission = null;
         if (param0 != 0) {
           field_t = -14;

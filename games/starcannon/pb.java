@@ -37,10 +37,10 @@ final class pb {
         ne.field_d = var8.readLong((byte) 5);
         if (AccountRequestState.field_e == 2) {
           wc.field_f = var8.readUnsignedShort(-1174051992);
-          tk.field_e = var8.readUnsignedMedium(127);
+          AwtRasterBuffer.field_e = var8.readUnsignedMedium(127);
         } else {
           wc.field_f = 0;
-          tk.field_e = 0;
+          AwtRasterBuffer.field_e = 0;
         }
         stackIn_11_0 = (1 != var8.readUnsignedByte(7909)) ? 0 : 1;
         var4 = stackIn_11_0;

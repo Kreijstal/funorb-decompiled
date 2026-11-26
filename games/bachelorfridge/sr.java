@@ -11,7 +11,7 @@ final class sr {
     int field_e;
     static UiComponent field_b;
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_d = null;
         field_c = null;
         if (param0 < 125) {
@@ -252,7 +252,7 @@ final class sr {
           gka.a(126, -var1 + bs.field_k);
         }
         if (param0 > -9) {
-          sr.b((byte) -4);
+          sr.resetStaticState((byte) -4);
         }
     }
 
@@ -273,7 +273,7 @@ final class sr {
         et.field_m = null;
         tb.field_b = null;
         if (param0 != 48) {
-          sr.b((byte) 41);
+          sr.resetStaticState((byte) 41);
         }
     }
 

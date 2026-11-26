@@ -135,7 +135,7 @@ final class eg {
                                 if (decompiledFrameRemainder0) {
                                   if (param1 != 13) {
                                     if (param1 == 14) {
-                                      var14 = ij.a(0, '#', rb.field_i);
+                                      var14 = ij.a(0, '#', AwtRasterBuffer.field_i);
                                       this.a(25, var14[0], (String) null, 4, var14[1], 0, (String) null, 0, (String) null, false, (String) null, 0, 0, 320, 0);
                                       this.a(0, 1500, (RgbSprite) null, 0, 0);
                                       decompiledFrameRemainder0 = (var5 != 0);
@@ -213,7 +213,7 @@ final class eg {
               this.a(var22[2], 0, 320, 0, var22[0], var22[1]);
               this.a(0, 400, (RgbSprite) null, 0, 0);
               if (var5 != 0) {
-                var23 = ij.a(0, '#', cd.field_k);
+                var23 = ij.a(0, '#', ImageProducerRasterBuffer.field_k);
                 this.a(var23[0].length() * 3 / 2, var23[1], 8 + vg.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
                 this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
                 this.a(376, 400, new RgbSprite(220, 104), 0, 420);
@@ -224,7 +224,7 @@ final class eg {
               }
             }
           } else {
-            var23 = ij.a(0, '#', cd.field_k);
+            var23 = ij.a(0, '#', ImageProducerRasterBuffer.field_k);
             this.a(var23[0].length() * 3 / 2, var23[1], 8 + vg.field_I.c(var23[1]), (String) null, (String) null, 0, -87);
             this.a(0, (String) null, 8, var23[2], var23[0], 1, -126);
             this.a(376, 400, new RgbSprite(220, 104), 0, 420);
@@ -1079,7 +1079,7 @@ final class eg {
                   var34 = ei.field_mb[-3 + var25Lifetime2];
                 }
               } else {
-                var34 = cd.field_o[0];
+                var34 = ImageProducerRasterBuffer.field_o[0];
               }
             } else {
               SoftwareRasterizer.fillCircle((int)var28, (int)var30, (int)(var32 + 1.0), 0);

@@ -463,10 +463,10 @@ final class ih extends qe {
         ke.a(51, 605, 480, bk.field_e.field_b + 40);
         ke.a(106, 640 - be.field_o.field_d, 480, 0);
         ke.a(66, 0, 480, 0);
-        c.a(0, 640, 0, (byte) 30);
-        c.a(0, 640, 40, (byte) 55);
+        AwtRasterBuffer.a(0, 640, 0, (byte) 30);
+        AwtRasterBuffer.a(0, 640, 40, (byte) 55);
         jc.a(32, 460 - be.field_o.field_d, 8, 1, 2, 1);
-        c.a(0, 640, 480 - bk.field_e.field_b, (byte) 110);
+        AwtRasterBuffer.a(0, 640, 480 - bk.field_e.field_b, (byte) 110);
         ih.b(be.field_o.field_d, 40 + bk.field_e.field_b, 170, 425, 16777215, 32, 128);
         h.a(false, 425, 20, true, bk.field_e.field_b + 40);
         ih.a(8, 47, 172, 425, 256, 32, 8, 128);

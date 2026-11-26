@@ -81,7 +81,7 @@ abstract class MouseWheelInput {
 
     abstract int consumeWheelDelta(int obfuscationGuard);
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_d = null;
         field_c = null;
         field_e = null;

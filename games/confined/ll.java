@@ -85,7 +85,7 @@ final class ll {
           }
           try {
             var4 = param2.getGraphics();
-            pi.field_S.a((byte) 91, var4, param1, param0);
+            pi.field_S.drawImage((byte) 91, var4, param1, param0);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

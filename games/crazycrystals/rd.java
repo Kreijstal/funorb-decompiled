@@ -84,7 +84,7 @@ abstract class rd extends oh {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_i = null;
         if (!param0) {
           field_f = -104;

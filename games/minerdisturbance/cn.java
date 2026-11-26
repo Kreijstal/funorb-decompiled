@@ -75,7 +75,7 @@ final class cn {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_v = null;
         if (param0 < -107) {
           field_g = null;

@@ -177,8 +177,8 @@ final class l {
         if (param0 != 0) {
           field_a = (String) null;
         }
-        uc.field_e = new nf();
-        ak.field_a.d(uc.field_e, param0 ^ 26034);
+        AwtRasterBuffer.field_e = new nf();
+        ak.field_a.d(AwtRasterBuffer.field_e, param0 ^ 26034);
     }
 
     static {

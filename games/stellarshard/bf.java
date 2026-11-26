@@ -588,7 +588,7 @@ final class bf {
         return (byte) var2Lifetime4;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 2) {
           field_c = 35;
           field_a = null;

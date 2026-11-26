@@ -131,70 +131,70 @@ final class ld extends kf {
           var15 = be.field_b[0];
           var9 = var15.field_r << 1;
           var10 = var15.field_x << 1;
-          if (dd.field_f == null) {
-            dd.field_f = new RgbSprite(var9, var10);
-            de.a(dd.field_f, param0 ^ -117);
+          if (AwtRasterBuffer.field_f == null) {
+            AwtRasterBuffer.field_f = new RgbSprite(var9, var10);
+            de.a(AwtRasterBuffer.field_f, param0 ^ -117);
             var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            dd.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+            AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
-          if (var9 > dd.field_f.field_p) {
-            dd.field_f = new RgbSprite(var9, var10);
-            de.a(dd.field_f, param0 ^ -117);
+          if (var9 > AwtRasterBuffer.field_f.field_p) {
+            AwtRasterBuffer.field_f = new RgbSprite(var9, var10);
+            de.a(AwtRasterBuffer.field_f, param0 ^ -117);
             var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            dd.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+            AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
-          if (dd.field_f.field_u >= var10) {
-            de.a(dd.field_f, 6);
+          if (AwtRasterBuffer.field_f.field_u >= var10) {
+            de.a(AwtRasterBuffer.field_f, 6);
             SoftwareRasterizer.clearRaster();
             var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            dd.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+            AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
             return;
           }
-          dd.field_f = new RgbSprite(var9, var10);
-          de.a(dd.field_f, param0 ^ -117);
+          AwtRasterBuffer.field_f = new RgbSprite(var9, var10);
+          de.a(AwtRasterBuffer.field_f, param0 ^ -117);
           var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
           pd.a(-22949);
-          dd.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
+          AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
           return;
         }
         if (be.field_q == var8) {
           var16 = be.field_b[0];
           var9Lifetime1 = var16.field_r << 1;
           var10Lifetime1 = var16.field_x << 1;
-          if (dd.field_f == null) {
-            dd.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            de.a(dd.field_f, param0 ^ -117);
+          if (AwtRasterBuffer.field_f == null) {
+            AwtRasterBuffer.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
+            de.a(AwtRasterBuffer.field_f, param0 ^ -117);
             var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            dd.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+            AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
-          if (var9Lifetime1 > dd.field_f.field_p) {
-            dd.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            de.a(dd.field_f, param0 ^ -117);
+          if (var9Lifetime1 > AwtRasterBuffer.field_f.field_p) {
+            AwtRasterBuffer.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
+            de.a(AwtRasterBuffer.field_f, param0 ^ -117);
             var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            dd.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+            AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
-          if (dd.field_f.field_u >= var10Lifetime1) {
-            de.a(dd.field_f, 6);
+          if (AwtRasterBuffer.field_f.field_u >= var10Lifetime1) {
+            de.a(AwtRasterBuffer.field_f, 6);
             SoftwareRasterizer.clearRaster();
             var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
-            dd.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+            AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
             return;
           }
-          dd.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
-          de.a(dd.field_f, param0 ^ -117);
+          AwtRasterBuffer.field_f = new RgbSprite(var9Lifetime1, var10Lifetime1);
+          de.a(AwtRasterBuffer.field_f, param0 ^ -117);
           var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
           pd.a(-22949);
-          dd.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
+          AwtRasterBuffer.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);
           return;
         }
         if (ni.field_b == var8) {

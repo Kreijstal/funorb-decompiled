@@ -13,7 +13,7 @@ final class pi extends IntrusiveNode {
     int[] field_g;
     byte[][][] field_h;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < 76) {
           field_o = 112;
           field_j = null;

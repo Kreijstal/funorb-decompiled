@@ -131,7 +131,7 @@ final class pb extends le {
         }
     }
 
-    public static void f(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         if (param0 >= -83) {
           field_Kb = -91;
           field_Ob = null;

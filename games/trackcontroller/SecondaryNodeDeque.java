@@ -105,7 +105,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_f = null;
         if (param0 != 59) {
           mouseButton = -62;
@@ -117,7 +117,7 @@ final class SecondaryNodeDeque implements Iterable {
 
     final static boolean a(char param0, int param1) {
         if (param1 != 122) {
-          SecondaryNodeDeque.a((byte) -18);
+          SecondaryNodeDeque.resetStaticState((byte) -18);
           if (param0 < 65) {
             if (param0 < 97) {
               return false;

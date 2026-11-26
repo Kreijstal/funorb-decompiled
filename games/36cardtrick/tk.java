@@ -351,7 +351,7 @@ final class tk {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_l = null;
         field_o = null;
         field_b = null;

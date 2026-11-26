@@ -64,7 +64,7 @@ final class ci extends hh {
           }
           return;
         }
-        ci.c((byte) -62);
+        ci.resetStaticState((byte) -62);
         if (this.field_l) {
           this.field_a.a(false, 1);
           this.field_a.a((rt) null, 1);
@@ -126,7 +126,7 @@ final class ci extends hh {
         return PacketBuffer.field_i[var4];
     }
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         gameRandom = null;
         field_f = null;
         if (param0 == -47) {

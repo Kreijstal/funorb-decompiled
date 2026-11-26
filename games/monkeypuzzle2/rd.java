@@ -53,7 +53,7 @@ final class rd extends wj {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 10396) {
           field_p = 'ﾳ';
           field_o = null;

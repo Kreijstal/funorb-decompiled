@@ -21,7 +21,7 @@ final class s extends ma implements wl, mj {
 
     private final boolean i(int param0) {
         if (param0 != 0) {
-          s.g((byte) -98);
+          s.resetStaticState((byte) -98);
         }
         if (this.a((byte) 84, (ee) (this.field_L))) {
           return true;
@@ -33,7 +33,7 @@ final class s extends ma implements wl, mj {
         return param0 | param1;
     }
 
-    public static void g(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_S = null;
         if (param0 >= -79) {
           field_K = 79;

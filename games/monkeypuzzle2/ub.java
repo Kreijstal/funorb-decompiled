@@ -13,15 +13,15 @@ final class ub {
         }
     }
 
-    final static ba a(byte param0, int param1, java.awt.Component param2, int param3) {
+    final static AwtRasterBuffer a(byte param0, int param1, java.awt.Component param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          ba var5 = null;
-          sl var5_ref = null;
-          ba stackIn_3_0 = null;
-          sl stackIn_5_0 = null;
+          AwtRasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          AwtRasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -31,18 +31,18 @@ final class ub {
               if (param0 >= -46) {
                 ub.clearStaticReferences(-125);
               }
-              var4 = Class.forName("hg");
-              var5 = (ba) (var4.newInstance());
-              var5.a(param1, param2, param3, -103);
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (AwtRasterBuffer) (var4.newInstance());
+              var5.initialize(param1, param2, param3, -103);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new sl();
-              ((ba) ((Object) var5_ref)).a(param1, param2, param3, -119);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((AwtRasterBuffer) ((Object) var5_ref)).initialize(param1, param2, param3, -119);
               stackIn_5_0 = var5_ref;
-              return (ba) ((Object) stackIn_5_0);
+              return (AwtRasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

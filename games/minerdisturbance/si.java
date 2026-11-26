@@ -10,9 +10,9 @@ final class si {
     static boolean field_a;
 
     final static void a(int param0) {
-        if (null != ci.field_i) {
-          ci.field_i.b(127);
-          ci.field_i = null;
+        if (null != AwtRasterBuffer.field_i) {
+          AwtRasterBuffer.field_i.b(127);
+          AwtRasterBuffer.field_i = null;
           if (param0 >= -23) {
             si.a((byte) -22);
             return;

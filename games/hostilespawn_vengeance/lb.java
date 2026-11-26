@@ -223,7 +223,7 @@ final class lb {
                 sc.field_g.field_i = 0;
               } else {
                 rc.field_a = sj.field_c;
-                wa.field_k = var9Lifetime1;
+                ImageProducerRasterBuffer.field_k = var9Lifetime1;
                 jd.field_q = -1;
               }
             }
@@ -247,7 +247,7 @@ final class lb {
           }
           if (rc.field_a == sj.field_c &&
             eb.a(13372)) {
-            if (255 == wa.field_k) {
+            if (255 == ImageProducerRasterBuffer.field_k) {
               var9_ref_String = sc.field_g.a((byte) 28);
               if (var9_ref_String != null) {
                 ResourceArchive.a((byte) 98, bn.c(-1), var9_ref_String);
@@ -257,7 +257,7 @@ final class lb {
             }
             le.c((byte) 84);
             jn.field_C = false;
-            stackIn_57_0 = wa.field_k;
+            stackIn_57_0 = ImageProducerRasterBuffer.field_k;
             return stackIn_57_0;
           }
           if (null == ag.field_t) {

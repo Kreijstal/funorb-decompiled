@@ -1128,7 +1128,7 @@ final class ib {
                 }
                 var2 = mk.b("oV1_reachconsole", (byte) -121);
                 if (null != var2) {
-                  sm.field_a = PcmResampler.a(125, var2);
+                  AwtRasterBuffer.field_a = PcmResampler.a(125, var2);
                 }
                 var2 = mk.b("oV1_reachlift", (byte) -125);
                 if (var2 != null) {

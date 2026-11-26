@@ -69,14 +69,14 @@ final class si extends fb {
           }
         }
         if (!param0) {
-          ba.field_h = ea.a((byte) 90, var8, 80);
+          AwtRasterBuffer.field_h = ea.a((byte) 90, var8, 80);
           wh.field_e = null;
           return new hl(param0);
         }
         var5 = var8.readUnsignedShort(17277);
         try {
           var9 = GzipDecompressor.field_a.a(var5, param1 ^ -32769);
-          ba.field_h = var9.b((byte) -54);
+          AwtRasterBuffer.field_h = var9.b((byte) -54);
           if (!i.field_h.equals(cl.field_e)) {
             stackIn_25_0 = var9.field_q;
           } else {
@@ -87,7 +87,7 @@ final class si extends fb {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           kk.a("CC1", (byte) 123, (Throwable) ((Object) var6));
-          ba.field_h = null;
+          AwtRasterBuffer.field_h = null;
           wh.field_e = null;
           return new hl(param0);
         }

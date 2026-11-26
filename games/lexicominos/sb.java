@@ -22,7 +22,7 @@ final class sb {
         m.a(eh.field_c, -121, false);
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         field_e = (int[][]) null;
         field_b = null;
@@ -66,7 +66,7 @@ final class sb {
               }
             }
             if (param3 != 0) {
-              sb.b(-85);
+              sb.resetStaticState(-85);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

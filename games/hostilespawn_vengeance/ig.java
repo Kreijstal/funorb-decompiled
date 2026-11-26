@@ -370,7 +370,7 @@ class ig extends ph {
           this.e((byte) 125);
         }
         if (!param0) {
-          ig.m(83);
+          ig.resetStaticState(83);
         }
     }
 
@@ -433,7 +433,7 @@ class ig extends ph {
         }
     }
 
-    public static void m(int param0) {
+    public static void resetStaticState(int param0) {
         field_R = null;
         field_N = null;
         field_H = null;

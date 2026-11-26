@@ -351,7 +351,7 @@ final class kk {
               var7 = stackIn_12_0;
               var5.a(gg.a(new String[]{var7}, WeightedObjectCache.field_a, true), 14, 53, var3 - 30, var4, 1, -1, 0, 0, 14);
             }
-            ac.field_a.a((byte) 118);
+            ac.field_a.setAsRasterTarget((byte) 118);
             var6 = this.field_i * var4 / 20;
             stackIn_15_0 = ~var6;
             stackIn_15_1 = ~var4;
@@ -512,7 +512,7 @@ final class kk {
         pl.field_e.a(nc.field_c, 30, var3 - 37, -60 + var2, 40, 1, -1, 1, 0, 12);
         var7 = 137;
         sb.field_r.a(var6, var2 / 2, var7, 9330743, -1);
-        ac.field_a.a((byte) 116);
+        ac.field_a.setAsRasterTarget((byte) 116);
         var8 = var3 * this.field_i / 20;
         if (var8 > var3) {
           var8 = var3;
@@ -573,7 +573,7 @@ final class kk {
           return;
         }
         boolean decompiledNaturalLoopExit0 = false;
-        while (!(decompiledNaturalLoopExit0 = (!ba.a(-1)))) {
+        while (!(decompiledNaturalLoopExit0 = (!AwtRasterBuffer.a(-1)))) {
           if (13 == oa.field_H &&
             this.field_g != 0) {
             if (this.field_g == 7) {
@@ -827,7 +827,7 @@ final class kk {
         } else {
           var10.a(var7, var8 >> 1, var10.field_C, var9, -1);
         }
-        ac.field_a.a((byte) 114);
+        ac.field_a.setAsRasterTarget((byte) 114);
         var11Lifetime1 = 40 * this.field_i / 20;
         if (var11Lifetime1 > 40 ||
           ad.a(false)) {
@@ -853,7 +853,7 @@ final class kk {
         int var5 = 86 % ((53 - param0) / 61);
         int var4 = 90;
         sb.field_r.a(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
-        ac.field_a.a((byte) 127);
+        ac.field_a.setAsRasterTarget((byte) 127);
         int var6 = this.field_i * var3 / 20;
         if (var3 < var6) {
           var6 = var3;
@@ -1210,7 +1210,7 @@ final class kk {
                 break;
               }
               hl.field_a = 0;
-              if (null != ba.field_f) {
+              if (null != AwtRasterBuffer.field_f) {
                 rb.h(3591);
                 if (var8 == 0) {
                   break;
@@ -1387,7 +1387,7 @@ final class kk {
               if (!this.field_c.g(0)) {
                 break;
               }
-              if (ba.field_f != null) {
+              if (AwtRasterBuffer.field_f != null) {
                 rb.h(3591);
               }
               hd.a(true, ii.a(false));

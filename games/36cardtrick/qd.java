@@ -21,7 +21,7 @@ final class qd {
         return var2;
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != -2057) {
           field_a = 11;
@@ -125,7 +125,7 @@ final class qd {
           var3_int = 0;
           var4 = param2.length();
           if (param0 > -54) {
-            qd.c(-56);
+            qd.resetStaticState(-56);
           }
           for (var5 = 0; var5 < var4; var5++) {
             if (param1 == param2.charAt(var5)) {

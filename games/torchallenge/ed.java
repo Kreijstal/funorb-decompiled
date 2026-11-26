@@ -156,7 +156,7 @@ final class ed {
         return this.field_g[fieldTemp$0];
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_h = null;
         field_i = null;
         if (param0 <= 16) {
@@ -199,7 +199,7 @@ final class ed {
             hb.field_f = hb.field_f - 1;
           }
           if (param0 <= 67) {
-            ed.a(-124);
+            ed.resetStaticState(-124);
           }
           for (var2_int = 0; 6 > var2_int; var2_int++) {
             if (0 <= wa.field_sb[var2_int]) {

@@ -38,7 +38,7 @@ final class SplitAnimation extends EventAnimation {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_w = null;
         if (param0) {
           field_v = -47;

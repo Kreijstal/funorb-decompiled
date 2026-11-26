@@ -36,7 +36,7 @@ final class ke extends ui implements sg {
           do {
             var4 = param2.nextInt();
           } while (var4 >= var3_int);
-          stackIn_11_0 = vj.a((byte) -101, var4, param0);
+          stackIn_11_0 = ImageProducerRasterBuffer.a((byte) -101, var4, param0);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class ke extends ui implements sg {
         Throwable decompiledCaughtException = null;
         try {
           if (param3) {
-            ke.s(-5);
+            ke.resetStaticState(-5);
           }
           if (nj.field_e != null) {
             dl.a(param1, param0, -32532, 1048576, param2);
@@ -229,7 +229,7 @@ final class ke extends ui implements sg {
         return this.field_n;
     }
 
-    public static void s(int param0) {
+    public static void resetStaticState(int param0) {
         field_X = null;
         field_U = null;
         if (param0 > -65) {

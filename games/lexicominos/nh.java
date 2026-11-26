@@ -7,14 +7,14 @@ final class nh {
     static RgbSprite[] field_c;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        if (aa.field_i[param2] == null) {
+        if (ImageProducerRasterBuffer.field_i[param2] == null) {
           return;
         }
         uf.field_n = param2;
         if (param0 != 0) {
           return;
         }
-        CrossfadingMidiPcmStream.field_n.a((byte) 76, param1, aa.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
+        CrossfadingMidiPcmStream.field_n.a((byte) 76, param1, ImageProducerRasterBuffer.field_i[uf.field_n], (param3 ? 30 : 60) * AudioOutput.field_r / 22050);
     }
 
     public static void clearStaticReferences(int param0) {

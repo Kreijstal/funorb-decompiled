@@ -183,7 +183,7 @@ final class ha extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_m = null;
         if (param0 != 4) {
           field_z = 126;

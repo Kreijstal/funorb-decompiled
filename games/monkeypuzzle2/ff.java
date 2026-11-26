@@ -201,7 +201,7 @@ final class ff implements Runnable {
           return;
         }
         try {
-          sl.field_o = param2;
+          ImageProducerRasterBuffer.field_o = param2;
           fe.field_a = param1;
           rk.field_h = param3;
           tf.a((byte) 56, SoftwareRasterizer.field_g / 2, SoftwareRasterizer.field_h / 2);

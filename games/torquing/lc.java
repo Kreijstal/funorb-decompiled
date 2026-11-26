@@ -5,7 +5,7 @@ final class lc extends ro {
     static int field_z;
     static String field_B;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_z = 16;
         }

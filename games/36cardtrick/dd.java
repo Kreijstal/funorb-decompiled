@@ -193,7 +193,7 @@ final class dd {
             var8 = param2[var5_int] << var6 & 255 | (255 & param2[var5_int + 1]) >>> 8 - var6;
             if (0 <= var8 &&
               256 > var8) {
-              this.field_k[this.field_a] = (byte)fj.a((int) this.field_k[this.field_a], var8 >>> var7);
+              this.field_k[this.field_a] = (byte)GameApplet.a((int) this.field_k[this.field_a], var8 >>> var7);
               this.field_b = this.field_b + (-var7 + 8);
               this.field_a = this.field_a + 1;
               if (512 == this.field_b) {
@@ -213,7 +213,7 @@ final class dd {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param2[var5_int] << var6;
-            this.field_k[this.field_a] = (byte)fj.a((int) this.field_k[this.field_a], var8Lifetime1 >>> var7);
+            this.field_k[this.field_a] = (byte)GameApplet.a((int) this.field_k[this.field_a], var8Lifetime1 >>> var7);
           }
           if ((long)var7 + param0 < 8L) {
             this.field_b = (int)((long)this.field_b + param0);
@@ -258,7 +258,7 @@ final class dd {
         int var8 = 0;
         var8 = Main.field_T;
         try {
-          this.field_k[this.field_a] = (byte)fj.a((int) this.field_k[this.field_a], 128 >>> bc.a(this.field_b, 7));
+          this.field_k[this.field_a] = (byte)GameApplet.a((int) this.field_k[this.field_a], 128 >>> bc.a(this.field_b, 7));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {

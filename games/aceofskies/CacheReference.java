@@ -6,7 +6,7 @@ abstract class CacheReference extends DualLinkNode {
     static eg field_o;
     static volatile int field_n;
 
-    public static void f(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_n = 38;
           field_o = null;

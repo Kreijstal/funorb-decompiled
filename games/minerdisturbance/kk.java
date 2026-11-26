@@ -40,7 +40,7 @@ final class kk {
             }
             var1[var2] = new Sprite(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], var22);
           } else {
-            var16 = ci.field_a[var2];
+            var16 = AwtRasterBuffer.field_a[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;

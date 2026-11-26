@@ -8,7 +8,7 @@ final class sd {
     static int field_a;
     static int field_c;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_e = null;
         if (param0) {
           field_c = -99;

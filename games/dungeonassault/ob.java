@@ -185,7 +185,7 @@ final class ob extends ok {
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new RgbSprite(param1.a("final_frame.jpg", "", (byte) -123), (java.awt.Component) ((Object) c.field_h));
+          var2 = new RgbSprite(param1.a("final_frame.jpg", "", (byte) -123), (java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           if (param0 >= -40) {
             ob.discardDeclaredStaticReferences(119);
           }
@@ -217,7 +217,7 @@ final class ob extends ok {
         try {
           try {
             var4 = param2.getGraphics();
-            k.field_h.a(param0, true, var4, param3);
+            k.field_h.drawImage(param0, true, var4, param3);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

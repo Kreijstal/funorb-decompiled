@@ -370,7 +370,7 @@ final class ia extends rk {
         }
     }
 
-    public static void j(int param0) {
+    public static void resetStaticState(int param0) {
         field_I = null;
         if (param0 != -20657) {
           field_C = -5;

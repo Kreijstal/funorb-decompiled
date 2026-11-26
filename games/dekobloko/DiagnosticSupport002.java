@@ -49,7 +49,7 @@ final class DiagnosticSupport002 extends RuntimeException {
     final static void performAction0766(String stringArgument1, byte byteArgument2) {
         try {
           if (byteArgument2 != 45) {
-            DiagnosticSupport002.performAction0761((byte) 96);
+            DiagnosticSupport002.resetStaticState((byte) 96);
           }
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "jb.F(" + (stringArgument1 != null ? "{...}" : "null") + ',' + byteArgument2 + ')');
@@ -145,7 +145,7 @@ final class DiagnosticSupport002 extends RuntimeException {
         }
     }
 
-    public static void performAction0761(byte byteArgument1) {
+    public static void resetStaticState(byte byteArgument1) {
         stringState0271 = null;
         mixedSupport138ArrayState0001 = null;
         validationStatusState0002 = null;

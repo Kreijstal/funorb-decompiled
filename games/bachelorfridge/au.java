@@ -27,7 +27,7 @@ final class au {
         return var4;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 != -31824) {
           field_c = -118;

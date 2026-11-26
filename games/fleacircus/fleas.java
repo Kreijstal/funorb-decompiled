@@ -615,7 +615,7 @@ public final class fleas extends NetworkGameClient {
               var5 = ai.field_n.length - 1;
               do {
                 if (var5 < 0) {
-                  gi.field_b.a((byte) 125);
+                  gi.field_b.setAsRasterTarget((byte) 125);
                   var5 = SoftwareRasterizer.field_d;
                   break;
                 }
@@ -643,7 +643,7 @@ public final class fleas extends NetworkGameClient {
               var11 = 0;
               do {
                 if (var11 >= 3) {
-                  gi.field_b.a((byte) 111);
+                  gi.field_b.setAsRasterTarget((byte) 111);
                   nl.field_c = new RgbSprite[2][];
                   array$3 = new RgbSprite[pl.field_l[0]];
                   nl.field_c[0] = array$3;
@@ -722,7 +722,7 @@ public final class fleas extends NetworkGameClient {
                   FullscreenFocusCanvas.field_a.f();
                   BufferedSocket.field_m.a(0, 0, var11, var11);
                   BufferedSocket.field_m = null;
-                  gi.field_b.a((byte) 109);
+                  gi.field_b.setAsRasterTarget((byte) 109);
                   break;
                 }
                 nl.field_c[0][var11] = var10[2];
@@ -981,14 +981,14 @@ public final class fleas extends NetworkGameClient {
           b.clearStaticReferences(2);
           ud.clearStaticReferences((byte) 85);
           wj.clearStaticReferences(param0 - 95);
-          uc.clearStaticReferences((byte) -118);
+          AwtRasterBuffer.clearStaticReferences((byte) -118);
           of.clearStaticReferences(71);
           FullscreenFocusCanvas.a(-29039);
           va.b((byte) 126);
           ng.clearStaticReferences(0);
           w.clearStaticReferences(5);
           af.a(105);
-          uf.a(true);
+          uf.resetStaticState(true);
           k.a(-40);
           BufferedSocket.clearStaticReferences(123167272);
           kh.clearStaticReferences((byte) -97);
@@ -1007,11 +1007,11 @@ public final class fleas extends NetworkGameClient {
           fd.clearStaticReferences();
           MusicPatchPcmStream.a((byte) 112);
           AudioOutput.clearStaticReferences();
-          CrossfadingMidiPcmStream.b(false);
+          CrossfadingMidiPcmStream.resetStaticState(false);
           tj.clearStaticReferences(false);
           pl.f(param0 + 1);
           sa.clearStaticReferences((byte) 33);
-          ue.a(param0 - 6617886);
+          ue.resetStaticState(param0 - 6617886);
           pb.clearStaticReferences((byte) -120);
           ge.clearStaticReferences((byte) -79);
           pf.clearStaticReferences(13480);
@@ -1054,20 +1054,20 @@ public final class fleas extends NetworkGameClient {
           hj.clearStaticReferences(-5928);
           uj.clearStaticReferences((byte) 126);
           kc.clearStaticReferences(param0 ^ -2);
-          ug.a((byte) -73);
+          ug.resetStaticState((byte) -73);
           hh.a(true);
           pc.clearStaticReferences(param0 - 119);
           oj.clearDeclaredStaticReferences(param0 ^ -100);
           wc.a(-24464);
           de.clearStaticReferences(0);
-          g.a(false);
+          g.resetStaticState(false);
           bf.a(false);
           fk.i(105);
           ah.a(true);
-          qh.b(false);
+          qh.resetStaticState(false);
           cg.b(1);
           BoundedRandomAccessFile.clearStaticReferences(-930374320);
-          u.a(-2355);
+          u.resetStaticState(-2355);
           dl.releaseDeclaredStaticReferences(2);
           ek.clearStaticReferences((byte) -42);
           ic.discardDeclaredStaticReferences(-101);
@@ -1078,8 +1078,8 @@ public final class fleas extends NetworkGameClient {
           re.clearStaticReferences((byte) -56);
           si.clearStaticReferences(param0 ^ -66);
           tg.clearStaticReferences(true);
-          cj.a(false);
-          di.a(26189);
+          cj.resetStaticState(false);
+          di.resetStaticState(26189);
           q.a((byte) -127);
           m.clearStaticReferences(118);
           kl.clearStaticReferences((byte) -24);
@@ -1105,40 +1105,40 @@ public final class fleas extends NetworkGameClient {
           db.releaseDeclaredStaticReferences(0);
           gj.clearStaticReferences((byte) -112);
           ab.clearStaticReferences(param0 + 1);
-          ii.a(param0 + 6);
+          ii.resetStaticState(param0 + 6);
           aj.releaseDeclaredStaticReferences(113);
           ol.clearStaticReferences(true);
           ej.clearStaticReferences(1);
-          ag.a(param0 + 1);
+          ag.resetStaticState(param0 + 1);
           kk.clearStaticReferences(4);
           oc.clearStaticReferences((byte) -40);
           lg.clearStaticReferences(-106);
           hm.clearStaticReferences(2067);
           em.clearStaticReferences(3505);
           o.clearStaticReferences((byte) 82);
-          bj.clearStaticReferences(0);
+          ImageProducerRasterBuffer.clearStaticReferences(0);
           hf.clearStaticReferences(-124);
           wa.clearStaticReferences(param0 ^ 1730);
           kb.clearStaticReferences(false);
-          ml.j(1);
+          ml.resetStaticState(1);
           oh.f((byte) -110);
           lk.clearStaticReferences(true);
           ij.clearDeclaredStaticReferences((byte) -20);
           ja.discardDeclaredStaticReferences(-91);
           je.i(93);
           v.resetDeclaredStaticReferences(-8011);
-          vk.c(false);
+          vk.resetStaticState(false);
           r.d(0);
           sc.clearStaticReferences((byte) -73);
-          md.a((byte) -101);
+          md.resetStaticState((byte) -101);
           d.discardDeclaredStaticReferences(-1);
           SoundFilter.clearStaticReferences();
-          dh.a(120);
+          dh.resetStaticState(120);
           j.a(-113);
           DirectByteStorage.c(-1);
           id.clearStaticReferences((byte) 110);
           pk.clearDeclaredStaticReferences((byte) 89);
-          qj.i(param0 ^ 124);
+          qj.resetStaticState(param0 ^ 124);
           fh.clearStaticReferences((byte) -94);
           IterableNodeHashTable.clearStaticReferences((byte) -112);
           SecondaryNodeDeque.clearStaticReferences(0);
@@ -1148,7 +1148,7 @@ public final class fleas extends NetworkGameClient {
           a.a((byte) 126);
           NodeHashTableIterator.clearStaticReferences(105);
           SecondaryNodeDequeIterator.clearStaticReferences((byte) 58);
-          ll.a(61);
+          ll.resetStaticState(61);
           bh.clearDeclaredStaticReferences(param0 ^ 125);
           il.a(-70);
           pd.clearStaticReferences((byte) -89);
@@ -1156,7 +1156,7 @@ public final class fleas extends NetworkGameClient {
           ri.clearDeclaredStaticReferences((byte) -97);
           me.clearStaticReferences(param0 ^ -4284);
           aa.clearStaticReferences(-122);
-          mh.b(705);
+          mh.resetStaticState(705);
           jc.a(param0 - 36);
           tf.i(0);
           gm.clearDeclaredStaticReferences(false);
@@ -1184,10 +1184,10 @@ public final class fleas extends NetworkGameClient {
           oa.clearStaticReferences((byte) -88);
           te.clearStaticReferences(false);
           pi.clearStaticReferences((byte) 11);
-          AccountNameAvailabilityValidator.c(false);
+          AccountNameAvailabilityValidator.resetStaticState(false);
           ai.clearStaticReferences((byte) -10);
           ck.clearStaticReferences((byte) 2);
-          ga.c((byte) 113);
+          ga.resetStaticState((byte) 113);
           tl.clearStaticReferences((byte) 115);
           ak.clearStaticReferences(false);
           mi.a((byte) 27);
@@ -2257,12 +2257,12 @@ public final class fleas extends NetworkGameClient {
             if (var24 == 0) {
               if ((stackIn_42_0 == stackIn_42_1 ||
                 ii.a(1, (char) var3)) &&
-                uc.field_a.length() < 16) {
-                discarded$0 = uc.field_a.append((char) var3);
+                AwtRasterBuffer.field_a.length() < 16) {
+                discarded$0 = AwtRasterBuffer.field_a.append((char) var3);
               }
               if (ji.field_a == 85 &&
-                uc.field_a.length() > 0) {
-                uf.a(-1 + uc.field_a.length(), uc.field_a, ' ', -120);
+                AwtRasterBuffer.field_a.length() > 0) {
+                uf.a(-1 + AwtRasterBuffer.field_a.length(), AwtRasterBuffer.field_a, ' ', -120);
               }
               if (ji.field_a == 84) {
               }

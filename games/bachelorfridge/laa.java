@@ -11,7 +11,7 @@ final class laa extends pv {
     private int field_k;
     private double field_l;
 
-    public static void d(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_j = 34;
         }

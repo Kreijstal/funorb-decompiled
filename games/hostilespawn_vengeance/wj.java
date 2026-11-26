@@ -312,7 +312,7 @@ final class wj extends ph {
             cm.field_c.length != var4) {
             cm.field_c = new int[var4];
           }
-          if (wa.a(false)) {
+          if (ImageProducerRasterBuffer.a(false)) {
             wb.field_R = wb.field_R - 1;
           }
           if (0 < nl.field_d) {

@@ -26,14 +26,14 @@ final class nl extends IntrusiveNode {
           tf.n(17077);
           return;
         }
-        nl.a((byte) -105);
+        nl.resetStaticState((byte) -105);
         var1Lifetime1 = ie.a(false);
         var2Lifetime1 = ig.a((byte) 115);
         cb.field_a.a(var2Lifetime1 + (di.field_d << 1), -df.field_h + si.field_B, var1Lifetime1 + (df.field_h << 1), LoginMenuScreen.field_N - di.field_d, 7453);
         tf.n(17077);
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_n = (he[][]) null;
         if (param0 < -56) {
           field_o = null;
@@ -66,7 +66,7 @@ final class nl extends IntrusiveNode {
         try {
           var4_int = param2.e(param1, (byte) -124);
           if (param0 != 65) {
-            nl.a((byte) -84);
+            nl.resetStaticState((byte) -84);
           }
           if (var4_int == 0) {
             stackIn_5_0 = null;

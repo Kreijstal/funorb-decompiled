@@ -91,7 +91,7 @@ final class ga {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_b = -87;
           field_a = null;

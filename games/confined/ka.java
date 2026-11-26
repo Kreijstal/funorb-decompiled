@@ -392,7 +392,7 @@ class ka extends pm {
         }
     }
 
-    public static void l(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_P = 76;
           field_G = null;

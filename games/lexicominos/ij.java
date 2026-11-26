@@ -193,7 +193,7 @@ final class ij extends IntrusiveNode {
               ij.a(-74, (byte) 99, (sh) null, 63);
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + aa.field_g.a(var3_int, -1, param2.payload, 0, param2.position, var4);
+            param2.position = param2.position + ImageProducerRasterBuffer.field_g.a(var3_int, -1, param2.payload, 0, param2.position, var4);
             var5 = dc.a(var3_int, var4, (byte) 16, 0);
             stackIn_5_0 = var5;
             return stackIn_5_0;

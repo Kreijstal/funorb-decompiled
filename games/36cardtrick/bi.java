@@ -98,7 +98,7 @@ final class bi {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < 94) {
           field_d = -78;
         }

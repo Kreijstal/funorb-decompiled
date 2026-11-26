@@ -336,7 +336,7 @@ final class gg {
           if (var2 == 0) {
             var8 = (uj) (vm.field_h.beginBackward(param0 ^ -18154));
             if (var8 == null) {
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
               return;
             }
             var4 = var9.readUnsignedByte(-89);
@@ -348,7 +348,7 @@ final class gg {
             }
             var9.position = var9.position + 4;
             if (!var9.verifyCrc32(-114)) {
-              si.d(param0 ^ 65364);
+              ImageProducerRasterBuffer.d(param0 ^ 65364);
               return;
             }
             var8.unlink(-2193);
@@ -364,14 +364,14 @@ final class gg {
                 break;
               }
               if (var4_ref_om == null) {
-                si.d(65280);
+                ImageProducerRasterBuffer.d(65280);
                 return;
               }
               var4_ref_om.unlink(-2193);
               return;
             }
             fg.a((Throwable) null, (byte) -77, "A1: " + tm.b((byte) -124));
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

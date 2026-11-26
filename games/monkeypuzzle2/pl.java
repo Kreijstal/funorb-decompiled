@@ -235,7 +235,7 @@ final class pl {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var3 > var6; var6++) {
             var7 = param1.charAt(var6);
-            if (sl.a(0, (char) var7)) {
+            if (ImageProducerRasterBuffer.a(0, (char) var7)) {
               var8 = qb.a((char) var7, -201);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);

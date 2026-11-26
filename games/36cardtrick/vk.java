@@ -46,7 +46,7 @@ final class vk {
         return 1;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 1) {
           field_b = -122;
           field_j = null;
@@ -67,7 +67,7 @@ final class vk {
           this.field_a = bl.field_c;
         }
         this.field_k = hg.field_b;
-        this.field_g = fj.field_c;
+        this.field_g = GameApplet.field_c;
         this.field_c = fg.field_l;
         this.field_i = hi.field_b;
         this.field_h = bi.field_a;

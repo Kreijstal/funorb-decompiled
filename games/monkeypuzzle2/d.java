@@ -44,7 +44,7 @@ final class d extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_h = null;
         if (!param0) {
           field_e = -39;

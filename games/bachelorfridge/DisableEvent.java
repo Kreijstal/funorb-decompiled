@@ -262,7 +262,7 @@ final class DisableEvent extends SpecialEvent {
         }
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 > -84) {
           field_s = 4;
         }
@@ -297,7 +297,7 @@ final class DisableEvent extends SpecialEvent {
         var2 = BachelorFridge.field_y;
         try {
           if (param0) {
-            DisableEvent.d((byte) 75);
+            DisableEvent.resetStaticState((byte) 75);
           }
           var1 = (kha) (iea.field_d.beginForward((byte) 90));
           while (true) {

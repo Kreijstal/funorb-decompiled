@@ -60,7 +60,7 @@ final class th extends om {
         }
     }
 
-    public static void h(int param0) {
+    public static void resetStaticState(int param0) {
         field_A = null;
         if (param0 != -13117) {
           field_y = -61;

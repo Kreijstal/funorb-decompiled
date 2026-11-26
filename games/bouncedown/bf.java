@@ -97,7 +97,7 @@ final class bf extends al {
             return stackIn_5_0;
           }
           if (nd.a(var5, param1 + 183)) {
-            stackIn_8_0 = ef.field_d;
+            stackIn_8_0 = AwtRasterBuffer.field_d;
             return stackIn_8_0;
           }
           if (param1 != -114) {

@@ -29,7 +29,7 @@ final class mk extends ai {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_n = null;
         if (param0 < 71) {
           field_o = false;

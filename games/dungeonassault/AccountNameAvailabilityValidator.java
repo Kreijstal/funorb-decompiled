@@ -180,7 +180,7 @@ final class AccountNameAvailabilityValidator extends ip {
           }
           var3_int = 108 % ((5 - param1) / 44);
           if (this.nameAvailable) {
-            stackIn_14_0 = c.field_d;
+            stackIn_14_0 = AwtRasterBuffer.field_d;
           } else {
             stackIn_14_0 = pd.field_J;
           }

@@ -12,7 +12,7 @@ final class dk extends IntrusiveNode {
     static int field_h;
     short[] field_n;
     PcmSample[] field_m;
-    static bc field_o;
+    static AwtRasterBuffer field_o;
     int field_g;
 
     final boolean a(boolean param0, bn param1, int[] param2, byte[] param3) {
@@ -98,7 +98,7 @@ final class dk extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -55) {
-            field_o = (bc) null;
+            field_o = (AwtRasterBuffer) null;
           }
           stackIn_3_0 = mk.a(115, param0, 0, param0.length);
           return stackIn_3_0;

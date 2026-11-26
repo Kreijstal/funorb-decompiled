@@ -37,7 +37,7 @@ final class pg {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               if (param1 != -28) {
-                pg.c(2);
+                pg.resetStaticState(2);
               }
               var4 = (String) (oa.a(true, param0, "getcookies"));
               var5 = dc.a(var4, ';', (byte) -125);
@@ -145,7 +145,7 @@ final class pg {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -8413) {
           field_d = 56;
           field_b = null;
@@ -157,7 +157,7 @@ final class pg {
     final static void a(byte param0) {
         al.field_C = new IntrusiveDeque();
         if (param0 < 75) {
-          pg.c(-8);
+          pg.resetStaticState(-8);
         }
     }
 

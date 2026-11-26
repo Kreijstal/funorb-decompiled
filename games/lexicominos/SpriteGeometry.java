@@ -14,7 +14,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     int field_r;
     static String[] field_t;
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_q = null;
         field_t = null;
         if (param0 >= -31) {
@@ -99,7 +99,7 @@ abstract class SpriteGeometry extends DualLinkNode {
         try {
           VorbisSample.b(param1.a((byte) 127, "", "headers.packvorbis"));
           if (param0 != 0) {
-            SpriteGeometry.c(-110);
+            SpriteGeometry.resetStaticState(-110);
           }
           var2 = VorbisSample.a(param1, "jagex logo2.packvorbis", "");
           var2.c();

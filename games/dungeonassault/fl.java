@@ -75,7 +75,7 @@ final class fl extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_o = null;
         field_m = null;
         field_n = null;

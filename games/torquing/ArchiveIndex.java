@@ -37,7 +37,7 @@ final class ArchiveIndex {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("fg");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param3, (byte) 24, param1, param2);
               if (param0 == 0) {
@@ -144,7 +144,7 @@ final class ArchiveIndex {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_k = null;
         if (param0 <= 57) {
           field_a = false;

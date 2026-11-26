@@ -120,7 +120,7 @@ final class nn extends IntrusiveNode {
               if (!param2) {
                 nn.clearStaticReferences(-77);
               }
-              var4 = Class.forName("em");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param1, -3, param3, param0);
               stackIn_3_0 = var5;

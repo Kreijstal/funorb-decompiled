@@ -11,7 +11,7 @@ final class MixedSupport093 {
     static volatile int integerState0569;
     private static String stringState0393;
 
-    public static void performAction1197(boolean booleanArgument1) {
+    public static void resetStaticState(boolean booleanArgument1) {
         stringState0391 = null;
         stringState0390 = null;
         stringState0392 = null;

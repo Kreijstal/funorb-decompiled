@@ -11,7 +11,7 @@ final class dj {
 
     final static void b(int param0) {
         if (param0 != -28186) {
-          dj.a(86);
+          dj.resetStaticState(86);
         }
         rf.field_B[bk.d(23196)].a(0, 0, 102);
     }
@@ -40,7 +40,7 @@ final class dj {
         return var1;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         field_c = null;
         if (param0 > -47) {

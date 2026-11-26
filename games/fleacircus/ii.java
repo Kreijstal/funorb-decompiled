@@ -124,7 +124,7 @@ final class ii {
         return var2Lifetime4;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 != 5) {
           field_b = -53;
@@ -134,10 +134,10 @@ final class ii {
     final static void b(int param0) {
         if (param0 <= 111) {
           ii.a(11, '\002');
-          bj.a(14, BoundedRandomAccessFile.getApplet((byte) -54));
+          ImageProducerRasterBuffer.a(14, BoundedRandomAccessFile.getApplet((byte) -54));
           return;
         }
-        bj.a(14, BoundedRandomAccessFile.getApplet((byte) -54));
+        ImageProducerRasterBuffer.a(14, BoundedRandomAccessFile.getApplet((byte) -54));
     }
 
     final static boolean a(int param0, CharSequence param1) {
@@ -149,7 +149,7 @@ final class ii {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 12969) {
-            ii.a(77);
+            ii.resetStaticState(77);
           }
           stackIn_3_0 = gi.a(param1, true, 0, 10);
           return stackIn_3_0;

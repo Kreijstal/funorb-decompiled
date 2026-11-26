@@ -90,7 +90,7 @@ final class bi {
           var64 = new int[param4.field_b];
           var63 = mh.field_a;
           if (param0 < 44) {
-            bi.a((byte) 81);
+            bi.resetStaticState((byte) 81);
           }
           var62 = fa.field_e;
           var61 = tk.field_r;
@@ -228,7 +228,7 @@ final class bi {
           var5 = this.field_f;
           synchronized (var5) {
             if (param0 != -46) {
-              bi.a((byte) 87);
+              bi.resetStaticState((byte) 87);
             }
             if (param3 >= 0 &&
               this.field_c >= param3) {
@@ -575,7 +575,7 @@ final class bi {
         return "" + this.field_j;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 != 102) {
           field_i = -73;

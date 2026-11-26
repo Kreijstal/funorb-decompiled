@@ -170,7 +170,7 @@ final class GzipDecompressor {
         this(-1, 1000000, 1000000);
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != -12) {
           field_c = -16;
           field_e = null;

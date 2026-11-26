@@ -35,7 +35,7 @@ final class ol {
         this.field_f[param1] = param2;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_g = null;
         field_a = null;
         if (!param0) {
@@ -91,7 +91,7 @@ final class ol {
           this.field_f = var4;
           return;
         }
-        ol.a(false);
+        ol.resetStaticState(false);
         var4Lifetime1 = new int[this.a(true, param0)];
         var3Lifetime1 = var4Lifetime1;
         ri.a(this.field_f, 0, var4Lifetime1, 0, this.field_f.length);

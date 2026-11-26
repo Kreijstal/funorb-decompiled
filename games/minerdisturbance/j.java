@@ -55,7 +55,7 @@ final class j implements Runnable {
             field_e = (String) null;
           }
           var8 = param4.a((byte) 80);
-          if (null == ci.field_i &&
+          if (null == AwtRasterBuffer.field_i &&
             !AccountServiceResult.a(false, (byte) 38)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -177,7 +177,7 @@ final class j implements Runnable {
             stackIn_53_0 = oj.field_K;
             return stackIn_53_0;
           }
-          if (ci.field_i == null) {
+          if (AwtRasterBuffer.field_i == null) {
             if (ek.field_c) {
               if (qa.a(-112) > 30000L) {
                 nf.field_g = oi.field_K;
@@ -268,7 +268,7 @@ final class j implements Runnable {
         if (param0 != -110) {
           field_a = (String) null;
         }
-        return ci.field_e == AccountRequestState.field_h ? true : false;
+        return AwtRasterBuffer.field_e == AccountRequestState.field_h ? true : false;
     }
 
     j() {

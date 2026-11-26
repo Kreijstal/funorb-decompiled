@@ -27,7 +27,7 @@ class tn extends hc {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -2) {
           field_M = false;
         }
@@ -42,7 +42,7 @@ class tn extends hc {
           return null;
         }
         if (param0 != -27867) {
-          tn.a(-77);
+          tn.resetStaticState(-77);
         }
         if (this.field_N.field_n >= this.field_L.length) {
           return null;
@@ -273,7 +273,7 @@ class tn extends hc {
         int var1 = -9 / ((param0 - 56) / 37);
         ng.a((byte) -99);
         if (ef.field_c != null) {
-          ci.a(ef.field_c, 0);
+          AwtRasterBuffer.a(ef.field_c, 0);
         }
         bf.c(109);
         ll.a(-118);

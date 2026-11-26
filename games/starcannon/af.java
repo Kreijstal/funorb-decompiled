@@ -55,7 +55,7 @@ final class af extends kf {
         }
     }
 
-    public static void g(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         field_y = null;
         field_w = null;
         if (param0 != 9392) {

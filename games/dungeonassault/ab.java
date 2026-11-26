@@ -80,7 +80,7 @@ final class ab {
         var8 = DungeonAssault.field_K;
         try {
           if (param0 != -776726687) {
-            ab.b(-127);
+            ab.resetStaticState(-127);
           }
           var3_int = 0;
           var4 = jm.field_c;
@@ -109,7 +109,7 @@ final class ab {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 1781937827) {
           field_c = 85;
           field_b = null;

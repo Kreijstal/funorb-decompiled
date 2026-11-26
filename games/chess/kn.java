@@ -93,7 +93,7 @@ abstract class kn extends mf implements ra {
             field_G = (RgbSprite) null;
           }
           if (!param0) {
-            stackIn_6_0 = vj.field_d.b(param2);
+            stackIn_6_0 = AwtRasterBuffer.field_d.b(param2);
             return stackIn_6_0;
           }
           stackIn_4_0 = ce.field_a.b(param2);

@@ -104,7 +104,7 @@ class kj extends UiComponent implements gk {
             this.a(param0, param2, param1, 127);
           }
           if (!param3) {
-            kj.g(7);
+            kj.resetStaticState(7);
           }
           stackIn_6_0 = (StringBuilder) (param2);
           return stackIn_6_0;
@@ -653,7 +653,7 @@ class kj extends UiComponent implements gk {
         }
     }
 
-    public static void g(int param0) {
+    public static void resetStaticState(int param0) {
         field_H = null;
         field_I = null;
         field_E = null;

@@ -165,7 +165,7 @@ abstract class ob extends GameAppletShell {
           if (var3Lifetime1 != 0 &&
             0 == tb.field_f &&
             fh.field_b == 11 &&
-            !ci.a(82)) {
+            !AwtRasterBuffer.a(82)) {
             mc.c(-78);
           }
           if (tb.field_f != -1 &&
@@ -219,7 +219,7 @@ abstract class ob extends GameAppletShell {
         }
         if ((-1 != tb.field_f &&
           tb.field_f != 0 ||
-          ci.a(106)) &&
+          AwtRasterBuffer.a(106)) &&
           sf.correctedCurrentTimeMillis((byte) -15) >= j.field_f) {
           nd.field_e = false;
           if (tb.field_f != -1 &&
@@ -229,7 +229,7 @@ abstract class ob extends GameAppletShell {
           }
         }
         if (tb.field_f == 0 &&
-          !ci.a(param1 - 18752)) {
+          !AwtRasterBuffer.a(param1 - 18752)) {
           ul.field_a = false;
         }
         if (af.field_u == 0 &&
@@ -330,7 +330,7 @@ abstract class ob extends GameAppletShell {
         }
         if (!param0 &&
           fa.field_a) {
-          ci.a(ef.field_c, 0);
+          AwtRasterBuffer.a(ef.field_c, 0);
           this.c(-111);
           ab.a((byte) -13, ef.field_c);
         }
@@ -354,7 +354,7 @@ abstract class ob extends GameAppletShell {
         if (this.field_i) {
           return -1;
         }
-        if (!ci.a(101)) {
+        if (!AwtRasterBuffer.a(101)) {
           return -1;
         }
         if (nd.field_e) {
@@ -486,7 +486,7 @@ abstract class ob extends GameAppletShell {
         if (param0 != -1) {
           field_q = (ResourceArchive) null;
         }
-        stackIn_6_0 = (ci.field_i != null) && (qd.field_Q.a(param0 ^ -18545));
+        stackIn_6_0 = (AwtRasterBuffer.field_i != null) && (qd.field_Q.a(param0 ^ -18545));
         return stackIn_6_0;
     }
 
@@ -584,7 +584,7 @@ abstract class ob extends GameAppletShell {
           if (var4 == 1) {
             var5_int = ob.a((byte) 112, IsaacRandom.a(15), fe.f(0));
             if (-1 != var5_int) {
-              vj.a(-21614, nf.field_g, var5_int, vh.field_i);
+              ImageProducerRasterBuffer.a(-21614, nf.field_g, var5_int, vh.field_i);
               nf.field_g = null;
               vh.field_i = null;
             }

@@ -122,7 +122,7 @@ final class bb extends qf implements Cloneable {
           je.field_j = je.field_j + 5;
           b.field_a = b.field_a + 5;
           we.field_h = we.field_h + 10;
-          bc.field_a.a(64, 12 * param3, param1 * 12, 0, (byte) -111);
+          AwtRasterBuffer.field_a.a(64, 12 * param3, param1 * 12, 0, (byte) -111);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

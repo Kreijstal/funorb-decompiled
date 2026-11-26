@@ -317,15 +317,15 @@ final class aj extends DualLinkNode {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uc.field_c.a(-48) &&
-            !param0.equals(uc.field_c.c(param1 - 16954))) {
-            uc.field_c = pk.a((byte) 68, param0);
+          if (AwtRasterBuffer.field_c.a(-48) &&
+            !param0.equals(AwtRasterBuffer.field_c.c(param1 - 16954))) {
+            AwtRasterBuffer.field_c = pk.a((byte) 68, param0);
           }
           if (param1 != -1) {
             var3 = (PlatformTaskDispatcher) null;
             aj.a((byte) -26, (Object) null, (PlatformTaskDispatcher) null);
           }
-          stackIn_7_0 = uc.field_c;
+          stackIn_7_0 = AwtRasterBuffer.field_c;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

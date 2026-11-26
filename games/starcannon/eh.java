@@ -2778,7 +2778,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_nonmember", param0 + 49);
                 if (null != var2) {
-                  mg.field_m = DualLinkNode.a(115, var2);
+                  ImageProducerRasterBuffer.field_m = DualLinkNode.a(115, var2);
                 }
                 var2 = rd.a("fs_button_close", 102);
                 if (null != var2) {

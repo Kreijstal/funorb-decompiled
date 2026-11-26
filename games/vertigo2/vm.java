@@ -10,7 +10,7 @@ final class vm {
         try {
           param0.setFocusTraversalKeysEnabled(false);
           if (param1 != 11631) {
-            vm.a(-6);
+            vm.resetStaticState(-6);
           }
           param0.addKeyListener(kb.field_a);
           param0.addFocusListener(kb.field_a);
@@ -38,7 +38,7 @@ final class vm {
         return false;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -586) {
           field_b = 106;
           field_a = null;

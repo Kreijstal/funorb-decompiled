@@ -11,7 +11,7 @@ final class jl {
     static AudioOutput field_d;
     static RgbSprite field_c;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 > 68) {
           field_d = null;
           field_f = null;

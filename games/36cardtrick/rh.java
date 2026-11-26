@@ -106,9 +106,9 @@ final class rh extends IntrusiveNode {
           }
           var4_ref_StringLifetime1 = var1.readString(false);
           var5 = var1.readString(false);
-          var6 = jf.a(0, var4_ref_StringLifetime1);
+          var6 = ImageProducerRasterBuffer.a(0, var4_ref_StringLifetime1);
           if (var6 == null) {
-            var6 = jf.a(param0 + 0, var5);
+            var6 = ImageProducerRasterBuffer.a(param0 + 0, var5);
             if (null != var6) {
               rf.field_d.a(var6, (long)ff.a((byte) 116, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 6144);
             }
@@ -119,7 +119,7 @@ final class rh extends IntrusiveNode {
             fieldTemp$0 = ok.field_b;
             ok.field_b = ok.field_b + 1;
             var6.field_eb = fieldTemp$0;
-            kh.field_c.addLast(var6, param0 ^ 27362);
+            AwtRasterBuffer.field_c.addLast(var6, param0 ^ 27362);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -127,10 +127,10 @@ final class rh extends IntrusiveNode {
           var6.field_gb = var4_ref_StringLifetime1;
           var6.field_cb = (String) (var3Lifetime1);
           var6.unlink(82);
-          var7 = (aa) (kh.field_c.beginForward((byte) 74));
+          var7 = (aa) (AwtRasterBuffer.field_c.beginForward((byte) 74));
           while (null != var7) {
             if (rl.a((byte) 127, var7, var6)) {
-              var7 = (aa) (kh.field_c.nextForward((byte) -109));
+              var7 = (aa) (AwtRasterBuffer.field_c.nextForward((byte) -109));
               if (var8 == 0) {
                 continue;
               }
@@ -138,7 +138,7 @@ final class rh extends IntrusiveNode {
             break;
           }
           if (null == var7) {
-            kh.field_c.addLast(var6, param0 ^ 27362);
+            AwtRasterBuffer.field_c.addLast(var6, param0 ^ 27362);
             if (var8 == 0) {
               return;
             }
@@ -158,7 +158,7 @@ final class rh extends IntrusiveNode {
           hb.field_a = null;
           na.field_q = null;
           rd.field_k = (byte[][]) null;
-          jf.field_i = null;
+          ImageProducerRasterBuffer.field_i = null;
           int var1_int = 5 / ((-88 - param0) / 33);
           kb.field_c = null;
         } catch (RuntimeException runtimeException) {

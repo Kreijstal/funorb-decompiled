@@ -29,7 +29,7 @@ final class cl extends kn implements wg, sh {
               field_M = (String) null;
             }
             var4 = param0.getGraphics();
-            ResourceArchive.field_e.a(param1, param3 - 197, var4, param2);
+            ResourceArchive.field_e.drawImage(param1, param3 - 197, var4, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ final class cl extends kn implements wg, sh {
         }
     }
 
-    public static void o(int param0) {
+    public static void resetStaticState(int param0) {
         field_M = null;
         if (param0 != 20) {
           field_T = 49;

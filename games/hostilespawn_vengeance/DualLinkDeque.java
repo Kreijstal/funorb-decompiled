@@ -383,7 +383,7 @@ final class DualLinkDeque implements Iterable {
           try {
             var4 = param1.getGraphics();
             var5 = -75 / ((param2 - 46) / 41);
-            o.field_n.a(param3, (byte) -126, param0, var4);
+            o.field_n.drawImage(param3, (byte) -126, param0, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

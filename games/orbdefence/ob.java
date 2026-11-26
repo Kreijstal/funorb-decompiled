@@ -26,7 +26,7 @@ final class ob extends ta implements ff, ai {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_E = null;
         field_L = null;
         field_D = null;
@@ -117,7 +117,7 @@ final class ob extends ta implements ff, ai {
           return (java.awt.Container) ((Object) h.field_J);
         }
         if (param0 != 4) {
-          ob.a((byte) -91);
+          ob.resetStaticState((byte) -91);
           return (java.awt.Container) ((Object) uj.b((byte) -120));
         }
         return (java.awt.Container) ((Object) uj.b((byte) -120));

@@ -54,7 +54,7 @@ class jj extends ma {
         RuntimeException var3 = null;
         try {
           if (param0 != 27759) {
-            jj.f(100);
+            jj.resetStaticState(100);
           }
           if (param1 != null) {
             if (!param1.field_Z) {
@@ -188,7 +188,7 @@ class jj extends ma {
         this(param0, param1, 0, 0, 0, 0, (String) null);
     }
 
-    public static void f(int param0) {
+    public static void resetStaticState(int param0) {
         field_I = null;
         if (param0 != 0) {
           field_db = -36;

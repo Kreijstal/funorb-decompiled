@@ -11,7 +11,7 @@ final class nh {
     static String field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         pendingHighscoreQueries = null;
         field_b = null;
         field_d = null;

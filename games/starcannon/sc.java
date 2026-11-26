@@ -51,7 +51,7 @@ final class sc {
           }
           s.field_c = true;
           vj.field_V = param0 ? true : false;
-          fa.field_G = new ph(ti.field_b, tk.field_a, param2, tc.field_x, vj.field_V);
+          fa.field_G = new ph(ti.field_b, AwtRasterBuffer.field_a, param2, tc.field_x, vj.field_V);
           ti.field_b.a((byte) 85, (UiWidget) (fa.field_G));
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "sc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

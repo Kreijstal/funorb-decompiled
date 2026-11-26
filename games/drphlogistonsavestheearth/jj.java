@@ -7,7 +7,7 @@ final class jj {
     static he[] field_a;
     static AccountServiceResult field_d;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 >= 109) {
           field_c = null;
           field_a = null;

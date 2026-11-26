@@ -19,7 +19,7 @@ final class ji {
         return var1 + da.field_F;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 != -5046) {
           field_b = 20;

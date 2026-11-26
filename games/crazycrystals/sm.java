@@ -11,7 +11,7 @@ final class sm extends l {
     static int field_i;
     static int field_e;
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 10) {
           field_i = -38;
         }

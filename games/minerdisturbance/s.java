@@ -48,7 +48,7 @@ final class s extends hc {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (AccountRequestState.field_h == ci.field_e) {
+          if (AccountRequestState.field_h == AwtRasterBuffer.field_e) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }
@@ -56,7 +56,7 @@ final class s extends hc {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (ic.field_l != ci.field_e) {
+          if (ic.field_l != AwtRasterBuffer.field_e) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

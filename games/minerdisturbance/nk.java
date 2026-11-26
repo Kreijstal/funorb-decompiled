@@ -15,7 +15,7 @@ final class nk extends IntrusiveNode {
     int[] field_y;
     int field_n;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_x = -23;
           field_v = (String[][]) null;

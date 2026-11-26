@@ -30,7 +30,7 @@ public final class Confined extends i {
           pk.clearStaticReferences(param0 - 13733);
           MouseWheelInput.a((byte) 81);
           SoftwareRasterizer.clearStaticReferences();
-          mg.a((byte) -121);
+          mg.resetStaticState((byte) -121);
           PacketBuffer.clearBufferStatics(param0 - 196);
           ri.clearStaticReferences((byte) 28);
           ih.a(-172274096);
@@ -43,10 +43,10 @@ public final class Confined extends i {
           d.clearStaticReferences((byte) 46);
           oc.clearStaticReferences(-113);
           ta.clearStaticReferences(27616);
-          ab.a((byte) -117);
-          gb.a((byte) 90);
+          ab.resetStaticState((byte) -117);
+          gb.resetStaticState((byte) 90);
           jg.clearStaticReferences((byte) 1);
-          rb.clearStaticReferences((byte) -90);
+          AwtRasterBuffer.clearStaticReferences((byte) -90);
           ad.clearStaticReferences((byte) -120);
           GameCanvas.clearStaticReferences((byte) -86);
           wi.clearStaticReferences((byte) 12);
@@ -58,14 +58,14 @@ public final class Confined extends i {
           hn.e(0);
           PrimaryNodeDeque.clearStaticReferences(103);
           eg.clearStaticReferences((byte) 80);
-          sg.e((byte) 109);
+          sg.resetStaticState((byte) 109);
           pm.clearDeclaredStaticReferences((byte) 45);
           rd.clearDeclaredStaticReferences(-122);
           ee.clearStaticReferences(2);
           DualLinkNode.b(9898);
           IntrusiveNode.a(14);
           oi.clearStaticReferences(false);
-          ka.l(0);
+          ka.resetStaticState(0);
           od.clearStaticReferences();
           vg.l(78);
           sk.clearStaticReferences();
@@ -74,7 +74,7 @@ public final class Confined extends i {
           hm.clearStaticReferences(true);
           hf.clearDeclaredStaticReferences(-126);
           il.n(109);
-          ah.h((byte) -128);
+          ah.resetStaticState((byte) -128);
           sa.h((byte) -28);
           cl.clearStaticReferences(false);
           mb.m(1072);
@@ -90,7 +90,7 @@ public final class Confined extends i {
           PolygonScanlineRasterizer.clearStaticReferences();
           wc.n(0);
           lc.a((byte) 83);
-          vb.d(8);
+          vb.resetStaticState(8);
           kl.clearStaticReferences(-16420);
           un.d(param0 - 191);
           ql.clearStaticReferences(14293);
@@ -115,7 +115,7 @@ public final class Confined extends i {
           ef.discardDeclaredStaticReferences(111);
           dh.c(false);
           ke.j(-14508);
-          tg.g((byte) 126);
+          tg.resetStaticState((byte) 126);
           w.releaseDeclaredStaticReferences(param0 - 191);
           bf.clearStaticReferences(false);
           bn.clearStaticReferences((byte) 127);
@@ -157,12 +157,12 @@ public final class Confined extends i {
           ll.clearStaticReferences(false);
           qd.clearStaticReferences((byte) -115);
           cg.clearStaticReferences(0);
-          si.a(false);
+          si.resetStaticState(false);
           em.clearStaticReferences((byte) -64);
           mh.clearStaticReferences(param0 - 16993);
           a.a(false);
           wb.b(-8854);
-          kn.a(-126);
+          kn.resetStaticState(-126);
           lh.clearStaticReferences(0);
           kd.clearStaticReferences((byte) 104);
           tn.clearStaticReferences(false);
@@ -172,7 +172,7 @@ public final class Confined extends i {
           BoundedRandomAccessFile.clearStaticReferences(param0 - 191);
           im.clearStaticReferences(false);
           rl.clearStaticReferences(-114);
-          IsaacRandom.a(-1);
+          IsaacRandom.resetStaticState(-1);
           ni.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(param0 ^ param0);
           oa.clearStaticReferences();
@@ -215,12 +215,12 @@ public final class Confined extends i {
           ag.clearStaticReferences(param0 - 182);
           of.clearStaticReferences((byte) 99);
           fh.clearStaticReferences(true);
-          mc.a((byte) 58);
+          mc.resetStaticState((byte) 58);
           qa.clearStaticReferences(param0 ^ -234);
           n.clearStaticReferences((byte) 122);
-          kk.a((byte) -95);
+          kk.resetStaticState((byte) -95);
           q.clearStaticReferences(-93);
-          cd.clearStaticReferences(-45);
+          ImageProducerRasterBuffer.clearStaticReferences(-45);
           vl.clearStaticReferences(-14578);
           tl.clearStaticReferences((byte) 123);
           dc.clearStaticReferences(12259);
@@ -254,7 +254,7 @@ public final class Confined extends i {
           IntrusiveNodeHashTable.clearStaticReferences(param0 - 245);
           IntrusiveDeque.clearStaticReferences((byte) 108);
           nd.clearStaticReferences(30661);
-          oj.e(20);
+          oj.resetStaticState(20);
           og.clearStaticReferences(param0 ^ -211);
           qk.clearStaticReferences(param0 - 81);
           IntrusiveNodeHashTableIterator.clearStaticReferences((byte) -91);
@@ -281,7 +281,7 @@ public final class Confined extends i {
           jn.releaseDeclaredStaticReferences(97);
           al.clearStaticReferences((byte) 73);
           ai.a(-12875);
-          mk.c(89);
+          mk.resetStaticState(89);
           ii.a(false);
           ca.clearStaticReferences(-1635);
           om.clearStaticReferences((byte) -50);
@@ -289,7 +289,7 @@ public final class Confined extends i {
           ud.clearStaticReferences(98);
           pe.b(param0 - 147);
           gg.clearStaticReferences(116);
-          pn.a(param0 - 274);
+          pn.resetStaticState(param0 - 274);
           sd.clearStaticReferences(-15138);
           AccountNameAvailabilityValidator.clearStaticReferences(-119);
           gl.clearStaticReferences((byte) -11);
@@ -299,7 +299,7 @@ public final class Confined extends i {
           lf.e(127);
           rf.a((byte) 112);
           nn.clearStaticReferences(-11650);
-          fi.a((byte) -125);
+          fi.resetStaticState((byte) -125);
           ra.clearStaticReferences(true);
           va.clearStaticReferences(param0 - 312);
           this.field_y = null;
@@ -678,7 +678,7 @@ public final class Confined extends i {
               ul.a(88, r.field_b, 12, param0 - 55445, 432);
             }
             if (qn.field_v.field_B.field_rb) {
-              ul.a(128, rb.field_g, 13, -4245, 432);
+              ul.a(128, AwtRasterBuffer.field_g, 13, -4245, 432);
             }
             if (qn.field_v.field_B.field_Bb.field_b > 8) {
               ol.a(272, 30613, qn.field_v.field_B.field_Bb.field_b - 8, 4, 384);
@@ -1020,7 +1020,7 @@ public final class Confined extends i {
             sb.field_h = new RgbSprite(20, 20);
             sb.field_h.d();
             var2_ref.a(0, 0, 20, 20);
-            pi.field_S.a((byte) 111);
+            pi.field_S.setAsRasterTarget((byte) 111);
             var2_ref2 = null;
             pn.field_a = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy16", (byte) 38);
             vg.field_I = bj.a("", ih.field_d, ul.field_U, "fonts_bottomheavy32", (byte) 38);
@@ -1052,7 +1052,7 @@ public final class Confined extends i {
                 qe.field_O = nm.a(ih.field_d, "enemy_shot", 1, "");
                 jc.a(wl.field_a, 10265, 76.0f);
                 this.h(51200);
-                cd.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
+                ImageProducerRasterBuffer.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
                 wb.field_a = dh.a(false, "missile_flame", "", ih.field_d);
                 IntrusiveDeque.field_c = dh.a(false, "interface", "", ih.field_d);
                 nn.field_t = nm.a(ih.field_d, "interface_icons", param0 + 96, "");

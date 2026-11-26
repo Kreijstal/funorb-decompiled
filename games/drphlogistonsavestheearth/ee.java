@@ -7,7 +7,7 @@ final class ee {
     static volatile int field_d;
     static he[] field_b;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 1) {
           field_a = 65;

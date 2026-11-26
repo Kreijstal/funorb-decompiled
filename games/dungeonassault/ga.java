@@ -86,7 +86,7 @@ final class ga extends ip {
             this.field_s = var4.a((byte) 109);
           }
           if (this.field_s) {
-            stackIn_12_0 = c.field_d;
+            stackIn_12_0 = AwtRasterBuffer.field_d;
           } else {
             stackIn_12_0 = pd.field_J;
           }

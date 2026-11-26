@@ -23,7 +23,7 @@ final class fa extends UiWidget {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         oh.field_c[DelayedPcmStream.field_p] = param1;
         jk.field_c[DelayedPcmStream.field_p] = DelayedPcmStream.field_p;
-        tk.field_f[DelayedPcmStream.field_p] = param2;
+        AwtRasterBuffer.field_f[DelayedPcmStream.field_p] = param2;
         if (param2 > lh.field_s) {
           mh.field_j = param2;
         }
@@ -264,7 +264,7 @@ final class fa extends UiWidget {
         if (param3 < 106) {
           field_G = (ph) null;
         }
-        return mg.a((byte) -78);
+        return ImageProducerRasterBuffer.a((byte) -78);
     }
 
     static {

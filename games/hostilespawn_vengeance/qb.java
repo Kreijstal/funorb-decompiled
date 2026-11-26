@@ -9,7 +9,7 @@ final class qb extends IntrusiveNode {
     static String field_m;
     static int field_i;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_m = null;
         if (param0) {
           field_k = -37;

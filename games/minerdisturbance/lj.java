@@ -23,7 +23,7 @@ final class lj extends IntrusiveNode {
         return var2;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 > -23) {
           field_r = 91;
         }

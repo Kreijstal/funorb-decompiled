@@ -822,7 +822,7 @@ final class be {
         for (var3 = 0; var3 < param1; var3++) {
           var2[var3] = be.a(param0, param0.field_h, param0.field_c, var3 * 65536 / param1 & 65535, 4096);
         }
-        lb.field_C.a(101);
+        lb.field_C.setAsRasterTarget(101);
         return var2;
     }
 

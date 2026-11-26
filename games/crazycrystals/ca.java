@@ -34,7 +34,7 @@ final class ca extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_m = 115;
           field_g = null;

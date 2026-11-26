@@ -349,9 +349,9 @@ final class ea extends se {
     final static int h(byte param0) {
         if (param0 != -16) {
           field_bb = (ok) null;
-          return si.field_o;
+          return ImageProducerRasterBuffer.field_o;
         }
-        return si.field_o;
+        return ImageProducerRasterBuffer.field_o;
     }
 
     ea(vb param0, String param1, int param2, int param3, int param4, int param5) {

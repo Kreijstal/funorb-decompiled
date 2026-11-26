@@ -117,7 +117,7 @@ final class pj extends bo implements Cloneable {
         var7Lifetime1 = 74 / ((param0 - 74) / 41);
     }
 
-    public static void g(int param0) {
+    public static void resetStaticState(int param0) {
         field_w = null;
         field_r = null;
         if (param0 >= -78) {

@@ -223,7 +223,7 @@ final class s {
                 if (stackIn_63_0 < stackIn_63_1) {
                   MouseInput.field_b[var23Lifetime2] = -2147483648;
                 } else {
-                  fa.field_j[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
+                  ImageProducerRasterBuffer.field_j[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
                   gf.field_p[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
                     var7_int = var29Lifetime1;

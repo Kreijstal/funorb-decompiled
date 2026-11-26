@@ -12,7 +12,7 @@ final class wk {
     static String field_i;
     private vr field_h;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 >= -8) {
           field_a = -25;
           field_e = null;
@@ -28,7 +28,7 @@ final class wk {
           return UiWidget.field_i;
         }
         if (!param0) {
-          wk.a(44);
+          wk.resetStaticState(44);
           return InvincibleAnimation.field_w;
         }
         return InvincibleAnimation.field_w;

@@ -11,7 +11,7 @@ class ph extends dm {
     static boolean field_k;
     static jd field_g;
     static String field_m;
-    static vj field_j;
+    static AwtRasterBuffer field_j;
     static int field_h;
     static RgbSprite field_f;
 
@@ -20,7 +20,7 @@ class ph extends dm {
           param0.writeLong(param1 ^ -7, this.field_i);
           param0.writeBase38String(this.field_e, false);
           if (param1 != 123) {
-            field_j = (vj) null;
+            field_j = (AwtRasterBuffer) null;
           }
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "ph.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -57,7 +57,7 @@ class ph extends dm {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -43) {
-            field_j = (vj) null;
+            field_j = (AwtRasterBuffer) null;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param0 != 2 ||

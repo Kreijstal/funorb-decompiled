@@ -50,14 +50,14 @@ final class lm extends kn implements f, sh {
     }
 
     final static String n(int param0) {
-        if (ic.field_l == ci.field_e) {
+        if (ic.field_l == AwtRasterBuffer.field_e) {
           return km.field_b;
         }
         if (!PcmResampler.field_f.a(0)) {
           return PcmResampler.field_f.a(false);
         }
         int var1 = 104 % ((param0 - 25) / 54);
-        if (ci.field_e == AccountRequestState.field_h) {
+        if (AwtRasterBuffer.field_e == AccountRequestState.field_h) {
           return PcmResampler.field_f.a(false);
         }
         return pl.field_a;
@@ -217,7 +217,7 @@ final class lm extends kn implements f, sh {
         fe var2 = new fe(me.field_l, var1, (rm) null);
         this.field_P = new hc(he.field_c, (rm) null);
         this.field_J = new hc(u.field_b, (rm) null);
-        this.field_N.field_n = vj.field_l;
+        this.field_N.field_n = ImageProducerRasterBuffer.field_l;
         this.field_N.a(new AccountNameAvailabilityValidator(this.field_N), 1048576);
         this.field_P.field_E = false;
         this.field_P.field_A = (ad) ((Object) new wi());

@@ -13,7 +13,7 @@ final class dh extends IntrusiveNode {
     int field_p;
     int field_l;
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_o = null;
         field_g = null;
         if (param0 != -36) {

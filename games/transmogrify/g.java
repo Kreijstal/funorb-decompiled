@@ -33,7 +33,7 @@ final class g extends fi {
           if (param3 == -1) {
             return;
           }
-          g.i(-34);
+          g.resetStaticState(-34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class g extends fi {
         }
     }
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_y = null;
         if (param0 != 19224) {
           field_z = 81;

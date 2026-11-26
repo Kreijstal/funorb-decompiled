@@ -811,7 +811,7 @@ final class qh {
                   var6.c(16 * -var7_int, 16 * -var8_int);
                 }
               }
-              o.field_n.b((byte) 113);
+              o.field_n.setAsRasterTarget((byte) 113);
               var14 = new byte[60000];
               var12 = var14;
               var7 = var12;

@@ -30,7 +30,7 @@ abstract class vf extends DualLinkNode {
     final static void c(byte param0) {
         int var2 = 0;
         int var3 = DungeonAssault.field_K;
-        if (null == kf.field_p) {
+        if (null == ImageProducerRasterBuffer.field_p) {
           return;
         }
         try {
@@ -101,15 +101,15 @@ abstract class vf extends DualLinkNode {
           ic.a(13, 27029, "whirling_blades");
           ic.a(35, 27029, "tripwire_bell");
           ic.a(36, 27029, "glass");
-          k.field_c = tp.a(kf.field_p, "laugh", "skull", -1998);
-          hf.field_ib = tp.a(kf.field_p, "tumble", "dice", -1998);
+          k.field_c = tp.a(ImageProducerRasterBuffer.field_p, "laugh", "skull", -1998);
+          hf.field_ib = tp.a(ImageProducerRasterBuffer.field_p, "tumble", "dice", -1998);
           rg.field_M = new eh[4];
           for (var2 = 0; var2 < 4; var2++) {
-            rg.field_M[var2] = tp.a(kf.field_p, "idle" + (1 + var2), "dragon", -1998);
+            rg.field_M[var2] = tp.a(ImageProducerRasterBuffer.field_p, "idle" + (1 + var2), "dragon", -1998);
           }
-          bo.field_Lb = tp.a(kf.field_p, "eye_open", "dragon", -1998);
-          ce.field_v = tp.a(kf.field_p, "victory", "dragon", -1998);
-          kf.field_j = tp.a(kf.field_p, "defeat", "dragon", -1998);
+          bo.field_Lb = tp.a(ImageProducerRasterBuffer.field_p, "eye_open", "dragon", -1998);
+          ce.field_v = tp.a(ImageProducerRasterBuffer.field_p, "victory", "dragon", -1998);
+          ImageProducerRasterBuffer.field_j = tp.a(ImageProducerRasterBuffer.field_p, "defeat", "dragon", -1998);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "vf.P(" + param0 + ')');
         }

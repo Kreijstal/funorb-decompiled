@@ -12,7 +12,7 @@ final class MixedSupport124 {
     static String stringState0545;
     static int integerState0791;
 
-    public static void performAction1618(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         stringState0542 = null;
         stringState0543 = null;
         rgbSpriteState0059 = null;

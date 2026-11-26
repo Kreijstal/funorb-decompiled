@@ -104,7 +104,7 @@ final class uj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_v = null;
         if (param0 <= 36) {
           field_s = -35;

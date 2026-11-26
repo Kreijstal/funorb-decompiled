@@ -128,8 +128,8 @@ final class bg extends qe {
         int var3 = DungeonAssault.field_K;
         super.b(param0);
         jh.a(this.field_e);
-        c.a(0, 640, 0, (byte) 64);
-        c.a(0, 640, 40, (byte) 75);
+        AwtRasterBuffer.a(0, 640, 0, (byte) 64);
+        AwtRasterBuffer.a(0, 640, 40, (byte) 75);
         vf.a(432, true, 33, 114, 48);
         vf.a(432, true, 599, 115, 48);
         vf.a(32, true, 164, -54, 8);

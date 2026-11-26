@@ -82,7 +82,7 @@ final class AccountNameAvailabilityValidator extends mf {
           var11 = param5.field_C * param2[10] + param5.field_t;
           var13 = param5.field_D + param5.field_C * param2[11];
           var15 = 0.4 * param3;
-          pa.a(var9_double, var15, (byte) -11, param6, var13, var11, cd.field_o[(param1 & 15) >> 1], param0, param4);
+          pa.a(var9_double, var15, (byte) -11, param6, var13, var11, ImageProducerRasterBuffer.field_o[(param1 & 15) >> 1], param0, param4);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "qg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

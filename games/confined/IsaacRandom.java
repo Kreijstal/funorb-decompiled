@@ -447,7 +447,7 @@ final class IsaacRandom {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != -1) {

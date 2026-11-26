@@ -99,7 +99,7 @@ final class pf {
         return -1;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == 0) {
           field_d = null;
           field_b = null;

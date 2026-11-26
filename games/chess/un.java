@@ -836,7 +836,7 @@ final class un {
           ResourceArchive.field_c.e();
         }
         if (hl.field_h) {
-          ph.field_j.b(48);
+          ph.field_j.setAsRasterTarget(48);
         }
         if (-2 == this.field_B.field_f ||
           this.c(25)) {

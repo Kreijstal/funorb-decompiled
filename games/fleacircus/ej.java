@@ -63,7 +63,7 @@ final class ej {
           if (fleas.field_E == 0 &&
             tj.field_a >= 15 && (qh.c((byte) 55) ||
             !(wc.field_q > 0))) {
-            bj.field_m = bc.field_V;
+            ImageProducerRasterBuffer.field_m = bc.field_V;
             oa.a(7, false, -72);
             return;
           }
@@ -79,7 +79,7 @@ final class ej {
           lk.field_D.field_k = false;
           si.field_y.field_k = true;
           c.field_U = false;
-          uc.b((byte) 84);
+          AwtRasterBuffer.b((byte) 84);
           rg.b(4);
           em.field_b = 6000;
           fb.field_e = new int[100];

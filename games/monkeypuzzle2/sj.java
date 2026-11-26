@@ -149,14 +149,14 @@ final class sj {
             var14.addOutline(1);
             dj.field_a[var6_intLifetime2] = var14;
           }
-          ac.field_a.a((byte) 120);
-          ba.field_a[param4] = lb.a(false, "", param3, "sprite_explorer_idle");
-          ba.field_a[4] = lb.a(false, "", param3, "sprite_explorer_celebrate_maj");
-          ba.field_a[3] = lb.a(false, "", param3, "sprite_explorer_celebrate_min");
-          ba.field_a[2] = lb.a(false, "", param3, "sprite_explorer_climbing");
-          ba.field_a[1] = lb.a(false, "", param3, "sprite_explorer_shoot");
-          ba.field_a[5] = lb.a(false, "", param3, "sprite_explorer_lose");
-          ba.field_a[6] = lb.a(false, "", param3, "sprite_explorer_idle_panic");
+          ac.field_a.setAsRasterTarget((byte) 120);
+          AwtRasterBuffer.field_a[param4] = lb.a(false, "", param3, "sprite_explorer_idle");
+          AwtRasterBuffer.field_a[4] = lb.a(false, "", param3, "sprite_explorer_celebrate_maj");
+          AwtRasterBuffer.field_a[3] = lb.a(false, "", param3, "sprite_explorer_celebrate_min");
+          AwtRasterBuffer.field_a[2] = lb.a(false, "", param3, "sprite_explorer_climbing");
+          AwtRasterBuffer.field_a[1] = lb.a(false, "", param3, "sprite_explorer_shoot");
+          AwtRasterBuffer.field_a[5] = lb.a(false, "", param3, "sprite_explorer_lose");
+          AwtRasterBuffer.field_a[6] = lb.a(false, "", param3, "sprite_explorer_idle_panic");
           kb.field_a = new Sprite[8];
           var6 = lb.a(false, "", param3, "menu_titles");
           kb.field_a[6] = var6[6];
@@ -166,14 +166,14 @@ final class sj {
           kb.field_a[1] = var6[1];
           kb.field_a[0] = var6[0];
           kb.field_a[7] = var6[5];
-          cm.field_F = new Sprite[ba.field_a[0].length];
+          cm.field_F = new Sprite[AwtRasterBuffer.field_a[0].length];
           for (var7 = 0; cm.field_F.length > var7; var7++) {
-            cm.field_F[var7] = new Sprite(6 + ba.field_a[0][var7].field_m, ba.field_a[0][var7].field_n + 6);
+            cm.field_F[var7] = new Sprite(6 + AwtRasterBuffer.field_a[0][var7].field_m, AwtRasterBuffer.field_a[0][var7].field_n + 6);
             cm.field_F[var7].e();
-            ba.field_a[0][var7].a(3, 3);
+            AwtRasterBuffer.field_a[0][var7].a(3, 3);
             h.a(3, 16777215, 0, false, cm.field_F[var7].field_j, 0, cm.field_F[var7].field_k, cm.field_F[var7]);
           }
-          ac.field_a.a((byte) 119);
+          ac.field_a.setAsRasterTarget((byte) 119);
           wl.field_f = lb.a(false, "", param3, "catapult");
           hf.field_d = ma.a(param3, "sun", 16711680, "");
           qa.field_i = ma.a(param3, "moon", param4 ^ 16711680, "");
@@ -255,7 +255,7 @@ final class sj {
               var8[var10_intLifetime2].d(0, 0, vg.field_K[var9_intLifetime2]);
             }
           }
-          ac.field_a.a((byte) 113);
+          ac.field_a.setAsRasterTarget((byte) 113);
           var17 = ie.field_b;
           for (var10_intLifetime3 = 0; var10_intLifetime3 < var17.length; var10_intLifetime3++) {
             var11_ref_le = var17[var10_intLifetime3];
@@ -280,7 +280,7 @@ final class sj {
             var10[var11] = -3 + var18[var11].field_l;
           }
           pl.field_e.a(var9, var20);
-          ac.field_a.a((byte) 110);
+          ac.field_a.setAsRasterTarget((byte) 110);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "sj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

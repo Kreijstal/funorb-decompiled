@@ -2647,7 +2647,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("fs_accept_beforeaccept", 0);
                 if (var2 != null) {
-                  na.field_d = mj.a((byte) -116, var2);
+                  AwtRasterBuffer.field_d = mj.a((byte) -116, var2);
                 }
                 var2 = wg.a("fs_button_accept", 0);
                 if (null != var2) {

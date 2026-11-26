@@ -17,7 +17,7 @@ final class b extends cia {
         this.field_s = DiveBomberAnimation.a(3, kf.field_a, -2147483648);
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_t = null;
         if (param0 != 5910) {
           field_u = 59;

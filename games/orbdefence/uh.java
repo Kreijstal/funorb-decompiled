@@ -54,7 +54,7 @@ final class uh {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -5) {
           field_b = -19;
           field_c = null;

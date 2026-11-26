@@ -259,7 +259,7 @@ final class ff {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_u = null;
         field_v = null;
         field_n = null;

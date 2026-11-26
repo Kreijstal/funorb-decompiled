@@ -378,7 +378,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_L = null;
         if (param0 > -24) {
           field_q = -58;

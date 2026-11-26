@@ -8,7 +8,7 @@ final class o extends ql {
     private v field_d;
     static String field_j;
     private oc field_i;
-    static sm field_n;
+    static AwtRasterBuffer field_n;
     private we[] field_f;
     static RgbSprite field_g;
     static boolean field_e;

@@ -183,7 +183,7 @@ final class ji {
               if (!param4) {
                 stackIn_23_0 = fg.field_b[var13];
               } else {
-                stackIn_23_0 = tk.field_f[var13];
+                stackIn_23_0 = AwtRasterBuffer.field_f[var13];
               }
               var14 = stackIn_23_0;
               if (var7_int < var14) {

@@ -1685,7 +1685,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("warlock", false);
                 if (null != var2) {
-                  kf.field_i = dj.a(var2, param1);
+                  ImageProducerRasterBuffer.field_i = dj.a(var2, param1);
                 }
                 var2 = gm.a("death_knight", param1);
                 if (var2 != null) {
@@ -1841,7 +1841,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("hell_beast", false);
                 if (var2 != null) {
-                  kf.field_q = dj.a(var2, param1);
+                  ImageProducerRasterBuffer.field_q = dj.a(var2, param1);
                 }
                 var2 = gm.a("demon_lord", false);
                 if (var2 != null) {
@@ -3107,7 +3107,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_dragons_of_renown", false);
                 if (null != var2) {
-                  c.field_e = dj.a(var2, param1);
+                  AwtRasterBuffer.field_e = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_my_profile", false);
                 if (null != var2) {
@@ -3501,7 +3501,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_raider_snuck_past_guardian", param1);
                 if (null != var2) {
-                  c.field_c = dj.a(var2, false);
+                  AwtRasterBuffer.field_c = dj.a(var2, false);
                 }
                 var2 = gm.a("text_guardian_trapped_alerted", param1);
                 if (var2 != null) {

@@ -138,7 +138,7 @@ final class nd extends lc implements rc {
         if (param0 != -21065) {
           field_A = (bj) null;
         }
-        return ef.field_a;
+        return AwtRasterBuffer.field_a;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

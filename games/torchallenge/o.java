@@ -526,7 +526,7 @@ final class o extends IntrusiveNode {
         eh.field_k = 100 * param1 / 150;
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_j = null;
         field_k = null;
         field_n = null;
@@ -542,7 +542,7 @@ final class o extends IntrusiveNode {
           gh.field_x = false;
         }
         if (!param1) {
-          o.b(false);
+          o.resetStaticState(false);
         }
         rf.field_ib = 0;
         RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];

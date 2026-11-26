@@ -54,7 +54,7 @@ final class oe {
 
     final void b(int param0) {
         int fieldTemp$0 = 0;
-        if (null != ba.field_f) {
+        if (null != AwtRasterBuffer.field_f) {
           return;
         }
         if (af.field_c <= 0) {
@@ -113,7 +113,7 @@ final class oe {
             dl.field_a[var1_int] = 0L;
           }
           if (param0 <= 100) {
-            oe.d(-61);
+            oe.resetStaticState(-61);
           }
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             ve.field_w[var1_intLifetime1] = 0L;
@@ -124,7 +124,7 @@ final class oe {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -12248) {
           field_d = true;
         }

@@ -153,7 +153,7 @@ class IntrusiveNode {
         }
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_g = null;
         field_f = null;
         field_a = null;

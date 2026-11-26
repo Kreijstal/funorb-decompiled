@@ -149,7 +149,7 @@ final class MixedSupport142 extends HashNode {
         return integerLocal2 != 0;
     }
 
-    public static void performAction1755(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         validationStatusState0005 = null;
         stringState0596 = null;
         if (integerArgument1 < 120) {

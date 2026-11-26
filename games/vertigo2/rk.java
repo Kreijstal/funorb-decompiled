@@ -85,7 +85,7 @@ abstract class rk extends DualLinkNode {
         rh.b(-14, 17);
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_w = null;
         field_v = null;
         field_x = null;

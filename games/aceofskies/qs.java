@@ -86,7 +86,7 @@ final class qs {
         av.field_c = new IntrusiveDeque();
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_a = null;
         if (param0 <= 10) {
           field_b = 125;

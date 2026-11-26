@@ -32,7 +32,7 @@ final class lc extends IntrusiveNode {
         return var5;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 >= -36) {
           field_s = 80;
           field_u = null;

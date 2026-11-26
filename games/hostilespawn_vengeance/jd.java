@@ -108,7 +108,7 @@ final class jd extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 33) {
-            jd.c(45);
+            jd.resetStaticState(45);
           }
           var4_int = param2.a((byte) -2, param1);
           var5 = param2.a(var4_int, param3, -1);
@@ -140,7 +140,7 @@ final class jd extends IntrusiveNode {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_i = null;
         field_h = null;
         field_x = null;

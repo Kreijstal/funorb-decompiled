@@ -7,7 +7,7 @@ final class gf {
     private int field_b;
     float field_g;
     static String field_a;
-    static kh field_e;
+    static AwtRasterBuffer field_e;
     static String[] field_h;
     private int field_f;
     private t[] field_c;

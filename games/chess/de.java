@@ -61,7 +61,7 @@ final class de {
           var24 = null;
           var12 = Chess.field_G;
           try {
-            var14 = (fl) (vj.field_c.beginBackward(param1 ^ -18175));
+            var14 = (fl) (AwtRasterBuffer.field_c.beginBackward(param1 ^ -18175));
             var18 = var14;
             if (var18 == null) {
               return;

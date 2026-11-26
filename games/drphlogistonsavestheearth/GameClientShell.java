@@ -670,7 +670,7 @@ abstract class GameClientShell extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), MidiPcmStream.f(109), IntrusiveDeque.f(-51), fa.a(true));
+            var5_intLifetime1 = hb.a(-60, fl.a(false), this.field_u, nf.e((byte) 127), MidiPcmStream.f(109), IntrusiveDeque.f(-51), ImageProducerRasterBuffer.a(true));
             if (var5_intLifetime1 != -1) {
               wh.a(var5_intLifetime1, cc.field_p, (byte) 117, td.field_m);
               cc.field_p = null;

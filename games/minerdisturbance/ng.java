@@ -31,7 +31,7 @@ final class ng {
         if (kf.field_d == null) {
           return;
         }
-        ci.a(kf.field_d, 0);
+        AwtRasterBuffer.a(kf.field_d, 0);
         kf.field_d.a(false, qa.field_a);
         kf.field_d = null;
         if (ij.field_o != null) {

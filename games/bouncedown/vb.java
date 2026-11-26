@@ -149,7 +149,7 @@ final class vb implements fc {
             } else {
               if (var9Lifetime1 == 248) {
                 ta.a((byte) -118, vi.b(0));
-                ib.field_o = vf.field_a;
+                ImageProducerRasterBuffer.field_o = vf.field_a;
                 kc.a((byte) 18);
                 fa.field_a = false;
                 stackIn_28_0 = var9Lifetime1;
@@ -187,7 +187,7 @@ final class vb implements fc {
           if (id.field_i == pj.field_a &&
             va.b(1)) {
             if (255 != wa.field_d) {
-              ib.field_o = jc.field_g.readString(true);
+              ImageProducerRasterBuffer.field_o = jc.field_g.readString(true);
             } else {
               var10_ref_String = jc.field_g.readNullableString((byte) 57);
               if (var10_ref_String != null) {
@@ -202,9 +202,9 @@ final class vb implements fc {
           if (NodeHashTableIterator.field_a == null) {
             if (fa.field_a) {
               if (ph.a((byte) 76) > 30000L) {
-                ib.field_o = jh.field_t;
+                ImageProducerRasterBuffer.field_o = jh.field_t;
               } else {
-                ib.field_o = Platform.field_k;
+                ImageProducerRasterBuffer.field_o = Platform.field_k;
               }
               fa.field_a = false;
               stackIn_60_0 = 249;

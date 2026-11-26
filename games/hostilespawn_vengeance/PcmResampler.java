@@ -395,7 +395,7 @@ final class PcmResampler {
         return param0;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_h = null;
         field_c = null;
         field_f = null;
@@ -425,7 +425,7 @@ final class PcmResampler {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 121) {
-            PcmResampler.a((byte) -36);
+            PcmResampler.resetStaticState((byte) -36);
           }
           stackIn_3_0 = db.a(param1, 0, (byte) -126, param1.length);
           return stackIn_3_0;

@@ -15,7 +15,7 @@ final class nd extends hf {
     int field_T;
     static vh field_P;
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_L = null;
         if (param0) {
           field_R = null;

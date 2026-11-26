@@ -20,7 +20,7 @@ final class ib {
         return param0 & ~var2;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != -35) {
           field_a = 119;
           field_b = null;

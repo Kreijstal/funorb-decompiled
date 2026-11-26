@@ -75,7 +75,7 @@ final class il extends vg {
         return false;
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == -5758) {
           field_x = null;
           field_u = null;

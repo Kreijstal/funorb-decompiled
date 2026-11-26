@@ -9,7 +9,7 @@ final class wh {
     static String field_a;
     static boolean field_b;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_b = false;
         }

@@ -260,7 +260,7 @@ final class an extends ql {
         }
     }
 
-    public static void g(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         field_j = null;
         field_d = null;
         if (param0 != 2) {

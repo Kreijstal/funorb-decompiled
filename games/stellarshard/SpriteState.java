@@ -46,7 +46,7 @@ abstract class SpriteState extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_u = null;
         if (param0 != -28692) {
           field_r = false;

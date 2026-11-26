@@ -64,7 +64,7 @@ final class MixedSupport134 {
         DualNode.performAction0127((byte) 123, GameplayControls.sceneWidgetPart005State0003);
     }
 
-    public static void performAction1683(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         stringState0576 = null;
         stringState0577 = null;
         byteArrayState0029 = null;

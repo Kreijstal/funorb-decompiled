@@ -584,7 +584,7 @@ final class t extends ma implements mj {
             if (param1) {
               return;
             }
-            si.a(126, param2);
+            ImageProducerRasterBuffer.a(126, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

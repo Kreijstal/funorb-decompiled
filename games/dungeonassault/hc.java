@@ -14,7 +14,7 @@ final class hc {
 
     final static boolean b(int param0) {
         if (param0 != 1) {
-          hc.a(-2);
+          hc.resetStaticState(-2);
           if (!wh.field_d) {
             return ed.c(true) ? true : false;
           }
@@ -35,7 +35,7 @@ final class hc {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_e = null;
         field_a = null;
         field_f = null;

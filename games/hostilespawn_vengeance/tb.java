@@ -112,13 +112,13 @@ final class tb extends ph {
     }
 
     final static void f(byte param0) {
-        if (null == wa.field_q) {
+        if (null == ImageProducerRasterBuffer.field_q) {
           return;
         }
-        v.a(8, wa.field_q);
-        wa.field_q.exitFullscreen(true, gf.field_b);
+        v.a(8, ImageProducerRasterBuffer.field_q);
+        ImageProducerRasterBuffer.field_q.exitFullscreen(true, gf.field_b);
         if (param0 < -84) {
-          wa.field_q = null;
+          ImageProducerRasterBuffer.field_q = null;
           if (ie.field_c != null) {
             ie.field_c.c(73);
           }
@@ -126,7 +126,7 @@ final class tb extends ph {
           return;
         }
         tb.clearDeclaredStaticReferences((byte) -36);
-        wa.field_q = null;
+        ImageProducerRasterBuffer.field_q = null;
         if (ie.field_c != null) {
           ie.field_c.c(73);
         }

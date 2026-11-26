@@ -112,7 +112,7 @@ final class tg extends ga implements el {
         this.b(this.field_Q, 10);
     }
 
-    public static void g(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_T = null;
         if (param0 <= 123) {
           field_S = 121;

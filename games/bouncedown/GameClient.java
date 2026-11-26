@@ -24,7 +24,7 @@ abstract class GameClient extends AppletShell {
         if (param0 != 6) {
           this.field_m = false;
         }
-        ib.field_m[5] = true;
+        ImageProducerRasterBuffer.field_m[5] = true;
     }
 
     final void j(int param0) {
@@ -35,7 +35,7 @@ abstract class GameClient extends AppletShell {
         var4 = Bounce.field_N;
         var2 = wa.field_d;
         if (64 > var2 &&
-          ib.field_m[var2]) {
+          ImageProducerRasterBuffer.field_m[var2]) {
           if (param0 != -4) {
             field_s = 15;
           }
@@ -97,7 +97,7 @@ abstract class GameClient extends AppletShell {
               }
             }
           } else {
-            ef.a((byte) 124);
+            AwtRasterBuffer.a((byte) 124);
           }
           return;
         }
@@ -106,13 +106,13 @@ abstract class GameClient extends AppletShell {
     }
 
     private final void a(boolean param0, boolean param1) {
-        ib.field_m[0] = true;
-        ib.field_m[17] = true;
-        ib.field_m[8] = param1;
-        ib.field_m[18] = true;
-        ib.field_m[3] = true;
-        ib.field_m[7] = true;
-        ib.field_m[16] = true;
+        ImageProducerRasterBuffer.field_m[0] = true;
+        ImageProducerRasterBuffer.field_m[17] = true;
+        ImageProducerRasterBuffer.field_m[8] = param1;
+        ImageProducerRasterBuffer.field_m[18] = true;
+        ImageProducerRasterBuffer.field_m[3] = true;
+        ImageProducerRasterBuffer.field_m[7] = true;
+        ImageProducerRasterBuffer.field_m[16] = true;
         if (param0) {
           field_B = 46L;
         }
@@ -131,7 +131,7 @@ abstract class GameClient extends AppletShell {
     }
 
     private final void i(int param0) {
-        ib.field_m[2] = true;
+        ImageProducerRasterBuffer.field_m[2] = true;
         if (param0 != 0) {
           field_n = (IntrusiveDeque) null;
         }
@@ -357,18 +357,18 @@ abstract class GameClient extends AppletShell {
           discarded$0 = this.a(true, false, false);
         }
         if (!param0 &&
-          ef.field_f) {
+          AwtRasterBuffer.field_f) {
           mh.a(ch.field_h, (byte) 110);
           this.d(12955);
           l.a(0, ch.field_h);
         }
-        if (ib.field_m[8]) {
+        if (ImageProducerRasterBuffer.field_m[8]) {
           vg.a((byte) -17);
         }
     }
 
     private final void a(boolean param0) {
-        ib.field_m[1] = param0;
+        ImageProducerRasterBuffer.field_m[1] = param0;
     }
 
     final int h(int param0) {
@@ -397,7 +397,7 @@ abstract class GameClient extends AppletShell {
           this.a((byte) 93, "reconnect");
         }
         va.a(2);
-        cl.a(ib.field_o, true, var2);
+        cl.a(ImageProducerRasterBuffer.field_o, true, var2);
         dl.field_b = true;
         nj.field_n = 15000L + fa.correctedCurrentTimeMillis(-61);
         if (param0 != 1) {
@@ -407,7 +407,7 @@ abstract class GameClient extends AppletShell {
     }
 
     private final void f(int param0) {
-        ib.field_m[param0] = true;
+        ImageProducerRasterBuffer.field_m[param0] = true;
     }
 
     final void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4) {
@@ -500,11 +500,11 @@ abstract class GameClient extends AppletShell {
             field_s = -61;
           }
           if (var4 == 1) {
-            var5_int = hh.a(ne.f(32768), ef.a(30923), (byte) 99);
+            var5_int = hh.a(ne.f(32768), AwtRasterBuffer.a(30923), (byte) 99);
             if (var5_int != -1) {
-              ej.a(var5_int, bi.field_l, ib.field_o, 255);
+              ej.a(var5_int, bi.field_l, ImageProducerRasterBuffer.field_o, 255);
               bi.field_l = null;
-              ib.field_o = null;
+              ImageProducerRasterBuffer.field_o = null;
             }
             var11 = fa.b(1);
             if (var11 != null) {
@@ -514,9 +514,9 @@ abstract class GameClient extends AppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = sa.a(bb.a(-102), pj.a((byte) 48), ok.d(1), uf.a((byte) -128), 85, this.field_C, bl.b(-71));
             if (-1 != var5_intLifetime1) {
-              jf.a((byte) -52, bi.field_l, var5_intLifetime1, ib.field_o);
+              jf.a((byte) -52, bi.field_l, var5_intLifetime1, ImageProducerRasterBuffer.field_o);
               bi.field_l = null;
-              ib.field_o = null;
+              ImageProducerRasterBuffer.field_o = null;
             }
           }
           if (var4 == 3) {
@@ -531,10 +531,10 @@ abstract class GameClient extends AppletShell {
               var5_intLifetime2 = b.a((byte) -37, this.field_C, uf.a((byte) -108), bl.b(-95), this.field_p, false);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  stackIn_29_0 = ib.field_o;
+                  stackIn_29_0 = ImageProducerRasterBuffer.field_o;
                   stackIn_30_1 = (param1) ? false : true;
                   cl.a(stackIn_29_0, stackIn_30_1, var5_intLifetime2);
-                  ib.field_o = null;
+                  ImageProducerRasterBuffer.field_o = null;
                 } else {
                   al.field_h = l.field_b;
                   ta.b(101);

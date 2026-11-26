@@ -7,7 +7,7 @@ final class qd extends ib {
     private Object field_o;
     static int field_r;
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_p = null;
         if (param0 != 400) {
           field_r = 18;

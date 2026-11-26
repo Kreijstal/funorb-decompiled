@@ -1,0 +1,50 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class BufferedImageRasterBuffer extends AwtRasterBuffer {
+    private java.awt.Component field_j;
+
+    final void initialize(int param0, java.awt.Component param1, int param2, int param3) {
+        java.awt.image.DataBufferInt var5 = null;
+        java.awt.image.DirectColorModel var6 = null;
+        java.awt.image.WritableRaster var7 = null;
+        java.awt.image.DataBufferInt var5Lifetime1;
+        java.awt.image.DirectColorModel var6Lifetime1;
+        java.awt.image.WritableRaster var7Lifetime1;
+        if (param3 < -10) {
+          this.field_i = param2;
+          this.field_g = param0;
+          this.field_e = new int[param2 * param0 + 1];
+          var5 = new java.awt.image.DataBufferInt(this.field_e, this.field_e.length);
+          var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+          var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_g, this.field_i), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);
+          this.field_b = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6), var7, false, new Hashtable()));
+          this.field_j = param1;
+          this.setAsRasterTarget((byte) 126);
+          return;
+        }
+        this.field_j = (java.awt.Component) null;
+        this.field_i = param2;
+        this.field_g = param0;
+        this.field_e = new int[param2 * param0 + 1];
+        var5Lifetime1 = new java.awt.image.DataBufferInt(this.field_e, this.field_e.length);
+        var6Lifetime1 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
+        var7Lifetime1 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6Lifetime1)).createCompatibleSampleModel(this.field_g, this.field_i), (java.awt.image.DataBuffer) ((Object) var5Lifetime1), (java.awt.Point) null);
+        this.field_b = (java.awt.Image) ((Object) new java.awt.image.BufferedImage((java.awt.image.ColorModel) ((Object) var6Lifetime1), var7Lifetime1, false, new Hashtable()));
+        this.field_j = param1;
+        this.setAsRasterTarget((byte) 126);
+    }
+
+    final void drawImage(int param0, int param1, java.awt.Graphics param2, int param3) {
+        param2.drawImage(this.field_b, param0, param3, (java.awt.image.ImageObserver) ((Object) this.field_j));
+        if (param1 != 7) {
+          java.awt.Component var6 = (java.awt.Component) null;
+          this.initialize(-88, (java.awt.Component) null, 65, 59);
+        }
+    }
+
+    public BufferedImageRasterBuffer() {
+    }
+}

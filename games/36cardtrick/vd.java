@@ -117,7 +117,7 @@ final class vd extends DualLinkNode {
             td.field_b = param12;
             mk.field_k = param6;
             wk.field_d = param3;
-            kh.field_g = param9;
+            AwtRasterBuffer.field_g = param9;
             bj.field_m = param2;
             dg.field_F = param13;
             kj.field_t = param1;
@@ -236,7 +236,7 @@ final class vd extends DualLinkNode {
         int var2Lifetime1;
         if (this.field_m != null) {
           for (var2 = 0; var2 < this.field_m.length; var2++) {
-            this.field_m[var2] = fj.a(this.field_m[var2], 32768);
+            this.field_m[var2] = GameApplet.a(this.field_m[var2], 32768);
           }
         }
         var2Lifetime1 = -85 % ((param0 - 62) / 63);

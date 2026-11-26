@@ -572,7 +572,7 @@ final class cl extends ee {
                         param1.field_rb = true;
                         kc.a(wi.field_b, (pm) (this), 126, param1.field_hb);
                         if (param1.field_hb) {
-                          pk.a((byte) 62, b.a(new String[]{rb.field_g}, vg.field_K, 1177));
+                          pk.a((byte) 62, b.a(new String[]{AwtRasterBuffer.field_g}, vg.field_K, 1177));
                           param1.field_hb = false;
                           this.d(10797);
                         } else {

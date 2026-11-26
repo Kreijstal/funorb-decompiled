@@ -259,9 +259,9 @@ final class fh extends g implements wi, qh {
             var4Lifetime2 = var3;
           }
           var4Lifetime1 = null;
-          if (null != jf.field_l &&
-            !jf.field_l.equals(param0.getParameter("session"))) {
-            var4Lifetime1 = jf.field_l;
+          if (null != ImageProducerRasterBuffer.field_l &&
+            !ImageProducerRasterBuffer.field_l.equals(param0.getParameter("session"))) {
+            var4Lifetime1 = ImageProducerRasterBuffer.field_l;
           }
           stackIn_11_0 = hi.a((String) (var3), param1, (String) (var4Lifetime1), -1, 353);
           return stackIn_11_0;

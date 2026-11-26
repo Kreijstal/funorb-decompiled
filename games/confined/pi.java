@@ -9,7 +9,7 @@ final class pi extends ga implements ge, el {
     static int field_H;
     static int[] field_U;
     static String field_P;
-    static rb field_S;
+    static AwtRasterBuffer field_S;
     static int field_L;
 
     public final void a(na param0, int param1, int param2, boolean param3) {
@@ -42,7 +42,7 @@ final class pi extends ga implements ge, el {
           if (!param3) {
             return;
           }
-          field_S = (rb) null;
+          field_S = (AwtRasterBuffer) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

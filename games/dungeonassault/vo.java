@@ -158,7 +158,7 @@ final class vo extends ip {
             return stackIn_7_0;
           }
           if (!this.a(param0, (byte) -117)) {
-            return c.field_d;
+            return AwtRasterBuffer.field_d;
           }
           stackIn_11_0 = pd.field_J;
           return stackIn_11_0;

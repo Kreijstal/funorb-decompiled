@@ -144,7 +144,7 @@ final class pa extends IntrusiveNode {
                 var18.field_o[var5] = -5;
               }
             }
-            vj.field_c.addFirst((IntrusiveNode) (var18), (byte) 92);
+            AwtRasterBuffer.field_c.addFirst((IntrusiveNode) (var18), (byte) 92);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

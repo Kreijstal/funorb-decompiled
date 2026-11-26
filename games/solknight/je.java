@@ -7,7 +7,7 @@ final class je {
     static String field_a;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 <= 21) {
@@ -73,7 +73,7 @@ final class je {
         if (qf.field_b > var1) {
           of.field_e = of.field_e + (qf.field_b - var1);
           if (param0 != 1) {
-            je.a((byte) 110);
+            je.resetStaticState((byte) 110);
             qf.field_b = var1;
             return var1 + of.field_e;
           }
@@ -84,7 +84,7 @@ final class je {
           qf.field_b = var1;
           return var1 + of.field_e;
         }
-        je.a((byte) 110);
+        je.resetStaticState((byte) 110);
         qf.field_b = var1;
         return var1 + of.field_e;
     }

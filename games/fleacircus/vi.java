@@ -205,7 +205,7 @@ final class vi {
         if (ui.field_kb == wi.field_f) {
           return IterableNodeHashTable.field_d;
         }
-        if (!uc.field_c.a(param0 ^ 87)) {
+        if (!AwtRasterBuffer.field_c.a(param0 ^ 87)) {
           return IterableNodeHashTable.field_d;
         }
         if (param0 == -55) {

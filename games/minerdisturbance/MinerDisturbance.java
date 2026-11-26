@@ -195,7 +195,7 @@ public final class MinerDisturbance extends ob {
             if (cm.field_o == 0 &&
               qd.field_S ||
               cm.field_o == 1 &&
-              ci.field_b) {
+              AwtRasterBuffer.field_b) {
               this.t(48);
               if (var4 != 0) {
                 SoftwareRasterizer.clearRaster();
@@ -426,7 +426,7 @@ public final class MinerDisturbance extends ob {
               }
             } else {
               if (null != pf.field_a) {
-                ci.field_b = true;
+                AwtRasterBuffer.field_b = true;
                 return true;
               }
               rf.field_d = jn.a("thermometer", -29553, "supervolcano", fl.field_f);
@@ -4067,7 +4067,7 @@ public final class MinerDisturbance extends ob {
             }
             if (decompiledFrameRemainder0) {
               ef.field_b[3].addOutline(1);
-              ResourceArchive.field_e.a((byte) -45);
+              ResourceArchive.field_e.setAsRasterTarget((byte) -45);
               ha.field_c = jn.a("unachieved", -29553, "basic", ob.field_q);
               cb.field_e = jn.a("orbcoin", -29553, "basic", ob.field_q);
               a.field_a = td.a("miner2", fl.field_f, "", (byte) 118);
@@ -4151,7 +4151,7 @@ public final class MinerDisturbance extends ob {
             var8_int = 0;
             do {
               if (!(te.field_e[1].length > var8_int)) {
-                ResourceArchive.field_e.a((byte) -45);
+                ResourceArchive.field_e.setAsRasterTarget((byte) -45);
                 he.field_b = td.a("shopframe", fl.field_f, "shop", (byte) 125);
                 vh.field_a = new Sprite[2];
                 vh.field_a[0] = jn.a("shop_background", -29553, "shop", fl.field_f);
@@ -4196,7 +4196,7 @@ public final class MinerDisturbance extends ob {
                 s.field_L[2] = jn.a("scroll_bottom", -29553, "", fl.field_f);
                 ck.field_a = jn.a("seismograph_base", -29553, "", fl.field_f);
                 ma.field_O = jn.a("seismograph_grid", -29553, "", fl.field_f);
-                ResourceArchive.field_e.a((byte) -45);
+                ResourceArchive.field_e.setAsRasterTarget((byte) -45);
                 ol.field_a = jn.a("seismograph_needle", -29553, "", fl.field_f);
                 ol.field_c = jn.a("title_achievements", -29553, "", fl.field_f);
                 on.field_x = jn.a("title_allscores", -29553, "", fl.field_f);
@@ -4289,7 +4289,7 @@ public final class MinerDisturbance extends ob {
             this.a(-88);
           }
           if (null != kf.field_d) {
-            ci.a(kf.field_d, 0);
+            AwtRasterBuffer.a(kf.field_d, 0);
             kf.field_d.a(param0, qa.field_a);
             kf.field_d = null;
           }
@@ -4711,16 +4711,16 @@ public final class MinerDisturbance extends ob {
           en.a(10);
           ob.clearStaticReferences(124);
           tj.clearStaticReferences(false);
-          ge.a(111);
+          ge.resetStaticState(111);
           el.clearStaticReferences(2);
           gn.a(param0 + 28807);
           of.clearStaticReferences(-60);
           lg.a((byte) 76);
-          ja.f(param0 ^ 151);
+          ja.resetStaticState(param0 ^ 151);
           bf.a(param0 ^ 49);
           wd.clearStaticReferences(param0 - 98);
           PacketBuffer.clearStaticReferences(109);
-          ClientException.a((byte) 84);
+          ClientException.resetStaticState((byte) 84);
           lf.clearStaticReferences(false);
           MouseWheelInput.clearStaticReferences((byte) 124);
           de.clearStaticReferences((byte) 34);
@@ -4735,7 +4735,7 @@ public final class MinerDisturbance extends ob {
           pa.clearStaticReferences(param0 ^ 2);
           fb.clearStaticReferences(true);
           ek.clearStaticReferences((byte) 19);
-          ci.b(0);
+          AwtRasterBuffer.resetStaticState(0);
           dm.clearStaticReferences(20583);
           FullscreenFocusCanvas.clearStaticReferences((byte) 79);
           pl.clearStaticReferences(-26537);
@@ -4758,7 +4758,7 @@ public final class MinerDisturbance extends ob {
           AudioOutput.clearStaticReferences();
           CrossfadingMidiPcmStream.clearDeclaredStaticReferences(98);
           qk.clearStaticReferences(-1003);
-          ch.c(-104);
+          ch.resetStaticState(-104);
           nm.a(false);
           bk.clearStaticReferences((byte) -113);
           me.clearStaticReferences((byte) -83);
@@ -4771,10 +4771,10 @@ public final class MinerDisturbance extends ob {
           hm.clearStaticReferences((byte) 112);
           AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -42);
           jl.releaseDeclaredStaticReferences((byte) 126);
-          rg.r(param0 ^ 28777);
-          ik.p(120);
+          rg.resetStaticState(param0 ^ 28777);
+          ik.resetStaticState(120);
           qd.clearStaticReferences(true);
-          cl.o(20);
+          cl.resetStaticState(20);
           lm.clearDeclaredStaticReferences((byte) -106);
           pf.clearStaticReferences(-1);
           vi.clearStaticReferences(-1);
@@ -4786,7 +4786,7 @@ public final class MinerDisturbance extends ob {
           dk.clearStaticReferences(param0 + 96);
           sc.a(5565);
           ec.clearStaticReferences(-65);
-          hn.a(param0 - 1);
+          hn.resetStaticState(param0 - 1);
           CipherPacketBuffer.clearStaticReferences(false);
           c.clearStaticReferences((byte) -73);
           PcmResampler.a(param0 - 8);
@@ -4801,7 +4801,7 @@ public final class MinerDisturbance extends ob {
           cm.clearDeclaredStaticReferences(param0 + 17);
           fh.clearStaticReferences(param0 ^ -12662);
           ff.clearStaticReferences(-12);
-          tf.a(24044);
+          tf.resetStaticState(24044);
           SpriteState.clearStaticReferences(true);
           uf.clearStaticReferences(param0 ^ 201);
           wa.clearStaticReferences(112);
@@ -4818,7 +4818,7 @@ public final class MinerDisturbance extends ob {
           nj.clearStaticReferences(-109);
           ByteStorage.clearStaticReferences((byte) -112);
           va.clearStaticReferences();
-          cn.a(param0 - 129);
+          cn.resetStaticState(param0 - 129);
           qf.clearDeclaredStaticReferences(param0 - 28582);
           vc.clearDeclaredStaticReferences(param0 + 105);
           ng.a(-1);
@@ -4829,27 +4829,27 @@ public final class MinerDisturbance extends ob {
           mk.clearStaticReferences((byte) -91);
           on.clearDeclaredStaticReferences(-112);
           qg.clearStaticReferences(0);
-          fl.a(-1);
+          fl.resetStaticState(-1);
           hh.clearStaticReferences(-125);
           fe.l(-95);
-          jc.a(0);
+          jc.resetStaticState(0);
           cc.clearDeclaredStaticReferences((byte) 15);
           nf.clearStaticReferences(false);
           am.clearDeclaredStaticReferences(43);
-          ke.s(-125);
+          ke.resetStaticState(-125);
           ui.clearDeclaredStaticReferences(param0 ^ -2);
           kn.clearStaticReferences((byte) -15);
           jk.releaseDeclaredStaticReferences((byte) -36);
           wf.g((byte) 87);
           oi.clearStaticReferences((byte) 91);
           ei.o(-2638);
-          tn.a(param0 - 3);
+          tn.resetStaticState(param0 - 3);
           qn.clearStaticReferences((byte) 84);
           w.clearDeclaredStaticReferences(256);
           ti.clearStaticReferences((byte) -53);
           cb.d(false);
           ol.clearStaticReferences(1);
-          ba.a((byte) 54);
+          ba.resetStaticState((byte) 54);
           gm.clearStaticReferences(-20);
           dj.clearStaticReferences();
           td.clearStaticReferences(false);
@@ -4858,9 +4858,9 @@ public final class MinerDisturbance extends ob {
           ud.clearStaticReferences(-105);
           pb.clearStaticReferences(-98);
           ef.a((byte) 102);
-          ce.b(14480);
+          ce.resetStaticState(14480);
           mb.clearStaticReferences(30520);
-          ah.a(true);
+          ah.resetStaticState(true);
           qe.clearStaticReferences((byte) 104);
           fd.releaseDeclaredStaticReferences(param0 - 258);
           om.clearStaticReferences(param0 - 1);
@@ -4872,13 +4872,13 @@ public final class MinerDisturbance extends ob {
           hb.clearStaticReferences(-105);
           hk.clearStaticReferences(127);
           bb.clearStaticReferences(-4);
-          ul.a((byte) 14);
+          ul.resetStaticState((byte) 14);
           sn.clearStaticReferences((byte) -18);
           a.clearStaticReferences(0);
           jh.clearStaticReferences((byte) 39);
           pm.clearStaticReferences(92);
           ca.b(param0 ^ 11);
-          vj.d(16711680);
+          ImageProducerRasterBuffer.d(16711680);
           o.clearStaticReferences(param0 - 23642);
           vk.clearStaticReferences(119);
           tm.a((byte) -107);
@@ -4888,7 +4888,7 @@ public final class MinerDisturbance extends ob {
           ne.a(2);
           nh.clearStaticReferences((byte) -76);
           SoundFilter.clearStaticReferences();
-          lj.a((byte) -69);
+          lj.resetStaticState((byte) -69);
           DirectByteStorage.clearStaticReferences(param0 - 1);
           bm.clearStaticReferences(0);
           aa.clearStaticReferences((byte) -123);
@@ -4911,7 +4911,7 @@ public final class MinerDisturbance extends ob {
           hf.clearDeclaredStaticReferences(-16935);
           AccountRequestState.releaseStatics((byte) 126);
           AccountServiceResult.c(-20613);
-          lc.a(param0 - 52);
+          lc.resetStaticState(param0 - 52);
           wb.clearDeclaredStaticReferences(param0 ^ 1);
           fg.a(-114);
           sa.clearDeclaredStaticReferences(42);
@@ -4922,7 +4922,7 @@ public final class MinerDisturbance extends ob {
           ug.clearStaticReferences((byte) 45);
           i.clearStaticReferences((byte) -57);
           le.a(-9392);
-          rj.a(3);
+          rj.resetStaticState(3);
           pn.a(param0 ^ 16777214);
           sk.clearStaticReferences(true);
           hl.clearStaticReferences(false);
@@ -4948,9 +4948,9 @@ public final class MinerDisturbance extends ob {
           mj.clearStaticReferences((byte) -118);
           hj.clearStaticReferences(false);
           dn.clearStaticReferences((byte) -100);
-          nk.a(0);
+          nk.resetStaticState(0);
           fm.clearDeclaredStaticReferences((byte) -123);
-          sj.a((byte) 22);
+          sj.resetStaticState((byte) 22);
           pc.d(12);
           tl.clearStaticReferences((byte) -121);
           oc.e(-640);
@@ -6224,7 +6224,7 @@ public final class MinerDisturbance extends ob {
                             ud.a(new ac(hd.field_d), 30, 30, 88);
                             ic.a(113, 4473924, 15885602, 16502531);
                             aa.a(6, new ac(vc.field_p), -1, 6, new ac(vc.field_p), 6);
-                            ResourceArchive.field_e.a((byte) -45);
+                            ResourceArchive.field_e.setAsRasterTarget((byte) -45);
                             qd.n(21);
                             nn.field_n = true;
                             wf.p(4462);
@@ -6597,7 +6597,7 @@ public final class MinerDisturbance extends ob {
               }
               break;
             }
-            if (!ci.a(105)) {
+            if (!AwtRasterBuffer.a(105)) {
               return;
             }
             var3 = this.c((byte) -119);

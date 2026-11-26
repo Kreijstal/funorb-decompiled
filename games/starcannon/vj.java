@@ -68,7 +68,7 @@ final class vj extends kc implements ga {
             var8[var9] = bd.field_e.nextInt();
           }
           if (param5 != 99) {
-            vj.e(false);
+            vj.resetStaticState(false);
           }
           if (null == dd.field_a ||
             !(dd.field_a.payload.length >= var7_int)) {
@@ -137,7 +137,7 @@ final class vj extends kc implements ga {
         }
     }
 
-    public static void e(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_W = null;
         if (!param0) {
           field_V = false;

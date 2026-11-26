@@ -280,7 +280,7 @@ final class ld extends pu {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_o = null;
         if (!param0) {
           field_q = -18;
@@ -292,7 +292,7 @@ final class ld extends pu {
     final static void a(int param0, int param1, int param2, int param3) {
         gma.field_e[param1] = new si(param1, param0, param0);
         if (param2 != 45) {
-          ld.b(true);
+          ld.resetStaticState(true);
         }
     }
 

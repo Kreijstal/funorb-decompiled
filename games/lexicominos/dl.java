@@ -28,7 +28,7 @@ final class dl {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           if (param2 > -28) {
-            dl.a(-62);
+            dl.resetStaticState(-62);
           }
           stackIn_6_0 = vi.a(param3.a(param0, -27493, param4), (byte) 107);
           return stackIn_6_0;
@@ -410,7 +410,7 @@ final class dl {
         return "" + this.field_f;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         if (param0 != 7) {
           field_b = false;

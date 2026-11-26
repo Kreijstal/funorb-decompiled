@@ -113,7 +113,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 != 4) {
           field_f = 1.7799608967568306;

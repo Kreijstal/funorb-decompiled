@@ -1087,7 +1087,7 @@ final class sg {
           if ((this.field_d == 2 ||
             this.field_d == 14) &&
             (this.field_c.field_d != -1 &&
-            -1 != aa.field_j)) {
+            -1 != ImageProducerRasterBuffer.field_j)) {
             var3_int = this.field_c.field_d;
           }
           if (!param1) {
@@ -1549,7 +1549,7 @@ final class sg {
                     stackIn_71_3 = stackIn_67_3;
                     stackIn_71_4 = true;
                   }
-                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).a(dd.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
+                  var2_intLifetime1 = stackIn_71_0 + stackIn_71_1 * ((BinaryBitmapFont) (Object) stackIn_71_2).a(AwtRasterBuffer.a(stackIn_71_3 != 0, stackIn_71_4, false, -11902), 40, var2_intLifetime1 - bi.field_a.field_E, 254, 1000, 0, -1, 1, 0, var3);
                 } else {
                   if (this.field_d != 3 &&
                     this.field_d != 12) {

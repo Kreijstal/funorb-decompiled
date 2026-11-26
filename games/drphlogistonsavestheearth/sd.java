@@ -13,14 +13,14 @@ final class sd {
         try {
           jk.a(0, this.field_f, 31536000L, param0, "jagex-last-login-method");
           if (param1 != -50) {
-            sd.a(88);
+            sd.resetStaticState(88);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "sd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 == 2) {
           field_a = null;

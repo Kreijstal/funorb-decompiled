@@ -16,7 +16,7 @@ final class dh {
         pd.a(param0, true, 0);
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < 116) {
           field_a = -109L;
           field_c = null;

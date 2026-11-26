@@ -327,7 +327,7 @@ final class lg extends in {
         return var6 / (long)this.field_p;
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_g = null;
         field_e = null;
         if (param0 >= -111) {

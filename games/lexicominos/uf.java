@@ -126,7 +126,7 @@ final class uf extends tj {
 
     final static void a(String param0, int param1, String param2, boolean param3) {
         try {
-          dd.field_d = param0;
+          AwtRasterBuffer.field_d = param0;
           rf.field_b = param2;
           m.a(DualLinkNode.field_o, -118, param3);
           int var4_int = -15 % ((param1 - 43) / 40);

@@ -45,8 +45,8 @@ final class wd {
               }
               bj.field_f = ae.field_u;
               ae.field_u = ne.field_o;
-              ne.field_o = wa.field_k;
-              wa.field_k = var4_ref_ei.field_s;
+              ne.field_o = ImageProducerRasterBuffer.field_k;
+              ImageProducerRasterBuffer.field_k = var4_ref_ei.field_s;
               return true;
             }
           }
@@ -69,8 +69,8 @@ final class wd {
             if (bl.field_b == 0) {
               bj.field_f = ae.field_u;
               ae.field_u = ne.field_o;
-              ne.field_o = wa.field_k;
-              wa.field_k = tc.field_a;
+              ne.field_o = ImageProducerRasterBuffer.field_k;
+              ImageProducerRasterBuffer.field_k = tc.field_a;
               tc.field_a = -1;
               return true;
             }

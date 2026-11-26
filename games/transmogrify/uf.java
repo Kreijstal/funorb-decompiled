@@ -64,7 +64,7 @@ final class uf {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 < 43) {
           field_a = 114;
@@ -73,7 +73,7 @@ final class uf {
 
     final static boolean a(byte param0) {
         if (param0 != -76) {
-          uf.a(60);
+          uf.resetStaticState(60);
         }
         return !dl.field_l.b(-26753) ? true : false;
     }

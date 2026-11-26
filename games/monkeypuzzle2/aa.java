@@ -239,7 +239,7 @@ abstract class aa {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != -1) {
           field_a = 39;
@@ -270,7 +270,7 @@ abstract class aa {
           GameApplet.field_k.dispose();
         }
         if (param0 != -11449) {
-          aa.c(26);
+          aa.resetStaticState(26);
         }
     }
 

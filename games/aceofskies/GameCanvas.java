@@ -28,7 +28,7 @@ final class GameCanvas extends java.awt.Canvas {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_b = null;
         field_a = null;
         if (!param0) {

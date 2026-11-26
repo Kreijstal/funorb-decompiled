@@ -271,7 +271,7 @@ final class ResourceArchive {
               var8 = var7;
               var7.a();
               pe.field_fb[12].a(true, 128, (int)param2.field_c, 32, 32);
-              o.field_n.b((byte) 119);
+              o.field_n.setAsRasterTarget((byte) 119);
               var8.b(-32 + param3, -32 + param0, 64);
               pe.field_fb[8].a(true, 128, (int)param2.field_c, param3, param0);
             }

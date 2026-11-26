@@ -22,7 +22,7 @@ final class MixedSupport117 {
         }
     }
 
-    public static void performAction1527(byte byteArgument1) {
+    public static void resetStaticState(byte byteArgument1) {
         stringState0518 = null;
         stringState0517 = null;
         stringState0516 = null;
@@ -39,7 +39,7 @@ final class MixedSupport117 {
         int integerLocal3 = MixedSupport042.computeInteger0536(integerLocal2, LoginCredentials.integerState0348, integerArgument4, integerLocal1, 110);
         int integerLocal4 = MixedSupport113.integerArrayState0201[PlayerNameAvailabilityValidator.integerState0354];
         if (integerArgument2 >= -35) {
-          MixedSupport117.performAction1527((byte) 86);
+          MixedSupport117.resetStaticState((byte) 86);
         }
         int integerLocal5 = MixedSupport113.integerArrayState0201[(PlayerNameAvailabilityValidator.integerState0354 + 1) % MixedSupport081.integerArrayState0153.length];
         int integerLocal6 = MixedSupport042.computeInteger0536(integerLocal5, LoginCredentials.integerState0348, integerArgument4, integerLocal4, 114);

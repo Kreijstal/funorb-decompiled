@@ -107,9 +107,9 @@ final class tk {
               ea.i((byte) -128) <= 30000L) {
               return false;
             }
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
           } catch (IOException iOException) {
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

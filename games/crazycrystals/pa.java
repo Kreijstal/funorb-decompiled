@@ -77,7 +77,7 @@ final class pa extends pc {
         var6 = CrazyCrystals.field_B;
         try {
           if (param3 > -21) {
-            pa.e((byte) 22);
+            pa.resetStaticState((byte) 22);
           }
           for (var4_int = -param2 + (param0.length - 2); var4_int >= param2 + 1; var4_int--) {
             for (var5 = 1 + param1; var5 < -1 + (-param1 + param0[0].length); var5++) {
@@ -103,7 +103,7 @@ final class pa extends pc {
         throw new Error();
     }
 
-    public static void e(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 >= -90) {
           field_F = -63;
         }

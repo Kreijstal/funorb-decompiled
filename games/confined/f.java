@@ -31,7 +31,7 @@ final class f {
             var6[var4].d();
             param1[var4].a(param1[var4].field_t << 3, param1[var4].field_x << 3, 1280, 752, 0, 655360 / param2);
           }
-          pi.field_S.a((byte) 110);
+          pi.field_S.setAsRasterTarget((byte) 110);
           stackIn_8_0 = var3;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

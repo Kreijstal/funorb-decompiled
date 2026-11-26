@@ -352,7 +352,7 @@ final class UiComponentPart022 extends UiComponentPart025 {
         return;
     }
 
-    public static void performAction1207(byte byteArgument1) {
+    public static void resetStaticState(byte byteArgument1) {
         rgbSpriteState0038 = null;
         stringArrayState0026 = null;
         stringArrayState0027 = null;

@@ -333,7 +333,7 @@ final class NodeHashTableIterator implements Iterator {
         return true;
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_h = null;
         if (param0 >= -11) {
           field_e = -67;

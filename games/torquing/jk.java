@@ -58,7 +58,7 @@ final class jk {
     final static void a(String param0, byte param1, boolean param2) {
         try {
           if (param1 != -79) {
-            jk.a(81);
+            jk.resetStaticState(81);
           }
           nk.field_t = param2;
           aq.field_c = true;
@@ -69,7 +69,7 @@ final class jk {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_a = -53;

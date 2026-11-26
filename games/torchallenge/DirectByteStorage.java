@@ -286,14 +286,14 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param1);
           if (param0 != 50) {
-            DirectByteStorage.d(-112);
+            DirectByteStorage.resetStaticState(-112);
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "oi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_h = null;
         if (param0 != 10166) {
           field_g = true;

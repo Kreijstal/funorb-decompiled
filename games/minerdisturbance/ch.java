@@ -22,7 +22,7 @@ abstract class ch {
 
     abstract void a(Object param0, boolean param1, int param2);
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_g = null;
         if (param0 >= -11) {
           field_f = 16;

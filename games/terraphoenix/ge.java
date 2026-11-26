@@ -9,7 +9,7 @@ final class ge {
     static Boolean field_d;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         field_d = null;
         field_c = null;

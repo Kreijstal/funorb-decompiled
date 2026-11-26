@@ -110,7 +110,7 @@ abstract class bi extends GameApplet {
             wd.a(6, true);
           }
           if (eg.field_k[6]) {
-            sl.a(7, (byte) 63);
+            ImageProducerRasterBuffer.a(7, (byte) 63);
           }
           if (eg.field_k[8]) {
             df.f((byte) -98);
@@ -256,7 +256,7 @@ abstract class bi extends GameApplet {
           return;
         }
         if (vg.c(false)) {
-          discarded$1 = this.a(false, true, null != ba.field_f ? true : false);
+          discarded$1 = this.a(false, true, null != AwtRasterBuffer.field_f ? true : false);
         } else {
           if (mc.field_a < 10) {
           } else {
@@ -356,7 +356,7 @@ abstract class bi extends GameApplet {
         int var3Lifetime2;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (ci.field_a != null) {
-          if (ba.field_f == null) {
+          if (AwtRasterBuffer.field_f == null) {
             var6 = hd.b(true);
             var4 = var6.getSize();
             ci.field_a.a(-124, var4.width, var4.height);
@@ -751,7 +751,7 @@ abstract class bi extends GameApplet {
           this.a((byte) 77, "reconnect");
         }
         cf.a((byte) 3);
-        pc.a((byte) -46, var2, sl.field_n);
+        pc.a((byte) -46, var2, ImageProducerRasterBuffer.field_n);
         qj.field_J = true;
         ha.field_ab = pf.correctedCurrentTimeMillis(0) + 15000L;
         return var2;
@@ -796,8 +796,8 @@ abstract class bi extends GameApplet {
           if (var4 == 1) {
             var5_int = hb.a(-7468, qj.l(111), NodeHashTableIterator.a((byte) 112));
             if (var5_int != -1) {
-              p.a(sl.field_n, (byte) 121, var5_int, cm.field_E);
-              sl.field_n = null;
+              p.a(ImageProducerRasterBuffer.field_n, (byte) 121, var5_int, cm.field_E);
+              ImageProducerRasterBuffer.field_n = null;
               cm.field_E = null;
             }
             var11 = na.a(55);
@@ -808,9 +808,9 @@ abstract class bi extends GameApplet {
           if (var4 == 2) {
             var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), lb.d((byte) -56), true, this.field_n, pl.a((byte) -69));
             if (var5_intLifetime1 != -1) {
-              fj.a(cm.field_E, sl.field_n, -27967, var5_intLifetime1);
+              fj.a(cm.field_E, ImageProducerRasterBuffer.field_n, -27967, var5_intLifetime1);
               cm.field_E = null;
-              sl.field_n = null;
+              ImageProducerRasterBuffer.field_n = null;
             }
           }
           if (var4 == 3) {
@@ -823,8 +823,8 @@ abstract class bi extends GameApplet {
               var5_intLifetime2 = ad.a(this.field_n, 650, this.field_y, false, mk.e(0), lb.d((byte) -56));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  pc.a((byte) -46, var5_intLifetime2, sl.field_n);
-                  sl.field_n = null;
+                  pc.a((byte) -46, var5_intLifetime2, ImageProducerRasterBuffer.field_n);
+                  ImageProducerRasterBuffer.field_n = null;
                 } else {
                   MouseWheelInput.field_b = ProxySocketConnector.field_f;
                   db.a(false);

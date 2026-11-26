@@ -116,7 +116,7 @@ final class mh extends IntrusiveNode {
         return stackIn_5_0;
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -24011) {
           field_i = false;
         }

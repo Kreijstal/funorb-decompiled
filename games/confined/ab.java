@@ -58,7 +58,7 @@ final class ab {
           var5 = vb.field_e;
           var1 = var5;
           if (param0 < 98) {
-            ab.a((byte) -5);
+            ab.resetStaticState((byte) -5);
           }
           var2 = 0;
           var3 = var5.length;
@@ -87,7 +87,7 @@ final class ab {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 > -26) {
           field_a = -36;

@@ -33,7 +33,7 @@ abstract class hn {
 
     abstract ec b(int param0);
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != 0) {

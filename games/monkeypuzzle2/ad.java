@@ -978,7 +978,7 @@ final class ad {
               if (wk.field_a == 7) {
                 wk.field_a = 3;
               }
-              sl.field_n = MonkeyPuzzle2.field_D.readString(-1);
+              ImageProducerRasterBuffer.field_n = MonkeyPuzzle2.field_D.readString(-1);
               DequeCursor.field_e = false;
               stackIn_86_0 = wk.field_a;
               return stackIn_86_0;
@@ -990,9 +990,9 @@ final class ad {
             if (ol.field_g == null) {
               if (DequeCursor.field_e) {
                 if (30000L >= wf.a(84)) {
-                  sl.field_n = AccountNameAvailabilityValidator.field_p;
+                  ImageProducerRasterBuffer.field_n = AccountNameAvailabilityValidator.field_p;
                 } else {
-                  sl.field_n = kj.field_E;
+                  ImageProducerRasterBuffer.field_n = kj.field_E;
                 }
                 DequeCursor.field_e = false;
                 stackIn_96_0 = 3;

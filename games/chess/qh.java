@@ -68,7 +68,7 @@ final class qh {
           kb.field_S = true;
           gm.field_f = param2;
           if (gm.field_f == 0) {
-            var3_int = vm.a(qi.field_m, -9224, vj.field_d, n.field_d, mk.field_a);
+            var3_int = vm.a(qi.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = 3 + var3_int;
             cb.field_k = new int[var4];
             ka.field_g = new String[var4];
@@ -87,7 +87,7 @@ final class qh {
             cb.field_k[var4 - 1] = 1;
             fi.field_c[1] = 5;
           } else if (gm.field_f == 1) {
-            var3_int = vm.a(qi.field_m, -9224, vj.field_d, n.field_d, mk.field_a);
+            var3_int = vm.a(qi.field_m, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = var3_int + 2;
             cb.field_k = new int[var4];
             ka.field_g = new String[var4];
@@ -105,9 +105,9 @@ final class qh {
           } else if (gm.field_f != 2) {
             if (3 == gm.field_f) {
               if (oc.field_l.privilegedTasksEnabled) {
-                var3_int = vm.a(hl.field_a, -9224, vj.field_d, n.field_d, mk.field_a);
+                var3_int = vm.a(hl.field_a, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               } else {
-                var3_int = vm.a(Chess.field_D, -9224, vj.field_d, n.field_d, mk.field_a);
+                var3_int = vm.a(Chess.field_D, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               }
               var4 = 2 + var3_int;
               cb.field_k = new int[var4];
@@ -124,7 +124,7 @@ final class qh {
               cb.field_k[-1 + var4] = 0;
               fi.field_c[0] = 5;
             } else if (gm.field_f == 4) {
-              var3_int = vm.a(le.field_c, -9224, vj.field_d, n.field_d, mk.field_a);
+              var3_int = vm.a(le.field_c, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               var4 = var3_int + 2;
               cb.field_k = new int[var4];
               ka.field_g = new String[var4];
@@ -143,7 +143,7 @@ final class qh {
               if (gm.field_f != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = vm.a(AccountCreationResultPanel.field_Gb, -9224, vj.field_d, n.field_d, mk.field_a);
+              var3_int = vm.a(AccountCreationResultPanel.field_Gb, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               var4 = 3 + var3_int;
               cb.field_k = new int[var4];
               ka.field_g = new String[var4];
@@ -163,7 +163,7 @@ final class qh {
               fi.field_c[1] = 5;
             }
           } else {
-            var3_int = vm.a(oc.a(i.field_a, new String[]{"<br><%0><br>"}, (byte) -110), -9224, vj.field_d, n.field_d, mk.field_a);
+            var3_int = vm.a(oc.a(i.field_a, new String[]{"<br><%0><br>"}, (byte) -110), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(n.field_d[var5])) {
@@ -180,7 +180,7 @@ final class qh {
             tj.field_p = new String[-var4 + (var3_int - 1)];
             ne.a(n.field_d, 1 + var4, tj.field_p, 0, var3_int - var4 - 1);
             var4 = -1;
-            var3_int = vm.a(oc.a(tb.field_e, new String[]{"<br><%0><br>"}, (byte) -105), -9224, vj.field_d, n.field_d, mk.field_a);
+            var3_int = vm.a(oc.a(tb.field_e, new String[]{"<br><%0><br>"}, (byte) -105), -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(n.field_d[var5])) {
                 continue;

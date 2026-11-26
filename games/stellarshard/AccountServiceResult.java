@@ -37,7 +37,7 @@ final class AccountServiceResult {
           while (true) {
             if (var3.length <= var4) {
               if (param1 > -7) {
-                AccountServiceResult.a((byte) 46);
+                AccountServiceResult.resetStaticState((byte) 46);
               }
               stackIn_14_0 = ma.field_m;
               return stackIn_14_0;
@@ -65,7 +65,7 @@ final class AccountServiceResult {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 >= -92) {
           field_h = 125;
           field_c = null;

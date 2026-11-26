@@ -334,7 +334,7 @@ final class fb {
         }
         this.field_s = ne.field_d;
         this.field_h = vd.field_e;
-        this.field_b = tk.field_e;
+        this.field_b = AwtRasterBuffer.field_e;
         this.field_i = wc.field_f;
     }
 

@@ -114,7 +114,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           nj.field_e = kd.correctedCurrentTimeMillis(-2456);
           CombatState.sleepMillis(0, 5000L);
-          kf.field_o = null;
+          ImageProducerRasterBuffer.field_o = null;
           this.a((byte) 116, false);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "kg.destroy()");
@@ -238,7 +238,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 eg.b(116);
                 this.d((byte) 114);
-                k.field_h = bn.a(-1, (java.awt.Component) ((Object) c.field_h), up.field_d, eg.field_d);
+                k.field_h = bn.a(-1, (java.awt.Component) ((Object) AwtRasterBuffer.field_h), up.field_d, eg.field_d);
                 this.a((byte) -80);
                 o.field_o = fd.b((byte) 108);
                 do {
@@ -259,7 +259,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                   do {
                     if (!(var3 < nk.field_Kb)) {
                       this.c((byte) -68);
-                      NodeHashTableIterator.a(i.field_A, c.field_h, (byte) -32);
+                      NodeHashTableIterator.a(i.field_A, AwtRasterBuffer.field_h, (byte) -32);
                       break;
                     }
                     this.c(-1);
@@ -421,10 +421,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         var4 = DungeonAssault.field_K;
         try {
-          if (c.field_h != null) {
-            c.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
-            c.field_h.getParent().setBackground(java.awt.Color.black);
-            c.field_h.getParent().remove((java.awt.Component) ((Object) c.field_h));
+          if (AwtRasterBuffer.field_h != null) {
+            AwtRasterBuffer.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
+            AwtRasterBuffer.field_h.getParent().setBackground(java.awt.Color.black);
+            AwtRasterBuffer.field_h.getParent().remove((java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           }
           boolean decompiledFrameRemainder0 = true;
           if (null != hh.field_k) {
@@ -454,21 +454,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          c.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) c.field_h));
-          c.field_h.setSize(up.field_d, eg.field_d);
-          c.field_h.setVisible(true);
+          AwtRasterBuffer.field_h = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) AwtRasterBuffer.field_h));
+          AwtRasterBuffer.field_h.setSize(up.field_d, eg.field_d);
+          AwtRasterBuffer.field_h.setVisible(true);
           if (ad.field_d == var2) {
             var3 = ad.field_d.getInsets();
-            c.field_h.setLocation(aj.field_Gb + var3.left, rb.field_L + var3.top);
+            AwtRasterBuffer.field_h.setLocation(aj.field_Gb + var3.left, rb.field_L + var3.top);
             if (var4 != 0) {
-              c.field_h.setLocation(aj.field_Gb, rb.field_L);
+              AwtRasterBuffer.field_h.setLocation(aj.field_Gb, rb.field_L);
             }
           } else {
-            c.field_h.setLocation(aj.field_Gb, rb.field_L);
+            AwtRasterBuffer.field_h.setLocation(aj.field_Gb, rb.field_L);
           }
-          c.field_h.addFocusListener((java.awt.event.FocusListener) (this));
-          c.field_h.requestFocus();
+          AwtRasterBuffer.field_h.addFocusListener((java.awt.event.FocusListener) (this));
+          AwtRasterBuffer.field_h.requestFocus();
           rj.field_o = true;
           rn.field_b = true;
           im.field_d = true;
@@ -668,17 +668,17 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (fieldTemp$1 > 50) {
             im.field_d = true;
             sb.field_b = sb.field_b - 50;
-            c.field_h.setSize(up.field_d, eg.field_d);
-            c.field_h.setVisible(true);
+            AwtRasterBuffer.field_h.setSize(up.field_d, eg.field_d);
+            AwtRasterBuffer.field_h.setVisible(true);
             if (null != ad.field_d &&
               null == hh.field_k) {
               var6 = ad.field_d.getInsets();
-              c.field_h.setLocation(var6.left + aj.field_Gb, rb.field_L + var6.top);
+              AwtRasterBuffer.field_h.setLocation(var6.left + aj.field_Gb, rb.field_L + var6.top);
               if (DungeonAssault.field_K != 0) {
-                c.field_h.setLocation(aj.field_Gb, rb.field_L);
+                AwtRasterBuffer.field_h.setLocation(aj.field_Gb, rb.field_L);
               }
             } else {
-              c.field_h.setLocation(aj.field_Gb, rb.field_L);
+              AwtRasterBuffer.field_h.setLocation(aj.field_Gb, rb.field_L);
             }
           }
           this.b((byte) 38);
@@ -725,10 +725,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (c.field_h != null) {
+          if (AwtRasterBuffer.field_h != null) {
             try {
-              c.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
-              c.field_h.getParent().remove((java.awt.Component) ((Object) c.field_h));
+              AwtRasterBuffer.field_h.removeFocusListener((java.awt.event.FocusListener) (this));
+              AwtRasterBuffer.field_h.getParent().remove((java.awt.Component) ((Object) AwtRasterBuffer.field_h));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;
@@ -839,7 +839,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ci.field_q = m.c(true);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param2, param5, true);
               i.field_A = dupTemp$0;
-              kf.field_o = dupTemp$0;
+              ImageProducerRasterBuffer.field_o = dupTemp$0;
               var8 = i.field_A.requestThreadStart(-21432, 1, (Runnable) (this));
               do {
                 if (var8.status != 0) {

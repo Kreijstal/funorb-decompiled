@@ -844,8 +844,8 @@ final class gh extends ea implements Cloneable {
           AccountServiceResult.field_e = null;
           td.field_e.a((byte) -87);
           td.field_e = null;
-          bc.field_a.a((byte) -82);
-          bc.field_a = null;
+          AwtRasterBuffer.field_a.a((byte) -82);
+          AwtRasterBuffer.field_a = null;
           dn.field_d.a((byte) -87);
           dn.field_d = null;
           wp.field_b.a((byte) -91);

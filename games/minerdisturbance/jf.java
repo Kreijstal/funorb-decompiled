@@ -46,7 +46,7 @@ final class jf {
           var14 = var6[var9];
           ln[] var10 = var14;
           for (var11_int = 0; var14.length > var11_int; var11_int++) {
-            var14[var11_int] = ci.a(var5[var9], (byte) -114, var19[var11_int]);
+            var14[var11_int] = AwtRasterBuffer.a(var5[var9], (byte) -114, var19[var11_int]);
           }
         }
         var9Lifetime1 = var17.field_C;

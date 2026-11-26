@@ -65,9 +65,9 @@ abstract class tl {
         var4 = stackIn_11_0;
         cd.field_g = var8.readString(false);
         if (var4 != 0) {
-          fj.field_c = var8.readString(false);
+          GameApplet.field_c = var8.readString(false);
         } else {
-          fj.field_c = cd.field_g;
+          GameApplet.field_c = cd.field_g;
         }
         if (hg.field_b == 1) {
           var8.readUnsignedShort((byte) 72);
@@ -87,7 +87,7 @@ abstract class tl {
         try {
           var9 = mh.field_d.a(var5, -32769);
           hi.field_b = var9.b((byte) 28);
-          if (!fj.field_c.equals(ri.field_c)) {
+          if (!GameApplet.field_c.equals(ri.field_c)) {
             stackIn_24_0 = var9.field_m;
           } else {
             stackIn_24_0 = null;

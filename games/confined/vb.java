@@ -241,7 +241,7 @@ final class vb {
         return var2;
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         if (param0 != 8) {
           field_d = -115L;

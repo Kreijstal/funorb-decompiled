@@ -108,7 +108,7 @@ class ha extends pc implements ql {
         }
     }
 
-    public static void f(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 > -39) {
           field_db = true;
           field_Z = null;

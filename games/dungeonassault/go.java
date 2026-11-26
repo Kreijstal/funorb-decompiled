@@ -340,8 +340,8 @@ final class go extends qe {
         vf.a(352, true, 600, 103, 48);
         je.a((byte) -99, 352, 48, pi.field_b, 0, 32);
         je.a((byte) -113, 352, 48, pi.field_b, 608, 32);
-        c.a(0, 640, 0, (byte) 118);
-        c.a(0, 640, 40, (byte) 65);
+        AwtRasterBuffer.a(0, 640, 0, (byte) 118);
+        AwtRasterBuffer.a(0, 640, 40, (byte) 65);
         vd.a(200, 2, -14561, 0, 0, 400);
         vd.a(200, 0, -14561, 2, 440, 400);
         vd.a(360, 2, -14561, 2, 140, 390);
@@ -2897,7 +2897,7 @@ final class go extends qe {
                   if (var5_int != 36864) {
                     var9 = new oc(var7, var6, false, ResourceArchive.field_b);
                   } else {
-                    var9 = new oc(var7, var6, true, c.field_c);
+                    var9 = new oc(var7, var6, true, AwtRasterBuffer.field_c);
                   }
                 }
               } else {

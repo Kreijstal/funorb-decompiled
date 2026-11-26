@@ -21,7 +21,7 @@ final class vj {
         return dk.field_b[var5];
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 18775) {
           field_b = false;
           field_c = null;

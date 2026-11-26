@@ -93,10 +93,10 @@ final class fc extends DualLinkNode {
         if (param0 <= 115) {
           return (String) null;
         }
-        if (ci.field_e == ic.field_l) {
+        if (AwtRasterBuffer.field_e == ic.field_l) {
           return PcmResampler.field_d;
         }
-        if (ci.field_e == AccountRequestState.field_h) {
+        if (AwtRasterBuffer.field_e == AccountRequestState.field_h) {
           return ic.field_m;
         }
         if (!PcmResampler.field_f.a(0)) {

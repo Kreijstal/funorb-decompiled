@@ -10,8 +10,8 @@ final class kp {
 
     final static void a(int param0) {
         ib.a(930);
-        if (null != c.field_h) {
-          pd.a(c.field_h, -32);
+        if (null != AwtRasterBuffer.field_h) {
+          pd.a(AwtRasterBuffer.field_h, -32);
           hf.i((byte) -32);
           fd.a(52);
           lm.b((byte) -99);

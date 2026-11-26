@@ -88,7 +88,7 @@ abstract class fc extends ag implements ai {
 
     final boolean g(int param0) {
         if (param0 != -9015) {
-          fc.h(-9);
+          fc.resetStaticState(-9);
         }
         return null != this.a((byte) -83) ? true : false;
     }
@@ -186,7 +186,7 @@ abstract class fc extends ag implements ai {
         }
     }
 
-    public static void h(int param0) {
+    public static void resetStaticState(int param0) {
         field_y = null;
         if (param0 != 1) {
           field_z = 55;

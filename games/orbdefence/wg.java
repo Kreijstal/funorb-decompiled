@@ -109,7 +109,7 @@ final class wg extends hi {
         return null;
     }
 
-    public static void j(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -24392) {
           field_q = -50;
           field_n = null;

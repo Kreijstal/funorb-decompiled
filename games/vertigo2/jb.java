@@ -27,7 +27,7 @@ final class jb extends TextureOperator {
         SoftwareRasterizer.intersectClip(param2, param0, param1, param4);
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_H = null;
         field_L = null;
         field_A = null;

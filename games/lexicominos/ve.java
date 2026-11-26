@@ -8,7 +8,7 @@ abstract class ve {
     static boolean field_a;
     static int field_d;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_b = null;
         field_e = null;
         if (!param0) {
@@ -321,7 +321,7 @@ abstract class ve {
           }
         }
         if (param0 != 94) {
-          ve.a(true);
+          ve.resetStaticState(true);
         }
         return var2;
     }
@@ -424,7 +424,7 @@ abstract class ve {
         if (DualLinkNode.field_i == MouseWheelInput.field_c) {
           return qa.field_c.a(false);
         }
-        return dd.field_d;
+        return AwtRasterBuffer.field_d;
     }
 
     static {

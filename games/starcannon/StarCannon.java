@@ -1827,7 +1827,7 @@ public final class StarCannon extends ag {
             gg.field_f[-var4_intLifetime2 + 24].b(0, 0);
             var17.d();
           }
-          hg.field_y.b(param1 + 1333);
+          hg.field_y.setAsRasterTarget(param1 + 1333);
           fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", jg.field_F);
           var4 = new Sprite[40];
           for (var5_int = 0; var5_int < 4; var5_int++) {
@@ -1956,7 +1956,7 @@ public final class StarCannon extends ag {
           var23 = var22[var8];
           li.a(var23, (byte) -100);
         }
-        hg.field_y.b(-83);
+        hg.field_y.setAsRasterTarget(-83);
         jl.field_j = 5;
         fi.field_f = null;
         ia.field_k = 0;
@@ -3184,7 +3184,7 @@ public final class StarCannon extends ag {
 
     final void c(byte param0) {
         StarCannon.clearStaticReferences(122);
-        bj.a(-1);
+        bj.resetStaticState(-1);
         eb.a(true);
         pb.clearStaticReferences(91);
         rd.clearStaticReferences(-29826);
@@ -3207,7 +3207,7 @@ public final class StarCannon extends ag {
         qa.clearStaticReferences(-5504);
         mf.clearStaticReferences(23675);
         kg.clearStaticReferences((byte) 103);
-        r.a(-76);
+        r.resetStaticState(-76);
         ce.clearStaticReferences(30518);
         j.a(-3);
         ri.clearStaticReferences(-15552);
@@ -3217,11 +3217,11 @@ public final class StarCannon extends ag {
         qi.clearStaticReferences(0);
         vf.clearStaticReferences(false);
         fi.a(0);
-        tk.clearDeclaredStaticReferences(-124);
+        AwtRasterBuffer.clearDeclaredStaticReferences(-124);
         cg.clearStaticReferences(89);
         FullscreenFocusCanvas.a(-1);
         bb.clearStaticReferences(2);
-        bf.a(15415);
+        bf.resetStaticState(15415);
         d.a(32);
         jl.clearStaticReferences(0);
         m.b(-98);
@@ -3229,9 +3229,9 @@ public final class StarCannon extends ag {
         wd.clearStaticReferences();
         AudioOutput.clearStaticReferences();
         eh.g((byte) 101);
-        ef.a((byte) 27);
+        ef.resetStaticState((byte) 27);
         td.clearStaticReferences(-12539);
-        BufferedSocket.b(105);
+        BufferedSocket.resetStaticState(105);
         DelayedPcmStream.clearStaticReferences((byte) -61);
         IntrusiveNode.clearDeclaredStaticReferences(false);
         SpriteState.d((byte) -80);
@@ -3244,7 +3244,7 @@ public final class StarCannon extends ag {
         bi.b(0);
         ck.a(false);
         gf.clearStaticReferences((byte) -126);
-        sd.a(false);
+        sd.resetStaticState(false);
         sc.clearStaticReferences(0);
         wg.clearStaticReferences((byte) -117);
         be.clearStaticReferences(20342);
@@ -3272,8 +3272,8 @@ public final class StarCannon extends ag {
         ua.clearStaticReferences(128);
         ne.a(-109);
         ia.k(36);
-        fc.a(20811);
-        u.a(2);
+        fc.resetStaticState(20811);
+        u.resetStaticState(2);
         hc.a(false);
         sa.clearStaticReferences(30334);
         v.clearStaticReferences((byte) -63);
@@ -3288,10 +3288,10 @@ public final class StarCannon extends ag {
         la.clearStaticReferences((byte) 1);
         ik.clearStaticReferences(0);
         jb.clearStaticReferences(-730625660);
-        pd.a((byte) 98);
-        vj.e(true);
+        pd.resetStaticState((byte) 98);
+        vj.resetStaticState(true);
         fg.clearStaticReferences((byte) 6);
-        hd.a((byte) 125);
+        hd.resetStaticState((byte) 125);
         gl.clearStaticReferences();
         fd.clearStaticReferences(-12241);
         kl.clearStaticReferences(21367);
@@ -3308,7 +3308,7 @@ public final class StarCannon extends ag {
         DelegatingCanvas.clearStaticReferences((byte) 56);
         te.a(-1);
         dl.clearStaticReferences(true);
-        ByteStorage.a((byte) 63);
+        ByteStorage.resetStaticState((byte) 63);
         nk.clearStaticReferences();
         fk.clearStaticReferences(-4918);
         va.clearStaticReferences((byte) 80);
@@ -3321,16 +3321,16 @@ public final class StarCannon extends ag {
         bd.clearStaticReferences((byte) -74);
         UiWidget.c((byte) -44);
         dk.clearStaticReferences(-115);
-        kf.a(0);
+        kf.resetStaticState(0);
         kc.releaseDeclaredStaticReferences(false);
         qd.clearDeclaredStaticReferences((byte) -37);
         vk.e((byte) 73);
         ba.clearStaticReferences(125);
         dh.clearStaticReferences((byte) -107);
-        na.a(426388817);
+        na.resetStaticState(426388817);
         ff.f(-75);
         rc.clearStaticReferences((byte) -14);
-        ta.a(-32769);
+        ta.resetStaticState(-32769);
         gd.a((byte) 123);
         ha.clearStaticReferences((byte) -62);
         b.clearStaticReferences(true);
@@ -3339,7 +3339,7 @@ public final class StarCannon extends ag {
         oe.b(12);
         le.clearStaticReferences(-11434);
         hf.b(-22720);
-        mg.clearStaticReferences(0);
+        ImageProducerRasterBuffer.clearStaticReferences(0);
         jk.clearStaticReferences(-124);
         nf.clearStaticReferences(-109);
         ad.clearStaticReferences((byte) -95);
@@ -3350,7 +3350,7 @@ public final class StarCannon extends ag {
         ab.clearDeclaredStaticReferences((byte) 119);
         jg.e(934716193);
         pa.f(-200);
-        gh.e(13329);
+        gh.resetStaticState(13329);
         qf.d((byte) 100);
         vg.clearStaticReferences(-117);
         jj.clearStaticReferences(0);
@@ -3360,9 +3360,9 @@ public final class StarCannon extends ag {
         li.clearStaticReferences(-23);
         se.clearDeclaredStaticReferences((byte) -2);
         DirectByteStorage.clearStaticReferences(20756);
-        ve.a(32729);
+        ve.resetStaticState(32729);
         tj.clearStaticReferences(-123);
-        af.g(9392);
+        af.resetDeclaredStaticState(9392);
         o.clearStaticReferences(4432);
         IterableNodeHashTable.a(false);
         SecondaryNodeDeque.clearStaticReferences(-110);
@@ -3380,7 +3380,7 @@ public final class StarCannon extends ag {
         ie.h(24288);
         vc.clearStaticReferences((byte) 35);
         re.clearStaticReferences(0);
-        hj.a((byte) -45);
+        hj.resetStaticState((byte) -45);
         ld.clearDeclaredStaticReferences(8240);
         oj.d(-113);
         ah.clearStaticReferences(-91);
@@ -3388,7 +3388,7 @@ public final class StarCannon extends ag {
         hb.a(9681);
         AccountRequestState.releaseStatics(true);
         AccountServiceResult.clearStaticReferences(-1);
-        qb.a(-115);
+        qb.resetStaticState(-115);
         ge.a(45);
         q.clearStaticReferences((byte) 119);
         kj.clearStaticReferences(0);
@@ -3402,8 +3402,8 @@ public final class StarCannon extends ag {
         dg.clearStaticReferences(124);
         of.clearStaticReferences(true);
         il.clearStaticReferences(2147483647);
-        nh.a(false);
-        AccountNameAvailabilityValidator.g(0);
+        nh.resetStaticState(false);
+        AccountNameAvailabilityValidator.resetStaticState(0);
         cc.clearStaticReferences((byte) -98);
         cf.clearDeclaredStaticReferences(1);
         di.clearDeclaredStaticReferences(24979);

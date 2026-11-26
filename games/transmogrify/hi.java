@@ -39,7 +39,7 @@ final class hi {
         return stackIn_8_0;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_f = null;
         field_e = null;
         field_d = null;
@@ -53,7 +53,7 @@ final class hi {
     final static void a(int param0, String param1) {
         try {
           if (param0 != -23883) {
-            hi.a(true);
+            hi.resetStaticState(true);
           }
           e.field_I = param1;
         } catch (RuntimeException runtimeException) {

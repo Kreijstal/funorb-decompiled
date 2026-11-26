@@ -118,7 +118,7 @@ final class IterableNodeHashTable implements Iterable {
           sf.field_f = new pg(na.field_d, af.field_r);
           na.field_d.a((byte) -128, (UiWidget) (sf.field_f));
           if (param1 != -1) {
-            IterableNodeHashTable.a(100);
+            IterableNodeHashTable.resetStaticState(100);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ai.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -176,7 +176,7 @@ final class IterableNodeHashTable implements Iterable {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         field_g = null;
         field_a = null;

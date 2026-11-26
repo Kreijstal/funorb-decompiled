@@ -153,7 +153,7 @@ final class uf extends ql {
           var2 = ha.field_t;
           if (var2 != 6) {
             if (var2 == 9) {
-              return sm.field_a;
+              return AwtRasterBuffer.field_a;
             }
             if (var2 == 0) {
               return wk.field_f;
@@ -165,7 +165,7 @@ final class uf extends ql {
         var2Lifetime1 = ha.field_t;
         if (var2Lifetime1 != 6) {
           if (var2Lifetime1 == 9) {
-            return sm.field_a;
+            return AwtRasterBuffer.field_a;
           }
           if (var2Lifetime1 == 0) {
             return wk.field_f;

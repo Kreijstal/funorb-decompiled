@@ -213,7 +213,7 @@ final class ij {
           }
           var2Lifetime27 = AccountNameAvailabilityValidator.a((byte) 48, "waitforhs");
           if (null != var2Lifetime27) {
-            ib.field_j = c.a(0, var2Lifetime27);
+            ImageProducerRasterBuffer.field_j = c.a(0, var2Lifetime27);
           }
           var2Lifetime28 = AccountNameAvailabilityValidator.a((byte) 48, "nohs");
           if (var2Lifetime28 != null) {

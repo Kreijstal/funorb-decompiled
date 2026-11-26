@@ -60,7 +60,7 @@ final class AccountServiceResult {
             field_b = 5;
           }
           if (0 == SecondaryNodeDeque.field_a) {
-            var3_int = lb.a(qa.field_c, gi.field_f, mg.field_m, rh.field_h, -80);
+            var3_int = lb.a(qa.field_c, gi.field_f, ImageProducerRasterBuffer.field_m, rh.field_h, -80);
             var4 = 3 + var3_int;
             eg.field_a = new int[var4];
             DualLinkNode.field_h = new String[var4];
@@ -79,7 +79,7 @@ final class AccountServiceResult {
             eg.field_a[var4 - 1] = 1;
             od.field_h[1] = 5;
           } else if (1 == SecondaryNodeDeque.field_a) {
-            var3_int = lb.a(qa.field_c, gi.field_f, mg.field_m, rh.field_h, -128);
+            var3_int = lb.a(qa.field_c, gi.field_f, ImageProducerRasterBuffer.field_m, rh.field_h, -128);
             var4 = var3_int + 2;
             DualLinkNode.field_h = new String[var4];
             eg.field_a = new int[var4];

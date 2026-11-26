@@ -59,11 +59,11 @@ final class tf {
             nf.d(param1 - 1041792321);
             return false;
           }
-          if (kf.field_p != null) {
+          if (ImageProducerRasterBuffer.field_p != null) {
             tp.a(param1 ^ 1041792331, 92.0f, he.field_n);
             g.a(fi.d(false), param1 ^ 1041775506);
             vf.c((byte) 117);
-            kf.field_p = null;
+            ImageProducerRasterBuffer.field_p = null;
             nf.d(0);
             return false;
           }

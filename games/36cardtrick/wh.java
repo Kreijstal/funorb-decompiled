@@ -17,7 +17,7 @@ final class wh {
             var3 = (String) null;
             wh.a((String) null, false);
           }
-          stackIn_5_0 = (null != jf.a(0, param0));
+          stackIn_5_0 = (null != ImageProducerRasterBuffer.a(0, param0));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

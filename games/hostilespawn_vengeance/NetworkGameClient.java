@@ -408,7 +408,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int discarded$2 = 0;
         int var3 = HostileSpawn.field_I ? 1 : 0;
         if (bc.d(-95)) {
-          discarded$1 = this.a(false, param0 ^ 12751, wa.field_q != null ? true : false);
+          discarded$1 = this.a(false, param0 ^ 12751, ImageProducerRasterBuffer.field_q != null ? true : false);
         } else {
           if (pb.field_Kb < 10) {
           } else {
@@ -437,7 +437,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var5;
         var5 = HostileSpawn.field_I ? 1 : 0;
         var2 = 102 % ((45 - param0) / 58);
-        var3 = wa.field_k;
+        var3 = ImageProducerRasterBuffer.field_k;
         if (var3 < 64 &&
           mk.field_O[var3]) {
           if (0 == var3) {
@@ -539,7 +539,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var3Lifetime2;
         var5 = HostileSpawn.field_I ? 1 : 0;
         if (ie.field_c != null) {
-          if (null == wa.field_q) {
+          if (null == ImageProducerRasterBuffer.field_q) {
             var6 = fg.b((byte) -31);
             var4 = var6.getSize();
             ie.field_c.a(var4.height, 1, var4.width);

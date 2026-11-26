@@ -108,7 +108,7 @@ final class em extends hi {
         }
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_s = null;
         if (param0 != -15) {
           field_o = 125;

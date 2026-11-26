@@ -21,7 +21,7 @@ final class wd extends ik {
         oc.field_b = param2;
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 31441) {
           field_j = -109;
         }

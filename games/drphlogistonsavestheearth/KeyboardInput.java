@@ -27,7 +27,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               var3 = 1 + DirectByteStorage.field_j & 127;
               if (var3 != rc.field_g) {
                 ac.field_f[DirectByteStorage.field_j] = -1;
-                na.field_a[DirectByteStorage.field_j] = (char)var2_int;
+                AwtRasterBuffer.field_a[DirectByteStorage.field_j] = (char)var2_int;
                 DirectByteStorage.field_j = var3;
               }
             }
@@ -38,7 +38,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 116) {
           field_a = 14;
           field_b = null;
@@ -83,7 +83,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var3 = 127 & DirectByteStorage.field_j + 1;
             if (rc.field_g != var3) {
               ac.field_f[DirectByteStorage.field_j] = var2_int;
-              na.field_a[DirectByteStorage.field_j] = (char)0;
+              AwtRasterBuffer.field_a[DirectByteStorage.field_j] = (char)0;
               DirectByteStorage.field_j = var3;
             }
           }

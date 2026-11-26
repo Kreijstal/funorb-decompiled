@@ -441,7 +441,7 @@ final class MusicPatchPcmStream extends PcmStream {
         return (PcmStream) ((Object) var1_ref.field_v);
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 26609) {
           field_s = -67L;
           field_r = null;

@@ -143,8 +143,8 @@ final class bf {
             df.field_c.c(41 + dm.field_d[var2_int].field_y, 48);
           }
           SoftwareRasterizer.restoreClip(kd.field_g);
-          c.a(0, 640, 0, (byte) 80);
-          c.a(0, 640, 40, (byte) 46);
+          AwtRasterBuffer.a(0, 640, 0, (byte) 80);
+          AwtRasterBuffer.a(0, 640, 40, (byte) 46);
           vf.a(432, true, 33, -75, 48);
           vf.a(432, true, 599, 113, 48);
           vf.a(32, true, 164, -113, 8);

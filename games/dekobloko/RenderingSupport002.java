@@ -125,7 +125,7 @@ final class RenderingSupport002 {
         }
     }
 
-    public static void performAction0240(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         nodeDequeState0004 = null;
         if (integerArgument1 <= 123) {
           floatState0002 = 0.3723239600658417f;

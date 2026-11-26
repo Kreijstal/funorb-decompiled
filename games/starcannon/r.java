@@ -7,7 +7,7 @@ final class r {
     static lh field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 > -43) {
           field_d = -40;
@@ -28,7 +28,7 @@ final class r {
           } catch (InterruptedException interruptedException) {
           }
           if (param0 != 18780) {
-            r.a(82);
+            r.resetStaticState(82);
             return;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {

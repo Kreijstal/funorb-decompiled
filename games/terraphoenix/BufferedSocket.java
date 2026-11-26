@@ -248,7 +248,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_d = null;
         if (param0 > 94) {
           return;

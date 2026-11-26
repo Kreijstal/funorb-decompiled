@@ -403,7 +403,7 @@ final class vh {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 11826) {
           field_e = -24;
         }

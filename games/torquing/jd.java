@@ -94,7 +94,7 @@ final class jd extends jh {
         return AccountNameAvailabilityValidator.field_l;
     }
 
-    public static void h(int param0) {
+    public static void resetStaticState(int param0) {
         field_D = null;
         if (param0 > -26) {
           field_E = false;

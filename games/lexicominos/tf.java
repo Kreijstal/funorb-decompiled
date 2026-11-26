@@ -23,7 +23,7 @@ final class tf {
         return param0 & param1;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != -3082) {
           field_c = -37;

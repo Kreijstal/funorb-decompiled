@@ -262,7 +262,7 @@ final class ml {
                                                 } else {
                                                   decompiledFrameRemainder0 = !(pj.field_a <= 0);
                                                   if (decompiledFrameRemainder0) {
-                                                    decompiledFrameRemainder0 = !(!ci.field_b);
+                                                    decompiledFrameRemainder0 = !(!AwtRasterBuffer.field_b);
                                                   }
                                                 }
                                                 if ((decompiledFrameRemainder0) &&
@@ -1479,7 +1479,7 @@ final class ml {
           var14 = 14235957;
         }
         if (var6 == 21 &&
-          !ci.field_b) {
+          !AwtRasterBuffer.field_b) {
           var14 = 16755370;
           var13 = 11184810;
           var9Lifetime2 = jk.field_lb;
@@ -1881,7 +1881,7 @@ final class ml {
                       var13 == 0 &&
                       ha.field_b >= 0 &&
                       var15 == Math.abs(ha.field_b) &&
-                      ci.a(-27933, var8_ref_String__[var14_int])) {
+                      AwtRasterBuffer.a(-27933, var8_ref_String__[var14_int])) {
                       var13 = 1;
                       var9.c(1 + var14_int + ". ", param4 + 45, var12, 16610816, -1);
                       var9.a(var16, 45 + param4, var12, 16610816, -1);
@@ -2078,7 +2078,7 @@ final class ml {
         var4 += 50;
         pk.field_b.b(si.field_e, 320 + param0, var4, 0, -1);
         var4 = var4 + var7;
-        ce.field_d.a(ci.field_j, var3 + 10, var4, -20 + var5, 300, 0, -1, 1, 0, 14);
+        ce.field_d.a(AwtRasterBuffer.field_j, var3 + 10, var4, -20 + var5, 300, 0, -1, 1, 0, 14);
         ArchiveIndex.a(285, 90, var3 - 20, var5 + 40, (byte) 47, hd.field_d);
         ce.field_d.a(bf.field_a, var3 + 10, 310, var5 - 20, 300, 0, -1, 1, 0, 14);
     }

@@ -35,7 +35,7 @@ final class bh {
         return qh.field_f;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -1) {
           field_c = 3;
         }

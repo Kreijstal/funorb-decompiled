@@ -15,7 +15,7 @@ final class on extends DualLinkNode {
     static boolean field_x;
     static int field_t;
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -29639) {
           field_t = -81;
         }
@@ -59,7 +59,7 @@ final class on extends DualLinkNode {
           while (true) {
             if (var4_intLifetime1 >= this.field_q.length) {
               if (param2 > -44) {
-                on.e(-105);
+                on.resetStaticState(-105);
               }
               return true;
             }

@@ -48,7 +48,7 @@ class ql {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != -3) {
           field_c = 34;

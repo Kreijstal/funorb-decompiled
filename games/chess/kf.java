@@ -27,7 +27,7 @@ final class kf extends IntrusiveNode {
         try {
           try {
             var4 = param2.getGraphics();
-            ph.field_j.a(param3, 12105912, var4, param0);
+            ph.field_j.drawImage(param3, 12105912, var4, param0);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

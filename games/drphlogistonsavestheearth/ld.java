@@ -882,7 +882,7 @@ final class ld {
         var4 = var2 + 125;
         var5 = 198;
         var6 = (31 + cb.field_b.field_x) / 2;
-        na.field_c.a(50, var4);
+        AwtRasterBuffer.field_c.a(50, var4);
         cb.field_b.c(hd.field_O, var5, var4 + var6, 4210752, -1);
         SoftwareRasterizer.drawHorizontalLineAlpha(50, var4 + 33, 540, 0, 25);
         var4 += 40;

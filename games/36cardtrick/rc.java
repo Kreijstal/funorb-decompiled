@@ -13,7 +13,7 @@ final class rc extends IntrusiveNode {
     static RgbSprite[] field_k;
     static boolean field_m;
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_i = null;
         field_k = null;
         field_l = null;
@@ -48,7 +48,7 @@ final class rc extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            rc.b((byte) -48);
+            rc.resetStaticState((byte) -48);
           }
           var3 = (CharSequence) ((Object) param1);
           stackIn_3_0 = aa.field_fb.equals(ff.a((byte) 116, var3));

@@ -28,7 +28,7 @@ abstract class ob {
         return this.field_k.c(0) + this.field_a.c(param0 ^ 20);
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 12554) {
           field_l = -115;

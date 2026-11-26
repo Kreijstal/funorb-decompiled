@@ -19,7 +19,7 @@ final class wp {
         return nr.a(param3, 1, param2, param0, -33);
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         field_c = null;
         if (param0 == 10) {

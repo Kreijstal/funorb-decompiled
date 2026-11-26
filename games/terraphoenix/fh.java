@@ -27,7 +27,7 @@ final class fh {
     static String field_l;
     int field_k;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_x = null;
         field_c = null;
         if (param0 < 34) {
@@ -286,7 +286,7 @@ final class fh {
     final static void a(int param0, int param1) {
         dm.field_f = 1000000000L / (long)param1;
         if (param0 <= 58) {
-          fh.a((byte) 46);
+          fh.resetStaticState((byte) 46);
         }
     }
 

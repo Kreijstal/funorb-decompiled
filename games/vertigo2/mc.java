@@ -144,7 +144,7 @@ final class mc {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         field_i = null;
         if (param0 > -61) {

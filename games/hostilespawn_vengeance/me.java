@@ -417,10 +417,10 @@ abstract class me extends wb {
             var2_int = 15;
             qm.field_R = param1;
             var3 = 15;
-            if (null == wa.field_q) {
+            if (null == ImageProducerRasterBuffer.field_q) {
               stackIn_6_0 = GameAppletShell.field_h;
             } else {
-              stackIn_6_0 = wa.field_q;
+              stackIn_6_0 = ImageProducerRasterBuffer.field_q;
             }
             var4 = stackIn_6_0;
             if (0 == param1) {

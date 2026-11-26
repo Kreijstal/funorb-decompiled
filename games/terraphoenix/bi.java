@@ -143,7 +143,7 @@ final class bi {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("ri");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (param1 >= -70) {
                 stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;

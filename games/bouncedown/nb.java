@@ -21,7 +21,7 @@ final class nb {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -15 % ((param2 + 31) / 40);
-          stackIn_1_0 = ib.computeCrc32(param1, param0, 0, (byte) -33);
+          stackIn_1_0 = ImageProducerRasterBuffer.computeCrc32(param1, param0, 0, (byte) -33);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

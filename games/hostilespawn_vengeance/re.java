@@ -220,7 +220,7 @@ final class re {
           }
         }
         if (decompiledFrameCompleted1) {
-          o.field_n.b((byte) 108);
+          o.field_n.setAsRasterTarget((byte) 108);
           this.a(100, (byte) -55, 286, 72, 496);
           SoftwareRasterizer.setClip(72, 286, 568, 386);
           this.field_F.a(103, false);
@@ -686,7 +686,7 @@ final class re {
           hh.field_a[var3].e(32, 48);
         }
         var4.e();
-        o.field_n.b((byte) 121);
+        o.field_n.setAsRasterTarget((byte) 121);
         SoftwareRasterizer.restoreClip(var5);
         return var4;
     }
@@ -1154,7 +1154,7 @@ final class re {
               this.field_C.field_b = dd.field_o[this.field_d].length;
             }
           }
-          o.field_n.b((byte) 123);
+          o.field_n.setAsRasterTarget((byte) 123);
           this.field_F.a(16, 0, (byte) -105);
           this.field_F.a(true, true);
           return;
@@ -1819,7 +1819,7 @@ final class re {
                   (decompiledFrameRemainder15) &&
                   (decompiledFrameRemainder14) &&
                   (decompiledFrameRemainder13)) {
-                  if (wa.field_q != null) {
+                  if (ImageProducerRasterBuffer.field_q != null) {
                     tb.f((byte) -119);
                   }
                   dc.a(76, bn.c(-1));
@@ -2888,7 +2888,7 @@ final class re {
           }
           break;
         }
-        o.field_n.b((byte) 107);
+        o.field_n.setAsRasterTarget((byte) 107);
         this.field_E.field_tb = 64;
         this.field_E.field_qb = var4.field_qb + 10;
         this.field_E.field_zb = 80;
@@ -3892,7 +3892,7 @@ final class re {
           this.field_H = new RgbSprite(ln.field_a.field_d * var3, var3 * ln.field_a.field_a);
           this.field_H.a();
           IntrusiveNode.field_d.a(4, var3);
-          o.field_n.b((byte) 113);
+          o.field_n.setAsRasterTarget((byte) 113);
         }
         this.a(150, (byte) -55, 70, 52, 304);
         this.a(150, (byte) -55, 70, 364, 220);
@@ -4845,12 +4845,12 @@ final class re {
         do {
           if (var9 <= 0) {
             var11.field_pb = var6;
-            o.field_n.b((byte) -47);
+            o.field_n.setAsRasterTarget((byte) -47);
             var3.field_pb = var6.h();
             var3.field_pb.f();
             var5.field_Bb = oa.field_m;
             var5.field_nb = oa.field_m;
-            o.field_n.b((byte) -31);
+            o.field_n.setAsRasterTarget((byte) -31);
             this.field_h = new fj(0L, var11, var3, var4, var5);
             break;
           }

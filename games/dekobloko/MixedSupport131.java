@@ -128,7 +128,7 @@ final class MixedSupport131 {
         }
     }
 
-    public static void performAction1673(byte byteArgument1) {
+    public static void resetStaticState(byte byteArgument1) {
         stringState0569 = null;
         stringState0567 = null;
         stringState0568 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends fj {
+abstract class c extends GameApplet {
     private boolean field_v;
     private int field_m;
     private int field_q;
@@ -103,7 +103,7 @@ abstract class c extends fj {
                 gk.field_d = param1;
                 var2 = hc.a("loginm3", (byte) -127);
                 if (null != var2) {
-                  jf.field_k = GzipInflater.a(var2, (byte) 81);
+                  ImageProducerRasterBuffer.field_k = GzipInflater.a(var2, (byte) 81);
                 }
                 var2 = hc.a("loginm2", (byte) -127);
                 if (var2 != null) {
@@ -2760,7 +2760,7 @@ abstract class c extends fj {
                 }
                 var2 = hc.a("fs_focus_or_resolution", (byte) -127);
                 if (var2 != null) {
-                  fj.field_f = GzipInflater.a(var2, (byte) 89);
+                  GameApplet.field_f = GzipInflater.a(var2, (byte) 89);
                 }
                 var2 = hc.a("fs_timeout", (byte) -127);
                 if (var2 != null) {

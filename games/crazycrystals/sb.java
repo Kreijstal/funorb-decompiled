@@ -178,26 +178,26 @@ final class sb extends pc {
           var22 = ao.field_b[0];
           var9 = var22.field_n << 1;
           var10 = var22.field_o << 1;
-          if (null == tk.field_l) {
-            tk.field_l = new RgbSprite(var9, var10);
-            em.a((byte) 38, tk.field_l);
+          if (null == ImageProducerRasterBuffer.field_l) {
+            ImageProducerRasterBuffer.field_l = new RgbSprite(var9, var10);
+            em.a((byte) 38, ImageProducerRasterBuffer.field_l);
           } else {
-            if (var9 > tk.field_l.field_l) {
-              tk.field_l = new RgbSprite(var9, var10);
-              em.a((byte) 38, tk.field_l);
+            if (var9 > ImageProducerRasterBuffer.field_l.field_l) {
+              ImageProducerRasterBuffer.field_l = new RgbSprite(var9, var10);
+              em.a((byte) 38, ImageProducerRasterBuffer.field_l);
             } else {
-              if (tk.field_l.field_u < var10) {
-                tk.field_l = new RgbSprite(var9, var10);
-                em.a((byte) 38, tk.field_l);
+              if (ImageProducerRasterBuffer.field_l.field_u < var10) {
+                ImageProducerRasterBuffer.field_l = new RgbSprite(var9, var10);
+                em.a((byte) 38, ImageProducerRasterBuffer.field_l);
               } else {
-                em.a((byte) 38, tk.field_l);
+                em.a((byte) 38, ImageProducerRasterBuffer.field_l);
                 SoftwareRasterizer.clearRaster();
               }
             }
           }
           var22.a(112, 144, var22.field_n << 4, var22.field_o << 4, -this.field_D << 10, 4096);
           lg.a(1);
-          tk.field_l.d(-var22.field_n + var5, -var22.field_o + var6, 256);
+          ImageProducerRasterBuffer.field_l.d(-var22.field_n + var5, -var22.field_o + var6, 256);
           return;
         }
         field_C = (String) null;
@@ -206,18 +206,18 @@ final class sb extends pc {
           var15 = ao.field_b[0];
           var9Lifetime1 = var15.field_n << 1;
           var10Lifetime1 = var15.field_o << 1;
-          if (null != tk.field_l &&
-            var9Lifetime1 <= tk.field_l.field_l &&
-            tk.field_l.field_u >= var10Lifetime1) {
-            em.a((byte) 38, tk.field_l);
+          if (null != ImageProducerRasterBuffer.field_l &&
+            var9Lifetime1 <= ImageProducerRasterBuffer.field_l.field_l &&
+            ImageProducerRasterBuffer.field_l.field_u >= var10Lifetime1) {
+            em.a((byte) 38, ImageProducerRasterBuffer.field_l);
             SoftwareRasterizer.clearRaster();
           } else {
-            tk.field_l = new RgbSprite(var9Lifetime1, var10Lifetime1);
-            em.a((byte) 38, tk.field_l);
+            ImageProducerRasterBuffer.field_l = new RgbSprite(var9Lifetime1, var10Lifetime1);
+            em.a((byte) 38, ImageProducerRasterBuffer.field_l);
           }
           var15.a(112, 144, var15.field_n << 4, var15.field_o << 4, -this.field_D << 10, 4096);
           lg.a(1);
-          tk.field_l.d(-var15.field_n + var5, -var15.field_o + var6, 256);
+          ImageProducerRasterBuffer.field_l.d(-var15.field_n + var5, -var15.field_o + var6, 256);
           return;
         }
         if (var8Lifetime1 != ec.field_h) {
@@ -237,18 +237,18 @@ final class sb extends pc {
         var14 = var16;
         var9Lifetime2 = var16.field_n << 1;
         var10Lifetime2 = var16.field_o << 1;
-        if (null != tk.field_l &&
-          var9Lifetime2 <= tk.field_l.field_l &&
-          tk.field_l.field_u >= var10Lifetime2) {
-          em.a((byte) 38, tk.field_l);
+        if (null != ImageProducerRasterBuffer.field_l &&
+          var9Lifetime2 <= ImageProducerRasterBuffer.field_l.field_l &&
+          ImageProducerRasterBuffer.field_l.field_u >= var10Lifetime2) {
+          em.a((byte) 38, ImageProducerRasterBuffer.field_l);
           SoftwareRasterizer.clearRaster();
         } else {
-          tk.field_l = new RgbSprite(var9Lifetime2, var10Lifetime2);
-          em.a((byte) 38, tk.field_l);
+          ImageProducerRasterBuffer.field_l = new RgbSprite(var9Lifetime2, var10Lifetime2);
+          em.a((byte) 38, ImageProducerRasterBuffer.field_l);
         }
         var16.a(112, 144, var16.field_n << 4, var16.field_o << 4, -this.field_D << 10, 4096);
         lg.a(1);
-        tk.field_l.d(-var16.field_n + var5, -var16.field_o + var6, 256);
+        ImageProducerRasterBuffer.field_l.d(-var16.field_n + var5, -var16.field_o + var6, 256);
     }
 
     static {

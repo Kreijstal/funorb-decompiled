@@ -14,7 +14,7 @@ class s extends pj {
     boolean field_F;
     static PacketBuffer field_C;
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_y = null;
         field_A = null;
         if (param0 > 7) {

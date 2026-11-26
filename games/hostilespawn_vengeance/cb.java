@@ -109,7 +109,7 @@ final class cb {
           } else {
             stackIn_3_2 = Math.max(eh.field_g, qi.field_J);
           }
-          sm.a(stackIn_2_0, stackIn_2_1, stackIn_3_2);
+          AwtRasterBuffer.a(stackIn_2_0, stackIn_2_1, stackIn_3_2);
           if (le.field_D > 0) {
             mk.field_L.b(jh.a((byte) -93, le.field_D / 50), 320, 52, 16711680, 0);
           }

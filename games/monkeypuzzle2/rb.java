@@ -223,7 +223,7 @@ final class rb extends ii {
         }
     }
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_fb = null;
         field_hb = null;
         if (param0 > -114) {
@@ -232,13 +232,13 @@ final class rb extends ii {
     }
 
     final static void h(int param0) {
-        vh.a(ba.field_f, (byte) -125);
+        vh.a(AwtRasterBuffer.field_f, (byte) -125);
         if (param0 != 3591) {
           field_eb = -116;
         }
-        ba.field_f.exitFullscreen((byte) -107, rc.field_k);
+        AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
         ie.field_e.requestFocus();
-        ba.field_f = null;
+        AwtRasterBuffer.field_f = null;
     }
 
     rb() {

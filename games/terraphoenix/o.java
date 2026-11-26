@@ -46,7 +46,7 @@ final class o {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 != 0) {
           field_b = -49;

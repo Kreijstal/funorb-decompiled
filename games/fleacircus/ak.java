@@ -208,7 +208,7 @@ final class ak {
               tc.field_e = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
-                bj.a(14, BoundedRandomAccessFile.getApplet((byte) -80));
+                ImageProducerRasterBuffer.a(14, BoundedRandomAccessFile.getApplet((byte) -80));
                 fh.field_a = rf.field_q;
                 k.c(-28354);
                 aa.field_q = false;

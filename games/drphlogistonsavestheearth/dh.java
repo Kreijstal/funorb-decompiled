@@ -81,7 +81,7 @@ final class dh extends si {
         }
     }
 
-    public static void j(int param0) {
+    public static void resetStaticState(int param0) {
         field_H = null;
         field_S = null;
         if (param0 != 3) {

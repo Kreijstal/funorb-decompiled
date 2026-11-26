@@ -162,7 +162,7 @@ final class q extends jg {
           } else if (ea.field_a != 2) {
             if (3 == ea.field_a) {
               if (ki.field_d.privilegedTasksEnabled) {
-                var3_int = ri.a(cf.field_cb, 106, cd.field_n, rn.field_e, wg.field_a);
+                var3_int = ri.a(cf.field_cb, 106, ImageProducerRasterBuffer.field_n, rn.field_e, wg.field_a);
               } else {
                 var3_int = ri.a(cf.field_cb, -113, IntrusiveNodeHashTable.field_d, rn.field_e, wg.field_a);
               }

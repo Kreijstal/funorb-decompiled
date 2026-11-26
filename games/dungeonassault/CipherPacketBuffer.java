@@ -108,7 +108,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void n(int param0) {
+    public static void resetStaticState(int param0) {
         field_u = null;
         field_w = null;
         field_x = null;

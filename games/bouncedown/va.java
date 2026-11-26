@@ -10,7 +10,7 @@ final class va {
     static RgbSprite[] field_d;
     static int field_a;
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_e = null;
         field_c = null;
         if (param0 == 2) {
@@ -56,7 +56,7 @@ final class va {
         if (param0 == 2) {
           return;
         }
-        va.c(50);
+        va.resetStaticState(50);
     }
 
     static {

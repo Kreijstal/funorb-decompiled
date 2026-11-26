@@ -105,7 +105,7 @@ final class AccountCreationResultPanel extends dg implements qk {
         return var2;
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_ub = false;
         }

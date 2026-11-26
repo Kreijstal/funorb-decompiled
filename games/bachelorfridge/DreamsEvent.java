@@ -39,7 +39,7 @@ final class DreamsEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_r = null;
         field_q = null;
         if (param0 != -17811) {

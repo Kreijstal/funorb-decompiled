@@ -272,7 +272,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    public static void h(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         field_n = null;
         if (param0 != 0) {

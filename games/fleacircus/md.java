@@ -73,7 +73,7 @@ final class md extends bb {
         SecondaryNodeDequeIterator.field_g = null;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_M = null;
         field_P = null;
         if (param0 == -101) {

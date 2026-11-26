@@ -39,7 +39,7 @@ final class oh {
               field_c = 89;
             }
             var4 = param3.getGraphics();
-            ac.field_a.a(param2, 7, var4, param0);
+            ac.field_a.drawImage(param2, 7, var4, param0);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

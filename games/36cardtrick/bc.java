@@ -17,7 +17,7 @@ final class bc {
         return param0 & param1;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_b = null;
         if (param0) {
           field_a = -21;

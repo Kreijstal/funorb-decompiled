@@ -10,7 +10,7 @@ final class sg extends DualLinkNode {
     cm[] field_t;
     private byte[][] field_v;
 
-    public static void e(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 38) {
           field_x = 64;
         }

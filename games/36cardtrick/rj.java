@@ -254,7 +254,7 @@ final class rj {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_w = null;
         if (param0 <= 57) {
           field_p = -35;

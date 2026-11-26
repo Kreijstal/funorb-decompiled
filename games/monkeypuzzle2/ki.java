@@ -275,7 +275,7 @@ final class ki extends DualLinkNode {
           this.field_I.e((int)(this.field_B + (float)this.field_G) - 79, (int)((float)this.field_y + this.field_q), 16777212);
           this.field_I.e((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q - 1.0f), 16777215);
           this.field_I.e(-80 + (int)((float)this.field_G + this.field_B), (int)(1.0f + ((float)this.field_y + this.field_q)), 16777214);
-          ac.field_a.a((byte) 117);
+          ac.field_a.setAsRasterTarget((byte) 117);
         }
         int var2 = -89 % ((param0 - 59) / 54);
     }
@@ -329,7 +329,7 @@ final class ki extends DualLinkNode {
           this.field_y = -51;
         }
         this.field_I.e((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q), this.field_k + 1);
-        ac.field_a.a((byte) 124);
+        ac.field_a.setAsRasterTarget((byte) 124);
     }
 
     private final void a(boolean param0) {

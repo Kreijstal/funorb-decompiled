@@ -59,7 +59,7 @@ final class tl extends eh {
         return stackIn_6_0;
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_s = null;
         field_l = null;
         if (param0 >= -95) {

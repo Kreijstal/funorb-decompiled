@@ -577,7 +577,7 @@ final class rd extends id {
         stackIn_2_10 = param10;
         stackIn_2_11 = param12;
         stackIn_2_12 = sb.field_a[param5];
-        stackIn_2_13 = cd.field_j[param5];
+        stackIn_2_13 = ImageProducerRasterBuffer.field_j[param5];
         stackIn_2_14 = param13;
         stackIn_2_15 = param14;
         stackIn_2_16 = 0;

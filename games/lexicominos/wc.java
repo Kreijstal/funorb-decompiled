@@ -17,7 +17,7 @@ final class wc {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 != -50) {
           field_a = -89;

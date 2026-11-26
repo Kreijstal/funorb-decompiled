@@ -91,7 +91,7 @@ final class qla extends TileEffect {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -24) {
           field_f = -125;
           field_g = null;

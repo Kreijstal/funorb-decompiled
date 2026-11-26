@@ -19,7 +19,7 @@ final class fn {
           kb.f((byte) 100);
           return;
         }
-        fn.a(108);
+        fn.resetStaticState(108);
         lf.a(-1, param1);
         kb.f((byte) 100);
     }
@@ -96,7 +96,7 @@ final class fn {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         if (param0 >= -3) {
           field_c = 55;

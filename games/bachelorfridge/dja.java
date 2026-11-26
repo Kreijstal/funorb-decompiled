@@ -11,7 +11,7 @@ final class dja extends pu {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_l = null;
         if (param0 != -14190) {
           field_m = 47;

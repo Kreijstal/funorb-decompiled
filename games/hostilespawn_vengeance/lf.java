@@ -50,7 +50,7 @@ class lf {
                 }
                 eh.field_a.e(1);
                 SoftwareRasterizer.blurRectangle(32, 32, 0, 0, eh.field_a.field_u, eh.field_a.field_r);
-                o.field_n.b((byte) -98);
+                o.field_n.setAsRasterTarget((byte) -98);
                 eh.field_a.b(var2 - 12 - 48, -48 + (-12 + var3), 92);
               }
             }

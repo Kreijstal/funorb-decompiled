@@ -12,7 +12,7 @@ class WidgetContainer extends UiWidget implements oh {
         int var4 = SolKnight.field_L ? 1 : 0;
         ck var2 = new ck(this.field_B);
         if (!param0) {
-          WidgetContainer.d(false);
+          WidgetContainer.resetStaticState(false);
         }
         UiWidget var3 = (UiWidget) (var2.a((byte) 114));
         while (var3 != null) {
@@ -221,7 +221,7 @@ class WidgetContainer extends UiWidget implements oh {
         return null != this.d((byte) -48) ? true : false;
     }
 
-    public static void d(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_A = null;
         if (param0) {
           field_C = 53;

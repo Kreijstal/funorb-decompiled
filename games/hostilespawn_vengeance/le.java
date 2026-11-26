@@ -393,7 +393,7 @@ class le extends cf {
         SoftwareRasterizer.setClip(var12, var13, var15, var16);
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_xb = null;
         field_ub = null;
         if (param0 != -3354) {

@@ -369,7 +369,7 @@ final class db extends qe {
           this.b((byte) -57);
         }
         var6 = o.a(3, (byte) 110, param1);
-        var7 = kf.a(param1, 3, -114);
+        var7 = ImageProducerRasterBuffer.a(param1, 3, -114);
         if (ke.a(76, var3)) {
           SoftwareRasterizer.drawRectangleOutline(-4 + var4, -6 + var6, 8 + var5 - var4, var7 + 8, 0);
           db.b(var4, var6 - 2, var5 - var4, var7, 8421504, 128, 128);
@@ -1129,7 +1129,7 @@ final class db extends qe {
             param1 >= bh.b(var4, 3, false) &&
             qd.a(var4, param2 ^ -265, 3) > param1 &&
             param0 >= var5 &&
-            param0 < var5 + kf.a(var4, 3, -100)) {
+            param0 < var5 + ImageProducerRasterBuffer.a(var4, 3, -100)) {
             return var4;
           }
           var4++;

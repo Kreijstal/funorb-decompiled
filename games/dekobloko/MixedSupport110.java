@@ -83,7 +83,7 @@ final class MixedSupport110 {
         }
     }
 
-    public static void performAction1457(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         if (integerArgument1 != 2) {
           longState0045 = 40L;
           rgbSpriteArrayState0024 = null;

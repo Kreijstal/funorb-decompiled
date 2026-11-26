@@ -10,7 +10,7 @@ final class AccountNameAvailabilityValidator extends qf {
     static int field_m;
     private boolean nameAvailable;
 
-    public static void g(int param0) {
+    public static void resetStaticState(int param0) {
         field_l = null;
         field_p = null;
         field_j = null;

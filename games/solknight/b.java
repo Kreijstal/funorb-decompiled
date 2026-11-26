@@ -5,7 +5,7 @@ final class b {
     static boolean field_b;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -11709) {
           field_b = false;
         }

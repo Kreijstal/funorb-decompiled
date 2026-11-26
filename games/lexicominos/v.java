@@ -8,7 +8,7 @@ final class v extends ik {
     private int field_v;
     private RgbSprite[] field_C;
     static int field_u;
-    static dd field_B;
+    static AwtRasterBuffer field_B;
     static int[] field_w;
     static String field_t;
 
@@ -45,7 +45,7 @@ final class v extends ik {
           }
           var7 = stackIn_13_0;
           if (param4 != -3284) {
-            field_B = (dd) null;
+            field_B = (AwtRasterBuffer) null;
           }
           stackIn_18_0 = (!param2) ? 7105644 : 16777215;
           var8 = stackIn_18_0;

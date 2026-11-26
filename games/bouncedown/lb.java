@@ -23,7 +23,7 @@ final class lb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_c = null;
         if (param0 >= -3) {
           field_b = -113;
@@ -51,7 +51,7 @@ final class lb {
         try {
           var2_int = param1.f(7, 8);
           if (param0 < 42) {
-            lb.a((byte) 78);
+            lb.resetStaticState((byte) 78);
           }
           if (0 < var2_int) {
             return null;

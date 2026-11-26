@@ -6,7 +6,7 @@ final class na {
     static int field_a;
     static ve field_c;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -20008) {
           field_b = 55;
           field_c = null;

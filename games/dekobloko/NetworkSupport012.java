@@ -64,7 +64,7 @@ final class NetworkSupport012 {
         return rgbSpriteLocal2;
     }
 
-    public static void performAction1534(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         if (integerArgument1 != 30553) {
           integerState0759 = 92;
           mixedSupport001State0001 = null;

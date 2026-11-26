@@ -72,7 +72,7 @@ final class ve extends ci {
         RuntimeException decompiledCaughtException = null;
         var2 = Chess.field_G;
         try {
-          jh.field_e.a(-120, hd.field_d, vj.field_h, true);
+          jh.field_e.a(-120, hd.field_d, AwtRasterBuffer.field_h, true);
           jh.field_e.f((byte) 70);
           while (kf.d(param0 ^ -19010)) {
             jh.field_e.a(d.field_Ib, 57, vg.field_a);

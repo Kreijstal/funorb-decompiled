@@ -11,7 +11,7 @@ final class el extends ta implements bf, ai {
     static int field_D;
     static long field_F;
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_F = 22L;
           field_A = null;

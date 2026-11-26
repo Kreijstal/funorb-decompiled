@@ -373,7 +373,7 @@ final class gf {
               var13 = -this.field_a + 255;
               this.field_g.c();
               SoftwareRasterizer.fillCircle(this.field_g.field_y / 2, this.field_g.field_w / 2, var13, 1);
-              lb.field_C.a(119);
+              lb.field_C.setAsRasterTarget(119);
               var15 = (int)this.field_m + this.field_g.field_w / 2;
               var14 = (int)this.field_i + this.field_g.field_y / 2;
               var3 = 255;

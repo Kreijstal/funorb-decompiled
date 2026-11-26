@@ -75,7 +75,7 @@ final class si {
         return param0 >= 6144 ? vj.field_e[-6144 + param0] : -vj.field_e[-param0 + 6144];
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_a = null;
         field_g = null;
         if (param0) {

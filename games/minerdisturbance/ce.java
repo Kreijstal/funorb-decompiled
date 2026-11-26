@@ -144,7 +144,7 @@ final class ce {
         return var5 * var4 + (var3 * param2 + (var4 * var6 >> 16));
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

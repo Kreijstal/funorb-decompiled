@@ -18,7 +18,7 @@ final class hq extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 124) {
-            hq.a(true);
+            hq.resetStaticState(true);
           }
           var5 = param3.a(param1, param2, (byte) -119);
           var4 = var5;
@@ -41,7 +41,7 @@ final class hq extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_q = null;
         if (param0) {
           field_r = 80;
@@ -59,7 +59,7 @@ final class hq extends IntrusiveNode {
           lb.field_c.a(118, 438, SoftwareRasterizer.field_j - 124, 0, var4 * 438 / var3 + (202 + var2));
           return;
         }
-        hq.a(false);
+        hq.resetStaticState(false);
         var4Lifetime1 = var3 - param0 * param0;
         AccountNameAvailabilityValidator.field_o.a(94, 199, -124 + (SoftwareRasterizer.field_j - 90), 90, var2 - var4Lifetime1 * 199 / var3);
         lb.field_c.a(118, 438, SoftwareRasterizer.field_j - 124, 0, var4Lifetime1 * 438 / var3 + (202 + var2));

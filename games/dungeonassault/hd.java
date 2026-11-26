@@ -100,7 +100,7 @@ final class hd {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = c.field_h.getGraphics();
+            var9 = AwtRasterBuffer.field_h.getGraphics();
             if (td.field_a == null) {
               td.field_a = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -113,7 +113,7 @@ final class hd {
             }
             try {
               if (bb.field_e == null) {
-                bb.field_e = c.field_h.createImage(304, 34);
+                bb.field_e = AwtRasterBuffer.field_h.createImage(304, 34);
               }
               var10 = bb.field_e.getGraphics();
               var10.setColor(param1);
@@ -152,7 +152,7 @@ final class hd {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            c.field_h.repaint();
+            AwtRasterBuffer.field_h.repaint();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

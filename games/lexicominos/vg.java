@@ -55,7 +55,7 @@ final class vg {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = (byte[][][]) null;
         if (param0 != 0) {
           field_b = -79;

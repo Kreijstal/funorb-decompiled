@@ -15,12 +15,12 @@ final class di {
           gh.e(-46);
           return;
         }
-        di.a(43);
+        di.resetStaticState(43);
         AccountServiceResult.field_d.a(-q.field_d + MidiPcmStream.field_M, param0 + 20667, (q.field_d << 1) + var1, var2 + (bb.field_C << 1), -bb.field_C + rb.field_H);
         gh.e(-46);
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 26189) {
           field_d = -125;
           field_b = null;

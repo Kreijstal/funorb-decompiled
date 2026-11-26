@@ -20,7 +20,7 @@ final class fh {
         m.field_h = param0;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= -23) {
           field_h = null;
           field_a = (Sprite[][]) null;

@@ -71,7 +71,7 @@ final class ef {
           }
           pf.field_b = param1;
           if (param0 <= 8) {
-            ef.a(false);
+            ef.resetStaticState(false);
           }
           PacketBuffer.field_e = -1;
           if (ac.field_b &&
@@ -95,7 +95,7 @@ final class ef {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_a = null;
         if (!param0) {
           field_b = -19;

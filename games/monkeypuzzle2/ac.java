@@ -5,7 +5,7 @@ final class ac {
     static boolean field_b;
     static String field_c;
     static String field_d;
-    static ba field_a;
+    static AwtRasterBuffer field_a;
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;

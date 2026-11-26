@@ -6,7 +6,7 @@ final class ie {
     static le field_b;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -1962602524) {
           field_a = 6;
         }

@@ -57,7 +57,7 @@ final class bh extends ma {
         }
     }
 
-    public static void f(int param0) {
+    public static void resetStaticState(int param0) {
         field_q = null;
         if (param0 != 1) {
           field_p = true;
@@ -200,7 +200,7 @@ final class bh extends ma {
         var11 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param0 >= -123) {
-            bh.f(-13);
+            bh.resetStaticState(-13);
           }
           var1_int = 0;
           var2 = 0;

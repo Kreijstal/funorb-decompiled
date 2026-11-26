@@ -102,7 +102,7 @@ final class mf {
         }
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_h = null;
         field_e = null;
         field_d = null;
@@ -147,7 +147,7 @@ final class mf {
           fe.field_Q = 2064384 & var2_intLifetime1 << 15;
           fe.field_Q = fe.field_Q + (param1.readUnsignedByte(16383) << 7);
           if (param0 != 14) {
-            mf.b((byte) 127);
+            mf.resetStaticState((byte) 127);
           }
           var2_intLifetime2 = param1.readUnsignedByte(param0 ^ 16369);
           nh.field_a = var2_intLifetime2 << 16 & 65536;

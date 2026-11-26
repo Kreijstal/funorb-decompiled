@@ -144,7 +144,7 @@ final class AccountCreationResultPanel extends af implements qh {
         }
     }
 
-    public static void u(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -2113) {
           field_rb = -75;
           field_tb = null;

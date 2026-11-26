@@ -29,7 +29,7 @@ final class qc extends qe {
         var4 = bh.b(param1, this.field_B, param0);
         var5 = qd.a(param1, 380, this.field_B);
         var6 = o.a(this.field_B, (byte) 122, param1);
-        var7 = kf.a(param1, this.field_B, -96);
+        var7 = ImageProducerRasterBuffer.a(param1, this.field_B, -96);
         if (!ke.a(105, var3) &&
           this.field_B != 3) {
           of.field_j.h(640 - of.field_j.field_y >> 1, var6);
@@ -473,7 +473,7 @@ final class qc extends qe {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_z = null;
         if (param0 != 0) {
           field_w = 61;
@@ -484,7 +484,7 @@ final class qc extends qe {
         if (param0 != 394) {
           return 54;
         }
-        return kf.a(param1, this.field_B, -116);
+        return ImageProducerRasterBuffer.a(param1, this.field_B, -116);
     }
 
     private final void c(boolean param0, int param1) {
@@ -712,7 +712,7 @@ final class qc extends qe {
           var4 == 14) {
           var6 = 120 + IterableNodeHashTable.field_b;
         }
-        kf.a(param0, this.field_B, param1 - 46);
+        ImageProducerRasterBuffer.a(param0, this.field_B, param1 - 46);
         var10 = -var6 + var8 + var7 >> 1;
         if (!ke.a(param1 + 105, var4) &&
           this.field_B != 3) {

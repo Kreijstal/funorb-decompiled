@@ -589,7 +589,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final boolean verifyCrc32(int param0) {
         this.position = this.position - 4;
-        int var2 = ib.computeCrc32(this.position, this.payload, 0, (byte) -33);
+        int var2 = ImageProducerRasterBuffer.computeCrc32(this.position, this.payload, 0, (byte) -33);
         if (param0 >= -9) {
           CharSequence var4 = (CharSequence) null;
           PacketBuffer.encodeCp1252((CharSequence) null, false);
@@ -930,7 +930,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1 != -1) {
           this.position = 26;
         }
-        int var3 = ib.computeCrc32(this.position, this.payload, param0, (byte) -33);
+        int var3 = ImageProducerRasterBuffer.computeCrc32(this.position, this.payload, param0, (byte) -33);
         this.writeInt(var3, (byte) -87);
         return var3;
     }

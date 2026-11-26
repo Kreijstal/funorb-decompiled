@@ -68,7 +68,7 @@ final class cj {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_l = null;
         field_k = null;
         field_a = null;

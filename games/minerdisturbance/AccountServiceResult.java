@@ -138,7 +138,7 @@ final class AccountServiceResult {
             qd.field_Q = dk.field_c;
           } else {
             try {
-              ci.field_i = new ll((java.net.Socket) (dk.field_b.result), mm.field_b);
+              AwtRasterBuffer.field_i = new ll((java.net.Socket) (dk.field_b.result), mm.field_b);
               var4 = kj.field_a;
               sn.field_c.position = 0;
               var4.position = 0;

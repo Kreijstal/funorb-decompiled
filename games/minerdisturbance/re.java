@@ -142,7 +142,7 @@ final class re implements uj {
           int var8Lifetime1;
           var9 = MinerDisturbance.field_ab;
           try {
-            if (null == ci.field_i &&
+            if (null == AwtRasterBuffer.field_i &&
               !AccountServiceResult.a(param4, (byte) -126)) {
               stackIn_6_0 = -1;
               return stackIn_6_0;
@@ -298,7 +298,7 @@ final class re implements uj {
               stackIn_86_0 = oj.field_K;
               return stackIn_86_0;
             }
-            if (null == ci.field_i) {
+            if (null == AwtRasterBuffer.field_i) {
               if (ek.field_c) {
                 if (qa.a(-125) > 30000L) {
                   nf.field_g = oi.field_K;

@@ -329,7 +329,7 @@ abstract class ah extends ee {
         }
     }
 
-    public static void h(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_R = null;
         field_T = null;
         if (param0 != -128) {

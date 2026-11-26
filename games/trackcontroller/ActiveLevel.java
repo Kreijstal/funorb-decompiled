@@ -331,7 +331,7 @@ final class ActiveLevel extends LevelGrid {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_B = null;
         field_H = null;
         if (param0 > -27) {
@@ -1353,7 +1353,7 @@ final class ActiveLevel extends LevelGrid {
             return true;
           }
           if (param0 != 56) {
-            ActiveLevel.a(106);
+            ActiveLevel.resetStaticState(106);
           }
           if (MouseInputHandler.a(param2, param1, (byte) 96)) {
             return false;
@@ -1460,7 +1460,7 @@ final class ActiveLevel extends LevelGrid {
         }
         this.a(false);
         if (param0 != 24661) {
-          ActiveLevel.a(11);
+          ActiveLevel.resetStaticState(11);
         }
         var2 = (MovingBlock) (this.movingBlocks.first(2));
         while (var2 != null) {

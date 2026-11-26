@@ -15,7 +15,7 @@ final class ce extends kl {
     static int field_w;
     StringBuilder field_u;
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_m = null;
         field_v = null;
         field_o = null;

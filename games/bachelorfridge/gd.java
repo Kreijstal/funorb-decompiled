@@ -35,7 +35,7 @@ final class gd extends pu {
         }
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_n = (gna[][]) null;
         field_o = null;
         if (param0 != -49) {

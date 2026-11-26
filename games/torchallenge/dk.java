@@ -278,7 +278,7 @@ final class dk {
           try {
             try {
               var6 = -74 % ((param2 + 69) / 51);
-              var4 = Class.forName("ke");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param3, param1, param0, -23435);
               stackIn_1_0 = var5;

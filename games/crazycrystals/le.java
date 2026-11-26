@@ -91,8 +91,8 @@ final class le extends ln {
     }
 
     final static java.applet.Applet b(byte param0) {
-        if (tk.field_i != null) {
-          return tk.field_i;
+        if (ImageProducerRasterBuffer.field_i != null) {
+          return ImageProducerRasterBuffer.field_i;
         }
         if (param0 != -20) {
           le.a(-107);

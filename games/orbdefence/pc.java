@@ -19,7 +19,7 @@ final class pc extends hl {
         }
     }
 
-    public static void q(int param0) {
+    public static void resetStaticState(int param0) {
         field_W = null;
         field_ab = null;
         field_bb = null;

@@ -76,7 +76,7 @@ final class ih extends kj implements sg {
     final static boolean f(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -77) {
-          ih.h(-21);
+          ih.resetDeclaredStaticState(-21);
         }
         stackIn_6_0 = (gj.field_c >= 10) && (li.field_K >= 13);
         return stackIn_6_0;
@@ -290,7 +290,7 @@ final class ih extends kj implements sg {
         }
     }
 
-    public static void h(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         field_O = null;
         if (param0 != 99) {
           field_K = -128;

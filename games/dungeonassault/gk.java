@@ -28,7 +28,7 @@ final class gk extends ii implements mg, vg {
           }
           var4 = var3.a((byte) -95);
           var5 = -22 / ((param1 - 35) / 41);
-          stackIn_7_0 = (c.field_d == var4);
+          stackIn_7_0 = (AwtRasterBuffer.field_d == var4);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

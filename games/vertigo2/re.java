@@ -65,7 +65,7 @@ final class re {
         return this.field_h + 1;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         field_a = null;
         field_f = null;

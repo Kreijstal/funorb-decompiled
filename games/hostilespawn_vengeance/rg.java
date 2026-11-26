@@ -88,9 +88,9 @@ final class rg {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               qj.a(var14, (byte) -12);
               if (var6_intLifetime1 != 0) {
-                pm.a(var6_intLifetime1, s.field_e, 75, sm.field_g, jn.field_J, hf.field_a);
+                pm.a(var6_intLifetime1, s.field_e, 75, AwtRasterBuffer.field_g, jn.field_J, hf.field_a);
               } else {
-                pm.a(var6_intLifetime1, s.field_e, 80, sm.field_g, jn.field_J, hf.field_a);
+                pm.a(var6_intLifetime1, s.field_e, 80, AwtRasterBuffer.field_g, jn.field_J, hf.field_a);
               }
             }
             ve.a((byte) -125, var5);

@@ -2860,7 +2860,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("fs_accept_countdown_sing", 24);
                 if (null != var2) {
-                  wa.field_l = PcmResampler.a(125, var2);
+                  ImageProducerRasterBuffer.field_l = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("fs_accept_countdown_pl", 24);
                 if (null != var2) {

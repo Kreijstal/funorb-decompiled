@@ -15,9 +15,9 @@ final class lf {
         int var9 = 0;
         int var10 = 0;
         int var3 = ph.a(-86, param0);
-        int var4 = kh.a(-101, param0);
+        int var4 = AwtRasterBuffer.a(-101, param0);
         int var5 = ph.a(-107, param1);
-        int var6 = kh.a(-110, param1);
+        int var6 = AwtRasterBuffer.a(-110, param1);
         if (param2) {
           var7 = (int)((long)var3 * (long)var5 >> 16);
           var8 = (int)((long)var3 * (long)var6 >> 16);

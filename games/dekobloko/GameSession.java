@@ -1767,7 +1767,7 @@ final class GameSession {
         return NetworkSupport006.computeInteger1026(this.booleanState0143, integerLocal1, (byte) -122, this.integerState0607, integerLocal2);
     }
 
-    public static void performAction1315(boolean booleanArgument1) {
+    public static void resetStaticState(boolean booleanArgument1) {
         if (booleanArgument1) {
           integerState0618 = -69;
         }

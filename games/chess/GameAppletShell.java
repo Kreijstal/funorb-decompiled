@@ -828,8 +828,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           var2_long = ud.correctedCurrentTimeMillis(2);
-          var4 = vj.field_f[qk.field_e];
-          vj.field_f[qk.field_e] = var2_long;
+          var4 = AwtRasterBuffer.field_f[qk.field_e];
+          AwtRasterBuffer.field_f[qk.field_e] = var2_long;
           if (var4 != 0L &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);

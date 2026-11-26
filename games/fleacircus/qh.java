@@ -31,7 +31,7 @@ final class qh extends dl {
         return fg.field_m;
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_D = 35;
           field_C = null;

@@ -63,7 +63,7 @@ final class kp extends f implements Cloneable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 3) {
-            kp.b(false);
+            kp.resetStaticState(false);
           }
           if (!param4.a((byte) 102)) {
             stackIn_5_0 = (String) (param0);
@@ -154,7 +154,7 @@ final class kp extends f implements Cloneable {
         if (param1 == -110) {
           return new pf(param2, param0, (f) (this)).a(param0, (byte) -110, param2);
         }
-        kp.b(true);
+        kp.resetStaticState(true);
         return new pf(param2, param0, (f) (this)).a(param0, (byte) -110, param2);
     }
 
@@ -279,7 +279,7 @@ final class kp extends f implements Cloneable {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_n = null;
         field_l = null;
         if (param0) {
@@ -328,7 +328,7 @@ final class kp extends f implements Cloneable {
 
     final void a(int param0, int param1) {
         if (param1 < 61) {
-          kp.b(true);
+          kp.resetStaticState(true);
           this.field_o = param0;
           return;
         }

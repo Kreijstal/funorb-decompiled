@@ -56,7 +56,7 @@ final class sd implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param4) {
-            sd.a((byte) 126);
+            sd.resetStaticState((byte) 126);
           }
           var9 = new aj(param3, param2, param5, param6, param0, param8, param7);
           ImageProducerRasterBuffer.field_e.addLast((byte) -114, var9);
@@ -327,7 +327,7 @@ final class sd implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 >= -76) {
           field_b = -14;
         }

@@ -57,7 +57,7 @@ final class po extends ka {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           if (param0 != -1) {
-            po.c(126);
+            po.resetStaticState(126);
           }
           String var3 = ls.a(param1, param2, (byte) 21);
           if (var3 != null) {
@@ -170,7 +170,7 @@ final class po extends ka {
         return;
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         powerIconSprites = null;
         if (param0 != -30534) {
           activeMenuId = 87;

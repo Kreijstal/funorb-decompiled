@@ -236,6 +236,14 @@
       "renamedSymbol": "C:DirectByteStorage"
     },
     {
+      "symbol": "C:bc",
+      "originalName": "bc",
+      "to": "AwtRasterBuffer",
+      "evidence": "Abstract AWT raster buffer with exactly four instance fields:two dimension ints,int pixel array,and Image. Declares initialization/drawing operations implemented by ImageProducer and BufferedImage subclasses,and a final method installing its pixels/dimensions as the software raster target. Entire class source and instance/static member context reviewed;all616class-use spans inventoried and70representative contexts read. Preserve modifiers,implicit constructor/default state,all unrelated statics/field names,full primitive domains/guards/aliases/allocation/exception order and native/override bindings.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:AwtRasterBuffer"
+    },
+    {
       "symbol": "C:be",
       "originalName": "be",
       "to": "SecondaryNodeDeque",
@@ -322,6 +330,14 @@
       "evidence": "Complete constructor, owned read/write/seek/length/close methods, private fields and finalizer reviewed: tracked RandomAccessFile position/max length, overflow sentinel write and EOFException, oversized-file deletion and unlimited-bound conversion. Preserve guard-specific handle discards, skipped position updates, helper calls, sentinels and partial failures; unrelated statics retained.",
       "confidence": "reviewed",
       "renamedSymbol": "C:BoundedRandomAccessFile"
+    },
+    {
+      "symbol": "C:hg",
+      "originalName": "hg",
+      "to": "BufferedImageRasterBuffer",
+      "evidence": "AWT raster buffer backed by inherited int pixel storage through DataBufferInt/DirectColorModel/WritableRaster/BufferedImage,and drawn through Graphics.drawImage using retained Component observer. Complete class,public empty no-argument constructor,and both initialization/drawing bodies reviewed;exactly one own nonstatic Component field and four inherited dimension/pixel/image fields verified with bound platform APIs. Preserve finality/visibility,all method/field leaves except constructor class-name display,full primitive domains,guard paths,int overflow and pixel-array size,Lexicominos supplied premultiplication boolean,aliases,partial writes and allocation/call/exception order. Exactly one bound Class.forName string must follow this class rename;other literals unchanged. Deko already has provisional RenderingSupport013 alias,so its existing literal edit is refined rather than counted twice.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BufferedImageRasterBuffer"
     },
     {
       "symbol": "C:id",
@@ -506,6 +522,14 @@
       "evidence": "PCM stream mixer with separate intrusive child-stream and scheduled-listener deques,accumulated frame progress and next listener deadline. Constructor allocates both original deque objects in retained order and initializes progress zero/next deadline minus one;mix/skip preserve listener scheduling and virtual child traversal. Reviewed constructor SHA256s 55be8316fb08bc2cbe531ab39854df609f7c511635a0e49f2f0a8245ea5ed1ac. Naming only. Complete owning PCM API and directly supporting bodies,all91 candidate constructor bodies and independent selected native/class-name-literal scans reviewed. Preserve original fields and default/declaration state,constructor chaining,all JVM widths/domains,guards,literals,overflow,FP/casts,aliases,partial writes,allocation/call/exception ordering,visibility/modifiers and native/override binding identities. No intentional literal/native edits or whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "C:PcmStreamMixer"
+    },
+    {
+      "symbol": "C:tk",
+      "originalName": "tk",
+      "to": "ImageProducerRasterBuffer",
+      "evidence": "AWT ImageProducer/ImageObserver raster buffer with two private instance fields for ImageConsumer and ColorModel,plus inherited pixels/Image/two dimensions. Complete empty package-visible constructor and all nine nonconstructor instance bodies reviewed:consumer registration/removal/identity callbacks,always-true imageUpdate,empty resend callback,startProduction delegation,initialization,draw,and synchronized pixel publication. Platform setPixels/imageComplete/createImage/prepareImage/drawImage bindings and parent storage verified. All574type references inventoried and48representative contexts read. Preserve all unrelated static helpers,interface names,visibility/finality/monitors,full primitive domains,all game-specific guard/null/exception behavior,pixel/dimension aliases,and allocation/callback/partial-write order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:ImageProducerRasterBuffer"
     },
     {
       "symbol": "C:u",
@@ -884,6 +908,14 @@
       "renamedSymbol": "M:DirectByteStorage.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ag.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ag.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:ah.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -980,12 +1012,36 @@
       "renamedSymbol": "M:bb.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:bc.a(I)V",
+      "originalName": "a",
+      "to": "setAsRasterTarget",
+      "evidence": "Source-purpose review: Install this buffer pixel-array reference and its two dimensions through the already-reviewed static setRasterBuffer operation,which stores the global target/dimensions and resets clipping. All13owning class bodies,13callee bodies,and all135incoming contexts reviewed. Preserve every game-specific guard-dependent return,static cleanup/Canvas nulling,virtual reinitialization,self recursion,pixel-array null assignment,division exception and exact before/after call order;retain argument widths/domains and finality. No signature/body/field changes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AwtRasterBuffer.setAsRasterTarget(I)V"
+    },
+    {
+      "symbol": "M:bc.a(IILjava/awt/Component;I)V",
+      "originalName": "a",
+      "to": "initialize",
+      "evidence": "Source-purpose review: Initialize inherited raster dimensions/pixels/AWT image with the original Component-backed BufferedImage or ImageProducer implementation. Entire26override families/78members,52concrete bodies and26abstract signatures reviewed with all46incoming contexts. Preserve all three member names consistently,visibility/finality,all original parameter permutations/primitive domains,guards,partial assignments,monitors,allocation/call/exception order and diagnostics. Lexicominos supplied premultiplication boolean and all per-game exceptional branches retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AwtRasterBuffer.initialize(IILjava/awt/Component;I)V"
+    },
+    {
+      "symbol": "M:bc.a(Ljava/awt/Graphics;IBI)V",
+      "originalName": "a",
+      "to": "drawImage",
+      "evidence": "Source-purpose review: Publish producer pixels where applicable and draw the retained AWT image through Graphics.drawImage using the original coordinates/observer. Entire26override families/78members,52concrete bodies and26abstract signatures reviewed with all46incoming contexts. Preserve all three member names consistently,visibility/finality,all original parameter permutations/primitive domains,guards,partial assignments,monitors,allocation/call/exception order and diagnostics. Lexicominos supplied premultiplication boolean and all per-game exceptional branches retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AwtRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V"
+    },
+    {
       "symbol": "M:bc.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 5 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 31247b525f00a3c00277829f2d91e3aeea011b6c7c7195ef6ea5856f31f1e59c.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bc.clearStaticReferences(I)V"
+      "renamedSymbol": "M:AwtRasterBuffer.clearStaticReferences(I)V"
     },
     {
       "symbol": "M:be.a(B)V",
@@ -1018,6 +1074,14 @@
       "evidence": "Complete declaration/body verified against exact source-reviewed private static<T extends Throwable> RuntimeException helper with throws T and body throw(T)throwable. Preserve generic exception signature, original Throwable identity, null behavior, annotation and every explicit type argument/call site; do not wrap or convert checked exceptions.",
       "confidence": "reviewed",
       "renamedSymbol": "M:bg.throwUnchecked(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;"
+    },
+    {
+      "symbol": "M:bh.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:bh.resetStaticState(I)V"
     },
     {
       "symbol": "M:bk.a()V",
@@ -1154,6 +1218,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 1b07af9abc29d0ee4e5b716f14c42f76b94325099dc47302dc82bb9d874654b7.",
       "confidence": "reviewed",
       "renamedSymbol": "M:c.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ca.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ca.resetStaticState(I)V"
     },
     {
       "symbol": "M:cb.f(I)V",
@@ -1900,6 +1972,14 @@
       "renamedSymbol": "M:gk.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:gl.a(B)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 4 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.resetStaticState(B)V"
+    },
+    {
       "symbol": "M:gl.a(I)J",
       "originalName": "a",
       "to": "length",
@@ -2002,6 +2082,22 @@
       "evidence": "Source-purpose review: Clears 2 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (1 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:hf.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:hg.a(IILjava/awt/Component;I)V",
+      "originalName": "a",
+      "to": "initialize",
+      "evidence": "Source-purpose review: Initialize inherited raster dimensions/pixels/AWT image with the original Component-backed BufferedImage or ImageProducer implementation. Entire26override families/78members,52concrete bodies and26abstract signatures reviewed with all46incoming contexts. Preserve all three member names consistently,visibility/finality,all original parameter permutations/primitive domains,guards,partial assignments,monitors,allocation/call/exception order and diagnostics. Lexicominos supplied premultiplication boolean and all per-game exceptional branches retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V"
+    },
+    {
+      "symbol": "M:hg.a(Ljava/awt/Graphics;IBI)V",
+      "originalName": "a",
+      "to": "drawImage",
+      "evidence": "Source-purpose review: Publish producer pixels where applicable and draw the retained AWT image through Graphics.drawImage using the original coordinates/observer. Entire26override families/78members,52concrete bodies and26abstract signatures reviewed with all46incoming contexts. Preserve all three member names consistently,visibility/finality,all original parameter permutations/primitive domains,guards,partial assignments,monitors,allocation/call/exception order and diagnostics. Lexicominos supplied premultiplication boolean and all per-game exceptional branches retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V"
     },
     {
       "symbol": "M:hk.b(I)V",
@@ -2228,6 +2324,14 @@
       "renamedSymbol": "M:DualLinkNode.clearDeclaredStaticReferences(I)V"
     },
     {
+      "symbol": "M:ik.a(B)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ik.resetStaticState(B)V"
+    },
+    {
       "symbol": "M:il.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -2292,6 +2396,14 @@
       "renamedSymbol": "M:IntrusiveNode.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:jc.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jc.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:jd.f(B)Lsi;",
       "originalName": "f",
       "to": "pollAccountCreationResult",
@@ -2306,6 +2418,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 14 null writes to 8 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 3f91c0c92872cf9d9a440c57bf04b95e8b2e09c26cb87dfe9888b9cd73c30070.",
       "confidence": "reviewed",
       "renamedSymbol": "M:je.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:jf.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jf.resetStaticState(I)V"
     },
     {
       "symbol": "M:jg.a(I)V",
@@ -2338,6 +2458,14 @@
       "evidence": "Source-purpose review: Clears 2 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:jj.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:jk.a(Z)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:jk.resetStaticState(Z)V"
     },
     {
       "symbol": "M:jm.a(BLjava/awt/Component;)V",
@@ -2514,6 +2642,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 3 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 7fcbcf453fbdd14649b0e1101a59ce9c2059eb37a6d2c9695f56f03fdd59a83d.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ke.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:kf.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 6 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kf.resetStaticState(I)V"
     },
     {
       "symbol": "M:kg.a()Lod;",
@@ -2852,6 +2988,14 @@
       "renamedSymbol": "M:kk.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:kl.h(B)V",
+      "originalName": "h",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kl.resetStaticState(B)V"
+    },
+    {
       "symbol": "M:km.e(I)V",
       "originalName": "e",
       "to": "clearStaticReferences",
@@ -2866,6 +3010,14 @@
       "evidence": "Source-purpose review: Clears 1 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:kn.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:kp.b(Z)V",
+      "originalName": "b",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 4 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:kp.resetStaticState(Z)V"
     },
     {
       "symbol": "M:l.a(B)V",
@@ -2996,6 +3148,14 @@
       "renamedSymbol": "M:CipherPacketBuffer.clearDeclaredStaticReferences(I)V"
     },
     {
+      "symbol": "M:me.a(B)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 4 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:me.resetStaticState(B)V"
+    },
+    {
       "symbol": "M:me.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3018,6 +3178,22 @@
       "evidence": "Source-purpose review: Clears 2 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (0 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
       "renamedSymbol": "M:mf.releaseDeclaredStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:mg.b(I)V",
+      "originalName": "b",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 12 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mg.resetStaticState(I)V"
+    },
+    {
+      "symbol": "M:mh.c(I)V",
+      "originalName": "c",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:mh.resetStaticState(I)V"
     },
     {
       "symbol": "M:mi.h(I)V",
@@ -3106,6 +3282,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 7 null writes to 6 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a8a024e7b9cd69ec719b61a4f328dee36107082ecd7aea3fbf83d792ce6c166d.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ne.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:nf.c(B)V",
+      "originalName": "c",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:nf.resetStaticState(B)V"
     },
     {
       "symbol": "M:ng.a(B)I",
@@ -3468,6 +3652,14 @@
       "renamedSymbol": "M:oa.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:ob.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ob.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:oc.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -3588,6 +3780,14 @@
       "renamedSymbol": "M:oj.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:ol.i(I)V",
+      "originalName": "i",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 5 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ol.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:om.e(B)V",
       "originalName": "e",
       "to": "clearDeclaredStaticReferences",
@@ -3610,6 +3810,14 @@
       "evidence": "Build the original subscribe.ws URL relative to the supplied Applet code base,pass it through the original URL adaptation helper and show it in AppletContext target _top. Preserve original checked/unchecked catches,printStackTrace effects,call/allocation order,null inputs and guard behavior. Retain 10%((-8-intGuard)/55) before URL allocation inside original Exception catch. Complete original-body SHA256 54b144dec902ca5098da96ff55144331c75216e5ecfbadef6feec29076173bff. Naming only;45complete selected method bodies,one selected constructor and341field declarations source-reviewed. Preserve original bodies,literals,full JVM argument widths/domains,guards,overflow,casts,aliases,partial writes,call/allocation/exception order,visibility/modifiers and every native/override binding. Existing meaningful aliases unchanged;native/class-name-literal intentional edit allowlists empty. No whole-game runtime equivalence claim.",
       "confidence": "reviewed",
       "renamedSymbol": "M:on.openSubscriptionPage(ILjava/applet/Applet;)V"
+    },
+    {
+      "symbol": "M:pa.e(B)V",
+      "originalName": "e",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:pa.resetStaticState(B)V"
     },
     {
       "symbol": "M:pb.a(I)V",
@@ -3684,6 +3892,22 @@
       "renamedSymbol": "M:ph.clearStaticReferences(Z)V"
     },
     {
+      "symbol": "M:pi.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:pi.resetStaticState(I)V"
+    },
+    {
+      "symbol": "M:pj.g(I)V",
+      "originalName": "g",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:pj.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:pk.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -3754,6 +3978,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 98c01e41182c0840e681ead79c74fb8270fd702d1426ffce66607911b98a7fcd.",
       "confidence": "reviewed",
       "renamedSymbol": "M:qc.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:qd.i(I)V",
+      "originalName": "i",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:qd.resetStaticState(I)V"
     },
     {
       "symbol": "M:qf.e(B)V",
@@ -3866,6 +4098,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a77cf89bf053b2909638436f67c73b018856f5f01f775965ea3fd6016b6715fe.",
       "confidence": "reviewed",
       "renamedSymbol": "M:rc.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:rd.a(Z)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 3 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rd.resetStaticState(Z)V"
     },
     {
       "symbol": "M:rf.e(B)V",
@@ -4020,6 +4260,14 @@
       "renamedSymbol": "M:sm.copyBytes(I[B)[B"
     },
     {
+      "symbol": "M:sm.b(I)V",
+      "originalName": "b",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:sm.resetStaticState(I)V"
+    },
+    {
       "symbol": "M:sn.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -4058,6 +4306,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 2 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 a4ba06a65ab9d96c7bfcccc3616c62394e8b54618ebe7cd0d9e700054a6b3201.",
       "confidence": "reviewed",
       "renamedSymbol": "M:tf.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:th.h(I)V",
+      "originalName": "h",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:th.resetStaticState(I)V"
     },
     {
       "symbol": "M:ti.c(I)V",
@@ -4153,7 +4409,31 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 6 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 336d385a9c65fe9816670dd4acce71292f7b91695198f1b7857e2dbf957c18b0.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tk.clearStaticReferences(B)V"
+      "renamedSymbol": "M:ImageProducerRasterBuffer.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:tk.a(IILjava/awt/Component;I)V",
+      "originalName": "a",
+      "to": "initialize",
+      "evidence": "Source-purpose review: Initialize inherited raster dimensions/pixels/AWT image with the original Component-backed BufferedImage or ImageProducer implementation. Entire26override families/78members,52concrete bodies and26abstract signatures reviewed with all46incoming contexts. Preserve all three member names consistently,visibility/finality,all original parameter permutations/primitive domains,guards,partial assignments,monitors,allocation/call/exception order and diagnostics. Lexicominos supplied premultiplication boolean and all per-game exceptional branches retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V"
+    },
+    {
+      "symbol": "M:tk.a(Ljava/awt/Graphics;IBI)V",
+      "originalName": "a",
+      "to": "drawImage",
+      "evidence": "Source-purpose review: Publish producer pixels where applicable and draw the retained AWT image through Graphics.drawImage using the original coordinates/observer. Entire26override families/78members,52concrete bodies and26abstract signatures reviewed with all46incoming contexts. Preserve all three member names consistently,visibility/finality,all original parameter permutations/primitive domains,guards,partial assignments,monitors,allocation/call/exception order and diagnostics. Lexicominos supplied premultiplication boolean and all per-game exceptional branches retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V"
+    },
+    {
+      "symbol": "M:tk.c(I)V",
+      "originalName": "c",
+      "to": "publishPixelsToConsumer",
+      "evidence": "Source-purpose review: Publish retained pixel storage/dimensions/color model through ImageConsumer.setPixels and the original conditional imageComplete(2) behavior. Entire class instance contract and all52publisher call sites reviewed. Retain private/final/synchronized modifiers,consumer re-reads,guard-dependent returns/static resets/reinitialization/callbacks,and all call/write/exception order. DrPhlogiston parameter is actual pixel y coordinate and DungeonAssault parameter is actual x coordinate;do not replace with0 or treat as dummy guard. No body/signature/field/primitive-domain changes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.publishPixelsToConsumer(I)V"
     },
     {
       "symbol": "M:tm.a(I)V",
@@ -4618,6 +4898,22 @@
       "evidence": "Complete cleanup statement proof reviewed: 3 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 30c71448b7c74764cc6f44b76360f0f596a3c036f6a991b015f11ed7245c38aa.",
       "confidence": "reviewed",
       "renamedSymbol": "M:wc.clearStaticReferences(B)V"
+    },
+    {
+      "symbol": "M:wd.c(I)V",
+      "originalName": "c",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 1 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:wd.resetStaticState(I)V"
+    },
+    {
+      "symbol": "M:we.a(I)V",
+      "originalName": "a",
+      "to": "resetStaticState",
+      "evidence": "Source-purpose review: Resets declared static state through 2 null-reference stores and 1 primitive-literal stores. Source-bound effect grammar permits primitive guard/local expressions and conditional returns only,with no foreign fields/array effects/external calls;all bound stores/static ownership verified. Preserve full primitive domains,original literal values including nonzero guard-path writes,all conditional paths,casts,write/evaluation/allocation/exception order and modifiers. Parser passed11positive/20hostile fixtures;27representative bodies25callers human-reviewed. Purpose synonym avoids inherited/same-signature collisions;existing meaningful names preserved.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:we.resetStaticState(I)V"
     },
     {
       "symbol": "M:wf.$cfr$sneakyThrow(Ljava/lang/Throwable;)Ljava/lang/RuntimeException;",
@@ -5290,9 +5586,9 @@
     },
     {
       "symbol": "C:bc",
-      "renamedSymbol": "C:bc",
+      "renamedSymbol": "C:AwtRasterBuffer",
       "originalName": "bc",
-      "renamedName": "bc",
+      "renamedName": "AwtRasterBuffer",
       "declaration": {
         "file": "bc.java",
         "start": 53,
@@ -6478,9 +6774,9 @@
     },
     {
       "symbol": "C:hg",
-      "renamedSymbol": "C:hg",
+      "renamedSymbol": "C:BufferedImageRasterBuffer",
       "originalName": "hg",
-      "renamedName": "hg",
+      "renamedName": "BufferedImageRasterBuffer",
       "declaration": {
         "file": "hg.java",
         "start": 71,
@@ -8766,9 +9062,9 @@
     },
     {
       "symbol": "C:tk",
-      "renamedSymbol": "C:tk",
+      "renamedSymbol": "C:ImageProducerRasterBuffer",
       "originalName": "tk",
-      "renamedName": "tk",
+      "renamedName": "ImageProducerRasterBuffer",
       "declaration": {
         "file": "tk.java",
         "start": 71,
@@ -10790,7 +11086,7 @@
     },
     {
       "symbol": "F:bc.field_a:Lam;",
-      "renamedSymbol": "F:bc.field_a:Lam;",
+      "renamedSymbol": "F:AwtRasterBuffer.field_a:Lam;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -10801,7 +11097,7 @@
     },
     {
       "symbol": "F:bc.field_b:Ljava/awt/Image;",
-      "renamedSymbol": "F:bc.field_b:Ljava/awt/Image;",
+      "renamedSymbol": "F:AwtRasterBuffer.field_b:Ljava/awt/Image;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -10812,7 +11108,7 @@
     },
     {
       "symbol": "F:bc.field_c:[I",
-      "renamedSymbol": "F:bc.field_c:[I",
+      "renamedSymbol": "F:AwtRasterBuffer.field_c:[I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -10823,7 +11119,7 @@
     },
     {
       "symbol": "F:bc.field_d:I",
-      "renamedSymbol": "F:bc.field_d:I",
+      "renamedSymbol": "F:AwtRasterBuffer.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -10834,7 +11130,7 @@
     },
     {
       "symbol": "F:bc.field_e:I",
-      "renamedSymbol": "F:bc.field_e:I",
+      "renamedSymbol": "F:AwtRasterBuffer.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -10845,7 +11141,7 @@
     },
     {
       "symbol": "F:bc.field_f:Ljh;",
-      "renamedSymbol": "F:bc.field_f:Ljh;",
+      "renamedSymbol": "F:AwtRasterBuffer.field_f:Ljh;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -14310,7 +14606,7 @@
     },
     {
       "symbol": "F:dk.field_o:Lbc;",
-      "renamedSymbol": "F:dk.field_o:Lbc;",
+      "renamedSymbol": "F:dk.field_o:LAwtRasterBuffer;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -18699,7 +18995,7 @@
     },
     {
       "symbol": "F:hg.field_g:Ljava/awt/Component;",
-      "renamedSymbol": "F:hg.field_g:Ljava/awt/Component;",
+      "renamedSymbol": "F:BufferedImageRasterBuffer.field_g:Ljava/awt/Component;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -33824,7 +34120,7 @@
     },
     {
       "symbol": "F:tk.field_g:Ljava/awt/image/ImageConsumer;",
-      "renamedSymbol": "F:tk.field_g:Ljava/awt/image/ImageConsumer;",
+      "renamedSymbol": "F:ImageProducerRasterBuffer.field_g:Ljava/awt/image/ImageConsumer;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -33835,7 +34131,7 @@
     },
     {
       "symbol": "F:tk.field_h:[Ldl;",
-      "renamedSymbol": "F:tk.field_h:[LRgbSprite;",
+      "renamedSymbol": "F:ImageProducerRasterBuffer.field_h:[LRgbSprite;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -33846,7 +34142,7 @@
     },
     {
       "symbol": "F:tk.field_i:Ljava/applet/Applet;",
-      "renamedSymbol": "F:tk.field_i:Ljava/applet/Applet;",
+      "renamedSymbol": "F:ImageProducerRasterBuffer.field_i:Ljava/applet/Applet;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -33857,7 +34153,7 @@
     },
     {
       "symbol": "F:tk.field_j:Ljava/awt/image/ColorModel;",
-      "renamedSymbol": "F:tk.field_j:Ljava/awt/image/ColorModel;",
+      "renamedSymbol": "F:ImageProducerRasterBuffer.field_j:Ljava/awt/image/ColorModel;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -33868,7 +34164,7 @@
     },
     {
       "symbol": "F:tk.field_k:Lmk;",
-      "renamedSymbol": "F:tk.field_k:Lmk;",
+      "renamedSymbol": "F:ImageProducerRasterBuffer.field_k:Lmk;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -33879,7 +34175,7 @@
     },
     {
       "symbol": "F:tk.field_l:Ldl;",
-      "renamedSymbol": "F:tk.field_l:LRgbSprite;",
+      "renamedSymbol": "F:ImageProducerRasterBuffer.field_l:LRgbSprite;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -47497,7 +47793,7 @@
     },
     {
       "symbol": "L:bc.a(I)V#0",
-      "renamedSymbol": "L:bc.a(I)V#0",
+      "renamedSymbol": "L:AwtRasterBuffer.setAsRasterTarget(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -47508,7 +47804,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#0",
-      "renamedSymbol": "L:bc.a(III)V#0",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -47519,7 +47815,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#1",
-      "renamedSymbol": "L:bc.a(III)V#1",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -47530,7 +47826,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#10",
-      "renamedSymbol": "L:bc.a(III)V#10",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#10",
       "originalName": "var6Lifetime2",
       "renamedName": "var6Lifetime2",
       "declaration": {
@@ -47541,7 +47837,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#11",
-      "renamedSymbol": "L:bc.a(III)V#11",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#11",
       "originalName": "var6Lifetime3",
       "renamedName": "var6Lifetime3",
       "declaration": {
@@ -47552,7 +47848,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#12",
-      "renamedSymbol": "L:bc.a(III)V#12",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#12",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -47563,7 +47859,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#13",
-      "renamedSymbol": "L:bc.a(III)V#13",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#13",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -47574,7 +47870,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#14",
-      "renamedSymbol": "L:bc.a(III)V#14",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#14",
       "originalName": "var7Lifetime3",
       "renamedName": "var7Lifetime3",
       "declaration": {
@@ -47585,7 +47881,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#15",
-      "renamedSymbol": "L:bc.a(III)V#15",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#15",
       "originalName": "var7Lifetime4",
       "renamedName": "var7Lifetime4",
       "declaration": {
@@ -47596,7 +47892,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#16",
-      "renamedSymbol": "L:bc.a(III)V#16",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#16",
       "originalName": "var7Lifetime5",
       "renamedName": "var7Lifetime5",
       "declaration": {
@@ -47607,7 +47903,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#17",
-      "renamedSymbol": "L:bc.a(III)V#17",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#17",
       "originalName": "var7Lifetime6",
       "renamedName": "var7Lifetime6",
       "declaration": {
@@ -47618,7 +47914,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#18",
-      "renamedSymbol": "L:bc.a(III)V#18",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#18",
       "originalName": "var7Lifetime7",
       "renamedName": "var7Lifetime7",
       "declaration": {
@@ -47629,7 +47925,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#19",
-      "renamedSymbol": "L:bc.a(III)V#19",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#19",
       "originalName": "var6Lifetime4",
       "renamedName": "var6Lifetime4",
       "declaration": {
@@ -47640,7 +47936,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#2",
-      "renamedSymbol": "L:bc.a(III)V#2",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -47651,7 +47947,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#20",
-      "renamedSymbol": "L:bc.a(III)V#20",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#20",
       "originalName": "var7Lifetime8",
       "renamedName": "var7Lifetime8",
       "declaration": {
@@ -47662,7 +47958,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#21",
-      "renamedSymbol": "L:bc.a(III)V#21",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#21",
       "originalName": "var6Lifetime1Lifetime1",
       "renamedName": "var6Lifetime1Lifetime1",
       "declaration": {
@@ -47673,7 +47969,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#22",
-      "renamedSymbol": "L:bc.a(III)V#22",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#22",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -47684,7 +47980,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#23",
-      "renamedSymbol": "L:bc.a(III)V#23",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#23",
       "originalName": "var7Lifetime4Lifetime1",
       "renamedName": "var7Lifetime4Lifetime1",
       "declaration": {
@@ -47695,7 +47991,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#24",
-      "renamedSymbol": "L:bc.a(III)V#24",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#24",
       "originalName": "var7Lifetime9",
       "renamedName": "var7Lifetime9",
       "declaration": {
@@ -47706,7 +48002,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#3",
-      "renamedSymbol": "L:bc.a(III)V#3",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -47717,7 +48013,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#4",
-      "renamedSymbol": "L:bc.a(III)V#4",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -47728,7 +48024,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#5",
-      "renamedSymbol": "L:bc.a(III)V#5",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -47739,7 +48035,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#6",
-      "renamedSymbol": "L:bc.a(III)V#6",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#6",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -47750,7 +48046,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#7",
-      "renamedSymbol": "L:bc.a(III)V#7",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#7",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -47761,7 +48057,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#8",
-      "renamedSymbol": "L:bc.a(III)V#8",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#8",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -47772,7 +48068,7 @@
     },
     {
       "symbol": "L:bc.a(III)V#9",
-      "renamedSymbol": "L:bc.a(III)V#9",
+      "renamedSymbol": "L:AwtRasterBuffer.a(III)V#9",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -95798,7 +96094,7 @@
     },
     {
       "symbol": "L:hg.a(IILjava/awt/Component;I)V#0",
-      "renamedSymbol": "L:hg.a(IILjava/awt/Component;I)V#0",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -95809,7 +96105,7 @@
     },
     {
       "symbol": "L:hg.a(IILjava/awt/Component;I)V#1",
-      "renamedSymbol": "L:hg.a(IILjava/awt/Component;I)V#1",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -95820,7 +96116,7 @@
     },
     {
       "symbol": "L:hg.a(IILjava/awt/Component;I)V#2",
-      "renamedSymbol": "L:hg.a(IILjava/awt/Component;I)V#2",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -95831,7 +96127,7 @@
     },
     {
       "symbol": "L:hg.a(IILjava/awt/Component;I)V#3",
-      "renamedSymbol": "L:hg.a(IILjava/awt/Component;I)V#3",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -95842,7 +96138,7 @@
     },
     {
       "symbol": "L:hg.a(Ljava/awt/Graphics;IBI)V#0",
-      "renamedSymbol": "L:hg.a(Ljava/awt/Graphics;IBI)V#0",
+      "renamedSymbol": "L:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -134639,7 +134935,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#0",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#0",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -134650,7 +134946,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#1",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#1",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#1",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -134661,7 +134957,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#10",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#10",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -134672,7 +134968,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#11",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#11",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -134683,7 +134979,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#12",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#12",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#12",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -134694,7 +134990,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#13",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#13",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#13",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -134705,7 +135001,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#14",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#14",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#14",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -134716,7 +135012,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#2",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#2",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#2",
       "originalName": "var4_ref2",
       "renamedName": "var4_ref2",
       "declaration": {
@@ -134727,7 +135023,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#3",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#3",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#3",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -134738,7 +135034,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#4",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#4",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#4",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -134749,7 +135045,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#5",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#5",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#5",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -134760,7 +135056,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#6",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#6",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#6",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -134771,7 +135067,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#7",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#7",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#7",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -134782,7 +135078,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#8",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#8",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#8",
       "originalName": "stackIn_8_1",
       "renamedName": "stackIn_8_1",
       "declaration": {
@@ -134793,7 +135089,7 @@
     },
     {
       "symbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#9",
-      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)Lbc;#9",
+      "renamedSymbol": "L:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#9",
       "originalName": "stackIn_9_2",
       "renamedName": "stackIn_9_2",
       "declaration": {
@@ -167617,7 +167913,7 @@
     },
     {
       "symbol": "L:tk.a(IC)C#0",
-      "renamedSymbol": "L:tk.a(IC)C#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.a(IC)C#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -167628,7 +167924,7 @@
     },
     {
       "symbol": "L:tk.a(IC)C#1",
-      "renamedSymbol": "L:tk.a(IC)C#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.a(IC)C#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -167639,7 +167935,7 @@
     },
     {
       "symbol": "L:tk.a(IC)C#2",
-      "renamedSymbol": "L:tk.a(IC)C#2",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.a(IC)C#2",
       "originalName": "var2Lifetime1",
       "renamedName": "var2Lifetime1",
       "declaration": {
@@ -167650,7 +167946,7 @@
     },
     {
       "symbol": "L:tk.a(IILjava/awt/Component;I)V#0",
-      "renamedSymbol": "L:tk.a(IILjava/awt/Component;I)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -167661,7 +167957,7 @@
     },
     {
       "symbol": "L:tk.a(IILjava/awt/Component;I)V#1",
-      "renamedSymbol": "L:tk.a(IILjava/awt/Component;I)V#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -167672,7 +167968,7 @@
     },
     {
       "symbol": "L:tk.a(Ljava/awt/Graphics;IBI)V#0",
-      "renamedSymbol": "L:tk.a(Ljava/awt/Graphics;IBI)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -167683,7 +167979,7 @@
     },
     {
       "symbol": "L:tk.a(Ljava/awt/Graphics;IBI)V#1",
-      "renamedSymbol": "L:tk.a(Ljava/awt/Graphics;IBI)V#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -167694,7 +167990,7 @@
     },
     {
       "symbol": "L:tk.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "L:tk.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -167705,7 +168001,7 @@
     },
     {
       "symbol": "L:tk.c(I)V#0",
-      "renamedSymbol": "L:tk.c(I)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.publishPixelsToConsumer(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -167716,7 +168012,7 @@
     },
     {
       "symbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
-      "renamedSymbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -167727,7 +168023,7 @@
     },
     {
       "symbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
-      "renamedSymbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -167738,7 +168034,7 @@
     },
     {
       "symbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
-      "renamedSymbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
       "originalName": "stackIn_4_1",
       "renamedName": "stackIn_4_1",
       "declaration": {
@@ -167749,7 +168045,7 @@
     },
     {
       "symbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
-      "renamedSymbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
       "originalName": "stackIn_5_2",
       "renamedName": "stackIn_5_2",
       "declaration": {
@@ -167760,7 +168056,7 @@
     },
     {
       "symbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
-      "renamedSymbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -167771,7 +168067,7 @@
     },
     {
       "symbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
-      "renamedSymbol": "L:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -167782,7 +168078,7 @@
     },
     {
       "symbol": "L:tk.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "L:tk.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -167793,7 +168089,7 @@
     },
     {
       "symbol": "L:tk.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "L:tk.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "L:ImageProducerRasterBuffer.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -192026,9 +192322,9 @@
     },
     {
       "symbol": "M:ag.a(I)V",
-      "renamedSymbol": "M:ag.a(I)V",
+      "renamedSymbol": "M:ag.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "ag.java",
         "start": 765,
@@ -193038,9 +193334,9 @@
     },
     {
       "symbol": "M:bc.a(I)V",
-      "renamedSymbol": "M:bc.a(I)V",
+      "renamedSymbol": "M:AwtRasterBuffer.setAsRasterTarget(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setAsRasterTarget",
       "declaration": {
         "file": "bc.java",
         "start": 7035,
@@ -193049,7 +193345,7 @@
     },
     {
       "symbol": "M:bc.a(III)V",
-      "renamedSymbol": "M:bc.a(III)V",
+      "renamedSymbol": "M:AwtRasterBuffer.a(III)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -193060,9 +193356,9 @@
     },
     {
       "symbol": "M:bc.a(IILjava/awt/Component;I)V",
-      "renamedSymbol": "M:bc.a(IILjava/awt/Component;I)V",
+      "renamedSymbol": "M:AwtRasterBuffer.initialize(IILjava/awt/Component;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initialize",
       "declaration": {
         "file": "bc.java",
         "start": 6953,
@@ -193071,9 +193367,9 @@
     },
     {
       "symbol": "M:bc.a(Ljava/awt/Graphics;IBI)V",
-      "renamedSymbol": "M:bc.a(Ljava/awt/Graphics;IBI)V",
+      "renamedSymbol": "M:AwtRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawImage",
       "declaration": {
         "file": "bc.java",
         "start": 7531,
@@ -193082,7 +193378,7 @@
     },
     {
       "symbol": "M:bc.b(I)V",
-      "renamedSymbol": "M:bc.clearStaticReferences(I)V",
+      "renamedSymbol": "M:AwtRasterBuffer.clearStaticReferences(I)V",
       "originalName": "b",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -193346,9 +193642,9 @@
     },
     {
       "symbol": "M:bh.a(I)V",
-      "renamedSymbol": "M:bh.a(I)V",
+      "renamedSymbol": "M:bh.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "bh.java",
         "start": 878,
@@ -194017,9 +194313,9 @@
     },
     {
       "symbol": "M:ca.a(I)V",
-      "renamedSymbol": "M:ca.a(I)V",
+      "renamedSymbol": "M:ca.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "ca.java",
         "start": 980,
@@ -202058,9 +202354,9 @@
     },
     {
       "symbol": "M:gl.a(B)V",
-      "renamedSymbol": "M:BoundedRandomAccessFile.a(B)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.resetStaticState(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "gl.java",
         "start": 4578,
@@ -202553,9 +202849,9 @@
     },
     {
       "symbol": "M:hg.<init>()V",
-      "renamedSymbol": "M:hg.<init>()V",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.<init>()V",
       "originalName": "hg",
-      "renamedName": "hg",
+      "renamedName": "BufferedImageRasterBuffer",
       "declaration": {
         "file": "hg.java",
         "start": 1334,
@@ -202564,9 +202860,9 @@
     },
     {
       "symbol": "M:hg.a(IILjava/awt/Component;I)V",
-      "renamedSymbol": "M:hg.a(IILjava/awt/Component;I)V",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initialize",
       "declaration": {
         "file": "hg.java",
         "start": 391,
@@ -202575,9 +202871,9 @@
     },
     {
       "symbol": "M:hg.a(Ljava/awt/Graphics;IBI)V",
-      "renamedSymbol": "M:hg.a(Ljava/awt/Graphics;IBI)V",
+      "renamedSymbol": "M:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawImage",
       "declaration": {
         "file": "hg.java",
         "start": 143,
@@ -203928,9 +204224,9 @@
     },
     {
       "symbol": "M:ik.a(B)V",
-      "renamedSymbol": "M:ik.a(B)V",
+      "renamedSymbol": "M:ik.resetStaticState(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "ik.java",
         "start": 2992,
@@ -204566,9 +204862,9 @@
     },
     {
       "symbol": "M:jc.a(I)V",
-      "renamedSymbol": "M:jc.a(I)V",
+      "renamedSymbol": "M:jc.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "jc.java",
         "start": 165,
@@ -204676,9 +204972,9 @@
     },
     {
       "symbol": "M:jf.a(I)V",
-      "renamedSymbol": "M:jf.a(I)V",
+      "renamedSymbol": "M:jf.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "jf.java",
         "start": 137,
@@ -205204,9 +205500,9 @@
     },
     {
       "symbol": "M:jk.a(Z)V",
-      "renamedSymbol": "M:jk.a(Z)V",
+      "renamedSymbol": "M:jk.resetStaticState(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "jk.java",
         "start": 438,
@@ -205897,9 +206193,9 @@
     },
     {
       "symbol": "M:kf.a(I)V",
-      "renamedSymbol": "M:kf.a(I)V",
+      "renamedSymbol": "M:kf.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "kf.java",
         "start": 282,
@@ -206909,9 +207205,9 @@
     },
     {
       "symbol": "M:kl.h(B)V",
-      "renamedSymbol": "M:kl.h(B)V",
+      "renamedSymbol": "M:kl.resetStaticState(B)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "kl.java",
         "start": 1095,
@@ -207305,9 +207601,9 @@
     },
     {
       "symbol": "M:kp.b(Z)V",
-      "renamedSymbol": "M:kp.b(Z)V",
+      "renamedSymbol": "M:kp.resetStaticState(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "kp.java",
         "start": 10017,
@@ -208845,9 +209141,9 @@
     },
     {
       "symbol": "M:me.a(B)V",
-      "renamedSymbol": "M:me.a(B)V",
+      "renamedSymbol": "M:me.resetStaticState(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "me.java",
         "start": 1447,
@@ -208966,9 +209262,9 @@
     },
     {
       "symbol": "M:mg.b(I)V",
-      "renamedSymbol": "M:mg.b(I)V",
+      "renamedSymbol": "M:mg.resetStaticState(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "mg.java",
         "start": 356,
@@ -209043,9 +209339,9 @@
     },
     {
       "symbol": "M:mh.c(I)V",
-      "renamedSymbol": "M:mh.c(I)V",
+      "renamedSymbol": "M:mh.resetStaticState(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "mh.java",
         "start": 1128,
@@ -210088,9 +210384,9 @@
     },
     {
       "symbol": "M:nf.c(B)V",
-      "renamedSymbol": "M:nf.c(B)V",
+      "renamedSymbol": "M:nf.resetStaticState(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "nf.java",
         "start": 587,
@@ -211243,9 +211539,9 @@
     },
     {
       "symbol": "M:ob.a(I)V",
-      "renamedSymbol": "M:ob.a(I)V",
+      "renamedSymbol": "M:ob.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "ob.java",
         "start": 631,
@@ -211947,7 +212243,7 @@
     },
     {
       "symbol": "M:oj.a(IILjava/awt/Component;I)Lbc;",
-      "renamedSymbol": "M:oj.a(IILjava/awt/Component;I)Lbc;",
+      "renamedSymbol": "M:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -212178,9 +212474,9 @@
     },
     {
       "symbol": "M:ol.i(I)V",
-      "renamedSymbol": "M:ol.i(I)V",
+      "renamedSymbol": "M:ol.resetStaticState(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "ol.java",
         "start": 1679,
@@ -212640,9 +212936,9 @@
     },
     {
       "symbol": "M:pa.e(B)V",
-      "renamedSymbol": "M:pa.e(B)V",
+      "renamedSymbol": "M:pa.resetStaticState(B)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "pa.java",
         "start": 4082,
@@ -213454,9 +213750,9 @@
     },
     {
       "symbol": "M:pi.a(I)V",
-      "renamedSymbol": "M:pi.a(I)V",
+      "renamedSymbol": "M:pi.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "pi.java",
         "start": 288,
@@ -213586,9 +213882,9 @@
     },
     {
       "symbol": "M:pj.g(I)V",
-      "renamedSymbol": "M:pj.g(I)V",
+      "renamedSymbol": "M:pj.resetStaticState(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "pj.java",
         "start": 4042,
@@ -214763,9 +215059,9 @@
     },
     {
       "symbol": "M:qd.i(I)V",
-      "renamedSymbol": "M:qd.i(I)V",
+      "renamedSymbol": "M:qd.resetStaticState(I)V",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "qd.java",
         "start": 197,
@@ -216072,9 +216368,9 @@
     },
     {
       "symbol": "M:rd.a(Z)V",
-      "renamedSymbol": "M:rd.a(Z)V",
+      "renamedSymbol": "M:rd.resetStaticState(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "rd.java",
         "start": 2716,
@@ -218118,9 +218414,9 @@
     },
     {
       "symbol": "M:sm.b(I)V",
-      "renamedSymbol": "M:sm.b(I)V",
+      "renamedSymbol": "M:sm.resetStaticState(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "sm.java",
         "start": 258,
@@ -218767,9 +219063,9 @@
     },
     {
       "symbol": "M:th.h(I)V",
-      "renamedSymbol": "M:th.h(I)V",
+      "renamedSymbol": "M:th.resetStaticState(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "th.java",
         "start": 1900,
@@ -219009,9 +219305,9 @@
     },
     {
       "symbol": "M:tk.<init>()V",
-      "renamedSymbol": "M:tk.<init>()V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.<init>()V",
       "originalName": "tk",
-      "renamedName": "tk",
+      "renamedName": "ImageProducerRasterBuffer",
       "declaration": {
         "file": "tk.java",
         "start": 12805,
@@ -219020,7 +219316,7 @@
     },
     {
       "symbol": "M:tk.a(B)V",
-      "renamedSymbol": "M:tk.clearStaticReferences(B)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.clearStaticReferences(B)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -219031,7 +219327,7 @@
     },
     {
       "symbol": "M:tk.a(IC)C",
-      "renamedSymbol": "M:tk.a(IC)C",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.a(IC)C",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -219042,9 +219338,9 @@
     },
     {
       "symbol": "M:tk.a(IILjava/awt/Component;I)V",
-      "renamedSymbol": "M:tk.a(IILjava/awt/Component;I)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "initialize",
       "declaration": {
         "file": "tk.java",
         "start": 11043,
@@ -219053,9 +219349,9 @@
     },
     {
       "symbol": "M:tk.a(Ljava/awt/Graphics;IBI)V",
-      "renamedSymbol": "M:tk.a(Ljava/awt/Graphics;IBI)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawImage",
       "declaration": {
         "file": "tk.java",
         "start": 380,
@@ -219064,7 +219360,7 @@
     },
     {
       "symbol": "M:tk.addConsumer(Ljava/awt/image/ImageConsumer;)V",
-      "renamedSymbol": "M:tk.addConsumer(Ljava/awt/image/ImageConsumer;)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.addConsumer(Ljava/awt/image/ImageConsumer;)V",
       "originalName": "addConsumer",
       "renamedName": "addConsumer",
       "declaration": {
@@ -219075,9 +219371,9 @@
     },
     {
       "symbol": "M:tk.c(I)V",
-      "renamedSymbol": "M:tk.c(I)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.publishPixelsToConsumer(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "publishPixelsToConsumer",
       "declaration": {
         "file": "tk.java",
         "start": 10364,
@@ -219086,7 +219382,7 @@
     },
     {
       "symbol": "M:tk.imageUpdate(Ljava/awt/Image;IIIII)Z",
-      "renamedSymbol": "M:tk.imageUpdate(Ljava/awt/Image;IIIII)Z",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z",
       "originalName": "imageUpdate",
       "renamedName": "imageUpdate",
       "declaration": {
@@ -219097,7 +219393,7 @@
     },
     {
       "symbol": "M:tk.isConsumer(Ljava/awt/image/ImageConsumer;)Z",
-      "renamedSymbol": "M:tk.isConsumer(Ljava/awt/image/ImageConsumer;)Z",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.isConsumer(Ljava/awt/image/ImageConsumer;)Z",
       "originalName": "isConsumer",
       "renamedName": "isConsumer",
       "declaration": {
@@ -219108,7 +219404,7 @@
     },
     {
       "symbol": "M:tk.removeConsumer(Ljava/awt/image/ImageConsumer;)V",
-      "renamedSymbol": "M:tk.removeConsumer(Ljava/awt/image/ImageConsumer;)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.removeConsumer(Ljava/awt/image/ImageConsumer;)V",
       "originalName": "removeConsumer",
       "renamedName": "removeConsumer",
       "declaration": {
@@ -219119,7 +219415,7 @@
     },
     {
       "symbol": "M:tk.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V",
-      "renamedSymbol": "M:tk.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V",
       "originalName": "requestTopDownLeftRightResend",
       "renamedName": "requestTopDownLeftRightResend",
       "declaration": {
@@ -219130,7 +219426,7 @@
     },
     {
       "symbol": "M:tk.startProduction(Ljava/awt/image/ImageConsumer;)V",
-      "renamedSymbol": "M:tk.startProduction(Ljava/awt/image/ImageConsumer;)V",
+      "renamedSymbol": "M:ImageProducerRasterBuffer.startProduction(Ljava/awt/image/ImageConsumer;)V",
       "originalName": "startProduction",
       "renamedName": "startProduction",
       "declaration": {
@@ -222617,9 +222913,9 @@
     },
     {
       "symbol": "M:wd.c(I)V",
-      "renamedSymbol": "M:wd.c(I)V",
+      "renamedSymbol": "M:wd.resetStaticState(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "wd.java",
         "start": 718,
@@ -222650,9 +222946,9 @@
     },
     {
       "symbol": "M:we.a(I)V",
-      "renamedSymbol": "M:we.a(I)V",
+      "renamedSymbol": "M:we.resetStaticState(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetStaticState",
       "declaration": {
         "file": "we.java",
         "start": 243,
@@ -225070,7 +225366,7 @@
     },
     {
       "symbol": "P:ag.a(I)V#0",
-      "renamedSymbol": "P:ag.a(I)V#0",
+      "renamedSymbol": "P:ag.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227358,7 +227654,7 @@
     },
     {
       "symbol": "P:bc.a(I)V#0",
-      "renamedSymbol": "P:bc.a(I)V#0",
+      "renamedSymbol": "P:AwtRasterBuffer.setAsRasterTarget(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227369,7 +227665,7 @@
     },
     {
       "symbol": "P:bc.a(III)V#0",
-      "renamedSymbol": "P:bc.a(III)V#0",
+      "renamedSymbol": "P:AwtRasterBuffer.a(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227380,7 +227676,7 @@
     },
     {
       "symbol": "P:bc.a(III)V#1",
-      "renamedSymbol": "P:bc.a(III)V#1",
+      "renamedSymbol": "P:AwtRasterBuffer.a(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227391,7 +227687,7 @@
     },
     {
       "symbol": "P:bc.a(III)V#2",
-      "renamedSymbol": "P:bc.a(III)V#2",
+      "renamedSymbol": "P:AwtRasterBuffer.a(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -227402,7 +227698,7 @@
     },
     {
       "symbol": "P:bc.a(IILjava/awt/Component;I)V#0",
-      "renamedSymbol": "P:bc.a(IILjava/awt/Component;I)V#0",
+      "renamedSymbol": "P:AwtRasterBuffer.initialize(IILjava/awt/Component;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227413,7 +227709,7 @@
     },
     {
       "symbol": "P:bc.a(IILjava/awt/Component;I)V#1",
-      "renamedSymbol": "P:bc.a(IILjava/awt/Component;I)V#1",
+      "renamedSymbol": "P:AwtRasterBuffer.initialize(IILjava/awt/Component;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227424,7 +227720,7 @@
     },
     {
       "symbol": "P:bc.a(IILjava/awt/Component;I)V#2",
-      "renamedSymbol": "P:bc.a(IILjava/awt/Component;I)V#2",
+      "renamedSymbol": "P:AwtRasterBuffer.initialize(IILjava/awt/Component;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -227435,7 +227731,7 @@
     },
     {
       "symbol": "P:bc.a(IILjava/awt/Component;I)V#3",
-      "renamedSymbol": "P:bc.a(IILjava/awt/Component;I)V#3",
+      "renamedSymbol": "P:AwtRasterBuffer.initialize(IILjava/awt/Component;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -227446,7 +227742,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#0",
-      "renamedSymbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#0",
+      "renamedSymbol": "P:AwtRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227457,7 +227753,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#1",
-      "renamedSymbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#1",
+      "renamedSymbol": "P:AwtRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -227468,7 +227764,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#2",
-      "renamedSymbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#2",
+      "renamedSymbol": "P:AwtRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -227479,7 +227775,7 @@
     },
     {
       "symbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#3",
-      "renamedSymbol": "P:bc.a(Ljava/awt/Graphics;IBI)V#3",
+      "renamedSymbol": "P:AwtRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -227490,7 +227786,7 @@
     },
     {
       "symbol": "P:bc.b(I)V#0",
-      "renamedSymbol": "P:bc.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:AwtRasterBuffer.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -227886,7 +228182,7 @@
     },
     {
       "symbol": "P:bh.a(I)V#0",
-      "renamedSymbol": "P:bh.a(I)V#0",
+      "renamedSymbol": "P:bh.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -229118,7 +229414,7 @@
     },
     {
       "symbol": "P:ca.a(I)V#0",
-      "renamedSymbol": "P:ca.a(I)V#0",
+      "renamedSymbol": "P:ca.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -253571,7 +253867,7 @@
     },
     {
       "symbol": "P:gl.a(B)V#0",
-      "renamedSymbol": "P:BoundedRandomAccessFile.a(B)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -254506,7 +254802,7 @@
     },
     {
       "symbol": "P:hg.a(IILjava/awt/Component;I)V#0",
-      "renamedSymbol": "P:hg.a(IILjava/awt/Component;I)V#0",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -254517,7 +254813,7 @@
     },
     {
       "symbol": "P:hg.a(IILjava/awt/Component;I)V#1",
-      "renamedSymbol": "P:hg.a(IILjava/awt/Component;I)V#1",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -254528,7 +254824,7 @@
     },
     {
       "symbol": "P:hg.a(IILjava/awt/Component;I)V#2",
-      "renamedSymbol": "P:hg.a(IILjava/awt/Component;I)V#2",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -254539,7 +254835,7 @@
     },
     {
       "symbol": "P:hg.a(IILjava/awt/Component;I)V#3",
-      "renamedSymbol": "P:hg.a(IILjava/awt/Component;I)V#3",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.initialize(IILjava/awt/Component;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -254550,7 +254846,7 @@
     },
     {
       "symbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#0",
-      "renamedSymbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#0",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -254561,7 +254857,7 @@
     },
     {
       "symbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#1",
-      "renamedSymbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#1",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -254572,7 +254868,7 @@
     },
     {
       "symbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#2",
-      "renamedSymbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#2",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -254583,7 +254879,7 @@
     },
     {
       "symbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#3",
-      "renamedSymbol": "P:hg.a(Ljava/awt/Graphics;IBI)V#3",
+      "renamedSymbol": "P:BufferedImageRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -257124,7 +257420,7 @@
     },
     {
       "symbol": "P:ik.a(B)V#0",
-      "renamedSymbol": "P:ik.a(B)V#0",
+      "renamedSymbol": "P:ik.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258565,7 +258861,7 @@
     },
     {
       "symbol": "P:jc.a(I)V#0",
-      "renamedSymbol": "P:jc.a(I)V#0",
+      "renamedSymbol": "P:jc.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258829,7 +259125,7 @@
     },
     {
       "symbol": "P:jf.a(I)V#0",
-      "renamedSymbol": "P:jf.a(I)V#0",
+      "renamedSymbol": "P:jf.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260193,7 +260489,7 @@
     },
     {
       "symbol": "P:jk.a(Z)V#0",
-      "renamedSymbol": "P:jk.a(Z)V#0",
+      "renamedSymbol": "P:jk.resetStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -261744,7 +262040,7 @@
     },
     {
       "symbol": "P:kf.a(I)V#0",
-      "renamedSymbol": "P:kf.a(I)V#0",
+      "renamedSymbol": "P:kf.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -266232,7 +266528,7 @@
     },
     {
       "symbol": "P:kl.h(B)V#0",
-      "renamedSymbol": "P:kl.h(B)V#0",
+      "renamedSymbol": "P:kl.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -267354,7 +267650,7 @@
     },
     {
       "symbol": "P:kp.b(Z)V#0",
-      "renamedSymbol": "P:kp.b(Z)V#0",
+      "renamedSymbol": "P:kp.resetStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -270830,7 +271126,7 @@
     },
     {
       "symbol": "P:me.a(B)V#0",
-      "renamedSymbol": "P:me.a(B)V#0",
+      "renamedSymbol": "P:me.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -270995,7 +271291,7 @@
     },
     {
       "symbol": "P:mg.b(I)V#0",
-      "renamedSymbol": "P:mg.b(I)V#0",
+      "renamedSymbol": "P:mg.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -271248,7 +271544,7 @@
     },
     {
       "symbol": "P:mh.c(I)V#0",
-      "renamedSymbol": "P:mh.c(I)V#0",
+      "renamedSymbol": "P:mh.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -273701,7 +273997,7 @@
     },
     {
       "symbol": "P:nf.c(B)V#0",
-      "renamedSymbol": "P:nf.c(B)V#0",
+      "renamedSymbol": "P:nf.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275791,7 +276087,7 @@
     },
     {
       "symbol": "P:ob.a(I)V#0",
-      "renamedSymbol": "P:ob.a(I)V#0",
+      "renamedSymbol": "P:ob.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277496,7 +277792,7 @@
     },
     {
       "symbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#0",
-      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#0",
+      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -277507,7 +277803,7 @@
     },
     {
       "symbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#1",
-      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#1",
+      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -277518,7 +277814,7 @@
     },
     {
       "symbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#2",
-      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#2",
+      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -277529,7 +277825,7 @@
     },
     {
       "symbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#3",
-      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)Lbc;#3",
+      "renamedSymbol": "P:oj.a(IILjava/awt/Component;I)LAwtRasterBuffer;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -278145,7 +278441,7 @@
     },
     {
       "symbol": "P:ol.i(I)V#0",
-      "renamedSymbol": "P:ol.i(I)V#0",
+      "renamedSymbol": "P:ol.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -279289,7 +279585,7 @@
     },
     {
       "symbol": "P:pa.e(B)V#0",
-      "renamedSymbol": "P:pa.e(B)V#0",
+      "renamedSymbol": "P:pa.resetStaticState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -281676,7 +281972,7 @@
     },
     {
       "symbol": "P:pi.a(I)V#0",
-      "renamedSymbol": "P:pi.a(I)V#0",
+      "renamedSymbol": "P:pi.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -282006,7 +282302,7 @@
     },
     {
       "symbol": "P:pj.g(I)V#0",
-      "renamedSymbol": "P:pj.g(I)V#0",
+      "renamedSymbol": "P:pj.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -284998,7 +285294,7 @@
     },
     {
       "symbol": "P:qd.i(I)V#0",
-      "renamedSymbol": "P:qd.i(I)V#0",
+      "renamedSymbol": "P:qd.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -288628,7 +288924,7 @@
     },
     {
       "symbol": "P:rd.a(Z)V#0",
-      "renamedSymbol": "P:rd.a(Z)V#0",
+      "renamedSymbol": "P:rd.resetStaticState(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -293072,7 +293368,7 @@
     },
     {
       "symbol": "P:sm.b(I)V#0",
-      "renamedSymbol": "P:sm.b(I)V#0",
+      "renamedSymbol": "P:sm.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294403,7 +294699,7 @@
     },
     {
       "symbol": "P:th.h(I)V#0",
-      "renamedSymbol": "P:th.h(I)V#0",
+      "renamedSymbol": "P:th.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294755,7 +295051,7 @@
     },
     {
       "symbol": "P:tk.a(B)V#0",
-      "renamedSymbol": "P:tk.clearStaticReferences(B)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.clearStaticReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294766,7 +295062,7 @@
     },
     {
       "symbol": "P:tk.a(IC)C#0",
-      "renamedSymbol": "P:tk.a(IC)C#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.a(IC)C#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294777,7 +295073,7 @@
     },
     {
       "symbol": "P:tk.a(IC)C#1",
-      "renamedSymbol": "P:tk.a(IC)C#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.a(IC)C#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294788,7 +295084,7 @@
     },
     {
       "symbol": "P:tk.a(IILjava/awt/Component;I)V#0",
-      "renamedSymbol": "P:tk.a(IILjava/awt/Component;I)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294799,7 +295095,7 @@
     },
     {
       "symbol": "P:tk.a(IILjava/awt/Component;I)V#1",
-      "renamedSymbol": "P:tk.a(IILjava/awt/Component;I)V#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294810,7 +295106,7 @@
     },
     {
       "symbol": "P:tk.a(IILjava/awt/Component;I)V#2",
-      "renamedSymbol": "P:tk.a(IILjava/awt/Component;I)V#2",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -294821,7 +295117,7 @@
     },
     {
       "symbol": "P:tk.a(IILjava/awt/Component;I)V#3",
-      "renamedSymbol": "P:tk.a(IILjava/awt/Component;I)V#3",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.initialize(IILjava/awt/Component;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -294832,7 +295128,7 @@
     },
     {
       "symbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#0",
-      "renamedSymbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294843,7 +295139,7 @@
     },
     {
       "symbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#1",
-      "renamedSymbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294854,7 +295150,7 @@
     },
     {
       "symbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#2",
-      "renamedSymbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#2",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -294865,7 +295161,7 @@
     },
     {
       "symbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#3",
-      "renamedSymbol": "P:tk.a(Ljava/awt/Graphics;IBI)V#3",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.drawImage(Ljava/awt/Graphics;IBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -294876,7 +295172,7 @@
     },
     {
       "symbol": "P:tk.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "P:tk.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.addConsumer(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294887,7 +295183,7 @@
     },
     {
       "symbol": "P:tk.c(I)V#0",
-      "renamedSymbol": "P:tk.c(I)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.publishPixelsToConsumer(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294898,7 +295194,7 @@
     },
     {
       "symbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
-      "renamedSymbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294909,7 +295205,7 @@
     },
     {
       "symbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
-      "renamedSymbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294920,7 +295216,7 @@
     },
     {
       "symbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
-      "renamedSymbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -294931,7 +295227,7 @@
     },
     {
       "symbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
-      "renamedSymbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -294942,7 +295238,7 @@
     },
     {
       "symbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
-      "renamedSymbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -294953,7 +295249,7 @@
     },
     {
       "symbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
-      "renamedSymbol": "P:tk.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.imageUpdate(Ljava/awt/Image;IIIII)Z#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -294964,7 +295260,7 @@
     },
     {
       "symbol": "P:tk.isConsumer(Ljava/awt/image/ImageConsumer;)Z#0",
-      "renamedSymbol": "P:tk.isConsumer(Ljava/awt/image/ImageConsumer;)Z#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.isConsumer(Ljava/awt/image/ImageConsumer;)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294975,7 +295271,7 @@
     },
     {
       "symbol": "P:tk.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "P:tk.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.removeConsumer(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294986,7 +295282,7 @@
     },
     {
       "symbol": "P:tk.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "P:tk.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.requestTopDownLeftRightResend(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294997,7 +295293,7 @@
     },
     {
       "symbol": "P:tk.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
-      "renamedSymbol": "P:tk.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
+      "renamedSymbol": "P:ImageProducerRasterBuffer.startProduction(Ljava/awt/image/ImageConsumer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303654,7 +303950,7 @@
     },
     {
       "symbol": "P:wd.c(I)V#0",
-      "renamedSymbol": "P:wd.c(I)V#0",
+      "renamedSymbol": "P:wd.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -303742,7 +304038,7 @@
     },
     {
       "symbol": "P:we.a(I)V#0",
-      "renamedSymbol": "P:we.a(I)V#0",
+      "renamedSymbol": "P:we.resetStaticState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -306397,7 +306693,7 @@
       "original": "CrazyCrystals.java",
       "renamed": "CrazyCrystals.java",
       "inputSha256": "a08d8042f0911171e4fb913fce01c42b4c66ebb601c47a17fe8740dcec639b80",
-      "outputSha256": "a0a25a802d147d4be81d0d8b5b77d865b46d1fbbabf5007f24e962b297f52fb3",
+      "outputSha256": "670365a7c4825861ba90db1a07cb321db31c324c34dfdbecf50240df1df3158d",
       "edits": [
         {
           "start": 79,
@@ -306514,6 +306810,13 @@
           "symbol": "C:vf",
           "original": "vf",
           "renamed": "KeyboardInputHandler"
+        },
+        {
+          "start": 20718,
+          "end": 20719,
+          "symbol": "M:jf.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 20737,
@@ -306691,6 +306994,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 21334,
+          "end": 21336,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
           "start": 21337,
           "end": 21338,
           "symbol": "M:bc.b(I)V",
@@ -306747,6 +307057,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 21519,
+          "end": 21520,
+          "symbol": "M:me.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 21544,
           "end": 21546,
           "symbol": "C:wb",
@@ -306775,6 +307092,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 21708,
+          "end": 21709,
+          "symbol": "M:ob.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 21731,
           "end": 21732,
           "symbol": "M:pk.b(I)V",
@@ -306794,6 +307118,13 @@
           "symbol": "M:bn.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 21836,
+          "end": 21837,
+          "symbol": "M:kp.b(Z)V",
+          "original": "b",
+          "renamed": "resetStaticState"
         },
         {
           "start": 21887,
@@ -306992,11 +307323,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 22725,
+          "end": 22726,
+          "symbol": "M:ag.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 22748,
           "end": 22749,
           "symbol": "M:bp.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 22775,
+          "end": 22776,
+          "symbol": "M:ol.i(I)V",
+          "original": "i",
+          "renamed": "resetStaticState"
         },
         {
           "start": 22801,
@@ -307011,6 +307356,13 @@
           "symbol": "M:sa.d(Z)V",
           "original": "d",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 22827,
+          "end": 22828,
+          "symbol": "M:kl.h(B)V",
+          "original": "h",
+          "renamed": "resetStaticState"
         },
         {
           "start": 22854,
@@ -307095,6 +307447,13 @@
           "symbol": "M:de.f(I)V",
           "original": "f",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 23153,
+          "end": 23154,
+          "symbol": "M:pj.g(I)V",
+          "original": "g",
+          "renamed": "resetStaticState"
         },
         {
           "start": 23183,
@@ -307286,6 +307645,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 23798,
+          "end": 23799,
+          "symbol": "M:mg.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 23817,
           "end": 23819,
           "symbol": "C:md",
@@ -307396,6 +307762,13 @@
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24130,
+          "end": 24131,
+          "symbol": "M:gl.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 24159,
@@ -307538,11 +307911,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 24729,
+          "end": 24730,
+          "symbol": "M:pi.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 24749,
           "end": 24750,
           "symbol": "M:h.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 24768,
+          "end": 24769,
+          "symbol": "M:kf.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 24798,
@@ -307615,6 +308002,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 25131,
+          "end": 25132,
+          "symbol": "M:jc.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 25195,
           "end": 25196,
           "symbol": "M:lg.b(I)V",
@@ -307655,6 +308049,13 @@
           "symbol": "M:va.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 25388,
+          "end": 25390,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 25391,
@@ -307762,6 +308163,13 @@
           "renamed": "clearDeclaredStaticReferences"
         },
         {
+          "start": 25816,
+          "end": 25817,
+          "symbol": "M:jk.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 25838,
           "end": 25839,
           "symbol": "M:ei.f(B)V",
@@ -307837,6 +308245,13 @@
           "symbol": "M:ph.c(Z)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 26165,
+          "end": 26166,
+          "symbol": "M:pa.e(B)V",
+          "original": "e",
+          "renamed": "resetStaticState"
         },
         {
           "start": 26194,
@@ -307937,6 +308352,13 @@
           "renamed": "releaseDeclaredStaticReferences"
         },
         {
+          "start": 26448,
+          "end": 26449,
+          "symbol": "M:qd.i(I)V",
+          "original": "i",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 26469,
           "end": 26470,
           "symbol": "M:wf.c(I)V",
@@ -308000,6 +308422,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 26763,
+          "end": 26764,
+          "symbol": "M:th.h(I)V",
+          "original": "h",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 26796,
           "end": 26797,
           "symbol": "M:ce.b(Z)V",
@@ -308021,6 +308450,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 26891,
+          "end": 26892,
+          "symbol": "M:we.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 26915,
           "end": 26916,
           "symbol": "M:dp.a(I)V",
@@ -308028,11 +308464,32 @@
           "renamed": "clearDeclaredStaticReferences"
         },
         {
+          "start": 26937,
+          "end": 26938,
+          "symbol": "M:ca.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
+          "start": 26966,
+          "end": 26967,
+          "symbol": "M:ik.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 26994,
           "end": 26995,
           "symbol": "M:nk.c(I)V",
           "original": "c",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 27014,
+          "end": 27015,
+          "symbol": "M:mh.c(I)V",
+          "original": "c",
+          "renamed": "resetStaticState"
         },
         {
           "start": 27032,
@@ -308161,11 +308618,25 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 27636,
+          "end": 27637,
+          "symbol": "M:nf.c(B)V",
+          "original": "c",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 27663,
           "end": 27664,
           "symbol": "M:pd.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 27685,
+          "end": 27686,
+          "symbol": "M:rd.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 27729,
@@ -308259,6 +308730,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 28086,
+          "end": 28087,
+          "symbol": "M:sm.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 28129,
           "end": 28130,
           "symbol": "M:fa.a(Z)V",
@@ -308287,6 +308765,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 28231,
+          "end": 28232,
+          "symbol": "M:wd.c(I)V",
+          "original": "c",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 28292,
           "end": 28293,
           "symbol": "M:pe.d(I)V",
@@ -308306,6 +308791,13 @@
           "symbol": "M:pm.a(B)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 28375,
+          "end": 28376,
+          "symbol": "M:bh.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 28402,
@@ -308688,6 +309180,13 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 47866,
+          "end": 47868,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 47883,
           "end": 47885,
           "symbol": "C:dl",
@@ -308707,6 +309206,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 48167,
+          "end": 48169,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 49535,
@@ -308882,6 +309388,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 54653,
+          "end": 54654,
+          "symbol": "M:bc.a(I)V",
+          "original": "a",
+          "renamed": "setAsRasterTarget"
         },
         {
           "start": 54870,
@@ -309876,7 +310389,7 @@
       "original": "ag.java",
       "renamed": "ag.java",
       "inputSha256": "3c9edd8db117c11570cad2b3d5341f6b01f3b9cab1bb208b810e2c5e3e02c967",
-      "outputSha256": "e92effb4e3d7368e20a5ffb93ddbbc5045771258982ff9cf44fa06d52b61070d",
+      "outputSha256": "5b9da84dd1fdc4ecbd4111189af2d2d6db6284cbbf99d2ad1d110b53fb0bc28f",
       "edits": [
         {
           "start": 121,
@@ -309891,6 +310404,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 765,
+          "end": 766,
+          "symbol": "M:ag.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -312384,7 +312904,7 @@
       "original": "bb.java",
       "renamed": "bb.java",
       "inputSha256": "0cec08456676a5b1d5a56b4439b3f16fedf4b4cbded27ba2b71ffc9b79439f19",
-      "outputSha256": "7192d90e0bce304cfb42422f38bddb01a8b6027a00a04167e9d3a0793f7263eb",
+      "outputSha256": "68fb1fc914cc6618a6c70a61dc6a4b71d90c1013a08274cb1bac1a23fe985a0a",
       "edits": [
         {
           "start": 98,
@@ -312485,6 +313005,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 4450,
+          "end": 4452,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
           "start": 4961,
           "end": 4962,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -312502,10 +313029,17 @@
     },
     {
       "original": "bc.java",
-      "renamed": "bc.java",
+      "renamed": "AwtRasterBuffer.java",
       "inputSha256": "25c0062fb990a9735f8a99acdbb90e8bd258cffa4b8968f4a873b83a523402ff",
-      "outputSha256": "23d404816703fa7a3893c78830897cc809beb2bd30294ace11847aaaa40095b9",
+      "outputSha256": "698d254b76429a56ae27e6cfcc2afd6e98674ab8a8551d07f63143a728a1a4d6",
       "edits": [
+        {
+          "start": 53,
+          "end": 55,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
         {
           "start": 1391,
           "end": 1393,
@@ -312591,6 +313125,20 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6953,
+          "end": 6954,
+          "symbol": "M:bc.a(IILjava/awt/Component;I)V",
+          "original": "a",
+          "renamed": "initialize"
+        },
+        {
+          "start": 7035,
+          "end": 7036,
+          "symbol": "M:bc.a(I)V",
+          "original": "a",
+          "renamed": "setAsRasterTarget"
+        },
+        {
           "start": 7059,
           "end": 7061,
           "symbol": "C:kh",
@@ -312605,11 +313153,25 @@
           "renamed": "setRasterBuffer"
         },
         {
+          "start": 7215,
+          "end": 7216,
+          "symbol": "M:bc.a(IILjava/awt/Component;I)V",
+          "original": "a",
+          "renamed": "initialize"
+        },
+        {
           "start": 7299,
           "end": 7300,
           "symbol": "M:bc.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 7531,
+          "end": 7532,
+          "symbol": "M:bc.a(Ljava/awt/Graphics;IBI)V",
+          "original": "a",
+          "renamed": "drawImage"
         }
       ]
     },
@@ -312915,8 +313477,16 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "cc3bfcc0b552e8a6b6e5f906519dfe71e04ff9e81413f95da314b09aebd4b530",
-      "outputSha256": "cc3bfcc0b552e8a6b6e5f906519dfe71e04ff9e81413f95da314b09aebd4b530",
-      "edits": []
+      "outputSha256": "f643be47b85f0c8a981c7dacbc797269e57e87a505b29312fc7ddca97209ab6c",
+      "edits": [
+        {
+          "start": 878,
+          "end": 879,
+          "symbol": "M:bh.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        }
+      ]
     },
     {
       "original": "bi.java",
@@ -313894,7 +314464,7 @@
       "original": "bq.java",
       "renamed": "bq.java",
       "inputSha256": "9e55dbb65b73bb8b58bb3b7fbe63a4c9eab2ffab9b25c2f3b032f5fa0777ce96",
-      "outputSha256": "ec4806e06028ce755071caef233fe10703708a1ac508cdc019f8c21824ef8327",
+      "outputSha256": "cad7ec4966121ec550ee84780f542cca3b803fb603fee182fdaf5ddee06a9069",
       "edits": [
         {
           "start": 344,
@@ -313937,6 +314507,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1805,
+          "end": 1806,
+          "symbol": "M:bc.a(Ljava/awt/Graphics;IBI)V",
+          "original": "a",
+          "renamed": "drawImage"
         },
         {
           "start": 2624,
@@ -314057,7 +314634,7 @@
       "original": "ca.java",
       "renamed": "ca.java",
       "inputSha256": "8d77e5907963feab2ddaa0a4dff37ebb83003585fbdd2f428be51d3f3f25374d",
-      "outputSha256": "1916555463363a08a11735e10511bc85f516bb09415a47abfadc5671fbcbcab2",
+      "outputSha256": "53a4b01652b40bc6baf6a85b498a7669c7eeedaecddfd8a4ebb158d1d5e3a1f3",
       "edits": [
         {
           "start": 61,
@@ -314065,6 +314642,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 980,
+          "end": 981,
+          "symbol": "M:ca.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1540,
@@ -316545,7 +317129,7 @@
       "original": "da.java",
       "renamed": "da.java",
       "inputSha256": "ed103909f4200ed3ba52ccef5e79b5d516f10511b138d8c188ed55783bef9bc8",
-      "outputSha256": "30be2201bde5bfd246c18ba847921e95b8d970ebde54c0a4fc05b223748c5891",
+      "outputSha256": "ffbc006563f05446eff448abc2a806845d116ef871b72b99be8ceedb636dc4ea",
       "edits": [
         {
           "start": 2650,
@@ -316842,11 +317426,67 @@
           "renamed": "IsaacRandom"
         },
         {
+          "start": 19933,
+          "end": 19935,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
           "start": 19990,
           "end": 19992,
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 20032,
+          "end": 20034,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 20077,
+          "end": 20079,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 20204,
+          "end": 20206,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 20378,
+          "end": 20380,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 20425,
+          "end": 20427,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 20467,
+          "end": 20469,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 20607,
+          "end": 20609,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 21178,
@@ -318161,7 +318801,7 @@
       "original": "dk.java",
       "renamed": "dk.java",
       "inputSha256": "ededb3a3d7910cea9e4d870e4e18dad4dad92c2976b89010dfe184eac97c5c3c",
-      "outputSha256": "44ae1cf1df63a3da1e3f80abb885fd172392d0185ed96f426d77582e6a0fd0da",
+      "outputSha256": "ced73fda16bffca6b2318b873f54c472f82504056bec861c054e8ed159040a8a",
       "edits": [
         {
           "start": 61,
@@ -318178,6 +318818,13 @@
           "renamed": "PcmSample"
         },
         {
+          "start": 295,
+          "end": 297,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
           "start": 1770,
           "end": 1772,
           "symbol": "C:ko",
@@ -318190,6 +318837,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3406,
+          "end": 3408,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 3945,
@@ -323989,7 +324643,7 @@
       "original": "fe.java",
       "renamed": "fe.java",
       "inputSha256": "d4839851aabbe4a916e42a747ee52203cdd7c1a21d8e9c38bdd9bceeb2c0d349",
-      "outputSha256": "c67a6f7d114f7a01a314982c4bd2e221b3a0dcb104b4c4d09a7979f5b6951aa3",
+      "outputSha256": "f53bf15a9b94e0437cefea9a9742c4d4278577ac996b36fe454a17823e92b7e6",
       "edits": [
         {
           "start": 248,
@@ -324011,6 +324665,13 @@
           "symbol": "C:ij",
           "original": "ij",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 3086,
+          "end": 3088,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 3894,
@@ -324088,6 +324749,13 @@
           "symbol": "C:kg",
           "original": "kg",
           "renamed": "RawPcmStream"
+        },
+        {
+          "start": 5036,
+          "end": 5038,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 5056,
@@ -325659,7 +326327,7 @@
       "original": "gh.java",
       "renamed": "gh.java",
       "inputSha256": "10c604563e1bc40d25adb907af762f14c442a1a4be9d75f16baa3ef07f3d6fd1",
-      "outputSha256": "003ce06a47075bc6c6f5f6bd72543bcd038c48532f9e132e992c1cae074f2bfe",
+      "outputSha256": "b6ed22ecbe6dddbe8a6253fc40dc70be7f3159e0327b8ca8f14f335c0301a9f3",
       "edits": [
         {
           "start": 2949,
@@ -325947,6 +326615,20 @@
           "symbol": "C:si",
           "original": "si",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 31426,
+          "end": 31428,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 31462,
+          "end": 31464,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 31882,
@@ -326244,7 +326926,7 @@
       "original": "gl.java",
       "renamed": "BoundedRandomAccessFile.java",
       "inputSha256": "d35de9780e486c9c5c78aec21feccdc37ce645fc8c4c56990170b5697d201d6c",
-      "outputSha256": "8fc026c2a711707dc456ece8e187be271a26a7d92f8f6f32f11bd48aa1614ec0",
+      "outputSha256": "6bff98d5b6fec44a70a0f4b04de49ec4fc02207e0e1e1f8e86d6c92ca8b4affe",
       "edits": [
         {
           "start": 69,
@@ -326329,6 +327011,13 @@
           "symbol": "M:gl.d(I)V",
           "original": "d",
           "renamed": "close"
+        },
+        {
+          "start": 4578,
+          "end": 4579,
+          "symbol": "M:gl.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 4778,
@@ -327457,10 +328146,53 @@
     },
     {
       "original": "hg.java",
-      "renamed": "hg.java",
+      "renamed": "BufferedImageRasterBuffer.java",
       "inputSha256": "6ddbabbf194ba4bd8a163425e6f432d17e7bb573f174f2ec9006c85dea62e559",
-      "outputSha256": "6ddbabbf194ba4bd8a163425e6f432d17e7bb573f174f2ec9006c85dea62e559",
-      "edits": []
+      "outputSha256": "2f650329552524dbab6432aad6bc2ce3cabf26ddaea2bc17f22c88f0ce59849e",
+      "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:hg",
+          "original": "hg",
+          "renamed": "BufferedImageRasterBuffer"
+        },
+        {
+          "start": 82,
+          "end": 84,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 143,
+          "end": 144,
+          "symbol": "M:hg.a(Ljava/awt/Graphics;IBI)V",
+          "original": "a",
+          "renamed": "drawImage"
+        },
+        {
+          "start": 391,
+          "end": 392,
+          "symbol": "M:hg.a(IILjava/awt/Component;I)V",
+          "original": "a",
+          "renamed": "initialize"
+        },
+        {
+          "start": 1307,
+          "end": 1308,
+          "symbol": "M:bc.a(I)V",
+          "original": "a",
+          "renamed": "setAsRasterTarget"
+        },
+        {
+          "start": 1334,
+          "end": 1336,
+          "symbol": "M:hg.<init>()V",
+          "original": "hg",
+          "renamed": "BufferedImageRasterBuffer"
+        }
+      ]
     },
     {
       "original": "hh.java",
@@ -329356,7 +330088,7 @@
       "original": "ih.java",
       "renamed": "GzipDecompressor.java",
       "inputSha256": "c796ac76e067bb1bb2b5348b90e529e5224bd209761f8289af734433ced3e30b",
-      "outputSha256": "15974a29781d16210bf44803e66ce440a0aba031b565a954c6e4e2064c1e2015",
+      "outputSha256": "b5a6d65bee4407b7e168122c1d5a1ce82b7adfe42f0c86a1a7eec96d3d4c43e3",
       "edits": [
         {
           "start": 71,
@@ -329483,6 +330215,13 @@
           "symbol": "M:kh.a()V",
           "original": "a",
           "renamed": "clearRaster"
+        },
+        {
+          "start": 2495,
+          "end": 2496,
+          "symbol": "M:bc.a(I)V",
+          "original": "a",
+          "renamed": "setAsRasterTarget"
         },
         {
           "start": 3262,
@@ -329702,7 +330441,7 @@
       "original": "ik.java",
       "renamed": "ik.java",
       "inputSha256": "6a7a092dad839e3d846e47702375f266a22f9b82edc5b3953db87621fbb7c0f4",
-      "outputSha256": "f19d36057bf628dfac4c89be901772a83e7fadc8fcb6d6aabae23a206a3f2d52",
+      "outputSha256": "fc708341188091a5c396cb33b08932b9a3b86ea822de18fe4c4cffe5180356ec",
       "edits": [
         {
           "start": 2012,
@@ -329724,6 +330463,13 @@
           "symbol": "C:bm",
           "original": "bm",
           "renamed": "IsaacRandom"
+        },
+        {
+          "start": 2992,
+          "end": 2993,
+          "symbol": "M:ik.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -330419,7 +331165,7 @@
       "original": "ip.java",
       "renamed": "ip.java",
       "inputSha256": "f754b6a85e8e6fc6cff058add0401f1f87635e232998d5a76a6cf8de17e415c4",
-      "outputSha256": "aebc9f3eac69a2661f2467e8526887969dbffe0d740edf49a5437e72558f1e53",
+      "outputSha256": "c5debe71bd2bc971ba4b462f2a8afcdade07222903fb70a83c060d98423d0e2a",
       "edits": [
         {
           "start": 294,
@@ -330476,6 +331222,20 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2875,
+          "end": 2877,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 2907,
+          "end": 2909,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 2952,
@@ -330829,7 +331589,7 @@
       "original": "jc.java",
       "renamed": "jc.java",
       "inputSha256": "427c456294f7eada28ffbf1b7628427f7138e5ed7416ee7a8c4a292e913d8a41",
-      "outputSha256": "dc438735ecddcc6baaa991c2cce4476006798d236142114e83b38977d92398cc",
+      "outputSha256": "02eb015aeeb26110edf06e3054c43e44476e9a7bb7346f847c79b1de6d44c0ca",
       "edits": [
         {
           "start": 94,
@@ -330837,6 +331597,13 @@
           "symbol": "C:ko",
           "original": "ko",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 165,
+          "end": 166,
+          "symbol": "M:jc.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -330944,7 +331711,7 @@
       "original": "jf.java",
       "renamed": "jf.java",
       "inputSha256": "aef4d0d9b05f75def3dc2cc6b2ee6bd5a710c369e5c105b48a5ad46c17904a4b",
-      "outputSha256": "2be86a7cb52345c6601a30d5f7deee0ca24e3b032bec61cb4c85001daaec17be",
+      "outputSha256": "c743d53b1f2d53057e3e2e112b88221cbdd0fb457ab1869a5c862c5185d76797",
       "edits": [
         {
           "start": 99,
@@ -330952,6 +331719,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 137,
+          "end": 138,
+          "symbol": "M:jf.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 347,
@@ -331263,7 +332037,7 @@
       "original": "jj.java",
       "renamed": "jj.java",
       "inputSha256": "957c424c6e5d36f8a9bebcfe7f310b5b33b860604a3e46f3c09e10ba1c1b0378",
-      "outputSha256": "5cc9dfe8d1add4a5eded804baeef481daf132cf5f3a7f5891d8bb78cc96a2d09",
+      "outputSha256": "ce48a02296a7c2d8555cff145e77b4ecaa4c404c2fc5cab71b54a541a68881ed",
       "edits": [
         {
           "start": 113,
@@ -331355,6 +332129,20 @@
           "symbol": "F:ng.field_f:I",
           "original": "field_f",
           "renamed": "position"
+        },
+        {
+          "start": 3089,
+          "end": 3091,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 3185,
+          "end": 3187,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 3295,
@@ -331523,8 +332311,15 @@
       "original": "jk.java",
       "renamed": "jk.java",
       "inputSha256": "e8579c6c2a604df0fd02f9bcda5c23bce77998ea2298d715782ba328fd2f153b",
-      "outputSha256": "15a1dabe54b0492f50e0a31b3d10690ae366787a253f955ae6c4ea5a51a871b8",
+      "outputSha256": "0848ad19f84524ec1e46ca74f51d92cac9a7f626e3b28d0d96b4117771b9d4ef",
       "edits": [
+        {
+          "start": 438,
+          "end": 439,
+          "symbol": "M:jk.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 793,
           "end": 794,
@@ -333260,8 +334055,16 @@
       "original": "kf.java",
       "renamed": "kf.java",
       "inputSha256": "7b7f822ebe1ccb81e0baf0748fbe4d33beb983fa2e3e812d7c27a534a6a9182d",
-      "outputSha256": "7b7f822ebe1ccb81e0baf0748fbe4d33beb983fa2e3e812d7c27a534a6a9182d",
-      "edits": []
+      "outputSha256": "f65f1d789122a6073c7014d6330969e6cbe0f6c4782b202dab888de5ed339285",
+      "edits": [
+        {
+          "start": 282,
+          "end": 283,
+          "symbol": "M:kf.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        }
+      ]
     },
     {
       "original": "kg.java",
@@ -334881,7 +335684,7 @@
       "original": "kl.java",
       "renamed": "kl.java",
       "inputSha256": "169b15c41be349f9c08c144dc8219941a2032ad1f769e2ce0e51d518d64a94cf",
-      "outputSha256": "2f5f8aec143a11013a0929cea843c1f21488e9da02f8921adbe0e8a7df8dd0b9",
+      "outputSha256": "a5fbfae0d77549c4dbc7a2bf862532a2692c0610f094de1f25e4c0ad8be7dddf",
       "edits": [
         {
           "start": 909,
@@ -334889,6 +335692,20 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1095,
+          "end": 1096,
+          "symbol": "M:kl.h(B)V",
+          "original": "h",
+          "renamed": "resetStaticState"
+        },
+        {
+          "start": 1369,
+          "end": 1370,
+          "symbol": "M:kl.h(B)V",
+          "original": "h",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1497,
@@ -334924,6 +335741,13 @@
           "symbol": "M:kh.f(IIII)V",
           "original": "f",
           "renamed": "drawHorizontalLine"
+        },
+        {
+          "start": 3376,
+          "end": 3377,
+          "symbol": "M:kl.h(B)V",
+          "original": "h",
+          "renamed": "resetStaticState"
         },
         {
           "start": 4023,
@@ -335228,7 +336052,7 @@
       "original": "kp.java",
       "renamed": "kp.java",
       "inputSha256": "4c2740d8f74a8621b33549bce50e7c92bdcf462e856987bd577480720f4b6380",
-      "outputSha256": "203ee529603f79abcad5c332020b8da6ee62dea70a1fa5daed2415371de3d66d",
+      "outputSha256": "05ca831f25fc5c27d991994a8e16694fb0a49e978eddb80b50fc82d5b5849760",
       "edits": [
         {
           "start": 194,
@@ -335236,6 +336060,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 1929,
+          "end": 1930,
+          "symbol": "M:kp.b(Z)V",
+          "original": "b",
+          "renamed": "resetStaticState"
         },
         {
           "start": 3335,
@@ -335250,6 +336081,13 @@
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 4816,
+          "end": 4817,
+          "symbol": "M:kp.b(Z)V",
+          "original": "b",
+          "renamed": "resetStaticState"
         },
         {
           "start": 4976,
@@ -335287,6 +336125,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 10017,
+          "end": 10018,
+          "symbol": "M:kp.b(Z)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 10371,
           "end": 10373,
           "symbol": "C:dl",
@@ -335313,6 +336158,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 11871,
+          "end": 11872,
+          "symbol": "M:kp.b(Z)V",
+          "original": "b",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -335398,7 +336250,7 @@
       "original": "la.java",
       "renamed": "la.java",
       "inputSha256": "8dd8b29a04eae6769d8e0a254f266eb22c204f5c2c8fd1ffb11175e4eef6a008",
-      "outputSha256": "6822a909052a7eb1ab6d428bc7bc90bcc82dda070bc422b32426c557e1e8071a",
+      "outputSha256": "afd69997dc365aa3b974316573767479efeded5c54ab1c90642340b26781c7e9",
       "edits": [
         {
           "start": 260,
@@ -336136,6 +336988,41 @@
           "renamed": "fillRoundedRectangleAlpha"
         },
         {
+          "start": 10824,
+          "end": 10826,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 11074,
+          "end": 11076,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 11853,
+          "end": 11855,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 12122,
+          "end": 12124,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 12349,
+          "end": 12351,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
           "start": 12434,
           "end": 12436,
           "symbol": "C:md",
@@ -336452,7 +337339,7 @@
       "original": "le.java",
       "renamed": "le.java",
       "inputSha256": "f06be91a5fd78dca91e0174ba3ba0f158db240f442906f2d358aad1aa4e72895",
-      "outputSha256": "83fa23a2bfbe947bc6cfbff4a1e4868059f19328d4db00e9423d9dd6ba2841a0",
+      "outputSha256": "f8956a8b37caee9bc3d90d8d8894ee17d9eb5db2ef4b664177c7ea601069b6a3",
       "edits": [
         {
           "start": 77,
@@ -336593,6 +337480,20 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 2729,
+          "end": 2731,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 2768,
+          "end": 2770,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 2897,
@@ -337944,7 +338845,7 @@
       "original": "me.java",
       "renamed": "me.java",
       "inputSha256": "0cf2a8f9a15cdc7db81f7598533e2b2262a946705d12c2b3d545b93e21ce4995",
-      "outputSha256": "c582924d9b764bb30435ec5802de8dd85fb8022ac52eb181c6b2d161247f97bd",
+      "outputSha256": "274d0f7199e97bbed81fe5e686993e79faba82b67e4f2bc2688bbb510b8fd593",
       "edits": [
         {
           "start": 222,
@@ -338003,6 +338904,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 1447,
+          "end": 1448,
+          "symbol": "M:me.a(B)V",
+          "original": "a",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 1670,
           "end": 1671,
           "symbol": "M:me.a(I)V",
@@ -338051,7 +338959,7 @@
       "original": "mg.java",
       "renamed": "mg.java",
       "inputSha256": "43b5c1d717470c35fd55d6bf472ab8c4f6549d5371a3b8fc236e81e611bcc97d",
-      "outputSha256": "480e4ba2f246f53764de3daa7fc7c72916e7dba129010d7c00335a732c8a5747",
+      "outputSha256": "055f9efbd6ad9ac52237e4542c15b82106e29ce0b8722fc38c5f22ad076e34dd",
       "edits": [
         {
           "start": 69,
@@ -338075,11 +338983,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 356,
+          "end": 357,
+          "symbol": "M:mg.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 1194,
           "end": 1196,
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 1487,
+          "end": 1488,
+          "symbol": "M:mg.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
         },
         {
           "start": 2194,
@@ -338094,8 +339016,15 @@
       "original": "mh.java",
       "renamed": "mh.java",
       "inputSha256": "ba5f10b0ab16ba5371978e2051db0b57f27c07753c4904dc8e2e8d0974de1f50",
-      "outputSha256": "5153df66907637b83996461eb182e8457f4f862460c0a3b6835bc0fb4262b1bb",
+      "outputSha256": "a93d107b7961e34f5661d0609b603bd20609787c61452c7fa1781eb0ced92235",
       "edits": [
+        {
+          "start": 793,
+          "end": 794,
+          "symbol": "M:mh.c(I)V",
+          "original": "c",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 823,
           "end": 825,
@@ -338109,6 +339038,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1128,
+          "end": 1129,
+          "symbol": "M:mh.c(I)V",
+          "original": "c",
+          "renamed": "resetStaticState"
         },
         {
           "start": 1326,
@@ -338517,7 +339453,7 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "047d2ea6714ad8efa7b8e91d2c07e83ccbab905eb6041be475ce75d0e28115e4",
-      "outputSha256": "fd53ff4c9cc82b2244d20fb8205f37ddd2fad7bcea3f1ef152fa9f696d15323f",
+      "outputSha256": "a5c3c646ccc60b46422fb5ea3dc0c187e33003c1fe9312afd24e15a048a5cc6e",
       "edits": [
         {
           "start": 112,
@@ -338546,6 +339482,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 566,
+          "end": 568,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 3173,
@@ -339697,7 +340640,7 @@
       "original": "nf.java",
       "renamed": "nf.java",
       "inputSha256": "386e534ed68155698d21442c619268eaf4d177e6b84f9a6a4f47b4b6bc561dac",
-      "outputSha256": "de200a54d846fc0742679c8b9b757b0bd6db821fa71a67c13bdc9679e5fcd8ad",
+      "outputSha256": "385d9613fc2946eb9559a881b72145cf45acafbd334361020f34bf8e983ad9e1",
       "edits": [
         {
           "start": 108,
@@ -339705,6 +340648,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 587,
+          "end": 588,
+          "symbol": "M:nf.c(B)V",
+          "original": "c",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -343406,7 +344356,7 @@
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "e7adea9e4b906459ba88cf361eed3af5531664b44d550ec679669642cccb14e4",
-      "outputSha256": "ccd49a28787d011e03b1f258d51913d9d4f308db7ab73db56b13d0004fa9f457",
+      "outputSha256": "370e7d51d1ae4e4758e27b5ba55a191736569202e507b203d1614ffeeb0e75b0",
       "edits": [
         {
           "start": 138,
@@ -343449,6 +344399,13 @@
           "symbol": "C:ng",
           "original": "ng",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 631,
+          "end": 632,
+          "symbol": "M:ob.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 3264,
@@ -344289,7 +345246,7 @@
       "original": "oj.java",
       "renamed": "oj.java",
       "inputSha256": "b5def4ed143609808848d41ee494cb1a705ef06d34f237b7c923f37120971883",
-      "outputSha256": "586182f0d06cade66c567811c73d216b35a5413a6afb9a2173328d9f1b47ea07",
+      "outputSha256": "f9ab96b8cfd66c130720a6f5a1c9717b3474b47d9caf588a2d47fe5adc5c2eec",
       "edits": [
         {
           "start": 224,
@@ -344348,11 +345305,96 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 10209,
+          "end": 10211,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 10414,
+          "end": 10416,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 10440,
+          "end": 10442,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 10470,
+          "end": 10472,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 10503,
+          "end": 10505,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 10778,
+          "end": 10780,
+          "symbol": "C:hg",
+          "original": "hg",
+          "renamed": "BufferedImageRasterBuffer",
+          "kind": "class-name-literal"
+        },
+        {
           "start": 10839,
           "end": 10840,
           "symbol": "M:oj.f(B)V",
           "original": "f",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 10892,
+          "end": 10894,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 10937,
+          "end": 10938,
+          "symbol": "M:bc.a(IILjava/awt/Component;I)V",
+          "original": "a",
+          "renamed": "initialize"
+        },
+        {
+          "start": 11269,
+          "end": 11271,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 11291,
+          "end": 11293,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
+        {
+          "start": 11316,
+          "end": 11317,
+          "symbol": "M:bc.a(IILjava/awt/Component;I)V",
+          "original": "a",
+          "renamed": "initialize"
+        },
+        {
+          "start": 11408,
+          "end": 11410,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 11990,
@@ -344473,7 +345515,7 @@
       "original": "ol.java",
       "renamed": "ol.java",
       "inputSha256": "746b06dce82297ac1a8695f711ecc35e6e58171c7066c29c175ba047b9607952",
-      "outputSha256": "e2b4534cb35022b211752c5e22753bccc03d7ec35c57f94f5e6000909aff97a3",
+      "outputSha256": "29385ca3d9dc287653b38dfd8c0e210fc655fbfa57b67c415f9547f36f65b0d4",
       "edits": [
         {
           "start": 231,
@@ -344509,6 +345551,13 @@
           "symbol": "M:jb.a(Z)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 1679,
+          "end": 1680,
+          "symbol": "M:ol.i(I)V",
+          "original": "i",
+          "renamed": "resetStaticState"
         },
         {
           "start": 2883,
@@ -344968,7 +346017,7 @@
       "original": "pa.java",
       "renamed": "pa.java",
       "inputSha256": "1e09e6f85641f3ed64b3c69a2473d5817dec809a973429ea19a74c6cca9efb41",
-      "outputSha256": "5d97c83653d9d9061ed424e6d7a7754b439dec6d6a6707ecfdf4fc32113543fb",
+      "outputSha256": "ed573685420e8f819bc44a6be73835423ca570416bd1f539f6edeb5a6ded1752",
       "edits": [
         {
           "start": 169,
@@ -344985,11 +346034,25 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 3014,
+          "end": 3015,
+          "symbol": "M:pa.e(B)V",
+          "original": "e",
+          "renamed": "resetStaticState"
+        },
+        {
           "start": 3766,
           "end": 3767,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4082,
+          "end": 4083,
+          "symbol": "M:pa.e(B)V",
+          "original": "e",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -345900,7 +346963,7 @@
       "original": "pi.java",
       "renamed": "pi.java",
       "inputSha256": "bd668d60d938ffb12c83a8c4d89a63404f841e9cb05a435ac2f0e74358cc28d1",
-      "outputSha256": "9972ecaf0b47b13b65446c129350b8e7efeffe18544414ed43b29c84a2ca4e55",
+      "outputSha256": "552416417bcf235ad09a41a0b2345f80b17b0d4276fbe7ce520da92cdc38d0dd",
       "edits": [
         {
           "start": 61,
@@ -345922,6 +346985,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "PlatformTask"
+        },
+        {
+          "start": 288,
+          "end": 289,
+          "symbol": "M:pi.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -345929,7 +346999,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "abd1b5bc9a114c77591a40447b21c6022534efcc2a97440aaaad79f7e6d1e702",
-      "outputSha256": "838c477ab5a25f4b55ce745bff93325dd8a7db01f0406a910f133f024083a651",
+      "outputSha256": "a8d367d9cd4f4adf783c058595a63fd59830d2ed5dd57778aca6a20066c52154",
       "edits": [
         {
           "start": 3231,
@@ -345944,6 +347014,13 @@
           "symbol": "C:jm",
           "original": "jm",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 4042,
+          "end": 4043,
+          "symbol": "M:pj.g(I)V",
+          "original": "g",
+          "renamed": "resetStaticState"
         },
         {
           "start": 4627,
@@ -346239,7 +347316,7 @@
       "original": "pl.java",
       "renamed": "pl.java",
       "inputSha256": "72286cb7be879cb92bbe323e1f5e80309ae69f9f0589b986254c4de85d5ff571",
-      "outputSha256": "a3098ca8169dc81ead73d9874d3414b5e6851509170fefedb777b54b9806596b",
+      "outputSha256": "eeb9e549e81c5a0debacc707d578795570625031ddf803be2a145de547c5934a",
       "edits": [
         {
           "start": 61,
@@ -346296,6 +347373,13 @@
           "symbol": "M:kh.a()V",
           "original": "a",
           "renamed": "clearRaster"
+        },
+        {
+          "start": 1659,
+          "end": 1661,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
         },
         {
           "start": 2401,
@@ -347995,8 +349079,15 @@
       "original": "qd.java",
       "renamed": "qd.java",
       "inputSha256": "589789c2093203ef7d808ff8ed284aca83374b0c9894fed6424f4ab15c6be443",
-      "outputSha256": "90e0fd4c1750ac15555969438a6073503898d536e4771655b22c5d15f3387a6e",
+      "outputSha256": "87519f2114038975eec0138edaa923e68e40d072591fed60a55f44bbe555c31d",
       "edits": [
+        {
+          "start": 197,
+          "end": 198,
+          "symbol": "M:qd.i(I)V",
+          "original": "i",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 788,
           "end": 789,
@@ -349168,7 +350259,7 @@
       "original": "rb.java",
       "renamed": "rb.java",
       "inputSha256": "f6855124d509b6dd84d2baf7bb48437e8de3e3f47ceeaf6de139b1a1cd9e86a4",
-      "outputSha256": "7e953ac201e2c015570ce9ffb4607303fb4e8e196694d2d4e0b63035de01f344",
+      "outputSha256": "25dac8c77b2bb7d92fae221409be19e12af1b8b1c5c032da714f5324f116910f",
       "edits": [
         {
           "start": 265,
@@ -349225,6 +350316,13 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 3136,
+          "end": 3137,
+          "symbol": "M:bc.a(I)V",
+          "original": "a",
+          "renamed": "setAsRasterTarget"
         },
         {
           "start": 3475,
@@ -349401,7 +350499,7 @@
       "original": "rd.java",
       "renamed": "rd.java",
       "inputSha256": "9c2913cd6d4f638e545ea588a04414bb4be094f44f1c00018e30a17167e1d439",
-      "outputSha256": "e626ddc9e24b220b475aca87e746c9a5c86a392cee9b18e87416b96885732f1c",
+      "outputSha256": "fee23272a123dbde1f7809634602ed15749fee5105f2c3cc0810345217f52f4e",
       "edits": [
         {
           "start": 108,
@@ -349423,6 +350521,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2716,
+          "end": 2717,
+          "symbol": "M:rd.a(Z)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 3067,
@@ -351330,7 +352435,7 @@
       "original": "ro.java",
       "renamed": "ro.java",
       "inputSha256": "1d5c75910206b9af8b3b9dfb9a726522dd755eda153c61e0b6f9889db066a55b",
-      "outputSha256": "2ae0877f509613a60d7ac17140206679471237c2f5e1e40231488363755ea420",
+      "outputSha256": "5837da9baf5ebbc29aa64920c9c3b75a83d071a5201ab33c8ae9d514091bce2d",
       "edits": [
         {
           "start": 98,
@@ -351506,6 +352611,62 @@
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 7415,
+          "end": 7417,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 9422,
+          "end": 9424,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 10769,
+          "end": 10771,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 12943,
+          "end": 12945,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 14945,
+          "end": 14947,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 15995,
+          "end": 15997,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 17416,
+          "end": 17418,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 19713,
+          "end": 19715,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 21108,
@@ -351999,7 +353160,7 @@
       "original": "sb.java",
       "renamed": "sb.java",
       "inputSha256": "75d9ebbbb87c96f6d9f14afbf093891402cb72358ae28d48d7c144e14f7dc137",
-      "outputSha256": "4f53efca9b5afcc4d59c857357bc9feacd011778d2ba266f5b7d024b65612cab",
+      "outputSha256": "b919f0abca5b978b07e5a0a6e3247ebd7aaedc31b1894ce8ba5b19de9d210f76",
       "edits": [
         {
           "start": 194,
@@ -352128,11 +353289,46 @@
           "renamed": "GzipDecompressor"
         },
         {
+          "start": 5930,
+          "end": 5932,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 5956,
+          "end": 5958,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 5973,
           "end": 5975,
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 6018,
+          "end": 6020,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6073,
+          "end": 6075,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6109,
+          "end": 6111,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 6126,
@@ -352142,11 +353338,46 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 6173,
+          "end": 6175,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6225,
+          "end": 6227,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6271,
+          "end": 6273,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 6288,
           "end": 6290,
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 6337,
+          "end": 6339,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6405,
+          "end": 6407,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 6434,
@@ -352163,6 +353394,41 @@
           "renamed": "clearRaster"
         },
         {
+          "start": 6609,
+          "end": 6611,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 6977,
+          "end": 6979,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 7020,
+          "end": 7022,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 7054,
+          "end": 7056,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 7122,
+          "end": 7124,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 7147,
           "end": 7149,
           "symbol": "C:kh",
@@ -352177,6 +353443,13 @@
           "renamed": "clearRaster"
         },
         {
+          "start": 7186,
+          "end": 7188,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 7203,
           "end": 7205,
           "symbol": "C:dl",
@@ -352184,11 +353457,53 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 7266,
+          "end": 7268,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 7416,
+          "end": 7418,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 7764,
           "end": 7766,
           "symbol": "C:ih",
           "original": "ih",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 8135,
+          "end": 8137,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8176,
+          "end": 8178,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8208,
+          "end": 8210,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8274,
+          "end": 8276,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 8297,
@@ -352205,11 +353520,32 @@
           "renamed": "clearRaster"
         },
         {
+          "start": 8332,
+          "end": 8334,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 8349,
           "end": 8351,
           "symbol": "C:dl",
           "original": "dl",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 8410,
+          "end": 8412,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8552,
+          "end": 8554,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         }
       ]
     },
@@ -352849,8 +354185,15 @@
       "original": "sm.java",
       "renamed": "sm.java",
       "inputSha256": "167c125c7416e57d46d79d8c293e2e4888b11740e306b96db59461ee3c5b25cc",
-      "outputSha256": "86a7c194f989c37bf09df0f462cc5a62ca32dbe210e2acb3a1e7c0f401dfa9d9",
+      "outputSha256": "6cd4cf4399ab988995a7b5aaa215dd15ae5ff28f4064d739bbfff4087cdc1253",
       "edits": [
+        {
+          "start": 258,
+          "end": 259,
+          "symbol": "M:sm.b(I)V",
+          "original": "b",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 588,
           "end": 589,
@@ -353997,7 +355340,7 @@
       "original": "th.java",
       "renamed": "th.java",
       "inputSha256": "794d50d7cce9fa96ed31f0a4b3ecf61fdbd33be7b0dc2e120fea75b691664c1c",
-      "outputSha256": "16b01fa30cd9158e6f38c8d15cfd11c30b26c454a7c01c3fd781cc4e1344dc57",
+      "outputSha256": "c0b06010f4526e445501955cc0e26536033fbc4affce8a8a6313ca68c3b07097",
       "edits": [
         {
           "start": 659,
@@ -354019,6 +355362,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 1900,
+          "end": 1901,
+          "symbol": "M:th.h(I)V",
+          "original": "h",
+          "renamed": "resetStaticState"
         }
       ]
     },
@@ -354551,10 +355901,24 @@
     },
     {
       "original": "tk.java",
-      "renamed": "tk.java",
+      "renamed": "ImageProducerRasterBuffer.java",
       "inputSha256": "7075e98bb5924d1b127a03bbf4e183eca4364f7de2fe28651e2e5d3b31b795cb",
-      "outputSha256": "6cbbe2774040dd6aefe8a512c18589156b401a8733a075842f14ee3fa5a2a848",
+      "outputSha256": "e4877bd1ac353d2b973aba1aa746da370a48feae4f4b09b1639bca8aa1c2c120",
       "edits": [
+        {
+          "start": 71,
+          "end": 73,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 82,
+          "end": 84,
+          "symbol": "C:bc",
+          "original": "bc",
+          "renamed": "AwtRasterBuffer"
+        },
         {
           "start": 168,
           "end": 170,
@@ -354570,6 +355934,20 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 380,
+          "end": 381,
+          "symbol": "M:tk.a(Ljava/awt/Graphics;IBI)V",
+          "original": "a",
+          "renamed": "drawImage"
+        },
+        {
+          "start": 529,
+          "end": 530,
+          "symbol": "M:tk.c(I)V",
+          "original": "c",
+          "renamed": "publishPixelsToConsumer"
+        },
+        {
           "start": 707,
           "end": 708,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -354577,11 +355955,60 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 4511,
+          "end": 4513,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 10204,
           "end": 10205,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 10364,
+          "end": 10365,
+          "symbol": "M:tk.c(I)V",
+          "original": "c",
+          "renamed": "publishPixelsToConsumer"
+        },
+        {
+          "start": 11043,
+          "end": 11044,
+          "symbol": "M:tk.a(IILjava/awt/Component;I)V",
+          "original": "a",
+          "renamed": "initialize"
+        },
+        {
+          "start": 11524,
+          "end": 11525,
+          "symbol": "M:tk.c(I)V",
+          "original": "c",
+          "renamed": "publishPixelsToConsumer"
+        },
+        {
+          "start": 11631,
+          "end": 11632,
+          "symbol": "M:tk.c(I)V",
+          "original": "c",
+          "renamed": "publishPixelsToConsumer"
+        },
+        {
+          "start": 11738,
+          "end": 11739,
+          "symbol": "M:tk.c(I)V",
+          "original": "c",
+          "renamed": "publishPixelsToConsumer"
+        },
+        {
+          "start": 11844,
+          "end": 11845,
+          "symbol": "M:bc.a(I)V",
+          "original": "a",
+          "renamed": "setAsRasterTarget"
         },
         {
           "start": 11926,
@@ -354603,6 +356030,13 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 12805,
+          "end": 12807,
+          "symbol": "M:tk.<init>()V",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 12976,
@@ -360270,7 +361704,7 @@
       "original": "wa.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "2e77bcf4c8d8f92e3e3f7a1f6ca096dec251e7660664476d8bc828e62a05defe",
-      "outputSha256": "f349c3219acb5374dacfdf830acc98843cb45a077cf6419051f88f041cee889b",
+      "outputSha256": "bf2cd4237291dde6635f8b36c921c031c8af41cf38d7a626c37195cbf95b1a7e",
       "edits": [
         {
           "start": 60,
@@ -360350,6 +361784,20 @@
           "renamed": "BoundedRandomAccessFile"
         },
         {
+          "start": 5322,
+          "end": 5324,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 5361,
+          "end": 5363,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 5418,
           "end": 5420,
           "symbol": "C:un",
@@ -360390,6 +361838,27 @@
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 8530,
+          "end": 8532,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8556,
+          "end": 8558,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 8604,
+          "end": 8606,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 9206,
@@ -360448,6 +361917,20 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 15327,
+          "end": 15329,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 15361,
+          "end": 15363,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 16205,
           "end": 16206,
           "symbol": "M:un.a(I)V",
@@ -360462,11 +361945,32 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 18181,
+          "end": 18183,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 18218,
           "end": 18220,
           "symbol": "C:gl",
           "original": "gl",
           "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 18288,
+          "end": 18290,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 18401,
+          "end": 18403,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 18734,
@@ -360679,6 +362183,34 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 28480,
+          "end": 28482,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 28504,
+          "end": 28506,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 28543,
+          "end": 28545,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 28955,
+          "end": 28957,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 29462,
           "end": 29463,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
@@ -360700,11 +362232,53 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 32030,
+          "end": 32032,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 32064,
+          "end": 32066,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 32113,
+          "end": 32115,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
           "start": 32474,
           "end": 32475,
           "symbol": "M:dn.a(Ljava/lang/Throwable;Ljava/lang/String;)Lub;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 32971,
+          "end": 32973,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 33005,
+          "end": 33007,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 33054,
+          "end": 33056,
+          "symbol": "C:tk",
+          "original": "tk",
+          "renamed": "ImageProducerRasterBuffer"
         },
         {
           "start": 33413,
@@ -361491,8 +363065,15 @@
       "original": "wd.java",
       "renamed": "wd.java",
       "inputSha256": "b3ccd4bd1499489d1bd2aa461e20b2fd6954abd6ba5937c562d4ec34a02d96e4",
-      "outputSha256": "6d97a6507d894b204ee64c12ba3ef9615084feee205e569cac86fe3180031e76",
+      "outputSha256": "2442526483077fbfa3ffcdbf610f74579c98c57e32a0373ca03db31ac3588e3e",
       "edits": [
+        {
+          "start": 718,
+          "end": 719,
+          "symbol": "M:wd.c(I)V",
+          "original": "c",
+          "renamed": "resetStaticState"
+        },
         {
           "start": 1647,
           "end": 1649,
@@ -361569,7 +363150,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "50e2d0ee9cc93fbfcb2e2cc12d339707096da365b91563a9cce4907ce82227a4",
-      "outputSha256": "dafba3876df733bf1ee99ae7eadf0a8a3af3aaa0958a35bd6dcb1061d234dd6e",
+      "outputSha256": "1c6337bb29614613c3184b47df0242315fb61c1df36c7cd6d50e8d83179f1abb",
       "edits": [
         {
           "start": 61,
@@ -361577,6 +363158,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 243,
+          "end": 244,
+          "symbol": "M:we.a(I)V",
+          "original": "a",
+          "renamed": "resetStaticState"
         },
         {
           "start": 417,
@@ -363333,10 +364921,10 @@
       "commit": "67141d635b7060c02e01505325a82243446974c0",
       "subdirectory": "games/crazycrystals"
     },
-    "rulesSha256": "a7132523275c157b7ed82a8925ca7159313f6bcda3017ef803c0803af3109498",
+    "rulesSha256": "da83e099a6aff2a8412b7aab032a96528172df5f62998d6efc61f07e6ef49029",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "bb3dfcf46b89f012ae7a499e137086c984daf881763ebd79b778558870ab7fbd",
-    "outputTreeSha256": "b700efe2783d958a6f997d60d1a34260016ba48ca4419177bfa2d18e75f40e2a",
+    "outputTreeSha256": "e7ed227c4c3ee8dbb55096646ffbc092b182d4fa4b40c4b488e7d124b29f4d07",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
@@ -363351,7 +364939,7 @@
       "overrideFamiliesChecked": 903,
       "overrideRelationshipsPreserved": true,
       "classNameLiteralBindingsCompared": 11,
-      "classNameLiteralEdits": 1,
+      "classNameLiteralEdits": 2,
       "labelBindingsCompared": 137,
       "labelEdits": 137,
       "runtimeEquivalenceVerified": false,

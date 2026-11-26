@@ -190,7 +190,7 @@ final class mg {
             var4Lifetime1 = 120 - var3Lifetime1 >> 1;
             a.a(16777214, var7, param0 ^ -97, var4Lifetime1, 16777215, 23);
           }
-          gf.field_e.a(200);
+          gf.field_e.setAsRasterTarget(200);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "mg.B(" + param0 + ')');
         }

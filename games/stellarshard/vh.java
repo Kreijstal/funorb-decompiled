@@ -221,7 +221,7 @@ final class vh {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != 48) {
           field_i = 87;
         }

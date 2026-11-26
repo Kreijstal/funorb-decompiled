@@ -210,7 +210,7 @@ final class qi extends jd {
               var5 = (java.awt.Canvas) null;
               qi.a((java.awt.Canvas) null, 12, -85, -86);
             }
-            ca.field_d.a(param2, param1, var4, -104);
+            ca.field_d.drawImage(param2, param1, var4, -104);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

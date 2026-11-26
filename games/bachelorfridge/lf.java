@@ -7,7 +7,7 @@ final class lf {
     static int field_c;
     static JaggrabDownloader field_d;
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         field_d = null;
         if (param0 < 118) {
@@ -69,7 +69,7 @@ final class lf {
           SnowEvent.field_t = lh.field_t;
           return;
         }
-        lf.b(-42);
+        lf.resetStaticState(-42);
         MoveDefinition.b((byte) -34);
         mda.field_b.a(FridgeCreature.field_q[BananarangAnimation.field_Q].field_d * 100, 31407, 400, 105, 350);
         RasterBuffer.field_d = new wl("foodlist", mda.field_b, cb.field_m, nha.field_e);

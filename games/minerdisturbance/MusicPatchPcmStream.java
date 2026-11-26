@@ -197,7 +197,7 @@ final class MusicPatchPcmStream extends PcmStream {
         if (param0 >= -95) {
           return true;
         }
-        stackIn_6_0 = (ci.field_i != null) && (qd.field_Q == pb.field_c);
+        stackIn_6_0 = (AwtRasterBuffer.field_i != null) && (qd.field_Q == pb.field_c);
         return stackIn_6_0;
     }
 

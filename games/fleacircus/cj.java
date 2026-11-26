@@ -18,7 +18,7 @@ final class cj {
         ij.a(-1, oa.field_o, (String) null);
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_a = null;
         if (param0) {
           field_b = 31;

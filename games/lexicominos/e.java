@@ -25,7 +25,7 @@ final class e {
     byte[][] field_o;
     private int[][] field_j;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 1) {
           field_q = 62;
         }

@@ -34,7 +34,7 @@ final class th extends IntrusiveNode {
         this.field_j = false;
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_n = null;
         field_i = null;
         if (param0 != 0) {

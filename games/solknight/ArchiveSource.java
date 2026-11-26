@@ -130,7 +130,7 @@ abstract class ArchiveSource {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 == 8355711) {
           return;

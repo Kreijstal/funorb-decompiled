@@ -1579,7 +1579,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("create_email_tooltip", 0);
                 if (var2 != null) {
-                  bj.field_i = ab.a(0, var2);
+                  ImageProducerRasterBuffer.field_i = ab.a(0, var2);
                 }
                 var2 = ad.a("create_email_confirm_tooltip", 0);
                 if (null != var2) {

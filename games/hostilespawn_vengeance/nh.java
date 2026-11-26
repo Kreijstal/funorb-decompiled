@@ -77,14 +77,14 @@ final class nh extends fc {
     final static void a(boolean param0, byte param1) {
         if (param1 > -63) {
           field_M = 78;
-          if (wa.field_q != null) {
+          if (ImageProducerRasterBuffer.field_q != null) {
             tb.f((byte) -122);
             return;
           }
           cn.a(param0, (byte) 91);
           return;
         }
-        if (wa.field_q != null) {
+        if (ImageProducerRasterBuffer.field_q != null) {
           tb.f((byte) -122);
           return;
         }

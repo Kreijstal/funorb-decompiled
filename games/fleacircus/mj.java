@@ -78,9 +78,9 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           var21Lifetime1 = -param3[0] + param0[0];
           var22Lifetime1 = param0[1] - param3[1];
           var23Lifetime1 = param0[2] - param3[2];
-          var9 = var23Lifetime1 * param3[5] + var22Lifetime1 * param3[4] + var21Lifetime1 * param3[3] >> -bj.field_l + 16;
+          var9 = var23Lifetime1 * param3[5] + var22Lifetime1 * param3[4] + var21Lifetime1 * param3[3] >> -ImageProducerRasterBuffer.field_l + 16;
           var11 = var22Lifetime1 * param3[10] + (var21Lifetime1 * param3[9] + var23Lifetime1 * param3[11]) >> 16;
-          var10 = param3[7] * var22Lifetime1 + (param3[6] * var21Lifetime1 + param3[8] * var23Lifetime1) >> -bj.field_l + 16;
+          var10 = param3[7] * var22Lifetime1 + (param3[6] * var21Lifetime1 + param3[8] * var23Lifetime1) >> -ImageProducerRasterBuffer.field_l + 16;
           var21Lifetime2 = bl.field_c;
           var22Lifetime2 = bl.field_a;
           var23Lifetime2 = 0;
@@ -89,8 +89,8 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var24Lifetime1 = param1.field_n[var23Lifetime2];
               var25Lifetime1 = param1.field_f[var23Lifetime2];
               var26Lifetime1 = param1.field_P[var23Lifetime2];
-              var27Lifetime1 = var9 + (var18 * var26Lifetime1 + var15 * var25Lifetime1 + var12 * var24Lifetime1 >> 16 - bj.field_l);
-              var28Lifetime1 = (var13 * var24Lifetime1 - (-(var25Lifetime1 * var16) - var26Lifetime1 * var19) >> -bj.field_l + 16) + var10;
+              var27Lifetime1 = var9 + (var18 * var26Lifetime1 + var15 * var25Lifetime1 + var12 * var24Lifetime1 >> 16 - ImageProducerRasterBuffer.field_l);
+              var28Lifetime1 = (var13 * var24Lifetime1 - (-(var25Lifetime1 * var16) - var26Lifetime1 * var19) >> -ImageProducerRasterBuffer.field_l + 16) + var10;
               var29Lifetime1 = var11 + (var17 * var25Lifetime1 + (var14 * var24Lifetime1 + var26Lifetime1 * var20) >> 16);
               stackIn_68_0 = 50;
               stackIn_68_1 = var29Lifetime1;
@@ -109,8 +109,8 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                   ContextualRuntimeException.field_c[var23Lifetime2] = var29Lifetime1;
                 }
                 if (param2) {
-                  qk.field_f[var23Lifetime2] = var27Lifetime1 >> bj.field_l;
-                  ej.field_c[var23Lifetime2] = var28Lifetime1 >> bj.field_l;
+                  qk.field_f[var23Lifetime2] = var27Lifetime1 >> ImageProducerRasterBuffer.field_l;
+                  ej.field_c[var23Lifetime2] = var28Lifetime1 >> ImageProducerRasterBuffer.field_l;
                   k.field_l[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;

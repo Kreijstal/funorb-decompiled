@@ -112,7 +112,7 @@ final class tk extends IOException {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 8191) {
           field_a = false;
           field_b = null;

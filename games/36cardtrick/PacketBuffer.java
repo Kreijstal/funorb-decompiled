@@ -556,7 +556,7 @@ class PacketBuffer extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 < 56) {
           field_h = true;
           field_k = null;

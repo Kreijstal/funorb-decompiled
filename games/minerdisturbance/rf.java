@@ -20,7 +20,7 @@ final class rf {
           if (param0 != -75) {
             rf.clearStaticReferences((byte) -48);
           }
-          if (AccountRequestState.field_h == ci.field_e) {
+          if (AccountRequestState.field_h == AwtRasterBuffer.field_e) {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
@@ -32,7 +32,7 @@ final class rf {
           }
           ic.field_m = param1;
           IterableNodeHashTable.field_d = null;
-          AccountRequestState.field_h = ci.field_e;
+          AccountRequestState.field_h = AwtRasterBuffer.field_e;
           stackIn_9_0 = null;
           return (AccountServiceResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

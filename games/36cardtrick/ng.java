@@ -22,7 +22,7 @@ final class ng extends lk {
         this.b(!param4 ? true : false);
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 2) {
           field_H = (byte) 43;
         }
@@ -149,7 +149,7 @@ final class ng extends lk {
         this.field_K = new RgbSprite[]{this.a(this.field_z, this.field_M, (byte) 88), this.a(this.field_A, this.field_L, (byte) 88)};
         this.field_D = this.a(param0);
         if (param0) {
-          ng.a(-28);
+          ng.resetStaticState(-28);
         }
         this.field_E = this.field_D.a();
         this.field_F = new RgbSprite(this.field_q >> 1, this.field_q);

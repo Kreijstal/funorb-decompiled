@@ -17,7 +17,7 @@ final class AchievementUnlockEvent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 17118) {
-            AchievementUnlockEvent.a((byte) 93);
+            AchievementUnlockEvent.resetStaticState((byte) 93);
           }
           if (dl.field_l.b(-26753) &&
             !param1.equals(dl.field_l.a((byte) -41))) {
@@ -39,7 +39,7 @@ final class AchievementUnlockEvent extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_g = null;
         if (param0 != -110) {
           field_k = -126;

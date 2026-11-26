@@ -237,7 +237,7 @@ final class cp extends gd {
         return (var4 + param2) / param1 - var4;
     }
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_O = null;
         field_Q = null;
         field_P = null;
@@ -267,7 +267,7 @@ final class cp extends gd {
             na.field_D.a(param0 + 30335, mm.field_t, ob.field_Yb);
           }
           if (param0 != -30208) {
-            cp.c((byte) 49);
+            cp.resetStaticState((byte) 49);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

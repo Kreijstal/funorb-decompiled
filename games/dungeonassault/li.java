@@ -24,12 +24,12 @@ final class li {
 
     final static void a(int param0) {
         if (param0 != -8) {
-          li.a(true);
+          li.resetStaticState(true);
         }
         np.a((byte) -123, m.c(true));
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_j = 33;
         }

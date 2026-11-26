@@ -78,7 +78,7 @@ final class MixedSupport053 extends HashNode {
         }
     }
 
-    public static void performAction0621(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         if (integerArgument1 == 22771) {
           stringState0221 = null;
           sceneWidgetState0047 = null;

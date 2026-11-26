@@ -12,7 +12,7 @@ final class of {
     static long field_e;
     static Sprite field_f;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == 1) {
           field_f = null;
           field_b = null;

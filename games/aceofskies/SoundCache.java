@@ -41,7 +41,7 @@ final class SoundCache {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_f = null;
         if (param0) {
           field_e = 125;

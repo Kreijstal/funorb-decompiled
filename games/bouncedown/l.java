@@ -47,17 +47,17 @@ final class l {
         var5 = Bounce.field_N;
         try {
           for (var2_int = 0; 3 > var2_int; var2_int++) {
-            ef.field_i[var2_int] = 0;
+            AwtRasterBuffer.field_i[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < oh.field_c; var2_intLifetime1++) {
             if (param1.field_h == sh.field_cb[var2_intLifetime1].field_h) {
               dupTemp$3 = sh.field_cb[var2_intLifetime1].a((byte) 78);
-              ef.field_i[dupTemp$3] = ef.field_i[dupTemp$3] + 1;
+              AwtRasterBuffer.field_i[dupTemp$3] = AwtRasterBuffer.field_i[dupTemp$3] + 1;
             }
           }
           var3 = 98 / ((param0 - 45) / 34);
           dupTemp$0 = param1.a((byte) -94);
-          ef.field_i[dupTemp$0] = ef.field_i[dupTemp$0] + 1;
+          AwtRasterBuffer.field_i[dupTemp$0] = AwtRasterBuffer.field_i[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           var6 = 0;
           var3Lifetime1 = var6;
@@ -65,8 +65,8 @@ final class l {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_h == sh.field_cb[var6].field_h) {
               var4 = sh.field_cb[var6].a((byte) 113);
-              if (ef.field_i[var4] > wk.field_G) {
-                ef.field_i[var4] = ef.field_i[var4] - 1;
+              if (AwtRasterBuffer.field_i[var4] > wk.field_G) {
+                AwtRasterBuffer.field_i[var4] = AwtRasterBuffer.field_i[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

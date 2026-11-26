@@ -1,0 +1,95 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class AwtRasterBuffer {
+    static int field_g;
+    int[] field_f;
+    int field_e;
+    static RgbSprite field_h;
+    java.awt.Image field_c;
+    static String field_a;
+    static RgbSprite field_d;
+    static RgbSprite field_i;
+    int field_b;
+
+    abstract void drawImage(int param0, byte param1, int param2, java.awt.Graphics param3);
+
+    abstract void initialize(int param0, java.awt.Component param1, int param2, int param3);
+
+    final void setAsRasterTarget(byte param0) {
+        SoftwareRasterizer.setRasterBuffer(this.field_f, this.field_b, this.field_e);
+        int var2 = -15 % ((param0 - 49) / 57);
+    }
+
+    public static void clearStaticReferences(byte param0) {
+        field_a = null;
+        field_h = null;
+        field_i = null;
+        if (param0 != -102) {
+          return;
+        }
+        field_d = null;
+    }
+
+    final static void a(int param0, int param1, int param2) {
+        int stackIn_13_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var5Lifetime1;
+        int var6Lifetime1;
+        var8 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          if (param0 != -11003) {
+            AwtRasterBuffer.clearStaticReferences((byte) 109);
+          }
+          if (qi.field_J < param2) {
+            qi.field_J = param2;
+          }
+          var3_int = 366;
+          var4 = 614;
+          SoftwareRasterizer.fillRectangle(var4 + 4, 70 + var3_int, 12, 12, 0);
+          if (param1 > 0) {
+            if (param1 * 4 >= param2) {
+              stackIn_13_0 = (param2 <= param1 * 2) ? 128 : 64;
+            } else {
+              stackIn_13_0 = 32;
+            }
+            var5 = stackIn_13_0;
+            var6 = var5 - 1 & sg.field_i;
+            if (var5 / 2 <= var6) {
+              var6 = var5 - var6;
+            }
+            SoftwareRasterizer.fillRectangleAlpha(var4 + 4, 70 + var3_int, 12, 12, 16776960, var6 * 256 / var5);
+          }
+          HostileSpawn.field_J[0].e(var4, var3_int);
+          var5Lifetime1 = var3_int + 64;
+          var6Lifetime1 = param2;
+          var7 = var3_int;
+          while (var7 > -var6Lifetime1 + var5Lifetime1) {
+            var7 = var7 - HostileSpawn.field_J[1].field_A;
+            HostileSpawn.field_J[1].e(var4, var7);
+          }
+          var7 = var7 - HostileSpawn.field_J[2].field_A;
+          if (param1 > param2) {
+            param1 = param2;
+          }
+          HostileSpawn.field_J[2].e(var4, var7);
+          SoftwareRasterizer.fillRectangleAlpha(7 + var4, 1 + var5Lifetime1 - param1, 6, param1, 16776960, 128);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) var3), "sm.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+        }
+    }
+
+    static {
+        field_a = "Find the console that activates the lift.";
+    }
+}

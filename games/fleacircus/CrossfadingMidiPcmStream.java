@@ -139,7 +139,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_z = null;
         if (param0) {
           field_D = -86;

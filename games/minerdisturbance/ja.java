@@ -6,7 +6,7 @@ class ja extends DualLinkNode {
     static byte[] field_v;
     private static String field_z;
 
-    public static void f(int param0) {
+    public static void resetStaticState(int param0) {
         field_v = null;
         if (param0 != 150) {
           field_u = -108;

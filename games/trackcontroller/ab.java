@@ -5,7 +5,7 @@ final class ab {
     static int field_a;
     static String field_b;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 != 98) {
           field_a = 29;

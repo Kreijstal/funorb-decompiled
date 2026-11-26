@@ -14,7 +14,7 @@ final class kd extends IntrusiveNode {
     int field_i;
     int field_l;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_o = null;
         field_m = null;
         if (param0 != 8192) {

@@ -55,7 +55,7 @@ final class bl {
         this.field_j = DirectByteStorage.field_c;
         this.field_c = g.field_i;
         this.field_g = ek.field_f;
-        this.field_a = ib.field_n;
+        this.field_a = ImageProducerRasterBuffer.field_n;
         this.field_h = eg.field_o;
         if (!param0) {
           this.field_f = null;

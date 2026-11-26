@@ -248,7 +248,7 @@ final class lc extends IntrusiveNode {
         return '_';
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_k = null;
         if (param0 == 111) {
           field_s = null;

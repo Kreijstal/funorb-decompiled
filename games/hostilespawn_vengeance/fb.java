@@ -130,7 +130,7 @@ final class fb extends ql {
             ln.field_a.field_c[var4Lifetime1Lifetime1] = 0;
             ln.field_a.field_c[var4Lifetime1Lifetime1 - 1] = 0;
             ln.field_a.field_c[1 + var4Lifetime1Lifetime1] = 0;
-            if (0 < wa.field_p) {
+            if (0 < ImageProducerRasterBuffer.field_p) {
               CrossfadingMidiPcmStream.a(16, 1);
               nh.field_E.a((byte) 46, this.field_p);
             } else {

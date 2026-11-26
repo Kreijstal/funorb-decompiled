@@ -66,7 +66,7 @@ final class as {
         RenderStateSnapshot.resetTooltip(0);
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 < 120) {
           field_c = -80;

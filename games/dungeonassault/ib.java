@@ -65,7 +65,7 @@ final class ib {
         if (param0 != 930) {
           ib.a((byte) -44);
         }
-        c.field_h.requestFocus();
+        AwtRasterBuffer.field_h.requestFocus();
     }
 
     public static void d(int param0) {
@@ -92,11 +92,11 @@ final class ib {
             String var4 = (String) null;
             ib.a((byte) 67, 45, (String) null);
           }
-          var3.field_e = tp.a(kf.field_p, "idle", param0, -1998);
-          var3.field_u = tp.a(kf.field_p, "select", param0, -1998);
-          var3.field_t = tp.a(kf.field_p, "victory", param0, -1998);
-          var3.field_v = tp.a(kf.field_p, "defeat", param0, -1998);
-          var3.field_l = tp.a(kf.field_p, "death", param0, -1998);
+          var3.field_e = tp.a(ImageProducerRasterBuffer.field_p, "idle", param0, -1998);
+          var3.field_u = tp.a(ImageProducerRasterBuffer.field_p, "select", param0, -1998);
+          var3.field_t = tp.a(ImageProducerRasterBuffer.field_p, "victory", param0, -1998);
+          var3.field_v = tp.a(ImageProducerRasterBuffer.field_p, "defeat", param0, -1998);
+          var3.field_l = tp.a(ImageProducerRasterBuffer.field_p, "death", param0, -1998);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "ib.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

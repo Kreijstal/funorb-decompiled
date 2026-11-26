@@ -198,7 +198,7 @@ final class h {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_a = null;
         if (param0 < 20) {
           field_c = -122;

@@ -81,7 +81,7 @@ final class ut extends tia {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_q = null;
         if (param0 != -8696) {
           field_o = -3;
@@ -241,7 +241,7 @@ final class ut extends tia {
             eu.field_b.put((long)ra.field_k[var1_int].toLowerCase().hashCode(), (byte) -81, new ji(var1_int));
           }
           if (param0 != -22021) {
-            ut.b(11);
+            ut.resetStaticState(11);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

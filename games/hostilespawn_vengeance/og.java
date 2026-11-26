@@ -403,7 +403,7 @@ final class og {
         this.field_a = this.field_a + Math.cos(param1) * -param0 / 20.0;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_d = null;
         field_e = null;
         field_b = null;

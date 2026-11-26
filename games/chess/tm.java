@@ -27,7 +27,7 @@ final class tm {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         field_h = null;
         field_a = null;

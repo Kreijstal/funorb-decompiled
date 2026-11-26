@@ -45,7 +45,7 @@ final class qe extends ng {
               var6 = vh.a(true, se.field_E[var3_int], true);
               var4 = var4 + hj.field_a;
               var7 = bi.field_h - (var6 >> 1);
-              if (ef.a(var4, -GameClient.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (GameClient.field_z << 1) + var6, param0, param2)) {
+              if (AwtRasterBuffer.a(var4, -GameClient.field_z + var7, -78, (cl.field_m << 1) + pb.field_j, (GameClient.field_z << 1) + var6, param0, param2)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

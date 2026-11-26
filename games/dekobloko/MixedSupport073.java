@@ -34,7 +34,7 @@ final class MixedSupport073 {
         return integerArrayLocal4;
     }
 
-    public static void performAction0920(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         sceneWidgetState0073 = null;
         stringState0321 = null;
         rgbSpriteState0029 = null;

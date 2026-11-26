@@ -983,7 +983,7 @@ public final class Chess extends gb {
         bg.field_Z = new RgbSprite(77, 20);
         bg.field_Z.e();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c, -1 + SoftwareRasterizer.field_c / 2, 1449732);
-        ph.field_j.b(48);
+        ph.field_j.setAsRasterTarget(48);
         MouseWheelInput.field_c = qm.a(1, "", "history_replay_controls", mm.field_d);
         IsaacCipher.field_g = ao.a(mm.field_d, "turntime_icons", 2993, "");
     }
@@ -1099,7 +1099,7 @@ public final class Chess extends gb {
           }
         }
         dj.field_t = ub.field_d[1][1].c();
-        ph.field_j.b(48);
+        ph.field_j.setAsRasterTarget(48);
         nh.a();
         nh.c(370, ec.c((byte) -63) + 240);
         for (var8_intLifetime1 = 0; 2 > var8_intLifetime1; var8_intLifetime1++) {
@@ -1157,7 +1157,7 @@ public final class Chess extends gb {
         dj.field_t.d();
         dj.field_t.field_r = 0;
         dj.field_t.field_s = 0;
-        ph.field_j.b(48);
+        ph.field_j.setAsRasterTarget(48);
         tg.field_r = null;
     }
 
@@ -1517,7 +1517,7 @@ public final class Chess extends gb {
         ph.field_f.e();
         var2.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
         SoftwareRasterizer.blurRectangle(2, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
-        ph.field_j.b(48);
+        ph.field_j.setAsRasterTarget(48);
         var3Lifetime1 = qm.field_g;
         if (var3Lifetime1 != 1) {
           ob.field_B = jn.a("scenery_2d_grass", 8221, "", mm.field_d);
@@ -1571,7 +1571,7 @@ public final class Chess extends gb {
         gi.a(true);
         il.clearStaticReferences(91);
         bb.b(-16987);
-        rn.a(-2);
+        rn.resetStaticState(-2);
         ti.clearStaticReferences(3411);
         ng.clearStaticReferences((byte) -85);
         li.clearStaticReferences(-69);
@@ -1581,7 +1581,7 @@ public final class Chess extends gb {
         wk.a(-26815);
         ca.a((byte) -102);
         gm.a(6);
-        vj.clearStaticReferences(-97);
+        AwtRasterBuffer.clearStaticReferences(-97);
         rh.a(104);
         FullscreenFocusCanvas.a(-9);
         gg.c(0);
@@ -1592,7 +1592,7 @@ public final class Chess extends gb {
         eb.clearStaticReferences(-29115);
         wm.clearStaticReferences((byte) -108);
         hj.clearStaticReferences(64655);
-        lc.b((byte) -9);
+        lc.resetStaticState((byte) -9);
         hn.clearStaticReferences(false);
         IntrusiveNode.a((byte) -91);
         tn.a(-2);
@@ -1630,7 +1630,7 @@ public final class Chess extends gb {
         GzipInflater.clearStaticReferences(-6145);
         ArchiveProvider.clearStaticReferences(1007);
         rd.clearStaticReferences(32286);
-        ie.a(-1962602524);
+        ie.resetStaticState(-1962602524);
         fm.clearDeclaredStaticReferences(-9);
         AccountCreationResultPanel.discardDeclaredStaticReferences((byte) -106);
         ch.releaseDeclaredStaticReferences(30);
@@ -1638,7 +1638,7 @@ public final class Chess extends gb {
         ol.clearDeclaredStaticReferences(106);
         ii.clearDeclaredStaticReferences(82);
         wf.clearDeclaredStaticReferences(35);
-        s.g((byte) -93);
+        s.resetStaticState((byte) -93);
         vg.b(125);
         tg.clearStaticReferences((byte) 93);
         n.clearStaticReferences(-123);
@@ -1649,8 +1649,8 @@ public final class Chess extends gb {
         mm.clearStaticReferences(120);
         hb.a(false);
         sn.clearStaticReferences((byte) -65);
-        wg.b(69);
-        cd.a(1570);
+        wg.resetStaticState(69);
+        cd.resetStaticState(1570);
         qe.clearStaticReferences(2);
         nk.l(8);
         sc.a(-26862);
@@ -1687,7 +1687,7 @@ public final class Chess extends gb {
         ig.clearStaticReferences(-49);
         ob.clearStaticReferences(false);
         ad.clearStaticReferences(-82);
-        cc.e((byte) 109);
+        cc.resetStaticState((byte) 109);
         gd.clearStaticReferences((byte) 84);
         tc.clearDeclaredStaticReferences(-7588);
         da.e(16);
@@ -1698,8 +1698,8 @@ public final class Chess extends gb {
         hl.clearStaticReferences(true);
         hi.clearStaticReferences();
         am.c((byte) 119);
-        fn.a(-86);
-        em.b(3);
+        fn.resetStaticState(-86);
+        em.resetStaticState(3);
         rb.clearStaticReferences(-18067);
         lk.a(0);
         sg.clearStaticReferences((byte) 124);
@@ -1739,11 +1739,11 @@ public final class Chess extends gb {
         wn.clearStaticReferences(false);
         oa.a(17);
         kh.clearStaticReferences(64);
-        si.clearDeclaredStaticReferences(23);
+        ImageProducerRasterBuffer.clearDeclaredStaticReferences(23);
         de.clearStaticReferences((byte) -120);
-        tm.a((byte) 76);
+        tm.resetStaticState((byte) 76);
         og.clearStaticReferences();
-        td.a(5239);
+        td.resetStaticState(5239);
         cl.clearStaticReferences(12);
         df.clearStaticReferences(-6);
         vi.clearStaticReferences((byte) 116);
@@ -1758,7 +1758,7 @@ public final class Chess extends gb {
         bj.releaseDeclaredStaticReferences(45);
         rm.a(850101921);
         t.clearDeclaredStaticReferences(8);
-        se.e((byte) 67);
+        se.resetStaticState((byte) 67);
         jn.clearStaticReferences((byte) -61);
         ea.clearStaticReferences((byte) -44);
         ki.b(true);
@@ -1800,7 +1800,7 @@ public final class Chess extends gb {
         vf.clearStaticReferences(false);
         lf.j(1839839976);
         ve.clearDeclaredStaticReferences(103);
-        bk.a(true);
+        bk.resetStaticState(true);
         ac.clearStaticReferences((byte) -119);
         mh.clearStaticReferences(3);
         tk.b((byte) 77);
@@ -2042,7 +2042,7 @@ public final class Chess extends gb {
           var3.e();
           param1.a(0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
           SoftwareRasterizer.blurRectangle(param0, 2, 0, 0, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
-          ph.field_j.b(48);
+          ph.field_j.setAsRasterTarget(48);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2070,7 +2070,7 @@ public final class Chess extends gb {
         SoftwareRasterizer.drawRectangleOutline(0, 0, 270, 325, 1);
         SoftwareRasterizer.fillRectangle(0, 0, 4, SoftwareRasterizer.field_c, 0);
         SoftwareRasterizer.drawVerticalLine(4, 0, SoftwareRasterizer.field_c, 1);
-        ph.field_j.b(48);
+        ph.field_j.setAsRasterTarget(48);
         tb.field_a.d();
     }
 

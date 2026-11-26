@@ -67,7 +67,7 @@ final class pn {
         return this;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_k = null;
         field_l = null;
         if (param0 >= -74) {

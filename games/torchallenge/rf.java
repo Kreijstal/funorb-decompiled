@@ -10,7 +10,7 @@ final class rf extends dj implements uh {
     static int[][] field_eb;
     static int[] field_jb;
 
-    public static void i(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_eb = (int[][]) null;
         field_jb = null;
         if (param0 >= 6) {

@@ -107,7 +107,7 @@ final class oj {
           for (var6 = 0; var4_int > var6; var6++) {
             var5[var6] = (-param0[var6] << 16) + var6;
           }
-          dd.a(var16, -23588);
+          AwtRasterBuffer.a(var16, -23588);
           var19 = var5;
           for (var7 = 0; var7 < var19.length; var7++) {
             var8 = var19[var7];

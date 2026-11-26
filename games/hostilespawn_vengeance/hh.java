@@ -150,7 +150,7 @@ final class hh {
               FullscreenFocusCanvas.field_k[1] = 5;
             }
           } else {
-            var3_int = fa.a(gf.field_c, cg.field_a, 53, lj.field_u, vg.a(new String[]{"<br><%0><br>"}, param0 + 108, wa.field_l));
+            var3_int = fa.a(gf.field_c, cg.field_a, 53, lj.field_u, vg.a(new String[]{"<br><%0><br>"}, param0 + 108, ImageProducerRasterBuffer.field_l));
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(gf.field_c[var5])) {

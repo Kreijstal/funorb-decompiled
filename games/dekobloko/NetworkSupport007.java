@@ -79,7 +79,7 @@ final class NetworkSupport007 extends DualNode {
         int integerLocal1 = 0;
         int integerLocal2 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (integerArgument1 != 19423) {
-          NetworkSupport007.performAction1041(-120);
+          NetworkSupport007.resetStaticState(-120);
         }
         if (this.integerArrayState0154 != null) {
           for (integerLocal1 = 0; integerLocal1 < this.integerArrayState0154.length; integerLocal1++) {
@@ -88,7 +88,7 @@ final class NetworkSupport007 extends DualNode {
         }
     }
 
-    public static void performAction1041(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         huffmanCodecState0001 = null;
         stringState0347 = null;
         stringState0346 = null;

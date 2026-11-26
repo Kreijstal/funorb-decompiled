@@ -8,7 +8,7 @@ final class fj {
     static int field_d;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         playerDisplayName = null;
         field_b = null;
         if (param0 != -11965) {

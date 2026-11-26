@@ -113,7 +113,7 @@ final class tf {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("qb");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (!param1) {
                 field_b = (String) null;
               }

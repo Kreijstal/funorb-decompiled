@@ -22,7 +22,7 @@ final class uk extends wj {
           if (this.a(param1, 3917) != ol.field_h) {
             return ue.field_E;
           }
-          stackIn_5_0 = ba.field_d;
+          stackIn_5_0 = AwtRasterBuffer.field_d;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

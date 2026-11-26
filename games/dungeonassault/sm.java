@@ -53,7 +53,7 @@ final class sm {
             if (null == ci.field_q) {
               return;
             }
-            stackIn_14_0 = kf.field_o;
+            stackIn_14_0 = ImageProducerRasterBuffer.field_o;
             stackIn_14_1 = param1 ^ -17;
             stackIn_14_2 = null;
             stackIn_14_3 = null;

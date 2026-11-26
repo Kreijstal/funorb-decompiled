@@ -63,7 +63,7 @@ final class IterableNodeHashTable implements Iterable {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_e = null;
         if (param0 != 3663) {
           field_c = -42;

@@ -127,7 +127,7 @@ class hb extends nb {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 >= -120) {
           field_n = 114;
         }

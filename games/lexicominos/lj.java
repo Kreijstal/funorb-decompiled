@@ -28,7 +28,7 @@ final class lj {
         try {
           try {
             var4 = param1.getGraphics();
-            v.field_B.a(param0, var4, (byte) -88, param2);
+            v.field_B.drawImage(param0, var4, (byte) -88, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

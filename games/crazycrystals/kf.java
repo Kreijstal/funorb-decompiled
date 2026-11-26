@@ -11,7 +11,7 @@ final class kf {
     static ol field_h;
     static String field_f;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_e = null;
         field_h = null;
         field_a = null;

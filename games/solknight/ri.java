@@ -16,7 +16,7 @@ final class ri implements j {
         return (-param1 & param1) == param1 ? true : false;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_d = null;
         field_a = null;
         if (param0) {

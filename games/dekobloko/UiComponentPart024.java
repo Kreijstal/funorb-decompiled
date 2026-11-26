@@ -260,7 +260,7 @@ final class UiComponentPart024 extends UiComponentPart032 {
         }
     }
 
-    public static void performAction1282(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         stringArrayState0032 = null;
         integerArrayState0184 = null;
         stringState0435 = null;
@@ -341,7 +341,7 @@ final class UiComponentPart024 extends UiComponentPart032 {
           proxySocketFactoryLocal1 = new ProxySocketFactory();
           ((SocketFactory) ((Object) proxySocketFactoryLocal1)).stringState0614 = stringArgument1;
           if (integerArgument3 != 23155) {
-            UiComponentPart024.performAction1282(-1);
+            UiComponentPart024.resetStaticState(-1);
           }
           ((SocketFactory) ((Object) proxySocketFactoryLocal1)).integerState0927 = integerArgument2;
           stackProxySocketFactoryLocal3 = proxySocketFactoryLocal1;

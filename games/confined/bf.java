@@ -137,7 +137,7 @@ final class bf extends ga implements pg, el {
         vf var1 = new vf(fa.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
         fj var2 = new fj(Confined.field_G, var1, (uk) null);
         this.field_Q = new rg(ta.field_a, (uk) null);
-        this.field_P = new rg(rb.field_d, (uk) null);
+        this.field_P = new rg(AwtRasterBuffer.field_d, (uk) null);
         this.field_O.field_C = ra.field_b;
         this.field_O.a(-18312, new AccountNameAvailabilityValidator(this.field_O));
         this.field_Q.field_L = false;

@@ -122,7 +122,7 @@ final class so extends TextureOperator {
         return (int[]) null;
     }
 
-    public static void g(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -13533) {
           field_y = 22L;
           field_z = null;

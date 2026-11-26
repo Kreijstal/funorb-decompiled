@@ -1,0 +1,167 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+    static char[] field_m;
+    private java.awt.image.ImageConsumer field_l;
+    private java.awt.image.ColorModel field_p;
+    static String field_k;
+    static String field_n;
+    static int[] field_j;
+    static RgbSprite[] field_o;
+
+    public static void clearStaticReferences(int param0) {
+        if (param0 <= -40) {
+          field_o = null;
+          field_k = null;
+          field_n = null;
+          field_j = null;
+          field_m = null;
+          return;
+        }
+        ImageProducerRasterBuffer.clearStaticReferences(32);
+        field_o = null;
+        field_k = null;
+        field_n = null;
+        field_j = null;
+        field_m = null;
+    }
+
+    final static boolean c(byte param0) {
+        if (param0 != 6) {
+          field_j = (int[]) null;
+          return dh.field_vb.a(false);
+        }
+        return dh.field_vb.a(false);
+    }
+
+    public final synchronized void removeConsumer(java.awt.image.ImageConsumer param0) {
+        RuntimeException var2 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (this.field_l != param0) {
+            return;
+          }
+          this.field_l = null;
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("cd.removeConsumer(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
+    }
+
+    final void drawImage(byte param0, java.awt.Graphics param1, int param2, int param3) {
+        try {
+          this.publishPixelsToConsumer((byte) 126);
+          int var5_int = 57 / ((param0 - 36) / 52);
+          param1.drawImage(this.field_e, param3, param2, (java.awt.image.ImageObserver) (this));
+        } catch (RuntimeException runtimeException) {
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    final void initialize(java.awt.Component param0, int param1, int param2, int param3) {
+        this.field_f = new int[1 + param1 * param3];
+        this.field_b = param1;
+        this.field_c = param3;
+        if (param2 > -53) {
+          return;
+        }
+        try {
+          this.field_p = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.field_e = param0.createImage((java.awt.image.ImageProducer) (this));
+          this.publishPixelsToConsumer((byte) 120);
+          param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.publishPixelsToConsumer((byte) 125);
+          param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.publishPixelsToConsumer((byte) 116);
+          param0.prepareImage(this.field_e, (java.awt.image.ImageObserver) (this));
+          this.setAsRasterTarget((byte) 106);
+        } catch (RuntimeException runtimeException) {
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
+        try {
+          this.field_l = param0;
+          param0.setDimensions(this.field_b, this.field_c);
+          param0.setProperties((Hashtable) null);
+          param0.setColorModel(this.field_p);
+          param0.setHints(14);
+        } catch (RuntimeException runtimeException) {
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final synchronized void publishPixelsToConsumer(byte param0) {
+        if (param0 <= 103) {
+          return;
+        }
+        if (this.field_l == null) {
+          return;
+        }
+        this.field_l.setPixels(0, 0, this.field_b, this.field_c, this.field_p, this.field_f, 0, this.field_b);
+        this.field_l.imageComplete(2);
+    }
+
+    public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
+        return this.field_l == param0;
+    }
+
+    public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
+        RuntimeException var7 = null;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          return true;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_4_0 = var7;
+          stackIn_4_1 = new StringBuilder().append("cd.imageUpdate(");
+          if (param0 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    ImageProducerRasterBuffer() {
+    }
+
+    public final void startProduction(java.awt.image.ImageConsumer param0) {
+        try {
+          this.addConsumer(param0);
+        } catch (RuntimeException runtimeException) {
+          throw sd.a((Throwable) ((Object) runtimeException), "cd.startProduction(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_m = new char[]{(char)8364, (char)0, (char)8218, (char)402, (char)8222, (char)8230, (char)8224, (char)8225, (char)710, (char)8240, (char)352, (char)8249, (char)338, (char)0, (char)381, (char)0, (char)0, (char)8216, (char)8217, (char)8220, (char)8221, (char)8226, (char)8211, (char)8212, (char)732, (char)8482, (char)353, (char)8250, (char)339, (char)0, (char)382, (char)376};
+        field_n = "Unfortunately your configuration doesn't support fullscreen mode.";
+        field_j = new int[]{0, 60, 0, 120};
+        field_k = "The journey went smoothly.#You have reached the fifth planet#of the system of Yonderia.";
+    }
+}

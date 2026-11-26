@@ -118,7 +118,7 @@ final class a extends kb {
             var4 = (bd) (param1.nextForward(2));
           }
           var3Lifetime1 = 0;
-          dd.a(var2, -23588);
+          AwtRasterBuffer.a(var2, -23588);
           var4Lifetime1 = (bd) (param1.beginForward(true));
           while (var4Lifetime1 != null) {
             incrementValue$3 = var3Lifetime1;

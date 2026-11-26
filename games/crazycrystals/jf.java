@@ -5,7 +5,7 @@ final class jf {
     static volatile int field_a;
     static RgbSprite[] field_b;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 0) {
           field_a = 1;

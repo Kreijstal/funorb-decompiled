@@ -7,7 +7,7 @@ final class hg extends vk implements qk, ga {
     private dk field_E;
     private ng field_A;
     static String field_D;
-    static tk field_y;
+    static AwtRasterBuffer field_y;
 
     public static void clearStaticReferences(boolean param0) {
         if (param0) {
@@ -362,7 +362,7 @@ final class hg extends vk implements qk, ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            field_y = (tk) null;
+            field_y = (AwtRasterBuffer) null;
           }
           if (param0 == this.field_C) {
             ag.k(-1108);

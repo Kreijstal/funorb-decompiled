@@ -274,7 +274,7 @@ final class uj extends IntrusiveNode {
           if (var2 == 0) {
             var4_ref_pa = (pa) (ve.field_Nb.beginBackward(-18110));
             if (var4_ref_pa == null) {
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
               return;
             }
             var5_int = -var9.position + sb.field_sb;
@@ -302,14 +302,14 @@ final class uj extends IntrusiveNode {
               break;
             }
             if (var5 == null) {
-              si.d(param0 + 65523);
+              ImageProducerRasterBuffer.d(param0 + 65523);
               return;
             }
             var5.unlink(-2193);
             return;
           }
           fg.a((Throwable) null, (byte) -77, "LR1: " + tm.b((byte) -127));
-          si.d(65280);
+          ImageProducerRasterBuffer.d(65280);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

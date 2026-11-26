@@ -22,7 +22,7 @@ class ma extends jf implements ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            ma.n(30);
+            ma.resetStaticState(30);
           }
           if (!this.field_Bb) {
             ff.a(-27, "tochangedisplayname.ws", nb.a(71));
@@ -45,7 +45,7 @@ class ma extends jf implements ke {
         }
     }
 
-    public static void n(int param0) {
+    public static void resetStaticState(int param0) {
         field_tb = null;
         if (param0 != 19678) {
           field_vb = -97L;

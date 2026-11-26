@@ -9,7 +9,7 @@ final class ka {
 
     final static void a(int param0) {
         if (param0 != 1) {
-          ka.a((byte) 39);
+          ka.resetStaticState((byte) 39);
         }
         nf.field_y = -1;
         of.field_k = true;
@@ -22,7 +22,7 @@ final class ka {
         var2.field_w = true;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != -67) {
           field_c = 97;
         }

@@ -21,7 +21,7 @@ abstract class i extends GameAppletShell {
     private int field_z;
 
     private final void n(int param0) {
-        rb.field_a[4] = true;
+        AwtRasterBuffer.field_a[4] = true;
         if (param0 != 20129) {
           this.m(2);
         }
@@ -29,11 +29,11 @@ abstract class i extends GameAppletShell {
 
     private final void e(byte param0) {
         int var2 = -114 / ((28 - param0) / 54);
-        rb.field_a[5] = true;
+        AwtRasterBuffer.field_a[5] = true;
     }
 
     private final void d(byte param0) {
-        rb.field_a[1] = true;
+        AwtRasterBuffer.field_a[1] = true;
         if (param0 >= -96) {
           this.field_z = 30;
         }
@@ -236,7 +236,7 @@ abstract class i extends GameAppletShell {
           mk.field_o = false;
         }
         if (we.field_c == 0 &&
-          cd.c((byte) 6)) {
+          ImageProducerRasterBuffer.c((byte) 6)) {
           we.field_c = 1;
         }
         if (we.field_c == 1) {
@@ -336,7 +336,7 @@ abstract class i extends GameAppletShell {
           this.g(122);
           ac.a(fb.field_b, (byte) -102);
         }
-        if (rb.field_a[8]) {
+        if (AwtRasterBuffer.field_a[8]) {
           og.a(false);
         }
     }
@@ -358,7 +358,7 @@ abstract class i extends GameAppletShell {
         var4 = Confined.field_J ? 1 : 0;
         var2 = Confined.field_F;
         if (64 > var2 &&
-          rb.field_a[var2]) {
+          AwtRasterBuffer.field_a[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -446,7 +446,7 @@ abstract class i extends GameAppletShell {
     }
 
     private final void k(int param0) {
-        rb.field_a[param0] = true;
+        AwtRasterBuffer.field_a[param0] = true;
     }
 
     private final void a(int param0, int param1, String param2, byte param3, int param4) {
@@ -881,13 +881,13 @@ abstract class i extends GameAppletShell {
     }
 
     private final void a(boolean param0, boolean param1) {
-        rb.field_a[8] = param0;
-        rb.field_a[0] = param1;
-        rb.field_a[16] = true;
-        rb.field_a[18] = true;
-        rb.field_a[17] = true;
-        rb.field_a[7] = true;
-        rb.field_a[3] = true;
+        AwtRasterBuffer.field_a[8] = param0;
+        AwtRasterBuffer.field_a[0] = param1;
+        AwtRasterBuffer.field_a[16] = true;
+        AwtRasterBuffer.field_a[18] = true;
+        AwtRasterBuffer.field_a[17] = true;
+        AwtRasterBuffer.field_a[7] = true;
+        AwtRasterBuffer.field_a[3] = true;
     }
 
     protected i() {

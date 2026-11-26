@@ -86,7 +86,7 @@ final class pda extends DualLinkNode {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_q = null;
         if (param0 != -3) {
           field_p = 23;

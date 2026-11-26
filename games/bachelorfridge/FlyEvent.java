@@ -41,7 +41,7 @@ final class FlyEvent extends SpecialEvent {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_r = null;
         field_t = null;
         if (param0 != -23353) {

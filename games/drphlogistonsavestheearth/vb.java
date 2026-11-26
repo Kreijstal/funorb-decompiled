@@ -16,7 +16,7 @@ final class vb extends IntrusiveNode {
     int[][] field_t;
     static int field_o;
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 4) {
           field_o = 127;
           field_q = null;

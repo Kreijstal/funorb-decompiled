@@ -139,7 +139,7 @@ final class Slime {
             var15.c(0, 1, 0);
             var15.a(0, 0);
           }
-          ca.field_d.c(64);
+          ca.field_d.setAsRasterTarget(64);
           var4 = var4 - var6.field_s / 2;
           var5 -= 32;
           var6.e();

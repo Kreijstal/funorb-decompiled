@@ -51,7 +51,7 @@ final class md {
               hc.field_f = stackIn_13_0;
               sb.field_a = stackIn_13_0;
               ra.field_b = ByteArrayStore.field_a;
-              nf.a(na.field_r, false, MouseInputHandler.field_d, kh.field_g, kj.field_t);
+              nf.a(na.field_r, false, MouseInputHandler.field_d, AwtRasterBuffer.field_g, kj.field_t);
               fe.a((byte) -36, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

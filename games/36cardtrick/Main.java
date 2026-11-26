@@ -156,7 +156,7 @@ public final class Main extends c {
           ue.field_d = param0;
           dg.field_J = 0;
           if (ec.field_f >= 2) {
-            jf.field_n = false;
+            ImageProducerRasterBuffer.field_n = false;
           }
           q.field_i = 255;
           this.p((byte) 99);
@@ -301,7 +301,7 @@ public final class Main extends c {
                     if (!dl.d(0)) {
                       ra.field_d = sk.a(4, (byte) 125);
                       if (0 < ai.field_m &&
-                        !jf.field_n) {
+                        !ImageProducerRasterBuffer.field_n) {
                         this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 80, 3);
                       }
                       dj.field_a = (byte)(rk.field_X >> 8);
@@ -1092,7 +1092,7 @@ public final class Main extends c {
             }
           }
           if (ai.field_m > 0 &&
-            !jf.field_n &&
+            !ImageProducerRasterBuffer.field_n &&
             !dl.d(0)) {
             this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 70, 3);
           }
@@ -1289,7 +1289,7 @@ public final class Main extends c {
           stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
           stackIn_4_2 = 130;
           stackIn_4_3 = 238;
-          if (jf.field_n) {
+          if (ImageProducerRasterBuffer.field_n) {
             stackIn_5_4 = 16776960;
           } else {
             stackIn_5_4 = 16777215;
@@ -1708,7 +1708,7 @@ public final class Main extends c {
             la.field_k.c();
             var4 = 40 / ((param1 - 23) / 52);
             var3_ref.c(0, 0, 4405028);
-            gf.field_e.a(200);
+            gf.field_e.setAsRasterTarget(200);
             stackIn_115_0 = 2;
             return stackIn_115_0;
           }
@@ -1723,7 +1723,7 @@ public final class Main extends c {
           sk.field_c.c();
           qi.field_D.a(0, 0, var5Lifetime1, var5Lifetime1);
           qi.field_D = null;
-          gf.field_e.a(200);
+          gf.field_e.setAsRasterTarget(200);
           this.field_I = gl.a("tiles", mh.field_c, "", -13244);
           var6_ref = lh.a("canyonmask2", mh.field_c, "", 120);
           var7 = var6_ref.field_c;
@@ -1971,7 +1971,7 @@ public final class Main extends c {
           var27.d(-5, 0);
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
           ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
-          gf.field_e.a(200);
+          gf.field_e.setAsRasterTarget(200);
           tc.field_a = new RgbSprite[9];
           var28 = new RgbSprite(2, 2);
           var29 = var28.field_r;
@@ -2073,15 +2073,15 @@ public final class Main extends c {
           sh.clearStaticReferences(4352);
           c.g((byte) 108);
           ClientException.clearStaticReferences((byte) -118);
-          fj.a((byte) -67);
+          GameApplet.a((byte) -67);
           rf.clearStaticReferences(param0 ^ -19749);
           MouseInputHandler.a((byte) 98);
           MouseWheelInput.a(87);
           SoftwareRasterizer.clearStaticReferences();
           ee.clearStaticReferences();
           wh.clearStaticReferences(120);
-          ii.a(4308);
-          PacketBuffer.c((byte) 111);
+          ii.resetStaticState(4308);
+          PacketBuffer.resetStaticState((byte) 111);
           id.a(true);
           sd.clearStaticReferences((byte) 39);
           kg.clearStaticReferences((byte) 84);
@@ -2089,14 +2089,14 @@ public final class Main extends c {
           mc.a(8192);
           hb.clearStaticReferences(true);
           ia.clearStaticReferences(-12765);
-          bi.a(param0 ^ 121);
+          bi.resetStaticState(param0 ^ 121);
           lf.clearStaticReferences(param0 - 10584);
-          vk.a(1);
+          vk.resetStaticState(1);
           gg.clearStaticReferences(false);
           ij.clearStaticReferences(3);
-          bc.a(false);
-          gk.c(0);
-          kh.clearStaticReferences(192);
+          bc.resetStaticState(false);
+          gk.resetStaticState(0);
+          AwtRasterBuffer.clearStaticReferences(192);
           gf.clearStaticReferences((byte) 103);
           FullscreenFocusCanvas.clearStaticReferences((byte) 127);
           bj.clearStaticReferences(-113);
@@ -2105,11 +2105,11 @@ public final class Main extends c {
           re.clearStaticReferences(-4);
           gj.clearStaticReferences((byte) 14);
           eb.clearStaticReferences(true);
-          tk.a(~param0);
-          jd.a((byte) 23);
+          tk.resetStaticState(~param0);
+          jd.resetStaticState((byte) 23);
           gi.clearStaticReferences(1159353185);
           AudioOutput.clearStaticReferences();
-          oj.a((byte) -105);
+          oj.resetStaticState((byte) -105);
           lh.clearStaticReferences(7865);
           cj.clearStaticReferences((byte) 110);
           vg.clearStaticReferences((byte) -72);
@@ -2121,7 +2121,7 @@ public final class Main extends c {
           al.clearStaticReferences((byte) -70);
           hk.a(121);
           j.releaseDeclaredStaticReferences(param0 + 46);
-          AccountCreationResultPanel.u(-2113);
+          AccountCreationResultPanel.resetStaticState(-2113);
           rk.clearStaticReferences((byte) -30);
           kl.clearDeclaredStaticReferences(-23573);
           tj.clearDeclaredStaticReferences(0);
@@ -2129,13 +2129,13 @@ public final class Main extends c {
           fh.clearDeclaredStaticReferences(200);
           jk.clearStaticReferences((byte) -63);
           aj.clearStaticReferences(83);
-          th.b(true);
+          th.resetStaticState(true);
           hd.clearStaticReferences();
           ig.clearStaticReferences();
           VorbisFloor.clearStaticReferences();
           da.clearStaticReferences(-1703274388);
           vb.clearStaticReferences(-1);
-          rj.b(param0 ^ 72);
+          rj.resetStaticState(param0 ^ 72);
           me.a((byte) -128);
           tc.a((byte) -119);
           uk.a((byte) 96);
@@ -2155,7 +2155,7 @@ public final class Main extends c {
           ri.clearStaticReferences(-2);
           dc.clearStaticReferences();
           lg.clearStaticReferences(param0 + 18002);
-          a.d(param0 ^ -14282);
+          a.resetStaticState(param0 ^ -14282);
           cd.clearStaticReferences((byte) 104);
           na.clearStaticReferences(false);
           hc.clearStaticReferences(true);
@@ -2173,7 +2173,7 @@ public final class Main extends c {
           sl.clearStaticReferences(-3);
           wg.clearStaticReferences((byte) 126);
           jh.clearStaticReferences((byte) 51);
-          nf.a(param0 ^ 17);
+          nf.resetStaticState(param0 ^ 17);
           mb.clearStaticReferences(1024);
           ma.clearStaticReferences(-47);
           kj.clearDeclaredStaticReferences((byte) 45);
@@ -2190,11 +2190,11 @@ public final class Main extends c {
           jc.clearDeclaredStaticReferences(42);
           qf.n(param0 + 8736);
           g.clearStaticReferences(true);
-          qd.c(param0 ^ -2057);
+          qd.resetStaticState(param0 ^ -2057);
           ji.a(-61);
           kb.clearStaticReferences(480);
           vd.clearStaticReferences(69);
-          ra.a(250);
+          ra.resetStaticState(250);
           ja.clearStaticReferences((byte) -113);
           pg.clearStaticReferences((byte) -85);
           ni.clearStaticReferences((byte) -35);
@@ -2203,16 +2203,16 @@ public final class Main extends c {
           ca.clearStaticReferences((byte) 127);
           tl.clearStaticReferences(80);
           ProxyAuthenticationRequiredException.a(param0 + 0);
-          ec.d(param0 ^ 10);
-          jf.d(param0 ^ -14143);
+          ec.resetDeclaredStaticState(param0 ^ 10);
+          ImageProducerRasterBuffer.resetStaticState(param0 ^ -14143);
           hi.clearStaticReferences(0);
           ga.b(true);
           dd.clearStaticReferences(false);
           ck.clearStaticReferences((byte) 41);
           hf.o(-31141);
           ta.clearStaticReferences((byte) 116);
-          ng.a(2);
-          bd.l(-10790);
+          ng.resetStaticState(2);
+          bd.resetStaticState(-10790);
           dg.clearDeclaredStaticReferences(param0 ^ -74);
           gl.clearDeclaredStaticReferences(1);
           pa.clearStaticReferences((byte) -78);
@@ -2224,7 +2224,7 @@ public final class Main extends c {
           h.clearDeclaredStaticReferences(-26526);
           SoundFilter.clearStaticReferences();
           pj.clearStaticReferences(param0 ^ -18178);
-          e.a(-560430640);
+          e.resetStaticState(-560430640);
           dj.clearStaticReferences(52);
           lc.b(param0 + 91);
           bf.clearStaticReferences((byte) -121);
@@ -2233,8 +2233,8 @@ public final class Main extends c {
           fl.clearStaticReferences(param0 ^ 31237);
           qi.d((byte) 77);
           wc.releaseDeclaredStaticReferences(param0 - 21693);
-          de.a(false);
-          IterableNodeHashTable.a(3663);
+          de.resetStaticState(false);
+          IterableNodeHashTable.resetStaticState(3663);
           tf.g(-1);
           q.c(0);
           Crc32Table.clearStaticReferences(120);
@@ -2249,12 +2249,12 @@ public final class Main extends c {
           bl.clearStaticReferences((byte) 114);
           aa.d((byte) -49);
           t.clearStaticReferences(0);
-          rc.b((byte) 112);
-          dh.b((byte) -36);
+          rc.resetStaticState((byte) 112);
+          dh.resetStaticState((byte) -36);
           AccountRequestState.clearStaticReferences(178313985);
           AccountServiceResult.clearStaticReferences(2);
           lb.clearStaticReferences(640);
-          cc.a((byte) 107);
+          cc.resetStaticState((byte) 107);
           kf.clearStaticReferences((byte) 110);
           ui.clearDeclaredStaticReferences(-22742);
           qa.clearStaticReferences((byte) -31);
@@ -2268,7 +2268,7 @@ public final class Main extends c {
           gh.clearStaticReferences(256);
           oc.clearStaticReferences(-41);
           di.a(-1);
-          AccountNameAvailabilityValidator.h(param0 ^ 0);
+          AccountNameAvailabilityValidator.resetStaticState(param0 ^ 0);
           mk.clearStaticReferences((byte) 110);
           rd.c(true);
           p.clearDeclaredStaticReferences(param0 ^ 0);
@@ -2292,8 +2292,8 @@ public final class Main extends c {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "Main.FA(" + param0 + ')');
         }
         if (var3 != 0) {
-          stackIn_11_0 = (!fj.field_g);
-          fj.field_g = stackIn_11_0;
+          stackIn_11_0 = (!GameApplet.field_g);
+          GameApplet.field_g = stackIn_11_0;
         }
     }
 
@@ -2329,7 +2329,7 @@ public final class Main extends c {
             } else {
               stackIn_14_2 = true;
             }
-            jf.a((java.awt.Canvas) (stackIn_13_0), stackIn_13_1, stackIn_14_2);
+            ImageProducerRasterBuffer.a((java.awt.Canvas) (stackIn_13_0), stackIn_13_1, stackIn_14_2);
             return;
           }
           if (!fg.field_k) {
@@ -2921,13 +2921,13 @@ public final class Main extends c {
               }
               if (!(2 > ec.field_f)) {
                 this.field_L = GzipInflater.field_c[66];
-                jf.field_n = jf.field_n | this.field_L;
+                ImageProducerRasterBuffer.field_n = ImageProducerRasterBuffer.field_n | this.field_L;
                 if (GzipInflater.field_c[25]) {
                   this.field_db = 1000;
                 }
                 if (!(!GzipInflater.field_c[51])) {
                   this.field_Q = 1;
-                  jf.field_n = true;
+                  ImageProducerRasterBuffer.field_n = true;
                   var3Lifetime2 = 0;
                   while (var3Lifetime2 < this.field_H.length) {
                     stackIn_151_0 = this.field_H;

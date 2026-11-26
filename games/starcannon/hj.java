@@ -28,7 +28,7 @@ final class hj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 >= -23) {

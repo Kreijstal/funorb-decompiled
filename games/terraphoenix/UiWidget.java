@@ -32,7 +32,7 @@ class UiWidget extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 20) {
-            UiWidget.a(true);
+            UiWidget.resetStaticState(true);
           }
           stackIn_3_0 = new ec(param0);
           return stackIn_3_0;
@@ -196,7 +196,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_i = null;
         if (!param0) {
           field_k = 105;
@@ -501,7 +501,7 @@ class UiWidget extends IntrusiveNode {
 
     int d(byte param0) {
         if (param0 < 23) {
-          UiWidget.a(false);
+          UiWidget.resetStaticState(false);
           return 0;
         }
         return 0;

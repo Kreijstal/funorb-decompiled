@@ -7,7 +7,7 @@ final class ob {
     static long field_a;
     static int[] field_c;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 != 30063) {
           field_a = 73L;

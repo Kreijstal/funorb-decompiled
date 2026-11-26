@@ -108,7 +108,7 @@ final class cg {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("jk");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (param1) {
                 stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;

@@ -22,7 +22,7 @@ final class h extends hl {
           String var5Lifetime3;
           String var5Lifetime4;
           try {
-            jf.field_l = param2;
+            ImageProducerRasterBuffer.field_l = param2;
             try {
               if (param1 <= 34) {
                 h.a(81, 58);

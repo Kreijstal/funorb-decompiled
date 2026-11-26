@@ -25,7 +25,7 @@ final class ul {
             w.field_R[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));
           }
           if (param0 != 8) {
-            ul.a((byte) 48);
+            ul.resetStaticState((byte) 48);
           }
           var5 = 256;
           var1_intLifetime1 = var5;
@@ -249,7 +249,7 @@ final class ul {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_d = null;
         if (param0 != 14) {
           field_a = true;

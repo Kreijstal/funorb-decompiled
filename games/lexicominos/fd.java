@@ -113,7 +113,7 @@ final class fd implements Runnable {
             break;
           }
           if (param0 != -58) {
-            fd.a((byte) -11);
+            fd.resetStaticState((byte) -11);
           }
           while (var2_long % 37L == 0L) {
             if (var2_long != 0L) {
@@ -163,7 +163,7 @@ final class fd implements Runnable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_e = null;
         field_a = null;
         if (param0 != -61) {

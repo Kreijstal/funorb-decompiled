@@ -141,7 +141,7 @@ final class gg extends ej implements ai {
         }
     }
 
-    public static void f(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_N = 83;
           field_O = null;

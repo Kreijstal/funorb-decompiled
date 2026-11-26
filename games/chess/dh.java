@@ -265,7 +265,7 @@ final class dh {
     final static void c(byte param0) {
         hh var1 = (hh) (eh.field_R.beginBackward(-18110));
         if (var1 == null) {
-          si.d(65280);
+          ImageProducerRasterBuffer.d(65280);
           return;
         }
         nk var2 = tk.field_h;

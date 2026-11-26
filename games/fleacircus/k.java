@@ -397,7 +397,7 @@ final class k {
 
     final static void a(int param0, wk param1) {
         try {
-          uc.a((byte) 5, true, param1);
+          AwtRasterBuffer.a((byte) 5, true, param1);
           if (param0 != 0) {
             k.a(-15, -38, 84, true);
           }

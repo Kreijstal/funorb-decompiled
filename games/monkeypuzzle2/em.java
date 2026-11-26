@@ -104,7 +104,7 @@ final class em extends ButtonWidget {
         hc.sleepIgnoringInterrupts(param0, (byte) -50);
     }
 
-    public static void a(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         if (param0 != -27714) {
           field_B = 50;
           field_C = null;
@@ -196,7 +196,7 @@ final class em extends ButtonWidget {
           super.b(-48, param1, param2, param3);
           return;
         }
-        em.a(-109);
+        em.resetDeclaredStaticState(-109);
         super.b(-48, param1, param2, param3);
     }
 

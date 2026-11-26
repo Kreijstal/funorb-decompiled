@@ -75,7 +75,7 @@ final class gf {
         this.field_j = param1;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != 46) {
           field_g = -115;
           field_o = null;

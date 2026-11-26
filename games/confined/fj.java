@@ -162,7 +162,7 @@ class fj extends IntrusiveNode {
             ta.a(99, 130, ui.field_a, 148, ek.field_k);
             ta.a(100, 154, ui.field_a, 148, kc.field_r);
             ta.a(116, 178, ui.field_a, 148, r.field_b);
-            ta.a(114, 202, ui.field_a, 148, rb.field_g);
+            ta.a(114, 202, ui.field_a, 148, AwtRasterBuffer.field_g);
             ta.a(115, 400, qe.field_J, 172, si.field_a);
             lf.field_j.d(448, 148);
             var2_int = pn.field_a.c(fh.field_e);
@@ -208,7 +208,7 @@ class fj extends IntrusiveNode {
             ta.a(106, 258, ui.field_a, 198, ek.field_k);
             ta.a(98, 282, ui.field_a, 198, kc.field_r);
             ta.a(117, 306, ui.field_a, 198, r.field_b);
-            ta.a(100, 330, ui.field_a, 198, rb.field_g);
+            ta.a(100, 330, ui.field_a, 198, AwtRasterBuffer.field_g);
             ta.a(106, 528, qe.field_J, 222, si.field_a);
             tj.a(7370619, 170, (byte) 55, 294, 294, 154);
             tj.a(7370619, 154, (byte) 49, 308, 294, 154);
@@ -340,7 +340,7 @@ class fj extends IntrusiveNode {
             kc.a(false, 129, 9, 96);
             kc.a(false, 194, 15, 76);
             kc.a(false, 259, 7, 96);
-            pn.field_a.a(b.a(new String[]{rb.field_g}, on.field_b, 1177), 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
+            pn.field_a.a(b.a(new String[]{AwtRasterBuffer.field_g}, on.field_b, 1177), 132, 58, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(di.field_e, 152, 123, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(field_D, 132, 188, 412, 60, 4243584, -1, 3, 1, 20);
             pn.field_a.a(vj.field_b, 152, 253, 412, 60, 4243584, -1, 3, 1, 20);

@@ -12,7 +12,7 @@ final class g extends w {
     public g() {
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_t = null;
         if (param0) {
           field_s = 92;

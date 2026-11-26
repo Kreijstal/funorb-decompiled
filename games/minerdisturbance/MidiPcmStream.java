@@ -1001,7 +1001,7 @@ final class MidiPcmStream extends PcmStream {
               }
               var3 = var3 + param2;
             }
-            vj.a(var3, param1);
+            ImageProducerRasterBuffer.a(var3, param1);
             var3 = CipherPacketBuffer.a("%3a", -1, var3, ":");
             var3 = CipherPacketBuffer.a("%40", -1, var3, "@");
             var3 = CipherPacketBuffer.a("%26", -1, var3, "&");

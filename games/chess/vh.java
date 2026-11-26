@@ -74,7 +74,7 @@ final class vh {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                si.d(65280);
+                ImageProducerRasterBuffer.d(65280);
               }
               qn.field_U.position = 0;
             }

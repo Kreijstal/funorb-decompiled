@@ -121,10 +121,10 @@ abstract class wh extends DualLinkNode {
             stackIn_11_0 = stackOut_10_0;
             if (var19 == 0) {
               if (stackIn_11_0) {
-                var12 = fa.field_j[var9];
+                var12 = ImageProducerRasterBuffer.field_j[var9];
                 var13 = gf.field_p[var9];
-                var14 = fa.field_j[var10] - var12;
-                var15 = fa.field_j[var11] - var12;
+                var14 = ImageProducerRasterBuffer.field_j[var10] - var12;
+                var15 = ImageProducerRasterBuffer.field_j[var11] - var12;
                 var16 = -var13 + gf.field_p[var10];
                 var17 = gf.field_p[var11] - var13;
               }

@@ -35,7 +35,7 @@ abstract class nd extends DualLinkNode {
             if (param0 == 0) {
               return false;
             }
-            var6 = cd.field_m;
+            var6 = ImageProducerRasterBuffer.field_m;
             var2 = var6;
             for (var3 = 0; var3 < var6.length; var3++) {
               var4 = var6[var3];

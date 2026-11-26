@@ -115,7 +115,7 @@ final class SpecialMoveDefinition extends MoveDefinition {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_r = null;
         if (param0 != 1) {
           field_m = 97;

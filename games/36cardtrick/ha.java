@@ -246,7 +246,7 @@ final class ha {
             if (cb.field_j == null) {
               if (lk.field_w) {
                 if (we.a((byte) 79) > 30000L) {
-                  e.field_a = jf.field_k;
+                  e.field_a = ImageProducerRasterBuffer.field_k;
                 } else {
                   e.field_a = e.field_f;
                 }

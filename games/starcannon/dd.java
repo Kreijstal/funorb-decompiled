@@ -43,7 +43,7 @@ final class dd {
           }
           try {
             var4 = param0.getGraphics();
-            hg.field_y.a(param2, param1, var4, 19291);
+            hg.field_y.drawImage(param2, param1, var4, 19291);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

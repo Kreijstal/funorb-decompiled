@@ -666,7 +666,7 @@ final class c extends sc {
           }
           var2Lifetime11 = wm.a("keyname_energyweapon4", (byte) 55);
           if (var2Lifetime11 != null) {
-            rb.field_g = va.a(0, var2Lifetime11);
+            AwtRasterBuffer.field_g = va.a(0, var2Lifetime11);
           }
           var2Lifetime12 = wm.a("keyname_missile1", (byte) 62);
           if (var2Lifetime12 != null) {
@@ -905,7 +905,7 @@ final class c extends sc {
           }
           var2Lifetime70 = wm.a("intro2_TheJourneyWentSmoothly", (byte) 114);
           if (null != var2Lifetime70) {
-            cd.field_k = va.a(0, var2Lifetime70);
+            ImageProducerRasterBuffer.field_k = va.a(0, var2Lifetime70);
           }
           var2Lifetime71 = wm.a("intro3_TheAliensHaveAdvancedTechnology", (byte) 109);
           if (var2Lifetime71 != null) {
@@ -969,7 +969,7 @@ final class c extends sc {
           }
           var2Lifetime86 = wm.a("intro15_GoodLuck", (byte) 87);
           if (null != var2Lifetime86) {
-            rb.field_i = va.a(0, var2Lifetime86);
+            AwtRasterBuffer.field_i = va.a(0, var2Lifetime86);
           }
           var2Lifetime87 = wm.a("ending1_SettingCourseForEarth", (byte) 51);
           if (var2Lifetime87 != null) {

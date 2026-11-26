@@ -7,7 +7,7 @@ final class um {
     static String field_b;
     static int field_d;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 != 106) {
           field_c = 55;

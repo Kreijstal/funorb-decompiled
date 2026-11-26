@@ -12,7 +12,7 @@ final class rh {
     Archive field_d;
     String field_b;
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_g = null;
         if (param0 != 0) {
           field_e = -90;

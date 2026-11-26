@@ -83,7 +83,7 @@ abstract class ik {
 
     abstract void a(boolean param0, int param1, int param2);
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 99) {
           field_e = -126;
         }

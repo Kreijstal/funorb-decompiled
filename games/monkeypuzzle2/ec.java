@@ -26,7 +26,7 @@ final class ec {
         try {
           wg.field_j.a(v.field_a, rc.field_g, true, true);
           wg.field_j.l(126);
-          while (ba.a(param0 - 2)) {
+          while (AwtRasterBuffer.a(param0 - 2)) {
             wg.field_j.a(oa.field_H, 109, rd.field_p);
           }
           if (-1 != gb.field_f) {

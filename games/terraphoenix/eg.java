@@ -13,7 +13,7 @@ final class eg extends IntrusiveNode {
     static int field_h;
     int field_o;
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_n = null;
         field_k = null;
         if (param0 != 29) {

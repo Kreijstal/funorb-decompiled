@@ -9,7 +9,7 @@ final class DirectByteStorage extends ByteStorage {
     static boolean field_g;
     static int field_h;
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_j = null;
         if (param0 >= -40) {
           field_g = false;

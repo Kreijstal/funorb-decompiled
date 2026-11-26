@@ -21,8 +21,8 @@ final class vf extends ph {
         var2 = HostileSpawn.field_I ? 1 : 0;
         try {
           if (!m.c(param0 ^ -77)) {
-            if (null != wa.field_q &&
-              wa.field_q.focusLost) {
+            if (null != ImageProducerRasterBuffer.field_q &&
+              ImageProducerRasterBuffer.field_q.focusLost) {
               tb.f((byte) -119);
               nb.field_F.c(new jh(nb.field_F, hf.field_g), param0 + 118);
             }

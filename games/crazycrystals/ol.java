@@ -67,7 +67,7 @@ final class ol extends om {
         return null;
     }
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_y = null;
         field_z = null;
         field_D = null;

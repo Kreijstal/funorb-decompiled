@@ -418,7 +418,7 @@ final class mj {
               pe.field_f = pe.a(3, 10, 1, -16947, 13);
             }
             if (!pe.field_f.field_i) {
-              this.field_c[6].field_f = ib.field_j;
+              this.field_c[6].field_f = ImageProducerRasterBuffer.field_j;
               decompiledFrameRemainder0 = (var13 != 0);
             }
             if (decompiledFrameRemainder0) {

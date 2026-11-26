@@ -232,7 +232,7 @@ final class pa extends dg {
           if (cb.field_j == null) {
             if (lk.field_w) {
               if (we.a((byte) 79) > 30000L) {
-                e.field_a = jf.field_k;
+                e.field_a = ImageProducerRasterBuffer.field_k;
               } else {
                 e.field_a = e.field_f;
               }
@@ -293,7 +293,7 @@ final class pa extends dg {
           if (param1 != -1) {
             field_N = (String) null;
           }
-          var2 = new ic(param0, kb.field_c, ml.field_b, na.field_q, hb.field_a, jf.field_i, rd.field_k);
+          var2 = new ic(param0, kb.field_c, ml.field_b, na.field_q, hb.field_a, ImageProducerRasterBuffer.field_i, rd.field_k);
           rh.d(-41);
           stackIn_6_0 = var2;
           return stackIn_6_0;

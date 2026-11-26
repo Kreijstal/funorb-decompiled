@@ -15,7 +15,7 @@ final class mh extends aa {
           rg.field_n = param2;
           return;
         }
-        mh.b(124);
+        mh.resetStaticState(124);
         fb.field_c = param0;
         cm.field_j = param3;
         rg.field_n = param2;
@@ -58,7 +58,7 @@ final class mh extends aa {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_v = null;
         field_x = null;
         if (param0 != 705) {

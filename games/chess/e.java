@@ -133,7 +133,7 @@ final class e extends ma implements mj {
           vk.field_i.a(370, -5 + rb.field_c.field_M - 370, -2147483648, 30, 5);
           ci.field_zb.a(2, -5 + (oh.field_a.field_pb - 37), 37, -3, sc.field_e, 5, -5 + (-5 + oh.field_a.field_M));
           var3 = (2 + rb.field_c.field_M) / 2;
-          si.field_l.a(0, -2 + var3, -2147483648, 40, rb.field_c.field_pb - 40);
+          ImageProducerRasterBuffer.field_l.a(0, -2 + var3, -2147483648, 40, rb.field_c.field_pb - 40);
           if (!bo.field_c) {
             var3 = 0;
           }
@@ -156,7 +156,7 @@ final class e extends ma implements mj {
         vk.field_i.a(370, -5 + rb.field_c.field_M - 370, -2147483648, 30, 5);
         ci.field_zb.a(2, -5 + (oh.field_a.field_pb - 37), 37, -3, sc.field_e, 5, -5 + (-5 + oh.field_a.field_M));
         var3Lifetime1 = (2 + rb.field_c.field_M) / 2;
-        si.field_l.a(0, -2 + var3Lifetime1, -2147483648, 40, rb.field_c.field_pb - 40);
+        ImageProducerRasterBuffer.field_l.a(0, -2 + var3Lifetime1, -2147483648, 40, rb.field_c.field_pb - 40);
         if (!bo.field_c) {
           var3Lifetime1 = 0;
         }

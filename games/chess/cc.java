@@ -27,7 +27,7 @@ final class cc extends ab {
         }
     }
 
-    public static void e(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_v = null;
         if (param0 < 17) {
           field_z = 70;

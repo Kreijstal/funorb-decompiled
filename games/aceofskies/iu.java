@@ -56,7 +56,7 @@ final class iu extends ao {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 == 119) {
           field_h = null;
           field_f = null;

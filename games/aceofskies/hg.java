@@ -54,7 +54,7 @@ final class hg extends to {
         String stackIn_14_2 = null;
         try {
           if (param0 != 2147483647) {
-            hg.j(-34);
+            hg.resetDeclaredStaticState(-34);
           }
           if (nb.field_c == AccountCreationResultPanel.field_fb) {
             return null;
@@ -207,7 +207,7 @@ final class hg extends to {
         }
     }
 
-    public static void j(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         field_y = null;
         field_C = null;
         sharedSpriteArchive = null;

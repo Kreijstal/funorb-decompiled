@@ -451,36 +451,36 @@ final class pj extends nb implements ue, jk, ag {
         }
     }
 
-    final static dd a(int param0, byte param1, int param2, java.awt.Component param3) {
+    final static AwtRasterBuffer a(int param0, byte param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          dd var5 = null;
-          aa var5_ref = null;
-          dd stackIn_3_0 = null;
-          aa stackIn_5_0 = null;
+          AwtRasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          AwtRasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("qi");
-              var5 = (dd) (var4.newInstance());
+              var4 = Class.forName("BufferedImageRasterBuffer");
+              var5 = (AwtRasterBuffer) (var4.newInstance());
               if (param1 != 99) {
                 pj.clearStaticReferences((byte) 89);
               }
-              var5.a(false, param0, param2, param3);
+              var5.initialize(false, param0, param2, param3);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new aa();
-              ((dd) ((Object) var5_ref)).a(false, param0, param2, param3);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((AwtRasterBuffer) ((Object) var5_ref)).initialize(false, param0, param2, param3);
               stackIn_5_0 = var5_ref;
-              return (dd) ((Object) stackIn_5_0);
+              return (AwtRasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

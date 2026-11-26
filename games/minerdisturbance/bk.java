@@ -162,7 +162,7 @@ final class bk {
           IOException iOException = null;
           int var2 = 0;
           Throwable decompiledCaughtException = null;
-          if (null != ci.field_i && (0 > param1 ||
+          if (null != AwtRasterBuffer.field_i && (0 > param1 ||
             pb.field_c == qd.field_Q)) {
             var2 = -19 % ((-8 - param0) / 45);
             if (sn.field_c.position == 0 &&
@@ -171,7 +171,7 @@ final class bk {
             }
             if (sn.field_c.position > 0) {
               try {
-                ci.field_i.a((byte) 124, sn.field_c.payload, sn.field_c.position, 0);
+                AwtRasterBuffer.field_i.a((byte) 124, sn.field_c.payload, sn.field_c.position, 0);
                 ck.field_d = sf.correctedCurrentTimeMillis((byte) 115);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

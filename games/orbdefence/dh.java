@@ -45,7 +45,7 @@ class dh extends hl implements ai {
         }
     }
 
-    public static void e(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != -94) {
           field_Z = 63;
         }

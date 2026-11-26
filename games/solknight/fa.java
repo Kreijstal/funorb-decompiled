@@ -10,7 +10,7 @@ final class fa {
     static int[] field_g;
     static int[] field_e;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_b = null;
         if (!param0) {
           field_f = 70;

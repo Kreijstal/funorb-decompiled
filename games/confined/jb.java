@@ -948,7 +948,7 @@ final class jb {
               pn.field_a.a(var11_ref_String, var10 + (var3.field_j - 0), var5, -var10 + var3.field_f, var6, var7, -1, 0, 1, 20);
             }
           } else {
-            var8 = pn.field_a.c(rb.field_h);
+            var8 = pn.field_a.c(AwtRasterBuffer.field_h);
             var9 = pn.field_a.c(mg.field_d);
             if (var8 < var9) {
               var8 = var9;
@@ -1185,7 +1185,7 @@ final class jb {
         if (var3 == 7) {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_p.f((byte) -79)) {
-            var4 = pn.field_a.c(rb.field_h);
+            var4 = pn.field_a.c(AwtRasterBuffer.field_h);
             var5 = pn.field_a.c(mg.field_d);
             if (var4 < var5) {
               var4 = var5;
@@ -1253,7 +1253,7 @@ final class jb {
             if (this.field_p.d((byte) 55)) {
               this.e((byte) -128);
             }
-            var4Lifetime1 = pn.field_a.c(rb.field_h);
+            var4Lifetime1 = pn.field_a.c(AwtRasterBuffer.field_h);
             var5Lifetime1 = pn.field_a.c(mg.field_d);
             if (var5Lifetime1 > var4Lifetime1) {
               var4Lifetime1 = var5Lifetime1;
@@ -1308,7 +1308,7 @@ final class jb {
             if (this.field_p.d((byte) 55)) {
               this.e((byte) -122);
             }
-            var4Lifetime2 = pn.field_a.c(rb.field_h);
+            var4Lifetime2 = pn.field_a.c(AwtRasterBuffer.field_h);
             var5Lifetime2 = pn.field_a.c(mg.field_d);
             if (var5Lifetime2 > var4Lifetime2) {
               var4Lifetime2 = var5Lifetime2;

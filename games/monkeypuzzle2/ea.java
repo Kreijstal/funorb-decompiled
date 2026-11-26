@@ -27,7 +27,7 @@ final class ea {
             }
             var4 = new byte[var3_int];
             if (param0 != 90) {
-              ea.a(-85);
+              ea.resetStaticState(-85);
             }
             param1.position = param1.position + jc.field_d.a(-1, 0, param1.position, var3_int, var4, param1.payload);
             var5 = sc.a(var4, var3_int, param0 ^ -106, 0);
@@ -53,7 +53,7 @@ final class ea {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_c = 117;
           field_d = null;

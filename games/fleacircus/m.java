@@ -77,8 +77,8 @@ final class m {
           if (ol.field_d != null) {
             ol.field_d.field_N.a(param1, -69);
           }
-          if (null != uc.field_e) {
-            uc.field_e.field_H.a(param1, -102);
+          if (null != AwtRasterBuffer.field_e) {
+            AwtRasterBuffer.field_e.field_H.a(param1, -102);
           }
           if (param0 >= -20) {
             field_c = (int[]) null;

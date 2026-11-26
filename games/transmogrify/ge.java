@@ -45,7 +45,7 @@ final class ge extends aj implements hl, df {
         }
     }
 
-    public static void n(int param0) {
+    public static void resetStaticState(int param0) {
         field_A = null;
         if (param0 != 1843) {
           field_x = false;

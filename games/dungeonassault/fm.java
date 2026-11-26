@@ -50,7 +50,7 @@ final class fm {
           return cg.field_b;
         }
         if (10 == param1) {
-          return kf.field_k;
+          return ImageProducerRasterBuffer.field_k;
         }
         if (11 == param1) {
           return jl.field_c;

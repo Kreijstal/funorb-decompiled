@@ -112,7 +112,7 @@ final class AccountNameAvailabilityValidator extends r {
           ResourceArchive.field_c.field_z = new String[wj.field_c[fleas.field_E].length];
           ResourceArchive.field_c.field_t = new boolean[ResourceArchive.field_c.field_z.length];
           if (param0 != -6359) {
-            AccountNameAvailabilityValidator.c(true);
+            AccountNameAvailabilityValidator.resetStaticState(true);
           }
           for (var1_int = 0; var1_int < ResourceArchive.field_c.field_t.length; var1_int++) {
             var2 = hj.field_a[fleas.field_E] >= var1_int ? 1 : 0;
@@ -132,7 +132,7 @@ final class AccountNameAvailabilityValidator extends r {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_n = null;
         if (param0) {
           field_p = 114;
@@ -141,7 +141,7 @@ final class AccountNameAvailabilityValidator extends r {
 
     final void d(boolean param0) {
         if (!param0) {
-          AccountNameAvailabilityValidator.c(false);
+          AccountNameAvailabilityValidator.resetStaticState(false);
         }
         this.checkedName = null;
     }

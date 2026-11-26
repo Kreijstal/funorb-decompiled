@@ -212,7 +212,7 @@ final class ul extends IntrusiveNode {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_k = null;
         if (param0 != -31397) {
           field_n = -111;

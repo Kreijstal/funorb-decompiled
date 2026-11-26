@@ -28,7 +28,7 @@ final class wg extends IntrusiveNode {
             if (th.field_o[var2] < 137) {
               th.field_o[var2] = 137;
             }
-            sl.field_k[var2] = -(m.field_e[var2] / 2) + 320;
+            ImageProducerRasterBuffer.field_k[var2] = -(m.field_e[var2] / 2) + 320;
             si.field_v[var2] = 240 - th.field_o[var2] / 2;
             vh.field_E[var2] = new Sprite(m.field_e[var2], th.field_o[var2]);
             vh.field_E[var2].e();
@@ -67,7 +67,7 @@ final class wg extends IntrusiveNode {
               ak.field_t[0].c(15, 79);
             }
           }
-          ac.field_a.a((byte) 118);
+          ac.field_a.setAsRasterTarget((byte) 118);
           if (param0 >= -78) {
             var5 = (float[]) null;
             wg.a((float[]) null, (byte) -105);

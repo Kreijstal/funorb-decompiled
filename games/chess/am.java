@@ -259,7 +259,7 @@ final class am {
             }
             if (var2 != 4) {
               fg.a((Throwable) null, (byte) -77, "F1: " + tm.b((byte) -128));
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
               return;
             }
             ld.field_g = 1;

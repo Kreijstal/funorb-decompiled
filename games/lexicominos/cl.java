@@ -124,7 +124,7 @@ final class cl extends rl implements nd {
               param0.g(12, 26527);
               var4[var5] = var6;
             } else {
-              var6_int = param0.g(dd.a((byte) 34, var5 - 1), 26527);
+              var6_int = param0.g(AwtRasterBuffer.a((byte) 34, var5 - 1), 26527);
               var4[var5] = var4[var6_int];
             }
           }

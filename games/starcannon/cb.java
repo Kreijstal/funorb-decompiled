@@ -180,7 +180,7 @@ final class cb {
             while (var9 < var8) {
               var11 = jk.field_c[var9];
               var6[0][var10] = ef.field_f[var11];
-              var19[0][var10 * 4] = tk.field_f[var11];
+              var19[0][var10 * 4] = AwtRasterBuffer.field_f[var11];
               var19[0][1 + var10 * 4] = nf.field_b[var11];
               var19[0][2 + 4 * var10] = MouseWheelSource.field_f[var11];
               var19[0][4 * var10 + 3] = ab.field_G[var11];
@@ -199,7 +199,7 @@ final class cb {
             while (var8 > var13) {
               var11Lifetime1 = jk.field_c[var13 + var5];
               var6[1][var14] = ef.field_f[var11Lifetime1];
-              var19[1][4 * var14] = tk.field_f[var11Lifetime1];
+              var19[1][4 * var14] = AwtRasterBuffer.field_f[var11Lifetime1];
               var19[1][1 + 4 * var14] = nf.field_b[var11Lifetime1];
               var19[1][2 + 4 * var14] = MouseWheelSource.field_f[var11Lifetime1];
               var19[1][4 * var14 + 3] = ab.field_G[var11Lifetime1];

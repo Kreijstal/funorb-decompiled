@@ -397,7 +397,7 @@ final class mk extends WidgetContainer implements cm, ij, nc {
         var2.patchByteLength((byte) 24, var2.position - var3);
     }
 
-    public static void k(int param0) {
+    public static void resetStaticState(int param0) {
         field_S = null;
         field_K = null;
         field_P = null;

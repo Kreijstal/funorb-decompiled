@@ -282,7 +282,7 @@ final class vd extends td implements jg, ButtonListener, a {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_K = -56;
         }

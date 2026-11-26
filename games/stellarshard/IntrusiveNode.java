@@ -18,7 +18,7 @@ class IntrusiveNode {
           df.a(param1 ^ -11, param0);
           we.a(false, param1 + 12660, ul.field_H);
           if (param1 != 97) {
-            IntrusiveNode.b((byte) -95);
+            IntrusiveNode.resetStaticState((byte) -95);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "gg.NB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -58,7 +58,7 @@ class IntrusiveNode {
         return true;
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         field_f = null;
         field_h = null;

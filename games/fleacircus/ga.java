@@ -27,7 +27,7 @@ final class ga extends r {
             return stackIn_3_0;
           }
           if (param0 != 160) {
-            ga.c((byte) -73);
+            ga.resetStaticState((byte) -73);
           }
           var5 = (CharSequence) ((Object) param1);
           var3_int = pl.a(var5, -9816);
@@ -82,7 +82,7 @@ final class ga extends r {
         }
     }
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_p = null;
         field_q = null;
         if (param0 > 111) {

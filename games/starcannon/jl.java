@@ -401,7 +401,7 @@ final class jl {
               af.field_w[1 + 8 * pd.field_a].c(var4, -6 + var3);
               var3 = var3 + (14 * af.field_y.a(mc.field_i, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) + 14);
               af.field_w[2 + pd.field_a * 8].c(var4, -6 + var3);
-              var3 = var3 + (14 + 14 * af.field_y.a(mg.field_k, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
+              var3 = var3 + (14 + 14 * af.field_y.a(ImageProducerRasterBuffer.field_k, var4 + 40, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
               af.field_w[8 * pd.field_a + 5].c(var4, -6 + var3);
               var3 = var3 + (14 * af.field_y.a(a.field_c, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14) + 14);
               af.field_y.a(la.field_a, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);

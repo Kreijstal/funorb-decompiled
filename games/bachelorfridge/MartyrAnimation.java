@@ -14,7 +14,7 @@ final class MartyrAnimation extends EventAnimation {
         MartyrAnimation.a(-28, -56, 3, (FridgeCreature) null, 27);
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_v = null;
         if (param0 == 2) {
           return;

@@ -17,7 +17,7 @@ final class bma extends cia {
         this.field_v = param3;
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 >= -34) {
           field_u = -10;
           field_t = null;

@@ -156,7 +156,7 @@ final class fa {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_c = 65;
         }

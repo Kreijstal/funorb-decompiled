@@ -34,7 +34,7 @@ final class ii {
     }
 
     final static String b(byte param0) {
-        if (ic.field_l == ci.field_e) {
+        if (ic.field_l == AwtRasterBuffer.field_e) {
           return qf.field_r;
         }
         int var1 = -48 / ((param0 - 15) / 47);

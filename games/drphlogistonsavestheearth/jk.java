@@ -317,7 +317,7 @@ final class jk extends si {
             for (var8 = 0; var7 > var8; var8++) {
               lg.field_a[var8] = -1;
             }
-            sg.field_f[0] = na.field_d;
+            sg.field_f[0] = AwtRasterBuffer.field_d;
             mi.field_g = new int[2];
             lg.field_a[1] = 0;
             sg.field_f[1] = wk.field_h;

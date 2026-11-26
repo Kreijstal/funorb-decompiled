@@ -62,7 +62,7 @@ final class gn {
 
     final void a(boolean param0) {
         int fieldTemp$1 = 0;
-        if (null != wa.field_q) {
+        if (null != ImageProducerRasterBuffer.field_q) {
           return;
         }
         if (0 >= wb.field_S) {
@@ -239,7 +239,7 @@ final class gn {
                 qa.field_g[var10.field_h + 1].a(true, 128, (int)var10.field_c, param1, param4);
                 var14.a();
                 qa.field_g[1 + var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
-                o.field_n.b((byte) 117);
+                o.field_n.setAsRasterTarget((byte) 117);
                 for (var12 = 0; var14.field_D.length > var12; var12++) {
                   if (var14.field_D[var12] != 0) {
                     var14.field_D[var12] = 16711680;
@@ -270,7 +270,7 @@ final class gn {
                   hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
                   var14.a();
                   hh.field_a[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
-                  o.field_n.b((byte) 110);
+                  o.field_n.setAsRasterTarget((byte) 110);
                   for (var12 = 0; var14.field_D.length > var12; var12++) {
                     if (var14.field_D[var12] != 0) {
                       var14.field_D[var12] = 16711680;
@@ -296,7 +296,7 @@ final class gn {
                     wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, param1, param4);
                     var14.a();
                     wk.field_b[var10.field_h].a(true, 128, (int)var10.field_c, 32, 32);
-                    o.field_n.b((byte) -88);
+                    o.field_n.setAsRasterTarget((byte) -88);
                     for (var12 = 0; var14.field_D.length > var12; var12++) {
                       if (var14.field_D[var12] != 0) {
                         var14.field_D[var12] = 16711680;

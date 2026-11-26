@@ -67,7 +67,7 @@ final class ga {
               dl.field_b = false;
               var3_int = 1;
             }
-            hd.a(aa.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
+            hd.a(ImageProducerRasterBuffer.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
           }
           if (param0 == 57) {
             return;
@@ -139,7 +139,7 @@ final class ga {
               dl.field_b = false;
               var3_int = 1;
             }
-            hd.a(aa.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
+            hd.a(ImageProducerRasterBuffer.a((byte) 92), (byte) -90, ik.a((byte) 94), var3_int != 0, te.field_E);
           }
           if (param0 == 57) {
             return;

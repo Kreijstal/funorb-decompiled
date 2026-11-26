@@ -9,7 +9,7 @@ final class cf {
     int field_a;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != -87) {
           field_e = -67;
           field_b = null;

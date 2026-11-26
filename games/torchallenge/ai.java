@@ -29,7 +29,7 @@ final class ai {
           }
           return stackIn_15_0;
         }
-        ai.a(38);
+        ai.resetStaticState(38);
         param1 = param1 & 8191;
         if (4096 <= param1) {
           if (param1 < 6144) {
@@ -69,7 +69,7 @@ final class ai {
             }
           }
           if (param0 != 0) {
-            ai.a(68);
+            ai.resetStaticState(68);
           }
           AccountServiceResult.field_h = (Sprite[][]) null;
           return;
@@ -80,7 +80,7 @@ final class ai {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 == 2048) {
           return;

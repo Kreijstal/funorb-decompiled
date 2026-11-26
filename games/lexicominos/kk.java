@@ -259,7 +259,7 @@ final class kk extends ve {
         }
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < -70) {
           field_n = null;
           field_i = null;

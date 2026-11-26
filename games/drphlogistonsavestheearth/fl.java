@@ -22,7 +22,7 @@ final class fl {
         return nd.field_K;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 > 42) {
           field_a = null;
           field_e = null;

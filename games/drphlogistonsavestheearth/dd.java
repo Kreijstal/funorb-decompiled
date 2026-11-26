@@ -208,11 +208,11 @@ final class dd extends u {
               stackIn_39_0 = null;
             }
             var21 = stackIn_39_0;
-            var22 = fa.field_j[var15Lifetime1];
+            var22 = ImageProducerRasterBuffer.field_j[var15Lifetime1];
             var23 = gf.field_p[var15Lifetime1];
-            var24 = fa.field_j[var16];
+            var24 = ImageProducerRasterBuffer.field_j[var16];
             var25 = gf.field_p[var16];
-            var26 = fa.field_j[var17];
+            var26 = ImageProducerRasterBuffer.field_j[var17];
             var27 = gf.field_p[var17];
             if (var18 == var19 &&
               var19 == var20) {

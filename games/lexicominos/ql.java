@@ -17,7 +17,7 @@ abstract class ql extends al {
           return;
         }
         if (!param0) {
-          ql.g((byte) -79);
+          ql.resetStaticState((byte) -79);
         }
         this.b(this.field_M, -120, this.field_N);
         this.field_J = 0;
@@ -186,7 +186,7 @@ abstract class ql extends al {
         int var5 = -2 % ((10 - param1) / 59);
     }
 
-    public static void g(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_Q = null;
         if (param0 != 42) {
           field_O = -54;

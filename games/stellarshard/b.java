@@ -79,7 +79,7 @@ final class b extends id {
         return false;
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_u = null;
         if (!param0) {
           field_t = 69;

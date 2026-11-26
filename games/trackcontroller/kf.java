@@ -7,7 +7,7 @@ final class kf {
     static Sprite[] field_d;
     static int field_a;
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         if (param0 != -1688814815) {
           field_c = -121;

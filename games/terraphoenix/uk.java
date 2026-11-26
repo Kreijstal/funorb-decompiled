@@ -77,7 +77,7 @@ final class uk {
           if (param0) {
             return;
           }
-          uk.a(-74);
+          uk.resetStaticState(-74);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class uk {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         if (param0 > -28) {
           field_c = true;

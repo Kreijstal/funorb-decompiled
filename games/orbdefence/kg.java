@@ -11,7 +11,7 @@ final class kg extends IntrusiveNode {
     static int field_f;
     static String field_l;
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_j = null;
         field_l = null;
         field_h = null;

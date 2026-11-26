@@ -22,7 +22,7 @@ final class ll {
         try {
           try {
             var4 = param2.getGraphics();
-            gf.field_e.a(var4, param3, param0, (byte) 123);
+            gf.field_e.drawImage(var4, param3, param0, (byte) 123);
             if (param1 != 115) {
               var5 = (java.awt.Canvas) null;
               ll.a(95, (byte) 7, (java.awt.Canvas) null, 48);

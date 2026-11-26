@@ -6,7 +6,7 @@ final class el {
     static int[][] field_b;
     static int field_a;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_a = 21;
           field_b = (int[][]) null;
@@ -20,7 +20,7 @@ final class el {
     final static void a(boolean param0, int param1) {
         aa.field_a = param1;
         if (!param0) {
-          el.a(false);
+          el.resetStaticState(false);
         }
     }
 

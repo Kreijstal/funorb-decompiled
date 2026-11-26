@@ -203,7 +203,7 @@ final class hi extends bg {
         return ao.field_O.field_Mb;
     }
 
-    public static void d(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_p = null;
         if (param0 <= -47) {
           field_n = null;

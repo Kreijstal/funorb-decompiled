@@ -6,7 +6,7 @@ final class jc {
     static PcmSample field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 33469985) {
           field_b = true;
           field_a = null;

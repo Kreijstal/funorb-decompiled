@@ -227,7 +227,7 @@ final class id {
           var4 = var3;
           for (var5 = 0; var4.length > var5; var5++) {
             var6 = var4[var5];
-            var7 = bj.a(param1 - 31656, var6);
+            var7 = ImageProducerRasterBuffer.a(param1 - 31656, var6);
             if (var7 != null) {
               stackIn_20_0 = var7;
               return stackIn_20_0;

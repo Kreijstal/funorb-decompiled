@@ -8,7 +8,7 @@ final class kh {
     static String field_b;
     static int field_d;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_e = null;
         field_c = null;
         field_b = null;
@@ -25,7 +25,7 @@ final class kh {
         ak.field_b = null;
         i.field_I = null;
         if (param0 >= -29) {
-          kh.a(false);
+          kh.resetStaticState(false);
         }
     }
 

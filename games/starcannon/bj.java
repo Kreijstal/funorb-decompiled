@@ -19,7 +19,7 @@ final class bj {
         RuntimeException var3_ref = null;
         try {
           if (!param2) {
-            bj.a(-127);
+            bj.resetStaticState(-127);
           }
           param1 = s.a(param1, '_', "", (byte) -10);
           var3 = vh.a(param1, 0);
@@ -45,7 +45,7 @@ final class bj {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         field_d = null;
         field_a = null;

@@ -27,7 +27,7 @@ final class MidiNote extends IntrusiveNode {
     un field_B;
     int field_r;
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_s = null;
         field_i = null;
         if (param0 != 73) {

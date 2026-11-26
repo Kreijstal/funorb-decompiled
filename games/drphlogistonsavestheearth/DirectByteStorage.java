@@ -21,7 +21,7 @@ final class DirectByteStorage extends ByteStorage {
             ib.field_f = MidiPcmStream.a(param1, 0);
           }
           if (param0 != 45) {
-            DirectByteStorage.c((byte) -81);
+            DirectByteStorage.resetStaticState((byte) -81);
           }
           stackIn_7_0 = ib.field_f;
           return stackIn_7_0;
@@ -116,7 +116,7 @@ final class DirectByteStorage extends ByteStorage {
           var8.writeInt(param1.field_o, (byte) 126);
           var8.writeInt(param1.field_s, (byte) 107);
           if (param2 >= -93) {
-            DirectByteStorage.c((byte) -14);
+            DirectByteStorage.resetStaticState((byte) -14);
           }
           var8.writeInt(param1.field_j, (byte) -112);
           var8.writeInt(param1.field_h, (byte) -16);
@@ -170,7 +170,7 @@ final class DirectByteStorage extends ByteStorage {
           var10 = param0.field_w;
           var11 = param0.field_y;
           if (param3 < 28) {
-            DirectByteStorage.c((byte) -103);
+            DirectByteStorage.resetStaticState((byte) -103);
           }
           var12 = SoftwareRasterizer.field_k - var11;
           var13 = 0;
@@ -247,7 +247,7 @@ final class DirectByteStorage extends ByteStorage {
         }
     }
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_h = null;
         if (param0 <= 24) {
           field_i = -53;

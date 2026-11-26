@@ -26,7 +26,7 @@ final class nh {
         return stackIn_7_0;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_a = null;
         field_h = null;
         if (param0) {
@@ -46,7 +46,7 @@ final class nh {
           try {
             try {
               if (param1 != 337033697) {
-                nh.a(false);
+                nh.resetStaticState(false);
               }
               var2 = new java.net.URL(param0.getCodeBase(), "quit.ws");
               param0.getAppletContext().showDocument(NodeHashTableIterator.a(127, var2, param0), "_top");

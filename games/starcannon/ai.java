@@ -186,9 +186,9 @@ final class ai {
     final static void a(int param0, boolean param1, int param2) {
         if (null == oh.field_c) {
           oh.field_c = new int[param2 * 2];
-          if (null == tk.field_f ||
-            !(tk.field_f.length >= param2)) {
-            tk.field_f = new int[param2 * 2];
+          if (null == AwtRasterBuffer.field_f ||
+            !(AwtRasterBuffer.field_f.length >= param2)) {
+            AwtRasterBuffer.field_f = new int[param2 * 2];
           }
           if (nf.field_b == null ||
             !(param2 <= nf.field_b.length)) {
@@ -277,9 +277,9 @@ final class ai {
           }
         } else {
           if (oh.field_c.length >= param2) {
-            if (null == tk.field_f ||
-              !(tk.field_f.length >= param2)) {
-              tk.field_f = new int[param2 * 2];
+            if (null == AwtRasterBuffer.field_f ||
+              !(AwtRasterBuffer.field_f.length >= param2)) {
+              AwtRasterBuffer.field_f = new int[param2 * 2];
             }
             if (nf.field_b == null ||
               !(param2 <= nf.field_b.length)) {
@@ -368,9 +368,9 @@ final class ai {
             }
           } else {
             oh.field_c = new int[param2 * 2];
-            if (null == tk.field_f ||
-              !(tk.field_f.length >= param2)) {
-              tk.field_f = new int[param2 * 2];
+            if (null == AwtRasterBuffer.field_f ||
+              !(AwtRasterBuffer.field_f.length >= param2)) {
+              AwtRasterBuffer.field_f = new int[param2 * 2];
             }
             if (nf.field_b == null ||
               !(param2 <= nf.field_b.length)) {

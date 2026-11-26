@@ -136,8 +136,8 @@ abstract class wm {
           lg.field_c = new ci(0L, e.field_M, vh.field_d);
           vk.field_i = new ci(0L, DualLinkNode.field_j, ba.field_R);
           ci.field_zb = new nb(0L, new ci(0L, (ci) null), gm.field_b, ia.field_o);
-          si.field_l = new ci(0L, nj.field_x, ae.field_c.toUpperCase());
-          si.field_l.field_tb = bo.field_c;
+          ImageProducerRasterBuffer.field_l = new ci(0L, nj.field_x, ae.field_c.toUpperCase());
+          ImageProducerRasterBuffer.field_l.field_tb = bo.field_c;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
@@ -165,7 +165,7 @@ abstract class wm {
           oh.field_a.a((byte) 125, vk.field_i);
           oh.field_a.a((byte) 125, ci.field_zb);
           if (bo.field_c) {
-            rb.field_c.a((byte) 125, si.field_l);
+            rb.field_c.a((byte) 125, ImageProducerRasterBuffer.field_l);
           }
           rb.field_c.a((byte) 124, wj.field_g);
           qi.field_o = new ci(0L, qn.field_P);

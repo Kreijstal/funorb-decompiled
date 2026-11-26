@@ -172,7 +172,7 @@ final class rf implements Runnable {
           if (ph.a(param0, false)) {
             return true;
           }
-          var6 = kh.field_f;
+          var6 = AwtRasterBuffer.field_f;
           var2 = var6;
           for (var3 = param1; var6.length > var3; var3++) {
             var4 = var6[var3];

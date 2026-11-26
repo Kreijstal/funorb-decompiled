@@ -74,7 +74,7 @@ final class GasCloudEvent extends SpecialEvent {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("tu");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (param3 != 29548) {
                 var6 = (java.awt.Component) null;
                 GasCloudEvent.a(-117, 32, (java.awt.Component) null, -59);

@@ -32,17 +32,17 @@ final class ji extends kn {
         RuntimeException var7_ref = null;
         try {
           super.a(param0, param1, param2, param3, param4 ^ param4, param5);
-          var7 = vj.field_a;
+          var7 = AwtRasterBuffer.field_a;
           if (var7 != null &&
             this.a(param0, param5, param2, (byte) -117, param3)) {
             if (this.field_p instanceof cj) {
               ((cj) (this.field_p)).a(var7, -10925, this);
-              vj.field_a = null;
+              AwtRasterBuffer.field_a = null;
               return;
             }
             if (var7.field_p instanceof cj) {
               ((cj) (var7.field_p)).a(var7, -10925, this);
-              vj.field_a = null;
+              AwtRasterBuffer.field_a = null;
               return;
             }
           }
@@ -206,7 +206,7 @@ final class ji extends kn {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  si.d(65280);
+                  ImageProducerRasterBuffer.d(65280);
                   DirectByteStorage.field_f = false;
                   stackIn_31_0 = var7Lifetime1;
                   return stackIn_31_0;
@@ -246,9 +246,9 @@ final class ji extends kn {
                 tk.field_h.readUnsignedByte(-87);
                 tk.field_h.readUnsignedByte(-86);
                 tk.field_h.readInt((byte) -106);
-                si.field_n = tk.field_h.readUnsignedShort(674914976);
-                jn.field_P = new byte[si.field_n];
-                for (var9 = 0; si.field_n > var9; var9++) {
+                ImageProducerRasterBuffer.field_n = tk.field_h.readUnsignedShort(674914976);
+                jn.field_P = new byte[ImageProducerRasterBuffer.field_n];
+                for (var9 = 0; ImageProducerRasterBuffer.field_n > var9; var9++) {
                   jn.field_P[var9] = tk.field_h.readByte(0);
                 }
               }
@@ -297,7 +297,7 @@ final class ji extends kn {
             }
             if (qd.field_m == tb.field_f &&
               jl.a(false)) {
-              si.d(65280);
+              ImageProducerRasterBuffer.d(65280);
               if (wg.field_B == 7 &&
                 !DirectByteStorage.field_f) {
                 DirectByteStorage.field_f = true;

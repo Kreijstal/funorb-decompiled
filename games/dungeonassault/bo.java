@@ -74,7 +74,7 @@ final class bo extends ok {
           mi.field_e = mk.a(4, (byte) 34);
           hj.field_Z = bg.a(true, 9, false, false, true);
           np.field_A = mk.a(10, (byte) 34);
-          kf.field_p = bg.a(true, 11, false, false, true);
+          ImageProducerRasterBuffer.field_p = bg.a(true, 11, false, false, true);
           sb.field_a = bg.a(true, 12, false, false, true);
           ia.field_W = mk.a(13, (byte) 34);
           DualLinkNode.field_r = mk.a(14, (byte) 34);
@@ -87,7 +87,7 @@ final class bo extends ok {
           be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
           be.field_s.a(qk.field_c, 237, sa.field_w, hj.field_Z);
           be.field_s.a(qk.field_c, 237, sa.field_w, sb.field_a);
-          be.field_s.a(uc.field_L, 237, nb.field_b, kf.field_p);
+          be.field_s.a(uc.field_L, 237, nb.field_b, ImageProducerRasterBuffer.field_p);
           be.field_s.a(mp.field_c, "roman20", rf.field_L, uc.field_I, -109);
           be.field_s.a(mp.field_c, "roman20", rf.field_L, gh.field_c, -101);
           be.field_s.a(mp.field_c, "roman12", rf.field_L, uc.field_I, -93);
@@ -105,7 +105,7 @@ final class bo extends ok {
         mi.field_e = mk.a(4, (byte) 34);
         hj.field_Z = bg.a(true, 9, false, false, true);
         np.field_A = mk.a(10, (byte) 34);
-        kf.field_p = bg.a(true, 11, false, false, true);
+        ImageProducerRasterBuffer.field_p = bg.a(true, 11, false, false, true);
         sb.field_a = bg.a(true, 12, false, false, true);
         ia.field_W = mk.a(13, (byte) 34);
         DualLinkNode.field_r = mk.a(14, (byte) 34);
@@ -118,7 +118,7 @@ final class bo extends ok {
         be.field_s.a(sa.field_w, "lobby", qk.field_c, gh.field_c, -83);
         be.field_s.a(qk.field_c, 237, sa.field_w, hj.field_Z);
         be.field_s.a(qk.field_c, 237, sa.field_w, sb.field_a);
-        be.field_s.a(uc.field_L, 237, nb.field_b, kf.field_p);
+        be.field_s.a(uc.field_L, 237, nb.field_b, ImageProducerRasterBuffer.field_p);
         be.field_s.a(mp.field_c, "roman20", rf.field_L, uc.field_I, -109);
         be.field_s.a(mp.field_c, "roman20", rf.field_L, gh.field_c, -101);
         be.field_s.a(mp.field_c, "roman12", rf.field_L, uc.field_I, -93);

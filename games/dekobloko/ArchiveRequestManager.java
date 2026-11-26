@@ -50,7 +50,7 @@ final class ArchiveRequestManager extends MixedSupport115 {
                 stackFramebufferLocal6 = (Framebuffer) null;
                 return stackFramebufferLocal6;
               }
-              classLocal1 = Class.forName("RenderingSupport013");
+              classLocal1 = Class.forName("BufferedImageRasterBuffer");
               framebufferLocal4 = (Framebuffer) (classLocal1.newInstance());
               framebufferLocal4.performAction0424(integerArgument3, (byte) 83, integerArgument1, componentArgument4);
               stackFramebufferLocal7 = framebufferLocal4;

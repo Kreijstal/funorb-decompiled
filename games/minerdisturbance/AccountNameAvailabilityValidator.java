@@ -56,7 +56,7 @@ final class AccountNameAvailabilityValidator extends cb {
           qf.field_r = param5;
           km.field_b = param6;
           PcmResampler.field_d = param0;
-          ic.field_l = ci.field_e;
+          ic.field_l = AwtRasterBuffer.field_e;
           ArchiveIndex.field_o = param3;
           vk.field_g = null;
           me.field_j = param1;

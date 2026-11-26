@@ -87,7 +87,7 @@ final class kj extends IntrusiveNode {
           }
           MusicPatchPcmStream.field_r.a(param1, param0, param3, (byte) 45);
           if (param2 != -2958) {
-            kj.a(93);
+            kj.resetStaticState(93);
           }
           SoftwareRasterizer.clearRaster();
           ByteStorage.a(true, (byte) -106);
@@ -96,7 +96,7 @@ final class kj extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_m = null;
         field_p = null;
         field_o = null;

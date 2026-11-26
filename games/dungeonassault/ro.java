@@ -462,7 +462,7 @@ final class ro extends kl {
         }
         bo.field_Lb.a((byte) -19);
         ce.field_v.a((byte) -19);
-        kf.field_j.a((byte) -19);
+        ImageProducerRasterBuffer.field_j.a((byte) -19);
     }
 
     ro(go param0) {

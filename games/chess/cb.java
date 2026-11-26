@@ -43,7 +43,7 @@ final class cb {
           var1 = lg.field_d;
           synchronized (var1) {
             ph.field_h = ta.field_y;
-            si.field_o = si.field_o + 1;
+            ImageProducerRasterBuffer.field_o = ImageProducerRasterBuffer.field_o + 1;
             if (0 > lk.field_e) {
               for (var2 = 0; var2 < 112; var2++) {
                 ok.field_Jb[var2] = false;

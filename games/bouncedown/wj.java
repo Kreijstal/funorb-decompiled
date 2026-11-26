@@ -8,7 +8,7 @@ final class wj {
     static int field_e;
     static AccountRequestState field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == 0) {
           field_b = null;
           field_c = null;

@@ -57,7 +57,7 @@ final class be {
           }
           try {
             var4 = param1.getGraphics();
-            gi.field_b.a(var4, param0, param3, (byte) 64);
+            gi.field_b.drawImage(var4, param0, param3, (byte) 64);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

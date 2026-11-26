@@ -35,7 +35,7 @@ abstract class SpriteGeometry extends DualLinkNode {
     }
 
     final static void a(boolean param0, int param1) {
-        uc.field_c.a(param0, 10518);
+        AwtRasterBuffer.field_c.a(param0, 10518);
         if (param1 <= 43) {
           SpriteGeometry.a(19, 19, 119, 12, 2);
         }

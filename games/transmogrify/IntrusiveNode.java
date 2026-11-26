@@ -9,7 +9,7 @@ class IntrusiveNode {
     static mi field_d;
     static String field_e;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_d = null;
         field_e = null;
         if (param0) {

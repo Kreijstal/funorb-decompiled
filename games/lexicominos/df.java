@@ -78,7 +78,7 @@ final class df {
         return var1;
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (!param0) {
           field_a = 12;
         }
@@ -101,7 +101,7 @@ final class df {
         try {
           var4_int = param2.c(param0, (byte) -89);
           if (param3 > -36) {
-            df.a(true);
+            df.resetStaticState(true);
           }
           var5 = param2.a(param1, -27964, var4_int);
           stackIn_3_0 = CrossfadingMidiPcmStream.a(param2, var4_int, (byte) -108, var5);

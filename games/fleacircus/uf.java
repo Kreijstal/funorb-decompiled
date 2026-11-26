@@ -201,7 +201,7 @@ final class uf {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_l = null;
         if (!param0) {
           field_k = -71;

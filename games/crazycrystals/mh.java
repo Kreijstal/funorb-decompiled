@@ -27,7 +27,7 @@ final class mh extends ik {
     final static void a(byte param0, String param1, String param2) {
         try {
           if (param0 != 1) {
-            mh.c(-13);
+            mh.resetStaticState(-13);
           }
           SecondaryNodeDequeIterator.a(param1, false, param2, false);
         } catch (RuntimeException runtimeException) {
@@ -35,7 +35,7 @@ final class mh extends ik {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 >= -53) {
           field_h = 63;
         }

@@ -38,7 +38,7 @@ abstract class ue {
         return 0;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_c = null;
         if (param0 != 18) {
           field_a = -77;

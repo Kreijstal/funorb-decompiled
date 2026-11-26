@@ -87,7 +87,7 @@ final class qm extends ip {
           var3_int = stackIn_3_0;
           var4 = -1 % ((param1 - 5) / 44);
           if (var3_int != 0) {
-            return c.field_d;
+            return AwtRasterBuffer.field_d;
           }
           stackIn_6_0 = pd.field_J;
           return stackIn_6_0;

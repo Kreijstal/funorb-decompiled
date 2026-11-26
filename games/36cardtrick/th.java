@@ -36,7 +36,7 @@ final class th {
         return false;
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_b = null;
         if (!param0) {
           field_a = -14;
@@ -54,7 +54,7 @@ final class th {
         ue.field_d = ue.field_d | var3;
         nb.field_e = nb.field_e | var3;
         db.field_m = db.field_m | var3;
-        if (jf.field_n) {
+        if (ImageProducerRasterBuffer.field_n) {
           return true;
         }
         if (!dl.d(0)) {

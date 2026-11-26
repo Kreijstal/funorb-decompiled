@@ -6,7 +6,7 @@ final class q {
     static String field_b;
     static int field_a;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 < 66) {

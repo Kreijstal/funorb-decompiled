@@ -266,7 +266,7 @@ final class ik extends kn implements be, sh, f {
         }
     }
 
-    public static void p(int param0) {
+    public static void resetStaticState(int param0) {
         field_S = null;
         if (param0 != 120) {
           field_T = -63;
@@ -369,7 +369,7 @@ final class ik extends kn implements be, sh, f {
         this.field_V = new ti("", (rm) null, var1 != 0);
         this.field_K = new hc(cg.field_r, (rm) null);
         this.field_R = new hc(hk.field_c, (rm) null);
-        this.field_I.field_n = vj.field_l;
+        this.field_I.field_n = ImageProducerRasterBuffer.field_l;
         this.field_P.field_n = fm.field_I;
         this.field_M.field_n = lg.field_b;
         this.field_J.field_n = fe.field_C;

@@ -79,7 +79,7 @@ final class gb extends hd {
 
     private gb(int param0, int param1, int param2) {
         this.field_t = param0;
-        this.field_f = tk.field_a;
+        this.field_f = AwtRasterBuffer.field_a;
         this.field_s = param1;
         this.field_u = t.field_r;
         this.field_q = param2;

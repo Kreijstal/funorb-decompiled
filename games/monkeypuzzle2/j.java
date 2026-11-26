@@ -41,7 +41,7 @@ final class j {
         try {
           var1_int = 0;
           var2 = 0;
-          while (ba.a(-1)) {
+          while (AwtRasterBuffer.a(-1)) {
             sj.field_f.e(0);
             if (sj.field_f.c((byte) -84)) {
               var1_int = 1;

@@ -67,7 +67,7 @@ final class bd extends IntrusiveNode {
           }
           var2 = tl.field_h.beginForward(true);
           while (var2 != null) {
-            dd.a(53, param0);
+            AwtRasterBuffer.a(53, param0);
             var2 = tl.field_h.nextForward(2);
           }
           return;

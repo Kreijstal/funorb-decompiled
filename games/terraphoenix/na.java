@@ -113,7 +113,7 @@ final class na extends ei {
         }
     }
 
-    public static void d(boolean param0) {
+    public static void resetDeclaredStaticState(boolean param0) {
         field_Z = (byte[][]) null;
         if (!param0) {
           field_Y = -73;

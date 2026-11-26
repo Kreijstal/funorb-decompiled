@@ -16,7 +16,7 @@ final class lg {
     static int field_c;
     String field_k;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_j = null;
         if (param0 != -2) {
           field_h = 12;

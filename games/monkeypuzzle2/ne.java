@@ -173,7 +173,7 @@ final class ne {
               var1_int = var1_int + vf.field_b;
             }
             if (var4 >= 0) {
-              sl.field_o.b(var6, var8Lifetime1, da.field_a + var1_int, var5, -1);
+              ImageProducerRasterBuffer.field_o.b(var6, var8Lifetime1, da.field_a + var1_int, var5, -1);
               var1_int = var1_int + (hb.field_n + vf.field_b + ud.field_a);
             } else {
               fe.field_a.b(var6, var8Lifetime1, nf.field_M + var1_int, var5, -1);
@@ -188,7 +188,7 @@ final class ne {
         }
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_c = null;
         if (param0 != -17) {
           field_b = -18;
@@ -198,7 +198,7 @@ final class ne {
 
     final static int a(int param0) {
         if (param0 != -1) {
-          ne.b((byte) 95);
+          ne.resetStaticState((byte) 95);
         }
         return ib.field_a;
     }

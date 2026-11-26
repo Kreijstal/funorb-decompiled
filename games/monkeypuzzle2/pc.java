@@ -374,7 +374,7 @@ abstract class pc extends nf {
         this.c((byte) -90, (UiWidget) null);
     }
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_U = null;
         field_P = null;
         if (!param0) {

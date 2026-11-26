@@ -271,7 +271,7 @@ final class la extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_j = null;
         field_i = null;
         if (param0 == 74) {

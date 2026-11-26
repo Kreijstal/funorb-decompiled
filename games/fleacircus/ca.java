@@ -592,7 +592,7 @@ final class ca extends gj implements dc, da, pe {
           this.field_I = new bb(tk.field_y, (kd) null);
           this.field_R = new bb(qj.field_J, (kd) null);
           this.field_K.field_m = df.field_c;
-          this.field_U.field_m = bj.field_i;
+          this.field_U.field_m = ImageProducerRasterBuffer.field_i;
           this.field_H.field_m = cg.field_v;
           this.field_F.field_m = nc.field_c;
           this.field_M.field_m = a.field_h;

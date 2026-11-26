@@ -48,7 +48,7 @@ abstract class ByteStorage {
         return var1;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 <= 32) {
           field_e = 69;

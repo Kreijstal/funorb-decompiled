@@ -29,7 +29,7 @@ final class be extends ip {
           if (this.field_p instanceof qn) {
             var3 = ((qn) ((Object) this.field_p)).a(-79);
             if (var3 != null) {
-              if (var3.a((byte) -117) == c.field_d &&
+              if (var3.a((byte) -117) == AwtRasterBuffer.field_d &&
                 !param1.equals(this.field_p.field_w)) {
                 stackIn_9_0 = DirectByteStorage.field_j;
                 return stackIn_9_0;
@@ -71,14 +71,14 @@ final class be extends ip {
           if (this.field_p instanceof qn) {
             var3 = ((qn) ((Object) this.field_p)).a(-122);
             if (var3 != null &&
-              var3.a((byte) -99) != c.field_d) {
+              var3.a((byte) -99) != AwtRasterBuffer.field_d) {
               stackIn_5_0 = pd.field_J;
               return stackIn_5_0;
             }
           }
           var3_int = -81 / ((5 - param1) / 44);
           if (param0.equals(this.field_p.field_w)) {
-            stackIn_9_0 = c.field_d;
+            stackIn_9_0 = AwtRasterBuffer.field_d;
           } else {
             stackIn_9_0 = pd.field_J;
           }

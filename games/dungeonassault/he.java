@@ -475,7 +475,7 @@ final class he extends ip {
             hp.field_b[28].field_F = var3_ref_StringLifetime27;
             hp.field_b[28].field_G = var4Lifetime27;
           }
-          var3_ref_StringLifetime28 = kf.field_i;
+          var3_ref_StringLifetime28 = ImageProducerRasterBuffer.field_i;
           var4Lifetime28 = IterableNodeHashTable.field_c;
           if (hp.field_b[29] != null) {
             hp.field_b[29].field_G = var4Lifetime28;
@@ -778,7 +778,7 @@ final class he extends ip {
             gh.field_i[32].field_o = var5Lifetime32;
             gh.field_i[32].field_z = var3_ref_StringLifetime66;
           }
-          var3_ref_StringLifetime67 = kf.field_q;
+          var3_ref_StringLifetime67 = ImageProducerRasterBuffer.field_q;
           var4Lifetime67 = sm.field_b;
           var5Lifetime33 = (String) null;
           if (null != gh.field_i[33]) {
@@ -930,7 +930,7 @@ final class he extends ip {
           var4 = ri.a((byte) 47, var6);
           if (var4 > 0 &&
             var4 <= 130) {
-            return c.field_d;
+            return AwtRasterBuffer.field_d;
           }
           stackIn_8_0 = pd.field_J;
           return stackIn_8_0;

@@ -277,7 +277,7 @@ final class pg {
         uc.field_e = param0 * 100 / 150;
     }
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 112) {
           field_b = -11;
         }

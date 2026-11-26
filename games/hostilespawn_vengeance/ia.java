@@ -38,7 +38,7 @@ final class ia {
         if (param0 != 64) {
           field_k = (String) null;
         }
-        wa.field_p = this.field_j;
+        ImageProducerRasterBuffer.field_p = this.field_j;
         vj.field_s = 0;
         uf.field_h = this.field_f;
         AccountNameAvailabilityValidator.field_s = 0;
@@ -232,7 +232,7 @@ final class ia {
         }
         kf.a(VolumeRampingMidiPcmStream.field_Q, 0, this.field_b, 0, VolumeRampingMidiPcmStream.field_Q.length);
         this.field_f = uf.field_h;
-        this.field_j = wa.field_p;
+        this.field_j = ImageProducerRasterBuffer.field_p;
     }
 
     public static void clearStaticReferences(byte param0) {

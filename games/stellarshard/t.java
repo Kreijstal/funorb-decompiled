@@ -34,7 +34,7 @@ final class t {
         IntrusiveDeque.c(-2290);
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -6081) {
           field_e = -69;
           field_c = null;

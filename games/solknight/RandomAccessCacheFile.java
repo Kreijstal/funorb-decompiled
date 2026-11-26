@@ -33,7 +33,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 <= 103) {
           field_d = 122;
@@ -75,7 +75,7 @@ final class RandomAccessCacheFile {
 
     final long a(int param0) throws IOException {
         if (param0 != -1) {
-          RandomAccessCacheFile.c(114);
+          RandomAccessCacheFile.resetStaticState(114);
           return this.field_a.length();
         }
         return this.field_a.length();

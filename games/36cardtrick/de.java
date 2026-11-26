@@ -8,7 +8,7 @@ final class de {
     int field_a;
     static int field_b;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         if (param0) {
           field_b = -77;
         }
@@ -83,7 +83,7 @@ final class de {
           var6Lifetime1 = h.field_F << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ph.a(-35, var6Lifetime1) >> 8;
-          var9Lifetime1 = kh.a(95, var6Lifetime1) >> 8;
+          var9Lifetime1 = AwtRasterBuffer.a(95, var6Lifetime1) >> 8;
           if (eg.field_b != -1 &&
             ij.field_e != -1) {
             var8Lifetime1 = 240 - ij.field_e;
@@ -118,7 +118,7 @@ final class de {
               nl.field_c[var18] = nl.field_c[var18] + sk.field_b[var15][var18];
             }
             me.a(false, false, nl.field_c, true, var17, rh.field_h, false);
-            fj.a(-102, var8Lifetime1, var12Lifetime1, var14, var9Lifetime1, var7Lifetime1, var17, var13Lifetime1);
+            GameApplet.a(-102, var8Lifetime1, var12Lifetime1, var14, var9Lifetime1, var7Lifetime1, var17, var13Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

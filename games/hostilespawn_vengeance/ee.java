@@ -169,7 +169,7 @@ final class ee {
               var6_int = sc.field_g.readUnsignedByte(32270);
               if (var6_int != 0) {
                 jd.field_q = -1;
-                wa.field_k = var6_int;
+                ImageProducerRasterBuffer.field_k = var6_int;
                 rc.field_a = bi.field_a;
               } else {
                 rc.field_a = dc.field_e;
@@ -187,7 +187,7 @@ final class ee {
             if (ej.field_q == rc.field_a &&
               re.c((byte) 33, 1)) {
               var6_intLifetime1 = sc.field_g.readUnsignedByte(32270);
-              wa.field_k = var6_intLifetime1;
+              ImageProducerRasterBuffer.field_k = var6_intLifetime1;
               sc.field_g.field_i = 0;
               fl.field_b = null;
               if (var6_intLifetime1 != 0 &&
@@ -278,24 +278,24 @@ final class ee {
                 he.field_s[var8Lifetime1] = he.field_s[var8Lifetime1] + 50;
               }
               sc.field_g.a(he.field_s, 8);
-              stackIn_79_0 = wa.field_k;
+              stackIn_79_0 = ImageProducerRasterBuffer.field_k;
               return stackIn_79_0;
             }
             if (bi.field_a == rc.field_a &&
               eb.a(13372)) {
               le.c((byte) 83);
-              if (wa.field_k == 7 &&
+              if (ImageProducerRasterBuffer.field_k == 7 &&
                 !jn.field_C) {
                 jn.field_C = true;
                 stackIn_85_0 = -1;
                 return stackIn_85_0;
               }
-              if (7 == wa.field_k) {
-                wa.field_k = 3;
+              if (7 == ImageProducerRasterBuffer.field_k) {
+                ImageProducerRasterBuffer.field_k = 3;
               }
               km.field_x = sc.field_g.o(32);
               jn.field_C = false;
-              stackIn_90_0 = wa.field_k;
+              stackIn_90_0 = ImageProducerRasterBuffer.field_k;
               return stackIn_90_0;
             }
             if (ag.field_t == null) {

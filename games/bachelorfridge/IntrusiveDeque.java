@@ -132,7 +132,7 @@ final class IntrusiveDeque {
           ld.a(16711872, 6, param0 - 31838, 6);
           return;
         }
-        IntrusiveDeque.b(60);
+        IntrusiveDeque.resetStaticState(60);
         ld.a(16711872, 6, param0 - 31838, 6);
     }
 
@@ -184,7 +184,7 @@ final class IntrusiveDeque {
         return this.sentinel.next == this.sentinel ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_f = null;
         if (param0 != 7) {
           field_a = 30L;

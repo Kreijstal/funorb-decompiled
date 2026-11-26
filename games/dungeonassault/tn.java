@@ -269,7 +269,7 @@ final class tn extends bh {
           if (var6Lifetime1 == pd.field_J) {
             var15 = sl.field_c[2];
             var15.b(var9, var10 - (var15.field_v >> 1), 256);
-          } else if (var6Lifetime1 == c.field_d) {
+          } else if (var6Lifetime1 == AwtRasterBuffer.field_d) {
             var16 = sl.field_c[1];
             var16.b(var9, var10 - (var16.field_v >> 1), 256);
           }

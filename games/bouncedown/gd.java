@@ -17,7 +17,7 @@ final class gd {
         return 13;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 255) {
           field_a = -56L;

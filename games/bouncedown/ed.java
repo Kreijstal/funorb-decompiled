@@ -7,7 +7,7 @@ abstract class ed {
     static int field_d;
     bh[] field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 != 19599) {
           field_d = 21;
@@ -35,7 +35,7 @@ abstract class ed {
 
     final static RgbSprite[] a(int param0, int param1, int param2, int param3) {
         if (param2 <= 60) {
-          ed.a(7);
+          ed.resetStaticState(7);
         }
         return kg.a(param1, 1, param3, -2147483648, param0);
     }
@@ -219,7 +219,7 @@ abstract class ed {
             return (java.awt.Frame) (stackIn_34_0);
           }
           if (var11.status == 2) {
-            ib.exitFullscreenFrame(param1, var7, (byte) 115);
+            ImageProducerRasterBuffer.exitFullscreenFrame(param1, var7, (byte) 115);
             stackIn_37_0 = null;
             return (java.awt.Frame) (stackIn_37_0);
           }

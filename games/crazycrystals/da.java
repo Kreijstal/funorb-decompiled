@@ -660,25 +660,25 @@ final class da extends ue {
             }
           }
           if (param0) {
-            bc.field_f.a(0, og.a(0, dp.field_h, to.field_a), og.a(0, IsaacRandom.field_h, qh.field_i));
-            if (bc.field_f.a(true)) {
-              if (0 == bc.field_f.field_c) {
+            AwtRasterBuffer.field_f.a(0, og.a(0, dp.field_h, to.field_a), og.a(0, IsaacRandom.field_h, qh.field_i));
+            if (AwtRasterBuffer.field_f.a(true)) {
+              if (0 == AwtRasterBuffer.field_f.field_c) {
                 stackIn_59_0 = 3;
                 return stackIn_59_0;
               }
-              if (bc.field_f.field_c == 1) {
+              if (AwtRasterBuffer.field_f.field_c == 1) {
                 stackIn_62_0 = 2;
                 return stackIn_62_0;
               }
             }
             while (ge.b(-83)) {
-              bc.field_f.a(0, (byte) 104);
-              if (bc.field_f.a(true)) {
-                if (bc.field_f.field_c == 0) {
+              AwtRasterBuffer.field_f.a(0, (byte) 104);
+              if (AwtRasterBuffer.field_f.a(true)) {
+                if (AwtRasterBuffer.field_f.field_c == 0) {
                   stackIn_69_0 = 3;
                   return stackIn_69_0;
                 }
-                if (bc.field_f.field_c == 1) {
+                if (AwtRasterBuffer.field_f.field_c == 1) {
                   stackIn_73_0 = 1;
                   return stackIn_73_0;
                 }

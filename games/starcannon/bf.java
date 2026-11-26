@@ -1523,7 +1523,7 @@ final class bf extends IntrusiveNode {
             }
           }
           if (param3 != 6) {
-            bf.a(-76);
+            bf.resetStaticState(-76);
           }
           if (r.field_c == ab.field_F &&
             fk.a(false)) {
@@ -1584,7 +1584,7 @@ final class bf extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_x = null;
         if (param0 != 15415) {
           field_w = 4;

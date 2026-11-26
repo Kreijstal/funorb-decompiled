@@ -133,7 +133,7 @@ final class pi extends DualLinkNode {
         int var2Lifetime1;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          while (ba.a(-1)) {
+          while (AwtRasterBuffer.a(-1)) {
             if (oa.field_H != 13 &&
               oa.field_H != 83 &&
               oa.field_H != 84) {

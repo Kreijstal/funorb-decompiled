@@ -6,7 +6,7 @@ final class rn {
     static int field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_c = null;
         if (param0 != -2) {
           field_a = 49;

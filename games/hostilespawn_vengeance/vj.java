@@ -80,8 +80,8 @@ final class vj extends ql {
                 }
               }
               boolean decompiledFrameRemainder0 = true;
-              wa.field_p = wa.field_p + 1;
-              if (this.field_m + wa.field_p >= 3 &&
+              ImageProducerRasterBuffer.field_p = ImageProducerRasterBuffer.field_p + 1;
+              if (this.field_m + ImageProducerRasterBuffer.field_p >= 3 &&
                 15 == ha.field_t) {
                 CrossfadingMidiPcmStream.a(16, 1);
                 nh.field_E.a(-1, 8360, -1);
@@ -204,10 +204,10 @@ final class vj extends ql {
           }
         }
         this.field_r.e(-127);
-        if (this.field_m + wa.field_p > 0) {
+        if (this.field_m + ImageProducerRasterBuffer.field_p > 0) {
           SoftwareRasterizer.fillRectangleAlpha(100, 40, 90, 20, 0, 128);
           SoftwareRasterizer.drawRectangleOutline(100, 40, 90, 20, 16776960);
-          id.field_A.c(ph.field_z + wa.field_p, 105, 55, 16776960, -1);
+          id.field_A.c(ph.field_z + ImageProducerRasterBuffer.field_p, 105, 55, 16776960, -1);
         }
         var3 = 81 / ((-48 - param0) / 38);
         if (this.field_m > 0 ||
@@ -284,14 +284,14 @@ final class vj extends ql {
           this.field_i.field_l.a(25, (byte) 94, var10.field_c);
           this.field_i.b((byte) 117);
         }
-        if (wa.field_p > 1) {
+        if (ImageProducerRasterBuffer.field_p > 1) {
           this.field_l = true;
         }
         if (this.field_n >= 0 &&
           dn.field_i != of.field_d) {
           this.field_i = null;
           this.field_m = this.field_m + 1;
-          wa.field_p = wa.field_p - 1;
+          ImageProducerRasterBuffer.field_p = ImageProducerRasterBuffer.field_p - 1;
           this.field_t[this.field_n] = true;
           if (this.field_m == 3) {
             CrossfadingMidiPcmStream.a(0, 1);
@@ -321,7 +321,7 @@ final class vj extends ql {
           this.field_n = -1;
         }
         if (~this.field_n > param0 &&
-          wa.field_p > 0 && (ha.field_t == 15 ||
+          ImageProducerRasterBuffer.field_p > 0 && (ha.field_t == 15 ||
           ha.field_t == 16)) {
           var8 = 0;
           var5_intLifetime1 = var8;
@@ -402,7 +402,7 @@ final class vj extends ql {
           }
           break;
         }
-        wa.field_p = 0;
+        ImageProducerRasterBuffer.field_p = 0;
         this.field_n = -1;
         this.field_m = 0;
         this.field_o = new v(CrossfadingMidiPcmStream.field_E, 0, 0, 200);

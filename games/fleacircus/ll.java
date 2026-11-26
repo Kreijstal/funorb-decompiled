@@ -16,7 +16,7 @@ final class ll extends IntrusiveNode {
     static int field_s;
     static int field_m;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 > 3) {
           field_n = null;
           field_o = null;
@@ -34,20 +34,20 @@ final class ll extends IntrusiveNode {
           fl.field_b = new RgbSprite(640, 336);
           fl.field_b.f();
           oe.a((byte) -118, ResourceArchive.field_c.field_x, fleas.field_E);
-          gi.field_b.a((byte) 71);
+          gi.field_b.setAsRasterTarget((byte) 71);
           if (param0 != 336) {
-            ll.a(-25);
+            ll.resetStaticState(-25);
             return;
           }
           return;
         }
         fl.field_b.f();
         oe.a((byte) -118, ResourceArchive.field_c.field_x, fleas.field_E);
-        gi.field_b.a((byte) 71);
+        gi.field_b.setAsRasterTarget((byte) 71);
         if (param0 == 336) {
           return;
         }
-        ll.a(-25);
+        ll.resetStaticState(-25);
     }
 
     ll() {

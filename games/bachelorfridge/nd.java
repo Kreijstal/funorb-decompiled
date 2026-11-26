@@ -79,7 +79,7 @@ final class nd extends TileEffect {
         super(param0, param1, param2);
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_g = null;
         field_i = null;
         if (param0) {

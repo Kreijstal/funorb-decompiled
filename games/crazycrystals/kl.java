@@ -31,7 +31,7 @@ final class kl extends en {
         }
     }
 
-    public static void h(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_S = null;
         if (param0 != -1) {
           field_T = 91;
@@ -42,7 +42,7 @@ final class kl extends en {
         try {
           d.a(param1, (byte) 125, "");
           if (param0 != -1) {
-            kl.h((byte) -111);
+            kl.resetStaticState((byte) -111);
           }
           qe.a(0, param1);
         } catch (RuntimeException runtimeException) {
@@ -92,7 +92,7 @@ final class kl extends en {
           }
           this.field_Y = param3;
           if (param0 != 8405024) {
-            kl.h((byte) 14);
+            kl.resetStaticState((byte) 14);
           }
           this.field_X.field_A = (int)(param2 / 100.0f * 65536.0f);
           return;

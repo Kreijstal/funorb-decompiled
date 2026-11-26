@@ -19,7 +19,7 @@ final class kk extends IOException {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 >= -86) {
           field_c = -28;
           field_a = null;

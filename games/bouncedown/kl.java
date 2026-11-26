@@ -27,7 +27,7 @@ final class kl extends IntrusiveNode {
     static int field_t;
     int field_E;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_m = null;
         if (param0 != 0) {
           field_g = -121;

@@ -539,7 +539,7 @@ class ci extends ei {
         RuntimeException decompiledCaughtException = null;
         var3 = Chess.field_G;
         try {
-          var4 = (fl) (vj.field_c.beginBackward(-18110));
+          var4 = (fl) (AwtRasterBuffer.field_c.beginBackward(-18110));
           var1 = var4;
           if (var1 == null) {
             return false;

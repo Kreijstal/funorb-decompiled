@@ -53,7 +53,7 @@ final class me extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_l = null;
         field_h = null;
         if (param0) {

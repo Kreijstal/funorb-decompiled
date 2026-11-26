@@ -5,7 +5,7 @@ import java.io.*;
 
 abstract class gi {
     static byte[] field_c;
-    static uc field_b;
+    static AwtRasterBuffer field_b;
     static String[] field_a;
     static PcmSample field_d;
 
@@ -236,7 +236,7 @@ abstract class gi {
         field_c = null;
         field_d = null;
         if (param0 < 26) {
-          field_b = (uc) null;
+          field_b = (AwtRasterBuffer) null;
         }
         field_b = null;
     }

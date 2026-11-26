@@ -112,7 +112,7 @@ final class SecondaryNodeDeque implements Iterable {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_i = null;
         field_c = null;
         field_b = null;
@@ -164,7 +164,7 @@ final class SecondaryNodeDeque implements Iterable {
 
     final static boolean a(int param0, char param1) {
         if (param0 != 95) {
-          SecondaryNodeDeque.a((byte) -6);
+          SecondaryNodeDeque.resetStaticState((byte) -6);
           if (param1 == 160) {
             return true;
           }

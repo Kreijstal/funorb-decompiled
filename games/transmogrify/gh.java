@@ -25,14 +25,14 @@ final class gh extends IntrusiveNode {
           var1.unlink(param0 + 5);
           return;
         }
-        gh.e(38);
+        gh.resetStaticState(38);
         var2.readInt((byte) -108);
         var2.readInt((byte) -105);
         var2.readInt((byte) -119);
         var1.unlink(param0 + 5);
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < 10) {
           field_i = true;
           field_m = null;
@@ -61,7 +61,7 @@ final class gh extends IntrusiveNode {
             var3 = (CharSequence) ((Object) var2);
             if (uk.b(114, var3) != 0L) {
               if (param1 != -112) {
-                gh.e(-50);
+                gh.resetStaticState(-50);
               }
               return;
             }

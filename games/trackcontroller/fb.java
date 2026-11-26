@@ -104,7 +104,7 @@ final class fb {
           param1.removeMouseMotionListener(hd.mouseHandler);
           param1.removeFocusListener(hd.mouseHandler);
           if (param0 >= -99) {
-            fb.a(-114);
+            fb.resetStaticState(-114);
           }
           db.liveMouseButton = 0;
         } catch (RuntimeException runtimeException) {
@@ -112,7 +112,7 @@ final class fb {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 30580) {
           field_a = -63;
           field_b = null;

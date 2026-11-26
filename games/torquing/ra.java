@@ -33,7 +33,7 @@ final class ra {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_d = null;
         if (param0 != 376) {
           field_c = -1;

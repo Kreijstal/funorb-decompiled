@@ -101,7 +101,7 @@ public final class Bounce extends GameClient {
           ab.clearStaticReferences((byte) -104);
           hi.a(false);
           ua.clearStaticReferences(-24750);
-          jl.a(87);
+          jl.resetStaticState(87);
           GameClient.clearStaticReferences((byte) 115);
           ClientException.clearStaticReferences((byte) 72);
           AppletShell.e((byte) 118);
@@ -117,14 +117,14 @@ public final class Bounce extends GameClient {
           mc.clearStaticReferences((byte) 47);
           pd.clearStaticReferences((byte) -119);
           nc.a(119);
-          b.a(76);
+          b.resetStaticState(76);
           bl.clearStaticReferences(37);
-          va.c(2);
+          va.resetStaticState(2);
           ej.clearStaticReferences(-64);
           bb.clearStaticReferences((byte) 25);
           pg.clearStaticReferences(false);
           sg.clearStaticReferences((byte) -112);
-          ef.clearStaticReferences(-10);
+          AwtRasterBuffer.clearStaticReferences(-10);
           gi.clearStaticReferences(72);
           FullscreenFocusCanvas.clearStaticReferences(false);
           pb.clearDeclaredStaticReferences(-19);
@@ -144,9 +144,9 @@ public final class Bounce extends GameClient {
           og.clearStaticReferences((byte) 106);
           f.clearStaticReferences(-7355);
           uk.clearStaticReferences(113);
-          kl.a(0);
+          kl.resetStaticState(0);
           oe.clearStaticReferences();
-          MusicPatchPcmStream.d(0);
+          MusicPatchPcmStream.resetStaticState(0);
           nl.clearStaticReferences((byte) 94);
           hf.clearStaticReferences((byte) 124);
           c.clearStaticReferences((byte) 56);
@@ -154,14 +154,14 @@ public final class Bounce extends GameClient {
           pf.clearStaticReferences(-1);
           AccountCreationResultPanel.clearStaticReferences(false);
           db.n(260);
-          ec.n(101);
+          ec.resetDeclaredStaticState(101);
           sh.clearDeclaredStaticReferences(5);
           gh.clearStaticReferences(true);
           k.clearStaticReferences((byte) -81);
           ci.a(false);
           q.clearStaticReferences((byte) -117);
           ve.clearStaticReferences((byte) 85);
-          fk.a((byte) 118);
+          fk.resetStaticState((byte) 118);
           g.a(6623);
           qj.clearStaticReferences(-112);
           PcmResampler.clearStaticReferences(0);
@@ -182,14 +182,14 @@ public final class Bounce extends GameClient {
           ag.a(-1);
           hd.clearStaticReferences(233);
           le.clearStaticReferences((byte) 90);
-          gd.a(255);
+          gd.resetStaticState(255);
           ng.clearStaticReferences(2);
           SpriteGeometry.clearStaticReferences(65);
           qb.a((byte) -30);
           tb.clearStaticReferences((byte) 68);
           ml.clearStaticReferences(-1);
           lf.a(false);
-          vh.b(11826);
+          vh.resetStaticState(11826);
           md.clearStaticReferences(-94);
           ce.clearStaticReferences((byte) -49);
           ok.c(114);
@@ -204,7 +204,7 @@ public final class Bounce extends GameClient {
           if (param0 >= -98) {
             this.field_H = 17;
           }
-          wj.a(0);
+          wj.resetStaticState(0);
           ij.a(true);
           ca.clearStaticReferences((byte) -86);
           ge.clearStaticReferences(-120);
@@ -215,15 +215,15 @@ public final class Bounce extends GameClient {
           fi.clearStaticReferences(-14935);
           da.clearStaticReferences(-87);
           ad.clearStaticReferences();
-          uj.a((byte) 105);
-          hh.a(false);
+          uj.resetStaticState((byte) 105);
+          hh.resetStaticState(false);
           jj.clearStaticReferences(true);
           dl.clearStaticReferences((byte) 94);
           vb.clearStaticReferences(119);
           qi.clearStaticReferences(0);
           sj.clearStaticReferences((byte) 42);
           vg.a(8);
-          ed.a(19599);
+          ed.resetStaticState(19599);
           lk.clearDeclaredStaticReferences((byte) 122);
           ak.clearDeclaredStaticReferences(127);
           wk.clearStaticReferences((byte) 38);
@@ -237,18 +237,18 @@ public final class Bounce extends GameClient {
           vd.clearStaticReferences(1567641170);
           ae.clearStaticReferences((byte) -119);
           fl.clearStaticReferences(8192);
-          ta.a(0);
+          ta.resetStaticState(0);
           oa.clearStaticReferences(22085);
-          tk.b(8191);
-          ib.a(true);
-          lb.a((byte) -83);
+          tk.resetStaticState(8191);
+          ImageProducerRasterBuffer.resetStaticState(true);
+          lb.resetStaticState((byte) -83);
           kj.clearStaticReferences(false);
           rj.clearStaticReferences(0);
           ch.clearStaticReferences(false);
           pa.clearStaticReferences(37);
           hb.clearStaticReferences((byte) 123);
           ba.clearStaticReferences((byte) 94);
-          mh.m(-16167);
+          mh.resetStaticState(-16167);
           ll.clearStaticReferences((byte) -83);
           nd.a(true);
           vc.clearStaticReferences((byte) -6);
@@ -261,7 +261,7 @@ public final class Bounce extends GameClient {
           d.f((byte) -112);
           SoundFilter.clearStaticReferences();
           kb.a(-9192);
-          mb.c(60);
+          mb.resetDeclaredStaticState(60);
           DirectByteStorage.clearStaticReferences(11041);
           aj.clearStaticReferences(false);
           bj.clearStaticReferences(-119);
@@ -277,7 +277,7 @@ public final class Bounce extends GameClient {
           SecondaryNodeDequeIterator.clearStaticReferences(true);
           sa.a(true);
           he.b((byte) -53);
-          w.b(62771140);
+          w.resetStaticState(62771140);
           qa.a(19108);
           jh.clearStaticReferences(-1);
           r.clearStaticReferences((byte) 51);
@@ -302,7 +302,7 @@ public final class Bounce extends GameClient {
           bi.clearStaticReferences(false);
           gf.clearStaticReferences(false);
           id.clearStaticReferences((byte) -72);
-          jc.a(true);
+          jc.resetStaticState(true);
           kg.clearStaticReferences((byte) -64);
           bh.clearStaticReferences((byte) 120);
           AccountNameAvailabilityValidator.clearStaticReferences(0);
@@ -910,7 +910,7 @@ public final class Bounce extends GameClient {
           }
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (ef.field_c) {
+          if (AwtRasterBuffer.field_c) {
             if ((bh.field_d != null) &&
               (decompiledFrameRemainder0 = !(!bh.field_d.field_g))) {
               ui.field_g = ui.field_g | bh.field_d.field_k;
@@ -1321,7 +1321,7 @@ public final class Bounce extends GameClient {
             if (!jh.b(767564065)) {
               bh.field_d = lf.a(-97, 4);
             }
-            ef.field_c = true;
+            AwtRasterBuffer.field_c = true;
             vc.e((byte) -44);
             return;
           }
@@ -1517,7 +1517,7 @@ public final class Bounce extends GameClient {
             ke.a((java.awt.Canvas) (stackIn_11_0), stackIn_12_1, true);
             return;
           }
-          if (!ef.field_c) {
+          if (!AwtRasterBuffer.field_c) {
             i.a((java.awt.Canvas) (var2), 0);
             return;
           }

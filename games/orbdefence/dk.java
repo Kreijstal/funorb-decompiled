@@ -37,7 +37,7 @@ final class dk {
         vd.a(false, -536866817, hi.field_f);
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != 0) {

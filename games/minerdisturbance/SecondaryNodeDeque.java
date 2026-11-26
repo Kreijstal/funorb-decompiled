@@ -36,7 +36,7 @@ final class SecondaryNodeDeque implements Iterable {
           }
           var3 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var8);
         } else {
-          var17 = ci.field_a[0];
+          var17 = AwtRasterBuffer.field_a[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;

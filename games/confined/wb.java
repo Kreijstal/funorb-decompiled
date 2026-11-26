@@ -1114,7 +1114,7 @@ final class wb {
                 }
                 var2 = ha.a("cancel", (byte) 19);
                 if (null != var2) {
-                  rb.field_d = va.a(0, var2);
+                  AwtRasterBuffer.field_d = va.a(0, var2);
                 }
                 var2 = ha.a("pleaselogintoplay", (byte) 121);
                 if (var2 != null) {
@@ -2000,7 +2000,7 @@ final class wb {
                 }
                 var2 = ha.a("sound_colon", (byte) 26);
                 if (null != var2) {
-                  rb.field_h = va.a(0, var2);
+                  AwtRasterBuffer.field_h = va.a(0, var2);
                 }
                 var2 = ha.a("music_colon", (byte) 81);
                 if (null != var2) {
@@ -2797,7 +2797,7 @@ final class wb {
                 }
                 var2 = ha.a("fs_unavailable", (byte) 33);
                 if (null != var2) {
-                  cd.field_n = va.a(0, var2);
+                  ImageProducerRasterBuffer.field_n = va.a(0, var2);
                 }
                 var2 = ha.a("fs_unavailable_try_signed_applet", (byte) 79);
                 if (null != var2) {

@@ -113,7 +113,7 @@ final class pka implements WidgetRenderer {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -8155) {
           field_f = false;
           field_a = null;

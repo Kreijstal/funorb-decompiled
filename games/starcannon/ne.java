@@ -32,12 +32,12 @@ abstract class ne {
 
     final static void b(int param0, int param1) {
         if (param1 == 150) {
-          mg.a((byte) -78);
+          ImageProducerRasterBuffer.a((byte) -78);
           return;
         }
         String var3 = (String) null;
         ne.a(false, (String) null, (String) null, 49);
-        mg.a((byte) -78);
+        ImageProducerRasterBuffer.a((byte) -78);
     }
 
     public static void a(int param0) {

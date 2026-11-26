@@ -327,7 +327,7 @@ final class bg extends IntrusiveNode {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_p = null;
         if (param0 != 102) {
           field_k = 75;

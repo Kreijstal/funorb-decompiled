@@ -226,7 +226,7 @@ abstract class sp extends nm {
         return super.a(-1);
     }
 
-    public static void l(int param0) {
+    public static void resetStaticState(int param0) {
         field_P = null;
         field_Q = null;
         if (param0 != -6) {

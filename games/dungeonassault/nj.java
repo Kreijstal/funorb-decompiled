@@ -10,7 +10,7 @@ final class nj {
     static int[] field_g;
     static IntrusiveDeque field_f;
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_f = null;
         if (param0 == 84) {
           field_c = null;
@@ -30,7 +30,7 @@ final class nj {
         try {
           hf.field_pb = param0;
           if (param2 != -6332) {
-            nj.a((byte) 73);
+            nj.resetStaticState((byte) 73);
           }
           AccountCreationResultPanel.field_Qb = param1;
         } catch (RuntimeException runtimeException) {

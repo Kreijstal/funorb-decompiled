@@ -17,7 +17,7 @@ final class hi {
     private int field_d;
     static String field_h;
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_i = null;
         if (param0 < 9) {
           field_a = 88;

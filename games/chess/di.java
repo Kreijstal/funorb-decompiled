@@ -142,7 +142,7 @@ final class di extends ci {
               ce.field_a.a(var6, var8Lifetime1, var1_int + rm.field_S, var5, -1);
               var1_int = var1_int + (vh.field_c + kl.field_i + MouseWheelInput.field_b);
             } else {
-              vj.field_d.a(var6, var8Lifetime1, var1_int + b.field_d, var5, -1);
+              AwtRasterBuffer.field_d.a(var6, var8Lifetime1, var1_int + b.field_d, var5, -1);
               var1_int = var1_int + fd.field_n;
             }
           }

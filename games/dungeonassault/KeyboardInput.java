@@ -356,7 +356,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         field_d = null;
         if (param0 != -129) {

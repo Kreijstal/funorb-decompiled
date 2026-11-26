@@ -21,7 +21,7 @@ final class MixedSupport067 {
         RuntimeException caughtExceptionLocal6 = null;
         try {
           if (integerArgument1 >= -14) {
-            MixedSupport067.performAction0839(95);
+            MixedSupport067.resetStaticState(95);
           }
           stackByteArrayLocal2 = MixedSupport096.resourceArchiveState0014.computeByteArray0809(0, stringArgument2, "");
           return stackByteArrayLocal2;
@@ -39,7 +39,7 @@ final class MixedSupport067 {
         }
     }
 
-    public static void performAction0839(int integerArgument1) {
+    public static void resetStaticState(int integerArgument1) {
         if (integerArgument1 <= -85) {
           stringState0298 = null;
           stringState0299 = null;

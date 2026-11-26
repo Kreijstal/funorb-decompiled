@@ -33,7 +33,7 @@ final class fi extends qe {
           String var2 = (String) null;
           fi.a(105, -61, (String) null, 118);
         }
-        return cm.field_R == null ? c.field_h : (java.awt.Canvas) ((Object) cm.field_R);
+        return cm.field_R == null ? AwtRasterBuffer.field_h : (java.awt.Canvas) ((Object) cm.field_R);
     }
 
     private final int a(boolean param0, int param1) {
@@ -170,8 +170,8 @@ final class fi extends qe {
         jh.a(this.field_e);
         bf.a(false, -128);
         kn.field_e = false;
-        c.a(0, 640, 0, (byte) 44);
-        c.a(0, 640, 40, (byte) 44);
+        AwtRasterBuffer.a(0, 640, 0, (byte) 44);
+        AwtRasterBuffer.a(0, 640, 40, (byte) 44);
         vf.a(432, true, 33, 125, 48);
         vf.a(432, true, 599, 117, 48);
         vf.a(32, true, 164, -110, 8);

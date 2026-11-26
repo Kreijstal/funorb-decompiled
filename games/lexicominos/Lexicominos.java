@@ -167,20 +167,20 @@ public final class Lexicominos extends nk {
             this.d(param0 + 18466);
             hc.field_gb = null;
             gl.field_a = null;
-            aa.field_i[0] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game");
-            aa.field_i[1] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game2");
-            aa.field_i[2] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game3");
-            aa.field_i[3] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game4");
-            aa.field_i[4] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game5");
-            aa.field_i[5] = ih.a(SecondaryNodeDequeIterator.field_b, "", "panic");
-            aa.field_i[6] = ih.a(SecondaryNodeDequeIterator.field_b, "", "titlescreen");
-            aa.field_i[7] = ih.a(SecondaryNodeDequeIterator.field_b, "", "gameover");
+            ImageProducerRasterBuffer.field_i[0] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game");
+            ImageProducerRasterBuffer.field_i[1] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game2");
+            ImageProducerRasterBuffer.field_i[2] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game3");
+            ImageProducerRasterBuffer.field_i[3] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game4");
+            ImageProducerRasterBuffer.field_i[4] = ih.a(SecondaryNodeDequeIterator.field_b, "", "game5");
+            ImageProducerRasterBuffer.field_i[5] = ih.a(SecondaryNodeDequeIterator.field_b, "", "panic");
+            ImageProducerRasterBuffer.field_i[6] = ih.a(SecondaryNodeDequeIterator.field_b, "", "titlescreen");
+            ImageProducerRasterBuffer.field_i[7] = ih.a(SecondaryNodeDequeIterator.field_b, "", "gameover");
             var3_int = 0;
             boolean decompiledNaturalLoopExit4 = false;
-            while (!(decompiledNaturalLoopExit4 = (!(aa.field_i.length > var3_int)))) {
+            while (!(decompiledNaturalLoopExit4 = (!(ImageProducerRasterBuffer.field_i.length > var3_int)))) {
               if (var17 == 0) {
-                if (aa.field_i[var3_int] != null) {
-                  CrossfadingMidiPcmStream.field_n.field_A.a(0, aa.field_i[var3_int], (byte) 102, vb.field_r, ga.field_a);
+                if (ImageProducerRasterBuffer.field_i[var3_int] != null) {
+                  CrossfadingMidiPcmStream.field_n.field_A.a(0, ImageProducerRasterBuffer.field_i[var3_int], (byte) 102, vb.field_r, ga.field_a);
                 }
                 var3_int++;
                 continue;
@@ -219,13 +219,13 @@ public final class Lexicominos extends nk {
             if (ci.field_a == null) {
               if (qc.field_d == null) {
                 qc.field_d = el.a(0, ia.field_H);
-                v.field_B.b(1);
+                v.field_B.setAsRasterTarget(1);
                 dl.b(5);
                 return false;
               }
               if (null == ne.field_b) {
                 ne.field_b = el.a(0, lg.field_c);
-                v.field_B.b(1);
+                v.field_B.setAsRasterTarget(1);
                 dl.b(param0 ^ -81);
                 return false;
               }
@@ -235,7 +235,7 @@ public final class Lexicominos extends nk {
                   th.field_r = 0;
                   SpriteGeometry.field_v = 90;
                   cg.field_j = -1;
-                  aa.field_j = -2;
+                  ImageProducerRasterBuffer.field_j = -2;
                   break;
                 }
                 vg.field_d[var3_int] = new sg(this, var3_int);
@@ -473,7 +473,7 @@ public final class Lexicominos extends nk {
             var7_int = stackIn_180_0;
             do {
               if (!(var7_int < fg.field_e.length)) {
-                v.field_B.b(1);
+                v.field_B.setAsRasterTarget(1);
                 ia.field_H = df.a("", "letterBkgnd", dl.field_d, (byte) -47);
                 lg.field_c = df.a("", "letterBkgndGrey", dl.field_d, (byte) -56);
                 jj.field_f = td.a("", "highlight", dl.field_d, 22306);
@@ -917,7 +917,7 @@ public final class Lexicominos extends nk {
         try {
           Lexicominos.o(2);
           ff.clearStaticReferences(param0 ^ -43);
-          bl.a((byte) 111);
+          bl.resetStaticState((byte) 111);
           eb.b((byte) -100);
           hb.clearStaticReferences((byte) 76);
           CrossfadingMidiPcmStream.a((byte) 120);
@@ -927,7 +927,7 @@ public final class Lexicominos extends nk {
           nk.clearStaticReferences((byte) 89);
           de.clearStaticReferences(param0 ^ 73);
           GameAppletShell.e(439);
-          wg.c(param0 + 37);
+          wg.resetStaticState(param0 + 37);
           da.a((byte) 123);
           MouseWheelInput.clearStaticReferences(param0 + 35);
           SoftwareRasterizer.clearStaticReferences();
@@ -942,12 +942,12 @@ public final class Lexicominos extends nk {
           jh.clearStaticReferences(false);
           ah.clearStaticReferences((byte) -95);
           il.clearStaticReferences(0);
-          df.a(true);
+          df.resetStaticState(true);
           af.clearStaticReferences(param0 ^ 25);
           hi.clearStaticReferences(5);
           ig.clearStaticReferences(-71);
           tb.a(255);
-          dd.a(1);
+          AwtRasterBuffer.a(1);
           td.clearStaticReferences(0);
           FullscreenFocusCanvas.b(20);
           gf.clearStaticReferences(-78);
@@ -958,14 +958,14 @@ public final class Lexicominos extends nk {
           fc.clearStaticReferences(-265);
           sg.b(0);
           wb.clearStaticReferences(5);
-          pg.c(-8413);
+          pg.resetStaticState(-8413);
           be.clearStaticReferences((byte) -116);
           ge.clearStaticReferences((byte) -59);
-          SpriteGeometry.c(-43);
+          SpriteGeometry.resetStaticState(-43);
           DualLinkNode.clearDeclaredStaticReferences(param0 - 163);
           IntrusiveNode.clearDeclaredStaticReferences(true);
-          vg.b(0);
-          fd.a((byte) -61);
+          vg.resetStaticState(0);
+          fd.resetStaticState((byte) -61);
           MidiPcmStream.c(true);
           na.clearStaticReferences(true);
           cb.clearStaticReferences(param0 + 29073);
@@ -973,9 +973,9 @@ public final class Lexicominos extends nk {
           MusicPatchPcmStream.clearStaticReferences((byte) 37);
           fg.clearStaticReferences(param0 - 55);
           wh.clearStaticReferences(param0 - 167);
-          bk.a((byte) 98);
+          bk.resetStaticState((byte) 98);
           ob.clearStaticReferences(122);
-          e.a(param0 - 78);
+          e.resetStaticState(param0 - 78);
           GzipDecompressor.clearStaticReferences(11);
           hf.clearDeclaredStaticReferences(param0 - 16006);
           jl.clearStaticReferences(-15699);
@@ -1005,7 +1005,7 @@ public final class Lexicominos extends nk {
           ad.clearStaticReferences((byte) -108);
           nh.clearStaticReferences(60);
           gg.clearStaticReferences(true);
-          qg.a((byte) 105);
+          qg.resetStaticState((byte) 105);
           bj.clearStaticReferences(true);
           kb.a(false);
           q.clearStaticReferences((byte) 70);
@@ -1014,7 +1014,7 @@ public final class Lexicominos extends nk {
           qf.e((byte) -15);
           ci.clearStaticReferences((byte) -127);
           dc.clearStaticReferences((byte) -63);
-          dl.a(param0 ^ 72);
+          dl.resetStaticState(param0 ^ 72);
           fj.f((byte) -12);
           ug.clearStaticReferences(64);
           vh.a((byte) 119);
@@ -1029,7 +1029,7 @@ public final class Lexicominos extends nk {
           eh.clearStaticReferences((byte) 99);
           rg.c(0);
           pa.b(param0 - 77);
-          wc.a((byte) -50);
+          wc.resetStaticState((byte) -50);
           dj.clearStaticReferences(-45);
           ui.clearStaticReferences(-1);
           he.a(-1);
@@ -1043,11 +1043,11 @@ public final class Lexicominos extends nk {
           fb.clearStaticReferences(2);
           ib.clearStaticReferences(false);
           og.clearStaticReferences((byte) 124);
-          ve.a(true);
+          ve.resetStaticState(true);
           w.releaseDeclaredStaticReferences(false);
           kf.clearStaticReferences(-85);
           mg.clearStaticReferences(false);
-          ql.g((byte) 42);
+          ql.resetStaticState((byte) 42);
           al.clearStaticReferences((byte) 102);
           nb.d(false);
           ta.f(0);
@@ -1064,8 +1064,8 @@ public final class Lexicominos extends nk {
           lg.clearStaticReferences(21745);
           ck.clearStaticReferences((byte) -18);
           rk.clearStaticReferences(true);
-          aa.clearStaticReferences((byte) -126);
-          jd.a((byte) -118);
+          ImageProducerRasterBuffer.clearStaticReferences((byte) -126);
+          jd.resetStaticState((byte) -118);
           we.clearStaticReferences((byte) -128);
           vf.a((byte) -53);
           ac.a(param0 - 75);
@@ -1088,7 +1088,7 @@ public final class Lexicominos extends nk {
           ae.clearDeclaredStaticReferences(-126);
           AudioFilter.clearStaticReferences();
           hd.a(-115);
-          kk.d(param0 - 159);
+          kk.resetStaticState(param0 - 159);
           gl.clearStaticReferences(-116);
           hh.clearStaticReferences(225);
           l.clearStaticReferences(4);
@@ -1097,7 +1097,7 @@ public final class Lexicominos extends nk {
           rh.clearStaticReferences(-119);
           gj.releaseDeclaredStaticReferences(-8601);
           ch.clearDeclaredStaticReferences(-123);
-          sb.b(16478);
+          sb.resetStaticState(16478);
           NodeHashTableIterator.a(param0 ^ -30299);
           SecondaryNodeDequeIterator.clearStaticReferences(true);
           sj.clearStaticReferences((byte) 5);
@@ -1142,7 +1142,7 @@ public final class Lexicominos extends nk {
           rb.clearStaticReferences((byte) 50);
           sc.clearStaticReferences(-70);
           ri.clearDeclaredStaticReferences((byte) 117);
-          tf.a(-3082);
+          tf.resetStaticState(-3082);
           this.field_B = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1359,7 +1359,7 @@ public final class Lexicominos extends nk {
             uj.a(-101, (java.awt.Canvas) (var2));
             return;
           }
-          if (aa.field_j != -2 &&
+          if (ImageProducerRasterBuffer.field_j != -2 &&
             th.field_r != -2) {
             SoftwareRasterizer.setClip(0, 0, 640, 20);
             cb.field_n.b(0, 0);
@@ -1372,23 +1372,23 @@ public final class Lexicominos extends nk {
             SoftwareRasterizer.resetClip();
           }
           boolean decompiledFrameRemainder0 = true;
-          if (aa.field_j != -2 &&
+          if (ImageProducerRasterBuffer.field_j != -2 &&
             th.field_r != -2) {
-            if (~aa.field_j == ~th.field_r) {
-              this.a(param0 + 3730, cl.field_S, jf.field_O, aa.field_j);
+            if (~ImageProducerRasterBuffer.field_j == ~th.field_r) {
+              this.a(param0 + 3730, cl.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
               this.a(jf.field_O.field_y, cl.field_S.field_y, false);
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
               boolean decompiledSharedTail0 = !(cg.field_j > 0);
               if (!decompiledSharedTail0) {
-                this.a(param0 ^ 4498, cl.field_S, jf.field_O, aa.field_j);
+                this.a(param0 ^ 4498, cl.field_S, jf.field_O, ImageProducerRasterBuffer.field_j);
                 this.a(22110, v.field_z, bb.field_C, th.field_r);
                 decompiledSharedTail0 = (var4 != 0);
               }
               if (decompiledSharedTail0) {
                 this.a(22110, cl.field_S, jf.field_O, th.field_r);
-                this.a(22110, v.field_z, bb.field_C, aa.field_j);
+                this.a(22110, v.field_z, bb.field_C, ImageProducerRasterBuffer.field_j);
               }
               if (SpriteGeometry.field_v == 0) {
                 this.a(jf.field_O.field_y, cl.field_S.field_y, false);
@@ -1564,10 +1564,10 @@ public final class Lexicominos extends nk {
                 vc.field_D = null;
                 MusicPatchPcmStream.c(!param0);
                 qf.a(this, 117);
-                decompiledFrameRemainder0 = (aa.field_j == 7);
+                decompiledFrameRemainder0 = (ImageProducerRasterBuffer.field_j == 7);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = (MouseWheelInput.field_a == 0))) {
-                  aa.field_j = 1;
+                  ImageProducerRasterBuffer.field_j = 1;
                   th.field_r = 1;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -1604,7 +1604,7 @@ public final class Lexicominos extends nk {
                       break;
                   }
                   if (!FullscreenFocusCanvas.a(-17977)) {
-                    vg.field_d[aa.field_j].a(true, true);
+                    vg.field_d[ImageProducerRasterBuffer.field_j].a(true, true);
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -1612,7 +1612,7 @@ public final class Lexicominos extends nk {
               if (decompiledFrameRemainder0) {
                 if (ae.i(0)) {
                   stackIn_94_1 = (ff.field_b != null);
-                  var3 = aa.a((nk) (this), stackIn_94_1, -96);
+                  var3 = ImageProducerRasterBuffer.a((nk) (this), stackIn_94_1, -96);
                   boolean decompiledSharedTail0 = (var3 != 2364824);
                   if (!decompiledSharedTail0) {
                     SecondaryNodeDeque.clearStaticReferences(482);
@@ -1700,31 +1700,31 @@ public final class Lexicominos extends nk {
                     AccountRequestState.field_d = gl.a(65526, 9, el.field_c.field_i, 3, el.field_c.field_f, (byte) 56, el.field_c.field_R, new int[]{el.field_c.field_J * 64 + el.field_c.field_m.field_i}, el.field_c.field_a);
                   }
                   hh.field_N = ud.a(1, -118, 10, 3, 9);
-                  aa.field_j = hf.field_a;
-                  if (7 == aa.field_j &&
+                  ImageProducerRasterBuffer.field_j = hf.field_a;
+                  if (7 == ImageProducerRasterBuffer.field_j &&
                     MouseWheelInput.field_a == 0) {
-                    aa.field_j = 1;
+                    ImageProducerRasterBuffer.field_j = 1;
                   }
                   al.a(16, ef.field_c, 100.0f);
                   if (var4 != 0) {
-                    aa.field_j = hc.field_db;
+                    ImageProducerRasterBuffer.field_j = hc.field_db;
                   }
                 } else {
-                  aa.field_j = hc.field_db;
+                  ImageProducerRasterBuffer.field_j = hc.field_db;
                 }
-                if (aa.field_j == -3) {
-                  aa.field_j = 0;
+                if (ImageProducerRasterBuffer.field_j == -3) {
+                  ImageProducerRasterBuffer.field_j = 0;
                   kl.a(3 * bi.field_a.field_E >> 1, 4, 320, jh.field_b, 12, bi.field_a, 4, (byte) 86, nh.field_c, false, 1 + bi.field_a.field_E, 240);
                 }
                 je.field_a = 3;
-                th.field_r = aa.field_j;
+                th.field_r = ImageProducerRasterBuffer.field_j;
                 if (var4 == 0) {
                   break regionExit1;
                 }
               }
-              if (~th.field_r == ~aa.field_j) {
-                if (aa.field_j != -1) {
-                  vg.field_d[aa.field_j].a((byte) -88);
+              if (~th.field_r == ~ImageProducerRasterBuffer.field_j) {
+                if (ImageProducerRasterBuffer.field_j != -1) {
+                  vg.field_d[ImageProducerRasterBuffer.field_j].a((byte) -88);
                   if (el.field_c == null) {
                     break regionExit1;
                   }
@@ -1826,7 +1826,7 @@ public final class Lexicominos extends nk {
                   break;
                 }
                 if (decompiledNaturalLoopExit0) {
-                  stackIn_336_0 = aa.field_j;
+                  stackIn_336_0 = ImageProducerRasterBuffer.field_j;
                   stackIn_336_1 = -1;
                 }
                 if (((stackIn_336_0 ^ stackIn_336_1) == 0)) {
@@ -1835,11 +1835,11 @@ public final class Lexicominos extends nk {
                 break regionExit1;
               }
               SpriteGeometry.field_v = SpriteGeometry.field_v + cg.field_j;
-              if (aa.field_j >= 0 &&
-                vg.field_d[aa.field_j].field_m != null) {
-                vg.field_d[aa.field_j].field_m.b(2);
+              if (ImageProducerRasterBuffer.field_j >= 0 &&
+                vg.field_d[ImageProducerRasterBuffer.field_j].field_m != null) {
+                vg.field_d[ImageProducerRasterBuffer.field_j].field_m.b(2);
               }
-              if (aa.field_j >= 0 &&
+              if (ImageProducerRasterBuffer.field_j >= 0 &&
                 el.field_c != null) {
                 el.field_c.b(2);
               }
@@ -1853,19 +1853,19 @@ public final class Lexicominos extends nk {
                     break regionExit1;
                   }
                 }
-                if (aa.field_j >= 0 &&
-                  vg.field_d[aa.field_j].field_m != null) {
+                if (ImageProducerRasterBuffer.field_j >= 0 &&
+                  vg.field_d[ImageProducerRasterBuffer.field_j].field_m != null) {
                   th.field_o[2].e(0);
-                  vg.field_d[aa.field_j].field_m = null;
+                  vg.field_d[ImageProducerRasterBuffer.field_j].field_m = null;
                 }
-                if (6 == aa.field_j &&
+                if (6 == ImageProducerRasterBuffer.field_j &&
                   th.field_r == 0) {
                   sc.field_g = 0;
                   MouseWheelInput.field_a = 0;
                   rb.field_b.clear(-105);
                 }
-                aa.field_j = th.field_r;
-                if (aa.field_j == -1) {
+                ImageProducerRasterBuffer.field_j = th.field_r;
+                if (ImageProducerRasterBuffer.field_j == -1) {
                 }
               }
             }
@@ -2192,7 +2192,7 @@ public final class Lexicominos extends nk {
           if (param2 >= 0) {
             vg.field_d[param2].field_g = param3;
           }
-          if (ja.field_b[th.field_r + 2] > ja.field_b[2 + aa.field_j]) {
+          if (ja.field_b[th.field_r + 2] > ja.field_b[2 + ImageProducerRasterBuffer.field_j]) {
             cg.field_j = 1;
             SpriteGeometry.field_v = 0;
             if (var8 != 0) {

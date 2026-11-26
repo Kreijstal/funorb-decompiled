@@ -91,8 +91,8 @@ final class re extends IntrusiveNode {
           this.field_m = param3;
           this.field_i = param2;
           this.field_h = param1;
-          fieldTemp$0 = mg.field_h;
-          mg.field_h = mg.field_h + 1;
+          fieldTemp$0 = ImageProducerRasterBuffer.field_h;
+          ImageProducerRasterBuffer.field_h = ImageProducerRasterBuffer.field_h + 1;
           this.field_g = 65535 & fieldTemp$0;
           this.field_n = param0;
           this.field_o = param6;

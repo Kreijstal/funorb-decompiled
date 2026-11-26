@@ -72,9 +72,9 @@ final class o extends IntrusiveNode {
           return;
         }
         try {
-          var3.field_d = tp.a(kf.field_p, "idle", param1, param0 ^ -11074);
-          var3.field_u = tp.a(kf.field_p, "victory", param1, -1998);
-          var3.field_m = tp.a(kf.field_p, "defeat", param1, -1998);
+          var3.field_d = tp.a(ImageProducerRasterBuffer.field_p, "idle", param1, param0 ^ -11074);
+          var3.field_u = tp.a(ImageProducerRasterBuffer.field_p, "victory", param1, -1998);
+          var3.field_m = tp.a(ImageProducerRasterBuffer.field_p, "defeat", param1, -1998);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "o.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

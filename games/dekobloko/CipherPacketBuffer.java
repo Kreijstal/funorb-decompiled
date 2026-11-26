@@ -148,7 +148,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           InputAdapter002.performAction1350(MixedSupport121.integerState0778, 112);
         }
         if (integerArgument1 != -4840) {
-          CipherPacketBuffer.performAction1643((byte) 73);
+          CipherPacketBuffer.resetStaticState((byte) 73);
         }
     }
 
@@ -192,7 +192,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void performAction1643(byte byteArgument1) {
+    public static void resetStaticState(byte byteArgument1) {
         nodeDequeState0033 = null;
         rgbSpriteArrayState0030 = null;
         if (byteArgument1 <= 111) {

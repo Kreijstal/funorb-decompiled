@@ -73,7 +73,7 @@ final class cc {
         return DirectByteArrayStore.field_e;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 <= 98) {
           field_e = -118;
         }

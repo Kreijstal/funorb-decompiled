@@ -210,7 +210,7 @@ final class MusicPatchPcmStream extends PcmStream {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         field_x = null;
         field_r = null;
         field_v = null;

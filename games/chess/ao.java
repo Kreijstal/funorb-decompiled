@@ -92,21 +92,21 @@ final class ao {
           if (m.a(param0 ^ 25329)) {
             qn.field_U.f(1, param0 ^ 25285);
             vh.a(0, (byte) -58);
-            si.d(65280);
+            ImageProducerRasterBuffer.d(65280);
             return;
           }
-          si.d(65280);
+          ImageProducerRasterBuffer.d(65280);
           return;
         }
         uc.a((byte) -72);
         jd.a((byte) -91);
         if (!m.a(param0 ^ 25329)) {
-          si.d(65280);
+          ImageProducerRasterBuffer.d(65280);
           return;
         }
         qn.field_U.f(1, param0 ^ 25285);
         vh.a(0, (byte) -58);
-        si.d(65280);
+        ImageProducerRasterBuffer.d(65280);
     }
 
     public static void clearStaticReferences(int param0) {

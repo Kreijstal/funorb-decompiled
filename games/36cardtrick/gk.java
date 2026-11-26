@@ -8,7 +8,7 @@ abstract class gk {
     static String field_c;
     static volatile int field_b;
 
-    public static void c(int param0) {
+    public static void resetStaticState(int param0) {
         field_e = null;
         field_d = null;
         if (param0 != 0) {
@@ -31,7 +31,7 @@ abstract class gk {
           }
           return this.a(param0, false);
         }
-        gk.c(25);
+        gk.resetStaticState(25);
         var4Lifetime1 = this.a(0);
         if (var4Lifetime1 > 0L) {
           wk.sleepMillis((byte) -104, var4Lifetime1);

@@ -175,7 +175,7 @@ final class oq extends qc {
         return false;
     }
 
-    public static void b(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_H = null;
         field_G = null;
         field_D = null;

@@ -49,7 +49,7 @@ class aa extends e {
             var2.b(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          uc.field_d.f();
+          AwtRasterBuffer.field_d.f();
           var1.e(0, 0);
           ia.a(param0 - 41);
         } catch (RuntimeException runtimeException) {

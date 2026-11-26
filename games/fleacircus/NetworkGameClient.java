@@ -288,7 +288,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           aj.a(0, ol.field_e);
         }
         if (ui.field_mb[8]) {
-          bj.e((byte) -41);
+          ImageProducerRasterBuffer.e((byte) -41);
         }
     }
 

@@ -62,7 +62,7 @@ final class gh extends dk {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 13329) {
           field_B = -72L;
           field_C = null;
@@ -85,7 +85,7 @@ final class gh extends dk {
         this.field_z = !this.field_z ? true : false;
         super.a(param0, 93, param2, param3);
         if (param1 <= 59) {
-          gh.e(116);
+          gh.resetStaticState(116);
           return;
         }
     }

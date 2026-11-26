@@ -370,11 +370,11 @@ public final class OrbDefence extends NetworkGameClient {
 
     final void a(boolean param0) {
         OrbDefence.clearStaticReferences((byte) -119);
-        kg.c(96);
+        kg.resetStaticState(96);
         IntrusiveDeque.a(9);
         wf.clearStaticReferences(71);
         jm.clearStaticReferences(-1178583839);
-        KeyboardListener.c(118);
+        KeyboardListener.resetStaticState(118);
         rl.clearStaticReferences((byte) -126);
         uk.clearStaticReferences(param0);
         NetworkGameClient.clearStaticReferences(-97);
@@ -389,8 +389,8 @@ public final class OrbDefence extends NetworkGameClient {
         tc.a(true);
         n.c((byte) -87);
         PacketBuffer.clearDeclaredStaticReferences(10);
-        ji.a(-5046);
-        nl.a((byte) -77);
+        ji.resetStaticState(-5046);
+        nl.resetStaticState((byte) -77);
         ce.clearStaticReferences(true);
         bi.clearStaticReferences((byte) 23);
         ld.clearStaticReferences(false);
@@ -400,9 +400,9 @@ public final class OrbDefence extends NetworkGameClient {
         lf.clearStaticReferences(117);
         og.clearStaticReferences((byte) -123);
         wh.clearStaticReferences(-122);
-        na.a(-20008);
+        na.resetStaticState(-20008);
         aa.clearStaticReferences((byte) -14);
-        RasterBuffer.a((byte) -27);
+        RasterBuffer.resetStaticState((byte) -27);
         l.clearStaticReferences(124);
         FullscreenFocusCanvas.clearStaticReferences(29967);
         jk.clearStaticReferences((byte) 65);
@@ -416,9 +416,9 @@ public final class OrbDefence extends NetworkGameClient {
         dj.c((byte) 78);
         cb.clearStaticReferences((byte) -95);
         IntrusiveNode.clearStaticReferences(40);
-        MidiPcmStream.d(116);
+        MidiPcmStream.resetStaticState(116);
         mh.clearStaticReferences(1);
-        he.c(22);
+        he.resetStaticState(22);
         qi.clearStaticReferences();
         MusicPatchPcmStream.clearDeclaredStaticReferences(79);
         AudioOutput.clearStaticReferences();
@@ -428,7 +428,7 @@ public final class OrbDefence extends NetworkGameClient {
         pf.clearStaticReferences(param0);
         lm.b(5);
         aj.clearStaticReferences((byte) -94);
-        fd.a(-32311);
+        fd.resetStaticState(-32311);
         id.clearStaticReferences((byte) -115);
         hd.clearStaticReferences(100);
         GzipDecompressor.clearStaticReferences(1000000);
@@ -439,18 +439,18 @@ public final class OrbDefence extends NetworkGameClient {
         sk.releaseDeclaredStaticReferences(-79);
         AccountCreationResultPanel.resetDeclaredStaticReferences(11285);
         ve.clearStaticReferences(false);
-        pc.q(-1);
-        dh.e((byte) -94);
+        pc.resetStaticState(-1);
+        dh.resetStaticState((byte) -94);
         rf.clearStaticReferences(!param0 ? true : false);
         pk.l(-100);
-        el.c(!param0 ? true : false);
+        el.resetStaticState(!param0 ? true : false);
         ee.clearStaticReferences((byte) 107);
         bl.clearStaticReferences(13756);
         ne.clearStaticReferences(-1459);
         kh.clearStaticReferences();
         nj.clearStaticReferences();
         VorbisFloor.clearStaticReferences();
-        sd.a((byte) -30);
+        sd.resetStaticState((byte) -30);
         DualLinkNode.clearDeclaredStaticReferences((byte) -128);
         ia.clearStaticReferences((byte) 125);
         fe.clearStaticReferences((byte) 126);
@@ -474,7 +474,7 @@ public final class OrbDefence extends NetworkGameClient {
         nd.clearStaticReferences(-16996);
         oa.clearStaticReferences((byte) 90);
         a.clearStaticReferences((byte) 29);
-        il.a(0);
+        il.resetStaticState(0);
         cd.clearStaticReferences((byte) 61);
         uc.clearStaticReferences((byte) -99);
         ak.c((byte) -102);
@@ -482,7 +482,7 @@ public final class OrbDefence extends NetworkGameClient {
         fl.clearStaticReferences(-128);
         wj.releaseDeclaredStaticReferences((byte) -90);
         jd.clearStaticReferences(0);
-        gg.f(true);
+        gg.resetStaticState(true);
         jc.clearStaticReferences(true);
         wi.clearStaticReferences();
         p.clearStaticReferences((byte) 73);
@@ -491,7 +491,7 @@ public final class OrbDefence extends NetworkGameClient {
         m.clearStaticReferences((byte) 98);
         lg.clearStaticReferences(104);
         oh.clearStaticReferences(-17303);
-        tg.a(2);
+        tg.resetStaticState(2);
         pa.clearStaticReferences(17);
         ua.clearStaticReferences(-415277564);
         tb.clearStaticReferences(-9698);
@@ -511,7 +511,7 @@ public final class OrbDefence extends NetworkGameClient {
         ck.clearStaticReferences(22499);
         dm.clearStaticReferences(0);
         pj.clearDeclaredStaticReferences(-75);
-        s.i(99);
+        s.resetStaticState(99);
         kj.clearStaticReferences((byte) 81);
         ej.releaseDeclaredStaticReferences(-15640);
         sg.clearDeclaredStaticReferences((byte) 87);
@@ -522,7 +522,7 @@ public final class OrbDefence extends NetworkGameClient {
         rh.clearStaticReferences((byte) 126);
         nh.clearStaticReferences((byte) -59);
         gb.a(2867);
-        dk.b(0);
+        dk.resetStaticState(0);
         cf.clearStaticReferences(0);
         mb.clearStaticReferences(114);
         pg.clearStaticReferences(-12150);
@@ -534,7 +534,7 @@ public final class OrbDefence extends NetworkGameClient {
         od.b((byte) -87);
         ok.clearStaticReferences((byte) 104);
         cg.clearStaticReferences(0);
-        uh.a(-5);
+        uh.resetStaticState(-5);
         sl.c((byte) 126);
         me.clearDeclaredStaticReferences(5);
         vc.a((byte) 116);
@@ -550,7 +550,7 @@ public final class OrbDefence extends NetworkGameClient {
         of.clearStaticReferences((byte) -83);
         hi.g(-104);
         qb.clearStaticReferences((byte) -83);
-        ob.a((byte) -19);
+        ob.resetStaticState((byte) -19);
         ue.clearStaticReferences((byte) -13);
         SoundFilter.clearStaticReferences();
         j.clearStaticReferences(-99);
@@ -571,7 +571,7 @@ public final class OrbDefence extends NetworkGameClient {
         md.clearStaticReferences(-77);
         ih.clearStaticReferences(-127);
         NodeHashTableIterator.clearStaticReferences(-1);
-        DualLinkDequeIterator.a(false);
+        DualLinkDequeIterator.resetStaticState(false);
         gj.c(false);
         vg.clearStaticReferences(false);
         hb.clearStaticReferences(119);
@@ -595,7 +595,7 @@ public final class OrbDefence extends NetworkGameClient {
         ec.a((byte) 122);
         df.clearStaticReferences(76);
         ii.clearStaticReferences(-26268);
-        hh.b(-93);
+        hh.resetStaticState(-93);
         i.clearStaticReferences(100);
         vh.clearDeclaredStaticReferences(95);
         fb.clearStaticReferences((byte) 125);
@@ -605,8 +605,8 @@ public final class OrbDefence extends NetworkGameClient {
         sa.a((byte) -105);
         ed.a(-1);
         AccountNameAvailabilityValidator.clearStaticReferences((byte) -97);
-        em.d((byte) -15);
-        wg.j(-24392);
+        em.resetStaticState((byte) -15);
+        wg.resetStaticState(-24392);
         b.j(-1);
         nb.clearDeclaredStaticReferences(-1);
         ug.clearStaticReferences((byte) -41);

@@ -55,7 +55,7 @@ final class sj {
         }
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_h = null;
         field_d = null;
         field_g = null;

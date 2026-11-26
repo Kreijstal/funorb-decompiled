@@ -53,7 +53,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           if (null == param0.field_a) {
           }
-          mg.a((byte) 92, param0);
+          ImageProducerRasterBuffer.a((byte) 92, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -180,7 +180,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 r.field_c = od.field_f;
               } else {
                 vh.field_t = var6_int;
-                r.field_c = mg.field_i;
+                r.field_c = ImageProducerRasterBuffer.field_i;
                 il.field_g = -1;
               }
             }
@@ -201,7 +201,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (8 != var6_intLifetime1) {
-                  r.field_c = mg.field_i;
+                  r.field_c = ImageProducerRasterBuffer.field_i;
                   il.field_g = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -289,7 +289,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
               stackIn_73_0 = vh.field_t;
               return stackIn_73_0;
             }
-            if (mg.field_i == r.field_c &&
+            if (ImageProducerRasterBuffer.field_i == r.field_c &&
               fk.a(false)) {
               ec.a((byte) 27);
               if (vh.field_t == 7 &&

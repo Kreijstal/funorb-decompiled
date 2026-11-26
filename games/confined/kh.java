@@ -307,7 +307,7 @@ final class kh extends dc {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = cd.field_m[var7 - 128];
+                var8 = ImageProducerRasterBuffer.field_m[var7 - 128];
                 if (var8 == 0) {
                   var8 = 63;
                 }

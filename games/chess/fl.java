@@ -82,7 +82,7 @@ final class fl extends IntrusiveNode {
           var8 = (CharSequence) ((Object) param3);
           ec.field_f = ad.a(var8, -2);
           re.field_p = param1;
-          var6 = dn.a(va.field_d, param0, vj.field_g, wk.field_c, 13911);
+          var6 = dn.a(va.field_d, param0, AwtRasterBuffer.field_g, wk.field_c, 13911);
           pg.a((byte) -18, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

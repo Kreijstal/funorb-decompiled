@@ -7,7 +7,7 @@ final class bf {
     static boolean field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < 103) {
           field_a = false;
           field_c = null;

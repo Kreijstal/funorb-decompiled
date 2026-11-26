@@ -92,7 +92,7 @@ final class de extends UiWidget {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 1) {
           field_I = -48;
         }

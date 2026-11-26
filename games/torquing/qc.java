@@ -18,7 +18,7 @@ final class qc extends aa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -112) {
-            qc.n(52);
+            qc.resetStaticState(52);
           }
           stackIn_3_0 = new DelayedPcmStream(param2, AudioOutput.field_c * param0 / 1000);
           return stackIn_3_0;
@@ -51,7 +51,7 @@ final class qc extends aa {
         }
     }
 
-    public static void n(int param0) {
+    public static void resetStaticState(int param0) {
         field_ab = null;
         field_cb = null;
         field_db = null;

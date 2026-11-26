@@ -95,7 +95,7 @@ final class FlirtAnimation extends EventAnimation {
         FlirtAnimation.d(-7);
     }
 
-    public static void f(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_x = null;
         if (param0 < -116) {
           return;

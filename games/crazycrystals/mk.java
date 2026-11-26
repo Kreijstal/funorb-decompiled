@@ -24,7 +24,7 @@ final class mk {
         if (param0 != -2) {
           field_a = (RgbSprite) null;
         }
-        stackIn_8_0 = (tk.field_k == this) || (this == fm.field_y) || (ek.field_h == this);
+        stackIn_8_0 = (ImageProducerRasterBuffer.field_k == this) || (this == fm.field_y) || (ek.field_h == this);
         return stackIn_8_0;
     }
 

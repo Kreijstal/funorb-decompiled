@@ -96,7 +96,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_l = null;
         if (!param0) {
           field_k = 115;

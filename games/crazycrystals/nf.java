@@ -24,7 +24,7 @@ abstract class nf extends oh {
     nf() {
     }
 
-    public static void c(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != 39) {
           field_f = true;
           field_g = null;

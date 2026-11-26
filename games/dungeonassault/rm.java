@@ -494,7 +494,7 @@ class rm extends ck {
         }
     }
 
-    public static void m(int param0) {
+    public static void resetStaticState(int param0) {
         field_S = null;
         field_J = null;
         if (param0 != 4) {

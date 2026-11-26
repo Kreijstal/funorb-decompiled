@@ -16,7 +16,7 @@ final class vl extends fi {
     private int field_E;
     private boolean field_F;
 
-    public static void i(int param0) {
+    public static void resetStaticState(int param0) {
         field_G = null;
         field_C = null;
         if (param0 != 2147483647) {

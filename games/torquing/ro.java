@@ -107,7 +107,7 @@ class ro extends am {
         return pm.field_p;
     }
 
-    public static void g(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_t = null;
         if (param0 < 112) {
           field_w = 110;

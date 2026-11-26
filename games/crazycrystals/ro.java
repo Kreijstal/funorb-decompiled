@@ -207,7 +207,7 @@ final class ro extends pn implements Cloneable {
                 if (0 <= var12 - var13) {
                   stackIn_306_0 = ja.field_h[var14];
                 } else {
-                  stackIn_306_0 = tk.field_h[var14];
+                  stackIn_306_0 = ImageProducerRasterBuffer.field_h[var14];
                 }
                 var11 = stackIn_306_0;
               } else {
@@ -263,7 +263,7 @@ final class ro extends pn implements Cloneable {
             if (-var13Lifetime1 + var12Lifetime1 <= 0) {
               stackIn_70_0 = ja.field_h[var14Lifetime1];
             } else {
-              stackIn_70_0 = tk.field_h[var14Lifetime1];
+              stackIn_70_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
             }
             var11 = stackIn_70_0;
             stackIn_73_0 = (var7Lifetime1 != 0) ? 0 : 1;
@@ -293,7 +293,7 @@ final class ro extends pn implements Cloneable {
                   if (0 <= var12Lifetime1 - var13Lifetime1) {
                     stackIn_92_0 = ja.field_h[var14Lifetime1];
                   } else {
-                    stackIn_92_0 = tk.field_h[var14Lifetime1];
+                    stackIn_92_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                   }
                   var11 = stackIn_92_0;
                 }
@@ -346,7 +346,7 @@ final class ro extends pn implements Cloneable {
                   if (0 <= var12Lifetime1 - var13Lifetime1) {
                     stackIn_44_0 = ja.field_h[var14Lifetime1];
                   } else {
-                    stackIn_44_0 = tk.field_h[var14Lifetime1];
+                    stackIn_44_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                   }
                   var11 = stackIn_44_0;
                 }
@@ -395,7 +395,7 @@ final class ro extends pn implements Cloneable {
                   if (0 <= var12Lifetime1 - var13Lifetime1) {
                     stackIn_139_0 = ja.field_h[var14Lifetime1];
                   } else {
-                    stackIn_139_0 = tk.field_h[var14Lifetime1];
+                    stackIn_139_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                   }
                   var11 = stackIn_139_0;
                 }
@@ -424,7 +424,7 @@ final class ro extends pn implements Cloneable {
               if (-var13Lifetime1 + var12Lifetime1 <= 0) {
                 stackIn_217_0 = ja.field_h[var14Lifetime1];
               } else {
-                stackIn_217_0 = tk.field_h[var14Lifetime1];
+                stackIn_217_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
               }
               var11 = stackIn_217_0;
               stackIn_220_0 = (var7Lifetime1 != 0) ? 0 : 1;
@@ -454,7 +454,7 @@ final class ro extends pn implements Cloneable {
                     if (0 <= var12Lifetime1 - var13Lifetime1) {
                       stackIn_239_0 = ja.field_h[var14Lifetime1];
                     } else {
-                      stackIn_239_0 = tk.field_h[var14Lifetime1];
+                      stackIn_239_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                     }
                     var11 = stackIn_239_0;
                   }
@@ -507,7 +507,7 @@ final class ro extends pn implements Cloneable {
                     if (0 <= var12Lifetime1 - var13Lifetime1) {
                       stackIn_191_0 = ja.field_h[var14Lifetime1];
                     } else {
-                      stackIn_191_0 = tk.field_h[var14Lifetime1];
+                      stackIn_191_0 = ImageProducerRasterBuffer.field_h[var14Lifetime1];
                     }
                     var11 = stackIn_191_0;
                   }

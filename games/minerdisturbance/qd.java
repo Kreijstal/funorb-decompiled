@@ -517,7 +517,7 @@ final class qd extends kn implements sh {
         GameAppletShell.field_g[9] = ck.field_c[2];
         GameAppletShell.field_g[11] = jf.field_e;
         GameAppletShell.field_g[12] = tl.field_p + ":";
-        e.field_i[11] = ci.field_h;
+        e.field_i[11] = AwtRasterBuffer.field_h;
         e.field_i[10] = pb.field_R;
         e.field_i[0] = nk.field_v;
         e.field_i[14] = ec.field_g;

@@ -25,7 +25,7 @@ final class fc {
         return stackIn_6_0;
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_a = null;
         field_d = null;
         if (param0 != 20811) {
@@ -59,7 +59,7 @@ final class fc {
           fi.field_g = hb.a(-990, "commonui", param3, "validation");
           nb.field_b = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
           nb.field_c = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
-          tk.field_a = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
+          AwtRasterBuffer.field_a = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
           var18 = new Sprite(param0.a("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
           o.a(param3, "commonui", "dropdown", false);
           var5 = fg.a(param3, "screen_options", "commonui", false);

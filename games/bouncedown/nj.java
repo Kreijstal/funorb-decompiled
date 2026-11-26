@@ -355,19 +355,19 @@ final class nj extends al {
               }
             }
           }
-          ef.field_a = (hj.field_a + cl.field_m << 1) * cf.field_f.field_f;
+          AwtRasterBuffer.field_a = (hj.field_a + cl.field_m << 1) * cf.field_f.field_f;
           ui.field_p = var3_intLifetime1 + bi.field_h - (var3_intLifetime1 >> 1);
           bb.field_b = bi.field_h - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < se.field_E.length; var4Lifetime2++) {
-            stackIn_115_0 = ef.field_a;
+            stackIn_115_0 = AwtRasterBuffer.field_a;
             if (IterableNodeHashTable.field_a[var4Lifetime2] >= 0) {
               stackIn_116_1 = pb.field_j;
             } else {
               stackIn_116_1 = k.field_D;
             }
-            ef.field_a = stackIn_115_0 + stackIn_116_1;
+            AwtRasterBuffer.field_a = stackIn_115_0 + stackIn_116_1;
           }
-          jl.field_a = uf.field_a - (ef.field_a >> 1);
+          jl.field_a = uf.field_a - (AwtRasterBuffer.field_a >> 1);
           lf.field_r = new int[se.field_E.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = jl.field_a;

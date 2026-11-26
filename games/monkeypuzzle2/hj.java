@@ -640,7 +640,7 @@ final class hj {
             this.field_z = 64623;
           }
           var3 = 0;
-          while (ba.a(-1)) {
+          while (AwtRasterBuffer.a(-1)) {
             if (!hf.field_f.field_o) {
               var4 = (oa.field_H ^ hf.field_f.field_d) % 8;
               if (0 != var4) {
@@ -874,7 +874,7 @@ final class hj {
                 var4Lifetime1 = 3;
               }
               if (0 == (this.field_d & var4Lifetime1)) {
-                var7 = ba.field_a[this.field_u].length;
+                var7 = AwtRasterBuffer.field_a[this.field_u].length;
                 this.a((byte) 82);
                 fieldTemp$9 = this.field_Y + 1;
                 this.field_Y = this.field_Y + 1;
@@ -1006,7 +1006,7 @@ final class hj {
                     ej.field_b = 0;
                   }
                   if ((this.field_d & 15) == 0) {
-                    var7 = ba.field_a[this.field_u].length;
+                    var7 = AwtRasterBuffer.field_a[this.field_u].length;
                     this.a((byte) 115);
                     fieldTemp$1 = this.field_Y + 1;
                     this.field_Y = this.field_Y + 1;
@@ -1099,7 +1099,7 @@ final class hj {
                             bl.a(50, uh.field_e);
                           }
                           if ((this.field_d & 15) == 0) {
-                            var7 = ba.field_a[this.field_u].length;
+                            var7 = AwtRasterBuffer.field_a[this.field_u].length;
                             fieldTemp$3 = this.field_Y + 1;
                             this.field_Y = this.field_Y + 1;
                             if (fieldTemp$3 == var7) {
@@ -1124,16 +1124,16 @@ final class hj {
                       this.field_f.e();
                       lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
                       sb.field_r.a(gg.a(new String[]{Integer.toString(this.field_I)}, ff.field_a, true), 170, sb.field_r.field_C, 1, -1);
-                      ac.field_a.a((byte) 119);
+                      ac.field_a.setAsRasterTarget((byte) 119);
                       if (IterableNodeHashTable.field_c == 19) {
                         e.a(254, (byte) 40, 1);
                       }
                       this.field_mb = 0.0f;
-                      this.field_s = 1 + (-13 + this.field_k - ba.field_a[0][0].field_n) / 30;
+                      this.field_s = 1 + (-13 + this.field_k - AwtRasterBuffer.field_a[0][0].field_n) / 30;
                       AccountServiceResult.a((byte) -33, ke.field_h[18]);
                     }
                     if (0 == (this.field_d & 15)) {
-                      var7 = ba.field_a[this.field_u].length;
+                      var7 = AwtRasterBuffer.field_a[this.field_u].length;
                       this.a((byte) 75);
                       fieldTemp$4 = this.field_Y + 1;
                       this.field_Y = this.field_Y + 1;
@@ -1150,7 +1150,7 @@ final class hj {
                     AccountNameAvailabilityValidator.f(8500);
                     this.d((byte) 56);
                     if (this.field_u != 2 &&
-                      hl.a(1, -ba.field_a[0][0].field_n + (-13 + this.field_k), this.field_M - 100) < 100) {
+                      hl.a(1, -AwtRasterBuffer.field_a[0][0].field_n + (-13 + this.field_k), this.field_M - 100) < 100) {
                       this.field_u = 2;
                       AccountServiceResult.a((byte) -116, ke.field_h[19]);
                     }
@@ -1495,7 +1495,7 @@ final class hj {
                 var8Lifetime5 = 256;
               }
               ma.a(this.field_m.field_s, 80, 0, this.field_m.field_m, var7_intLifetime4, var8Lifetime5, 0);
-              ac.field_a.a((byte) 110);
+              ac.field_a.setAsRasterTarget((byte) 110);
             }
             if (var2_intLifetime1 != 0) {
               qa.field_i.c(-qa.field_i.field_m + 320 - (qa.field_i.field_m >> 1), var3Lifetime1);
@@ -1520,7 +1520,7 @@ final class hj {
               kl.a(100, 5, this.field_d, 0, 0, this.field_N.field_k, this.field_N.field_j);
               this.field_q.e();
               this.field_N.a(this.field_N.field_m << 3, this.field_N.field_n << 3, 3200, 1600, 63535, 4096);
-              ac.field_a.a((byte) 116);
+              ac.field_a.setAsRasterTarget((byte) 116);
               SoftwareRasterizer.setClip(80, 0, 560, 480);
               fi.field_a[1].c(0, 0);
               this.field_q.b(80, 317, 580, 200, 100);
@@ -1728,7 +1728,7 @@ final class hj {
           j.field_g.c(-(j.field_g.field_m >> 1) + this.field_M - 20, -j.field_g.field_n + this.field_k);
           if (2 == this.field_u && (2 <= this.field_Y ||
             4 == this.field_jb)) {
-            var24 = ba.field_a[2][this.field_Y];
+            var24 = AwtRasterBuffer.field_a[2][this.field_Y];
             var10_ref_leLifetime1 = var24;
             var11Lifetime3 = (bl.field_f - (var24.field_m >> 1) - (-100 + this.field_M)) * 150;
             if (var11Lifetime3 >= 0) {
@@ -1742,7 +1742,7 @@ final class hj {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var25 = ba.field_a[this.field_u][this.field_Y];
+            var25 = AwtRasterBuffer.field_a[this.field_u][this.field_Y];
             var10_ref_leLifetime1Lifetime1 = var25;
             var10_ref_leLifetime1Lifetime1.c(-100 + this.field_M, -var25.field_n + this.field_k - 13);
           }
@@ -1797,7 +1797,7 @@ final class hj {
                         sb.field_r.a(var13, 320, 319, 6776679, -1);
                         sb.field_r.a(var13, 320, 320, 16724736, -1);
                         sb.field_r.a(var13, 330, 330, 6776679, -1, 50);
-                        ba.field_a[this.field_u][this.field_Y].c(-(ba.field_a[this.field_u][this.field_Y].field_k / 2) + 320, 240 - ba.field_a[this.field_u][this.field_Y].field_j / 2);
+                        AwtRasterBuffer.field_a[this.field_u][this.field_Y].c(-(AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_k / 2) + 320, 240 - AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_j / 2);
                         var21 = 0;
                         var14 = var21;
                         while (var21 < 5) {
@@ -1978,7 +1978,7 @@ final class hj {
           for (var1_int = 0; var1_int < 134; var1_int++) {
             SoftwareRasterizer.addPixel(pf.a((byte) 109, 480), pf.a((byte) -100, 100), 16777215);
           }
-          ac.field_a.a((byte) 111);
+          ac.field_a.setAsRasterTarget((byte) 111);
           this.field_N = new Sprite(480, 200);
           this.field_q = new Sprite(480, 200);
           this.field_A = 0;

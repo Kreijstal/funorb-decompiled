@@ -232,7 +232,7 @@ final class uj implements Runnable {
         rf.field_a.moveAllToFront(aj.field_b, param0 + param0);
         sb.field_m.e();
         SoftwareRasterizer.clearRaster();
-        ac.field_a.a((byte) 114);
+        ac.field_a.setAsRasterTarget((byte) 114);
         ek.field_b = 0;
         IterableNodeHashTable.field_e = 0;
         ok.field_d = false;
@@ -273,7 +273,7 @@ final class uj implements Runnable {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 == 10) {
           field_b = null;
           field_k = null;

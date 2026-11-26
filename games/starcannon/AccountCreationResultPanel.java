@@ -124,7 +124,7 @@ final class AccountCreationResultPanel extends ph implements ga {
               }
             }
           }
-          var5 = new kj((ph) (this), tk.field_a, var4);
+          var5 = new kj((ph) (this), AwtRasterBuffer.field_a, var4);
           if (param1.success) {
             if (param1.field_g) {
               this.c(20317, new jj(this));
@@ -167,7 +167,7 @@ final class AccountCreationResultPanel extends ph implements ga {
     }
 
     AccountCreationResultPanel(tc param0, kh param1) {
-        super(param0, tk.field_a, ge.field_a, false, false);
+        super(param0, AwtRasterBuffer.field_a, ge.field_a, false, false);
         try {
           this.field_pb = param1;
         } catch (RuntimeException runtimeException) {

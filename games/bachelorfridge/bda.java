@@ -8,7 +8,7 @@ final class bda extends lw {
     static String field_p;
     static int field_l;
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_o = null;
         if (param0 <= 0) {
           field_p = null;

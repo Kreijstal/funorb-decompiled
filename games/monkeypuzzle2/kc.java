@@ -59,11 +59,11 @@ abstract class kc {
                 dl.field_c[var5] = false;
                 var5++;
               }
-              vf.field_a = sl.field_j;
+              vf.field_a = ImageProducerRasterBuffer.field_j;
             } else {
-              while (sl.field_j != vf.field_a) {
-                var2 = ProxySocketConnector.field_g[sl.field_j];
-                sl.field_j = 127 & sl.field_j + 1;
+              while (ImageProducerRasterBuffer.field_j != vf.field_a) {
+                var2 = ProxySocketConnector.field_g[ImageProducerRasterBuffer.field_j];
+                ImageProducerRasterBuffer.field_j = 127 & ImageProducerRasterBuffer.field_j + 1;
                 if (var2 < 0) {
                   dl.field_c[~var2] = false;
                   continue;

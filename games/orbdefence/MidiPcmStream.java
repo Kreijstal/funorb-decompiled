@@ -1155,7 +1155,7 @@ final class MidiPcmStream extends PcmStream {
         this.c(param1, -129, param0);
     }
 
-    public static void d(int param0) {
+    public static void resetStaticState(int param0) {
         field_m = null;
         if (param0 <= 109) {
           field_u = 113;

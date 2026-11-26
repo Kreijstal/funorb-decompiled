@@ -76,7 +76,7 @@ final class ec extends mh {
         super(param0, param1, 33, 20, 30);
     }
 
-    public static void n(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         if (param0 < 85) {
           field_bb = -83;
           field_P = null;

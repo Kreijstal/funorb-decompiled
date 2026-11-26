@@ -257,7 +257,7 @@ final class ci extends lc implements gl, rc {
             this.field_i = this.field_i + (5 + var7.b(this.field_E, this.field_k - 40, var7.field_s));
           }
           var8 = wj.field_b;
-          var9 = ib.a(vi.b(0), (byte) -90);
+          var9 = ImageProducerRasterBuffer.a(vi.b(0), (byte) -90);
           if (nj.field_k != var9) {
             if (w.field_g == var9) {
               var8 = dl.field_a;

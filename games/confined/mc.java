@@ -59,7 +59,7 @@ final class mc {
         return (String) null;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 == 58) {
           field_b = null;
           field_d = null;

@@ -67,7 +67,7 @@ final class AccountNameAvailabilityValidator extends cg {
         return var2Lifetime1;
     }
 
-    public static void h(int param0) {
+    public static void resetStaticState(int param0) {
         field_k = (long[][]) null;
         field_n = null;
         field_o = null;
@@ -109,7 +109,7 @@ final class AccountNameAvailabilityValidator extends cg {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            AccountNameAvailabilityValidator.h(107);
+            AccountNameAvailabilityValidator.resetStaticState(107);
           }
           if (!param1) {
             stackIn_6_0 = mb.field_a.a(param2);

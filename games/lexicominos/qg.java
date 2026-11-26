@@ -39,7 +39,7 @@ final class qg {
         oe.a((byte) 106, param3, SoftwareRasterizer.field_b, param0, param6, param7, param2, param1, param4);
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         field_a = null;
         if (param0 != 105) {

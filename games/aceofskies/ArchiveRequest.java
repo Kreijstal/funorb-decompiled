@@ -32,7 +32,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         this.field_p = true;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         if (param0 != 34) {
           field_r = -109;
           field_n = null;

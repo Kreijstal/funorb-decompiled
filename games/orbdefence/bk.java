@@ -63,7 +63,7 @@ final class bk extends IOException {
               if (param3) {
                 field_c = (String) null;
               }
-              var4 = Class.forName("ch");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               var5 = (RasterBuffer) (var4.newInstance());
               var5.a(88, param2, param0, param1);
               stackIn_3_0 = var5;

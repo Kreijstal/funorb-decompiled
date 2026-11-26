@@ -45,7 +45,7 @@ final class oj {
         return !wh.field_a.a(640) ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_e = null;
         if (param0 != -105) {
           field_c = 6;

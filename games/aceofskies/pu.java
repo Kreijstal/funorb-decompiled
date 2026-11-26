@@ -44,7 +44,7 @@ final class pu {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_b = null;
         if (param0 != 240) {
           field_a = -93;

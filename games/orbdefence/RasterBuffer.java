@@ -65,7 +65,7 @@ abstract class RasterBuffer {
 
     abstract void a(int param0, int param1, java.awt.Graphics param2, boolean param3);
 
-    public static void a(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_b = null;
         if (param0 > -26) {
           field_c = true;
@@ -95,7 +95,7 @@ abstract class RasterBuffer {
           var10.n(9471);
           cg.field_c = mc.a(12, var10);
           if (param1 != -237) {
-            RasterBuffer.a((byte) -39);
+            RasterBuffer.resetStaticState((byte) -39);
           }
           tc.field_a = new wd[var3];
           ne.field_a = new int[var3][];

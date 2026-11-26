@@ -607,7 +607,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "notLoggedIn");
                 if (var2 != null) {
-                  ci.field_j = bh.a(var2, -1);
+                  AwtRasterBuffer.field_j = bh.a(var2, -1);
                 }
                 var2 = lh.b(-1, "loseProgress");
                 if (var2 != null) {
@@ -1469,7 +1469,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tutorialDynamiteInWater,0,0");
                 if (null != var2) {
-                  ci.field_h[0][0] = bh.a(var2, -124);
+                  AwtRasterBuffer.field_h[0][0] = bh.a(var2, -124);
                 }
                 var2 = lh.b(-1, "tutorialQuitWhileYoureAhead,0,0");
                 if (null != var2) {

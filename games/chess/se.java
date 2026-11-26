@@ -125,7 +125,7 @@ class se extends fb {
         }
     }
 
-    public static void e(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_Y = (byte[][][]) null;
         field_Z = null;
         field_W = null;
@@ -364,7 +364,7 @@ class se extends fb {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (param2 != 1) {
-          se.e((byte) 29);
+          se.resetStaticState((byte) 29);
         }
         this.a(param1, 34, ((mg) ((Object) this.field_n)).a(true, (mf) (this)), param3, param0);
     }

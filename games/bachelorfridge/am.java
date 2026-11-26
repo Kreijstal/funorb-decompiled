@@ -14,7 +14,7 @@ abstract class am extends vf {
     private int field_H;
     private int field_P;
 
-    public static void c(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_Q = null;
         field_R = null;
         if (!param0) {
@@ -196,7 +196,7 @@ abstract class am extends vf {
     boolean k(int param0) {
         this.m(17310);
         if (param0 >= -59) {
-          am.c(false);
+          am.resetStaticState(false);
         }
         return super.k(-81);
     }

@@ -12,7 +12,7 @@ final class bk extends hh {
     private si field_l;
     private uf field_i;
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 66) {
           lastKeyCode = -79;
           field_g = null;

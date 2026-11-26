@@ -60,7 +60,7 @@ final class q extends g {
             return stackIn_20_0;
           }
           if (param0 <= 57) {
-            q.e(106);
+            q.resetDeclaredStaticState(106);
           }
           if (param1.equals("D")) {
             stackIn_25_0 = Double.TYPE;
@@ -86,7 +86,7 @@ final class q extends g {
         }
     }
 
-    public static void e(int param0) {
+    public static void resetDeclaredStaticState(int param0) {
         if (param0 == 0) {
           field_Ob = null;
           field_Kb = null;

@@ -21,7 +21,7 @@ final class hh extends IntrusiveNode {
     final static void a(int param0, String param1) {
         try {
           if (param0 != 0) {
-            hh.a(true);
+            hh.resetStaticState(true);
           }
           mc.field_d = param1;
         } catch (RuntimeException runtimeException) {
@@ -68,7 +68,7 @@ final class hh extends IntrusiveNode {
             if (param0 == 48) {
               return;
             }
-            hh.a(false);
+            hh.resetStaticState(false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -119,7 +119,7 @@ final class hh extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_r = (byte[][]) null;
         if (!param0) {
           field_p = null;

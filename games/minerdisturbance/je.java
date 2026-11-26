@@ -1862,7 +1862,7 @@ final class je {
               } else {
                 rf.field_d.f(0, 0);
               }
-              ResourceArchive.field_e.a((byte) -45);
+              ResourceArchive.field_e.setAsRasterTarget((byte) -45);
               SoftwareRasterizer.setClip(var12Lifetime1, var13Lifetime1, var12Lifetime1 + pn.field_c.field_a, var13Lifetime1 + pn.field_c.field_f);
               kc.field_a.a(pn.field_c, var12Lifetime1, var13Lifetime1);
               SoftwareRasterizer.resetClip();

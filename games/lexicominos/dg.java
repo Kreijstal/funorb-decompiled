@@ -17,7 +17,7 @@ final class dg {
         if (!qa.field_c.b(12)) {
           return ef.field_b;
         }
-        return dd.field_d;
+        return AwtRasterBuffer.field_d;
     }
 
     static int a(int param0, int param1) {

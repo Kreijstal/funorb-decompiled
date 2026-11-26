@@ -7,7 +7,7 @@ final class ResourceArchive {
     private int field_j;
     private ArchiveIndex field_f;
     static long field_a;
-    static ci field_e;
+    static AwtRasterBuffer field_e;
     private Object[][] field_b;
     static String field_c;
     private Object[] field_i;

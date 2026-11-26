@@ -57,7 +57,7 @@ final class j extends jc {
         }
     }
 
-    public static void g(int param0) {
+    public static void resetStaticState(int param0) {
         field_K = null;
         field_H = null;
         field_P = null;

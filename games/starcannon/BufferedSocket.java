@@ -54,7 +54,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 < 13) {
           field_m = -57;
         }

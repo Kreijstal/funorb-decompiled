@@ -10,7 +10,7 @@ final class na {
     static int field_f;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_e = null;
         if (param0 != 426388817) {
           field_c = -42;

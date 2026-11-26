@@ -85,8 +85,8 @@ final class im {
               return true;
             }
             var4 = SecondaryNodeDeque.field_f;
-            if (ci.field_k != 0.0) {
-              var4 = (int)((double)var4 + dk.field_a.nextGaussian() * ci.field_k);
+            if (AwtRasterBuffer.field_k != 0.0) {
+              var4 = (int)((double)var4 + dk.field_a.nextGaussian() * AwtRasterBuffer.field_k);
               if (0 > var4) {
                 var4 = 0;
               }
@@ -214,7 +214,7 @@ final class im {
           bg.field_d = new int[sc.field_d];
           ng.field_e = new int[sc.field_d];
           qk.field_b = new int[sc.field_d];
-          ci.field_a = new byte[sc.field_d][];
+          AwtRasterBuffer.field_a = new byte[sc.field_d][];
           var17.position = -(8 * sc.field_d) + param1.length - 7;
           pf.field_c = var17.readUnsignedShort(-72);
           wd.field_a = var17.readUnsignedShort(-68);
@@ -254,7 +254,7 @@ final class im {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            ci.field_a[var4Lifetime5] = var21;
+            AwtRasterBuffer.field_a[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte((byte) -54);
             if ((var11 & 1) == 0) {

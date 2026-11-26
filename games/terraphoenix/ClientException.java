@@ -8,7 +8,7 @@ final class ClientException extends RuntimeException {
     String context;
     Throwable cause;
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != 0) {
           field_d = 29;
           field_c = null;

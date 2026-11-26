@@ -330,7 +330,7 @@ final class ah extends pj implements fh, ke {
         }
     }
 
-    public static void k(int param0) {
+    public static void resetStaticState(int param0) {
         if (param0 != -988) {
           field_J = -72;
         }
@@ -447,7 +447,7 @@ final class ah extends pj implements fh, ke {
 
     final static void a(byte param0, int param1) {
         if (param0 <= 108) {
-          ah.k(110);
+          ah.resetStaticState(110);
         }
         rd.field_D = param1 * 400 / 150;
         rd.field_F = 100 * param1 / 150;

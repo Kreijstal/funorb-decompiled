@@ -13,7 +13,7 @@ final class cg {
     static int field_h;
     private IntrusiveNode field_b;
 
-    public static void b(byte param0) {
+    public static void resetStaticState(byte param0) {
         field_a = null;
         field_c = null;
         if (param0 >= -107) {
@@ -46,7 +46,7 @@ final class cg {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param1 != 30) {
-            cg.b((byte) -92);
+            cg.resetStaticState((byte) -92);
           }
           try {
             if (!PlatformTaskDispatcher.field_f.startsWith("win")) {

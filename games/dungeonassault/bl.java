@@ -291,7 +291,7 @@ final class bl {
           g.field_Ib = oh.a(hj.field_Z, "pieces", 11091, "piece_necromancer");
           df.field_e = oh.a(hj.field_Z, "pieces", 11091, "piece_northman");
           ef.field_e = oh.a(hj.field_Z, "pieces", 11091, "piece_ogre");
-          kf.field_k = oh.a(hj.field_Z, "pieces", 11091, "piece_ork_blademaster");
+          ImageProducerRasterBuffer.field_k = oh.a(hj.field_Z, "pieces", 11091, "piece_ork_blademaster");
           lj.field_o = oh.a(hj.field_Z, "pieces", 11091, "piece_ork_mace");
           le.field_d = oh.a(hj.field_Z, "pieces", 11091, "piece_ork_shaman");
           oo.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_pitdemon");
@@ -377,7 +377,7 @@ final class bl {
           li.field_l[4] = new RgbSprite(li.field_l[0].field_y, li.field_l[0].field_v);
           li.field_l[4].e();
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_c, 13619075);
-          k.field_h.a(true);
+          k.field_h.setAsRasterTarget(true);
           li.field_l[5] = oh.a(hj.field_Z, "", 11091, "scroll_centre_right");
           li.field_l[6] = oh.a(hj.field_Z, "", 11091, "scroll_bottom_left");
           li.field_l[7] = oh.a(hj.field_Z, "", 11091, "scroll_bottom_centre");
@@ -398,7 +398,7 @@ final class bl {
           fp.field_d = new tf(IntrusiveNode.field_c, tp.field_u, cm.field_M);
           na.field_w = new tf(IntrusiveNode.field_c, bn.field_q, cm.field_M);
           cg.field_a = new tf(IntrusiveNode.field_c, vd.field_c, cm.field_M);
-          ih.field_x = new tf(IntrusiveNode.field_c, c.field_e.toUpperCase(), cm.field_M);
+          ih.field_x = new tf(IntrusiveNode.field_c, AwtRasterBuffer.field_e.toUpperCase(), cm.field_M);
           bf.field_m = new tf(IntrusiveNode.field_c, gk.field_K, cm.field_M);
           kd.field_e = new tf[ie.field_j.length];
           for (var14Lifetime3 = 0; var14Lifetime3 < ie.field_j.length; var14Lifetime3++) {

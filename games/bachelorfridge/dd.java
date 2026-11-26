@@ -119,7 +119,7 @@ final class dd extends WidgetContainer implements WidgetActionListener {
         }
     }
 
-    public static void a(int param0) {
+    public static void resetStaticState(int param0) {
         field_G = null;
         if (param0 != 0) {
           field_H = true;

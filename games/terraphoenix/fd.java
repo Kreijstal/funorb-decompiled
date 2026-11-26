@@ -488,7 +488,7 @@ class fd implements WidgetActionListener, w {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_q = null;
         field_i = null;
         if (param0 < 42) {

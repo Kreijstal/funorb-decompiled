@@ -12,7 +12,7 @@ final class ad {
     static String field_a;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void resetStaticState(boolean param0) {
         field_a = null;
         field_e = null;
         if (param0) {

@@ -111,14 +111,14 @@ final class ue extends jk {
             ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
             return;
           }
-          ba.field_f = qg.createFullscreenCanvas(640, 480, 0, rc.field_k, (byte) -73, 0);
-          if (null == ba.field_f) {
+          AwtRasterBuffer.field_f = qg.createFullscreenCanvas(640, 480, 0, rc.field_k, (byte) -73, 0);
+          if (null == AwtRasterBuffer.field_f) {
             var2Lifetime4 = 3;
             var3Lifetime4 = pl.field_e;
             ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3Lifetime4)).field_j + ((ta) ((Object) var3Lifetime4)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime4, param1, 240, ((ta) ((Object) var3Lifetime4)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime4);
             return;
           }
-          af.a(20, ba.field_f);
+          af.a(20, AwtRasterBuffer.field_f);
           var2Lifetime5 = 2;
           var3Lifetime5 = pl.field_e;
           ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3Lifetime5)).field_j + ((ta) ((Object) var3Lifetime5)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime5, param1, 240, ((ta) ((Object) var3Lifetime5)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime5);
@@ -136,14 +136,14 @@ final class ue extends jk {
           ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3Lifetime1Lifetime1)).field_j + ((ta) ((Object) var3Lifetime1Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1Lifetime1, param1, 240, ((ta) ((Object) var3Lifetime1Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1Lifetime1);
           return;
         }
-        ba.field_f = qg.createFullscreenCanvas(640, 480, 0, rc.field_k, (byte) -73, 0);
-        if (null == ba.field_f) {
+        AwtRasterBuffer.field_f = qg.createFullscreenCanvas(640, 480, 0, rc.field_k, (byte) -73, 0);
+        if (null == AwtRasterBuffer.field_f) {
           var2Lifetime2 = 3;
           var3Lifetime2 = pl.field_e;
           ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3Lifetime2)).field_j + ((ta) ((Object) var3Lifetime2)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime2, param1, 240, ((ta) ((Object) var3Lifetime2)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime2);
           return;
         }
-        af.a(20, ba.field_f);
+        af.a(20, AwtRasterBuffer.field_f);
         var2Lifetime3 = 2;
         var3Lifetime3 = pl.field_e;
         ff.a(sb.field_r, DelegatingCanvas.field_b, 480, ((ta) ((Object) var3Lifetime3)).field_j + ((ta) ((Object) var3Lifetime3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime3, param1, 240, ((ta) ((Object) var3Lifetime3)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime3);

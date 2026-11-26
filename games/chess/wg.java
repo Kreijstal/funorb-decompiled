@@ -59,7 +59,7 @@ final class wg extends pk {
           ec.field_f = ad.a(var5, -2);
           re.field_p = param2;
           if (param1 > -74) {
-            wg.b(88);
+            wg.resetStaticState(88);
           }
           kn.field_L = true;
         } catch (RuntimeException runtimeException) {
@@ -392,7 +392,7 @@ final class wg extends pk {
         }
     }
 
-    public static void b(int param0) {
+    public static void resetStaticState(int param0) {
         field_p = null;
         field_r = null;
         field_q = null;
