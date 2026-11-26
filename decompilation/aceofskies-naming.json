@@ -332,6 +332,14 @@
       "renamedSymbol": "B:BitmapFontMetrics.wrapText(I[LRenderSprite;[I[Ljava/lang/String;Ljava/lang/String;)I#0"
     },
     {
+      "symbol": "C:a",
+      "originalName": "a",
+      "to": "NativeSoftwareRenderContext",
+      "evidence": "Native software renderer allocates context array,constructs this with renderer/two retained sizes,then activates selected context.Whole47line class,constructor and renderer creation/selection/disposal callers read.10original scratch-mesh allocations and native handle-field spelling and original reverse identities preserved. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NativeSoftwareRenderContext"
+    },
+    {
       "symbol": "C:af",
       "originalName": "af",
       "to": "ByteStorage",
@@ -578,6 +586,14 @@
       "evidence": "Complete instance contract reviewed: final Object subclass, no instance fields or declared constructor, one toString override that throws IllegalStateException (Orb Defence retains RuntimeException context), exactly three shared instances across five static fields. Full cached username-query contract was reviewed at888c; current7de query/file independently inverse-restores to identical original input. Those identities encode request lifecycle, not labels or unrelated static utility roles. All typed field declarations/initializations reviewed, no native owned/type-use declarations. Preserve default constructors, identity/null aliases, state transitions and every unrelated static method/field; same-spelling non-class literals explicitly pinned unchanged.",
       "confidence": "reviewed",
       "renamedSymbol": "C:AccountRequestState"
+    },
+    {
+      "symbol": "C:e",
+      "originalName": "e",
+      "to": "NativeResource",
+      "evidence": "Single Boolean disposal interface used by finalizers and disposer across11implementations.Whole interface and exact11override edges/native declarations/wrappers read.Boolean true queued drain,false immediate disposal,with raw native implementation unexecuted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NativeResource"
     },
     {
       "symbol": "C:ed",
@@ -1572,6 +1588,14 @@
       "renamedSymbol": "C:OpenGlShaderObject"
     },
     {
+      "symbol": "C:vk",
+      "originalName": "vk",
+      "to": "NativeResourceDisposer",
+      "evidence": "Synchronized shared native resource disposal queue and renderer reference count;queue while count positive,dispose immediately otherwise,drain when last renderer released.Whole class/static initializer,all methods and actual renderer lifecycle/finalizers read. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NativeResourceDisposer"
+    },
+    {
       "symbol": "C:vp",
       "originalName": "vp",
       "to": "SoftwareRasterizer",
@@ -1642,6 +1666,14 @@
       "evidence": "FlightBody initialized with a pickup code and 400-tick life; session collects its upgrade or temporary weapon.",
       "confidence": "reviewed",
       "renamedSymbol": "C:Pickup"
+    },
+    {
+      "symbol": "C:wn",
+      "originalName": "wn",
+      "to": "NativeResourceDisposalNode",
+      "evidence": "IntrusiveNode retaining exact NativeResource reference for deferred disposal queue.Whole class/empty constructor and queue allocation/drain read;identity/unlink semantics remain. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:NativeResourceDisposalNode"
     },
     {
       "symbol": "C:wp",
@@ -6692,6 +6724,54 @@
       "renamedSymbol": "M:AceOfSkies.advanceGame(I)V"
     },
     {
+      "symbol": "M:a.E(JZ)V",
+      "originalName": "E",
+      "to": "releaseNative",
+      "evidence": "Native context disposal entry invoked by interface implementation with retained handle and exact Boolean;purpose from Java callback/queue contract;native body not available. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.releaseNative(JZ)V"
+    },
+    {
+      "symbol": "M:a.HA(JLha;II)V",
+      "originalName": "HA",
+      "to": "initializeNative",
+      "evidence": "Native initialization entry invoked after retained renderer and10scratch-mesh allocations;preserve long handle,renderer and two integer arguments;no asserted native allocation internals. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.initializeNative(JLGraphicsRenderer;II)V"
+    },
+    {
+      "symbol": "M:a.M(J)V",
+      "originalName": "M",
+      "to": "activateNative",
+      "evidence": "Native context activation entry reached by renderer selected-context operation through exact long handle;retain native declaration and call order. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.activateNative(J)V"
+    },
+    {
+      "symbol": "M:a.a()V",
+      "originalName": "a",
+      "to": "activateForCurrentThread",
+      "evidence": "Observe original Thread.currentThread call then activate retained native context;complete renderer selection caller proves context role.No Java thread-state write added. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.activateForCurrentThread()V"
+    },
+    {
+      "symbol": "M:a.b()V",
+      "originalName": "b",
+      "to": "activateContext",
+      "evidence": "Delegate original context activation through native long-handle entry;preserve exact alias/descriptor and no new guard. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.activateContext()V"
+    },
+    {
+      "symbol": "M:a.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.dispose(Z)V"
+    },
+    {
       "symbol": "M:ac.a(I)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -6826,6 +6906,14 @@
       "evidence": "Zero an int-array segment using the original eight sequential stores per unrolled iteration and scalar tail. Retain start/count arithmetic overflow,null/index exceptions and partial writes;do not substitute a library fill. Complete original-body SHA256 b3d53399488c4b1eb25cb619da620df3b5fedda0a1a29e454ee47e028fd4bdb6. Naming only;preserve full original JVM parameter widths/domains,all operators/constants/diagnostic strings,integer overflow,FP/cast order,shared aliases,partial writes,allocation/call/exception order,and declared modifiers. No class,field,parameter,local,native or class-name-literal changes. Existing meaningful aliases remain unchanged except the one explicitly reviewed Wizard Run correction.",
       "confidence": "reviewed",
       "renamedSymbol": "M:au.clearInts([III)V"
+    },
+    {
+      "symbol": "M:ba.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ba.dispose(Z)V"
     },
     {
       "symbol": "M:bb.a(I)V",
@@ -7348,6 +7436,14 @@
       "renamedSymbol": "M:dt.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:e.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeResource.dispose(Z)V"
+    },
+    {
       "symbol": "M:ec.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -7828,6 +7924,14 @@
       "renamedSymbol": "M:h.drawGlyph(CIIIZ)V"
     },
     {
+      "symbol": "M:h.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:h.dispose(Z)V"
+    },
+    {
       "symbol": "M:ha.K([I)V",
       "originalName": "K",
       "to": "getClip",
@@ -8252,6 +8356,14 @@
       "renamedSymbol": "M:IterableDualLinkDeque.clearStaticReferences(B)V"
     },
     {
+      "symbol": "M:i.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:i.dispose(Z)V"
+    },
+    {
       "symbol": "M:id.a(B)V",
       "originalName": "a",
       "to": "clearStaticReferences",
@@ -8386,6 +8498,22 @@
       "evidence": "Reviewed JavaSoftwareRenderSprite: a/b return the trimmed field_o/field_p while d/c add the left/right and top/bottom padding, and scaled draws divide the full size by the destination size. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NativeSoftwareRenderSprite.getFullWidth()I"
+    },
+    {
+      "symbol": "M:j.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderSprite.dispose(Z)V"
+    },
+    {
+      "symbol": "M:ja.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ja.dispose(Z)V"
     },
     {
       "symbol": "M:jc.SA(IIII[III)V",
@@ -9084,6 +9212,14 @@
       "renamedSymbol": "M:n.drawGlyph(CIIIZ)V"
     },
     {
+      "symbol": "M:n.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:n.dispose(Z)V"
+    },
+    {
       "symbol": "M:nb.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -9396,6 +9532,14 @@
       "renamedSymbol": "M:NativeSoftwareRenderer.drawLine(IIIIII)V"
     },
     {
+      "symbol": "M:oa.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeSoftwareRenderer.dispose(Z)V"
+    },
+    {
       "symbol": "M:ob.a(II[II)Lal;",
       "originalName": "a",
       "to": "getVorbisSampleByGroup",
@@ -9506,6 +9650,14 @@
       "evidence": "Complete cleanup statement proof reviewed: 2 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 ed8b08788d51b0f9354edb36a714dfd6460d2c80da735bb17d06bb510f126d3c.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ou.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:p.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:p.dispose(Z)V"
     },
     {
       "symbol": "M:pa.a()I",
@@ -11660,6 +11812,38 @@
       "renamedSymbol": "M:OpenGlShaderObject.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:vk.a(B)V",
+      "originalName": "a",
+      "to": "drainQueue",
+      "evidence": "Repeatedly remove queued node,invoke disposal true,then unlink;evaluate original byte-derived remainder only after queue empty.Preserve synchronized monitor,reentrancy,partial queue changes and throwing callback order. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeResourceDisposer.drainQueue(B)V"
+    },
+    {
+      "symbol": "M:vk.a(Le;I)V",
+      "originalName": "a",
+      "to": "disposeOrEnqueue",
+      "evidence": "Evaluate original guard remainder;return if disabled,enqueue exact resource in new node when renderer count positive,otherwise dispose false immediately.Preserve null handling,allocation/publication,monitor and callback failure behavior. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeResourceDisposer.disposeOrEnqueue(LNativeResource;I)V"
+    },
+    {
+      "symbol": "M:vk.a(Z)V",
+      "originalName": "a",
+      "to": "releaseRenderer",
+      "evidence": "On false decrement original count and drain only if exactly zero;true no-op.Preserve underflow/signed overflow,shared monitor and nested reentrant drain. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeResourceDisposer.releaseRenderer(Z)V"
+    },
+    {
+      "symbol": "M:vk.b(Z)V",
+      "originalName": "b",
+      "to": "retainRenderer",
+      "evidence": "On false increment original renderer reference count;true no-op.Preserve monitor,full counter overflow and no extra validation. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NativeResourceDisposer.retainRenderer(Z)V"
+    },
+    {
       "symbol": "M:vl.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
@@ -12026,6 +12210,22 @@
       "evidence": "Reviewed sentinel construction, bucket masking, insertion/unlink, lookup and traversal; secondary links are independent of IntrusiveNode links. Matching roles are also present in GeoBlox.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DualLinkNode.unlinkSecondaryNode(I)V"
+    },
+    {
+      "symbol": "M:xa.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:xa.dispose(Z)V"
+    },
+    {
+      "symbol": "M:ya.w(Z)V",
+      "originalName": "w",
+      "to": "dispose",
+      "evidence": "NativeResource disposal callback in exact11member override family;true from queued drain,false from immediate path.All declarations and4Java wrappers read;7direct native callbacks retain native flags,Boolean descriptor and original reverse identities.No native runtime/JNI ABI equivalence asserted. Identifier-only:preserve native/abstract/public/private/final/synchronized flags,all descriptors through exact class substitution,override closure,field_nativeid spelling,guards/recursion,literals,aliases,allocation/monitor/clock/order,primitive domains and partial exceptions.No native implementation or runtime-equivalence claim.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ya.dispose(Z)V"
     },
     {
       "symbol": "M:za.a(I[IIIIIB)V",
@@ -22005,9 +22205,9 @@
     },
     {
       "symbol": "C:a",
-      "renamedSymbol": "C:a",
+      "renamedSymbol": "C:NativeSoftwareRenderContext",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "NativeSoftwareRenderContext",
       "declaration": {
         "file": "a.java",
         "start": 50,
@@ -22984,9 +23184,9 @@
     },
     {
       "symbol": "C:e",
-      "renamedSymbol": "C:e",
+      "renamedSymbol": "C:NativeResource",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "NativeResource",
       "declaration": {
         "file": "e.java",
         "start": 48,
@@ -27604,9 +27804,9 @@
     },
     {
       "symbol": "C:vk",
-      "renamedSymbol": "C:vk",
+      "renamedSymbol": "C:NativeResourceDisposer",
       "originalName": "vk",
-      "renamedName": "vk",
+      "renamedName": "NativeResourceDisposer",
       "declaration": {
         "file": "vk.java",
         "start": 50,
@@ -27879,9 +28079,9 @@
     },
     {
       "symbol": "C:wn",
-      "renamedSymbol": "C:wn",
+      "renamedSymbol": "C:NativeResourceDisposalNode",
       "originalName": "wn",
-      "renamedName": "wn",
+      "renamedName": "NativeResourceDisposalNode",
       "declaration": {
         "file": "wn.java",
         "start": 50,
@@ -28022,7 +28222,7 @@
     },
     {
       "symbol": "F:a.field_a:Loa;",
-      "renamedSymbol": "F:a.field_a:LNativeSoftwareRenderer;",
+      "renamedSymbol": "F:NativeSoftwareRenderContext.field_a:LNativeSoftwareRenderer;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -28033,7 +28233,7 @@
     },
     {
       "symbol": "F:a.field_nativeid:J",
-      "renamedSymbol": "F:a.field_nativeid:J",
+      "renamedSymbol": "F:NativeSoftwareRenderContext.field_nativeid:J",
       "originalName": "field_nativeid",
       "renamedName": "field_nativeid",
       "declaration": {
@@ -48856,7 +49056,7 @@
     },
     {
       "symbol": "F:oa.field_k:[La;",
-      "renamedSymbol": "F:NativeSoftwareRenderer.field_k:[La;",
+      "renamedSymbol": "F:NativeSoftwareRenderer.field_k:[LNativeSoftwareRenderContext;",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -60285,7 +60485,7 @@
     },
     {
       "symbol": "F:vk.field_a:I",
-      "renamedSymbol": "F:vk.field_a:I",
+      "renamedSymbol": "F:NativeResourceDisposer.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -60296,7 +60496,7 @@
     },
     {
       "symbol": "F:vk.field_b:Z",
-      "renamedSymbol": "F:vk.field_b:Z",
+      "renamedSymbol": "F:NativeResourceDisposer.field_b:Z",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -60307,7 +60507,7 @@
     },
     {
       "symbol": "F:vk.field_c:Lkp;",
-      "renamedSymbol": "F:vk.field_c:LIntrusiveDeque;",
+      "renamedSymbol": "F:NativeResourceDisposer.field_c:LIntrusiveDeque;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -63178,7 +63378,7 @@
     },
     {
       "symbol": "F:wn.field_e:Le;",
-      "renamedSymbol": "F:wn.field_e:Le;",
+      "renamedSymbol": "F:NativeResourceDisposalNode.field_e:LNativeResource;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -65048,7 +65248,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#0",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#0",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -65059,7 +65259,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#1",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#1",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#1",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -65070,7 +65270,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#2",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#2",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#2",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -65081,7 +65281,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#3",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#3",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#3",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -65092,7 +65292,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#4",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#4",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#4",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -65103,7 +65303,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#5",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#5",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#5",
       "originalName": "discarded$5",
       "renamedName": "discarded$5",
       "declaration": {
@@ -65114,7 +65314,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#6",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#6",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#6",
       "originalName": "discarded$6",
       "renamedName": "discarded$6",
       "declaration": {
@@ -65125,7 +65325,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#7",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#7",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#7",
       "originalName": "discarded$7",
       "renamedName": "discarded$7",
       "declaration": {
@@ -65136,7 +65336,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#8",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#8",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#8",
       "originalName": "discarded$8",
       "renamedName": "discarded$8",
       "declaration": {
@@ -65147,7 +65347,7 @@
     },
     {
       "symbol": "L:a.<init>(Loa;II)V#9",
-      "renamedSymbol": "L:a.<init>(LNativeSoftwareRenderer;II)V#9",
+      "renamedSymbol": "L:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#9",
       "originalName": "discarded$9",
       "renamedName": "discarded$9",
       "declaration": {
@@ -225593,7 +225793,7 @@
     },
     {
       "symbol": "L:vk.a(B)V#0",
-      "renamedSymbol": "L:vk.a(B)V#0",
+      "renamedSymbol": "L:NativeResourceDisposer.drainQueue(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -225604,7 +225804,7 @@
     },
     {
       "symbol": "L:vk.a(B)V#1",
-      "renamedSymbol": "L:vk.a(B)V#1",
+      "renamedSymbol": "L:NativeResourceDisposer.drainQueue(B)V#1",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -225615,7 +225815,7 @@
     },
     {
       "symbol": "L:vk.a(Le;I)V#0",
-      "renamedSymbol": "L:vk.a(Le;I)V#0",
+      "renamedSymbol": "L:NativeResourceDisposer.disposeOrEnqueue(LNativeResource;I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -225626,7 +225826,7 @@
     },
     {
       "symbol": "L:vk.a(Le;I)V#1",
-      "renamedSymbol": "L:vk.a(Le;I)V#1",
+      "renamedSymbol": "L:NativeResourceDisposer.disposeOrEnqueue(LNativeResource;I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -241268,9 +241468,9 @@
     },
     {
       "symbol": "M:a.<init>(Loa;II)V",
-      "renamedSymbol": "M:a.<init>(LNativeSoftwareRenderer;II)V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "NativeSoftwareRenderContext",
       "declaration": {
         "file": "a.java",
         "start": 328,
@@ -241279,9 +241479,9 @@
     },
     {
       "symbol": "M:a.E(JZ)V",
-      "renamedSymbol": "M:a.E(JZ)V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.releaseNative(JZ)V",
       "originalName": "E",
-      "renamedName": "E",
+      "renamedName": "releaseNative",
       "declaration": {
         "file": "a.java",
         "start": 1244,
@@ -241290,9 +241490,9 @@
     },
     {
       "symbol": "M:a.HA(JLha;II)V",
-      "renamedSymbol": "M:a.HA(JLGraphicsRenderer;II)V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.initializeNative(JLGraphicsRenderer;II)V",
       "originalName": "HA",
-      "renamedName": "HA",
+      "renamedName": "initializeNative",
       "declaration": {
         "file": "a.java",
         "start": 1088,
@@ -241301,9 +241501,9 @@
     },
     {
       "symbol": "M:a.M(J)V",
-      "renamedSymbol": "M:a.M(J)V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.activateNative(J)V",
       "originalName": "M",
-      "renamedName": "M",
+      "renamedName": "activateNative",
       "declaration": {
         "file": "a.java",
         "start": 947,
@@ -241312,9 +241512,9 @@
     },
     {
       "symbol": "M:a.a()V",
-      "renamedSymbol": "M:a.a()V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.activateForCurrentThread()V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "activateForCurrentThread",
       "declaration": {
         "file": "a.java",
         "start": 132,
@@ -241323,9 +241523,9 @@
     },
     {
       "symbol": "M:a.b()V",
-      "renamedSymbol": "M:a.b()V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.activateContext()V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "activateContext",
       "declaration": {
         "file": "a.java",
         "start": 1164,
@@ -241334,7 +241534,7 @@
     },
     {
       "symbol": "M:a.finalize()V",
-      "renamedSymbol": "M:a.finalize()V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.finalize()V",
       "originalName": "finalize",
       "renamedName": "finalize",
       "declaration": {
@@ -241345,9 +241545,9 @@
     },
     {
       "symbol": "M:a.w(Z)V",
-      "renamedSymbol": "M:a.w(Z)V",
+      "renamedSymbol": "M:NativeSoftwareRenderContext.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "a.java",
         "start": 986,
@@ -242720,9 +242920,9 @@
     },
     {
       "symbol": "M:ba.w(Z)V",
-      "renamedSymbol": "M:ba.w(Z)V",
+      "renamedSymbol": "M:ba.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "ba.java",
         "start": 133,
@@ -248539,9 +248739,9 @@
     },
     {
       "symbol": "M:e.w(Z)V",
-      "renamedSymbol": "M:e.w(Z)V",
+      "renamedSymbol": "M:NativeResource.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "e.java",
         "start": 77,
@@ -253192,9 +253392,9 @@
     },
     {
       "symbol": "M:h.w(Z)V",
-      "renamedSymbol": "M:h.w(Z)V",
+      "renamedSymbol": "M:h.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "h.java",
         "start": 1062,
@@ -255348,9 +255548,9 @@
     },
     {
       "symbol": "M:i.w(Z)V",
-      "renamedSymbol": "M:i.w(Z)V",
+      "renamedSymbol": "M:i.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "i.java",
         "start": 179,
@@ -256547,9 +256747,9 @@
     },
     {
       "symbol": "M:j.w(Z)V",
-      "renamedSymbol": "M:NativeSoftwareRenderSprite.w(Z)V",
+      "renamedSymbol": "M:NativeSoftwareRenderSprite.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "j.java",
         "start": 2219,
@@ -256613,9 +256813,9 @@
     },
     {
       "symbol": "M:ja.w(Z)V",
-      "renamedSymbol": "M:ja.w(Z)V",
+      "renamedSymbol": "M:ja.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "ja.java",
         "start": 164,
@@ -268075,9 +268275,9 @@
     },
     {
       "symbol": "M:n.w(Z)V",
-      "renamedSymbol": "M:n.w(Z)V",
+      "renamedSymbol": "M:n.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "n.java",
         "start": 1565,
@@ -269813,9 +270013,9 @@
     },
     {
       "symbol": "M:oa.w(Z)V",
-      "renamedSymbol": "M:NativeSoftwareRenderer.w(Z)V",
+      "renamedSymbol": "M:NativeSoftwareRenderer.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "oa.java",
         "start": 6354,
@@ -271133,9 +271333,9 @@
     },
     {
       "symbol": "M:p.w(Z)V",
-      "renamedSymbol": "M:p.w(Z)V",
+      "renamedSymbol": "M:p.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "p.java",
         "start": 265,
@@ -282474,9 +282674,9 @@
     },
     {
       "symbol": "M:vk.a(B)V",
-      "renamedSymbol": "M:vk.a(B)V",
+      "renamedSymbol": "M:NativeResourceDisposer.drainQueue(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drainQueue",
       "declaration": {
         "file": "vk.java",
         "start": 190,
@@ -282485,9 +282685,9 @@
     },
     {
       "symbol": "M:vk.a(Le;I)V",
-      "renamedSymbol": "M:vk.a(Le;I)V",
+      "renamedSymbol": "M:NativeResourceDisposer.disposeOrEnqueue(LNativeResource;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "disposeOrEnqueue",
       "declaration": {
         "file": "vk.java",
         "start": 497,
@@ -282496,9 +282696,9 @@
     },
     {
       "symbol": "M:vk.a(Z)V",
-      "renamedSymbol": "M:vk.a(Z)V",
+      "renamedSymbol": "M:NativeResourceDisposer.releaseRenderer(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "releaseRenderer",
       "declaration": {
         "file": "vk.java",
         "start": 982,
@@ -282507,9 +282707,9 @@
     },
     {
       "symbol": "M:vk.b(Z)V",
-      "renamedSymbol": "M:vk.b(Z)V",
+      "renamedSymbol": "M:NativeResourceDisposer.retainRenderer(Z)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "retainRenderer",
       "declaration": {
         "file": "vk.java",
         "start": 839,
@@ -285356,9 +285556,9 @@
     },
     {
       "symbol": "M:wn.<init>()V",
-      "renamedSymbol": "M:wn.<init>()V",
+      "renamedSymbol": "M:NativeResourceDisposalNode.<init>()V",
       "originalName": "wn",
-      "renamedName": "wn",
+      "renamedName": "NativeResourceDisposalNode",
       "declaration": {
         "file": "wn.java",
         "start": 86,
@@ -285774,9 +285974,9 @@
     },
     {
       "symbol": "M:xa.w(Z)V",
-      "renamedSymbol": "M:xa.w(Z)V",
+      "renamedSymbol": "M:xa.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "xa.java",
         "start": 250,
@@ -285840,9 +286040,9 @@
     },
     {
       "symbol": "M:ya.w(Z)V",
-      "renamedSymbol": "M:ya.w(Z)V",
+      "renamedSymbol": "M:ya.dispose(Z)V",
       "originalName": "w",
-      "renamedName": "w",
+      "renamedName": "dispose",
       "declaration": {
         "file": "ya.java",
         "start": 134,
@@ -286082,7 +286282,7 @@
     },
     {
       "symbol": "P:a.<init>(Loa;II)V#0",
-      "renamedSymbol": "P:a.<init>(LNativeSoftwareRenderer;II)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286093,7 +286293,7 @@
     },
     {
       "symbol": "P:a.<init>(Loa;II)V#1",
-      "renamedSymbol": "P:a.<init>(LNativeSoftwareRenderer;II)V#1",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -286104,7 +286304,7 @@
     },
     {
       "symbol": "P:a.<init>(Loa;II)V#2",
-      "renamedSymbol": "P:a.<init>(LNativeSoftwareRenderer;II)V#2",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.<init>(LNativeSoftwareRenderer;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -286115,7 +286315,7 @@
     },
     {
       "symbol": "P:a.E(JZ)V#0",
-      "renamedSymbol": "P:a.E(JZ)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.releaseNative(JZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286126,7 +286326,7 @@
     },
     {
       "symbol": "P:a.E(JZ)V#1",
-      "renamedSymbol": "P:a.E(JZ)V#1",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.releaseNative(JZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -286137,7 +286337,7 @@
     },
     {
       "symbol": "P:a.HA(JLha;II)V#0",
-      "renamedSymbol": "P:a.HA(JLGraphicsRenderer;II)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.initializeNative(JLGraphicsRenderer;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286148,7 +286348,7 @@
     },
     {
       "symbol": "P:a.HA(JLha;II)V#1",
-      "renamedSymbol": "P:a.HA(JLGraphicsRenderer;II)V#1",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.initializeNative(JLGraphicsRenderer;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -286159,7 +286359,7 @@
     },
     {
       "symbol": "P:a.HA(JLha;II)V#2",
-      "renamedSymbol": "P:a.HA(JLGraphicsRenderer;II)V#2",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.initializeNative(JLGraphicsRenderer;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -286170,7 +286370,7 @@
     },
     {
       "symbol": "P:a.HA(JLha;II)V#3",
-      "renamedSymbol": "P:a.HA(JLGraphicsRenderer;II)V#3",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.initializeNative(JLGraphicsRenderer;II)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -286181,7 +286381,7 @@
     },
     {
       "symbol": "P:a.M(J)V#0",
-      "renamedSymbol": "P:a.M(J)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.activateNative(J)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286192,7 +286392,7 @@
     },
     {
       "symbol": "P:a.w(Z)V#0",
-      "renamedSymbol": "P:a.w(Z)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderContext.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -289316,7 +289516,7 @@
     },
     {
       "symbol": "P:ba.w(Z)V#0",
-      "renamedSymbol": "P:ba.w(Z)V#0",
+      "renamedSymbol": "P:ba.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -302791,7 +302991,7 @@
     },
     {
       "symbol": "P:e.w(Z)V#0",
-      "renamedSymbol": "P:e.w(Z)V#0",
+      "renamedSymbol": "P:NativeResource.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -313890,7 +314090,7 @@
     },
     {
       "symbol": "P:h.w(Z)V#0",
-      "renamedSymbol": "P:h.w(Z)V#0",
+      "renamedSymbol": "P:h.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -319335,7 +319535,7 @@
     },
     {
       "symbol": "P:i.w(Z)V#0",
-      "renamedSymbol": "P:i.w(Z)V#0",
+      "renamedSymbol": "P:i.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322272,7 +322472,7 @@
     },
     {
       "symbol": "P:j.w(Z)V#0",
-      "renamedSymbol": "P:NativeSoftwareRenderSprite.w(Z)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderSprite.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -322316,7 +322516,7 @@
     },
     {
       "symbol": "P:ja.w(Z)V#0",
-      "renamedSymbol": "P:ja.w(Z)V#0",
+      "renamedSymbol": "P:ja.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -350190,7 +350390,7 @@
     },
     {
       "symbol": "P:n.w(Z)V#0",
-      "renamedSymbol": "P:n.w(Z)V#0",
+      "renamedSymbol": "P:n.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -354876,7 +355076,7 @@
     },
     {
       "symbol": "P:oa.w(Z)V#0",
-      "renamedSymbol": "P:NativeSoftwareRenderer.w(Z)V#0",
+      "renamedSymbol": "P:NativeSoftwareRenderer.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -358165,7 +358365,7 @@
     },
     {
       "symbol": "P:p.w(Z)V#0",
-      "renamedSymbol": "P:p.w(Z)V#0",
+      "renamedSymbol": "P:p.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385368,7 +385568,7 @@
     },
     {
       "symbol": "P:vk.a(B)V#0",
-      "renamedSymbol": "P:vk.a(B)V#0",
+      "renamedSymbol": "P:NativeResourceDisposer.drainQueue(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385379,7 +385579,7 @@
     },
     {
       "symbol": "P:vk.a(Le;I)V#0",
-      "renamedSymbol": "P:vk.a(Le;I)V#0",
+      "renamedSymbol": "P:NativeResourceDisposer.disposeOrEnqueue(LNativeResource;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385390,7 +385590,7 @@
     },
     {
       "symbol": "P:vk.a(Le;I)V#1",
-      "renamedSymbol": "P:vk.a(Le;I)V#1",
+      "renamedSymbol": "P:NativeResourceDisposer.disposeOrEnqueue(LNativeResource;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -385401,7 +385601,7 @@
     },
     {
       "symbol": "P:vk.a(Z)V#0",
-      "renamedSymbol": "P:vk.a(Z)V#0",
+      "renamedSymbol": "P:NativeResourceDisposer.releaseRenderer(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -385412,7 +385612,7 @@
     },
     {
       "symbol": "P:vk.b(Z)V#0",
-      "renamedSymbol": "P:vk.b(Z)V#0",
+      "renamedSymbol": "P:NativeResourceDisposer.retainRenderer(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393607,7 +393807,7 @@
     },
     {
       "symbol": "P:xa.w(Z)V#0",
-      "renamedSymbol": "P:xa.w(Z)V#0",
+      "renamedSymbol": "P:xa.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -393662,7 +393862,7 @@
     },
     {
       "symbol": "P:ya.w(Z)V#0",
-      "renamedSymbol": "P:ya.w(Z)V#0",
+      "renamedSymbol": "P:ya.dispose(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -398412,16 +398612,72 @@
     },
     {
       "original": "a.java",
-      "renamed": "a.java",
+      "renamed": "NativeSoftwareRenderContext.java",
       "inputSha256": "82ea6c6bdb9b4638bb1c77a00ee4aa9cad6b16658acdc4a146c10c938c4ec334",
-      "outputSha256": "41a479f770f744ee6742a7790bae0fdb2fd5044b52ea1e0a510b81ed92f7e2df",
+      "outputSha256": "da09b81bfd4978d3d39c5cc3db5373a73db601882d9083059ff98734cfcedf68",
       "edits": [
+        {
+          "start": 50,
+          "end": 51,
+          "symbol": "C:a",
+          "original": "a",
+          "renamed": "NativeSoftwareRenderContext"
+        },
+        {
+          "start": 63,
+          "end": 64,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
         {
           "start": 79,
           "end": 81,
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "NativeSoftwareRenderer"
+        },
+        {
+          "start": 132,
+          "end": 133,
+          "symbol": "M:a.a()V",
+          "original": "a",
+          "renamed": "activateForCurrentThread"
+        },
+        {
+          "start": 183,
+          "end": 184,
+          "symbol": "M:a.b()V",
+          "original": "b",
+          "renamed": "activateContext"
+        },
+        {
+          "start": 284,
+          "end": 286,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 287,
+          "end": 288,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 290,
+          "end": 291,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 328,
+          "end": 329,
+          "symbol": "M:a.<init>(Loa;II)V",
+          "original": "a",
+          "renamed": "NativeSoftwareRenderContext"
         },
         {
           "start": 330,
@@ -398431,11 +398687,67 @@
           "renamed": "NativeSoftwareRenderer"
         },
         {
+          "start": 861,
+          "end": 863,
+          "symbol": "M:a.HA(JLha;II)V",
+          "original": "HA",
+          "renamed": "initializeNative"
+        },
+        {
+          "start": 947,
+          "end": 948,
+          "symbol": "M:a.M(J)V",
+          "original": "M",
+          "renamed": "activateNative"
+        },
+        {
+          "start": 986,
+          "end": 987,
+          "symbol": "M:a.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
+        {
+          "start": 1019,
+          "end": 1020,
+          "symbol": "M:a.E(JZ)V",
+          "original": "E",
+          "renamed": "releaseNative"
+        },
+        {
+          "start": 1088,
+          "end": 1090,
+          "symbol": "M:a.HA(JLha;II)V",
+          "original": "HA",
+          "renamed": "initializeNative"
+        },
+        {
           "start": 1104,
           "end": 1106,
           "symbol": "C:ha",
           "original": "ha",
           "renamed": "GraphicsRenderer"
+        },
+        {
+          "start": 1164,
+          "end": 1165,
+          "symbol": "M:a.b()V",
+          "original": "b",
+          "renamed": "activateContext"
+        },
+        {
+          "start": 1183,
+          "end": 1184,
+          "symbol": "M:a.M(J)V",
+          "original": "M",
+          "renamed": "activateNative"
+        },
+        {
+          "start": 1244,
+          "end": 1245,
+          "symbol": "M:a.E(JZ)V",
+          "original": "E",
+          "renamed": "releaseNative"
         }
       ]
     },
@@ -403301,14 +403613,49 @@
       "original": "ba.java",
       "renamed": "ba.java",
       "inputSha256": "10f6cbfbda45445accfa919a16c2fe8cd267ff67e36a05709583f8c67fedb252",
-      "outputSha256": "58480739f5850e8393ade509e1acf35d19fd4dd7f6570c5cd4c76358dded3d80",
+      "outputSha256": "28722662c86c1bc5d1c2368b8cd033b357e389ad94d3e61e430af7e1d95ca0b7",
       "edits": [
+        {
+          "start": 74,
+          "end": 75,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 133,
+          "end": 134,
+          "symbol": "M:ba.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
         {
           "start": 160,
           "end": 162,
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "NativeSoftwareRenderer"
+        },
+        {
+          "start": 269,
+          "end": 271,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 272,
+          "end": 273,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 275,
+          "end": 276,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         }
       ]
     },
@@ -423768,10 +424115,25 @@
     },
     {
       "original": "e.java",
-      "renamed": "e.java",
+      "renamed": "NativeResource.java",
       "inputSha256": "08d4bdbfb4fb3aacfbd34125fffa20440db6b22db296c5324a547ae0f8c76c47",
-      "outputSha256": "08d4bdbfb4fb3aacfbd34125fffa20440db6b22db296c5324a547ae0f8c76c47",
-      "edits": []
+      "outputSha256": "18675a3bf0601191359ff156f3f4ac43034c0a35c166bb653e71f44b7222676e",
+      "edits": [
+        {
+          "start": 48,
+          "end": 49,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "symbol": "M:e.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        }
+      ]
     },
     {
       "original": "ea.java",
@@ -440018,7 +440380,7 @@
       "original": "h.java",
       "renamed": "h.java",
       "inputSha256": "936eacbb4fd38a9105ad8fe1e2e37b0af57f606596e2fe534aecc6f6d0f9c1a6",
-      "outputSha256": "ef53bfd4d3ddd41bf4f636eda282d7f176ada0bb4d95424ac0e80650622e8040",
+      "outputSha256": "73c626640bc23159e03afa9450298b8b6eeb5ce35fb7ae710771b14cde1a16ea",
       "edits": [
         {
           "start": 60,
@@ -440026,6 +440388,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "RendererBitmapFont"
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         },
         {
           "start": 126,
@@ -440131,6 +440500,34 @@
           "symbol": "F:vd.field_i:I",
           "original": "field_i",
           "renamed": "padTop"
+        },
+        {
+          "start": 994,
+          "end": 996,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 997,
+          "end": 998,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 1000,
+          "end": 1001,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 1062,
+          "end": 1063,
+          "symbol": "M:h.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
         },
         {
           "start": 1115,
@@ -449430,14 +449827,49 @@
       "original": "i.java",
       "renamed": "i.java",
       "inputSha256": "5a821bbbcb8c6c263bde7651b7df9c917a8724852510d18cb1f307c1fe0f408f",
-      "outputSha256": "6d4e456c9cc30324288bcad32803c239f149d2a9a4556e583f3456043ced87f6",
+      "outputSha256": "a58777e9eca92e541fe6e70cb9b6d0b4ead494e889099118b76ba6c9a07581b3",
       "edits": [
+        {
+          "start": 74,
+          "end": 75,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
         {
           "start": 137,
           "end": 139,
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "NativeSoftwareRenderer"
+        },
+        {
+          "start": 179,
+          "end": 180,
+          "symbol": "M:i.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
+        {
+          "start": 288,
+          "end": 290,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 291,
+          "end": 292,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 294,
+          "end": 295,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         },
         {
           "start": 334,
@@ -451148,7 +451580,7 @@
       "original": "j.java",
       "renamed": "NativeSoftwareRenderSprite.java",
       "inputSha256": "977e011144ae79ddfc138a306a7ec0a519fb14267a0f10c05ab4892e2525768f",
-      "outputSha256": "59ad026de6c21a56d9003646e1644ffc11c78b1014b41e6538e28728290d6635",
+      "outputSha256": "239a6fa46c689537cd055eff482743ec7c001f1790fb941a9c859fb4ffcbb482",
       "edits": [
         {
           "start": 50,
@@ -451163,6 +451595,13 @@
           "symbol": "C:pa",
           "original": "pa",
           "renamed": "RenderSprite"
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         },
         {
           "start": 299,
@@ -451298,6 +451737,27 @@
           "renamed": "getFullHeight"
         },
         {
+          "start": 1019,
+          "end": 1021,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 1022,
+          "end": 1023,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 1025,
+          "end": 1026,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
           "start": 1263,
           "end": 1265,
           "symbol": "C:oa",
@@ -451324,6 +451784,13 @@
           "symbol": "M:j.d()I",
           "original": "d",
           "renamed": "getFullWidth"
+        },
+        {
+          "start": 2219,
+          "end": 2220,
+          "symbol": "M:j.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
         },
         {
           "start": 2352,
@@ -451366,8 +451833,44 @@
       "original": "ja.java",
       "renamed": "ja.java",
       "inputSha256": "decb6e2a82d5c758ca630a93f51ac543a8e1d77802a478ca631f68330452759e",
-      "outputSha256": "decb6e2a82d5c758ca630a93f51ac543a8e1d77802a478ca631f68330452759e",
-      "edits": []
+      "outputSha256": "6d179cc05a41420585d796d3b00acc9ec75c86570ae036e10ac36360d918f635",
+      "edits": [
+        {
+          "start": 75,
+          "end": 76,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "symbol": "M:ja.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
+        {
+          "start": 427,
+          "end": 429,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 430,
+          "end": 431,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 433,
+          "end": 434,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        }
+      ]
     },
     {
       "original": "jaclib/memory/Buffer.java",
@@ -477653,7 +478156,7 @@
       "original": "n.java",
       "renamed": "n.java",
       "inputSha256": "f6dd18497d760c2db494c57552fa800354cac2ee6fd6adaf04a4531769a98ae4",
-      "outputSha256": "28e0851848108e98a7a1e1e50c94b82835bc957a44f313bf93e87899006dc5c7",
+      "outputSha256": "bc163ccbe6d80e35b359088ee2c838aed2dc9feede860a1f818ac7e0506cced4",
       "edits": [
         {
           "start": 60,
@@ -477661,6 +478164,13 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "RendererBitmapFont"
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         },
         {
           "start": 126,
@@ -477899,6 +478409,34 @@
           "symbol": "C:oa",
           "original": "oa",
           "renamed": "NativeSoftwareRenderer"
+        },
+        {
+          "start": 1497,
+          "end": 1499,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 1500,
+          "end": 1501,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 1503,
+          "end": 1504,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 1565,
+          "end": 1566,
+          "symbol": "M:n.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
         }
       ]
     },
@@ -490185,7 +490723,7 @@
       "original": "oa.java",
       "renamed": "NativeSoftwareRenderer.java",
       "inputSha256": "c7d4bb6cc3a9f36f8d69d6fe1b67c8597d778331d7b3264bc6174209e07f2e10",
-      "outputSha256": "8034494c302347bf1c9272b3ac3b5a8c351dd6c56e6355469810b525e3d0dceb",
+      "outputSha256": "e2b88de230e52878f6873172e363007e9c99bea2f49edf3b858a50f3e3548736",
       "edits": [
         {
           "start": 50,
@@ -490202,6 +490740,13 @@
           "renamed": "GraphicsRenderer"
         },
         {
+          "start": 75,
+          "end": 76,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
           "start": 169,
           "end": 171,
           "symbol": "C:kp",
@@ -490214,6 +490759,13 @@
           "symbol": "C:ph",
           "original": "ph",
           "renamed": "IntrusiveNodeHashTable"
+        },
+        {
+          "start": 314,
+          "end": 315,
+          "symbol": "C:a",
+          "original": "a",
+          "renamed": "NativeSoftwareRenderContext"
         },
         {
           "start": 498,
@@ -490298,6 +490850,20 @@
           "symbol": "C:ei",
           "original": "ei",
           "renamed": "GzipInflater"
+        },
+        {
+          "start": 1097,
+          "end": 1099,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 1100,
+          "end": 1101,
+          "symbol": "M:vk.b(Z)V",
+          "original": "b",
+          "renamed": "retainRenderer"
         },
         {
           "start": 1159,
@@ -490412,6 +490978,13 @@
           "renamed": "blendMode"
         },
         {
+          "start": 2064,
+          "end": 2065,
+          "symbol": "M:a.a()V",
+          "original": "a",
+          "renamed": "activateForCurrentThread"
+        },
+        {
           "start": 2494,
           "end": 2495,
           "symbol": "M:ph.b(I)V",
@@ -490445,6 +491018,20 @@
           "symbol": "C:da",
           "original": "da",
           "renamed": "RendererBitmapFont"
+        },
+        {
+          "start": 2849,
+          "end": 2851,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 2852,
+          "end": 2853,
+          "symbol": "M:vk.a(Z)V",
+          "original": "a",
+          "renamed": "releaseRenderer"
         },
         {
           "start": 2920,
@@ -490678,6 +491265,20 @@
           "renamed": "put"
         },
         {
+          "start": 6022,
+          "end": 6024,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 6025,
+          "end": 6026,
+          "symbol": "M:vk.a(B)V",
+          "original": "a",
+          "renamed": "drainQueue"
+        },
+        {
           "start": 6101,
           "end": 6102,
           "symbol": "M:kp.d(I)Lwf;",
@@ -490690,6 +491291,13 @@
           "symbol": "M:kp.b(B)Lwf;",
           "original": "b",
           "renamed": "next"
+        },
+        {
+          "start": 6354,
+          "end": 6355,
+          "symbol": "M:oa.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
         },
         {
           "start": 6384,
@@ -490830,6 +491438,20 @@
           "symbol": "P:oa.KA(IIII)V#3",
           "original": "param3",
           "renamed": "bottom"
+        },
+        {
+          "start": 7092,
+          "end": 7093,
+          "symbol": "C:a",
+          "original": "a",
+          "renamed": "NativeSoftwareRenderContext"
+        },
+        {
+          "start": 7202,
+          "end": 7203,
+          "symbol": "C:a",
+          "original": "a",
+          "renamed": "NativeSoftwareRenderContext"
         },
         {
           "start": 7278,
@@ -491301,6 +491923,20 @@
           "renamed": "blendMode"
         },
         {
+          "start": 10326,
+          "end": 10328,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 10329,
+          "end": 10330,
+          "symbol": "M:vk.a(B)V",
+          "original": "a",
+          "renamed": "drainQueue"
+        },
+        {
           "start": 10434,
           "end": 10435,
           "symbol": "C:j",
@@ -491348,6 +491984,27 @@
           "symbol": "P:oa.U(IIIII)V#4",
           "original": "param4",
           "renamed": "blendMode"
+        },
+        {
+          "start": 10937,
+          "end": 10939,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 10940,
+          "end": 10941,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 10943,
+          "end": 10944,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         }
       ]
     },
@@ -494920,7 +495577,7 @@
       "original": "p.java",
       "renamed": "p.java",
       "inputSha256": "0a07138c5ce2fb7b29f16b49989401bf282b3da16c3cccf9a39d5d9f7a03c3de",
-      "outputSha256": "58fda8f11282c49ac8172495b53cd41549f92cf86aabf778de5dd5f1390e514d",
+      "outputSha256": "3387adf55be58ae28b958905cb8d807d299ef4cab21b6fbe1d8ac61391d7c6c2",
       "edits": [
         {
           "start": 60,
@@ -494928,6 +495585,20 @@
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 265,
+          "end": 266,
+          "symbol": "M:p.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
         },
         {
           "start": 318,
@@ -494949,6 +495620,27 @@
           "symbol": "M:kh.a(I)J",
           "original": "a",
           "renamed": "correctedCurrentTimeMillis"
+        },
+        {
+          "start": 1211,
+          "end": 1213,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 1214,
+          "end": 1215,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 1217,
+          "end": 1218,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
         },
         {
           "start": 1441,
@@ -560416,16 +561108,44 @@
     },
     {
       "original": "vk.java",
-      "renamed": "vk.java",
+      "renamed": "NativeResourceDisposer.java",
       "inputSha256": "43ed4d1b83170ad1ced64e176a04670904bbc15f667026def1807994fd19b681",
-      "outputSha256": "2cbaa0ee10bfa218cee641db8edbbdb00e953d670d7363ecef4321d8d29c9b9e",
+      "outputSha256": "5c1ed35ade6893a3f2244ecda1b2a0866e3e43a52dd967d315c67b4895b34d0f",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
         {
           "start": 74,
           "end": 76,
           "symbol": "C:kp",
           "original": "kp",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 190,
+          "end": 191,
+          "symbol": "M:vk.a(B)V",
+          "original": "a",
+          "renamed": "drainQueue"
+        },
+        {
+          "start": 240,
+          "end": 242,
+          "symbol": "C:wn",
+          "original": "wn",
+          "renamed": "NativeResourceDisposalNode"
+        },
+        {
+          "start": 251,
+          "end": 253,
+          "symbol": "C:wn",
+          "original": "wn",
+          "renamed": "NativeResourceDisposalNode"
         },
         {
           "start": 264,
@@ -560435,6 +561155,13 @@
           "renamed": "removeFirst"
         },
         {
+          "start": 412,
+          "end": 413,
+          "symbol": "M:e.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
+        {
           "start": 436,
           "end": 437,
           "symbol": "M:wf.c(I)V",
@@ -560442,11 +561169,74 @@
           "renamed": "unlink"
         },
         {
+          "start": 497,
+          "end": 498,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 499,
+          "end": 500,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 659,
+          "end": 661,
+          "symbol": "C:wn",
+          "original": "wn",
+          "renamed": "NativeResourceDisposalNode"
+        },
+        {
+          "start": 673,
+          "end": 675,
+          "symbol": "C:wn",
+          "original": "wn",
+          "renamed": "NativeResourceDisposalNode"
+        },
+        {
           "start": 730,
           "end": 731,
           "symbol": "M:kp.a(ILwf;)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 777,
+          "end": 778,
+          "symbol": "M:e.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
+        {
+          "start": 839,
+          "end": 840,
+          "symbol": "M:vk.b(Z)V",
+          "original": "b",
+          "renamed": "retainRenderer"
+        },
+        {
+          "start": 982,
+          "end": 983,
+          "symbol": "M:vk.a(Z)V",
+          "original": "a",
+          "renamed": "releaseRenderer"
+        },
+        {
+          "start": 1121,
+          "end": 1123,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 1124,
+          "end": 1125,
+          "symbol": "M:vk.a(B)V",
+          "original": "a",
+          "renamed": "drainQueue"
         },
         {
           "start": 1237,
@@ -571684,16 +572474,37 @@
     },
     {
       "original": "wn.java",
-      "renamed": "wn.java",
+      "renamed": "NativeResourceDisposalNode.java",
       "inputSha256": "5311aba4305a3b7078f5d4e92dec74349f4bc4cfcedda4d93b06e966fc19f0a4",
-      "outputSha256": "043b375c5e69fa4d37dae67616cda3a3670857c90a66507d80d83ec152196467",
+      "outputSha256": "7304ddbfb0c86a75b5441dc5048ccb778c032dfb232d7c56c956751e7af97a04",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:wn",
+          "original": "wn",
+          "renamed": "NativeResourceDisposalNode"
+        },
         {
           "start": 61,
           "end": 63,
           "symbol": "C:wf",
           "original": "wf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 70,
+          "end": 71,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 86,
+          "end": 88,
+          "symbol": "M:wn.<init>()V",
+          "original": "wn",
+          "renamed": "NativeResourceDisposalNode"
         }
       ]
     },
@@ -574116,15 +574927,86 @@
       "original": "xa.java",
       "renamed": "xa.java",
       "inputSha256": "5d0738cacf75dc1ba09f1b324af6cc4b66270daea405dde49815234e9e567695",
-      "outputSha256": "5d0738cacf75dc1ba09f1b324af6cc4b66270daea405dde49815234e9e567695",
-      "edits": []
+      "outputSha256": "c609409f533a5a53d2828bed56e52b36f22ec31a900c19f0af259ac00e45452b",
+      "edits": [
+        {
+          "start": 68,
+          "end": 69,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 187,
+          "end": 189,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 190,
+          "end": 191,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 193,
+          "end": 194,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 250,
+          "end": 251,
+          "symbol": "M:xa.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        }
+      ]
     },
     {
       "original": "ya.java",
       "renamed": "ya.java",
       "inputSha256": "a0bbcbedf6ac4229deef9ef92bca2aba84fc976627f5bb9993c499e294d9a141",
-      "outputSha256": "c9aa47d7a45b200d7ca4acf1ce8f07c73b7bbfe978b2f6143592964e8731a880",
+      "outputSha256": "26327fd05ed98249c6bd972f9ac36e592ab9a9439f9e4f7de8de7826683ba968",
       "edits": [
+        {
+          "start": 75,
+          "end": 76,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
+        {
+          "start": 134,
+          "end": 135,
+          "symbol": "M:ya.w(Z)V",
+          "original": "w",
+          "renamed": "dispose"
+        },
+        {
+          "start": 243,
+          "end": 245,
+          "symbol": "C:vk",
+          "original": "vk",
+          "renamed": "NativeResourceDisposer"
+        },
+        {
+          "start": 246,
+          "end": 247,
+          "symbol": "M:vk.a(Le;I)V",
+          "original": "a",
+          "renamed": "disposeOrEnqueue"
+        },
+        {
+          "start": 249,
+          "end": 250,
+          "symbol": "C:e",
+          "original": "e",
+          "renamed": "NativeResource"
+        },
         {
           "start": 315,
           "end": 317,
@@ -574403,10 +575285,10 @@
       "commit": "b168d7edeb104599156b5f908df62dfdc9f3b250",
       "subdirectory": "games/aceofskies"
     },
-    "rulesSha256": "e04881265d50d4cec970c401be62f87e600ccd77abde75e2ce0f42b812ea0c6b",
+    "rulesSha256": "245546d1a1517634cf2213e6b3df5a8b41a19cb2375071c5c4294b5107067999",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "e83d0f60847dedf785504d5703894944980b327ed81dff2305238ab5f59caf67",
-    "outputTreeSha256": "f994dc30d586aecb22be586653af5da037864048667e9f77f9800eefcdd234c6",
+    "outputTreeSha256": "8b3a2325d0999196c6e735f189e514e3f530e425620b706e8b4e992534a59b1b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

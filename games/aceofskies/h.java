@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends RendererBitmapFont implements e {
+final class h extends RendererBitmapFont implements NativeResource {
     long field_nativeid;
 
     final native void drawGlyph(char glyph, int x, int y, int color, boolean shadowPass);
@@ -25,11 +25,11 @@ final class h extends RendererBitmapFont implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          vk.a((e) (this), 36);
+          NativeResourceDisposer.disposeOrEnqueue((NativeResource) (this), 36);
         }
     }
 
-    public final native void w(boolean param0);
+    public final native void dispose(boolean param0);
 
     private final native void JA(NativeSoftwareRenderer param0, ya param1, byte[][] param2, int[] param3, int[] param4, int[] param5, int[] param6);
 

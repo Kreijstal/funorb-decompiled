@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NativeSoftwareRenderSprite extends RenderSprite implements e {
+final class NativeSoftwareRenderSprite extends RenderSprite implements NativeResource {
     long field_nativeid;
 
     private final native void b(long param0, float param1, float param2, float param3, float param4, float param5, float param6, int param7, int param8, int param9, int param10);
@@ -26,7 +26,7 @@ final class NativeSoftwareRenderSprite extends RenderSprite implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          vk.a((e) (this), -113);
+          NativeResourceDisposer.disposeOrEnqueue((NativeResource) (this), -113);
         }
     }
 
@@ -56,7 +56,7 @@ final class NativeSoftwareRenderSprite extends RenderSprite implements e {
         this.A(this.field_nativeid, param0, param1, param2, param3);
     }
 
-    public final void w(boolean param0) {
+    public final void dispose(boolean param0) {
         this.R(this.field_nativeid, param0);
     }
 

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends ao implements e {
+final class ja extends ao implements NativeResource {
     long field_nativeid;
 
     private final native void la();
 
-    public final void w(boolean param0) {
+    public final void dispose(boolean param0) {
         this.AA(this.field_nativeid, param0);
     }
 
@@ -18,7 +18,7 @@ final class ja extends ao implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          vk.a((e) (this), -115);
+          NativeResourceDisposer.disposeOrEnqueue((NativeResource) (this), -115);
         }
     }
 }

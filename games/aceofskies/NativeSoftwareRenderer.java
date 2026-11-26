@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
+final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeResource {
     private ya field_i;
     private boolean field_j;
     long field_nativeid;
@@ -11,7 +11,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
     private ao field_f;
     private int field_l;
     private IntrusiveNodeHashTable field_h;
-    private a[] field_k;
+    private NativeSoftwareRenderContext[] field_k;
     private int field_n;
     private boolean field_g;
 
@@ -34,7 +34,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
           if (!GzipInflater.a("sw3d", (byte) -16)) {
             throw new RuntimeException("");
           }
-          vk.b(false);
+          NativeResourceDisposer.retainRenderer(false);
           this.MA(this.field_a, 0, 0);
           AccountServiceResult.a(false, 0, true);
           this.field_g = true;
@@ -64,7 +64,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
     }
 
     private final void f(int param0) {
-        this.field_k[param0].a();
+        this.field_k[param0].activateForCurrentThread();
     }
 
     private final native void n(long param0, long param1);
@@ -96,7 +96,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
           this.field_g = false;
         }
         this.g();
-        vk.a(false);
+        NativeResourceDisposer.releaseRenderer(false);
         this.field_j = true;
     }
 
@@ -166,7 +166,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
     }
 
     final void b(int param0) {
-        vk.a((byte) 117);
+        NativeResourceDisposer.drainQueue((byte) 117);
         this.d(param0);
         ya var2 = (ya) (this.field_m.first(268435455));
         while (var2 != null) {
@@ -181,7 +181,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
         return true;
     }
 
-    public final native void w(boolean param0);
+    public final native void dispose(boolean param0);
 
     final RenderSprite createArgbSprite(int[] pixels, int offset, int stride, int width, int height, boolean param5) {
         return (RenderSprite) ((Object) new NativeSoftwareRenderSprite(this, pixels, offset, stride, width, height, false));
@@ -204,9 +204,9 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
 
     private final void g(int param0) {
         this.field_n = param0;
-        this.field_k = new a[this.field_n];
+        this.field_k = new NativeSoftwareRenderContext[this.field_n];
         for (int var2 = 0; var2 < this.field_n; var2++) {
-          this.field_k[var2] = new a(this, this.field_e, this.field_l);
+          this.field_k[var2] = new NativeSoftwareRenderContext(this, this.field_e, this.field_l);
         }
     }
 
@@ -295,7 +295,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
     private final void g() {
         System.gc();
         System.runFinalization();
-        vk.a((byte) -69);
+        NativeResourceDisposer.drainQueue((byte) -69);
     }
 
     final sm a(ra param0, gd param1) {
@@ -315,7 +315,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements e {
     protected final synchronized void finalize() {
         this.a(-9);
         if (this.field_nativeid != 0L) {
-          vk.a((e) (this), -111);
+          NativeResourceDisposer.disposeOrEnqueue((NativeResource) (this), -111);
         }
     }
 

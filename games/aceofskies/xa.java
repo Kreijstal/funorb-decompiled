@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class xa implements gd, e {
+final class xa implements gd, NativeResource {
     long field_nativeid;
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          vk.a((e) (this), -111);
+          NativeResourceDisposer.disposeOrEnqueue((NativeResource) (this), -111);
         }
     }
 
-    public final void w(boolean param0) {
+    public final void dispose(boolean param0) {
         this.va(this.field_nativeid, param0);
     }
 
