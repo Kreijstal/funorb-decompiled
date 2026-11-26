@@ -58,8 +58,8 @@ public final class ShatteredPlansClient extends GameClientShell {
     final void initialise(int param0) {
         this.initialiseShell(param0 + 257, 1, 14, 25, false, 0, 2, 4);
         MusicCrossfadeStream var3 = new MusicCrossfadeStream();
-        var3.field_u.d(128, (byte) -110, 9);
-        var3.field_r.d(128, (byte) -110, 9);
+        var3.field_u.setInitialChannelProgram(128, (byte) -110, 9);
+        var3.field_r.setInitialChannelProgram(128, (byte) -110, 9);
         var3.field_u.setMasterVolume(598, UiSpriteSupport.field_b);
         var3.field_r.setMasterVolume(param0 ^ -599, UiSpriteSupport.field_b);
         DebouncedValidator.initializeAudioPlayback((java.awt.Component) ((Object) NotificationEntry.field_i), ValidatedTextInputWidget.field_W, var3, 1102, false, 22050, 22050, true);
@@ -1475,7 +1475,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                 var11 = 10 + (var5_int - var10 >> 1);
                 var18 = new int[4];
                 SoftwareRasterizer.saveClip(var18);
-                MidiPcmStream.a(var6, var8, var11, (byte) -78, var10);
+                MidiPcmStream.drawDefaultHexagonPanel(var6, var8, var11, (byte) -78, var10);
                 SoftwareRasterizer.setClip(var11, var8, var10 + var11, var8 + var6);
                 var13 = GameSpriteResources.getAchievementIcon(var3_ref_he.field_k, (byte) 66);
                 var13.draw(-36 + (var7_int + var5_int / 2), 4 + var8);

@@ -84,7 +84,7 @@ final class TutorialTextSupport {
                 IconTextPanel.field_Cb.drawString(var13[var10], 0, IconTextPanel.field_Cb.field_J, 16777215, -1);
                 WidgetStyle.field_m[var8][var10] = GameSpriteResources.field_i[var8][var10].copy();
                 WidgetStyle.field_m[var8][var10].bindAsRenderTarget();
-                SoftwareRasterizer.b(1, 1, 0, 0, var3, var2_int);
+                SoftwareRasterizer.blurRectangle(1, 1, 0, 0, var3, var2_int);
               }
             }
           } else {

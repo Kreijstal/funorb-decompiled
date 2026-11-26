@@ -60,7 +60,7 @@ final class GameAssetSetupSupport {
           SettingsCookieSupport.field_a.bindAsRenderTarget();
           SoftwareRasterizer.fillRect(0, 0, var7_int, var8, 16777215);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 0);
-          SoftwareRasterizer.b(3, 3, 0, 0, var7_int, var8);
+          SoftwareRasterizer.blurRectangle(3, 3, 0, 0, var7_int, var8);
           SecondaryNodeHashTable.field_f.drawSilhouette(0, 0, 255);
           OpacityWidget.popLegacyRasterState(param6 + 8);
           HuffmanCodec.field_d = HighscoreResponseSupport.loadSpriteSetByName(101, "", param0, "edge_orbs");
@@ -71,7 +71,7 @@ final class GameAssetSetupSupport {
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
             var20.bindAsRenderTarget();
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 16777215);
-            SoftwareRasterizer.b(8, 8, 0, 0, var20.field_z, var20.field_w);
+            SoftwareRasterizer.blurRectangle(8, 8, 0, 0, var20.field_z, var20.field_w);
             var19.drawSilhouette(16 - var19.field_t, 16 - var19.field_x, 0);
             IsaacRandom.field_b[var9_int] = var20;
           }

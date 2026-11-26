@@ -48,7 +48,7 @@ final class GameMenuController {
           IntroLogoSupport.scaleRectangleBrightness(var8, -50, var10, param1 + 128, var7, var9);
           RasterTargetSupport.field_a = MenuWindow.captureRasterRectangle(RasterTargetSupport.field_a, var9, var8, var7, -1, var10);
           RasterTargetSupport.pushSpriteRenderTarget(RasterTargetSupport.field_a, 107);
-          SoftwareRasterizer.b(3, 3, 0, 0, var8, var10);
+          SoftwareRasterizer.blurRectangle(3, 3, 0, 0, var8, var10);
           RasterTargetSupport.field_a.drawAlpha(var7, var9, 128 - param1 << 1);
           OpacityWidget.popLegacyRasterState(0);
         } else {
@@ -58,7 +58,7 @@ final class GameMenuController {
             SoftwareRasterizer.fillRectAlpha(var7, var9, var8, var10, 855316, -param1 + 128 << 1);
           }
         }
-        MidiPcmStream.a(var10, var9, var7, (byte) -102, var8);
+        MidiPcmStream.drawDefaultHexagonPanel(var10, var9, var7, (byte) -102, var8);
         SoftwareRasterizer.saveClip(GzipInflater.field_f);
         SoftwareRasterizer.setClip(var7, var9, var7 + var8, var9 + var10);
         this.drawItems(var5, 7903);
@@ -546,7 +546,7 @@ final class GameMenuController {
           return;
         }
         if (var2 > 20) {
-          MidiPcmStream.a(var3, var5, var4, (byte) -112, var2);
+          MidiPcmStream.drawDefaultHexagonPanel(var3, var5, var4, (byte) -112, var2);
         }
         if (IntrusiveDequeCursor.field_c == 32) {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
@@ -733,7 +733,7 @@ final class GameMenuController {
         var12 = 20 + var4;
         var13 = var5 - 10;
         var14 = var6 + 10;
-        MidiPcmStream.a(var14, var13, var11, (byte) -73, var12);
+        MidiPcmStream.drawDefaultHexagonPanel(var14, var13, var11, (byte) -73, var12);
         SoftwareRasterizer.saveClip(GzipInflater.field_f);
         var15 = var10 + (var9 - 20);
         var16 = var12 + var11;
@@ -783,7 +783,7 @@ final class GameMenuController {
         var4 = this.getAnimatedLeft(false) - (-this.getAnimatedWidth(32) + var2 >> 1);
         var5 = this.getAnimatedTop(param0 - 71) - var3 - 24;
         if (var2 > 20) {
-          MidiPcmStream.a(var3, var5, var4, (byte) -109, var2);
+          MidiPcmStream.drawDefaultHexagonPanel(var3, var5, var4, (byte) -109, var2);
         }
         regionExit1: {
           SoftwareRasterizer.setClip(var4 + 8, 8 + var5, var2 + (var4 - 8), -8 + (var3 + var5));
@@ -842,7 +842,7 @@ final class GameMenuController {
         int var5 = this.getAnimatedLeft(false) - (var3 - this.getAnimatedWidth(32) >> 1);
         int var6 = -60 + this.getAnimatedTop(-122) - var4 - 48;
         if (var3 > 20) {
-          MidiPcmStream.a(var4, var6, var5, (byte) -124, var3);
+          MidiPcmStream.drawDefaultHexagonPanel(var4, var6, var5, (byte) -124, var3);
         }
         SoftwareRasterizer.setClip(8 + var5, 8 + var6, var5 + var3 - 8, -8 + var6 + var4);
         IconTextPanel.field_Cb.drawCentred(DraggableWidget.field_D, 320, (IconTextPanel.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
@@ -1734,7 +1734,7 @@ final class GameMenuController {
         int var8 = var4 - 10;
         int var9 = var3 + 10;
         int var10 = 127 / ((param0 - 15) / 60);
-        MidiPcmStream.a(var9, var8, var6, (byte) -72, var7);
+        MidiPcmStream.drawDefaultHexagonPanel(var9, var8, var6, (byte) -72, var7);
         this.drawItems(var4, 7903);
     }
 
@@ -2021,7 +2021,7 @@ final class GameMenuController {
         var12 = (640 - var10) / 2;
         var13 = 220;
         if (20 < var10) {
-          MidiPcmStream.a(var11, var13, var12, (byte) -124, var10);
+          MidiPcmStream.drawDefaultHexagonPanel(var11, var13, var12, (byte) -124, var10);
         }
         SoftwareRasterizer.setClip(10 + var12, var13, var12 + var10 - 10, var11 + var13);
         var14 = 98;

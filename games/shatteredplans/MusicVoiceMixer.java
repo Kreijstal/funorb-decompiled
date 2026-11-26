@@ -294,7 +294,7 @@ final class MusicVoiceMixer extends PcmStream {
                 stackIn_10_1 = -2139009338;
                 stackIn_10_2 = (MusicVoice) (param1);
                 stackIn_11_3 = !(param1.field_A.field_k[param1.field_H] >= 0);
-                ((MidiPcmStream) (Object) stackIn_10_0).a(stackIn_10_1, stackIn_10_2, stackIn_11_3);
+                ((MidiPcmStream) (Object) stackIn_10_0).applySampleStartOffset(stackIn_10_1, stackIn_10_2, stackIn_11_3);
               } else {
                 param1.field_K = PcmSampleStream.create(param1.field_M, param1.field_K.getSpeed(), param1.field_K.getVolume(), param1.field_K.getPan());
               }
@@ -367,7 +367,7 @@ final class MusicVoiceMixer extends PcmStream {
                 stackIn_13_1 = param4 ^ -2139009345;
                 stackIn_13_2 = (MusicVoice) (param2);
                 stackIn_14_3 = !(param2.field_A.field_k[param2.field_H] >= 0);
-                ((MidiPcmStream) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_13_2, stackIn_14_3);
+                ((MidiPcmStream) (Object) stackIn_13_0).applySampleStartOffset(stackIn_13_1, stackIn_13_2, stackIn_14_3);
                 param2.field_K.rampVolumeKeepPan(var9, var11.getVolume());
               }
               if (0 > param2.field_A.field_k[param2.field_H]) {

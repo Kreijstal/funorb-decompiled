@@ -87,7 +87,7 @@ final class TaskAi implements PlayerAi {
                     this.field_n[var4] = this.field_n[var4] - var2;
                     GameScreen.field_c[var3.field_n.field_p] = GameScreen.field_c[var3.field_n.field_p] + var2;
                   } else {
-                    this.a(var4, 71, var6);
+                    this.consolidateTerritoryFleets(var4, 71, var6);
                   }
                 } else {
                   if (this.field_m.field_o.field_i) {
@@ -123,7 +123,7 @@ final class TaskAi implements PlayerAi {
                     this.field_n[var4] = this.field_n[var4] - var2;
                     GameScreen.field_c[var3.field_n.field_p] = GameScreen.field_c[var3.field_n.field_p] + var2;
                   } else {
-                    this.a(var4, 71, var6);
+                    this.consolidateTerritoryFleets(var4, 71, var6);
                   }
                 } else {
                   if (this.field_m.field_o.field_i) {
@@ -137,13 +137,13 @@ final class TaskAi implements PlayerAi {
                   ChatCompositionSupport.field_a.addLast((byte) -113, new PlacementOrder(var3.field_n, var2));
                 }
               } else {
-                this.a(var4, 100, var6);
+                this.consolidateTerritoryFleets(var4, 100, var6);
               }
             } else {
               TabbedPanel.field_Ab[var3.field_n.field_p] = var3.field_n.field_x - var3.field_i;
               this.field_n[var4] = this.field_n[var4] - (-var3.field_n.field_N + var3.field_i);
               if (this.field_n[var4] < 0) {
-                this.a(var4, -52, var6);
+                this.consolidateTerritoryFleets(var4, -52, var6);
               }
             }
           }
@@ -151,7 +151,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final void j(int param0) {
+    private final void initializeFleetBudgets(int param0) {
         int var6 = 0;
         int var2;
         Object var3;
@@ -226,7 +226,7 @@ final class TaskAi implements PlayerAi {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 7270) {
           var10 = (Territory) null;
-          this.a((Territory) null, -28, (byte) 100);
+          this.distributeBorderDefenders((Territory) null, -28, (byte) 100);
         }
         var3_ref_wf__ = this.field_e;
         for (var4_int = 0; var3_ref_wf__.length > var4_int; var4_int++) {
@@ -325,15 +325,15 @@ final class TaskAi implements PlayerAi {
           GameScreen.field_c[var2] = 0;
           CheckboxWidgetPainter.field_c[var2] = 0;
         }
-        this.j(114);
+        this.initializeFleetBudgets(114);
         this.markThreatenedStars(15401);
-        this.d(114);
+        this.computeResourceWeights(114);
         this.buildGarrisonTasks(100);
         this.buildDefendTasks(0);
         this.buildAttackTasks(-30426);
         this.scoreTasks(115);
         this.allocateGarrisons((byte) 46);
-        this.g((byte) -70);
+        this.commitGarrisonMoves((byte) -70);
         this.executeTasks(true, 0);
         var2Lifetime1 = 0;
         for (var4 = 0; var4 < this.field_n.length; var4++) {
@@ -378,7 +378,7 @@ final class TaskAi implements PlayerAi {
               var8 = (DefendTask) (this.field_u.nextForward((byte) -71));
             }
             if (var7 <= 0) {
-              this.a(var6_ref_sd, var5, (byte) -122);
+              this.distributeBorderDefenders(var6_ref_sd, var5, (byte) -122);
             } else {
               var4Lifetime1Lifetime1 = 0;
             }
@@ -713,7 +713,7 @@ final class TaskAi implements PlayerAi {
           if (!this.field_w.field_h[param0.field_x] &&
             0 > var3_int) {
             this.field_c.submitAllianceOffer((byte) -63, this.field_w, param0);
-            this.b(true);
+            this.evaluateAllianceCandidates(true);
             return;
           }
           return;
@@ -780,7 +780,7 @@ final class TaskAi implements PlayerAi {
         return;
     }
 
-    private final void d(int param0) {
+    private final void computeResourceWeights(int param0) {
         int var2 = 0;
         Territory var2_ref_sd;
         int var3;
@@ -822,7 +822,7 @@ final class TaskAi implements PlayerAi {
         field_o = null;
     }
 
-    final static void a(boolean param0, int param1, boolean param2, int param3) {
+    final static void tickLobbySidePanels(boolean param0, int param1, boolean param2, int param3) {
         AnimatedPanel stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         AnimatedPanel stackIn_18_0 = null;
@@ -1044,7 +1044,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final int a(boolean param0, Star[] param1, Star param2, int param3, int param4) {
+    private final int commitAttackFleets(boolean param0, Star[] param1, Star param2, int param3, int param4) {
         int var13 = 0;
         int dupTemp$0 = 0;
         Player stackIn_4_0 = null;
@@ -1290,7 +1290,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final int a(int param0, Player param1, int param2) {
+    private final int classifyAllianceCandidate(int param0, Player param1, int param2) {
         int var10_int = 0;
         int var14 = 0;
         int stackIn_5_0 = 0;
@@ -1440,7 +1440,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final void a(int param0, int param1, Territory param2) {
+    private final void consolidateTerritoryFleets(int param0, int param1, Territory param2) {
         int var9 = 0;
         Object stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -1595,7 +1595,7 @@ final class TaskAi implements PlayerAi {
         } else {
           this.field_g = var4[0].field_x;
         }
-        this.b(true);
+        this.evaluateAllianceCandidates(true);
         if (-1 != this.field_r) {
           var5 = this.field_m.field_v[this.field_r];
           if (this.field_f[this.field_r] <= 0) {
@@ -1673,7 +1673,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final int[] b(Player param0, int param1) {
+    private final int[] computePlayerDistances(Player param0, int param1) {
         int var11 = 0;
         int stackIn_8_0 = 0;
         int[] stackIn_10_0 = null;
@@ -1941,7 +1941,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final void a(Territory param0, int param1, byte param2) {
+    private final void distributeBorderDefenders(Territory param0, int param1, byte param2) {
         int stackIn_32_0 = 0;
         int stackIn_40_0 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -2051,7 +2051,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final void b(boolean param0) {
+    private final void evaluateAllianceCandidates(boolean param0) {
         int var2 = 0;
         int var3;
         int var4;
@@ -2072,7 +2072,7 @@ final class TaskAi implements PlayerAi {
         }
         SettingsCookieSupport.field_e = new boolean[this.field_m.field_g.field_e.length];
         for (var2 = 0; var2 < ClientRuntimeState.field_g.length; var2++) {
-          ClientRuntimeState.field_g[var2] = this.b(this.field_m.field_v[var2], -97);
+          ClientRuntimeState.field_g[var2] = this.computePlayerDistances(this.field_m.field_v[var2], -97);
         }
         var9 = ClientRuntimeState.field_g[this.field_w.field_x];
         var3 = 0;
@@ -2102,7 +2102,7 @@ final class TaskAi implements PlayerAi {
           }
         }
         for (var4Lifetime1 = 0; this.field_m.field_r > var4Lifetime1; var4Lifetime1++) {
-          this.field_q[var4Lifetime1] = this.a(var3, this.field_m.field_v[var4Lifetime1], 3);
+          this.field_q[var4Lifetime1] = this.classifyAllianceCandidate(var3, this.field_m.field_v[var4Lifetime1], 3);
         }
         for (var4Lifetime2 = 0; var4Lifetime2 < this.field_m.field_r; var4Lifetime2++) {
           var5Lifetime1 = this.field_m.field_m[var4Lifetime2];
@@ -2112,7 +2112,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    final static Sprite[] a(int param0, byte param1) {
+    final static Sprite[] createSolidCenterSpriteGrid(int param0, byte param1) {
         Sprite[] var3 = new Sprite[9];
         Sprite[] var2 = var3;
         if (param1 != -16) {
@@ -2160,7 +2160,7 @@ final class TaskAi implements PlayerAi {
         }
     }
 
-    private final void g(byte param0) {
+    private final void commitGarrisonMoves(byte param0) {
         int var2;
         GarrisonTask var3;
         int var4;
@@ -2742,9 +2742,9 @@ final class TaskAi implements PlayerAi {
                 }
               }
             }
-            var11Lifetime2Lifetime1 = this.a(true, var29, param1.field_n, 102, var10Lifetime2);
+            var11Lifetime2Lifetime1 = this.commitAttackFleets(true, var29, param1.field_n, 102, var10Lifetime2);
             if (var10Lifetime2 > var11Lifetime2Lifetime1) {
-              var11Lifetime2Lifetime1 = var11Lifetime2Lifetime1 + this.a(false, var12, param1.field_n, 84, -var11Lifetime2Lifetime1 + var10Lifetime2);
+              var11Lifetime2Lifetime1 = var11Lifetime2Lifetime1 + this.commitAttackFleets(false, var12, param1.field_n, 84, -var11Lifetime2Lifetime1 + var10Lifetime2);
             }
             var10Lifetime2 = var10Lifetime2 - var11Lifetime2Lifetime1;
             if (var10Lifetime2 > 0) {

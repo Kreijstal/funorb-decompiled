@@ -28,7 +28,7 @@ final class SoftwareRasterizer {
         if (field_f > param3) {
           field_f = param3;
         }
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearClipAuxiliaryArrays();
     }
 
     final static void desaturateRect(int param0, int param1, int param2, int param3) {
@@ -76,9 +76,9 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
-        SoftwareRasterizer.a(field_h, 0, param2 + param3 * field_b, param0, param2, param4, field_b - param4, param5);
-        SoftwareRasterizer.a(field_h, 0, param2 + param3 * field_b, param1, param3, param5, field_b - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer.blurHorizontal(field_h, 0, param2 + param3 * field_b, param0, param2, param4, field_b - param4, param5);
+        SoftwareRasterizer.blurVertical(field_h, 0, param2 + param3 * field_b, param1, param3, param5, field_b - param4, param2, param4);
     }
 
     final static void addVerticalLine(int param0, int param1, int param2, int param3) {
@@ -842,7 +842,7 @@ final class SoftwareRasterizer {
         return;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurVertical(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -1589,7 +1589,7 @@ final class SoftwareRasterizer {
         field_a = 0;
         field_l = field_b;
         field_f = field_k;
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearClipAuxiliaryArrays();
     }
 
     final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
@@ -1676,7 +1676,7 @@ final class SoftwareRasterizer {
         field_a = param0[1];
         field_l = param0[2];
         field_f = param0[3];
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearClipAuxiliaryArrays();
     }
 
     final static void saveClip(int[] param0) {
@@ -1878,7 +1878,7 @@ final class SoftwareRasterizer {
         return;
     }
 
-    private final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int[] param11, int param12, int param13, int param14) {
+    private final static boolean addRadialGradientSpan(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int[] param9, int param10, int[] param11, int param12, int param13, int param14) {
         param3 = param14;
         param4 = param13;
         while (param8 < 0) {
@@ -2204,10 +2204,10 @@ final class SoftwareRasterizer {
         field_a = param1;
         field_l = param2;
         field_f = param3;
-        SoftwareRasterizer.d();
+        SoftwareRasterizer.clearClipAuxiliaryArrays();
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurHorizontal(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -2368,7 +2368,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    private final static void d() {
+    private final static void clearClipAuxiliaryArrays() {
         field_c = null;
         field_d = null;
     }
@@ -2563,7 +2563,7 @@ final class SoftwareRasterizer {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void fillAdditiveRadialGradientCircle(int param0, int param1, int param2, int param3, int[] param4) {
         int var16 = 0;
         int var5;
         int var6;
@@ -2658,8 +2658,8 @@ final class SoftwareRasterizer {
           var28 = (var18 - 2 << 4) - param0;
           var28 = var28 * var28;
           var29 = var28 - var27;
-          if (SoftwareRasterizer.a(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_h, param3, param4, 1, var24, var8 + var21Lifetime2)) {
-            SoftwareRasterizer.a(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_h, param3, param4, -1, var29, var8 + var27);
+          if (SoftwareRasterizer.addRadialGradientSpan(0, 0, 0, 0, 0, var26, var5, var14 + var17, var17 - var18, field_h, param3, param4, 1, var24, var8 + var21Lifetime2)) {
+            SoftwareRasterizer.addRadialGradientSpan(0, 0, 0, 0, 0, var26, var5, var14 + var18 - 1, var17 - var18, field_h, param3, param4, -1, var29, var8 + var27);
           }
           var14 = var14 + var15;
           var8 = var8 + var11;

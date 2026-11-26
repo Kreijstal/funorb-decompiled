@@ -714,7 +714,7 @@ class AnimatedPanel extends PanelNode {
           var15_int = 87 / ((40 - param12) / 61);
           var17 = (IndexedSprite[]) null;
           var16 = (int[]) null;
-          MidiPcmStream.a((IndexedSprite[]) null, param5, param10, (int[]) null, param11, param4, param9, param7, param1, param3, param8, param2, param13, param6, 16384, param0, param14);
+          MidiPcmStream.initializeLobbyUi((IndexedSprite[]) null, param5, param10, (int[]) null, param11, param4, param9, param7, param1, param3, param8, param2, param13, param6, 16384, param0, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -124,18 +124,18 @@ abstract class ArchiveRequest extends DualLinkNode {
           AccountBooleanRequest.field_h = new Sprite(256, 256);
           AccountBooleanRequest.field_h.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawScaled(0, 0, 256, 256);
-          SoftwareRasterizer.b(3, 3, 0, 0, 256, 256);
+          SoftwareRasterizer.blurRectangle(3, 3, 0, 0, 256, 256);
           FourIntSubmissionRequest.field_o = new Sprite(32, 32);
           FourIntSubmissionRequest.field_o.bindAsRenderTarget();
           DerelictMapGenerator.field_n.drawQuarterSize(0, 0);
           DiplomacyNotice.field_k = new Sprite(256, 256);
           DiplomacyNotice.field_k.bindAsRenderTarget();
           DerelictMapGenerator.field_n.draw(64, 64);
-          SoftwareRasterizer.b(12, 12, 0, 0, 256, 256);
+          SoftwareRasterizer.blurRectangle(12, 12, 0, 0, 256, 256);
           MouseInputHandler.field_b = new Sprite(64, 64);
           MouseInputHandler.field_b.bindAsRenderTarget();
           FourIntSubmissionRequest.field_o.draw(16, 16);
-          SoftwareRasterizer.b(3, 3, 0, 0, 64, 64);
+          SoftwareRasterizer.blurRectangle(3, 3, 0, 0, 64, 64);
           OpacityWidget.popLegacyRasterState(0);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "jc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

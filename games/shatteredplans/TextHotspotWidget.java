@@ -407,7 +407,7 @@ class TextHotspotWidget extends FocusableWidget {
         param0 += 30;
         if (param1 == -1) {
           param2 += 30;
-          MidiPcmStream.a(param2, -param2 + 480 >> 1, -param0 + 640 >> 1, (byte) -70, param0);
+          MidiPcmStream.drawDefaultHexagonPanel(param2, -param2 + 480 >> 1, -param0 + 640 >> 1, (byte) -70, param0);
           return;
         }
     }

@@ -208,7 +208,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
         }
         EmailValidator.animateLobbyPanelTransitions(true, param5);
         if (PlacementOrder.field_t > param9) {
-          TaskAi.a(param0, param9 ^ -26671, param5, param2);
+          TaskAi.tickLobbySidePanels(param0, param9 ^ -26671, param5, param2);
         }
         DualLinkDequeSequence.field_f.field_y = 1;
         DualLinkDequeSequence.field_f.field_kb = AccountConnectionPhase.field_b.field_kb;
@@ -228,7 +228,7 @@ final class LobbyRoomEntry extends AnimatedPanel {
           GalaxyMapLayoutSupport.field_a.field_zb.field_z = null;
           ObjectList.updateLobbyPlayerList(param4, 0, GalaxyMapLayoutSupport.field_a, param1, param2);
         }
-        MidiPcmStream.a(param1, (byte) 116, param3, param6, param2, param4, param8);
+        MidiPcmStream.updateLobbyRoomList(param1, (byte) 116, param3, param6, param2, param4, param8);
         ObjectList.updateLobbyPlayerList(param4, 0, EmailValidationError.field_a, param1, param2);
         Star.field_w = Star.field_w + 1;
     }

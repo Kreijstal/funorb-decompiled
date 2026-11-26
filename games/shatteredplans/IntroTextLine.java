@@ -118,7 +118,7 @@ final class IntroTextLine extends IntrusiveNode {
           }
           this.field_o.bindAsRenderTarget();
           this.field_i.drawOpaque(3, 3);
-          SoftwareRasterizer.b(1, 1, 0, 0, 6 + var4_int, var5 + 6);
+          SoftwareRasterizer.blurRectangle(1, 1, 0, 0, 6 + var4_int, var5 + 6);
           for (var7 = (var4_int + 6) * (6 + var5) - 1; var7 >= 0; var7--) {
             if (0 == (128 & SoftwareRasterizer.field_h[var7])) {
               SoftwareRasterizer.field_h[var7] = SoftwareRasterizer.field_h[var7] << 1;

@@ -44,7 +44,7 @@ final class DiskCacheWorker implements Runnable {
           var2 = (int)(20.0 * Math.log((double)(63.0f / (float)var1_int)) / Math.log(2.0));
           SoftwareRasterizer.fillCircle(320, 527, var2 + 400, (var1_int << 2) * 65793);
         }
-        SoftwareRasterizer.b(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
+        SoftwareRasterizer.blurRectangle(4, 4, 0, 0, SoftwareRasterizer.field_b, SoftwareRasterizer.field_k);
         DefensiveAi.field_r = new Sprite(640, 624 - DefendTask.field_s.field_x);
         DefensiveAi.field_r.bindAsRenderTarget();
         for (var1_int = 254; var1_int >= 1; var1_int--) {
@@ -80,9 +80,9 @@ final class DiskCacheWorker implements Runnable {
           return;
         }
         try {
-          SoftwareRasterizer.b(60, 60, 0, 0, IntNode.field_h.field_z, IntNode.field_h.field_w);
+          SoftwareRasterizer.blurRectangle(60, 60, 0, 0, IntNode.field_h.field_z, IntNode.field_h.field_w);
           KeyboardStateSupport.field_f.bindAsRenderTarget();
-          SoftwareRasterizer.b(60, 60, 0, 0, KeyboardStateSupport.field_f.field_z, KeyboardStateSupport.field_f.field_w);
+          SoftwareRasterizer.blurRectangle(60, 60, 0, 0, KeyboardStateSupport.field_f.field_z, KeyboardStateSupport.field_f.field_w);
           AccountBooleanRequest.field_j = GraphicsSettings.field_e.copy();
           AccountBooleanRequest.field_j.rotate180();
           for (var3 = 0; var3 < AccountBooleanRequest.field_j.field_B.length; var3++) {
@@ -105,7 +105,7 @@ final class DiskCacheWorker implements Runnable {
           CheckboxPainter.field_b = new Sprite(var1_int, var2);
           CheckboxPainter.field_b.bindAsRenderTarget();
           MusicVoice.field_n.drawSilhouette(0, 120, 4259648);
-          SoftwareRasterizer.b(120, 120, 0, 0, var1_int, var2);
+          SoftwareRasterizer.blurRectangle(120, 120, 0, 0, var1_int, var2);
           OpacityWidget.popLegacyRasterState(0);
           MapGenerationException.field_a = true;
         } catch (RuntimeException runtimeException) {

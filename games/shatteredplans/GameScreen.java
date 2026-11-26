@@ -965,7 +965,7 @@ final class GameScreen {
             IntroLogoSupport.scaleRectangleBrightness(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
             var8 = MenuWindow.captureRasterRectangle((Sprite) null, var6, var4, var5, -1, var7);
             RasterTargetSupport.pushSpriteRenderTarget(var8, 93);
-            SoftwareRasterizer.b(3, 3, 0, 0, var4, var7);
+            SoftwareRasterizer.blurRectangle(3, 3, 0, 0, var4, var7);
             OpacityWidget.popLegacyRasterState(0);
             var8.drawAlpha(var5, var6, (var3_int << 7) / 32);
             decompiledFrameRemainder1 = (var40 != 0);
@@ -990,7 +990,7 @@ final class GameScreen {
               IntroLogoSupport.scaleRectangleBrightness(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
             }
           }
-          MidiPcmStream.a(var7, var6, var5, (byte) -60, var4);
+          MidiPcmStream.drawDefaultHexagonPanel(var7, var6, var5, (byte) -60, var4);
           var8_array = new int[4];
           SoftwareRasterizer.saveClip(var8_array);
           SoftwareRasterizer.setClip(var5, var6, var5 + var4, var6 + var7);
@@ -1382,7 +1382,7 @@ final class GameScreen {
           if (param3 < 43) {
             this.refreshChatPanel(-128);
           }
-          MidiPcmStream.a(var9, param1, param2, (byte) -63, 190);
+          MidiPcmStream.drawDefaultHexagonPanel(var9, param1, param2, (byte) -63, 190);
           IconTextPanel.field_Cb.drawString(QuickChatCategoryRegistry.field_g[param4], 10 + param2, param1 + IconTextPanel.field_Cb.field_J, 16777215, -1);
           var10 = 210;
           var11 = var10 / (6 + var6_int);
@@ -3922,7 +3922,7 @@ final class GameScreen {
                   this.field_eb.bindAsRenderTarget();
                   SoftwareRasterizer.clear();
                   IconTextPanel.field_Cb.drawRightAligned(this.field_o, this.field_T.field_z, IconTextPanel.field_Cb.field_J, 16777215, -1);
-                  SoftwareRasterizer.b(1, 1, 0, 0, this.field_eb.field_z, this.field_eb.field_w);
+                  SoftwareRasterizer.blurRectangle(1, 1, 0, 0, this.field_eb.field_z, this.field_eb.field_w);
                   OpacityWidget.popLegacyRasterState(0);
                 }
               }
@@ -3974,7 +3974,7 @@ final class GameScreen {
               MatchingTextValidator.field_r.addOutline(var5Lifetime1);
               MatchingTextValidator.field_r.addOutline(var5Lifetime1);
               MatchingTextValidator.field_r.bindAsRenderTarget();
-              SoftwareRasterizer.b(5, 5, 0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w);
+              SoftwareRasterizer.blurRectangle(5, 5, 0, 0, MatchingTextValidator.field_r.field_z, MatchingTextValidator.field_r.field_w);
             }
             GradientMenuLabel.field_w.bindAsRenderTarget();
             SoftwareRasterizer.fillRect(0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w, 0);
@@ -3984,7 +3984,7 @@ final class GameScreen {
               GradientMenuLabel.field_w.addOutline(var5Lifetime1Lifetime1);
               GradientMenuLabel.field_w.addOutline(var5Lifetime1Lifetime1);
               GradientMenuLabel.field_w.bindAsRenderTarget();
-              SoftwareRasterizer.b(2, 2, 0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w);
+              SoftwareRasterizer.blurRectangle(2, 2, 0, 0, GradientMenuLabel.field_w.field_z, GradientMenuLabel.field_w.field_w);
               var6Lifetime1 = 0;
               while (!(var6Lifetime1 >= GradientMenuLabel.field_w.field_B.length)) {
                 GradientMenuLabel.field_w.field_B[var6Lifetime1] = 16777215 + KeyboardStateSupport.intAnd(GradientMenuLabel.field_w.field_B[var6Lifetime1] << 8, -16777216);

@@ -321,9 +321,9 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             } else {
               var16Lifetime1 = QuickChatPhraseRegistry.interpolateSmoothStep(256, 50, -950 + FleetTrailPoint.field_m, 0, 0);
             }
-            SoftwareRasterizer.a(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
-            SoftwareRasterizer.a(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);
-            SoftwareRasterizer.a(var22Lifetime1 + 256, var23Lifetime1 - 32, var16Lifetime1 >> 2, 12, MenuButton.field_v);
+            SoftwareRasterizer.fillAdditiveRadialGradientCircle(var22Lifetime1, var23Lifetime1, var16Lifetime1, 12, MenuButton.field_v);
+            SoftwareRasterizer.fillAdditiveRadialGradientCircle(var22Lifetime1 + 128, var23Lifetime1 - 16, var16Lifetime1 >> 1, 12, MenuButton.field_v);
+            SoftwareRasterizer.fillAdditiveRadialGradientCircle(var22Lifetime1 + 256, var23Lifetime1 - 32, var16Lifetime1 >> 2, 12, MenuButton.field_v);
           }
           var25Lifetime2 = -var22Lifetime1 + var18;
           if (var25Lifetime2 > 0) {

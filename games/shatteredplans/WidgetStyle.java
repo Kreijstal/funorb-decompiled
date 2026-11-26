@@ -80,8 +80,8 @@ final class WidgetStyle {
           var6.field_r = 0;
           var7 = new StatefulWidgetTheme(var4, true);
           var7.field_r = 0;
-          var7.setAllStateSprites((byte) 8, TaskAi.a(8947848, (byte) -16));
-          var7.newStateStyle(82, 1).setSprites(TaskAi.a(11184810, (byte) -16), -93).setTextColor((byte) 71, 2236962);
+          var7.setAllStateSprites((byte) 8, TaskAi.createSolidCenterSpriteGrid(8947848, (byte) -16));
+          var7.newStateStyle(82, 1).setSprites(TaskAi.createSolidCenterSpriteGrid(11184810, (byte) -16), -93).setTextColor((byte) 71, 2236962);
           this.field_a = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new DialPainter(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new SliderPainter(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);

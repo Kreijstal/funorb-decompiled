@@ -86,7 +86,7 @@ final class SpriteResourceSupport {
           }
           var4_int = param1.getGroupIdByName(125, param2);
           var5 = param1.getFileIdByName(var4_int, (byte) 106, param3);
-          stackIn_3_0 = MidiPcmStream.a(param1, var5, var4_int, -20487);
+          stackIn_3_0 = MidiPcmStream.loadSprite(param1, var5, var4_int, -20487);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

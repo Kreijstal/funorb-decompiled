@@ -29,7 +29,7 @@ abstract class SpriteState extends DualLinkNode {
           return;
         }
         try {
-          ValidationState.field_b.field_u.f(256);
+          ValidationState.field_b.field_u.releasePatchSampleIds(256);
           LobbyPlayerEntry.field_Sb = null;
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ii.WB(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

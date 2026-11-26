@@ -61,7 +61,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_u[param2] = (int)(0.5 + 2097152.0 * Math.pow(2.0, 0.00054931640625 * (double)param1));
     }
 
-    final static Sprite a(Archive param0, int param1, int param2, int param3) {
+    final static Sprite loadSprite(Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -140,7 +140,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void releasePatchSampleIds(int param0) {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 != 256) {
           this.field_r = (int[]) null;
@@ -207,7 +207,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void c(int param0, byte param1, int param2) {
+    private final void initializeChannelProgram(int param0, byte param1, int param2) {
         this.field_m[param2] = param0;
         this.field_P[param2] = KeyboardStateSupport.intAnd(-128, param0);
         int var4 = 120 % ((51 - param1) / 40);
@@ -346,7 +346,7 @@ final class MidiPcmStream extends PcmStream {
 
     }
 
-    final static void a(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final static void updateLobbyRoomList(boolean param0, byte param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var18_int = 0;
         int var22_int = 0;
         AnimatedPanel dupTemp$0 = null;
@@ -458,7 +458,7 @@ final class MidiPcmStream extends PcmStream {
           var7_int = ((ScrollPane) (Object) stackIn_3_0).updateScrollLayout(stackIn_3_1, stackIn_3_2, stackIn_4_3, -109, param0, 2) ? 1 : 0;
           var8 = SingleChildWidget.field_y.field_xb.field_M;
           if (param1 <= 109) {
-            MidiPcmStream.a((IndexedSprite[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
+            MidiPcmStream.initializeLobbyUi((IndexedSprite[]) null, -36, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, 119, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, -57, (int[]) null, (Sprite[][]) null);
           }
           var9 = ClientClockSupport.currentTimeMillis(14274);
           var11 = null;
@@ -904,7 +904,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(IndexedSprite[] param0, int param1, Archive param2, int[] param3, Sprite[][] param4, String[] param5, int param6, Archive param7, byte[] param8, String[][] param9, Archive param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
+    final static void initializeLobbyUi(IndexedSprite[] param0, int param1, Archive param2, int[] param3, Sprite[][] param4, String[] param5, int param6, Archive param7, byte[] param8, String[][] param9, Archive param10, byte[] param11, boolean param12, String[][] param13, int param14, int[] param15, Sprite[][] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -1034,7 +1034,7 @@ final class MidiPcmStream extends PcmStream {
           this.isPlaying(18);
         }
         this.field_z = null;
-        this.a(-1, param1);
+        this.resetPlaybackChannels(-1, param1);
     }
 
     private final void removeChannelVoices(int param0, byte param1) {
@@ -1062,14 +1062,14 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void releaseUnmappedVoices(boolean param0, int param1) {
         MusicVoice var3;
         int var4;
         MusicVoice var5;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (!param0) {
           var5 = (MusicVoice) null;
-          this.a(72, (MusicVoice) null, true);
+          this.applySampleStartOffset(72, (MusicVoice) null, true);
         }
         if ((2 & this.field_F[param1]) != 0) {
           var3 = (MusicVoice) (this.field_l.field_n.startForward(0));
@@ -1088,10 +1088,10 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, int param4) {
+    final static void drawDefaultHexagonPanel(int param0, int param1, int param2, byte param3, int param4) {
         ProjectsWindowSupport.drawPlainHexagonPanel(3974311, param4, true, param2, param0, param1);
         if (param3 > -57) {
-          MidiPcmStream.a((IndexedSprite[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
+          MidiPcmStream.initializeLobbyUi((IndexedSprite[]) null, 95, (Archive) null, (int[]) null, (Sprite[][]) null, (String[]) null, -102, (Archive) null, (byte[]) null, (String[][]) null, (Archive) null, (byte[]) null, false, (String[][]) null, 52, (int[]) null, (Sprite[][]) null);
         }
     }
 
@@ -1172,8 +1172,8 @@ final class MidiPcmStream extends PcmStream {
           this.field_T[param1] = 8192;
           this.field_p[param1] = 0;
           this.field_J[param1] = 8192;
-          this.a(true, param1);
-          this.d(0, param1);
+          this.releaseUnmappedVoices(true, param1);
+          this.resetChannelVoicePhases(0, param1);
           this.field_F[param1] = 0;
           this.field_q[param1] = 32767;
           this.field_r[param1] = 256;
@@ -1182,7 +1182,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void resetPlaybackChannels(int param0, boolean param1) {
         int var3 = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3Lifetime1;
@@ -1313,7 +1313,7 @@ final class MidiPcmStream extends PcmStream {
           if (var4 != 255) {
             return;
           }
-          this.a(-1, true);
+          this.resetPlaybackChannels(-1, true);
           return;
         }
         var5Lifetime4 = 15 & param0;
@@ -1364,7 +1364,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (var6Lifetime4 == 65) {
           if (var7Lifetime3 < 64) {
-            this.a(true, var5Lifetime4);
+            this.releaseUnmappedVoices(true, var5Lifetime4);
             this.field_F[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_F[var5Lifetime4], -3);
           } else {
             this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 2);
@@ -1411,7 +1411,7 @@ final class MidiPcmStream extends PcmStream {
         }
         if (81 == var6Lifetime4) {
           if (var7Lifetime3 < 64) {
-            this.d(0, var5Lifetime4);
+            this.resetChannelVoicePhases(0, var5Lifetime4);
             this.field_F[var5Lifetime4] = KeyboardStateSupport.intAnd(this.field_F[var5Lifetime4], -5);
           } else {
             this.field_F[var5Lifetime4] = PrivateChatMessage.intOr(this.field_F[var5Lifetime4], 4);
@@ -1494,7 +1494,7 @@ final class MidiPcmStream extends PcmStream {
         return null;
     }
 
-    private final void d(int param0, int param1) {
+    private final void resetChannelVoicePhases(int param0, int param1) {
         MusicVoice var3 = null;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if ((4 & this.field_F[param1]) != param0) {
@@ -1577,7 +1577,7 @@ final class MidiPcmStream extends PcmStream {
             stackIn_18_0 = this;
             stackIn_18_3 = true;
           }
-          this.a(stackIn_17_1, stackIn_17_2, stackIn_18_3);
+          this.applySampleStartOffset(stackIn_17_1, stackIn_17_2, stackIn_18_3);
         } else {
           var7.field_K = PcmSampleStream.create(var6, this.computePitch(var7, (byte) -6), this.computeVolume(var7, -1481279096), this.computePan(var7, (byte) 124));
         }
@@ -1846,7 +1846,7 @@ final class MidiPcmStream extends PcmStream {
                 var3 != 0) {
                 this.field_x.reset(var4);
               } else {
-                this.a(-1, true);
+                this.resetPlaybackChannels(-1, true);
                 this.field_x.release();
                 return;
               }
@@ -1859,7 +1859,7 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final void a(int param0, MusicVoice param1, boolean param2) {
+    final void applySampleStartOffset(int param0, MusicVoice param1, boolean param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -1977,8 +1977,8 @@ final class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized void d(int param0, byte param1, int param2) {
-        this.c(param0, (byte) 113, param2);
+    final synchronized void setInitialChannelProgram(int param0, byte param1, int param2) {
+        this.initializeChannelProgram(param0, (byte) 113, param2);
         if (param1 != -110) {
           this.firstChild();
         }
@@ -2016,7 +2016,7 @@ final class MidiPcmStream extends PcmStream {
         this.field_l = new MusicVoiceMixer(this);
         this.field_Q = new IntrusiveNodeHashTable(128);
         this.setChannelVolume((byte) -90, -1, 256);
-        this.a(-1, true);
+        this.resetPlaybackChannels(-1, true);
     }
 
     MidiPcmStream(MidiPcmStream param0) {
@@ -2045,7 +2045,7 @@ final class MidiPcmStream extends PcmStream {
         try {
           this.field_Q = param0.field_Q;
           this.setChannelVolume((byte) -75, -1, 256);
-          this.a(-1, true);
+          this.resetPlaybackChannels(-1, true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
