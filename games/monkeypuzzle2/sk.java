@@ -228,7 +228,7 @@ final class sk extends WidgetContainer implements ql {
           if (var1 > 255) {
             var1 = 255;
           }
-          field_D[var0] = bd.a(bd.a(ch.a(var1, 251723775) << 8, ch.a(var1 << 16, 16738534)), ch.a(var1, 16777215));
+          field_D[var0] = bd.a(bd.a(BufferedRandomAccessFile.a(var1, 251723775) << 8, BufferedRandomAccessFile.a(var1 << 16, 16738534)), BufferedRandomAccessFile.a(var1, 16777215));
         }
         field_F = "to return to the normal view.";
     }

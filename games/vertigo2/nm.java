@@ -163,15 +163,15 @@ abstract class nm extends WidgetContainer {
 
     final void b(int param0, int param1, int param2) {
         if (param0 == -1535749535) {
-          this.setBounds(false, gi.field_m - param1 >> 1, im.field_h - param2 >> 1, param2, param1);
+          this.setBounds(false, gi.field_m - param1 >> 1, BufferedRandomAccessFile.field_h - param2 >> 1, param2, param1);
           return;
         }
         nm.k(-40);
-        this.setBounds(false, gi.field_m - param1 >> 1, im.field_h - param2 >> 1, param2, param1);
+        this.setBounds(false, gi.field_m - param1 >> 1, BufferedRandomAccessFile.field_h - param2 >> 1, param2, param1);
     }
 
     nm(sd param0, int param1, int param2) {
-        super(-param1 + gi.field_m >> 1, -param2 + im.field_h >> 1, param1, param2, (WidgetListener) null);
+        super(-param1 + gi.field_m >> 1, -param2 + BufferedRandomAccessFile.field_h >> 1, param1, param2, (WidgetListener) null);
         try {
           this.field_I = false;
           this.field_H = param0;

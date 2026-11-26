@@ -6,7 +6,7 @@ final class wj extends IntrusiveNode {
     private int[] field_i;
     static PcmStreamMixer field_j;
     byte[] field_n;
-    static be field_s;
+    static BufferedRandomAccessFile field_s;
     byte[] field_q;
     rc[] field_h;
     int field_m;

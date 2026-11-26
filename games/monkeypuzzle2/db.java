@@ -176,13 +176,13 @@ final class db implements ml {
           ci.a(param0 + 30300, 166, 474, 40 + var1, 8, new int[]{14, 5}, 370);
           ci.a(30380, 166, 474, var1 + 40, 9, new int[]{14, 5}, 380);
           ci.a(param0 + 30300, 180, 460, 40 + var1, 10, new int[]{5}, 370);
-          lh.field_b = pl.field_e.a(ma.field_a[11]);
-          var2 = pl.field_e.a(ma.field_a[12]);
+          lh.field_b = BoundedRandomAccessFile.field_e.a(ma.field_a[11]);
+          var2 = BoundedRandomAccessFile.field_e.a(ma.field_a[12]);
           if (!(var2 <= lh.field_b)) {
             lh.field_b = var2;
           }
-          var3 = 4 + pl.field_e.field_j + pl.field_e.field_D;
-          i.field_r[7] = pl.field_e.field_D + 200 + (pl.field_e.field_C + var3);
+          var3 = 4 + BoundedRandomAccessFile.field_e.field_j + BoundedRandomAccessFile.field_e.field_D;
+          i.field_r[7] = BoundedRandomAccessFile.field_e.field_D + 200 + (BoundedRandomAccessFile.field_e.field_C + var3);
           mc.field_b[7] = 40 + var3;
           return;
         }
@@ -195,13 +195,13 @@ final class db implements ml {
         ci.a(param0 + 30300, 166, 474, 40 + var1, 8, new int[]{14, 5}, 370);
         ci.a(30380, 166, 474, var1 + 40, 9, new int[]{14, 5}, 380);
         ci.a(param0 + 30300, 180, 460, 40 + var1, 10, new int[]{5}, 370);
-        lh.field_b = pl.field_e.a(ma.field_a[11]);
-        var2Lifetime1 = pl.field_e.a(ma.field_a[12]);
+        lh.field_b = BoundedRandomAccessFile.field_e.a(ma.field_a[11]);
+        var2Lifetime1 = BoundedRandomAccessFile.field_e.a(ma.field_a[12]);
         if (!(var2Lifetime1 <= lh.field_b)) {
           lh.field_b = var2Lifetime1;
         }
-        var3Lifetime1 = 4 + pl.field_e.field_j + pl.field_e.field_D;
-        i.field_r[7] = pl.field_e.field_D + 200 + (pl.field_e.field_C + var3Lifetime1);
+        var3Lifetime1 = 4 + BoundedRandomAccessFile.field_e.field_j + BoundedRandomAccessFile.field_e.field_D;
+        i.field_r[7] = BoundedRandomAccessFile.field_e.field_D + 200 + (BoundedRandomAccessFile.field_e.field_C + var3Lifetime1);
         mc.field_b[7] = 40 + var3Lifetime1;
     }
 

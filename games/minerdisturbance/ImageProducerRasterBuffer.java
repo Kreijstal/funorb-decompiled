@@ -60,7 +60,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
             ImageProducerRasterBuffer.d(-99);
           }
           if (param2 == 255) {
-            stackIn_7_0 = !(me.field_j >= 13);
+            stackIn_7_0 = !(BufferedRandomAccessFile.field_j >= 13);
             IterableNodeHashTable.field_d = hn.createAccountSuccessResult(stackIn_7_0, (byte) 105);
             var6 = (String[]) null;
             en.a((String[]) null, 18423);

@@ -146,7 +146,7 @@ final class vh {
             if (bm.field_c == 0) {
               CrossfadingMidiPcmStream.a(0, 1);
             }
-            bn.a(3, param2);
+            BufferedRandomAccessFile.a(3, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

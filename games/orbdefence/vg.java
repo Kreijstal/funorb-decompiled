@@ -16,7 +16,7 @@ final class vg extends IntrusiveNode {
     static int field_l;
     static String field_j;
     int field_f;
-    static dj field_q;
+    static BufferedRandomAccessFile field_q;
     long field_h;
 
     final static boolean a(char param0, int param1) {

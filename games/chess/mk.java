@@ -513,7 +513,7 @@ final class mk {
             }
             if (var12.field_kc.field_F) {
               if (var12.field_ic == 1) {
-                var34 = lc.field_g;
+                var34 = BufferedRandomAccessFile.field_g;
               } else {
                 var34 = gf.field_a[var12.field_ic];
               }

@@ -480,7 +480,7 @@ class id implements uk, pj {
             }
             if (ma.field_s != null) {
               try {
-                ma.field_s.a(-4506);
+                ma.field_s.close(-4506);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -490,7 +490,7 @@ class id implements uk, pj {
               for (var1_int = 0; df.field_d.length > var1_int; var1_int++) {
                 if (df.field_d[var1_int] != null) {
                   try {
-                    df.field_d[var1_int].a(-4506);
+                    df.field_d[var1_int].close(-4506);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

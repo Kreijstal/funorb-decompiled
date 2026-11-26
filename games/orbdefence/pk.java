@@ -276,7 +276,7 @@ final class pk extends ta implements jb, ai {
             if (this.field_D) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = gl.field_k;
+              stackIn_18_3 = BoundedRandomAccessFile.field_k;
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
@@ -319,7 +319,7 @@ final class pk extends ta implements jb, ai {
           var8 = GzipDecompressor.field_d;
           var9 = PcmOutputWorker.a(true, uj.b((byte) -120));
           if (mj.field_l == var9) {
-            var8 = gl.field_h;
+            var8 = BoundedRandomAccessFile.field_h;
           } else {
             if (var9 == vh.field_s) {
               var8 = wd.field_k;

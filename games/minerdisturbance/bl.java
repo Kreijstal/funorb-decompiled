@@ -29,7 +29,7 @@ abstract class bl extends DualLinkNode {
             }
             if (null != fe.field_z) {
               try {
-                fe.field_z.b(-30821);
+                fe.field_z.close(-30821);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -39,7 +39,7 @@ abstract class bl extends DualLinkNode {
               for (var1_int = 0; aa.field_h.length > var1_int; var1_int++) {
                 if (aa.field_h[var1_int] != null) {
                   try {
-                    aa.field_h[var1_int].b(-30821);
+                    aa.field_h[var1_int].close(-30821);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

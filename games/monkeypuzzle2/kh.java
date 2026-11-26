@@ -43,7 +43,7 @@ final class kh {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (di.field_a != ch.field_d) {
+          if (di.field_a != BufferedRandomAccessFile.field_d) {
             return false;
           }
           var8 = new AccountCreationResultPanel(wg.field_j, param5);
@@ -54,7 +54,7 @@ final class kh {
             v.field_b = param6;
             v.field_c = param2;
             ClientException.field_d = param4;
-            ch.field_d = cf.field_b;
+            BufferedRandomAccessFile.field_d = cf.field_b;
             mh.field_F = param3;
           } else {
             var8.h((byte) 114);

@@ -147,7 +147,7 @@ public final class Torquing extends tg {
           Js5Transport.clearStaticReferences((byte) -77);
           DiskCacheWorker.a(param0 ^ 6);
           bo.clearStaticReferences(21384);
-          o.clearStaticReferences(-1);
+          BufferedRandomAccessFile.clearStaticReferences(-1);
           BufferedSocket.clearStaticReferences(param0 - 4);
           SpriteState.clearStaticReferences(false);
           DualLinkNode.clearDeclaredStaticReferences(-93);

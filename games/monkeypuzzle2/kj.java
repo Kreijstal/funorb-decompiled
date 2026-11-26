@@ -223,7 +223,7 @@ final class kj extends jk {
             BufferedSocket.field_m = param1;
             if (null != IntrusiveDeque.field_g.field_x) {
               try {
-                hj.field_D = new ch(IntrusiveDeque.field_g.field_x, 64, 0);
+                hj.field_D = new BufferedRandomAccessFile(IntrusiveDeque.field_g.field_x, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

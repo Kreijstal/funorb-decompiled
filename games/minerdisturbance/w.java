@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class w extends tn {
-    static me field_W;
+    static BufferedRandomAccessFile field_W;
     private int field_O;
     private Sprite field_Q;
     static String field_T;
@@ -389,7 +389,7 @@ final class w extends tn {
         if (param0 == -27867) {
           return null;
         }
-        field_W = (me) null;
+        field_W = (BufferedRandomAccessFile) null;
         return null;
     }
 

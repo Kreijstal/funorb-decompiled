@@ -248,7 +248,7 @@ final class jb extends IntrusiveNode {
                 }
                 if (var16 != 0 &&
                   var15 == 31) {
-                  var25_ref = oa.a((byte) -92, en.field_a[var15], new String[]{"" + me.field_h / 50});
+                  var25_ref = oa.a((byte) -92, en.field_a[var15], new String[]{"" + BufferedRandomAccessFile.field_h / 50});
                 }
                 if (var16 != 0 &&
                   var15 == 26) {
@@ -535,7 +535,7 @@ final class jb extends IntrusiveNode {
                 }
                 if (var16 != 0 &&
                   var15 == 31) {
-                  var25_ref = oa.a((byte) -92, en.field_a[var15], new String[]{"" + me.field_h / 50});
+                  var25_ref = oa.a((byte) -92, en.field_a[var15], new String[]{"" + BufferedRandomAccessFile.field_h / 50});
                 }
                 if (var16 != 0 &&
                   var15 == 26) {

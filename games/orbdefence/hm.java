@@ -11,7 +11,7 @@ final class hm extends ta implements ai {
         super(0, 0, 476, 225, (td) null);
         this.field_D = new s(ki.field_h, (ag) null);
         this.field_B = new s(bi.field_b, (ag) null);
-        this.field_E = new s(gl.field_k, (ag) null);
+        this.field_E = new s(BoundedRandomAccessFile.field_k, (ag) null);
         vk var1 = new vk();
         this.field_D.field_j = (td) ((Object) var1);
         this.field_B.field_j = (td) ((Object) var1);

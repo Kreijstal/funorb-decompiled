@@ -131,7 +131,7 @@ public final class Bounce extends GameClient {
           MidiPcmStream.clearStaticReferences(-112);
           v.clearStaticReferences(-8217);
           DiskCacheWorker.clearStaticReferences((byte) 74);
-          jf.e(-18695);
+          BufferedRandomAccessFile.e(-18695);
           BufferedSocket.clearStaticReferences(-14582);
           Platform.clearStaticReferences((byte) 64);
           Slime.clearStaticReferences(100);
@@ -192,7 +192,7 @@ public final class Bounce extends GameClient {
           SectorCacheStore.resetStaticState(11826);
           DiskArchiveRequest.clearStaticReferences(-94);
           ce.clearStaticReferences((byte) -49);
-          ok.c(114);
+          BoundedRandomAccessFile.c(114);
           wb.clearStaticReferences((byte) 65);
           cf.clearStaticReferences(1);
           nh.releaseDeclaredStaticReferences((byte) -102);

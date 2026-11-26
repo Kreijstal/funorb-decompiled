@@ -531,8 +531,8 @@ final class vd extends td implements jg, ButtonListener, a {
             var2 = var8;
             if (null != pl.field_b) {
               try {
-                pl.field_b.a(0L, true);
-                pl.field_b.a(-116, var9);
+                pl.field_b.seek(0L, true);
+                pl.field_b.readFully(-116, var9);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (0 == var10[var3_int]) {
                     continue;

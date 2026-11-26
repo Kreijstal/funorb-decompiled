@@ -66,7 +66,7 @@ final class bi {
                   var9 = NetworkArchiveRequest.field_y;
                 }
               } else {
-                var9 = ee.field_g;
+                var9 = BoundedRandomAccessFile.field_g;
               }
               if (var9 != null) {
                 var7 = 128;

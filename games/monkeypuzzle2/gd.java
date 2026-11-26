@@ -15,8 +15,8 @@ final class gd {
           Throwable decompiledCaughtException = null;
           if (null != hj.field_D) {
             try {
-              hj.field_D.a((byte) 89, 0L);
-              hj.field_D.a(MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position, (byte) 34, 24);
+              hj.field_D.seek((byte) 89, 0L);
+              hj.field_D.write(MonkeyPuzzle2.field_D.payload, MonkeyPuzzle2.field_D.position, (byte) 34, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
@@ -76,7 +76,7 @@ final class gd {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) 114) << ch.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte((byte) 114) << BufferedRandomAccessFile.a(var7 << 8, 768));
             }
             var4_ref_bk.unlink(-19822);
             return;

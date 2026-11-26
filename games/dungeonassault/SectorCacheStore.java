@@ -9,8 +9,8 @@ final class SectorCacheStore {
     static int field_d;
     static String field_c;
     private int field_a;
-    private hd field_f;
-    private hd field_g;
+    private BufferedRandomAccessFile field_f;
+    private BufferedRandomAccessFile field_g;
 
     final static void a(PcmSampleStream param0, int param1) {
         try {
@@ -91,12 +91,12 @@ final class SectorCacheStore {
           var3_ref = this.field_f;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 + param0 * 6) > this.field_g.a((byte) -92)) {
+              if ((long)(6 + param0 * 6) > this.field_g.length((byte) -92)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_g.a((long)(6 * param0), -26296);
-              this.field_g.a(0, -1, ByteStorage.field_c, 6);
+              this.field_g.seek((long)(6 * param0), -26296);
+              this.field_g.readFully(0, -1, ByteStorage.field_c, 6);
               var4_int = ((255 & ByteStorage.field_c[0]) << 16) + (((ByteStorage.field_c[1] & 255) << 8) + (ByteStorage.field_c[2] & 255));
               var5 = (ByteStorage.field_c[5] & 255) + (((ByteStorage.field_c[4] & 255) << 8) + ((ByteStorage.field_c[3] & 255) << 16));
               if (var4_int < 0) {
@@ -109,7 +109,7 @@ final class SectorCacheStore {
               if (var5 <= 0) {
                 return null;
               }
-              if ((long)var5 > (this.field_f.a((byte) -92) / 520L)) {
+              if ((long)var5 > (this.field_f.length((byte) -92) / 520L)) {
                 stackIn_15_0 = null;
                 return (byte[]) (stackIn_15_0);
               }
@@ -121,14 +121,14 @@ final class SectorCacheStore {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_f.a((long)(var5 * 520), -26296);
+                this.field_f.seek((long)(var5 * 520), -26296);
                 var10 = var4_int - var7;
                 if (param0 <= 65535) {
                   if (var10 > 512) {
                     var10 = 512;
                   }
                   var15 = 8;
-                  this.field_f.a(0, -1, ByteStorage.field_c, var15 + var10);
+                  this.field_f.readFully(0, -1, ByteStorage.field_c, var15 + var10);
                   var11 = (65280 & ByteStorage.field_c[0] << 8) + (255 & ByteStorage.field_c[1]);
                   var14 = 255 & ByteStorage.field_c[7];
                   var13 = ((ByteStorage.field_c[5] & 255) << 8) + (((ByteStorage.field_c[4] & 255) << 16) + (255 & ByteStorage.field_c[6]));
@@ -138,7 +138,7 @@ final class SectorCacheStore {
                   if (510 < var10) {
                     var10 = 510;
                   }
-                  this.field_f.a(0, -1, ByteStorage.field_c, var15 + var10);
+                  this.field_f.readFully(0, -1, ByteStorage.field_c, var15 + var10);
                   var13 = ((255 & ByteStorage.field_c[6]) << 16) - (-((ByteStorage.field_c[7] & 255) << 8) - (ByteStorage.field_c[8] & 255));
                   var14 = 255 & ByteStorage.field_c[9];
                   var11 = (ByteStorage.field_c[3] & 255) + ((65280 & ByteStorage.field_c[2] << 8) + (-16777216 & ByteStorage.field_c[0] << 24) + ((ByteStorage.field_c[1] & 255) << 16));
@@ -156,7 +156,7 @@ final class SectorCacheStore {
                 if (0 > var13) {
                   return null;
                 }
-                if ((long)var13 > this.field_f.a((byte) -92) / 520L) {
+                if ((long)var13 > this.field_f.length((byte) -92) / 520L) {
                   return null;
                 }
                 var16 = var15 + var10;
@@ -245,18 +245,18 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param3) {
-                  if (this.field_g.a((byte) -92) < (long)(6 * param2 + 6)) {
+                  if (this.field_g.length((byte) -92) < (long)(6 * param2 + 6)) {
                     return false;
                   }
-                  this.field_g.a((long)(param2 * 6), -26296);
-                  this.field_g.a(0, -1, ByteStorage.field_c, 6);
+                  this.field_g.seek((long)(param2 * 6), -26296);
+                  this.field_g.readFully(0, -1, ByteStorage.field_c, 6);
                   var7_int = ((255 & ByteStorage.field_c[4]) << 8) + ((255 & ByteStorage.field_c[3]) << 16) + (255 & ByteStorage.field_c[5]);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= (this.field_f.a((byte) -92) / 520L))) {
+                    !((long)var7_int <= (this.field_f.length((byte) -92) / 520L))) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_f.a((byte) -92) + 519L) / 520L);
+                  var7_int = (int)((this.field_f.length((byte) -92) + 519L) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -267,8 +267,8 @@ final class SectorCacheStore {
                 ByteStorage.field_c[2] = (byte)param1;
                 ByteStorage.field_c[0] = (byte)(param1 >> 16);
                 ByteStorage.field_c[1] = (byte)(param1 >> 8);
-                this.field_g.a((long)(6 * param2), -26296);
-                this.field_g.a(0, -91, 6, ByteStorage.field_c);
+                this.field_g.seek((long)(6 * param2), -26296);
+                this.field_g.write(0, -91, 6, ByteStorage.field_c);
                 var8 = 0;
                 if (!param0) {
                   this.field_b = 88;
@@ -279,10 +279,10 @@ final class SectorCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param3) {
-                      this.field_f.a((long)(520 * var7_int), -26296);
+                      this.field_f.seek((long)(520 * var7_int), -26296);
                       if (65535 >= param2) {
                         try {
-                          this.field_f.a(0, -1, ByteStorage.field_c, 8);
+                          this.field_f.readFully(0, -1, ByteStorage.field_c, 8);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -298,7 +298,7 @@ final class SectorCacheStore {
                         var11 = (ByteStorage.field_c[1] & 255) + (ByteStorage.field_c[0] << 8 & 65280);
                       } else {
                         try {
-                          this.field_f.a(0, -1, ByteStorage.field_c, 10);
+                          this.field_f.readFully(0, -1, ByteStorage.field_c, 10);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -317,7 +317,7 @@ final class SectorCacheStore {
                         var9 == var12 &&
                         this.field_a == var13) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !(this.field_f.a((byte) -92) / 520L >= (long)var10)))) {
+                        !(this.field_f.length((byte) -92) / 520L >= (long)var10)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -325,7 +325,7 @@ final class SectorCacheStore {
                       }
                     }
                     if (0 == var10) {
-                      var10 = (int)((519L + this.field_f.a((byte) -92)) / 520L);
+                      var10 = (int)((519L + this.field_f.length((byte) -92)) / 520L);
                       param3 = false;
                       if (var10 == 0) {
                         var10++;
@@ -348,13 +348,13 @@ final class SectorCacheStore {
                       ByteStorage.field_c[9] = (byte)this.field_a;
                       ByteStorage.field_c[2] = (byte)(param2 >> 8);
                       ByteStorage.field_c[8] = (byte)var10;
-                      this.field_f.a((long)(var7_int * 520), -26296);
-                      this.field_f.a(0, -116, 10, ByteStorage.field_c);
+                      this.field_f.seek((long)(var7_int * 520), -26296);
+                      this.field_f.write(0, -116, 10, ByteStorage.field_c);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_f.a(var8, -106, var11, param4);
+                      this.field_f.write(var8, -106, var11, param4);
                       var8 = var8 + var11;
                     } else {
                       ByteStorage.field_c[2] = (byte)(var9 >> 8);
@@ -365,13 +365,13 @@ final class SectorCacheStore {
                       ByteStorage.field_c[7] = (byte)this.field_a;
                       ByteStorage.field_c[3] = (byte)var9;
                       ByteStorage.field_c[0] = (byte)(param2 >> 8);
-                      this.field_f.a((long)(520 * var7_int), -26296);
-                      this.field_f.a(0, -97, 8, ByteStorage.field_c);
+                      this.field_f.seek((long)(520 * var7_int), -26296);
+                      this.field_f.write(0, -97, 8, ByteStorage.field_c);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_f.a(var8, -125, var11, param4);
+                      this.field_f.write(var8, -125, var11, param4);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -459,7 +459,7 @@ final class SectorCacheStore {
         return bl.field_r.b((byte) 113);
     }
 
-    SectorCacheStore(int param0, hd param1, hd param2, int param3) {
+    SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_b = 65000;
         this.field_f = null;
         this.field_g = null;

@@ -150,7 +150,7 @@ final class lc implements ml {
           lh.a(param2, param0, param4, param3 - 3249767);
           oi.a(-2);
           ed.field_c = di.field_a;
-          ch.field_d = di.field_a;
+          BufferedRandomAccessFile.field_d = di.field_a;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "lc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

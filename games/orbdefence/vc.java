@@ -665,10 +665,10 @@ final class vc {
                 if (30000L < ed.b(-1)) {
                   kk.field_Y = ee.field_c;
                   if (var9 != 0) {
-                    kk.field_Y = dj.field_j;
+                    kk.field_Y = BufferedRandomAccessFile.field_j;
                   }
                 } else {
-                  kk.field_Y = dj.field_j;
+                  kk.field_Y = BufferedRandomAccessFile.field_j;
                 }
                 FullscreenFocusCanvas.field_a = false;
                 stackIn_156_0 = 3;

@@ -23,7 +23,7 @@ public final class StarCannon extends ag {
         }
         se.field_l = b.a(false, 3);
         jg.field_F = b.a(false, 4);
-        cb.field_c = b.a(false, 5);
+        BoundedRandomAccessFile.field_c = b.a(false, 5);
         ej.a(fi.field_f, lf.field_eb, param0 + 23396);
     }
 
@@ -1577,7 +1577,7 @@ public final class StarCannon extends ag {
             }
           } else {
             if (!gh.f(-23093)) {
-              if (cb.a(false)) {
+              if (BoundedRandomAccessFile.a(false)) {
                 stackIn_39_1 = (null != n.field_a);
                 var2 = u.a((ag) (this), stackIn_39_1, (byte) 112);
                 if (var2 == 1) {
@@ -1693,8 +1693,8 @@ public final class StarCannon extends ag {
                 se.field_l.a(29741)) {
                 if (jg.field_F.b((byte) 119) &&
                   jg.field_F.a(29741)) {
-                  if (cb.field_c.b((byte) 127) &&
-                    cb.field_c.a(29741)) {
+                  if (BoundedRandomAccessFile.field_c.b((byte) 127) &&
+                    BoundedRandomAccessFile.field_c.a(29741)) {
                     if (fi.field_f.b((byte) 103) &&
                       fi.field_f.a("basic", -9883)) {
                       ma.a(fa.field_z, -13923, 70.0f);
@@ -1764,7 +1764,7 @@ public final class StarCannon extends ag {
                     ma.a(SecondaryNodeDeque.a(n.field_f, fi.field_f, (byte) -38, ae.field_a, "basic"), -13923, 60.0f);
                     return;
                   }
-                  ma.a(SecondaryNodeDeque.a(s.field_g, cb.field_c, (byte) -38, sj.field_D, ""), -13923, 50.0f);
+                  ma.a(SecondaryNodeDeque.a(s.field_g, BoundedRandomAccessFile.field_c, (byte) -38, sj.field_D, ""), -13923, 50.0f);
                   return;
                 }
                 ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, ae.field_a, ""), param1 - 12479, 40.0f);
@@ -1929,8 +1929,8 @@ public final class StarCannon extends ag {
         }
         ma.a(sj.field_C, -13923, 95.0f);
         this.d((byte) 22);
-        af.field_y = od.a("", jg.field_F, "b12", param1 + 1443, cb.field_c);
-        a.field_b = od.a("", jg.field_F, "font", -1, cb.field_c);
+        af.field_y = od.a("", jg.field_F, "b12", param1 + 1443, BoundedRandomAccessFile.field_c);
+        a.field_b = od.a("", jg.field_F, "font", -1, BoundedRandomAccessFile.field_c);
         var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", jg.field_F);
         ByteStorage.a(vk.a("", 59, "mbfg", jg.field_F), -60, wc.field_g);
         ta.a(vk.a("", param1 ^ -1510, "mb_logo", jg.field_F), param1 + 1319);
@@ -3230,7 +3230,7 @@ public final class StarCannon extends ag {
         AudioOutput.clearStaticReferences();
         eh.g((byte) 101);
         DiskCacheWorker.resetStaticState((byte) 27);
-        td.clearStaticReferences(-12539);
+        BufferedRandomAccessFile.clearStaticReferences(-12539);
         BufferedSocket.resetStaticState(105);
         DelayedPcmStream.clearStaticReferences((byte) -61);
         IntrusiveNode.clearDeclaredStaticReferences(false);
@@ -3284,7 +3284,7 @@ public final class StarCannon extends ag {
         NetworkArchiveRequest.clearDeclaredStaticReferences((byte) 108);
         DiskArchiveRequest.clearDeclaredStaticReferences(-64);
         t.clearStaticReferences((byte) 113);
-        cb.clearStaticReferences(0);
+        BoundedRandomAccessFile.clearStaticReferences(0);
         la.clearStaticReferences((byte) 1);
         ArchiveRequest.clearStaticReferences(0);
         jb.clearStaticReferences(-730625660);
@@ -3575,7 +3575,7 @@ public final class StarCannon extends ag {
           SoftwareRasterizer.fillRectangle(-12 + (-(ClientException.a(6940) / 2) + 320), -12 - wc.d(20) / 2 + 240, 24 + ClientException.a(6940), 24 + wc.d(20), 0);
           fg.a(32513, jk.field_f, 12, 12);
         }
-        if (cb.a(false) &&
+        if (BoundedRandomAccessFile.a(false) &&
           !gh.f(param0 ^ -23075)) {
           stackIn_88_0 = (n.field_a != null);
           jf.a(stackIn_88_0, param0 ^ 106);
@@ -3762,7 +3762,7 @@ public final class StarCannon extends ag {
           }
           qa.field_a.a(false, false);
           fc.a(param0, param4, (byte) 95, param3);
-          td.b(30000);
+          BufferedRandomAccessFile.b(30000);
           ie.field_x = cl.field_k;
           DualLinkNode.field_k = cl.field_k;
         } catch (RuntimeException runtimeException) {

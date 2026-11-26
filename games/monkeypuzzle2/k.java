@@ -101,7 +101,7 @@ final class k extends IntrusiveNode {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
               var4 = -27 % ((param1 - 23) / 44);
               var3 = uf.a(param0, (byte) 106, var3);
-              pl.a(true, 12430, param0, var3.toString());
+              BoundedRandomAccessFile.a(true, 12430, param0, var3.toString());
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

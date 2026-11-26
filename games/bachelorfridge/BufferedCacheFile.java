@@ -27,7 +27,7 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
         String stackIn_53_2 = null;
@@ -48,14 +48,14 @@ final class BufferedCacheFile {
             if (-1L != this.field_e) {
               if (this.field_e <= this.field_g) {
                 if (this.field_g > (long)this.field_j + this.field_e) {
-                  this.b((byte) 50);
+                  this.flush((byte) 50);
                 }
               } else {
-                this.b((byte) 50);
+                this.flush((byte) 50);
               }
             }
             if (param0 >= -52) {
-              this.b(-4);
+              this.length(-4);
             }
             if (this.field_e != -1L &&
               (this.field_e + (long)this.field_a.length) < (this.field_g + (long)param3)) {
@@ -65,7 +65,7 @@ final class BufferedCacheFile {
               this.field_g = this.field_g + (long)var5_int;
               param1 = param1 + var5_int;
               this.field_j = this.field_a.length;
-              this.b((byte) 50);
+              this.flush((byte) 50);
             }
             if (param3 <= this.field_a.length) {
               if (0 >= param3) {
@@ -137,7 +137,7 @@ final class BufferedCacheFile {
         }
     }
 
-    private final void b(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var7;
@@ -186,10 +186,10 @@ final class BufferedCacheFile {
         }
     }
 
-    final void a(byte param0, byte[] param1) throws IOException {
+    final void readFully(byte param0, byte[] param1) throws IOException {
         try {
           int var3_int = -69 / ((80 - param0) / 40);
-          this.a(param1.length, 0, -1, param1);
+          this.readFully(param1.length, 0, -1, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "v.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -202,14 +202,14 @@ final class BufferedCacheFile {
         field_d = null;
     }
 
-    final long b(int param0) {
+    final long length(int param0) {
         if (param0 != -1) {
           return 71L;
         }
         return this.field_i;
     }
 
-    private final void c(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
@@ -238,13 +238,13 @@ final class BufferedCacheFile {
         }
     }
 
-    final void d(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         int var2 = 108 / ((-72 - param0) / 38);
-        this.b((byte) 50);
+        this.flush((byte) 50);
         this.field_k.close(true);
     }
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         if (param1 > -84) {
           BufferedCacheFile.releaseStatics(-19);
         }
@@ -254,7 +254,7 @@ final class BufferedCacheFile {
         this.field_g = param0;
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, int param1, int param2, byte[] param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -326,7 +326,7 @@ final class BufferedCacheFile {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param0 > 0)) {
-              this.c(param2 ^ 0);
+              this.fillReadBuffer(param2 ^ 0);
               var9_intLifetime1Lifetime1 = param0;
               if (this.field_f < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_f;

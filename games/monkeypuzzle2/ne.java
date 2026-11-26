@@ -106,7 +106,7 @@ final class ne {
           if (param0 != -107) {
             ne.a(-67);
           }
-          for (var3 = 0; pl.field_k.length > var3; var3++) {
+          for (var3 = 0; BoundedRandomAccessFile.field_k.length > var3; var3++) {
             var4 = gh.field_a[var3];
             if (0 > var4) {
               var5 = lc.field_e;
@@ -117,7 +117,7 @@ final class ne {
                 var5 = ki.field_s;
               }
             }
-            var6 = pl.field_k[var3];
+            var6 = BoundedRandomAccessFile.field_k[var3];
             if (ud.field_b == 2 &&
               var2 == 1) {
               if (DiskCacheWorker.field_c.length <= wi.field_b.length) {
@@ -168,7 +168,7 @@ final class ne {
               var9 = stackIn_44_0;
               var1_int = var1_int + ud.field_a;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (pl.field_h << 1), var8Lifetime1 - pl.field_h, false, var1_int, hb.field_n + (vf.field_b << 1));
+                var9.a(var7Lifetime1 + (BoundedRandomAccessFile.field_h << 1), var8Lifetime1 - BoundedRandomAccessFile.field_h, false, var1_int, hb.field_n + (vf.field_b << 1));
               }
               var1_int = var1_int + vf.field_b;
             }

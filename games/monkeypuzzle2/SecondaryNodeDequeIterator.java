@@ -101,7 +101,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             var13 = param8;
             var14 = param6;
             var15 = var17[var11] >> 1 & 8355711;
-            var10[var11] = ch.a(var14 >> 17, 255) + ch.a(var13 >> 9, 65280) + ch.a(16711680, var12 >> 1) + var15;
+            var10[var11] = BufferedRandomAccessFile.a(var14 >> 17, 255) + BufferedRandomAccessFile.a(var13 >> 9, 65280) + BufferedRandomAccessFile.a(16711680, var12 >> 1) + var15;
             param9 = param9 + param4;
             param0++;
             param6 = param6 + param2;

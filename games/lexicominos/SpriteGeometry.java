@@ -50,8 +50,8 @@ abstract class SpriteGeometry extends DualLinkNode {
             var2 = var9;
             if (null != kf.field_y) {
               try {
-                kf.field_y.a((byte) 40, 0L);
-                kf.field_y.a(var10, 0);
+                kf.field_y.seek((byte) 40, 0L);
+                kf.field_y.readFully(var10, 0);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

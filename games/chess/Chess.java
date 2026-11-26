@@ -366,7 +366,7 @@ public final class Chess extends gb {
                 dj.a(true);
                 if (var2Lifetime1 != 1) {
                   if (pk.field_j) {
-                    lc.field_q = true;
+                    BufferedRandomAccessFile.field_q = true;
                     ma.field_D = false;
                     ji.field_P = true;
                     if (hj.field_i) {
@@ -429,7 +429,7 @@ public final class Chess extends gb {
               em.b(false);
               pk.field_j = false;
               ma.field_D = false;
-              lc.field_q = true;
+              BufferedRandomAccessFile.field_q = true;
               ji.field_P = true;
               hl.field_h = false;
               hj.field_i = false;
@@ -462,7 +462,7 @@ public final class Chess extends gb {
                   oc.field_p.a(71, false);
                 }
                 ma.field_D = false;
-                lc.field_q = true;
+                BufferedRandomAccessFile.field_q = true;
                 s.field_O = 0;
                 qk.field_h = -2;
                 hl.field_h = false;
@@ -998,7 +998,7 @@ public final class Chess extends gb {
           this.field_F = 37;
         }
         mm.field_d = ri.a(1, (byte) 127);
-        lc.field_m = ri.a(2, (byte) 127);
+        BufferedRandomAccessFile.field_m = ri.a(2, (byte) 127);
         tk.field_g = ri.a(3, (byte) 127);
         pg.field_o = ri.a(4, (byte) 127);
         li.field_g = ri.a(5, (byte) 127);
@@ -1592,7 +1592,7 @@ public final class Chess extends gb {
         eb.clearStaticReferences(-29115);
         wm.clearStaticReferences((byte) -108);
         hj.clearStaticReferences(64655);
-        lc.resetStaticState((byte) -9);
+        BufferedRandomAccessFile.resetStaticState((byte) -9);
         BufferedSocket.clearStaticReferences(false);
         IntrusiveNode.a((byte) -91);
         tn.a(-2);
@@ -1844,7 +1844,7 @@ public final class Chess extends gb {
         int var3Lifetime1;
         var4 = field_G;
         ArchiveRequest.h(param0 - 19759);
-        if (null == lc.field_m) {
+        if (null == BufferedRandomAccessFile.field_m) {
           if (null != tk.field_g) {
             nj.a(param0 ^ -19745, ae.field_a, 70.0f);
             this.a(true);
@@ -1938,8 +1938,8 @@ public final class Chess extends gb {
           ob.f(0);
           return false;
         }
-        if (lc.field_m.c((byte) 118) &&
-          lc.field_m.b((byte) -40)) {
+        if (BufferedRandomAccessFile.field_m.c((byte) 118) &&
+          BufferedRandomAccessFile.field_m.b((byte) -40)) {
           if (tk.field_g.c((byte) 127) &&
             tk.field_g.b((byte) -40)) {
             if (pg.field_o.c((byte) 126) &&
@@ -1978,8 +1978,8 @@ public final class Chess extends gb {
                                       dn.a(true);
                                       nj.a(-20, ae.field_a, 70.0f);
                                       this.a(true);
-                                      s.field_S = new fe(lc.field_m, tk.field_g);
-                                      lc.field_m = null;
+                                      s.field_S = new fe(BufferedRandomAccessFile.field_m, tk.field_g);
+                                      BufferedRandomAccessFile.field_m = null;
                                       ob.f(0);
                                       return false;
                                     }
@@ -2025,7 +2025,7 @@ public final class Chess extends gb {
           nj.a(-20, ji.a(sc.field_g, "", ol.field_X, tk.field_g, (byte) 90), 10.0f);
           return false;
         }
-        nj.a(-20, ji.a(sc.field_g, "", ol.field_X, lc.field_m, (byte) 116), 5.0f);
+        nj.a(-20, ji.a(sc.field_g, "", ol.field_X, BufferedRandomAccessFile.field_m, (byte) 116), 5.0f);
         return false;
     }
 

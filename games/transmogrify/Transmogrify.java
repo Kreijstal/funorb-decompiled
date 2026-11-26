@@ -683,8 +683,8 @@ public final class Transmogrify extends SessionGameApplet {
               AccountNameAvailabilityValidator.field_k.a((byte) -98, "basic")) {
               if (pc.field_a.a((byte) -120) &&
                 pc.field_a.c(param0 ^ -32065)) {
-                if (di.field_h.a((byte) -116) &&
-                  di.field_h.c(32031)) {
+                if (BoundedRandomAccessFile.field_h.a((byte) -116) &&
+                  BoundedRandomAccessFile.field_h.c(32031)) {
                   if (be.field_n.a((byte) -117) &&
                     be.field_n.c(32031)) {
                     if (ta.field_d.a((byte) -115) &&
@@ -722,7 +722,7 @@ public final class Transmogrify extends SessionGameApplet {
                             }
                             cg.b((byte) -121);
                             this.renderFrame(15648);
-                            rc.field_a = new bl(pc.field_a, di.field_h);
+                            rc.field_a = new bl(pc.field_a, BoundedRandomAccessFile.field_h);
                             FullscreenFocusCanvas.field_d[0] = r.a(pc.field_a, "", "trans16_button_click").a();
                             FullscreenFocusCanvas.field_d[1] = r.a(pc.field_a, "", "trans01_submit_accept").a();
                             FullscreenFocusCanvas.field_d[2] = r.a(pc.field_a, "", "trans02_submit_decline").a();
@@ -751,7 +751,7 @@ public final class Transmogrify extends SessionGameApplet {
                   vf.a((byte) 25, 48.0f, ImageProducerRasterBuffer.a(kh.field_e, be.field_n, 0, i.field_d, 32389));
                   return false;
                 }
-                vf.a((byte) -10, 2.0f, ee.a(i.field_d, (byte) 74, kh.field_e, di.field_h, ""));
+                vf.a((byte) -10, 2.0f, ee.a(i.field_d, (byte) 74, kh.field_e, BoundedRandomAccessFile.field_h, ""));
                 return false;
               }
               vf.a((byte) 90, 1.0f, ee.a(oc.field_H, (byte) 71, IndexedSpriteState.field_e, pc.field_a, ""));
@@ -760,17 +760,17 @@ public final class Transmogrify extends SessionGameApplet {
             vf.a((byte) -121, 0.0f, ee.a(vg.field_a, (byte) 100, aa.field_f, AccountNameAvailabilityValidator.field_k, "basic"));
             return false;
           }
-          if (null != di.field_h) {
+          if (null != BoundedRandomAccessFile.field_h) {
             vf.a((byte) -121, 74.0f, q.field_c);
             this.renderFrame(15648);
-            FullscreenFocusCanvas.field_d[10] = ml.a(di.field_h, "", "trans14_crowd_cheer_long").b();
-            FullscreenFocusCanvas.field_d[11] = ml.a(di.field_h, "", "trans15_crowd_cheer_short").b();
+            FullscreenFocusCanvas.field_d[10] = ml.a(BoundedRandomAccessFile.field_h, "", "trans14_crowd_cheer_long").b();
+            FullscreenFocusCanvas.field_d[11] = ml.a(BoundedRandomAccessFile.field_h, "", "trans15_crowd_cheer_short").b();
             var3_int = 95190;
             var4 = 275371;
             FullscreenFocusCanvas.field_d[9] = SocketConnector.a(var4, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
             FullscreenFocusCanvas.field_d[8] = SocketConnector.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var4, FullscreenFocusCanvas.field_d[10]);
             FullscreenFocusCanvas.field_d[12] = SocketConnector.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
-            di.field_h = null;
+            BoundedRandomAccessFile.field_h = null;
             el.b(-6491);
             return false;
           }
@@ -1003,14 +1003,14 @@ public final class Transmogrify extends SessionGameApplet {
               var5[incrementValue$2] = var15[var6_intLifetime1];
             }
           }
-          we.field_l = new WordLanguage[var16.length];
-          for (var6_intLifetime2 = 0; var6_intLifetime2 < we.field_l.length; var6_intLifetime2++) {
-            we.field_l[var6_intLifetime2] = new WordLanguage(oi.field_g, kk.field_a, var16[var6_intLifetime2]);
-            if (we.field_l[var6_intLifetime2].field_j.equals(hi.field_d)) {
+          BufferedRandomAccessFile.field_l = new WordLanguage[var16.length];
+          for (var6_intLifetime2 = 0; var6_intLifetime2 < BufferedRandomAccessFile.field_l.length; var6_intLifetime2++) {
+            BufferedRandomAccessFile.field_l[var6_intLifetime2] = new WordLanguage(oi.field_g, kk.field_a, var16[var6_intLifetime2]);
+            if (BufferedRandomAccessFile.field_l[var6_intLifetime2].field_j.equals(hi.field_d)) {
               am.field_n = var6_intLifetime2;
             }
           }
-          var6 = we.field_l[am.field_n];
+          var6 = BufferedRandomAccessFile.field_l[am.field_n];
           var17 = NodeHashTableIterator.a(de.field_d, 1, var6, (byte) 60, var6.field_d.charAt(0));
           var17.destinationX = 1000;
           var8 = var17;
@@ -1115,7 +1115,7 @@ public final class Transmogrify extends SessionGameApplet {
           }
           oi.field_g = cg.a((byte) -82, 1);
           pc.field_a = cg.a((byte) -82, 2);
-          di.field_h = cg.a((byte) -82, 3);
+          BoundedRandomAccessFile.field_h = cg.a((byte) -82, 3);
           be.field_n = cg.a((byte) -82, 4);
           ta.field_d = cg.a((byte) -82, 5);
           l.field_a = cg.a((byte) -82, 6);
@@ -1143,7 +1143,7 @@ public final class Transmogrify extends SessionGameApplet {
           uh.c(-21);
           DiskCacheWorker.clearStaticReferences(107);
           dk.clearStaticReferences((byte) 127);
-          we.clearStaticReferences(-11509);
+          BufferedRandomAccessFile.clearStaticReferences(-11509);
           BufferedSocket.clearStaticReferences(-102);
           ci.clearStaticReferences(-120);
           SessionGameApplet.clearStaticReferences((byte) -49);
@@ -1239,7 +1239,7 @@ public final class Transmogrify extends SessionGameApplet {
           NetworkArchiveRequest.clearStaticReferences(124);
           SectorCacheStore.clearStaticReferences((byte) 116);
           be.c((byte) 113);
-          di.clearStaticReferences(54);
+          BoundedRandomAccessFile.clearStaticReferences(54);
           eg.a((byte) 66);
           ArchiveRequest.clearStaticReferences(true);
           SocketConnector.clearStaticReferences(0);

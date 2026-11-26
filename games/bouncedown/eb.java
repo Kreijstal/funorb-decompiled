@@ -169,7 +169,7 @@ final class eb extends lc implements ki, rc {
           this.field_A = param0;
           this.field_H = new wd(BufferedSocket.field_i, (sk) null);
           this.field_H.field_j = (fc) ((Object) new jh());
-          var7 = jf.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
+          var7 = BufferedRandomAccessFile.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
           var3 = 20;
           var4 = new jd(sg.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, sg.field_a.field_s, -1, 2147483647, true);
           this.field_B = new vc(var7, var4);

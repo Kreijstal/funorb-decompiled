@@ -5,7 +5,7 @@ final class jg extends ak {
     static int[] field_A;
     static String field_B;
     static String field_D;
-    static jf field_C;
+    static BufferedRandomAccessFile field_C;
     int field_E;
 
     final static int a(int param0, boolean param1) {

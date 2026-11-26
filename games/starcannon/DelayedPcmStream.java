@@ -40,9 +40,9 @@ final class DelayedPcmStream extends PcmStream {
           ue.field_e = param0;
           AccountNameAvailabilityValidator.field_k = param2;
           w.field_v = param6;
-          cb.field_f = param9;
+          BoundedRandomAccessFile.field_f = param9;
           gi.field_e = param7;
-          td.field_p = param1;
+          BufferedRandomAccessFile.field_p = param1;
           eh.field_h = param4;
           re.field_l = param10;
         } catch (RuntimeException runtimeException) {

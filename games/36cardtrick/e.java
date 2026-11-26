@@ -10,7 +10,7 @@ final class e {
     static char[] field_b;
     static String field_f;
     int field_d;
-    static tk field_e;
+    static BufferedRandomAccessFile field_e;
 
     final static void a(byte param0) {
         if (param0 == 112) {

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hd {
+final class BufferedRandomAccessFile {
     private int field_d;
     private int field_l;
     private long field_k;
@@ -21,13 +21,13 @@ final class hd {
     static String[] field_m;
     static od field_g;
 
-    final void c(byte param0) throws IOException {
-        this.d((byte) -117);
+    final void close(byte param0) throws IOException {
+        this.flush((byte) -117);
         int var2 = 44 % ((19 - param0) / 58);
         this.field_f.close(0);
     }
 
-    private final void d(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         int var2;
         long var3;
         long var5;
@@ -260,7 +260,7 @@ final class hd {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param1 != -26296) {
           return;
         }
@@ -270,7 +270,7 @@ final class hd {
         this.field_k = param0;
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
@@ -298,7 +298,7 @@ final class hd {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
@@ -365,7 +365,7 @@ final class hd {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.a(-57);
+              this.fillReadBuffer(-57);
               var9_intLifetime1Lifetime1 = param3;
               if (var9_intLifetime1Lifetime1 > this.field_l) {
                 var9_intLifetime1Lifetime1 = this.field_l;
@@ -444,9 +444,9 @@ final class hd {
         }
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.a(param0, ~param0, param1, param1.length);
+          this.readFully(param0, ~param0, param1, param1.length);
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "hd.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -488,7 +488,7 @@ final class hd {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
@@ -507,11 +507,11 @@ final class hd {
               this.field_p = (long)param2 + this.field_k;
             }
             if (param1 >= -75) {
-              hd.a(true);
+              BufferedRandomAccessFile.a(true);
             }
             if (-1L != this.field_c && (this.field_c > this.field_k ||
               this.field_k > this.field_c + (long)this.field_d)) {
-              this.d((byte) 115);
+              this.flush((byte) 115);
             }
             if (this.field_c != -1L &&
               (this.field_k + (long)param2) > ((long)this.field_n.length + this.field_c)) {
@@ -521,7 +521,7 @@ final class hd {
               this.field_k = this.field_k + (long)var5_int;
               param2 = param2 - var5_int;
               this.field_d = this.field_n.length;
-              this.d((byte) -92);
+              this.flush((byte) -92);
             }
             if (this.field_n.length >= param2) {
               if (param2 <= 0) {
@@ -593,7 +593,7 @@ final class hd {
         }
     }
 
-    hd(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_b = -1L;
         this.field_d = 0;
@@ -611,7 +611,7 @@ final class hd {
         }
     }
 
-    final long a(byte param0) {
+    final long length(byte param0) {
         if (param0 != -92) {
           return -92L;
         }

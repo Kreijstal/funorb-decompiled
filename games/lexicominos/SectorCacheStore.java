@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class SectorCacheStore {
-    private be field_a;
+    private BufferedRandomAccessFile field_a;
     private int field_f;
-    private be field_c;
+    private BufferedRandomAccessFile field_c;
     static boolean field_g;
     static volatile boolean field_b;
     private int field_e;
@@ -78,18 +78,18 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param2) {
-                  if ((long)(6 + param4 * 6) > this.field_c.a((byte) -122)) {
+                  if ((long)(6 + param4 * 6) > this.field_c.length((byte) -122)) {
                     return false;
                   }
-                  this.field_c.a((byte) 40, (long)(param4 * 6));
-                  this.field_c.a(0, FullscreenFocusCanvas.field_a, 6, -1);
+                  this.field_c.seek((byte) 40, (long)(param4 * 6));
+                  this.field_c.readFully(0, FullscreenFocusCanvas.field_a, 6, -1);
                   var7_int = (65280 & FullscreenFocusCanvas.field_a[4] << 8) + (FullscreenFocusCanvas.field_a[3] << 16 & 16711680) + (255 & FullscreenFocusCanvas.field_a[5]);
                   if (var7_int <= 0 ||
-                    !((this.field_a.a((byte) -122) / 520L) >= (long)var7_int)) {
+                    !((this.field_a.length((byte) -122) / 520L) >= (long)var7_int)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_a.a((byte) -122)) / 520L);
+                  var7_int = (int)((519L + this.field_a.length((byte) -122)) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -101,10 +101,10 @@ final class SectorCacheStore {
                 FullscreenFocusCanvas.field_a[3] = (byte)(var7_int >> 16);
                 FullscreenFocusCanvas.field_a[5] = (byte)var7_int;
                 if (param1 != 17699) {
-                  this.field_c = (be) null;
+                  this.field_c = (BufferedRandomAccessFile) null;
                 }
-                this.field_c.a((byte) 40, (long)(param4 * 6));
-                this.field_c.b(0, FullscreenFocusCanvas.field_a, 6, -31593);
+                this.field_c.seek((byte) 40, (long)(param4 * 6));
+                this.field_c.write(0, FullscreenFocusCanvas.field_a, 6, -31593);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -112,10 +112,10 @@ final class SectorCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param2) {
-                      this.field_a.a((byte) 40, (long)(var7_int * 520));
+                      this.field_a.seek((byte) 40, (long)(var7_int * 520));
                       if (param4 > 65535) {
                         try {
-                          this.field_a.a(0, FullscreenFocusCanvas.field_a, 10, -1);
+                          this.field_a.readFully(0, FullscreenFocusCanvas.field_a, 10, -1);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -131,7 +131,7 @@ final class SectorCacheStore {
                         var13 = 255 & FullscreenFocusCanvas.field_a[9];
                       } else {
                         try {
-                          this.field_a.a(0, FullscreenFocusCanvas.field_a, 8, -1);
+                          this.field_a.readFully(0, FullscreenFocusCanvas.field_a, 8, -1);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -150,7 +150,7 @@ final class SectorCacheStore {
                         var9 == var12 &&
                         this.field_f == var13) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= (this.field_a.a((byte) -122) / 520L))))) {
+                        !((long)var10 <= (this.field_a.length((byte) -122) / 520L))))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -158,7 +158,7 @@ final class SectorCacheStore {
                       }
                     }
                     if (var10 == 0) {
-                      var10 = (int)((this.field_a.a((byte) -122) + 519L) / 520L);
+                      var10 = (int)((this.field_a.length((byte) -122) + 519L) / 520L);
                       param2 = false;
                       if (0 == var10) {
                         var10++;
@@ -181,13 +181,13 @@ final class SectorCacheStore {
                       FullscreenFocusCanvas.field_a[7] = (byte)(var10 >> 8);
                       FullscreenFocusCanvas.field_a[6] = (byte)(var10 >> 16);
                       FullscreenFocusCanvas.field_a[0] = (byte)(param4 >> 24);
-                      this.field_a.a((byte) 40, (long)(520 * var7_int));
-                      this.field_a.b(0, FullscreenFocusCanvas.field_a, 10, -31593);
+                      this.field_a.seek((byte) 40, (long)(520 * var7_int));
+                      this.field_a.write(0, FullscreenFocusCanvas.field_a, 10, -31593);
                       var11 = param3 - var8;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_a.b(var8, param0, var11, -31593);
+                      this.field_a.write(var8, param0, var11, -31593);
                       var8 = var8 + var11;
                     } else {
                       FullscreenFocusCanvas.field_a[5] = (byte)(var10 >> 8);
@@ -198,13 +198,13 @@ final class SectorCacheStore {
                       FullscreenFocusCanvas.field_a[7] = (byte)this.field_f;
                       FullscreenFocusCanvas.field_a[0] = (byte)(param4 >> 8);
                       FullscreenFocusCanvas.field_a[4] = (byte)(var10 >> 16);
-                      this.field_a.a((byte) 40, (long)(520 * var7_int));
-                      this.field_a.b(0, FullscreenFocusCanvas.field_a, 8, -31593);
+                      this.field_a.seek((byte) 40, (long)(520 * var7_int));
+                      this.field_a.write(0, FullscreenFocusCanvas.field_a, 8, -31593);
                       var11 = param3 - var8;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_a.b(var8, param0, var11, -31593);
+                      this.field_a.write(var8, param0, var11, -31593);
                       var8 = var8 + var11;
                     }
                     var7_int = var10;
@@ -313,12 +313,12 @@ final class SectorCacheStore {
               if (param1 != -65536) {
                 this.toString();
               }
-              if ((long)(param0 * 6 + 6) > this.field_c.a((byte) -122)) {
+              if ((long)(param0 * 6 + 6) > this.field_c.length((byte) -122)) {
                 stackIn_5_0 = null;
                 return (byte[]) (stackIn_5_0);
               }
-              this.field_c.a((byte) 40, (long)(6 * param0));
-              this.field_c.a(0, FullscreenFocusCanvas.field_a, 6, -1);
+              this.field_c.seek((byte) 40, (long)(6 * param0));
+              this.field_c.readFully(0, FullscreenFocusCanvas.field_a, 6, -1);
               var4_int = (255 & FullscreenFocusCanvas.field_a[2]) + ((255 & FullscreenFocusCanvas.field_a[0]) << 16) + ((FullscreenFocusCanvas.field_a[1] & 255) << 8);
               var5 = (FullscreenFocusCanvas.field_a[5] & 255) + ((FullscreenFocusCanvas.field_a[3] & 255) << 16) + (65280 & FullscreenFocusCanvas.field_a[4] << 8);
               if (var4_int < 0) {
@@ -330,7 +330,7 @@ final class SectorCacheStore {
               if (var5 <= 0) {
                 return null;
               }
-              if ((long)var5 > this.field_a.a((byte) -122) / 520L) {
+              if ((long)var5 > this.field_a.length((byte) -122) / 520L) {
                 stackIn_17_0 = null;
                 return (byte[]) (stackIn_17_0);
               }
@@ -342,14 +342,14 @@ final class SectorCacheStore {
                   stackIn_23_0 = null;
                   return (byte[]) (stackIn_23_0);
                 }
-                this.field_a.a((byte) 40, (long)(520 * var5));
+                this.field_a.seek((byte) 40, (long)(520 * var5));
                 var9 = -var7 + var4_int;
                 if (param0 <= 65535) {
                   if (512 < var9) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_a.a(0, FullscreenFocusCanvas.field_a, var14 + var9, -1);
+                  this.field_a.readFully(0, FullscreenFocusCanvas.field_a, var14 + var9, -1);
                   var12 = (255 & FullscreenFocusCanvas.field_a[6]) + ((FullscreenFocusCanvas.field_a[5] & 255) << 8) + ((FullscreenFocusCanvas.field_a[4] & 255) << 16);
                   var11 = ((255 & FullscreenFocusCanvas.field_a[2]) << 8) + (FullscreenFocusCanvas.field_a[3] & 255);
                   var10 = (FullscreenFocusCanvas.field_a[0] << 8 & 65280) + (255 & FullscreenFocusCanvas.field_a[1]);
@@ -359,7 +359,7 @@ final class SectorCacheStore {
                   if (510 < var9) {
                     var9 = 510;
                   }
-                  this.field_a.a(0, FullscreenFocusCanvas.field_a, var9 + var14, -1);
+                  this.field_a.readFully(0, FullscreenFocusCanvas.field_a, var9 + var14, -1);
                   var12 = (255 & FullscreenFocusCanvas.field_a[8]) + ((255 & FullscreenFocusCanvas.field_a[6]) << 16) + ((FullscreenFocusCanvas.field_a[7] & 255) << 8);
                   var10 = (255 & FullscreenFocusCanvas.field_a[3]) + ((FullscreenFocusCanvas.field_a[2] & 255) << 8) + (((255 & FullscreenFocusCanvas.field_a[1]) << 16) + ((255 & FullscreenFocusCanvas.field_a[0]) << 24));
                   var11 = (FullscreenFocusCanvas.field_a[5] & 255) + (65280 & FullscreenFocusCanvas.field_a[4] << 8);
@@ -377,7 +377,7 @@ final class SectorCacheStore {
                 if (var12 < 0) {
                   return null;
                 }
-                if (this.field_a.a((byte) -122) / 520L < (long)var12) {
+                if (this.field_a.length((byte) -122) / 520L < (long)var12) {
                   stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
@@ -438,7 +438,7 @@ final class SectorCacheStore {
         }
     }
 
-    SectorCacheStore(int param0, be param1, be param2, int param3) {
+    SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_a = null;
         this.field_c = null;
         this.field_e = 65000;

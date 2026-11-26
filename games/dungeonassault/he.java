@@ -836,7 +836,7 @@ final class he extends ip {
             DiskCacheWorker.field_e[rj.field_l + uf.field_a + var3Lifetime1] = ff.field_f[var3Lifetime1];
           }
           for (var3Lifetime2 = 0; var3Lifetime2 < ci.field_s.length; var3Lifetime2++) {
-            DiskCacheWorker.field_e[gn.field_d + var3Lifetime2] = hd.field_m[var3Lifetime2];
+            DiskCacheWorker.field_e[gn.field_d + var3Lifetime2] = BufferedRandomAccessFile.field_m[var3Lifetime2];
             DiskCacheWorker.field_e[var3Lifetime2 + (gn.field_d + rj.field_l)] = ki.field_h[var3Lifetime2];
           }
           for (var3Lifetime3 = 0; var3Lifetime3 < bl.field_n.length; var3Lifetime3++) {

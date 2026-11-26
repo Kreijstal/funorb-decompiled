@@ -80,8 +80,8 @@ abstract class jg {
             var2 = var8;
             if (KeyboardInput.field_b != null) {
               try {
-                KeyboardInput.field_b.a((byte) 123, 0L);
-                KeyboardInput.field_b.a(var9, (byte) -4);
+                KeyboardInput.field_b.seek((byte) 123, 0L);
+                KeyboardInput.field_b.readFully(var9, (byte) -4);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

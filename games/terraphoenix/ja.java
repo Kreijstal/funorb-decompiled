@@ -135,7 +135,7 @@ final class ja extends IntrusiveNode {
               rb.field_d[var6] = kh.field_F[var6];
             }
             rb.field_d[var5 - 3] = "";
-            rb.field_d[var5 - 2] = ak.field_g;
+            rb.field_d[var5 - 2] = BufferedRandomAccessFile.field_g;
             f.field_a[-2 + var5] = 0;
             pj.field_l[0] = 4;
             rb.field_d[var5 - 1] = RasterBuffer.field_e;
@@ -336,17 +336,17 @@ final class ja extends IntrusiveNode {
           }
           vi.field_o = nd.field_r - (var4Lifetime1 >> 1);
           ProxySocketConnector.field_g = -(var4Lifetime1 >> 1) + (var4Lifetime1 + nd.field_r);
-          ak.field_e = (dc.field_b + hi.field_ab << 1) * ai.field_i.field_g;
+          BufferedRandomAccessFile.field_e = (dc.field_b + hi.field_ab << 1) * ai.field_i.field_g;
           for (var5Lifetime2 = 0; var5Lifetime2 < rb.field_d.length; var5Lifetime2++) {
-            stackIn_112_0 = ak.field_e;
+            stackIn_112_0 = BufferedRandomAccessFile.field_e;
             if (0 > f.field_a[var5Lifetime2]) {
               stackIn_113_1 = DelegatingCanvas.field_b;
             } else {
               stackIn_113_1 = lm.field_d;
             }
-            ak.field_e = stackIn_112_0 + stackIn_113_1;
+            BufferedRandomAccessFile.field_e = stackIn_112_0 + stackIn_113_1;
           }
-          jh.field_m = -(ak.field_e >> 1) + DiskArchiveRequest.field_E;
+          jh.field_m = -(BufferedRandomAccessFile.field_e >> 1) + DiskArchiveRequest.field_E;
           ll.field_d = new int[rb.field_d.length][];
           var5Lifetime3 = 0;
           var6Lifetime3 = jh.field_m;

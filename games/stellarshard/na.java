@@ -210,17 +210,17 @@ final class na {
           try {
             var6 = null;
             if (null != fa.field_p.field_f) {
-              ma.field_s = new pc(fa.field_p.field_f, 5200, 0);
+              ma.field_s = new BufferedRandomAccessFile(fa.field_p.field_f, 5200, 0);
               fa.field_p.field_f = null;
-              var6 = new SectorCacheStore(255, ma.field_s, new pc(fa.field_p.field_d, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ma.field_s, new BufferedRandomAccessFile(fa.field_p.field_d, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != ma.field_s) {
               if (df.field_d == null) {
-                df.field_d = new pc[fa.field_p.field_l.length];
+                df.field_d = new BufferedRandomAccessFile[fa.field_p.field_l.length];
               }
               if (null == df.field_d[param2]) {
-                df.field_d[param2] = new pc(fa.field_p.field_l[param2], 12000, 0);
+                df.field_d[param2] = new BufferedRandomAccessFile(fa.field_p.field_l[param2], 12000, 0);
                 fa.field_p.field_l[param2] = null;
               }
               var7 = new SectorCacheStore(param2, ma.field_s, df.field_d[param2], 2097152);

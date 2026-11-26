@@ -47,16 +47,16 @@ final class we {
             var6 = null;
             var7 = null;
             if (ek.field_p.field_t != null) {
-              gd.field_q = new pf(ek.field_p.field_t, 5200, 0);
+              gd.field_q = new BufferedRandomAccessFile(ek.field_p.field_t, 5200, 0);
               ek.field_p.field_t = null;
-              var6 = new SectorCacheStore(255, gd.field_q, new pf(ek.field_p.field_v, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, gd.field_q, new BufferedRandomAccessFile(ek.field_p.field_v, 12000, 0), 2097152);
             }
             if (null != gd.field_q) {
               if (vh.field_e == null) {
-                vh.field_e = new pf[ek.field_p.field_d.length];
+                vh.field_e = new BufferedRandomAccessFile[ek.field_p.field_d.length];
               }
               if (vh.field_e[param0] == null) {
-                vh.field_e[param0] = new pf(ek.field_p.field_d[param0], 12000, 0);
+                vh.field_e[param0] = new BufferedRandomAccessFile(ek.field_p.field_d[param0], 12000, 0);
                 ek.field_p.field_d[param0] = null;
               }
               var7 = new SectorCacheStore(param0, gd.field_q, vh.field_e[param0], 2097152);

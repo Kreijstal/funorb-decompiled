@@ -16,7 +16,7 @@ final class qe extends ng {
         if (param0 > -57) {
           field_c = (String) null;
         }
-        return jf.field_h;
+        return BufferedRandomAccessFile.field_h;
     }
 
     final static int a(int param0, byte param1, int param2) {

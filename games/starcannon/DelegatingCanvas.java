@@ -67,7 +67,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
           qd.field_H = new int[bj.field_b];
           fc.field_d = new int[bj.field_b];
           var17.position = -(bj.field_b * 8) + (-7 + param0.length);
-          td.field_m = var17.readUnsignedShort(-1174051992);
+          BufferedRandomAccessFile.field_m = var17.readUnsignedShort(-1174051992);
           gb.field_w = var17.readUnsignedShort(-1174051992);
           var3 = 1 + (255 & var17.readUnsignedByte(7909));
           for (var4 = 0; bj.field_b > var4; var4++) {

@@ -8,7 +8,7 @@ class PacketBuffer extends IntrusiveNode {
     static int field_j;
     byte[] payload;
     static IntrusiveDeque field_k;
-    static we[] field_m;
+    static BufferedRandomAccessFile[] field_m;
 
     final int readVarInt(int param0) {
         int fieldTemp$0 = 0;

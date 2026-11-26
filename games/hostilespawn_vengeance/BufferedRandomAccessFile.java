@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class bn {
+final class BufferedRandomAccessFile {
     private int field_m;
     private byte[] field_d;
     private long field_i;
-    private ee field_j;
+    private BoundedRandomAccessFile field_j;
     static String field_n;
     private long field_f;
     static int field_p;
@@ -21,7 +21,7 @@ final class bn {
     static int[] field_b;
     private long field_c;
 
-    final long d(int param0) {
+    final long length(int param0) {
         int var2 = 76 % ((param0 - 55) / 48);
         return this.field_f;
     }
@@ -41,7 +41,7 @@ final class bn {
         return var2;
     }
 
-    final void a(int param0, int param1, byte[] param2, byte param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, byte param3) throws IOException {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -64,7 +64,7 @@ final class bn {
             }
             if (this.field_i != -1L && (this.field_h < this.field_i ||
               (this.field_i + (long)this.field_m) < this.field_h)) {
-              this.e(-1);
+              this.flush(-1);
             }
             if (this.field_i != -1L &&
               ((long)param0 + this.field_h) > (this.field_i + (long)this.field_e.length)) {
@@ -74,7 +74,7 @@ final class bn {
               this.field_h = this.field_h + (long)var5_int;
               param0 = param0 - var5_int;
               this.field_m = this.field_e.length;
-              this.e(-1);
+              this.flush(-1);
             }
             if (param0 <= this.field_e.length) {
               if (param0 <= 0) {
@@ -91,10 +91,10 @@ final class bn {
               return;
             }
             if (this.field_k != this.field_h) {
-              this.field_j.a(-18127, this.field_h);
+              this.field_j.seek(-18127, this.field_h);
               this.field_k = this.field_h;
             }
-            this.field_j.a(0, param2, param1, param0);
+            this.field_j.write(0, param2, param1, param0);
             this.field_k = this.field_k + (long)param0;
             if (this.field_g < this.field_k) {
               this.field_g = this.field_k;
@@ -146,15 +146,15 @@ final class bn {
         }
     }
 
-    final void f(int param0) throws IOException {
-        this.e(-1);
-        this.field_j.c(-1);
+    final void close(int param0) throws IOException {
+        this.flush(-1);
+        this.field_j.close(-1);
         if (param0 != 0) {
-          bn.clearStaticReferences(true);
+          BufferedRandomAccessFile.clearStaticReferences(true);
         }
     }
 
-    private final void e(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -162,10 +162,10 @@ final class bn {
         var7 = HostileSpawn.field_I ? 1 : 0;
         if (this.field_i != (long)param0) {
           if (~this.field_i != ~this.field_k) {
-            this.field_j.a(-18127, this.field_i);
+            this.field_j.seek(-18127, this.field_i);
             this.field_k = this.field_i;
           }
-          this.field_j.a(0, this.field_e, 0, this.field_m);
+          this.field_j.write(0, this.field_e, 0, this.field_m);
           this.field_k = this.field_k + (long)this.field_m;
           if (this.field_g < this.field_k) {
             this.field_g = this.field_k;
@@ -200,18 +200,18 @@ final class bn {
         }
     }
 
-    final void a(byte[] param0, byte param1) throws IOException {
+    final void readFully(byte[] param0, byte param1) throws IOException {
         if (param1 >= -65) {
           return;
         }
         try {
-          this.a(param0, (byte) -75, 0, param0.length);
+          this.readFully(param0, (byte) -75, 0, param0.length);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "bn.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
@@ -220,7 +220,7 @@ final class bn {
           this.field_c = -22L;
         }
         if (this.field_h != this.field_k) {
-          this.field_j.a(param0 - 31867, this.field_h);
+          this.field_j.seek(param0 - 31867, this.field_h);
           this.field_k = this.field_h;
         }
         this.field_c = this.field_h;
@@ -229,7 +229,7 @@ final class bn {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_j.a(this.field_d, false, var2, this.field_a);
+          var3 = this.field_j.read(this.field_d, false, var2, this.field_a);
           if (var3 == -1) {
             break;
           }
@@ -329,7 +329,7 @@ final class bn {
         try {
           if (param0 != 3) {
             p var3 = (p) null;
-            bn.a(false, -123, (p) null, 64);
+            BufferedRandomAccessFile.a(false, -123, (p) null, 64);
           }
           FullscreenFocusCanvas.a(param1.field_M, false);
           param1.field_M = 0;
@@ -338,18 +338,18 @@ final class bn {
         }
     }
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         if (param0 < 0L) {
           throw new IOException();
         }
         if (param1 < 83) {
           p var5 = (p) null;
-          bn.a(false, 118, (p) null, 42);
+          BufferedRandomAccessFile.a(false, 118, (p) null, 42);
         }
         this.field_h = param0;
     }
 
-    final void a(byte[] param0, byte param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, byte param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
@@ -398,10 +398,10 @@ final class bn {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param3 > this.field_d.length) {
-              this.field_j.a(-18127, this.field_h);
+              this.field_j.seek(-18127, this.field_h);
               this.field_k = this.field_h;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_j.a(param0, false, param3, param2);
+                var9_intLifetime1 = this.field_j.read(param0, false, param3, param2);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -416,7 +416,7 @@ final class bn {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.a(13740);
+              this.fillReadBuffer(13740);
               var9_intLifetime1Lifetime1 = param3;
               if (this.field_a < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_a;
@@ -472,7 +472,7 @@ final class bn {
               }
             }
             if (param1 >= -17) {
-              bn.clearStaticReferences(false);
+              BufferedRandomAccessFile.clearStaticReferences(false);
             }
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -498,14 +498,14 @@ final class bn {
         }
     }
 
-    bn(ee param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_m = 0;
         this.field_i = -1L;
         this.field_c = -1L;
         try {
           this.field_j = param0;
-          dupTemp$0 = param0.a(-1);
+          dupTemp$0 = param0.length(-1);
           this.field_g = dupTemp$0;
           this.field_f = dupTemp$0;
           this.field_e = new byte[param2];

@@ -38,7 +38,7 @@ final class in {
               return;
             }
             try {
-              jl.field_W = new o(u.field_t.field_c, 64, 0);
+              jl.field_W = new BufferedRandomAccessFile(u.field_t.field_c, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

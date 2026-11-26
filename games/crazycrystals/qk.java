@@ -100,18 +100,18 @@ final class qk extends og implements fd, vd {
           try {
             var6 = null;
             if (cc.field_a.field_p != null) {
-              fj.field_c = new qa(cc.field_a.field_p, 5200, 0);
+              fj.field_c = new BufferedRandomAccessFile(cc.field_a.field_p, 5200, 0);
               cc.field_a.field_p = null;
-              var6 = new SectorCacheStore(255, fj.field_c, new qa(cc.field_a.field_g, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, fj.field_c, new BufferedRandomAccessFile(cc.field_a.field_g, 12000, 0), 2097152);
             }
             var7 = null;
             var8 = -47 % ((-23 - param1) / 46);
             if (null != fj.field_c) {
               if (null == li.field_d) {
-                li.field_d = new qa[cc.field_a.field_n.length];
+                li.field_d = new BufferedRandomAccessFile[cc.field_a.field_n.length];
               }
               if (li.field_d[param0] == null) {
-                li.field_d[param0] = new qa(cc.field_a.field_n[param0], 12000, 0);
+                li.field_d[param0] = new BufferedRandomAccessFile(cc.field_a.field_n[param0], 12000, 0);
                 cc.field_a.field_n[param0] = null;
               }
               var7 = new SectorCacheStore(param0, fj.field_c, li.field_d[param0], 2097152);

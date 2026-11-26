@@ -129,12 +129,12 @@ final class ik extends wi {
             SoftwareRasterizer.restoreClip(ia.field_q);
             var3 = -this.field_P + this.field_l + this.field_n;
             var4 = this.field_D.field_N + this.field_a;
-            SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_P, this.field_d - this.field_D.field_N, this.field_s & k.field_a, this.field_s >>> ii.field_b);
-            SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_P, this.field_P, k.field_a & this.field_s, this.field_s >>> ii.field_b);
+            SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_P, this.field_d - this.field_D.field_N, this.field_s & BufferedRandomAccessFile.field_a, this.field_s >>> ii.field_b);
+            SoftwareRasterizer.fillRectangleAlpha(var3, var4, this.field_P, this.field_P, BufferedRandomAccessFile.field_a & this.field_s, this.field_s >>> ii.field_b);
             if (null != this.field_q) {
               this.field_q.d(var3, var4, this.field_P, this.field_d - this.field_D.field_N);
             }
-            SoftwareRasterizer.fillRectangleAlpha(var3, this.field_a - (-this.field_d + this.field_P), this.field_P, this.field_P, k.field_a & this.field_s, this.field_s >>> ii.field_b);
+            SoftwareRasterizer.fillRectangleAlpha(var3, this.field_a - (-this.field_d + this.field_P), this.field_P, this.field_P, BufferedRandomAccessFile.field_a & this.field_s, this.field_s >>> ii.field_b);
             var5 = (float)this.field_x / (float)(-1 + this.field_z.length);
             stackIn_25_0 = (float)this.field_P;
             if (null != this.field_K) {
@@ -161,13 +161,13 @@ final class ik extends wi {
               var8.b(var3, -var8.field_r + this.field_d + this.field_a);
             }
             if (null == this.field_K) {
-              SoftwareRasterizer.fillRectangleAlpha(var3, var4 + var6, this.field_P, this.field_P, this.field_r & k.field_a, this.field_r >>> ii.field_b);
-              SoftwareRasterizer.drawRectangleOutlineAlpha(var3, var4 + var6, this.field_P, this.field_P, k.field_a & this.field_F, this.field_F >>> ii.field_b);
+              SoftwareRasterizer.fillRectangleAlpha(var3, var4 + var6, this.field_P, this.field_P, this.field_r & BufferedRandomAccessFile.field_a, this.field_r >>> ii.field_b);
+              SoftwareRasterizer.drawRectangleOutlineAlpha(var3, var4 + var6, this.field_P, this.field_P, BufferedRandomAccessFile.field_a & this.field_F, this.field_F >>> ii.field_b);
             } else {
               this.field_K.d(-(this.field_K.field_x / 2) + var3 + this.field_P / 2, var6 + var4 + this.field_K.field_r / 2);
             }
-            SoftwareRasterizer.drawRectangleOutlineAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_I & k.field_a, this.field_I >>> ii.field_b);
-            SoftwareRasterizer.drawRectangleOutlineAlpha(param0 + this.field_l, this.field_a - 1, this.field_n + 2, 2 + this.field_d, k.field_a & this.field_N, this.field_N >>> ii.field_b);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_I & BufferedRandomAccessFile.field_a, this.field_I >>> ii.field_b);
+            SoftwareRasterizer.drawRectangleOutlineAlpha(param0 + this.field_l, this.field_a - 1, this.field_n + 2, 2 + this.field_d, BufferedRandomAccessFile.field_a & this.field_N, this.field_N >>> ii.field_b);
             return;
           }
           stackIn_5_0 = ~var3;
@@ -182,7 +182,7 @@ final class ik extends wi {
             stackIn_10_0 = this.field_O;
           }
           var4Lifetime1 = stackIn_10_0;
-          SoftwareRasterizer.fillRectangleAlpha(this.field_l, -this.field_S + var2, -this.field_P + this.field_n, this.field_D.field_N, var4Lifetime1 & k.field_a, var4Lifetime1 >>> ii.field_b);
+          SoftwareRasterizer.fillRectangleAlpha(this.field_l, -this.field_S + var2, -this.field_P + this.field_n, this.field_D.field_N, var4Lifetime1 & BufferedRandomAccessFile.field_a, var4Lifetime1 >>> ii.field_b);
           if (this.field_z.length > var3) {
             if (!this.field_t[var3] &&
               null != this.field_M) {
@@ -197,7 +197,7 @@ final class ik extends wi {
               stackIn_19_0 = this.field_H;
             }
             var6Lifetime1 = stackIn_19_0;
-            this.field_D.a(var5_ref_String, this.field_l + 5, -this.field_D.field_K + (this.field_D.field_N + var2) - this.field_S, k.field_a & var6Lifetime1, -1, var6Lifetime1 >>> ii.field_b);
+            this.field_D.a(var5_ref_String, this.field_l + 5, -this.field_D.field_K + (this.field_D.field_N + var2) - this.field_S, BufferedRandomAccessFile.field_a & var6Lifetime1, -1, var6Lifetime1 >>> ii.field_b);
           }
           var3++;
           var2 = var2 + this.field_D.field_N;

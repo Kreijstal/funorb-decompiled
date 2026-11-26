@@ -31,7 +31,7 @@ final class sc {
             }
             if (null != ah.field_f) {
               try {
-                ah.field_f.a(true);
+                ah.field_f.close(true);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -44,7 +44,7 @@ final class sc {
               for (var1_int = 0; bl.field_o.length > var1_int; var1_int++) {
                 if (bl.field_o[var1_int] != null) {
                   try {
-                    bl.field_o[var1_int].a(true);
+                    bl.field_o[var1_int].close(true);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

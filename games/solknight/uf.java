@@ -184,8 +184,8 @@ class uf extends af {
           Throwable decompiledCaughtException = null;
           if (null != pj.field_D) {
             try {
-              pj.field_D.a(0L, (byte) 45);
-              pj.field_D.a(te.field_N.payload, -20291, 24, te.field_N.position);
+              pj.field_D.seek(0L, (byte) 45);
+              pj.field_D.write(te.field_N.payload, -20291, 24, te.field_N.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

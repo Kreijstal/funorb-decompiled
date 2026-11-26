@@ -184,7 +184,7 @@ class fj extends IntrusiveNode {
             tj.a(2652240, 214, (byte) 19, -8 + var5, 94, 214);
             tj.a(2652240, 214, (byte) 122, 418, var5 - (-var4 - 8), 214);
             tj.a(2652240, 214, (byte) 107, 418, 418, 206);
-            pn.field_a.c(pf.field_i, 84, 306, 4243584, -1);
+            pn.field_a.c(BufferedRandomAccessFile.field_i, 84, 306, 4243584, -1);
             var6 = 234;
             tj.a(2652240, 188, (byte) 54, 556, 526, 188);
             tj.a(2652240, 188, (byte) 49, 556, 556, 260);

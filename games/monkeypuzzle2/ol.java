@@ -340,10 +340,10 @@ final class ol {
             }
           }
           this.field_b = this.field_b + this.field_i[var2 + 128 & 255];
-          dupTemp$1 = this.field_i[ch.a(1020, var3) >> 2] + (this.field_b + this.field_f);
+          dupTemp$1 = this.field_i[BufferedRandomAccessFile.a(1020, var3) >> 2] + (this.field_b + this.field_f);
           var4 = dupTemp$1;
           this.field_i[var2] = dupTemp$1;
-          dupTemp$2 = var3 + this.field_i[ch.a(var4, 261285) >> 8 >> 2];
+          dupTemp$2 = var3 + this.field_i[BufferedRandomAccessFile.a(var4, 261285) >> 8 >> 2];
           this.field_f = dupTemp$2;
           this.field_a[var2] = dupTemp$2;
         }

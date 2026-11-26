@@ -835,7 +835,7 @@ abstract class gm {
                 }
                 var2 = cd.a("publicchat_unavailable_ratedgame", -100);
                 if (var2 != null) {
-                  lc.field_l = ad.a(-29410, var2);
+                  BufferedRandomAccessFile.field_l = ad.a(-29410, var2);
                 }
                 var2 = cd.a("privatechat_friend_offline", -77);
                 if (null != var2) {
@@ -859,7 +859,7 @@ abstract class gm {
                 }
                 var2 = cd.a("runescapeclan", -100);
                 if (null != var2) {
-                  lc.field_g = ad.a(-29410, var2);
+                  BufferedRandomAccessFile.field_g = ad.a(-29410, var2);
                 }
                 var2 = cd.a("rated_membersonly", -128);
                 if (var2 != null) {

@@ -530,9 +530,9 @@ final class vd {
         var4.field_g = 11711154;
         this.field_m = param1;
         this.field_i = 3;
-        var4.a((byte) -21, 0).a(-108, 15658734).a(we.a(8947848, 124, 7829367, 10066329), (byte) 32);
-        var4.a((byte) -21, 1).a(we.a(11184810, 117, 13421772, 10066329), (byte) 32);
-        var4.a((byte) -21, 3).a(we.a(8947848, 112, 10066329, 7829367), (byte) 32).a(1, (byte) 112).a(1, false);
+        var4.a((byte) -21, 0).a(-108, 15658734).a(BufferedRandomAccessFile.a(8947848, 124, 7829367, 10066329), (byte) 32);
+        var4.a((byte) -21, 1).a(BufferedRandomAccessFile.a(11184810, 117, 13421772, 10066329), (byte) 32);
+        var4.a((byte) -21, 3).a(BufferedRandomAccessFile.a(8947848, 112, 10066329, 7829367), (byte) 32).a(1, (byte) 112).a(1, false);
         Sprite[] var5 = new Sprite[9];
         if (param0 >= -12) {
           return;
@@ -558,7 +558,7 @@ final class vd {
           discarded$1 = new ij(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ki();
           var17.a((byte) -106, var8);
-          var8.a((byte) -21, 0).a(we.a(15658734, 116, 10066329, 7829367), (byte) 32).a(-62, 1118481).b(-1, (byte) -102);
+          var8.a((byte) -21, 0).a(BufferedRandomAccessFile.a(15658734, 116, 10066329, 7829367), (byte) 32).a(-62, 1118481).b(-1, (byte) -102);
           var8.a((byte) -21, 4).a(true, 256).a(var5, (byte) 32);
           this.field_f = (WidgetRenderer) ((Object) var8);
           var9 = new Sprite[9];

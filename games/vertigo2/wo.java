@@ -222,7 +222,7 @@ final class wo {
               var10 = bh.field_y[-this.field_Y - 1];
             } else {
               if (this.field_Y > 0) {
-                var10 = im.field_c[-1 + this.field_Y];
+                var10 = BufferedRandomAccessFile.field_c[-1 + this.field_Y];
               }
             }
           }

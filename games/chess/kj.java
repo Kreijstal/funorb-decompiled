@@ -6,7 +6,7 @@ final class kj {
     private v field_d;
     private ResourceArchive field_b;
     static int field_c;
-    static lc field_a;
+    static BufferedRandomAccessFile field_a;
     static int field_h;
     static String field_f;
     static he field_g;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class gl {
+final class BoundedRandomAccessFile {
     static ba field_j;
     private RandomAccessFile field_d;
     static int field_b;
@@ -19,7 +19,7 @@ final class gl {
     protected final void finalize() throws Throwable {
         if (null != this.field_d) {
           System.out.println("");
-          this.d(100);
+          this.close(100);
         }
     }
 
@@ -30,7 +30,7 @@ final class gl {
           df.field_d = param0;
           jm.b(-1178583839);
           if (param2) {
-            gl.clearStaticReferences(74);
+            BoundedRandomAccessFile.clearStaticReferences(74);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "gl.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -98,12 +98,12 @@ final class gl {
           field_h = null;
           return;
         }
-        gl.clearStaticReferences(78);
+        BoundedRandomAccessFile.clearStaticReferences(78);
         field_c = null;
         field_h = null;
     }
 
-    final void a(int param0, byte param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, byte param1, int param2, byte[] param3) throws IOException {
         try {
           int var5_int = 5 / ((65 - param1) / 60);
           if ((this.field_g + (long)param2) > this.field_e) {
@@ -118,7 +118,7 @@ final class gl {
         }
     }
 
-    final int a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final int read(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -132,7 +132,7 @@ final class gl {
             this.field_g = this.field_g + (long)var5_int;
           }
           if (param2 != -4837) {
-            gl.clearStaticReferences(7);
+            BoundedRandomAccessFile.clearStaticReferences(7);
           }
           stackIn_5_0 = var5_int;
           return stackIn_5_0;
@@ -150,7 +150,7 @@ final class gl {
         }
     }
 
-    final void d(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_d) {
           this.field_d.close();
           this.field_d = null;
@@ -166,26 +166,26 @@ final class gl {
         field_f = (String) null;
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param0 == -9025) {
           this.field_d.seek(param1);
           this.field_g = param1;
           return;
         }
-        gl.b(-115);
+        BoundedRandomAccessFile.b(-115);
         this.field_d.seek(param1);
         this.field_g = param1;
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 1) {
-          gl.clearStaticReferences(-119);
+          BoundedRandomAccessFile.clearStaticReferences(-119);
           return this.field_d.length();
         }
         return this.field_d.length();
     }
 
-    gl(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

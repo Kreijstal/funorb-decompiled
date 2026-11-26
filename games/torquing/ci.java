@@ -79,7 +79,7 @@ final class ci {
             }
             if (null != jd.field_F) {
               try {
-                jd.field_F.a(false);
+                jd.field_F.close(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -89,7 +89,7 @@ final class ci {
               for (var1_int = 0; uj.field_b.length > var1_int; var1_int++) {
                 if (uj.field_b[var1_int] != null) {
                   try {
-                    uj.field_b[var1_int].a(false);
+                    uj.field_b[var1_int].close(false);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

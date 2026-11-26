@@ -34,22 +34,22 @@ final class hh {
           if (el.b((byte) 127)) {
             ud.field_b.e(8, 1);
             dk.b((byte) 41, 0);
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
-          k.c(-28354);
+          BufferedRandomAccessFile.c(-28354);
           return;
         }
         fm.a(0);
         gm.e((byte) -82);
         pj.d((byte) 60);
         if (!el.b((byte) 127)) {
-          k.c(-28354);
+          BufferedRandomAccessFile.c(-28354);
           return;
         }
         ud.field_b.e(8, 1);
         dk.b((byte) 41, 0);
-        k.c(-28354);
+        BufferedRandomAccessFile.c(-28354);
     }
 
     static {

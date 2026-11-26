@@ -127,7 +127,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (gl.field_y == 11 &&
           tb.field_a == 0) {
-          di.d(-4690);
+          BoundedRandomAccessFile.d(-4690);
         }
         return var2;
     }
@@ -177,7 +177,7 @@ abstract class SessionGameApplet extends GameApplet {
         ic.field_a = param5;
         uh.field_q = param3;
         q.field_d = param0;
-        di.field_d = param7;
+        BoundedRandomAccessFile.field_d = param7;
         this.c(true);
         rf.q(param1 ^ param1);
     }
@@ -456,7 +456,7 @@ abstract class SessionGameApplet extends GameApplet {
             tb.field_a == 0 &&
             gl.field_y == 11 &&
             !vc.e(false)) {
-            di.d(-4690);
+            BoundedRandomAccessFile.d(-4690);
           }
           if (tb.field_a != -1 &&
             tb.field_a != 0) {
@@ -562,12 +562,12 @@ abstract class SessionGameApplet extends GameApplet {
           bg.field_n = false;
           ea.field_n = TileRack.field_a;
           cf.a(DelayedPcmStream.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
-          if (di.field_b ||
+          if (BoundedRandomAccessFile.field_b ||
             null != lb.field_h) {
             stackIn_103_0 = 5;
-            stackIn_104_1 = !(di.field_b);
+            stackIn_104_1 = !(BoundedRandomAccessFile.field_b);
             stackIn_106_2 = lb.field_h;
-            stackIn_107_3 = !(di.field_b);
+            stackIn_107_3 = !(BoundedRandomAccessFile.field_b);
             td.a(stackIn_103_0, stackIn_104_1, stackIn_106_2, stackIn_107_3);
           }
           if (ProxySocketConnector.field_h) {
@@ -587,7 +587,7 @@ abstract class SessionGameApplet extends GameApplet {
         }
         if (10 == bi.field_L) {
           if (NodeHashTableIterator.field_f != 0) {
-            nk.field_d = cg.a((byte) -82, di.field_d);
+            nk.field_d = cg.a((byte) -82, BoundedRandomAccessFile.field_d);
           }
           bi.field_L = 11;
         }
@@ -704,7 +704,7 @@ abstract class SessionGameApplet extends GameApplet {
                   Transmogrify.field_B = null;
                 } else {
                   oi.field_i = ac.field_j;
-                  di.d(-4690);
+                  BoundedRandomAccessFile.d(-4690);
                   gl.field_y = 10;
                   ge.field_x = false;
                 }

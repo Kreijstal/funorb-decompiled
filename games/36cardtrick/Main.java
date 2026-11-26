@@ -253,7 +253,7 @@ public final class Main extends c {
                 boolean decompiledFrameRemainder2 = true;
                 boolean decompiledFrameRemainder1 = true;
                 boolean decompiledFrameRemainder0 = true;
-                tk.field_c = tk.field_c + 2;
+                BufferedRandomAccessFile.field_c = BufferedRandomAccessFile.field_c + 2;
                 var2_int = ff.field_b;
                 if ((var2_int != 9 ||
                   var3 != 0) &&
@@ -302,7 +302,7 @@ public final class Main extends c {
                       ra.field_d = sk.a(4, (byte) 125);
                       if (0 < ai.field_m &&
                         !ImageProducerRasterBuffer.field_n) {
-                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 80, 3);
+                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
                       }
                       dj.field_a = (byte)(rk.field_X >> 8);
                       if (var3 != 0) {
@@ -489,8 +489,8 @@ public final class Main extends c {
         var6 = field_T;
         try {
           jl.field_h = jl.field_h + ((bc.field_a << 1) + bc.field_a);
-          tk.field_a = tk.field_a + 3;
-          ol.field_W = ol.field_W + (tk.field_a << 1);
+          BufferedRandomAccessFile.field_a = BufferedRandomAccessFile.field_a + 3;
+          ol.field_W = ol.field_W + (BufferedRandomAccessFile.field_a << 1);
           nb.field_e = nb.field_e | ue.field_d;
           bc.field_a = bc.field_a + 2;
           q.field_i = q.field_i - 1;
@@ -669,7 +669,7 @@ public final class Main extends c {
                     decompiledFrameRemainder0 = (0 != dl.field_h);
                     if (decompiledFrameRemainder0) {
                       var2_int = eg.field_b * (640 ^ ij.field_e);
-                      tk.field_c = tk.field_c + 8;
+                      BufferedRandomAccessFile.field_c = BufferedRandomAccessFile.field_c + 8;
                       jl.field_h = jl.field_h + var2_int;
                       ol.field_W = ol.field_W - var2_int;
                       ByteArrayStore.field_b = ByteArrayStore.field_b + (af.field_ob << 3);
@@ -1094,7 +1094,7 @@ public final class Main extends c {
           if (ai.field_m > 0 &&
             !ImageProducerRasterBuffer.field_n &&
             !dl.d(0)) {
-            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, tk.field_c, (byte) 70, 3);
+            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(ai.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
           }
           AccountRequestState.a((byte) 53, lc.field_a[0]);
           this.a(11246, 6, 3, false);
@@ -1154,7 +1154,7 @@ public final class Main extends c {
           this.field_H[var2_int] = this.field_H[var3];
           this.field_H[var3] = (byte) var4;
           ByteArrayStore.field_b = ByteArrayStore.field_b + af.field_ob;
-          tk.field_c = tk.field_c + 1;
+          BufferedRandomAccessFile.field_c = BufferedRandomAccessFile.field_c + 1;
           rj.field_p = rj.field_p - af.field_ob;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1199,7 +1199,7 @@ public final class Main extends c {
                 break scanLoop1;
               }
               if (stackIn_15_0 != stackIn_8_1) {
-                wk.sleepMillis((byte) -107, 1L);
+                BoundedRandomAccessFile.sleepMillis((byte) -107, 1L);
                 var3_int++;
                 continue;
               }
@@ -2105,7 +2105,7 @@ public final class Main extends c {
           re.clearStaticReferences(-4);
           DiskCacheWorker.clearStaticReferences((byte) 14);
           eb.clearStaticReferences(true);
-          tk.resetStaticState(~param0);
+          BufferedRandomAccessFile.resetStaticState(~param0);
           BufferedSocket.resetStaticState((byte) 23);
           gi.clearStaticReferences(1159353185);
           AudioOutput.clearStaticReferences();
@@ -2834,17 +2834,17 @@ public final class Main extends c {
                   this.field_K = this.field_K - 1;
                   af.field_ob = af.field_ob - 512;
                   ai.field_m = ai.field_m + 2;
-                  ByteArrayStore.field_b = ByteArrayStore.field_b - (tk.field_c << 9);
-                  rj.field_p = rj.field_p + (tk.field_c << 9);
+                  ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c << 9);
+                  rj.field_p = rj.field_p + (BufferedRandomAccessFile.field_c << 9);
                 } else {
                   PacketBuffer.a(ve.field_c, param0 ^ 13426);
                   this.a(11246, 7, 3, false);
                 }
               } else {
-                ByteArrayStore.field_b = ByteArrayStore.field_b - (tk.field_c * dg.field_J << 7);
+                ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * dg.field_J << 7);
                 this.field_J = this.field_J - 1;
                 ai.field_m = ai.field_m + dg.field_J;
-                rj.field_p = rj.field_p + ((tk.field_c + 1) * dg.field_J << 7);
+                rj.field_p = rj.field_p + ((BufferedRandomAccessFile.field_c + 1) * dg.field_J << 7);
                 af.field_ob = af.field_ob - (dg.field_J << 7);
               }
               decompiledFrameRemainder2 = false;
@@ -2861,7 +2861,7 @@ public final class Main extends c {
               (decompiledFrameRemainder1)) {
               var2_int = this.o((byte) 30);
               if (-1 != var2_int) {
-                tk.field_a = tk.field_a + 1;
+                BufferedRandomAccessFile.field_a = BufferedRandomAccessFile.field_a + 1;
                 jl.field_h = jl.field_h + bc.field_a;
                 if (this.field_N == -1) {
                   this.field_N = var2_int;
@@ -2969,19 +2969,19 @@ public final class Main extends c {
               ai.field_m = ai.field_m + var4;
               af.field_ob = af.field_ob - (var4 << 7);
               rj.field_p = rj.field_p + (var4 << 7);
-              var4 = var4 * tk.field_c << 7;
+              var4 = var4 * BufferedRandomAccessFile.field_c << 7;
               bc.field_a = bc.field_a + 1;
               ByteArrayStore.field_b = ByteArrayStore.field_b - var4;
-              ol.field_W = ol.field_W + tk.field_a;
+              ol.field_W = ol.field_W + BufferedRandomAccessFile.field_a;
               rj.field_p = rj.field_p + var4;
               fieldTemp$1 = this.field_Q - 1;
               this.field_Q = this.field_Q - 1;
               if (fieldTemp$1 == 0) {
-                ByteArrayStore.field_b = ByteArrayStore.field_b - (tk.field_c * 50 << 7);
+                ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * 50 << 7);
                 af.field_ob = af.field_ob - 6400;
                 ai.field_m = ai.field_m + 50;
                 rj.field_p = rj.field_p + 6400;
-                rj.field_p = rj.field_p + (tk.field_c * 50 << 7);
+                rj.field_p = rj.field_p + (BufferedRandomAccessFile.field_c * 50 << 7);
                 this.c(-117, 4);
                 return;
               }

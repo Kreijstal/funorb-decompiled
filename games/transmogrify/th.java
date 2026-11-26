@@ -41,9 +41,9 @@ final class th {
             field_e = (String) null;
           }
           var2_intLifetime2 = param1.readUnsignedByte((byte) 127);
-          di.field_e = 65536 & var2_intLifetime2 << 16;
+          BoundedRandomAccessFile.field_e = 65536 & var2_intLifetime2 << 16;
           ug.field_b = ug.field_b + (var2_intLifetime2 >> 1);
-          di.field_e = di.field_e + param1.readUnsignedShort((byte) -104);
+          BoundedRandomAccessFile.field_e = BoundedRandomAccessFile.field_e + param1.readUnsignedShort((byte) -104);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "th.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

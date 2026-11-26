@@ -38,8 +38,8 @@ final class sb {
             var2 = var9;
             if (null != gf.field_g) {
               try {
-                gf.field_g.a((byte) 57, 0L);
-                gf.field_g.a(0, var10);
+                gf.field_g.seek((byte) 57, 0L);
+                gf.field_g.readFully(0, var10);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var11[var3_int]) {
                     continue;

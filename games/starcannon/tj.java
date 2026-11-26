@@ -254,7 +254,7 @@ final class tj extends kf {
         id[] var1 = new id[bj.field_b];
         int var2Lifetime1;
         for (var2 = 0; var2 < bj.field_b; var2++) {
-          var1[var2] = new id(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], og.field_c[var2], of.field_g);
+          var1[var2] = new id(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], og.field_c[var2], of.field_g);
         }
         var2Lifetime1 = -67 / ((-49 - param0) / 58);
         rc.b((byte) 123);

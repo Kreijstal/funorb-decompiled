@@ -7,7 +7,7 @@ final class bd extends IntrusiveNode {
     static int[] field_l;
     int field_h;
     static int[] field_m;
-    static be[] field_i;
+    static BufferedRandomAccessFile[] field_i;
 
     public static void clearStaticReferences(int param0) {
         field_j = null;
@@ -27,7 +27,7 @@ final class bd extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            field_i = (be[]) null;
+            field_i = (BufferedRandomAccessFile[]) null;
           }
           stackIn_3_0 = DirectByteStorage.a(false, param0, -84);
           return stackIn_3_0;

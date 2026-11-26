@@ -577,7 +577,7 @@ final class AccountRequestState {
           }
           var2Lifetime64 = jk.a(1, "barriername");
           if (null != var2Lifetime64) {
-            gl.field_c = ProxyAuthenticationRequiredException.a(var2Lifetime64, -12465);
+            BoundedRandomAccessFile.field_c = ProxyAuthenticationRequiredException.a(var2Lifetime64, -12465);
           }
           var2Lifetime65 = jk.a(1, "bonusscore");
           if (var2Lifetime65 != null) {
@@ -713,7 +713,7 @@ final class AccountRequestState {
           }
           var2Lifetime98 = jk.a(1, "orbpoints");
           if (null != var2Lifetime98) {
-            dj.field_e = ProxyAuthenticationRequiredException.a(var2Lifetime98, -12465);
+            BufferedRandomAccessFile.field_e = ProxyAuthenticationRequiredException.a(var2Lifetime98, -12465);
           }
           var2Lifetime99 = jk.a(1, "achievethisgame");
           if (var2Lifetime99 != null) {

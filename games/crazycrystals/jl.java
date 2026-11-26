@@ -131,8 +131,8 @@ final class jl {
           Throwable decompiledCaughtException = null;
           if (fp.field_e != null) {
             try {
-              fp.field_e.a(0L, -1);
-              fp.field_e.a(126, kd.field_n.payload, kd.field_n.position, 24);
+              fp.field_e.seek(0L, -1);
+              fp.field_e.write(126, kd.field_n.payload, kd.field_n.position, 24);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

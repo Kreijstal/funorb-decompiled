@@ -115,7 +115,7 @@ final class sj {
         int var10_intLifetime3;
         try {
           sb.field_r = vd.a(true, "", param0, param3, "big_font");
-          pl.field_e = vd.a(true, "kartika13", param2, param1, "");
+          BoundedRandomAccessFile.field_e = vd.a(true, "kartika13", param2, param1, "");
           ke.field_i = ma.a(param3, "background", param4 + 16711680, "");
           fi.field_a = lb.a(false, "", param3, "river_background");
           var13 = DiskCacheWorker.a("", "jungle_background", param3, false);
@@ -279,7 +279,7 @@ final class sj {
           for (var11 = 0; var11 < var20.length; var11++) {
             var10[var11] = -3 + var18[var11].field_l;
           }
-          pl.field_e.a(var9, var20);
+          BoundedRandomAccessFile.field_e.a(var9, var20);
           ac.field_a.setAsRasterTarget((byte) 110);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "sj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

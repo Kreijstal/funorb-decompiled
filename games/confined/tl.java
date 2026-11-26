@@ -45,7 +45,7 @@ final class tl {
             qa.field_c = param3;
             if (null != ld.field_k.field_n) {
               try {
-                KeyboardInput.field_b = new pf(ld.field_k.field_n, 64, 0);
+                KeyboardInput.field_b = new BufferedRandomAccessFile(ld.field_k.field_n, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

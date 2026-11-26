@@ -20,9 +20,9 @@ final class df extends wj {
           SoftwareRasterizer.setClip(80, 0, 560, 480);
           for (var1_int = 0; fg.field_a > var1_int; var1_int++) {
             if (n.field_d[var1_int][0] > 0.0f) {
-              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].c((int)pl.field_f[var1_int][0], (int)pl.field_f[var1_int][1]);
+              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].c((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
             } else {
-              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].f((int)pl.field_f[var1_int][0], (int)pl.field_f[var1_int][1]);
+              MouseWheelInput.field_a[ul.field_O[var1_int]][AccountNameAvailabilityValidator.field_r[var1_int]].f((int)BoundedRandomAccessFile.field_f[var1_int][0], (int)BoundedRandomAccessFile.field_f[var1_int][1]);
             }
           }
           SoftwareRasterizer.setClip(0, 0, 640, 480);
@@ -231,8 +231,8 @@ final class df extends wj {
             var2 = var6;
             if (hj.field_D != null) {
               try {
-                hj.field_D.a((byte) 101, 0L);
-                hj.field_D.a(3805, var6);
+                hj.field_D.seek((byte) 101, 0L);
+                hj.field_D.readFully(3805, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var2[var3_int]) {
                     continue;

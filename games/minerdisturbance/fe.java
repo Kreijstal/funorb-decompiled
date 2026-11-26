@@ -4,7 +4,7 @@
 import java.util.*;
 
 class fe extends IntrusiveNode {
-    static me field_z;
+    static BufferedRandomAccessFile field_z;
     static String field_C;
     rm field_y;
     nf field_B;

@@ -43,7 +43,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (this == jj.field_a &&
-            !tk.field_q) {
+            !BufferedRandomAccessFile.field_q) {
             t.field_h = 0L;
             return;
           }
@@ -113,10 +113,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (tk.field_q) {
+            if (BufferedRandomAccessFile.field_q) {
               return;
             }
-            tk.field_q = true;
+            BufferedRandomAccessFile.field_q = true;
           }
           if (uh.field_i != null) {
             uh.field_i.destroy();
@@ -336,12 +336,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void destroy() {
         if (jj.field_a != this ||
-          tk.field_q) {
+          BufferedRandomAccessFile.field_q) {
           return;
         }
         try {
           t.field_h = id.correctedCurrentTimeMillis(56);
-          wk.sleepMillis((byte) -123, 5000L);
+          BoundedRandomAccessFile.sleepMillis((byte) -123, 5000L);
           Main.field_W = null;
           this.a(false, false);
         } catch (RuntimeException runtimeException) {
@@ -602,7 +602,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     public final void stop() {
         if (this != jj.field_a ||
-          tk.field_q) {
+          BufferedRandomAccessFile.field_q) {
           return;
         }
         try {
@@ -648,7 +648,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException var2_ref = null;
         try {
           if (this == jj.field_a &&
-            !tk.field_q) {
+            !BufferedRandomAccessFile.field_q) {
             ii.field_a = true;
             if (hi.field_a &&
               -ej.field_jb + id.correctedCurrentTimeMillis(124) > 1000L) {
@@ -1043,7 +1043,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               jj.field_a = this;
               sk.field_d = 0;
               rh.field_k = 0;
-              tk.field_o = mk.g(-118);
+              BufferedRandomAccessFile.field_o = mk.g(-118);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param1, param2, true);
               jk.field_a = dupTemp$0;
               Main.field_W = dupTemp$0;
@@ -1053,7 +1053,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var8 = jk.field_a.requestThreadStart(0, 1, (Runnable) (this));
               while (true) {
                 if (var8.status == 0) {
-                  wk.sleepMillis((byte) -94, 10L);
+                  BoundedRandomAccessFile.sleepMillis((byte) -94, 10L);
                   if (var9 == 0) {
                     continue;
                   }

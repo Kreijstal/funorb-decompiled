@@ -97,7 +97,7 @@ final class GzipDecompressor {
         mg.field_x = null;
         rg.field_c = null;
         ci.field_b = null;
-        be.field_f = (byte[][]) null;
+        BufferedRandomAccessFile.field_f = (byte[][]) null;
         bd.field_m = null;
         if (param0 == 12428) {
           pb.field_h = null;

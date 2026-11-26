@@ -3,7 +3,7 @@
  */
 final class uj extends IntrusiveNode {
     static rf field_i;
-    static ge field_h;
+    static BufferedRandomAccessFile field_h;
     static BufferedSocket field_j;
 
     public static void clearDeclaredStaticReferences(int param0) {
@@ -108,7 +108,7 @@ final class uj extends IntrusiveNode {
           return 1;
         }
         if (param0 != 85) {
-          field_h = (ge) null;
+          field_h = (BufferedRandomAccessFile) null;
         }
         return -1;
     }

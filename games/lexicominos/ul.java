@@ -454,7 +454,7 @@ final class ul extends IntrusiveNode {
           we.field_i = td.a("commonui", "frame_bottom", param0, 22306);
           Lexicominos.field_I = df.a("commonui", "jagex_logo_grey", param0, (byte) -123);
           uc.field_hb = td.a("commonui", "button", param0, 22306);
-          be.field_b = uk.a("validation", "commonui", -909811167, param0);
+          BufferedRandomAccessFile.field_b = uk.a("validation", "commonui", -909811167, param0);
           cl.field_T = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo12", false, param1, param0));
           ql.field_Q = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14", false, param1, param0));
           FullscreenFocusCanvas.field_c = (BitmapFont) ((Object) MouseWheelInput.a("commonui", "arezzo14bold", false, param1, param0));

@@ -4,7 +4,7 @@
 final class cf {
     static boolean[] field_b;
     int field_a;
-    static hd[] field_c;
+    static BufferedRandomAccessFile[] field_c;
     static String field_d;
     PcmSample field_e;
     static RgbSprite field_f;
@@ -63,7 +63,7 @@ final class cf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 100) {
-            field_c = (hd[]) null;
+            field_c = (BufferedRandomAccessFile[]) null;
           }
           stackIn_3_0 = l.a(PcmSampleStream.b(param1, 100, param2), 0);
           return stackIn_3_0;

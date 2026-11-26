@@ -914,8 +914,8 @@ final class nk {
                   }
                   var14Lifetime1 = var14Lifetime1 + 20 * this.a(240 - var15 + 30, 8840959, 480, 1, bb.field_a[var11], var14Lifetime1, 0, -300 + (560 + var15 * 2), 20066, 20);
                   var14Lifetime1 += 10;
-                  var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, jf.a(jf.field_g, new String[]{Integer.toString(bf.field_j[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
-                  var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, jf.a(ha.field_m, new String[]{Integer.toString(jg.field_A[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
+                  var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, BufferedRandomAccessFile.a(BufferedRandomAccessFile.field_g, new String[]{Integer.toString(bf.field_j[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
+                  var14Lifetime1 = var14Lifetime1 + this.a(270, 8840959, 480, 1, BufferedRandomAccessFile.a(ha.field_m, new String[]{Integer.toString(jg.field_A[var11])}, (byte) -126), var14Lifetime1, 0, 260, 20066, 20) * 20;
                 }
                 var7Lifetime3Lifetime1 += 40;
               }

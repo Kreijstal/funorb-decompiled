@@ -332,7 +332,7 @@ final class ei extends IntrusiveNode {
                           }
                         }
                         param9.c((byte) -123);
-                        bn.a(3, param9);
+                        BufferedRandomAccessFile.a(3, param9);
                       }
                     }
                   }

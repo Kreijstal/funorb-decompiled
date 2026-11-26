@@ -336,7 +336,7 @@ final class fi extends qe {
           return;
         }
         try {
-          dupTemp$0 = hd.a(false, param0, "da_guardian_room_" + param2);
+          dupTemp$0 = BufferedRandomAccessFile.a(false, param0, "da_guardian_room_" + param2);
           var4.field_a = dupTemp$0;
           var4.field_x = dupTemp$0;
         } catch (RuntimeException runtimeException) {

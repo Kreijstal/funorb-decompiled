@@ -27,7 +27,7 @@ final class of {
         de.field_c[19] = dk.field_a;
         de.field_c[12] = SecondaryNodeDeque.field_f;
         de.field_c[8] = ol.field_c;
-        de.field_c[15] = we.field_b;
+        de.field_c[15] = BufferedRandomAccessFile.field_b;
         de.field_c[5] = ia.field_i;
         de.field_c[6] = ia.field_i;
         de.field_c[0] = vh.field_j;

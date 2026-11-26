@@ -55,7 +55,7 @@ final class AccountServiceResult {
               de.field_f != 10 &&
               de.field_f != 11) {
               if (de.field_f == 80 &&
-                im.a(-1)) {
+                BufferedRandomAccessFile.a(-1)) {
                 MouseWheelInput.field_a = true;
                 return true;
               }
@@ -63,7 +63,7 @@ final class AccountServiceResult {
             }
             return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
           }
-          if (!im.a(-1)) {
+          if (!BufferedRandomAccessFile.a(-1)) {
             return false;
           }
           stackIn_54_0 = (!NodeHashTableIterator.a(param0, param3, 78)) ? 0 : 1;
@@ -84,7 +84,7 @@ final class AccountServiceResult {
             if (de.field_f != 10 &&
               de.field_f != 11) {
               if (de.field_f == 80 &&
-                im.a(-1)) {
+                BufferedRandomAccessFile.a(-1)) {
                 MouseWheelInput.field_a = true;
                 return true;
               }
@@ -92,7 +92,7 @@ final class AccountServiceResult {
             }
             return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
           }
-          if (!im.a(-1)) {
+          if (!BufferedRandomAccessFile.a(-1)) {
             return false;
           }
           stackIn_23_0 = (!NodeHashTableIterator.a(param0, param3, 78)) ? 0 : 1;

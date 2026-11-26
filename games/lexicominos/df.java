@@ -55,7 +55,7 @@ final class df {
         var1 = new RgbSprite[th.field_t];
         for (var2 = 0; var2 < th.field_t; var2++) {
           var3 = pb.field_h[var2] * bd.field_m[var2];
-          var20 = be.field_f[var2];
+          var20 = BufferedRandomAccessFile.field_f[var2];
           if (!me.field_w[var2]) {
             var9 = new int[var3];
             var21 = var9;

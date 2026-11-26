@@ -75,7 +75,7 @@ final class ej {
           if (param0 != -39) {
             return;
           }
-          k.a(0, hf.field_e[var2]);
+          BufferedRandomAccessFile.a(0, hf.field_e[var2]);
           lk.field_D.field_k = false;
           si.field_y.field_k = true;
           c.field_U = false;

@@ -44,7 +44,7 @@ final class th {
     }
 
     final static boolean a(int param0, int param1, int param2) {
-        tk.field_c = tk.field_c + 1;
+        BufferedRandomAccessFile.field_c = BufferedRandomAccessFile.field_c + 1;
         rj.field_p = rj.field_p - af.field_ob;
         ByteArrayStore.field_b = ByteArrayStore.field_b + af.field_ob;
         int var3 = param1 << param2;
@@ -58,10 +58,10 @@ final class th {
           return true;
         }
         if (!dl.d(0)) {
-          uh.a(tk.field_a, (byte) 119, 4, param0, ol.field_W, param2, jl.field_h, bc.field_a);
+          uh.a(BufferedRandomAccessFile.field_a, (byte) 119, 4, param0, ol.field_W, param2, jl.field_h, bc.field_a);
           return true;
         }
-        ij.field_h.addLast(new dh(param2, param0, tk.field_a, jl.field_h, ol.field_W, bc.field_a), 27362);
+        ij.field_h.addLast(new dh(param2, param0, BufferedRandomAccessFile.field_a, jl.field_h, ol.field_W, bc.field_a), 27362);
         return true;
     }
 

@@ -167,7 +167,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_t != null) {
             try {
-              this.field_t.a(-31576);
+              this.field_t.close(-31576);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               iOException = (IOException) (Object) decompiledCaughtException;
@@ -175,7 +175,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_v != null) {
             try {
-              this.field_v.a(-31576);
+              this.field_v.close(-31576);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               iOException = (IOException) (Object) decompiledCaughtException;
@@ -185,7 +185,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2 = 0; var2 < this.field_q.length; var2++) {
               if (this.field_q[var2] != null) {
                 try {
-                  this.field_q[var2].a(-31576);
+                  this.field_q[var2].close(-31576);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -195,7 +195,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_p != null) {
             try {
-              this.field_p.a(-31576);
+              this.field_p.close(-31576);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               iOException = (IOException) (Object) decompiledCaughtException;

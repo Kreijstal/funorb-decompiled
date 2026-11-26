@@ -159,7 +159,7 @@ final class vj extends kc implements ga {
           if (param1 == oj.field_j) {
             var3 = wc.field_h;
           } else {
-            if (cb.field_d == param1) {
+            if (BoundedRandomAccessFile.field_d == param1) {
               var3 = kd.field_D;
               this.field_f = this.field_f + 10;
               if (wi.a(-10214)) {

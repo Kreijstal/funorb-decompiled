@@ -388,7 +388,7 @@ final class vh extends eh {
         int var13Lifetime1;
         var19 = StarCannon.field_A;
         try {
-          var5_int = td.bitLength(3 * (-param0 + param4), (byte) 41);
+          var5_int = BufferedRandomAccessFile.bitLength(3 * (-param0 + param4), (byte) 41);
           if (param3 != -6787) {
             vh.a((ia) null, -87);
           }

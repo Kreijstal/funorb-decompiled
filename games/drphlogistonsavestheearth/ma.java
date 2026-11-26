@@ -141,7 +141,7 @@ class ma extends jf implements ke {
                 }
               }
             } else {
-              var6.a(false, ge.field_g, 8);
+              var6.a(false, BufferedRandomAccessFile.field_g, 8);
             }
           }
           this.a(33, var6);

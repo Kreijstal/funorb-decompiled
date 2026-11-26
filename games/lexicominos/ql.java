@@ -197,7 +197,7 @@ abstract class ql extends al {
         if (param0) {
           return (IndexedSprite) null;
         }
-        IndexedSprite var1 = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], be.field_f[0], ci.field_b);
+        IndexedSprite var1 = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[0], rg.field_c[0], pb.field_h[0], bd.field_m[0], BufferedRandomAccessFile.field_f[0], ci.field_b);
         GzipDecompressor.a(12428);
         return var1;
     }

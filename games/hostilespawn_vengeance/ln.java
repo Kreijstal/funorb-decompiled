@@ -73,7 +73,7 @@ final class ln {
             var6 = var6 | 16;
           }
           s.field_b.d(param1 + 185, var6);
-          var7 = de.a(-110, bn.c(-1));
+          var7 = de.a(-110, BufferedRandomAccessFile.c(-1));
           if (var7 == null) {
             var7 = "";
           }
@@ -344,7 +344,7 @@ final class ln {
 
     ln(boolean param0) {
         if (param0) {
-          this.field_o = bn.field_b;
+          this.field_o = BufferedRandomAccessFile.field_b;
         } else {
           this.field_o = null;
         }

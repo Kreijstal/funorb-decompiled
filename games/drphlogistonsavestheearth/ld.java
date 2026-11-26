@@ -592,7 +592,7 @@ final class ld {
                 this.c(true);
               } else {
                 if (var2 == 4) {
-                  this.a(false, ge.field_p);
+                  this.a(false, BufferedRandomAccessFile.field_p);
                 } else {
                   if (5 == var2) {
                     this.a(false, th.field_b);
@@ -1907,7 +1907,7 @@ final class ld {
               }
               if (!ie.field_u[var14]) {
                 if (hb.field_g <= 0) {
-                  ge.field_d.b(var9, var10);
+                  BufferedRandomAccessFile.field_d.b(var9, var10);
                 } else {
                   tl.field_P.b(var9, var10);
                 }
@@ -1966,7 +1966,7 @@ final class ld {
           if (var15 == 0) {
             if (!ie.field_u[var14Lifetime1] &&
               hb.field_g <= 0) {
-              stackIn_67_0 = ge.field_d;
+              stackIn_67_0 = BufferedRandomAccessFile.field_d;
             } else {
               stackIn_67_0 = tl.field_P;
             }
@@ -1998,7 +1998,7 @@ final class ld {
           }
         }
         if (5 == this.field_c) {
-          var25.c(ge.field_i + ": " + sd.field_a.field_H, 310, var25.field_E + (150 + var4), 4210752, -1);
+          var25.c(BufferedRandomAccessFile.field_i + ": " + sd.field_a.field_H, 310, var25.field_E + (150 + var4), 4210752, -1);
         }
         return;
     }

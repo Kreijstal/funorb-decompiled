@@ -45,7 +45,7 @@ class d extends UiWidget {
             mp.field_b <= 0) {
             return;
           }
-          if (im.field_g) {
+          if (BufferedRandomAccessFile.field_g) {
             SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_e, td.field_c.field_C);
             wc.field_m.b(param1, 0);
           }

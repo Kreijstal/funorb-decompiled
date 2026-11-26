@@ -18,7 +18,7 @@ final class em extends ButtonWidget {
           if (param0 <= 84) {
             field_B = 72;
           }
-          stackIn_5_0 = (null != ch.a(param1, -1));
+          stackIn_5_0 = (null != BufferedRandomAccessFile.a(param1, -1));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,17 +45,17 @@ final class em extends ButtonWidget {
           try {
             var6 = null;
             if (null != rk.field_g.field_t) {
-              ah.field_f = new ch(rk.field_g.field_t, 5200, 0);
+              ah.field_f = new BufferedRandomAccessFile(rk.field_g.field_t, 5200, 0);
               rk.field_g.field_t = null;
-              var6 = new SectorCacheStore(255, ah.field_f, new ch(rk.field_g.field_i, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ah.field_f, new BufferedRandomAccessFile(rk.field_g.field_i, 12000, 0), 2097152);
             }
             var7 = null;
             if (ah.field_f != null) {
               if (bl.field_o == null) {
-                bl.field_o = new ch[rk.field_g.field_e.length];
+                bl.field_o = new BufferedRandomAccessFile[rk.field_g.field_e.length];
               }
               if (null == bl.field_o[param1]) {
-                bl.field_o[param1] = new ch(rk.field_g.field_e[param1], 12000, 0);
+                bl.field_o[param1] = new BufferedRandomAccessFile(rk.field_g.field_e[param1], 12000, 0);
                 rk.field_g.field_e[param1] = null;
               }
               var7 = new SectorCacheStore(param1, ah.field_f, bl.field_o[param1], 2097152);

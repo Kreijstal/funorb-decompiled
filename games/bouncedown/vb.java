@@ -79,7 +79,7 @@ final class vb implements fc {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (NodeHashTableIterator.field_a == null &&
-            !ok.a(false, 122)) {
+            !BoundedRandomAccessFile.a(false, 122)) {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
@@ -160,7 +160,7 @@ final class vb implements fc {
                 pe.field_d = -1;
                 wa.field_d = var9Lifetime1;
               } else {
-                qb.a(jf.b(false), 3);
+                qb.a(BufferedRandomAccessFile.b(false), 3);
                 lk.field_p = new Boolean(pb.a(jc.field_g, (byte) 87));
                 jc.field_g.position = 0;
               }

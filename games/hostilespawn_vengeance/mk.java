@@ -14,7 +14,7 @@ final class mk extends vd implements nk, qk, kn {
     static nc field_L;
     private sf field_N;
     private sf field_F;
-    static bn field_K;
+    static BufferedRandomAccessFile field_K;
     private sf field_E;
     private ph field_R;
     private sf field_U;

@@ -589,7 +589,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           uc.clearStaticReferences(0);
           ob.resetStaticState(12554);
           pk.clearStaticReferences(120);
-          qa.a(param0 - 6231);
+          BufferedRandomAccessFile.a(param0 - 6231);
           BufferedSocket.clearStaticReferences((byte) 45);
           bn.clearStaticReferences((byte) -3);
           kp.resetStaticState(false);

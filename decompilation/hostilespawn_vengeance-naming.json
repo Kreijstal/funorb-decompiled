@@ -476,6 +476,14 @@
       "renamedSymbol": "C:RgbSprite"
     },
     {
+      "symbol": "C:bn",
+      "originalName": "bn",
+      "to": "BufferedRandomAccessFile",
+      "evidence": "BufferedRandomAccessFile source-purpose review: concrete private file/buffer state,all instance bodies,typed constructors and IO callers;preserve existing behavior and full primitive parameter domains.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BufferedRandomAccessFile"
+    },
+    {
       "symbol": "C:ci",
       "originalName": "ci",
       "to": "MouseInput",
@@ -530,6 +538,14 @@
       "evidence": "Bucket array of IntrusiveNode sentinels with key lookup and insertion.",
       "confidence": "reviewed",
       "renamedSymbol": "C:IntrusiveNodeHashTable"
+    },
+    {
+      "symbol": "C:ee",
+      "originalName": "ee",
+      "to": "BoundedRandomAccessFile",
+      "evidence": "BoundedRandomAccessFile source-purpose review: concrete private file/buffer state,all instance bodies,typed constructors and IO callers;preserve existing behavior and full primitive parameter domains.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:BoundedRandomAccessFile"
     },
     {
       "symbol": "C:ef",
@@ -1628,12 +1644,76 @@
       "renamedSymbol": "M:bm.clearStaticReferences(I)V"
     },
     {
+      "symbol": "M:bn.a(I)V",
+      "originalName": "a",
+      "to": "fillReadBuffer",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.fillReadBuffer(I)V"
+    },
+    {
+      "symbol": "M:bn.a(II[BB)V",
+      "originalName": "a",
+      "to": "write",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.write(II[BB)V"
+    },
+    {
+      "symbol": "M:bn.a(JB)V",
+      "originalName": "a",
+      "to": "seek",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.seek(JB)V"
+    },
+    {
       "symbol": "M:bn.a(Z)V",
       "originalName": "a",
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 4 null writes to 4 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 b6513445e97ea842cc371d7b50d59e87e6443fd0598f2b3ff046220533140476.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bn.clearStaticReferences(Z)V"
+      "renamedSymbol": "M:BufferedRandomAccessFile.clearStaticReferences(Z)V"
+    },
+    {
+      "symbol": "M:bn.a([BB)V",
+      "originalName": "a",
+      "to": "readFully",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.readFully([BB)V"
+    },
+    {
+      "symbol": "M:bn.a([BBII)V",
+      "originalName": "a",
+      "to": "readFully",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.readFully([BBII)V"
+    },
+    {
+      "symbol": "M:bn.d(I)J",
+      "originalName": "d",
+      "to": "length",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.length(I)J"
+    },
+    {
+      "symbol": "M:bn.e(I)V",
+      "originalName": "e",
+      "to": "flush",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.flush(I)V"
+    },
+    {
+      "symbol": "M:bn.f(I)V",
+      "originalName": "f",
+      "to": "close",
+      "evidence": "Source-purpose review: BufferedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedRandomAccessFile.close(I)V"
     },
     {
       "symbol": "M:c.a(Z)V",
@@ -2004,12 +2084,52 @@
       "renamedSymbol": "M:IntrusiveNodeHashTable.get(JI)LIntrusiveNode;"
     },
     {
+      "symbol": "M:ee.a(I)J",
+      "originalName": "a",
+      "to": "length",
+      "evidence": "Source-purpose review: BoundedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.length(I)J"
+    },
+    {
+      "symbol": "M:ee.a(IJ)V",
+      "originalName": "a",
+      "to": "seek",
+      "evidence": "Source-purpose review: BoundedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.seek(IJ)V"
+    },
+    {
+      "symbol": "M:ee.a(I[BII)V",
+      "originalName": "a",
+      "to": "write",
+      "evidence": "Source-purpose review: BoundedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.write(I[BII)V"
+    },
+    {
+      "symbol": "M:ee.a([BZII)I",
+      "originalName": "a",
+      "to": "read",
+      "evidence": "Source-purpose review: BoundedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.read([BZII)I"
+    },
+    {
       "symbol": "M:ee.b(I)V",
       "originalName": "b",
       "to": "clearStaticReferences",
       "evidence": "Source-purpose review: Clears 5 owned static reference fields by null assignment. Full source-bound restricted-effect parse permits only these null stores, primitive guard/local expressions, conditional returns, and direct self calls (1 sites). No external calls or foreign field/array effects. Preserve modifiers,full primitive domains,casts,sentinel control flow,self recursion/overflow,division exceptions and original write/evaluation order. Effect parser passed7positive/14hostile fixtures;representative bodies/callers separately reviewed;all original caller bindings retained. Cleanup synonym selected to avoid inherited or same-signature name collisions;all unselected meaningful names preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:ee.clearStaticReferences(I)V"
+      "renamedSymbol": "M:BoundedRandomAccessFile.clearStaticReferences(I)V"
+    },
+    {
+      "symbol": "M:ee.c(I)V",
+      "originalName": "c",
+      "to": "close",
+      "evidence": "Source-purpose review: BoundedRandomAccessFile source-purpose review: owned file/buffer fields,all constructor/instance operation bodies and incoming caller/construction contexts verified. Preserve full primitive domains,all guards,IO/copy/store/arithmetic/exception order and literals. Contracts catalog-buffered-file-access-1-method-contracts-34-not-applied.json.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BoundedRandomAccessFile.close(I)V"
     },
     {
       "symbol": "M:eg.c(I)V",
@@ -6104,9 +6224,9 @@
     },
     {
       "symbol": "C:bn",
-      "renamedSymbol": "C:bn",
+      "renamedSymbol": "C:BufferedRandomAccessFile",
       "originalName": "bn",
-      "renamedName": "bn",
+      "renamedName": "BufferedRandomAccessFile",
       "declaration": {
         "file": "bn.java",
         "start": 69,
@@ -6511,9 +6631,9 @@
     },
     {
       "symbol": "C:ee",
-      "renamedSymbol": "C:ee",
+      "renamedSymbol": "C:BoundedRandomAccessFile",
       "originalName": "ee",
-      "renamedName": "ee",
+      "renamedName": "BoundedRandomAccessFile",
       "declaration": {
         "file": "ee.java",
         "start": 69,
@@ -11912,7 +12032,7 @@
     },
     {
       "symbol": "F:bn.field_a:I",
-      "renamedSymbol": "F:bn.field_a:I",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_a:I",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -11923,7 +12043,7 @@
     },
     {
       "symbol": "F:bn.field_b:[I",
-      "renamedSymbol": "F:bn.field_b:[I",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_b:[I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -11934,7 +12054,7 @@
     },
     {
       "symbol": "F:bn.field_c:J",
-      "renamedSymbol": "F:bn.field_c:J",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_c:J",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -11945,7 +12065,7 @@
     },
     {
       "symbol": "F:bn.field_d:[B",
-      "renamedSymbol": "F:bn.field_d:[B",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_d:[B",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -11956,7 +12076,7 @@
     },
     {
       "symbol": "F:bn.field_e:[B",
-      "renamedSymbol": "F:bn.field_e:[B",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_e:[B",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -11967,7 +12087,7 @@
     },
     {
       "symbol": "F:bn.field_f:J",
-      "renamedSymbol": "F:bn.field_f:J",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_f:J",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -11978,7 +12098,7 @@
     },
     {
       "symbol": "F:bn.field_g:J",
-      "renamedSymbol": "F:bn.field_g:J",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_g:J",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -11989,7 +12109,7 @@
     },
     {
       "symbol": "F:bn.field_h:J",
-      "renamedSymbol": "F:bn.field_h:J",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_h:J",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -12000,7 +12120,7 @@
     },
     {
       "symbol": "F:bn.field_i:J",
-      "renamedSymbol": "F:bn.field_i:J",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_i:J",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -12011,7 +12131,7 @@
     },
     {
       "symbol": "F:bn.field_j:Lee;",
-      "renamedSymbol": "F:bn.field_j:Lee;",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_j:LBoundedRandomAccessFile;",
       "originalName": "field_j",
       "renamedName": "field_j",
       "declaration": {
@@ -12022,7 +12142,7 @@
     },
     {
       "symbol": "F:bn.field_k:J",
-      "renamedSymbol": "F:bn.field_k:J",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_k:J",
       "originalName": "field_k",
       "renamedName": "field_k",
       "declaration": {
@@ -12033,7 +12153,7 @@
     },
     {
       "symbol": "F:bn.field_l:Lbd;",
-      "renamedSymbol": "F:bn.field_l:LRgbSprite;",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_l:LRgbSprite;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -12044,7 +12164,7 @@
     },
     {
       "symbol": "F:bn.field_m:I",
-      "renamedSymbol": "F:bn.field_m:I",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_m:I",
       "originalName": "field_m",
       "renamedName": "field_m",
       "declaration": {
@@ -12055,7 +12175,7 @@
     },
     {
       "symbol": "F:bn.field_n:Ljava/lang/String;",
-      "renamedSymbol": "F:bn.field_n:Ljava/lang/String;",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_n:Ljava/lang/String;",
       "originalName": "field_n",
       "renamedName": "field_n",
       "declaration": {
@@ -12066,7 +12186,7 @@
     },
     {
       "symbol": "F:bn.field_o:Lbd;",
-      "renamedSymbol": "F:bn.field_o:LRgbSprite;",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_o:LRgbSprite;",
       "originalName": "field_o",
       "renamedName": "field_o",
       "declaration": {
@@ -12077,7 +12197,7 @@
     },
     {
       "symbol": "F:bn.field_p:I",
-      "renamedSymbol": "F:bn.field_p:I",
+      "renamedSymbol": "F:BufferedRandomAccessFile.field_p:I",
       "originalName": "field_p",
       "renamedName": "field_p",
       "declaration": {
@@ -15553,7 +15673,7 @@
     },
     {
       "symbol": "F:ee.field_a:Lnd;",
-      "renamedSymbol": "F:ee.field_a:Lnd;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_a:Lnd;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -15564,7 +15684,7 @@
     },
     {
       "symbol": "F:ee.field_b:Lfk;",
-      "renamedSymbol": "F:ee.field_b:LAccountRequestState;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_b:LAccountRequestState;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -15575,7 +15695,7 @@
     },
     {
       "symbol": "F:ee.field_c:J",
-      "renamedSymbol": "F:ee.field_c:J",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_c:J",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -15586,7 +15706,7 @@
     },
     {
       "symbol": "F:ee.field_d:[Lbd;",
-      "renamedSymbol": "F:ee.field_d:[LRgbSprite;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_d:[LRgbSprite;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -15597,7 +15717,7 @@
     },
     {
       "symbol": "F:ee.field_e:I",
-      "renamedSymbol": "F:ee.field_e:I",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_e:I",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -15608,7 +15728,7 @@
     },
     {
       "symbol": "F:ee.field_f:J",
-      "renamedSymbol": "F:ee.field_f:J",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_f:J",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -15619,7 +15739,7 @@
     },
     {
       "symbol": "F:ee.field_g:Lbd;",
-      "renamedSymbol": "F:ee.field_g:LRgbSprite;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_g:LRgbSprite;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -15630,7 +15750,7 @@
     },
     {
       "symbol": "F:ee.field_h:Lnd;",
-      "renamedSymbol": "F:ee.field_h:Lnd;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_h:Lnd;",
       "originalName": "field_h",
       "renamedName": "field_h",
       "declaration": {
@@ -15641,7 +15761,7 @@
     },
     {
       "symbol": "F:ee.field_i:Ljava/io/RandomAccessFile;",
-      "renamedSymbol": "F:ee.field_i:Ljava/io/RandomAccessFile;",
+      "renamedSymbol": "F:BoundedRandomAccessFile.field_i:Ljava/io/RandomAccessFile;",
       "originalName": "field_i",
       "renamedName": "field_i",
       "declaration": {
@@ -17093,7 +17213,7 @@
     },
     {
       "symbol": "F:fd.field_f:Lee;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_f:Lee;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_f:LBoundedRandomAccessFile;",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -17159,7 +17279,7 @@
     },
     {
       "symbol": "F:fd.field_l:Lee;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_l:Lee;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_l:LBoundedRandomAccessFile;",
       "originalName": "field_l",
       "renamedName": "field_l",
       "declaration": {
@@ -17214,7 +17334,7 @@
     },
     {
       "symbol": "F:fd.field_q:Lee;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_q:Lee;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_q:LBoundedRandomAccessFile;",
       "originalName": "field_q",
       "renamedName": "field_q",
       "declaration": {
@@ -17269,7 +17389,7 @@
     },
     {
       "symbol": "F:fd.field_v:[Lee;",
-      "renamedSymbol": "F:PlatformTaskDispatcher.field_v:[Lee;",
+      "renamedSymbol": "F:PlatformTaskDispatcher.field_v:[LBoundedRandomAccessFile;",
       "originalName": "field_v",
       "renamedName": "field_v",
       "declaration": {
@@ -26652,7 +26772,7 @@
     },
     {
       "symbol": "F:mk.field_K:Lbn;",
-      "renamedSymbol": "F:mk.field_K:Lbn;",
+      "renamedSymbol": "F:mk.field_K:LBufferedRandomAccessFile;",
       "originalName": "field_K",
       "renamedName": "field_K",
       "declaration": {
@@ -29072,7 +29192,7 @@
     },
     {
       "symbol": "F:oe.field_a:[Lbn;",
-      "renamedSymbol": "F:NodeHashTableIterator.field_a:[Lbn;",
+      "renamedSymbol": "F:NodeHashTableIterator.field_a:[LBufferedRandomAccessFile;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -31866,7 +31986,7 @@
     },
     {
       "symbol": "F:q.field_b:Lbn;",
-      "renamedSymbol": "F:q.field_b:Lbn;",
+      "renamedSymbol": "F:q.field_b:LBufferedRandomAccessFile;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -38928,7 +39048,7 @@
     },
     {
       "symbol": "F:um.field_c:Lbn;",
-      "renamedSymbol": "F:SectorCacheStore.field_c:Lbn;",
+      "renamedSymbol": "F:SectorCacheStore.field_c:LBufferedRandomAccessFile;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -38972,7 +39092,7 @@
     },
     {
       "symbol": "F:um.field_g:Lbn;",
-      "renamedSymbol": "F:SectorCacheStore.field_g:Lbn;",
+      "renamedSymbol": "F:SectorCacheStore.field_g:LBufferedRandomAccessFile;",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -58354,7 +58474,7 @@
     },
     {
       "symbol": "L:bn.<init>(Lee;II)V#0",
-      "renamedSymbol": "L:bn.<init>(Lee;II)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.<init>(LBoundedRandomAccessFile;II)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -58365,7 +58485,7 @@
     },
     {
       "symbol": "L:bn.<init>(Lee;II)V#1",
-      "renamedSymbol": "L:bn.<init>(Lee;II)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.<init>(LBoundedRandomAccessFile;II)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -58376,7 +58496,7 @@
     },
     {
       "symbol": "L:bn.a(I)V#0",
-      "renamedSymbol": "L:bn.a(I)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.fillReadBuffer(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -58387,7 +58507,7 @@
     },
     {
       "symbol": "L:bn.a(I)V#1",
-      "renamedSymbol": "L:bn.a(I)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.fillReadBuffer(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -58398,7 +58518,7 @@
     },
     {
       "symbol": "L:bn.a(I)V#2",
-      "renamedSymbol": "L:bn.a(I)V#2",
+      "renamedSymbol": "L:BufferedRandomAccessFile.fillReadBuffer(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -58409,7 +58529,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#0",
-      "renamedSymbol": "L:bn.a(II[BB)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#0",
       "originalName": "stackIn_50_0",
       "renamedName": "stackIn_50_0",
       "declaration": {
@@ -58420,7 +58540,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#1",
-      "renamedSymbol": "L:bn.a(II[BB)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#1",
       "originalName": "stackIn_50_1",
       "renamedName": "stackIn_50_1",
       "declaration": {
@@ -58431,7 +58551,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#10",
-      "renamedSymbol": "L:bn.a(II[BB)V#10",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#10",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -58442,7 +58562,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#11",
-      "renamedSymbol": "L:bn.a(II[BB)V#11",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -58453,7 +58573,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#12",
-      "renamedSymbol": "L:bn.a(II[BB)V#12",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#12",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -58464,7 +58584,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#2",
-      "renamedSymbol": "L:bn.a(II[BB)V#2",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#2",
       "originalName": "stackIn_51_2",
       "renamedName": "stackIn_51_2",
       "declaration": {
@@ -58475,7 +58595,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#3",
-      "renamedSymbol": "L:bn.a(II[BB)V#3",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -58486,7 +58606,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#4",
-      "renamedSymbol": "L:bn.a(II[BB)V#4",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#4",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -58497,7 +58617,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#5",
-      "renamedSymbol": "L:bn.a(II[BB)V#5",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#5",
       "originalName": "var5_long",
       "renamedName": "var5_long",
       "declaration": {
@@ -58508,7 +58628,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#6",
-      "renamedSymbol": "L:bn.a(II[BB)V#6",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -58519,7 +58639,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#7",
-      "renamedSymbol": "L:bn.a(II[BB)V#7",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#7",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -58530,7 +58650,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#8",
-      "renamedSymbol": "L:bn.a(II[BB)V#8",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -58541,7 +58661,7 @@
     },
     {
       "symbol": "L:bn.a(II[BB)V#9",
-      "renamedSymbol": "L:bn.a(II[BB)V#9",
+      "renamedSymbol": "L:BufferedRandomAccessFile.write(II[BB)V#9",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -58552,7 +58672,7 @@
     },
     {
       "symbol": "L:bn.a(ILoj;)V#0",
-      "renamedSymbol": "L:bn.a(ILoj;)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ILoj;)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -58563,7 +58683,7 @@
     },
     {
       "symbol": "L:bn.a(ILoj;)V#1",
-      "renamedSymbol": "L:bn.a(ILoj;)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ILoj;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -58574,7 +58694,7 @@
     },
     {
       "symbol": "L:bn.a(JB)V#0",
-      "renamedSymbol": "L:bn.a(JB)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.seek(JB)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -58585,7 +58705,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#0",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#0",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -58596,7 +58716,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#1",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#1",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -58607,7 +58727,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#10",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#10",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -58618,7 +58738,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#11",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#11",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -58629,7 +58749,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#12",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#12",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#12",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -58640,7 +58760,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#13",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#13",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#13",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -58651,7 +58771,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#14",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#14",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#14",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -58662,7 +58782,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#15",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#15",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#15",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -58673,7 +58793,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#16",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#16",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#16",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -58684,7 +58804,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#17",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#17",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#17",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -58695,7 +58815,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#18",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#18",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#18",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -58706,7 +58826,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#19",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#19",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#19",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -58717,7 +58837,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#2",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#2",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#2",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -58728,7 +58848,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#20",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#20",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#20",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -58739,7 +58859,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#21",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#21",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#21",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -58750,7 +58870,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#22",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#22",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#22",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -58761,7 +58881,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#23",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#23",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#23",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -58772,7 +58892,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#3",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#3",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#3",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -58783,7 +58903,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#4",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#4",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#4",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -58794,7 +58914,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#5",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#5",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -58805,7 +58925,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#6",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#6",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#6",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -58816,7 +58936,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#7",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#7",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -58827,7 +58947,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#8",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#8",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#8",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -58838,7 +58958,7 @@
     },
     {
       "symbol": "L:bn.a(ZILp;I)V#9",
-      "renamedSymbol": "L:bn.a(ZILp;I)V#9",
+      "renamedSymbol": "L:BufferedRandomAccessFile.a(ZILp;I)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -58849,7 +58969,7 @@
     },
     {
       "symbol": "L:bn.a([BB)V#0",
-      "renamedSymbol": "L:bn.a([BB)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BB)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -58860,7 +58980,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#0",
-      "renamedSymbol": "L:bn.a([BBII)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#0",
       "originalName": "incrementValue$0",
       "renamedName": "incrementValue$0",
       "declaration": {
@@ -58871,7 +58991,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#1",
-      "renamedSymbol": "L:bn.a([BBII)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#1",
       "originalName": "stackIn_63_0",
       "renamedName": "stackIn_63_0",
       "declaration": {
@@ -58882,7 +59002,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#10",
-      "renamedSymbol": "L:bn.a([BBII)V#10",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#10",
       "originalName": "var9_int",
       "renamedName": "var9_int",
       "declaration": {
@@ -58893,7 +59013,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#11",
-      "renamedSymbol": "L:bn.a([BBII)V#11",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -58904,7 +59024,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#12",
-      "renamedSymbol": "L:bn.a([BBII)V#12",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -58915,7 +59035,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#13",
-      "renamedSymbol": "L:bn.a([BBII)V#13",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#13",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -58926,7 +59046,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#14",
-      "renamedSymbol": "L:bn.a([BBII)V#14",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -58937,7 +59057,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#15",
-      "renamedSymbol": "L:bn.a([BBII)V#15",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#15",
       "originalName": "var9_intLifetime1",
       "renamedName": "var9_intLifetime1",
       "declaration": {
@@ -58948,7 +59068,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#16",
-      "renamedSymbol": "L:bn.a([BBII)V#16",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#16",
       "originalName": "var9_intLifetime2",
       "renamedName": "var9_intLifetime2",
       "declaration": {
@@ -58959,7 +59079,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#17",
-      "renamedSymbol": "L:bn.a([BBII)V#17",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#17",
       "originalName": "var9_intLifetime1Lifetime1",
       "renamedName": "var9_intLifetime1Lifetime1",
       "declaration": {
@@ -58970,7 +59090,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#18",
-      "renamedSymbol": "L:bn.a([BBII)V#18",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#18",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -58981,7 +59101,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#19",
-      "renamedSymbol": "L:bn.a([BBII)V#19",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#19",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -58992,7 +59112,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#2",
-      "renamedSymbol": "L:bn.a([BBII)V#2",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#2",
       "originalName": "stackIn_63_1",
       "renamedName": "stackIn_63_1",
       "declaration": {
@@ -59003,7 +59123,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#20",
-      "renamedSymbol": "L:bn.a([BBII)V#20",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -59014,7 +59134,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#21",
-      "renamedSymbol": "L:bn.a([BBII)V#21",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#21",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -59025,7 +59145,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#3",
-      "renamedSymbol": "L:bn.a([BBII)V#3",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#3",
       "originalName": "stackIn_64_2",
       "renamedName": "stackIn_64_2",
       "declaration": {
@@ -59036,7 +59156,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#4",
-      "renamedSymbol": "L:bn.a([BBII)V#4",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -59047,7 +59167,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#5",
-      "renamedSymbol": "L:bn.a([BBII)V#5",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#5",
       "originalName": "var5_long",
       "renamedName": "var5_long",
       "declaration": {
@@ -59058,7 +59178,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#6",
-      "renamedSymbol": "L:bn.a([BBII)V#6",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -59069,7 +59189,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#7",
-      "renamedSymbol": "L:bn.a([BBII)V#7",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#7",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -59080,7 +59200,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#8",
-      "renamedSymbol": "L:bn.a([BBII)V#8",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -59091,7 +59211,7 @@
     },
     {
       "symbol": "L:bn.a([BBII)V#9",
-      "renamedSymbol": "L:bn.a([BBII)V#9",
+      "renamedSymbol": "L:BufferedRandomAccessFile.readFully([BBII)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -59102,7 +59222,7 @@
     },
     {
       "symbol": "L:bn.b(I)Ljava/lang/String;#0",
-      "renamedSymbol": "L:bn.b(I)Ljava/lang/String;#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.b(I)Ljava/lang/String;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -59113,7 +59233,7 @@
     },
     {
       "symbol": "L:bn.b(I)Ljava/lang/String;#1",
-      "renamedSymbol": "L:bn.b(I)Ljava/lang/String;#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.b(I)Ljava/lang/String;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -59124,7 +59244,7 @@
     },
     {
       "symbol": "L:bn.d(I)J#0",
-      "renamedSymbol": "L:bn.d(I)J#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.length(I)J#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -59135,7 +59255,7 @@
     },
     {
       "symbol": "L:bn.e(I)V#0",
-      "renamedSymbol": "L:bn.e(I)V#0",
+      "renamedSymbol": "L:BufferedRandomAccessFile.flush(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -59146,7 +59266,7 @@
     },
     {
       "symbol": "L:bn.e(I)V#1",
-      "renamedSymbol": "L:bn.e(I)V#1",
+      "renamedSymbol": "L:BufferedRandomAccessFile.flush(I)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -59157,7 +59277,7 @@
     },
     {
       "symbol": "L:bn.e(I)V#2",
-      "renamedSymbol": "L:bn.e(I)V#2",
+      "renamedSymbol": "L:BufferedRandomAccessFile.flush(I)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -59168,7 +59288,7 @@
     },
     {
       "symbol": "L:bn.e(I)V#3",
-      "renamedSymbol": "L:bn.e(I)V#3",
+      "renamedSymbol": "L:BufferedRandomAccessFile.flush(I)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -74381,7 +74501,7 @@
     },
     {
       "symbol": "L:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
-      "renamedSymbol": "L:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -74392,7 +74512,7 @@
     },
     {
       "symbol": "L:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
-      "renamedSymbol": "L:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
+      "renamedSymbol": "L:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -74403,7 +74523,7 @@
     },
     {
       "symbol": "L:ee.a(I[BII)V#0",
-      "renamedSymbol": "L:ee.a(I[BII)V#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.write(I[BII)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -74414,7 +74534,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#0",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#0",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -74425,7 +74545,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#1",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#1",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#1",
       "originalName": "stackIn_33_0",
       "renamedName": "stackIn_33_0",
       "declaration": {
@@ -74436,7 +74556,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#10",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#10",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#10",
       "originalName": "stackIn_103_1",
       "renamedName": "stackIn_103_1",
       "declaration": {
@@ -74447,7 +74567,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#11",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#11",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#11",
       "originalName": "stackIn_104_2",
       "renamedName": "stackIn_104_2",
       "declaration": {
@@ -74458,7 +74578,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#12",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#12",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#12",
       "originalName": "stackIn_106_1",
       "renamedName": "stackIn_106_1",
       "declaration": {
@@ -74469,7 +74589,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#13",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#13",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#13",
       "originalName": "stackIn_107_2",
       "renamedName": "stackIn_107_2",
       "declaration": {
@@ -74480,7 +74600,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#14",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#14",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -74491,7 +74611,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#15",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#15",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#15",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -74502,7 +74622,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#16",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#16",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#16",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -74513,7 +74633,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#17",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#17",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#17",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -74524,7 +74644,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#18",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#18",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#18",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -74535,7 +74655,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#19",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#19",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#19",
       "originalName": "var8_ref_Throwable",
       "renamedName": "var8_ref_Throwable",
       "declaration": {
@@ -74546,7 +74666,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#2",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#2",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#2",
       "originalName": "stackIn_47_0",
       "renamedName": "stackIn_47_0",
       "declaration": {
@@ -74557,7 +74677,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#20",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#20",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#20",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -74568,7 +74688,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#21",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#21",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#21",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -74579,7 +74699,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#22",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#22",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#22",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -74590,7 +74710,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#23",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#23",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#23",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -74601,7 +74721,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#24",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#24",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#24",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -74612,7 +74732,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#25",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#25",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#25",
       "originalName": "var6_intLifetime1",
       "renamedName": "var6_intLifetime1",
       "declaration": {
@@ -74623,7 +74743,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#26",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#26",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#26",
       "originalName": "var6_intLifetime2",
       "renamedName": "var6_intLifetime2",
       "declaration": {
@@ -74634,7 +74754,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#27",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#27",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#27",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -74645,7 +74765,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#28",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#28",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#28",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -74656,7 +74776,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#29",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#29",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#29",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -74667,7 +74787,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#3",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#3",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#3",
       "originalName": "stackIn_50_0",
       "renamedName": "stackIn_50_0",
       "declaration": {
@@ -74678,7 +74798,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#30",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#30",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#30",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -74689,7 +74809,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#31",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#31",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#31",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -74700,7 +74820,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#32",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#32",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#32",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -74711,7 +74831,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#33",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#33",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#33",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -74722,7 +74842,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#4",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#4",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#4",
       "originalName": "stackIn_79_0",
       "renamedName": "stackIn_79_0",
       "declaration": {
@@ -74733,7 +74853,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#5",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#5",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#5",
       "originalName": "stackIn_85_0",
       "renamedName": "stackIn_85_0",
       "declaration": {
@@ -74744,7 +74864,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#6",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#6",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#6",
       "originalName": "stackIn_90_0",
       "renamedName": "stackIn_90_0",
       "declaration": {
@@ -74755,7 +74875,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#7",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#7",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#7",
       "originalName": "stackIn_97_0",
       "renamedName": "stackIn_97_0",
       "declaration": {
@@ -74766,7 +74886,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#8",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#8",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#8",
       "originalName": "stackIn_100_0",
       "renamedName": "stackIn_100_0",
       "declaration": {
@@ -74777,7 +74897,7 @@
     },
     {
       "symbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#9",
-      "renamedSymbol": "L:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#9",
+      "renamedSymbol": "L:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#9",
       "originalName": "stackIn_103_0",
       "renamedName": "stackIn_103_0",
       "declaration": {
@@ -74788,7 +74908,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#0",
-      "renamedSymbol": "L:ee.a([BZII)I#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#0",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -74799,7 +74919,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#1",
-      "renamedSymbol": "L:ee.a([BZII)I#1",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -74810,7 +74930,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#2",
-      "renamedSymbol": "L:ee.a([BZII)I#2",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#2",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -74821,7 +74941,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#3",
-      "renamedSymbol": "L:ee.a([BZII)I#3",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#3",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -74832,7 +74952,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#4",
-      "renamedSymbol": "L:ee.a([BZII)I#4",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#4",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -74843,7 +74963,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#5",
-      "renamedSymbol": "L:ee.a([BZII)I#5",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#5",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -74854,7 +74974,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#6",
-      "renamedSymbol": "L:ee.a([BZII)I#6",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#6",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -74865,7 +74985,7 @@
     },
     {
       "symbol": "L:ee.a([BZII)I#7",
-      "renamedSymbol": "L:ee.a([BZII)I#7",
+      "renamedSymbol": "L:BoundedRandomAccessFile.read([BZII)I#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -74876,7 +74996,7 @@
     },
     {
       "symbol": "L:ee.c(I)V#0",
-      "renamedSymbol": "L:ee.c(I)V#0",
+      "renamedSymbol": "L:BoundedRandomAccessFile.close(I)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -82048,7 +82168,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -82059,7 +82179,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#1",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -82070,7 +82190,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#10",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#10",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#10",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -82081,7 +82201,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -82092,7 +82212,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#3",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#3",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -82103,7 +82223,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#4",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#4",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -82114,7 +82234,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#5",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#5",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -82125,7 +82245,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#6",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#6",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -82136,7 +82256,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#7",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#7",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#7",
       "originalName": "var8_ref",
       "renamedName": "var8_ref",
       "declaration": {
@@ -82147,7 +82267,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#8",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#8",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -82158,7 +82278,7 @@
     },
     {
       "symbol": "L:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#9",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#9",
+      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#9",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -186669,7 +186789,7 @@
     },
     {
       "symbol": "L:um.<init>(ILbn;Lbn;I)V#0",
-      "renamedSymbol": "L:SectorCacheStore.<init>(ILbn;Lbn;I)V#0",
+      "renamedSymbol": "L:SectorCacheStore.<init>(ILBufferedRandomAccessFile;LBufferedRandomAccessFile;I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -206458,9 +206578,9 @@
     },
     {
       "symbol": "M:bn.<init>(Lee;II)V",
-      "renamedSymbol": "M:bn.<init>(Lee;II)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.<init>(LBoundedRandomAccessFile;II)V",
       "originalName": "bn",
-      "renamedName": "bn",
+      "renamedName": "BufferedRandomAccessFile",
       "declaration": {
         "file": "bn.java",
         "start": 18929,
@@ -206469,9 +206589,9 @@
     },
     {
       "symbol": "M:bn.a(I)V",
-      "renamedSymbol": "M:bn.a(I)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.fillReadBuffer(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "fillReadBuffer",
       "declaration": {
         "file": "bn.java",
         "start": 7879,
@@ -206480,9 +206600,9 @@
     },
     {
       "symbol": "M:bn.a(II[BB)V",
-      "renamedSymbol": "M:bn.a(II[BB)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.write(II[BB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "write",
       "declaration": {
         "file": "bn.java",
         "start": 981,
@@ -206491,7 +206611,7 @@
     },
     {
       "symbol": "M:bn.a(ILoj;)V",
-      "renamedSymbol": "M:bn.a(ILoj;)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.a(ILoj;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -206502,9 +206622,9 @@
     },
     {
       "symbol": "M:bn.a(JB)V",
-      "renamedSymbol": "M:bn.a(JB)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.seek(JB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "seek",
       "declaration": {
         "file": "bn.java",
         "start": 12217,
@@ -206513,7 +206633,7 @@
     },
     {
       "symbol": "M:bn.a(Z)V",
-      "renamedSymbol": "M:bn.clearStaticReferences(Z)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.clearStaticReferences(Z)V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -206524,7 +206644,7 @@
     },
     {
       "symbol": "M:bn.a(ZILp;I)V",
-      "renamedSymbol": "M:bn.a(ZILp;I)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.a(ZILp;I)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -206535,9 +206655,9 @@
     },
     {
       "symbol": "M:bn.a([BB)V",
-      "renamedSymbol": "M:bn.a([BB)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.readFully([BB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readFully",
       "declaration": {
         "file": "bn.java",
         "start": 7476,
@@ -206546,9 +206666,9 @@
     },
     {
       "symbol": "M:bn.a([BBII)V",
-      "renamedSymbol": "M:bn.a([BBII)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.readFully([BBII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readFully",
       "declaration": {
         "file": "bn.java",
         "start": 12499,
@@ -206557,7 +206677,7 @@
     },
     {
       "symbol": "M:bn.b(I)Ljava/lang/String;",
-      "renamedSymbol": "M:bn.b(I)Ljava/lang/String;",
+      "renamedSymbol": "M:BufferedRandomAccessFile.b(I)Ljava/lang/String;",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -206568,7 +206688,7 @@
     },
     {
       "symbol": "M:bn.c(I)Ljava/applet/Applet;",
-      "renamedSymbol": "M:bn.c(I)Ljava/applet/Applet;",
+      "renamedSymbol": "M:BufferedRandomAccessFile.c(I)Ljava/applet/Applet;",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -206579,9 +206699,9 @@
     },
     {
       "symbol": "M:bn.d(I)J",
-      "renamedSymbol": "M:bn.d(I)J",
+      "renamedSymbol": "M:BufferedRandomAccessFile.length(I)J",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "length",
       "declaration": {
         "file": "bn.java",
         "start": 499,
@@ -206590,9 +206710,9 @@
     },
     {
       "symbol": "M:bn.e(I)V",
-      "renamedSymbol": "M:bn.e(I)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.flush(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "flush",
       "declaration": {
         "file": "bn.java",
         "start": 5752,
@@ -206601,9 +206721,9 @@
     },
     {
       "symbol": "M:bn.f(I)V",
-      "renamedSymbol": "M:bn.f(I)V",
+      "renamedSymbol": "M:BufferedRandomAccessFile.close(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "close",
       "declaration": {
         "file": "bn.java",
         "start": 5580,
@@ -209560,9 +209680,9 @@
     },
     {
       "symbol": "M:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V",
-      "renamedSymbol": "M:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V",
       "originalName": "ee",
-      "renamedName": "ee",
+      "renamedName": "BoundedRandomAccessFile",
       "declaration": {
         "file": "ee.java",
         "start": 12619,
@@ -209571,9 +209691,9 @@
     },
     {
       "symbol": "M:ee.a(I)J",
-      "renamedSymbol": "M:ee.a(I)J",
+      "renamedSymbol": "M:BoundedRandomAccessFile.length(I)J",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "length",
       "declaration": {
         "file": "ee.java",
         "start": 12474,
@@ -209582,7 +209702,7 @@
     },
     {
       "symbol": "M:ee.a(IIZ)I",
-      "renamedSymbol": "M:ee.a(IIZ)I",
+      "renamedSymbol": "M:BoundedRandomAccessFile.a(IIZ)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -209593,9 +209713,9 @@
     },
     {
       "symbol": "M:ee.a(IJ)V",
-      "renamedSymbol": "M:ee.a(IJ)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.seek(IJ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "seek",
       "declaration": {
         "file": "ee.java",
         "start": 1292,
@@ -209604,9 +209724,9 @@
     },
     {
       "symbol": "M:ee.a(I[BII)V",
-      "renamedSymbol": "M:ee.a(I[BII)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.write(I[BII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "write",
       "declaration": {
         "file": "ee.java",
         "start": 2817,
@@ -209615,7 +209735,7 @@
     },
     {
       "symbol": "M:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I",
-      "renamedSymbol": "M:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I",
+      "renamedSymbol": "M:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -209626,9 +209746,9 @@
     },
     {
       "symbol": "M:ee.a([BZII)I",
-      "renamedSymbol": "M:ee.a([BZII)I",
+      "renamedSymbol": "M:BoundedRandomAccessFile.read([BZII)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "read",
       "declaration": {
         "file": "ee.java",
         "start": 1489,
@@ -209637,7 +209757,7 @@
     },
     {
       "symbol": "M:ee.b(I)V",
-      "renamedSymbol": "M:ee.clearStaticReferences(I)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.clearStaticReferences(I)V",
       "originalName": "b",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -209648,9 +209768,9 @@
     },
     {
       "symbol": "M:ee.c(I)V",
-      "renamedSymbol": "M:ee.c(I)V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.close(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "close",
       "declaration": {
         "file": "ee.java",
         "start": 818,
@@ -209659,7 +209779,7 @@
     },
     {
       "symbol": "M:ee.finalize()V",
-      "renamedSymbol": "M:ee.finalize()V",
+      "renamedSymbol": "M:BoundedRandomAccessFile.finalize()V",
       "originalName": "finalize",
       "renamedName": "finalize",
       "declaration": {
@@ -210913,7 +211033,7 @@
     },
     {
       "symbol": "M:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -228854,7 +228974,7 @@
     },
     {
       "symbol": "M:um.<init>(ILbn;Lbn;I)V",
-      "renamedSymbol": "M:SectorCacheStore.<init>(ILbn;Lbn;I)V",
+      "renamedSymbol": "M:SectorCacheStore.<init>(ILBufferedRandomAccessFile;LBufferedRandomAccessFile;I)V",
       "originalName": "um",
       "renamedName": "SectorCacheStore",
       "declaration": {
@@ -241889,7 +242009,7 @@
     },
     {
       "symbol": "P:bn.<init>(Lee;II)V#0",
-      "renamedSymbol": "P:bn.<init>(Lee;II)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.<init>(LBoundedRandomAccessFile;II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -241900,7 +242020,7 @@
     },
     {
       "symbol": "P:bn.<init>(Lee;II)V#1",
-      "renamedSymbol": "P:bn.<init>(Lee;II)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.<init>(LBoundedRandomAccessFile;II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -241911,7 +242031,7 @@
     },
     {
       "symbol": "P:bn.<init>(Lee;II)V#2",
-      "renamedSymbol": "P:bn.<init>(Lee;II)V#2",
+      "renamedSymbol": "P:BufferedRandomAccessFile.<init>(LBoundedRandomAccessFile;II)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -241922,7 +242042,7 @@
     },
     {
       "symbol": "P:bn.a(I)V#0",
-      "renamedSymbol": "P:bn.a(I)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.fillReadBuffer(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -241933,7 +242053,7 @@
     },
     {
       "symbol": "P:bn.a(II[BB)V#0",
-      "renamedSymbol": "P:bn.a(II[BB)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.write(II[BB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -241944,7 +242064,7 @@
     },
     {
       "symbol": "P:bn.a(II[BB)V#1",
-      "renamedSymbol": "P:bn.a(II[BB)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.write(II[BB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -241955,7 +242075,7 @@
     },
     {
       "symbol": "P:bn.a(II[BB)V#2",
-      "renamedSymbol": "P:bn.a(II[BB)V#2",
+      "renamedSymbol": "P:BufferedRandomAccessFile.write(II[BB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -241966,7 +242086,7 @@
     },
     {
       "symbol": "P:bn.a(II[BB)V#3",
-      "renamedSymbol": "P:bn.a(II[BB)V#3",
+      "renamedSymbol": "P:BufferedRandomAccessFile.write(II[BB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -241977,7 +242097,7 @@
     },
     {
       "symbol": "P:bn.a(ILoj;)V#0",
-      "renamedSymbol": "P:bn.a(ILoj;)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.a(ILoj;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -241988,7 +242108,7 @@
     },
     {
       "symbol": "P:bn.a(ILoj;)V#1",
-      "renamedSymbol": "P:bn.a(ILoj;)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.a(ILoj;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -241999,7 +242119,7 @@
     },
     {
       "symbol": "P:bn.a(JB)V#0",
-      "renamedSymbol": "P:bn.a(JB)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.seek(JB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242010,7 +242130,7 @@
     },
     {
       "symbol": "P:bn.a(JB)V#1",
-      "renamedSymbol": "P:bn.a(JB)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.seek(JB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -242021,7 +242141,7 @@
     },
     {
       "symbol": "P:bn.a(Z)V#0",
-      "renamedSymbol": "P:bn.clearStaticReferences(Z)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.clearStaticReferences(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242032,7 +242152,7 @@
     },
     {
       "symbol": "P:bn.a(ZILp;I)V#0",
-      "renamedSymbol": "P:bn.a(ZILp;I)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.a(ZILp;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242043,7 +242163,7 @@
     },
     {
       "symbol": "P:bn.a(ZILp;I)V#1",
-      "renamedSymbol": "P:bn.a(ZILp;I)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.a(ZILp;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -242054,7 +242174,7 @@
     },
     {
       "symbol": "P:bn.a(ZILp;I)V#2",
-      "renamedSymbol": "P:bn.a(ZILp;I)V#2",
+      "renamedSymbol": "P:BufferedRandomAccessFile.a(ZILp;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -242065,7 +242185,7 @@
     },
     {
       "symbol": "P:bn.a(ZILp;I)V#3",
-      "renamedSymbol": "P:bn.a(ZILp;I)V#3",
+      "renamedSymbol": "P:BufferedRandomAccessFile.a(ZILp;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -242076,7 +242196,7 @@
     },
     {
       "symbol": "P:bn.a([BB)V#0",
-      "renamedSymbol": "P:bn.a([BB)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.readFully([BB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242087,7 +242207,7 @@
     },
     {
       "symbol": "P:bn.a([BB)V#1",
-      "renamedSymbol": "P:bn.a([BB)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.readFully([BB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -242098,7 +242218,7 @@
     },
     {
       "symbol": "P:bn.a([BBII)V#0",
-      "renamedSymbol": "P:bn.a([BBII)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.readFully([BBII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242109,7 +242229,7 @@
     },
     {
       "symbol": "P:bn.a([BBII)V#1",
-      "renamedSymbol": "P:bn.a([BBII)V#1",
+      "renamedSymbol": "P:BufferedRandomAccessFile.readFully([BBII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -242120,7 +242240,7 @@
     },
     {
       "symbol": "P:bn.a([BBII)V#2",
-      "renamedSymbol": "P:bn.a([BBII)V#2",
+      "renamedSymbol": "P:BufferedRandomAccessFile.readFully([BBII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -242131,7 +242251,7 @@
     },
     {
       "symbol": "P:bn.a([BBII)V#3",
-      "renamedSymbol": "P:bn.a([BBII)V#3",
+      "renamedSymbol": "P:BufferedRandomAccessFile.readFully([BBII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -242142,7 +242262,7 @@
     },
     {
       "symbol": "P:bn.b(I)Ljava/lang/String;#0",
-      "renamedSymbol": "P:bn.b(I)Ljava/lang/String;#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.b(I)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242153,7 +242273,7 @@
     },
     {
       "symbol": "P:bn.c(I)Ljava/applet/Applet;#0",
-      "renamedSymbol": "P:bn.c(I)Ljava/applet/Applet;#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.c(I)Ljava/applet/Applet;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242164,7 +242284,7 @@
     },
     {
       "symbol": "P:bn.d(I)J#0",
-      "renamedSymbol": "P:bn.d(I)J#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.length(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242175,7 +242295,7 @@
     },
     {
       "symbol": "P:bn.e(I)V#0",
-      "renamedSymbol": "P:bn.e(I)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.flush(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -242186,7 +242306,7 @@
     },
     {
       "symbol": "P:bn.f(I)V#0",
-      "renamedSymbol": "P:bn.f(I)V#0",
+      "renamedSymbol": "P:BufferedRandomAccessFile.close(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248599,7 +248719,7 @@
     },
     {
       "symbol": "P:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
-      "renamedSymbol": "P:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248610,7 +248730,7 @@
     },
     {
       "symbol": "P:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
-      "renamedSymbol": "P:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248621,7 +248741,7 @@
     },
     {
       "symbol": "P:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#2",
-      "renamedSymbol": "P:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.<init>(Ljava/io/File;Ljava/lang/String;J)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248632,7 +248752,7 @@
     },
     {
       "symbol": "P:ee.a(I)J#0",
-      "renamedSymbol": "P:ee.a(I)J#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.length(I)J#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248643,7 +248763,7 @@
     },
     {
       "symbol": "P:ee.a(IIZ)I#0",
-      "renamedSymbol": "P:ee.a(IIZ)I#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(IIZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248654,7 +248774,7 @@
     },
     {
       "symbol": "P:ee.a(IIZ)I#1",
-      "renamedSymbol": "P:ee.a(IIZ)I#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(IIZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248665,7 +248785,7 @@
     },
     {
       "symbol": "P:ee.a(IIZ)I#2",
-      "renamedSymbol": "P:ee.a(IIZ)I#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(IIZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248676,7 +248796,7 @@
     },
     {
       "symbol": "P:ee.a(IJ)V#0",
-      "renamedSymbol": "P:ee.a(IJ)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.seek(IJ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248687,7 +248807,7 @@
     },
     {
       "symbol": "P:ee.a(IJ)V#1",
-      "renamedSymbol": "P:ee.a(IJ)V#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.seek(IJ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248698,7 +248818,7 @@
     },
     {
       "symbol": "P:ee.a(I[BII)V#0",
-      "renamedSymbol": "P:ee.a(I[BII)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(I[BII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248709,7 +248829,7 @@
     },
     {
       "symbol": "P:ee.a(I[BII)V#1",
-      "renamedSymbol": "P:ee.a(I[BII)V#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(I[BII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248720,7 +248840,7 @@
     },
     {
       "symbol": "P:ee.a(I[BII)V#2",
-      "renamedSymbol": "P:ee.a(I[BII)V#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(I[BII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248731,7 +248851,7 @@
     },
     {
       "symbol": "P:ee.a(I[BII)V#3",
-      "renamedSymbol": "P:ee.a(I[BII)V#3",
+      "renamedSymbol": "P:BoundedRandomAccessFile.write(I[BII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -248742,7 +248862,7 @@
     },
     {
       "symbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#0",
-      "renamedSymbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248753,7 +248873,7 @@
     },
     {
       "symbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#1",
-      "renamedSymbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248764,7 +248884,7 @@
     },
     {
       "symbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#2",
-      "renamedSymbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248775,7 +248895,7 @@
     },
     {
       "symbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#3",
-      "renamedSymbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#3",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -248786,7 +248906,7 @@
     },
     {
       "symbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#4",
-      "renamedSymbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#4",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -248797,7 +248917,7 @@
     },
     {
       "symbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#5",
-      "renamedSymbol": "P:ee.a(ZIZILjava/lang/String;Ljava/lang/String;)I#5",
+      "renamedSymbol": "P:BoundedRandomAccessFile.a(ZIZILjava/lang/String;Ljava/lang/String;)I#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -248808,7 +248928,7 @@
     },
     {
       "symbol": "P:ee.a([BZII)I#0",
-      "renamedSymbol": "P:ee.a([BZII)I#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BZII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248819,7 +248939,7 @@
     },
     {
       "symbol": "P:ee.a([BZII)I#1",
-      "renamedSymbol": "P:ee.a([BZII)I#1",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BZII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -248830,7 +248950,7 @@
     },
     {
       "symbol": "P:ee.a([BZII)I#2",
-      "renamedSymbol": "P:ee.a([BZII)I#2",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BZII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -248841,7 +248961,7 @@
     },
     {
       "symbol": "P:ee.a([BZII)I#3",
-      "renamedSymbol": "P:ee.a([BZII)I#3",
+      "renamedSymbol": "P:BoundedRandomAccessFile.read([BZII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -248852,7 +248972,7 @@
     },
     {
       "symbol": "P:ee.b(I)V#0",
-      "renamedSymbol": "P:ee.clearStaticReferences(I)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.clearStaticReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -248863,7 +248983,7 @@
     },
     {
       "symbol": "P:ee.c(I)V#0",
-      "renamedSymbol": "P:ee.c(I)V#0",
+      "renamedSymbol": "P:BoundedRandomAccessFile.close(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -251734,7 +251854,7 @@
     },
     {
       "symbol": "P:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -251745,7 +251865,7 @@
     },
     {
       "symbol": "P:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -251756,7 +251876,7 @@
     },
     {
       "symbol": "P:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -251767,7 +251887,7 @@
     },
     {
       "symbol": "P:fd.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)Lee;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;Ljava/lang/String;I)LBoundedRandomAccessFile;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -293545,7 +293665,7 @@
     },
     {
       "symbol": "P:um.<init>(ILbn;Lbn;I)V#0",
-      "renamedSymbol": "P:SectorCacheStore.<init>(ILbn;Lbn;I)V#0",
+      "renamedSymbol": "P:SectorCacheStore.<init>(ILBufferedRandomAccessFile;LBufferedRandomAccessFile;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -293556,7 +293676,7 @@
     },
     {
       "symbol": "P:um.<init>(ILbn;Lbn;I)V#1",
-      "renamedSymbol": "P:SectorCacheStore.<init>(ILbn;Lbn;I)V#1",
+      "renamedSymbol": "P:SectorCacheStore.<init>(ILBufferedRandomAccessFile;LBufferedRandomAccessFile;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -293567,7 +293687,7 @@
     },
     {
       "symbol": "P:um.<init>(ILbn;Lbn;I)V#2",
-      "renamedSymbol": "P:SectorCacheStore.<init>(ILbn;Lbn;I)V#2",
+      "renamedSymbol": "P:SectorCacheStore.<init>(ILBufferedRandomAccessFile;LBufferedRandomAccessFile;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -293578,7 +293698,7 @@
     },
     {
       "symbol": "P:um.<init>(ILbn;Lbn;I)V#3",
-      "renamedSymbol": "P:SectorCacheStore.<init>(ILbn;Lbn;I)V#3",
+      "renamedSymbol": "P:SectorCacheStore.<init>(ILBufferedRandomAccessFile;LBufferedRandomAccessFile;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -300930,7 +301050,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "a9f7b0ea8a5e8cca68a07e98493c893c63a8ecbf2558edc3b0415a58ea38d24f",
+      "outputSha256": "639a9bc380e8d2844d328ec718ed1897a43b1fb7311fc3389b4e0a5e7a38e5b7",
       "edits": [
         {
           "start": 78,
@@ -300989,6 +301109,13 @@
           "renamed": "VolumeRampingMidiPcmStream"
         },
         {
+          "start": 1497,
+          "end": 1499,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 1573,
           "end": 1575,
           "symbol": "C:jg",
@@ -300996,11 +301123,25 @@
           "renamed": "KeyboardInput"
         },
         {
+          "start": 1711,
+          "end": 1713,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 1817,
           "end": 1819,
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "VolumeRampingMidiPcmStream"
+        },
+        {
+          "start": 1932,
+          "end": 1934,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 4016,
@@ -301029,6 +301170,13 @@
           "symbol": "C:d",
           "original": "d",
           "renamed": "NetworkGameClient"
+        },
+        {
+          "start": 4294,
+          "end": 4296,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 4366,
@@ -301638,6 +301786,13 @@
           "symbol": "C:oe",
           "original": "oe",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 19383,
+          "end": 19385,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 19423,
@@ -303802,6 +303957,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 53293,
+          "end": 53295,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 53296,
           "end": 53297,
           "symbol": "M:bn.a(Z)V",
@@ -304346,6 +304508,13 @@
           "symbol": "M:rb.a(Z)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 55207,
+          "end": 55209,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 55210,
@@ -306415,6 +306584,13 @@
           "renamed": "GameAppletShell"
         },
         {
+          "start": 92687,
+          "end": 92689,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 92806,
           "end": 92808,
           "symbol": "C:wa",
@@ -307078,6 +307254,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "MouseInput"
+        },
+        {
+          "start": 106517,
+          "end": 106519,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 106530,
@@ -312976,7 +313159,7 @@
       "original": "bf.java",
       "renamed": "bf.java",
       "inputSha256": "83820787d01cd21c6e3aab8a5c4135f9433be16302a500568c935f1f626de963",
-      "outputSha256": "2e1f38f9355715ac685031330db1a8452ec7f03ed8380c05ab8ff4d2125b69d7",
+      "outputSha256": "77b0fbc82d5ae1d5d075573e87045189d20f8c1b53ab8cf0b5b57ab3bacd55c8",
       "edits": [
         {
           "start": 326,
@@ -313140,6 +313323,13 @@
           "renamed": "AccountServiceResult"
         },
         {
+          "start": 7453,
+          "end": 7455,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 7456,
           "end": 7458,
           "symbol": "C:jj",
@@ -313159,6 +313349,13 @@
           "symbol": "C:um",
           "original": "um",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 7576,
+          "end": 7578,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 7579,
@@ -313182,6 +313379,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 7745,
+          "end": 7747,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 7748,
           "end": 7750,
           "symbol": "C:jj",
@@ -313201,6 +313405,13 @@
           "symbol": "C:oe",
           "original": "oe",
           "renamed": "NodeHashTableIterator"
+        },
+        {
+          "start": 7881,
+          "end": 7883,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 7884,
@@ -313292,7 +313503,7 @@
       "original": "bh.java",
       "renamed": "bh.java",
       "inputSha256": "67aaf3457f6525dff074a6bcf533e6c6a59da0d43b33cae3b0b99123d12c4869",
-      "outputSha256": "edae288a736c10257c38b92c6edafbdd926ca45dde25eb1d5a4beb1d0fb52f82",
+      "outputSha256": "11eea83958fecb0033872d9bb32401f35c6c1890524b0fd214f4f7bb072df3bc",
       "edits": [
         {
           "start": 95,
@@ -313370,6 +313581,13 @@
           "symbol": "M:bh.a(I)V",
           "original": "a",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 2629,
+          "end": 2631,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 3099,
@@ -313713,7 +313931,7 @@
       "original": "bi.java",
       "renamed": "bi.java",
       "inputSha256": "67119959c8a4ff2cd791624f2193f732cf55ef9c1d315f9d2e7030a2e73b19dc",
-      "outputSha256": "fbd721406f1015ba99f629c6a26191f0fa71fdea40331925c12149755d044384",
+      "outputSha256": "545f3197365bd33e1cdd7e56b2bdb588563dc39cecb56d0e6fa73e45fec55e7b",
       "edits": [
         {
           "start": 116,
@@ -313763,6 +313981,13 @@
           "symbol": "C:lm",
           "original": "lm",
           "renamed": "NetworkArchiveRequest"
+        },
+        {
+          "start": 2224,
+          "end": 2226,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 2489,
@@ -313974,10 +314199,24 @@
     },
     {
       "original": "bn.java",
-      "renamed": "bn.java",
+      "renamed": "BufferedRandomAccessFile.java",
       "inputSha256": "2d2665fe866d22d62c8acded16ca86db97588e3236eb156853d2b8a66189f521",
-      "outputSha256": "62e5ec117eec2ac997566e0a85b456f175e37b3138f4acafeab13211262de97f",
+      "outputSha256": "a00be29faea7cbf5aac8df7f2661c8376137c3f81bc761e5f9d7048d3fb17882",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 165,
+          "end": 167,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
         {
           "start": 265,
           "end": 267,
@@ -313993,6 +314232,27 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 499,
+          "end": 500,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 981,
+          "end": 982,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 1868,
+          "end": 1869,
+          "symbol": "M:bn.e(I)V",
+          "original": "e",
+          "renamed": "flush"
+        },
+        {
           "start": 2129,
           "end": 2130,
           "symbol": "M:kf.a([BI[BII)V",
@@ -314000,11 +314260,32 @@
           "renamed": "copyByteRange"
         },
         {
+          "start": 2421,
+          "end": 2422,
+          "symbol": "M:bn.e(I)V",
+          "original": "e",
+          "renamed": "flush"
+        },
+        {
           "start": 2683,
           "end": 2684,
           "symbol": "M:kf.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 3084,
+          "end": 3085,
+          "symbol": "M:ee.a(IJ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 3191,
+          "end": 3192,
+          "symbol": "M:ee.a(I[BII)V",
+          "original": "a",
+          "renamed": "write"
         },
         {
           "start": 4397,
@@ -314028,6 +314309,34 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 5580,
+          "end": 5581,
+          "symbol": "M:bn.f(I)V",
+          "original": "f",
+          "renamed": "close"
+        },
+        {
+          "start": 5628,
+          "end": 5629,
+          "symbol": "M:bn.e(I)V",
+          "original": "e",
+          "renamed": "flush"
+        },
+        {
+          "start": 5656,
+          "end": 5657,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
+          "start": 5700,
+          "end": 5702,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 5703,
           "end": 5704,
           "symbol": "M:bn.a(Z)V",
@@ -314035,11 +314344,46 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 5752,
+          "end": 5753,
+          "symbol": "M:bn.e(I)V",
+          "original": "e",
+          "renamed": "flush"
+        },
+        {
+          "start": 6023,
+          "end": 6024,
+          "symbol": "M:ee.a(IJ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 6124,
+          "end": 6125,
+          "symbol": "M:ee.a(I[BII)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
           "start": 7279,
           "end": 7280,
           "symbol": "M:kf.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 7476,
+          "end": 7477,
+          "symbol": "M:bn.a([BB)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
+          "start": 7613,
+          "end": 7614,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 7724,
@@ -314054,6 +314398,27 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 7879,
+          "end": 7880,
+          "symbol": "M:bn.a(I)V",
+          "original": "a",
+          "renamed": "fillReadBuffer"
+        },
+        {
+          "start": 8172,
+          "end": 8173,
+          "symbol": "M:ee.a(IJ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 8503,
+          "end": 8504,
+          "symbol": "M:ee.a([BZII)I",
+          "original": "a",
+          "renamed": "read"
         },
         {
           "start": 8744,
@@ -314091,6 +314456,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 11886,
+          "end": 11888,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 11941,
           "end": 11943,
           "symbol": "C:ue",
@@ -314112,6 +314484,27 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 12217,
+          "end": 12218,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 12404,
+          "end": 12406,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 12499,
+          "end": 12500,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
           "start": 13571,
           "end": 13572,
           "symbol": "M:kf.a([BI[BII)V",
@@ -314126,6 +314519,27 @@
           "renamed": "copyByteRange"
         },
         {
+          "start": 14561,
+          "end": 14562,
+          "symbol": "M:ee.a(IJ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 14713,
+          "end": 14714,
+          "symbol": "M:ee.a([BZII)I",
+          "original": "a",
+          "renamed": "read"
+        },
+        {
+          "start": 15381,
+          "end": 15382,
+          "symbol": "M:bn.a(I)V",
+          "original": "a",
+          "renamed": "fillReadBuffer"
+        },
+        {
           "start": 15597,
           "end": 15598,
           "symbol": "M:kf.a([BI[BII)V",
@@ -314138,6 +314552,13 @@
           "symbol": "M:kf.a([BI[BII)V",
           "original": "a",
           "renamed": "copyByteRange"
+        },
+        {
+          "start": 17839,
+          "end": 17841,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 17842,
@@ -314159,6 +314580,27 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 18929,
+          "end": 18931,
+          "symbol": "M:bn.<init>(Lee;II)V",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 18932,
+          "end": 18934,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 19175,
+          "end": 19176,
+          "symbol": "M:ee.a(I)J",
+          "original": "a",
+          "renamed": "length"
         },
         {
           "start": 19439,
@@ -314696,7 +315138,7 @@
       "original": "cf.java",
       "renamed": "cf.java",
       "inputSha256": "ecf70e7ad72613b202e462207317ee0a60e7a775a04b5b90056d2d81782c2486",
-      "outputSha256": "68e9857f5034e16e15a3eebf5e65f0a754e9cecb449f875f1f8bc7e4cfbbb562",
+      "outputSha256": "0c72771811d82ee2d2a3816e216e0a91b025453cfe67b6bc113974d9cd6f96e9",
       "edits": [
         {
           "start": 55,
@@ -314830,6 +315272,13 @@
           "symbol": "C:wa",
           "original": "wa",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 3428,
+          "end": 3430,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 3937,
@@ -316028,7 +316477,7 @@
       "original": "d.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "16a04084497e43ae05fa4aeb18e40377b8b78e63a11875840fb2ffb318b43c56",
-      "outputSha256": "87ec2ef6a3f84b56061f1e98b21fa572c42136b03adb92e04b355e61f941e075",
+      "outputSha256": "b59333375013f049d52a3190d0baeb0c9557458b04c7eb9015555f614c1cb692",
       "edits": [
         {
           "start": 72,
@@ -316101,6 +316550,20 @@
           "renamed": "clearDeclaredStaticReferences"
         },
         {
+          "start": 3727,
+          "end": 3729,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 3980,
+          "end": 3982,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 4025,
           "end": 4027,
           "symbol": "C:qc",
@@ -316141,6 +316604,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 5517,
+          "end": 5519,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 5527,
@@ -316213,6 +316683,13 @@
           "renamed": "SpriteGeometry"
         },
         {
+          "start": 10931,
+          "end": 10933,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 10977,
           "end": 10979,
           "symbol": "C:qc",
@@ -316241,6 +316718,13 @@
           "renamed": "ArchiveIndex"
         },
         {
+          "start": 11512,
+          "end": 11514,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 11564,
           "end": 11566,
           "symbol": "C:md",
@@ -316248,11 +316732,53 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 11698,
+          "end": 11700,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 11859,
+          "end": 11861,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 11945,
+          "end": 11947,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 12013,
           "end": 12015,
           "symbol": "C:td",
           "original": "td",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 12018,
+          "end": 12020,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 12178,
+          "end": 12180,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 12271,
+          "end": 12273,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 14002,
@@ -317336,7 +317862,7 @@
       "original": "df.java",
       "renamed": "df.java",
       "inputSha256": "f739c3b0f5c70ff28fec32c9361b5a530c07414b4f48a72711ec3827316c0591",
-      "outputSha256": "667f7225f46a948af3a68bb97ad0845c7c60df7e0c7d318e7452baa615beb566",
+      "outputSha256": "2e442e6a73b7d4793c06a0d3bafaaa0e36c333c0c7b33ec6a266a266577f1fa1",
       "edits": [
         {
           "start": 93,
@@ -317374,6 +317900,13 @@
           "renamed": "MouseInput"
         },
         {
+          "start": 6881,
+          "end": 6883,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 8397,
           "end": 8399,
           "symbol": "C:wg",
@@ -317407,7 +317940,7 @@
       "original": "dg.java",
       "renamed": "dg.java",
       "inputSha256": "70664ced236e1ea09a5faa6d6cabdbbd7d4dea3438d0acab4473cf4ed32199e2",
-      "outputSha256": "fb9d11ff6bcbe1e13718cc6bf0c29533a9971f7c6cecb9b16ffa5b7d8606f5d6",
+      "outputSha256": "1b90e7519b8f16efa74b6515f69042a3c63d8d640cd0f0efd21a758c57db60c5",
       "edits": [
         {
           "start": 586,
@@ -317422,6 +317955,13 @@
           "symbol": "M:dg.q(I)V",
           "original": "q",
           "renamed": "releaseDeclaredStaticReferences"
+        },
+        {
+          "start": 1406,
+          "end": 1408,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 2031,
@@ -324831,7 +325371,7 @@
       "original": "e.java",
       "renamed": "e.java",
       "inputSha256": "282ba6062f570b7ad36847e09ac3c6f5116d33f90be849b76434fef4ffcba1bd",
-      "outputSha256": "1e80ac7a1536f8521d3914d400aa73eb055652f9ddb6d419339cfb147c04e2e8",
+      "outputSha256": "56c311e292e96351ac2147f1181fbb643acb30f764c3a339d8322f3f823536dd",
       "edits": [
         {
           "start": 116,
@@ -324986,6 +325526,13 @@
           "symbol": "M:HostileSpawn.a(Ljava/applet/Applet;I)V",
           "original": "a",
           "renamed": "openSubscriptionPage"
+        },
+        {
+          "start": 13076,
+          "end": 13078,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 15628,
@@ -325556,7 +326103,7 @@
       "original": "ed.java",
       "renamed": "IntrusiveNodeHashTable.java",
       "inputSha256": "38d5b2c3afef1b9ed61f49d0aa784fa7b0238cdedbd8008d0edcf6a46767b699",
-      "outputSha256": "112c979cf7b1803906d1532290b068d2d0741f30c6ce8249ccc3884965f60b08",
+      "outputSha256": "3872af110a0b85c8bac1e6207a3d3a22eaaae2c75ba64271ff69df5004f48ade",
       "edits": [
         {
           "start": 71,
@@ -325641,6 +326188,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 3463,
+          "end": 3465,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 3683,
@@ -325793,10 +326347,17 @@
     },
     {
       "original": "ee.java",
-      "renamed": "ee.java",
+      "renamed": "BoundedRandomAccessFile.java",
       "inputSha256": "4588c359d296815db31272b66657a7e55e50e1703dcc9c407a04977200bd6149",
-      "outputSha256": "ef8fd0b07fd8066cbc736d7e59a5e836fda9af192f7de32736f99246ccc1e261",
+      "outputSha256": "468be3c5ea0812a49f4d8fd2683769d6b912287edca257dcddcd7e492cca0683",
       "edits": [
+        {
+          "start": 69,
+          "end": 71,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
         {
           "start": 221,
           "end": 223,
@@ -325826,6 +326387,13 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 406,
+          "end": 408,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 409,
           "end": 410,
           "symbol": "M:ee.b(I)V",
@@ -325833,11 +326401,53 @@
           "renamed": "clearStaticReferences"
         },
         {
+          "start": 818,
+          "end": 819,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
+          "start": 930,
+          "end": 932,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 1253,
+          "end": 1254,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
+          "start": 1292,
+          "end": 1293,
+          "symbol": "M:ee.a(IJ)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 1417,
+          "end": 1419,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 1420,
           "end": 1421,
           "symbol": "M:ee.b(I)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 1489,
+          "end": 1490,
+          "symbol": "M:ee.a([BZII)I",
+          "original": "a",
+          "renamed": "read"
         },
         {
           "start": 1903,
@@ -325861,6 +326471,13 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 2817,
+          "end": 2818,
+          "symbol": "M:ee.a(I[BII)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
           "start": 3328,
           "end": 3330,
           "symbol": "C:wg",
@@ -325873,6 +326490,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4904,
+          "end": 4906,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 5461,
@@ -326008,6 +326632,20 @@
           "renamed": "ArchiveProvider"
         },
         {
+          "start": 8557,
+          "end": 8559,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 8691,
+          "end": 8693,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 8821,
           "end": 8823,
           "symbol": "C:gb",
@@ -326015,11 +326653,32 @@
           "renamed": "ResourceArchive"
         },
         {
+          "start": 8837,
+          "end": 8839,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 8925,
           "end": 8927,
           "symbol": "C:wg",
           "original": "wg",
           "renamed": "AccountCreationResultPanel"
+        },
+        {
+          "start": 8993,
+          "end": 8995,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 9310,
+          "end": 9312,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 9681,
@@ -326090,6 +326749,20 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 12474,
+          "end": 12475,
+          "symbol": "M:ee.a(I)J",
+          "original": "a",
+          "renamed": "length"
+        },
+        {
+          "start": 12619,
+          "end": 12621,
+          "symbol": "M:ee.<init>(Ljava/io/File;Ljava/lang/String;J)V",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 13319,
@@ -326345,7 +327018,7 @@
       "original": "ei.java",
       "renamed": "ei.java",
       "inputSha256": "11057c84a6aac4ce3918360fb3be5341f838e2e768b8795790958a3ebfc312bf",
-      "outputSha256": "e664963f6afae9a57fe7997a3a655b34cabdaacebc954e55bca87ed1ac000589",
+      "outputSha256": "705e3f193a350aef538746337e972adcc7dab2febbb8012122bc32f3ae833c25",
       "edits": [
         {
           "start": 61,
@@ -326494,6 +327167,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 13922,
+          "end": 13924,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 34983,
@@ -327728,7 +328408,7 @@
       "original": "f.java",
       "renamed": "f.java",
       "inputSha256": "010ac615b2a7c92f9a152b0e60510afed15405bfb8b97661bab5bed33acc7579",
-      "outputSha256": "b31fe7e92d0752432c86c2524cb20b175424b1debb42742e1956174f51e6d0e2",
+      "outputSha256": "0c3d092f491945555bb19b9eaa3fd1822124c3680e1a7d9fd59a46a2c5e6d4c3",
       "edits": [
         {
           "start": 98,
@@ -327813,6 +328493,20 @@
           "symbol": "C:vi",
           "original": "vi",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 3492,
+          "end": 3493,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 3537,
+          "end": 3538,
+          "symbol": "M:bn.a([BB)V",
+          "original": "a",
+          "renamed": "readFully"
         },
         {
           "start": 4805,
@@ -328137,7 +328831,7 @@
       "original": "fc.java",
       "renamed": "fc.java",
       "inputSha256": "d130f8ca3434a74e09e25ea632c5e61d2297d09f9a2a4a922a739aa70f1576aa",
-      "outputSha256": "f8e45cbb679c39ab439922f4a5e74b6a1d9845495a32cff332176e0f4eb3534b",
+      "outputSha256": "063f767d3085f1dc15a9472f0f0136210719a3c80cf301e2c20a074c680308f7",
       "edits": [
         {
           "start": 1359,
@@ -328166,6 +328860,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 3249,
+          "end": 3251,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 3352,
@@ -328299,7 +329000,7 @@
       "original": "fd.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "1a670a1423c1000457f3b0eaf012ff2d2196abc385859bb0d4743c11376a2b87",
-      "outputSha256": "599593033449ff8859a002ecb6b53f181f1094e5ff3bd4e929e2d2fd74e4e886",
+      "outputSha256": "7a1d086b0d6836b518c173831c0de952f2ce766d441cf4c327cf904203fc9fe7",
       "edits": [
         {
           "start": 69,
@@ -328316,11 +329017,32 @@
           "renamed": "shutdownRequested"
         },
         {
+          "start": 127,
+          "end": 129,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 151,
           "end": 153,
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "DirectDrawFullscreenManager"
+        },
+        {
+          "start": 167,
+          "end": 169,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 210,
+          "end": 212,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 386,
@@ -328335,6 +329057,13 @@
           "symbol": "F:fd.field_s:Lkk;",
           "original": "field_s",
           "renamed": "queueHead"
+        },
+        {
+          "start": 402,
+          "end": 404,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 426,
@@ -328449,6 +329178,34 @@
           "renamed": "workerThread"
         },
         {
+          "start": 2013,
+          "end": 2014,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
+          "start": 2348,
+          "end": 2349,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
+          "start": 2810,
+          "end": 2811,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
+          "start": 3184,
+          "end": 3185,
+          "symbol": "M:ee.c(I)V",
+          "original": "c",
+          "renamed": "close"
+        },
+        {
           "start": 3750,
           "end": 3752,
           "symbol": "C:kk",
@@ -328526,6 +329283,41 @@
           "renamed": "enqueueTask"
         },
         {
+          "start": 4493,
+          "end": 4495,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4602,
+          "end": 4604,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4782,
+          "end": 4784,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4885,
+          "end": 4887,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5595,
+          "end": 5597,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 6264,
           "end": 6266,
           "symbol": "C:kk",
@@ -328566,6 +329358,13 @@
           "symbol": "C:ab",
           "original": "ab",
           "renamed": "ProxyAuthenticationRequiredException"
+        },
+        {
+          "start": 6905,
+          "end": 6907,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 7118,
@@ -329555,6 +330354,41 @@
           "renamed": "privilegedTasksEnabled"
         },
         {
+          "start": 24140,
+          "end": 24142,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24234,
+          "end": 24236,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24323,
+          "end": 24325,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24412,
+          "end": 24414,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 24527,
+          "end": 24529,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 24626,
           "end": 24633,
           "symbol": "F:fd.field_b:Z",
@@ -329751,7 +330585,7 @@
       "original": "fg.java",
       "renamed": "fg.java",
       "inputSha256": "f532702238614f09ecf482d7dbd49fe24f8390f57d7b09623be5278fc61cf090",
-      "outputSha256": "9654e13a0b85bfb9007dbe21b6d795b09256dea5912b012556b383d755a33f14",
+      "outputSha256": "b89b9d5cb5617ea5fc97dc579439c573bc4b40f9eec6acfe0a03164e78a772db",
       "edits": [
         {
           "start": 66,
@@ -329815,6 +330649,13 @@
           "symbol": "C:jb",
           "original": "jb",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 3667,
+          "end": 3669,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 3702,
@@ -332470,7 +333311,7 @@
       "original": "gj.java",
       "renamed": "gj.java",
       "inputSha256": "f8a8be583e241737c2ff4e3cfa3fa213ae082c5b66feeb62ba0e41bc1080a8eb",
-      "outputSha256": "dc2d22e0d5819320fd859b9c9e1490d2b908fc9509323841788c6dacd9e0945c",
+      "outputSha256": "73902c6afa570d7e3ea3c551c84d1f3376474125ed68cf54b0c55a8bdea57901",
       "edits": [
         {
           "start": 59,
@@ -332529,6 +333370,13 @@
           "renamed": "CrossfadingMidiPcmStream"
         },
         {
+          "start": 1779,
+          "end": 1781,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 1815,
           "end": 1817,
           "symbol": "C:gb",
@@ -332541,6 +333389,13 @@
           "symbol": "C:fh",
           "original": "fh",
           "renamed": "GzipDecompressor"
+        },
+        {
+          "start": 1863,
+          "end": 1865,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 1922,
@@ -334118,7 +334973,7 @@
       "original": "gm.java",
       "renamed": "gm.java",
       "inputSha256": "d87353117a51985421b7aa675f414c3a551eb8883f979dfc1aa7335418148970",
-      "outputSha256": "49f146e96662f14d509318fd35a0569e494d652f7389e0300ad331a302d8fb0e",
+      "outputSha256": "4f75654cbcd427d959be526a664f1bc081e340eaa388faedee740b821e8bae4e",
       "edits": [
         {
           "start": 90,
@@ -334147,6 +335002,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 921,
+          "end": 923,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 1026,
@@ -336818,7 +337680,7 @@
       "original": "hj.java",
       "renamed": "hj.java",
       "inputSha256": "e709b77dd24d198b91cb6292849e77ff58353e9ad2f79ac7008292a7016c20ea",
-      "outputSha256": "014c48decba6aa74b801db81a933fb2cb28963f983f0373e2b768a648bfa2eeb",
+      "outputSha256": "13eb4fb126822c519dc69505f021589b45627955afd94fa1548086a71bee7837",
       "edits": [
         {
           "start": 61,
@@ -336959,6 +337821,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 6951,
+          "end": 6953,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 7160,
@@ -337951,7 +338820,7 @@
       "original": "ib.java",
       "renamed": "ib.java",
       "inputSha256": "a4e22972bb11822da2def36f6bdd9a6f3a8695df2df7627322040fc87e025cf6",
-      "outputSha256": "29f0a4a9406abe1b6576b2b1c6384848ba40b1cc720a1769c506736754d4a156",
+      "outputSha256": "1882ee7d5a162fd448ca45736e90eaac3a9a66f697a74f3a67e317c5fff4030f",
       "edits": [
         {
           "start": 167,
@@ -340241,6 +341110,13 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 48904,
+          "end": 48906,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 48917,
@@ -343097,7 +343973,7 @@
       "original": "jc.java",
       "renamed": "jc.java",
       "inputSha256": "4812fd50bb30443855cb7364af1b185f67fb167a819a78ced6c95a06710447d5",
-      "outputSha256": "bba5b524bcc2903e028a73ae1655b5770171810a306fd2aa73159d70bc9187f7",
+      "outputSha256": "cc0f92a04690742aa90eb4bc9de05cce49bebb90da0276b15c9c0e368dde900d",
       "edits": [
         {
           "start": 66,
@@ -343231,6 +344107,20 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 5103,
+          "end": 5105,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5255,
+          "end": 5257,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 5586,
@@ -343584,7 +344474,7 @@
       "original": "jg.java",
       "renamed": "KeyboardInput.java",
       "inputSha256": "5d9a9183751989550ef4b5066e89293e72099cb4380e9e0ea5ac670f0226dec2",
-      "outputSha256": "27f3efc0a5f4ab96505b44e00170dca2e8f516d42048a4216f77a4f54e3e3afe",
+      "outputSha256": "894e7cd8404de75dcbb819858bc9fc5891290c8cf723b53d23a82fdaac4a9b9e",
       "edits": [
         {
           "start": 50,
@@ -343734,6 +344624,13 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 3505,
+          "end": 3507,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
           "start": 4520,
           "end": 4522,
           "symbol": "C:wg",
@@ -343753,6 +344650,13 @@
           "symbol": "C:nj",
           "original": "nj",
           "renamed": "ByteStorage"
+        },
+        {
+          "start": 5123,
+          "end": 5125,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 5423,
@@ -344752,7 +345656,7 @@
       "original": "jn.java",
       "renamed": "jn.java",
       "inputSha256": "041372d713dd9fb3039fa5bd68487028d1f680c5e45a191b0a8c82ec23cab94a",
-      "outputSha256": "320770f32b1a2c9bff2c8e304f06c7285b7915205d09b13cdd6cce8754ccf084",
+      "outputSha256": "1ea55b1b0d88f3b0f82ee1e7c39f96cd4eb5c862fb627bd3953093e1941846bf",
       "edits": [
         {
           "start": 148,
@@ -344844,6 +345748,41 @@
           "symbol": "C:nm",
           "original": "nm",
           "renamed": "PcmResampler"
+        },
+        {
+          "start": 4872,
+          "end": 4874,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4958,
+          "end": 4960,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5006,
+          "end": 5008,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5074,
+          "end": 5076,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5093,
+          "end": 5095,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 5327,
@@ -346843,7 +347782,7 @@
       "original": "km.java",
       "renamed": "km.java",
       "inputSha256": "562aab6b63a935de38ea8b691a44710f1d13343530b616f4ef3d5548782acb48",
-      "outputSha256": "dec0c382fcb59078146f6fe6bbbdc42341ca0d16916cdd7affce46742dad5696",
+      "outputSha256": "ce7e22f6f5c36b0035e26ee1f36dc25690cdb2972abc49ff42fa616f92ec1cc4",
       "edits": [
         {
           "start": 77,
@@ -347026,6 +347965,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 7265,
+          "end": 7267,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 7707,
@@ -347588,7 +348534,7 @@
       "original": "lb.java",
       "renamed": "lb.java",
       "inputSha256": "24373499b07be217eb74d48cc03760e1191636b41b3d042117aae881b4bceab0",
-      "outputSha256": "4b80e5750f76e3e313c35744b49b46e830625c32809a3f916dad33678770a27f",
+      "outputSha256": "b9f819eaa52a914b87dc19ac43be1b690f30ac9d42201cc7c9cea0e6fa8e3971",
       "edits": [
         {
           "start": 90,
@@ -347731,6 +348677,13 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 5364,
+          "end": 5366,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 5596,
           "end": 5598,
           "symbol": "C:lm",
@@ -347766,6 +348719,13 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 7237,
+          "end": 7239,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 7736,
           "end": 7738,
           "symbol": "C:wa",
@@ -347792,6 +348752,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "ResourceArchive"
+        },
+        {
+          "start": 8712,
+          "end": 8714,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 8924,
@@ -349172,7 +350139,7 @@
       "original": "lk.java",
       "renamed": "lk.java",
       "inputSha256": "9ccf26d5726f17d8bf81302827f78275dadcbf5c4f343479bece5a1c976f89c3",
-      "outputSha256": "d85182c64b22f822a800004ca73c38e46b9f4bf62bf72875094c50ca27068cd9",
+      "outputSha256": "aaf05c4afa1718e552024ed8db1ee4f4e0cadd97277aaa37cd4cc1ecdc10f0d4",
       "edits": [
         {
           "start": 810,
@@ -349341,6 +350308,13 @@
           "symbol": "C:jg",
           "original": "jg",
           "renamed": "KeyboardInput"
+        },
+        {
+          "start": 14501,
+          "end": 14503,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 14685,
@@ -349532,7 +350506,7 @@
       "original": "ln.java",
       "renamed": "ln.java",
       "inputSha256": "1d2e5fce2ed2b811fc40035cbc9a1c9117645014129555429d1e573b0c8cabf0",
-      "outputSha256": "611c9b663b319dbeee176951d4f3736c66d84c75f63da6b3e65968329d8c44b9",
+      "outputSha256": "e5a720706c7e5d25359a5d22b5f5279b58108e809093d274bff82da638d2ce72",
       "edits": [
         {
           "start": 264,
@@ -349589,6 +350563,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 2244,
+          "end": 2246,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 2494,
@@ -349752,6 +350733,13 @@
           "renamed": "DiskCacheWorker"
         },
         {
+          "start": 14132,
+          "end": 14134,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 14260,
           "end": 14262,
           "symbol": "C:md",
@@ -349771,7 +350759,7 @@
       "original": "m.java",
       "renamed": "m.java",
       "inputSha256": "1bd78a15510c18b95c5204f64687b85f69452c45db76c89f624bdc4e384c8418",
-      "outputSha256": "e4f6b8859a9b770c2b88b4053aed6f99e7bb909bbac717042a54d7c168082a5f",
+      "outputSha256": "dbc8818306ce21402ce363bfaa991812c229e990fe9d3554d82f82fee6b9331b",
       "edits": [
         {
           "start": 79,
@@ -349835,6 +350823,13 @@
           "symbol": "C:wc",
           "original": "wc",
           "renamed": "ArchiveIndex"
+        },
+        {
+          "start": 2221,
+          "end": 2223,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 3558,
@@ -350230,7 +351225,7 @@
       "original": "md.java",
       "renamed": "DirectByteStorage.java",
       "inputSha256": "05ad2d750e70599690c46da750f3687df6dc18ba7257843eeb8df99ed2464da8",
-      "outputSha256": "32416c514147262388d7320a7cae180168e534a8ee8cb1f084ab22077dd05906",
+      "outputSha256": "dfcd4b3d76826cf4324dd2f5b5e26ffc55c6838d69a7486fe53243eea8e2a937",
       "edits": [
         {
           "start": 69,
@@ -350338,6 +351333,13 @@
           "renamed": "shutdown"
         },
         {
+          "start": 3348,
+          "end": 3349,
+          "symbol": "M:bn.f(I)V",
+          "original": "f",
+          "renamed": "close"
+        },
+        {
           "start": 3648,
           "end": 3650,
           "symbol": "C:md",
@@ -350373,6 +351375,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 3905,
+          "end": 3906,
+          "symbol": "M:bn.f(I)V",
+          "original": "f",
+          "renamed": "close"
+        },
+        {
           "start": 4491,
           "end": 4493,
           "symbol": "C:wg",
@@ -350385,6 +351394,20 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4943,
+          "end": 4945,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 4998,
+          "end": 5000,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 5036,
@@ -350434,7 +351457,7 @@
       "original": "me.java",
       "renamed": "me.java",
       "inputSha256": "3646b093a3b101e4f0154ee5de3dd162e7117e56d2047fa1346033d9577863ac",
-      "outputSha256": "eb6f7ab904a0e38b88689151e79a3dfdca71cfff0ffd58c4ddb6a16463ac0fc2",
+      "outputSha256": "b6610ad5b7dfd0c3e80f333037a663b9b247300e3d7e3b2c710e88e75099367e",
       "edits": [
         {
           "start": 304,
@@ -350645,6 +351668,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 14999,
+          "end": 15001,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 16008,
@@ -351022,8 +352052,15 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "1a26608323ba24cdc8b1a59cdd1add9dd2a11bafd0b31ee18db1337795c71c79",
-      "outputSha256": "d5ebc0d194eaaebe244b364186da83c54ec2afd335bab601ee80c10df029cb75",
+      "outputSha256": "ebbb07069d7f33c1fbd3c5c9cd6eaad8d46411ce2dcbd0884f2dca3eab6aa65a",
       "edits": [
+        {
+          "start": 404,
+          "end": 406,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
         {
           "start": 2212,
           "end": 2214,
@@ -354361,7 +355398,7 @@
       "original": "nj.java",
       "renamed": "ByteStorage.java",
       "inputSha256": "5bcec3383d4ae19e2bd6c598a4a9b1858d5d6411d79a080246ecdb614b18982a",
-      "outputSha256": "0e7c06a2c8a28ae63b3b5259730dbaed90ee9ba1e57d9ce26fb0515aec12b267",
+      "outputSha256": "fdc4d2474e06a9bc58496d15833100ac1c357c01e960d882a4def239eed3b7c7",
       "edits": [
         {
           "start": 53,
@@ -354550,6 +355587,13 @@
           "original": "L2",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 6083,
+          "end": 6085,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 6159,
@@ -356217,7 +357261,7 @@
       "original": "oe.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "f56137fdcb05eadc599f6b5a314fa9f4a7bb049b0b7085e8e71352d7ca1e2f3d",
-      "outputSha256": "1970dcd92a6aecc4bc352261b3ac8304d9c9d5dcf4d3896e057cae913fa77f5b",
+      "outputSha256": "35eca469025b627242e8419a0d260eb81c5179a03221163caa190803d94a493f",
       "edits": [
         {
           "start": 71,
@@ -356253,6 +357297,13 @@
           "symbol": "F:oe.field_b:Lam;",
           "original": "field_b",
           "renamed": "nextNode"
+        },
+        {
+          "start": 177,
+          "end": 179,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 203,
@@ -362008,7 +363059,7 @@
       "original": "ph.java",
       "renamed": "ph.java",
       "inputSha256": "c24a533b0138b47a9f607cd1bd6e9980a03b4afa1b92eda839cfe9350b91f14f",
-      "outputSha256": "54111288b760d0ddcf0d7b89ad5b01296b6ac1669fb7799ba0ee4b34f21d78be",
+      "outputSha256": "4ec58fbbdfbfb679c97415f029a6600e5cbaa924cb3c5cf73f0b620042e66776",
       "edits": [
         {
           "start": 217,
@@ -362044,6 +363095,13 @@
           "symbol": "C:jj",
           "original": "jj",
           "renamed": "AccountServiceResult"
+        },
+        {
+          "start": 893,
+          "end": 895,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 1225,
@@ -362262,7 +363320,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "832de292feb54f980c0418440143cf54ca8fbb05303666a47e251ced747e47c1",
-      "outputSha256": "4f6f861752c55c66c114b7524197377c3324257ae7901707ddd54615e2f94847",
+      "outputSha256": "f2b8be9926fce559aa9472f87993cac8abc392523088c0ed29ea1e70201e8239",
       "edits": [
         {
           "start": 484,
@@ -362368,6 +363426,13 @@
           "symbol": "C:kh",
           "original": "kh",
           "renamed": "VolumeRampingMidiPcmStream"
+        },
+        {
+          "start": 10451,
+          "end": 10453,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 10555,
@@ -362658,7 +363723,7 @@
       "original": "q.java",
       "renamed": "q.java",
       "inputSha256": "edbdddee6a01474c4ccf413ce3f38df7d4925b0086670b86e96f936ef26b862d",
-      "outputSha256": "e1375ee3a53c1068cc59ec3f4afc3641b23d8404cc7f259583356f93652d754f",
+      "outputSha256": "29d8dda2d12e6fdd3e8549ada8ebe2b903c9c024ca842915e7dbc139b696bf6a",
       "edits": [
         {
           "start": 137,
@@ -362666,6 +363731,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 160,
+          "end": 162,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 311,
@@ -362778,7 +363850,7 @@
       "original": "qa.java",
       "renamed": "qa.java",
       "inputSha256": "8b89b26702dac7fb847b34c84937a27c3fd60c265d1cb1117c705db940c28a55",
-      "outputSha256": "e6bbfee3b7745e1456b53248b0815750f2c7027242c569efee74938a53aa5e96",
+      "outputSha256": "804db405f20ce3a364b56926135e3adc39fdf6ab7fe1a7acfa9f5b6ec7ecd83d",
       "edits": [
         {
           "start": 66,
@@ -362884,6 +363956,62 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 4464,
+          "end": 4466,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4571,
+          "end": 4573,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4716,
+          "end": 4718,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4824,
+          "end": 4826,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 4961,
+          "end": 4963,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5097,
+          "end": 5099,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5206,
+          "end": 5208,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
+        },
+        {
+          "start": 5351,
+          "end": 5353,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 7387,
@@ -366077,7 +367205,7 @@
       "original": "rd.java",
       "renamed": "rd.java",
       "inputSha256": "f9a761523a98595431a14058ede86829c33b2e51217506b975a27b8a42f2fb16",
-      "outputSha256": "9eddfca927a03c2dd8eac1c5d93d25d219eda9c2b8e7d4e9245acd14eea81df9",
+      "outputSha256": "8c234889d8319a24f73e8c14de3bdc621248d0fe5ec1c197bd970e3e6614838f",
       "edits": [
         {
           "start": 67,
@@ -366556,6 +367684,20 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 22251,
+          "end": 22252,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 22294,
+          "end": 22295,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
           "start": 22745,
           "end": 22747,
           "symbol": "C:gb",
@@ -366589,7 +367731,7 @@
       "original": "re.java",
       "renamed": "re.java",
       "inputSha256": "56c5d35b47521bb20f32cb9ef7116c2ae21625190fde51f47f8d4788280499c8",
-      "outputSha256": "8298e3f4c82baa847c2076fa280cfb9bc4927274e8ba4fea5772ee3e3c121988",
+      "outputSha256": "ec3f856519a8c57bbb0bb29818600bea2c4c15ea964cab50e398f2cf2f7a75ee",
       "edits": [
         {
           "start": 237,
@@ -367574,6 +368716,13 @@
           "symbol": "C:wa",
           "original": "wa",
           "renamed": "ImageProducerRasterBuffer"
+        },
+        {
+          "start": 64249,
+          "end": 64251,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 64321,
@@ -370498,7 +371647,7 @@
       "original": "rl.java",
       "renamed": "rl.java",
       "inputSha256": "b95ad0b499a7f75847b25ba1b84eb9349e7d7b24e2556b4797b2c7e48fd95963",
-      "outputSha256": "52f528aa4cadeabd31f56e8c116289ed39c59f75f24fe4cbe0225f3105e1e1b6",
+      "outputSha256": "6cd00bc314e92790d009fcea480bd860336dad6b7de9dac23bc378a368811921",
       "edits": [
         {
           "start": 93,
@@ -370522,6 +371671,13 @@
           "renamed": "RgbSprite"
         },
         {
+          "start": 1310,
+          "end": 1312,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 1560,
           "end": 1562,
           "symbol": "C:si",
@@ -370534,6 +371690,20 @@
           "symbol": "C:si",
           "original": "si",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1623,
+          "end": 1625,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 1649,
+          "end": 1651,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 1662,
@@ -370550,11 +371720,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 1752,
+          "end": 1754,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 1765,
           "end": 1767,
           "symbol": "C:si",
           "original": "si",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 1794,
+          "end": 1796,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 1807,
@@ -371167,7 +372351,7 @@
       "original": "sb.java",
       "renamed": "sb.java",
       "inputSha256": "0bfbafac07be7696ecc8a1604e842a0d505a1f5b7cd731ac5dedc800a7d4f68f",
-      "outputSha256": "88301d2247d6ce02e4abd820b741300de46d8b42550e787efa6a5b5885ce6fc7",
+      "outputSha256": "3f308a06ee3193187180bde78493dd34eed6ec45aade158faa6e8146a5a1fe6c",
       "edits": [
         {
           "start": 295,
@@ -371196,6 +372380,13 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "ArchiveRequest"
+        },
+        {
+          "start": 484,
+          "end": 486,
+          "symbol": "C:ee",
+          "original": "ee",
+          "renamed": "BoundedRandomAccessFile"
         },
         {
           "start": 497,
@@ -371701,7 +372892,7 @@
       "original": "sd.java",
       "renamed": "sd.java",
       "inputSha256": "e006419ddb50e36615576b80f52563e617a8102984a33e7cbcd87294eacdf480",
-      "outputSha256": "3d1184511a75b839682d12d553290738dc462e51add455c6fde9a5ec9b748108",
+      "outputSha256": "d7ac4d5c117e29ff80e83052fa066c598aa5257c6ef749118c4ee58a7332dbfc",
       "edits": [
         {
           "start": 122,
@@ -371716,6 +372907,13 @@
           "symbol": "C:bd",
           "original": "bd",
           "renamed": "RgbSprite"
+        },
+        {
+          "start": 447,
+          "end": 449,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 1143,
@@ -371877,7 +373075,7 @@
       "original": "se.java",
       "renamed": "GameAppletShell.java",
       "inputSha256": "195ef57a474e2badfb624fae51ccb35ee318c752d4ee0d76877b6f4d691770a4",
-      "outputSha256": "d9bd4b087b983c2e8018a8380e5666e6628bcb3b256fb38f2895e7125bd8e3bf",
+      "outputSha256": "0a7d23fd69469b412170c729d747a528f05b312e045dc1b9f613e22784e099b1",
       "edits": [
         {
           "start": 60,
@@ -372151,6 +373349,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "SpriteGeometry"
+        },
+        {
+          "start": 11842,
+          "end": 11844,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 11882,
@@ -372515,6 +373720,13 @@
           "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 34482,
+          "end": 34484,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 35625,
@@ -378532,7 +379744,7 @@
       "original": "um.java",
       "renamed": "SectorCacheStore.java",
       "inputSha256": "91b1a8d875d06068f0989815baa392ce69310ab607680f6bbc62b6db337efae2",
-      "outputSha256": "d03c185ef06d7b4028ef6a1b5c816a6478b789883fa129a2ee8706dc2c3a7f76",
+      "outputSha256": "819d5a2483f8bfbec3feb1a7187827cdc4a43e5131e9010bf331f4f9e9161721",
       "edits": [
         {
           "start": 69,
@@ -378542,11 +379754,74 @@
           "renamed": "SectorCacheStore"
         },
         {
+          "start": 166,
+          "end": 168,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 242,
+          "end": 244,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 306,
           "end": 307,
           "symbol": "M:um.a([BZIII)Z",
           "original": "a",
           "renamed": "writeSectorChain"
+        },
+        {
+          "start": 1254,
+          "end": 1255,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 1349,
+          "end": 1350,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 1415,
+          "end": 1416,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
+          "start": 1656,
+          "end": 1657,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 1803,
+          "end": 1804,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 2364,
+          "end": 2365,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 2428,
+          "end": 2429,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
         },
         {
           "start": 2528,
@@ -378557,6 +379832,20 @@
           "kind": "label"
         },
         {
+          "start": 2748,
+          "end": 2749,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 2900,
+          "end": 2901,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
           "start": 3420,
           "end": 3422,
           "symbol": "B:um.a([BZIII)Z#0",
@@ -378565,12 +379854,75 @@
           "kind": "label"
         },
         {
+          "start": 3965,
+          "end": 3966,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
           "start": 4484,
           "end": 4486,
           "symbol": "B:um.a([BZIII)Z#0",
           "original": "L3",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 5149,
+          "end": 5150,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 5504,
+          "end": 5505,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 6489,
+          "end": 6490,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 6563,
+          "end": 6564,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 6779,
+          "end": 6780,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 7366,
+          "end": 7367,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 7439,
+          "end": 7440,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
+        },
+        {
+          "start": 7653,
+          "end": 7654,
+          "symbol": "M:bn.a(II[BB)V",
+          "original": "a",
+          "renamed": "write"
         },
         {
           "start": 8704,
@@ -378657,11 +380009,81 @@
           "renamed": "read"
         },
         {
+          "start": 12403,
+          "end": 12404,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 12485,
+          "end": 12486,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 12547,
+          "end": 12548,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
+          "start": 13180,
+          "end": 13181,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
+          "start": 13607,
+          "end": 13608,
+          "symbol": "M:bn.a(JB)V",
+          "original": "a",
+          "renamed": "seek"
+        },
+        {
+          "start": 13872,
+          "end": 13873,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
+          "start": 14414,
+          "end": 14415,
+          "symbol": "M:bn.a([BBII)V",
+          "original": "a",
+          "renamed": "readFully"
+        },
+        {
+          "start": 15321,
+          "end": 15322,
+          "symbol": "M:bn.d(I)J",
+          "original": "d",
+          "renamed": "length"
+        },
+        {
           "start": 16361,
           "end": 16363,
           "symbol": "M:um.<init>(ILbn;Lbn;I)V",
           "original": "um",
           "renamed": "SectorCacheStore"
+        },
+        {
+          "start": 16376,
+          "end": 16378,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
+          "start": 16387,
+          "end": 16389,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 16716,
@@ -380027,7 +381449,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "c77c34d504d6cd535317ce0706026d7b46b1079d70dbf6faf8bd3625b107affc",
-      "outputSha256": "48608fa364ca5757ec21e2251dc5f5153f14d3a119b5710b88c2ba3dab52bd50",
+      "outputSha256": "0332015763255c6313a547cb9b8627b52e406fdada59eb30a5d7eced10d9a50a",
       "edits": [
         {
           "start": 67,
@@ -380042,6 +381464,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "CrossfadingMidiPcmStream"
+        },
+        {
+          "start": 5783,
+          "end": 5785,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 6517,
@@ -384520,7 +385949,7 @@
       "original": "wk.java",
       "renamed": "wk.java",
       "inputSha256": "588ed0f217442eb2def7c0628f836f43751947598ae52c7fbab6585ab44989ad",
-      "outputSha256": "2e2d1163aaeca4c71eec4ca9c00bf40f64eda95ec7d200b5a8510283a89c99f7",
+      "outputSha256": "2c848c4fd558dd72a4387a947507ce1064e56ffec9164f648418c244973d09a9",
       "edits": [
         {
           "start": 147,
@@ -384614,6 +386043,13 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 1667,
+          "end": 1669,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 1749,
           "end": 1750,
           "symbol": "M:vi.e(I)I",
@@ -384628,11 +386064,25 @@
           "renamed": "DirectByteStorage"
         },
         {
+          "start": 2016,
+          "end": 2018,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
+        },
+        {
           "start": 2316,
           "end": 2318,
           "symbol": "C:md",
           "original": "md",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 2345,
+          "end": 2347,
+          "symbol": "C:bn",
+          "original": "bn",
+          "renamed": "BufferedRandomAccessFile"
         },
         {
           "start": 2468,
@@ -385214,10 +386664,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "ce13f086b6e7998ddc01aebc89d59c998479d84987524f45e3a436746513fda2",
+    "rulesSha256": "384480ba0cc20b1a5baec735fc3e972d8c227c96f9ec2592135ab364bfeb38ee",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "3c52ec231c2d706d300f4c597b2c566a7a8572aa597f2499f82e058eb3659f37",
+    "outputTreeSha256": "70bababf86cbd6d024289ff09f71991d76a1bbff9c13c3631a170e64d1344257",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

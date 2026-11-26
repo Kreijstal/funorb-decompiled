@@ -24,16 +24,16 @@ final class jg extends al {
             var6 = null;
             var7 = null;
             if (mc.field_b.field_r != null) {
-              TutorialController.field_x = new ak(mc.field_b.field_r, 5200, 0);
+              TutorialController.field_x = new BufferedRandomAccessFile(mc.field_b.field_r, 5200, 0);
               mc.field_b.field_r = null;
-              var6 = new SectorCacheStore(255, TutorialController.field_x, new ak(mc.field_b.field_q, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, TutorialController.field_x, new BufferedRandomAccessFile(mc.field_b.field_q, 12000, 0), 2097152);
             }
             if (TutorialController.field_x != null) {
               if (null == ProxyAuthenticationRequiredException.field_b) {
-                ProxyAuthenticationRequiredException.field_b = new ak[mc.field_b.field_s.length];
+                ProxyAuthenticationRequiredException.field_b = new BufferedRandomAccessFile[mc.field_b.field_s.length];
               }
               if (null == ProxyAuthenticationRequiredException.field_b[param4]) {
-                ProxyAuthenticationRequiredException.field_b[param4] = new ak(mc.field_b.field_s[param4], 12000, 0);
+                ProxyAuthenticationRequiredException.field_b[param4] = new BufferedRandomAccessFile(mc.field_b.field_s[param4], 12000, 0);
                 mc.field_b.field_s[param4] = null;
               }
               var7 = new SectorCacheStore(param4, TutorialController.field_x, ProxyAuthenticationRequiredException.field_b[param4], 2097152);

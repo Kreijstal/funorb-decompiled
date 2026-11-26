@@ -491,7 +491,7 @@ class g extends lk implements u {
           if (param2 != -1) {
             return true;
           }
-          param0 = wk.a('_', 58, param0, "");
+          param0 = BoundedRandomAccessFile.a('_', 58, param0, "");
           var3 = gi.a(100, param0);
           stackIn_8_0 = (param1.indexOf(param0) != -1) || (param1.indexOf(var3) != -1);
           return stackIn_8_0;

@@ -146,13 +146,13 @@ final class jc {
         }
         if (param0) {
           field_a = (RgbSprite) null;
-          if (od.field_I == ee.field_b) {
+          if (od.field_I == BoundedRandomAccessFile.field_b) {
             od.field_I = e.field_q;
             return wj.field_H;
           }
           return null;
         }
-        if (od.field_I == ee.field_b) {
+        if (od.field_I == BoundedRandomAccessFile.field_b) {
           od.field_I = e.field_q;
           return wj.field_H;
         }

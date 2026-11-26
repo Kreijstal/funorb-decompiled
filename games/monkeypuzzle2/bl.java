@@ -3,7 +3,7 @@
  */
 final class bl extends IntrusiveNode {
     bl field_e;
-    static ch[] field_o;
+    static BufferedRandomAccessFile[] field_o;
     int field_n;
     int field_i;
     int field_j;

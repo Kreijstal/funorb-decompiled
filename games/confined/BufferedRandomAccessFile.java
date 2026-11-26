@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pf {
+final class BufferedRandomAccessFile {
     private byte[] field_e;
     private long field_k;
     private int field_j;
@@ -18,15 +18,15 @@ final class pf {
     static int[] field_h;
     static String field_i;
 
-    final void c(int param0) throws IOException {
-        this.a(0);
+    final void close(int param0) throws IOException {
+        this.flush(0);
         this.field_g.close(0);
         if (param0 >= -77) {
           this.field_a = -48L;
         }
     }
 
-    final void a(int param0, byte param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, byte param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
         String stackIn_57_2 = null;
@@ -50,10 +50,10 @@ final class pf {
             if (this.field_a != -1L) {
               if (this.field_c >= this.field_a) {
                 if (this.field_c > this.field_a + (long)this.field_f) {
-                  this.a(0);
+                  this.flush(0);
                 }
               } else {
-                this.a(0);
+                this.flush(0);
               }
             }
             if (this.field_a != -1L &&
@@ -64,7 +64,7 @@ final class pf {
               param2 = param2 + var5_int;
               this.field_c = this.field_c + (long)var5_int;
               this.field_f = this.field_l.length;
-              this.a(0);
+              this.flush(0);
             }
             if (this.field_l.length >= param0) {
               if (param0 <= 0) {
@@ -136,11 +136,11 @@ final class pf {
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         if (0L <= param1) {
           if (param0 != 123) {
             CharSequence[] var5 = (CharSequence[]) null;
-            pf.a(-121, (CharSequence[]) null);
+            BufferedRandomAccessFile.a(-121, (CharSequence[]) null);
           }
           this.field_c = param1;
           return;
@@ -159,7 +159,7 @@ final class pf {
         try {
           if (param0 != 11739) {
             var3 = (CharSequence[]) null;
-            pf.a(-18, (CharSequence[]) null);
+            BufferedRandomAccessFile.a(-18, (CharSequence[]) null);
           }
           stackIn_3_0 = IsaacRandom.a(param1, -2, 0, param1.length);
           return stackIn_3_0;
@@ -177,15 +177,15 @@ final class pf {
         }
     }
 
-    final long b(byte param0) {
+    final long length(byte param0) {
         if (param0 < 95) {
           CharSequence[] var3 = (CharSequence[]) null;
-          pf.a(-91, (CharSequence[]) null);
+          BufferedRandomAccessFile.a(-91, (CharSequence[]) null);
         }
         return this.field_m;
     }
 
-    final void a(int param0, byte[] param1, byte param2, int param3) throws IOException {
+    final void readFully(int param0, byte[] param1, byte param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
@@ -255,7 +255,7 @@ final class pf {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.a((byte) -55);
+              this.fillReadBuffer((byte) -55);
               var9_intLifetime1Lifetime1 = param3;
               if (var9_intLifetime1Lifetime1 > this.field_j) {
                 var9_intLifetime1Lifetime1 = this.field_j;
@@ -334,18 +334,18 @@ final class pf {
         }
     }
 
-    final void a(byte[] param0, byte param1) throws IOException {
+    final void readFully(byte[] param0, byte param1) throws IOException {
         if (param1 != -4) {
           return;
         }
         try {
-          this.a(0, param0, (byte) 123, param0.length);
+          this.readFully(0, param0, (byte) 123, param0.length);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "pf.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void fillReadBuffer(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Confined.field_J ? 1 : 0;
@@ -372,7 +372,7 @@ final class pf {
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -429,7 +429,7 @@ final class pf {
         field_h = null;
     }
 
-    pf(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_a = -1L;
         this.field_f = 0;

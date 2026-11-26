@@ -38,8 +38,8 @@ class lc extends DualLinkNode {
             var2 = var8;
             if (null != ge.field_d) {
               try {
-                ge.field_d.a(param1 ^ 14, 0L);
-                ge.field_d.a(631, var9);
+                ge.field_d.seek(param1 ^ 14, 0L);
+                ge.field_d.readFully(631, var9);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

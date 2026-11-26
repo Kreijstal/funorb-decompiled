@@ -165,7 +165,7 @@ final class lg {
           return;
         }
         try {
-          dupTemp$0 = hd.a(false, param1, "da_trap_" + param2);
+          dupTemp$0 = BufferedRandomAccessFile.a(false, param1, "da_trap_" + param2);
           var4.field_a = dupTemp$0;
           var4.field_x = dupTemp$0;
         } catch (RuntimeException runtimeException) {

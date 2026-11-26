@@ -5,7 +5,7 @@ final class vh {
     private int field_f;
     private IntrusiveNode field_g;
     private IntrusiveNode field_c;
-    static pf[] field_e;
+    static BufferedRandomAccessFile[] field_e;
     private int field_d;
     private IntrusiveNode[] field_b;
     static CipherPacketBuffer field_a;
@@ -42,7 +42,7 @@ final class vh {
 
     final static void b(int param0) {
         if (param0 != -4749) {
-          field_e = (pf[]) null;
+          field_e = (BufferedRandomAccessFile[]) null;
         }
         if (IntrusiveNode.field_e == 10) {
           ClientException.a((byte) 126);

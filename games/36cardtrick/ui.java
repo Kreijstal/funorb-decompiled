@@ -87,7 +87,7 @@ final class ui extends g implements qh {
             }
             if (ni.field_c != null) {
               try {
-                ni.field_c.a((byte) -120);
+                ni.field_c.close((byte) -120);
               } catch (IOException iOException) {
               }
             }
@@ -95,7 +95,7 @@ final class ui extends g implements qh {
               for (var1_int = 0; var1_int < rk.field_Z.length; var1_int++) {
                 if (rk.field_Z[var1_int] != null) {
                   try {
-                    rk.field_Z[var1_int].a((byte) -86);
+                    rk.field_Z[var1_int].close((byte) -86);
                   } catch (IOException var2_ref) {
                   }
                 }

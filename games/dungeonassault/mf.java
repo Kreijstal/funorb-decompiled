@@ -36,8 +36,8 @@ final class mf {
             var2 = var8;
             if (PcmOutputWorker.field_b != null) {
               try {
-                PcmOutputWorker.field_b.a(0L, -26296);
-                PcmOutputWorker.field_b.a(param0 ^ -30463, var9);
+                PcmOutputWorker.field_b.seek(0L, -26296);
+                PcmOutputWorker.field_b.readFully(param0 ^ -30463, var9);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;
@@ -210,7 +210,7 @@ final class mf {
               im.field_d = false;
               var3_int = 1;
             }
-            hd.a(tl.b(-3), jc.field_d, var3_int != 0, (byte) 105, h.a(-3));
+            BufferedRandomAccessFile.a(tl.b(-3), jc.field_d, var3_int != 0, (byte) 105, h.a(-3));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

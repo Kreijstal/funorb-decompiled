@@ -312,7 +312,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 91, "pressnext");
                 if (var2 != null) {
-                  ak.field_c = ll.a(0, var2);
+                  BufferedRandomAccessFile.field_c = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 87, "objectivefailed");
                 if (var2 != null) {

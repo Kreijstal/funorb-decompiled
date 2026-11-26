@@ -128,7 +128,7 @@ final class ld extends kf {
         int var6 = this.field_o + (param1 + (this.field_v >> 1));
         sc var8 = this.field_E.b((byte) 116);
         if (jj.field_e == var8) {
-          var15 = be.field_b[0];
+          var15 = BufferedRandomAccessFile.field_b[0];
           var9 = var15.field_r << 1;
           var10 = var15.field_x << 1;
           if (AwtRasterBuffer.field_f == null) {
@@ -162,8 +162,8 @@ final class ld extends kf {
           AwtRasterBuffer.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
           return;
         }
-        if (be.field_q == var8) {
-          var16 = be.field_b[0];
+        if (BufferedRandomAccessFile.field_q == var8) {
+          var16 = BufferedRandomAccessFile.field_b[0];
           var9Lifetime1 = var16.field_r << 1;
           var10Lifetime1 = var16.field_x << 1;
           if (AwtRasterBuffer.field_f == null) {
@@ -198,12 +198,12 @@ final class ld extends kf {
           return;
         }
         if (ni.field_b == var8) {
-          var14 = be.field_b[2];
+          var14 = BufferedRandomAccessFile.field_b[2];
           var14.d(var5 - (var14.field_p >> 1), var6 - (var14.field_u >> 1), 256);
           return;
         }
         if (rh.field_p == var8) {
-          var13 = be.field_b[1];
+          var13 = BufferedRandomAccessFile.field_b[1];
           var13.d(-(var13.field_p >> 1) + var5, var6 - (var13.field_u >> 1), 256);
           return;
         }

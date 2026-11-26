@@ -230,7 +230,7 @@ final class DirectByteStorage extends ByteStorage {
                         if (param0.field_j > 0 &&
                           null != param0.field_y) {
                           dupTemp$0 = param0.field_y[var8];
-                          lc.field_n[dupTemp$0] = lc.field_n[dupTemp$0] + 1;
+                          BufferedRandomAccessFile.field_n[dupTemp$0] = BufferedRandomAccessFile.field_n[dupTemp$0] + 1;
                         }
                         ResourceArchive.field_a = ResourceArchive.field_a + 1;
                         break;
@@ -251,9 +251,9 @@ final class DirectByteStorage extends ByteStorage {
             param0.field_y != null) {
             var8Lifetime1 = 0;
             var9Lifetime1 = 0;
-            while (!(lc.field_n.length <= var9Lifetime1)) {
-              var10Lifetime1 = lc.field_n[var9Lifetime1];
-              lc.field_n[var9Lifetime1] = var8Lifetime1;
+            while (!(BufferedRandomAccessFile.field_n.length <= var9Lifetime1)) {
+              var10Lifetime1 = BufferedRandomAccessFile.field_n[var9Lifetime1];
+              BufferedRandomAccessFile.field_n[var9Lifetime1] = var8Lifetime1;
               var8Lifetime1 = var8Lifetime1 + var10Lifetime1;
               var9Lifetime1++;
               if (var19 != 0) {

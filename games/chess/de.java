@@ -260,9 +260,9 @@ final class de {
           return;
         }
         IntrusiveDeque.field_f = qk.field_h;
-        if (lc.field_q) {
+        if (BufferedRandomAccessFile.field_q) {
           oc.field_p = null;
-          lc.field_q = false;
+          BufferedRandomAccessFile.field_q = false;
         }
         nc.field_T = 0;
         wn.field_e = ma.field_D;

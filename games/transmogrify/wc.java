@@ -393,9 +393,9 @@ final class wc {
             for (var7_intLifetime1 = 0; var7_intLifetime1 < var4; var7_intLifetime1++) {
               th.a(101, var16);
               if (0 != var7_intLifetime1) {
-                vh.a(di.field_e, ug.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
+                vh.a(BoundedRandomAccessFile.field_e, ug.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
               } else {
-                vh.a(di.field_e, ug.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
+                vh.a(BoundedRandomAccessFile.field_e, ug.field_b, DiskArchiveRequest.field_x, ia.field_j, var7_intLifetime1, false);
               }
             }
             jj.a((byte) -93, var6);

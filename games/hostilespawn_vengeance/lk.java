@@ -382,7 +382,7 @@ final class lk extends vd implements cd, qk {
             this.field_m = this.field_m + (var7.b(this.field_I, -40 + this.field_s, var7.field_y) + 5);
           }
           var8 = KeyboardInput.field_b;
-          var9 = qj.a(bn.c(-1), (byte) -116);
+          var9 = qj.a(BufferedRandomAccessFile.c(-1), (byte) -116);
           if (ub.field_b != var9) {
             if (var9 == wh.field_c) {
               var8 = dg.field_nb;

@@ -1065,7 +1065,7 @@ final class je extends bb {
                 }
                 var2 = ad.a("pleasetryagain", 0);
                 if (null != var2) {
-                  k.field_e = ab.a(0, var2);
+                  BufferedRandomAccessFile.field_e = ab.a(0, var2);
                 }
                 var2 = ad.a("pleasereenterpass", 0);
                 if (var2 != null) {

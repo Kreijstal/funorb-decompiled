@@ -39,7 +39,7 @@ final class oa extends IntrusiveNode {
         DiskCacheWorker.field_g = 0;
         if (bc.field_V == 0) {
           ImageProducerRasterBuffer.field_m = bc.field_V;
-          k.a(0, BufferedSocket.field_j);
+          BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
           if (bc.field_V >= 0) {
             pi.field_b[bc.field_V].a(param1, true);
           }
@@ -52,7 +52,7 @@ final class oa extends IntrusiveNode {
         }
         if (-2 == bc.field_V) {
           ImageProducerRasterBuffer.field_m = bc.field_V;
-          k.a(0, BufferedSocket.field_j);
+          BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
         }
         if (bc.field_V >= 0) {
           pi.field_b[bc.field_V].a(param1, true);

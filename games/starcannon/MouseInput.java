@@ -334,7 +334,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
         RuntimeException var2_ref = null;
         var5 = StarCannon.field_A;
         try {
-          if (null == td.field_o) {
+          if (null == BufferedRandomAccessFile.field_o) {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -342,7 +342,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (ld) (td.field_o.a((long)var2.hashCode(), 55));
+          var3 = (ld) (BufferedRandomAccessFile.field_o.a((long)var2.hashCode(), 55));
           if (param1 < 44) {
             stackIn_9_0 = (ld) null;
             return stackIn_9_0;
@@ -357,7 +357,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (ld) (td.field_o.b(1));
+            var3 = (ld) (BufferedRandomAccessFile.field_o.b(1));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

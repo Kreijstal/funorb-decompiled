@@ -11,7 +11,7 @@ class fe extends dk {
     private int field_A;
     private boolean field_G;
     private int field_C;
-    static td[] field_J;
+    static BufferedRandomAccessFile[] field_J;
 
     private final void h(boolean param0) {
         UiWidget var3 = null;
@@ -360,7 +360,7 @@ class fe extends dk {
           param1.previous = param0.previous;
           param1.next = param0;
           if (param2) {
-            field_J = (td[]) null;
+            field_J = (BufferedRandomAccessFile[]) null;
           }
           param1.previous.next = param1;
           param1.next.previous = param1;

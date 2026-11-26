@@ -85,7 +85,7 @@ final class mp {
             var5 = (int[]) null;
             mp.a((Random) null, (int[]) null, -57, -11, 117);
           }
-          stackIn_3_0 = hd.a(false, param3, param1 + "_" + param0);
+          stackIn_3_0 = BufferedRandomAccessFile.a(false, param3, param1 + "_" + param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

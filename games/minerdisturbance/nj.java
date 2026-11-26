@@ -63,8 +63,8 @@ final class nj {
           Throwable decompiledCaughtException = null;
           if (null != w.field_W) {
             try {
-              w.field_W.a((byte) 115, 0L);
-              w.field_W.a(kj.field_a.payload, 24, kj.field_a.position, true);
+              w.field_W.seek((byte) 115, 0L);
+              w.field_W.write(kj.field_a.payload, 24, kj.field_a.position, true);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

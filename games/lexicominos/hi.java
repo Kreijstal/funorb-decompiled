@@ -114,7 +114,7 @@ final class hi {
                 var5 = SecondaryNodeDequeIterator.field_c;
               }
             } else {
-              var5 = ea.field_b;
+              var5 = BoundedRandomAccessFile.field_b;
             }
             var6 = MouseWheelInput.field_g[var3];
             if (sh.field_a == 2 &&

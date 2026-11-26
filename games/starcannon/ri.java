@@ -28,17 +28,17 @@ final class ri {
           try {
             var6 = null;
             if (DirectByteStorage.field_f.field_e != null) {
-              ne.field_l = new td(DirectByteStorage.field_f.field_e, 5200, 0);
+              ne.field_l = new BufferedRandomAccessFile(DirectByteStorage.field_f.field_e, 5200, 0);
               DirectByteStorage.field_f.field_e = null;
-              var6 = new SectorCacheStore(255, ne.field_l, new td(DirectByteStorage.field_f.field_t, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ne.field_l, new BufferedRandomAccessFile(DirectByteStorage.field_f.field_t, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != ne.field_l) {
               if (fe.field_J == null) {
-                fe.field_J = new td[DirectByteStorage.field_f.field_q.length];
+                fe.field_J = new BufferedRandomAccessFile[DirectByteStorage.field_f.field_q.length];
               }
               if (fe.field_J[param3] == null) {
-                fe.field_J[param3] = new td(DirectByteStorage.field_f.field_q[param3], 12000, 0);
+                fe.field_J[param3] = new BufferedRandomAccessFile(DirectByteStorage.field_f.field_q[param3], 12000, 0);
                 DirectByteStorage.field_f.field_q[param3] = null;
               }
               var7 = new SectorCacheStore(param3, ne.field_l, fe.field_J[param3], 2097152);

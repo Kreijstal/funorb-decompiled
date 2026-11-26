@@ -195,7 +195,7 @@ final class hj extends DualLinkNode {
         RuntimeException var4_ref = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          ki.field_f = ee.field_b;
+          ki.field_f = BoundedRandomAccessFile.field_b;
           if (param2 != 0) {
             return;
           }

@@ -111,7 +111,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           field_a = (String) null;
         }
         if (var1.length() == 0) {
-          var1 = cb.b(true);
+          var1 = BoundedRandomAccessFile.b(true);
         }
         if (0 == var1.length()) {
           var1 = ta.field_c;

@@ -386,7 +386,7 @@ final class ph extends di {
             return stackIn_9_0;
           }
           if (ef.a((byte) -102, var5)) {
-            stackIn_13_0 = ak.field_j;
+            stackIn_13_0 = BufferedRandomAccessFile.field_j;
             return stackIn_13_0;
           }
           var6 = -107 / ((param1 - 26) / 56);
@@ -398,7 +398,7 @@ final class ph extends di {
             stackIn_31_0 = nb.field_a;
             return stackIn_31_0;
           }
-          if (ak.a(var5, var7, false)) {
+          if (BufferedRandomAccessFile.a(var5, var7, false)) {
             stackIn_21_0 = jd.field_i;
             return stackIn_21_0;
           }

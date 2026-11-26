@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ee {
+final class BoundedRandomAccessFile {
     static nd field_a;
     private long field_c;
     private RandomAccessFile field_i;
@@ -17,7 +17,7 @@ final class ee {
     public static void clearStaticReferences(int param0) {
         field_b = null;
         if (param0 != 0) {
-          ee.clearStaticReferences(121);
+          BoundedRandomAccessFile.clearStaticReferences(121);
         }
         field_a = null;
         field_g = null;
@@ -35,10 +35,10 @@ final class ee {
         return sa.a((byte) -115, param1);
     }
 
-    final void c(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != -1) {
           String var3 = (String) null;
-          ee.a(true, 30, true, -25, (String) null, (String) null);
+          BoundedRandomAccessFile.a(true, 30, true, -25, (String) null, (String) null);
         }
         if (this.field_i != null) {
           this.field_i.close();
@@ -49,19 +49,19 @@ final class ee {
     protected final void finalize() throws Throwable {
         if (this.field_i != null) {
           System.out.println("");
-          this.c(-1);
+          this.close(-1);
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         this.field_i.seek(param1);
         if (param0 != -18127) {
-          ee.clearStaticReferences(35);
+          BoundedRandomAccessFile.clearStaticReferences(35);
         }
         this.field_f = param1;
     }
 
-    final int a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, boolean param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_6_0 = 0;
@@ -93,7 +93,7 @@ final class ee {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         if (param0 != 0) {
           return;
         }
@@ -149,7 +149,7 @@ final class ee {
             }
             if (param3 > -85) {
               var10 = (String) null;
-              ee.a(true, 46, false, -119, (String) null, (String) null);
+              BoundedRandomAccessFile.a(true, 46, false, -119, (String) null, (String) null);
             }
             if (rc.field_a == sa.field_c) {
               if (!param0) {
@@ -244,27 +244,27 @@ final class ee {
               ca.field_a = sc.field_g.readUnsignedByte(32270);
               rc.field_a = MouseInput.field_d;
               if (t.field_i.a(false) == ArchiveProvider.field_a) {
-                ub.field_b.a((byte) -126, bn.c(-1));
+                ub.field_b.a((byte) -126, BufferedRandomAccessFile.c(-1));
               } else {
                 if (t.field_i.a(false) == ln.field_l) {
-                  wh.field_c.a((byte) -109, bn.c(-1));
+                  wh.field_c.a((byte) -109, BufferedRandomAccessFile.c(-1));
                 }
               }
               jn.field_C = false;
               if (var12 != null) {
-                ResourceArchive.a((byte) 62, bn.c(-1), var12);
+                ResourceArchive.a((byte) 62, BufferedRandomAccessFile.c(-1), var12);
               }
               if (0 >= wb.field_S &&
                 !AccountCreationResultPanel.field_ub) {
                 try {
-                  a.a("unzap", bn.c(-1), -124);
+                  a.a("unzap", BufferedRandomAccessFile.c(-1), -124);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  a.a(bn.c(-1), new Object[]{pm.a(ib.field_d, (byte) 100)}, "zap", -13730);
+                  a.a(BufferedRandomAccessFile.c(-1), new Object[]{pm.a(ib.field_d, (byte) 100)}, "zap", -13730);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -341,14 +341,14 @@ final class ee {
         }
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != -1) {
           return -92L;
         }
         return this.field_i.length();
     }
 
-    ee(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

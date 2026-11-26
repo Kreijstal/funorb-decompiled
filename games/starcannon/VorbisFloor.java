@@ -42,7 +42,7 @@ final class VorbisFloor {
         var2 = this.field_c.length;
         System.arraycopy(this.field_c, 0, field_e, 0, var2);
         var3 = field_i[this.field_f - 1];
-        var4 = td.bitLength(var3 - 1, (byte) 100);
+        var4 = BufferedRandomAccessFile.bitLength(var3 - 1, (byte) 100);
         field_g[0] = nj.readBits(var4);
         field_g[1] = nj.readBits(var4);
         var5 = 2;

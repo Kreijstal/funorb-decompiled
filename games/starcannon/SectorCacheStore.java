@@ -6,8 +6,8 @@ import java.io.*;
 final class SectorCacheStore {
     private int field_c;
     static boolean field_d;
-    private td field_b;
-    private td field_e;
+    private BufferedRandomAccessFile field_b;
+    private BufferedRandomAccessFile field_e;
     private int field_a;
 
     private final boolean writeSectorChain(byte param0, int param1, int param2, byte[] param3, boolean param4) {
@@ -36,30 +36,30 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param4) {
-                  if ((long)(6 + param2 * 6) > this.field_e.b(false)) {
+                  if ((long)(6 + param2 * 6) > this.field_e.length(false)) {
                     return false;
                   }
-                  this.field_e.a((long)(param2 * 6), 0);
-                  this.field_e.a(param0 ^ 38, cb.field_b, 0, 6);
-                  var7_int = (255 & cb.field_b[5]) + (cb.field_b[3] << 16 & 16711680) + (cb.field_b[4] << 8 & 65280);
+                  this.field_e.seek((long)(param2 * 6), 0);
+                  this.field_e.readFully(param0 ^ 38, BoundedRandomAccessFile.field_b, 0, 6);
+                  var7_int = (255 & BoundedRandomAccessFile.field_b[5]) + (BoundedRandomAccessFile.field_b[3] << 16 & 16711680) + (BoundedRandomAccessFile.field_b[4] << 8 & 65280);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= (this.field_b.b(false) / 520L))) {
+                    !((long)var7_int <= (this.field_b.length(false) / 520L))) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_b.b(false) + 519L) / 520L);
+                  var7_int = (int)((this.field_b.length(false) + 519L) / 520L);
                   if (0 == var7_int) {
                     var7_int = 1;
                   }
                 }
-                cb.field_b[1] = (byte)(param1 >> 8);
-                cb.field_b[5] = (byte)var7_int;
-                cb.field_b[4] = (byte)(var7_int >> 8);
-                cb.field_b[2] = (byte)param1;
-                cb.field_b[0] = (byte)(param1 >> 16);
-                cb.field_b[3] = (byte)(var7_int >> 16);
-                this.field_e.a((long)(6 * param2), 0);
-                this.field_e.a(0, 6, false, cb.field_b);
+                BoundedRandomAccessFile.field_b[1] = (byte)(param1 >> 8);
+                BoundedRandomAccessFile.field_b[5] = (byte)var7_int;
+                BoundedRandomAccessFile.field_b[4] = (byte)(var7_int >> 8);
+                BoundedRandomAccessFile.field_b[2] = (byte)param1;
+                BoundedRandomAccessFile.field_b[0] = (byte)(param1 >> 16);
+                BoundedRandomAccessFile.field_b[3] = (byte)(var7_int >> 16);
+                this.field_e.seek((long)(6 * param2), 0);
+                this.field_e.write(0, 6, false, BoundedRandomAccessFile.field_b);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -67,10 +67,10 @@ final class SectorCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param4) {
-                      this.field_b.a((long)(520 * var7_int), 0);
+                      this.field_b.seek((long)(520 * var7_int), 0);
                       if (param2 > 65535) {
                         try {
-                          this.field_b.a(param0 - 38, cb.field_b, 0, 10);
+                          this.field_b.readFully(param0 - 38, BoundedRandomAccessFile.field_b, 0, 10);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,13 +80,13 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var11 = (255 & cb.field_b[3]) + ((cb.field_b[2] & 255) << 8) + (((255 & cb.field_b[0]) << 24) + (cb.field_b[1] << 16 & 16711680));
-                        var13 = cb.field_b[9] & 255;
-                        var12 = (255 & cb.field_b[5]) + (65280 & cb.field_b[4] << 8);
-                        var10 = (cb.field_b[8] & 255) + (cb.field_b[6] << 16 & 16711680) + (cb.field_b[7] << 8 & 65280);
+                        var11 = (255 & BoundedRandomAccessFile.field_b[3]) + ((BoundedRandomAccessFile.field_b[2] & 255) << 8) + (((255 & BoundedRandomAccessFile.field_b[0]) << 24) + (BoundedRandomAccessFile.field_b[1] << 16 & 16711680));
+                        var13 = BoundedRandomAccessFile.field_b[9] & 255;
+                        var12 = (255 & BoundedRandomAccessFile.field_b[5]) + (65280 & BoundedRandomAccessFile.field_b[4] << 8);
+                        var10 = (BoundedRandomAccessFile.field_b[8] & 255) + (BoundedRandomAccessFile.field_b[6] << 16 & 16711680) + (BoundedRandomAccessFile.field_b[7] << 8 & 65280);
                       } else {
                         try {
-                          this.field_b.a(0, cb.field_b, 0, 8);
+                          this.field_b.readFully(0, BoundedRandomAccessFile.field_b, 0, 8);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -96,16 +96,16 @@ final class SectorCacheStore {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var12 = (cb.field_b[3] & 255) + (cb.field_b[2] << 8 & 65280);
-                        var10 = ((255 & cb.field_b[5]) << 8) + (((255 & cb.field_b[4]) << 16) + (cb.field_b[6] & 255));
-                        var13 = 255 & cb.field_b[7];
-                        var11 = (255 & cb.field_b[1]) + ((cb.field_b[0] & 255) << 8);
+                        var12 = (BoundedRandomAccessFile.field_b[3] & 255) + (BoundedRandomAccessFile.field_b[2] << 8 & 65280);
+                        var10 = ((255 & BoundedRandomAccessFile.field_b[5]) << 8) + (((255 & BoundedRandomAccessFile.field_b[4]) << 16) + (BoundedRandomAccessFile.field_b[6] & 255));
+                        var13 = 255 & BoundedRandomAccessFile.field_b[7];
+                        var11 = (255 & BoundedRandomAccessFile.field_b[1]) + ((BoundedRandomAccessFile.field_b[0] & 255) << 8);
                       }
                       if ((var11 == param2 &&
                         var12 == var9 &&
                         var13 == this.field_c) &&
                         (decompiledFrameRemainder0 = (!(0 <= var10) ||
-                        !((this.field_b.b(false) / 520L) >= (long)var10)))) {
+                        !((this.field_b.length(false) / 520L) >= (long)var10)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -114,7 +114,7 @@ final class SectorCacheStore {
                     }
                     if (var10 == 0) {
                       param4 = false;
-                      var10 = (int)((this.field_b.b(false) + 519L) / 520L);
+                      var10 = (int)((this.field_b.length(false) + 519L) / 520L);
                       if (var10 == 0) {
                         var10++;
                       }
@@ -126,40 +126,40 @@ final class SectorCacheStore {
                       var10 = 0;
                     }
                     if (param2 > 65535) {
-                      cb.field_b[3] = (byte)param2;
-                      cb.field_b[2] = (byte)(param2 >> 8);
-                      cb.field_b[0] = (byte)(param2 >> 24);
-                      cb.field_b[7] = (byte)(var10 >> 8);
-                      cb.field_b[6] = (byte)(var10 >> 16);
-                      cb.field_b[4] = (byte)(var9 >> 8);
-                      cb.field_b[1] = (byte)(param2 >> 16);
-                      cb.field_b[5] = (byte)var9;
-                      cb.field_b[8] = (byte)var10;
-                      cb.field_b[9] = (byte)this.field_c;
-                      this.field_b.a((long)(var7_int * 520), 0);
-                      this.field_b.a(0, 10, false, cb.field_b);
+                      BoundedRandomAccessFile.field_b[3] = (byte)param2;
+                      BoundedRandomAccessFile.field_b[2] = (byte)(param2 >> 8);
+                      BoundedRandomAccessFile.field_b[0] = (byte)(param2 >> 24);
+                      BoundedRandomAccessFile.field_b[7] = (byte)(var10 >> 8);
+                      BoundedRandomAccessFile.field_b[6] = (byte)(var10 >> 16);
+                      BoundedRandomAccessFile.field_b[4] = (byte)(var9 >> 8);
+                      BoundedRandomAccessFile.field_b[1] = (byte)(param2 >> 16);
+                      BoundedRandomAccessFile.field_b[5] = (byte)var9;
+                      BoundedRandomAccessFile.field_b[8] = (byte)var10;
+                      BoundedRandomAccessFile.field_b[9] = (byte)this.field_c;
+                      this.field_b.seek((long)(var7_int * 520), 0);
+                      this.field_b.write(0, 10, false, BoundedRandomAccessFile.field_b);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_b.a(var8, var11, false, param3);
+                      this.field_b.write(var8, var11, false, param3);
                       var8 = var8 + var11;
                     } else {
-                      cb.field_b[3] = (byte)var9;
-                      cb.field_b[6] = (byte)var10;
-                      cb.field_b[5] = (byte)(var10 >> 8);
-                      cb.field_b[1] = (byte)param2;
-                      cb.field_b[4] = (byte)(var10 >> 16);
-                      cb.field_b[7] = (byte)this.field_c;
-                      cb.field_b[2] = (byte)(var9 >> 8);
-                      cb.field_b[0] = (byte)(param2 >> 8);
-                      this.field_b.a((long)(var7_int * 520), 0);
-                      this.field_b.a(0, 8, false, cb.field_b);
+                      BoundedRandomAccessFile.field_b[3] = (byte)var9;
+                      BoundedRandomAccessFile.field_b[6] = (byte)var10;
+                      BoundedRandomAccessFile.field_b[5] = (byte)(var10 >> 8);
+                      BoundedRandomAccessFile.field_b[1] = (byte)param2;
+                      BoundedRandomAccessFile.field_b[4] = (byte)(var10 >> 16);
+                      BoundedRandomAccessFile.field_b[7] = (byte)this.field_c;
+                      BoundedRandomAccessFile.field_b[2] = (byte)(var9 >> 8);
+                      BoundedRandomAccessFile.field_b[0] = (byte)(param2 >> 8);
+                      this.field_b.seek((long)(var7_int * 520), 0);
+                      this.field_b.write(0, 8, false, BoundedRandomAccessFile.field_b);
                       var11 = param1 - var8;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_b.a(var8, var11, false, param3);
+                      this.field_b.write(var8, var11, false, param3);
                       var8 = var8 + var11;
                     }
                     var9++;
@@ -173,7 +173,7 @@ final class SectorCacheStore {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var7 = (IOException) (Object) decompiledCaughtException;
                 if (param0 != 38) {
-                  this.field_b = (td) null;
+                  this.field_b = (BufferedRandomAccessFile) null;
                 }
                 return false;
               }
@@ -257,17 +257,17 @@ final class SectorCacheStore {
           var3 = this.field_b;
           synchronized (var3) {
             try {
-              if (this.field_e.b(false) < (long)(6 + 6 * param0)) {
+              if (this.field_e.length(false) < (long)(6 + 6 * param0)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_e.a((long)(6 * param0), 0);
-              this.field_e.a(0, cb.field_b, 0, 6);
+              this.field_e.seek((long)(6 * param0), 0);
+              this.field_e.readFully(0, BoundedRandomAccessFile.field_b, 0, 6);
               if (param1 != 114) {
                 this.read(24, (byte) 53);
               }
-              var4_int = (255 & cb.field_b[2]) + ((cb.field_b[1] << 8 & 65280) + (16711680 & cb.field_b[0] << 16));
-              var5 = (65280 & cb.field_b[4] << 8) + ((16711680 & cb.field_b[3] << 16) + (cb.field_b[5] & 255));
+              var4_int = (255 & BoundedRandomAccessFile.field_b[2]) + ((BoundedRandomAccessFile.field_b[1] << 8 & 65280) + (16711680 & BoundedRandomAccessFile.field_b[0] << 16));
+              var5 = (65280 & BoundedRandomAccessFile.field_b[4] << 8) + ((16711680 & BoundedRandomAccessFile.field_b[3] << 16) + (BoundedRandomAccessFile.field_b[5] & 255));
               if (var4_int < 0) {
                 return null;
               }
@@ -278,7 +278,7 @@ final class SectorCacheStore {
               if (0 >= var5) {
                 return null;
               }
-              if (this.field_b.b(false) / 520L < (long)var5) {
+              if (this.field_b.length(false) / 520L < (long)var5) {
                 return null;
               }
               var6 = new byte[var4_int];
@@ -292,28 +292,28 @@ final class SectorCacheStore {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_b.a((long)(var5 * 520), 0);
+                this.field_b.seek((long)(var5 * 520), 0);
                 var9 = -var7 + var4_int;
                 if (param0 <= 65535) {
                   var14 = 8;
                   if (var9 > 512) {
                     var9 = 512;
                   }
-                  this.field_b.a(0, cb.field_b, 0, var14 + var9);
-                  var12 = (cb.field_b[6] & 255) + (65280 & cb.field_b[5] << 8) + (cb.field_b[4] << 16 & 16711680);
-                  var10 = (cb.field_b[0] << 8 & 65280) + (255 & cb.field_b[1]);
-                  var11 = (cb.field_b[2] << 8 & 65280) + (cb.field_b[3] & 255);
-                  var13 = 255 & cb.field_b[7];
+                  this.field_b.readFully(0, BoundedRandomAccessFile.field_b, 0, var14 + var9);
+                  var12 = (BoundedRandomAccessFile.field_b[6] & 255) + (65280 & BoundedRandomAccessFile.field_b[5] << 8) + (BoundedRandomAccessFile.field_b[4] << 16 & 16711680);
+                  var10 = (BoundedRandomAccessFile.field_b[0] << 8 & 65280) + (255 & BoundedRandomAccessFile.field_b[1]);
+                  var11 = (BoundedRandomAccessFile.field_b[2] << 8 & 65280) + (BoundedRandomAccessFile.field_b[3] & 255);
+                  var13 = 255 & BoundedRandomAccessFile.field_b[7];
                 } else {
                   var14 = 10;
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_b.a(0, cb.field_b, 0, var14 + var9);
-                  var11 = (65280 & cb.field_b[4] << 8) + (cb.field_b[5] & 255);
-                  var12 = (255 & cb.field_b[8]) + (((cb.field_b[6] & 255) << 16) + (65280 & cb.field_b[7] << 8));
-                  var10 = (255 & cb.field_b[3]) + (16711680 & cb.field_b[1] << 16) + (-16777216 & cb.field_b[0] << 24) + (cb.field_b[2] << 8 & 65280);
-                  var13 = cb.field_b[9] & 255;
+                  this.field_b.readFully(0, BoundedRandomAccessFile.field_b, 0, var14 + var9);
+                  var11 = (65280 & BoundedRandomAccessFile.field_b[4] << 8) + (BoundedRandomAccessFile.field_b[5] & 255);
+                  var12 = (255 & BoundedRandomAccessFile.field_b[8]) + (((BoundedRandomAccessFile.field_b[6] & 255) << 16) + (65280 & BoundedRandomAccessFile.field_b[7] << 8));
+                  var10 = (255 & BoundedRandomAccessFile.field_b[3]) + (16711680 & BoundedRandomAccessFile.field_b[1] << 16) + (-16777216 & BoundedRandomAccessFile.field_b[0] << 24) + (BoundedRandomAccessFile.field_b[2] << 8 & 65280);
+                  var13 = BoundedRandomAccessFile.field_b[9] & 255;
                 }
                 if (var10 != param0) {
                   return null;
@@ -328,7 +328,7 @@ final class SectorCacheStore {
                 if (var12 < 0) {
                   return null;
                 }
-                if (this.field_b.b(false) / 520L < (long)var12) {
+                if (this.field_b.length(false) / 520L < (long)var12) {
                   stackIn_45_0 = null;
                   return (byte[]) (stackIn_45_0);
                 }
@@ -336,7 +336,7 @@ final class SectorCacheStore {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$0 = var7;
                   var7++;
-                  var6[incrementValue$0] = cb.field_b[var16];
+                  var6[incrementValue$0] = BoundedRandomAccessFile.field_b[var16];
                 }
                 var8++;
                 var5 = var12;
@@ -497,7 +497,7 @@ final class SectorCacheStore {
         }
     }
 
-    SectorCacheStore(int param0, td param1, td param2, int param3) {
+    SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_b = null;
         this.field_e = null;
         this.field_a = 65000;

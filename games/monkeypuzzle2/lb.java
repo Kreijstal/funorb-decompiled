@@ -51,7 +51,7 @@ final class lb extends WidgetContainer implements ql {
     }
 
     final static String d(byte param0) {
-        if (ch.field_d == cf.field_b) {
+        if (BufferedRandomAccessFile.field_d == cf.field_b) {
           return mh.field_F;
         }
         if (param0 != -56) {

@@ -158,7 +158,7 @@ final class ad {
           var65 = new int[param7.field_c];
           var64 = hk.field_c;
           var63 = p.field_x;
-          var62 = hd.field_j;
+          var62 = BufferedRandomAccessFile.field_j;
           for (var13 = 0; param7.field_c > var13; var13++) {
             var14 = param6 * var62[var13] + (param1 * var63[var13] + var64[var13] * param2) >> 8;
             if (var14 < 0) {

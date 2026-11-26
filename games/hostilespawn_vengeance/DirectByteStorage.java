@@ -93,7 +93,7 @@ final class DirectByteStorage extends ByteStorage {
             }
             if (null != mk.field_K) {
               try {
-                mk.field_K.f(0);
+                mk.field_K.close(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -106,7 +106,7 @@ final class DirectByteStorage extends ByteStorage {
               for (var1_int = 0; NodeHashTableIterator.field_a.length > var1_int; var1_int++) {
                 if (NodeHashTableIterator.field_a[var1_int] != null) {
                   try {
-                    NodeHashTableIterator.field_a[var1_int].f(0);
+                    NodeHashTableIterator.field_a[var1_int].close(0);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -131,10 +131,10 @@ final class DirectByteStorage extends ByteStorage {
     final static void c(int param0) {
         if (param0 >= -70) {
           field_l = (String) null;
-          cj.a(bn.c(-1), 0);
+          cj.a(BufferedRandomAccessFile.c(-1), 0);
           return;
         }
-        cj.a(bn.c(-1), 0);
+        cj.a(BufferedRandomAccessFile.c(-1), 0);
     }
 
     final byte[] getBytes(byte param0) {

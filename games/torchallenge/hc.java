@@ -57,8 +57,8 @@ final class hc extends ng {
             var2 = var6;
             if (null != cf.field_d) {
               try {
-                cf.field_d.a(0L, 0);
-                cf.field_d.a((byte) -128, var6);
+                cf.field_d.seek(0L, 0);
+                cf.field_d.readFully((byte) -128, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

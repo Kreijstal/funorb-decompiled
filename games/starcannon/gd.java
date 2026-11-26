@@ -59,8 +59,8 @@ final class gd {
           Throwable decompiledCaughtException = null;
           if (null != mf.field_c) {
             try {
-              mf.field_c.a(0L, 0);
-              mf.field_c.a(se.field_p.position, 24, false, se.field_p.payload);
+              mf.field_c.seek(0L, 0);
+              mf.field_c.write(se.field_p.position, 24, false, se.field_p.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

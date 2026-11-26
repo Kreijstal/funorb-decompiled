@@ -60,7 +60,7 @@ final class wk {
         }
         if (!param1) {
           DirectByteStorage.field_f = pk.a(80, 122, var8);
-          bn.field_b = null;
+          BufferedRandomAccessFile.field_b = null;
           return new ln(param1);
         }
         var5 = var8.readUnsignedShort(8);
@@ -72,13 +72,13 @@ final class wk {
           } else {
             stackIn_24_0 = null;
           }
-          bn.field_b = stackIn_24_0;
+          BufferedRandomAccessFile.field_b = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           ic.a((byte) -115, "CC1", (Throwable) ((Object) var6));
           DirectByteStorage.field_f = null;
-          bn.field_b = null;
+          BufferedRandomAccessFile.field_b = null;
           return new ln(param1);
         }
         return new ln(param1);

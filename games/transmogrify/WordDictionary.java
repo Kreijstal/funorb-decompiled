@@ -311,7 +311,7 @@ final class WordDictionary {
               }
               var7 = stackIn_9_0[stackIn_10_1];
               var5_int = var7[AccountNameAvailabilityValidator.a(var7.length, param1, false)] & 255;
-              param0[var6] = di.a(68, (byte)var5_int);
+              param0[var6] = BoundedRandomAccessFile.a(68, (byte)var5_int);
             }
             if (!this.b((byte) -119, param0)) {
               stackIn_5_0 = 256;

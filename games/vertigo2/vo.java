@@ -26,16 +26,16 @@ final class vo extends va {
             var6 = null;
             var7 = null;
             if (null != or.field_f.field_o) {
-              ad.field_g = new im(or.field_f.field_o, 5200, 0);
+              ad.field_g = new BufferedRandomAccessFile(or.field_f.field_o, 5200, 0);
               or.field_f.field_o = null;
-              var6 = new SectorCacheStore(255, ad.field_g, new im(or.field_f.field_r, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ad.field_g, new BufferedRandomAccessFile(or.field_f.field_r, 12000, 0), 2097152);
             }
             if (ad.field_g != null) {
               if (null == ProxyAuthenticationRequiredException.field_g) {
-                ProxyAuthenticationRequiredException.field_g = new im[or.field_f.field_n.length];
+                ProxyAuthenticationRequiredException.field_g = new BufferedRandomAccessFile[or.field_f.field_n.length];
               }
               if (null == ProxyAuthenticationRequiredException.field_g[param3]) {
-                ProxyAuthenticationRequiredException.field_g[param3] = new im(or.field_f.field_n[param3], 12000, 0);
+                ProxyAuthenticationRequiredException.field_g[param3] = new BufferedRandomAccessFile(or.field_f.field_n[param3], 12000, 0);
                 or.field_f.field_n[param3] = null;
               }
               var7 = new SectorCacheStore(param3, ad.field_g, ProxyAuthenticationRequiredException.field_g[param3], 2097152);

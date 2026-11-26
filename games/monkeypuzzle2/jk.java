@@ -452,35 +452,35 @@ abstract class jk extends UiWidget implements ga {
             var3_int = aa.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
             var4 = 3 + var3_int;
             gh.field_a = new int[var4];
-            pl.field_k = new String[var4];
+            BoundedRandomAccessFile.field_k = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               gh.field_a[var5] = -1;
             }
             bi.field_B = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              pl.field_k[var5] = vi.field_b[var5];
+              BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
             }
-            pl.field_k[-3 + var4] = "";
-            pl.field_k[var4 - 2] = qd.field_d;
+            BoundedRandomAccessFile.field_k[-3 + var4] = "";
+            BoundedRandomAccessFile.field_k[var4 - 2] = qd.field_d;
             gh.field_a[-2 + var4] = 0;
             bi.field_B[0] = 4;
-            pl.field_k[-1 + var4] = db.field_e;
+            BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
             gh.field_a[-1 + var4] = 1;
             bi.field_B[1] = 5;
           } else if (ud.field_b == 1) {
             var3_int = aa.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
             var4 = var3_int + 2;
-            pl.field_k = new String[var4];
+            BoundedRandomAccessFile.field_k = new String[var4];
             gh.field_a = new int[var4];
             for (var5 = 0; var4 > var5; var5++) {
               gh.field_a[var5] = -1;
             }
             bi.field_B = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              pl.field_k[var5] = vi.field_b[var5];
+              BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
             }
-            pl.field_k[-2 + var4] = "";
-            pl.field_k[-1 + var4] = db.field_e;
+            BoundedRandomAccessFile.field_k[-2 + var4] = "";
+            BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
             gh.field_a[var4 - 1] = 0;
             bi.field_B[0] = 5;
           } else if (ud.field_b != 2) {
@@ -492,32 +492,32 @@ abstract class jk extends UiWidget implements ga {
               }
               var4 = 2 + var3_int;
               gh.field_a = new int[var4];
-              pl.field_k = new String[var4];
+              BoundedRandomAccessFile.field_k = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 gh.field_a[var5] = -1;
               }
               bi.field_B = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                pl.field_k[var5] = vi.field_b[var5];
+                BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
               }
-              pl.field_k[var4 - 2] = "";
-              pl.field_k[var4 - 1] = db.field_e;
+              BoundedRandomAccessFile.field_k[var4 - 2] = "";
+              BoundedRandomAccessFile.field_k[var4 - 1] = db.field_e;
               gh.field_a[-1 + var4] = 0;
               bi.field_B[0] = 5;
             } else if (ud.field_b == 4) {
               var3_int = aa.a(fe.field_a, rk.field_h, pd.field_e, true, vi.field_b);
               var4 = var3_int + 2;
-              pl.field_k = new String[var4];
+              BoundedRandomAccessFile.field_k = new String[var4];
               gh.field_a = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 gh.field_a[var5] = -1;
               }
               bi.field_B = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                pl.field_k[var5] = vi.field_b[var5];
+                BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
               }
-              pl.field_k[-2 + var4] = "";
-              pl.field_k[-1 + var4] = db.field_e;
+              BoundedRandomAccessFile.field_k[-2 + var4] = "";
+              BoundedRandomAccessFile.field_k[-1 + var4] = db.field_e;
               gh.field_a[-1 + var4] = 0;
               bi.field_B[0] = 5;
             } else {
@@ -527,19 +527,19 @@ abstract class jk extends UiWidget implements ga {
               var3_int = aa.a(fe.field_a, rk.field_h, mg.field_r, true, vi.field_b);
               var4 = 3 + var3_int;
               gh.field_a = new int[var4];
-              pl.field_k = new String[var4];
+              BoundedRandomAccessFile.field_k = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 gh.field_a[var5] = -1;
               }
               bi.field_B = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
-                pl.field_k[var5] = vi.field_b[var5];
+                BoundedRandomAccessFile.field_k[var5] = vi.field_b[var5];
               }
-              pl.field_k[var4 - 3] = "";
-              pl.field_k[var4 - 2] = j.field_b;
+              BoundedRandomAccessFile.field_k[var4 - 3] = "";
+              BoundedRandomAccessFile.field_k[var4 - 2] = j.field_b;
               gh.field_a[var4 - 2] = 0;
               bi.field_B[0] = 3;
-              pl.field_k[var4 - 1] = db.field_e;
+              BoundedRandomAccessFile.field_k[var4 - 1] = db.field_e;
               gh.field_a[-1 + var4] = 1;
               bi.field_B[1] = 5;
             }
@@ -590,23 +590,23 @@ abstract class jk extends UiWidget implements ga {
             var6 = stackIn_70_0;
             var7 = var6 + (var5 + 7);
             gh.field_a = new int[var7];
-            pl.field_k = new String[var7];
+            BoundedRandomAccessFile.field_k = new String[var7];
             for (var8 = 0; var8 < var7; var8++) {
               gh.field_a[var8] = -1;
             }
             bi.field_B = new int[2];
-            pl.field_k[0] = qb.field_d;
+            BoundedRandomAccessFile.field_k[0] = qb.field_d;
             gh.field_a[1] = 0;
-            pl.field_k[1] = jf.field_p;
+            BoundedRandomAccessFile.field_k[1] = jf.field_p;
             gh.field_a[3] = 1;
-            pl.field_k[4] = sk.field_F;
+            BoundedRandomAccessFile.field_k[4] = sk.field_F;
             bi.field_B[1] = 2;
-            pl.field_k[2] = WidgetContainer.field_y;
+            BoundedRandomAccessFile.field_k[2] = WidgetContainer.field_y;
             bi.field_B[0] = 5;
-            pl.field_k[3] = uf.field_c;
-            pl.field_k[5] = "";
+            BoundedRandomAccessFile.field_k[3] = uf.field_c;
+            BoundedRandomAccessFile.field_k[5] = "";
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_77_0 = pl.field_k;
+              stackIn_77_0 = BoundedRandomAccessFile.field_k;
               stackIn_77_1 = var8Lifetime2 + 6;
               if (0 <= -var5 + var8Lifetime2 + DiskCacheWorker.field_c.length) {
                 stackIn_78_2 = DiskCacheWorker.field_c[DiskCacheWorker.field_c.length + var8Lifetime2 - var5];
@@ -615,10 +615,10 @@ abstract class jk extends UiWidget implements ga {
               }
               stackIn_77_0[stackIn_77_1] = stackIn_78_2;
             }
-            pl.field_k[6 + var5] = null;
+            BoundedRandomAccessFile.field_k[6 + var5] = null;
             gh.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_82_0 = pl.field_k;
+              stackIn_82_0 = BoundedRandomAccessFile.field_k;
               stackIn_82_1 = var8Lifetime3 + 7 + var5;
               stackIn_82_2 = re.field_a.length;
               stackIn_82_3 = var8Lifetime3;
@@ -633,9 +633,9 @@ abstract class jk extends UiWidget implements ga {
           }
           sj.field_f.field_i = bi.field_B.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; var4Lifetime1 < pl.field_k.length; var4Lifetime1++) {
+          for (var4Lifetime1 = 0; var4Lifetime1 < BoundedRandomAccessFile.field_k.length; var4Lifetime1++) {
             stackIn_91_0 = -108;
-            stackIn_91_1 = pl.field_k[var4Lifetime1];
+            stackIn_91_1 = BoundedRandomAccessFile.field_k[var4Lifetime1];
             stackIn_92_2 = !(gh.field_a[var4Lifetime1] < 0);
             var5Lifetime1 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(stackIn_91_0, stackIn_91_1, stackIn_92_2);
             if (var3_intLifetime1 < var5Lifetime1) {
@@ -667,7 +667,7 @@ abstract class jk extends UiWidget implements ga {
           if (param0 >= -92) {
             return;
           }
-          for (var4Lifetime2 = 0; pl.field_k.length > var4Lifetime2; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; BoundedRandomAccessFile.field_k.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_118_0 = fd.field_s;
             if (gh.field_a[var4Lifetime2] >= 0) {
               stackIn_119_1 = hb.field_n;
@@ -677,21 +677,21 @@ abstract class jk extends UiWidget implements ga {
             fd.field_s = stackIn_118_0 + stackIn_119_1;
           }
           ArchiveRequest.field_k = -(fd.field_s >> 1) + fl.field_b;
-          ja.field_A = new int[pl.field_k.length][];
+          ja.field_A = new int[BoundedRandomAccessFile.field_k.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = ArchiveRequest.field_k;
-          while (pl.field_k.length > var4Lifetime3) {
+          while (BoundedRandomAccessFile.field_k.length > var4Lifetime3) {
             var6Lifetime1 = gh.field_a[var4Lifetime3];
             if (var6Lifetime1 < 0) {
               var5Lifetime3 = var5Lifetime3 + gi.field_a;
             } else {
-              var7Lifetime2 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-115, pl.field_k[var4Lifetime3], true);
+              var7Lifetime2 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(-115, BoundedRandomAccessFile.field_k[var4Lifetime3], true);
               var8Lifetime1 = jc.field_b - (var7Lifetime2 >> 1);
               var5Lifetime3 = var5Lifetime3 + ud.field_a;
               ja.field_A[var4Lifetime3] = new int[4];
-              ja.field_A[var4Lifetime3][0] = -pl.field_h + var8Lifetime1;
+              ja.field_A[var4Lifetime3][0] = -BoundedRandomAccessFile.field_h + var8Lifetime1;
               ja.field_A[var4Lifetime3][1] = var5Lifetime3;
-              ja.field_A[var4Lifetime3][2] = (pl.field_h << 1) + var7Lifetime2;
+              ja.field_A[var4Lifetime3][2] = (BoundedRandomAccessFile.field_h << 1) + var7Lifetime2;
               var5Lifetime3 = var5Lifetime3 + ((vf.field_b << 1) + (ud.field_a + hb.field_n));
               ja.field_A[var4Lifetime3][3] = hb.field_n + (vf.field_b << 1);
             }

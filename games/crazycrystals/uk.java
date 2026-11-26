@@ -147,7 +147,7 @@ final class uk extends nf {
                 return;
               }
               if (null == NetworkGameClient.field_p) {
-                NetworkGameClient.field_p = qa.a((byte) 121, 4);
+                NetworkGameClient.field_p = BufferedRandomAccessFile.a((byte) 121, 4);
               }
               if (NetworkGameClient.field_p.field_k) {
                 fk.field_s = NetworkGameClient.field_p.field_f;

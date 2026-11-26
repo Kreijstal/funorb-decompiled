@@ -2767,39 +2767,39 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("titles_aggression_male,0", param1);
                 if (var2 != null) {
-                  hd.field_m[0] = dj.a(var2, param1);
+                  BufferedRandomAccessFile.field_m[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_aggression_male,1", false);
                 if (null != var2) {
-                  hd.field_m[1] = dj.a(var2, false);
+                  BufferedRandomAccessFile.field_m[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_aggression_male,2", false);
                 if (null != var2) {
-                  hd.field_m[2] = dj.a(var2, param1);
+                  BufferedRandomAccessFile.field_m[2] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_aggression_male,3", false);
                 if (var2 != null) {
-                  hd.field_m[3] = dj.a(var2, false);
+                  BufferedRandomAccessFile.field_m[3] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_aggression_male,4", param1);
                 if (var2 != null) {
-                  hd.field_m[4] = dj.a(var2, false);
+                  BufferedRandomAccessFile.field_m[4] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_aggression_male,5", false);
                 if (var2 != null) {
-                  hd.field_m[5] = dj.a(var2, false);
+                  BufferedRandomAccessFile.field_m[5] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_aggression_male,6", false);
                 if (var2 != null) {
-                  hd.field_m[6] = dj.a(var2, param1);
+                  BufferedRandomAccessFile.field_m[6] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_aggression_male,7", false);
                 if (null != var2) {
-                  hd.field_m[7] = dj.a(var2, false);
+                  BufferedRandomAccessFile.field_m[7] = dj.a(var2, false);
                 }
                 var2 = gm.a("titles_aggression_male,8", false);
                 if (null != var2) {
-                  hd.field_m[8] = dj.a(var2, param1);
+                  BufferedRandomAccessFile.field_m[8] = dj.a(var2, param1);
                 }
                 var2 = gm.a("titles_aggression_female,0", false);
                 if (var2 != null) {

@@ -688,10 +688,10 @@ final class GameEntity {
             stackIn_13_3 = null;
             stackIn_13_4 = tc.field_u.getCodeBase();
             stackIn_13_5 = new StringBuilder().append("clienterror.ws?c=").append(lg.field_d).append("&u=");
-            if (kb.field_c != null) {
+            if (BoundedRandomAccessFile.field_c != null) {
               stackIn_14_2 = null;
               stackIn_14_3 = null;
-              stackIn_14_6 = kb.field_c;
+              stackIn_14_6 = BoundedRandomAccessFile.field_c;
             } else {
               stackIn_14_2 = null;
               stackIn_14_3 = null;

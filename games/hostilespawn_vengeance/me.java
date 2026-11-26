@@ -433,7 +433,7 @@ abstract class me extends wb {
             if (param0 <= 83) {
               field_ib = (RgbSprite[]) null;
             }
-            var5 = ee.field_d[-1 + param1];
+            var5 = BoundedRandomAccessFile.field_d[-1 + param1];
             var6 = new int[var5.field_D.length];
             var7_int = 0;
             while (var6.length > var7_int) {

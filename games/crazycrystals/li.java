@@ -3,7 +3,7 @@
  */
 abstract class li implements n {
     static String field_e;
-    static qa[] field_d;
+    static BufferedRandomAccessFile[] field_d;
     static int field_c;
     private long field_b;
     static nj field_a;

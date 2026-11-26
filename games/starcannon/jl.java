@@ -1395,7 +1395,7 @@ final class jl {
                     var12 = var11 % 3;
                     if (var12 != 0) {
                       if (var12 != 1) {
-                        var13 = td.field_j;
+                        var13 = BufferedRandomAccessFile.field_j;
                       } else {
                         var13 = lb.field_l;
                       }
@@ -1417,7 +1417,7 @@ final class jl {
                     if (var9Lifetime1 == 1) {
                       var10 = lb.field_l;
                     } else {
-                      var10 = td.field_j;
+                      var10 = BufferedRandomAccessFile.field_j;
                     }
                   } else {
                     stackIn_30_0Lifetime1 = ta.field_a;

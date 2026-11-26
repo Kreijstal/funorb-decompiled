@@ -111,7 +111,7 @@ final class mj implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 if (param2) {
                   qk.field_f[var23Lifetime2] = var27Lifetime1 >> ImageProducerRasterBuffer.field_l;
                   ej.field_c[var23Lifetime2] = var28Lifetime1 >> ImageProducerRasterBuffer.field_l;
-                  k.field_l[var23Lifetime2] = var29Lifetime1;
+                  BufferedRandomAccessFile.field_l[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

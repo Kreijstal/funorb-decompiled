@@ -245,8 +245,8 @@ final class gb {
             var2 = var6;
             if (DelegatingCanvas.field_b != null) {
               try {
-                DelegatingCanvas.field_b.a(0L, (byte) -128);
-                DelegatingCanvas.field_b.a(var6, 16711708);
+                DelegatingCanvas.field_b.seek(0L, (byte) -128);
+                DelegatingCanvas.field_b.readFully(var6, 16711708);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

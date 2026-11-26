@@ -95,7 +95,7 @@ public final class MonkeyPuzzle2 extends bi {
           wl.clearStaticReferences((byte) 126);
           DiskCacheWorker.resetStaticState(10);
           c.clearStaticReferences(true);
-          ch.clearStaticReferences((byte) -73);
+          BufferedRandomAccessFile.clearStaticReferences((byte) -73);
           BufferedSocket.clearStaticReferences(1);
           IntrusiveDeque.resetStaticState(83);
           SpriteState.clearStaticReferences((byte) -69);
@@ -158,7 +158,7 @@ public final class MonkeyPuzzle2 extends bi {
           bh.clearStaticReferences(-8765);
           lf.clearStaticReferences(false);
           ef.resetStaticState(true);
-          pl.b((byte) -77);
+          BoundedRandomAccessFile.b((byte) -77);
           DelegatingCanvas.clearStaticReferences(-101);
           ec.clearStaticReferences((byte) 123);
           ol.clearStaticReferences(120);
@@ -435,9 +435,9 @@ public final class MonkeyPuzzle2 extends bi {
           stackIn_9_1 = 99;
           stackIn_10_2 = (null != AwtRasterBuffer.field_f);
           this.a((byte) stackIn_9_1, stackIn_10_2);
-          if (pl.field_d) {
+          if (BoundedRandomAccessFile.field_d) {
             this.h((byte) -32);
-            pl.field_d = false;
+            BoundedRandomAccessFile.field_d = false;
           }
           if (wj.d(-26)) {
             this.i(250);
@@ -615,7 +615,7 @@ public final class MonkeyPuzzle2 extends bi {
           if (ld.b(true)) {
             var2_intLifetime2 = this.f(param0 ^ 15246);
             if (2 == var2_intLifetime2) {
-              ha.a(8, 126, 8, pl.field_e.field_j, (Sprite[]) null, (Sprite[]) null, 2, 320, pl.field_e.field_j + pl.field_e.field_D, 240, pl.field_e);
+              ha.a(8, 126, 8, BoundedRandomAccessFile.field_e.field_j, (Sprite[]) null, (Sprite[]) null, 2, 320, BoundedRandomAccessFile.field_e.field_j + BoundedRandomAccessFile.field_e.field_D, 240, BoundedRandomAccessFile.field_e);
             }
           }
           return;
@@ -630,9 +630,9 @@ public final class MonkeyPuzzle2 extends bi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != ch.field_j) {
-            rh.a(-9585, ch.field_j);
-            ch.field_j = null;
+          if (null != BufferedRandomAccessFile.field_j) {
+            rh.a(-9585, BufferedRandomAccessFile.field_j);
+            BufferedRandomAccessFile.field_j = null;
             oe.a((byte) 103);
           }
           hk.field_k = ol.a(-92, 1);

@@ -875,8 +875,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             if (mh.field_b != null) {
               try {
-                mh.field_b.a(false, 0L);
-                mh.field_b.a(var2, param0 - 2766);
+                mh.field_b.seek(false, 0L);
+                mh.field_b.readFully(var2, param0 - 2766);
                 var3_int = 0;
                 scanLoop1: while (true) {
                   if (var3_int < 24) {

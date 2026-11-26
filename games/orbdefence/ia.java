@@ -99,7 +99,7 @@ abstract class ia {
           if (param1) {
             field_e = (String) null;
           }
-          while (gl.field_b > var2_intLifetime1) {
+          while (BoundedRandomAccessFile.field_b > var2_intLifetime1) {
             if (param0.field_d == jk.field_d[var2_intLifetime1].field_d) {
               dupTemp$3 = jk.field_d[var2_intLifetime1].b((byte) -63);
               od.field_j[dupTemp$3] = od.field_j[dupTemp$3] + 1;
@@ -109,7 +109,7 @@ abstract class ia {
           dupTemp$0 = param0.b((byte) -12);
           od.field_j[dupTemp$0] = od.field_j[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
-          for (var3 = 0; gl.field_b > var3; var3++) {
+          for (var3 = 0; BoundedRandomAccessFile.field_b > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_d == jk.field_d[var3].field_d) {
               var4 = jk.field_d[var3].b((byte) -25);
@@ -124,9 +124,9 @@ abstract class ia {
               jk.field_d[incrementValue$2] = jk.field_d[var3];
             }
           }
-          gl.field_b = var2_intLifetime2;
-          fieldTemp$1 = gl.field_b;
-          gl.field_b = gl.field_b + 1;
+          BoundedRandomAccessFile.field_b = var2_intLifetime2;
+          fieldTemp$1 = BoundedRandomAccessFile.field_b;
+          BoundedRandomAccessFile.field_b = BoundedRandomAccessFile.field_b + 1;
           jk.field_d[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

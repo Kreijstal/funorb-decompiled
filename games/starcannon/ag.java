@@ -223,7 +223,7 @@ abstract class ag extends GameApplet {
                     ea.b((byte) -107);
                   } else {
                     if (var2 == 6) {
-                      cb.a((byte) -104);
+                      BoundedRandomAccessFile.a((byte) -104);
                     } else {
                       if (var2 != 7) {
                         if (8 != var2) {
@@ -594,7 +594,7 @@ abstract class ag extends GameApplet {
                   pd.a(UiWidget.field_r, var5_intLifetime2, (byte) -77);
                   UiWidget.field_r = null;
                 } else {
-                  ne.field_j = cb.field_a;
+                  ne.field_j = BoundedRandomAccessFile.field_a;
                   w.b((byte) 14);
                   bl.field_a = 10;
                   ai.field_c = false;

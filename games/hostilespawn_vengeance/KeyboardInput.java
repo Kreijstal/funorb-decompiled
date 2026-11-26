@@ -99,7 +99,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (var2_int >= 0) {
               var3 = 127 & 1 + oa.field_a;
-              if (var3 != ee.field_e) {
+              if (var3 != BoundedRandomAccessFile.field_e) {
                 cm.field_a[oa.field_a] = var2_int;
                 pe.field_db[oa.field_a] = (char)0;
                 oa.field_a = var3;
@@ -147,7 +147,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
               65535 != var2_int &&
               j.a(false, (char) var2_int)) {
               var3 = 1 + oa.field_a & 127;
-              if (ee.field_e != var3) {
+              if (BoundedRandomAccessFile.field_e != var3) {
                 cm.field_a[oa.field_a] = -1;
                 pe.field_db[oa.field_a] = (char)var2_int;
                 oa.field_a = var3;

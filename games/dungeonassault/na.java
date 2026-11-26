@@ -26,7 +26,7 @@ final class na extends hh {
     }
 
     final static void a(boolean param0, int param1, boolean param2) {
-        hd.a(param1 ^ 2599413, param2, (String) null, param0);
+        BufferedRandomAccessFile.a(param1 ^ 2599413, param2, (String) null, param0);
         if (param1 != 2591221) {
           field_A = (RgbSprite) null;
         }

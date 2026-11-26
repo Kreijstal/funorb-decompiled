@@ -205,13 +205,13 @@ final class ob extends wm {
           return jd.field_d;
         }
         if (ci.field_ub == MidiPcmStream.field_A) {
-          return lc.field_e;
+          return BufferedRandomAccessFile.field_e;
         }
         if (param0 > -98) {
           ob.d((byte) 73);
         }
         if (!pi.field_c.b((byte) 107)) {
-          return lc.field_e;
+          return BufferedRandomAccessFile.field_e;
         }
         return pi.field_a;
     }

@@ -56,7 +56,7 @@ final class AccountRequestState {
           gh.field_g = true;
           v.field_R = param0;
           if (v.field_R == 0) {
-            var3_int = mh.a(false, rc.field_o, mb.field_a, tk.field_l, ij.field_a);
+            var3_int = mh.a(false, rc.field_o, mb.field_a, BufferedRandomAccessFile.field_l, ij.field_a);
             var4 = 3 + var3_int;
             me.field_a = new String[var4];
             wd.field_d = new int[var4];
@@ -75,7 +75,7 @@ final class AccountRequestState {
             wd.field_d[var4 - 1] = 1;
             dd.field_j[1] = 5;
           } else if (1 == v.field_R) {
-            var3_int = mh.a(false, rc.field_o, mb.field_a, tk.field_l, ij.field_a);
+            var3_int = mh.a(false, rc.field_o, mb.field_a, BufferedRandomAccessFile.field_l, ij.field_a);
             var4 = var3_int + 2;
             me.field_a = new String[var4];
             wd.field_d = new int[var4];

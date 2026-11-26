@@ -2953,7 +2953,7 @@ public final class stellarshard extends rb implements cf {
           NetworkArchiveRequest.clearStaticReferences(param0 ^ -15);
           DiskArchiveRequest.clearStaticReferences(param0 + 186);
           wc.clearStaticReferences(true);
-          kb.a((byte) 37);
+          BoundedRandomAccessFile.a((byte) 37);
           rh.a(param0 + 26);
           ArchiveRequest.e(param0 + 16512);
           na.clearStaticReferences(124);
@@ -4749,7 +4749,7 @@ public final class stellarshard extends rb implements cf {
             }
             if (fd.d((byte) -21)) {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 128);
-              SoftwareRasterizer.fillRectangle(-(ok.a((byte) 126) / 2) + 320 - 19, -16 - kb.b((byte) -114) / 2 + 240 - 5, ok.a((byte) 125) + 6 + 32, kb.b((byte) 121) + 10 + 32, 0);
+              SoftwareRasterizer.fillRectangle(-(ok.a((byte) 126) / 2) + 320 - 19, -16 - BoundedRandomAccessFile.b((byte) -114) / 2 + 240 - 5, ok.a((byte) 125) + 6 + 32, BoundedRandomAccessFile.b((byte) 121) + 10 + 32, 0);
               na.a(28, 256, 28, fg.field_P);
             }
             if (hd.field_b) {

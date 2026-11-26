@@ -3,9 +3,9 @@
  */
 import java.io.*;
 
-final class tk {
+final class BufferedRandomAccessFile {
     static int field_c;
-    private wk field_n;
+    private BoundedRandomAccessFile field_n;
     private long field_g;
     private int field_m;
     private long field_f;
@@ -22,7 +22,7 @@ final class tk {
     static String field_l;
     static boolean field_q;
 
-    final void a(byte param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(byte param0, byte[] param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
@@ -74,10 +74,10 @@ final class tk {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param3 > this.field_e.length) {
-              this.field_n.a(this.field_i, false);
+              this.field_n.seek(this.field_i, false);
               this.field_f = this.field_i;
               while (param3 > 0) {
-                var9_intLifetime1 = this.field_n.a(param3, param1, param2, param0 + 117);
+                var9_intLifetime1 = this.field_n.read(param3, param1, param2, param0 + 117);
                 if (-1 == var9_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -92,7 +92,7 @@ final class tk {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.b(param0 + 118);
+              this.fillReadBuffer(param0 + 118);
               var9_intLifetime1Lifetime1 = param3;
               if (this.field_m < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_m;
@@ -171,7 +171,7 @@ final class tk {
         }
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, int param2, int param3) throws IOException {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -191,7 +191,7 @@ final class tk {
             }
             if (this.field_g != -1L && (this.field_g > this.field_i ||
               this.field_i > ((long)this.field_d + this.field_g))) {
-              this.c(param3 + 102);
+              this.flush(param3 + 102);
             }
             if ((long)param3 != this.field_g &&
               (long)this.field_h.length + this.field_g < (long)param2 + this.field_i) {
@@ -201,7 +201,7 @@ final class tk {
               param1 = param1 + var5_int;
               this.field_i = this.field_i + (long)var5_int;
               this.field_d = this.field_h.length;
-              this.c(-122);
+              this.flush(-122);
             }
             if (this.field_h.length >= param2) {
               if (0 >= param2) {
@@ -218,10 +218,10 @@ final class tk {
               return;
             }
             if (~this.field_i != ~this.field_f) {
-              this.field_n.a(this.field_i, false);
+              this.field_n.seek(this.field_i, false);
               this.field_f = this.field_i;
             }
-            this.field_n.b(param1, param0, 0, param2);
+            this.field_n.write(param1, param0, 0, param2);
             this.field_f = this.field_f + (long)param2;
             if (this.field_f > this.field_k) {
               this.field_k = this.field_f;
@@ -273,22 +273,22 @@ final class tk {
         }
     }
 
-    final long b(byte param0) {
+    final long length(byte param0) {
         if (param0 != -95) {
           return 121L;
         }
         return this.field_j;
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.a((byte) -118, param1, param0, param1.length);
+          this.readFully((byte) -118, param1, param0, param1.length);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "tk.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void c(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2_long;
         int var2;
         long var4;
@@ -297,10 +297,10 @@ final class tk {
         var7 = Main.field_T;
         if (-1L != this.field_g) {
           if (this.field_f != this.field_g) {
-            this.field_n.a(this.field_g, false);
+            this.field_n.seek(this.field_g, false);
             this.field_f = this.field_g;
           }
-          this.field_n.b(0, this.field_h, 0, this.field_d);
+          this.field_n.write(0, this.field_h, 0, this.field_d);
           this.field_f = this.field_f + (long)this.field_d;
           if (this.field_k < this.field_f) {
             this.field_k = this.field_f;
@@ -360,14 +360,14 @@ final class tk {
         }
     }
 
-    tk(wk param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_g = -1L;
         this.field_p = -1L;
         this.field_d = 0;
         try {
           this.field_n = param0;
-          dupTemp$0 = param0.a(11311);
+          dupTemp$0 = param0.length(11311);
           this.field_k = dupTemp$0;
           this.field_j = dupTemp$0;
           this.field_i = 0L;
@@ -378,22 +378,22 @@ final class tk {
         }
     }
 
-    final void a(byte param0) throws IOException {
-        this.c(-44);
+    final void close(byte param0) throws IOException {
+        this.flush(-44);
         if (param0 > -25) {
           field_c = -80;
         }
-        this.field_n.a((byte) 15);
+        this.field_n.close((byte) 15);
     }
 
-    private final void b(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
         var4 = Main.field_T;
         this.field_m = param0;
         if (~this.field_f != ~this.field_i) {
-          this.field_n.a(this.field_i, false);
+          this.field_n.seek(this.field_i, false);
           this.field_f = this.field_i;
         }
         this.field_p = this.field_i;
@@ -402,7 +402,7 @@ final class tk {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_n.a(var2, this.field_e, this.field_m, -1);
+          var3 = this.field_n.read(var2, this.field_e, this.field_m, -1);
           if (-1 != var3) {
             this.field_m = this.field_m + var3;
             this.field_f = this.field_f + (long)var3;
@@ -412,7 +412,7 @@ final class tk {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         int var4 = -66 / ((-27 - param1) / 35);
         if (param0 < 0L) {
           throw new IOException();

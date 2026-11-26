@@ -179,7 +179,7 @@ class bd extends oh implements da {
               break;
             }
             if (var4 == null) {
-              k.c(param0 ^ 13077);
+              BufferedRandomAccessFile.c(param0 ^ 13077);
               return;
             }
             var5 = var28.readUnsignedByte(false);
@@ -276,14 +276,14 @@ class bd extends oh implements da {
               break;
             }
             if (var6_ref_bh == null) {
-              k.c(param0 ^ 13077);
+              BufferedRandomAccessFile.c(param0 ^ 13077);
               return;
             }
             var6_ref_bh.field_k = var4_long;
             var6_ref_bh.unlink(-1);
           } else {
             ud.a("HS1: " + ak.a(true), (Throwable) null, 0);
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
           }
           if (param0 != -24021) {
             bd.o(-33);

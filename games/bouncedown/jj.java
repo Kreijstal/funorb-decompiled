@@ -137,8 +137,8 @@ final class jj {
             if (ri.field_B == null) {
               return new byte[param1];
             }
-            for (var2 = 0; ok.field_c.length > var2; var2++) {
-              if (param1 == ok.field_c[var2] &&
+            for (var2 = 0; BoundedRandomAccessFile.field_c.length > var2; var2++) {
+              if (param1 == BoundedRandomAccessFile.field_c[var2] &&
                 DirectByteStorage.field_e[var2] > 0) {
                 dupTemp$29 = DirectByteStorage.field_e[var2] - 1;
                 arrayValue$30 = ri.field_B[var2];
@@ -169,8 +169,8 @@ final class jj {
             if (ri.field_B == null) {
               return new byte[param1];
             }
-            for (var2Lifetime5 = 0; ok.field_c.length > var2Lifetime5; var2Lifetime5++) {
-              if (param1 == ok.field_c[var2Lifetime5] &&
+            for (var2Lifetime5 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime5; var2Lifetime5++) {
+              if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime5] &&
                 DirectByteStorage.field_e[var2Lifetime5] > 0) {
                 dupTemp$25 = DirectByteStorage.field_e[var2Lifetime5] - 1;
                 arrayValue$26 = ri.field_B[var2Lifetime5];
@@ -200,8 +200,8 @@ final class jj {
           if (ri.field_B == null) {
             return new byte[param1];
           }
-          for (var2Lifetime6 = 0; ok.field_c.length > var2Lifetime6; var2Lifetime6++) {
-            if (param1 == ok.field_c[var2Lifetime6] &&
+          for (var2Lifetime6 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime6; var2Lifetime6++) {
+            if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime6] &&
               DirectByteStorage.field_e[var2Lifetime6] > 0) {
               dupTemp$22 = DirectByteStorage.field_e[var2Lifetime6] - 1;
               arrayValue$23 = ri.field_B[var2Lifetime6];
@@ -226,8 +226,8 @@ final class jj {
             if (ri.field_B == null) {
               return new byte[param1];
             }
-            for (var2Lifetime1 = 0; ok.field_c.length > var2Lifetime1; var2Lifetime1++) {
-              if (param1 == ok.field_c[var2Lifetime1] &&
+            for (var2Lifetime1 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime1; var2Lifetime1++) {
+              if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime1] &&
                 DirectByteStorage.field_e[var2Lifetime1] > 0) {
                 dupTemp$3 = DirectByteStorage.field_e[var2Lifetime1] - 1;
                 arrayValue$4 = ri.field_B[var2Lifetime1];
@@ -257,8 +257,8 @@ final class jj {
           if (ri.field_B == null) {
             return new byte[param1];
           }
-          for (var2Lifetime1Lifetime1 = 0; ok.field_c.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
-            if (param1 == ok.field_c[var2Lifetime1Lifetime1] &&
+          for (var2Lifetime1Lifetime1 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime1Lifetime1; var2Lifetime1Lifetime1++) {
+            if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime1Lifetime1] &&
               DirectByteStorage.field_e[var2Lifetime1Lifetime1] > 0) {
               dupTemp$7 = DirectByteStorage.field_e[var2Lifetime1Lifetime1] - 1;
               arrayValue$8 = ri.field_B[var2Lifetime1Lifetime1];
@@ -296,8 +296,8 @@ final class jj {
           if (ri.field_B == null) {
             return new byte[param1];
           }
-          for (var2Lifetime2 = 0; ok.field_c.length > var2Lifetime2; var2Lifetime2++) {
-            if (param1 == ok.field_c[var2Lifetime2] &&
+          for (var2Lifetime2 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime2; var2Lifetime2++) {
+            if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime2] &&
               DirectByteStorage.field_e[var2Lifetime2] > 0) {
               dupTemp$15 = DirectByteStorage.field_e[var2Lifetime2] - 1;
               arrayValue$16 = ri.field_B[var2Lifetime2];
@@ -313,8 +313,8 @@ final class jj {
           if (ri.field_B == null) {
             return new byte[param1];
           }
-          for (var2Lifetime3 = 0; ok.field_c.length > var2Lifetime3; var2Lifetime3++) {
-            if (param1 == ok.field_c[var2Lifetime3] &&
+          for (var2Lifetime3 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime3; var2Lifetime3++) {
+            if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime3] &&
               DirectByteStorage.field_e[var2Lifetime3] > 0) {
               dupTemp$12 = DirectByteStorage.field_e[var2Lifetime3] - 1;
               arrayValue$13 = ri.field_B[var2Lifetime3];
@@ -336,8 +336,8 @@ final class jj {
         if (ri.field_B == null) {
           return new byte[param1];
         }
-        for (var2Lifetime4 = 0; ok.field_c.length > var2Lifetime4; var2Lifetime4++) {
-          if (param1 == ok.field_c[var2Lifetime4] &&
+        for (var2Lifetime4 = 0; BoundedRandomAccessFile.field_c.length > var2Lifetime4; var2Lifetime4++) {
+          if (param1 == BoundedRandomAccessFile.field_c[var2Lifetime4] &&
             DirectByteStorage.field_e[var2Lifetime4] > 0) {
             dupTemp$10 = DirectByteStorage.field_e[var2Lifetime4] - 1;
             arrayValue$11 = ri.field_B[var2Lifetime4];

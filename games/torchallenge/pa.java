@@ -206,7 +206,7 @@ final class pa extends PacketBuffer {
             }
             if (null != jj.field_b) {
               try {
-                jj.field_b.a((byte) -57);
+                jj.field_b.close((byte) -57);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -219,7 +219,7 @@ final class pa extends PacketBuffer {
               for (var1_int = 0; var1_int < ij.field_y.length; var1_int++) {
                 if (null != ij.field_y[var1_int]) {
                   try {
-                    ij.field_y[var1_int].a((byte) -57);
+                    ij.field_y[var1_int].close((byte) -57);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2_ref = (IOException) (Object) decompiledCaughtException;

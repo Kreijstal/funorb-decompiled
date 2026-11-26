@@ -203,7 +203,7 @@ class hc extends of {
         if (!oh.a(param0 ^ -51)) {
           if (!MouseInput.field_e) {
             if (ri.field_f == null) {
-              ri.field_f = ge.a(4, (byte) -109);
+              ri.field_f = BufferedRandomAccessFile.a(4, (byte) -109);
             }
             if (ri.field_f.field_l) {
               ej.field_h = ej.field_h & ~ri.field_f.field_j;

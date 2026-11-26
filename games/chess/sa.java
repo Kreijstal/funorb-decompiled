@@ -66,8 +66,8 @@ final class sa {
             var2 = var9;
             if (null != DiskArchiveRequest.field_z) {
               try {
-                DiskArchiveRequest.field_z.a(0L, 0);
-                DiskArchiveRequest.field_z.a(0, var10);
+                DiskArchiveRequest.field_z.seek(0L, 0);
+                DiskArchiveRequest.field_z.readFully(0, var10);
                 for (var4_int = 0; 24 > var4_int; var4_int++) {
                   if (0 == var11[var4_int]) {
                     continue;

@@ -357,8 +357,8 @@ final class qi {
           }
           if (pl.field_b != null) {
             try {
-              pl.field_b.a(0L, true);
-              pl.field_b.a(24, param0 ^ -8771, ne.field_a.payload, ne.field_a.position);
+              pl.field_b.seek(0L, true);
+              pl.field_b.write(24, param0 ^ -8771, ne.field_a.payload, ne.field_a.position);
             } catch (Exception exception) {
             }
           }

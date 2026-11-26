@@ -116,7 +116,7 @@ final class vd extends DualLinkNode {
             nf.field_c = param0;
             td.field_b = param12;
             mk.field_k = param6;
-            wk.field_d = param3;
+            BoundedRandomAccessFile.field_d = param3;
             AwtRasterBuffer.field_g = param9;
             bj.field_m = param2;
             dg.field_F = param13;
@@ -126,7 +126,7 @@ final class vd extends DualLinkNode {
             }
             if (null != td.field_b.field_x) {
               try {
-                e.field_e = new tk(td.field_b.field_x, 64, 0);
+                e.field_e = new BufferedRandomAccessFile(td.field_b.field_x, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

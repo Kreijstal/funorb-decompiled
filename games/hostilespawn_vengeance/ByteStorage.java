@@ -152,7 +152,7 @@ abstract class ByteStorage {
                                   var6[incrementValue$2] = (int)var8_ref_p.field_c;
                                   break regionExit1;
                                 case 24:
-                                  bn.a(true, var3, var8_ref_p, var2);
+                                  BufferedRandomAccessFile.a(true, var3, var8_ref_p, var2);
                                   break regionExit1;
                                 case 6:
                                   tm.a((byte) 88, var2, var3, var8_ref_p);

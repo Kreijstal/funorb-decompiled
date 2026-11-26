@@ -36,7 +36,7 @@ final class mi extends el {
             }
             if (null != DiskCacheWorker.field_c) {
               try {
-                DiskCacheWorker.field_c.d(0);
+                DiskCacheWorker.field_c.close(0);
               } catch (IOException iOException) {
               }
             }
@@ -44,7 +44,7 @@ final class mi extends el {
               for (var1_int = 0; var1_int < kh.field_e.length; var1_int++) {
                 if (null != kh.field_e[var1_int]) {
                   try {
-                    kh.field_e[var1_int].d(0);
+                    kh.field_e[var1_int].close(0);
                   } catch (IOException var2_ref) {
                   }
                 }

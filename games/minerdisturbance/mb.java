@@ -53,7 +53,7 @@ final class mb {
         if (param0 > -65) {
           return 51;
         }
-        return me.field_j;
+        return BufferedRandomAccessFile.field_j;
     }
 
     final static void a(byte param0) {

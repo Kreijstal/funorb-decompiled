@@ -1110,8 +1110,8 @@ class vk extends UiWidget implements ch {
           var3 = 82 / ((-41 - param0) / 54);
           var2 = var1.readUnsignedByte(7909);
           if (var2 == 0) {
-            if (td.field_o == null) {
-              td.field_o = new ai(128);
+            if (BufferedRandomAccessFile.field_o == null) {
+              BufferedRandomAccessFile.field_o = new ai(128);
               DelegatingCanvas.field_b = 0;
             }
             stackIn_11_0 = (1 != var1.readUnsignedByte(7909)) ? 0 : 1;
@@ -1129,12 +1129,12 @@ class vk extends UiWidget implements ch {
             if (var6 == null) {
               var6 = MouseInput.a(var7, 89);
               if (var6 != null) {
-                td.field_o.a(2, (long)var8.hashCode(), var6);
+                BufferedRandomAccessFile.field_o.a(2, (long)var8.hashCode(), var6);
               }
             }
             if (null == var6) {
               var6 = new ld();
-              td.field_o.a(2, (long)var8.hashCode(), var6);
+              BufferedRandomAccessFile.field_o.a(2, (long)var8.hashCode(), var6);
               fieldTemp$0 = DelegatingCanvas.field_b;
               DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1;
               var6.field_hb = fieldTemp$0;

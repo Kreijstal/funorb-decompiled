@@ -22,7 +22,7 @@ final class ce {
             if (n.field_a != null &&
               n.field_a.focusLost) {
               re.a(0);
-              DelayedPcmStream.field_q.a((byte) 85, (UiWidget) (new vj(DelayedPcmStream.field_q, cb.field_d)));
+              DelayedPcmStream.field_q.a((byte) 85, (UiWidget) (new vj(DelayedPcmStream.field_q, BoundedRandomAccessFile.field_d)));
             }
             return;
           }

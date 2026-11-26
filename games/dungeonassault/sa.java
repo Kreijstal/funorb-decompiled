@@ -14,7 +14,7 @@ final class sa {
     private int field_p;
     static String field_w;
     private RgbSprite field_u;
-    static hd field_x;
+    static BufferedRandomAccessFile field_x;
     private RgbSprite field_g;
     private RgbSprite field_c;
     int field_b;
@@ -63,7 +63,7 @@ final class sa {
     public static void clearStaticReferences(boolean param0) {
         field_x = null;
         if (param0) {
-          field_x = (hd) null;
+          field_x = (BufferedRandomAccessFile) null;
         }
         field_h = null;
         field_e = null;

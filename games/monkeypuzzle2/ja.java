@@ -38,7 +38,7 @@ final class ja extends WidgetContainer implements u, ql {
             return (rb) (stackIn_3_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var2 = pl.a((byte) 119, var7);
+          var2 = BoundedRandomAccessFile.a((byte) 119, var7);
           if (var2 == null) {
             var2 = param0;
           }
@@ -49,7 +49,7 @@ final class ja extends WidgetContainer implements u, ql {
           var3 = (rb) (ah.field_b.a((long)var2.hashCode(), false));
           while (var3 != null) {
             var8 = (CharSequence) ((Object) var3.field_db);
-            var4 = pl.a((byte) 108, var8);
+            var4 = BoundedRandomAccessFile.a((byte) 108, var8);
             if (var4 == null) {
               var4 = var3.field_db;
             }

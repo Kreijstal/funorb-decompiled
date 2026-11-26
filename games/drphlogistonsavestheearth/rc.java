@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rc {
-    static ge[] field_d;
+    static BufferedRandomAccessFile[] field_d;
     static String field_b;
     static int[] field_i;
     static RgbSprite[][] field_a;

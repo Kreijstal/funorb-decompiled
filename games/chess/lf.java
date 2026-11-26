@@ -112,7 +112,7 @@ final class lf extends kn {
           if (var44.field_y != null &&
             1 < var44.field_j) {
             var60 = var44.field_y;
-            h.a(var60, 0, param4 ^ 1187586933, lc.field_n, 0);
+            h.a(var60, 0, param4 ^ 1187586933, BufferedRandomAccessFile.field_n, 0);
           } else {
             d.l(465918340);
           }

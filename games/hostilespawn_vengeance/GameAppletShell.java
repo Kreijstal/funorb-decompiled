@@ -312,7 +312,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               hf.field_h = param1;
               gm.field_m = param1;
               bb.field_d = 0;
-              HostileSpawn.field_B = bn.c(-1);
+              HostileSpawn.field_B = BufferedRandomAccessFile.c(-1);
               dupTemp$0 = new PlatformTaskDispatcher(param2, param5, param4, true);
               gf.field_b = dupTemp$0;
               lj.field_t = dupTemp$0;
@@ -879,7 +879,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               if (param0 != 3904) {
                 this.init();
               }
-              a.a("loggedout", bn.c(param0 ^ -3905), -126);
+              a.a("loggedout", BufferedRandomAccessFile.c(param0 ^ -3905), -126);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

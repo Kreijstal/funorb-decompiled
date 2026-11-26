@@ -9,7 +9,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static String field_h;
     static u[] field_e;
     static boolean field_a;
-    static im[] field_g;
+    static BufferedRandomAccessFile[] field_g;
     static int field_c;
     static int field_f;
 
@@ -48,13 +48,13 @@ final class ProxyAuthenticationRequiredException extends IOException {
             if (param0 == 53) {
               return;
             }
-            field_g = (im[]) null;
+            field_g = (BufferedRandomAccessFile[]) null;
             return;
           }
           up.field_z.b(param1, 0);
           dc.a(param1, (byte) -110);
           if (param0 != 53) {
-            field_g = (im[]) null;
+            field_g = (BufferedRandomAccessFile[]) null;
             return;
           }
           return;
@@ -66,14 +66,14 @@ final class ProxyAuthenticationRequiredException extends IOException {
           if (param0 == 53) {
             return;
           }
-          field_g = (im[]) null;
+          field_g = (BufferedRandomAccessFile[]) null;
           return;
         }
         dc.a(param1, (byte) -110);
         if (param0 == 53) {
           return;
         }
-        field_g = (im[]) null;
+        field_g = (BufferedRandomAccessFile[]) null;
     }
 
     public static void clearStaticReferences(byte param0) {

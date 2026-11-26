@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd {
-    static jf[] field_a;
+    static BufferedRandomAccessFile[] field_a;
     static String field_b;
 
     final static void a(int param0) {
@@ -30,7 +30,7 @@ final class pd {
           CipherPacketBuffer.field_l = nl.field_b[param1];
           return;
         }
-        field_a = (jf[]) null;
+        field_a = (BufferedRandomAccessFile[]) null;
         BufferedSocket.field_p = hc.field_d[param1];
         CipherPacketBuffer.field_l = nl.field_b[param1];
     }

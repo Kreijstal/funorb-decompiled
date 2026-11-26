@@ -509,7 +509,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var7 = -10 + var5_int;
           if (param2.field_w > 0 &&
             null != param2.field_y) {
-            di.c(-11517);
+            BoundedRandomAccessFile.c(-11517);
           }
           ug.field_h = 0;
           if (param1 > -122) {
@@ -756,7 +756,7 @@ final class MusicPatchPcmStream extends PcmStream {
           var7 = -10 + var5_int;
           if (param2.field_w > 0 &&
             null != param2.field_y) {
-            di.c(-11517);
+            BoundedRandomAccessFile.c(-11517);
           }
           ug.field_h = 0;
           if (param1 > -122) {

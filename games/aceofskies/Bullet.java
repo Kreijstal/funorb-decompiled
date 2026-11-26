@@ -35,8 +35,8 @@ final class Bullet extends FlightBody {
           }
           if (null != BitmapFontMetrics.field_g) {
             try {
-              BitmapFontMetrics.field_g.a(true, 0L);
-              BitmapFontMetrics.field_g.a(24, IntKeyLookup.incomingPacket.payload, IntKeyLookup.incomingPacket.position, -105);
+              BitmapFontMetrics.field_g.seek(true, 0L);
+              BitmapFontMetrics.field_g.write(24, IntKeyLookup.incomingPacket.payload, IntKeyLookup.incomingPacket.position, -105);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               Throwable decompiledCaughtException = decompiledCaughtParameter0;
               Exception var1 = (Exception) (Object) decompiledCaughtException;

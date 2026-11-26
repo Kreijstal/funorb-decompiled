@@ -37,7 +37,7 @@ final class AccountNameAvailabilityValidator extends tj {
               this.checkedName = param1;
               this.nameAvailable = var3.success;
             } else {
-              stackIn_8_0 = be.field_q;
+              stackIn_8_0 = BufferedRandomAccessFile.field_q;
               return stackIn_8_0;
             }
           }
@@ -80,7 +80,7 @@ final class AccountNameAvailabilityValidator extends tj {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          var3 = ea.a(var6, param0 ^ 125);
+          var3 = BoundedRandomAccessFile.a(var6, param0 ^ 125);
           if (var3 != null) {
             stackIn_3_0 = var3;
             return stackIn_3_0;

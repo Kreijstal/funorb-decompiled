@@ -61,7 +61,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             }
             if (wg.field_p >= 0 &&
               var2_int >= 0) {
-              gl.field_i[wg.field_p] = ~var2_int;
+              BoundedRandomAccessFile.field_i[wg.field_p] = ~var2_int;
               wg.field_p = 1 + wg.field_p & 127;
               if (DelegatingCanvas.field_b == wg.field_p) {
                 wg.field_p = -1;
@@ -108,7 +108,7 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
             }
             if (wg.field_p >= 0 &&
               var2_int >= 0) {
-              gl.field_i[wg.field_p] = var2_int;
+              BoundedRandomAccessFile.field_i[wg.field_p] = var2_int;
               wg.field_p = wg.field_p + 1 & 127;
               if (DelegatingCanvas.field_b == wg.field_p) {
                 wg.field_p = -1;

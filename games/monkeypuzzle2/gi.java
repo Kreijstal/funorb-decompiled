@@ -146,7 +146,7 @@ final class gi {
         int var8 = 0;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          this.field_h[this.field_d] = (byte)bd.a((int) this.field_h[this.field_d], 128 >>> ch.a(this.field_g, 7));
+          this.field_h[this.field_d] = (byte)bd.a((int) this.field_h[this.field_d], 128 >>> BufferedRandomAccessFile.a(this.field_g, 7));
           this.field_d = this.field_d + 1;
           if (this.field_d > 32) {
             while (this.field_d < 64) {
@@ -254,7 +254,7 @@ final class gi {
                 this.field_d = 0;
                 this.field_g = 0;
               }
-              this.field_h[this.field_d] = (byte)ch.a(var8 << -var7 + 8, 255);
+              this.field_h[this.field_d] = (byte)BufferedRandomAccessFile.a(var8 << -var7 + 8, 255);
               param0 = param0 - 8L;
               var5_int++;
               this.field_g = this.field_g + var7;
@@ -277,7 +277,7 @@ final class gi {
               this.field_g = 0;
               this.field_d = 0;
             }
-            this.field_h[this.field_d] = (byte)ch.a(var8Lifetime1 << 8 - var7, 255);
+            this.field_h[this.field_d] = (byte)BufferedRandomAccessFile.a(var8Lifetime1 << 8 - var7, 255);
             this.field_g = this.field_g + (int)param0;
           } else {
             this.field_g = (int)((long)this.field_g + param0);
@@ -336,7 +336,7 @@ final class gi {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_b[var3Lifetime1] = hd.a(this.field_b[var3Lifetime1], nc.field_d[var4][ch.a((int)(this.field_f[ch.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
+              this.field_b[var3Lifetime1] = hd.a(this.field_b[var3Lifetime1], nc.field_d[var4][BufferedRandomAccessFile.a((int)(this.field_f[BufferedRandomAccessFile.a(var3Lifetime1 - var4, 7)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -351,7 +351,7 @@ final class gi {
             var4Lifetime1 = var8;
             var5Lifetime1 = 56;
             while (var8 < 8) {
-              this.field_b[var3Lifetime1Lifetime2] = hd.a(this.field_b[var3Lifetime1Lifetime2], nc.field_d[var8][ch.a(255, (int)(this.field_m[ch.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
+              this.field_b[var3Lifetime1Lifetime2] = hd.a(this.field_b[var3Lifetime1Lifetime2], nc.field_d[var8][BufferedRandomAccessFile.a(255, (int)(this.field_m[BufferedRandomAccessFile.a(7, var3Lifetime1Lifetime2 - var8)] >>> var5Lifetime1))]);
               var8++;
               var5Lifetime1 -= 8;
             }

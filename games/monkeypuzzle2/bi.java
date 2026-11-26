@@ -163,7 +163,7 @@ abstract class bi extends GameApplet {
           var3_int = param0.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = pl.a((byte) 100, param0);
+            var4 = BoundedRandomAccessFile.a((byte) 100, param0);
             if (param1 != 20558) {
               field_B = (int[]) null;
             }
@@ -470,7 +470,7 @@ abstract class bi extends GameApplet {
         }
         if (mc.field_a == 1) {
           if (fe.field_h != 0) {
-            ec.field_a = ol.a(-107, pl.field_g);
+            ec.field_a = ol.a(-107, BoundedRandomAccessFile.field_g);
           }
           fj.field_B = b.a(false, 1, true, ph.field_c, (byte) 125);
           hf.field_a = b.a(false, 1, true, SecondaryNodeDequeIterator.field_e, (byte) -118);
@@ -528,24 +528,24 @@ abstract class bi extends GameApplet {
         }
         if (mc.field_a == 10) {
           if (fe.field_h != 0) {
-            ch.field_j = ol.a(-102, FullscreenFocusCanvas.field_e);
+            BufferedRandomAccessFile.field_j = ol.a(-102, FullscreenFocusCanvas.field_e);
           }
           mc.field_a = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (mc.field_a == 11) {
-          if (ch.field_j != null && (!ch.field_j.a(-124) ||
-            !ch.field_j.b(0))) {
-            ad.a(ec.a(ch.field_j, IntrusiveNode.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
+          if (BufferedRandomAccessFile.field_j != null && (!BufferedRandomAccessFile.field_j.a(-124) ||
+            !BufferedRandomAccessFile.field_j.b(0))) {
+            ad.a(ec.a(BufferedRandomAccessFile.field_j, IntrusiveNode.field_b, tk.field_a, 0), param0 ^ -24150, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
             mc.field_a = 12;
-            pl.field_d = true;
+            BoundedRandomAccessFile.field_d = true;
           }
         }
         if (mc.field_a == 12 &&
-          !pl.field_d) {
+          !BoundedRandomAccessFile.field_d) {
           mc.field_a = 13;
         }
         if (13 == mc.field_a) {
@@ -635,7 +635,7 @@ abstract class bi extends GameApplet {
         sj.a(92);
         eb.field_A = cf.createMouseWheelInput(param4 + 25427);
         af.a(20, ie.field_e);
-        pl.field_g = param3;
+        BoundedRandomAccessFile.field_g = param3;
         FullscreenFocusCanvas.field_e = param1;
         SecondaryNodeDequeIterator.field_e = param7;
         uk.field_q = param6;
@@ -766,7 +766,7 @@ abstract class bi extends GameApplet {
         int var4 = rc.field_f - 1;
         byte[] var5 = new byte[var4];
         MonkeyPuzzle2.field_D.a((byte) 118, 0, var4, var5);
-        pl.a(var3 != 0, 12430, ii.a(false), be.a(var5, (byte) -49));
+        BoundedRandomAccessFile.a(var3 != 0, 12430, ii.a(false), be.a(var5, (byte) -49));
     }
 
     private final int a(boolean param0, boolean param1, boolean param2) {
@@ -806,7 +806,7 @@ abstract class bi extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), lb.d((byte) -56), true, this.field_n, pl.a((byte) -69));
+            var5_intLifetime1 = nj.a(ci.a((byte) 78), gh.a(12035), mk.e(0), lb.d((byte) -56), true, this.field_n, BoundedRandomAccessFile.a((byte) -69));
             if (var5_intLifetime1 != -1) {
               fj.a(cm.field_E, ImageProducerRasterBuffer.field_n, -27967, var5_intLifetime1);
               cm.field_E = null;

@@ -64,8 +64,8 @@ final class lo {
             var2 = var6;
             if (fp.field_e != null) {
               try {
-                fp.field_e.a(0L, -1);
-                fp.field_e.a(var6, -88);
+                fp.field_e.seek(0L, -1);
+                fp.field_e.readFully(var6, -88);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

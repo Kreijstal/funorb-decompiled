@@ -1037,7 +1037,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("playfreeversion", 0);
                 if (var2 != null) {
-                  ge.field_g = mj.a((byte) -115, var2);
+                  BufferedRandomAccessFile.field_g = mj.a((byte) -115, var2);
                 }
                 var2 = wg.a("reloadgame", param0 ^ 7);
                 if (var2 != null) {
@@ -1413,7 +1413,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("create_email", 0);
                 if (var2 != null) {
-                  ge.field_c = mj.a((byte) -21, var2);
+                  BufferedRandomAccessFile.field_c = mj.a((byte) -21, var2);
                 }
                 var2 = wg.a("create_email_confirm", 0);
                 if (null != var2) {
@@ -2315,7 +2315,7 @@ final class LoginMenuScreen extends pj implements ke {
                 }
                 var2 = wg.a("hs_score", 0);
                 if (var2 != null) {
-                  ge.field_i = mj.a((byte) 91, var2);
+                  BufferedRandomAccessFile.field_i = mj.a((byte) 91, var2);
                 }
                 var2 = wg.a("hs_end", 0);
                 if (null != var2) {

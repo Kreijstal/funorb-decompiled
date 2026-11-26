@@ -7,7 +7,7 @@ final class ge {
     static int[] field_e;
     static int field_h;
     static String field_b;
-    static k field_d;
+    static BufferedRandomAccessFile field_d;
     static int field_g;
     static RgbSprite field_f;
 

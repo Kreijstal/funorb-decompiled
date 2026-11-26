@@ -11,7 +11,7 @@ final class DirectByteStorage extends ByteStorage {
         PcmOutputWorker.field_f = 0;
         fk.field_a = param0;
         ea.field_a = new n(2);
-        ea.field_a.a(false, param1, -1, td.a(pe.field_d, la.field_c, true));
+        ea.field_a.a(false, param1, -1, BufferedRandomAccessFile.a(pe.field_d, la.field_c, true));
     }
 
     final void setBytes(int param0, byte[] param1) {

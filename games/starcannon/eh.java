@@ -3042,31 +3042,31 @@ abstract class eh {
                 }
                 var2 = rd.a("mustlogin_alternate,1", -66);
                 if (var2 != null) {
-                  td.field_f[1] = DualLinkNode.a(112, var2);
+                  BufferedRandomAccessFile.field_f[1] = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("mustlogin_alternate,2", param0 ^ -9);
                 if (null != var2) {
-                  td.field_f[2] = DualLinkNode.a(112, var2);
+                  BufferedRandomAccessFile.field_f[2] = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("mustlogin_alternate,3", 85);
                 if (null != var2) {
-                  td.field_f[3] = DualLinkNode.a(113, var2);
+                  BufferedRandomAccessFile.field_f[3] = DualLinkNode.a(113, var2);
                 }
                 var2 = rd.a("mustlogin_alternate,4", 102);
                 if (null != var2) {
-                  td.field_f[4] = DualLinkNode.a(122, var2);
+                  BufferedRandomAccessFile.field_f[4] = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("mustlogin_alternate,5", 60);
                 if (null != var2) {
-                  td.field_f[5] = DualLinkNode.a(dg.a((int) param0, 75), var2);
+                  BufferedRandomAccessFile.field_f[5] = DualLinkNode.a(dg.a((int) param0, 75), var2);
                 }
                 var2 = rd.a("mustlogin_alternate,6", -58);
                 if (null != var2) {
-                  td.field_f[6] = DualLinkNode.a(119, var2);
+                  BufferedRandomAccessFile.field_f[6] = DualLinkNode.a(119, var2);
                 }
                 var2 = rd.a("mustlogin_alternate,7", 109);
                 if (null != var2) {
-                  td.field_f[7] = DualLinkNode.a(112, var2);
+                  BufferedRandomAccessFile.field_f[7] = DualLinkNode.a(112, var2);
                 }
                 var2 = rd.a("subscription_cost_monthly,0", 99);
                 if (var2 != null) {

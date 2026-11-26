@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class dj {
-    private gl field_f;
+final class BufferedRandomAccessFile {
+    private BoundedRandomAccessFile field_f;
     private int field_d;
     private long field_n;
     private long field_l;
@@ -19,12 +19,12 @@ final class dj {
     private static int[] field_b;
     static String field_e;
 
-    final long b(int param0) {
+    final long length(int param0) {
         int var2 = -3 % ((49 - param0) / 57);
         return this.field_k;
     }
 
-    private final void b(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         int var7;
         long var4;
@@ -35,10 +35,10 @@ final class dj {
         }
         if (-1L != this.field_h) {
           if (this.field_i != this.field_h) {
-            this.field_f.a(param0 ^ -8965, this.field_h);
+            this.field_f.seek(param0 ^ -8965, this.field_h);
             this.field_i = this.field_h;
           }
-          this.field_f.a(0, (byte) 127, this.field_d, this.field_m);
+          this.field_f.write(0, (byte) 127, this.field_d, this.field_m);
           this.field_i = this.field_i + (long)this.field_d;
           if (this.field_l < this.field_i) {
             this.field_l = this.field_i;
@@ -73,7 +73,7 @@ final class dj {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param0 < 0L) {
           throw new IOException();
         }
@@ -111,7 +111,7 @@ final class dj {
           lm.field_f = (kc) ((Object) wl.a("arezzo14", (byte) -111, "commonui", param2, param3));
           if (param1 <= 91) {
             ki var14 = (ki) null;
-            dj.a((ki) null, (byte) 9, (ki) null, (ki) null);
+            BufferedRandomAccessFile.a((ki) null, (byte) 9, (ki) null, (ki) null);
           }
           qc.field_b = (kc) ((Object) wl.a("arezzo14bold", (byte) -120, "commonui", param2, param3));
           var18 = new RgbSprite(param0.a("", 1, "button.gif"), (java.awt.Component) ((Object) GameAppletShell.field_f));
@@ -160,9 +160,9 @@ final class dj {
         }
     }
 
-    final void a(byte param0) throws IOException {
-        this.b((byte) 68);
-        this.field_f.d(26);
+    final void close(byte param0) throws IOException {
+        this.flush((byte) 68);
+        this.field_f.close(26);
         int var2 = 0 / ((param0 + 41) / 51);
     }
 
@@ -172,18 +172,18 @@ final class dj {
         field_b = null;
         if (param0 <= 72) {
           ki var2 = (ki) null;
-          dj.a((ki) null, (byte) 47, (ki) null, (ki) null);
+          BufferedRandomAccessFile.a((ki) null, (byte) 47, (ki) null, (ki) null);
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
         var4 = OrbDefence.field_D ? 1 : 0;
         this.field_c = 0;
         if (this.field_a != this.field_i) {
-          this.field_f.a(-9025, this.field_a);
+          this.field_f.seek(-9025, this.field_a);
           this.field_i = this.field_a;
         }
         this.field_n = this.field_a;
@@ -192,7 +192,7 @@ final class dj {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_f.a(this.field_c, var2, -4837, this.field_g);
+          var3 = this.field_f.read(this.field_c, var2, -4837, this.field_g);
           if (var3 != -1) {
             this.field_i = this.field_i + (long)var3;
             this.field_c = this.field_c + var3;
@@ -205,7 +205,7 @@ final class dj {
         }
     }
 
-    final void a(int param0, byte param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, byte param1, int param2, byte[] param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
@@ -256,10 +256,10 @@ final class dj {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param2 > this.field_g.length) {
-              this.field_f.a(-9025, this.field_a);
+              this.field_f.seek(-9025, this.field_a);
               this.field_i = this.field_a;
               while (param2 > 0) {
-                var10_intLifetime1 = this.field_f.a(param0, param2, -4837, param3);
+                var10_intLifetime1 = this.field_f.read(param0, param2, -4837, param3);
                 if (-1 == var10_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -274,7 +274,7 @@ final class dj {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param2 > 0)) {
-              this.a(200000000);
+              this.fillReadBuffer(200000000);
               var10_intLifetime1Lifetime1 = param2;
               if (var10_intLifetime1Lifetime1 > this.field_c) {
                 var10_intLifetime1Lifetime1 = this.field_c;
@@ -353,18 +353,18 @@ final class dj {
         }
     }
 
-    final void a(byte[] param0, int param1) throws IOException {
+    final void readFully(byte[] param0, int param1) throws IOException {
         if (param1 != 4) {
           return;
         }
         try {
-          this.a(0, (byte) -126, param0.length, param0);
+          this.readFully(0, (byte) -126, param0.length, param0);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "dj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(boolean param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(boolean param0, byte[] param1, int param2, int param3) throws IOException {
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
@@ -388,10 +388,10 @@ final class dj {
             if (this.field_h != -1L) {
               if (this.field_a >= this.field_h) {
                 if (this.field_a > (this.field_h + (long)this.field_d)) {
-                  this.b((byte) 68);
+                  this.flush((byte) 68);
                 }
               } else {
-                this.b((byte) 68);
+                this.flush((byte) 68);
               }
             }
             if (this.field_h != -1L &&
@@ -402,7 +402,7 @@ final class dj {
               this.field_a = this.field_a + (long)var5_int;
               param2 = param2 - var5_int;
               this.field_d = this.field_m.length;
-              this.b((byte) 68);
+              this.flush((byte) 68);
             }
             if (this.field_m.length >= param2) {
               if (param2 <= 0) {
@@ -419,10 +419,10 @@ final class dj {
               return;
             }
             if (this.field_i != this.field_a) {
-              this.field_f.a(-9025, this.field_a);
+              this.field_f.seek(-9025, this.field_a);
               this.field_i = this.field_a;
             }
-            this.field_f.a(param3, (byte) 0, param2, param1);
+            this.field_f.write(param3, (byte) 0, param2, param1);
             this.field_i = this.field_i + (long)param2;
             if (this.field_i > this.field_l) {
               this.field_l = this.field_i;
@@ -474,14 +474,14 @@ final class dj {
         }
     }
 
-    dj(gl param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_d = 0;
         this.field_h = -1L;
         this.field_n = -1L;
         try {
           this.field_f = param0;
-          dupTemp$0 = param0.a(1);
+          dupTemp$0 = param0.length(1);
           this.field_l = dupTemp$0;
           this.field_k = dupTemp$0;
           this.field_g = new byte[param1];

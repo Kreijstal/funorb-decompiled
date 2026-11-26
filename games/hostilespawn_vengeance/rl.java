@@ -43,7 +43,7 @@ final class rl {
         } else {
           stackIn_9_0 = param1 + qg.field_n;
         }
-        bn.field_p = stackIn_9_0;
+        BufferedRandomAccessFile.field_p = stackIn_9_0;
         if (-param1 + m.field_q >= ni.field_f - param2) {
           stackIn_12_0 = -param2 + ni.field_f;
         } else {
@@ -51,13 +51,13 @@ final class rl {
         }
         pk.field_m = stackIn_12_0;
         if (SoftwareRasterizer.field_j << 2 > v.field_g) {
-          if (SoftwareRasterizer.field_j << 2 > bn.field_p) {
-            bn.field_p = SoftwareRasterizer.field_j << 2;
+          if (SoftwareRasterizer.field_j << 2 > BufferedRandomAccessFile.field_p) {
+            BufferedRandomAccessFile.field_p = SoftwareRasterizer.field_j << 2;
           }
           v.field_g = SoftwareRasterizer.field_j << 2;
         }
-        if (bn.field_p > SoftwareRasterizer.field_a << 2) {
-          bn.field_p = SoftwareRasterizer.field_a << 2;
+        if (BufferedRandomAccessFile.field_p > SoftwareRasterizer.field_a << 2) {
+          BufferedRandomAccessFile.field_p = SoftwareRasterizer.field_a << 2;
           if (v.field_g > SoftwareRasterizer.field_a << 2) {
             v.field_g = SoftwareRasterizer.field_a << 2;
           }

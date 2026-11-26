@@ -296,8 +296,8 @@ final class vi extends qm {
             byte[] var2 = var9;
             if (BitmapFontMetrics.field_g != null) {
               try {
-                BitmapFontMetrics.field_g.a(true, 0L);
-                BitmapFontMetrics.field_g.a(var10, param0 ^ -13542);
+                BitmapFontMetrics.field_g.seek(true, 0L);
+                BitmapFontMetrics.field_g.readFully(var10, param0 ^ -13542);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var11[var3_int]) {
                     continue;

@@ -10,7 +10,7 @@ final class aa {
     private int field_g;
     static wh field_e;
     static String field_f;
-    static me[] field_h;
+    static BufferedRandomAccessFile[] field_h;
     private int[] field_c;
     static int field_b;
     static int field_d;

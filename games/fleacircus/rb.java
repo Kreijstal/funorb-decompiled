@@ -138,7 +138,7 @@ final class rb extends gj implements da {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  k.c(-28354);
+                  BufferedRandomAccessFile.c(-28354);
                   aa.field_q = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
@@ -227,7 +227,7 @@ final class rb extends gj implements da {
             }
             if (pi.field_g == ResourceArchive.field_k &&
               gf.b(115)) {
-              k.c(-28354);
+              BufferedRandomAccessFile.c(-28354);
               if (7 == be.field_a &&
                 !aa.field_q) {
                 aa.field_q = true;

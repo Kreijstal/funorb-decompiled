@@ -832,14 +832,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         Object var6 = null;
         try {
           var2_long = la.correctedCurrentTimeMillis(false);
-          var4 = wi.field_b[ge.field_f];
-          wi.field_b[ge.field_f] = var2_long;
+          var4 = wi.field_b[BufferedRandomAccessFile.field_f];
+          wi.field_b[BufferedRandomAccessFile.field_f] = var2_long;
           if (0L != var4 &&
             var4 < var2_long) {
             var6_int = (int)(-var4 + var2_long);
             qj.field_c = ((var6_int >> 1) + 32000) / var6_int;
           }
-          ge.field_f = 31 & 1 + ge.field_f;
+          BufferedRandomAccessFile.field_f = 31 & 1 + BufferedRandomAccessFile.field_f;
           var6 = this;
           synchronized (var6) {
             pj.field_C = NetworkArchiveRequest.field_J;

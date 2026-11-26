@@ -38,7 +38,7 @@ final class b {
           var9 = Bounce.field_N;
           try {
             if (null == NodeHashTableIterator.field_a &&
-              !ok.a(param5, 118)) {
+              !BoundedRandomAccessFile.a(param5, 118)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -123,9 +123,9 @@ final class b {
                 jc.field_g.readUnsignedByte((byte) -122);
                 jc.field_g.readUnsignedByte((byte) -108);
                 jc.field_g.readInt(-3);
-                ok.field_a = jc.field_g.readUnsignedShort(-1640531527);
-                hh.field_q = new byte[ok.field_a];
-                for (var8 = 0; ok.field_a > var8; var8++) {
+                BoundedRandomAccessFile.field_a = jc.field_g.readUnsignedShort(-1640531527);
+                hh.field_q = new byte[BoundedRandomAccessFile.field_a];
+                for (var8 = 0; BoundedRandomAccessFile.field_a > var8; var8++) {
                   hh.field_q[var8] = jc.field_g.readByte(96);
                 }
               }
@@ -134,7 +134,7 @@ final class b {
               qe.field_e = ce.a(var12, 0);
               nb.field_d = jc.field_g.readUnsignedByte((byte) -94);
               pj.field_a = field_b;
-              if (bj.field_E.b((byte) -124) != jf.field_h) {
+              if (bj.field_E.b((byte) -124) != BufferedRandomAccessFile.field_h) {
                 if (bj.field_E.b((byte) -113) == pg.field_b) {
                   w.field_g.a(1, DiskCacheWorker.b(0));
                 }

@@ -28,7 +28,7 @@ class mh {
             DiskCacheWorker.field_a = qa.createFullscreenCanvas(0, 480, 0, 17651, jk.field_a, 640);
           }
           if (DiskCacheWorker.field_a != null) {
-            tk.a(DiskCacheWorker.field_a, -1);
+            BufferedRandomAccessFile.a(DiskCacheWorker.field_a, -1);
             var2 = 2;
           } else {
             var2 = 3;

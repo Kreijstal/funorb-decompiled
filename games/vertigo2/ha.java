@@ -84,15 +84,15 @@ final class ha {
           gm.field_c[2] = fa.field_q;
           gm.field_c[4] = pq.field_g;
           gm.field_c[3] = ve.field_b;
-          im.field_j = new UiPanel(0L, (UiPanel) null);
+          BufferedRandomAccessFile.field_j = new UiPanel(0L, (UiPanel) null);
           hr.field_C = new UiPanel((long)param9, MidiPcmStream.field_t, kc.field_c);
           ArchiveRequest.field_v = new UiPanel(0L, MouseInputHandler.field_a, f.field_D);
           ja.field_f = new od(0L, new UiPanel(0L, (UiPanel) null), ua.field_c, ol.field_H);
-          im.field_j.b(hr.field_C, 118);
+          BufferedRandomAccessFile.field_j.b(hr.field_C, 118);
           if (MidiPcmStream.field_S) {
-            im.field_j.b(ArchiveRequest.field_v, 121);
+            BufferedRandomAccessFile.field_j.b(ArchiveRequest.field_v, 121);
           }
-          im.field_j.b(ja.field_f, 123);
+          BufferedRandomAccessFile.field_j.b(ja.field_f, 123);
           ja.field_f.field_Lb.a(AccountRequestState.field_b, param9 - 27);
           ja.field_f.field_Lb.field_ab = 1;
           var23 = ja.field_f.field_Lb;

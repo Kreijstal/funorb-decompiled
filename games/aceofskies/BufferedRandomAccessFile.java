@@ -20,7 +20,7 @@ final class BufferedRandomAccessFile {
     static AircraftDefinition playerDefinition;
     private BoundedRandomAccessFile field_m;
 
-    private final void a(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         int var8 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var2 = -57 / ((83 - param0) / 41);
         if (this.field_e != -1L) {
@@ -59,15 +59,15 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         if (param0 != 106) {
           return;
         }
-        this.a(param0 ^ 22);
+        this.flush(param0 ^ 22);
         this.field_m.close(19260);
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         String stackIn_64_2 = null;
         Throwable decompiledCaughtException = null;
         int var14 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -121,7 +121,7 @@ final class BufferedRandomAccessFile {
             if (decompiledFrameRemainder0 &&
               decompiledFrameCompleted0 &&
               0 < param1) {
-              this.d(0);
+              this.fillReadBuffer(0);
               int var9_intLifetime1Lifetime1 = param1;
               if (var9_intLifetime1Lifetime1 > this.field_a) {
                 var9_intLifetime1Lifetime1 = this.field_a;
@@ -203,7 +203,7 @@ final class BufferedRandomAccessFile {
         return 0 != (65536 & param2) ? true : false;
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         String stackIn_52_2 = null;
         Throwable decompiledCaughtException = null;
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -215,9 +215,9 @@ final class BufferedRandomAccessFile {
             }
             if (this.field_e != -1L) {
               if (!(this.field_e <= this.field_k)) {
-                this.a(-125);
+                this.flush(-125);
               } else if ((this.field_e + (long)this.field_c) < this.field_k) {
-                this.a(-125);
+                this.flush(-125);
               }
             }
             if (this.field_e != -1L &&
@@ -228,7 +228,7 @@ final class BufferedRandomAccessFile {
               param2 = param2 + var6_int;
               param0 = param0 - var6_int;
               this.field_c = this.field_g.length;
-              this.a(-39);
+              this.flush(-39);
             }
             if (this.field_g.length >= param0) {
               if (param0 <= 0) {
@@ -296,7 +296,7 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final void a(boolean param0, long param1) throws IOException {
+    final void seek(boolean param0, long param1) throws IOException {
         if (0L > param1) {
           throw new IOException();
         }
@@ -316,12 +316,12 @@ final class BufferedRandomAccessFile {
         playerDefinition = null;
     }
 
-    final void a(byte[] param0, int param1) throws IOException {
+    final void readFully(byte[] param0, int param1) throws IOException {
         if (param1 != 13541) {
           return;
         }
         try {
-          this.a(0, param0.length, param0, 0);
+          this.readFully(0, param0.length, param0, 0);
         } catch (RuntimeException runtimeException) {
           throw PcmOutputWorker.wrapClientException((Throwable) ((Object) runtimeException), "gh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -350,12 +350,12 @@ final class BufferedRandomAccessFile {
         }
     }
 
-    final long c(int param0) {
+    final long length(int param0) {
         int var2 = 54 % ((param0 + 8) / 45);
         return this.field_b;
     }
 
-    private final void d(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var4 = AceOfSkies.obfuscationControl ? 1 : 0;
         this.field_a = param0;
         if (this.field_k != this.field_d) {

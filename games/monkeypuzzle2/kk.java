@@ -221,7 +221,7 @@ final class kk {
                   this.field_g != 10) {
                   if (this.field_g == 7) {
                     lb.a(120, 400, (byte) -119, NodeHashTableIterator.field_e, 180, 185);
-                    var3_ref_vk = pl.field_e;
+                    var3_ref_vk = BoundedRandomAccessFile.field_e;
                     var4Lifetime1 = var3_ref_vk.field_C + 200;
                     var5Lifetime1 = 4 + (var3_ref_vk.field_j + var3_ref_vk.field_D);
                     var3_ref_vk.a(f.field_f, 320, var4Lifetime1, 1, -1);
@@ -331,7 +331,7 @@ final class kk {
         var4 = 263;
         SoftwareRasterizer.fillRectangle(3, 3, var3 - 6, -6 + var4, 16249775);
         lb.a(0, var3, (byte) -124, NodeHashTableIterator.field_e, 0, var4);
-        var5 = pl.field_e;
+        var5 = BoundedRandomAccessFile.field_e;
         var6 = 0;
         var7_int = DiskArchiveRequest.field_r / 8;
         if (param0 != 1) {
@@ -448,7 +448,7 @@ final class kk {
           SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
           lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
           sb.field_r.a(bg.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
-          var4 = pl.field_e;
+          var4 = BoundedRandomAccessFile.field_e;
           var5 = s.field_S;
           if (var5.field_l) {
             if (var5.field_g == null) {
@@ -509,7 +509,7 @@ final class kk {
             var6 = eg.field_h;
           }
         }
-        pl.field_e.a(nc.field_c, 30, var3 - 37, -60 + var2, 40, 1, -1, 1, 0, 12);
+        BoundedRandomAccessFile.field_e.a(nc.field_c, 30, var3 - 37, -60 + var2, 40, 1, -1, 1, 0, 12);
         var7 = 137;
         sb.field_r.a(var6, var2 / 2, var7, 9330743, -1);
         ac.field_a.setAsRasterTarget((byte) 116);
@@ -788,12 +788,12 @@ final class kk {
           var7 = gg.a(stackIn_6_0, var7, true);
           if ((var14 != 0) && (var6 == 5 &&
             this.field_g == 2)) {
-            var7 = pl.field_c;
+            var7 = BoundedRandomAccessFile.field_c;
           }
         } else {
           if (var6 == 5 &&
             this.field_g == 2) {
-            var7 = pl.field_c;
+            var7 = BoundedRandomAccessFile.field_c;
           }
         }
         var8 = this.field_f[param1].field_m;

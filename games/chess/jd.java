@@ -66,7 +66,7 @@ final class jd {
             }
             if (kj.field_a != null) {
               try {
-                kj.field_a.a((byte) -87);
+                kj.field_a.close((byte) -87);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -76,7 +76,7 @@ final class jd {
               for (var1_int = 0; hj.field_n.length > var1_int; var1_int++) {
                 if (hj.field_n[var1_int] != null) {
                   try {
-                    hj.field_n[var1_int].a((byte) -87);
+                    hj.field_n[var1_int].close((byte) -87);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

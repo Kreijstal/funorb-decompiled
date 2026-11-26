@@ -104,7 +104,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             !(var3 >= BufferedSocket.a(true)) &&
             !(vg.c(-127) <= var3)) {
             this.field_v = false;
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             id.a(false);
             BoundedRandomAccessFile.a(wi.field_m, 2, 109);
             ji.a((byte) -69);
@@ -405,7 +405,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                                 return;
                               }
                               ud.a("MGS1: " + ak.a(true), (Throwable) null, 0);
-                              k.c(-28354);
+                              BufferedRandomAccessFile.c(-28354);
                               return;
                             }
                             stackIn_30_0 = (12 == var2);
@@ -427,7 +427,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           return;
         }
         ud.a("MGS2: " + ak.a(true), (Throwable) null, 0);
-        k.c(-28354);
+        BufferedRandomAccessFile.c(-28354);
     }
 
     final void f(byte param0) {

@@ -102,7 +102,7 @@ abstract class MouseWheelInput {
             var1_int = 35 / ((param0 + 45) / 48);
             if (null != uj.field_h) {
               try {
-                uj.field_h.a(-126);
+                uj.field_h.close(-126);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -112,7 +112,7 @@ abstract class MouseWheelInput {
               for (var2 = 0; rc.field_d.length > var2; var2++) {
                 if (rc.field_d[var2] != null) {
                   try {
-                    rc.field_d[var2].a(-104);
+                    rc.field_d[var2].close(-104);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var3 = (IOException) (Object) decompiledCaughtException;

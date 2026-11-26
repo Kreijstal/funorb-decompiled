@@ -46,20 +46,20 @@ public final class HostileSpawn extends NetworkGameClient {
           VolumeRampingMidiPcmStream.field_bb = new int[101];
           wk.field_b[10] = aa.field_b;
           wk.field_b[5] = e.field_r;
-          wk.field_b[9] = bn.field_l;
+          wk.field_b[9] = BufferedRandomAccessFile.field_l;
           wk.field_b[8] = mg.field_b;
           wk.field_b[6] = KeyboardInput.field_h;
           wk.field_b[7] = qh.field_l;
           var2_int = 0;
           do {
             if (101 <= var2_int) {
-              ee.field_d = jd.a((byte) 33, "", vd.field_C, "crosshair");
+              BoundedRandomAccessFile.field_d = jd.a((byte) 33, "", vd.field_C, "crosshair");
               break;
             }
             VolumeRampingMidiPcmStream.field_bb[var2_int] = var2_int * 131586;
             var2_int++;
           } while (var7 == 0);
-          var2 = ee.field_d;
+          var2 = BoundedRandomAccessFile.field_d;
           var3_int = 0;
           while (var3_int < var2.length) {
             var4 = var2[var3_int];
@@ -113,7 +113,7 @@ public final class HostileSpawn extends NetworkGameClient {
           of.field_e = th.a(vd.field_C, -111, "micro_numbers", te.field_J, "");
           NetworkArchiveRequest.field_y = fg.a("", "splat_guard", vd.field_C, false);
           NetworkGameClient.field_s = fg.a("", "splat_dormant", vd.field_C, false);
-          ee.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
+          BoundedRandomAccessFile.field_g = fg.a("", "splat_praetorian", vd.field_C, false);
           AccountRequestState.field_c = fg.a("", "splat_queen", vd.field_C, false);
           DiskArchiveRequest.field_x = fg.a("", "splat_runner", vd.field_C, false);
           tb.field_I = fg.a("", "splat_spitter", vd.field_C, false);
@@ -424,7 +424,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[39] = hg.field_a;
           ia.field_l[213] = field_C;
           ia.field_l[72] = f.field_d;
-          ia.field_l[166] = bn.field_o;
+          ia.field_l[166] = BufferedRandomAccessFile.field_o;
           ia.field_l[112] = SpriteGeometry.field_B;
           ia.field_l[56] = an.field_j;
           ia.field_l[100] = nd.field_a;
@@ -1137,7 +1137,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ej.clearStaticReferences(-21742);
           DiskCacheWorker.clearStaticReferences(-3);
           sg.b(-106);
-          bn.clearStaticReferences(false);
+          BufferedRandomAccessFile.clearStaticReferences(false);
           BufferedSocket.clearStaticReferences(200);
           im.clearStaticReferences(-14986);
           lh.clearStaticReferences(-95);
@@ -1216,7 +1216,7 @@ public final class HostileSpawn extends NetworkGameClient {
           SectorCacheStore.clearStaticReferences(255);
           DiskArchiveRequest.clearStaticReferences(param0 ^ 26);
           rb.clearStaticReferences(false);
-          ee.clearStaticReferences(param0 - 28);
+          BoundedRandomAccessFile.clearStaticReferences(param0 - 28);
           fg.clearStaticReferences((byte) -98);
           ArchiveRequest.resetStaticState(true);
           IsaacGenerator.clearStaticReferences(true);
@@ -2218,7 +2218,7 @@ public final class HostileSpawn extends NetworkGameClient {
                 ImageProducerRasterBuffer.field_q = null;
                 GameAppletShell.field_h.requestFocus();
               }
-              dc.a(param0 - 1, bn.c(-1));
+              dc.a(param0 - 1, BufferedRandomAccessFile.c(-1));
               if (!field_I) {
                 return;
               }
@@ -2512,7 +2512,7 @@ public final class HostileSpawn extends NetworkGameClient {
           KeyboardInput.field_h = MouseInput.a("", param0 ^ 13130, "explosive_shells", vd.field_C);
           qh.field_l = MouseInput.a("", 120, "fusion_power", vd.field_C);
           mg.field_b = MouseInput.a("", -67, "incendiary_rockets", vd.field_C);
-          bn.field_l = MouseInput.a("", 111, "plasma_fire", vd.field_C);
+          BufferedRandomAccessFile.field_l = MouseInput.a("", 111, "plasma_fire", vd.field_C);
           if (param0 != 13119) {
             return;
           }

@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class wk {
+final class BoundedRandomAccessFile {
     private long field_c;
     static long field_d;
     private long field_b;
     private RandomAccessFile field_a;
 
-    final int a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final int read(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
@@ -80,7 +80,7 @@ final class wk {
           var4_int = param2.length();
           var5 = param3.length();
           if (param1 <= 11) {
-            wk.a(false);
+            BoundedRandomAccessFile.a(false);
           }
           var6 = var4_int;
           var7 = var5 - 1;
@@ -128,7 +128,7 @@ final class wk {
         }
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != 11311) {
           return 27L;
         }
@@ -138,7 +138,7 @@ final class wk {
     protected final void finalize() throws Throwable {
         if (this.field_a != null) {
           System.out.println("");
-          this.a((byte) 87);
+          this.close((byte) 87);
         }
     }
 
@@ -155,7 +155,7 @@ final class wk {
         return true;
     }
 
-    final void a(long param0, boolean param1) throws IOException {
+    final void seek(long param0, boolean param1) throws IOException {
         if (param1) {
           return;
         }
@@ -173,7 +173,7 @@ final class wk {
             if (null != DiskCacheWorker.field_a &&
               DiskCacheWorker.field_a.focusLost) {
               PcmOutputWorker.a(true);
-              s.field_d.b(new ol(s.field_d, tk.field_b), (byte) -15);
+              s.field_d.b(new ol(s.field_d, BufferedRandomAccessFile.field_b), (byte) -15);
             }
             return;
           }
@@ -193,7 +193,7 @@ final class wk {
         }
     }
 
-    final void b(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         if (param2 != 0) {
           return;
         }
@@ -210,23 +210,23 @@ final class wk {
         }
     }
 
-    final void a(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         if (null != this.field_a) {
           this.field_a.close();
           this.field_a = null;
           if (param0 <= 9) {
-            wk.sleepMillis((byte) -90, 9L);
+            BoundedRandomAccessFile.sleepMillis((byte) -90, 9L);
             return;
           }
           return;
         }
         if (param0 <= 9) {
-          wk.sleepMillis((byte) -90, 9L);
+          BoundedRandomAccessFile.sleepMillis((byte) -90, 9L);
           return;
         }
     }
 
-    wk(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

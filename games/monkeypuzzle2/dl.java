@@ -185,11 +185,11 @@ final class dl {
         if (param0 != 0) {
           return (AccountServiceResult) null;
         }
-        if (di.field_a == ch.field_d) {
+        if (di.field_a == BufferedRandomAccessFile.field_d) {
           throw new IllegalStateException();
         }
-        if (f.field_i == ch.field_d) {
-          ch.field_d = di.field_a;
+        if (f.field_i == BufferedRandomAccessFile.field_d) {
+          BufferedRandomAccessFile.field_d = di.field_a;
           return cg.field_a;
         }
         return null;

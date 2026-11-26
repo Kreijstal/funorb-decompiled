@@ -5,7 +5,7 @@ final class rd implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     static RgbSprite field_e;
     static String field_b;
     static byte[][] field_a;
-    static k field_c;
+    static BufferedRandomAccessFile field_c;
     static int[] field_d;
 
     public static void clearStaticReferences(byte param0) {

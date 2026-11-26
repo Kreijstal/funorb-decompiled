@@ -220,7 +220,7 @@ final class df {
           }
           if (param1.field_I <= 0) {
             param1.c((byte) 44);
-            bn.a(3, param1);
+            BufferedRandomAccessFile.a(3, param1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -99,7 +99,7 @@ final class kn {
           }
           stackIn_5_0 = var8;
           if (param7 != null) {
-            stackIn_6_1 = hd.a(false, param0, "da_raider_" + param7);
+            stackIn_6_1 = BufferedRandomAccessFile.a(false, param0, "da_raider_" + param7);
           } else {
             stackIn_6_1 = null;
           }
@@ -108,7 +108,7 @@ final class kn {
           if (param1 == null) {
             stackIn_9_1 = null;
           } else {
-            stackIn_9_1 = hd.a(false, param3, "da_raider_" + param1);
+            stackIn_9_1 = BufferedRandomAccessFile.a(false, param3, "da_raider_" + param1);
           }
           stackIn_8_0.field_g = stackIn_9_1;
           if (param4 < 123) {
@@ -117,7 +117,7 @@ final class kn {
           }
           stackIn_13_0 = var8;
           if (param6 != null) {
-            stackIn_14_1 = hd.a(false, param5, "da_raider_" + param6);
+            stackIn_14_1 = BufferedRandomAccessFile.a(false, param5, "da_raider_" + param6);
           } else {
             stackIn_14_1 = null;
           }

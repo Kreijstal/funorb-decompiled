@@ -210,7 +210,7 @@ final class ja extends IntrusiveNode {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_n = sj.field_B[var3];
             var4_ref_n.b((byte) -53);
-            kb.a(var3, -128);
+            BoundedRandomAccessFile.a(var3, -128);
             var5 = var4_ref_n.field_t + var4_ref_n.field_F >> 1;
             var6 = var4_ref_n.field_x + var4_ref_n.field_G >> 1;
             var7 = var4_ref_n.field_u + var4_ref_n.field_k >> 1;
@@ -258,7 +258,7 @@ final class ja extends IntrusiveNode {
             }
             var21[var16] = -2147483648;
             var17 = sj.field_B[var16];
-            kb.a(var16, param0 ^ 116);
+            BoundedRandomAccessFile.a(var16, param0 ^ 116);
             for (var18 = 0; var18 < 3; var18++) {
               pd.field_u[var18] = pd.field_u[var18] + bi.field_s[var15][var18];
             }

@@ -132,7 +132,7 @@ final class PcmOutputWorker implements Runnable {
         qo.field_D.a(0, 14017, ca.field_h.field_Fb, 0, -2 + (-40 + ca.field_h.field_db));
         bf.field_c.a(86, MouseWheelInput.field_k.field_Fb, Archive.field_f, 0, 0);
         int var1 = 2 + Archive.field_f;
-        im.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (MidiPcmStream.field_S ? var1 : 0), !MidiPcmStream.field_S ? 0 : var1, 0);
+        BufferedRandomAccessFile.field_j.a(94, MouseWheelInput.field_k.field_Fb, MouseWheelInput.field_k.field_db - (MidiPcmStream.field_S ? var1 : 0), !MidiPcmStream.field_S ? 0 : var1, 0);
         po.b((byte) -52);
         DirectByteStorage.field_j.a(123, ca.field_h.field_Fb, 40, ca.field_h.field_db - 40, 0);
         qn.field_s.a(121, ud.field_A.field_Fb, 30, 0, 0);

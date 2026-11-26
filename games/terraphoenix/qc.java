@@ -100,7 +100,7 @@ final class qc {
             var4 = (String) null;
             qc.a((String) null, (Archive) null, (String) null, (byte) -43);
           }
-          if (ak.a(param1, param2, false)) {
+          if (BufferedRandomAccessFile.a(param1, param2, false)) {
             return false;
           }
           if (a.a(param1, param0 - 136, param2)) {

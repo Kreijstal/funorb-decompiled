@@ -1298,7 +1298,7 @@ final class ll {
                 }
                 var2 = te.a("create", -85);
                 if (var2 != null) {
-                  pl.field_b = be.a(var2, (byte) 82);
+                  BoundedRandomAccessFile.field_b = be.a(var2, (byte) 82);
                 }
                 var2 = te.a("create_pleasechooseapassword", -103);
                 if (null != var2) {
@@ -1964,7 +1964,7 @@ final class ll {
                 }
                 var2 = te.a("mainmenu", param0 - 70);
                 if (null != var2) {
-                  pl.field_c = be.a(var2, (byte) -90);
+                  BoundedRandomAccessFile.field_c = be.a(var2, (byte) -90);
                 }
                 var2 = te.a("pausemenu", -97);
                 if (var2 != null) {

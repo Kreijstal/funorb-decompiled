@@ -71,7 +71,7 @@ final class BoundedRandomAccessFile {
                 param0 = db.a(ud.field_a, new String[]{param0}, true);
               }
               if (ud.field_c) {
-                param0 = k.field_e;
+                param0 = BufferedRandomAccessFile.field_e;
               }
               ok.field_x.a((byte) -97, param1, param0);
             }

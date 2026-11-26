@@ -3,7 +3,7 @@
  */
 abstract class uj {
     static IntrusiveDeque field_a;
-    static o[] field_b;
+    static BufferedRandomAccessFile[] field_b;
     kp[] field_c;
 
     final static void a(String param0, int param1, String param2) {
@@ -151,7 +151,7 @@ abstract class uj {
         var10 = Torquing.field_u;
         try {
           if (param0 >= -107) {
-            field_b = (o[]) null;
+            field_b = (BufferedRandomAccessFile[]) null;
           }
           var5_int = 0;
           var6 = 0;

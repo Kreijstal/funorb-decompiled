@@ -51,7 +51,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
               return;
             }
             try {
-              mf.field_c = new td(og.field_a.field_c, 64, 0);
+              mf.field_c = new BufferedRandomAccessFile(og.field_a.field_c, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

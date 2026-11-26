@@ -19,7 +19,7 @@ final class af {
             }
             if (vg.field_q != null) {
               try {
-                vg.field_q.a((byte) -120);
+                vg.field_q.close((byte) -120);
               } catch (IOException iOException) {
               }
             }
@@ -27,7 +27,7 @@ final class af {
               for (var1_int = 0; ok.field_a.length > var1_int; var1_int++) {
                 if (ok.field_a[var1_int] != null) {
                   try {
-                    ok.field_a[var1_int].a((byte) 63);
+                    ok.field_a[var1_int].close((byte) 63);
                   } catch (IOException var2_ref) {
                   }
                 }

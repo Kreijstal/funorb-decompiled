@@ -105,7 +105,7 @@ public final class Confined extends i {
           jf.b((byte) -88);
           DiskCacheWorker.clearStaticReferences((byte) -119);
           ja.clearStaticReferences((byte) -35);
-          pf.clearStaticReferences(param0 ^ -172);
+          BufferedRandomAccessFile.clearStaticReferences(param0 ^ -172);
           BufferedSocket.clearStaticReferences(116);
           tb.clearStaticReferences((byte) 116);
           di.a(0);
@@ -605,7 +605,7 @@ public final class Confined extends i {
                 var17_int++;
                 continue;
               }
-              PolygonScanlineRasterizer.addPolygonEdges(pf.field_h, 0, 8);
+              PolygonScanlineRasterizer.addPolygonEdges(BufferedRandomAccessFile.field_h, 0, 8);
               PolygonScanlineRasterizer.renderSpans(0);
               PolygonScanlineRasterizer.resetEdges();
               stackIn_98_0 = 0;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ge {
+final class BufferedRandomAccessFile {
     private long field_o;
     private int field_j;
     static String field_i;
@@ -22,15 +22,15 @@ final class ge {
     private long field_e;
     private int field_q;
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 > -46) {
           return;
         }
-        this.b(0);
+        this.flush(0);
         this.field_b.close(104);
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -50,7 +50,7 @@ final class ge {
             }
             if (this.field_k != -1L && (this.field_a < this.field_k ||
               this.field_a > this.field_k + (long)this.field_j)) {
-              this.b(0);
+              this.flush(0);
             }
             if (-1L != this.field_k &&
               ((long)this.field_l.length + this.field_k) < (this.field_a + (long)param0)) {
@@ -60,7 +60,7 @@ final class ge {
               param1 = param1 + var5_int;
               param0 = param0 - var5_int;
               this.field_j = this.field_l.length;
-              this.b(0);
+              this.flush(0);
             }
             if (param0 <= this.field_l.length) {
               if (param2 != 18017) {
@@ -146,16 +146,16 @@ final class ge {
         field_p = null;
     }
 
-    final void a(byte param0, byte[] param1) throws IOException {
+    final void readFully(byte param0, byte[] param1) throws IOException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a(0, param1, param1.length, -101);
+          this.readFully(0, param1, param1.length, -101);
           if (param0 != -111) {
-            ge.a(-11, (byte) 68);
+            BufferedRandomAccessFile.a(-11, (byte) 68);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,7 +193,7 @@ final class ge {
           }
           if (param0 < 82) {
             var6 = (CharSequence) null;
-            ge.a((byte) -112, false, (CharSequence) null);
+            BufferedRandomAccessFile.a((byte) -112, false, (CharSequence) null);
           }
           var4 = 0;
           while (true) {
@@ -241,7 +241,7 @@ final class ge {
           var6_int = param3 - param2;
           if (param5 > -123) {
             var10 = (CharSequence) null;
-            ge.a((byte[]) null, 67, 112, -126, (CharSequence) null, 48);
+            BufferedRandomAccessFile.a((byte[]) null, 67, 112, -126, (CharSequence) null, 48);
           }
           for (var7 = 0; var7 < var6_int; var7++) {
             {
@@ -362,14 +362,14 @@ final class ge {
         }
     }
 
-    final long b(boolean param0) {
+    final long length(boolean param0) {
         if (!param0) {
           return -64L;
         }
         return this.field_h;
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void fillReadBuffer(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -396,7 +396,7 @@ final class ge {
         }
     }
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         if (param0 < 0L) {
           throw new IOException();
         }
@@ -406,7 +406,7 @@ final class ge {
         this.field_a = param0;
     }
 
-    private final void b(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -416,7 +416,7 @@ final class ge {
         var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param0 != 0) {
           var8 = (CharSequence) null;
-          ge.a((byte[]) null, 111, 53, 38, (CharSequence) null, -38);
+          BufferedRandomAccessFile.a((byte[]) null, 111, 53, 38, (CharSequence) null, -38);
         }
         boolean decompiledFrameRemainder0 = true;
         if (-1L != this.field_k) {
@@ -477,13 +477,13 @@ final class ge {
         f var2 = new f();
         ql.field_i.addLast(var2, 255);
         if (param1 >= -74) {
-          ge.a(103, (byte) 124);
+          BufferedRandomAccessFile.a(103, (byte) 124);
         }
         bj.a(2591, param0);
         return var2;
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(int param0, byte[] param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
@@ -553,7 +553,7 @@ final class ge {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param2 > 0)) {
-              this.a((byte) -102);
+              this.fillReadBuffer((byte) -102);
               var9_intLifetime1Lifetime1 = param2;
               if (var9_intLifetime1Lifetime1 > this.field_q) {
                 var9_intLifetime1Lifetime1 = this.field_q;
@@ -632,7 +632,7 @@ final class ge {
         }
     }
 
-    ge(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_j = 0;
         this.field_k = -1L;

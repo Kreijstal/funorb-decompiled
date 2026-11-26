@@ -6,7 +6,7 @@ final class jl extends MeshGeometry {
     static Boolean field_T;
     static String field_U;
     static long[] field_V;
-    static o field_W;
+    static BufferedRandomAccessFile field_W;
     static double[][] field_O;
 
     final static void b(byte param0) {

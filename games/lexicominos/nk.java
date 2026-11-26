@@ -30,7 +30,7 @@ abstract class nk extends GameAppletShell {
         rk.field_c = bl.createMouseWheelInput(115);
         ha.a(ug.field_y, (byte) 76);
         th.field_m = param6;
-        ea.field_d = param0;
+        BoundedRandomAccessFile.field_d = param0;
         ll.field_f = param1;
         ij.field_l = param3;
         gf.field_e = param5;
@@ -178,7 +178,7 @@ abstract class nk extends GameAppletShell {
           nc.field_r == 0) {
           stackIn_25_0 = (nc.field_r != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_25_0;
-          nc.field_r = ea.a((byte) 105);
+          nc.field_r = BoundedRandomAccessFile.a((byte) 105);
           if (var3Lifetime1 != 0 &&
             0 == nc.field_r &&
             ta.field_g == 11 &&
@@ -313,7 +313,7 @@ abstract class nk extends GameAppletShell {
         }
         if (PacketBuffer.field_i == 10) {
           if (ri.field_e != 0) {
-            eg.field_C = oj.a(false, ea.field_d);
+            eg.field_C = oj.a(false, BoundedRandomAccessFile.field_d);
           }
           PacketBuffer.field_i = 11;
         }

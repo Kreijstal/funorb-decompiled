@@ -14,8 +14,8 @@ final class bd extends g implements qh {
           Throwable decompiledCaughtException = null;
           if (null != e.field_e) {
             try {
-              e.field_e.a(0L, 10);
-              e.field_e.a(rd.field_j.payload, rd.field_j.position, 24, -1);
+              e.field_e.seek(0L, 10);
+              e.field_e.write(rd.field_j.payload, rd.field_j.position, 24, -1);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

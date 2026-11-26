@@ -375,7 +375,7 @@ final class e {
             vm var3 = (vm) null;
             this.a(-82, (int[]) null, -17, (String) null, -50, 44, (vm) null, 100);
           }
-          HostileSpawn.openSubscriptionPage(bn.c(param0 ^ 35), -53);
+          HostileSpawn.openSubscriptionPage(BufferedRandomAccessFile.c(param0 ^ 35), -53);
         } catch (Exception exception) {
           exception.printStackTrace();
         }

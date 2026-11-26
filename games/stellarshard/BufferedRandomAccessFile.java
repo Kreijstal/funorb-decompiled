@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class pc {
+final class BufferedRandomAccessFile {
     private long field_c;
     private long field_l;
     private byte[] field_h;
-    private kb field_f;
+    private BoundedRandomAccessFile field_f;
     private long field_b;
     private int field_d;
     private long field_e;
@@ -18,7 +18,7 @@ final class pc {
     private int field_j;
     static boolean field_m;
 
-    final void a(int param0, byte param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, byte param1, int param2, byte[] param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_63_0 = null;
         StringBuilder stackIn_63_1 = null;
@@ -67,10 +67,10 @@ final class pc {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param0 > this.field_h.length) {
-              this.field_f.a(this.field_c, param1 + 2298);
+              this.field_f.seek(this.field_c, param1 + 2298);
               this.field_i = this.field_c;
               while (param0 > 0) {
-                var9_intLifetime1 = this.field_f.a(param0, param2, param3, 1);
+                var9_intLifetime1 = this.field_f.read(param0, param2, param3, 1);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -85,7 +85,7 @@ final class pc {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (0 < param0)) {
-              this.b(param1 ^ -5);
+              this.fillReadBuffer(param1 ^ -5);
               var9_intLifetime1Lifetime1 = param0;
               if (this.field_j < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_j;
@@ -167,7 +167,7 @@ final class pc {
         }
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -175,10 +175,10 @@ final class pc {
         var7 = stellarshard.field_B;
         if (this.field_l != -1L) {
           if (~this.field_i != ~this.field_l) {
-            this.field_f.a(this.field_l, 2205);
+            this.field_f.seek(this.field_l, 2205);
             this.field_i = this.field_l;
           }
-          this.field_f.a(this.field_k, false, 0, this.field_d);
+          this.field_f.write(this.field_k, false, 0, this.field_d);
           this.field_i = this.field_i + (long)this.field_d;
           if (this.field_e < this.field_i) {
             this.field_e = this.field_i;
@@ -216,7 +216,7 @@ final class pc {
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param0 < 0L) {
           throw new IOException();
         }
@@ -226,32 +226,32 @@ final class pc {
         this.field_c = param0;
     }
 
-    final long c(int param0) {
+    final long length(int param0) {
         if (param0 < 54) {
           this.field_k = (byte[]) null;
         }
         return this.field_a;
     }
 
-    private final void b(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = stellarshard.field_B;
         this.field_j = 0;
         if (this.field_c != this.field_i) {
-          this.field_f.a(this.field_c, 2205);
+          this.field_f.seek(this.field_c, 2205);
           this.field_i = this.field_c;
         }
         this.field_b = this.field_c;
         if (param0 <= 84) {
-          this.field_f = (kb) null;
+          this.field_f = (BoundedRandomAccessFile) null;
         }
         while (this.field_j < this.field_h.length) {
           var2 = this.field_h.length - this.field_j;
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_f.a(var2, this.field_j, this.field_h, 1);
+          var3 = this.field_f.read(var2, this.field_j, this.field_h, 1);
           if (var3 == -1) {
             break;
           }
@@ -260,9 +260,9 @@ final class pc {
         }
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.a(param1.length, (byte) -93, param0, param1);
+          this.readFully(param1.length, (byte) -93, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -310,15 +310,15 @@ final class pc {
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != -4506) {
-          this.field_f = (kb) null;
+          this.field_f = (BoundedRandomAccessFile) null;
         }
-        this.a((byte) 101);
-        this.field_f.a(param0 ^ 4590);
+        this.flush((byte) 101);
+        this.field_f.close(param0 ^ 4590);
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
@@ -338,7 +338,7 @@ final class pc {
             }
             if (this.field_l != -1L && (this.field_l > this.field_c ||
               this.field_c > ((long)this.field_d + this.field_l))) {
-              this.a((byte) 108);
+              this.flush((byte) 108);
             }
             if (this.field_l != -1L &&
               ((long)this.field_k.length + this.field_l) < ((long)param0 + this.field_c)) {
@@ -348,7 +348,7 @@ final class pc {
               this.field_c = this.field_c + (long)var5_int;
               param0 = param0 - var5_int;
               this.field_d = this.field_k.length;
-              this.a((byte) 108);
+              this.flush((byte) 108);
             }
             if (param0 <= this.field_k.length) {
               if (~param0 >= param2) {
@@ -365,10 +365,10 @@ final class pc {
               return;
             }
             if (this.field_i != this.field_c) {
-              this.field_f.a(this.field_c, param2 ^ -2206);
+              this.field_f.seek(this.field_c, param2 ^ -2206);
               this.field_i = this.field_c;
             }
-            this.field_f.a(param3, false, param1, param0);
+            this.field_f.write(param3, false, param1, param0);
             this.field_i = this.field_i + (long)param0;
             if (this.field_e < this.field_i) {
               this.field_e = this.field_i;
@@ -420,14 +420,14 @@ final class pc {
         }
     }
 
-    pc(kb param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_b = -1L;
         this.field_l = -1L;
         this.field_d = 0;
         try {
           this.field_f = param0;
-          dupTemp$0 = param0.b(-106);
+          dupTemp$0 = param0.length(-106);
           this.field_e = dupTemp$0;
           this.field_a = dupTemp$0;
           this.field_h = new byte[param1];

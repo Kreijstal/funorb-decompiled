@@ -353,7 +353,7 @@ final class BufferedSocket implements Runnable {
         kh.a(bi.field_j, 1);
         qk.c();
         SoftwareRasterizer.clearRaster();
-        jf.c(0);
+        BufferedRandomAccessFile.c(0);
         if (var5 < 256) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_k, 0, 256 - var5);
         }

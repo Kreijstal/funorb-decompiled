@@ -84,7 +84,7 @@ final class se {
           if (var2 == 0) {
             var4_ref_fi = (fi) (lk.field_O.beginForward((byte) 47));
             if (var4_ref_fi == null) {
-              k.c(-28354);
+              BufferedRandomAccessFile.c(-28354);
               return;
             }
             var5_int = -var10.position + pd.field_l;
@@ -113,14 +113,14 @@ final class se {
               break;
             }
             if (var5 == null) {
-              k.c(-28354);
+              BufferedRandomAccessFile.c(-28354);
               return;
             }
             var5.unlink(-1);
             return;
           }
           ud.a("LR1: " + ak.a(true), (Throwable) null, 0);
-          k.c(-28354);
+          BufferedRandomAccessFile.c(-28354);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

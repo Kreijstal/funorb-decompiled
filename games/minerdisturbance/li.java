@@ -1536,7 +1536,7 @@ final class li implements uj {
                 }
                 var2 = e.a(param0 - 9183, "login_no_displayname");
                 if (null != var2) {
-                  me.field_l = bh.a(var2, 59);
+                  BufferedRandomAccessFile.field_l = bh.a(var2, 59);
                 }
                 var2 = e.a(param0 ^ -9308, "create_username_tooltip");
                 if (var2 != null) {

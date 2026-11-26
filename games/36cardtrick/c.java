@@ -2736,7 +2736,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("fs_nonmember", (byte) -127);
                 if (var2 != null) {
-                  tk.field_l = GzipInflater.a(var2, (byte) 117);
+                  BufferedRandomAccessFile.field_l = GzipInflater.a(var2, (byte) 117);
                 }
                 var2 = SectorCacheStore.a("fs_button_close", (byte) -127);
                 if (var2 != null) {
@@ -3401,7 +3401,7 @@ abstract class c extends GameApplet {
           rf.c(-54);
           if (!th.a(true) &&
             cd.field_e != 11) {
-            wk.a(false);
+            BoundedRandomAccessFile.a(false);
           }
           if (Main.field_V != null) {
             eg.field_f = Main.field_V.pollRotation(-119);
@@ -3623,7 +3623,7 @@ abstract class c extends GameApplet {
             vd.field_w) {
             AccountCreationResultPanel.a(tb.field_c, (byte) -108);
             this.d(-1775094552);
-            tk.a(tb.field_c, -1);
+            BufferedRandomAccessFile.a(tb.field_c, -1);
           }
           if (nl.field_e[8]) {
             Main.l((byte) 89);
@@ -3874,7 +3874,7 @@ abstract class c extends GameApplet {
           eb.a(jk.field_a, this.field_l, param2, this.field_t, this.field_q, (byte) -62, hf.field_I, this.field_s, this.field_o);
           wh.a(192);
           Main.field_V = mk.c((byte) 100);
-          tk.a(tb.field_c, -1);
+          BufferedRandomAccessFile.a(tb.field_c, -1);
           jh.field_b = param0;
           bf.field_a = param7;
           ia.field_e = param3;

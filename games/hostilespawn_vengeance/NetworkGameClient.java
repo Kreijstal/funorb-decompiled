@@ -101,7 +101,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (param0 != -1431) {
           field_y = 69L;
         }
-        qj.a(var2, bn.c(-1), (byte) 85);
+        qj.a(var2, BufferedRandomAccessFile.c(-1), (byte) 85);
     }
 
     final int d(byte param0) {
@@ -114,7 +114,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (i.field_d) {
           return -1;
         }
-        int var2 = ee.a(true, this.field_A, this.field_r, -109, SpriteGeometry.d(750938499), q.c(-1));
+        int var2 = BoundedRandomAccessFile.a(true, this.field_A, this.field_r, -109, SpriteGeometry.d(750938499), q.c(-1));
         if (-1 == var2) {
           return -1;
         }
@@ -172,7 +172,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = -1 + jd.field_q;
         byte[] var5 = new byte[var4];
         sc.field_g.a(0, var4, var5, (byte) 82);
-        ArchiveIndex.a(bn.c(-1), PcmResampler.a(125, var5), (byte) -97, var3 != 0);
+        ArchiveIndex.a(BufferedRandomAccessFile.c(-1), PcmResampler.a(125, var5), (byte) -97, var3 != 0);
     }
 
     private final void a(int param0, String param1, int param2, int param3, byte param4) {
@@ -315,7 +315,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (param0) {
               i.field_d = false;
             } else {
-              var5_intLifetime2 = ee.a(false, this.field_A, this.field_r, -124, SpriteGeometry.d(750938499), q.c(-1));
+              var5_intLifetime2 = BoundedRandomAccessFile.a(false, this.field_A, this.field_r, -124, SpriteGeometry.d(750938499), q.c(-1));
               if (var5_intLifetime2 != -1) {
                 if (0 != var5_intLifetime2) {
                   la.a(var5_intLifetime2, km.field_x, (byte) 51);
@@ -331,36 +331,36 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (var4 == 4) {
             if (ArchiveIndex.field_g) {
-              aa.a(bn.c(-1), 2429);
+              aa.a(BufferedRandomAccessFile.c(-1), 2429);
             } else {
               DirectByteStorage.field_k = true;
               fa.field_c = 10;
             }
           }
           if (var4 == 5) {
-            dc.a(param1 ^ -64, bn.c(-1));
+            dc.a(param1 ^ -64, BufferedRandomAccessFile.c(-1));
           }
           if (6 == var4 &&
             ka.field_r) {
             fa.field_c = 10;
           }
           if (var4 == 7) {
-            uj.a(bn.c(param1 + 0), (byte) 41);
+            uj.a(BufferedRandomAccessFile.c(param1 + 0), (byte) 41);
           }
           if (var4 == 8) {
-            aa.a(bn.c(-1), 2429);
+            aa.a(BufferedRandomAccessFile.c(-1), 2429);
           }
           if (9 == var4) {
-            BufferedSocket.a(bn.c(-1), 200);
+            BufferedSocket.a(BufferedRandomAccessFile.c(-1), 200);
           }
           if (var4 == 10) {
             s.field_b.i(19319, 17);
           }
           if (var4 == 11) {
-            o.a((byte) -98, bn.c(-1));
+            o.a((byte) -98, BufferedRandomAccessFile.c(-1));
           }
           if (var4 == 12) {
-            ta.a(-320, hj.d(param1 + 71), bn.c(-1));
+            ta.a(-320, hj.d(param1 + 71), BufferedRandomAccessFile.c(-1));
           }
           if (var4 == 13) {
             try {

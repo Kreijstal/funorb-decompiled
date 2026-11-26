@@ -63,7 +63,7 @@ final class q {
           if (var2 == 0) {
             var9 = (kf) (ByteStorage.field_a.beginForward((byte) 47));
             if (var9 == null) {
-              k.c(-28354);
+              BufferedRandomAccessFile.c(-28354);
               return;
             }
             var4 = var10.readUnsignedByte(false);
@@ -78,12 +78,12 @@ final class q {
               var9.unlink(-1);
               return;
             }
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           if (1 != var2) {
             ud.a("A1: " + ak.a(true), (Throwable) null, 0);
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           var3 = var10.readInt((byte) 122);
@@ -96,7 +96,7 @@ final class q {
             break;
           }
           if (var4_ref_oa == null) {
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           var4_ref_oa.unlink(-1);

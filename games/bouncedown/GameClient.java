@@ -316,7 +316,7 @@ abstract class GameClient extends AppletShell {
           pa.field_i = null;
           ea.field_e = null;
           kg.field_b = null;
-          ok.a((java.applet.Applet) (this), -122);
+          BoundedRandomAccessFile.a((java.applet.Applet) (this), -122);
           vc.e((byte) -44);
           sa.field_k = 10;
         }
@@ -512,9 +512,9 @@ abstract class GameClient extends AppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = sa.a(bb.a(-102), pj.a((byte) 48), ok.d(1), uf.a((byte) -128), 85, this.field_C, bl.b(-71));
+            var5_intLifetime1 = sa.a(bb.a(-102), pj.a((byte) 48), BoundedRandomAccessFile.d(1), uf.a((byte) -128), 85, this.field_C, bl.b(-71));
             if (-1 != var5_intLifetime1) {
-              jf.a((byte) -52, bi.field_l, var5_intLifetime1, ImageProducerRasterBuffer.field_o);
+              BufferedRandomAccessFile.a((byte) -52, bi.field_l, var5_intLifetime1, ImageProducerRasterBuffer.field_o);
               bi.field_l = null;
               ImageProducerRasterBuffer.field_o = null;
             }

@@ -186,8 +186,8 @@ final class cn {
             }
             if (null != as.field_d) {
               try {
-                as.field_d.a(-23669, 0L);
-                as.field_d.a(0, var6);
+                as.field_d.seek(-23669, 0L);
+                as.field_d.readFully(0, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

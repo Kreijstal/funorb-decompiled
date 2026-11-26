@@ -216,8 +216,8 @@ final class nd extends ig {
         try {
           if (null != e.field_a) {
             try {
-              e.field_a.a(0L, 0);
-              e.field_a.a(24, ae.field_N.position, -1, ae.field_N.payload);
+              e.field_a.seek(0L, 0);
+              e.field_a.write(24, ae.field_N.position, -1, ae.field_N.payload);
             } catch (Exception exception) {
             }
           }

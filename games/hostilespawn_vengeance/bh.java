@@ -89,7 +89,7 @@ final class bh {
             return;
           }
           var14 = (int)(Math.sqrt((double)((float)var13 / 4.0f)) * 4.0);
-          for (var15 = v.field_g; var15 < bn.field_p; var15 += 4) {
+          for (var15 = v.field_g; var15 < BufferedRandomAccessFile.field_p; var15 += 4) {
             var16 = var15 - qg.field_n;
             var17 = var15 - qh.field_e;
             var18 = var16 * var12;

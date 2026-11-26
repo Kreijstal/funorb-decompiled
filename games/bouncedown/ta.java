@@ -19,7 +19,7 @@ final class ta {
           qk.c();
           SoftwareRasterizer.clearRaster();
           oa.field_a = 0;
-          jf.c(param0);
+          BufferedRandomAccessFile.c(param0);
           var2 = var1.b();
           for (var3 = 0; var3 < 15; var3++) {
             var2.e(-2, -2, 16777215);
@@ -75,7 +75,7 @@ final class ta {
           var1 = nb.field_d;
           if (var1 > 0) {
             if (var1 != 1) {
-              ej.field_c = jf.a(DiskArchiveRequest.field_v, new String[]{Integer.toString(var1)}, (byte) -126);
+              ej.field_c = BufferedRandomAccessFile.a(DiskArchiveRequest.field_v, new String[]{Integer.toString(var1)}, (byte) -126);
             } else {
               ej.field_c = pg.field_d;
             }

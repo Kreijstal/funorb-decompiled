@@ -413,7 +413,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             if (!(di.field_b.length > var2_int)) {
               tl.field_P = eh.a("basic", (byte) -53, ph.field_b, "unachieved");
               ce.field_b = eh.a("basic", (byte) -39, ph.field_b, "orbcoin");
-              ge.field_d = eh.a("basic", (byte) -55, ph.field_b, "locked");
+              BufferedRandomAccessFile.field_d = eh.a("basic", (byte) -55, ph.field_b, "locked");
               ol.a(false);
               break;
             }
@@ -465,7 +465,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           wi.field_a.c();
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 64, 64, 2897296, 0);
           cb.field_b.b("?", 32, 32, 16777215, 1);
-          ge.field_d.b(32, 32);
+          BufferedRandomAccessFile.field_d.b(32, 32);
           ArchiveRequest.field_C.setAsRasterTarget(103);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -526,7 +526,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           gb.clearStaticReferences(6);
           DiskCacheWorker.b(-31553);
           df.clearStaticReferences(110);
-          ge.clearStaticReferences(false);
+          BufferedRandomAccessFile.clearStaticReferences(false);
           BufferedSocket.clearStaticReferences(0);
           oj.clearStaticReferences(false);
           fj.clearDeclaredStaticReferences(57);
@@ -1086,7 +1086,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
           }
           if (!oh.a(param0 + 8755)) {
-            ri.field_f = ge.a(4, (byte) -125);
+            ri.field_f = BufferedRandomAccessFile.a(4, (byte) -125);
             if (null != sd.field_a) {
               bf.field_h = sd.field_a.j((byte) -68);
             }
@@ -1135,7 +1135,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           pc.field_b[0] = eh.a("", (byte) -35, kf.field_d, "act_screen_intro_4_part_1");
           pc.field_b[1] = eh.a("", (byte) -102, kf.field_d, "act_screen_intro_4_part_2");
           pc.field_b[2] = eh.a("", (byte) -61, kf.field_d, "act_screen_intro_4_part_3");
-          ge.field_p[0] = eh.a("", (byte) -93, kf.field_d, "act_screen_intro_5");
+          BufferedRandomAccessFile.field_p[0] = eh.a("", (byte) -93, kf.field_d, "act_screen_intro_5");
           th.field_b[0] = eh.a("", (byte) -31, kf.field_d, "act_screen_intro_6");
           v.field_W[0] = eh.a("", (byte) -100, kf.field_d, "act_screen_intro_7_part_1");
           v.field_W[1] = eh.a("", (byte) -75, kf.field_d, "act_screen_intro_7_part_2");
@@ -2193,7 +2193,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ah.a((byte) 109, 50);
           k.a(0, 50);
           if (!oh.a(0)) {
-            ri.field_f = ge.a(4, (byte) -79);
+            ri.field_f = BufferedRandomAccessFile.a(4, (byte) -79);
             vi.field_c = ck.a(0, 5, 1, true);
           }
           IterableNodeHashTable.a((byte) 86);

@@ -289,7 +289,7 @@ final class pa {
             gk.field_h = param0;
             if (pj.field_c.field_v != null) {
               try {
-                gf.field_g = new jf(pj.field_c.field_v, 64, 0);
+                gf.field_g = new BufferedRandomAccessFile(pj.field_c.field_v, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

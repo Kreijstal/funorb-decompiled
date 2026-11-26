@@ -60,7 +60,7 @@ final class lg {
         }
         cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) cl.field_e);
-        DiskCacheWorker.field_f = pl.a((byte) 112, var2);
+        DiskCacheWorker.field_f = BoundedRandomAccessFile.a((byte) 112, var2);
     }
 
     private final void a(int param0) {
@@ -86,7 +86,7 @@ final class lg {
             if (var4 == null) {
               var2 = 0;
             } else {
-              this.field_c[var3] = ch.a(this.field_c[var3], 15);
+              this.field_c[var3] = BufferedRandomAccessFile.a(this.field_c[var3], 15);
               this.field_h[var3] = var4;
             }
           }
@@ -153,7 +153,7 @@ final class lg {
           for (var5 = 0; this.field_s > var5; var5++) {
             dupTemp$0 = var4 + param0.readUnsignedByte((byte) 114);
             var4 = dupTemp$0;
-            this.field_q[var5] = ch.a(255, dupTemp$0);
+            this.field_q[var5] = BufferedRandomAccessFile.a(255, dupTemp$0);
           }
           this.field_L = new byte[256][];
           this.field_x = new int[256];
@@ -204,7 +204,7 @@ final class lg {
               for (var8 = 0; var8 < 96; var8++) {
                 dupTemp$1 = var4Lifetime1 + param0.readUnsignedByte((byte) 114);
                 var4Lifetime1 = dupTemp$1;
-                this.field_t[var6Lifetime1][var8] = ch.a(255, dupTemp$1) + var5Lifetime4;
+                this.field_t[var6Lifetime1][var8] = BufferedRandomAccessFile.a(255, dupTemp$1) + var5Lifetime4;
               }
               this.field_d[var6Lifetime1] = param0.readUnsignedByte((byte) 114);
               var8Lifetime1 = param0.readUnsignedByte((byte) 114);
@@ -233,7 +233,7 @@ final class lg {
               for (var11Lifetime1 = 0; var11Lifetime1 < var8Lifetime1; var11Lifetime1++) {
                 dupTemp$6 = var4Lifetime1Lifetime2 + param0.readUnsignedByte((byte) 114);
                 var4Lifetime1Lifetime2 = dupTemp$6;
-                this.field_u[var6Lifetime1][var11Lifetime1] = ch.a(255, dupTemp$6);
+                this.field_u[var6Lifetime1][var11Lifetime1] = BufferedRandomAccessFile.a(255, dupTemp$6);
               }
               array$7 = new int[var9];
               this.field_r[var6Lifetime1] = array$7;
@@ -252,7 +252,7 @@ final class lg {
               for (var11Lifetime3 = 0; var9 > var11Lifetime3; var11Lifetime3++) {
                 dupTemp$11 = var4Lifetime1Lifetime4 + param0.readUnsignedByte((byte) 114);
                 var4Lifetime1Lifetime4 = dupTemp$11;
-                this.field_z[var6Lifetime1][var11Lifetime3] = ch.a(dupTemp$11, 255);
+                this.field_z[var6Lifetime1][var11Lifetime3] = BufferedRandomAccessFile.a(dupTemp$11, 255);
               }
               this.field_m[var6Lifetime1] = param0.readUnsignedShort(17277);
               for (var11Lifetime4 = 0; var11Lifetime4 < var7; var11Lifetime4++) {

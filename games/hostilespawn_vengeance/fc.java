@@ -83,7 +83,7 @@ abstract class fc extends ag implements ai {
         if (param0 != -1) {
           field_z = -85;
         }
-        return la.a(bn.c(-1), 10295);
+        return la.a(BufferedRandomAccessFile.c(-1), 10295);
     }
 
     final boolean g(int param0) {

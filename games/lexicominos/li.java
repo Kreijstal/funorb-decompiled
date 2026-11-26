@@ -122,7 +122,7 @@ final class li extends bc {
         var13 = Lexicominos.field_L ? 1 : 0;
         var6 = this.field_N.b((byte) 125);
         if (var6 != jj.field_e &&
-          be.field_q != var6) {
+          BufferedRandomAccessFile.field_q != var6) {
           var5 = this.field_N.a((byte) 100);
           if (var5 == null) {
             var5 = this.field_O;
@@ -140,7 +140,7 @@ final class li extends bc {
         var9 = param2 + this.field_t;
         var10 = var8.a((w) (this), param0 ^ -20231, param1) + (var8.a((w) (this), (byte) 101).a(0) >> 1);
         if (var6Lifetime1 == jj.field_e) {
-          var18 = be.field_b[0];
+          var18 = BufferedRandomAccessFile.field_b[0];
           var11 = var18.field_r << 1;
           var12 = var18.field_x << 1;
           if (null == this.field_Q) {
@@ -165,19 +165,19 @@ final class li extends bc {
           this.field_Q.d(-(var18.field_r >> 1) + var9, var10 - var18.field_x, 256);
           return;
         }
-        if (be.field_q != var6Lifetime1) {
+        if (BufferedRandomAccessFile.field_q != var6Lifetime1) {
           if (ni.field_b == var6Lifetime1) {
-            var15 = be.field_b[2];
+            var15 = BufferedRandomAccessFile.field_b[2];
             var15.d(var9, var10 - (var15.field_u >> 1), 256);
             return;
           }
           if (rh.field_p == var6Lifetime1) {
-            var16 = be.field_b[1];
+            var16 = BufferedRandomAccessFile.field_b[1];
             var16.d(var9, var10 - (var16.field_u >> 1), 256);
           }
           return;
         }
-        var17 = be.field_b[0];
+        var17 = BufferedRandomAccessFile.field_b[0];
         var11Lifetime1 = var17.field_r << 1;
         var12Lifetime1 = var17.field_x << 1;
         if (null == this.field_Q) {

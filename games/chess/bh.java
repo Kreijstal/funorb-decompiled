@@ -584,8 +584,8 @@ abstract class bh extends mf implements ra {
         try {
           if (DiskArchiveRequest.field_z != null) {
             try {
-              DiskArchiveRequest.field_z.a(0L, 0);
-              DiskArchiveRequest.field_z.a(tk.field_h.position, 24, -1, tk.field_h.data);
+              DiskArchiveRequest.field_z.seek(0L, 0);
+              DiskArchiveRequest.field_z.write(tk.field_h.position, 24, -1, tk.field_h.data);
             } catch (Exception exception) {
             }
           }

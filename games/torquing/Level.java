@@ -1059,17 +1059,17 @@ final class Level {
             }
             var6 = null;
             if (hq.field_a.field_t != null) {
-              jd.field_F = new o(hq.field_a.field_t, 5200, 0);
+              jd.field_F = new BufferedRandomAccessFile(hq.field_a.field_t, 5200, 0);
               hq.field_a.field_t = null;
-              var6 = new SectorCacheStore(255, jd.field_F, new o(hq.field_a.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, jd.field_F, new BufferedRandomAccessFile(hq.field_a.field_n, 12000, 0), 2097152);
             }
             var7 = null;
             if (jd.field_F != null) {
               if (uj.field_b == null) {
-                uj.field_b = new o[hq.field_a.field_w.length];
+                uj.field_b = new BufferedRandomAccessFile[hq.field_a.field_w.length];
               }
               if (uj.field_b[param2] == null) {
-                uj.field_b[param2] = new o(hq.field_a.field_w[param2], 12000, 0);
+                uj.field_b[param2] = new BufferedRandomAccessFile(hq.field_a.field_w[param2], 12000, 0);
                 hq.field_a.field_w[param2] = null;
               }
               var7 = new SectorCacheStore(param2, jd.field_F, uj.field_b[param2], 2097152);

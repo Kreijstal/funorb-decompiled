@@ -32,8 +32,8 @@ final class fg {
           var1 = 4 % ((41 - param0) / 63);
           if (kf.field_y != null) {
             try {
-              kf.field_y.a((byte) 40, 0L);
-              kf.field_y.b(ig.field_a.position, ig.field_a.payload, 24, -31593);
+              kf.field_y.seek((byte) 40, 0L);
+              kf.field_y.write(ig.field_a.position, ig.field_a.payload, 24, -31593);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (Exception) (Object) decompiledCaughtException;

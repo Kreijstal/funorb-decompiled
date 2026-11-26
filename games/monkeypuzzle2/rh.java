@@ -469,7 +469,7 @@ abstract class rh extends WidgetContainer {
             }
             var6_ref = ja.a(var5_ref_String, -1684349368);
             var7_ref = var1.readString(-1);
-            var8_ref = pl.a((byte) 115, (CharSequence) ((Object) var5_ref_String));
+            var8_ref = BoundedRandomAccessFile.a((byte) 115, (CharSequence) ((Object) var5_ref_String));
             if (null == var8_ref) {
               var8_ref = var5_ref_String;
             }
@@ -525,16 +525,16 @@ abstract class rh extends WidgetContainer {
           }
           var5_ref_StringLifetime1 = var1.readString(-1);
           var6 = var1.readString(-1);
-          var7 = ch.a(var5_ref_StringLifetime1, -1);
+          var7 = BufferedRandomAccessFile.a(var5_ref_StringLifetime1, -1);
           if (var7 == null) {
-            var7 = ch.a(var6, -1);
+            var7 = BufferedRandomAccessFile.a(var6, -1);
             if (var7 != null) {
-              IntrusiveDeque.field_a.a(var7, (long)pl.a((byte) 123, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -101);
+              IntrusiveDeque.field_a.a(var7, (long)BoundedRandomAccessFile.a((byte) 123, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -101);
             }
           }
           if (null == var7) {
             var7 = new rb();
-            IntrusiveDeque.field_a.a(var7, (long)pl.a((byte) 109, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -98);
+            IntrusiveDeque.field_a.a(var7, (long)BoundedRandomAccessFile.a((byte) 109, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -98);
             fieldTemp$0 = nc.field_f;
             nc.field_f = nc.field_f + 1;
             var7.field_gb = fieldTemp$0;

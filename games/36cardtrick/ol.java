@@ -124,7 +124,7 @@ final class ol extends jc implements qh {
           if (param1 == rc.field_l) {
             var3 = ll.field_a;
           } else {
-            if (param1 == tk.field_b) {
+            if (param1 == BufferedRandomAccessFile.field_b) {
               var3 = fe.field_d;
               this.field_q = this.field_q + 10;
               if (kb.a(false)) {

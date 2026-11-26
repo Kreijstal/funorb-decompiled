@@ -195,7 +195,7 @@ final class ti extends nb implements nf, jk {
         int var3 = Lexicominos.field_L ? 1 : 0;
         IndexedSprite[] var1 = new IndexedSprite[th.field_t];
         for (var2 = 0; th.field_t > var2; var2++) {
-          var1[var2] = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], be.field_f[var2], ci.field_b);
+          var1[var2] = new IndexedSprite(uc.field_fb, eh.field_b, mg.field_x[var2], rg.field_c[var2], pb.field_h[var2], bd.field_m[var2], BufferedRandomAccessFile.field_f[var2], ci.field_b);
         }
         if (param0 <= 103) {
           field_M = -84L;
@@ -302,7 +302,7 @@ final class ti extends nb implements nf, jk {
             this.field_E = new kf(jd.field_d, (vd) null);
             this.field_G.field_D = false;
           } else {
-            this.field_N = new kf(be.field_i, (vd) null);
+            this.field_N = new kf(BufferedRandomAccessFile.field_i, (vd) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_D) {

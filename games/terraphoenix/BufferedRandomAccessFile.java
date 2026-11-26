@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ak {
+final class BufferedRandomAccessFile {
     static String field_c;
     static String field_g;
     static int field_q;
@@ -22,12 +22,12 @@ final class ak {
     private long field_i;
     private long field_b;
 
-    final void b(byte param0) throws IOException {
-        this.a(0);
+    final void close(byte param0) throws IOException {
+        this.flush(0);
         if (param0 > -5) {
-          ak.clearStaticReferences(false);
+          BufferedRandomAccessFile.clearStaticReferences(false);
         }
-        this.field_d.a(118);
+        this.field_d.close(118);
     }
 
     final static void b(int param0) {
@@ -35,7 +35,7 @@ final class ak {
         rd.field_k = new IntrusiveDeque();
     }
 
-    final long a(byte param0) {
+    final long length(byte param0) {
         int var2 = 36 % ((-70 - param0) / 40);
         return this.field_i;
     }
@@ -50,13 +50,13 @@ final class ak {
         field_g = null;
     }
 
-    private final void c(byte param0) throws IOException {
+    private final void fillReadBuffer(byte param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Terraphoenix.field_V;
         this.field_m = 0;
         if (this.field_p != this.field_h) {
-          this.field_d.a(this.field_p, (byte) 89);
+          this.field_d.seek(this.field_p, (byte) 89);
           this.field_h = this.field_p;
         }
         if (param0 > -86) {
@@ -68,7 +68,7 @@ final class ak {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_d.a(this.field_a, var2, this.field_m, 12955);
+          var3 = this.field_d.read(this.field_a, var2, this.field_m, 12955);
           if (var3 == -1) {
             break;
           }
@@ -77,7 +77,7 @@ final class ak {
         }
     }
 
-    final void a(boolean param0, long param1) throws IOException {
+    final void seek(boolean param0, long param1) throws IOException {
         if (param0) {
           return;
         }
@@ -116,7 +116,7 @@ final class ak {
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -124,10 +124,10 @@ final class ak {
         var7 = Terraphoenix.field_V;
         if (this.field_o != -1L) {
           if (this.field_o != this.field_h) {
-            this.field_d.a(this.field_o, (byte) 81);
+            this.field_d.seek(this.field_o, (byte) 81);
             this.field_h = this.field_o;
           }
-          this.field_d.a(this.field_n, this.field_k, 0, (byte) -73);
+          this.field_d.write(this.field_n, this.field_k, 0, (byte) -73);
           this.field_h = this.field_h + (long)this.field_n;
           if (this.field_h > this.field_l) {
             this.field_l = this.field_h;
@@ -161,11 +161,11 @@ final class ak {
           this.field_n = 0;
         }
         if (param0 != 0) {
-          ak.clearStaticReferences(true);
+          BufferedRandomAccessFile.clearStaticReferences(true);
         }
     }
 
-    final void a(byte[] param0, byte param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, byte param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_56_0 = null;
         StringBuilder stackIn_56_1 = null;
@@ -216,10 +216,10 @@ final class ak {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param3 > this.field_a.length) {
-              this.field_d.a(this.field_p, (byte) 93);
+              this.field_d.seek(this.field_p, (byte) 93);
               this.field_h = this.field_p;
               while (param3 > 0) {
-                var10_intLifetime1 = this.field_d.a(param0, param3, param2, 12955);
+                var10_intLifetime1 = this.field_d.read(param0, param3, param2, 12955);
                 if (-1 == var10_intLifetime1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -234,7 +234,7 @@ final class ak {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.c((byte) -127);
+              this.fillReadBuffer((byte) -127);
               var10_intLifetime1Lifetime1 = param3;
               if (var10_intLifetime1Lifetime1 > this.field_m) {
                 var10_intLifetime1Lifetime1 = this.field_m;
@@ -354,18 +354,18 @@ final class ak {
         }
     }
 
-    final void a(byte[] param0, int param1) throws IOException {
+    final void readFully(byte[] param0, int param1) throws IOException {
         try {
           if (param1 != 6605) {
             this.field_n = 83;
           }
-          this.a(param0, (byte) -125, 0, param0.length);
+          this.readFully(param0, (byte) -125, 0, param0.length);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "ak.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         RuntimeException stackIn_52_0 = null;
         StringBuilder stackIn_52_1 = null;
         String stackIn_53_2 = null;
@@ -385,7 +385,7 @@ final class ak {
             }
             if (this.field_o != -1L && (this.field_p < this.field_o ||
               this.field_o + (long)this.field_n < this.field_p)) {
-              this.a(param0 + 1);
+              this.flush(param0 + 1);
             }
             if (this.field_o != (long)param0 &&
               (long)param1 + this.field_p > this.field_o + (long)this.field_k.length) {
@@ -395,7 +395,7 @@ final class ak {
               this.field_p = this.field_p + (long)var5_int;
               param3 = param3 + var5_int;
               this.field_n = this.field_k.length;
-              this.a(0);
+              this.flush(0);
             }
             if (param1 <= this.field_k.length) {
               if (param1 <= 0) {
@@ -412,10 +412,10 @@ final class ak {
               return;
             }
             if (~this.field_h != ~this.field_p) {
-              this.field_d.a(this.field_p, (byte) 91);
+              this.field_d.seek(this.field_p, (byte) 91);
               this.field_h = this.field_p;
             }
-            this.field_d.a(param1, param2, param3, (byte) -107);
+            this.field_d.write(param1, param2, param3, (byte) -107);
             this.field_h = this.field_h + (long)param1;
             if (this.field_h > this.field_l) {
               this.field_l = this.field_h;
@@ -467,14 +467,14 @@ final class ak {
         }
     }
 
-    ak(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_n = 0;
         this.field_o = -1L;
         this.field_b = -1L;
         try {
           this.field_d = param0;
-          dupTemp$0 = param0.b((byte) 73);
+          dupTemp$0 = param0.length((byte) 73);
           this.field_l = dupTemp$0;
           this.field_i = dupTemp$0;
           this.field_a = new byte[param1];

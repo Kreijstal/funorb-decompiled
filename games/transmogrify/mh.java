@@ -201,22 +201,22 @@ final class mh {
           try {
             var6 = null;
             if (null != MouseInputHandler.field_a.field_b) {
-              kk.field_b = new we(MouseInputHandler.field_a.field_b, 5200, 0);
+              kk.field_b = new BufferedRandomAccessFile(MouseInputHandler.field_a.field_b, 5200, 0);
               MouseInputHandler.field_a.field_b = null;
-              var6 = new SectorCacheStore(255, kk.field_b, new we(MouseInputHandler.field_a.field_h, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, kk.field_b, new BufferedRandomAccessFile(MouseInputHandler.field_a.field_h, 12000, 0), 2097152);
             }
             var7 = null;
             if (kk.field_b != null) {
               if (null == PacketBuffer.field_m) {
-                PacketBuffer.field_m = new we[MouseInputHandler.field_a.field_s.length];
+                PacketBuffer.field_m = new BufferedRandomAccessFile[MouseInputHandler.field_a.field_s.length];
               }
               if (PacketBuffer.field_m[param5] == null) {
-                PacketBuffer.field_m[param5] = new we(MouseInputHandler.field_a.field_s[param5], 12000, 0);
+                PacketBuffer.field_m[param5] = new BufferedRandomAccessFile(MouseInputHandler.field_a.field_s[param5], 12000, 0);
                 MouseInputHandler.field_a.field_s[param5] = null;
               }
               var7 = new SectorCacheStore(param5, kk.field_b, PacketBuffer.field_m[param5], 2097152);
             }
-            var8 = we.field_j.a(param5, param3, 24108, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
+            var8 = BufferedRandomAccessFile.field_j.a(param5, param3, 24108, (SectorCacheStore) (var6), (SectorCacheStore) (var7));
             if (param1) {
               var8.a(true);
             }

@@ -277,8 +277,8 @@ final class kb extends IntrusiveNode {
             }
             if (null != s.field_y) {
               try {
-                s.field_y.a(0L, -1);
-                s.field_y.a(var2, 4);
+                s.field_y.seek(0L, -1);
+                s.field_y.readFully(var2, 4);
                 var3_int = 0;
                 scanLoop1: while (true) {
                   if (var3_int < 24) {

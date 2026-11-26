@@ -33,8 +33,8 @@ final class vh {
             var2 = var6;
             if (pj.field_D != null) {
               try {
-                pj.field_D.a(0L, (byte) 45);
-                pj.field_D.a((byte) 58, var6);
+                pj.field_D.seek(0L, (byte) 45);
+                pj.field_D.readFully((byte) 58, var6);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

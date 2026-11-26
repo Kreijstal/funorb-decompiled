@@ -6,7 +6,7 @@ final class mf {
     static String field_e;
     static AccountServiceResult field_a;
     static int field_d;
-    static td field_c;
+    static BufferedRandomAccessFile field_c;
 
     final static AwtRasterBuffer a(int param0, java.awt.Component param1, int param2, int param3) {
         try {

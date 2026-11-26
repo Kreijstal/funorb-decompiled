@@ -6,7 +6,7 @@ final class mi {
     static int field_j;
     int[] field_a;
     int field_b;
-    static ge field_f;
+    static BufferedRandomAccessFile field_f;
     static String field_d;
     static fg[] field_c;
     static int[] field_g;
@@ -88,7 +88,7 @@ final class mi {
         field_c = null;
         field_g = null;
         if (param0 <= 61) {
-          field_f = (ge) null;
+          field_f = (BufferedRandomAccessFile) null;
           return;
         }
     }

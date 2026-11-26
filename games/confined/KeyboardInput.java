@@ -3,7 +3,7 @@
  */
 final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_e;
-    static pf field_b;
+    static BufferedRandomAccessFile field_b;
     static int field_f;
     static e field_g;
     static jb field_a;

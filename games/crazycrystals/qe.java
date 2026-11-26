@@ -191,7 +191,7 @@ final class qe extends ln {
               return;
             }
             try {
-              fp.field_e = new qa(gf.field_b.field_s, 64, 0);
+              fp.field_e = new BufferedRandomAccessFile(gf.field_b.field_s, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

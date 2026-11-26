@@ -236,7 +236,7 @@ final class fe {
           }
           var5[4] = (RgbSprite) ((Object) var18);
           var4.b(-1, 4).a(true, (byte) -118).a(var5, -1);
-          var4.b(-1, 5).a(ok.a(param0 ^ 18906, 0, 0, 0, 65793), -1).a(true, (byte) -46).a(-1, param0 - 34);
+          var4.b(-1, 5).a(BoundedRandomAccessFile.a(param0 ^ 18906, 0, 0, 0, 65793), -1).a(true, (byte) -46).a(-1, param0 - 34);
           this.field_b = (fc) ((Object) var4);
           var6 = new qi(var4, true);
           var6.field_d = 0;

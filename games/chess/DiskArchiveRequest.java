@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DiskArchiveRequest extends ArchiveRequest {
-    static lc field_z;
+    static BufferedRandomAccessFile field_z;
     static String field_A;
     int field_B;
     static String field_y;

@@ -134,12 +134,12 @@ final class ok extends wi {
         if (0 != var2) {
           SoftwareRasterizer.saveClip(ia.field_q);
           SoftwareRasterizer.setClip(this.field_l, this.field_a, this.field_l + this.field_n, this.field_a + this.field_d);
-          SoftwareRasterizer.fillRectangleAlpha(1 + this.field_l, 1 + this.field_a, -2 + this.field_n, -2 + this.field_d, k.field_a & this.field_E, (this.field_E >>> ii.field_b) * var2 >>> 8);
-          this.field_I.a(this.field_v, this.field_l + this.field_O, 1 + this.field_a + this.field_t, -this.field_O + (-this.field_q + this.field_n), -2 + this.field_d, this.field_N & k.field_a, this.field_r & k.field_a, (this.field_N >>> ii.field_b) * var2 >>> 8, this.field_u, this.field_K, this.field_D);
-          SoftwareRasterizer.drawRectangleOutlineAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_F & k.field_a, (this.field_F >>> ii.field_b) * var2 >>> 8);
+          SoftwareRasterizer.fillRectangleAlpha(1 + this.field_l, 1 + this.field_a, -2 + this.field_n, -2 + this.field_d, BufferedRandomAccessFile.field_a & this.field_E, (this.field_E >>> ii.field_b) * var2 >>> 8);
+          this.field_I.a(this.field_v, this.field_l + this.field_O, 1 + this.field_a + this.field_t, -this.field_O + (-this.field_q + this.field_n), -2 + this.field_d, this.field_N & BufferedRandomAccessFile.field_a, this.field_r & BufferedRandomAccessFile.field_a, (this.field_N >>> ii.field_b) * var2 >>> 8, this.field_u, this.field_K, this.field_D);
+          SoftwareRasterizer.drawRectangleOutlineAlpha(this.field_l, this.field_a, this.field_n, this.field_d, this.field_F & BufferedRandomAccessFile.field_a, (this.field_F >>> ii.field_b) * var2 >>> 8);
           SoftwareRasterizer.restoreClip(ia.field_q);
-          SoftwareRasterizer.drawHorizontalLineAlpha(this.field_l, this.field_a + this.field_d, this.field_n, k.field_a & this.field_M, (this.field_M >>> ii.field_b) * var2 >>> 8);
-          SoftwareRasterizer.drawVerticalLineAlpha(this.field_l + this.field_n, this.field_a, this.field_d - 1, k.field_a & this.field_M, (this.field_M >>> ii.field_b) * var2 >>> 8);
+          SoftwareRasterizer.drawHorizontalLineAlpha(this.field_l, this.field_a + this.field_d, this.field_n, BufferedRandomAccessFile.field_a & this.field_M, (this.field_M >>> ii.field_b) * var2 >>> 8);
+          SoftwareRasterizer.drawVerticalLineAlpha(this.field_l + this.field_n, this.field_a, this.field_d - 1, BufferedRandomAccessFile.field_a & this.field_M, (this.field_M >>> ii.field_b) * var2 >>> 8);
           return;
         }
     }

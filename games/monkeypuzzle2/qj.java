@@ -54,7 +54,7 @@ final class qj extends ButtonWidget {
 
     final static aj l(int param0) {
         int var1 = -66 % ((param0 - 51) / 60);
-        return new aj(pl.a((byte) -69), bb.a((byte) -121));
+        return new aj(BoundedRandomAccessFile.a((byte) -69), bb.a((byte) -121));
     }
 
     final int a(boolean param0) {

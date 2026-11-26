@@ -186,7 +186,7 @@ final class ec extends ta implements ai {
               return;
             }
             try {
-              s.field_y = new dj(ef.field_i.field_v, 64, 0);
+              s.field_y = new BufferedRandomAccessFile(ef.field_i.field_v, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

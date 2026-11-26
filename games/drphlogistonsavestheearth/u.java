@@ -176,8 +176,8 @@ abstract class u {
             var2 = var8;
             if (null != mi.field_f) {
               try {
-                mi.field_f.a(0L, (byte) -63);
-                mi.field_f.a((byte) -111, var9);
+                mi.field_f.seek(0L, (byte) -63);
+                mi.field_f.readFully((byte) -111, var9);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

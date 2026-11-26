@@ -73,7 +73,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 ^ 15188, "loginm2");
                 if (null != var2) {
-                  dj.field_j = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  BufferedRandomAccessFile.field_j = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "loginm1");
                 if (null != var2) {
@@ -1087,7 +1087,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "justplay");
                 if (var2 != null) {
-                  gl.field_k = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  BoundedRandomAccessFile.field_k = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "justplay_excl");
                 if (var2 != null) {
@@ -1510,7 +1510,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "login_email");
                 if (null != var2) {
-                  gl.field_h = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  BoundedRandomAccessFile.field_h = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "login_username_tooltip");
                 if (var2 != null) {
@@ -1926,7 +1926,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "music_colon");
                 if (null != var2) {
-                  gl.field_a = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  BoundedRandomAccessFile.field_a = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fullscreen");
                 if (null != var2) {
@@ -1938,7 +1938,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "highscores");
                 if (var2 != null) {
-                  gl.field_f = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  BoundedRandomAccessFile.field_f = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "rankings");
                 if (null != var2) {

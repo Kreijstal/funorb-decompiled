@@ -1456,7 +1456,7 @@ final class aa {
                   if (!this.field_e.d((byte) 99)) {
                     break regionExit1;
                   }
-                  lc.field_q = true;
+                  BufferedRandomAccessFile.field_q = true;
                   qk.field_h = 0;
                   ma.field_D = false;
                   if (var11 == 0) {

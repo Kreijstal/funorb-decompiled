@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class lc {
+final class BufferedRandomAccessFile {
     private long field_d;
     private long field_r;
     private long field_p;
@@ -23,15 +23,15 @@ final class lc {
     private long field_h;
     private long field_b;
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.a(param1, -19616, param0, param1.length);
+          this.readFully(param1, -19616, param0, param1.length);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "lc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -86,7 +86,7 @@ final class lc {
           return BoundedRandomAccessFile.field_j;
         }
         if (param0 != 60) {
-          lc.d((byte) 67);
+          BufferedRandomAccessFile.d((byte) 67);
           return null;
         }
         return null;
@@ -97,7 +97,7 @@ final class lc {
         int var1 = -28 % ((param0 - 15) / 59);
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
@@ -117,7 +117,7 @@ final class lc {
             }
             if (this.field_h != -1L && (this.field_h > this.field_a ||
               (long)this.field_k + this.field_h < this.field_a)) {
-              this.b(17357);
+              this.flush(17357);
             }
             if ((long)param2 != this.field_h &&
               ((long)param1 + this.field_a) > ((long)this.field_o.length + this.field_h)) {
@@ -127,7 +127,7 @@ final class lc {
               param1 = param1 - var5_int;
               this.field_a = this.field_a + (long)var5_int;
               this.field_k = this.field_o.length;
-              this.b(17357);
+              this.flush(17357);
             }
             if (this.field_o.length >= param1) {
               if (param1 <= 0) {
@@ -212,14 +212,14 @@ final class lc {
         }
     }
 
-    final long c(byte param0) {
+    final long length(byte param0) {
         if (param0 != 109) {
           return 91L;
         }
         return this.field_r;
     }
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_60_0 = null;
         StringBuilder stackIn_60_1 = null;
@@ -289,7 +289,7 @@ final class lc {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.c(0);
+              this.fillReadBuffer(0);
               var9_intLifetime1Lifetime1 = param3;
               if (this.field_j < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_j;
@@ -380,7 +380,7 @@ final class lc {
         field_f = null;
     }
 
-    private final void c(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2;
         int var3;
         int var4;
@@ -406,22 +406,22 @@ final class lc {
         }
     }
 
-    final void a(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         if (param0 != -87) {
           field_m = (ResourceArchive) null;
         }
-        this.b(param0 ^ -17308);
+        this.flush(param0 ^ -17308);
         this.field_c.close(10992);
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if ((long)param1 > param0) {
           throw new IOException();
         }
         this.field_a = param0;
     }
 
-    lc(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_d = -1L;
         this.field_k = 0;

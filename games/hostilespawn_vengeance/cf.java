@@ -122,7 +122,7 @@ class cf extends DualLinkNode {
             }
             if (var6.field_z > 2) {
               var6.c((byte) 74);
-              bn.a(3, var6);
+              BufferedRandomAccessFile.a(3, var6);
             }
           } else {
             if (var6.field_I <= 0) {

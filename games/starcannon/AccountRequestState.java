@@ -85,7 +85,7 @@ final class AccountRequestState {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = of.field_g[w.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new Sprite(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var21);
+            var1[var2] = new Sprite(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var21);
           } else {
             var22 = ac.field_d[var2];
             var16 = new int[var3];
@@ -94,7 +94,7 @@ final class AccountRequestState {
             for (var7 = 0; var7 < var3; var7++) {
               var6[var7] = cl.a(w.a(255, (int) var22[var7]) << 24, of.field_g[w.a(255, (int) var20[var7])]);
             }
-            var1[var2] = (Sprite) ((Object) new ArgbSprite(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var16));
           }
         }
         rc.b((byte) -104);

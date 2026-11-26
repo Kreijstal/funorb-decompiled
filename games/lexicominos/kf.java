@@ -6,7 +6,7 @@ import java.util.*;
 class kf extends w {
     boolean field_D;
     private boolean field_B;
-    static be field_y;
+    static BufferedRandomAccessFile field_y;
     static RgbSprite[] field_A;
     private boolean field_x;
     boolean field_C;
@@ -126,7 +126,7 @@ class kf extends w {
         field_A = null;
         field_y = null;
         if (param0 != -85) {
-          field_y = (be) null;
+          field_y = (BufferedRandomAccessFile) null;
         }
     }
 

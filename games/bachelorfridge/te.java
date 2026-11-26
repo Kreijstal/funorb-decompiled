@@ -31,7 +31,7 @@ final class te extends TileEffect {
             }
             if (null != f.field_a) {
               try {
-                f.field_a.d(-120);
+                f.field_a.close(-120);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -43,7 +43,7 @@ final class te extends TileEffect {
             for (var1_int = 0; fr.field_m.length > var1_int; var1_int++) {
               if (fr.field_m[var1_int] != null) {
                 try {
-                  fr.field_m[var1_int].d(-7);
+                  fr.field_m[var1_int].close(-7);
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var2 = (IOException) (Object) decompiledCaughtException;

@@ -213,8 +213,8 @@ final class DiskCacheWorker implements Runnable {
           Throwable decompiledCaughtException = null;
           if (mh.field_b != null) {
             try {
-              mh.field_b.a(false, 0L);
-              mh.field_b.a(-1, 24, LevelEditor.field_j.payload, LevelEditor.field_j.position);
+              mh.field_b.seek(false, 0L);
+              mh.field_b.write(-1, 24, LevelEditor.field_j.payload, LevelEditor.field_j.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1_ref_Exception = (Exception) (Object) decompiledCaughtException;

@@ -155,12 +155,12 @@ final class DiskArchiveStore {
           var3 = this.field_h;
           synchronized (var3) {
             try {
-              if ((long)(6 + param1 * 6) > this.field_g.a((byte) -88)) {
+              if ((long)(6 + param1 * 6) > this.field_g.length((byte) -88)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_g.a((long)(6 * param1), true);
-              this.field_g.a(ByteStorage.field_a, 6, 0, 0);
+              this.field_g.seek((long)(6 * param1), true);
+              this.field_g.readFully(ByteStorage.field_a, 6, 0, 0);
               if (param0 >= -89) {
                 field_f = (AccountRequestState) null;
               }
@@ -176,7 +176,7 @@ final class DiskArchiveStore {
               if (var5 <= 0) {
                 return null;
               }
-              if (this.field_h.a((byte) -128) / 520L < (long)var5) {
+              if (this.field_h.length((byte) -128) / 520L < (long)var5) {
                 stackIn_17_0 = null;
                 return (byte[]) (stackIn_17_0);
               }
@@ -191,14 +191,14 @@ final class DiskArchiveStore {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_h.a((long)(var5 * 520), true);
+                this.field_h.seek((long)(var5 * 520), true);
                 var9 = -var7 + var4_int;
                 if (param1 > 65535) {
                   if (var9 > 510) {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_h.a(ByteStorage.field_a, var14 + var9, 0, 0);
+                  this.field_h.readFully(ByteStorage.field_a, var14 + var9, 0, 0);
                   var10 = (255 & ByteStorage.field_a[3]) + (((ByteStorage.field_a[2] & 255) << 8) + (((255 & ByteStorage.field_a[0]) << 24) + (ByteStorage.field_a[1] << 16 & 16711680)));
                   var11 = (ByteStorage.field_a[5] & 255) + ((ByteStorage.field_a[4] & 255) << 8);
                   var13 = ByteStorage.field_a[9] & 255;
@@ -208,7 +208,7 @@ final class DiskArchiveStore {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_h.a(ByteStorage.field_a, var14 + var9, 0, 0);
+                  this.field_h.readFully(ByteStorage.field_a, var14 + var9, 0, 0);
                   var12 = (ByteStorage.field_a[6] & 255) + ((ByteStorage.field_a[4] & 255) << 16) + (65280 & ByteStorage.field_a[5] << 8);
                   var11 = (ByteStorage.field_a[3] & 255) + ((255 & ByteStorage.field_a[2]) << 8);
                   var13 = 255 & ByteStorage.field_a[7];
@@ -226,7 +226,7 @@ final class DiskArchiveStore {
                 if (var12 < 0) {
                   return null;
                 }
-                if ((long)var12 > this.field_h.a((byte) -88) / 520L) {
+                if ((long)var12 > this.field_h.length((byte) -88) / 520L) {
                   stackIn_46_0 = null;
                   return (byte[]) (stackIn_46_0);
                 }
@@ -299,18 +299,18 @@ final class DiskArchiveStore {
               }
               try {
                 if (param3) {
-                  if ((long)(6 * param1 + 6) > this.field_g.a((byte) -95)) {
+                  if ((long)(6 * param1 + 6) > this.field_g.length((byte) -95)) {
                     return false;
                   }
-                  this.field_g.a((long)(6 * param1), true);
-                  this.field_g.a(ByteStorage.field_a, 6, 0, 0);
+                  this.field_g.seek((long)(6 * param1), true);
+                  this.field_g.readFully(ByteStorage.field_a, 6, 0, 0);
                   var7_int = ((ByteStorage.field_a[4] & 255) << 8) + ((16711680 & ByteStorage.field_a[3] << 16) + (255 & ByteStorage.field_a[5]));
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= this.field_h.a((byte) -77) / 520L)) {
+                    !((long)var7_int <= this.field_h.length((byte) -77) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_h.a((byte) -106) + 519L) / 520L);
+                  var7_int = (int)((this.field_h.length((byte) -106) + 519L) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -321,8 +321,8 @@ final class DiskArchiveStore {
                 ByteStorage.field_a[4] = (byte)(var7_int >> 8);
                 ByteStorage.field_a[2] = (byte)param2;
                 ByteStorage.field_a[5] = (byte)var7_int;
-                this.field_g.a((long)(param1 * 6), true);
-                this.field_g.a(6, -1, ByteStorage.field_a, 0);
+                this.field_g.seek((long)(param1 * 6), true);
+                this.field_g.write(6, -1, ByteStorage.field_a, 0);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -330,10 +330,10 @@ final class DiskArchiveStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param3) {
-                      this.field_h.a((long)(520 * var7_int), true);
+                      this.field_h.seek((long)(520 * var7_int), true);
                       if (65535 < param1) {
                         try {
-                          this.field_h.a(ByteStorage.field_a, 10, 0, 0);
+                          this.field_h.readFully(ByteStorage.field_a, 10, 0, 0);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -349,7 +349,7 @@ final class DiskArchiveStore {
                         var13 = 255 & ByteStorage.field_a[9];
                       } else {
                         try {
-                          this.field_h.a(ByteStorage.field_a, 8, 0, 0);
+                          this.field_h.readFully(ByteStorage.field_a, 8, 0, 0);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -368,7 +368,7 @@ final class DiskArchiveStore {
                         var9 == var12 &&
                         var13 == this.field_c) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((long)var10 <= (this.field_h.a((byte) -102) / 520L))))) {
+                        !((long)var10 <= (this.field_h.length((byte) -102) / 520L))))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -377,7 +377,7 @@ final class DiskArchiveStore {
                     }
                     if (var10 == 0) {
                       param3 = false;
-                      var10 = (int)((519L + this.field_h.a((byte) -104)) / 520L);
+                      var10 = (int)((519L + this.field_h.length((byte) -104)) / 520L);
                       if (var10 == 0) {
                         var10++;
                       }
@@ -402,13 +402,13 @@ final class DiskArchiveStore {
                       stackIn_60_0 = this.field_h;
                       stackIn_60_1 = (long)(520 * var7_int);
                       stackIn_61_2 = !(param4);
-                      ((BufferedCacheFile) (Object) stackIn_60_0).a(stackIn_60_1, stackIn_61_2);
-                      this.field_h.a(10, -1, ByteStorage.field_a, 0);
+                      ((BufferedCacheFile) (Object) stackIn_60_0).seek(stackIn_60_1, stackIn_61_2);
+                      this.field_h.write(10, -1, ByteStorage.field_a, 0);
                       var11 = -var8 + param2;
                       if (510 < var11) {
                         var11 = 510;
                       }
-                      this.field_h.a(var11, -1, param0, var8);
+                      this.field_h.write(var11, -1, param0, var8);
                       var8 = var8 + var11;
                     } else {
                       ByteStorage.field_a[1] = (byte)param1;
@@ -419,13 +419,13 @@ final class DiskArchiveStore {
                       ByteStorage.field_a[4] = (byte)(var10 >> 16);
                       ByteStorage.field_a[7] = (byte)this.field_c;
                       ByteStorage.field_a[0] = (byte)(param1 >> 8);
-                      this.field_h.a((long)(var7_int * 520), true);
-                      this.field_h.a(8, -1, ByteStorage.field_a, 0);
+                      this.field_h.seek((long)(var7_int * 520), true);
+                      this.field_h.write(8, -1, ByteStorage.field_a, 0);
                       var11 = -var8 + param2;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_h.a(var11, -1, param0, var8);
+                      this.field_h.write(var11, -1, param0, var8);
                       var8 = var8 + var11;
                     }
                     var9++;

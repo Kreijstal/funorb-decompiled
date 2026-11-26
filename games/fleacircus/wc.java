@@ -130,7 +130,7 @@ final class wc extends IntrusiveNode {
             cj.field_b = param10;
             if (null != DiskCacheWorker.field_f.field_k) {
               try {
-                ge.field_d = new k(DiskCacheWorker.field_f.field_k, 64, 0);
+                ge.field_d = new BufferedRandomAccessFile(DiskCacheWorker.field_f.field_k, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

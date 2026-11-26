@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ok {
+final class BoundedRandomAccessFile {
     static int field_a;
     private RandomAccessFile field_d;
     private long field_b;
@@ -13,18 +13,18 @@ final class ok {
     protected final void finalize() throws Throwable {
         if (this.field_d != null) {
           System.out.println("");
-          this.b(1337);
+          this.close(1337);
         }
     }
 
     public static void c(int param0) {
         field_c = null;
         if (param0 < 73) {
-          ok.d(83);
+          BoundedRandomAccessFile.d(83);
         }
     }
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         if (param1 != 20663) {
           return;
         }
@@ -32,7 +32,7 @@ final class ok {
         this.field_b = param0;
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 < 87) {
           this.field_b = -16L;
           return this.field_d.length();
@@ -40,7 +40,7 @@ final class ok {
         return this.field_d.length();
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != 1337) {
           return;
         }
@@ -50,7 +50,7 @@ final class ok {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         if (this.field_e < ((long)param2 + this.field_b)) {
           this.field_d.seek(this.field_e);
           this.field_d.write(1);
@@ -88,7 +88,7 @@ final class ok {
             var3 = (CharSequence) ((Object) var2);
             if (SpriteGeometry.a((byte) -22, var3) != 0L) {
               if (param1 >= -37) {
-                ok.a(62, 7, 10, -75, 30);
+                BoundedRandomAccessFile.a(62, 7, 10, -75, 30);
               }
               return;
             }
@@ -108,7 +108,7 @@ final class ok {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
@@ -137,7 +137,7 @@ final class ok {
         }
     }
 
-    ok(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -165,7 +165,7 @@ final class ok {
         if (param0 == 18938) {
           return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
         }
-        ok.a(false, 11);
+        BoundedRandomAccessFile.a(false, 11);
         return jk.a(param1, 1, param3, -7139, param4, 1, 3, param2, 1);
     }
 
@@ -208,12 +208,12 @@ final class ok {
               if (param1 > 117) {
                 return true;
               }
-              ok.d(70);
+              BoundedRandomAccessFile.d(70);
               return true;
             }
             ec.field_P = null;
             if (param1 <= 117) {
-              ok.d(70);
+              BoundedRandomAccessFile.d(70);
             }
             return true;
           }
@@ -222,7 +222,7 @@ final class ok {
           if (param1 > 117) {
             return true;
           }
-          ok.d(70);
+          BoundedRandomAccessFile.d(70);
           return true;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

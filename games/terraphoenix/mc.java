@@ -17,7 +17,7 @@ final class mc {
 
     final static int a(int param0) {
         int var1 = -107 / ((param0 + 53) / 59);
-        return ak.field_e;
+        return BufferedRandomAccessFile.field_e;
     }
 
     final static Sprite a(byte param0) {

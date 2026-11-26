@@ -3,7 +3,7 @@
  */
 final class hj {
     static String[] field_l;
-    static lc[] field_n;
+    static BufferedRandomAccessFile[] field_n;
     static String field_j;
     private wm field_d;
     private java.math.BigInteger field_f;

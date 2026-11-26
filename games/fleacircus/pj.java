@@ -55,7 +55,7 @@ final class pj extends cb {
             break;
           }
           if (var3 == null) {
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           var4 = var15.readUnsignedByte(false);
@@ -200,7 +200,7 @@ final class pj extends cb {
             }
             if (rd.field_c != null) {
               try {
-                rd.field_c.b((byte) -70);
+                rd.field_c.close((byte) -70);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -210,7 +210,7 @@ final class pj extends cb {
               for (var1_int = 0; var1_int < mc.field_c.length; var1_int++) {
                 if (mc.field_c[var1_int] != null) {
                   try {
-                    mc.field_c[var1_int].b((byte) -70);
+                    mc.field_c[var1_int].close((byte) -70);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2_ref = (IOException) (Object) decompiledCaughtException;

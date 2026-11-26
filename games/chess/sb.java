@@ -39,12 +39,12 @@ final class sb extends bj {
             return null;
           }
           if (MidiPcmStream.field_A == kn.field_D &&
-            param0.equals(lc.field_e)) {
+            param0.equals(BufferedRandomAccessFile.field_e)) {
             MidiPcmStream.field_A = ji.field_T;
             stackIn_8_0 = kf.field_j;
             return stackIn_8_0;
           }
-          lc.field_e = param0;
+          BufferedRandomAccessFile.field_e = param0;
           kf.field_j = null;
           MidiPcmStream.field_A = ci.field_ub;
           stackIn_10_0 = null;

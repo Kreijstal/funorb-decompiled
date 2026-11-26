@@ -51,7 +51,7 @@ final class wa extends IntrusiveNode {
             }
             if (wj.field_s != null) {
               try {
-                wj.field_s.c(0);
+                wj.field_s.close(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -61,7 +61,7 @@ final class wa extends IntrusiveNode {
               for (var1_int = 0; bd.field_i.length > var1_int; var1_int++) {
                 if (null != bd.field_i[var1_int]) {
                   try {
-                    bd.field_i[var1_int].c(0);
+                    bd.field_i[var1_int].close(0);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

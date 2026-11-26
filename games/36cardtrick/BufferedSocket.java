@@ -38,7 +38,7 @@ final class BufferedSocket implements Runnable {
           }
           if (this.field_d != null) {
             while (this.field_d.status == 0) {
-              wk.sleepMillis((byte) -104, 1L);
+              BoundedRandomAccessFile.sleepMillis((byte) -104, 1L);
             }
             if (this.field_d.status == 1) {
               try {

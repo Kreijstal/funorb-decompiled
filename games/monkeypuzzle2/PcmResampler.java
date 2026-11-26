@@ -39,7 +39,7 @@ final class PcmResampler {
           var4 = cb.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = fk.field_d[ch.a((int) var4[var6], 255)];
+            var5[var6] = fk.field_d[BufferedRandomAccessFile.a((int) var4[var6], 255)];
           }
           var1[var2] = new Sprite(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var5);
         }

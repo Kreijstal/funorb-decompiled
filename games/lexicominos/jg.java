@@ -103,7 +103,7 @@ final class jg extends tj {
           if (!param1.equals(this.field_n)) {
             var3 = ua.a(param1, 99);
             if (!var3.b(12)) {
-              stackIn_7_0 = be.field_q;
+              stackIn_7_0 = BufferedRandomAccessFile.field_q;
               return stackIn_7_0;
             }
             this.field_n = param1;

@@ -203,8 +203,8 @@ abstract class l {
         try {
           if (PcmOutputWorker.field_b != null) {
             try {
-              PcmOutputWorker.field_b.a(0L, -26296);
-              PcmOutputWorker.field_b.a(ra.field_c.position, -79, 24, ra.field_c.payload);
+              PcmOutputWorker.field_b.seek(0L, -26296);
+              PcmOutputWorker.field_b.write(ra.field_c.position, -79, 24, ra.field_c.payload);
             } catch (Exception exception) {
             }
           }

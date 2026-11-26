@@ -63,7 +63,7 @@ final class sc {
           return;
         }
         SecondaryNodeDequeIterator.field_c = param2;
-        ea.field_b = param3;
+        BoundedRandomAccessFile.field_b = param3;
     }
 
     public static void clearStaticReferences(int param0) {

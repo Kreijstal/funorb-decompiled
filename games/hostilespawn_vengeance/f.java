@@ -98,8 +98,8 @@ final class f implements nn {
             var2 = var6;
             if (q.field_b != null) {
               try {
-                q.field_b.a(0L, (byte) 117);
-                q.field_b.a(var6, (byte) -117);
+                q.field_b.seek(0L, (byte) 117);
+                q.field_b.readFully(var6, (byte) -117);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var2[var3_int]) {
                     continue;

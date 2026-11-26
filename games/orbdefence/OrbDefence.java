@@ -413,7 +413,7 @@ public final class OrbDefence extends NetworkGameClient {
         ge.clearStaticReferences(1);
         DiskCacheWorker.b(-122);
         pi.clearStaticReferences(param0);
-        dj.c((byte) 78);
+        BufferedRandomAccessFile.c((byte) 78);
         BufferedSocket.clearStaticReferences((byte) -95);
         IntrusiveNode.clearStaticReferences(40);
         MidiPcmStream.resetStaticState(116);
@@ -478,7 +478,7 @@ public final class OrbDefence extends NetworkGameClient {
         NetworkArchiveRequest.clearStaticReferences((byte) 61);
         DiskArchiveRequest.clearStaticReferences((byte) -99);
         ak.c((byte) -102);
-        gl.clearStaticReferences(128);
+        BoundedRandomAccessFile.clearStaticReferences(128);
         fl.clearStaticReferences(-128);
         ArchiveRequest.releaseDeclaredStaticReferences((byte) -90);
         jd.clearStaticReferences(0);
@@ -680,7 +680,7 @@ public final class OrbDefence extends NetworkGameClient {
         }
         if (rl.a((byte) 124)) {
           SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l);
-          gl.a(4 + f.field_w[0].field_o, f.field_w[0].field_k + 4, false, f.field_w);
+          BoundedRandomAccessFile.a(4 + f.field_w[0].field_o, f.field_w[0].field_k + 4, false, f.field_w);
         }
         if (lc.field_r != 0) {
           var3_int = 256 * te.field_O / 10;
@@ -945,7 +945,7 @@ public final class OrbDefence extends NetworkGameClient {
           return false;
         }
         if (null == bh.field_d) {
-          if (gl.b(10489)) {
+          if (BoundedRandomAccessFile.b(10489)) {
             for (var3Lifetime1 = 0; var3Lifetime1 < 9; var3Lifetime1++) {
               nc.field_cb[var3Lifetime1] = new ja(var3Lifetime1);
             }

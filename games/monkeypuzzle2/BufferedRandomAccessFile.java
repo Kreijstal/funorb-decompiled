@@ -3,8 +3,8 @@
  */
 import java.io.*;
 
-final class ch {
-    private pl field_b;
+final class BufferedRandomAccessFile {
+    private BoundedRandomAccessFile field_b;
     private long field_n;
     private long field_h;
     private int field_m;
@@ -19,14 +19,14 @@ final class ch {
     static ad field_j;
     static AccountRequestState field_d;
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a(param1, param1.length, 0, (byte) 117);
+          this.readFully(param1, param1.length, 0, (byte) 117);
           if (param0 != 3805) {
             this.field_k = (byte[]) null;
           }
@@ -71,7 +71,7 @@ final class ch {
         return param0 & param1;
     }
 
-    final void a(byte[] param0, int param1, byte param2, int param3) throws IOException {
+    final void write(byte[] param0, int param1, byte param2, int param3) throws IOException {
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
@@ -92,10 +92,10 @@ final class ch {
             if (this.field_a != -1L) {
               if (this.field_h >= this.field_a) {
                 if ((long)this.field_l + this.field_a < this.field_h) {
-                  this.b((byte) -109);
+                  this.flush((byte) -109);
                 }
               } else {
-                this.b((byte) -109);
+                this.flush((byte) -109);
               }
             }
             if (this.field_a != -1L &&
@@ -106,7 +106,7 @@ final class ch {
               param1 = param1 + var5_int;
               param3 = param3 - var5_int;
               this.field_l = this.field_c.length;
-              this.b((byte) -109);
+              this.flush((byte) -109);
             }
             if (this.field_c.length >= param3) {
               if (param2 < 31) {
@@ -126,10 +126,10 @@ final class ch {
               return;
             }
             if (~this.field_h != ~this.field_g) {
-              this.field_b.a(0, this.field_h);
+              this.field_b.seek(0, this.field_h);
               this.field_g = this.field_h;
             }
-            this.field_b.a(param1, (byte) 68, param0, param3);
+            this.field_b.write(param1, (byte) 68, param0, param3);
             this.field_g = this.field_g + (long)param3;
             if (this.field_f < this.field_g) {
               this.field_f = this.field_g;
@@ -188,14 +188,14 @@ final class ch {
         field_j = null;
     }
 
-    final long c(byte param0) {
+    final long length(byte param0) {
         if (param0 > -66) {
           return -86L;
         }
         return this.field_n;
     }
 
-    final void a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_62_0 = null;
         StringBuilder stackIn_62_1 = null;
@@ -247,10 +247,10 @@ final class ch {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param1 > this.field_k.length) {
-              this.field_b.a(0, this.field_h);
+              this.field_b.seek(0, this.field_h);
               this.field_g = this.field_h;
               while (param1 > 0) {
-                var9_intLifetime1 = this.field_b.a(param2, param0, (byte) -128, param1);
+                var9_intLifetime1 = this.field_b.read(param2, param0, (byte) -128, param1);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -265,7 +265,7 @@ final class ch {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param1 > 0)) {
-              this.a(-119);
+              this.fillReadBuffer(-119);
               var9_intLifetime1Lifetime1 = param1;
               if (this.field_m < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_m;
@@ -344,14 +344,14 @@ final class ch {
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         this.field_m = 0;
         if (param0 <= -111) {
           if (this.field_h != this.field_g) {
-            this.field_b.a(0, this.field_h);
+            this.field_b.seek(0, this.field_h);
             this.field_g = this.field_h;
           }
           this.field_e = this.field_h;
@@ -360,7 +360,7 @@ final class ch {
             if (var2 > 200000000) {
               var2 = 200000000;
             }
-            var3 = this.field_b.a(this.field_m, this.field_k, (byte) -126, var2);
+            var3 = this.field_b.read(this.field_m, this.field_k, (byte) -126, var2);
             if (var3 == -1) {
               break;
             }
@@ -371,7 +371,7 @@ final class ch {
         }
     }
 
-    private final void b(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -380,14 +380,14 @@ final class ch {
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param0 != -109) {
           var8 = (String) null;
-          ch.a((String) null, 104);
+          BufferedRandomAccessFile.a((String) null, 104);
         }
         if (this.field_a != -1L) {
           if (this.field_g != this.field_a) {
-            this.field_b.a(0, this.field_a);
+            this.field_b.seek(0, this.field_a);
             this.field_g = this.field_a;
           }
-          this.field_b.a(0, (byte) 68, this.field_c, this.field_l);
+          this.field_b.write(0, (byte) 68, this.field_c, this.field_l);
           this.field_g = this.field_g + (long)this.field_l;
           if (this.field_f < this.field_g) {
             this.field_f = this.field_g;
@@ -422,14 +422,14 @@ final class ch {
         }
     }
 
-    ch(pl param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_e = -1L;
         this.field_l = 0;
         this.field_a = -1L;
         try {
           this.field_b = param0;
-          dupTemp$0 = param0.c((byte) 124);
+          dupTemp$0 = param0.length((byte) 124);
           this.field_f = dupTemp$0;
           this.field_n = dupTemp$0;
           this.field_h = 0L;
@@ -440,13 +440,13 @@ final class ch {
         }
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }
         this.field_h = param1;
         if (param0 < 82) {
-          ch.b(-87);
+          BufferedRandomAccessFile.b(-87);
         }
     }
 
@@ -478,7 +478,7 @@ final class ch {
             return (rb) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = pl.a((byte) 109, var6);
+          var2 = BoundedRandomAccessFile.a((byte) 109, var6);
           if (param1 != -1) {
             stackIn_10_0 = (rb) null;
             return stackIn_10_0;
@@ -489,7 +489,7 @@ final class ch {
           var3 = (rb) (IntrusiveDeque.field_a.a((long)var2.hashCode(), false));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_db);
-            var4 = pl.a((byte) 126, var7);
+            var4 = BoundedRandomAccessFile.a((byte) 126, var7);
             if (var4.equals(var2)) {
               stackIn_20_0 = var3;
               return stackIn_20_0;
@@ -511,12 +511,12 @@ final class ch {
         }
     }
 
-    final void a(boolean param0) throws IOException {
+    final void close(boolean param0) throws IOException {
         if (!param0) {
           return;
         }
-        this.b((byte) -109);
-        this.field_b.a(19808);
+        this.flush((byte) -109);
+        this.field_b.close(19808);
     }
 
     static {

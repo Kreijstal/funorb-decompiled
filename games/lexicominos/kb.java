@@ -1079,7 +1079,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "login");
                 if (var2 != null) {
-                  be.field_i = ni.a((byte) -55, var2);
+                  BufferedRandomAccessFile.field_i = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "goback");
                 if (null != var2) {

@@ -477,8 +477,8 @@ class pc implements WidgetRenderer, fe {
           Throwable decompiledCaughtException = null;
           if (jl.field_W != null) {
             try {
-              jl.field_W.a(false, 0L);
-              jl.field_W.a(-1, 24, kj.field_d.position, kj.field_d.payload);
+              jl.field_W.seek(false, 0L);
+              jl.field_W.write(-1, 24, kj.field_d.position, kj.field_d.payload);
               decompiledRegionSelector0 = 0;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

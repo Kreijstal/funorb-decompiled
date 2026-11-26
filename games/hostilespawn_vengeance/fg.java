@@ -95,7 +95,7 @@ final class fg {
         if (param0 != -31) {
           field_b = (PcmSample[]) null;
         }
-        return (java.awt.Container) ((Object) bn.c(-1));
+        return (java.awt.Container) ((Object) BufferedRandomAccessFile.c(-1));
     }
 
     final static RgbSprite a(String param0, String param1, ResourceArchive param2, boolean param3) {

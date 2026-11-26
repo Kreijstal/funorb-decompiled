@@ -211,7 +211,7 @@ final class ho {
           he.field_x.a(77, wc.field_m.field_Fb, 24, 0, 0);
           lr.field_P.a(116, wc.field_m.field_Fb, -24 + wc.field_m.field_db, 24, 0);
           lr.field_P.field_Bb = vl.a(lr.field_P.field_db, 3, 0, 1, 11579568, 8421504);
-          im.field_j.a(99, lr.field_P.field_Fb - 10, -2 + (lr.field_P.field_db - 34), 5, 5);
+          BufferedRandomAccessFile.field_j.a(99, lr.field_P.field_Fb - 10, -2 + (lr.field_P.field_db - 34), 5, 5);
           Vertigo2.field_M.a(74, 80, 24, -5 + (lr.field_P.field_db - 24), (-80 + lr.field_P.field_Fb) / 2);
           po.b((byte) -52);
           return;

@@ -51,7 +51,7 @@ final class ec {
             stackIn_20_0 = 1;
             return stackIn_20_0;
           }
-          if (ch.field_d != cf.field_b) {
+          if (BufferedRandomAccessFile.field_d != cf.field_b) {
             stackIn_25_0 = -1;
             return stackIn_25_0;
           }

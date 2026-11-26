@@ -10,7 +10,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
     static IndexedSprite[] field_h;
     static int field_e;
     static int field_c;
-    static ak[] field_b;
+    static BufferedRandomAccessFile[] field_b;
     static int[] field_a;
 
     final static void b(int param0) {

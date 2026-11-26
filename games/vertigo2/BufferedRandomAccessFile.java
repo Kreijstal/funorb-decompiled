@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class im {
+final class BufferedRandomAccessFile {
     private long field_a;
     private byte[] field_o;
     private long field_d;
@@ -20,7 +20,7 @@ final class im {
     static boolean field_g;
     static UiPanel field_j;
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         String stackIn_58_2 = null;
@@ -43,7 +43,7 @@ final class im {
             }
             if (this.field_e != -1L && (this.field_e > this.field_d ||
               this.field_d > (long)this.field_l + this.field_e)) {
-              this.a((byte) 58);
+              this.flush((byte) 58);
             }
             if (this.field_e != -1L &&
               (long)param1 + this.field_d > this.field_e + (long)this.field_m.length) {
@@ -53,7 +53,7 @@ final class im {
               param1 = param1 - var5_int;
               param2 = param2 + var5_int;
               this.field_l = this.field_m.length;
-              this.a((byte) 100);
+              this.flush((byte) 100);
             }
             if (this.field_m.length >= param1) {
               if (param1 <= 0) {
@@ -125,7 +125,7 @@ final class im {
         }
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void readFully(int param0, int param1, byte[] param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_65_0 = null;
         StringBuilder stackIn_65_1 = null;
@@ -195,7 +195,7 @@ final class im {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param3 > 0)) {
-              this.d(-122);
+              this.fillReadBuffer(-122);
               var9_intLifetime1Lifetime1 = param3;
               if (this.field_b < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_b;
@@ -274,22 +274,22 @@ final class im {
         }
     }
 
-    final long c(int param0) {
+    final long length(int param0) {
         if (param0 != -1) {
-          im.a(90);
+          BufferedRandomAccessFile.a(90);
         }
         return this.field_a;
     }
 
-    final void b(int param0) throws IOException {
-        this.a((byte) 31);
+    final void close(int param0) throws IOException {
+        this.flush((byte) 31);
         if (param0 != -22473) {
           this.field_e = -20L;
         }
         this.field_f.close(0);
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }
@@ -299,9 +299,9 @@ final class im {
         this.field_d = param1;
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.a(-102, param0, param1, param1.length);
+          this.readFully(-102, param0, param1, param1.length);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "im.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -309,7 +309,7 @@ final class im {
 
     final static boolean a(int param0) {
         if (param0 != -1) {
-          im.clearStaticReferences(-33);
+          BufferedRandomAccessFile.clearStaticReferences(-33);
         }
         return !hj.field_b ? true : false;
     }
@@ -322,7 +322,7 @@ final class im {
         field_j = null;
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -367,11 +367,11 @@ final class im {
           this.field_e = -1L;
         }
         if (param0 < 20) {
-          this.c(17);
+          this.length(17);
         }
     }
 
-    im(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_k = -1L;
         this.field_l = 0;
@@ -389,7 +389,7 @@ final class im {
         }
     }
 
-    private final void d(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var3 = 0;
         int var4 = 0;
         int var5 = Vertigo2.field_L ? 1 : 0;

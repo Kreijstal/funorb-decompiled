@@ -78,7 +78,7 @@ final class mk extends IntrusiveNode {
         if (param0 != 0) {
           return (String) null;
         }
-        if (cf.field_b == ch.field_d) {
+        if (cf.field_b == BufferedRandomAccessFile.field_d) {
           return ac.field_c;
         }
         return wk.field_d;

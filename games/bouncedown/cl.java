@@ -82,7 +82,7 @@ final class cl extends al {
             }
             if (var3_int != 0) {
               if (ee.field_c) {
-                param0 = jf.a(ta.field_b, new String[]{param0}, (byte) -126);
+                param0 = BufferedRandomAccessFile.a(ta.field_b, new String[]{param0}, (byte) -126);
               }
               if (va.field_f) {
                 param0 = pf.field_B;

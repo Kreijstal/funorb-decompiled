@@ -164,7 +164,7 @@ final class lb {
               s.field_b.d(94, 18);
               s.field_b.field_i = s.field_b.field_i + 2;
               var10 = s.field_b.field_i;
-              var11_ref_StringLifetime3 = de.a(-120, bn.c(-1));
+              var11_ref_StringLifetime3 = de.a(-120, BufferedRandomAccessFile.c(-1));
               if (var11_ref_StringLifetime3 == null) {
                 var11_ref_StringLifetime3 = "";
               }
@@ -210,7 +210,7 @@ final class lb {
               rc.field_a = gj.field_b;
             } else {
               if (var9Lifetime1 == 248) {
-                cj.a(bn.c(-1), 0);
+                cj.a(BufferedRandomAccessFile.c(-1), 0);
                 km.field_x = sg.field_g;
                 le.c((byte) 119);
                 jn.field_C = false;
@@ -250,7 +250,7 @@ final class lb {
             if (255 == ImageProducerRasterBuffer.field_k) {
               var9_ref_String = sc.field_g.a((byte) 28);
               if (var9_ref_String != null) {
-                ResourceArchive.a((byte) 98, bn.c(-1), var9_ref_String);
+                ResourceArchive.a((byte) 98, BufferedRandomAccessFile.c(-1), var9_ref_String);
               }
             } else {
               km.field_x = sc.field_g.o(32);

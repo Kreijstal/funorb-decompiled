@@ -531,7 +531,7 @@ final class bg extends WidgetContainer implements u, ql, sh {
         this.field_F = new qc("", (of) null, 3);
         int var1 = 1;
         this.field_O = new em("", (of) null, var1 != 0);
-        this.field_z = new ButtonWidget(pl.field_b, (of) null);
+        this.field_z = new ButtonWidget(BoundedRandomAccessFile.field_b, (of) null);
         this.field_K = new ButtonWidget(aj.field_d, (of) null);
         this.field_N.field_m = oa.field_E;
         this.field_D.field_m = ad.field_f;

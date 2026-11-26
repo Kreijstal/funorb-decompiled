@@ -380,7 +380,7 @@ final class fm {
           var2_int = -3 % ((param1 - 27) / 44);
           if (param0.field_c != 0 ||
             0 != param0.field_f) {
-            for (var3 = 0; var3 < gl.field_b; var3++) {
+            for (var3 = 0; var3 < BoundedRandomAccessFile.field_b; var3++) {
               var4 = jk.field_d[var3];
               if (var4.field_d == 2 &&
                 param0.field_c == var4.field_c &&

@@ -604,8 +604,8 @@ final class rd {
           }
           if (null != q.field_b) {
             try {
-              q.field_b.a(0L, (byte) 109);
-              q.field_b.a(24, sc.field_g.field_i, sc.field_g.field_n, (byte) 60);
+              q.field_b.seek(0L, (byte) 109);
+              q.field_b.write(24, sc.field_g.field_i, sc.field_g.field_n, (byte) 60);
             } catch (Exception exception) {
             }
           }

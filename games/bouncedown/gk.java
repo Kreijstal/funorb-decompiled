@@ -635,7 +635,7 @@ final class gk {
           var5 = 1;
           var4 = 1;
         }
-        il.field_e = jf.a(var2 * var4, false, var5 * var2);
+        il.field_e = BufferedRandomAccessFile.a(var2 * var4, false, var5 * var2);
     }
 
     final synchronized boolean a(int param0, int param1, byte param2) {

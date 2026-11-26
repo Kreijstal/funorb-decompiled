@@ -84,7 +84,7 @@ final class cd {
         ah.field_h = false;
         qh.a(param0, true);
         ed.field_c = di.field_a;
-        ch.field_d = di.field_a;
+        BufferedRandomAccessFile.field_d = di.field_a;
     }
 
     final static void a(hl param0, byte param1) {

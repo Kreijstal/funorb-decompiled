@@ -31,7 +31,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param0 = wk.a('_', 63, param0, "");
+          param0 = BoundedRandomAccessFile.a('_', 63, param0, "");
           if (param1 != -115) {
             return true;
           }

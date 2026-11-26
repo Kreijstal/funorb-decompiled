@@ -92,7 +92,7 @@ final class ab implements td {
               wg.field_p = DelegatingCanvas.field_b;
             } else {
               while (DelegatingCanvas.field_b != wg.field_p) {
-                var3 = gl.field_i[DelegatingCanvas.field_b];
+                var3 = BoundedRandomAccessFile.field_i[DelegatingCanvas.field_b];
                 DelegatingCanvas.field_b = DelegatingCanvas.field_b + 1 & 127;
                 if (0 <= var3) {
                   IterableNodeHashTable.field_a[var3] = true;

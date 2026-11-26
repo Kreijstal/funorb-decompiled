@@ -575,10 +575,10 @@ final class vg {
                     while (true) {
                       fieldTemp$0 = am.field_n + 1;
                       am.field_n = am.field_n + 1;
-                      if (fieldTemp$0 == we.field_l.length) {
+                      if (fieldTemp$0 == BufferedRandomAccessFile.field_l.length) {
                         am.field_n = 0;
                       }
-                      if (we.field_l[am.field_n].field_g) {
+                      if (BufferedRandomAccessFile.field_l[am.field_n].field_g) {
                         continue;
                       }
                       break;
@@ -592,9 +592,9 @@ final class vg {
                     fieldTemp$1 = am.field_n - 1;
                     am.field_n = am.field_n - 1;
                     if (fieldTemp$1 < 0) {
-                      am.field_n = -1 + we.field_l.length;
+                      am.field_n = -1 + BufferedRandomAccessFile.field_l.length;
                     }
-                    if (we.field_l[am.field_n].field_g) {
+                    if (BufferedRandomAccessFile.field_l[am.field_n].field_g) {
                       continue;
                     }
                     break;
@@ -843,7 +843,7 @@ final class vg {
                     var5_ref_mi.a(var13_int + 1 + ". ", 268, var12, var14, -1);
                     var5_ref_mi.b(var17, 268, var12, var14, -1);
                     var5_ref_mi.a(Integer.toString(var15), 520, var12, var14, -1);
-                    var18 = we.field_l[var16].field_a;
+                    var18 = BufferedRandomAccessFile.field_l[var16].field_a;
                     var18.f(528, -1 + (-var5_ref_mi.field_y + (var12 + var5_ref_mi.field_C)) - (24 - (-var18.field_m + 24) / 2));
                     var3 = "";
                   }
@@ -936,7 +936,7 @@ final class vg {
                   stackIn_23_1 = (hc.field_u == 0) ? false : true;
                   stackIn_25_2 = -106;
                   stackIn_26_3 = (SecondaryNodeDeque.field_g == 0) ? false : true;
-                  var10 = we.a(stackIn_22_0, stackIn_23_1, stackIn_25_2, stackIn_26_3);
+                  var10 = BufferedRandomAccessFile.a(stackIn_22_0, stackIn_23_1, stackIn_25_2, stackIn_26_3);
                   var5Lifetime3 = IntrusiveNode.field_d.b(var10, 341) * var4;
                   IntrusiveNode.field_d.a(var10, 150, var3, 341, var5Lifetime3, 0, -1, 1, 0, var4);
                 }
@@ -1179,7 +1179,7 @@ final class vg {
         if (var8 != 12 &&
           var8 != 13) {
           if (var8 == 17) {
-            var12_ref_ti = we.field_l[am.field_n].field_a;
+            var12_ref_ti = BufferedRandomAccessFile.field_l[am.field_n].field_a;
             var13 = var11.a(var9);
             var14 = 36 + var13;
             var15 = var6 + var7 - var14 >> 1;

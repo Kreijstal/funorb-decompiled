@@ -124,7 +124,7 @@ final class eb {
         int var4_int = 0;
         int var6 = Lexicominos.field_L ? 1 : 0;
         int var1 = bd.field_m[0] * pb.field_h[0];
-        byte[] var2 = be.field_f[0];
+        byte[] var2 = BufferedRandomAccessFile.field_f[0];
         int[] var3 = new int[var1];
         int var5 = -59 % ((param0 + 55) / 54);
         for (var4_int = 0; var4_int < var1; var4_int++) {

@@ -76,7 +76,7 @@ final class lf {
             }
             if (null != TutorialController.field_x) {
               try {
-                TutorialController.field_x.b((byte) -28);
+                TutorialController.field_x.close((byte) -28);
               } catch (IOException iOException) {
               }
             }
@@ -84,7 +84,7 @@ final class lf {
               for (var1_int = 0; var1_int < ProxyAuthenticationRequiredException.field_b.length; var1_int++) {
                 if (null != ProxyAuthenticationRequiredException.field_b[var1_int]) {
                   try {
-                    ProxyAuthenticationRequiredException.field_b[var1_int].b((byte) -54);
+                    ProxyAuthenticationRequiredException.field_b[var1_int].close((byte) -54);
                   } catch (IOException var2_ref) {
                   }
                 }

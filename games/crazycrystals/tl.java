@@ -1181,7 +1181,7 @@ abstract class tl {
           }
           var2Lifetime215 = we.a("player_movemessage_normal", 1);
           if (var2Lifetime215 != null) {
-            qa.field_h = fa.a((byte) -85, var2Lifetime215);
+            BufferedRandomAccessFile.field_h = fa.a((byte) -85, var2Lifetime215);
           }
           var2Lifetime216 = we.a("player_movemessage_tutorial", 1);
           if (null != var2Lifetime216) {

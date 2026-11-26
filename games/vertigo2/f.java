@@ -43,7 +43,7 @@ final class f extends TextureOperator {
             ff.field_d = param0;
             if (null != kr.field_g.field_k) {
               try {
-                as.field_d = new im(kr.field_g.field_k, 64, 0);
+                as.field_d = new BufferedRandomAccessFile(kr.field_g.field_k, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

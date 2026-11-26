@@ -189,8 +189,8 @@ final class bj {
             var2 = var8;
             if (e.field_e != null) {
               try {
-                e.field_e.a(0L, -67);
-                e.field_e.a(param1 + 25, var9);
+                e.field_e.seek(0L, -67);
+                e.field_e.readFully(param1 + 25, var9);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

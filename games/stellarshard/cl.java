@@ -45,8 +45,8 @@ final class cl {
           }
           if (decompiledFrameRemainder0) {
             if (!wk.field_c) {
-              if (pc.field_g <= ArchiveRequest.field_v) {
-                stackIn_17_0 = (ArchiveRequest.field_v < pc.field_g + ul.field_D) ? 1 : 0;
+              if (BufferedRandomAccessFile.field_g <= ArchiveRequest.field_v) {
+                stackIn_17_0 = (ArchiveRequest.field_v < BufferedRandomAccessFile.field_g + ul.field_D) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -58,12 +58,12 @@ final class cl {
               ArchiveRequest.field_v = 0;
             } else {
               if (wk.field_c) {
-                ArchiveRequest.field_v = pc.field_g;
+                ArchiveRequest.field_v = BufferedRandomAccessFile.field_g;
               } else {
                 if (var2_int == 0) {
                   ArchiveRequest.field_v = 0;
                 } else {
-                  ArchiveRequest.field_v = pc.field_g;
+                  ArchiveRequest.field_v = BufferedRandomAccessFile.field_g;
                 }
               }
             }
@@ -78,7 +78,7 @@ final class cl {
             h.field_c = ClientException.field_c;
           }
           if (!wk.field_c &&
-            pc.field_g > ArchiveRequest.field_v &&
+            BufferedRandomAccessFile.field_g > ArchiveRequest.field_v &&
             qc.field_a) {
             am.field_f = vk.field_b;
             ArchiveRequest.field_v = 0;

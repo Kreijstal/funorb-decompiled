@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pl {
+final class BoundedRandomAccessFile {
     static String field_c;
     static String field_b;
     static int field_g;
@@ -17,7 +17,7 @@ final class pl {
     static vk field_e;
     private RandomAccessFile field_a;
 
-    final int a(int param0, byte[] param1, byte param2, int param3) throws IOException {
+    final int read(int param0, byte[] param1, byte param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -51,7 +51,7 @@ final class pl {
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         this.field_a.seek(param1);
         if (param0 != 0) {
           this.field_a = (RandomAccessFile) null;
@@ -61,12 +61,12 @@ final class pl {
         this.field_i = param1;
     }
 
-    final long c(byte param0) throws IOException {
+    final long length(byte param0) throws IOException {
         int var2 = 82 % ((param0 - 69) / 51);
         return this.field_a.length();
     }
 
-    final void a(int param0, byte param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, byte param1, byte[] param2, int param3) throws IOException {
         try {
           if (((long)param3 + this.field_i) > this.field_l) {
             this.field_a.seek(this.field_l);
@@ -76,7 +76,7 @@ final class pl {
           this.field_a.write(param2, param0, param3);
           if (param1 != 68) {
             CharSequence var6 = (CharSequence) null;
-            pl.a((byte) -58, (CharSequence) null);
+            BoundedRandomAccessFile.a((byte) -58, (CharSequence) null);
           }
           this.field_i = this.field_i + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -85,7 +85,7 @@ final class pl {
     }
 
     final static String a(byte param0) {
-        if (ch.field_d == cf.field_b) {
+        if (BufferedRandomAccessFile.field_d == cf.field_b) {
           return v.field_b;
         }
         if (!bb.field_a.a(0)) {
@@ -101,7 +101,7 @@ final class pl {
         return bh.field_b;
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_a) {
           this.field_a.close();
           this.field_a = null;
@@ -139,7 +139,7 @@ final class pl {
                 return;
               }
               var5 = (CharSequence) null;
-              pl.a((byte) -97, (CharSequence) null);
+              BoundedRandomAccessFile.a((byte) -97, (CharSequence) null);
               return;
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -179,7 +179,7 @@ final class pl {
         field_f = (float[][]) null;
         field_e = null;
         if (param0 != -77) {
-          pl.a((byte) -78);
+          BoundedRandomAccessFile.a((byte) -78);
           return;
         }
     }
@@ -265,10 +265,10 @@ final class pl {
           return;
         }
         System.out.println("");
-        this.a(19808);
+        this.close(19808);
     }
 
-    pl(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

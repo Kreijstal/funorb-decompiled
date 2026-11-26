@@ -240,8 +240,8 @@ abstract class sj extends rf {
             RgbSprite var7 = (RgbSprite) null;
             sj.a((RgbSprite) null, 111);
           }
-          var6.field_a = param4 == null ? null : hd.a(false, param2, "da_monster_" + param4);
-          var6.field_p = param5 != null ? hd.a(false, param0, "da_monster_" + param5) : null;
+          var6.field_a = param4 == null ? null : BufferedRandomAccessFile.a(false, param2, "da_monster_" + param4);
+          var6.field_p = param5 != null ? BufferedRandomAccessFile.a(false, param0, "da_monster_" + param5) : null;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "sj.GA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

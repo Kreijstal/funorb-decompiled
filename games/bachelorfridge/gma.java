@@ -35,8 +35,8 @@ final class gma {
           Throwable decompiledCaughtException = null;
           if (null != vg.field_n) {
             try {
-              vg.field_n.a(0L, (byte) -108);
-              vg.field_n.a(-96, ig.field_m.position, ig.field_m.payload, 24);
+              vg.field_n.seek(0L, (byte) -108);
+              vg.field_n.write(-96, ig.field_m.position, ig.field_m.payload, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class e {
-    static pc field_a;
+    static BufferedRandomAccessFile field_a;
     static wh[] field_d;
     static String field_b;
     static String[] field_f;
@@ -16,10 +16,10 @@ final class e {
           if (wk.field_c) {
             return null;
           }
-          if (pc.field_g > ArchiveRequest.field_v) {
+          if (BufferedRandomAccessFile.field_g > ArchiveRequest.field_v) {
             return null;
           }
-          if (pc.field_g + ul.field_D > ArchiveRequest.field_v) {
+          if (BufferedRandomAccessFile.field_g + ul.field_D > ArchiveRequest.field_v) {
             return hk.field_m;
           }
           return null;
@@ -27,10 +27,10 @@ final class e {
         if (wk.field_c) {
           return null;
         }
-        if (pc.field_g > ArchiveRequest.field_v) {
+        if (BufferedRandomAccessFile.field_g > ArchiveRequest.field_v) {
           return null;
         }
-        if (pc.field_g + ul.field_D > ArchiveRequest.field_v) {
+        if (BufferedRandomAccessFile.field_g + ul.field_D > ArchiveRequest.field_v) {
           return hk.field_m;
         }
         return null;

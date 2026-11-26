@@ -106,7 +106,7 @@ final class sg {
               return;
             }
             try {
-              e.field_a = new pc(il.field_v.field_e, 64, 0);
+              e.field_a = new BufferedRandomAccessFile(il.field_v.field_e, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

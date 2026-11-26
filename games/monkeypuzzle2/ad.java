@@ -925,7 +925,7 @@ final class ad {
               }
               cl.field_e = MonkeyPuzzle2.field_D.readString(-1);
               var12 = (CharSequence) ((Object) cl.field_e);
-              DiskCacheWorker.field_f = pl.a((byte) 109, var12);
+              DiskCacheWorker.field_f = BoundedRandomAccessFile.a((byte) 109, var12);
               ue.field_G = MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
               dk.field_h = wh.field_b;
               if (IntrusiveDeque.field_b.a(false) != te.field_a) {

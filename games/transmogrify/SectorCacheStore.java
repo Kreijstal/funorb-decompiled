@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class SectorCacheStore {
-    private we field_e;
+    private BufferedRandomAccessFile field_e;
     private int field_b;
     static String field_c;
     private int field_f;
-    private we field_d;
+    private BufferedRandomAccessFile field_d;
     static int field_a;
 
     public static void clearStaticReferences(byte param0) {
@@ -49,11 +49,11 @@ final class SectorCacheStore {
           var3_ref = this.field_e;
           synchronized (var3_ref) {
             try {
-              if (this.field_d.b((byte) 36) < (long)(6 + param1 * 6)) {
+              if (this.field_d.length((byte) 36) < (long)(6 + param1 * 6)) {
                 return null;
               }
-              this.field_d.a((long)(param1 * 6), (byte) -127);
-              this.field_d.a(0, 6, AccountCreationResultPanel.field_kb, (byte) 0);
+              this.field_d.seek((long)(param1 * 6), (byte) -127);
+              this.field_d.readFully(0, 6, AccountCreationResultPanel.field_kb, (byte) 0);
               if (param0 >= -35) {
                 this.field_b = 73;
               }
@@ -68,7 +68,7 @@ final class SectorCacheStore {
               if (var5 <= 0) {
                 return null;
               }
-              if ((this.field_e.b((byte) 36) / 520L) < (long)var5) {
+              if ((this.field_e.length((byte) 36) / 520L) < (long)var5) {
                 stackIn_17_0 = null;
                 return (byte[]) (stackIn_17_0);
               }
@@ -80,14 +80,14 @@ final class SectorCacheStore {
                   stackIn_23_0 = null;
                   return (byte[]) (stackIn_23_0);
                 }
-                this.field_e.a((long)(var5 * 520), (byte) -126);
+                this.field_e.seek((long)(var5 * 520), (byte) -126);
                 var9 = var4_int - var7;
                 if (param1 > 65535) {
                   var14 = 10;
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_e.a(0, var9 + var14, AccountCreationResultPanel.field_kb, (byte) 0);
+                  this.field_e.readFully(0, var9 + var14, AccountCreationResultPanel.field_kb, (byte) 0);
                   var13 = 255 & AccountCreationResultPanel.field_kb[9];
                   var12 = (255 & AccountCreationResultPanel.field_kb[8]) + (((AccountCreationResultPanel.field_kb[6] & 255) << 16) + (AccountCreationResultPanel.field_kb[7] << 8 & 65280));
                   var10 = ((AccountCreationResultPanel.field_kb[1] & 255) << 16) + ((AccountCreationResultPanel.field_kb[0] & 255) << 24) + ((AccountCreationResultPanel.field_kb[2] << 8 & 65280) + (255 & AccountCreationResultPanel.field_kb[3]));
@@ -97,7 +97,7 @@ final class SectorCacheStore {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_e.a(0, var9 + var14, AccountCreationResultPanel.field_kb, (byte) 0);
+                  this.field_e.readFully(0, var9 + var14, AccountCreationResultPanel.field_kb, (byte) 0);
                   var13 = 255 & AccountCreationResultPanel.field_kb[7];
                   var11 = (255 & AccountCreationResultPanel.field_kb[3]) + (AccountCreationResultPanel.field_kb[2] << 8 & 65280);
                   var12 = ((AccountCreationResultPanel.field_kb[4] & 255) << 16) - (-(65280 & AccountCreationResultPanel.field_kb[5] << 8) - (AccountCreationResultPanel.field_kb[6] & 255));
@@ -115,7 +115,7 @@ final class SectorCacheStore {
                 if (var12 < 0) {
                   return null;
                 }
-                if ((long)var12 > this.field_e.b((byte) 36) / 520L) {
+                if ((long)var12 > this.field_e.length((byte) 36) / 520L) {
                   stackIn_44_0 = null;
                   return (byte[]) (stackIn_44_0);
                 }
@@ -215,18 +215,18 @@ final class SectorCacheStore {
             synchronized (var6) {
               try {
                 if (param2) {
-                  if (this.field_d.b((byte) 36) < (long)(6 + 6 * param4)) {
+                  if (this.field_d.length((byte) 36) < (long)(6 + 6 * param4)) {
                     return false;
                   }
-                  this.field_d.a((long)(6 * param4), (byte) -122);
-                  this.field_d.a(0, 6, AccountCreationResultPanel.field_kb, (byte) 0);
+                  this.field_d.seek((long)(6 * param4), (byte) -122);
+                  this.field_d.readFully(0, 6, AccountCreationResultPanel.field_kb, (byte) 0);
                   var7_int = (AccountCreationResultPanel.field_kb[5] & 255) + ((AccountCreationResultPanel.field_kb[4] & 255) << 8) + (AccountCreationResultPanel.field_kb[3] << 16 & 16711680);
                   if (var7_int <= 0 ||
-                    !((this.field_e.b((byte) 36) / 520L) >= (long)var7_int)) {
+                    !((this.field_e.length((byte) 36) / 520L) >= (long)var7_int)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_e.b((byte) 36)) / 520L);
+                  var7_int = (int)((519L + this.field_e.length((byte) 36)) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -237,12 +237,12 @@ final class SectorCacheStore {
                 AccountCreationResultPanel.field_kb[1] = (byte)(param1 >> 8);
                 AccountCreationResultPanel.field_kb[3] = (byte)(var7_int >> 16);
                 AccountCreationResultPanel.field_kb[2] = (byte)param1;
-                this.field_d.a((long)(param4 * 6), (byte) -122);
+                this.field_d.seek((long)(param4 * 6), (byte) -122);
                 if (!param3) {
                   var17 = (byte[]) null;
                   discarded$0 = this.writeSectorChain((byte[]) null, -23, true, false, 106);
                 }
-                this.field_d.a(AccountCreationResultPanel.field_kb, 6, (byte) 110, 0);
+                this.field_d.write(AccountCreationResultPanel.field_kb, 6, (byte) 110, 0);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -250,10 +250,10 @@ final class SectorCacheStore {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param2) {
-                      this.field_e.a((long)(var7_int * 520), (byte) -122);
+                      this.field_e.seek((long)(var7_int * 520), (byte) -122);
                       if (param4 > 65535) {
                         try {
-                          this.field_e.a(0, 10, AccountCreationResultPanel.field_kb, (byte) 0);
+                          this.field_e.readFully(0, 10, AccountCreationResultPanel.field_kb, (byte) 0);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ final class SectorCacheStore {
                         var10 = ((255 & AccountCreationResultPanel.field_kb[6]) << 16) + ((AccountCreationResultPanel.field_kb[7] & 255) << 8) + (255 & AccountCreationResultPanel.field_kb[8]);
                       } else {
                         try {
-                          this.field_e.a(0, 8, AccountCreationResultPanel.field_kb, (byte) 0);
+                          this.field_e.readFully(0, 8, AccountCreationResultPanel.field_kb, (byte) 0);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -288,7 +288,7 @@ final class SectorCacheStore {
                         var12 == var9 &&
                         var13 == this.field_b) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !((this.field_e.b((byte) 36) / 520L) >= (long)var10)))) {
+                        !((this.field_e.length((byte) 36) / 520L) >= (long)var10)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -296,7 +296,7 @@ final class SectorCacheStore {
                       }
                     }
                     if (var10 == 0) {
-                      var10 = (int)((this.field_e.b((byte) 36) + 519L) / 520L);
+                      var10 = (int)((this.field_e.length((byte) 36) + 519L) / 520L);
                       param2 = false;
                       if (var10 == 0) {
                         var10++;
@@ -317,13 +317,13 @@ final class SectorCacheStore {
                       AccountCreationResultPanel.field_kb[3] = (byte)var9;
                       AccountCreationResultPanel.field_kb[6] = (byte)var10;
                       AccountCreationResultPanel.field_kb[0] = (byte)(param4 >> 8);
-                      this.field_e.a((long)(520 * var7_int), (byte) -120);
-                      this.field_e.a(AccountCreationResultPanel.field_kb, 8, (byte) 76, 0);
+                      this.field_e.seek((long)(520 * var7_int), (byte) -120);
+                      this.field_e.write(AccountCreationResultPanel.field_kb, 8, (byte) 76, 0);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_e.a(param0, var11, (byte) 116, var8);
+                      this.field_e.write(param0, var11, (byte) 116, var8);
                       var8 = var8 + var11;
                     } else {
                       AccountCreationResultPanel.field_kb[0] = (byte)(param4 >> 24);
@@ -336,13 +336,13 @@ final class SectorCacheStore {
                       AccountCreationResultPanel.field_kb[9] = (byte)this.field_b;
                       AccountCreationResultPanel.field_kb[2] = (byte)(param4 >> 8);
                       AccountCreationResultPanel.field_kb[4] = (byte)(var9 >> 8);
-                      this.field_e.a((long)(520 * var7_int), (byte) -128);
-                      this.field_e.a(AccountCreationResultPanel.field_kb, 10, (byte) 90, 0);
+                      this.field_e.seek((long)(520 * var7_int), (byte) -128);
+                      this.field_e.write(AccountCreationResultPanel.field_kb, 10, (byte) 90, 0);
                       var11 = -var8 + param1;
                       if (510 < var11) {
                         var11 = 510;
                       }
-                      this.field_e.a(param0, var11, (byte) 118, var8);
+                      this.field_e.write(param0, var11, (byte) 118, var8);
                       var8 = var8 + var11;
                     }
                     var7_int = var10;
@@ -414,7 +414,7 @@ final class SectorCacheStore {
         }
     }
 
-    SectorCacheStore(int param0, we param1, we param2, int param3) {
+    SectorCacheStore(int param0, BufferedRandomAccessFile param1, BufferedRandomAccessFile param2, int param3) {
         this.field_e = null;
         this.field_f = 65000;
         this.field_d = null;

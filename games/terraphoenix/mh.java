@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mh {
-    static ak field_b;
+    static BufferedRandomAccessFile field_b;
     static o field_a;
 
     public static void clearStaticReferences(int param0) {

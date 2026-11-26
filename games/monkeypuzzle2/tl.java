@@ -101,7 +101,7 @@ final class tl {
             var5 = var9;
             var6 = param3;
             var7 = param1;
-            var9[var6] = var7 + (ch.a(16711422, var9[var6]) >> 1);
+            var9[var6] = var7 + (BufferedRandomAccessFile.a(16711422, var9[var6]) >> 1);
             param3++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

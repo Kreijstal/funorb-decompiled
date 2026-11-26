@@ -733,10 +733,10 @@ public final class Vertigo2 extends GameShell {
           be.field_n = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_dynamite", "", (byte) 98));
           uo.field_e = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_6", "", (byte) 98));
           oj.field_L = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "lobby_logo", "", (byte) 98));
-          im.field_c = new ArgbSprite[5];
+          BufferedRandomAccessFile.field_c = new ArgbSprite[5];
           bh.field_y = new ArgbSprite[5];
           for (var4_intLifetime2 = 0; 5 > var4_intLifetime2; var4_intLifetime2++) {
-            im.field_c[var4_intLifetime2] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_" + (-var4_intLifetime2 + 5), "", (byte) 98));
+            BufferedRandomAccessFile.field_c[var4_intLifetime2] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_" + (-var4_intLifetime2 + 5), "", (byte) 98));
           }
           for (var4_intLifetime3 = 0; var4_intLifetime3 < 5; var4_intLifetime3++) {
             bh.field_y[var4_intLifetime3] = (ArgbSprite) (MusicPatchPcmStream.a(rn.field_u, "interface_bucket_blue_" + (-var4_intLifetime3 + 5), "", (byte) 98));
@@ -881,7 +881,7 @@ public final class Vertigo2 extends GameShell {
           tk.clearStaticReferences((byte) 95);
           DiskCacheWorker.a(false);
           kr.c(5);
-          im.clearStaticReferences(33);
+          BufferedRandomAccessFile.clearStaticReferences(33);
           ff.resetStaticState((byte) 120);
           GzipDecompressor.clearStaticReferences(-102);
           ab.resetStaticState(0);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class DelegatingCanvas extends java.awt.Canvas {
-    static we field_b;
+    static BufferedRandomAccessFile field_b;
     private java.awt.Component field_c;
     static float field_a;
 

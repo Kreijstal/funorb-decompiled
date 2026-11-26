@@ -199,7 +199,7 @@ abstract class ve {
               og.field_c = ig.field_a.readString(false);
               var11 = (CharSequence) ((Object) og.field_c);
               cb.field_t = ProxyAuthenticationRequiredException.a(var11, (byte) -48);
-              be.field_l = ig.field_a.readUnsignedByte(true);
+              BufferedRandomAccessFile.field_l = ig.field_a.readUnsignedByte(true);
               uf.field_m = gg.field_b;
               if (fa.field_b.a((byte) 45) == jf.field_M) {
                 bb.field_J.a(kk.c(-14047), 4096);

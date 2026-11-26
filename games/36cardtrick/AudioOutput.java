@@ -167,7 +167,7 @@ class AudioOutput {
           if (var1 != 0) {
             field_o.field_d = true;
             while (field_o.field_c) {
-              wk.sleepMillis((byte) -118, 50L);
+              BoundedRandomAccessFile.sleepMillis((byte) -118, 50L);
             }
             field_o = null;
           }

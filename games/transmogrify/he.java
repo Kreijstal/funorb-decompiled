@@ -464,7 +464,7 @@ final class he extends IntrusiveNode {
           }
           if (var8 > 0 &&
             var7 > 0) {
-            we.a(var6, param1, var7, param0.field_w, var10, var9, var8, 0, SoftwareRasterizer.field_h, (byte) -53, var5_int);
+            BufferedRandomAccessFile.a(var6, param1, var7, param0.field_w, var10, var9, var8, 0, SoftwareRasterizer.field_h, (byte) -53, var5_int);
             return;
           }
           return;

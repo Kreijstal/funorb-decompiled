@@ -5,7 +5,7 @@ import java.io.*;
 
 final class PcmOutputWorker implements Runnable {
     volatile AudioOutput[] field_g;
-    static hd field_b;
+    static BufferedRandomAccessFile field_b;
     static String[] field_f;
     static String field_c;
     static ph field_e;

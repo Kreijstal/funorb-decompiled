@@ -692,7 +692,7 @@ class mf extends IntrusiveNode {
           }
           break;
         }
-        var5 = lc.d((byte) 60);
+        var5 = BufferedRandomAccessFile.d((byte) 60);
         if (!param0) {
           mf.clearStaticReferences(118);
         }

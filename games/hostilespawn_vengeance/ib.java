@@ -1192,7 +1192,7 @@ final class ib {
                 }
                 var2 = mk.b("V4_notice_launcher", (byte) -120);
                 if (null != var2) {
-                  bn.field_n = PcmResampler.a(123, var2);
+                  BufferedRandomAccessFile.field_n = PcmResampler.a(123, var2);
                 }
                 var2 = mk.b("V4_notice_railgun", (byte) -127);
                 if (var2 != null) {

@@ -88,7 +88,7 @@ final class le {
           }
           if (vk.field_g == 0 &&
             null != ib.field_d) {
-            var2 = lc.field_l;
+            var2 = BufferedRandomAccessFile.field_l;
           }
           if (vk.field_g == 2 &&
             !jd.b((byte) 75)) {
@@ -101,7 +101,7 @@ final class le {
               var2 = oc.a(r.field_Fb, new String[]{ij.field_c}, (byte) -69);
             }
             if (an.field_c) {
-              lc.a((String) null, (String) null, 2, 0, (String) (var2), false);
+              BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, (String) (var2), false);
               kf.a(-98);
             }
           }

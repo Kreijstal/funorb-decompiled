@@ -135,10 +135,10 @@ final class j extends ne {
           var17 = new RgbSprite(param3.a(0, "", "button.gif"), (java.awt.Component) ((Object) ol.field_e));
           hm.a("dropdown", param0, (byte) -42, "commonui");
           var5 = fb.a(param0, (byte) 45, "commonui", "screen_options");
-          k.field_c = new bi[4];
+          BufferedRandomAccessFile.field_c = new bi[4];
           lg.field_c = new bi[4];
           hh.field_a = new bi[4];
-          var6 = new bi[][]{lg.field_c, k.field_c, hh.field_a};
+          var6 = new bi[][]{lg.field_c, BufferedRandomAccessFile.field_c, hh.field_a};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

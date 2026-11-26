@@ -129,7 +129,7 @@ final class PcmOutputWorker implements Runnable {
                 var2.serviceOutput();
               }
             }
-            wk.sleepMillis((byte) -123, 10L);
+            BoundedRandomAccessFile.sleepMillis((byte) -123, 10L);
             Main.a((Object) null, this.field_a, (byte) 109);
           }
         } catch (Exception exception) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class as {
-    static im field_d;
+    static BufferedRandomAccessFile field_d;
     static String field_f;
     static String field_c;
     static String field_a;

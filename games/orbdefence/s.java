@@ -9,7 +9,7 @@ class s extends pj {
     private boolean field_z;
     private boolean field_B;
     static String[] field_E;
-    static dj field_y;
+    static BufferedRandomAccessFile field_y;
     boolean field_D;
     boolean field_F;
     static PacketBuffer field_C;

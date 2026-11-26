@@ -12,8 +12,8 @@ final class f extends dk {
         try {
           if (ge.field_d != null) {
             try {
-              ge.field_d.a(-107, 0L);
-              ge.field_d.a(AccountRequestState.field_a.position, AccountRequestState.field_a.payload, 24, (byte) -23);
+              ge.field_d.seek(-107, 0L);
+              ge.field_d.write(AccountRequestState.field_a.position, AccountRequestState.field_a.payload, 24, (byte) -23);
             } catch (Exception exception) {
             }
           }

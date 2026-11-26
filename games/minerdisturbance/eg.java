@@ -126,18 +126,18 @@ class eg implements ad, cf {
           try {
             var6 = null;
             if (jl.field_fb.field_k != null) {
-              fe.field_z = new me(jl.field_fb.field_k, 5200, 0);
+              fe.field_z = new BufferedRandomAccessFile(jl.field_fb.field_k, 5200, 0);
               jl.field_fb.field_k = null;
-              var6 = new SectorCacheStore(255, fe.field_z, new me(jl.field_fb.field_f, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, fe.field_z, new BufferedRandomAccessFile(jl.field_fb.field_f, 12000, 0), 2097152);
             }
             var7 = null;
             var8 = -4 / ((param0 - 18) / 41);
             if (fe.field_z != null) {
               if (null == aa.field_h) {
-                aa.field_h = new me[jl.field_fb.field_e.length];
+                aa.field_h = new BufferedRandomAccessFile[jl.field_fb.field_e.length];
               }
               if (null == aa.field_h[param1]) {
-                aa.field_h[param1] = new me(jl.field_fb.field_e[param1], 12000, 0);
+                aa.field_h[param1] = new BufferedRandomAccessFile(jl.field_fb.field_e[param1], 12000, 0);
                 jl.field_fb.field_e[param1] = null;
               }
               var7 = new SectorCacheStore(param1, fe.field_z, aa.field_h[param1], 2097152);

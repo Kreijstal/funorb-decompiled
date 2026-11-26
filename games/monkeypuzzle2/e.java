@@ -203,7 +203,7 @@ final class e {
         try {
           mg.field_u = param5;
           vf.field_b = param3;
-          pl.field_h = param2;
+          BoundedRandomAccessFile.field_h = param2;
           ud.field_a = param1;
           de.field_j = param0;
           if (param4 != -1) {

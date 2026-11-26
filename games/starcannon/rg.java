@@ -36,7 +36,7 @@ final class rg extends vk implements si, ga {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = of.field_g[w.a(255, (int) var10[var6])];
           }
-          var1[var2] = new Sprite(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var11);
+          var1[var2] = new Sprite(BufferedRandomAccessFile.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var11);
         }
         var2Lifetime1 = 57 / ((47 - param0) / 46);
         rc.b((byte) -82);

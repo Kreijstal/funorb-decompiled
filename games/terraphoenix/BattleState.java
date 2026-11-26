@@ -3573,7 +3573,7 @@ final class BattleState {
           var9 = 0;
           var6 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var6 < ak.field_q)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(var6 < BufferedRandomAccessFile.field_q)))) {
             stackIn_523_0 = ~var6;
             stackIn_523_1 = -13;
             if (var12 == 0) {
@@ -3723,7 +3723,7 @@ final class BattleState {
             var10Lifetime1 = 0;
             var6 = 0;
             while (true) {
-              if (var6 < ak.field_q) {
+              if (var6 < BufferedRandomAccessFile.field_q) {
                 stackIn_548_0 = this.units[var6];
                 if (var12 == 0) {
                   if (stackIn_548_0 != null &&
@@ -3749,7 +3749,7 @@ final class BattleState {
             var10Lifetime2 = 0;
             var6 = 0;
             while (true) {
-              if (var6 < ak.field_q) {
+              if (var6 < BufferedRandomAccessFile.field_q) {
                 if (var12 == 0) {
                   if (null != this.units[var6] &&
                     null != this.units[var6].field_Z &&
@@ -5732,7 +5732,7 @@ final class BattleState {
                 }
                 case 12: {
                     try {
-                        if (~var4_int <= ~ak.field_q) {
+                        if (~var4_int <= ~BufferedRandomAccessFile.field_q) {
                             statePc = 109;
                             continue scanLoop1;
                         } else {
@@ -12183,10 +12183,10 @@ final class BattleState {
                                             if (Archive.field_a >= 1) {
                                               this.a(1, TutorialText.field_d[76], -87);
                                               if (var24 != 0) {
-                                                this.a(-1, ak.field_c, -32);
+                                                this.a(-1, BufferedRandomAccessFile.field_c, -32);
                                               }
                                             } else {
-                                              this.a(-1, ak.field_c, -32);
+                                              this.a(-1, BufferedRandomAccessFile.field_c, -32);
                                             }
                                             if (2 == Archive.field_a) {
                                               var2_int = 14;
@@ -12480,7 +12480,7 @@ final class BattleState {
           }
           var16 = 0;
           this.field_u = false;
-          ak.field_q = 0;
+          BufferedRandomAccessFile.field_q = 0;
           var15 = 0;
           scanLoop15: while (true) {
             boolean decompiledFrameCompleted0 = true;
@@ -12510,8 +12510,8 @@ final class BattleState {
                   }
                 }
                 if (stackIn_306_0 != null) {
-                  this.units[ak.field_q] = new BattleUnit(param0.field_nb[var15]);
-                  ak.field_q = ak.field_q + 1;
+                  this.units[BufferedRandomAccessFile.field_q] = new BattleUnit(param0.field_nb[var15]);
+                  BufferedRandomAccessFile.field_q = BufferedRandomAccessFile.field_q + 1;
                 }
                 var15++;
                 if (var24 == 0) {
@@ -12637,7 +12637,7 @@ final class BattleState {
               this.field_u = true;
             }
             if (decompiledFrameCompleted0) {
-              var16 = ak.field_q;
+              var16 = BufferedRandomAccessFile.field_q;
               var15 = 0;
               while (true) {
                 if (var15 < var6) {
@@ -12672,7 +12672,7 @@ final class BattleState {
                       this.units[var16].tile = var17_ref_dl;
                     }
                     var16++;
-                    ak.field_q = ak.field_q + 1;
+                    BufferedRandomAccessFile.field_q = BufferedRandomAccessFile.field_q + 1;
                     var15++;
                     continue;
                   }
@@ -12770,7 +12770,7 @@ final class BattleState {
             var15++;
           } while (var24 == 0);
           boolean decompiledNaturalLoopExit1 = false;
-          while (!(decompiledNaturalLoopExit1 = (!(var15 >= ak.field_q)))) {
+          while (!(decompiledNaturalLoopExit1 = (!(var15 >= BufferedRandomAccessFile.field_q)))) {
             stackIn_455_0 = ~this.units[var15].field_t;
             if (var24 == 0) {
               if (stackIn_455_0 != -5 &&
@@ -13046,85 +13046,85 @@ final class BattleState {
                   var18 = 0;
                   var19 = 0;
                   var20 = 0;
-                  if (~var15 == ~(0 + ak.field_q)) {
+                  if (~var15 == ~(0 + BufferedRandomAccessFile.field_q)) {
                     var19 = 16;
                     var20 = 0;
                     this.units[var15].field_nb = new oh(2);
                     var18 = 20;
                   }
-                  if (ak.field_q + 1 == var15) {
+                  if (BufferedRandomAccessFile.field_q + 1 == var15) {
                     this.units[var15].field_nb = new oh(2);
                     var19 = 20;
                     var18 = 19;
                     var20 = 0;
                   }
-                  if (ak.field_q + 2 == var15) {
+                  if (BufferedRandomAccessFile.field_q + 2 == var15) {
                     var20 = 0;
                     var18 = 26;
                     var19 = 21;
                     this.units[var15].field_nb = new oh(1);
                   }
-                  if (~(ak.field_q + 3) == ~var15) {
+                  if (~(BufferedRandomAccessFile.field_q + 3) == ~var15) {
                     var20 = 0;
                     var18 = 27;
                     this.units[var15].field_nb = new oh(1);
                     var19 = 18;
                   }
-                  if (4 + ak.field_q == var15) {
+                  if (4 + BufferedRandomAccessFile.field_q == var15) {
                     var20 = 0;
                     var19 = 30;
                     this.units[var15].field_nb = new oh(0);
                     var18 = 28;
                   }
-                  if (var15 == ak.field_q + 5) {
+                  if (var15 == BufferedRandomAccessFile.field_q + 5) {
                     this.units[var15].field_nb = new oh(1);
                     var19 = 33;
                     var20 = 0;
                     var18 = 27;
                   }
-                  if (var15 == ak.field_q + 6) {
+                  if (var15 == BufferedRandomAccessFile.field_q + 6) {
                     var19 = 31;
                     this.units[var15].field_nb = new oh(1);
                     var20 = 0;
                     var18 = 29;
                   }
-                  if (~(7 + ak.field_q) == ~var15) {
+                  if (~(7 + BufferedRandomAccessFile.field_q) == ~var15) {
                     this.units[var15].field_nb = new oh(3);
                     var20 = 0;
                     var18 = 25;
                     var19 = 5;
                   }
-                  if (var15 == ak.field_q + 8) {
+                  if (var15 == BufferedRandomAccessFile.field_q + 8) {
                     var18 = 26;
                     var19 = 5;
                     this.units[var15].field_nb = new oh(1);
                     var20 = 0;
                   }
-                  if (~var15 == ~(ak.field_q + 9)) {
+                  if (~var15 == ~(BufferedRandomAccessFile.field_q + 9)) {
                     this.units[var15].field_nb = new oh(3);
                     var20 = 0;
                     var18 = 27;
                     var19 = 5;
                   }
-                  if (~var15 == ~(10 + ak.field_q)) {
+                  if (~var15 == ~(10 + BufferedRandomAccessFile.field_q)) {
                     var19 = 37;
                     var20 = 0;
                     var18 = 2;
                     this.units[var15].field_nb = new oh(2);
                   }
-                  if (var15 == ak.field_q + 11) {
+                  if (var15 == BufferedRandomAccessFile.field_q + 11) {
                     this.units[var15].field_nb = new oh(2);
                     var18 = 3;
                     var20 = 0;
                     var19 = 38;
                   }
-                  if (~var15 == ~(ak.field_q + 12)) {
+                  if (~var15 == ~(BufferedRandomAccessFile.field_q + 12)) {
                     var18 = 29;
                     var19 = 2;
                     var20 = 0;
                     this.units[var15].field_nb = new oh(2);
                   }
-                  if (13 + ak.field_q == var15) {
+                  if (13 + BufferedRandomAccessFile.field_q == var15) {
                     var20 = 0;
                     var18 = 29;
                     this.units[var15].field_nb = new oh(2);

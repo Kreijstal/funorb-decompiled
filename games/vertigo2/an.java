@@ -338,15 +338,15 @@ final class an {
           }
           stackIn_73_0 = AccountNameAvailabilityValidator.field_o;
           stackIn_73_1 = 0;
-          stackIn_74_2 = (param2) && (!param0) && (!im.field_g);
+          stackIn_74_2 = (param2) && (!param0) && (!BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);
           stackIn_78_0 = lb.field_c;
           stackIn_78_1 = 0;
-          stackIn_79_2 = (param2) && (!param0) && (!im.field_g);
+          stackIn_79_2 = (param2) && (!param0) && (!BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_78_0).a(stackIn_78_1, stackIn_79_2);
           stackIn_83_0 = wc.field_m;
           stackIn_83_1 = 0;
-          stackIn_84_2 = (param2) && (!param0) && (im.field_g);
+          stackIn_84_2 = (param2) && (!param0) && (BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (null != sj.field_d) {

@@ -201,33 +201,33 @@ abstract class wm {
           hm.field_c[0] = new ci(0L, r.field_Tb, ia.field_w);
           ba.field_P[0] = new tl[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            ba.field_P[0][1 + var17_int] = new tl(0L, lc.field_f, (ci) null, sj.field_k, sh.field_b[var17_int], gf.field_a[var17_int]);
+            ba.field_P[0][1 + var17_int] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, sh.field_b[var17_int], gf.field_a[var17_int]);
           }
           if (2 <= wn.field_d.length) {
             hm.field_c[1] = new ci(0L, r.field_Tb, tm.field_h);
             array$0 = new tl[1 + wn.field_d.length];
             ba.field_P[1] = array$0;
-            ba.field_P[1][0] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
+            ba.field_P[1][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < wn.field_d.length; var17_intLifetime1++) {
-              ba.field_P[1][var17_intLifetime1 + 1] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) null, Integer.toString(wn.field_d[var17_intLifetime1]));
+              ba.field_P[1][var17_intLifetime1 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, Integer.toString(wn.field_d[var17_intLifetime1]));
             }
           }
           hm.field_c[2] = new ci(0L, r.field_Tb, jb.field_d);
-          ba.field_P[2] = new tl[]{new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k), new tl(0L, lc.field_f, (ci) null, sj.field_k, gi.field_c[0], fd.field_l), new tl(0L, lc.field_f, (ci) null, sj.field_k, gi.field_c[1], pe.field_c)};
+          ba.field_P[2] = new tl[]{new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[0], fd.field_l), new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, gi.field_c[1], pe.field_c)};
           if (un.field_q > 1) {
             hm.field_c[3] = new ci(0L, r.field_Tb, cl.field_a);
             array$1 = new tl[un.field_q + 1];
             ba.field_P[3] = array$1;
-            ba.field_P[3][0] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
+            ba.field_P[3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
             for (var17_intLifetime2 = 0; un.field_q > var17_intLifetime2; var17_intLifetime2++) {
-              ba.field_P[3][var17_intLifetime2 + 1] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) null, bj.field_pb[var17_intLifetime2]);
+              ba.field_P[3][var17_intLifetime2 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, bj.field_pb[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param6; var17_intLifetime3++) {
             hm.field_c[4 + var17_intLifetime3] = new ci(0L, r.field_Tb, td.field_n[var17_intLifetime3]);
             array$2 = new tl[ce.a((int) ba.field_Q[var17_intLifetime3], 255) + 1];
             ba.field_P[var17_intLifetime3 + 4] = array$2;
-            ba.field_P[4 + var17_intLifetime3][0] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
+            ba.field_P[4 + var17_intLifetime3][0] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) null, df.field_k);
             for (var18 = 0; (255 & ba.field_Q[var17_intLifetime3]) > var18; var18++) {
               if (GzipInflater.field_e == null) {
                 var19_ref = null;
@@ -247,7 +247,7 @@ abstract class wm {
                   var20 = null;
                 }
               }
-              ba.field_P[4 + var17_intLifetime3][var18 + 1] = new tl(0L, lc.field_f, (ci) null, sj.field_k, (RgbSprite) (var19_ref), (String) (var20));
+              ba.field_P[4 + var17_intLifetime3][var18 + 1] = new tl(0L, BufferedRandomAccessFile.field_f, (ci) null, sj.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param6; var17_intLifetime4++) {

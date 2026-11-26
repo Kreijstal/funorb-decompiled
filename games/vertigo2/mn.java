@@ -30,7 +30,7 @@ final class mn extends IntrusiveNode {
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 ||
           null == gd.field_j) {
-          im.field_g = false;
+          BufferedRandomAccessFile.field_g = false;
         }
         if (param0) {
           if (ArchiveRequest.field_y <= 0) {
@@ -77,7 +77,7 @@ final class mn extends IntrusiveNode {
                 ArchiveRequest.field_y = ArchiveRequest.field_y - 1;
               }
             } else {
-              im.field_g = false;
+              BufferedRandomAccessFile.field_g = false;
               if (0 >= ko.field_P) {
                 if (0 >= mp.field_b) {
                   if (ArchiveRequest.field_y < ld.field_b) {

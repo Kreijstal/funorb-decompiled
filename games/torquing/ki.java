@@ -214,7 +214,7 @@ final class ki extends WidgetContainer implements fp, ng, ba {
         this.field_J = new lg(bq.field_a, (ca) null);
         this.field_N = new lg(cm.field_k, (ca) null);
         this.field_E.field_n = ag.field_d;
-        this.field_K.field_n = o.field_c;
+        this.field_K.field_n = BufferedRandomAccessFile.field_c;
         this.field_G.field_n = pf.field_j;
         this.field_B.field_n = oi.field_a;
         this.field_L.field_n = ud.field_j;

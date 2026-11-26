@@ -75,7 +75,7 @@ final class fj extends ButtonWidget {
         RuntimeException var4 = null;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          ch.field_d = f.field_i;
+          BufferedRandomAccessFile.field_d = f.field_i;
           if (255 != param3) {
             if (100 > param3) {
               cg.field_a = lh.createAccountErrorResult(true, param1, param3);

@@ -3,7 +3,7 @@
  */
 final class mc {
     static int field_b;
-    static k[] field_c;
+    static BufferedRandomAccessFile[] field_c;
     static int field_a;
 
     public static void clearStaticReferences(byte param0) {
@@ -19,7 +19,7 @@ final class mc {
         try {
           DualLinkNode.field_k = param1;
           if (param2 != 0) {
-            field_c = (k[]) null;
+            field_c = (BufferedRandomAccessFile[]) null;
           }
           GameAppletShell.field_b = param0;
         } catch (RuntimeException runtimeException) {

@@ -22,7 +22,7 @@ final class fl {
           if (param1 != -116) {
             field_b = (String) null;
           }
-          var2 = new PalettedBitmapFont(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
+          var2 = new PalettedBitmapFont(param0, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, BufferedRandomAccessFile.field_f);
           GzipDecompressor.a(12428);
           stackIn_6_0 = var2;
           return stackIn_6_0;

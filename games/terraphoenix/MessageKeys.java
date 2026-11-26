@@ -233,7 +233,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("error_js5connect", false);
                 if (null != var2) {
-                  ak.field_f = ll.a(0, var2);
+                  BufferedRandomAccessFile.field_f = ll.a(0, var2);
                 }
                 var2 = bc.a("login_gameupdated", false);
                 if (null != var2) {
@@ -1774,7 +1774,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_alert_passrepeated", false);
                 if (var2 != null) {
-                  ak.field_j = ll.a(param0 ^ 3, var2);
+                  BufferedRandomAccessFile.field_j = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("create_alert_passlength", false);
                 if (null != var2) {
@@ -2848,7 +2848,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("fs_button_members", false);
                 if (null != var2) {
-                  ak.field_g = ll.a(0, var2);
+                  BufferedRandomAccessFile.field_g = ll.a(0, var2);
                 }
                 var2 = bc.a("fs_unavailable", false);
                 if (null != var2) {

@@ -266,7 +266,7 @@ final class ed {
             stackIn_52_1 = GzipDecompressor.field_e;
             stackIn_52_2 = ha.field_l;
             stackIn_53_3 = (ul.field_G.field_k == 0);
-            k.a(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
+            BufferedRandomAccessFile.a(stackIn_52_0, stackIn_52_1, stackIn_52_2, stackIn_53_3);
           }
           if (null != vj.field_c &&
             null != df.field_b) {
@@ -279,7 +279,7 @@ final class ed {
             stackIn_61_1 = rj.field_o;
             stackIn_61_2 = mh.field_w;
             stackIn_62_3 = (ul.field_G.field_k == 1);
-            k.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_62_3);
+            BufferedRandomAccessFile.a(stackIn_61_0, stackIn_61_1, stackIn_61_2, stackIn_62_3);
           }
           if (MouseWheelInput.field_f != null) {
             var1_int = 357 - MouseWheelInput.field_f.field_r / 2;

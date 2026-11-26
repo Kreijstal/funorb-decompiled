@@ -574,7 +574,7 @@ final class rg extends ii implements pf, vg, mg {
           if (ub.field_s == var4) {
             return false;
           }
-          if (var4 != hd.field_g) {
+          if (var4 != BufferedRandomAccessFile.field_g) {
             return true;
           }
           return false;

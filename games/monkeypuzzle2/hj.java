@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class hj {
-    static ch field_D;
+    static BufferedRandomAccessFile field_D;
     int field_k;
     int field_P;
     private int field_H;
@@ -172,7 +172,7 @@ final class hj {
           while (this.field_fb.length > var5) {
             var7 = WidgetContainer.field_w[var5];
             var8 = ad.field_g[var5];
-            this.field_fb[var5] = ch.a(ch.a(65280, var8) * var4 + var3 * ch.a(var7, 65280), 16711680) + ch.a(var4 * ch.a(var8, 16711935) + ch.a(var7, 16711935) * var3, -16711936) >> 8;
+            this.field_fb[var5] = BufferedRandomAccessFile.a(BufferedRandomAccessFile.a(65280, var8) * var4 + var3 * BufferedRandomAccessFile.a(var7, 65280), 16711680) + BufferedRandomAccessFile.a(var4 * BufferedRandomAccessFile.a(var8, 16711935) + BufferedRandomAccessFile.a(var7, 16711935) * var3, -16711936) >> 8;
             var5++;
           }
           return;
@@ -475,7 +475,7 @@ final class hj {
             }
             try {
               if (!param1) {
-                field_D = (ch) null;
+                field_D = (BufferedRandomAccessFile) null;
               }
               var2_int = ol.field_g.c(-110);
               if (var2_int > 0) {
@@ -1752,10 +1752,10 @@ final class hj {
           ci.field_d.a(0, ci.field_d.field_n << 3, this.field_M << 4, this.field_k - 48 << 4, var10Lifetime3, 4096);
           DequeCursor.field_a[0].c(20 + this.field_M, this.field_k - 13 - wl.field_f[0].field_n);
           fa.f(1);
-          pl.field_e.a(this.field_j.toString(), 40, 124, 16777215, -1);
-          pl.field_e.a(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
+          BoundedRandomAccessFile.field_e.a(this.field_j.toString(), 40, 124, 16777215, -1);
+          BoundedRandomAccessFile.field_e.a(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
           var11Lifetime4 = -48 / ((param0 - 56) / 43);
-          pl.field_e.a(Integer.toString(1 + aa.field_a), 40, 288, 16777215, -1);
+          BoundedRandomAccessFile.field_e.a(Integer.toString(1 + aa.field_a), 40, 288, 16777215, -1);
           if (13 != this.field_jb) {
             if (this.field_jb == 1) {
               var12 = this.field_d * 40 / 50;
@@ -1997,7 +1997,7 @@ final class hj {
           }
           this.field_fb = new int[WidgetContainer.field_w.length];
           gl.a(WidgetContainer.field_w, 0, this.field_fb, 0, this.field_fb.length);
-          ch.b(-112);
+          BufferedRandomAccessFile.b(-112);
           ProxyAuthenticationRequiredException.field_b = null;
           dupTemp$0 = jf.a(-2147483648);
           this.field_W = dupTemp$0;

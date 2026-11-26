@@ -54,7 +54,7 @@ abstract class wb {
           field_g = (java.awt.Image) null;
           return;
         }
-        var1 = be.field_l;
+        var1 = BufferedRandomAccessFile.field_l;
         if (var1 > 0) {
           if (var1 == 1) {
             jj.field_d = oj.field_d;

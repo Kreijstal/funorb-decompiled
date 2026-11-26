@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class kb {
+final class BoundedRandomAccessFile {
     static String field_e;
     private RandomAccessFile field_d;
     private long field_a;
@@ -11,7 +11,7 @@ final class kb {
     static String[] field_f;
     static String field_c;
 
-    final void a(long param0, int param1) throws IOException {
+    final void seek(long param0, int param1) throws IOException {
         this.field_d.seek(param0);
         if (param1 != 2205) {
           this.field_a = -119L;
@@ -45,7 +45,7 @@ final class kb {
         }
     }
 
-    final int a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final int read(int param0, int param1, byte[] param2, int param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -59,7 +59,7 @@ final class kb {
             this.field_a = this.field_a + (long)var5_int;
           }
           if (param3 != 1) {
-            kb.a(-29, -80);
+            BoundedRandomAccessFile.a(-29, -80);
           }
           stackIn_5_0 = var5_int;
           return stackIn_5_0;
@@ -80,11 +80,11 @@ final class kb {
     protected final void finalize() throws Throwable {
         if (null != this.field_d) {
           System.out.println("");
-          this.a(118);
+          this.close(118);
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         int var2 = -70 % ((49 - param0) / 40);
         if (this.field_d != null) {
           this.field_d.close();
@@ -92,7 +92,7 @@ final class kb {
         }
     }
 
-    final void a(byte[] param0, boolean param1, int param2, int param3) throws IOException {
+    final void write(byte[] param0, boolean param1, int param2, int param3) throws IOException {
         try {
           if (this.field_b < this.field_a + (long)param3) {
             this.field_d.seek(this.field_b);
@@ -101,7 +101,7 @@ final class kb {
           }
           this.field_d.write(param0, param2, param3);
           if (param1) {
-            kb.b((byte) -71);
+            BoundedRandomAccessFile.b((byte) -71);
           }
           this.field_a = this.field_a + (long)param3;
         } catch (RuntimeException runtimeException) {
@@ -119,7 +119,7 @@ final class kb {
         field_e = null;
         field_f = null;
         if (param0 != 37) {
-          kb.a(-99, 9);
+          BoundedRandomAccessFile.a(-99, 9);
         }
     }
 
@@ -193,14 +193,14 @@ final class kb {
         pd.field_u = SocketConnector.a(-119, var4 * var2, var6 * var2);
     }
 
-    final long b(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != -106) {
-          kb.a(50, 0);
+          BoundedRandomAccessFile.a(50, 0);
         }
         return this.field_d.length();
     }
 
-    kb(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

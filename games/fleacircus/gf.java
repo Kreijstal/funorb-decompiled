@@ -172,7 +172,7 @@ final class gf {
         if (param0 > -5) {
           gf.clearStaticReferences(126);
           if (var1 == null) {
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           var2 = AccountRequestState.field_a;
@@ -184,7 +184,7 @@ final class gf {
           return;
         }
         if (var1 == null) {
-          k.c(-28354);
+          BufferedRandomAccessFile.c(-28354);
           return;
         }
         var2Lifetime1 = AccountRequestState.field_a;

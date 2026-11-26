@@ -2053,7 +2053,7 @@ final class je {
               }
             } else {
               field_u = field_N[cm.field_o];
-              if (me.field_h < 2000) {
+              if (BufferedRandomAccessFile.field_h < 2000) {
                 fn.a(31, 224, 3);
               }
             }
@@ -2061,7 +2061,7 @@ final class je {
         }
         field_H = field_H + 24;
         if (field_u == field_N[cm.field_o]) {
-          me.a(cm.field_o, false);
+          BufferedRandomAccessFile.a(cm.field_o, false);
         }
         if (rg.field_sb > 0 &&
           field_u == field_N[cm.field_o] &&
@@ -2796,7 +2796,7 @@ final class je {
           field_u < 20) {
           field_D = (hf.field_t + 24) * 32;
           field_J = true;
-          me.a(cm.field_o, false);
+          BufferedRandomAccessFile.a(cm.field_o, false);
         }
         if (field_J &&
           (field_m & 1) == 0) {

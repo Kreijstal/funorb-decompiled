@@ -558,7 +558,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param1) {
           PacketBuffer.clearStaticReferences(-28);
         }
-        lr.field_P.b(im.field_j, 120);
+        lr.field_P.b(BufferedRandomAccessFile.field_j, 120);
         lr.field_P.b(Vertigo2.field_M, 120);
         ho.a(0, param0);
     }

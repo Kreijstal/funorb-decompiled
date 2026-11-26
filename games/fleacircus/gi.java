@@ -58,9 +58,9 @@ abstract class gi {
               ContextualRuntimeException.b(115) <= 30000L) {
               return false;
             }
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
           } catch (IOException iOException) {
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {

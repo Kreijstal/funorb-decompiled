@@ -580,16 +580,16 @@ class ci extends ei {
             var6 = null;
             var7 = null;
             if (null != ol.field_N.field_a) {
-              kj.field_a = new lc(ol.field_N.field_a, 5200, 0);
+              kj.field_a = new BufferedRandomAccessFile(ol.field_N.field_a, 5200, 0);
               ol.field_N.field_a = null;
-              var6 = new SectorCacheStore(255, kj.field_a, new lc(ol.field_N.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, kj.field_a, new BufferedRandomAccessFile(ol.field_N.field_n, 12000, 0), 2097152);
             }
             if (null != kj.field_a) {
               if (hj.field_n == null) {
-                hj.field_n = new lc[ol.field_N.field_r.length];
+                hj.field_n = new BufferedRandomAccessFile[ol.field_N.field_r.length];
               }
               if (null == hj.field_n[param1]) {
-                hj.field_n[param1] = new lc(ol.field_N.field_r[param1], 12000, 0);
+                hj.field_n[param1] = new BufferedRandomAccessFile(ol.field_N.field_r[param1], 12000, 0);
                 ol.field_N.field_r[param1] = null;
               }
               var7 = new SectorCacheStore(param1, kj.field_a, hj.field_n[param1], 2097152);

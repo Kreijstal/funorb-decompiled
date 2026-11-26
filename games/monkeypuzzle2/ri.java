@@ -92,7 +92,7 @@ final class ri {
         int var18Lifetime1;
         var19 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var20 = pl.field_e;
+          var20 = BoundedRandomAccessFile.field_e;
           if (!param2) {
             stackIn_4_0 = kg.field_c;
           } else {

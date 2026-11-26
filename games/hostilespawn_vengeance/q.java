@@ -6,7 +6,7 @@ final class q {
     static int field_d;
     static int field_h;
     static RgbSprite field_c;
-    static bn field_b;
+    static BufferedRandomAccessFile field_b;
     static String field_l;
     static na field_j;
     static ql field_g;

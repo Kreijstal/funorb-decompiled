@@ -401,7 +401,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                     rm.q(-5705);
                   }
                 } else {
-                  hd.a(!param0);
+                  BufferedRandomAccessFile.a(!param0);
                 }
               } else {
                 pk.d(126);
@@ -770,7 +770,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_103_1 = !(np.field_D);
             stackIn_105_2 = mi.field_d;
             stackIn_106_3 = !(np.field_D);
-            hd.a(stackIn_102_0, stackIn_103_1, stackIn_105_2, stackIn_106_3);
+            BufferedRandomAccessFile.a(stackIn_102_0, stackIn_103_1, stackIn_105_2, stackIn_106_3);
           }
           if (f.field_d) {
             kd.a(4);

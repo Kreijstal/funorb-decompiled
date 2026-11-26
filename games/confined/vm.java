@@ -82,7 +82,7 @@ final class vm extends hf {
             }
             if (null != gd.field_q) {
               try {
-                gd.field_q.c(-102);
+                gd.field_q.close(-102);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -92,7 +92,7 @@ final class vm extends hf {
               for (var1_int = 0; vh.field_e.length > var1_int; var1_int++) {
                 if (vh.field_e[var1_int] != null) {
                   try {
-                    vh.field_e[var1_int].c(-96);
+                    vh.field_e[var1_int].close(-96);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

@@ -158,7 +158,7 @@ final class AccountCreationResultPanel extends sh implements rc {
           if (this.field_ob) {
             return super.e((byte) 21);
           }
-          var2 = jf.pollAccountCreationResult(true);
+          var2 = BufferedRandomAccessFile.pollAccountCreationResult(true);
           if (var2 != null) {
             this.showAccountCreationResult(-1, false, var2);
             return super.e((byte) 21);
@@ -171,7 +171,7 @@ final class AccountCreationResultPanel extends sh implements rc {
         if (this.field_ob) {
           return super.e((byte) 21);
         }
-        var2Lifetime1 = jf.pollAccountCreationResult(true);
+        var2Lifetime1 = BufferedRandomAccessFile.pollAccountCreationResult(true);
         if (var2Lifetime1 != null) {
           this.showAccountCreationResult(-1, false, var2Lifetime1);
           return super.e((byte) 21);

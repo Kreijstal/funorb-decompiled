@@ -73,7 +73,7 @@ final class ai {
           }
           if (var5 != null) {
             String var6 = (String) null;
-            lc.a(var4, (String) null, 2, 0, (String) (var5), false);
+            BufferedRandomAccessFile.a(var4, (String) null, 2, 0, (String) (var5), false);
             pk.field_b = -1;
             me.field_a = null;
             if (param1 != 3) {

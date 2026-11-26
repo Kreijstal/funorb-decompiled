@@ -306,8 +306,8 @@ final class ij extends ArchiveProvider {
             var2 = var6;
             if (null != w.field_W) {
               try {
-                w.field_W.a((byte) 120, 0L);
-                w.field_W.a(var6, 119);
+                w.field_W.seek((byte) 120, 0L);
+                w.field_W.readFully(var6, 119);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

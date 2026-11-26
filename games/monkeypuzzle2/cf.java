@@ -55,7 +55,7 @@ final class cf {
             var10 = new int[var3];
             var22 = var10;
             for (var6 = 0; var3 > var6; var6++) {
-              var10[var6] = fk.field_d[ch.a(255, (int) var21[var6])];
+              var10[var6] = fk.field_d[BufferedRandomAccessFile.a(255, (int) var21[var6])];
             }
             var1[var2] = new Sprite(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var22);
           } else {
@@ -67,7 +67,7 @@ final class cf {
             var13 = var17;
             var6_ref_int__ = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6_ref_int__[var7] = bd.a(fk.field_d[ch.a(255, (int) var21[var7])], ch.a(var16[var7] << 24, -16777216));
+              var6_ref_int__[var7] = bd.a(fk.field_d[BufferedRandomAccessFile.a(255, (int) var21[var7])], BufferedRandomAccessFile.a(var16[var7] << 24, -16777216));
             }
             var1[var2] = (Sprite) ((Object) new ArgbSprite(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var17));
           }
@@ -109,8 +109,8 @@ final class cf {
           if (255 < var1) {
             var1 = 255;
           }
-          field_a[var0] = ch.a(16746712, var1 << 16);
-          field_a[var0] = bd.a(field_a[var0], ch.a(var0 * var0 >> 5, 1962934527) << 8);
+          field_a[var0] = BufferedRandomAccessFile.a(16746712, var1 << 16);
+          field_a[var0] = bd.a(field_a[var0], BufferedRandomAccessFile.a(var0 * var0 >> 5, 1962934527) << 8);
         }
     }
 }

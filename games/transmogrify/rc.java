@@ -80,7 +80,7 @@ final class rc {
           if (null != MouseInputHandler.field_c) {
             DirectByteStorage.field_j = DirectByteStorage.field_j - MouseInputHandler.field_c.field_o;
           }
-          MouseInputHandler.field_c = we.field_l[am.field_n];
+          MouseInputHandler.field_c = BufferedRandomAccessFile.field_l[am.field_n];
           DirectByteStorage.field_j = DirectByteStorage.field_j + MouseInputHandler.field_c.field_o;
           if (mg.field_d &&
             null != MouseInputHandler.field_c.field_b) {

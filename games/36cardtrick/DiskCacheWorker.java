@@ -328,7 +328,7 @@ final class DiskCacheWorker implements Runnable {
         try {
           var2 = param0.requestThreadStart(0, 5, (Runnable) (this));
           while (0 == var2.status) {
-            wk.sleepMillis((byte) -112, 10L);
+            BoundedRandomAccessFile.sleepMillis((byte) -112, 10L);
           }
           if (var2.status == 2) {
             throw new RuntimeException();

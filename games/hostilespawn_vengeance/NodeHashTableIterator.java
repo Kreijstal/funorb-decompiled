@@ -7,7 +7,7 @@ final class NodeHashTableIterator implements Iterator {
     static RgbSprite field_g;
     static RgbSprite field_d;
     private IntrusiveNode nextNode;
-    static bn[] field_a;
+    static BufferedRandomAccessFile[] field_a;
     private IntrusiveNodeHashTable table;
     private int nextBucketIndex;
     private IntrusiveNode lastReturned;

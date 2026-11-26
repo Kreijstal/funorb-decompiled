@@ -92,8 +92,8 @@ final class fd {
             }
             if (null != mf.field_c) {
               try {
-                mf.field_c.a(0L, 0);
-                mf.field_c.a(var5, 15);
+                mf.field_c.seek(0L, 0);
+                mf.field_c.readFully(var5, 15);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var5[var3_int] == 0) {
                     continue;

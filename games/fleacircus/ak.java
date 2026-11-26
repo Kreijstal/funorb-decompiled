@@ -210,7 +210,7 @@ final class ak {
               if (248 == var9Lifetime1) {
                 ImageProducerRasterBuffer.a(14, BoundedRandomAccessFile.getApplet((byte) -80));
                 fh.field_a = rf.field_q;
-                k.c(-28354);
+                BufferedRandomAccessFile.c(-28354);
                 aa.field_q = false;
                 stackIn_35_0 = var9Lifetime1;
                 return stackIn_35_0;
@@ -236,7 +236,7 @@ final class ak {
                 for (var12 = 0; var12 < var11; var12++) {
                   tc.field_e[var12] = AccountRequestState.field_a.readPrefixedString(-84);
                 }
-                k.c(-28354);
+                BufferedRandomAccessFile.c(-28354);
                 aa.field_q = false;
                 stackIn_46_0 = 100 + var11;
                 return stackIn_46_0;
@@ -253,7 +253,7 @@ final class ak {
                 ea.a(376, BoundedRandomAccessFile.getApplet((byte) -93), var9_ref_String);
               }
             }
-            k.c(param1 ^ -21613);
+            BufferedRandomAccessFile.c(param1 ^ -21613);
             aa.field_q = false;
             stackIn_57_0 = be.field_a;
             return stackIn_57_0;

@@ -277,7 +277,7 @@ final class jn extends fb {
             bk.field_n = param11;
             if (null != re.field_n.field_d) {
               try {
-                DiskArchiveRequest.field_z = new lc(re.field_n.field_d, 64, 0);
+                DiskArchiveRequest.field_z = new BufferedRandomAccessFile(re.field_n.field_d, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

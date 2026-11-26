@@ -29,7 +29,7 @@ final class IntrusiveNodeHashTable implements Iterable {
             }
             if (null != fj.field_c) {
               try {
-                fj.field_c.d(-200000001);
+                fj.field_c.close(-200000001);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -42,7 +42,7 @@ final class IntrusiveNodeHashTable implements Iterable {
               for (var1_int = 0; var1_int < li.field_d.length; var1_int++) {
                 if (li.field_d[var1_int] != null) {
                   try {
-                    li.field_d[var1_int].d(-200000001);
+                    li.field_d[var1_int].close(-200000001);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

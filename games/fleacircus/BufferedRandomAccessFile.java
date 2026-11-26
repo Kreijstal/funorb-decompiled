@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class k {
+final class BufferedRandomAccessFile {
     private long field_k;
     private byte[] field_f;
     private long field_g;
@@ -20,7 +20,7 @@ final class k {
     static String field_e;
     private long field_o;
 
-    final void a(byte[] param0, int param1, int param2, int param3) throws IOException {
+    final void readFully(byte[] param0, int param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         int stackIn_30_0 = 0;
         int stackIn_30_1 = 0;
@@ -92,7 +92,7 @@ final class k {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param2 > 0)) {
-              this.b(98);
+              this.fillReadBuffer(98);
               var9_intLifetime1Lifetime1 = param2;
               if (this.field_i < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_i;
@@ -197,7 +197,7 @@ final class k {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, byte param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, byte param3) throws IOException {
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
@@ -219,7 +219,7 @@ final class k {
             }
             if (this.field_j != -1L && (this.field_d < this.field_j ||
               this.field_d > this.field_j + (long)this.field_h)) {
-              this.a((byte) -109);
+              this.flush((byte) -109);
             }
             if (this.field_j != -1L &&
               this.field_d + (long)param2 > this.field_j + (long)this.field_b.length) {
@@ -229,7 +229,7 @@ final class k {
               this.field_d = this.field_d + (long)var6_int;
               param2 = param2 - var6_int;
               this.field_h = this.field_b.length;
-              this.a((byte) 41);
+              this.flush((byte) 41);
             }
             if (this.field_b.length >= param2) {
               if (param2 <= 0) {
@@ -313,14 +313,14 @@ final class k {
 
     public static void a(int param0) {
         if (param0 != -40) {
-          k.c(70);
+          BufferedRandomAccessFile.c(70);
         }
         field_e = null;
         field_l = null;
         field_c = null;
     }
 
-    private final void a(byte param0) throws IOException {
+    private final void flush(byte param0) throws IOException {
         int var2;
         long var3;
         long var5;
@@ -368,12 +368,12 @@ final class k {
         }
     }
 
-    private final void b(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = fleas.field_A ? 1 : 0;
         if (param0 < 47) {
-          k.a(92, 3, 126, true);
+          BufferedRandomAccessFile.a(92, 3, 126, true);
         }
         this.field_i = 0;
         if (~this.field_d != ~this.field_k) {
@@ -399,14 +399,14 @@ final class k {
         try {
           AwtRasterBuffer.a((byte) 5, true, param1);
           if (param0 != 0) {
-            k.a(-15, -38, 84, true);
+            BufferedRandomAccessFile.a(-15, -38, 84, true);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "k.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         if (param1 >= 0L) {
           if (param0 > -103) {
             this.field_b = (byte[]) null;
@@ -417,14 +417,14 @@ final class k {
         throw new IOException();
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.a(param1, 0, param1.length, 6520);
+          this.readFully(param1, 0, param1.length, 6520);
           if (param0 != 631) {
             this.field_b = (byte[]) null;
           }
@@ -443,22 +443,22 @@ final class k {
         }
     }
 
-    final void b(byte param0) throws IOException {
-        this.a((byte) 74);
+    final void close(byte param0) throws IOException {
+        this.flush((byte) 74);
         if (param0 != -70) {
-          k.a(-30, -73, -71, false);
+          BufferedRandomAccessFile.a(-30, -73, -71, false);
         }
         this.field_m.close(-1);
     }
 
-    final long c(byte param0) {
+    final long length(byte param0) {
         if (param0 >= -46) {
           return 49L;
         }
         return this.field_o;
     }
 
-    k(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_g = -1L;
         this.field_h = 0;

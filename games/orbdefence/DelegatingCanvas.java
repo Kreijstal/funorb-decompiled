@@ -241,16 +241,16 @@ final class DelegatingCanvas extends java.awt.Canvas {
             var6 = null;
             var7 = null;
             if (lh.field_b.field_u != null) {
-              vg.field_q = new dj(lh.field_b.field_u, 5200, 0);
+              vg.field_q = new BufferedRandomAccessFile(lh.field_b.field_u, 5200, 0);
               lh.field_b.field_u = null;
-              var6 = new SectorCacheStore(255, vg.field_q, new dj(lh.field_b.field_g, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, vg.field_q, new BufferedRandomAccessFile(lh.field_b.field_g, 12000, 0), 2097152);
             }
             if (null != vg.field_q) {
               if (null == ok.field_a) {
-                ok.field_a = new dj[lh.field_b.field_p.length];
+                ok.field_a = new BufferedRandomAccessFile[lh.field_b.field_p.length];
               }
               if (null == ok.field_a[param2]) {
-                ok.field_a[param2] = new dj(lh.field_b.field_p[param2], 12000, 0);
+                ok.field_a[param2] = new BufferedRandomAccessFile(lh.field_b.field_p[param2], 12000, 0);
                 lh.field_b.field_p[param2] = null;
               }
               var7 = new SectorCacheStore(param2, vg.field_q, ok.field_a[param2], 2097152);

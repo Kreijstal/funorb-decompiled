@@ -219,7 +219,7 @@ final class di extends ci {
             this.field_Kb.a(12, (byte) -73);
           } else {
             if (this.field_Gb[param2] == -1) {
-              lc.a(103);
+              BufferedRandomAccessFile.a(103);
               rc.b(0);
             } else {
               var5 = this.field_Gb[param2] | 32768;

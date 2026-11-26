@@ -140,7 +140,7 @@ abstract class ArchiveRequest extends DualLinkNode {
                 var24 = param1.field_P[var23];
                 var25 = param1.field_f[var23];
                 var26 = param1.field_H[var23];
-                qa.field_i[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
+                BufferedRandomAccessFile.field_i[var23] = (var12 * var24 - (-(var15 * var25) - var18 * var26) >> 16) + var9;
                 fh.field_k[var23] = var10 + (var25 * var16 + var24 * var13 + var19 * var26 >> 16);
                 vg.field_b[var23] = (var14 * var24 - (-(var17 * var25) - var26 * var20) >> 16) + var11;
                 var24 = param1.field_q[var23];

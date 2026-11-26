@@ -322,7 +322,7 @@ final class GzipDecompressor {
             }
           }
           if (param0) {
-            ea.field_a.a(td.a(rg.field_B, kc.field_Q, true), td.a(pe.field_d, la.field_c, true), -104);
+            ea.field_a.a(BufferedRandomAccessFile.a(rg.field_B, kc.field_Q, true), BufferedRandomAccessFile.a(pe.field_d, la.field_c, true), -104);
             if (ea.field_a.g(0)) {
               if (ea.field_a.field_k == 0) {
                 stackIn_62_0 = 3;

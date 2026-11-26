@@ -1017,7 +1017,7 @@ final class c extends sc {
           }
           var2Lifetime98 = wm.a("holdCtrlToFire", (byte) 82);
           if (null != var2Lifetime98) {
-            pf.field_i = va.a(0, var2Lifetime98);
+            BufferedRandomAccessFile.field_i = va.a(0, var2Lifetime98);
           }
           var2Lifetime99 = wm.a("arrowKeys1", (byte) 86);
           if (var2Lifetime99 != null) {

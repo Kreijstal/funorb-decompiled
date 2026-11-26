@@ -52,8 +52,8 @@ final class gd {
           Throwable decompiledCaughtException = null;
           if (s.field_y != null) {
             try {
-              s.field_y.a(0L, -1);
-              s.field_y.a(false, NetworkArchiveRequest.field_t.payload, 24, NetworkArchiveRequest.field_t.position);
+              s.field_y.seek(0L, -1);
+              s.field_y.write(false, NetworkArchiveRequest.field_t.payload, 24, NetworkArchiveRequest.field_t.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

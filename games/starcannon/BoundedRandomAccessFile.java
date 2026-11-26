@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class cb {
+final class BoundedRandomAccessFile {
     static int field_f;
     private long field_e;
     static byte[] field_b;
@@ -42,30 +42,30 @@ final class cb {
         }
     }
 
-    final void a(int param0, long param1) throws IOException {
+    final void seek(int param0, long param1) throws IOException {
         this.field_h.seek(param1);
         if (param0 != 0) {
-          cb.clearStaticReferences(17);
+          BoundedRandomAccessFile.clearStaticReferences(17);
         }
         this.field_e = param1;
     }
 
-    final long c(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         int var2 = -109 % ((44 - param0) / 55);
         return this.field_h.length();
     }
 
-    final void a(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (null != this.field_h) {
           this.field_h.close();
           this.field_h = null;
         }
         if (param0 != 1) {
-          cb.b(false);
+          BoundedRandomAccessFile.b(false);
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         try {
           if (param2 != 494) {
             field_b = (byte[]) null;
@@ -82,7 +82,7 @@ final class cb {
         }
     }
 
-    final int a(byte[] param0, int param1, int param2, byte param3) throws IOException {
+    final int read(byte[] param0, int param1, int param2, byte param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_5_0 = 0;
@@ -92,7 +92,7 @@ final class cb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 > -72) {
-            cb.a((byte) 54);
+            BoundedRandomAccessFile.a((byte) 54);
           }
           var5_int = this.field_h.read(param0, param1, param2);
           if (var5_int > 0) {
@@ -153,7 +153,7 @@ final class cb {
             return;
           }
           if (param0 > -93) {
-            cb.b(false);
+            BoundedRandomAccessFile.b(false);
           }
           var4 = var15.readUnsignedByte(7909);
           if (0 != var4) {
@@ -245,18 +245,18 @@ final class cb {
     protected final void finalize() throws Throwable {
         if (null != this.field_h) {
           System.out.println("");
-          this.a(1);
+          this.close(1);
         }
     }
 
     final static boolean a(boolean param0) {
         if (param0) {
-          cb.a(true);
+          BoundedRandomAccessFile.a(true);
         }
         return AccountNameAvailabilityValidator.b(true);
     }
 
-    cb(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (-1L == param2) {

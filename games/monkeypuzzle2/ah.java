@@ -4,7 +4,7 @@
 final class ah {
     static byte[] field_c;
     static boolean field_h;
-    static ch field_f;
+    static BufferedRandomAccessFile field_f;
     static ih[] field_a;
     static int field_j;
     static int[] field_i;

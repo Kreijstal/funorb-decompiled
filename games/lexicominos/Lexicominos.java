@@ -959,7 +959,7 @@ public final class Lexicominos extends nk {
           sg.b(0);
           wb.clearStaticReferences(5);
           pg.resetStaticState(-8413);
-          be.clearStaticReferences((byte) -116);
+          BufferedRandomAccessFile.clearStaticReferences((byte) -116);
           BufferedSocket.clearStaticReferences((byte) -59);
           SpriteGeometry.resetStaticState(-43);
           DualLinkNode.clearDeclaredStaticReferences(param0 - 163);
@@ -1190,7 +1190,7 @@ public final class Lexicominos extends nk {
           CrossfadingMidiPcmStream.field_n.field_s.a(128, true, 9);
           ce.field_b.setRootStream(CrossfadingMidiPcmStream.field_n);
           this.a(false, param0, true, (byte) 18, false);
-          ea.field_b = 0;
+          BoundedRandomAccessFile.field_b = 0;
           g.field_n = 10640990;
           SecondaryNodeDequeIterator.field_c = 3941155;
         } catch (RuntimeException runtimeException) {

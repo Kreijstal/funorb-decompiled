@@ -66,7 +66,7 @@ final class dj {
               return;
             }
             try {
-              PcmOutputWorker.field_b = new hd(sc.field_q.field_h, 64, 0);
+              PcmOutputWorker.field_b = new BufferedRandomAccessFile(sc.field_q.field_h, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ abstract class kk {
     static IntrusiveDeque field_f;
     static Sprite[] field_d;
     static ci field_a;
-    static we field_b;
+    static BufferedRandomAccessFile field_b;
     static String field_g;
     static String field_e;
     static String field_c;

@@ -2276,7 +2276,7 @@ final class cg {
                 }
                 var2 = hg.a((byte) 123, "orbpoints");
                 if (null != var2) {
-                  jf.field_g = c.a(0, var2);
+                  BufferedRandomAccessFile.field_g = c.a(0, var2);
                 }
                 var2 = hg.a((byte) 92, "orbcoins");
                 if (null != var2) {

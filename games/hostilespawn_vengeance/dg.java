@@ -51,7 +51,7 @@ class dg extends me implements qk {
         try {
           var6_int = 60 / ((-63 - param4) / 52);
           if (!this.field_mb) {
-            ta.a(-320, "tochangedisplayname.ws", bn.c(-1));
+            ta.a(-320, "tochangedisplayname.ws", BufferedRandomAccessFile.c(-1));
             return;
           }
           g.a((byte) 62, 3);

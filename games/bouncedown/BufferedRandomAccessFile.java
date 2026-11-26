@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-final class jf {
+final class BufferedRandomAccessFile {
     private byte[] field_m;
     private long field_k;
     private long field_i;
-    private ok field_d;
+    private BoundedRandomAccessFile field_d;
     static sb field_h;
     private byte[] field_j;
     private long field_c;
@@ -18,9 +18,9 @@ final class jf {
     private long field_a;
     static String field_g;
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
-          this.b(param0, param1, param1.length, 11842);
+          this.readFully(param0, param1, param1.length, 11842);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "jf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -41,13 +41,13 @@ final class jf {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    private final void d(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Bounce.field_N;
         this.field_e = 0;
         if (~this.field_b != ~this.field_l) {
-          this.field_d.a(this.field_b, 20663);
+          this.field_d.seek(this.field_b, 20663);
           this.field_l = this.field_b;
         }
         this.field_k = this.field_b;
@@ -56,7 +56,7 @@ final class jf {
           if (var2 > 200000000) {
             var2 = 200000000;
           }
-          var3 = this.field_d.a(this.field_j, var2, this.field_e, -1);
+          var3 = this.field_d.read(this.field_j, var2, this.field_e, -1);
           if (var3 == -1) {
             break;
           }
@@ -72,7 +72,7 @@ final class jf {
         field_g = null;
         field_h = null;
         if (param0 != -18695) {
-          jf.b(false);
+          BufferedRandomAccessFile.b(false);
         }
     }
 
@@ -84,10 +84,10 @@ final class jf {
         return 1;
     }
 
-    final long c(boolean param0) {
+    final long length(boolean param0) {
         if (!param0) {
           String var3 = (String) null;
-          jf.a((byte) 94, (String[]) null, -48, (String) null);
+          BufferedRandomAccessFile.a((byte) 94, (String[]) null, -48, (String) null);
         }
         return this.field_c;
     }
@@ -150,7 +150,7 @@ final class jf {
           }
           var6 = new StringBuilder(var4);
           if (param2 != -126) {
-            jf.c(94);
+            BufferedRandomAccessFile.c(94);
           }
           var7 = 0;
           var5Lifetime1 = 0;
@@ -203,7 +203,7 @@ final class jf {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         RuntimeException stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -223,7 +223,7 @@ final class jf {
             }
             if (this.field_a != -1L && (this.field_b < this.field_a ||
               (this.field_a + (long)this.field_f) < this.field_b)) {
-              this.a(-1);
+              this.flush(-1);
             }
             if (this.field_a != -1L &&
               (long)this.field_m.length + this.field_a < (long)param2 + this.field_b) {
@@ -233,14 +233,14 @@ final class jf {
               param3 = param3 + var5_int;
               param2 = param2 - var5_int;
               this.field_f = this.field_m.length;
-              this.a(~param0);
+              this.flush(~param0);
             }
             if (param2 > this.field_m.length) {
               if (this.field_l != this.field_b) {
-                this.field_d.a(this.field_b, param0 ^ 20663);
+                this.field_d.seek(this.field_b, param0 ^ 20663);
                 this.field_l = this.field_b;
               }
-              this.field_d.a(1, param3, param2, param1);
+              this.field_d.write(1, param3, param2, param1);
               this.field_l = this.field_l + (long)param2;
               if (this.field_i < this.field_l) {
                 this.field_i = this.field_l;
@@ -291,7 +291,7 @@ final class jf {
             throw var5;
           }
           if (param0 != 0) {
-            jf.b(false);
+            BufferedRandomAccessFile.b(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -322,7 +322,7 @@ final class jf {
         var5 = Bounce.field_N;
         try {
           if (param0 != -52) {
-            jf.a(30, true, 104);
+            BufferedRandomAccessFile.a(30, true, 104);
           }
           fh.field_B = he.field_p;
           if (param2 == 255) {
@@ -358,7 +358,7 @@ final class jf {
         }
     }
 
-    final void b(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(int param0, byte[] param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -407,10 +407,10 @@ final class jf {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             if (param2 > this.field_j.length) {
-              this.field_d.a(this.field_b, 20663);
+              this.field_d.seek(this.field_b, 20663);
               this.field_l = this.field_b;
               while (param2 > 0) {
-                var9_intLifetime1 = this.field_d.a(param1, param2, param0, -1);
+                var9_intLifetime1 = this.field_d.read(param1, param2, param0, -1);
                 if (var9_intLifetime1 == -1) {
                   decompiledFrameCompleted0 = false;
                   break;
@@ -425,7 +425,7 @@ final class jf {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (param2 > 0)) {
-              this.d(param3 + 4482);
+              this.fillReadBuffer(param3 + 4482);
               var9_intLifetime1Lifetime1 = param2;
               if (this.field_e < var9_intLifetime1Lifetime1) {
                 var9_intLifetime1Lifetime1 = this.field_e;
@@ -521,17 +521,17 @@ final class jf {
         return ci.field_L;
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }
         this.field_b = param1;
         if (param0 != 57) {
-          jf.pollAccountCreationResult(true);
+          BufferedRandomAccessFile.pollAccountCreationResult(true);
         }
     }
 
-    private final void a(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -541,10 +541,10 @@ final class jf {
         var7 = Bounce.field_N;
         if (this.field_a != (long)param0) {
           if (this.field_l != this.field_a) {
-            this.field_d.a(this.field_a, 20663);
+            this.field_d.seek(this.field_a, 20663);
             this.field_l = this.field_a;
           }
-          this.field_d.a(1, 0, this.field_f, this.field_m);
+          this.field_d.write(1, 0, this.field_f, this.field_m);
           this.field_l = this.field_l + (long)this.field_f;
           if (this.field_l > this.field_i) {
             this.field_i = this.field_l;
@@ -593,12 +593,12 @@ final class jf {
 
     }
 
-    final void b(int param0) throws IOException {
+    final void close(int param0) throws IOException {
         if (param0 != -747969087) {
           return;
         }
-        this.a(-1);
-        this.field_d.b(1337);
+        this.flush(-1);
+        this.field_d.close(1337);
     }
 
     final static void c(int param0) {
@@ -707,14 +707,14 @@ final class jf {
         }
     }
 
-    jf(ok param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(BoundedRandomAccessFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_k = -1L;
         this.field_f = 0;
         this.field_a = -1L;
         try {
           this.field_d = param0;
-          dupTemp$0 = param0.a(126);
+          dupTemp$0 = param0.length(126);
           this.field_i = dupTemp$0;
           this.field_c = dupTemp$0;
           this.field_m = new byte[param2];

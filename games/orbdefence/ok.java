@@ -7,7 +7,7 @@ final class ok {
     float field_d;
     int field_c;
     float field_e;
-    static dj[] field_a;
+    static BufferedRandomAccessFile[] field_a;
     static int field_f;
 
     public static void clearStaticReferences(byte param0) {
@@ -41,7 +41,7 @@ final class ok {
         try {
           gg.a(param9, param12, param1, param18, param8, param5, param17, param19, param20, param16, param6, param2, new pf(param11), param14, param10, new pf(param3), -90, new pf(param15), param4, param13, param0);
           if (param7 != -1) {
-            field_a = (dj[]) null;
+            field_a = (BufferedRandomAccessFile[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

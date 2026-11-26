@@ -128,8 +128,8 @@ final class ca {
             var2 = var6;
             if (e.field_a != null) {
               try {
-                e.field_a.a(0L, 0);
-                e.field_a.a(0, var6);
+                e.field_a.seek(0L, 0);
+                e.field_a.readFully(0, var6);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (0 == var6[var3_int]) {
                     continue;

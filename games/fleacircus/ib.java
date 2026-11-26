@@ -201,7 +201,7 @@ final class ib implements ComponentLayout {
                 field_f = (ResourceArchive) null;
               }
               ud.a("F1: " + ak.a(true), (Throwable) null, 0);
-              k.c(-28354);
+              BufferedRandomAccessFile.c(-28354);
               return;
             }
             nb.field_i = 1;

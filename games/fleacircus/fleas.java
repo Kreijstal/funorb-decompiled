@@ -989,7 +989,7 @@ public final class fleas extends NetworkGameClient {
           w.clearStaticReferences(5);
           DiskCacheWorker.a(105);
           uf.resetStaticState(true);
-          k.a(-40);
+          BufferedRandomAccessFile.a(-40);
           BufferedSocket.clearStaticReferences(123167272);
           kh.clearStaticReferences((byte) -97);
           ik.b(false);
@@ -1385,7 +1385,7 @@ public final class fleas extends NetworkGameClient {
             do {
               if (var3_int >= 11) {
                 ab.field_b = 0;
-                k.a(0, BufferedSocket.field_j);
+                BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
                 var3_int = 3072;
                 break;
               }

@@ -3,7 +3,7 @@
  */
 final class fj {
     static String[] field_b;
-    static qa field_c;
+    static BufferedRandomAccessFile field_c;
     static String field_a;
     static boolean field_d;
 

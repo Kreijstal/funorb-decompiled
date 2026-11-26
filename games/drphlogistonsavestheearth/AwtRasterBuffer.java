@@ -88,16 +88,16 @@ abstract class AwtRasterBuffer {
             }
             var7 = null;
             if (null != MouseWheelInput.field_e.field_d) {
-              uj.field_h = new ge(MouseWheelInput.field_e.field_d, 5200, 0);
+              uj.field_h = new BufferedRandomAccessFile(MouseWheelInput.field_e.field_d, 5200, 0);
               MouseWheelInput.field_e.field_d = null;
-              var6 = new SectorCacheStore(255, uj.field_h, new ge(MouseWheelInput.field_e.field_b, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, uj.field_h, new BufferedRandomAccessFile(MouseWheelInput.field_e.field_b, 12000, 0), 2097152);
             }
             if (uj.field_h != null) {
               if (rc.field_d == null) {
-                rc.field_d = new ge[MouseWheelInput.field_e.field_c.length];
+                rc.field_d = new BufferedRandomAccessFile[MouseWheelInput.field_e.field_c.length];
               }
               if (null == rc.field_d[param1]) {
-                rc.field_d[param1] = new ge(MouseWheelInput.field_e.field_c[param1], 12000, 0);
+                rc.field_d[param1] = new BufferedRandomAccessFile(MouseWheelInput.field_e.field_c[param1], 12000, 0);
                 MouseWheelInput.field_e.field_c[param1] = null;
               }
               var7 = new SectorCacheStore(param1, uj.field_h, rc.field_d[param1], 2097152);

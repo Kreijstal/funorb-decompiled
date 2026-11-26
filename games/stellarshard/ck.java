@@ -171,13 +171,13 @@ class ck extends wl implements oi {
         vf var2Lifetime1;
         this.field_cb.c(65280, 4210752, 2121792);
         if (param0 == 52) {
-          var2 = new vf(this, this.field_jb, kb.field_e);
+          var2 = new vf(this, this.field_jb, BoundedRandomAccessFile.field_e);
           var2.a(-31805, 15, vg.field_q);
           this.b(var2, 23143);
           return;
         }
         ck.m(-107);
-        var2Lifetime1 = new vf(this, this.field_jb, kb.field_e);
+        var2Lifetime1 = new vf(this, this.field_jb, BoundedRandomAccessFile.field_e);
         var2Lifetime1.a(-31805, 15, vg.field_q);
         this.b(var2Lifetime1, 23143);
     }

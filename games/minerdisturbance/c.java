@@ -30,7 +30,7 @@ final class c {
             sj.field_d = new int[i.field_c.length];
             MidiPcmStream.field_x = new int[i.field_c.length];
             sj.field_d = i.a(-111, i.field_c, sj.field_d);
-            MidiPcmStream.field_x = me.a(8, MidiPcmStream.field_x, i.field_c);
+            MidiPcmStream.field_x = BufferedRandomAccessFile.a(8, MidiPcmStream.field_x, i.field_c);
             hc.field_D = true;
             AccountServiceResult.b(4);
           }
@@ -235,7 +235,7 @@ final class c {
           sj.field_d = new int[i.field_c.length];
           MidiPcmStream.field_x = new int[i.field_c.length];
           sj.field_d = i.a(-111, i.field_c, sj.field_d);
-          MidiPcmStream.field_x = me.a(8, MidiPcmStream.field_x, i.field_c);
+          MidiPcmStream.field_x = BufferedRandomAccessFile.a(8, MidiPcmStream.field_x, i.field_c);
           hc.field_D = true;
           AccountServiceResult.b(4);
         }

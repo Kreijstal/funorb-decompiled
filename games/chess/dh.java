@@ -453,7 +453,7 @@ final class dh {
         RuntimeException decompiledCaughtException = null;
         var4 = Chess.field_G;
         try {
-          var5 = lc.field_n;
+          var5 = BufferedRandomAccessFile.field_n;
           var1 = var5;
           var2 = 0;
           var3 = var5.length;
@@ -627,14 +627,14 @@ final class dh {
             return true;
           }
           var5 = (String) null;
-          lc.a(this.field_i, (String) null, 2, 0, var6, false);
+          BufferedRandomAccessFile.a(this.field_i, (String) null, 2, 0, var6, false);
           return true;
         }
         if (5 == param1) {
           var9 = ArchiveRequest.a(param2, 21250, this.field_i);
           if (var9 != null) {
             var5Lifetime1 = (String) null;
-            lc.a(this.field_i, (String) null, 2, 0, var9, false);
+            BufferedRandomAccessFile.a(this.field_i, (String) null, 2, 0, var9, false);
           }
           return true;
         }
@@ -642,7 +642,7 @@ final class dh {
           var7 = FullscreenFocusCanvas.a(param2, this.field_i, (byte) 64);
           if (var7 != null) {
             var5Lifetime2 = (String) null;
-            lc.a(this.field_i, (String) null, 2, 0, var7, false);
+            BufferedRandomAccessFile.a(this.field_i, (String) null, 2, 0, var7, false);
           }
           return true;
         }
@@ -652,7 +652,7 @@ final class dh {
         var8 = of.a(this.field_f, param2, this.field_i, -1);
         if (var8 != null) {
           var5Lifetime3 = (String) null;
-          lc.a(this.field_i, (String) null, 2, 0, var8, false);
+          BufferedRandomAccessFile.a(this.field_i, (String) null, 2, 0, var8, false);
         }
         return true;
     }

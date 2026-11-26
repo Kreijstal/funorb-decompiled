@@ -29,8 +29,8 @@ final class me implements j {
           }
           if (cf.field_d != null) {
             try {
-              cf.field_d.a(0L, 0);
-              cf.field_d.a(-4573, id.field_b.position, id.field_b.payload, 24);
+              cf.field_d.seek(0L, 0);
+              cf.field_d.write(-4573, id.field_b.position, id.field_b.payload, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

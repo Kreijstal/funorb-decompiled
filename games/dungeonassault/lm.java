@@ -44,7 +44,7 @@ class lm extends IntrusiveNode {
             }
             if (null != sa.field_x) {
               try {
-                sa.field_x.c((byte) -118);
+                sa.field_x.close((byte) -118);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -59,7 +59,7 @@ class lm extends IntrusiveNode {
                 }
                 if (null != cf.field_c[var2]) {
                   try {
-                    cf.field_c[var2].c((byte) -42);
+                    cf.field_c[var2].close((byte) -42);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var3_ref = (IOException) (Object) decompiledCaughtException;

@@ -3,31 +3,31 @@
  */
 import java.io.*;
 
-final class ea {
+final class BoundedRandomAccessFile {
     static int field_b;
     static int field_d;
     private long field_e;
     private long field_a;
     private RandomAccessFile field_c;
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 >= -2) {
           return -41L;
         }
         return this.field_c.length();
     }
 
-    final void a(byte param0, long param1) throws IOException {
+    final void seek(byte param0, long param1) throws IOException {
         this.field_c.seek(param1);
         this.field_a = param1;
         if (param0 == -55) {
           return;
         }
         CharSequence var5 = (CharSequence) null;
-        ea.a((CharSequence) null, 115);
+        BoundedRandomAccessFile.a((CharSequence) null, 115);
     }
 
-    final void a(int param0, int param1, byte[] param2, int param3) throws IOException {
+    final void write(int param0, int param1, byte[] param2, int param3) throws IOException {
         try {
           if (param0 != 1) {
             this.field_e = 104L;
@@ -44,7 +44,7 @@ final class ea {
         }
     }
 
-    final int a(int param0, int param1, byte param2, byte[] param3) throws IOException {
+    final int read(int param0, int param1, byte param2, byte[] param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -86,7 +86,7 @@ final class ea {
         return pc.e(0);
     }
 
-    final void a(boolean param0) throws IOException {
+    final void close(boolean param0) throws IOException {
         if (param0) {
           if (this.field_c != null) {
             this.field_c.close();
@@ -95,7 +95,7 @@ final class ea {
           return;
         }
         CharSequence var3 = (CharSequence) null;
-        ea.a((CharSequence) null, -68);
+        BoundedRandomAccessFile.a((CharSequence) null, -68);
         if (this.field_c != null) {
           this.field_c.close();
           this.field_c = null;
@@ -129,7 +129,7 @@ final class ea {
         }
     }
 
-    ea(File param0, String param1, long param2) throws IOException {
+    BoundedRandomAccessFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {
@@ -156,7 +156,7 @@ final class ea {
     protected final void finalize() throws Throwable {
         if (null != this.field_c) {
           System.out.println("");
-          this.a(true);
+          this.close(true);
         }
     }
 

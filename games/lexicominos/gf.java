@@ -413,7 +413,7 @@ final class gf {
           me.field_w = new boolean[th.field_t];
           rg.field_c = new int[th.field_t];
           pb.field_h = new int[th.field_t];
-          be.field_f = new byte[th.field_t][];
+          BufferedRandomAccessFile.field_f = new byte[th.field_t][];
           bd.field_m = new int[th.field_t];
           var17.position = -(8 * th.field_t) - 7 + param1.length;
           uc.field_fb = var17.readUnsignedShort(-1698573656);
@@ -450,7 +450,7 @@ final class gf {
             var20 = new byte[var7];
             var18 = var20;
             var8 = var18;
-            be.field_f[var4Lifetime5] = var20;
+            BufferedRandomAccessFile.field_f[var4Lifetime5] = var20;
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;

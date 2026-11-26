@@ -288,7 +288,7 @@ final class gj extends TextureOperator {
                   var10_ref_String = Vertigo2.a(new String[]{Integer.toString(kk.field_j)}, uo.field_c, 111);
                 }
                 if (0 == (lo.field_d & 16) &&
-                  !im.field_g) {
+                  !BufferedRandomAccessFile.field_g) {
                   fo.field_f.field_Bb = SpriteState.field_u.field_Q;
                 }
                 fo.field_f.field_S = fo.field_f.field_S + "<br>" + var10_ref_String;
@@ -615,15 +615,15 @@ final class gj extends TextureOperator {
           }
           stackIn_178_0 = AccountNameAvailabilityValidator.field_o;
           stackIn_178_1 = 0;
-          stackIn_179_2 = (param4) && (!param2) && (!im.field_g);
+          stackIn_179_2 = (param4) && (!param2) && (!BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_178_0).a(stackIn_178_1, stackIn_179_2);
           stackIn_183_0 = lb.field_c;
           stackIn_183_1 = 0;
-          stackIn_184_2 = (param4) && (!param2) && (!im.field_g);
+          stackIn_184_2 = (param4) && (!param2) && (!BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_183_0).a(stackIn_183_1, stackIn_184_2);
           stackIn_188_0 = wc.field_m;
           stackIn_188_1 = param3;
-          stackIn_189_2 = (param4) && (!param2) && (im.field_g);
+          stackIn_189_2 = (param4) && (!param2) && (BufferedRandomAccessFile.field_g);
           ((UiPanel) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
           IterableNodeHashTable.field_e.field_b.k(0);
           if (gd.field_j != null) {
@@ -634,10 +634,10 @@ final class gj extends TextureOperator {
               na.field_p = true;
             }
             if (fo.field_f.field_tb != 0) {
-              im.field_g = true;
+              BufferedRandomAccessFile.field_g = true;
             }
             if (Vertigo2.field_M.field_tb != 0) {
-              im.field_g = false;
+              BufferedRandomAccessFile.field_g = false;
             }
             mg.a(false, param1, false, gd.field_j);
           }

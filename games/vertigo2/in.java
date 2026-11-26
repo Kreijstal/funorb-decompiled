@@ -69,13 +69,13 @@ final class in {
         if (mp.field_b > 0) {
           gj.a(param0, param5, param9, param8 ^ -66, param3);
         }
-        if (im.field_g &&
+        if (BufferedRandomAccessFile.field_g &&
           gd.field_j.field_Qb >= gd.field_j.field_uc) {
-          im.field_j.field_lb = false;
+          BufferedRandomAccessFile.field_j.field_lb = false;
           ja.field_f.field_Lb.field_S = fg.field_db;
           DelegatingCanvas.a(0, ja.field_f.field_Nb);
         } else {
-          im.field_j.field_lb = true;
+          BufferedRandomAccessFile.field_j.field_lb = true;
           ja.field_f.field_Lb.field_S = null;
           ClientException.a((byte) -86, ja.field_f, param1, param6, param5);
         }

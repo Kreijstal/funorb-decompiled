@@ -107,7 +107,7 @@ abstract class GameShell extends GameApplet {
             sa.a(-336, 7);
           }
           if (tg.field_c[8]) {
-            ak.b(param0 ^ -105);
+            BufferedRandomAccessFile.b(param0 ^ -105);
           }
         }
         return var2;
@@ -380,7 +380,7 @@ abstract class GameShell extends GameApplet {
                     if (IntrusiveDeque.field_f == 5) {
                       k.a(5, sh.field_x, false);
                     } else {
-                      k.a(256, ak.field_f, false);
+                      k.a(256, BufferedRandomAccessFile.field_f, false);
                     }
                   } else {
                     k.a(256, j.field_P, false);

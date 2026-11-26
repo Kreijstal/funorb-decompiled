@@ -137,25 +137,25 @@ final class qa {
               var24 = var18;
               if (r.field_a != 0 &&
                 var19 < 0) {
-                var25 = ee.a(var18, -param5 + var7_int - 1, false);
+                var25 = BoundedRandomAccessFile.a(var18, -param5 + var7_int - 1, false);
                 var21 = var21 + var25;
-                var25 = ee.a(var18, var7_int + 0 - param5, false);
+                var25 = BoundedRandomAccessFile.a(var18, var7_int + 0 - param5, false);
                 var22 = var22 + var25;
                 var21 = var21 + var25;
-                var25 = ee.a(var18, 1 + (var7_int - param5), false);
+                var25 = BoundedRandomAccessFile.a(var18, 1 + (var7_int - param5), false);
                 var22 = var22 + var25;
-                var25 = ee.a(var18, -1 + var7_int, false);
+                var25 = BoundedRandomAccessFile.a(var18, -1 + var7_int, false);
                 var23 = var23 + var25;
                 var21 = var21 + var25;
-                var25 = ee.a(var18, 1 + var7_int, false);
+                var25 = BoundedRandomAccessFile.a(var18, 1 + var7_int, false);
                 var22 = var22 + var25;
                 var24 = var24 + var25;
-                var25 = ee.a(var18, var7_int + (-1 + param5), false);
+                var25 = BoundedRandomAccessFile.a(var18, var7_int + (-1 + param5), false);
                 var23 = var23 + var25;
-                var25 = ee.a(var18, param5 + var7_int - 0, false);
+                var25 = BoundedRandomAccessFile.a(var18, param5 + var7_int - 0, false);
                 var23 = var23 + var25;
                 var24 = var24 + var25;
-                var25 = ee.a(var18, param5 + (1 + var7_int), false);
+                var25 = BoundedRandomAccessFile.a(var18, param5 + (1 + var7_int), false);
                 var24 = var24 + var25;
               } else {
                 var25 = sa.a((byte) -128, var7_int - (1 + param5));

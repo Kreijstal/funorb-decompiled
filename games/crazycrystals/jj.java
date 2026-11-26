@@ -130,7 +130,7 @@ final class jj {
               }
               if (!param4) {
                 stackIn_45_0 = ((4 & var7) != 0);
-                qa.field_j = stackIn_45_0;
+                BufferedRandomAccessFile.field_j = stackIn_45_0;
                 stackIn_48_0 = ((8 & var7) != 0);
                 ne.field_b = stackIn_48_0;
                 if (!ne.field_b) {
@@ -163,7 +163,7 @@ final class jj {
                 ah.a(-77, var6, le.b((byte) -20));
               }
               if (mo.field_l <= 0 &&
-                !qa.field_j) {
+                !BufferedRandomAccessFile.field_j) {
                 try {
                   hi.a(le.b((byte) -20), "unzap", -115);
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {

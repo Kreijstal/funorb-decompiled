@@ -206,7 +206,7 @@ final class lh extends ik {
         }
         boolean decompiledFrameRemainder0 = true;
         if (PacketBuffer.field_i >= 20 &&
-          ha.a(126) && (!(be.field_l > 0) ||
+          ha.a(126) && (!(BufferedRandomAccessFile.field_l > 0) ||
           DualLinkNode.d(true))) {
           stackIn_9_0 = false;
           decompiledFrameRemainder0 = false;

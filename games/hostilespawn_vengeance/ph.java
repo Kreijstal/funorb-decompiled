@@ -30,7 +30,7 @@ class ph extends ag {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
-          if (ee.field_b == ki.field_f &&
+          if (BoundedRandomAccessFile.field_b == ki.field_f &&
             param0.equals(uh.field_g)) {
             ki.field_f = e.field_q;
             stackIn_11_0 = nl.field_a;

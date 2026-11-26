@@ -24,7 +24,7 @@ final class TutorialController {
     int field_t;
     private String field_f;
     private boolean field_s;
-    static ak field_x;
+    static BufferedRandomAccessFile field_x;
     int field_q;
     static byte[] field_m;
     int field_l;

@@ -344,7 +344,7 @@ final class jk {
               if (30000L < ed.b(-1)) {
                 kk.field_Y = ee.field_c;
               } else {
-                kk.field_Y = dj.field_j;
+                kk.field_Y = BufferedRandomAccessFile.field_j;
               }
               FullscreenFocusCanvas.field_a = false;
               stackIn_62_0 = 249;

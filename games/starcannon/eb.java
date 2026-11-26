@@ -127,17 +127,17 @@ final class eb {
             var14 = fb.a(u.field_a, 114, new String[]{kc.field_N[fc.field_c]});
             var5 = gi.field_b.c(var14, AccountNameAvailabilityValidator.field_k);
             var6Lifetime1 = gi.field_b.a(var14, AccountNameAvailabilityValidator.field_k, gi.field_b.field_p + gi.field_b.field_q);
-            var7Lifetime1 = cb.field_f + (AccountNameAvailabilityValidator.field_k - var5) / 2;
+            var7Lifetime1 = BoundedRandomAccessFile.field_f + (AccountNameAvailabilityValidator.field_k - var5) / 2;
             var5 += 6;
             var7Lifetime1 -= 3;
-            var8 = ue.field_e + (td.field_p - var6Lifetime1) / 2;
+            var8 = ue.field_e + (BufferedRandomAccessFile.field_p - var6Lifetime1) / 2;
             var6Lifetime1 += 6;
             if (var7Lifetime1 < 0) {
               var9_int = -var7Lifetime1;
               w.field_v = w.field_v - var9_int;
               re.field_l.field_x = re.field_l.field_x + var9_int * 2;
               re.field_l.field_w = re.field_l.field_w + var9_int;
-              cb.field_f = cb.field_f + var9_int;
+              BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f + var9_int;
               var5 = var5 + var9_int * 2;
               var7Lifetime1 = var7Lifetime1 + var9_int;
             }
@@ -145,7 +145,7 @@ final class eb {
             if (var5 + var7Lifetime1 > re.field_l.field_x) {
               var9_intLifetime1 = var7Lifetime1 + var5 - re.field_l.field_x;
               var5 = var5 + var9_intLifetime1 * 2;
-              cb.field_f = cb.field_f + var9_intLifetime1;
+              BoundedRandomAccessFile.field_f = BoundedRandomAccessFile.field_f + var9_intLifetime1;
               w.field_v = w.field_v - var9_intLifetime1;
               var7Lifetime1 = var7Lifetime1 + var9_intLifetime1;
               re.field_l.field_w = re.field_l.field_w + var9_intLifetime1;
@@ -172,7 +172,7 @@ final class eb {
             re.field_l.f();
             var9 = new Sprite(re.field_l.field_x, re.field_l.field_q);
             var9.e();
-            gi.field_b.a(var14, cb.field_f, ue.field_e, AccountNameAvailabilityValidator.field_k, td.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
+            gi.field_b.a(var14, BoundedRandomAccessFile.field_f, ue.field_e, AccountNameAvailabilityValidator.field_k, BufferedRandomAccessFile.field_p, 16777215, -1, 1, 1, gi.field_b.field_q + gi.field_b.field_p);
             hh.a(0, 0, 3, var9.field_q, false, 1, var9, var9.field_x);
             re.field_l.e();
             var9.e(0, 0);

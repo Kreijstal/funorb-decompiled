@@ -29,7 +29,7 @@ final class gm {
         String[] var6 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          od.field_I = ee.field_b;
+          od.field_I = BoundedRandomAccessFile.field_b;
           if (255 != param3) {
             if (param3 < 100) {
               wj.field_H = an.createAccountErrorResult(param3, -10, param1);

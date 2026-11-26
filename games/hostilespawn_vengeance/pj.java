@@ -311,7 +311,7 @@ final class pj extends ql {
           if (VolumeRampingMidiPcmStream.field_Q[4]) {
             this.field_y.field_l = -1;
           }
-          this.field_s = new v(bn.field_n, 0, var12[7] * 24, 200);
+          this.field_s = new v(BufferedRandomAccessFile.field_n, 0, var12[7] * 24, 200);
           this.field_s.field_l = 24 * (3 + var12[6]);
           if (VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_s.field_l = -1;

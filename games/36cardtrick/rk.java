@@ -6,7 +6,7 @@ final class rk extends jc {
     private String field_db;
     private String field_bb;
     static int field_X;
-    static tk[] field_Z;
+    static BufferedRandomAccessFile[] field_Z;
     private ng field_Y;
     private boolean field_W;
     static cc field_fb;

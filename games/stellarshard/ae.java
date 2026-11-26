@@ -33,7 +33,7 @@ class ae extends ig {
           }
           var5_int = param2.b(param0, (byte) -118);
           var6 = param2.a(var5_int, param1, (byte) -11);
-          stackIn_3_0 = pc.a(var5_int, param4, param2, (byte) -39, var6);
+          stackIn_3_0 = BufferedRandomAccessFile.a(var5_int, param4, param2, (byte) -39, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

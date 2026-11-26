@@ -234,7 +234,7 @@ abstract class pc extends nf {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = pl.a((byte) 109, param2);
+            var4 = BoundedRandomAccessFile.a((byte) 109, param2);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!ok.a(-61, var4.charAt(0)) &&

@@ -148,7 +148,7 @@ abstract class rb extends GameApplet {
                 }
               }
             } else {
-              pc.field_m = false;
+              BufferedRandomAccessFile.field_m = false;
             }
           }
           if (4 == var4) {
@@ -352,7 +352,7 @@ abstract class rb extends GameApplet {
             pk.a(4);
             wl.a(2, -8440, wc.field_p);
             cm.a((byte) -117);
-            pc.field_m = true;
+            BufferedRandomAccessFile.field_m = true;
             vc.field_a = ih.correctedCurrentTimeMillis((byte) -98) + 15000L;
           }
         }
@@ -415,7 +415,7 @@ abstract class rb extends GameApplet {
                   }
                 }
               }
-              pc.field_m = true;
+              BufferedRandomAccessFile.field_m = true;
             }
           }
         }
@@ -423,7 +423,7 @@ abstract class rb extends GameApplet {
           ei.field_F != 0 ||
           il.e(32525)) &&
           ih.correctedCurrentTimeMillis((byte) -98) >= vc.field_a) {
-          pc.field_m = false;
+          BufferedRandomAccessFile.field_m = false;
           if (ei.field_F != -1 &&
             ei.field_F != 0) {
             ei.field_F = -1;
@@ -822,7 +822,7 @@ abstract class rb extends GameApplet {
         if (!il.e(32525)) {
           return -1;
         }
-        if (pc.field_m) {
+        if (BufferedRandomAccessFile.field_m) {
           return -1;
         }
         var2 = wj.a(wh.a((byte) 116), this.field_v, this.field_x, tc.c(-5), (byte) 71, true);
@@ -839,7 +839,7 @@ abstract class rb extends GameApplet {
           }
           pk.a(4);
           wl.a(var2, -8440, NodeHashTableIterator.field_a);
-          pc.field_m = true;
+          BufferedRandomAccessFile.field_m = true;
           vc.field_a = 15000L + ih.correctedCurrentTimeMillis((byte) -98);
           return var2;
         }

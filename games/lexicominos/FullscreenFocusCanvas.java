@@ -43,7 +43,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (mc.field_k > 200) {
           var5 = (250 - mc.field_k << 8) / 50;
         }
-        de.a(be.field_d, param1 ^ 144);
+        de.a(BufferedRandomAccessFile.field_d, param1 ^ 144);
         MeshRasterState.b();
         SoftwareRasterizer.clearRaster();
         rg.b(0);
@@ -53,7 +53,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (param1 <= mc.field_k) {
             nc.field_n.b(var3 + 15, var4 + 10, var5);
           } else {
-            be.field_d.f(var3, var4);
+            BufferedRandomAccessFile.field_d.f(var3, var4);
           }
           var6 = mc.field_k - 125;
           if (var6 > 0) {
@@ -92,7 +92,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
         pd.a(param1 ^ -22835);
         if (param1 > mc.field_k) {
-          be.field_d.f(var3, var4);
+          BufferedRandomAccessFile.field_d.f(var3, var4);
           var6Lifetime1 = mc.field_k - 125;
           if (var6Lifetime1 > 0 &&
             var6Lifetime1 < 50) {

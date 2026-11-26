@@ -431,7 +431,7 @@ class PacketBuffer extends IntrusiveNode {
               var3_int = 1;
               gb.field_j = false;
             }
-            m.a(dj.a((byte) 125), ch.field_i, rb.c((byte) 86), var3_int != 0, -3);
+            m.a(dj.a((byte) 125), BufferedRandomAccessFile.field_i, rb.c((byte) 86), var3_int != 0, -3);
           }
           var3_intLifetime1 = -27 % ((-35 - param1) / 56);
           return;

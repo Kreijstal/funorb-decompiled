@@ -8,7 +8,7 @@ final class ma extends IntrusiveNode {
     static bh field_m;
     int field_q;
     int field_l;
-    static pc field_s;
+    static BufferedRandomAccessFile field_s;
     int field_n;
     static int[] field_k;
     int field_t;

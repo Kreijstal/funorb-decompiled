@@ -853,7 +853,7 @@ final class vj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_4_0 = ge.a((byte) 88, false, param1);
+            stackIn_4_0 = BufferedRandomAccessFile.a((byte) 88, false, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

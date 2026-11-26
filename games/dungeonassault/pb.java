@@ -208,7 +208,7 @@ final class pb extends wf {
                   var21Lifetime2 = param4.field_v[var18];
                   hk.field_c[var18] = var21Lifetime2 * var15 + (var19 * var9 + var20 * var12) >> 16;
                   p.field_x[var18] = var10 * var19 - (-(var20 * var13) - var21Lifetime2 * var16) >> 16;
-                  hd.field_j[var18] = var11 * var19 + var20 * var14 + var17 * var21Lifetime2 >> 16;
+                  BufferedRandomAccessFile.field_j[var18] = var11 * var19 + var20 * var14 + var17 * var21Lifetime2 >> 16;
                   var18++;
                 }
               }

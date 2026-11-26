@@ -673,7 +673,7 @@ final class fq extends ea implements Cloneable {
             field_z = (String) null;
           }
           if (!vh.field_a) {
-            var6 = qa.field_h;
+            var6 = BufferedRandomAccessFile.field_h;
             var5 = var6;
             var5 = var6;
             if (var3_int <= 1) {

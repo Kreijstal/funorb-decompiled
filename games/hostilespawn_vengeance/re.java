@@ -1822,7 +1822,7 @@ final class re {
                   if (ImageProducerRasterBuffer.field_q != null) {
                     tb.f((byte) -119);
                   }
-                  dc.a(76, bn.c(-1));
+                  dc.a(76, BufferedRandomAccessFile.c(-1));
                   if (var7 == 0) {
                     break regionExit1;
                   }

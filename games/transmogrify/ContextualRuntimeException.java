@@ -1578,7 +1578,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_password_hint", (byte) 112);
                 if (null != var2) {
-                  di.field_a = eg.a(param0 ^ 117, var2);
+                  BoundedRandomAccessFile.field_a = eg.a(param0 ^ 117, var2);
                 }
                 var2 = kb.a("create_password_confirm_tooltip", (byte) 127);
                 if (null != var2) {
@@ -1984,7 +1984,7 @@ final class ContextualRuntimeException extends RuntimeException {
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  we.field_b = eg.a(param0 ^ 123, var2);
+                  BufferedRandomAccessFile.field_b = eg.a(param0 ^ 123, var2);
                 }
                 var2 = kb.a("tohighscores", (byte) 109);
                 if (null != var2) {
@@ -2568,7 +2568,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("keychar_the_character_under_questionmark", (byte) 105);
                 if (var2 != null) {
-                  di.a(97, var2[0]);
+                  BoundedRandomAccessFile.a(97, var2[0]);
                 }
                 var2 = kb.a("rating_noratings", (byte) 105);
                 if (var2 != null) {

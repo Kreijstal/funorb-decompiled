@@ -298,7 +298,7 @@ final class LetterTile extends IntrusiveNode {
         if (param0 != 31) {
           return true;
         }
-        return we.field_j.b(false);
+        return BufferedRandomAccessFile.field_j.b(false);
     }
 
     LetterTile() {

@@ -172,7 +172,7 @@ final class eh {
           }
           if (kk.field_b != null) {
             try {
-              kk.field_b.a((byte) -96);
+              kk.field_b.close((byte) -96);
             } catch (IOException iOException) {
             }
           }
@@ -180,7 +180,7 @@ final class eh {
             for (var1_int = 0; var1_int < PacketBuffer.field_m.length; var1_int++) {
               if (PacketBuffer.field_m[var1_int] != null) {
                 try {
-                  PacketBuffer.field_m[var1_int].a((byte) -61);
+                  PacketBuffer.field_m[var1_int].close((byte) -61);
                 } catch (IOException var2_ref) {
                 }
               }

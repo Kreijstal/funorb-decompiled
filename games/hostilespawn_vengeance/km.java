@@ -196,7 +196,7 @@ final class km extends sd {
           if (param7 < 77) {
             return;
           }
-          for (var15 = v.field_g; var15 < bn.field_p; var15 += 4) {
+          for (var15 = v.field_g; var15 < BufferedRandomAccessFile.field_p; var15 += 4) {
             var16 = var15 - qg.field_n;
             var17 = -qh.field_e + var15;
             var18 = var12 * var16;

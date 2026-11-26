@@ -123,10 +123,10 @@ final class ba extends ma implements nn, mj {
               } else {
                 var14 = (String) null;
                 var13 = (String) null;
-                lc.a((String) null, (String) null, 2, 0, af.field_b, false);
+                BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, af.field_b, false);
                 var16 = (String) null;
                 var15 = (String) null;
-                lc.a((String) null, (String) null, 2, 0, kd.field_Eb, false);
+                BufferedRandomAccessFile.a((String) null, (String) null, 2, 0, kd.field_Eb, false);
               }
             }
           }

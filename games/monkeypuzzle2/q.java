@@ -115,13 +115,13 @@ final class q {
             field_c = (sd) null;
           }
           var4 = ArchiveRequest.field_k;
-          while (pl.field_k.length > var3_int) {
+          while (BoundedRandomAccessFile.field_k.length > var3_int) {
             var5 = gh.field_a[var3_int];
             if (var5 >= 0) {
-              var6 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(74, pl.field_k[var3_int], true);
+              var6 = AccountNameAvailabilityValidator.$cfr$intArgs$a$590e95718a07(74, BoundedRandomAccessFile.field_k[var3_int], true);
               var7 = jc.field_b - (var6 >> 1);
               var4 = var4 + ud.field_a;
-              if (lf.a(param1 - 19828, param2, param0, hb.field_n + (vf.field_b << 1), (pl.field_h << 1) + var6, -pl.field_h + var7, var4)) {
+              if (lf.a(param1 - 19828, param2, param0, hb.field_n + (vf.field_b << 1), (BoundedRandomAccessFile.field_h << 1) + var6, -BoundedRandomAccessFile.field_h + var7, var4)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

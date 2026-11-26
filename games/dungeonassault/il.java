@@ -23,7 +23,7 @@ final class il {
               this.field_e = (Object) null;
             }
             var3 = (Object[]) null;
-            stackIn_6_0 = (RgbSprite) (hd.field_e.invoke(this.field_e, (Object[]) null));
+            stackIn_6_0 = (RgbSprite) (BufferedRandomAccessFile.field_e.invoke(this.field_e, (Object[]) null));
             return stackIn_6_0;
           } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,10 +101,10 @@ final class il {
           RuntimeException var2_ref3 = null;
           try {
             this.field_e = param0;
-            if (hd.field_h != null) {
+            if (BufferedRandomAccessFile.field_h != null) {
               DelegatingCanvas.field_e[0] = param0;
               try {
-                this.field_e = hd.field_h.newInstance(DelegatingCanvas.field_e);
+                this.field_e = BufferedRandomAccessFile.field_h.newInstance(DelegatingCanvas.field_e);
                 return;
               } catch (java.lang.IllegalAccessException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

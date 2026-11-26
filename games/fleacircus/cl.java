@@ -49,7 +49,7 @@ final class cl {
             }
             var16_ref = (ia) (rj.field_i.beginForward((byte) 47));
             if (var16_ref == null) {
-              k.c(-28354);
+              BufferedRandomAccessFile.c(-28354);
               return;
             }
             var16_ref.field_n = true;
@@ -64,17 +64,17 @@ final class cl {
               var12.unlink(-1);
               return;
             }
-            k.c(param0 ^ 28386);
+            BufferedRandomAccessFile.c(param0 ^ 28386);
             return;
           }
           if (var2 != 2) {
             ud.a("A1: " + ak.a(true), (Throwable) null, 0);
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           var14 = (ia) (rj.field_i.beginForward((byte) 47));
           if (var14 == null) {
-            k.c(-28354);
+            BufferedRandomAccessFile.c(-28354);
             return;
           }
           var14.field_i = ContextualRuntimeException.a((byte) -121);

@@ -1667,7 +1667,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(param1 ^ 92, "connectionrestored");
                 if (var2 != null) {
-                  kb.field_e = se.a(0, var2);
+                  BoundedRandomAccessFile.field_e = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 106, "warning_ifyouquit");
                 if (var2 != null) {
@@ -2997,27 +2997,27 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(106, "quickchat_shortcut_help,0");
                 if (null != var2) {
-                  kb.field_f[0] = se.a(0, var2);
+                  BoundedRandomAccessFile.field_f[0] = se.a(0, var2);
                 }
                 var2 = ca.a(91, "quickchat_shortcut_help,1");
                 if (var2 != null) {
-                  kb.field_f[1] = se.a(0, var2);
+                  BoundedRandomAccessFile.field_f[1] = se.a(0, var2);
                 }
                 var2 = ca.a(93, "quickchat_shortcut_help,2");
                 if (null != var2) {
-                  kb.field_f[2] = se.a(0, var2);
+                  BoundedRandomAccessFile.field_f[2] = se.a(0, var2);
                 }
                 var2 = ca.a(87, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  kb.field_f[3] = se.a(ih.a(param1, 1), var2);
+                  BoundedRandomAccessFile.field_f[3] = se.a(ih.a(param1, 1), var2);
                 }
                 var2 = ca.a(97, "quickchat_shortcut_help,4");
                 if (null != var2) {
-                  kb.field_f[4] = se.a(0, var2);
+                  BoundedRandomAccessFile.field_f[4] = se.a(0, var2);
                 }
                 var2 = ca.a(113, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  kb.field_f[5] = se.a(0, var2);
+                  BoundedRandomAccessFile.field_f[5] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 107, "quickchat_shortcut_keys,0");
                 if (var2 != null) {

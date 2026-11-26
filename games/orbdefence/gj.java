@@ -38,7 +38,7 @@ final class gj extends IntrusiveNode {
           bd.field_u = hg.a("", (byte) 113);
           bd.field_u.a(false, (byte) -114);
           int var5_int = -57 / ((-43 - param1) / 60);
-          dj.a(param2, (byte) 122, param4, param0);
+          BufferedRandomAccessFile.a(param2, (byte) 122, param4, param0);
           sd.a(125);
           tg.field_c = tl.field_h;
           qc.field_g = tl.field_h;

@@ -306,9 +306,9 @@ final class bl {
         MusicPatchPcmStream.field_n[0] = k.field_e;
         MusicPatchPcmStream.field_n[4] = rc.field_i;
         MusicPatchPcmStream.field_n[7] = dk.field_b;
-        MusicPatchPcmStream.field_n[2] = gl.field_f;
+        MusicPatchPcmStream.field_n[2] = BoundedRandomAccessFile.field_f;
         MusicPatchPcmStream.field_n[1] = vg.field_s;
-        MusicPatchPcmStream.field_n[13] = gl.field_a;
+        MusicPatchPcmStream.field_n[13] = BoundedRandomAccessFile.field_a;
         MusicPatchPcmStream.field_n[24] = gb.field_g[5];
         MusicPatchPcmStream.field_n[9] = eg.field_w[1];
         if (param0 < 14) {

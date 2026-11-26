@@ -123,7 +123,7 @@ final class ji extends IntrusiveNode {
               return;
             }
             try {
-              mh.field_b = new ak(da.field_g.field_m, 64, 0);
+              mh.field_b = new BufferedRandomAccessFile(da.field_g.field_m, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

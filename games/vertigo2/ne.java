@@ -42,7 +42,7 @@ final class ne extends WidgetContainer implements nc, ij {
         if (MidiPcmStream.field_S) {
           MouseWheelInput.field_k.b(bf.field_c, 121);
         }
-        MouseWheelInput.field_k.b(im.field_j, 118);
+        MouseWheelInput.field_k.b(BufferedRandomAccessFile.field_j, 118);
         if (!param0) {
           qo.field_D = new lb(SpriteState.field_A, MouseWheelInput.field_k);
           ca.field_h = new UiPanel(0L, (UiPanel) null);

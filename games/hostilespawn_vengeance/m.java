@@ -67,7 +67,7 @@ final class m extends IntrusiveNode {
             sd.field_u = param1;
             if (uj.field_k.field_q != null) {
               try {
-                q.field_b = new bn(uj.field_k.field_q, 64, 0);
+                q.field_b = new BufferedRandomAccessFile(uj.field_k.field_q, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;

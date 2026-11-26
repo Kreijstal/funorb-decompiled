@@ -71,8 +71,8 @@ final class qc {
           Throwable decompiledCaughtException = null;
           if (null != gf.field_g) {
             try {
-              gf.field_g.a((byte) 57, 0L);
-              gf.field_g.a(0, jc.field_g.payload, 24, jc.field_g.position);
+              gf.field_g.seek((byte) 57, 0L);
+              gf.field_g.write(0, jc.field_g.payload, 24, jc.field_g.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

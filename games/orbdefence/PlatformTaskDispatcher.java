@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
-    gl field_u;
+    BoundedRandomAccessFile field_u;
     private static String field_a;
     static String field_j;
     private DirectDrawFullscreenManager field_o;
     private PlatformTask queueHead;
-    gl field_g;
-    gl field_v;
+    BoundedRandomAccessFile field_g;
+    BoundedRandomAccessFile field_v;
     private Object field_i;
     private boolean shutdownRequested;
     private static String field_e;
@@ -25,7 +25,7 @@ final class PlatformTaskDispatcher implements Runnable {
     private PlatformTask queueTail;
     static String field_c;
     private boolean microsoftJvm;
-    gl[] field_p;
+    BoundedRandomAccessFile[] field_p;
     private static String field_n;
     boolean privilegedTasksEnabled;
 
@@ -99,7 +99,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_u) {
             try {
-              this.field_u.d(109);
+              this.field_u.close(109);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -107,7 +107,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_g) {
             try {
-              this.field_g.d(56);
+              this.field_g.close(56);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -120,7 +120,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2_int = 0; var2_int < this.field_p.length; var2_int++) {
               if (this.field_p[var2_int] != null) {
                 try {
-                  this.field_p[var2_int].d(21);
+                  this.field_p[var2_int].close(21);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -130,7 +130,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_v != null) {
             try {
-              this.field_v.d(param0 - 20603);
+              this.field_v.close(param0 - 20603);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -178,15 +178,15 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(0, param1, param2, 2, 0);
     }
 
-    private final static gl a(String param0, String param1, byte param2, int param3) {
+    private final static BoundedRandomAccessFile a(String param0, String param1, byte param2, int param3) {
         try {
-          gl stackIn_12_0 = null;
+          BoundedRandomAccessFile stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           int var6 = 0;
           String var7 = null;
-          gl var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           if (param3 == 33) {
             var4 = "jagex_" + param1 + "_preferences" + param0 + "_rc.dat";
@@ -203,7 +203,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!(0 < var7.length()) ||
               new File(var7).exists()) {
               try {
-                var8 = new gl(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_12_0 = var8;
                 return stackIn_12_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -253,7 +253,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ProxyAuthenticationRequiredException var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          gl var3_ref3 = null;
+          BoundedRandomAccessFile var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -575,12 +575,12 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         ri.a(field_a, (byte) -94, field_f);
         if (this.privilegedTasksEnabled) {
-          this.field_v = new gl(ri.a(-121, (String) null, field_f, "random.dat"), "rw", 25L);
-          this.field_u = new gl(ri.a("main_file_cache.dat2", 1), "rw", 314572800L);
-          this.field_g = new gl(ri.a("main_file_cache.idx255", 1), "rw", 1048576L);
-          this.field_p = new gl[param2];
+          this.field_v = new BoundedRandomAccessFile(ri.a(-121, (String) null, field_f, "random.dat"), "rw", 25L);
+          this.field_u = new BoundedRandomAccessFile(ri.a("main_file_cache.dat2", 1), "rw", 314572800L);
+          this.field_g = new BoundedRandomAccessFile(ri.a("main_file_cache.idx255", 1), "rw", 1048576L);
+          this.field_p = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_p[var5_int] = new gl(ri.a("main_file_cache.idx" + var5_int, 1), "rw", 1048576L);
+            this.field_p[var5_int] = new BoundedRandomAccessFile(ri.a("main_file_cache.idx" + var5_int, 1), "rw", 1048576L);
           }
           if (this.microsoftJvm) {
             try {

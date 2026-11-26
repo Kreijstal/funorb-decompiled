@@ -5,7 +5,7 @@ import java.io.*;
 
 final class jd extends jh {
     static Sprite field_D;
-    static o field_F;
+    static BufferedRandomAccessFile field_F;
     static boolean field_E;
 
     final static void a(byte param0, int param1) {
@@ -167,7 +167,7 @@ final class jd extends jh {
           if (param3 > 109) {
             return;
           }
-          field_F = (o) null;
+          field_F = (BufferedRandomAccessFile) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

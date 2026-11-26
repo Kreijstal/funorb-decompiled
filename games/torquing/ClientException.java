@@ -36,8 +36,8 @@ final class ClientException extends RuntimeException {
             var2 = var6;
             if (null != jl.field_W) {
               try {
-                jl.field_W.a(false, 0L);
-                jl.field_W.a(-1, var6);
+                jl.field_W.seek(false, 0L);
+                jl.field_W.readFully(-1, var6);
                 for (var3_int = 0; 24 > var3_int; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

@@ -47,7 +47,7 @@ abstract class m implements dp {
 
     public final od a(byte param0) {
         if (this.a(-51)) {
-          return hd.field_g;
+          return BufferedRandomAccessFile.field_g;
         }
         if (!((350L + this.field_b) <= kd.correctedCurrentTimeMillis(-2456))) {
           return ub.field_s;

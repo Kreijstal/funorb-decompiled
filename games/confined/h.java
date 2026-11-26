@@ -228,7 +228,7 @@ final class h extends ee {
             } else {
               cb.field_b = b.a(new String[]{Integer.toString(var1)}, GameCanvas.field_g, param0 + 32751);
             }
-            cb.field_b = pf.a(11739, new CharSequence[]{(CharSequence) ((Object) cb.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) f.field_a)});
+            cb.field_b = BufferedRandomAccessFile.a(11739, new CharSequence[]{(CharSequence) ((Object) cb.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) f.field_a)});
           }
           ki.field_c.n(10);
           bn.c(param0 + 31574);

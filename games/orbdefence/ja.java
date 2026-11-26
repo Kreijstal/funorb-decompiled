@@ -2757,9 +2757,9 @@ final class ja {
         }
         var14Lifetime1 = 220;
         var5Lifetime2 = 470;
-        ob.field_I.c(dj.field_e, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
-        ob.field_I.c(dj.field_e, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
-        ob.field_I.c(dj.field_e, var5Lifetime2, var14Lifetime1, 11154431, -1);
+        ob.field_I.c(BufferedRandomAccessFile.field_e, var5Lifetime2 - 1, var14Lifetime1, 0, 0);
+        ob.field_I.c(BufferedRandomAccessFile.field_e, var5Lifetime2, -1 + var14Lifetime1, 0, 0);
+        ob.field_I.c(BufferedRandomAccessFile.field_e, var5Lifetime2, var14Lifetime1, 11154431, -1);
         var14Lifetime1 += 24;
         var20 = Integer.toString(100 * wd.field_D[var17]);
         if (var11[var17] &&

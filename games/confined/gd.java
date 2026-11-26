@@ -4,7 +4,7 @@
 final class gd extends IntrusiveNode {
     static int[] field_m;
     int field_s;
-    static pf field_q;
+    static BufferedRandomAccessFile field_q;
     static String field_r;
     static RgbSprite[] field_t;
     static int field_n;

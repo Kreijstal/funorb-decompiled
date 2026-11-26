@@ -7,13 +7,13 @@ final class PlatformTaskDispatcher implements Runnable {
     private Object field_m;
     static String field_o;
     private static String field_j;
-    cb field_c;
+    BoundedRandomAccessFile field_c;
     private DirectDrawFullscreenManager field_b;
     static String field_l;
-    cb field_t;
+    BoundedRandomAccessFile field_t;
     java.awt.EventQueue field_w;
     private boolean microsoftJvm;
-    cb[] field_q;
+    BoundedRandomAccessFile[] field_q;
     private boolean shutdownRequested;
     private PlatformTask queueHead;
     private static String field_v;
@@ -25,7 +25,7 @@ final class PlatformTaskDispatcher implements Runnable {
     static String field_r;
     private Win32CursorManager field_i;
     private Object field_s;
-    cb field_e;
+    BoundedRandomAccessFile field_e;
     static java.lang.reflect.Method field_p;
     private static int field_a;
 
@@ -65,15 +65,15 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.enqueueTask(4, 0, 0, 16266, param1);
     }
 
-    private final static cb a(byte param0, String param1, String param2, int param3) {
+    private final static BoundedRandomAccessFile a(byte param0, String param1, String param2, int param3) {
         try {
           int var6 = 0;
-          cb stackIn_12_0 = null;
+          BoundedRandomAccessFile stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          cb var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           String var9 = null;
           if (param3 != 33) {
@@ -91,7 +91,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new cb(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_12_0 = var8;
                 return stackIn_12_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class PlatformTaskDispatcher implements Runnable {
 
     private final PlatformTask requestSocketConnection(int param0, String param1, boolean param2, int param3) {
         if (param3 != 22) {
-          this.field_c = (cb) null;
+          this.field_c = (BoundedRandomAccessFile) null;
         }
         return this.enqueueTask(!param2 ? 1 : 22, 0, param0, 16266, param1);
     }
@@ -165,7 +165,7 @@ final class PlatformTaskDispatcher implements Runnable {
           ProxyAuthenticationRequiredException var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          cb var3_ref3 = null;
+          BoundedRandomAccessFile var3_ref3 = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -435,7 +435,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_e != null) {
             try {
-              this.field_e.a(param0 ^ 1);
+              this.field_e.close(param0 ^ 1);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -443,7 +443,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (null != this.field_t) {
             try {
-              this.field_t.a(1);
+              this.field_t.close(1);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -453,7 +453,7 @@ final class PlatformTaskDispatcher implements Runnable {
             for (var2_int = 0; var2_int < this.field_q.length; var2_int++) {
               if (null != this.field_q[var2_int]) {
                 try {
-                  this.field_q[var2_int].a(1);
+                  this.field_q[var2_int].close(1);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -463,7 +463,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_c != null) {
             try {
-              this.field_c.a(1);
+              this.field_c.close(1);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -581,12 +581,12 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         e.a(field_a, field_j, -19960);
         if (this.privilegedTasksEnabled) {
-          this.field_c = new cb(e.a("random.dat", (String) null, -8204, field_a), "rw", 25L);
-          this.field_e = new cb(e.a(0, "main_file_cache.dat2"), "rw", 314572800L);
-          this.field_t = new cb(e.a(0, "main_file_cache.idx255"), "rw", 1048576L);
-          this.field_q = new cb[param2];
+          this.field_c = new BoundedRandomAccessFile(e.a("random.dat", (String) null, -8204, field_a), "rw", 25L);
+          this.field_e = new BoundedRandomAccessFile(e.a(0, "main_file_cache.dat2"), "rw", 314572800L);
+          this.field_t = new BoundedRandomAccessFile(e.a(0, "main_file_cache.idx255"), "rw", 1048576L);
+          this.field_q = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_q[var5_int] = new cb(e.a(0, "main_file_cache.idx" + var5_int), "rw", 1048576L);
+            this.field_q[var5_int] = new BoundedRandomAccessFile(e.a(0, "main_file_cache.idx" + var5_int), "rw", 1048576L);
           }
           if (this.microsoftJvm) {
             try {

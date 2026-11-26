@@ -258,10 +258,10 @@ public final class MinerDisturbance extends ob {
               ce.field_d.c("CURRENTLEVEL: " + je.field_u, 630, var3, 65535, -1);
               var3 += 30;
               stackIn_88_0 = ce.field_d;
-              stackIn_88_1 = "SECONDS FOR ERRUPTION: " + me.field_h / 50;
+              stackIn_88_1 = "SECONDS FOR ERRUPTION: " + BufferedRandomAccessFile.field_h / 50;
               stackIn_88_2 = 630;
               stackIn_88_3 = var3;
-              if (me.field_h < 2000) {
+              if (BufferedRandomAccessFile.field_h < 2000) {
                 stackIn_89_4 = 65280;
               } else {
                 stackIn_89_4 = 16711680;
@@ -347,7 +347,7 @@ public final class MinerDisturbance extends ob {
               fi.field_b = td.a("penguin", fl.field_f, "supervolcano", (byte) 124);
               ArchiveIndex.field_j = td.a("icebomb", fl.field_f, "supervolcano", (byte) 118);
               hk.field_a = td.a("freezeexplosion", fl.field_f, "supervolcano", (byte) 113);
-              me.field_k[1] = jn.a("levelbackground", -29553, "supervolcano", fl.field_f);
+              BufferedRandomAccessFile.field_k[1] = jn.a("levelbackground", -29553, "supervolcano", fl.field_f);
               return false;
             }
             if (sa.field_t[1][0] == null) {
@@ -524,7 +524,7 @@ public final class MinerDisturbance extends ob {
           boolean decompiledSharedTail0 = (this.field_K);
           if (!decompiledSharedTail0) {
             if (je.field_N[cm.field_o] != je.field_u) {
-              me.field_h = me.field_h + 1;
+              BufferedRandomAccessFile.field_h = BufferedRandomAccessFile.field_h + 1;
             }
             this.field_R = this.field_R - 1;
             this.u(-16506);
@@ -774,7 +774,7 @@ public final class MinerDisturbance extends ob {
             decompiledFrameRemainder1 = (var8 != 0);
           }
           if (decompiledFrameRemainder1) {
-            var2 = me.field_k[cm.field_o];
+            var2 = BufferedRandomAccessFile.field_k[cm.field_o];
             var3 = -(li.field_c % var2.field_x);
             while (var3 < 640) {
               stackIn_20_0 = -(ClientException.field_d % var2.field_A);
@@ -1312,7 +1312,7 @@ public final class MinerDisturbance extends ob {
                 if (var21 != 0) {
                   je.field_u = je.field_N[cm.field_o];
                   je.k();
-                  if (me.field_h < 2000) {
+                  if (BufferedRandomAccessFile.field_h < 2000) {
                     fn.a(31, 224, 3);
                   }
                 }
@@ -1320,7 +1320,7 @@ public final class MinerDisturbance extends ob {
             } else {
               je.field_u = je.field_N[cm.field_o];
               je.k();
-              if (me.field_h < 2000) {
+              if (BufferedRandomAccessFile.field_h < 2000) {
                 fn.a(31, 224, 3);
               }
             }
@@ -4761,7 +4761,7 @@ public final class MinerDisturbance extends ob {
           ch.resetStaticState(-104);
           DiskCacheWorker.a(false);
           bk.clearStaticReferences((byte) -113);
-          me.clearStaticReferences((byte) -83);
+          BufferedRandomAccessFile.clearStaticReferences((byte) -83);
           BufferedSocket.b((byte) -121);
           ha.a((byte) 28);
           d.a((byte) 109);
@@ -5836,7 +5836,7 @@ public final class MinerDisturbance extends ob {
                 fh.field_e = jn.a("screen_box_top", -29553, "volcano", fl.field_f);
                 ei.field_M = jn.a("screen_box_bottom", -29553, "volcano", fl.field_f);
                 IntrusiveNode.field_b = jn.a("score_box", -29553, "volcano", fl.field_f);
-                me.field_k[0] = jn.a("levelbackground", -29553, "volcano", fl.field_f);
+                BufferedRandomAccessFile.field_k[0] = jn.a("levelbackground", -29553, "volcano", fl.field_f);
               }
               qd.field_S = true;
               return true;
@@ -6349,7 +6349,7 @@ public final class MinerDisturbance extends ob {
           cl.field_I = 0;
           IntrusiveNode.field_a = 0;
           eb.field_e = 0;
-          me.field_h = 0;
+          BufferedRandomAccessFile.field_h = 0;
           hn.field_c = false;
           field_J = -1;
           DiskCacheWorker.field_g[2] = 0;

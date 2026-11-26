@@ -89,7 +89,7 @@ final class rl {
         if (param0 != -6) {
           return 92;
         }
-        we.field_j.a(false);
+        BufferedRandomAccessFile.field_j.a(false);
         if (!oh.field_h.c((byte) 124)) {
           return ai.a(2);
         }

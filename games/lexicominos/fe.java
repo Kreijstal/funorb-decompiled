@@ -61,7 +61,7 @@ final class fe implements rd {
           var6_int = param1 + param3.field_t;
           var7 = param3.field_o + param0;
           ae.a(true, param3.field_j, var7, param3.field_v, var6_int);
-          var8 = be.field_b[1];
+          var8 = BufferedRandomAccessFile.field_b[1];
           if (param3 instanceof kf &&
             ((kf) (param3)).field_C) {
             var8.d(var6_int - (-1 - (param3.field_j - var8.field_r >> 1)), (param3.field_v - var8.field_x >> 1) + (var7 + 1), 256);

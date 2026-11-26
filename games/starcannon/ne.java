@@ -5,7 +5,7 @@ abstract class ne {
     int field_g;
     int field_f;
     static long field_d;
-    static td field_l;
+    static BufferedRandomAccessFile field_l;
     int field_h;
     static String field_i;
     static IntrusiveDeque field_c;
@@ -61,7 +61,7 @@ abstract class ne {
           ByteStorage.field_e = (param0 << 16) / 150;
           return;
         }
-        field_l = (td) null;
+        field_l = (BufferedRandomAccessFile) null;
         ByteStorage.field_a = param0 * 100 / 150;
         ByteStorage.field_c = param0 * 400 / 150;
         ByteStorage.field_e = (param0 << 16) / 150;

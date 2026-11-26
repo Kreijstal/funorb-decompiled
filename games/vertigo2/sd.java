@@ -28,7 +28,7 @@ final class sd extends WidgetWrapper {
     }
 
     public sd() {
-        super(0, 0, gi.field_m, im.field_h, (WidgetListener) null, (uf) null);
+        super(0, 0, gi.field_m, BufferedRandomAccessFile.field_h, (WidgetListener) null, (uf) null);
         this.field_J = new IntrusiveDeque();
     }
 

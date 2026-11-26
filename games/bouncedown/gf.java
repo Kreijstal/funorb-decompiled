@@ -3,7 +3,7 @@
  */
 final class gf extends IntrusiveNode {
     static String field_h;
-    static jf field_g;
+    static BufferedRandomAccessFile field_g;
     int field_i;
 
     final static int a(int param0, CharSequence param1) {

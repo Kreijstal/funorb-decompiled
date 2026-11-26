@@ -59,7 +59,7 @@ final class AccountNameAvailabilityValidator extends cb {
           ic.field_l = AwtRasterBuffer.field_e;
           ArchiveIndex.field_o = param3;
           vk.field_g = null;
-          me.field_j = param1;
+          BufferedRandomAccessFile.field_j = param1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

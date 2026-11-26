@@ -160,7 +160,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 jh.field_h = ll.a(false, (byte) -49, param5, param0);
               } else {
                 var10 = (String) null;
-                jh.field_h = ArchiveRequest.a(param0, -66, cb.field_a, (String) null, false);
+                jh.field_h = ArchiveRequest.a(param0, -66, BoundedRandomAccessFile.field_a, (String) null, false);
               }
               d.field_b.position = 0;
               d.field_b.writeByte(14, -51);
@@ -219,7 +219,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             }
             if (r.field_c == dd.field_b &&
               fk.a(false)) {
-              cb.field_a = se.field_p.readLong((byte) 5);
+              BoundedRandomAccessFile.field_a = se.field_p.readLong((byte) 5);
               ad.field_y = se.field_p.readUnsignedByte(7909);
               se.field_p.readUnsignedByte(7909);
               u.field_d = se.field_p.readUnsignedShort(param4 ^ 1174051991);
@@ -272,7 +272,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
                 }
               } else {
                 try {
-                  mb.a(new Object[]{ue.a(cb.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
+                  mb.a(new Object[]{ue.a(BoundedRandomAccessFile.field_a, param4 + 16779)}, ll.b(114), "zap", -27504);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

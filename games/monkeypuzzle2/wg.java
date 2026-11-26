@@ -24,7 +24,7 @@ final class wg extends IntrusiveNode {
           for (var2 = 0; 5 > var2; var2++) {
             fd.field_o[var2] = false;
             m.field_e[var2] = 272;
-            th.field_o[var2] = 30 + (var1_int + (pl.field_e.field_D + pl.field_e.field_C) * pl.field_e.a(th.field_n[var2], -57 + m.field_e[var2]));
+            th.field_o[var2] = 30 + (var1_int + (BoundedRandomAccessFile.field_e.field_D + BoundedRandomAccessFile.field_e.field_C) * BoundedRandomAccessFile.field_e.a(th.field_n[var2], -57 + m.field_e[var2]));
             if (th.field_o[var2] < 137) {
               th.field_o[var2] = 137;
             }
@@ -33,7 +33,7 @@ final class wg extends IntrusiveNode {
             vh.field_E[var2] = new Sprite(m.field_e[var2], th.field_o[var2]);
             vh.field_E[var2].e();
             lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, th.field_o[var2]);
-            pl.field_e.a(th.field_n[var2], 57, 15, m.field_e[var2] - 72, th.field_o[var2] - 30, 1, -1, 0, 0, pl.field_e.field_C + pl.field_e.field_D);
+            BoundedRandomAccessFile.field_e.a(th.field_n[var2], 57, 15, m.field_e[var2] - 72, th.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
             sb.field_r.b(lb.field_A, 57, th.field_o[var2] - 15, 1, 6579300);
             var3 = var2;
             if (0 != var3) {

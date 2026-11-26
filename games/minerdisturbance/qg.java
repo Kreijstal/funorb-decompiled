@@ -164,7 +164,7 @@ final class qg implements ad {
               return;
             }
             try {
-              w.field_W = new me(mm.field_b.field_i, 64, 0);
+              w.field_W = new BufferedRandomAccessFile(mm.field_b.field_i, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

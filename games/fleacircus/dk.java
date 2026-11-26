@@ -107,7 +107,7 @@ abstract class dk extends UiComponent implements wg {
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;
-                  k.c(-28354);
+                  BufferedRandomAccessFile.c(-28354);
                 }
                 ud.field_b.position = 0;
               }

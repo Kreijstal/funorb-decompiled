@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class o {
+final class BufferedRandomAccessFile {
     private byte[] field_a;
     private long field_k;
     private long field_l;
@@ -17,7 +17,7 @@ final class o {
     private int field_j;
     private RandomAccessCacheFile field_d;
 
-    private final void c(int param0) throws IOException {
+    private final void flush(int param0) throws IOException {
         long var2;
         long var4;
         int var6;
@@ -62,26 +62,26 @@ final class o {
           this.field_e = -1L;
         }
         if (param0 <= 45) {
-          o.clearStaticReferences(77);
+          BufferedRandomAccessFile.clearStaticReferences(77);
         }
     }
 
-    final long b(boolean param0) {
+    final long length(boolean param0) {
         if (!param0) {
           return -35L;
         }
         return this.field_l;
     }
 
-    final void a(boolean param0) throws IOException {
-        this.c(116);
+    final void close(boolean param0) throws IOException {
+        this.flush(116);
         this.field_d.close((byte) -118);
         if (param0) {
-          this.b(false);
+          this.length(false);
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void write(int param0, int param1, int param2, byte[] param3) throws IOException {
         RuntimeException stackIn_55_0 = null;
         StringBuilder stackIn_55_1 = null;
         String stackIn_56_2 = null;
@@ -102,10 +102,10 @@ final class o {
             if (this.field_e != -1L) {
               if (this.field_i >= this.field_e) {
                 if (this.field_e + (long)this.field_b < this.field_i) {
-                  this.c(100);
+                  this.flush(100);
                 }
               } else {
-                this.c(100);
+                this.flush(100);
               }
             }
             if (this.field_e != -1L &&
@@ -116,7 +116,7 @@ final class o {
               this.field_i = this.field_i + (long)var5_int;
               param2 = param2 + var5_int;
               this.field_b = this.field_g.length;
-              this.c(55);
+              this.flush(55);
             }
             if (this.field_g.length < param1) {
               if (this.field_i != this.field_h) {
@@ -174,7 +174,7 @@ final class o {
             throw var5;
           }
           if (param0 != -1) {
-            this.b(true);
+            this.length(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -198,7 +198,7 @@ final class o {
         field_c = null;
     }
 
-    private final void a(int param0) throws IOException {
+    private final void fillReadBuffer(int param0) throws IOException {
         int var2 = 0;
         int var3 = 0;
         int var4 = Torquing.field_u;
@@ -209,7 +209,7 @@ final class o {
         }
         this.field_f = this.field_i;
         if (param0 >= -54) {
-          this.b(true);
+          this.length(true);
         }
         while (this.field_a.length > this.field_j) {
           var2 = -this.field_j + this.field_a.length;
@@ -225,7 +225,7 @@ final class o {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void readFully(int param0, byte[] param1, int param2, int param3) throws IOException {
         int incrementValue$0 = 0;
         RuntimeException stackIn_61_0 = null;
         StringBuilder stackIn_61_1 = null;
@@ -294,7 +294,7 @@ final class o {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted0) &&
               (0 < param2)) {
-              this.a(-70);
+              this.fillReadBuffer(-70);
               var10_intLifetime1Lifetime1 = param2;
               if (var10_intLifetime1Lifetime1 > this.field_j) {
                 var10_intLifetime1Lifetime1 = this.field_j;
@@ -373,28 +373,28 @@ final class o {
         }
     }
 
-    final void a(boolean param0, long param1) throws IOException {
+    final void seek(boolean param0, long param1) throws IOException {
         if (param1 < 0L) {
           throw new IOException();
         }
         this.field_i = param1;
         if (param0) {
-          o.clearStaticReferences(116);
+          BufferedRandomAccessFile.clearStaticReferences(116);
         }
     }
 
-    final void a(int param0, byte[] param1) throws IOException {
+    final void readFully(int param0, byte[] param1) throws IOException {
         try {
           if (param0 != -1) {
             field_c = (String) null;
           }
-          this.a(0, param1, param1.length, -78);
+          this.readFully(0, param1, param1.length, -78);
         } catch (RuntimeException runtimeException) {
           throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "o.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    o(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
+    BufferedRandomAccessFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_e = -1L;
         this.field_f = -1L;

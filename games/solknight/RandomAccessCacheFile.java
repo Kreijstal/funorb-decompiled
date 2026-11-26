@@ -29,7 +29,7 @@ final class RandomAccessCacheFile {
     protected final void finalize() throws Throwable {
         if (this.field_a != null) {
           System.out.println("");
-          this.a((byte) -125);
+          this.close((byte) -125);
         }
     }
 
@@ -40,7 +40,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -73,7 +73,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final long a(int param0) throws IOException {
+    final long length(int param0) throws IOException {
         if (param0 != -1) {
           RandomAccessCacheFile.resetStaticState(114);
           return this.field_a.length();
@@ -81,7 +81,7 @@ final class RandomAccessCacheFile {
         return this.field_a.length();
     }
 
-    final int a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final int read(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
@@ -110,7 +110,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final void a(byte param0) throws IOException {
+    final void close(byte param0) throws IOException {
         int var2 = 0;
         int var2Lifetime1;
         if (null == this.field_a) {
@@ -146,7 +146,7 @@ final class RandomAccessCacheFile {
         }
     }
 
-    final void a(long param0, byte param1) throws IOException {
+    final void seek(long param0, byte param1) throws IOException {
         this.field_a.seek(param0);
         if (param1 <= 71) {
           field_b = (int[]) null;

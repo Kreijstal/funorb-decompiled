@@ -7,7 +7,7 @@ final class ni {
     static String field_a;
     static int field_d;
     static Boolean field_f;
-    static tk field_c;
+    static BufferedRandomAccessFile field_c;
 
     public static void clearStaticReferences(byte param0) {
         field_a = null;

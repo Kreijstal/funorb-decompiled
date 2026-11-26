@@ -2042,7 +2042,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "create_email_tooltip");
                 if (null != var2) {
-                  o.field_c = SecondaryNodeDeque.a(var2, false);
+                  BufferedRandomAccessFile.field_c = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "create_email_confirm_tooltip");
                 if (var2 != null) {

@@ -78,13 +78,13 @@ abstract class k implements ba {
             var9 = sb.a(var8, "@", "%40", 118);
             var10 = sb.a(var9, "&", "%26", 109);
             var11 = sb.a(var10, "#", "%23", 90);
-            if (tk.field_o == null) {
+            if (BufferedRandomAccessFile.field_o == null) {
               return;
             }
             stackIn_11_0 = Main.field_W;
             stackIn_11_1 = null;
             stackIn_11_2 = null;
-            stackIn_11_3 = tk.field_o.getCodeBase();
+            stackIn_11_3 = BufferedRandomAccessFile.field_o.getCodeBase();
             stackIn_11_4 = new StringBuilder().append("clienterror.ws?c=").append(ca.field_d).append("&u=");
             if (fk.field_o == null) {
               stackIn_12_1 = null;
@@ -97,7 +97,7 @@ abstract class k implements ba {
             }
             var5 = ((PlatformTaskDispatcher) (Object) stackIn_11_0).requestUrlStream(new java.net.URL(stackIn_11_3, ((StringBuilder) (Object) stackIn_11_4).append(stackIn_12_5).append("&v1=").append(PlatformTaskDispatcher.field_v).append("&v2=").append(PlatformTaskDispatcher.field_w).append("&e=").append(var11).toString()), true);
             while (var5.status == 0) {
-              wk.sleepMillis((byte) -97, 1L);
+              BoundedRandomAccessFile.sleepMillis((byte) -97, 1L);
             }
             if (1 == var5.status) {
               var6 = (DataInputStream) (var5.result);

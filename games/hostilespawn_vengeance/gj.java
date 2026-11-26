@@ -60,7 +60,7 @@ final class gj {
         if (param0 != -17) {
           field_d = (RgbSprite) null;
         }
-        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, CrossfadingMidiPcmStream.field_G, ee.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, ee.field_a};
+        return new nd[]{bh.field_c, ac.field_c, tf.field_b, li.field_x, lk.field_N, CrossfadingMidiPcmStream.field_G, BoundedRandomAccessFile.field_h, pl.field_q, lg.field_e, ResourceArchive.field_f, GzipDecompressor.field_a, bc.field_j, oa.field_g, BoundedRandomAccessFile.field_a};
     }
 
     final static u[] a(boolean param0, CipherPacketBuffer param1) {

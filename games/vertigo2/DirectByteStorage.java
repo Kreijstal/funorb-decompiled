@@ -51,7 +51,7 @@ final class DirectByteStorage extends ByteStorage {
             }
             if (null != ad.field_g) {
               try {
-                ad.field_g.b(-22473);
+                ad.field_g.close(-22473);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var1 = (IOException) (Object) decompiledCaughtException;
@@ -61,7 +61,7 @@ final class DirectByteStorage extends ByteStorage {
               for (var1_int = 0; ProxyAuthenticationRequiredException.field_g.length > var1_int; var1_int++) {
                 if (ProxyAuthenticationRequiredException.field_g[var1_int] != null) {
                   try {
-                    ProxyAuthenticationRequiredException.field_g[var1_int].b(-22473);
+                    ProxyAuthenticationRequiredException.field_g[var1_int].close(-22473);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

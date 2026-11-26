@@ -36,8 +36,8 @@ final class qja extends bf {
             var2 = var6;
             if (vg.field_n != null) {
               try {
-                vg.field_n.a(0L, (byte) -114);
-                vg.field_n.a((byte) -102, var6);
+                vg.field_n.seek(0L, (byte) -114);
+                vg.field_n.readFully((byte) -102, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var6[var3_int]) {
                     continue;

@@ -237,7 +237,7 @@ final class nj extends al {
               CipherPacketBuffer.field_n[1] = 5;
             }
           } else {
-            var3_int = r.a(ba.field_E, ClientException.field_g, jf.a(al.field_g, new String[]{"<br><%0><br>"}, (byte) -126), 1, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, BufferedRandomAccessFile.a(al.field_g, new String[]{"<br><%0><br>"}, (byte) -126), 1, gk.field_a);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ClientException.field_g[var5])) {
@@ -254,7 +254,7 @@ final class nj extends al {
             ll.field_E = new String[var3_int - var4 - 1];
             cb.a(ClientException.field_g, var4 + 1, ll.field_E, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = r.a(ba.field_E, ClientException.field_g, jf.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, gk.field_a);
+            var3_int = r.a(ba.field_E, ClientException.field_g, BufferedRandomAccessFile.a(se.field_B, new String[]{"<br><%0><br>"}, (byte) -126), param1 ^ -25697, gk.field_a);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ClientException.field_g[var5])) {
                 continue;

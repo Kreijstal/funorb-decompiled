@@ -67,8 +67,8 @@ final class PcmOutputWorker implements Runnable {
             AccountNameAvailabilityValidator.field_r[fg.field_a] = 0;
             n.field_d[fg.field_a][0] = (float)(pf.a((byte) 60, 3) - 1);
             n.field_d[fg.field_a][1] = -0.5f;
-            pl.field_f[fg.field_a][0] = (float)(pf.a((byte) -88, 480) + 80);
-            pl.field_f[fg.field_a][1] = 490.0f;
+            BoundedRandomAccessFile.field_f[fg.field_a][0] = (float)(pf.a((byte) -88, 480) + 80);
+            BoundedRandomAccessFile.field_f[fg.field_a][1] = 490.0f;
             fg.field_a = fg.field_a + 1;
           }
           stackIn_7_0 = ((kb.field_c & 7) != 0) ? 0 : 1;
@@ -84,12 +84,12 @@ final class PcmOutputWorker implements Runnable {
                 AccountNameAvailabilityValidator.field_r[var3] = 0;
               }
             }
-            dupTemp$0 = pl.field_f[var3];
+            dupTemp$0 = BoundedRandomAccessFile.field_f[var3];
             dupTemp$0[0] = dupTemp$0[0] + n.field_d[var3][0];
-            dupTemp$1 = pl.field_f[var3];
+            dupTemp$1 = BoundedRandomAccessFile.field_f[var3];
             dupTemp$1[1] = dupTemp$1[1] + n.field_d[var3][1];
-            if (pl.field_f[var3][1] < (float)(5 + param0)) {
-              pl.field_f[var3][1] = (float)(5 + param0);
+            if (BoundedRandomAccessFile.field_f[var3][1] < (float)(5 + param0)) {
+              BoundedRandomAccessFile.field_f[var3][1] = (float)(5 + param0);
             }
             dupTemp$2 = DiskCacheWorker.field_k[var3];
             DiskCacheWorker.field_k[var3] = dupTemp$2 + 1;
@@ -100,8 +100,8 @@ final class PcmOutputWorker implements Runnable {
               }
               var4 = var3 + 1;
               if (var4 < fg.field_a) {
-                var5 = pl.field_f[var3][0] - pl.field_f[var4][0];
-                var6 = -pl.field_f[var4][1] + pl.field_f[var3][1];
+                var5 = BoundedRandomAccessFile.field_f[var3][0] - BoundedRandomAccessFile.field_f[var4][0];
+                var6 = -BoundedRandomAccessFile.field_f[var4][1] + BoundedRandomAccessFile.field_f[var3][1];
                 var7 = var5 * var5 + var6 * var6;
                 if (!(var7 < 400.0f)) {
                   if (!(var7 > 3600.0f)) {
@@ -132,9 +132,9 @@ final class PcmOutputWorker implements Runnable {
                   dupTemp$11[1] = dupTemp$11[1] * var8;
                 }
               }
-              if (90.0f > pl.field_f[var3][0] &&
+              if (90.0f > BoundedRandomAccessFile.field_f[var3][0] &&
                 0.0f > n.field_d[var3][0] ||
-                pl.field_f[var3][0] > 550.0f &&
+                BoundedRandomAccessFile.field_f[var3][0] > 550.0f &&
                 n.field_d[var3][0] > 0.0f) {
                 dupTemp$12 = n.field_d[var3];
                 dupTemp$12[0] = (float)((double)dupTemp$12[0] * (Math.random() + -1.0));
@@ -142,7 +142,7 @@ final class PcmOutputWorker implements Runnable {
                 dupTemp$13[1] = (float)((double)dupTemp$13[1] + (-0.5 + Math.random()));
                 DiskCacheWorker.field_k[var3] = 0;
               }
-              if ((float)(param0 + 20) > pl.field_f[var3][1] &&
+              if ((float)(param0 + 20) > BoundedRandomAccessFile.field_f[var3][1] &&
                 0.0f > n.field_d[var3][1]) {
                 dupTemp$14 = n.field_d[var3];
                 dupTemp$14[1] = (float)((double)dupTemp$14[1] * (-1.0 + Math.random()));
@@ -150,7 +150,7 @@ final class PcmOutputWorker implements Runnable {
                 dupTemp$15[0] = (float)((double)dupTemp$15[0] + (Math.random() - 0.5));
                 DiskCacheWorker.field_k[var3] = 0;
               } else {
-                if (490.0f < pl.field_f[var3][1] &&
+                if (490.0f < BoundedRandomAccessFile.field_f[var3][1] &&
                   n.field_d[var3][1] > 0.0f) {
                   dupTemp$16 = n.field_d[var3];
                   dupTemp$16[1] = (float)((double)dupTemp$16[1] * (Math.random() + -1.0));

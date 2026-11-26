@@ -57,17 +57,17 @@ final class lf {
             }
             var6 = null;
             if (null != bi.field_b.field_t) {
-              ni.field_c = new tk(bi.field_b.field_t, 5200, 0);
+              ni.field_c = new BufferedRandomAccessFile(bi.field_b.field_t, 5200, 0);
               bi.field_b.field_t = null;
-              var6 = new SectorCacheStore(255, ni.field_c, new tk(bi.field_b.field_d, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, ni.field_c, new BufferedRandomAccessFile(bi.field_b.field_d, 12000, 0), 2097152);
             }
             var7 = null;
             if (ni.field_c != null) {
               if (rk.field_Z == null) {
-                rk.field_Z = new tk[bi.field_b.field_o.length];
+                rk.field_Z = new BufferedRandomAccessFile[bi.field_b.field_o.length];
               }
               if (rk.field_Z[param3] == null) {
-                rk.field_Z[param3] = new tk(bi.field_b.field_o[param3], 12000, 0);
+                rk.field_Z[param3] = new BufferedRandomAccessFile(bi.field_b.field_o[param3], 12000, 0);
                 bi.field_b.field_o[param3] = null;
               }
               var7 = new SectorCacheStore(param3, ni.field_c, rk.field_Z[param3], 2097152);

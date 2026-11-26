@@ -10,7 +10,7 @@ final class df implements uk {
     private int field_e;
     static String field_k;
     private int field_a;
-    static pc[] field_d;
+    static BufferedRandomAccessFile[] field_d;
     private BitmapFont field_f;
     static String field_j;
 
@@ -77,7 +77,7 @@ final class df implements uk {
     public static void clearStaticReferences(int param0) {
         field_k = null;
         if (param0 != 11324) {
-          field_d = (pc[]) null;
+          field_d = (BufferedRandomAccessFile[]) null;
         }
         field_d = null;
         field_j = null;
@@ -107,7 +107,7 @@ final class df implements uk {
         try {
           pk.field_b = param1;
           if (param0 > -93) {
-            field_d = (pc[]) null;
+            field_d = (BufferedRandomAccessFile[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "df.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -174,7 +174,7 @@ final class df implements uk {
                 DualLinkDeque.a((byte) 78, rb.field_w, b.field_t, NanoFrameTimer.field_h, FrameTimer.field_b, var6_intLifetime1);
               }
             }
-            kb.a(var5, (byte) 47);
+            BoundedRandomAccessFile.a(var5, (byte) 47);
             var6 = new String[2][var5];
             var20 = new int[2][4 * var5];
             var8 = BufferedSocket.field_b;

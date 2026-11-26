@@ -152,13 +152,13 @@ final class jn extends fc {
         Throwable decompiledCaughtException = null;
         var1_ref = ByteStorage.field_c;
         synchronized (var1_ref) {
-          if (PcmResampler.field_j == ee.field_e) {
+          if (PcmResampler.field_j == BoundedRandomAccessFile.field_e) {
             return false;
           }
-          pj.field_e = cm.field_a[ee.field_e];
-          aj.field_e = pe.field_db[ee.field_e];
+          pj.field_e = cm.field_a[BoundedRandomAccessFile.field_e];
+          aj.field_e = pe.field_db[BoundedRandomAccessFile.field_e];
           var2 = 26 % ((-11 - param0) / 61);
-          ee.field_e = 127 & ee.field_e + 1;
+          BoundedRandomAccessFile.field_e = 127 & BoundedRandomAccessFile.field_e + 1;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;

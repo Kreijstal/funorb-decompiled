@@ -220,7 +220,7 @@ final class bb {
           sc.field_h = new ci(0L, nj.field_x);
           tk.field_d = new ci(0L, pa.field_m);
           fi.field_b = new ci(0L, pa.field_m);
-          lc.field_f = new ci(0L, pa.field_m);
+          BufferedRandomAccessFile.field_f = new ci(0L, pa.field_m);
           pa.field_m.field_Ab = rh.a(ao.a(param0, "smallbutton", 2993, "lobby"), -9568);
           pa.field_m.field_Q = rh.a(ao.a(param0, "smallbutton_mouseover", 2993, "lobby"), -9568);
           dupTemp$0 = rh.a(ao.a(param0, "smallbutton_active", 2993, "lobby"), -9568);
@@ -244,12 +244,12 @@ final class bb {
           sc.field_h.field_Q = rh.a(ao.a(param0, "backbutton_mouseover", param3 ^ -3034, "lobby"), -9568);
           sc.field_h.field_Z = rh.a(ao.a(param0, "backbutton_mouseheld", 2993, "lobby"), param3 ^ 9527);
           sc.field_h.field_D = rh.a(ao.a(param0, "backbutton_disabled", 2993, "lobby"), param3 - 9463);
-          lc.field_f.field_Ab = rh.a(ao.a(param0, "gameoptionbutton", 2993, "lobby"), -9568);
-          lc.field_f.field_Q = rh.a(ao.a(param0, "gameoptionbutton_mouseover", param3 + 3098, "lobby"), -9568);
+          BufferedRandomAccessFile.field_f.field_Ab = rh.a(ao.a(param0, "gameoptionbutton", 2993, "lobby"), -9568);
+          BufferedRandomAccessFile.field_f.field_Q = rh.a(ao.a(param0, "gameoptionbutton_mouseover", param3 + 3098, "lobby"), -9568);
           dupTemp$1 = rh.a(ao.a(param0, "gameoptionbutton_active", 2993, "lobby"), -9568);
-          lc.field_f.field_ab = dupTemp$1;
-          lc.field_f.field_Z = dupTemp$1;
-          lc.field_f.field_D = rh.a(ao.a(param0, "gameoptionbutton_disabled", param3 + 3098, "lobby"), -9568);
+          BufferedRandomAccessFile.field_f.field_ab = dupTemp$1;
+          BufferedRandomAccessFile.field_f.field_Z = dupTemp$1;
+          BufferedRandomAccessFile.field_f.field_D = rh.a(ao.a(param0, "gameoptionbutton_disabled", param3 + 3098, "lobby"), -9568);
           tk.field_d.field_Ab = rh.a(ao.a(param0, "chatbutton", param3 + 3098, "lobby"), param3 - 9463);
           tk.field_d.field_Q = rh.a(ao.a(param0, "chatbutton_mouseover", param3 ^ -3034, "lobby"), -9568);
           dupTemp$2 = rh.a(ao.a(param0, "chatbutton_active", 2993, "lobby"), -9568);

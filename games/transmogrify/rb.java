@@ -14,8 +14,8 @@ final class rb {
           }
           if (DelegatingCanvas.field_b != null) {
             try {
-              DelegatingCanvas.field_b.a(0L, (byte) -127);
-              DelegatingCanvas.field_b.a(WordLanguage.field_l.payload, 24, (byte) 118, WordLanguage.field_l.position);
+              DelegatingCanvas.field_b.seek(0L, (byte) -127);
+              DelegatingCanvas.field_b.write(WordLanguage.field_l.payload, 24, (byte) 118, WordLanguage.field_l.position);
             } catch (Exception exception) {
             }
           }
