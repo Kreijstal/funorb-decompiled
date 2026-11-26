@@ -1534,7 +1534,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
-          ig stackIn_1_0 = new ig(this, metrics, glyphSprites, param2);
+          HardwareAtlasBitmapFont stackIn_1_0 = new HardwareAtlasBitmapFont(this, metrics, glyphSprites, param2);
           return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -1984,7 +1984,7 @@ abstract class HardwareRenderer extends GraphicsRenderer {
         }
         this.field_hb = false;
         this.d((byte) 82);
-        if (this.field_bb == nj.field_f) {
+        if (this.field_bb == SoftwareScanlineMask.field_f) {
           this.g(false);
         }
     }

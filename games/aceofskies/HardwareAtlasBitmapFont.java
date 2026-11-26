@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ig extends RendererBitmapFont {
+final class HardwareAtlasBitmapFont extends RendererBitmapFont {
     private HardwareVertexBuffer field_h;
     private boolean field_g;
     private HardwareRenderer field_f;
     private HardwareTexture2D field_e;
 
-    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, GlyphMask mask, int maskX, int maskY) {
     }
 
-    ig(HardwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
+    HardwareAtlasBitmapFont(HardwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int stackIn_22_2 = 0;
         int var8;

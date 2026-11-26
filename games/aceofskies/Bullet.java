@@ -55,7 +55,7 @@ final class Bullet extends FlightBody {
         ec.menuTransitionTicks = 0;
         ci.nextMenuId = screenId;
         if (!(ci.nextMenuId < 0)) {
-          aa.menuScreens[ci.nextMenuId].open(pointerSelection, 1);
+          GlyphMask.menuScreens[ci.nextMenuId].open(pointerSelection, 1);
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tu extends RendererBitmapFont {
+final class JavaMonochromeBitmapFont extends RendererBitmapFont {
     private int[] field_e;
     private int[] field_j;
     private int[] field_g;
@@ -9,7 +9,7 @@ final class tu extends RendererBitmapFont {
     private int[] field_i;
     private byte[][] field_h;
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitSolidGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = -(param5 >> 2);
         param5 = -(param5 & 3);
         for (int var11 = -param6; var11 < 0; var11++) {
@@ -87,13 +87,13 @@ final class tu extends RendererBitmapFont {
           return;
         }
         if ((color & -16777216) == -16777216) {
-          this.b(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
+          this.blitSolidGlyph(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
         } else if ((color & -16777216) != 0) {
-          this.a(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
+          this.blitTranslucentGlyph(this.field_h[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
         }
     }
 
-    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, GlyphMask mask, int maskX, int maskY) {
         if (mask == null) {
           this.drawGlyph(glyph, x, y, color, shadowPass);
           return;
@@ -137,17 +137,17 @@ final class tu extends RendererBitmapFont {
           return;
         }
         if ((color & -16777216) == -16777216) {
-          this.a(this.field_h[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_i[glyph], mask, maskX, maskY);
+          this.blitSolidGlyphWithMask(this.field_h[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_i[glyph], mask, maskX, maskY);
         } else {
-          this.b(this.field_h[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_i[glyph], mask, maskX, maskY);
+          this.blitTranslucentGlyphWithMask(this.field_h[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_i[glyph], mask, maskX, maskY);
         }
     }
 
-    private final void b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitTranslucentGlyphWithMask(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, GlyphMask param12, int param13, int param14) {
         int stackIn_5_0 = 0;
         int var28;
         Object var16 = null;
-        nj var16_ref = (nj) (param12);
+        SoftwareScanlineMask var16_ref = (SoftwareScanlineMask) (param12);
         int[] var33 = var16_ref.field_h;
         int[] var32 = var33;
         int[] var17 = var32;
@@ -219,11 +219,11 @@ final class tu extends RendererBitmapFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitSolidGlyphWithMask(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, GlyphMask param12, int param13, int param14) {
         int stackIn_5_0 = 0;
         int var25;
         Object var16 = null;
-        nj var16_ref = (nj) (param12);
+        SoftwareScanlineMask var16_ref = (SoftwareScanlineMask) (param12);
         int[] var28 = var16_ref.field_h;
         int[] var27 = var28;
         int[] var17 = var27;
@@ -288,7 +288,7 @@ final class tu extends RendererBitmapFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitTranslucentGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = param2 >>> 24;
         int var11 = 255 - var10;
         for (int var12 = -param6; var12 < 0; var12++) {
@@ -308,7 +308,7 @@ final class tu extends RendererBitmapFont {
         }
     }
 
-    tu(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
+    JavaMonochromeBitmapFont(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         this.field_f = param0;
         this.field_i = param3;

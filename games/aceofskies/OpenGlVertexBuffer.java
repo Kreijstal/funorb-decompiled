@@ -37,7 +37,7 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements HardwareVertexBuf
         if (Character.isISOControl(param0)) {
           return false;
         }
-        if (dc.a((byte) -69, param0)) {
+        if (OpenGlTextureMask.isAsciiAlphaNumeric((byte) -69, param0)) {
           return true;
         }
         if (param1 <= 110) {
@@ -87,7 +87,7 @@ final class OpenGlVertexBuffer extends OpenGlBuffer implements HardwareVertexBuf
           gm.field_x = od.a("", 66);
           gm.field_x.a(param0, false);
           kg.a(4, param2, param4, param1);
-          nj.d(-8129);
+          SoftwareScanlineMask.initializeLoginUi(-8129);
           nb.field_c = DiskCacheWorker.field_h;
           ht.field_k = DiskCacheWorker.field_h;
         } catch (RuntimeException runtimeException) {

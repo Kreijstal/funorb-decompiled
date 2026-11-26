@@ -19,7 +19,7 @@ final class jk {
           if (Character.isISOControl(param0)) {
             return false;
           }
-          if (dc.a((byte) -119, param0)) {
+          if (OpenGlTextureMask.isAsciiAlphaNumeric((byte) -119, param0)) {
             return true;
           }
           char[] var5 = wo.field_l;

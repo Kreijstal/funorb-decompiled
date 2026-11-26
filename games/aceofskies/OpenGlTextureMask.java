@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends aa {
+final class OpenGlTextureMask extends GlyphMask {
     static int field_f;
     static RenderSprite bulletSprite;
     el field_e;
 
-    public static void c(int param0) {
+    public static void clearTextureMaskStatics(int param0) {
         bulletSprite = null;
         if (param0 != -58) {
-          dc.c(33);
+          OpenGlTextureMask.clearTextureMaskStatics(33);
         }
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isAsciiAlphaNumeric(byte param0, char param1) {
         if (param0 >= -67) {
           return false;
         }
@@ -47,7 +47,7 @@ final class dc extends aa {
         return true;
     }
 
-    private dc() throws Throwable {
+    private OpenGlTextureMask() throws Throwable {
         throw new Error();
     }
 

@@ -19,7 +19,7 @@ final class of {
         if (param0 <= 104) {
           return;
         }
-        nj.c(-113);
+        SoftwareScanlineMask.showLoadingPanel(-113);
         oi.a(4, 20665);
     }
 

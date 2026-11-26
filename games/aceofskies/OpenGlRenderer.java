@@ -2115,7 +2115,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
-          mu stackIn_1_0 = new mu(this, metrics, glyphSprites, param2);
+          OpenGlAtlasBitmapFont stackIn_1_0 = new OpenGlAtlasBitmapFont(this, metrics, glyphSprites, param2);
           return (RendererBitmapFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

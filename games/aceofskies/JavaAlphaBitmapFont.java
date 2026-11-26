@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ts extends RendererBitmapFont {
+final class JavaAlphaBitmapFont extends RendererBitmapFont {
     private int[] field_e;
     private JavaSoftwareRenderer field_f;
     private int[] field_j;
@@ -9,11 +9,11 @@ final class ts extends RendererBitmapFont {
     private int[] field_i;
     private byte[][] field_g;
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, aa param12, int param13, int param14) {
+    private final void blitCoverageGlyphWithMask(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, GlyphMask param12, int param13, int param14) {
         int stackIn_5_0 = 0;
         int var26;
         Object var16 = null;
-        nj var16_ref = (nj) (param12);
+        SoftwareScanlineMask var16_ref = (SoftwareScanlineMask) (param12);
         int[] var32 = var16_ref.field_h;
         int[] var31 = var32;
         int[] var17 = var31;
@@ -87,7 +87,7 @@ final class ts extends RendererBitmapFont {
         }
     }
 
-    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, GlyphMask mask, int maskX, int maskY) {
         if (mask == null) {
           this.drawGlyph(glyph, x, y, color, shadowPass);
           return;
@@ -130,10 +130,10 @@ final class ts extends RendererBitmapFont {
           var10 <= 0) {
           return;
         }
-        this.a(this.field_g[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_e[glyph], mask, maskX, maskY);
+        this.blitCoverageGlyphWithMask(this.field_g[glyph], this.field_f.field_E, color, var15, var12, var9, var10, var13, var14, x, y, this.field_e[glyph], mask, maskX, maskY);
     }
 
-    ts(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
+    JavaAlphaBitmapFont(JavaSoftwareRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, int[] param3, int[] param4) {
         super(param0, param1);
         int stackIn_9_2 = 0;
         this.field_f = param0;
@@ -164,7 +164,7 @@ final class ts extends RendererBitmapFont {
         }
     }
 
-    private final void a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final void blitCoverageGlyph(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         for (int var10 = -param6; var10 < 0; var10++) {
           for (int var11 = -param5; var11 < 0; var11++) {
             int incrementValue$11 = param3;
@@ -225,6 +225,6 @@ final class ts extends RendererBitmapFont {
           var7 <= 0) {
           return;
         }
-        this.a(this.field_g[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
+        this.blitCoverageGlyph(this.field_g[glyph], this.field_f.field_E, color, var12, var9, var6, var7, var10, var11);
     }
 }

@@ -128,7 +128,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               -mg.field_b + kh.correctedCurrentTimeMillis(-67) > 1000L) {
               java.awt.Rectangle var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (nj.field_e > var2.width) {
+                if (SoftwareScanlineMask.field_e > var2.width) {
                   return;
                 }
                 if (hb.field_b > var2.height) {
@@ -719,7 +719,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               hb.field_b = param5;
               BufferedRandomAccessFile.field_f = this;
               td.field_b = param0;
-              nj.field_e = param0;
+              SoftwareScanlineMask.field_e = param0;
               ci.field_g = param1;
               CrossfadingMidiPcmStream.field_x = 0;
               fb.field_c = bm.m(124);

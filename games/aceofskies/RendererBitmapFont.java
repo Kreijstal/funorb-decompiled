@@ -7,7 +7,7 @@ abstract class RendererBitmapFont {
     private BitmapFontMetrics metrics;
     static AudioOutput field_a;
 
-    final int drawParagraph(int maskY, int left, int textColor, boolean obfuscationGuard, int shadowColor, int horizontalAlignment, int top, int lineSpacing, int maskX, RenderSprite[] inlineImages, aa mask, int verticalAlignment, int[] inlineImageBaselineOffsets, int width, int height, String text) {
+    final int drawParagraph(int maskY, int left, int textColor, boolean obfuscationGuard, int shadowColor, int horizontalAlignment, int top, int lineSpacing, int maskX, RenderSprite[] inlineImages, GlyphMask mask, int verticalAlignment, int[] inlineImageBaselineOffsets, int width, int height, String text) {
         String stackIn_7_2 = null;
         String stackIn_10_2 = null;
         String stackIn_13_2 = null;
@@ -154,13 +154,13 @@ abstract class RendererBitmapFont {
         }
         try {
           this.resetTextStyle(shadowColor, -1, textColor);
-          this.drawStyledText(0, inlineImages, leftX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (aa) null, maskY);
+          this.drawStyledText(0, inlineImages, leftX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (GlyphMask) null, maskY);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.O(" + textColor + ',' + shadowColor + ',' + (inlineImages != null ? "{...}" : "null") + ',' + leftX + ',' + maskY + ',' + (text != null ? "{...}" : "null") + ',' + baselineY + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int drawParagraphInternal(int height, int shadowColor, int maximumLines, aa mask, int verticalAlignment, int textColor, String text, int width, int horizontalAlignment, int top, int maskY, int lineSpacing, RenderSprite[] inlineImages, int obfuscationGuard, int[] inlineImageBaselineOffsets, int left, int maskX) {
+    private final int drawParagraphInternal(int height, int shadowColor, int maximumLines, GlyphMask mask, int verticalAlignment, int textColor, String text, int width, int horizontalAlignment, int top, int maskY, int lineSpacing, RenderSprite[] inlineImages, int obfuscationGuard, int[] inlineImageBaselineOffsets, int left, int maskX) {
         String stackIn_50_2 = null;
         String stackIn_53_2 = null;
         String stackIn_56_2 = null;
@@ -291,13 +291,13 @@ abstract class RendererBitmapFont {
             this.drawRightAlignedText((String) null, -14, 82, 83, -17, (byte) 19);
           }
           this.resetTextStyle(shadowColor, obfuscationGuard - 18732, textColor);
-          this.drawStyledText(0, (RenderSprite[]) null, leftX, text, (byte) 5, (int[]) null, baselineY, (aa) null, 0);
+          this.drawStyledText(0, (RenderSprite[]) null, leftX, text, (byte) 5, (int[]) null, baselineY, (GlyphMask) null, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.F(" + textColor + ',' + shadowColor + ',' + leftX + ',' + (text != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ')');
         }
     }
 
-    private final void drawStyledText(int maskX, RenderSprite[] inlineImages, int penX, String text, byte obfuscationGuard, int[] inlineImageBaselineOffsets, int baselineY, aa mask, int maskY) {
+    private final void drawStyledText(int maskX, RenderSprite[] inlineImages, int penX, String text, byte obfuscationGuard, int[] inlineImageBaselineOffsets, int baselineY, GlyphMask mask, int maskY) {
         int stackIn_26_0 = 0;
         String stackIn_65_2 = null;
         String stackIn_68_2 = null;
@@ -483,7 +483,7 @@ abstract class RendererBitmapFont {
           if (obfuscationGuard != 92) {
             this.renderer = (GraphicsRenderer) null;
           }
-          this.drawStyledText(0, (RenderSprite[]) null, rightX - this.metrics.measureTextWidth((byte) 94, text), text, (byte) 5, (int[]) null, baselineY, (aa) null, 0);
+          this.drawStyledText(0, (RenderSprite[]) null, rightX - this.metrics.measureTextWidth((byte) 94, text), text, (byte) 5, (int[]) null, baselineY, (GlyphMask) null, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.J(" + (text != null ? "{...}" : "null") + ',' + textColor + ',' + shadowColor + ',' + rightX + ',' + baselineY + ',' + obfuscationGuard + ')');
         }
@@ -511,7 +511,7 @@ abstract class RendererBitmapFont {
         }
         try {
           this.resetTextStyle(shadowColor, -1, textColor);
-          this.drawStyledText(0, (RenderSprite[]) null, -(this.metrics.measureTextWidth((byte) 94, text) / 2) + centerX, text, (byte) 5, (int[]) null, baselineY, (aa) null, 0);
+          this.drawStyledText(0, (RenderSprite[]) null, -(this.metrics.measureTextWidth((byte) 94, text) / 2) + centerX, text, (byte) 5, (int[]) null, baselineY, (GlyphMask) null, 0);
           if (obfuscationGuard < 95) {
             String var8 = (String) null;
             this.drawRightAlignedText((String) null, 1, -72, -15, 80, (byte) -125);
@@ -530,13 +530,13 @@ abstract class RendererBitmapFont {
           if (obfuscationGuard > -93) {
             RendererBitmapFont.a(126, -64);
           }
-          this.drawStyledText(0, inlineImages, -this.metrics.measureTextWidth((byte) 94, text) + rightX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (aa) null, 0);
+          this.drawStyledText(0, inlineImages, -this.metrics.measureTextWidth((byte) 94, text) + rightX, text, (byte) 5, inlineImageBaselineOffsets, baselineY, (GlyphMask) null, 0);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "da.M(" + shadowColor + ',' + textColor + ',' + (inlineImageBaselineOffsets != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + baselineY + ',' + (text != null ? "{...}" : "null") + ',' + rightX + ',' + (inlineImages != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY);
+    abstract void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, GlyphMask mask, int maskX, int maskY);
 
     static {
         field_b = new int[128];

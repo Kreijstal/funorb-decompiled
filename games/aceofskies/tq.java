@@ -36,9 +36,9 @@ final class tq extends fa {
         if (!param0) {
           tq.b(false);
         }
-        aa.menuScreens[4] = new MenuScreen(4);
+        GlyphMask.menuScreens[4] = new MenuScreen(4);
         za.registerMenuLayout(32, new int[]{8, 9, 10, 21, 5, 20}, 400, 30, 2, 468, (byte) 120);
-        aa.menuScreens[2] = new MenuScreen(2);
+        GlyphMask.menuScreens[2] = new MenuScreen(2);
         if (qr.field_a <= 0) {
           co.returnMenuId = 0;
           if ((64 & hg.field_D) != 0) {
@@ -53,9 +53,9 @@ final class tq extends fa {
         }
         if (cn.a(pt.field_b, (byte) 75)) {
           za.registerMenuLayout(32, new int[]{1, 12, 13, 4, 3, 7}, 180, 170, 1, 470, (byte) 121);
-          aa.menuScreens[1] = new MenuScreen(1);
+          GlyphMask.menuScreens[1] = new MenuScreen(1);
           za.registerMenuLayout(32, new int[]{12, 13, 4, 5}, 180, 170, 7, 470, (byte) 87);
-          aa.menuScreens[7] = new MenuScreen(7);
+          GlyphMask.menuScreens[7] = new MenuScreen(7);
         }
         co.returnMenuId = 0;
         if ((64 & hg.field_D) != 0) {

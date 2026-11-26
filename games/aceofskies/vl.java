@@ -41,7 +41,7 @@ final class vl {
         String stackIn_8_2 = null;
         try {
           if (param0 == 10) {
-            boolean stackIn_4_0 = aa.a(true, 10, param1, (byte) -43);
+            boolean stackIn_4_0 = GlyphMask.isValidIntInRadix(true, 10, param1, (byte) -43);
             return stackIn_4_0;
           }
           return true;

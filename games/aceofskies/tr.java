@@ -9,7 +9,7 @@ final class tr {
         int var5 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {
           for (int var2_int = 0; var2_int < 3; var2_int++) {
-            aa.field_c[var2_int] = 0;
+            GlyphMask.field_c[var2_int] = 0;
           }
           if (param1 > -85) {
             field_a = (st) null;
@@ -17,18 +17,18 @@ final class tr {
           for (int var2_intLifetime1 = 0; var2_intLifetime1 < dd.field_a; var2_intLifetime1++) {
             if (param0.field_f == ve.field_b[var2_intLifetime1].field_f) {
               int dupTemp$3 = ve.field_b[var2_intLifetime1].a(0);
-              aa.field_c[dupTemp$3] = aa.field_c[dupTemp$3] + 1;
+              GlyphMask.field_c[dupTemp$3] = GlyphMask.field_c[dupTemp$3] + 1;
             }
           }
           int dupTemp$0 = param0.a(0);
-          aa.field_c[dupTemp$0] = aa.field_c[dupTemp$0] + 1;
+          GlyphMask.field_c[dupTemp$0] = GlyphMask.field_c[dupTemp$0] + 1;
           int var2_intLifetime2 = 0;
           for (int var3 = 0; dd.field_a > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (ve.field_b[var3].field_f == param0.field_f) {
               int var4 = ve.field_b[var3].a(0);
-              if (WeightedObjectCache.field_a < aa.field_c[var4]) {
-                aa.field_c[var4] = aa.field_c[var4] - 1;
+              if (WeightedObjectCache.field_a < GlyphMask.field_c[var4]) {
+                GlyphMask.field_c[var4] = GlyphMask.field_c[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

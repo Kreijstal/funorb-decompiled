@@ -134,7 +134,7 @@ public final class AceOfSkies extends NetworkGameClient {
               int var4 = 0;
               while (true) {
                 if (var4 < 8) {
-                  aa.menuScreens[var4] = new MenuScreen(var4);
+                  GlyphMask.menuScreens[var4] = new MenuScreen(var4);
                   var4++;
                   if (!var5) {
                     continue;
@@ -314,7 +314,7 @@ public final class AceOfSkies extends NetworkGameClient {
             if (-1 == po.activeMenuId) {
               return;
             }
-            aa.menuScreens[po.activeMenuId].advanceMenu(-25039);
+            GlyphMask.menuScreens[po.activeMenuId].advanceMenu(-25039);
             if (!var3) {
               return;
             }
@@ -502,7 +502,7 @@ public final class AceOfSkies extends NetworkGameClient {
           gn.a((byte) -72);
           eo.clearStaticReferences((byte) 50);
           fn.a((byte) -5);
-          aa.a(0);
+          GlyphMask.clearGlyphMaskStatics(0);
           hn.clearStaticReferences(0);
           pr.a(obfuscationGuard - 19552);
           mr.clearStaticReferences(0);
@@ -685,8 +685,8 @@ public final class AceOfSkies extends NetworkGameClient {
           tq.clearStaticReferences(400);
           NodeHashTableIterator.clearStaticReferences(19592);
           DualLinkDequeIterator.a((byte) 116);
-          nj.clearStaticReferences((byte) -59);
-          dc.c(obfuscationGuard ^ -19509);
+          SoftwareScanlineMask.clearStaticReferences((byte) -59);
+          OpenGlTextureMask.clearTextureMaskStatics(obfuscationGuard ^ -19509);
           qk.clearStaticReferences(0);
           OpenGlShaderObject.clearStaticReferences(1);
           mq.clearStaticReferences(20370);
@@ -885,20 +885,20 @@ public final class AceOfSkies extends NetworkGameClient {
                 ec.menuTransitionTicks < 30) {
                 int var5_int = ec.menuTransitionTicks;
                 var5_int = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_int / 2.0 / 30.0));
-                aa.menuScreens[po.activeMenuId].drawMenu(-var5_int + 480, var4, -4);
+                GlyphMask.menuScreens[po.activeMenuId].drawMenu(-var5_int + 480, var4, -4);
               }
               if (ci.nextMenuId != -1 &&
                 !(ec.menuTransitionTicks <= 10)) {
                 int var5_intLifetime2 = ec.menuTransitionTicks - 40;
                 var5_intLifetime2 = (int)(480.0 * Math.cos(3.141592653589793 * (double)var5_intLifetime2 / 2.0 / 30.0));
-                aa.menuScreens[ci.nextMenuId].drawMenu(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
+                GlyphMask.menuScreens[ci.nextMenuId].drawMenu(-var5_intLifetime2 + 480, var4, obfuscationGuard - 154);
                 if (var10 &&
                   po.activeMenuId != -1) {
-                  aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
+                  GlyphMask.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
                 }
               }
             } else if (po.activeMenuId != -1) {
-              aa.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
+              GlyphMask.menuScreens[po.activeMenuId].drawMenu(0, var4, -4);
             }
             if (gi.a(true)) {
               var3 = true;
@@ -955,12 +955,12 @@ public final class AceOfSkies extends NetworkGameClient {
               }
               if (decompiledSharedTail0) {
                 var9 = lb.field_a[var5.field_f];
-                aa.achievementSprites[var5.field_f].drawScaled(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
+                GlyphMask.achievementSprites[var5.field_f].drawScaled(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                 var8 += 65;
               }
-              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
-              PacketBuffer.gameFont.drawParagraph(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, var8 - 1, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, -180 + sh.field_u, var6_int << 24, true, var6_int << 24, 1, 1 + var8, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
+              PacketBuffer.gameFont.drawParagraph(0, sh.field_u - 180, 16777215 | var6_int << 24, true, -1, 1, var8, 18, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, 170, 150, var9);
             }
             if (var3) {
               if (0 == bg.field_b && (!jf.a(15000) ||
@@ -1059,7 +1059,7 @@ public final class AceOfSkies extends NetworkGameClient {
                       break;
                   }
                   if (!gi.a(true)) {
-                    aa.menuScreens[po.activeMenuId].open(true, 1);
+                    GlyphMask.menuScreens[po.activeMenuId].open(true, 1);
                   }
                   decompiledFrameRemainder0 = ((var3));
                 }

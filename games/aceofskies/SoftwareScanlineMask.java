@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends aa {
+final class SoftwareScanlineMask extends GlyphMask {
     static int field_e;
     int[] field_h;
     int[] field_g;
     static qo field_f;
 
-    final static void c(int param0) {
+    final static void showLoadingPanel(int param0) {
         vn.field_f.e((byte) 116);
         if (fu.field_d != null) {
           vn.field_f.a(fu.field_d, 0);
@@ -19,7 +19,7 @@ final class nj extends aa {
         int var1Lifetime1 = -46 / ((11 - param0) / 46);
     }
 
-    final static void d(int param0) {
+    final static void initializeLoginUi(int param0) {
         if (param0 != -8129) {
           return;
         }
@@ -37,7 +37,7 @@ final class nj extends aa {
         field_f = null;
     }
 
-    private nj() throws Throwable {
+    private SoftwareScanlineMask() throws Throwable {
         throw new Error();
     }
 

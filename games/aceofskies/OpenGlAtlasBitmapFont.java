@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mu extends RendererBitmapFont {
+final class OpenGlAtlasBitmapFont extends RendererBitmapFont {
     private OpenGlRenderer field_f;
     private si field_g;
     private boolean field_e;
     private el field_h;
 
-    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, aa mask, int maskX, int maskY) {
-        dc var9 = (dc) (mask);
+    final void drawGlyphWithMask(char glyph, int x, int y, int color, boolean shadowPass, GlyphMask mask, int maskX, int maskY) {
+        OpenGlTextureMask var9 = (OpenGlTextureMask) (mask);
         el var10 = var9.field_e;
         this.field_f.a((byte) 10);
         this.field_f.a(this.field_h, 1);
@@ -67,7 +67,7 @@ final class mu extends RendererBitmapFont {
         }
     }
 
-    mu(OpenGlRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
+    OpenGlAtlasBitmapFont(OpenGlRenderer param0, BitmapFontMetrics param1, SpriteData[] param2, boolean param3) {
         super(param0, param1);
         int stackIn_22_2 = 0;
         int var8_int;

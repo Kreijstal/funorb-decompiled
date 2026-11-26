@@ -54,7 +54,7 @@ final class AccountCreationResultPanel extends oo implements dn {
             this.field_eb = false;
           }
           if (param1.success) {
-            var4 = aa.field_d;
+            var4 = GlyphMask.field_d;
           } else if (null != param1.suggestions) {
             var4 = HudMessage.field_e;
             if (this.field_db != null) {

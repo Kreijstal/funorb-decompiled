@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class aa {
+abstract class GlyphMask {
     static MenuScreen[] menuScreens;
     static int[] field_c;
     static String field_d;
     static RenderSprite[] achievementSprites;
 
-    protected aa() throws Throwable {
+    protected GlyphMask() throws Throwable {
         throw new Error();
     }
 
-    public static void a(int param0) {
+    public static void clearGlyphMaskStatics(int param0) {
         menuScreens = null;
         if (param0 == 0) {
           achievementSprites = null;
@@ -19,13 +19,13 @@ abstract class aa {
           field_d = null;
           return;
         }
-        aa.b(-69);
+        GlyphMask.showLoginWithStoredUsername(-69);
         achievementSprites = null;
         field_c = null;
         field_d = null;
     }
 
-    final static void b(int param0) {
+    final static void showLoginWithStoredUsername(int param0) {
         String var2 = (String) null;
         ub.a(rt.field_e, (String) null, -117);
         if (param0 != 87) {
@@ -33,7 +33,7 @@ abstract class aa {
         }
     }
 
-    final static boolean a(boolean param0, int param1, CharSequence param2, byte param3) {
+    final static boolean isValidIntInRadix(boolean param0, int param1, CharSequence param2, byte param3) {
         String stackIn_44_2 = null;
         int var11 = AceOfSkies.obfuscationControl ? 1 : 0;
         try {

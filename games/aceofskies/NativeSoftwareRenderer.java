@@ -268,12 +268,12 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeRes
         }
         if (!param2) {
           if (!var6) {
-            return (RendererBitmapFont) ((Object) new n(this, this.field_i, metrics, glyphSprites, (RenderSprite[]) null));
+            return (RendererBitmapFont) ((Object) new NativePalettedBitmapFont(this, this.field_i, metrics, glyphSprites, (RenderSprite[]) null));
           }
           throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
         }
         if (!var6) {
-          return (RendererBitmapFont) ((Object) new h(this, this.field_i, metrics, glyphSprites, (RenderSprite[]) null));
+          return (RendererBitmapFont) ((Object) new NativeMonochromeBitmapFont(this, this.field_i, metrics, glyphSprites, (RenderSprite[]) null));
         }
         throw new IllegalArgumentException("Cannot specify alpha with non-mono font unless someone writes it");
     }

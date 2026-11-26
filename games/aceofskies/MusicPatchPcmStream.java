@@ -232,7 +232,7 @@ final class MusicPatchPcmStream extends PcmStream {
             uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
           }
           InstrumentPatch.field_m.h((byte) 127);
-          nj.c(98);
+          SoftwareScanlineMask.showLoadingPanel(98);
           return;
         }
         field_n = (String) null;
@@ -251,7 +251,7 @@ final class MusicPatchPcmStream extends PcmStream {
             uf.field_e = od.a(new CharSequence[]{(CharSequence) ((Object) uf.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) ne.field_f)}, 3);
           }
           InstrumentPatch.field_m.h((byte) 127);
-          nj.c(98);
+          SoftwareScanlineMask.showLoadingPanel(98);
         }
     }
 

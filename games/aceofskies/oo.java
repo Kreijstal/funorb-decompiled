@@ -66,7 +66,7 @@ class oo extends dg implements dn {
         if (!this.field_V) {
           return;
         }
-        aa.b(87);
+        GlyphMask.showLoginWithStoredUsername(87);
     }
 
     public static void g(byte param0) {

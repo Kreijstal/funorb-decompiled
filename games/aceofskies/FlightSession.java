@@ -3538,7 +3538,7 @@ final class FlightSession {
                   Bullet var22_ref4 = this.bullets[var21Lifetime2];
                   var23Lifetime3 = (int)(var13 + (var22_ref4.position.x + this.cameraLookAheadX) * var3);
                   var24Lifetime2 = (int)(var3 * (var22_ref4.position.y + this.cameraLookAheadY) + var15);
-                  dc.bulletSprite.a((float)var23Lifetime3, (float)var24Lifetime2, (int)((double)(var22_ref4.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4.heading));
+                  OpenGlTextureMask.bulletSprite.a((float)var23Lifetime3, (float)var24Lifetime2, (int)((double)(var22_ref4.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4.heading));
                   var21Lifetime2++;
                   break scanLoop4;
                 }
@@ -3577,7 +3577,7 @@ final class FlightSession {
                 Bullet var22_ref4Lifetime1 = this.bullets[var21Lifetime2];
                 int var23Lifetime3Lifetime1 = (int)(var13 + (var22_ref4Lifetime1.position.x + this.cameraLookAheadX) * var3);
                 var24Lifetime2 = (int)(var3 * (var22_ref4Lifetime1.position.y + this.cameraLookAheadY) + var15);
-                dc.bulletSprite.a((float)var23Lifetime3Lifetime1, (float)var24Lifetime2, (int)((double)(var22_ref4Lifetime1.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4Lifetime1.heading));
+                OpenGlTextureMask.bulletSprite.a((float)var23Lifetime3Lifetime1, (float)var24Lifetime2, (int)((double)(var22_ref4Lifetime1.remainingTicks * 42) * var3), (int)(256.0 * var22_ref4Lifetime1.heading));
                 var21Lifetime2++;
                 if (var28) {
                   break scanLoop4;

@@ -984,7 +984,7 @@ final class MenuScreen {
           regionExit1: {
             Object var19_ref = null;
             if ((var16 & 1 << var18) != 0) {
-              var19_ref_pa = aa.achievementSprites[var18];
+              var19_ref_pa = GlyphMask.achievementSprites[var18];
             } else {
               if (alternateView) {
                 break regionExit1;
@@ -1084,13 +1084,13 @@ final class MenuScreen {
             (var16 & 1 << var17) == 0) {
             var18_ref_StringLifetime1 = NodeHashTableIterator.field_c;
           }
-          PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (aa) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
+          PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
           int var7Lifetime2Lifetime3 = 320;
           int var15Lifetime1Lifetime3 = 350 + verticalOffset;
           PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
           int var21Lifetime1 = verticalOffset + 200;
           if (var19Lifetime1) {
-            aa.achievementSprites[var17].drawBlended(256, var21Lifetime1, 0, var5, 1);
+            GlyphMask.achievementSprites[var17].drawBlended(256, var21Lifetime1, 0, var5, 1);
           } else if (qr.field_a <= 0 &&
             var12[var17]) {
             ut.lockedSprite.drawBlended(256, var21Lifetime1, 0, var5, 1);

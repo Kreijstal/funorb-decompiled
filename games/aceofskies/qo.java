@@ -127,7 +127,7 @@ final class qo {
         if (param0 != -92) {
           field_c = 87;
         }
-        return ((aj.field_v == this ? 1 : 0) | (this == nj.field_f ? 1 : 0)) != 0;
+        return ((aj.field_v == this ? 1 : 0) | (this == SoftwareScanlineMask.field_f ? 1 : 0)) != 0;
     }
 
     static {

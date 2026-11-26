@@ -1694,7 +1694,7 @@ final class ub extends IntrusiveNode {
                 }
                 var2 = lr.a(4688, "create_account_success");
                 if (null != var2) {
-                  aa.field_d = ea.a(0, var2);
+                  GlyphMask.field_d = ea.a(0, var2);
                 }
                 var2 = lr.a(4688, "invalid_name");
                 if (var2 != null) {

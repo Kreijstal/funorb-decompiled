@@ -33,7 +33,7 @@ final class vr {
         try {
           if (param0 != null &&
             param0.length() >= SocketConnector.field_d &&
-            param0.length() <= dc.field_f) {
+            param0.length() <= OpenGlTextureMask.field_f) {
             if (param1 == 2) {
               return false;
             }

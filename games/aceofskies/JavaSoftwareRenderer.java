@@ -503,14 +503,14 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         }
         if (!param2) {
           if (!var6) {
-            return (RendererBitmapFont) ((Object) new be(this, metrics, glyphSprites, var4, var5));
+            return (RendererBitmapFont) ((Object) new JavaPalettedBitmapFont(this, metrics, glyphSprites, var4, var5));
           }
           throw new IllegalArgumentException("");
         }
         if (!var6) {
-          return (RendererBitmapFont) ((Object) new tu(this, metrics, glyphSprites, var4, var5));
+          return (RendererBitmapFont) ((Object) new JavaMonochromeBitmapFont(this, metrics, glyphSprites, var4, var5));
         }
-        return (RendererBitmapFont) ((Object) new ts(this, metrics, glyphSprites, var4, var5));
+        return (RendererBitmapFont) ((Object) new JavaAlphaBitmapFont(this, metrics, glyphSprites, var4, var5));
     }
 
     private final void f(int param0) {

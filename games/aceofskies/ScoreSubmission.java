@@ -33,7 +33,7 @@ final class ScoreSubmission extends IntrusiveNode {
             SectorCacheStore.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
             ac.keySprites = new RenderSprite[qa.keySpriteData.length];
             SocketConnector.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
-            aa.achievementSprites = new RenderSprite[BufferElementType.achievementSpriteData.length];
+            GlyphMask.achievementSprites = new RenderSprite[BufferElementType.achievementSpriteData.length];
             rs.medalSprites = new RenderSprite[ByteStorage.medalSpriteData.length];
             GameKeyHandler.upgradeSprites = new RenderSprite[qq.upgradeSpriteData.length];
             HighscoreQuery.powerBulbSprites = new RenderSprite[tt.powerBulbSpriteData.length];
@@ -127,12 +127,12 @@ final class ScoreSubmission extends IntrusiveNode {
             in.scoreDigitSprites[var2Lifetime19] = var6.createSprite(kb.scoreDigitSpriteData[var2Lifetime19], false);
           }
           AccountNameAvailabilityValidator.titleImage = var6.createSprite(BoundedRandomAccessFile.titleImageData, false);
-          dc.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
+          OpenGlTextureMask.bulletSprite = var6.createSprite(RendererManager.bulletSpriteData, false);
           se.bigGameFont = var6.createFont(kn.bigFontMetrics, q.bigFontSpriteData, true);
           kn.titleFont = var6.createFont(ImageProducerRasterBuffer.titleFontMetrics, nc.titleFontSpriteData, true);
           PacketBuffer.gameFont = var6.createFont(hi.gameFontMetrics, CipherPacketBuffer.fontSpriteData, true);
           for (int var2Lifetime20 = 0; BufferElementType.achievementSpriteData.length > var2Lifetime20; var2Lifetime20++) {
-            aa.achievementSprites[var2Lifetime20] = var6.createSprite(BufferElementType.achievementSpriteData[var2Lifetime20], false);
+            GlyphMask.achievementSprites[var2Lifetime20] = var6.createSprite(BufferElementType.achievementSpriteData[var2Lifetime20], false);
           }
           for (int var2Lifetime21 = 0; var2Lifetime21 < ByteStorage.medalSpriteData.length; var2Lifetime21++) {
             RenderSprite[] stackIn_78_0 = rs.medalSprites;
