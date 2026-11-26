@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa {
+final class PolygonScanlineRasterizer {
     private static int field_a;
     private static int[] field_g;
     private static int field_h;
@@ -11,7 +11,7 @@ final class wa {
     private static int field_e;
     private static int field_d;
 
-    private final static void a(int[] param0, int param1, int param2) {
+    private final static void addPolygonEdges(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -78,21 +78,21 @@ final class wa {
         }
     }
 
-    private final static void a() {
+    private final static void resetEdges() {
         field_c = 0;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3) {
-        wa.a();
-        wa.a(param0, param1, param2);
-        wa.a(param3);
+    private final static void fillPolygonSlice(int[] param0, int param1, int param2, int param3) {
+        PolygonScanlineRasterizer.resetEdges();
+        PolygonScanlineRasterizer.addPolygonEdges(param0, param1, param2);
+        PolygonScanlineRasterizer.renderSpans(param3);
     }
 
-    final static void b(int[] param0, int param1, int param2) {
-        wa.a(param0, 0, param0.length, param1, param2, (int[]) null, (int[]) null);
+    final static void fillPolygonAlpha(int[] param0, int param1, int param2) {
+        PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked(param0, 0, param0.length, param1, param2, (int[]) null, (int[]) null);
     }
 
-    private final static boolean d() {
+    private final static boolean nextScanlineSpan() {
         int var0;
         int var1;
         int var2;
@@ -157,14 +157,14 @@ final class wa {
             field_c = 0;
             return false;
           }
-          wa.a(var3, var0);
+          PolygonScanlineRasterizer.sortActiveEdgesByX(var3, var0);
           field_f = var3;
           field_d = var0;
           var1 = var3;
         }
     }
 
-    private final static void b(int param0, int param1) {
+    private final static void sortEdgesByStartY(int param0, int param1) {
         int var7 = 0;
         int var2;
         int var3;
@@ -198,11 +198,11 @@ final class wa {
         field_g[var2 + 1] = var4;
         field_g[var2 + 2] = var5;
         field_g[var2 + 3] = var6;
-        wa.b(param0, var2);
-        wa.b(var2 + 4, param1);
+        PolygonScanlineRasterizer.sortEdgesByStartY(param0, var2);
+        PolygonScanlineRasterizer.sortEdgesByStartY(var2 + 4, param1);
     }
 
-    private final static void c() {
+    private final static void initializeScanlineSpans() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -217,7 +217,7 @@ final class wa {
           field_h = 2147483646;
           return;
         }
-        wa.b(0, field_c);
+        PolygonScanlineRasterizer.sortEdgesByStartY(0, field_c);
         int var0 = field_g[1];
         if (var0 < wb.field_a) {
           var0 = wb.field_a;
@@ -242,11 +242,11 @@ final class wa {
         field_h = var0 - 1;
     }
 
-    final static void a(int[] param0, int param1) {
-        wa.a(param0, 0, param0.length, param1);
+    final static void fillPolygon(int[] param0, int param1) {
+        PolygonScanlineRasterizer.fillPolygonSlice(param0, 0, param0.length, param1);
     }
 
-    private final static void a(int param0, int param1) {
+    private final static void sortActiveEdgesByX(int param0, int param1) {
         int var3 = 0;
         int var2;
         int var4;
@@ -276,13 +276,13 @@ final class wa {
         return;
     }
 
-    private final static void a(int param0, int param1, int[] param2, int[] param3) {
+    private final static void renderSpansAlphaMasked(int param0, int param1, int[] param2, int[] param3) {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        wa.c();
-        while (wa.d()) {
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
           var4 = field_a;
           var5 = field_e;
           var6 = field_h;
@@ -299,12 +299,12 @@ final class wa {
         }
     }
 
-    private final static void a(int param0) {
+    private final static void renderSpans(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        wa.c();
-        while (wa.d()) {
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
           var1 = field_a;
           var2 = field_e;
           var3 = field_h;
@@ -316,13 +316,13 @@ final class wa {
         field_g = null;
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int[] param5, int[] param6) {
+    private final static void fillPolygonSliceAlphaMasked(int[] param0, int param1, int param2, int param3, int param4, int[] param5, int[] param6) {
         if (param5 != null &&
           wb.field_b - wb.field_a != param5.length) {
           throw new IllegalStateException();
         }
-        wa.a();
-        wa.a(param0, param1, param2);
-        wa.a(param3, param4, param5, param6);
+        PolygonScanlineRasterizer.resetEdges();
+        PolygonScanlineRasterizer.addPolygonEdges(param0, param1, param2);
+        PolygonScanlineRasterizer.renderSpansAlphaMasked(param3, param4, param5, param6);
     }
 }

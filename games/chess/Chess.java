@@ -963,10 +963,10 @@ public final class Chess extends gb {
         int[] var4 = new int[]{12, 3, 19, 10, 15, 10, 15, 18, 10, 18, 10, 10, 6, 10, 12, 4};
         var6.e();
         wb.h(0, 0, wb.field_h, wb.field_c, 4, 1647364);
-        wa.a(var4, 16777215);
+        PolygonScanlineRasterizer.fillPolygon(var4, 16777215);
         var3.e();
         wb.h(0, 0, wb.field_h, wb.field_c, 4, 1647364);
-        wa.a(var4, 255);
+        PolygonScanlineRasterizer.fillPolygon(var4, 255);
         be.field_d = var6.c();
         df.field_e = var3.c();
         var6.a();
@@ -1657,7 +1657,7 @@ public final class Chess extends gb {
         hd.a((byte) -2);
         fk.d((byte) 1);
         DualLinkNode.c((byte) -26);
-        wa.clearStaticReferences();
+        PolygonScanlineRasterizer.clearStaticReferences();
         b.clearStaticReferences(-17436);
         gf.clearStaticReferences(540);
         cb.clearStaticReferences(-1);

@@ -779,7 +779,7 @@ public final class BachelorFridge extends NetworkGameClient {
         vca.releaseStatics(488250252);
         CreatureEvent.releaseStatics(-225);
         md.releaseStatics(28075);
-        sq.releaseStatics();
+        PolygonScanlineRasterizer.releaseStatics();
         qi.releaseStatics(10);
         FoodShopPanel.releaseStatics(true);
         ula.releaseStatics(0);

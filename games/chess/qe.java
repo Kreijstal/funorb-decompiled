@@ -937,7 +937,7 @@ final class qe extends uk {
         var22Lifetime1 = (int)(33.0 * Math.sin((double)param2 / 10.0)) + 64;
         var30 = (int[]) ((Object) this.field_H.clone());
         se.a(var20Lifetime1, var30, 45, (byte) 44, var19Lifetime1, var21Lifetime1, var18Lifetime1);
-        wa.b(var30, 16711680, var22Lifetime1);
+        PolygonScanlineRasterizer.fillPolygonAlpha(var30, 16711680, var22Lifetime1);
         qk.field_k.e();
         if (param5) {
           if (IntrusiveDeque.field_f == -1) {

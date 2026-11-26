@@ -783,11 +783,11 @@ class nf extends pl {
         if (var17 > param0 + param2) {
           var17 = param0 + param2;
         }
-        k.c();
-        while (k.d()) {
-          var18 = k.field_h;
-          var19 = k.field_f;
-          var20 = k.field_c;
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
+          var18 = PolygonScanlineRasterizer.field_h;
+          var19 = PolygonScanlineRasterizer.field_f;
+          var20 = PolygonScanlineRasterizer.field_c;
           if (var18 < var16) {
             var18 = var16;
           }

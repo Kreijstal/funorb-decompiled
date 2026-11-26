@@ -2206,10 +2206,10 @@
     {
       "symbol": "C:ok",
       "originalName": "ok",
-      "to": "MixedSupport092",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport092"
+      "to": "PolygonScanlineRasterizer",
+      "evidence": "Complete original class, all owned methods, bound callers and horizontal raster helpers reviewed: static packed polygon-edge storage, edge sorting, fixed-point scanline span iteration and polygon filling. Preserve all source behavior, primitive domains, allocation, clipping, sentinel, exception and partial-write order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:PolygonScanlineRasterizer"
     },
     {
       "symbol": "C:ol",
@@ -18753,7 +18753,7 @@
       "to": "integerState0565",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0565:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0565:I"
     },
     {
       "symbol": "F:ok.field_b:I",
@@ -18761,7 +18761,7 @@
       "to": "integerState0560",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0560:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0560:I"
     },
     {
       "symbol": "F:ok.field_c:I",
@@ -18769,7 +18769,7 @@
       "to": "integerState0566",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0566:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0566:I"
     },
     {
       "symbol": "F:ok.field_d:I",
@@ -18777,7 +18777,7 @@
       "to": "integerState0562",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0562:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0562:I"
     },
     {
       "symbol": "F:ok.field_e:I",
@@ -18785,7 +18785,7 @@
       "to": "integerState0563",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0563:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0563:I"
     },
     {
       "symbol": "F:ok.field_f:[I",
@@ -18793,7 +18793,7 @@
       "to": "integerArrayState0177",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerArrayState0177:[I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerArrayState0177:[I"
     },
     {
       "symbol": "F:ok.field_g:I",
@@ -18801,7 +18801,7 @@
       "to": "integerState0564",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0564:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0564:I"
     },
     {
       "symbol": "F:ok.field_h:I",
@@ -18809,7 +18809,7 @@
       "to": "integerState0561",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport092.integerState0561:I"
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0561:I"
     },
     {
       "symbol": "F:ol.field_n:I",
@@ -103761,7 +103761,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#0"
     },
     {
       "symbol": "L:ok.a()V#1",
@@ -103769,7 +103769,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#1"
     },
     {
       "symbol": "L:ok.a()V#2",
@@ -103777,7 +103777,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#2"
     },
     {
       "symbol": "L:ok.a()V#3",
@@ -103785,7 +103785,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#3"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#3"
     },
     {
       "symbol": "L:ok.a()V#4",
@@ -103793,7 +103793,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#4"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#4"
     },
     {
       "symbol": "L:ok.a()V#5",
@@ -103801,7 +103801,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#5"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#5"
     },
     {
       "symbol": "L:ok.a()V#6",
@@ -103809,7 +103809,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#6"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#6"
     },
     {
       "symbol": "L:ok.a()V#7",
@@ -103817,7 +103817,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#7"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#7"
     },
     {
       "symbol": "L:ok.a()V#8",
@@ -103825,7 +103825,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#8"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#8"
     },
     {
       "symbol": "L:ok.a(I)V#0",
@@ -103833,7 +103833,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1186(I)V#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpans(I)V#0"
     },
     {
       "symbol": "L:ok.a(I)V#1",
@@ -103841,7 +103841,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1186(I)V#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpans(I)V#1"
     },
     {
       "symbol": "L:ok.a(I)V#2",
@@ -103849,7 +103849,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1186(I)V#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpans(I)V#2"
     },
     {
       "symbol": "L:ok.a(II)V#0",
@@ -103857,7 +103857,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#0"
     },
     {
       "symbol": "L:ok.a(II)V#1",
@@ -103865,7 +103865,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#1"
     },
     {
       "symbol": "L:ok.a(II)V#2",
@@ -103873,7 +103873,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#2"
     },
     {
       "symbol": "L:ok.a(II)V#3",
@@ -103881,7 +103881,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#3"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#3"
     },
     {
       "symbol": "L:ok.a(II)V#4",
@@ -103889,7 +103889,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#4"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#4"
     },
     {
       "symbol": "L:ok.a(II)V#5",
@@ -103897,7 +103897,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#5"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#5"
     },
     {
       "symbol": "L:ok.a(II)V#6",
@@ -103905,7 +103905,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#6"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#6"
     },
     {
       "symbol": "L:ok.a(II[I[I)V#0",
@@ -103913,7 +103913,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#0"
     },
     {
       "symbol": "L:ok.a(II[I[I)V#1",
@@ -103921,7 +103921,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#1"
     },
     {
       "symbol": "L:ok.a(II[I[I)V#2",
@@ -103929,7 +103929,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#2"
     },
     {
       "symbol": "L:ok.a(II[I[I)V#3",
@@ -103937,7 +103937,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#3"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#3"
     },
     {
       "symbol": "L:ok.b()Z#0",
@@ -103945,7 +103945,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#0"
     },
     {
       "symbol": "L:ok.b()Z#1",
@@ -103953,7 +103953,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#1"
     },
     {
       "symbol": "L:ok.b()Z#10",
@@ -103961,7 +103961,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#10"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#10"
     },
     {
       "symbol": "L:ok.b()Z#11",
@@ -103969,7 +103969,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#11"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#11"
     },
     {
       "symbol": "L:ok.b()Z#12",
@@ -103977,7 +103977,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#12"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#12"
     },
     {
       "symbol": "L:ok.b()Z#2",
@@ -103985,7 +103985,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#2"
     },
     {
       "symbol": "L:ok.b()Z#3",
@@ -103993,7 +103993,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#3"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#3"
     },
     {
       "symbol": "L:ok.b()Z#4",
@@ -104001,7 +104001,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#4"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#4"
     },
     {
       "symbol": "L:ok.b()Z#5",
@@ -104009,7 +104009,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#5"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#5"
     },
     {
       "symbol": "L:ok.b()Z#6",
@@ -104017,7 +104017,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#6"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#6"
     },
     {
       "symbol": "L:ok.b()Z#7",
@@ -104025,7 +104025,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#7"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#7"
     },
     {
       "symbol": "L:ok.b()Z#8",
@@ -104033,7 +104033,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#8"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#8"
     },
     {
       "symbol": "L:ok.b()Z#9",
@@ -104041,7 +104041,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#9"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#9"
     },
     {
       "symbol": "L:ok.b(II)V#0",
@@ -104049,7 +104049,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#0"
     },
     {
       "symbol": "L:ok.b(II)V#1",
@@ -104057,7 +104057,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#1"
     },
     {
       "symbol": "L:ok.b(II)V#2",
@@ -104065,7 +104065,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#2"
     },
     {
       "symbol": "L:ok.b(II)V#3",
@@ -104073,7 +104073,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#3"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#3"
     },
     {
       "symbol": "L:ok.b([III)V#0",
@@ -104081,7 +104081,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#0"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#0"
     },
     {
       "symbol": "L:ok.b([III)V#1",
@@ -104089,7 +104089,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#1"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#1"
     },
     {
       "symbol": "L:ok.b([III)V#10",
@@ -104097,7 +104097,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#10"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#10"
     },
     {
       "symbol": "L:ok.b([III)V#11",
@@ -104105,7 +104105,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#11"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#11"
     },
     {
       "symbol": "L:ok.b([III)V#12",
@@ -104113,7 +104113,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#12"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#12"
     },
     {
       "symbol": "L:ok.b([III)V#13",
@@ -104121,7 +104121,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#13"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#13"
     },
     {
       "symbol": "L:ok.b([III)V#14",
@@ -104129,7 +104129,7 @@
       "to": "integerLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#14"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#14"
     },
     {
       "symbol": "L:ok.b([III)V#15",
@@ -104137,7 +104137,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#15"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#15"
     },
     {
       "symbol": "L:ok.b([III)V#2",
@@ -104145,7 +104145,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#2"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#2"
     },
     {
       "symbol": "L:ok.b([III)V#3",
@@ -104153,7 +104153,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#3"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#3"
     },
     {
       "symbol": "L:ok.b([III)V#4",
@@ -104161,7 +104161,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#4"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#4"
     },
     {
       "symbol": "L:ok.b([III)V#5",
@@ -104169,7 +104169,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#5"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#5"
     },
     {
       "symbol": "L:ok.b([III)V#6",
@@ -104177,7 +104177,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#6"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#6"
     },
     {
       "symbol": "L:ok.b([III)V#7",
@@ -104185,7 +104185,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#7"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#7"
     },
     {
       "symbol": "L:ok.b([III)V#8",
@@ -104193,7 +104193,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#8"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#8"
     },
     {
       "symbol": "L:ok.b([III)V#9",
@@ -104201,7 +104201,7 @@
       "to": "integerArrayLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#9"
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#9"
     },
     {
       "symbol": "L:on.<init>(Lmm;II)V#1",
@@ -159550,98 +159550,98 @@
     {
       "symbol": "M:ok.a()V",
       "originalName": "a",
-      "to": "performAction1185",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1185()V"
+      "to": "initializeScanlineSpans",
+      "evidence": "Source-purpose review: Sort packed edges by starting Y, clip the initial scanline, convert endpoints to fixed-point intersections and slopes, and initialize the active-edge cursors. Preserve zero-edge return, shifts, signed division, clipping and mutation order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.initializeScanlineSpans()V"
     },
     {
       "symbol": "M:ok.a(I)V",
       "originalName": "a",
-      "to": "performAction1186",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1186(I)V"
+      "to": "renderSpans",
+      "evidence": "Source-purpose review: Initialize and consume paired scanline spans through the solid horizontal-line helper. Preserve original zero-count sentinel behavior, clipping and shared-state mutations.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.renderSpans(I)V"
     },
     {
       "symbol": "M:ok.a(II)V",
       "originalName": "a",
-      "to": "performAction1187",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1187(II)V"
+      "to": "sortEdgesByStartY",
+      "evidence": "Source-purpose review: Recursively partition four-int endpoint records by starting Y. Preserve exact pivot, record moves, recursion boundaries, index domains and exception behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.sortEdgesByStartY(II)V"
     },
     {
       "symbol": "M:ok.a(II[I[I)V",
       "originalName": "a",
-      "to": "performAction1188",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1188(II[I[I)V"
+      "to": "renderSpansAlphaMasked",
+      "evidence": "Source-purpose review: Initialize and consume scanline spans, optionally clip each span to its per-row mask offset/width, then call the 256-scale alpha horizontal-line helper. Preserve mask indexes, clipping, integer arithmetic and partial writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V"
     },
     {
       "symbol": "M:ok.a([II)V",
       "originalName": "a",
-      "to": "performAction1189",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1189([II)V"
+      "to": "fillPolygon",
+      "evidence": "Source-purpose review: Delegate the whole flat-coordinate array to the solid polygon slice fill, evaluating its length in original order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygon([II)V"
     },
     {
       "symbol": "M:ok.a([III)V",
       "originalName": "a",
-      "to": "performAction1190",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1190([III)V"
+      "to": "fillPolygonAlpha",
+      "evidence": "Source-purpose review: Delegate the whole flat-coordinate array to the alpha polygon slice fill with null row masks. The helper uses 256-minus-alpha RGB blending; preserve the full integer alpha domain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygonAlpha([III)V"
     },
     {
       "symbol": "M:ok.a([IIII)V",
       "originalName": "a",
-      "to": "performAction1191",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1191([IIII)V"
+      "to": "fillPolygonSlice",
+      "evidence": "Source-purpose review: Reset edges, append the supplied flat-coordinate slice, then fill its scanline spans in the given color. Preserve raw offsets/counts and reset/add/render order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V"
     },
     {
       "symbol": "M:ok.a([IIIII[I[I)V",
       "originalName": "a",
-      "to": "performAction1192",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1192([IIIII[I[I)V"
+      "to": "fillPolygonSliceAlphaMasked",
+      "evidence": "Source-purpose review: Validate optional row-mask height against raster clip height before resetting edges, append the coordinate slice, then render alpha/masked spans. Preserve exact exception, allocation and state-mutation order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V"
     },
     {
       "symbol": "M:ok.b()Z",
       "originalName": "b",
-      "to": "computeBoolean1193",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.computeBoolean1193()Z"
+      "to": "nextScanlineSpan",
+      "evidence": "Source-purpose review: Advance active edges and scanlines, insert eligible edges, remove expired edges, sort intersections and yield the next paired left/right/Y span. Preserve sentinels, fixed-point arithmetic, bounds and state updates.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.nextScanlineSpan()Z"
     },
     {
       "symbol": "M:ok.b(II)V",
       "originalName": "b",
-      "to": "performAction1194",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1194(II)V"
+      "to": "sortActiveEdgesByX",
+      "evidence": "Source-purpose review: Order active fixed-point X intersections using adjacent swaps of X, delta-X and ending-Y while retaining the unused record slot. Preserve exact early exits and range updates.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V"
     },
     {
       "symbol": "M:ok.b([III)V",
       "originalName": "b",
-      "to": "performAction1195",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1195([III)V"
+      "to": "addPolygonEdges",
+      "evidence": "Source-purpose review: Append non-horizontal edges of a closed flat-coordinate polygon slice as four-int endpoint records oriented by starting Y. Preserve capacity growth, copies, full integer/index domains, count increments and partial writes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.addPolygonEdges([III)V"
     },
     {
       "symbol": "M:ok.c()V",
       "originalName": "c",
-      "to": "performAction1196",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport092.performAction1196()V"
+      "to": "resetEdges",
+      "evidence": "Source-purpose review: Set only the packed edge-count cursor to zero without clearing the other shared scanline state or allocating.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.resetEdges()V"
     },
     {
       "symbol": "M:ok.d()V",
@@ -159649,7 +159649,7 @@
       "to": "clearStaticReferences",
       "evidence": "Reviewed complete statement classification and resolved field bindings: 1 null writes to 1 own static reference fields; only parameter guards, returns and braces otherwise. Preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 cd939d25460bd26eeb540a3837bbd8ca6301cb10672a744973b74a88469f990e.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MixedSupport092.clearStaticReferences()V"
+      "renamedSymbol": "M:PolygonScanlineRasterizer.clearStaticReferences()V"
     },
     {
       "symbol": "M:ol.a()I",
@@ -204105,7 +204105,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1186(I)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpans(I)V#0"
     },
     {
       "symbol": "P:ok.a(II)V#0",
@@ -204113,7 +204113,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1187(II)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#0"
     },
     {
       "symbol": "P:ok.a(II)V#1",
@@ -204121,7 +204121,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1187(II)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#1"
     },
     {
       "symbol": "P:ok.a(II[I[I)V#0",
@@ -204129,7 +204129,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#0"
     },
     {
       "symbol": "P:ok.a(II[I[I)V#1",
@@ -204137,7 +204137,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#1"
     },
     {
       "symbol": "P:ok.a(II[I[I)V#2",
@@ -204145,7 +204145,7 @@
       "to": "integerArrayArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#2"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#2"
     },
     {
       "symbol": "P:ok.a(II[I[I)V#3",
@@ -204153,7 +204153,7 @@
       "to": "integerArrayArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#3"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#3"
     },
     {
       "symbol": "P:ok.a([II)V#0",
@@ -204161,7 +204161,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1189([II)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygon([II)V#0"
     },
     {
       "symbol": "P:ok.a([II)V#1",
@@ -204169,7 +204169,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1189([II)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygon([II)V#1"
     },
     {
       "symbol": "P:ok.a([III)V#0",
@@ -204177,7 +204177,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1190([III)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonAlpha([III)V#0"
     },
     {
       "symbol": "P:ok.a([III)V#1",
@@ -204185,7 +204185,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1190([III)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonAlpha([III)V#1"
     },
     {
       "symbol": "P:ok.a([III)V#2",
@@ -204193,7 +204193,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1190([III)V#2"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonAlpha([III)V#2"
     },
     {
       "symbol": "P:ok.a([IIII)V#0",
@@ -204201,7 +204201,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#0"
     },
     {
       "symbol": "P:ok.a([IIII)V#1",
@@ -204209,7 +204209,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#1"
     },
     {
       "symbol": "P:ok.a([IIII)V#2",
@@ -204217,7 +204217,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#2"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#2"
     },
     {
       "symbol": "P:ok.a([IIII)V#3",
@@ -204225,7 +204225,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#3"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#3"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#0",
@@ -204233,7 +204233,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#0"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#1",
@@ -204241,7 +204241,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#1"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#2",
@@ -204249,7 +204249,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#2"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#2"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#3",
@@ -204257,7 +204257,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#3"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#3"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#4",
@@ -204265,7 +204265,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#4"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#4"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#5",
@@ -204273,7 +204273,7 @@
       "to": "integerArrayArgument6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#5"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#5"
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#6",
@@ -204281,7 +204281,7 @@
       "to": "integerArrayArgument7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#6"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#6"
     },
     {
       "symbol": "P:ok.b(II)V#0",
@@ -204289,7 +204289,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1194(II)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#0"
     },
     {
       "symbol": "P:ok.b(II)V#1",
@@ -204297,7 +204297,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1194(II)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#1"
     },
     {
       "symbol": "P:ok.b([III)V#0",
@@ -204305,7 +204305,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1195([III)V#0"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.addPolygonEdges([III)V#0"
     },
     {
       "symbol": "P:ok.b([III)V#1",
@@ -204313,7 +204313,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1195([III)V#1"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.addPolygonEdges([III)V#1"
     },
     {
       "symbol": "P:ok.b([III)V#2",
@@ -204321,7 +204321,7 @@
       "to": "integerArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport092.performAction1195([III)V#2"
+      "renamedSymbol": "P:PolygonScanlineRasterizer.addPolygonEdges([III)V#2"
     },
     {
       "symbol": "P:ol.a(I)V#0",
@@ -225587,9 +225587,9 @@
     },
     {
       "symbol": "C:ok",
-      "renamedSymbol": "C:MixedSupport092",
+      "renamedSymbol": "C:PolygonScanlineRasterizer",
       "originalName": "ok",
-      "renamedName": "MixedSupport092",
+      "renamedName": "PolygonScanlineRasterizer",
       "declaration": {
         "file": "ok.java",
         "start": 50,
@@ -248335,7 +248335,7 @@
     },
     {
       "symbol": "F:ok.field_a:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0565:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0565:I",
       "originalName": "field_a",
       "renamedName": "integerState0565",
       "declaration": {
@@ -248346,7 +248346,7 @@
     },
     {
       "symbol": "F:ok.field_b:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0560:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0560:I",
       "originalName": "field_b",
       "renamedName": "integerState0560",
       "declaration": {
@@ -248357,7 +248357,7 @@
     },
     {
       "symbol": "F:ok.field_c:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0566:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0566:I",
       "originalName": "field_c",
       "renamedName": "integerState0566",
       "declaration": {
@@ -248368,7 +248368,7 @@
     },
     {
       "symbol": "F:ok.field_d:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0562:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0562:I",
       "originalName": "field_d",
       "renamedName": "integerState0562",
       "declaration": {
@@ -248379,7 +248379,7 @@
     },
     {
       "symbol": "F:ok.field_e:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0563:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0563:I",
       "originalName": "field_e",
       "renamedName": "integerState0563",
       "declaration": {
@@ -248390,7 +248390,7 @@
     },
     {
       "symbol": "F:ok.field_f:[I",
-      "renamedSymbol": "F:MixedSupport092.integerArrayState0177:[I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerArrayState0177:[I",
       "originalName": "field_f",
       "renamedName": "integerArrayState0177",
       "declaration": {
@@ -248401,7 +248401,7 @@
     },
     {
       "symbol": "F:ok.field_g:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0564:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0564:I",
       "originalName": "field_g",
       "renamedName": "integerState0564",
       "declaration": {
@@ -248412,7 +248412,7 @@
     },
     {
       "symbol": "F:ok.field_h:I",
-      "renamedSymbol": "F:MixedSupport092.integerState0561:I",
+      "renamedSymbol": "F:PolygonScanlineRasterizer.integerState0561:I",
       "originalName": "field_h",
       "renamedName": "integerState0561",
       "declaration": {
@@ -368587,7 +368587,7 @@
     },
     {
       "symbol": "L:ok.a()V#0",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#0",
       "originalName": "var3",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -368598,7 +368598,7 @@
     },
     {
       "symbol": "L:ok.a()V#1",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#1",
       "originalName": "var4",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -368609,7 +368609,7 @@
     },
     {
       "symbol": "L:ok.a()V#2",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#2",
       "originalName": "var5",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -368620,7 +368620,7 @@
     },
     {
       "symbol": "L:ok.a()V#3",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#3",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#3",
       "originalName": "var6",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -368631,7 +368631,7 @@
     },
     {
       "symbol": "L:ok.a()V#4",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#4",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#4",
       "originalName": "var7",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -368642,7 +368642,7 @@
     },
     {
       "symbol": "L:ok.a()V#5",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#5",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#5",
       "originalName": "var8",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -368653,7 +368653,7 @@
     },
     {
       "symbol": "L:ok.a()V#6",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#6",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#6",
       "originalName": "var2",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -368664,7 +368664,7 @@
     },
     {
       "symbol": "L:ok.a()V#7",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#7",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#7",
       "originalName": "var0",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -368675,7 +368675,7 @@
     },
     {
       "symbol": "L:ok.a()V#8",
-      "renamedSymbol": "L:MixedSupport092.performAction1185()V#8",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.initializeScanlineSpans()V#8",
       "originalName": "var1",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -368686,7 +368686,7 @@
     },
     {
       "symbol": "L:ok.a(I)V#0",
-      "renamedSymbol": "L:MixedSupport092.performAction1186(I)V#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpans(I)V#0",
       "originalName": "var1",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -368697,7 +368697,7 @@
     },
     {
       "symbol": "L:ok.a(I)V#1",
-      "renamedSymbol": "L:MixedSupport092.performAction1186(I)V#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpans(I)V#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -368708,7 +368708,7 @@
     },
     {
       "symbol": "L:ok.a(I)V#2",
-      "renamedSymbol": "L:MixedSupport092.performAction1186(I)V#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpans(I)V#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -368719,7 +368719,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#0",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#0",
       "originalName": "var7",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -368730,7 +368730,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#1",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -368741,7 +368741,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#2",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -368752,7 +368752,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#3",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#3",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#3",
       "originalName": "var4",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -368763,7 +368763,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#4",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#4",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#4",
       "originalName": "var5",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -368774,7 +368774,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#5",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#5",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#5",
       "originalName": "var6",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -368785,7 +368785,7 @@
     },
     {
       "symbol": "L:ok.a(II)V#6",
-      "renamedSymbol": "L:MixedSupport092.performAction1187(II)V#6",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#6",
       "originalName": "var8",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -368796,7 +368796,7 @@
     },
     {
       "symbol": "L:ok.a(II[I[I)V#0",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#0",
       "originalName": "var4",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -368807,7 +368807,7 @@
     },
     {
       "symbol": "L:ok.a(II[I[I)V#1",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#1",
       "originalName": "var5",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -368818,7 +368818,7 @@
     },
     {
       "symbol": "L:ok.a(II[I[I)V#2",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#2",
       "originalName": "var6",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -368829,7 +368829,7 @@
     },
     {
       "symbol": "L:ok.a(II[I[I)V#3",
-      "renamedSymbol": "L:MixedSupport092.performAction1188(II[I[I)V#3",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#3",
       "originalName": "var7",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -368840,7 +368840,7 @@
     },
     {
       "symbol": "L:ok.b()Z#0",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#0",
       "originalName": "var0",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -368851,7 +368851,7 @@
     },
     {
       "symbol": "L:ok.b()Z#1",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#1",
       "originalName": "var1",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -368862,7 +368862,7 @@
     },
     {
       "symbol": "L:ok.b()Z#10",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#10",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#10",
       "originalName": "var10",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -368873,7 +368873,7 @@
     },
     {
       "symbol": "L:ok.b()Z#11",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#11",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#11",
       "originalName": "var4Lifetime1",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -368884,7 +368884,7 @@
     },
     {
       "symbol": "L:ok.b()Z#12",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#12",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#12",
       "originalName": "var5Lifetime1",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -368895,7 +368895,7 @@
     },
     {
       "symbol": "L:ok.b()Z#2",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#2",
       "originalName": "var2",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -368906,7 +368906,7 @@
     },
     {
       "symbol": "L:ok.b()Z#3",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#3",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#3",
       "originalName": "var3",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -368917,7 +368917,7 @@
     },
     {
       "symbol": "L:ok.b()Z#4",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#4",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#4",
       "originalName": "var4",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -368928,7 +368928,7 @@
     },
     {
       "symbol": "L:ok.b()Z#5",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#5",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#5",
       "originalName": "var5",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -368939,7 +368939,7 @@
     },
     {
       "symbol": "L:ok.b()Z#6",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#6",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#6",
       "originalName": "var6",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -368950,7 +368950,7 @@
     },
     {
       "symbol": "L:ok.b()Z#7",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#7",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#7",
       "originalName": "var7",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -368961,7 +368961,7 @@
     },
     {
       "symbol": "L:ok.b()Z#8",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#8",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#8",
       "originalName": "var8",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -368972,7 +368972,7 @@
     },
     {
       "symbol": "L:ok.b()Z#9",
-      "renamedSymbol": "L:MixedSupport092.computeBoolean1193()Z#9",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.nextScanlineSpan()Z#9",
       "originalName": "var9",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -368983,7 +368983,7 @@
     },
     {
       "symbol": "L:ok.b(II)V#0",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#0",
       "originalName": "var3",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -368994,7 +368994,7 @@
     },
     {
       "symbol": "L:ok.b(II)V#1",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -369005,7 +369005,7 @@
     },
     {
       "symbol": "L:ok.b(II)V#2",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#2",
       "originalName": "var4",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -369016,7 +369016,7 @@
     },
     {
       "symbol": "L:ok.b(II)V#3",
-      "renamedSymbol": "L:MixedSupport092.performAction1194(II)V#3",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#3",
       "originalName": "var5",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -369027,7 +369027,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#0",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#0",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -369038,7 +369038,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#1",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#1",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#1",
       "originalName": "fieldTemp$1",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -369049,7 +369049,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#10",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#10",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#10",
       "originalName": "var4",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -369060,7 +369060,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#11",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#11",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#11",
       "originalName": "var5",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -369071,7 +369071,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#12",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#12",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#12",
       "originalName": "var6",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -369082,7 +369082,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#13",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#13",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#13",
       "originalName": "var7",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -369093,7 +369093,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#14",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#14",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#14",
       "originalName": "var8",
       "renamedName": "integerLocal15",
       "declaration": {
@@ -369104,7 +369104,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#15",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#15",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#15",
       "originalName": "var5Lifetime1",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -369115,7 +369115,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#2",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#2",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#2",
       "originalName": "fieldTemp$2",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -369126,7 +369126,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#3",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#3",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#3",
       "originalName": "fieldTemp$3",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -369137,7 +369137,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#4",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#4",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#4",
       "originalName": "fieldTemp$4",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -369148,7 +369148,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#5",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#5",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#5",
       "originalName": "fieldTemp$5",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -369159,7 +369159,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#6",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#6",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#6",
       "originalName": "fieldTemp$6",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -369170,7 +369170,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#7",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#7",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#7",
       "originalName": "fieldTemp$7",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -369181,7 +369181,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#8",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#8",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#8",
       "originalName": "var3",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -369192,7 +369192,7 @@
     },
     {
       "symbol": "L:ok.b([III)V#9",
-      "renamedSymbol": "L:MixedSupport092.performAction1195([III)V#9",
+      "renamedSymbol": "L:PolygonScanlineRasterizer.addPolygonEdges([III)V#9",
       "originalName": "var4_ref_int__",
       "renamedName": "integerArrayLocal10",
       "declaration": {
@@ -449195,9 +449195,9 @@
     },
     {
       "symbol": "M:ok.a()V",
-      "renamedSymbol": "M:MixedSupport092.performAction1185()V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.initializeScanlineSpans()V",
       "originalName": "a",
-      "renamedName": "performAction1185",
+      "renamedName": "initializeScanlineSpans",
       "declaration": {
         "file": "ok.java",
         "start": 1330,
@@ -449206,9 +449206,9 @@
     },
     {
       "symbol": "M:ok.a(I)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1186(I)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.renderSpans(I)V",
       "originalName": "a",
-      "renamedName": "performAction1186",
+      "renamedName": "renderSpans",
       "declaration": {
         "file": "ok.java",
         "start": 6716,
@@ -449217,9 +449217,9 @@
     },
     {
       "symbol": "M:ok.a(II)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1187(II)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.sortEdgesByStartY(II)V",
       "originalName": "a",
-      "renamedName": "performAction1187",
+      "renamedName": "sortEdgesByStartY",
       "declaration": {
         "file": "ok.java",
         "start": 5287,
@@ -449228,9 +449228,9 @@
     },
     {
       "symbol": "M:ok.a(II[I[I)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1188(II[I[I)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V",
       "originalName": "a",
-      "renamedName": "performAction1188",
+      "renamedName": "renderSpansAlphaMasked",
       "declaration": {
         "file": "ok.java",
         "start": 623,
@@ -449239,9 +449239,9 @@
     },
     {
       "symbol": "M:ok.a([II)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1189([II)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygon([II)V",
       "originalName": "a",
-      "renamedName": "performAction1189",
+      "renamedName": "fillPolygon",
       "declaration": {
         "file": "ok.java",
         "start": 6434,
@@ -449250,9 +449250,9 @@
     },
     {
       "symbol": "M:ok.a([III)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1190([III)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygonAlpha([III)V",
       "originalName": "a",
-      "renamedName": "performAction1190",
+      "renamedName": "fillPolygonAlpha",
       "declaration": {
         "file": "ok.java",
         "start": 460,
@@ -449261,9 +449261,9 @@
     },
     {
       "symbol": "M:ok.a([IIII)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1191([IIII)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V",
       "originalName": "a",
-      "renamedName": "performAction1191",
+      "renamedName": "fillPolygonSlice",
       "declaration": {
         "file": "ok.java",
         "start": 6549,
@@ -449272,9 +449272,9 @@
     },
     {
       "symbol": "M:ok.a([IIIII[I[I)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1192([IIIII[I[I)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V",
       "originalName": "a",
-      "renamedName": "performAction1192",
+      "renamedName": "fillPolygonSliceAlphaMasked",
       "declaration": {
         "file": "ok.java",
         "start": 7013,
@@ -449283,9 +449283,9 @@
     },
     {
       "symbol": "M:ok.b()Z",
-      "renamedSymbol": "M:MixedSupport092.computeBoolean1193()Z",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.nextScanlineSpan()Z",
       "originalName": "b",
-      "renamedName": "computeBoolean1193",
+      "renamedName": "nextScanlineSpan",
       "declaration": {
         "file": "ok.java",
         "start": 3248,
@@ -449294,9 +449294,9 @@
     },
     {
       "symbol": "M:ok.b(II)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1194(II)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V",
       "originalName": "b",
-      "renamedName": "performAction1194",
+      "renamedName": "sortActiveEdgesByX",
       "declaration": {
         "file": "ok.java",
         "start": 2380,
@@ -449305,9 +449305,9 @@
     },
     {
       "symbol": "M:ok.b([III)V",
-      "renamedSymbol": "M:MixedSupport092.performAction1195([III)V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.addPolygonEdges([III)V",
       "originalName": "b",
-      "renamedName": "performAction1195",
+      "renamedName": "addPolygonEdges",
       "declaration": {
         "file": "ok.java",
         "start": 7383,
@@ -449316,9 +449316,9 @@
     },
     {
       "symbol": "M:ok.c()V",
-      "renamedSymbol": "M:MixedSupport092.performAction1196()V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.resetEdges()V",
       "originalName": "c",
-      "renamedName": "performAction1196",
+      "renamedName": "resetEdges",
       "declaration": {
         "file": "ok.java",
         "start": 344,
@@ -449327,7 +449327,7 @@
     },
     {
       "symbol": "M:ok.d()V",
-      "renamedSymbol": "M:MixedSupport092.clearStaticReferences()V",
+      "renamedSymbol": "M:PolygonScanlineRasterizer.clearStaticReferences()V",
       "originalName": "d",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -511851,7 +511851,7 @@
     },
     {
       "symbol": "P:ok.a(I)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1186(I)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpans(I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -511862,7 +511862,7 @@
     },
     {
       "symbol": "P:ok.a(II)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1187(II)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -511873,7 +511873,7 @@
     },
     {
       "symbol": "P:ok.a(II)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1187(II)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortEdgesByStartY(II)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -511884,7 +511884,7 @@
     },
     {
       "symbol": "P:ok.a(II[I[I)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -511895,7 +511895,7 @@
     },
     {
       "symbol": "P:ok.a(II[I[I)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -511906,7 +511906,7 @@
     },
     {
       "symbol": "P:ok.a(II[I[I)V#2",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#2",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#2",
       "originalName": "param2",
       "renamedName": "integerArrayArgument3",
       "declaration": {
@@ -511917,7 +511917,7 @@
     },
     {
       "symbol": "P:ok.a(II[I[I)V#3",
-      "renamedSymbol": "P:MixedSupport092.performAction1188(II[I[I)V#3",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.renderSpansAlphaMasked(II[I[I)V#3",
       "originalName": "param3",
       "renamedName": "integerArrayArgument4",
       "declaration": {
@@ -511928,7 +511928,7 @@
     },
     {
       "symbol": "P:ok.a([II)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1189([II)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygon([II)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -511939,7 +511939,7 @@
     },
     {
       "symbol": "P:ok.a([II)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1189([II)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygon([II)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -511950,7 +511950,7 @@
     },
     {
       "symbol": "P:ok.a([III)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1190([III)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonAlpha([III)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -511961,7 +511961,7 @@
     },
     {
       "symbol": "P:ok.a([III)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1190([III)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonAlpha([III)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -511972,7 +511972,7 @@
     },
     {
       "symbol": "P:ok.a([III)V#2",
-      "renamedSymbol": "P:MixedSupport092.performAction1190([III)V#2",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonAlpha([III)V#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -511983,7 +511983,7 @@
     },
     {
       "symbol": "P:ok.a([IIII)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -511994,7 +511994,7 @@
     },
     {
       "symbol": "P:ok.a([IIII)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -512005,7 +512005,7 @@
     },
     {
       "symbol": "P:ok.a([IIII)V#2",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#2",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -512016,7 +512016,7 @@
     },
     {
       "symbol": "P:ok.a([IIII)V#3",
-      "renamedSymbol": "P:MixedSupport092.performAction1191([IIII)V#3",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSlice([IIII)V#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -512027,7 +512027,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -512038,7 +512038,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -512049,7 +512049,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#2",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#2",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -512060,7 +512060,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#3",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#3",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -512071,7 +512071,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#4",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#4",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -512082,7 +512082,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#5",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#5",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#5",
       "originalName": "param5",
       "renamedName": "integerArrayArgument6",
       "declaration": {
@@ -512093,7 +512093,7 @@
     },
     {
       "symbol": "P:ok.a([IIIII[I[I)V#6",
-      "renamedSymbol": "P:MixedSupport092.performAction1192([IIIII[I[I)V#6",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked([IIIII[I[I)V#6",
       "originalName": "param6",
       "renamedName": "integerArrayArgument7",
       "declaration": {
@@ -512104,7 +512104,7 @@
     },
     {
       "symbol": "P:ok.b(II)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1194(II)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -512115,7 +512115,7 @@
     },
     {
       "symbol": "P:ok.b(II)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1194(II)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.sortActiveEdgesByX(II)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -512126,7 +512126,7 @@
     },
     {
       "symbol": "P:ok.b([III)V#0",
-      "renamedSymbol": "P:MixedSupport092.performAction1195([III)V#0",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.addPolygonEdges([III)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -512137,7 +512137,7 @@
     },
     {
       "symbol": "P:ok.b([III)V#1",
-      "renamedSymbol": "P:MixedSupport092.performAction1195([III)V#1",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.addPolygonEdges([III)V#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -512148,7 +512148,7 @@
     },
     {
       "symbol": "P:ok.b([III)V#2",
-      "renamedSymbol": "P:MixedSupport092.performAction1195([III)V#2",
+      "renamedSymbol": "P:PolygonScanlineRasterizer.addPolygonEdges([III)V#2",
       "originalName": "param2",
       "renamedName": "integerArgument3",
       "declaration": {
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "a323b2ddd7c65caaac83d52f1383fcb45a7371b4120bb16f8d268722d7b943a9",
+      "outputSha256": "889a4214ec52ec59674795e0fc6224f2521417a827654ec98ca712235c3bc113",
       "edits": [
         {
           "start": 57,
@@ -727028,7 +727028,7 @@
           "end": 53248,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 53249,
@@ -867316,7 +867316,7 @@
       "original": "fh.java",
       "renamed": "MixedSupport039.java",
       "inputSha256": "056337a37177cdf55556cdcb168b7cf2eccfd1f9deb1ded718fdc24efac22679",
-      "outputSha256": "9062805b72a1e28394cbb7d593f661fff1234fb87b2d9200c9fb5178ca9aa82c",
+      "outputSha256": "5d83e0bbaaa975c6cfdd97e61d1a5675e41231cefd5d0b23588ff802091d0bea",
       "edits": [
         {
           "start": 50,
@@ -868009,14 +868009,14 @@
           "end": 1607,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 1608,
           "end": 1609,
           "symbol": "M:ok.a([III)V",
           "original": "a",
-          "renamed": "performAction1190"
+          "renamed": "fillPolygonAlpha"
         },
         {
           "start": 1610,
@@ -868037,14 +868037,14 @@
           "end": 1672,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 1673,
           "end": 1674,
           "symbol": "M:ok.a([III)V",
           "original": "a",
-          "renamed": "performAction1190"
+          "renamed": "fillPolygonAlpha"
         },
         {
           "start": 1675,
@@ -1347828,16 +1347828,16 @@
     },
     {
       "original": "ok.java",
-      "renamed": "MixedSupport092.java",
+      "renamed": "PolygonScanlineRasterizer.java",
       "inputSha256": "cab5a642709a70a551d43f5d18121cfa103498c161c3aa6bcfbc54ba90fb1a66",
-      "outputSha256": "52356b2a937b79ec375af09eb8f04ae9c61e2c50ade51375689b6a330fa7e94f",
+      "outputSha256": "0f6a3cdabff552a295365393145c938d86962260f6a106bceba073c65dbe1924",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 78,
@@ -1347900,7 +1347900,7 @@
           "end": 345,
           "symbol": "M:ok.c()V",
           "original": "c",
-          "renamed": "performAction1196"
+          "renamed": "resetEdges"
         },
         {
           "start": 358,
@@ -1347928,7 +1347928,7 @@
           "end": 461,
           "symbol": "M:ok.a([III)V",
           "original": "a",
-          "renamed": "performAction1190"
+          "renamed": "fillPolygonAlpha"
         },
         {
           "start": 468,
@@ -1347956,14 +1347956,14 @@
           "end": 512,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 513,
           "end": 514,
           "symbol": "M:ok.a([IIIII[I[I)V",
           "original": "a",
-          "renamed": "performAction1192"
+          "renamed": "fillPolygonSliceAlphaMasked"
         },
         {
           "start": 515,
@@ -1347998,7 +1347998,7 @@
           "end": 624,
           "symbol": "M:ok.a(II[I[I)V",
           "original": "a",
-          "renamed": "performAction1188"
+          "renamed": "renderSpansAlphaMasked"
         },
         {
           "start": 629,
@@ -1348061,28 +1348061,28 @@
           "end": 777,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 778,
           "end": 779,
           "symbol": "M:ok.a()V",
           "original": "a",
-          "renamed": "performAction1185"
+          "renamed": "initializeScanlineSpans"
         },
         {
           "start": 798,
           "end": 800,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 801,
           "end": 802,
           "symbol": "M:ok.b()Z",
           "original": "b",
-          "renamed": "computeBoolean1193"
+          "renamed": "nextScanlineSpan"
         },
         {
           "start": 818,
@@ -1348390,7 +1348390,7 @@
           "end": 1331,
           "symbol": "M:ok.a()V",
           "original": "a",
-          "renamed": "performAction1185"
+          "renamed": "initializeScanlineSpans"
         },
         {
           "start": 1348,
@@ -1348481,14 +1348481,14 @@
           "end": 1656,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 1657,
           "end": 1658,
           "symbol": "M:ok.a(II)V",
           "original": "a",
-          "renamed": "performAction1187"
+          "renamed": "sortEdgesByStartY"
         },
         {
           "start": 1662,
@@ -1348859,7 +1348859,7 @@
           "end": 2381,
           "symbol": "M:ok.b(II)V",
           "original": "b",
-          "renamed": "performAction1194"
+          "renamed": "sortActiveEdgesByX"
         },
         {
           "start": 2386,
@@ -1349223,7 +1349223,7 @@
           "end": 3249,
           "symbol": "M:ok.b()Z",
           "original": "b",
-          "renamed": "computeBoolean1193"
+          "renamed": "nextScanlineSpan"
         },
         {
           "start": 3266,
@@ -1350014,14 +1350014,14 @@
           "end": 5149,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 5150,
           "end": 5151,
           "symbol": "M:ok.b(II)V",
           "original": "b",
-          "renamed": "performAction1194"
+          "renamed": "sortActiveEdgesByX"
         },
         {
           "start": 5152,
@@ -1350084,7 +1350084,7 @@
           "end": 5288,
           "symbol": "M:ok.a(II)V",
           "original": "a",
-          "renamed": "performAction1187"
+          "renamed": "sortEdgesByStartY"
         },
         {
           "start": 5293,
@@ -1350644,14 +1350644,14 @@
           "end": 6355,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6356,
           "end": 6357,
           "symbol": "M:ok.a(II)V",
           "original": "a",
-          "renamed": "performAction1187"
+          "renamed": "sortEdgesByStartY"
         },
         {
           "start": 6358,
@@ -1350672,14 +1350672,14 @@
           "end": 6383,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6384,
           "end": 6385,
           "symbol": "M:ok.a(II)V",
           "original": "a",
-          "renamed": "performAction1187"
+          "renamed": "sortEdgesByStartY"
         },
         {
           "start": 6386,
@@ -1350700,7 +1350700,7 @@
           "end": 6435,
           "symbol": "M:ok.a([II)V",
           "original": "a",
-          "renamed": "performAction1189"
+          "renamed": "fillPolygon"
         },
         {
           "start": 6442,
@@ -1350721,14 +1350721,14 @@
           "end": 6474,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6475,
           "end": 6476,
           "symbol": "M:ok.a([IIII)V",
           "original": "a",
-          "renamed": "performAction1191"
+          "renamed": "fillPolygonSlice"
         },
         {
           "start": 6477,
@@ -1350756,7 +1350756,7 @@
           "end": 6550,
           "symbol": "M:ok.a([IIII)V",
           "original": "a",
-          "renamed": "performAction1191"
+          "renamed": "fillPolygonSlice"
         },
         {
           "start": 6557,
@@ -1350791,28 +1350791,28 @@
           "end": 6613,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6614,
           "end": 6615,
           "symbol": "M:ok.c()V",
           "original": "c",
-          "renamed": "performAction1196"
+          "renamed": "resetEdges"
         },
         {
           "start": 6627,
           "end": 6629,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6630,
           "end": 6631,
           "symbol": "M:ok.b([III)V",
           "original": "b",
-          "renamed": "performAction1195"
+          "renamed": "addPolygonEdges"
         },
         {
           "start": 6632,
@@ -1350840,14 +1350840,14 @@
           "end": 6667,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6668,
           "end": 6669,
           "symbol": "M:ok.a(I)V",
           "original": "a",
-          "renamed": "performAction1186"
+          "renamed": "renderSpans"
         },
         {
           "start": 6670,
@@ -1350861,7 +1350861,7 @@
           "end": 6717,
           "symbol": "M:ok.a(I)V",
           "original": "a",
-          "renamed": "performAction1186"
+          "renamed": "renderSpans"
         },
         {
           "start": 6722,
@@ -1350896,28 +1350896,28 @@
           "end": 6808,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6809,
           "end": 6810,
           "symbol": "M:ok.a()V",
           "original": "a",
-          "renamed": "performAction1185"
+          "renamed": "initializeScanlineSpans"
         },
         {
           "start": 6829,
           "end": 6831,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 6832,
           "end": 6833,
           "symbol": "M:ok.b()Z",
           "original": "b",
-          "renamed": "computeBoolean1193"
+          "renamed": "nextScanlineSpan"
         },
         {
           "start": 6849,
@@ -1351015,7 +1351015,7 @@
           "end": 7014,
           "symbol": "M:ok.a([IIIII[I[I)V",
           "original": "a",
-          "renamed": "performAction1192"
+          "renamed": "fillPolygonSliceAlphaMasked"
         },
         {
           "start": 7021,
@@ -1351113,28 +1351113,28 @@
           "end": 7256,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 7257,
           "end": 7258,
           "symbol": "M:ok.c()V",
           "original": "c",
-          "renamed": "performAction1196"
+          "renamed": "resetEdges"
         },
         {
           "start": 7270,
           "end": 7272,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 7273,
           "end": 7274,
           "symbol": "M:ok.b([III)V",
           "original": "b",
-          "renamed": "performAction1195"
+          "renamed": "addPolygonEdges"
         },
         {
           "start": 7275,
@@ -1351162,14 +1351162,14 @@
           "end": 7310,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 7311,
           "end": 7312,
           "symbol": "M:ok.a(II[I[I)V",
           "original": "a",
-          "renamed": "performAction1188"
+          "renamed": "renderSpansAlphaMasked"
         },
         {
           "start": 7313,
@@ -1351204,7 +1351204,7 @@
           "end": 7384,
           "symbol": "M:ok.b([III)V",
           "original": "b",
-          "renamed": "performAction1195"
+          "renamed": "addPolygonEdges"
         },
         {
           "start": 7391,
@@ -1415588,7 +1415588,7 @@
       "original": "qc.java",
       "renamed": "GameSession.java",
       "inputSha256": "7a5446e9a9f769263f0e6ae2c0a4efa579defbcdd10bccd04e1a0259a23203ab",
-      "outputSha256": "c353f2749d0c13272f198cc95611c7337820e06972709234b9b08789d98cb25d",
+      "outputSha256": "10cea7a48d48f53ef67732cb54477d25289df87ec2a97fd44d35e4232c651ad0",
       "edits": [
         {
           "start": 71,
@@ -1435184,14 +1435184,14 @@
           "end": 61499,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 61500,
           "end": 61501,
           "symbol": "M:ok.a([II)V",
           "original": "a",
-          "renamed": "performAction1189"
+          "renamed": "fillPolygon"
         },
         {
           "start": 61502,
@@ -1435366,14 +1435366,14 @@
           "end": 61957,
           "symbol": "C:ok",
           "original": "ok",
-          "renamed": "MixedSupport092"
+          "renamed": "PolygonScanlineRasterizer"
         },
         {
           "start": 61958,
           "end": 61959,
           "symbol": "M:ok.a([II)V",
           "original": "a",
-          "renamed": "performAction1189"
+          "renamed": "fillPolygon"
         },
         {
           "start": 61960,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "3c774fbdd2ea6b6c3c388e7455e574f768a680ed8731b880bcfb969e2ed53d71",
+    "rulesSha256": "84176752bd20eefa7a4cb4dd3698a0a17fb35b6b384b7f7e95893473f8348c5d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "1b825d68c00c72b9b720aa9db8e16bb1026a2f118af8c02391bf2903b83c338a",
+    "outputTreeSha256": "37ec86b59d9c421f4099de71debbe219341df6cae34af3d1a7aeaae25a1c2b81",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

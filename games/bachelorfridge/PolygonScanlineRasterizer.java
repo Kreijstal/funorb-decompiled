@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sq {
+final class PolygonScanlineRasterizer {
     private static int field_b;
     private static int field_e;
     private static int field_f;
@@ -11,7 +11,7 @@ final class sq {
     private static int field_a;
     private static int[] field_g;
 
-    private final static void b(int param0, int param1) {
+    private final static void sortActiveEdgesByX(int param0, int param1) {
         int var3 = 0;
         int var2;
         int var4;
@@ -41,7 +41,7 @@ final class sq {
         return;
     }
 
-    private final static void a(int[] param0, int param1, int param2) {
+    private final static void addPolygonEdges(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -109,12 +109,12 @@ final class sq {
         }
     }
 
-    private final static void a(int param0) {
+    private final static void renderSpans(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        sq.a();
-        while (sq.b()) {
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
           var1 = field_e;
           var2 = field_d;
           var3 = field_a;
@@ -122,11 +122,11 @@ final class sq {
         }
     }
 
-    private final static void d() {
+    private final static void resetEdges() {
         field_c = 0;
     }
 
-    private final static void a(int param0, int param1) {
+    private final static void sortEdgesByStartY(int param0, int param1) {
         int var7 = 0;
         int var2;
         int var3;
@@ -160,11 +160,11 @@ final class sq {
         field_g[var2 + 1] = var4;
         field_g[var2 + 2] = var5;
         field_g[var2 + 3] = var6;
-        sq.a(param0, var2);
-        sq.a(var2 + 4, param1);
+        PolygonScanlineRasterizer.sortEdgesByStartY(param0, var2);
+        PolygonScanlineRasterizer.sortEdgesByStartY(var2 + 4, param1);
     }
 
-    private final static void a() {
+    private final static void initializeScanlineSpans() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -179,7 +179,7 @@ final class sq {
           field_a = 2147483646;
           return;
         }
-        sq.a(0, field_c);
+        PolygonScanlineRasterizer.sortEdgesByStartY(0, field_c);
         int var0 = field_g[1];
         if (var0 < SoftwareRasterizer.field_j) {
           var0 = SoftwareRasterizer.field_j;
@@ -204,13 +204,13 @@ final class sq {
         field_a = var0 - 1;
     }
 
-    final static void a(int[] param0, int param1, int param2, int param3) {
-        sq.d();
-        sq.a(param0, param1, param2);
-        sq.a(param3);
+    final static void fillPolygonSlice(int[] param0, int param1, int param2, int param3) {
+        PolygonScanlineRasterizer.resetEdges();
+        PolygonScanlineRasterizer.addPolygonEdges(param0, param1, param2);
+        PolygonScanlineRasterizer.renderSpans(param3);
     }
 
-    private final static boolean b() {
+    private final static boolean nextScanlineSpan() {
         int var0;
         int var1;
         int var2;
@@ -275,7 +275,7 @@ final class sq {
             field_c = 0;
             return false;
           }
-          sq.b(var3, var0);
+          PolygonScanlineRasterizer.sortActiveEdgesByX(var3, var0);
           field_b = var3;
           field_h = var0;
           var1 = var3;

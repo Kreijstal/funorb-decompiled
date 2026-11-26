@@ -1630,7 +1630,7 @@ final class GameSession {
             integerLocal14 = integerArgument3;
             SoftwareRaster.performAction0656(integerLocal13 - 2, integerLocal14 - 3, integerLocal12 + 8, 17, 4, 65793);
             integerArrayLocal15 = new int[]{integerLocal13 + integerLocal12, 11 + integerLocal14, integerLocal13 - (-integerLocal12 - 15), integerLocal14 + 15, 15 + (integerLocal13 + integerLocal12), 15 + integerLocal14, integerLocal12 + (integerLocal13 + 15), 13 + integerLocal14, integerLocal13 + integerLocal12 + 6, 4 + integerLocal14};
-            MixedSupport092.performAction1189(integerArrayLocal15, 65793);
+            PolygonScanlineRasterizer.fillPolygon(integerArrayLocal15, 65793);
             integerLocal16 = 16777215;
             if (integerLocal11 != 0 &&
               0 != (CipherPacketBuffer.integerState0799 & 16)) {
@@ -1641,7 +1641,7 @@ final class GameSession {
             }
             SoftwareRaster.performAction0656(integerLocal13 - 1, -3 + integerLocal14 + 1, integerLocal12 + 6, 15, 4, integerLocal16);
             integerArrayLocal17 = new int[]{1 + integerLocal12 + integerLocal13, 10 + integerLocal14, 14 + integerLocal12 + integerLocal13, integerLocal14 + 14, integerLocal12 + (integerLocal13 + 5), integerLocal14 + 5};
-            MixedSupport092.performAction1189(integerArrayLocal17, integerLocal16);
+            PolygonScanlineRasterizer.fillPolygon(integerArrayLocal17, integerLocal16);
             UiComponentPart029.renderingSupport009State0005.performAction1069((String) (objectLocal9), integerLocal13 + 2, 10 + integerLocal14, 65793, -1);
           }
           MixedSupport029.performAction0407(integerArgument5, 353 + integerArgument1, stringArgument2, integerArgument3 + 14, (byte) 75, UiComponentPart029.renderingSupport009State0005);

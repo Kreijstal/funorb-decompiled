@@ -442,10 +442,10 @@ final class hn {
         }
         var34Lifetime1 = this.field_x.field_f * 2;
         for (var35 = 0; var35 < 8; var35++) {
-          k.b();
-          k.a(var41, var34Lifetime1 * var35, var34Lifetime1);
+          PolygonScanlineRasterizer.resetEdges();
+          PolygonScanlineRasterizer.addPolygonEdges(var41, var34Lifetime1 * var35, var34Lifetime1);
           if (var35 < 7) {
-            k.a(var41, var34Lifetime1 + var35 * var34Lifetime1, var34Lifetime1);
+            PolygonScanlineRasterizer.addPolygonEdges(var41, var34Lifetime1 + var35 * var34Lifetime1, var34Lifetime1);
           }
           var36 = (-this.field_L + 100) * uc.field_db.length / 100;
           uc.field_db[var36].b(var24 - var26, -var26 + var25, 2 * var26, 2 * var26, (1 + var35) * var27 / 8);

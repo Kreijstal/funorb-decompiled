@@ -38,7 +38,7 @@ final class cfa extends IntrusiveNode {
             var9[1 + (2 + 2 * var13)] = -(int)(Math.cos((double)(-(var13 + var10)) * 6.283185307179586 / (double)var8) * (double)param2) + param5;
             var13++;
           }
-          sq.a(var16, 0, 2 * (2 + var12), param4);
+          PolygonScanlineRasterizer.fillPolygonSlice(var16, 0, 2 * (2 + var12), param4);
           var10 = var10 + var12;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "cfa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

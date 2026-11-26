@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k {
+final class PolygonScanlineRasterizer {
     private static int field_g;
     static int field_c;
     static int field_f;
@@ -15,11 +15,11 @@ final class k {
         field_d = null;
     }
 
-    final static void b() {
+    final static void resetEdges() {
         field_a = 0;
     }
 
-    final static void c() {
+    final static void initializeScanlineSpans() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -34,7 +34,7 @@ final class k {
           field_c = 2147483646;
           return;
         }
-        k.a(0, field_a);
+        PolygonScanlineRasterizer.sortEdgesByStartY(0, field_a);
         int var0 = field_d[1];
         if (var0 < fn.field_b) {
           var0 = fn.field_b;
@@ -59,7 +59,7 @@ final class k {
         field_c = var0 - 1;
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void addPolygonEdges(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -127,7 +127,7 @@ final class k {
         }
     }
 
-    private final static void a(int param0, int param1) {
+    private final static void sortEdgesByStartY(int param0, int param1) {
         int var7 = 0;
         int var2;
         int var3;
@@ -161,16 +161,16 @@ final class k {
         field_d[var2 + 1] = var4;
         field_d[var2 + 2] = var5;
         field_d[var2 + 3] = var6;
-        k.a(param0, var2);
-        k.a(var2 + 4, param1);
+        PolygonScanlineRasterizer.sortEdgesByStartY(param0, var2);
+        PolygonScanlineRasterizer.sortEdgesByStartY(var2 + 4, param1);
     }
 
-    final static void a(int param0) {
+    final static void renderSpans(int param0) {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
-        k.c();
-        while (k.d()) {
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
           var1 = field_h;
           var2 = field_f;
           var3 = field_c;
@@ -178,7 +178,7 @@ final class k {
         }
     }
 
-    private final static void b(int param0, int param1) {
+    private final static void sortActiveEdgesByX(int param0, int param1) {
         int var3 = 0;
         int var2;
         int var4;
@@ -208,7 +208,7 @@ final class k {
         return;
     }
 
-    final static boolean d() {
+    final static boolean nextScanlineSpan() {
         int var0;
         int var1;
         int var2;
@@ -273,7 +273,7 @@ final class k {
             field_a = 0;
             return false;
           }
-          k.b(var3, var0);
+          PolygonScanlineRasterizer.sortActiveEdgesByX(var3, var0);
           field_g = var3;
           field_b = var0;
           var1 = var3;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport092 {
+final class PolygonScanlineRasterizer {
     private static int integerState0560;
     private static int integerState0561;
     private static int integerState0562;
@@ -11,7 +11,7 @@ final class MixedSupport092 {
     private static int integerState0565;
     private static int integerState0566;
 
-    private final static void performAction1196() {
+    private final static void resetEdges() {
         integerState0562 = 0;
     }
 
@@ -19,17 +19,17 @@ final class MixedSupport092 {
         integerArrayState0177 = null;
     }
 
-    final static void performAction1190(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
-        MixedSupport092.performAction1192(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2, integerArgument3, (int[]) null, (int[]) null);
+    final static void fillPolygonAlpha(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+        PolygonScanlineRasterizer.fillPolygonSliceAlphaMasked(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2, integerArgument3, (int[]) null, (int[]) null);
     }
 
-    private final static void performAction1188(int integerArgument1, int integerArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4) {
+    private final static void renderSpansAlphaMasked(int integerArgument1, int integerArgument2, int[] integerArrayArgument3, int[] integerArrayArgument4) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
         int integerLocal4 = 0;
-        MixedSupport092.performAction1185();
-        while (MixedSupport092.computeBoolean1193()) {
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
           integerLocal1 = integerState0565;
           integerLocal2 = integerState0563;
           integerLocal3 = integerState0561;
@@ -46,7 +46,7 @@ final class MixedSupport092 {
         }
     }
 
-    private final static void performAction1185() {
+    private final static void initializeScanlineSpans() {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
@@ -61,7 +61,7 @@ final class MixedSupport092 {
           integerState0561 = 2147483646;
           return;
         }
-        MixedSupport092.performAction1187(0, integerState0562);
+        PolygonScanlineRasterizer.sortEdgesByStartY(0, integerState0562);
         int integerLocal8 = integerArrayState0177[1];
         if (integerLocal8 < SoftwareRaster.integerState0280) {
           integerLocal8 = SoftwareRaster.integerState0280;
@@ -86,7 +86,7 @@ final class MixedSupport092 {
         integerState0561 = integerLocal8 - 1;
     }
 
-    private final static void performAction1194(int integerArgument1, int integerArgument2) {
+    private final static void sortActiveEdgesByX(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -116,7 +116,7 @@ final class MixedSupport092 {
         return;
     }
 
-    private final static boolean computeBoolean1193() {
+    private final static boolean nextScanlineSpan() {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -181,14 +181,14 @@ final class MixedSupport092 {
             integerState0562 = 0;
             return false;
           }
-          MixedSupport092.performAction1194(integerLocal4, integerLocal1);
+          PolygonScanlineRasterizer.sortActiveEdgesByX(integerLocal4, integerLocal1);
           integerState0566 = integerLocal4;
           integerState0560 = integerLocal1;
           integerLocal2 = integerLocal4;
         }
     }
 
-    private final static void performAction1187(int integerArgument1, int integerArgument2) {
+    private final static void sortEdgesByStartY(int integerArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         int integerLocal2;
         int integerLocal3;
@@ -222,26 +222,26 @@ final class MixedSupport092 {
         integerArrayState0177[integerLocal2 + 1] = integerLocal4;
         integerArrayState0177[integerLocal2 + 2] = integerLocal5;
         integerArrayState0177[integerLocal2 + 3] = integerLocal6;
-        MixedSupport092.performAction1187(integerArgument1, integerLocal2);
-        MixedSupport092.performAction1187(integerLocal2 + 4, integerArgument2);
+        PolygonScanlineRasterizer.sortEdgesByStartY(integerArgument1, integerLocal2);
+        PolygonScanlineRasterizer.sortEdgesByStartY(integerLocal2 + 4, integerArgument2);
     }
 
-    final static void performAction1189(int[] integerArrayArgument1, int integerArgument2) {
-        MixedSupport092.performAction1191(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2);
+    final static void fillPolygon(int[] integerArrayArgument1, int integerArgument2) {
+        PolygonScanlineRasterizer.fillPolygonSlice(integerArrayArgument1, 0, integerArrayArgument1.length, integerArgument2);
     }
 
-    private final static void performAction1191(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        MixedSupport092.performAction1196();
-        MixedSupport092.performAction1195(integerArrayArgument1, integerArgument2, integerArgument3);
-        MixedSupport092.performAction1186(integerArgument4);
+    private final static void fillPolygonSlice(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+        PolygonScanlineRasterizer.resetEdges();
+        PolygonScanlineRasterizer.addPolygonEdges(integerArrayArgument1, integerArgument2, integerArgument3);
+        PolygonScanlineRasterizer.renderSpans(integerArgument4);
     }
 
-    private final static void performAction1186(int integerArgument1) {
+    private final static void renderSpans(int integerArgument1) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;
-        MixedSupport092.performAction1185();
-        while (MixedSupport092.computeBoolean1193()) {
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
           integerLocal1 = integerState0565;
           integerLocal2 = integerState0563;
           integerLocal3 = integerState0561;
@@ -249,17 +249,17 @@ final class MixedSupport092 {
         }
     }
 
-    private final static void performAction1192(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int[] integerArrayArgument6, int[] integerArrayArgument7) {
+    private final static void fillPolygonSliceAlphaMasked(int[] integerArrayArgument1, int integerArgument2, int integerArgument3, int integerArgument4, int integerArgument5, int[] integerArrayArgument6, int[] integerArrayArgument7) {
         if (integerArrayArgument6 != null &&
           SoftwareRaster.integerState0283 - SoftwareRaster.integerState0280 != integerArrayArgument6.length) {
           throw new IllegalStateException();
         }
-        MixedSupport092.performAction1196();
-        MixedSupport092.performAction1195(integerArrayArgument1, integerArgument2, integerArgument3);
-        MixedSupport092.performAction1188(integerArgument4, integerArgument5, integerArrayArgument6, integerArrayArgument7);
+        PolygonScanlineRasterizer.resetEdges();
+        PolygonScanlineRasterizer.addPolygonEdges(integerArrayArgument1, integerArgument2, integerArgument3);
+        PolygonScanlineRasterizer.renderSpansAlphaMasked(integerArgument4, integerArgument5, integerArrayArgument6, integerArrayArgument7);
     }
 
-    private final static void performAction1195(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
+    private final static void addPolygonEdges(int[] integerArrayArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         int integerLocal2 = 0;
         int integerLocal3 = 0;

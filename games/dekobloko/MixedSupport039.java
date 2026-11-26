@@ -47,9 +47,9 @@ final class MixedSupport039 {
             integerLocal12 = MixedSupport051.computeInteger0603(integerLocal6 + integerLocal8, (byte) -122) >> 6;
             integerArrayLocal13 = new int[]{integerLocal2 + integerArgument4, integerArgument1 + integerLocal3, integerLocal9 + integerArgument4, integerArgument1 + integerLocal10, integerArgument4 + integerLocal11, integerLocal12 + integerArgument1};
             if (256 == integerArgument2) {
-              MixedSupport092.performAction1190(integerArrayLocal13, 16777215, integerLocal7);
+              PolygonScanlineRasterizer.fillPolygonAlpha(integerArrayLocal13, 16777215, integerLocal7);
             } else {
-              MixedSupport092.performAction1190(integerArrayLocal13, 16777215, integerLocal7 * 256 >> 9);
+              PolygonScanlineRasterizer.fillPolygonAlpha(integerArrayLocal13, 16777215, integerLocal7 * 256 >> 9);
             }
           }
           return;

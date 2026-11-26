@@ -87,7 +87,7 @@ public final class Confined extends i {
           u.clearStaticReferences((byte) -118);
           pl.c(-1444);
           ti.clearStaticReferences();
-          k.clearStaticReferences();
+          PolygonScanlineRasterizer.clearStaticReferences();
           wc.n(0);
           lc.a((byte) 83);
           vb.d(8);
@@ -583,7 +583,7 @@ public final class Confined extends i {
               var15 = (int)(1024.5 * Math.sin(var17_double));
               var16 = (int)(1024.5 * Math.cos(var17_double));
             }
-            k.b();
+            PolygonScanlineRasterizer.resetEdges();
             var17_int = 0;
             scanLoop1: while (true) {
               if (var17_int < mm.field_eb.length) {
@@ -601,13 +601,13 @@ public final class Confined extends i {
                   mm.field_bb[var17_int][1 + var18] = var22 * var14 / 51200 + var11;
                   var18 += 2;
                 }
-                k.a(mm.field_bb[var17_int], 0, mm.field_eb[var17_int].length);
+                PolygonScanlineRasterizer.addPolygonEdges(mm.field_bb[var17_int], 0, mm.field_eb[var17_int].length);
                 var17_int++;
                 continue;
               }
-              k.a(pf.field_h, 0, 8);
-              k.a(0);
-              k.b();
+              PolygonScanlineRasterizer.addPolygonEdges(pf.field_h, 0, 8);
+              PolygonScanlineRasterizer.renderSpans(0);
+              PolygonScanlineRasterizer.resetEdges();
               stackIn_98_0 = 0;
               break;
             }
@@ -621,7 +621,7 @@ public final class Confined extends i {
                 sk.field_u = 0;
                 break;
               }
-              k.a(mm.field_bb[var17_int], 0, mm.field_eb[var17_int].length);
+              PolygonScanlineRasterizer.addPolygonEdges(mm.field_bb[var17_int], 0, mm.field_eb[var17_int].length);
               var17_int++;
             } while (var23 == 0);
             var17 = fd.field_e.field_z;
@@ -1330,11 +1330,11 @@ public final class Confined extends i {
         int var3;
         int var4;
         int var5;
-        k.c();
-        while (k.d()) {
-          var3 = k.field_h;
-          var4 = k.field_f;
-          var5 = k.field_c;
+        PolygonScanlineRasterizer.initializeScanlineSpans();
+        while (PolygonScanlineRasterizer.nextScanlineSpan()) {
+          var3 = PolygonScanlineRasterizer.field_h;
+          var4 = PolygonScanlineRasterizer.field_f;
+          var5 = PolygonScanlineRasterizer.field_c;
           if (var3 < 0) {
             var3 = 0;
           }

@@ -1431,7 +1431,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         MixedSupport101.performAction1268(62);
         UiComponentPart019.clearStaticReferences(-17690);
         MixedSupport046.performAction0565((byte) -118);
-        MixedSupport092.clearStaticReferences();
+        PolygonScanlineRasterizer.clearStaticReferences();
         NetworkSupport001.clearStaticReferences(0);
         SceneWidgetPart001.performAction0159(15338);
         NetworkArchiveRequestManager.performAction1291(112);
