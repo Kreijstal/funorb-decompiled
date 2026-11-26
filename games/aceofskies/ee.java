@@ -23,7 +23,7 @@ abstract class ee extends or {
         if (param0 == 14) {
           int var1 = BitmapFontMetrics.b(-99);
           int var2 = ArchiveNetworkClient.e(-121);
-          MouseWheelInput.field_d.a(-652, var1 + (DirectByteStorage.field_h << 1), (po.field_j << 1) + var2, pt.field_a - po.field_j, -DirectByteStorage.field_h + ac.field_c);
+          MouseWheelInput.field_d.a(-652, var1 + (DirectByteStorage.field_h << 1), (po.field_j << 1) + var2, pt.field_a - po.field_j, -DirectByteStorage.field_h + SoftwareDepthBuffer.field_c);
           qa.b(-37);
           return;
         }

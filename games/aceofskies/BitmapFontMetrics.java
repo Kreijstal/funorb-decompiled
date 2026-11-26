@@ -32,7 +32,7 @@ final class BitmapFontMetrics {
           if (param0 >= -76) {
             field_b = (int[]) null;
           }
-          int stackIn_4_0 = -ac.field_c + je.field_a;
+          int stackIn_4_0 = -SoftwareDepthBuffer.field_c + je.field_a;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

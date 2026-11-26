@@ -34,7 +34,7 @@ final class ql extends ud {
           if (!param0) {
             return;
           }
-          int var5 = mo.field_c[param2] * this.field_h;
+          int var5 = OpenGlAssemblyProgram.field_c[param2] * this.field_h;
           if (this.field_s == 1) {
             int var9 = this.field_k[0];
             int var8 = this.field_l[0] << 12;

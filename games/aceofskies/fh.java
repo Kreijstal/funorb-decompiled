@@ -134,7 +134,7 @@ final class fh extends vo {
             String stackIn_30_0 = qa.field_c;
             return stackIn_30_0;
           }
-          if (!lb.a(var6, var5, -115)) {
+          if (!SoftwareFramebuffer.containsNameOrReverse(var6, var5, -115)) {
             String stackIn_35_0 = co.field_a;
             return stackIn_35_0;
           }

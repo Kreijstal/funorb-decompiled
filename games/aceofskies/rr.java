@@ -282,7 +282,7 @@ final class rr {
     final static void a(String param0, byte param1, java.applet.Applet param2) {
         try {
           try {
-            ac.field_d = param0;
+            SoftwareDepthBuffer.field_d = param0;
             try {
               String var3 = param2.getParameter("cookieprefix");
               if (param1 > -105) {

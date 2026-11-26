@@ -37,7 +37,7 @@ abstract class ai {
             w stackIn_15_0 = (w) null;
             return stackIn_15_0;
           }
-          w stackIn_4_0 = mo.field_a;
+          w stackIn_4_0 = OpenGlAssemblyProgram.field_a;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;

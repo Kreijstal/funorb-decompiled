@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlUnderwaterEffect extends RenderEffect {
-    private mo field_o;
-    private mo field_p;
-    private mo field_j;
+    private OpenGlAssemblyProgram field_o;
+    private OpenGlAssemblyProgram field_p;
+    private OpenGlAssemblyProgram field_j;
     private float[] field_l;
     private boolean field_f;
     private boolean field_i;
     private boolean field_k;
     static eg field_m;
-    private mo field_g;
+    private OpenGlAssemblyProgram field_g;
     private boolean field_h;
     private HardwareTexture2D field_n;
 
@@ -70,7 +70,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
 
     final void a(boolean param0, boolean param1) {
         if (param0) {
-          this.field_o = (mo) null;
+          this.field_o = (OpenGlAssemblyProgram) null;
         }
     }
 
@@ -93,10 +93,10 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
         try {
           if (param1 != null &&
             param0.field_Vc) {
-            this.field_o = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_ground_unlit"), param0);
-            this.field_g = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_ground_lit"), param0);
-            this.field_p = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_unlit"), param0);
-            this.field_j = ac.a(true, 34336, param1.a("gl", (byte) -71, "uw_model_lit"), param0);
+            this.field_o = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_ground_unlit"), param0);
+            this.field_g = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_ground_lit"), param0);
+            this.field_p = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_model_unlit"), param0);
+            this.field_j = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "uw_model_lit"), param0);
             boolean stackIn_7_0 = !(null == this.field_p);
             stackIn_10_1 = !(this.field_o == null);
             stackIn_13_2 = !(this.field_g == null);
@@ -144,7 +144,7 @@ final class OpenGlUnderwaterEffect extends RenderEffect {
 
     final void a(int param0, int param1, int param2) {
         if (param0 != 1786747298) {
-          this.field_g = (mo) null;
+          this.field_g = (OpenGlAssemblyProgram) null;
         }
     }
 

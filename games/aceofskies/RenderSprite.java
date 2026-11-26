@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class RenderSprite implements ra {
+abstract class RenderSprite implements ColorBuffer {
     final void draw(int x, int y) {
         this.drawBlended(x, y, 1, 0, 1);
     }

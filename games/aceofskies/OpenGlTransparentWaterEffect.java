@@ -4,7 +4,7 @@
 final class OpenGlTransparentWaterEffect extends RenderEffect {
     private HardwareOpenGlRenderer field_f;
     private em field_g;
-    private mo field_h;
+    private OpenGlAssemblyProgram field_h;
 
     final void a(int param0, int param1, HardwareTexture param2) {
         try {
@@ -84,7 +84,7 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
         r.field_n = r.field_n | var3;
         MenuScreen.field_g.addLast(92, new iq(param2));
         if (!tt.field_a) {
-          sb.field_c.addLast(param1 + 6, new oc(param2, param0, NetworkGameClient.field_x, bo.field_h, se.field_b, GzipInflater.field_a - or.score));
+          sb.field_c.addLast(param1 + 6, new AchievementSubmission(param2, param0, NetworkGameClient.field_x, bo.field_h, se.field_b, GzipInflater.field_a - or.score));
           if (param2 == 6) {
             MenuScreen.field_g.addLast(116, new iq(-1));
             si.c(true);
@@ -110,7 +110,7 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
           if (param1 != null &&
             this.field_g.b(false) &&
             this.field_f.field_Vc) {
-            this.field_h = ac.a(true, 34336, param1.a("gl", (byte) -71, "transparent_water"), this.field_f);
+            this.field_h = SoftwareDepthBuffer.createAssemblyProgram(true, 34336, param1.a("gl", (byte) -71, "transparent_water"), this.field_f);
             return;
           }
           this.field_h = null;
@@ -145,7 +145,7 @@ final class OpenGlTransparentWaterEffect extends RenderEffect {
         if (param0 == 3) {
           return null != this.field_h ? true : false;
         }
-        this.field_h = (mo) null;
+        this.field_h = (OpenGlAssemblyProgram) null;
         return null != this.field_h ? true : false;
     }
 

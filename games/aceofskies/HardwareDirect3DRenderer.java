@@ -351,7 +351,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.field_Rc.SetTextureStageState(this.field_F, var6, var7 | HardwareDirect3DRenderer.a(param3, (byte) -68));
     }
 
-    final void a(RenderSprite param0, boolean param1) {
+    final void bindSpriteTarget(RenderSprite param0, boolean param1) {
     }
 
     final void u(byte param0) {
@@ -376,7 +376,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.field_Mc = false;
     }
 
-    final gd a(int param0, int param1) {
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
         return null;
     }
 
@@ -538,7 +538,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.field_Rc.a(27, this.field_Db);
     }
 
-    final sm a(ra param0, gd param1) {
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
         return null;
     }
 
@@ -613,7 +613,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.field_Rc.SetTransform(2, field_Sc);
     }
 
-    final void a(sm param0) {
+    final void bindFramebuffer(Framebuffer param0) {
     }
 
     final void T(int param0) {
@@ -646,7 +646,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         this.field_Rc.SetTransform(3, this.field_N);
         if (param0 > -51) {
           RenderSprite var3 = (RenderSprite) null;
-          this.a((RenderSprite) null, true);
+          this.bindSpriteTarget((RenderSprite) null, true);
         }
     }
 
@@ -654,7 +654,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         int var2 = 0;
         if (param0 < 123) {
           RenderSprite var7 = (RenderSprite) null;
-          this.a((RenderSprite) null, true);
+          this.bindSpriteTarget((RenderSprite) null, true);
         }
         while (var2 < this.field_B) {
           sf var3 = this.field_D[var2];
@@ -723,7 +723,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         if (param0 == CipherPacketBuffer.field_p) {
           return 2;
         }
-        if (param0 == ac.field_b) {
+        if (param0 == SoftwareDepthBuffer.field_b) {
           return 0;
         }
         if (ArchiveNetworkClient.field_i == param0) {
@@ -739,7 +739,7 @@ public final class HardwareDirect3DRenderer extends HardwareRenderer {
         throw new IllegalArgumentException();
     }
 
-    final void a() {
+    final void restoreDefaultFramebuffer() {
     }
 
     final void c(int param0, byte param1) {

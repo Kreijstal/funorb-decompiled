@@ -29,7 +29,7 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
     private int field_o;
     int[] field_E;
     private int field_r;
-    private lb field_C;
+    private SoftwareFramebuffer field_C;
     private int field_x;
     private int field_s;
     private static String field_H;
@@ -115,8 +115,8 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         this.field_F.a((byte) -35, 5);
     }
 
-    final void a(sm param0) {
-        lb var2 = (lb) (param0);
+    final void bindFramebuffer(Framebuffer param0) {
+        SoftwareFramebuffer var2 = (SoftwareFramebuffer) (param0);
         this.field_f = var2.field_c;
         this.field_v = var2.field_b;
         this.field_E = var2.field_d;
@@ -609,8 +609,8 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         this.b(x + width - 1, y + 1, height - 2, argb, blendMode);
     }
 
-    final gd a(int param0, int param1) {
-        return (gd) ((Object) new ac(param0, param1));
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
+        return (DepthBuffer) ((Object) new SoftwareDepthBuffer(param0, param1));
     }
 
     private final void a(java.awt.Canvas param0, int param1, int param2) {
@@ -719,7 +719,7 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         return (RenderSprite) ((Object) new AlphaBlendedJavaSoftwareSprite(this, pixels, offset, stride, width, height, param5));
     }
 
-    final void a() {
+    final void restoreDefaultFramebuffer() {
         if (this.field_l != null) {
           this.field_E = this.field_p.field_e;
           this.field_f = this.field_p.field_g;
@@ -854,8 +854,8 @@ final class JavaSoftwareRenderer extends GraphicsRenderer {
         this.field_y = true;
     }
 
-    final sm a(ra param0, gd param1) {
-        return (sm) ((Object) new lb(this, (RenderSprite) (param0), (ac) (param1)));
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
+        return (Framebuffer) ((Object) new SoftwareFramebuffer(this, (RenderSprite) (param0), (SoftwareDepthBuffer) (param1)));
     }
 
     static {

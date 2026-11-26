@@ -24,7 +24,7 @@ final class ClientException extends RuntimeException {
     final static void queueScoreSubmission(ScoreSubmission submission, boolean obfuscationGuard, int opcode) {
         try {
           tq.pendingScoreSubmissions.addLast(84, submission);
-          ac.writeScoreSubmission(0, opcode, submission);
+          SoftwareDepthBuffer.writeScoreSubmission(0, opcode, submission);
           if (!obfuscationGuard) {
             field_e = false;
           }

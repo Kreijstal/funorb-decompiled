@@ -71,7 +71,7 @@ final class OpenGlEnvironmentWaterEffect extends RenderEffect {
           OpenGlShaderObject var6 = RendererManager.a((byte) 29, 35633, param1.a("gl", (byte) -71, "environment_mapped_water_v"), param0);
           OpenGlShaderObject var4 = var6;
           OpenGlShaderObject var5 = RendererManager.a((byte) 29, 35632, param1.a("gl", (byte) -71, "environment_mapped_water_f"), param0);
-          this.field_h = mo.a(0, param0, new OpenGlShaderObject[]{var6, var5});
+          this.field_h = OpenGlAssemblyProgram.linkShaderProgram(0, param0, new OpenGlShaderObject[]{var6, var5});
           boolean stackIn_12_1 = (null != this.field_h) && (this.field_f.a(0));
           this.field_g = stackIn_12_1;
           return;

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mo {
+final class OpenGlAssemblyProgram {
     private HardwareOpenGlRenderer field_b;
     int field_d;
     static int[] field_c;
     static w field_a;
 
-    final static io a(int param0, HardwareOpenGlRenderer param1, OpenGlShaderObject[] param2) {
+    final static io linkShaderProgram(int param0, HardwareOpenGlRenderer param1, OpenGlShaderObject[] param2) {
         String stackIn_30_2 = null;
         String stackIn_33_2 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -70,7 +70,7 @@ final class mo {
         }
     }
 
-    final static void a(int param0) {
+    final static void beginLoginFromGuest(int param0) {
         if (!ks.field_b) {
           throw new IllegalStateException();
         }
@@ -79,13 +79,13 @@ final class mo {
         SoundCache.field_d = 0;
     }
 
-    public static void b(int param0) {
+    public static void clearAssemblyProgramStatics(int param0) {
         field_a = null;
         field_c = null;
         int var1 = -16 / ((param0 + 33) / 39);
     }
 
-    mo(HardwareOpenGlRenderer param0, int param1, int param2) {
+    OpenGlAssemblyProgram(HardwareOpenGlRenderer param0, int param1, int param2) {
         try {
           this.field_d = param2;
           this.field_b = param0;

@@ -61,7 +61,7 @@ final class pl {
         try {
           ScoreSubmission submission = (ScoreSubmission) (tq.pendingScoreSubmissions.first(268435455));
           while (submission != null) {
-            ac.writeScoreSubmission(0, opcode, submission);
+            SoftwareDepthBuffer.writeScoreSubmission(0, opcode, submission);
             submission = (ScoreSubmission) (tq.pendingScoreSubmissions.next((byte) 103));
           }
           if (obfuscationGuard != 0) {

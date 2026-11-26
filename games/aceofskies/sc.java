@@ -40,13 +40,13 @@ final class sc {
         }
     }
 
-    final static eh a(boolean param0, int param1) {
+    final static AchievementStateRequest a(boolean param0, int param1) {
         if (param0) {
-          return (eh) null;
+          return (AchievementStateRequest) null;
         }
-        eh var2 = new eh();
+        AchievementStateRequest var2 = new AchievementStateRequest();
         wu.field_w.addLast(117, var2);
-        lb.a(param1, 0);
+        SoftwareFramebuffer.writeAchievementStateRequest(param1, 0);
         return var2;
     }
 

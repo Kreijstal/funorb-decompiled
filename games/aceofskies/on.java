@@ -74,7 +74,7 @@ final class on {
         int var3 = param0.field_k;
         int var4 = param0.field_h;
         int var5 = param0.field_a;
-        int[] var15 = oc.field_g;
+        int[] var15 = AchievementSubmission.field_g;
         int[] var14 = var15;
         int[] var6 = var14;
         int var7 = param0.field_q;
@@ -176,7 +176,7 @@ final class on {
         param0.field_k = var3;
         param0.field_h = var4;
         param0.field_a = var5;
-        oc.field_g = var6;
+        AchievementSubmission.field_g = var6;
         param0.field_q = var7;
         param0.field_s = var8;
         param0.field_j = var9;
@@ -226,8 +226,8 @@ final class on {
         Object var24 = null;
         Object var25 = null;
         param0.field_G = 1;
-        if (oc.field_g == null) {
-          oc.field_g = new int[param0.field_G * 100000];
+        if (AchievementSubmission.field_g == null) {
+          AchievementSubmission.field_g = new int[param0.field_G * 100000];
         }
         boolean var26 = true;
         while (true) {
@@ -398,14 +398,14 @@ final class on {
                 param0.field_o[var4] = param0.field_o[var4] + param0.field_o[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(oc.field_g[var4] & 255);
+                var1 = (byte)(AchievementSubmission.field_g[var4] & 255);
                 int dupTemp$1 = param0.field_o[var1 & 255];
-                oc.field_g[dupTemp$1] = oc.field_g[dupTemp$1] | var4 << 8;
+                AchievementSubmission.field_g[dupTemp$1] = AchievementSubmission.field_g[dupTemp$1] | var4 << 8;
                 param0.field_o[var1 & 255] = param0.field_o[var1 & 255] + 1;
               }
-              param0.field_q = oc.field_g[param0.field_d] >> 8;
+              param0.field_q = AchievementSubmission.field_g[param0.field_d] >> 8;
               param0.field_h = 0;
-              param0.field_q = oc.field_g[param0.field_q];
+              param0.field_q = AchievementSubmission.field_g[param0.field_q];
               param0.field_a = (byte)(param0.field_q & 255);
               param0.field_q = param0.field_q >> 8;
               param0.field_h = param0.field_h + 1;
@@ -469,7 +469,7 @@ final class on {
               }
               int dupTemp$0 = param0.field_m[var1 & 255] & 255;
               param0.field_F[dupTemp$0] = param0.field_F[dupTemp$0] + 1;
-              oc.field_g[var14] = param0.field_m[var1 & 255] & 255;
+              AchievementSubmission.field_g[var14] = param0.field_m[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -524,7 +524,7 @@ final class on {
             var1 = param0.field_m[param0.field_x[param0.field_g[0]] & 255];
             param0.field_F[var1 & 255] = param0.field_F[var1 & 255] + var15;
             while (var15 > 0) {
-              oc.field_g[var14] = var1 & 255;
+              AchievementSubmission.field_g[var14] = var1 & 255;
               var14++;
               var15--;
             }

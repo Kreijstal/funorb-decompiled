@@ -412,39 +412,39 @@ final class wu {
           }
           byte[] var2Lifetime49 = im.a(67, "achievement_names,0");
           if (null != var2Lifetime49) {
-            lb.field_a[0] = ea.a(0, var2Lifetime49);
+            SoftwareFramebuffer.field_a[0] = ea.a(0, var2Lifetime49);
           }
           byte[] var2Lifetime50 = im.a(98, "achievement_names,1");
           if (null != var2Lifetime50) {
-            lb.field_a[1] = ea.a(0, var2Lifetime50);
+            SoftwareFramebuffer.field_a[1] = ea.a(0, var2Lifetime50);
           }
           byte[] var2Lifetime51 = im.a(103, "achievement_names,2");
           if (null != var2Lifetime51) {
-            lb.field_a[2] = ea.a(0, var2Lifetime51);
+            SoftwareFramebuffer.field_a[2] = ea.a(0, var2Lifetime51);
           }
           byte[] var2Lifetime52 = im.a(42, "achievement_names,3");
           if (var2Lifetime52 != null) {
-            lb.field_a[3] = ea.a(0, var2Lifetime52);
+            SoftwareFramebuffer.field_a[3] = ea.a(0, var2Lifetime52);
           }
           byte[] var2Lifetime53 = im.a(121, "achievement_names,4");
           if (var2Lifetime53 != null) {
-            lb.field_a[4] = ea.a(0, var2Lifetime53);
+            SoftwareFramebuffer.field_a[4] = ea.a(0, var2Lifetime53);
           }
           byte[] var2Lifetime54 = im.a(113, "achievement_names,5");
           if (var2Lifetime54 != null) {
-            lb.field_a[5] = ea.a(0, var2Lifetime54);
+            SoftwareFramebuffer.field_a[5] = ea.a(0, var2Lifetime54);
           }
           byte[] var2Lifetime55 = im.a(84, "achievement_names,6");
           if (null != var2Lifetime55) {
-            lb.field_a[6] = ea.a(0, var2Lifetime55);
+            SoftwareFramebuffer.field_a[6] = ea.a(0, var2Lifetime55);
           }
           byte[] var2Lifetime56 = im.a(75, "achievement_names,7");
           if (null != var2Lifetime56) {
-            lb.field_a[7] = ea.a(0, var2Lifetime56);
+            SoftwareFramebuffer.field_a[7] = ea.a(0, var2Lifetime56);
           }
           byte[] var2Lifetime57 = im.a(99, "achievement_names,8");
           if (null != var2Lifetime57) {
-            lb.field_a[8] = ea.a(0, var2Lifetime57);
+            SoftwareFramebuffer.field_a[8] = ea.a(0, var2Lifetime57);
           }
           byte[] var2Lifetime58 = im.a(106, "achievement_criteria,0");
           if (null != var2Lifetime58) {

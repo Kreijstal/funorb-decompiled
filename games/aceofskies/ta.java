@@ -29,11 +29,11 @@ final class ta extends RenderEffect {
         }
         HardwareCubeTexture var3 = this.field_b.O(29190);
         if (var3 == null) {
-          this.field_b.a(ac.field_b, 0, 0);
+          this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
           return;
         }
         if (!param0) {
-          this.field_b.a(ac.field_b, 0, 0);
+          this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
           return;
         }
         this.field_b.a(1, (byte) 47);
@@ -42,7 +42,7 @@ final class ta extends RenderEffect {
         this.field_b.a(1, (byte) 120);
         this.field_b.a(du.field_l, true, bd.field_C);
         this.field_b.a(true, 2, true, ArchiveNetworkClient.field_i, false);
-        this.field_b.a(ac.field_b, 0, 0);
+        this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
         ec var4 = this.field_b.d(12343);
         var4.a(this.field_b.f(false), (byte) -121);
         this.field_b.a(qn.field_a, (byte) 117);

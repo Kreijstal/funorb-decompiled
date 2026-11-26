@@ -44,7 +44,7 @@ final class InstrumentEnvelope {
             for (int var7 = 0; var7 < var6; var7++) {
               var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 124);
             }
-            eh var16_ref = (eh) (wu.field_w.first(268435455));
+            AchievementStateRequest var16_ref = (AchievementStateRequest) (wu.field_w.first(268435455));
             if (var16_ref == null) {
               te.b(true);
               return;
@@ -56,14 +56,14 @@ final class InstrumentEnvelope {
             return;
           }
           if (var2 == 1) {
-            oc var12 = (oc) (ci.field_j.first(268435455));
+            AchievementSubmission var12 = (AchievementSubmission) (ci.field_j.first(268435455));
             if (var12 == null) {
               te.b(true);
               return;
             }
             var12.unlink(-123);
           } else if (var2 == 2) {
-            eh var14 = (eh) (wu.field_w.first(268435455));
+            AchievementStateRequest var14 = (AchievementStateRequest) (wu.field_w.first(268435455));
             if (var14 == null) {
               te.b(true);
               return;

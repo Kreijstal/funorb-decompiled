@@ -325,7 +325,7 @@ public final class AceOfSkies extends NetworkGameClient {
               return;
             }
             if (gi.a(true)) {
-              mo.a(-1316);
+              OpenGlAssemblyProgram.beginLoginFromGuest(-1316);
               if (var3) {
                 StrongCacheReference.c((byte) 9);
               }
@@ -583,7 +583,7 @@ public final class AceOfSkies extends NetworkGameClient {
           SoundFilter.clearStaticReferences();
           rj.a(true);
           CanvasImageBuffer.clearStaticReferences(obfuscationGuard ^ 21630);
-          lb.clearStaticReferences(24);
+          SoftwareFramebuffer.clearStaticReferences(24);
           ao.a(obfuscationGuard - 19411);
           OpenGlRenderer.y(32598);
           eb.b(64);
@@ -630,7 +630,7 @@ public final class AceOfSkies extends NetworkGameClient {
           iu.a((byte) 119);
           ff.a((byte) 8);
           ui.clearStaticReferences();
-          ac.clearStaticReferences(-28819);
+          SoftwareDepthBuffer.clearStaticReferences(-28819);
           ka.clearStaticReferences((byte) -126);
           r.f(27354);
           du.j(obfuscationGuard - 19583);
@@ -677,7 +677,7 @@ public final class AceOfSkies extends NetworkGameClient {
           OpenGlCubeTexture.b(true);
           OpenGlVolumeTexture.a(126);
           OpenGlUnderwaterEffect.g(obfuscationGuard + 5851);
-          mo.b(39);
+          OpenGlAssemblyProgram.clearAssemblyProgramStatics(39);
           OpenGlEnvironmentWaterEffect.c((byte) 125);
           io.clearStaticReferences(obfuscationGuard - 52006);
           OpenGlBuffer.d(107);
@@ -704,7 +704,7 @@ public final class AceOfSkies extends NetworkGameClient {
           ht.a(-91);
           qq.clearStaticReferences((byte) 116);
           HudMessage.a((byte) 117);
-          oc.a((byte) 121);
+          AchievementSubmission.clearAchievementSubmissionStatics((byte) 121);
           mj.a(3);
           AccountRequestState.releaseStatics(122);
           id.clearStaticReferences((byte) 106);
@@ -923,7 +923,7 @@ public final class AceOfSkies extends NetworkGameClient {
               ls.a(stackIn_54_0, (byte) -37);
             }
             if (ln.field_d >= 2 &&
-              lb.field_e) {
+              SoftwareFramebuffer.field_e) {
               PacketBuffer.gameFont.drawText(16777215, 1, 20, Integer.toString(wk.field_f), obfuscationGuard ^ 18877, 20);
             }
             iq var5 = (iq) (MenuScreen.field_g.first(268435455));
@@ -954,7 +954,7 @@ public final class AceOfSkies extends NetworkGameClient {
                 decompiledSharedTail0 = ((var10));
               }
               if (decompiledSharedTail0) {
-                var9 = lb.field_a[var5.field_f];
+                var9 = SoftwareFramebuffer.field_a[var5.field_f];
                 GlyphMask.achievementSprites[var5.field_f].drawScaled(53 + (-180 + sh.field_u), 45, 64, 64, 0, var6_int << 24 | 16777215, 1);
                 var8 += 65;
               }
@@ -1050,7 +1050,7 @@ public final class AceOfSkies extends NetworkGameClient {
                     default:
                       break;
                     case 4:
-                      mo.a(-1316);
+                      OpenGlAssemblyProgram.beginLoginFromGuest(-1316);
                       if (!var3) {
                         break;
                       }
@@ -1108,7 +1108,7 @@ public final class AceOfSkies extends NetworkGameClient {
           }
           if (!cn.b(true)) {
             do {
-              oc var2 = (oc) (sb.field_c.removeFirst(121));
+              AchievementSubmission var2 = (AchievementSubmission) (sb.field_c.removeFirst(121));
               if (null != var2) {
                 pn.a(var2, (byte) -117, 4);
               } else if (!var3) {

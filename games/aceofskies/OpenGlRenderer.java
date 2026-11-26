@@ -1736,12 +1736,12 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
     }
 
-    final sm a(ra param0, gd param1) {
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
           Object stackIn_1_0 = null;
-          return (sm) (stackIn_1_0);
+          return (Framebuffer) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
@@ -1851,7 +1851,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
         if (param1 != -125) {
           RenderSprite var4 = (RenderSprite) null;
-          this.a((RenderSprite) null, true);
+          this.bindSpriteTarget((RenderSprite) null, true);
         }
     }
 
@@ -1947,7 +1947,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
     }
 
-    final void a(RenderSprite param0, boolean param1) {
+    final void bindSpriteTarget(RenderSprite param0, boolean param1) {
         String stackIn_32_2 = null;
         DualLinkNode var4 = null;
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
@@ -2031,7 +2031,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
     }
 
-    final void a() {
+    final void restoreDefaultFramebuffer() {
         if (this.field_A) {
           if (this.field_qb != this.field_y) {
             throw new RuntimeException();
@@ -2108,7 +2108,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
         this.l(24643);
     }
 
-    final void a(sm param0) {
+    final void bindFramebuffer(Framebuffer param0) {
     }
 
     final RendererBitmapFont createFont(BitmapFontMetrics metrics, SpriteData[] glyphSprites, boolean param2) {
@@ -2253,7 +2253,7 @@ final class OpenGlRenderer extends GraphicsRenderer {
         }
     }
 
-    final gd a(int param0, int param1) {
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
         return null;
     }
 

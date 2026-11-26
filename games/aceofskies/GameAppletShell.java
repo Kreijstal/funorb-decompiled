@@ -25,7 +25,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          lb.field_g = 4000L + kh.correctedCurrentTimeMillis(-61);
+          SoftwareFramebuffer.field_g = 4000L + kh.correctedCurrentTimeMillis(-61);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "vb.stop()");
         }
@@ -446,7 +446,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          lb.field_g = kh.correctedCurrentTimeMillis(-96);
+          SoftwareFramebuffer.field_g = kh.correctedCurrentTimeMillis(-96);
           IntrusiveNode.sleepMillis(5000L, false);
           mj.field_a = null;
           this.a(false, (byte) 29);
@@ -464,7 +464,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           return;
         }
         try {
-          lb.field_g = 0L;
+          SoftwareFramebuffer.field_g = 0L;
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "vb.start()");
         }
@@ -605,8 +605,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 io.field_c = ij.c(8194);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (lb.field_g != 0L) {
-                    stackIn_100_0 = compareLongs(kh.correctedCurrentTimeMillis(-125), lb.field_g);
+                  if (SoftwareFramebuffer.field_g != 0L) {
+                    stackIn_100_0 = compareLongs(kh.correctedCurrentTimeMillis(-125), SoftwareFramebuffer.field_g);
                     decompiledFrameRemainder0 = ((!(var5)));
                     if (decompiledFrameRemainder0 &&
                       stackIn_100_0 >= 0) {

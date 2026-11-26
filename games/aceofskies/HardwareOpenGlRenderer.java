@@ -615,10 +615,10 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         }
     }
 
-    final void a() {
+    final void restoreDefaultFramebuffer() {
     }
 
-    final void a(RenderSprite param0, boolean param1) {
+    final void bindSpriteTarget(RenderSprite param0, boolean param1) {
     }
 
     final void a(fa param0, byte param1) {
@@ -840,63 +840,63 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
           iq var5 = (iq) (this.field_Ec.removeFirst(126));
           int incrementValue$3 = var2;
           var2++;
-          ac.field_e[incrementValue$3] = (int)var5.key;
+          SoftwareDepthBuffer.field_e[incrementValue$3] = (int)var5.key;
           this.field_j = this.field_j - var5.field_f;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteBuffersARB(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteBuffersARB(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         while (!this.field_Lc.isEmpty(true)) {
           iq var6 = (iq) (this.field_Lc.removeFirst(124));
           int incrementValue$2 = var2;
           var2++;
-          ac.field_e[incrementValue$2] = (int)var6.key;
+          SoftwareDepthBuffer.field_e[incrementValue$2] = (int)var6.key;
           this.field_jc = this.field_jc - var6.field_f;
           if (1000 != var2) {
             continue;
           }
-          jaggl.OpenGL.glDeleteTextures(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         if (0 < var2) {
-          jaggl.OpenGL.glDeleteTextures(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         while (!this.field_Wc.isEmpty(true)) {
           iq var7 = (iq) (this.field_Wc.removeFirst(121));
           int incrementValue$1 = var2;
           var2++;
-          ac.field_e[incrementValue$1] = var7.field_f;
+          SoftwareDepthBuffer.field_e[incrementValue$1] = var7.field_f;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         while (!this.field_vc.isEmpty(true)) {
           iq var8 = (iq) (this.field_vc.removeFirst(124));
           int incrementValue$0 = var2;
           var2++;
-          ac.field_e[incrementValue$0] = (int)var8.key;
+          SoftwareDepthBuffer.field_e[incrementValue$0] = (int)var8.key;
           this.field_qb = this.field_qb - var8.field_f;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, ac.field_e, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SoftwareDepthBuffer.field_e, 0);
           var2 = 0;
         }
         while (!this.field_uc.isEmpty(true)) {
@@ -1040,8 +1040,8 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
 
     final HardwareIndexBuffer c(boolean param0, int param1) {
         if (param1 != 8762) {
-          gd var4 = (gd) null;
-          this.a((ra) null, (gd) null);
+          DepthBuffer var4 = (DepthBuffer) null;
+          this.createFramebuffer((ColorBuffer) null, (DepthBuffer) null);
         }
         return (HardwareIndexBuffer) ((Object) new OpenGlIndexBuffer(this, BufferElementType.field_b, param0));
     }
@@ -1146,12 +1146,12 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         super.G(-127);
     }
 
-    final sm a(ra param0, gd param1) {
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
         String stackIn_5_2 = null;
         String stackIn_8_2 = null;
         try {
           Object stackIn_1_0 = null;
-          return (sm) (stackIn_1_0);
+          return (Framebuffer) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
           RuntimeException var3 = decompiledCaughtException;
@@ -1311,7 +1311,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         }
     }
 
-    final gd a(int param0, int param1) {
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
         return null;
     }
 
@@ -1367,7 +1367,7 @@ final class HardwareOpenGlRenderer extends HardwareRenderer {
         }
     }
 
-    final void a(sm param0) {
+    final void bindFramebuffer(Framebuffer param0) {
     }
 
     final void a(boolean param0, ia param1, int param2, int param3) {

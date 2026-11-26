@@ -9,7 +9,7 @@ final class jb {
     }
 
     final static void a(String param0, int param1) {
-        System.out.println("Error: " + eh.a("%0a", -104, "\n", param0));
+        System.out.println("Error: " + AchievementStateRequest.replaceSubstring("%0a", -104, "\n", param0));
         if (param1 != 20164) {
           field_a = (String[]) null;
         }

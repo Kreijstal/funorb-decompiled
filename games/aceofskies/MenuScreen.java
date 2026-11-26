@@ -219,10 +219,10 @@ final class MenuScreen {
         }
         this.a(40 + var10, (byte) 86, var7 - 20, 40 + var9, var30, -20 + var8);
         String var11 = mf.field_a;
-        if (oc.highscoreView == 1) {
+        if (AchievementSubmission.highscoreView == 1) {
           var11 = OpenGlRenderer.field_zc;
         }
-        if (2 == oc.highscoreView) {
+        if (2 == AchievementSubmission.highscoreView) {
           var11 = jo.field_l;
           String var12 = var11;
           String var12Lifetime3 = var11;
@@ -237,9 +237,9 @@ final class MenuScreen {
             if (var13_ref_uc.completed) {
               if (null != var13_ref_uc.namesByView) {
                 var12Lifetime1 = IndexedSpriteState.field_g;
-                String[] var14 = var13_ref_uc.namesByView[oc.highscoreView];
-                int[] var35 = var13_ref_uc.valuesByView[oc.highscoreView];
-                int var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, oc.highscoreView, to.lastScoreSubmission);
+                String[] var14 = var13_ref_uc.namesByView[AchievementSubmission.highscoreView];
+                int[] var35 = var13_ref_uc.valuesByView[AchievementSubmission.highscoreView];
+                int var16 = ca.findSubmittedScoreRow(var13_ref_uc, (byte) 113, AchievementSubmission.highscoreView, to.lastScoreSubmission);
                 kn.bigFontMetrics.measureTextWidth((byte) 94, "10. ");
                 int var17 = verticalOffset + (hi.gameFontMetrics.maxAscent + 140);
                 int var18 = 310;
@@ -543,19 +543,19 @@ final class MenuScreen {
               if (!this.input.isActivated((byte) 124)) {
                 break;
               }
-              oc.highscoreView = 0;
+              AchievementSubmission.highscoreView = 0;
               break;
             case 9:
               if (!this.input.isActivated((byte) 88)) {
                 break;
               }
-              oc.highscoreView = 1;
+              AchievementSubmission.highscoreView = 1;
               break;
             case 10:
               if (!this.input.isActivated((byte) 87)) {
                 break;
               }
-              oc.highscoreView = 2;
+              AchievementSubmission.highscoreView = 2;
               break;
             case 15:
               if (this.input.isActivated((byte) 97)) {
@@ -980,7 +980,7 @@ final class MenuScreen {
         }
         int var16 = stackIn_7_0;
         int var17 = -1;
-        for (int var18 = 0; -1 + lb.field_a.length > var18; var18++) {
+        for (int var18 = 0; -1 + SoftwareFramebuffer.field_a.length > var18; var18++) {
           regionExit1: {
             Object var19_ref = null;
             if ((var16 & 1 << var18) != 0) {
@@ -1087,7 +1087,7 @@ final class MenuScreen {
           PacketBuffer.gameFont.drawParagraph(0, -(var20Lifetime1 / 2) + var7Lifetime2Lifetime2, var5, true, var6, 1, 8 + var15Lifetime1Lifetime2, hi.gameFontMetrics.maxAscent, 0, (RenderSprite[]) null, (GlyphMask) null, 0, (int[]) null, var20Lifetime1, 480, var18_ref_StringLifetime1);
           int var7Lifetime2Lifetime3 = 320;
           int var15Lifetime1Lifetime3 = 350 + verticalOffset;
-          PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, lb.field_a[var17]);
+          PacketBuffer.gameFont.drawCenteredText(118, var5, var6, var15Lifetime1Lifetime3, var7Lifetime2Lifetime3, SoftwareFramebuffer.field_a[var17]);
           int var21Lifetime1 = verticalOffset + 200;
           if (var19Lifetime1) {
             GlyphMask.achievementSprites[var17].drawBlended(256, var21Lifetime1, 0, var5, 1);
@@ -1182,10 +1182,10 @@ final class MenuScreen {
         this.a(verticalOffset, (byte) 76, bt.field_b);
         int var9 = 20;
         String[] var10 = new String[50];
-        int[] var18 = new int[ac.keySprites.length];
+        int[] var18 = new int[SoftwareDepthBuffer.keySprites.length];
         int[] var17 = var18;
         int[] var11 = var17;
-        for (int var12_int = 0; var12_int < ac.keySprites.length; var12_int++) {
+        for (int var12_int = 0; var12_int < SoftwareDepthBuffer.keySprites.length; var12_int++) {
           var18[var12_int] = 10;
         }
         int[] var12 = new int[50];
@@ -1195,20 +1195,20 @@ final class MenuScreen {
             var12[var13] = var12[var13] - 64;
           }
         }
-        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, ac.keySprites, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
+        int var13Lifetime1 = hi.gameFontMetrics.wrapText(-102, SoftwareDepthBuffer.keySprites, var12, var10, sn.a(io.field_a[vq.instructionPage], 120, new String[]{"          "}));
         for (int var14 = 0; var14 < var13Lifetime1; var14++) {
           if (!var10[var14].startsWith("<b>")) {
             RendererBitmapFont stackIn_19_0 = PacketBuffer.gameFont;
             int stackIn_19_1 = var4;
             int stackIn_19_2 = 0;
-            RenderSprite[] stackIn_19_3 = ac.keySprites;
+            RenderSprite[] stackIn_19_3 = SoftwareDepthBuffer.keySprites;
             stackIn_20_4 = (vq.instructionPage != 5) ? (0) : (64);
             ((RendererBitmapFont) (Object) stackIn_19_0).drawTextWithImages(stackIn_19_1, stackIn_19_2, stackIn_19_3, stackIn_20_4 + (12 + var5), 0, var10[var14], var6 + var8 / 2 + var9 * (var14 - var13Lifetime1 / 2), var18);
           } else {
-            se.bigGameFont.drawTextWithImages(var4, 0, ac.keySprites, var5 + 12, 0, var10[var14], var9 * (var14 - var13Lifetime1 / 2) + (10 - (-var6 - var8 / 2)), var18);
+            se.bigGameFont.drawTextWithImages(var4, 0, SoftwareDepthBuffer.keySprites, var5 + 12, 0, var10[var14], var9 * (var14 - var13Lifetime1 / 2) + (10 - (-var6 - var8 / 2)), var18);
           }
         }
-        se.bigGameFont.drawRightAlignedTextWithImages(0, var4, var11, (byte) -110, -10 + (var8 + var6), om.a(io.field_a.length, 1 + vq.instructionPage, (byte) 66), var7 + var5 - 10, ac.keySprites);
+        se.bigGameFont.drawRightAlignedTextWithImages(0, var4, var11, (byte) -110, -10 + (var8 + var6), om.a(io.field_a.length, 1 + vq.instructionPage, (byte) 66), var7 + var5 - 10, SoftwareDepthBuffer.keySprites);
     }
 
     final static void a(byte param0, int param1, boolean param2) {
@@ -1440,7 +1440,7 @@ final class MenuScreen {
               }
             }
           }
-          ac.field_c = ri.field_a - (var3_intLifetime1 >> 1);
+          SoftwareDepthBuffer.field_c = ri.field_a - (var3_intLifetime1 >> 1);
           OpenGlIndexBuffer.field_q = (pp.field_a + as.field_c << 1) * pr.field_b.itemCount;
           je.field_a = -(var3_intLifetime1 >> 1) + (ri.field_a + var3_intLifetime1);
           for (int var4Lifetime2 = 0; var4Lifetime2 < ne.field_g.length; var4Lifetime2++) {
@@ -1564,12 +1564,12 @@ final class MenuScreen {
                 this.input.selectedIndex <= 2) {
                 this.input.setSelectedIndex((byte) -119, 4);
               } else {
-                this.input.setSelectedIndex((byte) -122, oc.highscoreView);
+                this.input.setSelectedIndex((byte) -122, AchievementSubmission.highscoreView);
               }
             }
             if (bk.lastKeyCode == 98) {
               if (this.input.selectedIndex == 4) {
-                this.input.setSelectedIndex((byte) -108, oc.highscoreView);
+                this.input.setSelectedIndex((byte) -108, AchievementSubmission.highscoreView);
               } else {
                 this.input.setSelectedIndex((byte) -100, 4);
               }

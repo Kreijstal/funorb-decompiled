@@ -45,7 +45,7 @@ final class ii extends vo {
             int stackIn_12_0 = 5890;
             return stackIn_12_0;
           }
-          if (ac.field_b == param1) {
+          if (SoftwareDepthBuffer.field_b == param1) {
             int stackIn_3_0 = 34167;
             return stackIn_3_0;
           }

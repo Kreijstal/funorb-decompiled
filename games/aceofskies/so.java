@@ -13,14 +13,14 @@ final class so {
           if (param1 > -29) {
             so.a(-27, (byte) -64);
           }
-          oc var4 = (oc) (ci.field_j.first(268435455));
+          AchievementSubmission var4 = (AchievementSubmission) (ci.field_j.first(268435455));
           while (var4 != null) {
-            ac.a(param0, 0, var4);
-            var4 = (oc) (ci.field_j.next((byte) 103));
+            SoftwareDepthBuffer.writeAchievementSubmission(param0, 0, var4);
+            var4 = (AchievementSubmission) (ci.field_j.next((byte) 103));
           }
           IntrusiveNode var2 = wu.field_w.first(268435455);
           while (var2 != null) {
-            lb.a(param0, 0);
+            SoftwareFramebuffer.writeAchievementStateRequest(param0, 0);
             var2 = wu.field_w.next((byte) 103);
           }
           return;

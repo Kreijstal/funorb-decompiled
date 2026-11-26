@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac implements gd {
+final class SoftwareDepthBuffer implements DepthBuffer {
     int field_a;
     static int field_c;
     static int[] field_e;
@@ -10,7 +10,7 @@ final class ac implements gd {
     static jb field_b;
     static RenderSprite[] keySprites;
 
-    final static void a(int param0, int param1, oc param2) {
+    final static void writeAchievementSubmission(int param0, int param1, AchievementSubmission param2) {
         CipherPacketBuffer var5 = q.outgoingPacket;
         var5.writeCipheredOpcode(43, param0);
         var5.position = var5.position + 1;
@@ -43,13 +43,13 @@ final class ac implements gd {
         }
     }
 
-    final static mo a(boolean param0, int param1, byte[] param2, HardwareOpenGlRenderer param3) {
+    final static OpenGlAssemblyProgram createAssemblyProgram(boolean param0, int param1, byte[] param2, HardwareOpenGlRenderer param3) {
         String stackIn_13_2 = null;
         String stackIn_16_2 = null;
         try {
           if (param2 == null) {
             Object stackIn_2_0 = null;
-            return (mo) (stackIn_2_0);
+            return (OpenGlAssemblyProgram) (stackIn_2_0);
           }
           int var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param1, var4_int);
@@ -58,13 +58,13 @@ final class ac implements gd {
           if (-1 != ClientException.field_b[0]) {
             jaggl.OpenGL.glBindProgramARB(param1, 0);
             Object stackIn_5_0 = null;
-            return (mo) (stackIn_5_0);
+            return (OpenGlAssemblyProgram) (stackIn_5_0);
           }
           jaggl.OpenGL.glBindProgramARB(param1, 0);
           if (!param0) {
             field_b = (jb) null;
           }
-          mo stackIn_9_0 = new mo(param3, param1, var4_int);
+          OpenGlAssemblyProgram stackIn_9_0 = new OpenGlAssemblyProgram(param3, param1, var4_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           RuntimeException decompiledCaughtException = decompiledCaughtParameter0;
@@ -86,7 +86,7 @@ final class ac implements gd {
         }
     }
 
-    ac(int param0, int param1) {
+    SoftwareDepthBuffer(int param0, int param1) {
         this.field_g = param1;
         this.field_a = param0;
     }

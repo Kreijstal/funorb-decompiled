@@ -90,9 +90,9 @@ final class oj extends RenderEffect {
           this.a(-6, -33, (HardwareTexture) null);
         }
         if (null == this.field_h) {
-          this.field_b.a(ac.field_b, 0, 0);
+          this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
         } else if (!param0) {
-          this.field_b.a(ac.field_b, 0, 0);
+          this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
         } else {
           this.field_b.a(1, (byte) 78);
           this.field_b.a(rg.field_A, false);
@@ -102,7 +102,7 @@ final class oj extends RenderEffect {
           if (this.field_i) {
             this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
             this.field_b.a(true, 0, true, CipherPacketBuffer.field_p, false);
-            this.field_b.a(ac.field_b, 0, 0);
+            this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
           } else {
             this.field_b.a(bd.field_C, true, ru.field_a);
             this.field_b.a((byte) 119, 0, ArchiveNetworkClient.field_i);
@@ -110,7 +110,7 @@ final class oj extends RenderEffect {
             this.field_b.a(OpenGlEnvironmentWaterEffect.field_j, true, bd.field_C);
             this.field_b.a((byte) 120, 0, ArchiveNetworkClient.field_i);
             this.field_b.a(true, 1, true, ArchiveNetworkClient.field_i, false);
-            this.field_b.a(ac.field_b, 0, 0);
+            this.field_b.a(SoftwareDepthBuffer.field_b, 0, 0);
             this.field_b.a(this.field_b.field_Kb, -9135);
           }
           this.field_b.a(0, (byte) 40);

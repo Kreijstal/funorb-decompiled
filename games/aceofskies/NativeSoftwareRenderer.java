@@ -55,8 +55,8 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeRes
         }
     }
 
-    final void a(RenderSprite param0, boolean param1) {
-        this.n(((NativeSoftwareRenderSprite) (param0)).field_nativeid, 0L);
+    final void bindSpriteTarget(RenderSprite param0, boolean param1) {
+        this.bindNativeFramebuffer(((NativeSoftwareRenderSprite) (param0)).field_nativeid, 0L);
     }
 
     final void drawLine(int x1, int y1, int x2, int y2, int argb, int blendMode) {
@@ -67,11 +67,11 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeRes
         this.field_k[param0].activateForCurrentThread();
     }
 
-    private final native void n(long param0, long param1);
+    private final native void bindNativeFramebuffer(long param0, long param1);
 
-    final void a(sm param0) {
-        wa var2 = (wa) (param0);
-        this.n(var2.field_a.field_nativeid, var2.field_b.field_nativeid);
+    final void bindFramebuffer(Framebuffer param0) {
+        NativeSoftwareFramebuffer var2 = (NativeSoftwareFramebuffer) (param0);
+        this.bindNativeFramebuffer(var2.field_a.field_nativeid, var2.field_b.field_nativeid);
     }
 
     final native int[] Y();
@@ -109,7 +109,7 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeRes
         this.ma(((ja) (param0)).field_nativeid);
     }
 
-    final void a() {
+    final void restoreDefaultFramebuffer() {
         this.a(this.field_d.field_i);
     }
 
@@ -298,8 +298,8 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeRes
         NativeResourceDisposer.drainQueue((byte) -69);
     }
 
-    final sm a(ra param0, gd param1) {
-        return (sm) ((Object) new wa(this, (NativeSoftwareRenderSprite) (param0), (xa) (param1)));
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
+        return (Framebuffer) ((Object) new NativeSoftwareFramebuffer(this, (NativeSoftwareRenderSprite) (param0), (NativeSoftwareDepthBuffer) (param1)));
     }
 
     private final native void ma(long param0);
@@ -308,8 +308,8 @@ final class NativeSoftwareRenderer extends GraphicsRenderer implements NativeRes
 
     private final native void wa(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    final gd a(int param0, int param1) {
-        return (gd) ((Object) new xa(param0, param1));
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
+        return (DepthBuffer) ((Object) new NativeSoftwareDepthBuffer(param0, param1));
     }
 
     protected final synchronized void finalize() {

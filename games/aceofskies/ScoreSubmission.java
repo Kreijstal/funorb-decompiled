@@ -31,7 +31,7 @@ final class ScoreSubmission extends IntrusiveNode {
             sd.cloudSprites = new RenderSprite[na.cloudSpriteData.length];
             SecondaryKeyHashTable.smokeSprites = new RenderSprite[tq.smokeSpriteData.length];
             SectorCacheStore.explosionSprites = new RenderSprite[ud.explosionSpriteData.length];
-            ac.keySprites = new RenderSprite[qa.keySpriteData.length];
+            SoftwareDepthBuffer.keySprites = new RenderSprite[qa.keySpriteData.length];
             SocketConnector.levelRingSprites = new RenderSprite[hq.levelRingSpriteData.length];
             GlyphMask.achievementSprites = new RenderSprite[BufferElementType.achievementSpriteData.length];
             rs.medalSprites = new RenderSprite[ByteStorage.medalSpriteData.length];
@@ -101,7 +101,7 @@ final class ScoreSubmission extends IntrusiveNode {
           }
           qk.woodenTileSprite = var6.createSprite(lt.woodenTileSpriteData, false);
           for (int var2Lifetime13 = 0; var2Lifetime13 < qa.keySpriteData.length; var2Lifetime13++) {
-            ac.keySprites[var2Lifetime13] = var6.createSprite(qa.keySpriteData[var2Lifetime13], false);
+            SoftwareDepthBuffer.keySprites[var2Lifetime13] = var6.createSprite(qa.keySpriteData[var2Lifetime13], false);
           }
           for (int var2Lifetime14 = 0; var2Lifetime14 < ArchiveIndex.gaugeSpriteData.length; var2Lifetime14++) {
             int var5 = 0;

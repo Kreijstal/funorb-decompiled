@@ -109,7 +109,7 @@ abstract class GraphicsRenderer {
 
     abstract void setClip(int left, int top, int right, int bottom);
 
-    abstract void a(sm param0);
+    abstract void bindFramebuffer(Framebuffer param0);
 
     abstract int[] Y();
 
@@ -119,9 +119,9 @@ abstract class GraphicsRenderer {
 
     abstract void a(za param0);
 
-    abstract void a();
+    abstract void restoreDefaultFramebuffer();
 
-    abstract gd a(int param0, int param1);
+    abstract DepthBuffer createDepthBuffer(int param0, int param1);
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.drawLine(param1, param0, param2, param4, param3, param5);
@@ -133,7 +133,7 @@ abstract class GraphicsRenderer {
 
     abstract void drawRectOutline(int x, int y, int width, int height, int argb, int blendMode);
 
-    abstract sm a(ra param0, gd param1);
+    abstract Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1);
 
     final void a(int param0) {
         OpenGlShaderObject.field_f[this.field_c] = false;
@@ -238,9 +238,9 @@ abstract class GraphicsRenderer {
 
     abstract void b(int param0, int param1) throws lp;
 
-    void a(RenderSprite param0, boolean param1) {
+    void bindSpriteTarget(RenderSprite param0, boolean param1) {
         try {
-          this.a(this.a(param0, param1 ? this.a(param0.getWidth(), param0.getHeight()) : null));
+          this.bindFramebuffer(this.createFramebuffer(param0, param1 ? this.createDepthBuffer(param0.getWidth(), param0.getHeight()) : null));
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "ha.R(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

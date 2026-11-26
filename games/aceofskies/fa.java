@@ -4,7 +4,7 @@
 abstract class fa {
     static int field_a;
     static PacketBuffer field_c;
-    static eh field_b;
+    static AchievementStateRequest field_b;
 
     final static bo a(GraphicsRenderer param0, boolean param1) {
         bo var3 = null;
@@ -48,7 +48,7 @@ abstract class fa {
 
     public static void clearStaticReferences(boolean param0) {
         if (param0) {
-          field_b = (eh) null;
+          field_b = (AchievementStateRequest) null;
         }
         field_b = null;
         field_c = null;

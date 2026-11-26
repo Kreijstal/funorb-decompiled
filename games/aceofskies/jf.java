@@ -87,9 +87,9 @@ final class jf implements ir {
             var5 = var3;
             var5 = var3;
           }
-          if (ac.field_d != null &&
-            !ac.field_d.equals(param0.getParameter("session"))) {
-            var5 = ac.field_d;
+          if (SoftwareDepthBuffer.field_d != null &&
+            !SoftwareDepthBuffer.field_d.equals(param0.getParameter("session"))) {
+            var5 = SoftwareDepthBuffer.field_d;
           }
           java.net.URL stackIn_7_0 = OpenGlShaderObject.a(param1, (String) (var3), (String) (var5), 122, -1);
           return stackIn_7_0;

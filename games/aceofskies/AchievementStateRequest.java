@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends IntrusiveNode {
+final class AchievementStateRequest extends IntrusiveNode {
     int field_e;
     boolean field_g;
     int[] field_f;
 
-    eh() {
+    AchievementStateRequest() {
         this.field_g = false;
     }
 
-    final static String a(String param0, int param1, String param2, String param3) {
+    final static String replaceSubstring(String param0, int param1, String param2, String param3) {
         int var6 = AceOfSkies.obfuscationControl ? 1 : 0;
         int var4 = param3.indexOf(param0);
         while (var4 != -1) {

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb implements sm {
-    private ac field_f;
+final class SoftwareFramebuffer implements Framebuffer {
+    private SoftwareDepthBuffer field_f;
     static boolean field_e;
     static long field_g;
     int[] field_d;
@@ -10,7 +10,7 @@ final class lb implements sm {
     int field_c;
     static String[] field_a;
 
-    final static int a(int param0) {
+    final static int pollJs5Connection(int param0) {
         om.field_c.a((byte) 95);
         if (ul.field_r.f(param0 + param0)) {
           return 0;
@@ -18,7 +18,7 @@ final class lb implements sm {
         return OpenGlRenderer.t(19078);
     }
 
-    final static void a(int param0, java.applet.Applet param1) {
+    final static void openSupportWebsite(int param0, java.applet.Applet param1) {
         try {
           String stackIn_8_2 = null;
           Throwable decompiledCaughtException = null;
@@ -52,7 +52,7 @@ final class lb implements sm {
         }
     }
 
-    lb(JavaSoftwareRenderer param0, RenderSprite param1, ac param2) {
+    SoftwareFramebuffer(JavaSoftwareRenderer param0, RenderSprite param1, SoftwareDepthBuffer param2) {
         String stackIn_14_2 = null;
         String stackIn_17_2 = null;
         String stackIn_20_2 = null;
@@ -109,7 +109,7 @@ final class lb implements sm {
         }
     }
 
-    final static void a(int param0, int param1) {
+    final static void writeAchievementStateRequest(int param0, int param1) {
         if (param1 == 0) {
           CipherPacketBuffer var2 = q.outgoingPacket;
           var2.writeCipheredOpcode(109, param0);
@@ -131,7 +131,7 @@ final class lb implements sm {
         field_a = null;
     }
 
-    final static boolean a(String param0, String param1, int param2) {
+    final static boolean containsNameOrReverse(String param0, String param1, int param2) {
         String stackIn_9_2 = null;
         String stackIn_12_2 = null;
         try {

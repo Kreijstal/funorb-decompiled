@@ -71,7 +71,7 @@ final class Direct3DTransparentWaterEffect extends RenderEffect {
     final void a(boolean param0, byte param1) {
         this.field_b.a((byte) 127, 0, CipherPacketBuffer.field_p);
         this.field_b.a((byte) 122, 1, GameKeyHandler.field_a);
-        this.field_b.a(false, 2, true, ac.field_b, true);
+        this.field_b.a(false, 2, true, SoftwareDepthBuffer.field_b, true);
         this.field_b.d(false, -113);
         this.field_g.a(this.field_f, 5243);
         this.b((byte) -25);
@@ -126,7 +126,7 @@ final class Direct3DTransparentWaterEffect extends RenderEffect {
     final void a(boolean param0) {
         this.field_g.a((jagdx.IDirect3DVertexShader) null, 5243);
         this.field_b.a((byte) 119, 0, CipherPacketBuffer.field_p);
-        this.field_b.a((byte) 123, 1, ac.field_b);
+        this.field_b.a((byte) 123, 1, SoftwareDepthBuffer.field_b);
         this.field_b.a((byte) 119, 2, GameKeyHandler.field_a);
         this.field_b.d(param0, -121);
     }

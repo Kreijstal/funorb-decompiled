@@ -58,9 +58,9 @@ final class bo {
         fo var3 = null;
         fo var2 = null;
         if (this.field_b.field_b != this.field_d) {
-          this.field_c.a();
+          this.field_c.restoreDefaultFramebuffer();
           if (null != this.field_b.field_b) {
-            this.field_c.a(this.field_b.field_b, true);
+            this.field_c.bindSpriteTarget(this.field_b.field_b, true);
           } else {
             this.field_d = this.field_b.field_b;
             if (!param0) {

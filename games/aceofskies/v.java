@@ -23,13 +23,13 @@ final class v {
               var3 = var3 + param0;
             }
             jb.a(var3, 20164);
-            String var7 = eh.a(":", param1 + 165, "%3a", var3);
-            String var8 = eh.a("@", -77, "%40", var7);
-            String var9 = eh.a("&", param1 ^ -67, "%26", var8);
+            String var7 = AchievementStateRequest.replaceSubstring(":", param1 + 165, "%3a", var3);
+            String var8 = AchievementStateRequest.replaceSubstring("@", -77, "%40", var7);
+            String var9 = AchievementStateRequest.replaceSubstring("&", param1 ^ -67, "%26", var8);
             if (param1 != -52) {
               return;
             }
-            String var10 = eh.a("#", 118, "%23", var9);
+            String var10 = AchievementStateRequest.replaceSubstring("#", 118, "%23", var9);
             if (null == fb.field_c) {
               return;
             }

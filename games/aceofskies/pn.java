@@ -103,13 +103,13 @@ final class pn implements Runnable {
         return var2;
     }
 
-    final static void a(oc param0, byte param1, int param2) {
+    final static void a(AchievementSubmission param0, byte param1, int param2) {
         try {
           ci.field_j.addLast(77, param0);
           if (param1 > -70) {
             field_b = (long[]) null;
           }
-          ac.a(param2, 0, param0);
+          SoftwareDepthBuffer.writeAchievementSubmission(param2, 0, param0);
         } catch (RuntimeException runtimeException) {
           throw pn.wrapClientException((Throwable) ((Object) runtimeException), "pn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

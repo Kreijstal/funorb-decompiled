@@ -93,7 +93,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             BufferElementType.a(true, bm.m(param0 ^ 114));
           }
           if (var4 == 9) {
-            lb.a(61, bm.m(param0 + 119));
+            SoftwareFramebuffer.openSupportWebsite(61, bm.m(param0 + 119));
           }
           if (var4 == 10) {
             q.outgoingPacket.writeCipheredOpcode(100, 17);
@@ -437,7 +437,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           RenderEffect.field_a == 0) {
           boolean stackIn_24_0 = !(RenderEffect.field_a != -1);
           boolean var3Lifetime1 = stackIn_24_0;
-          RenderEffect.field_a = lb.a(0);
+          RenderEffect.field_a = SoftwareFramebuffer.pollJs5Connection(0);
           if (var3Lifetime1 &&
             0 == RenderEffect.field_a &&
             SoundCache.field_d == 11 &&

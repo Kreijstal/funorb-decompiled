@@ -71,7 +71,7 @@ final class bu {
           if (cr.a(param1, param2, (byte) 52)) {
             return false;
           }
-          if (lb.a(param2, param1, -103)) {
+          if (SoftwareFramebuffer.containsNameOrReverse(param2, param1, -103)) {
             return false;
           }
           if (param0 >= 56) {

@@ -28,15 +28,15 @@ final class ji {
           }
           if (IndexedSpriteState.field_f != param0) {
             if (ms.field_d != param0) {
-              mo.field_c = new int[param0];
+              OpenGlAssemblyProgram.field_c = new int[param0];
               int var5 = 0;
               int var3_intLifetime1 = var5;
               while (param0 > var5) {
-                mo.field_c[var5] = (var5 << 12) / param0;
+                OpenGlAssemblyProgram.field_c[var5] = (var5 << 12) / param0;
                 var5++;
               }
             } else {
-              mo.field_c = NetworkGameClient.field_v;
+              OpenGlAssemblyProgram.field_c = NetworkGameClient.field_v;
             }
             IndexedSpriteState.field_f = param0;
           }

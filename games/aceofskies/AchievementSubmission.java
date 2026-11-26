@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends IntrusiveNode {
+final class AchievementSubmission extends IntrusiveNode {
     int field_j;
     static int highscoreView;
     int field_f;
@@ -11,12 +11,12 @@ final class oc extends IntrusiveNode {
     int field_i;
     static int[] field_g;
 
-    public static void a(byte param0) {
+    public static void clearAchievementSubmissionStatics(byte param0) {
         field_g = null;
         int var1 = -105 / ((param0 - 66) / 46);
     }
 
-    oc(int param0, int param1, int param2, int param3, int param4, int param5) {
+    AchievementSubmission(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.field_k = param0;
         this.field_i = param1;
         this.field_f = param5;
