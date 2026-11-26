@@ -71,7 +71,7 @@ final class TutorialStageSupport {
             }
             try {
               GradientMenuLabel.field_x = param1;
-              var3 = OrderableInsertionSupport.field_a.a(117, GradientMenuLabel.field_x, true);
+              var3 = OrderableInsertionSupport.field_a.generateStageMap(117, GradientMenuLabel.field_x, true);
             } catch (MapGenerationException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (MapGenerationException) (Object) decompiledCaughtException;

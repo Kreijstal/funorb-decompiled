@@ -104,7 +104,7 @@ final class GzipInflater {
               return;
             }
             if (var2 != 4) {
-              GameKeyHandler.reportClientError(-29901, (Throwable) null, "F1: " + Dialog.a(16738));
+              GameKeyHandler.reportClientError(-29901, (Throwable) null, "F1: " + Dialog.formatPacketErrorContext(16738));
               TabbedPanel.closeClientSocket(-101);
               return;
             }

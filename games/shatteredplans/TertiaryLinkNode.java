@@ -9,7 +9,7 @@ class TertiaryLinkNode extends DualLinkNode {
     TertiaryLinkNode field_p;
     TertiaryLinkNode field_q;
 
-    final static void c(int param0, int param1) {
+    final static void fillCoverageSpans(int param0, int param1) {
         RasterCoverageSpan dupTemp$0 = null;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -34,7 +34,7 @@ class TertiaryLinkNode extends DualLinkNode {
         try {
           if (param0 != -20677) {
             var13 = (String) null;
-            TertiaryLinkNode.a((String) null, 69);
+            TertiaryLinkNode.loadLocalizedTextResource((String) null, 69);
           }
           var2_int = 16711935 & param1;
           CheckboxWidget.beginCoverageScan(param0 ^ 27840);
@@ -116,7 +116,7 @@ class TertiaryLinkNode extends DualLinkNode {
         this.field_q = null;
     }
 
-    final static BattleEvent a(byte param0, Star param1) {
+    final static BattleEvent findLocalBattleEvent(byte param0, Star param1) {
         int var5 = 0;
         IntrusiveNode var2 = null;
         BattleEvent var3 = null;
@@ -181,7 +181,7 @@ class TertiaryLinkNode extends DualLinkNode {
         field_t = null;
     }
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] loadLocalizedTextResource(String param0, int param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;

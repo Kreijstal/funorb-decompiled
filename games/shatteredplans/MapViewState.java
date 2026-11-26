@@ -715,7 +715,7 @@ abstract class MapViewState {
               this.field_l = (Random) ((Object) new IsaacBackedRandom((long)this.field_d));
               var4_ref = (BattleSnapshot) (this.field_m.startForward(0));
               while (var4_ref != null) {
-                var4_ref.c(true);
+                var4_ref.resetCombatPreview(true);
                 var4_ref = (BattleSnapshot) (this.field_m.nextForward((byte) -71));
               }
               this.field_o.showStatusText(10, 0, TertiaryListSequence.field_g);

@@ -87,7 +87,7 @@ final class LoginRequestSupport {
                   if (0 == ClientException.field_f[var2_int] &&
                     WidgetStyle.isTutorialConditionMet(var5[var2_int].field_c, (byte) -125)) {
                     ClientException.field_f[var2_int] = 1;
-                    BattleSnapshot.a(0);
+                    BattleSnapshot.completeTutorialTextReveal(0);
                   }
                 }
               }

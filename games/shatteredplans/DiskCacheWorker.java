@@ -368,7 +368,7 @@ final class DiskCacheWorker implements Runnable {
             DiskCacheWorker.loadIntroSprites((byte) -62);
           }
           ChatAndSocialPanel.field_a.setResult(false, 37);
-          SolMapGenerator.a((byte) 87, param1, param4, param3);
+          SolMapGenerator.loadCommonUiAssets((byte) 87, param1, param4, param3);
           AudioService.initializeAccountDialogs(0);
           PrivateChatMessage.field_l = AccountCreationDialog.field_Fb;
           MatchingTextValidator.field_s = AccountCreationDialog.field_Fb;

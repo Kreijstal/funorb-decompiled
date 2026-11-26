@@ -771,7 +771,7 @@ final class GameMenuController {
         if (param0 != -23) {
           discarded$0 = this.itemLabel(72, -48);
         }
-        if (Dialog.d(true)) {
+        if (Dialog.isGuestSession(true)) {
           this.drawRankingsAccountPrompt(param0 ^ -21);
           return;
         }
@@ -2155,7 +2155,7 @@ final class GameMenuController {
         String[] var16 = null;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var16 = TutorialMapGenerator.a(param7, (byte) 119, param8, new int[]{param4});
+          var16 = TutorialMapGenerator.wrapTextPreservingColours(param7, (byte) 119, param8, new int[]{param4});
           var11 = var16;
           for (var12 = 0; var12 < var11.length; var12++) {
             var13 = var11[var12];
@@ -2266,7 +2266,7 @@ final class GameMenuController {
               MenuTransitionSupport.beginMenuTransition(0, -4, (byte) 96, var6 != 0);
             } else {
               if (var5 == 1) {
-                if (Dialog.d(true)) {
+                if (Dialog.isGuestSession(true)) {
                   var5 = 0;
                   HorizontalGradientComponent.showStyledAccountChoiceMenu(320, AccountRequestState.field_b.field_K, AccountRequestState.field_b.field_K + AccountRequestState.field_b.field_q, 240, 8, AchievementProgress.field_a, param1, DerelictMapReader.field_i, (byte) -87, 2, DerelictMapReader.field_i, AccountRequestState.field_b, false, 8, var5);
                 } else {

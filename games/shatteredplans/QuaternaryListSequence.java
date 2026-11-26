@@ -7,7 +7,7 @@ final class QuaternaryListSequence extends NodeSequence {
     static String field_f;
     private QuaternaryNodeList field_g;
 
-    final static void a(int param0, int param1, int param2, boolean param3, Star[] param4, Random param5, Star[] param6) {
+    final static void connectStarComponents(int param0, int param1, int param2, boolean param3, Star[] param4, Random param5, Star[] param6) {
         Star[] array$0 = null;
         int var15 = 0;
         Object stackIn_22_0 = null;
@@ -189,7 +189,7 @@ final class QuaternaryListSequence extends NodeSequence {
         }
     }
 
-    final static void d(byte param0) {
+    final static void readByteArrayRequestResponse(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -228,7 +228,7 @@ final class QuaternaryListSequence extends NodeSequence {
               var4.unlink((byte) -122);
               return;
             }
-            GameKeyHandler.reportClientError(-29901, (Throwable) null, "A1: " + Dialog.a(16738));
+            GameKeyHandler.reportClientError(-29901, (Throwable) null, "A1: " + Dialog.formatPacketErrorContext(16738));
             TabbedPanel.closeClientSocket(-108);
           } else {
             var3_ref_ld = (ByteArrayReadRequest) (SectorCacheStore.field_d.startForward(0));
@@ -265,12 +265,12 @@ final class QuaternaryListSequence extends NodeSequence {
 
     final IntrusiveNode next(boolean param0) {
         if (param0) {
-          QuaternaryListSequence.d((byte) 82);
+          QuaternaryListSequence.readByteArrayRequestResponse((byte) 82);
         }
         return (IntrusiveNode) ((Object) this.field_g.nextForward(-115));
     }
 
-    final static void a(int param0, Territory param1) {
+    final static void recomputeTerritoryProduction(int param0, Territory param1) {
         int var3 = 0;
         int[] var2 = null;
         int var4 = 0;
@@ -328,7 +328,7 @@ final class QuaternaryListSequence extends NodeSequence {
         return this.field_g.size(-7432);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void submitBirthDate(int param0, int param1, int param2, int param3) {
         ProgressDialog.field_cb.position = 0;
         ProgressDialog.field_cb.writeByte(12, (byte) -128);
         ProgressDialog.field_cb.writeInt(11135, Bzip2State.field_u.nextInt());
@@ -351,7 +351,7 @@ final class QuaternaryListSequence extends NodeSequence {
     public static void clearStatics(int param0) {
         if (param0 != 17593) {
           Territory var2 = (Territory) null;
-          QuaternaryListSequence.a(-89, (Territory) null);
+          QuaternaryListSequence.recomputeTerritoryProduction(-89, (Territory) null);
         }
         field_f = null;
     }

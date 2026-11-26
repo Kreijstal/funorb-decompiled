@@ -513,11 +513,11 @@ final class GameState {
           if (!this.field_o.field_i) {
             var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
-              QuaternaryListSequence.a(127, var5);
+              QuaternaryListSequence.recomputeTerritoryProduction(127, var5);
               var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
-            QuaternaryListSequence.a(127, var4.field_m);
+            QuaternaryListSequence.recomputeTerritoryProduction(127, var4.field_m);
           }
         }
     }
@@ -2385,7 +2385,7 @@ final class GameState {
           }
           param1.field_f = new int[this.field_r + 1];
           param1.field_h = new boolean[this.field_r + 1];
-          QuaternaryListSequence.a(126, param1.field_m);
+          QuaternaryListSequence.recomputeTerritoryProduction(126, param1.field_m);
           SolMapReader.recomputeTerritoryResourceSurplus(param1.field_m, param0);
           var3 = new Player[this.field_r + 1];
           var4 = new String[this.field_r + 1];
@@ -2596,12 +2596,12 @@ final class GameState {
           if (!this.field_o.field_i) {
             var5 = (Territory) (var4.field_i.startForward(0));
             while (var5 != null) {
-              QuaternaryListSequence.a(param0 ^ 127, var5);
+              QuaternaryListSequence.recomputeTerritoryProduction(param0 ^ 127, var5);
               SolMapReader.recomputeTerritoryResourceSurplus(var5, param0 - 5);
               var5 = (Territory) (var4.field_i.nextForward((byte) -71));
             }
           } else {
-            QuaternaryListSequence.a(param0 ^ 125, var4.field_m);
+            QuaternaryListSequence.recomputeTerritoryProduction(param0 ^ 125, var4.field_m);
             SolMapReader.recomputeTerritoryResourceSurplus(var4.field_m, -5);
           }
         }
@@ -2836,12 +2836,12 @@ final class GameState {
           if (!this.field_o.field_i) {
             var18 = (Territory) (param1.field_i.startForward(0));
             while (var18 != null) {
-              QuaternaryListSequence.a(120, var18);
+              QuaternaryListSequence.recomputeTerritoryProduction(120, var18);
               SolMapReader.recomputeTerritoryResourceSurplus(var18, -5);
               var18 = (Territory) (param1.field_i.nextForward((byte) -71));
             }
           } else {
-            QuaternaryListSequence.a(122, param1.field_m);
+            QuaternaryListSequence.recomputeTerritoryProduction(122, param1.field_m);
             SolMapReader.recomputeTerritoryResourceSurplus(param1.field_m, -5);
           }
           var11 = (FleetMove) (param0.startForward(0));

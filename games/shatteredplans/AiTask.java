@@ -10,7 +10,7 @@ class AiTask extends IntrusiveNode {
     static String field_m;
     int field_i;
 
-    final static void a(int param0) {
+    final static void showPendingLobbyMessage(int param0) {
         String var2 = null;
         if (param0 == -15887) {
           if (RichTextLayout.field_h != null) {

@@ -270,7 +270,7 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
               if (SocketArchiveNetworkClient.markTutorialEventSeen("combatSuccess", -116)) {
                 DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("combatSuccess", -21502));
                 if (var5 != 0) {
-                  var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
+                  var1 = TertiaryLinkNode.findLocalBattleEvent((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
                     SocketArchiveNetworkClient.markTutorialEventSeen("combatFailed", -116)) {
                     DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
@@ -278,13 +278,13 @@ final class UnderageAccountInfoPanel extends WidgetContainer implements Hyperlin
                 }
               }
             } else {
-              var1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
+              var1 = TertiaryLinkNode.findLocalBattleEvent((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
                 SocketArchiveNetworkClient.markTutorialEventSeen("combatFailed", -116)) {
                 DefendTask.pushTutorialScene(1, DiplomacyNotice.findTutorialSceneByTag("combatFailed", -21502));
               }
             }
-            var1Lifetime1 = TertiaryLinkNode.a((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
+            var1Lifetime1 = TertiaryLinkNode.findLocalBattleEvent((byte) -69, TextReplacementEntry.field_a.field_P.field_g.field_e[1]);
             if (null != var1Lifetime1) {
               PopupPlacementSupport.field_m.putReplacement(ChatHistoryEntry.formatLocalAttackLosses(var1Lifetime1, 23248), 27275, "combatreport1");
             }

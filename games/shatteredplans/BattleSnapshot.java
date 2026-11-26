@@ -25,7 +25,7 @@ final class BattleSnapshot extends IntrusiveNode {
     static AnimatedPanel field_t;
     static AnimatedPanel field_y;
 
-    final static void d(int param0) {
+    final static void drawNotifications(int param0) {
         int var2 = 0;
         RuntimeException runtimeException = null;
         int var1_int = 0;
@@ -62,7 +62,7 @@ final class BattleSnapshot extends IntrusiveNode {
         return new Date().getYear() + 1900;
     }
 
-    final static boolean a(int param0) {
+    final static boolean completeTutorialTextReveal(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
@@ -99,7 +99,7 @@ final class BattleSnapshot extends IntrusiveNode {
         }
     }
 
-    final void c(boolean param0) {
+    final void resetCombatPreview(boolean param0) {
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
         int var2;
@@ -111,7 +111,7 @@ final class BattleSnapshot extends IntrusiveNode {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_v = (int[]) ((Object) this.field_m.clone());
         if (!param0) {
-          this.c(false);
+          this.resetCombatPreview(false);
         }
         this.field_u = 0;
         for (var2 = 0; this.field_m.length > var2; var2++) {
@@ -179,13 +179,13 @@ final class BattleSnapshot extends IntrusiveNode {
               this.field_z = this.field_m[var2_int];
             }
           }
-          this.c(true);
+          this.resetCombatPreview(true);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static EmailValidationError a(int param0, String param1) {
+    final static EmailValidationError validateEmailAddress(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String var3 = null;

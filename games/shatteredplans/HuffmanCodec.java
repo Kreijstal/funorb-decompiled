@@ -29,7 +29,7 @@ final class HuffmanCodec {
             var2 = 2;
           }
         } else {
-          var2 = (Dialog.d(true)) ? 0 : 1;
+          var2 = (Dialog.isGuestSession(true)) ? 0 : 1;
         }
         if (null == BoundsRect.field_p &&
           CanvasResizeController.field_u) {

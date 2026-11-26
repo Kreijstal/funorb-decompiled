@@ -43,7 +43,7 @@ final class IntroRenderSupport {
           if (!param2) {
             field_c = -118;
           }
-          TertiaryLinkNode.c(-20677, param1);
+          TertiaryLinkNode.fillCoverageSpans(-20677, param1);
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "qn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

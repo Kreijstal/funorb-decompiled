@@ -260,7 +260,7 @@ abstract class GameClientShell extends GameApplet {
                                 SolMapReader.readChatRestrictionFlags(-1);
                                 return;
                               }
-                              GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGS1: " + Dialog.a(16738));
+                              GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGS1: " + Dialog.formatPacketErrorContext(16738));
                               TabbedPanel.closeClientSocket(-107);
                               return;
                             }
@@ -274,7 +274,7 @@ abstract class GameClientShell extends GameApplet {
                       }
                     }
                   } else {
-                    QuaternaryListSequence.d((byte) -117);
+                    QuaternaryListSequence.readByteArrayRequestResponse((byte) -117);
                   }
                 }
               }
@@ -286,7 +286,7 @@ abstract class GameClientShell extends GameApplet {
           }
           return;
         }
-        GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGS2: " + Dialog.a(16738));
+        GameKeyHandler.reportClientError(-29901, (Throwable) null, "MGS2: " + Dialog.formatPacketErrorContext(16738));
         TabbedPanel.closeClientSocket(-127);
     }
 

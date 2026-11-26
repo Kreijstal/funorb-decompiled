@@ -75,7 +75,7 @@ final class GameTextResources {
           throw new IllegalStateException();
         }
         if (null == DateInputWidget.field_G) {
-          var1 = Dialog.l(param0 ^ param0);
+          var1 = Dialog.getSuggestedLoginName(param0 ^ param0);
           TutorialStageSupport.field_e = new LoginForm(var1, (String) null, true, false, false);
           ByteArrayStorage.field_e.addDialog(true, HighscoreResponseSupport.field_f);
           HighscoreResponseSupport.field_f.setContent(TutorialStageSupport.field_e, param0 - 18);
@@ -83,7 +83,7 @@ final class GameTextResources {
           return;
         }
         DateInputWidget.field_G.closeStatusDialog((byte) -104);
-        var1Lifetime1 = Dialog.l(param0 ^ param0);
+        var1Lifetime1 = Dialog.getSuggestedLoginName(param0 ^ param0);
         TutorialStageSupport.field_e = new LoginForm(var1Lifetime1, (String) null, true, false, false);
         ByteArrayStorage.field_e.addDialog(true, HighscoreResponseSupport.field_f);
         HighscoreResponseSupport.field_f.setContent(TutorialStageSupport.field_e, param0 - 18);

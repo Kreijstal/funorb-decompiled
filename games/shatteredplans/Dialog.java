@@ -10,7 +10,7 @@ abstract class Dialog extends WidgetContainer {
     private int field_G;
     static String field_H;
 
-    final static void a(String[] args, int param1, TutorialScene param2, int param3) {
+    final static void setTutorialSceneBounds(String[] args, int param1, TutorialScene param2, int param3) {
         try {
           param2.field_t = LoginMethodPreference.parseIntegerOrAuto(args[0], 107);
           param2.field_b = LoginMethodPreference.parseIntegerOrAuto(args[1], 108);
@@ -18,14 +18,14 @@ abstract class Dialog extends WidgetContainer {
           param2.field_q = LoginMethodPreference.parseIntegerOrAuto(args[3], 100);
           param2.field_n = param1;
           if (param3 > -11) {
-            Dialog.a(-61);
+            Dialog.formatPacketErrorContext(-61);
           }
         } catch (RuntimeException runtimeException) {
           throw UrlLoader.wrapThrowable((Throwable) ((Object) runtimeException), "w.BA(" + (args != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final static String a(int param0) {
+    final static String formatPacketErrorContext(int param0) {
         int var2 = 0;
         String var7 = null;
         int var3 = 0;
@@ -92,7 +92,7 @@ abstract class Dialog extends WidgetContainer {
         if (param0 != 0) {
           field_D = (Sprite) null;
         }
-        this.field_G = this.e(false);
+        this.field_G = this.getTargetOpacity(false);
         stackIn_6_0 = (this.field_G == 0) && (!this.field_E);
         return stackIn_6_0;
     }
@@ -111,7 +111,7 @@ abstract class Dialog extends WidgetContainer {
         boolean stackIn_10_0 = false;
         int var3Lifetime1;
         var3 = -91 % ((param0 + 23) / 52);
-        var2 = this.e(false);
+        var2 = this.getTargetOpacity(false);
         var3Lifetime1 = var2 - this.field_G;
         if (0 < var3Lifetime1) {
           this.field_G = this.field_G + (8 + (var3Lifetime1 - 1)) / 8;
@@ -130,7 +130,7 @@ abstract class Dialog extends WidgetContainer {
         this.setBounds(UsernameAvailabilityValidator.field_q - param0 >> 1, param0, (byte) 122, ClientOverlaySupport.field_a - param1 >> 1, param1);
     }
 
-    final static EmailValidationError a(byte param0, String param1) {
+    final static EmailValidationError validateDomainLabel(byte param0, String param1) {
         int var4 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -198,7 +198,7 @@ abstract class Dialog extends WidgetContainer {
         }
     }
 
-    final static void f(byte param0) {
+    final static void shutdownClient(byte param0) {
         BufferedCacheFile.exitFullscreen(0);
         if (NotificationEntry.field_i != null) {
           StandardMapGenerator.detachInputListeners(NotificationEntry.field_i, (byte) -101);
@@ -218,14 +218,14 @@ abstract class Dialog extends WidgetContainer {
 
     public static void clearStatics(int param0) {
         if (param0 != -1) {
-          Dialog.a(56);
+          Dialog.formatPacketErrorContext(56);
         }
         field_D = null;
         field_H = null;
         field_J = (String[][]) null;
     }
 
-    private final int e(boolean param0) {
+    private final int getTargetOpacity(boolean param0) {
         if (param0) {
           this.drawLayer(-109, -11, -57, 34);
         }
@@ -234,7 +234,7 @@ abstract class Dialog extends WidgetContainer {
 
     abstract void drawFrame(int param0, int param1, int param2);
 
-    final static String l(int param0) {
+    final static String getSuggestedLoginName(int param0) {
         String var1 = "";
         if (null != TutorialStageSupport.field_e) {
           var1 = TutorialStageSupport.field_e.getUsername(false);
@@ -248,7 +248,7 @@ abstract class Dialog extends WidgetContainer {
         return var1;
     }
 
-    final static boolean d(boolean param0) {
+    final static boolean isGuestSession(boolean param0) {
         if (!param0) {
           Dialog.clearStatics(-66);
         }

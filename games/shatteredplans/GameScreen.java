@@ -2269,7 +2269,7 @@ final class GameScreen {
           if (decompiledNaturalLoopExit1) {
             stackIn_45_0 = -14145;
           }
-          BattleSnapshot.d(stackIn_45_0);
+          BattleSnapshot.drawNotifications(stackIn_45_0);
           if (null != this.field_O) {
             this.field_O.drawFullRaster(false, 96);
           }

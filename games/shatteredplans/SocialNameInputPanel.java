@@ -479,7 +479,7 @@ final class SocialNameInputPanel extends AnimatedPanel {
             0 < this.field_Db.length()) {
             ClientContextMenuSupport.padWithChar(this.field_Db, this.field_Db.length() - 1, 29, ' ');
           }
-          if (TutorialMapGenerator.a(QuickChatHelpSupport.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
+          if (TutorialMapGenerator.canAppendAccountNameCharacter(QuickChatHelpSupport.field_h, (CharSequence) ((Object) this.field_Db), (byte) 119)) {
             discarded$0 = this.field_Db.append(QuickChatHelpSupport.field_h);
           } else {
             if (this.field_Db.length() == 0 &&

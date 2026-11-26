@@ -25,7 +25,7 @@ final class StrongCacheEntry extends WeightedCacheEntry {
         }
         stackIn_9_0 = ((IsolationistAi.field_r &&
           MusicCrossfadeStream.field_q) ||
-          Dialog.d(true));
+          Dialog.isGuestSession(true));
         return stackIn_9_0;
     }
 

@@ -169,7 +169,7 @@ final class HighscoreResponseSupport {
               }
             }
             if (decompiledFrameRemainder0) {
-              GameKeyHandler.reportClientError(-29901, (Throwable) null, "HS1: " + Dialog.a(16738));
+              GameKeyHandler.reportClientError(-29901, (Throwable) null, "HS1: " + Dialog.formatPacketErrorContext(16738));
               TabbedPanel.closeClientSocket(-100);
             }
           }

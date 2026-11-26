@@ -94,7 +94,7 @@ final class GameSession implements AiHost {
           var6 = stackIn_16_0;
           var7 = -QuickChatHelpSupport.field_f.stringWidth(var4) + var5 - 20;
           if (var7 < QuickChatHelpSupport.field_f.stringWidth(param1)) {
-            var8 = TutorialMapGenerator.a(QuickChatHelpSupport.field_f, (byte) 125, param1, new int[]{var7});
+            var8 = TutorialMapGenerator.wrapTextPreservingColours(QuickChatHelpSupport.field_f, (byte) 125, param1, new int[]{var7});
             var9 = var8;
             var10 = 0;
             while (var9.length > var10) {
@@ -4264,7 +4264,7 @@ final class GameSession implements AiHost {
                 }
               } else {
                 stackIn_21_0 = this.field_P.field_v[0];
-                if (Dialog.d(true)) {
+                if (Dialog.isGuestSession(true)) {
                   stackIn_22_1 = IntList.field_f[0];
                 } else {
                   stackIn_22_1 = Star.field_o;

@@ -247,7 +247,7 @@ class TextHotspotWidget extends FocusableWidget {
                   FullscreenFocusCanvas.drawIntroOrbScene(param0 - 6173);
                 } else {
                   if (SolVictoryChecker.field_m == 5) {
-                    TutorialMapGenerator.c(param0 ^ 6333);
+                    TutorialMapGenerator.drawLoadingBackdrop(param0 ^ 6333);
                   }
                 }
               }

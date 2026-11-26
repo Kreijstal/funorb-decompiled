@@ -52,7 +52,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         if (null != NameSuggestionsPanel.field_K) {
           BufferedCacheFile.exitFullscreen(0);
         }
-        Dialog.f((byte) 89);
+        Dialog.shutdownClient((byte) 89);
     }
 
     final void initialise(int param0) {
@@ -241,7 +241,7 @@ public final class ShatteredPlansClient extends GameClientShell {
                   var2 = 1;
                 }
               } else {
-                if (!Dialog.d(true)) {
+                if (!Dialog.isGuestSession(true)) {
                   GzipInflater.initializeClientMenus(1);
                 }
                 DisplayModeInfo.field_e = true;
@@ -265,7 +265,7 @@ public final class ShatteredPlansClient extends GameClientShell {
               }
             }
           }
-          if (!Dialog.d(true)) {
+          if (!Dialog.isGuestSession(true)) {
             while (true) {
               var3_ref_lq = (FourIntSubmissionRequest) (GameKeyHandler.field_a.pollFirst(54));
               if (var3_ref_lq == null) {
@@ -904,7 +904,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         DerelictMapGenerator.clearStatics(84);
         StandardMapGenerator.clearStatics(0);
         SolMapGenerator.clearStatics((byte) -80);
-        TutorialMapGenerator.d(-10);
+        TutorialMapGenerator.clearTutorialMapStatics(-10);
         TertiaryNodeList.clearTertiaryListStatics(-5731);
         AchievementProgress.clearStatics((byte) -37);
         GameAssetSetupSupport.clearStatics(100);
@@ -1151,7 +1151,7 @@ public final class ShatteredPlansClient extends GameClientShell {
         if (~ClientOverlayDrawSupport.field_c != ~ClientOverlayDrawSupport.field_g) {
           if (ClientOverlayDrawSupport.field_g != ClientInputSupport.field_f) {
             if (~ClientOverlayDrawSupport.field_g == ~NanoFrameTimer.field_d) {
-              if (!Dialog.d(true)) {
+              if (!Dialog.isGuestSession(true)) {
                 if (null != StringList.field_b) {
                   AccountBooleanRequest.queueHighscoreSubmission(20, StringList.field_b, 3);
                 }

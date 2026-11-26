@@ -60,15 +60,15 @@ final class IntroGlowPoint {
               var8 = var1;
               if (var5.equalsIgnoreCase("topright")) {
                 var8 = var1;
-                Dialog.a((String[]) (var6), 1, var8, -75);
+                Dialog.setTutorialSceneBounds((String[]) (var6), 1, var8, -75);
               } else {
                 if (var5.equalsIgnoreCase("bottomleft")) {
                   var8 = var1;
-                  Dialog.a((String[]) (var6), 2, var8, -92);
+                  Dialog.setTutorialSceneBounds((String[]) (var6), 2, var8, -92);
                 } else {
                   if (var5.equalsIgnoreCase("bottomright")) {
                     var8 = var1;
-                    Dialog.a((String[]) (var6), 3, var8, -40);
+                    Dialog.setTutorialSceneBounds((String[]) (var6), 3, var8, -40);
                   } else {
                     if (!var5.equalsIgnoreCase("tag")) {
                       var8 = var1;
@@ -106,7 +106,7 @@ final class IntroGlowPoint {
                 }
               }
             } else {
-              Dialog.a((String[]) (var6), 0, var8, -117);
+              Dialog.setTutorialSceneBounds((String[]) (var6), 0, var8, -117);
             }
           } else {
             discarded$0 = var3.append(Territory.field_t);

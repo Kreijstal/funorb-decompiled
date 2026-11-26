@@ -71,7 +71,7 @@ final class BirthDateConfirmationForm extends ArrayWidgetGroup implements Button
           return;
         }
         try {
-          QuaternaryListSequence.a(this.field_J.year(88), this.field_J.monthIndex((byte) 96), 4, this.field_J.day(false));
+          QuaternaryListSequence.submitBirthDate(this.field_J.year(88), this.field_J.monthIndex((byte) 96), 4, this.field_J.day(false));
           if (param1 != 6) {
             field_Q = -62;
           }

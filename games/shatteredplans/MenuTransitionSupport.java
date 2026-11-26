@@ -128,7 +128,7 @@ final class MenuTransitionSupport {
         byte[] var1Lifetime1;
         byte[] var2Lifetime1;
         if (param0 == -69) {
-          if (Dialog.d(true)) {
+          if (Dialog.isGuestSession(true)) {
             return;
           }
           if (StringNode.field_j == -1) {
@@ -146,7 +146,7 @@ final class MenuTransitionSupport {
           return;
         }
         MenuTransitionSupport.drawClientInterface(true, -56);
-        if (Dialog.d(true)) {
+        if (Dialog.isGuestSession(true)) {
           return;
         }
         if (StringNode.field_j == -1) {

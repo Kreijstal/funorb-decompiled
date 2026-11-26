@@ -132,7 +132,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         }
     }
 
-    final static void a(byte param0, Archive param1, Archive param2, Archive param3) {
+    final static void loadCommonUiAssets(byte param0, Archive param1, Archive param2, Archive param3) {
         IndexedSprite[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
@@ -228,7 +228,7 @@ final class SolMapGenerator extends StandardMapGenerator {
         try {
           if (param0) {
             var9 = (Archive) null;
-            SolMapGenerator.a((byte) 49, (Archive) null, (Archive) null, (Archive) null);
+            SolMapGenerator.loadCommonUiAssets((byte) 49, (Archive) null, (Archive) null, (Archive) null);
           }
           var3 = null;
           if (null != IsaacRandom.field_h) {
