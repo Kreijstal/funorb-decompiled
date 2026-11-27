@@ -86,7 +86,7 @@ final class lk {
               var12 = var14;
               var7 = var12;
               if (var4 == 1) {
-                gf.decompress(var14, var6, param1, var5, 9);
+                Bzip2Decompressor.decompress(var14, var6, param1, var5, 9);
               } else {
                 var8 = je.field_d;
                 synchronized (var8) {

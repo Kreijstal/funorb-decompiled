@@ -4386,7 +4386,7 @@ public final class Terraphoenix extends GameShell {
           tg.clearStaticReferences(23);
           bc.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(false);
-          ih.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences((byte) -105);
           MessageKeys.a(77);
           hi.l(0);

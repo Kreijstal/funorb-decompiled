@@ -385,7 +385,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical label target and declaration ordinal; transfer kind and target are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:MixedSupport120.performAction1581(LBzip2State;)V#0"
+      "renamedSymbol": "B:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0"
     },
     {
       "symbol": "B:uc.a(IZIIIILve;Z)V#0",
@@ -2750,10 +2750,10 @@
     {
       "symbol": "C:td",
       "originalName": "td",
-      "to": "MixedSupport120",
-      "evidence": "Structural category: Utility or mixed responsibility (low); numbered category label, finer purpose unresolved.",
-      "confidence": "category",
-      "renamedSymbol": "C:MixedSupport120"
+      "to": "Bzip2Decompressor",
+      "evidence": "Whole source-purpose review: final static Bzip2 decompression utility; one private typed state singleton allocated at class initialization; synchronized byte-array entry, bit/byte readers, used-symbol map, canonical Huffman tables, move-to-front block decoding, inverse-BWT/run output and retained cleanup all individually read or linked to exact earlier human-read bodies. All incoming selected helper references lie inside exact reviewed bodies. Keep the state allocation and class-init behavior, shared table ownership, locks, source/output/index/count/cast domains, array aliasing, partial writes, evaluation/exception order and all literals. Rename identifiers only; add no format checks, repairs, CRC handling or guards.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Bzip2Decompressor"
     },
     {
       "symbol": "C:te",
@@ -23961,7 +23961,7 @@
       "to": "mixedSupport141State0001",
       "evidence": "Resolved declaration type; state label, finer field purpose unresolved.",
       "confidence": "typed",
-      "renamedSymbol": "F:MixedSupport120.mixedSupport141State0001:LBzip2State;"
+      "renamedSymbol": "F:Bzip2Decompressor.mixedSupport141State0001:LBzip2State;"
     },
     {
       "symbol": "F:te.field_p:I",
@@ -132033,7 +132033,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.computeInteger1576(ILBzip2State;)I#0"
+      "renamedSymbol": "L:Bzip2Decompressor.readBits(ILBzip2State;)I#0"
     },
     {
       "symbol": "L:td.a([BI[BII)I#0",
@@ -132041,7 +132041,7 @@
       "to": "stackIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.decompress([BI[BII)I#0"
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#0"
     },
     {
       "symbol": "L:td.a([BI[BII)I#1",
@@ -132049,7 +132049,7 @@
       "to": "caughtExceptionLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.decompress([BI[BII)I#1"
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#1"
     },
     {
       "symbol": "L:td.a([BI[BII)I#2",
@@ -132057,7 +132057,7 @@
       "to": "objectLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.decompress([BI[BII)I#2"
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#2"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#0",
@@ -132065,7 +132065,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#0"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#0"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#1",
@@ -132073,7 +132073,7 @@
       "to": "cachedIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#1"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#1"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#10",
@@ -132081,7 +132081,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#10"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#10"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#2",
@@ -132089,7 +132089,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#2"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#2"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#3",
@@ -132097,7 +132097,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#3"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#3"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#4",
@@ -132105,7 +132105,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#4"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#4"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#5",
@@ -132113,7 +132113,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#5"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#5"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#6",
@@ -132121,7 +132121,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#6"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#6"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#7",
@@ -132129,7 +132129,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#7"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#7"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#8",
@@ -132137,7 +132137,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#8"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#8"
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#9",
@@ -132145,7 +132145,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#9"
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#9"
     },
     {
       "symbol": "L:td.b(Lvl;)V#0",
@@ -132153,7 +132153,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1580(LBzip2State;)V#0"
+      "renamedSymbol": "L:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V#0"
     },
     {
       "symbol": "L:td.c(Lvl;)V#0",
@@ -132161,7 +132161,7 @@
       "to": "integerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#0"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0"
     },
     {
       "symbol": "L:td.c(Lvl;)V#1",
@@ -132169,7 +132169,7 @@
       "to": "integerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#1"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#1"
     },
     {
       "symbol": "L:td.c(Lvl;)V#10",
@@ -132177,7 +132177,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#10"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#10"
     },
     {
       "symbol": "L:td.c(Lvl;)V#11",
@@ -132185,7 +132185,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#11"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#11"
     },
     {
       "symbol": "L:td.c(Lvl;)V#12",
@@ -132193,7 +132193,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#12"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#12"
     },
     {
       "symbol": "L:td.c(Lvl;)V#13",
@@ -132201,7 +132201,7 @@
       "to": "integerArrayLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#13"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#13"
     },
     {
       "symbol": "L:td.c(Lvl;)V#14",
@@ -132209,7 +132209,7 @@
       "to": "integerArrayLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#14"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#14"
     },
     {
       "symbol": "L:td.c(Lvl;)V#15",
@@ -132217,7 +132217,7 @@
       "to": "integerArrayLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#15"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#15"
     },
     {
       "symbol": "L:td.c(Lvl;)V#2",
@@ -132225,7 +132225,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#2"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#2"
     },
     {
       "symbol": "L:td.c(Lvl;)V#3",
@@ -132233,7 +132233,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#3"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#3"
     },
     {
       "symbol": "L:td.c(Lvl;)V#4",
@@ -132241,7 +132241,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#4"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#4"
     },
     {
       "symbol": "L:td.c(Lvl;)V#5",
@@ -132249,7 +132249,7 @@
       "to": "integerArrayLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#5"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#5"
     },
     {
       "symbol": "L:td.c(Lvl;)V#6",
@@ -132257,7 +132257,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#6"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#6"
     },
     {
       "symbol": "L:td.c(Lvl;)V#7",
@@ -132265,7 +132265,7 @@
       "to": "byteArrayLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#7"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#7"
     },
     {
       "symbol": "L:td.c(Lvl;)V#8",
@@ -132273,7 +132273,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#8"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#8"
     },
     {
       "symbol": "L:td.c(Lvl;)V#9",
@@ -132281,7 +132281,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#9"
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#9"
     },
     {
       "symbol": "L:td.d(Lvl;)V#0",
@@ -132289,7 +132289,7 @@
       "to": "cachedIntegerLocal1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#0"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#0"
     },
     {
       "symbol": "L:td.d(Lvl;)V#1",
@@ -132297,7 +132297,7 @@
       "to": "cachedIntegerLocal2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#1"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#1"
     },
     {
       "symbol": "L:td.d(Lvl;)V#10",
@@ -132305,7 +132305,7 @@
       "to": "integerLocal11",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#10"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#10"
     },
     {
       "symbol": "L:td.d(Lvl;)V#11",
@@ -132313,7 +132313,7 @@
       "to": "integerLocal12",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#11"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#11"
     },
     {
       "symbol": "L:td.d(Lvl;)V#12",
@@ -132321,7 +132321,7 @@
       "to": "integerLocal13",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#12"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#12"
     },
     {
       "symbol": "L:td.d(Lvl;)V#13",
@@ -132329,7 +132329,7 @@
       "to": "integerLocal14",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#13"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#13"
     },
     {
       "symbol": "L:td.d(Lvl;)V#14",
@@ -132337,7 +132337,7 @@
       "to": "integerLocal15",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#14"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#14"
     },
     {
       "symbol": "L:td.d(Lvl;)V#15",
@@ -132345,7 +132345,7 @@
       "to": "integerLocal16",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#15"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#15"
     },
     {
       "symbol": "L:td.d(Lvl;)V#16",
@@ -132353,7 +132353,7 @@
       "to": "integerLocal17",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#16"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#16"
     },
     {
       "symbol": "L:td.d(Lvl;)V#17",
@@ -132361,7 +132361,7 @@
       "to": "integerLocal18",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#17"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#17"
     },
     {
       "symbol": "L:td.d(Lvl;)V#18",
@@ -132369,7 +132369,7 @@
       "to": "integerLocal19",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#18"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#18"
     },
     {
       "symbol": "L:td.d(Lvl;)V#19",
@@ -132377,7 +132377,7 @@
       "to": "integerLocal20",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#19"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#19"
     },
     {
       "symbol": "L:td.d(Lvl;)V#2",
@@ -132385,7 +132385,7 @@
       "to": "integerLocal3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#2"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#2"
     },
     {
       "symbol": "L:td.d(Lvl;)V#20",
@@ -132393,7 +132393,7 @@
       "to": "integerLocal21",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#20"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#20"
     },
     {
       "symbol": "L:td.d(Lvl;)V#21",
@@ -132401,7 +132401,7 @@
       "to": "integerLocal22",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#21"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#21"
     },
     {
       "symbol": "L:td.d(Lvl;)V#22",
@@ -132409,7 +132409,7 @@
       "to": "integerLocal23",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#22"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#22"
     },
     {
       "symbol": "L:td.d(Lvl;)V#23",
@@ -132417,7 +132417,7 @@
       "to": "integerLocal24",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#23"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#23"
     },
     {
       "symbol": "L:td.d(Lvl;)V#24",
@@ -132425,7 +132425,7 @@
       "to": "objectLocal25",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#24"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#24"
     },
     {
       "symbol": "L:td.d(Lvl;)V#25",
@@ -132433,7 +132433,7 @@
       "to": "objectLocal26",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#25"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#25"
     },
     {
       "symbol": "L:td.d(Lvl;)V#26",
@@ -132441,7 +132441,7 @@
       "to": "objectLocal27",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#26"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#26"
     },
     {
       "symbol": "L:td.d(Lvl;)V#27",
@@ -132449,7 +132449,7 @@
       "to": "integerLocal28",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#27"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#27"
     },
     {
       "symbol": "L:td.d(Lvl;)V#28",
@@ -132457,7 +132457,7 @@
       "to": "byteArrayLocal29",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#28"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#28"
     },
     {
       "symbol": "L:td.d(Lvl;)V#29",
@@ -132465,7 +132465,7 @@
       "to": "integerLocal30",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#29"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#29"
     },
     {
       "symbol": "L:td.d(Lvl;)V#3",
@@ -132473,7 +132473,7 @@
       "to": "integerLocal4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#3"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#3"
     },
     {
       "symbol": "L:td.d(Lvl;)V#30",
@@ -132481,7 +132481,7 @@
       "to": "integerLocal31",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#30"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#30"
     },
     {
       "symbol": "L:td.d(Lvl;)V#31",
@@ -132489,7 +132489,7 @@
       "to": "integerLocal32",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#31"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#31"
     },
     {
       "symbol": "L:td.d(Lvl;)V#32",
@@ -132497,7 +132497,7 @@
       "to": "integerLocal33",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#32"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#32"
     },
     {
       "symbol": "L:td.d(Lvl;)V#33",
@@ -132505,7 +132505,7 @@
       "to": "integerLocal34",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#33"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#33"
     },
     {
       "symbol": "L:td.d(Lvl;)V#34",
@@ -132513,7 +132513,7 @@
       "to": "integerLocal35",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#34"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#34"
     },
     {
       "symbol": "L:td.d(Lvl;)V#35",
@@ -132521,7 +132521,7 @@
       "to": "integerLocal36",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#35"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#35"
     },
     {
       "symbol": "L:td.d(Lvl;)V#36",
@@ -132529,7 +132529,7 @@
       "to": "integerLocal37",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#36"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#36"
     },
     {
       "symbol": "L:td.d(Lvl;)V#37",
@@ -132537,7 +132537,7 @@
       "to": "integerLocal38",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#37"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#37"
     },
     {
       "symbol": "L:td.d(Lvl;)V#38",
@@ -132545,7 +132545,7 @@
       "to": "byteArrayLocal39",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#38"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#38"
     },
     {
       "symbol": "L:td.d(Lvl;)V#39",
@@ -132553,7 +132553,7 @@
       "to": "byteArrayLocal40",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#39"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#39"
     },
     {
       "symbol": "L:td.d(Lvl;)V#4",
@@ -132561,7 +132561,7 @@
       "to": "integerLocal5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#4"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#4"
     },
     {
       "symbol": "L:td.d(Lvl;)V#5",
@@ -132569,7 +132569,7 @@
       "to": "integerLocal6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#5"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#5"
     },
     {
       "symbol": "L:td.d(Lvl;)V#6",
@@ -132577,7 +132577,7 @@
       "to": "integerLocal7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#6"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#6"
     },
     {
       "symbol": "L:td.d(Lvl;)V#7",
@@ -132585,7 +132585,7 @@
       "to": "integerLocal8",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#7"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#7"
     },
     {
       "symbol": "L:td.d(Lvl;)V#8",
@@ -132593,7 +132593,7 @@
       "to": "integerLocal9",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#8"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#8"
     },
     {
       "symbol": "L:td.d(Lvl;)V#9",
@@ -132601,7 +132601,7 @@
       "to": "integerLocal10",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#9"
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#9"
     },
     {
       "symbol": "L:te.a(Ljava/lang/String;B)Ljava/lang/String;#0",
@@ -163497,23 +163497,23 @@
       "to": "clearStaticReferences",
       "evidence": "Reviewed complete statement classification and resolved field bindings: 1 null writes to 1 own static reference fields; only parameter guards, returns and braces otherwise. Preserve partial/duplicate cleanup and write order. Published pre-rename body SHA256 9b38e9c30a0a189dfe645631439f7b34e9716b959c2c1211b7124450feb0a34a.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MixedSupport120.clearStaticReferences()V"
+      "renamedSymbol": "M:Bzip2Decompressor.clearStaticReferences()V"
     },
     {
       "symbol": "M:td.a(ILvl;)I",
       "originalName": "a",
-      "to": "computeInteger1576",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.computeInteger1576(ILBzip2State;)I"
+      "to": "readBits",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readBits. Exact earlier human-read state bit-reader contract reused by game, symbol, source SHA and body SHA; preserve the original signed-int shift masking, byte&255 input, pointer/count/store/exception ordering and supplied primitive domain. Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.readBits(ILBzip2State;)I"
     },
     {
       "symbol": "M:td.a(Lvl;)B",
       "originalName": "a",
-      "to": "computeByte1577",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.computeByte1577(LBzip2State;)B"
+      "to": "readByte",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readByte. {\"behavior\":\"Call the bound bit reader with width 8 and cast its result to a signed Java byte.\",\"preserve\":\"Preserve the same state argument, call and cast. No unsigned interpretation, masking, guards or changes to failure order.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.readByte(LBzip2State;)B"
     },
     {
       "symbol": "M:td.a([BI[BII)I",
@@ -163521,47 +163521,47 @@
       "to": "decompress",
       "evidence": "Source-purpose review: Source-reviewed Bzip2 byte-array decode entry;exact earlier human body review source4 reused by game/symbol/source/body SHA;all incoming caller contexts human-read. Bzip2 byte-array decode entry uses shared state under captured lock,repeatedly reads original global state field,sets input/output/offset/remaining/bit counters in exact original order,calls block decoder,returns original requested-minus-remaining int,and clears input/output only on normal return. Preserve unused supplied int,full primitive domains,all casts,locks,partial effects,reference/exception order and literals. Container caller retains format1 dispatch,output allocation,unused return,all arguments including source offset9,and adjacent gzip branch.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:MixedSupport120.decompress([BI[BII)I"
+      "renamedSymbol": "M:Bzip2Decompressor.decompress([BI[BII)I"
     },
     {
       "symbol": "M:td.a([I[I[I[BIII)V",
       "originalName": "a",
-      "to": "performAction1579",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.performAction1579([I[I[I[BIII)V"
+      "to": "buildHuffmanDecodeTables",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 buildHuffmanDecodeTables. {\"behavior\":\"Build canonical Huffman permutation, cumulative bases and code limits from supplied byte code lengths and integer bounds.\",\"preserve\":\"Keep ascending length/symbol traversal, the 23-entry initialization loops, signed byte indexing, prefix sums, shifts and integer overflow. Preserve all supplied primitive domains and aliasing among the four arrays, exact store/read and exception order. No clamping, validation, array replacement or reordering.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V"
     },
     {
       "symbol": "M:td.b(Lvl;)V",
       "originalName": "b",
-      "to": "performAction1580",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.performAction1580(LBzip2State;)V"
+      "to": "buildSymbolMap",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 buildSymbolMap. {\"behavior\":\"Reset the used-symbol count, scan 256 usage booleans and append each used index as a byte to the sequential symbol map.\",\"preserve\":\"Keep count reset before traversal, boolean read before map store, and count increment after the store. Preserve signed casts, null/index exceptions and partial writes; do not clear unused map entries.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V"
     },
     {
       "symbol": "M:td.c(Lvl;)V",
       "originalName": "c",
-      "to": "performAction1581",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.performAction1581(LBzip2State;)V"
+      "to": "writeDecodedRuns",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 writeDecodedRuns. {\"behavior\":\"Resume inverse-BWT traversal and expand repeated-byte runs into the supplied output array until output is exhausted or the block is drained, then save progress.\",\"preserve\":\"Keep initial state and global-table read order, local cached table aliases, signed byte comparisons/casts, arithmetic right shifts and (byte & 255) + 4 run count. Retain every output store before its pointer/count updates, every labelled continuation, the zero-output pending-run branches, the empty cumulative-count comparison, and the ordered trailing state/global writes. Preserve the full signed-int domain, overflow, null/index failures and partial effects; add no input repairs or new guards.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V"
     },
     {
       "symbol": "M:td.d(Lvl;)V",
       "originalName": "d",
-      "to": "performAction1582",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.performAction1582(LBzip2State;)V"
+      "to": "decodeBlocks",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 decodeBlocks. {\"behavior\":\"Decode Bzip2 blocks using the state bit reader, used-symbol map, Huffman selectors/tables and move-to-front runs, build the inverse-BWT table, and invoke the output run writer. Continue only while the completed block is fully drained.\",\"preserve\":[\"Retain assignment of block-size multiplier 1 before testing the shared table for null; allocate multiplier * 100000 only when null and keep allocation failure/class initialization timing. Do not resize a non-null table.\",\"Keep the first byte == 23 early return, the remaining header/CRC byte consumption and the consumed randomization bit with its empty conditional. This source does not validate CRC or implement a new randomized-block repair.\",\"Preserve the three ordered original-pointer shifts/masks; 16-group and 256-symbol flag writes; 3-bit table count, 15-bit selector count, unary selector decoding and per-block new byte[6] allocation.\",\"Preserve byte casts in selector counters and move-to-front selectors, signed byte indexing, 5-bit starting lengths, bit-driven length adjustments, signed length minima/maxima and exact Huffman helper argument order.\",\"Keep 50-symbol selector group advancement, the existing length/code comparisons, Object-to-int[] casts, mask/shift arithmetic and full signed-int overflow behavior.\",\"Keep the 4096-entry move-to-front staging layout, 16-element block shifts, unrolled four-store updates, and rebuild only when the existing head comparison reaches zero.\",\"Keep run-symbol 0/1 accumulation from -1 with doubled integer weights, histogram updates and the ordered stores to the shared block array.\",\"Retain end-of-block cumulative-table construction, OR of the original index shifted by 8 into the shared array, pointer initialization and byte casts, then the exact run-writer call and fully-drained comparison.\",\"Do not change primitive types, method modifiers, any source operation, evaluation order, local aliases, array/state partial writes, null/index/cast/allocation exception behavior, or add guards, validation, CRC checks or repairs.\"]} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.decodeBlocks(LBzip2State;)V"
     },
     {
       "symbol": "M:td.e(Lvl;)B",
       "originalName": "e",
-      "to": "computeByte1583",
-      "evidence": "Resolved override family; type-based operation label, finer purpose unresolved.",
-      "confidence": "typed",
-      "renamedSymbol": "M:MixedSupport120.computeByte1583(LBzip2State;)B"
+      "to": "readBit",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readBit. {\"behavior\":\"Call the bound bit reader with width 1 and cast its result to byte.\",\"preserve\":\"Preserve the call and cast for the full supplied state domain, including null or malformed state; add no validation.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.readBit(LBzip2State;)B"
     },
     {
       "symbol": "M:te.a(Ljava/lang/String;B)Ljava/lang/String;",
@@ -215721,7 +215721,7 @@
       "to": "integerArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.computeInteger1576(ILBzip2State;)I#0"
+      "renamedSymbol": "P:Bzip2Decompressor.readBits(ILBzip2State;)I#0"
     },
     {
       "symbol": "P:td.a(ILvl;)I#1",
@@ -215729,7 +215729,7 @@
       "to": "mixedSupport141Argument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.computeInteger1576(ILBzip2State;)I#1"
+      "renamedSymbol": "P:Bzip2Decompressor.readBits(ILBzip2State;)I#1"
     },
     {
       "symbol": "P:td.a(Lvl;)B#0",
@@ -215737,7 +215737,7 @@
       "to": "mixedSupport141Argument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.computeByte1577(LBzip2State;)B#0"
+      "renamedSymbol": "P:Bzip2Decompressor.readByte(LBzip2State;)B#0"
     },
     {
       "symbol": "P:td.a([BI[BII)I#0",
@@ -215745,7 +215745,7 @@
       "to": "byteArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#0"
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#0"
     },
     {
       "symbol": "P:td.a([BI[BII)I#1",
@@ -215753,7 +215753,7 @@
       "to": "integerArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#1"
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#1"
     },
     {
       "symbol": "P:td.a([BI[BII)I#2",
@@ -215761,7 +215761,7 @@
       "to": "byteArrayArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#2"
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#2"
     },
     {
       "symbol": "P:td.a([BI[BII)I#3",
@@ -215769,7 +215769,7 @@
       "to": "integerArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#3"
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#3"
     },
     {
       "symbol": "P:td.a([BI[BII)I#4",
@@ -215777,7 +215777,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#4"
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#4"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#0",
@@ -215785,7 +215785,7 @@
       "to": "integerArrayArgument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#0"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#0"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#1",
@@ -215793,7 +215793,7 @@
       "to": "integerArrayArgument2",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#1"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#1"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#2",
@@ -215801,7 +215801,7 @@
       "to": "integerArrayArgument3",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#2"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#2"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#3",
@@ -215809,7 +215809,7 @@
       "to": "byteArrayArgument4",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#3"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#3"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#4",
@@ -215817,7 +215817,7 @@
       "to": "integerArgument5",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#4"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#4"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#5",
@@ -215825,7 +215825,7 @@
       "to": "integerArgument6",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#5"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#5"
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#6",
@@ -215833,7 +215833,7 @@
       "to": "integerArgument7",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#6"
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#6"
     },
     {
       "symbol": "P:td.b(Lvl;)V#0",
@@ -215841,7 +215841,7 @@
       "to": "mixedSupport141Argument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1580(LBzip2State;)V#0"
+      "renamedSymbol": "P:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V#0"
     },
     {
       "symbol": "P:td.c(Lvl;)V#0",
@@ -215849,7 +215849,7 @@
       "to": "mixedSupport141Argument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1581(LBzip2State;)V#0"
+      "renamedSymbol": "P:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0"
     },
     {
       "symbol": "P:td.d(Lvl;)V#0",
@@ -215857,7 +215857,7 @@
       "to": "mixedSupport141Argument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.performAction1582(LBzip2State;)V#0"
+      "renamedSymbol": "P:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#0"
     },
     {
       "symbol": "P:td.e(Lvl;)B#0",
@@ -215865,7 +215865,7 @@
       "to": "mixedSupport141Argument1",
       "evidence": "Resolved declaration ordinal and type; cached values, stores and branch behavior are unchanged.",
       "confidence": "typed",
-      "renamedSymbol": "P:MixedSupport120.computeByte1583(LBzip2State;)B#0"
+      "renamedSymbol": "P:Bzip2Decompressor.readBit(LBzip2State;)B#0"
     },
     {
       "symbol": "P:te.<init>(Lrk;Lrk;Lrk;)V#0",
@@ -223068,7 +223068,7 @@
     },
     {
       "symbol": "B:td.c(Lvl;)V#0",
-      "renamedSymbol": "B:MixedSupport120.performAction1581(LBzip2State;)V#0",
+      "renamedSymbol": "B:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0",
       "originalName": "L0",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -226335,9 +226335,9 @@
     },
     {
       "symbol": "C:td",
-      "renamedSymbol": "C:MixedSupport120",
+      "renamedSymbol": "C:Bzip2Decompressor",
       "originalName": "td",
-      "renamedName": "MixedSupport120",
+      "renamedName": "Bzip2Decompressor",
       "declaration": {
         "file": "td.java",
         "start": 50,
@@ -255496,7 +255496,7 @@
     },
     {
       "symbol": "F:td.field_a:Lvl;",
-      "renamedSymbol": "F:MixedSupport120.mixedSupport141State0001:LBzip2State;",
+      "renamedSymbol": "F:Bzip2Decompressor.mixedSupport141State0001:LBzip2State;",
       "originalName": "field_a",
       "renamedName": "mixedSupport141State0001",
       "declaration": {
@@ -408352,7 +408352,7 @@
     },
     {
       "symbol": "L:td.a(ILvl;)I#0",
-      "renamedSymbol": "L:MixedSupport120.computeInteger1576(ILBzip2State;)I#0",
+      "renamedSymbol": "L:Bzip2Decompressor.readBits(ILBzip2State;)I#0",
       "originalName": "var2",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -408363,7 +408363,7 @@
     },
     {
       "symbol": "L:td.a([BI[BII)I#0",
-      "renamedSymbol": "L:MixedSupport120.decompress([BI[BII)I#0",
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#0",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIntegerLocal1",
       "declaration": {
@@ -408374,7 +408374,7 @@
     },
     {
       "symbol": "L:td.a([BI[BII)I#1",
-      "renamedSymbol": "L:MixedSupport120.decompress([BI[BII)I#1",
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "caughtExceptionLocal2",
       "declaration": {
@@ -408385,7 +408385,7 @@
     },
     {
       "symbol": "L:td.a([BI[BII)I#2",
-      "renamedSymbol": "L:MixedSupport120.decompress([BI[BII)I#2",
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#2",
       "originalName": "var5",
       "renamedName": "objectLocal3",
       "declaration": {
@@ -408396,7 +408396,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#0",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#0",
       "originalName": "var9",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -408407,7 +408407,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#1",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#1",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "cachedIntegerLocal2",
       "declaration": {
@@ -408418,7 +408418,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#10",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#10",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#10",
       "originalName": "var8Lifetime6",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -408429,7 +408429,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#2",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#2",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#2",
       "originalName": "var7",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -408440,7 +408440,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#3",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#3",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#3",
       "originalName": "var8",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -408451,7 +408451,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#4",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#4",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#4",
       "originalName": "var10",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -408462,7 +408462,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#5",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#5",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#5",
       "originalName": "var8Lifetime1",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -408473,7 +408473,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#6",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#6",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#6",
       "originalName": "var8Lifetime2",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -408484,7 +408484,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#7",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#7",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#7",
       "originalName": "var8Lifetime3",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -408495,7 +408495,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#8",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#8",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#8",
       "originalName": "var8Lifetime4",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -408506,7 +408506,7 @@
     },
     {
       "symbol": "L:td.a([I[I[I[BIII)V#9",
-      "renamedSymbol": "L:MixedSupport120.performAction1579([I[I[I[BIII)V#9",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#9",
       "originalName": "var8Lifetime5",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -408517,7 +408517,7 @@
     },
     {
       "symbol": "L:td.b(Lvl;)V#0",
-      "renamedSymbol": "L:MixedSupport120.performAction1580(LBzip2State;)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -408528,7 +408528,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#0",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "integerLocal1",
       "declaration": {
@@ -408539,7 +408539,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#1",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#1",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#1",
       "originalName": "var2",
       "renamedName": "integerLocal2",
       "declaration": {
@@ -408550,7 +408550,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#10",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#10",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#10",
       "originalName": "var11",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -408561,7 +408561,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#11",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#11",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#11",
       "originalName": "var12",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -408572,7 +408572,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#12",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#12",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#12",
       "originalName": "var13",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -408583,7 +408583,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#13",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#13",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#13",
       "originalName": "var14",
       "renamedName": "integerArrayLocal14",
       "declaration": {
@@ -408594,7 +408594,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#14",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#14",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#14",
       "originalName": "var15",
       "renamedName": "integerArrayLocal15",
       "declaration": {
@@ -408605,7 +408605,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#15",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#15",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#15",
       "originalName": "var15Lifetime1",
       "renamedName": "integerArrayLocal16",
       "declaration": {
@@ -408616,7 +408616,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#2",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#2",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#2",
       "originalName": "var3",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -408627,7 +408627,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#3",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#3",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#3",
       "originalName": "var4",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -408638,7 +408638,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#4",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#4",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#4",
       "originalName": "var5",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -408649,7 +408649,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#5",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#5",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#5",
       "originalName": "var6",
       "renamedName": "integerArrayLocal6",
       "declaration": {
@@ -408660,7 +408660,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#6",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#6",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#6",
       "originalName": "var7",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -408671,7 +408671,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#7",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#7",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#7",
       "originalName": "var8",
       "renamedName": "byteArrayLocal8",
       "declaration": {
@@ -408682,7 +408682,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#8",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#8",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#8",
       "originalName": "var9",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -408693,7 +408693,7 @@
     },
     {
       "symbol": "L:td.c(Lvl;)V#9",
-      "renamedSymbol": "L:MixedSupport120.performAction1581(LBzip2State;)V#9",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#9",
       "originalName": "var10",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -408704,7 +408704,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#0",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "cachedIntegerLocal1",
       "declaration": {
@@ -408715,7 +408715,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#1",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#1",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "cachedIntegerLocal2",
       "declaration": {
@@ -408726,7 +408726,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#10",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#10",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#10",
       "originalName": "var9",
       "renamedName": "integerLocal11",
       "declaration": {
@@ -408737,7 +408737,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#11",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#11",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#11",
       "originalName": "var10",
       "renamedName": "integerLocal12",
       "declaration": {
@@ -408748,7 +408748,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#12",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#12",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#12",
       "originalName": "var11",
       "renamedName": "integerLocal13",
       "declaration": {
@@ -408759,7 +408759,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#13",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#13",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#13",
       "originalName": "var12",
       "renamedName": "integerLocal14",
       "declaration": {
@@ -408770,7 +408770,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#14",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#14",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#14",
       "originalName": "var13",
       "renamedName": "integerLocal15",
       "declaration": {
@@ -408781,7 +408781,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#15",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#15",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#15",
       "originalName": "var14",
       "renamedName": "integerLocal16",
       "declaration": {
@@ -408792,7 +408792,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#16",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#16",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#16",
       "originalName": "var15",
       "renamedName": "integerLocal17",
       "declaration": {
@@ -408803,7 +408803,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#17",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#17",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#17",
       "originalName": "var16",
       "renamedName": "integerLocal18",
       "declaration": {
@@ -408814,7 +408814,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#18",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#18",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#18",
       "originalName": "var17",
       "renamedName": "integerLocal19",
       "declaration": {
@@ -408825,7 +408825,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#19",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#19",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#19",
       "originalName": "var18",
       "renamedName": "integerLocal20",
       "declaration": {
@@ -408836,7 +408836,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#2",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#2",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#2",
       "originalName": "var1",
       "renamedName": "integerLocal3",
       "declaration": {
@@ -408847,7 +408847,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#20",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#20",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#20",
       "originalName": "var19",
       "renamedName": "integerLocal21",
       "declaration": {
@@ -408858,7 +408858,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#21",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#21",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#21",
       "originalName": "var20",
       "renamedName": "integerLocal22",
       "declaration": {
@@ -408869,7 +408869,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#22",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#22",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#22",
       "originalName": "var21",
       "renamedName": "integerLocal23",
       "declaration": {
@@ -408880,7 +408880,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#23",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#23",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#23",
       "originalName": "var22",
       "renamedName": "integerLocal24",
       "declaration": {
@@ -408891,7 +408891,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#24",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#24",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#24",
       "originalName": "var23",
       "renamedName": "objectLocal25",
       "declaration": {
@@ -408902,7 +408902,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#25",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#25",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#25",
       "originalName": "var24",
       "renamedName": "objectLocal26",
       "declaration": {
@@ -408913,7 +408913,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#26",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#26",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#26",
       "originalName": "var25",
       "renamedName": "objectLocal27",
       "declaration": {
@@ -408924,7 +408924,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#27",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#27",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#27",
       "originalName": "var26",
       "renamedName": "integerLocal28",
       "declaration": {
@@ -408935,7 +408935,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#28",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#28",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#28",
       "originalName": "var27_ref_byte__",
       "renamedName": "byteArrayLocal29",
       "declaration": {
@@ -408946,7 +408946,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#29",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#29",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#29",
       "originalName": "var27",
       "renamedName": "integerLocal30",
       "declaration": {
@@ -408957,7 +408957,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#3",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#3",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#3",
       "originalName": "var2",
       "renamedName": "integerLocal4",
       "declaration": {
@@ -408968,7 +408968,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#30",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#30",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#30",
       "originalName": "var28",
       "renamedName": "integerLocal31",
       "declaration": {
@@ -408979,7 +408979,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#31",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#31",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#31",
       "originalName": "var29",
       "renamedName": "integerLocal32",
       "declaration": {
@@ -408990,7 +408990,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#32",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#32",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#32",
       "originalName": "var30",
       "renamedName": "integerLocal33",
       "declaration": {
@@ -409001,7 +409001,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#33",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#33",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#33",
       "originalName": "var31",
       "renamedName": "integerLocal34",
       "declaration": {
@@ -409012,7 +409012,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#34",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#34",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#34",
       "originalName": "var32",
       "renamedName": "integerLocal35",
       "declaration": {
@@ -409023,7 +409023,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#35",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#35",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#35",
       "originalName": "var33",
       "renamedName": "integerLocal36",
       "declaration": {
@@ -409034,7 +409034,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#36",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#36",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#36",
       "originalName": "var34",
       "renamedName": "integerLocal37",
       "declaration": {
@@ -409045,7 +409045,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#37",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#37",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#37",
       "originalName": "var35",
       "renamedName": "integerLocal38",
       "declaration": {
@@ -409056,7 +409056,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#38",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#38",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#38",
       "originalName": "var36",
       "renamedName": "byteArrayLocal39",
       "declaration": {
@@ -409067,7 +409067,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#39",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#39",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#39",
       "originalName": "var37",
       "renamedName": "byteArrayLocal40",
       "declaration": {
@@ -409078,7 +409078,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#4",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#4",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#4",
       "originalName": "var3",
       "renamedName": "integerLocal5",
       "declaration": {
@@ -409089,7 +409089,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#5",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#5",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#5",
       "originalName": "var4",
       "renamedName": "integerLocal6",
       "declaration": {
@@ -409100,7 +409100,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#6",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#6",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#6",
       "originalName": "var5",
       "renamedName": "integerLocal7",
       "declaration": {
@@ -409111,7 +409111,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#7",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#7",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#7",
       "originalName": "var6",
       "renamedName": "integerLocal8",
       "declaration": {
@@ -409122,7 +409122,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#8",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#8",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#8",
       "originalName": "var7",
       "renamedName": "integerLocal9",
       "declaration": {
@@ -409133,7 +409133,7 @@
     },
     {
       "symbol": "L:td.d(Lvl;)V#9",
-      "renamedSymbol": "L:MixedSupport120.performAction1582(LBzip2State;)V#9",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#9",
       "originalName": "var8",
       "renamedName": "integerLocal10",
       "declaration": {
@@ -455311,7 +455311,7 @@
     },
     {
       "symbol": "M:td.a()V",
-      "renamedSymbol": "M:MixedSupport120.clearStaticReferences()V",
+      "renamedSymbol": "M:Bzip2Decompressor.clearStaticReferences()V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -455322,9 +455322,9 @@
     },
     {
       "symbol": "M:td.a(ILvl;)I",
-      "renamedSymbol": "M:MixedSupport120.computeInteger1576(ILBzip2State;)I",
+      "renamedSymbol": "M:Bzip2Decompressor.readBits(ILBzip2State;)I",
       "originalName": "a",
-      "renamedName": "computeInteger1576",
+      "renamedName": "readBits",
       "declaration": {
         "file": "td.java",
         "start": 18943,
@@ -455333,9 +455333,9 @@
     },
     {
       "symbol": "M:td.a(Lvl;)B",
-      "renamedSymbol": "M:MixedSupport120.computeByte1577(LBzip2State;)B",
+      "renamedSymbol": "M:Bzip2Decompressor.readByte(LBzip2State;)B",
       "originalName": "a",
-      "renamedName": "computeByte1577",
+      "renamedName": "readByte",
       "declaration": {
         "file": "td.java",
         "start": 18854,
@@ -455344,7 +455344,7 @@
     },
     {
       "symbol": "M:td.a([BI[BII)I",
-      "renamedSymbol": "M:MixedSupport120.decompress([BI[BII)I",
+      "renamedSymbol": "M:Bzip2Decompressor.decompress([BI[BII)I",
       "originalName": "a",
       "renamedName": "decompress",
       "declaration": {
@@ -455355,9 +455355,9 @@
     },
     {
       "symbol": "M:td.a([I[I[I[BIII)V",
-      "renamedSymbol": "M:MixedSupport120.performAction1579([I[I[I[BIII)V",
+      "renamedSymbol": "M:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V",
       "originalName": "a",
-      "renamedName": "performAction1579",
+      "renamedName": "buildHuffmanDecodeTables",
       "declaration": {
         "file": "td.java",
         "start": 15924,
@@ -455366,9 +455366,9 @@
     },
     {
       "symbol": "M:td.b(Lvl;)V",
-      "renamedSymbol": "M:MixedSupport120.performAction1580(LBzip2State;)V",
+      "renamedSymbol": "M:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V",
       "originalName": "b",
-      "renamedName": "performAction1580",
+      "renamedName": "buildSymbolMap",
       "declaration": {
         "file": "td.java",
         "start": 17623,
@@ -455377,9 +455377,9 @@
     },
     {
       "symbol": "M:td.c(Lvl;)V",
-      "renamedSymbol": "M:MixedSupport120.performAction1581(LBzip2State;)V",
+      "renamedSymbol": "M:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V",
       "originalName": "c",
-      "renamedName": "performAction1581",
+      "renamedName": "writeDecodedRuns",
       "declaration": {
         "file": "td.java",
         "start": 117,
@@ -455388,9 +455388,9 @@
     },
     {
       "symbol": "M:td.d(Lvl;)V",
-      "renamedSymbol": "M:MixedSupport120.performAction1582(LBzip2State;)V",
+      "renamedSymbol": "M:Bzip2Decompressor.decodeBlocks(LBzip2State;)V",
       "originalName": "d",
-      "renamedName": "performAction1582",
+      "renamedName": "decodeBlocks",
       "declaration": {
         "file": "td.java",
         "start": 3647,
@@ -455399,9 +455399,9 @@
     },
     {
       "symbol": "M:td.e(Lvl;)B",
-      "renamedSymbol": "M:MixedSupport120.computeByte1583(LBzip2State;)B",
+      "renamedSymbol": "M:Bzip2Decompressor.readBit(LBzip2State;)B",
       "originalName": "e",
-      "renamedName": "computeByte1583",
+      "renamedName": "readBit",
       "declaration": {
         "file": "td.java",
         "start": 17996,
@@ -527845,7 +527845,7 @@
     },
     {
       "symbol": "P:td.a(ILvl;)I#0",
-      "renamedSymbol": "P:MixedSupport120.computeInteger1576(ILBzip2State;)I#0",
+      "renamedSymbol": "P:Bzip2Decompressor.readBits(ILBzip2State;)I#0",
       "originalName": "param0",
       "renamedName": "integerArgument1",
       "declaration": {
@@ -527856,7 +527856,7 @@
     },
     {
       "symbol": "P:td.a(ILvl;)I#1",
-      "renamedSymbol": "P:MixedSupport120.computeInteger1576(ILBzip2State;)I#1",
+      "renamedSymbol": "P:Bzip2Decompressor.readBits(ILBzip2State;)I#1",
       "originalName": "param1",
       "renamedName": "mixedSupport141Argument2",
       "declaration": {
@@ -527867,7 +527867,7 @@
     },
     {
       "symbol": "P:td.a(Lvl;)B#0",
-      "renamedSymbol": "P:MixedSupport120.computeByte1577(LBzip2State;)B#0",
+      "renamedSymbol": "P:Bzip2Decompressor.readByte(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "mixedSupport141Argument1",
       "declaration": {
@@ -527878,7 +527878,7 @@
     },
     {
       "symbol": "P:td.a([BI[BII)I#0",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#0",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#0",
       "originalName": "param0",
       "renamedName": "byteArrayArgument1",
       "declaration": {
@@ -527889,7 +527889,7 @@
     },
     {
       "symbol": "P:td.a([BI[BII)I#1",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#1",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#1",
       "originalName": "param1",
       "renamedName": "integerArgument2",
       "declaration": {
@@ -527900,7 +527900,7 @@
     },
     {
       "symbol": "P:td.a([BI[BII)I#2",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#2",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#2",
       "originalName": "param2",
       "renamedName": "byteArrayArgument3",
       "declaration": {
@@ -527911,7 +527911,7 @@
     },
     {
       "symbol": "P:td.a([BI[BII)I#3",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#3",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#3",
       "originalName": "param3",
       "renamedName": "integerArgument4",
       "declaration": {
@@ -527922,7 +527922,7 @@
     },
     {
       "symbol": "P:td.a([BI[BII)I#4",
-      "renamedSymbol": "P:MixedSupport120.decompress([BI[BII)I#4",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -527933,7 +527933,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#0",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#0",
       "originalName": "param0",
       "renamedName": "integerArrayArgument1",
       "declaration": {
@@ -527944,7 +527944,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#1",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#1",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#1",
       "originalName": "param1",
       "renamedName": "integerArrayArgument2",
       "declaration": {
@@ -527955,7 +527955,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#2",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#2",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#2",
       "originalName": "param2",
       "renamedName": "integerArrayArgument3",
       "declaration": {
@@ -527966,7 +527966,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#3",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#3",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#3",
       "originalName": "param3",
       "renamedName": "byteArrayArgument4",
       "declaration": {
@@ -527977,7 +527977,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#4",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#4",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#4",
       "originalName": "param4",
       "renamedName": "integerArgument5",
       "declaration": {
@@ -527988,7 +527988,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#5",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#5",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#5",
       "originalName": "param5",
       "renamedName": "integerArgument6",
       "declaration": {
@@ -527999,7 +527999,7 @@
     },
     {
       "symbol": "P:td.a([I[I[I[BIII)V#6",
-      "renamedSymbol": "P:MixedSupport120.performAction1579([I[I[I[BIII)V#6",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#6",
       "originalName": "param6",
       "renamedName": "integerArgument7",
       "declaration": {
@@ -528010,7 +528010,7 @@
     },
     {
       "symbol": "P:td.b(Lvl;)V#0",
-      "renamedSymbol": "P:MixedSupport120.performAction1580(LBzip2State;)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "mixedSupport141Argument1",
       "declaration": {
@@ -528021,7 +528021,7 @@
     },
     {
       "symbol": "P:td.c(Lvl;)V#0",
-      "renamedSymbol": "P:MixedSupport120.performAction1581(LBzip2State;)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "mixedSupport141Argument1",
       "declaration": {
@@ -528032,7 +528032,7 @@
     },
     {
       "symbol": "P:td.d(Lvl;)V#0",
-      "renamedSymbol": "P:MixedSupport120.performAction1582(LBzip2State;)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "mixedSupport141Argument1",
       "declaration": {
@@ -528043,7 +528043,7 @@
     },
     {
       "symbol": "P:td.e(Lvl;)B#0",
-      "renamedSymbol": "P:MixedSupport120.computeByte1583(LBzip2State;)B#0",
+      "renamedSymbol": "P:Bzip2Decompressor.readBit(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "mixedSupport141Argument1",
       "declaration": {
@@ -708281,7 +708281,7 @@
       "original": "client.java",
       "renamed": "DekoBlokoClient.java",
       "inputSha256": "762f5e43ad92e5c59eb72fec239e808c117daf40f5ad8dc76e6e4bdc4a4cf96f",
-      "outputSha256": "effe570eb6c01503b76606d07aee882dacf5709066de2e84e79fd9fe2070ef0c",
+      "outputSha256": "648c4e23b99248a290e6cae5210ea58502d7e38e56a2276708d04a21d28039aa",
       "edits": [
         {
           "start": 57,
@@ -727427,7 +727427,7 @@
           "end": 53898,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 53899,
@@ -952892,7 +952892,7 @@
       "original": "i.java",
       "renamed": "MixedSupport057.java",
       "inputSha256": "19e8f1427a4315dfeea79ebf8e7f1a9b15430e74e85769292021f85c21722a6c",
-      "outputSha256": "3b37744c352fe1977c5a2ab0163e142ff89d2b59e443ee053e83fb58f5e9f8d6",
+      "outputSha256": "d9acbc43e26e0eae1487843fbc437965d2deee7b26e3f0ecb8a8912f37122db5",
       "edits": [
         {
           "start": 69,
@@ -954138,7 +954138,7 @@
           "end": 4663,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 4664,
@@ -1619314,16 +1619314,16 @@
     },
     {
       "original": "td.java",
-      "renamed": "MixedSupport120.java",
+      "renamed": "Bzip2Decompressor.java",
       "inputSha256": "76e98395972476b1fbc5d54f26015025b4d68d3301cadde7432f4465550034b3",
-      "outputSha256": "7c12ad50de5ef417a1d3e03ba7c3333093ef1e1641d1c365907b303bbff05c75",
+      "outputSha256": "9180a287f5a68d8a83b56be0c506ad1059870e8e1697b83883eb23bbaf8991da",
       "edits": [
         {
           "start": 50,
           "end": 52,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 74,
@@ -1619344,7 +1619344,7 @@
           "end": 118,
           "symbol": "M:td.c(Lvl;)V",
           "original": "c",
-          "renamed": "performAction1581"
+          "renamed": "writeDecodedRuns"
         },
         {
           "start": 119,
@@ -1620740,7 +1620740,7 @@
           "end": 3648,
           "symbol": "M:td.d(Lvl;)V",
           "original": "d",
-          "renamed": "performAction1582"
+          "renamed": "decodeBlocks"
         },
         {
           "start": 3649,
@@ -1621272,14 +1621272,14 @@
           "end": 5131,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5132,
           "end": 5133,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5134,
@@ -1621307,14 +1621307,14 @@
           "end": 5222,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5223,
           "end": 5224,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5225,
@@ -1621335,14 +1621335,14 @@
           "end": 5253,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5254,
           "end": 5255,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5256,
@@ -1621363,14 +1621363,14 @@
           "end": 5284,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5285,
           "end": 5286,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5287,
@@ -1621391,14 +1621391,14 @@
           "end": 5315,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5316,
           "end": 5317,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5318,
@@ -1621419,14 +1621419,14 @@
           "end": 5346,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5347,
           "end": 5348,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5349,
@@ -1621447,14 +1621447,14 @@
           "end": 5377,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5378,
           "end": 5379,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5380,
@@ -1621475,14 +1621475,14 @@
           "end": 5408,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5409,
           "end": 5410,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5411,
@@ -1621503,14 +1621503,14 @@
           "end": 5439,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5440,
           "end": 5441,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5442,
@@ -1621531,14 +1621531,14 @@
           "end": 5470,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5471,
           "end": 5472,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5473,
@@ -1621559,14 +1621559,14 @@
           "end": 5501,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5502,
           "end": 5503,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 5504,
@@ -1621608,14 +1621608,14 @@
           "end": 5601,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5602,
           "end": 5603,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5604,
@@ -1621671,14 +1621671,14 @@
           "end": 5693,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5694,
           "end": 5695,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5696,
@@ -1621734,14 +1621734,14 @@
           "end": 5785,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5786,
           "end": 5787,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 5788,
@@ -1621818,14 +1621818,14 @@
           "end": 5925,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 5926,
           "end": 5927,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 5928,
@@ -1622000,14 +1622000,14 @@
           "end": 6362,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 6363,
           "end": 6364,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 6365,
@@ -1622056,14 +1622056,14 @@
           "end": 6538,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 6539,
           "end": 6540,
           "symbol": "M:td.b(Lvl;)V",
           "original": "b",
-          "renamed": "performAction1580"
+          "renamed": "buildSymbolMap"
         },
         {
           "start": 6541,
@@ -1622105,14 +1622105,14 @@
           "end": 6606,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 6607,
           "end": 6608,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 6612,
@@ -1622133,14 +1622133,14 @@
           "end": 6640,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 6641,
           "end": 6642,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 6647,
@@ -1622189,14 +1622189,14 @@
           "end": 6780,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 6781,
           "end": 6782,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 6783,
@@ -1622546,14 +1622546,14 @@
           "end": 7712,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 7713,
           "end": 7714,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 7718,
@@ -1622602,14 +1622602,14 @@
           "end": 7927,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 7928,
           "end": 7929,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 7930,
@@ -1622679,14 +1622679,14 @@
           "end": 8126,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 8127,
           "end": 8128,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 8129,
@@ -1622931,14 +1622931,14 @@
           "end": 8726,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 8727,
           "end": 8728,
           "symbol": "M:td.a([I[I[I[BIII)V",
           "original": "a",
-          "renamed": "performAction1579"
+          "renamed": "buildHuffmanDecodeTables"
         },
         {
           "start": 8729,
@@ -1623470,14 +1623470,14 @@
           "end": 9741,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 9742,
           "end": 9743,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 9744,
@@ -1623533,14 +1623533,14 @@
           "end": 9856,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 9857,
           "end": 9858,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 9859,
@@ -1624191,14 +1624191,14 @@
           "end": 11163,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 11164,
           "end": 11165,
           "symbol": "M:td.c(Lvl;)V",
           "original": "c",
-          "renamed": "performAction1581"
+          "renamed": "writeDecodedRuns"
         },
         {
           "start": 11166,
@@ -1625542,14 +1625542,14 @@
           "end": 14184,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 14185,
           "end": 14186,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 14187,
@@ -1625605,14 +1625605,14 @@
           "end": 14311,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 14312,
           "end": 14313,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 14314,
@@ -1625955,14 +1625955,14 @@
           "end": 15216,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 15217,
           "end": 15218,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 15219,
@@ -1626018,14 +1626018,14 @@
           "end": 15343,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 15344,
           "end": 15345,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 15346,
@@ -1626263,7 +1626263,7 @@
           "end": 15925,
           "symbol": "M:td.a([I[I[I[BIII)V",
           "original": "a",
-          "renamed": "performAction1579"
+          "renamed": "buildHuffmanDecodeTables"
         },
         {
           "start": 15932,
@@ -1626921,7 +1626921,7 @@
           "end": 17624,
           "symbol": "M:td.b(Lvl;)V",
           "original": "b",
-          "renamed": "performAction1580"
+          "renamed": "buildSymbolMap"
         },
         {
           "start": 17625,
@@ -1627082,7 +1627082,7 @@
           "end": 17997,
           "symbol": "M:td.e(Lvl;)B",
           "original": "e",
-          "renamed": "computeByte1583"
+          "renamed": "readBit"
         },
         {
           "start": 17998,
@@ -1627103,14 +1627103,14 @@
           "end": 18034,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 18035,
           "end": 18036,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 18040,
@@ -1627362,14 +1627362,14 @@
           "end": 18621,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 18622,
           "end": 18623,
           "symbol": "M:td.d(Lvl;)V",
           "original": "d",
-          "renamed": "performAction1582"
+          "renamed": "decodeBlocks"
         },
         {
           "start": 18624,
@@ -1627460,7 +1627460,7 @@
           "end": 18855,
           "symbol": "M:td.a(Lvl;)B",
           "original": "a",
-          "renamed": "computeByte1577"
+          "renamed": "readByte"
         },
         {
           "start": 18856,
@@ -1627481,14 +1627481,14 @@
           "end": 18892,
           "symbol": "C:td",
           "original": "td",
-          "renamed": "MixedSupport120"
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 18893,
           "end": 18894,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 18898,
@@ -1627502,7 +1627502,7 @@
           "end": 18944,
           "symbol": "M:td.a(ILvl;)I",
           "original": "a",
-          "renamed": "computeInteger1576"
+          "renamed": "readBits"
         },
         {
           "start": 18949,
@@ -1763716,10 +1763716,10 @@
       "commit": "1655ca853d0d4027018f3efcdc37be76ab7895f4",
       "subdirectory": "games/dekobloko"
     },
-    "rulesSha256": "13a8e9a80776c06d5b59418053957b8a9c4ad1b7a03725688f8d3fd3d42c6115",
+    "rulesSha256": "99c58851c1dd71e78ef2ac0363d72174e10167e061466ef5e9bf6426a0f0c808",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "889d4c36cb11f8cc007dc663a1f4a375f6d1a96a9677a6a24037a9c86fb474d8",
-    "outputTreeSha256": "6f88cc6ebcd62344a665b07488be5f4ad6637b0911c903a130e6293030c84fe1",
+    "outputTreeSha256": "fae0eec38e974b31d45253d071b2dc6cb419ab05159fed1d930af43228fb7169",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

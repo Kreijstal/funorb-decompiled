@@ -709,7 +709,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           tf.clearStaticReferences(param0 - 215);
           v.clearStaticReferences(114);
           ByteStorage.a((byte) 100);
-          di.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(param0 + 169);
           pi.resetStaticState(102);
           h.clearStaticReferences(0);

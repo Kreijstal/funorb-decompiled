@@ -136,7 +136,7 @@ final class ta {
                   wg.field_u.decompress(var9, var13, (byte) 115);
                 }
               } else {
-                ad.decompress(var13, var5, param1, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, param1, var4, 9);
               }
               stackIn_24_0 = var6;
               return stackIn_24_0;

@@ -1950,7 +1950,7 @@ public final class TorChallenge extends GameClientBase {
           wi.clearStaticReferences(1);
           ByteStorage.a(8727);
           wc.clearStaticReferences((byte) -48);
-          nl.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(-113);
           ed.resetStaticState(91);
           PcmOutputWorker.b(6);

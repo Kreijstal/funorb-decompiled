@@ -3309,7 +3309,7 @@ public final class StarCannon extends ag {
         te.a(-1);
         dl.clearStaticReferences(true);
         ByteStorage.resetStaticState((byte) 63);
-        nk.clearStaticReferences();
+        Bzip2Decompressor.clearStaticReferences();
         Bzip2State.clearStaticReferences(-4918);
         va.clearStaticReferences((byte) 80);
         mc.a((byte) 40);

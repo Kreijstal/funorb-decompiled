@@ -235,7 +235,7 @@ final class ce {
                   ei.field_i.decompress(var13, var9, -1);
                 }
               } else {
-                gh.decompress(var13, var5, param1, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, param1, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;

@@ -214,7 +214,7 @@ public final class Bounce extends GameClient {
           DelegatingCanvas.clearStaticReferences((byte) -83);
           fi.clearStaticReferences(-14935);
           da.clearStaticReferences(-87);
-          ad.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.resetStaticState((byte) 105);
           hh.resetStaticState(false);
           jj.clearStaticReferences(true);

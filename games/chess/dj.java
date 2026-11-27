@@ -119,7 +119,7 @@ final class dj extends DualLinkNode {
                   nc.field_N.decompress(var14, (byte) -34, var10);
                 }
               } else {
-                en.decompress(var14, var6, param0, var5, 9);
+                Bzip2Decompressor.decompress(var14, var6, param0, var5, 9);
               }
               stackIn_21_0 = var7;
               return stackIn_21_0;

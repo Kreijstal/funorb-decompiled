@@ -175,7 +175,7 @@ public final class Confined extends i {
           IsaacRandom.resetStaticState(-1);
           ni.clearStaticReferences(false);
           ByteStorage.clearStaticReferences(param0 ^ param0);
-          oa.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(79);
           jd.clearStaticReferences((byte) -38);
           ei.clearStaticReferences((byte) 122);

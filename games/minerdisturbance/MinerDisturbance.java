@@ -4817,7 +4817,7 @@ public final class MinerDisturbance extends ob {
           GameCanvas.clearStaticReferences((byte) -22);
           nj.clearStaticReferences(-109);
           ByteStorage.clearStaticReferences((byte) -112);
-          va.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.resetStaticState(param0 - 129);
           qf.clearDeclaredStaticReferences(param0 - 28582);
           vc.clearDeclaredStaticReferences(param0 + 105);

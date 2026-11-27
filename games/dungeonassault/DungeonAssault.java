@@ -786,7 +786,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ik.clearStaticReferences(0);
           ra.a((byte) -114);
           ByteStorage.clearStaticReferences((byte) 23);
-          ej.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.a((byte) 108);
           oe.clearDeclaredStaticReferences(0);
           kn.a(0);

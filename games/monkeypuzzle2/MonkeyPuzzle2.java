@@ -189,7 +189,7 @@ public final class MonkeyPuzzle2 extends bi {
           vd.clearStaticReferences(112);
           ie.clearStaticReferences((byte) -107);
           ByteStorage.clearStaticReferences(-123);
-          tg.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.resetStaticState(0);
           i.clearStaticReferences(true);
           nj.clearStaticReferences(-151);

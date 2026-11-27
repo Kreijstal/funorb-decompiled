@@ -393,7 +393,7 @@ public final class TrackController extends GameShell {
         kd.clearStaticReferences((byte) 86);
         oe.clearStaticReferences(-1);
         ByteStorage.clearStaticReferences((byte) 125);
-        b.clearStaticReferences();
+        Bzip2Decompressor.clearStaticReferences();
         nf.clearStaticReferences(261211);
         SocketArchiveRequestConnection.clearStaticReferences(80);
         mb.clearStaticReferences((byte) -36);

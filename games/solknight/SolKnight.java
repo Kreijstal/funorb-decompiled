@@ -318,7 +318,7 @@ public final class SolKnight extends ab {
           qg.clearStaticReferences(false);
           int var2_int = -89 / ((-28 - param0) / 59);
           ByteStorage.clearStaticReferences((byte) 94);
-          gi.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences((byte) -37);
           di.clearDeclaredStaticReferences(7);
           fl.a((byte) -108);

@@ -538,7 +538,7 @@ public final class AceOfSkies extends NetworkGameClient {
           qa.clearStaticReferences(-7);
           IntKeyLookup.clearStaticReferences(88);
           ByteStorage.clearStaticReferences(-124);
-          on.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(16);
           bb.clearStaticReferences(-15388);
           kn.clearStaticReferences(-1);

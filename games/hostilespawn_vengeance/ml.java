@@ -204,7 +204,7 @@ final class ml {
                   tg.field_b.decompress(124, var13, var10);
                 }
               } else {
-                wf.decompress(var13, var5_int, param0, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5_int, param0, var4, 9);
               }
               stackIn_21_0 = var6;
               return stackIn_21_0;

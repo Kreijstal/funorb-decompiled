@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg {
+final class Bzip2Decompressor {
     private static Bzip2State field_a;
 
     public static void clearStaticReferences() {
         field_a = null;
     }
 
-    private final static byte c(Bzip2State param0) {
-        return (byte)tg.a(1, param0);
+    private final static byte readBit(Bzip2State param0) {
+        return (byte)Bzip2Decompressor.readBits(1, param0);
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanDecodeTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -72,7 +72,7 @@ final class tg {
           field_a.field_A = 0;
           field_a.field_p = 0;
           field_a.field_z = 0;
-          tg.b(field_a);
+          Bzip2Decompressor.decodeBlocks(field_a);
           param1 = param1 - field_a.field_w;
           field_a.field_l = null;
           field_a.field_G = null;
@@ -81,7 +81,7 @@ final class tg {
         return stackIn_2_0;
     }
 
-    private final static int a(int param0, Bzip2State param1) {
+    private final static int readBits(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_q < param0) {
           param1.field_A = param1.field_A << 8 | param1.field_l[param1.field_g] & 255;
@@ -97,7 +97,7 @@ final class tg {
         return var2;
     }
 
-    private final static void b(Bzip2State param0) {
+    private final static void decodeBlocks(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -169,31 +169,31 @@ final class tg {
           if (var26 == 0) {
             return;
           }
-          var1 = tg.a(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           if (var1 == 23) {
             return;
           }
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.a(param0);
-          var1 = tg.c(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readBit(param0);
           if (var1 == 0) {
           }
           param0.field_m = 0;
-          var1 = tg.a(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           param0.field_m = param0.field_m << 8 | var1 & 255;
-          var1 = tg.a(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           param0.field_m = param0.field_m << 8 | var1 & 255;
-          var1 = tg.a(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           param0.field_m = param0.field_m << 8 | var1 & 255;
           for (var4 = 0; var4 < 16; var4++) {
-            var1 = tg.c(param0);
+            var1 = Bzip2Decompressor.readBit(param0);
             if (var1 != 1) {
               param0.field_o[var4] = false;
             } else {
@@ -206,22 +206,22 @@ final class tg {
           for (var4 = 0; var4 < 16; var4++) {
             if (param0.field_o[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
-                var1 = tg.c(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 == 1) {
                   param0.field_j[var4 * 16 + var5] = true;
                 }
               }
             }
           }
-          tg.e(param0);
+          Bzip2Decompressor.buildSymbolMap(param0);
           var7 = param0.field_t + 2;
-          var8 = tg.a(3, param0);
-          var9 = tg.a(15, param0);
+          var8 = Bzip2Decompressor.readBits(3, param0);
+          var9 = Bzip2Decompressor.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
             while (true) {
-              var1 = tg.c(param0);
+              var1 = Bzip2Decompressor.readBit(param0);
               if (var1 != 0) {
                 var5++;
                 continue;
@@ -251,7 +251,7 @@ final class tg {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = tg.a(5, param0);
+            var17 = Bzip2Decompressor.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -259,13 +259,13 @@ final class tg {
                 break;
               }
               while (true) {
-                var1 = tg.c(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 == 0) {
                   param0.field_C[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
-                var1 = tg.c(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 != 0) {
                   var17--;
                   continue;
@@ -285,7 +285,7 @@ final class tg {
                 var2 = param0.field_C[var6][var4];
               }
             }
-            tg.a(param0.field_a[var6], param0.field_x[var6], param0.field_k[var6], param0.field_C[var6], var2, var3, var7);
+            Bzip2Decompressor.buildHuffmanDecodeTables(param0.field_a[var6], param0.field_x[var6], param0.field_k[var6], param0.field_C[var6], var2, var3, var7);
             param0.field_e[var6] = var2;
           }
           var10 = param0.field_t + 1;
@@ -314,10 +314,10 @@ final class tg {
           }
           var12--;
           var18 = var22;
-          var19 = tg.a(var18, param0);
+          var19 = Bzip2Decompressor.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
-            var20 = tg.c(param0);
+            var20 = Bzip2Decompressor.readBit(param0);
             var19 = var19 << 1 | var20;
           }
           var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -345,7 +345,7 @@ final class tg {
               param0.field_I = param0.field_I >> 8;
               param0.field_E = param0.field_E + 1;
               param0.field_F = var14;
-              tg.d(param0);
+              Bzip2Decompressor.writeDecodedRuns(param0);
               if (param0.field_E == param0.field_F + 1 &&
                 param0.field_B == 0) {
                 var26 = 1;
@@ -417,10 +417,10 @@ final class tg {
               }
               var12--;
               var18 = var22;
-              var19 = tg.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = tg.c(param0);
+                var20 = Bzip2Decompressor.readBit(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -448,10 +448,10 @@ final class tg {
               }
               var12--;
               var18 = var22;
-              var19 = tg.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = tg.c(param0);
+                var20 = Bzip2Decompressor.readBit(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -469,7 +469,7 @@ final class tg {
         }
     }
 
-    private final static void d(Bzip2State param0) {
+    private final static void writeDecodedRuns(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -600,7 +600,7 @@ final class tg {
         return;
     }
 
-    private final static void e(Bzip2State param0) {
+    private final static void buildSymbolMap(Bzip2State param0) {
         int var1 = 0;
         param0.field_t = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -611,8 +611,8 @@ final class tg {
         }
     }
 
-    private final static byte a(Bzip2State param0) {
-        return (byte)tg.a(8, param0);
+    private final static byte readByte(Bzip2State param0) {
+        return (byte)Bzip2Decompressor.readBits(8, param0);
     }
 
     static {

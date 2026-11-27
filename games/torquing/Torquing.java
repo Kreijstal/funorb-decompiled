@@ -246,7 +246,7 @@ public final class Torquing extends tg {
           cn.resetStaticState(-1581);
           vb.a(param0 ^ 41);
           ByteStorage.clearStaticReferences(param0 - 110);
-          fc.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.a((byte) 44);
           pm.clearStaticReferences(0);
           DelayedPcmStream.clearStaticReferences(-125);

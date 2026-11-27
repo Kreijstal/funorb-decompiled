@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport120 {
+final class Bzip2Decompressor {
     private static Bzip2State mixedSupport141State0001;
 
-    private final static void performAction1581(Bzip2State mixedSupport141Argument1) {
+    private final static void writeDecodedRuns(Bzip2State mixedSupport141Argument1) {
         int integerLocal1;
         int integerLocal2;
         int integerLocal3;
@@ -135,7 +135,7 @@ final class MixedSupport120 {
         return;
     }
 
-    private final static void performAction1582(Bzip2State mixedSupport141Argument1) {
+    private final static void decodeBlocks(Bzip2State mixedSupport141Argument1) {
         int cachedIntegerLocal1 = 0;
         int cachedIntegerLocal2 = 0;
         int integerLocal3;
@@ -207,31 +207,31 @@ final class MixedSupport120 {
           if (integerLocal28 == 0) {
             return;
           }
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
           if (integerLocal3 == 23) {
             return;
           }
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
-          integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
           if (integerLocal3 == 0) {
           }
           mixedSupport141Argument1.integerState0875 = 0;
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
           mixedSupport141Argument1.integerState0875 = mixedSupport141Argument1.integerState0875 << 8 | integerLocal3 & 255;
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
           mixedSupport141Argument1.integerState0875 = mixedSupport141Argument1.integerState0875 << 8 | integerLocal3 & 255;
-          integerLocal3 = MixedSupport120.computeByte1577(mixedSupport141Argument1);
+          integerLocal3 = Bzip2Decompressor.readByte(mixedSupport141Argument1);
           mixedSupport141Argument1.integerState0875 = mixedSupport141Argument1.integerState0875 << 8 | integerLocal3 & 255;
           for (integerLocal6 = 0; integerLocal6 < 16; integerLocal6++) {
-            integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+            integerLocal3 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
             if (integerLocal3 != 1) {
               mixedSupport141Argument1.booleanArrayState0012[integerLocal6] = false;
             } else {
@@ -244,22 +244,22 @@ final class MixedSupport120 {
           for (integerLocal6 = 0; integerLocal6 < 16; integerLocal6++) {
             if (mixedSupport141Argument1.booleanArrayState0012[integerLocal6]) {
               for (integerLocal7 = 0; integerLocal7 < 16; integerLocal7++) {
-                integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal3 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
                 if (integerLocal3 == 1) {
                   mixedSupport141Argument1.booleanArrayState0013[integerLocal6 * 16 + integerLocal7] = true;
                 }
               }
             }
           }
-          MixedSupport120.performAction1580(mixedSupport141Argument1);
+          Bzip2Decompressor.buildSymbolMap(mixedSupport141Argument1);
           integerLocal9 = mixedSupport141Argument1.integerState0872 + 2;
-          integerLocal10 = MixedSupport120.computeInteger1576(3, mixedSupport141Argument1);
-          integerLocal11 = MixedSupport120.computeInteger1576(15, mixedSupport141Argument1);
+          integerLocal10 = Bzip2Decompressor.readBits(3, mixedSupport141Argument1);
+          integerLocal11 = Bzip2Decompressor.readBits(15, mixedSupport141Argument1);
           integerLocal6 = 0;
           while (integerLocal6 < integerLocal11) {
             integerLocal7 = 0;
             while (true) {
-              integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+              integerLocal3 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
               if (integerLocal3 != 0) {
                 integerLocal7++;
                 continue;
@@ -289,7 +289,7 @@ final class MixedSupport120 {
           }
           integerLocal8 = 0;
           while (integerLocal8 < integerLocal10) {
-            integerLocal19 = MixedSupport120.computeInteger1576(5, mixedSupport141Argument1);
+            integerLocal19 = Bzip2Decompressor.readBits(5, mixedSupport141Argument1);
             integerLocal6 = 0;
             while (true) {
               if (integerLocal6 >= integerLocal9) {
@@ -297,13 +297,13 @@ final class MixedSupport120 {
                 break;
               }
               while (true) {
-                integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal3 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
                 if (integerLocal3 == 0) {
                   mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6] = (byte)integerLocal19;
                   integerLocal6++;
                   break;
                 }
-                integerLocal3 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal3 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
                 if (integerLocal3 != 0) {
                   integerLocal19--;
                   continue;
@@ -323,7 +323,7 @@ final class MixedSupport120 {
                 integerLocal4 = mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8][integerLocal6];
               }
             }
-            MixedSupport120.performAction1579(mixedSupport141Argument1.integerArrayArrayState0027[integerLocal8], mixedSupport141Argument1.integerArrayArrayState0028[integerLocal8], mixedSupport141Argument1.integerArrayArrayState0026[integerLocal8], mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8], integerLocal4, integerLocal5, integerLocal9);
+            Bzip2Decompressor.buildHuffmanDecodeTables(mixedSupport141Argument1.integerArrayArrayState0027[integerLocal8], mixedSupport141Argument1.integerArrayArrayState0028[integerLocal8], mixedSupport141Argument1.integerArrayArrayState0026[integerLocal8], mixedSupport141Argument1.byteArrayArrayState0012[integerLocal8], integerLocal4, integerLocal5, integerLocal9);
             mixedSupport141Argument1.integerArrayState0251[integerLocal8] = integerLocal4;
           }
           integerLocal12 = mixedSupport141Argument1.integerState0872 + 1;
@@ -352,10 +352,10 @@ final class MixedSupport120 {
           }
           integerLocal14--;
           integerLocal20 = integerLocal24;
-          integerLocal21 = MixedSupport120.computeInteger1576(integerLocal20, mixedSupport141Argument1);
+          integerLocal21 = Bzip2Decompressor.readBits(integerLocal20, mixedSupport141Argument1);
           while (integerLocal21 > ((int[]) (objectLocal25))[integerLocal20]) {
             integerLocal20++;
-            integerLocal22 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+            integerLocal22 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
             integerLocal21 = integerLocal21 << 1 | integerLocal22;
           }
           integerLocal15 = ((int[]) (objectLocal27))[integerLocal21 - ((int[]) (objectLocal26))[integerLocal20]];
@@ -383,7 +383,7 @@ final class MixedSupport120 {
               mixedSupport141Argument1.integerState0871 = mixedSupport141Argument1.integerState0871 >> 8;
               mixedSupport141Argument1.integerState0864 = mixedSupport141Argument1.integerState0864 + 1;
               mixedSupport141Argument1.integerState0860 = integerLocal16;
-              MixedSupport120.performAction1581(mixedSupport141Argument1);
+              Bzip2Decompressor.writeDecodedRuns(mixedSupport141Argument1);
               if (mixedSupport141Argument1.integerState0864 == mixedSupport141Argument1.integerState0860 + 1 &&
                 mixedSupport141Argument1.integerState0867 == 0) {
                 integerLocal28 = 1;
@@ -455,10 +455,10 @@ final class MixedSupport120 {
               }
               integerLocal14--;
               integerLocal20 = integerLocal24;
-              integerLocal21 = MixedSupport120.computeInteger1576(integerLocal20, mixedSupport141Argument1);
+              integerLocal21 = Bzip2Decompressor.readBits(integerLocal20, mixedSupport141Argument1);
               while (integerLocal21 > ((int[]) (objectLocal25))[integerLocal20]) {
                 integerLocal20++;
-                integerLocal22 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal22 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
                 integerLocal21 = integerLocal21 << 1 | integerLocal22;
               }
               integerLocal15 = ((int[]) (objectLocal27))[integerLocal21 - ((int[]) (objectLocal26))[integerLocal20]];
@@ -486,10 +486,10 @@ final class MixedSupport120 {
               }
               integerLocal14--;
               integerLocal20 = integerLocal24;
-              integerLocal21 = MixedSupport120.computeInteger1576(integerLocal20, mixedSupport141Argument1);
+              integerLocal21 = Bzip2Decompressor.readBits(integerLocal20, mixedSupport141Argument1);
               while (integerLocal21 > ((int[]) (objectLocal25))[integerLocal20]) {
                 integerLocal20++;
-                integerLocal22 = MixedSupport120.computeByte1583(mixedSupport141Argument1);
+                integerLocal22 = Bzip2Decompressor.readBit(mixedSupport141Argument1);
                 integerLocal21 = integerLocal21 << 1 | integerLocal22;
               }
               integerLocal15 = ((int[]) (objectLocal27))[integerLocal21 - ((int[]) (objectLocal26))[integerLocal20]];
@@ -507,7 +507,7 @@ final class MixedSupport120 {
         }
     }
 
-    private final static void performAction1579(int[] integerArrayArgument1, int[] integerArrayArgument2, int[] integerArrayArgument3, byte[] byteArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
+    private final static void buildHuffmanDecodeTables(int[] integerArrayArgument1, int[] integerArrayArgument2, int[] integerArrayArgument3, byte[] byteArrayArgument4, int integerArgument5, int integerArgument6, int integerArgument7) {
         int integerLocal1 = 0;
         int cachedIntegerLocal2 = 0;
         int integerLocal3;
@@ -552,7 +552,7 @@ final class MixedSupport120 {
         }
     }
 
-    private final static void performAction1580(Bzip2State mixedSupport141Argument1) {
+    private final static void buildSymbolMap(Bzip2State mixedSupport141Argument1) {
         int integerLocal1 = 0;
         mixedSupport141Argument1.integerState0872 = 0;
         for (integerLocal1 = 0; integerLocal1 < 256; integerLocal1++) {
@@ -567,8 +567,8 @@ final class MixedSupport120 {
         mixedSupport141State0001 = null;
     }
 
-    private final static byte computeByte1583(Bzip2State mixedSupport141Argument1) {
-        return (byte)MixedSupport120.computeInteger1576(1, mixedSupport141Argument1);
+    private final static byte readBit(Bzip2State mixedSupport141Argument1) {
+        return (byte)Bzip2Decompressor.readBits(1, mixedSupport141Argument1);
     }
 
     final static int decompress(byte[] byteArrayArgument1, int integerArgument2, byte[] byteArrayArgument3, int integerArgument4, int integerArgument5) {
@@ -586,7 +586,7 @@ final class MixedSupport120 {
           mixedSupport141State0001.integerState0861 = 0;
           mixedSupport141State0001.integerState0874 = 0;
           mixedSupport141State0001.integerState0870 = 0;
-          MixedSupport120.performAction1582(mixedSupport141State0001);
+          Bzip2Decompressor.decodeBlocks(mixedSupport141State0001);
           integerArgument2 = integerArgument2 - mixedSupport141State0001.integerState0865;
           mixedSupport141State0001.byteArrayState0037 = null;
           mixedSupport141State0001.byteArrayState0034 = null;
@@ -595,11 +595,11 @@ final class MixedSupport120 {
         return stackIntegerLocal1;
     }
 
-    private final static byte computeByte1577(Bzip2State mixedSupport141Argument1) {
-        return (byte)MixedSupport120.computeInteger1576(8, mixedSupport141Argument1);
+    private final static byte readByte(Bzip2State mixedSupport141Argument1) {
+        return (byte)Bzip2Decompressor.readBits(8, mixedSupport141Argument1);
     }
 
-    private final static int computeInteger1576(int integerArgument1, Bzip2State mixedSupport141Argument2) {
+    private final static int readBits(int integerArgument1, Bzip2State mixedSupport141Argument2) {
         int integerLocal1;
         while (mixedSupport141Argument2.integerState0868 < integerArgument1) {
           mixedSupport141Argument2.integerState0861 = mixedSupport141Argument2.integerState0861 << 8 | mixedSupport141Argument2.byteArrayState0037[mixedSupport141Argument2.integerState0863] & 255;

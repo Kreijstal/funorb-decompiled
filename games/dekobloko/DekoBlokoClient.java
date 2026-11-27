@@ -1463,7 +1463,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           return;
         }
         try {
-          MixedSupport120.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(true);
           MixedSupport071.clearStaticReferences(true);
           MixedSupport130.clearStaticReferences((byte) 111);

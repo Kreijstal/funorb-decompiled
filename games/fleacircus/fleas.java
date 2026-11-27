@@ -1089,7 +1089,7 @@ public final class fleas extends NetworkGameClient {
           lf.clearStaticReferences((byte) 65);
           fl.clearStaticReferences(26113);
           ByteStorage.clearStaticReferences((byte) -75);
-          fe.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.a(true);
           fg.clearDeclaredStaticReferences(-5);
           gf.clearStaticReferences(-46);

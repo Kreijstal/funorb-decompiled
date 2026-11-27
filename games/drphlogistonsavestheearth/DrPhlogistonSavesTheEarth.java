@@ -622,7 +622,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           rc.a(2);
           qf.clearStaticReferences((byte) 64);
           ByteStorage.clearStaticReferences(67);
-          gh.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           lc.resetStaticState((byte) 111);
           sc.a(-63);
           ki.clearStaticReferences(true);

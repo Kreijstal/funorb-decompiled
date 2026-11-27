@@ -1246,7 +1246,7 @@ public final class Transmogrify extends SessionGameApplet {
           rl.clearStaticReferences(7);
           db.a(8192);
           ByteStorage.clearStaticReferences(48);
-          gf.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences((byte) -37);
           ch.resetStaticState(807);
           ll.releaseDeclaredStaticReferences(5);

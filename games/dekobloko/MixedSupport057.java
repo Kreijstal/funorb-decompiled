@@ -138,7 +138,7 @@ final class MixedSupport057 {
                   MixedSupport065.gzipDecompressorState0001.decompress((byte) 111, packetBufferLocal8, byteArrayLocal11);
                 }
               } else {
-                MixedSupport120.decompress(byteArrayLocal11, integerLocal5, byteArrayArgument1, integerLocal3, 9);
+                Bzip2Decompressor.decompress(byteArrayLocal11, integerLocal5, byteArrayArgument1, integerLocal3, 9);
               }
               stackByteArrayLocal13 = byteArrayLocal7;
               return stackByteArrayLocal13;

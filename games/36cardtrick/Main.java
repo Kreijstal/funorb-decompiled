@@ -2153,7 +2153,7 @@ public final class Main extends c {
           ke.clearStaticReferences((byte) -124);
           ByteArrayStore.clearStaticReferences(-118);
           ri.clearStaticReferences(-2);
-          dc.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(param0 + 18002);
           a.resetStaticState(param0 ^ -14282);
           cd.clearStaticReferences((byte) 104);

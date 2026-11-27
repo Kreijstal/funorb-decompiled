@@ -51,7 +51,7 @@ final class in {
                   IntrusiveNode.field_g.decompress(var9, true, var12);
                 }
               } else {
-                va.decompress(var12, var5_int, param0, var4, 9);
+                Bzip2Decompressor.decompress(var12, var5_int, param0, var4, 9);
               }
               stackIn_19_0 = var6;
               return stackIn_19_0;

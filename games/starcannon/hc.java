@@ -74,7 +74,7 @@ final class hc {
                   mj.field_b.decompress(var9, true, var12);
                 }
               } else {
-                nk.decompress(var12, var5_int, param1, var4, 9);
+                Bzip2Decompressor.decompress(var12, var5_int, param1, var4, 9);
               }
               stackIn_22_0 = var6;
               return stackIn_22_0;

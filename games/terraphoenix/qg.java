@@ -49,7 +49,7 @@ final class qg {
                   wj.field_c.decompress(var9, 10, var12);
                 }
               } else {
-                ih.decompress(var12, var5_int, param1, var4, 9);
+                Bzip2Decompressor.decompress(var12, var5_int, param1, var4, 9);
               }
               stackIn_19_0 = var6;
               return stackIn_19_0;

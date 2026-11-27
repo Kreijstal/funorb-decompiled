@@ -500,7 +500,7 @@ public final class OrbDefence extends NetworkGameClient {
         DelegatingCanvas.clearStaticReferences((byte) 3);
         bh.clearStaticReferences(-21000);
         ByteStorage.clearStaticReferences(14);
-        ac.clearStaticReferences();
+        Bzip2Decompressor.clearStaticReferences();
         Bzip2State.clearStaticReferences(16);
         ud.clearStaticReferences(true);
         q.a(109);

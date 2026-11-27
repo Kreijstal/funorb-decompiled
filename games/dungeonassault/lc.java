@@ -298,7 +298,7 @@ final class lc {
               var11 = var13;
               var6 = var11;
               if (1 == var3) {
-                ej.decompress(var13, var5, param0, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);
               } else {
                 var7 = FullscreenFocusCanvas.field_f;
                 synchronized (var7) {

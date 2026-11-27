@@ -2973,7 +2973,7 @@ public final class stellarshard extends rb implements cf {
           e.clearStaticReferences(186);
           vj.a((byte) 104);
           ByteStorage.b(64);
-          j.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(true);
           lb.clearStaticReferences((byte) 122);
           og.clearStaticReferences((byte) 78);

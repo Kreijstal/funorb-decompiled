@@ -94,7 +94,7 @@ abstract class nf extends DualLinkNode {
                   tj.field_e.decompress(var13, 693, var9);
                 }
               } else {
-                ac.decompress(var13, var5, param0, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);
               }
               stackIn_24_0 = var6;
               return stackIn_24_0;

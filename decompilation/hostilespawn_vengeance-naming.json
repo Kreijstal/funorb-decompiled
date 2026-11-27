@@ -417,7 +417,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:wf.c(LBzip2State;)V#0"
+      "renamedSymbol": "B:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0"
     },
     {
       "symbol": "B:wj.a(B)V#0",
@@ -962,6 +962,14 @@
       "evidence": "Per-group and per-file id, size and digest arrays describing an archive.",
       "confidence": "reviewed",
       "renamedSymbol": "C:ArchiveIndex"
+    },
+    {
+      "symbol": "C:wf",
+      "originalName": "wf",
+      "to": "Bzip2Decompressor",
+      "evidence": "Whole source-purpose review: final static Bzip2 decompression utility; one private typed state singleton allocated at class initialization; synchronized byte-array entry, bit/byte readers, used-symbol map, canonical Huffman tables, move-to-front block decoding, inverse-BWT/run output and retained cleanup all individually read or linked to exact earlier human-read bodies. All incoming selected helper references lie inside exact reviewed bodies. Keep the state allocation and class-init behavior, shared table ownership, locks, source/output/index/count/cast domains, array aliasing, partial writes, evaluation/exception order and all literals. Rename identifiers only; add no format checks, repairs, CRC handling or guards.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Bzip2Decompressor"
     },
     {
       "symbol": "C:wg",
@@ -5281,7 +5289,23 @@
       "to": "clearStaticReferences",
       "evidence": "Complete cleanup statement proof reviewed: 1 null writes to 1 declared own static reference fields; only parameter guards, returns and braces otherwise. Own-field qualification and absent parameter/default-local shadow establish every target. Preserve partial/duplicate cleanup and order. Published pre-rename body SHA256 9afa273f48909703d70946c71a77fe437d3cbdc81c1721b4ad5d3a637c6b8b11.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:wf.clearStaticReferences()V"
+      "renamedSymbol": "M:Bzip2Decompressor.clearStaticReferences()V"
+    },
+    {
+      "symbol": "M:wf.a(ILck;)I",
+      "originalName": "a",
+      "to": "readBits",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readBits. Exact earlier human-read state bit-reader contract reused by game, symbol, source SHA and body SHA; preserve the original signed-int shift masking, byte&255 input, pointer/count/store/exception ordering and supplied primitive domain. Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.readBits(ILBzip2State;)I"
+    },
+    {
+      "symbol": "M:wf.a(Lck;)V",
+      "originalName": "a",
+      "to": "buildSymbolMap",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 buildSymbolMap. {\"behavior\":\"Reset the used-symbol count, scan 256 usage booleans and append each used index as a byte to the sequential symbol map.\",\"preserve\":\"Keep count reset before traversal, boolean read before map store, and count increment after the store. Preserve signed casts, null/index exceptions and partial writes; do not clear unused map entries.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V"
     },
     {
       "symbol": "M:wf.a([BI[BII)I",
@@ -5289,7 +5313,47 @@
       "to": "decompress",
       "evidence": "Source-purpose review: Source-reviewed Bzip2 byte-array decode entry;exact earlier human body review source4 reused by game/symbol/source/body SHA;all incoming caller contexts human-read. Bzip2 byte-array decode entry uses shared state under captured lock,repeatedly reads original global state field,sets input/output/offset/remaining/bit counters in exact original order,calls block decoder,returns original requested-minus-remaining int,and clears input/output only on normal return. Preserve unused supplied int,full primitive domains,all casts,locks,partial effects,reference/exception order and literals. Container caller retains format1 dispatch,output allocation,unused return,all arguments including source offset9,and adjacent gzip branch.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:wf.decompress([BI[BII)I"
+      "renamedSymbol": "M:Bzip2Decompressor.decompress([BI[BII)I"
+    },
+    {
+      "symbol": "M:wf.a([I[I[I[BIII)V",
+      "originalName": "a",
+      "to": "buildHuffmanDecodeTables",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 buildHuffmanDecodeTables. {\"behavior\":\"Build canonical Huffman permutation, cumulative bases and code limits from supplied byte code lengths and integer bounds.\",\"preserve\":\"Keep ascending length/symbol traversal, the 23-entry initialization loops, signed byte indexing, prefix sums, shifts and integer overflow. Preserve all supplied primitive domains and aliasing among the four arrays, exact store/read and exception order. No clamping, validation, array replacement or reordering.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V"
+    },
+    {
+      "symbol": "M:wf.b(Lck;)B",
+      "originalName": "b",
+      "to": "readByte",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readByte. {\"behavior\":\"Call the bound bit reader with width 8 and cast its result to a signed Java byte.\",\"preserve\":\"Preserve the same state argument, call and cast. No unsigned interpretation, masking, guards or changes to failure order.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.readByte(LBzip2State;)B"
+    },
+    {
+      "symbol": "M:wf.c(Lck;)V",
+      "originalName": "c",
+      "to": "writeDecodedRuns",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 writeDecodedRuns. {\"behavior\":\"Resume inverse-BWT traversal and expand repeated-byte runs into the supplied output array until output is exhausted or the block is drained, then save progress.\",\"preserve\":\"Keep initial state and global-table read order, local cached table aliases, signed byte comparisons/casts, arithmetic right shifts and (byte & 255) + 4 run count. Retain every output store before its pointer/count updates, every labelled continuation, the zero-output pending-run branches, the empty cumulative-count comparison, and the ordered trailing state/global writes. Preserve the full signed-int domain, overflow, null/index failures and partial effects; add no input repairs or new guards.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V"
+    },
+    {
+      "symbol": "M:wf.d(Lck;)B",
+      "originalName": "d",
+      "to": "readBit",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 readBit. {\"behavior\":\"Call the bound bit reader with width 1 and cast its result to byte.\",\"preserve\":\"Preserve the call and cast for the full supplied state domain, including null or malformed state; add no validation.\"} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.readBit(LBzip2State;)B"
+    },
+    {
+      "symbol": "M:wf.e(Lck;)V",
+      "originalName": "e",
+      "to": "decodeBlocks",
+      "evidence": "Source-purpose review: Exact source/body and compiler-bound caller review: Bzip2 decodeBlocks. {\"behavior\":\"Decode Bzip2 blocks using the state bit reader, used-symbol map, Huffman selectors/tables and move-to-front runs, build the inverse-BWT table, and invoke the output run writer. Continue only while the completed block is fully drained.\",\"preserve\":[\"Retain assignment of block-size multiplier 1 before testing the shared table for null; allocate multiplier * 100000 only when null and keep allocation failure/class initialization timing. Do not resize a non-null table.\",\"Keep the first byte == 23 early return, the remaining header/CRC byte consumption and the consumed randomization bit with its empty conditional. This source does not validate CRC or implement a new randomized-block repair.\",\"Preserve the three ordered original-pointer shifts/masks; 16-group and 256-symbol flag writes; 3-bit table count, 15-bit selector count, unary selector decoding and per-block new byte[6] allocation.\",\"Preserve byte casts in selector counters and move-to-front selectors, signed byte indexing, 5-bit starting lengths, bit-driven length adjustments, signed length minima/maxima and exact Huffman helper argument order.\",\"Keep 50-symbol selector group advancement, the existing length/code comparisons, Object-to-int[] casts, mask/shift arithmetic and full signed-int overflow behavior.\",\"Keep the 4096-entry move-to-front staging layout, 16-element block shifts, unrolled four-store updates, and rebuild only when the existing head comparison reaches zero.\",\"Keep run-symbol 0/1 accumulation from -1 with doubled integer weights, histogram updates and the ordered stores to the shared block array.\",\"Retain end-of-block cumulative-table construction, OR of the original index shifted by 8 into the shared array, pointer initialization and byte casts, then the exact run-writer call and fully-drained comparison.\",\"Do not change primitive types, method modifiers, any source operation, evaluation order, local aliases, array/state partial writes, null/index/cast/allocation exception behavior, or add guards, validation, CRC checks or repairs.\"]} Identifier-only change; retain modifiers, primitive types, class initialization, all literals, aliasing, partial effects and original exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Bzip2Decompressor.decodeBlocks(LBzip2State;)V"
     },
     {
       "symbol": "M:wg.a(Ljava/lang/Throwable;Ljava/lang/String;)Lkc;",
@@ -6000,7 +6064,7 @@
     },
     {
       "symbol": "B:wf.c(Lck;)V#0",
-      "renamedSymbol": "B:wf.c(LBzip2State;)V#0",
+      "renamedSymbol": "B:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0",
       "originalName": "L0",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -9641,9 +9705,9 @@
     },
     {
       "symbol": "C:wf",
-      "renamedSymbol": "C:wf",
+      "renamedSymbol": "C:Bzip2Decompressor",
       "originalName": "wf",
-      "renamedName": "wf",
+      "renamedName": "Bzip2Decompressor",
       "declaration": {
         "file": "wf.java",
         "start": 50,
@@ -41497,7 +41561,7 @@
     },
     {
       "symbol": "F:wf.field_a:Lck;",
-      "renamedSymbol": "F:wf.field_a:LBzip2State;",
+      "renamedSymbol": "F:Bzip2Decompressor.field_a:LBzip2State;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -200381,7 +200445,7 @@
     },
     {
       "symbol": "L:wf.a(ILck;)I#0",
-      "renamedSymbol": "L:wf.a(ILBzip2State;)I#0",
+      "renamedSymbol": "L:Bzip2Decompressor.readBits(ILBzip2State;)I#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -200392,7 +200456,7 @@
     },
     {
       "symbol": "L:wf.a(Lck;)V#0",
-      "renamedSymbol": "L:wf.a(LBzip2State;)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -200403,7 +200467,7 @@
     },
     {
       "symbol": "L:wf.a([BI[BII)I#0",
-      "renamedSymbol": "L:wf.decompress([BI[BII)I#0",
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#0",
       "originalName": "stackIn_2_0",
       "renamedName": "stackIn_2_0",
       "declaration": {
@@ -200414,7 +200478,7 @@
     },
     {
       "symbol": "L:wf.a([BI[BII)I#1",
-      "renamedSymbol": "L:wf.decompress([BI[BII)I#1",
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -200425,7 +200489,7 @@
     },
     {
       "symbol": "L:wf.a([BI[BII)I#2",
-      "renamedSymbol": "L:wf.decompress([BI[BII)I#2",
+      "renamedSymbol": "L:Bzip2Decompressor.decompress([BI[BII)I#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -200436,7 +200500,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#0",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -200447,7 +200511,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#1",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#1",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -200458,7 +200522,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#10",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#10",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#10",
       "originalName": "var8Lifetime6",
       "renamedName": "var8Lifetime6",
       "declaration": {
@@ -200469,7 +200533,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#2",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#2",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -200480,7 +200544,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#3",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#3",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#3",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -200491,7 +200555,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#4",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#4",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -200502,7 +200566,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#5",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#5",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#5",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -200513,7 +200577,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#6",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#6",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#6",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -200524,7 +200588,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#7",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#7",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#7",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -200535,7 +200599,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#8",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#8",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#8",
       "originalName": "var8Lifetime4",
       "renamedName": "var8Lifetime4",
       "declaration": {
@@ -200546,7 +200610,7 @@
     },
     {
       "symbol": "L:wf.a([I[I[I[BIII)V#9",
-      "renamedSymbol": "L:wf.a([I[I[I[BIII)V#9",
+      "renamedSymbol": "L:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#9",
       "originalName": "var8Lifetime5",
       "renamedName": "var8Lifetime5",
       "declaration": {
@@ -200557,7 +200621,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#0",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -200568,7 +200632,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#1",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#1",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -200579,7 +200643,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#10",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#10",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -200590,7 +200654,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#11",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#11",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -200601,7 +200665,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#12",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#12",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -200612,7 +200676,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#13",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#13",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#13",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -200623,7 +200687,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#14",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#14",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#14",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -200634,7 +200698,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#15",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#15",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#15",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -200645,7 +200709,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#2",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#2",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -200656,7 +200720,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#3",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#3",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -200667,7 +200731,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#4",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#4",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#4",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -200678,7 +200742,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#5",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#5",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -200689,7 +200753,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#6",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#6",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -200700,7 +200764,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#7",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#7",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -200711,7 +200775,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#8",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#8",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -200722,7 +200786,7 @@
     },
     {
       "symbol": "L:wf.c(Lck;)V#9",
-      "renamedSymbol": "L:wf.c(LBzip2State;)V#9",
+      "renamedSymbol": "L:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -200733,7 +200797,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#0",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#0",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#0",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -200744,7 +200808,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#1",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#1",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#1",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -200755,7 +200819,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#10",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#10",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -200766,7 +200830,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#11",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#11",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -200777,7 +200841,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#12",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#12",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -200788,7 +200852,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#13",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#13",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -200799,7 +200863,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#14",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#14",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -200810,7 +200874,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#15",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#15",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#15",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -200821,7 +200885,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#16",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#16",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#16",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -200832,7 +200896,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#17",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#17",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#17",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -200843,7 +200907,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#18",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#18",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -200854,7 +200918,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#19",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#19",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#19",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -200865,7 +200929,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#2",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#2",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -200876,7 +200940,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#20",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#20",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#20",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -200887,7 +200951,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#21",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#21",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#21",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -200898,7 +200962,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#22",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#22",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#22",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -200909,7 +200973,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#23",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#23",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#23",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -200920,7 +200984,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#24",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#24",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#24",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -200931,7 +200995,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#25",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#25",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#25",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -200942,7 +201006,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#26",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#26",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#26",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -200953,7 +201017,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#27",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#27",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#27",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -200964,7 +201028,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#28",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#28",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#28",
       "originalName": "var27_ref_byte__",
       "renamedName": "var27_ref_byte__",
       "declaration": {
@@ -200975,7 +201039,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#29",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#29",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#29",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -200986,7 +201050,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#3",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#3",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -200997,7 +201061,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#30",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#30",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#30",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -201008,7 +201072,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#31",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#31",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#31",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -201019,7 +201083,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#32",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#32",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#32",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -201030,7 +201094,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#33",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#33",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#33",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -201041,7 +201105,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#34",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#34",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#34",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -201052,7 +201116,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#35",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#35",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#35",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -201063,7 +201127,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#36",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#36",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#36",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -201074,7 +201138,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#37",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#37",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#37",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -201085,7 +201149,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#38",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#38",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#38",
       "originalName": "var36",
       "renamedName": "var36",
       "declaration": {
@@ -201096,7 +201160,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#39",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#39",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#39",
       "originalName": "var37",
       "renamedName": "var37",
       "declaration": {
@@ -201107,7 +201171,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#4",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#4",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#4",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -201118,7 +201182,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#5",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#5",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#5",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -201129,7 +201193,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#6",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#6",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -201140,7 +201204,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#7",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#7",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -201151,7 +201215,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#8",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#8",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -201162,7 +201226,7 @@
     },
     {
       "symbol": "L:wf.e(Lck;)V#9",
-      "renamedSymbol": "L:wf.e(LBzip2State;)V#9",
+      "renamedSymbol": "L:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -231874,7 +231938,7 @@
     },
     {
       "symbol": "M:wf.a()V",
-      "renamedSymbol": "M:wf.clearStaticReferences()V",
+      "renamedSymbol": "M:Bzip2Decompressor.clearStaticReferences()V",
       "originalName": "a",
       "renamedName": "clearStaticReferences",
       "declaration": {
@@ -231885,9 +231949,9 @@
     },
     {
       "symbol": "M:wf.a(ILck;)I",
-      "renamedSymbol": "M:wf.a(ILBzip2State;)I",
+      "renamedSymbol": "M:Bzip2Decompressor.readBits(ILBzip2State;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "readBits",
       "declaration": {
         "file": "wf.java",
         "start": 296,
@@ -231896,9 +231960,9 @@
     },
     {
       "symbol": "M:wf.a(Lck;)V",
-      "renamedSymbol": "M:wf.a(LBzip2State;)V",
+      "renamedSymbol": "M:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "buildSymbolMap",
       "declaration": {
         "file": "wf.java",
         "start": 878,
@@ -231907,7 +231971,7 @@
     },
     {
       "symbol": "M:wf.a([BI[BII)I",
-      "renamedSymbol": "M:wf.decompress([BI[BII)I",
+      "renamedSymbol": "M:Bzip2Decompressor.decompress([BI[BII)I",
       "originalName": "a",
       "renamedName": "decompress",
       "declaration": {
@@ -231918,9 +231982,9 @@
     },
     {
       "symbol": "M:wf.a([I[I[I[BIII)V",
-      "renamedSymbol": "M:wf.a([I[I[I[BIII)V",
+      "renamedSymbol": "M:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "buildHuffmanDecodeTables",
       "declaration": {
         "file": "wf.java",
         "start": 2019,
@@ -231929,9 +231993,9 @@
     },
     {
       "symbol": "M:wf.b(Lck;)B",
-      "renamedSymbol": "M:wf.b(LBzip2State;)B",
+      "renamedSymbol": "M:Bzip2Decompressor.readByte(LBzip2State;)B",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "readByte",
       "declaration": {
         "file": "wf.java",
         "start": 207,
@@ -231940,9 +232004,9 @@
     },
     {
       "symbol": "M:wf.c(Lck;)V",
-      "renamedSymbol": "M:wf.c(LBzip2State;)V",
+      "renamedSymbol": "M:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "writeDecodedRuns",
       "declaration": {
         "file": "wf.java",
         "start": 15986,
@@ -231951,9 +232015,9 @@
     },
     {
       "symbol": "M:wf.d(Lck;)B",
-      "renamedSymbol": "M:wf.d(LBzip2State;)B",
+      "renamedSymbol": "M:Bzip2Decompressor.readBit(LBzip2State;)B",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "readBit",
       "declaration": {
         "file": "wf.java",
         "start": 117,
@@ -231962,9 +232026,9 @@
     },
     {
       "symbol": "M:wf.e(Lck;)V",
-      "renamedSymbol": "M:wf.e(LBzip2State;)V",
+      "renamedSymbol": "M:Bzip2Decompressor.decodeBlocks(LBzip2State;)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "decodeBlocks",
       "declaration": {
         "file": "wf.java",
         "start": 3718,
@@ -300085,7 +300149,7 @@
     },
     {
       "symbol": "P:wf.a(ILck;)I#0",
-      "renamedSymbol": "P:wf.a(ILBzip2State;)I#0",
+      "renamedSymbol": "P:Bzip2Decompressor.readBits(ILBzip2State;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300096,7 +300160,7 @@
     },
     {
       "symbol": "P:wf.a(ILck;)I#1",
-      "renamedSymbol": "P:wf.a(ILBzip2State;)I#1",
+      "renamedSymbol": "P:Bzip2Decompressor.readBits(ILBzip2State;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300107,7 +300171,7 @@
     },
     {
       "symbol": "P:wf.a(Lck;)V#0",
-      "renamedSymbol": "P:wf.a(LBzip2State;)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.buildSymbolMap(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300118,7 +300182,7 @@
     },
     {
       "symbol": "P:wf.a([BI[BII)I#0",
-      "renamedSymbol": "P:wf.decompress([BI[BII)I#0",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300129,7 +300193,7 @@
     },
     {
       "symbol": "P:wf.a([BI[BII)I#1",
-      "renamedSymbol": "P:wf.decompress([BI[BII)I#1",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300140,7 +300204,7 @@
     },
     {
       "symbol": "P:wf.a([BI[BII)I#2",
-      "renamedSymbol": "P:wf.decompress([BI[BII)I#2",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -300151,7 +300215,7 @@
     },
     {
       "symbol": "P:wf.a([BI[BII)I#3",
-      "renamedSymbol": "P:wf.decompress([BI[BII)I#3",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -300162,7 +300226,7 @@
     },
     {
       "symbol": "P:wf.a([BI[BII)I#4",
-      "renamedSymbol": "P:wf.decompress([BI[BII)I#4",
+      "renamedSymbol": "P:Bzip2Decompressor.decompress([BI[BII)I#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -300173,7 +300237,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#0",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300184,7 +300248,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#1",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#1",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -300195,7 +300259,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#2",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#2",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -300206,7 +300270,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#3",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#3",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -300217,7 +300281,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#4",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#4",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -300228,7 +300292,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#5",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#5",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -300239,7 +300303,7 @@
     },
     {
       "symbol": "P:wf.a([I[I[I[BIII)V#6",
-      "renamedSymbol": "P:wf.a([I[I[I[BIII)V#6",
+      "renamedSymbol": "P:Bzip2Decompressor.buildHuffmanDecodeTables([I[I[I[BIII)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -300250,7 +300314,7 @@
     },
     {
       "symbol": "P:wf.b(Lck;)B#0",
-      "renamedSymbol": "P:wf.b(LBzip2State;)B#0",
+      "renamedSymbol": "P:Bzip2Decompressor.readByte(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300261,7 +300325,7 @@
     },
     {
       "symbol": "P:wf.c(Lck;)V#0",
-      "renamedSymbol": "P:wf.c(LBzip2State;)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.writeDecodedRuns(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300272,7 +300336,7 @@
     },
     {
       "symbol": "P:wf.d(Lck;)B#0",
-      "renamedSymbol": "P:wf.d(LBzip2State;)B#0",
+      "renamedSymbol": "P:Bzip2Decompressor.readBit(LBzip2State;)B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -300283,7 +300347,7 @@
     },
     {
       "symbol": "P:wf.e(Lck;)V#0",
-      "renamedSymbol": "P:wf.e(LBzip2State;)V#0",
+      "renamedSymbol": "P:Bzip2Decompressor.decodeBlocks(LBzip2State;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -301178,7 +301242,7 @@
       "original": "HostileSpawn.java",
       "renamed": "HostileSpawn.java",
       "inputSha256": "e34f4e6f51eddc91b33ad239bb24116efc0c7f813d7f3d9ecfde44d7543a6e3d",
-      "outputSha256": "f8a8076a52a25b23628119d3dd427d4bab726c262dff4fdfc325dfab2ba08ca3",
+      "outputSha256": "9b787ebb8b594229e11ee17c4cd4ab09b59487a21c62bd4fee708ebf27b98f65",
       "edits": [
         {
           "start": 78,
@@ -304874,6 +304938,13 @@
           "symbol": "M:nj.b(B)V",
           "original": "b",
           "renamed": "clearStaticReferences"
+        },
+        {
+          "start": 55938,
+          "end": 55940,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 55941,
@@ -353057,7 +353128,7 @@
       "original": "ml.java",
       "renamed": "ml.java",
       "inputSha256": "de95b4ad334b1002ebfac90de90dab4d9b73921c9699c41d84177d84b8bff3fc",
-      "outputSha256": "78c8fe37dc3b024ea0e5ed3c151b6e1f5c66c617717fae6437b6459ee93d178f",
+      "outputSha256": "b7b3068a4e0cfa7e4bcd0886831e0ef4afd3a3e9bda126b3d5fff4be11c36b72",
       "edits": [
         {
           "start": 93,
@@ -353198,6 +353269,13 @@
           "symbol": "M:fh.a(I[BLvi;)V",
           "original": "a",
           "renamed": "decompress"
+        },
+        {
+          "start": 7220,
+          "end": 7222,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
         },
         {
           "start": 7223,
@@ -386003,16 +386081,30 @@
     },
     {
       "original": "wf.java",
-      "renamed": "wf.java",
+      "renamed": "Bzip2Decompressor.java",
       "inputSha256": "9c20d1116f243a0e832d41182eead918c5313e3345cecfa0a1fb4d11e13e776f",
-      "outputSha256": "447824cb6e998cf943a6be4f1af28af96d71ede3dadae2a0a2040fa082cd5ca5",
+      "outputSha256": "4f0c5ab6714e8072bb8d1a2356697b9d23bc9bd6ca83d7c6b55a8113d365535c",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
         {
           "start": 74,
           "end": 76,
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "Bzip2State"
+        },
+        {
+          "start": 117,
+          "end": 118,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
         },
         {
           "start": 119,
@@ -386022,6 +386114,27 @@
           "renamed": "Bzip2State"
         },
         {
+          "start": 153,
+          "end": 155,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 156,
+          "end": 157,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 207,
+          "end": 208,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
           "start": 209,
           "end": 211,
           "symbol": "C:ck",
@@ -386029,11 +386142,39 @@
           "renamed": "Bzip2State"
         },
         {
+          "start": 243,
+          "end": 245,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 246,
+          "end": 247,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 296,
+          "end": 297,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
           "start": 310,
           "end": 312,
           "symbol": "C:ck",
           "original": "ck",
           "renamed": "Bzip2State"
+        },
+        {
+          "start": 878,
+          "end": 879,
+          "symbol": "M:wf.a(Lck;)V",
+          "original": "a",
+          "renamed": "buildSymbolMap"
         },
         {
           "start": 880,
@@ -386057,6 +386198,34 @@
           "renamed": "decompress"
         },
         {
+          "start": 1784,
+          "end": 1786,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 1787,
+          "end": 1788,
+          "symbol": "M:wf.e(Lck;)V",
+          "original": "e",
+          "renamed": "decodeBlocks"
+        },
+        {
+          "start": 2019,
+          "end": 2020,
+          "symbol": "M:wf.a([I[I[I[BIII)V",
+          "original": "a",
+          "renamed": "buildHuffmanDecodeTables"
+        },
+        {
+          "start": 3718,
+          "end": 3719,
+          "symbol": "M:wf.e(Lck;)V",
+          "original": "e",
+          "renamed": "decodeBlocks"
+        },
+        {
           "start": 3720,
           "end": 3722,
           "symbol": "C:ck",
@@ -386076,6 +386245,370 @@
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 5198,
+          "end": 5200,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5201,
+          "end": 5202,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5289,
+          "end": 5291,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5292,
+          "end": 5293,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5320,
+          "end": 5322,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5323,
+          "end": 5324,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5351,
+          "end": 5353,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5354,
+          "end": 5355,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5382,
+          "end": 5384,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5385,
+          "end": 5386,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5413,
+          "end": 5415,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5416,
+          "end": 5417,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5444,
+          "end": 5446,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5447,
+          "end": 5448,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5475,
+          "end": 5477,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5478,
+          "end": 5479,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5506,
+          "end": 5508,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5509,
+          "end": 5510,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5537,
+          "end": 5539,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5540,
+          "end": 5541,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5568,
+          "end": 5570,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5571,
+          "end": 5572,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 5668,
+          "end": 5670,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5671,
+          "end": 5672,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5760,
+          "end": 5762,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5763,
+          "end": 5764,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5852,
+          "end": 5854,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5855,
+          "end": 5856,
+          "symbol": "M:wf.b(Lck;)B",
+          "original": "b",
+          "renamed": "readByte"
+        },
+        {
+          "start": 5992,
+          "end": 5994,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 5995,
+          "end": 5996,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 6429,
+          "end": 6431,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 6432,
+          "end": 6433,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 6605,
+          "end": 6607,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 6608,
+          "end": 6609,
+          "symbol": "M:wf.a(Lck;)V",
+          "original": "a",
+          "renamed": "buildSymbolMap"
+        },
+        {
+          "start": 6673,
+          "end": 6675,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 6676,
+          "end": 6677,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6707,
+          "end": 6709,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 6710,
+          "end": 6711,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 6847,
+          "end": 6849,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 6850,
+          "end": 6851,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 7779,
+          "end": 7781,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 7782,
+          "end": 7783,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 7994,
+          "end": 7996,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 7997,
+          "end": 7998,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 8193,
+          "end": 8195,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 8196,
+          "end": 8197,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 8793,
+          "end": 8795,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 8796,
+          "end": 8797,
+          "symbol": "M:wf.a([I[I[I[BIII)V",
+          "original": "a",
+          "renamed": "buildHuffmanDecodeTables"
+        },
+        {
+          "start": 9808,
+          "end": 9810,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 9811,
+          "end": 9812,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 9923,
+          "end": 9925,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 9926,
+          "end": 9927,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
         },
         {
           "start": 10603,
@@ -386113,6 +386646,20 @@
           "renamed": "NanoFrameTimer"
         },
         {
+          "start": 11225,
+          "end": 11227,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 11228,
+          "end": 11229,
+          "symbol": "M:wf.c(Lck;)V",
+          "original": "c",
+          "renamed": "writeDecodedRuns"
+        },
+        {
           "start": 13758,
           "end": 13760,
           "symbol": "C:lg",
@@ -386120,11 +386667,74 @@
           "renamed": "NanoFrameTimer"
         },
         {
+          "start": 14245,
+          "end": 14247,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 14248,
+          "end": 14249,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 14372,
+          "end": 14374,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 14375,
+          "end": 14376,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
+          "start": 15277,
+          "end": 15279,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 15280,
+          "end": 15281,
+          "symbol": "M:wf.a(ILck;)I",
+          "original": "a",
+          "renamed": "readBits"
+        },
+        {
+          "start": 15404,
+          "end": 15406,
+          "symbol": "C:wf",
+          "original": "wf",
+          "renamed": "Bzip2Decompressor"
+        },
+        {
+          "start": 15407,
+          "end": 15408,
+          "symbol": "M:wf.d(Lck;)B",
+          "original": "d",
+          "renamed": "readBit"
+        },
+        {
           "start": 15835,
           "end": 15837,
           "symbol": "C:lg",
           "original": "lg",
           "renamed": "NanoFrameTimer"
+        },
+        {
+          "start": 15986,
+          "end": 15987,
+          "symbol": "M:wf.c(Lck;)V",
+          "original": "c",
+          "renamed": "writeDecodedRuns"
         },
         {
           "start": 15988,
@@ -387885,10 +388495,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/hostilespawn_vengeance"
     },
-    "rulesSha256": "56de67c8a444c1c1275b3cf742ecb0058abe026a805144d5b87d5bb39fa226f9",
+    "rulesSha256": "b264ff2981fbd3355400a8ebc528bceed8d497c13e85f081d056219cf1eede14",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "7c43a30e1a665109a7dd73ec74076bee6cd233bdeeb3ec9d66c47c942b6842c0",
-    "outputTreeSha256": "b13fe17b19300c10265ba352f2853bc44ea65c440240032394fdaa4326c1a9bf",
+    "outputTreeSha256": "dd21b1c0665813e791012de4046e503efd407f2c399d50698e562e4b27b8f883",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

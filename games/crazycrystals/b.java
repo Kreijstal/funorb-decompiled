@@ -282,7 +282,7 @@ final class b {
               var11 = var13;
               var6 = var11;
               if (var3 == 1) {
-                di.decompress(var13, var5, param0, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);
               } else {
                 var7 = qg.field_s;
                 synchronized (var7) {

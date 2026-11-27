@@ -63,7 +63,7 @@ final class hm extends TextureOperator {
                   uo.field_g.decompress(var9, (byte) 88, var12);
                 }
               } else {
-                rj.decompress(var12, var5_int, param1, var4, 9);
+                Bzip2Decompressor.decompress(var12, var5_int, param1, var4, 9);
               }
               stackIn_22_0 = var6;
               return stackIn_22_0;

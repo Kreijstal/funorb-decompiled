@@ -1246,7 +1246,7 @@ public final class HostileSpawn extends NetworkGameClient {
           mf.b(-33);
           rg.clearStaticReferences(1);
           ByteStorage.clearStaticReferences((byte) -93);
-          wf.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences(-665);
           ng.clearStaticReferences(10448);
           hf.clearStaticReferences(false);

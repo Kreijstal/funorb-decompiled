@@ -97,7 +97,7 @@ final class jh {
                   g.field_k.decompress((byte) 97, var9, var13);
                 }
               } else {
-                gi.decompress(var13, var5, param0, var4, 9);
+                Bzip2Decompressor.decompress(var13, var5, param0, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;

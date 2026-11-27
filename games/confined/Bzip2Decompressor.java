@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa {
+final class Bzip2Decompressor {
     private static Bzip2State field_a;
 
-    private final static byte e(Bzip2State param0) {
-        return (byte)oa.a(8, param0);
+    private final static byte readByte(Bzip2State param0) {
+        return (byte)Bzip2Decompressor.readBits(8, param0);
     }
 
-    private final static void a(Bzip2State param0) {
+    private final static void buildSymbolMap(Bzip2State param0) {
         int var1 = 0;
         param0.field_e = 0;
         for (var1 = 0; var1 < 256; var1++) {
@@ -19,7 +19,7 @@ final class oa {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanDecodeTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -64,7 +64,7 @@ final class oa {
         }
     }
 
-    private final static void b(Bzip2State param0) {
+    private final static void writeDecodedRuns(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -195,7 +195,7 @@ final class oa {
         return;
     }
 
-    private final static void c(Bzip2State param0) {
+    private final static void decodeBlocks(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -267,31 +267,31 @@ final class oa {
           if (var26 == 0) {
             return;
           }
-          var1 = oa.e(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           if (var1 == 23) {
             return;
           }
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.e(param0);
-          var1 = oa.d(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readBit(param0);
           if (var1 == 0) {
           }
           param0.field_u = 0;
-          var1 = oa.e(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           param0.field_u = param0.field_u << 8 | var1 & 255;
-          var1 = oa.e(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           param0.field_u = param0.field_u << 8 | var1 & 255;
-          var1 = oa.e(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           param0.field_u = param0.field_u << 8 | var1 & 255;
           for (var4 = 0; var4 < 16; var4++) {
-            var1 = oa.d(param0);
+            var1 = Bzip2Decompressor.readBit(param0);
             if (var1 != 1) {
               param0.field_a[var4] = false;
             } else {
@@ -304,22 +304,22 @@ final class oa {
           for (var4 = 0; var4 < 16; var4++) {
             if (param0.field_a[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
-                var1 = oa.d(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 == 1) {
                   param0.field_y[var4 * 16 + var5] = true;
                 }
               }
             }
           }
-          oa.a(param0);
+          Bzip2Decompressor.buildSymbolMap(param0);
           var7 = param0.field_e + 2;
-          var8 = oa.a(3, param0);
-          var9 = oa.a(15, param0);
+          var8 = Bzip2Decompressor.readBits(3, param0);
+          var9 = Bzip2Decompressor.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
             while (true) {
-              var1 = oa.d(param0);
+              var1 = Bzip2Decompressor.readBit(param0);
               if (var1 != 0) {
                 var5++;
                 continue;
@@ -349,7 +349,7 @@ final class oa {
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = oa.a(5, param0);
+            var17 = Bzip2Decompressor.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -357,13 +357,13 @@ final class oa {
                 break;
               }
               while (true) {
-                var1 = oa.d(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 == 0) {
                   param0.field_w[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
-                var1 = oa.d(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 != 0) {
                   var17--;
                   continue;
@@ -383,7 +383,7 @@ final class oa {
                 var2 = param0.field_w[var6][var4];
               }
             }
-            oa.a(param0.field_l[var6], param0.field_r[var6], param0.field_q[var6], param0.field_w[var6], var2, var3, var7);
+            Bzip2Decompressor.buildHuffmanDecodeTables(param0.field_l[var6], param0.field_r[var6], param0.field_q[var6], param0.field_w[var6], var2, var3, var7);
             param0.field_g[var6] = var2;
           }
           var10 = param0.field_e + 1;
@@ -412,10 +412,10 @@ final class oa {
           }
           var12--;
           var18 = var22;
-          var19 = oa.a(var18, param0);
+          var19 = Bzip2Decompressor.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
-            var20 = oa.d(param0);
+            var20 = Bzip2Decompressor.readBit(param0);
             var19 = var19 << 1 | var20;
           }
           var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -443,7 +443,7 @@ final class oa {
               param0.field_G = param0.field_G >> 8;
               param0.field_c = param0.field_c + 1;
               param0.field_h = var14;
-              oa.b(param0);
+              Bzip2Decompressor.writeDecodedRuns(param0);
               if (param0.field_c == param0.field_h + 1 &&
                 param0.field_t == 0) {
                 var26 = 1;
@@ -515,10 +515,10 @@ final class oa {
               }
               var12--;
               var18 = var22;
-              var19 = oa.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = oa.d(param0);
+                var20 = Bzip2Decompressor.readBit(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -546,10 +546,10 @@ final class oa {
               }
               var12--;
               var18 = var22;
-              var19 = oa.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = oa.d(param0);
+                var20 = Bzip2Decompressor.readBit(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -582,7 +582,7 @@ final class oa {
           field_a.field_d = 0;
           field_a.field_F = 0;
           field_a.field_J = 0;
-          oa.c(field_a);
+          Bzip2Decompressor.decodeBlocks(field_a);
           param1 = param1 - field_a.field_v;
           field_a.field_A = null;
           field_a.field_z = null;
@@ -595,11 +595,11 @@ final class oa {
         field_a = null;
     }
 
-    private final static byte d(Bzip2State param0) {
-        return (byte)oa.a(1, param0);
+    private final static byte readBit(Bzip2State param0) {
+        return (byte)Bzip2Decompressor.readBits(1, param0);
     }
 
-    private final static int a(int param0, Bzip2State param1) {
+    private final static int readBits(int param0, Bzip2State param1) {
         int var2;
         while (param1.field_f < param0) {
           param1.field_d = param1.field_d << 8 | param1.field_A[param1.field_p] & 255;

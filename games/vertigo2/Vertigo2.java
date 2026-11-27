@@ -969,7 +969,7 @@ public final class Vertigo2 extends GameShell {
           TextureOperator.clearStaticReferences(true);
           pq.clearStaticReferences(-1);
           ByteStorage.clearStaticReferences(-1);
-          rj.clearStaticReferences();
+          Bzip2Decompressor.clearStaticReferences();
           Bzip2State.clearStaticReferences((byte) 111);
           al.a(-1216);
           gl.clearStaticReferences(true);

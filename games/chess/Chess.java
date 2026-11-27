@@ -1708,7 +1708,7 @@ public final class Chess extends gb {
         qm.clearStaticReferences((byte) -6);
         qh.clearStaticReferences(-99);
         ByteStorage.clearStaticReferences(-24420);
-        en.clearStaticReferences();
+        Bzip2Decompressor.clearStaticReferences();
         Bzip2State.clearStaticReferences(256);
         ql.clearStaticReferences((byte) 109);
         vh.a(102);

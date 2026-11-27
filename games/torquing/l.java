@@ -91,7 +91,7 @@ final class l {
               var10 = var12;
               var6 = var10;
               if (var3 == 1) {
-                fc.decompress(var12, var5_int, param1, var4, 9);
+                Bzip2Decompressor.decompress(var12, var5_int, param1, var4, 9);
               } else {
                 var7 = SecondaryNodeDequeIterator.field_d;
                 synchronized (var7) {
