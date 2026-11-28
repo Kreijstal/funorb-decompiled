@@ -61,7 +61,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (integerArgument1 != 21014) {
             pcmStreamMixerState0001 = (PcmStreamMixer) null;
           }
-          UiComponentPart025.nodeDequeState0027 = sceneWidgetArgument3.nodeDequeState0034;
+          RichTextWidget.nodeDequeState0027 = sceneWidgetArgument3.nodeDequeState0034;
           MixedSupport021.performAction0325(true);
         } catch (RuntimeException runtimeException) {
           throw ClientException.computeDiagnosticSupport0020365((Throwable) ((Object) runtimeException), "dg.A(" + integerArgument1 + ',' + (sceneWidgetArgument2 != null ? "{...}" : "null") + ',' + (sceneWidgetArgument3 != null ? "{...}" : "null") + ')');

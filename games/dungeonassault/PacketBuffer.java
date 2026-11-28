@@ -532,7 +532,7 @@ class PacketBuffer extends IntrusiveNode {
         q var1 = null;
         RuntimeException var1_ref = null;
         try {
-          var1 = new q(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], fe.field_g[0], jc.field_f[param0], jn.field_k[0], ub.field_q[0], uo.field_b);
+          var1 = new q(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], RichTextLayout.field_g[0], jc.field_f[param0], jn.field_k[0], ub.field_q[0], uo.field_b);
           sb.a(500);
           stackIn_1_0 = var1;
           return stackIn_1_0;
@@ -1291,11 +1291,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_welcome1,0", false);
                 if (var2 != null) {
-                  bh.field_J[0] = dj.a(var2, false);
+                  RichTextWidget.field_J[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_welcome1,1", false);
                 if (var2 != null) {
-                  bh.field_J[1] = dj.a(var2, param1);
+                  RichTextWidget.field_J[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_welcome2,0", param1);
                 if (null != var2) {
@@ -1507,7 +1507,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_placeroom1,1", false);
                 if (var2 != null) {
-                  tg.field_e[1] = dj.a(var2, false);
+                  TextLineMetrics.field_e[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_placeroom2,1", param1);
                 if (null != var2) {
@@ -1515,11 +1515,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("tutorial_stable1,0", false);
                 if (null != var2) {
-                  hh.field_n[0] = dj.a(var2, false);
+                  DefaultTextWidgetRenderer.field_n[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("tutorial_stable1,1", false);
                 if (null != var2) {
-                  hh.field_n[1] = dj.a(var2, param1);
+                  DefaultTextWidgetRenderer.field_n[1] = dj.a(var2, param1);
                 }
                 var2 = gm.a("tutorial_stable2,1", false);
                 if (null != var2) {
@@ -2017,7 +2017,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_hidden_pit", false);
                 if (var2 != null) {
-                  bh.field_L = dj.a(var2, false);
+                  RichTextWidget.field_L = dj.a(var2, false);
                 }
                 var2 = gm.a("desc_teleport", false);
                 if (var2 != null) {
@@ -2133,7 +2133,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("desc_hall_of_glass", false);
                 if (null != var2) {
-                  tg.field_a = dj.a(var2, param1);
+                  TextLineMetrics.field_a = dj.a(var2, param1);
                 }
                 var2 = gm.a("desc_magical_guardian_room", false);
                 if (null != var2) {
@@ -2289,11 +2289,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_revive,0", param1);
                 if (var2 != null) {
-                  hh.field_h[0] = dj.a(var2, false);
+                  DefaultTextWidgetRenderer.field_h[0] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_revive,1", false);
                 if (null != var2) {
-                  hh.field_h[1] = dj.a(var2, false);
+                  DefaultTextWidgetRenderer.field_h[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_circumvent,0", false);
                 if (var2 != null) {
@@ -2497,11 +2497,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_spy_brief,0", false);
                 if (null != var2) {
-                  fe.field_n[0] = dj.a(var2, param1);
+                  RichTextLayout.field_n[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_spy_brief,1", false);
                 if (null != var2) {
-                  fe.field_n[1] = dj.a(var2, false);
+                  RichTextLayout.field_n[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_glamour_brief,0", false);
                 if (null != var2) {
@@ -2571,11 +2571,11 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("ability_chaos_champion_brief,0", param1);
                 if (var2 != null) {
-                  bh.field_N[0] = dj.a(var2, param1);
+                  RichTextWidget.field_N[0] = dj.a(var2, param1);
                 }
                 var2 = gm.a("ability_chaos_champion_brief,1", false);
                 if (null != var2) {
-                  bh.field_N[1] = dj.a(var2, false);
+                  RichTextWidget.field_N[1] = dj.a(var2, false);
                 }
                 var2 = gm.a("ability_fickle_brief,0", param1);
                 if (null != var2) {
@@ -2635,7 +2635,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("orb_war", false);
                 if (null != var2) {
-                  tg.field_n = dj.a(var2, param1);
+                  TextLineMetrics.field_n = dj.a(var2, param1);
                 }
                 var2 = gm.a("orb_preservation_desc", false);
                 if (var2 != null) {
@@ -3159,7 +3159,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_menu", param1);
                 if (null != var2) {
-                  l.field_d = dj.a(var2, false);
+                  TextLayout.field_d = dj.a(var2, false);
                 }
                 var2 = gm.a("text_rooms", false);
                 if (var2 != null) {
@@ -3399,7 +3399,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_raiders_died_none", false);
                 if (null != var2) {
-                  l.field_f = dj.a(var2, false);
+                  TextLayout.field_f = dj.a(var2, false);
                 }
                 var2 = gm.a("text_raiders_died_one", param1);
                 if (var2 != null) {
@@ -3849,7 +3849,7 @@ class PacketBuffer extends IntrusiveNode {
                 }
                 var2 = gm.a("text_title_requirements_achievement", false);
                 if (var2 != null) {
-                  l.field_c = dj.a(var2, param1);
+                  TextLayout.field_c = dj.a(var2, param1);
                 }
                 var2 = gm.a("text_title_requirements_external", false);
                 if (var2 != null) {

@@ -61,9 +61,9 @@ abstract class MouseWheelInput {
         }
     }
 
-    final static h b(boolean param0) {
+    final static DefaultTextWidgetRenderer b(boolean param0) {
         if (null == eh.field_e) {
-          eh.field_e = new h(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
+          eh.field_e = new DefaultTextWidgetRenderer(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
         }
         if (!param0) {
           MouseWheelInput.b(false);

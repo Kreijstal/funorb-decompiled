@@ -602,7 +602,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("invite", -15192);
                 if (byteArrayState0015 != null) {
-                  MixedSupport001.stringState0003 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  DefaultTextWidgetRenderer.stringState0003 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("status_concluded", -15192);
                 if (null != byteArrayState0015) {
@@ -1248,7 +1248,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("checking", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart025.stringState0451 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  RichTextWidget.stringState0451 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("create_namealreadytaken", -15192);
                 if (byteArrayState0015 != null) {
@@ -2741,7 +2741,7 @@ final class TranslatedUiText {
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mb_full_access_2", -15192);
                 if (byteArrayState0015 != null) {
-                  UiComponentPart025.stringState0450 = MixedSupport105.computeString1370(byteArrayState0015, 2);
+                  RichTextWidget.stringState0450 = MixedSupport105.computeString1370(byteArrayState0015, 2);
                 }
                 byteArrayState0015 = NetworkSupport008.computeByteArray1172("mb_achievement_count_1", -15192);
                 if (byteArrayState0015 != null) {

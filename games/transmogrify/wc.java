@@ -75,7 +75,7 @@ final class wc {
               InteractiveWidget.field_z = g.field_y;
             }
             if (g.field_y == InteractiveWidget.field_z &&
-              ue.a(1, 0)) {
+              TextLayout.a(1, 0)) {
               var6_int = WordLanguage.field_l.readUnsignedByte((byte) 125);
               if (var6_int == 0) {
                 InteractiveWidget.field_z = lb.field_e;
@@ -87,7 +87,7 @@ final class wc {
               WordLanguage.field_l.position = 0;
             }
             if (InteractiveWidget.field_z == lb.field_e &&
-              ue.a(8, 0)) {
+              TextLayout.a(8, 0)) {
               fd.field_g = WordLanguage.field_l.readLong((byte) -115);
               WordLanguage.field_l.position = 0;
               tb.a(ll.field_V, param0, param3, param4, 122);
@@ -96,7 +96,7 @@ final class wc {
             boolean decompiledFrameRemainder0 = true;
             var6_intLifetime1 = -17 / ((-59 - param1) / 55);
             if (InteractiveWidget.field_z == DisplayNameSelectionPanel.field_I &&
-              ue.a(1, 0)) {
+              TextLayout.a(1, 0)) {
               var7 = WordLanguage.field_l.readUnsignedByte((byte) 110);
               DebouncedFieldValidator.field_e = var7;
               e.field_I = null;

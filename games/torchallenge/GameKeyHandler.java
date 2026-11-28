@@ -120,12 +120,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (df.field_Q >= 0 &&
+            if (RichTextWidget.field_Q >= 0 &&
               var2_int >= 0) {
-              PcmOutputWorker.field_g[df.field_Q] = var2_int;
-              df.field_Q = 127 & df.field_Q + 1;
-              if (df.field_Q == qa.field_a) {
-                df.field_Q = -1;
+              PcmOutputWorker.field_g[RichTextWidget.field_Q] = var2_int;
+              RichTextWidget.field_Q = 127 & RichTextWidget.field_Q + 1;
+              if (RichTextWidget.field_Q == qa.field_a) {
+                RichTextWidget.field_Q = -1;
               }
             }
             if (0 <= var2_int) {
@@ -182,12 +182,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (df.field_Q >= 0 &&
+            if (RichTextWidget.field_Q >= 0 &&
               var2_int >= 0) {
-              PcmOutputWorker.field_g[df.field_Q] = ~var2_int;
-              df.field_Q = 1 + df.field_Q & 127;
-              if (qa.field_a == df.field_Q) {
-                df.field_Q = -1;
+              PcmOutputWorker.field_g[RichTextWidget.field_Q] = ~var2_int;
+              RichTextWidget.field_Q = 1 + RichTextWidget.field_Q & 127;
+              if (qa.field_a == RichTextWidget.field_Q) {
+                RichTextWidget.field_Q = -1;
               }
             }
           }
@@ -210,7 +210,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (hl.field_d != null) {
-            df.field_Q = -1;
+            RichTextWidget.field_Q = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "mj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');

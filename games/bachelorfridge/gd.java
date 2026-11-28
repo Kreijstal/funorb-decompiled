@@ -24,7 +24,7 @@ final class gd extends pu {
           vc.field_c = param0;
           StatusEffectInfo.field_c = param2;
           BuffVendorAnimation.field_B = param4;
-          kt.field_j = param9;
+          SetMoveSlotCooldownEffect.field_j = param9;
           sha.field_m = param10;
           if (param3 > -57) {
             field_l = -90L;

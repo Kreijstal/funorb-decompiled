@@ -121,7 +121,7 @@ final class MidiPcmStream extends PcmStream {
             field_D = (ResourceArchive) null;
           }
           vk.field_c = new LoginPanel(param1, param0, false, true, true);
-          ed.field_c.a(10768, vk.field_c);
+          TextLayout.field_c.a(10768, vk.field_c);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "pk.FA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

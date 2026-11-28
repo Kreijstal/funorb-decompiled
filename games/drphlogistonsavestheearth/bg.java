@@ -118,7 +118,7 @@ final class bg extends IntrusiveNode {
             bc.field_b = null;
             ul.field_c = eg.field_d.copy();
             ul.field_c.bindAsRenderTarget();
-            fk.a(2 * SoftwareRasterizer.field_c / 3, SoftwareRasterizer.field_k, 0, 64, (byte) 104, 0);
+            TextHotspotBounds.a(2 * SoftwareRasterizer.field_c / 3, SoftwareRasterizer.field_k, 0, 64, (byte) 104, 0);
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(ha.field_d);
             ch.field_A = (r.field_b.field_y - DualLinkNode.field_r.field_y) / 2 + 434;
@@ -188,11 +188,11 @@ final class bg extends IntrusiveNode {
             p.a(var9.field_z, 3, 0, var9.field_C, 1, 0, 0, var9);
             InteractiveWidget.field_z.bindAsRenderTarget();
             var9.draw(0, 0);
-            qa.field_L = new RgbSprite(640, 480);
-            qa.field_L.bindAsRenderTarget();
+            RichTextWidget.field_L = new RgbSprite(640, 480);
+            RichTextWidget.field_L.bindAsRenderTarget();
             InteractiveWidget.field_z.drawRotated(hd.field_B + (InteractiveWidget.field_z.field_z >> 1), (InteractiveWidget.field_z.field_C >> 1) + ac.field_a, ib.field_l, 4096);
             InteractiveWidget.field_z = null;
-            qa.field_L.trimTransparentBorders();
+            RichTextWidget.field_L.trimTransparentBorders();
             SoftwareRasterizer.setRasterBuffer(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ha.field_d);
           }
@@ -236,8 +236,8 @@ final class bg extends IntrusiveNode {
             sa.field_e = null;
           }
           SoftwareRasterizer.saveClip(ha.field_d);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, qf.field_d, em.field_d);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, qf.field_d, em.field_d);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, qf.field_d, TextLayout.field_d);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, qf.field_d, TextLayout.field_d);
           if (null != DelegatingCanvas.field_c) {
             DelegatingCanvas.field_c.draw(0, 0);
           }
@@ -245,8 +245,8 @@ final class bg extends IntrusiveNode {
             t.field_d.draw(0, 0);
           }
           InteractiveWidget.field_D.draw(0, 0);
-          if (null != qa.field_L) {
-            qa.field_L.draw(0, 0);
+          if (null != RichTextWidget.field_L) {
+            RichTextWidget.field_L.draw(0, 0);
           }
           if (r.field_b != null &&
             null != DualLinkNode.field_r) {
@@ -283,7 +283,7 @@ final class bg extends IntrusiveNode {
             r.field_b.draw(434, 390);
             nj.field_f.draw(0, 0);
             if (ArchiveRequest.field_w.field_f == 1) {
-              fk.a(7 * r.field_b.field_w / 12, -4 + r.field_b.field_y, 392, 64, (byte) -73, 436);
+              TextHotspotBounds.a(7 * r.field_b.field_w / 12, -4 + r.field_b.field_y, 392, 64, (byte) -73, 436);
             }
             stackIn_67_0 = (1 == ArchiveRequest.field_w.field_f);
             qj.a(stackIn_67_0, AccountRegistrationPanel.field_N, ch.field_A, true);

@@ -64,7 +64,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "idlemessage20min");
                 if (var2 != null) {
-                  kk.field_i = ni.a((byte) -55, var2);
+                  RichTextLayout.field_i = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "error_js5crc");
                 if (var2 != null) {
@@ -1463,7 +1463,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_more_suggestions");
                 if (var2 != null) {
-                  bc.field_J = ni.a((byte) -55, var2);
+                  RichTextWidget.field_J = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_select_alternative");
                 if (null != var2) {
@@ -2593,19 +2593,19 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  bc.field_L[0] = ni.a((byte) -55, var2);
+                  RichTextWidget.field_L[0] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "reconnect_lost_seq,1");
                 if (null != var2) {
-                  bc.field_L[1] = ni.a((byte) -55, var2);
+                  RichTextWidget.field_L[1] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  bc.field_L[2] = ni.a((byte) -55, var2);
+                  RichTextWidget.field_L[2] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  bc.field_L[3] = ni.a((byte) -55, var2);
+                  RichTextWidget.field_L[3] = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "reconnect_lost");
                 if (null != var2) {

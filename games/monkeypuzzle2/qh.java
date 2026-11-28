@@ -224,7 +224,7 @@ final class qh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             } else {
               if (var9Lifetime1 == 248) {
                 nh.a((byte) 99, ii.a(false));
-                ImageProducerRasterBuffer.field_n = sb.field_q;
+                ImageProducerRasterBuffer.field_n = RichTextLayout.field_q;
                 PacketBuffer.a(-1);
                 DequeCursor.field_e = false;
                 stackIn_34_0 = var9Lifetime1;

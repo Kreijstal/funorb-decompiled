@@ -26,7 +26,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static String e(int param0) {
-        if (FridgeScreen.field_p == kq.field_j) {
+        if (FridgeScreen.field_p == StopFloodEffect.field_j) {
           return sc.field_n;
         }
         if (!ut.field_m.a(false)) {
@@ -35,7 +35,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (param0 != 21240) {
           return (String) null;
         }
-        if (kq.field_j == ReportAbusePanel.field_G) {
+        if (StopFloodEffect.field_j == ReportAbusePanel.field_G) {
           return ut.field_m.b(25477);
         }
         return IncomingSpecial.field_p;

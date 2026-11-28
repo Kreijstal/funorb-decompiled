@@ -244,13 +244,13 @@ final class ei extends om {
         field_G = null;
     }
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         int var2 = 0;
         String var3 = null;
         if (param0 <= -23) {
           var2 = this.field_w.field_m ? 1 : 0;
           this.field_w.field_m = this.field_m;
-          var3 = this.field_w.a((byte) -28);
+          var3 = this.field_w.getTooltipText((byte) -28);
           this.field_w.field_m = var2 != 0 ? true : false;
           return var3;
         }

@@ -59,7 +59,7 @@ final class l {
           ob.field_a = new int[ef.field_l];
           b.field_b = new int[ef.field_l];
           var17.position = -(ef.field_l * 8) + (-7 + param0.length);
-          e.field_e = var17.readUnsignedShort((byte) 75);
+          DefaultTextWidgetRenderer.field_e = var17.readUnsignedShort((byte) 75);
           uf.field_k = var17.readUnsignedShort((byte) -49);
           var3 = 1 + (255 & var17.readUnsignedByte(false));
           for (var4 = 0; ef.field_l > var4; var4++) {

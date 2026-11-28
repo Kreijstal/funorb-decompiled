@@ -27,7 +27,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.checkedName)) {
-            var4 = c.pollAccountNameCheck(param0, 78);
+            var4 = RichTextLayout.pollAccountNameCheck(param0, 78);
             if (var4 == null) {
               return null;
             }
@@ -56,7 +56,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           var15 = 0.4 * param3;
           pa.a(var9_double, var15, (byte) -11, param6, var13, var11, ImageProducerRasterBuffer.field_o[(param1 & 15) >> 1], param0, param4);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "qg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "qg.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return stackIn_4_0;
           }
           if (!param1.equals(this.checkedName)) {
-            var3 = c.pollAccountNameCheck(param1, 117);
+            var3 = RichTextLayout.pollAccountNameCheck(param1, 117);
             if (var3 != null &&
               var3.message == null) {
               this.nameAvailable = var3.success;
@@ -130,7 +130,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             }
           }
           if (this.nameAvailable) {
-            stackIn_16_0 = nn.field_q;
+            stackIn_16_0 = TextHotspotBounds.field_q;
           } else {
             stackIn_16_0 = fb.field_e;
           }
@@ -145,7 +145,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 

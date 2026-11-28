@@ -269,7 +269,7 @@ final class ge extends k implements WidgetActivationListener {
                 var6.field_y = this.field_y;
                 var6.field_r = 50;
                 var6.field_u = 0;
-                var6.field_n = (jm) ((Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+                var6.field_n = (jm) ((Object) new DefaultTextWidgetRenderer(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
                 this.b(var6, 95);
                 this.field_gb = this.a(sj.field_m, (rg) (this), 30);
                 return;
@@ -288,7 +288,7 @@ final class ge extends k implements WidgetActivationListener {
           var7.field_y = this.field_y;
           var7.field_r = 50;
           var7.field_u = 0;
-          var7.field_n = (jm) ((Object) new hl(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var7.field_n = (jm) ((Object) new DefaultTextWidgetRenderer(rc.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var7, 95);
           this.field_gb = this.a(sj.field_m, (rg) (this), 30);
           return;

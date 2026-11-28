@@ -3,7 +3,7 @@
  */
 class IntrusiveNode {
     IntrusiveNode next;
-    static hh field_b;
+    static DefaultTextWidgetRenderer field_b;
     IntrusiveNode previous;
     static long field_g;
     static BinaryBitmapFont field_c;

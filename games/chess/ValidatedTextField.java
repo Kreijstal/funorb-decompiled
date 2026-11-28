@@ -8,7 +8,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     private FieldValidator field_Y;
     static String[] field_cb;
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_w) {
           return null;
         }

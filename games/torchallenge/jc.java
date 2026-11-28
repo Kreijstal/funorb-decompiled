@@ -23,7 +23,7 @@ abstract class jc {
           field_j = (String[]) null;
         }
         for (var2 = 0; var2 < vl.field_b; var2++) {
-          var1[var2] = new ge(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], h.field_a[var2], td.field_m);
+          var1[var2] = new ge(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], h.field_a[var2], td.field_m);
         }
         p.a(0);
         return var1;

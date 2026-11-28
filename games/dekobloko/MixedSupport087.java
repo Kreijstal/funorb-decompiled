@@ -25,7 +25,7 @@ final class MixedSupport087 {
             }
             if (musicTrackArgument2 != null) {
               UiComponentPart033.midiSynthesizerState0001 = new MidiSynthesizer(musicTrackArgument2);
-              UiComponentPart033.midiSynthesizerState0001.performAction0686(MixedSupport001.integerState0011 * 50 / 128);
+              UiComponentPart033.midiSynthesizerState0001.performAction0686(DefaultTextWidgetRenderer.integerState0011 * 50 / 128);
               UiComponentPart033.midiSynthesizerState0001.performAction0692(integerArgument1);
               GameAssets.pcmStreamMixerState0004.addListener(UiComponentPart033.midiSynthesizerState0001);
             }

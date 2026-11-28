@@ -162,9 +162,9 @@ final class aj {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               ob.a(-33, var15);
               if (var6_intLifetime1 == 0) {
-                ImageProducerRasterBuffer.a(ia.field_j, var6_intLifetime1, 27715, jf.field_sb, uc.field_U, ti.field_e);
+                ImageProducerRasterBuffer.a(TextHotspotBounds.field_j, var6_intLifetime1, 27715, jf.field_sb, uc.field_U, ti.field_e);
               } else {
-                ImageProducerRasterBuffer.a(ia.field_j, var6_intLifetime1, param0 ^ 31088, jf.field_sb, uc.field_U, ti.field_e);
+                ImageProducerRasterBuffer.a(TextHotspotBounds.field_j, var6_intLifetime1, param0 ^ 31088, jf.field_sb, uc.field_U, ti.field_e);
               }
             }
             hl.a((byte) -44, var5);

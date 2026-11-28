@@ -127,7 +127,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.H(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.H(" + param0 + ')');
         }
     }
 
@@ -206,7 +206,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -218,7 +218,7 @@ final class PlayerShip extends MovingTunnelEntity {
           field_W = null;
           field_Ib = null;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "dj.J(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "dj.J(" + param0 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "dj.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "dj.B(" + param0 + ')');
         }
     }
 
@@ -1215,7 +1215,7 @@ final class PlayerShip extends MovingTunnelEntity {
                       !mc.field_e[ib.field_W]) {
                       if ((this.field_zb <= 0 ||
                         this.field_A.field_M ||
-                        !mc.field_e[vf.field_l]) &&
+                        !mc.field_e[DefaultTextWidgetRenderer.field_l]) &&
                         (decompiledFrameRemainder0 = !(this.field_ab <= 0)) &&
                         (decompiledFrameRemainder0 = !(this.field_A.field_M)) &&
                         (decompiledFrameRemainder0 = !(!mc.field_e[PcmOutputWorker.field_f])) &&
@@ -1351,7 +1351,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3_ref), "dj.S(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3_ref), "dj.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1368,7 +1368,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.JA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.JA(" + param0 + ')');
         }
     }
 
@@ -1409,7 +1409,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) runtimeException), "dj.PA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "dj.PA(" + param0 + ')');
         }
     }
 
@@ -1418,7 +1418,7 @@ final class PlayerShip extends MovingTunnelEntity {
           super.shiftWorldOrigin(param0, param1, param2, param3);
           this.field_Lb.a(param0, param3, param2, 47);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "dj.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "dj.MB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1455,7 +1455,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1483,7 +1483,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.K(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.K(" + param0 + ')');
         }
     }
 
@@ -1507,7 +1507,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var5), "dj.T(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var5), "dj.T(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1604,7 +1604,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.RA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.RA(" + param0 + ')');
         }
     }
 
@@ -1619,7 +1619,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.TA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.TA(" + param0 + ')');
         }
     }
 
@@ -1644,7 +1644,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1670,7 +1670,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.N(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.N(" + param0 + ')');
         }
     }
 
@@ -1697,7 +1697,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1716,7 +1716,7 @@ final class PlayerShip extends MovingTunnelEntity {
           this.field_ob = 0;
           this.field_Hb = 65536;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "dj.NA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "dj.NA(" + param0 + ')');
         }
     }
 
@@ -1745,7 +1745,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -1754,7 +1754,7 @@ final class PlayerShip extends MovingTunnelEntity {
           this.field_X = true;
           super.resolveTunnelWallContact(param0, param1, param2, param3, param4, param5, param6);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "dj.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "dj.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1769,7 +1769,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.EB(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.EB(" + param0 + ')');
         }
     }
 
@@ -2032,7 +2032,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.MA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.MA(" + param0 + ')');
         }
     }
 
@@ -2051,7 +2051,7 @@ final class PlayerShip extends MovingTunnelEntity {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "dj.R(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "dj.R(" + param0 + ')');
         }
     }
 
@@ -2077,7 +2077,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2104,7 +2104,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -2191,7 +2191,7 @@ final class PlayerShip extends MovingTunnelEntity {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(')').toString());
         }
     }
 

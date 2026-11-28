@@ -19,14 +19,14 @@ final class ub {
           if (param6) {
             field_a = (String) null;
           }
-          kj.field_P = PcmPlayerService.createOutput(param0, param4, 0, param2);
+          RichTextWidget.field_P = PcmPlayerService.createOutput(param0, param4, 0, param2);
           ql.field_r = PcmPlayerService.createOutput(param0, param4, 1, param3);
           ti.field_f = new PcmStreamMixer();
           ak.field_a = 1000 * param3 / param7;
           ql.field_r.setRootStream(ti.field_f);
           NameSuggestionsPanel.field_I = param5;
           NameSuggestionsPanel.field_I.setMasterVolume(1349013231, la.field_k);
-          kj.field_P.setRootStream(NameSuggestionsPanel.field_I);
+          RichTextWidget.field_P.setRootStream(NameSuggestionsPanel.field_I);
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "ub.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }

@@ -96,7 +96,7 @@ final class hc {
             vc.field_d[-2 + var4] = be.field_J;
             ImageProducerRasterBuffer.field_l[-2 + var4] = 0;
             fl.field_b[0] = 4;
-            vc.field_d[var4 - 1] = le.field_a;
+            vc.field_d[var4 - 1] = TextLineMetrics.field_a;
             ImageProducerRasterBuffer.field_l[-1 + var4] = 1;
             fl.field_b[1] = 5;
           } else if (te.field_M == 1) {
@@ -112,7 +112,7 @@ final class hc {
               vc.field_d[var5] = w.field_c[var5];
             }
             vc.field_d[-2 + var4] = "";
-            vc.field_d[var4 - 1] = le.field_a;
+            vc.field_d[var4 - 1] = TextLineMetrics.field_a;
             ImageProducerRasterBuffer.field_l[-1 + var4] = 0;
             fl.field_b[0] = 5;
           } else if (te.field_M != 2) {
@@ -133,7 +133,7 @@ final class hc {
                 vc.field_d[var5] = w.field_c[var5];
               }
               vc.field_d[var4 - 2] = "";
-              vc.field_d[var4 - 1] = le.field_a;
+              vc.field_d[var4 - 1] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[-1 + var4] = 0;
               fl.field_b[0] = 5;
             } else if (4 == te.field_M) {
@@ -149,7 +149,7 @@ final class hc {
                 vc.field_d[var5] = w.field_c[var5];
               }
               vc.field_d[var4 - 2] = "";
-              vc.field_d[-1 + var4] = le.field_a;
+              vc.field_d[-1 + var4] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[var4 - 1] = 0;
               fl.field_b[0] = 5;
             } else {
@@ -171,7 +171,7 @@ final class hc {
               vc.field_d[var4 - 2] = fg.field_c;
               ImageProducerRasterBuffer.field_l[var4 - 2] = 0;
               fl.field_b[0] = 3;
-              vc.field_d[-1 + var4] = le.field_a;
+              vc.field_d[-1 + var4] = TextLineMetrics.field_a;
               ImageProducerRasterBuffer.field_l[var4 - 1] = 1;
               fl.field_b[1] = 5;
             }
@@ -302,7 +302,7 @@ final class hc {
             }
             v.field_d = stackIn_110_0 + stackIn_111_1;
           }
-          th.field_J = -(v.field_d >> 1) + vk.field_m;
+          th.field_J = -(v.field_d >> 1) + RichTextLayout.field_m;
           og.field_j = new int[vc.field_d.length][];
           var4Lifetime3 = 0;
           if (!param1) {
@@ -351,7 +351,7 @@ final class hc {
         int var7 = RasterBuffer.field_f.get(11);
         int var8 = RasterBuffer.field_f.get(12);
         int var9 = RasterBuffer.field_f.get(13);
-        return na.field_j[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + li.field_h[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return na.field_j[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + TextHotspotBounds.field_h[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     static {

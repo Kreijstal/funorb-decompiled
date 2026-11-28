@@ -56,7 +56,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -104,9 +104,9 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
 
     final static void a(int param0, PcmSample param1) {
         try {
-          tb.field_l.playSample(param1, param0, on.field_c * 96 / 160);
+          TextHotspotBounds.field_l.playSample(param1, param0, on.field_c * 96 / 160);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "th.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "th.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -179,7 +179,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -202,14 +202,14 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           var4 = param1;
           ((EditableTextField) ((Object) var3)).setText(false, var4, true);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "th.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "th.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_H = new ValidatedTextField("", (ca) null, 12);
-        pc var1 = new pc(sp.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(sp.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(AudioService.field_a, var1, (ca) null);
         this.field_B = new InteractiveWidget(NodeHashTableIterator.field_d, (ca) null);
         this.field_E = new InteractiveWidget(TranslucentSpriteLayer.field_j, (ca) null);
@@ -279,7 +279,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -287,13 +287,13 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         if (param0 <= 119) {
           this.a(23, (UiWidget) null, 'ﾚ', -1);
           if (this.canSubmitDisplayName(true)) {
-            cm.a((byte) -21, this.field_H.text);
+            RichTextLayout.a((byte) -21, this.field_H.text);
             return;
           }
           return;
         }
         if (this.canSubmitDisplayName(true)) {
-          cm.a((byte) -21, this.field_H.text);
+          RichTextLayout.a((byte) -21, this.field_H.text);
           return;
         }
     }
@@ -331,7 +331,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -341,7 +341,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
           this.field_B.field_x = this.canSubmitDisplayName(true);
           int var5_int = 109 % ((param0 + 28) / 43);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "th.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "th.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 

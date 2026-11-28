@@ -199,7 +199,7 @@ final class ch {
         if (param0 > -35) {
           return (rh[]) null;
         }
-        return new rh[]{vj.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, BitPacketBuffer.field_p, BitPacketBuffer.field_n, oe.field_d, GameApplet.field_f, EmailFormatValidator.field_p, ai.field_b, BattleState.field_l, AgeValidator.field_n, wg.field_b};
+        return new rh[]{RichTextWidget.field_K, ArchiveRequest.field_z, lf.field_f, ArchiveRequest.field_u, fl.field_e, BitPacketBuffer.field_p, BitPacketBuffer.field_n, oe.field_d, GameApplet.field_f, EmailFormatValidator.field_p, ai.field_b, BattleState.field_l, AgeValidator.field_n, wg.field_b};
     }
 
     final void a(int param0, Terraphoenix param1) {
@@ -222,13 +222,13 @@ final class ch {
         try {
           this.field_b = false;
           SoftwareRasterizer.setClip(0, 0, 640, this.field_i / 4 + 56);
-          em.field_c.drawOpaque(0, this.field_i / 4 + 0);
+          TextLineMetrics.field_c.drawOpaque(0, this.field_i / 4 + 0);
           SoftwareRasterizer.setClip(0, 56, 356 + this.field_i, 422);
-          em.field_c.drawOpaque(0 + this.field_i, 0);
+          TextLineMetrics.field_c.drawOpaque(0 + this.field_i, 0);
           SoftwareRasterizer.setClip(356 - this.field_i, 56, 640, 422);
-          em.field_c.drawOpaque(0 - this.field_i, 0);
+          TextLineMetrics.field_c.drawOpaque(0 - this.field_i, 0);
           SoftwareRasterizer.setClip(0, -this.field_i + 422, 640, 480);
-          em.field_c.drawOpaque(0, -this.field_i + 0);
+          TextLineMetrics.field_c.drawOpaque(0, -this.field_i + 0);
           SoftwareRasterizer.resetClip();
           qh.field_b.draw(-qh.field_b.field_r + 624, -qh.field_b.field_t + (464 - this.field_i));
           if (param1.field_jb > 0) {

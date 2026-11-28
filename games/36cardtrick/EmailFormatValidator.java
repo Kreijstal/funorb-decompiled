@@ -57,7 +57,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_3_0 = (null != di.a(param0, 64)) ? 0 : 1;
+          stackIn_3_0 = (null != TextLineMetrics.a(param0, 64)) ? 0 : 1;
           var3_int = stackIn_3_0;
           if (param1 >= -58) {
             field_j = (BitPacketBuffer) null;

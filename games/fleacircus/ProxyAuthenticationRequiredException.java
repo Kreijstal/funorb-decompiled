@@ -16,22 +16,22 @@ final class ProxyAuthenticationRequiredException extends IOException {
     final static void a(int param0) {
         ia.field_p[4] = new int[]{5};
         tk.a(34, 185, new int[]{5}, 455, -119, 4, 383);
-        pi.field_b[4] = new t(4);
+        TextLineMetrics.field_b[4] = new t(4);
         tk.a(34, 57, new int[]{8, 9, 10, 5}, 600, -126, 2, 383);
-        pi.field_b[2] = new t(2);
+        TextLineMetrics.field_b[2] = new t(2);
         tk.a(34, 165, new int[]{20, 5}, 475, -120, 8, 410);
-        pi.field_b[8] = new t(8);
+        TextLineMetrics.field_b[8] = new t(8);
         ia.field_p[6] = new int[]{22};
         tk.a(70, 165, new int[]{22}, 475, -125, 6, 295);
         if (param0 > -51) {
           ProxyAuthenticationRequiredException.a(19);
         }
-        pi.field_b[6] = new t(6);
+        TextLineMetrics.field_b[6] = new t(6);
         ResourceArchive.field_c.field_d = ResourceArchive.field_c.field_D.field_N * 11;
         if (wc.field_q > 0 &&
           lf.a(fg.field_q, 31849)) {
           tk.a(34, 155, new int[]{1, 19, 12, 13, 4, 3, 7}, 485, -123, 1, 135);
-          pi.field_b[1] = new t(1);
+          TextLineMetrics.field_b[1] = new t(1);
         }
     }
 

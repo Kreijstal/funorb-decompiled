@@ -147,9 +147,9 @@ public final class Terraphoenix extends GameShell {
             this.C(0);
             return;
           }
-          if (ld.field_b) {
+          if (TextLayout.field_b) {
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (!fd.d(1)))) {
+            while (!(decompiledNaturalLoopExit0 = (!DefaultTextWidgetRenderer.d(1)))) {
               stackIn_70_0 = ~ProxyAuthenticationRequiredException.field_g;
               if (var8 == 0) {
                 if (stackIn_70_0 <= -10) {
@@ -158,7 +158,7 @@ public final class Terraphoenix extends GameShell {
                 if (lf.field_c == 84 ||
                   lf.field_c == 13) {
                   ProxyAuthenticationRequiredException.field_g = 20;
-                  ld.field_b = false;
+                  TextLayout.field_b = false;
                   qd.$cfr$intArgs$a$e9dea5688aa5(79, 34);
                 }
                 if (lf.field_c == 97 ||
@@ -234,11 +234,11 @@ public final class Terraphoenix extends GameShell {
                 DiskArchiveRequest.field_I == 1) {
                 qd.$cfr$intArgs$a$e9dea5688aa5(26, 34);
                 ProxyAuthenticationRequiredException.field_g = 20;
-                ld.field_b = false;
+                TextLayout.field_b = false;
               }
             }
             if (oh.field_f == 2) {
-              ld.field_b = false;
+              TextLayout.field_b = false;
               ProxyAuthenticationRequiredException.field_g = 20;
               qd.$cfr$intArgs$a$e9dea5688aa5(53, 34);
             }
@@ -600,7 +600,7 @@ public final class Terraphoenix extends GameShell {
               this.field_X = new BattleState(this);
             }
             while (true) {
-              if (fd.d(1)) {
+              if (DefaultTextWidgetRenderer.d(1)) {
                 if (lf.field_c != 13) {
                   continue;
                 }
@@ -636,8 +636,8 @@ public final class Terraphoenix extends GameShell {
                     bh.field_e[99]) {
                     gi.field_h = gi.field_h + var3Lifetime1Lifetime1;
                   }
-                  if (0 != vj.field_P) {
-                    gi.field_h = gi.field_h + var3Lifetime1Lifetime1 * vj.field_P;
+                  if (0 != RichTextWidget.field_P) {
+                    gi.field_h = gi.field_h + var3Lifetime1Lifetime1 * RichTextWidget.field_P;
                   }
                   if (this.field_F.e(-1) ||
                     bh.field_e[102] ||
@@ -938,8 +938,8 @@ public final class Terraphoenix extends GameShell {
               bh.field_e[99]) {
               qg.field_a = qg.field_a + var3Lifetime2;
             }
-            if (vj.field_P != 0) {
-              qg.field_a = qg.field_a + var3Lifetime2 * vj.field_P;
+            if (RichTextWidget.field_P != 0) {
+              qg.field_a = qg.field_a + var3Lifetime2 * RichTextWidget.field_P;
             }
             if (this.field_S.e(-1) ||
               bh.field_e[102] ||
@@ -1051,8 +1051,8 @@ public final class Terraphoenix extends GameShell {
             this.field_mb = 0;
             this.field_ib = 0;
             gd.field_c = gd.field_c + 1;
-            if (null != hh.field_m) {
-              hh.field_m.bindAsRenderTarget();
+            if (null != TextHotspotBounds.field_m) {
+              TextHotspotBounds.field_m.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               k.field_f.a(0);
             }
@@ -1304,7 +1304,7 @@ public final class Terraphoenix extends GameShell {
           }
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!fd.d(1)))) {
+          while (!(decompiledNaturalLoopExit0 = (!DefaultTextWidgetRenderer.d(1)))) {
             if (34 == lf.field_c &&
               mm.field_e >= 2) {
               this.field_Cb = new LevelEditor();
@@ -1484,7 +1484,7 @@ public final class Terraphoenix extends GameShell {
             var3 == 0) {
             ProxyAuthenticationRequiredException.field_g = 20;
             wf.field_h = false;
-            ld.field_b = true;
+            TextLayout.field_b = true;
             ea.field_o = 0;
           }
           var5++;
@@ -1616,7 +1616,7 @@ public final class Terraphoenix extends GameShell {
         try {
           mi.clearStaticReferences(param1 ^ 22369);
           if (param0) {
-            BitPacketBuffer.pumpClientUi(3795, vj.field_P);
+            BitPacketBuffer.pumpClientUi(3795, RichTextWidget.field_P);
           }
           if (ab.field_a != null) {
             if (ee.field_G.ensureIndexLoaded(0) &&
@@ -2125,7 +2125,7 @@ public final class Terraphoenix extends GameShell {
         var4 = field_V;
         try {
           this.a(8, 5000, 9, 0, 10, false, 26, 11);
-          vj.g(0);
+          RichTextWidget.g(0);
           ByteStorage.b(false);
           wi.h(-4168);
           var2_int = 49 % ((-60 - param0) / 46);
@@ -2225,7 +2225,7 @@ public final class Terraphoenix extends GameShell {
           var2_int = 400;
           this.a(true, var2_int);
           if (ProxyAuthenticationRequiredException.field_g < 10) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
             var4 = 240;
@@ -2565,7 +2565,7 @@ public final class Terraphoenix extends GameShell {
           this.a(true, var2_int);
           this.f(true);
           if (ProxyAuthenticationRequiredException.field_g < 10) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
             var4 = 240;
@@ -2862,7 +2862,7 @@ public final class Terraphoenix extends GameShell {
             while (var2_int < 480) {
               SoftwareRasterizer.setClip(-(rk.field_c >> 1) + 320, var2_int, (rk.field_c >> 1) + 320, 1 + var2_int);
               var3 = (int)(Math.sin((double)(ng.field_x + var2_int) * 0.02) * (double)(640 - rk.field_c >> 2));
-              hh.field_m.drawAdditive(var3, 0, 256);
+              TextHotspotBounds.field_m.drawAdditive(var3, 0, 256);
               SoftwareRasterizer.resetClip();
               var2_int++;
               if (var4 != 0) {
@@ -2874,13 +2874,13 @@ public final class Terraphoenix extends GameShell {
               (var4 != 0)) {
               SoftwareRasterizer.setClip(-(rk.field_c >> 1) + 320, 0, 320 + (rk.field_c >> 1), 480);
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 192);
-              hh.field_m.drawAdditive(0, 0, 256);
+              TextHotspotBounds.field_m.drawAdditive(0, 0, 256);
               SoftwareRasterizer.resetClip();
             }
           } else {
             SoftwareRasterizer.setClip(-(rk.field_c >> 1) + 320, 0, 320 + (rk.field_c >> 1), 480);
             SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 0, 192);
-            hh.field_m.drawAdditive(0, 0, 256);
+            TextHotspotBounds.field_m.drawAdditive(0, 0, 256);
             SoftwareRasterizer.resetClip();
           }
           if (param0 < 54) {
@@ -3247,7 +3247,7 @@ public final class Terraphoenix extends GameShell {
                       qd.$cfr$intArgs$a$e9dea5688aa5(105, 27);
                       return;
                     }
-                    if (!fd.d(1)) {
+                    if (!DefaultTextWidgetRenderer.d(1)) {
                       return;
                     }
                     if (lf.field_c == 97) {
@@ -3634,7 +3634,7 @@ public final class Terraphoenix extends GameShell {
             }
           }
           while (true) {
-            if (!fd.d(1)) {
+            if (!DefaultTextWidgetRenderer.d(1)) {
               return;
             }
             if (lf.field_c == 97 ||
@@ -3755,7 +3755,7 @@ public final class Terraphoenix extends GameShell {
           this.a(true, var2_int);
           ab.field_i = -1;
           if (ProxyAuthenticationRequiredException.field_g < 10) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
             var4 = 240;
@@ -4046,7 +4046,7 @@ public final class Terraphoenix extends GameShell {
           this.f(true);
           ab.field_i = -1;
           if (10 > ProxyAuthenticationRequiredException.field_g) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
             var4 = 240;
@@ -4153,7 +4153,7 @@ public final class Terraphoenix extends GameShell {
                       } else {
                         hf.field_w[var12].draw(120, var5Lifetime1);
                       }
-                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.drawParagraph(InteractiveWidget.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + vj.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
+                      var5Lifetime1 = var5Lifetime1 + (AccountRequestState.field_f.field_w + AccountRequestState.field_f.field_w * AccountRequestState.field_f.drawParagraph(InteractiveWidget.field_J[var12].toUpperCase() + "<br>" + "<br>" + i.field_e + d.field_L[var12] + "<br>" + RichTextWidget.field_L + ImageProducerRasterBuffer.field_m[var12], 268, var5Lifetime1, 252, 480, 16777215, -1, 0, 0, AccountRequestState.field_f.field_w));
                       var13 = 0;
                       while (!(ImageProducerRasterBuffer.field_m[var12] <= var13)) {
                         IsaacCipher.field_k.drawQuarterSize(460 + var13 * -8, 250);
@@ -4391,7 +4391,7 @@ public final class Terraphoenix extends GameShell {
           MessageKeys.a(77);
           hi.l(0);
           kd.clearStaticReferences(true);
-          fd.resetStaticState(69);
+          DefaultTextWidgetRenderer.resetStaticState(69);
           ob.clearStaticReferences();
           nl.clearStaticReferences(true);
           dj.resetStaticState(-81);
@@ -4409,7 +4409,7 @@ public final class Terraphoenix extends GameShell {
           hf.clearStaticReferences((byte) 54);
           f.resetStaticState(-108911807);
           sk.clearStaticReferences(true);
-          ld.a((byte) -115);
+          TextLayout.a((byte) -115);
           UiWidget.resetStaticState(true);
           InteractiveWidget.clearStaticReferences((byte) -82);
           jc.clearDeclaredStaticReferences((byte) 47);
@@ -4436,7 +4436,7 @@ public final class Terraphoenix extends GameShell {
           al.releaseDeclaredStaticReferences(-22);
           hm.clearStaticReferences(true);
           NameSuggestionsPanel.clearStaticReferences((byte) 114);
-          vj.h(-32015);
+          RichTextWidget.h(-32015);
           dd.clearDeclaredStaticReferences((byte) 121);
           ki.clearDeclaredStaticReferences((byte) -112);
           df.clearDeclaredStaticReferences((byte) -106);
@@ -4448,7 +4448,7 @@ public final class Terraphoenix extends GameShell {
           SoundFilter.clearStaticReferences();
           ProxySocketConnector.b(-5);
           DirectByteStorage.clearStaticReferences(0);
-          rd.clearStaticReferences(125);
+          RichTextLayout.clearStaticReferences(125);
           fc.clearStaticReferences((byte) -114);
           cb.clearStaticReferences(true);
           hj.clearStaticReferences((byte) -120);
@@ -4491,7 +4491,7 @@ public final class Terraphoenix extends GameShell {
           me.resetStaticState(true);
           vi.clearStaticReferences((byte) -113);
           bd.clearStaticReferences(-103);
-          em.clearStaticReferences(-119);
+          TextLineMetrics.clearStaticReferences(-119);
           AccountNameAvailabilityValidator.f((byte) -48);
           PasswordValidator.clearStaticReferences(104682000);
           EmailFormatValidator.clearStaticReferences(true);
@@ -4499,7 +4499,7 @@ public final class Terraphoenix extends GameShell {
           AgeValidator.clearDeclaredStaticReferences((byte) -76);
           MatchingFieldValidator.e((byte) -27);
           rj.b(0);
-          hh.clearStaticReferences(255);
+          TextHotspotBounds.clearStaticReferences(255);
           im.clearStaticReferences(false);
           DebouncedFieldValidator.b(8191);
           oa.clearStaticReferences(7463);
@@ -5026,7 +5026,7 @@ public final class Terraphoenix extends GameShell {
                 if (1 == DiskArchiveRequest.field_I) {
                   this.field_X.field_u = true;
                   this.field_X.c((byte) -76);
-                  while (fd.d(param0 ^ 254)) {
+                  while (DefaultTextWidgetRenderer.d(param0 ^ 254)) {
                   }
                 }
               }
@@ -5037,7 +5037,7 @@ public final class Terraphoenix extends GameShell {
             }
             this.field_X.b(param0 - 256, this);
             while (true) {
-              if (!fd.d(param0 ^ 254)) {
+              if (!DefaultTextWidgetRenderer.d(param0 ^ 254)) {
                 return;
               }
               if (var5 != 0) {
@@ -5108,7 +5108,7 @@ public final class Terraphoenix extends GameShell {
           }
           this.field_Cb.field_d = MouseWheelInput.field_b;
           this.field_Cb.b(76);
-          while (fd.d(param0 + 1)) {
+          while (DefaultTextWidgetRenderer.d(param0 + 1)) {
             if (bh.field_e[96]) {
               sj.field_b = sj.field_b - 48;
             }
@@ -5256,7 +5256,7 @@ public final class Terraphoenix extends GameShell {
               ja.field_i = 2;
             }
           }
-          while (fd.d(1)) {
+          while (DefaultTextWidgetRenderer.d(1)) {
             if (lf.field_c != 13) {
               continue;
             }
@@ -5325,7 +5325,7 @@ public final class Terraphoenix extends GameShell {
           ab.field_i = -1;
           if (ProxyAuthenticationRequiredException.field_g < 10) {
             boolean decompiledFrameRemainder0 = true;
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var3 = 320;
             var4 = 240;
@@ -5558,7 +5558,7 @@ public final class Terraphoenix extends GameShell {
           if (ConfirmedEmailAvailabilityValidator.field_q == 4) {
             ConfirmedEmailAvailabilityValidator.field_q = 0;
           }
-          vj.g(0);
+          RichTextWidget.g(0);
           var2_int = 17 / ((param0 + 75) / 37);
           ByteStorage.b(false);
           wi.h(-4168);
@@ -5779,7 +5779,7 @@ public final class Terraphoenix extends GameShell {
                 sj.field_b = this.field_X.field_c;
               }
             }
-            while (fd.d(1)) {
+            while (DefaultTextWidgetRenderer.d(1)) {
               stackIn_163_0 = -85;
               stackIn_163_1 = ~lf.field_c;
               if (var6 != 0) {
@@ -5865,7 +5865,7 @@ public final class Terraphoenix extends GameShell {
             this.field_X.field_j = MouseWheelInput.field_b;
             this.field_X.field_N = DiskArchiveRequest.field_I;
             this.field_X.b(param0 - 127, this);
-            while (fd.d(param0 ^ 127)) {
+            while (DefaultTextWidgetRenderer.d(param0 ^ 127)) {
               stackIn_163_0 = lf.field_c;
               stackIn_163_1 = 13;
               if (var6 != 0) {
@@ -5875,7 +5875,7 @@ public final class Terraphoenix extends GameShell {
               if (stackIn_163_0 == stackIn_163_1) {
                 TutorialText.field_c = ja.field_i;
                 ja.field_i = 12;
-                hh.field_m.bindAsRenderTarget();
+                TextHotspotBounds.field_m.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 rk.field_c = 32;
                 TextFieldValidator.field_k = new Sprite(640, 480);
@@ -5897,8 +5897,8 @@ public final class Terraphoenix extends GameShell {
                 this.field_Eb[0] = ee.field_z;
                 if (DiskArchiveRequest.field_I == 1) {
                   ProxyAuthenticationRequiredException.field_g = 20;
-                  ld.field_b = true;
-                  hh.field_m.bindAsRenderTarget();
+                  TextLayout.field_b = true;
+                  TextHotspotBounds.field_m.bindAsRenderTarget();
                   SoftwareRasterizer.clearRaster();
                   k.field_f.a(0);
                   rk.field_c = 32;
@@ -5935,7 +5935,7 @@ public final class Terraphoenix extends GameShell {
                 if (DiskArchiveRequest.field_I == 1) {
                   TutorialText.field_c = ja.field_i;
                   ja.field_i = 12;
-                  hh.field_m.bindAsRenderTarget();
+                  TextHotspotBounds.field_m.bindAsRenderTarget();
                   SoftwareRasterizer.clearRaster();
                   TextFieldValidator.field_k = new Sprite(640, 480);
                   var2_intLifetime1Lifetime2 = 0;
@@ -6081,8 +6081,8 @@ public final class Terraphoenix extends GameShell {
               rk.field_c = rk.field_c - 1;
             }
           }
-          if (hh.field_m == null) {
-            hh.field_m = new Sprite(640, 480);
+          if (TextHotspotBounds.field_m == null) {
+            TextHotspotBounds.field_m = new Sprite(640, 480);
           }
           if (ProxyAuthenticationRequiredException.field_g > 0) {
             ProxyAuthenticationRequiredException.field_g = ProxyAuthenticationRequiredException.field_g - 1;
@@ -6152,7 +6152,7 @@ public final class Terraphoenix extends GameShell {
           ab.field_i = -1;
           var3 = ic.field_x[0];
           if (ProxyAuthenticationRequiredException.field_g < 10) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var4 = 320;
             var5 = 240;
@@ -6990,7 +6990,7 @@ public final class Terraphoenix extends GameShell {
           ab.field_i = -1;
           var3 = ic.field_x[0];
           if (ProxyAuthenticationRequiredException.field_g < 10) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var4 = 320;
             var5 = 240;
@@ -7688,7 +7688,7 @@ public final class Terraphoenix extends GameShell {
           }
           var4 = 0;
           while (true) {
-            if (fd.d(1)) {
+            if (DefaultTextWidgetRenderer.d(1)) {
               if (lf.field_c == 84) {
                 var2_int = this.field_xb;
                 var3 = 0;
@@ -7802,7 +7802,7 @@ public final class Terraphoenix extends GameShell {
           }
           if (~var2_int == ~var5) {
             wf.field_h = false;
-            ld.field_b = true;
+            TextLayout.field_b = true;
             ea.field_o = 0;
             ProxyAuthenticationRequiredException.field_g = 20;
           }
@@ -7982,7 +7982,7 @@ public final class Terraphoenix extends GameShell {
               wa.field_s = wa.field_s + 256;
             }
           }
-          if (ld.field_b) {
+          if (TextLayout.field_b) {
             stackIn_50_0 = 1;
             if (wf.field_h) {
               stackIn_51_1 = 0;
@@ -8003,7 +8003,7 @@ public final class Terraphoenix extends GameShell {
               bj.field_e.drawOpaque(0, 439);
               ab.field_i = -1;
               if (10 > ProxyAuthenticationRequiredException.field_g) {
-                hh.field_m.bindAsRenderTarget();
+                TextHotspotBounds.field_m.bindAsRenderTarget();
                 SoftwareRasterizer.clearRaster();
                 var4 = 320;
                 var5 = 240;
@@ -8119,7 +8119,7 @@ public final class Terraphoenix extends GameShell {
             this.a(true, var3_intLifetime1);
             ab.field_i = -1;
             if (ProxyAuthenticationRequiredException.field_g < 10) {
-              hh.field_m.bindAsRenderTarget();
+              TextHotspotBounds.field_m.bindAsRenderTarget();
               SoftwareRasterizer.clearRaster();
               var5Lifetime1 = 320;
               var6Lifetime1 = 240;
@@ -8453,7 +8453,7 @@ public final class Terraphoenix extends GameShell {
           }
           boolean decompiledFrameCompleted0 = true;
           if (null != this.field_Eb &&
-            !ld.field_b) {
+            !TextLayout.field_b) {
             var3_intLifetime2 = 0;
             var4Lifetime2 = 4;
             var5Lifetime2 = 0;
@@ -8514,7 +8514,7 @@ public final class Terraphoenix extends GameShell {
               this.field_Eb = null;
             }
           }
-          if (ld.field_b) {
+          if (TextLayout.field_b) {
             stackIn_551_0 = 1;
             if (wf.field_h) {
               stackIn_552_1 = 0;
@@ -8793,7 +8793,7 @@ public final class Terraphoenix extends GameShell {
           vl.field_c = il.a("lighttab", "", ab.field_a, -1);
           cc.field_i = ig.a(ab.field_a, 0, "weapons", "");
           Bzip2State.field_a = ig.a(ab.field_a, param0 ^ -2020, "armour", "");
-          em.field_c = il.a("researchscreen", "menu_graphics", ab.field_a, param0 ^ 2019);
+          TextLineMetrics.field_c = il.a("researchscreen", "menu_graphics", ab.field_a, param0 ^ 2019);
           aj.field_a = ig.a(ab.field_a, 0, "floors", "");
           dm.field_a = ig.a(ab.field_a, 0, "testwall", "");
           se.field_c = ig.a(ab.field_a, 0, "trees", "");
@@ -9051,7 +9051,7 @@ public final class Terraphoenix extends GameShell {
           ab.field_i = -1;
           var3 = ic.field_x[0];
           if (ProxyAuthenticationRequiredException.field_g < 10) {
-            hh.field_m.bindAsRenderTarget();
+            TextHotspotBounds.field_m.bindAsRenderTarget();
             SoftwareRasterizer.clearRaster();
             var4 = 320;
             if (this.field_X.field_f == 1) {
@@ -9136,7 +9136,7 @@ public final class Terraphoenix extends GameShell {
               AccountRequestState.field_f.drawString(pe.field_c[0], var6, var11, wa.field_s, 0);
               AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_g), 300, var11, wa.field_s, 0);
               if (!bk.c(-25704)) {
-                AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_g * 100 + hh.field_l, var7, var11, wa.field_s, 0);
+                AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_g * 100 + TextHotspotBounds.field_l, var7, var11, wa.field_s, 0);
               }
               var11 += 12;
               var12 = var12 + this.field_X.field_e.field_g * 100;
@@ -9144,21 +9144,21 @@ public final class Terraphoenix extends GameShell {
             if (this.field_X.field_e.field_j > 0) {
               AccountRequestState.field_f.drawString(pe.field_c[1], var6, var11, wa.field_s, 0);
               AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_j), 300, var11, wa.field_s, 0);
-              AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_j * 500 + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_j * 500 + TextHotspotBounds.field_l, var7, var11, wa.field_s, 0);
               var12 = var12 + 500 * this.field_X.field_e.field_j;
               var11 += 12;
             }
             if (this.field_X.field_e.field_m > 0) {
               AccountRequestState.field_f.drawString(pe.field_c[28], var6, var11, wa.field_s, 0);
               AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_m), 300, var11, wa.field_s, 0);
-              AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_m * 100 + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(this.field_X.field_e.field_m * 100 + TextHotspotBounds.field_l, var7, var11, wa.field_s, 0);
               var11 += 12;
               var12 = var12 + this.field_X.field_e.field_m * 100;
             }
             if (0 < this.field_X.field_e.field_b) {
               AccountRequestState.field_f.drawString(pe.field_c[2], var6, var11, wa.field_s, 0);
               AccountRequestState.field_f.drawString(Integer.toString(this.field_X.field_e.field_b), 300, var11, wa.field_s, 0);
-              AccountRequestState.field_f.drawRightAligned(1000 * this.field_X.field_e.field_b + hh.field_l, var7, var11, wa.field_s, 0);
+              AccountRequestState.field_f.drawRightAligned(1000 * this.field_X.field_e.field_b + TextHotspotBounds.field_l, var7, var11, wa.field_s, 0);
               var12 = var12 + 1000 * this.field_X.field_e.field_b;
               var11 += 12;
             }
@@ -9568,7 +9568,7 @@ public final class Terraphoenix extends GameShell {
               }
             }
           }
-          while (fd.d(1)) {
+          while (DefaultTextWidgetRenderer.d(1)) {
             if (lf.field_c != 13) {
               continue;
             }
@@ -9683,7 +9683,7 @@ public final class Terraphoenix extends GameShell {
           if (param0 >= -19) {
             this.field_hb = 4;
           }
-          if (!ld.field_b) {
+          if (!TextLayout.field_b) {
             wg.field_f.draw(533, 7);
             if (ef.field_j >= 533 &&
               MouseWheelInput.field_b <= 35 &&

@@ -380,7 +380,7 @@ public final class BachelorFridge extends NetworkGameClient {
             if (null != kga.field_c) {
               stackIn_70_1 = true;
             } else {
-              stackIn_70_1 = kt.field_i;
+              stackIn_70_1 = SetMoveSlotCooldownEffect.field_i;
             }
             SetFriendlyEffect.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_70_1);
           }
@@ -399,7 +399,7 @@ public final class BachelorFridge extends NetworkGameClient {
           if (kha.field_f &&
             mk.field_p != -1 &&
             -1 != gd.field_m) {
-            vv.field_c[kr.field_vb].draw(mk.field_p - vv.field_c[kr.field_vb].field_t, gd.field_m - vv.field_c[kr.field_vb].field_u);
+            TextLayout.field_c[kr.field_vb].draw(mk.field_p - TextLayout.field_c[kr.field_vb].field_t, gd.field_m - TextLayout.field_c[kr.field_vb].field_u);
           }
           IncomingEvent.a(0, -106, var2, 0);
           return;
@@ -424,9 +424,9 @@ public final class BachelorFridge extends NetworkGameClient {
           BoardTile.field_b = daa.c(-94, 6);
           HomingMissileAnimation.field_w = daa.c(param0 + 103, 7);
           FullHealAnimation.field_B = daa.c(param0 + 96, 8);
-          fda.field_l = daa.c(param0 ^ 73, 9);
+          RemoveDefeatedCreatureEffect.field_l = daa.c(param0 ^ 73, 9);
           JaggrabDownloader.field_m = daa.c(param0 ^ 52, 10);
-          fda.field_k = daa.c(83, param0);
+          RemoveDefeatedCreatureEffect.field_k = daa.c(83, param0);
           ria.field_i = daa.c(103, 12);
           pr.field_j = daa.c(-60, 13);
           iga.field_d = DiveBomberSpecial.a(14, false, false, 114, false);
@@ -826,7 +826,7 @@ public final class BachelorFridge extends NetworkGameClient {
         sea.releaseStatics((byte) -78);
         wd.c(1);
         via.releaseStatics(1);
-        vv.releaseStatics(0);
+        TextLayout.releaseStatics(0);
         UiWidget.c(1023);
         WidgetWrapper.releaseStatics(-81);
         am.resetStaticState(true);
@@ -950,7 +950,7 @@ public final class BachelorFridge extends NetworkGameClient {
         IterableDualLinkDeque.releaseStatics(-124);
         ul.releaseStatics(false);
         SoundFilter.releaseStatics();
-        tq.releaseStatics(-15298);
+        RichTextLayout.releaseStatics(-15298);
         raa.releaseStatics(2);
         re.releaseStatics(-124);
         du.releaseStatics(8192);
@@ -1074,24 +1074,24 @@ public final class BachelorFridge extends NetworkGameClient {
           bja.releaseStatics(-10744);
           ns.releaseStatics(-11);
           DamageEffect.releaseStatics(-124);
-          lia.releaseStatics((byte) 42);
-          qq.a(5);
+          ChangeHealthAndStatusEffect.releaseStatics((byte) 42);
+          ChangeCreatureStatOrHealthEffect.a(5);
           PlaceCreatureEffect.releaseStatics((byte) 85);
           MoveCreatureEffect.releaseStatics((byte) -13);
           SetFriendlyEffect.releaseStatics((byte) 29);
-          ela.releaseStatics((byte) 80);
+          DisableMoveSlotEffect.releaseStatics((byte) 80);
           DamageTileEffect.releaseStatics((byte) 116);
-          bm.releaseStatics((byte) 3);
+          SetTileTerrainEffect.releaseStatics((byte) 3);
           ClearTileFlagEffect.releaseStatics(101);
-          o.clearStaticReferences((byte) -7);
-          dh.releaseStatics((byte) -78);
-          fda.releaseStatics((byte) 25);
-          ic.releaseStatics(false);
-          kq.clearStaticReferences((byte) -91);
-          kt.releaseStatics(-23401);
-          mh.a(-15947);
-          pea.clearStaticReferences((byte) 116);
-          jk.releaseStatics((byte) -115);
+          ChangeAllCreaturesHealthEffect.clearStaticReferences((byte) -7);
+          ArmPetAttackEffect.releaseStatics((byte) -78);
+          RemoveDefeatedCreatureEffect.releaseStatics((byte) 25);
+          ClearPendingPetAttackEffect.releaseStatics(false);
+          StopFloodEffect.clearStaticReferences((byte) -91);
+          SetMoveSlotCooldownEffect.releaseStatics(-23401);
+          CreaturePoseEffect.a(-15947);
+          ConsumeCreatureRemainsEffect.clearStaticReferences((byte) 116);
+          CreaturePoseAnimation.releaseStatics((byte) -115);
           dla.releaseStatics(1097);
           EffectBatchAnimation.releaseStatics(24831);
           LevitateSpecial.clearStaticReferences((byte) -72);
@@ -1137,7 +1137,7 @@ public final class BachelorFridge extends NetworkGameClient {
           gea.releaseStatics(4096);
           fm.releaseStatics(101);
           bga.releaseStatics(false);
-          mla.clearStaticReferences((byte) 93);
+          TextLineMetrics.clearStaticReferences((byte) 93);
           AccountNameAvailabilityValidator.releaseStatics((byte) 84);
           PasswordValidator.releaseStatics(22753);
           EmailFormatValidator.f((byte) -24);
@@ -1360,8 +1360,8 @@ public final class BachelorFridge extends NetworkGameClient {
                     if (FullHealAnimation.field_B.ensureIndexLoaded(0) &&
                       FullHealAnimation.field_B.tryLoadAllGroups((byte) 105)) {
                       waa.a(0, 4);
-                      if (fda.field_l.ensureIndexLoaded(0) &&
-                        fda.field_l.tryLoadAllGroups((byte) 113)) {
+                      if (RemoveDefeatedCreatureEffect.field_l.ensureIndexLoaded(0) &&
+                        RemoveDefeatedCreatureEffect.field_l.tryLoadAllGroups((byte) 113)) {
                         waa.a(0, 5);
                         if (JaggrabDownloader.field_m.ensureIndexLoaded(0) &&
                           JaggrabDownloader.field_m.tryLoadAllGroups((byte) 120)) {
@@ -1402,14 +1402,14 @@ public final class BachelorFridge extends NetworkGameClient {
                                                 if (wb.field_l.ensureIndexLoaded(0) &&
                                                   wb.field_l.tryLoadAllGroups((byte) 99)) {
                                                   waa.a(0, 18);
-                                                  if (fda.field_k.ensureIndexLoaded(0) &&
-                                                    fda.field_k.tryLoadAllGroups((byte) 101)) {
+                                                  if (RemoveDefeatedCreatureEffect.field_k.ensureIndexLoaded(0) &&
+                                                    RemoveDefeatedCreatureEffect.field_k.tryLoadAllGroups((byte) 101)) {
                                                     waa.a(0, 19);
                                                     SlowAllSpecial.b(108);
                                                     this.a(78.5999984741211f, true);
                                                     this.draw((byte) 50);
                                                     waa.a(0, 20);
-                                                    pu.a(JaggrabDownloader.field_m, fda.field_l, -21201, HomingMissileAnimation.field_w, FullHealAnimation.field_B);
+                                                    pu.a(JaggrabDownloader.field_m, RemoveDefeatedCreatureEffect.field_l, -21201, HomingMissileAnimation.field_w, FullHealAnimation.field_B);
                                                     oe.a(230, (byte) 108);
                                                     ke.b(34);
                                                     HomingMissileAnimation.field_w = null;
@@ -1417,7 +1417,7 @@ public final class BachelorFridge extends NetworkGameClient {
                                                     waa.a(0, 21);
                                                     return false;
                                                   }
-                                                  this.a(fda.field_k, (byte) -6, 78.5f, 78.5999984741211f);
+                                                  this.a(RemoveDefeatedCreatureEffect.field_k, (byte) -6, 78.5f, 78.5999984741211f);
                                                   return false;
                                                 }
                                                 this.a(wb.field_l, (byte) 110, 78.0999984741211f, 78.5f);
@@ -1459,7 +1459,7 @@ public final class BachelorFridge extends NetworkGameClient {
                         this.a(JaggrabDownloader.field_m, (byte) 115, 23.299999237060547f, 25.399999618530273f);
                         return false;
                       }
-                      this.a(fda.field_l, (byte) -100, 23.299999237060547f, 23.299999237060547f);
+                      this.a(RemoveDefeatedCreatureEffect.field_l, (byte) -100, 23.299999237060547f, 23.299999237060547f);
                       return false;
                     }
                     this.a(FullHealAnimation.field_B, (byte) -91, 0.8999999761581421f, 23.299999237060547f);
@@ -1627,7 +1627,7 @@ public final class BachelorFridge extends NetworkGameClient {
             break;
           }
           var6 = lna.field_y;
-          r.a(InsanoSauceAnimation.field_y, -1, ScavengerSpecial.field_p, lna.field_y, tj.field_c, jha.field_j, pt.field_b, 4, fda.field_k, ClamsSpecial.field_p, var6, var4, true, var5, 5);
+          r.a(InsanoSauceAnimation.field_y, -1, ScavengerSpecial.field_p, lna.field_y, tj.field_c, jha.field_j, pt.field_b, 4, RemoveDefeatedCreatureEffect.field_k, ClamsSpecial.field_p, var6, var4, true, var5, 5);
           nda.field_l = hca.a("basic", vb.field_j, -99, "lobby_game_logo");
           iw.a(200, (byte) -89);
           SpecialEvent.a(-114, ScavengerSpecial.field_p, ClamsSpecial.field_p);
@@ -1743,7 +1743,7 @@ public final class BachelorFridge extends NetworkGameClient {
                       lga.c((byte) 118);
                     }
                     if (var3 == 2) {
-                      dh.a((java.applet.Applet) (this), 59);
+                      ArmPetAttackEffect.a((java.applet.Applet) (this), 59);
                     }
                   }
                   this.a(true, (byte) 115);
@@ -1752,7 +1752,7 @@ public final class BachelorFridge extends NetworkGameClient {
                 if (decompiledFrameRemainder0) {
                   if (nba.b((byte) -99)) {
                     if (ha.field_l == ha.field_k) {
-                      var3 = jk.d(2);
+                      var3 = CreaturePoseAnimation.d(2);
                       if (var3 == 1) {
                         SuperSpeedEvent.field_r = true;
                         au.a(0, gba.field_Ib, false);
@@ -1820,7 +1820,7 @@ public final class BachelorFridge extends NetworkGameClient {
                     if (ri.field_a == 14) {
                       StatusEffectInfo.a(true);
                       dfa.a(150, ul.roundUpPowerOfTwo(-58, 4), ul.roundUpPowerOfTwo(-51, 2000), 0, jha.field_j, InsanoSauceAnimation.field_y.length, mia.d((byte) -104), StickySpecial.c(true), 1024, NetworkGameClient.n(96));
-                      MusicPatch.a(vv.a(31185), -83, jha.c(-31068));
+                      MusicPatch.a(TextLayout.a(31185), -83, jha.c(-31068));
                       UiWidget.field_g = true;
                       hm.field_b = true;
                       bka.field_h = false;
@@ -1858,7 +1858,7 @@ public final class BachelorFridge extends NetworkGameClient {
                       continue;
                     }
                     if (68 == ri.field_a) {
-                      var3_ref_int__ = vv.a((byte) 124);
+                      var3_ref_int__ = TextLayout.a((byte) 124);
                       var4_ref_int__ = var3_ref_int__;
                       var5_ref_pf = ig.field_m;
                       var6 = ((PacketBuffer) ((Object) var5_ref_pf)).readUnsignedByte(16711935);

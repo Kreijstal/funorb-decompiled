@@ -193,7 +193,7 @@ final class uc extends InteractiveWidget {
         }
         if (!hc.field_Q) {
           hc.field_Q = true;
-          var12 = ia.field_i[param4][AccountRegistrationPanel.field_T[4]][0];
+          var12 = TextHotspotBounds.field_i[param4][AccountRegistrationPanel.field_T[4]][0];
           var12.field_l = var12.field_k.length;
           ki.field_d = RawPcmStream.createForPlaybackRateWithScaledVolumeAndPan(var12, 100, var10, var11);
           ki.field_d.setLoopCount(-1);

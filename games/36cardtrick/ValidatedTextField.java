@@ -19,7 +19,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 != -79) {
           this.notifyTextChanged(107);
           if (!this.field_j) {

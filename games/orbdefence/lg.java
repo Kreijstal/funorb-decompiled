@@ -39,7 +39,7 @@ final class lg {
           uk.field_b.writeInt(j.field_e, -1);
           uk.field_b.writeLong(DisplayNameSelectionPanel.field_G, -16943);
           var6 = 0;
-          if (jc.field_b) {
+          if (DefaultTextWidgetRenderer.field_b) {
             var6 = var6 | 1;
           }
           if (PacketBuffer.field_g) {
@@ -106,7 +106,7 @@ final class lg {
         if (param0 != -2) {
           return false;
         }
-        return ed.field_b.a(param0 + 2);
+        return TextLineMetrics.field_b.a(param0 + 2);
     }
 
     static {

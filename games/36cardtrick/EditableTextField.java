@@ -175,10 +175,10 @@ class EditableTextField extends InteractiveWidget {
           if (!super.a(param0, param1, param2, -83, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_v instanceof ne)) {
+          if (!(this.field_v instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((ne) ((Object) this.field_v)).a(eg.field_b, param1, -10989, param0, (lk) (this), ij.field_e);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_v)).findTextOffsetAtScreenPosition(eg.field_b, param1, -10989, param0, (lk) (this), ij.field_e);
           if (-1 == var8_int) {
             stackIn_8_1 = 0;
           } else {
@@ -412,7 +412,7 @@ class EditableTextField extends InteractiveWidget {
 
     void a(int param0, int param1, lk param2, int param3) {
         int var6 = 0;
-        ne var7 = null;
+        TextWidgetRenderer var7 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -425,9 +425,9 @@ class EditableTextField extends InteractiveWidget {
           super.a(param0, param1, param2, param3 + 0);
           this.scrollCaretIntoView((byte) -120);
           if (this.field_x == 1) {
-            if (this.field_v instanceof ne) {
-              var7 = (ne) ((Object) this.field_v);
-              var6 = var7.a(eg.field_b, param0, -10989, param1, (lk) (this), ij.field_e);
+            if (this.field_v instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.field_v);
+              var6 = var7.findTextOffsetAtScreenPosition(eg.field_b, param0, -10989, param1, (lk) (this), ij.field_e);
               if (-1 != var6) {
                 if (this.field_G &&
                   this.field_L > var6 &&
@@ -528,19 +528,19 @@ class EditableTextField extends InteractiveWidget {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ne var8 = null;
+        TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (null != this.field_v &&
           0 == param3) {
           this.field_v.a(param0, (lk) (this), 11447, param1, this.field_B);
-          if (this.field_v instanceof ne) {
-            var8 = (ne) ((Object) this.field_v);
+          if (this.field_v instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.field_v);
             if (this.field_F != this.field_N) {
-              var8.a((lk) (this), (byte) 67, param1, param0, this.field_N, this.field_F);
+              var8.paintSelection((lk) (this), (byte) 67, param1, param0, this.field_N, this.field_F);
             }
             var6 = id.correctedCurrentTimeMillis(62);
             if ((-this.field_M + var6) % 1000L < 500L) {
-              var8.a(param0, this.field_N, param1, (byte) 55, (lk) (this));
+              var8.paintCaret(param0, this.field_N, param1, (byte) 55, (lk) (this));
             }
           }
         }
@@ -550,35 +550,35 @@ class EditableTextField extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(byte param0) {
-        mj var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        ne var9;
+        TextWidgetRenderer var9;
         var8 = Main.field_T;
         if (!this.field_J) {
           this.field_m = 0;
           this.field_l = 0;
           return;
         }
-        if (!(this.field_v instanceof ne)) {
+        if (!(this.field_v instanceof TextWidgetRenderer)) {
           return;
         }
         if (param0 > -74) {
           return;
         }
-        var9 = (ne) ((Object) this.field_v);
-        var3 = var9.a((byte) -96, (lk) (this));
-        var4 = var3.b((byte) -5);
-        var5 = var9.a((lk) (this), 0);
-        var6 = var9.a(-1) >> 1;
+        var9 = (TextWidgetRenderer) ((Object) this.field_v);
+        var3 = var9.getTextLayout((byte) -96, (lk) (this));
+        var4 = var3.getMaxLineRightX((byte) -5);
+        var5 = var9.getTextAreaWidth((lk) (this), 0);
+        var6 = var9.getFontLineHeight(-1) >> 1;
         if (var5 - var6 > var4) {
           this.field_l = 0;
           this.field_m = 0;
         } else {
-          var7 = this.field_l + var3.a(true, this.field_N);
+          var7 = this.field_l + var3.getXForTextOffset(true, this.field_N);
           if (var7 > var5 - var6) {
             this.field_l = -var7 + (-var6 + var5) + this.field_l;
           } else {

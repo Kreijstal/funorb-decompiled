@@ -41,7 +41,7 @@ final class ng extends lk {
         int var6 = this.field_i + param1;
         this.a(this.field_K[0], var6, false, var5);
         if (65536 > this.field_J) {
-          ek.a(var6, this.field_h + var5, (this.field_J * this.field_h >> 16) + var5, (byte) 74, this.field_q + var6);
+          DefaultTextWidgetRenderer.a(var6, this.field_h + var5, (this.field_J * this.field_h >> 16) + var5, (byte) 74, this.field_q + var6);
           this.a(this.field_K[1], var6, false, var5);
           gg.a(14756);
         }
@@ -100,7 +100,7 @@ final class ng extends lk {
         var8 = Main.field_T;
         try {
           var5_int = param3 + this.field_h;
-          ek.a(param1, -this.field_D.field_p + var5_int, this.field_D.field_p + param3, (byte) 96, this.field_q + param1);
+          DefaultTextWidgetRenderer.a(param1, -this.field_D.field_p + var5_int, this.field_D.field_p + param3, (byte) 96, this.field_q + param1);
           var6 = -this.field_B + param3;
           if (param2) {
             var9 = (lk) null;

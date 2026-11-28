@@ -141,7 +141,7 @@ final class an {
               }
             }
           }
-          ro.field_g.a(97);
+          TextLayout.field_g.a(97);
           stackIn_66_0 = var15;
           return stackIn_66_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -582,7 +582,7 @@ final class an {
             return stackIn_17_0;
           }
           if (param2 == 6) {
-            stackIn_20_0 = Vertigo2.a(new String[]{param1}, va.field_r, 18);
+            stackIn_20_0 = Vertigo2.a(new String[]{param1}, DefaultTextWidgetRenderer.field_r, 18);
             return stackIn_20_0;
           }
           if (param2 == 7) {

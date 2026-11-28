@@ -89,7 +89,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           param0.drawAdditive(param4 + 1, 1 + param5, param6);
           SoftwareRasterizer.restoreClip(mo.field_w);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "eq.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "eq.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 

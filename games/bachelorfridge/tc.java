@@ -230,7 +230,7 @@ final class tc {
               }
               var2 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", (byte) 64));
-              var4 = fda.a(-1, ';', var3);
+              var4 = RemoveDefeatedCreatureEffect.a(-1, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

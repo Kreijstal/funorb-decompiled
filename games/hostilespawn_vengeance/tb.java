@@ -75,7 +75,7 @@ final class tb extends InteractiveWidget {
                   }
                   if (var5 >= 2 &&
                     !param2) {
-                    stackIn_30_0 = mm.field_k;
+                    stackIn_30_0 = TextHotspotBounds.field_k;
                     return stackIn_30_0;
                   }
                 }

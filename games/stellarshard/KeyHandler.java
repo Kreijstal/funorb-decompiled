@@ -35,7 +35,7 @@ final class KeyHandler implements java.awt.event.KeyListener, java.awt.event.Foc
             stackIn_3_0 = 103;
             return stackIn_3_0;
           }
-          var4 = rg.field_F;
+          var4 = RichTextWidget.field_F;
           while (var3_int < stellarshard.field_L.length) {
             var5 = sj.field_J[var3_int];
             if (var5 < 0) {

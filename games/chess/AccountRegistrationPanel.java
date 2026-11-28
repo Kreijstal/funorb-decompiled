@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ma implements nn, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends ma implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_Z;
     private ki field_P;
     private ValidatedTextField field_T;
@@ -12,7 +12,7 @@ final class AccountRegistrationPanel extends ma implements nn, WidgetActivationL
     private ValidatedTextField field_Q;
     private ValidatedTextField field_L;
     NameSuggestionsPanel field_Y;
-    private se field_K;
+    private RichTextWidget field_K;
     static PlatformTaskDispatcher field_N;
     private ValidatedTextField field_W;
     private ValidatedTextField field_U;
@@ -62,7 +62,7 @@ final class AccountRegistrationPanel extends ma implements nn, WidgetActivationL
         field_N = null;
     }
 
-    public final void a(int param0, byte param1, se param2, int param3) {
+    public final void onTextHotspotActivated(int param0, byte param1, RichTextWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -460,7 +460,7 @@ final class AccountRegistrationPanel extends ma implements nn, WidgetActivationL
         this.field_M = new InteractiveWidget(vf.field_c, (rg) null);
         this.field_T.field_j = vc.field_a;
         this.field_Q.field_j = MusicPatchPcmStream.field_o;
-        this.field_L.field_j = hl.field_q;
+        this.field_L.field_j = DefaultTextWidgetRenderer.field_q;
         this.field_U.field_j = DiskArchiveRequest.field_A;
         this.field_Z.field_j = wk.field_a;
         this.field_W.field_j = fm.field_P;
@@ -494,8 +494,8 @@ final class AccountRegistrationPanel extends ma implements nn, WidgetActivationL
         kg var4 = new kg(46, var3, this.field_y - 90, 25, this.field_P, true, this.field_y - 120, 5, rc.field_a, 11579568, li.field_a);
         this.b(var4, 95);
         var3 = var3 + var4.field_C;
-        hl var5 = new hl(rb.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, rb.field_b.field_C, -1, 2147483647, true);
-        this.field_K = new se(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(rb.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, rb.field_b.field_C, -1, 2147483647, true);
+        this.field_K = new RichTextWidget(var2, var5);
         this.field_K.field_j = "";
         this.field_K.a(-23750, 0, ok.field_Gb);
         this.field_K.a(-23750, 1, ok.field_Gb);

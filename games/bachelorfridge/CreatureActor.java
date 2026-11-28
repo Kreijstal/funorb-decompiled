@@ -34,7 +34,7 @@ final class CreatureActor extends IntrusiveNode {
         return 0.0f;
     }
 
-    final void b(int param0, int param1) {
+    final void playAnimation(int param0, int param1) {
         this.field_f.a((byte) 28, this.field_s.field_o.field_b, param1);
         if (param0 != -1) {
           this.c((byte) 96);

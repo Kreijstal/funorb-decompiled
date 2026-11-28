@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ta implements ff, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends ta implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     NameSuggestionsPanel field_M;
     static String field_H;
     static boolean field_N;
@@ -9,7 +9,7 @@ final class AccountRegistrationPanel extends ta implements ff, WidgetActivationL
     private ValidatedTextField field_O;
     static int field_C;
     private ValidatedTextField field_G;
-    private te field_L;
+    private RichTextWidget field_L;
     private ValidatedTextField field_D;
     private InteractiveWidget field_K;
     private InteractiveWidget field_F;
@@ -125,8 +125,8 @@ final class AccountRegistrationPanel extends ta implements ff, WidgetActivationL
         h var4 = new h(46, var3, -90 + this.field_m, 25, this.field_P, true, this.field_m - 120, 5, pc.field_bb, 11579568, rh.field_d);
         this.a(var4, (byte) 74);
         var3 = var3 + var4.field_r;
-        jc var5 = new jc(lm.field_f, 0, 0, 0, 0, 16777215, -1, 0, 0, lm.field_f.field_H, -1, 2147483647, true);
-        this.field_L = new te(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(lm.field_f, 0, 0, 0, 0, 16777215, -1, 0, 0, lm.field_f.field_H, -1, 2147483647, true);
+        this.field_L = new RichTextWidget(var2, var5);
         this.field_L.field_i = "";
         this.field_L.a(0, ConfirmedEmailAvailabilityValidator.field_p, 2);
         this.field_L.a(1, ConfirmedEmailAvailabilityValidator.field_p, 2);
@@ -472,7 +472,7 @@ final class AccountRegistrationPanel extends ta implements ff, WidgetActivationL
     private final int a(int param0, pj param1, int param2, byte param3, String param4) {
         h var6 = null;
         RuntimeException var6_ref = null;
-        te var7 = null;
+        RichTextWidget var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -484,8 +484,8 @@ final class AccountRegistrationPanel extends ta implements ff, WidgetActivationL
           var6 = new h(20, param0, param2 + 120, 25, param1, false, 120, 3, lm.field_f, 16777215, param4);
           this.a(var6, (byte) 74);
           if (param3 != -82) {
-            var7 = (te) null;
-            this.a(-72, -9, (byte) -113, (te) null);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated(-72, -9, (byte) -113, (RichTextWidget) null);
           }
           stackIn_3_0 = var6.field_r;
           return stackIn_3_0;
@@ -509,7 +509,7 @@ final class AccountRegistrationPanel extends ta implements ff, WidgetActivationL
         }
     }
 
-    public final void a(int param0, int param1, byte param2, te param3) {
+    public final void onTextHotspotActivated(int param0, int param1, byte param2, RichTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -553,12 +553,12 @@ final class AccountRegistrationPanel extends ta implements ff, WidgetActivationL
         String var2Lifetime1;
         if (!param0) {
           var2 = (String) null;
-          ed.a((String) null, 0, sk.field_G);
+          TextLineMetrics.a((String) null, 0, sk.field_G);
           return;
         }
         field_C = 44;
         var2Lifetime1 = (String) null;
-        ed.a((String) null, 0, sk.field_G);
+        TextLineMetrics.a((String) null, 0, sk.field_G);
     }
 
     static {

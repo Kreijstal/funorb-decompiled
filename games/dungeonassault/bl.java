@@ -303,7 +303,7 @@ final class bl {
           na.field_A = oh.a(hj.field_Z, "pieces", 11091, "piece_saurus_warrior");
           dk.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_skeleton");
           n.field_b = oh.a(hj.field_Z, "pieces", 11091, "piece_snake");
-          hh.field_o = oh.a(hj.field_Z, "pieces", 11091, "piece_spectre");
+          DefaultTextWidgetRenderer.field_o = oh.a(hj.field_Z, "pieces", 11091, "piece_spectre");
           jf.field_f = oh.a(hj.field_Z, "pieces", 11091, "piece_spider");
           DungeonAssault.field_I = oh.a(hj.field_Z, "pieces", 11091, "piece_spy");
           DebouncedFieldValidator.field_c = oh.a(hj.field_Z, "pieces", 11091, "piece_thief");
@@ -450,7 +450,7 @@ final class bl {
         boolean stackIn_29_1 = false;
         int var1;
         int var2;
-        if (hh.field_s == SecondaryNodeDequeIterator.field_l) {
+        if (DefaultTextWidgetRenderer.field_s == SecondaryNodeDequeIterator.field_l) {
           SecondaryNodeDequeIterator.field_l = null;
         }
         if (0 <= ce.field_p) {
@@ -466,7 +466,7 @@ final class bl {
         if (DisplayNameSelectionPanel.field_L == null) {
           stackIn_8_0 = 620;
         } else {
-          stackIn_8_0 = hh.field_p - 100;
+          stackIn_8_0 = DefaultTextWidgetRenderer.field_p - 100;
         }
         ArchiveRequest.field_w = stackIn_8_0;
         if (null != DisplayNameSelectionPanel.field_L) {
@@ -479,7 +479,7 @@ final class bl {
           if (jn.field_l == null) {
             stackIn_16_0 = 620;
           } else {
-            stackIn_16_0 = -100 + hh.field_p;
+            stackIn_16_0 = -100 + DefaultTextWidgetRenderer.field_p;
           }
           var1 = stackIn_16_0;
           if (jn.field_l != null) {

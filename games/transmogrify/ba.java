@@ -16,10 +16,10 @@ final class ba extends IntrusiveNode {
 
     final static hg e(int param0) {
         if (param0 <= 0) {
-          return new hg(le.h(23), uf.a((byte) -76));
+          return new hg(RichTextWidget.h(23), uf.a((byte) -76));
         }
         field_n = -53;
-        return new hg(le.h(23), uf.a((byte) -76));
+        return new hg(RichTextWidget.h(23), uf.a((byte) -76));
     }
 
     public static void clearStaticReferences(int param0) {

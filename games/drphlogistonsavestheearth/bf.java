@@ -252,7 +252,7 @@ final class bf {
           } else {
             var2 = this.field_F;
           }
-          if (this.field_V % qa.field_T[this.field_Q] == 0) {
+          if (this.field_V % RichTextWidget.field_T[this.field_Q] == 0) {
             fieldTemp$0 = this.field_E + 1;
             this.field_E = this.field_E + 1;
             if (fieldTemp$0 == var2.length) {
@@ -261,13 +261,13 @@ final class bf {
           }
           if (this.field_r != null) {
             if (this.field_u > 0) {
-              this.field_R = -(this.field_u / qa.field_T[this.field_Q]) - 1 + this.field_r.length;
+              this.field_R = -(this.field_u / RichTextWidget.field_T[this.field_Q]) - 1 + this.field_r.length;
               if (var6 != 0) {
                 if (this.field_u >= 0) {
                   this.field_u = this.field_r.length - 1;
-                  this.field_R = -(-this.field_u / qa.field_T[this.field_Q]) + (-1 + this.field_r.length);
+                  this.field_R = -(-this.field_u / RichTextWidget.field_T[this.field_Q]) + (-1 + this.field_r.length);
                 } else {
-                  this.field_R = -(-this.field_u / qa.field_T[this.field_Q]) + (-1 + this.field_r.length);
+                  this.field_R = -(-this.field_u / RichTextWidget.field_T[this.field_Q]) + (-1 + this.field_r.length);
                 }
               }
             } else {
@@ -277,7 +277,7 @@ final class bf {
                 decompiledSharedTail0 = (var6 != 0);
               }
               if (decompiledSharedTail0) {
-                this.field_R = -(-this.field_u / qa.field_T[this.field_Q]) + (-1 + this.field_r.length);
+                this.field_R = -(-this.field_u / RichTextWidget.field_T[this.field_Q]) + (-1 + this.field_r.length);
               }
             }
             if (-1 + this.field_r.length < this.field_R) {
@@ -446,7 +446,7 @@ final class bf {
             2 == sd.field_e &&
             0 < AgeValidator.field_s[this.field_Q]) {
             if (0 == (1 & this.field_e)) {
-              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], fk.field_t[this.field_Q], true);
+              this.field_f = gm.a(this.field_f, PcmOutputWorker.field_c[this.field_Q], AgeValidator.field_s[this.field_Q], ff.field_Q[this.field_Q][this.field_E], TextHotspotBounds.field_t[this.field_Q], true);
             }
             if (this.field_f != null) {
               this.field_f.drawAdditive((int)this.field_o, (int)this.field_N, 382);
@@ -2345,7 +2345,7 @@ final class bf {
           this.field_Q = param0;
           this.field_Q = param0;
           this.field_H = ql.field_b[this.field_Q];
-          this.field_w = o.field_k[this.field_Q];
+          this.field_w = RichTextLayout.field_k[this.field_Q];
           if (this.field_Q == 12 &&
             0.333 > Math.random()) {
             this.field_V = 0;
@@ -2456,7 +2456,7 @@ final class bf {
                 break;
               }
             case 11:
-              this.field_r = mi.field_i;
+              this.field_r = TextLineMetrics.field_i;
               this.field_y = ib.field_r;
               var10 = 0;
               while (this.field_L.length > var10) {

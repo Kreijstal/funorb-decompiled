@@ -89,7 +89,7 @@ final class hf {
           }
           try {
             if (ih.field_X == 0) {
-              DiskArchiveRequest.field_q = vc.field_G.requestDirectSocket(MatchingFieldValidator.field_l, a.field_a, 0);
+              DiskArchiveRequest.field_q = RichTextWidget.field_G.requestDirectSocket(MatchingFieldValidator.field_l, a.field_a, 0);
               ih.field_X = ih.field_X + 1;
             }
             if (ih.field_X == 1) {
@@ -105,7 +105,7 @@ final class hf {
               hf.a(true);
             }
             if (ih.field_X == 2) {
-              AccountRequestState.field_a = new BufferedSocket((java.net.Socket) (DiskArchiveRequest.field_q.result), vc.field_G);
+              AccountRequestState.field_a = new BufferedSocket((java.net.Socket) (DiskArchiveRequest.field_q.result), RichTextWidget.field_G);
               var2 = new PacketBuffer(13);
               AppletShell.a(pe.field_c, 6, AccountRequestState.field_e, var2, fi.field_c);
               var2.writeByte(15, (byte) 98);
@@ -189,7 +189,7 @@ final class hf {
             stackIn_15_0 = 3;
             return stackIn_15_0;
           }
-          if (qg.field_g == vc.field_F) {
+          if (qg.field_g == RichTextWidget.field_F) {
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }

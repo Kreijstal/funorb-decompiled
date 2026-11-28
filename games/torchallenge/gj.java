@@ -264,16 +264,16 @@ final class gj {
             }
             qb.field_c = new String[var4];
             he.a(wf.field_e, 0, qb.field_c, 0, var4);
-            qi.field_b = new String[-1 + (-var4 + var3_int)];
-            he.a(wf.field_e, 1 + var4, qi.field_b, 0, -1 + (-var4 + var3_int));
+            TextLineMetrics.field_b = new String[-1 + (-var4 + var3_int)];
+            he.a(wf.field_e, 1 + var4, TextLineMetrics.field_b, 0, -1 + (-var4 + var3_int));
             if (qb.field_c.length > ji.field_n.length) {
               stackIn_29_0 = qb.field_c.length;
             } else {
               stackIn_29_0 = ji.field_n.length;
             }
             var5 = stackIn_29_0;
-            if (qi.field_b.length > FrameTimer.field_c.length) {
-              stackIn_32_0 = qi.field_b.length;
+            if (TextLineMetrics.field_b.length > FrameTimer.field_c.length) {
+              stackIn_32_0 = TextLineMetrics.field_b.length;
             } else {
               stackIn_32_0 = FrameTimer.field_c.length;
             }
@@ -310,10 +310,10 @@ final class gj {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_44_0 = MatchingFieldValidator.field_s;
               stackIn_44_1 = var8Lifetime3 + 7 + var5;
-              stackIn_44_2 = ~qi.field_b.length;
+              stackIn_44_2 = ~TextLineMetrics.field_b.length;
               stackIn_44_3 = ~var8Lifetime3;
               if (stackIn_44_2 < stackIn_44_3) {
-                stackIn_47_2 = qi.field_b[var8Lifetime3];
+                stackIn_47_2 = TextLineMetrics.field_b[var8Lifetime3];
               } else {
                 stackIn_47_2 = "";
               }

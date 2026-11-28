@@ -88,13 +88,13 @@ final class ab {
             var5 = to.field_c[var3_int];
             if (var5 >= 0) {
               var6 = KeyboardInput.a(true, DungeonRaidScreen.field_A[var3_int], param0 ^ 776707894);
-              var4 = var4 + ci.field_j;
+              var4 = var4 + TextHotspotBounds.field_j;
               var7 = PasswordValidator.field_r - (var6 >> 1);
               if (PacketBuffer.a(var4, mj.field_g + (RaiderDefinition.field_q << 1), param1, (oh.field_t << 1) + var6, -oh.field_t + var7, param2, 100)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (mj.field_g + ci.field_j + (RaiderDefinition.field_q << 1));
+              var4 = var4 + (mj.field_g + TextHotspotBounds.field_j + (RaiderDefinition.field_q << 1));
             } else {
               var4 = var4 + ag.field_a;
             }

@@ -39,7 +39,7 @@ final class HomingMissileSpecial extends SpecialOrder {
           var3 = var2.position;
           var2.writeByte(2, 0);
           var2.writeBytes(0, -125, LevitateEvent.field_r.length, LevitateEvent.field_r);
-          var2.writeByte(tq.field_h, 0);
+          var2.writeByte(RichTextLayout.field_h, 0);
           var2.writeByte(ena.field_n, 0);
           var2.writeBytes(0, -128, MouseWheelInput.field_c.length, MouseWheelInput.field_c);
           var2.writeLengthByte((byte) 81, var2.position - var3);
@@ -49,7 +49,7 @@ final class HomingMissileSpecial extends SpecialOrder {
         var3Lifetime1 = var2.position;
         var2.writeByte(2, 0);
         var2.writeBytes(0, -125, LevitateEvent.field_r.length, LevitateEvent.field_r);
-        var2.writeByte(tq.field_h, 0);
+        var2.writeByte(RichTextLayout.field_h, 0);
         var2.writeByte(ena.field_n, 0);
         var2.writeBytes(0, -128, MouseWheelInput.field_c.length, MouseWheelInput.field_c);
         var2.writeLengthByte((byte) 81, var2.position - var3Lifetime1);

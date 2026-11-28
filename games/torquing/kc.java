@@ -65,7 +65,7 @@ final class kc extends am {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class kc extends am {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -316,7 +316,7 @@ final class kc extends am {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -329,7 +329,7 @@ final class kc extends am {
           qm.field_a = param1;
           ae.field_mb = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "kc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "kc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -130,7 +130,7 @@ final class PcmResampler {
         if (param0 == param1) {
           return;
         }
-        var3 = ed.greatestCommonDivisor(param0, (byte) -104, param1);
+        var3 = TextLayout.greatestCommonDivisor(param0, (byte) -104, param1);
         param0 = param0 / var3;
         param1 = param1 / var3;
         this.field_c = param1;

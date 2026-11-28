@@ -52,7 +52,7 @@ public final class OrbDefence extends NetworkGameClient {
               bg.a(-2027485778);
               ImageProducerRasterBuffer.b(0);
               if (5 == kf.field_c &&
-                dm.field_f == 0) {
+                TextLayout.field_f == 0) {
                 kf.field_c = 2;
                 rh.a((byte) -96, 2, false);
               }
@@ -483,7 +483,7 @@ public final class OrbDefence extends NetworkGameClient {
         ArchiveRequest.releaseDeclaredStaticReferences((byte) -90);
         jd.clearStaticReferences(0);
         gg.resetStaticState(true);
-        jc.clearStaticReferences(true);
+        DefaultTextWidgetRenderer.clearStaticReferences(true);
         wi.clearStaticReferences();
         p.clearStaticReferences((byte) 73);
         fa.clearStaticReferences(false);
@@ -509,7 +509,7 @@ public final class OrbDefence extends NetworkGameClient {
         sj.clearStaticReferences((byte) 64);
         ab.clearStaticReferences(false);
         ck.clearStaticReferences(22499);
-        dm.clearStaticReferences(0);
+        TextLayout.clearStaticReferences(0);
         pj.clearDeclaredStaticReferences(-75);
         InteractiveWidget.resetStaticState(99);
         kj.clearStaticReferences((byte) 81);
@@ -545,7 +545,7 @@ public final class OrbDefence extends NetworkGameClient {
         hl.discardDeclaredStaticReferences(0);
         dg.clearStaticReferences((byte) 120);
         NameSuggestionsPanel.releaseDeclaredStaticReferences(29858);
-        te.releaseDeclaredStaticReferences(-3213);
+        RichTextWidget.releaseDeclaredStaticReferences(-3213);
         kk.discardDeclaredStaticReferences(79);
         of.clearStaticReferences((byte) -83);
         TextFieldValidator.g(-104);
@@ -559,7 +559,7 @@ public final class OrbDefence extends NetworkGameClient {
         ei.b(139);
         hg.c(false);
         vf.clearStaticReferences(1);
-        bd.clearDeclaredStaticReferences(0);
+        RichTextLayout.clearDeclaredStaticReferences(0);
         tj.a((byte) -58);
         dd.clearDeclaredStaticReferences((byte) -119);
         mm.releaseDeclaredStaticReferences(21006);
@@ -603,7 +603,7 @@ public final class OrbDefence extends NetworkGameClient {
         vb.clearDeclaredStaticReferences(-26818);
         ef.clearStaticReferences(param0);
         sa.a((byte) -105);
-        ed.a(-1);
+        TextLineMetrics.a(-1);
         AccountNameAvailabilityValidator.clearStaticReferences((byte) -97);
         PasswordValidator.resetStaticState((byte) -15);
         EmailFormatValidator.resetStaticState(-24392);
@@ -611,7 +611,7 @@ public final class OrbDefence extends NetworkGameClient {
         AgeValidator.clearDeclaredStaticReferences(-1);
         MatchingFieldValidator.clearStaticReferences((byte) -41);
         li.clearStaticReferences(false);
-        cc.clearStaticReferences((byte) 83);
+        TextHotspotBounds.clearStaticReferences((byte) 83);
         qd.clearStaticReferences(-96);
         DebouncedFieldValidator.clearStaticReferences(7312);
         e.clearStaticReferences((byte) -14);
@@ -644,7 +644,7 @@ public final class OrbDefence extends NetworkGameClient {
         }
         SoftwareRasterizer.clearRaster();
         if (~kk.field_S != ~kf.field_c) {
-          if (5 <= te.field_O) {
+          if (5 <= RichTextWidget.field_O) {
             if (kk.field_S != -1) {
               if (kk.field_S == 1 &&
                 il.field_f != null) {
@@ -654,7 +654,7 @@ public final class OrbDefence extends NetworkGameClient {
             } else {
               il.field_f.a(2, false);
             }
-            ub.a(10 - te.field_O, 0, ub.field_a);
+            ub.a(10 - RichTextWidget.field_O, 0, ub.field_a);
           } else {
             if (kf.field_c != -1) {
               if (kf.field_c == 1 &&
@@ -665,7 +665,7 @@ public final class OrbDefence extends NetworkGameClient {
             } else {
               il.field_f.a(2, false);
             }
-            ub.a(te.field_O, 0, ub.field_a);
+            ub.a(RichTextWidget.field_O, 0, ub.field_a);
           }
         } else {
           if (-1 != kf.field_c) {
@@ -683,7 +683,7 @@ public final class OrbDefence extends NetworkGameClient {
           BoundedRandomAccessFile.a(4 + f.field_w[0].field_o, f.field_w[0].field_k + 4, false, f.field_w);
         }
         if (lc.field_r != 0) {
-          var3_int = 256 * te.field_O / 10;
+          var3_int = 256 * RichTextWidget.field_O / 10;
           if (var3_int > 0) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_l, 0, var3_int);
           }
@@ -720,7 +720,7 @@ public final class OrbDefence extends NetworkGameClient {
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 56, 16777215, 128);
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 55, 16777215, 192);
           SoftwareRasterizer.fillCircleAlpha(var4, 417, 54, 0, 255);
-          bd.field_o[var3.field_k].drawHalfSize(var4 - 32, 370);
+          RichTextLayout.field_o[var3.field_k].drawHalfSize(var4 - 32, 370);
           ob.field_I.drawCentred(gj.field_j[var3.field_k], var4 - 1, 440 + ob.field_I.field_H, 0, 0);
           ob.field_I.drawCentred(gj.field_j[var3.field_k], var4, ob.field_I.field_H + 439, 0, 0);
           ob.field_I.drawCentred(gj.field_j[var3.field_k], var4, 440 + ob.field_I.field_H, 15610879, -1);
@@ -767,13 +767,13 @@ public final class OrbDefence extends NetworkGameClient {
           if (j.field_b.ensureIndexLoaded(-1) &&
             j.field_b.tryLoadGroupByName((byte) 102, "basic")) {
             if (!j.field_b.tryLoadGroupByName((byte) 99, "arialbold14")) {
-              j.a(4.0f, ed.a(TextFieldValidator.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
+              j.a(4.0f, TextLineMetrics.a(TextFieldValidator.field_e, j.field_b, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 118);
               return false;
             }
             if (GameAppletShell.field_d.ensureIndexLoaded(-1) &&
               GameAppletShell.field_d.tryLoadGroupByName((byte) 121, "arialbold14")) {
               if (!j.field_b.tryLoadGroupByName((byte) 81, "arial13")) {
-                j.a(4.0f, ed.a(TextFieldValidator.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
+                j.a(4.0f, TextLineMetrics.a(TextFieldValidator.field_e, j.field_b, param1 - 14513, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 112);
                 return false;
               }
               if (GameAppletShell.field_d.ensureIndexLoaded(param1 - 98) &&
@@ -845,31 +845,31 @@ public final class OrbDefence extends NetworkGameClient {
                             vd.a(39);
                             return false;
                           }
-                          j.a(55.0f, ed.a(TextFieldValidator.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
+                          j.a(55.0f, TextLineMetrics.a(TextFieldValidator.field_e, pd.field_r, param1 ^ -14383, ProxyAuthenticationRequiredException.field_a, ""), (byte) 105);
                           return false;
                         }
-                        j.a(45.0f, ed.a(kj.field_z, bh.field_d, param1 - 14513, jj.field_B, ""), (byte) 120);
+                        j.a(45.0f, TextLineMetrics.a(kj.field_z, bh.field_d, param1 - 14513, jj.field_B, ""), (byte) 120);
                         return false;
                       }
-                      j.a(40.0f, ed.a(ha.field_l, lg.field_c, -14416, qd.field_a, ""), (byte) 112);
+                      j.a(40.0f, TextLineMetrics.a(ha.field_l, lg.field_c, -14416, qd.field_a, ""), (byte) 112);
                       return false;
                     }
                     j.a(30.0f, mc.a(hl.field_N, ii.field_d, ld.field_c, 0, -93), (byte) 113);
                     return false;
                   }
-                  j.a(20.0f, ed.a(hb.field_b, AccountCreationResultPanel.field_hb, -14416, vg.field_u, ""), (byte) 111);
+                  j.a(20.0f, TextLineMetrics.a(hb.field_b, AccountCreationResultPanel.field_hb, -14416, vg.field_u, ""), (byte) 111);
                   return false;
                 }
-                j.a(10.0f, ed.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
+                j.a(10.0f, TextLineMetrics.a(hb.field_b, kd.field_q, -14416, vg.field_u, ""), (byte) 114);
                 return false;
               }
-              j.a(5.0f, ed.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 122);
+              j.a(5.0f, TextLineMetrics.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arial13"), (byte) 122);
               return false;
             }
-            j.a(5.0f, ed.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 113);
+            j.a(5.0f, TextLineMetrics.a(TextFieldValidator.field_e, GameAppletShell.field_d, -14416, ProxyAuthenticationRequiredException.field_a, "arialbold14"), (byte) 113);
             return false;
           }
-          j.a(3.0f, ed.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
+          j.a(3.0f, TextLineMetrics.a(kj.field_z, j.field_b, param1 - 14513, jj.field_B, "basic"), (byte) 120);
           return false;
         }
         if (null != AccountCreationResultPanel.field_hb) {
@@ -950,7 +950,7 @@ public final class OrbDefence extends NetworkGameClient {
               nc.field_cb[var3Lifetime1] = new ja(var3Lifetime1);
             }
             kf.field_c = 0;
-            cc.a(false, 50);
+            TextHotspotBounds.a(false, 50);
             km.a((byte) -62, 50);
             TextFieldValidator.a(ee.field_b[12], param1 ^ 99, false, 1, true, 2);
             bl.field_p = 0;
@@ -962,17 +962,17 @@ public final class OrbDefence extends NetworkGameClient {
           return true;
         }
         fk.a(bh.field_d, "background", -117, "");
-        cc.field_t = sf.a("", pd.field_r, -1, "aafont", bh.field_d);
-        var14 = cc.field_t.field_J[0];
+        TextHotspotBounds.field_t = sf.a("", pd.field_r, -1, "aafont", bh.field_d);
+        var14 = TextHotspotBounds.field_t.field_J[0];
         var11 = var14;
         var10 = var11;
         var3_ref_int__ = var10;
-        cc.field_t.field_J = new int[2][];
-        cc.field_t.field_J[0] = var14;
+        TextHotspotBounds.field_t.field_J = new int[2][];
+        TextHotspotBounds.field_t.field_J[0] = var14;
         array$1 = new int[var14.length];
-        cc.field_t.field_J[1] = array$1;
+        TextHotspotBounds.field_t.field_J[1] = array$1;
         for (var4_int = 0; var14.length > var4_int; var4_int++) {
-          cc.field_t.field_J[1][var4_int] = EditableTextField.a(var14[var4_int], 16711935);
+          TextHotspotBounds.field_t.field_J[1][var4_int] = EditableTextField.a(var14[var4_int], 16711935);
         }
         var4 = fl.a(-9945, bh.field_d, "", "keys");
         var5 = new int[]{14, 14, 14, 15, 15};
@@ -1020,33 +1020,33 @@ public final class OrbDefence extends NetworkGameClient {
         ProxyAuthenticationRequiredException.field_d = p.a(13863, "", bh.field_d, "button_frame");
         qc.field_f = p.a(13863, "", bh.field_d, "button_raised");
         p.a(param1 ^ 13894, "", bh.field_d, "button_depressed");
-        bd.field_o = new RgbSprite[24];
-        bd.field_o[0] = fk.a(bh.field_d, "achievements_icon_1", -99, "");
-        bd.field_o[1] = fk.a(bh.field_d, "achievements_icon_2", -71, "");
-        bd.field_o[2] = fk.a(bh.field_d, "achievements_icon_3", 45, "");
-        bd.field_o[3] = fk.a(bh.field_d, "achievements_icon_4", 92, "");
-        bd.field_o[4] = fk.a(bh.field_d, "achievements_icon_5", -100, "");
-        bd.field_o[5] = fk.a(bh.field_d, "achievements_icon_6", -115, "");
-        bd.field_o[6] = fk.a(bh.field_d, "achievements_icon_7", gi.a((int) param1, 55), "");
-        bd.field_o[7] = fk.a(bh.field_d, "achievements_icon_8", 72, "");
-        bd.field_o[8] = fk.a(bh.field_d, "achievements_icon_9", 58, "");
-        bd.field_o[9] = fk.a(bh.field_d, "achievements_icon_10", -116, "");
-        bd.field_o[10] = fk.a(bh.field_d, "achievements_icon_11", 57, "");
-        bd.field_o[11] = fk.a(bh.field_d, "achievements_icon_12", -79, "");
-        bd.field_o[12] = fk.a(bh.field_d, "achievements_icon_13", 38, "");
-        bd.field_o[13] = fk.a(bh.field_d, "achievements_icon_14", 87, "");
-        bd.field_o[14] = fk.a(bh.field_d, "achievements_icon_15", 98, "");
-        bd.field_o[15] = fk.a(bh.field_d, "achievements_icon_16", gi.a((int) param1, 62), "");
-        bd.field_o[16] = fk.a(bh.field_d, "achievements_icon_17", 51, "");
-        bd.field_o[17] = fk.a(bh.field_d, "achievements_icon_18", gi.a((int) param1, -29), "");
-        bd.field_o[18] = fk.a(bh.field_d, "achievements_icon_19", param1 - 202, "");
-        bd.field_o[19] = fk.a(bh.field_d, "achievements_icon_20", 87, "");
-        bd.field_o[20] = fk.a(bh.field_d, "achievements_icon_21", -70, "");
-        bd.field_o[21] = fk.a(bh.field_d, "achievements_icon_22", -125, "");
-        bd.field_o[22] = fk.a(bh.field_d, "achievements_icon_23", 120, "");
-        bd.field_o[23] = fk.a(bh.field_d, "achievements_icon_24", -98, "");
+        RichTextLayout.field_o = new RgbSprite[24];
+        RichTextLayout.field_o[0] = fk.a(bh.field_d, "achievements_icon_1", -99, "");
+        RichTextLayout.field_o[1] = fk.a(bh.field_d, "achievements_icon_2", -71, "");
+        RichTextLayout.field_o[2] = fk.a(bh.field_d, "achievements_icon_3", 45, "");
+        RichTextLayout.field_o[3] = fk.a(bh.field_d, "achievements_icon_4", 92, "");
+        RichTextLayout.field_o[4] = fk.a(bh.field_d, "achievements_icon_5", -100, "");
+        RichTextLayout.field_o[5] = fk.a(bh.field_d, "achievements_icon_6", -115, "");
+        RichTextLayout.field_o[6] = fk.a(bh.field_d, "achievements_icon_7", gi.a((int) param1, 55), "");
+        RichTextLayout.field_o[7] = fk.a(bh.field_d, "achievements_icon_8", 72, "");
+        RichTextLayout.field_o[8] = fk.a(bh.field_d, "achievements_icon_9", 58, "");
+        RichTextLayout.field_o[9] = fk.a(bh.field_d, "achievements_icon_10", -116, "");
+        RichTextLayout.field_o[10] = fk.a(bh.field_d, "achievements_icon_11", 57, "");
+        RichTextLayout.field_o[11] = fk.a(bh.field_d, "achievements_icon_12", -79, "");
+        RichTextLayout.field_o[12] = fk.a(bh.field_d, "achievements_icon_13", 38, "");
+        RichTextLayout.field_o[13] = fk.a(bh.field_d, "achievements_icon_14", 87, "");
+        RichTextLayout.field_o[14] = fk.a(bh.field_d, "achievements_icon_15", 98, "");
+        RichTextLayout.field_o[15] = fk.a(bh.field_d, "achievements_icon_16", gi.a((int) param1, 62), "");
+        RichTextLayout.field_o[16] = fk.a(bh.field_d, "achievements_icon_17", 51, "");
+        RichTextLayout.field_o[17] = fk.a(bh.field_d, "achievements_icon_18", gi.a((int) param1, -29), "");
+        RichTextLayout.field_o[18] = fk.a(bh.field_d, "achievements_icon_19", param1 - 202, "");
+        RichTextLayout.field_o[19] = fk.a(bh.field_d, "achievements_icon_20", 87, "");
+        RichTextLayout.field_o[20] = fk.a(bh.field_d, "achievements_icon_21", -70, "");
+        RichTextLayout.field_o[21] = fk.a(bh.field_d, "achievements_icon_22", -125, "");
+        RichTextLayout.field_o[22] = fk.a(bh.field_d, "achievements_icon_23", 120, "");
+        RichTextLayout.field_o[23] = fk.a(bh.field_d, "achievements_icon_24", -98, "");
         ba.a((byte) -27);
-        var6_ref_hj__ = bd.field_o;
+        var6_ref_hj__ = RichTextLayout.field_o;
         for (var7_int = 0; var7_int < var6_ref_hj__.length; var7_int++) {
           var12 = var6_ref_hj__[var7_int];
           sl.a(2408, var12);
@@ -1086,7 +1086,7 @@ public final class OrbDefence extends NetworkGameClient {
         if (!df.field_f) {
           MusicPatchPcmStream.field_n[25] = db.field_c;
         } else {
-          MusicPatchPcmStream.field_n[25] = cc.field_m;
+          MusicPatchPcmStream.field_n[25] = TextHotspotBounds.field_m;
         }
         if (param0) {
           return;
@@ -1102,8 +1102,8 @@ public final class OrbDefence extends NetworkGameClient {
         if (0 != lc.field_r) {
           if (lc.field_r != 1) {
             if (lc.field_r != 2) {
-              te.field_O = te.field_O - 1;
-              if (0 == te.field_O) {
+              RichTextWidget.field_O = RichTextWidget.field_O - 1;
+              if (0 == RichTextWidget.field_O) {
                 lc.field_r = 0;
               }
             } else {
@@ -1118,15 +1118,15 @@ public final class OrbDefence extends NetworkGameClient {
                   ud.a(8, ProxyAuthenticationRequiredException.field_d, false, ob.field_I.field_E + ob.field_I.field_B, 6, 6, ob.field_I, ob.field_I.field_E, (byte) 5, 320, 240, qc.field_f);
                 }
               } else {
-                kf.field_c = dm.field_a;
+                kf.field_c = TextLayout.field_a;
               }
               kk.field_S = kf.field_c;
-              te.field_O = 9;
+              RichTextWidget.field_O = 9;
               lc.field_r = 3;
             }
           } else {
-            te.field_O = te.field_O + 1;
-            if (te.field_O == 10) {
+            RichTextWidget.field_O = RichTextWidget.field_O + 1;
+            if (RichTextWidget.field_O == 10) {
               if (rl.a((byte) 108)) {
                 n.a((byte) -110);
               } else {
@@ -1143,13 +1143,13 @@ public final class OrbDefence extends NetworkGameClient {
               il.field_f.b(28803, true);
             }
           } else {
-            te.field_O = te.field_O + 1;
-            if (te.field_O == 10) {
+            RichTextWidget.field_O = RichTextWidget.field_O + 1;
+            if (RichTextWidget.field_O == 10) {
               if (kf.field_c == 2) {
                 kj.field_x = null;
               }
               kf.field_c = kk.field_S;
-              te.field_O = 0;
+              RichTextWidget.field_O = 0;
             }
           }
         }

@@ -164,8 +164,8 @@ final class ja {
             if (1000 < param0.field_e) {
               param0.field_I = param0.field_I - 1;
               param0.field_e = 0;
-              mm.field_m[ProxySocketFactory.field_j] = new oj(param2, 1, rl.field_c);
-              mm.field_m[ProxySocketFactory.field_j].field_F = 1;
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param2, 1, rl.field_c);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_F = 1;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
           }

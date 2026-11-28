@@ -48,7 +48,7 @@ final class cb {
                 return stackIn_18_0;
               }
             } else {
-              if (ce.field_g.indexOf(var4) == -1) {
+              if (TextLayout.field_g.indexOf(var4) == -1) {
                 stackIn_22_0 = we.field_g;
                 return stackIn_22_0;
               }

@@ -156,7 +156,7 @@ final class IntrusiveDeque {
 
     final static void c(int param0) {
         String var2 = (String) null;
-        oc.a(fi.field_l, (byte) 79, (String) null);
+        oc.a(TextHotspotBounds.field_l, (byte) 79, (String) null);
         if (param0 == 1) {
           return;
         }

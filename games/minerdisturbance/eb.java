@@ -12,10 +12,10 @@ final class eb {
 
     final static ResourceArchive a(boolean param0, int param1, boolean param2, int param3, boolean param4) {
         if (param4) {
-          return eg.a(-104, param1, false, param2, param0, param3);
+          return DefaultTextWidgetRenderer.a(-104, param1, false, param2, param0, param3);
         }
         field_c = (String) null;
-        return eg.a(-104, param1, false, param2, param0, param3);
+        return DefaultTextWidgetRenderer.a(-104, param1, false, param2, param0, param3);
     }
 
     public static void clearStaticReferences(byte param0) {

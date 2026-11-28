@@ -9,7 +9,7 @@ final class iia extends BoardChange {
     static String field_q;
     static String field_n;
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         try {
           if (param0) {
             field_q = (String) null;
@@ -20,7 +20,7 @@ final class iia extends BoardChange {
         }
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         BattleScreen var4 = param0.field_o;
         BattleScreen var3 = var4;
         if (param1 > -2) {
@@ -28,7 +28,7 @@ final class iia extends BoardChange {
         }
         try {
           var4.field_T[this.field_r] = 0;
-          this.a(false, var3.field_h);
+          this.applyToBattle(false, var3.field_h);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "iia.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -190,7 +190,7 @@ final class iia extends BoardChange {
         }
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -120 / ((37 - param1) / 38);
           param0.writeByte(this.field_r, 0);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends pn {
+final class qe extends RichTextWidget {
     static int field_Z;
     static String[] field_U;
     private int field_Y;
@@ -14,7 +14,7 @@ final class qe extends pn {
     private String field_ab;
     static GameApplet field_T;
 
-    final String a(boolean param0) {
+    final String getTooltipText(boolean param0) {
         if (!param0) {
           return null;
         }
@@ -55,9 +55,9 @@ final class qe extends pn {
         Sprite var31;
         Sprite var32;
         Sprite var33;
-        qa var34;
-        qa var35;
-        qa var36;
+        TextWidgetRenderer var34;
+        TextWidgetRenderer var35;
+        TextWidgetRenderer var36;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -82,31 +82,31 @@ final class qe extends pn {
           var17 = lr.field_L;
           if (!var17.equals(this.text)) {
             this.text = var17;
-            this.e((byte) -118);
+            this.rebuildHotspotBounds((byte) -118);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_J.getValidationStatus(-23996);
-          var34 = (qa) ((Object) this.listener);
+          var34 = (TextWidgetRenderer) ((Object) this.listener);
           var9 = this.x + param2;
-          var10 = var34.a((UiWidget) (this), 1, param3) + (var34.b((UiWidget) (this), 110).b((byte) 91) >> 1);
+          var10 = var34.getTextOriginY((UiWidget) (this), 1, param3) + (var34.getTextLayout((UiWidget) (this), 110).getLayoutHeight((byte) 91) >> 1);
           if (tk.field_n == var6) {
             var20 = jn.field_b[0];
             var11 = var20.field_x << 1;
             var12 = var20.field_B << 1;
             if (null == this.field_bb) {
               this.field_bb = new Sprite(var11, var12);
-              lq.a(this.field_bb, (byte) -94);
+              TextLineMetrics.a(this.field_bb, (byte) -94);
             } else {
               if (this.field_bb.field_y < var11) {
                 this.field_bb = new Sprite(var11, var12);
-                lq.a(this.field_bb, (byte) -94);
+                TextLineMetrics.a(this.field_bb, (byte) -94);
               } else {
                 if (var12 <= this.field_bb.field_t) {
-                  lq.a(this.field_bb, (byte) -94);
+                  TextLineMetrics.a(this.field_bb, (byte) -94);
                   SoftwareRasterizer.clearRaster();
                 } else {
                   this.field_bb = new Sprite(var11, var12);
-                  lq.a(this.field_bb, (byte) -94);
+                  TextLineMetrics.a(this.field_bb, (byte) -94);
                 }
               }
             }
@@ -134,11 +134,11 @@ final class qe extends pn {
           if (null != this.field_bb &&
             this.field_bb.field_y >= var11Lifetime4 &&
             var12Lifetime4 <= this.field_bb.field_t) {
-            lq.a(this.field_bb, (byte) -94);
+            TextLineMetrics.a(this.field_bb, (byte) -94);
             SoftwareRasterizer.clearRaster();
           } else {
             this.field_bb = new Sprite(var11Lifetime4, var12Lifetime4);
-            lq.a(this.field_bb, (byte) -94);
+            TextLineMetrics.a(this.field_bb, (byte) -94);
           }
           var19.drawRotatedAbout(112, 144, var19.field_x << 4, var19.field_B << 4, -this.field_Y << 10, 4096);
           ln.d(-28558);
@@ -149,31 +149,31 @@ final class qe extends pn {
           var23 = lr.field_L;
           if (!var23.equals(this.text)) {
             this.text = var23;
-            this.e((byte) -118);
+            this.rebuildHotspotBounds((byte) -118);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_J.getValidationStatus(-23996);
-          var35 = (qa) ((Object) this.listener);
+          var35 = (TextWidgetRenderer) ((Object) this.listener);
           var9Lifetime1 = this.x + param2;
-          var10Lifetime1 = var35.a((UiWidget) (this), 1, param3) + (var35.b((UiWidget) (this), 110).b((byte) 91) >> 1);
+          var10Lifetime1 = var35.getTextOriginY((UiWidget) (this), 1, param3) + (var35.getTextLayout((UiWidget) (this), 110).getLayoutHeight((byte) 91) >> 1);
           if (tk.field_n == var6) {
             var26 = jn.field_b[0];
             var11Lifetime1 = var26.field_x << 1;
             var12Lifetime1 = var26.field_B << 1;
             if (null == this.field_bb) {
               this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
-              lq.a(this.field_bb, (byte) -94);
+              TextLineMetrics.a(this.field_bb, (byte) -94);
             } else {
               if (this.field_bb.field_y < var11Lifetime1) {
                 this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
-                lq.a(this.field_bb, (byte) -94);
+                TextLineMetrics.a(this.field_bb, (byte) -94);
               } else {
                 if (var12Lifetime1 <= this.field_bb.field_t) {
-                  lq.a(this.field_bb, (byte) -94);
+                  TextLineMetrics.a(this.field_bb, (byte) -94);
                   SoftwareRasterizer.clearRaster();
                 } else {
                   this.field_bb = new Sprite(var11Lifetime1, var12Lifetime1);
-                  lq.a(this.field_bb, (byte) -94);
+                  TextLineMetrics.a(this.field_bb, (byte) -94);
                 }
               }
             }
@@ -201,11 +201,11 @@ final class qe extends pn {
           if (null != this.field_bb &&
             this.field_bb.field_y >= var11Lifetime1Lifetime1 &&
             var12Lifetime1Lifetime1 <= this.field_bb.field_t) {
-            lq.a(this.field_bb, (byte) -94);
+            TextLineMetrics.a(this.field_bb, (byte) -94);
             SoftwareRasterizer.clearRaster();
           } else {
             this.field_bb = new Sprite(var11Lifetime1Lifetime1, var12Lifetime1Lifetime1);
-            lq.a(this.field_bb, (byte) -94);
+            TextLineMetrics.a(this.field_bb, (byte) -94);
           }
           var25.drawRotatedAbout(112, 144, var25.field_x << 4, var25.field_B << 4, -this.field_Y << 10, 4096);
           ln.d(-28558);
@@ -218,30 +218,30 @@ final class qe extends pn {
         }
         if (!var5.equals(this.text)) {
           this.text = var5;
-          this.e((byte) -118);
+          this.rebuildHotspotBounds((byte) -118);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_J.getValidationStatus(-23996);
-        var36 = (qa) ((Object) this.listener);
+        var36 = (TextWidgetRenderer) ((Object) this.listener);
         var9Lifetime2 = this.x + param2;
-        var10Lifetime2 = var36.a((UiWidget) (this), 1, param3) + (var36.b((UiWidget) (this), 110).b((byte) 91) >> 1);
+        var10Lifetime2 = var36.getTextOriginY((UiWidget) (this), 1, param3) + (var36.getTextLayout((UiWidget) (this), 110).getLayoutHeight((byte) 91) >> 1);
         if (tk.field_n == var6Lifetime1) {
           var31 = jn.field_b[0];
           var11Lifetime2 = var31.field_x << 1;
           var12Lifetime2 = var31.field_B << 1;
           if (null == this.field_bb) {
             this.field_bb = new Sprite(var11Lifetime2, var12Lifetime2);
-            lq.a(this.field_bb, (byte) -94);
+            TextLineMetrics.a(this.field_bb, (byte) -94);
           } else {
             if (this.field_bb.field_y < var11Lifetime2) {
               this.field_bb = new Sprite(var11Lifetime2, var12Lifetime2);
-              lq.a(this.field_bb, (byte) -94);
+              TextLineMetrics.a(this.field_bb, (byte) -94);
             } else {
               if (var12Lifetime2 > this.field_bb.field_t) {
                 this.field_bb = new Sprite(var11Lifetime2, var12Lifetime2);
-                lq.a(this.field_bb, (byte) -94);
+                TextLineMetrics.a(this.field_bb, (byte) -94);
               } else {
-                lq.a(this.field_bb, (byte) -94);
+                TextLineMetrics.a(this.field_bb, (byte) -94);
                 SoftwareRasterizer.clearRaster();
               }
             }
@@ -270,11 +270,11 @@ final class qe extends pn {
         if (null != this.field_bb &&
           this.field_bb.field_y >= var11Lifetime3 &&
           var12Lifetime3 <= this.field_bb.field_t) {
-          lq.a(this.field_bb, (byte) -94);
+          TextLineMetrics.a(this.field_bb, (byte) -94);
           SoftwareRasterizer.clearRaster();
         } else {
           this.field_bb = new Sprite(var11Lifetime3, var12Lifetime3);
-          lq.a(this.field_bb, (byte) -94);
+          TextLineMetrics.a(this.field_bb, (byte) -94);
         }
         var30.drawRotatedAbout(112, 144, var30.field_x << 4, var30.field_B << 4, -this.field_Y << 10, 4096);
         ln.d(-28558);

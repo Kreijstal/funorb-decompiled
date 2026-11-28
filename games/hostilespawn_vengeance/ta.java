@@ -61,7 +61,7 @@ final class ta extends me {
           AccountNameAvailabilityValidator.field_o = false;
           MusicPatchPcmStream.field_l = false;
           ClientLookupTables.field_d = km.field_A;
-          pm.field_d = 26;
+          TextLineMetrics.field_d = 26;
           nl.field_d = 0;
           qi.field_J = 0;
           dn.field_b = 0;
@@ -160,7 +160,7 @@ final class ta extends me {
           ib.field_c = 0;
           DualLinkNode.field_o = 0;
           for (var2_intLifetime1 = 0; 3000 > var2_intLifetime1; var2_intLifetime1++) {
-            mm.field_m[var2_intLifetime1] = null;
+            TextHotspotBounds.field_m[var2_intLifetime1] = null;
           }
           var2_intLifetime2 = -118 / ((param0 + 46) / 37);
           for (var3Lifetime1 = 0; var3Lifetime1 < 3000; var3Lifetime1++) {
@@ -169,14 +169,14 @@ final class ta extends me {
           ti.field_f.setCoordinates(-1, 8360, -1);
           ln.field_a = null;
           ln.field_a = new id(GridPoint.field_h[bm.field_c][rl.field_c]);
-          mm.a(ln.field_a, true);
+          TextHotspotBounds.a(ln.field_a, true);
           if (0 > ti.field_f.field_e) {
             System.err.println("Map failed to set player position.");
             ti.field_f.setCoordinates(100, 8360, 100);
           }
           ti.field_f.field_g = ti.field_f.field_g + 1;
           ti.field_f.field_e = ti.field_f.field_e + 1;
-          mm.field_m[0] = new oj(ti.field_f, 0, rl.field_c);
+          TextHotspotBounds.field_m[0] = new oj(ti.field_f, 0, rl.field_c);
           ki.field_c = null;
           ki.field_c = new RgbSprite(ln.field_a.field_a, ln.field_a.field_d);
           ki.field_c.bindAsRenderTarget();
@@ -280,8 +280,8 @@ final class ta extends me {
               CrossfadingMidiPcmStream.a(0, 1);
             }
           }
-          uj.field_p.field_g = (int)(24.0 * (mm.field_m[0].field_l.field_a + (double)mm.field_m[0].field_j.field_g) - 240.0);
-          uj.field_p.field_e = (int)(-320.0 + (mm.field_m[0].field_l.field_f + (double)mm.field_m[0].field_j.field_e) * 24.0);
+          uj.field_p.field_g = (int)(24.0 * (TextHotspotBounds.field_m[0].field_l.field_a + (double)TextHotspotBounds.field_m[0].field_j.field_g) - 240.0);
+          uj.field_p.field_e = (int)(-320.0 + (TextHotspotBounds.field_m[0].field_l.field_f + (double)TextHotspotBounds.field_m[0].field_j.field_e) * 24.0);
           if (null != DirectByteStorage.field_g) {
             for (var6Lifetime2 = 0; var6Lifetime2 < DirectByteStorage.field_g.length; var6Lifetime2++) {
               DirectByteStorage.field_g[var6Lifetime2].a(18421);
@@ -361,7 +361,7 @@ final class ta extends me {
           if (q.field_g != null) {
             q.field_g.e(0);
           }
-          mb.field_s.a(500, 8000);
+          RichTextLayout.field_s.a(500, 8000);
           wh.field_f = true;
           if (!om.field_b) {
             if (VolumeRampingMidiPcmStream.field_ab.a(bm.field_c, -28, rl.field_c)) {

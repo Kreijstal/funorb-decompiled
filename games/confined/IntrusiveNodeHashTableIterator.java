@@ -66,7 +66,7 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
           this.field_a = param0;
           this.reset(1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

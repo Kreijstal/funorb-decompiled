@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rh extends na {
+final class rh extends RichTextWidget {
     private int field_Y;
     private RgbSprite field_eb;
     static ej field_ab;
@@ -29,8 +29,8 @@ final class rh extends na {
         RgbSprite var24;
         RgbSprite var25;
         RgbSprite var26;
-        pj var27;
-        pj var28;
+        TextWidgetRenderer var27;
+        TextWidgetRenderer var28;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -54,14 +54,14 @@ final class rh extends na {
         }
         if (!var5.equals(this.field_B)) {
           this.field_B = var5;
-          this.b(false);
+          this.rebuildHotspotBounds(false);
         }
         if (param2 >= 36) {
           super.a(param0, param1, (byte) 94, param3);
           var6Lifetime1 = this.field_bb.getValidationStatus(-3621);
-          var28 = (pj) ((Object) this.field_n);
+          var28 = (TextWidgetRenderer) ((Object) this.field_n);
           var9 = this.field_q + param3;
-          var10 = var28.a(param0, 2, (fj) (this)) + (var28.a((fj) (this), (byte) -88).b(23791) >> 1);
+          var10 = var28.getTextOriginY(param0, 2, (fj) (this)) + (var28.getTextLayout((fj) (this), (byte) -88).getLayoutHeight(23791) >> 1);
           if (ab.field_b != var6Lifetime1 &&
             var6Lifetime1 != qh.field_x) {
             if (var6Lifetime1 == fb.field_e) {
@@ -69,7 +69,7 @@ final class rh extends na {
               var24.drawAdditive(var9, -(var24.field_w >> 1) + var10, 256);
               return;
             }
-            if (nn.field_q != var6Lifetime1) {
+            if (TextHotspotBounds.field_q != var6Lifetime1) {
               return;
             }
             var25 = gg.field_q[1];
@@ -104,9 +104,9 @@ final class rh extends na {
         this.a(-64, 111, (byte) -111, 110);
         super.a(param0, param1, (byte) 94, param3);
         var6Lifetime2 = this.field_bb.getValidationStatus(-3621);
-        var27 = (pj) ((Object) this.field_n);
+        var27 = (TextWidgetRenderer) ((Object) this.field_n);
         var9Lifetime1 = this.field_q + param3;
-        var10Lifetime1 = var27.a(param0, 2, (fj) (this)) + (var27.a((fj) (this), (byte) -88).b(23791) >> 1);
+        var10Lifetime1 = var27.getTextOriginY(param0, 2, (fj) (this)) + (var27.getTextLayout((fj) (this), (byte) -88).getLayoutHeight(23791) >> 1);
         if (ab.field_b == var6Lifetime2) {
           var18 = gg.field_q[0];
           var11Lifetime1 = var18.field_t << 1;
@@ -131,7 +131,7 @@ final class rh extends na {
             var20.drawAdditive(var9Lifetime1, -(var20.field_w >> 1) + var10Lifetime1, 256);
             return;
           }
-          if (nn.field_q != var6Lifetime2) {
+          if (TextHotspotBounds.field_q != var6Lifetime2) {
             return;
           }
           var21 = gg.field_q[1];
@@ -189,7 +189,7 @@ final class rh extends na {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -200,7 +200,7 @@ final class rh extends na {
           this.field_bb = param0;
           this.a(-123, param4, param3, param5, param2);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -209,11 +209,11 @@ final class rh extends na {
           this.field_Y = this.field_Y + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "rh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final String f(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 <= -82) {
           return null;
         }

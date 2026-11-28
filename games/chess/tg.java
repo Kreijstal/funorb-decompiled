@@ -39,7 +39,7 @@ final class tg {
     }
 
     final void a(BitmapFont param0, int param1) {
-        hl var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         nj var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -62,7 +62,7 @@ final class tg {
         nj var14Lifetime1;
         nj var14Lifetime2;
         try {
-          var17 = new hl(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_C + param0.field_t));
+          var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_C + param0.field_t));
           this.field_f = (jm) ((Object) var17);
           var17.field_g = 16777215;
           var4 = new nj();

@@ -142,7 +142,7 @@ final class m extends TextureOperator {
 
     final static boolean h(int param0) {
         int var1 = 23 % ((-79 - param0) / 37);
-        if (!sl.b(-24)) {
+        if (!RichTextLayout.b(-24)) {
           return false;
         }
         if ((8 & ProxyAuthenticationRequiredException.field_f) == 0) {

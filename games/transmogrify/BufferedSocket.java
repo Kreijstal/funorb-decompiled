@@ -471,7 +471,7 @@ final class BufferedSocket implements Runnable {
           var2_long = lk.correctedCurrentTimeMillis(0);
           if (aa.field_a != 0 &&
             AgeValidator.field_k < 0) {
-            var4_ref_b = (b) (le.field_C.beginForward((byte) -95));
+            var4_ref_b = (b) (RichTextWidget.field_C.beginForward((byte) -95));
             if (var4_ref_b != null &&
               var4_ref_b.field_g < var2_long) {
               var4_ref_b.unlink(5);
@@ -493,7 +493,7 @@ final class BufferedSocket implements Runnable {
           while (true) {
             if (0 > AgeValidator.field_k) {
               WordLanguage.field_l.position = 0;
-              if (!ue.a(1, 0)) {
+              if (!TextLayout.a(1, 0)) {
                 return false;
               }
               AgeValidator.field_k = WordLanguage.field_l.readCipheredByte(-12135);
@@ -522,7 +522,7 @@ final class BufferedSocket implements Runnable {
             for (var6 = 0; tg.field_a > var6; var6++) {
               var5.field_h[var6] = WordLanguage.field_l.payload[var6];
             }
-            le.field_C.addLast(var5, -100);
+            RichTextWidget.field_C.addLast(var5, -100);
             AgeValidator.field_k = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

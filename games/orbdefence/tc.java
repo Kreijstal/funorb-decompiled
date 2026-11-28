@@ -41,7 +41,7 @@ final class tc {
               return true;
             }
           }
-          var2Lifetime1 = dm.field_d;
+          var2Lifetime1 = TextLayout.field_d;
           for (var3Lifetime1 = 0; var2Lifetime1.length > var3Lifetime1; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (var4Lifetime1 == param1) {

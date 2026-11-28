@@ -31,7 +31,7 @@ final class ii extends IntrusiveNode {
           var5.appendCrc32(var4, true);
           var5.backpatchByteLength((byte) 48, var5.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ii.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -80,7 +80,7 @@ final class ii extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

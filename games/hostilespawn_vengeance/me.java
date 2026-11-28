@@ -111,7 +111,7 @@ abstract class me extends wb {
               rc.field_a = sa.field_c;
               var2.field_i = 0;
               hm.a(og.field_c, rl.field_b, s.field_b, ea.field_c, 4122);
-              mb.d(-1, -22370);
+              RichTextLayout.d(-1, -22370);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (IOException) (Object) decompiledCaughtException;

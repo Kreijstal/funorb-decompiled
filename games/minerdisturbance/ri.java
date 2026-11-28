@@ -27,7 +27,7 @@ final class ri {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          eg.a(var2, 87, var3, var4, param1);
+          DefaultTextWidgetRenderer.a(var2, 87, var3, var4, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,8 +183,8 @@ final class ri {
                       } else {
                         stackIn_28_0 = var15 >> var7;
                       }
-                      var16 = -stackIn_28_0 + (mg.field_e.length - 1);
-                      var17 = mg.field_e[var16];
+                      var16 = -stackIn_28_0 + (TextLineMetrics.field_e.length - 1);
+                      var17 = TextLineMetrics.field_e[var16];
                       while (true) {
                         if (var17 >> 4 != 0) {
                           var16--;
@@ -194,14 +194,14 @@ final class ri {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var17 = mg.field_e[var16];
+                          var17 = TextLineMetrics.field_e[var16];
                           continue;
                         }
                         stackIn_38_0Lifetime1 = var17;
                         stackIn_38_1Lifetime1 = var16 << 4;
                         var18 = stackIn_38_0Lifetime1 + stackIn_38_1Lifetime1;
                         IntrusiveDeque.field_d[var18] = var8;
-                        mg.field_e[var16] = 1 + var17;
+                        TextLineMetrics.field_e[var16] = 1 + var17;
                         if (0 < param3.field_E &&
                           param3.field_x != null) {
                           dupTemp$0 = param3.field_x[var8];

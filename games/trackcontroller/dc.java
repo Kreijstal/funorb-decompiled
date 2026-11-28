@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends ic {
+final class dc extends DefaultTextWidgetRenderer {
     private int field_u;
     static jb field_w;
     private int field_q;

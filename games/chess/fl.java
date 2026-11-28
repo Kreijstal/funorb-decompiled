@@ -40,7 +40,7 @@ final class fl extends IntrusiveNode {
           lf.field_O = rc.field_d;
           rc.field_d = false;
           th.field_d = IterableNodeHashTable.field_g;
-          re.field_m = ub.field_b;
+          TextHotspotBounds.field_m = TextLayout.field_b;
           ag.field_f = pd.field_Eb;
           IterableNodeHashTable.field_g = 0;
         }
@@ -81,7 +81,7 @@ final class fl extends IntrusiveNode {
           ij.field_c = param3;
           var8 = (CharSequence) ((Object) param3);
           ec.field_f = ad.a(var8, -2);
-          re.field_p = param1;
+          TextHotspotBounds.field_p = param1;
           var6 = dn.a(va.field_d, param0, AwtRasterBuffer.field_g, wk.field_c, 13911);
           pg.a((byte) -18, var6);
           return true;

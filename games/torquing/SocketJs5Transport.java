@@ -60,7 +60,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -376,7 +376,7 @@ final class SocketJs5Transport extends Js5Transport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
             var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.wrapThrowable((Throwable) ((Object) var2_ref2), "fh.E(" + param0 + ')');
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref2), "fh.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -407,7 +407,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "fh.G(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "fh.G(" + param0 + ')');
         }
     }
 
@@ -503,7 +503,7 @@ final class SocketJs5Transport extends Js5Transport {
             } else {
               stackIn_39_2 = "{...}";
             }
-            throw rb.wrapThrowable((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1571,7 +1571,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "goback");
                 if (null != var2) {
-                  cm.field_k = SecondaryNodeDeque.a(var2, false);
+                  RichTextLayout.field_k = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "otheroptions");
                 if (var2 != null) {
@@ -2492,7 +2492,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "resumegame");
                 if (null != var2) {
-                  cm.field_j = SecondaryNodeDeque.a(var2, false);
+                  RichTextLayout.field_j = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "resumetutorial");
                 if (var2 != null) {
@@ -3176,7 +3176,7 @@ final class SocketJs5Transport extends Js5Transport {
                 }
                 var2 = se.a((byte) -33, "fs_nonmember");
                 if (var2 != null) {
-                  pc.field_i = SecondaryNodeDeque.a(var2, false);
+                  DefaultTextWidgetRenderer.field_i = SecondaryNodeDeque.a(var2, false);
                 }
                 var2 = se.a((byte) -33, "fs_button_close");
                 if (null != var2) {
@@ -3547,7 +3547,7 @@ final class SocketJs5Transport extends Js5Transport {
                   } else {
                     stackIn_2612_2 = "{...}";
                   }
-                  throw rb.wrapThrowable((Throwable) ((Object) stackIn_2611_0), ((StringBuilder) (Object) stackIn_2611_1).append(stackIn_2612_2).append(')').toString());
+                  throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_2611_0), ((StringBuilder) (Object) stackIn_2611_1).append(stackIn_2612_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   stackIn_2620_0 = (!GameApplet.field_a);
@@ -3572,7 +3572,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "fh.C(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "fh.C(" + param0 + ')');
         }
     }
 
@@ -3589,7 +3589,7 @@ final class SocketJs5Transport extends Js5Transport {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "fh.Q(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "fh.Q(" + param0 + ')');
         }
     }
 
@@ -3629,7 +3629,7 @@ final class SocketJs5Transport extends Js5Transport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var2_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "fh.L(" + param0 + ')');
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "fh.L(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3683,7 +3683,7 @@ final class SocketJs5Transport extends Js5Transport {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var3_ref = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.wrapThrowable((Throwable) ((Object) var3_ref), "fh.M(" + param0 + ',' + param1 + ')');
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3_ref), "fh.M(" + param0 + ',' + param1 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -3771,7 +3771,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -3803,7 +3803,7 @@ final class SocketJs5Transport extends Js5Transport {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

@@ -22,7 +22,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         kg.a((String) null, wj.field_c, (byte) 92);
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_h) {
           return null;
         }

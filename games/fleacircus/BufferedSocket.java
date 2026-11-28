@@ -88,7 +88,7 @@ final class BufferedSocket implements Runnable {
                 rd.a(var3, 79, 5);
                 ej.a((byte) -39);
               } else {
-                mi.field_r.addLast(false, var3);
+                TextHotspotBounds.field_r.addLast(false, var3);
                 ej.a((byte) -39);
               }
             }

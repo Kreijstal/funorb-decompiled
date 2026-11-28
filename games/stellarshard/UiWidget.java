@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiWidget extends IntrusiveNode {
-    vk field_r;
+    TextLayout field_r;
     lf field_v;
     uk field_u;
     int field_l;
@@ -71,7 +71,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    String d(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 3690) {
           this.field_m = (String) null;
           if (this.field_q) {
@@ -220,12 +220,12 @@ class UiWidget extends IntrusiveNode {
                       param0 = false;
                       if (0 != fb.field_n) {
                         nb.field_H = fb.field_n;
-                        cl.a(this.d(3690), (byte) 96);
+                        cl.a(this.getTooltipText(3690), (byte) 96);
                         return param0;
                       }
                       if (nb.field_H == 0) {
                         nb.field_H = fb.field_n;
-                        cl.a(this.d(3690), (byte) 96);
+                        cl.a(this.getTooltipText(3690), (byte) 96);
                         return param0;
                       }
                       this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -242,19 +242,19 @@ class UiWidget extends IntrusiveNode {
                         this.c(true);
                       }
                       nb.field_H = fb.field_n;
-                      cl.a(this.d(3690), (byte) 96);
+                      cl.a(this.getTooltipText(3690), (byte) 96);
                       return param0;
                     }
                   }
                 }
                 if (0 != fb.field_n) {
                   nb.field_H = fb.field_n;
-                  cl.a(this.d(3690), (byte) 96);
+                  cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 if (nb.field_H == 0) {
                   nb.field_H = fb.field_n;
-                  cl.a(this.d(3690), (byte) 96);
+                  cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -268,22 +268,22 @@ class UiWidget extends IntrusiveNode {
                 }
                 if (var7 == 0) {
                   nb.field_H = fb.field_n;
-                  cl.a(this.d(3690), (byte) 96);
+                  cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 if (var5 == 0) {
                   nb.field_H = fb.field_n;
-                  cl.a(this.d(3690), (byte) 96);
+                  cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 if (gh.field_c == 0) {
                   nb.field_H = fb.field_n;
-                  cl.a(this.d(3690), (byte) 96);
+                  cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
                 this.c(true);
                 nb.field_H = fb.field_n;
-                cl.a(this.d(3690), (byte) 96);
+                cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               if (gh.field_c != 0) {
@@ -297,7 +297,7 @@ class UiWidget extends IntrusiveNode {
                       if (0 == fb.field_n) {
                         if (nb.field_H == 0) {
                           nb.field_H = fb.field_n;
-                          cl.a(this.d(3690), (byte) 96);
+                          cl.a(this.getTooltipText(3690), (byte) 96);
                           return param0;
                         }
                         this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -313,12 +313,12 @@ class UiWidget extends IntrusiveNode {
                           gh.field_c != 0) {
                           this.c(true);
                           nb.field_H = fb.field_n;
-                          cl.a(this.d(3690), (byte) 96);
+                          cl.a(this.getTooltipText(3690), (byte) 96);
                           return param0;
                         }
                       }
                       nb.field_H = fb.field_n;
-                      cl.a(this.d(3690), (byte) 96);
+                      cl.a(this.getTooltipText(3690), (byte) 96);
                       return param0;
                     }
                   }
@@ -329,7 +329,7 @@ class UiWidget extends IntrusiveNode {
               }
               if (nb.field_H == 0) {
                 nb.field_H = fb.field_n;
-                cl.a(this.d(3690), (byte) 96);
+                cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -348,7 +348,7 @@ class UiWidget extends IntrusiveNode {
               gh.field_c != 0) {
               this.c(true);
               nb.field_H = fb.field_n;
-              cl.a(this.d(3690), (byte) 96);
+              cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
           }
@@ -372,12 +372,12 @@ class UiWidget extends IntrusiveNode {
               }
               if (0 != fb.field_n) {
                 nb.field_H = fb.field_n;
-                cl.a(this.d(3690), (byte) 96);
+                cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               if (nb.field_H == 0) {
                 nb.field_H = fb.field_n;
-                cl.a(this.d(3690), (byte) 96);
+                cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -395,7 +395,7 @@ class UiWidget extends IntrusiveNode {
                 this.c(true);
               }
               nb.field_H = fb.field_n;
-              cl.a(this.d(3690), (byte) 96);
+              cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
             if (var5 == 0) {
@@ -405,12 +405,12 @@ class UiWidget extends IntrusiveNode {
               }
               if (0 != fb.field_n) {
                 nb.field_H = fb.field_n;
-                cl.a(this.d(3690), (byte) 96);
+                cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               if (nb.field_H == 0) {
                 nb.field_H = fb.field_n;
-                cl.a(this.d(3690), (byte) 96);
+                cl.a(this.getTooltipText(3690), (byte) 96);
                 return param0;
               }
               this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -428,7 +428,7 @@ class UiWidget extends IntrusiveNode {
                 this.c(true);
               }
               nb.field_H = fb.field_n;
-              cl.a(this.d(3690), (byte) 96);
+              cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
             this.a(param2, KeyHandler.field_a, this, ni.field_e, 63, ke.field_b, param3);
@@ -441,12 +441,12 @@ class UiWidget extends IntrusiveNode {
                   param0 = false;
                   if (0 != fb.field_n) {
                     nb.field_H = fb.field_n;
-                    cl.a(this.d(3690), (byte) 96);
+                    cl.a(this.getTooltipText(3690), (byte) 96);
                     return param0;
                   }
                   if (nb.field_H == 0) {
                     nb.field_H = fb.field_n;
-                    cl.a(this.d(3690), (byte) 96);
+                    cl.a(this.getTooltipText(3690), (byte) 96);
                     return param0;
                   }
                   this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -463,19 +463,19 @@ class UiWidget extends IntrusiveNode {
                     this.c(true);
                   }
                   nb.field_H = fb.field_n;
-                  cl.a(this.d(3690), (byte) 96);
+                  cl.a(this.getTooltipText(3690), (byte) 96);
                   return param0;
                 }
               }
             }
             if (0 != fb.field_n) {
               nb.field_H = fb.field_n;
-              cl.a(this.d(3690), (byte) 96);
+              cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
             if (nb.field_H == 0) {
               nb.field_H = fb.field_n;
-              cl.a(this.d(3690), (byte) 96);
+              cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
             this.a(KeyHandler.field_a, -109, this, param3, param2, ni.field_e);
@@ -489,7 +489,7 @@ class UiWidget extends IntrusiveNode {
             }
             if (var7 == 0) {
               nb.field_H = fb.field_n;
-              cl.a(this.d(3690), (byte) 96);
+              cl.a(this.getTooltipText(3690), (byte) 96);
               return param0;
             }
           }
@@ -499,7 +499,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         nb.field_H = fb.field_n;
-        cl.a(this.d(3690), (byte) 96);
+        cl.a(this.getTooltipText(3690), (byte) 96);
         return param0;
     }
 
@@ -508,7 +508,7 @@ class UiWidget extends IntrusiveNode {
           this.b(this.field_p, this.field_w, this.field_k, this.field_t, 23987);
           return;
         }
-        this.field_r = (vk) null;
+        this.field_r = (TextLayout) null;
         this.b(this.field_p, this.field_w, this.field_k, this.field_t, 23987);
     }
 
@@ -850,7 +850,7 @@ class UiWidget extends IntrusiveNode {
 
     UiWidget(String param0, uk param1, lf param2) {
         RuntimeException runtimeException = null;
-        pj var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -865,10 +865,10 @@ class UiWidget extends IntrusiveNode {
           this.field_u = param1;
           this.field_m = param0;
           this.field_v = param2;
-          if (this.field_u instanceof pj) {
-            var4 = (pj) ((Object) this.field_u);
-            this.field_p = var4.a(this, (byte) 124);
-            this.field_t = var4.a(this, 28361);
+          if (this.field_u instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_u);
+            this.field_p = var4.getPreferredWidth(this, (byte) 124);
+            this.field_t = var4.getPreferredHeight(this, 28361);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

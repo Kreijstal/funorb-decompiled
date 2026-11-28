@@ -1794,7 +1794,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("create_alert_doublespace", 24);
                 if (null != var2) {
-                  mm.field_k = PcmResampler.a(122, var2);
+                  TextHotspotBounds.field_k = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("create_alert_passchars", 24);
                 if (null != var2) {
@@ -2126,7 +2126,7 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("quit", 24);
                 if (null != var2) {
-                  mm.field_h = PcmResampler.a(125, var2);
+                  TextHotspotBounds.field_h = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("login_createaccount", 24);
                 if (var2 != null) {
@@ -2756,15 +2756,15 @@ final class MusicPatchPcmStream extends PcmStream {
                 }
                 var2 = vj.a("members_expansion_benefits,0", 24);
                 if (var2 != null) {
-                  mm.field_n[0] = PcmResampler.a(125, var2);
+                  TextHotspotBounds.field_n[0] = PcmResampler.a(125, var2);
                 }
                 var2 = vj.a("members_expansion_benefits,1", 24);
                 if (null != var2) {
-                  mm.field_n[1] = PcmResampler.a(127, var2);
+                  TextHotspotBounds.field_n[1] = PcmResampler.a(127, var2);
                 }
                 var2 = vj.a("members_expansion_benefits,2", 24);
                 if (null != var2) {
-                  mm.field_n[2] = PcmResampler.a(122, var2);
+                  TextHotspotBounds.field_n[2] = PcmResampler.a(122, var2);
                 }
                 var2 = vj.a("members_expansion_price_top", 24);
                 if (null != var2) {

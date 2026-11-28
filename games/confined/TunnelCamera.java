@@ -67,7 +67,7 @@ final class TunnelCamera extends TunnelEntity {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class TunnelCamera extends TunnelEntity {
           var6.appendCrc32(26199, var4);
           var6.backpatchByteLength(25859, var6.position - var4);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.N(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -126,7 +126,7 @@ final class TunnelCamera extends TunnelEntity {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -136,7 +136,7 @@ final class TunnelCamera extends TunnelEntity {
             this.updateEffectiveViewOrigin(18);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -146,7 +146,7 @@ final class TunnelCamera extends TunnelEntity {
             this.field_N = -1.1636230847772295;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class TunnelCamera extends TunnelEntity {
             this.field_R = 2.2622491296623233;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class TunnelCamera extends TunnelEntity {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -291,7 +291,7 @@ final class TunnelCamera extends TunnelEntity {
             this.field_L = 0.011069630776745578;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -302,7 +302,7 @@ final class TunnelCamera extends TunnelEntity {
           }
           param0.onCameraContact(-1, this);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -334,7 +334,7 @@ final class TunnelCamera extends TunnelEntity {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ final class TunnelCamera extends TunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -372,7 +372,7 @@ final class TunnelCamera extends TunnelEntity {
         try {
           param1.field_N = true;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -536,7 +536,7 @@ final class TunnelCamera extends TunnelEntity {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -555,7 +555,7 @@ final class TunnelCamera extends TunnelEntity {
             this.dispatchEntityCollision((TunnelEntity) null, 81);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -566,7 +566,7 @@ final class TunnelCamera extends TunnelEntity {
             TunnelCamera.addChatMessageIfNew(true, (oc) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -577,7 +577,7 @@ final class TunnelCamera extends TunnelEntity {
             this.onLightningArcContact((LightningArc) null, true);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -585,7 +585,7 @@ final class TunnelCamera extends TunnelEntity {
         try {
           int var3_int = 111 / ((-35 - param1) / 60);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -640,7 +640,7 @@ final class TunnelCamera extends TunnelEntity {
           param1.field_N = true;
           int var3_int = -30 % ((14 - param0) / 53);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "vg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "vg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

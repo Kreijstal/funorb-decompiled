@@ -24,7 +24,7 @@ final class n extends DualLinkNode {
         try {
           this.field_v = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "n.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

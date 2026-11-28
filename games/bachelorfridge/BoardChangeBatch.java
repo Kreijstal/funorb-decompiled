@@ -30,7 +30,7 @@ final class BoardChangeBatch extends BattleUpdate {
         try {
           var6 = (BoardChange) (this.field_k.beginForward((byte) 90));
           while (var6 != null) {
-            var6.a(param1, param0);
+            var6.applyToBattle(param1, param0);
             var6 = (BoardChange) (this.field_k.nextForward(0));
           }
           if (!param1) {
@@ -96,7 +96,7 @@ final class BoardChangeBatch extends BattleUpdate {
           }
           var5 = (BoardChange) (this.field_k.beginForward((byte) 90));
           while (var5 != null) {
-            var5.a(param0, (byte) -63);
+            var5.write(param0, (byte) -63);
             var5 = (BoardChange) (this.field_k.nextForward(0));
           }
           return;

@@ -64,7 +64,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 >= -23) {
           field_R = (RgbSprite[]) null;
           if (!this.field_m) {

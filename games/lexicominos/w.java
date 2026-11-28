@@ -15,7 +15,7 @@ class w extends IntrusiveNode {
     int field_v;
     int field_t;
     int field_l;
-    ve field_w;
+    TextLayout field_w;
     static aj field_n;
     int field_o;
     int field_p;
@@ -358,7 +358,7 @@ class w extends IntrusiveNode {
             }
           }
           if (param0 != -119) {
-            this.b(-47);
+            this.getTooltipText(-47);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -498,18 +498,18 @@ class w extends IntrusiveNode {
         if (!param1) {
           if (var5 == 0) {
             pg.field_f = ul.field_o;
-            sj.a(0, this.b(param3 - 2));
+            sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           if (nk.field_z == 0) {
             pg.field_f = ul.field_o;
-            sj.a(0, this.b(param3 - 2));
+            sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           this.c((byte) -122);
           if (var7 == 0) {
             pg.field_f = ul.field_o;
-            sj.a(0, this.b(param3 - 2));
+            sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
         }
@@ -529,7 +529,7 @@ class w extends IntrusiveNode {
                 }
               }
               pg.field_f = ul.field_o;
-              sj.a(0, this.b(param3 - 2));
+              sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
             if (this.a(-4808, nk.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
@@ -538,12 +538,12 @@ class w extends IntrusiveNode {
             }
             if (0 != ul.field_o) {
               pg.field_f = ul.field_o;
-              sj.a(0, this.b(param3 - 2));
+              sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
             if (0 == pg.field_f) {
               pg.field_f = ul.field_o;
-              sj.a(0, this.b(param3 - 2));
+              sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
             this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
@@ -556,7 +556,7 @@ class w extends IntrusiveNode {
               ArchiveRequest.field_t = null;
             }
             pg.field_f = ul.field_o;
-            sj.a(0, this.b(param3 - 2));
+            sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           this.a(bk.field_b, param0, ResourceArchive.field_e, param2, this, -29771, gd.field_l);
@@ -564,12 +564,12 @@ class w extends IntrusiveNode {
         if (0 == nk.field_z) {
           if (0 != ul.field_o) {
             pg.field_f = ul.field_o;
-            sj.a(0, this.b(param3 - 2));
+            sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           if (0 == pg.field_f) {
             pg.field_f = ul.field_o;
-            sj.a(0, this.b(param3 - 2));
+            sj.a(0, this.getTooltipText(param3 - 2));
             return param1;
           }
           this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
@@ -582,7 +582,7 @@ class w extends IntrusiveNode {
             ArchiveRequest.field_t = null;
           }
           pg.field_f = ul.field_o;
-          sj.a(0, this.b(param3 - 2));
+          sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
         if (this.a(-4808, nk.field_z, this, ProxyAuthenticationRequiredException.field_a, param2, param0, ef.field_a)) {
@@ -594,12 +594,12 @@ class w extends IntrusiveNode {
               param1 = false;
               if (0 != ul.field_o) {
                 pg.field_f = ul.field_o;
-                sj.a(0, this.b(param3 - 2));
+                sj.a(0, this.getTooltipText(param3 - 2));
                 return param1;
               }
               if (0 == pg.field_f) {
                 pg.field_f = ul.field_o;
-                sj.a(0, this.b(param3 - 2));
+                sj.a(0, this.getTooltipText(param3 - 2));
                 return param1;
               }
               this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
@@ -611,19 +611,19 @@ class w extends IntrusiveNode {
                 ArchiveRequest.field_t = null;
               }
               pg.field_f = ul.field_o;
-              sj.a(0, this.b(param3 - 2));
+              sj.a(0, this.getTooltipText(param3 - 2));
               return param1;
             }
           }
         }
         if (0 != ul.field_o) {
           pg.field_f = ul.field_o;
-          sj.a(0, this.b(param3 - 2));
+          sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
         if (0 == pg.field_f) {
           pg.field_f = ul.field_o;
-          sj.a(0, this.b(param3 - 2));
+          sj.a(0, this.getTooltipText(param3 - 2));
           return param1;
         }
         this.a(this, bk.field_b, param2, 0, param0, ResourceArchive.field_e);
@@ -635,11 +635,11 @@ class w extends IntrusiveNode {
           ArchiveRequest.field_t = null;
         }
         pg.field_f = ul.field_o;
-        sj.a(0, this.b(param3 - 2));
+        sj.a(0, this.getTooltipText(param3 - 2));
         return param1;
     }
 
-    String b(int param0) {
+    String getTooltipText(int param0) {
         if (param0 < 121) {
           return (String) null;
         }
@@ -655,17 +655,17 @@ class w extends IntrusiveNode {
     }
 
     w(String param0, rd param1, vd param2) {
-        ub var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_p = 0;
         this.field_l = 0;
         try {
           this.field_u = param0;
           this.field_i = param1;
           this.field_r = param2;
-          if (this.field_i instanceof ub) {
-            var4 = (ub) ((Object) this.field_i);
-            this.field_j = var4.b(8089, this);
-            this.field_v = var4.a(-13293, this);
+          if (this.field_i instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_i);
+            this.field_j = var4.getPreferredWidth(8089, this);
+            this.field_v = var4.getPreferredHeight(-13293, this);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.wrapClientException((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

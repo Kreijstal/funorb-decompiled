@@ -44,7 +44,7 @@ final class we extends UiWidget {
           }
           ln.d(-28558);
           if (SoftwareRasterizer.field_d <= param0 + this.field_I.field_y) {
-            lq.a(this.field_Q, (byte) -94);
+            TextLineMetrics.a(this.field_Q, (byte) -94);
             param1.draw(-this.field_P, 0);
             param1.draw(-this.field_P + 2 * this.field_O, 0);
             this.field_E.drawMultiply(0, 0);
@@ -52,7 +52,7 @@ final class we extends UiWidget {
             this.field_Q.draw(param0, param3);
           }
           if (var5_int - this.field_I.field_y <= SoftwareRasterizer.field_i) {
-            lq.a(this.field_Q, (byte) -94);
+            TextLineMetrics.a(this.field_Q, (byte) -94);
             for (var7 = this.field_P + (this.width - this.field_I.field_y); 2 * this.field_O < var7; var7 = var7 - 2 * this.field_O) {
             }
             param1.draw(-var7, 0);
@@ -178,7 +178,7 @@ final class we extends UiWidget {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        lq.a(var14, (byte) -94);
+        TextLineMetrics.a(var14, (byte) -94);
         int var5 = this.height >> 1;
         int var6 = 0;
         if (param2 <= 27) {
@@ -256,7 +256,7 @@ final class we extends UiWidget {
         }
         int var2 = this.height >> 1;
         Sprite var3 = new Sprite(var2, this.height);
-        lq.a(var3, (byte) -94);
+        TextLineMetrics.a(var3, (byte) -94);
         for (var4 = 0; var4 < this.height; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));

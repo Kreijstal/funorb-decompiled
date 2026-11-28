@@ -21,7 +21,7 @@ final class bja extends BoardChange {
         this.field_j = 6;
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -59,7 +59,7 @@ final class bja extends BoardChange {
         }
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         try {
           param0.addChild(27799, new mi(param0.field_o, this));
           if (param1 >= -2) {

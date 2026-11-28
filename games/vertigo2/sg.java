@@ -116,10 +116,10 @@ final class sg {
           if (param6 >= ua.field_e &&
             WidgetContainer.field_D >= param6) {
             var57 = vl.field_e[param6];
-            var40 = pk.a((byte) -14, ib.field_a, -param2 + param4, ap.field_e);
-            var41 = pk.a((byte) -14, ib.field_a, param2 + param4, ap.field_e);
-            var42 = pk.a((byte) -14, ib.field_a, param4 - var11, ap.field_e);
-            var43 = pk.a((byte) -14, ib.field_a, var11 + param4, ap.field_e);
+            var40 = TextHotspotBounds.a((byte) -14, ib.field_a, -param2 + param4, ap.field_e);
+            var41 = TextHotspotBounds.a((byte) -14, ib.field_a, param2 + param4, ap.field_e);
+            var42 = TextHotspotBounds.a((byte) -14, ib.field_a, param4 - var11, ap.field_e);
+            var43 = TextHotspotBounds.a((byte) -14, ib.field_a, var11 + param4, ap.field_e);
             ki.a(param3 - 144, var40, var57, var42, param5);
             ki.a(-97, var42, var57, var43, param7);
             ki.a(-75, var43, var57, var41, param5);
@@ -181,8 +181,8 @@ final class sg {
             if (var40Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
-            var42Lifetime1 = pk.a((byte) -14, ib.field_a, var8_int + param4, ap.field_e);
-            var43Lifetime1 = pk.a((byte) -14, ib.field_a, -var8_int + param4, ap.field_e);
+            var42Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, var8_int + param4, ap.field_e);
+            var43Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, -var8_int + param4, ap.field_e);
             if (var39 == 0) {
               if (ua.field_e <= var40Lifetime1) {
                 ki.a(-95, var43Lifetime1, vl.field_e[var40Lifetime1], var42Lifetime1, param5);
@@ -193,8 +193,8 @@ final class sg {
               ki.a(-98, var43Lifetime1, vl.field_e[var41Lifetime1], var42Lifetime1, param5);
               continue;
             }
-            var44 = pk.a((byte) -14, ib.field_a, param4 + var10, ap.field_e);
-            var45 = pk.a((byte) -14, ib.field_a, param4 - var10, ap.field_e);
+            var44 = TextHotspotBounds.a((byte) -14, ib.field_a, param4 + var10, ap.field_e);
+            var45 = TextHotspotBounds.a((byte) -14, ib.field_a, param4 - var10, ap.field_e);
             if (var40Lifetime1 >= ua.field_e) {
               var58 = vl.field_e[var40Lifetime1];
               ki.a(param3 ^ -86, var43Lifetime1, var58, var45, param5);

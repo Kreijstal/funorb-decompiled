@@ -95,15 +95,15 @@ abstract class da extends lm implements aa {
         }
     }
 
-    String c(byte param0) {
+    String getTooltipText(byte param0) {
         String var3 = null;
         if (param0 <= 3) {
           lm var4 = (lm) null;
           this.a((lm) null, 'ￅ', 105, (byte) -45);
         }
-        String var2 = super.c((byte) 38);
+        String var2 = super.getTooltipText((byte) 38);
         if (null != this.field_D) {
-          var3 = this.field_D.c((byte) 41);
+          var3 = this.field_D.getTooltipText((byte) 41);
           if (var3 != null) {
             return var3;
           }

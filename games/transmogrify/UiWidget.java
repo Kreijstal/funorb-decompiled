@@ -8,7 +8,7 @@ class UiWidget extends IntrusiveNode {
     int field_p;
     String field_k;
     int field_o;
-    ue field_i;
+    TextLayout field_i;
     String field_j;
     int field_n;
     int field_l;
@@ -309,7 +309,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    String f(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 4) {
           this.field_s = 3;
         }
@@ -492,7 +492,7 @@ class UiWidget extends IntrusiveNode {
             this.a(param1, bk.field_a, this, param0, f.field_a, -17, PacketBuffer.field_j);
           }
           if (tg.field_d != 0) {
-            if (this.b(ol.field_b, tg.field_d, this, param1, -30386, nk.field_c, param0)) {
+            if (this.b(TextLineMetrics.field_b, tg.field_d, this, param1, -30386, nk.field_c, param0)) {
               param2 = false;
             } else {
               if (var5 != 0) {
@@ -518,7 +518,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         hi.field_g = b.field_k;
-        eg.a(this.f(param3 ^ 0), (byte) 126);
+        eg.a(this.getTooltipText(param3 ^ 0), (byte) 126);
         return param2;
     }
 
@@ -545,7 +545,7 @@ class UiWidget extends IntrusiveNode {
 
     UiWidget(String param0, WidgetRenderer param1, ma param2) {
         RuntimeException runtimeException = null;
-        m var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -560,10 +560,10 @@ class UiWidget extends IntrusiveNode {
           this.field_m = param2;
           this.field_q = param1;
           this.field_k = param0;
-          if (this.field_q instanceof m) {
-            var4 = (m) ((Object) this.field_q);
-            this.field_l = var4.a(-1, this);
-            this.field_h = var4.b(this, 228);
+          if (this.field_q instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_q);
+            this.field_l = var4.getPreferredWidth(-1, this);
+            this.field_h = var4.getPreferredHeight(this, 228);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

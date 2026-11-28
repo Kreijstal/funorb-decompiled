@@ -64,7 +64,7 @@ final class fb extends ql {
         int var4Lifetime1Lifetime1;
         int var4Lifetime5Lifetime1;
         var8 = HostileSpawn.field_I ? 1 : 0;
-        var11 = mm.field_m[0];
+        var11 = TextHotspotBounds.field_m[0];
         var3 = var11.field_j;
         if (this.field_o != null) {
           this.field_o.field_j.copyCoordinatesFrom((byte) 46, var3);
@@ -120,7 +120,7 @@ final class fb extends ql {
               var5_ref_oj.field_M = 0;
               fieldTemp$1 = ProxySocketFactory.field_j;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
-              mm.field_m[fieldTemp$1] = var9;
+              TextHotspotBounds.field_m[fieldTemp$1] = var9;
             }
           }
           if (!(this.field_i.field_I > 0) ||
@@ -142,7 +142,7 @@ final class fb extends ql {
             tb.field_N = le.field_D;
             ti.a(235, (byte) 86, 20);
             this.field_s = false;
-            if (pm.field_h &&
+            if (TextLineMetrics.field_h &&
               this.field_j != null &&
               this.field_j.field_e > 18) {
               var5Lifetime1 = this.field_j.getClampedTileIndex(-4);
@@ -271,7 +271,7 @@ final class fb extends ql {
             }
             fieldTemp$3 = ProxySocketFactory.field_j;
             ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
-            mm.field_m[fieldTemp$3] = var10;
+            TextHotspotBounds.field_m[fieldTemp$3] = var10;
           }
         }
         if (ha.field_t == 14) {
@@ -292,7 +292,7 @@ final class fb extends ql {
         if (0 < this.field_h) {
           this.field_h = this.field_h - 1;
         }
-        if (pm.field_h &&
+        if (TextLineMetrics.field_h &&
           om.field_b &&
           this.field_j != null &&
           ln.field_a.field_g[var3.getClampedTileIndex(-4)] == 2) {
@@ -358,7 +358,7 @@ final class fb extends ql {
         CrossfadingMidiPcmStream.a(3, 1);
         this.field_g = -1;
         this.field_s = false;
-        if (pm.field_h &&
+        if (TextLineMetrics.field_h &&
           var10.length > 20) {
           this.field_j = new GridPoint(var10[20], var10[21]);
         }
@@ -419,7 +419,7 @@ final class fb extends ql {
 
     final String a(boolean param0) {
         if (3 != ha.field_t) {
-          return cj.field_K;
+          return RichTextWidget.field_K;
         }
         if (this.field_s) {
           return CipherPacketBuffer.field_v;

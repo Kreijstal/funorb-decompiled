@@ -182,17 +182,17 @@ final class SceneWidgetPart008 extends SceneWidget {
           null == AccountRegistrationPanel.sceneWidgetState0116) {
           integerLocal2 = 0;
         }
-        if (NetworkSupport010.integerState0585 == 0 &&
+        if (TextHotspotBounds.integerState0585 == 0 &&
           null != UiComponentPart011.sceneWidgetPart013State0002) {
           integerLocal2 = 0;
         }
-        if (2 == NetworkSupport010.integerState0585 &&
+        if (2 == TextHotspotBounds.integerState0585 &&
           !MixedSupport056.computeBoolean0666((byte) -53)) {
           integerLocal2 = 0;
         }
         if (MixedSupport146.integerState0931 == 84) {
           if (integerLocal2 == 0) {
-            if (0 != NetworkSupport010.integerState0585) {
+            if (0 != TextHotspotBounds.integerState0585) {
               BufferedSocket.performAction1371((byte) 94);
             }
           } else {
@@ -211,7 +211,7 @@ final class SceneWidgetPart008 extends SceneWidget {
                 UiComponentPart004.performAction0184((String) null, (String) null, MixedSupport132.stringState0571, (byte) 69, 2, 0);
                 BufferedSocket.performAction1371((byte) 94);
               } else {
-                integerLocal5 = NetworkSupport010.integerState0585;
+                integerLocal5 = TextHotspotBounds.integerState0585;
                 if (integerLocal5 == 0 &&
                   null != MixedSupport016.sceneWidgetPart013State0001) {
                   integerLocal5 = 1;
@@ -219,7 +219,7 @@ final class SceneWidgetPart008 extends SceneWidget {
                 if (ReturnedShape.computeInteger1429(0, integerLocal5) == 2) {
                   MixedSupport031.performAction0418(integerLocal5, integerArgument3, 1, (byte) 71);
                 }
-                UiComponent.performAction0208(integerArgument1, (byte) -85, NetworkSupport010.integerState0585, MixedSupport029.stringState0149, -1, stringLocal4);
+                UiComponent.performAction0208(integerArgument1, (byte) -85, TextHotspotBounds.integerState0585, MixedSupport029.stringState0149, -1, stringLocal4);
                 BufferedSocket.performAction1371((byte) 94);
               }
             }
@@ -251,7 +251,7 @@ final class SceneWidgetPart008 extends SceneWidget {
           stringLocal17 = stringLocal15;
           stringLocal28 = stringLocal17;
           stringLocal29 = stringLocal17;
-          if (NetworkSupport010.integerState0585 == 2) {
+          if (TextHotspotBounds.integerState0585 == 2) {
             charSequenceLocal21 = (CharSequence) ((Object) MixedSupport029.stringState0149);
             stringLocal19 = NodeHashTableIterator.substituteIndexedPlaceholders(94, NetworkSupport009.stringState0388, new String[]{MixedSupport125.computeString1621(charSequenceLocal21, true)});
             stringLocal7 = NodeHashTableIterator.substituteIndexedPlaceholders(108, CacheWorkQueue.stringState0266, new String[]{stringLocal15});
@@ -264,7 +264,7 @@ final class SceneWidgetPart008 extends SceneWidget {
             }
           } else {
             stringLocal30 = "";
-            if (NetworkSupport010.integerState0585 == 0) {
+            if (TextHotspotBounds.integerState0585 == 0) {
               if (MixedSupport016.sceneWidgetPart013State0001 == null &&
                 EmailFormatValidator.booleanState0077) {
                 stringLocal30 = "[" + MixedSupport127.stringState0554 + "] ";

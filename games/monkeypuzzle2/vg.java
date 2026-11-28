@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vg extends jj {
+final class vg extends RichTextWidget {
     private FieldValidator field_H;
     static int field_J;
     private String field_N;
@@ -23,7 +23,7 @@ final class vg extends jj {
         return false;
     }
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 == 54) {
           return null;
         }
@@ -102,9 +102,9 @@ final class vg extends jj {
         Sprite var29;
         Sprite var30;
         Sprite var31;
-        ui var32;
-        ui var33;
-        ui var34;
+        TextWidgetRenderer var32;
+        TextWidgetRenderer var33;
+        TextWidgetRenderer var34;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -130,9 +130,9 @@ final class vg extends jj {
           if (var5.equals(this.field_s)) {
             super.a(param0, param1, param2, param3);
             var6 = this.field_H.getValidationStatus(false);
-            var34 = (ui) ((Object) this.field_h);
+            var34 = (TextWidgetRenderer) ((Object) this.field_h);
             var9 = this.field_r + param3;
-            var10 = var34.a((UiWidget) (this), -73, param2) + (var34.a(-1, (UiWidget) (this)).b(62) >> 1);
+            var10 = var34.getTextOriginY((UiWidget) (this), -73, param2) + (var34.getTextLayout(-1, (UiWidget) (this)).getLayoutHeight(62) >> 1);
             if (var6 != ke.field_d &&
               var6 != f.field_g) {
               if (IsaacRandom.field_h == var6) {
@@ -173,12 +173,12 @@ final class vg extends jj {
             return;
           }
           this.field_s = var5;
-          this.a(true);
+          this.rebuildHotspotBounds(true);
           super.a(param0, param1, param2, param3);
           var6 = this.field_H.getValidationStatus(false);
-          var33 = (ui) ((Object) this.field_h);
+          var33 = (TextWidgetRenderer) ((Object) this.field_h);
           var9Lifetime2 = this.field_r + param3;
-          var10Lifetime2 = var33.a((UiWidget) (this), -73, param2) + (var33.a(-1, (UiWidget) (this)).b(62) >> 1);
+          var10Lifetime2 = var33.getTextOriginY((UiWidget) (this), -73, param2) + (var33.getTextLayout(-1, (UiWidget) (this)).getLayoutHeight(62) >> 1);
           if (var6 == ke.field_d) {
             var23 = hk.field_i[0];
             var11Lifetime2 = var23.field_m << 1;
@@ -239,13 +239,13 @@ final class vg extends jj {
         var17 = w.field_a;
         if (!var17.equals(this.field_s)) {
           this.field_s = var17;
-          this.a(true);
+          this.rebuildHotspotBounds(true);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_H.getValidationStatus(false);
-        var32 = (ui) ((Object) this.field_h);
+        var32 = (TextWidgetRenderer) ((Object) this.field_h);
         var9Lifetime1 = this.field_r + param3;
-        var10Lifetime1 = var32.a((UiWidget) (this), -73, param2) + (var32.a(-1, (UiWidget) (this)).b(62) >> 1);
+        var10Lifetime1 = var32.getTextOriginY((UiWidget) (this), -73, param2) + (var32.getTextLayout(-1, (UiWidget) (this)).getLayoutHeight(62) >> 1);
         if (var6Lifetime1 == ke.field_d) {
           var21 = hk.field_i[0];
           var11Lifetime1 = var21.field_m << 1;

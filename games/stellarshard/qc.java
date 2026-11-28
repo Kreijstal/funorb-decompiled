@@ -309,8 +309,8 @@ final class qc {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            pd.field_g = new String[var4];
-            ri.a(hc.field_m, 0, pd.field_g, 0, var4);
+            RichTextLayout.field_g = new String[var4];
+            ri.a(hc.field_m, 0, RichTextLayout.field_g, 0, var4);
             fb.field_e = new String[-var4 + (var3_int - 1)];
             ri.a(hc.field_m, var4 + 1, fb.field_e, 0, var3_int + (-var4 - 1));
             var3_int = nj.a(IntrusiveNode.field_d, pe.field_c, hc.field_m, (byte) -128, h.a(dl.field_K, 0, new String[]{"<br><%0><br>"}));
@@ -329,10 +329,10 @@ final class qc {
             ri.a(hc.field_m, 0, bb.field_k, 0, var4);
             o.field_g = new String[-var4 + (var3_int - 1)];
             ri.a(hc.field_m, 1 + var4, o.field_g, 0, -var4 + (var3_int - 1));
-            if (pd.field_g.length < bb.field_k.length) {
+            if (RichTextLayout.field_g.length < bb.field_k.length) {
               stackIn_50_0 = bb.field_k.length;
             } else {
-              stackIn_50_0 = pd.field_g.length;
+              stackIn_50_0 = RichTextLayout.field_g.length;
             }
             var5 = stackIn_50_0;
             if (o.field_g.length <= fb.field_e.length) {
@@ -394,7 +394,7 @@ final class qc {
             }
           }
           if (2 == rb.field_s) {
-            var10 = pd.field_g;
+            var10 = RichTextLayout.field_g;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
@@ -424,10 +424,10 @@ final class qc {
             }
             fl.field_a = stackIn_110_0 + stackIn_111_1;
           }
-          rg.field_F = -(fl.field_a >> 1) + eh.field_g;
+          RichTextWidget.field_F = -(fl.field_a >> 1) + eh.field_g;
           vl.field_o = new int[stellarshard.field_L.length][];
           var4Lifetime3 = param2;
-          var5Lifetime3 = rg.field_F;
+          var5Lifetime3 = RichTextWidget.field_F;
           while (var4Lifetime3 < stellarshard.field_L.length) {
             var6Lifetime1 = sj.field_J[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
@@ -623,7 +623,7 @@ final class qc {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < cc.field_m) {
-                        vk.a(var25, 0, var29, 0, param2, (byte) 96, var36Lifetime2 + var37, var21, var38, 0);
+                        TextLayout.a(var25, 0, var29, 0, param2, (byte) 96, var36Lifetime2 + var37, var21, var38, 0);
                       }
                     } else {
                       var39 = (-var21 + var22) / var38;
@@ -633,9 +633,9 @@ final class qc {
                         var38 = -1 - var37 + cc.field_m;
                       }
                       if (var37 >= 0) {
-                        vk.a(var25, var41, var29, var40, param2, (byte) 71, var36Lifetime2 + var37, var21, var38, var39);
+                        TextLayout.a(var25, var41, var29, var40, param2, (byte) 71, var36Lifetime2 + var37, var21, var38, var39);
                       } else {
-                        vk.a(-(var37 * var40) + var25, var41, var29 - var41 * var37, var40, param2, (byte) 63, var36Lifetime2, var21 - var37 * var39, var37 + var38, var39);
+                        TextLayout.a(-(var37 * var40) + var25, var41, var29 - var41 * var37, var40, param2, (byte) 63, var36Lifetime2, var21 - var37 * var39, var37 + var38, var39);
                       }
                     }
                   }
@@ -784,14 +784,14 @@ final class qc {
                     var37Lifetime1 = -var36Lifetime1 + (cc.field_m - 1);
                   }
                   if (var36Lifetime1 < 0) {
-                    vk.a(var25 - var39Lifetime1 * var36Lifetime1, var40Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29, var39Lifetime1, param2, (byte) 92, var35Lifetime1, -(var38Lifetime1 * var36Lifetime1) + var21, var37Lifetime1 + var36Lifetime1, var38Lifetime1);
+                    TextLayout.a(var25 - var39Lifetime1 * var36Lifetime1, var40Lifetime1, -(var40Lifetime1 * var36Lifetime1) + var29, var39Lifetime1, param2, (byte) 92, var35Lifetime1, -(var38Lifetime1 * var36Lifetime1) + var21, var37Lifetime1 + var36Lifetime1, var38Lifetime1);
                   } else {
-                    vk.a(var25, var40Lifetime1, var29, var39Lifetime1, param2, (byte) 77, var35Lifetime1 + var36Lifetime1, var21, var37Lifetime1, var38Lifetime1);
+                    TextLayout.a(var25, var40Lifetime1, var29, var39Lifetime1, param2, (byte) 77, var35Lifetime1 + var36Lifetime1, var21, var37Lifetime1, var38Lifetime1);
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
                     cc.field_m > var36Lifetime1) {
-                    vk.a(var25, 0, var29, 0, param2, (byte) 94, var36Lifetime1 + var35Lifetime1, var21, var37Lifetime1, 0);
+                    TextLayout.a(var25, 0, var29, 0, param2, (byte) 94, var36Lifetime1 + var35Lifetime1, var21, var37Lifetime1, 0);
                   }
                 }
               }

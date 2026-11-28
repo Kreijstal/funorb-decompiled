@@ -117,7 +117,7 @@ final class wa implements de {
           }
           jk.field_l = param3;
           mc.field_c = param2;
-          nh.field_i = param0;
+          TextLineMetrics.field_i = param0;
           pa.field_I = new Sprite[param4.length];
           for (var8 = 0; param4.length > var8; var8++) {
             pa.field_I[var8] = new Sprite(317, 34);
@@ -162,7 +162,7 @@ final class wa implements de {
         var8 = StarCannon.field_A;
         try {
           boolean decompiledFrameRemainder0 = true;
-          var9 = se.field_p;
+          var9 = RichTextLayout.field_p;
           var2 = var9.readUnsignedByte(7909);
           var3 = var9.readUnsignedByte(7909);
           if (var2 == 0) {

@@ -111,9 +111,9 @@ final class DisplayNameSelectionPanel extends gj implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (ComponentLayout) null);
         this.field_I = new ValidatedTextField("", (kd) null, 12);
-        e var1 = new e(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(t.field_c, var1, (kd) null);
-        this.field_J = new InteractiveWidget(e.field_g, (kd) null);
+        this.field_J = new InteractiveWidget(DefaultTextWidgetRenderer.field_g, (kd) null);
         this.field_L = new InteractiveWidget(gd.field_d, (kd) null);
         this.field_I.field_m = df.field_c;
         this.field_I.setFieldValidator(true, new AccountNameAvailabilityValidator(this.field_I));

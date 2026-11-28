@@ -23,10 +23,10 @@ final class ck extends qg {
         this.field_E.drawParagraph(this.field_D, var7 + var5 + this.field_A, var6 + this.field_A, -this.field_A + this.field_C, -(2 * this.field_A) + this.field_q, this.field_B, param2, !this.field_H ? 2 : 0, 1, this.field_E.field_s);
     }
 
-    final String b(byte param0) {
+    final String getTooltipText(byte param0) {
         int var2 = this.field_y.field_j ? 1 : 0;
         this.field_y.field_j = this.field_j;
-        String var3 = this.field_y.b(param0);
+        String var3 = this.field_y.getTooltipText(param0);
         this.field_y.field_j = var2 != 0 ? true : false;
         return var3;
     }

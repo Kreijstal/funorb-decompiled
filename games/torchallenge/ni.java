@@ -10,7 +10,7 @@ final class ni {
     static int field_f;
     static Sprite[] field_h;
     ResourceArchive field_a;
-    static bc field_d;
+    static DefaultTextWidgetRenderer field_d;
     String field_g;
 
     final static String a(String[] args, int param1, String param2) {

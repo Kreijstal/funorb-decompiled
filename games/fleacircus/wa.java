@@ -96,7 +96,7 @@ final class wa {
             var8 = param2[var5_int] << var6 & 255 | (param2[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_c[this.field_a] = (byte)ne.a((int) this.field_c[this.field_a], var8 >>> var7);
+              this.field_c[this.field_a] = (byte)TextLayout.a((int) this.field_c[this.field_a], var8 >>> var7);
               this.field_a = this.field_a + 1;
               this.field_o = this.field_o + (8 - var7);
               if (this.field_o == 512) {
@@ -116,7 +116,7 @@ final class wa {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = 255 & param2[var5_int] << var6;
-            this.field_c[this.field_a] = (byte)ne.a((int) this.field_c[this.field_a], var8Lifetime1 >>> var7);
+            this.field_c[this.field_a] = (byte)TextLayout.a((int) this.field_c[this.field_a], var8Lifetime1 >>> var7);
           }
           if (8L > param1 + (long)var7) {
             this.field_o = (int)((long)this.field_o + param1);
@@ -173,7 +173,7 @@ final class wa {
         int var8 = 0;
         var8 = fleas.field_A ? 1 : 0;
         try {
-          this.field_c[this.field_a] = (byte)ne.a((int) this.field_c[this.field_a], 128 >>> sc.a(7, this.field_o));
+          this.field_c[this.field_a] = (byte)TextLayout.a((int) this.field_c[this.field_a], 128 >>> sc.a(7, this.field_o));
           this.field_a = this.field_a + 1;
           if (this.field_a > 32) {
             while (this.field_a < 64) {

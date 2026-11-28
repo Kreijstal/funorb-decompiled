@@ -65,7 +65,7 @@ final class md extends InteractiveWidget {
     }
 
     final static void i(int param0) {
-        j.field_o = null;
+        RichTextLayout.field_o = null;
         d.field_L = false;
         int var1 = 28 / ((79 - param0) / 39);
         uk.field_a = null;

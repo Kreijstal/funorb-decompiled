@@ -35,7 +35,7 @@ final class ScorePopup {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = uj.field_d;
+            stackIn_4_0 = TextLineMetrics.field_d;
             return stackIn_4_0;
           }
           if (255 < var2_int) {
@@ -44,7 +44,7 @@ final class ScorePopup {
           }
           var3 = qj.a('.', param1, 10287);
           if (var3.length < 2) {
-            stackIn_11_0 = uj.field_d;
+            stackIn_11_0 = TextLineMetrics.field_d;
             return stackIn_11_0;
           }
           var4 = var3;
@@ -183,7 +183,7 @@ final class ScorePopup {
             var4 = nb.field_O;
           }
           if (this.value == -14) {
-            var4 = ja.field_k;
+            var4 = TextHotspotBounds.field_k;
           }
           if (this.value == -15) {
             var4 = rd.field_b;

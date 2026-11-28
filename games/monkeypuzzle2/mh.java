@@ -12,10 +12,10 @@ final class mh extends jk {
     private boolean field_E;
     private int field_I;
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         int var2 = this.field_v.field_g ? 1 : 0;
         this.field_v.field_g = this.field_g;
-        String var3 = this.field_v.a(param0);
+        String var3 = this.field_v.getTooltipText(param0);
         this.field_v.field_g = var2 != 0 ? true : false;
         return var3;
     }

@@ -37,7 +37,7 @@ final class rl {
         } else {
           stackIn_6_0 = m.field_q + param1;
         }
-        cn.field_r = stackIn_6_0;
+        DefaultTextWidgetRenderer.field_r = stackIn_6_0;
         if (qg.field_n + param1 <= param2 + qh.field_e) {
           stackIn_9_0 = param2 + qh.field_e;
         } else {
@@ -63,19 +63,19 @@ final class rl {
           }
         }
         if (SoftwareRasterizer.field_b << 2 > pk.field_m) {
-          if (cn.field_r < SoftwareRasterizer.field_b << 2) {
-            cn.field_r = SoftwareRasterizer.field_b << 2;
+          if (DefaultTextWidgetRenderer.field_r < SoftwareRasterizer.field_b << 2) {
+            DefaultTextWidgetRenderer.field_r = SoftwareRasterizer.field_b << 2;
           }
           pk.field_m = SoftwareRasterizer.field_b << 2;
         }
         if (param0 != -19104) {
           return;
         }
-        if (cn.field_r > SoftwareRasterizer.field_l << 2) {
+        if (DefaultTextWidgetRenderer.field_r > SoftwareRasterizer.field_l << 2) {
           if (SoftwareRasterizer.field_l << 2 < pk.field_m) {
             pk.field_m = SoftwareRasterizer.field_l << 2;
           }
-          cn.field_r = SoftwareRasterizer.field_l << 2;
+          DefaultTextWidgetRenderer.field_r = SoftwareRasterizer.field_l << 2;
         }
     }
 

@@ -49,7 +49,7 @@ class ca extends rd {
 
     final static void f(int param0) {
         gd.field_g = false;
-        se.field_p.readUnsignedByte(7909);
+        RichTextLayout.field_p.readUnsignedByte(7909);
         if (param0 != 0) {
           field_Y = -84L;
         }

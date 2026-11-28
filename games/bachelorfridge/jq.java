@@ -188,7 +188,7 @@ final class jq extends k {
             stackIn_7_0 = rm.field_c;
             return stackIn_7_0;
           }
-          var3 = fda.a(-1, '.', param1);
+          var3 = RemoveDefeatedCreatureEffect.a(-1, '.', param1);
           if (var3.length < 2) {
             stackIn_10_0 = uc.field_j;
             return stackIn_10_0;
@@ -205,7 +205,7 @@ final class jq extends k {
               return stackIn_18_0;
             }
           }
-          stackIn_21_0 = lia.a(-58, var3[var3.length - 1]);
+          stackIn_21_0 = ChangeHealthAndStatusEffect.a(-58, var3[var3.length - 1]);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

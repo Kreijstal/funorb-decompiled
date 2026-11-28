@@ -19,7 +19,7 @@ class ka extends TunnelEntity {
             field_P = -79;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ class ka extends TunnelEntity {
             field_F = (byte[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ class ka extends TunnelEntity {
             this.onShockwaveContact(-79, (ShockwaveBlast) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -95,7 +95,7 @@ class ka extends TunnelEntity {
             this.field_K = -0.9744507612027556;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -108,7 +108,7 @@ class ka extends TunnelEntity {
           int var3_int = -113 % ((-2 - param1) / 62);
           param0.addLast((IntrusiveNode) (this.field_I), (byte) -108);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ class ka extends TunnelEntity {
         try {
           int var3_int = 98 % ((param0 - 14) / 53);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ class ka extends TunnelEntity {
           }
           this.a(-13, uc.field_db[this.field_J], param1, param3);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -183,7 +183,7 @@ class ka extends TunnelEntity {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -193,7 +193,7 @@ class ka extends TunnelEntity {
             this.field_O = 2.3214224287080496;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ class ka extends TunnelEntity {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -269,7 +269,7 @@ class ka extends TunnelEntity {
             this.onShockwaveContact(98, (ShockwaveBlast) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -295,7 +295,7 @@ class ka extends TunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ class ka extends TunnelEntity {
             this.dispatchEntityCollision((TunnelEntity) null, 62);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -333,7 +333,7 @@ class ka extends TunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -349,7 +349,7 @@ class ka extends TunnelEntity {
         try {
           int var3_int = -120 / ((-35 - param1) / 60);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -388,7 +388,7 @@ class ka extends TunnelEntity {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ class ka extends TunnelEntity {
             field_F = (byte[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.CA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -421,7 +421,7 @@ class ka extends TunnelEntity {
             field_N = (ResourceArchive) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ka.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ka.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

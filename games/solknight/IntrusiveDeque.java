@@ -261,7 +261,7 @@ final class IntrusiveDeque {
           if (param1 <= 26) {
             field_a = -33;
           }
-          if (kj.field_R < 10) {
+          if (RichTextWidget.field_R < 10) {
             var3_int = 0;
             if (wa.field_b) {
               wa.field_b = false;

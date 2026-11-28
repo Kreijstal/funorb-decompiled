@@ -238,7 +238,7 @@ abstract class v extends b {
           return;
         }
         try {
-          MidiPcmStream.field_O = new LoginPanel(lg.field_b, (String) null, eb.field_m, param2, param0);
+          MidiPcmStream.field_O = new LoginPanel(TextLayout.field_b, (String) null, eb.field_m, param2, param0);
           bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
           t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
         } catch (RuntimeException runtimeException) {
@@ -501,7 +501,7 @@ abstract class v extends b {
             stackIn_37_0 = var8;
             return stackIn_37_0;
           }
-          lg.a(param4, (byte) 103, var8);
+          TextLayout.a(param4, (byte) 103, var8);
           stackIn_35_0 = null;
           return (java.awt.Frame) (stackIn_35_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -547,7 +547,7 @@ abstract class v extends b {
           return;
         }
         try {
-          MidiPcmStream.field_O = new LoginPanel(lg.field_b, (String) null, eb.field_m, param2, param0);
+          MidiPcmStream.field_O = new LoginPanel(TextLayout.field_b, (String) null, eb.field_m, param2, param0);
           bg.field_K = new jf(t.field_b, MidiPcmStream.field_O);
           t.field_b.a((byte) 88, (UiComponent) (bg.field_K));
         } catch (RuntimeException runtimeException) {

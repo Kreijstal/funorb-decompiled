@@ -21,7 +21,7 @@ final class hc extends InteractiveWidget {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        PcmSample var8 = ia.field_i[param3][param5][param2];
+        PcmSample var8 = TextHotspotBounds.field_i[param3][param5][param2];
         int var9 = qk.a(param3, param7, param6, param2, 125, param1, param5, param4);
         if (param0 < 20) {
           hc.d((byte) -55);

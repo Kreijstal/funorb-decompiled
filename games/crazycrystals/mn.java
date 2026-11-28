@@ -10,7 +10,7 @@ final class mn extends pd {
     static String field_m;
 
     final void a(byte param0) {
-        tb.field_d.playSampleWithPan(de.field_l, 100, this.field_h * gi.field_m * 48, this.field_k / this.field_h);
+        TextLayout.field_d.playSampleWithPan(de.field_l, 100, this.field_h * gi.field_m * 48, this.field_k / this.field_h);
         this.field_h = 0;
         this.field_k = 0;
         int var2 = 123 % ((param0 - 29) / 42);

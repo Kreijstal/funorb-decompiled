@@ -229,7 +229,7 @@ final class me extends DualLinkNode {
     }
 
     final static void c(byte param0) {
-        sa.a((byte) 88, kk.c(-14047));
+        sa.a((byte) 88, RichTextLayout.c(-14047));
         if (param0 >= -4) {
           field_w = (boolean[]) null;
         }

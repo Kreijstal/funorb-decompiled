@@ -331,7 +331,7 @@ final class co extends qm {
         } else {
           ah.a(ao.field_d, var4, 3, (byte) -115, 3);
           ah.a(m.field_m, var4, 6, (byte) -38, 6);
-          ah.a(tb.field_f, var4, 9, (byte) -63, 9);
+          ah.a(TextLayout.field_f, var4, 9, (byte) -63, 9);
           ah.a(cm.field_c, var4, 14, (byte) 86, 14);
         }
     }

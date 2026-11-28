@@ -11,7 +11,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ie.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ie.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -29,7 +29,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent.update(param0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ie.update(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ie.update(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         try {
           this.delegateComponent.paint(param0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ie.paint(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ie.paint(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

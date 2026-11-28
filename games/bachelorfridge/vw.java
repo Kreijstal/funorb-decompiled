@@ -5,8 +5,8 @@ final class vw {
     static ArenaTheme[] field_a;
 
     final static java.awt.Container a(int param0) {
-        if (null != fda.field_j) {
-          return (java.awt.Container) ((Object) fda.field_j);
+        if (null != RemoveDefeatedCreatureEffect.field_j) {
+          return (java.awt.Container) ((Object) RemoveDefeatedCreatureEffect.field_j);
         }
         if (param0 != -1334) {
           field_a = (ArenaTheme[]) null;

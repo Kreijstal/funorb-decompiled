@@ -45,7 +45,7 @@ final class tc extends rl {
 
     final void a(byte param0) {
         int var2 = -78 / ((29 - param0) / 42);
-        tb.field_d.playSampleWithPan(re.field_h, 100, this.field_l * (48 * gi.field_m), this.field_k / this.field_l);
+        TextLayout.field_d.playSampleWithPan(re.field_h, 100, this.field_l * (48 * gi.field_m), this.field_k / this.field_l);
         this.field_k = 0;
         this.field_l = 0;
     }

@@ -21,7 +21,7 @@ final class rc implements fe {
             rc.a(108);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "rc.A(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "rc.A(" + param0 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ final class rc implements fe {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "rc.D(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "rc.D(" + param0 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ final class rc implements fe {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class rc implements fe {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class rc implements fe {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -428,7 +428,7 @@ final class rc implements fe {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(')').toString());
         }
     }
 }

@@ -293,7 +293,7 @@ final class rd {
     }
 
     final void a(int param0, BitmapFont param1) {
-        ic var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         gi var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -316,7 +316,7 @@ final class rd {
         gi var14Lifetime1;
         gi var14Lifetime2;
         try {
-          var17 = new ic(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_G + param1.field_u));
+          var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_G + param1.field_u));
           var17.field_i = 16777215;
           this.field_k = (t) ((Object) var17);
           var4 = new gi();

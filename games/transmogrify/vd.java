@@ -512,7 +512,7 @@ final class vd {
         ki var14 = null;
         ki var19 = null;
         int var15 = Transmogrify.field_A ? 1 : 0;
-        h var17 = new h(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_t + param1.field_y));
+        DefaultTextWidgetRenderer var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_t + param1.field_y));
         ki var14Lifetime1;
         ki var14Lifetime2;
         this.field_q = (WidgetRenderer) ((Object) var17);

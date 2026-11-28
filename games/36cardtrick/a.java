@@ -273,11 +273,11 @@ final class a extends ch {
         if (NameSuggestionsPanel.field_F < param1) {
           ah.field_d = param1;
         }
-        if (param1 < fk.field_h) {
+        if (param1 < TextHotspotBounds.field_h) {
           mf.field_g = param1;
         }
         q.field_h[DirectByteArrayStore.field_f] = param2;
-        mj.field_b[DirectByteArrayStore.field_f] = param0;
+        TextLayout.field_b[DirectByteArrayStore.field_f] = param0;
         ij.field_c[DirectByteArrayStore.field_f] = param5;
         int var6 = param5 + (param2 + param0);
         int var7 = var6 == 0 ? 0 : 1000 * param2 / var6;

@@ -37,7 +37,7 @@ final class tl extends eh {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -362,7 +362,7 @@ final class tl extends eh {
           } else {
             stackIn_60_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_59_1).append(stackIn_60_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -388,7 +388,7 @@ final class tl extends eh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

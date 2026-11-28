@@ -274,7 +274,7 @@ final class de {
           vk.field_b = 0;
         }
         if (ji.field_P) {
-          fj.a(param0 + 31645);
+          TextLineMetrics.a(param0 + 31645);
           vf.a(true);
           pd.field_Lb = null;
           ji.field_P = false;

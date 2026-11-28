@@ -28,7 +28,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           if (0 >= param0) {
             throw new IllegalArgumentException();
           }
-          if (tn.a(param0, -3236)) {
+          if (RichTextWidget.a(param0, -3236)) {
             stackIn_6_0 = (int)((4294967295L & (long)param2.nextInt()) * (long)param0 >> 32);
             return stackIn_6_0;
           }
@@ -64,7 +64,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
 
     public final FieldValidator getFieldValidator(int param0) {
         if (param0 != 35) {
-          this.h(-84);
+          this.getTooltipText(-84);
           return this.field_S;
         }
         return this.field_S;
@@ -214,7 +214,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String h(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_x) {
           return null;
         }

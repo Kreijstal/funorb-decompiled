@@ -179,17 +179,17 @@ final class jk extends si {
             for (var5 = 0; var5 < var4; var5++) {
               lg.field_a[var5] = -1;
             }
-            mi.field_g = new int[2];
+            TextLineMetrics.field_g = new int[2];
             for (var5 = 0; var3_int > var5; var5++) {
               sg.field_f[var5] = pj.field_A[var5];
             }
             sg.field_f[-3 + var4] = "";
-            sg.field_f[var4 - 2] = qa.field_N;
+            sg.field_f[var4 - 2] = RichTextWidget.field_N;
             lg.field_a[var4 - 2] = 0;
-            mi.field_g[0] = 4;
+            TextLineMetrics.field_g[0] = 4;
             sg.field_f[-1 + var4] = TextFieldValidator.field_h;
             lg.field_a[-1 + var4] = 1;
-            mi.field_g[1] = 5;
+            TextLineMetrics.field_g[1] = 5;
           } else if (NodeHashTableIterator.field_g == 1) {
             var3_int = ab.a(ol.field_h, kc.field_j, pj.field_A, uj.field_i, param0 ^ 14027);
             var4 = var3_int + 2;
@@ -198,14 +198,14 @@ final class jk extends si {
             for (var5 = 0; var4 > var5; var5++) {
               lg.field_a[var5] = -1;
             }
-            mi.field_g = new int[1];
+            TextLineMetrics.field_g = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
               sg.field_f[var5] = pj.field_A[var5];
             }
             sg.field_f[var4 - 2] = "";
             sg.field_f[var4 - 1] = TextFieldValidator.field_h;
             lg.field_a[-1 + var4] = 0;
-            mi.field_g[0] = 5;
+            TextLineMetrics.field_g[0] = 5;
           } else if (2 != NodeHashTableIterator.field_g) {
             if (NodeHashTableIterator.field_g == 3) {
               if (sb.field_d.privilegedTasksEnabled) {
@@ -219,30 +219,30 @@ final class jk extends si {
               for (var5 = 0; var5 < var4; var5++) {
                 lg.field_a[var5] = -1;
               }
-              mi.field_g = new int[1];
+              TextLineMetrics.field_g = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 sg.field_f[var5] = pj.field_A[var5];
               }
               sg.field_f[-2 + var4] = "";
               sg.field_f[var4 - 1] = TextFieldValidator.field_h;
               lg.field_a[-1 + var4] = 0;
-              mi.field_g[0] = 5;
+              TextLineMetrics.field_g[0] = 5;
             } else if (4 == NodeHashTableIterator.field_g) {
-              var3_int = ab.a(ol.field_h, o.field_f, pj.field_A, uj.field_i, 14074);
+              var3_int = ab.a(ol.field_h, RichTextLayout.field_f, pj.field_A, uj.field_i, 14074);
               var4 = var3_int + 2;
               sg.field_f = new String[var4];
               lg.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 lg.field_a[var5] = -1;
               }
-              mi.field_g = new int[1];
+              TextLineMetrics.field_g = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 sg.field_f[var5] = pj.field_A[var5];
               }
               sg.field_f[-2 + var4] = "";
               sg.field_f[var4 - 1] = TextFieldValidator.field_h;
               lg.field_a[var4 - 1] = 0;
-              mi.field_g[0] = 5;
+              TextLineMetrics.field_g[0] = 5;
             } else {
               if (NodeHashTableIterator.field_g != 5) {
                 throw new IllegalArgumentException();
@@ -254,17 +254,17 @@ final class jk extends si {
               for (var5 = 0; var5 < var4; var5++) {
                 lg.field_a[var5] = -1;
               }
-              mi.field_g = new int[2];
+              TextLineMetrics.field_g = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 sg.field_f[var5] = pj.field_A[var5];
               }
               sg.field_f[var4 - 3] = "";
               sg.field_f[var4 - 2] = hi.field_h;
               lg.field_a[-2 + var4] = 0;
-              mi.field_g[0] = 3;
+              TextLineMetrics.field_g[0] = 3;
               sg.field_f[var4 - 1] = TextFieldValidator.field_h;
               lg.field_a[var4 - 1] = 1;
-              mi.field_g[1] = 5;
+              TextLineMetrics.field_g[1] = 5;
             }
           } else {
             var3_int = ab.a(ol.field_h, a.a(5044, mk.field_b, new String[]{"<br><%0><br>"}), pj.field_A, uj.field_i, param0 + 14025);
@@ -318,15 +318,15 @@ final class jk extends si {
               lg.field_a[var8] = -1;
             }
             sg.field_f[0] = AwtRasterBuffer.field_d;
-            mi.field_g = new int[2];
+            TextLineMetrics.field_g = new int[2];
             lg.field_a[1] = 0;
             sg.field_f[1] = wk.field_h;
             sg.field_f[4] = GameClientShell.field_B;
             sg.field_f[2] = ph.field_d;
             lg.field_a[3] = 1;
             sg.field_f[3] = ff.field_K;
-            mi.field_g[0] = 5;
-            mi.field_g[1] = 2;
+            TextLineMetrics.field_g[0] = 5;
+            TextLineMetrics.field_g[1] = 2;
             sg.field_f[5] = "";
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_68_0 = sg.field_f;
@@ -354,7 +354,7 @@ final class jk extends si {
             }
             aa.field_d = la.correctedCurrentTimeMillis(false);
           }
-          wg.field_k.field_e = mi.field_g.length;
+          wg.field_k.field_e = TextLineMetrics.field_g.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < sg.field_f.length; var4Lifetime1++) {
             stackIn_89_0 = sg.field_f[var4Lifetime1];

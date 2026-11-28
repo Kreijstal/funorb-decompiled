@@ -67,7 +67,7 @@ final class NameSuggestionsPanel extends nb implements WidgetActivationListener 
               ((InteractiveWidget) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_16_3, 20 + 16 * var5, 0);
               this.b((byte) 112, this.field_G[var5]);
             }
-            this.field_G[var3_int] = new InteractiveWidget(bc.field_J, (vd) (this));
+            this.field_G[var3_int] = new InteractiveWidget(RichTextWidget.field_J, (vd) (this));
             this.field_G[var3_int].field_i = (rd) ((Object) var4);
             stackIn_19_0 = this.field_G[var3_int];
             stackIn_19_1 = 15;

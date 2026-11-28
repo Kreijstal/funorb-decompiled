@@ -10,16 +10,16 @@ final class Quaternion {
     final static void a(boolean param0) {
         if (ei.field_G != null) {
           ei.field_G.o(3);
-          pd.field_e = new DisplayNameSelectionPanel();
+          RichTextLayout.field_e = new DisplayNameSelectionPanel();
           if (!param0) {
-            sf.field_f.b(pd.field_e, 23143);
+            sf.field_f.b(RichTextLayout.field_e, 23143);
             return;
           }
           return;
         }
-        pd.field_e = new DisplayNameSelectionPanel();
+        RichTextLayout.field_e = new DisplayNameSelectionPanel();
         if (!param0) {
-          sf.field_f.b(pd.field_e, 23143);
+          sf.field_f.b(RichTextLayout.field_e, 23143);
           return;
         }
     }

@@ -46,14 +46,14 @@ final class qd {
     }
 
     final static int a(int param0, int param1, int param2) {
-        int var3 = tg.field_f[param2][param0];
+        int var3 = TextLineMetrics.field_f[param2][param0];
         if (param1 != 380) {
           qd.a(false, false, 41, (byte) -8, 52);
         }
         if (ke.a(param1 ^ 280, var3)) {
           return 380;
         }
-        return tg.field_j[param2];
+        return TextLineMetrics.field_j[param2];
     }
 
     static {

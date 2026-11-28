@@ -64,7 +64,7 @@ abstract class mh extends wk {
           if (param0 != 10768) {
             this.e((byte) -12);
           }
-          if (mb.field_n == this.field_V) {
+          if (RichTextLayout.field_n == this.field_V) {
             this.a((byte) 126, this.field_ab, 12 + this.field_Q + this.field_X.field_m, 12 + this.field_X.field_k);
             this.field_T = 0;
             return;
@@ -211,7 +211,7 @@ abstract class mh extends wk {
           fieldTemp$1 = this.field_T + 1;
           this.field_T = this.field_T + 1;
           if (fieldTemp$1 == this.field_N) {
-            this.field_V = mb.field_n;
+            this.field_V = RichTextLayout.field_n;
             this.a((byte) 126, this.field_ab, this.field_Q + 12 + this.field_X.field_m, this.field_X.field_k + 12);
             this.field_T = 0;
             this.field_S.field_E = 0;
@@ -241,7 +241,7 @@ abstract class mh extends wk {
         int fieldTemp$3 = this.field_T + 1;
         this.field_T = this.field_T + 1;
         if (fieldTemp$3 == this.field_N) {
-          this.field_V = mb.field_n;
+          this.field_V = RichTextLayout.field_n;
           this.a((byte) 126, this.field_ab, this.field_Q + 12 + this.field_X.field_m, this.field_X.field_k + 12);
           this.field_T = 0;
           this.field_S.field_E = 0;

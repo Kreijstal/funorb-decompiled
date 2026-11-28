@@ -264,10 +264,10 @@ abstract class uk {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(param4.length() * 6) + 304) / 2 + var7, 22 + var8);
             }
-            if (null != ub.field_k) {
+            if (null != RichTextLayout.field_k) {
               var9.setFont(hk.field_a);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(ub.field_k, gg.field_d / 2 - 6 * ub.field_k.length() / 2, AccountNameAvailabilityValidator.field_j / 2 - 26);
+              var9.drawString(RichTextLayout.field_k, gg.field_d / 2 - 6 * RichTextLayout.field_k.length() / 2, AccountNameAvailabilityValidator.field_j / 2 - 26);
             }
             var6 = -29 % ((-48 - param2) / 46);
           } catch (java.lang.Exception decompiledCaughtParameter1) {

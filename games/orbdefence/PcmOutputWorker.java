@@ -37,7 +37,7 @@ final class PcmOutputWorker implements Runnable {
         try {
           var2 = li.a(param1, "jagex-last-login-method", param0);
           if (var2 == null) {
-            stackIn_3_0 = jc.field_a;
+            stackIn_3_0 = DefaultTextWidgetRenderer.field_a;
             return stackIn_3_0;
           }
           var3 = nd.a(-1);
@@ -48,7 +48,7 @@ final class PcmOutputWorker implements Runnable {
               return stackIn_9_0;
             }
           }
-          stackIn_12_0 = jc.field_a;
+          stackIn_12_0 = DefaultTextWidgetRenderer.field_a;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

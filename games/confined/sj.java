@@ -46,7 +46,7 @@ abstract class sj extends ug {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ abstract class sj extends ug {
           this.b(this.field_lb, 10);
           this.field_nb = null;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sj.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sj.HB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -97,7 +97,7 @@ abstract class sj extends ug {
           this.field_jb = param3;
           this.a(true, param1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -106,7 +106,7 @@ abstract class sj extends ug {
         int fieldTemp$1 = 0;
         int var3 = Confined.field_J ? 1 : 0;
         if (null != this.field_ib) {
-          if (this.field_ib == c.field_s) {
+          if (this.field_ib == RichTextLayout.field_s) {
             fieldTemp$0 = this.field_mb + 1;
             this.field_mb = this.field_mb + 1;
             if (this.field_jb != fieldTemp$0) {
@@ -117,7 +117,7 @@ abstract class sj extends ug {
               }
               return super.l(param0 ^ 0);
             }
-            this.field_ib = sc.field_a;
+            this.field_ib = TextLayout.field_a;
             this.a(this.field_nb.field_z + (this.field_ob + 12), this.field_hb, 6, this.field_nb.field_F + 12);
             this.field_lb.field_K = 0;
             this.field_mb = 0;
@@ -171,7 +171,7 @@ abstract class sj extends ug {
     }
 
     final void g(byte param0) {
-        if (this.field_ib == c.field_s) {
+        if (this.field_ib == RichTextLayout.field_s) {
           return;
         }
         this.field_ib = PowerUpPickup.field_S;
@@ -205,9 +205,9 @@ abstract class sj extends ug {
         RuntimeException decompiledCaughtException = null;
         try {
           this.field_nb = param0;
-          if (this.field_ib != sc.field_a) {
-            if (this.field_ib != c.field_s) {
-              this.field_ib = c.field_s;
+          if (this.field_ib != TextLayout.field_a) {
+            if (this.field_ib != RichTextLayout.field_s) {
+              this.field_ib = RichTextLayout.field_s;
               this.field_mb = 0;
             }
           } else {
@@ -229,7 +229,7 @@ abstract class sj extends ug {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

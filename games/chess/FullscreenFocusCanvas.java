@@ -67,7 +67,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
             stackIn_16_0 = nb.field_Hb;
             return stackIn_16_0;
           }
-          if (ah.a(param1, -52)) {
+          if (RichTextLayout.a(param1, -52)) {
             stackIn_19_0 = MatchingFieldValidator.a(mf.field_B, new String[]{param1}, (byte) -85);
             return stackIn_19_0;
           }

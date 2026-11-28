@@ -113,7 +113,7 @@ final class pfa {
               var1_int = var1_int + um.field_d;
             }
             if (var4 < 0) {
-              jk.field_o.drawText(var6, var8Lifetime1, gaa.field_k + var1_int, var5, -1);
+              CreaturePoseAnimation.field_o.drawText(var6, var8Lifetime1, gaa.field_k + var1_int, var5, -1);
               var1_int = var1_int + FlyAnimation.field_z;
             } else {
               fp.field_f.drawText(var6, var8Lifetime1, var1_int + JaggrabDownloader.field_f, var5, -1);

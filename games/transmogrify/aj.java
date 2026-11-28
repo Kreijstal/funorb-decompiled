@@ -103,7 +103,7 @@ class aj extends UiWidget implements pb {
         try {
           var8 = new tl(this.field_u);
           if (param4 != -30386) {
-            this.f(-5);
+            this.getTooltipText(-5);
           }
           var9 = (UiWidget) (var8.c(-108));
           while (var9 != null) {
@@ -292,7 +292,7 @@ class aj extends UiWidget implements pb {
         }
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         tl var2;
         UiWidget var3;
         String var4;
@@ -304,7 +304,7 @@ class aj extends UiWidget implements pb {
         var2 = new tl(this.field_u);
         var3 = (UiWidget) (var2.c(-95));
         while (var3 != null) {
-          var4 = var3.f(4);
+          var4 = var3.getTooltipText(4);
           if (var4 != null) {
             return var4;
           }

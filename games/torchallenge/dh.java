@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends df {
+final class dh extends RichTextWidget {
     private Sprite field_Z;
     static Sprite[][] field_cb;
     private String field_W;
@@ -106,7 +106,7 @@ final class dh extends df {
         Sprite var20;
         Object var24;
         Object var37;
-        gd var41;
+        TextWidgetRenderer var41;
         String var5;
         int var11;
         int var12;
@@ -120,8 +120,8 @@ final class dh extends df {
         Sprite var38;
         Sprite var39;
         Sprite var40;
-        gd var42;
-        gd var43;
+        TextWidgetRenderer var42;
+        TextWidgetRenderer var43;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -144,13 +144,13 @@ final class dh extends df {
           var17 = hb.field_h;
           if (!var17.equals(this.field_v)) {
             this.field_v = var17;
-            this.d(false);
+            this.rebuildHotspotBounds(false);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_bb.getValidationStatus(-74);
-          var41 = (gd) ((Object) this.field_q);
+          var41 = (TextWidgetRenderer) ((Object) this.field_q);
           var9 = this.field_m + param1;
-          var10 = var41.a((UiComponent) (this), 3, param0) + (var41.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
+          var10 = var41.getTextOriginY((UiComponent) (this), 3, param0) + (var41.getTextLayout(102, (UiComponent) (this)).getLayoutHeight((byte) -63) >> 1);
           if (var6 != bl.field_S &&
             jh.field_c != var6) {
             if (SpriteLoader.field_c == var6) {
@@ -190,13 +190,13 @@ final class dh extends df {
           }
           if (!var5.equals(this.field_v)) {
             this.field_v = var5;
-            this.d(false);
+            this.rebuildHotspotBounds(false);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_bb.getValidationStatus(-74);
-          var43 = (gd) ((Object) this.field_q);
+          var43 = (TextWidgetRenderer) ((Object) this.field_q);
           var9Lifetime1 = this.field_m + param1;
-          var10Lifetime1 = var43.a((UiComponent) (this), 3, param0) + (var43.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
+          var10Lifetime1 = var43.getTextOriginY((UiComponent) (this), 3, param0) + (var43.getTextLayout(102, (UiComponent) (this)).getLayoutHeight((byte) -63) >> 1);
           if (var6 != bl.field_S &&
             jh.field_c != var6) {
             if (SpriteLoader.field_c == var6) {
@@ -239,13 +239,13 @@ final class dh extends df {
         var23 = hb.field_h;
         if (!var23.equals(this.field_v)) {
           this.field_v = var23;
-          this.d(false);
+          this.rebuildHotspotBounds(false);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_bb.getValidationStatus(-74);
-        var42 = (gd) ((Object) this.field_q);
+        var42 = (TextWidgetRenderer) ((Object) this.field_q);
         var9Lifetime2 = this.field_m + param1;
-        var10Lifetime2 = var42.a((UiComponent) (this), 3, param0) + (var42.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
+        var10Lifetime2 = var42.getTextOriginY((UiComponent) (this), 3, param0) + (var42.getTextLayout(102, (UiComponent) (this)).getLayoutHeight((byte) -63) >> 1);
         if (var6Lifetime1 == bl.field_S) {
           var25 = ub.field_f[0];
           var16Lifetime1 = var25;
@@ -365,11 +365,11 @@ final class dh extends df {
         return var5_refLifetime1;
     }
 
-    final String b(boolean param0) {
+    final String getTooltipText(boolean param0) {
         if (!param0) {
           return null;
         }
-        this.b(false);
+        this.getTooltipText(false);
         return null;
     }
 

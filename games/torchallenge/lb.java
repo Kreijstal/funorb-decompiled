@@ -23,7 +23,7 @@ abstract class lb extends DualLinkNode {
           field_u = (String[]) null;
         }
         for (var2 = 0; var2 < vl.field_b; var2++) {
-          var3 = lg.field_e[var2] * MusicPatchPcmStream.field_r[var2];
+          var3 = TextLayout.field_e[var2] * MusicPatchPcmStream.field_r[var2];
           var10 = h.field_a[var2];
           var11 = new int[var3];
           var9 = var11;
@@ -31,7 +31,7 @@ abstract class lb extends DualLinkNode {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = td.field_m[jh.a((int) var10[var6], 255)];
           }
-          var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var11);
+          var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var11);
         }
         p.a(0);
         return var1;

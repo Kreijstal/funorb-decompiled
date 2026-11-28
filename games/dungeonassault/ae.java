@@ -409,7 +409,7 @@ final class ae {
             }
           }
           d.field_e = PasswordValidator.field_r - (-var3_intLifetime1 + (var3_intLifetime1 >> 1));
-          jn.field_d = (ci.field_j + RaiderDefinition.field_q << 1) * d.field_g.field_i;
+          jn.field_d = (TextHotspotBounds.field_j + RaiderDefinition.field_q << 1) * d.field_g.field_i;
           bf.field_b = -(var3_intLifetime1 >> 1) + PasswordValidator.field_r;
           for (var4Lifetime2 = 0; DungeonRaidScreen.field_A.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_114_0 = jn.field_d;
@@ -429,12 +429,12 @@ final class ae {
             if (0 <= var6Lifetime1) {
               var7Lifetime2 = KeyboardInput.a(true, DungeonRaidScreen.field_A[var4Lifetime3], param2 ^ 30632);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + PasswordValidator.field_r;
-              var5Lifetime3 = var5Lifetime3 + ci.field_j;
+              var5Lifetime3 = var5Lifetime3 + TextHotspotBounds.field_j;
               dg.field_L[var4Lifetime3] = new int[4];
               dg.field_L[var4Lifetime3][0] = -oh.field_t + var8Lifetime1;
               dg.field_L[var4Lifetime3][1] = var5Lifetime3;
               dg.field_L[var4Lifetime3][2] = var7Lifetime2 + (oh.field_t << 1);
-              var5Lifetime3 = var5Lifetime3 + (mj.field_g + ((RaiderDefinition.field_q << 1) + ci.field_j));
+              var5Lifetime3 = var5Lifetime3 + (mj.field_g + ((RaiderDefinition.field_q << 1) + TextHotspotBounds.field_j));
               dg.field_L[var4Lifetime3][3] = (RaiderDefinition.field_q << 1) + mj.field_g;
             } else {
               var5Lifetime3 = var5Lifetime3 + ag.field_a;

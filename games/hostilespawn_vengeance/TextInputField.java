@@ -102,7 +102,7 @@ final class TextInputField extends EditableTextField implements FieldValidatorPr
         field_Y = null;
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != 34) {
           field_X = (int[]) null;
           if (!this.field_u) {

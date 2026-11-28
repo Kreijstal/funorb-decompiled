@@ -17,7 +17,7 @@ final class t {
         dd.a(-91);
         ra.a(126);
         if (!param0) {
-          id.a(true);
+          DefaultTextWidgetRenderer.a(true);
           if (EmailFormatValidator.e((byte) 58)) {
             pg.field_fb.f(1, 950);
             ue.a((byte) -96, 0);
@@ -26,7 +26,7 @@ final class t {
           return;
         }
         field_d = -85L;
-        id.a(!param0 ? true : false);
+        DefaultTextWidgetRenderer.a(!param0 ? true : false);
         if (EmailFormatValidator.e((byte) 58)) {
           pg.field_fb.f(1, 950);
           ue.a((byte) -96, 0);

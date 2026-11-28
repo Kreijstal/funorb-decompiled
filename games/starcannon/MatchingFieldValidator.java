@@ -444,7 +444,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime60 = BoundedRandomAccessFile.a("maxpowtext", (byte) -124);
           if (var2Lifetime60 != null) {
-            ab.field_B = DualLinkNode.a(param1 ^ 30855, var2Lifetime60);
+            RichTextWidget.field_B = DualLinkNode.a(param1 ^ 30855, var2Lifetime60);
           }
           var2Lifetime61 = BoundedRandomAccessFile.a("sideguntext", (byte) -124);
           if (null != var2Lifetime61) {
@@ -452,7 +452,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           }
           var2Lifetime62 = BoundedRandomAccessFile.a("backguntext", (byte) -124);
           if (null != var2Lifetime62) {
-            oi.field_i = DualLinkNode.a(119, var2Lifetime62);
+            TextHotspotBounds.field_i = DualLinkNode.a(119, var2Lifetime62);
           }
           var2Lifetime63 = BoundedRandomAccessFile.a("shieldtext", (byte) -124);
           if (null != var2Lifetime63) {

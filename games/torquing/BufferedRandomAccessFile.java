@@ -187,7 +187,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -369,7 +369,7 @@ final class BufferedRandomAccessFile {
           } else {
             stackIn_62_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_61_0), ((StringBuilder) (Object) stackIn_61_1).append(stackIn_62_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -390,7 +390,7 @@ final class BufferedRandomAccessFile {
           }
           this.readFully(0, param1, param1.length, -78);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "o.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "o.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -408,7 +408,7 @@ final class BufferedRandomAccessFile {
           this.field_g = new byte[param2];
           this.field_a = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "o.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

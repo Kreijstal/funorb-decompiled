@@ -31,7 +31,7 @@ final class ag {
         try {
           var2_int = param1.length();
           if (param0 == ~var2_int) {
-            stackIn_3_0 = uj.field_d;
+            stackIn_3_0 = TextLineMetrics.field_d;
             return stackIn_3_0;
           }
           if (var2_int > 63) {

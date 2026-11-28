@@ -39,12 +39,12 @@ final class wa {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "wa.C(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "wa.C(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static void a(int param0) {
-        vf.a((byte) -126, 17);
+        DefaultTextWidgetRenderer.a((byte) -126, 17);
         if (param0 != -20683) {
           field_d = (int[]) null;
         }

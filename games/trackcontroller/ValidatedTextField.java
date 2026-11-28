@@ -96,7 +96,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_q) {
           return null;
         }
@@ -104,11 +104,11 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           return null;
         }
         if (param0 == 0) {
-          cj.a(true, this.field_x - this.field_S + kf.mouseX, fg.mouseY);
+          RichTextLayout.a(true, this.field_x - this.field_S + kf.mouseX, fg.mouseY);
           return this.field_n;
         }
         ValidatedTextField.a(34, 125, (byte) -88, true);
-        cj.a(true, this.field_x - this.field_S + kf.mouseX, fg.mouseY);
+        RichTextLayout.a(true, this.field_x - this.field_S + kf.mouseX, fg.mouseY);
         return this.field_n;
     }
 

@@ -8,7 +8,7 @@ final class me {
     static hg field_b;
     static rk[] field_c;
 
-    final static void a(String param0, int param1, fj param2, BitmapFont param3, byte param4) {
+    final static void a(String param0, int param1, TextLineMetrics param2, BitmapFont param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -82,7 +82,7 @@ final class me {
         field_e = null;
         if (param0 != 18854) {
           BitmapFont var2 = (BitmapFont) null;
-          me.a((String) null, 27, (fj) null, (BitmapFont) null, (byte) 90);
+          me.a((String) null, 27, (TextLineMetrics) null, (BitmapFont) null, (byte) 90);
         }
     }
 

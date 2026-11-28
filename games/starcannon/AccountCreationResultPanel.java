@@ -134,7 +134,7 @@ final class AccountCreationResultPanel extends ph implements WidgetActivationLis
           } else {
             if (!this.field_ub) {
               if (param1.statusCode == 5) {
-                var5.a(hd.field_i, 13759, 11);
+                var5.a(DefaultTextWidgetRenderer.field_i, 13759, 11);
                 var5.a(KeyboardInput.field_b, 13759, 17);
               } else {
                 var5.a(InteractiveWidget.field_t, 13759, -1);

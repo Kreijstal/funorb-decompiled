@@ -22,12 +22,12 @@ class DualLinkNode extends IntrusiveNode {
         }
         RgbSprite[] var3 = new RgbSprite[9];
         RgbSprite[] var2 = var3;
-        var3[4] = mi.a(64, (byte) -93, param1);
+        var3[4] = TextLineMetrics.a(64, (byte) -93, param1);
         return var2;
     }
 
     final static he e(int param0) {
-        he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], a.field_e[0], MouseInput.field_a);
+        he var1 = new he(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], RichTextWidget.field_J[0], a.field_e[0], MouseInput.field_a);
         Bzip2State.a((byte) -21);
         if (param0 != 7786) {
           return (he) null;

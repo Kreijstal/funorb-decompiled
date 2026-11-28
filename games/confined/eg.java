@@ -85,7 +85,7 @@ final class eg {
                 if (decompiledFrameRemainder0) {
                   if (param1 != 5) {
                     if (param1 == 6) {
-                      var8 = ij.a(0, '#', vf.field_t);
+                      var8 = ij.a(0, '#', DefaultTextWidgetRenderer.field_t);
                       this.a(20, PlayerShip.field_Ib, 176, (String) null, (String) null, 0, -82);
                       this.a(50, var8[1], 256, var8[2], var8[0], 1, -100);
                       this.a(396, 700, new RgbSprite(64, 64), 0, 184);
@@ -126,7 +126,7 @@ final class eg {
                               }
                               if (decompiledFrameRemainder0) {
                                 if (param1 == 12) {
-                                  var13 = ij.a(0, '#', sc.field_e);
+                                  var13 = ij.a(0, '#', TextLayout.field_e);
                                   this.a(20, var13[1], 122, (String) null, var13[0], 0, -127);
                                   this.a(80, var13[3], 202, var13[4], var13[2], 1, -100);
                                   this.a(396, 1050, this.field_f, 0, 130);
@@ -302,7 +302,7 @@ final class eg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class eg {
           this.field_g = param0;
           this.field_a = param3;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "eg.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "eg.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -413,7 +413,7 @@ final class eg {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -1244,7 +1244,7 @@ final class eg {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(')').toString());
         }
     }
 
@@ -1477,7 +1477,7 @@ final class eg {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 

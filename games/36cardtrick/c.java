@@ -175,7 +175,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("ticketing_gotowebsite", (byte) -127);
                 if (null != var2) {
-                  fk.field_l = GzipInflater.a(var2, (byte) 79);
+                  TextHotspotBounds.field_l = GzipInflater.a(var2, (byte) 79);
                 }
                 var2 = SectorCacheStore.a("ticketing_waitingformessages", (byte) -127);
                 if (var2 != null) {
@@ -1205,7 +1205,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("connectionrestored", (byte) -127);
                 if (var2 != null) {
-                  dg.field_E = GzipInflater.a(var2, (byte) 98);
+                  RichTextWidget.field_E = GzipInflater.a(var2, (byte) 98);
                 }
                 var2 = SectorCacheStore.a("warning_ifyouquit", (byte) -127);
                 if (null != var2) {
@@ -1461,7 +1461,7 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("create_displayname", (byte) -127);
                 if (null != var2) {
-                  mj.field_a = GzipInflater.a(var2, (byte) 121);
+                  TextLayout.field_a = GzipInflater.a(var2, (byte) 121);
                 }
                 var2 = SectorCacheStore.a("create_password", (byte) -127);
                 if (null != var2) {
@@ -2842,11 +2842,11 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("rating_mode_long_name,0", (byte) -127);
                 if (var2 != null) {
-                  mj.field_c[0] = GzipInflater.a(var2, (byte) 119);
+                  TextLayout.field_c[0] = GzipInflater.a(var2, (byte) 119);
                 }
                 var2 = SectorCacheStore.a("rating_mode_long_name,1", (byte) -127);
                 if (null != var2) {
-                  mj.field_c[1] = GzipInflater.a(var2, (byte) 80);
+                  TextLayout.field_c[1] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = SectorCacheStore.a("graphics_config_fixed_size", (byte) -127);
                 if (null != var2) {
@@ -2910,31 +2910,31 @@ abstract class c extends GameApplet {
                 }
                 var2 = SectorCacheStore.a("mustlogin2,1", (byte) -127);
                 if (var2 != null) {
-                  ek.field_a[1] = GzipInflater.a(var2, (byte) 126);
+                  DefaultTextWidgetRenderer.field_a[1] = GzipInflater.a(var2, (byte) 126);
                 }
                 var2 = SectorCacheStore.a("mustlogin2,2", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[2] = GzipInflater.a(var2, (byte) 102);
+                  DefaultTextWidgetRenderer.field_a[2] = GzipInflater.a(var2, (byte) 102);
                 }
                 var2 = SectorCacheStore.a("mustlogin2,3", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[3] = GzipInflater.a(var2, (byte) 80);
+                  DefaultTextWidgetRenderer.field_a[3] = GzipInflater.a(var2, (byte) 80);
                 }
                 var2 = SectorCacheStore.a("mustlogin2,4", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[4] = GzipInflater.a(var2, (byte) 115);
+                  DefaultTextWidgetRenderer.field_a[4] = GzipInflater.a(var2, (byte) 115);
                 }
                 var2 = SectorCacheStore.a("mustlogin2,5", (byte) -127);
                 if (var2 != null) {
-                  ek.field_a[5] = GzipInflater.a(var2, (byte) 96);
+                  DefaultTextWidgetRenderer.field_a[5] = GzipInflater.a(var2, (byte) 96);
                 }
                 var2 = SectorCacheStore.a("mustlogin2,6", (byte) -127);
                 if (var2 != null) {
-                  ek.field_a[6] = GzipInflater.a(var2, (byte) 123);
+                  DefaultTextWidgetRenderer.field_a[6] = GzipInflater.a(var2, (byte) 123);
                 }
                 var2 = SectorCacheStore.a("mustlogin2,7", (byte) -127);
                 if (null != var2) {
-                  ek.field_a[7] = GzipInflater.a(var2, (byte) 84);
+                  DefaultTextWidgetRenderer.field_a[7] = GzipInflater.a(var2, (byte) 84);
                 }
                 var2 = SectorCacheStore.a("mustlogin3,1", (byte) -127);
                 if (null != var2) {
@@ -3562,7 +3562,7 @@ abstract class c extends GameApplet {
             ad.a(51);
             ck.field_G = FrameTimer.field_c;
             tj.field_K = false;
-            cj.a(aa.field_db, dg.field_F, sg.field_a, jk.field_c, 126);
+            cj.a(aa.field_db, RichTextWidget.field_F, sg.field_a, jk.field_c, 126);
             if (PacketBuffer.field_h ||
               null != cj.field_k) {
               stackIn_200_0 = cj.field_k;
@@ -3925,7 +3925,7 @@ abstract class c extends GameApplet {
           int var8 = 0;
           var8 = Main.field_T;
           try {
-            var4_int = mj.a(EditableTextField.field_I, eg.field_f, param0, true);
+            var4_int = TextLayout.a(EditableTextField.field_I, eg.field_f, param0, true);
             if (var4_int == 0) {
               throw new IllegalStateException();
             }
@@ -3938,7 +3938,7 @@ abstract class c extends GameApplet {
               }
               var6 = DualLinkNode.a(59);
               if (var6 != null) {
-                fk.a(param2 + 24978, var6.booleanValue());
+                TextHotspotBounds.a(param2 + 24978, var6.booleanValue());
               }
             }
             if (var4_int == 2) {
@@ -3977,7 +3977,7 @@ abstract class c extends GameApplet {
                 }
               }}
             if (var4_int == 4) {
-              if (!dg.field_F) {
+              if (!RichTextWidget.field_F) {
                 cd.field_e = 10;
                 vg.field_d = true;
                 if (var8 != 0) {
@@ -4014,12 +4014,12 @@ abstract class c extends GameApplet {
             }
             if (13 == var4_int) {
               try {
-                if (di.field_d == null) {
-                  di.field_d = new rf(jk.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                if (TextLineMetrics.field_d == null) {
+                  TextLineMetrics.field_d = new rf(jk.field_a, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
                 }
-                var5_int = di.field_d.a(true) ? 1 : 0;
+                var5_int = TextLineMetrics.field_d.a(true) ? 1 : 0;
                 if (var5_int != 0) {
-                  var6_ref = di.field_d.a(-55);
+                  var6_ref = TextLineMetrics.field_d.a(-55);
                   boolean decompiledSharedTail0 = (null != var6_ref);
                   if (!decompiledSharedTail0) {
                     ok.a(param2 ^ 574, (String) null);
@@ -4029,14 +4029,14 @@ abstract class c extends GameApplet {
                     var7 = NameSuggestionsPanel.decodeCp1252String(255, 0, var6_ref.payload, var6_ref.position);
                     ok.a(564, var7);
                   }
-                  di.field_d = null;
+                  TextLineMetrics.field_d = null;
                 }
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5 = (Exception) (Object) decompiledCaughtException;
                 DebouncedFieldValidator.a((Throwable) ((Object) var5), (byte) -104, "S1");
                 ok.a(param2 + 554, (String) null);
-                di.field_d = null;
+                TextLineMetrics.field_d = null;
               }
             }
             if (var4_int == 15) {

@@ -99,8 +99,8 @@ final class mj {
             return false;
           }
         }
-        var4 = ab.field_G[param0] + MouseWheelSource.field_f[param0] + nf.field_b[param0];
-        var5 = ab.field_G[param3] + (MouseWheelSource.field_f[param3] + nf.field_b[param3]);
+        var4 = RichTextWidget.field_G[param0] + MouseWheelSource.field_f[param0] + nf.field_b[param0];
+        var5 = RichTextWidget.field_G[param3] + (MouseWheelSource.field_f[param3] + nf.field_b[param3]);
         if (param2 != -24153) {
           mj.a(93, false, 103, -10);
         }

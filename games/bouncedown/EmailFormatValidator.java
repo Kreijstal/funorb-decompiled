@@ -356,7 +356,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             }
           }
           AwtRasterBuffer.field_a = (hj.field_a + ConfirmedEmailAvailabilityValidator.field_m << 1) * cf.field_f.field_f;
-          ui.field_p = var3_intLifetime1 + bi.field_h - (var3_intLifetime1 >> 1);
+          TextHotspotBounds.field_p = var3_intLifetime1 + bi.field_h - (var3_intLifetime1 >> 1);
           bb.field_b = bi.field_h - (var3_intLifetime1 >> 1);
           for (var4Lifetime2 = 0; var4Lifetime2 < se.field_E.length; var4Lifetime2++) {
             stackIn_115_0 = AwtRasterBuffer.field_a;

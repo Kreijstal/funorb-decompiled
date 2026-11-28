@@ -39,7 +39,7 @@ final class pf {
         this(param0, false);
     }
 
-    final static void a(BitmapFont param0, String param1, int param2, int param3, mg param4) {
+    final static void a(BitmapFont param0, String param1, int param2, int param3, TextLineMetrics param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;

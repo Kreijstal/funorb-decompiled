@@ -21,8 +21,8 @@ abstract class FrameTimer {
           GameStringTable.field_j = param2;
           IterableNodeHashTable.field_e = param0;
           SecondaryNodeDeque.field_d = (ArchiveRequestConnection) ((Object) new SocketArchiveRequestConnection());
-          rb.field_a = new DiskCacheWorker(param1);
-          ij.field_d = new wg(SecondaryNodeDeque.field_d, rb.field_a);
+          TextLayout.field_a = new DiskCacheWorker(param1);
+          ij.field_d = new wg(SecondaryNodeDeque.field_d, TextLayout.field_a);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

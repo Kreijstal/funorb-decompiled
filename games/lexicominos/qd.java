@@ -64,11 +64,11 @@ final class qd {
         }
         stackIn_9_0 = (1 != var8.readUnsignedByte(true)) ? 0 : 1;
         var4 = stackIn_9_0;
-        ik.field_k = var8.readString(false);
+        DefaultTextWidgetRenderer.field_k = var8.readString(false);
         if (var4 != 0) {
           GzipDecompressor.field_c = var8.readString(false);
         } else {
-          GzipDecompressor.field_c = ik.field_k;
+          GzipDecompressor.field_c = DefaultTextWidgetRenderer.field_k;
         }
         if (1 == kb.field_a) {
           var8.readUnsignedShort(-1698573656);

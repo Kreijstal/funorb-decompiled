@@ -69,7 +69,7 @@ final class SecondaryNodeDeque implements Iterable {
     }
 
     final static void b(int param0) {
-        if (0 - hh.field_b == MouseWheelInput.field_d) {
+        if (0 - DefaultTextWidgetRenderer.field_b == MouseWheelInput.field_d) {
           MouseWheelInput.field_d = MouseWheelInput.field_d + 1;
           if (param0 <= -123) {
             return;
@@ -77,7 +77,7 @@ final class SecondaryNodeDeque implements Iterable {
           SecondaryNodeDeque.a(true);
           return;
         }
-        if (MouseWheelInput.field_d != -hh.field_b + 250) {
+        if (MouseWheelInput.field_d != -DefaultTextWidgetRenderer.field_b + 250) {
           MouseWheelInput.field_d = MouseWheelInput.field_d + 1;
           if (param0 <= -123) {
             return;

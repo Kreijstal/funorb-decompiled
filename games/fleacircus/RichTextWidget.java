@@ -1,0 +1,259 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class RichTextWidget extends InteractiveWidget {
+    static int field_P;
+    private String[] field_K;
+    private IntrusiveDeque field_N;
+    static String field_L;
+    static String field_O;
+    private TextHotspotBounds field_M;
+
+    final void rebuildHotspotBounds(int param0) {
+        int var11 = 0;
+        int stackIn_9_0 = 0;
+        int stackIn_14_0 = 0;
+        int var2;
+        TextWidgetRenderer var3;
+        TextLayout var4;
+        int var5;
+        String var6;
+        int var7;
+        int var8;
+        int var9;
+        Object var10;
+        TextLineMetrics var12;
+        int var13;
+        int var14;
+        TextHotspotBounds var15;
+        int var16;
+        UiComponent var17;
+        int var7Lifetime1;
+        var16 = fleas.field_A ? 1 : 0;
+        this.field_N = new IntrusiveDeque();
+        var2 = 0;
+        if (param0 != 424) {
+          var17 = (UiComponent) null;
+          this.a(-109, 29, (UiComponent) null, (byte) 12);
+        }
+        var3 = (TextWidgetRenderer) ((Object) this.field_p);
+        var4 = var3.getTextLayout((UiComponent) (this), (byte) -35);
+        while (true) {
+          var5 = this.field_i.indexOf("<hotspot=", var2);
+          if (-1 == var5) {
+            return;
+          }
+          var7 = this.field_i.indexOf(">", var5);
+          var6 = this.field_i.substring(var5 + 9, var7);
+          var7Lifetime1 = Integer.parseInt(var6);
+          var2 = this.field_i.indexOf("</hotspot>", var5);
+          var8 = var4.getLineIndexForTextOffset(var5, -1);
+          var9 = var4.getLineIndexForTextOffset(var2, -1);
+          var10 = null;
+          for (var11 = var8; var9 >= var11; var11++) {
+            var12 = var4.field_c[var11];
+            if (~var8 == ~var11) {
+              stackIn_9_0 = var4.getXForTextOffset(-1, var5);
+            } else {
+              stackIn_9_0 = var12.field_d[0];
+            }
+            var13 = stackIn_9_0;
+            if (var11 == var9) {
+              stackIn_14_0 = var4.getXForTextOffset(-1, var2);
+            } else {
+              if (var12 == null) {
+                stackIn_14_0 = 0;
+              } else {
+                stackIn_14_0 = var12.field_d[var12.field_d.length - 1];
+              }
+            }
+            var14 = stackIn_14_0;
+            var15 = new TextHotspotBounds(var7Lifetime1, var13, var12.field_a, -var13 + var14, Math.max(var3.getFontLineHeight((byte) 127), -var12.field_a + var12.field_c));
+            if (var10 != null) {
+              ((TextHotspotBounds) (var10)).field_q = var15;
+            }
+            var10 = var15;
+            this.field_N.addLast(false, var15);
+          }
+        }
+    }
+
+    final void a(int param0, String param1, int param2) {
+        String[] var7 = null;
+        String[] var8 = null;
+        int var5 = 0;
+        int var6 = fleas.field_A ? 1 : 0;
+        try {
+          if (param0 != 0) {
+            this.b(55, 20, false, -78);
+          }
+          if (this.field_K == null ||
+            param2 >= this.field_K.length) {
+            var7 = new String[param2 + 1];
+            var8 = var7;
+            String[] var4 = var8;
+            if (null != this.field_K) {
+              for (var5 = 0; var5 < this.field_K.length; var5++) {
+                var7[var5] = this.field_K[var5];
+              }
+            }
+            this.field_K = var8;
+          }
+          this.field_K[param2] = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ja.FA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+        }
+    }
+
+    RichTextWidget(String param0, ComponentLayout param1) {
+        super(param0, (kd) null);
+        this.field_M = null;
+        try {
+          this.field_p = param1;
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final TextHotspotBounds findHotspotAt(int param0, int param1, int param2) {
+        TextHotspotBounds var4;
+        TextHotspotBounds var5;
+        int var6;
+        var6 = fleas.field_A ? 1 : 0;
+        var4 = (TextHotspotBounds) (this.field_N.beginForward((byte) 47));
+        if (param2 != -1) {
+          return (TextHotspotBounds) null;
+        }
+        while (var4 != null) {
+          var5 = var4;
+          while (var5 != null) {
+            if (param0 >= var5.field_i &&
+              param1 >= var5.field_j &&
+              param0 < var5.field_i + var5.field_n &&
+              var5.field_j + var5.field_l >= param1) {
+              return var4;
+            }
+            var5 = var5.field_q;
+          }
+          var4 = (TextHotspotBounds) (this.field_N.nextForward((byte) -105));
+        }
+        return null;
+    }
+
+    void a(int param0, int param1, UiComponent param2, byte param3) {
+        int var5_int = 0;
+        int var6 = 0;
+        try {
+          super.a(param0, param1, param2, (byte) -108);
+          this.field_M = null;
+          if (param3 > -85) {
+            this.field_M = (TextHotspotBounds) null;
+          }
+          if (this.field_x) {
+            var5_int = ag.field_f - (param1 + this.field_y);
+            var6 = -param0 + kc.field_b - this.field_z;
+            this.field_M = this.findHotspotAt(var5_int, var6, -1);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw pf.wrapClientException((Throwable) ((Object) runtimeException), "ja.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+        }
+    }
+
+    String getTooltipText(int param0) {
+        TextHotspotBounds discarded$0 = null;
+        if (null == this.field_M) {
+          return null;
+        }
+        if (null == this.field_K) {
+          return null;
+        }
+        if (param0 != 4) {
+          discarded$0 = this.findHotspotAt(-37, 104, -16);
+        }
+        if (this.field_M.field_m >= this.field_K.length) {
+          return null;
+        }
+        return this.field_K[this.field_M.field_m];
+    }
+
+    final void b(int param0, int param1, int param2, int param3) {
+        this.a(param1, param0, param2, ((TextWidgetRenderer) ((Object) this.field_p)).getPreferredHeight(-69, (UiComponent) (this)), 80);
+        if (param3 != -9) {
+          this.field_K = (String[]) null;
+        }
+    }
+
+    public static void discardDeclaredStaticReferences(int param0) {
+        field_O = null;
+        if (param0 > -75) {
+          return;
+        }
+        field_L = null;
+    }
+
+    boolean a(UiComponent param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 > -26) {
+            this.activateFromInput(78, 122, -59, -72);
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("ja.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw pf.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void a(int param0, int param1, int param2, int param3, int param4) {
+        super.a(param0, param1, param2, param3, param4);
+        this.rebuildHotspotBounds(424);
+    }
+
+    void b(int param0, int param1, boolean param2, int param3) {
+        int var7 = 0;
+        int var8 = 0;
+        super.b(param0, param1, param2, param3);
+        if (param3 != 0) {
+          return;
+        }
+        TextWidgetRenderer var5 = (TextWidgetRenderer) ((Object) this.field_p);
+        TextHotspotBounds var6 = this.field_M;
+        if (var6 != null) {
+          var7 = var5.getTextOriginX(false, param1, (UiComponent) (this));
+          var8 = var5.getTextOriginY(param0, (UiComponent) (this), (byte) 84);
+          do {
+            ek.a(var6.field_l + 2, -2 + (var7 + var6.field_i), var8 + var6.field_j - 2, 1, var6.field_n + 2);
+            var6 = var6.field_q;
+          } while (var6 != null);
+        }
+    }
+
+    final void activateFromInput(int param0, int param1, int param2, int param3) {
+        super.activateFromInput(param0, param1, param2, param3);
+        int var5 = param2 - this.field_y;
+        int var6 = -this.field_z + param0;
+        TextHotspotBounds var7 = this.findHotspotAt(var5, var6, -1);
+        if (var7 != null &&
+          null != this.field_s) {
+          ((TextHotspotListener) ((Object) this.field_s)).onTextHotspotActivated(var7.field_m, this, param3, param1 ^ 22);
+        }
+    }
+
+    static {
+        field_P = 0;
+        field_O = "Close";
+        field_L = "Please wait...";
+    }
+}

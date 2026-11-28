@@ -240,7 +240,7 @@ final class rf implements Runnable {
         RuntimeException var2 = null;
         var3 = Main.field_T;
         try {
-          AgeValidator.a(NameSuggestionsPanel.field_F, param1, DirectByteArrayStore.field_f, 0, true, fk.field_h, 8192);
+          AgeValidator.a(NameSuggestionsPanel.field_F, param1, DirectByteArrayStore.field_f, 0, true, TextHotspotBounds.field_h, 8192);
           if (param0 != -23243) {
             rf.c(-100);
           }

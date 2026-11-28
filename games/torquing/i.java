@@ -53,7 +53,7 @@ final class i extends im implements WidgetActivationListener {
           var4.x = 0;
           var4.width = this.width;
           var4.y = 50;
-          var4.renderer = (WidgetRenderer) ((Object) new pc(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.renderer = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, -6938);
           this.field_O = this.a((ca) (this), true, qd.field_i);
           return;
@@ -73,7 +73,7 @@ final class i extends im implements WidgetActivationListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class i extends im implements WidgetActivationListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -197,7 +197,7 @@ final class i extends im implements WidgetActivationListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

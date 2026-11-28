@@ -119,14 +119,14 @@ final class rl {
             if (gh.b((byte) 105)) {
               if (eg.field_d == 0) {
                 vc.a((byte) -121, param2, false);
-                pd.a(param0, 0, 0, (byte) -24);
+                RichTextLayout.a(param0, 0, 0, (byte) -24);
               } else {
                 ByteStorage.a(param0, param1 - 101);
               }
             } else {
               SoftwareRasterizer.clearRaster();
               n.a(240, (byte) -41, 320);
-              pd.a(param0, 0, 0, (byte) -80);
+              RichTextLayout.a(param0, 0, 0, (byte) -80);
             }
           }
           return;

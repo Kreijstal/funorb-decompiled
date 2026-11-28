@@ -267,7 +267,7 @@ final class NodeHashTable implements Iterable {
     final static void performAction1500(int integerArgument1, boolean booleanArgument2, int integerArgument3, int integerArgument4, int integerArgument5, byte byteArgument6, int integerArgument7) {
         String stringLocal1 = null;
         if (byteArgument6 == -41) {
-          if (NetworkSupport010.integerState0585 == 2) {
+          if (TextHotspotBounds.integerState0585 == 2) {
             stringLocal1 = GameDomainSupport006.stringState0625;
           } else {
             stringLocal1 = MixedSupport090.stringState0376;

@@ -211,7 +211,7 @@ final class PasswordValidator extends TextFieldValidator {
           var7 = 0;
           for (var10 = 0; var10 < -1 + rd.field_p[ValidatedTextField.field_ib]; var10++) {
             var6 = var1_int;
-            var1_int = var1_int + fa.field_m[ValidatedTextField.field_ib][var10];
+            var1_int = var1_int + RichTextLayout.field_m[ValidatedTextField.field_ib][var10];
             var7 = var1_int;
             if (var1_int <= RandomAccessCacheFile.field_e) {
               continue;
@@ -294,7 +294,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_25_0 = wc.field_f;
             return stackIn_25_0;
           }
-          if (bc.a((byte) -127, var5, var6)) {
+          if (DefaultTextWidgetRenderer.a((byte) -127, var5, var6)) {
             stackIn_28_0 = k.field_k;
             return stackIn_28_0;
           }

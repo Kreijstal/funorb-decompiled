@@ -35,8 +35,8 @@ final class gj extends IntrusiveNode {
 
     final static void a(ResourceArchive param0, byte param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
         try {
-          bd.field_u = hg.a("", (byte) 113);
-          bd.field_u.a(false, (byte) -114);
+          RichTextLayout.field_u = hg.a("", (byte) 113);
+          RichTextLayout.field_u.a(false, (byte) -114);
           int var5_int = -57 / ((-43 - param1) / 60);
           BufferedRandomAccessFile.a(param2, (byte) 122, param4, param0);
           sd.a(125);

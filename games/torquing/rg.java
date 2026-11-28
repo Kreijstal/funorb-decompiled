@@ -443,7 +443,7 @@ final class rg extends am {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_69_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class rg extends am {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -744,7 +744,7 @@ final class rg extends am {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

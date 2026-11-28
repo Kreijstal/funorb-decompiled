@@ -63,23 +63,23 @@ final class bs extends UiPanel {
         int var15Lifetime2;
         var17 = Vertigo2.field_L ? 1 : 0;
         try {
-          var11 = pk.a((byte) -14, WidgetContainer.field_D, param5, ua.field_e);
-          var12 = pk.a((byte) -14, WidgetContainer.field_D, param3, ua.field_e);
-          var13 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
-          var14 = pk.a((byte) -14, ib.field_a, param1, ap.field_e);
+          var11 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param5, ua.field_e);
+          var12 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param3, ua.field_e);
+          var13 = TextHotspotBounds.a((byte) -14, ib.field_a, param4, ap.field_e);
+          var14 = TextHotspotBounds.a((byte) -14, ib.field_a, param1, ap.field_e);
           if (param6 != 0) {
             return;
           }
-          var7_int = pk.a((byte) -14, WidgetContainer.field_D, param5 + param0, ua.field_e);
-          var8 = pk.a((byte) -14, WidgetContainer.field_D, param3 - param0, ua.field_e);
+          var7_int = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param5 + param0, ua.field_e);
+          var8 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param3 - param0, ua.field_e);
           for (var15 = var11; var15 < var7_int; var15++) {
             ki.a(-121, var13, vl.field_e[var15], var14, param2);
           }
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             ki.a(param6 - 126, var13, vl.field_e[var15Lifetime1], var14, param2);
           }
-          var9 = pk.a((byte) -14, ib.field_a, param4 + param0, ap.field_e);
-          var10 = pk.a((byte) -14, ib.field_a, -param0 + param1, ap.field_e);
+          var9 = TextHotspotBounds.a((byte) -14, ib.field_a, param4 + param0, ap.field_e);
+          var10 = TextHotspotBounds.a((byte) -14, ib.field_a, -param0 + param1, ap.field_e);
           for (var15Lifetime2 = var7_int; var15Lifetime2 <= var8; var15Lifetime2++) {
             var21 = vl.field_e[var15Lifetime2];
             ki.a(param6 - 105, var13, var21, var9, param2);
@@ -165,7 +165,7 @@ final class bs extends UiPanel {
             bs.b((byte) 18);
           }
           var1 = new Sprite(540, 140);
-          lq.a(var1, (byte) -94);
+          TextLineMetrics.a(var1, (byte) -94);
           oo.c();
           SoftwareRasterizer.clearRaster();
           hm.field_F = 0;
@@ -189,17 +189,17 @@ final class bs extends UiPanel {
         try {
           qr.field_q = tn.a("display_name_changed", param0, -99, "basic");
           h.field_D = new dm(0L, pb.field_b, we.field_J, nf.field_o);
-          ao.field_O = new dm(0L, pb.field_b, sl.field_s, eq.field_B);
+          ao.field_O = new dm(0L, pb.field_b, RichTextLayout.field_s, eq.field_B);
           wi.field_g = new UiPanel(0L, (UiPanel) null);
           IterableNodeHashTable.field_a = new UiPanel(0L, AccountRequestState.field_b);
           IterableNodeHashTable.field_a.field_O = 1;
           int var2_int = -113 % ((param1 - 32) / 50);
           LevelTile.field_q = new UiPanel(0L, MidiPcmStream.field_t, kc.field_c);
-          va.field_f = new UiPanel(0L, MouseInputHandler.field_a, BlastDebrisBatch.field_i);
+          DefaultTextWidgetRenderer.field_f = new UiPanel(0L, MouseInputHandler.field_a, BlastDebrisBatch.field_i);
           PlayerAvatarRenderer.field_k = new UiPanel(0L, ja.field_e);
           wi.field_g.b(IterableNodeHashTable.field_a, 118);
           wi.field_g.b(LevelTile.field_q, 127);
-          wi.field_g.b(va.field_f, 127);
+          wi.field_g.b(DefaultTextWidgetRenderer.field_f, 127);
           wi.field_g.b(h.field_D, 118);
           wi.field_g.b(PlayerAvatarRenderer.field_k, 118);
           h.field_D.field_Lb.field_Lb.a(AccountRequestState.field_b, -34);

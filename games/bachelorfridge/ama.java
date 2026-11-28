@@ -151,7 +151,7 @@ final class ama extends k {
           var3_int = hh.field_d;
           var4 = bi.field_g;
           SplitAnimation.a(param1, -5);
-          bm.a(it.field_r, 0, wp.field_r, -14702, 0);
+          SetTileTerrainEffect.a(it.field_r, 0, wp.field_r, -14702, 0);
           if (this.field_n != null) {
             for (var5 = 0; var5 < this.field_n.length; var5++) {
               var6 = this.field_n[var5];

@@ -42,8 +42,8 @@ final class ob extends ql {
         var2 = 0;
         var3 = param0;
         while (var3 < ProxySocketFactory.field_j) {
-          if (mm.field_m[var3] != null &&
-            mm.field_m[var3].field_i == 27) {
+          if (TextHotspotBounds.field_m[var3] != null &&
+            TextHotspotBounds.field_m[var3].field_i == 27) {
             var2 = 1;
           } else {
             var3++;
@@ -61,7 +61,7 @@ final class ob extends ql {
         int var3;
         GridPoint var4;
         var3 = HostileSpawn.field_I ? 1 : 0;
-        var4 = mm.field_m[0].field_j;
+        var4 = TextHotspotBounds.field_m[0].field_j;
         if (0 == this.field_D.field_a) {
           if (VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_D.field_a = 2;
@@ -157,7 +157,7 @@ final class ob extends ql {
         try {
           this.field_f = this.field_f - 1;
           if (this.field_f == 1) {
-            var5 = mm.field_m[0].field_j;
+            var5 = TextHotspotBounds.field_m[0].field_j;
             this.field_d.field_a = 1;
             if (var5.field_g < 40) {
               this.field_d.field_l = 1968;
@@ -178,7 +178,7 @@ final class ob extends ql {
             tb.field_N = le.field_D;
           } else {
             r.field_a = 1;
-            pm.field_d = pm.field_d - 7;
+            TextLineMetrics.field_d = TextLineMetrics.field_d - 7;
             tb.field_N = 150;
           }
           var3_int = -76 % ((23 - param0) / 32);
@@ -259,10 +259,10 @@ final class ob extends ql {
         var6 = 0;
         var3Lifetime1 = var6;
         while (ProxySocketFactory.field_j > var6) {
-          if (null != mm.field_m[var6] &&
-            mm.field_m[var6].field_i == 20 &&
-            ih.a(mm.field_m[var6].field_j, (byte) -87, this.field_l) < 8) {
-            this.field_x = mm.field_m[var6];
+          if (null != TextHotspotBounds.field_m[var6] &&
+            TextHotspotBounds.field_m[var6].field_i == 20 &&
+            ih.a(TextHotspotBounds.field_m[var6].field_j, (byte) -87, this.field_l) < 8) {
+            this.field_x = TextHotspotBounds.field_m[var6];
           } else {
             var6++;
             continue;
@@ -279,7 +279,7 @@ final class ob extends ql {
         int var3;
         GridPoint var4;
         var3 = -77 % ((param0 + 48) / 38);
-        var4 = mm.field_m[0].field_j;
+        var4 = TextHotspotBounds.field_m[0].field_j;
         this.field_D.e(-115);
         this.field_H.e(-114);
         if (this.field_H.field_a == 1 &&

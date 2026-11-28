@@ -202,12 +202,12 @@ final class jc {
         }
     }
 
-    final static ic a(byte param0) {
+    final static DefaultTextWidgetRenderer a(byte param0) {
         if (ok.field_D == null) {
-          ok.field_D = new ic(fk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, fk.field_a.field_G, -1, 2147483647, true);
+          ok.field_D = new DefaultTextWidgetRenderer(fk.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, fk.field_a.field_G, -1, 2147483647, true);
         }
         if (param0 < 71) {
-          return (ic) null;
+          return (DefaultTextWidgetRenderer) null;
         }
         return ok.field_D;
     }

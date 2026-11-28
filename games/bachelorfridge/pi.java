@@ -36,7 +36,7 @@ final class pi extends TileEffect {
               }
               var3 = var9 + "settings";
               var4 = (String) (JavaScriptBridge.callWithoutArguments(param1, "getcookies", (byte) 64));
-              var5 = fda.a(-1, ';', var4);
+              var5 = RemoveDefeatedCreatureEffect.a(-1, ';', var4);
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

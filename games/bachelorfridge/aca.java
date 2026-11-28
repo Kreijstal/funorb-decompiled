@@ -133,7 +133,7 @@ final class aca extends TileEffect {
         int var4 = var3 + var2;
         int var5 = var2 - var3;
         int var6 = !this.field_j ? 200 : 60;
-        bma var7 = new bma(var4, var6 << 4, var5, DiveBomberAnimation.a(mla.field_b.length, GasCloudAnimation.field_I, -2147483648), 50 + DiveBomberAnimation.a(50, GasCloudAnimation.field_I, -2147483648));
+        bma var7 = new bma(var4, var6 << 4, var5, DiveBomberAnimation.a(TextLineMetrics.field_b.length, GasCloudAnimation.field_I, -2147483648), 50 + DiveBomberAnimation.a(50, GasCloudAnimation.field_I, -2147483648));
         if (param0 == -100) {
           this.field_h.addLast(var7, true);
           return;
@@ -736,7 +736,7 @@ final class aca extends TileEffect {
           }
           var5 = (var4.field_i >> 4) + param2;
           var6 = (var4.field_q >> 4) + param0 - (var4.field_h >> 4);
-          mla.field_b[var4.field_v].draw(var5, var6);
+          TextLineMetrics.field_b[var4.field_v].draw(var5, var6);
           var4 = (bma) (this.field_h.nextForward(0));
           if (var7 != 0) {
             return;
@@ -760,7 +760,7 @@ final class aca extends TileEffect {
     }
 
     final static void a(byte param0, int param1) {
-        fda.b(param0 ^ -117);
+        RemoveDefeatedCreatureEffect.b(param0 ^ -117);
         if (param0 == -118) {
           return;
         }

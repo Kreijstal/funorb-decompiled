@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class la extends IntrusiveNode {
-    static af field_i;
+    static DefaultTextWidgetRenderer field_i;
     static String field_m;
     static IntrusiveDeque field_j;
     static boolean field_n;

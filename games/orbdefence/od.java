@@ -62,7 +62,7 @@ final class od {
         if (this.field_e >= 25) {
           this.a((byte) -124, 25);
         } else {
-          this.a((byte) -119, 25 * cc.field_f.field_e / 25);
+          this.a((byte) -119, 25 * TextHotspotBounds.field_f.field_e / 25);
         }
         if (!param0) {
           this.a((byte) -53, -57);

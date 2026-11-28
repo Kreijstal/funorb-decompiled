@@ -71,7 +71,7 @@ abstract class FunOrbClient extends GameApplet {
               }
               booleanLocal14 = MixedSupport100.computeBoolean1238(24994);
               if (booleanLocal14 != null) {
-                NetworkSupport010.performAction1254(booleanLocal14.booleanValue(), false);
+                TextHotspotBounds.performAction1254(booleanLocal14.booleanValue(), false);
               }
             }
             if (integerLocal7 == 2) {
@@ -114,10 +114,10 @@ abstract class FunOrbClient extends GameApplet {
               }
             }
             if (integerLocal7 == 5) {
-              NetworkSupport010.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
+              TextHotspotBounds.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
             }
             if (integerLocal7 == 6 &&
-              UiComponentPart025.booleanState0152) {
+              RichTextWidget.booleanState0152) {
               MixedSupport052.integerState0269 = 10;
             }
             if (integerLocal7 == 7) {
@@ -390,7 +390,7 @@ abstract class FunOrbClient extends GameApplet {
               NodeDeque.resourceArchiveState0025 = MixedSupport138.computeResourceArchive1719(MixedSupport139.integerState0856, 34);
             }
             MixedSupport116.resourceArchiveState0021 = AccountRegistrationPanel.computeResourceArchive1587(1, integerArgument2 + 131, false, true, RenderingSupport002.integerState0112);
-            PcmPlayerService.resourceArchiveState0020 = AccountRegistrationPanel.computeResourceArchive1587(1, 127, false, true, MixedSupport001.integerState0014);
+            PcmPlayerService.resourceArchiveState0020 = AccountRegistrationPanel.computeResourceArchive1587(1, 127, false, true, DefaultTextWidgetRenderer.integerState0014);
             UiComponentPart023.resourceArchiveState0016 = AccountRegistrationPanel.computeResourceArchive1587(1, 113, false, true, ReturnedShape.integerState0697);
             MixedSupport005.resourceArchiveState0002 = MixedSupport116.resourceArchiveState0021;
             UiComponentPart004.integerState0091 = 2;
@@ -418,7 +418,7 @@ abstract class FunOrbClient extends GameApplet {
             DebouncedFieldValidator.computeBoolean0087(UiComponentPart023.resourceArchiveState0016, -2147483648)) {
             MixedSupport027.performAction0389(-8621);
             SceneWidgetPart008.performAction1132((byte) 112);
-            UiComponentPart025.booleanState0152 = false;
+            RichTextWidget.booleanState0152 = false;
             LoginPanel.stringState0227 = SoftwareFramebuffer.stringState0616;
             UiComponentPart029.performAction1483(MixedSupport116.resourceArchiveState0021, UiComponentPart023.resourceArchiveState0016, (byte) 76, UiComponent.booleanState0017, PcmPlayerService.resourceArchiveState0020);
             if (RenderingSupport003.booleanState0054 ||
@@ -440,7 +440,7 @@ abstract class FunOrbClient extends GameApplet {
               EditableTextField.performAction1445(false);
             }
             if (null == MouseWheelInput.pcmStreamMixerState0002) {
-              MouseWheelInput.pcmStreamMixerState0002 = NetworkSupport010.computePcmStreamMixer1253(15000);
+              MouseWheelInput.pcmStreamMixerState0002 = TextHotspotBounds.computePcmStreamMixer1253(15000);
               RichTextLayout.integerState0161 = MixedSupport057.computeInteger0683(1);
             }
             MixedSupport029.performAction0409(UiComponentPart023.resourceArchiveState0016, RichTextLayout.integerState0161, MouseWheelInput.pcmStreamMixerState0002, 20350);
@@ -461,7 +461,7 @@ abstract class FunOrbClient extends GameApplet {
           if (UiComponentPart004.integerState0091 == 11) {
             if (null != GameDomainSupport006.resourceArchiveState0027 && (!GameDomainSupport006.resourceArchiveState0027.ensureIndexLoaded((byte) 121) ||
               !GameDomainSupport006.resourceArchiveState0027.tryLoadAllGroups(false))) {
-              UiComponentPart025.performAction1359(0.0f, -78, ResourceSupport001.computeString0045(GameDomainSupport006.resourceArchiveState0027, MixedSupport037.stringState0174, true, MixedSupport028.stringState0137));
+              RichTextWidget.performAction1359(0.0f, -78, ResourceSupport001.computeString0045(GameDomainSupport006.resourceArchiveState0027, MixedSupport037.stringState0174, true, MixedSupport028.stringState0137));
               frameRemainderLocal17 = false;
             }
             else {
@@ -478,7 +478,7 @@ abstract class FunOrbClient extends GameApplet {
             if (GameAssets.mixedSupport014State0001 != null) {
               stackIntegerLocal8 = (!GameAssets.mixedSupport014State0001.computeBoolean0192(-57)) ? 0 : 1;
               integerLocal16 = stackIntegerLocal8;
-              UiComponentPart025.performAction1359(GameAssets.mixedSupport014State0001.floatState0001, integerArgument2 + 82, GameAssets.mixedSupport014State0001.stringState0068);
+              RichTextWidget.performAction1359(GameAssets.mixedSupport014State0001.floatState0001, integerArgument2 + 82, GameAssets.mixedSupport014State0001.stringState0068);
             }
             if (integerLocal16 != 0) {
               UiComponentPart004.integerState0091 = 20;
@@ -742,7 +742,7 @@ abstract class FunOrbClient extends GameApplet {
           MixedSupport127.mouseWheelInputState0001 = UiComponentPart030.computeMouseWheelInput1558(-22);
           MixedSupport056.performAction0668(GameDomainSupport004.canvasState0001, (byte) -71);
           MixedSupport049.integerState0262 = integerArgument1;
-          MixedSupport001.integerState0014 = integerArgument7;
+          DefaultTextWidgetRenderer.integerState0014 = integerArgument7;
           MixedSupport139.integerState0856 = integerArgument4;
           RenderingSupport002.integerState0112 = integerArgument5;
           ReturnedShape.integerState0697 = integerArgument6;

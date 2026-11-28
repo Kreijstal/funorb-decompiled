@@ -166,9 +166,9 @@ final class CrossfadingMidiPcmStream extends PcmStream {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-          param1.removeMouseListener(lb.field_y);
-          param1.removeMouseMotionListener(lb.field_y);
-          param1.removeFocusListener(lb.field_y);
+          param1.removeMouseListener(TextHotspotBounds.field_y);
+          param1.removeMouseMotionListener(TextHotspotBounds.field_y);
+          param1.removeFocusListener(TextHotspotBounds.field_y);
           qd.field_J = 0;
           if (param0 != -106) {
             field_z = 13;

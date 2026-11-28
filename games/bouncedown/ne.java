@@ -269,7 +269,7 @@ final class ne extends DualLinkNode {
               this.field_o = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
                 var6 = param1.readUnsignedShort(-1640531527);
-                var7 = jd.a(param0 + 21296, var6);
+                var7 = DefaultTextWidgetRenderer.a(param0 + 21296, var6);
                 if (var7 != null) {
                   this.field_t[var5] = var6;
                   array$0 = new int[var7.field_c];

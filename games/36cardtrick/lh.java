@@ -202,7 +202,7 @@ final class lh {
             boolean decompiledFrameRemainder0 = true;
             if (me.field_b[var3].field_k == param1.field_k) {
               var4 = me.field_b[var3].b(2);
-              if (mj.field_e < DiskArchiveRequest.field_u[var4]) {
+              if (TextLayout.field_e < DiskArchiveRequest.field_u[var4]) {
                 DiskArchiveRequest.field_u[var4] = DiskArchiveRequest.field_u[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

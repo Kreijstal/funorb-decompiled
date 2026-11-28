@@ -223,9 +223,9 @@ final class eb {
           if (param5 > -52) {
             eb.clearStaticReferences(true);
           }
-          dg.field_H = (ch) ((Object) new a());
+          RichTextWidget.field_H = (ch) ((Object) new a());
           AccountRequestState.field_b = new DiskCacheWorker(param0);
-          ja.field_b = new eb(dg.field_H, AccountRequestState.field_b);
+          ja.field_b = new eb(RichTextWidget.field_H, AccountRequestState.field_b);
         } catch (RuntimeException runtimeException) {
           throw ma.wrapException((Throwable) ((Object) runtimeException), "eb.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

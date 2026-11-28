@@ -205,7 +205,7 @@ final class IsaacRandom {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = uo.field_b[nb.a(255, (int) var2[var4_int])];
         }
-        RgbSprite var4 = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], fe.field_g[0], jc.field_f[0], jn.field_k[0], var3);
+        RgbSprite var4 = new RgbSprite(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[0], RichTextLayout.field_g[0], jc.field_f[0], jn.field_k[0], var3);
         sb.a(500);
         return var4;
     }

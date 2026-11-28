@@ -5,12 +5,12 @@ final class vd {
     static int field_a;
     static pb field_b;
 
-    final static jd a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         int var1 = 63 / ((-10 - param0) / 63);
         if (ml.field_e != null) {
           return ml.field_e;
         }
-        ml.field_e = new jd(GzipDecompressor.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, GzipDecompressor.field_d.field_s, -1, 2147483647, true);
+        ml.field_e = new DefaultTextWidgetRenderer(GzipDecompressor.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, GzipDecompressor.field_d.field_s, -1, 2147483647, true);
         return ml.field_e;
     }
 
@@ -82,12 +82,12 @@ final class vd {
           DirectByteStorage.field_b = DirectByteStorage.field_b + (var2_int >> 3);
           MouseWheelInput.field_a = MouseWheelInput.field_a + (param1.readUnsignedShort(-1640531527) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) -119);
-          ed.field_b = (63 & var2_intLifetime1) << 15;
+          TextLayout.field_b = (63 & var2_intLifetime1) << 15;
           MouseWheelInput.field_a = MouseWheelInput.field_a + (var2_intLifetime1 >> 6);
-          ed.field_b = ed.field_b + (param1.readUnsignedByte((byte) -119) << 7);
+          TextLayout.field_b = TextLayout.field_b + (param1.readUnsignedByte((byte) -119) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) -119);
           qe.field_i = (1 & var2_intLifetime2) << 16;
-          ed.field_b = ed.field_b + (var2_intLifetime2 >> 1);
+          TextLayout.field_b = TextLayout.field_b + (var2_intLifetime2 >> 1);
           qe.field_i = qe.field_i + param1.readUnsignedShort(-1640531527);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "vd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

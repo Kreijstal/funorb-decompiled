@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ql extends af {
+final class ql extends DefaultTextWidgetRenderer {
     static String[] field_s;
     private bf field_w;
     static int[] field_q;

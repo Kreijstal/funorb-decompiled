@@ -245,17 +245,17 @@ final class pk extends kl {
     final void a(boolean param0) {
         if (!param0) {
           super.a(param0);
-          if (hh.field_s != null) {
+          if (DefaultTextWidgetRenderer.field_s != null) {
             this.field_d = true;
-            this.field_r = this.field_n == hh.field_s ? true : false;
+            this.field_r = this.field_n == DefaultTextWidgetRenderer.field_s ? true : false;
           }
           return;
         }
         field_o = (RgbSprite) null;
         super.a(param0);
-        if (hh.field_s != null) {
+        if (DefaultTextWidgetRenderer.field_s != null) {
           this.field_d = true;
-          this.field_r = this.field_n == hh.field_s ? true : false;
+          this.field_r = this.field_n == DefaultTextWidgetRenderer.field_s ? true : false;
         }
     }
 

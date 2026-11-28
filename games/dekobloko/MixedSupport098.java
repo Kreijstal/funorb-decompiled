@@ -155,7 +155,7 @@ final class MixedSupport098 {
             MixedSupport098.computeBoolean1217(73, -42);
           }
           for (integerLocal1 = integerArgument4; integerLocal1 < integerArgument2; integerLocal1++) {
-            integerLocal2 = MixedSupport001.integerArrayState0003[(byteArrayArgument1[integerLocal1] ^ integerLocal2) & 255] ^ integerLocal2 >>> 8;
+            integerLocal2 = DefaultTextWidgetRenderer.integerArrayState0003[(byteArrayArgument1[integerLocal1] ^ integerLocal2) & 255] ^ integerLocal2 >>> 8;
           }
           integerLocal2 = ~integerLocal2;
           stackIntegerLocal5 = integerLocal2;

@@ -51,7 +51,7 @@ final class vl extends hl {
         int var3 = DungeonAssault.field_K;
         q[] var1 = new q[dk.field_d];
         for (var2 = 0; dk.field_d > var2; var2++) {
-          var1[var2] = new q(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], fe.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
+          var1[var2] = new q(ce.field_x, tb.field_i, MusicPatchPcmStream.field_t[var2], RichTextLayout.field_g[var2], jc.field_f[var2], jn.field_k[var2], ub.field_q[var2], uo.field_b);
         }
         if (param0 <= -62) {
           sb.a(500);

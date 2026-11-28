@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends vd implements nk, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends vd implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     static String field_Q;
     private vf field_G;
     private TextInputField field_P;
@@ -10,7 +10,7 @@ final class AccountRegistrationPanel extends vd implements nk, WidgetActivationL
     static volatile int field_I;
     private InteractiveWidget field_S;
     private TextInputField field_M;
-    private cj field_T;
+    private RichTextWidget field_T;
     static CoverageBitmapFont field_L;
     private TextInputField field_N;
     private TextInputField field_F;
@@ -324,8 +324,8 @@ final class AccountRegistrationPanel extends vd implements nk, WidgetActivationL
         nh var4 = new nh(46, var3, this.field_s - 90, 25, this.field_G, true, this.field_s - 120, 5, jn.field_G, 11579568, hm.field_o);
         this.a(51448, var4);
         var3 = var3 + var4.field_x;
-        cn var5 = new cn(jd.field_s, 0, 0, 0, 0, 16777215, -1, 0, 0, jd.field_s.field_y, -1, 2147483647, true);
-        this.field_T = new cj(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(jd.field_s, 0, 0, 0, 0, 16777215, -1, 0, 0, jd.field_s.field_y, -1, 2147483647, true);
+        this.field_T = new RichTextWidget(var2, var5);
         this.field_T.field_i = "";
         this.field_T.a(-1, KeyboardInput.field_e, 0);
         this.field_T.a(-1, KeyboardInput.field_e, 1);
@@ -411,7 +411,7 @@ final class AccountRegistrationPanel extends vd implements nk, WidgetActivationL
         }
     }
 
-    public final void a(int param0, int param1, cj param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;

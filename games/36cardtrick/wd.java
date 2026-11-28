@@ -41,9 +41,9 @@ final class wd {
         }
         if (q.field_h == null) {
           q.field_h = new int[2 * param2];
-          if (mj.field_b == null ||
-            !(mj.field_b.length >= param2)) {
-            mj.field_b = new int[param2 * 2];
+          if (TextLayout.field_b == null ||
+            !(TextLayout.field_b.length >= param2)) {
+            TextLayout.field_b = new int[param2 * 2];
           }
           if (null == ij.field_c ||
             !(ij.field_c.length >= param2)) {
@@ -76,8 +76,8 @@ final class wd {
         } else {
           if (q.field_h.length < param2) {
             q.field_h = new int[2 * param2];
-            if (mj.field_b == null) {
-              mj.field_b = new int[param2 * 2];
+            if (TextLayout.field_b == null) {
+              TextLayout.field_b = new int[param2 * 2];
               if (null == ij.field_c ||
                 !(ij.field_c.length >= param2)) {
                 ij.field_c = new int[2 * param2];
@@ -95,7 +95,7 @@ final class wd {
                 ma.field_a = new boolean[2 * param2];
               }
             } else {
-              if (mj.field_b.length >= param2) {
+              if (TextLayout.field_b.length >= param2) {
                 if (null == ij.field_c ||
                   !(ij.field_c.length >= param2)) {
                   ij.field_c = new int[2 * param2];
@@ -113,7 +113,7 @@ final class wd {
                   ma.field_a = new boolean[2 * param2];
                 }
               } else {
-                mj.field_b = new int[param2 * 2];
+                TextLayout.field_b = new int[param2 * 2];
                 if (null == ij.field_c ||
                   !(ij.field_c.length >= param2)) {
                   ij.field_c = new int[2 * param2];
@@ -133,8 +133,8 @@ final class wd {
               }
             }
           } else {
-            if (mj.field_b == null) {
-              mj.field_b = new int[param2 * 2];
+            if (TextLayout.field_b == null) {
+              TextLayout.field_b = new int[param2 * 2];
               if (null == ij.field_c ||
                 !(ij.field_c.length >= param2)) {
                 ij.field_c = new int[2 * param2];
@@ -164,7 +164,7 @@ final class wd {
                 }
               }
             } else {
-              if (mj.field_b.length >= param2) {
+              if (TextLayout.field_b.length >= param2) {
                 if (null == ij.field_c ||
                   !(ij.field_c.length >= param2)) {
                   ij.field_c = new int[2 * param2];
@@ -194,7 +194,7 @@ final class wd {
                   }
                 }
               } else {
-                mj.field_b = new int[param2 * 2];
+                TextLayout.field_b = new int[param2 * 2];
                 if (null == ij.field_c ||
                   !(ij.field_c.length >= param2)) {
                   ij.field_c = new int[2 * param2];
@@ -227,7 +227,7 @@ final class wd {
             }
           }
         }
-        fk.field_h = 2147483647;
+        TextHotspotBounds.field_h = 2147483647;
         mf.field_g = 2147483647;
         DirectByteArrayStore.field_f = 0;
         ah.field_d = -2147483648;

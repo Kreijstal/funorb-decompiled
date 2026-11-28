@@ -133,7 +133,7 @@ final class hf {
             stackIn_11_0 = AccountRequestState.field_a;
             return stackIn_11_0;
           }
-          if (ah.a(param2, 54)) {
+          if (RichTextLayout.a(param2, 54)) {
             stackIn_14_0 = MatchingFieldValidator.a(i.field_b, new String[]{param2}, (byte) -108);
             return stackIn_14_0;
           }

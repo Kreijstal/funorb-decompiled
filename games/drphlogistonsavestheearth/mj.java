@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mj extends l {
+class mj extends DefaultTextWidgetRenderer {
     static volatile int field_u;
     static he[] field_w;
     static RgbSprite field_v;

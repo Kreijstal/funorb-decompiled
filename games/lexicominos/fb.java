@@ -137,7 +137,7 @@ final class fb implements rd {
         pf.field_o = 0;
         l.field_G = -2147483648;
         rb.field_a = -2147483648;
-        ve.field_d = 2147483647;
+        TextLayout.field_d = 2147483647;
     }
 
     fb(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

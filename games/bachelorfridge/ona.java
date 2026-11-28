@@ -82,7 +82,7 @@ final class ona extends UiComponent {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (-1 == jk.field_l.indexOf(var5Lifetime1)) {
+              if (-1 == CreaturePoseAnimation.field_l.indexOf(var5Lifetime1)) {
                 stackIn_46_0 = cha.field_m;
                 return stackIn_46_0;
               }

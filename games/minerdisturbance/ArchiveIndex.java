@@ -441,7 +441,7 @@ final class ArchiveIndex {
                 array$5 = new int[var12];
                 this.field_p[var11] = array$5;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(eg.a(param0, -71));
+                  dupTemp$6 = var8Lifetime1 + var17.readUnsignedShort(DefaultTextWidgetRenderer.a(param0, -71));
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_p[var11];
                   dupTemp$7[var14] = dupTemp$6;
@@ -542,7 +542,7 @@ final class ArchiveIndex {
     }
 
     final static boolean a(byte param0) {
-        tn.field_M = true;
+        RichTextWidget.field_M = true;
         if (param0 > -125) {
           return true;
         }

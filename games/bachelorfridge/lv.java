@@ -81,7 +81,7 @@ final class lv extends iha {
     }
 
     static {
-        field_l = vv.a((byte) 126);
+        field_l = TextLayout.a((byte) 126);
         int[] var13 = field_l;
         int[] var1 = var13;
         int[] var0 = var1;

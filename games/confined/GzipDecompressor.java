@@ -38,7 +38,7 @@ final class GzipDecompressor {
             }
             this.field_a.reset();
           } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "ln.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ln.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

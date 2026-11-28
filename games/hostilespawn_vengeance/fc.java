@@ -67,11 +67,11 @@ abstract class fc extends ag implements ai {
         }
     }
 
-    String e(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.e((int) (char)param0);
+        String var2 = super.getTooltipText((int) (char)param0);
         if (this.field_A != null) {
-          var3 = this.field_A.e(34);
+          var3 = this.field_A.getTooltipText(34);
           if (var3 != null) {
             return var3;
           }

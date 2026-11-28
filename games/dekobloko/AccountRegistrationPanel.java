@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class AccountRegistrationPanel extends ComponentContainer implements CallbackContract015, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends ComponentContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     NameSuggestionsPanel uiComponentPart007State0002;
     static SceneWidget sceneWidgetState0116;
     private ValidatedTextField uiComponentPart021State0002;
@@ -18,7 +18,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
     static String stringState0529;
     private ValidatedTextField uiComponentPart021State0006;
     private ValidatedTextField uiComponentPart021State0007;
-    private UiComponentPart025 uiComponentPart025State0002;
+    private RichTextWidget uiComponentPart025State0002;
     static boolean booleanState0185;
 
     public AccountRegistrationPanel() {
@@ -69,8 +69,8 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
         UiComponentPart006 uiComponentPart006Local6 = new UiComponentPart006(46, integerLocal5, -90 + this.integerState0107, 25, this.uiComponentPart009State0001, true, -120 + this.integerState0107, 5, MixedSupport011.bitmapFontState0006, 11579568, MixedSupport051.stringState0211);
         this.performAction0895(uiComponentPart006Local6, (byte) -55);
         integerLocal5 = integerLocal5 + uiComponentPart006Local6.integerState0108;
-        MixedSupport001 mixedSupport001Local7 = new MixedSupport001(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 0, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
-        this.uiComponentPart025State0002 = new UiComponentPart025(stringLocal4, mixedSupport001Local7);
+        DefaultTextWidgetRenderer mixedSupport001Local7 = new DefaultTextWidgetRenderer(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 0, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
+        this.uiComponentPart025State0002 = new RichTextWidget(stringLocal4, mixedSupport001Local7);
         this.uiComponentPart025State0002.stringState0080 = "";
         this.uiComponentPart025State0002.performAction1362(MixedSupport107.stringState0464, 0, 1);
         this.uiComponentPart025State0002.performAction1362(MixedSupport107.stringState0464, 1, 1);
@@ -426,7 +426,7 @@ final class AccountRegistrationPanel extends ComponentContainer implements Callb
         return MixedSupport068.computeResourceArchive0841(booleanArgument4, integerArgument1, integerArgument5, false, false, booleanArgument3);
     }
 
-    public final void performAction1034(UiComponentPart025 uiComponentPart025Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    public final void onTextHotspotActivated(RichTextWidget uiComponentPart025Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         int integerLocal1 = 0;
         RuntimeException stackRuntimeExceptionLocal2 = null;
         StringBuilder stackStringBuilderLocal3 = null;

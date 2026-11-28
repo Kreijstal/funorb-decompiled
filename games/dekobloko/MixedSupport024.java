@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class MixedSupport024 extends MixedSupport001 {
+class MixedSupport024 extends DefaultTextWidgetRenderer {
     static String stringState0115;
     static String stringState0116;
     private static int[] integerArrayState0032;

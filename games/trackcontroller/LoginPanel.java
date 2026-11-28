@@ -186,7 +186,7 @@ final class LoginPanel extends td implements TextFieldListener, ButtonListener {
           }
           this.field_H.field_n = ie.field_a;
           if (this.field_O != null) {
-            this.field_O.field_n = ic.field_g;
+            this.field_O.field_n = DefaultTextWidgetRenderer.field_g;
           }
           if (!this.field_L) {
             if (!this.field_I) {

@@ -512,13 +512,13 @@ final class DiskCacheWorker implements Runnable {
           var15.field_z = (BitmapFont) ((Object) var7);
           var15.field_qb = Archive.field_f;
           var15.field_A = 16777215;
-          pn.field_N = new UiPanel(0L, AccountRequestState.field_b);
-          pn.field_N.field_Bb = ml.a((byte) -13, 2236962, false, 2236962, 16, false);
-          pn.field_N.field_R = 2;
+          RichTextWidget.field_N = new UiPanel(0L, AccountRequestState.field_b);
+          RichTextWidget.field_N.field_Bb = ml.a((byte) -13, 2236962, false, 2236962, 16, false);
+          RichTextWidget.field_N.field_R = 2;
           fm.field_e = new UiPanel(0L, AccountRequestState.field_b);
           fm.field_e.field_Bb = ml.a((byte) -13, 1513239, false, 1513239, 16, false);
           fm.field_e.field_R = 2;
-          tm.field_b = new UiPanel(0L, pn.field_N);
+          tm.field_b = new UiPanel(0L, RichTextWidget.field_N);
           tm.field_b.a(ja.field_e, -46);
           IterableNodeHashTable.field_b = new UiPanel(0L, fm.field_e);
           IterableNodeHashTable.field_b.a(ja.field_e, -104);

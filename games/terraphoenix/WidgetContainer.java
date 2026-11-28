@@ -629,7 +629,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         k var2;
         UiWidget var3;
         String var4;
@@ -641,7 +641,7 @@ class WidgetContainer extends UiWidget implements sf {
         }
         var3 = (UiWidget) (var2.a((byte) -13));
         while (var3 != null) {
-          var4 = var3.f(71);
+          var4 = var3.getTooltipText(71);
           if (var4 != null) {
             return var4;
           }

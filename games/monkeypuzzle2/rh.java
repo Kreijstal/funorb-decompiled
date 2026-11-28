@@ -219,162 +219,162 @@ abstract class rh extends WidgetContainer {
           SectorCacheStore.field_b = param1;
           var2 = PcmResampler.a((byte) 76, "score_colon_space");
           if (null != var2) {
-            be.a(var2, (byte) 112);
+            TextLineMetrics.a(var2, (byte) 112);
           }
           var2Lifetime1 = PcmResampler.a((byte) 76, "instructions_1");
           if (var2Lifetime1 != null) {
-            mk.field_j = be.a(var2Lifetime1, (byte) 111);
+            mk.field_j = TextLineMetrics.a(var2Lifetime1, (byte) 111);
           }
           var2Lifetime2 = PcmResampler.a((byte) 76, "instructions_2");
           if (null != var2Lifetime2) {
-            WeightedObjectCache.field_a = be.a(var2Lifetime2, (byte) -104);
+            WeightedObjectCache.field_a = TextLineMetrics.a(var2Lifetime2, (byte) -104);
           }
           var2Lifetime3 = PcmResampler.a((byte) 76, "tips,0");
           if (var2Lifetime3 != null) {
-            AgeValidator.field_n[0] = be.a(var2Lifetime3, (byte) 68);
+            AgeValidator.field_n[0] = TextLineMetrics.a(var2Lifetime3, (byte) 68);
           }
           var2Lifetime4 = PcmResampler.a((byte) 76, "tips,1");
           if (null != var2Lifetime4) {
-            AgeValidator.field_n[1] = be.a(var2Lifetime4, (byte) 100);
+            AgeValidator.field_n[1] = TextLineMetrics.a(var2Lifetime4, (byte) 100);
           }
           var2Lifetime5 = PcmResampler.a((byte) 76, "tips,2");
           if (null != var2Lifetime5) {
-            AgeValidator.field_n[2] = be.a(var2Lifetime5, (byte) 66);
+            AgeValidator.field_n[2] = TextLineMetrics.a(var2Lifetime5, (byte) 66);
           }
           var2Lifetime6 = PcmResampler.a((byte) 76, "tips,3");
           if (null != var2Lifetime6) {
-            AgeValidator.field_n[3] = be.a(var2Lifetime6, (byte) -36);
+            AgeValidator.field_n[3] = TextLineMetrics.a(var2Lifetime6, (byte) -36);
           }
           var2Lifetime7 = PcmResampler.a((byte) 76, "tips,4");
           if (null != var2Lifetime7) {
-            AgeValidator.field_n[4] = be.a(var2Lifetime7, (byte) 100);
+            AgeValidator.field_n[4] = TextLineMetrics.a(var2Lifetime7, (byte) 100);
           }
           var2Lifetime8 = PcmResampler.a((byte) 76, "notShowingTips");
           if (var2Lifetime8 != null) {
-            lg.field_I = be.a(var2Lifetime8, (byte) -57);
+            lg.field_I = TextLineMetrics.a(var2Lifetime8, (byte) -57);
           }
           var2Lifetime9 = PcmResampler.a((byte) 76, "youHaveSeen");
           if (null != var2Lifetime9) {
-            AccountCreationResultPanel.field_kb = be.a(var2Lifetime9, (byte) -44);
+            AccountCreationResultPanel.field_kb = TextLineMetrics.a(var2Lifetime9, (byte) -44);
           }
           var2Lifetime10 = PcmResampler.a((byte) 76, "wellDone");
           if (null != var2Lifetime10) {
-            TextFieldValidator.field_h = be.a(var2Lifetime10, (byte) -87);
+            TextFieldValidator.field_h = TextLineMetrics.a(var2Lifetime10, (byte) -87);
           }
           var2Lifetime11 = PcmResampler.a((byte) 76, "youScored");
           if (var2Lifetime11 != null) {
-            cl.field_b = be.a(var2Lifetime11, (byte) -66);
+            cl.field_b = TextLineMetrics.a(var2Lifetime11, (byte) -66);
           }
           var2Lifetime12 = PcmResampler.a((byte) 76, "pressEnter");
           if (null != var2Lifetime12) {
-            lb.field_A = be.a(var2Lifetime12, (byte) 77);
+            lb.field_A = TextLineMetrics.a(var2Lifetime12, (byte) 77);
           }
           var2Lifetime13 = PcmResampler.a((byte) 76, "levelComplete");
           if (null != var2Lifetime13) {
-            sc.field_d = be.a(var2Lifetime13, (byte) -109);
+            sc.field_d = TextLineMetrics.a(var2Lifetime13, (byte) -109);
           }
           var2Lifetime14 = PcmResampler.a((byte) 76, "speedBonus");
           if (var2Lifetime14 != null) {
-            PcmOutputWorker.field_a = be.a(var2Lifetime14, (byte) 122);
+            PcmOutputWorker.field_a = TextLineMetrics.a(var2Lifetime14, (byte) 122);
           }
           var2Lifetime15 = PcmResampler.a((byte) 76, "cancel");
           if (null != var2Lifetime15) {
-            be.a(var2Lifetime15, (byte) 119);
+            TextLineMetrics.a(var2Lifetime15, (byte) 119);
           }
           var2Lifetime16 = PcmResampler.a((byte) 76, "close");
           if (var2Lifetime16 != null) {
-            be.a(var2Lifetime16, (byte) -41);
+            TextLineMetrics.a(var2Lifetime16, (byte) -41);
           }
           var2Lifetime17 = PcmResampler.a((byte) 76, "members");
           if (var2Lifetime17 != null) {
-            be.a(var2Lifetime17, (byte) 105);
+            TextLineMetrics.a(var2Lifetime17, (byte) 105);
           }
           var2Lifetime18 = PcmResampler.a((byte) 76, "tipsColon");
           if (var2Lifetime18 != null) {
-            pe.field_c = be.a(var2Lifetime18, (byte) -80);
+            pe.field_c = TextLineMetrics.a(var2Lifetime18, (byte) -80);
           }
           var2Lifetime19 = PcmResampler.a((byte) 76, "achievement_names,0");
           if (var2Lifetime19 != null) {
-            rb.field_hb[0] = be.a(var2Lifetime19, (byte) -44);
+            rb.field_hb[0] = TextLineMetrics.a(var2Lifetime19, (byte) -44);
           }
           var2Lifetime20 = PcmResampler.a((byte) 76, "achievement_names,1");
           if (null != var2Lifetime20) {
-            rb.field_hb[1] = be.a(var2Lifetime20, (byte) 94);
+            rb.field_hb[1] = TextLineMetrics.a(var2Lifetime20, (byte) 94);
           }
           var2Lifetime21 = PcmResampler.a((byte) 76, "achievement_names,2");
           if (null != var2Lifetime21) {
-            rb.field_hb[2] = be.a(var2Lifetime21, (byte) -68);
+            rb.field_hb[2] = TextLineMetrics.a(var2Lifetime21, (byte) -68);
           }
           var2Lifetime22 = PcmResampler.a((byte) 76, "achievement_names,3");
           if (null != var2Lifetime22) {
-            rb.field_hb[3] = be.a(var2Lifetime22, (byte) 89);
+            rb.field_hb[3] = TextLineMetrics.a(var2Lifetime22, (byte) 89);
           }
           var2Lifetime23 = PcmResampler.a((byte) 76, "achievement_names,4");
           if (null != var2Lifetime23) {
-            rb.field_hb[4] = be.a(var2Lifetime23, (byte) 122);
+            rb.field_hb[4] = TextLineMetrics.a(var2Lifetime23, (byte) 122);
           }
           var2Lifetime24 = PcmResampler.a((byte) 76, "achievement_names,5");
           if (null != var2Lifetime24) {
-            rb.field_hb[5] = be.a(var2Lifetime24, (byte) -107);
+            rb.field_hb[5] = TextLineMetrics.a(var2Lifetime24, (byte) -107);
           }
           var2Lifetime25 = PcmResampler.a((byte) 76, "achievement_names,6");
           if (null != var2Lifetime25) {
-            rb.field_hb[6] = be.a(var2Lifetime25, (byte) -89);
+            rb.field_hb[6] = TextLineMetrics.a(var2Lifetime25, (byte) -89);
           }
           var2Lifetime26 = PcmResampler.a((byte) 76, "achievement_names,7");
           if (var2Lifetime26 != null) {
-            rb.field_hb[7] = be.a(var2Lifetime26, (byte) 85);
+            rb.field_hb[7] = TextLineMetrics.a(var2Lifetime26, (byte) 85);
           }
           var2Lifetime27 = PcmResampler.a((byte) 76, "achievement_names,8");
           if (null != var2Lifetime27) {
-            rb.field_hb[8] = be.a(var2Lifetime27, (byte) -28);
+            rb.field_hb[8] = TextLineMetrics.a(var2Lifetime27, (byte) -28);
           }
           var2Lifetime28 = PcmResampler.a((byte) 76, "achievement_names,9");
           if (null != var2Lifetime28) {
-            rb.field_hb[9] = be.a(var2Lifetime28, (byte) 70);
+            rb.field_hb[9] = TextLineMetrics.a(var2Lifetime28, (byte) 70);
           }
           var2Lifetime29 = PcmResampler.a((byte) 76, "achievement_criteria,0");
           if (null != var2Lifetime29) {
-            ki.field_r[0] = be.a(var2Lifetime29, (byte) 87);
+            ki.field_r[0] = TextLineMetrics.a(var2Lifetime29, (byte) 87);
           }
           var2Lifetime30 = PcmResampler.a((byte) 76, "achievement_criteria,1");
           if (null != var2Lifetime30) {
-            ki.field_r[1] = be.a(var2Lifetime30, (byte) -122);
+            ki.field_r[1] = TextLineMetrics.a(var2Lifetime30, (byte) -122);
           }
           var2Lifetime31 = PcmResampler.a((byte) 76, "achievement_criteria,2");
           if (null != var2Lifetime31) {
-            ki.field_r[2] = be.a(var2Lifetime31, (byte) 92);
+            ki.field_r[2] = TextLineMetrics.a(var2Lifetime31, (byte) 92);
           }
           var2Lifetime32 = PcmResampler.a((byte) 76, "achievement_criteria,3");
           if (var2Lifetime32 != null) {
-            ki.field_r[3] = be.a(var2Lifetime32, (byte) 84);
+            ki.field_r[3] = TextLineMetrics.a(var2Lifetime32, (byte) 84);
           }
           var2Lifetime33 = PcmResampler.a((byte) 76, "achievement_criteria,4");
           if (var2Lifetime33 != null) {
-            ki.field_r[4] = be.a(var2Lifetime33, (byte) 65);
+            ki.field_r[4] = TextLineMetrics.a(var2Lifetime33, (byte) 65);
           }
           var2Lifetime34 = PcmResampler.a((byte) 76, "achievement_criteria,5");
           if (param0 != -9585) {
             return;
           }
           if (null != var2Lifetime34) {
-            ki.field_r[5] = be.a(var2Lifetime34, (byte) 125);
+            ki.field_r[5] = TextLineMetrics.a(var2Lifetime34, (byte) 125);
           }
           var2Lifetime35 = PcmResampler.a((byte) 76, "achievement_criteria,6");
           if (var2Lifetime35 != null) {
-            ki.field_r[6] = be.a(var2Lifetime35, (byte) -33);
+            ki.field_r[6] = TextLineMetrics.a(var2Lifetime35, (byte) -33);
           }
           var2Lifetime36 = PcmResampler.a((byte) 76, "achievement_criteria,7");
           if (var2Lifetime36 != null) {
-            ki.field_r[7] = be.a(var2Lifetime36, (byte) -115);
+            ki.field_r[7] = TextLineMetrics.a(var2Lifetime36, (byte) -115);
           }
           var2Lifetime37 = PcmResampler.a((byte) 76, "achievement_criteria,8");
           if (null != var2Lifetime37) {
-            ki.field_r[8] = be.a(var2Lifetime37, (byte) -106);
+            ki.field_r[8] = TextLineMetrics.a(var2Lifetime37, (byte) -106);
           }
           var2Lifetime38 = PcmResampler.a((byte) 76, "achievement_criteria,9");
           if (null != var2Lifetime38) {
-            ki.field_r[9] = be.a(var2Lifetime38, (byte) 95);
+            ki.field_r[9] = TextLineMetrics.a(var2Lifetime38, (byte) 95);
           }
           SectorCacheStore.field_b = null;
           return;
@@ -459,7 +459,7 @@ abstract class rh extends WidgetContainer {
           if (var3 == 0) {
             if (null == ah.field_b) {
               ah.field_b = new vd(128);
-              jj.field_F = 0;
+              RichTextWidget.field_F = 0;
             }
             stackIn_11_0 = (var1.readUnsignedByte((byte) 114) != 1) ? 0 : 1;
             var4_int = stackIn_11_0;
@@ -482,8 +482,8 @@ abstract class rh extends WidgetContainer {
             if (var6_ref == null) {
               var6_ref = new rb();
               ah.field_b.a(var6_ref, (long)var8_ref.hashCode(), -98);
-              fieldTemp$1 = jj.field_F;
-              jj.field_F = jj.field_F + 1;
+              fieldTemp$1 = RichTextWidget.field_F;
+              RichTextWidget.field_F = RichTextWidget.field_F + 1;
               var6_ref.field_gb = fieldTemp$1;
               wl.field_d.addFirst(-8212, var6_ref);
             }

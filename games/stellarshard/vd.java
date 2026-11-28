@@ -128,7 +128,7 @@ final class vd {
             boolean decompiledFrameRemainder0 = true;
             if (param0.field_p == IterableNodeHashTable.field_d[var3].field_p) {
               var4 = IterableNodeHashTable.field_d[var3].a((byte) 105);
-              if (pd.field_q < cg.field_d[var4]) {
+              if (RichTextLayout.field_q < cg.field_d[var4]) {
                 cg.field_d[var4] = cg.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }

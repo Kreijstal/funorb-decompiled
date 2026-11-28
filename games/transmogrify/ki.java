@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends h {
+final class ki extends DefaultTextWidgetRenderer {
     private ab field_p;
     private ab[] field_o;
 
@@ -286,7 +286,7 @@ final class ki extends h {
           return;
         }
         try {
-          ol.a(param1, 30194);
+          TextLineMetrics.a(param1, 30194);
         } catch (RuntimeException runtimeException) {
           throw ch.wrapClientException((Throwable) ((Object) runtimeException), "ki.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

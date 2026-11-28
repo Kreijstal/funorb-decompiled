@@ -213,7 +213,7 @@ final class ha {
                 }
               }
               if (d.field_c > 0) {
-                dg.field_F = true;
+                RichTextWidget.field_F = true;
               }
               NetworkArchiveRequest.field_r.setCipherSeed(kb.field_e, 8);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {

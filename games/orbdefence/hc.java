@@ -38,7 +38,7 @@ final class hc extends IntrusiveNode {
             }
             if (param1) {
               var10.setColor(java.awt.Color.black);
-              var10.fillRect(0, 0, bd.field_k, th.field_e);
+              var10.fillRect(0, 0, RichTextLayout.field_k, th.field_e);
             }
             if (param4 == null) {
               param4 = new java.awt.Color(140, 17, 17);
@@ -57,11 +57,11 @@ final class hc extends IntrusiveNode {
               var11.setFont(e.field_a);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param2, (-(6 * param2.length()) + 304) / 2, 22);
-              var10.drawImage(gj.field_f, bd.field_k / 2 - 152, -18 + th.field_e / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(gj.field_f, RichTextLayout.field_k / 2 - 152, -18 + th.field_e / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
-              var7 = bd.field_k / 2 - 152;
+              var7 = RichTextLayout.field_k / 2 - 152;
               var8 = -18 + th.field_e / 2;
               var10.setColor(param4);
               var10.drawRect(var7, var8, 303, 33);
@@ -78,7 +78,7 @@ final class hc extends IntrusiveNode {
             }
             var10.setFont(e.field_a);
             var10.setColor(java.awt.Color.white);
-            var10.drawString(nl.field_a, bd.field_k / 2 - nl.field_a.length() * 6 / 2, th.field_e / 2 - 26);
+            var10.drawString(nl.field_a, RichTextLayout.field_k / 2 - nl.field_a.length() * 6 / 2, th.field_e / 2 - 26);
             return;
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

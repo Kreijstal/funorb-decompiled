@@ -232,7 +232,7 @@ final class ce extends td {
               if (null != this.field_s.field_e &&
                 this.field_s.field_e[param2] != null) {
                 var29 = this.field_s.field_e[param2];
-                var30 = jd.a(var5, 0, var18.length - 2, 0);
+                var30 = DefaultTextWidgetRenderer.a(var5, 0, var18.length - 2, 0);
                 var11 = 0;
                 var9 = var11;
                 while (64 > var11) {
@@ -283,7 +283,7 @@ final class ce extends td {
             if (null != this.field_s.field_e &&
               this.field_s.field_e[param2] != null) {
               var28 = this.field_s.field_e[param2];
-              var27 = jd.a(var5, 0, var18.length - 2, param1 - 255);
+              var27 = DefaultTextWidgetRenderer.a(var5, 0, var18.length - 2, param1 - 255);
               for (var9 = 0; var9 < 64; var9++) {
                 if (var27[var9] != var28[var9]) {
                   throw new RuntimeException();

@@ -696,7 +696,7 @@ final class BufferedRandomAccessFile {
             for (var18 = 0; var18 < 3; var18++) {
               il.field_e[var18] = il.field_e[var18] + li.field_e[var15][var18];
             }
-            ui.a(-99, false, false, qh.field_g, il.field_e, true, var17);
+            TextHotspotBounds.a(-99, false, false, qh.field_g, il.field_e, true, var17);
             eh.a(var17, var12Lifetime1, var13Lifetime1, var7Lifetime1, var9Lifetime1, var14, var8Lifetime1, -111);
           }
           return;

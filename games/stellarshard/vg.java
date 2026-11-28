@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vg extends id {
+class vg extends DefaultTextWidgetRenderer {
     static long[] field_t;
     static String field_q;
     static th field_p;

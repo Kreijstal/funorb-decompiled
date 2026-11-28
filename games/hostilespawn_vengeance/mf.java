@@ -18,7 +18,7 @@ final class mf {
           if (~param1 != ~NameSuggestionsPanel.field_I) {
             NameSuggestionsPanel.field_I = param1;
             jf.field_c = 1;
-            mb.field_s.a(500, 8000);
+            RichTextLayout.field_s.a(500, 8000);
             le.field_D = 0;
             ha.field_w.field_l = false;
             if (param1 != 3 &&

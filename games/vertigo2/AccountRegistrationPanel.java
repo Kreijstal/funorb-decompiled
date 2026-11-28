@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements cm, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends WidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_L;
     private ck field_R;
     private ValidatedTextField field_F;
@@ -14,7 +14,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, Widg
     private ValidatedTextField field_T;
     private ValidatedTextField field_H;
     private InteractiveWidget field_O;
-    private pn field_N;
+    private RichTextWidget field_N;
     private InteractiveWidget field_I;
     private ValidatedTextField field_U;
     static int field_E;
@@ -189,7 +189,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, Widg
         }
     }
 
-    public final void a(pn param0, int param1, int param2, byte param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         UiWidget var7 = null;
@@ -354,8 +354,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements cm, Widg
         mg var4 = new mg(46, var3, this.width - 90, 25, this.field_R, true, -120 + this.width, 5, bl.field_N, 11579568, ll.field_d);
         this.c((byte) 88, var4);
         var3 = var3 + var4.height;
-        va var5 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 0, 0, qc.field_x.field_z, -1, 2147483647, true);
-        this.field_N = new pn(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(qc.field_x, 0, 0, 0, 0, 16777215, -1, 0, 0, qc.field_x.field_z, -1, 2147483647, true);
+        this.field_N = new RichTextWidget(var2, var5);
         this.field_N.field_q = "";
         this.field_N.a(0, 0, fm.field_c);
         this.field_N.a(1, 0, fm.field_c);

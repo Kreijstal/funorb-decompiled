@@ -45,21 +45,21 @@ final class th extends si {
         bc var7 = null;
         try {
           super.a(param0, param1 ^ param1, param2, param3, param4, param5);
-          var7 = jf.field_a;
+          var7 = TextLayout.field_a;
           if (var7 != null) {
             if (!this.a(param0, param4, param5, param3, -110)) {
               return;
             }
             if (this.field_n instanceof gk) {
               ((gk) (this.field_n)).a(this, -7935, var7);
-              jf.field_a = null;
+              TextLayout.field_a = null;
               return;
             }
             if (!(var7.field_n instanceof gk)) {
               return;
             }
             ((gk) (var7.field_n)).a(this, -7935, var7);
-            jf.field_a = null;
+            TextLayout.field_a = null;
           }
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "th.O(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');

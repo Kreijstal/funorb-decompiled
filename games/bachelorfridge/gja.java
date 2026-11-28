@@ -117,7 +117,7 @@ final class gja extends tia {
         if (param0 != -16103) {
           return false;
         }
-        return kga.field_c != null ? true : kt.field_i;
+        return kga.field_c != null ? true : SetMoveSlotCooldownEffect.field_i;
     }
 
     final static void a(boolean param0, java.applet.Applet param1, String param2, int param3) {

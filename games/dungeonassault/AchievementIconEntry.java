@@ -141,7 +141,7 @@ final class AchievementIconEntry extends IntrusiveNode {
                                       ik.a((String) null, 24, 9);
                                     } else {
                                       if (mn.field_b == 8) {
-                                        ik.a(bh.field_Q, 95, mn.field_b);
+                                        ik.a(RichTextWidget.field_Q, 95, mn.field_b);
                                       }
                                     }
                                   }

@@ -347,13 +347,13 @@ final class eg {
             if (decompiledFrameRemainder0) {
               if (np.field_M != null &&
                 um.field_h >= 5) {
-                hh.field_s = null;
+                DefaultTextWidgetRenderer.field_s = null;
               } else {
-                hh.field_s = pa.field_c;
-                if (null != hh.field_s) {
-                  hh.field_s.a(-hh.field_s.field_i + eh.field_h, (byte) -98, -hh.field_s.field_t + hj.field_S);
+                DefaultTextWidgetRenderer.field_s = pa.field_c;
+                if (null != DefaultTextWidgetRenderer.field_s) {
+                  DefaultTextWidgetRenderer.field_s.a(-DefaultTextWidgetRenderer.field_s.field_i + eh.field_h, (byte) -98, -DefaultTextWidgetRenderer.field_s.field_t + hj.field_S);
                   if (var4 != 0) {
-                    hh.field_s = null;
+                    DefaultTextWidgetRenderer.field_s = null;
                   }
                 }
               }

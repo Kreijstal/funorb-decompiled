@@ -108,8 +108,8 @@ abstract class CreatureEvent extends BattleUpdate {
     final static void a(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
-          param1.addKeyListener(vv.field_e);
-          param1.addFocusListener(vv.field_e);
+          param1.addKeyListener(TextLayout.field_e);
+          param1.addFocusListener(TextLayout.field_e);
           int var2_int = -78 / ((13 - param0) / 48);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ii.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

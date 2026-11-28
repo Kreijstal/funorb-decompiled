@@ -1169,7 +1169,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("back", 0);
                 if (var2 != null) {
-                  mi.field_k = ab.a(0, var2);
+                  TextHotspotBounds.field_k = ab.a(0, var2);
                 }
                 var2 = ad.a("exitfullscreenmode", 0);
                 if (var2 != null) {
@@ -1327,7 +1327,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("openinpopupwindow", 0);
                 if (var2 != null) {
-                  pi.field_f = ab.a(0, var2);
+                  TextLineMetrics.field_f = ab.a(0, var2);
                 }
                 var2 = ad.a("create", 0);
                 if (null != var2) {
@@ -1859,7 +1859,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("loading_music", 0);
                 if (var2 != null) {
-                  mi.field_p = ab.a(0, var2);
+                  TextHotspotBounds.field_p = ab.a(0, var2);
                 }
                 var2 = ad.a("loading_instruments", 0);
                 if (var2 != null) {
@@ -2063,7 +2063,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("ok", 0);
                 if (null != var2) {
-                  e.field_g = ab.a(0, var2);
+                  DefaultTextWidgetRenderer.field_g = ab.a(0, var2);
                 }
                 var2 = ad.a("on", 0);
                 if (null != var2) {
@@ -2717,7 +2717,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("fs_button_close", 0);
                 if (null != var2) {
-                  ja.field_O = ab.a(0, var2);
+                  RichTextWidget.field_O = ab.a(0, var2);
                 }
                 var2 = ad.a("fs_button_members", 0);
                 if (var2 != null) {
@@ -2857,7 +2857,7 @@ final class je extends InteractiveWidget {
                 }
                 var2 = ad.a("pleasewait_dotdotdot", 0);
                 if (null != var2) {
-                  ja.field_L = ab.a(0, var2);
+                  RichTextWidget.field_L = ab.a(0, var2);
                 }
                 var2 = ad.a("serviceunavailable", 0);
                 if (null != var2) {
@@ -3184,14 +3184,14 @@ final class je extends InteractiveWidget {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         RuntimeException var2 = null;
         String stackIn_7_0 = null;
         Object stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 4) {
-            this.g(97);
+            this.getTooltipText(97);
           }
           if (this.field_x) {
             stackIn_7_0 = this.field_K.getValidationMessage(90);

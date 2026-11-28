@@ -63,7 +63,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltipText(boolean param0) {
         if (!this.field_w) {
           return null;
         }

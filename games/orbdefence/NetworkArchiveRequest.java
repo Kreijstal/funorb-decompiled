@@ -162,13 +162,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             if (20 <= var6) {
               if (var6 >= 30) {
                 var7 = (12800 - 256 * var6) / 20;
-                jc.field_k.drawAdditive(var3, var4, var7);
+                DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
               } else {
-                jc.field_k.drawAdditive(var3, var4, 256);
+                DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, 256);
               }
             } else {
               var7 = 256 * var6 / 20;
-              jc.field_k.drawAdditive(var3, var4, var7);
+              DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
             }
           }
         } else {
@@ -183,13 +183,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 if (20 <= var6) {
                   if (var6 >= 30) {
                     var7 = (12800 - 256 * var6) / 20;
-                    jc.field_k.drawAdditive(var3, var4, var7);
+                    DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
                   } else {
-                    jc.field_k.drawAdditive(var3, var4, 256);
+                    DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, 256);
                   }
                 } else {
                   var7 = 256 * var6 / 20;
-                  jc.field_k.drawAdditive(var3, var4, var7);
+                  DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
                 }
               }
               var6 = ji.field_b - 140;
@@ -223,7 +223,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                 } else {
                   if (20 > var6) {
                     var7 = 256 * var6 / 20;
-                    jc.field_k.drawAdditive(var3, var4, var7);
+                    DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
                     var6 = ji.field_b - 140;
                     if (var6 > 0) {
                       var7 = 256;
@@ -234,7 +234,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                     }
                   } else {
                     if (var6 < 30) {
-                      jc.field_k.drawAdditive(var3, var4, 256);
+                      DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, 256);
                       var6 = ji.field_b - 140;
                       if (var6 > 0) {
                         var7 = 256;
@@ -245,7 +245,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
                       }
                     } else {
                       var7 = (12800 - 256 * var6) / 20;
-                      jc.field_k.drawAdditive(var3, var4, var7);
+                      DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
                       var6 = ji.field_b - 140;
                       if (var6 > 0) {
                         var7 = 256;
@@ -270,13 +270,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               if (20 <= var6) {
                 if (var6 >= 30) {
                   var7 = (12800 - 256 * var6) / 20;
-                  jc.field_k.drawAdditive(var3, var4, var7);
+                  DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
                 } else {
-                  jc.field_k.drawAdditive(var3, var4, 256);
+                  DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, 256);
                 }
               } else {
                 var7 = 256 * var6 / 20;
-                jc.field_k.drawAdditive(var3, var4, var7);
+                DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
               }
             }
           } else {
@@ -284,13 +284,13 @@ final class NetworkArchiveRequest extends ArchiveRequest {
               var6 < 50) {
               if (20 > var6) {
                 var7 = 256 * var6 / 20;
-                jc.field_k.drawAdditive(var3, var4, var7);
+                DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
               } else {
                 if (var6 < 30) {
-                  jc.field_k.drawAdditive(var3, var4, 256);
+                  DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, 256);
                 } else {
                   var7 = (12800 - 256 * var6) / 20;
-                  jc.field_k.drawAdditive(var3, var4, var7);
+                  DefaultTextWidgetRenderer.field_k.drawAdditive(var3, var4, var7);
                 }
               }
             }

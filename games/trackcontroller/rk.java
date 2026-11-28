@@ -95,10 +95,10 @@ final class rk extends wd {
           if (SpriteState.field_u[param0] > SpriteState.field_u[param2]) {
             return false;
           }
-          if (va.field_e[param2] > va.field_e[param0]) {
+          if (TextLineMetrics.field_e[param2] > TextLineMetrics.field_e[param0]) {
             return true;
           }
-          if (va.field_e[param0] > va.field_e[param2]) {
+          if (TextLineMetrics.field_e[param0] > TextLineMetrics.field_e[param2]) {
             return false;
           }
           if (param1 > 60) {
@@ -123,10 +123,10 @@ final class rk extends wd {
           }
           return !(param2 <= param0);
         }
-        if (va.field_e[param0] < va.field_e[param2]) {
+        if (TextLineMetrics.field_e[param0] < TextLineMetrics.field_e[param2]) {
           return true;
         }
-        if (va.field_e[param2] < va.field_e[param0]) {
+        if (TextLineMetrics.field_e[param2] < TextLineMetrics.field_e[param0]) {
           return false;
         }
         if (SpriteState.field_u[param0] < SpriteState.field_u[param2]) {

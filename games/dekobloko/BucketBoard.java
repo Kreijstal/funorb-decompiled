@@ -468,7 +468,7 @@ final class BucketBoard {
                 LoginPanel.integerState0275 = LoginPanel.integerState0275 + integerLocal28;
                 MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal28;
                 this.integerState0475 = this.integerState0475 + integerLocal27;
-                this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(0, integerLocal23, 81), this.computeInteger0977(true, integerLocal23, 0), integerLocal27, MixedSupport001.integerArrayState0002, -1 + integerLocal23, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23), " = <b>", Integer.toString(integerLocal27)}), 2777);
+                this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(0, integerLocal23, 81), this.computeInteger0977(true, integerLocal23, 0), integerLocal27, DefaultTextWidgetRenderer.integerArrayState0002, -1 + integerLocal23, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23), " = <b>", Integer.toString(integerLocal27)}), 2777);
               } else {
                 if (this.nodeDequeState0018 != null) {
                   integerLocal27 = AccountFieldStatusIndicator.computeInteger1205(integerLocal26, 65);
@@ -482,7 +482,7 @@ final class BucketBoard {
                   MixedSupport035.integerState0220 = MixedSupport035.integerState0220 + integerLocal33;
                   LoginPanel.integerState0275 = LoginPanel.integerState0275 + integerLocal33;
                   if (0 < integerLocal28) {
-                    this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(integerLocal26, integerLocal23, 65), this.computeInteger0977(true, integerLocal23, integerLocal26), integerLocal28, MixedSupport001.integerArrayState0002, integerLocal23 - integerLocal26 - 1, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23 - integerLocal26), " = <b>", Integer.toString(integerLocal28)}), 2777);
+                    this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(integerLocal26, integerLocal23, 65), this.computeInteger0977(true, integerLocal23, integerLocal26), integerLocal28, DefaultTextWidgetRenderer.integerArrayState0002, integerLocal23 - integerLocal26 - 1, 8 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal23 - integerLocal26), " = <b>", Integer.toString(integerLocal28)}), 2777);
                   }
                   this.nodeDequeState0018.addFirst(new MixedSupport112(false, this.computeInteger0982(0, integerLocal26, 112), this.computeInteger0977(true, integerLocal26, 0), integerLocal27, MixedSupport009.integerArrayState0015, -4 + integerLocal26, 16 | 7 & integerLocal19, new String[]{" <times> ", Integer.toString(integerLocal26), " = <b>", Integer.toString(integerLocal27)}), 2777);
                 }
@@ -944,7 +944,7 @@ final class BucketBoard {
     private final void performAction0984(boolean booleanArgument1) {
         int integerLocal1 = -300 + UiComponentPart016.computeInteger0830((byte) 122, 601, AccountRegistrationPanel.randomState0003);
         integerLocal1 = integerLocal1 * (integerLocal1 * integerLocal1) / 90000;
-        MixedSupport001.performAction0007(integerLocal1, this.integerState0474 / 4, MixedSupport006.rawSoundState0001, this.integerState0462, 256);
+        DefaultTextWidgetRenderer.performAction0007(integerLocal1, this.integerState0474 / 4, MixedSupport006.rawSoundState0001, this.integerState0462, 256);
         if (booleanArgument1) {
           this.deepestPieceCenterY2 = -21;
         }
@@ -1770,7 +1770,7 @@ final class BucketBoard {
           if ((integerLocal1 & -1879048193) == 24 &&
             0 == this.integerState0481) {
             this.integerState0481 = 1;
-            RenderingSupport003.performAction0571(this.integerState0458, this.integerState0446 / 2, (byte) 127, NetworkSupport010.rawSoundState0017);
+            RenderingSupport003.performAction0571(this.integerState0458, this.integerState0446 / 2, (byte) 127, TextHotspotBounds.rawSoundState0017);
           }
           if ((integerLocal1 & -1879048193) == 29) {
             this.booleanState0105 = true;

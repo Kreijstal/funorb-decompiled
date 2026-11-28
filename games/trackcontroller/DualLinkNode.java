@@ -27,7 +27,7 @@ class DualLinkNode extends IntrusiveNode {
           }
           var2 = ne.field_b.first(2);
           while (var2 != null) {
-            cj.a(param1, false);
+            RichTextLayout.a(param1, false);
             var2 = ne.field_b.next(10);
           }
           return;

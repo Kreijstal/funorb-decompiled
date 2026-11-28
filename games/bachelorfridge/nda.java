@@ -23,7 +23,7 @@ final class nda extends pu {
         try {
           RasterBuffer.field_a = param6;
           lha.field_b = param5;
-          jk.a(param15, param17, param13, (byte) -64, param3);
+          CreaturePoseAnimation.a(param15, param17, param13, (byte) -64, param3);
           jn.a(param2, param10, param14, param9);
           if (param9) {
             return;

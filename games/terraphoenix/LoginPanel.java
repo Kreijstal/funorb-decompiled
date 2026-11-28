@@ -378,7 +378,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
                   si.m(-74);
                 } else {
                   if (this.field_Q) {
-                    fd.c(-24);
+                    DefaultTextWidgetRenderer.c(-24);
                   } else {
                     ie.a(4);
                   }

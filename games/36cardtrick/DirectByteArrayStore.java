@@ -47,7 +47,7 @@ final class DirectByteArrayStore extends ByteArrayStore {
           return 57;
         }
         ja.field_b.a((byte) -50);
-        if (dg.field_H.b((byte) -125)) {
+        if (RichTextWidget.field_H.b((byte) -125)) {
           return 0;
         }
         return kf.a(76);

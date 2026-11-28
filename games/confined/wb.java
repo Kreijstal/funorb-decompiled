@@ -32,7 +32,7 @@ final class wb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) runtimeException), "wb.D(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "wb.D(" + param0 + ')');
         }
     }
 
@@ -74,7 +74,7 @@ final class wb {
           if (d.field_d) {
             var6 = var6 | 1;
           }
-          if (na.field_W) {
+          if (RichTextWidget.field_W) {
             var6 = var6 | 4;
           }
           if (param4) {
@@ -106,7 +106,7 @@ final class wb {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class wb {
             wb.a(117, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ')');
         }
     }
 
@@ -1512,7 +1512,7 @@ final class wb {
                 }
                 var2 = ha.a("create_password", (byte) 35);
                 if (null != var2) {
-                  sc.field_b = va.a(0, var2);
+                  TextLayout.field_b = va.a(0, var2);
                 }
                 var2 = ha.a("create_password_confirm", (byte) 85);
                 if (var2 != null) {
@@ -1880,7 +1880,7 @@ final class wb {
                 }
                 var2 = ha.a("waitingfor_soundeffects", (byte) 48);
                 if (null != var2) {
-                  sd.field_g = va.a(0, var2);
+                  TextLineMetrics.field_g = va.a(0, var2);
                 }
                 var2 = ha.a("waitingfor_music", (byte) 89);
                 if (var2 != null) {
@@ -2008,7 +2008,7 @@ final class wb {
                 }
                 var2 = ha.a("fullscreen", (byte) 39);
                 if (null != var2) {
-                  nn.field_v = va.a(param0 - 6, var2);
+                  TextHotspotBounds.field_v = va.a(param0 - 6, var2);
                 }
                 var2 = ha.a("screensize", (byte) 28);
                 if (null != var2) {
@@ -2154,7 +2154,7 @@ final class wb {
                 }
                 var2 = ha.a("next", (byte) 80);
                 if (null != var2) {
-                  na.field_U = va.a(0, var2);
+                  RichTextWidget.field_U = va.a(0, var2);
                 }
                 var2 = ha.a("graphics_colon", (byte) 110);
                 if (null != var2) {
@@ -3156,7 +3156,7 @@ final class wb {
                   } else {
                     stackIn_2620_2 = "{...}";
                   }
-                  throw sd.a((Throwable) ((Object) stackIn_2619_0), ((StringBuilder) (Object) stackIn_2619_1).append(stackIn_2620_2).append(')').toString());
+                  throw TextLineMetrics.a((Throwable) ((Object) stackIn_2619_0), ((StringBuilder) (Object) stackIn_2619_1).append(stackIn_2620_2).append(')').toString());
                 }
                 if (var3 != 0) {
                   var4 = GameAppletShell.field_k;
@@ -3192,7 +3192,7 @@ final class wb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 

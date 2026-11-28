@@ -22,7 +22,7 @@ final class kj {
         pd.field_g = null;
         LevelLostScene.field_i = null;
         ib.field_l = null;
-        fo.field_m = null;
+        TextHotspotBounds.field_m = null;
         if (param0 <= 16) {
           return;
         }

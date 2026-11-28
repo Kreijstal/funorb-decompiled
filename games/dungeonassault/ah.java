@@ -176,7 +176,7 @@ final class ah {
             ah.a((ResourceArchive) null, 14, (String) null, (String) null, (ResourceArchive) null);
           }
           var6 = param4.getFileIdByName(0, param2, var5_int);
-          stackIn_3_0 = hh.a(param0, param4, var5_int, (byte) 124, var6);
+          stackIn_3_0 = DefaultTextWidgetRenderer.a(param0, param4, var5_int, (byte) 124, var6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

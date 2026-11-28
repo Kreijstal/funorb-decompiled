@@ -60,7 +60,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         if (qc.field_i == eh.field_p) {
           return ji.field_k.a(0);
         }
-        return lg.field_b;
+        return TextLayout.field_b;
     }
 
     final String getValidationMessage(String param0, byte param1) {

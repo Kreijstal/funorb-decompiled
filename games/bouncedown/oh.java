@@ -81,7 +81,7 @@ final class oh {
     }
 
     final static void b(boolean param0) {
-        ed.field_c.a(10768, new k());
+        TextLayout.field_c.a(10768, new k());
         if (!param0) {
           oh.a(true);
         }

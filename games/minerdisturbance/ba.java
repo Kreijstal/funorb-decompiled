@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends kn implements be, WidgetActivationListener {
+final class ba extends kn implements TextHotspotListener, WidgetActivationListener {
     static ln field_K;
     private AccountCreationResultPanel field_J;
     static boolean field_M;
-    private tn field_L;
+    private RichTextWidget field_L;
     private InteractiveWidget field_I;
 
     ba(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (ad) null);
         String var7 = null;
         int var3 = 0;
-        eg var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -21,8 +21,8 @@ final class ba extends kn implements be, WidgetActivationListener {
           this.field_I.field_A = (ad) ((Object) new wi());
           var7 = oa.a((byte) -98, tk.field_b, new String[]{this.a(false), this.e((byte) -65)});
           var3 = 20;
-          var4 = new eg(bn.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
-          this.field_L = new tn(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(bn.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
+          this.field_L = new RichTextWidget(var7, var4);
           this.field_L.field_n = "";
           this.field_L.a(-24, 0, wk.field_d);
           this.field_L.a(-100, 1, wk.field_d);
@@ -50,7 +50,7 @@ final class ba extends kn implements be, WidgetActivationListener {
         return "</col></u>";
     }
 
-    public final void a(tn param0, int param1, int param2, int param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, int param3) {
         String discarded$1 = null;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -188,7 +188,7 @@ final class ba extends kn implements be, WidgetActivationListener {
           ph.field_a = wh.a(param4, "", "md_title_music");
           h.field_d = wh.a(param4, "", "md_game_music");
           df.field_b = wh.a(param4, "", "md_volcano_music");
-          eg.field_p = wh.a(param4, "", "md_ice_music");
+          DefaultTextWidgetRenderer.field_p = wh.a(param4, "", "md_ice_music");
           hl.field_a = wh.a(param4, "", "md_ice_panic_music");
           DualLinkNode.field_s = wh.a(param4, "", "md_win");
           aa.field_e = wh.a(param4, "", "md_lose");
@@ -201,7 +201,7 @@ final class ba extends kn implements be, WidgetActivationListener {
           stackIn_4_0 = km.field_a;
           stackIn_5_1 = !(param3);
           ((MidiPcmStream) (Object) stackIn_4_0).a(stackIn_5_1, df.field_b, var6, 0, param2);
-          km.field_a.a(false, eg.field_p, var6, 0, param2);
+          km.field_a.a(false, DefaultTextWidgetRenderer.field_p, var6, 0, param2);
           km.field_a.a(false, hl.field_a, var6, 0, param2);
           km.field_a.a(false, DualLinkNode.field_s, var6, 0, param2);
           km.field_a.a(false, aa.field_e, var6, 0, param2);

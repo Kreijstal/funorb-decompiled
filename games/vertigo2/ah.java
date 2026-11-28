@@ -1464,7 +1464,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -109, "keycode_jump");
                 if (var2 != null) {
-                  ro.field_i = var2[0] & 255;
+                  TextLayout.field_i = var2[0] & 255;
                 }
                 var2 = en.a((byte) -107, "keycode_turnleft");
                 if (var2 != null) {
@@ -1484,7 +1484,7 @@ class ah extends mo {
                 }
                 var2 = en.a((byte) -11, "keycode_forwards_classic");
                 if (var2 != null) {
-                  pn.field_O = var2[0] & 255;
+                  RichTextWidget.field_O = var2[0] & 255;
                 }
                 var2 = en.a((byte) -9, "keycode_right_classic");
                 if (var2 != null) {

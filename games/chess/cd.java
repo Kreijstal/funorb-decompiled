@@ -231,10 +231,10 @@ final class cd extends pk {
             cd.a((String) null, -127);
           }
           var2.drawOpaque(0, 0);
-          re.field_u = new RgbSprite(var3, -v.field_i.field_t + var4);
-          re.field_u.bindAsRenderTarget();
+          TextHotspotBounds.field_u = new RgbSprite(var3, -v.field_i.field_t + var4);
+          TextHotspotBounds.field_u.bindAsRenderTarget();
           var2.drawOpaque(0, -v.field_i.field_t);
-          re.field_u.field_r = v.field_i.field_t;
+          TextHotspotBounds.field_u.field_r = v.field_i.field_t;
           fd.a(28773);
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "cd.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

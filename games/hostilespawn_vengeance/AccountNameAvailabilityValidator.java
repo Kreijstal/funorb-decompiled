@@ -136,7 +136,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (param1 >= -86) {
           return;
         }
-        mb.field_s.a(500, 8000);
+        RichTextLayout.field_s.a(500, 8000);
         if (jh.field_ab != 1) {
           return;
         }

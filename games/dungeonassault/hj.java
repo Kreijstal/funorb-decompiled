@@ -99,7 +99,7 @@ final class hj extends gd {
     }
 
     final static void g(int param0) {
-        fe.field_k = new IntrusiveDeque();
+        RichTextLayout.field_k = new IntrusiveDeque();
         int var1 = -89 / ((param0 - 62) / 36);
     }
 

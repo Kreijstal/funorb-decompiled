@@ -131,7 +131,7 @@ final class jc {
               if (param2.field_w == 0) {
                 kc.b(true);
               } else {
-                be.b(-127);
+                TextLineMetrics.b(-127);
               }
             }
             if (param0.field_l != param2.field_l) {

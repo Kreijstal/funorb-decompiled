@@ -349,7 +349,7 @@ final class aj extends DualLinkNode {
         int var3 = fleas.field_A ? 1 : 0;
         if (null != this.field_z) {
           for (var2 = 0; this.field_z.length > var2; var2++) {
-            this.field_z[var2] = ne.a(this.field_z[var2], 32768);
+            this.field_z[var2] = TextLayout.a(this.field_z[var2], 32768);
           }
         }
         if (param0 != 0) {

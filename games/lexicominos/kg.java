@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends nb implements ue, WidgetActivationListener {
+final class kg extends nb implements TextHotspotListener, WidgetActivationListener {
     private AccountCreationResultPanel field_F;
-    private bc field_B;
+    private RichTextWidget field_B;
     static PcmStreamMixer field_G;
     private InteractiveWidget field_E;
     static int field_C;
@@ -43,7 +43,7 @@ final class kg extends nb implements ue, WidgetActivationListener {
         super(0, 0, 288, 0, (rd) null);
         String var7 = null;
         int var3 = 0;
-        ik var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -52,8 +52,8 @@ final class kg extends nb implements ue, WidgetActivationListener {
           this.field_E.field_i = (rd) ((Object) new v());
           var7 = da.a(new String[]{this.e(true), this.h(-6724)}, AccountNameAvailabilityValidator.field_p, false);
           var3 = 20;
-          var4 = new ik(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
-          this.field_B = new bc(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
+          this.field_B = new RichTextWidget(var7, var4);
           this.field_B.field_q = "";
           this.field_B.a(wc.field_b, 0, -27371);
           this.field_B.a(wc.field_b, 1, -27371);
@@ -87,7 +87,7 @@ final class kg extends nb implements ue, WidgetActivationListener {
         return ig.field_a.readString(false);
     }
 
-    public final void a(int param0, bc param1, int param2, int param3) {
+    public final void onTextHotspotActivated(int param0, RichTextWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;

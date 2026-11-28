@@ -20,19 +20,19 @@ final class cl extends hk {
         int var2Lifetime1;
         if (this.field_h <= 0) {
           if (this.field_f > 0) {
-            tb.field_d.playSampleWithPan(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
+            TextLayout.field_d.playSampleWithPan(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
             this.field_f = 0;
             this.field_g = 0;
           }
           var2 = 63 / ((29 - param0) / 42);
           return;
         }
-        tb.field_d.playSampleWithPan(d.field_b[this.field_k], 100, 128 * gi.field_m, this.field_l / this.field_h);
+        TextLayout.field_d.playSampleWithPan(d.field_b[this.field_k], 100, 128 * gi.field_m, this.field_l / this.field_h);
         this.field_k = this.field_k + 1;
         this.field_l = 0;
         this.field_h = 0;
         if (this.field_f > 0) {
-          tb.field_d.playSampleWithPan(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
+          TextLayout.field_d.playSampleWithPan(cj.field_x, 100, gi.field_m * 128, this.field_g / this.field_f);
           this.field_f = 0;
           this.field_g = 0;
         }
@@ -72,7 +72,7 @@ final class cl extends hk {
         var4 = CrazyCrystals.field_B;
         try {
           for (var3_int = 0; ma.field_n.length > var3_int; var3_int++) {
-            fo.field_m[var3_int] = param1.field_g;
+            TextHotspotBounds.field_m[var3_int] = param1.field_g;
           }
           if (param0 == 19) {
             return;

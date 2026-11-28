@@ -246,16 +246,16 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
                     if (0 == var18) {
                       if (0 <= var17 &&
                         uc.field_f > var17) {
-                        qa.a(var17 + var16Lifetime2, param8, param4, var18, -2141888031);
+                        RichTextWidget.a(var17 + var16Lifetime2, param8, param4, var18, -2141888031);
                       }
                     } else {
                       if (var18 + var17 >= uc.field_f) {
                         var18 = -1 + (-var17 + uc.field_f);
                       }
                       if (var17 < 0) {
-                        qa.a(var16Lifetime2, param8, param4, var17 + var18, param1 ^ 2141888101);
+                        RichTextWidget.a(var16Lifetime2, param8, param4, var17 + var18, param1 ^ 2141888101);
                       } else {
-                        qa.a(var17 + var16Lifetime2, param8, param4, var18, -2141888031);
+                        RichTextWidget.a(var17 + var16Lifetime2, param8, param4, var18, -2141888031);
                       }
                     }
                   }
@@ -327,16 +327,16 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
                 if (var17Lifetime1 == 0) {
                   if (var16Lifetime1 >= 0 &&
                     uc.field_f > var16Lifetime1) {
-                    qa.a(var15Lifetime1 + var16Lifetime1, param8, param4, var17Lifetime1, -2141888031);
+                    RichTextWidget.a(var15Lifetime1 + var16Lifetime1, param8, param4, var17Lifetime1, -2141888031);
                   }
                 } else {
                   if (uc.field_f <= var17Lifetime1 + var16Lifetime1) {
                     var17Lifetime1 = -1 - var16Lifetime1 + uc.field_f;
                   }
                   if (var16Lifetime1 < 0) {
-                    qa.a(var15Lifetime1, param8, param4, var16Lifetime1 + var17Lifetime1, param1 ^ 2141888101);
+                    RichTextWidget.a(var15Lifetime1, param8, param4, var16Lifetime1 + var17Lifetime1, param1 ^ 2141888101);
                   } else {
-                    qa.a(var15Lifetime1 + var16Lifetime1, param8, param4, var17Lifetime1, -2141888031);
+                    RichTextWidget.a(var15Lifetime1 + var16Lifetime1, param8, param4, var17Lifetime1, -2141888031);
                   }
                 }
               }

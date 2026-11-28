@@ -110,7 +110,7 @@ final class rb extends gj implements WidgetActivationListener {
               if (var6_int == 0) {
                 ResourceArchive.field_k = ef.field_h;
               } else {
-                ResourceArchive.field_k = pi.field_g;
+                ResourceArchive.field_k = TextLineMetrics.field_g;
                 be.field_a = var6_int;
                 pd.field_l = -1;
               }
@@ -133,7 +133,7 @@ final class rb extends gj implements WidgetActivationListener {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ResourceArchive.field_k = pi.field_g;
+                  ResourceArchive.field_k = TextLineMetrics.field_g;
                   pd.field_l = -1;
                   decompiledFrameRemainder0 = false;
                 }
@@ -225,7 +225,7 @@ final class rb extends gj implements WidgetActivationListener {
               stackIn_78_0 = 13;
               return stackIn_78_0;
             }
-            if (pi.field_g == ResourceArchive.field_k &&
+            if (TextLineMetrics.field_g == ResourceArchive.field_k &&
               gf.b(115)) {
               BufferedRandomAccessFile.c(-28354);
               if (7 == be.field_a &&

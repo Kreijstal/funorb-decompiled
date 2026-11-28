@@ -264,7 +264,7 @@ final class vc implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var13_ref_String = field_b;
               var16.field_b.a((byte) -12, var13_ref_String, 7);
               var17 = pi.field_d;
-              var13 = re.field_m;
+              var13 = TextHotspotBounds.field_m;
               var14 = ag.field_f;
               var17.field_b.a(true, var13, 0, var14, 0);
             }

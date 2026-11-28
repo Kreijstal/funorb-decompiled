@@ -12,7 +12,7 @@ final class d {
     int field_i;
     private int field_f;
     int field_o;
-    static hd field_l;
+    static DefaultTextWidgetRenderer field_l;
     private int field_j;
     int field_p;
     int field_h;

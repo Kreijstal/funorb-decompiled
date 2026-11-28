@@ -58,7 +58,7 @@ final class uha extends UiComponent {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int stackIn_5_0 = 0;
-        mh stackIn_6_0 = null;
+        CreaturePoseEffect stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -70,7 +70,7 @@ final class uha extends UiComponent {
           }
           stackIn_5_0 = (param0.readUnsignedByte(16711935) == 1) ? 1 : 0;
           var3 = stackIn_5_0;
-          stackIn_6_0 = new mh(var2, var3 != 0);
+          stackIn_6_0 = new CreaturePoseEffect(var2, var3 != 0);
           return (EventEffect) ((Object) stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

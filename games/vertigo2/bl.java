@@ -213,7 +213,7 @@ final class bl extends l {
             qq.a(MovingLevelTile.field_w, 0, jo.field_g, 0, var4);
             field_z = new String[var3_int - var4 - 1];
             qq.a(MovingLevelTile.field_w, 1 + var4, field_z, 0, -1 - var4 + var3_int);
-            var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, ro.field_f, -113), (byte) 102, MovingLevelTile.field_w, mf.field_c);
+            var3_int = dc.a(bc.field_c, Vertigo2.a(new String[]{"<br><%0><br>"}, TextLayout.field_f, -113), (byte) 102, MovingLevelTile.field_w, mf.field_c);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(MovingLevelTile.field_w[var5])) {

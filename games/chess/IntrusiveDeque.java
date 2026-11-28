@@ -305,7 +305,7 @@ final class IntrusiveDeque {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          re.field_u.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
+          TextHotspotBounds.field_u.drawWithOpacity(var3 + 15, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

@@ -285,7 +285,7 @@ final class nj {
             var6 = param2;
           } else {
             var7 = (CharSequence) ((Object) param2);
-            var4_long = lg.a(var7, -1);
+            var4_long = TextLayout.a(var7, -1);
           }
           stackIn_7_0 = ac.a(var4_long, (String) (var6), -12, param0, param3);
           return stackIn_7_0;

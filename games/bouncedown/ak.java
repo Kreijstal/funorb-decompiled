@@ -175,11 +175,11 @@ abstract class ak extends lk implements ik {
         }
     }
 
-    String d(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.d(param0);
+        String var2 = super.getTooltipText(param0);
         if (null != this.field_x) {
-          var3 = this.field_x.d(0);
+          var3 = this.field_x.getTooltipText(0);
           if (var3 != null) {
             return var3;
           }

@@ -5,7 +5,7 @@ final class ow extends BoardChange {
     private aj[] field_m;
     static String field_n;
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         try {
           param0.addChild(27799, new lv(param0.field_o, this.field_m));
           if (param1 >= -2) {
@@ -67,7 +67,7 @@ final class ow extends BoardChange {
         }
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         int var5 = 0;
         aj[] var3 = null;
         int var4 = 0;
@@ -133,7 +133,7 @@ final class ow extends BoardChange {
         }
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         int var4 = 0;
         aj[] var3 = null;
         aj var5 = null;

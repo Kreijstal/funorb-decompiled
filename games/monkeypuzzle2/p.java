@@ -208,7 +208,7 @@ final class p {
               105 >= param2) {
               var4 = param3;
               wh.a(var4, true);
-              w.field_c = jj.createAccountSuggestionsResult(param3, true);
+              w.field_c = RichTextWidget.createAccountSuggestionsResult(param3, true);
               return;
             }
             w.field_c = lh.createAccountErrorResult(true, param0, param2);

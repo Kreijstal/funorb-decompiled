@@ -47,7 +47,7 @@ abstract class sh extends WidgetContainer implements FieldValidatorProvider {
           var2 = ig.field_m;
           var3 = var2.readUnsignedByte(16711935);
           if (var3 == 0) {
-            var12 = vv.a((byte) 123);
+            var12 = TextLayout.a((byte) 123);
             var4 = var12;
             var11 = var12;
             var5 = var11;
@@ -85,7 +85,7 @@ abstract class sh extends WidgetContainer implements FieldValidatorProvider {
             vc.a((byte) -100);
             return;
           }
-          var15.field_m = vv.a((byte) 113);
+          var15.field_m = TextLayout.a((byte) 113);
           var15.field_j = true;
           var15.unlink(false);
           return;

@@ -34,7 +34,7 @@ final class gk {
           if (param0.field_g != 0 ||
             param0.field_d != 0) {
             for (var2_int = 0; sf.field_e > var2_int; var2_int++) {
-              var3 = mi.field_c[var2_int];
+              var3 = TextLineMetrics.field_c[var2_int];
               if (2 == var3.field_a &&
                 var3.field_g == param0.field_g &&
                 param0.field_d == var3.field_d) {

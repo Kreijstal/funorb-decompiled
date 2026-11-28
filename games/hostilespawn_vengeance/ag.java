@@ -16,7 +16,7 @@ class ag extends IntrusiveNode {
     static BufferedSocket field_t;
     int field_s;
     int field_m;
-    ce field_l;
+    TextLayout field_l;
     boolean field_u;
     int field_q;
     nn field_h;
@@ -127,7 +127,7 @@ class ag extends IntrusiveNode {
         if (!param2) {
           if (var5 == 0) {
             mn.field_c = EditableTextField.field_L;
-            IntrusiveNode.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -136,7 +136,7 @@ class ag extends IntrusiveNode {
           }
           if (pf.field_o == 0) {
             mn.field_c = EditableTextField.field_L;
-            IntrusiveNode.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -146,7 +146,7 @@ class ag extends IntrusiveNode {
           this.c((byte) -82);
           if (var7 == 0) {
             mn.field_c = EditableTextField.field_L;
-            IntrusiveNode.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -161,7 +161,7 @@ class ag extends IntrusiveNode {
         if (pf.field_o == 0) {
           if (EditableTextField.field_L != 0) {
             mn.field_c = EditableTextField.field_L;
-            IntrusiveNode.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -170,7 +170,7 @@ class ag extends IntrusiveNode {
           }
           if (mn.field_c == 0) {
             mn.field_c = EditableTextField.field_L;
-            IntrusiveNode.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -186,7 +186,7 @@ class ag extends IntrusiveNode {
             DiskArchiveRequest.field_D = null;
           }
           mn.field_c = EditableTextField.field_L;
-          IntrusiveNode.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -198,7 +198,7 @@ class ag extends IntrusiveNode {
           if (var7 == 0) {
             if (EditableTextField.field_L != 0) {
               mn.field_c = EditableTextField.field_L;
-              IntrusiveNode.a(this.e(34), (byte) -82);
+              IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
               if (param1 == 8799) {
                 return param2;
               }
@@ -207,7 +207,7 @@ class ag extends IntrusiveNode {
             }
             if (mn.field_c == 0) {
               mn.field_c = EditableTextField.field_L;
-              IntrusiveNode.a(this.e(34), (byte) -82);
+              IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
               if (param1 == 8799) {
                 return param2;
               }
@@ -223,7 +223,7 @@ class ag extends IntrusiveNode {
               DiskArchiveRequest.field_D = null;
             }
             mn.field_c = EditableTextField.field_L;
-            IntrusiveNode.a(this.e(34), (byte) -82);
+            IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
             if (param1 == 8799) {
               return param2;
             }
@@ -242,7 +242,7 @@ class ag extends IntrusiveNode {
                 ((k) (var10.field_p)).a(var10, false, (od) null);
                 DiskArchiveRequest.field_D = null;
                 mn.field_c = EditableTextField.field_L;
-                IntrusiveNode.a(this.e(34), (byte) -82);
+                IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
                 if (param1 != 8799) {
                   ag.d((byte) 54);
                 }
@@ -252,7 +252,7 @@ class ag extends IntrusiveNode {
             }
           }
           mn.field_c = EditableTextField.field_L;
-          IntrusiveNode.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -261,7 +261,7 @@ class ag extends IntrusiveNode {
         }
         if (EditableTextField.field_L != 0) {
           mn.field_c = EditableTextField.field_L;
-          IntrusiveNode.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -270,7 +270,7 @@ class ag extends IntrusiveNode {
         }
         if (mn.field_c == 0) {
           mn.field_c = EditableTextField.field_L;
-          IntrusiveNode.a(this.e(34), (byte) -82);
+          IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
           if (param1 == 8799) {
             return param2;
           }
@@ -286,7 +286,7 @@ class ag extends IntrusiveNode {
           DiskArchiveRequest.field_D = null;
         }
         mn.field_c = EditableTextField.field_L;
-        IntrusiveNode.a(this.e(34), (byte) -82);
+        IntrusiveNode.a(this.getTooltipText(34), (byte) -82);
         if (param1 == 8799) {
           return param2;
         }
@@ -450,7 +450,7 @@ class ag extends IntrusiveNode {
         this.a(this.field_s, this.field_m, param0 ^ param0, this.field_v, this.field_x);
     }
 
-    String e(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 34) {
           this.field_s = 88;
           if (this.field_u) {
@@ -542,7 +542,7 @@ class ag extends IntrusiveNode {
           if (param0 <= 0) {
             return false;
           }
-          this.field_l = (ce) null;
+          this.field_l = (TextLayout) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -708,7 +708,7 @@ class ag extends IntrusiveNode {
 
     ag(String param0, nn param1, mh param2) {
         RuntimeException runtimeException = null;
-        mi var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -723,10 +723,10 @@ class ag extends IntrusiveNode {
           this.field_h = param1;
           this.field_p = param2;
           this.field_n = param0;
-          if (this.field_h instanceof mi) {
-            var4 = (mi) ((Object) this.field_h);
-            this.field_s = var4.a(false, this);
-            this.field_x = var4.b(this, (byte) -79);
+          if (this.field_h instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_h);
+            this.field_s = var4.getPreferredWidth(false, this);
+            this.field_x = var4.getPreferredHeight(this, (byte) -79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

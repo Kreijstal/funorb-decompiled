@@ -28,10 +28,10 @@ final class sa extends ok {
         this.field_H.drawParagraph(this.field_O, this.field_S + var7 + var5, this.field_S + var6, this.field_E - this.field_S, -(this.field_S * 2) + this.field_u, this.field_N, -1, !this.field_L ? 2 : 0, 1, this.field_H.field_G);
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_B.field_q ? 1 : 0;
         this.field_B.field_q = this.field_q;
-        String var3 = this.field_B.e(param0);
+        String var3 = this.field_B.getTooltipText(param0);
         this.field_B.field_q = var2 != 0 ? true : false;
         return var3;
     }

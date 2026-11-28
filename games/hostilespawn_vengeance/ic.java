@@ -134,7 +134,7 @@ final class ic extends IntrusiveNode {
             stackIn_7_0 = hb.field_v;
             return stackIn_7_0;
           }
-          var3 = cj.a(param0, -57, '.');
+          var3 = RichTextWidget.a(param0, -57, '.');
           if (var3.length < 2) {
             stackIn_10_0 = gf.field_f;
             return stackIn_10_0;

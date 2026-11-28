@@ -75,7 +75,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
             stackIn_3_0 = tk.field_f;
             return stackIn_3_0;
           }
-          var3 = nn.b(68);
+          var3 = TextHotspotBounds.b(68);
           var4 = 0;
           if (param1 > -3) {
             field_e = (String) null;
@@ -141,7 +141,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -188,7 +188,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.lastReturned = null;
           this.nextNode = this.deque.sentinel.field_o;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "tm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

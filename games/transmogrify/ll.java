@@ -77,7 +77,7 @@ final class ll extends bi implements WidgetActivationListener {
             }
             var2 = 1;
           }
-          bk.field_c.a(-112, tl.a(196077633, ol.field_b, nk.field_c), tl.a(196077633, PacketBuffer.field_j, bk.field_a));
+          bk.field_c.a(-112, tl.a(196077633, TextLineMetrics.field_b, nk.field_c), tl.a(196077633, PacketBuffer.field_j, bk.field_a));
           if (bk.field_c.b(31552)) {
             var1_int = 1;
           }
@@ -163,7 +163,7 @@ final class ll extends bi implements WidgetActivationListener {
           var4.field_p = 0;
           var4.field_h = 80;
           var4.field_n = 50;
-          var4.field_q = (WidgetRenderer) ((Object) new h(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (WidgetRenderer) ((Object) new DefaultTextWidgetRenderer(al.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -82);
           this.field_P = this.a(oe.field_a, (ma) (this), -3);
           return;

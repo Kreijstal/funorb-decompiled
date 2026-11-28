@@ -282,7 +282,7 @@ final class HomingMissileEvent extends SpecialEvent {
         SoftwareRasterizer.field_j = FlyAnimation.field_D;
         SoftwareRasterizer.field_k = eia.field_d;
         int var1 = -34 % ((-63 - param0) / 42);
-        SoftwareRasterizer.field_h = tq.field_r;
+        SoftwareRasterizer.field_h = RichTextLayout.field_r;
         SoftwareRasterizer.field_f = jf.field_m;
     }
 

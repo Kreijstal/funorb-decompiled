@@ -113,7 +113,7 @@ final class pb {
         if (param0 != -84) {
           return;
         }
-        if (0 < ui.field_m) {
+        if (0 < TextHotspotBounds.field_m) {
           if (this.field_p) {
             fieldTemp$0 = this.field_t - 1;
             this.field_t = this.field_t - 1;
@@ -330,7 +330,7 @@ final class pb {
         if (this.field_a > ja.field_d) {
           return false;
         }
-        if (ui.field_m > 0) {
+        if (TextHotspotBounds.field_m > 0) {
           return true;
         }
         return false;

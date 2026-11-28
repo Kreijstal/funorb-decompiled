@@ -21,7 +21,7 @@ final class ci {
           for (var1_int = 0; var1_int < 16; var1_int++) {
             var2 = -pe.field_d[1 + var1_int].field_e[0] + pe.field_d[var1_int].field_e[0];
             var3 = -pe.field_d[1 + var1_int].field_e[1] + pe.field_d[var1_int].field_e[1];
-            var4 = (int)(65535.0 * (be.field_b - Math.atan2((double)var3, (double)var2) - 1.5707963267948966) / 6.283185307179586);
+            var4 = (int)(65535.0 * (TextLineMetrics.field_b - Math.atan2((double)var3, (double)var2) - 1.5707963267948966) / 6.283185307179586);
             dj.field_a[0].drawRotatedAboutNearest(dj.field_a[0].field_m << 3, 0, (int)pe.field_d[var1_int].field_e[0] << 4, (int)pe.field_d[var1_int].field_e[1] << 4, var4, 4096);
           }
           SoftwareRasterizer.setClip(0, 0, 640, 480);

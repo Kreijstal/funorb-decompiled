@@ -33,7 +33,7 @@ final class ii extends InteractiveWidget {
             ta.field_s = new Sprite(var9, var10);
             hj.a(ta.field_s, 1);
             var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
@@ -41,7 +41,7 @@ final class ii extends InteractiveWidget {
             ta.field_s = new Sprite(var9, var10);
             hj.a(ta.field_s, 1);
             var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
@@ -49,18 +49,18 @@ final class ii extends InteractiveWidget {
             hj.a(ta.field_s, 1);
             SoftwareRasterizer.clearRaster();
             var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
             return;
           }
           ta.field_s = new Sprite(var9, var10);
           hj.a(ta.field_s, 1);
           var15.drawRotatedAboutBilinear(112, 144, var15.field_w << 4, var15.field_x << 4, -this.field_I << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           ta.field_s.drawAdditive(-var15.field_w + var5, -var15.field_x + var6, 256);
           return;
         }
-        if (var8 == vk.field_d) {
+        if (var8 == TextLayout.field_d) {
           var18 = DualLinkNode.field_p[0];
           var9Lifetime1 = var18.field_w << 1;
           var10Lifetime1 = var18.field_x << 1;
@@ -68,7 +68,7 @@ final class ii extends InteractiveWidget {
             ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             hj.a(ta.field_s, 1);
             var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
@@ -76,7 +76,7 @@ final class ii extends InteractiveWidget {
             ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             hj.a(ta.field_s, 1);
             var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
@@ -84,14 +84,14 @@ final class ii extends InteractiveWidget {
             hj.a(ta.field_s, 1);
             SoftwareRasterizer.clearRaster();
             var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
             return;
           }
           ta.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
           hj.a(ta.field_s, 1);
           var18.drawRotatedAboutBilinear(112, 144, var18.field_w << 4, var18.field_x << 4, -this.field_I << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           ta.field_s.drawAdditive(-var18.field_w + var5, -var18.field_x + var6, 256);
           return;
         }
@@ -190,7 +190,7 @@ final class ii extends InteractiveWidget {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != 3690) {
           return (String) null;
         }

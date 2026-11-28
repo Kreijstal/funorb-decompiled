@@ -210,7 +210,7 @@ final class IsaacRandom {
           ValidatedTextField.field_P = new int[eg.field_c];
           da.field_c = new int[eg.field_c];
           mb.field_b = new int[eg.field_c];
-          jj.field_E = new byte[eg.field_c][];
+          RichTextWidget.field_E = new byte[eg.field_c][];
           var17.position = -7 + param0.length - 8 * eg.field_c;
           nj.field_d = var17.readUnsignedShort(17277);
           qk.field_a = var17.readUnsignedShort(17277);
@@ -250,7 +250,7 @@ final class IsaacRandom {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            jj.field_E[var4Lifetime5] = var21;
+            RichTextWidget.field_E[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.readUnsignedByte((byte) 114);
             stackIn_24_0 = -1;

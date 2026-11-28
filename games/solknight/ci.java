@@ -192,7 +192,7 @@ class ci extends gf implements WidgetActivationListener {
         RuntimeException var6 = null;
         try {
           if (!this.field_lb) {
-            kj.a(ia.g(97), 108, "tochangedisplayname.ws");
+            RichTextWidget.a(ia.g(97), 108, "tochangedisplayname.ws");
           } else {
             h.a(3, true);
             this.f(true);
@@ -344,7 +344,7 @@ class ci extends gf implements WidgetActivationListener {
           fi.field_a = SecondaryNodeDeque.a(param3, -18362, "frame_top", "commonui");
           ProxySocketConnector.field_l = SecondaryNodeDeque.a(param3, -18362, "frame_bottom", "commonui");
           fa.field_b = Asteroid.a("jagex_logo_grey", "commonui", param3, (byte) -125);
-          vk.field_i = SecondaryNodeDeque.a(param3, -18362, "button", "commonui");
+          RichTextLayout.field_i = SecondaryNodeDeque.a(param3, -18362, "button", "commonui");
           PacketBuffer.field_k = nh.a(param3, "validation", 0, "commonui");
           stackIn_3_0 = (Archive) (param0);
           stackIn_3_1 = "commonui";
@@ -399,7 +399,7 @@ class ci extends gf implements WidgetActivationListener {
           var12.bindAsRenderTarget();
           var18.drawOpaque(-var9Lifetime1, 0);
           MidiPcmStream.e(4096);
-          vk.field_i = new Sprite[]{var16, var12, var11};
+          RichTextLayout.field_i = new Sprite[]{var16, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -25,11 +25,11 @@ final class AccountServiceResult {
         fm.field_T = new ci(0L, (ci) null);
         fm.field_T.a((byte) 127, qa.field_f.field_a);
         fm.field_T.a((byte) 123, sc.field_d);
-        ah.field_i = new ci(0L, ki.field_P);
+        RichTextLayout.field_i = new ci(0L, ki.field_P);
         if (param1) {
           dn.field_c = new ci(0L, (ci) null);
-          ah.field_i.a((byte) 123, qf.field_f);
-          ah.field_i.a((byte) 126, dn.field_c);
+          RichTextLayout.field_i.a((byte) 123, qf.field_f);
+          RichTextLayout.field_i.a((byte) 126, dn.field_c);
           dn.field_c.a((byte) 126, bh.field_G);
           dn.field_c.a((byte) 123, BufferedSocket.field_d);
           cf.a(122, param0);
@@ -37,8 +37,8 @@ final class AccountServiceResult {
         }
         AccountServiceResult.a(false, true);
         dn.field_c = new ci(0L, (ci) null);
-        ah.field_i.a((byte) 123, qf.field_f);
-        ah.field_i.a((byte) 126, dn.field_c);
+        RichTextLayout.field_i.a((byte) 123, qf.field_f);
+        RichTextLayout.field_i.a((byte) 126, dn.field_c);
         dn.field_c.a((byte) 126, bh.field_G);
         dn.field_c.a((byte) 123, BufferedSocket.field_d);
         cf.a(122, param0);

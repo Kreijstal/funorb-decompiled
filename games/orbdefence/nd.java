@@ -13,7 +13,7 @@ final class nd {
         if (param0 != -1) {
           nd.clearStaticReferences(91);
         }
-        return new df[]{mj.field_l, vh.field_s, jc.field_a};
+        return new df[]{mj.field_l, vh.field_s, DefaultTextWidgetRenderer.field_a};
     }
 
     public static void clearStaticReferences(int param0) {

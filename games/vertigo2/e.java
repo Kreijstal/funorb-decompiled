@@ -56,8 +56,8 @@ final class e {
         }
         if (ua.field_e <= param3 &&
           WidgetContainer.field_D >= param3) {
-          param4 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
-          param1 = pk.a((byte) -14, ib.field_a, param1, ap.field_e);
+          param4 = TextHotspotBounds.a((byte) -14, ib.field_a, param4, ap.field_e);
+          param1 = TextHotspotBounds.a((byte) -14, ib.field_a, param1, ap.field_e);
           oq.a(param1, param4, (byte) -86, param3, param2);
         }
     }

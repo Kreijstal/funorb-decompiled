@@ -249,7 +249,7 @@ final class mc extends IntrusiveNode {
                         stackIn_38_0Lifetime1 = var17;
                         stackIn_38_1Lifetime1 = var16 << 4;
                         var18 = stackIn_38_0Lifetime1 + stackIn_38_1Lifetime1;
-                        dm.field_g[var18] = var8;
+                        TextLayout.field_g[var18] = var8;
                         vf.field_a[var16] = 1 + var17;
                         if (param2.field_m > 0 &&
                           param2.field_t != null) {

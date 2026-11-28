@@ -41,7 +41,7 @@ final class oa extends IntrusiveNode {
           ImageProducerRasterBuffer.field_m = ValidatedTextField.field_V;
           BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
           if (ValidatedTextField.field_V >= 0) {
-            pi.field_b[ValidatedTextField.field_V].a(param1, true);
+            TextLineMetrics.field_b[ValidatedTextField.field_V].a(param1, true);
           }
           var3 = -72 % ((param2 + 26) / 39);
           if (ValidatedTextField.field_V != 8) {
@@ -55,7 +55,7 @@ final class oa extends IntrusiveNode {
           BufferedRandomAccessFile.a(0, BufferedSocket.field_j);
         }
         if (ValidatedTextField.field_V >= 0) {
-          pi.field_b[ValidatedTextField.field_V].a(param1, true);
+          TextLineMetrics.field_b[ValidatedTextField.field_V].a(param1, true);
         }
         var3Lifetime1 = -72 % ((param2 + 26) / 39);
         if (ValidatedTextField.field_V != 8) {

@@ -39,7 +39,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             ProxyAuthenticationRequiredException.a(false);
           }
           var5 = param1.getFileIdByName((byte) -91, param2, var4_int);
-          stackIn_3_0 = fk.a(var4_int, param1, var5, 16711680);
+          stackIn_3_0 = TextHotspotBounds.a(var4_int, param1, var5, 16711680);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

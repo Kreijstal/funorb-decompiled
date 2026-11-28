@@ -23,7 +23,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           int var3_int = -85 / ((-35 - param1) / 60);
           param0.onDampedProjectileContact((byte) 9, this);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -41,7 +41,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
             this.field_Y = 0.723536474622876;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -51,7 +51,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
             DampedProjectile.h((byte) -107);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -79,7 +79,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           }
           param1.b((MovingTunnelEntity) (this), -127);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -112,7 +112,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           param2.a((byte) 62, var13);
           this.field_Q.a(0.04, var13[8], var13[6], var13[7], 7);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -130,7 +130,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
             this.updateForTunnelSegment(-98, -49);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           }
           param0.onDampedProjectileContact((byte) 9, this);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
             this.applyDamage(-127, false, 0.5826377833815527);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -176,7 +176,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           }
           param1.c((MovingTunnelEntity) (this), -7442);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -187,7 +187,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
             field_W = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -213,7 +213,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -239,7 +239,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -248,7 +248,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           param1.b(false, (MovingTunnelEntity) (this));
           int var3_int = -102 / ((param0 - 14) / 53);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "sa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "sa.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -297,7 +297,7 @@ abstract class DampedProjectile extends MovingTunnelEntity {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

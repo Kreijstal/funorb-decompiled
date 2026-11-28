@@ -113,7 +113,7 @@ final class t {
             }
             var4_ref_ll = m.field_b;
             if (!var4_ref_ll.field_l) {
-              var2 = ja.field_L;
+              var2 = RichTextWidget.field_L;
             } else {
               if (null != var4_ref_ll.field_i) {
                 var2 = bh.field_n;

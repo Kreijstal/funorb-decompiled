@@ -225,14 +225,14 @@ final class MovingBlock extends IntrusiveNode {
             } else {
               if (var9Lifetime1 == 248) {
                 ob.a(209, CachedArchiveSource.b((byte) 77));
-                fi.field_t = gh.field_c;
+                TextHotspotBounds.field_t = gh.field_c;
                 GameKeyHandler.a((byte) 125);
                 kg.field_f = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (var9Lifetime1 == 99) {
-                DiskArchiveStore.a(va.a(93), false);
+                DiskArchiveStore.a(TextLineMetrics.a(93), false);
                 qi.field_c = new Boolean(bg.a(ne.field_a, -2));
                 ne.field_a.position = 0;
               } else {
@@ -268,7 +268,7 @@ final class MovingBlock extends IntrusiveNode {
                 dh.a(-19136, var10_ref_String, CachedArchiveSource.b((byte) 77));
               }
             } else {
-              fi.field_t = ne.field_a.readString(0);
+              TextHotspotBounds.field_t = ne.field_a.readString(0);
             }
             GameKeyHandler.a((byte) 115);
             kg.field_f = false;
@@ -278,9 +278,9 @@ final class MovingBlock extends IntrusiveNode {
           if (null == r.field_i) {
             if (kg.field_f) {
               if (bj.b(-21676) <= 30000L) {
-                fi.field_t = cf.field_m;
+                TextHotspotBounds.field_t = cf.field_m;
               } else {
-                fi.field_t = nk.field_j;
+                TextHotspotBounds.field_t = nk.field_j;
               }
               kg.field_f = false;
               stackIn_63_0 = 249;

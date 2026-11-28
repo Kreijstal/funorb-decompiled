@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mc extends hh {
+class mc extends DefaultTextWidgetRenderer {
     static r field_x;
     static RgbSprite[] field_w;
 
@@ -41,7 +41,7 @@ class mc extends hh {
           if (param0 <= 15) {
             mc.clearDeclaredStaticReferences(21);
           }
-          tg.field_f[param1] = param2;
+          TextLineMetrics.field_f[param1] = param2;
           bf.field_f[param1] = (DungeonAssaultScreen) ((Object) new MenuScreen(param1));
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "mc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

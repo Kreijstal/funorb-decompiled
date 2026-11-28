@@ -120,7 +120,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final void a(PlatformTaskDispatcher param0, int param1) {
         try {
-          lg.a(param0, (byte) 49, this.field_d);
+          TextLayout.a(param0, (byte) 49, this.field_d);
           if (param1 >= -47) {
             java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
             this.focusLost((java.awt.event.FocusEvent) null);

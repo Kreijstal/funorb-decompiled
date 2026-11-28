@@ -28,11 +28,11 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           this.field_O = -this.x + n.field_t - param3;
           int var5_int = -91 % ((param0 + 28) / 43);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "gp.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_s) {
           return null;
         }
@@ -62,7 +62,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
             ValidatedTextField.j((byte) 91);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "gp.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

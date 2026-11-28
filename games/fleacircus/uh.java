@@ -1058,7 +1058,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime186 = tf.a(0, "INSTRUCTIONS_BODIES_5_5");
           if (var2Lifetime186 != null) {
-            j.field_l = ab.a(0, var2Lifetime186);
+            RichTextLayout.field_l = ab.a(0, var2Lifetime186);
           }
           var2Lifetime187 = tf.a(0, "INSTRUCTIONS_BODIES_5_6");
           if (null != var2Lifetime187) {
@@ -1118,7 +1118,7 @@ final class uh extends IntrusiveNode {
           }
           var2Lifetime201 = tf.a(0, "LABEL_BUTTON_LEFTSLOPE");
           if (var2Lifetime201 != null) {
-            j.field_h = ab.a(0, var2Lifetime201);
+            RichTextLayout.field_h = ab.a(0, var2Lifetime201);
           }
           var2Lifetime202 = tf.a(0, "LABEL_BUTTON_RIGHTSLOPE");
           if (null != var2Lifetime202) {

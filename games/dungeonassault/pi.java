@@ -141,11 +141,11 @@ final class pi {
 
     final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
-          tg.field_f[param2] = param0;
-          tg.field_b[param2] = param1;
-          tg.field_j[param2] = param4;
-          tg.field_h[param2] = param5;
-          tg.field_d[param2] = param3;
+          TextLineMetrics.field_f[param2] = param0;
+          TextLineMetrics.field_b[param2] = param1;
+          TextLineMetrics.field_j[param2] = param4;
+          TextLineMetrics.field_h[param2] = param5;
+          TextLineMetrics.field_d[param2] = param3;
           if (param6 != 0) {
             pi.clearStaticReferences(-9);
           }

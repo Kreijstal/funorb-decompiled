@@ -72,9 +72,9 @@ final class DiskCacheWorker implements Runnable {
             }
           } else {
             var3_int = 0;
-            if (j.field_e) {
+            if (RichTextLayout.field_e) {
               var3_int = 1;
-              j.field_e = false;
+              RichTextLayout.field_e = false;
             }
             se.a(hl.d((byte) -85), AgeValidator.field_p, Bzip2State.a(-1917), var3_int != 0, (byte) -81);
           }

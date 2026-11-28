@@ -23,7 +23,7 @@ final class tb {
         }
         if (DiskArchiveRequest.field_I != null) {
           if (!DiskArchiveRequest.field_I.ensureIndexLoaded(0)) {
-            return mi.field_d;
+            return TextLineMetrics.field_d;
           }
           return dh.field_J;
         }

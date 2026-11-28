@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends bc {
+final class ga extends DefaultTextWidgetRenderer {
     private gj field_t;
     static IntrusiveDeque field_w;
     static String field_u;
@@ -125,7 +125,7 @@ final class ga extends bc {
             stackIn_5_0 = null;
           }
           var11 = (InteractiveWidget) (stackIn_5_0);
-          bc.a(param0.field_l + (param1 + param0.field_i), param0.field_m + param2, param0.field_i + param1, param2 + param0.field_m + param0.field_p, param3 - 96);
+          DefaultTextWidgetRenderer.a(param0.field_l + (param1 + param0.field_i), param0.field_m + param2, param0.field_i + param1, param2 + param0.field_m + param0.field_p, param3 - 96);
           if (var11 != null) {
             param4 = param4 & var11.field_F;
           }

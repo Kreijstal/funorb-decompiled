@@ -104,7 +104,7 @@ abstract class dm {
         int[] var16 = null;
         var9 = Chess.field_G;
         try {
-          var3_int = se.field_V;
+          var3_int = RichTextWidget.field_V;
           rh.field_c = new ci(0L, (ci) null);
           if (param1 == null) {
             var10 = (Throwable) null;

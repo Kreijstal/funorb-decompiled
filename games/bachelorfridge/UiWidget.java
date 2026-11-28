@@ -19,7 +19,7 @@ class UiWidget extends IntrusiveNode {
     static String field_i;
     int field_u;
     WidgetRenderer renderer;
-    vv field_j;
+    TextLayout field_j;
     int field_o;
     static int[] field_l;
     WidgetListener listener;
@@ -117,7 +117,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetListener param1) {
-        this(param0, fda.field_i.field_i, param1);
+        this(param0, RemoveDefeatedCreatureEffect.field_i.field_i, param1);
     }
 
     final boolean processInput(boolean param0, int param1, int param2, int param3) {
@@ -667,7 +667,7 @@ class UiWidget extends IntrusiveNode {
         if (var5 == null) {
           return;
         }
-        fda.field_i.a((byte) -49, SuperSpeedEvent.field_s, IntrusiveDeque.field_b, var5);
+        RemoveDefeatedCreatureEffect.field_i.a((byte) -49, SuperSpeedEvent.field_s, IntrusiveDeque.field_b, var5);
     }
 
     boolean acquireFocus(UiWidget param0, int param1) {
@@ -729,8 +729,8 @@ class UiWidget extends IntrusiveNode {
           this.renderer = param1;
           if (this.renderer instanceof WidgetMetrics) {
             var4 = (WidgetMetrics) ((Object) this.renderer);
-            this.width = var4.a(-21928, this);
-            this.height = var4.c(this, false);
+            this.width = var4.getPreferredWidth(-21928, this);
+            this.height = var4.getPreferredHeight(this, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

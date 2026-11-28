@@ -63,7 +63,7 @@ final class nd {
     }
 
     final void a(BitmapFont param0, boolean param1) {
-        lb var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         fk var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -86,7 +86,7 @@ final class nd {
         fk var14Lifetime1;
         fk var14Lifetime2;
         try {
-          var17 = new lb(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_o + param0.field_u));
+          var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_o + param0.field_u));
           var17.field_c = 16777215;
           this.field_n = (wo) ((Object) var17);
           var4 = new fk();

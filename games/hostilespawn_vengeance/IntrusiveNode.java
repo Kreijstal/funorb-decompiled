@@ -183,7 +183,7 @@ class IntrusiveNode {
             FullscreenFocusCanvas.a(250, false);
             var3Lifetime1 = 1;
             for (var4_int = 0; var4_int < ProxySocketFactory.field_j; var4_int++) {
-              if (125 != mm.field_m[var4_int].field_i) {
+              if (125 != TextHotspotBounds.field_m[var4_int].field_i) {
                 continue;
               }
               var3Lifetime1 = 0;
@@ -197,7 +197,7 @@ class IntrusiveNode {
                 rl.field_c == 2) {
                 CrossfadingMidiPcmStream.a(14, 1);
                 for (var4_intLifetime2 = 1; var4_intLifetime2 < ProxySocketFactory.field_j; var4_intLifetime2++) {
-                  var8 = mm.field_m[var4_intLifetime2];
+                  var8 = TextHotspotBounds.field_m[var4_intLifetime2];
                   if (15 == var8.field_i) {
                     var8.field_i = -1;
                     var6 = var8.field_j.getClampedTileIndex(-4);
@@ -235,7 +235,7 @@ class IntrusiveNode {
             return;
           }
           for (var3Lifetime3 = 0; var3Lifetime3 < ProxySocketFactory.field_j; var3Lifetime3++) {
-            var4 = mm.field_m[var3Lifetime3];
+            var4 = TextHotspotBounds.field_m[var3Lifetime3];
             if (5 == var4.field_i) {
               var4.field_I = 0;
             } else {

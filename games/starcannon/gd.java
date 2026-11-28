@@ -60,15 +60,15 @@ final class gd {
           if (null != mf.field_c) {
             try {
               mf.field_c.seek(0L, 0);
-              mf.field_c.write(se.field_p.position, 24, false, se.field_p.payload);
+              mf.field_c.write(RichTextLayout.field_p.position, 24, false, RichTextLayout.field_p.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              se.field_p.position = se.field_p.position + param0;
+              RichTextLayout.field_p.position = RichTextLayout.field_p.position + param0;
               return;
             }
           }
-          se.field_p.position = se.field_p.position + param0;
+          RichTextLayout.field_p.position = RichTextLayout.field_p.position + param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

@@ -61,7 +61,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         if (param0 != 256) {
           field_m = (wg) null;
         }
-        return gf.a(0, kk.c(param0 ^ -14303));
+        return gf.a(0, RichTextLayout.c(param0 ^ -14303));
     }
 
     final String getValidationMessage(byte param0, String param1) {

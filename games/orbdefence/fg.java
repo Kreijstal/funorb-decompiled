@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class fg extends jc {
+class fg extends DefaultTextWidgetRenderer {
     static int field_u;
 
     public final void a(int param0, int param1, pj param2, int param3, boolean param4) {
@@ -219,7 +219,7 @@ class fg extends jc {
           }
           for (var2 = 1; vf.field_a.length > var2; var2++) {
             var3 = vf.field_a[var2];
-            mk.a(dm.field_g, var2 << 4, dm.field_g, var1_int, var3);
+            mk.a(TextLayout.field_g, var2 << 4, TextLayout.field_g, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;

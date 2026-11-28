@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class mi extends el {
+final class mi extends RichTextWidget {
     private FieldValidator field_S;
     private Sprite field_P;
     private int field_Q;
@@ -31,8 +31,8 @@ final class mi extends el {
             return;
           }
           try {
-            if (rb.field_a != null) {
-              rb.field_a.shutdown(83);
+            if (TextLayout.field_a != null) {
+              TextLayout.field_a.shutdown(83);
             }
             if (null != DiskCacheWorker.field_c) {
               try {
@@ -63,7 +63,7 @@ final class mi extends el {
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
         ud var6;
-        dl var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -100,13 +100,13 @@ final class mi extends el {
             }
           }
           this.field_s = var5;
-          this.b(true);
+          this.rebuildHotspotBounds(true);
         }
         super.a(param0, param1, param2, param3 ^ 0);
         var6Lifetime1 = this.field_S.getValidationStatus((byte) -5);
-        var8 = (dl) ((Object) this.field_y);
+        var8 = (TextWidgetRenderer) ((Object) this.field_y);
         var9 = param1 + this.field_p;
-        var10 = var8.a((UiWidget) (this), param3 ^ -29188, param2) + (var8.a((byte) 124, (UiWidget) (this)).a(12323) >> 1);
+        var10 = var8.getTextOriginY((UiWidget) (this), param3 ^ -29188, param2) + (var8.getTextLayout((byte) 124, (UiWidget) (this)).getLayoutHeight(12323) >> 1);
         if (var6Lifetime1 != DiskArchiveRequest.field_x &&
           var6Lifetime1 != AsyncRequest.field_t) {
           if (ef.field_b == var6Lifetime1) {
@@ -171,7 +171,7 @@ final class mi extends el {
         }
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 0) {
           return null;
         }

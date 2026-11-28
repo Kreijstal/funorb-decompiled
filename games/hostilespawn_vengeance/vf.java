@@ -206,7 +206,7 @@ final class vf extends InteractiveWidget {
     final static void a(int param0, int param1) {
         int var2 = 0;
         if (r.field_a >= 1) {
-          var2 = pm.field_d;
+          var2 = TextLineMetrics.field_d;
         } else {
           var2 = 0;
         }
@@ -278,7 +278,7 @@ final class vf extends InteractiveWidget {
           }
           ProxySocketFactory.field_h[0] = cm.a(128, 5, 0, 1);
           ProxySocketFactory.field_h[1] = cm.a(128, 5, 1, 1);
-          nh.field_L = cj.a(6, 5);
+          nh.field_L = RichTextWidget.a(6, 5);
           if (param0 != -8255) {
             var3 = (String[]) null;
             vf.createAccountSuggestionsResult((String[]) null, false);

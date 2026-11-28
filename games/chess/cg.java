@@ -93,7 +93,7 @@ final class cg {
         var10 = Chess.field_G;
         try {
           in.field_a = true;
-          fj.field_g = param2;
+          TextLineMetrics.field_g = param2;
           var11 = param1;
           if (!param3) {
             stackIn_4_0 = ph.field_m;
@@ -101,7 +101,7 @@ final class cg {
             stackIn_4_0 = aa.field_a;
           }
           var6 = stackIn_4_0;
-          if (fj.field_g == 0) {
+          if (TextLineMetrics.field_g == 0) {
             var7 = TextFieldValidator.a(var11, -9224, sj.field_d, da.field_A, 480);
             var8 = 3 + var7;
             bd.field_e = new String[var8];
@@ -121,7 +121,7 @@ final class cg {
             ec.field_l[-1 + var8] = 1;
             eh.field_L[1] = 2;
           } else {
-            if (fj.field_g != 1) {
+            if (TextLineMetrics.field_g != 1) {
               throw new IllegalArgumentException();
             }
             var7 = TextFieldValidator.a(var11, -9224, sj.field_d, da.field_A, 480);

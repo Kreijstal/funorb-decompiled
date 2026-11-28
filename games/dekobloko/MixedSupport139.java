@@ -47,14 +47,14 @@ final class MixedSupport139 {
         return true;
     }
 
-    final static MixedSupport001 computeMixedSupport0011725(int integerArgument1) {
+    final static DefaultTextWidgetRenderer computeMixedSupport0011725(int integerArgument1) {
         if (integerArgument1 == 1424) {
           if (null == NetworkSupport012.mixedSupport001State0001) {
-            NetworkSupport012.mixedSupport001State0001 = new MixedSupport001(MixedSupport011.bitmapFontState0006, 20, 0, 0, 0, 11579568, -1, 0, 0, MixedSupport011.bitmapFontState0006.integerState0518, -1, 2147483647, true);
+            NetworkSupport012.mixedSupport001State0001 = new DefaultTextWidgetRenderer(MixedSupport011.bitmapFontState0006, 20, 0, 0, 0, 11579568, -1, 0, 0, MixedSupport011.bitmapFontState0006.integerState0518, -1, 2147483647, true);
           }
           return NetworkSupport012.mixedSupport001State0001;
         }
-        return (MixedSupport001) null;
+        return (DefaultTextWidgetRenderer) null;
     }
 
     public static void clearStaticReferences(boolean booleanArgument1) {

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements re, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends WidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private tg field_L;
-    private kj field_J;
+    private RichTextWidget field_J;
     static String field_E;
     private ValidatedTextField field_K;
     private ValidatedTextField field_S;
@@ -141,7 +141,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, Widg
         }
     }
 
-    public final void a(int param0, int param1, int param2, kj param3) {
+    public final void onTextHotspotActivated(int param0, int param1, int param2, RichTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -195,7 +195,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, Widg
         this.field_P.field_z = ql.field_u;
         this.field_I.field_z = GameKeyHandler.field_d;
         this.field_M.field_z = InteractiveWidget.field_G;
-        this.field_O.field_z = kj.field_K;
+        this.field_O.field_z = RichTextWidget.field_K;
         this.field_K.field_z = wi.field_k;
         this.field_S.field_z = ImageProducerRasterBuffer.field_i;
         this.field_L.field_z = wi.field_h;
@@ -228,8 +228,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, Widg
         ke var4 = new ke(46, var3, -90 + this.field_t, 25, this.field_L, true, this.field_t - 120, 5, jh.field_g, 11579568, h.field_e);
         this.a(var4, 5411);
         var3 = var3 + var4.field_x;
-        af var5 = new af(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 0, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
-        this.field_J = new kj(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 0, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
+        this.field_J = new RichTextWidget(var2, var5);
         this.field_J.field_z = "";
         this.field_J.a(0, mj.field_a, 1);
         this.field_J.a(1, mj.field_a, 1);
@@ -514,7 +514,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, Widg
     public final void onWidgetActivated(int param0, int param1, int param2, InteractiveWidget param3, boolean param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
-        kj var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -530,8 +530,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements re, Widg
           if (param4) {
             return;
           }
-          var7 = (kj) null;
-          this.a(61, -5, -28, (kj) null);
+          var7 = (RichTextWidget) null;
+          this.onTextHotspotActivated(61, -5, -28, (RichTextWidget) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

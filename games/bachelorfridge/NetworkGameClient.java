@@ -177,7 +177,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           vc.field_a = sd.field_c.pollRotation((byte) -127);
         }
         if (cia.a(0)) {
-          var3 = 1200 * fda.a(0);
+          var3 = 1200 * RemoveDefeatedCreatureEffect.a(0);
           if (this.field_s ||
             !(GasCloudAnimation.e(30) <= var3) &&
             !(var3 >= FridgeCreature.e(-124))) {
@@ -270,7 +270,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SuperSpeedAllEvent.field_r = 1;
         }
         if (1 == SuperSpeedAllEvent.field_r) {
-          if (0 != kt.field_k) {
+          if (0 != SetMoveSlotCooldownEffect.field_k) {
             lh.field_s = daa.c(68, OneAnimation.field_z);
           }
           Bzip2State.field_B = StatusEffectInfo.a(1, false, 0, true, OneEvent.field_q);
@@ -302,7 +302,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           WidgetContainer.a((byte) 89, em.field_T)) {
           sr.a(48);
           ut.d(-124);
-          lia.field_i = false;
+          ChangeHealthAndStatusEffect.field_i = false;
           MassPoisonSpecial.field_p = ema.field_Ab;
           SauceOfFlameAnimation.a(vs.field_c, -12472, em.field_T, Bzip2State.field_B, fi.field_n);
           if (FloodSpecial.field_p ||
@@ -328,7 +328,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           SuperSpeedAllEvent.field_r = 10;
         }
         if (10 == SuperSpeedAllEvent.field_r) {
-          if (kt.field_k != 0) {
+          if (SetMoveSlotCooldownEffect.field_k != 0) {
             nha.field_c = daa.c(124, ov.field_c);
           }
           SuperSpeedAllEvent.field_r = 11;
@@ -435,7 +435,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 stackIn_31_0 = -10183;
                 stackIn_32_1 = (var2 == 12);
                 var3 = via.a(stackIn_31_0, stackIn_32_1);
-                fda.a(var3, 3100);
+                RemoveDefeatedCreatureEffect.a(var3, 3100);
                 break;
               case 6:
                 wda.a((byte) 116);
@@ -520,7 +520,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = BachelorFridge.field_y;
-          var4 = RaiseAnimation.a(8192, vc.field_a, kt.field_k, param0);
+          var4 = RaiseAnimation.a(8192, vc.field_a, SetMoveSlotCooldownEffect.field_k, param0);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -576,10 +576,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 5) {
-            dh.a(nia.d(-31768), 56);
+            ArmPetAttackEffect.a(nia.d(-31768), 56);
           }
           if (var4 == 6 &&
-            lia.field_i) {
+            ChangeHealthAndStatusEffect.field_i) {
             jv.field_j = 10;
           }
           if (var4 == 7) {
@@ -721,7 +721,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         int var4 = dw.field_f - 1;
         byte[] var5 = new byte[var4];
         ig.field_m.readCipheredBytes(var5, var4, 0, param0 - 31918);
-        gja.a(var3 != 0, nia.d(-31768), qq.a(var5, false), 38);
+        gja.a(var3 != 0, nia.d(-31768), ChangeCreatureStatOrHealthEffect.a(var5, false), 38);
         if (param0 != 10) {
           discarded$0 = this.a(false, 81, false);
         }
@@ -742,12 +742,12 @@ abstract class NetworkGameClient extends GameAppletShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        kt.field_k = this.field_m;
-        sr.a(kt.field_k, (byte) 78);
-        vda.a(this.field_w, this.field_v, 5000, param0, param5, this.field_n, 5000, 64, DiveBomberEvent.field_r, this.field_k, kt.field_k, this.field_r, this.field_t, this.field_l);
-        cc.a(param0, this.field_r, -1456477592, this.field_k, this.field_l, DiveBomberEvent.field_r, kt.field_k, this.field_v, this.field_t);
+        SetMoveSlotCooldownEffect.field_k = this.field_m;
+        sr.a(SetMoveSlotCooldownEffect.field_k, (byte) 78);
+        vda.a(this.field_w, this.field_v, 5000, param0, param5, this.field_n, 5000, 64, DiveBomberEvent.field_r, this.field_k, SetMoveSlotCooldownEffect.field_k, this.field_r, this.field_t, this.field_l);
+        cc.a(param0, this.field_r, -1456477592, this.field_k, this.field_l, DiveBomberEvent.field_r, SetMoveSlotCooldownEffect.field_k, this.field_v, this.field_t);
         DualLinkNodeHashTable.c((byte) 69);
-        sd.field_c = qq.createMouseWheelInput(-5368);
+        sd.field_c = ChangeCreatureStatOrHealthEffect.createMouseWheelInput(-5368);
         nl.a(TBomberAnimation.field_y, (byte) 76);
         mj.field_j = param6;
         if (param4) {

@@ -134,7 +134,7 @@ final class k {
           fb.field_h.bindAsRenderTarget();
           var2.drawOpaque(0, -wh.field_a.field_y);
           fb.field_h.field_s = wh.field_a.field_y;
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "k.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

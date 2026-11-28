@@ -85,11 +85,11 @@ final class ReturnedShape {
         RuntimeException caughtExceptionLocal4 = null;
         RuntimeException runtimeExceptionLocal5 = null;
         try {
-          if (null == NetworkSupport010.uiComponentPart026State0001) {
-            NetworkSupport010.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
-            MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -107, NetworkSupport010.uiComponentPart026State0001);
+          if (null == TextHotspotBounds.uiComponentPart026State0001) {
+            TextHotspotBounds.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
+            MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -107, TextHotspotBounds.uiComponentPart026State0001);
           }
-          NetworkSupport010.uiComponentPart026State0001.performAction1391(booleanArgument2, floatArgument3, 4210752, stringArgument4);
+          TextHotspotBounds.uiComponentPart026State0001.performAction1391(booleanArgument2, floatArgument3, 4210752, stringArgument4);
           SoftwareRaster.clearRaster();
           RenderingSupport002.performAction0248(true, integerArgument1 + 106);
           if (integerArgument1 != 12) {

@@ -447,7 +447,7 @@ final class kk {
           var3 = 275;
           SoftwareRasterizer.fillRectangle(3, 3, var2 - 6, var3 - 6, 16249775);
           lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
-          sb.field_r.drawCentred(AccountRegistrationPanel.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
+          RichTextLayout.field_r.drawCentred(AccountRegistrationPanel.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
           var4 = BoundedRandomAccessFile.field_e;
           var5 = s.field_S;
           if (var5.field_l) {
@@ -511,7 +511,7 @@ final class kk {
         }
         BoundedRandomAccessFile.field_e.drawParagraph(nc.field_c, 30, var3 - 37, -60 + var2, 40, 1, -1, 1, 0, 12);
         var7 = 137;
-        sb.field_r.drawCentred(var6, var2 / 2, var7, 9330743, -1);
+        RichTextLayout.field_r.drawCentred(var6, var2 / 2, var7, 9330743, -1);
         ac.field_a.setAsRasterTarget((byte) 116);
         var8 = var3 * this.field_i / 20;
         if (var8 > var3) {
@@ -806,7 +806,7 @@ final class kk {
         if (this.field_g != 7) {
           lb.a(0, var8, (byte) -33, NodeHashTableIterator.field_e, 0, 40);
         }
-        var10 = sb.field_r;
+        var10 = RichTextLayout.field_r;
         if (var6 == 11 ||
           var6 == 12) {
           var11 = lh.field_b + 137;
@@ -852,7 +852,7 @@ final class kk {
         lb.a(0, var2, (byte) 64, NodeHashTableIterator.field_e, 0, var3);
         int var5 = 86 % ((53 - param0) / 61);
         int var4 = 90;
-        sb.field_r.drawParagraph(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
+        RichTextLayout.field_r.drawParagraph(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
         ac.field_a.setAsRasterTarget((byte) 127);
         int var6 = this.field_i * var3 / 20;
         if (var3 < var6) {
@@ -1300,7 +1300,7 @@ final class kk {
                   }
                 }
               }
-              bl.a(50, uh.field_e);
+              TextHotspotBounds.a(50, uh.field_e);
               if (var8 == 0) {
                 break;
               }

@@ -507,11 +507,11 @@ final class pf extends pn implements Cloneable {
           }
           if (var2 == 1) {
             var4_int = var9.readSignedSmart(0);
-            var5_ref_we = (LevelProgressUpdate) (tb.field_b.beginForward(32073));
+            var5_ref_we = (LevelProgressUpdate) (TextLayout.field_b.beginForward(32073));
             while (var5_ref_we != null) {
               if (var5_ref_we.field_j != var3 ||
                 var5_ref_we.field_g != var4_int) {
-                var5_ref_we = (LevelProgressUpdate) (tb.field_b.nextForward(false));
+                var5_ref_we = (LevelProgressUpdate) (TextLayout.field_b.nextForward(false));
                 continue;
               }
               break;

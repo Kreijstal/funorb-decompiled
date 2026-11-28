@@ -59,7 +59,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (ah.field_c >= 0 &&
               var2_int >= 0) {
-              ab.field_A[ah.field_c] = ~var2_int;
+              RichTextWidget.field_A[ah.field_c] = ~var2_int;
               ah.field_c = 127 & ah.field_c + 1;
               if (ec.field_a == ah.field_c) {
                 ah.field_c = -1;
@@ -106,7 +106,7 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             }
             if (ah.field_c >= 0 &&
               var2_int >= 0) {
-              ab.field_A[ah.field_c] = var2_int;
+              RichTextWidget.field_A[ah.field_c] = var2_int;
               ah.field_c = 1 + ah.field_c & 127;
               if (ah.field_c == ec.field_a) {
                 ah.field_c = -1;
@@ -211,16 +211,16 @@ final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.
             var6 = DualLinkNode.field_h[var3];
             if (SecondaryNodeDeque.field_a == 2 &&
               1 == var2) {
-              if (se.field_n.length >= ri.field_b.length) {
-                stackIn_20_0 = se.field_n.length;
+              if (RichTextLayout.field_n.length >= ri.field_b.length) {
+                stackIn_20_0 = RichTextLayout.field_n.length;
               } else {
                 stackIn_20_0 = ri.field_b.length;
               }
               var7 = stackIn_20_0;
               if (var3 >= 6 &&
                 6 + var7 > var3) {
-                if (-var7 + se.field_n.length + (-6 + var3) >= 0) {
-                  stackIn_25_0 = se.field_n[-var7 + var3 + (-6 + se.field_n.length)];
+                if (-var7 + RichTextLayout.field_n.length + (-6 + var3) >= 0) {
+                  stackIn_25_0 = RichTextLayout.field_n[-var7 + var3 + (-6 + RichTextLayout.field_n.length)];
                 } else {
                   stackIn_25_0 = "";
                 }

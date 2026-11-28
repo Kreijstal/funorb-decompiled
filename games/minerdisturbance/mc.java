@@ -1048,12 +1048,12 @@ final class mc {
           }
           var13 = null;
           if (6 == var12) {
-            tn.field_K[6].drawOpaque(487, 326);
+            RichTextWidget.field_K[6].drawOpaque(487, 326);
             var13_ref = vh.field_h[ah.field_f];
           } else {
             if (var12 != 0) {
               if (var12 == 2) {
-                tn.field_K[2].drawOpaque(487, 326);
+                RichTextWidget.field_K[2].drawOpaque(487, 326);
                 var13_ref = gl.field_x[ah.field_f];
               } else {
                 if (var12 != 3) {
@@ -1061,17 +1061,17 @@ final class mc {
                     if (var12 != 9) {
                       if (var12 != 1) {
                         if (var12 == 11) {
-                          tn.field_K[11].drawOpaque(487, 326);
+                          RichTextWidget.field_K[11].drawOpaque(487, 326);
                           var13_ref = tc.field_p;
                         } else {
                           if (8 != var12) {
                             if (4 == var12) {
-                              tn.field_K[4].drawOpaque(487, 326);
+                              RichTextWidget.field_K[4].drawOpaque(487, 326);
                               var13_ref = LoginPanel.field_M;
                             } else {
                               if (10 != var12) {
                                 if (var12 == 5) {
-                                  tn.field_K[5].drawOpaque(487, 326);
+                                  RichTextWidget.field_K[5].drawOpaque(487, 326);
                                   var13_ref = uf.field_u;
                                 } else {
                                   if (var12 != 12) {
@@ -1082,74 +1082,74 @@ final class mc {
                                             if (17 != var12) {
                                               if (var12 != 18) {
                                                 if (var12 == 19) {
-                                                  tn.field_K[18].drawOpaque(487, 326);
+                                                  RichTextWidget.field_K[18].drawOpaque(487, 326);
                                                   var13_ref = ck.field_e;
                                                 } else {
                                                   if (20 == var12) {
-                                                    tn.field_K[19].drawOpaque(487, 326);
+                                                    RichTextWidget.field_K[19].drawOpaque(487, 326);
                                                     var13_ref = fm.field_K;
                                                   } else {
                                                     var13_ref = ne.field_R[ah.field_f];
                                                   }
                                                 }
                                               } else {
-                                                tn.field_K[17].drawOpaque(487, 326);
+                                                RichTextWidget.field_K[17].drawOpaque(487, 326);
                                                 var13_ref = DisplayNameSelectionPanel.field_I;
                                               }
                                             } else {
-                                              tn.field_K[16].drawOpaque(487, 326);
-                                              var13_ref = nf.field_b;
+                                              RichTextWidget.field_K[16].drawOpaque(487, 326);
+                                              var13_ref = TextLayout.field_b;
                                             }
                                           } else {
-                                            tn.field_K[15].drawOpaque(487, 326);
+                                            RichTextWidget.field_K[15].drawOpaque(487, 326);
                                             var13_ref = ol.field_d;
                                           }
                                         } else {
-                                          tn.field_K[14].drawOpaque(487, 326);
+                                          RichTextWidget.field_K[14].drawOpaque(487, 326);
                                           var13_ref = jn.field_p;
                                         }
                                       } else {
-                                        tn.field_K[13].drawOpaque(487, 326);
+                                        RichTextWidget.field_K[13].drawOpaque(487, 326);
                                         var13_ref = fd.field_kb[ah.field_f];
                                       }
                                     } else {
-                                      tn.field_K[12].drawOpaque(487, 326);
+                                      RichTextWidget.field_K[12].drawOpaque(487, 326);
                                       var13_ref = qh.field_d;
                                     }
                                   } else {
-                                    tn.field_K[12].drawOpaque(487, 326);
+                                    RichTextWidget.field_K[12].drawOpaque(487, 326);
                                     var13_ref = hh.field_c;
                                   }
                                 }
                               } else {
-                                tn.field_K[10].drawOpaque(487, 326);
+                                RichTextWidget.field_K[10].drawOpaque(487, 326);
                                 var13_ref = wc.field_d;
                               }
                             }
                           } else {
-                            tn.field_K[8].drawOpaque(487, 326);
+                            RichTextWidget.field_K[8].drawOpaque(487, 326);
                             var13_ref = ef.field_d;
                           }
                         }
                       } else {
-                        tn.field_K[1].drawOpaque(487, 326);
+                        RichTextWidget.field_K[1].drawOpaque(487, 326);
                         var13_ref = ig.field_d;
                       }
                     } else {
-                      tn.field_K[9].drawOpaque(487, 326);
+                      RichTextWidget.field_K[9].drawOpaque(487, 326);
                       var13_ref = mn.field_w[ah.field_f];
                     }
                   } else {
-                    tn.field_K[7].drawOpaque(487, 326);
+                    RichTextWidget.field_K[7].drawOpaque(487, 326);
                     var13_ref = ii.field_c;
                   }
                 } else {
-                  tn.field_K[3].drawOpaque(487, 326);
+                  RichTextWidget.field_K[3].drawOpaque(487, 326);
                   var13_ref = ob.field_v;
                 }
               }
             } else {
-              tn.field_K[0].drawOpaque(487, 326);
+              RichTextWidget.field_K[0].drawOpaque(487, 326);
               var13_ref = hm.field_J[ah.field_f];
             }
           }
@@ -1162,7 +1162,7 @@ final class mc {
             if (ne.field_R[ah.field_f] == var13_ref) {
               stackIn_156_5 = 0;
             } else {
-              stackIn_156_5 = tn.field_K[13].field_x + 20;
+              stackIn_156_5 = RichTextWidget.field_K[13].field_x + 20;
             }
             ((BinaryBitmapFont) (Object) stackIn_155_0).drawParagraph(stackIn_155_1, stackIn_155_2, stackIn_155_3, stackIn_155_4 - stackIn_156_5, 90, 3550242, -1, 3, 0, 0);
           }

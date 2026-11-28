@@ -107,9 +107,9 @@ final class wc implements uj {
         RuntimeException var1 = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          var1_int = mg.field_e[0];
-          for (var2 = 1; var2 < mg.field_e.length; var2++) {
-            var3 = mg.field_e[var2];
+          var1_int = TextLineMetrics.field_e[0];
+          for (var2 = 1; var2 < TextLineMetrics.field_e.length; var2++) {
+            var3 = TextLineMetrics.field_e[var2];
             ai.a(IntrusiveDeque.field_d, var2 << 4, IntrusiveDeque.field_d, var1_int, var3);
             var1_int = var1_int + var3;
           }

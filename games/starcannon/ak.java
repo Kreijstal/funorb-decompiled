@@ -287,7 +287,7 @@ final class ak {
         var27 = StarCannon.field_A;
         try {
           var1_int = -2 % ((param0 + 38) / 55);
-          var2 = se.field_p;
+          var2 = RichTextLayout.field_p;
           var3 = var2.readUnsignedByte(7909);
           if (var3 == 0) {
             var4 = var2.readUnsignedShort(-1174051992);
@@ -760,7 +760,7 @@ final class ak {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_n = bd.a(param0.length, param0, (byte) 70, 0);
+            this.field_n = TextLayout.a(param0.length, param0, (byte) 70, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (param2[var4_int] != this.field_n[var4_int]) {
                 throw new RuntimeException();

@@ -263,7 +263,7 @@ final class RenderingSupport007 {
           if (MixedSupport146.integerState0931 == 13) {
             SceneWidgetPart008.performAction1129(-26);
             SceneWidgetPart007.booleanState0114 = false;
-            UiComponentPart025.performAction1363(false, (byte) -108);
+            RichTextWidget.performAction1363(false, (byte) -108);
             return;
           }
           if (UiComponentPart023.computeBoolean1242(-30146)) {
@@ -494,7 +494,7 @@ final class RenderingSupport007 {
     }
 
     final static void performAction0889(int integerArgument1) {
-        NetworkSupport010.integerState0585 = integerArgument1;
+        TextHotspotBounds.integerState0585 = integerArgument1;
         LoginCredentials.booleanState0085 = true;
     }
 
@@ -582,7 +582,7 @@ final class RenderingSupport007 {
         RgbSprite rgbSpriteLocal2 = MixedSupport086.rgbSpriteState0036;
         rgbSpriteLocal2.draw(320 - rgbSpriteLocal2.integerState0254 / 2, -(integerLocal1 >> 2) + (50 - rgbSpriteLocal2.integerState0260 / 2));
         SoftwareRaster.fillRectangleAlpha(integerLocal1 + 4 + this.integerState0374, this.integerState0375 + 4, -8 + this.integerState0368, -8 + this.integerState0372, 0, 150);
-        GameplayControls.performAction1749(this.integerState0372, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, integerLocal1 + this.integerState0374);
+        GameplayControls.performAction1749(this.integerState0372, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, integerLocal1 + this.integerState0374);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 362, LobbyRoomRow.computeString1709(this.integerState0367, 26135), 16777215, 560 + integerLocal1);
         GameDomainSupport006.performAction1823(72, this.integerState0367, integerLocal1);
     }
@@ -684,7 +684,7 @@ final class RenderingSupport007 {
         if ((integerLocal2 == 13 || !booleanArgument2) &&
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
           LobbyRoomRow.booleanState0203 = false;
-          UiComponentPart025.performAction1363(booleanArgument2, (byte) -111);
+          RichTextWidget.performAction1363(booleanArgument2, (byte) -111);
           SceneWidgetPart008.performAction1129(integerArgument1 ^ -14836);
           return true;
         }
@@ -729,7 +729,7 @@ final class RenderingSupport007 {
         }
         integerLocal4 = RenderingSupport001.computeInteger0135((byte) 107, MixedSupport048.mixedSupport072State0001, MixedSupport036.integerState0222, this.mixedSupport068State0001);
         MixedSupport042.performAction0537(105, 256, 16777215, ReturnedShapeUpdate.stringState0597, integerLocal2 + 125, SceneWidget.renderingSupport009State0007);
-        MixedSupport042.performAction0537(105, 256, 16777215, MixedSupport001.stringState0002, 333 + integerLocal2, SceneWidget.renderingSupport009State0007);
+        MixedSupport042.performAction0537(105, 256, 16777215, DefaultTextWidgetRenderer.stringState0002, 333 + integerLocal2, SceneWidget.renderingSupport009State0007);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 105, MixedSupport117.stringState0516, 16777215, 545 + integerLocal2);
         if (byteArgument1 > -42) {
           return;
@@ -803,7 +803,7 @@ final class RenderingSupport007 {
         }
         int integerLocal3 = !this.booleanState0094 ? 0 : 23;
         SoftwareRaster.fillRectangleAlpha(integerLocal1 + (4 + this.integerState0374), -8 + (this.integerState0372 + this.integerState0375), -8 + this.integerState0368, integerLocal3 + 142, 0, 150);
-        GameplayControls.performAction1749(integerLocal3 + 150, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, -13 + this.integerState0375 + this.integerState0372, integerLocal1 + this.integerState0374);
+        GameplayControls.performAction1749(integerLocal3 + 150, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, this.integerState0368, -13 + this.integerState0375 + this.integerState0372, integerLocal1 + this.integerState0374);
         MixedSupport036.performAction0505(this.integerState0372 + this.integerState0375, (byte) 5, this.booleanState0094, integerLocal1 + 185);
         TextLineMetrics.performAction1104(this.integerState0370, integerLocal1 + 333, (byte) 74, this.integerState0372 + this.integerState0375, this.integerState0371);
     }
@@ -954,7 +954,7 @@ final class RenderingSupport007 {
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
           SceneWidgetPart010.performAction1466(true);
           DebouncedFieldValidator.booleanState0006 = false;
-          UiComponentPart025.performAction1363(booleanArgument2, (byte) -104);
+          RichTextWidget.performAction1363(booleanArgument2, (byte) -104);
           SceneWidgetPart008.performAction1129(integerArgument1 ^ -126);
           return true;
         }
@@ -1025,7 +1025,7 @@ final class RenderingSupport007 {
           if (MixedSupport146.integerState0931 == 13) {
             SceneWidgetPart008.performAction1129(integerArgument1 + 8749);
             LobbyRoomRow.booleanState0203 = false;
-            UiComponentPart025.performAction1363(false, (byte) -112);
+            RichTextWidget.performAction1363(false, (byte) -112);
             return;
           }
           if (UiComponentPart023.computeBoolean1242(-30146)) {
@@ -1088,7 +1088,7 @@ final class RenderingSupport007 {
           }
           gameDomainSupport002Local3 = this.gameDomainSupport002ArrayState0001[integerLocal1];
           stringLocal4 = gameDomainSupport002Local3.stringState0142;
-          MixedSupport045.computeInteger0552(gameDomainSupport002Local3.integerState0176, 1, gameDomainSupport002Local3.integerState0178, stringLocal4, 1, gameDomainSupport002Local3.integerState0175, integerLocal2, MixedSupport001.renderingSupport009State0001, (byte) -125, 1, integerLocal6 + gameDomainSupport002Local3.integerState0174);
+          MixedSupport045.computeInteger0552(gameDomainSupport002Local3.integerState0176, 1, gameDomainSupport002Local3.integerState0178, stringLocal4, 1, gameDomainSupport002Local3.integerState0175, integerLocal2, DefaultTextWidgetRenderer.renderingSupport009State0001, (byte) -125, 1, integerLocal6 + gameDomainSupport002Local3.integerState0174);
         }
         if (integerArgument1 != 16687906) {
           this.integerState0365 = 100;
@@ -1123,7 +1123,7 @@ final class RenderingSupport007 {
             MixedSupport043.booleanState0048 = false;
             SceneWidgetPart007.booleanState0114 = false;
           }
-          UiComponentPart025.performAction1363(booleanArgument1, (byte) -102);
+          RichTextWidget.performAction1363(booleanArgument1, (byte) -102);
           SceneWidgetPart008.performAction1129(115);
           return true;
         }
@@ -1645,7 +1645,7 @@ final class RenderingSupport007 {
         integerLocal17 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         integerLocal5 = -(this.integerState0369 >> 2) + (640 - this.integerState0363 * (this.integerState0363 * 640) / 400);
         SoftwareRaster.fillRectangleAlpha(4 + this.integerState0374 + integerLocal5, this.integerState0375 + 4, this.integerState0368 - 8, -8 + this.integerState0372, 0, 150);
-        GameplayControls.performAction1749(this.integerState0372, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, this.integerState0374 + integerLocal5);
+        GameplayControls.performAction1749(this.integerState0372, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, this.integerState0368, this.integerState0375, this.integerState0374 + integerLocal5);
         if (integerArgument2 != 15764) {
           this.booleanState0095 = false;
         }
@@ -1740,10 +1740,10 @@ final class RenderingSupport007 {
               integerLocal1 == MixedSupport019.integerState0114) {
               integerLocal18 = 16777215;
             }
-            MixedSupport045.computeInteger0552(gameDomainSupport002Local6.integerState0176, 1, integerLocal8, stringLocal7, 20, integerLocal9, integerLocal18, MixedSupport001.renderingSupport009State0001, (byte) -128, 1, gameDomainSupport002Local6.integerState0174 + integerLocal5);
+            MixedSupport045.computeInteger0552(gameDomainSupport002Local6.integerState0176, 1, integerLocal8, stringLocal7, 20, integerLocal9, integerLocal18, DefaultTextWidgetRenderer.renderingSupport009State0001, (byte) -128, 1, gameDomainSupport002Local6.integerState0174 + integerLocal5);
           } else {
-            integerLocal19 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
-            integerLocal13 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
+            integerLocal19 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
+            integerLocal13 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
             if (integerLocal13 > integerLocal19) {
               integerLocal19 = integerLocal13;
             }
@@ -1751,12 +1751,12 @@ final class RenderingSupport007 {
             SoftwareRaster.fillRectangle(-1 + integerLocal14 + integerLocal5, integerLocal8 + 11, 130, 8, 65793);
             SoftwareRaster.fillRectangle(1 + (integerLocal14 + integerLocal5), 13 + integerLocal8, 126, 4, integerLocal18);
             if (gameDomainSupport002Local6.integerState0179 != 6) {
-              stackIntegerLocal3 = MixedSupport001.integerState0011 * 128 / 128;
+              stackIntegerLocal3 = DefaultTextWidgetRenderer.integerState0011 * 128 / 128;
             } else {
               stackIntegerLocal3 = GameDomainSupport005.integerState0578 * 128 / 128;
             }
             integerLocal15 = stackIntegerLocal3;
-            MixedSupport045.computeInteger0552(-5 + integerLocal14 - gameDomainSupport002Local6.integerState0174, 1, integerLocal8, stringLocal7, 20, integerLocal9, integerLocal18, MixedSupport001.renderingSupport009State0001, (byte) -124, 2, gameDomainSupport002Local6.integerState0174 + integerLocal5);
+            MixedSupport045.computeInteger0552(-5 + integerLocal14 - gameDomainSupport002Local6.integerState0174, 1, integerLocal8, stringLocal7, 20, integerLocal9, integerLocal18, DefaultTextWidgetRenderer.renderingSupport009State0001, (byte) -124, 2, gameDomainSupport002Local6.integerState0174 + integerLocal5);
             stackIntegerLocal4 = (gameDomainSupport002Local6.integerState0179 == 6) ? 1 : 3;
             integerLocal16 = stackIntegerLocal4;
             MixedSupport121.computeRgbSprite1601(true, integerLocal16).drawScaled(integerLocal5 + (-9 + integerLocal14) + integerLocal15, 6 + integerLocal8, 18, 18);
@@ -1794,7 +1794,7 @@ final class RenderingSupport007 {
           if (MixedSupport146.integerState0931 == 13) {
             SceneWidgetPart008.performAction1129(-77);
             MixedSupport043.booleanState0048 = false;
-            UiComponentPart025.performAction1363(false, (byte) -107);
+            RichTextWidget.performAction1363(false, (byte) -107);
             return;
           }
           boolean frameRemainderLocal4 = true;
@@ -1885,7 +1885,7 @@ final class RenderingSupport007 {
           if (integerLocal1 == 13) {
             LoginPanel.booleanState0066 = false;
           }
-          UiComponentPart025.performAction1363(booleanArgument1, (byte) -103);
+          RichTextWidget.performAction1363(booleanArgument1, (byte) -103);
           SceneWidgetPart008.performAction1129(11);
           return true;
         }
@@ -2011,7 +2011,7 @@ final class RenderingSupport007 {
           if (13 == MixedSupport146.integerState0931) {
             SceneWidgetPart008.performAction1129(118);
             BucketBoard.booleanState0109 = false;
-            UiComponentPart025.performAction1363(false, (byte) -117);
+            RichTextWidget.performAction1363(false, (byte) -117);
             return;
           }
           this.mixedSupport116State0002.performAction1512(-36);
@@ -2111,8 +2111,8 @@ final class RenderingSupport007 {
         if (integerLocal1 == 6) {
           boolean frameRemainderLocal14 = true;
           if (this.mixedSupport116State0002.computeBoolean1517(true)) {
-            integerLocal3 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
-            integerLocal4 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
+            integerLocal3 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
+            integerLocal4 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
             if (integerLocal4 > integerLocal3) {
               integerLocal3 = integerLocal4;
             }
@@ -2170,8 +2170,8 @@ final class RenderingSupport007 {
         }
         if (7 == integerLocal1) {
           if (this.mixedSupport116State0002.computeBoolean1517(true)) {
-            integerLocal9 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
-            integerLocal10 = MixedSupport001.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
+            integerLocal9 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(MixedSupport101.stringState0434);
+            integerLocal10 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(MixedSupport040.stringState0179);
             if (integerLocal10 > integerLocal9) {
               integerLocal9 = integerLocal10;
             }
@@ -2181,33 +2181,33 @@ final class RenderingSupport007 {
             MixedSupport112.booleanState0166 = true;
             if (integerLocal13 >= 0) {
               if (integerLocal13 <= 128) {
-                MixedSupport001.integerState0011 = integerLocal13;
+                DefaultTextWidgetRenderer.integerState0011 = integerLocal13;
               } else {
-                MixedSupport001.integerState0011 = 128;
+                DefaultTextWidgetRenderer.integerState0011 = 128;
               }
             } else {
-              MixedSupport001.integerState0011 = 0;
+              DefaultTextWidgetRenderer.integerState0011 = 0;
             }
           }
           if (this.mixedSupport116State0002.computeBoolean1523(122)) {
-            MixedSupport001.integerState0011 = 0;
+            DefaultTextWidgetRenderer.integerState0011 = 0;
             MixedSupport112.booleanState0166 = true;
           }
           if (this.mixedSupport116State0002.computeBoolean1510((byte) -51)) {
             MixedSupport112.booleanState0166 = true;
-            MixedSupport001.integerState0011 = 128;
+            DefaultTextWidgetRenderer.integerState0011 = 128;
           }
           if (this.mixedSupport116State0002.computeBoolean1522(true)) {
-            MixedSupport001.integerState0011 = MixedSupport001.integerState0011 - 1 & -16;
-            if (MixedSupport001.integerState0011 < 0) {
-              MixedSupport001.integerState0011 = 0;
+            DefaultTextWidgetRenderer.integerState0011 = DefaultTextWidgetRenderer.integerState0011 - 1 & -16;
+            if (DefaultTextWidgetRenderer.integerState0011 < 0) {
+              DefaultTextWidgetRenderer.integerState0011 = 0;
             }
             MixedSupport112.booleanState0166 = true;
           }
           if (this.mixedSupport116State0002.computeBoolean1521(101)) {
-            MixedSupport001.integerState0011 = -16 & 16 + MixedSupport001.integerState0011;
-            if (MixedSupport001.integerState0011 > 128) {
-              MixedSupport001.integerState0011 = 128;
+            DefaultTextWidgetRenderer.integerState0011 = -16 & 16 + DefaultTextWidgetRenderer.integerState0011;
+            if (DefaultTextWidgetRenderer.integerState0011 > 128) {
+              DefaultTextWidgetRenderer.integerState0011 = 128;
             }
             MixedSupport112.booleanState0166 = true;
           }
@@ -2254,7 +2254,7 @@ final class RenderingSupport007 {
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
           SceneWidgetPart008.performAction1129(-38);
           MixedSupport118.performAction1548(false);
-          NetworkSupport010.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
+          TextHotspotBounds.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
         }
         if (integerLocal1 == 13 &&
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
@@ -2355,7 +2355,7 @@ final class RenderingSupport007 {
         if ((integerLocal1 == 13 || !booleanArgument1) &&
           this.mixedSupport116State0002.computeBoolean1520((byte) 114)) {
           SceneWidgetPart007.booleanState0114 = false;
-          UiComponentPart025.performAction1363(booleanArgument1, (byte) -103);
+          RichTextWidget.performAction1363(booleanArgument1, (byte) -103);
           SceneWidgetPart008.performAction1129(122);
           return true;
         }

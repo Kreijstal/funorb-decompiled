@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rf extends pc {
+final class rf extends DefaultTextWidgetRenderer {
     static int[][] field_q;
     private int field_y;
     static boolean[] field_x;
@@ -78,7 +78,7 @@ final class rf extends pc {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -185,7 +185,7 @@ final class rf extends pc {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_33_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 

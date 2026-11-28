@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class AccountRegistrationPanel extends td implements jg, ButtonListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends td implements TextHotspotListener, ButtonListener, NameSuggestionListener {
     private ValidatedTextField field_I;
     private ButtonWidget field_H;
     private ButtonWidget field_C;
@@ -14,7 +14,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, N
     private ValidatedTextField field_E;
     private ValidatedTextField field_L;
     private ValidatedTextField field_M;
-    private el field_D;
+    private RichTextWidget field_D;
     private ValidatedTextField field_J;
     static int field_K;
 
@@ -92,8 +92,8 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, N
         sa var4 = new sa(46, var3, -90 + this.field_x, 25, this.field_O, true, -120 + this.field_x, 5, fk.field_a, 11579568, GameKeyHandler.field_c);
         this.a(false, var4);
         var3 = var3 + var4.field_u;
-        ic var5 = new ic(gk.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, gk.field_c.field_G, -1, 2147483647, true);
-        this.field_D = new el(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(gk.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, gk.field_c.field_G, -1, 2147483647, true);
+        this.field_D = new RichTextWidget(var2, var5);
         this.field_D.field_n = "";
         this.field_D.a((byte) -85, bb.field_a, 0);
         this.field_D.a((byte) 58, bb.field_a, 1);
@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, N
 
     final static void b(int param0, int param1, int param2) {
         if (uh.field_b[param1] == null) {
-          uh.field_b[param1] = PcmSampleStream.createForPlaybackRate(va.field_d[param1], 100, NameSuggestionsPanel.field_G[param1]);
+          uh.field_b[param1] = PcmSampleStream.createForPlaybackRate(TextLineMetrics.field_d[param1], 100, NameSuggestionsPanel.field_G[param1]);
         }
         if (!uh.field_b[param1].isLinked(10000536)) {
           uh.field_b[param1].setSamplePosition(0);
@@ -412,7 +412,7 @@ final class AccountRegistrationPanel extends td implements jg, ButtonListener, N
         }
     }
 
-    public final void a(el param0, int param1, int param2, int param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

@@ -25,7 +25,7 @@ final class ClamsAnimation extends EventAnimation {
           al.a(param0 ^ -103, this.field_w.moveId);
           while (var3 != null) {
             var4 = var3.target.resolveCreatureView(param0 ^ -27455, this.screen);
-            var4.b(-1, 6);
+            var4.playAnimation(-1, 6);
             var3.apply(var2, this.screen.field_h, 12);
             var3 = (EventEffect) (this.field_w.effects.nextForward(param0 - 6));
           }

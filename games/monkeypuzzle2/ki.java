@@ -270,7 +270,7 @@ final class ki extends DualLinkNode {
     final void d(byte param0) {
         if (2 == this.field_w ||
           this.field_w == 3) {
-          sb.field_m.bindAsRenderTarget();
+          RichTextLayout.field_m.bindAsRenderTarget();
           this.field_I.drawSilhouette(-80 + (int)((float)this.field_G + this.field_B) - 1, (int)(this.field_q + (float)this.field_y), 16777213);
           this.field_I.drawSilhouette((int)(this.field_B + (float)this.field_G) - 79, (int)((float)this.field_y + this.field_q), 16777212);
           this.field_I.drawSilhouette((int)((float)this.field_G + this.field_B) - 80, (int)((float)this.field_y + this.field_q - 1.0f), 16777215);
@@ -324,7 +324,7 @@ final class ki extends DualLinkNode {
     }
 
     final void c(byte param0) {
-        sb.field_m.bindAsRenderTarget();
+        RichTextLayout.field_m.bindAsRenderTarget();
         if (param0 >= -83) {
           this.field_y = -51;
         }
@@ -390,18 +390,18 @@ final class ki extends DualLinkNode {
           var5 = var5 + var3;
           var3 = 0;
         }
-        if (sb.field_m.field_k < var4 + var2) {
-          var4 = sb.field_m.field_k - var2;
+        if (RichTextLayout.field_m.field_k < var4 + var2) {
+          var4 = RichTextLayout.field_m.field_k - var2;
         }
-        if (sb.field_m.field_j < var3 + var5) {
-          var5 = sb.field_m.field_j - var3;
+        if (RichTextLayout.field_m.field_j < var3 + var5) {
+          var5 = RichTextLayout.field_m.field_j - var3;
         }
         if (param0 < 104) {
           return;
         }
-        var6 = var3 * sb.field_m.field_k + var2;
-        var7 = -var4 + sb.field_m.field_k;
-        var14 = sb.field_m.field_s;
+        var6 = var3 * RichTextLayout.field_m.field_k + var2;
+        var7 = -var4 + RichTextLayout.field_m.field_k;
+        var14 = RichTextLayout.field_m.field_s;
         while (true) {
           incrementValue$0 = var5;
           var5--;

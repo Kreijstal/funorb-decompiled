@@ -755,7 +755,7 @@ class vd extends ag implements ai {
         }
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         fl var2 = null;
         RuntimeException var2_ref = null;
         ag var3 = null;
@@ -773,7 +773,7 @@ class vd extends ag implements ai {
           var3 = (ag) (var2.b(param0 - 33));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
-            var4 = var3.e(34);
+            var4 = var3.getTooltipText(34);
             stackIn_16_0 = null;
             if (var5 == 0) {
               if (stackIn_16_0 != var4) {

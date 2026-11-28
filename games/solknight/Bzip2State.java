@@ -86,9 +86,9 @@ final class Bzip2State {
         field_e = null;
     }
 
-    final static af a(byte param0) {
+    final static DefaultTextWidgetRenderer a(byte param0) {
         if (null == la.field_i) {
-          la.field_i = new af(jh.field_g, 20, 0, 0, 0, 11579568, -1, 0, 0, jh.field_g.field_F, -1, 2147483647, true);
+          la.field_i = new DefaultTextWidgetRenderer(jh.field_g, 20, 0, 0, 0, 11579568, -1, 0, 0, jh.field_g.field_F, -1, 2147483647, true);
           if (param0 >= -58) {
             field_e = (RasterBuffer) null;
             return la.field_i;

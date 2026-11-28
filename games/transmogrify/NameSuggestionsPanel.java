@@ -80,7 +80,7 @@ final class NameSuggestionsPanel extends aj implements WidgetActivationListener 
               this.field_C[var5].a(param1 ^ 17099, var5 * 16 + 20, 0, 80, 15);
               this.a((UiWidget) (this.field_C[var5]), (byte) -125);
             }
-            this.field_C[var3_int] = new InteractiveWidget(nj.field_p, (ma) (this));
+            this.field_C[var3_int] = new InteractiveWidget(TextHotspotBounds.field_p, (ma) (this));
             this.field_C[var3_int].field_q = (WidgetRenderer) ((Object) var4);
             this.field_C[var3_int].a(-127, 16 * var3_int + 16 + 20, 0, 100, 15);
             this.a((UiWidget) (this.field_C[var3_int]), (byte) -92);

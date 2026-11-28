@@ -100,7 +100,7 @@ final class hba extends AttackEvent {
           am.field_M = pi.a(param1, -8845, "basic", "status_icons");
           DefaultWidgetRenderer.field_h = RageSpecial.a(29611, "basic", "doughnut", param1)[0];
           var10 = RageSpecial.a(29611, "basic", "special_tiles_ones", param1);
-          qq.field_i = new IndexedSprite[3];
+          ChangeCreatureStatOrHealthEffect.field_i = new IndexedSprite[3];
           dupTemp$0 = var10[6];
           HuffmanCodec.field_b = dupTemp$0;
           ge.field_K = dupTemp$0;
@@ -111,9 +111,9 @@ final class hba extends AttackEvent {
           fw.field_f = var10[5];
           ff.field_u = var10[0];
           uu.field_vb = var10[1];
-          qq.field_i[0] = var10[17];
-          qq.field_i[2] = var10[19];
-          qq.field_i[1] = var10[18];
+          ChangeCreatureStatOrHealthEffect.field_i[0] = var10[17];
+          ChangeCreatureStatOrHealthEffect.field_i[2] = var10[19];
+          ChangeCreatureStatOrHealthEffect.field_i[1] = var10[18];
           cba.field_c = new IndexedSprite[]{var10[23], var10[24], var10[25]};
           iw.field_b = new IndexedSprite[]{var10[26], var10[27], var10[28]};
           sv.field_c = var10[29];
@@ -147,7 +147,7 @@ final class hba extends AttackEvent {
           lf.field_b[1] = var11[15];
           lf.field_b[0] = var11[14];
           Object var3 = null;
-          mla.field_b = pi.a(param1, -8845, "basic", "snowflakes");
+          TextLineMetrics.field_b = pi.a(param1, -8845, "basic", "snowflakes");
           du.field_b = BagpipeSpecial.a(param1, -1, "basic", "cat_head");
           PacketBuffer.field_f = BagpipeSpecial.a(param1, -1, "basic", "cat_eyes");
           IterableDualLinkDeque.field_d = RageSpecial.a(29611, "basic", "cat_paw", param1);
@@ -180,7 +180,7 @@ final class hba extends AttackEvent {
             as.field_a[var6_intLifetime3] = ls.field_a[var6_intLifetime3].copyFlippedHorizontal();
           }
           sj.field_k = RageSpecial.a(29611, "basic", "win_takenhold", param1);
-          ela.field_j = RageSpecial.a(29611, "basic", "win_ctf", param1);
+          DisableMoveSlotEffect.field_j = RageSpecial.a(29611, "basic", "win_ctf", param1);
           IncomingAnimation.field_v = RageSpecial.a(29611, "basic", "fly_small", param1);
           MatchingFieldValidator.field_k = new IndexedSprite[2];
           for (var6_intLifetime4 = 0; var6_intLifetime4 < IncomingAnimation.field_v.length; var6_intLifetime4++) {
@@ -385,8 +385,8 @@ final class hba extends AttackEvent {
         var2 = BachelorFridge.field_y;
         try {
           PizzaArenaTheme.field_i = new IntrusiveNodeHashTable(4);
-          for (var1_int = 0; jk.field_k.length > var1_int; var1_int++) {
-            PizzaArenaTheme.field_i.put((long)jk.field_k[var1_int].toLowerCase().hashCode(), (byte) 69, new ji(var1_int));
+          for (var1_int = 0; CreaturePoseAnimation.field_k.length > var1_int; var1_int++) {
+            PizzaArenaTheme.field_i.put((long)CreaturePoseAnimation.field_k[var1_int].toLowerCase().hashCode(), (byte) 69, new ji(var1_int));
           }
           if (param0 != 7) {
             field_v = (String) null;

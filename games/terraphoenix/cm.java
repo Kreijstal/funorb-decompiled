@@ -13,13 +13,13 @@ final class cm {
           return;
         }
         if (nb.field_b == null) {
-          rd.field_s = new DisplayNameSelectionPanel();
-          bj.field_f.a(rd.field_s, -24);
+          RichTextLayout.field_s = new DisplayNameSelectionPanel();
+          bj.field_f.a(RichTextLayout.field_s, -24);
           return;
         }
         nb.field_b.h((byte) -126);
-        rd.field_s = new DisplayNameSelectionPanel();
-        bj.field_f.a(rd.field_s, -24);
+        RichTextLayout.field_s = new DisplayNameSelectionPanel();
+        bj.field_f.a(RichTextLayout.field_s, -24);
     }
 
     public static void clearStaticReferences(byte param0) {

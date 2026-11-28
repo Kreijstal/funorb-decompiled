@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends te {
+final class kk extends RichTextWidget {
     private FieldValidator field_T;
     static String field_Y;
     private String field_R;
@@ -99,7 +99,7 @@ final class kk extends te {
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
         qd var6;
-        rj var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -122,7 +122,7 @@ final class kk extends te {
               }
               if (!(var5.equals(this.field_l))) {
                 this.field_l = var5;
-                this.a((byte) -127);
+                this.rebuildHotspotBounds((byte) -127);
               }
               break regionExit1;
             }
@@ -130,7 +130,7 @@ final class kk extends te {
           }
           if (!var5.equals(this.field_l)) {
             this.field_l = var5;
-            this.a((byte) -127);
+            this.rebuildHotspotBounds((byte) -127);
           }
         }
         super.a(param0, param1, param2 ^ 0, param3);
@@ -138,9 +138,9 @@ final class kk extends te {
           this.field_R = (String) null;
         }
         var6Lifetime1 = this.field_T.getValidationStatus(-7847);
-        var8 = (rj) ((Object) this.field_j);
+        var8 = (TextWidgetRenderer) ((Object) this.field_j);
         var9 = param3 + this.field_s;
-        var10 = var8.a((pj) (this), 9534, param0) + (var8.a((pj) (this), true).b(122) >> 1);
+        var10 = var8.getTextOriginY((pj) (this), 9534, param0) + (var8.getTextLayout((pj) (this), true).getLayoutHeight(122) >> 1);
         if (var6Lifetime1 != ml.field_a &&
           uj.field_b != var6Lifetime1) {
           if (vh.field_h == var6Lifetime1) {
@@ -288,7 +288,7 @@ final class kk extends te {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == -8235) {
           return null;
         }

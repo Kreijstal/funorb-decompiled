@@ -389,29 +389,29 @@ abstract class bi extends GameApplet {
             ha.field_ab = 15000L + pf.correctedCurrentTimeMillis(0);
           }
         }
-        if (bl.field_m == -1 ||
-          bl.field_m == 0) {
-          stackIn_27_0 = (bl.field_m != -1) ? 0 : 1;
+        if (TextHotspotBounds.field_m == -1 ||
+          TextHotspotBounds.field_m == 0) {
+          stackIn_27_0 = (TextHotspotBounds.field_m != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_27_0;
-          bl.field_m = kh.a((byte) -93);
+          TextHotspotBounds.field_m = kh.a((byte) -93);
           if (var3Lifetime1 != 0 &&
-            bl.field_m == 0 &&
+            TextHotspotBounds.field_m == 0 &&
             11 == k.field_g &&
             !ld.b(true)) {
             db.a(false);
           }
-          if (bl.field_m != -1 &&
-            bl.field_m != 0) {
+          if (TextHotspotBounds.field_m != -1 &&
+            TextHotspotBounds.field_m != 0) {
             ha.field_ab = pf.correctedCurrentTimeMillis(param0 - 99) + 15000L;
           }
         }
-        if (bl.field_m != -1 &&
-          0 != bl.field_m) {
+        if (TextHotspotBounds.field_m != -1 &&
+          0 != TextHotspotBounds.field_m) {
           if (mc.field_a < 10) {
-            if (bl.field_m != 3) {
-              if (bl.field_m != 4) {
-                if (bl.field_m != 2) {
-                  if (bl.field_m != 5) {
+            if (TextHotspotBounds.field_m != 3) {
+              if (TextHotspotBounds.field_m != 4) {
+                if (TextHotspotBounds.field_m != 2) {
+                  if (TextHotspotBounds.field_m != 5) {
                     this.a((byte) 105, "js5connect");
                   } else {
                     this.a((byte) 58, "outofdate");
@@ -428,12 +428,12 @@ abstract class bi extends GameApplet {
           } else {
             if (10 <= k.field_g) {
               cf.a((byte) 92);
-              if (bl.field_m == 3) {
+              if (TextHotspotBounds.field_m == 3) {
                 pc.a((byte) -46, 256, LoginPanel.field_A);
               } else {
-                if (bl.field_m != 4) {
-                  if (bl.field_m != 2) {
-                    if (5 != bl.field_m) {
+                if (TextHotspotBounds.field_m != 4) {
+                  if (TextHotspotBounds.field_m != 2) {
+                    if (5 != TextHotspotBounds.field_m) {
                       pc.a((byte) -46, 256, me.field_h);
                     } else {
                       pc.a((byte) -46, 5, sc.field_b);
@@ -449,18 +449,18 @@ abstract class bi extends GameApplet {
             }
           }
         }
-        if ((bl.field_m != -1 &&
-          0 != bl.field_m ||
+        if ((TextHotspotBounds.field_m != -1 &&
+          0 != TextHotspotBounds.field_m ||
           ld.b(true)) &&
           pf.correctedCurrentTimeMillis(param0 - 99) >= ha.field_ab) {
           qj.field_J = false;
-          if (-1 != bl.field_m &&
-            bl.field_m != 0) {
-            bl.field_m = -1;
+          if (-1 != TextHotspotBounds.field_m &&
+            TextHotspotBounds.field_m != 0) {
+            TextHotspotBounds.field_m = -1;
             PcmOutputWorker.a(64);
           }
         }
-        if (bl.field_m == 0 &&
+        if (TextHotspotBounds.field_m == 0 &&
           !ld.b(true)) {
           lh.field_e = false;
         }
@@ -502,7 +502,7 @@ abstract class bi extends GameApplet {
           pb.a(false);
           dj.b(param0 ^ -25469);
           cf.field_c = false;
-          be.field_d = j.field_h;
+          TextLineMetrics.field_d = j.field_h;
           lc.a(fj.field_B, mb.field_c, DebouncedFieldValidator.field_a, param0 + 3249773, ii.field_m);
           if (sd.field_d ||
             kg.field_d != null) {
@@ -742,7 +742,7 @@ abstract class bi extends GameApplet {
         if (0 == var2 ||
           var2 == 1) {
           if (k.field_g == 11 &&
-            bl.field_m == 0) {
+            TextHotspotBounds.field_m == 0) {
             db.a(false);
           }
           return var2;
@@ -766,7 +766,7 @@ abstract class bi extends GameApplet {
         int var4 = rc.field_f - 1;
         byte[] var5 = new byte[var4];
         MonkeyPuzzle2.field_D.a((byte) 118, 0, var4, var5);
-        BoundedRandomAccessFile.a(var3 != 0, 12430, ii.a(false), be.a(var5, (byte) -49));
+        BoundedRandomAccessFile.a(var3 != 0, 12430, ii.a(false), TextLineMetrics.a(var5, (byte) -49));
     }
 
     private final int a(boolean param0, boolean param1, boolean param2) {
@@ -814,9 +814,9 @@ abstract class bi extends GameApplet {
             }
           }
           if (var4 == 3) {
-            if (bl.field_m != -1 &&
-              bl.field_m != 0) {
-              bl.field_m = -1;
+            if (TextHotspotBounds.field_m != -1 &&
+              TextHotspotBounds.field_m != 0) {
+              TextHotspotBounds.field_m = -1;
               PcmOutputWorker.a(95);
             }
             if (!param0) {
@@ -854,7 +854,7 @@ abstract class bi extends GameApplet {
             k.field_g = 10;
           }
           if (7 == var4) {
-            aa.a(-126, ii.a(false));
+            TextLayout.a(-126, ii.a(false));
           }
           if (var4 == 8) {
             ResourceArchive.clearSessionAndReloadPage(ii.a(false), true);

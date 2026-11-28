@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends og implements im, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends og implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_K;
     private ValidatedTextField field_M;
     static int[] field_J;
@@ -13,7 +13,7 @@ final class AccountRegistrationPanel extends og implements im, WidgetActivationL
     private of field_F;
     NameSuggestionsPanel field_L;
     private ValidatedTextField field_A;
-    private rf field_H;
+    private RichTextWidget field_H;
     static String field_C;
 
     private final int a(int param0, int param1, String param2, int param3, qm param4) {
@@ -101,13 +101,13 @@ final class AccountRegistrationPanel extends og implements im, WidgetActivationL
         var3 = var3 + (this.a(170, 20, var3, 0, sh.field_m, "", this.field_K) + 5);
         var3 = var3 + this.a(var3, 170, fh.field_h, this.field_M, 25406);
         var3 = var3 + (this.a(pk.field_f, var3, this.field_I, true, AccountServiceResult.field_c, 170) + 5);
-        var3 = var3 + (5 + this.a(fh.field_g, var3, this.field_N, true, tb.field_c, 170));
+        var3 = var3 + (5 + this.a(fh.field_g, var3, this.field_N, true, TextLayout.field_c, 170));
         var3 = var3 + this.a(170, -81, ui.field_b, var3, this.field_z);
         ei var4 = new ei(46, var3, -90 + this.field_g, 25, this.field_F, true, -120 + this.field_g, 5, ba.field_i, 11579568, Bzip2State.field_j);
         this.b(var4, -123);
         var3 = var3 + var4.field_f;
-        lb var5 = new lb(ai.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ai.field_h.field_o, -1, 2147483647, true);
-        this.field_H = new rf(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(ai.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, ai.field_h.field_o, -1, 2147483647, true);
+        this.field_H = new RichTextWidget(var2, var5);
         this.field_H.field_t = "";
         this.field_H.a(47, hp.field_r, 0);
         this.field_H.a(47, hp.field_r, 1);
@@ -139,7 +139,7 @@ final class AccountRegistrationPanel extends og implements im, WidgetActivationL
         }
     }
 
-    public final void a(int param0, int param1, rf param2, byte param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, byte param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue extends WidgetContainer implements cm, WidgetActivationListener {
+final class ue extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static s field_J;
-    private pn field_L;
+    private RichTextWidget field_L;
     private InteractiveWidget field_P;
     private AccountCreationResultPanel field_E;
     static int[] field_G;
@@ -69,7 +69,7 @@ final class ue extends WidgetContainer implements cm, WidgetActivationListener {
         super(0, 0, 288, 0, (WidgetListener) null);
         String var7 = null;
         int var3 = 0;
-        va var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -78,8 +78,8 @@ final class ue extends WidgetContainer implements cm, WidgetActivationListener {
           this.field_P.listener = (WidgetListener) ((Object) new vo());
           var7 = Vertigo2.a(new String[]{this.a(0), this.a((byte) -88)}, BlastDebrisModel.field_n, -127);
           var3 = 20;
-          var4 = new va(qc.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
-          this.field_L = new pn(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(qc.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, qc.field_x.field_z, -1, 2147483647, true);
+          this.field_L = new RichTextWidget(var7, var4);
           this.field_L.field_q = "";
           this.field_L.a(0, 0, fm.field_c);
           this.field_L.a(1, 0, fm.field_c);
@@ -142,7 +142,7 @@ final class ue extends WidgetContainer implements cm, WidgetActivationListener {
         }
     }
 
-    public final void a(pn param0, int param1, int param2, byte param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, byte param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

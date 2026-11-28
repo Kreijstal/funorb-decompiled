@@ -160,8 +160,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 stackIn_47_0 = ((4 & var7) != 0);
                 IndexedSpriteState.field_i = stackIn_47_0;
                 stackIn_50_0 = ((8 & var7) != 0);
-                fi.field_o = stackIn_50_0;
-                if (fi.field_o) {
+                TextHotspotBounds.field_o = stackIn_50_0;
+                if (TextHotspotBounds.field_o) {
                 }
               }
               if (mk.field_c) {
@@ -229,7 +229,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
               if (uk.field_c == 7) {
                 uk.field_c = 3;
               }
-              fi.field_t = ne.field_a.readString(0);
+              TextHotspotBounds.field_t = ne.field_a.readString(0);
               kg.field_f = false;
               stackIn_90_0 = uk.field_c;
               return stackIn_90_0;
@@ -237,9 +237,9 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
             if (r.field_i == null) {
               if (kg.field_f) {
                 if (bj.b(-21676) <= 30000L) {
-                  fi.field_t = cf.field_m;
+                  TextHotspotBounds.field_t = cf.field_m;
                 } else {
-                  fi.field_t = nk.field_j;
+                  TextHotspotBounds.field_t = nk.field_j;
                 }
                 kg.field_f = false;
                 stackIn_97_0 = 3;

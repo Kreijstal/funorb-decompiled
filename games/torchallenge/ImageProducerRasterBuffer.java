@@ -97,7 +97,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           ConfirmedEmailAvailabilityValidator.field_s[PcmOutputWorker.field_c] = param1;
           hi.field_G[PcmOutputWorker.field_c] = PcmOutputWorker.field_c;
           bg.field_Q[PcmOutputWorker.field_c] = param3;
-          if (param3 > ia.field_q) {
+          if (param3 > TextHotspotBounds.field_q) {
             v.field_Z = param3;
           }
           if (param3 < ol.field_d) {
@@ -353,7 +353,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
               ol.field_g = ba.field_i;
               ea.field_g = null;
             }
-            df.field_O = true;
+            RichTextWidget.field_O = true;
             if (gh.field_x) {
               GameApplet.field_o = 1;
               if (var6 == 0) {

@@ -39,7 +39,7 @@ final class de {
         if (param0) {
           var1 = new Sprite[vl.field_b];
           for (var2 = 0; vl.field_b > var2; var2++) {
-            var3 = lg.field_e[var2] * MusicPatchPcmStream.field_r[var2];
+            var3 = TextLayout.field_e[var2] * MusicPatchPcmStream.field_r[var2];
             var26 = h.field_a[var2];
             if (!vd.field_c[var2]) {
               var9 = new int[var3];
@@ -47,7 +47,7 @@ final class de {
               for (var6_int = 0; var3 > var6_int; var6_int++) {
                 var9[var6_int] = td.field_m[jh.a((int) var26[var6_int], 255)];
               }
-              var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var27);
+              var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var27);
             } else {
               var28 = MatchingFieldValidator.field_t[var2];
               var16 = new int[var3];
@@ -56,14 +56,14 @@ final class de {
               for (var7 = 0; var3 > var7; var7++) {
                 var6[var7] = p.a(jh.a(255, (int) var28[var7]) << 24, td.field_m[jh.a(255, (int) var26[var7])]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var16));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var16));
             }
           }
         } else {
           field_c = (boolean[][]) null;
           var1 = new Sprite[vl.field_b];
           for (var2 = 0; vl.field_b > var2; var2++) {
-            var3 = lg.field_e[var2] * MusicPatchPcmStream.field_r[var2];
+            var3 = TextLayout.field_e[var2] * MusicPatchPcmStream.field_r[var2];
             var29 = h.field_a[var2];
             if (!vd.field_c[var2]) {
               var9 = new int[var3];
@@ -71,7 +71,7 @@ final class de {
               for (var6_int = 0; var3 > var6_int; var6_int++) {
                 var9[var6_int] = td.field_m[jh.a((int) var29[var6_int], 255)];
               }
-              var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var30);
+              var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var30);
             } else {
               var31 = MatchingFieldValidator.field_t[var2];
               var16 = new int[var3];
@@ -80,7 +80,7 @@ final class de {
               for (var7 = 0; var3 > var7; var7++) {
                 var6[var7] = p.a(jh.a(255, (int) var31[var7]) << 24, td.field_m[jh.a(255, (int) var29[var7])]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], lg.field_e[var2], var16));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], MusicPatchPcmStream.field_r[var2], TextLayout.field_e[var2], var16));
             }
           }
         }

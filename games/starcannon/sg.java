@@ -184,7 +184,7 @@ final class sg {
     }
 
     final void a(byte param0, BitmapFont param1) {
-        hd var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         w var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -207,7 +207,7 @@ final class sg {
         w var14Lifetime1;
         w var14Lifetime2;
         try {
-          var18 = new hd(param1, 2, 2, 2236962, 1, 1, 1, 2 + param1.field_q + param1.field_p);
+          var18 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + param1.field_q + param1.field_p);
           var18.field_c = 16777215;
           this.field_j = (de) ((Object) var18);
           var4 = new w();
@@ -238,7 +238,7 @@ final class sg {
           }
           var5[4] = (Sprite) ((Object) var19);
           var4.a(4, (byte) -76).a(-38, true).a(var5, (byte) -74);
-          var4.a(5, (byte) -76).a(ab.b(0, -25343, 0, 0, 65793), (byte) -74).a(-52, true).c(-1, 2);
+          var4.a(5, (byte) -76).a(RichTextWidget.b(0, -25343, 0, 0, 65793), (byte) -74).a(-52, true).c(-1, 2);
           this.field_d = (de) ((Object) var4);
           var6 = new w(var4, true);
           var6.field_h = 0;

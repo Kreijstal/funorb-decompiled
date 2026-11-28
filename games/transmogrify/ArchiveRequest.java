@@ -21,7 +21,7 @@ abstract class ArchiveRequest extends DualLinkNode {
 
     final static tf[] d(int param0) {
         if (param0 == -26481) {
-          return new tf[]{WordLanguage.field_m, og.field_d, PacketBuffer.field_l, field_u, PcmOutputWorker.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, CrossfadingMidiPcmStream.field_m, u.field_c, kb.field_q, ik.field_cb, nj.field_g};
+          return new tf[]{WordLanguage.field_m, og.field_d, PacketBuffer.field_l, field_u, PcmOutputWorker.field_e, gk.field_b, rf.field_db, gk.field_d, gh.field_g, CrossfadingMidiPcmStream.field_m, u.field_c, kb.field_q, ik.field_cb, TextHotspotBounds.field_g};
         }
         return (tf[]) null;
     }

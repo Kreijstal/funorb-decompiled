@@ -122,7 +122,7 @@ final class dh {
                   if (!var9.field_Qb) {
                     this.field_b.a((byte) -12, MatchingFieldValidator.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
                   } else {
-                    this.field_b.a((byte) -12, MatchingFieldValidator.a(ub.field_c, new String[]{var5}, (byte) -127), 0);
+                    this.field_b.a((byte) -12, MatchingFieldValidator.a(TextLayout.field_c, new String[]{var5}, (byte) -127), 0);
                     this.field_b.a((byte) -12, MatchingFieldValidator.a(w.field_Fb, new String[]{var5}, (byte) -81), 1);
                   }
                 }
@@ -174,7 +174,7 @@ final class dh {
             if (!var8.field_Qb) {
               this.field_b.a((byte) -12, MatchingFieldValidator.a(pi.field_b, new String[]{var5}, (byte) -102), 0);
             } else {
-              this.field_b.a((byte) -12, MatchingFieldValidator.a(ub.field_c, new String[]{var5}, (byte) -127), 0);
+              this.field_b.a((byte) -12, MatchingFieldValidator.a(TextLayout.field_c, new String[]{var5}, (byte) -127), 0);
               this.field_b.a((byte) -12, MatchingFieldValidator.a(w.field_Fb, new String[]{var5}, (byte) -81), 1);
             }
           }
@@ -570,7 +570,7 @@ final class dh {
             return true;
           }
           if (param1 == 2) {
-            fj.a(param2, 3, this.field_d);
+            TextLineMetrics.a(param2, 3, this.field_d);
             return true;
           }
           if (param1 == 3) {

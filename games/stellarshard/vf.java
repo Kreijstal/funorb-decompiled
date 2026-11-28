@@ -225,12 +225,12 @@ final class vf extends WidgetContainer implements WidgetActivationListener {
         }
     }
 
-    final static id a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         if (param0 != 0) {
           vf.clearStaticReferences(true);
         }
         if (null == mk.field_l) {
-          mk.field_l = new id(de.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, de.field_c.field_N, -1, 2147483647, true);
+          mk.field_l = new DefaultTextWidgetRenderer(de.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, de.field_c.field_N, -1, 2147483647, true);
         }
         return mk.field_l;
     }

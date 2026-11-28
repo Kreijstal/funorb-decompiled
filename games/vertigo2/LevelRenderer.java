@@ -891,8 +891,8 @@ final class LevelRenderer {
               this.field_c.length != AccountCreationResultPanel.field_ob.length) {
               AccountCreationResultPanel.field_ob = new int[this.field_c.length][3];
             }
-            if (null == va.field_b) {
-              va.field_b = new int[]{0, 0, 0, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535};
+            if (null == DefaultTextWidgetRenderer.field_b) {
+              DefaultTextWidgetRenderer.field_b = new int[]{0, 0, 0, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535};
             }
             for (var22Lifetime4 = 0; this.field_c.length > var22Lifetime4; var22Lifetime4++) {
               this.field_c[var22Lifetime4].prepareAnimatedAvatarMesh(true);
@@ -976,10 +976,10 @@ final class LevelRenderer {
                 for (var25 = 0; var25 < this.field_c.length; var25++) {
                   if (dc.field_J[var25] != null &&
                     (var25 + 1 & this.field_a[var24].field_d) != 0) {
-                    va.field_b[0] = AccountCreationResultPanel.field_ob[var25][0];
-                    va.field_b[2] = AccountCreationResultPanel.field_ob[var25][1];
-                    va.field_b[1] = this.field_a[var24].getShadowSurfaceHeight(true);
-                    var26Lifetime1Lifetime1 = -(128 * (va.field_b[1] - AccountCreationResultPanel.field_ob[var25][2]) / 960) + 128;
+                    DefaultTextWidgetRenderer.field_b[0] = AccountCreationResultPanel.field_ob[var25][0];
+                    DefaultTextWidgetRenderer.field_b[2] = AccountCreationResultPanel.field_ob[var25][1];
+                    DefaultTextWidgetRenderer.field_b[1] = this.field_a[var24].getShadowSurfaceHeight(true);
+                    var26Lifetime1Lifetime1 = -(128 * (DefaultTextWidgetRenderer.field_b[1] - AccountCreationResultPanel.field_ob[var25][2]) / 960) + 128;
                     if (var26Lifetime1Lifetime1 > 10 &&
                       var26Lifetime1Lifetime1 <= 128) {
                       var35 = new Model(dc.field_J[var25], false, true, true, true);
@@ -989,7 +989,7 @@ final class LevelRenderer {
                         var36.field_T < 4096 &&
                         var36.field_w < 4096) {
                         var36.field_K = false;
-                        var36.a(this.field_s.field_e, va.field_b);
+                        var36.a(this.field_s.field_e, DefaultTextWidgetRenderer.field_b);
                       }
                     }
                   }
@@ -1056,7 +1056,7 @@ final class LevelRenderer {
           var27_int = var13Lifetime1;
           if (var27_int == 0) {
             if (param4.field_w == 0) {
-              va.field_s.a(620, -45, 16777215, 30, -1, Vertigo2.a(new String[]{Integer.toString(param7 + 1)}, bl.field_o, -121));
+              DefaultTextWidgetRenderer.field_s.a(620, -45, 16777215, 30, -1, Vertigo2.a(new String[]{Integer.toString(param7 + 1)}, bl.field_o, -121));
               return;
             }
             if (param4.field_w == 1) {
@@ -1068,23 +1068,23 @@ final class LevelRenderer {
               var27[3] = DebouncedFieldValidator.field_c;
               var28 = 1;
               for (var29 = 0; var38.length > var29; var29++) {
-                var28 = Math.max(var28, va.field_s.a(1, var38[var29]));
+                var28 = Math.max(var28, DefaultTextWidgetRenderer.field_s.a(1, var38[var29]));
               }
               var28 += 20;
               var29 = -(var28 / 2) + 610;
               FullscreenFocusCanvas.a(!param3, var29 - var28 / 2, var28, 5);
-              va.field_s.a(var38[0], 16777215, -1, var29, 30, 2);
+              DefaultTextWidgetRenderer.field_s.a(var38[0], 16777215, -1, var29, 30, 2);
               FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 55);
-              va.field_s.a(var38[1], 16777215, -1, var29, 80, 2);
+              DefaultTextWidgetRenderer.field_s.a(var38[1], 16777215, -1, var29, 80, 2);
               if (param0 < 0) {
                 return;
               }
               FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 105);
               if (param8 != 0) {
-                va.field_s.a(var38[3], 2479095, -1, var29, 130, 2);
+                DefaultTextWidgetRenderer.field_s.a(var38[3], 2479095, -1, var29, 130, 2);
                 return;
               }
-              va.field_s.a(var38[2], 16131600, -1, var29, 130, 2);
+              DefaultTextWidgetRenderer.field_s.a(var38[2], 16131600, -1, var29, 130, 2);
               return;
             }
             if (param4.field_w == 2) {
@@ -1096,23 +1096,23 @@ final class LevelRenderer {
               var27[2] = lh.field_d;
               var28 = 1;
               for (var29 = 0; var39.length > var29; var29++) {
-                var28 = Math.max(var28, va.field_s.a(1, var39[var29]));
+                var28 = Math.max(var28, DefaultTextWidgetRenderer.field_s.a(1, var39[var29]));
               }
               var28 += 20;
               var29 = 610 - var28 / 2;
               FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 5);
-              va.field_s.a(var39[0], 16777215, -1, var29, 30, 2);
+              DefaultTextWidgetRenderer.field_s.a(var39[0], 16777215, -1, var29, 30, 2);
               FullscreenFocusCanvas.a(false, -(var28 / 2) + var29, var28, 55);
-              va.field_s.a(var39[1], 16777215, -1, var29, 80, 2);
+              DefaultTextWidgetRenderer.field_s.a(var39[1], 16777215, -1, var29, 80, 2);
               if (0 > param0) {
                 return;
               }
               FullscreenFocusCanvas.a(!param3, var29 - var28 / 2, var28, 105);
               if (param8 == 0) {
-                va.field_s.a(lh.field_d, 16131600, -1, var29, 130, 2);
+                DefaultTextWidgetRenderer.field_s.a(lh.field_d, 16131600, -1, var29, 130, 2);
                 return;
               }
-              va.field_s.a(DebouncedFieldValidator.field_c, 2479095, -1, var29, 130, 2);
+              DefaultTextWidgetRenderer.field_s.a(DebouncedFieldValidator.field_c, 2479095, -1, var29, 130, 2);
               return;
             }
           } else {
@@ -1142,12 +1142,12 @@ final class LevelRenderer {
             }
             if (var27_int == 3) {
               ea.field_d[0].draw(320 - ea.field_d[0].field_x / 2, 70);
-              va.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
+              DefaultTextWidgetRenderer.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
               return;
             }
             if (4 == var27_int) {
               ea.field_d[6].draw(-(ea.field_d[6].field_x / 2) + 320, -20);
-              va.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
+              DefaultTextWidgetRenderer.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
               return;
             }
             if (var27_int == 6) {
@@ -1155,14 +1155,14 @@ final class LevelRenderer {
                 ea.field_d[1].draw(320 - ea.field_d[1].field_x / 2, 70);
               }
               if (0 == param4.field_w) {
-                va.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
+                DefaultTextWidgetRenderer.field_s.a(md.field_y, 16777215, -1, 320, 420, 2);
                 return;
               }
               var27_int = (-var22Lifetime5 + 250) / 50;
               if (var27_int < 0) {
                 var27_int = 0;
               }
-              va.field_s.a(Vertigo2.a(new String[]{Integer.toString(var27_int)}, lr.field_T, -114), 16777215, -1, 320, 420, 2);
+              DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{Integer.toString(var27_int)}, lr.field_T, -114), 16777215, -1, 320, 420, 2);
               if (param4.field_w == 2) {
                 var28 = param4.field_E;
                 if (param0 >= 0) {
@@ -1200,7 +1200,7 @@ final class LevelRenderer {
                     ea.field_d[9].draw(320 - ea.field_d[9].field_x / 2, 70);
                   }
                 }
-                va.field_s.a(var29_ref_String, 16777215, -1, 320, 200, 2);
+                DefaultTextWidgetRenderer.field_s.a(var29_ref_String, 16777215, -1, 320, 200, 2);
               }
               return;
             }
@@ -1213,26 +1213,26 @@ final class LevelRenderer {
               this.field_f.a(200, true, 220, 28, 14);
               if (param4.field_w != 2) {
                 if (1 == param4.field_w) {
-                  FullscreenFocusCanvas.a(!param3, 20, va.field_s.a(1, lp.field_A), 55);
-                  va.field_s.a(16777215, (byte) 104, -1, 20, lp.field_A, 80);
+                  FullscreenFocusCanvas.a(!param3, 20, DefaultTextWidgetRenderer.field_s.a(1, lp.field_A), 55);
+                  DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 104, -1, 20, lp.field_A, 80);
                 }
               } else {
                 var27_int = param4.field_I / 50;
-                FullscreenFocusCanvas.a(false, 20, va.field_s.a(1, GameplayScreen.field_e), 10);
+                FullscreenFocusCanvas.a(false, 20, DefaultTextWidgetRenderer.field_s.a(1, GameplayScreen.field_e), 10);
                 if (var27_int < 0) {
                   var27_int = 0;
                 }
-                va.field_s.a(16777215, (byte) 52, -1, 20, GameplayScreen.field_e, 35);
+                DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 52, -1, 20, GameplayScreen.field_e, 35);
                 if (param4.field_I > 0) {
                   var40 = Vertigo2.a(new String[]{gl.a(-121, true, false, param4.field_I)}, mc.field_f, -3);
-                  var29 = va.field_s.a(1, var40);
+                  var29 = DefaultTextWidgetRenderer.field_s.a(1, var40);
                   FullscreenFocusCanvas.a(false, -20 - var29 + 640, var29, 60);
                   var30 = 16777215;
                   if (var27_int < 10) {
                     var31 = (int)(100.0 * (Math.sin((double)param4.field_I / 8.0) + 1.0)) + 55;
                     var30 = var31 + (var31 << 8) + 16711680;
                   }
-                  va.field_s.a(var30, (byte) 108, -1, 640 - (var29 + 20), var40, 66 + va.field_s.field_k);
+                  DefaultTextWidgetRenderer.field_s.a(var30, (byte) 108, -1, 640 - (var29 + 20), var40, 66 + DefaultTextWidgetRenderer.field_s.field_k);
                 }
               }
               if (param8 >= 0 &&
@@ -1242,8 +1242,8 @@ final class LevelRenderer {
               if (param4.field_w == 0 &&
                 param7 == 0) {
                 MusicPatchPcmStream.a(190, 210, 282, 20, 64, 150);
-                tk.field_c.drawParagraph(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, va.field_s.field_c + va.field_s.field_j);
-                tk.field_c.drawParagraph(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, va.field_s.field_c + va.field_s.field_j);
+                tk.field_c.drawParagraph(tq.field_c, 40, 292, 200, 160, 16777215, -1, 0, 0, DefaultTextWidgetRenderer.field_s.field_c + DefaultTextWidgetRenderer.field_s.field_j);
+                tk.field_c.drawParagraph(vl.field_g, 50, 294, 160, 160, 16777215, -1, 2, 0, DefaultTextWidgetRenderer.field_s.field_c + DefaultTextWidgetRenderer.field_s.field_j);
               }
               if (param4.field_w != 2 &&
                 1 != param4.field_w) {
@@ -1256,7 +1256,7 @@ final class LevelRenderer {
               var28 = 1;
               for (var29 = 0; var29 < var41.length; var29++) {
                 if (param0 != var29) {
-                  var28 = Math.max(var28, va.field_s.a(1, var41[var29]));
+                  var28 = Math.max(var28, DefaultTextWidgetRenderer.field_s.a(1, var41[var29]));
                 }
               }
               var29 = 20;
@@ -1266,12 +1266,12 @@ final class LevelRenderer {
               }
               if (param0 != 0) {
                 FullscreenFocusCanvas.a(false, var29, var28, 5 + (-30 + var30Lifetime1));
-                va.field_s.a(16131600, (byte) 89, -1, var29, var41[0], var30Lifetime1);
+                DefaultTextWidgetRenderer.field_s.a(16131600, (byte) 89, -1, var29, var41[0], var30Lifetime1);
                 var30Lifetime1 += 50;
               }
               if (param0 != 1) {
                 FullscreenFocusCanvas.a(false, var29, var28, -30 + var30Lifetime1 + 5);
-                va.field_s.a(2479095, (byte) 98, -1, var29, var41[1], var30Lifetime1);
+                DefaultTextWidgetRenderer.field_s.a(2479095, (byte) 98, -1, var29, var41[1], var30Lifetime1);
                 return;
               }
             }

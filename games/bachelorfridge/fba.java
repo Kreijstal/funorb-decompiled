@@ -17,13 +17,13 @@ final class fba {
         ArenaTheme.field_f = 0;
         InvincibleEvent.field_s = 0;
         if (param1 < -41) {
-          ic.field_i = new jd(2);
-          ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
+          ClearPendingPetAttackEffect.field_i = new jd(2);
+          ClearPendingPetAttackEffect.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
           return;
         }
         field_a = (IndexedSprite) null;
-        ic.field_i = new jd(2);
-        ic.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
+        ClearPendingPetAttackEffect.field_i = new jd(2);
+        ClearPendingPetAttackEffect.field_i.a(param0, 91, wja.a(gd.field_m, mk.field_p, false), -1);
     }
 
     static {

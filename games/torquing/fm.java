@@ -41,7 +41,7 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -87,7 +87,7 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "fm.E(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "fm.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
         try {
           jk.a(ii.field_m, (byte) -79, param0);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "fm.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "fm.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -175,14 +175,14 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     public fm() {
         super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_C = new InteractiveWidget(qh.field_e, (ca) null);
-        this.field_D = new InteractiveWidget(cm.field_k, (ca) null);
+        this.field_D = new InteractiveWidget(RichTextLayout.field_k, (ca) null);
         this.field_B = new InteractiveWidget(FrameTimer.field_c, (ca) null);
         rf var1 = new rf();
         this.field_C.renderer = (WidgetRenderer) ((Object) var1);
@@ -242,7 +242,7 @@ final class fm extends WidgetContainer implements WidgetActivationListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

@@ -77,7 +77,7 @@ final class TeleportAnimation extends EventAnimation {
         al.a(-99, this.field_A.moveId);
         while (var3 != null) {
           var4 = var3.target.resolveCreatureView(-27449, this.screen);
-          var4.b(-1, 7);
+          var4.playAnimation(-1, 7);
           if (var3 instanceof MoveCreatureEffect) {
             var5 = (MoveCreatureEffect) (var3);
             var6 = var5.target.resolveCreatureView(-27449, this.screen);

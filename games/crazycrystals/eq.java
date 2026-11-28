@@ -89,7 +89,7 @@ final class eq extends rl {
             return stackIn_2_0;
           }
           var7 = (int)(100.0 * Math.pow(2.0, (double)var6_int / 12.0));
-          tb.field_d.playSampleWithPan(qp.field_i, var7, 48 * gi.field_m, param3);
+          TextLayout.field_d.playSampleWithPan(qp.field_i, var7, 48 * gi.field_m, param3);
           ph.a(10, (byte) 107, param1, param4);
           stackIn_4_0 = IsaacRandom.field_g;
           return stackIn_4_0;

@@ -220,10 +220,10 @@ final class DiskCacheWorker implements Runnable {
           return kk.field_g;
         }
         if (db.field_a == of.field_d) {
-          return jh.field_g;
+          return RichTextLayout.field_g;
         }
         if (!dl.field_l.b(-26753)) {
-          return jh.field_g;
+          return RichTextLayout.field_g;
         }
         return ob.field_F;
     }

@@ -66,7 +66,7 @@ final class kj extends IntrusiveNode {
             var3 = (String) null;
             kj.pollAccountNameCheck((String) null, 50);
           }
-          if (rk.field_X == cj.field_e &&
+          if (rk.field_X == RichTextLayout.field_e &&
             param0.equals(vh.field_p)) {
             rk.field_X = DiskArchiveStore.field_f;
             stackIn_11_0 = ByteStorage.field_c;

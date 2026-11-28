@@ -181,7 +181,7 @@ final class ec extends ta implements WidgetActivationListener {
             }
             ef.field_i = param11;
             PacketBuffer.field_g = param4;
-            jc.field_b = param2;
+            DefaultTextWidgetRenderer.field_b = param2;
             if (null == ef.field_i.field_v) {
               return;
             }

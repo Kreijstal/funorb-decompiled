@@ -121,7 +121,7 @@ final class wj extends fb {
               } else {
                 GzipDecompressor.field_d = ih.field_a;
                 ue.field_b = -1;
-                ja.field_t = var7;
+                TextHotspotBounds.field_t = var7;
               }
             }
             if (GzipDecompressor.field_d == vg.field_p &&
@@ -135,7 +135,7 @@ final class wj extends fb {
             if (GzipDecompressor.field_d == lb.field_o &&
               GameEntity.b(64, 1)) {
               var7Lifetime1 = EditableTextField.field_N.readUnsignedByte(4);
-              ja.field_t = var7Lifetime1;
+              TextHotspotBounds.field_t = var7Lifetime1;
               pk.field_b = null;
               EditableTextField.field_N.position = 0;
               if (var7Lifetime1 != 0 &&
@@ -219,31 +219,31 @@ final class wj extends fb {
                 }
               }
               if (0 < mk.field_k) {
-                uj.field_f = true;
+                TextLineMetrics.field_f = true;
               }
               pg.field_fb.a(dj.field_b, -1001);
               for (var9Lifetime1 = 0; 4 > var9Lifetime1; var9Lifetime1++) {
                 dj.field_b[var9Lifetime1] = dj.field_b[var9Lifetime1] + 50;
               }
               EditableTextField.field_N.a(dj.field_b, -1001);
-              stackIn_72_0 = ja.field_t;
+              stackIn_72_0 = TextHotspotBounds.field_t;
               return stackIn_72_0;
             }
             if (ih.field_a == GzipDecompressor.field_d &&
               cd.e((byte) 123)) {
               IntrusiveDeque.c(-2290);
-              if (ja.field_t == 7 &&
+              if (TextHotspotBounds.field_t == 7 &&
                 !ta.field_u) {
                 ta.field_u = true;
                 stackIn_84_0 = -1;
                 return stackIn_84_0;
               }
-              if (7 == ja.field_t) {
-                ja.field_t = 3;
+              if (7 == TextHotspotBounds.field_t) {
+                TextHotspotBounds.field_t = 3;
               }
               NodeHashTableIterator.field_a = EditableTextField.field_N.readString((byte) 116);
               ta.field_u = false;
-              stackIn_82_0 = ja.field_t;
+              stackIn_82_0 = TextHotspotBounds.field_t;
               return stackIn_82_0;
             }
             if (ob.field_b == null) {

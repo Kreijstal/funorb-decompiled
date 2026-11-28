@@ -53,7 +53,7 @@ final class db extends DungeonAssaultScreen {
                   if (bl.field_n.length > var7) {
                     var8_int = bl.field_n[var7];
                     var9 = ib.a((byte) 6, 16760960, ce.field_o[var8_int]);
-                    var5 = jk.a(new String[]{var9, var4}, l.field_c, 30496);
+                    var5 = jk.a(new String[]{var9, var4}, TextLayout.field_c, 30496);
                   }
                   if (var10 == 0) {
                     break regionExit2;
@@ -94,8 +94,8 @@ final class db extends DungeonAssaultScreen {
                     }
                     if (var10 != 0) {
                       var7 = var6 - gn.field_d;
-                      if (var7 < ci.field_s.length) {
-                        var8_intLifetime1 = ci.field_s[var7];
+                      if (var7 < TextHotspotBounds.field_s.length) {
+                        var8_intLifetime1 = TextHotspotBounds.field_s[var7];
                         var9 = ib.a((byte) 91, 16760960, Integer.toString(var8_intLifetime1));
                         var5 = jk.a(new String[]{var9, var4}, ac.field_f, 30496);
                       }
@@ -109,8 +109,8 @@ final class db extends DungeonAssaultScreen {
                   }
                 } else {
                   var7 = var6 - gn.field_d;
-                  if (var7 < ci.field_s.length) {
-                    var8_intLifetime1 = ci.field_s[var7];
+                  if (var7 < TextHotspotBounds.field_s.length) {
+                    var8_intLifetime1 = TextHotspotBounds.field_s[var7];
                     var9 = ib.a((byte) 91, 16760960, Integer.toString(var8_intLifetime1));
                     var5 = jk.a(new String[]{var9, var4}, ac.field_f, 30496);
                   }
@@ -140,7 +140,7 @@ final class db extends DungeonAssaultScreen {
     }
 
     private final void a(int param0, byte param1) {
-        int var3 = tg.field_f[3][param0];
+        int var3 = TextLineMetrics.field_f[3][param0];
         String var4 = this.a(var3, 0);
         int var5 = IntrusiveNode.field_c.stringWidth(var4);
         int var6 = IntrusiveNode.field_c.field_E + IntrusiveNode.field_c.field_H;
@@ -170,10 +170,10 @@ final class db extends DungeonAssaultScreen {
         if (param2 <= 69) {
           this.a((byte) 8, 36);
         }
-        var4 = tg.field_f[3][param1];
+        var4 = TextLineMetrics.field_f[3][param1];
         var5 = this.a(var4, 0);
         var6 = IntrusiveNode.field_c.stringWidth(var5);
-        var7 = bh.b(param1, 3, false);
+        var7 = RichTextWidget.b(param1, 3, false);
         var8 = qd.a(param1, 380, 3);
         var9 = o.a(3, (byte) 101, param1);
         var10 = -var6 + (var7 + var8) >> 1;
@@ -281,9 +281,9 @@ final class db extends DungeonAssaultScreen {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (hh.field_s != null &&
-              hh.field_s.field_u instanceof Integer) {
-              var2_int = ((Integer) (hh.field_s.field_u)).intValue();
+            if (DefaultTextWidgetRenderer.field_s != null &&
+              DefaultTextWidgetRenderer.field_s.field_u instanceof Integer) {
+              var2_int = ((Integer) (DefaultTextWidgetRenderer.field_s.field_u)).intValue();
               var7 = (int[]) null;
               if (o.a(FrameTimer.field_c, (int[]) null, var2_int, gm.field_d, true)) {
                 gm.field_d.field_w = var2_int;
@@ -362,8 +362,8 @@ final class db extends DungeonAssaultScreen {
         int var5;
         int var6;
         int var7;
-        var3 = tg.field_f[3][param1];
-        var4 = bh.b(param1, 3, false);
+        var3 = TextLineMetrics.field_f[3][param1];
+        var4 = RichTextWidget.b(param1, 3, false);
         var5 = qd.a(param1, 380, 3);
         if (param0 < 60) {
           this.b((byte) -57);
@@ -460,7 +460,7 @@ final class db extends DungeonAssaultScreen {
           var7 = stackIn_5_0;
           var17 = this.a(var3, var6_int, 32, var7 != 0);
           var3 = var3 + (3 + var17.field_x);
-          stackOut_5_0 = bh.a(126, var6_int).equals(bh.a(123, var6_int + rj.field_l));
+          stackOut_5_0 = RichTextWidget.a(126, var6_int).equals(RichTextWidget.a(123, var6_int + rj.field_l));
           stackIn_10_0 = stackOut_5_0 ? 1 : 0;
           stackIn_6_0 = stackOut_5_0;
           if (var10 == 0) {
@@ -488,7 +488,7 @@ final class db extends DungeonAssaultScreen {
             var7Lifetime1 = stackIn_16_0;
             var19 = this.a(var3, var6_intLifetime1, 2, var7Lifetime1 != 0);
             var3 = var3 + (var19.field_x + 3);
-            stackOut_16_0 = bh.a(117, var6_intLifetime1).equals(bh.a(122, rj.field_l + var6_intLifetime1));
+            stackOut_16_0 = RichTextWidget.a(117, var6_intLifetime1).equals(RichTextWidget.a(122, rj.field_l + var6_intLifetime1));
             stackIn_24_0 = stackOut_16_0 ? 1 : 0;
             stackIn_17_0 = stackOut_16_0;
             if (var10 != 0) {
@@ -515,7 +515,7 @@ final class db extends DungeonAssaultScreen {
             var7Lifetime2 = stackIn_29_0;
             var21 = this.a(var3, var6_intLifetime2, -117, var7Lifetime2 != 0);
             var3 = var3 + (var21.field_x + 3);
-            stackOut_29_0 = bh.a(120, var6_intLifetime2).equals(bh.a(120, var6_intLifetime2 + rj.field_l));
+            stackOut_29_0 = RichTextWidget.a(120, var6_intLifetime2).equals(RichTextWidget.a(120, var6_intLifetime2 + rj.field_l));
             stackIn_36_0 = stackOut_29_0 ? 1 : 0;
             stackIn_30_0 = stackOut_29_0;
             if (var10 != 0) {
@@ -535,14 +535,14 @@ final class db extends DungeonAssaultScreen {
         }
         var5_intLifetime2 = stackIn_36_0;
         scanLoop3: while (true) {
-          if (var5_intLifetime2 < ci.field_s.length) {
+          if (var5_intLifetime2 < TextHotspotBounds.field_s.length) {
             var6_intLifetime3 = var5_intLifetime2 + gn.field_d;
             var14 = (int[]) null;
             stackIn_41_0 = (!o.a(FrameTimer.field_c, (int[]) null, var6_intLifetime3, gm.field_d, true)) ? 0 : 1;
             var7Lifetime3 = stackIn_41_0;
             var23 = this.a(var3, var6_intLifetime3, -112, var7Lifetime3 != 0);
             var3 = var3 + (var23.field_x + 3);
-            stackOut_41_0 = bh.a(120, var6_intLifetime3).equals(bh.a(119, rj.field_l + var6_intLifetime3));
+            stackOut_41_0 = RichTextWidget.a(120, var6_intLifetime3).equals(RichTextWidget.a(119, rj.field_l + var6_intLifetime3));
             stackIn_49_0 = stackOut_41_0 ? 1 : 0;
             stackIn_42_0 = stackOut_41_0;
             if (var10 != 0) {
@@ -570,7 +570,7 @@ final class db extends DungeonAssaultScreen {
           var25 = this.a(var3, var6_intLifetime4, -121, var7Lifetime4 != 0);
           var3 = var3 + (3 + var25.field_x);
           if (var10 == 0) {
-            if (!bh.a(122, var6_intLifetime4).equals(bh.a(121, rj.field_l + var6_intLifetime4))) {
+            if (!RichTextWidget.a(122, var6_intLifetime4).equals(RichTextWidget.a(121, rj.field_l + var6_intLifetime4))) {
               var26 = this.a(var3, rj.field_l + var6_intLifetime4, -111, var7Lifetime4 != 0);
               var3 = var3 + (3 + var26.field_x);
             }
@@ -629,7 +629,7 @@ final class db extends DungeonAssaultScreen {
         if (this.field_w.field_b != -1) {
           this.a(this.field_w.field_b, -1, true);
         }
-        if (hh.field_s == hf.field_mb) {
+        if (DefaultTextWidgetRenderer.field_s == hf.field_mb) {
           var2 = ((lk) (mk.field_j.field_l)).field_O;
           if (0 == gm.field_d.field_e) {
             this.field_b = (kl) ((Object) new pk(ag.field_b, oj.field_c, var2));
@@ -815,8 +815,8 @@ final class db extends DungeonAssaultScreen {
         int[] var7 = null;
         var4 = DungeonAssault.field_K;
         super.initializeScreen(param0);
-        tg.field_f[3] = nb.field_e;
-        this.field_w = new ae(tg.field_f[3].length);
+        TextLineMetrics.field_f[3] = nb.field_e;
+        this.field_w = new ae(TextLineMetrics.field_f[3].length);
         fk.a((byte) 121, lf.field_w);
         jh.a(this.field_e);
         bf.a(false, -128);
@@ -1072,7 +1072,7 @@ final class db extends DungeonAssaultScreen {
 
     private final void a(int param0, int param1, boolean param2) {
         int var4;
-        var4 = tg.field_f[3][param0];
+        var4 = TextLineMetrics.field_f[3][param0];
         if (param1 != -1) {
           field_u = (String) null;
         }
@@ -1117,7 +1117,7 @@ final class db extends DungeonAssaultScreen {
         }
         var4 = 0;
         while (true) {
-          if (tg.field_f[3].length <= var4) {
+          if (TextLineMetrics.field_f[3].length <= var4) {
             return -1;
           }
           var5 = o.a(3, (byte) 95, var4);
@@ -1126,7 +1126,7 @@ final class db extends DungeonAssaultScreen {
             return stackIn_7_0 ? 1 : 0;
           }
           if (stackIn_7_0 &&
-            param1 >= bh.b(var4, 3, false) &&
+            param1 >= RichTextWidget.b(var4, 3, false) &&
             qd.a(var4, param2 ^ -265, 3) > param1 &&
             param0 >= var5 &&
             param0 < var5 + ImageProducerRasterBuffer.a(var4, 3, -100)) {

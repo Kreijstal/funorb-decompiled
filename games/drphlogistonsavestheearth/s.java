@@ -401,7 +401,7 @@ final class s {
           hg.field_ob[28] = rk.field_f;
           hg.field_ob[20] = EmailFormatValidator.field_r[0];
           hg.field_ob[26] = rk.field_f;
-          hg.field_ob[23] = o.field_n;
+          hg.field_ob[23] = RichTextLayout.field_n;
           hg.field_ob[32] = rk.field_f;
           hg.field_ob[35] = EmailFormatValidator.field_r[0];
           hg.field_ob[31] = rk.field_f;

@@ -88,7 +88,7 @@ final class m {
               if (DebouncedFieldValidator.field_c.field_j != var4) {
                 var5 = ai.field_d;
               } else {
-                var5 = lg.field_f;
+                var5 = TextLayout.field_f;
               }
             }
             var6 = MatchingFieldValidator.field_s[var3];
@@ -109,8 +109,8 @@ final class m {
                 }
                 var6 = stackIn_24_0;
               }
-              if (qi.field_b.length > FrameTimer.field_c.length) {
-                stackIn_28_0 = qi.field_b.length;
+              if (TextLineMetrics.field_b.length > FrameTimer.field_c.length) {
+                stackIn_28_0 = TextLineMetrics.field_b.length;
               } else {
                 stackIn_28_0 = FrameTimer.field_c.length;
               }
@@ -189,8 +189,8 @@ final class m {
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
           for (var3 = 0; var3 < 16; var3++) {
-            var9 = ia.field_p[var3];
-            var1 = lg.field_d[var3];
+            var9 = TextHotspotBounds.field_p[var3];
+            var1 = TextLayout.field_d[var3];
             if (1 == kf.field_b &&
               fl.field_t[var3] != null) {
               var1 = fl.field_t[var3];

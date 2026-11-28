@@ -16,7 +16,7 @@ abstract class MouseWheelInput {
             field_a = (int[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "vc.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

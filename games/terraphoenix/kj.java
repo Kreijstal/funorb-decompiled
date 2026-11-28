@@ -55,7 +55,7 @@ final class kj implements WidgetActionListener {
         var2 = Terraphoenix.field_V;
         if (param0 == 95) {
           PcmResampler.field_e = null;
-          fd.field_k = false;
+          DefaultTextWidgetRenderer.field_k = false;
           if (qi.field_b) {
             nb.field_b.l(54);
             return;
@@ -70,12 +70,12 @@ final class kj implements WidgetActionListener {
             PcmResampler.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) PcmResampler.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
           }
           nb.field_b.h((byte) -126);
-          vj.a(param0 ^ -24476);
+          RichTextWidget.a(param0 ^ -24476);
           return;
         }
         field_b = (PcmStreamMixer) null;
         PcmResampler.field_e = null;
-        fd.field_k = false;
+        DefaultTextWidgetRenderer.field_k = false;
         if (qi.field_b) {
           nb.field_b.l(54);
         } else {
@@ -89,7 +89,7 @@ final class kj implements WidgetActionListener {
             PcmResampler.field_e = bj.a(new CharSequence[]{(CharSequence) ((Object) PcmResampler.field_e), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) mm.field_h)}, (byte) -103);
           }
           nb.field_b.h((byte) -126);
-          vj.a(param0 ^ -24476);
+          RichTextWidget.a(param0 ^ -24476);
         }
     }
 

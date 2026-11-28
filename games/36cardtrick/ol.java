@@ -143,7 +143,7 @@ final class ol extends jc implements WidgetActivationListener {
           var4.field_q = 80;
           var4.field_i = 50;
           var4.field_h = this.field_h;
-          var4.field_v = (ci) ((Object) new ek(me.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_v = (ci) ((Object) new DefaultTextWidgetRenderer(me.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var4, (byte) 118);
           this.field_Y = this.a(gh.field_i, -29995, (pl) (this));
           return;

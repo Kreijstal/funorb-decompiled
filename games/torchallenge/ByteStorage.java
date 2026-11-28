@@ -180,7 +180,7 @@ abstract class ByteStorage {
         var28 = TorChallenge.field_F ? 1 : 0;
         try {
           var5_int = gh.field_x ? 1 : 0;
-          var6 = bc.field_o;
+          var6 = DefaultTextWidgetRenderer.field_o;
           var7 = PcmOutputWorker.activeScreenId;
           if (var5_int != 0) {
             if (-1 != var6) {

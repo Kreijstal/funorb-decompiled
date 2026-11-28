@@ -22,8 +22,8 @@ final class lf extends kl {
         RuntimeException var2 = null;
         try {
           super.a(param0);
-          if (hh.field_s != null) {
-            stackIn_7_1 = (hh.field_s == this.field_o);
+          if (DefaultTextWidgetRenderer.field_s != null) {
+            stackIn_7_1 = (DefaultTextWidgetRenderer.field_s == this.field_o);
             this.field_u = stackIn_7_1;
             this.field_d = true;
           }

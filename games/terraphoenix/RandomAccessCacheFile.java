@@ -123,7 +123,7 @@ final class RandomAccessCacheFile {
         RuntimeException decompiledCaughtException = null;
         var3 = Terraphoenix.field_V;
         try {
-          var4 = (wf) (rd.field_k.beginBackward(9272));
+          var4 = (wf) (RichTextLayout.field_k.beginBackward(9272));
           var1 = var4;
           if (param0 > -86) {
             RandomAccessCacheFile.a((byte) -125);

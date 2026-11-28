@@ -94,7 +94,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
               return;
             }
             try {
-              mi.field_f = new BufferedRandomAccessFile(pi.field_I.field_m, 64, 0);
+              TextLineMetrics.field_f = new BufferedRandomAccessFile(pi.field_I.field_m, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

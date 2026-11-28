@@ -15,7 +15,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var3 = 0;
         int var3Lifetime1;
         try {
-          if (vv.field_e != null) {
+          if (TextLayout.field_e != null) {
             ce.field_x = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
@@ -74,7 +74,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (null != vv.field_e) {
+          if (null != TextLayout.field_e) {
             ce.field_x = 0;
             var2_int = param0.getKeyCode();
             if (0 <= var2_int &&
@@ -209,7 +209,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (null != vv.field_e) {
+          if (null != TextLayout.field_e) {
             gfa.field_c = -1;
           }
         } catch (RuntimeException runtimeException) {
@@ -221,7 +221,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var2_int = 0;
         int var3 = 0;
         try {
-          if (vv.field_e != null) {
+          if (TextLayout.field_e != null) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && 65535 != var2_int &&
               cga.isSupportedCp1252KeyCharacter(255, (char) var2_int)) {

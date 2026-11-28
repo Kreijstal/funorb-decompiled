@@ -156,14 +156,14 @@ final class nk {
                     break regionExit1;
                   case 6:
                     if (param0 != 0) {
-                      jd.field_a = jd.field_a + param0;
-                      if (jd.field_a < 0) {
-                        jd.field_a = 0;
+                      DefaultTextWidgetRenderer.field_a = DefaultTextWidgetRenderer.field_a + param0;
+                      if (DefaultTextWidgetRenderer.field_a < 0) {
+                        DefaultTextWidgetRenderer.field_a = 0;
                       }
-                      if (jd.field_a > 256) {
-                        jd.field_a = 256;
+                      if (DefaultTextWidgetRenderer.field_a > 256) {
+                        DefaultTextWidgetRenderer.field_a = 256;
                       }
-                      ld.field_l.setMasterVolume(jd.field_a / 2, 100);
+                      ld.field_l.setMasterVolume(DefaultTextWidgetRenderer.field_a / 2, 100);
                       break regionExit2;
                     }
                     stackIn_99_0 = !(rd.field_a);
@@ -508,12 +508,12 @@ final class nk {
         }
         if (this.field_i == 13) {
           if (!this.field_k.field_d) {
-            mb.field_j = 0;
+            RichTextLayout.field_j = 0;
             qa.field_j = 0;
           }
-          if (250 < mb.field_j) {
+          if (250 < RichTextLayout.field_j) {
             qa.field_j = -qa.field_j + 235;
-            mb.field_j = mb.field_j - 250;
+            RichTextLayout.field_j = RichTextLayout.field_j - 250;
           }
           AppletShell.field_b = (9 * AppletShell.field_b + qa.field_j) / 10;
           var4 = 80;
@@ -805,7 +805,7 @@ final class nk {
               this.a(2 + this.field_g, var5Lifetime1, var6Lifetime1, -35 + (od.field_f.stringWidth(var23) / 2 + var4Lifetime1), 21641);
               var24 = "l";
               var6Lifetime1 = var24;
-              var7Lifetime2 = jd.field_a / 2 + var4Lifetime1;
+              var7Lifetime2 = DefaultTextWidgetRenderer.field_a / 2 + var4Lifetime1;
               this.a(this.field_g, var5Lifetime1, var6Lifetime1, var7Lifetime2 + od.field_f.stringWidth(var24) / 2 - 35, param1 - 16720247);
             }
           } else {
@@ -834,7 +834,7 @@ final class nk {
             stackIn_180_0 = kb.field_a;
           } else {
             if (!jh.b(767564065)) {
-              stackIn_180_0 = ui.field_g;
+              stackIn_180_0 = TextHotspotBounds.field_g;
             } else {
               stackIn_180_0 = 0;
             }
@@ -1058,7 +1058,7 @@ final class nk {
               }
               stackIn_73_0 = -320 + (uc.field_C + 33);
               if (this.field_i != 5) {
-                stackIn_74_1 = jd.field_a;
+                stackIn_74_1 = DefaultTextWidgetRenderer.field_a;
               } else {
                 stackIn_74_1 = DiskArchiveRequest.field_w;
               }
@@ -1066,13 +1066,13 @@ final class nk {
                 if (this.field_i == 5) {
                   stackIn_78_1 = DiskArchiveRequest.field_w;
                 } else {
-                  stackIn_78_1 = jd.field_a;
+                  stackIn_78_1 = DefaultTextWidgetRenderer.field_a;
                 }
                 this.a(-(stackIn_78_1 / 2) + (35 + uc.field_C) - 322, (byte) -51, true);
               }
               stackIn_81_0 = uc.field_C - 320 + 33;
               if (this.field_i != 5) {
-                stackIn_82_1 = jd.field_a;
+                stackIn_82_1 = DefaultTextWidgetRenderer.field_a;
               } else {
                 stackIn_82_1 = DiskArchiveRequest.field_w;
               }
@@ -1080,7 +1080,7 @@ final class nk {
                 if (this.field_i == 5) {
                   stackIn_86_1 = DiskArchiveRequest.field_w;
                 } else {
-                  stackIn_86_1 = jd.field_a;
+                  stackIn_86_1 = DefaultTextWidgetRenderer.field_a;
                 }
                 this.a(-(stackIn_86_1 / 2) + (2 + (-320 + uc.field_C)) + 35, (byte) 84, true);
               }

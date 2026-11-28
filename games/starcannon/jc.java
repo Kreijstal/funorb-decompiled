@@ -55,7 +55,7 @@ final class jc {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var14 = bd.a(-5 - var12.length + var9.position, var9.payload, (byte) 93, 5);
+        var14 = TextLayout.a(-5 - var12.length + var9.position, var9.payload, (byte) 93, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (var5[1 + var7] != var14[var7]) {
             throw new RuntimeException();

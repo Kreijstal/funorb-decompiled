@@ -26,16 +26,16 @@ final class ni {
         }
     }
 
-    final static va a(boolean param0) {
+    final static DefaultTextWidgetRenderer a(boolean param0) {
         if (!param0) {
           if (ek.field_F == null) {
-            ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
+            ek.field_F = new DefaultTextWidgetRenderer(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
           }
           return ek.field_F;
         }
         field_g = (String[]) null;
         if (ek.field_F == null) {
-          ek.field_F = new va(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
+          ek.field_F = new DefaultTextWidgetRenderer(bl.field_N, 20, 0, 0, 0, 11579568, -1, 0, 0, bl.field_N.field_z, -1, 2147483647, true);
         }
         return ek.field_F;
     }

@@ -25,8 +25,8 @@ final class MenuScreen extends DungeonAssaultScreen {
         int var9;
         int var10;
         int var11;
-        var3 = tg.field_f[this.field_B][param1];
-        var4 = bh.b(param1, this.field_B, param0);
+        var3 = TextLineMetrics.field_f[this.field_B][param1];
+        var4 = RichTextWidget.b(param1, this.field_B, param0);
         var5 = qd.a(param1, 380, this.field_B);
         var6 = o.a(this.field_B, (byte) 122, param1);
         var7 = ImageProducerRasterBuffer.a(param1, this.field_B, -96);
@@ -116,7 +116,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           return;
         }
         this.a((byte) -107);
-        var2 = tg.field_h[this.field_B];
+        var2 = TextLineMetrics.field_h[this.field_B];
         var3 = 640 - tm.field_p.field_y >> 1;
         for (var4 = 0; this.field_x.field_i > var4; var4++) {
           if (this.d(var4, -7228)) {
@@ -127,7 +127,7 @@ final class MenuScreen extends DungeonAssaultScreen {
           mn.field_b != 9) {
           le.field_f.draw(4 + var3, -28 + var2);
           e.field_j.draw(var3 + 198, -28 + var2);
-          CipherPacketBuffer.field_w.draw(var3 + 214, (-3 + this.field_x.field_i) * tg.field_d[this.field_B] + (var2 - 5));
+          CipherPacketBuffer.field_w.draw(var3 + 214, (-3 + this.field_x.field_i) * TextLineMetrics.field_d[this.field_B] + (var2 - 5));
           oj.field_a.draw(var3 + 4, 293 + var2);
         } else {
           am.field_a.draw(-(am.field_a.field_E / 2) + 320, 48);
@@ -203,7 +203,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         cf var8_ref_cf;
         int var9;
         var9 = DungeonAssault.field_K;
-        var4 = tg.field_f[this.field_B][param1];
+        var4 = TextLineMetrics.field_f[this.field_B][param1];
         if (param0 >= -101) {
           field_w = 68;
         }
@@ -322,7 +322,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         int var5;
         int var6;
         var6 = DungeonAssault.field_K;
-        for (var4 = 0; var4 < tg.field_f[this.field_B].length; var4++) {
+        for (var4 = 0; var4 < TextLineMetrics.field_f[this.field_B].length; var4++) {
           var5 = this.a(var4, 125);
           if (this.d(var4, -7228) &&
             this.e(var4, 82) <= param2 &&
@@ -353,7 +353,7 @@ final class MenuScreen extends DungeonAssaultScreen {
     }
 
     private final void a(byte param0, int param1) {
-        int var3 = tg.field_f[this.field_B][param1];
+        int var3 = TextLineMetrics.field_f[this.field_B][param1];
         String var4 = ui.a(var3, 19435);
         int var5 = IntrusiveNode.field_c.stringWidth(var4);
         int var6 = IntrusiveNode.field_c.field_H + IntrusiveNode.field_c.field_E;
@@ -699,13 +699,13 @@ final class MenuScreen extends DungeonAssaultScreen {
         int var12_int;
         int[] var12;
         int var13;
-        var4 = tg.field_f[this.field_B][param0];
+        var4 = TextLineMetrics.field_f[this.field_B][param0];
         var5 = ui.a(var4, 19435);
         var6 = IntrusiveNode.field_c.stringWidth(var5);
         if (param1 != -31) {
           this.field_x = (ae) null;
         }
-        var7 = bh.b(param0, this.field_B, false);
+        var7 = RichTextWidget.b(param0, this.field_B, false);
         var8 = qd.a(param0, 380, this.field_B);
         var9 = o.a(this.field_B, (byte) 105, param0);
         if (var4 == 13 ||
@@ -721,8 +721,8 @@ final class MenuScreen extends DungeonAssaultScreen {
         var11 = rp.a(param1 + 15204407, var4) ? 1 : 0;
         if (20 == var4 &&
           -1 != this.field_x.field_b &&
-          tg.field_f[this.field_B].length > this.field_x.field_b) {
-          var12_int = tg.field_f[this.field_B][this.field_x.field_b];
+          TextLineMetrics.field_f[this.field_B].length > this.field_x.field_b) {
+          var12_int = TextLineMetrics.field_f[this.field_B][this.field_x.field_b];
           stackIn_16_0 = param2;
           stackIn_17_1 = (rp.a(15204376, var12_int)) ? false : true;
           param2 = stackIn_16_0 | stackIn_17_1;
@@ -1012,7 +1012,7 @@ final class MenuScreen extends DungeonAssaultScreen {
         if (param0 <= 49) {
           discarded$0 = this.a(-114, 14);
         }
-        var3 = var3 + " " + tg.a('#', jk.a(new String[]{jg.field_e}, g.a(false, false, (byte) -111, var2 != 0), 30496), 3, "<br><br>");
+        var3 = var3 + " " + TextLineMetrics.a('#', jk.a(new String[]{jg.field_e}, g.a(false, false, (byte) -111, var2 != 0), 30496), 3, "<br><br>");
         IntrusiveNode.field_c.drawParagraph(var3, 80, 80, 480, 10 * IntrusiveNode.field_c.field_R, 16777215, -1, 1, 0, IntrusiveNode.field_c.field_R);
     }
 
@@ -1020,12 +1020,12 @@ final class MenuScreen extends DungeonAssaultScreen {
         if (param1 != 82) {
           this.field_u = (tf[]) null;
         }
-        return bh.b(param0, this.field_B, false);
+        return RichTextWidget.b(param0, this.field_B, false);
     }
 
     MenuScreen(int param0) {
         this.field_B = param0;
-        this.field_x = new ae(tg.field_f[this.field_B].length);
+        this.field_x = new ae(TextLineMetrics.field_f[this.field_B].length);
     }
 
     static {

@@ -73,7 +73,7 @@ class WidgetContainer extends UiWidget implements dq {
         }
     }
 
-    String a(boolean param0) {
+    String getTooltipText(boolean param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
@@ -85,7 +85,7 @@ class WidgetContainer extends UiWidget implements dq {
         var2 = new IntrusiveDequeCursor(this.children);
         var3 = (UiWidget) (var2.d(4));
         while (var3 != null) {
-          var4 = var3.a(false);
+          var4 = var3.getTooltipText(false);
           if (var4 != null) {
             return var4;
           }
@@ -435,7 +435,7 @@ class WidgetContainer extends UiWidget implements dq {
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (!param0) {
-          this.a(false);
+          this.getTooltipText(false);
         }
         var2 = new IntrusiveDequeCursor(this.children);
         var3 = (UiWidget) (var2.d(4));

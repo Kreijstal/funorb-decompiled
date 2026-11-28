@@ -10,7 +10,7 @@ final class rh {
 
     final static void a(byte param0, int param1, boolean param2) {
         int var3 = 99 / ((param0 - 75) / 33);
-        te.field_O = 0;
+        RichTextWidget.field_O = 0;
         kk.field_S = param1;
         if (kk.field_S < 0) {
           return;

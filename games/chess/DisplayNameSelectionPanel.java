@@ -178,7 +178,7 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
         mn.field_h.writeByte(param0, (byte) 71);
         mn.field_h.writeByte(param1, (byte) -91);
         mn.field_h.writeShort(param3, 115);
-        mn.field_h.applyRsa(SecondaryNodeHashTable.field_k, se.field_M, (byte) 86);
+        mn.field_h.applyRsa(SecondaryNodeHashTable.field_k, RichTextWidget.field_M, (byte) 86);
         EditableTextField.field_U.writeCipheredByte(18, -116);
         int fieldTemp$0 = EditableTextField.field_U.position + 1;
         EditableTextField.field_U.position = EditableTextField.field_U.position + 1;
@@ -424,9 +424,9 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
               var12.field_Gb.field_T = var24_int;
               var12.field_Gb.field_P = var24_int;
               var12.field_Gb.field_O = var24_int;
-              if (se.field_S != param1) {
+              if (RichTextWidget.field_S != param1) {
                 if (var12.field_ac) {
-                  var12.field_Ob.field_db = MatchingFieldValidator.a(se.field_U, new String[]{var20}, (byte) -68);
+                  var12.field_Ob.field_db = MatchingFieldValidator.a(RichTextWidget.field_U, new String[]{var20}, (byte) -68);
                   var12.field_Ub.field_db = ue.field_b;
                 } else {
                   if (!var12.field_Qb) {
@@ -452,7 +452,7 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Ub.field_db != null) {
-                  if (se.field_S == param1) {
+                  if (RichTextWidget.field_S == param1) {
                     var26Lifetime2 = 40;
                   } else {
                     var26Lifetime2 = var12.field_Ub.e((byte) 39) + BirthDateValidator.field_g * 2;
@@ -508,7 +508,7 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
               !var12.l(param0 ^ 21486)) {
               if (var12.field_Gb.field_L == 0) {
                 if (0 == var12.field_Ub.field_L) {
-                  da.a(var12, ag.field_f, 0, 0, re.field_m, param1, false);
+                  da.a(var12, ag.field_f, 0, 0, TextHotspotBounds.field_m, param1, false);
                 } else {
                   fd.a(param3, -109, var12.field_Yb);
                 }
@@ -647,7 +647,7 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
                     }
                   }
                 }
-                if (param1 == se.field_S &&
+                if (param1 == RichTextWidget.field_S &&
                   ci.f(-38)) {
                   if (var26Lifetime1 != 0) {
                     var24 = var34 + "<br>" + ca.field_f + (String) (var25);
@@ -661,7 +661,7 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
                     var24 = var34 + "<br>" + gg.field_l + (String) (var25);
                   }
                 }
-                if (se.field_S == param1 &&
+                if (RichTextWidget.field_S == param1 &&
                   !ci.f(-125)) {
                   var27 = pd.field_Rb.field_Gb;
                   var24 = (String) (var24) + "<br>" + MatchingFieldValidator.a(fc.field_b, new String[]{var27}, (byte) -53);
@@ -732,7 +732,7 @@ final class DisplayNameSelectionPanel extends ma implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (jm) null);
         this.field_L = new ValidatedTextField("", (rg) null, 12);
-        hl var1 = new hl(rc.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, rb.field_b.field_C, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(rc.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, rb.field_b.field_C, -1, 2147483647, true);
         mf var2 = new mf(ce.field_c, var1, (rg) null);
         this.field_N = new InteractiveWidget(hg.field_a, (rg) null);
         this.field_P = new InteractiveWidget(ue.field_b, (rg) null);

@@ -318,7 +318,7 @@ abstract class dl extends DualLinkNode {
           }
           var2Lifetime51 = GzipDecompressor.a(10, "all");
           if (var2Lifetime51 != null) {
-            ol.field_c = eg.a(117, var2Lifetime51);
+            TextLineMetrics.field_c = eg.a(117, var2Lifetime51);
           }
           var2Lifetime52 = GzipDecompressor.a(10, "mine");
           if (var2Lifetime52 != null) {

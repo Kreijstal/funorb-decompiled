@@ -69,7 +69,7 @@ final class NetworkSupport001 {
     }
 
     final static void performAction0061(int integerArgument1) {
-        NetworkSupport010.integerState0585 = 0;
+        TextHotspotBounds.integerState0585 = 0;
         if (integerArgument1 != -1045) {
           return;
         }

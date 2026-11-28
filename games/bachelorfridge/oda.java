@@ -86,7 +86,7 @@ final class oda {
     final static EventEffect a(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
-        kq stackIn_3_0 = null;
+        StopFloodEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -96,7 +96,7 @@ final class oda {
             var3 = (PacketBuffer) null;
             oda.a(-17, (PacketBuffer) null);
           }
-          stackIn_3_0 = new kq();
+          stackIn_3_0 = new StopFloodEffect();
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,10 +116,10 @@ final class oda {
         Object var1 = null;
         Throwable var2 = null;
         Throwable decompiledCaughtException = null;
-        if (null != vv.field_e) {
-          var1 = vv.field_e;
+        if (null != TextLayout.field_e) {
+          var1 = TextLayout.field_e;
           synchronized (var1) {
-            vv.field_e = null;
+            TextLayout.field_e = null;
           }
         }
         if (param0 != -705481812) {

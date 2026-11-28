@@ -67,7 +67,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -157,7 +157,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -168,7 +168,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
             this.a((fj) null, (byte) 37, 92, '8');
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "w.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "w.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -184,7 +184,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
           var3.setText(false, false, var4);
           this.field_X.clearText((byte) 110);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "w.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "w.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -309,7 +309,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
           var12 = dupTemp$0;
           this.b(dupTemp$0, 10);
           this.field_m = this.field_m + (((fj) ((Object) var12)).field_z + 5);
-          dupTemp$1 = new la(10, this.field_m, this.field_F - 20, 25, this.field_X, false, 80, 3, var7, 16777215, sc.field_b);
+          dupTemp$1 = new la(10, this.field_m, this.field_F - 20, 25, this.field_X, false, 80, 3, var7, 16777215, TextLayout.field_b);
           var13 = dupTemp$1;
           this.b(dupTemp$1, 10);
           this.field_V.field_t = (uk) (this);
@@ -366,7 +366,7 @@ final class LoginPanel extends ga implements TextFieldListener, WidgetActivation
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

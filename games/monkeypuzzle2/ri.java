@@ -198,7 +198,7 @@ final class ri {
               var14 = var14 + var13Lifetime1;
             }
             var12Lifetime1 = 135;
-            var20.drawString(a.field_c, 15, var12Lifetime1, 1, -1);
+            var20.drawString(DefaultTextWidgetRenderer.field_c, 15, var12Lifetime1, 1, -1);
             var12Lifetime1 = var12Lifetime1 - var13Lifetime1;
             var20.drawString(wk.field_c + ve.field_y[var5], 15, var12Lifetime1, 1, -1);
             for (var18Lifetime1 = 0; f.field_j[var5] > var18Lifetime1; var18Lifetime1++) {
@@ -212,7 +212,7 @@ final class ri {
             }
           } else {
             if (ok.a(false)) {
-              sb.field_r.drawParagraph(el.field_c, 20, 15, -40 + ke.field_f[1].field_k, ke.field_f[1].field_j - 40, 9330743, -1, 1, 1, 0);
+              RichTextLayout.field_r.drawParagraph(el.field_c, 20, 15, -40 + ke.field_f[1].field_k, ke.field_f[1].field_j - 40, 9330743, -1, 1, 1, 0);
             }
           }
           ac.field_a.setAsRasterTarget((byte) 109);
@@ -260,7 +260,7 @@ final class ri {
           ah.field_g[2] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle water", "", wd.field_i, param0);
           ah.field_g[3] = IterableNodeHashTable.a(2570, "music/Monkey Puzzle aztec", "", wd.field_i, param0);
           kb.field_d = IterableNodeHashTable.a(2570, "music/monkey_puzzle_level_complete_jingle", "", wd.field_i, param0);
-          bl.field_g = IterableNodeHashTable.a(2570, "music/Monkey_Puzzle_game_over_Jingle", "", wd.field_i, param0);
+          TextHotspotBounds.field_g = IterableNodeHashTable.a(2570, "music/Monkey_Puzzle_game_over_Jingle", "", wd.field_i, param0);
           b.field_l = IterableNodeHashTable.a(param1 ^ 2570, "music/Monkey_Puzzle_world_Complete_Jingle", "", wd.field_i, param0);
           wf.field_h = IterableNodeHashTable.a(2570, "music/Monkey_Puzzle_Game_Complete_Jingle", "", wd.field_i, param0);
           var8 = new String[]{"menu_select", "MP_throw_coconut", "MP_deflect3", "MP_deflect_ceiling", "MP_monkeyhit", "MP_coconut_hit", "MP_coconut_fall", "MP_monkeyfall", "MP_splash_2", "MP_splash_3", "MP_splash_4", "MP_splash_5", "MP_intro_screen_appear", "MP_intro_screen_close", "MP_intro_screen_monkey_fall", "MP_intro_screen_rain", "MP_intro_screen_ambience_1", "MP_intro_screen_ambience_2", "MP_lvl_end_vine", "MP_lvl_end_climb", "MP_monkey_amb1", "MP_monkey_amb2", "MP_monkey_amb3", "MP_monkey_amb4", "MP_monkey_amb5", "MP_monkey_laugh1", "MP_monkey_laugh2", "MP_monkey_laugh3", "MP_lvl_end_climb_step1", "MP_lvl_end_climb_step2", "MP_lvl_end_climb_step3", "mp_level_complete"};

@@ -66,7 +66,7 @@ final class n {
           n.clearStaticReferences(54);
           return;
         }
-        if (!jj.b(true)) {
+        if (!RichTextWidget.b(true)) {
           if (param4 == -301) {
             return;
           }

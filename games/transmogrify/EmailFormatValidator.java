@@ -146,7 +146,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         lk.field_d[MatchingFieldValidator.field_l] = MatchingFieldValidator.field_l;
         dk.field_k[MatchingFieldValidator.field_l] = param0;
         if (param0 < ua.field_d) {
-          ue.field_a = param0;
+          TextLayout.field_a = param0;
         }
         if (!(param0 <= rc.field_c)) {
           vb.field_a = param0;
@@ -164,8 +164,8 @@ final class EmailFormatValidator extends TextFieldValidator {
         if (!(vb.field_a >= var7)) {
           vb.field_a = var7;
         }
-        if (var7 < ue.field_a) {
-          ue.field_a = var7;
+        if (var7 < TextLayout.field_a) {
+          TextLayout.field_a = var7;
         }
     }
 

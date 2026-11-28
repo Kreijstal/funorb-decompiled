@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class r extends ek {
+class r extends DefaultTextWidgetRenderer {
     static volatile int field_s;
     static boolean field_p;
     static boolean field_q;

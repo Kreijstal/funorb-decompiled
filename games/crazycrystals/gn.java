@@ -128,7 +128,7 @@ final class gn extends en implements WidgetActivationListener {
           var4.field_r = 0;
           var4.field_f = 80;
           var4.field_j = 50;
-          var4.field_i = (wo) ((Object) new lb(ba.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_i = (wo) ((Object) new DefaultTextWidgetRenderer(ba.field_i, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var4, 125);
           this.field_V = this.a((bi) (this), qo.field_o, (byte) 118);
           return;

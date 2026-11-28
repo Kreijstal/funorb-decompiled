@@ -135,12 +135,12 @@ final class di {
               stackIn_31_0 = -1;
             }
             var20 = stackIn_31_0;
-            if (ce.field_f != null &&
+            if (TextLayout.field_f != null &&
               null != param2.field_g &&
               var14Lifetime1 < param2.field_g.length &&
               param2.field_g[var14Lifetime1] != -1 &&
-              ce.field_f.length > param2.field_g[var14Lifetime1]) {
-              stackIn_39_0 = ce.field_f[param2.field_g[var14Lifetime1]];
+              TextLayout.field_f.length > param2.field_g[var14Lifetime1]) {
+              stackIn_39_0 = TextLayout.field_f[param2.field_g[var14Lifetime1]];
             } else {
               stackIn_39_0 = null;
             }

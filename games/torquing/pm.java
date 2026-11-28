@@ -104,7 +104,7 @@ final class pm extends IntrusiveNode {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "pm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "pm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

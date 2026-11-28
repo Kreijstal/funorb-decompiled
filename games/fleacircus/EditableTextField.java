@@ -54,21 +54,21 @@ class EditableTextField extends InteractiveWidget {
 
     final void b(int param0, int param1, boolean param2, int param3) {
         long var6;
-        eg var8;
+        TextWidgetRenderer var8;
         if (!param2) {
           this.field_O = -50;
         }
         if (null != this.field_p &&
           param3 == 0) {
           this.field_p.a(-74, param1, this.field_D, (UiComponent) (this), param0);
-          if (this.field_p instanceof eg) {
-            var8 = (eg) ((Object) this.field_p);
+          if (this.field_p instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.field_p);
             if (this.field_M != this.field_K) {
-              var8.a((UiComponent) (this), this.field_M, param0, this.field_K, -30298, param1);
+              var8.paintSelection((UiComponent) (this), this.field_M, param0, this.field_K, -30298, param1);
             }
             var6 = lj.correctedCurrentTimeMillis((byte) -27);
             if ((var6 - this.field_Q) % 1000L < 500L) {
-              var8.a(param0, 0, (UiComponent) (this), this.field_M, param1);
+              var8.paintCaret(param0, 0, (UiComponent) (this), this.field_M, param1);
             }
           }
         }
@@ -134,8 +134,8 @@ class EditableTextField extends InteractiveWidget {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
-            this.field_p instanceof eg) {
-            var8_int = ((eg) ((Object) this.field_p)).a(kc.field_b, (UiComponent) (this), (byte) 97, param6, param0, ag.field_f);
+            this.field_p instanceof TextWidgetRenderer) {
+            var8_int = ((TextWidgetRenderer) ((Object) this.field_p)).findTextOffsetAtScreenPosition(kc.field_b, (UiComponent) (this), (byte) 97, param6, param0, ag.field_f);
             if (-1 == var8_int) {
               stackIn_5_1 = 0;
             } else {
@@ -212,38 +212,38 @@ class EditableTextField extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(int param0) {
-        ne var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
         UiComponent var9;
-        eg var10;
+        TextWidgetRenderer var10;
         var8 = fleas.field_A ? 1 : 0;
         if (!this.field_T) {
           this.field_n = 0;
           this.field_r = 0;
           return;
         }
-        if (!(this.field_p instanceof eg)) {
+        if (!(this.field_p instanceof TextWidgetRenderer)) {
           return;
         }
-        var10 = (eg) ((Object) this.field_p);
-        var3 = var10.a((UiComponent) (this), (byte) -35);
-        var4 = var3.b((byte) 97);
+        var10 = (TextWidgetRenderer) ((Object) this.field_p);
+        var3 = var10.getTextLayout((UiComponent) (this), (byte) -35);
+        var4 = var3.getMaxLineRightX((byte) 97);
         if (param0 <= 89) {
           var9 = (UiComponent) null;
           this.a(11, 11, (UiComponent) null, '*');
         }
-        var5 = var10.b((UiComponent) (this), (byte) -67);
-        var6 = var10.a((byte) 127) >> 1;
+        var5 = var10.getTextAreaWidth((UiComponent) (this), (byte) -67);
+        var6 = var10.getFontLineHeight((byte) 127) >> 1;
         if (var4 < var5 - var6) {
           this.field_r = 0;
           this.field_n = 0;
           return;
         }
-        var7 = this.field_r + var3.c(-1, this.field_M);
+        var7 = this.field_r + var3.getXForTextOffset(-1, this.field_M);
         if (var5 - var6 >= var7) {
           if (var7 < var6) {
             this.field_r = this.field_r + (var6 - var7);
@@ -383,7 +383,7 @@ class EditableTextField extends InteractiveWidget {
 
     void a(int param0, int param1, UiComponent param2, byte param3) {
         int var6 = 0;
-        eg var7 = null;
+        TextWidgetRenderer var7 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -396,9 +396,9 @@ class EditableTextField extends InteractiveWidget {
           }
           this.scrollCaretIntoView(127);
           if (this.field_v == 1) {
-            if (this.field_p instanceof eg) {
-              var7 = (eg) ((Object) this.field_p);
-              var6 = var7.a(kc.field_b, (UiComponent) (this), (byte) 80, param1, param0, ag.field_f);
+            if (this.field_p instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.field_p);
+              var6 = var7.findTextOffsetAtScreenPosition(kc.field_b, (UiComponent) (this), (byte) 80, param1, param0, ag.field_f);
               if (var6 != -1) {
                 if (this.field_R &&
                   this.field_N > var6 &&

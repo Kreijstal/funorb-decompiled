@@ -16,7 +16,7 @@ abstract class td {
           pb.field_k.a(false, (byte) -48);
           uc.a(param2, 118, param3, param1);
           ProxyAuthenticationRequiredException.a(param0 ^ 127);
-          vc.field_F = wj.field_a;
+          RichTextWidget.field_F = wj.field_a;
           fh.field_B = wj.field_a;
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "td.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');

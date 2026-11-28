@@ -44,33 +44,33 @@ class EditableTextField extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(int param0) {
-        bd var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        lg var9;
+        TextWidgetRenderer var9;
         var8 = StarCannon.field_A;
         if (!this.field_I) {
           this.field_n = 0;
           this.field_q = 0;
           return;
         }
-        if (!(this.field_o instanceof lg)) {
+        if (!(this.field_o instanceof TextWidgetRenderer)) {
           return;
         }
-        var9 = (lg) ((Object) this.field_o);
-        var3 = var9.a((UiWidget) (this), (byte) -106);
-        var4 = var3.c(param0 + 101);
-        var5 = var9.b(91, (UiWidget) (this));
-        var6 = var9.a(param0 + param0) >> 1;
+        var9 = (TextWidgetRenderer) ((Object) this.field_o);
+        var3 = var9.getTextLayout((UiWidget) (this), (byte) -106);
+        var4 = var3.getMaxLineRightX(param0 + 101);
+        var5 = var9.getTextAreaWidth(91, (UiWidget) (this));
+        var6 = var9.getFontLineHeight(param0 + param0) >> 1;
         if (var5 - var6 > var4) {
           this.field_n = 0;
           this.field_q = 0;
           return;
         }
-        var7 = this.field_n + var3.a((byte) -30, this.field_B);
+        var7 = this.field_n + var3.getXForTextOffset((byte) -30, this.field_B);
         if (var7 > -var6 + var5) {
           this.field_n = this.field_n - var7 - (var6 - var5);
         } else {
@@ -117,9 +117,9 @@ class EditableTextField extends InteractiveWidget {
     final void a(int param0, int param1, byte param2, int param3) {
         long var6;
         UiWidget var8;
-        lg var9;
-        lg var11;
-        lg var12;
+        TextWidgetRenderer var9;
+        TextWidgetRenderer var11;
+        TextWidgetRenderer var12;
         long var6Lifetime1;
         long var6Lifetime2;
         long var6Lifetime3;
@@ -131,22 +131,22 @@ class EditableTextField extends InteractiveWidget {
             return;
           }
           this.field_o.a(param1, this.field_u, param2 ^ -102, param3, (UiWidget) (this));
-          if (!(this.field_o instanceof lg)) {
+          if (!(this.field_o instanceof TextWidgetRenderer)) {
             return;
           }
-          var12 = (lg) ((Object) this.field_o);
+          var12 = (TextWidgetRenderer) ((Object) this.field_o);
           if (this.field_B == this.field_D) {
             var6 = dd.correctedCurrentTimeMillis(74);
             if (500L <= (-this.field_F + var6) % 1000L) {
               return;
             }
-            var12.a(-3, (UiWidget) (this), param1, param3, this.field_B);
+            var12.paintCaret(-3, (UiWidget) (this), param1, param3, this.field_B);
             return;
           }
-          var12.a(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
+          var12.paintSelection(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
           var6Lifetime3 = dd.correctedCurrentTimeMillis(74);
           if (500L > (-this.field_F + var6Lifetime3) % 1000L) {
-            var12.a(-3, (UiWidget) (this), param1, param3, this.field_B);
+            var12.paintCaret(-3, (UiWidget) (this), param1, param3, this.field_B);
           }
           return;
         }
@@ -159,23 +159,23 @@ class EditableTextField extends InteractiveWidget {
           return;
         }
         this.field_o.a(param1, this.field_u, param2 ^ -102, param3, (UiWidget) (this));
-        if (!(this.field_o instanceof lg)) {
+        if (!(this.field_o instanceof TextWidgetRenderer)) {
           return;
         }
-        var11 = (lg) ((Object) this.field_o);
+        var11 = (TextWidgetRenderer) ((Object) this.field_o);
         var9 = var11;
         if (this.field_B == this.field_D) {
           var6Lifetime1 = dd.correctedCurrentTimeMillis(74);
           if (500L <= (-this.field_F + var6Lifetime1) % 1000L) {
             return;
           }
-          var11.a(-3, (UiWidget) (this), param1, param3, this.field_B);
+          var11.paintCaret(-3, (UiWidget) (this), param1, param3, this.field_B);
           return;
         }
-        var11.a(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
+        var11.paintSelection(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
         var6Lifetime2 = dd.correctedCurrentTimeMillis(74);
         if (500L > (-this.field_F + var6Lifetime2) % 1000L) {
-          var11.a(-3, (UiWidget) (this), param1, param3, this.field_B);
+          var11.paintCaret(-3, (UiWidget) (this), param1, param3, this.field_B);
         }
         return;
     }
@@ -521,7 +521,7 @@ class EditableTextField extends InteractiveWidget {
     }
 
     void a(int param0, int param1, UiWidget param2, int param3) {
-        lg var7 = null;
+        TextWidgetRenderer var7 = null;
         int var6 = 0;
         super.a(60, param1, param2, param3);
         this.scrollCaretIntoView(0);
@@ -530,9 +530,9 @@ class EditableTextField extends InteractiveWidget {
         }
         try {
           if (this.field_l == 1) {
-            if (this.field_o instanceof lg) {
-              var7 = (lg) ((Object) this.field_o);
-              var6 = var7.a(pe.field_d, la.field_c, (UiWidget) (this), param1, param3, true);
+            if (this.field_o instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.field_o);
+              var6 = var7.findTextOffsetAtScreenPosition(pe.field_d, la.field_c, (UiWidget) (this), param1, param3, true);
               if (var6 != -1) {
                 if (this.field_G && var6 < this.field_C &&
                   this.field_D < var6) {
@@ -562,10 +562,10 @@ class EditableTextField extends InteractiveWidget {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_o instanceof lg)) {
+          if (!(this.field_o instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((lg) ((Object) this.field_o)).a(pe.field_d, la.field_c, (UiWidget) (this), param2, param3, true);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_o)).findTextOffsetAtScreenPosition(pe.field_d, la.field_c, (UiWidget) (this), param2, param3, true);
           if (var8_int == -1) {
             stackIn_7_1 = 0;
           } else {

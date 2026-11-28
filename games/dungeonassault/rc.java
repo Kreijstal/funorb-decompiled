@@ -80,7 +80,7 @@ final class rc {
     }
 
     final static void c(int param0) {
-        bh.field_M = false;
+        RichTextWidget.field_M = false;
         ra.field_c.readUnsignedByte(true);
         if (param0 != 16777215) {
           field_b = (java.applet.Applet) null;

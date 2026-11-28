@@ -17,8 +17,8 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
             ak.field_y = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              mb.field_o.length > var2_int) {
-              var2_int = -129 & mb.field_o[var2_int];
+              RichTextLayout.field_o.length > var2_int) {
+              var2_int = -129 & RichTextLayout.field_o[var2_int];
             } else {
               var2_int = -1;
             }
@@ -88,8 +88,8 @@ final class nf implements java.awt.event.KeyListener, java.awt.event.FocusListen
           ak.field_y = 0;
           var2_int = param0.getKeyCode();
           if (0 <= var2_int &&
-            mb.field_o.length > var2_int) {
-            var2_int = mb.field_o[var2_int];
+            RichTextLayout.field_o.length > var2_int) {
+            var2_int = RichTextLayout.field_o[var2_int];
             if ((var2_int & 128) != 0) {
               var2_int = -1;
             }

@@ -89,11 +89,11 @@ final class ee {
           return var2_ref_byte__;
         }
         if (param0 == 5000 &&
-          ja.field_q > 0) {
-          fieldTemp$1 = ja.field_q - 1;
-          ja.field_q = ja.field_q - 1;
+          TextHotspotBounds.field_q > 0) {
+          fieldTemp$1 = TextHotspotBounds.field_q - 1;
+          TextHotspotBounds.field_q = TextHotspotBounds.field_q - 1;
           var2_ref_byte__Lifetime1 = ei.field_H[fieldTemp$1];
-          ei.field_H[ja.field_q] = null;
+          ei.field_H[TextHotspotBounds.field_q] = null;
           return var2_ref_byte__Lifetime1;
         }
         if (param0 == 30000 &&

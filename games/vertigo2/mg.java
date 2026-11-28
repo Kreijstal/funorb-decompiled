@@ -702,10 +702,10 @@ final class mg extends WidgetWrapper {
         field_T = null;
     }
 
-    final String a(boolean param0) {
+    final String getTooltipText(boolean param0) {
         int var2 = this.field_C.field_p ? 1 : 0;
         this.field_C.field_p = this.field_p;
-        String var3 = this.field_C.a(param0);
+        String var3 = this.field_C.getTooltipText(param0);
         this.field_C.field_p = var2 != 0 ? true : false;
         return var3;
     }

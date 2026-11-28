@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mq extends va {
+final class mq extends DefaultTextWidgetRenderer {
     private e field_x;
     static String field_t;
     static String field_u;
@@ -75,8 +75,8 @@ final class mq extends va {
           var20 = var15 * (-1 + var7);
           if (ua.field_e <= param4 &&
             WidgetContainer.field_D >= param4) {
-            var21 = pk.a((byte) -14, ib.field_a, param5 + param3, ap.field_e);
-            var22 = pk.a((byte) -14, ib.field_a, -param3 + param5, ap.field_e);
+            var21 = TextHotspotBounds.a((byte) -14, ib.field_a, param5 + param3, ap.field_e);
+            var22 = TextHotspotBounds.a((byte) -14, ib.field_a, -param3 + param5, ap.field_e);
             ki.a(-86, var22, vl.field_e[param4], var21, param2);
           }
           while (true) {
@@ -112,8 +112,8 @@ final class mq extends va {
             if (var21Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
-            var23 = pk.a((byte) -14, ib.field_a, param5 + var6_int, ap.field_e);
-            var24 = pk.a((byte) -14, ib.field_a, param5 - var6_int, ap.field_e);
+            var23 = TextHotspotBounds.a((byte) -14, ib.field_a, param5 + var6_int, ap.field_e);
+            var24 = TextHotspotBounds.a((byte) -14, ib.field_a, param5 - var6_int, ap.field_e);
             if (ua.field_e <= var21Lifetime1) {
               ki.a(-85, var24, vl.field_e[var21Lifetime1], var23, param2);
             }
@@ -138,29 +138,29 @@ final class mq extends va {
         if (!ln.field_d.field_i) {
           if ((ln.field_d.field_D.field_t & 1 << ln.field_d.field_B) == 0) {
             if (ln.field_d.field_D.field_t != 0) {
-              sl.field_q[12] = en.field_c;
+              RichTextLayout.field_q[12] = en.field_c;
             } else {
               if ((1 << ln.field_d.field_B | ln.field_d.field_h) != -1 + (1 << ln.field_d.field_D.field_z)) {
-                sl.field_q[12] = fq.field_f;
+                RichTextLayout.field_q[12] = fq.field_f;
               } else {
-                sl.field_q[12] = ii.field_A;
+                RichTextLayout.field_q[12] = ii.field_A;
               }
             }
           } else {
-            sl.field_q[12] = BlastDebrisBatch.field_a;
+            RichTextLayout.field_q[12] = BlastDebrisBatch.field_a;
           }
         } else {
           if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_t) != 0) {
-            sl.field_q[12] = BlastDebrisModel.field_p;
+            RichTextLayout.field_q[12] = BlastDebrisModel.field_p;
           } else {
             if (ln.field_d.field_D.field_t == 0) {
               if ((1 << ln.field_d.field_B | ln.field_d.field_h) == -1 + (1 << ln.field_d.field_D.field_z)) {
-                sl.field_q[12] = GameShell.field_B;
+                RichTextLayout.field_q[12] = GameShell.field_B;
               } else {
-                sl.field_q[12] = oq.field_H;
+                RichTextLayout.field_q[12] = oq.field_H;
               }
             } else {
-              sl.field_q[12] = LevelSimulation.field_H;
+              RichTextLayout.field_q[12] = LevelSimulation.field_H;
             }
           }
         }

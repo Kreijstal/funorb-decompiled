@@ -1,0 +1,332 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class RichTextWidget extends InteractiveWidget {
+    private IntrusiveDeque field_P;
+    static String[] field_Q;
+    private TextHotspotBounds field_I;
+    static int field_R;
+    static int[] field_K;
+    static int field_L;
+    static int field_O;
+    private String[] field_M;
+    static UiPanel field_N;
+    static String field_H;
+
+    void a(boolean param0, int param1, int param2, int param3) {
+        int var7 = 0;
+        int var8 = 0;
+        super.a(param0, param1, param2, param3);
+        if (param1 != 0) {
+          return;
+        }
+        TextWidgetRenderer var5 = (TextWidgetRenderer) ((Object) this.listener);
+        TextHotspotBounds var6 = this.field_I;
+        if (var6 != null) {
+          var7 = var5.getTextOriginX((UiWidget) (this), param2, -14323);
+          var8 = var5.getTextOriginY((UiWidget) (this), 1, param3);
+          do {
+            mr.a(var6.field_t + 2, -2 + var6.field_p + var8, var6.field_q + 2, 0, var7 + var6.field_s - 2);
+            var6 = var6.field_n;
+          } while (var6 != null);
+        }
+    }
+
+    boolean a(byte param0, UiWidget param1) {
+        RuntimeException var3 = null;
+        qn var4 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != 116) {
+            var4 = (qn) null;
+            RichTextWidget.a(-65, (byte) 81, (qn) null);
+          }
+          return false;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("pn.DA(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final void b(int param0, int param1, byte param2, int param3) {
+        this.setBounds(false, param0, param1, ((TextWidgetRenderer) ((Object) this.listener)).getPreferredHeight((UiWidget) (this), param2 - 120), param3);
+        if (param2 != 119) {
+          field_O = -24;
+        }
+    }
+
+    RichTextWidget(String param0, WidgetListener param1) {
+        super(param0, (uf) null);
+        this.field_I = null;
+        try {
+          this.listener = param1;
+        } catch (RuntimeException runtimeException) {
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "pn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    void a(byte param0, int param1, int param2, UiWidget param3) {
+        int var5_int = 0;
+        int var6 = 0;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        try {
+          super.a((byte) 115, param1, param2, param3);
+          this.field_I = null;
+          if (param0 <= 6) {
+            return;
+          }
+          if (this.field_p) {
+            var5_int = -param1 + (PacketBuffer.field_n - this.x);
+            var6 = gb.field_d - (param2 + this.y);
+            this.field_I = this.findHotspotAt(var6, var5_int, 498);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_8_0 = var5;
+          stackIn_8_1 = new StringBuilder().append("pn.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    final void a(int param0, int param1, String param2) {
+        int var5 = 0;
+        String[] var4 = null;
+        int var6 = 0;
+        String[] var7 = null;
+        String[] var8 = null;
+        RuntimeException stackIn_14_0 = null;
+        StringBuilder stackIn_14_1 = null;
+        String stackIn_15_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var4_ref = null;
+        var6 = Vertigo2.field_L ? 1 : 0;
+        try {
+          if (this.field_M == null ||
+            this.field_M.length <= param0) {
+            var7 = new String[param0 + 1];
+            var8 = var7;
+            var4 = var8;
+            if (this.field_M != null) {
+              for (var5 = 0; var5 < this.field_M.length; var5++) {
+                var7[var5] = this.field_M[var5];
+              }
+            }
+            this.field_M = var8;
+          }
+          this.field_M[param0] = param2;
+          if (param1 != 0) {
+            field_L = -80;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4_ref = decompiledCaughtException;
+          stackIn_14_0 = var4_ref;
+          stackIn_14_1 = new StringBuilder().append("pn.T(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_15_2 = "null";
+          } else {
+            stackIn_15_2 = "{...}";
+          }
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+        }
+    }
+
+    String getTooltipText(boolean param0) {
+        if (param0) {
+          field_O = -114;
+        }
+        if (this.field_I == null) {
+          return null;
+        }
+        if (null == this.field_M) {
+          return null;
+        }
+        if (this.field_I.field_u >= this.field_M.length) {
+          return null;
+        }
+        return this.field_M[this.field_I.field_u];
+    }
+
+    final void rebuildHotspotBounds(byte param0) {
+        int var11 = 0;
+        int stackIn_10_0 = 0;
+        int stackIn_15_0 = 0;
+        int var2;
+        TextWidgetRenderer var3;
+        TextLayout var4;
+        int var5;
+        String var6;
+        int var7;
+        int var8;
+        int var9;
+        Object var10;
+        TextLineMetrics var12;
+        int var13;
+        int var14;
+        TextHotspotBounds var15;
+        int var16;
+        String var17;
+        int var7Lifetime1;
+        var16 = Vertigo2.field_L ? 1 : 0;
+        this.field_P = new IntrusiveDeque();
+        var2 = 0;
+        var3 = (TextWidgetRenderer) ((Object) this.listener);
+        if (param0 > -90) {
+          var17 = (String) null;
+          this.a(54, -39, (String) null);
+        }
+        var4 = var3.getTextLayout((UiWidget) (this), 46);
+        while (true) {
+          var5 = this.text.indexOf("<hotspot=", var2);
+          if (-1 == var5) {
+            return;
+          }
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(9 + var5, var7);
+          var7Lifetime1 = Integer.parseInt(var6);
+          var2 = this.text.indexOf("</hotspot>", var5);
+          var8 = var4.getLineIndexForTextOffset(var5, 22413);
+          var9 = var4.getLineIndexForTextOffset(var2, 22413);
+          var10 = null;
+          for (var11 = var8; var9 >= var11; var11++) {
+            var12 = var4.field_c[var11];
+            if (var8 != var11) {
+              stackIn_10_0 = var12.field_c[0];
+            } else {
+              stackIn_10_0 = var4.getXForTextOffset(var5, 127);
+            }
+            var13 = stackIn_10_0;
+            if (var9 == var11) {
+              stackIn_15_0 = var4.getXForTextOffset(var2, -90);
+            } else {
+              if (var12 == null) {
+                stackIn_15_0 = 0;
+              } else {
+                stackIn_15_0 = var12.field_c[-1 + var12.field_c.length];
+              }
+            }
+            var14 = stackIn_15_0;
+            var15 = new TextHotspotBounds(var7Lifetime1, var13, var12.field_f, var14 - var13, Math.max(var3.getFontLineHeight((byte) -91), -var12.field_f + var12.field_d));
+            if (var10 != null) {
+              ((TextHotspotBounds) (var10)).field_n = var15;
+            }
+            this.field_P.addFirst(var15, false);
+            var10 = var15;
+          }
+        }
+    }
+
+    final void setBounds(boolean param0, int param1, int param2, int param3, int param4) {
+        TextHotspotBounds discarded$0 = null;
+        super.setBounds(param0, param1, param2, param3, param4);
+        if (param0) {
+          discarded$0 = this.findHotspotAt(22, 68, 111);
+        }
+        this.rebuildHotspotBounds((byte) -127);
+    }
+
+    final static void a(int param0, byte param1, qn param2) {
+        BitPacketBuffer var3 = null;
+        try {
+          var3 = uh.field_Wb;
+          var3.writeCipheredByte(param0, 125);
+          int var4 = -75 % ((param1 + 70) / 44);
+          var3.writeByte(param2.field_n, 125);
+          var3.writeShort(param2.field_x, -1783);
+        } catch (RuntimeException runtimeException) {
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "pn.BA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public static void a(byte param0) {
+        field_H = null;
+        field_K = null;
+        if (param0 != -53) {
+          ei var2 = (ei) null;
+          RichTextWidget.a((byte) 22, (ei) null);
+        }
+        field_Q = null;
+        field_N = null;
+    }
+
+    private final TextHotspotBounds findHotspotAt(int param0, int param1, int param2) {
+        TextHotspotBounds var4;
+        TextHotspotBounds var5;
+        int var6;
+        var6 = Vertigo2.field_L ? 1 : 0;
+        if (param2 != 498) {
+          field_K = (int[]) null;
+        }
+        var4 = (TextHotspotBounds) (this.field_P.beginBackward((byte) 100));
+        while (var4 != null) {
+          var5 = var4;
+          while (var5 != null) {
+            if (param1 >= var5.field_s &&
+              var5.field_p <= param0 &&
+              var5.field_s + var5.field_t > param1 &&
+              param0 <= var5.field_p + var5.field_q) {
+              return var4;
+            }
+            var5 = var5.field_n;
+          }
+          var4 = (TextHotspotBounds) (this.field_P.nextBackward(param2 - 439));
+        }
+        return null;
+    }
+
+    final void activateFromInput(int param0, int param1, byte param2, int param3) {
+        super.activateFromInput(param0, param1, (byte) 127, param3);
+        if (param2 < 111) {
+          UiWidget var8 = (UiWidget) null;
+          this.a((byte) -49, -96, 6, (UiWidget) null);
+        }
+        int var5 = param0 - this.x;
+        int var6 = param3 - this.y;
+        TextHotspotBounds var7 = this.findHotspotAt(var6, var5, 498);
+        if (var7 != null &&
+          null != this.field_v) {
+          ((TextHotspotListener) ((Object) this.field_v)).onTextHotspotActivated(this, var7.field_u, param1, (byte) 70);
+        }
+    }
+
+    final static void a(byte param0, ei param1) {
+        try {
+          if (param0 <= 51) {
+            field_H = (String) null;
+          }
+          jm.field_B = param1;
+        } catch (RuntimeException runtimeException) {
+          throw wn.wrapClientException((Throwable) ((Object) runtimeException), "pn.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    static {
+        field_K = new int[]{303, 375, 440, 498, 560};
+        field_Q = new String[]{"Connecting to update server", "Verbinde mit Aktualisierungsserver", "Connexion au serveur de mise à jour", "Conectando ao servidor de atualização", "Met updateserver verbinden", "Connecting to update server (untranslated)"};
+        field_H = "Sound: ";
+        field_O = 98;
+    }
+}

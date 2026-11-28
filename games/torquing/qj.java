@@ -412,12 +412,12 @@ final class qj {
 
     final static void a(int param0, int param1, int param2, PcmSample param3) {
         try {
-          tb.field_l.playSampleWithDelay(param3, 100, on.field_c * param2 / 160, param0);
+          TextHotspotBounds.field_l.playSampleWithDelay(param3, 100, on.field_c * param2 / 160, param0);
           if (param1 != -5205) {
             field_b = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "qj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "qj.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

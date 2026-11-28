@@ -209,7 +209,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             InteractiveWidget.field_z = vf.field_b;
           }
           if (vf.field_b == InteractiveWidget.field_z &&
-            ue.a(1, 0)) {
+            TextLayout.a(1, 0)) {
             var9Lifetime1 = WordLanguage.field_l.readUnsignedByte((byte) 97);
             WordLanguage.field_l.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -219,7 +219,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             } else {
               if (var9Lifetime1 == 248) {
                 tb.a(ha.b(param2 ^ -66), true);
-                Transmogrify.field_B = nj.field_j;
+                Transmogrify.field_B = TextHotspotBounds.field_j;
                 pc.a(1);
                 MusicPatchPcmStream.field_k = false;
                 stackIn_33_0 = var9Lifetime1;
@@ -230,7 +230,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
                 tg.field_a = -1;
                 DebouncedFieldValidator.field_e = var9Lifetime1;
               } else {
-                ue.a(jk.a((byte) -114), 0);
+                TextLayout.a(jk.a((byte) -114), 0);
                 ch.field_f = new Boolean(oh.a((byte) -87, WordLanguage.field_l));
                 WordLanguage.field_l.position = 0;
               }
@@ -238,10 +238,10 @@ final class ProxyAuthenticationRequiredException extends IOException {
           }
           if (aa.field_b == InteractiveWidget.field_z) {
             var9Lifetime2 = 2;
-            if (ue.a(var9Lifetime2, 0)) {
+            if (TextLayout.a(var9Lifetime2, 0)) {
               var10Lifetime1 = WordLanguage.field_l.readUnsignedShort((byte) -102);
               WordLanguage.field_l.position = 0;
-              if (ue.a(var10Lifetime1, 0)) {
+              if (TextLayout.a(var10Lifetime1, 0)) {
                 var11 = wh.field_F.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   wh.field_F[var12] = WordLanguage.field_l.readPrefixedString(26);

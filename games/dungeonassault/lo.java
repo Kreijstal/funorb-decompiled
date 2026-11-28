@@ -52,7 +52,7 @@ abstract class lo {
               param0.j(-66, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param0.j(-117, hh.a(1, -1 + var5));
+              var6_int = param0.j(-117, DefaultTextWidgetRenderer.a(1, -1 + var5));
               var4[var5] = var4[var6_int];
             }
           }

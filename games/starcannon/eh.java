@@ -1142,7 +1142,7 @@ abstract class eh {
                 }
                 var2 = rd.a("reloadgame", -97);
                 if (var2 != null) {
-                  hd.field_i = DualLinkNode.a(123, var2);
+                  DefaultTextWidgetRenderer.field_i = DualLinkNode.a(123, var2);
                 }
                 var2 = rd.a("toserverlist", 99);
                 if (null != var2) {
@@ -1920,7 +1920,7 @@ abstract class eh {
                 }
                 var2 = rd.a("loading_soundeffects", param0 - 6);
                 if (var2 != null) {
-                  bd.field_g = DualLinkNode.a(param0 + 49, var2);
+                  TextLayout.field_g = DualLinkNode.a(param0 + 49, var2);
                 }
                 var2 = rd.a("loading_music", -101);
                 if (null != var2) {
@@ -2040,7 +2040,7 @@ abstract class eh {
                 }
                 var2 = rd.a("login_createaccount", param0 + 63);
                 if (var2 != null) {
-                  oi.field_n = DualLinkNode.a(120, var2);
+                  TextHotspotBounds.field_n = DualLinkNode.a(120, var2);
                 }
                 var2 = rd.a("tohighscores", param0 + 46);
                 if (null != var2) {
@@ -2786,7 +2786,7 @@ abstract class eh {
                 }
                 var2 = rd.a("fs_button_members", param0 ^ 91);
                 if (var2 != null) {
-                  oi.field_j = DualLinkNode.a(115, var2);
+                  TextHotspotBounds.field_j = DualLinkNode.a(115, var2);
                 }
                 var2 = rd.a("fs_unavailable", 117);
                 if (var2 != null) {
@@ -2818,7 +2818,7 @@ abstract class eh {
                 }
                 var2 = rd.a("mb_caption_title", -64);
                 if (null != var2) {
-                  se.field_t = DualLinkNode.a(120, var2);
+                  RichTextLayout.field_t = DualLinkNode.a(120, var2);
                 }
                 var2 = rd.a("mb_including_gamename", 117);
                 if (var2 != null) {
@@ -3010,31 +3010,31 @@ abstract class eh {
                 }
                 var2 = rd.a("mustlogin4,1", 125);
                 if (null != var2) {
-                  hd.field_g[1] = DualLinkNode.a(125, var2);
+                  DefaultTextWidgetRenderer.field_g[1] = DualLinkNode.a(125, var2);
                 }
                 var2 = rd.a("mustlogin4,2", param0 ^ -67);
                 if (null != var2) {
-                  hd.field_g[2] = DualLinkNode.a(param0 + 62, var2);
+                  DefaultTextWidgetRenderer.field_g[2] = DualLinkNode.a(param0 + 62, var2);
                 }
                 var2 = rd.a("mustlogin4,3", 125);
                 if (null != var2) {
-                  hd.field_g[3] = DualLinkNode.a(124, var2);
+                  DefaultTextWidgetRenderer.field_g[3] = DualLinkNode.a(124, var2);
                 }
                 var2 = rd.a("mustlogin4,4", 95);
                 if (null != var2) {
-                  hd.field_g[4] = DualLinkNode.a(param0 + 60, var2);
+                  DefaultTextWidgetRenderer.field_g[4] = DualLinkNode.a(param0 + 60, var2);
                 }
                 var2 = rd.a("mustlogin4,5", -83);
                 if (null != var2) {
-                  hd.field_g[5] = DualLinkNode.a(122, var2);
+                  DefaultTextWidgetRenderer.field_g[5] = DualLinkNode.a(122, var2);
                 }
                 var2 = rd.a("mustlogin4,6", 56);
                 if (null != var2) {
-                  hd.field_g[6] = DualLinkNode.a(param0 + 54, var2);
+                  DefaultTextWidgetRenderer.field_g[6] = DualLinkNode.a(param0 + 54, var2);
                 }
                 var2 = rd.a("mustlogin4,7", -91);
                 if (null != var2) {
-                  hd.field_g[7] = DualLinkNode.a(126, var2);
+                  DefaultTextWidgetRenderer.field_g[7] = DualLinkNode.a(126, var2);
                 }
                 var2 = rd.a("mustlogin_notloggedin", 61);
                 if (var2 != null) {

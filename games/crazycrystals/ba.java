@@ -126,7 +126,7 @@ final class ba extends ScoreModifier {
             field_h = (java.awt.Image) null;
           }
           cf.field_c.addLast(0, param2);
-          tb.a(param0, param2, (byte) -123);
+          TextLayout.a(param0, param2, (byte) -123);
         } catch (RuntimeException runtimeException) {
           throw dn.wrapClientException((Throwable) ((Object) runtimeException), "ba.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

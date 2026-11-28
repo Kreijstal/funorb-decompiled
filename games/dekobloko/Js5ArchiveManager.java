@@ -173,7 +173,7 @@ final class Js5ArchiveManager {
         if (!LoginCredentials.booleanState0085) {
           return false;
         }
-        if (0 != NetworkSupport010.integerState0585) {
+        if (0 != TextHotspotBounds.integerState0585) {
           return false;
         }
         return true;

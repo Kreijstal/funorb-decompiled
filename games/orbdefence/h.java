@@ -95,10 +95,10 @@ final class h extends kj {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_y.field_t ? 1 : 0;
         this.field_y.field_t = this.field_t;
-        String var3 = this.field_y.g(param0);
+        String var3 = this.field_y.getTooltipText(param0);
         this.field_y.field_t = var2 != 0 ? true : false;
         return var3;
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gk extends eg {
+class gk extends DefaultTextWidgetRenderer {
     static bg field_s;
 
     public final void a(int param0, int param1, fe param2, int param3, boolean param4) {

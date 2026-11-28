@@ -203,7 +203,7 @@ final class og {
             var2_int++;
           }
           for (var2_intLifetime1 = -1 + PacketBuffer.field_p.length; var2_intLifetime1 >= 0; var2_intLifetime1--) {
-            mm.field_m[ProxySocketFactory.field_j] = PacketBuffer.field_p[var2_intLifetime1];
+            TextHotspotBounds.field_m[ProxySocketFactory.field_j] = PacketBuffer.field_p[var2_intLifetime1];
             ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
           }
           return;

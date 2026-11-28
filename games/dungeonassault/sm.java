@@ -50,14 +50,14 @@ final class sm {
             var8 = eg.a(var7, "@", "%40", true);
             var9 = eg.a(var8, "&", "%26", true);
             var10 = eg.a(var9, "#", "%23", true);
-            if (null == ci.field_q) {
+            if (null == TextHotspotBounds.field_q) {
               return;
             }
             stackIn_14_0 = ImageProducerRasterBuffer.field_o;
             stackIn_14_1 = param1 ^ -17;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
-            stackIn_14_4 = ci.field_q.getCodeBase();
+            stackIn_14_4 = TextHotspotBounds.field_q.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(CipherPacketBuffer.field_s).append("&u=");
             if (pe.field_o != null) {
               stackIn_15_2 = null;

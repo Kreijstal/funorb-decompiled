@@ -52,7 +52,7 @@ final class li {
             return null;
           }
           if (param1 == -2) {
-            stackIn_7_0 = hl.a(param1 + 2);
+            stackIn_7_0 = DefaultTextWidgetRenderer.a(param1 + 2);
             return stackIn_7_0;
           }
           stackIn_5_0 = (RgbSprite) null;

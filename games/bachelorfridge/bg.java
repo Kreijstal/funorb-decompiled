@@ -8,7 +8,7 @@ final class bg extends BoardChange {
         this.field_j = 5;
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         try {
           param1.field_K = 0;
           param1.field_x = param0 ? true : false;
@@ -36,7 +36,7 @@ final class bg extends BoardChange {
         aja.field_p = null;
         qc.field_b = null;
         lna.field_q = true;
-        qq.field_k = null;
+        ChangeCreatureStatOrHealthEffect.field_k = null;
         bi.field_h = null;
         int var1 = -34 / ((-5 - param0) / 54);
         if (lna.field_C == null) {

@@ -177,7 +177,7 @@ final class BagpipeAnimation extends EventAnimation {
           while (var3 != null) {
             var3.apply(var7, this.screen.field_h, 12);
             var9 = var3.target.resolveCreatureView(-27449, this.screen);
-            var9.b(~param0, 6);
+            var9.playAnimation(~param0, 6);
             var9.a(24831, 17, kna.field_g[40]);
             var3 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 0));
           }
@@ -188,7 +188,7 @@ final class BagpipeAnimation extends EventAnimation {
         while (var3 != null) {
           var3.apply(var7, this.screen.field_h, 12);
           var11 = var3.target.resolveCreatureView(-27449, this.screen);
-          var11.b(~param0, 6);
+          var11.playAnimation(~param0, 6);
           var11.a(24831, 17, kna.field_g[40]);
           var3 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 0));
         }

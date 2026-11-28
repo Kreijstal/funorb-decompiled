@@ -17,7 +17,7 @@ final class cd extends ea implements Cloneable {
 
     private final RgbSprite h(int param0) {
         if (0 < this.field_t) {
-          return rf.field_C;
+          return RichTextWidget.field_C;
         }
         if (this.field_t < param0) {
           return qi.field_a;

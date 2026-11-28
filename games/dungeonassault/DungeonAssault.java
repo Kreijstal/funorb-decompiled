@@ -285,7 +285,7 @@ public final class DungeonAssault extends NetworkGameClient {
           if (cm.field_R != null &&
             cm.field_R.focusLost) {
             ib.a(930);
-            hh.a((byte) -128);
+            DefaultTextWidgetRenderer.a((byte) -128);
           }
           stackIn_44_1 = (cm.field_R != null);
           this.a(stackIn_44_1, (byte) -74);
@@ -311,9 +311,9 @@ public final class DungeonAssault extends NetworkGameClient {
                     this.updateScreensAndTransitions(false, (byte) -69);
                   } else {
                     if (~fm.field_a == ~fm.field_e) {
-                      var2_int = l.d(4570);
+                      var2_int = TextLayout.d(4570);
                       if (var2_int == 1) {
-                        ik.a(bh.field_Q, 53, 0);
+                        ik.a(RichTextWidget.field_Q, 53, 0);
                       }
                       this.updateScreensAndTransitions(true, (byte) -69);
                     } else {
@@ -544,7 +544,7 @@ public final class DungeonAssault extends NetworkGameClient {
               var3Lifetime1 = 0;
             }
             if (var3Lifetime1 != 0) {
-              l.a(-1);
+              TextLayout.a(-1);
               return;
             }
           }
@@ -769,7 +769,7 @@ public final class DungeonAssault extends NetworkGameClient {
           hc.resetStaticState(32);
           nm.clearDeclaredStaticReferences(38);
           vd.clearStaticReferences((byte) -96);
-          hh.clearStaticReferences(1);
+          DefaultTextWidgetRenderer.clearStaticReferences(1);
           re.clearStaticReferences();
           jp.clearStaticReferences();
           sm.clearStaticReferences((byte) -118);
@@ -795,7 +795,7 @@ public final class DungeonAssault extends NetworkGameClient {
           an.clearDeclaredStaticReferences(-13023);
           jn.resetStaticState(1);
           im.clearStaticReferences(-1);
-          l.a((byte) -24);
+          TextLayout.a((byte) -24);
           lm.clearStaticReferences((byte) -123);
           InteractiveWidget.b(!param0);
           da.clearDeclaredStaticReferences(6);
@@ -840,7 +840,7 @@ public final class DungeonAssault extends NetworkGameClient {
           hf.clearDeclaredStaticReferences(0);
           uc.clearStaticReferences(false);
           NameSuggestionsPanel.releaseDeclaredStaticReferences((byte) -32);
-          bh.clearDeclaredStaticReferences((byte) -106);
+          RichTextWidget.clearDeclaredStaticReferences((byte) -106);
           ng.f((byte) 124);
           tn.h((byte) -89);
           rb.clearDeclaredStaticReferences(4935);
@@ -857,7 +857,7 @@ public final class DungeonAssault extends NetworkGameClient {
           j.clearDeclaredStaticReferences((byte) -7);
           eb.clearDeclaredStaticReferences((byte) 86);
           ol.clearStaticReferences((byte) -96);
-          fe.clearStaticReferences((byte) -34);
+          RichTextLayout.clearStaticReferences((byte) -34);
           DirectByteStorage.clearStaticReferences(124);
           bp.a(-1);
           oi.releaseDeclaredStaticReferences(119);
@@ -936,7 +936,7 @@ public final class DungeonAssault extends NetworkGameClient {
           ub.clearStaticReferences((byte) 123);
           ue.clearStaticReferences((byte) 36);
           pi.clearStaticReferences(11877);
-          tg.clearStaticReferences(400);
+          TextLineMetrics.clearStaticReferences(400);
           AccountNameAvailabilityValidator.clearStaticReferences((byte) 102);
           PasswordValidator.clearDeclaredStaticReferences(1);
           EmailFormatValidator.clearStaticReferences(false);
@@ -944,7 +944,7 @@ public final class DungeonAssault extends NetworkGameClient {
           AgeValidator.d((byte) 117);
           MatchingFieldValidator.clearDeclaredStaticReferences(-15818);
           fb.clearStaticReferences(25);
-          ci.resetStaticState(116);
+          TextHotspotBounds.resetStaticState(116);
           od.clearStaticReferences((byte) 106);
           DebouncedFieldValidator.clearStaticReferences(-1);
           ab.resetStaticState(1781937827);
@@ -1107,7 +1107,7 @@ public final class DungeonAssault extends NetworkGameClient {
             var3_int = 15 + la.a((byte) -105);
             var4_int = 30 + KeyboardInput.b(4);
             fm.a(ea.a((byte) 13), var3_int, var4_int, (byte) -127);
-            ci.a((byte) -119);
+            TextHotspotBounds.a((byte) -119);
           }
           if (!sl.b(15000)) {
             if (ue.b((byte) -112) &&

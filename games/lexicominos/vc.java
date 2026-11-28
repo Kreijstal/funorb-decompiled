@@ -34,7 +34,7 @@ final class vc extends nb implements WidgetActivationListener {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         fb.field_g = param2;
-        kk.field_o = param1;
+        RichTextLayout.field_o = param1;
         hc.field_fb = param4;
         sb.field_f = param3;
         if (param0 != -5094) {

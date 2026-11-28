@@ -30,7 +30,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
           field_c = 111;
         }
         if (!(fa.correctedCurrentTimeMillis(81) >= (this.field_d + 350L))) {
-          return ui.field_o;
+          return TextHotspotBounds.field_o;
         }
         return this.evaluateValidationStatus(-1);
     }

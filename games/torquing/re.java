@@ -57,7 +57,7 @@ final class re {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class re {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3), "re.A(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3), "re.A(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -228,7 +228,7 @@ final class re {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -315,7 +315,7 @@ final class re {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -323,7 +323,7 @@ final class re {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

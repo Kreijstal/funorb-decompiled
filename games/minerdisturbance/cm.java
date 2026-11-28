@@ -58,7 +58,7 @@ final class cm extends IntrusiveNode {
           if (param0 != 6) {
             return;
           }
-          var7 = ag.a(bm.c(-90), true);
+          var7 = ag.a(RichTextLayout.c(-90), true);
           if (var7 == null) {
             var7 = "";
           }
@@ -87,9 +87,9 @@ final class cm extends IntrusiveNode {
     final static boolean a(boolean param0) {
         if (!param0) {
           field_o = -3;
-          return rd.a((byte) 27, bm.c(-118));
+          return rd.a((byte) 27, RichTextLayout.c(-118));
         }
-        return rd.a((byte) 27, bm.c(-118));
+        return rd.a((byte) 27, RichTextLayout.c(-118));
     }
 
     cm(int param0) {

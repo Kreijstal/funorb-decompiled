@@ -199,12 +199,12 @@ abstract class fi extends UiWidget implements pb {
         field_t = null;
     }
 
-    String f(int param0) {
-        String var2 = super.f(param0);
+    String getTooltipText(int param0) {
+        String var2 = super.getTooltipText(param0);
         if (this.field_v == null) {
           return var2;
         }
-        String var3 = this.field_v.f(4);
+        String var3 = this.field_v.getTooltipText(4);
         if (var3 != null) {
           return var3;
         }

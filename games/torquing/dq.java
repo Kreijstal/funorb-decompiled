@@ -57,12 +57,12 @@ final class dq {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
     final void a(BitmapFont param0, byte param1) {
-        pc var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         se var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -85,7 +85,7 @@ final class dq {
         se var14Lifetime1;
         se var14Lifetime2;
         try {
-          var18 = new pc(param0, 2, 2, 2236962, 1, 1, 1, param0.field_t + param0.field_x + 2);
+          var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_t + param0.field_x + 2);
           this.field_n = (WidgetRenderer) ((Object) var18);
           var18.field_h = 16777215;
           var4 = new se();
@@ -157,7 +157,7 @@ final class dq {
           var20 = new se(var4, true);
           var20.a((byte) -57, var13);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "dq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "dq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -186,7 +186,7 @@ final class dq {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -281,7 +281,7 @@ final class dq {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

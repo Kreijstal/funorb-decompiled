@@ -58,7 +58,7 @@ final class dh extends IntrusiveNode {
               if (param1 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + rb.a(qg.correctedCurrentTimeMillis(false) + 1000L * param1, (byte) -101) + "; Max-Age=" + param1;
+                var7Lifetime4 = var9 + "; Expires=" + TextLayout.a(qg.correctedCurrentTimeMillis(false) + 1000L * param1, (byte) -101) + "; Max-Age=" + param1;
               }
               JavaScriptBridge.evaluate(param2, "document.cookie=\"" + var7Lifetime4 + "\"", param4 ^ -23611);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -185,7 +185,7 @@ final class dh extends IntrusiveNode {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param1.length() != 0) {
-                var5Lifetime6 = var7 + "; Expires=" + rb.a(94608000000L + qg.correctedCurrentTimeMillis(false), (byte) -111) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + TextLayout.a(94608000000L + qg.correctedCurrentTimeMillis(false), (byte) -111) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

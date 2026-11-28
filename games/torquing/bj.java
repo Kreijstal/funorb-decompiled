@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj extends rb {
+final class bj extends RichTextWidget {
     private int field_H;
     private FieldValidator field_I;
     private Sprite field_G;
@@ -15,7 +15,7 @@ final class bj extends rb {
           int var5_int = 44 / ((-28 - param0) / 43);
           super.a(-88, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bj.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class bj extends rb {
         Sprite var21;
         Object var26;
         Object var31;
-        fe var35;
+        TextWidgetRenderer var35;
         int var11;
         int var12;
         Sprite var17;
@@ -44,8 +44,8 @@ final class bj extends rb {
         Sprite var32;
         Sprite var33;
         Sprite var34;
-        fe var36;
-        fe var37;
+        TextWidgetRenderer var36;
+        TextWidgetRenderer var37;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -72,13 +72,13 @@ final class bj extends rb {
             var30 = this.field_J;
             if (!var30.equals(this.text)) {
               this.text = var30;
-              this.a((byte) -36);
+              this.rebuildHotspotBounds((byte) -36);
             }
             super.a(param0, (byte) -63, param2, param3);
             var6 = this.field_I.getValidationStatus((byte) -84);
-            var37 = (fe) ((Object) this.renderer);
+            var37 = (TextWidgetRenderer) ((Object) this.renderer);
             var9 = this.x + param3;
-            var10 = var37.a((UiWidget) (this), param2, -101) + (var37.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
+            var10 = var37.getTextOriginY((UiWidget) (this), param2, -101) + (var37.getTextLayout((byte) 116, (UiWidget) (this)).getLayoutHeight(false) >> 1);
             if (var6 != IntrusiveNode.field_a &&
               var6 != IsaacCipher.field_h) {
               if (var6 == so.field_u) {
@@ -120,13 +120,13 @@ final class bj extends rb {
           }
           if (!var25.equals(this.text)) {
             this.text = var25;
-            this.a((byte) -36);
+            this.rebuildHotspotBounds((byte) -36);
           }
           super.a(param0, (byte) -63, param2, param3);
           var6 = this.field_I.getValidationStatus((byte) -84);
-          var36 = (fe) ((Object) this.renderer);
+          var36 = (TextWidgetRenderer) ((Object) this.renderer);
           var9Lifetime2 = this.x + param3;
-          var10Lifetime2 = var36.a((UiWidget) (this), param2, -101) + (var36.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
+          var10Lifetime2 = var36.getTextOriginY((UiWidget) (this), param2, -101) + (var36.getTextLayout((byte) 116, (UiWidget) (this)).getLayoutHeight(false) >> 1);
           if (var6 != IntrusiveNode.field_a &&
             var6 != IsaacCipher.field_h) {
             if (var6 == so.field_u) {
@@ -170,13 +170,13 @@ final class bj extends rb {
         var18 = rg.field_C;
         if (!var18.equals(this.text)) {
           this.text = var18;
-          this.a((byte) -36);
+          this.rebuildHotspotBounds((byte) -36);
         }
         super.a(param0, (byte) -63, param2, param3);
         var6Lifetime1 = this.field_I.getValidationStatus((byte) -84);
-        var35 = (fe) ((Object) this.renderer);
+        var35 = (TextWidgetRenderer) ((Object) this.renderer);
         var9Lifetime1 = this.x + param3;
-        var10Lifetime1 = var35.a((UiWidget) (this), param2, -101) + (var35.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
+        var10Lifetime1 = var35.getTextOriginY((UiWidget) (this), param2, -101) + (var35.getTextLayout((byte) 116, (UiWidget) (this)).getLayoutHeight(false) >> 1);
         if (var6Lifetime1 != IntrusiveNode.field_a &&
           var6Lifetime1 != IsaacCipher.field_h) {
           if (var6Lifetime1 == so.field_u) {
@@ -235,11 +235,11 @@ final class bj extends rb {
           this.field_I = param0;
           this.a((byte) 125, param2, param3, param5, param4);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 0) {
           return null;
         }
@@ -269,7 +269,7 @@ final class bj extends rb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

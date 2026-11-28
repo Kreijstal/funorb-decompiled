@@ -16,7 +16,7 @@ final class sj {
           if (param1 != 447616545) {
             this.toString();
           }
-          eg.a("jagex-last-login-method", param1 - 447616669, this.field_b, 31536000L, param0);
+          DefaultTextWidgetRenderer.a("jagex-last-login-method", param1 - 447616669, this.field_b, 31536000L, param0);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "sj.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

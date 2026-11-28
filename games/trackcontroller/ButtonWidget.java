@@ -175,7 +175,7 @@ class ButtonWidget extends UiWidget {
           if (param0 != 19438) {
             return true;
           }
-          var3 = rb.a(22479, param2);
+          var3 = TextLayout.a(22479, param2);
           stackIn_8_0 = (-1 != param1.indexOf(param2)) || (param1.indexOf(var3) != -1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

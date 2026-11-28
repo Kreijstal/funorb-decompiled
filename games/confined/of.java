@@ -70,7 +70,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "of.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "of.B(" + param0 + ')');
         }
     }
 
@@ -183,7 +183,7 @@ final class of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "of.C(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "of.C(" + param0 + ')');
         }
     }
 

@@ -49,10 +49,10 @@ final class kg extends dg {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_y.field_q ? 1 : 0;
         this.field_y.field_q = this.field_q;
-        String var3 = this.field_y.d(param0);
+        String var3 = this.field_y.getTooltipText(param0);
         this.field_y.field_q = var2 != 0 ? true : false;
         return var3;
     }

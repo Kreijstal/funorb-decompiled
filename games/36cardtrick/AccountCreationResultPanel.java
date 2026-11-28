@@ -202,7 +202,7 @@ final class AccountCreationResultPanel extends af implements WidgetActivationLis
 
     final static de[] v(int param0) {
         int var1 = 5 / ((param0 - 40) / 58);
-        return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, qe.field_H, qe.field_J, nf.field_d, qi.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, dg.field_G, jl.field_g};
+        return new de[]{uh.field_n, eb.field_l, c.field_k, kg.field_b, qe.field_H, qe.field_J, nf.field_d, qi.field_A, rc.field_g, lh.field_a, ra.field_a, vk.field_e, RichTextWidget.field_G, jl.field_g};
     }
 
     final static int a(int param0, int param1, IsaacRandom param2) {

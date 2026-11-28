@@ -61,15 +61,15 @@ final class ql {
             cg.field_b[BufferedSocket.field_t] = null;
             return var2;
           }
-          if (null != se.field_Y) {
+          if (null != RichTextWidget.field_Y) {
             for (var2_int = 0; he.field_Fb.length > var2_int; var2_int++) {
               if (he.field_Fb[var2_int] == param1 &&
                 sg.field_g[var2_int] > 0) {
                 dupTemp$4 = sg.field_g[var2_int] - 1;
-                arrayValue$5 = se.field_Y[var2_int];
+                arrayValue$5 = RichTextWidget.field_Y[var2_int];
                 sg.field_g[var2_int] = dupTemp$4;
                 var3 = arrayValue$5[dupTemp$4];
-                se.field_Y[var2_int][sg.field_g[var2_int]] = null;
+                RichTextWidget.field_Y[var2_int][sg.field_g[var2_int]] = null;
                 return var3;
               }
             }
@@ -84,15 +84,15 @@ final class ql {
               cg.field_b[BufferedSocket.field_t] = null;
               return var2;
             }
-            if (null != se.field_Y) {
+            if (null != RichTextWidget.field_Y) {
               for (var2_int = 0; he.field_Fb.length > var2_int; var2_int++) {
                 if (he.field_Fb[var2_int] == param1 &&
                   sg.field_g[var2_int] > 0) {
                   dupTemp$13 = sg.field_g[var2_int] - 1;
-                  arrayValue$14 = se.field_Y[var2_int];
+                  arrayValue$14 = RichTextWidget.field_Y[var2_int];
                   sg.field_g[var2_int] = dupTemp$13;
                   var3 = arrayValue$14[dupTemp$13];
-                  se.field_Y[var2_int][sg.field_g[var2_int]] = null;
+                  RichTextWidget.field_Y[var2_int][sg.field_g[var2_int]] = null;
                   return var3;
                 }
               }
@@ -106,15 +106,15 @@ final class ql {
               return var2;
             }
             if (param1 != 30000) {
-              if (null != se.field_Y) {
+              if (null != RichTextWidget.field_Y) {
                 for (var2_int = 0; he.field_Fb.length > var2_int; var2_int++) {
                   if (he.field_Fb[var2_int] == param1 &&
                     sg.field_g[var2_int] > 0) {
                     dupTemp$9 = sg.field_g[var2_int] - 1;
-                    arrayValue$10 = se.field_Y[var2_int];
+                    arrayValue$10 = RichTextWidget.field_Y[var2_int];
                     sg.field_g[var2_int] = dupTemp$9;
                     var3 = arrayValue$10[dupTemp$9];
-                    se.field_Y[var2_int][sg.field_g[var2_int]] = null;
+                    RichTextWidget.field_Y[var2_int][sg.field_g[var2_int]] = null;
                     return var3;
                   }
                 }
@@ -127,15 +127,15 @@ final class ql {
                 cg.field_b[BufferedSocket.field_t] = null;
                 return var2;
               }
-              if (null != se.field_Y) {
+              if (null != RichTextWidget.field_Y) {
                 for (var2_int = 0; he.field_Fb.length > var2_int; var2_int++) {
                   if (he.field_Fb[var2_int] == param1 &&
                     sg.field_g[var2_int] > 0) {
                     dupTemp$7 = sg.field_g[var2_int] - 1;
-                    arrayValue$8 = se.field_Y[var2_int];
+                    arrayValue$8 = RichTextWidget.field_Y[var2_int];
                     sg.field_g[var2_int] = dupTemp$7;
                     var3 = arrayValue$8[dupTemp$7];
-                    se.field_Y[var2_int][sg.field_g[var2_int]] = null;
+                    RichTextWidget.field_Y[var2_int][sg.field_g[var2_int]] = null;
                     return var3;
                   }
                 }

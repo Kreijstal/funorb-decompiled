@@ -86,7 +86,7 @@ final class gs {
         this.field_m = CreatureActor.field_g;
         this.field_i = OneAnimation.field_x;
         this.field_e = gba.field_yb;
-        this.field_b = vv.field_d;
+        this.field_b = TextLayout.field_d;
         this.field_k = to.field_a;
         this.field_d = laa.field_m;
         this.field_g = qia.field_b;
@@ -124,7 +124,7 @@ final class gs {
         int var2_int = 0;
         RuntimeException var2 = null;
         EventEffect stackIn_2_0 = null;
-        o stackIn_4_0 = null;
+        ChangeAllCreaturesHealthEffect stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -135,7 +135,7 @@ final class gs {
             return stackIn_2_0;
           }
           var2_int = param1.readUnsignedShort((byte) 113);
-          stackIn_4_0 = new o(var2_int);
+          stackIn_4_0 = new ChangeAllCreaturesHealthEffect(var2_int);
           return (EventEffect) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

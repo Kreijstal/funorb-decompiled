@@ -94,8 +94,8 @@ abstract class si extends vg implements ba {
         }
     }
 
-    String e(int param0) {
-        String var2 = super.e(-93);
+    String getTooltipText(int param0) {
+        String var2 = super.getTooltipText(-93);
         if (null == this.field_z) {
           if (param0 > -39) {
             field_B = 63;
@@ -103,7 +103,7 @@ abstract class si extends vg implements ba {
           }
           return var2;
         }
-        String var3 = this.field_z.e(-71);
+        String var3 = this.field_z.getTooltipText(-71);
         if (var3 != null) {
           return var3;
         }

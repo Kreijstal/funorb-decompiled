@@ -20,7 +20,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = rb.a(22479, param0);
+          var3 = TextLayout.a(22479, param0);
           if (-1 == param1.indexOf(param0) &&
             -1 == param1.indexOf(var3)) {
             var4 = -12 % ((param2 - 62) / 33);

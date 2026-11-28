@@ -28,7 +28,7 @@ abstract class ui extends WidgetContainer {
           SoftwareRasterizer.clearRaster();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
@@ -38,7 +38,7 @@ abstract class ui extends WidgetContainer {
           SoftwareRasterizer.clearRaster();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
@@ -48,7 +48,7 @@ abstract class ui extends WidgetContainer {
           SoftwareRasterizer.clearRaster();
           this.b(param1 + 58, 0, 0);
           super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
           return;
         }
@@ -56,7 +56,7 @@ abstract class ui extends WidgetContainer {
         SoftwareRasterizer.clearRaster();
         this.b(param1 + 58, 0, 0);
         super.a(param0, param1, -this.field_k - param2, -this.field_w - param3);
-        id.b((byte) -58);
+        DefaultTextWidgetRenderer.b((byte) -58);
         UiWidget.field_s.drawWithOpacity(param3 + this.field_w, param2 + this.field_k, this.field_E);
     }
 

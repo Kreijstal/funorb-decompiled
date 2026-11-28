@@ -156,13 +156,13 @@ final class lb {
           field_a = (String) null;
         }
         hg.field_Z = param1 >> 4 & 3;
-        bd.field_p = (14 & param1) >> 2;
+        RichTextLayout.field_p = (14 & param1) >> 2;
         if (hg.field_Z > 2) {
           hg.field_Z = 2;
         }
         wf.field_a = 3 & param1;
-        if (bd.field_p > 2) {
-          bd.field_p = 2;
+        if (RichTextLayout.field_p > 2) {
+          RichTextLayout.field_p = 2;
         }
         if (wf.field_a > 2) {
           wf.field_a = 2;

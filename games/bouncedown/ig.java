@@ -21,7 +21,7 @@ final class ig {
         ng.field_b = false;
         oh.a(115, -1);
         int var1 = -119 % ((-17 - param0) / 32);
-        vc.field_F = wj.field_a;
+        RichTextWidget.field_F = wj.field_a;
         fh.field_B = wj.field_a;
     }
 

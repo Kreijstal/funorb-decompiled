@@ -103,7 +103,7 @@ final class ak {
     }
 
     final static int a(boolean param0) {
-        if (kj.field_R < 2) {
+        if (RichTextWidget.field_R < 2) {
           return 0;
         }
         if (0 == vd.field_b) {
@@ -126,14 +126,14 @@ final class ak {
             return 80;
           }
         } else {
-          if (null != af.field_c) {
-            if (!af.field_c.ensureIndexLoaded((byte) -121)) {
+          if (null != DefaultTextWidgetRenderer.field_c) {
+            if (!DefaultTextWidgetRenderer.field_c.ensureIndexLoaded((byte) -121)) {
               return 14;
             }
-            if (!af.field_c.hasGroupName(82, "")) {
+            if (!DefaultTextWidgetRenderer.field_c.hasGroupName(82, "")) {
               return 29;
             }
-            if (!af.field_c.tryLoadGroupByName(2, "")) {
+            if (!DefaultTextWidgetRenderer.field_c.tryLoadGroupByName(2, "")) {
               return 29;
             }
           }

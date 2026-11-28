@@ -157,7 +157,7 @@ final class em {
           DisplayNameSelectionPanel.a(21487, ib.field_c, param9, param7, param3);
         }
         mk.a(param7, param4, param9, (byte) -68, param0, param3, param8);
-        DisplayNameSelectionPanel.a(param1 + 21485, se.field_S, param9, param7, param3);
+        DisplayNameSelectionPanel.a(param1 + 21485, RichTextWidget.field_S, param9, param7, param3);
         DelegatingCanvas.field_c = DelegatingCanvas.field_c + 1;
     }
 

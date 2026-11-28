@@ -28,7 +28,7 @@ final class ol {
             }
             Bzip2State.a(param1, param2);
           } catch (RuntimeException runtimeException) {
-            throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ol.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -122,7 +122,7 @@ final class ol {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param1).append(')').toString());
         }
     }
 

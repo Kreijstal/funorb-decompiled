@@ -68,7 +68,7 @@ final class h {
     }
 
     final static void a(boolean param0) {
-        ri.a((byte) -112, bm.c(-125));
+        ri.a((byte) -112, RichTextLayout.c(-125));
         if (param0) {
           h.b(true);
         }

@@ -163,7 +163,7 @@ final class tj extends g implements WidgetActivationListener {
               }
             }
           } else {
-            ub.c(0);
+            RichTextLayout.c(0);
           }
           var6_int = 59 % ((param1 + 62) / 32);
           return;

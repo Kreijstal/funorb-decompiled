@@ -40,7 +40,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           var9.appendCrc32(26199, var4);
           var9.backpatchByteLength(25859, -var4 + var9.position);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "lf.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "lf.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (this.field_l instanceof FieldValidatorProvider) {
             var3 = ((FieldValidatorProvider) ((Object) this.field_l)).getFieldValidator((byte) -9);
             if (var3 != null) {
-              if (var3.getValidationStatus(-3621) == nn.field_q &&
+              if (var3.getValidationStatus(-3621) == TextHotspotBounds.field_q &&
                 !param0.equals(this.field_l.field_B)) {
                 stackIn_6_0 = IntrusiveDeque.field_d;
                 return stackIn_6_0;
@@ -85,7 +85,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         try {
           this.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,13 +116,13 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (this.field_l instanceof FieldValidatorProvider) {
             var3 = ((FieldValidatorProvider) ((Object) this.field_l)).getFieldValidator((byte) -9);
             if (var3 != null &&
-              var3.getValidationStatus(-3621) != nn.field_q) {
+              var3.getValidationStatus(-3621) != TextHotspotBounds.field_q) {
               stackIn_8_0 = fb.field_e;
               return stackIn_8_0;
             }
           }
           if (param1.equals(this.field_l.field_B)) {
-            stackIn_12_0 = nn.field_q;
+            stackIn_12_0 = TextHotspotBounds.field_q;
           } else {
             stackIn_12_0 = fb.field_e;
           }
@@ -137,7 +137,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "lf.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "lf.B(" + param0 + ')');
         }
     }
 

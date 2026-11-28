@@ -1238,7 +1238,7 @@ class jla {
               if (!this.field_e.e(param0 ^ -38)) {
                 break regionExit1;
               }
-              ks.field_i = 0;
+              ClearCreatureStatusEffect.field_i = 0;
               if (var9 == 0) {
                 break regionExit2;
               }
@@ -1251,7 +1251,7 @@ class jla {
               if (!this.field_e.e(0)) {
                 break regionExit2;
               }
-              ks.field_i = 1;
+              ClearCreatureStatusEffect.field_i = 1;
               if (var9 == 0) {
                 break regionExit2;
               }
@@ -1310,7 +1310,7 @@ class jla {
               if (!this.field_e.e(param0 + 38)) {
                 break regionExit1;
               }
-              dh.a(nia.d(-31768), 124);
+              ArmPetAttackEffect.a(nia.d(-31768), 124);
               if (var9 == 0) {
                 break regionExit2;
               }
@@ -1994,20 +1994,20 @@ class jla {
             this.field_e.field_g <= 1) {
             this.field_e.b(89, 2);
             if (var3 != 0) {
-              this.field_e.b(108, ks.field_i);
+              this.field_e.b(108, ClearCreatureStatusEffect.field_i);
             }
           } else {
-            this.field_e.b(108, ks.field_i);
+            this.field_e.b(108, ClearCreatureStatusEffect.field_i);
           }
         }
         if (98 == gf.field_k) {
           if (this.field_e.field_g != 2) {
             this.field_e.b(91, 2);
             if (var3 != 0) {
-              this.field_e.b(100, ks.field_i);
+              this.field_e.b(100, ClearCreatureStatusEffect.field_i);
             }
           } else {
-            this.field_e.b(100, ks.field_i);
+            this.field_e.b(100, ClearCreatureStatusEffect.field_i);
           }
         }
         this.field_e.a(param0);
@@ -2178,7 +2178,7 @@ class jla {
         var2 = var2 + g.field_g.drawParagraph(EventAnimation.field_j[7], var4, var2 * g.field_g.field_u + 40, var3, 430, 3518976, -1, 0, 0, g.field_g.field_u);
         var3 = r.field_n.field_q;
         int var5 = 1;
-        if (kt.field_k == 0) {
+        if (SetMoveSlotCooldownEffect.field_k == 0) {
           var5 = 0;
         }
         g.field_g.drawParagraph(EventAnimation.field_j[3], 125, -((var5 + 11) * g.field_g.field_u / param0) + 470, var3, 2 * g.field_g.field_u, 3518976, -1, 0, 0, g.field_g.field_u);

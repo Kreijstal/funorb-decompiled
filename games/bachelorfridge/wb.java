@@ -217,14 +217,14 @@ final class wb extends lw {
     final static EventEffect a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        tfa stackIn_1_0 = null;
+        StartFloodEffect stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -61 / ((param1 - 52) / 43);
-          stackIn_1_0 = new tfa();
+          stackIn_1_0 = new StartFloodEffect();
           return (EventEffect) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

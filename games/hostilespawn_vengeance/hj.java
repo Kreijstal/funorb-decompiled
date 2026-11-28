@@ -83,7 +83,7 @@ final class hj extends DualLinkNode {
             this.field_v = (String[]) null;
           }
           if (1 == param0) {
-            this.field_v = cj.a(param2.o(32), -14, '<');
+            this.field_v = RichTextWidget.a(param2.o(32), -14, '<');
           } else {
             if (param0 == 2) {
               var4_int = param2.readUnsignedByte(param1 ^ 13041);
@@ -98,7 +98,7 @@ final class hj extends DualLinkNode {
                 this.field_u = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
                   var6 = param2.readUnsignedShort(8);
-                  var7 = mb.c(param1 - 41805, var6);
+                  var7 = RichTextLayout.c(param1 - 41805, var6);
                   if (var7 != null) {
                     this.field_q[var5] = var6;
                     array$0 = new int[var7.field_b];

@@ -5,13 +5,13 @@ final class sa {
     static ub field_c;
     static String field_b;
     static String field_d;
-    static cn field_a;
+    static DefaultTextWidgetRenderer field_a;
     static String field_e;
 
     final static void a(int param0) {
         ProxySocketFactory.field_h[0] = cm.a(128, 5, 0, 1);
         ProxySocketFactory.field_h[1] = cm.a(128, 5, 1, 1);
-        nh.field_L = cj.a(6, param0);
+        nh.field_L = RichTextWidget.a(6, param0);
     }
 
     public static void clearStaticReferences(byte param0) {
@@ -63,7 +63,7 @@ final class sa {
             0 == ak.field_b[ln.field_a.field_o[param1]].field_a) {
             var2_int = 25;
           }
-          if ((cj.field_I & 2) == 0) {
+          if ((RichTextWidget.field_I & 2) == 0) {
             if (0 > var2_int) {
               var2_int = 0;
             }

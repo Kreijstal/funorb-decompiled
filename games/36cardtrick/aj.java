@@ -154,7 +154,7 @@ final class aj {
     }
 
     final void a(int param0, BitmapFont param1) {
-        ek var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         nd var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -177,7 +177,7 @@ final class aj {
         nd var14Lifetime1;
         nd var14Lifetime2;
         try {
-          var17 = new ek(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_s + 2);
+          var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_x + param1.field_s + 2);
           this.field_h = (ci) ((Object) var17);
           var17.field_h = 16777215;
           var4 = new nd();

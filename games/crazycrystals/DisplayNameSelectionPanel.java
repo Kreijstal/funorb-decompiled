@@ -27,7 +27,7 @@ final class DisplayNameSelectionPanel extends og implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (wo) null);
         this.field_G = new ValidatedTextField("", (bi) null, 12);
-        lb var1 = new lb(ba.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ba.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
         qm var2 = new qm(gg.field_a, var1, (bi) null);
         this.field_B = new InteractiveWidget(hb.field_i, (bi) null);
         this.field_C = new InteractiveWidget(GameAppletShell.field_k, (bi) null);
@@ -43,7 +43,7 @@ final class DisplayNameSelectionPanel extends og implements NameSuggestionListen
         int var5 = 200;
         var3 += 50;
         this.b(var2, 12);
-        var3 = var3 + (5 + this.a(this.field_G, tb.field_c, var3, 170, fh.field_g, (byte) 122));
+        var3 = var3 + (5 + this.a(this.field_G, TextLayout.field_c, var3, 170, fh.field_g, (byte) 122));
         this.field_B.a(40, 496 - var5 >> 1, var3, var5, (byte) -52);
         this.field_C.a(40, var4 + 3, 15 + var3, 60, (byte) -52);
         this.field_C.field_l = (bi) (this);

@@ -186,7 +186,7 @@ abstract class om extends qm implements he {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            this.a((byte) 61);
+            this.getTooltipText((byte) 61);
           }
           stackIn_6_0 = (null != this.field_w) && (this.field_w.a(true, param1));
           return stackIn_6_0;
@@ -405,15 +405,15 @@ abstract class om extends qm implements he {
         return null == this.field_w ? 0 : this.field_w.c((byte) 97);
     }
 
-    String a(byte param0) {
+    String getTooltipText(byte param0) {
         String var3 = null;
-        String var2 = super.a((byte) -46);
+        String var2 = super.getTooltipText((byte) -46);
         String var3Lifetime1;
         if (param0 > -23) {
           Hashtable var4 = (Hashtable) null;
           this.a((StringBuilder) null, (Hashtable) null, 43, -106);
           if (null != this.field_w) {
-            var3 = this.field_w.a((byte) -72);
+            var3 = this.field_w.getTooltipText((byte) -72);
             if (var3 != null) {
               return var3;
             }
@@ -424,7 +424,7 @@ abstract class om extends qm implements he {
         if (null == this.field_w) {
           return var2;
         }
-        var3Lifetime1 = this.field_w.a((byte) -72);
+        var3Lifetime1 = this.field_w.getTooltipText((byte) -72);
         if (var3Lifetime1 == null) {
           return var2;
         }

@@ -194,9 +194,9 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
     final static ci j(int param0) {
         if (param0 != -1) {
           ConfirmedEmailAvailabilityValidator.a(33, 69, -51);
-          return se.field_S.field_Kb;
+          return RichTextWidget.field_S.field_Kb;
         }
-        return se.field_S.field_Kb;
+        return RichTextWidget.field_S.field_Kb;
     }
 
     ConfirmedEmailAvailabilityValidator(EditableTextField param0, EditableTextField param1) {

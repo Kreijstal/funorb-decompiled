@@ -37,7 +37,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           var10 = var8;
           var3 = var10.readUnsignedByte(32270);
           var10.c(false);
-          ce.field_f = gj.a(param1, var10);
+          TextLayout.field_f = gj.a(param1, var10);
           wj.field_J = new pf[var3];
           ClientLookupTables.field_f = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
@@ -148,7 +148,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           nl.field_b = 0;
           var3 = ProxySocketFactory.field_j;
           var4 = ln.field_a.field_d;
-          var5 = mm.field_m[0];
+          var5 = TextHotspotBounds.field_m[0];
           var39 = var5;
           var39Lifetime1 = var5;
           var6 = var5.field_j;
@@ -167,11 +167,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           var12 = 0;
           for (var13 = 0; var3 > var13; var13++) {
-            var9[mm.field_m[var13].field_j.getClampedTileIndex(-4)] = 0;
+            var9[TextHotspotBounds.field_m[var13].field_j.getClampedTileIndex(-4)] = 0;
           }
           for (var13Lifetime1 = 0; var3 > var13Lifetime1; var13Lifetime1++) {
             boolean decompiledFrameRemainder0 = true;
-            var39Lifetime2 = mm.field_m[var13Lifetime1];
+            var39Lifetime2 = TextHotspotBounds.field_m[var13Lifetime1];
             if (var39Lifetime2 != null) {
               if (var39Lifetime2.field_i == 8) {
                 var12 = 1;
@@ -443,7 +443,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
                                                                             (!(var39Lifetime2.field_I > 0))) {
                                                                             var39Lifetime2.c((byte) 64);
                                                                             for (var26 = 0; var26 < 10; var26++) {
-                                                                              mm.field_m[ProxySocketFactory.field_j] = new oj(var39Lifetime2.field_j, 3, rl.field_c);
+                                                                              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var39Lifetime2.field_j, 3, rl.field_c);
                                                                               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                                                                             }
                                                                             tk.a(3, jc.field_c, 32, true);
@@ -609,21 +609,21 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           for (var14 = ProxySocketFactory.field_j - 1; var14 > 0; var14--) {
             var13Lifetime3 = 0;
-            if (mm.field_m[var14].field_G > 0) {
+            if (TextHotspotBounds.field_m[var14].field_G > 0) {
               var13Lifetime3 = 16;
             }
-            if (var13Lifetime3 > mm.field_m[var14].field_q) {
-              dupTemp$0 = mm.field_m[var14];
+            if (var13Lifetime3 > TextHotspotBounds.field_m[var14].field_q) {
+              dupTemp$0 = TextHotspotBounds.field_m[var14];
               dupTemp$0.field_q = dupTemp$0.field_q + 1;
             }
-            if (mm.field_m[var14].field_q > var13Lifetime3) {
-              dupTemp$1 = mm.field_m[var14];
+            if (TextHotspotBounds.field_m[var14].field_q > var13Lifetime3) {
+              dupTemp$1 = TextHotspotBounds.field_m[var14];
               dupTemp$1.field_q = dupTemp$1.field_q - 1;
             }
-            if (-1 == mm.field_m[var14].field_i) {
+            if (-1 == TextHotspotBounds.field_m[var14].field_i) {
               ProxySocketFactory.field_j = ProxySocketFactory.field_j - 1;
-              mm.field_m[var14] = mm.field_m[ProxySocketFactory.field_j];
-              mm.field_m[ProxySocketFactory.field_j] = null;
+              TextHotspotBounds.field_m[var14] = TextHotspotBounds.field_m[ProxySocketFactory.field_j];
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = null;
             }
           }
           if (eh.field_g > 0 &&
@@ -648,22 +648,22 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               le.field_D < 6000) {
               var14Lifetime1 = var14Lifetime1 + 6000 / le.field_D;
             }
-            if (var14Lifetime1 >= mb.field_s.field_g.length) {
-              var14Lifetime1 = -1 + mb.field_s.field_g.length;
+            if (var14Lifetime1 >= RichTextLayout.field_s.field_g.length) {
+              var14Lifetime1 = -1 + RichTextLayout.field_s.field_g.length;
             }
-            mb.field_s.b(var14Lifetime1, (byte) 112);
+            RichTextLayout.field_s.b(var14Lifetime1, (byte) 112);
           }
           if (0 < eh.field_g &&
             hg.field_e == 1) {
             if (256 < lj.field_q) {
               lj.field_q = 256;
             }
-            if (lj.field_q <= mb.field_s.field_v) {
-              if (mb.field_s.field_v > lj.field_q) {
-                mb.field_s.field_v = mb.field_s.field_v - 1;
+            if (lj.field_q <= RichTextLayout.field_s.field_v) {
+              if (RichTextLayout.field_s.field_v > lj.field_q) {
+                RichTextLayout.field_s.field_v = RichTextLayout.field_s.field_v - 1;
               }
             } else {
-              mb.field_s.field_v = Math.min(lj.field_q, mb.field_s.field_v + 8);
+              RichTextLayout.field_s.field_v = Math.min(lj.field_q, RichTextLayout.field_s.field_v + 8);
             }
           }
           if (eh.field_g > 0 &&
@@ -672,11 +672,11 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               ha.field_t == 3) {
               nl.field_b = 100;
             }
-            if (nl.field_b > mb.field_s.field_u) {
-              mb.field_s.field_u = Math.min(nl.field_b, mb.field_s.field_u + 8);
+            if (nl.field_b > RichTextLayout.field_s.field_u) {
+              RichTextLayout.field_s.field_u = Math.min(nl.field_b, RichTextLayout.field_s.field_u + 8);
             } else {
-              if (nl.field_b < mb.field_s.field_u) {
-                mb.field_s.field_u = Math.max(nl.field_b, -8 + mb.field_s.field_u);
+              if (nl.field_b < RichTextLayout.field_s.field_u) {
+                RichTextLayout.field_s.field_u = Math.max(nl.field_b, -8 + RichTextLayout.field_s.field_u);
               }
             }
           }
@@ -894,8 +894,8 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
               param0 <= 56 &&
               param1 <= 9) {
               var6 = 0;
-              for (var5_int = 0; var5_int < mm.field_m.length; var5_int++) {
-                var16 = mm.field_m[var5_int];
+              for (var5_int = 0; var5_int < TextHotspotBounds.field_m.length; var5_int++) {
+                var16 = TextHotspotBounds.field_m[var5_int];
                 if (var16 != null &&
                   var16.field_j.field_g < 15 &&
                   var16.field_I > 0 && (var16.field_i == 5 ||

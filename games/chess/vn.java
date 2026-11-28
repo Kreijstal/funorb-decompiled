@@ -19,7 +19,7 @@ class vn extends bj implements WidgetActivationListener {
     private boolean field_tb;
 
     final static void l(int param0) {
-        MusicPatchPcmStream.field_t = new String[re.field_j];
+        MusicPatchPcmStream.field_t = new String[TextHotspotBounds.field_j];
         MusicPatchPcmStream.field_t[5] = sa.field_f;
         MusicPatchPcmStream.field_t[11] = ii.field_N;
         MusicPatchPcmStream.field_t[17] = fl.field_s;
@@ -157,13 +157,13 @@ class vn extends bj implements WidgetActivationListener {
               stackIn_15_1 = -1;
               stackIn_15_2 = 113;
               if (this.field_zb) {
-                stackIn_16_3 = hl.field_f;
+                stackIn_16_3 = DefaultTextWidgetRenderer.field_f;
               } else {
                 stackIn_16_3 = GameAppletShell.field_k;
               }
               ((e) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_15_2, stackIn_16_3);
             } else {
-              var6.a((byte) -114, (rg) (this), hl.field_f);
+              var6.a((byte) -114, (rg) (this), DefaultTextWidgetRenderer.field_f);
             }
           } else {
             var6.a(11, 29, PcmOutputWorker.field_a);

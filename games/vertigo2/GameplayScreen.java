@@ -92,7 +92,7 @@ final class GameplayScreen {
           uh.field_Wb.writeByte(param0, param1 + 24174);
           uh.field_Wb.writeInt(this.field_D.field_l[this.field_B].field_H, param1 ^ param1);
           uh.field_Wb.writeInt(mc.field_e, param1 ^ -24066);
-          uh.field_Wb.writeInt(sl.field_l, param1 + 24066);
+          uh.field_Wb.writeInt(RichTextLayout.field_l, param1 + 24066);
           uh.field_Wb.writeInt(ci.field_b, param1 ^ -24066);
           uh.field_Wb.writeInt(MatchSession.field_k, 0);
         } catch (RuntimeException runtimeException) {
@@ -197,25 +197,25 @@ final class GameplayScreen {
                   ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                   break;
                 case 6:
-                  pn.field_R = pn.field_R - ProxySocketConnector.field_e;
+                  RichTextWidget.field_R = RichTextWidget.field_R - ProxySocketConnector.field_e;
                   c.field_h = c.field_h - 1;
                 default:
                   break;
                 case 7:
-                  pn.field_R = pn.field_R - c.field_h;
+                  RichTextWidget.field_R = RichTextWidget.field_R - c.field_h;
                   ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 5:
-                  pn.field_R = pn.field_R + c.field_h;
+                  RichTextWidget.field_R = RichTextWidget.field_R + c.field_h;
                   ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 4:
                   c.field_h = c.field_h + 1;
-                  pn.field_R = pn.field_R + ProxySocketConnector.field_e;
+                  RichTextWidget.field_R = RichTextWidget.field_R + ProxySocketConnector.field_e;
                   if (var12 == 0) {
                     break;
                   }
@@ -302,7 +302,7 @@ final class GameplayScreen {
               }
               switch (var5) {
                 case 1:
-                  mc.field_e = mc.field_e - sl.field_l;
+                  mc.field_e = mc.field_e - RichTextLayout.field_l;
                   ci.field_b = ci.field_b - 1;
                   if (var12 == 0) {
                     break;
@@ -310,47 +310,47 @@ final class GameplayScreen {
                   break;
                 case 2:
                   mc.field_e = mc.field_e + ci.field_b;
-                  sl.field_l = sl.field_l + 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l + 1;
                   if (var12 == 0) {
                     break;
                   }
                   break;
                 case 3:
                   ci.field_b = ci.field_b + 1;
-                  mc.field_e = mc.field_e + sl.field_l;
+                  mc.field_e = mc.field_e + RichTextLayout.field_l;
                   if (var12 == 0) {
                     break;
                   }
                   break;
                 case 5:
                   ci.field_b = ci.field_b + 1;
-                  MatchSession.field_k = MatchSession.field_k + sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k + RichTextLayout.field_l;
                   if (var12 == 0) {
                     break;
                   }
                 default:
                   break;
                 case 7:
-                  MatchSession.field_k = MatchSession.field_k - sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k - RichTextLayout.field_l;
                   ci.field_b = ci.field_b - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 6:
                   MatchSession.field_k = MatchSession.field_k - ci.field_b;
-                  sl.field_l = sl.field_l - 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 4:
                   MatchSession.field_k = MatchSession.field_k + ci.field_b;
-                  sl.field_l = sl.field_l + 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l + 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 0:
                   mc.field_e = mc.field_e - ci.field_b;
-                  sl.field_l = sl.field_l - 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l - 1;
                   break;
               }
             }
@@ -462,21 +462,21 @@ final class GameplayScreen {
                     break;
                   case 4:
                     c.field_h = c.field_h + 1;
-                    pn.field_R = pn.field_R + ProxySocketConnector.field_e;
+                    RichTextWidget.field_R = RichTextWidget.field_R + ProxySocketConnector.field_e;
                     break;
                   case 6:
-                    pn.field_R = pn.field_R - ProxySocketConnector.field_e;
+                    RichTextWidget.field_R = RichTextWidget.field_R - ProxySocketConnector.field_e;
                     c.field_h = c.field_h - 1;
                   default:
                     break;
                   case 7:
-                    pn.field_R = pn.field_R - c.field_h;
+                    RichTextWidget.field_R = RichTextWidget.field_R - c.field_h;
                     ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 5:
-                    pn.field_R = pn.field_R + c.field_h;
+                    RichTextWidget.field_R = RichTextWidget.field_R + c.field_h;
                     ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                     if (var12 == 0) {
                       break;
@@ -568,20 +568,20 @@ final class GameplayScreen {
                 switch (var7) {
                   case 0:
                     mc.field_e = mc.field_e - ci.field_b;
-                    sl.field_l = sl.field_l - 1;
+                    RichTextLayout.field_l = RichTextLayout.field_l - 1;
                     if (var12 == 0) {
                       break;
                     }
                     break;
                   case 5:
                     ci.field_b = ci.field_b + 1;
-                    MatchSession.field_k = MatchSession.field_k + sl.field_l;
+                    MatchSession.field_k = MatchSession.field_k + RichTextLayout.field_l;
                     if (var12 == 0) {
                       break;
                     }
                     break;
                   case 6:
-                    sl.field_l = sl.field_l - 1;
+                    RichTextLayout.field_l = RichTextLayout.field_l - 1;
                     MatchSession.field_k = MatchSession.field_k - ci.field_b;
                     if (var12 == 0) {
                       break;
@@ -589,32 +589,32 @@ final class GameplayScreen {
                   default:
                     break;
                   case 7:
-                    MatchSession.field_k = MatchSession.field_k - sl.field_l;
+                    MatchSession.field_k = MatchSession.field_k - RichTextLayout.field_l;
                     ci.field_b = ci.field_b - 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 4:
                     MatchSession.field_k = MatchSession.field_k + ci.field_b;
-                    sl.field_l = sl.field_l + 1;
+                    RichTextLayout.field_l = RichTextLayout.field_l + 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 3:
                     ci.field_b = ci.field_b + 1;
-                    mc.field_e = mc.field_e + sl.field_l;
+                    mc.field_e = mc.field_e + RichTextLayout.field_l;
                     if (var12 == 0) {
                       break;
                     }
                   case 2:
-                    sl.field_l = sl.field_l + 1;
+                    RichTextLayout.field_l = RichTextLayout.field_l + 1;
                     mc.field_e = mc.field_e + ci.field_b;
                     if (var12 == 0) {
                       break;
                     }
                   case 1:
                     ci.field_b = ci.field_b - 1;
-                    mc.field_e = mc.field_e - sl.field_l;
+                    mc.field_e = mc.field_e - RichTextLayout.field_l;
                     break;
                 }
               }
@@ -633,7 +633,7 @@ final class GameplayScreen {
                   var5 = var5 | lp.field_B[(var6 + 2) % 4];
                 }
                 if (UiPanel.field_eb[q.field_u] ||
-                  UiPanel.field_eb[pn.field_O]) {
+                  UiPanel.field_eb[RichTextWidget.field_O]) {
                   var5 = var5 | lp.field_B[(5 + var6) % 4];
                 }
                 if (UiPanel.field_eb[DiskCacheWorker.field_g] ||
@@ -652,7 +652,7 @@ final class GameplayScreen {
                 var5 = var5 | lp.field_B[(var6 + 2) % 4];
               }
               if (UiPanel.field_eb[q.field_u] ||
-                UiPanel.field_eb[pn.field_O]) {
+                UiPanel.field_eb[RichTextWidget.field_O]) {
                 var5 = var5 | lp.field_B[(5 + var6) % 4];
               }
               if (UiPanel.field_eb[DiskCacheWorker.field_g] ||
@@ -844,8 +844,8 @@ final class GameplayScreen {
               if (this.field_D.field_r.field_n >= 100 &&
                 1 == this.field_D.field_r.getSimulationPhase(9979)) {
                 var8 += 5;
-                var4Lifetime1 = va.field_s.a(1, LevelRenderable.field_a);
-                va.field_s.a(LevelRenderable.field_a, 16777215, -1, 320, var8 + va.field_s.field_k, 2);
+                var4Lifetime1 = DefaultTextWidgetRenderer.field_s.a(1, LevelRenderable.field_a);
+                DefaultTextWidgetRenderer.field_s.a(LevelRenderable.field_a, 16777215, -1, 320, var8 + DefaultTextWidgetRenderer.field_s.field_k, 2);
               }
             }
             if (this.field_D.field_r.getSimulationPhase(9979) == 1) {
@@ -899,7 +899,7 @@ final class GameplayScreen {
           if (uh.field_Xb == null &&
             this.field_D.field_l[this.field_B].field_W > 0 &&
             !this.field_c) {
-            uh.field_Xb = new vi(0, 65535, gi.field_u, pn.field_R, ProxySocketConnector.field_e, c.field_h, new int[]{this.field_D.field_l[this.field_B].field_W});
+            uh.field_Xb = new vi(0, 65535, gi.field_u, RichTextWidget.field_R, ProxySocketConnector.field_e, c.field_h, new int[]{this.field_D.field_l[this.field_B].field_W});
             if (!ag.b(49)) {
               nr.a(3, -22754, uh.field_Xb);
             }
@@ -1148,24 +1148,24 @@ final class GameplayScreen {
                   break;
                 case 7:
                   ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
-                  pn.field_R = pn.field_R - c.field_h;
+                  RichTextWidget.field_R = RichTextWidget.field_R - c.field_h;
                   if (var8 == 0) {
                     break;
                   }
                 case 6:
-                  pn.field_R = pn.field_R - ProxySocketConnector.field_e;
+                  RichTextWidget.field_R = RichTextWidget.field_R - ProxySocketConnector.field_e;
                   c.field_h = c.field_h - 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 5:
                   ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
-                  pn.field_R = pn.field_R + c.field_h;
+                  RichTextWidget.field_R = RichTextWidget.field_R + c.field_h;
                   if (var8 == 0) {
                     break;
                   }
                 case 4:
-                  pn.field_R = pn.field_R + ProxySocketConnector.field_e;
+                  RichTextWidget.field_R = RichTextWidget.field_R + ProxySocketConnector.field_e;
                   c.field_h = c.field_h + 1;
                   if (var8 == 0) {
                     break;
@@ -1260,14 +1260,14 @@ final class GameplayScreen {
               }
               switch (var4) {
                 case 1:
-                  mc.field_e = mc.field_e - sl.field_l;
+                  mc.field_e = mc.field_e - RichTextLayout.field_l;
                   ci.field_b = ci.field_b - 1;
                   if (var8 == 0) {
                     break;
                   }
                   break;
                 case 2:
-                  sl.field_l = sl.field_l + 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l + 1;
                   mc.field_e = mc.field_e + ci.field_b;
                   if (var8 == 0) {
                     break;
@@ -1275,13 +1275,13 @@ final class GameplayScreen {
                   break;
                 case 3:
                   ci.field_b = ci.field_b + 1;
-                  mc.field_e = mc.field_e + sl.field_l;
+                  mc.field_e = mc.field_e + RichTextLayout.field_l;
                   if (var8 == 0) {
                     break;
                   }
                   break;
                 case 4:
-                  sl.field_l = sl.field_l + 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l + 1;
                   MatchSession.field_k = MatchSession.field_k + ci.field_b;
                   if (var8 == 0) {
                     break;
@@ -1289,27 +1289,27 @@ final class GameplayScreen {
                   break;
                 case 5:
                   ci.field_b = ci.field_b + 1;
-                  MatchSession.field_k = MatchSession.field_k + sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k + RichTextLayout.field_l;
                   if (var8 == 0) {
                     break;
                   }
                 default:
                   break;
                 case 7:
-                  MatchSession.field_k = MatchSession.field_k - sl.field_l;
+                  MatchSession.field_k = MatchSession.field_k - RichTextLayout.field_l;
                   ci.field_b = ci.field_b - 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 6:
-                  sl.field_l = sl.field_l - 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l - 1;
                   MatchSession.field_k = MatchSession.field_k - ci.field_b;
                   if (var8 == 0) {
                     break;
                   }
                 case 0:
                   mc.field_e = mc.field_e - ci.field_b;
-                  sl.field_l = sl.field_l - 1;
+                  RichTextLayout.field_l = RichTextLayout.field_l - 1;
                   break;
               }
             }
@@ -1488,7 +1488,7 @@ final class GameplayScreen {
             ~AgeValidator.field_n == ~DebouncedFieldValidator.field_f) {
             this.field_C = this.field_C | 2;
           }
-          if (DebouncedFieldValidator.field_f == ro.field_i ||
+          if (DebouncedFieldValidator.field_f == TextLayout.field_i ||
             ~om.field_B == ~DebouncedFieldValidator.field_f) {
             this.field_C = this.field_C | 1;
           }
@@ -1501,7 +1501,7 @@ final class GameplayScreen {
             ci.field_b = 0;
             mc.field_e = 0;
             MatchSession.field_k = 0;
-            sl.field_l = 0;
+            RichTextLayout.field_l = 0;
             ByteStorage.a(this.field_D.field_e, this.field_D.field_l[0].field_H, true);
             gj.a((byte) -66, false, LevelRenderer.field_n, 20);
           }
@@ -1599,12 +1599,12 @@ final class GameplayScreen {
                   return;
                 }
               }
-              va.a(20, (byte) 125);
+              DefaultTextWidgetRenderer.a(20, (byte) 125);
               if (var8 == 0) {
                 return;
               }
             }
-            va.a(50, (byte) 124);
+            DefaultTextWidgetRenderer.a(50, (byte) 124);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1826,7 +1826,7 @@ final class GameplayScreen {
               }
               this.field_b.bindAsRenderTarget();
               this.field_G.drawMatchFrame(this.field_B, -this.field_D.field_e + var5, 1 + (var6 - this.field_D.field_e), true, this.field_D.field_r, this.field_D.field_f, this.field_D.field_g, var6, this.field_n);
-              ro.field_g.a(-125);
+              TextLayout.field_g.a(-125);
               this.field_b.drawAdditive(0, 0, 128);
             }
             boolean decompiledFrameRemainder2 = true;
@@ -1885,7 +1885,7 @@ final class GameplayScreen {
                   var8_ref_String = cd.field_c;
                 }
                 if (decompiledFrameRemainder4) {
-                  va.field_s.a(616, param1 ^ 65, 16777215, var7_intLifetime1 * 14 + 140, -1, var8_ref_String);
+                  DefaultTextWidgetRenderer.field_s.a(616, param1 ^ 65, 16777215, var7_intLifetime1 * 14 + 140, -1, var8_ref_String);
                 }
                 var7_intLifetime1++;
               }
@@ -1922,14 +1922,14 @@ final class GameplayScreen {
               var8Lifetime1 = 15;
               var9 = var8Lifetime1 * 2 + (int)np.field_Nb;
               var10 = var8Lifetime1 * 2 + tk.field_c.field_z;
-              va.field_s.b(93);
+              DefaultTextWidgetRenderer.field_s.b(93);
               FullscreenFocusCanvas.a(false, 25, var9, 3 + td.field_c.field_C - var10);
               stackIn_171_0 = (var7_intLifetime1Lifetime1 != 0) ? 14586368 : 16777215;
               var11_intLifetime1 = stackIn_171_0;
-              va.field_s.a(j.field_p, var11_intLifetime1, -1, var8Lifetime1 + ((int)np.field_Nb / 2 + 25), td.field_c.field_C - var8Lifetime1, 2);
+              DefaultTextWidgetRenderer.field_s.a(j.field_p, var11_intLifetime1, -1, var8Lifetime1 + ((int)np.field_Nb / 2 + 25), td.field_c.field_C - var8Lifetime1, 2);
             }
             var7 = this.field_D.field_l[this.field_n];
-            if (null != va.field_s &&
+            if (null != DefaultTextWidgetRenderer.field_s &&
               0 <= this.field_n &&
               var7 != null) {
               var8Lifetime2 = 20;
@@ -2011,7 +2011,7 @@ final class GameplayScreen {
                 this.field_a.a(this.field_M, 20, (byte) 51, var8Lifetime2Lifetime1, 30);
               }
             }
-            va.b(127);
+            DefaultTextWidgetRenderer.b(127);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2065,10 +2065,10 @@ final class GameplayScreen {
           sk.field_b = 42354;
           MatchSession.field_k = 1986;
           mc.field_e = 1951;
-          sl.field_l = 1954;
+          RichTextLayout.field_l = 1954;
           ci.field_b = 1982;
           ProxySocketConnector.field_e = 5180;
-          pn.field_R = 617;
+          RichTextWidget.field_R = 617;
           c.field_h = 9170;
           gi.field_u = 8768;
           BirthDateValidator.field_k = 2127;

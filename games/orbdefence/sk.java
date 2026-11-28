@@ -84,7 +84,7 @@ final class sk extends kj {
     }
 
     public sk() {
-        super(0, 0, ed.field_a, lh.field_d, (td) null, (ag) null);
+        super(0, 0, TextLineMetrics.field_a, lh.field_d, (td) null, (ag) null);
         this.field_B = new IntrusiveDeque();
     }
 

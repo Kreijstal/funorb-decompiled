@@ -12,7 +12,7 @@ final class tg {
     static String field_a;
     static long field_k;
     static AudioOutput field_i;
-    static e field_e;
+    static DefaultTextWidgetRenderer field_e;
 
     final static int a(ad param0, int param1, ad param2) {
         RuntimeException var3 = null;

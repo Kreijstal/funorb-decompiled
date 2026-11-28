@@ -64,7 +64,7 @@ final class lj {
 
     final static void a(int param0, LevelProgressUpdate param1, int param2) {
         try {
-          tb.field_b.addLast(0, param1);
+          TextLayout.field_b.addLast(0, param1);
           pm.a(param0, param1, (byte) 71);
           if (param2 > -38) {
             field_b = -2;

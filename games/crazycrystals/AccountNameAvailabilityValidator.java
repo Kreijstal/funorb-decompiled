@@ -42,7 +42,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         try {
           var3_int = 15 % ((41 - param1) / 49);
           var6 = (CharSequence) ((Object) param0);
-          var4 = rf.a(var6, -63);
+          var4 = RichTextWidget.a(var6, -63);
           if (var4 != null) {
             stackIn_2_0 = var4;
             return stackIn_2_0;

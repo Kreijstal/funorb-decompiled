@@ -29,7 +29,7 @@ final class cf {
         try {
           oi.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "cf.C(" + param0 + ')');
         }
     }
 
@@ -73,7 +73,7 @@ final class cf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -102,7 +102,7 @@ final class cf {
         int var0 = 0;
         field_a = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          field_a[var0] = cm.a(45, var0);
+          field_a[var0] = RichTextLayout.a(45, var0);
         }
         field_e = 250;
         field_c = true;

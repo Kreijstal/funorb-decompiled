@@ -278,7 +278,7 @@ final class pa {
             hh.field_p = new CipherPacketBuffer(param12);
             tc.field_t = param2;
             td.field_b = param1;
-            mb.field_s = param3;
+            RichTextLayout.field_s = param3;
             pj.field_c = param11;
             nb.field_f = param4;
             of.field_c = param13;

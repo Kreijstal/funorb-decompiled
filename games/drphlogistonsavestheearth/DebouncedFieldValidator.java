@@ -66,7 +66,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
 
     abstract String evaluateValidationMessage(byte param0);
 
-    final static void a(boolean param0, int param1, String param2, BitmapFont param3, mi param4) {
+    final static void a(boolean param0, int param1, String param2, BitmapFont param3, TextLineMetrics param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -81,14 +81,14 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        mi var10 = null;
+        TextLineMetrics var10 = null;
         var9 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
           var5_int = 0;
           var6 = -1;
           if (param0) {
-            var10 = (mi) null;
-            DebouncedFieldValidator.a(false, 13, (String) null, (BitmapFont) null, (mi) null);
+            var10 = (TextLineMetrics) null;
+            DebouncedFieldValidator.a(false, 13, (String) null, (BitmapFont) null, (TextLineMetrics) null);
           }
           for (var7 = 1; param2.length() > var7; var7++) {
             var8 = param2.charAt(var7);
@@ -140,16 +140,16 @@ abstract class DebouncedFieldValidator implements FieldValidator {
         field_g = null;
         field_a = null;
         if (param0 <= 5) {
-          mi var2 = (mi) null;
-          DebouncedFieldValidator.a(false, 91, (String) null, (BitmapFont) null, (mi) null);
+          TextLineMetrics var2 = (TextLineMetrics) null;
+          DebouncedFieldValidator.a(false, 91, (String) null, (BitmapFont) null, (TextLineMetrics) null);
         }
     }
 
     public final void recordInputChange(byte param0) {
         this.field_d = la.correctedCurrentTimeMillis(false);
         if (param0 != 87) {
-          mi var3 = (mi) null;
-          DebouncedFieldValidator.a(true, 28, (String) null, (BitmapFont) null, (mi) null);
+          TextLineMetrics var3 = (TextLineMetrics) null;
+          DebouncedFieldValidator.a(true, 28, (String) null, (BitmapFont) null, (TextLineMetrics) null);
         }
     }
 

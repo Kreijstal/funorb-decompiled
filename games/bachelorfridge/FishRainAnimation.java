@@ -24,7 +24,7 @@ final class FishRainAnimation extends EventAnimation {
           var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
           while (var3_ref != null) {
             var9 = var3_ref.target.resolveCreatureView(-27449, this.screen);
-            var9.b(-1, 6);
+            var9.playAnimation(-1, 6);
             var3_ref.apply(var8, this.screen.field_h, 12);
             if (var3_ref instanceof DamageEffect) {
               this.addChild(27799, new DamagePopupAnimation(this.screen, var9, var3_ref.field_f));
@@ -41,7 +41,7 @@ final class FishRainAnimation extends EventAnimation {
         var3_ref = (EventEffect) (this.field_x.effects.beginForward((byte) 90));
         while (var3_ref != null) {
           var7 = var3_ref.target.resolveCreatureView(-27449, this.screen);
-          var7.b(-1, 6);
+          var7.playAnimation(-1, 6);
           var3_ref.apply(var6, this.screen.field_h, 12);
           if (var3_ref instanceof DamageEffect) {
             this.addChild(27799, new DamagePopupAnimation(this.screen, var7, var3_ref.field_f));

@@ -111,7 +111,7 @@ final class dp extends lw {
     }
 
     dp() {
-        super(true, new String[]{un.field_f, pea.field_l}, FullHealAnimation.field_w);
+        super(true, new String[]{un.field_f, ConsumeCreatureRemainsEffect.field_l}, FullHealAnimation.field_w);
         this.field_c = new int[][]{new int[]{280, 290}, new int[]{320, 400}};
     }
 

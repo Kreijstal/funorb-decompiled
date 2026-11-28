@@ -156,7 +156,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
               var3_int = param0;
             }
             var4 = new byte[var3_int];
-            param2.position = param2.position + cc.field_k.a(param2.position, var4, -1, 0, param2.payload, var3_int);
+            param2.position = param2.position + TextHotspotBounds.field_k.a(param2.position, var4, -1, 0, param2.payload, var3_int);
             var5 = tj.decodeCp1252String(var3_int, 0, 0, var4);
             var6 = 44 / ((-38 - param1) / 47);
             stackIn_3_0 = var5;
@@ -223,7 +223,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             }
             var2 = 1;
           }
-          ab.field_j.a(jc.a(AccountCreationResultPanel.field_fb, (byte) 81, bg.field_c), ~param0, jc.a(ua.field_a, (byte) 37, DiskCacheWorker.field_d));
+          ab.field_j.a(DefaultTextWidgetRenderer.a(AccountCreationResultPanel.field_fb, (byte) 81, bg.field_c), ~param0, DefaultTextWidgetRenderer.a(ua.field_a, (byte) 37, DiskCacheWorker.field_d));
           if (ab.field_j.a((byte) -1)) {
             var1_int = 1;
           }
@@ -276,11 +276,11 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
 
     final static boolean h(int param0) {
         if (param0 == 2) {
-          return !bd.field_u.a(false) ? true : false;
+          return !RichTextLayout.field_u.a(false) ? true : false;
         }
         String[] var2 = (String[]) null;
         TextFieldValidator.createAccountSuggestionsResult(-29, (String[]) null);
-        return !bd.field_u.a(false) ? true : false;
+        return !RichTextLayout.field_u.a(false) ? true : false;
     }
 
     public final void onTextChanged(EditableTextField param0, int param1) {

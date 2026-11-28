@@ -50,7 +50,7 @@ final class lc {
             if (var3 > 0) {
               var4 = 0;
               while (!(ProxySocketFactory.field_j <= var4)) {
-                stackOut_13_0 = mm.field_m[var4].field_b;
+                stackOut_13_0 = TextHotspotBounds.field_m[var4].field_b;
                 stackIn_45_0 = stackOut_13_0 ? 1 : 0;
                 stackIn_14_0 = stackOut_13_0;
                 if (var5 != 0) {
@@ -58,17 +58,17 @@ final class lc {
                   break;
                 }
                 if (stackIn_14_0 &&
-                  mm.field_m[var4].field_i != 8 &&
-                  var3 == ln.field_a.field_g[mm.field_m[var4].field_j.getClampedTileIndex(-4)]) {
-                  if (mm.field_m[var4].field_i != 27) {
-                    mm.field_m[var4].field_I = 0;
+                  TextHotspotBounds.field_m[var4].field_i != 8 &&
+                  var3 == ln.field_a.field_g[TextHotspotBounds.field_m[var4].field_j.getClampedTileIndex(-4)]) {
+                  if (TextHotspotBounds.field_m[var4].field_i != 27) {
+                    TextHotspotBounds.field_m[var4].field_I = 0;
                   } else {
                     AccountNameAvailabilityValidator.field_o = false;
                     if (bm.field_c == 1 &&
                       rl.field_c == 3) {
                       ti.a(231, (byte) -113, 24);
                     }
-                    mm.field_m[var4].c((byte) -99);
+                    TextHotspotBounds.field_m[var4].c((byte) -99);
                   }
                 }
                 var4++;

@@ -83,9 +83,9 @@ final class qfa extends cga {
         try {
           qc.field_b.field_Z = param5;
           if (2 == gk.field_d) {
-            qq.field_k.field_Z = NanoGameClock.field_l;
+            ChangeCreatureStatOrHealthEffect.field_k.field_Z = NanoGameClock.field_l;
           } else {
-            qq.field_k.field_Z = ClearTileFlagEffect.field_k;
+            ChangeCreatureStatOrHealthEffect.field_k.field_Z = ClearTileFlagEffect.field_k;
           }
           var9_int = 495;
           var10 = 5;
@@ -94,8 +94,8 @@ final class qfa extends cga {
           var10 = var10 + (param4 + param0);
           DisableSpecial.field_r.a(param4, 31407, DisableSpecial.field_r.field_sb, HailAnimation.field_A.field_sb, 0);
           BoardChangeAnimation.field_k.a(param1, 31407, BoardChangeAnimation.field_k.e(-1), 5, var10);
-          var11 = qq.field_k.e(-1);
-          qq.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
+          var11 = ChangeCreatureStatOrHealthEffect.field_k.e(-1);
+          ChangeCreatureStatOrHealthEffect.field_k.a(param1, 31407, var11, -var11 + (var9_int - 5), var10);
           var12 = param1 + (var10 + 5);
           qc.field_b.a(param8, 31407, var9_int, 0, 0);
           tga.field_m.a(var12, 31407, var9_int, 0, param8);
@@ -205,7 +205,7 @@ final class qfa extends cga {
             return stackIn_16_0;
           }
           if (param0 == 9) {
-            stackIn_19_0 = bm.field_m;
+            stackIn_19_0 = SetTileTerrainEffect.field_m;
             return stackIn_19_0;
           }
           if (param0 == 10) {

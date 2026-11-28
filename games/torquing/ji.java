@@ -76,7 +76,7 @@ final class ji {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -209,7 +209,7 @@ final class ji {
           param0.field_A[param0.vertexCount] = (short)-32768;
           param0.vertexCount = param0.vertexCount + 1;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ji.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -244,7 +244,7 @@ final class ji {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -292,7 +292,7 @@ final class ji {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var8), "ji.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var8), "ji.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

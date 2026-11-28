@@ -339,11 +339,11 @@ final class ce {
           }
           var2Lifetime43 = e.a("instructions_p4,0", true);
           if (null != var2Lifetime43) {
-            ve.field_b[0] = ni.a((byte) -55, var2Lifetime43);
+            TextLayout.field_b[0] = ni.a((byte) -55, var2Lifetime43);
           }
           var2Lifetime44 = e.a("instructions_p4,1", true);
           if (null != var2Lifetime44) {
-            ve.field_b[1] = ni.a((byte) -55, var2Lifetime44);
+            TextLayout.field_b[1] = ni.a((byte) -55, var2Lifetime44);
           }
           stackIn_200_0 = "_1of4";
           stackIn_201_1 = !(param0);
@@ -369,7 +369,7 @@ final class ce {
           stackIn_225_1 = !(param0);
           var2Lifetime49 = e.a(stackIn_224_0, stackIn_225_1);
           if (null != var2Lifetime49) {
-            kk.field_n = ni.a((byte) -55, var2Lifetime49);
+            RichTextLayout.field_n = ni.a((byte) -55, var2Lifetime49);
           }
           stackIn_232_0 = "tutorial_p2";
           stackIn_233_1 = !(param0);
@@ -385,7 +385,7 @@ final class ce {
           stackIn_243_1 = !(param0);
           var2Lifetime52 = e.a(stackIn_242_0, stackIn_243_1);
           if (var2Lifetime52 != null) {
-            kk.field_q = ni.a((byte) -55, var2Lifetime52);
+            RichTextLayout.field_q = ni.a((byte) -55, var2Lifetime52);
           }
           var2Lifetime53 = e.a("END", true);
           if (var2Lifetime53 != null) {

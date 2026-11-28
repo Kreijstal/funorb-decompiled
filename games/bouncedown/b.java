@@ -105,7 +105,7 @@ final class b {
               l.field_b = jc.field_g.readLong((byte) -121);
               hi.field_c = jc.field_g.readUnsignedByte((byte) -75);
               jc.field_g.readUnsignedByte((byte) -118);
-              ui.field_m = jc.field_g.readUnsignedShort(-1640531527);
+              TextHotspotBounds.field_m = jc.field_g.readUnsignedShort(-1640531527);
               var11 = jc.field_g.readNullableString((byte) -95);
               var7 = jc.field_g.readUnsignedByte((byte) -110);
               if ((1 & var7) != 0) {
@@ -143,9 +143,9 @@ final class b {
               }
               fa.field_a = false;
               if (var11 != null) {
-                jd.a(0, DiskCacheWorker.b(0), var11);
+                DefaultTextWidgetRenderer.a(0, DiskCacheWorker.b(0), var11);
               }
-              if (0 >= ui.field_m &&
+              if (0 >= TextHotspotBounds.field_m &&
                 !vk.field_a) {
                 try {
                   JavaScriptBridge.callWithoutArguments(DiskCacheWorker.b(0), "unzap", -31185);
@@ -161,7 +161,7 @@ final class b {
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (ui.field_m > 0) {
+              if (TextHotspotBounds.field_m > 0) {
                 EditableTextField.field_B = true;
               }
               hh.field_p.b(tc.field_r, 126);

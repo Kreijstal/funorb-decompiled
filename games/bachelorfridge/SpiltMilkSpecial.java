@@ -126,7 +126,7 @@ final class SpiltMilkSpecial extends SpecialOrder {
             var9.r(-7);
             return true;
           }
-          FridgeScreen.field_p = kq.field_j;
+          FridgeScreen.field_p = StopFloodEffect.field_j;
           pma.field_k = param1;
           sc.field_n = param5;
           ZombiesSpecial.field_p = null;

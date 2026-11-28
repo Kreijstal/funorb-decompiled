@@ -250,15 +250,15 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (10 == ib.field_k) {
           if (cg.field_y != 0) {
-            ne.field_a = q.a(8192, ll.field_s);
+            TextLayout.field_a = q.a(8192, ll.field_s);
           }
           ib.field_k = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (ib.field_k == 11) {
-          if (null != ne.field_a && (!ne.field_a.ensureIndexLoaded((byte) -113) ||
-            !ne.field_a.tryLoadAllGroups(-18))) {
-            jj.a(0.0f, cb.a(sg.field_a, AccountServiceResult.field_a, ne.field_a, (byte) 13), true);
+          if (null != TextLayout.field_a && (!TextLayout.field_a.ensureIndexLoaded((byte) -113) ||
+            !TextLayout.field_a.tryLoadAllGroups(-18))) {
+            jj.a(0.0f, cb.a(sg.field_a, AccountServiceResult.field_a, TextLayout.field_a, (byte) 13), true);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -331,25 +331,25 @@ abstract class NetworkGameClient extends GameAppletShell {
     }
 
     private final void j(int param0) {
-        ne.field_b[10] = -1;
-        ne.field_b[7] = -1;
-        ne.field_b[3] = -1;
-        ne.field_b[13] = -1;
-        ne.field_b[2] = -2;
-        ne.field_b[9] = -1;
-        ne.field_b[11] = -1;
-        ne.field_b[4] = -1;
-        ne.field_b[17] = -1;
-        ne.field_b[6] = -2;
-        ne.field_b[1] = 16;
+        TextLayout.field_b[10] = -1;
+        TextLayout.field_b[7] = -1;
+        TextLayout.field_b[3] = -1;
+        TextLayout.field_b[13] = -1;
+        TextLayout.field_b[2] = -2;
+        TextLayout.field_b[9] = -1;
+        TextLayout.field_b[11] = -1;
+        TextLayout.field_b[4] = -1;
+        TextLayout.field_b[17] = -1;
+        TextLayout.field_b[6] = -2;
+        TextLayout.field_b[1] = 16;
         if (param0 <= 52) {
           field_q = (ed) null;
         }
-        ne.field_b[18] = 1;
-        ne.field_b[8] = -2;
-        ne.field_b[12] = -1;
-        ne.field_b[5] = -1;
-        ne.field_b[16] = -1;
+        TextLayout.field_b[18] = 1;
+        TextLayout.field_b[8] = -2;
+        TextLayout.field_b[12] = -1;
+        TextLayout.field_b[5] = -1;
+        TextLayout.field_b[16] = -1;
     }
 
     final void g(int param0) {
@@ -412,7 +412,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             var3 = sg.a(stackIn_30_0, param0 ^ -113);
                             lg.a(var3, param0 + 12);
                           } else {
-                            pi.c((byte) 15);
+                            TextLineMetrics.c((byte) 15);
                           }
                         }
                       }
@@ -685,7 +685,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = j.a(this.field_k, b.a(param1 ^ 14638), lc.f(0), ti.a((byte) -8), (byte) -116, vi.b((byte) -55), uj.a(param1 - 2477));
+            var5_intLifetime1 = RichTextLayout.a(this.field_k, b.a(param1 ^ 14638), lc.f(0), ti.a((byte) -8), (byte) -116, vi.b((byte) -55), uj.a(param1 - 2477));
             if (-1 != var5_intLifetime1) {
               oc.a(false, tc.field_e, var5_intLifetime1, fh.field_a);
               tc.field_e = null;

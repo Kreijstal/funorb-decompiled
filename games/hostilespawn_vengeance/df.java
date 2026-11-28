@@ -182,7 +182,7 @@ final class df {
               var17 = 0;
               var18 = 1;
               if (ProxySocketFactory.field_j > var18) {
-                var19 = mm.field_m[var18];
+                var19 = TextHotspotBounds.field_m[var18];
                 if (4 == var19.field_i &&
                   var15 == var19.field_j.field_e &&
                   var19.field_j.field_g == var16) {
@@ -193,7 +193,7 @@ final class df {
                 fieldTemp$1 = param1.field_v - 1;
                 param1.field_v = param1.field_v - 1;
                 if (fieldTemp$1 >= 0) {
-                  mm.field_m[ProxySocketFactory.field_j] = new oj(param8, 4, rl.field_c);
+                  TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param8, 4, rl.field_c);
                   ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                 }
               }

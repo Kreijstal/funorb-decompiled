@@ -11,7 +11,7 @@ final class kaa extends pu {
         Throwable var2 = null;
         boolean stackIn_5_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = vv.field_e;
+        var1_ref = TextLayout.field_e;
         synchronized (var1_ref) {
           if (DefaultWidgetRenderer.field_q == HazmatEvent.field_s) {
             return false;

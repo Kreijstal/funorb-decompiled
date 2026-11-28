@@ -17,7 +17,7 @@ final class ScavengerAnimation extends EventAnimation {
           if (this.field_l != 45) {
             return false;
           }
-          var2.b(-1, 20);
+          var2.playAnimation(-1, 20);
           PizzaArenaTheme.e(49, var2.field_s.field_o.field_e);
           return false;
         }

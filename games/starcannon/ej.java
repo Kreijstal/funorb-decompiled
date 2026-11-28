@@ -8,20 +8,20 @@ final class ej extends mi {
     private Object field_r;
 
     final static void b(boolean param0, int param1) {
-        bd.field_a = (55 & param1) >> 4;
-        if (2 < bd.field_a) {
-          bd.field_a = 2;
+        TextLayout.field_a = (55 & param1) >> 4;
+        if (2 < TextLayout.field_a) {
+          TextLayout.field_a = 2;
         }
         sc.field_b = (param1 & 12) >> 2;
         if (sc.field_b > 2) {
           sc.field_b = 2;
         }
-        bd.field_b = param1 & 3;
+        TextLayout.field_b = param1 & 3;
         if (!param0) {
           ej.clearDeclaredStaticReferences(96);
         }
-        if (bd.field_b > 2) {
-          bd.field_b = 2;
+        if (TextLayout.field_b > 2) {
+          TextLayout.field_b = 2;
         }
     }
 

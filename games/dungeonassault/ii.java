@@ -212,7 +212,7 @@ class ii extends lm implements aa {
             for (var11 = param3; param5 > var11; var11++) {
               var12 = ol.field_k[var11];
               if (!param6) {
-                stackIn_24_0 = ci.field_n[var12];
+                stackIn_24_0 = TextHotspotBounds.field_n[var12];
               } else {
                 stackIn_24_0 = i.field_t[var12];
               }
@@ -291,7 +291,7 @@ class ii extends lm implements aa {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         dj var2;
         lm var3;
         String var4;
@@ -305,7 +305,7 @@ class ii extends lm implements aa {
         }
         var3 = (lm) (var2.a(-479592473));
         while (var3 != null) {
-          var4 = var3.c((byte) 80);
+          var4 = var3.getTooltipText((byte) 80);
           if (var4 != null) {
             return var4;
           }

@@ -96,7 +96,7 @@ final class ce {
           if (param1 > -71) {
             ce.clearStaticReferences(false);
           }
-          var3 = re.field_m;
+          var3 = TextHotspotBounds.field_m;
           var4 = ag.field_f;
           var13.field_b.a(true, var3, 0, var4, 0);
           return;

@@ -100,7 +100,7 @@ final class ha {
           var24.field_O = 1;
           bf.field_c = new UiPanel(0L, AccountRequestState.field_b);
           bf.field_c.field_O = 1;
-          DirectByteStorage.field_j = new UiPanel(0L, vc.field_b, sl.field_x.toUpperCase());
+          DirectByteStorage.field_j = new UiPanel(0L, vc.field_b, RichTextLayout.field_x.toUpperCase());
           qn.field_s = new UiPanel(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
           ja.field_b = new UiPanel(0L, dj.field_b);
           po.field_a = new UiPanel(0L, MidiPcmStream.field_t, pe.field_u);
@@ -239,7 +239,7 @@ final class ha {
           }
           fo.field_f = new UiPanel(0L, SpriteState.field_u);
           hd.field_g = new UiPanel(0L, SpriteState.field_u);
-          kk.field_f = new UiPanel(0L, pn.field_N);
+          kk.field_f = new UiPanel(0L, RichTextWidget.field_N);
           kk.field_f.a(AccountRequestState.field_b, -86);
           var17 = kk.field_f;
           kk.field_f.field_ab = 1;
@@ -458,7 +458,7 @@ final class ha {
         SoftwareRasterizer.resetClip();
         pp.a(16777215, (byte) 57, param4, param0, param2, 40, param3, 3355443);
         MidiPcmStream.a(param2, param3, param0, 0, param4);
-        ro.field_g.a(-60);
+        TextLayout.field_g.a(-60);
         for (var10Lifetime2 = 0; this.field_e.field_F.length > var10Lifetime2; var10Lifetime2++) {
           this.field_e.field_F[var10Lifetime2] = b.a(this.field_e.field_F[var10Lifetime2], this.field_c.field_F[var10Lifetime2]);
         }

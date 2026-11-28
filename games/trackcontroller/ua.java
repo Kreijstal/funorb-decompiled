@@ -7,12 +7,12 @@ final class ua extends ButtonWidget {
     static String field_K;
     private int field_J;
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (this.field_q) {
           return this.field_I.getValidationMessage(15914);
         }
         if (param0 != 0) {
-          this.e(-5);
+          this.getTooltipText(-5);
           return null;
         }
         return null;

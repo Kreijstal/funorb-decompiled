@@ -141,7 +141,7 @@ class ta extends pj implements c {
         try {
           var11 = new km(this.field_x);
           if (param0 >= -115) {
-            this.g(5);
+            this.getTooltipText(5);
           }
           var9 = (pj) (var11.d(27935));
           while (var9 != null) {
@@ -188,13 +188,13 @@ class ta extends pj implements c {
         return var2;
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         String var4 = null;
         int var5 = OrbDefence.field_D ? 1 : 0;
         km var2 = new km(this.field_x);
         pj var3 = (pj) (var2.d(27935));
         while (var3 != null) {
-          var4 = var3.g(-8235);
+          var4 = var3.getTooltipText(-8235);
           if (var4 != null) {
             return var4;
           }
@@ -272,7 +272,7 @@ class ta extends pj implements c {
             var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          jc.field_k.bindAsRenderTarget();
+          DefaultTextWidgetRenderer.field_k.bindAsRenderTarget();
           var1.drawHalfSize(0, 0);
           ValidatedTextField.g((byte) -105);
         } catch (RuntimeException runtimeException) {
@@ -513,7 +513,7 @@ class ta extends pj implements c {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < fg.field_u; var13Lifetime1++) {
-            var14Lifetime1 = dm.field_g[var13Lifetime1];
+            var14Lifetime1 = TextLayout.field_g[var13Lifetime1];
             var15Lifetime1 = param1.field_M[var14Lifetime1];
             var16 = param1.field_e[var14Lifetime1];
             var17 = param1.field_l[var14Lifetime1];

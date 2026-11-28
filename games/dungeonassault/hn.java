@@ -79,8 +79,8 @@ final class hn extends kl {
     final void a(boolean param0) {
         int var2 = 0;
         super.a(param0);
-        if (null != hh.field_s) {
-          this.field_s = hh.field_s == this.field_m ? true : false;
+        if (null != DefaultTextWidgetRenderer.field_s) {
+          this.field_s = DefaultTextWidgetRenderer.field_s == this.field_m ? true : false;
           this.field_d = true;
         }
         if (no.field_d == 1) {

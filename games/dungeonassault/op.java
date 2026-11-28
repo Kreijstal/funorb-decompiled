@@ -225,9 +225,9 @@ final class op {
               return stackIn_61_0;
             }
             var9Lifetime3 = an.field_E;
-            an.field_E = l.field_b;
+            an.field_E = TextLayout.field_b;
             ResourceArchive.field_e = true;
-            l.field_b = var9Lifetime3;
+            TextLayout.field_b = var9Lifetime3;
           }
           stackIn_64_0 = -1;
           return stackIn_64_0;

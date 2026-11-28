@@ -27,7 +27,7 @@ final class jk {
 
     final FullscreenFocusCanvas c(int param0) {
         this.field_a = th.field_e;
-        this.field_h = bd.field_k;
+        this.field_h = RichTextLayout.field_k;
         this.field_q.a((byte) 14, this.field_c, this.field_f);
         int var2 = -96 / ((-34 - param0) / 57);
         vc.field_a = false;
@@ -120,14 +120,14 @@ final class jk {
         }
         if (this.field_l) {
         } else {
-          if (this.field_n > bd.field_k) {
-            PasswordValidator.field_r = (-bd.field_k + this.field_n) / 2;
+          if (this.field_n > RichTextLayout.field_k) {
+            PasswordValidator.field_r = (-RichTextLayout.field_k + this.field_n) / 2;
           } else {
             if (this.field_n > 0) {
               PasswordValidator.field_r = 0;
             }
           }
-          if (bd.field_k != this.field_e ||
+          if (RichTextLayout.field_k != this.field_e ||
             this.field_b != th.field_e) {
             this.field_q.a((byte) 46, this.field_b, this.field_e);
           }
@@ -341,7 +341,7 @@ final class jk {
           }
           if (null == p.field_d) {
             if (FullscreenFocusCanvas.field_a) {
-              if (30000L < ed.b(-1)) {
+              if (30000L < TextLineMetrics.b(-1)) {
                 kk.field_Y = ee.field_c;
               } else {
                 kk.field_Y = BufferedRandomAccessFile.field_j;
@@ -439,12 +439,12 @@ final class jk {
             var3 = (int)((float)var2 / this.field_s);
           }
         }
-        if (bd.field_k != var2 ||
+        if (RichTextLayout.field_k != var2 ||
           var3 != th.field_e) {
           this.field_q.a((byte) 53, var3, var2);
         }
         if (this.field_n > 0) {
-          PasswordValidator.field_r = (this.field_n - bd.field_k) / 2;
+          PasswordValidator.field_r = (this.field_n - RichTextLayout.field_k) / 2;
         }
     }
 

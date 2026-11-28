@@ -29,7 +29,7 @@ final class tb {
             return false;
           }
           var2_long = lj.correctedCurrentTimeMillis((byte) -83);
-          if (ja.field_P != 0 &&
+          if (RichTextWidget.field_P != 0 &&
             0 > il.field_h) {
             var4_ref_ha = (ha) (ImageProducerRasterBuffer.field_n.beginForward((byte) 47));
             if (var4_ref_ha != null &&
@@ -64,7 +64,7 @@ final class tb {
             if (!gf.b(-9)) {
               return false;
             }
-            if (ja.field_P == 0) {
+            if (RichTextWidget.field_P == 0) {
               hc.field_j = rj.field_k;
               rj.field_k = vi.field_a;
               vi.field_a = be.field_a;
@@ -72,7 +72,7 @@ final class tb {
               il.field_h = -1;
               return true;
             }
-            var4 = ja.field_P;
+            var4 = RichTextWidget.field_P;
             if (g.field_u != 0.0) {
               var4 = (int)((double)var4 + jj.field_R.nextGaussian() * g.field_u);
               if (var4 < 0) {

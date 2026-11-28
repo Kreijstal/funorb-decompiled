@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ke extends cn {
+final class ke extends DefaultTextWidgetRenderer {
     private int field_t;
     static ta field_s;
     static String field_w;

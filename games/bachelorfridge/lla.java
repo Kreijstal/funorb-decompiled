@@ -26,12 +26,12 @@ final class lla extends pu {
           vu.field_p.field_eb = AccountServiceResult.field_b;
           vu.field_p.field_db = AccountServiceResult.field_b;
           nla.field_b = mka.a(16700762, 16700762, 16700762, (byte) -119, jha.field_g, 16700762, 16700762, 16700762);
-          nla.field_b.field_A = tq.field_g;
-          nla.field_b.field_eb = tq.field_g;
+          nla.field_b.field_A = RichTextLayout.field_g;
+          nla.field_b.field_eb = RichTextLayout.field_g;
           if (param1 != 99) {
             return;
           }
-          nla.field_b.field_db = tq.field_g;
+          nla.field_b.field_db = RichTextLayout.field_g;
           nla.field_b.field_N = 1;
           nha.field_e = new gba("scrollbar", vu.field_p, new Sprite(8, 8), new Sprite(8, 8), cb.field_m, vu.field_p, true);
           ika.field_a = new gba("scrollbar", nla.field_b, new Sprite(8, 8), new Sprite(8, 8), bu.field_j, nla.field_b, true);
@@ -77,12 +77,12 @@ final class lla extends pu {
           vu.field_p.field_eb = AccountServiceResult.field_b;
           vu.field_p.field_db = AccountServiceResult.field_b;
           nla.field_b = mka.a(16700762, 16700762, 16700762, (byte) -119, jha.field_g, 16700762, 16700762, 16700762);
-          nla.field_b.field_A = tq.field_g;
-          nla.field_b.field_eb = tq.field_g;
+          nla.field_b.field_A = RichTextLayout.field_g;
+          nla.field_b.field_eb = RichTextLayout.field_g;
           if (param1 != 99) {
             return;
           }
-          nla.field_b.field_db = tq.field_g;
+          nla.field_b.field_db = RichTextLayout.field_g;
           nla.field_b.field_N = 1;
           nha.field_e = new gba("scrollbar", vu.field_p, new Sprite(8, 8), new Sprite(8, 8), cb.field_m, vu.field_p, true);
           ika.field_a = new gba("scrollbar", nla.field_b, new Sprite(8, 8), new Sprite(8, 8), bu.field_j, nla.field_b, true);
@@ -126,12 +126,12 @@ final class lla extends pu {
         vu.field_p.field_eb = AccountServiceResult.field_b;
         vu.field_p.field_db = AccountServiceResult.field_b;
         nla.field_b = mka.a(16700762, 16700762, 16700762, (byte) -119, jha.field_g, 16700762, 16700762, 16700762);
-        nla.field_b.field_A = tq.field_g;
-        nla.field_b.field_eb = tq.field_g;
+        nla.field_b.field_A = RichTextLayout.field_g;
+        nla.field_b.field_eb = RichTextLayout.field_g;
         if (param1 != 99) {
           return;
         }
-        nla.field_b.field_db = tq.field_g;
+        nla.field_b.field_db = RichTextLayout.field_g;
         nla.field_b.field_N = 1;
         nha.field_e = new gba("scrollbar", vu.field_p, new Sprite(8, 8), new Sprite(8, 8), cb.field_m, vu.field_p, true);
         ika.field_a = new gba("scrollbar", nla.field_b, new Sprite(8, 8), new Sprite(8, 8), bu.field_j, nla.field_b, true);

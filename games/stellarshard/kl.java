@@ -46,7 +46,7 @@ final class kl extends IntrusiveNode {
         int var8Lifetime1;
         var10 = stellarshard.field_B;
         try {
-          var1_int = rg.field_F;
+          var1_int = RichTextWidget.field_F;
           var2 = 0;
           if (!param0) {
             field_r = (PacketBuffer) null;
@@ -72,10 +72,10 @@ final class kl extends IntrusiveNode {
             var6 = stellarshard.field_L[var3];
             if (2 == rb.field_s &&
               var2 == 1) {
-              if (pd.field_g.length < bb.field_k.length) {
+              if (RichTextLayout.field_g.length < bb.field_k.length) {
                 stackIn_19_0 = bb.field_k.length;
               } else {
-                stackIn_19_0 = pd.field_g.length;
+                stackIn_19_0 = RichTextLayout.field_g.length;
               }
               var7 = stackIn_19_0;
               if (o.field_g.length <= fb.field_e.length) {
@@ -86,8 +86,8 @@ final class kl extends IntrusiveNode {
               var8 = stackIn_22_0;
               if (6 <= var3 &&
                 var3 < 6 + var7) {
-                if (-6 + var3 + pd.field_g.length - var7 >= 0) {
-                  stackIn_28_0 = pd.field_g[-var7 + var3 + (-6 + pd.field_g.length)];
+                if (-6 + var3 + RichTextLayout.field_g.length - var7 >= 0) {
+                  stackIn_28_0 = RichTextLayout.field_g[-var7 + var3 + (-6 + RichTextLayout.field_g.length)];
                 } else {
                   stackIn_28_0 = "";
                 }

@@ -69,7 +69,7 @@ final class mf {
             return;
           }
           FullscreenFocusCanvas.a((java.awt.Component) ((Object) param1), (byte) 69);
-          oi.a((java.awt.Component) ((Object) param1), 0);
+          TextHotspotBounds.a((java.awt.Component) ((Object) param1), 0);
           if (null == qj.field_eb) {
             return;
           }

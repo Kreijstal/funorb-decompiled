@@ -25,7 +25,7 @@ final class mc {
           if (param0 >= -38) {
             mc.clearStaticReferences(-13);
           }
-          stackIn_3_0 = uj.a(param2, (byte) 124, param1, true);
+          stackIn_3_0 = TextLineMetrics.a(param2, (byte) 124, param1, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

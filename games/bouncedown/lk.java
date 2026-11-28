@@ -5,7 +5,7 @@ import java.util.*;
 
 class lk extends IntrusiveNode {
     String field_q;
-    ed field_l;
+    TextLayout field_l;
     int field_i;
     int field_u;
     static lj field_t;
@@ -119,7 +119,7 @@ class lk extends IntrusiveNode {
         if (param0 == 0) {
           if (this.field_j == null) {
             if (param2 < 33) {
-              this.field_l = (ed) null;
+              this.field_l = (TextLayout) null;
               return;
             }
             return;
@@ -129,7 +129,7 @@ class lk extends IntrusiveNode {
         if (param2 >= 33) {
           return;
         }
-        this.field_l = (ed) null;
+        this.field_l = (TextLayout) null;
     }
 
     final void a(int param0, StringBuilder param1, Hashtable param2, int param3) {
@@ -222,7 +222,7 @@ class lk extends IntrusiveNode {
         }
     }
 
-    String d(int param0) {
+    String getTooltipText(int param0) {
         if (param0 == 0) {
           return !this.field_g ? null : this.field_q;
         }
@@ -308,7 +308,7 @@ class lk extends IntrusiveNode {
                 if (!param1) {
                   return false;
                 }
-                ResourceArchive.updateTooltipState(73, this.d(0));
+                ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
                 return param2;
               }
               if (0 == d.field_B) {
@@ -316,7 +316,7 @@ class lk extends IntrusiveNode {
                 if (!param1) {
                   return false;
                 }
-                ResourceArchive.updateTooltipState(73, this.d(0));
+                ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
                 return param2;
               }
               this.a(ll.field_y, param0, this, param3, 34, uc.field_C);
@@ -331,7 +331,7 @@ class lk extends IntrusiveNode {
               if (!param1) {
                 return false;
               }
-              ResourceArchive.updateTooltipState(73, this.d(0));
+              ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
               return param2;
             }
             this.a(param0, ll.field_y, va.field_a, uc.field_C, param3, this, true);
@@ -358,14 +358,14 @@ class lk extends IntrusiveNode {
                     if (!param1) {
                       return false;
                     }
-                    ResourceArchive.updateTooltipState(73, this.d(0));
+                    ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
                     return param2;
                   }
                   d.field_B = n.field_m;
                   if (!param1) {
                     return false;
                   }
-                  ResourceArchive.updateTooltipState(73, this.d(0));
+                  ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
                   return param2;
                 }
               }
@@ -385,7 +385,7 @@ class lk extends IntrusiveNode {
             if (!param1) {
               return false;
             }
-            ResourceArchive.updateTooltipState(73, this.d(0));
+            ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
             return param2;
           }
         }
@@ -393,7 +393,7 @@ class lk extends IntrusiveNode {
         if (!param1) {
           return false;
         }
-        ResourceArchive.updateTooltipState(73, this.d(0));
+        ResourceArchive.updateTooltipState(73, this.getTooltipText(0));
         return param2;
     }
 
@@ -648,7 +648,7 @@ class lk extends IntrusiveNode {
 
     lk(String param0, fc param1, sk param2) {
         RuntimeException runtimeException = null;
-        sf var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -663,10 +663,10 @@ class lk extends IntrusiveNode {
           this.field_h = param0;
           this.field_n = param2;
           this.field_j = param1;
-          if (this.field_j instanceof sf) {
-            var4 = (sf) ((Object) this.field_j);
-            this.field_k = var4.a(-79925823, this);
-            this.field_m = var4.a(this, 1);
+          if (this.field_j instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_j);
+            this.field_k = var4.getPreferredWidth(-79925823, this);
+            this.field_m = var4.getPreferredHeight(this, 1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

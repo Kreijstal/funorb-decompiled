@@ -121,7 +121,7 @@ final class an extends qb {
             var6 = kka.a(var2_int, -114, 2);
             var7 = vc.a(var2_int, 9, -16306);
             var8 = lt.b(28427, var2_int) ? 1 : 0;
-            qq.a(var8 != 0, var4, var3, var5, var7, var6, var6, 29052);
+            ChangeCreatureStatOrHealthEffect.a(var8 != 0, var4, var3, var5, var7, var6, var6, 29052);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

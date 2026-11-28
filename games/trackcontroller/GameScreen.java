@@ -466,7 +466,7 @@ final class GameScreen {
         if (var8 == 0) {
           if (26 == var6) {
             stackIn_52_0 = kg.field_e;
-            stackIn_53_1 = (!fi.field_i) ? 1 : 0;
+            stackIn_53_1 = (!TextHotspotBounds.field_i) ? 1 : 0;
             var10 = stackIn_52_0[stackIn_53_1];
             var11 = DisplayNameSelectionPanel.font.stringWidth(var7) - (-DisplayNameSelectionPanel.font.charWidth(' ') - var10.field_s);
             var12 = param1 + (156 - var11 >> 1);
@@ -1367,8 +1367,8 @@ final class GameScreen {
                     if (var6 == 26) {
                       if (!(!this.field_e.b(false))) {
                         si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                        stackIn_79_0 = !(fi.field_i);
-                        fi.field_i = stackIn_79_0;
+                        stackIn_79_0 = !(TextHotspotBounds.field_i);
+                        TextHotspotBounds.field_i = stackIn_79_0;
                       }
                       decompiledFrameRemainder0 = false;
                     }

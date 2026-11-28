@@ -736,40 +736,40 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
           }
           if (var2_ref_ai != null) {
             if (var2_ref_ai != SpriteGeometry.field_x) {
-              hh.field_r = (en) ((Object) new bd(var2_ref_ai.field_h));
+              DefaultTextWidgetRenderer.field_r = (en) ((Object) new bd(var2_ref_ai.field_h));
               SpriteGeometry.field_x = var2_ref_ai;
             }
-            uj.a(hh.field_r, 95);
+            uj.a(DefaultTextWidgetRenderer.field_r, 95);
           }
         }
         boolean decompiledFrameRemainder1 = true;
-        if (this.field_Q == hh.field_s) {
+        if (this.field_Q == DefaultTextWidgetRenderer.field_s) {
           this.saveDungeonChanges(param0 + 1380862290);
           this.a(true, (byte) -27);
           decompiledFrameRemainder1 = (var4 != 0);
         }
         if (decompiledFrameRemainder1) {
-          if (this.field_O != hh.field_s) {
-            if (this.field_L != hh.field_s) {
-              if (hh.field_s == this.field_A) {
+          if (this.field_O != DefaultTextWidgetRenderer.field_s) {
+            if (this.field_L != DefaultTextWidgetRenderer.field_s) {
+              if (DefaultTextWidgetRenderer.field_s == this.field_A) {
                 this.a((byte) -47, 0);
                 decompiledFrameRemainder1 = (var4 != 0);
               }
               if (decompiledFrameRemainder1) {
-                if (this.field_C != hh.field_s) {
-                  if (hh.field_s == this.field_y) {
+                if (this.field_C != DefaultTextWidgetRenderer.field_s) {
+                  if (DefaultTextWidgetRenderer.field_s == this.field_y) {
                     this.a((byte) -88, 4);
                     decompiledFrameRemainder1 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    if (this.field_P != hh.field_s) {
-                      if (hh.field_s == this.field_w ||
-                        this.field_t == hh.field_s) {
+                    if (this.field_P != DefaultTextWidgetRenderer.field_s) {
+                      if (DefaultTextWidgetRenderer.field_s == this.field_w ||
+                        this.field_t == DefaultTextWidgetRenderer.field_s) {
                         this.a((byte) -121);
                         decompiledFrameRemainder1 = (var4 != 0);
                       }
                       if (decompiledFrameRemainder1) {
-                        if ((!(hh.field_s instanceof cp)) &&
+                        if ((!(DefaultTextWidgetRenderer.field_s instanceof cp)) &&
                           (decompiledFrameRemainder1 = (0 != no.field_d))) {
                           var2 = this.findDungeonTileAt(lc.field_c, AchievementIconEntry.field_k, param0 + 1380862337);
                           if (var2 != -1 &&
@@ -830,7 +830,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
                           decompiledFrameRemainder1 = (var4 != 0);
                         }
                         if (decompiledFrameRemainder1) {
-                          var5 = ((cp) (hh.field_s)).field_S;
+                          var5 = ((cp) (DefaultTextWidgetRenderer.field_s)).field_S;
                           this.field_H = new SpriteAnimationPlayer(var5.field_d);
                           if (null != var5.field_u) {
                             this.field_H.startAnimation(rf.field_M, var5.field_u, -10872);
@@ -1369,7 +1369,7 @@ final class DungeonBuilderScreen extends DungeonAssaultScreen {
         PackedBitSet.field_c = null;
         bd.field_g = null;
         SecondaryNodeDequeIterator.field_m = null;
-        hh.field_r = null;
+        DefaultTextWidgetRenderer.field_r = null;
         bn.field_f = null;
         super.releaseScreenResources();
         System.gc();

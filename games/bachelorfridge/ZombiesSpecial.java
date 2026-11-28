@@ -78,6 +78,6 @@ final class ZombiesSpecial extends SpecialOrder {
     }
 
     static {
-        field_q = vv.a((byte) 121);
+        field_q = TextLayout.a((byte) 121);
     }
 }

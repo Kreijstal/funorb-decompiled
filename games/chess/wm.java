@@ -128,7 +128,7 @@ abstract class wm {
           fe.field_h.field_fb = 1;
           ln.field_cc = new ci(0L, sc.field_h, qf.field_h.toUpperCase());
           he.field_Hb = new ci((long)param2, ma.field_G, em.field_M.toUpperCase());
-          oh.field_a = new ci(0L, hl.field_d);
+          oh.field_a = new ci(0L, DefaultTextWidgetRenderer.field_d);
           ue.field_d = new ci(0L, bo.field_e, ql.field_b);
           in.field_b = new ci(0L, e.field_M, de.field_a);
           ca.field_g = new ci(0L, e.field_M, qj.field_h);
@@ -185,16 +185,16 @@ abstract class wm {
           ec.field_j.field_fb = 1;
           ln.field_vc = new ci(0L, bo.field_e, ei.field_s);
           nb.field_Ib = new ci(0L, DualLinkNode.field_j, IntrusiveDeque.field_e);
-          se.field_S = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
+          RichTextWidget.field_S = new nb(0L, new ci(0L, (ci) null), FrameTimer.field_b, Bzip2State.field_o);
           de.field_d.a((byte) 127, ec.field_j);
           de.field_d.a((byte) 124, ln.field_vc);
           if (bo.field_c) {
             de.field_d.a((byte) 123, nb.field_Ib);
           }
-          de.field_d.a((byte) 125, se.field_S);
+          de.field_d.a((byte) 125, RichTextWidget.field_S);
           sc.field_d = new ci(0L, sc.field_h, kl.field_f.toUpperCase());
           sc.field_f = new ci(0L, ma.field_G);
-          ce.field_d = new ci(0L, hl.field_d);
+          ce.field_d = new ci(0L, DefaultTextWidgetRenderer.field_d);
           DisplayNameSelectionPanel.field_M = new ci(0L, wc.field_B, ob.field_r.toUpperCase());
           ba.field_P = new tl[param6 + 4][];
           hm.field_c = new ci[4 + param6];

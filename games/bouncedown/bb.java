@@ -15,7 +15,7 @@ final class bb {
         if (!pb.field_k.a(1000)) {
           return pb.field_k.a((byte) -53);
         }
-        if (vc.field_F == qg.field_g) {
+        if (RichTextWidget.field_F == qg.field_g) {
           return pb.field_k.a((byte) -116);
         }
         return gi.field_b;

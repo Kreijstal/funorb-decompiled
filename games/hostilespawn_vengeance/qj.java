@@ -264,9 +264,9 @@ final class qj extends IntrusiveNode {
         int var17 = 0;
         try {
           var4_int = ln.field_a.field_d;
-          var5 = mm.field_m[0];
+          var5 = TextHotspotBounds.field_m[0];
           var6 = var5.field_j;
-          var7 = mm.field_m[param1];
+          var7 = TextHotspotBounds.field_m[param1];
           var8 = var7.field_j;
           var9 = var7.field_l;
           if (param0 > -87) {

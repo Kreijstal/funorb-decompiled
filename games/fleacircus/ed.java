@@ -86,12 +86,12 @@ final class ed {
             MouseWheelInput.field_f.drawGrayModulated(2, 2, SecondaryNodeDequeIterator.field_e);
             rg.a(0, var11, var11.field_w, var11.field_t, 1, -122, 2, 0);
             MouseWheelInput.field_f = var11;
-            mi.field_o = MouseWheelInput.field_f.copyMirroredHorizontally();
+            TextHotspotBounds.field_o = MouseWheelInput.field_f.copyMirroredHorizontally();
             var12 = new RgbSprite(195, 221);
             var6 = var12.field_w / 2;
             var12.bindAsRenderTarget();
-            ql.field_k.drawCentred(db.a(IterableNodeHashTable.field_b, new String[]{pi.field_e}, true), var6, 40, 16777215, -1);
-            qj.field_H.drawCentred(db.a(jj.field_Y, new String[]{pi.field_e}, true), var6, 60, 16777215, -1);
+            ql.field_k.drawCentred(db.a(IterableNodeHashTable.field_b, new String[]{TextLineMetrics.field_e}, true), var6, 40, 16777215, -1);
+            qj.field_H.drawCentred(db.a(jj.field_Y, new String[]{TextLineMetrics.field_e}, true), var6, 60, 16777215, -1);
             ql.field_k.drawCentred(db.a(NetworkGameClient.field_w, new String[]{id.field_i}, true), var6, 110, 16777215, -1);
             qj.field_H.drawCentred(db.a(lj.field_i, new String[]{id.field_i}, true), var6, 130, 16777215, -1);
             ql.field_k.drawCentred(MidiPcmStream.field_N, var6, 180, 16777215, -1);
@@ -284,7 +284,7 @@ final class ed {
           if (MouseWheelInput.field_f != null) {
             var1_int = 357 - MouseWheelInput.field_f.field_r / 2;
             MouseWheelInput.field_f.draw(-MouseWheelInput.field_f.field_x + 269, var1_int);
-            mi.field_o.draw(586, var1_int);
+            TextHotspotBounds.field_o.draw(586, var1_int);
             if (kc.field_b > var1_int &&
               kc.field_b < MouseWheelInput.field_f.field_t + var1_int) {
               var2Lifetime5 = (40 * jd.a(false, bf.field_b << 4) >> 16) + 40;
@@ -298,10 +298,10 @@ final class ed {
                 } else {
                   if (ag.field_f > 586 &&
                     ag.field_f < 586 + MouseWheelInput.field_f.field_w) {
-                    mi.field_o.drawAdditive(585, var1_int - 1, var2Lifetime5);
-                    mi.field_o.drawAdditive(587, var1_int - 1, var2Lifetime5);
-                    mi.field_o.drawAdditive(585, 1 + var1_int, var2Lifetime5);
-                    mi.field_o.drawAdditive(587, 1 + var1_int, var2Lifetime5);
+                    TextHotspotBounds.field_o.drawAdditive(585, var1_int - 1, var2Lifetime5);
+                    TextHotspotBounds.field_o.drawAdditive(587, var1_int - 1, var2Lifetime5);
+                    TextHotspotBounds.field_o.drawAdditive(585, 1 + var1_int, var2Lifetime5);
+                    TextHotspotBounds.field_o.drawAdditive(587, 1 + var1_int, var2Lifetime5);
                   }
                 }
               }

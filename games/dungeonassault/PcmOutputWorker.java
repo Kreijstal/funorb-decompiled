@@ -219,7 +219,7 @@ final class PcmOutputWorker implements Runnable {
 
     final static void a(qk param0, byte param1, int param2, int param3, int param4, qk param5) {
         try {
-          ci.field_j = param4;
+          TextHotspotBounds.field_j = param4;
           oh.field_t = param3;
           om.field_d = param5;
           gd.field_G = param0;

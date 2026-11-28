@@ -53,13 +53,13 @@ final class od {
             if (ii.field_G != -1) {
               var1 = -ii.field_G + hj.field_S;
               var2 = eh.field_h - a.field_i;
-              hh.field_p = hh.field_p + var1;
+              DefaultTextWidgetRenderer.field_p = DefaultTextWidgetRenderer.field_p + var1;
               ed.field_P = ed.field_P + var2;
-              if (hh.field_p < 0) {
-                hh.field_p = 0;
+              if (DefaultTextWidgetRenderer.field_p < 0) {
+                DefaultTextWidgetRenderer.field_p = 0;
               }
-              if (hh.field_p > 640) {
-                hh.field_p = 640;
+              if (DefaultTextWidgetRenderer.field_p > 640) {
+                DefaultTextWidgetRenderer.field_p = 640;
               }
               if (ed.field_P < 0) {
                 ed.field_P = 0;
@@ -85,9 +85,9 @@ final class od {
               field_b = (String[]) null;
             }
             eg.a(pp.field_K, true);
-            if (PacketBuffer.field_n != hh.field_s) {
-              if (tk.field_k != hh.field_s) {
-                if (ti.field_A != hh.field_s) {
+            if (PacketBuffer.field_n != DefaultTextWidgetRenderer.field_s) {
+              if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+                if (ti.field_A != DefaultTextWidgetRenderer.field_s) {
                   return true;
                 }
                 var4 = (gn) null;
@@ -113,9 +113,9 @@ final class od {
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);
-            if (PacketBuffer.field_n != hh.field_s) {
-              if (tk.field_k != hh.field_s) {
-                if (ti.field_A == hh.field_s) {
+            if (PacketBuffer.field_n != DefaultTextWidgetRenderer.field_s) {
+              if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+                if (ti.field_A == DefaultTextWidgetRenderer.field_s) {
                   var4Lifetime5 = (gn) null;
                   KeyboardInput.a(false, 0, (gn) null);
                 }
@@ -138,7 +138,7 @@ final class od {
             return true;
           }
           eg.a(pp.field_K, true);
-          if (PacketBuffer.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == DefaultTextWidgetRenderer.field_s) {
             fieldTemp$17 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$17 >= uo.field_f.length) {
@@ -147,8 +147,8 @@ final class od {
             KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
-          if (tk.field_k != hh.field_s) {
-            if (ti.field_A != hh.field_s) {
+          if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+            if (ti.field_A != DefaultTextWidgetRenderer.field_s) {
               return true;
             }
             var4Lifetime6 = (gn) null;
@@ -171,13 +171,13 @@ final class od {
             if (ii.field_G != -1) {
               var1Lifetime1 = -ii.field_G + hj.field_S;
               var2Lifetime1 = eh.field_h - a.field_i;
-              hh.field_p = hh.field_p + var1Lifetime1;
+              DefaultTextWidgetRenderer.field_p = DefaultTextWidgetRenderer.field_p + var1Lifetime1;
               ed.field_P = ed.field_P + var2Lifetime1;
-              if (hh.field_p < 0) {
-                hh.field_p = 0;
+              if (DefaultTextWidgetRenderer.field_p < 0) {
+                DefaultTextWidgetRenderer.field_p = 0;
               }
-              if (hh.field_p > 640) {
-                hh.field_p = 640;
+              if (DefaultTextWidgetRenderer.field_p > 640) {
+                DefaultTextWidgetRenderer.field_p = 640;
               }
               if (ed.field_P < 0) {
                 ed.field_P = 0;
@@ -203,9 +203,9 @@ final class od {
               field_b = (String[]) null;
             }
             eg.a(pp.field_K, true);
-            if (PacketBuffer.field_n != hh.field_s) {
-              if (tk.field_k != hh.field_s) {
-                if (ti.field_A == hh.field_s) {
+            if (PacketBuffer.field_n != DefaultTextWidgetRenderer.field_s) {
+              if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+                if (ti.field_A == DefaultTextWidgetRenderer.field_s) {
                   var4Lifetime1 = (gn) null;
                   KeyboardInput.a(false, 0, (gn) null);
                 }
@@ -230,9 +230,9 @@ final class od {
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);
-            if (PacketBuffer.field_n != hh.field_s) {
-              if (tk.field_k != hh.field_s) {
-                if (ti.field_A == hh.field_s) {
+            if (PacketBuffer.field_n != DefaultTextWidgetRenderer.field_s) {
+              if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+                if (ti.field_A == DefaultTextWidgetRenderer.field_s) {
                   var4Lifetime1Lifetime1 = (gn) null;
                   KeyboardInput.a(false, 0, (gn) null);
                 }
@@ -255,7 +255,7 @@ final class od {
             return true;
           }
           eg.a(pp.field_K, true);
-          if (PacketBuffer.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == DefaultTextWidgetRenderer.field_s) {
             fieldTemp$11 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$11 >= uo.field_f.length) {
@@ -264,8 +264,8 @@ final class od {
             KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
-          if (tk.field_k != hh.field_s) {
-            if (ti.field_A != hh.field_s) {
+          if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+            if (ti.field_A != DefaultTextWidgetRenderer.field_s) {
               return true;
             }
             var4Lifetime1Lifetime2 = (gn) null;
@@ -294,13 +294,13 @@ final class od {
           if (ii.field_G != -1) {
             var1Lifetime2 = -ii.field_G + hj.field_S;
             var2Lifetime2 = eh.field_h - a.field_i;
-            hh.field_p = hh.field_p + var1Lifetime2;
+            DefaultTextWidgetRenderer.field_p = DefaultTextWidgetRenderer.field_p + var1Lifetime2;
             ed.field_P = ed.field_P + var2Lifetime2;
-            if (hh.field_p < 0) {
-              hh.field_p = 0;
+            if (DefaultTextWidgetRenderer.field_p < 0) {
+              DefaultTextWidgetRenderer.field_p = 0;
             }
-            if (hh.field_p > 640) {
-              hh.field_p = 640;
+            if (DefaultTextWidgetRenderer.field_p > 640) {
+              DefaultTextWidgetRenderer.field_p = 640;
             }
             if (ed.field_P < 0) {
               ed.field_P = 0;
@@ -325,9 +325,9 @@ final class od {
           if (param0 > -50) {
             field_b = (String[]) null;
             eg.a(pp.field_K, true);
-            if (PacketBuffer.field_n != hh.field_s) {
-              if (tk.field_k != hh.field_s) {
-                if (ti.field_A == hh.field_s) {
+            if (PacketBuffer.field_n != DefaultTextWidgetRenderer.field_s) {
+              if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+                if (ti.field_A == DefaultTextWidgetRenderer.field_s) {
                   var4Lifetime2 = (gn) null;
                   KeyboardInput.a(false, 0, (gn) null);
                 }
@@ -350,7 +350,7 @@ final class od {
             return true;
           }
           eg.a(pp.field_K, true);
-          if (PacketBuffer.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == DefaultTextWidgetRenderer.field_s) {
             fieldTemp$1 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$1 >= uo.field_f.length) {
@@ -359,8 +359,8 @@ final class od {
             KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
-          if (tk.field_k != hh.field_s) {
-            if (ti.field_A != hh.field_s) {
+          if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+            if (ti.field_A != DefaultTextWidgetRenderer.field_s) {
               return true;
             }
             var4Lifetime2Lifetime1 = (gn) null;
@@ -377,7 +377,7 @@ final class od {
         }
         if (param0 <= -50) {
           eg.a(pp.field_K, true);
-          if (PacketBuffer.field_n == hh.field_s) {
+          if (PacketBuffer.field_n == DefaultTextWidgetRenderer.field_s) {
             fieldTemp$5 = fc.field_d + 1;
             fc.field_d = fc.field_d + 1;
             if (fieldTemp$5 >= uo.field_f.length) {
@@ -386,8 +386,8 @@ final class od {
             KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
             return true;
           }
-          if (tk.field_k != hh.field_s) {
-            if (ti.field_A != hh.field_s) {
+          if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+            if (ti.field_A != DefaultTextWidgetRenderer.field_s) {
               return true;
             }
             var4Lifetime3 = (gn) null;
@@ -404,7 +404,7 @@ final class od {
         }
         field_b = (String[]) null;
         eg.a(pp.field_K, true);
-        if (PacketBuffer.field_n == hh.field_s) {
+        if (PacketBuffer.field_n == DefaultTextWidgetRenderer.field_s) {
           fieldTemp$7 = fc.field_d + 1;
           fc.field_d = fc.field_d + 1;
           if (fieldTemp$7 >= uo.field_f.length) {
@@ -413,8 +413,8 @@ final class od {
           KeyboardInput.a(false, 0, uo.field_f[fc.field_d]);
           return true;
         }
-        if (tk.field_k != hh.field_s) {
-          if (ti.field_A != hh.field_s) {
+        if (tk.field_k != DefaultTextWidgetRenderer.field_s) {
+          if (ti.field_A != DefaultTextWidgetRenderer.field_s) {
             return true;
           }
           var4Lifetime4 = (gn) null;

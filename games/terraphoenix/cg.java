@@ -82,7 +82,7 @@ final class cg extends WidgetContainer implements WidgetActivationListener {
               }
             }
           } else {
-            ld.a(1);
+            TextLayout.a(1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

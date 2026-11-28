@@ -186,7 +186,7 @@ final class qe extends ScoreModifier {
             vb.field_m = param7;
             fj.field_d = param11;
             SpriteGeometry.field_r = param5;
-            tb.field_g = param12;
+            TextLayout.field_g = param12;
             if (null == gf.field_b.field_s) {
               return;
             }

@@ -7,7 +7,7 @@ final class ve extends ej {
     static int[] field_N;
     static int field_Q;
     private String field_S;
-    static jc field_O;
+    static DefaultTextWidgetRenderer field_O;
     private dg field_T;
     static int[] field_V;
     private boolean field_U;

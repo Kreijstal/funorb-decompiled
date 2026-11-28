@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vo extends va {
+final class vo extends DefaultTextWidgetRenderer {
     private int field_z;
     static int field_x;
     static int field_y;

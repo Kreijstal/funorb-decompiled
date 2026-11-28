@@ -174,10 +174,10 @@ final class fk extends kl {
         this.field_q = -1;
         super.a(param0);
         this.field_q = this.b(hj.field_S, 27403, eh.field_h);
-        if (hh.field_s == this.field_p) {
+        if (DefaultTextWidgetRenderer.field_s == this.field_p) {
           this.a(true, (byte) 22);
         } else {
-          if (hh.field_s != this.field_o) {
+          if (DefaultTextWidgetRenderer.field_s != this.field_o) {
             if (no.field_d != 0) {
               var2 = this.b(lc.field_c, 27403, AchievementIconEntry.field_k);
               if (-1 != var2) {

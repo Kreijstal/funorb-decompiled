@@ -29,7 +29,7 @@ final class uf {
         }
         if (param0 > -107) {
           uf.a(-94);
-          if (qg.field_g == vc.field_F) {
+          if (qg.field_g == RichTextWidget.field_F) {
             return t.field_t;
           }
           if (!pb.field_k.a(1000)) {
@@ -37,7 +37,7 @@ final class uf {
           }
           return gi.field_b;
         }
-        if (qg.field_g == vc.field_F) {
+        if (qg.field_g == RichTextWidget.field_F) {
           return t.field_t;
         }
         if (!pb.field_k.a(1000)) {

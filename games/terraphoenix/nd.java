@@ -150,7 +150,7 @@ final class nd extends IntrusiveNode {
                   }
                 }
                 if (param6) {
-                  ld.field_h[var23Lifetime2] = var27Lifetime1 >> hb.field_l;
+                  TextLayout.field_h[var23Lifetime2] = var27Lifetime1 >> hb.field_l;
                   jl.field_A[var23Lifetime2] = var28Lifetime1 >> hb.field_l;
                   qa.field_a[var23Lifetime2] = var29Lifetime1;
                 }
@@ -238,7 +238,7 @@ final class nd extends IntrusiveNode {
             stackIn_71_1 = param4 ? 1 : 0;
             break;
           }
-          ld.a(stackIn_71_0, stackIn_71_1 != 0, param0, var7_int, (byte) 124);
+          TextLayout.a(stackIn_71_0, stackIn_71_1 != 0, param0, var7_int, (byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

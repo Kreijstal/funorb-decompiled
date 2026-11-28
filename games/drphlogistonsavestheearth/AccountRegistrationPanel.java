@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends pj implements ra, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends pj implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_S;
     private ValidatedTextField field_Q;
     private ValidatedTextField field_K;
     private ValidatedTextField field_ab;
     private InteractiveWidget field_L;
     private nc field_T;
-    private qa field_Z;
+    private RichTextWidget field_Z;
     static String field_U;
     NameSuggestionsPanel field_V;
     private ValidatedTextField field_P;
@@ -129,7 +129,7 @@ final class AccountRegistrationPanel extends pj implements ra, WidgetActivationL
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            this.field_Z = (qa) null;
+            this.field_Z = (RichTextWidget) null;
           }
           if (param3 == this.field_L) {
             gf.d((byte) 103);
@@ -346,7 +346,7 @@ final class AccountRegistrationPanel extends pj implements ra, WidgetActivationL
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, int param1, qa param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -388,7 +388,7 @@ final class AccountRegistrationPanel extends pj implements ra, WidgetActivationL
     public final void onNameSuggestionsRefreshRequested(byte param0) {
         ((AccountNameAvailabilityValidator) (this.field_K.getFieldValidator((byte) 84))).invalidateCheckedName((byte) -27);
         if (param0 > -23) {
-          this.field_Z = (qa) null;
+          this.field_Z = (RichTextWidget) null;
         }
     }
 
@@ -482,7 +482,7 @@ final class AccountRegistrationPanel extends pj implements ra, WidgetActivationL
         dm dupTemp$1 = new dm(10000536);
         this.field_ab.field_l = (cg) ((Object) dupTemp$1);
         this.field_S.field_l = (cg) ((Object) dupTemp$1);
-        String var2 = a.a(5044, fk.field_p, new String[]{this.l(15), this.i(-87)});
+        String var2 = a.a(5044, TextHotspotBounds.field_p, new String[]{this.l(15), this.i(-87)});
         int var3 = 20;
         var3 = var3 + this.a(170, this.field_P, BufferedRandomAccessFile.field_c, 16777215, var3);
         var3 = var3 + (this.a(IsaacRandom.field_a, 170, this.field_J, (byte) -103, var3, "", 20) + 5);
@@ -493,8 +493,8 @@ final class AccountRegistrationPanel extends pj implements ra, WidgetActivationL
         dh var4 = new dh(46, var3, -90 + this.field_w, 25, this.field_T, true, -120 + this.field_w, 5, u.field_d, 11579568, GameAppletShell.field_d);
         this.b(var4, (byte) 105);
         var3 = var3 + var4.field_k;
-        l var5 = new l(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 0, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
-        this.field_Z = new qa(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 0, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
+        this.field_Z = new RichTextWidget(var2, var5);
         this.field_Z.field_v = "";
         this.field_Z.a(we.field_d, 0, -64);
         this.field_Z.a(we.field_d, 1, -73);

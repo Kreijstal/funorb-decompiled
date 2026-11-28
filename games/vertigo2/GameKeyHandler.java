@@ -83,11 +83,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             var2_int = param0.getKeyChar();
             if (var2_int != 0 && 65535 != var2_int &&
               gr.isSupportedCp1252KeyCharacter(0, (char) var2_int)) {
-              var3 = 127 & ro.field_e + 1;
+              var3 = 127 & TextLayout.field_e + 1;
               if (var3 != MusicPatchPcmStream.field_B) {
-                wm.field_j[ro.field_e] = -1;
-                af.field_F[ro.field_e] = (char)var2_int;
-                ro.field_e = var3;
+                wm.field_j[TextLayout.field_e] = -1;
+                af.field_F[TextLayout.field_e] = (char)var2_int;
+                TextLayout.field_e = var3;
               }
             }
           }
@@ -130,11 +130,11 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
           }
           if (var2_int >= 0) {
-            var3 = 1 + ro.field_e & 127;
+            var3 = 1 + TextLayout.field_e & 127;
             if (var3 != MusicPatchPcmStream.field_B) {
-              wm.field_j[ro.field_e] = var2_int;
-              af.field_F[ro.field_e] = (char)0;
-              ro.field_e = var3;
+              wm.field_j[TextLayout.field_e] = var2_int;
+              af.field_F[TextLayout.field_e] = (char)0;
+              TextLayout.field_e = var3;
             }
           }
           var3Lifetime1 = param0.getModifiers();

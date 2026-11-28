@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on extends eg {
+final class on extends DefaultTextWidgetRenderer {
     static IntrusiveDeque field_t;
     private nb[] field_w;
     static String field_z;

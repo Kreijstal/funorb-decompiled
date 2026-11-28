@@ -83,7 +83,7 @@ abstract class GameShell extends GameApplet {
           if (var3Lifetime1 != 0 &&
             GameplayScreen.field_f == 0 &&
             11 == hn.field_w &&
-            !va.b((byte) -81)) {
+            !DefaultTextWidgetRenderer.b((byte) -81)) {
             vo.c((byte) 117);
           }
           if (-1 != GameplayScreen.field_f &&
@@ -137,7 +137,7 @@ abstract class GameShell extends GameApplet {
         }
         if ((-1 != GameplayScreen.field_f &&
           GameplayScreen.field_f != 0 ||
-          va.b((byte) -81)) &&
+          DefaultTextWidgetRenderer.b((byte) -81)) &&
           gk.correctedCurrentTimeMillis(98) >= ProxySocketConnector.field_j) {
           ValidatedTextField.field_R = false;
           if (GameplayScreen.field_f != -1 &&
@@ -147,7 +147,7 @@ abstract class GameShell extends GameApplet {
           }
         }
         if (GameplayScreen.field_f == 0 &&
-          !va.b((byte) -81)) {
+          !DefaultTextWidgetRenderer.b((byte) -81)) {
           DiskArchiveRequest.field_E = false;
         }
         if (qc.field_A == 0 &&
@@ -814,7 +814,7 @@ abstract class GameShell extends GameApplet {
         if (this.field_f) {
           return -1;
         }
-        if (!va.b((byte) -81)) {
+        if (!DefaultTextWidgetRenderer.b((byte) -81)) {
           return -1;
         }
         if (ValidatedTextField.field_R) {

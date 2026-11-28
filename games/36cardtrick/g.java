@@ -456,7 +456,7 @@ class g extends lk implements u {
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltipText(byte param0) {
         qd var2;
         lk var3;
         String var4;
@@ -468,7 +468,7 @@ class g extends lk implements u {
           return (String) null;
         }
         while (var3 != null) {
-          var4 = var3.b((byte) -79);
+          var4 = var3.getTooltipText((byte) -79);
           if (var4 != null) {
             return var4;
           }

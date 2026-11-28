@@ -164,7 +164,7 @@ class ph extends qj implements WidgetActivationListener {
           this.field_kb.b(8405024, 2, 4210752);
           var5 = new kj(this, this.field_fb, param0);
           if (param1 == 5) {
-            var5.a(hd.field_i, 13759, 11);
+            var5.a(DefaultTextWidgetRenderer.field_i, 13759, 11);
             var5.a(KeyboardInput.field_b, 13759, 17);
           } else {
             if (256 != param1) {

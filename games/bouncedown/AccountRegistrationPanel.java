@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends lc implements ki, WidgetActivationListener, NameSuggestionListener {
-    private vc field_L;
+final class AccountRegistrationPanel extends lc implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
+    private RichTextWidget field_L;
     private ValidatedTextField field_A;
     private InteractiveWidget field_D;
     private ValidatedTextField field_C;
@@ -51,7 +51,7 @@ final class AccountRegistrationPanel extends lc implements ki, WidgetActivationL
         }
     }
 
-    public final void a(vc param0, byte param1, int param2, int param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, byte param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -110,7 +110,7 @@ final class AccountRegistrationPanel extends lc implements ki, WidgetActivationL
           if (var4 == a.field_e) {
             return false;
           }
-          if (var4 == ui.field_o) {
+          if (var4 == TextHotspotBounds.field_o) {
             return false;
           }
           if (var4 != ha.field_l) {
@@ -270,8 +270,8 @@ final class AccountRegistrationPanel extends lc implements ki, WidgetActivationL
         hb var4 = new hb(46, var3, -90 + this.field_k, 25, this.field_G, true, -120 + this.field_k, 5, GzipDecompressor.field_d, 11579568, ll.field_D);
         this.b(var4, true);
         var3 = var3 + var4.field_m;
-        jd var5 = new jd(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
-        this.field_L = new vc(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 0, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
+        this.field_L = new RichTextWidget(var2, var5);
         this.field_L.field_q = "";
         this.field_L.a(Slime.field_b, 0, (byte) -77);
         this.field_L.a(Slime.field_b, 1, (byte) 36);

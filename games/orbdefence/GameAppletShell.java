@@ -222,13 +222,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 }
                 ml.a(117);
                 this.e(53);
-                BufferedSocket.field_a = ProxyAuthenticationRequiredException.a(bd.field_k, (java.awt.Component) ((Object) field_f), th.field_e, false);
+                BufferedSocket.field_a = ProxyAuthenticationRequiredException.a(RichTextLayout.field_k, (java.awt.Component) ((Object) field_f), th.field_e, false);
                 this.initializeClient((byte) -69);
                 ge.field_g = ql.a(65280);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (jc.field_o != 0L) {
-                    stackIn_98_0 = compareLongs(ji.correctedCurrentTimeMillis(-117), jc.field_o);
+                  if (DefaultTextWidgetRenderer.field_o != 0L) {
+                    stackIn_98_0 = compareLongs(ji.correctedCurrentTimeMillis(-117), DefaultTextWidgetRenderer.field_o);
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_98_0 >= 0)) {
@@ -353,10 +353,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (te.field_G) {
+            if (RichTextWidget.field_G) {
               return;
             }
-            te.field_G = true;
+            RichTextWidget.field_G = true;
           }
           if (mj.field_j != null) {
             mj.field_j.destroy();
@@ -407,11 +407,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void destroy() {
         if (this != aj.field_b ||
-          te.field_G) {
+          RichTextWidget.field_G) {
           return;
         }
         try {
-          jc.field_o = ji.correctedCurrentTimeMillis(126);
+          DefaultTextWidgetRenderer.field_o = ji.correctedCurrentTimeMillis(126);
           hb.sleepMillis(5000L, 101);
           df.field_e = null;
           this.shutdownApplet(0, false);
@@ -576,7 +576,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 return;
               }
               ih.field_a = 0;
-              bd.field_k = param3;
+              RichTextLayout.field_k = param3;
               md.field_j = param3;
               aj.field_b = this;
               if (param0 != -10291) {
@@ -628,11 +628,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void stop() {
         if (this != aj.field_b ||
-          te.field_G) {
+          RichTextWidget.field_G) {
           return;
         }
         try {
-          jc.field_o = 4000L + ji.correctedCurrentTimeMillis(-51);
+          DefaultTextWidgetRenderer.field_o = 4000L + ji.correctedCurrentTimeMillis(-51);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "tf.stop()");
         }
@@ -667,7 +667,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           if (50 < fieldTemp$1) {
             hh.field_c = true;
             DualLinkDequeIterator.field_j = DualLinkDequeIterator.field_j - 50;
-            field_f.setSize(bd.field_k, th.field_e);
+            field_f.setSize(RichTextLayout.field_k, th.field_e);
             field_f.setVisible(true);
             boolean decompiledSharedTail0 = (null != h.field_J &&
               mh.field_b == null);
@@ -726,11 +726,11 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void start() {
         if (aj.field_b != this ||
-          te.field_G) {
+          RichTextWidget.field_G) {
           return;
         }
         try {
-          jc.field_o = 0L;
+          DefaultTextWidgetRenderer.field_o = 0L;
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "tf.start()");
         }
@@ -745,7 +745,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (this == aj.field_b &&
-            !te.field_G) {
+            !RichTextWidget.field_G) {
             hh.field_c = true;
             if (d.field_g &&
               ji.correctedCurrentTimeMillis(123) - dc.field_j > 1000L) {
@@ -822,7 +822,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             field_c = -118;
           }
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) field_f));
-          field_f.setSize(bd.field_k, th.field_e);
+          field_f.setSize(RichTextLayout.field_k, th.field_e);
           field_f.setVisible(true);
           if (var2 == h.field_J) {
             var3 = h.field_J.getInsets();

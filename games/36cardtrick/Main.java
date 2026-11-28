@@ -154,7 +154,7 @@ public final class Main extends c {
           nb.field_e = 0;
           rj.field_p = af.field_ob - ByteArrayStore.field_b;
           ue.field_d = param0;
-          dg.field_J = 0;
+          RichTextWidget.field_J = 0;
           if (NanoFrameTimer.field_f >= 2) {
             ImageProducerRasterBuffer.field_n = false;
           }
@@ -302,7 +302,7 @@ public final class Main extends c {
                       ra.field_d = sk.a(4, (byte) 125);
                       if (0 < AgeValidator.field_m &&
                         !ImageProducerRasterBuffer.field_n) {
-                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
+                        this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + RichTextWidget.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 80, 3);
                       }
                       dj.field_a = (byte)(rk.field_X >> 8);
                       if (var3 != 0) {
@@ -494,7 +494,7 @@ public final class Main extends c {
           nb.field_e = nb.field_e | ue.field_d;
           bc.field_a = bc.field_a + 2;
           q.field_i = q.field_i - 1;
-          dg.field_J = dg.field_J + 1;
+          RichTextWidget.field_J = RichTextWidget.field_J + 1;
           ue.field_d = 0;
           rj.field_p = rj.field_p + 1;
           this.field_Q = this.field_H.length / 2;
@@ -516,15 +516,15 @@ public final class Main extends c {
           } while (var6 == 0);
           do {
             if (var3 <= 0) {
-              if (dg.field_J >= 3) {
-                stackIn_17_1 = 2 * ((-1 + dg.field_J) / 2);
+              if (RichTextWidget.field_J >= 3) {
+                stackIn_17_1 = 2 * ((-1 + RichTextWidget.field_J) / 2);
               } else {
                 stackIn_17_1 = 1;
               }
               this.field_eb = stackIn_17_1;
-              this.field_ab = Math.max(-(dg.field_J * 50) + 600, 100);
-              this.field_J = Math.max(44 - 4 * dg.field_J, 20);
-              var3 = Math.max(-(20000 * dg.field_J) + 200000, 40000);
+              this.field_ab = Math.max(-(RichTextWidget.field_J * 50) + 600, 100);
+              this.field_J = Math.max(44 - 4 * RichTextWidget.field_J, 20);
+              var3 = Math.max(-(20000 * RichTextWidget.field_J) + 200000, 40000);
               this.field_bb = this.field_eb * ((20 + this.field_J) * this.field_ab) / 2 + var3;
               var4 = this.field_bb % 10000;
               this.field_bb = this.field_bb - var4;
@@ -1051,11 +1051,11 @@ public final class Main extends c {
           if (4 == var5 ||
             var6 != 0) {
             this.field_K = (this.field_db + 999) / 1000;
-            if (dg.field_J > 0 &&
-              dg.field_J < 6) {
-              th.a(1 + q.field_i, 1, dg.field_J - 1);
+            if (RichTextWidget.field_J > 0 &&
+              RichTextWidget.field_J < 6) {
+              th.a(1 + q.field_i, 1, RichTextWidget.field_J - 1);
             }
-            var4Lifetime1 = Math.max(-(4 * dg.field_J) + 44, 20) - this.field_J;
+            var4Lifetime1 = Math.max(-(4 * RichTextWidget.field_J) + 44, 20) - this.field_J;
             if (var4Lifetime1 <= 18) {
               th.a(250, 1, 5);
             }
@@ -1094,7 +1094,7 @@ public final class Main extends c {
           if (AgeValidator.field_m > 0 &&
             !ImageProducerRasterBuffer.field_n &&
             !dl.d(0)) {
-            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + dg.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
+            this.field_P = pk.a(fb.field_c[this.field_C], new int[]{(AgeValidator.field_m << 8) + RichTextWidget.field_J}, af.field_ob, vb.field_a[this.field_C], ByteArrayStore.field_b, rj.field_p, BufferedRandomAccessFile.field_c, (byte) 70, 3);
           }
           AccountRequestState.a((byte) 53, lc.field_a[0]);
           this.a(11246, 6, 3, false);
@@ -1284,7 +1284,7 @@ public final class Main extends c {
         var14 = field_T;
         try {
           NameSuggestionsPanel.field_H.drawOpaque(0, 0);
-          qa.field_b.drawRightAligned(Integer.toString(dg.field_J), 85, 80, 16777215, -1);
+          qa.field_b.drawRightAligned(Integer.toString(RichTextWidget.field_J), 85, 80, 16777215, -1);
           stackIn_4_0 = qa.field_b;
           stackIn_4_1 = Integer.toString(-af.field_ob + rj.field_p + ByteArrayStore.field_b >> 8);
           stackIn_4_2 = 130;
@@ -1841,7 +1841,7 @@ public final class Main extends c {
           var14Lifetime1 = var13.field_c;
           var13.field_f = var13.field_b;
           var13.field_c = 0;
-          di.a(var13, 4997716, 0, 5000797, 13449, var14Lifetime1);
+          TextLineMetrics.a(var13, 4997716, 0, 5000797, 13449, var14Lifetime1);
           SoftwareRasterizer.fillRectangleVerticalGradient(0, 316, 640, 164, 5066333, 9336387);
           var15 = DelegatingCanvas.a(-127, "cloud1mask", "", mh.field_c);
           var16 = DelegatingCanvas.a(-127, "cloud2mask", "", mh.field_c);
@@ -1881,7 +1881,7 @@ public final class Main extends c {
           mg.field_j[4].drawOpaque(0, 0);
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.fillRectangle(169, 121, 308, 261, 16777215);
-          ek.a((byte) 92, 11173684, 2955525, 5122825, 103, 8475405, 296, 151, 342);
+          DefaultTextWidgetRenderer.a((byte) 92, 11173684, 2955525, 5122825, 103, 8475405, 296, 151, 342);
           TextFieldValidator.field_i.draw(174, 128);
           TextFieldValidator.field_i.draw(461, 128);
           TextFieldValidator.field_i.draw(176, 363);
@@ -1896,7 +1896,7 @@ public final class Main extends c {
           var24.bindAsRenderTarget();
           mg.field_j[4].drawOpaque(0, 0);
           SoftwareRasterizer.fillRectangle(18, 18, 604, 444, 16777215);
-          ek.a((byte) 92, 11173684, 2955525, 5122825, 0, 8475405, 480, 0, 640);
+          DefaultTextWidgetRenderer.a((byte) 92, 11173684, 2955525, 5122825, 0, 8475405, 480, 0, 640);
           TextFieldValidator.field_i.draw(23, 25);
           TextFieldValidator.field_i.draw(-TextFieldValidator.field_i.field_p + 617, 25);
           TextFieldValidator.field_i.draw(23, 455 - TextFieldValidator.field_i.field_o);
@@ -1938,7 +1938,7 @@ public final class Main extends c {
           mg.field_j[4].drawOpaque(0, 0);
           SoftwareRasterizer.resetClip();
           SoftwareRasterizer.fillRectangle(236, 103, 343, 291, 16777215);
-          ek.a((byte) 92, 11173684, 2955525, 5122825, 91, 8475405, 318, 223, 368);
+          DefaultTextWidgetRenderer.a((byte) 92, 11173684, 2955525, 5122825, 91, 8475405, 318, 223, 368);
           TextFieldValidator.field_i.draw(242, 109);
           TextFieldValidator.field_i.draw(562, 109);
           TextFieldValidator.field_i.draw(243, 374);
@@ -1955,7 +1955,7 @@ public final class Main extends c {
           DelegatingCanvas.a(-128, "ropeout", "", mh.field_c).draw(0, 0);
           DelegatingCanvas.a(-128, "ropein", "", mh.field_c).drawWithOpacity(0, 0, 116);
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
-          ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
+          DefaultTextWidgetRenderer.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           a.a(16777215, vk.field_j, -1, 39, 6697779, 113);
           a.a(16777215, tj.field_D, -1, 98, 6697779, 162);
           a.a(16777215, ti.field_b, -1, 15, 6697779, 262);
@@ -1970,7 +1970,7 @@ public final class Main extends c {
           var23.draw(0, -38);
           var27.draw(-5, 0);
           SoftwareRasterizer.fillRectangle(198, 33, 415, 415, 1);
-          ek.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
+          DefaultTextWidgetRenderer.a((byte) 92, 10274800, 269877, 538209, 31, 5671872, 419, 196, 419);
           gf.field_e.setAsRasterTarget(200);
           tc.field_a = new RgbSprite[9];
           var28 = new RgbSprite(2, 2);
@@ -2165,7 +2165,7 @@ public final class Main extends c {
           ArchiveRequest.clearStaticReferences((byte) 103);
           kk.clearStaticReferences(false);
           eg.clearStaticReferences((byte) 38);
-          ek.clearStaticReferences((byte) 61);
+          DefaultTextWidgetRenderer.clearStaticReferences((byte) 61);
           jb.clearStaticReferences();
           ok.clearStaticReferences(93);
           ha.clearStaticReferences(-124);
@@ -2183,7 +2183,7 @@ public final class Main extends c {
           ti.clearStaticReferences(true);
           db.clearStaticReferences(0);
           tb.a(param0 + 128);
-          mj.a((byte) 126);
+          TextLayout.a((byte) 126);
           lk.clearStaticReferences(0);
           InteractiveWidget.clearDeclaredStaticReferences((byte) -69);
           qg.clearDeclaredStaticReferences(80);
@@ -2213,7 +2213,7 @@ public final class Main extends c {
           ta.clearStaticReferences((byte) 116);
           ng.resetStaticState(2);
           NameSuggestionsPanel.resetStaticState(-10790);
-          dg.clearDeclaredStaticReferences(param0 ^ -74);
+          RichTextWidget.clearDeclaredStaticReferences(param0 ^ -74);
           gl.clearDeclaredStaticReferences(1);
           pa.clearStaticReferences((byte) -78);
           ua.clearDeclaredStaticReferences(72);
@@ -2229,7 +2229,7 @@ public final class Main extends c {
           lc.b(param0 + 91);
           bf.clearStaticReferences((byte) -121);
           DirectByteArrayStore.clearDeclaredStaticReferences(0);
-          ub.d(-126);
+          RichTextLayout.d(-126);
           fl.clearStaticReferences(param0 ^ 31237);
           qi.d((byte) 77);
           wc.releaseDeclaredStaticReferences(param0 - 21693);
@@ -2267,7 +2267,7 @@ public final class Main extends c {
           dl.a(param0 + 8996);
           gh.clearStaticReferences(256);
           oc.clearStaticReferences(-41);
-          di.a(-1);
+          TextLineMetrics.a(-1);
           AccountNameAvailabilityValidator.resetStaticState(param0 ^ 0);
           PasswordValidator.clearStaticReferences((byte) 110);
           EmailFormatValidator.c(true);
@@ -2275,7 +2275,7 @@ public final class Main extends c {
           AgeValidator.clearDeclaredStaticReferences(50);
           MatchingFieldValidator.clearStaticReferences(true);
           td.clearStaticReferences((byte) 53);
-          fk.clearStaticReferences(-30530);
+          TextHotspotBounds.clearStaticReferences(-30530);
           sg.clearStaticReferences(511);
           nc.a(param0);
           this.field_H = null;
@@ -2841,11 +2841,11 @@ public final class Main extends c {
                   this.a(11246, 7, 3, false);
                 }
               } else {
-                ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * dg.field_J << 7);
+                ByteArrayStore.field_b = ByteArrayStore.field_b - (BufferedRandomAccessFile.field_c * RichTextWidget.field_J << 7);
                 this.field_J = this.field_J - 1;
-                AgeValidator.field_m = AgeValidator.field_m + dg.field_J;
-                rj.field_p = rj.field_p + ((BufferedRandomAccessFile.field_c + 1) * dg.field_J << 7);
-                af.field_ob = af.field_ob - (dg.field_J << 7);
+                AgeValidator.field_m = AgeValidator.field_m + RichTextWidget.field_J;
+                rj.field_p = rj.field_p + ((BufferedRandomAccessFile.field_c + 1) * RichTextWidget.field_J << 7);
+                af.field_ob = af.field_ob - (RichTextWidget.field_J << 7);
               }
               decompiledFrameRemainder2 = false;
             } else {
@@ -2892,7 +2892,7 @@ public final class Main extends c {
                     rb.field_g = var3;
                     if (this.field_J <= 0) {
                       stackIn_117_0 = 124;
-                      if (1 != dg.field_J) {
+                      if (1 != RichTextWidget.field_J) {
                         stackIn_118_1 = 14;
                       } else {
                         stackIn_118_1 = 13;
@@ -2965,7 +2965,7 @@ public final class Main extends c {
               var3Lifetime1 = this.field_N;
               this.field_H[this.field_A] = (byte) -1;
               var2[var3Lifetime1] = (byte) -1;
-              var4 = 4 + dg.field_J;
+              var4 = 4 + RichTextWidget.field_J;
               AgeValidator.field_m = AgeValidator.field_m + var4;
               af.field_ob = af.field_ob - (var4 << 7);
               rj.field_p = rj.field_p + (var4 << 7);

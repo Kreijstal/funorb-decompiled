@@ -169,7 +169,7 @@ final class pl {
                     }
                   }
                   if (var21 != null &&
-                    rb.a(false, var21)) {
+                    TextLayout.a(false, var21)) {
                     var8[1][var13] = IntrusiveDequeCursor.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

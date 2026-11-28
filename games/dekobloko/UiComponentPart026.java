@@ -66,10 +66,10 @@ final class UiComponentPart026 extends UiComponentPart030 {
           if (integerArgument1 != -20494) {
             stringState0460 = (String) null;
           }
-          mixedSupport129Local2 = (MixedSupport129) (UiComponentPart025.nodeDequeState0026.beginBackward((byte) 125));
+          mixedSupport129Local2 = (MixedSupport129) (RichTextWidget.nodeDequeState0026.beginBackward((byte) 125));
           while (mixedSupport129Local2 != null) {
             RenderingSupport006.performAction0748(mixedSupport129Local2, (byte) -70, integerArgument2);
-            mixedSupport129Local2 = (MixedSupport129) (UiComponentPart025.nodeDequeState0026.nextBackward(true));
+            mixedSupport129Local2 = (MixedSupport129) (RichTextWidget.nodeDequeState0026.nextBackward(true));
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal5) {

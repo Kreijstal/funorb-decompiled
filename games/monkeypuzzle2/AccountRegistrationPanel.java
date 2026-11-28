@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements u, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends WidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private em field_O;
     private ButtonWidget field_z;
     private ButtonWidget field_K;
-    private jj field_C;
+    private RichTextWidget field_C;
     static String[] field_B;
     static int[] field_L;
     private ValidatedTextField field_N;
@@ -62,7 +62,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, Widge
         }
     }
 
-    public final void a(int param0, int param1, jj param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -539,7 +539,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, Widge
         this.field_H.field_m = kd.field_d;
         this.field_J.field_m = BufferedSocket.field_h;
         this.field_F.field_m = ri.field_d;
-        this.field_O.field_m = a.field_j;
+        this.field_O.field_m = DefaultTextWidgetRenderer.field_j;
         this.field_N.setFieldValidator(new AccountNameAvailabilityValidator(this.field_N), true);
         this.field_D.setFieldValidator(new EmailFormatValidator(this.field_D), true);
         this.field_I.setFieldValidator(new ConfirmedEmailAvailabilityValidator(this.field_I, this.field_D), true);
@@ -560,17 +560,17 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, Widge
         this.field_H.field_h = (ml) ((Object) dupTemp$1);
         String var2 = gg.a(new String[]{this.e((byte) -95), this.b(false)}, EmailFormatValidator.field_p, true);
         int var3 = 20;
-        var3 = var3 + this.a(-107, be.field_e, this.field_D, 170, var3);
+        var3 = var3 + this.a(-107, TextLineMetrics.field_e, this.field_D, 170, var3);
         var3 = var3 + (5 + this.a(20, var3, ef.field_a, 170, this.field_I, 3, ""));
         var3 = var3 + this.a(-112, ec.field_c, this.field_H, 170, var3);
-        var3 = var3 + (5 + this.a((byte) 98, 170, this.field_J, ce.field_a, var3, jj.field_B));
+        var3 = var3 + (5 + this.a((byte) 98, 170, this.field_J, ce.field_a, var3, RichTextWidget.field_B));
         var3 = var3 + (5 + this.a((byte) 122, 170, this.field_N, ke.field_e, var3, TextFieldValidator.field_l));
         var3 = var3 + this.a(var3, 93, 170, mg.field_v, this.field_F);
         mh var4 = new mh(46, var3, -90 + this.field_l, 25, this.field_O, true, -120 + this.field_l, 5, pf.field_c, 11579568, WeightedObjectCache.field_f);
         this.b((byte) -52, var4);
         var3 = var3 + var4.field_p;
-        a var5 = new a(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 0, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
-        this.field_C = new jj(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 0, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
+        this.field_C = new RichTextWidget(var2, var5);
         this.field_C.field_m = "";
         this.field_C.a(false, 0, kg.field_a);
         this.field_C.a(false, 1, kg.field_a);
@@ -594,7 +594,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, Widge
 
     public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         boolean discarded$1 = false;
-        jj var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -602,8 +602,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements u, Widge
         RuntimeException var6 = null;
         try {
           if (param3 != 7) {
-            var7 = (jj) null;
-            this.a(-82, -126, (jj) null, -55);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated(-82, -126, (RichTextWidget) null, -55);
           }
           if (param4 != this.field_K) {
             if (param4 == this.field_z) {

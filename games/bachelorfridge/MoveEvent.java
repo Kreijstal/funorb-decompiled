@@ -72,7 +72,7 @@ final class MoveEvent extends CreatureEvent {
         int var3 = 0;
         int var4 = 0;
         PacketBuffer var5 = null;
-        bm stackIn_3_0 = null;
+        SetTileTerrainEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -85,7 +85,7 @@ final class MoveEvent extends CreatureEvent {
           var2_int = param0.readUnsignedByte(16711935);
           var3 = param0.readUnsignedByte(16711935);
           var4 = param0.readUnsignedByte(16711935);
-          stackIn_3_0 = new bm(var2_int, var3, var4);
+          stackIn_3_0 = new SetTileTerrainEffect(var2_int, var3, var4);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

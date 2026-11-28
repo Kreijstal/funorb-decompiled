@@ -19,11 +19,11 @@ final class kf extends IntrusiveNode {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (dg.field_H.field_b >= 4) {
-            if (dg.field_H.field_l == -1) {
+          if (RichTextWidget.field_H.field_b >= 4) {
+            if (RichTextWidget.field_H.field_l == -1) {
               return 3;
             }
-            if (-2 == dg.field_H.field_l) {
+            if (-2 == RichTextWidget.field_H.field_l) {
               return 4;
             }
             return 1;
@@ -73,7 +73,7 @@ final class kf extends IntrusiveNode {
             if (4 != IterableNodeHashTable.field_c) {
               return -1;
             }
-            dg.field_H.a(tf.field_r, ii.field_d, false);
+            RichTextWidget.field_H.a(tf.field_r, ii.field_d, false);
             d.field_a = null;
             tf.field_r = null;
             IterableNodeHashTable.field_c = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa extends dg {
+final class pa extends RichTextWidget {
     static String field_N;
     private int field_R;
     private FieldValidator field_O;
@@ -322,7 +322,7 @@ final class pa extends dg {
         }
     }
 
-    final String b(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 == -79) {
           return null;
         }
@@ -441,7 +441,7 @@ final class pa extends dg {
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
         sg var6;
-        ne var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -465,13 +465,13 @@ final class pa extends dg {
         }
         if (!var5.equals(this.field_r)) {
           this.field_r = var5;
-          this.e((byte) 5);
+          this.rebuildHotspotBounds((byte) 5);
         }
         super.a(param0, param1, param2 ^ 0, param3);
         var6Lifetime1 = this.field_O.getValidationStatus(true);
-        var8 = (ne) ((Object) this.field_v);
+        var8 = (TextWidgetRenderer) ((Object) this.field_v);
         var9 = this.field_o + param0;
-        var10 = var8.a((lk) (this), -1815612287, param1) + (var8.a((byte) 92, (lk) (this)).b(0) >> 1);
+        var10 = var8.getTextOriginY((lk) (this), -1815612287, param1) + (var8.getTextLayout((byte) 92, (lk) (this)).getLayoutHeight(0) >> 1);
         if (param2 != -1) {
           var14 = (lk) null;
           this.a(-10, (lk) null);

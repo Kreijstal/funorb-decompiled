@@ -158,7 +158,7 @@ abstract class ei extends kh {
           }
           stackIn_68_0 = 1;
           while (true) {
-            if (!fd.d(stackIn_68_0)) {
+            if (!DefaultTextWidgetRenderer.d(stackIn_68_0)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }
@@ -596,7 +596,7 @@ abstract class ei extends kh {
           }
           stackIn_68_0 = 1;
           while (true) {
-            if (!fd.d(stackIn_68_0)) {
+            if (!DefaultTextWidgetRenderer.d(stackIn_68_0)) {
               stackIn_81_0 = 0;
               return stackIn_81_0;
             }

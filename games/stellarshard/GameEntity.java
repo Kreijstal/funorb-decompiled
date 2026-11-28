@@ -1295,7 +1295,7 @@ final class GameEntity {
           SoftwareRasterizer.fillRectangle(0, 0, 96, 96, 0);
           cc.a();
           var9_ref_bj.a(var4, var5, var6, var7, 0, 0, 3000, -1L);
-          pd.field_h.a((byte) -107);
+          RichTextLayout.field_h.a((byte) -107);
           if (0 == nc.field_H) {
             if (DiskArchiveRequest.field_I > 0 &&
               (15 & DiskArchiveRequest.field_I) >= 7) {
@@ -1339,7 +1339,7 @@ final class GameEntity {
                   for (var11 = -(3 & gh.field_b); var11 < var35.field_x; var11 += 3) {
                     SoftwareRasterizer.drawHorizontalLine(0, var11, var35.field_w, 0);
                   }
-                  pd.field_h.a((byte) -107);
+                  RichTextLayout.field_h.a((byte) -107);
                   if ((gh.field_b & 48) <= 0) {
                     var35.draw(var2, var3);
                   } else {

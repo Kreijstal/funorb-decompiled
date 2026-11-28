@@ -517,7 +517,7 @@ final class saa {
         try {
           if (param1) {
             if (AccountRequestState.field_a) {
-              ic.a(74);
+              ClearPendingPetAttackEffect.a(74);
             }
             if (!this.field_i &&
               this.field_s == null) {

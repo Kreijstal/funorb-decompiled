@@ -154,7 +154,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = gg.a(bh.a((byte) 78), (byte) 126, this.field_x, ac.c(70), bp.a(6), vg.b((byte) -29), hp.d(5));
+            var5_intLifetime1 = gg.a(TextLineMetrics.a((byte) 78), (byte) 126, this.field_x, ac.c(70), bp.a(6), vg.b((byte) -29), hp.d(5));
             if (var5_intLifetime1 != -1) {
               LevelLostScene.setLoginResponseMessage(-13405, gj.field_o, var5_intLifetime1, re.field_j);
               re.field_j = null;
@@ -625,9 +625,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (am.field_e == null) {
             am.field_e = ba.a(-29513);
-            tb.field_a = ep.c((byte) 112);
+            TextLayout.field_a = ep.c((byte) 112);
           }
-          am.a(am.field_e, 0, FullscreenFocusCanvas.field_a, tb.field_a);
+          am.a(am.field_e, 0, FullscreenFocusCanvas.field_a, TextLayout.field_a);
           rb.field_k = null;
           FullscreenFocusCanvas.field_a = null;
           ok.field_c = null;

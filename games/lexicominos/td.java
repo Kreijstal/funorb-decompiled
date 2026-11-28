@@ -85,7 +85,7 @@ final class td {
           }
           var2_long = rf.correctedCurrentTimeMillis(0);
           if (0 != sc.field_f &&
-            0 > kk.field_r) {
+            0 > RichTextLayout.field_r) {
             stackIn_12_0 = eb.field_f;
             stackIn_13_1 = !(param1);
             var4_ref_c = (c) (((IntrusiveDeque) (Object) stackIn_12_0).beginForward(stackIn_13_1));
@@ -98,31 +98,31 @@ final class td {
                 ig.field_a.payload[var5_int] = var4_ref_c.field_h[var5_int];
               }
               vh.field_b = df.field_a;
-              df.field_a = wl.field_i;
-              wl.field_i = pg.field_d;
+              df.field_a = TextHotspotBounds.field_i;
+              TextHotspotBounds.field_i = pg.field_d;
               pg.field_d = var4_ref_c.field_k;
               return true;
             }
           }
           while (true) {
-            if (kk.field_r < 0) {
+            if (RichTextLayout.field_r < 0) {
               ig.field_a.position = 0;
               if (!a.b(1, 10343)) {
                 return false;
               }
-              kk.field_r = ig.field_a.readCipheredByte((byte) -76);
+              RichTextLayout.field_r = ig.field_a.readCipheredByte((byte) -76);
               ig.field_a.position = 0;
-              a.field_c = param0[kk.field_r];
+              a.field_c = param0[RichTextLayout.field_r];
             }
             if (!NetworkArchiveRequest.d(2)) {
               return false;
             }
             if (sc.field_f == 0) {
               vh.field_b = df.field_a;
-              df.field_a = wl.field_i;
-              wl.field_i = pg.field_d;
-              pg.field_d = kk.field_r;
-              kk.field_r = -1;
+              df.field_a = TextHotspotBounds.field_i;
+              TextHotspotBounds.field_i = pg.field_d;
+              pg.field_d = RichTextLayout.field_r;
+              RichTextLayout.field_r = -1;
               return true;
             }
             var4 = sc.field_f;
@@ -132,12 +132,12 @@ final class td {
                 var4 = 0;
               }
             }
-            var5 = new c((long)var4 + var2_long, kk.field_r, new byte[a.field_c]);
+            var5 = new c((long)var4 + var2_long, RichTextLayout.field_r, new byte[a.field_c]);
             for (var6 = 0; a.field_c > var6; var6++) {
               var5.field_h[var6] = ig.field_a.payload[var6];
             }
             eb.field_f.addLast(125, var5);
-            kk.field_r = -1;
+            RichTextLayout.field_r = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -29,11 +29,11 @@ final class cc {
         if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
           return lj.field_r + " - " + im.field_c.getGroupLoadPercentByName(123, "commonui") + "%";
         }
-        if (!mb.field_m.ensureIndexLoaded(-15879)) {
+        if (!RichTextLayout.field_m.ensureIndexLoaded(-15879)) {
           return cf.field_r;
         }
-        if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
-          return FrameTimer.field_a + " - " + mb.field_m.getGroupLoadPercentByName(119, "commonui") + "%";
+        if (!RichTextLayout.field_m.tryLoadGroupByName(-8088, "commonui")) {
+          return FrameTimer.field_a + " - " + RichTextLayout.field_m.getGroupLoadPercentByName(119, "commonui") + "%";
         }
         if (!ll.field_b.ensureIndexLoaded(-15879)) {
           return dg.field_qb;

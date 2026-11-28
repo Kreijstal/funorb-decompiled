@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends nb implements ue, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends nb implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private te field_J;
     private ValidatedTextField field_E;
     private ValidatedTextField field_D;
@@ -9,7 +9,7 @@ final class AccountRegistrationPanel extends nb implements ue, WidgetActivationL
     private ValidatedTextField field_O;
     private InteractiveWidget field_I;
     private InteractiveWidget field_P;
-    private bc field_F;
+    private RichTextWidget field_F;
     private ValidatedTextField field_M;
     static String field_L;
     private ValidatedTextField field_K;
@@ -132,8 +132,8 @@ final class AccountRegistrationPanel extends nb implements ue, WidgetActivationL
         jf var4 = new jf(46, var3, this.field_j - 90, 25, this.field_J, true, -120 + this.field_j, 5, ValidatedTextField.field_T, 11579568, IsaacRandom.field_j);
         this.b((byte) -74, var4);
         var3 = var3 + var4.field_v;
-        ik var5 = new ik(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 0, 0, ql.field_Q.field_E, -1, 2147483647, true);
-        this.field_F = new bc(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(ql.field_Q, 0, 0, 0, 0, 16777215, -1, 0, 0, ql.field_Q.field_E, -1, 2147483647, true);
+        this.field_F = new RichTextWidget(var2, var5);
         this.field_F.field_q = "";
         this.field_F.a(wc.field_b, 0, -27371);
         this.field_F.a(wc.field_b, 1, -27371);
@@ -314,7 +314,7 @@ final class AccountRegistrationPanel extends nb implements ue, WidgetActivationL
         }
     }
 
-    public final void a(int param0, bc param1, int param2, int param3) {
+    public final void onTextHotspotActivated(int param0, RichTextWidget param1, int param2, int param3) {
         int discarded$1 = 0;
         RuntimeException var5 = null;
         int var6 = 0;

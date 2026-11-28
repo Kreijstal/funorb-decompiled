@@ -38,7 +38,7 @@ final class ol {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class ol {
         if (param1 != 30613) {
           field_b = (String) null;
         }
-        nn.field_t[param3].draw(param0, param4);
+        TextHotspotBounds.field_t[param3].draw(param0, param4);
         pn.field_a.drawRightAligned(Integer.toString(param2), param0 + 39, 38 + param4, 16777215, -1);
     }
 

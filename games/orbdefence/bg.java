@@ -202,7 +202,7 @@ final class bg {
                   var24Lifetime1 = param1.field_A[var23Lifetime2];
                   var25Lifetime1 = param1.field_L[var23Lifetime2];
                   var26Lifetime1 = param1.field_b[var23Lifetime2];
-                  cc.field_j[var23Lifetime2] = var9 + (var24Lifetime1 * var12 - (-(var25Lifetime1 * var15) - var18 * var26Lifetime1) >> 16);
+                  TextHotspotBounds.field_j[var23Lifetime2] = var9 + (var24Lifetime1 * var12 - (-(var25Lifetime1 * var15) - var18 * var26Lifetime1) >> 16);
                   jk.field_t[var23Lifetime2] = var10 + (var19 * var26Lifetime1 + var24Lifetime1 * var13 + var25Lifetime1 * var16 >> 16);
                   ve.field_N[var23Lifetime2] = (var14 * var24Lifetime1 + var25Lifetime1 * var17 + var26Lifetime1 * var20 >> 16) + var11;
                   var24Lifetime1 = param1.field_E[var23Lifetime2];

@@ -125,7 +125,7 @@ final class w extends wd implements ButtonListener {
           var4.field_x = this.field_x;
           var4.field_u = 80;
           var4.field_p = 0;
-          var4.field_y = (t) ((Object) new ic(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_y = (t) ((Object) new DefaultTextWidgetRenderer(fk.field_a, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(false, var4);
           this.field_S = this.a(23879, MovingBlock.field_k, (tg) (this));
           return;

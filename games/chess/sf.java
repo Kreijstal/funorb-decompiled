@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sf extends hl {
+final class sf extends DefaultTextWidgetRenderer {
     private int field_t;
     private int field_w;
     private int field_s;

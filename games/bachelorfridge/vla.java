@@ -82,7 +82,7 @@ final class vla extends mv {
               if (this.field_k.d((byte) -90)) {
                 return false;
               }
-              var4.b(-1, var6_ref.field_o);
+              var4.playAnimation(-1, var6_ref.field_o);
               return false;
             }
             if (!this.field_k.d((byte) -75)) {
@@ -95,7 +95,7 @@ final class vla extends mv {
               return false;
             }
             if (!this.field_k.d((byte) -90)) {
-              var4.b(-1, var6_ref.field_o);
+              var4.playAnimation(-1, var6_ref.field_o);
               return false;
             }
             return false;
@@ -107,7 +107,7 @@ final class vla extends mv {
               }
               if (this.field_q == 63 &&
                 !this.field_k.d((byte) -90)) {
-                var4.b(-1, var6_ref.field_o);
+                var4.playAnimation(-1, var6_ref.field_o);
                 return false;
               }
               return false;
@@ -119,7 +119,7 @@ final class vla extends mv {
           }
           if (this.field_q == 63 &&
             !this.field_k.d((byte) -90)) {
-            var4.b(-1, var6_ref.field_o);
+            var4.playAnimation(-1, var6_ref.field_o);
             return false;
           }
           return false;

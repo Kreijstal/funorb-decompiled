@@ -38,7 +38,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           this.field_T = var3_int;
           param0.field_J.recordPowerUpSpawn(var3_int, 93);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           this.field_C = var7_double;
           this.a(123, TunnelEntity.field_w[(31 & this.field_V) >> 1], param1, param3);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -154,7 +154,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
         try {
           this.field_R = 2;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.BB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -286,7 +286,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -432,7 +432,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                   }
                                   this.d(10797);
                                 } else {
-                                  this.a(sc.field_j, -73);
+                                  this.a(TextLayout.field_j, -73);
                                 }
                               } else {
                                 if (var4 != 12) {
@@ -510,7 +510,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
                                             }
                                           }
                                         } else {
-                                          kc.a(na.field_Q, (TunnelEntity) (this), 124, true);
+                                          kc.a(RichTextWidget.field_Q, (TunnelEntity) (this), 124, true);
                                           param1.field_Gb = 1500;
                                           this.d(10797);
                                         }
@@ -613,7 +613,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           } else {
             stackIn_155_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_154_0), ((StringBuilder) (Object) stackIn_154_1).append(stackIn_155_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_154_0), ((StringBuilder) (Object) stackIn_154_1).append(stackIn_155_2).append(')').toString());
         }
     }
 
@@ -624,7 +624,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_R = 69;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -730,7 +730,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -741,7 +741,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_T = -106;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.VA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -752,7 +752,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           }
           this.a((byte) -113, param0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.GB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -785,7 +785,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           this.field_K = var14 * var18[6] + var12 * var18[3] + var18[9] * var6;
           this.field_T = param2;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -811,7 +811,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -845,7 +845,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -856,7 +856,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_V = -53;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -864,7 +864,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
         try {
           int var3_int = 116 % ((param0 - 14) / 53);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -875,7 +875,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_R = -82;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -885,7 +885,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_V = 72;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -896,7 +896,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_U = false;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -913,7 +913,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
             this.field_V = -43;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -921,7 +921,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
         try {
           int var3_int = -92 % ((-35 - param1) / 60);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -933,7 +933,7 @@ final class PowerUpPickup extends MovingTunnelEntity {
           }
           param1.onPowerUpContact(this, (byte) 107);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "cl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "cl.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

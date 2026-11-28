@@ -37,7 +37,7 @@ final class sj extends IntrusiveNode {
           if (decompiledFrameRemainder0) {
             if (!af.field_b) {
               if (ug.field_m >= dj.field_b) {
-                stackIn_16_0 = (dj.field_b + ik.field_j > ug.field_m) ? 1 : 0;
+                stackIn_16_0 = (dj.field_b + DefaultTextWidgetRenderer.field_j > ug.field_m) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }

@@ -414,10 +414,10 @@ final class jl {
                 af.field_w[6 + 8 * pd.field_a].c(var4, var3 - 6);
                 var3 = var3 + (14 + af.field_y.drawParagraph(t.field_x, 40 + var4, var3, -40 + var5, var6, 49407, -1, 0, 0, 14) * 14);
                 af.field_w[pd.field_a * 8 + 7].c(var4, var3 - 6);
-                var3 = var3 + (14 + af.field_y.drawParagraph(oi.field_i, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) * 14);
+                var3 = var3 + (14 + af.field_y.drawParagraph(TextHotspotBounds.field_i, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14) * 14);
                 af.field_w[8 * pd.field_a + 3].c(var4, var3 - 6);
                 var3 = var3 + (14 + 14 * af.field_y.drawParagraph(NetworkArchiveRequest.field_y, 40 + var4, var3, var5 - 40, var6, 49407, -1, 0, 0, 14));
-                af.field_y.drawParagraph(ab.field_B, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
+                af.field_y.drawParagraph(RichTextWidget.field_B, var4, var3, var5, var6, 16777215, -1, 0, 0, 14);
               }
             }
           }
@@ -861,7 +861,7 @@ final class jl {
                                 if (n.field_a != null) {
                                   re.a(0);
                                 }
-                                nh.a(ll.b(113), 337033697);
+                                TextLineMetrics.a(ll.b(113), 337033697);
                                 mj.a(255, 12, 0, 12, 50);
                                 break;
                               default:
@@ -990,11 +990,11 @@ final class jl {
               for (var5 = 0; var5 < FullscreenFocusCanvas.field_c.length; var5++) {
                 FullscreenFocusCanvas.field_c[var5] = null;
               }
-              se.field_m = 0;
+              RichTextLayout.field_m = 0;
               nf.field_e = 0;
               lc.field_gb = 0;
               if (nf.field_l > 0) {
-                se.field_m = 1;
+                RichTextLayout.field_m = 1;
               }
               if (null != kc.field_P) {
                 ti.field_f.removeOwnedListener(kc.field_P);

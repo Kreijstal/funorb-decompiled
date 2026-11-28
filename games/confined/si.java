@@ -37,7 +37,7 @@ final class si {
         var1 = new RgbSprite[wc.field_hc];
         var3 = 76 / ((param0 + 87) / 32);
         for (var2 = 0; var2 < wc.field_hc; var2++) {
-          var4 = InteractiveWidget.field_I[var2] * sd.field_f[var2];
+          var4 = InteractiveWidget.field_I[var2] * TextLineMetrics.field_f[var2];
           var22 = rj.field_f[var2];
           if (!pa.field_e[var2]) {
             var11 = new int[var4];
@@ -45,7 +45,7 @@ final class si {
             for (var7 = 0; var7 < var4; var7++) {
               var11[var7] = an.field_p[va.a(255, (int) var22[var7])];
             }
-            var1[var2] = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], sd.field_f[var2], var23);
+            var1[var2] = new RgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], TextLineMetrics.field_f[var2], var23);
           } else {
             var16 = un.field_i[var2];
             var12 = var16;
@@ -57,7 +57,7 @@ final class si {
             for (var8 = 0; var4 > var8; var8++) {
               var7_ref_int__[var8] = nl.a(va.a((int) var16[var8], 255) << 24, an.field_p[va.a((int) var22[var8], 255)]);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], sd.field_f[var2], var18));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], TextLineMetrics.field_f[var2], var18));
           }
         }
         StageDirector.clearIndexedSpriteDecodeBuffers(false);
@@ -131,7 +131,7 @@ final class si {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -178,7 +178,7 @@ final class si {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

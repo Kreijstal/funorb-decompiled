@@ -48,7 +48,7 @@ final class it {
         int var4;
         var4 = BachelorFridge.field_y;
         if (this.field_a) {
-          fda.field_m.drawRotated(0, 20 + this.field_j, 36 + (this.field_p + param1), -1049413117, (-this.field_b + 1024) * 4);
+          RemoveDefeatedCreatureEffect.field_m.drawRotated(0, 20 + this.field_j, 36 + (this.field_p + param1), -1049413117, (-this.field_b + 1024) * 4);
         }
         nk.a(qa.field_k, param1 + 16 + this.field_p, 4 + this.field_j, 48, 28);
         if (this.field_a) {

@@ -61,7 +61,7 @@ final class AccountCreationResultPanel extends bd implements WidgetActivationLis
           if (!param1.success) {
             if (!this.field_vb) {
               if (param1.statusCode != 5) {
-                var5.a(mi.field_k, param0 - 23551, -1);
+                var5.a(TextHotspotBounds.field_k, param0 - 23551, -1);
               } else {
                 var5.a(DelegatingCanvas.field_c, -23493, 11);
                 var5.a(vk.field_K, -23493, 17);

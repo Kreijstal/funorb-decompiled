@@ -35,7 +35,7 @@ final class SectorCacheStore {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = bh.a(125, param0);
+          var3 = RichTextWidget.a(125, param0);
           if (var3 == null) {
             stackIn_3_0 = (String) (param1);
             return stackIn_3_0;

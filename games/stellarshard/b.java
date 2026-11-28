@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends id {
+final class b extends DefaultTextWidgetRenderer {
     static int field_t;
     static boolean field_v;
     private int field_r;

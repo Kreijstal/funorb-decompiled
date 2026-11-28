@@ -66,7 +66,7 @@ final class we {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_j[var3Lifetime1] = ue.a(this.field_j[var3Lifetime1], pd.field_l[var4][DirectByteStorage.a(255, (int)(this.field_f[DirectByteStorage.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
+              this.field_j[var3Lifetime1] = ue.a(this.field_j[var3Lifetime1], RichTextLayout.field_l[var4][DirectByteStorage.a(255, (int)(this.field_f[DirectByteStorage.a(-var4 + var3Lifetime1, 7)] >>> var5))]);
               var4++;
               var5 -= 8;
             }
@@ -74,14 +74,14 @@ final class we {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_f[var3Lifetime1Lifetime1] = this.field_j[var3Lifetime1Lifetime1];
           }
-          this.field_f[0] = ue.a(this.field_f[0], pd.field_j[var2Lifetime2]);
+          this.field_f[0] = ue.a(this.field_f[0], RichTextLayout.field_j[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_j[var3Lifetime1Lifetime2] = this.field_f[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_j[var3Lifetime1Lifetime2] = ue.a(this.field_j[var3Lifetime1Lifetime2], pd.field_l[var7][DirectByteStorage.a((int)(this.field_d[DirectByteStorage.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
+              this.field_j[var3Lifetime1Lifetime2] = ue.a(this.field_j[var3Lifetime1Lifetime2], RichTextLayout.field_l[var7][DirectByteStorage.a((int)(this.field_d[DirectByteStorage.a(7, var3Lifetime1Lifetime2 - var7)] >>> var5Lifetime1), 255)]);
               var7++;
               var5Lifetime1 -= 8;
             }

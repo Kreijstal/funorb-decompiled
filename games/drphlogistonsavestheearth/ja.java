@@ -82,8 +82,8 @@ final class ja {
           }
           var2_intLifetime1 = 96 / ((80 - param1) / 36);
           for (var3 = 0; var3 < sf.field_e; var3++) {
-            if (param0.field_a == mi.field_c[var3].field_a) {
-              dupTemp$3 = mi.field_c[var3].a((byte) -93);
+            if (param0.field_a == TextLineMetrics.field_c[var3].field_a) {
+              dupTemp$3 = TextLineMetrics.field_c[var3].a((byte) -93);
               fm.field_e[dupTemp$3] = fm.field_e[dupTemp$3] + 1;
             }
           }
@@ -92,8 +92,8 @@ final class ja {
           var3Lifetime1 = 0;
           for (var4 = 0; var4 < sf.field_e; var4++) {
             boolean decompiledFrameRemainder0 = true;
-            if (param0.field_a == mi.field_c[var4].field_a) {
-              var5 = mi.field_c[var4].a((byte) -79);
+            if (param0.field_a == TextLineMetrics.field_c[var4].field_a) {
+              var5 = TextLineMetrics.field_c[var4].a((byte) -79);
               if (fm.field_e[var5] > ee.field_a) {
                 fm.field_e[var5] = fm.field_e[var5] - 1;
                 decompiledFrameRemainder0 = false;
@@ -102,13 +102,13 @@ final class ja {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var3Lifetime1;
               var3Lifetime1++;
-              mi.field_c[incrementValue$2] = mi.field_c[var4];
+              TextLineMetrics.field_c[incrementValue$2] = TextLineMetrics.field_c[var4];
             }
           }
           sf.field_e = var3Lifetime1;
           fieldTemp$1 = sf.field_e;
           sf.field_e = sf.field_e + 1;
-          mi.field_c[fieldTemp$1] = param0;
+          TextLineMetrics.field_c[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

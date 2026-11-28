@@ -77,7 +77,7 @@ final class jb {
     final void b(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
-        if (pd.field_f != null) {
+        if (RichTextLayout.field_f != null) {
           return;
         }
         if (param0 != 0) {

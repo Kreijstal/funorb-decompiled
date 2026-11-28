@@ -1348,7 +1348,7 @@ final class LevelScreen extends ib {
                 var10_ref_pa.a(new int[]{0, 0, 0, var11, -var12_int, 0, var12_int, var11, 0, 0, 0, 65536});
                 var13_ref_bj = var10_ref_pa.a(32, 346, 50, 50, -50);
                 var13_ref_bj.a(0, 0, 0, 0, 0, 0, 1000, -1L);
-                pd.field_h.a((byte) -107);
+                RichTextLayout.field_h.a((byte) -107);
               }
               var4_double = (double)(var9 + 1) * 3.141592653589793 / 25.0;
               var6 = (int)(128.0 * Math.cos(var2_double));
@@ -1531,7 +1531,7 @@ final class LevelScreen extends ib {
             qj.field_a.drawString(nb.field_O, 68 + var2_intLifetime1, var3Lifetime1Lifetime2 + 12, 16777215, -1);
             e.field_g[14].draw(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
-            qj.field_a.drawString(ja.field_k, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
+            qj.field_a.drawString(TextHotspotBounds.field_k, var2_intLifetime1 + 68, var3Lifetime1Lifetime2 + 12, 16777215, -1);
             e.field_g[15].draw(var2_intLifetime1, var3Lifetime1Lifetime2);
             var3Lifetime1Lifetime2 += 40;
             qj.field_a.drawString(rd.field_b, 68 + var2_intLifetime1, 12 + var3Lifetime1Lifetime2, 16777215, -1);
@@ -1562,11 +1562,11 @@ final class LevelScreen extends ib {
             ed.a(-6313, 119, 98, fg.field_P, 402, 302);
             DebouncedFieldValidator.a(li.field_b, 9, -1, false, 320, 5883647, 439);
             if (DualLinkNode.a(-1)) {
-              qj.field_a.drawCentred(pd.field_p, 320, 159, 0, -1);
-              qj.field_a.drawCentred(pd.field_p, 320, 161, 0, -1);
-              qj.field_a.drawCentred(pd.field_p, 319, 160, 0, -1);
-              qj.field_a.drawCentred(pd.field_p, 321, 160, 0, -1);
-              qj.field_a.drawCentred(pd.field_p, 320, 160, 16777215, -1);
+              qj.field_a.drawCentred(RichTextLayout.field_p, 320, 159, 0, -1);
+              qj.field_a.drawCentred(RichTextLayout.field_p, 320, 161, 0, -1);
+              qj.field_a.drawCentred(RichTextLayout.field_p, 319, 160, 0, -1);
+              qj.field_a.drawCentred(RichTextLayout.field_p, 321, 160, 0, -1);
+              qj.field_a.drawCentred(RichTextLayout.field_p, 320, 160, 16777215, -1);
               if (DualLinkNode.a(param0 ^ -86)) {
                 qj.field_a.drawParagraph(hj.field_e, 220, 192, 200, 200, 16777215, 0, 1, 0, qj.field_a.field_N);
               }
@@ -1675,11 +1675,11 @@ final class LevelScreen extends ib {
                     break;
                   }
                   if (var7Lifetime1 == 0) {
-                    qj.field_a.drawCentred(pd.field_p, 320, 159, 0, -1);
-                    qj.field_a.drawCentred(pd.field_p, 320, 161, 0, -1);
-                    qj.field_a.drawCentred(pd.field_p, 319, 160, 0, -1);
-                    qj.field_a.drawCentred(pd.field_p, 321, 160, 0, -1);
-                    qj.field_a.drawCentred(pd.field_p, 320, 160, 16777215, -1);
+                    qj.field_a.drawCentred(RichTextLayout.field_p, 320, 159, 0, -1);
+                    qj.field_a.drawCentred(RichTextLayout.field_p, 320, 161, 0, -1);
+                    qj.field_a.drawCentred(RichTextLayout.field_p, 319, 160, 0, -1);
+                    qj.field_a.drawCentred(RichTextLayout.field_p, 321, 160, 0, -1);
+                    qj.field_a.drawCentred(RichTextLayout.field_p, 320, 160, 16777215, -1);
                   }
                   SoftwareRasterizer.setClip(129, 0, 511, 479);
                   qj.field_a.drawCentred(sj.field_C, 320 - bf.field_c, 366, 0, -1);
@@ -1849,7 +1849,7 @@ final class LevelScreen extends ib {
                 if (var6Lifetime2 != 0) {
                   var7Lifetime2 = 330 - (-(qj.field_a.field_N * 5 / 2) + 96);
                   var7Lifetime2 = var7Lifetime2 + qj.field_a.field_N;
-                  qj.field_a.drawCentred(id.field_l, 320, var7Lifetime2, 10742263, -1);
+                  qj.field_a.drawCentred(DefaultTextWidgetRenderer.field_l, 320, var7Lifetime2, 10742263, -1);
                   if (DualLinkNode.a(-1)) {
                     qj.field_a.drawCentred(hj.field_e, 320, var7Lifetime2 + 100, 10742263, -1);
                   }

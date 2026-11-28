@@ -27,7 +27,7 @@ final class ld {
             return 1;
           }
           if (param0 == field_g &&
-            ah.a(this.field_i, 76)) {
+            RichTextLayout.a(this.field_i, 76)) {
             return 1;
           }
           return 0;
@@ -75,7 +75,7 @@ final class ld {
           this.field_l = mk.field_d;
         }
         this.field_d = ue.field_c;
-        this.field_h = fj.field_a;
+        this.field_h = TextLineMetrics.field_a;
     }
 
     ld(int param0, String param1, int param2, String param3, String param4) {

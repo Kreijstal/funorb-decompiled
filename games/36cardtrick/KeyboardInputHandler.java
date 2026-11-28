@@ -169,7 +169,7 @@ final class KeyboardInputHandler implements java.awt.event.KeyListener, java.awt
         ti.field_c = gf.field_h[param1];
         FullscreenFocusCanvas.field_d = ri.field_a[param1];
         int var2 = -109 / ((-56 - param0) / 40);
-        MatchingFieldValidator.field_j = dg.field_I[param1];
+        MatchingFieldValidator.field_j = RichTextWidget.field_I[param1];
     }
 
     static {

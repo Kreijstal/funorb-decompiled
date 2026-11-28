@@ -88,7 +88,7 @@ final class eb {
         if (dj.field_b > ug.field_m) {
           return null;
         }
-        if (!(ik.field_j + dj.field_b <= ug.field_m)) {
+        if (!(DefaultTextWidgetRenderer.field_j + dj.field_b <= ug.field_m)) {
           return nc.field_p;
         }
         return null;

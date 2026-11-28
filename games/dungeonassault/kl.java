@@ -192,7 +192,7 @@ class kl {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -121 % ((param1 - 36) / 62);
-          var3 = uj.a(ci.a(param0, 2), -1);
+          var3 = uj.a(TextHotspotBounds.a(param0, 2), -1);
           if (var3 == null) {
             var3 = "";
           }

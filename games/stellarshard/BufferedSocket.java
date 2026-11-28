@@ -82,7 +82,7 @@ final class BufferedSocket implements Runnable {
           var12 = new Sprite(var17.field_v - 2 * var9, var9);
           var12.bindAsRenderTarget();
           var17.drawOpaque(-var9, 0);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           ImageProducerRasterBuffer.field_i = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "fh.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
@@ -285,7 +285,7 @@ final class BufferedSocket implements Runnable {
           var2_long = ih.correctedCurrentTimeMillis((byte) -98);
           if (hk.field_n != 0 &&
             hk.field_k < 0) {
-            var4_ref_fa = (fa) (uj.field_e.beginForward(-103));
+            var4_ref_fa = (fa) (TextLineMetrics.field_e.beginForward(-103));
             if (var4_ref_fa != null &&
               var2_long > var4_ref_fa.field_m) {
               var4_ref_fa.unlink(20);
@@ -296,8 +296,8 @@ final class BufferedSocket implements Runnable {
               }
               ld.field_E = t.field_e;
               t.field_e = InteractiveWidget.field_y;
-              InteractiveWidget.field_y = ja.field_t;
-              ja.field_t = var4_ref_fa.field_o;
+              InteractiveWidget.field_y = TextHotspotBounds.field_t;
+              TextHotspotBounds.field_t = var4_ref_fa.field_o;
               return true;
             }
           }
@@ -320,8 +320,8 @@ final class BufferedSocket implements Runnable {
             if (hk.field_n == 0) {
               ld.field_E = t.field_e;
               t.field_e = InteractiveWidget.field_y;
-              InteractiveWidget.field_y = ja.field_t;
-              ja.field_t = hk.field_k;
+              InteractiveWidget.field_y = TextHotspotBounds.field_t;
+              TextHotspotBounds.field_t = hk.field_k;
               hk.field_k = -1;
               return true;
             }
@@ -336,7 +336,7 @@ final class BufferedSocket implements Runnable {
             for (var6 = 0; ue.field_b > var6; var6++) {
               var5.field_l[var6] = EditableTextField.field_N.payload[var6];
             }
-            uj.field_e.addLast(-41, var5);
+            TextLineMetrics.field_e.addLast(-41, var5);
             hk.field_k = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

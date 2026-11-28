@@ -56,7 +56,7 @@ final class pda extends DualLinkNode {
               }
             }
           } else {
-            this.field_r = fda.a(~param1, '<', param0.readString(-125));
+            this.field_r = RemoveDefeatedCreatureEffect.a(~param1, '<', param0.readString(-125));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

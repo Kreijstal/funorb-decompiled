@@ -69,7 +69,7 @@ final class ck extends ud {
         kf.field_f = null;
         co.field_F = false;
         cl.field_o = param0;
-        rf.field_G = -1;
+        RichTextWidget.field_G = -1;
         DiskCacheWorker.field_b = -1;
     }
 

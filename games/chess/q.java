@@ -327,7 +327,7 @@ final class q {
           }
           var2Lifetime56 = vh.a((byte) 81, "MENU_TEXT_KNIGHT");
           if (var2Lifetime56 != null) {
-            se.field_Z = ad.a(-29410, var2Lifetime56);
+            RichTextWidget.field_Z = ad.a(-29410, var2Lifetime56);
           }
           var2Lifetime57 = vh.a((byte) 112, "MENU_TEXT_BISHOP");
           if (null != var2Lifetime57) {
@@ -675,7 +675,7 @@ final class q {
           if (stackIn_36_0.field_L != 0) {
             GzipInflater.field_h = new pc(bj.field_jb.field_U, bj.field_jb.field_wb, bj.field_jb.field_M, bj.field_jb.field_pb, param3, ki.field_P, dc.field_s, SectorCacheStore.field_b, EditableTextField.field_P, kj.field_g, sj.field_k, (String) null, 0L);
           }
-          var4 = fj.a(BirthDateValidator.field_g, param1, fe.field_g, param0 ^ -6836);
+          var4 = TextLineMetrics.a(BirthDateValidator.field_g, param1, fe.field_g, param0 ^ -6836);
           if (var4 != null) {
             ce.a(var4, -90);
           }

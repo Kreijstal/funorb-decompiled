@@ -201,7 +201,7 @@ final class km extends sd {
             var17 = -qh.field_e + var15;
             var18 = var12 * var16;
             var19 = var16 * var11_int;
-            for (var20 = pk.field_m; cn.field_r > var20; var20 += 4) {
+            for (var20 = pk.field_m; DefaultTextWidgetRenderer.field_r > var20; var20 += 4) {
               var21 = -m.field_q + var20;
               var22 = var20 - ni.field_f;
               var23 = var18 + var11_int * var21 >> 2;

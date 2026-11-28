@@ -74,7 +74,7 @@ final class jl extends jc {
                   }
                   if (var5 >= 2 &&
                     !param2) {
-                    stackIn_31_0 = fd.field_p;
+                    stackIn_31_0 = DefaultTextWidgetRenderer.field_p;
                     return stackIn_31_0;
                   }
                 }
@@ -119,8 +119,8 @@ final class jl extends jc {
           if (param0 > -33) {
             return;
           }
-          for (var2 = 1; var2 < rd.field_t; var2++) {
-            for (var3 = rd.field_t - 1; var2 <= var3; var3--) {
+          for (var2 = 1; var2 < RichTextLayout.field_t; var2++) {
+            for (var3 = RichTextLayout.field_t - 1; var2 <= var3; var3--) {
               if (SecondaryNodeDeque.a(false, p.field_a[var3].field_a, 320, 240, p.field_a[var3].field_g) > SecondaryNodeDeque.a(false, p.field_a[-1 + var3].field_a, 320, 240, p.field_a[-1 + var3].field_g)) {
                 var5 = p.field_a[var3];
                 var1 = var5;

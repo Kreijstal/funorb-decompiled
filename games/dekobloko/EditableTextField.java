@@ -80,30 +80,30 @@ class EditableTextField extends InteractiveComponent {
         int integerLocal4;
         int integerLocal5;
         int integerLocal6;
-        CallbackContract012 callbackContract012Local7;
+        TextWidgetRenderer callbackContract012Local7;
         integerLocal6 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         if (!this.booleanState0164) {
           this.integerState0103 = 0;
           this.integerState0105 = 0;
           return;
         }
-        if (!(this.callbackContract004State0006 instanceof CallbackContract012)) {
+        if (!(this.callbackContract004State0006 instanceof TextWidgetRenderer)) {
           return;
         }
-        callbackContract012Local7 = (CallbackContract012) ((Object) this.callbackContract004State0006);
-        textLayoutLocal1 = callbackContract012Local7.computeTextLayout0011((UiComponent) (this), (byte) 118);
-        integerLocal2 = textLayoutLocal1.computeInteger0235(false);
+        callbackContract012Local7 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
+        textLayoutLocal1 = callbackContract012Local7.getTextLayout((UiComponent) (this), (byte) 118);
+        integerLocal2 = textLayoutLocal1.getMaxLineRightX(false);
         if (integerArgument1 != -17122) {
           this.integerState0717 = -109;
         }
-        integerLocal3 = callbackContract012Local7.computeInteger0018(false, (UiComponent) (this));
-        integerLocal4 = callbackContract012Local7.computeInteger0001((byte) -106) >> 1;
+        integerLocal3 = callbackContract012Local7.getTextAreaWidth(false, (UiComponent) (this));
+        integerLocal4 = callbackContract012Local7.getFontLineHeight((byte) -106) >> 1;
         if (integerLocal2 < integerLocal3 - integerLocal4) {
           this.integerState0105 = 0;
           this.integerState0103 = 0;
           return;
         }
-        integerLocal5 = this.integerState0103 + textLayoutLocal1.computeInteger0229((byte) -94, this.integerState0718);
+        integerLocal5 = this.integerState0103 + textLayoutLocal1.getXForTextOffset((byte) -94, this.integerState0718);
         if (integerLocal3 - integerLocal4 < integerLocal5) {
           this.integerState0103 = this.integerState0103 + (-integerLocal4 + integerLocal3) - integerLocal5;
         } else {
@@ -172,10 +172,10 @@ class EditableTextField extends InteractiveComponent {
           if (!super.computeBoolean0056(integerArgument1, integerArgument2, uiComponentArgument3, integerArgument4, integerArgument5, integerArgument6, byteArgument7)) {
             return false;
           }
-          if (!(this.callbackContract004State0006 instanceof CallbackContract012)) {
+          if (!(this.callbackContract004State0006 instanceof TextWidgetRenderer)) {
             return false;
           }
-          integerLocal8 = ((CallbackContract012) ((Object) this.callbackContract004State0006)).computeInteger0006(integerArgument6, -257, (UiComponent) (this), integerArgument5, MixedSupport101.integerState0590, HashNode.integerState0069);
+          integerLocal8 = ((TextWidgetRenderer) ((Object) this.callbackContract004State0006)).findTextOffsetAtScreenPosition(integerArgument6, -257, (UiComponent) (this), integerArgument5, MixedSupport101.integerState0590, HashNode.integerState0069);
           stackIntegerLocal1 = byteArgument7 ^ 30294;
           if (integerLocal8 == -1) {
             stackIntegerLocal2 = 0;
@@ -317,7 +317,7 @@ class EditableTextField extends InteractiveComponent {
     }
 
     final void performAction0162(int integerArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        CallbackContract012 callbackContract012Local1 = null;
+        TextWidgetRenderer callbackContract012Local1 = null;
         long longLocal2 = 0L;
         if (integerArgument2 > -103) {
           UiComponent uiComponentLocal3 = (UiComponent) null;
@@ -326,21 +326,21 @@ class EditableTextField extends InteractiveComponent {
         if (null != this.callbackContract004State0006 &&
           integerArgument3 == 0) {
           this.callbackContract004State0006.performAction0017(this.booleanState0035, integerArgument1, integerArgument4, (byte) -110, (UiComponent) (this));
-          if (this.callbackContract004State0006 instanceof CallbackContract012) {
-            callbackContract012Local1 = (CallbackContract012) ((Object) this.callbackContract004State0006);
+          if (this.callbackContract004State0006 instanceof TextWidgetRenderer) {
+            callbackContract012Local1 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
             if (this.integerState0717 != this.integerState0718) {
-              callbackContract012Local1.performAction0003(this.integerState0717, this.integerState0718, integerArgument4, integerArgument1, -123, (UiComponent) (this));
+              callbackContract012Local1.paintSelection(this.integerState0717, this.integerState0718, integerArgument4, integerArgument1, -123, (UiComponent) (this));
             }
             longLocal2 = MixedSupport062.correctedCurrentTimeMillis(4);
             if ((longLocal2 - this.longState0043) % 1000L < 500L) {
-              callbackContract012Local1.performAction0014((UiComponent) (this), this.integerState0718, 1, integerArgument1, integerArgument4);
+              callbackContract012Local1.paintCaret((UiComponent) (this), this.integerState0718, 1, integerArgument1, integerArgument4);
             }
           }
         }
     }
 
     void performAction0218(UiComponent uiComponentArgument1, int integerArgument2, int integerArgument3, int integerArgument4) {
-        CallbackContract012 callbackContract012Local1 = null;
+        TextWidgetRenderer callbackContract012Local1 = null;
         int integerLocal2 = 0;
         try {
           super.performAction0218(uiComponentArgument1, 94, integerArgument3, integerArgument4);
@@ -349,9 +349,9 @@ class EditableTextField extends InteractiveComponent {
           }
           this.scrollCaretIntoView(-17122);
           if (this.integerState0109 == 1) {
-            if (this.callbackContract004State0006 instanceof CallbackContract012) {
-              callbackContract012Local1 = (CallbackContract012) ((Object) this.callbackContract004State0006);
-              integerLocal2 = callbackContract012Local1.computeInteger0006(integerArgument4, -257, (UiComponent) (this), integerArgument3, MixedSupport101.integerState0590, HashNode.integerState0069);
+            if (this.callbackContract004State0006 instanceof TextWidgetRenderer) {
+              callbackContract012Local1 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
+              integerLocal2 = callbackContract012Local1.findTextOffsetAtScreenPosition(integerArgument4, -257, (UiComponent) (this), integerArgument3, MixedSupport101.integerState0590, HashNode.integerState0069);
               if (integerLocal2 != -1) {
                 if (this.booleanState0165 && this.integerState0715 > integerLocal2 &&
                   this.integerState0717 < integerLocal2) {

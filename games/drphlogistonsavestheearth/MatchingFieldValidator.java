@@ -73,7 +73,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
     }
 
     final static String e(byte param0) {
-        if (hg.field_ub == fk.field_q) {
+        if (hg.field_ub == TextHotspotBounds.field_q) {
           return bg.field_q;
         }
         if (!ib.field_f.a(false)) {

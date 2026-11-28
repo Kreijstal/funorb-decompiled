@@ -58,7 +58,7 @@ class bd extends oh implements WidgetActivationListener {
               if (this.field_pb) {
                 stackIn_13_1 = uh.field_o;
               } else {
-                stackIn_13_1 = mi.field_k;
+                stackIn_13_1 = TextHotspotBounds.field_k;
               }
               ((bm) (Object) stackIn_12_0).a(stackIn_13_1, -23493, -1);
             }

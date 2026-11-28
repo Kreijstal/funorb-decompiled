@@ -39,7 +39,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_8_0 = kg.field_T;
             return stackIn_8_0;
           }
-          if (ah.a(var5, (byte) -29)) {
+          if (RichTextLayout.a(var5, (byte) -29)) {
             stackIn_12_0 = q.field_a;
             return stackIn_12_0;
           }
@@ -82,16 +82,16 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static hl d(boolean param0) {
+    final static DefaultTextWidgetRenderer d(boolean param0) {
         if (!param0) {
           if (ic.field_e == null) {
-            ic.field_e = new hl(rc.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, rc.field_a.field_C, -1, 2147483647, true);
+            ic.field_e = new DefaultTextWidgetRenderer(rc.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, rc.field_a.field_C, -1, 2147483647, true);
           }
           return ic.field_e;
         }
         PasswordValidator.d(false);
         if (ic.field_e == null) {
-          ic.field_e = new hl(rc.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, rc.field_a.field_C, -1, 2147483647, true);
+          ic.field_e = new DefaultTextWidgetRenderer(rc.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, rc.field_a.field_C, -1, 2147483647, true);
         }
         return ic.field_e;
     }

@@ -12,7 +12,7 @@ class UiComponent extends IntrusiveNode {
     ComponentLayout field_p;
     int field_r;
     static bi field_l;
-    ne field_w;
+    TextLayout field_w;
     int field_n;
     static String field_o;
     int field_z;
@@ -309,7 +309,7 @@ class UiComponent extends IntrusiveNode {
                   if (param1 < 38) {
                     return false;
                   }
-                  df.a(0, this.g(4));
+                  df.a(0, this.getTooltipText(4));
                   return param2;
                 }
               }
@@ -343,7 +343,7 @@ class UiComponent extends IntrusiveNode {
                     if (param1 < 38) {
                       return false;
                     }
-                    df.a(0, this.g(4));
+                    df.a(0, this.getTooltipText(4));
                     return param2;
                   }
                 }
@@ -353,7 +353,7 @@ class UiComponent extends IntrusiveNode {
                 if (param1 < 38) {
                   return false;
                 }
-                df.a(0, this.g(4));
+                df.a(0, this.getTooltipText(4));
                 return param2;
               }
               if (SpriteGeometry.field_u == 0) {
@@ -361,7 +361,7 @@ class UiComponent extends IntrusiveNode {
                 if (param1 < 38) {
                   return false;
                 }
-                df.a(0, this.g(4));
+                df.a(0, this.getTooltipText(4));
                 return param2;
               }
               this.a((byte) 5, this, param3, ag.field_f, kc.field_b, param0);
@@ -381,7 +381,7 @@ class UiComponent extends IntrusiveNode {
               if (param1 < 38) {
                 return false;
               }
-              df.a(0, this.g(4));
+              df.a(0, this.getTooltipText(4));
               return param2;
             }
             if (jk.field_r != 0) {
@@ -396,7 +396,7 @@ class UiComponent extends IntrusiveNode {
                 if (param1 < 38) {
                   return false;
                 }
-                df.a(0, this.g(4));
+                df.a(0, this.getTooltipText(4));
                 return param2;
               }
               this.a((byte) 5, this, param3, ag.field_f, kc.field_b, param0);
@@ -415,7 +415,7 @@ class UiComponent extends IntrusiveNode {
                 if (param1 < 38) {
                   return false;
                 }
-                df.a(0, this.g(4));
+                df.a(0, this.getTooltipText(4));
                 return param2;
               }
             }
@@ -425,7 +425,7 @@ class UiComponent extends IntrusiveNode {
         if (param1 < 38) {
           return false;
         }
-        df.a(0, this.g(4));
+        df.a(0, this.getTooltipText(4));
         return param2;
     }
 
@@ -455,7 +455,7 @@ class UiComponent extends IntrusiveNode {
           }
           break;
         }
-        var4 = new RgbSprite(e.field_e, uf.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], var3);
+        var4 = new RgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[0], b.field_b[0], NameSuggestionsPanel.field_H[0], ob.field_a[0], var3);
         EditableTextField.o(-28210);
         if (param0 > 75) {
           return var4;
@@ -464,7 +464,7 @@ class UiComponent extends IntrusiveNode {
         return var4;
     }
 
-    String g(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 4) {
           this.a('P', (byte) 48, 41);
           if (this.field_x) {
@@ -559,7 +559,7 @@ class UiComponent extends IntrusiveNode {
     final void b(boolean param0) {
         this.a(this.field_y, this.field_u, this.field_z, this.field_j, 80);
         if (param0) {
-          this.g(-71);
+          this.getTooltipText(-71);
         }
     }
 
@@ -739,17 +739,17 @@ class UiComponent extends IntrusiveNode {
     }
 
     UiComponent(String param0, ComponentLayout param1, kd param2) {
-        eg var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_n = 0;
         this.field_r = 0;
         try {
           this.field_s = param2;
           this.field_i = param0;
           this.field_p = param1;
-          if (this.field_p instanceof eg) {
-            var4 = (eg) ((Object) this.field_p);
-            this.field_u = var4.a(-110, this);
-            this.field_j = var4.b(-101, this);
+          if (this.field_p instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_p);
+            this.field_u = var4.getPreferredWidth(-110, this);
+            this.field_j = var4.getPreferredHeight(-101, this);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

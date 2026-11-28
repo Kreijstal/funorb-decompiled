@@ -57,12 +57,12 @@ final class ok {
         String var2Lifetime1;
         if (param0 > 73) {
           var2 = (String) null;
-          le.a(-35, "", (String) null);
+          TextLineMetrics.a(-35, "", (String) null);
           return;
         }
         field_a = (jh) null;
         var2Lifetime1 = (String) null;
-        le.a(-35, "", (String) null);
+        TextLineMetrics.a(-35, "", (String) null);
     }
 
     public static void clearStaticReferences(int param0) {

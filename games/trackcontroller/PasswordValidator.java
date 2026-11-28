@@ -63,10 +63,10 @@ final class PasswordValidator extends TextFieldValidator {
         if (param0 != 95) {
           return;
         }
-        if (cj.field_o != null) {
-          var1 = cj.field_o;
+        if (RichTextLayout.field_o != null) {
+          var1 = RichTextLayout.field_o;
           synchronized (var1) {
-            cj.field_o = null;
+            RichTextLayout.field_o = null;
           }
         }
     }
@@ -196,7 +196,7 @@ final class PasswordValidator extends TextFieldValidator {
           if (param2 <= 77) {
             field_m = (aa) null;
           }
-          var3 = rb.a(22479, param1);
+          var3 = TextLayout.a(22479, param1);
           stackIn_7_0 = (param0.indexOf(param1) != -1) || (-1 != param0.indexOf(var3));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

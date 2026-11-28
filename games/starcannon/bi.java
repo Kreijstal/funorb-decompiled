@@ -26,7 +26,7 @@ final class bi {
               ah.field_c = ec.field_a;
             } else {
               while (ec.field_a != ah.field_c) {
-                var2 = ab.field_A[ec.field_a];
+                var2 = RichTextWidget.field_A[ec.field_a];
                 ec.field_a = 127 & 1 + ec.field_a;
                 if (var2 < 0) {
                   wc.field_c[~var2] = false;

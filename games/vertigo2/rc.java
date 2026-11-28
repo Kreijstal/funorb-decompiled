@@ -35,20 +35,20 @@ final class rc {
         if (param0 != -32163) {
           return;
         }
-        int var5 = 110 + va.field_s.field_j;
+        int var5 = 110 + DefaultTextWidgetRenderer.field_s.field_j;
         if (0 == jq.field_b) {
-          va.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
-          va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
           var13.drawParagraph(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           mp.field_a.draw(60, 290);
           SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
           var13.drawParagraph(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
           var13.drawParagraph(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
-          va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+          DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
           return;
         }
         if (1 == jq.field_b) {
-          va.field_s.a(16777215, (byte) 61, -1, 40, uq.field_b, var5);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 61, -1, 40, uq.field_b, var5);
           var6 = 30;
           var7 = var3 + 130 + 2 * var4;
           var8 = IntrusiveNode.field_i[0].field_y;
@@ -62,13 +62,13 @@ final class rc {
           var10 += 3;
           LevelSimulation.drawTutorialEntries(var10, var8, var2, MenuSelectionCursor.field_j, var11, var13, 225, var6, aa.field_Sb, var7, 128, IntrusiveNode.field_i, var9);
           if (var12 == 0) {
-            va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+            DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
             return;
           }
         }
         if (jq.field_b != 2) {
           if (jq.field_b == 3) {
-            va.field_s.a(16777215, (byte) 81, -1, 40, CrossfadingMidiPcmStream.field_A, var5);
+            DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 81, -1, 40, CrossfadingMidiPcmStream.field_A, var5);
             var6Lifetime1 = 30;
             var7Lifetime1 = 130 + var3 + var4 * 2;
             var8Lifetime1 = vj.field_g[0].field_y;
@@ -82,26 +82,26 @@ final class rc {
             SoftwareRasterizer.drawVerticalLineAlpha(320, 134 + var3, 320 - (80 + (-4 - var3)), 16777215, 100);
             LevelSimulation.drawTutorialEntries(var10Lifetime1, var8Lifetime1, var2, ag.field_a, var11Lifetime1, var13, 225, var6Lifetime1, LevelRenderable.field_e, var7Lifetime1, param0 + 32291, vj.field_g, var9Lifetime1);
             if (var12 == 0) {
-              va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+              DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
               return;
             }
           }
           if (jq.field_b != 4) {
-            va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+            DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
             return;
           }
-          va.field_s.a(16777215, (byte) 98, -1, 40, en.field_b, var5);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 98, -1, 40, en.field_b, var5);
           var13.drawParagraph(ue.field_K, 40, var4 * 1 + (130 + var3), 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
-          va.field_s.a(15637810, (byte) 109, -1, 40, bq.field_H, var5 + 76);
+          DefaultTextWidgetRenderer.field_s.a(15637810, (byte) 109, -1, 40, bq.field_H, var5 + 76);
           var13.drawParagraph(th.field_k, 40, var4 / 2 + var5 + 76, 540, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
-          va.field_s.a(15637810, (byte) 67, -1, 40, AccountNameAvailabilityValidator.field_r, var5 + 156);
+          DefaultTextWidgetRenderer.field_s.a(15637810, (byte) 67, -1, 40, AccountNameAvailabilityValidator.field_r, var5 + 156);
           var13.drawParagraph(nh.field_i, 40, var4 / 2 + var5 + 156, 540, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
           if (var12 == 0) {
-            va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+            DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
             return;
           }
         }
-        va.field_s.a(16777215, (byte) 71, -1, 40, fh.field_v, var5);
+        DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 71, -1, 40, fh.field_v, var5);
         var6Lifetime2 = 30;
         var7Lifetime2 = var3 + 130 + 2 * var4;
         var8Lifetime2 = IntrusiveNode.field_i[0].field_y;
@@ -115,17 +115,17 @@ final class rc {
         var6Lifetime2 += 300;
         LevelSimulation.drawTutorialEntries(var10Lifetime2, var8Lifetime2, var2, MenuSelectionCursor.field_j, var11Lifetime2, var13, 225, var6Lifetime2, aa.field_Sb, var7Lifetime2, param0 + 32291, IntrusiveNode.field_i, var9Lifetime2);
         if (var12 == 0) {
-          va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+          DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
           return;
         }
-        va.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
-        va.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
+        DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 60, -1, 40, TextureOperator.field_w, var5);
+        DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 84, -1, 410, ao.field_R, var5);
         var13.drawParagraph(sd.field_K, 40, var4 * 1 + (var3 + 130), 350, 225, 16777215, -1, 0, 0, var13.field_M + var13.field_z);
         mp.field_a.draw(60, 290);
         SoftwareRasterizer.drawVerticalLineAlpha(390, var3 + 130 + 4, 324 - (-var3 + 80), 16777215, 100);
         var13.drawParagraph(pp.field_w, 410, 130 + (var3 + 1 * var4), 190, 225, 16777215, -1, 0, 0, var13.field_z + var13.field_M);
         var13.drawParagraph(op.field_b, 410, var4 * 1 + var3 + 130, 190, 225, 16777215, -1, 2, 0, var13.field_z + var13.field_M);
-        va.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
+        DefaultTextWidgetRenderer.field_s.a(590, param0 + 32132, 16777215, var5, 1, ej.a((byte) 118, 1 + jq.field_b, 5));
     }
 
     public static void clearStaticReferences(boolean param0) {

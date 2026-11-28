@@ -13,7 +13,7 @@ class uc extends re implements WidgetActivationListener {
     private boolean field_db;
     private boolean field_ib;
     static String field_mb;
-    static ik field_kb;
+    static DefaultTextWidgetRenderer field_kb;
 
     final boolean a(char param0, int param1, w param2, byte param3) {
         int var5_int = 0;
@@ -152,7 +152,7 @@ class uc extends re implements WidgetActivationListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!this.field_ob) {
-            pd.a("tochangedisplayname.ws", -109, kk.c(-14047));
+            pd.a("tochangedisplayname.ws", -109, RichTextLayout.c(-14047));
           } else {
             ni.a(56, 3);
             this.g(true);

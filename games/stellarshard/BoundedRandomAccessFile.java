@@ -190,7 +190,7 @@ final class BoundedRandomAccessFile {
           var4 = 1;
           var6 = 1;
         }
-        pd.field_u = SocketConnector.a(-119, var4 * var2, var6 * var2);
+        RichTextLayout.field_u = SocketConnector.a(-119, var4 * var2, var6 * var2);
     }
 
     final long length(int param0) throws IOException {

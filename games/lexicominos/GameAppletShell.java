@@ -86,13 +86,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               }
               ga.field_c = 0;
               bk.field_d = param3;
-              wl.field_m = param3;
+              TextHotspotBounds.field_m = param3;
               c.field_j = this;
               ef.field_e = 0;
               AccountCreationResultPanel.field_sb = param2;
               fi.field_j = param2;
               AccountRequestState.field_f = param0;
-              tg.field_i = kk.c(-14047);
+              tg.field_i = RichTextLayout.c(-14047);
               dupTemp$0 = new PlatformTaskDispatcher(param5, param6, param1, true);
               jh.field_a = dupTemp$0;
               TriangleMesh.field_n = dupTemp$0;
@@ -176,7 +176,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               field_o = (RgbSprite[]) null;
             }
             try {
-              JavaScriptBridge.callWithoutArguments(true, kk.c(-14047), "loggedout");
+              JavaScriptBridge.callWithoutArguments(true, RichTextLayout.c(-14047), "loggedout");
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
@@ -317,7 +317,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                 if (fi.field_j > var2.width) {
                   return;
                 }
-                if (var2.height < wl.field_m) {
+                if (var2.height < TextHotspotBounds.field_m) {
                   return;
                 }
               }
@@ -617,7 +617,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (bc.a(false, (CharSequence) ((Object) var4)) &&
+                      if (RichTextWidget.a(false, (CharSequence) ((Object) var4)) &&
                         !(ArchiveRequest.a((byte) 117, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a("wrongjava", 68);
                         decompiledFrameRemainder3 = (var5 != 0);

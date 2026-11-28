@@ -32,7 +32,7 @@ final class BufferedRandomAccessFile {
 
     final static void b(int param0) {
         int var1 = -86 / ((4 - param0) / 52);
-        rd.field_k = new IntrusiveDeque();
+        RichTextLayout.field_k = new IntrusiveDeque();
     }
 
     final long length(byte param0) {

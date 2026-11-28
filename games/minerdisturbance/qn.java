@@ -50,7 +50,7 @@ final class qn extends InteractiveWidget {
         int var1 = -113 / ((param0 - 5) / 34);
     }
 
-    final String h(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != -27867) {
           qn.clearStaticReferences((byte) -1);
           if (this.field_x) {
@@ -127,7 +127,7 @@ final class qn extends InteractiveWidget {
           ha.field_d.drawAdditive(var5 - var15.field_x, var6 - var15.field_A, 256);
           return;
         }
-        if (bm.field_o == var8) {
+        if (RichTextLayout.field_o == var8) {
           var16 = AccountServiceResult.field_g[0];
           var9Lifetime1 = var16.field_x << 1;
           var10Lifetime1 = var16.field_A << 1;

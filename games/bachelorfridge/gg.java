@@ -29,7 +29,7 @@ final class gg {
             stackIn_7_0 = fp.field_f.stringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = jk.field_o.stringWidth(param2);
+          stackIn_5_0 = CreaturePoseAnimation.field_o.stringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

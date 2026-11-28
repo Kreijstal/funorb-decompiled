@@ -162,11 +162,11 @@ final class dk {
           field_a = 1;
         }
         int var3 = 1 << param1;
-        if (0 != (ui.field_g & var3)) {
+        if (0 != (TextHotspotBounds.field_g & var3)) {
           return;
         }
         kb.field_a = kb.field_a | var3;
-        ui.field_g = ui.field_g | var3;
+        TextHotspotBounds.field_g = TextHotspotBounds.field_g | var3;
         LoginPanel.field_F.addLast(1, new ab(param1));
         if (!PasswordValidator.field_k) {
           if (jh.b(767564065)) {

@@ -153,7 +153,7 @@ final class mc {
     }
 
     final void a(BitmapFont param0, int param1) {
-        va var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         mq var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -176,7 +176,7 @@ final class mc {
         mq var14Lifetime1;
         mq var14Lifetime2;
         try {
-          var17 = new va(param0, 2, 2, 2236962, 1, 1, 1, param0.field_M + (param0.field_z + 2));
+          var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_M + (param0.field_z + 2));
           this.field_h = (WidgetListener) ((Object) var17);
           var17.field_e = 16777215;
           var4 = new mq();

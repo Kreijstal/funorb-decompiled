@@ -129,8 +129,8 @@ final class kr {
     }
 
     final static void a(int param0) {
-        GameShell.field_x = va.field_s.a(1, sl.field_q[20]);
-        int var1 = va.field_s.a(1, sl.field_q[21]);
+        GameShell.field_x = DefaultTextWidgetRenderer.field_s.a(1, RichTextLayout.field_q[20]);
+        int var1 = DefaultTextWidgetRenderer.field_s.a(1, RichTextLayout.field_q[21]);
         if (!(GameShell.field_x >= var1)) {
           GameShell.field_x = var1;
         }

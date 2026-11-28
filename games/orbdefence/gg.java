@@ -117,7 +117,7 @@ final class gg extends ej implements WidgetActivationListener {
           var4.field_m = this.field_m;
           var4.field_r = 80;
           var4.field_s = 0;
-          var4.field_j = (td) ((Object) new jc(pc.field_bb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_j = (td) ((Object) new DefaultTextWidgetRenderer(pc.field_bb, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) 74);
           this.field_P = this.a(th.field_d, 6, (ag) (this));
           return;

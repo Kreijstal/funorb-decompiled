@@ -24,7 +24,7 @@ final class wk {
     }
 
     final static String a(boolean param0) {
-        if (kq.field_j == FridgeScreen.field_p) {
+        if (StopFloodEffect.field_j == FridgeScreen.field_p) {
           return UiWidget.field_i;
         }
         if (!param0) {

@@ -684,13 +684,13 @@ final class vg {
         if (param0 != 122) {
           this.g(-27, -43);
         }
-        this.field_j.a(-107, this.a(ol.field_b, 1448, nk.field_c), this.a(PacketBuffer.field_j, 1448, bk.field_a));
+        this.field_j.a(-107, this.a(TextLineMetrics.field_b, 1448, nk.field_c), this.a(PacketBuffer.field_j, 1448, bk.field_a));
         if (-1 != this.field_j.field_d) {
           this.a(true, this.field_j.field_d, true);
         }
         if (tg.field_d != 0) {
           this.field_h = nk.field_c;
-          this.field_d = ol.field_b;
+          this.field_d = TextLineMetrics.field_b;
         }
     }
 
@@ -1119,7 +1119,7 @@ final class vg {
             for (var8Lifetime1 = param5; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = lk.field_d[var8Lifetime1];
               var10Lifetime1 = lk.field_d[1 + var8Lifetime1];
-              if (h.a(var9Lifetime1, var10Lifetime1, -7079, param3)) {
+              if (DefaultTextWidgetRenderer.a(var9Lifetime1, var10Lifetime1, -7079, param3)) {
                 lk.field_d[var8Lifetime1] = var10Lifetime1;
                 lk.field_d[1 + var8Lifetime1] = var9Lifetime1;
               }
@@ -1187,13 +1187,13 @@ final class vg {
             if (!param0) {
               var11.drawString(var9, var15, var11.field_y + var5, var10, -1);
             } else {
-              le.field_A.drawString(var9, var15, var11.field_y + var5, var10, -1);
+              RichTextWidget.field_A.drawString(var9, var15, var11.field_y + var5, var10, -1);
             }
           } else if (!ResourceArchive.field_g[this.field_i]) {
             if (!param0) {
               var11.drawCentred(var9, var7 + var6 >> 1, var11.field_y + var5, var10, -1);
             } else {
-              le.field_A.drawCentred(var9, var6 + var7 >> 1, var5 + var11.field_y, var10, -1);
+              RichTextWidget.field_A.drawCentred(var9, var6 + var7 >> 1, var5 + var11.field_y, var10, -1);
             }
           } else {
             var12 = 16710412;
@@ -1226,7 +1226,7 @@ final class vg {
           var12 = 80 * var12 / 256;
           SoftwareRasterizer.drawRectangleOutline(var12 + (this.field_c - 1), 3 + var5, 3, -6 + fd.field_b[this.field_i], var10);
           if (param0) {
-            le.field_A.drawRightAligned(var9, this.field_c, var5 + var11.field_y, var10, -1);
+            RichTextWidget.field_A.drawRightAligned(var9, this.field_c, var5 + var11.field_y, var10, -1);
           } else {
             var11.drawRightAligned(var9, this.field_c, var5 + var11.field_y, var10, -1);
           }

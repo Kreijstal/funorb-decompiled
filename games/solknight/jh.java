@@ -250,7 +250,7 @@ final class jh {
             field_g = (BitmapFont) null;
           }
           cf.field_e = cf.field_e + 1;
-          PacketBuffer.field_j = le.field_f;
+          PacketBuffer.field_j = TextLineMetrics.field_f;
           BufferedSocket.field_m = c.field_J;
           ne.field_d = pe.field_n;
           pe.field_n = false;

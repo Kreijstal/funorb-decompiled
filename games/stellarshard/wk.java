@@ -14,7 +14,7 @@ final class wk {
         if (param0 < 74) {
           field_a = (ResourceArchive) null;
         }
-        return id.b(-4);
+        return DefaultTextWidgetRenderer.b(-4);
     }
 
     public static void clearStaticReferences(byte param0) {

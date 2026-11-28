@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends vd implements nk, WidgetActivationListener {
+final class te extends vd implements TextHotspotListener, WidgetActivationListener {
     static GameAppletShell field_E;
     static RgbSprite[] field_G;
     private AccountCreationResultPanel field_H;
-    private cj field_L;
+    private RichTextWidget field_L;
     static DisplayNameSelectionPanel field_M;
     static ResourceArchive field_J;
     static int field_K;
@@ -119,7 +119,7 @@ final class te extends vd implements nk, WidgetActivationListener {
         }
     }
 
-    public final void a(int param0, int param1, cj param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -162,7 +162,7 @@ final class te extends vd implements nk, WidgetActivationListener {
         super(0, 0, 288, 0, (nn) null);
         String var7 = null;
         int var3 = 0;
-        cn var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -171,8 +171,8 @@ final class te extends vd implements nk, WidgetActivationListener {
           this.field_I.field_h = (nn) ((Object) new ke());
           var7 = vg.a(new String[]{this.e((byte) -61), this.k(4897)}, 89, s.field_a);
           var3 = 20;
-          var4 = new cn(jd.field_s, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
-          this.field_L = new cj(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(jd.field_s, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
+          this.field_L = new RichTextWidget(var7, var4);
           this.field_L.field_i = "";
           this.field_L.a(-1, KeyboardInput.field_e, 0);
           this.field_L.a(-1, KeyboardInput.field_e, 1);

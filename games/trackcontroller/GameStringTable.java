@@ -153,7 +153,7 @@ final class GameStringTable extends IntrusiveNode {
           }
           var2Lifetime13 = DualLinkNode.a("hint_move_push", param0 ^ -522);
           if (null != var2Lifetime13) {
-            va.field_a = ta.a(32200, var2Lifetime13);
+            TextLineMetrics.field_a = ta.a(32200, var2Lifetime13);
           }
           var2Lifetime14 = DualLinkNode.a("hint_ditto", -523);
           if (param0 != 3) {

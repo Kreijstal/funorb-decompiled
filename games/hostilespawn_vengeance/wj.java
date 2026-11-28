@@ -12,7 +12,7 @@ final class wj extends InteractiveWidget {
     static RgbSprite field_L;
     static AccountServiceResult field_H;
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (this.field_u) {
           return this.field_I.getValidationMessage(-41);
         }
@@ -340,7 +340,7 @@ final class wj extends InteractiveWidget {
           if (param0 >= -22) {
             return;
           }
-          var5 = mm.field_m[0];
+          var5 = TextHotspotBounds.field_m[0];
           var6 = var5.field_j;
           var7 = var6.field_e;
           var8 = var6.field_g;

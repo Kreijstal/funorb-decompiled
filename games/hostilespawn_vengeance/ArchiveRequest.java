@@ -43,7 +43,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           try {
             try {
               var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, -120));
-              var4 = cj.a(var3, -84, ';');
+              var4 = RichTextWidget.a(var3, -84, ';');
               for (var5 = param2; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

@@ -75,7 +75,7 @@ abstract class GameClient extends AppletShell {
                             }
                             stackIn_35_0 = (var2 == 12);
                             var3 = vg.a(stackIn_35_0, 3904);
-                            vc.a(param0 ^ 1, var3);
+                            RichTextWidget.a(param0 ^ 1, var3);
                           }
                         } else {
                           bj.a(jc.field_g, (byte) -125, pe.field_d, DebouncedFieldValidator.field_e);
@@ -230,7 +230,7 @@ abstract class GameClient extends AppletShell {
                     if (cf.field_e != 5) {
                       ConfirmedEmailAvailabilityValidator.a(db.field_O, true, 256);
                     } else {
-                      ConfirmedEmailAvailabilityValidator.a(ui.field_k, true, 5);
+                      ConfirmedEmailAvailabilityValidator.a(TextHotspotBounds.field_k, true, 5);
                     }
                   } else {
                     ConfirmedEmailAvailabilityValidator.a(jl.field_e, true, 256);
@@ -264,7 +264,7 @@ abstract class GameClient extends AppletShell {
         }
         if (1 == sa.field_k) {
           if (Slime.field_a != 0) {
-            FullscreenFocusCanvas.field_a = fa.a((byte) -76, jd.field_g);
+            FullscreenFocusCanvas.field_a = fa.a((byte) -76, DefaultTextWidgetRenderer.field_g);
           }
           pa.field_i = jc.a(ne.field_n, false, 1, 0, true);
           kg.field_b = jc.a(mh.field_Y, false, 1, 0, true);
@@ -279,7 +279,7 @@ abstract class GameClient extends AppletShell {
               if (FullscreenFocusCanvas.field_a.tryLoadGroupByName("", false)) {
                 cg.a((byte) -99, FullscreenFocusCanvas.field_a);
                 FullscreenFocusCanvas.field_a = null;
-                vc.e((byte) -44);
+                RichTextWidget.e((byte) -44);
               }
             } else {
               FullscreenFocusCanvas.field_a = null;
@@ -317,7 +317,7 @@ abstract class GameClient extends AppletShell {
           ea.field_e = null;
           kg.field_b = null;
           BoundedRandomAccessFile.a((java.applet.Applet) (this), -122);
-          vc.e((byte) -44);
+          RichTextWidget.e((byte) -44);
           sa.field_k = 10;
         }
         if (sa.field_k == 10) {
@@ -444,7 +444,7 @@ abstract class GameClient extends AppletShell {
         lg.field_a = param0;
         ne.field_n = param1;
         mh.field_Y = param4;
-        jd.field_g = param7;
+        DefaultTextWidgetRenderer.field_g = param7;
         if (param5 != 8764) {
           this.h(-50);
         }

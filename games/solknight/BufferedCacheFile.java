@@ -241,43 +241,43 @@ final class BufferedCacheFile {
         int var3Lifetime1;
         var11 = SolKnight.field_L ? 1 : 0;
         try {
-          if (vk.field_p >= 10 &&
+          if (RichTextLayout.field_p >= 10 &&
             0 == (1 << kb.field_b & fa.field_f)) {
             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (SectorCacheStore.field_i >>> 11 << kb.field_b);
             fa.field_f = fa.field_f | 1 << kb.field_b;
             lc.field_h = lc.field_h | 1 << kb.field_b;
             var1_int = IterableNodeHashTable.countSetBits(fa.field_f & 255, 126);
-            vk.a(246, (byte) 89, 9);
+            RichTextLayout.a(246, (byte) 89, 9);
             if (var1_int == 4) {
-              vk.a(245, (byte) 89, 10);
+              RichTextLayout.a(245, (byte) 89, 10);
             }
             if (8 == var1_int) {
-              vk.a(244, (byte) 89, 11);
+              RichTextLayout.a(244, (byte) 89, 11);
             }
           }
-          if (25 <= vk.field_p &&
+          if (25 <= RichTextLayout.field_p &&
             0 == (1 << 8 + kb.field_b & fa.field_f)) {
             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (SectorCacheStore.field_i >>> 11 << kb.field_b + 8);
             fa.field_f = fa.field_f | 1 << kb.field_b + 8;
             lc.field_h = lc.field_h | 1 << kb.field_b + 8;
             var1_intLifetime1 = IterableNodeHashTable.countSetBits(fa.field_f & 65280, 127);
-            vk.a(243, (byte) 89, 12);
+            RichTextLayout.a(243, (byte) 89, 12);
             if (var1_intLifetime1 == 4) {
-              vk.a(242, (byte) 89, 13);
+              RichTextLayout.a(242, (byte) 89, 13);
             }
             if (var1_intLifetime1 == 8) {
-              vk.a(241, (byte) 89, 14);
+              RichTextLayout.a(241, (byte) 89, 14);
             }
           }
-          if (vk.field_p >= 50 &&
+          if (RichTextLayout.field_p >= 50 &&
             (fa.field_f & 65536) == 0) {
             lc.field_h = lc.field_h | 65536;
             fa.field_f = fa.field_f | 65536;
             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (SectorCacheStore.field_i >>> 11 << 16);
-            vk.a(240, (byte) 89, 15);
+            RichTextLayout.a(240, (byte) 89, 15);
           }
-          if (vk.field_p > ImageProducerRasterBuffer.field_m) {
-            ImageProducerRasterBuffer.field_m = vk.field_p;
+          if (RichTextLayout.field_p > ImageProducerRasterBuffer.field_m) {
+            ImageProducerRasterBuffer.field_m = RichTextLayout.field_p;
           }
           var1_intLifetime2 = 0;
           if (kf.field_G != null) {
@@ -318,7 +318,7 @@ final class BufferedCacheFile {
                 PacketBuffer.a(true, 6, -128);
                 pk.a((byte) -96, 5, false);
               }
-              vk.field_p = 0;
+              RichTextLayout.field_p = 0;
             }
           } else {
             if (FullscreenFocusCanvas.field_b > 0) {
@@ -336,7 +336,7 @@ final class BufferedCacheFile {
               7 > kb.field_b ||
               !(ia.field_hb <= 100)) {
               ia.field_hb = 0;
-              vk.field_p = 0;
+              RichTextLayout.field_p = 0;
             }
           }
           if (ProxyAuthenticationRequiredException.field_a < 0) {
@@ -346,7 +346,7 @@ final class BufferedCacheFile {
             pl.field_a = 0;
           }
           if (ProxyAuthenticationRequiredException.field_a < 128 &&
-            0 < vk.field_p) {
+            0 < RichTextLayout.field_p) {
             ProxyAuthenticationRequiredException.field_a = 128;
           }
           if (pl.field_a > 0) {
@@ -372,23 +372,23 @@ final class BufferedCacheFile {
           if (ci.field_ib < 128) {
             ci.field_ib = 128;
           }
-          if (vk.field_p >= 25 &&
+          if (RichTextLayout.field_p >= 25 &&
             SectorCacheStore.field_h < 2) {
             fg.field_a = 500;
             SectorCacheStore.field_h = 2;
             mb.a(param0, 1, 256);
           }
-          if (vk.field_p >= 10) {
+          if (RichTextLayout.field_p >= 10) {
             fg.field_a = 500;
           }
-          if (vk.field_p >= 10 &&
+          if (RichTextLayout.field_p >= 10 &&
             SectorCacheStore.field_h < 1) {
             fg.field_a = 1500;
             SectorCacheStore.field_h = 1;
             mb.a(param0, 0, 256);
           }
           if (pg.field_e) {
-            vk.field_p = 0;
+            RichTextLayout.field_p = 0;
           }
           if (pg.field_e &&
             kd.currentScreenIndex != -1 ||
@@ -553,7 +553,7 @@ final class BufferedCacheFile {
             if (DirectByteStorage.field_d > 0) {
               DirectByteStorage.field_d = DirectByteStorage.field_d - 1;
             }
-            vk.updateAsteroidsAndDestructionProgress((byte) -126);
+            RichTextLayout.updateAsteroidsAndDestructionProgress((byte) -126);
             if (pg.field_e &&
               DirectByteStorage.field_d > 0) {
               pg.field_e = false;
@@ -616,7 +616,7 @@ final class BufferedCacheFile {
             PacketBuffer.a(false, 5, -127);
             lc.field_p = lc.field_p + 1;
             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t - 1;
-            vk.field_p = 0;
+            RichTextLayout.field_p = 0;
             ImageProducerRasterBuffer.field_n = true;
             if (1 + kb.field_b < 8) {
               lk.field_b = GameKeyHandler.field_a[kb.field_b];

@@ -197,7 +197,7 @@ final class id implements Serializable {
         if (param0 != -2) {
           field_b = (String) null;
         }
-        var15 = mm.field_m[0].field_j;
+        var15 = TextHotspotBounds.field_m[0].field_j;
         var4 = var15.getClampedTileIndex(-4);
         vf.a(param0 - 83, var4);
         var5 = var15.field_g - 20;

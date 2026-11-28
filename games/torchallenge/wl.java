@@ -31,7 +31,7 @@ final class wl {
         String var8;
         String var9;
         var7 = TorChallenge.field_F ? 1 : 0;
-        if (bc.field_o != 13 &&
+        if (DefaultTextWidgetRenderer.field_o != 13 &&
           !cj.field_b) {
           if (!be.field_b) {
             var2 = ea.field_e;
@@ -45,10 +45,10 @@ final class wl {
           if (ub.field_i) {
             SoftwareRasterizer.saveClip(ArchiveRequest.field_w);
           }
-          ba.field_i.a(true, 18, true, (Sprite) null, 3, df.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+          ba.field_i.a(true, 18, true, (Sprite) null, 3, RichTextWidget.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
           NodeHashTableIterator.field_j = null;
-          ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
-          ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+          ba.field_i.a(true, 18, true, (Sprite) null, 6, RichTextWidget.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
+          ba.field_i.a(true, 18, true, (Sprite) null, 2, RichTextWidget.field_R, aa.field_g, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
           if (ub.field_i) {
             SoftwareRasterizer.restoreClip(ArchiveRequest.field_w);
           }
@@ -56,12 +56,12 @@ final class wl {
             this.c((byte) -13);
           }
           if (!ol.field_a) {
-            BufferedSocket.field_p.a(this.field_e, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, 0, 2657, BufferedSocket.field_p.field_u);
-            BufferedSocket.field_p.a((byte) -126, df.field_R, this.field_e);
-            lb.a(df.field_R, this.field_e, param0 ^ 119);
-            if (df.field_O) {
+            BufferedSocket.field_p.a(this.field_e, RichTextWidget.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, 0, 2657, BufferedSocket.field_p.field_u);
+            BufferedSocket.field_p.a((byte) -126, RichTextWidget.field_R, this.field_e);
+            lb.a(RichTextWidget.field_R, this.field_e, param0 ^ 119);
+            if (RichTextWidget.field_O) {
               qh.a(GameApplet.field_o, true);
-              df.field_O = false;
+              RichTextWidget.field_O = false;
             }
             if (!gh.field_x) {
               if (o.field_l <= 0) {
@@ -72,7 +72,7 @@ final class wl {
             } else {
               ByteStorage.a(0, 0, (byte) 55, true, 1);
             }
-            if (fa.field_g >= 2) {
+            if (RichTextLayout.field_g >= 2) {
               var8 = "FPS:" + oh.field_e;
               tf.field_x.drawRightAligned(var8, 636, 80, 0, -1);
               var3 = Runtime.getRuntime().totalMemory();
@@ -95,9 +95,9 @@ final class wl {
           }
           if (ol.field_a &&
             BufferedSocket.field_p != null) {
-            BufferedSocket.field_p.a(aa.field_g, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, BufferedSocket.field_p.type, 2657, BufferedSocket.field_p.field_u);
+            BufferedSocket.field_p.a(aa.field_g, RichTextWidget.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.y, BufferedSocket.field_p.x, BufferedSocket.field_p.type, 2657, BufferedSocket.field_p.field_u);
             BufferedSocket.field_p.b(false, false);
-            BufferedSocket.field_p.a((byte) -86, df.field_R, aa.field_g);
+            BufferedSocket.field_p.a((byte) -86, RichTextWidget.field_R, aa.field_g);
           }
           this.b((byte) 6);
           return;
@@ -401,7 +401,7 @@ final class wl {
         BufferedSocket.field_p.c((byte) 29, aa.field_g);
         if (0 < BufferedSocket.field_p.field_db) {
           ub.field_i = false;
-          df.field_R = 32 * BufferedSocket.field_p.x - (-(32 * BufferedSocket.field_p.field_B / 256) - 32);
+          RichTextWidget.field_R = 32 * BufferedSocket.field_p.x - (-(32 * BufferedSocket.field_p.field_B / 256) - 32);
           aa.field_g = -32 + (-240 + (64 * BufferedSocket.field_p.field_u / 256 + BufferedSocket.field_p.y * 64));
           if (aa.field_g < 0) {
             aa.field_g = 0;
@@ -473,7 +473,7 @@ final class wl {
         }
         if (cj.field_b) {
           PcmOutputWorker.activeScreenId = 13;
-          bc.field_o = 13;
+          DefaultTextWidgetRenderer.field_o = 13;
           cj.field_b = false;
         }
     }
@@ -570,7 +570,7 @@ final class wl {
         kk.field_d = cd.field_b;
         if (!(cd.field_b <= aa.field_f >> 1)) {
           PcmOutputWorker.activeScreenId = 10;
-          bc.field_o = 10;
+          DefaultTextWidgetRenderer.field_o = 10;
           kk.field_d = kk.field_d - (aa.field_f >> 1);
           fh.field_b = -1;
         }
@@ -614,7 +614,7 @@ final class wl {
         this.field_g = false;
         this.field_e = 0;
         this.field_a = 0;
-        stackIn_3_1 = !(fa.field_g < 2);
+        stackIn_3_1 = !(RichTextLayout.field_g < 2);
         this.field_f = stackIn_3_1;
         ae.field_z = 16;
         DebouncedFieldValidator.field_b = param2;
@@ -666,7 +666,7 @@ final class wl {
         }
         if (BufferedSocket.field_p != null) {
           aa.field_g = -32 + 64 * BufferedSocket.field_p.y + BufferedSocket.field_p.field_u * 64 / 256 - 240;
-          df.field_R = 32 * BufferedSocket.field_p.field_B / 256 + 32 * BufferedSocket.field_p.x + 32;
+          RichTextWidget.field_R = 32 * BufferedSocket.field_p.field_B / 256 + 32 * BufferedSocket.field_p.x + 32;
           if (aa.field_g < 0) {
             aa.field_g = 0;
           }
@@ -684,7 +684,7 @@ final class wl {
         }
         qh.a(0, true);
         eh.field_l = 0;
-        df.field_O = false;
+        RichTextWidget.field_O = false;
         GameApplet.field_o = 0;
         if (GameClientBase.p(-67)) {
           jj.field_c = 0;

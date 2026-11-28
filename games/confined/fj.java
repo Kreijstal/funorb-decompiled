@@ -12,7 +12,7 @@ class fj extends IntrusiveNode {
     static ci field_x;
     int field_z;
     int field_y;
-    sc field_p;
+    TextLayout field_p;
     int field_m;
     boolean field_w;
     int field_o;
@@ -33,7 +33,7 @@ class fj extends IntrusiveNode {
             this.a(-49, 87, 70, 119, -98);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "fj.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "fj.K(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -100,7 +100,7 @@ class fj extends IntrusiveNode {
             }
           }
           if (param1 != 11579568) {
-            this.f((byte) -73);
+            this.getTooltipText((byte) -73);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,7 +113,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -361,7 +361,7 @@ class fj extends IntrusiveNode {
             pn.field_a.drawRightAligned(wd.field_e + ": ", 400, 12 + var2_intLifetime3, 16777215, -1);
             pn.field_a.drawString("20000, 40000, 60000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
             var2_intLifetime3 += 18;
-            pn.field_a.drawRightAligned(na.field_Q + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
+            pn.field_a.drawRightAligned(RichTextWidget.field_Q + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
             pn.field_a.drawString("25000, 45000, 65000, ...", 400, var2_intLifetime3 + 12, 4243584, -1);
             var2_intLifetime3 += 18;
             pn.field_a.drawRightAligned(km.field_a + ": ", 400, var2_intLifetime3 + 12, 16777215, -1);
@@ -383,7 +383,7 @@ class fj extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "fj.AB(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "fj.AB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -412,7 +412,7 @@ class fj extends IntrusiveNode {
         }
     }
 
-    String f(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 > -82) {
           return (String) null;
         }
@@ -442,7 +442,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -468,7 +468,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -527,7 +527,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -604,7 +604,7 @@ class fj extends IntrusiveNode {
           }
         }
         i.field_w = Confined.field_I;
-        CipherPacketBuffer.a((byte) 122, this.f((byte) -108));
+        CipherPacketBuffer.a((byte) 122, this.getTooltipText((byte) -108));
         if (!param0) {
           this.field_B = (String) null;
         }
@@ -652,7 +652,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -726,7 +726,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -750,7 +750,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -788,7 +788,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -799,7 +799,7 @@ class fj extends IntrusiveNode {
 
     fj(String param0, fe param1, uk param2) {
         RuntimeException runtimeException = null;
-        pj var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -814,10 +814,10 @@ class fj extends IntrusiveNode {
           this.field_B = param0;
           this.field_t = param2;
           this.field_n = param1;
-          if (this.field_n instanceof pj) {
-            var4 = (pj) ((Object) this.field_n);
-            this.field_F = var4.a((byte) 118, this);
-            this.field_z = var4.a(-1870081887, this);
+          if (this.field_n instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_n);
+            this.field_F = var4.getPreferredWidth((byte) 118, this);
+            this.field_z = var4.getPreferredHeight(-1870081887, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -842,7 +842,7 @@ class fj extends IntrusiveNode {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -857,7 +857,7 @@ class fj extends IntrusiveNode {
           this.field_n = param4;
           this.field_F = param2;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "fj.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 

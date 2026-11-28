@@ -30,7 +30,7 @@ final class wk {
         pk.field_k = stackIn_3_0;
         lb.field_b = 127 & var3;
         ja.field_c = var8.readUnsignedByte(32270);
-        pm.field_c = var8.c(10818);
+        TextLineMetrics.field_c = var8.c(10818);
         if (!param0) {
           return (ln) null;
         }
@@ -121,7 +121,7 @@ final class wk {
         RuntimeException decompiledCaughtException = null;
         var4 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var2 = mm.field_m[0];
+          var2 = TextHotspotBounds.field_m[0];
           for (var3 = -10; var3 <= 10; var3 += 10) {
             var5 = jn.field_F[ib.field_c];
             var5.field_i = 16;

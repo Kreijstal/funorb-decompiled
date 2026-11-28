@@ -270,7 +270,7 @@ final class g {
             if (64 != param2.length) {
               throw new RuntimeException();
             }
-            this.field_l = jd.a(param0, 0, param0.length, 0);
+            this.field_l = DefaultTextWidgetRenderer.a(param0, 0, param0.length, 0);
             for (var4_int = 0; var4_int < 64; var4_int++) {
               if (param2[var4_int] != this.field_l[var4_int]) {
                 throw new RuntimeException();

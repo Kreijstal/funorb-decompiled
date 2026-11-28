@@ -22,7 +22,7 @@ final class mo {
         RuntimeException decompiledCaughtException = null;
         var3 = DungeonAssault.field_K;
         try {
-          var4 = (oe) (fe.field_k.beginBackward(-24172));
+          var4 = (oe) (RichTextLayout.field_k.beginBackward(-24172));
           var1 = var4;
           if (var1 == null) {
             return false;

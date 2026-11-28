@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends ii implements pf, WidgetActivationListener {
+final class cm extends ii implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_N;
     static int field_P;
-    private bh field_L;
+    private RichTextWidget field_L;
     private AccountCreationResultPanel field_O;
     static ad field_T;
     static boolean field_Q;
@@ -156,10 +156,10 @@ final class cm extends ii implements pf, WidgetActivationListener {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, bh param1, int param2, int param3) {
+    public final void onTextHotspotActivated(int param0, RichTextWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        bh var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -167,8 +167,8 @@ final class cm extends ii implements pf, WidgetActivationListener {
         var6 = DungeonAssault.field_K;
         try {
           if (param2 != 126) {
-            var7 = (bh) null;
-            this.a(113, (bh) null, 9, -25);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated(113, (RichTextWidget) null, 9, -25);
           }
           if (param0 == 0) {
             lk.a("terms.ws", (byte) 58);
@@ -241,7 +241,7 @@ final class cm extends ii implements pf, WidgetActivationListener {
         super(0, 0, 288, 0, (ca) null);
         String var7 = null;
         int var3 = 0;
-        hh var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -250,8 +250,8 @@ final class cm extends ii implements pf, WidgetActivationListener {
           this.field_N.field_o = (ca) ((Object) new na());
           var7 = jk.a(new String[]{this.a(120), this.i(115)}, nj.field_a, 30496);
           var3 = 20;
-          var4 = new hh(lp.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
-          this.field_L = new bh(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(lp.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, lp.field_C.field_H, -1, 2147483647, true);
+          this.field_L = new RichTextWidget(var7, var4);
           this.field_L.field_i = "";
           this.field_L.a(8, 0, kn.field_d);
           this.field_L.a(8, 1, kn.field_d);

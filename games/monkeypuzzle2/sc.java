@@ -40,11 +40,11 @@ final class sc {
             if (param0 != 0) {
               sc.a(40);
             }
-            if (null != bl.field_o) {
-              for (var1_int = 0; bl.field_o.length > var1_int; var1_int++) {
-                if (bl.field_o[var1_int] != null) {
+            if (null != TextHotspotBounds.field_o) {
+              for (var1_int = 0; TextHotspotBounds.field_o.length > var1_int; var1_int++) {
+                if (TextHotspotBounds.field_o[var1_int] != null) {
                   try {
-                    bl.field_o[var1_int].close(true);
+                    TextHotspotBounds.field_o[var1_int].close(true);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -134,10 +134,10 @@ final class sc {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = sb.a((byte) 79, param2);
+        int var3 = RichTextLayout.a((byte) 79, param2);
         int var5 = 37 % ((-85 - param0) / 36);
         int var4 = FullscreenFocusCanvas.a((byte) 71, param2);
-        int var6 = sb.a((byte) 79, param1);
+        int var6 = RichTextLayout.a((byte) 79, param1);
         int var7 = FullscreenFocusCanvas.a((byte) 71, param1);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var7 * (long)var3 >> 16);
@@ -187,7 +187,7 @@ final class sc {
             if (var8 != 0) {
               if (var8 >= 128 &&
                 var8 < 160) {
-                var9 = sb.field_n[-128 + var8];
+                var9 = RichTextLayout.field_n[-128 + var8];
                 if (var9 == 0) {
                   var9 = 63;
                 }

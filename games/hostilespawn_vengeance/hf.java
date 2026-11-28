@@ -70,12 +70,12 @@ final class hf {
           return (byte[]) null;
         }
         if (param1 == 100 &&
-          mb.field_i > 0) {
+          RichTextLayout.field_i > 0) {
           fieldTemp$4 = rf.field_i;
-          fieldTemp$5 = mb.field_i - 1;
-          mb.field_i = mb.field_i - 1;
+          fieldTemp$5 = RichTextLayout.field_i - 1;
+          RichTextLayout.field_i = RichTextLayout.field_i - 1;
           var2_ref_byte__ = fieldTemp$4[fieldTemp$5];
-          rf.field_i[mb.field_i] = null;
+          rf.field_i[RichTextLayout.field_i] = null;
           return var2_ref_byte__;
         }
         if (param1 == 5000 &&
@@ -90,8 +90,8 @@ final class hf {
           gm.field_f > 0) {
           fieldTemp$7 = gm.field_f - 1;
           gm.field_f = gm.field_f - 1;
-          var2_ref_byte__Lifetime2 = cn.field_m[fieldTemp$7];
-          cn.field_m[gm.field_f] = null;
+          var2_ref_byte__Lifetime2 = DefaultTextWidgetRenderer.field_m[fieldTemp$7];
+          DefaultTextWidgetRenderer.field_m[gm.field_f] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (null != c.field_c) {

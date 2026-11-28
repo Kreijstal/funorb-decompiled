@@ -7,9 +7,9 @@ final class ff extends nh {
     final ua a(int param0) {
         if (param0 != 160) {
           field_k = -55;
-          return rg.field_J;
+          return RichTextWidget.field_J;
         }
-        return rg.field_J;
+        return RichTextWidget.field_J;
     }
 
     final static void a(int param0, int param1) {

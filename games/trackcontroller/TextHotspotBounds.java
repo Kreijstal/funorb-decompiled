@@ -1,0 +1,75 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TextHotspotBounds extends IntrusiveNode {
+    int field_q;
+    static boolean field_o;
+    TextHotspotBounds field_j;
+    int field_m;
+    static String field_t;
+    static boolean field_i;
+    static String field_l;
+    int field_k;
+    static long field_p;
+    int field_r;
+    int field_n;
+    static String[] field_s;
+
+    public static void clearStaticReferences(int param0) {
+        field_t = null;
+        field_l = null;
+        if (param0 != -5654) {
+          return;
+        }
+        field_s = null;
+    }
+
+    final static String a(int param0, CharSequence[] param1) {
+        RuntimeException var2 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 <= 114) {
+            field_o = true;
+          }
+          stackIn_3_0 = IntrusiveDequeCursor.a(0, param1, (byte) 57, param1.length);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("fi.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final static aa[] e(int param0) {
+        if (param0 == 0) {
+          return new aa[]{hl.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, ProxyAuthenticationRequiredException.field_b, CrossfadingMidiPcmStream.field_n, LevelGrid.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, PasswordValidator.field_m, uj.field_a, kb.field_e, oj.field_a};
+        }
+        TextHotspotBounds.clearStaticReferences(93);
+        return new aa[]{hl.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, ProxyAuthenticationRequiredException.field_b, CrossfadingMidiPcmStream.field_n, LevelGrid.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, PasswordValidator.field_m, uj.field_a, kb.field_e, oj.field_a};
+    }
+
+    TextHotspotBounds(int param0, int param1, int param2, int param3, int param4) {
+        this.field_k = param3;
+        this.field_m = param4;
+        this.field_n = param1;
+        this.field_q = param0;
+        this.field_r = param2;
+    }
+
+    static {
+        field_o = true;
+        field_i = false;
+        field_s = new String[]{"All other member expansions", "Loads more Achievements", "Full community features"};
+    }
+}

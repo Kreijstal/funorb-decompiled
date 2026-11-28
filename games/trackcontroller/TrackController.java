@@ -407,7 +407,7 @@ public final class TrackController extends GameShell {
         pl.clearStaticReferences(-30877);
         w.resetStaticState(true);
         bd.clearStaticReferences(44);
-        ic.clearStaticReferences((byte) -56);
+        DefaultTextWidgetRenderer.clearStaticReferences((byte) -56);
         ig.clearStaticReferences();
         VorbisDecoder.clearStaticReferences();
         mf.resetStaticState((byte) -103);
@@ -429,7 +429,7 @@ public final class TrackController extends GameShell {
         gi.clearDeclaredStaticReferences((byte) -127);
         gh.b(8462);
         jd.clearStaticReferences(-12814);
-        rb.clearStaticReferences(-2857);
+        TextLayout.clearStaticReferences(-2857);
         UiWidget.clearDeclaredStaticReferences(param0 ^ -59);
         ButtonWidget.i(param0 - 222);
         ok.clearStaticReferences((byte) -7);
@@ -461,7 +461,7 @@ public final class TrackController extends GameShell {
         EditableTextField.clearStaticReferences(-85);
         dg.clearStaticReferences((byte) 16);
         NameSuggestionsPanel.b(false);
-        el.c(false);
+        RichTextWidget.c(false);
         ua.clearStaticReferences(param0 - 219);
         ed.j(param0 - 3726);
         TextFieldValidator.clearStaticReferences((byte) 73);
@@ -471,7 +471,7 @@ public final class TrackController extends GameShell {
         SoundFilter.clearStaticReferences();
         f.resetStaticState((byte) 113);
         DirectByteStorage.clearStaticReferences(param0 - 105);
-        cj.clearDeclaredStaticReferences(4);
+        RichTextLayout.clearDeclaredStaticReferences(4);
         qh.clearStaticReferences(-51);
         fj.clearDeclaredStaticReferences((byte) 118);
         mc.clearStaticReferences(false);
@@ -514,14 +514,14 @@ public final class TrackController extends GameShell {
         r.d(-1);
         ei.clearStaticReferences(73);
         qi.clearStaticReferences(param0 ^ param0);
-        va.c(20300);
+        TextLineMetrics.c(20300);
         AccountNameAvailabilityValidator.clearDeclaredStaticReferences((byte) -127);
         PasswordValidator.h(256);
         EmailFormatValidator.clearDeclaredStaticReferences(param0 ^ 105);
         ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences((byte) 69);
         MatchingFieldValidator.clearDeclaredStaticReferences(112);
         jb.clearStaticReferences(-111);
-        fi.clearStaticReferences(param0 - 5759);
+        TextHotspotBounds.clearStaticReferences(param0 - 5759);
         ud.clearStaticReferences(true);
         DebouncedFieldValidator.clearStaticReferences(0);
         oi.clearStaticReferences(-13);
@@ -565,7 +565,7 @@ public final class TrackController extends GameShell {
         if (IterableNodeHashTable.a(43)) {
           this.l(-122);
           if (IterableNodeHashTable.a(114)) {
-            if (!ic.a(1)) {
+            if (!DefaultTextWidgetRenderer.a(1)) {
               return;
             }
             discarded$0 = this.loadAssets(467, false);
@@ -779,15 +779,15 @@ public final class TrackController extends GameShell {
           int var8Lifetime1;
           int var8Lifetime2;
           var18 = field_F ? 1 : 0;
-          if (null != el.field_L) {
-            if (el.field_L.ensureIndexLoaded(111) &&
-              el.field_L.tryLoadGroupByName("basic", (byte) -3)) {
-              if (!el.field_L.tryLoadGroupByName("comic12", (byte) -3)) {
-                ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, el.field_L, 43));
+          if (null != RichTextWidget.field_L) {
+            if (RichTextWidget.field_L.ensureIndexLoaded(111) &&
+              RichTextWidget.field_L.tryLoadGroupByName("basic", (byte) -3)) {
+              if (!RichTextWidget.field_L.tryLoadGroupByName("comic12", (byte) -3)) {
+                ud.a(128, 3.0f, wf.a("comic12", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, RichTextWidget.field_L, 43));
                 return false;
               }
-              if (!el.field_L.tryLoadGroupByName("kartika13", (byte) -3)) {
-                ud.a(param0 - 339, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, el.field_L, param0 - 431));
+              if (!RichTextWidget.field_L.tryLoadGroupByName("kartika13", (byte) -3)) {
+                ud.a(param0 - 339, 3.0f, wf.a("kartika13", IndexedSpriteState.field_f, DebouncedFieldValidator.field_c, RichTextWidget.field_L, param0 - 431));
                 return false;
               }
               if (!fb.field_b.tryLoadGroupByName("comic12", (byte) -3)) {
@@ -825,11 +825,11 @@ public final class TrackController extends GameShell {
                             }
                             mf.c((byte) 114);
                             this.drawFrame(160);
-                            vj.field_a = ab.a("basic", -15383, "unachieved", el.field_L);
+                            vj.field_a = ab.a("basic", -15383, "unachieved", RichTextWidget.field_L);
                             ei.a(vj.field_a, -1);
-                            ii.field_p = ab.a("basic", -15383, "locked", el.field_L);
+                            ii.field_p = ab.a("basic", -15383, "locked", RichTextWidget.field_L);
                             ei.a(ii.field_p, -1);
-                            dc.field_p = ab.a("basic", -15383, "orbcoin", el.field_L);
+                            dc.field_p = ab.a("basic", -15383, "orbcoin", RichTextWidget.field_L);
                             var3_ref_byte__ = si.field_c.getFileByName("", param0 ^ -468, "tcfont");
                             var4_ref_ng__ = ie.a("", sg.field_a, "tcfont", param0 - 341);
                             var5_ref_oh = (BitmapFont) ((Object) ma.a(6488064, (byte) -123, 2, var4_ref_ng__, var3_ref_byte__, 15252224));
@@ -856,9 +856,9 @@ public final class TrackController extends GameShell {
                             ((PalettedBitmapFont) (var5_ref_oh)).field_M[7][1] = 16711680;
                             ((PalettedBitmapFont) (var5_ref_oh)).field_M[8][1] = 15252224;
                             ((PalettedBitmapFont) (var5_ref_oh)).field_M[8][2] = 0;
-                            ba.field_b = (BitmapFont) ((Object) uk.a("comic12", el.field_L, fb.field_b, "", 8));
-                            GameApplet.field_c = (BitmapFont) ((Object) uk.a("kartika13", el.field_L, fb.field_b, "", -43));
-                            el.field_L = null;
+                            ba.field_b = (BitmapFont) ((Object) uk.a("comic12", RichTextWidget.field_L, fb.field_b, "", 8));
+                            GameApplet.field_c = (BitmapFont) ((Object) uk.a("kartika13", RichTextWidget.field_L, fb.field_b, "", -43));
+                            RichTextWidget.field_L = null;
                             fb.field_b = null;
                             qi.d(71);
                             return false;
@@ -884,7 +884,7 @@ public final class TrackController extends GameShell {
               ud.a(128, 6.0f, wf.a("", ValidatedTextField.field_W, ei.field_k, LoginPanel.field_D, param0 - 413));
               return false;
             }
-            ud.a(128, 2.0f, wf.a("basic", sa.field_K, gj.field_e, el.field_L, param0 ^ 413));
+            ud.a(128, 2.0f, wf.a("basic", sa.field_K, gj.field_e, RichTextWidget.field_L, param0 ^ 413));
             return false;
           }
           if (sg.field_a == null) {
@@ -892,28 +892,28 @@ public final class TrackController extends GameShell {
               ud.a(param0 ^ 339, 75.0f, ld.field_a);
               this.drawFrame(160);
               od.field_d = new jc(j.field_h, DiskArchiveRequest.field_C);
-              va.field_d[0] = cc.a(j.field_h, "", "track_wrong_password").b();
-              va.field_d[1] = cc.a(j.field_h, "", "track_correct_password").b();
-              va.field_d[2] = cc.a(j.field_h, "", "track_train_loop").b();
-              va.field_d[3] = cc.a(j.field_h, "", "track_train_whistle").b();
-              va.field_d[4] = cc.a(j.field_h, "", "track_train_fade").b();
-              va.field_d[6] = cc.a(j.field_h, "", "track_blockpush_1").b();
-              va.field_d[7] = cc.a(j.field_h, "", "track_blockconnect").b();
-              va.field_d[5] = va.field_d[7];
-              va.field_d[8] = cc.a(j.field_h, "", "track_footstep_1_and_2").b();
-              va.field_d[9] = cc.a(j.field_h, "", "track_slide_4").b();
-              va.field_d[10] = cc.a(j.field_h, "", "score_count").b();
+              TextLineMetrics.field_d[0] = cc.a(j.field_h, "", "track_wrong_password").b();
+              TextLineMetrics.field_d[1] = cc.a(j.field_h, "", "track_correct_password").b();
+              TextLineMetrics.field_d[2] = cc.a(j.field_h, "", "track_train_loop").b();
+              TextLineMetrics.field_d[3] = cc.a(j.field_h, "", "track_train_whistle").b();
+              TextLineMetrics.field_d[4] = cc.a(j.field_h, "", "track_train_fade").b();
+              TextLineMetrics.field_d[6] = cc.a(j.field_h, "", "track_blockpush_1").b();
+              TextLineMetrics.field_d[7] = cc.a(j.field_h, "", "track_blockconnect").b();
+              TextLineMetrics.field_d[5] = TextLineMetrics.field_d[7];
+              TextLineMetrics.field_d[8] = cc.a(j.field_h, "", "track_footstep_1_and_2").b();
+              TextLineMetrics.field_d[9] = cc.a(j.field_h, "", "track_slide_4").b();
+              TextLineMetrics.field_d[10] = cc.a(j.field_h, "", "score_count").b();
               NameSuggestionsPanel.field_G[10] = 48;
-              va.field_d[11] = cc.a(j.field_h, "", "block_disconnect_placeholder").b();
-              va.field_d[12] = cc.a(j.field_h, "", "cannot_push_placeholder").b();
-              var39 = va.field_d[10].field_j;
+              TextLineMetrics.field_d[11] = cc.a(j.field_h, "", "block_disconnect_placeholder").b();
+              TextLineMetrics.field_d[12] = cc.a(j.field_h, "", "cannot_push_placeholder").b();
+              var39 = TextLineMetrics.field_d[10].field_j;
               var35 = new byte[AudioOutput.field_h * 5 / 50];
               var30 = var35;
               var4_ref_byte__ = var30;
               for (var5 = 0; var5 < var39.length; var5++) {
                 var4_ref_byte__[var5] = var39[var5];
               }
-              va.field_d[10] = new PcmSample(AudioOutput.field_h, var4_ref_byte__, 0, var35.length);
+              TextLineMetrics.field_d[10] = new PcmSample(AudioOutput.field_h, var4_ref_byte__, 0, var35.length);
               for (var5 = 0; var5 < 13; var5++) {
                 if (NameSuggestionsPanel.field_G[var5] == 0) {
                   NameSuggestionsPanel.field_G[var5] = 96;

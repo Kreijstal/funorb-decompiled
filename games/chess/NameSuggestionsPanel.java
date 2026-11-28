@@ -533,7 +533,7 @@ final class NameSuggestionsPanel extends ma implements WidgetActivationListener 
                   if (var23 != 0) {
                     var21 = eb.field_G + (String) (var22);
                   } else {
-                    var21 = MatchingFieldValidator.a(fj.field_b, new String[]{(String) (var22)}, (byte) -100);
+                    var21 = MatchingFieldValidator.a(TextLineMetrics.field_b, new String[]{(String) (var22)}, (byte) -100);
                   }
                 }
                 if (var21 != null) {

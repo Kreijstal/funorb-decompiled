@@ -83,7 +83,7 @@ final class dha {
           var4 = (EventEffect) (param1.effects.beginForward((byte) 90));
           while (var4 != null) {
             var5 = var4.target.resolveCreatureView(-27449, param2);
-            var5.b(-1, 6);
+            var5.playAnimation(-1, 6);
             var4.apply(var3, param2.field_h, 12);
             var4 = (EventEffect) (param1.effects.nextForward(0));
           }

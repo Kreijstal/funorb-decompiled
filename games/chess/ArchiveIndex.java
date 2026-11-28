@@ -287,7 +287,7 @@ final class ArchiveIndex {
           ij.field_c = param0;
           var5 = (CharSequence) ((Object) param0);
           ec.field_f = ad.a(var5, -2);
-          re.field_p = param1;
+          TextHotspotBounds.field_p = param1;
           int var4_int = -59 % ((param2 - 54) / 48);
           df.a(true);
         } catch (RuntimeException runtimeException) {

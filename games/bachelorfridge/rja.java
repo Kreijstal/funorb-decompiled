@@ -44,7 +44,7 @@ final class rja extends mv {
             return;
           }
           var5.field_s.applyMoveCooldown(this.field_q.moveId, (byte) -106);
-          var5.b(-1, 1);
+          var5.playAnimation(-1, 1);
           if (this.field_q.field_r) {
             var5.a(16777152, 14, m.field_c);
           } else {

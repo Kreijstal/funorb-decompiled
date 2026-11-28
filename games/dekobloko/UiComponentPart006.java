@@ -256,10 +256,10 @@ final class UiComponentPart006 extends ComponentDecorator {
         return rgbSpriteArrayLocal7;
     }
 
-    final String computeString0223(byte byteArgument1) {
+    final String getTooltipText(byte byteArgument1) {
         int integerLocal1 = this.uiComponentState0002.booleanState0018 ? 1 : 0;
         this.uiComponentState0002.booleanState0018 = this.booleanState0018;
-        String stringLocal2 = this.uiComponentState0002.computeString0223(byteArgument1);
+        String stringLocal2 = this.uiComponentState0002.getTooltipText(byteArgument1);
         this.uiComponentState0002.booleanState0018 = integerLocal1 != 0 ? true : false;
         return stringLocal2;
     }

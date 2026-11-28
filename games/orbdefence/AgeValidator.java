@@ -25,7 +25,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.getValidationStatus(param1, (byte) -99) == vh.field_h) {
-            stackIn_3_0 = te.field_L;
+            stackIn_3_0 = RichTextWidget.field_L;
             return stackIn_3_0;
           }
           if (param0 == -11300) {

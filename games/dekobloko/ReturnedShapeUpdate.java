@@ -34,7 +34,7 @@ final class ReturnedShapeUpdate extends HashNode {
             integerArgument5 = 0;
           }
           MixedSupport029.stringState0149 = stringArgument3;
-          NetworkSupport010.integerState0585 = integerArgument5;
+          TextHotspotBounds.integerState0585 = integerArgument5;
           integerLocal1 = -49 / ((-60 - integerArgument4) / 43);
           charSequenceLocal4 = (CharSequence) ((Object) stringArgument3);
           TextLayout.stringState0081 = ComponentContainer.computeString0894(charSequenceLocal4, (byte) 2);

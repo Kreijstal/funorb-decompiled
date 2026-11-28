@@ -39,7 +39,7 @@ final class mc {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ final class mc {
         if (oe.field_Q == ValidatedTextField.field_fb) {
           return jb.field_o;
         }
-        if (ValidatedTextField.field_fb == na.field_S) {
+        if (ValidatedTextField.field_fb == RichTextWidget.field_S) {
           return MovingTunnelEntity.field_F;
         }
         if (!fb.field_a.c(param0 ^ 17221)) {

@@ -41,7 +41,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "ab.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "ab.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ final class ab {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "ab.A(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "ab.A(" + param0 + ')');
         }
     }
 

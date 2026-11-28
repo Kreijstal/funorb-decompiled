@@ -114,7 +114,7 @@ final class t extends ti {
               if (this.field_t.field_p != null &&
                 null != this.field_t.field_p[param0]) {
                 var27 = this.field_t.field_p[param0];
-                var28 = bd.a(-2 + var18.length, var18, (byte) 93, 0);
+                var28 = TextLayout.a(-2 + var18.length, var18, (byte) 93, 0);
                 for (var9 = 0; var9 < 64; var9++) {
                   if (~var27[var9] != ~var28[var9]) {
                     throw new RuntimeException();
@@ -162,7 +162,7 @@ final class t extends ti {
             if (this.field_t.field_p != null &&
               null != this.field_t.field_p[param0]) {
               var30 = this.field_t.field_p[param0];
-              var29 = bd.a(var18.length - 2, var18, (byte) 108, 0);
+              var29 = TextLayout.a(var18.length - 2, var18, (byte) 108, 0);
               var11 = 0;
               var9 = var11;
               while (var11 < 64) {

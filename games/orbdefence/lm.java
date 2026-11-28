@@ -1638,7 +1638,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_passrepeated");
                 if (null != var2) {
-                  jc.field_n = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  DefaultTextWidgetRenderer.field_n = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_passlength");
                 if (null != var2) {
@@ -1674,7 +1674,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_invalidage");
                 if (var2 != null) {
-                  te.field_L = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  RichTextWidget.field_L = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(param0 + 15020, "create_alert_yearrange");
                 if (var2 != null) {
@@ -1682,7 +1682,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_alert_mismatch");
                 if (var2 != null) {
-                  cc.field_i = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  TextHotspotBounds.field_i = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_passwordvalid");
                 if (var2 != null) {
@@ -1694,7 +1694,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "create_account_success");
                 if (null != var2) {
-                  bd.field_m = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  RichTextLayout.field_m = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "invalid_name");
                 if (null != var2) {
@@ -2692,7 +2692,7 @@ final class lm {
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_accept_aftercancel");
                 if (var2 != null) {
-                  te.field_J = ProxyAuthenticationRequiredException.a(var2, -12465);
+                  RichTextWidget.field_J = ProxyAuthenticationRequiredException.a(var2, -12465);
                 }
                 var2 = CrossfadingMidiPcmStream.a(15136, "fs_accept_countdown_sing");
                 if (null != var2) {

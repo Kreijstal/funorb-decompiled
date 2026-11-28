@@ -21,7 +21,7 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "jb.A(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "jb.A(" + param0 + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class jb {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_77_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ final class jb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "jb.B(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "jb.B(" + param0 + ')');
         }
     }
 
@@ -257,7 +257,7 @@ final class jb {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

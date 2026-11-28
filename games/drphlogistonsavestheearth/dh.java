@@ -189,10 +189,10 @@ final class dh extends si {
         this.field_Q.drawParagraph(this.field_L, this.field_I + var5 + var7, this.field_I + var6, this.field_K - this.field_I, this.field_k - this.field_I * 2, this.field_O, -1, !this.field_P ? 2 : 0, 1, this.field_Q.field_x);
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_z.field_n ? 1 : 0;
         this.field_z.field_n = this.field_n;
-        String var3 = this.field_z.e(-76);
+        String var3 = this.field_z.getTooltipText(-76);
         if (param0 >= -39) {
           field_N = (BitPacketBuffer) null;
         }

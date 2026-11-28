@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cl extends WidgetContainer implements jf, WidgetActivationListener {
+final class cl extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_G;
     static d field_J;
     static String field_I;
     private AccountCreationResultPanel field_H;
-    private vj field_F;
+    private RichTextWidget field_F;
 
     cl(AccountCreationResultPanel param0) {
         super(0, 0, 288, 0, (WidgetActionListener) null);
         String var7 = null;
         int var3 = 0;
-        fd var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -21,8 +21,8 @@ final class cl extends WidgetContainer implements jf, WidgetActivationListener {
           this.field_G.listener = (WidgetActionListener) ((Object) new ic());
           var7 = MessageKeys.a(new String[]{this.f((byte) -69), this.d(false)}, -1, ArchiveRequest.field_y);
           var3 = 20;
-          var4 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
-          this.field_F = new vj(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(qk.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
+          this.field_F = new RichTextWidget(var7, var4);
           this.field_F.field_x = "";
           this.field_F.a(0, ig.field_b, (byte) 126);
           this.field_F.a(1, ig.field_b, (byte) 25);
@@ -56,7 +56,7 @@ final class cl extends WidgetContainer implements jf, WidgetActivationListener {
         }
     }
 
-    public final void a(byte param0, vj param1, int param2, int param3) {
+    public final void onTextHotspotActivated(byte param0, RichTextWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -68,14 +68,14 @@ final class cl extends WidgetContainer implements jf, WidgetActivationListener {
         try {
           var5_int = -51 / ((param0 + 10) / 40);
           if (param3 == 0) {
-            ld.a((byte) -29, "terms.ws");
+            TextLayout.a((byte) -29, "terms.ws");
           } else {
             if (1 != param3) {
               if (param3 == 2) {
-                ld.a((byte) -29, "conduct.ws");
+                TextLayout.a((byte) -29, "conduct.ws");
               }
             } else {
-              ld.a((byte) -29, "privacy.ws");
+              TextLayout.a((byte) -29, "privacy.ws");
             }
           }
           return;

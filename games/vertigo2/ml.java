@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class ml extends va {
+class ml extends DefaultTextWidgetRenderer {
     static Archive field_u;
     static int field_v;
     static String field_A;

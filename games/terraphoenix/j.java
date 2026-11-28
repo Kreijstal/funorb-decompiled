@@ -16,10 +16,10 @@ final class j extends jc {
     private int field_Q;
     static int field_R;
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_F.field_s ? 1 : 0;
         this.field_F.field_s = this.field_s;
-        String var3 = this.field_F.f(85);
+        String var3 = this.field_F.getTooltipText(85);
         this.field_F.field_s = var2 != 0 ? true : false;
         if (param0 > 70) {
           return var3;

@@ -284,7 +284,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             ValidatedTextField.field_T = dk.a(new CharSequence[]{(CharSequence) ((Object) ValidatedTextField.field_T), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) qe.field_h)}, (byte) -55);
           }
           SectorCacheStore.field_a.i((byte) -78);
-          rf.a(param0 - 60);
+          RichTextWidget.a(param0 - 60);
         }
     }
 
@@ -545,7 +545,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             wm.field_d = lo.correctedCurrentTimeMillis((byte) -60);
           }
-          lb.field_l.field_b = sn.field_a.length;
+          DefaultTextWidgetRenderer.field_l.field_b = sn.field_a.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; var4Lifetime1 < je.field_i.length; var4Lifetime1++) {
             stackIn_90_0 = 90;
@@ -575,7 +575,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
           }
           ri.field_a = oa.field_b + (var3_intLifetime1 - (var3_intLifetime1 >> 1));
-          gp.field_a = (field_a + bn.field_c << 1) * lb.field_l.field_b;
+          gp.field_a = (field_a + bn.field_c << 1) * DefaultTextWidgetRenderer.field_l.field_b;
           bf.field_c = -(var3_intLifetime1 >> 1) + oa.field_b;
           for (var4Lifetime2 = 0; var4Lifetime2 < je.field_i.length; var4Lifetime2++) {
             stackIn_115_0 = gp.field_a;
@@ -611,9 +611,9 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             var4Lifetime3++;
           }
           if (2 == am.field_g) {
-            lb.field_l.a((byte) 41, param2, -1, -1);
+            DefaultTextWidgetRenderer.field_l.a((byte) 41, param2, -1, -1);
           } else {
-            lb.field_l.a((byte) 41, param2, SecondaryNodeDeque.a(-1013410975, qh.field_i, IsaacRandom.field_h), 0);
+            DefaultTextWidgetRenderer.field_l.a((byte) 41, param2, SecondaryNodeDeque.a(-1013410975, qh.field_i, IsaacRandom.field_h), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

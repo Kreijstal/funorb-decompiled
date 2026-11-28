@@ -162,7 +162,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 <= 121) {
           w var3 = (w) null;
           this.a((byte) 68, (w) null, 113, 107);

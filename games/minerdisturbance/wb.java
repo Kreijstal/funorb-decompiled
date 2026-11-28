@@ -105,8 +105,8 @@ final class wb extends IntrusiveNode {
           this.field_v = param0;
           this.field_o = param3;
           this.field_u = param2;
-          fieldTemp$0 = nf.field_c;
-          nf.field_c = nf.field_c + 1;
+          fieldTemp$0 = TextLayout.field_c;
+          TextLayout.field_c = TextLayout.field_c + 1;
           this.field_w = 65535 & fieldTemp$0;
           this.field_t = param4;
           this.field_s = param1;

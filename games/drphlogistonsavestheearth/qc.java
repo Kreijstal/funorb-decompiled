@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc {
-    static l field_b;
+    static DefaultTextWidgetRenderer field_b;
     static he field_a;
     private static String field_z;
 
     public static void clearStaticReferences(int param0) {
         field_a = null;
         if (param0 != 24937) {
-          field_b = (l) null;
+          field_b = (DefaultTextWidgetRenderer) null;
           field_b = null;
           return;
         }

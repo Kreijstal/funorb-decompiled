@@ -13,7 +13,7 @@ final class wea extends AnimationNode {
         if (2 > SuperSpeedAllEvent.field_r) {
           return 0;
         }
-        if (kt.field_k == 0) {
+        if (SetMoveSlotCooldownEffect.field_k == 0) {
           if (!Bzip2State.field_B.ensureIndexLoaded(0)) {
             return 20;
           }
@@ -95,13 +95,13 @@ final class wea extends AnimationNode {
             var6 = ((dla) (var2_ref_bf)).field_n.resolveCreatureView(-27449, this.field_j);
             if (!var6.field_s.isDown(81) &&
               var6.field_f.field_s != 6) {
-              var6.b(-1, 5);
+              var6.playAnimation(-1, 5);
             }
           } else {
             var5 = ((qja) (var2_ref_bf)).field_i.resolveCreatureView(-27449, this.field_j);
             if (!var5.field_s.isDown(98) &&
               var5.field_f.field_s != 3) {
-              var5.b(-1, 7);
+              var5.playAnimation(-1, 7);
             }
           }
           var2_ref_bf = (bf) (this.field_l.field_m.nextForward(0));

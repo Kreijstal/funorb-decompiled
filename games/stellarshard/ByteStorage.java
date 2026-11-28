@@ -17,7 +17,7 @@ abstract class ByteStorage {
             field_a = 100;
           }
           nb.a(b.field_v, fg.field_K, am.field_i, (byte) -120);
-          pd.a(param0, 0, 0, (byte) -79);
+          RichTextLayout.a(param0, 0, 0, (byte) -79);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "i.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -44,7 +44,7 @@ abstract class ByteStorage {
             0 != param1.length()) {
             var2_int = param1.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_7_0 = uj.field_d;
+              stackIn_7_0 = TextLineMetrics.field_d;
               return stackIn_7_0;
             }
             var3 = param1.substring(0, var2_int);

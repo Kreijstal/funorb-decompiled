@@ -184,7 +184,7 @@ final class uq extends UiComponent {
         qi.a((byte) 78);
         kaa.field_m = -1;
         sia.field_h = true;
-        dh.a((byte) 58, var2);
+        ArmPetAttackEffect.a((byte) 58, var2);
     }
 
     public static void releaseStatics(int param0) {

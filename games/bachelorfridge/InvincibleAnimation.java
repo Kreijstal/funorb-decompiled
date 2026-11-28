@@ -47,7 +47,7 @@ final class InvincibleAnimation extends EventAnimation {
           while (var3_ref != null) {
             var3_ref.apply(var8, this.screen.field_h, 12);
             var9 = var3_ref.target.resolveCreatureView(-27449, this.screen);
-            var9.b(-1, 6);
+            var9.playAnimation(-1, 6);
             var9.a(24831, 101, kna.field_g[33]);
             var3_ref = (DamageEffect) (this.field_x.effects.nextForward(0));
           }
@@ -63,7 +63,7 @@ final class InvincibleAnimation extends EventAnimation {
         while (var3_refLifetime1 != null) {
           var3_refLifetime1.apply(var6, this.screen.field_h, 12);
           var7 = var3_refLifetime1.target.resolveCreatureView(-27449, this.screen);
-          var7.b(-1, 6);
+          var7.playAnimation(-1, 6);
           var7.a(24831, 101, kna.field_g[33]);
           var3_refLifetime1 = (DamageEffect) (this.field_x.effects.nextForward(0));
         }

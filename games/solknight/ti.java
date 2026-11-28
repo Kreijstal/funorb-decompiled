@@ -37,7 +37,7 @@ final class ti {
             for (var6 = param3; var5 > var6; var6++) {
               boolean decompiledFrameCompleted0 = true;
               if (~param0.field_n == ~param2.field_m[param1][var6] &&
-                kj.a(param2.field_n[param1][var6], (byte) -109)) {
+                RichTextWidget.a(param2.field_n[param1][var6], (byte) -109)) {
                 for (var7 = 0; var7 < var4_int; var7++) {
                   if (param0.field_r[var7] != param2.field_i[param1][var7 + var4_int * var6]) {
                     decompiledFrameCompleted0 = false;

@@ -158,7 +158,7 @@ final class lk extends UiComponent {
         int var6 = this.field_z + param0;
         this.a(this.field_E[0], var6, 0, var5);
         if (this.field_I < 65536) {
-          mi.a((byte) -52, var5 + this.field_u, var5 + (this.field_u * this.field_I >> 16), var6 + this.field_j, var6);
+          TextHotspotBounds.a((byte) -52, var5 + this.field_u, var5 + (this.field_u * this.field_I >> 16), var6 + this.field_j, var6);
           this.a(this.field_E[1], var6, 0, var5);
           ia.a(-68);
         }
@@ -278,7 +278,7 @@ final class lk extends UiComponent {
         var8 = fleas.field_A ? 1 : 0;
         try {
           var5_int = this.field_u + param3;
-          mi.a((byte) -52, var5_int - this.field_P.field_w, param3 + this.field_P.field_w, param1 + this.field_j, param1);
+          TextHotspotBounds.a((byte) -52, var5_int - this.field_P.field_w, param3 + this.field_P.field_w, param1 + this.field_j, param1);
           var6 = -this.field_B + param3;
           if (param2 != 0) {
             field_A = (fh) null;

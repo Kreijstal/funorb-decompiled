@@ -181,14 +181,14 @@ final class LevelCompleteScene extends AnimatedResultScene {
             if (!vh.field_a) {
               for (var5 = ib.field_l[var2]; LevelLostScene.field_i[var2] > var5; var5++) {
                 var6 = (ScoreModifier) (vm.field_j[var2].elementAt(var5));
-                an.field_q.drawString(var6.field_a, -37 + m.field_l[var2] * 15, 252 + (jj.field_b - 255) + 15 * (var5 + fo.field_m[var2]), var4, -1);
+                an.field_q.drawString(var6.field_a, -37 + m.field_l[var2] * 15, 252 + (jj.field_b - 255) + 15 * (var5 + TextHotspotBounds.field_m[var2]), var4, -1);
                 stackIn_20_0 = an.field_q;
                 if (var6.field_e == 0) {
                   stackIn_21_1 = "<times>2";
                 } else {
                   stackIn_21_1 = Integer.toString(var6.field_e);
                 }
-                ((BinaryBitmapFont) (Object) stackIn_20_0).drawRightAligned(stackIn_21_1, 135 + (15 * m.field_l[var2] - 37), -15 + (jj.field_b + (fo.field_m[var2] + var5) * 15 + 12), 16760896, -1);
+                ((BinaryBitmapFont) (Object) stackIn_20_0).drawRightAligned(stackIn_21_1, 135 + (15 * m.field_l[var2] - 37), -15 + (jj.field_b + (TextHotspotBounds.field_m[var2] + var5) * 15 + 12), 16760896, -1);
               }
             }
           }
@@ -261,7 +261,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         int var4Lifetime1;
         this.field_g = 0;
         bp.field_b = new Vector();
-        tb.field_d.playSampleWithPan(wc.field_q, 100, 128 * qd.field_r, 8192);
+        TextLayout.field_d.playSampleWithPan(wc.field_q, 100, 128 * qd.field_r, 8192);
         var2 = 31;
         var3 = 11;
         if (ul.field_g != 1) {
@@ -425,7 +425,7 @@ final class LevelCompleteScene extends AnimatedResultScene {
         stackIn_17_0[7] = (ScoreModifier) ((Object) new go(kp.field_l, -100, var2, var3));
         var4 = stackIn_17_0;
         vm.field_j = new Vector[ma.field_n.length];
-        fo.field_m = new int[ma.field_n.length];
+        TextHotspotBounds.field_m = new int[ma.field_n.length];
         ib.field_l = new int[ma.field_n.length];
         LevelLostScene.field_i = new int[ma.field_n.length];
         for (var5Lifetime1 = 0; var5Lifetime1 < vm.field_j.length; var5Lifetime1++) {

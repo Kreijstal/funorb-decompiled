@@ -51,7 +51,7 @@ final class jk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "jk.B(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "jk.B(" + param0 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class jk {
           IsaacCipher.field_m = new mn(dc.field_a, LoginPanel.field_E, param0, ff.field_a, ArchiveRequest.field_t);
           dc.field_a.a(IsaacCipher.field_m, (byte) 112);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "jk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

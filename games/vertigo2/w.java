@@ -175,7 +175,7 @@ final class w extends TextureOperator {
           var8 = new ei(0);
           while (!var8.a((byte) 70)) {
           }
-          pn.a((byte) 71, var8);
+          RichTextWidget.a((byte) 71, var8);
           ap.field_b[2] = new go(param0, "character", "vertigo_death");
           ap.field_b[3] = new go(param0, "character", "fall_fan_jump");
           ap.field_b[0] = new go(param0, "character", "vertigo_idle");

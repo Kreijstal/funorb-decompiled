@@ -65,7 +65,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationStatus((byte) 107) == TrackController.field_G &&
                 !param0.equals(this.field_o.field_s)) {
-                stackIn_8_0 = rb.field_c;
+                stackIn_8_0 = TextLayout.field_c;
                 return stackIn_8_0;
               }
               stackIn_10_0 = var3.getValidationMessage(15914);
@@ -78,7 +78,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
           if (param0.equals(this.field_o.field_s)) {
             return null;
           }
-          stackIn_16_0 = rb.field_c;
+          stackIn_16_0 = TextLayout.field_c;
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

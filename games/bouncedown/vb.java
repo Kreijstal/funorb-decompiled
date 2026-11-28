@@ -191,7 +191,7 @@ final class vb implements fc {
             } else {
               var10_ref_String = jc.field_g.readNullableString((byte) 57);
               if (var10_ref_String != null) {
-                jd.a(0, DiskCacheWorker.b(0), var10_ref_String);
+                DefaultTextWidgetRenderer.a(0, DiskCacheWorker.b(0), var10_ref_String);
               }
             }
             kc.a((byte) 18);

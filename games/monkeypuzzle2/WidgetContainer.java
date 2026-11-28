@@ -277,13 +277,13 @@ class WidgetContainer extends UiWidget implements ga {
         field_x = null;
     }
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         String var4 = null;
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         DequeCursor var2 = new DequeCursor(this.field_u);
         UiWidget var3 = (UiWidget) (var2.a((byte) -37));
         while (var3 != null) {
-          var4 = var3.a((byte) 54);
+          var4 = var3.getTooltipText((byte) 54);
           if (var4 != null) {
             return var4;
           }
@@ -393,7 +393,7 @@ class WidgetContainer extends UiWidget implements ga {
 
     final boolean b(byte param0) {
         if (param0 < 38) {
-          this.a((byte) 92);
+          this.getTooltipText((byte) 92);
         }
         return null != this.a(true) ? true : false;
     }

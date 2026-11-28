@@ -348,7 +348,7 @@ final class AccountCreationResultPanel extends nk implements WidgetActivationLis
           return InteractiveWidget.field_G;
         }
         if (param1 == 27) {
-          return hh.field_o;
+          return DefaultTextWidgetRenderer.field_o;
         }
         if (param1 == 28) {
           return f.field_f;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends WidgetContainer implements md, WidgetActivationListener {
+final class sj extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
     static n[] field_B;
-    private rg field_G;
+    private RichTextWidget field_G;
     private InteractiveWidget field_D;
     static double field_I;
     static int field_K;
@@ -21,7 +21,7 @@ final class sj extends WidgetContainer implements md, WidgetActivationListener {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, int param1, rg param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -66,7 +66,7 @@ final class sj extends WidgetContainer implements md, WidgetActivationListener {
         super(0, 0, 288, 0, (uk) null);
         String var7 = null;
         int var3 = 0;
-        id var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -75,8 +75,8 @@ final class sj extends WidgetContainer implements md, WidgetActivationListener {
           this.field_D.field_u = (uk) ((Object) new b());
           var7 = h.a(nj.field_s, 0, new String[]{this.d(false), this.a(0)});
           var3 = 20;
-          var4 = new id(si.field_V, 0, 0, 0, 0, 16777215, -1, 3, 0, si.field_V.field_N, -1, 2147483647, true);
-          this.field_G = new rg(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(si.field_V, 0, 0, 0, 0, 16777215, -1, 3, 0, si.field_V.field_N, -1, 2147483647, true);
+          this.field_G = new RichTextWidget(var7, var4);
           this.field_G.field_x = "";
           this.field_G.a(ni.field_b, 0, 1);
           this.field_G.a(ni.field_b, 1, 1);

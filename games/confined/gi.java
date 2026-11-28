@@ -63,7 +63,7 @@ final class gi extends AcceleratingProjectile {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class gi extends AcceleratingProjectile {
           kj.a(MatchingFieldValidator.field_i, 96, param1);
           this.field_gb = 64.0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "gi.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -105,7 +105,7 @@ final class gi extends AcceleratingProjectile {
           this.field_cb.field_u = 50.0;
           param0.addLast((IntrusiveNode) (this.field_cb), (byte) 123);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "gi.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "gi.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -176,7 +176,7 @@ final class gi extends AcceleratingProjectile {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -206,7 +206,7 @@ final class gi extends AcceleratingProjectile {
           this.field_A.field_H = 0.6;
           this.field_A.field_E = this.field_D;
           this.field_A.field_A = 0.5;
-          var6 = new gk(this.field_A, (TunnelEntity) null, vf.field_n, 0, false);
+          var6 = new gk(this.field_A, (TunnelEntity) null, DefaultTextWidgetRenderer.field_n, 0, false);
           var6.field_w = 4.0;
           var6.field_m = 255;
           this.field_A.field_n = var6;
@@ -248,7 +248,7 @@ final class gi extends AcceleratingProjectile {
         this.field_A.field_H = 0.6;
         this.field_A.field_E = this.field_D;
         this.field_A.field_A = 0.5;
-        var5 = new gk(this.field_A, (TunnelEntity) null, vf.field_n, 0, false);
+        var5 = new gk(this.field_A, (TunnelEntity) null, DefaultTextWidgetRenderer.field_n, 0, false);
         var5.field_w = 4.0;
         var5.field_m = 255;
         this.field_A.field_n = var5;
@@ -326,7 +326,7 @@ final class gi extends AcceleratingProjectile {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

@@ -38,8 +38,8 @@ final class nn extends IntrusiveNode {
           var7 = var7 - (2 + param2);
           ui.field_b.a(82, ui.field_b.field_Fb, param2, 0, param1 + dj.field_d.field_Fb);
           mg.field_R.a(5, 2, param3, var7 - 5, 5, param1 + 485 + (2 + param3), param0 ^ 3125);
-          if (null != lq.field_a) {
-            lq.field_a.setBounds(false, mg.field_R.field_wb, mg.field_R.field_N, mg.field_R.field_db, mg.field_R.field_Fb);
+          if (null != TextLineMetrics.field_a) {
+            TextLineMetrics.field_a.setBounds(false, mg.field_R.field_wb, mg.field_R.field_N, mg.field_R.field_db, mg.field_R.field_Fb);
           }
           var8 = -param1 + (td.field_c.field_Fb - var6_int);
           var9 = var8 / 2;

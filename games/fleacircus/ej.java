@@ -59,7 +59,7 @@ final class ej {
         int var4 = 0;
         var4 = fleas.field_A ? 1 : 0;
         try {
-          j.field_f = wi.field_p.field_b;
+          RichTextLayout.field_f = wi.field_p.field_b;
           if (fleas.field_E == 0 &&
             tj.field_a >= 15 && (DiskArchiveRequest.c((byte) 55) ||
             !(wc.field_q > 0))) {

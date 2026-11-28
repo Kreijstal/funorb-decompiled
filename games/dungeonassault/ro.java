@@ -677,7 +677,7 @@ final class ro extends kl {
                     var10 = var5;
                     var10 = var5;
                   } else {
-                    var5 = l.field_f;
+                    var5 = TextLayout.field_f;
                   }
                 }
                 this.a(true, 16711680, sm.field_e + "<br><br>" + var5);
@@ -739,7 +739,7 @@ final class ro extends kl {
             var3Lifetime1 = this.field_p.a(1, this.field_C);
             var4 = NetworkGameClient.countSetBits(var3Lifetime1, 8);
             if (var3Lifetime1 == 0) {
-              var12 = l.field_f;
+              var12 = TextLayout.field_f;
               var16 = var12;
               var16 = var12;
               this.a(true, 16711680, sm.field_e + "<br><br>" + var12);
@@ -791,7 +791,7 @@ final class ro extends kl {
     final void a(boolean param0) {
         int var3 = DungeonAssault.field_K;
         super.a(param0);
-        if (hh.field_s != this.field_s) {
+        if (DefaultTextWidgetRenderer.field_s != this.field_s) {
           return;
         }
         if (this.field_t == 5) {

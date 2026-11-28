@@ -206,7 +206,7 @@ final class sr {
               PlaceCreatureEffect.field_j.field_Z = bga.field_f.toUpperCase();
             }
           }
-          stackIn_73_0 = ela.field_i;
+          stackIn_73_0 = DisableMoveSlotEffect.field_i;
           stackIn_73_1 = 19842;
           stackIn_74_2 = (param3) && (!param1) && (!w.field_e);
           ((UiComponent) (Object) stackIn_73_0).a(stackIn_73_1, stackIn_74_2);

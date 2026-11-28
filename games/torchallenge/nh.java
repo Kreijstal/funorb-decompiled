@@ -210,7 +210,7 @@ final class nh extends v implements WidgetActivationListener {
           var4.field_i = 50;
           var4.field_p = this.field_p;
           var4.field_l = 80;
-          var4.field_q = (j) ((Object) new bc(GameApplet.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (j) ((Object) new DefaultTextWidgetRenderer(GameApplet.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(0, var4);
           this.field_gb = this.a(ab.field_n, 2, (gg) (this));
           return;

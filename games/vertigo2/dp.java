@@ -293,7 +293,7 @@ final class dp extends TextureOperator {
                 UiPanel.field_eb[~var2] = false;
               }
             }
-            ah.field_l = ro.field_e;
+            ah.field_l = TextLayout.field_e;
           }
           if (param0 <= 97) {
             field_F = (String[]) null;

@@ -74,7 +74,7 @@ final class AgeValidator extends TextFieldValidator {
             decompiledFrameRemainder0 = (ie.field_C == null);
           }
           if (decompiledFrameRemainder0) {
-            if (!em.field_c) {
+            if (!TextLayout.field_c) {
               if (dd.field_l >= BufferedSocket.field_c) {
                 stackIn_18_0 = (je.field_j + BufferedSocket.field_c > dd.field_l) ? 1 : 0;
               } else {
@@ -86,7 +86,7 @@ final class AgeValidator extends TextFieldValidator {
             boolean decompiledFrameRemainder1 = true;
             var2_int = stackIn_18_0;
             if (param0 != null) {
-              if (em.field_c) {
+              if (TextLayout.field_c) {
                 dd.field_l = BufferedSocket.field_c;
                 decompiledFrameRemainder1 = false;
               }
@@ -103,10 +103,10 @@ final class AgeValidator extends TextFieldValidator {
             oh.field_e = ClientException.field_c;
             pi.field_Q = Bzip2State.field_B;
             if (param0 != null) {
-              em.field_c = false;
+              TextLayout.field_c = false;
             } else {
               if (var2_int != 0) {
-                em.field_c = true;
+                TextLayout.field_c = true;
               }
             }
           }
@@ -114,7 +114,7 @@ final class AgeValidator extends TextFieldValidator {
           if (param1 != 0) {
             return;
           }
-          if (!em.field_c &&
+          if (!TextLayout.field_c &&
             dd.field_l < BufferedSocket.field_c &&
             df.field_o) {
             oh.field_e = ClientException.field_c;
@@ -122,10 +122,10 @@ final class AgeValidator extends TextFieldValidator {
             dd.field_l = 0;
           }
           ClientException.field_c = -1;
-          if (em.field_c &&
+          if (TextLayout.field_c &&
             dd.field_l == cd.field_d) {
             dd.field_l = 0;
-            em.field_c = false;
+            TextLayout.field_c = false;
           }
           Bzip2State.field_B = -1;
           return;

@@ -295,9 +295,9 @@ final class pe {
     final static int a(int param0, int param1) {
         param1 = param1 & 8191;
         if (param0 <= param1) {
-          return param1 >= 6144 ? -nj.field_r[-param1 + 8192] : -nj.field_r[param1 - 4096];
+          return param1 >= 6144 ? -TextHotspotBounds.field_r[-param1 + 8192] : -TextHotspotBounds.field_r[param1 - 4096];
         }
-        return param1 < 2048 ? nj.field_r[param1] : nj.field_r[-param1 + 4096];
+        return param1 < 2048 ? TextHotspotBounds.field_r[param1] : TextHotspotBounds.field_r[-param1 + 4096];
     }
 
     public static void clearStaticReferences(byte param0) {

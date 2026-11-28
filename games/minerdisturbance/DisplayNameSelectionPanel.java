@@ -213,7 +213,7 @@ final class DisplayNameSelectionPanel extends kn implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (ad) null);
         this.field_N = new ValidatedTextField("", (rm) null, 12);
-        eg var1 = new eg(sl.field_q, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(sl.field_q, 0, 0, 0, 0, 16777215, -1, 3, 0, bn.field_d.field_I, -1, 2147483647, true);
         fe var2 = new fe(BufferedRandomAccessFile.field_l, var1, (rm) null);
         this.field_P = new InteractiveWidget(he.field_c, (rm) null);
         this.field_J = new InteractiveWidget(u.field_b, (rm) null);

@@ -57,7 +57,7 @@ final class dj {
               var16 = (PacketBuffer) null;
               dj.a((PacketBuffer) null, (byte) 79);
             }
-            l.field_b = param7;
+            TextLayout.field_b = param7;
             ii.field_D = param4;
             la.field_c = param5;
             sc.field_q = param13;

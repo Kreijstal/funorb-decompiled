@@ -29,7 +29,7 @@ final class vi {
     }
 
     final void a(int param0, BitmapFont param1) {
-        eg var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         on var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -52,7 +52,7 @@ final class vi {
         on var14Lifetime1;
         on var14Lifetime2;
         try {
-          var17 = new eg(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_E + param1.field_I));
+          var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_E + param1.field_I));
           this.field_b = (ad) ((Object) var17);
           var17.field_q = 16777215;
           var4 = new on();

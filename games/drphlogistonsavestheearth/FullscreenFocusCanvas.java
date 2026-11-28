@@ -186,7 +186,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         byte[] var2Lifetime134;
         byte[] var2Lifetime135;
         try {
-          o.field_l = param0;
+          RichTextLayout.field_l = param0;
           var2 = NodeHashTableIterator.a("members_benefits_captions,0", 125);
           if (null != var2) {
             ej.field_e[0] = mj.a((byte) 26, var2);
@@ -457,7 +457,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime67 = NodeHashTableIterator.a("HUMAN_SURVIVAL_BONUS_BUILDINGS", param1 - 129);
           if (var2Lifetime67 != null) {
-            l.field_h = mj.a((byte) -22, var2Lifetime67);
+            DefaultTextWidgetRenderer.field_h = mj.a((byte) -22, var2Lifetime67);
           }
           var2Lifetime68 = NodeHashTableIterator.a("LEVEL_COMPLETE_PRESS_ANY_KEY_TO_CONTINUE", param1 - 131);
           if (null != var2Lifetime68) {
@@ -716,7 +716,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var2Lifetime131 = NodeHashTableIterator.a("keycode_gun", param1 ^ 130);
           if (null != var2Lifetime131) {
-            em.field_e = 255 & var2Lifetime131[0];
+            TextLayout.field_e = 255 & var2Lifetime131[0];
           }
           var2Lifetime132 = NodeHashTableIterator.a("keycode_bomb", 125);
           if (var2Lifetime132 != null) {
@@ -734,7 +734,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           if (null != var2Lifetime135) {
             nj.field_a = 255 & var2Lifetime135[0];
           }
-          o.field_l = null;
+          RichTextLayout.field_l = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

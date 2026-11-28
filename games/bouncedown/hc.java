@@ -162,7 +162,7 @@ final class hc {
           }
           if (param0 != null &&
             param0.length() >= lc.field_y &&
-            param0.length() <= mb.field_e) {
+            param0.length() <= RichTextLayout.field_e) {
             return false;
           }
           return true;

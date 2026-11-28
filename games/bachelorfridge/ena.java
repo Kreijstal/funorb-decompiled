@@ -86,7 +86,7 @@ final class ena extends pu {
         fba.field_a = BagpipeSpecial.a(param1, -1, "basic", "icon_buy");
         bn.field_h = BagpipeSpecial.a(param1, -1, "basic", "icon_buy_hover");
         AccountServiceResult.field_b = hk.a("scroll_green", param1, -76, "basic");
-        tq.field_g = hk.a("scroll_yellow", param1, -94, "basic");
+        RichTextLayout.field_g = hk.a("scroll_yellow", param1, -94, "basic");
         og.field_b = hk.a("scroll_brown", param1, 43, "basic");
         jf.field_l = BagpipeSpecial.a(param1, -1, "basic", "tab_shop");
         InvincibleSpecial.field_p = BagpipeSpecial.a(param1, param0 ^ 43, "basic", "tab_shop_active");
@@ -105,7 +105,7 @@ final class ena extends pu {
         hca.a("basic", param1, param0 - 50, "bucket");
         hca.a("basic", param1, -125, "bucket_empty");
         MoveInfoPanel.field_a = FullHealEvent.a("bag_hover", param1, "basic", (byte) 88);
-        pea.field_k = FullHealEvent.a("bag_bg", param1, "basic", (byte) -108);
+        ConsumeCreatureRemainsEffect.field_k = FullHealEvent.a("bag_bg", param1, "basic", (byte) -108);
         kga.field_d = FullHealEvent.a("bag_full_hover", param1, "basic", (byte) -111);
         ve.field_l = pi.a(param1, param0 - 8801, "basic", "arena_entrance_anim");
         rea.field_k = FullHealEvent.a("arena_sign_off", param1, "basic", (byte) -100);

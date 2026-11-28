@@ -67,7 +67,7 @@ abstract class jq {
         SoftwareRasterizer.fillRoundedRectangle(0, 0, param3, param4, 12, 5921370);
         if (param0 > 57) {
           SoftwareRasterizer.fillRoundedRectangle(4, 4, -8 + param3, param4 - 8, 8, 0);
-          ro.field_g.a(-127);
+          TextLayout.field_g.a(-127);
           SoftwareRasterizer.setClip(param1, param2, param1 + param3, param2 + 40);
           SoftwareRasterizer.fillRoundedRectangleAlpha(param1, param2, param3, param4, 12, 2048068, 150);
           SoftwareRasterizer.setClip(param1, 40 + param2, param3 + param1, param2 + param4);
@@ -78,7 +78,7 @@ abstract class jq {
         }
         jq.a(1, 91, 33, -110, -47);
         SoftwareRasterizer.fillRoundedRectangle(4, 4, -8 + param3, param4 - 8, 8, 0);
-        ro.field_g.a(-127);
+        TextLayout.field_g.a(-127);
         SoftwareRasterizer.setClip(param1, param2, param1 + param3, param2 + 40);
         SoftwareRasterizer.fillRoundedRectangleAlpha(param1, param2, param3, param4, 12, 2048068, 150);
         SoftwareRasterizer.setClip(param1, 40 + param2, param3 + param1, param2 + param4);

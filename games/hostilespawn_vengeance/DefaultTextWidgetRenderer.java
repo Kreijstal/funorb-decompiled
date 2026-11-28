@@ -1,0 +1,781 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class DefaultTextWidgetRenderer implements nn, TextWidgetRenderer {
+    int field_b;
+    int field_j;
+    static byte[][] field_m;
+    int field_a;
+    static String field_c;
+    int field_o;
+    int field_n;
+    BitmapFont field_g;
+    int field_q;
+    int field_i;
+    static RgbSprite field_h;
+    int field_d;
+    static int[] field_e;
+    private int field_f;
+    int field_p;
+    int field_k;
+    static int field_r;
+    private boolean field_l;
+
+    public final int getTextOriginY(int param0, ag param1, int param2) {
+        RuntimeException var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -1) {
+            field_e = (int[]) null;
+          }
+          stackIn_3_0 = this.a(-1, param1, 0, param2);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("cn.T(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public final int findTextOffsetAtScreenPosition(int param0, int param1, int param2, ag param3, int param4, int param5) {
+        RuntimeException var7 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.getTextLayout(param3, 1);
+          if (param2 <= -68) {
+            stackIn_4_0 = param3.field_l.getTextOffsetAt(83, param5 - this.getTextOriginY(-1, param3, param4), param1 - this.getTextOriginX(param0, -1, param3));
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -96;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("cn.R(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    private final int a(ag param0, int param1, int param2, int param3) {
+        RuntimeException var5 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param3 != -26318) {
+            this.field_p = -119;
+          }
+          stackIn_3_0 = param0.field_v + param1 - (-this.field_q - param0.field_q) + param2;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("cn.Q(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    private final int a(int param0, ag param1) {
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 == -4) {
+            stackIn_4_0 = -this.field_i + (param1.field_x - this.field_n);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = 46;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("cn.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    String c(ag param0, int param1) {
+        RuntimeException var3 = null;
+        String stackIn_2_0 = null;
+        String stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == 3) {
+            stackIn_4_0 = param0.field_n;
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = (String) null;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("cn.V(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final void a(int param0, boolean param1, int param2, ag param3) {
+        try {
+          if (param1) {
+            this.field_d = -113;
+          }
+          this.a(param3, this.field_f, 0, param0, 0, this.field_j, param2, (byte) 94);
+        } catch (RuntimeException runtimeException) {
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "cn.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final int a(int param0, ag param1, int param2, int param3) {
+        RuntimeException var5 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 == -1) {
+            stackIn_4_0 = param2 + param1.field_m + param3 + this.field_n + param1.field_o;
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -52;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_7_0 = var5;
+          stackIn_7_1 = new StringBuilder().append("cn.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final static void a(int param0, BitmapFont param1, int param2, BitmapFont param3) {
+        try {
+          cg.field_a = param2;
+          lj.field_u = param1;
+          na.field_c = param3;
+          if (param0 <= 125) {
+            DefaultTextWidgetRenderer.clearStaticReferences(122);
+          }
+          ArchiveIndex.a(SoftwareRasterizer.field_e / 2, SoftwareRasterizer.field_k / 2, -1);
+          ub.a(param1.field_F + param1.field_N, param3.field_F + param3.field_N, param3.field_N, param1.field_N, (byte) -127);
+        } catch (RuntimeException runtimeException) {
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "cn.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final TextLayout getTextLayout(ag param0, int param1) {
+        RuntimeException var3 = null;
+        ag var4 = null;
+        TextLayout stackIn_9_0 = null;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (null == param0.field_l) {
+            param0.field_l = (TextLayout) ((Object) new RichTextLayout());
+          }
+          if (param1 != 1) {
+            var4 = (ag) null;
+            this.getPreferredHeight((ag) null, (byte) 124);
+          }
+          if (this.field_l) {
+            ((RichTextLayout) (param0.field_l)).layoutWrappedText(0, this.a(-4, param0), this.getTextAreaWidth(param0, (byte) 67), this.field_b, this.field_g, this.c(param0, 3), this.field_k, this.field_a);
+          } else {
+            this.b(param0, 3);
+          }
+          stackIn_9_0 = param0.field_l;
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("cn.N(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final int getTextOriginX(int param0, int param1, ag param2) {
+        RuntimeException var4 = null;
+        ag var5 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -1) {
+            var5 = (ag) null;
+            this.getPreferredWidth(false, (ag) null);
+          }
+          stackIn_3_0 = this.a(param2, param0, 0, -26318);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("cn.M(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final void a(int param0, DefaultTextWidgetRenderer param1) {
+        try {
+          param1.field_k = this.field_k;
+          if (param0 > -32) {
+            this.field_p = -18;
+          }
+          param1.field_o = this.field_o;
+          param1.field_q = this.field_q;
+          param1.field_l = this.field_l;
+          param1.field_n = this.field_n;
+          param1.field_j = this.field_j;
+          param1.field_p = this.field_p;
+          param1.field_i = this.field_i;
+          param1.field_d = this.field_d;
+          param1.field_f = this.field_f;
+          param1.field_a = this.field_a;
+          param1.field_g = this.field_g;
+          param1.field_b = this.field_b;
+        } catch (RuntimeException runtimeException) {
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "cn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final int getPreferredWidth(boolean param0, ag param1) {
+        RuntimeException var3 = null;
+        BitmapFont var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0) {
+            var4 = (BitmapFont) null;
+            DefaultTextWidgetRenderer.a(114, (BitmapFont) null, 6, (BitmapFont) null);
+          }
+          this.getTextLayout(param1, 1);
+          stackIn_3_0 = param1.field_l.getMaxLineRightX(3915) + this.field_q + this.field_p;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("cn.K(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    public final int getPreferredHeight(ag param0, byte param1) {
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          this.getTextLayout(param0, 1);
+          if (param1 >= -58) {
+            DefaultTextWidgetRenderer.a(false, (byte) -4);
+          }
+          stackIn_3_0 = param0.field_l.getLayoutHeight(true) + (this.field_n + this.field_i);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("cn.A(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_m = (byte[][]) null;
+        field_e = null;
+        field_c = null;
+        if (param0 < 14) {
+          return;
+        }
+        field_h = null;
+    }
+
+    public void a(int param0, int param1, int param2, ag param3, boolean param4) {
+        if (null == this.field_g) {
+          return;
+        }
+        try {
+          this.a(param0, false, param1, param3);
+          if (param2 != 15430) {
+            this.field_n = 13;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "cn.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+        }
+    }
+
+    public final int getFontLineHeight(boolean param0) {
+        if (!param0) {
+          this.field_d = 10;
+        }
+        return this.field_g.field_F + this.field_g.field_y;
+    }
+
+    final static void a(boolean param0, byte param1) {
+        int var2;
+        int var3;
+        var3 = HostileSpawn.field_I ? 1 : 0;
+        if (wb.field_S <= 0) {
+          var2 = (ta.p(3)) ? 0 : 1;
+        } else {
+          if (null != ie.field_c) {
+            ImageProducerRasterBuffer.field_q = ie.field_c.d(16776960);
+            sd.a(2, 0);
+          } else {
+            ImageProducerRasterBuffer.field_q = KeyboardInput.createFullscreenCanvas(640, (byte) -114, gf.field_b, 0, 480, 0);
+          }
+          if (ImageProducerRasterBuffer.field_q != null) {
+            ea.a(ImageProducerRasterBuffer.field_q, 0);
+            var2 = 2;
+          } else {
+            var2 = 3;
+          }
+        }
+        if (param1 <= 76) {
+          return;
+        }
+        if (null == ie.field_c &&
+          TextLineMetrics.field_e) {
+          hh.a(5, var2, param0);
+        }
+    }
+
+    public final void paintCaret(int param0, ag param1, int param2, int param3, int param4) {
+        int stackIn_6_0 = 0;
+        int stackIn_6_1 = 0;
+        int stackIn_6_2 = 0;
+        int stackIn_7_3;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var6 = null;
+        int var7 = 0;
+        TextLineMetrics var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        DefaultTextWidgetRenderer var13 = null;
+        TextLayout var14 = null;
+        TextLayout var15 = null;
+        try {
+          if (param3 != 0) {
+            var13 = (DefaultTextWidgetRenderer) null;
+            this.a(-73, (DefaultTextWidgetRenderer) null);
+          }
+          if (param1.g(param3 - 9015)) {
+            var14 = this.getTextLayout(param1, 1);
+            var15 = var14;
+            var7 = var15.getLineIndexForTextOffset(param2, 0);
+            var8 = var14.field_d[var7];
+            var9 = var15.getXForTextOffset(param2, 0);
+            var10 = this.a(param1, param4, var9, param3 - 26318);
+            var11 = this.getTextOriginY(-1, param1, param0) + Math.max(0, var8.field_i);
+            stackIn_6_0 = this.getTextOriginY(-1, param1, param0);
+            stackIn_6_1 = this.a(-4, param1);
+            stackIn_6_2 = var8.field_f;
+            if (var15.field_d.length > var7 + 1) {
+              stackIn_7_3 = var14.field_d[1 + var7].field_i;
+            } else {
+              stackIn_7_3 = var8.field_f;
+            }
+            var12 = stackIn_6_0 + Math.min(stackIn_6_1, Math.min(stackIn_6_2, stackIn_7_3));
+            TextInputField.pushAndIntersectClip(param1.field_v + (param4 + param1.field_s), param1.field_m + param0, param1.field_x + (param0 + param1.field_m), param1.field_v + param4, true);
+            gf.field_e.a(1077952576, var10, var12, var10, this.field_o, var11);
+            eh.b(false);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var6 = decompiledCaughtException;
+          stackIn_11_0 = var6;
+          stackIn_11_1 = new StringBuilder().append("cn.E(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+        }
+    }
+
+    private final void a(ag param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7) {
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        ag var14 = null;
+        int var12Lifetime1;
+        var13 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          TextInputField.pushAndIntersectClip(param6 + param0.field_v + param0.field_s, param0.field_m + param3, param0.field_m + (param3 + param0.field_x), param6 + param0.field_v, true);
+          if (param7 < 85) {
+            var14 = (ag) null;
+            this.c((ag) null, 36);
+          }
+          boolean decompiledFrameRemainder0 = true;
+          var9_int = this.getTextAreaWidth(param0, (byte) 69);
+          var10 = this.a(-4, param0);
+          if (!this.field_l) {
+            var12 = this.field_b;
+            if (var12 == 0) {
+              var11 = this.field_g.field_y;
+            } else {
+              if (var12 != 2) {
+                if (var12 != 3 &&
+                  var12 != 1) {
+                }
+                var11 = this.field_g.field_y + (-this.field_g.field_y + var10 - this.field_g.field_F >> 1);
+              } else {
+                var11 = var10 - this.field_g.field_F;
+              }
+            }
+            var12Lifetime1 = this.field_k;
+            if (var12Lifetime1 != 0 &&
+              var12Lifetime1 != 3) {
+              if (var12Lifetime1 == 1) {
+                this.field_g.drawCentred(this.c(param0, 3), this.a(param0, param6, param2, -26318) + (var9_int >> 1), var11 + this.a(-1, param0, param4, param3), param5, param1);
+              } else {
+                if ((var12Lifetime1 == 2)) {
+                  this.field_g.drawRightAligned(this.c(param0, 3), this.a(param0, param6, param2, -26318) + var9_int, this.a(-1, param0, param4, param3) + var11, param5, param1);
+                }
+              }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              this.field_g.drawString(this.c(param0, 3), this.a(param0, param6, param2, -26318), this.a(-1, param0, param4, param3) + var11, param5, param1);
+            }
+          } else {
+            this.field_g.drawParagraph(this.c(param0, 3), this.a(param0, param6, param2, -26318), this.a(-1, param0, param4, param3), var9_int, var10, param5, param1, this.field_k, this.field_b, this.field_a);
+          }
+          eh.b(false);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          stackIn_29_0 = var9;
+          stackIn_29_1 = new StringBuilder().append("cn.O(");
+          if (param0 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+        }
+    }
+
+    private final void b(ag param0, int param1) {
+        RuntimeException stackIn_34_0 = null;
+        StringBuilder stackIn_34_1 = null;
+        String stackIn_35_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var6Lifetime1;
+        var7 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          if (param0.field_l == null) {
+            param0.field_l = (TextLayout) ((Object) new RichTextLayout());
+          }
+          var3_int = this.getTextAreaWidth(param0, (byte) 85);
+          var4 = this.a(-4, param0);
+          var6 = this.field_b;
+          if (var6 == 0) {
+            var5 = this.field_g.field_y;
+          } else {
+            if (var6 != 2) {
+              if (3 != var6 &&
+                var6 != 1) {
+              }
+              var5 = this.field_g.field_y + (var4 + (-this.field_g.field_y - this.field_g.field_F) >> 1);
+            } else {
+              var5 = -this.field_g.field_F + var4;
+            }
+          }
+          if (param1 != 3) {
+            this.field_q = 69;
+          }
+          var6Lifetime1 = this.field_k;
+          if (var6Lifetime1 != 0 &&
+            var6Lifetime1 != 3) {
+            if (1 != var6Lifetime1) {
+              if (var6Lifetime1 == 2) {
+                if (!(param0.field_l instanceof RichTextLayout)) {
+                  return;
+                }
+                ((RichTextLayout) (param0.field_l)).layoutSingleLineRightAligned(this.field_g, var5, -1002333144, var3_int, this.c(param0, param1 + 0));
+              }
+            } else {
+              if (param0.field_l instanceof RichTextLayout) {
+                ((RichTextLayout) (param0.field_l)).layoutSingleLineCentered(var5, this.c(param0, 3), var3_int >> 1, 28916, this.field_g);
+                return;
+              }
+            }
+            return;
+          }
+          if (param0.field_l instanceof RichTextLayout) {
+            ((RichTextLayout) (param0.field_l)).layoutSingleLineLeftAligned(var5, 0, this.c(param0, 3), this.field_g, (byte) -2);
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_34_0 = var3;
+          stackIn_34_1 = new StringBuilder().append("cn.C(");
+          if (param0 == null) {
+            stackIn_35_2 = "null";
+          } else {
+            stackIn_35_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final int getTextAreaWidth(ag param0, byte param1) {
+        RuntimeException var3 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 > 12) {
+            stackIn_4_0 = param0.field_s - (this.field_q + this.field_p);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = 104;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_7_0 = var3;
+          stackIn_7_1 = new StringBuilder().append("cn.I(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final void paintSelection(int param0, byte param1, int param2, ag param3, int param4, int param5) {
+        int var12 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_21_0 = 0;
+        RuntimeException stackIn_26_0 = null;
+        StringBuilder stackIn_26_1 = null;
+        String stackIn_27_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        TextLineMetrics var13 = null;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
+        var16 = HostileSpawn.field_I ? 1 : 0;
+        try {
+          if (param1 != 41) {
+            field_c = (String) null;
+          }
+          if (param5 == param2) {
+            return;
+          }
+          if (param3.g(param1 - 9056)) {
+            var17 = this.getTextLayout(param3, param1 ^ 40);
+            var18 = var17;
+            if (param5 > param2) {
+              var8 = param2;
+              var9 = param5;
+            } else {
+              var9 = param2;
+              var8 = param5;
+            }
+            var10 = var18.getLineIndexForTextOffset(var8, 0);
+            var11 = var18.getLineIndexForTextOffset(var9, param1 - 41);
+            TextInputField.pushAndIntersectClip(param3.field_s + (param0 + param3.field_v), param4 + param3.field_m, param3.field_x + (param3.field_m + param4), param0 + param3.field_v, true);
+            for (var12 = var10; var11 >= var12; var12++) {
+              var13 = var17.field_d[var12];
+              if (var10 == var12) {
+                stackIn_16_0 = var18.getXForTextOffset(var8, 0);
+              } else {
+                stackIn_16_0 = var13.field_b[0];
+              }
+              var14 = stackIn_16_0;
+              if (var12 == var11) {
+                stackIn_21_0 = var18.getXForTextOffset(var9, param1 ^ 41);
+              } else {
+                if (var13 == null) {
+                  stackIn_21_0 = 0;
+                } else {
+                  stackIn_21_0 = var13.field_b[var13.field_b.length - 1];
+                }
+              }
+              var15 = stackIn_21_0;
+              gf.field_e.a(this.a(param3, param0, var14, -26318), var15 - var14, this.field_d >>> 24, this.field_d, var13.field_f, this.field_n + param3.field_m + (param4 + (param3.field_o + var13.field_i)), 11776);
+            }
+            eh.b(false);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_26_0 = var7;
+          stackIn_26_1 = new StringBuilder().append("cn.S(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_27_2 = "null";
+          } else {
+            stackIn_27_2 = "{...}";
+          }
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    DefaultTextWidgetRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
+    }
+
+    protected DefaultTextWidgetRenderer() {
+    }
+
+    DefaultTextWidgetRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+        try {
+          this.field_f = param6;
+          this.field_i = param4;
+          this.field_a = param9;
+          this.field_j = param5;
+          this.field_g = param0;
+          this.field_b = param8;
+          this.field_p = param2;
+          this.field_n = param3;
+          this.field_o = param10;
+          this.field_k = param7;
+          this.field_d = param11;
+          this.field_l = param12 ? true : false;
+          this.field_q = param1;
+        } catch (RuntimeException runtimeException) {
+          throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "cn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+        }
+    }
+
+    static {
+        int var0 = 0;
+        int var1 = 0;
+        field_m = new byte[50][];
+        field_c = "Find and exterminate the spawn queen, then exit via the lift.";
+        field_e = new int[255];
+        for (var0 = 0; var0 < 255; var0++) {
+          var1 = 3 * (var0 - 128);
+          if (255 < var1) {
+            var1 = 255;
+          }
+          if (var1 < 0) {
+            var1 = 0;
+          }
+          field_e[var0] = 255 + 256 * var0;
+        }
+    }
+}

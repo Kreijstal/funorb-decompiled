@@ -70,10 +70,10 @@ final class cd {
         try {
           Exception var1 = null;
           Throwable decompiledCaughtException = null;
-          if (mi.field_f != null) {
+          if (TextLineMetrics.field_f != null) {
             try {
-              mi.field_f.seek(0L, (byte) -63);
-              mi.field_f.write(24, dh.field_N.position, 18017, dh.field_N.payload);
+              TextLineMetrics.field_f.seek(0L, (byte) -63);
+              TextLineMetrics.field_f.write(24, dh.field_N.position, 18017, dh.field_N.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

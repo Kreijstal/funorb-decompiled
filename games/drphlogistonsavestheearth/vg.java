@@ -4,7 +4,7 @@
 import java.util.*;
 
 class vg extends IntrusiveNode {
-    em field_s;
+    TextLayout field_s;
     int field_t;
     int field_y;
     int field_k;
@@ -286,7 +286,7 @@ class vg extends IntrusiveNode {
             this.c((byte) 61);
           }
           i.field_a = db.field_a;
-          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (ma.field_sb == 0) {
@@ -308,7 +308,7 @@ class vg extends IntrusiveNode {
               }
             }
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           regionExit1: {
@@ -336,18 +336,18 @@ class vg extends IntrusiveNode {
                 }
               }
               i.field_a = db.field_a;
-              AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+              AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
               return param2;
             }
           }
           if (db.field_a != 0) {
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           if (i.field_a == 0) {
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -364,7 +364,7 @@ class vg extends IntrusiveNode {
             this.c((byte) 61);
           }
           i.field_a = db.field_a;
-          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (var5 != 0) {
@@ -387,7 +387,7 @@ class vg extends IntrusiveNode {
               }
             }
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           regionExit2: {
@@ -415,17 +415,17 @@ class vg extends IntrusiveNode {
               }
             }
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           if (db.field_a != 0) {
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           if (i.field_a == 0) {
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
           this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -442,7 +442,7 @@ class vg extends IntrusiveNode {
             this.c((byte) 61);
           }
           i.field_a = db.field_a;
-          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (0 == mh.field_f) {
@@ -463,7 +463,7 @@ class vg extends IntrusiveNode {
             }
           }
           i.field_a = db.field_a;
-          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (this.a(ih.field_R, this, mh.field_f, (byte) 115, ae.field_gb, param0, param1)) {
@@ -471,12 +471,12 @@ class vg extends IntrusiveNode {
           if (var7 == 0) {
             if (db.field_a != 0) {
               i.field_a = db.field_a;
-              AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+              AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
               return param2;
             }
             if (i.field_a == 0) {
               i.field_a = db.field_a;
-              AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+              AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
               return param2;
             }
             this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -493,18 +493,18 @@ class vg extends IntrusiveNode {
               this.c((byte) 61);
             }
             i.field_a = db.field_a;
-            AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+            AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
             return param2;
           }
         }
         if (db.field_a != 0) {
           i.field_a = db.field_a;
-          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         if (i.field_a == 0) {
           i.field_a = db.field_a;
-          AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+          AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
           return param2;
         }
         this.a(param0, param1, ob.field_g, this, ck.field_c, false);
@@ -521,7 +521,7 @@ class vg extends IntrusiveNode {
           this.c((byte) 61);
         }
         i.field_a = db.field_a;
-        AgeValidator.a(this.e(param3 ^ -125), param3 ^ param3);
+        AgeValidator.a(this.getTooltipText(param3 ^ -125), param3 ^ param3);
         return param2;
     }
 
@@ -637,7 +637,7 @@ class vg extends IntrusiveNode {
     final void e(byte param0) {
         this.a(this.field_m, this.field_k, this.field_o, 16535, this.field_w);
         if (param0 <= 11) {
-          this.e(37);
+          this.getTooltipText(37);
           return;
         }
     }
@@ -653,7 +653,7 @@ class vg extends IntrusiveNode {
         }
     }
 
-    String e(int param0) {
+    String getTooltipText(int param0) {
         if (param0 >= -39) {
           return (String) null;
         }
@@ -980,17 +980,17 @@ class vg extends IntrusiveNode {
     }
 
     vg(String param0, cg param1, fd param2) {
-        va var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_t = 0;
         this.field_q = 0;
         try {
           this.field_u = param2;
           this.field_p = param0;
           this.field_l = param1;
-          if (this.field_l instanceof va) {
-            var4 = (va) ((Object) this.field_l);
-            this.field_w = var4.a((byte) 48, this);
-            this.field_k = var4.a(170, this);
+          if (this.field_l instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_l);
+            this.field_w = var4.getPreferredWidth((byte) 48, this);
+            this.field_k = var4.getPreferredHeight(170, this);
           }
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "vg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

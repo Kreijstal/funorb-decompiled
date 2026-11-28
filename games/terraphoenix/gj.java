@@ -125,7 +125,7 @@ final class gj {
           if (param2 < 57) {
             field_a = -15;
           }
-          for (var4_int = 0; rd.field_t > var4_int; var4_int++) {
+          for (var4_int = 0; RichTextLayout.field_t > var4_int; var4_int++) {
             if (param1 >= p.field_a[var4_int].field_f &&
               p.field_a[var4_int].field_f + 32 >= param1 &&
               param3 >= p.field_a[var4_int].field_e &&

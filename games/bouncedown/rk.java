@@ -41,8 +41,8 @@ final class rk {
             field_a = 22;
           }
           vk.field_c = new LoginPanel(gi.field_b, (String) null, fe.field_g, param3, param2);
-          ed.field_c = new ec(DisplayNameSelectionPanel.field_N, vk.field_c);
-          DisplayNameSelectionPanel.field_N.b(ed.field_c, false);
+          TextLayout.field_c = new ec(DisplayNameSelectionPanel.field_N, vk.field_c);
+          DisplayNameSelectionPanel.field_N.b(TextLayout.field_c, false);
         } catch (RuntimeException runtimeException) {
           throw CipherPacketBuffer.wrapClientException((Throwable) ((Object) runtimeException), "rk.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -139,7 +139,7 @@ final class rk {
           return;
         }
         try {
-          vc.field_G = param6;
+          RichTextWidget.field_G = param6;
           AccountRequestState.field_e = param0;
           fi.field_c = param5;
           pe.field_c = param1;

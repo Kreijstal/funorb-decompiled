@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends ma implements nn, WidgetActivationListener {
+final class ba extends ma implements TextHotspotListener, WidgetActivationListener {
     static String field_M;
-    private se field_S;
+    private RichTextWidget field_S;
     static java.applet.Applet field_L;
     static DiskCacheWorker field_O;
     private InteractiveWidget field_T;
@@ -252,7 +252,7 @@ final class ba extends ma implements nn, WidgetActivationListener {
         super(0, 0, 288, 0, (jm) null);
         String var7 = null;
         int var3 = 0;
-        hl var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -261,8 +261,8 @@ final class ba extends ma implements nn, WidgetActivationListener {
           this.field_T.field_n = (jm) ((Object) new sf());
           var7 = MatchingFieldValidator.a(kl.field_g, new String[]{this.a(29917), this.g((byte) -11)}, (byte) -114);
           var3 = 20;
-          var4 = new hl(rb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, rb.field_b.field_C, -1, 2147483647, true);
-          this.field_S = new se(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(rb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, rb.field_b.field_C, -1, 2147483647, true);
+          this.field_S = new RichTextWidget(var7, var4);
           this.field_S.field_j = "";
           this.field_S.a(-23750, 0, ok.field_Gb);
           this.field_S.a(-23750, 1, ok.field_Gb);
@@ -336,7 +336,7 @@ final class ba extends ma implements nn, WidgetActivationListener {
         }
     }
 
-    public final void a(int param0, byte param1, se param2, int param3) {
+    public final void onTextHotspotActivated(int param0, byte param1, RichTextWidget param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

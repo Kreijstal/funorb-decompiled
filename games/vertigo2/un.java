@@ -511,7 +511,7 @@ final class un extends UiPanel {
 
     final static UiPanel b(byte param0) {
         int var1 = -13 / ((37 - param0) / 47);
-        return pk.e(2);
+        return TextHotspotBounds.e(2);
     }
 
     static {

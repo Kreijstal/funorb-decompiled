@@ -47,7 +47,7 @@ final class sh {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "sh.B(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "sh.B(" + param0 + ')');
         }
     }
 

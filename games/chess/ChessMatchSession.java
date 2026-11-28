@@ -332,7 +332,7 @@ final class ChessMatchSession {
         SoftwareRasterizer.fillRectangleVerticalGradient(14, 179, 88, 40, 8750469, 5592405);
         SoftwareRasterizer.drawRectangleOutline(13, 178, 90, 42, 1);
         ph.field_l.a(8, 173);
-        se.a(16777215, pg.field_v, 20, 186, 3, param0 + 166, 0, this.field_e / 50, 35, da.field_y);
+        RichTextWidget.a(16777215, pg.field_v, 20, 186, 3, param0 + 166, 0, this.field_e / 50, 35, da.field_y);
         stackIn_14_0 = DirectByteStorage.field_g;
         stackIn_14_1 = var2;
         stackIn_14_2 = 111;
@@ -341,7 +341,7 @@ final class ChessMatchSession {
         SoftwareRasterizer.fillRectangleVerticalGradient(14, 121, 88, 40, 8750469, 5592405);
         SoftwareRasterizer.drawRectangleOutline(13, 120, 90, 42, 1);
         ph.field_l.a(8, 115);
-        se.a(16711680, pg.field_v, 20, 128, 3, 60, 0, this.field_v / 50, 35, da.field_y);
+        RichTextWidget.a(16711680, pg.field_v, 20, 128, 3, 60, 0, this.field_v / 50, 35, da.field_y);
         var4 = 4;
         var5 = 70;
         var6 = 30;
@@ -359,7 +359,7 @@ final class ChessMatchSession {
               var10 = var10 + var6;
             }
           } else {
-            var26 = ub.field_d[0][this.field_t.field_g[var12]];
+            var26 = TextLayout.field_d[0][this.field_t.field_g[var12]];
             var26.drawQuarterSizeAveraged(var9, var10);
             var9 = var9 + var26.field_w / 12;
             if (var5 < var9) {
@@ -376,7 +376,7 @@ final class ChessMatchSession {
             var7 = var7 + var29.field_w / 3;
             decompiledFrameRemainder0 = !(var7 <= var5);
           } else {
-            var28 = ub.field_d[1][this.field_t.field_i[var12Lifetime1]];
+            var28 = TextLayout.field_d[1][this.field_t.field_i[var12Lifetime1]];
             var28.drawQuarterSizeAveraged(var7, var8);
             var7 = var7 + var28.field_w / 12;
             decompiledFrameRemainder0 = !(var7 <= var5);
@@ -623,7 +623,7 @@ final class ChessMatchSession {
         }
         if (this.field_b) {
           if (!this.field_B.field_d) {
-            if (!hl.field_h) {
+            if (!DefaultTextWidgetRenderer.field_h) {
               qk.field_h = 2;
             } else {
               qk.field_h = 11;
@@ -832,10 +832,10 @@ final class ChessMatchSession {
         var4 = SoftwareRasterizer.field_h;
         var5 = SoftwareRasterizer.field_c;
         if (this.field_b && (!(qb.field_a >= 400) ||
-          qb.field_c) && !hl.field_h) {
+          qb.field_c) && !DefaultTextWidgetRenderer.field_h) {
           ResourceArchive.field_c.bindAsRenderTarget();
         }
-        if (hl.field_h) {
+        if (DefaultTextWidgetRenderer.field_h) {
           ph.field_j.setAsRasterTarget(48);
         }
         if (-2 == this.field_B.field_f ||
@@ -926,7 +926,7 @@ final class ChessMatchSession {
         sf.b(param0);
         if (this.field_b) {
           this.c(1, param1);
-          if (!hl.field_h) {
+          if (!DefaultTextWidgetRenderer.field_h) {
             if (qb.field_a >= 400) {
               if (qb.field_c) {
                 qb.field_c = false;
@@ -959,7 +959,7 @@ final class ChessMatchSession {
             LoginPanel.a(ResourceArchive.field_l[9], param0 - 16777133);
           }
         }
-        if (!hl.field_h) {
+        if (!DefaultTextWidgetRenderer.field_h) {
           ec.field_d.field_i = wc.field_s.field_i - (-wc.field_s.field_l + ec.field_d.field_l);
           ec.field_d.field_k = qh.field_b.field_k;
           if (ec.field_d.field_q == null) {
@@ -1079,9 +1079,9 @@ final class ChessMatchSession {
             this.field_o = this.field_o ^ 5 << this.field_x;
             this.field_E = this.field_E - ag.field_f;
             this.field_j = this.field_j + ag.field_f;
-            this.field_s = this.field_s + re.field_m;
+            this.field_s = this.field_s + TextHotspotBounds.field_m;
             this.field_x = this.field_x ^ 5 << this.field_x;
-            this.field_z = this.field_z + re.field_m;
+            this.field_z = this.field_z + TextHotspotBounds.field_m;
             this.a(-1);
           }
         }
@@ -1141,7 +1141,7 @@ final class ChessMatchSession {
         boolean decompiledFrameRemainder0 = true;
         this.a(param1, -2);
         if (this.field_b &&
-          !hl.field_h &&
+          !DefaultTextWidgetRenderer.field_h &&
           qb.field_a >= 400 && (-1 == IntrusiveDeque.field_f ||
           -1 == qk.field_h)) {
           ec.field_d.field_C = true;
@@ -1186,12 +1186,12 @@ final class ChessMatchSession {
         try {
           stackIn_4_1 = (param5);
           this.field_m = stackIn_4_1;
-          stackIn_7_0 = !(hl.field_h);
+          stackIn_7_0 = !(DefaultTextWidgetRenderer.field_h);
           qb.field_c = stackIn_7_0;
           BirthDateValidator.field_i = -1000;
           this.field_d = 0;
           this.field_n = -1;
-          stackIn_10_0 = (hl.field_h) ? 400 : 0;
+          stackIn_10_0 = (DefaultTextWidgetRenderer.field_h) ? 400 : 0;
           qb.field_a = stackIn_10_0;
           this.field_w = -1;
           wc.field_s = new eb(552, 10, 81, 24, vh.field_f);

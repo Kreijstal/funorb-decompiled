@@ -38,7 +38,7 @@ final class ia extends tb implements WidgetActivationListener {
           var4.field_k = 50;
           var4.field_t = 80;
           var4.field_w = 0;
-          var4.field_u = (uk) ((Object) new id(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_u = (uk) ((Object) new DefaultTextWidgetRenderer(de.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(4, var4);
           this.field_P = this.a(-120, (lf) (this), td.field_a);
           return;

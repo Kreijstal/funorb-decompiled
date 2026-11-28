@@ -349,7 +349,7 @@ final class LoginPanel extends nb implements TextFieldListener, WidgetActivation
             this.field_o = this.field_o + (5 + var7.textHeight(this.field_F, this.field_j - 40, var7.field_E));
           }
           var8 = nb.field_y;
-          var9 = kb.a((byte) -31, kk.c(-14047));
+          var9 = kb.a((byte) -31, RichTextLayout.c(-14047));
           if (var9 == NameSuggestionsPanel.field_J) {
             var8 = fg.field_d;
           } else {

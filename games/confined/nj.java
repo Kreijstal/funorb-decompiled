@@ -13,7 +13,7 @@ final class nj extends InteractiveWidget {
         jb var8 = var7;
         var8.a((byte) -128, new bd(20, lh.field_a, pn.field_a));
         var8.a((byte) -125, new bd(14, !param1 ? fl.field_b : ConfirmedEmailAvailabilityValidator.field_i, pn.field_a));
-        var8.a((byte) -118, new bd(21, na.field_U, pn.field_a));
+        var8.a((byte) -118, new bd(21, RichTextWidget.field_U, pn.field_a));
         var7.field_h[1].field_f = pn.field_a.stringWidth(var7.field_h[1].field_a) + 100;
         bd var4 = var7.field_h[0];
         var7.field_h[2].field_f = 150;
@@ -95,7 +95,7 @@ final class nj extends InteractiveWidget {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 

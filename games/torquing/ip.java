@@ -32,7 +32,7 @@ final class ip {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class ip {
         RuntimeException var2_ref = null;
         var4 = Torquing.field_u;
         try {
-          var2 = (mc) (uj.field_a.beginBackward(0));
+          var2 = (mc) (TextLayout.field_a.beginBackward(0));
           while (var2 != null) {
             var3 = var2.field_j;
             if (var3.isSamplePositionOutOfRange()) {
@@ -87,9 +87,9 @@ final class ip {
                 return;
               }
             }
-            var2 = (mc) (uj.field_a.nextBackward(-24059));
+            var2 = (mc) (TextLayout.field_a.nextBackward(-24059));
           }
-          uj.field_a.addFirst((byte) 54, new mc(param1));
+          TextLayout.field_a.addFirst((byte) 54, new mc(param1));
           ni.a(param1, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -102,7 +102,7 @@ final class ip {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -149,7 +149,7 @@ final class ip {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

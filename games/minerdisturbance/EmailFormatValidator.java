@@ -43,7 +43,7 @@ final class EmailFormatValidator extends TextFieldValidator {
         Object var1 = null;
         Throwable decompiledCaughtException = null;
         Object var1_ref = null;
-        var1_ref = lb.field_y;
+        var1_ref = TextHotspotBounds.field_y;
         synchronized (var1_ref) {
           CipherPacketBuffer.field_B = qd.field_J;
           DirectByteStorage.field_c = DirectByteStorage.field_c + 1;

@@ -11,7 +11,7 @@ final class hc {
           ab.field_D.disposeResultScene(-1);
           ab.field_D = null;
         }
-        fn.field_j = bh.field_c;
+        fn.field_j = TextLineMetrics.field_c;
         wd.field_j = df.field_c;
         ob.field_l = AccountNameAvailabilityValidator.field_k;
         mb.field_g = LoginPanel.field_I;

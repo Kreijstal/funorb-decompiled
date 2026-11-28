@@ -131,7 +131,7 @@ final class DynamicLight extends IntrusiveNode {
                 if (!da.field_i) {
                 }
               }
-              if (na.field_W) {
+              if (RichTextWidget.field_W) {
                 e.field_c.readUnsignedByte(32);
                 e.field_c.readUnsignedByte(32);
                 e.field_c.readInt((byte) 51);
@@ -147,7 +147,7 @@ final class DynamicLight extends IntrusiveNode {
               field_q = e.field_c.readUnsignedByte(32);
               lk.field_d = wd.field_f;
               if (PacketBuffer.field_o.b((byte) -113) != IntrusiveNodeHashTable.field_a) {
-                if (PacketBuffer.field_o.b((byte) 126) == vf.field_e) {
+                if (PacketBuffer.field_o.b((byte) 126) == DefaultTextWidgetRenderer.field_e) {
                   tj.field_n.a(ii.b(false), (byte) 49);
                 }
               } else {
@@ -235,7 +235,7 @@ final class DynamicLight extends IntrusiveNode {
             } else {
               stackIn_105_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param5).append(')').toString());
+            throw TextLineMetrics.a((Throwable) ((Object) stackIn_101_0), ((StringBuilder) (Object) stackIn_104_1).append(stackIn_105_2).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -255,7 +255,7 @@ final class DynamicLight extends IntrusiveNode {
         try {
           this.field_r = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "oi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "oi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends vj {
+final class ki extends RichTextWidget {
     private Sprite field_U;
     static IndexedSprite field_ab;
     private String field_V;
@@ -113,7 +113,7 @@ final class ki extends vj {
             vi.field_j = null;
             Bzip2State.field_s = sb.field_p.copy();
             Bzip2State.field_s.bindAsRenderTarget();
-            hh.a(SoftwareRasterizer.field_k, (byte) -2, 2 * SoftwareRasterizer.field_j / 3, 0, 64, 0);
+            TextHotspotBounds.a(SoftwareRasterizer.field_k, (byte) -2, 2 * SoftwareRasterizer.field_j / 3, 0, 64, 0);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(rb.field_a);
             sl.field_d = (-IntrusiveNode.field_f.field_t + lm.field_e.field_t) / 2 + 390;
@@ -277,7 +277,7 @@ final class ki extends vj {
             lm.field_e.draw(434, 390);
             pc.field_d.draw(0, 0);
             if (1 == si.field_ob.field_h) {
-              hh.a(lm.field_e.field_r - 4, (byte) 123, 7 * lm.field_e.field_t / 12, 436, 64, 392);
+              TextHotspotBounds.a(lm.field_e.field_r - 4, (byte) 123, 7 * lm.field_e.field_t / 12, 436, 64, 392);
             }
             stackIn_65_0 = GameShell.field_C;
             stackIn_65_1 = -80;
@@ -361,7 +361,7 @@ final class ki extends vj {
         }
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 > 70) {
           return null;
         }
@@ -384,7 +384,7 @@ final class ki extends vj {
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
         im var6;
-        w var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -407,16 +407,16 @@ final class ki extends vj {
         }
         if (!var5.equals(this.text)) {
           this.text = var5;
-          this.b(true);
+          this.rebuildHotspotBounds(true);
         }
         super.a(param0, -118, param2, param3);
         if (param1 >= -106) {
           field_S = (String) null;
         }
         var6Lifetime1 = this.field_X.getValidationStatus(-16323);
-        var8 = (w) ((Object) this.listener);
+        var8 = (TextWidgetRenderer) ((Object) this.listener);
         var9 = param0 + this.x;
-        var10 = var8.a((UiWidget) (this), param3, (byte) -72) + (var8.a((UiWidget) (this), -19302).c(5859) >> 1);
+        var10 = var8.getTextOriginY((UiWidget) (this), param3, (byte) -72) + (var8.getTextLayout((UiWidget) (this), -19302).getLayoutHeight(5859) >> 1);
         if (kj.field_d != var6Lifetime1 &&
           var6Lifetime1 != oh.field_b) {
           if (qf.field_d == var6Lifetime1) {

@@ -69,7 +69,7 @@ final class lf {
         GzipDecompressor.b(5);
         if (null != AchievementNotice.field_k) {
           AchievementNotice.a(AchievementNotice.field_k, (byte) 118);
-          jh.a(false);
+          RichTextLayout.a(false);
           lk.b(false);
           eh.b((byte) 99);
           if (ua.a((byte) 69)) {
@@ -83,7 +83,7 @@ final class lf {
           lf.a((byte) 48);
           return;
         }
-        jh.a(false);
+        RichTextLayout.a(false);
         lk.b(false);
         eh.b((byte) 99);
         if (ua.a((byte) 69)) {

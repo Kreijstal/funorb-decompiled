@@ -89,7 +89,7 @@ final class td implements j {
               var20[0][var10 * 4 + 1] = eh.field_a[var11];
               var20[0][2 + 4 * var10] = ld.field_M[var11];
               var20[0][4 * var10 + 3] = ma.field_n[var11];
-              if (kj.a(cg.field_a[var11], (byte) -66) &&
+              if (RichTextWidget.a(cg.field_a[var11], (byte) -66) &&
                 ld.field_M[var11] + eh.field_a[var11] + ma.field_n[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -107,7 +107,7 @@ final class td implements j {
               var20[1][1 + 4 * var15] = eh.field_a[var11Lifetime1];
               var20[1][2 + 4 * var15] = ld.field_M[var11Lifetime1];
               var20[1][3 + var15 * 4] = ma.field_n[var11Lifetime1];
-              if (kj.a(cg.field_a[var11Lifetime1], (byte) -75) &&
+              if (RichTextWidget.a(cg.field_a[var11Lifetime1], (byte) -75) &&
                 ld.field_M[var11Lifetime1] + eh.field_a[var11Lifetime1] + ma.field_n[var11Lifetime1] == 0) {
                 var6[1][var15] = null;
                 var15--;

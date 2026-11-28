@@ -5,7 +5,7 @@ abstract class aa {
     abstract void a(int param0, PacketBuffer param1);
 
     final static void a(byte param0, int param1) {
-        jf.field_b = di.field_j[param1];
+        TextLayout.field_b = di.field_j[param1];
         if (param0 < 25) {
           return;
         }

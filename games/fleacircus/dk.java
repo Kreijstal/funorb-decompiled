@@ -451,11 +451,11 @@ abstract class dk extends UiComponent implements wg {
         }
     }
 
-    String g(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.g(param0);
+        String var2 = super.getTooltipText(param0);
         if (null != this.field_A) {
-          var3 = this.field_A.g(4);
+          var3 = this.field_A.getTooltipText(4);
           if (var3 != null) {
             return var3;
           }

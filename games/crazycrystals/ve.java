@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends lb {
+final class ve extends DefaultTextWidgetRenderer {
     private int field_r;
     static boolean field_t;
     private int field_s;

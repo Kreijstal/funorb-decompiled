@@ -2717,7 +2717,7 @@ final class LevelEntity {
             return false;
           }
           param1.field_b = 0;
-          var3_int = df.field_R / 32;
+          var3_int = RichTextWidget.field_R / 32;
           if (param1.x < var3_int &&
             this.field_a > 0) {
             param1.field_b = 64;
@@ -3228,7 +3228,7 @@ final class LevelEntity {
               }
             }
             if (decompiledFrameCompleted0) {
-              fa.field_t = -1;
+              RichTextLayout.field_t = -1;
               ul.field_m = 0;
               stackIn_273_0 = -1;
             }
@@ -3662,7 +3662,7 @@ final class LevelEntity {
                         if (var9_int != 2) {
                           return;
                         }
-                        this.a(var13, aa.field_g, -72, false, var11, df.field_R);
+                        this.a(var13, aa.field_g, -72, false, var11, RichTextWidget.field_R);
                         if (var27 == 0) {
                           return;
                         }
@@ -3683,7 +3683,7 @@ final class LevelEntity {
                             if (var9_int != 2) {
                               return;
                             }
-                            this.a(param1, aa.field_g, -118, true, param6 + param4, df.field_R);
+                            this.a(param1, aa.field_g, -118, true, param6 + param4, RichTextWidget.field_R);
                             if (var27 == 0) {
                               return;
                             }
@@ -3692,7 +3692,7 @@ final class LevelEntity {
                             var11 = param6 + param4;
                             var12Lifetime1 = var11 + var20;
                             if ((this.field_l > 0 ||
-                              !(0 < SocketConnector.field_k)) && bc.field_o != 3) {
+                              !(0 < SocketConnector.field_k)) && DefaultTextWidgetRenderer.field_o != 3) {
                               if (var11 > 320 &&
                                 si.field_L[0] >= var11) {
                                 var18 = 0;
@@ -3716,7 +3716,7 @@ final class LevelEntity {
                             if (var9_int != 2) {
                               return;
                             }
-                            this.a(param1, aa.field_g, -126, true, param6 + param4, df.field_R);
+                            this.a(param1, aa.field_g, -126, true, param6 + param4, RichTextWidget.field_R);
                             if (var27 == 0) {
                               return;
                             }
@@ -3725,7 +3725,7 @@ final class LevelEntity {
                             var11 = param4 + param6;
                             var12Lifetime1 = var11 + var20;
                             if ((this.field_l > 0 ||
-                              !(SocketConnector.field_k > 0)) && bc.field_o != 3) {
+                              !(SocketConnector.field_k > 0)) && DefaultTextWidgetRenderer.field_o != 3) {
                               if (var11 > 320 &&
                                 si.field_L[0] >= var11) {
                                 var18 = 0;
@@ -3749,7 +3749,7 @@ final class LevelEntity {
                             if (var9_int != 2) {
                               return;
                             }
-                            this.a(param1, aa.field_g, -85, true, param4 + param6, df.field_R);
+                            this.a(param1, aa.field_g, -85, true, param4 + param6, RichTextWidget.field_R);
                             if (var27 == 0) {
                               return;
                             }
@@ -3763,7 +3763,7 @@ final class LevelEntity {
                           if (var9_int != 2) {
                             return;
                           }
-                          this.a(param1, aa.field_g, param5 ^ 20793, true, param4 + param6, df.field_R);
+                          this.a(param1, aa.field_g, param5 ^ 20793, true, param4 + param6, RichTextWidget.field_R);
                           if (var27 == 0) {
                             return;
                           }
@@ -4091,7 +4091,7 @@ final class LevelEntity {
             if (this.field_L == 0) {
               this.field_ib = false;
               kf.field_d = 2;
-              kf.field_d = lg.b((byte) 84, this.y);
+              kf.field_d = TextLayout.b((byte) 84, this.y);
               if (kf.field_d < 0) {
                 kf.field_d = 0;
               }
@@ -4101,7 +4101,7 @@ final class LevelEntity {
           if (kf.field_d == 2) {
             this.a(true);
             this.field_mb = false;
-            kf.field_d = lg.b((byte) 84, this.y);
+            kf.field_d = TextLayout.b((byte) 84, this.y);
             if (kf.field_d < 0) {
               kf.field_d = 0;
             }
@@ -4117,7 +4117,7 @@ final class LevelEntity {
               this.field_h = -this.field_M;
               this.field_Q = 0;
             }
-            var11Lifetime1 = lg.b((byte) 84, BufferedSocket.field_p.y);
+            var11Lifetime1 = TextLayout.b((byte) 84, BufferedSocket.field_p.y);
             if (this.j((byte) 112) ||
               var11Lifetime1 < 0 ||
               var11Lifetime1 == 2) {
@@ -4141,7 +4141,7 @@ final class LevelEntity {
               wh.field_b = false;
               this.field_ib = false;
               kf.field_d = 4;
-              kf.field_d = lg.b((byte) 84, this.y);
+              kf.field_d = TextLayout.b((byte) 84, this.y);
               if (0 > kf.field_d) {
                 kf.field_d = 0;
               }
@@ -4179,7 +4179,7 @@ final class LevelEntity {
               if (this.field_L == 0) {
                 var11Lifetime2 = this.h(-26698);
                 if (var11Lifetime2 < 0) {
-                  kf.field_d = lg.b((byte) 84, this.y);
+                  kf.field_d = TextLayout.b((byte) 84, this.y);
                   if (kf.field_d < 0) {
                     kf.field_d = 0;
                   }
@@ -4213,7 +4213,7 @@ final class LevelEntity {
             td.field_e = 0;
             return;
           }
-          kf.field_d = lg.b((byte) 84, this.y);
+          kf.field_d = TextLayout.b((byte) 84, this.y);
           if (kf.field_d < 0) {
             kf.field_d = 0;
           }
@@ -4238,7 +4238,7 @@ final class LevelEntity {
                 }
                 return;
               }
-              kf.field_d = lg.b((byte) 84, this.y);
+              kf.field_d = TextLayout.b((byte) 84, this.y);
               if (0 > kf.field_d) {
                 kf.field_d = 0;
               }
@@ -4752,7 +4752,7 @@ final class LevelEntity {
                     this.field_L = 0;
                     decompiledFrameRemainder0 = (ea.field_e == 0);
                     if (decompiledFrameRemainder0) {
-                      rj.field_d = df.field_P;
+                      rj.field_d = RichTextWidget.field_P;
                       decompiledFrameRemainder0 = (var5 != 0);
                     }
                   }
@@ -4886,7 +4886,7 @@ final class LevelEntity {
                             ab.field_d = ab.field_d + 1;
                             if (var5 != 0) {
                               if (o.field_l <= 0) {
-                                df.field_O = true;
+                                RichTextWidget.field_O = true;
                                 ii.field_k = this;
                                 GameApplet.field_o = 2;
                                 NetworkArchiveRequest.field_B = 0;
@@ -4902,7 +4902,7 @@ final class LevelEntity {
                     }
                   } else {
                     if (o.field_l <= 0) {
-                      df.field_O = true;
+                      RichTextWidget.field_O = true;
                       ii.field_k = this;
                       GameApplet.field_o = 2;
                       NetworkArchiveRequest.field_B = 0;
@@ -6176,7 +6176,7 @@ final class LevelEntity {
           this.field_nb = de.field_c[var3_int][this.variant];
           this.field_K = mh.field_c[var3_int][this.variant];
           this.field_M = ck.field_a[var3_int];
-          this.field_cb = bc.field_l[var3_int];
+          this.field_cb = DefaultTextWidgetRenderer.field_l[var3_int];
           this.field_C = ll.field_k[var3_int][this.variant];
           this.field_L = 0;
           if (param1 <= 41) {
@@ -6376,7 +6376,7 @@ final class LevelEntity {
           boolean decompiledFrameRemainder0 = true;
           if (we.field_j != 3) {
             if (we.field_j == 2) {
-              if (AccountServiceResult.field_k - this.field_p - qi.field_f[we.field_j][fh.field_e] <= 0) {
+              if (AccountServiceResult.field_k - this.field_p - TextLineMetrics.field_f[we.field_j][fh.field_e] <= 0) {
                 oa.field_g = 0;
                 decompiledFrameRemainder0 = (var4 != 0);
               }
@@ -6393,7 +6393,7 @@ final class LevelEntity {
                 decompiledFrameRemainder0 = (var4 != 0);
               }
               if (decompiledFrameRemainder0) {
-                oa.field_g = (AccountServiceResult.field_k - this.field_p) / qi.field_f[we.field_j][fh.field_e];
+                oa.field_g = (AccountServiceResult.field_k - this.field_p) / TextLineMetrics.field_f[we.field_j][fh.field_e];
                 if ((-1 + kk.field_h[we.field_j][fh.field_e]) <= oa.field_g &&
                   !jh.field_b[we.field_j][fh.field_e]) {
                   oa.field_g = kk.field_h[we.field_j][fh.field_e] - 1;
@@ -6418,7 +6418,7 @@ final class LevelEntity {
                 this.field_v = false;
                 this.field_p = AccountServiceResult.field_k;
               }
-              if ((AccountServiceResult.field_k - this.field_p) > qi.field_f[we.field_j][fh.field_e]) {
+              if ((AccountServiceResult.field_k - this.field_p) > TextLineMetrics.field_f[we.field_j][fh.field_e]) {
                 this.field_eb = false;
               }
               oa.field_g = 1;
@@ -6427,7 +6427,7 @@ final class LevelEntity {
           if (we.field_j == 1) {
             var3 = pi.field_g[fh.field_e][oa.field_g] ? 1 : 0;
             if (var3 != 0 &&
-              0 == (-this.field_p + AccountServiceResult.field_k) % qi.field_f[we.field_j][fh.field_e]) {
+              0 == (-this.field_p + AccountServiceResult.field_k) % TextLineMetrics.field_f[we.field_j][fh.field_e]) {
               jc.b(fh.field_e, 1, 3);
             }
           }
@@ -6646,7 +6646,7 @@ final class LevelEntity {
           var10 = ae.field_s[AccountRegistrationPanel.field_T[this.type]];
           stackIn_11_0 = (0 >= this.field_G) ? 0 : 1;
           var11 = stackIn_11_0;
-          var12 = bc.field_l[AccountRegistrationPanel.field_T[this.type]] ? 1 : 0;
+          var12 = DefaultTextWidgetRenderer.field_l[AccountRegistrationPanel.field_T[this.type]] ? 1 : 0;
           if (this.type == 23) {
             RandomAccessCacheFile.a(-996593372, param2, param3);
             return;
@@ -8580,7 +8580,7 @@ final class LevelEntity {
               }
               break;
             }
-            fa.field_t = -1;
+            RichTextLayout.field_t = -1;
           }
           var17 = 0;
           scanLoop1: while (true) {
@@ -8602,7 +8602,7 @@ final class LevelEntity {
             break;
           }
           if (stackIn_24_0 != stackIn_24_1 ||
-            n.field_jb != fa.field_t ||
+            n.field_jb != RichTextLayout.field_t ||
             ul.field_m != this.field_a ||
             ul.field_m == 0) {
             dl.field_n[2] = 0;
@@ -8613,7 +8613,7 @@ final class LevelEntity {
             SectorCacheStore.field_f.bindAsTarget(124);
             ul.field_m = this.field_a;
             ec.field_b = AccountNameAvailabilityValidator.field_r;
-            fa.field_t = n.field_jb;
+            RichTextLayout.field_t = n.field_jb;
           }
           boolean decompiledFrameCompleted0 = true;
           od.a(param3 - (var13 - this.field_I >> 1), -32 + param2, -1, 8, 4, ea.field_h);
@@ -8671,7 +8671,7 @@ final class LevelEntity {
           }
           var17 = stackIn_63_0;
           while (var16 > var17) {
-            this.a(param1, df.field_R, id.field_d[var17][1], id.field_d[var17][2], id.field_d[var17][0], this.type, 2657, id.field_d[var17][3]);
+            this.a(param1, RichTextWidget.field_R, id.field_d[var17][1], id.field_d[var17][2], id.field_d[var17][0], this.type, 2657, id.field_d[var17][3]);
             var9 = dl.field_n[2];
             var7_int = dl.field_n[0];
             var8 = dl.field_n[1];
@@ -9122,7 +9122,7 @@ final class LevelEntity {
           var2_int = vj.field_c;
           var3 = pl.field_e[this.field_L];
           var4 = 0;
-          var5 = bc.field_h[var2_int][var3][this.field_kb] ? 1 : 0;
+          var5 = DefaultTextWidgetRenderer.field_h[var2_int][var3][this.field_kb] ? 1 : 0;
           var6 = ba.field_e[var2_int][var3][this.field_kb] ? 1 : 0;
           var7 = 0;
           var8 = vc.field_d[var2_int][var3][this.field_kb] ? 1 : 0;
@@ -9558,7 +9558,7 @@ final class LevelEntity {
           var4_int = param1 ? 1 : 0;
           var7 = vj.field_c;
           var8 = pl.field_e[this.field_L];
-          var9 = bc.field_h[var7][var8][this.field_kb] ? 1 : 0;
+          var9 = DefaultTextWidgetRenderer.field_h[var7][var8][this.field_kb] ? 1 : 0;
           var10 = ba.field_e[var7][var8][this.field_kb] ? 1 : 0;
           var11 = p.field_e[var7][var8][this.field_kb];
           if (param2) {

@@ -132,13 +132,13 @@ final class NanoFrameTimer extends FrameTimer {
           NanoFrameTimer.e(0);
           wf.field_i.a((byte) -120);
           if (!gb.field_d.b(-59)) {
-            return df.c((byte) 35);
+            return RichTextWidget.c((byte) 35);
           }
           return 0;
         }
         wf.field_i.a((byte) -120);
         if (!gb.field_d.b(-59)) {
-          return df.c((byte) 35);
+          return RichTextWidget.c((byte) 35);
         }
         return 0;
     }

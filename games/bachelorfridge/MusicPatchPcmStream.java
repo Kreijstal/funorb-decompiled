@@ -235,11 +235,11 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 == -1) {
-          ic.a(param0, rt.field_a[param2], -31855);
+          ClearPendingPetAttackEffect.a(param0, rt.field_a[param2], -31855);
           return;
         }
         field_m = (String) null;
-        ic.a(param0, rt.field_a[param2], -31855);
+        ClearPendingPetAttackEffect.a(param0, rt.field_a[param2], -31855);
     }
 
     private final void skipVoiceFrames(int param0, int param1, MidiNote param2) {

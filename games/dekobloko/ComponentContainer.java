@@ -267,7 +267,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
         return integerLocal3;
     }
 
-    String computeString0223(byte byteArgument1) {
+    String getTooltipText(byte byteArgument1) {
         MixedSupport108 mixedSupport108Local1;
         UiComponent uiComponentLocal2;
         String stringLocal3;
@@ -281,7 +281,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
           this.computeBoolean0214(59, 12, 76, (UiComponent) null, -65, -4, true);
         }
         while (uiComponentLocal2 != null) {
-          stringLocal3 = uiComponentLocal2.computeString0223((byte) 113);
+          stringLocal3 = uiComponentLocal2.getTooltipText((byte) 113);
           if (stringLocal3 != null) {
             return stringLocal3;
           }
@@ -367,7 +367,7 @@ class ComponentContainer extends UiComponent implements CallbackContract014 {
         int integerLocal1 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         MixedSupport108 mixedSupport108Local2 = new MixedSupport108(this.nodeDequeState0013);
         if (byteArgument1 != -95) {
-          this.computeString0223((byte) 50);
+          this.getTooltipText((byte) 50);
         }
         UiComponent uiComponentLocal3 = (UiComponent) (mixedSupport108Local2.computeHashNode1412((byte) 71));
         while (uiComponentLocal3 != null) {

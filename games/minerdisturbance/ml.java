@@ -211,7 +211,7 @@ final class ml {
                                                       if (!(!this.field_o.a((byte) -45))) {
                                                         ng.a((byte) 73);
                                                         try {
-                                                          uf.a(13, bm.c(param0 - 555));
+                                                          uf.a(13, RichTextLayout.c(param0 - 555));
                                                         } catch (java.lang.Exception decompiledCaughtParameter0) {
                                                           decompiledCaughtException = decompiledCaughtParameter0;
                                                           var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -414,7 +414,7 @@ final class ml {
               if (this.field_o.a((byte) 16)) {
                 d.field_c = true;
                 if (sc.field_b) {
-                  mg.a((byte) -125);
+                  TextLineMetrics.a((byte) -125);
                 }
                 stackIn_87_0 = !(sc.field_b);
                 sc.field_b = stackIn_87_0;
@@ -833,7 +833,7 @@ final class ml {
                         }
                       } else {
                         GameAppletShell.field_m.draw(param2, 0);
-                        if (!eg.b(112)) {
+                        if (!DefaultTextWidgetRenderer.b(112)) {
                           FullscreenFocusCanvas.field_c.draw(640 - (FullscreenFocusCanvas.field_c.field_x + param2), -FullscreenFocusCanvas.field_c.field_A + 480);
                         } else {
                           if (!fa.field_e) {
@@ -1775,7 +1775,7 @@ final class ml {
         if (sn.field_b[var5] == null) {
           stackIn_17_0 = (0 == var5) ? 6 : 7;
           var6 = stackIn_17_0;
-          sn.field_b[var5] = gk.a(3, 1, var6, eg.a((int) param3, -18), 10);
+          sn.field_b[var5] = gk.a(3, 1, var6, DefaultTextWidgetRenderer.a((int) param3, -18), 10);
         }
         if (!this.field_p) {
           stackIn_26_0 = (param1) ? 0 : 640;

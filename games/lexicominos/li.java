@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li extends bc {
+final class li extends RichTextWidget {
     static aj field_R;
     private FieldValidator field_N;
     static AccountServiceResult field_T;
@@ -87,7 +87,7 @@ final class li extends bc {
         }
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 > 121) {
           return null;
         }
@@ -107,7 +107,7 @@ final class li extends bc {
         String var5;
         sc var6;
         int var13;
-        ub var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -132,13 +132,13 @@ final class li extends bc {
         }
         if (!var5.equals(this.field_u)) {
           this.field_u = var5;
-          this.f(true);
+          this.rebuildHotspotBounds(true);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_N.getValidationStatus((byte) 119);
-        var8 = (ub) ((Object) this.field_i);
+        var8 = (TextWidgetRenderer) ((Object) this.field_i);
         var9 = param2 + this.field_t;
-        var10 = var8.a((w) (this), param0 ^ -20231, param1) + (var8.a((w) (this), (byte) 101).a(0) >> 1);
+        var10 = var8.getTextOriginY((w) (this), param0 ^ -20231, param1) + (var8.getTextLayout((w) (this), (byte) 101).getLayoutHeight(0) >> 1);
         if (var6Lifetime1 == jj.field_e) {
           var18 = BufferedRandomAccessFile.field_b[0];
           var11 = var18.field_r << 1;

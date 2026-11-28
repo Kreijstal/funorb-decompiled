@@ -295,7 +295,7 @@ final class LoginPanel extends gj implements TextFieldListener, WidgetActivation
             if (!this.field_K) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = mi.field_k;
+              stackIn_18_3 = TextHotspotBounds.field_k;
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;

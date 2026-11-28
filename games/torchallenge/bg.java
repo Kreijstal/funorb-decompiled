@@ -346,10 +346,10 @@ final class bg extends ic {
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltipText(boolean param0) {
         int var2 = this.field_A.field_w ? 1 : 0;
         this.field_A.field_w = this.field_w;
-        String var3 = this.field_A.b(param0);
+        String var3 = this.field_A.getTooltipText(param0);
         if (param0) {
           return (String) null;
         }

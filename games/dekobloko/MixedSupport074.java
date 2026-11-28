@@ -108,7 +108,7 @@ final class MixedSupport074 {
         SceneWidget sceneWidgetLocal2 = null;
         SceneWidget sceneWidgetLocal3 = null;
         try {
-          MixedSupport001.rgbSpriteState0001 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument1, "display_name_changed", "basic", integerArgument2 ^ 24181);
+          DefaultTextWidgetRenderer.rgbSpriteState0001 = UiComponentPart015.computeRgbSprite0704(resourceArchiveArgument1, "display_name_changed", "basic", integerArgument2 ^ 24181);
           MixedSupport066.sceneWidgetPart010State0003 = new SceneWidgetPart010(0L, UiComponentPart015.sceneWidgetPart010State0002, MixedSupport088.stringState0370, MixedSupport042.stringState0184);
           RenderingSupport003.sceneWidgetPart010State0001 = new SceneWidgetPart010(0L, UiComponentPart015.sceneWidgetPart010State0002, UiComponentPart019.stringState0349, GameDomainSupport006.stringState0630);
           ValidationStatus.sceneWidgetState0112 = new SceneWidget(0L, (SceneWidget) null);

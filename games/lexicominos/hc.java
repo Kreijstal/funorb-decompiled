@@ -78,7 +78,7 @@ final class hc extends ui {
               SpriteGeometry.field_q.writeByte(18, -1);
               SpriteGeometry.field_q.position = SpriteGeometry.field_q.position + 2;
               var10 = SpriteGeometry.field_q.position;
-              var11_ref_String = pg.a(kk.c(param3 + 16715), (byte) -28);
+              var11_ref_String = pg.a(RichTextLayout.c(param3 + 16715), (byte) -28);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -112,12 +112,12 @@ final class hc extends ui {
               SpriteGeometry.field_q.backpatchByteLength(SpriteGeometry.field_q.position - var9, (byte) -128);
             }
             kc.a(-1, param3 ^ 30761);
-            AgeValidator.field_m = ve.field_e;
+            AgeValidator.field_m = TextLayout.field_e;
           }
           if (param3 != -30762) {
             hc.releaseDeclaredStaticReferences(-12);
           }
-          if (AgeValidator.field_m == ve.field_e &&
+          if (AgeValidator.field_m == TextLayout.field_e &&
             a.b(1, 10343)) {
             var9Lifetime1 = ig.field_a.readUnsignedByte(true);
             ig.field_a.position = 0;
@@ -127,7 +127,7 @@ final class hc extends ui {
               AgeValidator.field_m = sg.field_l;
             } else {
               if (var9Lifetime1 == 248) {
-                sa.a((byte) 108, kk.c(-14047));
+                sa.a((byte) 108, RichTextLayout.c(-14047));
                 wj.field_p = el.field_d;
                 ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-88);
                 fb.field_p = false;
@@ -137,7 +137,7 @@ final class hc extends ui {
               if (var9Lifetime1 != 99) {
                 a.field_c = -1;
                 pg.field_d = var9Lifetime1;
-                AgeValidator.field_m = bc.field_F;
+                AgeValidator.field_m = RichTextWidget.field_F;
               } else {
                 a.b(wg.b(param3 ^ -19296), 10343);
                 wh.field_d = new Boolean(f.a(ig.field_a, 25444));
@@ -162,12 +162,12 @@ final class hc extends ui {
               }
             }
           }
-          if (bc.field_F == AgeValidator.field_m &&
+          if (RichTextWidget.field_F == AgeValidator.field_m &&
             NetworkArchiveRequest.d(2)) {
             if (pg.field_d == 255) {
               var9_ref_String = ig.field_a.readNullableString((byte) -49);
               if (var9_ref_String != null) {
-                MouseWheelInput.a(var9_ref_String, -11971, kk.c(-14047));
+                MouseWheelInput.a(var9_ref_String, -11971, RichTextLayout.c(-14047));
               }
             } else {
               wj.field_p = ig.field_a.readString(false);

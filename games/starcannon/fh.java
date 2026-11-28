@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fh extends hd {
+class fh extends DefaultTextWidgetRenderer {
     static Sprite[] field_r;
     static Sprite field_q;
 

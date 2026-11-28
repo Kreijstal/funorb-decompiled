@@ -98,7 +98,7 @@ final class jn {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -196,13 +196,13 @@ final class jn {
               var9 = stackIn_43_0;
               var1_int = var1_int + WidgetContainer.field_z;
               if (var9 != null) {
-                var9.a(-aq.field_b + var8Lifetime1, (ln.field_D << 1) + kp.field_d, (aq.field_b << 1) + var7Lifetime1, (byte) 119, var1_int);
+                var9.a(-aq.field_b + var8Lifetime1, (ln.field_D << 1) + TextLineMetrics.field_d, (aq.field_b << 1) + var7Lifetime1, (byte) 119, var1_int);
               }
               var1_int = var1_int + ln.field_D;
             }
             if (0 <= var4) {
               sp.field_Q.drawString(var6, var8Lifetime1, var1_int + LevelRun.field_p, var5, -1);
-              var1_int = var1_int + (WidgetContainer.field_z + (ln.field_D + kp.field_d));
+              var1_int = var1_int + (WidgetContainer.field_z + (ln.field_D + TextLineMetrics.field_d));
             } else {
               bo.field_e.drawString(var6, var8Lifetime1, var1_int + bp.field_f, var5, -1);
               var1_int = var1_int + bp.field_e;
@@ -212,7 +212,7 @@ final class jn {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "jn.C(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "jn.C(" + param0 + ')');
         }
     }
 

@@ -1,0 +1,140 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TextLineMetrics {
+    static boolean field_h;
+    static int[] field_g;
+    int field_i;
+    static boolean field_e;
+    int field_f;
+    static boolean field_a;
+    int[] field_b;
+    static long field_c;
+    static int field_d;
+
+    public static void clearStaticReferences(byte param0) {
+        if (param0 != -12) {
+          return;
+        }
+        field_g = null;
+    }
+
+    final int getRightX(byte param0) {
+        int stackIn_6_0 = 0;
+        if (param0 < 111) {
+          this.field_i = -31;
+        }
+        if (this.field_b != null &&
+          this.field_b.length != 0) {
+          stackIn_6_0 = this.field_b[-1 + this.field_b.length];
+        } else {
+          stackIn_6_0 = 0;
+        }
+        return stackIn_6_0;
+    }
+
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+        rg.field_d[fc.field_z] = param0;
+        PasswordValidator.field_s[fc.field_z] = fc.field_z;
+        qa.field_d[fc.field_z] = param1;
+        if (!(param1 <= rf.field_c)) {
+          kl.field_a = param1;
+        }
+        if (!(i.field_f <= param1)) {
+          bh.field_e = param1;
+        }
+        ta.field_mb[fc.field_z] = param5;
+        og.field_b[fc.field_z] = param3;
+        PasswordValidator.field_t[fc.field_z] = param4;
+        int var6 = param3 + (param5 + param4);
+        if (param2 <= 64) {
+          field_h = false;
+        }
+        int var7 = var6 == 0 ? 0 : 1000 * param5 / var6;
+        TextFieldValidator.field_n[fc.field_z] = var7;
+        if (var7 < bh.field_e) {
+          bh.field_e = var7;
+        }
+        if (kl.field_a < var7) {
+          kl.field_a = var7;
+        }
+        fc.field_z = fc.field_z + 1;
+    }
+
+    final static RgbSprite[] a(int param0, int param1, byte param2, int param3) {
+        if (param2 != -117) {
+          TextLineMetrics.clearStaticReferences((byte) -84);
+        }
+        return DelayedPacket.a(param0, 1, param1, param3, 119);
+    }
+
+    final static String a(long param0, byte param1) {
+        long var8 = 0L;
+        int var10 = 0;
+        int var11 = 0;
+        StringBuilder discarded$0 = null;
+        int var12 = HostileSpawn.field_I ? 1 : 0;
+        if (0L >= param0) {
+          return null;
+        }
+        if (param0 >= 6582952005840035281L) {
+          return null;
+        }
+        if (param0 % 37L == 0L) {
+          return null;
+        }
+        int var4 = -74 / ((41 - param1) / 33);
+        int var3 = 0;
+        long var5 = param0;
+        while (var5 != 0L) {
+          var3++;
+          var5 = var5 / 37L;
+        }
+        StringBuilder var7 = new StringBuilder(var3);
+        while (0L != param0) {
+          var8 = param0;
+          param0 = param0 / 37L;
+          var10 = nf.field_h[(int)(-(37L * param0) + var8)];
+          if (var10 == 95) {
+            var11 = -1 + var7.length();
+            var7.setCharAt(var11, Character.toUpperCase(var7.charAt(var11)));
+            var10 = 160;
+          }
+          discarded$0 = var7.append((char) var10);
+        }
+        var7.reverse();
+        var7.setCharAt(0, Character.toUpperCase(var7.charAt(0)));
+        return var7.toString();
+    }
+
+    final int findNearestCharacterIndex(int param0, byte param1) {
+        int var3 = 0;
+        int var4;
+        int var5;
+        var5 = HostileSpawn.field_I ? 1 : 0;
+        if (null != this.field_b &&
+          this.field_b.length != 0) {
+          for (var3 = 1; var3 < this.field_b.length; var3++) {
+            if (this.field_b[var3] + this.field_b[var3 - 1] >> 1 > param0) {
+              return var3 - 1;
+            }
+          }
+          var4 = -108 / ((-45 - param1) / 61);
+          return this.field_b.length - 1;
+        }
+        return 0;
+    }
+
+    TextLineMetrics(int param0, int param1, int param2) {
+        this.field_i = param0;
+        this.field_f = param1;
+        this.field_b = new int[param2 + 1];
+    }
+
+    static {
+        field_h = false;
+        field_g = new int[]{0, 1000, 2500, 5000, 10000, 15000, 20000, 25000, 40000, 50000, 60000, 70000, 80000, 90000, 100000, 125000, 150000, 175000, 200000, 250000};
+        field_e = true;
+        field_a = false;
+    }
+}

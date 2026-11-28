@@ -115,21 +115,21 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 if (ProxySocketFactory.field_j <= var4) {
                   return;
                 }
-                if (125 != mm.field_m[var4].field_i) {
+                if (125 != TextHotspotBounds.field_m[var4].field_i) {
                   var4++;
                   continue;
                 }
                 break;
               }
-              nh.field_E.copyCoordinatesFrom((byte) 46, mm.field_m[var4].field_j);
+              nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4].field_j);
               return;
             }
             if (var6 == 2) {
               for (var4Lifetime1 = -1 + ProxySocketFactory.field_j; 0 <= var4Lifetime1; var4Lifetime1--) {
-                if (mm.field_m[var4Lifetime1].field_i != 4) {
+                if (TextHotspotBounds.field_m[var4Lifetime1].field_i != 4) {
                   continue;
                 }
-                nh.field_E.copyCoordinatesFrom((byte) 46, mm.field_m[var4Lifetime1].field_j);
+                nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime1].field_j);
                 break;
               }
               if (nh.field_E.field_e != -1) {
@@ -141,10 +141,10 @@ final class CrossfadingMidiPcmStream extends PcmStream {
             }
             if (var6 == 3) {
               for (var4Lifetime2 = 0; ProxySocketFactory.field_j > var4Lifetime2; var4Lifetime2++) {
-                if (mm.field_m[var4Lifetime2].field_i != 8) {
+                if (TextHotspotBounds.field_m[var4Lifetime2].field_i != 8) {
                   continue;
                 }
-                nh.field_E.copyCoordinatesFrom((byte) 46, mm.field_m[var4Lifetime2].field_j);
+                nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime2].field_j);
                 break;
               }
               if (0 != bm.field_c) {
@@ -171,7 +171,7 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 if (var4Lifetime3 >= ProxySocketFactory.field_j) {
                   return;
                 }
-                var6_ref_oj = mm.field_m[var4Lifetime3];
+                var6_ref_oj = TextHotspotBounds.field_m[var4Lifetime3];
                 if (var6_ref_oj.field_i != 125) {
                   var4Lifetime3++;
                   continue;
@@ -206,8 +206,8 @@ final class CrossfadingMidiPcmStream extends PcmStream {
                 return;
               }
               for (var4Lifetime5 = 0; var4Lifetime5 < ProxySocketFactory.field_j; var4Lifetime5++) {
-                if (mm.field_m[var4Lifetime5].field_i == 127) {
-                  nh.field_E.copyCoordinatesFrom((byte) 46, mm.field_m[var4Lifetime5].field_j);
+                if (TextHotspotBounds.field_m[var4Lifetime5].field_i == 127) {
+                  nh.field_E.copyCoordinatesFrom((byte) 46, TextHotspotBounds.field_m[var4Lifetime5].field_j);
                   return;
                 }
               }

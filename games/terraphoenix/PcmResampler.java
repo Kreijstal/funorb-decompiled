@@ -30,7 +30,7 @@ final class PcmResampler {
             stackIn_3_0 = -58;
             return stackIn_3_0;
           }
-          while (fd.d(1)) {
+          while (DefaultTextWidgetRenderer.d(1)) {
             jl.field_I.a(lf.field_c, SectorCacheStore.field_g, (byte) -121);
           }
           if (ga.field_c != -1) {
@@ -39,7 +39,7 @@ final class PcmResampler {
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }
-          if (fd.field_k) {
+          if (DefaultTextWidgetRenderer.field_k) {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }

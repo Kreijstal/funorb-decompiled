@@ -86,14 +86,14 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             stackIn_11_2 = null;
             stackIn_11_3 = BufferedRandomAccessFile.field_o.getCodeBase();
             stackIn_11_4 = new StringBuilder().append("clienterror.ws?c=").append(ca.field_d).append("&u=");
-            if (fk.field_o == null) {
+            if (TextHotspotBounds.field_o == null) {
               stackIn_12_1 = null;
               stackIn_12_2 = null;
               stackIn_12_5 = "" + kb.field_f;
             } else {
               stackIn_12_1 = null;
               stackIn_12_2 = null;
-              stackIn_12_5 = fk.field_o;
+              stackIn_12_5 = TextHotspotBounds.field_o;
             }
             var5 = ((PlatformTaskDispatcher) (Object) stackIn_11_0).requestUrlStream(new java.net.URL(stackIn_11_3, ((StringBuilder) (Object) stackIn_11_4).append(stackIn_12_5).append("&v1=").append(PlatformTaskDispatcher.field_v).append("&v2=").append(PlatformTaskDispatcher.field_w).append("&e=").append(var11).toString()), true);
             while (var5.status == 0) {

@@ -326,13 +326,13 @@ class EditableTextField extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(int param0) {
-        dm var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        rj var9;
+        TextWidgetRenderer var9;
         int var4Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -343,22 +343,22 @@ class EditableTextField extends InteractiveWidget {
           this.field_q = 0;
           return;
         }
-        if (!(this.field_j instanceof rj)) {
+        if (!(this.field_j instanceof TextWidgetRenderer)) {
           return;
         }
-        var9 = (rj) ((Object) this.field_j);
-        var3 = var9.a((pj) (this), true);
+        var9 = (TextWidgetRenderer) ((Object) this.field_j);
+        var3 = var9.getTextLayout((pj) (this), true);
         if (param0 != 1970553377) {
           this.field_L = -101;
-          var4 = var3.a(false);
-          var5 = var9.a((pj) (this), param0 - 1970553495);
-          var6 = var9.a((byte) 94) >> 1;
+          var4 = var3.getMaxLineRightX(false);
+          var5 = var9.getTextAreaWidth((pj) (this), param0 - 1970553495);
+          var6 = var9.getFontLineHeight((byte) 94) >> 1;
           if (-var6 + var5 > var4) {
             this.field_f = 0;
             this.field_q = 0;
             return;
           }
-          var7 = this.field_f + var3.a(param0 - 1970553503, this.field_N);
+          var7 = this.field_f + var3.getXForTextOffset(param0 - 1970553503, this.field_N);
           if (var7 <= -var6 + var5) {
             if (var7 < var6) {
               this.field_f = this.field_f - var7 + var6;
@@ -376,15 +376,15 @@ class EditableTextField extends InteractiveWidget {
           this.field_f = -var5 + var6;
           return;
         }
-        var4Lifetime1 = var3.a(false);
-        var5Lifetime1 = var9.a((pj) (this), param0 - 1970553495);
-        var6Lifetime1 = var9.a((byte) 94) >> 1;
+        var4Lifetime1 = var3.getMaxLineRightX(false);
+        var5Lifetime1 = var9.getTextAreaWidth((pj) (this), param0 - 1970553495);
+        var6Lifetime1 = var9.getFontLineHeight((byte) 94) >> 1;
         if (-var6Lifetime1 + var5Lifetime1 > var4Lifetime1) {
           this.field_f = 0;
           this.field_q = 0;
           return;
         }
-        var7Lifetime1 = this.field_f + var3.a(param0 - 1970553503, this.field_N);
+        var7Lifetime1 = this.field_f + var3.getXForTextOffset(param0 - 1970553503, this.field_N);
         if (var7Lifetime1 > -var6Lifetime1 + var5Lifetime1) {
           this.field_f = -var7Lifetime1 - var6Lifetime1 + var5Lifetime1 + this.field_f;
         } else {
@@ -608,15 +608,15 @@ class EditableTextField extends InteractiveWidget {
     }
 
     void a(byte param0, pj param1, int param2, int param3) {
-        rj var5 = null;
+        TextWidgetRenderer var5 = null;
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
           this.scrollCaretIntoView(1970553377);
           if (this.field_v == 1) {
-            if (this.field_j instanceof rj) {
-              var5 = (rj) ((Object) this.field_j);
-              var6 = var5.a(DiskCacheWorker.field_d, param3, 2147483647, ua.field_a, (pj) (this), param2);
+            if (this.field_j instanceof TextWidgetRenderer) {
+              var5 = (TextWidgetRenderer) ((Object) this.field_j);
+              var6 = var5.findTextOffsetAtScreenPosition(DiskCacheWorker.field_d, param3, 2147483647, ua.field_a, (pj) (this), param2);
               if (var6 != -1) {
                 if (this.field_J &&
                   this.field_K > var6 &&
@@ -645,8 +645,8 @@ class EditableTextField extends InteractiveWidget {
         RuntimeException var8 = null;
         try {
           if (super.a((byte) -116, param1, param2, param3, param4, param5, param6) &&
-            this.field_j instanceof rj) {
-            var8_int = ((rj) ((Object) this.field_j)).a(DiskCacheWorker.field_d, param6, 2147483647, ua.field_a, (pj) (this), param3);
+            this.field_j instanceof TextWidgetRenderer) {
+            var8_int = ((TextWidgetRenderer) ((Object) this.field_j)).findTextOffsetAtScreenPosition(DiskCacheWorker.field_d, param6, 2147483647, ua.field_a, (pj) (this), param3);
             if (var8_int != -1) {
               stackIn_6_1 = var8_int;
             } else {
@@ -878,7 +878,7 @@ class EditableTextField extends InteractiveWidget {
 
     final void a(int param0, int param1, int param2, int param3) {
         long var6;
-        rj var8;
+        TextWidgetRenderer var8;
         if (this.field_j == null) {
           if (param2 == 1048575) {
             return;
@@ -894,20 +894,20 @@ class EditableTextField extends InteractiveWidget {
           return;
         }
         this.field_j.a(param0, param3, (pj) (this), -4394, this.field_F);
-        if (!(this.field_j instanceof rj)) {
+        if (!(this.field_j instanceof TextWidgetRenderer)) {
           if (param2 == 1048575) {
             return;
           }
           this.moveCaret(-122, -76);
           return;
         }
-        var8 = (rj) ((Object) this.field_j);
+        var8 = (TextWidgetRenderer) ((Object) this.field_j);
         if (this.field_N != this.field_L) {
-          var8.a(this.field_L, this.field_N, (pj) (this), param3, param2 ^ -1048511, param0);
+          var8.paintSelection(this.field_L, this.field_N, (pj) (this), param3, param2 ^ -1048511, param0);
         }
         var6 = ji.correctedCurrentTimeMillis(126);
         if ((-this.field_Q + var6) % 1000L < 500L) {
-          var8.a(param0, (pj) (this), param3, (byte) 94, this.field_N);
+          var8.paintCaret(param0, (pj) (this), param3, (byte) 94, this.field_N);
         }
         if (param2 == 1048575) {
           return;

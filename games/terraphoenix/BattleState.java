@@ -657,7 +657,7 @@ final class BattleState {
                   var3 = ByteStorage.field_g;
                   var4_ref = va.field_b;
                   if (IntrusiveNode.field_c == ProxySocketConnector.field_i &&
-                    ~vf.field_a == ~ld.field_e) {
+                    ~vf.field_a == ~TextLayout.field_e) {
                     var3 = wg.field_k;
                     if (null != var5 &&
                       var5.field_w) {
@@ -866,14 +866,14 @@ final class BattleState {
                             ProxySocketConnector.field_i = IntrusiveNode.field_c;
                             EmailFormatValidator.field_m = null;
                             this.field_q.field_S = false;
-                            ld.field_e = vf.field_a;
+                            TextLayout.field_e = vf.field_a;
                             AccountRequestState.field_d = -1;
                             if (var9 == 0) {
                               break regionExit2;
                             }
                           }
                           if (ProxySocketConnector.field_i == IntrusiveNode.field_c &&
-                            ld.field_e == vf.field_a) {
+                            TextLayout.field_e == vf.field_a) {
                             if (EmailFormatValidator.field_m != null &&
                               Math.random() * 100.0 < (double)EmailFormatValidator.field_m.a(param1)) {
                               var6_ref_int__ = new int[]{2, 10, 11};
@@ -895,7 +895,7 @@ final class BattleState {
                             }
                           }
                           ProxySocketConnector.field_i = IntrusiveNode.field_c;
-                          ld.field_e = vf.field_a;
+                          TextLayout.field_e = vf.field_a;
                           AccountRequestState.field_d = -1;
                           this.field_q.field_S = false;
                           this.field_q.tile.unit = null;
@@ -1521,8 +1521,8 @@ final class BattleState {
           }
           if (param1 == 39 &&
             !ConfirmedEmailAvailabilityValidator.field_o) {
-            stackIn_66_0 = !(fd.field_o);
-            fd.field_o = stackIn_66_0;
+            stackIn_66_0 = !(DefaultTextWidgetRenderer.field_o);
+            DefaultTextWidgetRenderer.field_o = stackIn_66_0;
           }
           if (this.field_J &&
             ~rh.field_c == ~param1 &&
@@ -3153,7 +3153,7 @@ final class BattleState {
           ja.field_i = 7;
           rk.field_c = 32;
           ProxyAuthenticationRequiredException.field_g = 20;
-          hh.field_m.bindAsRenderTarget();
+          TextHotspotBounds.field_m.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           k.field_f.a(0);
           var4 = -88 % ((-66 - param0) / 59);
@@ -3893,7 +3893,7 @@ final class BattleState {
         try {
           var3_int = li.field_a ? 1 : 0;
           tg.field_l = -1;
-          rd.field_t = 0;
+          RichTextLayout.field_t = 0;
           li.field_a = false;
           if (!this.field_u) {
             this.map.a(24, (byte) -122, 92);
@@ -3921,7 +3921,7 @@ final class BattleState {
           if (param1) {
             var5 = 0;
           }
-          if (ld.field_b) {
+          if (TextLayout.field_b) {
             var5 = 0;
           }
           if (!this.field_J) {
@@ -4046,12 +4046,12 @@ final class BattleState {
           }
           if (decompiledFrameCompleted7) {
             if (ProxySocketConnector.field_i > -1 &&
-              ld.field_e > -1 &&
+              TextLayout.field_e > -1 &&
               var5 != 0) {
               var4Lifetime1Lifetime1 = -sj.field_b + 320;
               var6Lifetime1Lifetime1 = -lg.field_c + 240;
-              var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 + 32 * (ProxySocketConnector.field_i - ld.field_e);
-              var6Lifetime1Lifetime1 = var6Lifetime1Lifetime1 + 16 * (ld.field_e + ProxySocketConnector.field_i);
+              var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 + 32 * (ProxySocketConnector.field_i - TextLayout.field_e);
+              var6Lifetime1Lifetime1 = var6Lifetime1Lifetime1 + 16 * (TextLayout.field_e + ProxySocketConnector.field_i);
               var7Lifetime1Lifetime1 = this.field_q.field_N;
               if (AccountRequestState.field_d > 0) {
                 var8_ref_ci = hb.field_p[3];
@@ -4960,7 +4960,7 @@ final class BattleState {
         try {
           EmailFormatValidator.field_m = null;
           ProxySocketConnector.field_i = -1;
-          ld.field_e = -1;
+          TextLayout.field_e = -1;
           AccountRequestState.field_d = -1;
           if (param0 != -3) {
             this.field_d = 61;

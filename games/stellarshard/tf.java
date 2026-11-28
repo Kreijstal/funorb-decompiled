@@ -10,12 +10,12 @@ abstract class tf {
         int var1 = ok.a((byte) 125);
         int var2 = BoundedRandomAccessFile.b((byte) 98);
         if (param0 == 0) {
-          eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), rg.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
+          eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), RichTextWidget.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
           kl.a(true);
           return;
         }
         tf.clearStaticReferences(-92);
-        eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), rg.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
+        eh.field_a.a(true, var1 + (PacketBuffer.field_q << 1), var2 + (DirectByteStorage.field_h << 1), RichTextWidget.field_F - DirectByteStorage.field_h, -PacketBuffer.field_q + od.field_r);
         kl.a(true);
     }
 

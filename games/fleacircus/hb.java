@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends e {
+final class hb extends DefaultTextWidgetRenderer {
     private te[] field_s;
     static int field_t;
     static String field_q;
@@ -83,7 +83,7 @@ final class hb extends e {
             stackIn_3_0 = null;
           }
           var10 = (InteractiveWidget) (stackIn_3_0);
-          mi.a((byte) -52, param1 + (param3.field_y + param3.field_u), param3.field_y + param1, param4 + (param3.field_z + param3.field_j), param4 + param3.field_z);
+          TextHotspotBounds.a((byte) -52, param1 + (param3.field_y + param3.field_u), param3.field_y + param1, param4 + (param3.field_z + param3.field_j), param4 + param3.field_z);
           if (var10 != null) {
             param2 = param2 & var10.field_D;
           }

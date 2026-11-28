@@ -30,7 +30,7 @@ abstract class vo {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        lia stackIn_3_0 = null;
+        ChangeHealthAndStatusEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -42,7 +42,7 @@ abstract class vo {
             vo.a((byte) 104);
           }
           var4 = param1.readByte(true);
-          stackIn_3_0 = new lia(var2, var3, var4);
+          stackIn_3_0 = new ChangeHealthAndStatusEffect(var2, var3, var4);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

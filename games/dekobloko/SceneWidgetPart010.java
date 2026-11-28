@@ -104,7 +104,7 @@ final class SceneWidgetPart010 extends SceneWidget {
     }
 
     final static void performAction1460(int integerArgument1, int integerArgument2, byte byteArgument3, int integerArgument4, int integerArgument5) {
-        MixedSupport001.integerState0013 = integerArgument4;
+        DefaultTextWidgetRenderer.integerState0013 = integerArgument4;
         MixedSupport085.integerState0531 = integerArgument1;
         if (byteArgument3 != -91) {
           SceneWidgetPart010.bitLength((byte) 18, 119);
@@ -175,8 +175,8 @@ final class SceneWidgetPart010 extends SceneWidget {
         if (MixedSupport005.uiComponentPart016State0001 != null) {
           MixedSupport005.uiComponentPart016State0001.performAction0835((byte) -66);
         }
-        if (null != NetworkSupport010.uiComponentPart026State0001) {
-          NetworkSupport010.uiComponentPart026State0001.performAction1394((byte) 114);
+        if (null != TextHotspotBounds.uiComponentPart026State0001) {
+          TextHotspotBounds.uiComponentPart026State0001.performAction1394((byte) 114);
         }
         GameAssets.performAction1494(0);
         int integerLocal1 = 62 % ((-55 - byteArgument1) / 60);

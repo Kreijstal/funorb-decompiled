@@ -203,7 +203,7 @@ final class sc implements Runnable {
         u.field_f[7] = jh.field_bb;
         u.field_f[15] = IntrusiveNodeHashTable.field_d;
         u.field_f[13] = ArchiveIndex.field_s;
-        u.field_f[11] = mm.field_h;
+        u.field_f[11] = TextHotspotBounds.field_h;
         u.field_f[5] = ej.field_o;
         u.field_f[18] = field_p;
         u.field_f[28] = ia.field_k;

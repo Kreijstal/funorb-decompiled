@@ -404,7 +404,7 @@ final class ba extends mv {
           !this.field_o.field_r &&
           !this.field_o.field_n &&
           !this.field_o.field_t) {
-          var7.b(-1, var4.field_o);
+          var7.playAnimation(-1, var4.field_o);
         }
         var5 = this.field_o.creature.resolveCreature(124, this.field_p.field_h);
         this.field_p.field_s.a((byte) -57, var5.tileY, var5.tileX);

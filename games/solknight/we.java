@@ -216,19 +216,19 @@ final class we implements j {
             TextFieldValidator.field_e = Asteroid.a("signup_text", "benefits", kc.field_Q, (byte) -119);
             jh.field_b = Asteroid.a("menu_text", "benefits", kc.field_Q, (byte) -114);
             GameApplet.field_j = Asteroid.a("button_frame", "benefits", kc.field_Q, (byte) -121);
-            kj.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
+            RichTextWidget.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
             GzipDecompressor.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
             ArchiveRequest.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
             var28 = SoftwareRasterizer.field_f;
             var2 = SoftwareRasterizer.field_a;
             var3 = SoftwareRasterizer.field_d;
             SoftwareRasterizer.saveClip(lj.field_D);
-            var11 = new Sprite(kj.field_S.field_p + 4, 4 + kj.field_S.field_t);
+            var11 = new Sprite(RichTextWidget.field_S.field_p + 4, 4 + RichTextWidget.field_S.field_t);
             var11.bindAsRenderTarget();
-            kj.field_S.drawGrayModulated(2, 2, ea.field_o);
+            RichTextWidget.field_S.drawGrayModulated(2, 2, ea.field_o);
             UiWidget.a(var11.field_p, 0, var11.field_t, 2, var11, 0, 1, (byte) 21);
-            kj.field_S = var11;
-            fh.field_f = kj.field_S.copyMirroredHorizontally();
+            RichTextWidget.field_S = var11;
+            fh.field_f = RichTextWidget.field_S.copyMirroredHorizontally();
             var12 = new Sprite(195, 221);
             var6 = var12.field_p / 2;
             var12.bindAsRenderTarget();
@@ -236,7 +236,7 @@ final class we implements j {
             ArchiveRequest.field_n.drawCentred(LoginPanel.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
             GzipDecompressor.field_a.drawCentred(LoginPanel.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
             ArchiveRequest.field_n.drawCentred(LoginPanel.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
-            GzipDecompressor.field_a.drawCentred(le.field_b, var6, 180, 16777215, -1);
+            GzipDecompressor.field_a.drawCentred(TextLineMetrics.field_b, var6, 180, 16777215, -1);
             ArchiveRequest.field_n.drawCentred(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
             pf.field_b.bindAsRenderTarget();
@@ -422,12 +422,12 @@ final class we implements j {
             stackIn_65_2 = (GameKeyHandler.field_b.field_f == 1);
             kb.a(stackIn_64_0, stackIn_64_1, stackIn_65_2, lk.field_c);
           }
-          if (kj.field_S != null) {
-            var1_int = -(kj.field_S.field_r / 2) + 357;
-            kj.field_S.draw(269 - kj.field_S.field_q, var1_int);
+          if (RichTextWidget.field_S != null) {
+            var1_int = -(RichTextWidget.field_S.field_r / 2) + 357;
+            RichTextWidget.field_S.draw(269 - RichTextWidget.field_S.field_q, var1_int);
             fh.field_f.draw(586, var1_int);
             if (var1_int < BufferedSocket.field_m &&
-              var1_int + kj.field_S.field_t > BufferedSocket.field_m) {
+              var1_int + RichTextWidget.field_S.field_t > BufferedSocket.field_m) {
               stackIn_72_0 = 40;
               stackIn_72_1 = ArchiveSource.field_a << 4;
               stackIn_73_2 = !(param0);
@@ -437,15 +437,15 @@ final class we implements j {
                 qd.field_e[field_h].draw(269, 340);
                 return;
               }
-              if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
+              if (PacketBuffer.field_j > 269 - RichTextWidget.field_S.field_p &&
                 PacketBuffer.field_j < 269) {
-                kj.field_S.drawAdditive(269 - kj.field_S.field_q - 1, -1 + var1_int, var2Lifetime5);
-                kj.field_S.drawAdditive(1 + (-kj.field_S.field_q + 269), -1 + var1_int, var2Lifetime5);
-                kj.field_S.drawAdditive(-1 + (-kj.field_S.field_q + 269), 1 + var1_int, var2Lifetime5);
-                kj.field_S.drawAdditive(-kj.field_S.field_q + 269 + 1, 1 + var1_int, var2Lifetime5);
+                RichTextWidget.field_S.drawAdditive(269 - RichTextWidget.field_S.field_q - 1, -1 + var1_int, var2Lifetime5);
+                RichTextWidget.field_S.drawAdditive(1 + (-RichTextWidget.field_S.field_q + 269), -1 + var1_int, var2Lifetime5);
+                RichTextWidget.field_S.drawAdditive(-1 + (-RichTextWidget.field_S.field_q + 269), 1 + var1_int, var2Lifetime5);
+                RichTextWidget.field_S.drawAdditive(-RichTextWidget.field_S.field_q + 269 + 1, 1 + var1_int, var2Lifetime5);
               } else {
                 if (586 < PacketBuffer.field_j &&
-                  PacketBuffer.field_j < kj.field_S.field_p + 586) {
+                  PacketBuffer.field_j < RichTextWidget.field_S.field_p + 586) {
                   fh.field_f.drawAdditive(585, -1 + var1_int, var2Lifetime5);
                   fh.field_f.drawAdditive(587, var1_int - 1, var2Lifetime5);
                   fh.field_f.drawAdditive(585, 1 + var1_int, var2Lifetime5);

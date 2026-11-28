@@ -72,7 +72,7 @@ final class AccountServiceResult {
               DualLinkNode.field_h[var5] = gi.field_f[var5];
             }
             DualLinkNode.field_h[var4 - 3] = "";
-            DualLinkNode.field_h[-2 + var4] = oi.field_j;
+            DualLinkNode.field_h[-2 + var4] = TextHotspotBounds.field_j;
             eg.field_a[-2 + var4] = 0;
             od.field_h[0] = 4;
             DualLinkNode.field_h[-1 + var4] = mc.field_e;
@@ -167,8 +167,8 @@ final class AccountServiceResult {
             if (-1 == var4) {
               throw new IllegalStateException();
             }
-            se.field_n = new String[var4];
-            ug.a(gi.field_f, 0, se.field_n, 0, var4);
+            RichTextLayout.field_n = new String[var4];
+            ug.a(gi.field_f, 0, RichTextLayout.field_n, 0, var4);
             fb.field_c = new String[-1 + var3_int - var4];
             ug.a(gi.field_f, 1 + var4, fb.field_c, 0, -1 + (-var4 + var3_int));
             var3_int = lb.a(qa.field_c, gi.field_f, fb.a(dg.field_j, 125, new String[]{"<br><%0><br>"}), rh.field_h, -64);
@@ -187,10 +187,10 @@ final class AccountServiceResult {
             ug.a(gi.field_f, 0, ri.field_b, 0, var4);
             rd.field_q = new String[var3_int - var4 - 1];
             ug.a(gi.field_f, 1 + var4, rd.field_q, 0, var3_int + (-var4 - 1));
-            if (se.field_n.length < ri.field_b.length) {
+            if (RichTextLayout.field_n.length < ri.field_b.length) {
               stackIn_30_0 = ri.field_b.length;
             } else {
-              stackIn_30_0 = se.field_n.length;
+              stackIn_30_0 = RichTextLayout.field_n.length;
             }
             var5 = stackIn_30_0;
             if (fb.field_c.length >= rd.field_q.length) {
@@ -252,7 +252,7 @@ final class AccountServiceResult {
             }
           }
           if (SecondaryNodeDeque.field_a == 2) {
-            var9 = se.field_n;
+            var9 = RichTextLayout.field_n;
             for (var5Lifetime2 = 0; var9.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var9[var5Lifetime2];
               var7Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(var11, 26, false);

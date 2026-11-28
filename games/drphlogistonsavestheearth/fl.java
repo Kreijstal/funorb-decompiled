@@ -13,7 +13,7 @@ final class fl {
     int field_h;
 
     final static String a(boolean param0) {
-        if (fk.field_q == hg.field_ub) {
+        if (TextHotspotBounds.field_q == hg.field_ub) {
           return ol.field_j;
         }
         if (param0) {

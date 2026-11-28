@@ -38,7 +38,7 @@ abstract class MouseWheelInput {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var7), "ck.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var7), "ck.I(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -200,7 +200,7 @@ abstract class MouseWheelInput {
                   var24Lifetime1Lifetime1 = param6.field_c[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param6.field_q[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param6.field_n[var23Lifetime2];
-                  sc.field_i[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16);
+                  TextLayout.field_i[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + (var12 * var24Lifetime1Lifetime1 + var15 * var25Lifetime1Lifetime1) >> 16);
                   wa.field_d[var23Lifetime2] = (var26Lifetime1Lifetime1 * var19 + var25Lifetime1Lifetime1 * var16 + var24Lifetime1Lifetime1 * var13 >> 16) + var10;
                   ba.field_P[var23Lifetime2] = (var20 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17 + var14 * var24Lifetime1Lifetime1 >> 16) + var11;
                   var23Lifetime2++;
@@ -242,7 +242,7 @@ abstract class MouseWheelInput {
                   var20 = param6.field_y[var18];
                   var21Lifetime2 = param6.field_r[var18];
                   tf.field_m[var18] = var20 * var12 + var9 * var19 + var21Lifetime2 * var15 >> 16;
-                  sd.field_c[var18] = var19 * var10 + (var20 * var13 + var16 * var21Lifetime2) >> 16;
+                  TextLineMetrics.field_c[var18] = var19 * var10 + (var20 * var13 + var16 * var21Lifetime2) >> 16;
                   LoginPanel.field_R[var18] = var14 * var20 + (var11 * var19 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
@@ -276,7 +276,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_73_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(')').toString());
         }
     }
 
@@ -328,7 +328,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -386,7 +386,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ abstract class MouseWheelInput {
           field_b = null;
           field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ck.H(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ck.H(" + param0 + ')');
         }
     }
 
@@ -458,7 +458,7 @@ abstract class MouseWheelInput {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 

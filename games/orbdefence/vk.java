@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vk extends jc {
+final class vk extends DefaultTextWidgetRenderer {
     static String field_y;
     private int field_x;
     private RgbSprite[] field_A;

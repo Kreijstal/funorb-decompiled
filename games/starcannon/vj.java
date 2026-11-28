@@ -58,14 +58,14 @@ final class vj extends kc implements WidgetActivationListener {
         int var9Lifetime1;
         try {
           var7_int = IterableNodeHashTable.a(23201, param4);
-          if (bd.field_e == null) {
-            bd.field_e = new java.security.SecureRandom();
+          if (TextLayout.field_e == null) {
+            TextLayout.field_e = new java.security.SecureRandom();
           }
           var12 = new int[4];
           var11 = var12;
           var8 = var11;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = bd.field_e.nextInt();
+            var8[var9] = TextLayout.field_e.nextInt();
           }
           if (param5 != 99) {
             vj.resetStaticState(false);
@@ -178,7 +178,7 @@ final class vj extends kc implements WidgetActivationListener {
           var4.field_f = 80;
           var4.field_j = 50;
           var4.field_i = this.field_i;
-          var4.field_o = (de) ((Object) new hd(nb.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_o = (de) ((Object) new DefaultTextWidgetRenderer(nb.field_b, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(true, var4);
           this.field_Z = this.a(mc.field_e, (qg) (this), true);
           return;

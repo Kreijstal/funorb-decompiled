@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class s extends vc {
+final class s extends RichTextWidget {
     private int field_L;
     private String field_I;
     private FieldValidator field_H;
@@ -10,7 +10,7 @@ final class s extends vc {
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
         vf var6;
-        sf var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -25,7 +25,7 @@ final class s extends vc {
             regionExit3: {
               var13 = Bounce.field_N;
               var6 = this.field_H.getValidationStatus((byte) 122);
-              if (ui.field_o != var6 &&
+              if (TextHotspotBounds.field_o != var6 &&
                 mi.field_c != var6) {
                 var5 = this.field_H.getValidationMessage((byte) 66);
                 if (var5 == null) {
@@ -44,17 +44,17 @@ final class s extends vc {
             }
           }
           this.field_h = var5;
-          this.a(0);
+          this.rebuildHotspotBounds(0);
         }
         super.a(param0, param1, 111, param3);
         var6Lifetime1 = this.field_H.getValidationStatus((byte) 124);
-        var8 = (sf) ((Object) this.field_j);
+        var8 = (TextWidgetRenderer) ((Object) this.field_j);
         var9 = param3 + this.field_r;
         if (param2 <= 33) {
           this.a(-109, -117, 123, 87);
         }
-        var10 = var8.a(param1, (lk) (this), (byte) 51) + (var8.b((lk) (this), 0).b((byte) 14) >> 1);
-        if (var6Lifetime1 != ui.field_o &&
+        var10 = var8.getTextOriginY(param1, (lk) (this), (byte) 51) + (var8.getTextLayout((lk) (this), 0).getLayoutHeight((byte) 14) >> 1);
+        if (var6Lifetime1 != TextHotspotBounds.field_o &&
           var6Lifetime1 != mi.field_c) {
           if (a.field_e == var6Lifetime1) {
             var14 = la.field_E[2];
@@ -102,7 +102,7 @@ final class s extends vc {
           }
           var2_long = fa.correctedCurrentTimeMillis(-94);
           if (0 != DiskCacheWorker.field_c &&
-            bh.field_c < 0) {
+            TextLineMetrics.field_c < 0) {
             var4_ref_j = (j) (ih.field_w.beginForward((byte) -99));
             if (var4_ref_j != null &&
               var4_ref_j.field_h < var2_long) {
@@ -123,14 +123,14 @@ final class s extends vc {
             return false;
           }
           while (true) {
-            if (bh.field_c < 0) {
+            if (TextLineMetrics.field_c < 0) {
               jc.field_g.position = 0;
               if (!IsaacRandom.a(1, 3)) {
                 return false;
               }
-              bh.field_c = jc.field_g.h((byte) 43);
+              TextLineMetrics.field_c = jc.field_g.h((byte) 43);
               jc.field_g.position = 0;
-              pe.field_d = param1[bh.field_c];
+              pe.field_d = param1[TextLineMetrics.field_c];
             }
             if (!va.b(1)) {
               return false;
@@ -139,8 +139,8 @@ final class s extends vc {
               ak.field_z = i.field_f;
               i.field_f = DebouncedFieldValidator.field_b;
               DebouncedFieldValidator.field_b = wa.field_d;
-              wa.field_d = bh.field_c;
-              bh.field_c = -1;
+              wa.field_d = TextLineMetrics.field_c;
+              TextLineMetrics.field_c = -1;
               return true;
             }
             var4 = DiskCacheWorker.field_c;
@@ -150,12 +150,12 @@ final class s extends vc {
                 var4 = 0;
               }
             }
-            var5 = new j((long)var4 + var2_long, bh.field_c, new byte[pe.field_d]);
+            var5 = new j((long)var4 + var2_long, TextLineMetrics.field_c, new byte[pe.field_d]);
             for (var6 = 0; var6 < pe.field_d; var6++) {
               var5.field_i[var6] = jc.field_g.payload[var6];
             }
             ih.field_w.addLast(1, var5);
-            bh.field_c = -1;
+            TextLineMetrics.field_c = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -210,7 +210,7 @@ final class s extends vc {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 0) {
           return null;
         }
@@ -239,7 +239,7 @@ final class s extends vc {
           }
           var4_int = param0.getGroupIdByName(param3, false);
           var5 = param0.getFileIdByName(var4_int, param1, 102);
-          stackIn_3_0 = jd.a(var4_int, param0, 8, var5);
+          stackIn_3_0 = DefaultTextWidgetRenderer.a(var4_int, param0, 8, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -60,9 +60,9 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             var8 = ik.field_c[9] >> 2;
             var9 = ik.field_c[10] >> 2;
             var10_int = ik.field_c[11] >> 2;
-            var11 = ld.field_a[5] * var10_int + (ld.field_a[3] * var8 + ld.field_a[4] * var9) >> 14;
-            var12 = var8 * ld.field_a[6] - (-(ld.field_a[7] * var9) - ld.field_a[8] * var10_int) >> 14;
-            var13 = ld.field_a[9] * var8 - (-(ld.field_a[10] * var9) - ld.field_a[11] * var10_int) >> 14;
+            var11 = TextLayout.field_a[5] * var10_int + (TextLayout.field_a[3] * var8 + TextLayout.field_a[4] * var9) >> 14;
+            var12 = var8 * TextLayout.field_a[6] - (-(TextLayout.field_a[7] * var9) - TextLayout.field_a[8] * var10_int) >> 14;
+            var13 = TextLayout.field_a[9] * var8 - (-(TextLayout.field_a[10] * var9) - TextLayout.field_a[11] * var10_int) >> 14;
             var2[var3] = var5 * var11 + (var6 * var12 + var7 * var13) >> 16;
           }
           var3Lifetime1 = ik.field_c[9] >> 8;
@@ -103,9 +103,9 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             var17 = cm.field_b[var16];
             TutorialController.a(var16, -6);
             for (var18 = 0; 3 > var18; var18++) {
-              ld.field_a[var18] = ld.field_a[var18] + DualLinkNode.field_j[var15][var18];
+              TextLayout.field_a[var18] = TextLayout.field_a[var18] + DualLinkNode.field_j[var15][var18];
             }
-            nd.a(var17, true, ik.field_c, 37, false, ld.field_a, false);
+            nd.a(var17, true, ik.field_c, 37, false, TextLayout.field_a, false);
             lm.a(var17, var13Lifetime1, var7Lifetime1, var12Lifetime1, var9Lifetime1, 0, var8Lifetime1, var14);
           }
           return;

@@ -122,7 +122,7 @@ final class IterableNodeHashTable implements Iterable {
           tl.field_a = AccountNameAvailabilityValidator.field_j;
           AccountNameAvailabilityValidator.field_j = false;
           tg.field_d = WordDictionary.field_b;
-          ol.field_b = NameSuggestionsPanel.field_w;
+          TextLineMetrics.field_b = NameSuggestionsPanel.field_w;
           nk.field_c = ga.field_b;
           WordDictionary.field_b = 0;
         }

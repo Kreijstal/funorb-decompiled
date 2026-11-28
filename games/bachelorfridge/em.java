@@ -107,25 +107,25 @@ final class em extends am implements WidgetActionListener {
             }
           }
           if (param0) {
-            ic.field_i.a(wja.a(jc.field_r, nfa.field_a, false), -121, wja.a(gd.field_m, mk.field_p, false));
-            if (ic.field_i.e(0)) {
-              if (ic.field_i.field_g == 0) {
+            ClearPendingPetAttackEffect.field_i.a(wja.a(jc.field_r, nfa.field_a, false), -121, wja.a(gd.field_m, mk.field_p, false));
+            if (ClearPendingPetAttackEffect.field_i.e(0)) {
+              if (ClearPendingPetAttackEffect.field_i.field_g == 0) {
                 stackIn_61_0 = 3;
                 return stackIn_61_0;
               }
-              if (ic.field_i.field_g == 1) {
+              if (ClearPendingPetAttackEffect.field_i.field_g == 1) {
                 stackIn_64_0 = 2;
                 return stackIn_64_0;
               }
             }
             while (kaa.b(param1 + 127)) {
-              ic.field_i.a(0, -128);
-              if (ic.field_i.e(0)) {
-                if (ic.field_i.field_g == 0) {
+              ClearPendingPetAttackEffect.field_i.a(0, -128);
+              if (ClearPendingPetAttackEffect.field_i.e(0)) {
+                if (ClearPendingPetAttackEffect.field_i.field_g == 0) {
                   stackIn_71_0 = 3;
                   return stackIn_71_0;
                 }
-                if (1 == ic.field_i.field_g) {
+                if (1 == ClearPendingPetAttackEffect.field_i.field_g) {
                   stackIn_74_0 = 1;
                   return stackIn_74_0;
                 }

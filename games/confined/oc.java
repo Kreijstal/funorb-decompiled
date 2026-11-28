@@ -71,7 +71,7 @@ final class oc {
           }
           if (qn.field_n != -1) {
             var1_int = qn.field_n;
-            vf.a((byte) -115, -1);
+            DefaultTextWidgetRenderer.a((byte) -115, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
@@ -82,7 +82,7 @@ final class oc {
             stackIn_13_0 = 3;
             return stackIn_13_0;
           }
-          if (ValidatedTextField.field_fb == na.field_S) {
+          if (ValidatedTextField.field_fb == RichTextWidget.field_S) {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
@@ -99,7 +99,7 @@ final class oc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "oc.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "oc.B(" + param0 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class oc {
           }
           int var10_int = -119 / ((param2 - 2) / 51);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "oc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "oc.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

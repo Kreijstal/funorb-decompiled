@@ -149,7 +149,7 @@ final class hl {
         RuntimeException var2 = null;
         var3 = TorChallenge.field_F ? 1 : 0;
         try {
-          wc.a(true, true, ia.field_q, 0, ol.field_d, param1, PcmOutputWorker.field_c);
+          wc.a(true, true, TextHotspotBounds.field_q, 0, ol.field_d, param1, PcmOutputWorker.field_c);
           var2_int = 0;
           if (param0 != -44) {
             hl.a((byte) 99);

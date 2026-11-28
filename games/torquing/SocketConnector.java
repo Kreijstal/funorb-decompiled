@@ -67,7 +67,7 @@ abstract class SocketConnector {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ abstract class SocketConnector {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "ao.F(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "ao.F(" + param0 + ',' + param1 + ')');
         }
     }
 

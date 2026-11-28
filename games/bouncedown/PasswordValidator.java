@@ -105,7 +105,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_11_0;
           }
           if (ab.a(var5, (byte) -12)) {
-            stackIn_14_0 = mb.field_k;
+            stackIn_14_0 = RichTextLayout.field_k;
             return stackIn_14_0;
           }
           if (this.a(param1 ^ 65, param0)) {

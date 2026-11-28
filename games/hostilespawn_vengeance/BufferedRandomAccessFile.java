@@ -304,12 +304,12 @@ final class BufferedRandomAccessFile {
             if (var28 < 0) {
               var28 = 0;
             }
-            cn.field_e[var27] = 256 * var27 + var28;
+            DefaultTextWidgetRenderer.field_e[var27] = 256 * var27 + var28;
           }
           km.a((byte) var10, var26 + var7, var5 + var26, ni.field_c, var9, var25 + var6, (byte) var11, 85, var4_int + var25, var16, var8);
-          bh.a((byte) var10, cn.field_e, (byte) var11, var17, var4_int + var25, var5 + var26, var7 + var26, var18, var16, var6 + var25, 9233);
+          bh.a((byte) var10, DefaultTextWidgetRenderer.field_e, (byte) var11, var17, var4_int + var25, var5 + var26, var7 + var26, var18, var16, var6 + var25, 9233);
           km.a((byte) var10, -var26 + var7, var5 - var26, ni.field_c, var9, var6 - var25, (byte) var11, 117, -var25 + var4_int, var16, var8);
-          bh.a((byte) var10, cn.field_e, (byte) var11, var17, var4_int - var25, -var26 + var5, -var26 + var7, var18, var16, -var25 + var6, 9233);
+          bh.a((byte) var10, DefaultTextWidgetRenderer.field_e, (byte) var11, var17, var4_int - var25, -var26 + var5, -var26 + var7, var18, var16, -var25 + var6, 9233);
         } catch (RuntimeException runtimeException) {
           throw AccountCreationResultPanel.wrapClientException((Throwable) ((Object) runtimeException), "bn.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

@@ -38,7 +38,7 @@ final class ii extends ql implements WidgetActivationListener {
           var4.field_v = 80;
           var4.field_t = 0;
           var4.field_o = 50;
-          var4.field_i = (rd) ((Object) new ik(ValidatedTextField.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_i = (rd) ((Object) new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 104, var4);
           this.field_R = this.a((vd) (this), true, NodeHashTableIterator.field_d);
           return;

@@ -17,7 +17,7 @@ abstract class sg extends ta {
     }
 
     final void a(int param0, byte param1, int param2) {
-        this.a(ed.field_a - param2 >> 1, lh.field_d - param0 >> 1, param0, (byte) -90, param2);
+        this.a(TextLineMetrics.field_a - param2 >> 1, lh.field_d - param0 >> 1, param0, (byte) -90, param2);
         if (param1 != -81) {
           field_E = (String) null;
         }
@@ -54,7 +54,7 @@ abstract class sg extends ta {
         if (param0 != -16) {
           field_E = (String) null;
         }
-        ed.a((String) null, param0 + 16, "");
+        TextLineMetrics.a((String) null, param0 + 16, "");
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -83,7 +83,7 @@ abstract class sg extends ta {
     }
 
     sg(sk param0, int param1, int param2) {
-        super(ed.field_a - param1 >> 1, -param2 + lh.field_d >> 1, param1, param2, (td) null);
+        super(TextLineMetrics.field_a - param1 >> 1, -param2 + lh.field_d >> 1, param1, param2, (td) null);
         try {
           this.field_C = param0;
           this.field_A = false;

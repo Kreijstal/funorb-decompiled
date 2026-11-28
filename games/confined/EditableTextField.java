@@ -42,7 +42,7 @@ class EditableTextField extends InteractiveWidget {
           this.field_X = true;
           this.field_Y = ri.correctedCurrentTimeMillis(-3);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ul.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -95,7 +95,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -118,36 +118,36 @@ class EditableTextField extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(int param0) {
-        sc var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        pj var9;
+        TextWidgetRenderer var9;
         var8 = Confined.field_J ? 1 : 0;
         if (!this.field_X) {
           this.field_y = 0;
           this.field_v = 0;
           return;
         }
-        if (!(this.field_n instanceof pj)) {
+        if (!(this.field_n instanceof TextWidgetRenderer)) {
           return;
         }
-        var9 = (pj) ((Object) this.field_n);
-        var3 = var9.a((fj) (this), (byte) -114);
+        var9 = (TextWidgetRenderer) ((Object) this.field_n);
+        var3 = var9.getTextLayout((fj) (this), (byte) -114);
         if (param0 < 111) {
           return;
         }
-        var4 = var3.a(true);
-        var5 = var9.a((fj) (this), -123);
-        var6 = var9.a(-1431655766) >> 1;
+        var4 = var3.getMaxLineRightX(true);
+        var5 = var9.getTextAreaWidth((fj) (this), -123);
+        var6 = var9.getFontLineHeight(-1431655766) >> 1;
         if (var4 < -var6 + var5) {
           this.field_y = 0;
           this.field_v = 0;
           return;
         }
-        var7 = this.field_v + var3.a(this.field_Q, -125);
+        var7 = this.field_v + var3.getXForTextOffset(this.field_Q, -125);
         if (var7 > var5 - var6) {
           this.field_v = this.field_v + var5 - (var6 + var7);
         } else {
@@ -166,7 +166,7 @@ class EditableTextField extends InteractiveWidget {
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
-        pj var5;
+        TextWidgetRenderer var5;
         long var6;
         if (param2 <= 36) {
           return;
@@ -174,14 +174,14 @@ class EditableTextField extends InteractiveWidget {
         if (this.field_n != null &&
           param1 == 0) {
           this.field_n.a((byte) -122, param3, this.field_L, (fj) (this), param0);
-          if (this.field_n instanceof pj) {
-            var5 = (pj) ((Object) this.field_n);
+          if (this.field_n instanceof TextWidgetRenderer) {
+            var5 = (TextWidgetRenderer) ((Object) this.field_n);
             if (this.field_Q != this.field_R) {
-              var5.a(param3, (fj) (this), 0, this.field_R, param0, this.field_Q);
+              var5.paintSelection(param3, (fj) (this), 0, this.field_R, param0, this.field_Q);
             }
             var6 = ri.correctedCurrentTimeMillis(-3);
             if (500L > (var6 - this.field_Y) % 1000L) {
-              var5.a(param3, (fj) (this), param0, -71, this.field_Q);
+              var5.paintCaret(param3, (fj) (this), param0, -71, this.field_Q);
             }
           }
         }
@@ -342,7 +342,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_82_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_81_0), ((StringBuilder) (Object) stackIn_81_1).append(stackIn_82_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -361,10 +361,10 @@ class EditableTextField extends InteractiveWidget {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_n instanceof pj)) {
+          if (!(this.field_n instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((pj) ((Object) this.field_n)).a((byte) 108, param3, jh.field_R, param0, ld.field_l, (fj) (this));
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_n)).findTextOffsetAtScreenPosition((byte) 108, param3, jh.field_R, param0, ld.field_l, (fj) (this));
           stackIn_5_1 = -12521;
           if (var8_int != -1) {
             stackIn_6_2 = var8_int;
@@ -396,7 +396,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -441,7 +441,7 @@ class EditableTextField extends InteractiveWidget {
     }
 
     void a(fj param0, int param1, int param2, int param3) {
-        pj var5 = null;
+        TextWidgetRenderer var5 = null;
         int var6 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -452,9 +452,9 @@ class EditableTextField extends InteractiveWidget {
           super.a(param0, param1, param2, param3);
           this.scrollCaretIntoView(122);
           if (1 == this.field_o) {
-            if (this.field_n instanceof pj) {
-              var5 = (pj) ((Object) this.field_n);
-              var6 = var5.a((byte) 77, param3, jh.field_R, param2, ld.field_l, (fj) (this));
+            if (this.field_n instanceof TextWidgetRenderer) {
+              var5 = (TextWidgetRenderer) ((Object) this.field_n);
+              var6 = var5.findTextOffsetAtScreenPosition((byte) 77, param3, jh.field_R, param2, ld.field_l, (fj) (this));
               if (-1 != var6) {
                 if (this.field_Z &&
                   this.field_V > var6 &&
@@ -477,7 +477,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -493,13 +493,13 @@ class EditableTextField extends InteractiveWidget {
 
     final static void a(int param0, String param1, int param2, int param3, int param4) {
         try {
-          nn.field_t[param2].draw(param0, param4);
+          TextHotspotBounds.field_t[param2].draw(param0, param4);
           pn.field_a.drawString(param1, 2 + param0, 14 + param4, 16777215, -1);
           if (param3 != -4245) {
             EditableTextField.k(69);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ul.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ul.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -537,7 +537,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -653,7 +653,7 @@ class EditableTextField extends InteractiveWidget {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

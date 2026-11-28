@@ -101,7 +101,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (!AccountServiceResult.a(22084)) {
           if (dk.field_c >= 10) {
-            if (!l.a(true)) {
+            if (!TextLayout.a(true)) {
               SecondaryNodeDeque.b(-128);
             } else {
               if (AccountNameAvailabilityValidator.field_n != 0) {
@@ -163,7 +163,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         GzipDecompressor.a(AwtRasterBuffer.field_h, (byte) -126);
         MouseInput.field_a = param5;
         s.field_a = param7;
-        bh.field_P = param2;
+        RichTextWidget.field_P = param2;
         pm.field_m = param3;
         sp.field_h = param4;
         this.e((byte) 68);
@@ -486,9 +486,9 @@ abstract class NetworkGameClient extends GameAppletShell {
               en.a((byte) -54);
             }
             if (param2) {
-              hh.field_c = false;
+              DefaultTextWidgetRenderer.field_c = false;
             } else {
-              var5_intLifetime2 = bh.a(this.field_u, NetworkArchiveRequest.e(7142), 106, this.field_q, false, vl.c(-29455));
+              var5_intLifetime2 = RichTextWidget.a(this.field_u, NetworkArchiveRequest.e(7142), 106, this.field_q, false, vl.c(-29455));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 == 0) {
                   IntrusiveNode.field_g = MusicPatchPcmStream.field_s;
@@ -642,10 +642,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             !(var3 >= mn.a((byte) 106))) {
             this.field_v = false;
             tl.a(122);
-            l.a(param1 + 73);
+            TextLayout.a(param1 + 73);
             nf.a(2, true, sj.field_V);
             DelegatingCanvas.a((byte) -105);
-            hh.field_c = true;
+            DefaultTextWidgetRenderer.field_c = true;
             ab.field_a = 15000L + kd.correctedCurrentTimeMillis(-2456);
           }
         }
@@ -669,7 +669,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           gm.field_c != 0) {
           if (10 <= dk.field_c) {
             if (AccountNameAvailabilityValidator.field_n >= 10) {
-              l.a(param1 + 73);
+              TextLayout.a(param1 + 73);
               if (3 != gm.field_c) {
                 if (gm.field_c == 4) {
                   nf.a(256, true, sf.field_e);
@@ -687,7 +687,7 @@ abstract class NetworkGameClient extends GameAppletShell {
               } else {
                 nf.a(256, true, InteractiveWidget.field_D);
               }
-              hh.field_c = true;
+              DefaultTextWidgetRenderer.field_c = true;
             }
           } else {
             if (3 == gm.field_c) {
@@ -713,7 +713,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           0 != gm.field_c ||
           dm.c(param1 - 43)) &&
           kd.correctedCurrentTimeMillis(param1 - 2382) >= ab.field_a) {
-          hh.field_c = false;
+          DefaultTextWidgetRenderer.field_c = false;
           if (gm.field_c != -1 &&
             0 != gm.field_c) {
             gm.field_c = -1;
@@ -789,7 +789,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         }
         if (dk.field_c == 10) {
           if (hc.field_d != 0) {
-            PacketBuffer.field_k = mk.a(bh.field_P, (byte) 34);
+            PacketBuffer.field_k = mk.a(RichTextWidget.field_P, (byte) 34);
           }
           dk.field_c = 11;
         }
@@ -842,10 +842,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (!dm.c(-118)) {
           return -1;
         }
-        if (hh.field_c) {
+        if (DefaultTextWidgetRenderer.field_c) {
           return -1;
         }
-        var2 = bh.a(this.field_u, NetworkArchiveRequest.e(7142), 116, this.field_q, true, vl.c(-29455));
+        var2 = RichTextWidget.a(this.field_u, NetworkArchiveRequest.e(7142), 116, this.field_q, true, vl.c(-29455));
         if (var2 == -1) {
           return -1;
         }
@@ -854,9 +854,9 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (!EditableTextField.field_P) {
             this.a((byte) -112, "reconnect");
           }
-          l.a(-1);
+          TextLayout.a(-1);
           nf.a(var2, true, tp.field_v);
-          hh.field_c = true;
+          DefaultTextWidgetRenderer.field_c = true;
           ab.field_a = 15000L + kd.correctedCurrentTimeMillis(-2456);
           return var2;
         }

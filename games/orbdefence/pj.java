@@ -19,7 +19,7 @@ class pj extends IntrusiveNode {
     static RgbSprite[] field_u;
     static int field_p;
     static String field_k;
-    dm field_g;
+    TextLayout field_g;
     td field_j;
     int field_n;
 
@@ -102,7 +102,7 @@ class pj extends IntrusiveNode {
         field_o = (String[]) null;
     }
 
-    String g(int param0) {
+    String getTooltipText(int param0) {
         if (param0 == -8235) {
           return !this.field_t ? null : this.field_i;
         }
@@ -469,19 +469,19 @@ class pj extends IntrusiveNode {
             this.h(0);
           }
           ud.field_j = of.field_G;
-          fg.a(101, this.g(-8235));
+          fg.a(101, this.getTooltipText(-8235));
           return param2;
         }
         if (of.field_K == 0) {
           if (gi.field_e == 0) {
             if (of.field_G != 0) {
               ud.field_j = of.field_G;
-              fg.a(101, this.g(-8235));
+              fg.a(101, this.getTooltipText(-8235));
               return param2;
             }
             if (ud.field_j == 0) {
               ud.field_j = of.field_G;
-              fg.a(101, this.g(-8235));
+              fg.a(101, this.getTooltipText(-8235));
               return param2;
             }
             this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
@@ -498,7 +498,7 @@ class pj extends IntrusiveNode {
               this.h(0);
             }
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, AccountCreationResultPanel.field_fb, param0)) {
@@ -510,12 +510,12 @@ class pj extends IntrusiveNode {
                 param2 = false;
                 if (of.field_G != 0) {
                   ud.field_j = of.field_G;
-                  fg.a(101, this.g(-8235));
+                  fg.a(101, this.getTooltipText(-8235));
                   return param2;
                 }
                 if (ud.field_j == 0) {
                   ud.field_j = of.field_G;
-                  fg.a(101, this.g(-8235));
+                  fg.a(101, this.getTooltipText(-8235));
                   return param2;
                 }
                 this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
@@ -530,19 +530,19 @@ class pj extends IntrusiveNode {
                   this.h(0);
                 }
                 ud.field_j = of.field_G;
-                fg.a(101, this.g(-8235));
+                fg.a(101, this.getTooltipText(-8235));
                 return param2;
               }
             }
           }
           if (of.field_G != 0) {
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           if (ud.field_j == 0) {
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
@@ -559,7 +559,7 @@ class pj extends IntrusiveNode {
             this.h(0);
           }
           ud.field_j = of.field_G;
-          fg.a(101, this.g(-8235));
+          fg.a(101, this.getTooltipText(-8235));
           return param2;
         }
         if (var5 != 0) {
@@ -582,7 +582,7 @@ class pj extends IntrusiveNode {
               }
             }
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, AccountCreationResultPanel.field_fb, param0)) {
@@ -607,18 +607,18 @@ class pj extends IntrusiveNode {
                 }
               }
               ud.field_j = of.field_G;
-              fg.a(101, this.g(-8235));
+              fg.a(101, this.getTooltipText(-8235));
               return param2;
             }
           }
           if (of.field_G != 0) {
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           if (ud.field_j == 0) {
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
@@ -635,18 +635,18 @@ class pj extends IntrusiveNode {
             this.h(0);
           }
           ud.field_j = of.field_G;
-          fg.a(101, this.g(-8235));
+          fg.a(101, this.getTooltipText(-8235));
           return param2;
         }
         if (gi.field_e == 0) {
           if (of.field_G != 0) {
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           if (ud.field_j == 0) {
             ud.field_j = of.field_G;
-            fg.a(101, this.g(-8235));
+            fg.a(101, this.getTooltipText(-8235));
             return param2;
           }
           this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
@@ -663,7 +663,7 @@ class pj extends IntrusiveNode {
             this.h(0);
           }
           ud.field_j = of.field_G;
-          fg.a(101, this.g(-8235));
+          fg.a(101, this.getTooltipText(-8235));
           return param2;
         }
         if (this.a((byte) -120, this, gi.field_e, param3, bg.field_c, AccountCreationResultPanel.field_fb, param0)) {
@@ -672,12 +672,12 @@ class pj extends IntrusiveNode {
         }
         if (of.field_G != 0) {
           ud.field_j = of.field_G;
-          fg.a(101, this.g(-8235));
+          fg.a(101, this.getTooltipText(-8235));
           return param2;
         }
         if (ud.field_j == 0) {
           ud.field_j = of.field_G;
-          fg.a(101, this.g(-8235));
+          fg.a(101, this.getTooltipText(-8235));
           return param2;
         }
         this.a(param0, ua.field_a, (byte) -98, this, param3, DiskCacheWorker.field_d);
@@ -694,7 +694,7 @@ class pj extends IntrusiveNode {
           this.h(0);
         }
         ud.field_j = of.field_G;
-        fg.a(101, this.g(-8235));
+        fg.a(101, this.getTooltipText(-8235));
         return param2;
     }
 
@@ -807,17 +807,17 @@ class pj extends IntrusiveNode {
     }
 
     pj(String param0, td param1, ag param2) {
-        rj var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_f = 0;
         this.field_q = 0;
         try {
           this.field_h = param2;
           this.field_l = param0;
           this.field_j = param1;
-          if (this.field_j instanceof rj) {
-            var4 = (rj) ((Object) this.field_j);
-            this.field_m = var4.c(this, true);
-            this.field_r = var4.b(this, true);
+          if (this.field_j instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_j);
+            this.field_m = var4.getPreferredWidth(this, true);
+            this.field_r = var4.getPreferredHeight(this, true);
           }
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "pj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

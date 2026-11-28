@@ -186,7 +186,7 @@ final class fe {
     }
 
     final void a(int param0, BitmapFont param1) {
-        jd var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         qi var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -209,7 +209,7 @@ final class fe {
         qi var14Lifetime1;
         qi var14Lifetime2;
         try {
-          var17 = new jd(param1, 2, 2, 2236962, 1, 1, 1, param1.field_s + (param1.field_x + 2));
+          var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_s + (param1.field_x + 2));
           this.field_c = (fc) ((Object) var17);
           var17.field_h = 16777215;
           var4 = new qi();
@@ -225,9 +225,9 @@ final class fe {
           this.field_k = 3;
           var4.field_i = 11711154;
           this.field_f = 3;
-          var4.b(-1, 0).a(15658734, -2).a(ed.a(8947848, 7829367, 78, 10066329), -1);
-          var4.b(-1, 1).a(ed.a(11184810, 13421772, 73, 10066329), -1);
-          var4.b(param0 - 33, 3).a(ed.a(8947848, 10066329, param0 ^ 78, 7829367), param0 - 33).a((byte) 74, 1).b(1, (byte) -54);
+          var4.b(-1, 0).a(15658734, -2).a(TextLayout.a(8947848, 7829367, 78, 10066329), -1);
+          var4.b(-1, 1).a(TextLayout.a(11184810, 13421772, 73, 10066329), -1);
+          var4.b(param0 - 33, 3).a(TextLayout.a(8947848, 10066329, param0 ^ 78, 7829367), param0 - 33).a((byte) 74, 1).b(1, (byte) -54);
           var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, param0);
           var18 = var16;
@@ -249,7 +249,7 @@ final class fe {
           discarded$1 = new vg(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new qi();
           var17.a(var8, (byte) -122);
-          var8.b(-1, 0).a(ed.a(15658734, 10066329, 67, 7829367), -1).a(1118481, param0 ^ -34).a(-1, (byte) -49);
+          var8.b(-1, 0).a(TextLayout.a(15658734, 10066329, 67, 7829367), -1).a(1118481, param0 ^ -34).a(-1, (byte) -49);
           var8.b(param0 ^ -33, 4).a(true, (byte) -61).a(var5, -1);
           this.field_e = (fc) ((Object) var8);
           var9 = new RgbSprite[9];

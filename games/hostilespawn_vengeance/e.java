@@ -587,9 +587,9 @@ final class e {
         this.field_e.draw(16, 302);
         mn.field_e.drawParagraph(this.field_a[this.field_b], 9, 257, 622, 33, 16754688, -1, 1, 1, 0);
         FullscreenFocusCanvas.field_j.draw(30, 330);
-        mn.field_e.drawParagraph(mm.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        mn.field_e.drawParagraph(mm.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        mn.field_e.drawParagraph(mm.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(TextHotspotBounds.field_n[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(TextHotspotBounds.field_n[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
+        mn.field_e.drawParagraph(TextHotspotBounds.field_n[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
         od.field_D.draw((127 - od.field_D.field_u) / 2 + 508, 315);
         if (this.field_u.field_f != 0) {
           if (this.field_u.field_f == 1) {

@@ -231,9 +231,9 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != -8235) {
-          this.g(83);
+          this.getTooltipText(83);
         }
         if (!this.field_t) {
           return null;
@@ -241,7 +241,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         if (null == this.field_i) {
           return null;
         }
-        dm.a(1, this.field_m - this.field_T + ua.field_a, DiskCacheWorker.field_d);
+        TextLayout.a(1, this.field_m - this.field_T + ua.field_a, DiskCacheWorker.field_d);
         return this.field_i;
     }
 

@@ -15,12 +15,12 @@ final class EmailFormatValidator extends TextFieldValidator {
         nc.field_Z = tb.field_b[param0];
         if (param1 <= -100) {
           de.field_b = jk.field_r[param0];
-          mi.field_e = cc.field_h[param0];
+          mi.field_e = TextHotspotBounds.field_h[param0];
           return;
         }
         field_p = 109;
         de.field_b = jk.field_r[param0];
-        mi.field_e = cc.field_h[param0];
+        mi.field_e = TextHotspotBounds.field_h[param0];
     }
 
     final String getValidationMessage(int param0, String param1) {

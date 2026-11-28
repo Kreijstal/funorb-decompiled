@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport009 extends MixedSupport001 {
+final class MixedSupport009 extends DefaultTextWidgetRenderer {
     static UiComponentPart019 uiComponentPart019State0001;
     static String stringState0039;
     private MixedSupport118 mixedSupport118State0001;

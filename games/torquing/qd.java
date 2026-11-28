@@ -62,11 +62,11 @@ final class qd {
               var6 = MenuScreen.measureMenuText(true, -90, wh.field_z[var3_int]);
               var4 = var4 + WidgetContainer.field_z;
               var7 = -(var6 >> 1) + vk.field_A;
-              if (l.a((ln.field_D << 1) + kp.field_d, param2, param0 + 6821, param1, (aq.field_b << 1) + var6, var7 - aq.field_b, var4)) {
+              if (l.a((ln.field_D << 1) + TextLineMetrics.field_d, param2, param0 + 6821, param1, (aq.field_b << 1) + var6, var7 - aq.field_b, var4)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + (kp.field_d + (ln.field_D << 1) + WidgetContainer.field_z);
+              var4 = var4 + (TextLineMetrics.field_d + (ln.field_D << 1) + WidgetContainer.field_z);
             } else {
               var4 = var4 + bp.field_e;
             }
@@ -77,7 +77,7 @@ final class qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3), "qd.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

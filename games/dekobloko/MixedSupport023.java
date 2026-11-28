@@ -85,7 +85,7 @@ final class MixedSupport023 {
         if (integerArgument2 <= 75) {
           stringState0106 = (String) null;
         }
-        UiComponentPart025.performAction1363(booleanArgument1, (byte) -108);
+        RichTextWidget.performAction1363(booleanArgument1, (byte) -108);
     }
 
     final static boolean computeBoolean0340(CharSequence charSequenceArgument1, byte byteArgument2) {

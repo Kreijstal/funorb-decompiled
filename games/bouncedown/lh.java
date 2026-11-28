@@ -75,7 +75,7 @@ final class lh {
           CharSequence[] var2 = (CharSequence[]) null;
           lh.a(-62, -97, (CharSequence[]) null, 63);
         }
-        return qg.field_g == vc.field_F ? true : false;
+        return qg.field_g == RichTextWidget.field_F ? true : false;
     }
 
     final static String a(int param0, int param1, CharSequence[] param2, int param3) {

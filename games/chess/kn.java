@@ -203,12 +203,12 @@ abstract class kn extends mf implements ra {
         return this.field_M == null ? 0 : this.field_M.a(true);
     }
 
-    String g(int param0) {
-        String var2 = super.g(param0);
+    String getTooltipText(int param0) {
+        String var2 = super.getTooltipText(param0);
         if (this.field_M == null) {
           return var2;
         }
-        String var3 = this.field_M.g(0);
+        String var3 = this.field_M.getTooltipText(0);
         if (var3 == null) {
           return var2;
         }

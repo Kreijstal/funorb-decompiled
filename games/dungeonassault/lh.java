@@ -106,7 +106,7 @@ final class lh {
     }
 
     final void a(int param0, BitmapFont param1) {
-        hh var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         an var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -129,7 +129,7 @@ final class lh {
         an var15Lifetime1;
         an var15Lifetime2;
         try {
-          var18 = new hh(param1, 2, 2, 2236962, 1, 1, 1, param1.field_H + (param1.field_E + 2));
+          var18 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_H + (param1.field_E + 2));
           var18.field_g = 16777215;
           this.field_m = (ca) ((Object) var18);
           var4 = new an();

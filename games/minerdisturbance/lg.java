@@ -56,7 +56,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "caption4");
                 if (null != var2) {
-                  eg.field_g = bh.a(var2, -123);
+                  DefaultTextWidgetRenderer.field_g = bh.a(var2, -123);
                 }
                 var2 = lh.b(-1, "caption5");
                 if (var2 != null) {
@@ -1345,7 +1345,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "deathCauseExplodedJetpack");
                 if (null != var2) {
-                  mg.field_c = bh.a(var2, -127);
+                  TextLineMetrics.field_c = bh.a(var2, -127);
                 }
                 var2 = lh.b(-1, "deathEatenByWorm");
                 if (var2 != null) {
@@ -1601,7 +1601,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "clickToContinue");
                 if (null != var2) {
-                  mg.field_g = bh.a(var2, -128);
+                  TextLineMetrics.field_g = bh.a(var2, -128);
                 }
                 var2 = lh.b(-1, "getRich");
                 if (null != var2) {
@@ -1613,7 +1613,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltipTorch");
                 if (null != var2) {
-                  lb.field_t = bh.a(var2, 89);
+                  TextHotspotBounds.field_t = bh.a(var2, 89);
                 }
                 var2 = lh.b(-1, "tooltipDynamite");
                 if (var2 != null) {
@@ -1629,7 +1629,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "tooltipGasMask");
                 if (null != var2) {
-                  mg.field_b = bh.a(var2, -120);
+                  TextLineMetrics.field_b = bh.a(var2, -120);
                 }
                 var2 = lh.b(-1, "tooltipHardHat");
                 if (var2 != null) {
@@ -1813,7 +1813,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "shopIceBomb");
                 if (var2 != null) {
-                  nf.field_b = bh.a(var2, -122);
+                  TextLayout.field_b = bh.a(var2, -122);
                 }
                 var2 = lh.b(-1, "shopWelcome,0");
                 if (var2 != null) {
@@ -1907,7 +1907,7 @@ final class lg {
                 }
                 var2 = lh.b(-1, "keycode_mine_up");
                 if (null != var2) {
-                  lb.field_w = var2[0] & 255;
+                  TextHotspotBounds.field_w = var2[0] & 255;
                 }
                 var2 = lh.b(-1, "keycode_mine_up_right");
                 if (null != var2) {

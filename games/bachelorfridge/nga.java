@@ -61,7 +61,7 @@ final class nga extends vo {
     }
 
     final static void b(byte param0) {
-        fda.field_i = lia.a(5);
+        RemoveDefeatedCreatureEffect.field_i = ChangeHealthAndStatusEffect.a(5);
         if (param0 != 113) {
           return;
         }
@@ -71,6 +71,6 @@ final class nga extends vo {
 
     static {
         field_j = "You are not currently logged in to the game.";
-        field_i = vv.a((byte) 109);
+        field_i = TextLayout.a((byte) 109);
     }
 }

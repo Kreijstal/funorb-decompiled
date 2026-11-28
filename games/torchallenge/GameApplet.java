@@ -64,12 +64,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           bg.field_P.setVisible(true);
           if (var2 == gi.field_b) {
             var3 = gi.field_b.getInsets();
-            bg.field_P.setLocation(ra.field_g + var3.left, bc.field_d + var3.top);
+            bg.field_P.setLocation(ra.field_g + var3.left, DefaultTextWidgetRenderer.field_d + var3.top);
             if (var4 != 0) {
-              bg.field_P.setLocation(ra.field_g, bc.field_d);
+              bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
             }
           } else {
-            bg.field_P.setLocation(ra.field_g, bc.field_d);
+            bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
           }
           bg.field_P.addFocusListener((java.awt.event.FocusListener) (this));
           bg.field_P.requestFocus();
@@ -283,22 +283,22 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var6_int = (int)(-var4 + var2_long);
             oh.field_e = ((var6_int >> 1) + 32000) / var6_int;
           }
-          fieldTemp$0 = lg.field_c;
-          lg.field_c = lg.field_c + 1;
+          fieldTemp$0 = TextLayout.field_c;
+          TextLayout.field_c = TextLayout.field_c + 1;
           if (fieldTemp$0 > 50) {
             je.field_f = true;
-            lg.field_c = lg.field_c - 50;
+            TextLayout.field_c = TextLayout.field_c - 50;
             bg.field_P.setSize(sd.field_c, fl.field_v);
             bg.field_P.setVisible(true);
             if (null != gi.field_b &&
               nk.field_d == null) {
               var6 = gi.field_b.getInsets();
-              bg.field_P.setLocation(var6.left + ra.field_g, bc.field_d + var6.top);
+              bg.field_P.setLocation(var6.left + ra.field_g, DefaultTextWidgetRenderer.field_d + var6.top);
               if (TorChallenge.field_F) {
-                bg.field_P.setLocation(ra.field_g, bc.field_d);
+                bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
               }
             } else {
-              bg.field_P.setLocation(ra.field_g, bc.field_d);
+              bg.field_P.setLocation(ra.field_g, DefaultTextWidgetRenderer.field_d);
             }
           }
           this.drawFrame(param0 ^ -26805);
@@ -546,7 +546,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               kd.field_r = param3;
               var8_int = 111 / ((-79 - param2) / 46);
               GameKeyHandler.field_c = this;
-              bc.field_d = 0;
+              DefaultTextWidgetRenderer.field_d = 0;
               NameSuggestionsPanel.field_O = gi.b(12476);
               dupTemp$0 = new PlatformTaskDispatcher(param4, param1, param6, true);
               ArchiveRequest.field_u = dupTemp$0;

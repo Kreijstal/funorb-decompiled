@@ -31,10 +31,10 @@ abstract class IndexedSpriteState {
         lr.field_k[17] = WidgetTheme.field_q;
         lr.field_k[33] = BitPacketBuffer.field_i;
         lr.field_k[34] = tj.field_a;
-        hl.field_G = new String[]{HazmatAnimation.field_w, bm.field_i, vm.field_g, mg.field_p};
+        hl.field_G = new String[]{HazmatAnimation.field_w, SetTileTerrainEffect.field_i, vm.field_g, mg.field_p};
         lr.field_k[11] = EffectBatchAnimation.field_m;
         lr.field_k[19] = WidgetWrapper.field_y;
-        lr.field_k[13] = dh.field_i;
+        lr.field_k[13] = ArmPetAttackEffect.field_i;
         lr.field_k[24] = nla.field_c;
         lr.field_k[22] = rc.field_k;
         lr.field_k[1] = BoundedRandomAccessFile.field_a;

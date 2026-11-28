@@ -12,9 +12,9 @@ final class ic extends ii {
     final fk a(int param0) {
         if (param0 != 10277) {
           this.a(1);
-          return te.field_M;
+          return RichTextWidget.field_M;
         }
-        return te.field_M;
+        return RichTextWidget.field_M;
     }
 
     static {

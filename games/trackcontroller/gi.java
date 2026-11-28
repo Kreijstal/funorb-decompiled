@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gi extends ic {
+final class gi extends DefaultTextWidgetRenderer {
     private qi[] field_s;
     static int field_r;
     private qi field_p;

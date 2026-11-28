@@ -53,7 +53,7 @@ final class MusicPatchPcmStream extends PcmStream {
           pe.a(var4, 97);
           mp.field_g = DiskArchiveRequest.a(5138823, 0, 1513239, 2245737, 4020342, 1513239, 1127256, (BitmapFont) null, 65793, 65793, param1 ^ 94, 65793, 8947848);
           fo.field_c = DiskArchiveRequest.a(0, 16764006, 0, 0, 0, 0, 0, param0, 0, 0, 88, 0, 0);
-          va.field_h = DiskArchiveRequest.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
+          DefaultTextWidgetRenderer.field_h = DiskArchiveRequest.a(0, 16777215, 0, 0, 0, 0, 0, param0, 0, 0, 125, 0, 0);
           var5 = SoftwareRasterizer.field_e;
           var6 = SoftwareRasterizer.field_j;
           var15 = SoftwareRasterizer.field_l;
@@ -63,7 +63,7 @@ final class MusicPatchPcmStream extends PcmStream {
             SoftwareRasterizer.drawVerticalLine(var8, 1 + var8, -(var8 << 1) + 14, 16777215);
           }
           SoftwareRasterizer.setRasterBuffer(var15, var5, var6);
-          lr.field_H = fj.a(va.field_h, fo.field_c, var4, 10, mp.field_g);
+          lr.field_H = fj.a(DefaultTextWidgetRenderer.field_h, fo.field_c, var4, 10, mp.field_g);
           ql.field_L.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -398,7 +398,7 @@ final class MusicPatchPcmStream extends PcmStream {
             }
           }
           qp.field_d = -(var8Lifetime1 >> 1) + var8Lifetime1 + ni.field_a;
-          pk.field_o = -(var8Lifetime1 >> 1) + ni.field_a;
+          TextHotspotBounds.field_o = -(var8Lifetime1 >> 1) + ni.field_a;
           sf.field_d = kg.field_G.itemCount * (vo.field_y + eb.field_h << 1);
           for (var9Lifetime2 = 0; var9Lifetime2 < al.field_y.length; var9Lifetime2++) {
             stackIn_36_0 = sf.field_d;
@@ -432,7 +432,7 @@ final class MusicPatchPcmStream extends PcmStream {
         var6.bindAsRenderTarget();
         SoftwareRasterizer.fillRoundedRectangle(0, 0, param1, param0, 12, 5921370);
         SoftwareRasterizer.fillRoundedRectangle(4, 4, -8 + param1, -8 + param0, 8, 0);
-        ro.field_g.a(-125);
+        TextLayout.field_g.a(-125);
         SoftwareRasterizer.fillRoundedRectangleAlpha(param3, param2, param1, param0, 12, 0, param5);
         var6.draw(param3, param2);
     }

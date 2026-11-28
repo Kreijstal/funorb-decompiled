@@ -38,7 +38,7 @@ abstract class d extends DualLinkNode {
           eb.field_c = param0;
           od.b(param1 + 97, 12);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "d.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "d.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

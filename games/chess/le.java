@@ -92,7 +92,7 @@ final class le {
           }
           if (vk.field_g == 2 &&
             !jd.b((byte) 75)) {
-            boolean decompiledSharedTail0 = !(ah.a(ec.field_f, 75));
+            boolean decompiledSharedTail0 = !(RichTextLayout.a(ec.field_f, 75));
             if (!decompiledSharedTail0) {
               var2 = MatchingFieldValidator.a(el.field_x, new String[]{ij.field_c}, (byte) -57);
               decompiledSharedTail0 = (var10 != 0);
@@ -111,7 +111,7 @@ final class le {
             var2 = SecondaryNodeHashTable.field_e;
           }
           if (var2 != null) {
-            fj.a((String) (var2), 0, -1, (String) null, AccountNameAvailabilityValidator.field_l);
+            TextLineMetrics.a((String) (var2), 0, -1, (String) null, AccountNameAvailabilityValidator.field_l);
           } else {
             var3 = ci.field_J;
             var3 = DiskCacheWorker.a(-11307, var3);
@@ -184,7 +184,7 @@ final class le {
                 }
               }
             }
-            fj.a(var4 + BitmapFont.escapeMarkup(sg.field_c.toString()), var7, -1, var5, TextFieldValidator.field_i[var6]);
+            TextLineMetrics.a(var4 + BitmapFont.escapeMarkup(sg.field_c.toString()), var7, -1, var5, TextFieldValidator.field_i[var6]);
             if (!kn.field_L) {
               uc.field_c.field_F = false;
             }

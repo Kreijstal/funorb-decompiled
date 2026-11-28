@@ -8,7 +8,7 @@ final class iw {
     final static void a(int param0, boolean param1, BitmapFont param2, BitmapFont param3) {
         FullHealEvent.field_s = param0;
         fp.field_f = param2;
-        jk.field_o = param3;
+        CreaturePoseAnimation.field_o = param3;
         if (param1) {
           return;
         }

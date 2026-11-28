@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends hl {
+final class nj extends DefaultTextWidgetRenderer {
     static hg field_v;
     private ai field_s;
     static int field_t;

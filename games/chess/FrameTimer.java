@@ -483,7 +483,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("mu_gameopt_accept_x_into_game", -96);
                 if (null != var2) {
-                  ub.field_c = ad.a(-29410, var2);
+                  TextLayout.field_c = ad.a(-29410, var2);
                 }
                 var2 = cd.a("mu_gameopt_reject_x_from_game", -91);
                 if (null != var2) {
@@ -663,7 +663,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("inviting_x", -118);
                 if (var2 != null) {
-                  se.field_U = ad.a(-29410, var2);
+                  RichTextWidget.field_U = ad.a(-29410, var2);
                 }
                 var2 = cd.a("x_wants_to_join", -115);
                 if (null != var2) {
@@ -891,7 +891,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("gameopt_cannotbecombined1", -80);
                 if (null != var2) {
-                  fj.field_b = ad.a(-29410, var2);
+                  TextLineMetrics.field_b = ad.a(-29410, var2);
                 }
                 var2 = cd.a("gameopt_cannotbecombined2", -102);
                 if (null != var2) {
@@ -999,7 +999,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("ra_title", -105);
                 if (null != var2) {
-                  se.field_W = ad.a(-29410, var2);
+                  RichTextWidget.field_W = ad.a(-29410, var2);
                 }
                 var2 = cd.a("ra_mutethisplayer", -128);
                 if (var2 != null) {
@@ -1217,7 +1217,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("retry", -103);
                 if (null != var2) {
-                  hl.field_f = ad.a(-29410, var2);
+                  DefaultTextWidgetRenderer.field_f = ad.a(-29410, var2);
                 }
                 var2 = cd.a("back", -74);
                 if (null != var2) {
@@ -1633,7 +1633,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("create_email_confirm_tooltip", -74);
                 if (var2 != null) {
-                  hl.field_q = ad.a(-29410, var2);
+                  DefaultTextWidgetRenderer.field_q = ad.a(-29410, var2);
                 }
                 var2 = cd.a("create_age_tooltip", -119);
                 if (var2 != null) {
@@ -2778,7 +2778,7 @@ abstract class FrameTimer {
                 }
                 var2 = cd.a("fs_unavailable", -90);
                 if (var2 != null) {
-                  hl.field_a = ad.a(-29410, var2);
+                  DefaultTextWidgetRenderer.field_a = ad.a(-29410, var2);
                 }
                 var2 = cd.a("fs_unavailable_try_signed_applet", -113);
                 if (var2 != null) {

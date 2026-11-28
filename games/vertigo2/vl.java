@@ -95,9 +95,9 @@ final class vl {
                 !(param1 + param0 <= ac.field_I.length)) {
                 ac.field_I = new int[2 * (param0 + param1)];
               }
-              if (null == sl.field_m ||
-                !(param1 <= sl.field_m.length)) {
-                sl.field_m = new boolean[2 * param1];
+              if (null == RichTextLayout.field_m ||
+                !(param1 <= RichTextLayout.field_m.length)) {
+                RichTextLayout.field_m = new boolean[2 * param1];
               }
             } else {
               if (jf.field_N.length < param1) {
@@ -110,9 +110,9 @@ final class vl {
                   !(param1 + param0 <= ac.field_I.length)) {
                   ac.field_I = new int[2 * (param0 + param1)];
                 }
-                if (null == sl.field_m ||
-                  !(param1 <= sl.field_m.length)) {
-                  sl.field_m = new boolean[2 * param1];
+                if (null == RichTextLayout.field_m ||
+                  !(param1 <= RichTextLayout.field_m.length)) {
+                  RichTextLayout.field_m = new boolean[2 * param1];
                 }
               } else {
                 if (null == hm.field_A) {
@@ -121,9 +121,9 @@ final class vl {
                     !(param1 + param0 <= ac.field_I.length)) {
                     ac.field_I = new int[2 * (param0 + param1)];
                   }
-                  if (null == sl.field_m ||
-                    !(param1 <= sl.field_m.length)) {
-                    sl.field_m = new boolean[2 * param1];
+                  if (null == RichTextLayout.field_m ||
+                    !(param1 <= RichTextLayout.field_m.length)) {
+                    RichTextLayout.field_m = new boolean[2 * param1];
                   }
                 } else {
                   if (hm.field_A.length < param1) {
@@ -132,20 +132,20 @@ final class vl {
                       !(param1 + param0 <= ac.field_I.length)) {
                       ac.field_I = new int[2 * (param0 + param1)];
                     }
-                    if (null == sl.field_m ||
-                      !(param1 <= sl.field_m.length)) {
-                      sl.field_m = new boolean[2 * param1];
+                    if (null == RichTextLayout.field_m ||
+                      !(param1 <= RichTextLayout.field_m.length)) {
+                      RichTextLayout.field_m = new boolean[2 * param1];
                     }
                   } else {
                     if (null == ac.field_I ||
                       !(param1 + param0 <= ac.field_I.length)) {
                       ac.field_I = new int[2 * (param0 + param1)];
                     }
-                    if (null == sl.field_m) {
-                      sl.field_m = new boolean[2 * param1];
+                    if (null == RichTextLayout.field_m) {
+                      RichTextLayout.field_m = new boolean[2 * param1];
                     } else {
-                      if (param1 > sl.field_m.length) {
-                        sl.field_m = new boolean[2 * param1];
+                      if (param1 > RichTextLayout.field_m.length) {
+                        RichTextLayout.field_m = new boolean[2 * param1];
                       }
                     }
                   }
@@ -172,9 +172,9 @@ final class vl {
             !(param1 + param0 <= ac.field_I.length)) {
             ac.field_I = new int[2 * (param0 + param1)];
           }
-          if (null == sl.field_m ||
-            !(param1 <= sl.field_m.length)) {
-            sl.field_m = new boolean[2 * param1];
+          if (null == RichTextLayout.field_m ||
+            !(param1 <= RichTextLayout.field_m.length)) {
+            RichTextLayout.field_m = new boolean[2 * param1];
           }
         } else {
           if (param1 <= on.field_e.length) {
@@ -194,9 +194,9 @@ final class vl {
                   !(param1 + param0 <= ac.field_I.length)) {
                   ac.field_I = new int[2 * (param0 + param1)];
                 }
-                if (null == sl.field_m ||
-                  !(param1 <= sl.field_m.length)) {
-                  sl.field_m = new boolean[2 * param1];
+                if (null == RichTextLayout.field_m ||
+                  !(param1 <= RichTextLayout.field_m.length)) {
+                  RichTextLayout.field_m = new boolean[2 * param1];
                 }
               } else {
                 if (jf.field_N.length < param1) {
@@ -209,9 +209,9 @@ final class vl {
                     !(param1 + param0 <= ac.field_I.length)) {
                     ac.field_I = new int[2 * (param0 + param1)];
                   }
-                  if (null == sl.field_m ||
-                    !(param1 <= sl.field_m.length)) {
-                    sl.field_m = new boolean[2 * param1];
+                  if (null == RichTextLayout.field_m ||
+                    !(param1 <= RichTextLayout.field_m.length)) {
+                    RichTextLayout.field_m = new boolean[2 * param1];
                   }
                 } else {
                   if (null == hm.field_A) {
@@ -220,9 +220,9 @@ final class vl {
                       !(param1 + param0 <= ac.field_I.length)) {
                       ac.field_I = new int[2 * (param0 + param1)];
                     }
-                    if (null == sl.field_m ||
-                      !(param1 <= sl.field_m.length)) {
-                      sl.field_m = new boolean[2 * param1];
+                    if (null == RichTextLayout.field_m ||
+                      !(param1 <= RichTextLayout.field_m.length)) {
+                      RichTextLayout.field_m = new boolean[2 * param1];
                     }
                   } else {
                     if (hm.field_A.length < param1) {
@@ -231,20 +231,20 @@ final class vl {
                         !(param1 + param0 <= ac.field_I.length)) {
                         ac.field_I = new int[2 * (param0 + param1)];
                       }
-                      if (null == sl.field_m ||
-                        !(param1 <= sl.field_m.length)) {
-                        sl.field_m = new boolean[2 * param1];
+                      if (null == RichTextLayout.field_m ||
+                        !(param1 <= RichTextLayout.field_m.length)) {
+                        RichTextLayout.field_m = new boolean[2 * param1];
                       }
                     } else {
                       if (null == ac.field_I ||
                         !(param1 + param0 <= ac.field_I.length)) {
                         ac.field_I = new int[2 * (param0 + param1)];
                       }
-                      if (null == sl.field_m) {
-                        sl.field_m = new boolean[2 * param1];
+                      if (null == RichTextLayout.field_m) {
+                        RichTextLayout.field_m = new boolean[2 * param1];
                       } else {
-                        if (param1 > sl.field_m.length) {
-                          sl.field_m = new boolean[2 * param1];
+                        if (param1 > RichTextLayout.field_m.length) {
+                          RichTextLayout.field_m = new boolean[2 * param1];
                         }
                       }
                     }
@@ -271,9 +271,9 @@ final class vl {
               !(param1 + param0 <= ac.field_I.length)) {
               ac.field_I = new int[2 * (param0 + param1)];
             }
-            if (null == sl.field_m ||
-              !(param1 <= sl.field_m.length)) {
-              sl.field_m = new boolean[2 * param1];
+            if (null == RichTextLayout.field_m ||
+              !(param1 <= RichTextLayout.field_m.length)) {
+              RichTextLayout.field_m = new boolean[2 * param1];
             }
           } else {
             on.field_e = new int[param1 * 2];
@@ -291,9 +291,9 @@ final class vl {
                     !(param1 + param0 <= ac.field_I.length)) {
                     ac.field_I = new int[2 * (param0 + param1)];
                   }
-                  if (null == sl.field_m ||
-                    !(param1 <= sl.field_m.length)) {
-                    sl.field_m = new boolean[2 * param1];
+                  if (null == RichTextLayout.field_m ||
+                    !(param1 <= RichTextLayout.field_m.length)) {
+                    RichTextLayout.field_m = new boolean[2 * param1];
                   }
                 } else {
                   if (hm.field_A.length < param1) {
@@ -302,20 +302,20 @@ final class vl {
                       !(param1 + param0 <= ac.field_I.length)) {
                       ac.field_I = new int[2 * (param0 + param1)];
                     }
-                    if (null == sl.field_m ||
-                      !(param1 <= sl.field_m.length)) {
-                      sl.field_m = new boolean[2 * param1];
+                    if (null == RichTextLayout.field_m ||
+                      !(param1 <= RichTextLayout.field_m.length)) {
+                      RichTextLayout.field_m = new boolean[2 * param1];
                     }
                   } else {
                     if (null == ac.field_I ||
                       !(param1 + param0 <= ac.field_I.length)) {
                       ac.field_I = new int[2 * (param0 + param1)];
                     }
-                    if (null == sl.field_m) {
-                      sl.field_m = new boolean[2 * param1];
+                    if (null == RichTextLayout.field_m) {
+                      RichTextLayout.field_m = new boolean[2 * param1];
                     } else {
-                      if (param1 > sl.field_m.length) {
-                        sl.field_m = new boolean[2 * param1];
+                      if (param1 > RichTextLayout.field_m.length) {
+                        RichTextLayout.field_m = new boolean[2 * param1];
                       }
                     }
                   }
@@ -353,11 +353,11 @@ final class vl {
                     }
                   }
                 }
-                if (null == sl.field_m) {
-                  sl.field_m = new boolean[2 * param1];
+                if (null == RichTextLayout.field_m) {
+                  RichTextLayout.field_m = new boolean[2 * param1];
                 } else {
-                  if (param1 > sl.field_m.length) {
-                    sl.field_m = new boolean[2 * param1];
+                  if (param1 > RichTextLayout.field_m.length) {
+                    RichTextLayout.field_m = new boolean[2 * param1];
                   }
                 }
               }
@@ -381,8 +381,8 @@ final class vl {
               !(param1 + param0 <= ac.field_I.length)) {
               ac.field_I = new int[2 * (param0 + param1)];
             }
-            if (null != sl.field_m &&
-              param1 <= sl.field_m.length) {
+            if (null != RichTextLayout.field_m &&
+              param1 <= RichTextLayout.field_m.length) {
               id.field_d = -2147483648;
               FrameTimer.field_b = -2147483648;
               BlastEffectRenderer.field_i = 0;
@@ -390,7 +390,7 @@ final class vl {
               f.field_y = 2147483647;
               return;
             }
-            sl.field_m = new boolean[2 * param1];
+            RichTextLayout.field_m = new boolean[2 * param1];
           }
         }
         id.field_d = -2147483648;

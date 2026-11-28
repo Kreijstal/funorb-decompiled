@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ih extends pj implements ra, WidgetActivationListener {
+final class ih extends pj implements TextHotspotListener, WidgetActivationListener {
     static String field_N;
     private AccountCreationResultPanel field_M;
     static int[] field_O;
     static String field_P;
     static String field_J;
-    private qa field_Q;
+    private RichTextWidget field_Q;
     static int field_K;
     static int field_R;
     private InteractiveWidget field_L;
@@ -20,7 +20,7 @@ final class ih extends pj implements ra, WidgetActivationListener {
         }
         he[] var1 = new he[bd.field_M];
         for (var2 = 0; var2 < bd.field_M; var2++) {
-          var1[var2] = new he(oe.field_b, field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], qa.field_J[var2], a.field_e[var2], MouseInput.field_a);
+          var1[var2] = new he(oe.field_b, field_K, kh.field_i[var2], vi.field_b[var2], gf.field_o[var2], RichTextWidget.field_J[var2], a.field_e[var2], MouseInput.field_a);
         }
         Bzip2State.a((byte) -21);
         return var1;
@@ -68,7 +68,7 @@ final class ih extends pj implements ra, WidgetActivationListener {
         super(0, 0, 288, 0, (cg) null);
         String var7 = null;
         int var3 = 0;
-        l var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -77,8 +77,8 @@ final class ih extends pj implements ra, WidgetActivationListener {
           this.field_L.field_l = (cg) ((Object) new ie());
           var7 = a.a(5044, wk.field_l, new String[]{this.i(88), this.j(-84)});
           var3 = 20;
-          var4 = new l(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
-          this.field_Q = new qa(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(DualLinkNode.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
+          this.field_Q = new RichTextWidget(var7, var4);
           this.field_Q.field_v = "";
           this.field_Q.a(we.field_d, 0, 124);
           this.field_Q.a(we.field_d, 1, 115);
@@ -137,7 +137,7 @@ final class ih extends pj implements ra, WidgetActivationListener {
         field_N = null;
     }
 
-    public final void a(int param0, int param1, qa param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

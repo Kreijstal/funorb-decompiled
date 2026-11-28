@@ -244,7 +244,7 @@ final class hj {
           if (param0 >= -36) {
             this.i(34);
           }
-          ie.a(aa.field_a, 112);
+          ie.a(TextLayout.field_a, 112);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "hj.P(" + param0 + ')');
         }
@@ -451,7 +451,7 @@ final class hj {
               }
             }
           }
-          bl.a(50, uh.field_e);
+          TextHotspotBounds.a(50, uh.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -738,7 +738,7 @@ final class hj {
             }
             if ((this.field_u == 0 ||
               this.field_u == 6) && (oa.field_H == 83 ||
-              oa.field_H == 82) && (jj.b(true) &&
+              oa.field_H == 82) && (RichTextWidget.b(true) &&
               this.field_jb == 0) && (!qb.field_b ||
               !(DequeCursor.field_b >= 0))) {
               this.field_u = 1;
@@ -835,7 +835,7 @@ final class hj {
             this.field_t = this.field_t + 1;
             if (this.field_d % 800 == 2 &&
               500 < this.field_t) {
-              a.b(92);
+              DefaultTextWidgetRenderer.b(92);
             }
             this.d((byte) 56);
             if (0 == (15 & this.field_d) &&
@@ -946,7 +946,7 @@ final class hj {
                 if (((this.field_u == 6)) &&
                   (!(-90 + this.field_O - this.field_W <= 50))) {
                   this.field_u = 0;
-                  nf.a(aa.field_a, (byte) 115, 8, 1);
+                  nf.a(TextLayout.field_a, (byte) 115, 8, 1);
                 }
               }
             }
@@ -968,12 +968,12 @@ final class hj {
                     }
                   }
                   if (this.field_d > 450 &&
-                    aa.field_a == 3) {
+                    TextLayout.field_a == 3) {
                     this.field_jb = 3;
                     this.field_d = 0;
                   } else {
                     if (450 < this.field_d) {
-                      ie.a(aa.field_a + 1, -28);
+                      ie.a(TextLayout.field_a + 1, -28);
                     }
                     this.field_d = this.field_d + 2;
                   }
@@ -981,17 +981,17 @@ final class hj {
               } else {
                 if (13 == var7) {
                   if (this.field_nb == 0) {
-                    bl.a(50, bl.field_g);
+                    TextHotspotBounds.a(50, TextHotspotBounds.field_g);
                     SocketConnector.c((byte) -84);
                   }
                   this.field_nb = this.field_nb + 4;
                   if (this.field_nb > 2120) {
-                    bl.a(50, uh.field_e);
+                    TextHotspotBounds.a(50, uh.field_e);
                     if (ok.a(false)) {
                       if (0 >= this.field_P &&
                         this.field_A <= 0) {
                         Bzip2State.field_f = 0;
-                        bl.a(50, uh.field_e);
+                        TextHotspotBounds.a(50, uh.field_e);
                       } else {
                         Bzip2State.field_f = 7;
                       }
@@ -1059,8 +1059,8 @@ final class hj {
                           this.field_u = 0;
                           fl.b(124);
                           this.a(-19921);
-                          if (aa.field_a != 0) {
-                            if (3 == aa.field_a) {
+                          if (TextLayout.field_a != 0) {
+                            if (3 == TextLayout.field_a) {
                               this.field_ib = 11;
                             }
                           } else {
@@ -1096,7 +1096,7 @@ final class hj {
                             this.field_nb = 0;
                             ej.field_b = 0;
                             this.field_d = 0;
-                            bl.a(50, uh.field_e);
+                            TextHotspotBounds.a(50, uh.field_e);
                           }
                           if ((this.field_d & 15) == 0) {
                             var7 = AwtRasterBuffer.field_a[this.field_u].length;
@@ -1117,13 +1117,13 @@ final class hj {
                         this.field_I = 0;
                       }
                       this.field_Y = 0;
-                      bl.a(50, kb.field_d);
+                      TextHotspotBounds.a(50, kb.field_d);
                       this.field_R.bindAsRenderTarget();
                       lb.a(0, 340, (byte) 24, NodeHashTableIterator.field_e, 0, 40);
-                      sb.field_r.drawCentred(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, sb.field_r.field_C, 1, -1);
+                      RichTextLayout.field_r.drawCentred(gg.a(new String[]{Integer.toString(10000)}, sc.field_d, true), 170, RichTextLayout.field_r.field_C, 1, -1);
                       this.field_f.bindAsRenderTarget();
                       lb.a(0, 340, (byte) -14, NodeHashTableIterator.field_e, 0, 40);
-                      sb.field_r.drawCentred(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, sb.field_r.field_C, 1, -1);
+                      RichTextLayout.field_r.drawCentred(gg.a(new String[]{Integer.toString(this.field_I)}, PcmOutputWorker.field_a, true), 170, RichTextLayout.field_r.field_C, 1, -1);
                       ac.field_a.setAsRasterTarget((byte) 119);
                       if (IterableNodeHashTable.field_c == 19) {
                         e.a(254, (byte) 40, 1);
@@ -1157,17 +1157,17 @@ final class hj {
                     rc.a(this.field_mb, this.field_s, (byte) -111);
                     if (0 > mh.field_D &&
                       this.field_u == 2) {
-                      if (vj.a(IterableNodeHashTable.field_c, 1) == aa.field_a) {
-                        ie.a(aa.field_a, 119);
+                      if (vj.a(IterableNodeHashTable.field_c, 1) == TextLayout.field_a) {
+                        ie.a(TextLayout.field_a, 119);
                         this.field_jb = 2;
                         this.field_d = 0;
                       } else {
                         this.field_jb = 4;
                         this.field_d = 0;
                         if (IterableNodeHashTable.field_c != 19) {
-                          bl.a(50, b.field_l);
+                          TextHotspotBounds.a(50, b.field_l);
                         } else {
-                          bl.a(50, wf.field_h);
+                          TextHotspotBounds.a(50, wf.field_h);
                         }
                       }
                       decompiledFrameRemainder0 = false;
@@ -1251,7 +1251,7 @@ final class hj {
           }
           stackIn_424_1 = !(this.field_l);
           this.field_l = stackIn_424_1;
-          if (aa.field_a == 0) {
+          if (TextLayout.field_a == 0) {
             if (0 == (this.field_d & 127)) {
               this.field_ib = this.field_ib - 1;
             }
@@ -1264,7 +1264,7 @@ final class hj {
             }
             this.h(340);
           } else {
-            if (aa.field_a == 3) {
+            if (TextLayout.field_a == 3) {
               if ((31 & this.field_d) == 0) {
                 this.field_ib = this.field_ib + 1;
               }
@@ -1404,7 +1404,7 @@ final class hj {
         var9_ref = null;
         var20 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          if (aa.field_a == 2) {
+          if (TextLayout.field_a == 2) {
             var2_int = -(2 * m.field_i[0].field_n) + this.field_y;
             var3 = 0;
             while (m.field_i[0].field_n * 2 + this.field_y > var2_int) {
@@ -1418,8 +1418,8 @@ final class hj {
               var2_int = var2_int + m.field_i[0].field_n;
             }
           } else {
-            if (aa.field_a != 3) {
-              if (aa.field_a == 0) {
+            if (TextLayout.field_a != 3) {
+              if (TextLayout.field_a == 0) {
                 var2_int = -((-30 + this.field_ib) * 255 / 65) + 255;
                 fi.field_a[fi.field_a.length - 1].drawBlendedTowardColor(0, 0, var2_int, 15387868);
                 DebouncedFieldValidator.field_d.drawHalfSize(-(DebouncedFieldValidator.field_d.field_m >> 2) + 320, this.field_ib);
@@ -1445,10 +1445,10 @@ final class hj {
               }
             }
           }
-          if (aa.field_a != 0) {
+          if (TextLayout.field_a != 0) {
             SocketConnector.a(this.field_H, (byte) -126);
           }
-          if (aa.field_a == 3) {
+          if (TextLayout.field_a == 3) {
             stackIn_45_0 = (this.field_ib >= 170) ? 1 : 0;
             var2_intLifetime1 = stackIn_45_0;
             var3Lifetime1 = -qa.field_i.field_n + (this.field_ib - 220);
@@ -1501,7 +1501,7 @@ final class hj {
               qa.field_i.draw(-qa.field_i.field_m + 320 - (qa.field_i.field_m >> 1), var3Lifetime1);
             }
           } else {
-            if (aa.field_a == 0) {
+            if (TextLayout.field_a == 0) {
               SoftwareRasterizer.setClip(0, 0, 640, 480);
               fi.field_a[0].draw(0, 0);
               j.field_f[this.field_p].drawScaled(this.field_a, this.field_ob, this.field_i, this.field_bb);
@@ -1540,7 +1540,7 @@ final class hj {
             }
           }
           if (this.field_C &&
-            aa.field_a == 1) {
+            TextLayout.field_a == 1) {
             pc.field_U[this.field_x].draw(this.field_X, this.field_h);
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < ib.field_c; var2_intLifetime2++) {
@@ -1559,7 +1559,7 @@ final class hj {
             if (var22_ref != null) {
               var22_ref.field_B = (float)this.field_M;
               var22_ref.field_q = (float)(-48 + this.field_k);
-              if (jj.b(true)) {
+              if (RichTextWidget.b(true)) {
                 var22_ref.a((byte) -74);
               }
               for (var3Lifetime3 = 1; var3Lifetime3 < 4; var3Lifetime3++) {
@@ -1730,7 +1730,7 @@ final class hj {
             4 == this.field_jb)) {
             var24 = AwtRasterBuffer.field_a[2][this.field_Y];
             var10_ref_leLifetime1 = var24;
-            var11Lifetime3 = (bl.field_f - (var24.field_m >> 1) - (-100 + this.field_M)) * 150;
+            var11Lifetime3 = (TextHotspotBounds.field_f - (var24.field_m >> 1) - (-100 + this.field_M)) * 150;
             if (var11Lifetime3 >= 0) {
               if (var11Lifetime3 > 65535) {
                 var11Lifetime3 = var11Lifetime3 - 65535;
@@ -1738,7 +1738,7 @@ final class hj {
             } else {
               var11Lifetime3 = -var11Lifetime3 + 65535;
             }
-            var10_ref_leLifetime1.drawRotatedAboutBilinear(var24.field_m << 3, 160, bl.field_f << 4, mh.field_D << 4, var11Lifetime3, 4096);
+            var10_ref_leLifetime1.drawRotatedAboutBilinear(var24.field_m << 3, 160, TextHotspotBounds.field_f << 4, mh.field_D << 4, var11Lifetime3, 4096);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -1755,7 +1755,7 @@ final class hj {
           BoundedRandomAccessFile.field_e.drawCentred(this.field_j.toString(), 40, 124, 16777215, -1);
           BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + IterableNodeHashTable.field_c % 5), 40, 208, 16777215, -1);
           var11Lifetime4 = -48 / ((param0 - 56) / 43);
-          BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + aa.field_a), 40, 288, 16777215, -1);
+          BoundedRandomAccessFile.field_e.drawCentred(Integer.toString(1 + TextLayout.field_a), 40, 288, 16777215, -1);
           if (13 != this.field_jb) {
             if (this.field_jb == 1) {
               var12 = this.field_d * 40 / 50;
@@ -1784,19 +1784,19 @@ final class hj {
                         }
                         var12 = stackIn_291_0;
                         kl.a(0, 0, 640, 480, 12163403, var12);
-                        sb.field_r.drawCentred(TextFieldValidator.field_h, 321, 170, 6776679, -1);
-                        sb.field_r.drawCentred(TextFieldValidator.field_h, 319, 170, 6776679, -1);
-                        sb.field_r.drawCentred(TextFieldValidator.field_h, 320, 171, 6776679, -1);
-                        sb.field_r.drawCentred(TextFieldValidator.field_h, 320, 169, 6776679, -1);
-                        sb.field_r.drawCentred(TextFieldValidator.field_h, 320, 170, 16724736, -1);
-                        sb.field_r.drawCentredAlpha(TextFieldValidator.field_h, 330, 180, 6776679, -1, 50);
+                        RichTextLayout.field_r.drawCentred(TextFieldValidator.field_h, 321, 170, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(TextFieldValidator.field_h, 319, 170, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(TextFieldValidator.field_h, 320, 171, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(TextFieldValidator.field_h, 320, 169, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(TextFieldValidator.field_h, 320, 170, 16724736, -1);
+                        RichTextLayout.field_r.drawCentredAlpha(TextFieldValidator.field_h, 330, 180, 6776679, -1, 50);
                         var13 = gg.a(new String[]{this.field_j.toString()}, cl.field_b, true);
-                        sb.field_r.drawCentred(var13, 321, 320, 6776679, -1);
-                        sb.field_r.drawCentred(var13, 319, 320, 6776679, -1);
-                        sb.field_r.drawCentred(var13, 320, 321, 6776679, -1);
-                        sb.field_r.drawCentred(var13, 320, 319, 6776679, -1);
-                        sb.field_r.drawCentred(var13, 320, 320, 16724736, -1);
-                        sb.field_r.drawCentredAlpha(var13, 330, 330, 6776679, -1, 50);
+                        RichTextLayout.field_r.drawCentred(var13, 321, 320, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(var13, 319, 320, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(var13, 320, 321, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(var13, 320, 319, 6776679, -1);
+                        RichTextLayout.field_r.drawCentred(var13, 320, 320, 16724736, -1);
+                        RichTextLayout.field_r.drawCentredAlpha(var13, 330, 330, 6776679, -1, 50);
                         AwtRasterBuffer.field_a[this.field_u][this.field_Y].draw(-(AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_k / 2) + 320, 240 - AwtRasterBuffer.field_a[this.field_u][this.field_Y].field_j / 2);
                         var21 = 0;
                         var14 = var21;
@@ -1820,7 +1820,7 @@ final class hj {
                       if (this.field_d < 400) {
                         ph.field_d.drawOpaque(0, 0);
                         SecondaryNodeDeque.field_c[0].b(el.field_b[0][0], el.field_b[0][1]);
-                        NameSuggestionsPanel.field_F[this.field_Y].draw(hc.field_h[aa.field_a][0], this.a(-97, 0, aa.field_a));
+                        NameSuggestionsPanel.field_F[this.field_Y].draw(hc.field_h[TextLayout.field_a][0], this.a(-97, 0, TextLayout.field_a));
                       }
                       if (this.field_d > 350 &&
                         400 > this.field_d) {
@@ -1840,35 +1840,35 @@ final class hj {
                         if (var12 > 255) {
                           var12 = 255;
                         }
-                        ma.a(Bzip2State.field_D[aa.field_a], 0, 0, 640, var12, var13_int);
+                        ma.a(Bzip2State.field_D[TextLayout.field_a], 0, 0, 640, var12, var13_int);
                       } else {
-                        Bzip2State.field_D[aa.field_a].drawOpaque(0, 0);
+                        Bzip2State.field_D[TextLayout.field_a].drawOpaque(0, 0);
                       }
                     }
                     if (450 < this.field_d &&
-                      3 > aa.field_a) {
+                      3 > TextLayout.field_a) {
                       ph.field_d.drawOpaque(0, 0);
-                      for (var13_int = 0; var13_int <= aa.field_a + 1; var13_int++) {
+                      for (var13_int = 0; var13_int <= TextLayout.field_a + 1; var13_int++) {
                         SecondaryNodeDeque.field_c[var13_int].b(el.field_b[var13_int][0], el.field_b[var13_int][1]);
                       }
-                      var13_int = hc.field_h[1 + aa.field_a][0] + (NameSuggestionsPanel.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
-                      var14 = (-ValidatedTextField.field_L[this.field_Y].field_n + NameSuggestionsPanel.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + aa.field_a][1];
+                      var13_int = hc.field_h[1 + TextLayout.field_a][0] + (NameSuggestionsPanel.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
+                      var14 = (-ValidatedTextField.field_L[this.field_Y].field_n + NameSuggestionsPanel.field_F[this.field_Y].field_n) / 2 + hc.field_h[1 + TextLayout.field_a][1];
                       if (this.field_d >= 650) {
                         if (this.field_d < 700) {
-                          if (aa.field_a != 2) {
+                          if (TextLayout.field_a != 2) {
                             ValidatedTextField.field_L[this.field_Y].draw(var13_int, var14);
                           } else {
                             ValidatedTextField.field_L[this.field_Y].drawFlippedHorizontal(var13_int, var14);
                           }
                         }
-                        NameSuggestionsPanel.field_F[this.field_Y].draw(hc.field_h[aa.field_a + 1][0], this.a(89, 650, aa.field_a + 1));
+                        NameSuggestionsPanel.field_F[this.field_Y].draw(hc.field_h[TextLayout.field_a + 1][0], this.a(89, 650, TextLayout.field_a + 1));
                       } else {
                         var15 = -400 + this.field_d - 50;
-                        var16 = hc.field_h[aa.field_a][0] + (NameSuggestionsPanel.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
-                        var17 = (NameSuggestionsPanel.field_F[this.field_Y].field_n - ValidatedTextField.field_L[this.field_Y].field_n) / 2 + hc.field_h[aa.field_a][1];
+                        var16 = hc.field_h[TextLayout.field_a][0] + (NameSuggestionsPanel.field_F[this.field_Y].field_m - ValidatedTextField.field_L[this.field_Y].field_m) / 2;
+                        var17 = (NameSuggestionsPanel.field_F[this.field_Y].field_n - ValidatedTextField.field_L[this.field_Y].field_n) / 2 + hc.field_h[TextLayout.field_a][1];
                         var18 = var16 + (-var16 + var13_int) * var15 / 200;
                         var19 = (var14 - var17) * var15 / 200 + var17;
-                        if (aa.field_a == 2) {
+                        if (TextLayout.field_a == 2) {
                           ValidatedTextField.field_L[this.field_Y].drawFlippedHorizontal(var18, var19);
                         } else {
                           ValidatedTextField.field_L[this.field_Y].draw(var18, var19);
@@ -1964,8 +1964,8 @@ final class hj {
           DiskCacheWorker.b(0);
           IterableNodeHashTable.field_c = 0;
           rb.a(IterableNodeHashTable.field_c, (byte) -58);
-          if (aa.field_a != 0) {
-            if (3 == aa.field_a) {
+          if (TextLayout.field_a != 0) {
+            if (3 == TextLayout.field_a) {
               this.field_ib = 11;
             }
           } else {

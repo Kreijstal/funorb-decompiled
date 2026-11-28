@@ -29,8 +29,8 @@ final class in {
           var9 = new PacketBuffer(param0);
           var3 = var9.readUnsignedByte((byte) -54);
           var4 = var9.readInt((byte) 69);
-          if (var4 >= 0 && (eg.field_h == 0 ||
-            !(var4 > eg.field_h))) {
+          if (var4 >= 0 && (DefaultTextWidgetRenderer.field_h == 0 ||
+            !(var4 > DefaultTextWidgetRenderer.field_h))) {
             if (var3 == param1) {
               var13 = new byte[var4];
               var11 = var13;
@@ -40,8 +40,8 @@ final class in {
               return stackIn_21_0;
             }
             var5_int = var9.readInt((byte) 20);
-            if (0 <= var5_int && (eg.field_h == 0 ||
-              !(var5_int > eg.field_h))) {
+            if (0 <= var5_int && (DefaultTextWidgetRenderer.field_h == 0 ||
+              !(var5_int > DefaultTextWidgetRenderer.field_h))) {
               var12 = new byte[var5_int];
               var10 = var12;
               var6 = var10;

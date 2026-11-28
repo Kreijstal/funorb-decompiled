@@ -1064,7 +1064,7 @@ class oj extends p {
               this.field_u = an.field_d;
             } else {
               if (this.field_i == 130) {
-                this.field_u = ce.field_a;
+                this.field_u = TextLayout.field_a;
                 this.field_H = jd.field_o;
               } else {
                 if (this.field_i == 131) {
@@ -1403,8 +1403,8 @@ class oj extends p {
               jh.a(uh.field_i * 3 / 2, (byte) 61, 47, jc.field_c, 3);
             }
             for (var9_int = 0; 3 > var9_int; var9_int++) {
-              mm.field_m[ProxySocketFactory.field_j] = new oj(param1, 3, rl.field_c);
-              mm.field_m[ProxySocketFactory.field_j].field_l.a(0.9, 0.9, 1);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param1, 3, rl.field_c);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_l.a(0.9, 0.9, 1);
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             FullscreenFocusCanvas.a(25, false);

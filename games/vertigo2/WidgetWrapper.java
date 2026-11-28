@@ -249,12 +249,12 @@ abstract class WidgetWrapper extends UiWidget implements dq {
         }
     }
 
-    String a(boolean param0) {
-        String var2 = super.a(param0);
+    String getTooltipText(boolean param0) {
+        String var2 = super.getTooltipText(param0);
         if (this.field_C == null) {
           return var2;
         }
-        String var3 = this.field_C.a(false);
+        String var3 = this.field_C.getTooltipText(false);
         if (var3 != null) {
           return var3;
         }

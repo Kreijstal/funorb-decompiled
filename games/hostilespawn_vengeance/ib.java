@@ -207,7 +207,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("misdat12", (byte) -124);
                 if (var2 != null) {
-                  cn.field_c = PcmResampler.a(123, var2);
+                  DefaultTextWidgetRenderer.field_c = PcmResampler.a(123, var2);
                 }
                 var2 = AccountRegistrationPanel.b("misdat11", (byte) -122);
                 if (var2 != null) {
@@ -1332,7 +1332,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("oV10_escape", (byte) -123);
                 if (null != var2) {
-                  cj.field_K = PcmResampler.a(122, var2);
+                  RichTextWidget.field_K = PcmResampler.a(122, var2);
                 }
                 var2 = AccountRegistrationPanel.b("chargescolon", (byte) -125);
                 if (null != var2) {
@@ -1388,7 +1388,7 @@ final class ib {
                 }
                 var2 = AccountRegistrationPanel.b("weapontitle", (byte) -125);
                 if (var2 != null) {
-                  mb.field_k = PcmResampler.a(126, var2);
+                  RichTextLayout.field_k = PcmResampler.a(126, var2);
                 }
                 var2 = AccountRegistrationPanel.b("desc_powerup_health", (byte) -123);
                 if (null != var2) {

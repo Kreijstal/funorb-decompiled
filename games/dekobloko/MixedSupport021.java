@@ -33,7 +33,7 @@ final class MixedSupport021 {
           UiComponentPart018.integerState0502 = 0;
           MixedSupport033.stringState0159 = null;
           MixedSupport029.integerState0182 = 0;
-          UiComponentPart025.nodeDequeState0027.clear(111);
+          RichTextWidget.nodeDequeState0027.clear(111);
           CipherPacketBuffer.nodeDequeState0033.clear(117);
           if (!booleanArgument1) {
             MixedSupport021.performAction0325(true);

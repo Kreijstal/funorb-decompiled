@@ -529,7 +529,7 @@ final class re {
             stackIn_11_1 = param1;
             stackIn_11_2 = false;
             stackIn_11_3 = al.field_Z;
-            stackIn_11_4 = -16 + ce.field_b[0];
+            stackIn_11_4 = -16 + TextLayout.field_b[0];
             stackIn_11_5 = 16776960;
             if (param5 >= 10) {
               stackIn_12_6 = "10";
@@ -538,10 +538,10 @@ final class re {
             }
             ec.a(stackIn_11_0, stackIn_11_1, stackIn_11_2, stackIn_11_3, stackIn_11_4, stackIn_11_5, stackIn_12_6);
           }
-          al.field_Z.drawString(param3, ce.field_b[0], param1, 16776960, -1);
-          al.field_Z.drawString(AchievementNotification.field_k[var7_int].toUpperCase(), ce.field_b[1], param1, 16776960, -1);
-          al.field_Z.drawString(var12, ce.field_b[2], param1, 16776960, -1);
-          ec.a(9, param1, false, al.field_Z, ce.field_b[3], 16776960, Integer.toString(var9));
+          al.field_Z.drawString(param3, TextLayout.field_b[0], param1, 16776960, -1);
+          al.field_Z.drawString(AchievementNotification.field_k[var7_int].toUpperCase(), TextLayout.field_b[1], param1, 16776960, -1);
+          al.field_Z.drawString(var12, TextLayout.field_b[2], param1, 16776960, -1);
+          ec.a(9, param1, false, al.field_Z, TextLayout.field_b[3], 16776960, Integer.toString(var9));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1273,10 +1273,10 @@ final class re {
                 var10 = 90;
                 this.a(244, (byte) -55, 90, 56, 528);
                 var10 += 16;
-                al.field_Z.drawString(ii.field_f[0].toUpperCase(), ce.field_b[0], var10, 16776960, -1);
-                al.field_Z.drawString(ii.field_f[1].toUpperCase(), ce.field_b[1], var10, 16776960, -1);
-                al.field_Z.drawString(ii.field_f[2].toUpperCase(), ce.field_b[2], var10, 16776960, -1);
-                al.field_Z.drawRightAligned(ii.field_f[3].toUpperCase(), ce.field_b[3], var10, 16776960, -1);
+                al.field_Z.drawString(ii.field_f[0].toUpperCase(), TextLayout.field_b[0], var10, 16776960, -1);
+                al.field_Z.drawString(ii.field_f[1].toUpperCase(), TextLayout.field_b[1], var10, 16776960, -1);
+                al.field_Z.drawString(ii.field_f[2].toUpperCase(), TextLayout.field_b[2], var10, 16776960, -1);
+                al.field_Z.drawRightAligned(ii.field_f[3].toUpperCase(), TextLayout.field_b[3], var10, 16776960, -1);
                 var10 += 6;
                 var10 += 18;
                 var11 = 0;
@@ -2462,7 +2462,7 @@ final class re {
         boolean[] var17 = null;
         boolean[] var18 = null;
         var14 = HostileSpawn.field_I ? 1 : 0;
-        wh.field_d.drawString(mb.field_k.toUpperCase(), 10 + param3, 22 + param1, 16776960, -1);
+        wh.field_d.drawString(RichTextLayout.field_k.toUpperCase(), 10 + param3, 22 + param1, 16776960, -1);
         var6 = 8 + param3;
         var7 = param1 + 30;
         var18 = new boolean[VolumeRampingMidiPcmStream.field_ib.length];
@@ -2990,7 +2990,7 @@ final class re {
         var3 = this.a((RgbSprite) null, MouseWheelInput.field_a, var3, (String) null, (byte) 80, il.field_c[9]);
         var3 = this.a((RgbSprite) null, eh.field_h, var3, (String) null, (byte) 80, km.field_A[0]);
         var3 = this.a((RgbSprite) null, ga.field_c, var3, (String) null, (byte) 80, pi.field_b);
-        var3 = this.a(mb.field_k, param0 ^ 58, var3);
+        var3 = this.a(RichTextLayout.field_k, param0 ^ 58, var3);
         var3 = this.a((RgbSprite) null, MidiPcmStream.field_A, var3, (String) null, (byte) 80, this.e((byte) -44, 0));
         var3 = this.a((RgbSprite) null, uj.field_q, var3, (String) null, (byte) 80, this.e((byte) -44, 1));
         var3 = this.a((RgbSprite) null, h.field_f, var3, (String) null, (byte) 80, this.e((byte) -44, 2));
@@ -3703,10 +3703,10 @@ final class re {
             stackIn_21_2 = new StringBuilder();
             stackIn_22_3 = (MidiPcmStream.field_r == 0) ? false : true;
             stackIn_25_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
-            stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(cj.a(wb.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
+            stackIn_27_2 = ((StringBuilder) (Object) stackIn_21_2).append(RichTextWidget.a(wb.a(stackIn_22_3, stackIn_25_4, false, rg.a((byte) 121)), -51, '#')[0]).append(" ");
             stackIn_28_3 = (0 == MidiPcmStream.field_r) ? false : true;
             stackIn_31_4 = (DelayedPacket.field_q.isEmpty(-20049)) ? false : true;
-            var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(cj.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
+            var14 = vg.a(stackIn_21_0, stackIn_21_1, ((StringBuilder) (Object) stackIn_27_2).append(RichTextWidget.a(wb.a(stackIn_28_3, stackIn_31_4, false, rg.a((byte) 122)), -119, '#')[1]).toString());
             al.field_Z.drawParagraph(var14.toUpperCase(), 70, 165, 500, -8 + (-164 + param2), 16711680, -1, 1, 2, 12);
           }
         }
@@ -3899,7 +3899,7 @@ final class re {
         this.a(176, (byte) -55, 228, 52, 304);
         this.a(176, (byte) -55, 228, 364, 220);
         SoftwareRasterizer.setClip(367, 73, 581, 217);
-        this.field_H.draw(364 + -mm.field_m[0].field_j.field_e * var3 + 110, -mm.field_m[0].field_j.field_g * var3 + 150);
+        this.field_H.draw(364 + -TextHotspotBounds.field_m[0].field_j.field_e * var3 + 110, -TextHotspotBounds.field_m[0].field_j.field_g * var3 + 150);
         if ((ca.field_c & 128) <= 0) {
           SoftwareRasterizer.fillCircleAlpha(var3 / 2 + 152, 128 - (-(var3 / 2) - 1), 4, 65535, 128);
           SoftwareRasterizer.fillCircleAlpha(var3 / 2 + 152, 128 + (var3 / 2 + 1), 3, 65535, 128);
@@ -3958,7 +3958,7 @@ final class re {
             var4 = rg.field_c;
           }
           if (rl.field_c == 8) {
-            var4 = cn.field_c;
+            var4 = DefaultTextWidgetRenderer.field_c;
             if (0 == r.field_a) {
               var4 = kc.field_b;
             }

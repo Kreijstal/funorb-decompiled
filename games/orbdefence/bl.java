@@ -22,7 +22,7 @@ final class bl {
     td field_q;
 
     final void a(BitmapFont param0, int param1) {
-        jc var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         sj var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -45,7 +45,7 @@ final class bl {
         sj var14Lifetime1;
         sj var14Lifetime2;
         try {
-          var18 = new jc(param0, 2, 2, 2236962, 1, 1, 1, param0.field_B + param0.field_H + 2);
+          var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_B + param0.field_H + 2);
           var18.field_s = 16777215;
           this.field_f = (td) ((Object) var18);
           var4 = new sj();
@@ -324,7 +324,7 @@ final class bl {
         MusicPatchPcmStream.field_n[26] = wh.field_d;
         MusicPatchPcmStream.field_n[17] = mi.field_d;
         MusicPatchPcmStream.field_n[22] = gb.field_g[3];
-        MusicPatchPcmStream.field_n[25] = cc.field_m;
+        MusicPatchPcmStream.field_n[25] = TextHotspotBounds.field_m;
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

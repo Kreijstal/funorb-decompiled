@@ -108,7 +108,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 79, "points");
                 if (var2 != null) {
-                  hh.field_l = ll.a(0, var2);
+                  TextHotspotBounds.field_l = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 101, "allysoldat");
                 if (null != var2) {
@@ -1578,7 +1578,7 @@ final class bl {
                 }
                 var2 = il.a((byte) 114, "MODELNAME_PULPIS");
                 if (null != var2) {
-                  hh.field_p = ll.a(0, var2);
+                  TextHotspotBounds.field_p = ll.a(0, var2);
                 }
                 var2 = il.a((byte) 92, "MODELNAME_PULGUN");
                 if (null != var2) {

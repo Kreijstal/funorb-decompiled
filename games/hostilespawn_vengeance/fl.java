@@ -76,11 +76,11 @@ final class fl {
           }
           var1_int = 1;
           while (true) {
-            if (pm.field_g.length <= var1_int) {
-              stackIn_14_0 = pm.field_g.length - 1;
+            if (TextLineMetrics.field_g.length <= var1_int) {
+              stackIn_14_0 = TextLineMetrics.field_g.length - 1;
               return stackIn_14_0;
             }
-            if (pm.field_g[var1_int] <= vj.field_s) {
+            if (TextLineMetrics.field_g[var1_int] <= vj.field_s) {
               var1_int++;
               continue;
             }

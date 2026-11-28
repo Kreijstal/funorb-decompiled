@@ -67,7 +67,7 @@ final class GzipDecompressor {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          eg.field_b.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
+          DefaultTextWidgetRenderer.field_b.drawWithOpacity(var3 + 15, var4 + 10, var7Lifetime1 * var5 >> 8);
         }
         return;
     }

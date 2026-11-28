@@ -47,7 +47,7 @@ final class wi {
             stackIn_15_0 = 1;
             return stackIn_15_0;
           }
-          if (hg.field_ub != fk.field_q) {
+          if (hg.field_ub != TextHotspotBounds.field_q) {
             stackIn_20_0 = -1;
             return stackIn_20_0;
           }
@@ -154,7 +154,7 @@ final class wi {
           LevelSession.field_ib = param0;
           tb.field_a = param1;
           IntrusiveNode.field_c = param7;
-          mi.field_j = param3;
+          TextLineMetrics.field_j = param3;
           AgeValidator.field_r = param4;
           vc.field_e = param5;
           AccountNameAvailabilityValidator.field_q = param2;

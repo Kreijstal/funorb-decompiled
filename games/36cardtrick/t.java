@@ -5,7 +5,7 @@ final class t {
     static String field_f;
     int field_c;
     String field_b;
-    static ek field_j;
+    static DefaultTextWidgetRenderer field_j;
     String field_a;
     static int field_i;
     ResourceArchive field_d;
@@ -18,7 +18,7 @@ final class t {
         field_f = null;
         field_j = null;
         if (param0 != 0) {
-          field_j = (ek) null;
+          field_j = (DefaultTextWidgetRenderer) null;
           field_e = null;
           return;
         }

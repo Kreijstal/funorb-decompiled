@@ -66,7 +66,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           var3 = 0;
           if (var1_int != 0 &&
             wg.field_k.field_f >= 0) {
-            var3 = mi.field_g[wg.field_k.field_f];
+            var3 = TextLineMetrics.field_g[wg.field_k.field_f];
             if (var3 == 2 ||
               5 == var3) {
               ch.c(3);
@@ -210,16 +210,16 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     }
 
     final static AccountServiceResult pollAccountCreationResult(int param0) {
-        if (fk.field_q == pj.field_D) {
+        if (TextHotspotBounds.field_q == pj.field_D) {
           throw new IllegalStateException();
         }
         if (param0 != 19860) {
           return (AccountServiceResult) null;
         }
-        if (fk.field_q != wg.field_u) {
+        if (TextHotspotBounds.field_q != wg.field_u) {
           return null;
         }
-        fk.field_q = pj.field_D;
+        TextHotspotBounds.field_q = pj.field_D;
         return jj.field_d;
     }
 
@@ -431,7 +431,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         int var2 = -108 % ((param0 - 35) / 33);
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_n) {
           return null;
         }

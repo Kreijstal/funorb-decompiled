@@ -27,7 +27,7 @@ final class mj extends IntrusiveNode {
 
     final static void c(int param0) {
         if (!vj.a(39)) {
-          cc.field_f.b(56);
+          TextHotspotBounds.field_f.b(56);
         }
         if (param0 != -21108) {
           field_i = (MouseWheelInput) null;

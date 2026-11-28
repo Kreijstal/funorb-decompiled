@@ -24,7 +24,7 @@ final class pb {
         BitPacketBuffer var8 = null;
         ff var9 = null;
         var7 = StarCannon.field_A;
-        var8 = se.field_p;
+        var8 = RichTextLayout.field_p;
         var2 = var8;
         var3 = var8.readUnsignedByte(7909);
         if (param0 != 13607) {
@@ -61,7 +61,7 @@ final class pb {
         }
         if (!param1) {
           vd.field_e = ha.a(var8, 80, 0);
-          se.field_o = null;
+          RichTextLayout.field_o = null;
           return new fb(param1);
         }
         var5 = var8.readUnsignedShort(param0 - 1174065599);
@@ -73,12 +73,12 @@ final class pb {
           } else {
             stackIn_24_0 = var9.field_s;
           }
-          se.field_o = stackIn_24_0;
+          RichTextLayout.field_o = stackIn_24_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           hc.a((Throwable) ((Object) var6), "CC1", (byte) 81);
-          se.field_o = null;
+          RichTextLayout.field_o = null;
           vd.field_e = null;
           return new fb(param1);
         }

@@ -39,7 +39,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -86,7 +86,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -106,7 +106,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         try {
           this.field_p = new MatchingFieldValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ad.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

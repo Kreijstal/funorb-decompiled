@@ -339,7 +339,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime50 = ImageProducerRasterBuffer.a(false, "lightninggun");
           if (null != var2Lifetime50) {
-            ja.field_k = se.a(0, var2Lifetime50);
+            TextHotspotBounds.field_k = se.a(0, var2Lifetime50);
           }
           var2Lifetime51 = ImageProducerRasterBuffer.a(false, "flamecannon");
           if (null != var2Lifetime51) {

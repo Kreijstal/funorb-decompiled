@@ -833,7 +833,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("loading", false);
                 if (null != var2) {
-                  hh.field_k = ll.a(0, var2);
+                  TextHotspotBounds.field_k = ll.a(0, var2);
                 }
                 var2 = bc.a("offline", false);
                 if (var2 != null) {
@@ -1189,7 +1189,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("pleasetryagain", false);
                 if (null != var2) {
-                  ld.field_g = ll.a(0, var2);
+                  TextLayout.field_g = ll.a(0, var2);
                 }
                 var2 = bc.a("pleasereenterpass", false);
                 if (null != var2) {
@@ -1279,7 +1279,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("connectionlost_withreason", false);
                 if (var2 != null) {
-                  fd.field_q = ll.a(param0 - 3, var2);
+                  DefaultTextWidgetRenderer.field_q = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("passwordverificationrequired", false);
                 if (var2 != null) {
@@ -1287,7 +1287,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("invalidpass", false);
                 if (var2 != null) {
-                  em.field_b = ll.a(param0 ^ 3, var2);
+                  TextLineMetrics.field_b = ll.a(param0 ^ 3, var2);
                 }
                 var2 = bc.a("retry", false);
                 if (null != var2) {
@@ -1502,51 +1502,51 @@ final class MessageKeys {
                 }
                 var2 = bc.a("monthnames,0", false);
                 if (var2 != null) {
-                  fd.field_i[0] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[0] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,1", false);
                 if (var2 != null) {
-                  fd.field_i[1] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[1] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("monthnames,2", false);
                 if (var2 != null) {
-                  fd.field_i[2] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[2] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,3", false);
                 if (null != var2) {
-                  fd.field_i[3] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[3] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,4", false);
                 if (var2 != null) {
-                  fd.field_i[4] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[4] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,5", false);
                 if (var2 != null) {
-                  fd.field_i[5] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[5] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,6", false);
                 if (var2 != null) {
-                  fd.field_i[6] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[6] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("monthnames,7", false);
                 if (null != var2) {
-                  fd.field_i[7] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[7] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("monthnames,8", false);
                 if (var2 != null) {
-                  fd.field_i[8] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[8] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,9", false);
                 if (var2 != null) {
-                  fd.field_i[9] = ll.a(param0 - 3, var2);
+                  DefaultTextWidgetRenderer.field_i[9] = ll.a(param0 - 3, var2);
                 }
                 var2 = bc.a("monthnames,10", false);
                 if (var2 != null) {
-                  fd.field_i[10] = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_i[10] = ll.a(0, var2);
                 }
                 var2 = bc.a("monthnames,11", false);
                 if (null != var2) {
-                  fd.field_i[11] = ll.a(sl.a(param0, 3), var2);
+                  DefaultTextWidgetRenderer.field_i[11] = ll.a(sl.a(param0, 3), var2);
                 }
                 var2 = bc.a("create_welcome", false);
                 if (null != var2) {
@@ -1766,7 +1766,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("create_alert_doublespace", false);
                 if (null != var2) {
-                  fd.field_p = ll.a(0, var2);
+                  DefaultTextWidgetRenderer.field_p = ll.a(0, var2);
                 }
                 var2 = bc.a("create_alert_passchars", false);
                 if (null != var2) {
@@ -2440,7 +2440,7 @@ final class MessageKeys {
                 }
                 var2 = bc.a("orbcoins", false);
                 if (null != var2) {
-                  vj.field_L = ll.a(0, var2);
+                  RichTextWidget.field_L = ll.a(0, var2);
                 }
                 var2 = bc.a("orbpoints_colon", false);
                 if (null != var2) {

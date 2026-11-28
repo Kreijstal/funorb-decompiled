@@ -56,7 +56,7 @@ final class gi {
           return;
         }
         try {
-          jj.field_A.drawScaledAdditive(0, 0, 640, 480, se.field_u);
+          jj.field_A.drawScaledAdditive(0, 0, 640, 480, RichTextLayout.field_u);
         } catch (RuntimeException runtimeException) {
           throw sd.wrapClientException((Throwable) ((Object) runtimeException), "gi.A(" + param0 + ')');
         }

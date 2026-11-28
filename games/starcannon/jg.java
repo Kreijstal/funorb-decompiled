@@ -10,7 +10,7 @@ final class jg extends InteractiveWidget {
     private FieldValidator field_D;
     static Sprite[] field_C;
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (this.field_h) {
           return this.field_D.getValidationMessage(26162);
         }

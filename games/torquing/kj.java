@@ -34,7 +34,7 @@ abstract class kj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "kj.I(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1_ref), "kj.I(" + param0 + ')');
         }
     }
 
@@ -368,7 +368,7 @@ abstract class kj {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_80_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(')').toString());
         }
     }
 

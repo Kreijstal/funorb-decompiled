@@ -29,7 +29,7 @@ abstract class MenuLayer {
           var1.drawHalfSize(0, 0);
           r.a(126);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "af.C(" + param0 + ')');
         }
     }
 

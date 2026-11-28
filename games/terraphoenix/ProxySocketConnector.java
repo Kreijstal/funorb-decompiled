@@ -130,7 +130,7 @@ final class ProxySocketConnector extends SocketConnector {
           var22 = null;
           var12 = Terraphoenix.field_V;
           try {
-            var13 = (wf) (rd.field_k.beginBackward(9272));
+            var13 = (wf) (RichTextLayout.field_k.beginBackward(9272));
             var17 = var13;
             if (var17 == null) {
               return;

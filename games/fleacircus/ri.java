@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends e {
+final class ri extends DefaultTextWidgetRenderer {
     static String field_q;
     static String field_u;
     static PacketBuffer field_x;

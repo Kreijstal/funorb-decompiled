@@ -144,7 +144,7 @@ final class vt extends tia {
               var12.field_vb = new UiComponent(0L, qs.field_m);
               var12.a(~param2, var12.field_vb);
               var12.d((byte) 118);
-              var12.field_Fb = new UiComponent(0L, mh.field_k);
+              var12.field_Fb = new UiComponent(0L, CreaturePoseEffect.field_k);
               var12.a(-1, var12.field_Fb);
               var12.field_Db = new UiComponent(0L, JaggrabDownloader.field_c);
               var13 = 1;
@@ -487,10 +487,10 @@ final class vt extends tia {
         int var3_int = 0;
         int var4 = 0;
         try {
-          var3_int = qq.field_i.length;
+          var3_int = ChangeCreatureStatOrHealthEffect.field_i.length;
           this.field_i = new Sprite[var3_int];
           for (var4 = 0; var4 < var3_int; var4++) {
-            this.field_i[var4] = qq.field_i[var4].toRgbSprite();
+            this.field_i[var4] = ChangeCreatureStatOrHealthEffect.field_i[var4].toRgbSprite();
           }
           this.field_j = new IntrusiveDeque();
           this.field_g = 192;

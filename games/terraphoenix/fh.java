@@ -161,7 +161,7 @@ final class fh {
         hf var14 = null;
         hf var19 = null;
         int var15 = Terraphoenix.field_V;
-        fd var17 = new fd(param0, 2, 2, 2236962, 1, 1, 1, param0.field_s + param0.field_p + 2);
+        DefaultTextWidgetRenderer var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_s + param0.field_p + 2);
         hf var14Lifetime1;
         hf var14Lifetime2;
         this.field_t = (WidgetActionListener) ((Object) var17);

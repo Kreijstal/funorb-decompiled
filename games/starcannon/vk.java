@@ -105,7 +105,7 @@ class vk extends UiWidget implements ch {
         try {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
-          var1 = se.field_p;
+          var1 = RichTextLayout.field_p;
           var2 = var1.readUnsignedByte(7909);
           if (var2 != 0) {
             if (var2 != 1) {
@@ -731,7 +731,7 @@ class vk extends UiWidget implements ch {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         ba var2 = null;
         RuntimeException var2_ref = null;
         UiWidget var3 = null;
@@ -749,7 +749,7 @@ class vk extends UiWidget implements ch {
           }
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
-            var4 = var3.d(12606);
+            var4 = var3.getTooltipText(12606);
             stackIn_15_0 = null;
             if (var5 == 0) {
               if (stackIn_15_0 != var4) {
@@ -1106,7 +1106,7 @@ class vk extends UiWidget implements ch {
         String var5_ref_StringLifetime1;
         var9 = StarCannon.field_A;
         try {
-          var1 = se.field_p;
+          var1 = RichTextLayout.field_p;
           var3 = 82 / ((-41 - param0) / 54);
           var2 = var1.readUnsignedByte(7909);
           if (var2 == 0) {
@@ -1145,14 +1145,14 @@ class vk extends UiWidget implements ch {
           }
           if (var2 != 1) {
             if (2 == var2) {
-              if (1 == bd.field_f) {
-                bd.field_f = 2;
+              if (1 == TextLayout.field_f) {
+                TextLayout.field_f = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (bd.field_f == 2) {
-                bd.field_f = 1;
+              if (TextLayout.field_f == 2) {
+                TextLayout.field_f = 1;
               }
               return;
             }
@@ -1161,7 +1161,7 @@ class vk extends UiWidget implements ch {
               ec.a((byte) 27);
               return;
             }
-            bd.field_f = 1;
+            TextLayout.field_f = 1;
             var4 = var1.readString(-72);
             wg.field_a = ((String) (var4)).intern();
             var5 = var1.readUnsignedByte(7909);

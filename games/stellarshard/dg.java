@@ -174,11 +174,11 @@ abstract class dg extends UiWidget implements f {
         }
     }
 
-    String d(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.d(param0);
+        String var2 = super.getTooltipText(param0);
         if (this.field_y != null) {
-          var3 = this.field_y.d(3690);
+          var3 = this.field_y.getTooltipText(3690);
           if (var3 != null) {
             return var3;
           }
@@ -312,7 +312,7 @@ abstract class dg extends UiWidget implements f {
 
     final int a(boolean param0) {
         if (param0) {
-          this.d(-101);
+          this.getTooltipText(-101);
         }
         return null != this.field_y ? this.field_y.a(false) : 0;
     }

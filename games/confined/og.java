@@ -146,7 +146,7 @@ final class og extends n {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class og extends n {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ final class og extends n {
             var7 = 0;
           }
           if (var7 != 0) {
-            var12.a((byte) -61, new bd(10, nn.field_v, pn.field_a));
+            var12.a((byte) -61, new bd(10, TextHotspotBounds.field_v, pn.field_a));
           }
           if (param1 != 55) {
             og.a(38, '%');
@@ -463,7 +463,7 @@ final class og extends n {
               var7 = 0;
             }
             if (var7 != 0) {
-              var12.a((byte) -61, new bd(10, nn.field_v, pn.field_a));
+              var12.a((byte) -61, new bd(10, TextHotspotBounds.field_v, pn.field_a));
             }
             if (param1 != 55) {
               og.a(38, '%');
@@ -507,7 +507,7 @@ final class og extends n {
                 var7 = 0;
               }
               if (var7 != 0) {
-                var12.a((byte) -61, new bd(10, nn.field_v, pn.field_a));
+                var12.a((byte) -61, new bd(10, TextHotspotBounds.field_v, pn.field_a));
               }
               if (param1 != 55) {
                 og.a(38, '%');
@@ -562,7 +562,7 @@ final class og extends n {
                   var7 = 0;
                 }
                 if (var7 != 0) {
-                  var12.a((byte) -61, new bd(10, nn.field_v, pn.field_a));
+                  var12.a((byte) -61, new bd(10, TextHotspotBounds.field_v, pn.field_a));
                 }
                 if (param1 != 55) {
                   og.a(38, '%');
@@ -597,7 +597,7 @@ final class og extends n {
                   var7 = 0;
                 }
                 if (var7 != 0) {
-                  var12.a((byte) -61, new bd(10, nn.field_v, pn.field_a));
+                  var12.a((byte) -61, new bd(10, TextHotspotBounds.field_v, pn.field_a));
                 }
                 if (param1 != 55) {
                   og.a(38, '%');
@@ -653,7 +653,7 @@ final class og extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "og.E(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "og.E(" + param0 + ')');
         }
     }
 
@@ -670,7 +670,7 @@ final class og extends n {
           im.b((byte) -85);
           tg.field_H = 0 - mg.field_g;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "og.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "og.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

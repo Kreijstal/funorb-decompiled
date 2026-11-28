@@ -177,22 +177,22 @@ final class me {
 
     final static void a(boolean param0) {
         if (lk.field_e >= 10000) {
-          vk.a(255, (byte) 89, 0);
+          RichTextLayout.a(255, (byte) 89, 0);
         }
         if (param0) {
           field_g = true;
         }
         if (lk.field_e >= 20000) {
-          vk.a(254, (byte) 89, 1);
+          RichTextLayout.a(254, (byte) 89, 1);
         }
         if (lk.field_e >= 30000) {
-          vk.a(253, (byte) 89, 2);
+          RichTextLayout.a(253, (byte) 89, 2);
         }
         if (lk.field_e >= 40000) {
-          vk.a(252, (byte) 89, 3);
+          RichTextLayout.a(252, (byte) 89, 3);
         }
         if (50000 <= lk.field_e) {
-          vk.a(251, (byte) 89, 4);
+          RichTextLayout.a(251, (byte) 89, 4);
         }
     }
 

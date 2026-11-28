@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mg extends a {
+class mg extends DefaultTextWidgetRenderer {
     static volatile int field_s;
     static boolean field_t;
     static int field_q;

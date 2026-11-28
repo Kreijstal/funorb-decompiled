@@ -27,11 +27,11 @@ final class uj implements Runnable {
           fd.field_f = param1.readUnsignedShort(98203176) << 5;
           var2_int = param1.readUnsignedByte((byte) 90);
           fd.field_f = fd.field_f + (var2_int >> 3);
-          cc.field_l = (var2_int & 7) << 18;
-          cc.field_l = cc.field_l + (param1.readUnsignedShort(98203176) << 2);
+          TextHotspotBounds.field_l = (var2_int & 7) << 18;
+          TextHotspotBounds.field_l = TextHotspotBounds.field_l + (param1.readUnsignedShort(98203176) << 2);
           var2_intLifetime1 = param1.readUnsignedByte((byte) 90);
           oh.field_b = (var2_intLifetime1 & 63) << 15;
-          cc.field_l = cc.field_l + (var2_intLifetime1 >> 6);
+          TextHotspotBounds.field_l = TextHotspotBounds.field_l + (var2_intLifetime1 >> 6);
           oh.field_b = oh.field_b + (param1.readUnsignedByte((byte) 90) << 7);
           var2_intLifetime2 = param1.readUnsignedByte((byte) 90);
           oh.field_b = oh.field_b + (var2_intLifetime2 >> 1);

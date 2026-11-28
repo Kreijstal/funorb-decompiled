@@ -18,7 +18,7 @@ class UiWidget extends IntrusiveNode {
     String text;
     int field_u;
     int width;
-    ro field_r;
+    TextLayout field_r;
 
     StringBuilder a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         RuntimeException var5 = null;
@@ -176,7 +176,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         ProxyAuthenticationRequiredException.field_c = q.field_v;
-        qc.a(this.a(false), 74);
+        qc.a(this.getTooltipText(false), 74);
         var6 = 96 % ((4 - param2) / 50);
         return param1;
     }
@@ -278,10 +278,10 @@ class UiWidget extends IntrusiveNode {
         if (param0 >= -60) {
           return;
         }
-        pk.a(1);
+        TextHotspotBounds.a(1);
     }
 
-    String a(boolean param0) {
+    String getTooltipText(boolean param0) {
         if (!param0) {
           return !this.field_p ? null : this.field_q;
         }
@@ -676,17 +676,17 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetListener param1, uf param2) {
-        qa var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_y = 0;
         this.field_u = 0;
         try {
           this.listener = param1;
           this.field_v = param2;
           this.text = param0;
-          if (this.listener instanceof qa) {
-            var4 = (qa) ((Object) this.listener);
-            this.width = var4.a(this, (byte) 112);
-            this.height = var4.a(this, -1);
+          if (this.listener instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.listener);
+            this.width = var4.getPreferredWidth(this, (byte) 112);
+            this.height = var4.getPreferredHeight(this, -1);
           }
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "iq.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

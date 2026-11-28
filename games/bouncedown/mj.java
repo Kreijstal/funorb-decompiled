@@ -107,7 +107,7 @@ final class mj {
             return stackIn_26_0;
           }
           if (!kg.field_b.tryLoadGroupByName("commonui", false)) {
-            stackIn_29_0 = vc.field_B + " - " + kg.field_b.getGroupLoadPercentByName("commonui", (byte) -100) + "%";
+            stackIn_29_0 = RichTextWidget.field_B + " - " + kg.field_b.getGroupLoadPercentByName("commonui", (byte) -100) + "%";
             return stackIn_29_0;
           }
           if (!ea.field_e.ensureIndexLoaded(-111)) {

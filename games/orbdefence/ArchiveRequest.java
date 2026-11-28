@@ -41,7 +41,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (param0 < 112) {
           field_k = (ml) null;
           if (!vj.a(97)) {
-            cc.field_f.a(true);
+            TextHotspotBounds.field_f.a(true);
             return;
           }
           return;
@@ -49,7 +49,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         if (vj.a(97)) {
           return;
         }
-        cc.field_f.a(true);
+        TextHotspotBounds.field_f.a(true);
     }
 
     public static void releaseDeclaredStaticReferences(byte param0) {

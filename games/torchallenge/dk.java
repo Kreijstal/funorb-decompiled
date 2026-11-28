@@ -162,7 +162,7 @@ final class dk {
     }
 
     final void a(BitmapFont param0, int param1) {
-        bc var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         ga var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -189,7 +189,7 @@ final class dk {
             BitmapFont var16 = (BitmapFont) null;
             this.a((BitmapFont) null, 22);
           }
-          var18 = new bc(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_K + param0.field_x);
+          var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_K + param0.field_x);
           this.field_q = (j) ((Object) var18);
           var18.field_k = 16777215;
           var4 = new ga();

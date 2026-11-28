@@ -98,7 +98,7 @@ final class AgeValidator extends TextFieldValidator {
             field_m = (dg) null;
           }
           var4 = (CharSequence) ((Object) param1);
-          if (!bc.a(false, var4)) {
+          if (!RichTextWidget.a(false, var4)) {
             stackIn_4_0 = ni.field_b;
             return stackIn_4_0;
           }

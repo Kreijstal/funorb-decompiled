@@ -26,7 +26,7 @@ final class jna extends IntrusiveNode {
               if (BoardChangeAnimation.field_k.field_R != 0) {
                 lna.field_q = false;
               }
-              if (qq.field_k.field_R != 0) {
+              if (ChangeCreatureStatOrHealthEffect.field_k.field_R != 0) {
                 ClamsEvent.d(param2 ^ 125);
                 lna.field_q = false;
               }

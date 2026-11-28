@@ -15,7 +15,7 @@ final class bd {
 
     final static void a(int param0) {
         bn.c(0);
-        vf.a((byte) -117, 4);
+        DefaultTextWidgetRenderer.a((byte) -117, 4);
         if (param0 != 1849965346) {
           bd.b(51);
         }
@@ -59,7 +59,7 @@ final class bd {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -79,7 +79,7 @@ final class bd {
           this.field_f = 100 + param2.stringWidth(this.field_a);
           this.field_i = 30;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

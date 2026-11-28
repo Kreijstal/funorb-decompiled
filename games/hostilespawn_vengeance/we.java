@@ -50,7 +50,7 @@ final class we {
         }
         var2 = uj.field_p.field_e;
         var3 = uj.field_p.field_g;
-        var4 = mm.field_m[0].field_j;
+        var4 = TextHotspotBounds.field_m[0].field_j;
         var7 = new GridPoint(this.field_d.field_e - var4.field_e, -var4.field_g + this.field_d.field_g);
         var8 = var7.directionInAngleUnits(param0 ^ -25098);
         var6 = this.field_c;

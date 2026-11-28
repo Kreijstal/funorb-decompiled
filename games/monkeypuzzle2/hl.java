@@ -23,7 +23,7 @@ final class hl {
           return 2;
         }
         if (this.field_i != 2) {
-          if (~this.field_j == ~sb.field_e) {
+          if (~this.field_j == ~RichTextLayout.field_e) {
             return 1;
           }
           if (2 != ci.field_b) {
@@ -37,7 +37,7 @@ final class hl {
         if (this.field_e > 0) {
           return 2;
         }
-        if (~this.field_j == ~sb.field_e) {
+        if (~this.field_j == ~RichTextLayout.field_e) {
           return 1;
         }
         if (2 != ci.field_b) {

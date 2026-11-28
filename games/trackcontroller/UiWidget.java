@@ -21,7 +21,7 @@ class UiWidget extends IntrusiveNode {
     static Sprite[] field_z;
     static String field_v;
     int field_x;
-    rb field_k;
+    TextLayout field_k;
     static IndexedSprite[] field_j;
 
     final static byte[] a(int param0, byte[] param1) {
@@ -171,7 +171,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         sc.field_h = SecondaryNodeDeque.mouseButton;
-        aj.a((byte) -127, this.e(0));
+        aj.a((byte) -127, this.getTooltipText(0));
         return param1;
     }
 
@@ -373,7 +373,7 @@ class UiWidget extends IntrusiveNode {
           return this.a((byte) -123, this);
         }
         if (param1 != 3931) {
-          this.e(-29);
+          this.getTooltipText(-29);
           return false;
         }
         return false;
@@ -531,7 +531,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    String e(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 0) {
           this.field_m = 111;
         }
@@ -614,7 +614,7 @@ class UiWidget extends IntrusiveNode {
 
     UiWidget(String param0, t param1, tg param2) {
         RuntimeException runtimeException = null;
-        dl var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -629,10 +629,10 @@ class UiWidget extends IntrusiveNode {
           this.field_s = param0;
           this.field_l = param2;
           this.field_y = param1;
-          if (this.field_y instanceof dl) {
-            var4 = (dl) ((Object) this.field_y);
-            this.field_x = var4.a(false, this);
-            this.field_u = var4.a(89, this);
+          if (this.field_y instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_y);
+            this.field_x = var4.getPreferredWidth(false, this);
+            this.field_u = var4.getPreferredHeight(89, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

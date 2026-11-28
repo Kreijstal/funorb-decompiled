@@ -188,7 +188,7 @@ abstract class GameClientShell extends GameAppletShell {
             stackIn_105_2 = !(fm.field_l);
             eb.a(stackIn_101_0, stackIn_102_1, stackIn_105_2, 10);
           }
-          if (em.field_b) {
+          if (TextLayout.field_b) {
             ka.a((byte) -87);
           }
           if (ac.field_b == null) {
@@ -213,7 +213,7 @@ abstract class GameClientShell extends GameAppletShell {
         if (hj.field_f == 11) {
           if (df.field_m != null && (!df.field_m.ensureIndexLoaded(0) ||
             !df.field_m.tryLoadAllGroups((byte) 126))) {
-            we.a(EditableTextField.a(mi.field_d, df.field_m, 27867, dh.field_J), -125, 0.0f);
+            we.a(EditableTextField.a(TextLineMetrics.field_d, df.field_m, 27867, dh.field_J), -125, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -355,7 +355,7 @@ abstract class GameClientShell extends GameAppletShell {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var3 = 42 % ((18 - param0) / 48);
-          var2 = new BinaryBitmapFont(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, a.field_e);
+          var2 = new BinaryBitmapFont(param1, kh.field_i, vi.field_b, gf.field_o, RichTextWidget.field_J, a.field_e);
           Bzip2State.a((byte) -21);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -514,7 +514,7 @@ abstract class GameClientShell extends GameAppletShell {
             if (var9 != null) {
               this.field_u = Integer.parseInt(var9);
             }
-            em.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            TextLayout.field_b = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(-4, param1, this.field_m, 32, param2, param0, param4);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

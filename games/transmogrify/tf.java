@@ -244,7 +244,7 @@ final class tf {
             qb.field_f[5] = "";
             AccountServiceResult.field_d[1] = 2;
             qb.field_f[4] = oi.field_j;
-            qb.field_f[2] = nj.field_l;
+            qb.field_f[2] = TextHotspotBounds.field_l;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_75_0 = qb.field_f;
               stackIn_75_1 = 6 + var8Lifetime2;

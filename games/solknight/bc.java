@@ -32,7 +32,7 @@ final class bc extends si {
             return stackIn_11_0 != 0;
           }
           if (1 == param0) {
-            jf.field_a = this;
+            TextLayout.field_a = this;
             this.field_N = param3 - this.field_m - param1;
             this.field_L = param4 + (-this.field_j - param5);
           }

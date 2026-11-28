@@ -182,7 +182,7 @@ final class aa {
           } else {
             stackIn_55_9 = 32;
           }
-          se.a(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_51_5, stackIn_51_6, stackIn_51_7, stackIn_51_8 | stackIn_55_9, da.field_y);
+          RichTextWidget.a(stackIn_51_0, stackIn_51_1, stackIn_51_2, stackIn_51_3, stackIn_51_4, stackIn_51_5, stackIn_51_6, stackIn_51_7, stackIn_51_8 | stackIn_55_9, da.field_y);
           stackIn_57_0 = 16711680;
           stackIn_57_1 = pg.field_v;
           stackIn_57_2 = 10 + (320 + var2);
@@ -198,7 +198,7 @@ final class aa {
           } else {
             stackIn_61_8 = 0;
           }
-          se.a(stackIn_57_0, stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_57_7, stackIn_61_8 | 3, da.field_y);
+          RichTextWidget.a(stackIn_57_0, stackIn_57_1, stackIn_57_2, stackIn_57_3, stackIn_57_4, stackIn_57_5, stackIn_57_6, stackIn_57_7, stackIn_61_8 | 3, da.field_y);
         }
         if (this.field_c < dc.field_n.length &&
           dc.field_n[this.field_c] != null) {
@@ -817,7 +817,7 @@ final class aa {
           var3 = param1 ? 1 : 0;
           ChessBoardState.a(qk.field_h, var3 != 0, 28333, -5);
         }
-        if (hl.field_h) {
+        if (DefaultTextWidgetRenderer.field_h) {
           la.a(11, (byte) -60, 0);
         }
         if (param0 != 11) {
@@ -1968,7 +1968,7 @@ final class aa {
             var11 = var11 + (-(ao.field_e.field_h / 4) + 128);
             var21.drawString(SecondaryNodeDequeIterator.field_d, var10Lifetime1, var21.field_C + var11, 1, -1);
             var17 = 0;
-            while (var17 < se.field_ab[var13Lifetime1]) {
+            while (var17 < RichTextWidget.field_ab[var13Lifetime1]) {
               ao.field_e.c(var17 * 5 + var21.stringWidth(SecondaryNodeDequeIterator.field_d) + (10 + var10Lifetime1), var11);
               var17++;
               if (var18 != 0) {
@@ -2448,7 +2448,7 @@ final class aa {
         nb.b(0, 25);
         qh.field_b.field_J = (BitmapFont) ((Object) jj.field_b);
         stackIn_57_0 = qh.field_b;
-        stackIn_59_1 = (hl.field_h) || (pk.field_j);
+        stackIn_59_1 = (DefaultTextWidgetRenderer.field_h) || (pk.field_j);
         stackIn_57_0.field_C = stackIn_59_1;
         qh.field_b.d((byte) -2);
     }

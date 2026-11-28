@@ -86,7 +86,7 @@ final class MixedSupport029 {
         if (!MixedSupport134.booleanState0194) {
           throw new IllegalStateException();
         }
-        UiComponentPart025.booleanState0152 = true;
+        RichTextWidget.booleanState0152 = true;
         GameplayControls.performAction1753(true, 841566312);
         MixedSupport052.integerState0269 = 0;
         if (integerArgument1 > 101) {

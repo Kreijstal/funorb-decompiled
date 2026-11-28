@@ -24,7 +24,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         field_Y = null;
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         if (!this.field_s) {
           return null;
         }
@@ -56,7 +56,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           if (param3 < 25) {
-            this.f(-56);
+            this.getTooltipText(-56);
           }
           super.a(param0, param1, param2, 77);
           this.field_Z = -param2 - this.x + ef.field_j;

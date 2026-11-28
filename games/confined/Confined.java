@@ -180,7 +180,7 @@ public final class Confined extends i {
           jd.clearStaticReferences((byte) -38);
           ei.clearStaticReferences((byte) 122);
           ml.clearStaticReferences(param0 ^ -193);
-          vf.b(param0 - 193);
+          DefaultTextWidgetRenderer.b(param0 - 193);
           ki.clearStaticReferences(false);
           he.clearStaticReferences((byte) 105);
           rm.clearStaticReferences(param0 - 192);
@@ -200,7 +200,7 @@ public final class Confined extends i {
           qh.clearStaticReferences(109);
           li.clearStaticReferences(1);
           rc.a(param0 ^ -30147);
-          sc.clearStaticReferences(-30048);
+          TextLayout.clearStaticReferences(-30048);
           fj.clearStaticReferences(296);
           InteractiveWidget.clearStaticReferences((byte) 17);
           am.clearStaticReferences(true);
@@ -234,7 +234,7 @@ public final class Confined extends i {
           sj.releaseDeclaredStaticReferences((byte) 70);
           ib.clearStaticReferences((byte) -20);
           NameSuggestionsPanel.releaseDeclaredStaticReferences(-125);
-          na.clearDeclaredStaticReferences((byte) -127);
+          RichTextWidget.clearDeclaredStaticReferences((byte) -127);
           ba.clearDeclaredStaticReferences((byte) -94);
           rh.clearDeclaredStaticReferences(8692);
           fa.f(91);
@@ -246,7 +246,7 @@ public final class Confined extends i {
           SoundFilter.clearStaticReferences();
           fb.clearStaticReferences(false);
           DirectByteStorage.clearDeclaredStaticReferences(-6348);
-          c.a((byte) 87);
+          RichTextLayout.a((byte) 87);
           wl.clearStaticReferences(false);
           qe.clearDeclaredStaticReferences(44);
           s.clearStaticReferences((byte) 92);
@@ -290,7 +290,7 @@ public final class Confined extends i {
           pe.b(param0 - 147);
           gg.clearStaticReferences(116);
           pn.resetStaticState(param0 - 274);
-          sd.clearStaticReferences(-15138);
+          TextLineMetrics.clearStaticReferences(-15138);
           AccountNameAvailabilityValidator.clearStaticReferences(-119);
           PasswordValidator.clearStaticReferences((byte) -11);
           EmailFormatValidator.clearStaticReferences(62);
@@ -298,7 +298,7 @@ public final class Confined extends i {
           AgeValidator.clearStaticReferences(-109);
           MatchingFieldValidator.e(127);
           rf.a((byte) 112);
-          nn.clearStaticReferences(-11650);
+          TextHotspotBounds.clearStaticReferences(-11650);
           fi.resetStaticState((byte) -125);
           DebouncedFieldValidator.clearStaticReferences(true);
           va.clearStaticReferences(param0 - 312);
@@ -306,7 +306,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) runtimeException), "Confined.E(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "Confined.E(" + param0 + ')');
         }
         if (GameAppletShell.field_k != 0) {
           field_J = (var3 == 0);
@@ -335,7 +335,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "Confined.F(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "Confined.F(" + param0 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "Confined.H(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2_ref), "Confined.H(" + param0 + ')');
         }
     }
 
@@ -693,10 +693,10 @@ public final class Confined extends i {
               ol.a(392, 30613, 1 + (qn.field_v.field_B.field_R - 1) / 50, 7, 384);
             }
             if (qn.field_v.field_B.field_mb) {
-              nn.field_t[0].drawOpaque(272, 432);
+              TextHotspotBounds.field_t[0].drawOpaque(272, 432);
             }
             if (qn.field_v.field_B.field_Eb) {
-              nn.field_t[1].drawOpaque(312, 432);
+              TextHotspotBounds.field_t[1].drawOpaque(312, 432);
             }
             if (qn.field_v.field_B.field_U > 0) {
               ol.a(352, param0 ^ 49045, (-1 + qn.field_v.field_B.field_U) / 50 + 1, 2, 432);
@@ -799,7 +799,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "Confined.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2_ref), "Confined.B(" + param0 + ')');
         }
     }
 
@@ -1055,7 +1055,7 @@ public final class Confined extends i {
                 ImageProducerRasterBuffer.field_o = nm.a(ih.field_d, "charge_cannon_blast", 1, "");
                 wb.field_a = dh.a(false, "missile_flame", "", ih.field_d);
                 IntrusiveDeque.field_c = dh.a(false, "interface", "", ih.field_d);
-                nn.field_t = nm.a(ih.field_d, "interface_icons", param0 + 96, "");
+                TextHotspotBounds.field_t = nm.a(ih.field_d, "interface_icons", param0 + 96, "");
                 dn.field_c = nm.a(ih.field_d, "interface_bars", 1, "");
                 gd.field_t = nm.a(ih.field_d, "interface_confined_decoration", 1, "");
                 cj.field_a = va.a(126, nm.a(ih.field_d, "menu_frame", 1, ""));
@@ -1126,7 +1126,7 @@ public final class Confined extends i {
             tl.field_b = fk.a(jd.field_b, "", "friend-shield-fizzle").a();
             fh.field_b = fk.a(jd.field_b, "", "enemy-shield-fizzle").a();
             hc.field_p = fk.a(jd.field_b, "", "invincibility-fizzle").a();
-            nn.field_o = fk.a(jd.field_b, "", "friend-shield-lost").a();
+            TextHotspotBounds.field_o = fk.a(jd.field_b, "", "friend-shield-lost").a();
             an.field_q = fk.a(jd.field_b, "", "enemy-shield-lost").a();
             ih.field_e = fk.a(jd.field_b, "", "enemy-shot-fire").a();
             ProjectileRay.field_fb = fk.a(jd.field_b, "", "enemy-shot-ambient").a();
@@ -1170,7 +1170,7 @@ public final class Confined extends i {
             bn.field_b = fk.a(jd.field_b, "", "concussion-homing-missile-explode").a();
             ib.field_J = fk.a(jd.field_b, "", "cluster-missile-explode").a();
             kj.field_b = fk.a(jd.field_b, "", "cluster-shell-explode").a();
-            vf.field_n = fk.a(jd.field_b, "", "nuclear-missile-explode").a();
+            DefaultTextWidgetRenderer.field_n = fk.a(jd.field_b, "", "nuclear-missile-explode").a();
             jn.field_U = fk.a(jd.field_b, "", "rock-explode").a();
             aj.field_a = fk.a(jd.field_b, "", "shield-lost-siren").a();
             rj.field_b = fk.a(jd.field_b, "", "interface-ambient").a();
@@ -1197,7 +1197,7 @@ public final class Confined extends i {
             EmailFormatValidator.field_j[1] = fk.a(jd.field_b, "", "boss-cube-arm").a();
             EmailFormatValidator.field_j[2] = fk.a(jd.field_b, "", "boss-bird-arm").a();
             EmailFormatValidator.field_j[3] = fk.a(jd.field_b, "", "boss-humanoid-arm").a();
-            sc.field_h[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").b();
+            TextLayout.field_h[0] = ph.a(AccountCreationResultPanel.field_Bb, "", "boss-sphere-armed-ambient").b();
             ol.field_c = fk.a(jd.field_b, "", "boss-bird-flap").a();
             gk.field_q = fk.a(jd.field_b, "", "boss-bird-antiflap").a();
             am.g(param0 - 4163);
@@ -1243,7 +1243,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref3), "Confined.T(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2_ref3), "Confined.T(" + param0 + ')');
         }
     }
 
@@ -1266,7 +1266,7 @@ public final class Confined extends i {
               StageDirector.clearIndexedSpriteDecodeBuffers(false);
               break;
             }
-            var1[var2] = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], sd.field_f[var2], rj.field_f[var2], an.field_p);
+            var1[var2] = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[var2], ij.field_r[var2], InteractiveWidget.field_I[var2], TextLineMetrics.field_f[var2], rj.field_f[var2], an.field_p);
             var2++;
           } while (var3 == 0);
           stackIn_12_0 = var1;
@@ -1274,7 +1274,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "Confined.P(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "Confined.P(" + param0 + ')');
         }
     }
 
@@ -1291,7 +1291,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "Confined.R(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "Confined.R(" + param0 + ')');
         }
     }
 
@@ -1314,7 +1314,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "Confined.M(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "Confined.M(" + param0 + ')');
         }
     }
 
@@ -1322,7 +1322,7 @@ public final class Confined extends i {
         try {
           this.a(15, "confined", 640);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "Confined.init()");
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "Confined.init()");
         }
     }
 
@@ -1667,7 +1667,7 @@ public final class Confined extends i {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "Confined.Q(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "Confined.Q(" + param0 + ')');
         }
     }
 

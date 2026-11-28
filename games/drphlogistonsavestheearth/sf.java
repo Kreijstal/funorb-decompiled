@@ -29,7 +29,7 @@ final class sf {
         int var7_int = 0;
         ch var19 = null;
         int var15 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        l var17 = new l(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_S + param1.field_x));
+        DefaultTextWidgetRenderer var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_S + param1.field_x));
         var17.field_o = 16777215;
         this.field_i = (cg) ((Object) var17);
         ch var4 = new ch();

@@ -32,16 +32,16 @@ final class fc {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = rd.field_d[sc.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new RgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var21);
+            var1[var2] = new RgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var21);
           } else {
             var22 = NetworkGameClient.field_t[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var3 > var7; var7++) {
-              var6[var7] = ne.a(rd.field_d[sc.a(255, (int) var20[var7])], sc.a((int) var22[var7], 255) << 24);
+              var6[var7] = TextLayout.a(rd.field_d[sc.a(255, (int) var20[var7])], sc.a((int) var22[var7], 255) << 24);
             }
-            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var16));
+            var1[var2] = (RgbSprite) ((Object) new ArgbSprite(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], var16));
           }
         }
         if (param0 >= -127) {
@@ -321,7 +321,7 @@ final class fc {
           og.a(stackIn_94_0, stackIn_95_1, 112, wd.field_a.field_l, wd.field_a.field_d, wd.field_a.field_n);
           aj.field_t[3].draw(352, 367);
           stackIn_97_0 = MatchingFieldValidator.field_p;
-          stackIn_97_1 = j.field_h.toLowerCase();
+          stackIn_97_1 = RichTextLayout.field_h.toLowerCase();
           stackIn_97_2 = 7 + (wd.field_a.field_l + 5);
           stackIn_97_3 = var9Lifetime6;
           stackIn_97_4 = wd.field_a.a((byte) 71);
@@ -357,7 +357,7 @@ final class fc {
           var12 = db.a(fb.field_f, new String[]{Integer.toString(DiskArchiveRequest.field_z), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_f)}, true);
           var13 = db.a(va.field_s, new String[]{Integer.toString(pl.field_f), Integer.toString((int) ia.field_m[fleas.field_E][var1_int].field_e)}, true);
           var14 = db.a(hm.field_h, new String[]{Integer.toString(wi.field_b)}, true);
-          var15 = db.a(pd.field_i, new String[]{Integer.toString(j.field_f ^ wi.field_p.field_b)}, true);
+          var15 = db.a(pd.field_i, new String[]{Integer.toString(RichTextLayout.field_f ^ wi.field_p.field_b)}, true);
           var16 = ve.field_d;
           var17 = 3 + (int)(1.5 * (double)var16.field_H);
           var18 = 0;

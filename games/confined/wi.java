@@ -65,7 +65,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "wi.H(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2_ref), "wi.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ final class wi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "wi.F(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "wi.F(" + param0 + ')');
         }
     }
 

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends td implements jg, ButtonListener {
+final class ge extends td implements TextHotspotListener, ButtonListener {
     private AccountCreationResultPanel field_C;
     static boolean field_D;
     private ButtonWidget field_E;
     static int field_G;
-    private el field_F;
+    private RichTextWidget field_F;
 
     private final String j(int param0) {
         if (param0 != 11844) {
@@ -16,7 +16,7 @@ final class ge extends td implements jg, ButtonListener {
         return "</col></u>";
     }
 
-    public final void a(el param0, int param1, int param2, int param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -60,7 +60,7 @@ final class ge extends td implements jg, ButtonListener {
         super(0, 0, 288, 0, (t) null);
         String var7 = null;
         int var3 = 0;
-        ic var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -69,8 +69,8 @@ final class ge extends td implements jg, ButtonListener {
           this.field_E.field_y = (t) ((Object) new dc());
           var7 = dh.a((byte) -81, new String[]{this.k(0), this.j(11844)}, qd.field_b);
           var3 = 20;
-          var4 = new ic(gk.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
-          this.field_F = new el(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(gk.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
+          this.field_F = new RichTextWidget(var7, var4);
           this.field_F.field_n = "";
           this.field_F.a((byte) 58, bb.field_a, 0);
           this.field_F.a((byte) 80, bb.field_a, 1);
@@ -135,7 +135,7 @@ final class ge extends td implements jg, ButtonListener {
     }
 
     public final void onWidgetActivated(ButtonWidget param0, int param1, int param2, int param3, int param4) {
-        el var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -147,8 +147,8 @@ final class ge extends td implements jg, ButtonListener {
             this.field_C.t(20252);
           }
           if (param4 != -27322) {
-            var7 = (el) null;
-            this.a((el) null, -97, -102, 71);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated((RichTextWidget) null, -97, -102, 71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -16,13 +16,13 @@ final class th extends le {
         int var3;
         var3 = HostileSpawn.field_I ? 1 : 0;
         be.field_g = null;
-        ce.field_e = 0;
+        TextLayout.field_e = 0;
         PasswordValidator.field_o = null;
-        var2 = mb.field_p;
+        var2 = RichTextLayout.field_p;
         if (param0 <= 120) {
           return -96;
         }
-        mb.field_p = hn.field_a;
+        RichTextLayout.field_p = hn.field_a;
         if (param1 == 51) {
           EditableTextField.field_N.field_e = 2;
         } else {
@@ -183,7 +183,7 @@ final class th extends le {
           var5_int = param0.getGroupIdByName((byte) -2, param4);
           var6 = -53 / ((param1 + 52) / 49);
           var7 = param0.getFileIdByName(var5_int, param2, -1);
-          stackIn_1_0 = cj.a(param3, 7844, var7, param0, var5_int);
+          stackIn_1_0 = RichTextWidget.a(param3, 7844, var7, param0, var5_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

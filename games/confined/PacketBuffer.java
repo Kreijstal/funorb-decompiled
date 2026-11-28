@@ -13,7 +13,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           field_o = null;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.V(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.V(" + param0 + ')');
         }
     }
 
@@ -31,7 +31,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.J(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.J(" + param0 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ class PacketBuffer extends IntrusiveNode {
           }
           if (AccountCreationResultPanel.field_Db == null) {
             AccountCreationResultPanel.field_Db = new pb(128);
-            c.field_k = 0;
+            RichTextLayout.field_k = 0;
           }
           var3Lifetime1 = var1.readString(true);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -184,8 +184,8 @@ class PacketBuffer extends IntrusiveNode {
           if (var6 == null) {
             var6 = new fg();
             AccountCreationResultPanel.field_Db.a((long)hh.a(0, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6, 117);
-            fieldTemp$0 = c.field_k;
-            c.field_k = c.field_k + 1;
+            fieldTemp$0 = RichTextLayout.field_k;
+            RichTextLayout.field_k = RichTextLayout.field_k + 1;
             var6.field_lb = fieldTemp$0;
             ExpandingPulseProjectile.field_fb.addLast((IntrusiveNode) (var6), (byte) -103);
           }
@@ -225,7 +225,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1_ref), "kg.L(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1_ref), "kg.L(" + param0 + ')');
         }
     }
 
@@ -258,7 +258,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$6] = (byte)(int)param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.T(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -297,7 +297,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -373,7 +373,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "kg.S(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "kg.S(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -399,7 +399,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.CA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.CA(" + param0 + ')');
         }
     }
 
@@ -417,7 +417,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.IA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.IA(" + param0 + ')');
         }
     }
 
@@ -441,7 +441,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.DA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.DA(" + param0 + ')');
         }
     }
 
@@ -475,7 +475,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -498,7 +498,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "kg.LA(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "kg.LA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -518,7 +518,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$2] = (byte)param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.G(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -530,7 +530,7 @@ class PacketBuffer extends IntrusiveNode {
         try {
           this.payload[-1 + (this.position - param0)] = (byte)param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.U(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.U(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -551,7 +551,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.AA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.AA(" + param0 + ')');
         }
     }
 
@@ -577,7 +577,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "kg.EA(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "kg.EA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -600,7 +600,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.BA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.BA(" + param0 + ')');
         }
     }
 
@@ -640,7 +640,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$7] = (byte)(int)param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.H(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.H(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -654,7 +654,7 @@ class PacketBuffer extends IntrusiveNode {
             field_o = (em) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.Q(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.Q(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -717,7 +717,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -742,7 +742,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "kg.R(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "kg.R(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -767,7 +767,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.I(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.I(" + param0 + ')');
         }
     }
 
@@ -833,7 +833,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -914,7 +914,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -934,7 +934,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.K(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.K(" + param0 + ')');
         }
     }
 
@@ -967,7 +967,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.GA(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.GA(" + param0 + ')');
         }
     }
 
@@ -987,7 +987,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.D(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.D(" + param0 + ')');
         }
     }
 
@@ -1026,7 +1026,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1035,7 +1035,7 @@ class PacketBuffer extends IntrusiveNode {
           ac.a(param0);
           vl.field_b = true;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.A(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.A(" + param0 + ')');
         }
     }
 
@@ -1044,7 +1044,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = 0;
           this.payload = dl.a(param0, -101);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.<init>(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.<init>(" + param0 + ')');
         }
     }
 
@@ -1064,7 +1064,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.M(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.M(" + param0 + ')');
         }
     }
 
@@ -1092,7 +1092,7 @@ class PacketBuffer extends IntrusiveNode {
           this.position = this.position + 1;
           this.payload[fieldTemp$4] = (byte)(int)param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kg.B(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kg.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1116,7 +1116,7 @@ class PacketBuffer extends IntrusiveNode {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -1134,7 +1134,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.O(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.O(" + param0 + ')');
         }
     }
 
@@ -1156,7 +1156,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "kg.N(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "kg.N(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1195,7 +1195,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2), "kg.P(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2), "kg.P(" + param0 + ')');
         }
     }
 
@@ -1211,7 +1211,7 @@ class PacketBuffer extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "kg.MA(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "kg.MA(" + param0 + ',' + param1 + ')');
         }
     }
 

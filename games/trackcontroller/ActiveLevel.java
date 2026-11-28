@@ -1131,7 +1131,7 @@ final class ActiveLevel extends LevelGrid {
               ii.tileSprites[50].drawTransparent(182 + this.field_a, this.field_f + 234);
             }
             if (!param0) {
-              var3Lifetime1 = va.field_a;
+              var3Lifetime1 = TextLineMetrics.field_a;
             }
           } else if (0 == this.tileFlags[7][9]) {
             if (param0 &&
@@ -1156,7 +1156,7 @@ final class ActiveLevel extends LevelGrid {
         }
         if (this.level.levelIndex == 1 &&
           !param0) {
-          if (fi.field_i) {
+          if (TextHotspotBounds.field_i) {
             return;
           }
           cl.a(NameSuggestionsPanel.field_L, 58, 72, 64, 332, 4);
@@ -1867,7 +1867,7 @@ final class ActiveLevel extends LevelGrid {
           ak.field_b = 10;
         }
         if (vg.field_p ||
-          fi.field_i) {
+          TextHotspotBounds.field_i) {
           ak.field_b = -1;
         }
         ProxySocketConnector.a(ak.field_b, (byte) 20);
@@ -1890,7 +1890,7 @@ final class ActiveLevel extends LevelGrid {
             } else {
               AsyncRequest.field_r = dh.a((byte) -75, new String[]{Integer.toString(var1)}, PacketBuffer.field_l);
             }
-            AsyncRequest.field_r = fi.a(116, new CharSequence[]{(CharSequence) ((Object) AsyncRequest.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
+            AsyncRequest.field_r = TextHotspotBounds.a(116, new CharSequence[]{(CharSequence) ((Object) AsyncRequest.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
           }
           kb.field_a.t(20252);
           r.f(-635);

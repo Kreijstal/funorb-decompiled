@@ -463,7 +463,7 @@ final class BufferedRandomAccessFile {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = ci.a(param2, -10396);
+          var3 = TextHotspotBounds.a(param2, -10396);
           if (var3 == null) {
             stackIn_2_0 = null;
             return (cf) (stackIn_2_0);

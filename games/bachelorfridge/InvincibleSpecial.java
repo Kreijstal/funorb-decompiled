@@ -27,7 +27,7 @@ final class InvincibleSpecial extends SpecialOrder {
     }
 
     final static int[] c(int param0) {
-        if (o.d((byte) 80)) {
+        if (ChangeAllCreaturesHealthEffect.d((byte) 80)) {
           return null;
         }
         if (!bf.field_h[CreatureType.field_n].c((byte) 95)) {

@@ -205,7 +205,7 @@ class kj extends UiComponent implements gk {
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltipText(boolean param0) {
         nj var2;
         UiComponent var3;
         String var4;
@@ -217,7 +217,7 @@ class kj extends UiComponent implements gk {
         }
         var3 = (UiComponent) (var2.c(0));
         while (var3 != null) {
-          var4 = var3.b(param0);
+          var4 = var3.getTooltipText(param0);
           if (var4 != null) {
             return var4;
           }

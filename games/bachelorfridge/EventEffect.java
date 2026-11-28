@@ -66,7 +66,7 @@ abstract class EventEffect extends IntrusiveNode {
             param0.writeByte(4, 0);
             return;
           }
-          if (this instanceof o) {
+          if (this instanceof ChangeAllCreaturesHealthEffect) {
             param0.writeByte(5, 0);
             return;
           }
@@ -74,7 +74,7 @@ abstract class EventEffect extends IntrusiveNode {
             param0.writeByte(6, 0);
             return;
           }
-          if (this instanceof ela) {
+          if (this instanceof DisableMoveSlotEffect) {
             param0.writeByte(7, 0);
             return;
           }
@@ -82,15 +82,15 @@ abstract class EventEffect extends IntrusiveNode {
             param0.writeByte(8, 0);
             return;
           }
-          if (this instanceof dh) {
+          if (this instanceof ArmPetAttackEffect) {
             param0.writeByte(9, 0);
             return;
           }
-          if (this instanceof fda) {
+          if (this instanceof RemoveDefeatedCreatureEffect) {
             param0.writeByte(10, 0);
             return;
           }
-          if (this instanceof ic) {
+          if (this instanceof ClearPendingPetAttackEffect) {
             param0.writeByte(11, 0);
             return;
           }
@@ -98,19 +98,19 @@ abstract class EventEffect extends IntrusiveNode {
             param0.writeByte(12, 0);
             return;
           }
-          if (this instanceof tfa) {
+          if (this instanceof StartFloodEffect) {
             param0.writeByte(13, 0);
             return;
           }
-          if (this instanceof kq) {
+          if (this instanceof StopFloodEffect) {
             param0.writeByte(14, 0);
             return;
           }
-          if (this instanceof bm) {
+          if (this instanceof SetTileTerrainEffect) {
             param0.writeByte(15, 0);
             return;
           }
-          if (!(this instanceof pea)) {
+          if (!(this instanceof ConsumeCreatureRemainsEffect)) {
             throw new RuntimeException("CreatureEffect type not found");
           }
           param0.writeByte(16, 0);

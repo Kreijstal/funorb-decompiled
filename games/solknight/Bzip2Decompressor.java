@@ -79,8 +79,8 @@ final class Bzip2Decompressor {
         var24 = null;
         var25 = null;
         param0.field_C = 1;
-        if (af.field_h == null) {
-          af.field_h = new int[param0.field_C * 100000];
+        if (DefaultTextWidgetRenderer.field_h == null) {
+          DefaultTextWidgetRenderer.field_h = new int[param0.field_C * 100000];
         }
         var26 = 1;
         while (true) {
@@ -251,14 +251,14 @@ final class Bzip2Decompressor {
                 param0.field_I[var4] = param0.field_I[var4] + param0.field_I[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(af.field_h[var4] & 255);
+                var1 = (byte)(DefaultTextWidgetRenderer.field_h[var4] & 255);
                 dupTemp$1 = param0.field_I[var1 & 255];
-                af.field_h[dupTemp$1] = af.field_h[dupTemp$1] | var4 << 8;
+                DefaultTextWidgetRenderer.field_h[dupTemp$1] = DefaultTextWidgetRenderer.field_h[dupTemp$1] | var4 << 8;
                 param0.field_I[var1 & 255] = param0.field_I[var1 & 255] + 1;
               }
-              param0.field_m = af.field_h[param0.field_g] >> 8;
+              param0.field_m = DefaultTextWidgetRenderer.field_h[param0.field_g] >> 8;
               param0.field_E = 0;
-              param0.field_m = af.field_h[param0.field_m];
+              param0.field_m = DefaultTextWidgetRenderer.field_h[param0.field_m];
               param0.field_t = (byte)(param0.field_m & 255);
               param0.field_m = param0.field_m >> 8;
               param0.field_E = param0.field_E + 1;
@@ -322,7 +322,7 @@ final class Bzip2Decompressor {
               }
               dupTemp$0 = param0.field_z[var1 & 255] & 255;
               param0.field_j[dupTemp$0] = param0.field_j[dupTemp$0] + 1;
-              af.field_h[var14] = param0.field_z[var1 & 255] & 255;
+              DefaultTextWidgetRenderer.field_h[var14] = param0.field_z[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
@@ -379,7 +379,7 @@ final class Bzip2Decompressor {
             var1 = param0.field_z[param0.field_k[param0.field_h[0]] & 255];
             param0.field_j[var1 & 255] = param0.field_j[var1 & 255] + var15;
             while (var15 > 0) {
-              af.field_h[var14] = var1 & 255;
+              DefaultTextWidgetRenderer.field_h[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -501,7 +501,7 @@ final class Bzip2Decompressor {
         var3 = param0.field_f;
         var4 = param0.field_E;
         var5 = param0.field_t;
-        var15 = af.field_h;
+        var15 = DefaultTextWidgetRenderer.field_h;
         var14 = var15;
         var6 = var14;
         var7 = param0.field_m;
@@ -603,7 +603,7 @@ final class Bzip2Decompressor {
         param0.field_f = var3;
         param0.field_E = var4;
         param0.field_t = var5;
-        af.field_h = var6;
+        DefaultTextWidgetRenderer.field_h = var6;
         param0.field_m = var7;
         param0.field_d = var8;
         param0.field_F = var9;

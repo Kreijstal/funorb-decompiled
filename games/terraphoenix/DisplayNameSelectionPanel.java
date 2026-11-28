@@ -31,7 +31,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_O == param0) {
-            ld.a(1);
+            TextLayout.a(1);
           } else {
             if (param0 == this.field_K) {
               this.submitDisplayName(50);
@@ -165,7 +165,7 @@ final class DisplayNameSelectionPanel extends WidgetContainer implements NameSug
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetActionListener) null);
         this.field_J = new ValidatedTextField("", (sc) null, 12);
-        fd var1 = new fd(ra.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ra.field_l, 0, 0, 0, 0, 16777215, -1, 3, 0, qk.field_e.field_s, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(wj.field_f, var1, (sc) null);
         this.field_K = new InteractiveWidget(BattleUnit.field_lb, (sc) null);
         this.field_O = new InteractiveWidget(lf.field_d, (sc) null);

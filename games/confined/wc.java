@@ -174,7 +174,7 @@ final class wc extends id {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -304,7 +304,7 @@ final class wc extends id {
           this.field_cc = new gk((TunnelEntity) (this), ResourceArchive.field_b[param3]);
           this.field_cc.field_w = this.field_C;
           this.field_cc.field_m = 192;
-          var8 = sc.field_h[param3];
+          var8 = TextLayout.field_h[param3];
           if (var8 != null) {
             this.field_Fb = new gk((TunnelEntity) (this), var8);
             this.field_Fb.field_w = this.field_C;
@@ -321,7 +321,7 @@ final class wc extends id {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -681,7 +681,7 @@ final class wc extends id {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -692,7 +692,7 @@ final class wc extends id {
           }
           super.onMovingEntityContact(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "wc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "wc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

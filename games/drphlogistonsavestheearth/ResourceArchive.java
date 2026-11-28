@@ -969,7 +969,7 @@ final class ResourceArchive {
               var3 = new PacketBuffer(13);
               FullscreenFocusCanvas.a(tb.field_a, IntrusiveNode.field_c, 26800, AccountNameAvailabilityValidator.field_q, var3);
               var3.writeByte(15, (byte) -92);
-              var3.writeInt(mi.field_j, (byte) 107);
+              var3.writeInt(TextLineMetrics.field_j, (byte) 107);
               ea.field_a.queueWrite(13, -30537, var3.payload, 0);
               InteractiveWidget.field_C = InteractiveWidget.field_C + 1;
               BoundedRandomAccessFile.field_a = la.correctedCurrentTimeMillis(false) + 30000L;

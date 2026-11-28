@@ -54,7 +54,7 @@ final class hl {
           dk.a(param9, 0, var16, 0, param9.length);
           bd.c(0);
           for (var17 = 0; 4 > var17; var17++) {
-            kp.a(param7, 72, param6, mf.field_z, param8);
+            TextLineMetrics.a(param7, 72, param6, mf.field_z, param8);
             UiWidget.a(param4, param10, -128, param6, param1, param0, param5, mf.field_z, hf.field_b, param2);
             if (1 != qd.field_d &&
               qd.field_d != 3) {
@@ -98,7 +98,7 @@ final class hl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

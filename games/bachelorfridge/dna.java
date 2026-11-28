@@ -103,7 +103,7 @@ final class dna extends UiComponent {
         int var2 = (FullscreenFocusCanvas.field_b - 640) / 2;
         int var3 = saa.field_b * saa.field_b;
         int var4 = var3 - param0 * param0;
-        ela.field_i.a(SoftwareRasterizer.field_c - 124 - 90, 31407, 199, -(199 * var4 / var3) + var2, 90);
+        DisableMoveSlotEffect.field_i.a(SoftwareRasterizer.field_c - 124 - 90, 31407, 199, -(199 * var4 / var3) + var2, 90);
         if (param1) {
           dna.f((byte) 74);
         }

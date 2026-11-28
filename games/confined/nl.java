@@ -27,7 +27,7 @@ final class nl {
             param1.length() != 0) {
             var2_int = param1.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_8_0 = vf.field_q;
+              stackIn_8_0 = DefaultTextWidgetRenderer.field_q;
               return stackIn_8_0;
             }
             var3 = param1.substring(param0, var2_int);
@@ -52,7 +52,7 @@ final class nl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -118,7 +118,7 @@ final class nl {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -130,7 +130,7 @@ final class nl {
           ud.a(SoftwareRasterizer.field_g / 2, (byte) -12, SoftwareRasterizer.field_l / param3);
           ue.a(param0.field_D + param0.field_y, param2.field_y + param2.field_D, param2.field_y, param0.field_y, 243);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "nl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "nl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

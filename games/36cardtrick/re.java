@@ -219,7 +219,7 @@ final class re {
                             if (var13 == 0) {
                               break scanLoop3;
                             }
-                            var14 = dg.field_J;
+                            var14 = RichTextWidget.field_J;
                           } else {
                             if (var5[var4].length <= var10) {
                               var8 = var8 + (qa.field_b.field_x + qa.field_b.field_s);

@@ -22,12 +22,12 @@ final class MixedSupport069 {
         RuntimeException runtimeExceptionLocal6 = null;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerLocal2 = MixedSupport001.integerArrayState0001[0];
+          integerLocal2 = DefaultTextWidgetRenderer.integerArrayState0001[0];
           if (integerArgument1 != 2) {
             integerArrayState0123 = (int[]) null;
           }
-          for (integerLocal1 = 1; MixedSupport001.integerArrayState0001.length > integerLocal1; integerLocal1++) {
-            integerLocal3 = MixedSupport001.integerArrayState0001[integerLocal1];
+          for (integerLocal1 = 1; DefaultTextWidgetRenderer.integerArrayState0001.length > integerLocal1; integerLocal1++) {
+            integerLocal3 = DefaultTextWidgetRenderer.integerArrayState0001[integerLocal1];
             MixedSupport008.performAction0076(PlayerNamePrompt.integerArrayState0053, integerLocal1 << 4, PlayerNamePrompt.integerArrayState0053, integerLocal2, integerLocal3);
             integerLocal2 = integerLocal2 + integerLocal3;
           }

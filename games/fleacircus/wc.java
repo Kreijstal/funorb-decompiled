@@ -119,7 +119,7 @@ final class wc extends IntrusiveNode {
               field_q = -30;
             }
             IsaacRandom.field_j = param13;
-            j.field_g = param1;
+            RichTextLayout.field_g = param1;
             bk.field_e = param3;
             DiskCacheWorker.field_f = param4;
             a.field_d = param6;

@@ -70,7 +70,7 @@ final class oj implements WidgetRenderer {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class oj implements WidgetRenderer {
                 cd.a(var30, -19729, 1);
                 var25 = var30.a((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
                 oj.a(param0, param1, param2, param3, true, var25, var24, param7, param8, param9);
-                pc.a(param6, 5265, var24, var25, param5, param9, param7, param1, param0);
+                DefaultTextWidgetRenderer.a(param6, 5265, var24, var25, param5, param9, param7, param1, param0);
               } else {
                 oj.a(param0, param1, param2, param3, true, param5, param6, param7, var24, param9);
                 oj.a(param0, param1, -param2 + 3, param3, param4, param5, var24, param7, param8, param9);
@@ -196,14 +196,14 @@ final class oj implements WidgetRenderer {
                 cd.a(var30, -19729, 1);
                 var25 = var30.a((var11 + var13) / 2, (var14 + var16) / 2, (var17 + var19) / 2);
                 oj.a(param0, param1, param2, param3, true, param5, var24, param7, var25, param9);
-                pc.a(var25, 5265, var24, param6, param8, param9, param7, param1, param0);
+                DefaultTextWidgetRenderer.a(var25, 5265, var24, param6, param8, param9, param7, param1, param0);
               }
             } else {
               cd.a(var30, -19729, 1);
               var25 = var30.a((var13 + var12) / 2, (var15 + var16) / 2, (var19 + var18) / 2);
               if (var23 == 0) {
                 oj.a(param0, param1, param2, param3, true, var24, param6, param7, var25, param9);
-                pc.a(var24, 5265, var25, param8, param5, param9, param7, param1, param0);
+                DefaultTextWidgetRenderer.a(var24, 5265, var25, param8, param5, param9, param7, param1, param0);
               } else {
                 cd.a(var30, -19729, 1);
                 var26_int = var30.a((var13 + var11) / 2, (var16 + var14) / 2, (var17 + var19) / 2);
@@ -225,7 +225,7 @@ final class oj implements WidgetRenderer {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_51_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(')').toString());
         }
     }
 
@@ -252,7 +252,7 @@ final class oj implements WidgetRenderer {
           this.field_c = param0;
           this.field_b = param1;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "oj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

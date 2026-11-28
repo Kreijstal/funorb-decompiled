@@ -141,7 +141,7 @@ final class hga extends am {
             var3 = -1 + var2_int;
             var4 = TextInputWidget.field_E[var2_int][1];
             var5 = TextInputWidget.field_E[var2_int][2];
-            var6 = bm.a(80, var2_int);
+            var6 = SetTileTerrainEffect.a(80, var2_int);
             var7 = vc.a(var2_int, 3, -16306);
             var8 = dha.a((byte) -38, var2_int);
             var9 = FridgeCreature.a(false, var2_int);

@@ -61,7 +61,7 @@ final class DirectByteStorage extends ByteStorage {
           for (var2_int = 0; var2_int < pf.field_o; var2_int++) {
             ff.field_a[var2_int + param1] = var2_int;
           }
-          ByteStorage.a(param1 + param1, param1, false, -93, l.field_G, ve.field_d, pf.field_o + param1);
+          ByteStorage.a(param1 + param1, param1, false, -93, l.field_G, TextLayout.field_d, pf.field_o + param1);
           if (param1 < pf.field_o) {
             pf.field_o = param1;
           }

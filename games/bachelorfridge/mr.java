@@ -76,7 +76,7 @@ final class mr extends TileEffect {
         if (this.field_g == 35) {
           MartyrAnimation.a(44, (byte) 20);
           this.field_e.a(this.field_c, false, this.field_d).field_j = 0;
-          this.field_i.a(false, this.field_e.field_h);
+          this.field_i.applyToBattle(false, this.field_e.field_h);
         }
         if (param0 >= 21) {
           return false;

@@ -289,7 +289,7 @@ final class ml {
           }
           var5 = -10 / ((34 - param2) / 47);
           var15 = pi.field_d;
-          var6 = re.field_m;
+          var6 = TextHotspotBounds.field_m;
           var7 = ag.field_f;
           var15.field_b.a(true, var6, 0, var7, 0);
           return;

@@ -306,7 +306,7 @@ abstract class fb {
           if (var6 == null) {
             DebouncedFieldValidator.field_a = 2;
           } else {
-            if (!rg.a((byte) 19, (CharSequence) ((Object) var6))) {
+            if (!RichTextWidget.a((byte) 19, (CharSequence) ((Object) var6))) {
               DebouncedFieldValidator.field_a = 2;
             } else {
               DebouncedFieldValidator.field_a = ResourceArchive.parseDecimalInt((CharSequence) ((Object) var6), (byte) 125);

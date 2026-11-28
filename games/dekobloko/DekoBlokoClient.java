@@ -200,7 +200,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           MixedSupport101.integerState0589 = Js5ArchiveManager.computeInteger1099((byte) -40);
           if (MixedSupport112.booleanState0166 &&
             null != UiComponentPart033.midiSynthesizerState0001) {
-            UiComponentPart033.midiSynthesizerState0001.performAction0686(MixedSupport001.integerState0011 * 50 / 128);
+            UiComponentPart033.midiSynthesizerState0001.performAction0686(DefaultTextWidgetRenderer.integerState0011 * 50 / 128);
             MixedSupport112.booleanState0166 = false;
           }
           if (MixedSupport020.fullscreenCanvasState0001 != null &&
@@ -233,7 +233,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           if (frameRemainderLocal52) {
             if (UiComponentPart029.computeBoolean1486(-1)) {
               if (!UiComponentPart001.computeBoolean0059((byte) -127)) {
-                if (!NetworkSupport010.computeBoolean1256(65)) {
+                if (!TextHotspotBounds.computeBoolean1256(65)) {
                   if (DisplayNameSelectionPanel.computeBoolean0321((byte) 123)) {
                     if (SceneWidgetPart002.integerState0241 != SceneWidgetPart002.integerState0249) {
                       this.updateScreensAndTransitions(30661, false);
@@ -262,7 +262,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                       MixedSupport118.performAction1548(false);
                     }
                     if (integerLocal25 == 2) {
-                      NetworkSupport010.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
+                      TextHotspotBounds.performAction1252((byte) -17, UiComponentPart029.computeApplet1485(25144));
                     }
                   }
                   this.updateScreensAndTransitions(30661, true);
@@ -344,7 +344,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                   if (HashNode.integerState0070 == 14) {
                     SocketFactory.performAction1792((byte) 66);
                     MixedSupport016.performAction0205(true);
-                    SecondaryNodeHashTable.performAction1119(UiComponentPart015.computeSceneWidget0706(8192), MixedSupport108.computeSceneWidget1421(-95), 0, 5, UiComponentPart020.roundUpPowerOfTwo(-10498, 2000), UiComponentPart025.computeSceneWidget1365((byte) 117), Bzip2State.byteArrayState0040, 150, UiComponentPart020.roundUpPowerOfTwo(-10498, 8), 1024);
+                    SecondaryNodeHashTable.performAction1119(UiComponentPart015.computeSceneWidget0706(8192), MixedSupport108.computeSceneWidget1421(-95), 0, 5, UiComponentPart020.roundUpPowerOfTwo(-10498, 2000), RichTextWidget.computeSceneWidget1365((byte) 117), Bzip2State.byteArrayState0040, 150, UiComponentPart020.roundUpPowerOfTwo(-10498, 8), 1024);
                     SecondaryNodeDequeIterator.performAction0362(21014, SceneWidgetPart011.computeSceneWidget1575((byte) 98), MixedSupport073.computeSceneWidget0919(-126));
                     UiComponentPart012.booleanState0059 = true;
                     IterableNodeCollection.booleanState0193 = true;
@@ -1445,7 +1445,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         MixedSupport115.performAction1488((byte) -126);
         MixedSupport100.clearStaticReferences((byte) 126);
         UiComponentPart014.discardDeclaredStaticReferences(-30);
-        MixedSupport001.clearStaticReferences(-1);
+        DefaultTextWidgetRenderer.clearStaticReferences(-1);
         MixedSupport104.clearStaticReferences();
         VorbisSample.clearStaticReferences();
         NetworkSupport009.clearStaticReferences(3805);
@@ -1510,7 +1510,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           EditableTextField.clearTextFieldGlobals(81);
           UiComponentPart004.discardDeclaredStaticReferences(104);
           NameSuggestionsPanel.clearStaticReferences(1);
-          UiComponentPart025.clearStaticReferences((byte) 117);
+          RichTextWidget.clearStaticReferences((byte) 117);
           UiComponentPart011.clearStaticReferences(-99);
           AccountFieldStatusIndicator.resetStaticState((byte) 47);
           UiComponentPart009.clearStaticReferences(false);
@@ -1583,7 +1583,7 @@ public final class DekoBlokoClient extends FunOrbClient {
           AgeValidator.clearStaticReferences(127);
           MatchingFieldValidator.performAction1427((byte) -112);
           MixedSupport057.clearStaticReferences(28180);
-          NetworkSupport010.clearStaticReferences(-59);
+          TextHotspotBounds.clearStaticReferences(-59);
           ValidationStatus.clearStaticReferences(20908);
           DebouncedFieldValidator.clearStaticReferences((byte) 127);
           EmailValidationError.clearStaticReferences(true);
@@ -1623,7 +1623,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             return;
           }
           if (!UiComponentPart029.computeBoolean1486(-1)) {
-            UiComponentPart025.performAction1359(100.0f, -81, MixedSupport010.stringState0048);
+            RichTextWidget.performAction1359(100.0f, -81, MixedSupport010.stringState0048);
             DisplayNameSelectionPanel.performAction0319(true, canvasLocal8);
             return;
           }
@@ -1747,11 +1747,11 @@ public final class DekoBlokoClient extends FunOrbClient {
           }
           if (DisplayNameSelectionPanel.computeBoolean0321((byte) 99)) {
             SoftwareRaster.fillRectangleAlpha(320 - GameDomainSupport006.computeInteger1825(3) / 2 - 34, -(ResourceSupport004.computeInteger1250(20) / 2) + 240 - 24, GameDomainSupport006.computeInteger1825(3) + 68, ResourceSupport004.computeInteger1250(126) + 48, 0, 200);
-            GameplayControls.performAction1749(ResourceSupport004.computeInteger1250(integerArgument1 - 356) + 60, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, GameDomainSupport006.computeInteger1825(3) + 80, 240 - ResourceSupport004.computeInteger1250(-5) / 2 - 30, 320 - GameDomainSupport006.computeInteger1825(3) / 2 - 40);
+            GameplayControls.performAction1749(ResourceSupport004.computeInteger1250(integerArgument1 - 356) + 60, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, GameDomainSupport006.computeInteger1825(3) + 80, 240 - ResourceSupport004.computeInteger1250(-5) / 2 - 30, 320 - GameDomainSupport006.computeInteger1825(3) / 2 - 40);
             IterableNodeCollection.performAction1660(32659);
           }
           if (!UiComponentPart001.computeBoolean0059((byte) 94)) {
-            if (NetworkSupport010.computeBoolean1256(67)) {
+            if (TextHotspotBounds.computeBoolean1256(67)) {
               stackIntegerLocal5 = 112;
               if (MixedSupport020.fullscreenCanvasState0001 != null) {
                 stackBooleanLocal6 = true;
@@ -1761,13 +1761,13 @@ public final class DekoBlokoClient extends FunOrbClient {
               UiComponentPart030.performAction1553(stackIntegerLocal5, stackBooleanLocal6);
               if (integerLocal16 != 0) {
                 SoftwareRaster.fillRectangleAlpha(-34 - MixedSupport136.computeInteger1705(480) / 2 + 320, -24 + (-(UiComponentPart008.computeInteger0369(110) / 2) + 240), 68 + MixedSupport136.computeInteger1705(480), 48 + UiComponentPart008.computeInteger0369(110), 0, 200);
-                GameplayControls.performAction1749(UiComponentPart008.computeInteger0369(113) + 60, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 80 + MixedSupport136.computeInteger1705(480), 210 - UiComponentPart008.computeInteger0369(108) / 2, 320 - (MixedSupport136.computeInteger1705(integerArgument1 ^ 160) / 2 + 40));
+                GameplayControls.performAction1749(UiComponentPart008.computeInteger0369(113) + 60, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 80 + MixedSupport136.computeInteger1705(480), 210 - UiComponentPart008.computeInteger0369(108) / 2, 320 - (MixedSupport136.computeInteger1705(integerArgument1 ^ 160) / 2 + 40));
                 MixedSupport020.performAction0299(true);
               }
             }
           } else {
             SoftwareRaster.fillRectangleAlpha(-34 - MixedSupport136.computeInteger1705(480) / 2 + 320, -24 + (-(UiComponentPart008.computeInteger0369(110) / 2) + 240), 68 + MixedSupport136.computeInteger1705(480), 48 + UiComponentPart008.computeInteger0369(110), 0, 200);
-            GameplayControls.performAction1749(UiComponentPart008.computeInteger0369(113) + 60, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 80 + MixedSupport136.computeInteger1705(480), 210 - UiComponentPart008.computeInteger0369(108) / 2, 320 - (MixedSupport136.computeInteger1705(integerArgument1 ^ 160) / 2 + 40));
+            GameplayControls.performAction1749(UiComponentPart008.computeInteger0369(113) + 60, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 80 + MixedSupport136.computeInteger1705(480), 210 - UiComponentPart008.computeInteger0369(108) / 2, 320 - (MixedSupport136.computeInteger1705(integerArgument1 ^ 160) / 2 + 40));
             MixedSupport020.performAction0299(true);
           }
           if (SceneWidgetPart002.integerState0249 != SceneWidgetPart002.integerState0241) {
@@ -2611,7 +2611,7 @@ public final class DekoBlokoClient extends FunOrbClient {
         try {
           if (null != ThemeTips.resourceArchiveState0009) {
             MixedSupport039.performAction0528((byte) -123);
-            UiComponentPart025.performAction1359(65.0f, integerArgument1 + 98, ReturnedShape.stringState0472);
+            RichTextWidget.performAction1359(65.0f, integerArgument1 + 98, ReturnedShape.stringState0472);
             this.renderFrame(320);
             UiComponentPart016.networkSupport011State0001 = new NetworkSupport011(ThemeTips.resourceArchiveState0009, MixedSupport005.resourceArchiveState0001);
             MixedSupport100.rawSoundState0016 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "fruit_step", integerArgument1 ^ 0);
@@ -2629,10 +2629,10 @@ public final class DekoBlokoClient extends FunOrbClient {
             RenderingSupport001.rawSoundState0002 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_simultaneous_bonus2", 0);
             MixedSupport090.rawSoundState0015 = UiComponentPart016.networkSupport011State0001.computeRawSound1257((byte) 101, "", "db_loose_drill");
             MixedSupport040.rawSoundState0008 = UiComponentPart016.networkSupport011State0001.computeRawSound1257((byte) 101, "", "db_bucket_water_capsule2");
-            NetworkSupport010.rawSoundState0017 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_quake", integerArgument1 ^ 0);
+            TextHotspotBounds.rawSoundState0017 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_quake", integerArgument1 ^ 0);
             IsaacRandom.rawSoundState0006 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_special_item_explode", integerArgument1 ^ 0);
             pcmResamplerLocal24 = new PcmResampler(22050, 11025);
-            NetworkSupport010.rawSoundState0017 = NetworkSupport010.rawSoundState0017.resample(pcmResamplerLocal24);
+            TextHotspotBounds.rawSoundState0017 = TextHotspotBounds.rawSoundState0017.resample(pcmResamplerLocal24);
             IsaacRandom.rawSoundState0006 = IsaacRandom.rawSoundState0006.resample(pcmResamplerLocal24);
             SceneWidget.rawSoundState0022 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_poison", integerArgument1 ^ 0);
             MixedSupport103.rawSoundState0018 = UiComponentPart016.networkSupport011State0001.computeRawSound1262("", "db_glass_lower", 0);
@@ -2653,7 +2653,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             return false;
           }
           if (MouseInput.resourceArchiveState0026 != null) {
-            UiComponentPart025.performAction1359(75.0f, -96, MixedSupport134.stringState0577);
+            RichTextWidget.performAction1359(75.0f, -96, MixedSupport134.stringState0577);
             this.renderFrame(320);
             LoginCredentials.musicTrackState0004 = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Deko Bloko Titlescreen");
             MixedSupport113.musicTrackArrayArrayState0001[0][0] = NetworkSupport008.computeMusicTrack1173(MouseInput.resourceArchiveState0026, 91, "", UiComponentPart016.networkSupport011State0001, "music/Ant_and_Deko_remix_NORMAL");
@@ -2705,8 +2705,8 @@ public final class DekoBlokoClient extends FunOrbClient {
               NodeDeque.performAction1737(true);
               return false;
             }
-            MixedSupport011.performAction0155(320, MixedSupport094.rgbSpriteArrayState0020, Framebuffer.renderingSupport010State0001, true, SceneWidgetNode.renderingSupport010State0002, 20, integerArgument1, 4, 1, 20, 20, 20, MixedSupport001.rgbSpriteArrayState0001, 14, 480, 240, CacheWorkQueue.rgbSpriteArrayState0016, 32, 16, 0, 5);
-            FrameTimer.performAction0709(MixedSupport094.rgbSpriteArrayState0020, SceneWidgetNode.renderingSupport010State0002, MixedSupport001.rgbSpriteArrayState0001, 320, 20, 0, 32, 20, 240, 4, 5, 20, Framebuffer.renderingSupport010State0001, CacheWorkQueue.rgbSpriteArrayState0016, 1, 14, 10406, 0, 16, 20);
+            MixedSupport011.performAction0155(320, MixedSupport094.rgbSpriteArrayState0020, Framebuffer.renderingSupport010State0001, true, SceneWidgetNode.renderingSupport010State0002, 20, integerArgument1, 4, 1, 20, 20, 20, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 14, 480, 240, CacheWorkQueue.rgbSpriteArrayState0016, 32, 16, 0, 5);
+            FrameTimer.performAction0709(MixedSupport094.rgbSpriteArrayState0020, SceneWidgetNode.renderingSupport010State0002, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 320, 20, 0, 32, 20, 240, 4, 5, 20, Framebuffer.renderingSupport010State0001, CacheWorkQueue.rgbSpriteArrayState0016, 1, 14, 10406, 0, 16, 20);
             ComponentContainer.renderingSupport007State0006 = MixedSupport033.computeRenderingSupport0070497(false, false, 0, false, false, 32357, false, false);
             FunOrbClient.performAction0104(50, -27096);
             MixedSupport076.performAction0945((byte) 86, 50);
@@ -2715,7 +2715,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             NodeDeque.performAction1737(true);
             return true;
           }
-          UiComponentPart025.performAction1359(90.0f, 96, MixedSupport136.stringState0582);
+          RichTextWidget.performAction1359(90.0f, 96, MixedSupport136.stringState0582);
           this.renderFrame(320);
           UiComponentPart029.renderingSupport009State0005 = MixedSupport016.computeRenderingSupport0090204("", GameSession.resourceArchiveState0019, MixedSupport005.resourceArchiveState0002, (byte) 108, "arial13");
           indexedSpriteArrayLocal25 = UiComponentPart030.computeIndexedSpriteArray1554("", MixedSupport005.resourceArchiveState0002, false, "arialbold14");
@@ -2767,7 +2767,7 @@ public final class DekoBlokoClient extends FunOrbClient {
             integerLocal29 = stackIntegerLocal12;
             do {
               if (integerLocal29 >= byteArrayLocal28.length) {
-                MixedSupport001.renderingSupport009State0001 = RenderingSupport004.computeRenderingSupport0090580(indexedSpriteArrayLocal27, integerArgument1 ^ 103, byteArrayLocal28);
+                DefaultTextWidgetRenderer.renderingSupport009State0001 = RenderingSupport004.computeRenderingSupport0090580(indexedSpriteArrayLocal27, integerArgument1 ^ 103, byteArrayLocal28);
                 Framebuffer.renderingSupport010State0001 = RenderingSupport003.computeRenderingSupport0100569((byte) 100, 16694016, 2, indexedSpriteArrayLocal27, byteArrayLocal28, 1);
                 Framebuffer.renderingSupport010State0001.integerArrayArrayState0018[1] = new int[]{0, 16777215, 1};
                 break;
@@ -2823,7 +2823,7 @@ public final class DekoBlokoClient extends FunOrbClient {
               do {
                 if (byteArrayLocal28.length <= integerLocal29) {
                   GameApplet.renderingSupport009State0002 = RenderingSupport004.computeRenderingSupport0090580(indexedSpriteArrayLocal27, 121, byteArrayLocal28);
-                  MixedSupport001.rgbSpriteArrayState0001 = ProxyAuthenticationRequiredException.computeRgbSpriteArray0334("ui_frame_vbrick", "ui_frame_hbrick", EmailFormatValidator.resourceArchiveState0008, true, "ui_frame_corner");
+                  DefaultTextWidgetRenderer.rgbSpriteArrayState0001 = ProxyAuthenticationRequiredException.computeRgbSpriteArray0334("ui_frame_vbrick", "ui_frame_hbrick", EmailFormatValidator.resourceArchiveState0008, true, "ui_frame_corner");
                   MixedSupport094.rgbSpriteArrayState0020 = InteractiveComponent.computeRgbSpriteArray0463("ui_button_up", "", integerArgument1 ^ -95, EmailFormatValidator.resourceArchiveState0008);
                   CacheWorkQueue.rgbSpriteArrayState0016 = InteractiveComponent.computeRgbSpriteArray0463("ui_button_highlight", "", -114, EmailFormatValidator.resourceArchiveState0008);
                   UiComponent.rgbSpriteArrayState0005 = MixedSupport011.computeRgbSpriteArray0154(112, EmailFormatValidator.resourceArchiveState0008, "", "chat_toggle_button");
@@ -3105,7 +3105,7 @@ public final class DekoBlokoClient extends FunOrbClient {
                   GameDomainSupport001.rgbSpriteState0006 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "machine_pipe", "", 8192);
                   MixedSupport124.rgbSpriteState0059 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "machine_portal", "", integerArgument1 + 8192);
                   MixedSupport009.integerArrayState0015 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "blobmatch_scorecols", "", 8192).integerArrayState0024;
-                  MixedSupport001.integerArrayState0002 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "eliminatetile_scorecols", "", integerArgument1 ^ 8192).integerArrayState0024;
+                  DefaultTextWidgetRenderer.integerArrayState0002 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "eliminatetile_scorecols", "", integerArgument1 ^ 8192).integerArrayState0024;
                   LoginCredentials.integerArrayState0115 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "simultaneous_scorecols", "", 8192).integerArrayState0024;
                   TextLineMetrics.integerArrayState0167 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "chain_scorecols", "", 8192).integerArrayState0024;
                   NetworkSupport008.integerArrayState0176 = UiComponentPart015.computeRgbSprite0704(EmailFormatValidator.resourceArchiveState0008, "bomb_scorecols", "", integerArgument1 ^ 8192).integerArrayState0024;

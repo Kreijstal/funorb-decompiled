@@ -9,7 +9,7 @@ class qm extends IntrusiveNode {
     wo field_i;
     static int field_n;
     static int[] field_q;
-    tb field_p;
+    TextLayout field_p;
     int field_j;
     String field_o;
     int field_f;
@@ -39,7 +39,7 @@ class qm extends IntrusiveNode {
         }
         var5 = SpriteGeometry.a((byte) 6);
         if (var5 != null) {
-          pi.field_j.a(var5, 3370, DiskCacheWorker.field_b, rf.field_G);
+          pi.field_j.a(var5, 3370, DiskCacheWorker.field_b, RichTextWidget.field_G);
         }
         var6 = 8 % ((param0 - 66) / 48);
     }
@@ -78,7 +78,7 @@ class qm extends IntrusiveNode {
         }
     }
 
-    String a(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 >= -23) {
           this.field_f = 96;
           if (this.field_m) {
@@ -300,7 +300,7 @@ class qm extends IntrusiveNode {
             return this.a(true, this);
           }
           if (param1) {
-            this.a((byte) -42);
+            this.getTooltipText((byte) -42);
             return false;
           }
           return false;
@@ -312,7 +312,7 @@ class qm extends IntrusiveNode {
         if (!param1) {
           return false;
         }
-        this.a((byte) -42);
+        this.getTooltipText((byte) -42);
         return false;
     }
 
@@ -480,7 +480,7 @@ class qm extends IntrusiveNode {
         if (param1) {
           return true;
         }
-        ia.a((byte) -47, this.a((byte) -54));
+        ia.a((byte) -47, this.getTooltipText((byte) -54));
         return param2;
     }
 
@@ -651,7 +651,7 @@ class qm extends IntrusiveNode {
 
     qm(String param0, wo param1, bi param2) {
         RuntimeException runtimeException = null;
-        fi var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -666,10 +666,10 @@ class qm extends IntrusiveNode {
           this.field_l = param2;
           this.field_o = param0;
           this.field_i = param1;
-          if (this.field_i instanceof fi) {
-            var4 = (fi) ((Object) this.field_i);
-            this.field_g = var4.b(this, -12817);
-            this.field_f = var4.c(this, -1);
+          if (this.field_i instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_i);
+            this.field_g = var4.getPreferredWidth(this, -12817);
+            this.field_f = var4.getPreferredHeight(this, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -248,8 +248,8 @@ final class oa extends jk {
               6 == var2_refLifetime2.field_w ||
               var2_refLifetime2.field_w == 5 ||
               var2_refLifetime2.field_w == 0) &&
-              pa.a(var2_refLifetime2.field_I, (int)(var2_refLifetime2.field_B + (float)var2_refLifetime2.field_G), (int)var2_refLifetime2.field_q + var2_refLifetime2.field_y, sb.field_m, 80, 0)) {
-              stackIn_69_0 = (!jj.a(-32680, var2_refLifetime2, -80 + (var2_refLifetime2.field_G + (int)var2_refLifetime2.field_B), var2_refLifetime2.field_y + (int)var2_refLifetime2.field_q)) ? 0 : 1;
+              pa.a(var2_refLifetime2.field_I, (int)(var2_refLifetime2.field_B + (float)var2_refLifetime2.field_G), (int)var2_refLifetime2.field_q + var2_refLifetime2.field_y, RichTextLayout.field_m, 80, 0)) {
+              stackIn_69_0 = (!RichTextWidget.a(-32680, var2_refLifetime2, -80 + (var2_refLifetime2.field_G + (int)var2_refLifetime2.field_B), var2_refLifetime2.field_y + (int)var2_refLifetime2.field_q)) ? 0 : 1;
               var3Lifetime1 = stackIn_69_0;
               var2_refLifetime2.field_x = var2_refLifetime2.field_x | var3Lifetime1 != 0;
               var2_refLifetime2.c((byte) -114);

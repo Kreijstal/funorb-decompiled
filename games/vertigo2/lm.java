@@ -144,7 +144,7 @@ final class lm extends TextureOperator {
         if (hm.field_F > 200) {
           var5 = (250 - hm.field_F << 8) / 50;
         }
-        lq.a(n.field_a, (byte) -94);
+        TextLineMetrics.a(n.field_a, (byte) -94);
         oo.c();
         SoftwareRasterizer.clearRaster();
         bq.h(-125);

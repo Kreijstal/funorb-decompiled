@@ -106,26 +106,26 @@ final class mh {
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 3; var2_int++) {
-            ol.field_d[var2_int] = 0;
+            TextLineMetrics.field_d[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; q.field_b > var2_intLifetime1; var2_intLifetime1++) {
             if (~eg.field_a[var2_intLifetime1].field_i == ~param1.field_i) {
               dupTemp$3 = eg.field_a[var2_intLifetime1].a(true);
-              ol.field_d[dupTemp$3] = ol.field_d[dupTemp$3] + 1;
+              TextLineMetrics.field_d[dupTemp$3] = TextLineMetrics.field_d[dupTemp$3] + 1;
             }
           }
           if (param0 != -27968) {
             field_b = (int[]) null;
           }
           dupTemp$0 = param1.a(true);
-          ol.field_d[dupTemp$0] = ol.field_d[dupTemp$0] + 1;
+          TextLineMetrics.field_d[dupTemp$0] = TextLineMetrics.field_d[dupTemp$0] + 1;
           var2_intLifetime2 = 0;
           for (var3 = 0; q.field_b > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
             if (eg.field_a[var3].field_i == param1.field_i) {
               var4 = eg.field_a[var3].a(true);
-              if (ol.field_d[var4] > kh.field_d) {
-                ol.field_d[var4] = ol.field_d[var4] - 1;
+              if (TextLineMetrics.field_d[var4] > kh.field_d) {
+                TextLineMetrics.field_d[var4] = TextLineMetrics.field_d[var4] - 1;
                 decompiledFrameRemainder0 = false;
               }
             }

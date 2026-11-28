@@ -106,7 +106,7 @@ final class LoginPanel extends ma implements TextFieldListener, WidgetActivation
               this.field_L = new InteractiveWidget(fd.field_o, (rg) (this));
             }
           } else {
-            this.field_M = new InteractiveWidget(hl.field_f, (rg) null);
+            this.field_M = new InteractiveWidget(DefaultTextWidgetRenderer.field_f, (rg) null);
             this.field_O = new InteractiveWidget(HuffmanCodec.field_b, (rg) null);
             this.field_N.field_H = false;
           }
@@ -424,7 +424,7 @@ final class LoginPanel extends ma implements TextFieldListener, WidgetActivation
             }
             var2 = 1;
           }
-          AccountRegistrationPanel.field_R.a(fe.a(re.field_m, 1, ag.field_f), 99, fe.a(BufferedSocket.field_k, 1, rf.field_b));
+          AccountRegistrationPanel.field_R.a(fe.a(TextHotspotBounds.field_m, 1, ag.field_f), 99, fe.a(BufferedSocket.field_k, 1, rf.field_b));
           if (AccountRegistrationPanel.field_R.d((byte) 124)) {
             var1_int = 1;
           }

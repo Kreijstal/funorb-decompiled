@@ -55,7 +55,7 @@ final class si extends ic {
           }
           var1_int = ba.field_b[1].fullWidth + ba.field_b[0].fullWidth + ba.field_b[2].fullWidth;
           var2 = 3;
-          var3 = lg.field_d[var2][8];
+          var3 = TextLayout.field_d[var2][8];
           var4 = AccountServiceResult.field_j[0];
           var5 = AccountServiceResult.field_j[1];
           var6 = var4 - var1_int >> 1;
@@ -179,7 +179,7 @@ final class si extends ic {
           return AccountCreationResultPanel.field_zb;
         }
         int var1 = -6 % ((78 - param0) / 36);
-        return lg.field_b;
+        return TextLayout.field_b;
     }
 
     final static vh a(String param0, int param1) {

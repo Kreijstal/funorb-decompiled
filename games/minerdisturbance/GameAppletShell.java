@@ -34,7 +34,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             this.field_i = true;
             System.out.println("error_game_" + param1);
             try {
-              JavaScriptBridge.callWithoutArguments((byte) 18, "loggedout", bm.c(-86));
+              JavaScriptBridge.callWithoutArguments((byte) 18, "loggedout", RichTextLayout.c(-86));
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = decompiledCaughtException;
@@ -73,7 +73,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           if (PcmOutputWorker.field_h == this &&
-            !tn.field_J) {
+            !RichTextWidget.field_J) {
             IsaacRandom.field_k = sf.correctedCurrentTimeMillis((byte) 124);
             gf.sleepMillis(5000L, -10309);
             hd.field_g = null;
@@ -164,13 +164,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException var2_ref = null;
         try {
           if (PcmOutputWorker.field_h == this &&
-            !tn.field_J) {
+            !RichTextWidget.field_J) {
             bh.field_cb = true;
             if (dh.field_e &&
               -pk.field_e + sf.correctedCurrentTimeMillis((byte) 113) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
-                if (var2.width < nf.field_h) {
+                if (var2.width < TextLayout.field_h) {
                   return;
                 }
                 if (BoundedRandomAccessFile.field_h > var2.height) {
@@ -207,7 +207,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void start() {
         if (PcmOutputWorker.field_h != this ||
-          tn.field_J) {
+          RichTextWidget.field_J) {
           return;
         }
         try {
@@ -418,10 +418,10 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (tn.field_J) {
+            if (RichTextWidget.field_J) {
               return;
             }
-            tn.field_J = param0;
+            RichTextWidget.field_J = param0;
           }
           if (of.field_b != null) {
             of.field_b.destroy();
@@ -694,7 +694,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final void stop() {
         if (this != PcmOutputWorker.field_h ||
-          tn.field_J) {
+          RichTextWidget.field_J) {
           return;
         }
         try {
@@ -819,14 +819,14 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               ml.field_a = param5;
               BoundedRandomAccessFile.field_h = param5;
               nk.field_x = param0;
-              nf.field_h = param0;
+              TextLayout.field_h = param0;
               tg.field_f = 0;
               AccountNameAvailabilityValidator.field_j = 0;
               if (param3 != 3) {
                 field_m = (Sprite) null;
               }
               PcmOutputWorker.field_h = this;
-              aj.field_d = bm.c(-108);
+              aj.field_d = RichTextLayout.c(-108);
               dupTemp$0 = new PlatformTaskDispatcher(param6, param4, param1, true);
               qa.field_a = dupTemp$0;
               hd.field_g = dupTemp$0;

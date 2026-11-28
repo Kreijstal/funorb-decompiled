@@ -34,7 +34,7 @@ abstract class FrameTimer {
             stackIn_5_0 = (BinaryBitmapFont) null;
             return stackIn_5_0;
           }
-          var2 = new BinaryBitmapFont(param1, DualLinkNode.field_p, ij.field_r, InteractiveWidget.field_I, sd.field_f, rj.field_f);
+          var2 = new BinaryBitmapFont(param1, DualLinkNode.field_p, ij.field_r, InteractiveWidget.field_I, TextLineMetrics.field_f, rj.field_f);
           StageDirector.clearIndexedSpriteDecodeBuffers(false);
           stackIn_7_0 = var2;
           return stackIn_7_0;
@@ -48,7 +48,7 @@ abstract class FrameTimer {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ abstract class FrameTimer {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+            throw TextLineMetrics.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

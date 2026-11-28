@@ -94,7 +94,7 @@ final class nj {
           if (0 > var1) {
             var1 = 0;
           }
-          if (lb.field_q) {
+          if (TextHotspotBounds.field_q) {
             if (el.field_c) {
               if (var1 >= 255) {
                 var1 = 255;
@@ -125,7 +125,7 @@ final class nj {
               SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
               IsaacRandom.field_c.drawAdditive(0, 0, 50);
               ResourceArchive.field_e.setAsRasterTarget((byte) -45);
-              lb.field_q = true;
+              TextHotspotBounds.field_q = true;
             }
             if (el.field_c) {
               if (var1 >= 255) {
@@ -158,7 +158,7 @@ final class nj {
         if (0 > var1Lifetime1) {
           var1Lifetime1 = 0;
         }
-        if (lb.field_q) {
+        if (TextHotspotBounds.field_q) {
           if (el.field_c) {
             if (var1Lifetime1 >= 255) {
               var1Lifetime1 = 255;
@@ -213,7 +213,7 @@ final class nj {
             SoftwareRasterizer.blurRectangle(4, 4, 0, 0, 640, 480);
             IsaacRandom.field_c.drawAdditive(0, 0, 50);
             ResourceArchive.field_e.setAsRasterTarget((byte) -45);
-            lb.field_q = true;
+            TextHotspotBounds.field_q = true;
             if (el.field_c) {
               if (var1Lifetime1 >= 255) {
                 var1Lifetime1 = 255;

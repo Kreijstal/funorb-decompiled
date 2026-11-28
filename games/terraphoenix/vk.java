@@ -26,7 +26,7 @@ final class vk {
             vk.a(87);
           }
           cl.field_J.i((byte) 126);
-          while (fd.d(1)) {
+          while (DefaultTextWidgetRenderer.d(1)) {
             cl.field_J.a(lf.field_c, SectorCacheStore.field_g, (byte) -116);
           }
           return;

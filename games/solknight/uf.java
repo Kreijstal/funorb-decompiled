@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uf extends af {
+class uf extends DefaultTextWidgetRenderer {
     static int field_q;
     static byte[][] field_s;
     static String field_r;
@@ -103,14 +103,14 @@ class uf extends af {
           if (null == NameSuggestionsPanel.field_I) {
             return;
           }
-          var5 = kj.field_P;
+          var5 = RichTextWidget.field_P;
           synchronized (var5) {
             NameSuggestionsPanel.field_I.b(param2, -1, -129);
             if (param3 == dj.field_j) {
               return;
             }
             NameSuggestionsPanel.field_I.stopPlayback((byte) 97);
-            kj.field_P.flushAndMarkDrainCheck();
+            RichTextWidget.field_P.flushAndMarkDrainCheck();
             dj.field_j = param3;
             if (null != dj.field_j) {
               NameSuggestionsPanel.field_I.a(param0, dj.field_j, true);

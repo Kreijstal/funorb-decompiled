@@ -25,7 +25,7 @@ final class dk {
         int var4;
         aa[] var5;
         var4 = TrackController.field_F ? 1 : 0;
-        var5 = fi.e(0);
+        var5 = TextHotspotBounds.e(0);
         var2 = var5;
         var3 = 0;
         if (param1 != 25) {

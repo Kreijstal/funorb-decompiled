@@ -108,12 +108,12 @@ final class kc {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
     final void a(boolean param0, BitmapFont param1) {
-        vf var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         qh var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -136,7 +136,7 @@ final class kc {
         qh var14Lifetime1;
         qh var14Lifetime2;
         try {
-          var17 = new vf(param1, 2, 2, 2236962, 1, 1, 1, param1.field_C + param1.field_D + 2);
+          var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_C + param1.field_D + 2);
           this.field_m = (fe) ((Object) var17);
           var17.field_i = 16777215;
           var4 = new qh();
@@ -204,7 +204,7 @@ final class kc {
           var19 = new qh(var4, true);
           var19.a(-69, var13);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kc.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -218,7 +218,7 @@ final class kc {
             kc.a(-114, -12, (ji) null, 16);
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kc.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -234,14 +234,14 @@ final class kc {
         field_r = null;
     }
 
-    final static vf a(byte param0) {
+    final static DefaultTextWidgetRenderer a(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
         if (qh.field_y != null) {
           var1 = 9 / ((11 - param0) / 59);
           return qh.field_y;
         }
-        qh.field_y = new vf(fa.field_Q, 20, 0, 0, 0, 11579568, -1, 0, 0, fa.field_Q.field_C, -1, 2147483647, true);
+        qh.field_y = new DefaultTextWidgetRenderer(fa.field_Q, 20, 0, 0, 0, 11579568, -1, 0, 0, fa.field_Q.field_C, -1, 2147483647, true);
         var1Lifetime1 = 9 / ((11 - param0) / 59);
         return qh.field_y;
     }
@@ -324,7 +324,7 @@ final class kc {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -354,7 +354,7 @@ final class kc {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -394,7 +394,7 @@ final class kc {
           SoftwareRasterizer.fillRectangle(var7 + 1, 1 + var8, 4 + var5_int, 4 + var6, this.field_p);
           this.field_i.drawString(param1, 3 + var7, var8 + (3 + this.field_i.field_y), this.field_a, -1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "kc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "kc.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -499,11 +499,11 @@ final class kc {
               var22 = var5 + 4;
             }
             var21 = var21 - var7;
-            sc.field_d[um.field_a] = var21;
+            TextLayout.field_d[um.field_a] = var21;
             var22 = var22 - (var5 - var6);
             uh.field_g[um.field_a] = var22 << 4;
           } else {
-            sc.field_d[um.field_a] = 320;
+            TextLayout.field_d[um.field_a] = 320;
             uh.field_g[um.field_a] = 3008;
           }
           gb.field_a[um.field_a] = 0;
@@ -525,7 +525,7 @@ final class kc {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 

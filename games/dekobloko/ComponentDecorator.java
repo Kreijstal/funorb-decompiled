@@ -91,7 +91,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         }
     }
 
-    String computeString0223(byte byteArgument1) {
+    String getTooltipText(byte byteArgument1) {
         String stringLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         String stringLocal3 = null;
@@ -99,9 +99,9 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
         String stackStringLocal5 = null;
         RuntimeException caughtExceptionLocal6 = null;
         try {
-          stringLocal1 = super.computeString0223(byteArgument1);
+          stringLocal1 = super.getTooltipText(byteArgument1);
           if (this.uiComponentState0002 != null) {
-            stringLocal3 = this.uiComponentState0002.computeString0223((byte) 113);
+            stringLocal3 = this.uiComponentState0002.getTooltipText((byte) 113);
             if (stringLocal3 != null) {
               stackStringLocal4 = stringLocal3;
               return stackStringLocal4;
@@ -371,8 +371,8 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                   if (sceneWidgetPart014Local21.stringState0605 != null &&
                     !sceneWidgetPart014Local21.stringState0605.equals("")) {
                     sceneWidgetPart014Local21.sceneWidgetState0148.integerState0889 = integerLocal25;
-                    sceneWidgetPart014Local21.sceneWidgetState0148.rgbSpriteState0070 = MixedSupport001.rgbSpriteState0001;
-                    sceneWidgetPart014Local21.sceneWidgetState0148.performAction1764(3 + MixedSupport001.rgbSpriteState0001.integerState0254, 0, integerLocal23, ComponentContainer.integerState0377, 0);
+                    sceneWidgetPart014Local21.sceneWidgetState0148.rgbSpriteState0070 = DefaultTextWidgetRenderer.rgbSpriteState0001;
+                    sceneWidgetPart014Local21.sceneWidgetState0148.performAction1764(3 + DefaultTextWidgetRenderer.rgbSpriteState0001.integerState0254, 0, integerLocal23, ComponentContainer.integerState0377, 0);
                     integerLocal26 = 1;
                   }
                   sceneWidgetPart014Local21.sceneWidgetState0149.integerState0910 = integerLocal24;
@@ -386,7 +386,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
                   integerLocal27 = 0;
                   integerLocal28 = -2 + (sceneWidgetPart014Local21.integerState0896 - 80);
                   if (integerLocal26 != 0) {
-                    integerLocal27 = MixedSupport001.rgbSpriteState0001.integerState0254 + 3;
+                    integerLocal27 = DefaultTextWidgetRenderer.rgbSpriteState0001.integerState0254 + 3;
                     integerLocal28 = integerLocal28 - integerLocal27;
                   }
                   stackSceneWidgetLocal7 = sceneWidgetPart014Local21.sceneWidgetState0147;
@@ -497,7 +497,7 @@ abstract class ComponentDecorator extends UiComponent implements CallbackContrac
             ComponentDecorator.computeSceneWidgetPart0141013(-121, true, (byte) -35);
           }
           if (SceneWidgetPart002.computeBoolean0558(integerArgument2, resourceArchiveArgument1, integerArgument3, 78)) {
-            stackIndexedSpriteLocal3 = MixedSupport001.computeIndexedSprite0019(0);
+            stackIndexedSpriteLocal3 = DefaultTextWidgetRenderer.computeIndexedSprite0019(0);
             return stackIndexedSpriteLocal3;
           }
           stackObjectLocal2 = null;

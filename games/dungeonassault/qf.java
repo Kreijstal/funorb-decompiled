@@ -27,11 +27,11 @@ final class qf extends en {
           var6 = null;
           if (param3.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param3);
-            var4_long = ci.a(var7, 2);
+            var4_long = TextHotspotBounds.a(var7, 2);
           } else {
             var6 = param3;
           }
-          stackIn_6_0 = l.a(param2, false, var4_long, param1, (String) (var6));
+          stackIn_6_0 = TextLayout.a(param2, false, var4_long, param1, (String) (var6));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

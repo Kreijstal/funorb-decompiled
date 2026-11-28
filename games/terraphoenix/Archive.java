@@ -484,7 +484,7 @@ final class Archive {
           0 > param1 ||
           this.field_f.field_k.length <= param2 ||
           this.field_f.field_k[param2] <= param1) {
-          if (rd.field_o) {
+          if (RichTextLayout.field_o) {
             throw new IllegalArgumentException(param2 + " " + param1);
           }
           return false;
@@ -520,7 +520,7 @@ final class Archive {
         if (0 > param0 ||
           this.field_f.field_k.length <= param0 ||
           this.field_f.field_k[param0] == 0) {
-          if (rd.field_o) {
+          if (RichTextLayout.field_o) {
             throw new IllegalArgumentException(Integer.toString(param0));
           }
           return false;

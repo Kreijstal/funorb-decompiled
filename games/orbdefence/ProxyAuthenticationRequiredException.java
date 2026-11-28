@@ -18,11 +18,11 @@ final class ProxyAuthenticationRequiredException extends IOException {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          dm.field_b = param1;
+          TextLayout.field_b = param1;
           if (param0 != 90) {
             return;
           }
-          if (dm.field_b != null &&
+          if (TextLayout.field_b != null &&
             param1.length < 3) {
             throw new IllegalArgumentException("");
           }

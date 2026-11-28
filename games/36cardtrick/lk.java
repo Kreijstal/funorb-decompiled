@@ -19,7 +19,7 @@ class lk extends IntrusiveNode {
     static String field_t;
     ci field_v;
     static String[] field_u;
-    mj field_s;
+    TextLayout field_s;
     pl field_k;
     int field_o;
 
@@ -62,7 +62,7 @@ class lk extends IntrusiveNode {
           }
         }
         sa.field_c = DebouncedFieldValidator.field_c;
-        hi.a(this.b((byte) -79), (byte) -111);
+        hi.a(this.getTooltipText((byte) -79), (byte) -111);
         if (param0 == -116) {
           return param3;
         }
@@ -212,7 +212,7 @@ class lk extends IntrusiveNode {
             }
           }
           if (param3 != 3) {
-            this.b((byte) -13);
+            this.getTooltipText((byte) -13);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -444,7 +444,7 @@ class lk extends IntrusiveNode {
         }
     }
 
-    String b(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 != -79) {
           this.a((Hashtable) null, true, 102, (StringBuilder) null);
         }
@@ -565,7 +565,7 @@ class lk extends IntrusiveNode {
 
     lk(String param0, ci param1, pl param2) {
         RuntimeException runtimeException = null;
-        ne var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -580,10 +580,10 @@ class lk extends IntrusiveNode {
           this.field_r = param0;
           this.field_k = param2;
           this.field_v = param1;
-          if (this.field_v instanceof ne) {
-            var4 = (ne) ((Object) this.field_v);
-            this.field_h = var4.a(this, (byte) 59);
-            this.field_q = var4.a(-2, this);
+          if (this.field_v instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_v);
+            this.field_h = var4.getPreferredWidth(this, (byte) 59);
+            this.field_q = var4.getPreferredHeight(-2, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

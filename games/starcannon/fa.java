@@ -32,7 +32,7 @@ final class fa extends UiWidget {
         }
         nf.field_b[DelayedPcmStream.field_p] = param4;
         MouseWheelSource.field_f[DelayedPcmStream.field_p] = param0;
-        ab.field_G[DelayedPcmStream.field_p] = param3;
+        RichTextWidget.field_G[DelayedPcmStream.field_p] = param3;
         int var6 = 27 % ((-39 - param5) / 50);
         int var7 = param3 + (param4 + param0);
         int var8 = var7 != 0 ? param4 * 1000 / var7 : 0;

@@ -140,7 +140,7 @@ final class ac {
                               if (om.field_b) {
                                 bh.field_g[18] = vg.a(new String[]{il.field_b[18]}, 82, TextInputField.field_Y);
                                 vg.field_e = new v[1];
-                                pm.field_h = true;
+                                TextLineMetrics.field_h = true;
                                 vg.field_e[0] = new v(ch.field_k, 24 * var17.field_j.field_e, var17.field_j.field_g + 3);
                                 vg.field_e[0].field_a = 1;
                               }

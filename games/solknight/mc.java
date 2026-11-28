@@ -5,14 +5,14 @@ final class mc {
     private int[] field_a;
 
     final static String a(int param0) {
-        if (kj.field_R < 2) {
-          return jf.field_b;
+        if (RichTextWidget.field_R < 2) {
+          return TextLayout.field_b;
         }
         if (param0 > -98) {
           return (String) null;
         }
-        if (af.field_c != null) {
-          if (!af.field_c.ensureIndexLoaded((byte) -121)) {
+        if (DefaultTextWidgetRenderer.field_c != null) {
+          if (!DefaultTextWidgetRenderer.field_c.ensureIndexLoaded((byte) -121)) {
             return wa.field_a;
           }
           return uf.field_r;
@@ -33,7 +33,7 @@ final class mc {
           return bg.field_t;
         }
         if (!AccountCreationResultPanel.field_ub.tryLoadAllGroups(true)) {
-          return li.field_j + " - " + AccountCreationResultPanel.field_ub.getArchiveLoadPercent((byte) -66) + "%";
+          return TextHotspotBounds.field_j + " - " + AccountCreationResultPanel.field_ub.getArchiveLoadPercent((byte) -66) + "%";
         }
         return qf.field_g;
     }

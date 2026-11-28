@@ -97,8 +97,8 @@ final class BufferedRandomAccessFile {
         if (null == KeyboardInput.field_c) {
           return -1;
         }
-        if (param0 >= nh.field_f &&
-          KeyboardInput.field_c.field_u + nh.field_f > param0 &&
+        if (param0 >= TextLineMetrics.field_f &&
+          KeyboardInput.field_c.field_u + TextLineMetrics.field_f > param0 &&
           param1 >= lf.field_Z &&
           param1 < lf.field_Z + KeyboardInput.field_c.field_v) {
           return 0;

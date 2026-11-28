@@ -156,7 +156,7 @@ class IntrusiveNode {
     }
 
     final static void a(boolean param0, int param1) {
-        ap.field_g = pn.field_Q[param1];
+        ap.field_g = RichTextWidget.field_Q[param1];
         eb.field_a = f.field_I[param1];
         bq.field_A = Vertigo2.field_H[param1];
         if (!param0) {

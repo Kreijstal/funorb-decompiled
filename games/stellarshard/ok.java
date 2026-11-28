@@ -77,7 +77,7 @@ final class ok {
         try {
           var2_int = param0.length();
           if (var2_int == 0) {
-            stackIn_3_0 = uj.field_d;
+            stackIn_3_0 = TextLineMetrics.field_d;
             return stackIn_3_0;
           }
           if (var2_int > 64) {
@@ -123,7 +123,7 @@ final class ok {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (-1 == vk.field_c.indexOf(var5Lifetime1)) {
+              if (-1 == TextLayout.field_c.indexOf(var5Lifetime1)) {
                 stackIn_45_0 = h.field_a;
                 return stackIn_45_0;
               }

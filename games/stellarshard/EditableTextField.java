@@ -128,8 +128,8 @@ class EditableTextField extends InteractiveWidget {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3, param4, (byte) 38, param6) &&
-            this.field_u instanceof pj) {
-            var8_int = ((pj) ((Object) this.field_u)).a(-109, (UiWidget) (this), param4, KeyHandler.field_a, param6, ni.field_e);
+            this.field_u instanceof TextWidgetRenderer) {
+            var8_int = ((TextWidgetRenderer) ((Object) this.field_u)).findTextOffsetAtScreenPosition(-109, (UiWidget) (this), param4, KeyHandler.field_a, param6, ni.field_e);
             stackIn_4_1 = 81;
             if (var8_int == -1) {
               stackIn_5_2 = 0;
@@ -230,23 +230,23 @@ class EditableTextField extends InteractiveWidget {
           this.field_n = 0;
           return;
         }
-        if (!(this.field_u instanceof pj)) {
+        if (!(this.field_u instanceof TextWidgetRenderer)) {
           return;
         }
         if (param0 != -9104) {
           return;
         }
-        pj var9 = (pj) ((Object) this.field_u);
-        vk var3 = var9.b((UiWidget) (this), (byte) 107);
-        int var4 = var3.a(false);
-        int var5 = var9.a(-27246, (UiWidget) (this));
-        int var6 = var9.a((byte) -73) >> 1;
+        TextWidgetRenderer var9 = (TextWidgetRenderer) ((Object) this.field_u);
+        TextLayout var3 = var9.getTextLayout((UiWidget) (this), (byte) 107);
+        int var4 = var3.getMaxLineRightX(false);
+        int var5 = var9.getTextAreaWidth(-27246, (UiWidget) (this));
+        int var6 = var9.getFontLineHeight((byte) -73) >> 1;
         if (var5 - var6 > var4) {
           this.field_l = 0;
           this.field_n = 0;
           return;
         }
-        int var7 = this.field_l + var3.b(this.field_H, 49);
+        int var7 = this.field_l + var3.getXForTextOffset(this.field_H, 49);
         if (var7 > var5 - var6) {
           this.field_l = this.field_l - var6 - (-var5 + var7);
         } else {
@@ -264,15 +264,15 @@ class EditableTextField extends InteractiveWidget {
     }
 
     void a(int param0, boolean param1, int param2, UiWidget param3) {
-        pj var5 = null;
+        TextWidgetRenderer var5 = null;
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
           this.scrollCaretIntoView(-9104);
           if (this.field_o == 1) {
-            if (this.field_u instanceof pj) {
-              var5 = (pj) ((Object) this.field_u);
-              var6 = var5.a(73, (UiWidget) (this), param2, KeyHandler.field_a, param0, ni.field_e);
+            if (this.field_u instanceof TextWidgetRenderer) {
+              var5 = (TextWidgetRenderer) ((Object) this.field_u);
+              var6 = var5.findTextOffsetAtScreenPosition(73, (UiWidget) (this), param2, KeyHandler.field_a, param0, ni.field_e);
               if (-1 != var6) {
                 if (this.field_L &&
                   var6 < this.field_F &&
@@ -394,7 +394,7 @@ class EditableTextField extends InteractiveWidget {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        pj var8 = null;
+        TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (param1 != -57) {
           this.field_L = true;
@@ -402,14 +402,14 @@ class EditableTextField extends InteractiveWidget {
         if (null != this.field_u &&
           0 == param0) {
           this.field_u.a(this.field_E, param3, param2, (UiWidget) (this), 4549);
-          if (this.field_u instanceof pj) {
-            var8 = (pj) ((Object) this.field_u);
+          if (this.field_u instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.field_u);
             if (this.field_H != this.field_I) {
-              var8.a((UiWidget) (this), this.field_H, param2, 0, param3, this.field_I);
+              var8.paintSelection((UiWidget) (this), this.field_H, param2, 0, param3, this.field_I);
             }
             var6 = ih.correctedCurrentTimeMillis((byte) -98);
             if (500L > (var6 - this.field_J) % 1000L) {
-              var8.a(this.field_H, false, param2, (UiWidget) (this), param3);
+              var8.paintCaret(this.field_H, false, param2, (UiWidget) (this), param3);
             }
           }
         }

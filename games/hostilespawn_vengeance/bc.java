@@ -55,7 +55,7 @@ final class bc extends IntrusiveNode {
           ng.field_u = ng.field_u + 1;
           sg.field_i = sg.field_i + 1;
           for (var14_int = 0; ProxySocketFactory.field_j > var14_int; var14_int++) {
-            var15_ref_oj = mm.field_m[var14_int];
+            var15_ref_oj = TextHotspotBounds.field_m[var14_int];
             var16_ref_oc = var15_ref_oj.field_j;
             var17 = var16_ref_oc.field_e - param3;
             if (var17 < 0) {

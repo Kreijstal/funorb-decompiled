@@ -21,7 +21,7 @@ final class ResourceArchive {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 125) {
-            stackIn_4_0 = uj.a(param0, (byte) 98, 10, true);
+            stackIn_4_0 = TextLineMetrics.a(param0, (byte) 98, 10, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = -69;

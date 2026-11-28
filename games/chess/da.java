@@ -161,7 +161,7 @@ final class da extends ArchiveProvider {
             bj.field_jb = new ci(0L, param7);
             bj.field_jb.field_db = ka.field_b;
             AccountNameAvailabilityValidator.field_m.a((byte) 127, bj.field_jb);
-            stackIn_31_0 = ub.a(21549) ? 1 : 0;
+            stackIn_31_0 = TextLayout.a(21549) ? 1 : 0;
           }
           if (stackIn_31_0 != 0 &&
             !qf.field_b) {
@@ -310,7 +310,7 @@ final class da extends ArchiveProvider {
                 var11_ref_String = "";
               }
               EditableTextField.field_U.writeString(-104, var11_ref_String);
-              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 86, se.field_M);
+              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 86, RichTextWidget.field_M);
               EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var10, 70);
               decompiledFrameRemainder0 = (var13 != 0);
             }
@@ -337,7 +337,7 @@ final class da extends ArchiveProvider {
               EditableTextField.field_U.writeByte(16, (byte) 63);
               EditableTextField.field_U.position = EditableTextField.field_U.position + 1;
               var9 = EditableTextField.field_U.position;
-              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 55, se.field_M);
+              lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 55, RichTextWidget.field_M);
               EditableTextField.field_U.backpatchByteLength(EditableTextField.field_U.position - var9, -1);
             }
             vh.a(-1, (byte) -27);

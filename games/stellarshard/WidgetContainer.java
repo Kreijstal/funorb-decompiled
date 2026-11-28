@@ -2781,7 +2781,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(127, "mouseoveranicon");
                 if (null != var2) {
-                  id.field_l = se.a(0, var2);
+                  DefaultTextWidgetRenderer.field_l = se.a(0, var2);
                 }
                 var2 = ca.a(106, "notyetachieved");
                 if (null != var2) {
@@ -2817,7 +2817,7 @@ class WidgetContainer extends UiWidget implements f {
                 }
                 var2 = ca.a(101, "no_highscores");
                 if (var2 != null) {
-                  pd.field_p = se.a(param1 ^ 1, var2);
+                  RichTextLayout.field_p = se.a(param1 ^ 1, var2);
                 }
                 var2 = ca.a(111, "hs_name");
                 if (var2 != null) {
@@ -3674,7 +3674,7 @@ class WidgetContainer extends UiWidget implements f {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         UiWidget var3 = null;
@@ -3692,7 +3692,7 @@ class WidgetContainer extends UiWidget implements f {
           var3 = (UiWidget) (var2.b((byte) 122));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
-            var4 = var3.d(param0 ^ 0);
+            var4 = var3.getTooltipText(param0 ^ 0);
             stackIn_14_0 = null;
             if (var5 == 0) {
               if (stackIn_14_0 != var4) {

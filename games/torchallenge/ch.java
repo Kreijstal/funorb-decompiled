@@ -80,7 +80,7 @@ final class ch {
             }
           }
           oj.field_d = null;
-          fa.field_q = null;
+          RichTextLayout.field_q = null;
           jj.field_a = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

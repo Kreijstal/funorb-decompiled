@@ -103,7 +103,7 @@ final class pb {
             field_f = true;
           }
           var64 = new int[param3.field_K];
-          var61 = pk.field_w;
+          var61 = TextHotspotBounds.field_w;
           var62 = dp.field_A;
           var63 = ByteStorage.field_d;
           for (var13 = 0; param3.field_K > var13; var13++) {
@@ -138,19 +138,19 @@ final class pb {
             var15Lifetime1 = param3.field_p[var14Lifetime1];
             var16 = param3.field_L[var14Lifetime1];
             var17 = param3.field_c[var14Lifetime1];
-            if (pk.field_w.length > param3.field_g[var14Lifetime1]) {
+            if (TextHotspotBounds.field_w.length > param3.field_g[var14Lifetime1]) {
               stackIn_26_0 = param3.field_g[var14Lifetime1];
             } else {
               stackIn_26_0 = -1;
             }
             var18 = stackIn_26_0;
-            if (param3.field_P[var14Lifetime1] < pk.field_w.length) {
+            if (param3.field_P[var14Lifetime1] < TextHotspotBounds.field_w.length) {
               stackIn_29_0 = param3.field_P[var14Lifetime1];
             } else {
               stackIn_29_0 = -1;
             }
             var19 = stackIn_29_0;
-            if (pk.field_w.length > param3.field_C[var14Lifetime1]) {
+            if (TextHotspotBounds.field_w.length > param3.field_C[var14Lifetime1]) {
               stackIn_32_0 = param3.field_C[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;

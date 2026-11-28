@@ -356,7 +356,7 @@ abstract class SpriteState extends DualLinkNode {
         }
         if (var2 >= 128 &&
           160 > var2) {
-          var3 = vk.field_e[var2 - 128];
+          var3 = RichTextLayout.field_e[var2 - 128];
           if (var3 == 0) {
             var3 = 63;
           }

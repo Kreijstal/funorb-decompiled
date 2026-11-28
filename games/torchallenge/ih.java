@@ -102,7 +102,7 @@ final class ih extends kj implements WidgetActivationListener {
         ec.field_b = -1;
         IsaacRandom.field_c = 0;
         gh.field_m = false;
-        fa.field_t = -1;
+        RichTextLayout.field_t = -1;
         sd.field_d = 0;
         ConfirmedEmailAvailabilityValidator.field_w = (int[][]) null;
         fh.field_d = 0;

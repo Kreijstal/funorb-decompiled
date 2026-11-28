@@ -300,7 +300,7 @@ public final class SolKnight extends ab {
           ArchiveRequest.clearDeclaredStaticReferences(-106);
           pf.clearStaticReferences((byte) -104);
           nf.discardDeclaredStaticReferences(-1);
-          af.clearStaticReferences(0);
+          DefaultTextWidgetRenderer.clearStaticReferences(0);
           hk.clearStaticReferences();
           ai.clearStaticReferences(-78);
           cf.resetStaticState((byte) -87);
@@ -326,7 +326,7 @@ public final class SolKnight extends ab {
           td.clearStaticReferences(false);
           ql.clearDeclaredStaticReferences(1);
           sj.clearStaticReferences(1);
-          jf.clearStaticReferences(-25616);
+          TextLayout.clearStaticReferences(-25616);
           UiWidget.e(-24922);
           InteractiveWidget.clearDeclaredStaticReferences(85);
           si.i(126);
@@ -357,7 +357,7 @@ public final class SolKnight extends ab {
           gf.clearStaticReferences((byte) 87);
           c.clearStaticReferences((byte) 113);
           NameSuggestionsPanel.clearStaticReferences((byte) -88);
-          kj.a(2);
+          RichTextWidget.a(2);
           kc.clearStaticReferences((byte) 110);
           pk.releaseDeclaredStaticReferences(-124);
           tg.releaseDeclaredStaticReferences(22722);
@@ -368,7 +368,7 @@ public final class SolKnight extends ab {
           hh.clearStaticReferences((byte) 54);
           SoundFilter.clearStaticReferences();
           fb.a(true);
-          vk.resetStaticState(-14275);
+          RichTextLayout.resetStaticState(-14275);
           DirectByteStorage.clearStaticReferences(0);
           of.resetStaticState(1);
           bc.clearStaticReferences(false);
@@ -413,14 +413,14 @@ public final class SolKnight extends ab {
           wi.a(-26923);
           ob.clearStaticReferences(false);
           bf.clearStaticReferences((byte) 119);
-          le.clearStaticReferences(-3390);
+          TextLineMetrics.clearStaticReferences(-3390);
           PasswordValidator.j(8191);
           EmailFormatValidator.clearStaticReferences((byte) 82);
           ConfirmedEmailAvailabilityValidator.clearStaticReferences(true);
           AgeValidator.e((byte) -123);
           MatchingFieldValidator.releaseDeclaredStaticReferences(732);
           wh.clearStaticReferences(25817);
-          li.a(26333);
+          TextHotspotBounds.a(26333);
           qf.a(10351);
           DebouncedFieldValidator.clearStaticReferences(350);
           pc.clearStaticReferences((byte) -121);
@@ -602,7 +602,7 @@ public final class SolKnight extends ab {
             return stackIn_59_0;
           }
           if (pl.field_d != null) {
-            TextFieldValidator.a((byte) 102, kj.field_N, 90.0f);
+            TextFieldValidator.a((byte) 102, RichTextWidget.field_N, 90.0f);
             this.renderClientFrame(-11633);
             jc.field_b = Asteroid.a("unachieved", "basic", pl.field_d, (byte) -127);
             nb.field_a = Asteroid.a("locked", "basic", pl.field_d, (byte) -117);
@@ -1207,15 +1207,15 @@ public final class SolKnight extends ab {
           GameApplet.field_f[6] = var43;
           GameApplet.field_f[5] = var21;
           GameApplet.field_f[8] = ig.a(var18, 30, 0, var18.field_q - var29.field_q, var29.field_q, var43.field_r);
-          le.field_d = new Sprite[9];
-          le.field_d[0] = var28;
-          le.field_d[1] = var20;
-          le.field_d[2] = ig.a(var17, 30, 0, 0, var42.field_q, var28.field_r);
-          le.field_d[3] = var23;
-          le.field_d[5] = var25;
-          le.field_d[6] = ig.a(var19, 30, 0, 0, var28.field_q, var42.field_r);
-          le.field_d[8] = var42;
-          le.field_d[7] = GameApplet.field_f[7];
+          TextLineMetrics.field_d = new Sprite[9];
+          TextLineMetrics.field_d[0] = var28;
+          TextLineMetrics.field_d[1] = var20;
+          TextLineMetrics.field_d[2] = ig.a(var17, 30, 0, 0, var42.field_q, var28.field_r);
+          TextLineMetrics.field_d[3] = var23;
+          TextLineMetrics.field_d[5] = var25;
+          TextLineMetrics.field_d[6] = ig.a(var19, 30, 0, 0, var28.field_q, var42.field_r);
+          TextLineMetrics.field_d[8] = var42;
+          TextLineMetrics.field_d[7] = GameApplet.field_f[7];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

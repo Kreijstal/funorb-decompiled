@@ -23,7 +23,7 @@ final class du {
             var3 = (String) null;
             du.pollAccountNameCheck((String) null, (byte) -83);
           }
-          if (ReportAbusePanel.field_G == kq.field_j) {
+          if (ReportAbusePanel.field_G == StopFloodEffect.field_j) {
             stackIn_4_0 = null;
             return (AccountServiceResult) (stackIn_4_0);
           }
@@ -34,7 +34,7 @@ final class du {
             return stackIn_8_0;
           }
           BagpipeAnimation.field_w = param0;
-          ReportAbusePanel.field_G = kq.field_j;
+          ReportAbusePanel.field_G = StopFloodEffect.field_j;
           vo.field_d = null;
           stackIn_10_0 = null;
           return (AccountServiceResult) (stackIn_10_0);

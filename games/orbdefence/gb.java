@@ -310,7 +310,7 @@ final class gb {
             gg.field_O = new int[2];
             FullscreenFocusCanvas.field_d[3] = mj.field_k;
             dd.field_B[3] = 1;
-            FullscreenFocusCanvas.field_d[4] = te.field_J;
+            FullscreenFocusCanvas.field_d[4] = RichTextWidget.field_J;
             FullscreenFocusCanvas.field_d[2] = ii.field_a;
             gg.field_O[1] = 2;
             gg.field_O[0] = 5;
@@ -405,7 +405,7 @@ final class gb {
           if (kg.field_m == 2) {
             ab.field_j.a(-1, -1, 0, param2);
           } else {
-            ab.field_j.a(0, jc.a(ua.field_a, (byte) 71, DiskCacheWorker.field_d), 0, param2);
+            ab.field_j.a(0, DefaultTextWidgetRenderer.a(ua.field_a, (byte) 71, DiskCacheWorker.field_d), 0, param2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

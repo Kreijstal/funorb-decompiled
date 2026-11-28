@@ -101,7 +101,7 @@ final class na {
     }
 
     final void a(BitmapFont param0, byte param1) {
-        cn var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         ha var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -124,7 +124,7 @@ final class na {
         ha var14Lifetime1;
         ha var14Lifetime2;
         try {
-          var17 = new cn(param0, 2, 2, 2236962, 1, 1, 1, param0.field_F + param0.field_y + 2);
+          var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_F + param0.field_y + 2);
           var17.field_j = 16777215;
           this.field_h = (nn) ((Object) var17);
           var4 = new ha();
@@ -140,9 +140,9 @@ final class na {
           this.field_k = 15658734;
           var4.field_o = 15658734;
           this.field_f = 15658734;
-          var4.a(0, true).a(15658734, true).a(false, pm.a(7829367, 8947848, (byte) -117, 10066329));
-          var4.a(1, true).a(false, pm.a(13421772, 11184810, (byte) -117, 10066329));
-          var4.a(3, true).a(false, pm.a(10066329, 8947848, (byte) -117, 7829367)).b(1, 16802).a((byte) 92, 1);
+          var4.a(0, true).a(15658734, true).a(false, TextLineMetrics.a(7829367, 8947848, (byte) -117, 10066329));
+          var4.a(1, true).a(false, TextLineMetrics.a(13421772, 11184810, (byte) -117, 10066329));
+          var4.a(3, true).a(false, TextLineMetrics.a(10066329, 8947848, (byte) -117, 7829367)).b(1, 16802).a((byte) 92, 1);
           var5 = new RgbSprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -164,7 +164,7 @@ final class na {
           discarded$1 = new h(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ha();
           var17.a(-80, var8);
-          var8.a(0, true).a(false, pm.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
+          var8.a(0, true).a(false, TextLineMetrics.a(10066329, 15658734, (byte) -117, 7829367)).a(1118481, true).a(-2147483648, -1);
           var8.a(4, true).a((byte) -52, true).a(false, var5);
           this.field_j = (nn) ((Object) var8);
           var9 = new RgbSprite[9];

@@ -305,7 +305,7 @@ class td extends UiWidget implements je {
         }
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
@@ -319,7 +319,7 @@ class td extends UiWidget implements je {
         var2 = new IntrusiveDequeCursor(this.field_B);
         var3 = (UiWidget) (var2.d(86));
         while (var3 != null) {
-          var4 = var3.e(0);
+          var4 = var3.getTooltipText(0);
           if (var4 != null) {
             return var4;
           }

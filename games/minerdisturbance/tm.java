@@ -191,7 +191,7 @@ final class tm extends IntrusiveNode {
                 if (param5) {
                   kk.field_b[var23Lifetime2] = var27Lifetime1 >> ml.field_d;
                   dm.field_d[var23Lifetime2] = var28Lifetime1 >> ml.field_d;
-                  nf.field_d[var23Lifetime2] = var29Lifetime1;
+                  TextLayout.field_d[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;

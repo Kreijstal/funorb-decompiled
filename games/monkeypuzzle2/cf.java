@@ -59,7 +59,7 @@ final class cf {
             }
             var1[var2] = new Sprite(nj.field_d, qk.field_a, ValidatedTextField.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var22);
           } else {
-            var16 = jj.field_E[var2];
+            var16 = RichTextWidget.field_E[var2];
             var12 = var16;
             var9 = var12;
             var5 = var9;

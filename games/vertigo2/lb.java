@@ -68,7 +68,7 @@ final class lb {
           this.field_b.a(var7, 12318, param3, param2, var6, param4, param0);
           IterableNodeHashTable.field_a.a(94, wi.field_g.field_Fb, Archive.field_f, 0, 0);
           LevelTile.field_q.a(114, -4 + (-re.field_k + wi.field_g.field_Fb - 80), 18, Archive.field_f + 2, 0);
-          va.field_f.a(param1 ^ 14013, 82 + re.field_k, 18, 2 + Archive.field_f, -82 + (wi.field_g.field_Fb - re.field_k));
+          DefaultTextWidgetRenderer.field_f.a(param1 ^ 14013, 82 + re.field_k, 18, 2 + Archive.field_f, -82 + (wi.field_g.field_Fb - re.field_k));
           h.field_D.a(-Archive.field_f + (wi.field_g.field_db - 2 - 20), 20, wi.field_g.field_Fb, 2, 1, 0, re.field_k, 2 + Archive.field_f + 20);
           ao.field_O.a(re.field_k, true, 2, 20);
           return;

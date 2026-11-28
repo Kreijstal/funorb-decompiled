@@ -378,7 +378,7 @@ public final class Chess extends NetworkGameClient {
                     de.a(-31645);
                     ae.field_e[IntrusiveDeque.field_f].a((byte) 122, false, 0);
                     pk.field_j = false;
-                    hl.field_h = false;
+                    DefaultTextWidgetRenderer.field_h = false;
                     hj.field_i = false;
                   }
                   fi.field_a = false;
@@ -425,13 +425,13 @@ public final class Chess extends NetworkGameClient {
           if (wg.field_B == 15) {
             if (pk.field_j) {
               de.a(-31645);
-              fj.a(0);
+              TextLineMetrics.a(0);
               em.b(false);
               pk.field_j = false;
               ma.field_D = false;
               BufferedRandomAccessFile.field_q = true;
               ji.field_P = true;
-              hl.field_h = false;
+              DefaultTextWidgetRenderer.field_h = false;
               hj.field_i = false;
               qk.field_h = 0;
             }
@@ -456,7 +456,7 @@ public final class Chess extends NetworkGameClient {
             wg.field_B != 58) {
             if (59 == wg.field_B) {
               if (hj.field_i ||
-                hl.field_h) {
+                DefaultTextWidgetRenderer.field_h) {
                 de.a(-31645);
                 if (hj.field_i) {
                   MatchingFieldValidator.field_p.a(71, false);
@@ -465,7 +465,7 @@ public final class Chess extends NetworkGameClient {
                 BufferedRandomAccessFile.field_q = true;
                 DisplayNameSelectionPanel.field_O = 0;
                 qk.field_h = -2;
-                hl.field_h = false;
+                DefaultTextWidgetRenderer.field_h = false;
                 wn.field_f = true;
                 hj.field_i = false;
               }
@@ -476,7 +476,7 @@ public final class Chess extends NetworkGameClient {
             if (hj.field_i) {
               var2_ref = MatchingFieldValidator.field_p;
             } else {
-              if (hl.field_h) {
+              if (DefaultTextWidgetRenderer.field_h) {
                 var2_ref = pd.field_Lb;
               }
             }
@@ -591,7 +591,7 @@ public final class Chess extends NetworkGameClient {
           } else {
             pd.field_Lb = var8;
             MatchingFieldValidator.field_p = null;
-            hl.field_h = true;
+            DefaultTextWidgetRenderer.field_h = true;
             nh.a();
             nh.c(370, 240 + ec.c((byte) -63));
             var10 = BoundedRandomAccessFile.a(var8.field_B.field_f, 0, var8.field_B.field_k);
@@ -831,9 +831,9 @@ public final class Chess extends NetworkGameClient {
           kl.field_k[5] = bn.a(lg.field_b, "", "white_queen");
           kl.field_k[6] = bn.a(lg.field_b, "", "white_king_gold_crown");
         }
-        se.field_N[0] = null;
+        RichTextWidget.field_N[0] = null;
         for (var3 = 1; var3 <= 6; var3++) {
-          se.field_N[var3] = (dd) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
+          RichTextWidget.field_N[var3] = (dd) (kl.field_k[var3].a(NameSuggestionsPanel.field_P[qm.field_g], vn.field_sb[qm.field_g], 5, -10, 5));
           n.field_b[var3] = new bn(new bn[]{kl.field_k[var3]}, 1);
           dupTemp$0 = n.field_b[var3].field_j;
           var10 = dupTemp$0;
@@ -1070,20 +1070,20 @@ public final class Chess extends NetworkGameClient {
         rl.field_d[1][0] = new RgbSprite(0, 0);
         hb.field_b[0][0] = new RgbSprite(0, 0);
         hb.field_b[1][0] = new RgbSprite(0, 0);
-        ub.field_d[0][0] = new RgbSprite(0, 0);
-        ub.field_d[1][0] = new RgbSprite(0, 0);
+        TextLayout.field_d[0][0] = new RgbSprite(0, 0);
+        TextLayout.field_d[1][0] = new RgbSprite(0, 0);
         qc.field_d[0][0] = new RgbSprite(0, 0);
         qc.field_d[1][0] = new RgbSprite(0, 0);
         for (var8_int = 0; var8_int <= 1; var8_int++) {
           if (var8_int != 0) {
-            stackIn_5_0 = se.field_N;
+            stackIn_5_0 = RichTextWidget.field_N;
           } else {
             stackIn_5_0 = ad.field_f;
           }
           var9_ref_dd__ = stackIn_5_0;
           for (var10 = 1; 7 > var10; var10++) {
-            ub.field_d[var8_int][var10] = new RgbSprite(180, 180);
-            ub.field_d[var8_int][var10].bindAsRenderTarget();
+            TextLayout.field_d[var8_int][var10] = new RgbSprite(180, 180);
+            TextLayout.field_d[var8_int][var10].bindAsRenderTarget();
             nh.a();
             if (var10 == 2) {
               var11_ref_int__ = var4;
@@ -1098,7 +1098,7 @@ public final class Chess extends NetworkGameClient {
             rl.field_d[var8_int][var10] = tg.field_r[-var10 + 6 + 6 * var8_int];
           }
         }
-        dj.field_t = ub.field_d[1][1].copy();
+        dj.field_t = TextLayout.field_d[1][1].copy();
         ph.field_j.setAsRasterTarget(48);
         nh.a();
         nh.c(370, ec.c((byte) -63) + 240);
@@ -1116,11 +1116,11 @@ public final class Chess extends NetworkGameClient {
             rl.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 94);
             hb.field_b[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             for (var11Lifetime2 = 0; var11Lifetime2 < 2; var11Lifetime2++) {
-              ub.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
+              TextLayout.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
             }
             qc.field_d[var8_intLifetime2][var10Lifetime1] = new RgbSprite(45, 45);
             qc.field_d[var8_intLifetime2][var10Lifetime1].bindAsRenderTarget();
-            ub.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 101);
+            TextLayout.field_d[var8_intLifetime2][var10Lifetime1].a(23, 1024, 23, 0, (byte) 101);
             qc.field_d[var8_intLifetime2][var10Lifetime1].addOutline(var9);
           }
         }
@@ -1203,14 +1203,14 @@ public final class Chess extends NetworkGameClient {
             stackIn_15_8 = !(fl.field_n <= 50);
             stackIn_18_9 = var3;
             stackIn_18_10 = true;
-            stackIn_20_11 = (hj.field_i) || (hl.field_h);
+            stackIn_20_11 = (hj.field_i) || (DefaultTextWidgetRenderer.field_h);
             bh.a(stackIn_14_0, stackIn_14_1, stackIn_14_2, stackIn_14_3, stackIn_14_4 != 0, stackIn_14_5, stackIn_14_6, stackIn_14_7, stackIn_15_8, stackIn_18_9 != 0, stackIn_18_10, stackIn_20_11);
           }
           while (kf.d(18954)) {
             if (wn.field_f) {
               tl.a(12, 13, param0 + 17, 15);
             }
-            if (hl.field_h &&
+            if (DefaultTextWidgetRenderer.field_h &&
               pd.field_Lb.f(89)) {
               continue;
             }
@@ -1414,7 +1414,7 @@ public final class Chess extends NetworkGameClient {
             !r.field_bc &&
             !fi.field_a) {
             MusicPatchPcmStream.a((byte) -78, var3 != 0);
-            if (hl.field_h) {
+            if (DefaultTextWidgetRenderer.field_h) {
               pd.field_Lb.a((byte) -37, var4 != 0);
             }
             if (hj.field_i) {
@@ -1424,7 +1424,7 @@ public final class Chess extends NetworkGameClient {
               if (wn.field_f) {
                 tl.a(12, 13, 94, 15);
               }
-              if (hl.field_h) {
+              if (DefaultTextWidgetRenderer.field_h) {
                 pd.field_Lb.f(26);
               }
               if (!hj.field_i) {
@@ -1695,7 +1695,7 @@ public final class Chess extends NetworkGameClient {
         ArchiveRequest.clearStaticReferences(-115);
         sl.clearStaticReferences((byte) 59);
         ge.k(0);
-        hl.clearStaticReferences(true);
+        DefaultTextWidgetRenderer.clearStaticReferences(true);
         hi.clearStaticReferences();
         am.c((byte) 119);
         fn.resetStaticState(-86);
@@ -1716,7 +1716,7 @@ public final class Chess extends NetworkGameClient {
         nj.clearStaticReferences(-10406);
         ka.clearStaticReferences((byte) -122);
         sj.clearStaticReferences(true);
-        ub.clearDeclaredStaticReferences((byte) 80);
+        TextLayout.clearDeclaredStaticReferences((byte) 80);
         mf.clearStaticReferences(0);
         InteractiveWidget.clearDeclaredStaticReferences(-1);
         kn.e((byte) 127);
@@ -1758,7 +1758,7 @@ public final class Chess extends NetworkGameClient {
         bj.releaseDeclaredStaticReferences(45);
         rm.a(850101921);
         NameSuggestionsPanel.clearDeclaredStaticReferences(8);
-        se.resetStaticState((byte) 67);
+        RichTextWidget.resetStaticState((byte) 67);
         jn.clearStaticReferences((byte) -61);
         ea.clearStaticReferences((byte) -44);
         ki.b(true);
@@ -1773,7 +1773,7 @@ public final class Chess extends NetworkGameClient {
         ih.clearDeclaredStaticReferences((byte) 48);
         bh.j(0);
         bf.clearStaticReferences(false);
-        ah.clearStaticReferences((byte) 83);
+        RichTextLayout.clearStaticReferences((byte) 83);
         DirectByteStorage.a((byte) -115);
         ml.clearStaticReferences((byte) -122);
         kb.clearDeclaredStaticReferences(-15237);
@@ -1820,14 +1820,14 @@ public final class Chess extends NetworkGameClient {
         uj.clearStaticReferences((byte) -118);
         om.clearStaticReferences((byte) -126);
         ai.clearStaticReferences(-125);
-        fj.clearStaticReferences((byte) 126);
+        TextLineMetrics.clearStaticReferences((byte) 126);
         AccountNameAvailabilityValidator.clearDeclaredStaticReferences(16);
         EmailFormatValidator.i(-19374);
         ConfirmedEmailAvailabilityValidator.clearStaticReferences(true);
         AgeValidator.clearStaticReferences((byte) 79);
         MatchingFieldValidator.h(0);
         ag.clearStaticReferences(9604);
-        re.clearStaticReferences(-7101);
+        TextHotspotBounds.clearStaticReferences(-7101);
         mk.clearStaticReferences((byte) -95);
         DebouncedFieldValidator.clearStaticReferences(350);
         sa.clearStaticReferences(-20127);

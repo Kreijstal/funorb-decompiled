@@ -34,7 +34,7 @@ final class ll {
           }
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_5_0 = vf.field_q;
+            stackIn_5_0 = DefaultTextWidgetRenderer.field_q;
             return stackIn_5_0;
           }
           if (var2_int > 255) {
@@ -43,7 +43,7 @@ final class ll {
           }
           var3 = ij.a(0, '.', param1);
           if (var3.length < 2) {
-            stackIn_12_0 = vf.field_q;
+            stackIn_12_0 = DefaultTextWidgetRenderer.field_q;
             return stackIn_12_0;
           }
           var4 = var3;
@@ -67,7 +67,7 @@ final class ll {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class ll {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class ll {
           }
           var2_int = param0.length();
           if (0 == var2_int) {
-            stackIn_6_0 = vf.field_q;
+            stackIn_6_0 = DefaultTextWidgetRenderer.field_q;
             return stackIn_6_0;
           }
           if (var2_int > 64) {
@@ -215,7 +215,7 @@ final class ll {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 

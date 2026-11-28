@@ -16,7 +16,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           }
           this.field_db = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "wh.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "wh.IA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -41,7 +41,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
           super.a(param0, param1, param2, param3);
           this.field_bb = -this.field_q + ld.field_l - param2;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "wh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "wh.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         super(param0, param1, param2);
     }
 
-    final String f(byte param0) {
+    final String getTooltipText(byte param0) {
         if (!this.field_w) {
           return null;
         }

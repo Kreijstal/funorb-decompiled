@@ -34,10 +34,10 @@ final class ea {
           if (param0 != -107) {
             return;
           }
-          var9 = se.field_p;
+          var9 = RichTextLayout.field_p;
           var2 = var9.readUnsignedByte(7909);
           if (var2 == 0) {
-            var8 = (pg) (ab.field_H.beginForward(-3905));
+            var8 = (pg) (RichTextWidget.field_H.beginForward(-3905));
             if (var8 == null) {
               ec.a((byte) 27);
               return;

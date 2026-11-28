@@ -26,7 +26,7 @@ final class le implements uj {
             le.a((byte) 52, -104);
           }
           try {
-            JavaScriptBridge.callWithArguments("resizing", bm.c(-117), 16715, new Object[]{new Integer(param1)});
+            JavaScriptBridge.callWithArguments("resizing", RichTextLayout.c(-117), 16715, new Object[]{new Integer(param1)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

@@ -49,7 +49,7 @@ final class TBomberAnimation extends EventAnimation {
           return true;
         }
         if (!this.field_z) {
-          this.field_w.creature.resolveCreatureView(-27449, this.screen).b(-1, 7);
+          this.field_w.creature.resolveCreatureView(-27449, this.screen).playAnimation(-1, 7);
           var2 = new te(this.screen, this.field_w.field_q, this.field_w.field_t);
           ((TileEffect) ((Object) var2)).a(0);
           this.field_z = true;

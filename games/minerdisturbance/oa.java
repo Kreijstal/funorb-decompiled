@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oa {
-    final static eg a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         if (null == kj.field_c) {
-          kj.field_c = new eg(sl.field_q, 20, 0, 0, 0, 11579568, -1, 0, 0, sl.field_q.field_I, -1, 2147483647, true);
+          kj.field_c = new DefaultTextWidgetRenderer(sl.field_q, 20, 0, 0, 0, 11579568, -1, 0, 0, sl.field_q.field_I, -1, 2147483647, true);
         }
         if (param0 != 0) {
-          return (eg) null;
+          return (DefaultTextWidgetRenderer) null;
         }
         return kj.field_c;
     }

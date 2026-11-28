@@ -43,7 +43,7 @@ final class kg extends kn {
             }
             var1_int = 1;
           }
-          nj.field_u.a(EditableTextField.a((byte) 107, re.field_m, ag.field_f), 99, EditableTextField.a((byte) 107, BufferedSocket.field_k, rf.field_b));
+          nj.field_u.a(EditableTextField.a((byte) 107, TextHotspotBounds.field_m, ag.field_f), 99, EditableTextField.a((byte) 107, BufferedSocket.field_k, rf.field_b));
           if (nj.field_u.d((byte) 55)) {
             var1_int = 1;
           }
@@ -156,10 +156,10 @@ final class kg extends kn {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_M.field_w ? 1 : 0;
         this.field_M.field_w = this.field_w;
-        String var3 = this.field_M.g(param0);
+        String var3 = this.field_M.getTooltipText(param0);
         this.field_M.field_w = var2 != 0 ? true : false;
         return var3;
     }

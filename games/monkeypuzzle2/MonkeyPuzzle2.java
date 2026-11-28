@@ -39,7 +39,7 @@ public final class MonkeyPuzzle2 extends bi {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          aa.a(-11449);
+          TextLayout.a(-11449);
           if (AwtRasterBuffer.field_f != null) {
             vh.a(AwtRasterBuffer.field_f, (byte) -117);
             AwtRasterBuffer.field_f.exitFullscreen((byte) -107, rc.field_k);
@@ -171,7 +171,7 @@ public final class MonkeyPuzzle2 extends bi {
           tl.clearStaticReferences((byte) -17);
           s.releaseDeclaredStaticReferences(7993);
           wk.clearStaticReferences(false);
-          a.clearStaticReferences(true);
+          DefaultTextWidgetRenderer.clearStaticReferences(true);
           ig.clearStaticReferences();
           sf.clearStaticReferences();
           j.b(5);
@@ -198,7 +198,7 @@ public final class MonkeyPuzzle2 extends bi {
           ak.c(-1);
           db.clearStaticReferences((byte) -36);
           mc.a(-74);
-          aa.resetStaticState(-1);
+          TextLayout.resetStaticState(-1);
           UiWidget.resetStaticState(0);
           ButtonWidget.j(-64);
           jk.clearStaticReferences((byte) 77);
@@ -236,7 +236,7 @@ public final class MonkeyPuzzle2 extends bi {
           pc.resetStaticState(true);
           jh.clearDeclaredStaticReferences(7434);
           NameSuggestionsPanel.clearStaticReferences((byte) 111);
-          jj.d((byte) 117);
+          RichTextWidget.d((byte) 117);
           vh.clearDeclaredStaticReferences(-9473);
           vg.clearDeclaredStaticReferences(-3114);
           em.resetDeclaredStaticState(-27714);
@@ -247,7 +247,7 @@ public final class MonkeyPuzzle2 extends bi {
           qj.clearDeclaredStaticReferences(4201);
           dm.clearStaticReferences();
           bb.clearStaticReferences(true);
-          sb.clearStaticReferences(12817);
+          RichTextLayout.clearStaticReferences(12817);
           oi.a((byte) -90);
           oa.clearStaticReferences(false);
           te.clearStaticReferences((byte) -88);
@@ -288,7 +288,7 @@ public final class MonkeyPuzzle2 extends bi {
           uh.a(true);
           mk.clearDeclaredStaticReferences(8134);
           hc.clearStaticReferences((byte) -105);
-          be.clearStaticReferences(true);
+          TextLineMetrics.clearStaticReferences(true);
           AccountNameAvailabilityValidator.e(-17202);
           PasswordValidator.clearDeclaredStaticReferences(0);
           EmailFormatValidator.clearDeclaredStaticReferences(98);
@@ -296,7 +296,7 @@ public final class MonkeyPuzzle2 extends bi {
           AgeValidator.clearStaticReferences((byte) -107);
           MatchingFieldValidator.resetStaticState(10396);
           sd.clearStaticReferences((byte) 122);
-          bl.clearDeclaredStaticReferences(0);
+          TextHotspotBounds.clearDeclaredStaticReferences(0);
           DebouncedFieldValidator.clearStaticReferences(-122);
           this.field_u = null;
         } catch (RuntimeException runtimeException) {
@@ -513,7 +513,7 @@ public final class MonkeyPuzzle2 extends bi {
                       stackIn_88_0 = !(pi.a((byte) 124));
                       re.field_f = stackIn_88_0;
                       if (!re.field_f) {
-                        bl.a(50, uh.field_e);
+                        TextHotspotBounds.a(50, uh.field_e);
                       }
                     } else {
                       if (!ResourceArchive.isMessageDialogActive(false) &&
@@ -552,7 +552,7 @@ public final class MonkeyPuzzle2 extends bi {
                         }
                         stackIn_60_0 = 44;
                         stackIn_61_1 = !(af.field_c <= 0);
-                        sb.$cfr$intArgs$a$7ffe4b125357(stackIn_60_0, stackIn_61_1);
+                        RichTextLayout.$cfr$intArgs$a$7ffe4b125357(stackIn_60_0, stackIn_61_1);
                         ProxyAuthenticationRequiredException.field_d[1] = new kk(1);
                         qh.field_b = dh.field_c;
                         uh.a((byte) -101, qh.field_b);
@@ -642,7 +642,7 @@ public final class MonkeyPuzzle2 extends bi {
             field_C = (ib) null;
           }
           fi.field_b = IsaacRandom.a(param0 - 92, 5);
-          PasswordValidator.field_p = be.a(false, true, param0 + 13303, 6, false);
+          PasswordValidator.field_p = TextLineMetrics.a(false, true, param0 + 13303, 6, false);
           ha.field_fb = IsaacRandom.a(-117, 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -782,7 +782,7 @@ public final class MonkeyPuzzle2 extends bi {
           db.b((byte) 80);
           stackIn_69_0 = 119;
           stackIn_70_1 = !(af.field_c <= 0);
-          sb.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_70_1);
+          RichTextLayout.$cfr$intArgs$a$7ffe4b125357(stackIn_69_0, stackIn_70_1);
           if (param0 != 36) {
             field_D = (hb) null;
           }
@@ -791,7 +791,7 @@ public final class MonkeyPuzzle2 extends bi {
           }
           qh.field_b = 0;
           tk.a(50, true);
-          jj.c((byte) 60);
+          RichTextWidget.c((byte) 60);
           wg.a(-106);
           gj.a((byte) -31);
           if (!ok.a(false)) {

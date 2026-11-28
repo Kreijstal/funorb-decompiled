@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class id extends ik {
+class id extends DefaultTextWidgetRenderer {
     static oj[] field_w;
     static int field_v;
     static String field_u;
@@ -81,17 +81,17 @@ class id extends ik {
             for (var5 = 0; var5 < var4; var5++) {
               ni.field_a[var5] = -1;
             }
-            ik.field_g = new int[2];
+            DefaultTextWidgetRenderer.field_g = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
               MouseWheelInput.field_g[var5] = ug.field_r[var5];
             }
             MouseWheelInput.field_g[var4 - 3] = "";
             MouseWheelInput.field_g[-2 + var4] = l.field_E;
             ni.field_a[-2 + var4] = 0;
-            ik.field_g[0] = 4;
+            DefaultTextWidgetRenderer.field_g[0] = 4;
             MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 1;
-            ik.field_g[1] = 5;
+            DefaultTextWidgetRenderer.field_g[1] = 5;
           } else if (ResourceArchive.field_a == 1) {
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, EmailFormatValidator.field_m, nb.field_x);
             var4 = var3_int + 2;
@@ -100,14 +100,14 @@ class id extends ik {
             for (var5 = 0; var5 < var4; var5++) {
               ni.field_a[var5] = -1;
             }
-            ik.field_g = new int[1];
+            DefaultTextWidgetRenderer.field_g = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
               MouseWheelInput.field_g[var5] = ug.field_r[var5];
             }
             MouseWheelInput.field_g[-2 + var4] = "";
             MouseWheelInput.field_g[-1 + var4] = NodeHashTableIterator.field_d;
             ni.field_a[-1 + var4] = 0;
-            ik.field_g[0] = 5;
+            DefaultTextWidgetRenderer.field_g[0] = 5;
           } else if (ResourceArchive.field_a != 2) {
             if (ResourceArchive.field_a == 3) {
               if (jh.field_a.privilegedTasksEnabled) {
@@ -121,14 +121,14 @@ class id extends ik {
               for (var5 = 0; var5 < var4; var5++) {
                 ni.field_a[var5] = -1;
               }
-              ik.field_g = new int[1];
+              DefaultTextWidgetRenderer.field_g = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
               MouseWheelInput.field_g[-2 + var4] = "";
               MouseWheelInput.field_g[-1 + var4] = NodeHashTableIterator.field_d;
               ni.field_a[var4 - 1] = 0;
-              ik.field_g[0] = 5;
+              DefaultTextWidgetRenderer.field_g[0] = 5;
             } else if (ResourceArchive.field_a == 4) {
               var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, AccountRegistrationPanel.field_B, nb.field_x);
               var4 = var3_int + 2;
@@ -137,14 +137,14 @@ class id extends ik {
               for (var5 = 0; var5 < var4; var5++) {
                 ni.field_a[var5] = -1;
               }
-              ik.field_g = new int[1];
+              DefaultTextWidgetRenderer.field_g = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
                 MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
               MouseWheelInput.field_g[-2 + var4] = "";
               MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
               ni.field_a[var4 - 1] = 0;
-              ik.field_g[0] = 5;
+              DefaultTextWidgetRenderer.field_g[0] = 5;
             } else {
               if (ResourceArchive.field_a != 5) {
                 throw new IllegalArgumentException();
@@ -156,17 +156,17 @@ class id extends ik {
               for (var5 = 0; var4 > var5; var5++) {
                 ni.field_a[var5] = -1;
               }
-              ik.field_g = new int[2];
+              DefaultTextWidgetRenderer.field_g = new int[2];
               for (var5 = 0; var5 < var3_int; var5++) {
                 MouseWheelInput.field_g[var5] = ug.field_r[var5];
               }
               MouseWheelInput.field_g[-3 + var4] = "";
               MouseWheelInput.field_g[var4 - 2] = MidiPcmStream.field_p;
               ni.field_a[-2 + var4] = 0;
-              ik.field_g[0] = 3;
+              DefaultTextWidgetRenderer.field_g[0] = 3;
               MouseWheelInput.field_g[var4 - 1] = NodeHashTableIterator.field_d;
               ni.field_a[-1 + var4] = 1;
-              ik.field_g[1] = 5;
+              DefaultTextWidgetRenderer.field_g[1] = 5;
             }
           } else {
             var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, da.a(new String[]{"<br><%0><br>"}, pl.field_a, false), nb.field_x);
@@ -221,12 +221,12 @@ class id extends ik {
             }
             MouseWheelInput.field_g[1] = pf.field_l;
             MouseWheelInput.field_g[0] = n.field_c;
-            ik.field_g = new int[2];
+            DefaultTextWidgetRenderer.field_g = new int[2];
             ni.field_a[1] = 0;
-            ik.field_g[1] = 2;
+            DefaultTextWidgetRenderer.field_g[1] = 2;
             MouseWheelInput.field_g[5] = "";
             MouseWheelInput.field_g[3] = pa.field_c;
-            ik.field_g[0] = 5;
+            DefaultTextWidgetRenderer.field_g[0] = 5;
             MouseWheelInput.field_g[4] = sb.field_b;
             ni.field_a[3] = 1;
             MouseWheelInput.field_g[2] = eg.field_F;
@@ -254,7 +254,7 @@ class id extends ik {
             }
             ug.field_x = rf.correctedCurrentTimeMillis(0);
           }
-          bc.field_H.field_h = ik.field_g.length;
+          RichTextWidget.field_H.field_h = DefaultTextWidgetRenderer.field_g.length;
           var3_intLifetime1 = 0;
           var4Lifetime1 = 114 / ((81 - param2) / 34);
           for (var5Lifetime1 = 0; var5Lifetime1 < MouseWheelInput.field_g.length; var5Lifetime1++) {
@@ -286,7 +286,7 @@ class id extends ik {
           }
           me.field_v = -(var3_intLifetime1 >> 1) + CrossfadingMidiPcmStream.field_D;
           gd.field_o = -(var3_intLifetime1 >> 1) + CrossfadingMidiPcmStream.field_D + var3_intLifetime1;
-          ph.field_b = (oh.field_b + we.field_l << 1) * bc.field_H.field_h;
+          ph.field_b = (oh.field_b + we.field_l << 1) * RichTextWidget.field_H.field_h;
           for (var5Lifetime2 = 0; var5Lifetime2 < MouseWheelInput.field_g.length; var5Lifetime2++) {
             stackIn_112_0 = ph.field_b;
             if (ni.field_a[var5Lifetime2] < 0) {
@@ -318,9 +318,9 @@ class id extends ik {
             var5Lifetime3++;
           }
           if (ResourceArchive.field_a == 2) {
-            bc.field_H.a(0, param1, -1, -1);
+            RichTextWidget.field_H.a(0, param1, -1, -1);
           } else {
-            bc.field_H.a(0, param1, rc.a(bk.field_b, 29532, ResourceArchive.field_e), 0);
+            RichTextWidget.field_H.a(0, param1, rc.a(bk.field_b, 29532, ResourceArchive.field_e), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

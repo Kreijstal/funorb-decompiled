@@ -296,10 +296,10 @@ final class hb extends ak {
         ll.field_E = null;
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_x.field_g ? 1 : 0;
         this.field_x.field_g = this.field_g;
-        String var3 = this.field_x.d(param0 ^ param0);
+        String var3 = this.field_x.getTooltipText(param0 ^ param0);
         this.field_x.field_g = var2 != 0 ? true : false;
         return var3;
     }

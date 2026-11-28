@@ -87,11 +87,11 @@ public final class CrazyCrystals extends NetworkGameClient {
             while (true) {
               if (!ge.b(-45)) {
                 if (cp.field_k[KeyboardInputHandler.field_c] &&
-                  !lb.field_k &&
+                  !DefaultTextWidgetRenderer.field_k &&
                   qh.field_o.isEmpty() &&
                   en.field_O == 0 &&
                   cn.field_d == null) {
-                  lb.field_k = true;
+                  DefaultTextWidgetRenderer.field_k = true;
                   stackIn_81_0 = !(qp.field_f);
                   qp.field_f = stackIn_81_0;
                 }
@@ -693,7 +693,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           cm.clearStaticReferences(-121);
           gn.clearStaticReferences(false);
           rc.clearStaticReferences(false);
-          lb.clearDeclaredStaticReferences((byte) -114);
+          DefaultTextWidgetRenderer.clearDeclaredStaticReferences((byte) -114);
           nb.clearStaticReferences();
           qj.clearStaticReferences(param0 ^ 84);
           hm.b(-2);
@@ -718,7 +718,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           fk.clearStaticReferences(param0 - 5171);
           gk.clearStaticReferences(-125);
           ip.clearStaticReferences((byte) -103);
-          tb.clearStaticReferences(param0 ^ -2180);
+          TextLayout.clearStaticReferences(param0 ^ -2180);
           qm.g(1);
           InteractiveWidget.clearDeclaredStaticReferences((byte) -58);
           om.clearDeclaredStaticReferences((byte) 122);
@@ -761,7 +761,7 @@ public final class CrazyCrystals extends NetworkGameClient {
           ud.h((byte) -124);
           co.clearDeclaredStaticReferences(2);
           NameSuggestionsPanel.releaseDeclaredStaticReferences(-7397);
-          rf.clearStaticReferences((byte) -98);
+          RichTextWidget.clearStaticReferences((byte) -98);
           sb.clearStaticReferences((byte) 2);
           io.h(param0 - 211);
           of.clearDeclaredStaticReferences(3);
@@ -859,13 +859,13 @@ public final class CrazyCrystals extends NetworkGameClient {
           pe.clearDeclaredStaticReferences(1);
           qp.clearDeclaredStaticReferences(param0 + 1095153591);
           pm.clearStaticReferences((byte) 35);
-          bh.resetStaticState(param0 ^ -90);
+          TextLineMetrics.resetStaticState(param0 ^ -90);
           AccountNameAvailabilityValidator.clearStaticReferences(true);
           PasswordValidator.clearDeclaredStaticReferences(-31737);
           ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences((byte) -33);
           AgeValidator.clearDeclaredStaticReferences(70);
           fp.a((byte) 125);
-          fo.a((byte) -56);
+          TextHotspotBounds.a((byte) -56);
           oi.clearStaticReferences((byte) 118);
           DebouncedFieldValidator.clearStaticReferences(param0 + 261);
           jp.clearStaticReferences((byte) 120);
@@ -945,7 +945,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             to.a(0, var2);
             return;
           }
-          fo.a(0);
+          TextHotspotBounds.a(0);
           if (!ul.a(true)) {
             td.a(96.0f, rh.field_e, false);
             to.a(0, var2);
@@ -1207,7 +1207,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             this.renderClientFrame(-124);
             h.field_d = bf.a(-1, "buttonframe", "", ResultScenePhase.field_d);
             DirectByteStorage.field_c = bf.a(-1, "hoverbuttonframe", "", ResultScenePhase.field_d);
-            fo.field_g = bf.a(-1, "smallbuttonframe", "", ResultScenePhase.field_d);
+            TextHotspotBounds.field_g = bf.a(-1, "smallbuttonframe", "", ResultScenePhase.field_d);
             mi.field_x = bf.a(-1, "hoversmallbuttonframe", "", ResultScenePhase.field_d);
             PasswordValidator.field_o = bf.a(-1, "hollowframe", "", ResultScenePhase.field_d);
             mg.field_b = bf.a(-1, "tinyhollowframe", "", ResultScenePhase.field_d);
@@ -1234,11 +1234,11 @@ public final class CrazyCrystals extends NetworkGameClient {
             var8_ref_dl__ = bf.a(-1, "bgtiles_metal", "", ResultScenePhase.field_d);
             var9 = bf.a(-1, "bgtiles_tiles", "", ResultScenePhase.field_d);
             var10 = var9.length + (var8_ref_dl__.length + var6_ref_dl__.length + java.lang.reflect.Array.getLength(var7)) - 12;
-            tb.field_e = new RgbSprite[4 + var10];
-            tb.field_e[0] = var6_ref_dl__[0];
-            tb.field_e[3] = var9[0];
-            tb.field_e[1] = (RgbSprite) (((Object[]) (var7))[0]);
-            tb.field_e[2] = var8_ref_dl__[0];
+            TextLayout.field_e = new RgbSprite[4 + var10];
+            TextLayout.field_e[0] = var6_ref_dl__[0];
+            TextLayout.field_e[3] = var9[0];
+            TextLayout.field_e[1] = (RgbSprite) (((Object[]) (var7))[0]);
+            TextLayout.field_e[2] = var8_ref_dl__[0];
             kj.field_a[0] = var6_ref_dl__[1];
             kj.field_a[1] = (RgbSprite) (((Object[]) (var7))[1]);
             kj.field_a[3] = var9[1];
@@ -1257,7 +1257,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               }
               incrementValue$2 = var11;
               var11++;
-              tb.field_e[incrementValue$2] = var6_ref_dl__[var12];
+              TextLayout.field_e[incrementValue$2] = var6_ref_dl__[var12];
               var12++;
             } while (var13 == 0);
             var12 = 3;
@@ -1268,7 +1268,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               }
               incrementValue$3 = var11;
               var11++;
-              tb.field_e[incrementValue$3] = (RgbSprite) (((Object[]) (var7))[var12]);
+              TextLayout.field_e[incrementValue$3] = (RgbSprite) (((Object[]) (var7))[var12]);
               var12++;
             } while (var13 == 0);
             var12 = 3;
@@ -1279,7 +1279,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               }
               incrementValue$4 = var11;
               var11++;
-              tb.field_e[incrementValue$4] = var8_ref_dl__[var12];
+              TextLayout.field_e[incrementValue$4] = var8_ref_dl__[var12];
               var12++;
             } while (var13 == 0);
             var12 = 3;
@@ -1292,7 +1292,7 @@ public final class CrazyCrystals extends NetworkGameClient {
               }
               incrementValue$5 = var11;
               var11++;
-              tb.field_e[incrementValue$5] = var9[var12];
+              TextLayout.field_e[incrementValue$5] = var9[var12];
               var12++;
             } while (var13 == 0);
             var6 = 0;
@@ -1402,7 +1402,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             ScoreModifier.field_d = var3_array[7];
             vp.field_d = var3_array[0];
             tl.field_b = var3_array[3];
-            rf.field_C = var3_array[4];
+            RichTextWidget.field_C = var3_array[4];
             ba.field_j = var3_array[6];
             ag.field_c = new RgbSprite[12];
             al.field_h = new RgbSprite[12];
@@ -1573,14 +1573,14 @@ public final class CrazyCrystals extends NetworkGameClient {
             vp.a(103);
             return;
           }
-          if (null == fo.field_i) {
+          if (null == TextHotspotBounds.field_i) {
             td.a(76.0f, BoundedRandomAccessFile.field_l, false);
             this.renderClientFrame(-124);
-            fo.field_i = new PcmSample[4];
-            fo.field_i[0] = ha.a(vm.field_k, "initialset", "footstep-rocky").b();
-            fo.field_i[1] = ha.a(vm.field_k, "initialset", "footstep-grass").b();
-            fo.field_i[2] = ha.a(vm.field_k, "initialset", "footstep-metal").b();
-            fo.field_i[3] = ha.a(vm.field_k, "initialset", "footstep-tiles").b();
+            TextHotspotBounds.field_i = new PcmSample[4];
+            TextHotspotBounds.field_i[0] = ha.a(vm.field_k, "initialset", "footstep-rocky").b();
+            TextHotspotBounds.field_i[1] = ha.a(vm.field_k, "initialset", "footstep-grass").b();
+            TextHotspotBounds.field_i[2] = ha.a(vm.field_k, "initialset", "footstep-metal").b();
+            TextHotspotBounds.field_i[3] = ha.a(vm.field_k, "initialset", "footstep-tiles").b();
             rn.field_p = ha.a(vm.field_k, "initialset", "footstep-ball").b();
             nj.field_c = bl.a(ma.field_p, "initialset", "spider-advancing").a();
             cf.field_f = bl.a(ma.field_p, "initialset", "spider-crushed").a();
@@ -1589,7 +1589,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             oa.field_e = bl.a(ma.field_p, "initialset", "key").a();
             gk.field_j = bl.a(ma.field_p, "initialset", "break-ledge").a();
             MouseWheelInput.field_k = ha.a(vm.field_k, "initialset", "bomb-explode").b();
-            lb.field_d = ha.a(vm.field_k, "initialset", "tile-explode").b();
+            DefaultTextWidgetRenderer.field_d = ha.a(vm.field_k, "initialset", "tile-explode").b();
             vp.a(119);
             return;
           }
@@ -1714,8 +1714,8 @@ public final class CrazyCrystals extends NetworkGameClient {
           AudioOutput.configureAudio(22050, true, 10);
           hb.field_h = AudioOutput.createOutput(ResultScene.field_a, (java.awt.Component) ((Object) jd.field_D), 0, 0);
           gf.field_c = AudioOutput.createOutput(ResultScene.field_a, (java.awt.Component) ((Object) jd.field_D), 1, 22050);
-          tb.field_d = new PcmStreamMixer();
-          hb.field_h.setRootStream(tb.field_d);
+          TextLayout.field_d = new PcmStreamMixer();
+          hb.field_h.setRootStream(TextLayout.field_d);
           this.a(true, false, true, true, -1);
           ao.field_e = 16760896;
           SpriteGeometry.field_s = 0;
@@ -1761,7 +1761,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             hb.field_g = false;
           }
           if (!cp.field_k[KeyboardInputHandler.field_c]) {
-            lb.field_k = false;
+            DefaultTextWidgetRenderer.field_k = false;
           }
           if (!param0) {
             this.disposeClient(70);
@@ -1876,7 +1876,7 @@ public final class CrazyCrystals extends NetworkGameClient {
                     if (var2 != null) {
                       var2.c(-1);
                     }
-                    var4 = tb.a(true);
+                    var4 = TextLayout.a(true);
                     if (3 == var4) {
                       dq.a(-32056, true);
                     }
@@ -1931,7 +1931,7 @@ public final class CrazyCrystals extends NetworkGameClient {
             if (var2_intLifetime1 == 0 ||
               var2_intLifetime1 == 1) {
               ue.a(2, -109);
-              fo.a(3, (byte) -98);
+              TextHotspotBounds.a(3, (byte) -98);
               AccountServiceResult.a(4, false);
               hk.a((byte) 5, 5);
             }

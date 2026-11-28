@@ -303,9 +303,9 @@ final class AttackOrder extends CreatureOrder {
         BattleCreature var21 = null;
         DamageTileEffect var22_ref_sl = null;
         ClearTileFlagEffect var22_ref_ro = null;
-        bm var22_ref_bm = null;
+        SetTileTerrainEffect var22_ref_bm = null;
         int var22 = 0;
-        o var23_ref_o = null;
+        ChangeAllCreaturesHealthEffect var23_ref_o = null;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
@@ -385,7 +385,7 @@ final class AttackOrder extends CreatureOrder {
                       var22_ref_sl = new DamageTileEffect(var9, var18, var19);
                       param1.addLast(var22_ref_sl, true);
                       if (var20.terrain == 34) {
-                        var23_ref_o = new o(50);
+                        var23_ref_o = new ChangeAllCreaturesHealthEffect(50);
                         param1.addLast(var23_ref_o, true);
                       }
                     }
@@ -394,13 +394,13 @@ final class AttackOrder extends CreatureOrder {
                       param1.addLast(var22_ref_ro, true);
                     }
                     if (var29.field_j == 80) {
-                      var22_ref_bm = new bm(15, var18, var19);
+                      var22_ref_bm = new SetTileTerrainEffect(15, var18, var19);
                       if (param2.tiles[var18][var19].occupant == null) {
                         param1.addLast(var22_ref_bm, true);
                       }
                     } else {
                       if (var29.field_j == 81) {
-                        var22_ref_bm = new bm(14, var18, var19);
+                        var22_ref_bm = new SetTileTerrainEffect(14, var18, var19);
                         if (null == param2.tiles[var18][var19].occupant) {
                           param1.addLast(var22_ref_bm, true);
                         }

@@ -29,7 +29,7 @@ final class ik {
               this.field_a.a(lga.a(true, new String[]{var3}, cc.field_a), true, 3);
             } else {
               if (var5.field_zb) {
-                this.field_a.a(lga.a(true, new String[]{var3}, o.field_i), true, 2);
+                this.field_a.a(lga.a(true, new String[]{var3}, ChangeAllCreaturesHealthEffect.field_i), true, 2);
               } else {
                 if (!var5.field_gc &&
                   var5.field_Fb && (!var5.field_Zb ||

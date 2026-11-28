@@ -101,7 +101,7 @@ final class Bzip2State {
         if (!kc.field_d.tryLoadAllGroups(-75)) {
           return ob.field_b + " - " + kc.field_d.getArchiveLoadPercent((byte) -43) + "%";
         }
-        return ja.field_L;
+        return RichTextWidget.field_L;
     }
 
     Bzip2State() {

@@ -18,19 +18,19 @@ final class jf extends mg {
     static RgbSprite field_O;
     static bj field_M;
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         String var3 = null;
         int var2 = this.field_A.field_m ? 1 : 0;
         String var3Lifetime1;
         if (param0 >= 121) {
           this.field_A.field_m = this.field_m;
-          var3 = this.field_A.b(122);
+          var3 = this.field_A.getTooltipText(122);
           this.field_A.field_m = var2 != 0 ? true : false;
           return var3;
         }
         jf.countSetBits((byte) 47, -104);
         this.field_A.field_m = this.field_m;
-        var3Lifetime1 = this.field_A.b(122);
+        var3Lifetime1 = this.field_A.getTooltipText(122);
         this.field_A.field_m = var2 != 0 ? true : false;
         return var3Lifetime1;
     }

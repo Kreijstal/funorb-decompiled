@@ -482,7 +482,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
         int var1;
         boolean stackIn_4_0 = false;
         var1 = 34 % ((param0 + 11) / 48);
-        stackIn_4_0 = (10 <= fj.field_i) && (kj.field_R >= 13);
+        stackIn_4_0 = (10 <= fj.field_i) && (RichTextWidget.field_R >= 13);
         return stackIn_4_0;
     }
 

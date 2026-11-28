@@ -9,9 +9,9 @@ final class vj {
     final static boolean a(int param0) {
         if (param0 < 38) {
           vj.a(-16);
-          return cc.field_f == null ? true : false;
+          return TextHotspotBounds.field_f == null ? true : false;
         }
-        return cc.field_f == null ? true : false;
+        return TextHotspotBounds.field_f == null ? true : false;
     }
 
     public static void clearStaticReferences(byte param0) {

@@ -233,7 +233,7 @@ final class di extends ci {
               }
               var8 = (String) null;
               IsaacCipher.a(9822, vk.field_g, ij.field_c, param1, var5, (String) null);
-              BufferedSocket.a(ij.field_c, vk.field_g, (byte) -54, var5, re.field_p);
+              BufferedSocket.a(ij.field_c, vk.field_g, (byte) -54, var5, TextHotspotBounds.field_p);
               rc.b(param0 ^ 24);
               e.h((byte) -120);
             }
@@ -493,7 +493,7 @@ final class di extends ci {
         if (lk.a((byte) 81)) {
           param1 = false;
         }
-        hl.a(-416228287, param1);
+        DefaultTextWidgetRenderer.a(-416228287, param1);
         if (fn.field_a) {
           SoftwareRasterizer.darkenRectangleHalf(qa.field_f.field_a.field_mb, qa.field_f.field_a.field_V, qa.field_f.field_a.field_M, qa.field_f.field_a.field_pb);
           qa.field_f.field_a.a(false, param1);

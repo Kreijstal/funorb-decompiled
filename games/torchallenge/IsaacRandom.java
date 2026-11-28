@@ -182,12 +182,12 @@ final class IsaacRandom {
             o.field_l = o.field_l - 1;
             if (0 == o.field_l) {
               GameApplet.field_o = 0;
-              df.field_O = true;
+              RichTextWidget.field_O = true;
             }
           }
           if (o.field_l > 0 &&
             BufferedSocket.field_p.field_db <= 0) {
-            df.field_O = true;
+            RichTextWidget.field_O = true;
             o.field_l = 0;
             GameApplet.field_o = 0;
           }

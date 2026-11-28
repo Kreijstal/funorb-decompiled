@@ -8,7 +8,7 @@ final class dia extends InteractiveWidget {
     private dia(String param0, WidgetRenderer param1, WidgetListener param2) {
         super(param0, param1, param2);
         try {
-          this.renderer = fda.field_i.field_h;
+          this.renderer = RemoveDefeatedCreatureEffect.field_i.field_h;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -29,9 +29,9 @@ final class dia extends InteractiveWidget {
     }
 
     private dia(String param0, WidgetListener param1) {
-        this(param0, fda.field_i.field_r, param1);
+        this(param0, RemoveDefeatedCreatureEffect.field_i.field_r, param1);
         try {
-          this.renderer = fda.field_i.field_h;
+          this.renderer = RemoveDefeatedCreatureEffect.field_i.field_h;
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "dia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

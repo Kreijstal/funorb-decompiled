@@ -165,7 +165,7 @@ final class ada extends k {
         stackIn_21_1 = 19842;
         stackIn_22_2 = (param0) && (!param3) && (eda.field_j);
         ((UiComponent) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_22_2);
-        lia.field_j.field_a.f(18632);
+        ChangeHealthAndStatusEffect.field_j.field_a.f(18632);
         if (mc.field_g.field_R != 0) {
           StickySpecial.field_p = true;
         }

@@ -64,7 +64,7 @@ final class ei {
         try {
           SoftwareRasterizer.drawRectangleOutline(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
-          if (dm.field_b == null) {
+          if (TextLayout.field_b == null) {
             if (rc.field_a != null) {
               rc.field_a.drawParagraph(cj.field_c, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
@@ -74,7 +74,7 @@ final class ei {
             var5 = (ResourceArchive) null;
             ei.a((byte) 4, -62, 74, (ResourceArchive) null);
           }
-          var7 = dm.field_b[kb.field_m];
+          var7 = TextLayout.field_b[kb.field_m];
           if (var7 != null) {
             var7.draw(245, 199);
           } else {
@@ -83,7 +83,7 @@ final class ei {
             }
           }
           if (og.field_b > h.field_A) {
-            var8 = dm.field_b[MidiPcmStream.field_u];
+            var8 = TextLayout.field_b[MidiPcmStream.field_u];
             if (var8 != null) {
               var2_int = h.field_A * (var8.field_s + 60) / og.field_b;
               var3 = -30 + var2_int;
@@ -98,8 +98,8 @@ final class ei {
             var2 = null;
             var6 = 0;
             var3Lifetime1 = var6;
-            while (dm.field_b.length > var6) {
-              var9 = dm.field_b[var6];
+            while (TextLayout.field_b.length > var6) {
+              var9 = TextLayout.field_b[var6];
               if (var9 != null && (var9.field_s != 365 ||
                 var9.field_t != 139)) {
                 if (var2 == null) {

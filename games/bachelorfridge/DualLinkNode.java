@@ -58,7 +58,7 @@ class DualLinkNode extends IntrusiveNode {
     final static EventEffect a(PacketBuffer param0, int param1) {
         CreatureRef var2 = null;
         RuntimeException var2_ref = null;
-        fda stackIn_3_0 = null;
+        RemoveDefeatedCreatureEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -68,7 +68,7 @@ class DualLinkNode extends IntrusiveNode {
             field_l = 115;
           }
           var2 = qi.a(param0, (byte) 64);
-          stackIn_3_0 = new fda(var2);
+          stackIn_3_0 = new RemoveDefeatedCreatureEffect(var2);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

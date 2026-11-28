@@ -21,7 +21,7 @@ public final class StarCannon extends ag {
         if (param0 != -23523) {
           return;
         }
-        se.field_l = b.a(false, 3);
+        RichTextLayout.field_l = b.a(false, 3);
         jg.field_F = b.a(false, 4);
         BoundedRandomAccessFile.field_c = b.a(false, 5);
         ej.a(FrameTimer.field_f, lf.field_eb, param0 + 23396);
@@ -1587,7 +1587,7 @@ public final class StarCannon extends ag {
                   if (null != n.field_a) {
                     re.a(0);
                   }
-                  nh.a(ll.b(72), 337033697);
+                  TextLineMetrics.a(ll.b(72), 337033697);
                 }
                 if (2364824 == var2) {
                   ie.clearStaticReferences(-1);
@@ -1596,10 +1596,10 @@ public final class StarCannon extends ag {
                 this.b(true);
               }
             } else {
-              if (nh.field_e != 0) {
+              if (TextLineMetrics.field_e != 0) {
                 this.b(true);
               } else {
-                var2 = bd.b(31380);
+                var2 = TextLayout.b(31380);
                 if (var2 == 2) {
                   re.a(0);
                 }
@@ -1630,7 +1630,7 @@ public final class StarCannon extends ag {
           this.a(true);
         }
         var2Lifetime1 = 0;
-        if (se.b((byte) -91)) {
+        if (RichTextLayout.b((byte) -91)) {
           var3 = this.h((byte) 58);
           if (var3 == 2) {
             var2Lifetime1 = 1;
@@ -1689,8 +1689,8 @@ public final class StarCannon extends ag {
             lj.field_h.tryLoadAllGroups(param1 + 31185)) {
             if (AccountNameAvailabilityValidator.field_p.ensureIndexLoaded((byte) 95) &&
               AccountNameAvailabilityValidator.field_p.tryLoadAllGroups(29741)) {
-              if (se.field_l.ensureIndexLoaded((byte) 109) &&
-                se.field_l.tryLoadAllGroups(29741)) {
+              if (RichTextLayout.field_l.ensureIndexLoaded((byte) 109) &&
+                RichTextLayout.field_l.tryLoadAllGroups(29741)) {
                 if (jg.field_F.ensureIndexLoaded((byte) 119) &&
                   jg.field_F.tryLoadAllGroups(29741)) {
                   if (BoundedRandomAccessFile.field_c.ensureIndexLoaded((byte) 127) &&
@@ -1770,24 +1770,24 @@ public final class StarCannon extends ag {
                 ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, ae.field_a, ""), param1 - 12479, 40.0f);
                 return;
               }
-              ma.a(SecondaryNodeDeque.a(kc.field_U, se.field_l, (byte) -38, BitPacketBuffer.field_l, ""), -13923, 30.0f);
+              ma.a(SecondaryNodeDeque.a(kc.field_U, RichTextLayout.field_l, (byte) -38, BitPacketBuffer.field_l, ""), -13923, 30.0f);
               return;
             }
-            ma.a(SecondaryNodeDeque.a(lc.field_ib, AccountNameAvailabilityValidator.field_p, (byte) -38, bd.field_g, ""), -13923, 20.0f);
+            ma.a(SecondaryNodeDeque.a(lc.field_ib, AccountNameAvailabilityValidator.field_p, (byte) -38, TextLayout.field_g, ""), -13923, 20.0f);
             return;
           }
-          ma.a(SecondaryNodeDeque.a(lc.field_ib, lj.field_h, (byte) -38, bd.field_g, ""), param1 ^ 13249, 10.0f);
+          ma.a(SecondaryNodeDeque.a(lc.field_ib, lj.field_h, (byte) -38, TextLayout.field_g, ""), param1 ^ 13249, 10.0f);
           return;
         }
-        if (null != se.field_l) {
+        if (null != RichTextLayout.field_l) {
           ma.a(GzipDecompressor.field_d, -13923, 75.0f);
           this.renderClientFrame((byte) 22);
           var3_ref = new ja(lj.field_h, AccountNameAvailabilityValidator.field_p);
-          fb.field_t = dl.a(var3_ref, (byte) 84, "music/star cannon level 1 final", "", se.field_l);
-          TextFieldValidator.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", se.field_l);
-          r.field_b = dl.a(var3_ref, (byte) -82, "music/star cannon boss final", "", se.field_l);
+          fb.field_t = dl.a(var3_ref, (byte) 84, "music/star cannon level 1 final", "", RichTextLayout.field_l);
+          TextFieldValidator.field_i = dl.a(var3_ref, (byte) 66, "music/star cannon level 2 final", "", RichTextLayout.field_l);
+          r.field_b = dl.a(var3_ref, (byte) -82, "music/star cannon boss final", "", RichTextLayout.field_l);
           AccountNameAvailabilityValidator.field_p = null;
-          se.field_l = null;
+          RichTextLayout.field_l = null;
           lj.field_h = null;
           tc.j(32);
           return;
@@ -2764,8 +2764,8 @@ public final class StarCannon extends ag {
           }
         }
         if (!(tj.field_G > 1000) ||
-          !(se.field_m > 2)) {
-          if ((2 == se.field_m) &&
+          !(RichTextLayout.field_m > 2)) {
+          if ((2 == RichTextLayout.field_m) &&
             (ua.field_c == 20)) {
             tj.field_G = 0;
             hc.field_e = "hahahah";
@@ -2779,9 +2779,9 @@ public final class StarCannon extends ag {
           stackIn_513_1 = -1;
           if (stackIn_513_0 < stackIn_513_1) {
             hc.field_e = hc.field_e.substring(1) + field_E;
-            if ((!(se.field_m >= 2) ||
+            if ((!(RichTextLayout.field_m >= 2) ||
               !(ua.field_c >= 20) &&
-              2 == se.field_m) && 2 <= ad.field_y) {
+              2 == RichTextLayout.field_m) && 2 <= ad.field_y) {
               stackIn_460_0 = (!a.field_a) ? 0 : 1;
               var3Lifetime6 = stackIn_460_0;
               if (hc.field_e.equalsIgnoreCase("thunder")) {
@@ -3291,7 +3291,7 @@ public final class StarCannon extends ag {
         pd.resetStaticState((byte) 98);
         vj.resetStaticState(true);
         fg.clearStaticReferences((byte) 6);
-        hd.resetStaticState((byte) 125);
+        DefaultTextWidgetRenderer.resetStaticState((byte) 125);
         gl.clearStaticReferences();
         fd.clearStaticReferences(-12241);
         kl.clearStaticReferences(21367);
@@ -3318,7 +3318,7 @@ public final class StarCannon extends ag {
         w.clearStaticReferences(3);
         eg.clearStaticReferences((byte) -118);
         ci.clearStaticReferences(-124);
-        bd.clearStaticReferences((byte) -74);
+        TextLayout.clearStaticReferences((byte) -74);
         UiWidget.c((byte) -44);
         InteractiveWidget.clearStaticReferences(-115);
         kf.resetStaticState(0);
@@ -3347,7 +3347,7 @@ public final class StarCannon extends ag {
         qj.clearStaticReferences(-102);
         fa.clearStaticReferences(1851621384);
         NameSuggestionsPanel.clearStaticReferences(-16);
-        ab.clearDeclaredStaticReferences((byte) 119);
+        RichTextWidget.clearDeclaredStaticReferences((byte) 119);
         jg.e(934716193);
         pa.f(-200);
         gh.resetStaticState(13329);
@@ -3358,7 +3358,7 @@ public final class StarCannon extends ag {
         sj.clearStaticReferences((byte) 126);
         SoundFilter.clearStaticReferences();
         li.clearStaticReferences(-23);
-        se.clearDeclaredStaticReferences((byte) -2);
+        RichTextLayout.clearDeclaredStaticReferences((byte) -2);
         DirectByteStorage.clearStaticReferences(20756);
         ve.resetStaticState(32729);
         tj.clearStaticReferences(-123);
@@ -3402,14 +3402,14 @@ public final class StarCannon extends ag {
         dg.clearStaticReferences(124);
         of.clearStaticReferences(true);
         il.clearStaticReferences(2147483647);
-        nh.resetStaticState(false);
+        TextLineMetrics.resetStaticState(false);
         AccountNameAvailabilityValidator.resetStaticState(0);
         PasswordValidator.clearStaticReferences((byte) -98);
         ConfirmedEmailAvailabilityValidator.clearDeclaredStaticReferences(1);
         AgeValidator.clearDeclaredStaticReferences(24979);
         MatchingFieldValidator.e((byte) 114);
         og.clearStaticReferences((byte) 92);
-        oi.a(false);
+        TextHotspotBounds.a(false);
         p.a(11);
         DebouncedFieldValidator.clearStaticReferences(1);
         sk.a(false);
@@ -3453,12 +3453,12 @@ public final class StarCannon extends ag {
           this.l((byte) -102);
         }
         if (!ld.field_ib) {
-          oi.a((java.awt.Canvas) (var2), (byte) -128);
+          TextHotspotBounds.a((java.awt.Canvas) (var2), (byte) -128);
           return;
         }
         if (oh.field_a != null) {
           ma.a(q.field_i, -13923, 100.0f);
-          oi.a((java.awt.Canvas) (var2), (byte) 72);
+          TextHotspotBounds.a((java.awt.Canvas) (var2), (byte) 72);
           return;
         }
         if (FullscreenFocusCanvas.field_d == 0) {
@@ -3564,7 +3564,7 @@ public final class StarCannon extends ag {
           j.field_c[var3.field_g].drawQuarterSizeAveraged(8, var4);
           af.field_y.drawString(AgeValidator.field_j[var3.field_g], 48, var4 + af.field_y.field_p, 65535, -1);
         }
-        if (nh.field_e != 0) {
+        if (TextLineMetrics.field_e != 0) {
           var4Lifetime1 = 256 * IsaacRandom.field_e / 50;
           if (0 < var4Lifetime1) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_f, 0, var4Lifetime1);
@@ -3607,7 +3607,7 @@ public final class StarCannon extends ag {
         ti.field_f = new PcmStreamMixer();
         nb.field_f.setRootStream(jk.field_k);
         ea.field_d.setRootStream(ti.field_f);
-        se.field_m = 0;
+        RichTextLayout.field_m = 0;
         bi.field_b = false;
         mc.field_b = 128;
         dg.field_l = 0;
@@ -3678,7 +3678,7 @@ public final class StarCannon extends ag {
           ja.field_d = ja.field_d - 10;
         }
         va.field_f = va.field_f + 1;
-        se.field_u = 256;
+        RichTextLayout.field_u = 256;
         if (5 < va.field_f) {
           va.field_f = va.field_f - 5;
           pd.field_a = pd.field_a + 1;
@@ -3694,8 +3694,8 @@ public final class StarCannon extends ag {
             pk.field_a.removeFirst((byte) 39);
           }
         }
-        if (nh.field_e != 0) {
-          if (1 == nh.field_e) {
+        if (TextLineMetrics.field_e != 0) {
+          if (1 == TextLineMetrics.field_e) {
             IsaacRandom.field_e = IsaacRandom.field_e + 1;
             if (IsaacRandom.field_e == 50) {
               if (!gh.f(-23093)) {
@@ -3703,13 +3703,13 @@ public final class StarCannon extends ag {
               } else {
                 mf.a((byte) -58);
               }
-              nh.field_e = 2;
+              TextLineMetrics.field_e = 2;
             }
           } else {
-            if (nh.field_e != 2) {
+            if (TextLineMetrics.field_e != 2) {
               IsaacRandom.field_e = IsaacRandom.field_e - 1;
               if (IsaacRandom.field_e == 0) {
-                nh.field_e = 0;
+                TextLineMetrics.field_e = 0;
               }
             } else {
               if (MouseInput.a(77)) {
@@ -3722,7 +3722,7 @@ public final class StarCannon extends ag {
               if (gh.f(-23093)) {
                 NanoFrameTimer.a(240, 12, 22, jk.field_f, 18, 320, jk.field_f, 12, a.field_b, -11, 12, false);
               }
-              nh.field_e = 3;
+              TextLineMetrics.field_e = 3;
               pa.field_L = field_z;
             }
           }

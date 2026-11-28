@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends kj implements tl, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends kj implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private InteractiveWidget field_Z;
     private ValidatedTextField field_K;
     static int[] field_T;
@@ -11,7 +11,7 @@ final class AccountRegistrationPanel extends kj implements tl, WidgetActivationL
     static String[][] field_bb;
     static int[][][] field_M;
     private ValidatedTextField field_Q;
-    private df field_U;
+    private RichTextWidget field_U;
     static int field_ab;
     private InteractiveWidget field_V;
     private ValidatedTextField field_S;
@@ -30,7 +30,7 @@ final class AccountRegistrationPanel extends kj implements tl, WidgetActivationL
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(df param0, int param1, int param2, boolean param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, boolean param3) {
         String discarded$1 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -506,8 +506,8 @@ final class AccountRegistrationPanel extends kj implements tl, WidgetActivationL
         bg var4 = new bg(46, var3, this.field_p - 90, 25, this.field_W, true, this.field_p - 120, 5, GameApplet.field_f, 11579568, ti.field_a);
         this.a(0, var4);
         var3 = var3 + var4.field_l;
-        bc var5 = new bc(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
-        this.field_U = new df(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
+        this.field_U = new RichTextWidget(var2, var5);
         this.field_U.field_r = "";
         this.field_U.a(0, false, gh.field_z);
         this.field_U.a(1, false, gh.field_z);
@@ -616,21 +616,21 @@ final class AccountRegistrationPanel extends kj implements tl, WidgetActivationL
     }
 
     final static void a(int param0, boolean param1) {
-        if (null == fa.field_q) {
-          fa.field_q = new Sprite(1, 1);
+        if (null == RichTextLayout.field_q) {
+          RichTextLayout.field_q = new Sprite(1, 1);
         }
-        fa.field_q.fullHeight = SoftwareRasterizer.height;
-        fa.field_q.storedHeight = SoftwareRasterizer.height;
+        RichTextLayout.field_q.fullHeight = SoftwareRasterizer.height;
+        RichTextLayout.field_q.storedHeight = SoftwareRasterizer.height;
         if (!param1) {
           field_M = (int[][][]) null;
         }
-        Sprite fieldTemp$0 = fa.field_q;
-        fa.field_q.fullWidth = SoftwareRasterizer.width;
+        Sprite fieldTemp$0 = RichTextLayout.field_q;
+        RichTextLayout.field_q.fullWidth = SoftwareRasterizer.width;
         fieldTemp$0.storedWidth = SoftwareRasterizer.width;
-        fa.field_q.pixels = SoftwareRasterizer.pixels;
+        RichTextLayout.field_q.pixels = SoftwareRasterizer.pixels;
         SoftwareRasterizer.saveClip(pf.field_g);
         SoftwareRasterizer.setClip(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
-        fa.field_q.drawTransparentWithIntensity(0, 0, param0);
+        RichTextLayout.field_q.drawTransparentWithIntensity(0, 0, param0);
         SoftwareRasterizer.restoreClip(pf.field_g);
     }
 

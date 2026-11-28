@@ -149,14 +149,14 @@ final class KeyboardListener implements java.awt.event.KeyListener, java.awt.eve
         if (qc.field_g == PacketBuffer.field_m) {
           return sk.field_G;
         }
-        if (!bd.field_u.a(false)) {
-          return bd.field_u.a(-63);
+        if (!RichTextLayout.field_u.a(false)) {
+          return RichTextLayout.field_u.a(-63);
         }
         int var1 = -5 % ((29 - param0) / 53);
         if (tg.field_c != PacketBuffer.field_m) {
           return vh.field_k;
         }
-        return bd.field_u.a(-118);
+        return RichTextLayout.field_u.a(-118);
     }
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {

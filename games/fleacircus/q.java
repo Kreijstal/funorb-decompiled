@@ -18,7 +18,7 @@ final class q {
           if (!param1) {
             q.a(false);
           }
-          stackIn_3_0 = e.a(param0, false, 0);
+          stackIn_3_0 = DefaultTextWidgetRenderer.a(param0, false, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -41,7 +41,7 @@ class kda {
     }
 
     final static String b(int param0) {
-        if (o.d((byte) 116)) {
+        if (ChangeAllCreaturesHealthEffect.d((byte) 116)) {
           return null;
         }
         if (param0 <= 92) {

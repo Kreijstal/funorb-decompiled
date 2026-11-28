@@ -15,7 +15,7 @@ final class nk extends IntrusiveNode {
             var1 = new vg();
           }
           var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, 11033, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.field_k, SoftwareRasterizer.clipTop);
-          cj.field_j.addLast((byte) -97, var1);
+          RichTextLayout.field_j.addLast((byte) -97, var1);
           return;
         }
         nk.clearStaticReferences(-35);
@@ -23,7 +23,7 @@ final class nk extends IntrusiveNode {
           var1 = new vg();
         }
         var1.a(SoftwareRasterizer.clipBottom, SoftwareRasterizer.stride, 11033, SoftwareRasterizer.pixels, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipRight, SoftwareRasterizer.field_k, SoftwareRasterizer.clipTop);
-        cj.field_j.addLast((byte) -97, var1);
+        RichTextLayout.field_j.addLast((byte) -97, var1);
     }
 
     final static void a(int param0, int param1) {

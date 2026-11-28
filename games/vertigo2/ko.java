@@ -145,9 +145,9 @@ final class ko extends af {
         tn var9 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         try {
-          if (ce.field_b != ro.field_g.field_d) {
-            tc.field_b = tc.field_b + (ro.field_g.field_d - ce.field_b);
-            ce.field_b = ro.field_g.field_d;
+          if (ce.field_b != TextLayout.field_g.field_d) {
+            tc.field_b = tc.field_b + (TextLayout.field_g.field_d - ce.field_b);
+            ce.field_b = TextLayout.field_g.field_d;
           }
           if (ld.field_b > TextFieldValidator.field_i) {
             TextFieldValidator.field_i = TextFieldValidator.field_i + 1;
@@ -157,11 +157,11 @@ final class ko extends af {
           }
           kg.c((byte) 77);
           td.field_c.a(0, param0);
-          if (lq.field_a != null) {
+          if (TextLineMetrics.field_a != null) {
             if (pe.field_r) {
-              lq.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
+              TextLineMetrics.field_a.a(td.field_c.field_C, param0, (byte) 82, td.field_c.field_ob);
             } else {
-              lq.field_a = null;
+              TextLineMetrics.field_a = null;
             }
           }
           for (var4_int = 0; var4_int < 5; var4_int++) {
@@ -270,8 +270,8 @@ final class ko extends af {
         }
     }
 
-    final String a(boolean param0) {
-        String var2 = this.field_T.a(param0);
+    final String getTooltipText(boolean param0) {
+        String var2 = this.field_T.getTooltipText(param0);
         if (var2 != null) {
           return var2;
         }

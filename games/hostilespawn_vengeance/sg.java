@@ -137,7 +137,7 @@ final class sg {
         int[] var33 = null;
         var24 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var25 = mm.field_m[0];
+          var25 = TextHotspotBounds.field_m[0];
           var2 = var25.field_j;
           var3 = var2.getClampedTileIndex(-4);
           var29 = ln.field_a.field_c;

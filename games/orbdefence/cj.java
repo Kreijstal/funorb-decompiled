@@ -19,11 +19,11 @@ final class cj {
             stackIn_2_0 = (mi) null;
             return stackIn_2_0;
           }
-          if (bd.field_u.a(false) &&
-            !param1.equals(bd.field_u.a(-80))) {
-            bd.field_u = hg.a(param1, (byte) 113);
+          if (RichTextLayout.field_u.a(false) &&
+            !param1.equals(RichTextLayout.field_u.a(-80))) {
+            RichTextLayout.field_u = hg.a(param1, (byte) 113);
           }
-          stackIn_7_0 = bd.field_u;
+          stackIn_7_0 = RichTextLayout.field_u;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

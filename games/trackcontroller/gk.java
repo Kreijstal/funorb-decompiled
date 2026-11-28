@@ -137,7 +137,7 @@ final class gk {
               var19[0][1 + 4 * var10] = ii.field_q[var11];
               var19[0][4 * var10 + 2] = qf.field_a[var11];
               var19[0][3 + var10 * 4] = qi.field_b[var11];
-              if (rb.a(false, Model.field_C[var11]) &&
+              if (TextLayout.a(false, Model.field_C[var11]) &&
                 qf.field_a[var11] + ii.field_q[var11] + qi.field_b[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
@@ -155,7 +155,7 @@ final class gk {
               var19[1][var14 * 4 + 1] = ii.field_q[var11Lifetime1];
               var19[1][2 + var14 * 4] = qf.field_a[var11Lifetime1];
               var19[1][var14 * 4 + 3] = qi.field_b[var11Lifetime1];
-              if (rb.a(false, Model.field_C[var11Lifetime1]) &&
+              if (TextLayout.a(false, Model.field_C[var11Lifetime1]) &&
                 qf.field_a[var11Lifetime1] + ii.field_q[var11Lifetime1] + qi.field_b[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;

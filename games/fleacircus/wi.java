@@ -51,11 +51,11 @@ abstract class wi {
         jd.field_q = hk.a(ib.field_f, "", "laura_woohoo").b().resample(var1Lifetime1);
     }
 
-    final static e a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         if (param0 != 17641) {
           wi.clearStaticReferences(false);
           if (tg.field_e == null) {
-            tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
+            tg.field_e = new DefaultTextWidgetRenderer(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
             return tg.field_e;
           }
           return tg.field_e;
@@ -63,7 +63,7 @@ abstract class wi {
         if (tg.field_e != null) {
           return tg.field_e;
         }
-        tg.field_e = new e(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
+        tg.field_e = new DefaultTextWidgetRenderer(nb.field_c, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_c.field_H, -1, 2147483647, true);
         return tg.field_e;
     }
 

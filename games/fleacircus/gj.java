@@ -340,7 +340,7 @@ class gj extends UiComponent implements wg {
         try {
           this.field_C.addLast(false, param0);
           if (param1 >= -27) {
-            this.g(121);
+            this.getTooltipText(121);
           }
         } catch (RuntimeException runtimeException) {
           throw pf.wrapClientException((Throwable) ((Object) runtimeException), "gj.TA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -536,13 +536,13 @@ class gj extends UiComponent implements wg {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         String var4 = null;
         int var5 = fleas.field_A ? 1 : 0;
         we var2 = new we(this.field_C);
         UiComponent var3 = (UiComponent) (var2.b(param0 ^ -127));
         while (var3 != null) {
-          var4 = var3.g(4);
+          var4 = var3.getTooltipText(4);
           if (var4 != null) {
             return var4;
           }
@@ -551,7 +551,7 @@ class gj extends UiComponent implements wg {
         if (param0 == 4) {
           return null;
         }
-        this.g(49);
+        this.getTooltipText(49);
         return null;
     }
 
@@ -576,7 +576,7 @@ class gj extends UiComponent implements wg {
           var4 = (UiComponent) (var3.c(-6144));
         }
         if (param0 != 8) {
-          this.g(-53);
+          this.getTooltipText(-53);
         }
         return var2;
     }

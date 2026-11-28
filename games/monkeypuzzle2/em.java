@@ -51,14 +51,14 @@ final class em extends ButtonWidget {
             }
             var7 = null;
             if (ah.field_f != null) {
-              if (bl.field_o == null) {
-                bl.field_o = new BufferedRandomAccessFile[rk.field_g.field_e.length];
+              if (TextHotspotBounds.field_o == null) {
+                TextHotspotBounds.field_o = new BufferedRandomAccessFile[rk.field_g.field_e.length];
               }
-              if (null == bl.field_o[param1]) {
-                bl.field_o[param1] = new BufferedRandomAccessFile(rk.field_g.field_e[param1], 12000, 0);
+              if (null == TextHotspotBounds.field_o[param1]) {
+                TextHotspotBounds.field_o[param1] = new BufferedRandomAccessFile(rk.field_g.field_e[param1], 12000, 0);
                 rk.field_g.field_e[param1] = null;
               }
-              var7 = new SectorCacheStore(param1, ah.field_f, bl.field_o[param1], 2097152);
+              var7 = new SectorCacheStore(param1, ah.field_f, TextHotspotBounds.field_o[param1], 2097152);
             }
             var8 = c.field_h.a(-24559, (SectorCacheStore) (var6), param1, (SectorCacheStore) (var7), param0);
             if (param5 != 50) {

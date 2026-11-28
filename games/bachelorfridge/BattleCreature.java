@@ -815,13 +815,13 @@ final class BattleCreature extends CreatureProfile {
             0 >= this.statusTurns &&
             !this.isCarryingFlag((byte) 85) &&
             this.shield <= 0) {
-            var6.a(true, new ks(new CreatureRef(this)));
+            var6.a(true, new ClearCreatureStatusEffect(new CreatureRef(this)));
             this.statusId = 0;
             this.recalculateCreatureStats(114);
           }
           if (this.statusId == 42 &&
             this.field_G) {
-            var6.a(true, new ks(new CreatureRef(this)));
+            var6.a(true, new ClearCreatureStatusEffect(new CreatureRef(this)));
             this.statusId = 0;
             this.recalculateCreatureStats(param3 ^ -15);
           }
@@ -839,7 +839,7 @@ final class BattleCreature extends CreatureProfile {
                 if (this.field_K[var7_int] == var8.field_g &&
                   var8.field_g != 0) {
                   this.setCooldownForMoveSlot(var7_int, 0);
-                  var6.a(true, new kt(new CreatureRef(this.ownerIndex, this.rosterSlot), var7_int));
+                  var6.a(true, new SetMoveSlotCooldownEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), var7_int));
                 }
               }
               var7_int++;
@@ -852,10 +852,10 @@ final class BattleCreature extends CreatureProfile {
             stackIn_46_1 = this.statusId;
           }
           if (stackIn_46_0 == stackIn_46_1) {
-            var6.a(true, new qq(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, 5));
+            var6.a(true, new ChangeCreatureStatOrHealthEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, 5));
           }
           if (this.statusId == 12) {
-            var6.a(true, new qq(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, 20));
+            var6.a(true, new ChangeCreatureStatOrHealthEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, 20));
           }
           if (this.statusId == 14) {
             var7_intLifetime1 = -this.hp + this.field_t;
@@ -863,18 +863,18 @@ final class BattleCreature extends CreatureProfile {
               var7_intLifetime1 = 5;
             }
             if (var7_intLifetime1 > 0) {
-              var6.a(true, new qq(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, -var7_intLifetime1));
+              var6.a(true, new ChangeCreatureStatOrHealthEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, -var7_intLifetime1));
             }
           }
           if (44 == this.statusId) {
-            var6.a(true, new qq(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, -20));
+            var6.a(true, new ChangeCreatureStatOrHealthEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, -20));
           }
           if (this.statusId == 53) {
-            var6.a(true, new qq(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, 10));
+            var6.a(true, new ChangeCreatureStatOrHealthEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -1, 10));
           }
           if (this.statusId != 32) {
             if (var5_int == 29) {
-              var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), 0, 12));
+              var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), 0, 12));
             }
             if (var5_int == 14) {
               var7_intLifetime2 = -this.hp + this.field_t;
@@ -882,25 +882,25 @@ final class BattleCreature extends CreatureProfile {
                 var7_intLifetime2 = 5;
               }
               if (var7_intLifetime2 > 0) {
-                var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), -var7_intLifetime2, -1));
+                var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -var7_intLifetime2, -1));
               }
             }
             if (21 == var5_int) {
-              var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), this.hp, -1));
+              var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), this.hp, -1));
             }
             if (15 == var5_int) {
-              var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), 5, -1));
+              var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), 5, -1));
             }
             if (var5_int == 16) {
-              var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), 0, DiveBomberAnimation.a(14, this.field_p, param3 + 2147483527) + 1));
+              var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), 0, DiveBomberAnimation.a(14, this.field_p, param3 + 2147483527) + 1));
             }
           }
           var7 = this.findAdjacentTerrainTile(36, 73);
           if (null != var7) {
-            var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), -30, -1));
+            var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -30, -1));
           }
           if (var5_int == 36) {
-            var6.a(true, new lia(new CreatureRef(this.ownerIndex, this.rosterSlot), -30, -1));
+            var6.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(this.ownerIndex, this.rosterSlot), -30, -1));
           }
           if (this.battle.field_R && (this.tileX == 0 ||
             0 == this.tileY ||

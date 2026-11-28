@@ -782,9 +782,9 @@ final class ResourceArchive {
         }
         param0 = param0 & 8191;
         if (param0 >= 4096) {
-          return 6144 > param0 ? -bd.field_c[6144 - param0] : bd.field_c[param0 - 6144];
+          return 6144 > param0 ? -TextLayout.field_c[6144 - param0] : TextLayout.field_c[param0 - 6144];
         }
-        return param0 < 2048 ? bd.field_c[-param0 + 2048] : -bd.field_c[-2048 + param0];
+        return param0 < 2048 ? TextLayout.field_c[-param0 + 2048] : -TextLayout.field_c[-2048 + param0];
     }
 
     final static CoverageBitmapFont loadBitmapFont(ResourceArchive param0, byte param1, int param2, int param3, ResourceArchive param4) {

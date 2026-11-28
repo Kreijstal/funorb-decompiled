@@ -64,7 +64,7 @@ final class vh extends ButtonWidget {
         }
     }
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         if (this.field_g) {
           return this.field_J.getValidationMessage((byte) 82);
         }
@@ -95,7 +95,7 @@ final class vh extends ButtonWidget {
           }
           var2_long = pf.correctedCurrentTimeMillis(0);
           if (PcmOutputWorker.field_g != 0 &&
-            sb.field_f < 0) {
+            RichTextLayout.field_f < 0) {
             var4_ref_nh = (nh) (cb.field_a.beginBackward((byte) -117));
             if (var4_ref_nh != null &&
               var2_long > var4_ref_nh.field_e) {
@@ -116,14 +116,14 @@ final class vh extends ButtonWidget {
             return true;
           }
           while (true) {
-            if (sb.field_f < 0) {
+            if (RichTextLayout.field_f < 0) {
               MonkeyPuzzle2.field_D.position = 0;
               if (!hj.a(1, true)) {
                 return false;
               }
-              sb.field_f = MonkeyPuzzle2.field_D.r(-118);
+              RichTextLayout.field_f = MonkeyPuzzle2.field_D.r(-118);
               MonkeyPuzzle2.field_D.position = 0;
-              rc.field_f = param0[sb.field_f];
+              rc.field_f = param0[RichTextLayout.field_f];
             }
             if (!gb.a(true)) {
               return false;
@@ -132,8 +132,8 @@ final class vh extends ButtonWidget {
               bk.field_f = il.field_e;
               il.field_e = hk.field_l;
               hk.field_l = wk.field_a;
-              wk.field_a = sb.field_f;
-              sb.field_f = -1;
+              wk.field_a = RichTextLayout.field_f;
+              RichTextLayout.field_f = -1;
               return true;
             }
             var4 = PcmOutputWorker.field_g;
@@ -143,12 +143,12 @@ final class vh extends ButtonWidget {
                 var4 = 0;
               }
             }
-            var5 = new nh(var2_long + (long)var4, sb.field_f, new byte[rc.field_f]);
+            var5 = new nh(var2_long + (long)var4, RichTextLayout.field_f, new byte[rc.field_f]);
             for (var6 = 0; rc.field_f > var6; var6++) {
               var5.field_h[var6] = MonkeyPuzzle2.field_D.payload[var6];
             }
             cb.field_a.addFirst(-8212, var5);
-            sb.field_f = -1;
+            RichTextLayout.field_f = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -8,7 +8,7 @@ abstract class ok extends UiWidget implements je {
     static Archive field_G;
     UiWidget field_B;
     static String[] field_C;
-    static ic field_D;
+    static DefaultTextWidgetRenderer field_D;
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException var8 = null;
@@ -206,19 +206,19 @@ abstract class ok extends UiWidget implements je {
           fe.a(30344, param3);
           cl.a(param3, (byte) -123);
           LevelData.a(false);
-          cj.d(param2 + 45);
+          RichTextLayout.d(param2 + 45);
           fb.field_a = 0 - GzipDecompressor.field_c;
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ok.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    String e(int param0) {
-        String var2 = super.e(param0 + param0);
+    String getTooltipText(int param0) {
+        String var2 = super.getTooltipText(param0 + param0);
         if (this.field_B == null) {
           return var2;
         }
-        String var3 = this.field_B.e(param0 + 0);
+        String var3 = this.field_B.getTooltipText(param0 + 0);
         if (var3 == null) {
           return var2;
         }

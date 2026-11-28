@@ -321,7 +321,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           stackIn_5_0 = ((128 & var3) != 0);
           ue.field_c = stackIn_5_0;
           tk.field_b = var3 & 127;
-          fj.field_a = var2.readUnsignedByte(-118);
+          TextLineMetrics.field_a = var2.readUnsignedByte(-118);
           sa.field_e = var2.readLong((byte) 115);
           if (tk.field_b == 2) {
             va.field_a = var2.readUnsignedShort(674914976);

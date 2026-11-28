@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends cj {
+final class al extends RichTextWidget {
     static String field_O;
     static String[] field_M;
     static int field_Q;
@@ -17,7 +17,7 @@ final class al extends cj {
     private FieldValidator field_Y;
     static vh field_N;
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 34) {
           return null;
         }
@@ -100,7 +100,7 @@ final class al extends cj {
         Object var36;
         Object var42;
         Object var46;
-        mi var50;
+        TextWidgetRenderer var50;
         String var5;
         int var11;
         int var12;
@@ -126,12 +126,12 @@ final class al extends cj {
         RgbSprite var47;
         RgbSprite var48;
         RgbSprite var49;
-        mi var51;
-        mi var52;
-        mi var53;
-        mi var54;
-        mi var55;
-        mi var56;
+        TextWidgetRenderer var51;
+        TextWidgetRenderer var52;
+        TextWidgetRenderer var53;
+        TextWidgetRenderer var54;
+        TextWidgetRenderer var55;
+        TextWidgetRenderer var56;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -171,15 +171,15 @@ final class al extends cj {
           var17 = mg.field_d;
           if (!var17.equals(this.field_n)) {
             this.field_n = var17;
-            this.j(-25638);
+            this.rebuildHotspotBounds(-25638);
           }
           super.a(param0, param1, (byte) 107, param3);
           var6 = this.field_Y.getValidationStatus(-100);
           if (param2 <= 42) {
             field_Q = 125;
-            var50 = (mi) ((Object) this.field_h);
+            var50 = (TextWidgetRenderer) ((Object) this.field_h);
             var9 = this.field_v + param1;
-            var10 = var50.a(-1, (ag) (this), param0) + (var50.a((ag) (this), 1).a(true) >> 1);
+            var10 = var50.getTextOriginY(-1, (ag) (this), param0) + (var50.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
             if (var6 != wl.field_c &&
               m.field_n != var6) {
               if (bi.field_d == var6) {
@@ -211,9 +211,9 @@ final class al extends cj {
             this.field_P.drawAdditive(-(var21.field_u >> 1) + var9, var10 - var21.field_r, 256);
             return;
           }
-          var51 = (mi) ((Object) this.field_h);
+          var51 = (TextWidgetRenderer) ((Object) this.field_h);
           var9Lifetime5 = this.field_v + param1;
-          var10Lifetime5 = var51.a(-1, (ag) (this), param0) + (var51.a((ag) (this), 1).a(true) >> 1);
+          var10Lifetime5 = var51.getTextOriginY(-1, (ag) (this), param0) + (var51.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
           if (var6 != wl.field_c &&
             m.field_n != var6) {
             if (bi.field_d == var6) {
@@ -257,15 +257,15 @@ final class al extends cj {
           var26 = mg.field_d;
           if (!var26.equals(this.field_n)) {
             this.field_n = var26;
-            this.j(-25638);
+            this.rebuildHotspotBounds(-25638);
           }
           super.a(param0, param1, (byte) 107, param3);
           var6 = this.field_Y.getValidationStatus(-100);
           if (param2 <= 42) {
             field_Q = 125;
-            var52 = (mi) ((Object) this.field_h);
+            var52 = (TextWidgetRenderer) ((Object) this.field_h);
             var9Lifetime1 = this.field_v + param1;
-            var10Lifetime1 = var52.a(-1, (ag) (this), param0) + (var52.a((ag) (this), 1).a(true) >> 1);
+            var10Lifetime1 = var52.getTextOriginY(-1, (ag) (this), param0) + (var52.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
             if (var6 != wl.field_c &&
               m.field_n != var6) {
               if (bi.field_d == var6) {
@@ -297,9 +297,9 @@ final class al extends cj {
             this.field_P.drawAdditive(-(var30.field_u >> 1) + var9Lifetime1, var10Lifetime1 - var30.field_r, 256);
             return;
           }
-          var53 = (mi) ((Object) this.field_h);
+          var53 = (TextWidgetRenderer) ((Object) this.field_h);
           var9Lifetime1Lifetime1 = this.field_v + param1;
-          var10Lifetime1Lifetime1 = var53.a(-1, (ag) (this), param0) + (var53.a((ag) (this), 1).a(true) >> 1);
+          var10Lifetime1Lifetime1 = var53.getTextOriginY(-1, (ag) (this), param0) + (var53.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
           if (var6 != wl.field_c &&
             m.field_n != var6) {
             if (bi.field_d == var6) {
@@ -345,16 +345,16 @@ final class al extends cj {
           var5 = var35;
           if (!var35.equals(this.field_n)) {
             this.field_n = var35;
-            this.j(-25638);
+            this.rebuildHotspotBounds(-25638);
           }
           super.a(param0, param1, (byte) 107, param3);
           var6Lifetime1 = this.field_Y.getValidationStatus(-100);
           if (param2 <= 42) {
             field_Q = 125;
           }
-          var54 = (mi) ((Object) this.field_h);
+          var54 = (TextWidgetRenderer) ((Object) this.field_h);
           var9Lifetime2 = this.field_v + param1;
-          var10Lifetime2 = var54.a(-1, (ag) (this), param0) + (var54.a((ag) (this), 1).a(true) >> 1);
+          var10Lifetime2 = var54.getTextOriginY(-1, (ag) (this), param0) + (var54.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
           if (var6Lifetime1 != wl.field_c &&
             m.field_n != var6Lifetime1) {
             if (bi.field_d == var6Lifetime1) {
@@ -397,14 +397,14 @@ final class al extends cj {
         }
         if (!var5.equals(this.field_n)) {
           this.field_n = var5;
-          this.j(-25638);
+          this.rebuildHotspotBounds(-25638);
         }
         super.a(param0, param1, (byte) 107, param3);
         var6Lifetime2 = this.field_Y.getValidationStatus(-100);
         if (param2 > 42) {
-          var56 = (mi) ((Object) this.field_h);
+          var56 = (TextWidgetRenderer) ((Object) this.field_h);
           var9Lifetime3 = this.field_v + param1;
-          var10Lifetime3 = var56.a(-1, (ag) (this), param0) + (var56.a((ag) (this), 1).a(true) >> 1);
+          var10Lifetime3 = var56.getTextOriginY(-1, (ag) (this), param0) + (var56.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
           if (var6Lifetime2 != wl.field_c &&
             m.field_n != var6Lifetime2) {
             if (bi.field_d == var6Lifetime2) {
@@ -437,9 +437,9 @@ final class al extends cj {
           return;
         }
         field_Q = 125;
-        var55 = (mi) ((Object) this.field_h);
+        var55 = (TextWidgetRenderer) ((Object) this.field_h);
         var9Lifetime4 = this.field_v + param1;
-        var10Lifetime4 = var55.a(-1, (ag) (this), param0) + (var55.a((ag) (this), 1).a(true) >> 1);
+        var10Lifetime4 = var55.getTextOriginY(-1, (ag) (this), param0) + (var55.getTextLayout((ag) (this), 1).getLayoutHeight(true) >> 1);
         if (var6Lifetime2 != wl.field_c &&
           m.field_n != var6Lifetime2) {
           if (bi.field_d == var6Lifetime2) {

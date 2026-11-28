@@ -375,7 +375,7 @@ final class BufferedSocket implements Runnable {
 
     final static void performAction1371(byte byteArgument1) {
         UiComponentPart008.stringBuilderState0001.setLength(0);
-        NetworkSupport010.integerState0585 = 0;
+        TextHotspotBounds.integerState0585 = 0;
         if (byteArgument1 != 94) {
           integerState0661 = -4;
         }

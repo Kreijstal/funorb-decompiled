@@ -1,0 +1,281 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+import java.util.*;
+
+abstract class TextLayout {
+    static String field_c;
+    static String field_d;
+    TextLineMetrics[] field_b;
+    static DiskCacheWorker field_a;
+
+    final static boolean a(boolean param0, String param1) {
+        RuntimeException var2 = null;
+        CharSequence var3 = null;
+        boolean stackIn_3_0 = false;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0) {
+            field_c = (String) null;
+          }
+          var3 = (CharSequence) ((Object) param1);
+          stackIn_3_0 = dd.field_p.equals(r.a(var3, -11133));
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("rb.I(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final int getXForTextOffset(byte param0, int param1) {
+        int var4 = 0;
+        TextLineMetrics[] var3;
+        TextLineMetrics var5;
+        int var6;
+        TextLineMetrics[] var7;
+        var6 = TrackController.field_F ? 1 : 0;
+        var7 = this.field_b;
+        var3 = var7;
+        for (var4 = 0; var4 < var7.length; var4++) {
+          var5 = var7[var4];
+          if (param1 < var5.field_b.length) {
+            return var5.field_b[param1];
+          }
+          param1 = param1 - (var5.field_b.length - 1);
+        }
+        if (param0 == 111) {
+          return 0;
+        }
+        return 56;
+    }
+
+    final static String a(int param0, String param1) {
+        int var4 = 0;
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        char[] var3 = null;
+        int var5 = 0;
+        String stackIn_7_0 = null;
+        RuntimeException stackIn_10_0 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        var5 = TrackController.field_F ? 1 : 0;
+        try {
+          var2_int = param1.length();
+          if (param0 != 22479) {
+            field_d = (String) null;
+          }
+          var3 = new char[var2_int];
+          for (var4 = 0; var2_int > var4; var4++) {
+            var3[-var4 + var2_int - 1] = param1.charAt(var4);
+          }
+          stackIn_7_0 = new String(var3);
+          return stackIn_7_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_10_0 = var2;
+          stackIn_10_1 = new StringBuilder().append("rb.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    final static String a(long param0, byte param1) {
+        ki.field_e.setTime(new Date(param0));
+        int var3 = ki.field_e.get(7);
+        if (param1 > -95) {
+          field_a = (DiskCacheWorker) null;
+        }
+        int var4 = ki.field_e.get(5);
+        int var5 = ki.field_e.get(2);
+        int var6 = ki.field_e.get(1);
+        int var7 = ki.field_e.get(11);
+        int var8 = ki.field_e.get(12);
+        int var9 = ki.field_e.get(13);
+        return fg.field_b[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + ej.field_f[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+    }
+
+    final int a(int param0, String param1, int param2, int param3) {
+        int var8 = 0;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_19_0 = 0;
+        int stackIn_19_1 = 0;
+        int stackIn_20_0 = 0;
+        int stackIn_22_0 = 0;
+        RuntimeException stackIn_25_0 = null;
+        StringBuilder stackIn_25_1 = null;
+        String stackIn_26_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        var10 = TrackController.field_F ? 1 : 0;
+        try {
+          var5_int = 0;
+          var6 = 0;
+          var7 = param1.length();
+          if (param2 != 5) {
+            stackIn_3_0 = 14;
+            return stackIn_3_0;
+          }
+          for (var8 = 0; var7 > var8; var8++) {
+            var9 = param1.charAt(var8);
+            if (var9 == 60) {
+              var6 = 1;
+            } else {
+              if (var9 != 62) {
+                if (var6 == 0 &&
+                  var9 == 32) {
+                  var5_int++;
+                }
+              } else {
+                var6 = 0;
+              }
+            }
+          }
+          if (var5_int <= 0) {
+            stackIn_22_0 = 0;
+            return stackIn_22_0;
+          }
+          stackIn_19_0 = param3 - param0 << 8;
+          stackIn_19_1 = var5_int;
+          stackIn_20_0 = stackIn_19_0 / stackIn_19_1;
+          return stackIn_20_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_25_0 = var5;
+          stackIn_25_1 = new StringBuilder().append("rb.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_26_2 = "null";
+          } else {
+            stackIn_26_2 = "{...}";
+          }
+          throw LevelGrid.toClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    final int getLayoutHeight(int param0) {
+        int stackIn_6_0 = 0;
+        if (param0 != 12323) {
+          field_a = (DiskCacheWorker) null;
+        }
+        if (this.field_b != null &&
+          this.field_b.length > 0) {
+          stackIn_6_0 = -this.field_b[0].field_c + this.field_b[-1 + this.field_b.length].field_f;
+        } else {
+          stackIn_6_0 = 0;
+        }
+        return stackIn_6_0;
+    }
+
+    final int getTextOffsetAt(int param0, boolean param1, int param2) {
+        int var5 = 0;
+        TextLineMetrics var6 = null;
+        int var7 = 0;
+        int var8 = TrackController.field_F ? 1 : 0;
+        if (null == this.field_b ||
+          this.field_b.length == 0 ||
+          this.field_b[0].field_c > param2) {
+          return -1;
+        }
+        if (this.field_b[-1 + this.field_b.length].field_f < param2) {
+          return -1;
+        }
+        if (this.field_b.length == 1) {
+          return this.field_b[0].findNearestCharacterIndex(param0, (byte) -85);
+        }
+        if (param1) {
+          return -1;
+        }
+        int var4 = 0;
+        for (var5 = 0; this.field_b.length > var5; var5++) {
+          var6 = this.field_b[var5];
+          if (param2 >= var6.field_c &&
+            !(var6.field_f < param2)) {
+            var7 = var6.findNearestCharacterIndex(param0, (byte) -85);
+            if (var7 == -1) {
+              return -1;
+            }
+            return var7 + var4;
+          }
+          var4 = var4 + (-1 + var6.field_b.length);
+        }
+        return -1;
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_a = null;
+        if (param0 != -2857) {
+          field_d = (String) null;
+        }
+        field_d = null;
+        field_c = null;
+    }
+
+    final int getLineIndexForTextOffset(int param0, byte param1) {
+        int var3 = 0;
+        TextLineMetrics var4 = null;
+        int var5 = TrackController.field_F ? 1 : 0;
+        if (param1 != -36) {
+          this.getMaxLineRightX(65);
+        }
+        for (var3 = 0; this.field_b.length > var3; var3++) {
+          var4 = this.field_b[var3];
+          if (var4.field_b.length > param0) {
+            return var3;
+          }
+          param0 = param0 - (-1 + var4.field_b.length);
+        }
+        return this.field_b.length;
+    }
+
+    final int getMaxLineRightX(int param0) {
+        int var4 = 0;
+        int var2;
+        TextLineMetrics[] var3;
+        TextLineMetrics var5;
+        int var7;
+        int var6;
+        var7 = TrackController.field_F ? 1 : 0;
+        var2 = param0;
+        if (this.field_b != null) {
+          var3 = this.field_b;
+          for (var4 = 0; var3.length > var4; var4++) {
+            var5 = var3[var4];
+            if (var5 != null) {
+              var6 = var5.getRightX(0);
+              if (var6 > var2) {
+                var2 = var6;
+              }
+            }
+          }
+        }
+        return var2;
+    }
+
+    static {
+        field_c = "This entry doesn't match";
+        field_d = "Names cannot contain consecutive spaces";
+    }
+}

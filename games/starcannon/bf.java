@@ -1479,8 +1479,8 @@ final class bf extends IntrusiveNode {
           }
           if (eb.field_a == r.field_c &&
             ag.a(param3 ^ 122, 1)) {
-            var9Lifetime1 = se.field_p.readUnsignedByte(param3 ^ 7907);
-            se.field_p.position = 0;
+            var9Lifetime1 = RichTextLayout.field_p.readUnsignedByte(param3 ^ 7907);
+            RichTextLayout.field_p.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               r.field_c = dh.field_a;
@@ -1495,25 +1495,25 @@ final class bf extends IntrusiveNode {
                 return stackIn_31_0;
               }
               if (var9Lifetime1 != 99) {
-                r.field_c = ab.field_F;
+                r.field_c = RichTextWidget.field_F;
                 il.field_g = -1;
                 vh.field_t = var9Lifetime1;
               } else {
                 ag.a(124, gd.a(true));
-                oj.field_g = new Boolean(vf.a(se.field_p, param3 - 6));
-                se.field_p.position = 0;
+                oj.field_g = new Boolean(vf.a(RichTextLayout.field_p, param3 - 6));
+                RichTextLayout.field_p.position = 0;
               }
             }
           }
           if (dh.field_a == r.field_c) {
             var9Lifetime2 = 2;
             if (ag.a(125, var9Lifetime2)) {
-              var10Lifetime1 = se.field_p.readUnsignedShort(param3 ^ -1174051986);
-              se.field_p.position = 0;
+              var10Lifetime1 = RichTextLayout.field_p.readUnsignedShort(param3 ^ -1174051986);
+              RichTextLayout.field_p.position = 0;
               if (ag.a(126, var10Lifetime1)) {
                 var11 = ph.field_nb.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  ph.field_nb[var12] = se.field_p.readPrefixedString(-12287);
+                  ph.field_nb[var12] = RichTextLayout.field_p.readPrefixedString(-12287);
                 }
                 ec.a((byte) 27);
                 eb.field_f = false;
@@ -1525,15 +1525,15 @@ final class bf extends IntrusiveNode {
           if (param3 != 6) {
             bf.resetStaticState(-76);
           }
-          if (r.field_c == ab.field_F &&
+          if (r.field_c == RichTextWidget.field_F &&
             Bzip2State.a(false)) {
             if (255 == vh.field_t) {
-              var9_ref_String = se.field_p.readNullableString((byte) -86);
+              var9_ref_String = RichTextLayout.field_p.readNullableString((byte) -86);
               if (var9_ref_String != null) {
                 lj.a(var9_ref_String, param3 ^ 121, ll.b(111));
               }
             } else {
-              UiWidget.field_r = se.field_p.readString(-125);
+              UiWidget.field_r = RichTextLayout.field_p.readString(-125);
             }
             ec.a((byte) 27);
             eb.field_f = false;

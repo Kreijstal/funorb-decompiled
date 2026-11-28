@@ -1,0 +1,90 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TextLineMetrics {
+    int field_a;
+    int field_d;
+    static int[] field_f;
+    int[] field_e;
+    static String field_g;
+    static int[] field_c;
+    static int field_b;
+
+    final int findNearestCharacterIndex(byte param0, int param1) {
+        int var3 = 0;
+        int var4;
+        var4 = Confined.field_J ? 1 : 0;
+        if (this.field_e == null) {
+          return 0;
+        }
+        if (0 == this.field_e.length) {
+          return 0;
+        }
+        if (param0 != 85) {
+          return 2;
+        }
+        for (var3 = 1; this.field_e.length > var3; var3++) {
+          if (this.field_e[-1 + var3] + this.field_e[var3] >> 1 > param1) {
+            return -1 + var3;
+          }
+        }
+        return -1 + this.field_e.length;
+    }
+
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
+          var2.field_c = var2.field_c + ' ' + param1;
+        } else {
+          var2 = new ClientException(param0, param1);
+        }
+        return var2;
+    }
+
+    final static void clearStaticReferences(byte param0) {
+        if (param0 != -4) {
+          field_c = (int[]) null;
+        }
+    }
+
+    final int getRightX(int param0) {
+        if (param0 < 42) {
+          TextLineMetrics.clearStaticReferences((byte) 37);
+          if (this.field_e == null) {
+            return 0;
+          }
+          if (this.field_e.length != 0) {
+            return this.field_e[this.field_e.length - 1];
+          }
+          return 0;
+        }
+        if (this.field_e == null) {
+          return 0;
+        }
+        if (this.field_e.length != 0) {
+          return this.field_e[this.field_e.length - 1];
+        }
+        return 0;
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_f = null;
+        field_g = null;
+        field_c = null;
+        if (param0 != -15138) {
+          field_c = (int[]) null;
+        }
+    }
+
+    TextLineMetrics(int param0, int param1, int param2) {
+        this.field_e = new int[1 + param2];
+        this.field_d = param0;
+        this.field_a = param1;
+    }
+
+    static {
+        field_g = "Waiting for sound effects";
+        field_c = new int[8192];
+    }
+}

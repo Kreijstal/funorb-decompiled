@@ -190,7 +190,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.getValidationStatus(param0, (byte) -122) == rk.field_c) {
-            stackIn_2_0 = bh.field_d;
+            stackIn_2_0 = TextLineMetrics.field_d;
             return stackIn_2_0;
           }
           var3_int = 14 / ((41 - param1) / 49);

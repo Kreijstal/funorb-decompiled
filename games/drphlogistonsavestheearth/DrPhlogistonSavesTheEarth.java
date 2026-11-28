@@ -60,7 +60,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         var3 = field_D ? 1 : 0;
         try {
-          we.a(qa.field_O, -106, 82.0f);
+          we.a(RichTextWidget.field_O, -106, 82.0f);
           bd.field_P = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun", true);
           le.field_d = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun2", true);
           qf.field_b = ProxyAuthenticationRequiredException.a("", kf.field_d, "weapongattlinggun3", param0);
@@ -106,8 +106,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               SoftwareRasterizer.drawHorizontalLine(0, 12, 800, 65280);
               SoftwareRasterizer.drawHorizontalLine(0, 13, 800, 65280);
               ArchiveRequest.field_C.setAsRasterTarget(127);
-              qa.field_M = new RgbSprite(20, 20);
-              qa.field_M.bindAsRenderTarget();
+              RichTextWidget.field_M = new RgbSprite(20, 20);
+              RichTextWidget.field_M.bindAsRenderTarget();
               SoftwareRasterizer.fillCircle(9, 9, 6, 8421376);
               ArchiveRequest.field_C.setAsRasterTarget(104);
               nd.field_L = new RgbSprite(20, 20);
@@ -394,7 +394,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         var3 = field_D ? 1 : 0;
         try {
-          we.a(qa.field_O, -89, 88.0f);
+          we.a(RichTextWidget.field_O, -89, 88.0f);
           of.field_x = eh.a("", (byte) -61, kf.field_d, "poweruplife");
           PacketBuffer.field_k = eh.a("", (byte) -66, kf.field_d, "poweruppoints100");
           qc.field_a = eh.a("", (byte) -56, kf.field_d, "poweruppoints1000");
@@ -605,7 +605,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           qc.clearStaticReferences(24937);
           ae.n(1);
           kk.clearStaticReferences((byte) 44);
-          l.clearStaticReferences(0);
+          DefaultTextWidgetRenderer.clearStaticReferences(0);
           uc.clearStaticReferences();
           sh.clearStaticReferences((byte) 119);
           ej.clearStaticReferences(12018);
@@ -663,7 +663,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           jf.clearStaticReferences((byte) 127);
           hd.clearStaticReferences(false);
           NameSuggestionsPanel.a((byte) 108);
-          qa.clearStaticReferences((byte) 122);
+          RichTextWidget.clearStaticReferences((byte) 122);
           gm.releaseDeclaredStaticReferences(-112);
           ci.resetStaticState(-76);
           nc.clearStaticReferences((byte) 126);
@@ -674,7 +674,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           tl.clearStaticReferences((byte) -39);
           SoundFilter.clearStaticReferences();
           hh.a(false);
-          o.clearStaticReferences((byte) 99);
+          RichTextLayout.clearStaticReferences((byte) 99);
           DirectByteStorage.resetStaticState((byte) 56);
           rb.clearStaticReferences(0);
           pi.clearDeclaredStaticReferences(2147483647);
@@ -718,13 +718,13 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           uj.clearDeclaredStaticReferences(1);
           jl.d(65535);
           kj.clearStaticReferences(14970);
-          mi.clearStaticReferences((byte) 91);
+          TextLineMetrics.clearStaticReferences((byte) 91);
           PasswordValidator.clearDeclaredStaticReferences(0);
           EmailFormatValidator.clearStaticReferences((byte) 125);
           AgeValidator.b(true);
           MatchingFieldValidator.d((byte) -95);
           cd.b((byte) -47);
-          fk.clearStaticReferences((byte) 111);
+          TextHotspotBounds.clearStaticReferences((byte) 111);
           vh.a(84);
           DebouncedFieldValidator.c(88);
           vi.clearStaticReferences(2823);
@@ -912,7 +912,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             } else {
               stackIn_12_0 = true;
             }
-            o.a(stackIn_12_0, 320, (java.awt.Canvas) (var2));
+            RichTextLayout.a(stackIn_12_0, 320, (java.awt.Canvas) (var2));
             return;
           }
           if (!this.field_C) {
@@ -1121,7 +1121,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         var4 = field_D ? 1 : 0;
         try {
-          we.a(qa.field_O, -80, 68.0f);
+          we.a(RichTextWidget.field_O, -80, 68.0f);
           mk.field_g[0] = eh.a("", (byte) -66, kf.field_d, "act_screen_intro_1_part_1");
           mk.field_g[1] = eh.a("", (byte) -90, kf.field_d, "act_screen_intro_1_part_2");
           mk.field_g[2] = eh.a("", (byte) -99, kf.field_d, "act_screen_intro_1_part_3");
@@ -1145,24 +1145,24 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           if (param0 != 22) {
             return;
           }
-          l.field_f[0][0] = eh.a("", (byte) -78, kf.field_d, "act_screen_death_1");
-          l.field_f[1][0] = l.field_f[0][0];
-          l.field_f[2][0] = l.field_f[0][0];
-          l.field_f[3][0] = eh.a("", (byte) -105, kf.field_d, "act_screen_death_4");
-          l.field_f[4][0] = l.field_f[3][0];
-          l.field_f[5][0] = l.field_f[3][0];
-          l.field_f[6][0] = eh.a("", (byte) -49, kf.field_d, "act_screen_death_7");
-          l.field_f[7][0] = l.field_f[6][0];
-          l.field_f[8][0] = l.field_f[6][0];
-          l.field_f[0][1] = eh.a("", (byte) -101, kf.field_d, "act_screen_death_boss_123");
-          l.field_f[1][1] = l.field_f[0][1];
-          l.field_f[2][1] = l.field_f[0][1];
-          l.field_f[3][1] = eh.a("", (byte) -96, kf.field_d, "act_screen_death_boss_456");
-          l.field_f[4][1] = l.field_f[3][1];
-          l.field_f[5][1] = l.field_f[3][1];
-          l.field_f[6][1] = eh.a("", (byte) -34, kf.field_d, "act_screen_death_boss_789");
-          l.field_f[7][1] = l.field_f[6][1];
-          l.field_f[8][1] = l.field_f[6][1];
+          DefaultTextWidgetRenderer.field_f[0][0] = eh.a("", (byte) -78, kf.field_d, "act_screen_death_1");
+          DefaultTextWidgetRenderer.field_f[1][0] = DefaultTextWidgetRenderer.field_f[0][0];
+          DefaultTextWidgetRenderer.field_f[2][0] = DefaultTextWidgetRenderer.field_f[0][0];
+          DefaultTextWidgetRenderer.field_f[3][0] = eh.a("", (byte) -105, kf.field_d, "act_screen_death_4");
+          DefaultTextWidgetRenderer.field_f[4][0] = DefaultTextWidgetRenderer.field_f[3][0];
+          DefaultTextWidgetRenderer.field_f[5][0] = DefaultTextWidgetRenderer.field_f[3][0];
+          DefaultTextWidgetRenderer.field_f[6][0] = eh.a("", (byte) -49, kf.field_d, "act_screen_death_7");
+          DefaultTextWidgetRenderer.field_f[7][0] = DefaultTextWidgetRenderer.field_f[6][0];
+          DefaultTextWidgetRenderer.field_f[8][0] = DefaultTextWidgetRenderer.field_f[6][0];
+          DefaultTextWidgetRenderer.field_f[0][1] = eh.a("", (byte) -101, kf.field_d, "act_screen_death_boss_123");
+          DefaultTextWidgetRenderer.field_f[1][1] = DefaultTextWidgetRenderer.field_f[0][1];
+          DefaultTextWidgetRenderer.field_f[2][1] = DefaultTextWidgetRenderer.field_f[0][1];
+          DefaultTextWidgetRenderer.field_f[3][1] = eh.a("", (byte) -96, kf.field_d, "act_screen_death_boss_456");
+          DefaultTextWidgetRenderer.field_f[4][1] = DefaultTextWidgetRenderer.field_f[3][1];
+          DefaultTextWidgetRenderer.field_f[5][1] = DefaultTextWidgetRenderer.field_f[3][1];
+          DefaultTextWidgetRenderer.field_f[6][1] = eh.a("", (byte) -34, kf.field_d, "act_screen_death_boss_789");
+          DefaultTextWidgetRenderer.field_f[7][1] = DefaultTextWidgetRenderer.field_f[6][1];
+          DefaultTextWidgetRenderer.field_f[8][1] = DefaultTextWidgetRenderer.field_f[6][1];
           hh.field_d[2] = eh.a("", (byte) -114, kf.field_d, "act_screen_completion_1");
           hh.field_d[5] = eh.a("", (byte) -83, kf.field_d, "act_screen_completion_2");
           hh.field_d[8] = eh.a("", (byte) -111, kf.field_d, "act_screen_completion_3");
@@ -1174,9 +1174,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
             }
             var3 = 0;
             while (2 > var3) {
-              rc.field_a[var2_int][var3] = new RgbSprite(l.field_f[var2_int][var3].field_h / 4, l.field_f[var2_int][var3].field_c / 4);
+              rc.field_a[var2_int][var3] = new RgbSprite(DefaultTextWidgetRenderer.field_f[var2_int][var3].field_h / 4, DefaultTextWidgetRenderer.field_f[var2_int][var3].field_c / 4);
               rc.field_a[var2_int][var3].bindAsRenderTarget();
-              l.field_f[var2_int][var3].b(0, 0);
+              DefaultTextWidgetRenderer.field_f[var2_int][var3].b(0, 0);
               var3++;
             }
             var2_int++;
@@ -1616,7 +1616,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
     }
 
     private final void h(byte param0) {
-        we.a(qa.field_O, -77, 60.0f);
+        we.a(RichTextWidget.field_O, -77, 60.0f);
         EmailFormatValidator.field_q = kc.a(ff.field_P, kf.field_d, "", param0 ^ -116, "font");
         if (param0 != -83) {
           return;
@@ -1634,7 +1634,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          we.a(qa.field_O, -111, 95.0f);
+          we.a(RichTextWidget.field_O, -111, 95.0f);
           nc.field_M = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_foreground", true);
           eb.field_g = ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_logo", true);
           ProxyAuthenticationRequiredException.a("", kf.field_d, "mb_transparency_layer", true);
@@ -1776,9 +1776,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
 
     private final void r(int param0) {
         try {
-          we.a(qa.field_O, -126, 62.0f);
+          we.a(RichTextWidget.field_O, -126, 62.0f);
           ea.field_c = eh.a("", (byte) -92, kf.field_d, "gameinterface");
-          fk.field_m = eh.a("", (byte) -78, kf.field_d, "get_ready_window");
+          TextHotspotBounds.field_m = eh.a("", (byte) -78, kf.field_d, "get_ready_window");
           ph.field_h = eh.a("", (byte) -40, kf.field_d, "title_screen");
           qj.field_f = eh.a("", (byte) -126, kf.field_d, "title_screen_chars");
           rk.field_a = eh.a("", (byte) -99, kf.field_d, "slider_background");
@@ -1813,9 +1813,9 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           ki.field_b = eh.a("", (byte) -40, kf.field_d, "help_key_up");
           si.field_D = ki.field_b.e();
           si.field_D.i();
-          fk.field_l = si.field_D.e();
-          fk.field_l.i();
-          lc.field_s = fk.field_l.e();
+          TextHotspotBounds.field_l = si.field_D.e();
+          TextHotspotBounds.field_l.i();
+          lc.field_s = TextHotspotBounds.field_l.e();
           lc.field_s.i();
           dh.field_R[0] = eh.a("", (byte) -66, kf.field_d, "game_interface_weapon_gatling_gun");
           dh.field_R[1] = eh.a("", (byte) -33, kf.field_d, "game_interface_weapon_bomb");
@@ -1840,7 +1840,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         var3 = field_D ? 1 : 0;
         try {
-          we.a(qa.field_O, -105, 78.0f);
+          we.a(RichTextWidget.field_O, -105, 78.0f);
           ph.field_a = ij.a("alientripod", (byte) 69, kf.field_d, "");
           af.field_e = new he[ph.field_a.length];
           var2_int = 0;
@@ -1864,7 +1864,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
               ae.field_lb = be.b(eh.a("", (byte) -81, kf.field_d, "alienasteroid_3"), 64);
               PasswordValidator.field_s = ij.a("alienbattlecarrier", (byte) 54, kf.field_d, "");
               ib.field_r = ij.a("alienbattlecarrier_side_arms", (byte) 85, kf.field_d, "");
-              mi.field_i = ij.a("alienbattlecarrier_middle_arms", (byte) 90, kf.field_d, "");
+              TextLineMetrics.field_i = ij.a("alienbattlecarrier_middle_arms", (byte) 90, kf.field_d, "");
               ImageProducerRasterBuffer.field_k = ij.a("alienbunker", (byte) 123, kf.field_d, "");
               ub.field_a = be.a(eh.a("", (byte) -111, kf.field_d, "alienbunker_rubble"), ImageProducerRasterBuffer.field_k.length);
               ib.field_j = new he[ImageProducerRasterBuffer.field_k.length];
@@ -2073,7 +2073,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
                         we.a(ValidatedTextField.a(ByteStorage.field_d, ij.field_a, 34, "", ff.field_P), -127, 45.0f);
                         return false;
                       }
-                      we.a(ValidatedTextField.a(l.field_s, hl.field_e, 34, "", mh.field_a), -115, 40.0f);
+                      we.a(ValidatedTextField.a(DefaultTextWidgetRenderer.field_s, hl.field_e, 34, "", mh.field_a), -115, 40.0f);
                       return false;
                     }
                     we.a(ValidatedTextField.a(td.field_o, sa.field_b, 34, "", kf.field_d), -118, 18.0f);
@@ -2216,7 +2216,7 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
         RuntimeException decompiledCaughtException = null;
         var6 = field_D ? 1 : 0;
         try {
-          we.a(qa.field_O, -103, 73.0f);
+          we.a(RichTextWidget.field_O, -103, 73.0f);
           bc.field_d = new RgbSprite(50, 300);
           FullscreenFocusCanvas.field_f = new he(50, 300, 2);
           var2_int = FullscreenFocusCanvas.field_f.field_d * 260;
@@ -2383,8 +2383,8 @@ public final class DrPhlogistonSavesTheEarth extends GameClientShell {
           AccountServiceResult.field_c[0].c();
           ck.field_d = this.a(eh.a("", (byte) -39, kf.field_d, "scenery_tile_earth_bath_09_broken"), (byte) 89);
           field_G = this.a(eh.a("", (byte) -71, kf.field_d, "scenery_tile_earth_bath_10_broken"), (byte) 7);
-          qa.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");
-          qa.field_S[0].c();
+          RichTextWidget.field_S = ij.a("scenery_tile_earth_bath_11_broken", (byte) 61, kf.field_d, "");
+          RichTextWidget.field_S[0].c();
           MatchingFieldValidator.field_p = new he[1];
           MatchingFieldValidator.field_p[0] = hh.field_c[0].e();
           MatchingFieldValidator.field_p[0].g();

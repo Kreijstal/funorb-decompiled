@@ -55,7 +55,7 @@ abstract class ByteStorage {
             if (param1 >= -2) {
               field_d = (int[]) null;
             }
-            ro.field_g.a(var4, param3, 15698, param0);
+            TextLayout.field_g.a(var4, param3, 15698, param0);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

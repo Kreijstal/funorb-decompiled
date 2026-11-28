@@ -17,7 +17,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         try {
           this.field_f = true;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "gj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "gj.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         try {
           si.a(this.field_e, param1, true);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "gj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
         String[] var7 = null;
         var5 = Confined.field_J ? 1 : 0;
         try {
-          na.field_S = b.field_a;
+          RichTextWidget.field_S = b.field_a;
           if (param3 == 255) {
             stackIn_9_0 = -108;
             stackIn_10_1 = !(wc.field_Ob >= 13);
@@ -110,7 +110,7 @@ final class GameCanvas extends java.awt.Canvas implements java.awt.event.FocusLi
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param3).append(')').toString());
         }
     }
 

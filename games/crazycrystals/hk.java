@@ -18,10 +18,10 @@ abstract class hk extends pb {
         RuntimeException var2 = null;
         var3 = CrazyCrystals.field_B;
         try {
-          var4 = (LevelProgressUpdate) (tb.field_b.beginForward(32073));
+          var4 = (LevelProgressUpdate) (TextLayout.field_b.beginForward(32073));
           while (var4 != null) {
             pm.a(param1, var4, (byte) 71);
-            var4 = (LevelProgressUpdate) (tb.field_b.nextForward(false));
+            var4 = (LevelProgressUpdate) (TextLayout.field_b.nextForward(false));
           }
           if (param0 != 5) {
             hk.clearDeclaredStaticReferences(72);

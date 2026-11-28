@@ -12,7 +12,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (lb.field_y != null) {
+          if (TextHotspotBounds.field_y != null) {
             DirectByteStorage.field_c = 0;
             DualLinkNode.field_n = param0.getX();
             DiskArchiveRequest.field_G = param0.getY();
@@ -76,7 +76,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (lb.field_y != null) {
+          if (TextHotspotBounds.field_y != null) {
             DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
             DiskCacheWorker.field_a = param0.getY();
@@ -102,7 +102,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
-          if (lb.field_y != null) {
+          if (TextHotspotBounds.field_y != null) {
             DirectByteStorage.field_c = 0;
             sa.field_o = -1;
             DiskCacheWorker.field_a = -1;
@@ -177,7 +177,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (lb.field_y != null) {
+          if (TextHotspotBounds.field_y != null) {
             DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
             DiskCacheWorker.field_a = param0.getY();
@@ -275,7 +275,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (lb.field_y != null) {
+          if (TextHotspotBounds.field_y != null) {
             DirectByteStorage.field_c = 0;
             qd.field_J = 0;
             kk.field_d = true;
@@ -307,7 +307,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
-          if (null != lb.field_y) {
+          if (null != TextHotspotBounds.field_y) {
             DirectByteStorage.field_c = 0;
             sa.field_o = param0.getX();
             DiskCacheWorker.field_a = param0.getY();
@@ -320,7 +320,7 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
-          if (lb.field_y != null) {
+          if (TextHotspotBounds.field_y != null) {
             qd.field_J = 0;
           }
         } catch (RuntimeException runtimeException) {
@@ -340,14 +340,14 @@ final class kh implements java.awt.event.MouseListener, java.awt.event.MouseMoti
               if (dn.field_t[var1_int].isSamplePositionOutOfRange()) {
                 dn.field_t[var1_int] = null;
               } else {
-                mg.a(1963987425, dn.field_t[var1_int]);
+                TextLineMetrics.a(1963987425, dn.field_t[var1_int]);
               }
             }
             if (gl.field_u[var1_int] != null) {
               if (gl.field_u[var1_int].isSamplePositionOutOfRange()) {
                 gl.field_u[var1_int] = null;
               } else {
-                mg.a(param0 ^ 1963987389, gl.field_u[var1_int]);
+                TextLineMetrics.a(param0 ^ 1963987389, gl.field_u[var1_int]);
               }
             }
           }

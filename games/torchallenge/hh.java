@@ -97,7 +97,7 @@ final class hh {
               }
             }
             PcmOutputWorker.field_c = 0;
-            ia.field_q = -2147483648;
+            TextHotspotBounds.field_q = -2147483648;
             v.field_Z = -2147483648;
             ol.field_d = 2147483647;
             pi.field_e = 2147483647;
@@ -194,7 +194,7 @@ final class hh {
                 }
               }
               PcmOutputWorker.field_c = 0;
-              ia.field_q = -2147483648;
+              TextHotspotBounds.field_q = -2147483648;
               v.field_Z = -2147483648;
               ol.field_d = 2147483647;
               pi.field_e = 2147483647;
@@ -289,7 +289,7 @@ final class hh {
                 }
               }
               PcmOutputWorker.field_c = 0;
-              ia.field_q = -2147483648;
+              TextHotspotBounds.field_q = -2147483648;
               v.field_Z = -2147483648;
               ol.field_d = 2147483647;
               pi.field_e = 2147483647;
@@ -311,7 +311,7 @@ final class hh {
             if (null != qa.field_i &&
               qa.field_i.length >= param2) {
               PcmOutputWorker.field_c = 0;
-              ia.field_q = -2147483648;
+              TextHotspotBounds.field_q = -2147483648;
               v.field_Z = -2147483648;
               ol.field_d = 2147483647;
               pi.field_e = 2147483647;
@@ -321,7 +321,7 @@ final class hh {
           }
         }
         PcmOutputWorker.field_c = 0;
-        ia.field_q = -2147483648;
+        TextHotspotBounds.field_q = -2147483648;
         v.field_Z = -2147483648;
         ol.field_d = 2147483647;
         pi.field_e = 2147483647;

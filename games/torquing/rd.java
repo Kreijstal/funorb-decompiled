@@ -24,7 +24,7 @@ final class rd extends am {
         this.field_w = 2000;
     }
 
-    final static void a(BitmapFont param0, int param1, int param2, String param3, kp param4) {
+    final static void a(BitmapFont param0, int param1, int param2, String param3, TextLineMetrics param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -86,7 +86,7 @@ final class rd extends am {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class rd extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -294,8 +294,8 @@ final class rd extends am {
 
     final void a(byte param0) {
         if (param0 < 123) {
-          kp var3 = (kp) null;
-          rd.a((BitmapFont) null, -27, 36, (String) null, (kp) null);
+          TextLineMetrics var3 = (TextLineMetrics) null;
+          rd.a((BitmapFont) null, -27, 36, (String) null, (TextLineMetrics) null);
         }
         ie.a(14837);
     }

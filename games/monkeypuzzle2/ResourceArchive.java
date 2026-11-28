@@ -196,7 +196,7 @@ final class ResourceArchive {
     final static void setLoadingStatus(String param0, int param1, float param2) {
         try {
           IntrusiveDeque.field_h = param2;
-          be.field_d = param0;
+          TextLineMetrics.field_d = param0;
           if (param1 != -24119) {
             field_f = (String) null;
           }
@@ -857,11 +857,11 @@ final class ResourceArchive {
                 rc.field_f = -1;
                 wk.field_a = var6_int;
               } else {
-                dk.field_h = aa.field_b;
+                dk.field_h = TextLayout.field_b;
               }
               MonkeyPuzzle2.field_D.position = 0;
             }
-            if (aa.field_b == dk.field_h &&
+            if (TextLayout.field_b == dk.field_h &&
               hj.a(8, true)) {
               ld.field_a = MonkeyPuzzle2.field_D.readLong(127);
               MonkeyPuzzle2.field_D.position = 0;

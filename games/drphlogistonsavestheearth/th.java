@@ -218,7 +218,7 @@ final class th {
               for (var5_int = 0; var5_int < gf.field_C; var5_int++) {
                 dh.field_N.payload[var5_int] = var4_ref_wk.field_j[var5_int];
               }
-              l.field_q = gg.field_l;
+              DefaultTextWidgetRenderer.field_q = gg.field_l;
               gg.field_l = ek.field_h;
               ek.field_h = t.field_b;
               t.field_b = var4_ref_wk.field_n;
@@ -239,7 +239,7 @@ final class th {
               return false;
             }
             if (lc.field_v == 0) {
-              l.field_q = gg.field_l;
+              DefaultTextWidgetRenderer.field_q = gg.field_l;
               gg.field_l = ek.field_h;
               ek.field_h = t.field_b;
               t.field_b = dj.field_N;

@@ -833,7 +833,7 @@ final class BattleState {
                 stackIn_25_0 = (var11 < var10) ? var10 : var11;
                 var12 = stackIn_25_0;
                 if (param1 >= var12) {
-                  var14.a(true, new lia(new CreatureRef(var9), param3, -1));
+                  var14.a(true, new ChangeHealthAndStatusEffect(new CreatureRef(var9), param3, -1));
                 }
               }
             }
@@ -2251,7 +2251,7 @@ final class BattleState {
                   var9++;
                 }
                 var10 = new EffectBatch();
-                var10.a(true, new qq(new CreatureRef(var8Lifetime1), -1, var9));
+                var10.a(true, new ChangeCreatureStatOrHealthEffect(new CreatureRef(var8Lifetime1), -1, var9));
                 var10.apply(this, false);
                 this.field_U.addLast(var10, true);
               }
@@ -2915,7 +2915,7 @@ final class BattleState {
             this.hasPlayerResigned((byte) 53, var3Lifetime5)) {
             var4_ref_ej = new ej(var3Lifetime5);
             var8.a(var4_ref_ej, (byte) 112);
-            var4_ref_ej.a(false, this);
+            var4_ref_ej.applyToBattle(false, this);
           }
         }
         if (this.field_A > this.field_J) {

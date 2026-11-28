@@ -73,14 +73,14 @@ final class n {
           hj.a(u.field_m, 1);
           cc.a();
           SoftwareRasterizer.clearRaster();
-          ja.a(param1 + 45);
+          TextHotspotBounds.a(param1 + 45);
           if (var5 < 256) {
             SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.field_i, SoftwareRasterizer.field_b, 0, -var5 + 256);
           }
           if (param1 != -41) {
             return;
           }
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           if (ni.field_d < 150) {
             u.field_m.drawHalfSize(var3_int, var4);
             if (var8 != 0) {
@@ -95,22 +95,22 @@ final class n {
             if (var6 >= 20) {
               if (30 <= var6) {
                 var7 = (-var6 + 50) * 256 / 20;
-                pd.field_s.drawAdditive(var3_int, var4, var7);
+                RichTextLayout.field_s.drawAdditive(var3_int, var4, var7);
                 if (var8 != 0) {
-                  pd.field_s.drawAdditive(var3_int, var4, 256);
+                  RichTextLayout.field_s.drawAdditive(var3_int, var4, 256);
                   var7 = 256 * var6 / 20;
-                  pd.field_s.drawAdditive(var3_int, var4, var7);
+                  RichTextLayout.field_s.drawAdditive(var3_int, var4, var7);
                 }
               } else {
-                pd.field_s.drawAdditive(var3_int, var4, 256);
+                RichTextLayout.field_s.drawAdditive(var3_int, var4, 256);
                 if (var8 != 0) {
                   var7 = 256 * var6 / 20;
-                  pd.field_s.drawAdditive(var3_int, var4, var7);
+                  RichTextLayout.field_s.drawAdditive(var3_int, var4, var7);
                 }
               }
             } else {
               var7 = 256 * var6 / 20;
-              pd.field_s.drawAdditive(var3_int, var4, var7);
+              RichTextLayout.field_s.drawAdditive(var3_int, var4, var7);
             }
           }
           var6Lifetime1 = ni.field_d - 140;

@@ -316,7 +316,7 @@ final class rd {
           boolean decompiledFrameRemainder1 = true;
           boolean decompiledFrameRemainder0 = true;
           SoftwareRasterizer.setClip(stackIn_11_0, stackIn_12_1, stackIn_14_2, stackIn_15_3);
-          var5 = mm.field_m[0];
+          var5 = TextHotspotBounds.field_m[0];
           if (hg.field_e == 1) {
             var6_ref_oc = new GridPoint();
             ln.field_a.a(-2, 1);
@@ -533,7 +533,7 @@ final class rd {
               if (bm.field_c == 0 &&
                 8 == rl.field_c &&
                 3 == ha.field_t &&
-                pm.field_a) {
+                TextLineMetrics.field_a) {
                 var21Lifetime2 = 0;
               }
               if (var21Lifetime2 != 0) {

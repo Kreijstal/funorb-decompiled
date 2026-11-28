@@ -50,7 +50,7 @@ public final class Torquing extends NetworkGameClient {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -92,7 +92,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.MA(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ public final class Torquing extends NetworkGameClient {
           ra.resetStaticState(376);
           i.clearDeclaredStaticReferences(50);
           ip.clearStaticReferences(108);
-          pc.clearStaticReferences(4252);
+          DefaultTextWidgetRenderer.clearStaticReferences(4252);
           pg.a(47);
           jb.a((byte) -124);
           VertexMesh.clearStaticReferences((byte) -81);
@@ -255,7 +255,7 @@ public final class Torquing extends NetworkGameClient {
           oj.clearStaticReferences(param0 ^ 5);
           ld.b((byte) -21);
           rn.a((byte) 116);
-          uj.clearStaticReferences((byte) -54);
+          TextLayout.clearStaticReferences((byte) -54);
           UiWidget.d(13509);
           InteractiveWidget.clearStaticReferences(52);
           jh.clearDeclaredStaticReferences((byte) 69);
@@ -335,7 +335,7 @@ public final class Torquing extends NetworkGameClient {
           wb.g((byte) 109);
           vk.b(95);
           rd.clearStaticReferences(127);
-          cm.clearStaticReferences(31003);
+          RichTextLayout.clearStaticReferences(31003);
           DirectByteStorage.clearDeclaredStaticReferences(-101);
           hq.clearStaticReferences(-1);
           jd.resetStaticState(-97);
@@ -397,7 +397,7 @@ public final class Torquing extends NetworkGameClient {
           AgeValidator.clearDeclaredStaticReferences(64);
           MatchingFieldValidator.clearStaticReferences((byte) -121);
           qd.clearStaticReferences(15);
-          tb.clearStaticReferences((byte) 103);
+          TextHotspotBounds.clearStaticReferences((byte) 103);
           cd.clearStaticReferences((byte) -11);
           DebouncedFieldValidator.clearDeclaredStaticReferences((byte) 62);
           ka.clearStaticReferences(101);
@@ -411,7 +411,7 @@ public final class Torquing extends NetworkGameClient {
           this.field_i = null;
           this.field_t = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.AA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.AA(" + param0 + ')');
         }
     }
 
@@ -449,7 +449,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.BB(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.BB(" + param0 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ public final class Torquing extends NetworkGameClient {
           qa.field_l = 9;
           SceneMeshBatch.initializeEmptyMesh();
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DA(" + param0 + ')');
         }
     }
 
@@ -492,7 +492,7 @@ public final class Torquing extends NetworkGameClient {
           if (null == this.field_t) {
             this.field_t = new TooltipPanel(i.field_Q, 0, 372, 286, GameKeyHandler.field_a[param1], -34, -159);
             this.field_t.addFlexibleVerticalSpace((byte) -19, 30);
-            this.field_t.appendCenteredText(false, ff.a(new String[]{Integer.toString(param1 + 1)}, 0, pc.field_n));
+            this.field_t.appendCenteredText(false, ff.a(new String[]{Integer.toString(param1 + 1)}, 0, DefaultTextWidgetRenderer.field_n));
             this.field_t.addFlexibleVerticalSpace((byte) 120, 40);
             this.field_t.appendCenteredText(false, ff.a(new String[]{Integer.toString(ie.field_b.field_b[param1]), Integer.toString(MenuScreen.field_k[param1])}, 0, ka.field_l));
             this.field_t.addFlexibleVerticalSpace((byte) 97, 30);
@@ -505,7 +505,7 @@ public final class Torquing extends NetworkGameClient {
           }
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.PA(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -834,7 +834,7 @@ public final class Torquing extends NetworkGameClient {
               rj.a(-65, cp.field_i, var33);
               MouseWheelInput.a(mn.a(rg.field_v, "", "mb_logo", 96), false);
               var34 = mn.a(rg.field_v, "", "mb_price_bg", 97);
-              kp.a(var34, 10, 24, 96, 118, 37, 6, false, -2000);
+              TextLineMetrics.a(var34, 10, 24, 96, 118, 37, 6, false, -2000);
               mk.field_b.a(-101);
             }
             rp.field_d = null;
@@ -1272,7 +1272,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3_ref), "Torquing.WA(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3_ref), "Torquing.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1578,7 +1578,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.SA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.SA(" + param0 + ')');
         }
     }
 
@@ -1611,7 +1611,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.TA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -1625,7 +1625,7 @@ public final class Torquing extends NetworkGameClient {
         try {
           oe.a(50, (byte) 44);
           oi.a(50, (byte) 80);
-          tb.a(50, -128);
+          TextHotspotBounds.a(50, -128);
           BufferedSocket.c(-101);
           jh.a(ResourceArchive.field_k[0], 0);
           var2_int = GzipDecompressor.field_b;
@@ -1641,7 +1641,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.CB(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.CB(" + param0 + ')');
         }
     }
 
@@ -1746,7 +1746,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "Torquing.EA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "Torquing.EA(" + param0 + ')');
         }
     }
 
@@ -1788,7 +1788,7 @@ public final class Torquing extends NetworkGameClient {
           qh.field_c.drawParagraph(VolumeScaledPcmStream.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2013,7 +2013,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.HA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.HA(" + param0 + ')');
         }
     }
 
@@ -2032,7 +2032,7 @@ public final class Torquing extends NetworkGameClient {
           pa.field_e[param1].drawOpaque(0, 0);
           SoftwareRasterizer.drawRectangleOutline(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2124,7 +2124,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.VA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.VA(" + param0 + ')');
         }
     }
 
@@ -2142,7 +2142,7 @@ public final class Torquing extends NetworkGameClient {
           int var2_int = -39 % ((param0 - 75) / 50);
           nb.b(0);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.JA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.JA(" + param0 + ')');
         }
     }
 
@@ -2154,7 +2154,7 @@ public final class Torquing extends NetworkGameClient {
             field_x = 30;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.QA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.QA(" + param0 + ')');
         }
     }
 
@@ -2213,7 +2213,7 @@ public final class Torquing extends NetworkGameClient {
             stackIn_20_0 = stackIn_15_0;
             stackIn_20_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -2221,7 +2221,7 @@ public final class Torquing extends NetworkGameClient {
         try {
           this.startAppletClient(16, "torquing", -116);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.init()");
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.init()");
         }
     }
 
@@ -2306,7 +2306,7 @@ public final class Torquing extends NetworkGameClient {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "Torquing.UA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "Torquing.UA(" + param0 + ')');
         }
     }
 
@@ -2332,7 +2332,7 @@ public final class Torquing extends NetworkGameClient {
           n.field_q = vg.a(-27646, 14);
           kc.a(1, rp.field_d, e.field_b);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.NA(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "Torquing.NA(" + param0 + ')');
         }
     }
 

@@ -13,7 +13,7 @@ class af extends ta implements WidgetActivationListener {
 
     final void d(boolean param0) {
         this.field_kb.a(0, 4210752, 2121792);
-        ui var2 = new ui(this, this.field_pb, dg.field_E);
+        ui var2 = new ui(this, this.field_pb, RichTextWidget.field_E);
         var2.a(sh.field_h, 15, -14);
         if (param0) {
           lk var3 = (lk) null;

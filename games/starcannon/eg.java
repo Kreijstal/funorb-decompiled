@@ -151,7 +151,7 @@ final class eg implements de {
           return;
         }
         IsaacRandom.field_c = null;
-        nh.field_h = null;
+        TextLineMetrics.field_h = null;
     }
 
     public static void clearStaticReferences(byte param0) {

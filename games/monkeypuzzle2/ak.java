@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ak extends a {
+final class ak extends DefaultTextWidgetRenderer {
     static int field_r;
     static Sprite[] field_t;
     static int field_v;
@@ -154,7 +154,7 @@ final class ak extends a {
             (param1 < 160 ||
             255 < param1)) {
             if (param1 != 0) {
-              var6 = sb.field_n;
+              var6 = RichTextLayout.field_n;
               var2 = var6;
               var3 = 0;
               while (var6.length > var3) {

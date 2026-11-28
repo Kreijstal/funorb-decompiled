@@ -73,25 +73,25 @@ final class wd {
             SpriteGeometry.field_n = SpriteGeometry.field_n - og.field_a;
           }
           var2_int = -1;
-          if (null == dm.field_b) {
+          if (null == TextLayout.field_b) {
             if (null != il.field_e) {
               var2_int = il.field_e.length;
             }
           } else {
-            var2_int = dm.field_b.length;
+            var2_int = TextLayout.field_b.length;
           }
           if (var2_int != -1) {
             boolean decompiledFrameRemainder0 = true;
             if (h.field_A < og.field_o) {
               h.field_A = h.field_A + 1;
-              if (h.field_A > og.field_b && (null == dm.field_b ||
-                dm.field_b[kb.field_m] == null)) {
+              if (h.field_A > og.field_b && (null == TextLayout.field_b ||
+                TextLayout.field_b[kb.field_m] == null)) {
                 h.field_A = h.field_A - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (og.field_o <= h.field_A &&
-                  null == dm.field_b[(1 + kb.field_m) % var2_int]) {
+                  null == TextLayout.field_b[(1 + kb.field_m) % var2_int]) {
                   h.field_A = h.field_A - 1;
                 }
               }

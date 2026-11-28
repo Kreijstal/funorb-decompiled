@@ -390,7 +390,7 @@ final class GasCloudAnimation extends EventAnimation {
               var13.field_ac = new UiComponent(0L, qs.field_m);
               var13.a(-1, var13.field_ac);
               var13.d((byte) 119);
-              var13.field_Ub = new UiComponent(0L, mh.field_k);
+              var13.field_Ub = new UiComponent(0L, CreaturePoseEffect.field_k);
               var14 = 1;
               var13.a(-1, var13.field_Ub);
             }
@@ -677,7 +677,7 @@ final class GasCloudAnimation extends EventAnimation {
               } else {
                 var35 = cc.field_d[var13.field_Kb];
               }
-              MusicPatchPcmStream.field_m = jk.field_j + " - " + var35;
+              MusicPatchPcmStream.field_m = CreaturePoseAnimation.field_j + " - " + var35;
             }
             if (var13.field_fc.field_T) {
               if (var13.field_dc) {
@@ -953,7 +953,7 @@ final class GasCloudAnimation extends EventAnimation {
           ria.field_k.field_lb = 1;
           ria.field_k.field_N = 1;
           ria.field_k.field_V = 1;
-          mh.field_k = new UiComponent(0L, ria.field_k);
+          CreaturePoseEffect.field_k = new UiComponent(0L, ria.field_k);
           JaggrabDownloader.field_c = new UiComponent(0L, ria.field_k);
           iw.field_a = new UiComponent(0L, vo.field_b);
           if (param0 != 30869) {
@@ -976,9 +976,9 @@ final class GasCloudAnimation extends EventAnimation {
           vo.field_b.field_A = tj.a(gw.a("lobby", "bigbutton_mouseover", param2, -68), (byte) -32);
           vo.field_b.field_db = tj.a(gw.a("lobby", "bigbutton_mouseheld", param2, -68), (byte) 114);
           vo.field_b.field_X = tj.a(gw.a("lobby", "bigbutton_disabled", param2, -128), (byte) -40);
-          mh.field_k.field_eb = tj.a(gw.a("lobby", "greenbutton", param2, -118), (byte) 123);
-          mh.field_k.field_A = tj.a(gw.a("lobby", "greenbutton_mouseover", param2, -53), (byte) 114);
-          mh.field_k.field_db = tj.a(gw.a("lobby", "greenbutton_mouseheld", param2, param0 - 30984), (byte) 120);
+          CreaturePoseEffect.field_k.field_eb = tj.a(gw.a("lobby", "greenbutton", param2, -118), (byte) 123);
+          CreaturePoseEffect.field_k.field_A = tj.a(gw.a("lobby", "greenbutton_mouseover", param2, -53), (byte) 114);
+          CreaturePoseEffect.field_k.field_db = tj.a(gw.a("lobby", "greenbutton_mouseheld", param2, param0 - 30984), (byte) 120);
           JaggrabDownloader.field_c.field_eb = tj.a(gw.a("lobby", "redbutton", param2, param0 ^ -30894), (byte) 123);
           JaggrabDownloader.field_c.field_A = tj.a(gw.a("lobby", "redbutton_mouseover", param2, -84), (byte) -70);
           JaggrabDownloader.field_c.field_db = tj.a(gw.a("lobby", "redbutton_mouseheld", param2, -88), (byte) -106);

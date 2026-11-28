@@ -93,12 +93,12 @@ final class ni {
         field_d = null;
     }
 
-    final static cn a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         if (param0 < 71) {
           ni.a(123);
         }
         if (null == sa.field_a) {
-          sa.field_a = new cn(jn.field_G, 20, 0, 0, 0, 11579568, -1, 0, 0, jn.field_G.field_y, -1, 2147483647, true);
+          sa.field_a = new DefaultTextWidgetRenderer(jn.field_G, 20, 0, 0, 0, 11579568, -1, 0, 0, jn.field_G.field_y, -1, 2147483647, true);
         }
         return sa.field_a;
     }

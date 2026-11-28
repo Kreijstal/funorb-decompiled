@@ -107,9 +107,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
-          if (va.field_o != null &&
-            this != va.field_o) {
-            stackIn_12_0 = va.field_o.getParameter(param0);
+          if (DefaultTextWidgetRenderer.field_o != null &&
+            this != DefaultTextWidgetRenderer.field_o) {
+            stackIn_12_0 = DefaultTextWidgetRenderer.field_o.getParameter(param0);
             return stackIn_12_0;
           }
           stackIn_14_0 = super.getParameter(param0);
@@ -255,7 +255,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          va.field_o = param0;
+          DefaultTextWidgetRenderer.field_o = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -370,8 +370,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               decompiledFrameRemainder0 = (var4 != 0);
             }
             if (decompiledFrameRemainder0) {
-              if (null != va.field_o) {
-                var2 = va.field_o;
+              if (null != DefaultTextWidgetRenderer.field_o) {
+                var2 = DefaultTextWidgetRenderer.field_o;
                 if (var4 != 0) {
                   var2 = qe.field_T;
                   var2 = lo.field_j;
@@ -426,9 +426,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         if (eo.field_k != null) {
           return null;
         }
-        if (va.field_o != null &&
-          this != va.field_o) {
-          return va.field_o.getCodeBase();
+        if (DefaultTextWidgetRenderer.field_o != null &&
+          this != DefaultTextWidgetRenderer.field_o) {
+          return DefaultTextWidgetRenderer.field_o.getCodeBase();
         }
         return super.getCodeBase();
     }
@@ -545,10 +545,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param5 >= ua.field_e &&
             WidgetContainer.field_D >= param5) {
             var15_ref_int__ = vl.field_e[param5];
-            var16 = pk.a((byte) -14, ib.field_a, -param4 + param3, ap.field_e);
-            var17 = pk.a((byte) -14, ib.field_a, param4 + param3, ap.field_e);
-            var18 = pk.a((byte) -14, ib.field_a, param3 - var8, ap.field_e);
-            var19 = pk.a((byte) -14, ib.field_a, param3 + var8, ap.field_e);
+            var16 = TextHotspotBounds.a((byte) -14, ib.field_a, -param4 + param3, ap.field_e);
+            var17 = TextHotspotBounds.a((byte) -14, ib.field_a, param4 + param3, ap.field_e);
+            var18 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 - var8, ap.field_e);
+            var19 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 + var8, ap.field_e);
             ki.a(-99, var16, var15_ref_int__, var18, param0);
             ki.a(param2 - 84, var18, var15_ref_int__, var19, param1);
             ki.a(-125, var19, var15_ref_int__, var17, param0);
@@ -577,10 +577,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var15 <= WidgetContainer.field_D) {
                 if (var8 > var9) {
                   var17Lifetime1 = jo.field_h[var9];
-                  var18Lifetime1 = pk.a((byte) -14, ib.field_a, param3 + var7_int, ap.field_e);
-                  var19Lifetime1 = pk.a((byte) -14, ib.field_a, param3 - var7_int, ap.field_e);
-                  var20 = pk.a((byte) -14, ib.field_a, param3 + var17Lifetime1, ap.field_e);
-                  var21 = pk.a((byte) -14, ib.field_a, -var17Lifetime1 + param3, ap.field_e);
+                  var18Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 + var7_int, ap.field_e);
+                  var19Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 - var7_int, ap.field_e);
+                  var20 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 + var17Lifetime1, ap.field_e);
+                  var21 = TextHotspotBounds.a((byte) -14, ib.field_a, -var17Lifetime1 + param3, ap.field_e);
                   if (WidgetContainer.field_D >= var16Lifetime1) {
                     var22 = vl.field_e[var16Lifetime1];
                     ki.a(-102, var19Lifetime1, var22, var21, param0);
@@ -594,8 +594,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     ki.a(-79, var20, var22Lifetime2, var18Lifetime1, param0);
                   }
                 } else {
-                  var17Lifetime1 = pk.a((byte) -14, ib.field_a, var7_int + param3, ap.field_e);
-                  var18Lifetime1 = pk.a((byte) -14, ib.field_a, -var7_int + param3, ap.field_e);
+                  var17Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, var7_int + param3, ap.field_e);
+                  var18Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, -var7_int + param3, ap.field_e);
                   if (var16Lifetime1 <= WidgetContainer.field_D) {
                     ki.a(param2 ^ 87, var18Lifetime1, vl.field_e[var16Lifetime1], var17Lifetime1, param0);
                   }
@@ -614,8 +614,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var18Lifetime1Lifetime1 = -var9 + param3;
               if (var17Lifetime1Lifetime1 >= ap.field_e &&
                 var18Lifetime1Lifetime1 <= ib.field_a) {
-                var17Lifetime1Lifetime1 = pk.a((byte) -14, ib.field_a, var17Lifetime1Lifetime1, ap.field_e);
-                var18Lifetime1Lifetime1 = pk.a((byte) -14, ib.field_a, var18Lifetime1Lifetime1, ap.field_e);
+                var17Lifetime1Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, var17Lifetime1Lifetime1, ap.field_e);
+                var18Lifetime1Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, var18Lifetime1Lifetime1, ap.field_e);
                 if (var8 <= var7_int) {
                   if (WidgetContainer.field_D >= var16Lifetime1Lifetime1) {
                     ki.a(-91, var18Lifetime1Lifetime1, vl.field_e[var16Lifetime1Lifetime1], var17Lifetime1Lifetime1, param0);
@@ -632,8 +632,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     stackIn_73_0 = jo.field_h[var7_int];
                   }
                   var19Lifetime1Lifetime1 = stackIn_73_0;
-                  var20Lifetime1 = pk.a((byte) -14, ib.field_a, param3 + var19Lifetime1Lifetime1, ap.field_e);
-                  var21Lifetime1 = pk.a((byte) -14, ib.field_a, param3 - var19Lifetime1Lifetime1, ap.field_e);
+                  var20Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 + var19Lifetime1Lifetime1, ap.field_e);
+                  var21Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, param3 - var19Lifetime1Lifetime1, ap.field_e);
                   if (var16Lifetime1Lifetime1 <= WidgetContainer.field_D) {
                     var22Lifetime1 = vl.field_e[var16Lifetime1Lifetime1];
                     ki.a(-95, var18Lifetime1Lifetime1, var22Lifetime1, var21Lifetime1, param0);
@@ -705,9 +705,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.net.URL) (stackIn_4_0);
           }
-          if (null != va.field_o &&
-            this != va.field_o) {
-            stackIn_10_0 = va.field_o.getDocumentBase();
+          if (null != DefaultTextWidgetRenderer.field_o &&
+            this != DefaultTextWidgetRenderer.field_o) {
+            stackIn_10_0 = DefaultTextWidgetRenderer.field_o.getDocumentBase();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getDocumentBase();
@@ -763,8 +763,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             }
             NodeHashTableIterator.field_g = true;
           }
-          if (null != va.field_o) {
-            va.field_o.destroy();
+          if (null != DefaultTextWidgetRenderer.field_o) {
+            DefaultTextWidgetRenderer.field_o.destroy();
           }
           try {
             this.disposeClient((byte) -123);
@@ -1002,8 +1002,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               }
               if (decompiledFrameRemainder3) {
                 var1 = qe.field_T;
-                if (null != va.field_o) {
-                  var1 = va.field_o;
+                if (null != DefaultTextWidgetRenderer.field_o) {
+                  var1 = DefaultTextWidgetRenderer.field_o;
                 }
                 var2_ref = PlatformTaskDispatcher.field_e;
                 if (null != var2_ref) {
@@ -1016,7 +1016,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 nf.a(true);
                 this.a((byte) -57);
-                ro.field_g = nn.a(gh.field_a, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F), true, op.field_c);
+                TextLayout.field_g = nn.a(gh.field_a, (java.awt.Component) ((Object) DisplayNameSelectionPanel.field_F), true, op.field_c);
                 this.initializeClient(255);
                 IsaacCipher.field_i = bl.c(true);
                 do {
@@ -1030,7 +1030,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    tf.field_n = IsaacCipher.field_i.waitAndCountTicks(sl.field_w, true);
+                    tf.field_n = IsaacCipher.field_i.waitAndCountTicks(RichTextLayout.field_w, true);
                     stackIn_101_0 = 0;
                   }
                   var3 = stackIn_101_0;
@@ -1076,9 +1076,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
-          if (null != va.field_o &&
-            this != va.field_o) {
-            stackIn_10_0 = va.field_o.getAppletContext();
+          if (null != DefaultTextWidgetRenderer.field_o &&
+            this != DefaultTextWidgetRenderer.field_o) {
+            stackIn_10_0 = DefaultTextWidgetRenderer.field_o.getAppletContext();
             return stackIn_10_0;
           }
           stackIn_12_0 = super.getAppletContext();

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends jd {
+final class qi extends DefaultTextWidgetRenderer {
     static int[] field_r;
     private kg field_t;
     private kg[] field_q;

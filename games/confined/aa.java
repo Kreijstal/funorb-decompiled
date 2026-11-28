@@ -7,7 +7,7 @@ final class aa {
 
     final static void a(boolean param0) {
         if (null != fj.field_u) {
-          c.a(!param0 ? true : false, fj.field_u);
+          RichTextLayout.a(!param0 ? true : false, fj.field_u);
           fj.field_u = null;
           am.g(-4258);
         }
@@ -30,8 +30,8 @@ final class aa {
         dg.field_n.a((byte) -6, ih.field_d, fi.field_b, dl.field_a);
         dg.field_n.a((byte) -6, EditableTextField.field_U, pb.field_a, ByteStorage.field_d);
         dg.field_n.a((byte) -6, oj.field_C, PrimaryNodeDeque.field_g, vk.field_x);
-        dg.field_n.a((byte) -6, jd.field_b, sd.field_g, af.field_U);
-        dg.field_n.a((byte) -6, AccountCreationResultPanel.field_Bb, sd.field_g, af.field_U);
+        dg.field_n.a((byte) -6, jd.field_b, TextLineMetrics.field_g, af.field_U);
+        dg.field_n.a((byte) -6, AccountCreationResultPanel.field_Bb, TextLineMetrics.field_g, af.field_U);
         dg.field_n.a((byte) -6, PrimaryNodeDeque.field_b, uc.field_cb, ug.field_bb);
     }
 

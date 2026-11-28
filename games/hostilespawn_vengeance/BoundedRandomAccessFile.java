@@ -161,7 +161,7 @@ final class BoundedRandomAccessFile {
               s.field_b.field_i = 0;
               s.field_b.d(94, 14);
               s.field_b.d(89, AchievementNotification.field_i.a(false).field_a);
-              mb.d(-1, -22370);
+              RichTextLayout.d(-1, -22370);
               rc.field_a = MouseInput.field_h;
             }
             if (rc.field_a == MouseInput.field_h &&
@@ -264,7 +264,7 @@ final class BoundedRandomAccessFile {
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments(BufferedRandomAccessFile.c(-1), new Object[]{pm.a(ib.field_d, (byte) 100)}, "zap", -13730);
+                  JavaScriptBridge.callWithArguments(BufferedRandomAccessFile.c(-1), new Object[]{TextLineMetrics.a(ib.field_d, (byte) 100)}, "zap", -13730);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

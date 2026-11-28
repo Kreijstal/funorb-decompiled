@@ -346,14 +346,14 @@ final class MidiPcmStream extends PcmStream {
           }
           if (var5Lifetime1 == 64) {
             if (var6Lifetime1 >= 64) {
-              this.field_q[var4Lifetime1] = ne.a(this.field_q[var4Lifetime1], 1);
+              this.field_q[var4Lifetime1] = TextLayout.a(this.field_q[var4Lifetime1], 1);
             } else {
               this.field_q[var4Lifetime1] = sc.a(this.field_q[var4Lifetime1], -2);
             }
           }
           if (var5Lifetime1 == 65) {
             if (var6Lifetime1 >= 64) {
-              this.field_q[var4Lifetime1] = ne.a(this.field_q[var4Lifetime1], 2);
+              this.field_q[var4Lifetime1] = TextLayout.a(this.field_q[var4Lifetime1], 2);
             } else {
               this.releaseUnmappedVoices(var4Lifetime1, param0 ^ -31961);
               this.field_q[var4Lifetime1] = sc.a(this.field_q[var4Lifetime1], -3);
@@ -403,7 +403,7 @@ final class MidiPcmStream extends PcmStream {
               this.resetChannelVoicePhases(var4Lifetime1, -20403);
               this.field_q[var4Lifetime1] = sc.a(this.field_q[var4Lifetime1], -5);
             } else {
-              this.field_q[var4Lifetime1] = ne.a(this.field_q[var4Lifetime1], 4);
+              this.field_q[var4Lifetime1] = TextLayout.a(this.field_q[var4Lifetime1], 4);
             }
           }
           if (var5Lifetime1 == 17) {
@@ -418,7 +418,7 @@ final class MidiPcmStream extends PcmStream {
 
     final static void b(boolean param0) {
         v.field_R = new String[]{fj.field_a, pb.field_h, tb.field_b, mh.field_v, NodeHashTableIterator.field_b, PcmOutputWorker.field_d, vj.field_a};
-        kb.field_k = new String[][]{new String[]{ProxyAuthenticationRequiredException.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, db.a(si.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ia.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), vg.field_v, UiComponent.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{gj.field_D, db.a(fl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oc.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(DiskCacheWorker.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ArchiveRequest.field_u, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(w.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(hc.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(pl.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oe.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ProxyAuthenticationRequiredException.field_h, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(re.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kf.field_j, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(lg.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(MouseWheelInput.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(hm.field_f, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ui.field_lb, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(gm.field_ib, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(j.field_l, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(cj.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{jj.field_V, g.field_t, qj.field_E}, new String[]{AgeValidator.field_q, kb.field_n, IntrusiveDeque.field_g, EmailFormatValidator.field_o}};
+        kb.field_k = new String[][]{new String[]{ProxyAuthenticationRequiredException.field_a, hf.field_f, oj.field_j}, new String[]{hc.field_f, db.a(si.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ia.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), vg.field_v, UiComponent.field_q, ea.field_c, cl.field_c, wa.field_d}, new String[]{gj.field_D, db.a(fl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oc.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(DiskCacheWorker.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ArchiveRequest.field_u, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kl.field_d, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(w.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(hc.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(pl.field_i, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(oe.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ProxyAuthenticationRequiredException.field_h, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(re.field_b, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(kf.field_j, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(lg.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{gj.field_D, db.a(MouseWheelInput.field_c, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(hm.field_f, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(ui.field_lb, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true), db.a(gm.field_ib, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(RichTextLayout.field_l, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, param0), db.a(cj.field_a, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true)}, new String[]{jj.field_V, g.field_t, qj.field_E}, new String[]{AgeValidator.field_q, kb.field_n, IntrusiveDeque.field_g, EmailFormatValidator.field_o}};
         String var21 = db.a(jk.field_o, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);
         String var1 = var21;
         String var2 = db.a(ak.field_g, new String[]{ti.field_a, AccountCreationResultPanel.field_xb}, true);

@@ -26,7 +26,7 @@ final class hi {
             return true;
           }
           if (param0 != 0) {
-            var6 = vk.field_e;
+            var6 = RichTextLayout.field_e;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
@@ -71,7 +71,7 @@ final class hi {
           try {
             var3 = "";
             if (param0 != null) {
-              var3 = kj.a((byte) 105, param0);
+              var3 = RichTextWidget.a((byte) 105, param0);
             }
             if (param1 != null) {
               if (param0 != null) {

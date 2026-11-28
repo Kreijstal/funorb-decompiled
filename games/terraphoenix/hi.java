@@ -150,7 +150,7 @@ final class hi extends ei implements WidgetActivationListener {
           var4.y = 50;
           var4.width = this.width;
           var4.x = 0;
-          var4.listener = (WidgetActionListener) ((Object) new fd(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.listener = (WidgetActionListener) ((Object) new DefaultTextWidgetRenderer(ra.field_l, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) 95, var4);
           this.field_X = this.a(false, RasterBuffer.field_e, (sc) (this));
           return;

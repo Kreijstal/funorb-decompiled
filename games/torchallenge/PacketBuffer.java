@@ -208,18 +208,18 @@ class PacketBuffer extends IntrusiveNode {
             }
             if (InteractiveWidget.field_A == aj.field_c) {
               if (!param1) {
-                qi.field_c = nj.a(param3, true, param4, false);
+                TextLineMetrics.field_c = nj.a(param3, true, param4, false);
               } else {
                 var10 = (String) null;
-                qi.field_c = ac.a(IsaacRandom.field_j, (String) null, 122, param3, false);
+                TextLineMetrics.field_c = ac.a(IsaacRandom.field_j, (String) null, 122, param3, false);
               }
               dk.field_s.position = 0;
               dk.field_s.writeByte(14, (byte) 122);
-              dk.field_s.writeByte(qi.field_c.a(true).field_a, (byte) 122);
+              dk.field_s.writeByte(TextLineMetrics.field_c.a(true).field_a, (byte) 122);
               nb.a(-1, -1);
-              aj.field_c = qi.field_a;
+              aj.field_c = TextLineMetrics.field_a;
             }
-            if (qi.field_a == aj.field_c &&
+            if (TextLineMetrics.field_a == aj.field_c &&
               pe.a((byte) 124, 1)) {
               var6_int = id.field_b.readUnsignedByte(-115);
               if (var6_int != 0) {
@@ -239,7 +239,7 @@ class PacketBuffer extends IntrusiveNode {
               pe.a((byte) 105, 8)) {
               lh.field_u = id.field_b.readLong(-125);
               id.field_b.position = 0;
-              DisplayNameSelectionPanel.a(param2, false, param1, qi.field_c, param0);
+              DisplayNameSelectionPanel.a(param2, false, param1, TextLineMetrics.field_c, param0);
               aj.field_c = cd.field_s;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -271,7 +271,7 @@ class PacketBuffer extends IntrusiveNode {
             if (le.field_a == aj.field_c &&
               NodeHashTableIterator.a((byte) 113)) {
               IsaacRandom.field_j = id.field_b.readLong(-87);
-              fa.field_g = id.field_b.readUnsignedByte(-108);
+              RichTextLayout.field_g = id.field_b.readUnsignedByte(-108);
               id.field_b.readUnsignedByte(-109);
               UiComponent.field_o = id.field_b.readUnsignedShort(param5);
               var11 = id.field_b.readOptionalString(-29648475);
@@ -302,10 +302,10 @@ class PacketBuffer extends IntrusiveNode {
               td.field_i = EmailFormatValidator.a(var12, (byte) 21);
               uk.field_H = id.field_b.readUnsignedByte(-89);
               aj.field_c = qc.field_d;
-              if (qi.field_c.a(true) == AccountCreationResultPanel.field_Db) {
+              if (TextLineMetrics.field_c.a(true) == AccountCreationResultPanel.field_Db) {
                 sd.field_e.a(gi.b(12476), param5);
               } else {
-                if (qi.field_c.a(true) == ja.field_g) {
+                if (TextLineMetrics.field_c.a(true) == ja.field_g) {
                   UiComponent.field_x.a(gi.b(12476), false);
                 }
               }

@@ -34,7 +34,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
             if (param5 != 22692) {
               field_d = (boolean[]) null;
             }
-            se.field_p = new BitPacketBuffer(param11);
+            RichTextLayout.field_p = new BitPacketBuffer(param11);
             d.field_b = new BitPacketBuffer(param2);
             sj.field_I = param9;
             qa.field_e = param4;

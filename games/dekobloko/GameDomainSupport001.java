@@ -26,7 +26,7 @@ final class GameDomainSupport001 {
             rgbSpriteLocal2.drawSilhouette(-2, -2, 16777215);
             SoftwareRaster.blurRectangle(4, 4, 0, 0, 540, 140);
           }
-          UiComponentPart025.rgbSpriteState0045.bindAsRenderTarget();
+          RichTextWidget.rgbSpriteState0045.bindAsRenderTarget();
           rgbSpriteLocal1.drawHalfSize(0, 0);
           ByteStorage.performAction1060((byte) -5);
         } catch (RuntimeException runtimeException) {

@@ -34,7 +34,7 @@ final class wf {
             return true;
           }
           WhirlpoolDigest.field_f = param2;
-          fi.field_l = param3;
+          TextHotspotBounds.field_l = param3;
           th.field_n = param1;
           MouseWheelInput.field_c = null;
           DebouncedFieldValidator.field_e = param5;

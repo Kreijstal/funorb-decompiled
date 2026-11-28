@@ -178,8 +178,8 @@ final class hi {
           }
           if (decompiledFrameRemainder0) {
             if (!DebouncedFieldValidator.field_b) {
-              if (Main.field_G >= ek.field_e) {
-                stackIn_16_0 = (ek.field_e + ra.field_e > Main.field_G) ? 1 : 0;
+              if (Main.field_G >= DefaultTextWidgetRenderer.field_e) {
+                stackIn_16_0 = (DefaultTextWidgetRenderer.field_e + ra.field_e > Main.field_G) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -190,7 +190,7 @@ final class hi {
             var2_int = stackIn_16_0;
             if (param0 != null && (DebouncedFieldValidator.field_b ||
               var2_int != 0)) {
-              Main.field_G = ek.field_e;
+              Main.field_G = DefaultTextWidgetRenderer.field_e;
               decompiledFrameRemainder1 = false;
             }
             else {
@@ -208,7 +208,7 @@ final class hi {
           }
           t.field_e = param0;
           if (!DebouncedFieldValidator.field_b &&
-            ek.field_e > Main.field_G &&
+            DefaultTextWidgetRenderer.field_e > Main.field_G &&
             d.field_s) {
             ti.field_a = ug.field_h;
             Main.field_G = 0;

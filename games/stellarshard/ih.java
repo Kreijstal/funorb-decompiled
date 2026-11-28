@@ -40,15 +40,15 @@ final class ih {
     }
 
     final static void b(byte param0) {
-        if (pd.field_f == null) {
+        if (RichTextLayout.field_f == null) {
           return;
         }
-        nd.a(-26621, pd.field_f);
+        nd.a(-26621, RichTextLayout.field_f);
         int var1 = -104 / ((param0 - 71) / 35);
-        pd.field_f.exitFullscreen(DebouncedFieldValidator.field_d, -79);
-        pd.field_f = null;
-        if (ja.field_m != null) {
-          ja.field_m.c(-1);
+        RichTextLayout.field_f.exitFullscreen(DebouncedFieldValidator.field_d, -79);
+        RichTextLayout.field_f = null;
+        if (TextHotspotBounds.field_m != null) {
+          TextHotspotBounds.field_m.c(-1);
         }
         qd.field_j.requestFocus();
     }

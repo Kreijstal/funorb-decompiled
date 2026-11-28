@@ -27,7 +27,7 @@ final class k {
         int var3_int = 0;
         try {
           dj.field_d = false;
-          fd.field_k = param2 ? true : false;
+          DefaultTextWidgetRenderer.field_k = param2 ? true : false;
           if (null != nb.field_b) {
             if (!nb.field_b.field_J) {
               return;
@@ -36,7 +36,7 @@ final class k {
               if (!qi.field_b) {
                 param1 = bi.field_c;
               } else {
-                param1 = em.field_b;
+                param1 = TextLineMetrics.field_b;
               }
               param0 = 2;
               mb.field_s.a(ol.field_Hb, -1);
@@ -48,10 +48,10 @@ final class k {
             }
             if (var3_int != 0) {
               if (dj.field_d) {
-                param1 = MessageKeys.a(new String[]{param1}, -1, fd.field_q);
+                param1 = MessageKeys.a(new String[]{param1}, -1, DefaultTextWidgetRenderer.field_q);
               }
               if (ok.field_h) {
-                param1 = ld.field_g;
+                param1 = TextLayout.field_g;
               }
               nb.field_b.a(true, param1, param0);
             }
@@ -126,9 +126,9 @@ final class k {
         }
     }
 
-    final static fd a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         if (qb.field_b == null) {
-          qb.field_b = new fd(ra.field_l, 20, 0, 0, 0, 11579568, -1, 0, 0, ra.field_l.field_s, -1, 2147483647, true);
+          qb.field_b = new DefaultTextWidgetRenderer(ra.field_l, 20, 0, 0, 0, 11579568, -1, 0, 0, ra.field_l.field_s, -1, 2147483647, true);
           if (param0 < 26) {
             field_a = (String) null;
             return qb.field_b;

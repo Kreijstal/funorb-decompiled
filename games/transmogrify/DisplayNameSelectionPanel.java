@@ -176,7 +176,7 @@ final class DisplayNameSelectionPanel extends aj implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_D = new ValidatedTextField("", (ma) null, 12);
-        h var1 = new h(al.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(al.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(bj.field_P, var1, (ma) null);
         this.field_x = new InteractiveWidget(Transmogrify.field_E, (ma) null);
         this.field_w = new InteractiveWidget(fk.field_D, (ma) null);

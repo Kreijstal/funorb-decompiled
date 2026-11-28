@@ -10,7 +10,7 @@ final class db {
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
-        qq stackIn_3_0 = null;
+        ChangeCreatureStatOrHealthEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -22,7 +22,7 @@ final class db {
           if (param1 != 95) {
             field_a = (ResourceArchive) null;
           }
-          stackIn_3_0 = new qq(var2, var3, var4);
+          stackIn_3_0 = new ChangeCreatureStatOrHealthEffect(var2, var3, var4);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -37,7 +37,7 @@ final class wb {
           } else {
             gd.field_a = 2;
           }
-          em.field_d = param3;
+          TextLayout.field_d = param3;
           rh.field_e = param5;
           qf.field_d = param2;
           ByteStorage.field_c = new RgbSprite[param4.length];

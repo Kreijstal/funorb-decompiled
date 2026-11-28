@@ -110,8 +110,8 @@ final class ce extends kl {
 
     final void a(boolean param0) {
         super.a(param0);
-        if (null != hh.field_s) {
-          if (this.field_n == hh.field_s) {
+        if (null != DefaultTextWidgetRenderer.field_s) {
+          if (this.field_n == DefaultTextWidgetRenderer.field_s) {
             this.field_u = null;
           }
           this.field_d = true;

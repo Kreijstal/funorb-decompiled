@@ -85,9 +85,9 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         }
         param0 = param0 & 8191;
         if (param0 >= 4096) {
-          return param0 < 6144 ? -bd.field_c[param0 - 4096] : -bd.field_c[-param0 + 8192];
+          return param0 < 6144 ? -TextLayout.field_c[param0 - 4096] : -TextLayout.field_c[-param0 + 8192];
         }
-        return param0 < 2048 ? bd.field_c[param0] : bd.field_c[4096 - param0];
+        return param0 < 2048 ? TextLayout.field_c[param0] : TextLayout.field_c[4096 - param0];
     }
 
     TextFieldValidator(EditableTextField param0) {

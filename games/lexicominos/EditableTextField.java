@@ -229,10 +229,10 @@ class EditableTextField extends InteractiveWidget {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_i instanceof ub)) {
+          if (!(this.field_i instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((ub) ((Object) this.field_i)).a((w) (this), param4, 9, param5, bk.field_b, ResourceArchive.field_e);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_i)).findTextOffsetAtScreenPosition((w) (this), param4, 9, param5, bk.field_b, ResourceArchive.field_e);
           if (-1 != var8_int) {
             stackIn_6_1 = var8_int;
           } else {
@@ -268,34 +268,34 @@ class EditableTextField extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(byte param0) {
-        ve var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
         int var9;
-        ub var10;
+        TextWidgetRenderer var10;
         var9 = Lexicominos.field_L ? 1 : 0;
         if (!this.field_N) {
           this.field_l = 0;
           this.field_p = 0;
           return;
         }
-        if (!(this.field_i instanceof ub)) {
+        if (!(this.field_i instanceof TextWidgetRenderer)) {
           return;
         }
-        var10 = (ub) ((Object) this.field_i);
-        var3 = var10.a((w) (this), (byte) 122);
-        var4 = var3.a((byte) 94);
-        var5 = var10.a((w) (this), 227);
-        var6 = var10.a(2) >> 1;
+        var10 = (TextWidgetRenderer) ((Object) this.field_i);
+        var3 = var10.getTextLayout((w) (this), (byte) 122);
+        var4 = var3.getMaxLineRightX((byte) 94);
+        var5 = var10.getTextAreaWidth((w) (this), 227);
+        var6 = var10.getFontLineHeight(2) >> 1;
         if (var4 < var5 - var6) {
           this.field_l = 0;
           this.field_p = 0;
           return;
         }
-        var7 = this.field_p + var3.a((byte) -116, this.field_F);
+        var7 = this.field_p + var3.getXForTextOffset((byte) -116, this.field_F);
         if (-var6 + var5 < var7) {
           this.field_p = -var7 - var6 - (-var5 - this.field_p);
         } else {
@@ -373,19 +373,19 @@ class EditableTextField extends InteractiveWidget {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        ub var8 = null;
+        TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (this.field_i != null &&
           param3 == 0) {
           this.field_i.a(param1, param2, this.field_D, (w) (this), -3284);
-          if (this.field_i instanceof ub) {
-            var8 = (ub) ((Object) this.field_i);
+          if (this.field_i instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.field_i);
             if (this.field_F != this.field_I) {
-              var8.a(param1, param2, (w) (this), (byte) 31, this.field_I, this.field_F);
+              var8.paintSelection(param1, param2, (w) (this), (byte) 31, this.field_I, this.field_F);
             }
             var6 = rf.correctedCurrentTimeMillis(0);
             if ((var6 - this.field_J) % 1000L < 500L) {
-              var8.a(this.field_F, param2, param1, (w) (this), true);
+              var8.paintCaret(this.field_F, param2, param1, (w) (this), true);
             }
           }
         }
@@ -432,15 +432,15 @@ class EditableTextField extends InteractiveWidget {
     }
 
     void a(byte param0, w param1, int param2, int param3) {
-        ub var5 = null;
+        TextWidgetRenderer var5 = null;
         int var6 = 0;
         try {
           super.a(param0, param1, param2, param3);
           this.scrollCaretIntoView((byte) 94);
           if (this.field_h == 1) {
-            if (this.field_i instanceof ub) {
-              var5 = (ub) ((Object) this.field_i);
-              var6 = var5.a((w) (this), param2, 9, param3, bk.field_b, ResourceArchive.field_e);
+            if (this.field_i instanceof TextWidgetRenderer) {
+              var5 = (TextWidgetRenderer) ((Object) this.field_i);
+              var6 = var5.findTextOffsetAtScreenPosition((w) (this), param2, 9, param3, bk.field_b, ResourceArchive.field_e);
               if (var6 != -1) {
                 if (this.field_K &&
                   var6 < this.field_L &&

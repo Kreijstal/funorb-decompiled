@@ -242,7 +242,7 @@ class EditableTextField extends ButtonWidget {
           return;
         }
         this.field_h.a(this.field_w, (UiWidget) (this), param2, param3, 110);
-        if (!(this.field_h instanceof ui)) {
+        if (!(this.field_h instanceof TextWidgetRenderer)) {
           if (param0 == 30) {
             return;
           }
@@ -250,12 +250,12 @@ class EditableTextField extends ButtonWidget {
           this.setText(false, 120, (String) null);
           return;
         }
-        ui var9 = (ui) ((Object) this.field_h);
+        TextWidgetRenderer var9 = (TextWidgetRenderer) ((Object) this.field_h);
         if (this.field_D != this.field_E) {
-          var9.a(119, (UiWidget) (this), this.field_D, param3, this.field_E, param2);
+          var9.paintSelection(119, (UiWidget) (this), this.field_D, param3, this.field_E, param2);
           var6 = pf.correctedCurrentTimeMillis(param0 - 30);
           if ((-this.field_K + var6) % 1000L < 500L) {
-            var9.a((UiWidget) (this), param3, param2, this.field_E, 0);
+            var9.paintCaret((UiWidget) (this), param3, param2, this.field_E, 0);
             if (param0 == 30) {
               return;
             }
@@ -272,7 +272,7 @@ class EditableTextField extends ButtonWidget {
         }
         var6Lifetime1 = pf.correctedCurrentTimeMillis(param0 - 30);
         if ((-this.field_K + var6Lifetime1) % 1000L < 500L) {
-          var9.a((UiWidget) (this), param3, param2, this.field_E, 0);
+          var9.paintCaret((UiWidget) (this), param3, param2, this.field_E, 0);
           if (param0 == 30) {
             return;
           }
@@ -288,7 +288,7 @@ class EditableTextField extends ButtonWidget {
     }
 
     void a(UiWidget param0, int param1, int param2, byte param3) {
-        ui var7 = null;
+        TextWidgetRenderer var7 = null;
         int var6 = 0;
         try {
           if (param3 >= -13) {
@@ -297,9 +297,9 @@ class EditableTextField extends ButtonWidget {
           super.a(param0, param1, param2, (byte) -98);
           this.scrollCaretIntoView(95);
           if (this.field_t == 1) {
-            if (this.field_h instanceof ui) {
-              var7 = (ui) ((Object) this.field_h);
-              var6 = var7.a(param2, p.field_a, (UiWidget) (this), ei.field_a, true, param1);
+            if (this.field_h instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.field_h);
+              var6 = var7.findTextOffsetAtScreenPosition(param2, p.field_a, (UiWidget) (this), ei.field_a, true, param1);
               if (-1 != var6) {
                 if (this.field_C &&
                   var6 < this.field_J &&
@@ -576,8 +576,8 @@ class EditableTextField extends ButtonWidget {
         RuntimeException var8 = null;
         try {
           if (super.a(param0, param1, param2, param3 ^ 0, param4, param5, param6) &&
-            this.field_h instanceof ui) {
-            var8_int = ((ui) ((Object) this.field_h)).a(param6, p.field_a, (UiWidget) (this), ei.field_a, true, param0);
+            this.field_h instanceof TextWidgetRenderer) {
+            var8_int = ((TextWidgetRenderer) ((Object) this.field_h)).findTextOffsetAtScreenPosition(param6, p.field_a, (UiWidget) (this), ei.field_a, true, param0);
             if (var8_int == -1) {
               stackIn_7_1 = 0;
             } else {
@@ -634,35 +634,35 @@ class EditableTextField extends ButtonWidget {
     }
 
     private final void scrollCaretIntoView(int param0) {
-        aa var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
         int var9;
-        ui var10;
+        TextWidgetRenderer var10;
         var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (!this.field_G) {
           this.field_i = 0;
           this.field_k = 0;
           return;
         }
-        if (!(this.field_h instanceof ui)) {
+        if (!(this.field_h instanceof TextWidgetRenderer)) {
           return;
         }
-        var10 = (ui) ((Object) this.field_h);
-        var3 = var10.a(-1, (UiWidget) (this));
-        var4 = var3.a(true);
-        var5 = var10.b((UiWidget) (this), true);
+        var10 = (TextWidgetRenderer) ((Object) this.field_h);
+        var3 = var10.getTextLayout(-1, (UiWidget) (this));
+        var4 = var3.getMaxLineRightX(true);
+        var5 = var10.getTextAreaWidth((UiWidget) (this), true);
         var7 = -85 / ((27 - param0) / 63);
-        var6 = var10.a(2) >> 1;
+        var6 = var10.getFontLineHeight(2) >> 1;
         if (-var6 + var5 > var4) {
           this.field_k = 0;
           this.field_i = 0;
           return;
         }
-        var8 = this.field_k + var3.a(115, this.field_E);
+        var8 = this.field_k + var3.getXForTextOffset(115, this.field_E);
         if (var5 - var6 < var8) {
           this.field_k = this.field_k - (-var5 + (var6 + var8));
         } else {

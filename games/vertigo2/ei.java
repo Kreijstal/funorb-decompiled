@@ -265,7 +265,7 @@ final class ei extends DualLinkNode {
           Model.a(param0, "", "character/death_block");
           ui.field_e = Model.a(param0, "", "character/death_block_electric");
           kn.field_p = Model.a(param0, "", "character/mouth");
-          sl.field_u = Model.a(param0, "", "character/spikes");
+          RichTextLayout.field_u = Model.a(param0, "", "character/spikes");
           SpriteState.field_v = Model.a(param0, "", "character/char_shadow");
           var9 = new Model[2];
           var2 = var9;

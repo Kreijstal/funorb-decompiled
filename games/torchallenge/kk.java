@@ -58,14 +58,14 @@ final class kk extends t {
         }
     }
 
-    final static bc c(boolean param0) {
+    final static DefaultTextWidgetRenderer c(boolean param0) {
         if (ni.field_d == null) {
-          ni.field_d = new bc(GameApplet.field_f, 20, 0, 0, 0, 11579568, -1, 0, 0, GameApplet.field_f.field_x, -1, 2147483647, true);
+          ni.field_d = new DefaultTextWidgetRenderer(GameApplet.field_f, 20, 0, 0, 0, 11579568, -1, 0, 0, GameApplet.field_f.field_x, -1, 2147483647, true);
         }
         if (!param0) {
           return ni.field_d;
         }
-        return (bc) null;
+        return (DefaultTextWidgetRenderer) null;
     }
 
     final static void a(int param0, int param1) {

@@ -20,7 +20,7 @@ final class DiagnosticSupport002 extends RuntimeException {
         int integerLocal4 = 0;
         try {
           MixedSupport066.sceneWidgetState0068.stringState0598 = stringArgument8;
-          if (2 == NetworkSupport010.integerState0585) {
+          if (2 == TextHotspotBounds.integerState0585) {
             RenderingSupport001.sceneWidgetState0004.stringState0598 = ResourceSupport003.stringState0382;
           } else {
             RenderingSupport001.sceneWidgetState0004.stringState0598 = SceneWidgetNode.stringState0318;

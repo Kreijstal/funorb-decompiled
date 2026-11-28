@@ -53,7 +53,7 @@ final class ng extends InteractiveWidget {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         RuntimeException var2 = null;
         String stackIn_4_0 = null;
         String stackIn_7_0 = null;
@@ -1079,7 +1079,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("pleaselogin", 99);
                 if (var2 != null) {
-                  bh.field_Q = dj.a(var2, false);
+                  RichTextWidget.field_Q = dj.a(var2, false);
                 }
                 var2 = rp.a("pleaselogin_member", 88);
                 if (null != var2) {
@@ -2795,7 +2795,7 @@ final class ng extends InteractiveWidget {
                 }
                 var2 = rp.a("mb_achievement_count_1", 95);
                 if (var2 != null) {
-                  bh.field_K = dj.a(var2, false);
+                  RichTextWidget.field_K = dj.a(var2, false);
                 }
                 var2 = rp.a("mb_achievement_count_2", 52);
                 if (var2 != null) {

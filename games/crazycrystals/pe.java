@@ -80,7 +80,7 @@ final class pe extends IntrusiveNode {
             }
             ei.a(var4, var5, false);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              tb.a(-31416, var14);
+              TextLayout.a(-31416, var14);
               if (var6_intLifetime1 != 0) {
                 ca.a(SpriteGeometry.field_q, PasswordValidator.field_q, jd.field_I, var6_intLifetime1, true, of.field_D);
               } else {

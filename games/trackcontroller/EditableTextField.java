@@ -204,10 +204,10 @@ class EditableTextField extends ButtonWidget {
           if (!super.a(param0, param1, param2, param3, param4 + param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_y instanceof dl)) {
+          if (!(this.field_y instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((dl) ((Object) this.field_y)).a(param6, kf.mouseX, 81, fg.mouseY, param5, (UiWidget) (this));
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_y)).findTextOffsetAtScreenPosition(param6, kf.mouseX, 81, fg.mouseY, param5, (UiWidget) (this));
           stackIn_6_1 = -19166;
           if (var8_int == -1) {
             stackIn_7_2 = 0;
@@ -244,7 +244,7 @@ class EditableTextField extends ButtonWidget {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        dl var8 = null;
+        TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (param3 != 29221) {
           this.cutSelection((byte) 60);
@@ -252,14 +252,14 @@ class EditableTextField extends ButtonWidget {
         if (this.field_y != null &&
           param0 == 0) {
           this.field_y.a(-24969, (UiWidget) (this), param2, this.field_B, param1);
-          if (this.field_y instanceof dl) {
-            var8 = (dl) ((Object) this.field_y);
+          if (this.field_y instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.field_y);
             if (this.field_Q != this.field_N) {
-              var8.b(param1, param2, this.field_Q, -84, this.field_N, (UiWidget) (this));
+              var8.paintSelection(param1, param2, this.field_Q, -84, this.field_N, (UiWidget) (this));
             }
             var6 = qg.correctedCurrentTimeMillis(false);
             if (500L > (var6 - this.field_I) % 1000L) {
-              var8.a(this.field_Q, (UiWidget) (this), param3 ^ -29312, param2, param1);
+              var8.paintCaret(this.field_Q, (UiWidget) (this), param3 ^ -29312, param2, param1);
             }
           }
         }
@@ -413,8 +413,8 @@ class EditableTextField extends ButtonWidget {
 
     private final void scrollCaretIntoView(int param0) {
         int var2;
-        dl var3;
-        rb var4;
+        TextWidgetRenderer var3;
+        TextLayout var4;
         int var5;
         int var6;
         int var7;
@@ -427,20 +427,20 @@ class EditableTextField extends ButtonWidget {
           return;
         }
         var2 = 124 / ((param0 - 28) / 54);
-        if (!(this.field_y instanceof dl)) {
+        if (!(this.field_y instanceof TextWidgetRenderer)) {
           return;
         }
-        var3 = (dl) ((Object) this.field_y);
-        var4 = var3.a((byte) 110, (UiWidget) (this));
-        var5 = var4.c(-1);
-        var6 = var3.a((UiWidget) (this), 121);
-        var7 = var3.a((byte) 46) >> 1;
+        var3 = (TextWidgetRenderer) ((Object) this.field_y);
+        var4 = var3.getTextLayout((byte) 110, (UiWidget) (this));
+        var5 = var4.getMaxLineRightX(-1);
+        var6 = var3.getTextAreaWidth((UiWidget) (this), 121);
+        var7 = var3.getFontLineHeight((byte) 46) >> 1;
         if (-var7 + var6 > var5) {
           this.field_o = 0;
           this.field_A = 0;
           return;
         }
-        var8 = this.field_o + var4.a((byte) 111, this.field_Q);
+        var8 = this.field_o + var4.getXForTextOffset((byte) 111, this.field_Q);
         if (var6 - var7 < var8) {
           this.field_o = -var7 + var6 - (var8 - this.field_o);
         } else {
@@ -516,7 +516,7 @@ class EditableTextField extends ButtonWidget {
                   }
                   if (var5 >= 2 &&
                     !param1) {
-                    stackIn_31_0 = rb.field_d;
+                    stackIn_31_0 = TextLayout.field_d;
                     return stackIn_31_0;
                   }
                 }
@@ -550,7 +550,7 @@ class EditableTextField extends ButtonWidget {
 
     void a(int param0, int param1, byte param2, UiWidget param3) {
         int var6 = 0;
-        dl var7 = null;
+        TextWidgetRenderer var7 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -560,9 +560,9 @@ class EditableTextField extends ButtonWidget {
           super.a(param0, param1, param2, param3);
           this.scrollCaretIntoView(param2 ^ 92);
           if (this.field_r == 1) {
-            if (this.field_y instanceof dl) {
-              var7 = (dl) ((Object) this.field_y);
-              var6 = var7.a(param0, kf.mouseX, 119, fg.mouseY, param1, (UiWidget) (this));
+            if (this.field_y instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.field_y);
+              var6 = var7.findTextOffsetAtScreenPosition(param0, kf.mouseX, 119, fg.mouseY, param1, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_K &&
                   this.field_L > var6 &&

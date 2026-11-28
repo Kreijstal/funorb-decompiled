@@ -30,7 +30,7 @@ final class ba {
         int var6Lifetime2Lifetime1;
         int var7Lifetime2Lifetime1;
         var13 = TorChallenge.field_F ? 1 : 0;
-        if (lg.field_d[param0][18] < 0) {
+        if (TextLayout.field_d[param0][18] < 0) {
           return;
         }
         var5 = ic.field_B[param0][0];
@@ -166,7 +166,7 @@ final class ba {
           vd.field_c = new boolean[vl.field_b];
           MatchingFieldValidator.field_t = new byte[vl.field_b][];
           h.field_a = new byte[vl.field_b][];
-          lg.field_e = new int[vl.field_b];
+          TextLayout.field_e = new int[vl.field_b];
           MusicPatchPcmStream.field_r = new int[vl.field_b];
           ImageProducerRasterBuffer.field_t = new int[vl.field_b];
           var17.position = param0.length - 7 - 8 * vl.field_b;
@@ -183,7 +183,7 @@ final class ba {
             MusicPatchPcmStream.field_r[var4Lifetime2] = var17.readUnsignedShort(false);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < vl.field_b; var4Lifetime3++) {
-            lg.field_e[var4Lifetime3] = var17.readUnsignedShort(false);
+            TextLayout.field_e[var4Lifetime3] = var17.readUnsignedShort(false);
           }
           var17.position = -(var3 * 3) + 3 + (-(8 * vl.field_b) + param0.length - 7);
           td.field_m = new int[var3];
@@ -196,7 +196,7 @@ final class ba {
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < vl.field_b; var4Lifetime5++) {
             var5 = MusicPatchPcmStream.field_r[var4Lifetime5];
-            var6 = lg.field_e[var4Lifetime5];
+            var6 = TextLayout.field_e[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;

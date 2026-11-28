@@ -27,30 +27,30 @@ final class IterableNodeCollection implements Iterable {
           renderingSupport007Local8.integerArrayState0121 = integerArrayArgument1;
           renderingSupport007Local8.integerState0366 = integerArgument3;
           if (UiComponentPart023.computeBoolean1242(-30146)) {
-            gameDomainSupport002Local7 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, MixedSupport001.renderingSupport009State0001);
+            gameDomainSupport002Local7 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
             gameDomainSupport002Local7.integerState0178 = 387;
             gameDomainSupport002Local7.integerState0174 = 320 - gameDomainSupport002Local7.integerState0176 / 2;
             renderingSupport007Local8.performAction0852(gameDomainSupport002Local7, 100);
           }
           if (SceneWidgetPart007.booleanState0114) {
-            gameDomainSupport002Local9 = new GameDomainSupport002(10, SceneWidgetPart006.stringState0276, MixedSupport001.renderingSupport009State0001);
+            gameDomainSupport002Local9 = new GameDomainSupport002(10, SceneWidgetPart006.stringState0276, DefaultTextWidgetRenderer.renderingSupport009State0001);
             gameDomainSupport002Local9.integerState0174 = -(gameDomainSupport002Local9.integerState0176 / 2) + 320;
             gameDomainSupport002Local9.integerState0178 = 387;
             renderingSupport007Local8.performAction0852(gameDomainSupport002Local9, 101);
           }
           if (MixedSupport043.booleanState0048) {
-            gameDomainSupport002Local10 = new GameDomainSupport002(19, SceneWidgetPart006.stringState0276, MixedSupport001.renderingSupport009State0001);
+            gameDomainSupport002Local10 = new GameDomainSupport002(19, SceneWidgetPart006.stringState0276, DefaultTextWidgetRenderer.renderingSupport009State0001);
             gameDomainSupport002Local10.integerState0178 = 387;
             gameDomainSupport002Local10.integerState0174 = -(gameDomainSupport002Local10.integerState0176 / 2) + 320;
             renderingSupport007Local8.performAction0852(gameDomainSupport002Local10, 100);
           }
           if (LoginPanel.booleanState0066) {
-            gameDomainSupport002Local11 = new GameDomainSupport002(3, MixedSupport089.stringState0373, MixedSupport001.renderingSupport009State0001);
+            gameDomainSupport002Local11 = new GameDomainSupport002(3, MixedSupport089.stringState0373, DefaultTextWidgetRenderer.renderingSupport009State0001);
             gameDomainSupport002Local11.integerState0174 = -(gameDomainSupport002Local11.integerState0176 / 2) + 320;
             gameDomainSupport002Local11.integerState0178 = 387;
             renderingSupport007Local8.performAction0852(gameDomainSupport002Local11, 123);
           }
-          gameDomainSupport002Local12 = new GameDomainSupport002(13, MixedSupport096.stringState0411, MixedSupport001.renderingSupport009State0001);
+          gameDomainSupport002Local12 = new GameDomainSupport002(13, MixedSupport096.stringState0411, DefaultTextWidgetRenderer.renderingSupport009State0001);
           if (integerArgument4 > -103) {
             IterableNodeCollection.performAction1656(-120);
           }

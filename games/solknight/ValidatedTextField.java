@@ -61,7 +61,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
         int var2 = 82 % ((param0 + 67) / 44);
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (!this.field_v) {
           return null;
         }

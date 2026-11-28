@@ -30,7 +30,7 @@ final class RefreshingSpecial extends SpecialOrder {
             var6 = param0.rosters[var8.ownerIndex].field_b[var5];
             if (var6 != null) {
               var4.effects.addLast(new DamageEffect(new CreatureRef(var6), false, 1, 0, var6.statusId), true);
-              var4.effects.addLast(new ks(new CreatureRef(var6)), true);
+              var4.effects.addLast(new ClearCreatureStatusEffect(new CreatureRef(var6)), true);
             }
           }
           stackIn_11_0 = var4;

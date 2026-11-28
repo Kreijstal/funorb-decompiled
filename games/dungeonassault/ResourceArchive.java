@@ -85,7 +85,7 @@ final class ResourceArchive {
     }
 
     final static void initializeLogoAnimation(byte param0, ResourceArchive param1, PcmStreamMixer param2, int param3) {
-        hh.field_b = eg.c(1) * param3 / 1000;
+        DefaultTextWidgetRenderer.field_b = eg.c(1) * param3 / 1000;
         ac.a((byte) -125, param1);
         kd.a(31913, param1);
         ob.a((byte) -53, param1);
@@ -95,7 +95,7 @@ final class ResourceArchive {
           return;
         }
         try {
-          MouseWheelInput.field_d = -hh.field_b + 0;
+          MouseWheelInput.field_d = -DefaultTextWidgetRenderer.field_b + 0;
         } catch (RuntimeException runtimeException) {
           throw AccountServiceResult.wrapClientException((Throwable) ((Object) runtimeException), "nh.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

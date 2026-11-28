@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha extends cn {
+final class ha extends DefaultTextWidgetRenderer {
     static CrossfadingMidiPcmStream field_w;
     static String field_x;
     static int field_v;

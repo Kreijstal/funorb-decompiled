@@ -13,7 +13,7 @@ final class ja {
         ud var1Lifetime1;
         var2 = SolKnight.field_L ? 1 : 0;
         try {
-          kj.field_P.serviceOutput();
+          RichTextWidget.field_P.serviceOutput();
           ql.field_r.serviceOutput();
           EditableTextField.field_M = EditableTextField.field_M - 1;
           if (param0 != 200) {

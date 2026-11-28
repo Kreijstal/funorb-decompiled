@@ -139,7 +139,7 @@ final class TunnelMesh {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -175,7 +175,7 @@ final class TunnelMesh {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -225,7 +225,7 @@ final class TunnelMesh {
           un.field_i = new byte[wc.field_hc][];
           DualLinkNode.field_p = new int[wc.field_hc];
           ij.field_r = new int[wc.field_hc];
-          sd.field_f = new int[wc.field_hc];
+          TextLineMetrics.field_f = new int[wc.field_hc];
           InteractiveWidget.field_I = new int[wc.field_hc];
           pa.field_e = new boolean[wc.field_hc];
           var17.position = -(8 * wc.field_hc) + param1.length - 7;
@@ -242,7 +242,7 @@ final class TunnelMesh {
             InteractiveWidget.field_I[var4Lifetime2] = var17.readUnsignedShort((byte) 25);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < wc.field_hc; var4Lifetime3++) {
-            sd.field_f[var4Lifetime3] = var17.readUnsignedShort((byte) 25);
+            TextLineMetrics.field_f[var4Lifetime3] = var17.readUnsignedShort((byte) 25);
           }
           var17.position = 3 - (3 * var3 - (-(8 * wc.field_hc) + param1.length) + 7);
           an.field_p = new int[var3];
@@ -258,7 +258,7 @@ final class TunnelMesh {
           }
           for (var4Lifetime5 = 0; wc.field_hc > var4Lifetime5; var4Lifetime5++) {
             var5 = InteractiveWidget.field_I[var4Lifetime5];
-            var6 = sd.field_f[var4Lifetime5];
+            var6 = TextLineMetrics.field_f[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;
@@ -324,7 +324,7 @@ final class TunnelMesh {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(')').toString());
         }
     }
 
@@ -703,7 +703,7 @@ final class TunnelMesh {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_49_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
         }
     }
 
@@ -753,7 +753,7 @@ final class TunnelMesh {
           this.field_h = this.field_h - var11Lifetime1;
           this.field_u = this.field_u - (var7Lifetime1 * var15 - var13 * var9Lifetime1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "lc.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "lc.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -854,7 +854,7 @@ final class TunnelMesh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 

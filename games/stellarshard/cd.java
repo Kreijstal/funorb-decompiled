@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd extends rg {
+final class cd extends RichTextWidget {
     private int field_N;
     private String field_Q;
     static String field_P;
@@ -66,7 +66,7 @@ final class cd extends rg {
         int var1 = -117 % ((71 - param0) / 50);
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 3690) {
           return null;
         }
@@ -109,7 +109,7 @@ final class cd extends rg {
           pg.field_fb.writeInt(0, t.field_f);
           pg.field_fb.writeLong((byte) 127, od.field_z);
           var7 = 0;
-          if (uj.field_f) {
+          if (TextLineMetrics.field_f) {
             var7 = var7 | 1;
           }
           if (ProxyAuthenticationRequiredException.field_b) {
@@ -180,11 +180,11 @@ final class cd extends rg {
         Sprite var38;
         Sprite var39;
         Sprite var40;
-        pj var41;
-        pj var42;
-        pj var43;
-        pj var44;
-        pj var45;
+        TextWidgetRenderer var41;
+        TextWidgetRenderer var42;
+        TextWidgetRenderer var43;
+        TextWidgetRenderer var44;
+        TextWidgetRenderer var45;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -217,15 +217,15 @@ final class cd extends rg {
           var17 = ui.field_D;
           if (!var17.equals(this.field_m)) {
             this.field_m = var17;
-            this.a((byte) -92);
+            this.rebuildHotspotBounds((byte) -92);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_R.getValidationStatus(param1 ^ 28091);
-          var41 = (pj) ((Object) this.field_u);
+          var41 = (TextWidgetRenderer) ((Object) this.field_u);
           var9 = this.field_w + param3;
-          var10 = var41.a((byte) 117, (UiWidget) (this), param2) + (var41.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
+          var10 = var41.getTextOriginY((byte) 117, (UiWidget) (this), param2) + (var41.getTextLayout((UiWidget) (this), (byte) 111).getLayoutHeight(17201) >> 1);
           if (eh.field_c != var6 &&
-            var6 != vk.field_d) {
+            var6 != TextLayout.field_d) {
             if (var6 == qj.field_c) {
               var21 = DualLinkNode.field_p[2];
               var21.drawAdditive(var9, -(var21.field_y >> 1) + var10, 256);
@@ -259,23 +259,23 @@ final class cd extends rg {
             }
           }
           var19.drawRotatedAboutBilinear(112, 144, var19.field_w << 4, var19.field_x << 4, -this.field_N << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           this.field_O.drawAdditive(var9 - (var19.field_w >> 1), -var19.field_x + var10, 256);
           return;
         }
-        if (var6 == vk.field_d) {
+        if (var6 == TextLayout.field_d) {
           var22 = ui.field_D;
           if (!var22.equals(this.field_m)) {
             this.field_m = var22;
-            this.a((byte) -92);
+            this.rebuildHotspotBounds((byte) -92);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_R.getValidationStatus(param1 ^ 28091);
-          var42 = (pj) ((Object) this.field_u);
+          var42 = (TextWidgetRenderer) ((Object) this.field_u);
           var9Lifetime1 = this.field_w + param3;
-          var10Lifetime1 = var42.a((byte) 117, (UiWidget) (this), param2) + (var42.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
+          var10Lifetime1 = var42.getTextOriginY((byte) 117, (UiWidget) (this), param2) + (var42.getTextLayout((UiWidget) (this), (byte) 111).getLayoutHeight(17201) >> 1);
           if (eh.field_c != var6 &&
-            var6 != vk.field_d) {
+            var6 != TextLayout.field_d) {
             if (var6 == qj.field_c) {
               var26 = DualLinkNode.field_p[2];
               var26.drawAdditive(var9Lifetime1, -(var26.field_y >> 1) + var10Lifetime1, 256);
@@ -309,7 +309,7 @@ final class cd extends rg {
             }
           }
           var24.drawRotatedAboutBilinear(112, 144, var24.field_w << 4, var24.field_x << 4, -this.field_N << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           this.field_O.drawAdditive(var9Lifetime1 - (var24.field_w >> 1), -var24.field_x + var10Lifetime1, 256);
           return;
         }
@@ -319,15 +319,15 @@ final class cd extends rg {
           var5 = var27;
           if (!var27.equals(this.field_m)) {
             this.field_m = var27;
-            this.a((byte) -92);
+            this.rebuildHotspotBounds((byte) -92);
           }
           super.a(param0, param1, param2, param3);
           var6Lifetime1 = this.field_R.getValidationStatus(param1 ^ 28091);
-          var43 = (pj) ((Object) this.field_u);
+          var43 = (TextWidgetRenderer) ((Object) this.field_u);
           var9Lifetime2 = this.field_w + param3;
-          var10Lifetime2 = var43.a((byte) 117, (UiWidget) (this), param2) + (var43.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
+          var10Lifetime2 = var43.getTextOriginY((byte) 117, (UiWidget) (this), param2) + (var43.getTextLayout((UiWidget) (this), (byte) 111).getLayoutHeight(17201) >> 1);
           if (eh.field_c != var6Lifetime1 &&
-            var6Lifetime1 != vk.field_d) {
+            var6Lifetime1 != TextLayout.field_d) {
             if (var6Lifetime1 == qj.field_c) {
               var31 = DualLinkNode.field_p[2];
               var31.drawAdditive(var9Lifetime2, -(var31.field_y >> 1) + var10Lifetime2, 256);
@@ -361,20 +361,20 @@ final class cd extends rg {
             }
           }
           var29.drawRotatedAboutBilinear(112, 144, var29.field_w << 4, var29.field_x << 4, -this.field_N << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           this.field_O.drawAdditive(var9Lifetime2 - (var29.field_w >> 1), -var29.field_x + var10Lifetime2, 256);
           return;
         }
         if (!var5.equals(this.field_m)) {
           this.field_m = var5;
-          this.a((byte) -92);
+          this.rebuildHotspotBounds((byte) -92);
           super.a(param0, param1, param2, param3);
           var6Lifetime2 = this.field_R.getValidationStatus(param1 ^ 28091);
-          var44 = (pj) ((Object) this.field_u);
+          var44 = (TextWidgetRenderer) ((Object) this.field_u);
           var9Lifetime3 = this.field_w + param3;
-          var10Lifetime3 = var44.a((byte) 117, (UiWidget) (this), param2) + (var44.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
+          var10Lifetime3 = var44.getTextOriginY((byte) 117, (UiWidget) (this), param2) + (var44.getTextLayout((UiWidget) (this), (byte) 111).getLayoutHeight(17201) >> 1);
           if (eh.field_c != var6Lifetime2 &&
-            var6Lifetime2 != vk.field_d) {
+            var6Lifetime2 != TextLayout.field_d) {
             if (var6Lifetime2 == qj.field_c) {
               var35 = DualLinkNode.field_p[2];
               var35.drawAdditive(var9Lifetime3, -(var35.field_y >> 1) + var10Lifetime3, 256);
@@ -408,15 +408,15 @@ final class cd extends rg {
             }
           }
           var33.drawRotatedAboutBilinear(112, 144, var33.field_w << 4, var33.field_x << 4, -this.field_N << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           this.field_O.drawAdditive(var9Lifetime3 - (var33.field_w >> 1), -var33.field_x + var10Lifetime3, 256);
           return;
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime3 = this.field_R.getValidationStatus(param1 ^ 28091);
-        var45 = (pj) ((Object) this.field_u);
+        var45 = (TextWidgetRenderer) ((Object) this.field_u);
         var9Lifetime4 = this.field_w + param3;
-        var10Lifetime4 = var45.a((byte) 117, (UiWidget) (this), param2) + (var45.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
+        var10Lifetime4 = var45.getTextOriginY((byte) 117, (UiWidget) (this), param2) + (var45.getTextLayout((UiWidget) (this), (byte) 111).getLayoutHeight(17201) >> 1);
         if (eh.field_c == var6Lifetime3) {
           var38 = DualLinkNode.field_p[0];
           var11Lifetime4 = var38.field_w << 1;
@@ -439,11 +439,11 @@ final class cd extends rg {
             }
           }
           var38.drawRotatedAboutBilinear(112, 144, var38.field_w << 4, var38.field_x << 4, -this.field_N << 10, 4096);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           this.field_O.drawAdditive(var9Lifetime4 - (var38.field_w >> 1), -var38.field_x + var10Lifetime4, 256);
           return;
         }
-        if (var6Lifetime3 != vk.field_d) {
+        if (var6Lifetime3 != TextLayout.field_d) {
           if (var6Lifetime3 == qj.field_c) {
             var40 = DualLinkNode.field_p[2];
             var40.drawAdditive(var9Lifetime4, -(var40.field_y >> 1) + var10Lifetime4, 256);
@@ -473,7 +473,7 @@ final class cd extends rg {
           hj.a(this.field_O, param1 ^ -58);
         }
         var37.drawRotatedAboutBilinear(112, 144, var37.field_w << 4, var37.field_x << 4, -this.field_N << 10, 4096);
-        id.b((byte) -58);
+        DefaultTextWidgetRenderer.b((byte) -58);
         this.field_O.drawAdditive(var9Lifetime4 - (var37.field_w >> 1), -var37.field_x + var10Lifetime4, 256);
     }
 
@@ -483,7 +483,7 @@ final class cd extends rg {
         }
         if (null != pg.field_db) {
           if (!pg.field_db.ensureIndexLoaded((byte) -36)) {
-            return rg.field_I;
+            return RichTextWidget.field_I;
           }
           return kf.field_d;
         }

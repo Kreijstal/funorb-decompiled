@@ -30,7 +30,7 @@ final class ej {
         RuntimeException decompiledCaughtException = null;
         var5 = Bounce.field_N;
         try {
-          vc.field_F = he.field_p;
+          RichTextWidget.field_F = he.field_p;
           if (param0 != param3) {
             if (100 <= param0 &&
               param0 <= 105) {

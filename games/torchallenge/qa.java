@@ -92,7 +92,7 @@ final class qa {
 
     final static void a(int param0, ej param1) {
         try {
-          lg.a(true, (byte) -79, param1);
+          TextLayout.a(true, (byte) -79, param1);
           if (param0 <= 44) {
             CharSequence[] var3 = (CharSequence[]) null;
             qa.a(-28, (CharSequence[]) null);

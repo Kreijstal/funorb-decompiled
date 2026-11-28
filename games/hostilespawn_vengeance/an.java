@@ -44,7 +44,7 @@ final class an extends ql {
               this.field_p[var2].field_l = -1;
             } else {
               if (ln.field_a.field_e[this.field_m[var2].getClampedTileIndex(-4)] &&
-                mm.field_m[0].field_j.field_g > this.field_m[var2].field_g + 1) {
+                TextHotspotBounds.field_m[0].field_j.field_g > this.field_m[var2].field_g + 1) {
                 this.field_p[var2].field_l = -1;
               }
             }
@@ -80,7 +80,7 @@ final class an extends ql {
         if (param0 != -1) {
           this.field_g = (GridPoint) null;
         }
-        var12 = mm.field_m[0];
+        var12 = TextHotspotBounds.field_m[0];
         var3 = 0;
         scanLoop1: while (true) {
           if (var3 < 2) {
@@ -138,19 +138,19 @@ final class an extends ql {
                     var7 = var7 + ln.field_a.field_d;
                   }
                   var9 = new GridPoint(this.field_h[var3Lifetime1]);
-                  mm.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
+                  TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
                   var9.field_g = var9.field_g - 1;
                   var9.field_e = var9.field_e - 1;
                   ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
-                  mm.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
+                  TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
                   var9.field_e = var9.field_e + 2;
                   ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                   var9.field_g = var9.field_g - 1;
-                  mm.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
+                  TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
                   var9.field_g = var9.field_g + 3;
                   var9.field_e = var9.field_e - 3;
                   ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
-                  mm.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
+                  TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var9, 2, rl.field_c);
                   ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                 } else {
                   ln.field_a.field_c[ln.field_a.field_d + var6] = 4;

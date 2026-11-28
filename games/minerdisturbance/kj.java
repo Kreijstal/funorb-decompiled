@@ -5,7 +5,7 @@ final class kj {
     static int field_d;
     static CipherPacketBuffer field_a;
     static String field_b;
-    static eg field_c;
+    static DefaultTextWidgetRenderer field_c;
 
     final static void a(int param0) {
         tm dupTemp$0 = null;

@@ -29,7 +29,7 @@ final class gaa extends lg {
         int[] var17 = null;
         var9 = BachelorFridge.field_y;
         try {
-          var3_int = kt.field_k;
+          var3_int = SetMoveSlotCooldownEffect.field_k;
           fo.field_a = new UiComponent(0L, (UiComponent) null);
           if (param1 == null) {
             var11 = (Throwable) null;
@@ -137,12 +137,12 @@ final class gaa extends lg {
           DisableSpecial.field_r = new UiComponent(0L, qk.field_q);
           aja.field_p.a(param2 ^ -56, DisableSpecial.field_r);
           BoardChangeAnimation.field_k = new UiComponent(0L, uc.field_l, FlySpecial.field_s);
-          qq.field_k = new UiComponent(0L, uc.field_l);
+          ChangeCreatureStatOrHealthEffect.field_k = new UiComponent(0L, uc.field_l);
           bi.field_h.a(param2 ^ -56, qc.field_b);
           bi.field_h.a(-1, tga.field_m);
           tga.field_m.a(param2 ^ -56, aja.field_p);
           tga.field_m.a(param2 ^ -56, BoardChangeAnimation.field_k);
-          tga.field_m.a(-1, qq.field_k);
+          tga.field_m.a(-1, ChangeCreatureStatOrHealthEffect.field_k);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

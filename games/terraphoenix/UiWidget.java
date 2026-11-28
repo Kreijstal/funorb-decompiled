@@ -10,7 +10,7 @@ class UiWidget extends IntrusiveNode {
     int field_y;
     static int field_k;
     static int field_m;
-    ld field_q;
+    TextLayout field_q;
     boolean field_s;
     static String field_h;
     static String field_i;
@@ -112,7 +112,7 @@ class UiWidget extends IntrusiveNode {
         return false;
     }
 
-    String f(int param0) {
+    String getTooltipText(int param0) {
         if (param0 < 70) {
           String var3 = (String) null;
           UiWidget.b((String) null, 49);
@@ -297,10 +297,10 @@ class UiWidget extends IntrusiveNode {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
-          RandomAccessCacheFile.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
           return param0;
         }
-        if (vj.field_P == 0) {
+        if (RichTextWidget.field_P == 0) {
           regionExit1: {
             if (DiskArchiveRequest.field_I != 0) {
               if (this.a(false, mm.field_c, param2, param1, DiskArchiveRequest.field_I, this, lm.field_c)) {
@@ -329,19 +329,19 @@ class UiWidget extends IntrusiveNode {
                   }
                 }
                 ab.field_k = oh.field_f;
-                RandomAccessCacheFile.a((byte) 16, this.f(105));
+                RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
                 return param0;
               }
             }
           }
           if (oh.field_f != 0) {
             ab.field_k = oh.field_f;
-            RandomAccessCacheFile.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
             return param0;
           }
           if (0 == ab.field_k) {
             ab.field_k = oh.field_f;
-            RandomAccessCacheFile.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
             return param0;
           }
           this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
@@ -358,11 +358,11 @@ class UiWidget extends IntrusiveNode {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
-          RandomAccessCacheFile.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
           return param0;
         }
         if (var5 != 0) {
-          this.a(this, param1, vj.field_P, ef.field_j, param2, MouseWheelInput.field_b, (byte) 37);
+          this.a(this, param1, RichTextWidget.field_P, ef.field_j, param2, MouseWheelInput.field_b, (byte) 37);
           if (DiskArchiveRequest.field_I != 0) {
             if (this.a(false, mm.field_c, param2, param1, DiskArchiveRequest.field_I, this, lm.field_c)) {
               param0 = false;
@@ -375,12 +375,12 @@ class UiWidget extends IntrusiveNode {
           }
           if (oh.field_f != 0) {
             ab.field_k = oh.field_f;
-            RandomAccessCacheFile.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
             return param0;
           }
           if (0 == ab.field_k) {
             ab.field_k = oh.field_f;
-            RandomAccessCacheFile.a((byte) 16, this.f(105));
+            RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
             return param0;
           }
           this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
@@ -396,7 +396,7 @@ class UiWidget extends IntrusiveNode {
             this.e(-31);
           }
           ab.field_k = oh.field_f;
-          RandomAccessCacheFile.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
           return param0;
         }
         if (DiskArchiveRequest.field_I != 0 &&
@@ -407,12 +407,12 @@ class UiWidget extends IntrusiveNode {
         }
         if (oh.field_f != 0) {
           ab.field_k = oh.field_f;
-          RandomAccessCacheFile.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
           return param0;
         }
         if (0 == ab.field_k) {
           ab.field_k = oh.field_f;
-          RandomAccessCacheFile.a((byte) 16, this.f(105));
+          RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
           return param0;
         }
         this.a(79, ef.field_j, param2, param1, MouseWheelInput.field_b, this);
@@ -429,7 +429,7 @@ class UiWidget extends IntrusiveNode {
           this.e(-31);
         }
         ab.field_k = oh.field_f;
-        RandomAccessCacheFile.a((byte) 16, this.f(105));
+        RandomAccessCacheFile.a((byte) 16, this.getTooltipText(105));
         return param0;
     }
 
@@ -735,17 +735,17 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, WidgetActionListener param1, sc param2) {
-        w var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_y = 0;
         this.field_v = 0;
         try {
           this.text = param0;
           this.field_r = param2;
           this.listener = param1;
-          if (this.listener instanceof w) {
-            var4 = (w) ((Object) this.listener);
-            this.width = var4.a(this, (byte) 102);
-            this.height = var4.b(this, (byte) 116);
+          if (this.listener instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.listener);
+            this.width = var4.getPreferredWidth(this, (byte) 102);
+            this.height = var4.getPreferredHeight(this, (byte) 116);
           }
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "gl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

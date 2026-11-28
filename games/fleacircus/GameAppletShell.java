@@ -202,7 +202,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         try {
           sd.field_g = true;
-          j.field_e = true;
+          RichTextLayout.field_e = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -297,7 +297,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ol.field_e.requestFocus();
           ha.field_k = true;
           sd.field_g = true;
-          j.field_e = true;
+          RichTextLayout.field_e = true;
           ContextualRuntimeException.field_h = false;
           cg.field_z = lj.correctedCurrentTimeMillis((byte) -127);
           return;
@@ -500,7 +500,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           qc.field_b = qc.field_b + 1;
           if (50 < fieldTemp$1) {
             qc.field_b = qc.field_b - 50;
-            j.field_e = true;
+            RichTextLayout.field_e = true;
             ol.field_e.setSize(ki.field_a, gm.field_nb);
             ol.field_e.setVisible(true);
             if (cb.field_t != null &&
@@ -819,7 +819,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         try {
           if (pf.field_c == this &&
             !NanoFrameTimer.field_l) {
-            j.field_e = true;
+            RichTextLayout.field_e = true;
             if (tj.field_d &&
               1000L < lj.correctedCurrentTimeMillis((byte) -109) - cg.field_z) {
               var2 = param0.getClipBounds();
@@ -960,7 +960,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         this.field_i = false;
     }
 
-    final static void a(String param0, BitmapFont param1, pi param2, int param3, int param4) {
+    final static void a(String param0, BitmapFont param1, TextLineMetrics param2, int param3, int param4) {
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
         RuntimeException stackIn_31_0 = null;

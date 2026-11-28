@@ -91,7 +91,7 @@ final class ut extends tia {
     }
 
     final void a(int param0, int param1, int param2) {
-        qq.a(this.field_n, param2, param0, param1 ^ -28638);
+        ChangeCreatureStatOrHealthEffect.a(this.field_n, param2, param0, param1 ^ -28638);
         if (param1 != 25415) {
           BitmapFont var5 = (BitmapFont) null;
           ut.a((String[]) null, 124, (String) null, (BitmapFont) null, 98);

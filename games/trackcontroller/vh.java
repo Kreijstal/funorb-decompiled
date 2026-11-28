@@ -11,7 +11,7 @@ abstract class vh extends DualLinkNode {
         jf.field_i = null;
         IntrusiveDequeCursor.field_c = null;
         mh.field_i = false;
-        el.field_O = null;
+        RichTextWidget.field_O = null;
         if (param0 != -2532) {
           String var2 = (String) null;
           vh.a((String) null, 32, (String) null);

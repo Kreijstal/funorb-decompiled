@@ -892,14 +892,14 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
           }
         }
         this.field_s = this.field_R.b(hj.field_S, param0 + 19089, eh.field_h);
-        if (hh.field_s != null) {
-          if (this.field_J == hh.field_s) {
+        if (DefaultTextWidgetRenderer.field_s != null) {
+          if (this.field_J == DefaultTextWidgetRenderer.field_s) {
             gd.a(Bzip2State.field_z, param0 - 2, 1, false);
           }
-          if (this.field_K == hh.field_s) {
+          if (this.field_K == DefaultTextWidgetRenderer.field_s) {
             AchievementIconEntry.a(11, -1, true, -23);
           }
-          if (this.field_N == hh.field_s) {
+          if (this.field_N == DefaultTextWidgetRenderer.field_s) {
             if (this.field_Y.field_k != 16) {
               if (32 == this.field_Y.field_k) {
                 this.e(param0 ^ 70);
@@ -908,7 +908,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               this.c(-124, 0);
             }
           }
-          if (this.field_r == hh.field_s) {
+          if (this.field_r == DefaultTextWidgetRenderer.field_s) {
             if (this.field_Y.field_k == 16) {
               this.c(param0 ^ -119, 1);
             } else {
@@ -917,17 +917,17 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
               }
             }
           }
-          if (this.field_t == hh.field_s &&
+          if (this.field_t == DefaultTextWidgetRenderer.field_s &&
             this.field_Y.field_k == 16) {
             this.c(-117, 2);
           }
-          if (this.field_O == hh.field_s &&
+          if (this.field_O == DefaultTextWidgetRenderer.field_s &&
             null != this.field_Y.field_u &&
             this.field_Y.canUseRaiderAbility(param0 - 2, this.field_Y.field_u)) {
             this.a((byte) -94, this.field_Y.field_u);
           }
-          if (hh.field_s instanceof hj) {
-            var18 = ((hj) (hh.field_s)).field_V;
+          if (DefaultTextWidgetRenderer.field_s instanceof hj) {
+            var18 = ((hj) (DefaultTextWidgetRenderer.field_s)).field_V;
             var2 = var18;
             if (this.field_y == null &&
               var18 != null && (this.field_Y.field_k != 4 ||
@@ -1224,8 +1224,8 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.field_L = PcmSampleStream.createForSampleStepWithScaledVolume(k.field_f.field_e, 256, 0);
         this.field_D.setLoopCount(-1);
         this.field_L.setLoopCount(-1);
-        l.a(this.field_D, 0);
-        l.a(this.field_L, 0);
+        TextLayout.a(this.field_D, 0);
+        TextLayout.a(this.field_L, 0);
         t.a(64, g.field_Lb, true, true);
     }
 
@@ -2430,15 +2430,15 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
     }
 
     final static String formatTimestamp(long param0, int param1) {
-        l.field_a.setTime(new Date(param0));
-        int var3 = l.field_a.get(7);
-        int var4 = l.field_a.get(5);
-        int var5 = l.field_a.get(2);
-        int var6 = l.field_a.get(1);
+        TextLayout.field_a.setTime(new Date(param0));
+        int var3 = TextLayout.field_a.get(7);
+        int var4 = TextLayout.field_a.get(5);
+        int var5 = TextLayout.field_a.get(2);
+        int var6 = TextLayout.field_a.get(1);
         int var8 = 66 % ((param1 + 54) / 54);
-        int var7 = l.field_a.get(11);
-        int var9 = l.field_a.get(12);
-        int var10 = l.field_a.get(13);
+        int var7 = TextLayout.field_a.get(11);
+        int var9 = TextLayout.field_a.get(12);
+        int var10 = TextLayout.field_a.get(13);
         return tl.field_e[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + pp.field_F[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var9 / 10 + var9 % 10 + ":" + var10 / 10 + var10 % 10 + " GMT";
     }
 
@@ -2681,7 +2681,7 @@ final class DungeonRaidScreen extends DungeonAssaultScreen {
         this.field_N = ke.a(var2, (byte) -123, gh.field_g[1], 464);
         this.field_t = ke.a(var2, (byte) -125, gh.field_g[2], 548);
         this.field_O = ke.a(var2, (byte) -114, gh.field_g[3], 590);
-        this.field_J = tn.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, IntrusiveNode.field_c, jm.field_i, param0 - 18125, l.field_d);
+        this.field_J = tn.a(-jm.field_i.field_y + 164 >> 1, (32 - jm.field_i.field_v >> 1) + 8, IntrusiveNode.field_c, jm.field_i, param0 - 18125, TextLayout.field_d);
         this.field_K = tn.a(476 + (-jm.field_i.field_y + 164 >> 1), 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -109, r.field_a);
         var3 = 424;
         this.field_M = new nn(false);

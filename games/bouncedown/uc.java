@@ -245,7 +245,7 @@ final class uc extends lc implements WidgetActivationListener {
             var14 = var6[var9];
             we[] var10 = var14;
             for (var11_int = 0; var14.length > var11_int; var11_int++) {
-              var14[var11_int] = jd.a(-30894, var19[var11_int], var5[var9]);
+              var14[var11_int] = DefaultTextWidgetRenderer.a(-30894, var19[var11_int], var5[var9]);
             }
           }
           var9Lifetime1 = var17.field_q;

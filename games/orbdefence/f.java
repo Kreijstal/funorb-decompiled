@@ -260,7 +260,7 @@ final class f {
             var2_intLifetime2 = this.field_c;
             var3Lifetime2 = 0;
             var4 = 0;
-            var3Lifetime2 = jc.field_f[this.field_m][this.field_x];
+            var3Lifetime2 = DefaultTextWidgetRenderer.field_f[this.field_m][this.field_x];
             if (1 == var3Lifetime2) {
               var2_intLifetime2 = var2_intLifetime2 * 3;
             }
@@ -311,7 +311,7 @@ final class f {
               }
               if (ok.a(0, false) &&
                 this.field_e[0].field_f > 0 &&
-                jc.field_f[this.field_m][-1 + this.field_x] == 7) {
+                DefaultTextWidgetRenderer.field_f[this.field_m][-1 + this.field_x] == 7) {
                 f.a(23, 232, (byte) -25);
               }
               df.field_g = df.field_g + this.field_e[0].field_f * 2;
@@ -498,7 +498,7 @@ final class f {
               var2_intLifetime2 = 1150;
             }
             if (this.field_x < 99 &&
-              jc.field_f[this.field_m][this.field_x] == 0 &&
+              DefaultTextWidgetRenderer.field_f[this.field_m][this.field_x] == 0 &&
               this.field_x > 11) {
               var2_intLifetime2 = var2_intLifetime2 / 2;
             }
@@ -759,7 +759,7 @@ final class f {
           if ((lb.field_g & var3_int) != 0) {
             return;
           }
-          dm.field_f = dm.field_f | var3_int;
+          TextLayout.field_f = TextLayout.field_f | var3_int;
           if (param2 != -25) {
             return;
           }

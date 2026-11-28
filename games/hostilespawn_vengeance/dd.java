@@ -175,20 +175,20 @@ final class dd extends ql {
               }
             }
             if (ul.field_L == 0 &&
-              mm.field_m[0].field_j.field_e <= 43 &&
-              58 >= mm.field_m[0].field_j.field_g) {
+              TextHotspotBounds.field_m[0].field_j.field_e <= 43 &&
+              58 >= TextHotspotBounds.field_m[0].field_j.field_g) {
               ul.field_L = 1;
               var11 = new GridPoint(42, 52);
-              mm.field_m[ProxySocketFactory.field_j] = new oj(var11, 6, rl.field_c);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var11, 6, rl.field_c);
               ln.field_a.field_c[var11.getClampedTileIndex(-4)] = 3;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             if (ul.field_L == 0 &&
-              mm.field_m[0].field_j.field_e >= 48 &&
-              mm.field_m[0].field_j.field_g <= 56) {
+              TextHotspotBounds.field_m[0].field_j.field_e >= 48 &&
+              TextHotspotBounds.field_m[0].field_j.field_g <= 56) {
               ul.field_L = 2;
               var12 = new GridPoint(42, 52);
-              mm.field_m[ProxySocketFactory.field_j] = new oj(var12, 6, rl.field_c);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(var12, 6, rl.field_c);
               ln.field_a.field_c[var12.getClampedTileIndex(-4)] = 3;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
@@ -413,33 +413,33 @@ final class dd extends ql {
               SoftwareRasterizer.fillRectangleAlpha(stackIn_105_0, stackIn_105_1, stackIn_105_2, stackIn_105_3, stackIn_105_4, stackIn_106_5 >> 3);
             }
             if (ul.field_L == 3 &&
-              mm.field_m[0].field_j.field_e <= 42 &&
-              mm.field_m[0].field_j.field_g <= 49) {
+              TextHotspotBounds.field_m[0].field_j.field_e <= 42 &&
+              TextHotspotBounds.field_m[0].field_j.field_g <= 49) {
               ul.field_L = 4;
             }
             if (ul.field_L == 4 &&
-              mm.field_m[0].field_j.field_e <= 42 &&
-              mm.field_m[0].field_j.field_g <= 49) {
+              TextHotspotBounds.field_m[0].field_j.field_e <= 42 &&
+              TextHotspotBounds.field_m[0].field_j.field_g <= 49) {
               ul.field_L = 5;
             }
             if (ul.field_L == 5 &&
-              50 <= mm.field_m[0].field_j.field_e) {
+              50 <= TextHotspotBounds.field_m[0].field_j.field_e) {
               ul.field_L = 10;
             }
             if (ul.field_L == 10 &&
-              mm.field_m[0].field_j.field_e == 63 &&
-              mm.field_m[0].field_j.field_g <= 30) {
+              TextHotspotBounds.field_m[0].field_j.field_e == 63 &&
+              TextHotspotBounds.field_m[0].field_j.field_g <= 30) {
               ul.field_L = 11;
             }
             if (ul.field_L == 10 &&
-              mm.field_m[0].field_j.field_e == 77 &&
-              mm.field_m[0].field_j.field_g >= 43) {
+              TextHotspotBounds.field_m[0].field_j.field_e == 77 &&
+              TextHotspotBounds.field_m[0].field_j.field_g >= 43) {
               ul.field_L = 12;
             }
             if (ul.field_L >= 10 &&
               12 >= ul.field_L &&
-              mm.field_m[0].field_j.field_e >= 82 &&
-              mm.field_m[0].field_j.field_g >= 30) {
+              TextHotspotBounds.field_m[0].field_j.field_e >= 82 &&
+              TextHotspotBounds.field_m[0].field_j.field_g >= 30) {
               ul.field_L = 13;
             }
             if (DebouncedFieldValidator.field_a &&
@@ -453,7 +453,7 @@ final class dd extends ql {
           } else if (rl.field_c == 1 &&
             bm.field_c == 0) {
             if (!tg.field_a &&
-              mm.field_m[0].field_j.field_e < 35) {
+              TextHotspotBounds.field_m[0].field_j.field_e < 35) {
               vg.field_e[0].a((byte) -74);
             }
             if (tg.field_a &&
@@ -555,11 +555,11 @@ final class dd extends ql {
         this.field_p.field_l = 0;
         var3Lifetime1 = param0;
         for (var4 = 0; ProxySocketFactory.field_j > var4; var4++) {
-          if (mm.field_m[var4].field_i == 22 ||
-            mm.field_m[var4].field_i == 5) {
+          if (TextHotspotBounds.field_m[var4].field_i == 22 ||
+            TextHotspotBounds.field_m[var4].field_i == 5) {
             incrementValue$0 = var3Lifetime1;
             var3Lifetime1++;
-            this.field_e[incrementValue$0] = mm.field_m[var4];
+            this.field_e[incrementValue$0] = TextHotspotBounds.field_m[var4];
           }
         }
         this.field_k = new GridPoint();
@@ -572,7 +572,7 @@ final class dd extends ql {
         CrossfadingMidiPcmStream.a(9, param0 ^ 1);
         nh.field_E.copyCoordinatesFrom((byte) 46, this.field_l);
         if (om.field_b) {
-          mm.field_m[0].field_j.copyCoordinatesFrom((byte) 46, this.field_l);
+          TextHotspotBounds.field_m[0].field_j.copyCoordinatesFrom((byte) 46, this.field_l);
           VolumeRampingMidiPcmStream.field_Q[1] = true;
           VolumeRampingMidiPcmStream.field_U[0] = 1;
           VolumeRampingMidiPcmStream.field_ib[0] = 420;
@@ -590,7 +590,7 @@ final class dd extends ql {
         int var3Lifetime1;
         int var3Lifetime2;
         var7 = HostileSpawn.field_I ? 1 : 0;
-        var8 = mm.field_m[0].field_j;
+        var8 = TextHotspotBounds.field_m[0].field_j;
         if (this.field_d.field_l == 0) {
           var3 = ih.a(var8, (byte) -77, this.field_m);
           if (var3 <= 4) {

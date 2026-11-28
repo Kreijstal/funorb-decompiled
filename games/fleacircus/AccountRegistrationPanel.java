@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends gj implements dc, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends gj implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_K;
     private InteractiveWidget field_R;
     static mf field_L;
@@ -14,7 +14,7 @@ final class AccountRegistrationPanel extends gj implements dc, WidgetActivationL
     private ValidatedTextField field_S;
     static int[] field_G;
     private vk field_T;
-    private ja field_J;
+    private RichTextWidget field_J;
     private ValidatedTextField field_H;
     private ValidatedTextField field_U;
     private ValidatedTextField field_M;
@@ -354,7 +354,7 @@ final class AccountRegistrationPanel extends gj implements dc, WidgetActivationL
         }
     }
 
-    public final void a(int param0, ja param1, int param2, int param3) {
+    public final void onTextHotspotActivated(int param0, RichTextWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -577,7 +577,7 @@ final class AccountRegistrationPanel extends gj implements dc, WidgetActivationL
         String var2 = null;
         int var3 = 0;
         ml var4 = null;
-        e var5 = null;
+        DefaultTextWidgetRenderer var5 = null;
         int var6 = 0;
         int var7 = 0;
         try {
@@ -627,11 +627,11 @@ final class AccountRegistrationPanel extends gj implements dc, WidgetActivationL
           var4 = new ml(46, var3, this.field_u - 90, 25, this.field_T, true, -120 + this.field_u, 5, nb.field_c, 11579568, lf.field_a);
           this.a((UiComponent) (var4), (byte) -101);
           var3 = var3 + var4.field_j;
-          var5 = new e(ug.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, ug.field_e.field_H, -1, 2147483647, true);
-          this.field_J = new ja(var2, var5);
+          var5 = new DefaultTextWidgetRenderer(ug.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, ug.field_e.field_H, -1, 2147483647, true);
+          this.field_J = new RichTextWidget(var2, var5);
           this.field_J.field_m = "";
-          this.field_J.a(0, pi.field_f, 0);
-          this.field_J.a(0, pi.field_f, 1);
+          this.field_J.a(0, TextLineMetrics.field_f, 0);
+          this.field_J.a(0, TextLineMetrics.field_f, 1);
           this.field_J.field_s = (kd) (this);
           this.field_J.b(this.field_u - 90, 46, var3, -9);
           var3 = var3 + (15 + this.field_J.field_j);

@@ -103,7 +103,7 @@ final class dk {
         }
     }
 
-    final static void a(String param0, int param1, int param2, be param3, BitmapFont param4) {
+    final static void a(String param0, int param1, int param2, TextLineMetrics param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -191,7 +191,7 @@ final class dk {
     }
 
     final void a(BitmapFont param0, boolean param1) {
-        a var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         ak var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -214,7 +214,7 @@ final class dk {
         ak var14Lifetime1;
         ak var14Lifetime2;
         try {
-          var17 = new a(param0, 2, 2, 2236962, 1, 1, 1, param0.field_C + param0.field_D + 2);
+          var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_C + param0.field_D + 2);
           var17.field_f = 16777215;
           this.field_a = (ml) ((Object) var17);
           var4 = new ak();

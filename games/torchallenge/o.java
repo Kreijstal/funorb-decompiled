@@ -546,7 +546,7 @@ final class o extends IntrusiveNode {
         }
         ValidatedTextField.field_ib = 0;
         RandomAccessCacheFile.field_e = s.field_k[1 + rj.field_g];
-        bc.field_o = 13;
+        DefaultTextWidgetRenderer.field_o = 13;
         PcmOutputWorker.activeScreenId = 13;
         ch.b(!param1);
     }

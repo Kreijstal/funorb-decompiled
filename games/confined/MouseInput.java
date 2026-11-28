@@ -14,7 +14,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             th.field_cb = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bh.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bh.mouseExited(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             th.field_cb = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bh.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bh.mouseEntered(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -90,7 +90,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             th.field_cb = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bh.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bh.mouseMoved(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -100,7 +100,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             param0.consume();
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bh.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bh.mouseClicked(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -151,7 +151,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -161,7 +161,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
             pe.field_n = 0;
           }
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bh.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bh.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -193,7 +193,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

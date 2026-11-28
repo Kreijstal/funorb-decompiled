@@ -48,7 +48,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
         try {
           this.field_j = new MatchingFieldValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -85,7 +85,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             this.field_h = var3.b(8909);
           }
           if (this.field_h) {
-            stackIn_15_0 = nn.field_q;
+            stackIn_15_0 = TextHotspotBounds.field_q;
           } else {
             stackIn_15_0 = fb.field_e;
           }
@@ -134,7 +134,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -182,7 +182,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
             }
             am.a(param2 + 73, param1);
           } catch (RuntimeException runtimeException) {
-            throw sd.a((Throwable) ((Object) runtimeException), "qc.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "qc.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

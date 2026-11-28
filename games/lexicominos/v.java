@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v extends ik {
+final class v extends DefaultTextWidgetRenderer {
     private int field_x;
     static RgbSprite field_z;
     private int field_y;

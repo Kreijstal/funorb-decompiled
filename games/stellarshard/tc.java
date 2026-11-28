@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends id {
+final class tc extends DefaultTextWidgetRenderer {
     private db[] field_x;
     static int field_r;
     static int field_p;
@@ -274,7 +274,7 @@ final class tc extends id {
             }
           }
           this.field_t.a(param2, this, param3, param4 - 4547, param1);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -284,7 +284,7 @@ final class PlayerNameAvailabilityValidator extends TextFieldValidator {
             integerLocal7 = integerLocal7 | 16;
           }
           SocketFactory.cipherPacketBufferState0002.writeByte(true, integerLocal7);
-          stringLocal8 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 114);
+          stringLocal8 = DefaultTextWidgetRenderer.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 114);
           if (stringLocal8 == null) {
             stringLocal8 = "";
           }

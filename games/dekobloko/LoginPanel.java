@@ -359,15 +359,15 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
               integerLocal16 = 0;
               if (sceneWidgetPart014Local14.stringState0605 != null &&
                 !sceneWidgetPart014Local14.stringState0605.equals("")) {
-                sceneWidgetPart014Local14.sceneWidgetState0148.rgbSpriteState0070 = MixedSupport001.rgbSpriteState0001;
+                sceneWidgetPart014Local14.sceneWidgetState0148.rgbSpriteState0070 = DefaultTextWidgetRenderer.rgbSpriteState0001;
                 sceneWidgetPart014Local14.sceneWidgetState0148.integerState0889 = 16737894;
-                sceneWidgetPart014Local14.sceneWidgetState0148.performAction1764(3 + MixedSupport001.rgbSpriteState0001.integerState0254, 0, 0, ComponentContainer.integerState0377, 0);
+                sceneWidgetPart014Local14.sceneWidgetState0148.performAction1764(3 + DefaultTextWidgetRenderer.rgbSpriteState0001.integerState0254, 0, 0, ComponentContainer.integerState0377, 0);
                 integerLocal16 = 1;
               }
               integerLocal17 = 0;
               integerLocal18 = sceneWidgetPart014Local14.integerState0896;
               if (integerLocal16 != 0) {
-                integerLocal17 = 3 + MixedSupport001.rgbSpriteState0001.integerState0254;
+                integerLocal17 = 3 + DefaultTextWidgetRenderer.rgbSpriteState0001.integerState0254;
                 integerLocal18 = integerLocal18 - integerLocal17;
               }
               stackSceneWidgetLocal6 = sceneWidgetPart014Local14.sceneWidgetState0147;
@@ -601,7 +601,7 @@ final class LoginPanel extends ComponentContainer implements TextFieldListener, 
             } else {
               if (interactiveComponentArgument3 == this.interactiveComponentState0003) {
                 if (this.booleanState0067) {
-                  UiComponentPart025.performAction1367(17);
+                  RichTextWidget.performAction1367(17);
                 } else {
                   if (this.booleanState0068) {
                     UiComponentPart030.performAction1557((byte) -73);

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends ga implements ge, WidgetActivationListener {
+final class pi extends ga implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_Q;
-    private na field_R;
+    private RichTextWidget field_R;
     private AccountCreationResultPanel field_O;
     static al field_T;
     static int field_H;
@@ -12,7 +12,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
     static AwtRasterBuffer field_S;
     static int field_L;
 
-    public final void a(na param0, int param1, int param2, boolean param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -54,7 +54,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
         super(0, 0, 288, 0, (fe) null);
         String var7 = null;
         int var3 = 0;
-        vf var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -264,8 +264,8 @@ final class pi extends ga implements ge, WidgetActivationListener {
           this.field_Q.field_n = (fe) ((Object) new je());
           var7 = b.a(new String[]{this.k(-99), this.l(99)}, ja.field_g, 1177);
           var3 = 20;
-          var4 = new vf(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
-          this.field_R = new na(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
+          this.field_R = new RichTextWidget(var7, var4);
           this.field_R.field_C = "";
           this.field_R.a(0, (byte) 9, om.field_o);
           this.field_R.a(1, (byte) 9, om.field_o);
@@ -281,7 +281,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
           this.b(this.field_Q, 10);
           this.a(-126, 300, 0, var5 + (var3 + 55), 0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "pi.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -291,7 +291,7 @@ final class pi extends ga implements ge, WidgetActivationListener {
         if (param0 == -1101556575) {
           var2 = IntrusiveNodeHashTable.a(true);
           kn.field_d.a(-ll.field_a + uh.field_c, ef.field_sb - g.field_n, (byte) 103, (ll.field_a << 1) + var2, var1 + (g.field_n << 1));
-          na.f(0);
+          RichTextWidget.f(0);
           return;
         }
     }

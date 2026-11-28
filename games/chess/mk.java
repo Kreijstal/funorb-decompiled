@@ -562,7 +562,7 @@ final class mk {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  fj.a(param0, 3, var12.g((byte) -125));
+                  TextLineMetrics.a(param0, 3, var12.g((byte) -125));
                 }
               } else {
                 ml.a(var32, var12, (byte) 94, param6);

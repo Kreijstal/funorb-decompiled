@@ -33,7 +33,7 @@ final class s extends InteractiveWidget {
             stackIn_3_0 = 65;
             return stackIn_3_0;
           }
-          mb.field_b.a(true, da.field_d, mg.field_a, 0);
+          mb.field_b.a(true, da.field_d, TextLineMetrics.field_a, 0);
           mb.field_b.o(param0 + 27655);
           while (mm.b((byte) 76)) {
             mb.field_b.a((byte) -65, lj.field_t, ud.field_c);

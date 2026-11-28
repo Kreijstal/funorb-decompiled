@@ -34,7 +34,7 @@ final class nb extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "nb.D(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "nb.D(" + param0 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class nb extends am {
           return;
         }
         bp.field_f = param2;
-        kp.field_d = param4;
+        TextLineMetrics.field_d = param4;
         bp.field_e = param3;
     }
 
@@ -220,7 +220,7 @@ final class nb extends am {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -271,7 +271,7 @@ final class nb extends am {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

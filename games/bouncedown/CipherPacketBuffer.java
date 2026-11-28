@@ -38,10 +38,10 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (param0 != 8) {
           String var2 = (String) null;
           CipherPacketBuffer.wrapClientException((Throwable) null, (String) null);
-          ed.field_c.a(10768, lg.field_b);
+          TextLayout.field_c.a(10768, lg.field_b);
           return;
         }
-        ed.field_c.a(10768, lg.field_b);
+        TextLayout.field_c.a(10768, lg.field_b);
     }
 
     final void a(boolean param0, int param1) {

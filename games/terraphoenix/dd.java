@@ -42,7 +42,7 @@ final class dd extends InteractiveWidget {
         return pe.field_a == SectorCacheStore.field_d ? true : false;
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         if (this.field_s) {
           return this.field_K.getValidationMessage((byte) 126);
         }
@@ -176,26 +176,26 @@ final class dd extends InteractiveWidget {
             var16 = AccountRequestState.field_c[0];
             var9 = var16.field_q << 1;
             var10 = var16.field_u << 1;
-            if (ld.field_c == null) {
-              ld.field_c = new Sprite(var9, var10);
-              il.a(1, ld.field_c);
+            if (TextLayout.field_c == null) {
+              TextLayout.field_c = new Sprite(var9, var10);
+              il.a(1, TextLayout.field_c);
             } else {
-              if (var9 > ld.field_c.field_r) {
-                ld.field_c = new Sprite(var9, var10);
-                il.a(1, ld.field_c);
+              if (var9 > TextLayout.field_c.field_r) {
+                TextLayout.field_c = new Sprite(var9, var10);
+                il.a(1, TextLayout.field_c);
               } else {
-                if (var10 <= ld.field_c.field_t) {
-                  il.a(1, ld.field_c);
+                if (var10 <= TextLayout.field_c.field_t) {
+                  il.a(1, TextLayout.field_c);
                   SoftwareRasterizer.clearRaster();
                 } else {
-                  ld.field_c = new Sprite(var9, var10);
-                  il.a(1, ld.field_c);
+                  TextLayout.field_c = new Sprite(var9, var10);
+                  il.a(1, TextLayout.field_c);
                 }
               }
             }
             var16.drawRotatedAbout(112, 144, var16.field_q << 4, var16.field_u << 4, -this.field_P << 10, 4096);
             MessageKeys.a(false);
-            ld.field_c.drawAdditive(var5 - var16.field_q, -var16.field_u + var6, 256);
+            TextLayout.field_c.drawAdditive(var5 - var16.field_q, -var16.field_u + var6, 256);
             return;
           }
           if (oh.field_b != var8) {
@@ -214,18 +214,18 @@ final class dd extends InteractiveWidget {
           var15 = AccountRequestState.field_c[0];
           var9Lifetime3 = var15.field_q << 1;
           var10Lifetime3 = var15.field_u << 1;
-          if (ld.field_c != null &&
-            var9Lifetime3 <= ld.field_c.field_r &&
-            var10Lifetime3 <= ld.field_c.field_t) {
-            il.a(1, ld.field_c);
+          if (TextLayout.field_c != null &&
+            var9Lifetime3 <= TextLayout.field_c.field_r &&
+            var10Lifetime3 <= TextLayout.field_c.field_t) {
+            il.a(1, TextLayout.field_c);
             SoftwareRasterizer.clearRaster();
           } else {
-            ld.field_c = new Sprite(var9Lifetime3, var10Lifetime3);
-            il.a(1, ld.field_c);
+            TextLayout.field_c = new Sprite(var9Lifetime3, var10Lifetime3);
+            il.a(1, TextLayout.field_c);
           }
           var15.drawRotatedAbout(112, 144, var15.field_q << 4, var15.field_u << 4, -this.field_P << 10, 4096);
           MessageKeys.a(false);
-          ld.field_c.drawAdditive(var5 - var15.field_q, -var15.field_u + var6, 256);
+          TextLayout.field_c.drawAdditive(var5 - var15.field_q, -var15.field_u + var6, 256);
           return;
         }
         field_O = (String[]) null;
@@ -235,26 +235,26 @@ final class dd extends InteractiveWidget {
           var20 = AccountRequestState.field_c[0];
           var9Lifetime1 = var20.field_q << 1;
           var10Lifetime1 = var20.field_u << 1;
-          if (ld.field_c == null) {
-            ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
-            il.a(1, ld.field_c);
+          if (TextLayout.field_c == null) {
+            TextLayout.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
+            il.a(1, TextLayout.field_c);
           } else {
-            if (var9Lifetime1 > ld.field_c.field_r) {
-              ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
-              il.a(1, ld.field_c);
+            if (var9Lifetime1 > TextLayout.field_c.field_r) {
+              TextLayout.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
+              il.a(1, TextLayout.field_c);
             } else {
-              if (var10Lifetime1 <= ld.field_c.field_t) {
-                il.a(1, ld.field_c);
+              if (var10Lifetime1 <= TextLayout.field_c.field_t) {
+                il.a(1, TextLayout.field_c);
                 SoftwareRasterizer.clearRaster();
               } else {
-                ld.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
-                il.a(1, ld.field_c);
+                TextLayout.field_c = new Sprite(var9Lifetime1, var10Lifetime1);
+                il.a(1, TextLayout.field_c);
               }
             }
           }
           var20.drawRotatedAbout(112, 144, var20.field_q << 4, var20.field_u << 4, -this.field_P << 10, 4096);
           MessageKeys.a(false);
-          ld.field_c.drawAdditive(var5 - var20.field_q, -var20.field_u + var6Lifetime1, 256);
+          TextLayout.field_c.drawAdditive(var5 - var20.field_q, -var20.field_u + var6Lifetime1, 256);
           return;
         }
         if (oh.field_b != var8Lifetime1) {
@@ -273,22 +273,22 @@ final class dd extends InteractiveWidget {
         var19 = AccountRequestState.field_c[0];
         var9Lifetime2 = var19.field_q << 1;
         var10Lifetime2 = var19.field_u << 1;
-        if (ld.field_c == null) {
-          ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
-          il.a(1, ld.field_c);
+        if (TextLayout.field_c == null) {
+          TextLayout.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
+          il.a(1, TextLayout.field_c);
         } else {
-          if (var9Lifetime2 <= ld.field_c.field_r &&
-            var10Lifetime2 <= ld.field_c.field_t) {
-            il.a(1, ld.field_c);
+          if (var9Lifetime2 <= TextLayout.field_c.field_r &&
+            var10Lifetime2 <= TextLayout.field_c.field_t) {
+            il.a(1, TextLayout.field_c);
             SoftwareRasterizer.clearRaster();
           } else {
-            ld.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
-            il.a(1, ld.field_c);
+            TextLayout.field_c = new Sprite(var9Lifetime2, var10Lifetime2);
+            il.a(1, TextLayout.field_c);
           }
         }
         var19.drawRotatedAbout(112, 144, var19.field_q << 4, var19.field_u << 4, -this.field_P << 10, 4096);
         MessageKeys.a(false);
-        ld.field_c.drawAdditive(var5 - var19.field_q, -var19.field_u + var6Lifetime1, 256);
+        TextLayout.field_c.drawAdditive(var5 - var19.field_q, -var19.field_u + var6Lifetime1, 256);
     }
 
     static {

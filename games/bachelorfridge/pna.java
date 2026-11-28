@@ -272,10 +272,10 @@ final class pna extends UiComponent {
             ByteStorage.field_f.a(-1, ut.field_q);
           }
           ByteStorage.field_f.a(-1, SnowEvent.field_q);
-          jj.field_wb = new UiComponent(0L, iw.field_a, dh.field_i.toUpperCase());
+          jj.field_wb = new UiComponent(0L, iw.field_a, ArmPetAttackEffect.field_i.toUpperCase());
           GzipDecompressor.field_a = new UiComponent(0L, p.field_o);
           vm.field_i = new UiComponent(0L, SlowAllAnimation.field_v);
-          mh.field_j = new UiComponent(0L, rda.field_a, IterableDualLinkDeque.field_c.toUpperCase());
+          CreaturePoseEffect.field_j = new UiComponent(0L, rda.field_a, IterableDualLinkDeque.field_c.toUpperCase());
           pka.field_b = new UiComponent[param3 + 4];
           gd.field_n = new gna[4 + param3][];
           pka.field_b[0] = new UiComponent(0L, ina.field_n, BitPacketBuffer.field_k);
@@ -353,7 +353,7 @@ final class pna extends UiComponent {
           ho.field_g = new UiComponent(0L, (UiComponent) null);
           ho.field_g.a(-1, GzipDecompressor.field_a);
           ho.field_g.a(-1, vm.field_i);
-          vm.field_i.a(-1, mh.field_j);
+          vm.field_i.a(-1, CreaturePoseEffect.field_j);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param3; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
               !(qha.field_c.length < 2)) && (var18Lifetime2 != 3 ||

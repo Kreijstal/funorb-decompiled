@@ -115,10 +115,10 @@ final class ad extends kf {
         return param0 == (-param0 & param0) ? true : false;
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_t.field_h ? 1 : 0;
         this.field_t.field_h = this.field_h;
-        String var3 = this.field_t.d(param0);
+        String var3 = this.field_t.getTooltipText(param0);
         this.field_t.field_h = var2 != 0 ? true : false;
         return var3;
     }

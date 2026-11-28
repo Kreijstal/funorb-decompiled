@@ -49,7 +49,7 @@ final class vb {
                 return stackIn_9_0;
               }
             }
-            if (ef.field_a == tb.field_o) {
+            if (ef.field_a == TextHotspotBounds.field_o) {
               if (!param3) {
                 eh.field_i = AgeValidator.a(param1, param0, 130, false);
               }
@@ -118,7 +118,7 @@ final class vb {
               var6 = kj.field_d.readNullableString(param2 - 8);
               var7 = kj.field_d.readUnsignedByte((byte) -101);
               if (0 != (1 & var7)) {
-                pc.b(false);
+                DefaultTextWidgetRenderer.b(false);
               }
               if (!param3) {
                 stackIn_71_0 = (0 != (4 & var7));
@@ -169,7 +169,7 @@ final class vb {
                 if (!(wp.field_w <= 0) ||
                   PacketBuffer.field_l) {
                   try {
-                    JavaScriptBridge.callWithArguments(ip.a(param2 - 18), new Object[]{kp.a((byte) -87, qd.field_e)}, 28989, "zap");
+                    JavaScriptBridge.callWithArguments(ip.a(param2 - 18), new Object[]{TextLineMetrics.a((byte) -87, qd.field_e)}, 28989, "zap");
                     decompiledRegionSelector0 = 0;
                   } catch (java.lang.Throwable decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -265,7 +265,7 @@ final class vb {
             } else {
               stackIn_163_2 = "{...}";
             }
-            throw rb.wrapThrowable((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_158_0), ((StringBuilder) (Object) stackIn_162_1).append(stackIn_163_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -328,7 +328,7 @@ final class vb {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var4), "vb.C(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var4), "vb.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -484,7 +484,7 @@ final class vb {
                 var24 = param0.field_L[var23];
                 var25 = param0.field_k[var23];
                 var26 = param0.field_h[var23];
-                pc.field_d[var23] = (var26 * var18 + (var24 * var12 + var15 * var25) >> 16) + var9;
+                DefaultTextWidgetRenderer.field_d[var23] = (var26 * var18 + (var24 * var12 + var15 * var25) >> 16) + var9;
                 BufferedSocket.field_j[var23] = (var16 * var25 + (var24 * var13 + var19 * var26) >> 16) + var10;
                 up.field_b[var23] = var11 + (var20 * var26 + var25 * var17 + var14 * var24 >> 16);
                 var24 = param0.field_K[var23];
@@ -558,7 +558,7 @@ final class vb {
           } else {
             stackIn_81_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_80_1).append(stackIn_81_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -694,7 +694,7 @@ final class vb {
                 }
                 case 16: {
                     var3 = (RuntimeException) ((Object) caughtException);
-                    throw rb.wrapThrowable((Throwable) ((Object) var3), "vb.E(" + param0 + ',' + param1 + ')');
+                    throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3), "vb.E(" + param0 + ',' + param1 + ')');
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -727,7 +727,7 @@ final class vb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -747,7 +747,7 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "vb.G(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "vb.G(" + param0 + ')');
         }
     }
 
@@ -764,7 +764,7 @@ final class vb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var4), "vb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var4), "vb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -820,7 +820,7 @@ final class vb {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(')').toString());
         }
     }
 

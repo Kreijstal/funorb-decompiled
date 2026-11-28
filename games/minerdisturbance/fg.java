@@ -133,7 +133,7 @@ final class fg {
           }
           var3 = new String[var2.size((byte) -119)][];
           for (var4 = 0; var3.length > var4; var4++) {
-            var3[var4] = ((fn) (var2.removeFirst(eg.a(param0, 63791)))).field_n;
+            var3[var4] = ((fn) (var2.removeFirst(DefaultTextWidgetRenderer.a(param0, 63791)))).field_n;
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;

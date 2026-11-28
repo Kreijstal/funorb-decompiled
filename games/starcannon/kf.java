@@ -15,11 +15,11 @@ abstract class kf extends UiWidget implements ch {
         field_u = null;
     }
 
-    String d(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.d(param0);
+        String var2 = super.getTooltipText(param0);
         if (null != this.field_t) {
-          var3 = this.field_t.d(12606);
+          var3 = this.field_t.getTooltipText(12606);
           if (var3 != null) {
             return var3;
           }
@@ -318,7 +318,7 @@ abstract class kf extends UiWidget implements ch {
           this.field_t.b((byte) -101);
         }
         if (param0 >= -72) {
-          this.d(104);
+          this.getTooltipText(104);
         }
     }
 
@@ -393,7 +393,7 @@ abstract class kf extends UiWidget implements ch {
             this.a(param0, param3, param2 - 388, param1);
           }
           if (param2 != 39) {
-            this.d(-10);
+            this.getTooltipText(-10);
           }
           stackIn_5_0 = (StringBuilder) (param1);
           return stackIn_5_0;

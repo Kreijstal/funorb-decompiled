@@ -243,7 +243,7 @@ final class ResourceArchive {
           if (qk.a(param0, (byte) -110)) {
             return true;
           }
-          var6 = h.field_l;
+          var6 = DefaultTextWidgetRenderer.field_l;
           var2 = var6;
           for (var3 = 0; var3 < var6.length; var3++) {
             var4 = var6[var3];

@@ -53,7 +53,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             stackIn_2_0 = (na) null;
             return stackIn_2_0;
           }
-          stackIn_6_0 = (sb.a(28079, param0) != null) ? 0 : 1;
+          stackIn_6_0 = (RichTextLayout.a(28079, param0) != null) ? 0 : 1;
           var3_int = stackIn_6_0;
           if (var3_int != 0) {
             return TextFieldValidator.field_i;

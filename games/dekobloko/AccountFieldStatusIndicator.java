@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountFieldStatusIndicator extends UiComponentPart025 {
+final class AccountFieldStatusIndicator extends RichTextWidget {
     static MixedSupport004 mixedSupport004State0003;
     static volatile int integerState0572;
     static int integerState0573;
@@ -39,7 +39,7 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
         RgbSprite rgbSpriteLocal9;
         Object objectLocal10;
         Object objectLocal11;
-        CallbackContract012 callbackContract012Local12;
+        TextWidgetRenderer callbackContract012Local12;
         String stringLocal13;
         int integerLocal14;
         int integerLocal15;
@@ -60,8 +60,8 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
         RgbSprite rgbSpriteLocal30;
         RgbSprite rgbSpriteLocal31;
         RgbSprite rgbSpriteLocal32;
-        CallbackContract012 callbackContract012Local33;
-        CallbackContract012 callbackContract012Local34;
+        TextWidgetRenderer callbackContract012Local33;
+        TextWidgetRenderer callbackContract012Local34;
         int integerLocal35;
         int integerLocal36;
         int integerLocal37;
@@ -89,19 +89,19 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         validationStatusLocal1 = this.callbackContract011State0003.getValidationStatus(20350);
         if (validationStatusLocal1 == MixedSupport076.validationStatusState0004) {
-          stringLocal6 = UiComponentPart025.stringState0451;
+          stringLocal6 = RichTextWidget.stringState0451;
           if (!stringLocal6.equals(this.stringState0078)) {
             this.stringState0078 = stringLocal6;
-            this.performAction1360(2874);
+            this.rebuildHotspotBounds(2874);
           }
           super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
           validationStatusLocal1 = this.callbackContract011State0003.getValidationStatus(20350);
-          callbackContract012Local12 = (CallbackContract012) ((Object) this.callbackContract004State0006);
+          callbackContract012Local12 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
           integerLocal2 = this.integerState0110 + integerArgument1;
           if (integerArgument2 >= -103) {
             uiComponentLocal5 = (UiComponent) null;
             this.computeBoolean0221(true, (UiComponent) null);
-            integerLocal3 = callbackContract012Local12.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local12.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
+            integerLocal3 = callbackContract012Local12.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local12.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
             if (MixedSupport076.validationStatusState0004 != validationStatusLocal1 &&
               DiagnosticSupport002.validationStatusState0002 != validationStatusLocal1) {
               if (validationStatusLocal1 == ReturnedShapeUpdate.validationStatusState0005) {
@@ -133,7 +133,7 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             this.rgbSpriteState0039.drawAdditive(integerLocal2 - (rgbSpriteLocal17.integerState0254 >> 1), integerLocal3 - rgbSpriteLocal17.integerState0260, 256);
             return;
           }
-          integerLocal46 = callbackContract012Local12.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local12.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
+          integerLocal46 = callbackContract012Local12.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local12.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
           if (MixedSupport076.validationStatusState0004 != validationStatusLocal1 &&
             DiagnosticSupport002.validationStatusState0002 != validationStatusLocal1) {
             if (validationStatusLocal1 == ReturnedShapeUpdate.validationStatusState0005) {
@@ -179,17 +179,17 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             stringLocal13 = this.stringState0400;
           }
         } else {
-          stringLocal13 = UiComponentPart025.stringState0451;
+          stringLocal13 = RichTextWidget.stringState0451;
         }
         if (stringLocal13.equals(this.stringState0078)) {
           super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
           validationStatusLocal52 = this.callbackContract011State0003.getValidationStatus(20350);
-          callbackContract012Local33 = (CallbackContract012) ((Object) this.callbackContract004State0006);
+          callbackContract012Local33 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
           integerLocal35 = this.integerState0110 + integerArgument1;
           if (integerArgument2 >= -103) {
             uiComponentLocal54 = (UiComponent) null;
             this.computeBoolean0221(true, (UiComponent) null);
-            integerLocal37 = callbackContract012Local33.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local33.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
+            integerLocal37 = callbackContract012Local33.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local33.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
             if (MixedSupport076.validationStatusState0004 != validationStatusLocal52 &&
               DiagnosticSupport002.validationStatusState0002 != validationStatusLocal52) {
               if (validationStatusLocal52 == ReturnedShapeUpdate.validationStatusState0005) {
@@ -221,7 +221,7 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
             this.rgbSpriteState0039.drawAdditive(integerLocal35 - (rgbSpriteLocal23.integerState0254 >> 1), integerLocal37 - rgbSpriteLocal23.integerState0260, 256);
             return;
           }
-          integerLocal49 = callbackContract012Local33.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local33.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
+          integerLocal49 = callbackContract012Local33.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local33.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
           if (MixedSupport076.validationStatusState0004 != validationStatusLocal52 &&
             DiagnosticSupport002.validationStatusState0002 != validationStatusLocal52) {
             if (validationStatusLocal52 == ReturnedShapeUpdate.validationStatusState0005) {
@@ -262,13 +262,13 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
           return;
         }
         this.stringState0078 = stringLocal13;
-        this.performAction1360(2874);
+        this.rebuildHotspotBounds(2874);
         super.performAction0162(integerArgument1, -105, integerArgument3, integerArgument4);
         validationStatusLocal53 = this.callbackContract011State0003.getValidationStatus(20350);
-        callbackContract012Local34 = (CallbackContract012) ((Object) this.callbackContract004State0006);
+        callbackContract012Local34 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
         integerLocal36 = this.integerState0110 + integerArgument1;
         if (integerArgument2 < -103) {
-          integerLocal38 = callbackContract012Local34.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local34.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
+          integerLocal38 = callbackContract012Local34.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local34.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
           if (MixedSupport076.validationStatusState0004 != validationStatusLocal53 &&
             DiagnosticSupport002.validationStatusState0002 != validationStatusLocal53) {
             if (validationStatusLocal53 == ReturnedShapeUpdate.validationStatusState0005) {
@@ -310,7 +310,7 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
         }
         uiComponentLocal55 = (UiComponent) null;
         this.computeBoolean0221(true, (UiComponent) null);
-        integerLocal39 = callbackContract012Local34.computeInteger0005(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local34.computeTextLayout0011((UiComponent) (this), (byte) 44).computeInteger0238(-1) >> 1);
+        integerLocal39 = callbackContract012Local34.getTextOriginY(integerArgument4, 0, (UiComponent) (this)) + (callbackContract012Local34.getTextLayout((UiComponent) (this), (byte) 44).getLayoutHeight(-1) >> 1);
         if (MixedSupport076.validationStatusState0004 != validationStatusLocal53 &&
           DiagnosticSupport002.validationStatusState0002 != validationStatusLocal53) {
           if (validationStatusLocal53 == ReturnedShapeUpdate.validationStatusState0005) {
@@ -402,7 +402,7 @@ final class AccountFieldStatusIndicator extends UiComponentPart025 {
         }
     }
 
-    final String computeString0223(byte byteArgument1) {
+    final String getTooltipText(byte byteArgument1) {
         if (byteArgument1 == 113) {
           return null;
         }

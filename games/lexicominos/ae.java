@@ -92,7 +92,7 @@ final class ae extends InteractiveWidget {
           if (var8_int * var8_int + var9 * var9 >= this.field_I * this.field_I) {
             return true;
           }
-          var10 = Math.atan2((double)var9, (double)var8_int) - wl.field_n;
+          var10 = Math.atan2((double)var9, (double)var8_int) - TextHotspotBounds.field_n;
           if (var10 < 0.0) {
             var10 = var10 - 3.141592653589793 / (double)this.field_K;
           } else {

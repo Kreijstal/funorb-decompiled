@@ -81,7 +81,7 @@ final class PcmOutputWorker implements Runnable {
               sn.field_c.writeByte(18, 25564);
               sn.field_c.position = sn.field_c.position + 2;
               var10 = sn.field_c.position;
-              var11_ref_String = ag.a(bm.c(-104), true);
+              var11_ref_String = ag.a(RichTextLayout.c(-104), true);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -127,8 +127,8 @@ final class PcmOutputWorker implements Runnable {
               vh.field_i = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
-                ri.a((byte) -125, bm.c(-99));
-                nf.field_g = d.field_a;
+                ri.a((byte) -125, RichTextLayout.c(-99));
+                TextLayout.field_g = d.field_a;
                 si.a(-98);
                 FrameTimer.field_c = false;
                 stackIn_35_0 = var9Lifetime1;
@@ -165,11 +165,11 @@ final class PcmOutputWorker implements Runnable {
           if (qd.field_Q == aa.field_l &&
             kj.b(-9319)) {
             if (oj.field_K != 255) {
-              nf.field_g = kj.field_a.readString(false);
+              TextLayout.field_g = kj.field_a.readString(false);
             } else {
               var9_ref_String = kj.field_a.readNullableString(81);
               if (var9_ref_String != null) {
-                nc.a(bm.c(-76), var9_ref_String, (byte) 115);
+                nc.a(RichTextLayout.c(-76), var9_ref_String, (byte) 115);
               }
             }
             si.a(-82);
@@ -180,9 +180,9 @@ final class PcmOutputWorker implements Runnable {
           if (AwtRasterBuffer.field_i == null) {
             if (FrameTimer.field_c) {
               if (qa.a(-112) > 30000L) {
-                nf.field_g = oi.field_K;
+                TextLayout.field_g = oi.field_K;
               } else {
-                nf.field_g = FullscreenFocusCanvas.field_a;
+                TextLayout.field_g = FullscreenFocusCanvas.field_a;
               }
               FrameTimer.field_c = false;
               stackIn_61_0 = 249;

@@ -290,7 +290,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ia.field_l[145] = AccountNameAvailabilityValidator.field_q;
           ia.field_l[141] = ln.field_g;
           ia.field_l[164] = pi.field_c;
-          ia.field_l[108] = cn.field_h;
+          ia.field_l[108] = DefaultTextWidgetRenderer.field_h;
           ia.field_l[162] = ga.field_a;
           ia.field_l[115] = BufferedSocket.field_f;
           ia.field_l[212] = SpriteGeometry.field_q;
@@ -598,7 +598,7 @@ public final class HostileSpawn extends NetworkGameClient {
           scanLoop2: while (true) {
             boolean decompiledFrameCompleted0 = true;
             if (ProxySocketFactory.field_j > var5Lifetime2) {
-              var9_ref = mm.field_m[var5Lifetime2];
+              var9_ref = TextHotspotBounds.field_m[var5Lifetime2];
               stackIn_155_0 = var9_ref.field_i;
               stackIn_155_1 = 1;
               if (var12 == 0) {
@@ -635,7 +635,7 @@ public final class HostileSpawn extends NetworkGameClient {
                   if (var9_intLifetime1 == 3 &&
                     var12 == 0) {
                     for (var5Lifetime2 = 0; var5Lifetime2 < ProxySocketFactory.field_j; var5Lifetime2++) {
-                      var9_ref = mm.field_m[var5Lifetime2];
+                      var9_ref = TextHotspotBounds.field_m[var5Lifetime2];
                       stackIn_155_0 = ~var9_ref.field_i;
                       stackIn_155_1 = -9;
                       if (stackIn_155_0 == stackIn_155_1) {
@@ -710,7 +710,7 @@ public final class HostileSpawn extends NetworkGameClient {
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted1)) {
                 for (var5Lifetime2 = 0; var5Lifetime2 < ProxySocketFactory.field_j; var5Lifetime2++) {
-                  var9_ref = mm.field_m[var5Lifetime2];
+                  var9_ref = TextHotspotBounds.field_m[var5Lifetime2];
                   stackIn_155_0 = -5;
                   stackIn_155_1 = ~var9_ref.field_i;
                   if (var12 != 0) {
@@ -736,8 +736,8 @@ public final class HostileSpawn extends NetworkGameClient {
             }
             break;
           }
-          var4Lifetime3 = param1 * mm.field_m[0].field_j.field_g;
-          var3_intLifetime3 = mm.field_m[0].field_j.field_e * param1;
+          var4Lifetime3 = param1 * TextHotspotBounds.field_m[0].field_j.field_g;
+          var3_intLifetime3 = TextHotspotBounds.field_m[0].field_j.field_e * param1;
           SoftwareRasterizer.fillRectangle(var3_intLifetime3, var4Lifetime3, param1, param1, 16777215);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1231,7 +1231,7 @@ public final class HostileSpawn extends NetworkGameClient {
           pk.clearStaticReferences(param0 - 26);
           jk.clearStaticReferences(-100);
           jh.g((byte) -115);
-          cn.clearStaticReferences(param0 ^ 110);
+          DefaultTextWidgetRenderer.clearStaticReferences(param0 ^ 110);
           ge.clearStaticReferences();
           sj.clearStaticReferences((byte) 58);
           u.clearStaticReferences(true);
@@ -1255,7 +1255,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ha.clearStaticReferences(true);
           ra.clearStaticReferences(11129);
           h.clearStaticReferences((byte) 76);
-          ce.clearStaticReferences(param0 + 6909);
+          TextLayout.clearStaticReferences(param0 + 6909);
           ag.d(5956);
           InteractiveWidget.clearStaticReferences(84);
           fc.resetStaticState(1);
@@ -1290,7 +1290,7 @@ public final class HostileSpawn extends NetworkGameClient {
           EditableTextField.resetStaticState(25);
           me.clearDeclaredStaticReferences((byte) -56);
           NameSuggestionsPanel.clearStaticReferences(-125);
-          cj.clearStaticReferences(true);
+          RichTextWidget.clearStaticReferences(true);
           wj.j(11460);
           al.clearDeclaredStaticReferences((byte) 78);
           vf.clearDeclaredStaticReferences((byte) -72);
@@ -1301,7 +1301,7 @@ public final class HostileSpawn extends NetworkGameClient {
           tb.clearDeclaredStaticReferences((byte) 83);
           SoundFilter.clearStaticReferences();
           tf.clearStaticReferences(16976);
-          mb.c(param0 + 99);
+          RichTextLayout.c(param0 + 99);
           DirectByteStorage.c((byte) 70);
           df.clearStaticReferences(49);
           rj.clearDeclaredStaticReferences((byte) -122);
@@ -1349,7 +1349,7 @@ public final class HostileSpawn extends NetworkGameClient {
           qi.clearStaticReferences(66);
           jf.clearStaticReferences((byte) -99);
           gm.a(0);
-          pm.clearStaticReferences((byte) -12);
+          TextLineMetrics.clearStaticReferences((byte) -12);
           AccountNameAvailabilityValidator.clearStaticReferences((byte) -69);
           PasswordValidator.clearStaticReferences((byte) -87);
           EmailFormatValidator.clearDeclaredStaticReferences(117);
@@ -1357,7 +1357,7 @@ public final class HostileSpawn extends NetworkGameClient {
           AgeValidator.f(83);
           MatchingFieldValidator.clearStaticReferences((byte) -109);
           je.a(34);
-          mm.clearDeclaredStaticReferences((byte) 10);
+          TextHotspotBounds.clearDeclaredStaticReferences((byte) 10);
           bm.clearStaticReferences(-88);
           DebouncedFieldValidator.clearStaticReferences(125);
           ll.clearStaticReferences(-125);
@@ -1549,8 +1549,8 @@ public final class HostileSpawn extends NetworkGameClient {
         try {
           em.field_c = em.field_c + 1;
           q.b(14470);
-          if (null != mb.field_s) {
-            mb.field_s.b(param0 ^ 53);
+          if (null != RichTextLayout.field_s) {
+            RichTextLayout.field_s.b(param0 ^ 53);
           }
           if (param0 != -35) {
             this.prepareGameShutdown(-72);
@@ -1669,7 +1669,7 @@ public final class HostileSpawn extends NetworkGameClient {
                 }
               }
               if (decompiledFrameCompleted0) {
-                mb.d(0, -22370);
+                RichTextLayout.d(0, -22370);
               }
             }
             if (!EditableTextField.c(false)) {
@@ -1763,11 +1763,11 @@ public final class HostileSpawn extends NetworkGameClient {
           boolean decompiledFrameCompleted2 = true;
           boolean decompiledFrameCompleted3 = true;
           boolean decompiledFrameCompleted4 = true;
-          if (mm.field_m == null) {
-            mm.field_m = new oj[3000];
+          if (TextHotspotBounds.field_m == null) {
+            TextHotspotBounds.field_m = new oj[3000];
             var2_int = 0;
             while (var2_int < 3000) {
-              mm.field_m[var2_int] = new oj();
+              TextHotspotBounds.field_m[var2_int] = new oj();
               var2_int++;
               if (var3 != 0) {
                 decompiledFrameCompleted4 = false;
@@ -2184,7 +2184,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (m.field_l) {
             ClientLookupTables.field_h.f(param0 ^ -35);
-            cn.a(false, (byte) 99);
+            DefaultTextWidgetRenderer.a(false, (byte) 99);
             m.field_l = false;
           }
           if (jk.a(-23322)) {
@@ -2269,7 +2269,7 @@ public final class HostileSpawn extends NetworkGameClient {
           }
           if (ClientLookupTables.field_h != null) {
             cg.a(-27587);
-            mb.field_s.b(0, (byte) 95);
+            RichTextLayout.field_s.b(0, (byte) 95);
             return;
           }
           if (null != this.field_G) {
@@ -2302,7 +2302,7 @@ public final class HostileSpawn extends NetworkGameClient {
           var4 = new VolumeRampingMidiPcmStream(var3);
           var5 = new VolumeRampingMidiPcmStream(var3);
           var6 = new CrossfadingMidiPcmStream(var3, var4, var5);
-          mb.field_s = new he(var5);
+          RichTextLayout.field_s = new he(var5);
           SpriteBase.initializeAudioOutput(var6, -25127, 22050, (java.awt.Component) ((Object) GameAppletShell.field_h), true, gf.field_b);
           if (param0 != -4323) {
             this.configureInterfaceThemeAndCursor(-15);
@@ -2482,7 +2482,7 @@ public final class HostileSpawn extends NetworkGameClient {
           EditableTextField.field_R = fg.a("", "Scenery_59", vd.field_C, false);
           ic.field_k = fg.a("", "Scenery_60", vd.field_C, false);
           eb.field_b = fg.a("", "Scenery_61", vd.field_C, false);
-          cn.field_h = fg.a("", "Scenery_62", vd.field_C, false);
+          DefaultTextWidgetRenderer.field_h = fg.a("", "Scenery_62", vd.field_C, false);
           jh.field_cb = fg.a("", "Scenery_63", vd.field_C, false);
           SocketFactory.field_c = fg.a("", "Scenery_64", vd.field_C, false);
           qg.field_m = fg.a("", "Scenery_65", vd.field_C, false);
@@ -2522,7 +2522,7 @@ public final class HostileSpawn extends NetworkGameClient {
           ak.field_a = MouseInput.a("", -116, "door_twiddles_hammerhead_h", vd.field_C);
           an.field_d = MouseInput.a("", 125, "door_twiddles_hammerhead_v", vd.field_C);
           jd.field_o = jd.a((byte) 33, "", vd.field_C, "doors_planet");
-          ce.field_a = MouseInput.a("", 118, "door_twiddles_planet_h", vd.field_C);
+          TextLayout.field_a = MouseInput.a("", 118, "door_twiddles_planet_h", vd.field_C);
           r.field_c = MouseInput.a("", 125, "door_twiddles_planet_v", vd.field_C);
           th.field_Hb = jd.a((byte) 33, "", vd.field_C, "doors_station");
           qa.field_c = MouseInput.a("", param0 - 13003, "door_twiddles_station_h", vd.field_C);

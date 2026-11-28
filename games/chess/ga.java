@@ -54,7 +54,7 @@ final class ga {
           var2 = (PcmOutputWorker.a(-3)) ? 0 : 1;
         }
         if (null == ch.field_gb &&
-          re.field_r) {
+          TextHotspotBounds.field_r) {
           qh.a(false, param0, var2);
         }
     }

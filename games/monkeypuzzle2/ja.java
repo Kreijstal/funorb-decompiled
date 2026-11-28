@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends WidgetContainer implements u, WidgetActivationListener {
-    private jj field_z;
+final class ja extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
+    private RichTextWidget field_z;
     private AccountCreationResultPanel field_C;
     static te field_B;
     private ButtonWidget field_D;
@@ -74,14 +74,14 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
         }
     }
 
-    public final void a(int param0, int param1, jj param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        jj var7 = null;
+        RichTextWidget var7 = null;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param0 == 0) {
@@ -96,8 +96,8 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
             }
           }
           if (param1 != -21099) {
-            var7 = (jj) null;
-            this.a(-11, 111, (jj) null, -70);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated(-11, 111, (RichTextWidget) null, -70);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,14 +116,14 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
 
     private final String a(int param0) {
         if (param0 != 1971849544) {
-          jj var3 = (jj) null;
-          this.a(-97, -69, (jj) null, 108);
+          RichTextWidget var3 = (RichTextWidget) null;
+          this.onTextHotspotActivated(-97, -69, (RichTextWidget) null, 108);
         }
         return "<u=2164A2><col=2164A2>";
     }
 
     public final void onWidgetActivated(int param0, int param1, int param2, int param3, ButtonWidget param4) {
-        jj var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -135,8 +135,8 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
             this.field_C.g((byte) -75);
           }
           if (param3 != 7) {
-            var7 = (jj) null;
-            this.a(-73, -74, (jj) null, -4);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated(-73, -74, (RichTextWidget) null, -4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
         super(0, 0, 288, 0, (ml) null);
         String var7 = null;
         int var3 = 0;
-        a var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -166,8 +166,8 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
           this.field_D.field_h = (ml) ((Object) new hd());
           var7 = gg.a(new String[]{this.a(1971849544), this.d((byte) 106)}, oi.field_i, true);
           var3 = 20;
-          var4 = new a(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
-          this.field_z = new jj(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
+          this.field_z = new RichTextWidget(var7, var4);
           this.field_z.field_m = "";
           this.field_z.a(false, 0, kg.field_a);
           this.field_z.a(false, 1, kg.field_a);
@@ -367,11 +367,11 @@ final class ja extends WidgetContainer implements u, WidgetActivationListener {
             }
             var21 = stackIn_39_0;
             var22 = AccountRegistrationPanel.field_L[var15Lifetime1];
-            var23 = sb.field_l[var15Lifetime1];
+            var23 = RichTextLayout.field_l[var15Lifetime1];
             var24 = AccountRegistrationPanel.field_L[var16];
-            var25 = sb.field_l[var16];
+            var25 = RichTextLayout.field_l[var16];
             var26 = AccountRegistrationPanel.field_L[var17];
-            var27 = sb.field_l[var17];
+            var27 = RichTextLayout.field_l[var17];
             if (var18 == var19 &&
               var19 == var20) {
               var28 = var55[var18];

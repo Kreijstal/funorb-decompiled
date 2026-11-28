@@ -529,7 +529,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          cn.a(126, param0, param12, param2);
+          DefaultTextWidgetRenderer.a(126, param0, param12, param2);
           ub.a(param9, param17, param10, param13, (byte) -127);
           ArchiveIndex.a(param14, param19, -1);
           re.a(param15 - 3996, param6, param7, param1, param11, param3);

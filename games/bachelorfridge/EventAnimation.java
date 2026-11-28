@@ -55,7 +55,7 @@ abstract class EventAnimation extends AnimationNode {
         int var9 = 0;
         DamageEffect var10 = null;
         DamageTileEffect var11 = null;
-        bm var12 = null;
+        SetTileTerrainEffect var12 = null;
         var9 = BachelorFridge.field_y;
         try {
           if (param3 != 0) {
@@ -65,11 +65,11 @@ abstract class EventAnimation extends AnimationNode {
           while (var5 != null) {
             if (!(var5 instanceof DamageEffect)) {
               if (!(var5 instanceof DamageTileEffect)) {
-                if (!(var5 instanceof bm)) {
+                if (!(var5 instanceof SetTileTerrainEffect)) {
                   var5 = (EventEffect) (this.event.effects.nextForward(0));
                   continue;
                 }
-                var12 = (bm) (var5);
+                var12 = (SetTileTerrainEffect) (var5);
                 if (var12.field_k == param0 &&
                   param1 == var12.field_l) {
                   var12.apply(param2.field_s, this.screen.field_h, 12);
@@ -97,7 +97,7 @@ abstract class EventAnimation extends AnimationNode {
                   var5.unlink(false);
                   return;
                 }
-                var7.b(param3 - 1, 6);
+                var7.playAnimation(param3 - 1, 6);
                 this.addChild(param3 ^ 27799, new DamagePopupAnimation(this.screen, var7, var10.field_f));
                 var5.unlink(false);
                 return;

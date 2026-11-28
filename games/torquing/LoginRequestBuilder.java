@@ -55,7 +55,7 @@ final class LoginRequestBuilder {
             var6 = var6 | 16;
           }
           wa.field_d.writeByte(90, var6);
-          var7 = rb.a(-124, ip.a(9));
+          var7 = RichTextWidget.a(-124, ip.a(9));
           if (var7 == null) {
             var7 = "";
           }
@@ -77,7 +77,7 @@ final class LoginRequestBuilder {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

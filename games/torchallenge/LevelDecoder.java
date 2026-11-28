@@ -254,16 +254,16 @@ final class LevelDecoder {
         int[] var17 = null;
         int[] var8 = null;
         int[] var4 = new int[]{5};
-        int[] var15 = lg.field_d[4];
+        int[] var15 = TextLayout.field_d[4];
         IntrusiveNode.a(200, 440, var15[6] + var15[8], 61, var15[3], 4, var4);
         GameApplet.screens[4] = new GameScreen(4, be.field_e);
-        int[] var16 = lg.field_d[2];
+        int[] var16 = TextLayout.field_d[2];
         int[] var6 = new int[]{8, 9, 10, 5};
         IntrusiveNode.a(var16[1], var16[2], var16[6] + var16[8], 74, var16[3], param0, var6);
         GameApplet.screens[2] = new GameScreen(2, be.field_e);
         if (0 < UiComponent.field_o &&
           ol.a((byte) -119, ArchiveRequest.field_u)) {
-          var17 = lg.field_d[1];
+          var17 = TextLayout.field_d[1];
           var8 = new int[]{1, 12, 13, 4, 31, 3, 7};
           IntrusiveNode.a(var17[1], var17[2], var17[6] + var17[8], 118, var17[3], 1, var8);
           GameApplet.screens[1] = new GameScreen(1, be.field_e);

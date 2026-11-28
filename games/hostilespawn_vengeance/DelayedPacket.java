@@ -90,7 +90,7 @@ final class DelayedPacket extends IntrusiveNode {
         var40 = HostileSpawn.field_I ? 1 : 0;
         try {
           param9.field_G = 2;
-          var17 = mm.field_m[0];
+          var17 = TextHotspotBounds.field_m[0];
           var18 = nh.a(-12149, param9, var17);
           if (var18 < 0.0) {
             var18 = var18 + 256.0;
@@ -327,7 +327,7 @@ final class DelayedPacket extends IntrusiveNode {
                         }
                         if (param9.field_i == 8) {
                           for (var24 = 0; var24 < 10; var24++) {
-                            mm.field_m[ProxySocketFactory.field_j] = new oj(param9.field_j, 3, rl.field_c);
+                            TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param9.field_j, 3, rl.field_c);
                             ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                           }
                         }
@@ -916,8 +916,8 @@ final class DelayedPacket extends IntrusiveNode {
             stackIn_5_5 = -50 + 2 * jf.field_d;
           }
           SoftwareRasterizer.fillRectangleAlpha(stackIn_4_0, stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_4_4, -(stackIn_5_5 * 5) + 250);
-          var1 = -72 + mm.field_m[0].field_j.field_e * 24 - uj.field_p.field_e;
-          var2 = -48 + 24 * mm.field_m[0].field_j.field_g - uj.field_p.field_g;
+          var1 = -72 + TextHotspotBounds.field_m[0].field_j.field_e * 24 - uj.field_p.field_e;
+          var2 = -48 + 24 * TextHotspotBounds.field_m[0].field_j.field_g - uj.field_p.field_g;
           if (MusicPatchPcmStream.field_n != null) {
             var3 = 0;
             var4 = 1;

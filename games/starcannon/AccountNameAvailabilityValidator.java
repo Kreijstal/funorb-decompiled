@@ -173,7 +173,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
     }
 
     final static boolean b(boolean param0) {
-        hd.field_p = param0 ? true : false;
+        DefaultTextWidgetRenderer.field_p = param0 ? true : false;
         wa.field_a = 15000L + dd.correctedCurrentTimeMillis(109);
         return bl.field_a == 11 ? true : false;
     }
@@ -220,10 +220,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             bb.a(param1 + 68, param0, var4);
             var4 = (of) (FrameTimer.field_c.nextForward(param1 ^ 16977));
           }
-          var2 = ab.field_H.beginForward(param1 - 3839);
+          var2 = RichTextWidget.field_H.beginForward(param1 - 3839);
           while (var2 != null) {
             sc.a(param1 ^ -32459, param0);
-            var2 = ab.field_H.nextForward(-16913);
+            var2 = RichTextWidget.field_H.nextForward(-16913);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

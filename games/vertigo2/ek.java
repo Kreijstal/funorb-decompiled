@@ -4,7 +4,7 @@
 final class ek extends TextureOperator {
     static int field_E;
     static String field_C;
-    static va field_F;
+    static DefaultTextWidgetRenderer field_F;
     private int field_A;
     private int field_z;
     private int field_D;

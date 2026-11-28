@@ -10,13 +10,13 @@ final class kf {
     final static void a(byte param0) {
         int var2 = 0;
         int var3 = 0;
-        kq.field_i = SoftwareRasterizer.field_c;
+        StopFloodEffect.field_i = SoftwareRasterizer.field_c;
         FullscreenFocusCanvas.field_b = SoftwareRasterizer.field_i;
         IncomingAnimation.f(199);
-        lia.field_j.a(0, -42 + MoveInfoPanel.field_e.field_p, 0, MoveInfoPanel.field_e.field_sb, (byte) 59);
-        dea.field_m.a(rg.field_h, 31407, kt.field_m.field_sb, 0, 0);
+        ChangeHealthAndStatusEffect.field_j.a(0, -42 + MoveInfoPanel.field_e.field_p, 0, MoveInfoPanel.field_e.field_sb, (byte) 59);
+        dea.field_m.a(rg.field_h, 31407, SetMoveSlotCooldownEffect.field_m.field_sb, 0, 0);
         int var1 = 2 + rg.field_h;
-        tv.field_o.a(kt.field_m.field_p - (IntrusiveDeque.field_c ? var1 : 0), 31407, kt.field_m.field_sb, 0, IntrusiveDeque.field_c ? var1 : 0);
+        tv.field_o.a(SetMoveSlotCooldownEffect.field_m.field_p - (IntrusiveDeque.field_c ? var1 : 0), 31407, SetMoveSlotCooldownEffect.field_m.field_sb, 0, IntrusiveDeque.field_c ? var1 : 0);
         RageEvent.e(0);
         mc.field_g.a(40, 31407, MoveInfoPanel.field_e.field_sb, 0, -40 + MoveInfoPanel.field_e.field_p);
         BoardTile.field_f.a(30, 31407, FullHealSpecial.field_r.field_sb, 0, 0);

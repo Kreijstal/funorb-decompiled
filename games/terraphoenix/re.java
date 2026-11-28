@@ -371,7 +371,7 @@ final class re {
                         } else {
                           if (var2 == 8) {
                             this.field_o = 25;
-                            this.field_r = hh.field_p;
+                            this.field_r = TextHotspotBounds.field_p;
                             this.field_l = 6;
                             this.field_g[0] = 40;
                             this.field_p = 2;

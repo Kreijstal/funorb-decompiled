@@ -219,7 +219,7 @@ abstract class ByteStorage {
                 if (var3_intLifetime1 != 0) {
                   stackIn_142_1 = mi.field_x;
                 } else {
-                  stackIn_142_1 = fo.field_g;
+                  stackIn_142_1 = TextHotspotBounds.field_g;
                 }
                 ip.a(stackIn_141_0, stackIn_142_1, 160, 20, 2, 480, var2 - 16);
                 stackIn_145_0 = var2;
@@ -229,7 +229,7 @@ abstract class ByteStorage {
                 } else {
                   stackIn_146_2 = 16777215;
                 }
-                tb.a(stackIn_145_0, stackIn_145_1, stackIn_146_2, 488, sh.field_l);
+                TextLayout.a(stackIn_145_0, stackIn_145_1, stackIn_146_2, 488, sh.field_l);
                 var4 = uh.field_o;
                 var5 = DebouncedFieldValidator.field_a;
                 scanLoop1: while (true) {
@@ -254,7 +254,7 @@ abstract class ByteStorage {
                 } else {
                   stackIn_161_2 = 12640511;
                 }
-                lb.a(stackIn_160_0, stackIn_160_1, stackIn_161_2, 632, -60);
+                DefaultTextWidgetRenderer.a(stackIn_160_0, stackIn_160_1, stackIn_161_2, 632, -60);
                 decompiledFrameRemainder0 = (var11 != 0);
               }
               if (decompiledFrameRemainder0) {
@@ -270,7 +270,7 @@ abstract class ByteStorage {
                   var3_intLifetime1Lifetime1 = stackIn_180_0;
                   stackIn_183_0 = 192;
                   if (var3_intLifetime1Lifetime1 == 0) {
-                    stackIn_184_1 = fo.field_g;
+                    stackIn_184_1 = TextHotspotBounds.field_g;
                   } else {
                     stackIn_184_1 = mi.field_x;
                   }
@@ -282,7 +282,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_188_2 = 16760896;
                   }
-                  tb.a(stackIn_187_0, stackIn_187_1, stackIn_188_2, 488, ji.field_u);
+                  TextLayout.a(stackIn_187_0, stackIn_187_1, stackIn_188_2, 488, ji.field_u);
                   stackIn_191_0 = nn.field_b;
                   stackIn_191_1 = var2;
                   if (var3_intLifetime1Lifetime1 != 0) {
@@ -290,7 +290,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_192_2 = 12640511;
                   }
-                  lb.a(stackIn_191_0, stackIn_191_1, stackIn_192_2, 632, -102);
+                  DefaultTextWidgetRenderer.a(stackIn_191_0, stackIn_191_1, stackIn_192_2, 632, -102);
                   decompiledFrameRemainder0 = (var11 != 0);
                 }
                 if (decompiledFrameRemainder0) {
@@ -307,7 +307,7 @@ abstract class ByteStorage {
                   if (var3_intLifetime1Lifetime2 != 0) {
                     stackIn_212_1 = mi.field_x;
                   } else {
-                    stackIn_212_1 = fo.field_g;
+                    stackIn_212_1 = TextHotspotBounds.field_g;
                   }
                   ip.a(stackIn_211_0, stackIn_212_1, 160, 20, 2, 480, -16 + var2);
                   stackIn_215_0 = var2;
@@ -317,7 +317,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_216_2 = 16760896;
                   }
-                  tb.a(stackIn_215_0, stackIn_215_1, stackIn_216_2, 488, ji.field_u);
+                  TextLayout.a(stackIn_215_0, stackIn_215_1, stackIn_216_2, 488, ji.field_u);
                   stackIn_219_0 = en.field_I;
                   stackIn_219_1 = var2;
                   if (var3_intLifetime1Lifetime2 == 0) {
@@ -325,7 +325,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_220_2 = 16777215;
                   }
-                  lb.a(stackIn_219_0, stackIn_219_1, stackIn_220_2, 632, param0 ^ 414);
+                  DefaultTextWidgetRenderer.a(stackIn_219_0, stackIn_219_1, stackIn_220_2, 632, param0 ^ 414);
                   var2 -= 20;
                   if (qh.field_i >= 480 &&
                     qh.field_i < 640 &&
@@ -340,7 +340,7 @@ abstract class ByteStorage {
                   if (var3_intLifetime1Lifetime3 != 0) {
                     stackIn_237_1 = mi.field_x;
                   } else {
-                    stackIn_237_1 = fo.field_g;
+                    stackIn_237_1 = TextHotspotBounds.field_g;
                   }
                   ip.a(stackIn_236_0, stackIn_237_1, 160, 20, 2, 480, var2 - 16);
                   stackIn_240_0 = var2;
@@ -350,7 +350,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_241_2 = 16760896;
                   }
-                  tb.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, 488, BoundedRandomAccessFile.field_f);
+                  TextLayout.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, 488, BoundedRandomAccessFile.field_f);
                   stackIn_244_0 = jd.field_J;
                   stackIn_244_1 = var2;
                   if (var3_intLifetime1Lifetime3 == 0) {
@@ -358,7 +358,7 @@ abstract class ByteStorage {
                   } else {
                     stackIn_245_2 = 16777215;
                   }
-                  lb.a(stackIn_244_0, stackIn_244_1, stackIn_245_2, 632, 9);
+                  DefaultTextWidgetRenderer.a(stackIn_244_0, stackIn_244_1, stackIn_245_2, 632, 9);
                 }
               }
             }
@@ -1881,7 +1881,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_displayname", 5236);
                 if (var2 != null) {
-                  tb.field_c = fa.a((byte) -124, var2);
+                  TextLayout.field_c = fa.a((byte) -124, var2);
                 }
                 var2 = ah.a("create_password", 5236);
                 if (var2 != null) {
@@ -2125,7 +2125,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("create_alert_invalidage", 5236);
                 if (var2 != null) {
-                  bh.field_d = fa.a((byte) -75, var2);
+                  TextLineMetrics.field_d = fa.a((byte) -75, var2);
                 }
                 var2 = ah.a("create_alert_yearrange", 5236);
                 if (var2 != null) {
@@ -2711,7 +2711,7 @@ abstract class ByteStorage {
                 }
                 var2 = ah.a("unreachedlevel_logintip", 5236);
                 if (var2 != null) {
-                  bh.field_a = fa.a((byte) -63, var2);
+                  TextLineMetrics.field_a = fa.a((byte) -63, var2);
                 }
                 var2 = ah.a("memberslevel_logintip", 5236);
                 if (var2 != null) {

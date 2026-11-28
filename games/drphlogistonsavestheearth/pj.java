@@ -141,7 +141,7 @@ class pj extends vg implements ba {
     void a(int param0, int param1, byte param2, int param3) {
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (param2 != -21) {
-          this.e(6);
+          this.getTooltipText(6);
         }
         if (param1 == 0 &&
           this.field_l != null) {
@@ -155,7 +155,7 @@ class pj extends vg implements ba {
         }
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         rh var2;
         vg var3;
         String var4;
@@ -167,7 +167,7 @@ class pj extends vg implements ba {
         var2 = new rh(this.field_I);
         var3 = (vg) (var2.c(-1));
         while (var3 != null) {
-          var4 = var3.e(-80);
+          var4 = var3.getTooltipText(-80);
           if (var4 != null) {
             return var4;
           }

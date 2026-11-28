@@ -77,7 +77,7 @@ final class PlayerRoster {
             var4 = f.correctedCurrentTimeMillis((byte) 73) - LoginPanel.field_P;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
-              tfa.a(5, 1, true);
+              StartFloodEffect.a(5, 1, true);
               var3 = 2;
             }
           }

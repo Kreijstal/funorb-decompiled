@@ -19,11 +19,11 @@ final class vj {
     }
 
     final void a(boolean param0) {
-        j.field_f = j.field_f ^ this.field_b;
-        vh.field_o = vh.field_o ^ j.field_f;
-        wi.field_b = wi.field_b + j.field_f;
-        pg.field_d = pg.field_d ^ j.field_f;
-        j.field_f = this.field_b;
+        RichTextLayout.field_f = RichTextLayout.field_f ^ this.field_b;
+        vh.field_o = vh.field_o ^ RichTextLayout.field_f;
+        wi.field_b = wi.field_b + RichTextLayout.field_f;
+        pg.field_d = pg.field_d ^ RichTextLayout.field_f;
+        RichTextLayout.field_f = this.field_b;
         if (!param0) {
           mc.field_a = wi.field_b & 65535;
           mc.field_b = -65536 & wi.field_b;
@@ -36,15 +36,15 @@ final class vj {
 
     final void a(int param0, int param1) {
         if (param0 <= -111) {
-          j.field_f = j.field_f ^ this.field_b;
-          j.field_f = j.field_f + param1;
-          j.field_f = j.field_f ^ this.field_b;
+          RichTextLayout.field_f = RichTextLayout.field_f ^ this.field_b;
+          RichTextLayout.field_f = RichTextLayout.field_f + param1;
+          RichTextLayout.field_f = RichTextLayout.field_f ^ this.field_b;
           return;
         }
         this.a(-120, 73);
-        j.field_f = j.field_f ^ this.field_b;
-        j.field_f = j.field_f + param1;
-        j.field_f = j.field_f ^ this.field_b;
+        RichTextLayout.field_f = RichTextLayout.field_f ^ this.field_b;
+        RichTextLayout.field_f = RichTextLayout.field_f + param1;
+        RichTextLayout.field_f = RichTextLayout.field_f ^ this.field_b;
     }
 
     public static void clearStaticReferences(boolean param0) {

@@ -96,13 +96,13 @@ final class IsaacRandom {
         if (param0 != 20529) {
           field_j = (int[]) null;
         }
-        int var1 = gf.field_o[0] * qa.field_J[0];
+        int var1 = gf.field_o[0] * RichTextWidget.field_J[0];
         byte[] var2 = a.field_e[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = MouseInput.field_a[rk.a((int) var2[var4_int], 255)];
         }
-        RgbSprite var4 = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], qa.field_J[0], var3);
+        RgbSprite var4 = new RgbSprite(oe.field_b, ih.field_K, kh.field_i[0], vi.field_b[0], gf.field_o[0], RichTextWidget.field_J[0], var3);
         Bzip2State.a((byte) -21);
         return var4;
     }

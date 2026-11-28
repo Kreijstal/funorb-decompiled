@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wc extends lb {
+class wc extends DefaultTextWidgetRenderer {
     static PcmSample field_q;
 
     wc(int param0) {

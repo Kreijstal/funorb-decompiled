@@ -80,7 +80,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 103, "login_gameupdated");
                 if (var2 != null) {
-                  ui.field_k = c.a(0, var2);
+                  TextHotspotBounds.field_k = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 119, "create_unable");
                 if (null != var2) {
@@ -1614,7 +1614,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 125, "create_alert_passrepeated");
                 if (var2 != null) {
-                  mb.field_k = c.a(0, var2);
+                  RichTextLayout.field_k = c.a(0, var2);
                 }
                 var2 = AgeValidator.a((byte) 87, "create_alert_passlength");
                 if (null != var2) {
@@ -1818,7 +1818,7 @@ final class cg {
                 }
                 var2 = AgeValidator.a((byte) 117, "loading_fonts");
                 if (var2 != null) {
-                  vc.field_B = c.a(param0 + 99, var2);
+                  RichTextWidget.field_B = c.a(param0 + 99, var2);
                 }
                 var2 = AgeValidator.a((byte) 91, "loading_soundeffects");
                 if (var2 != null) {

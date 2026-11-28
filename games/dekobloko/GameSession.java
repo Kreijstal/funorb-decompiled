@@ -1025,7 +1025,7 @@ final class GameSession {
               }
             }
           }
-          integerLocal80 = MixedSupport001.renderingSupport009State0001.stringWidth(GameDomainSupport003.stringState0236);
+          integerLocal80 = DefaultTextWidgetRenderer.renderingSupport009State0001.stringWidth(GameDomainSupport003.stringState0236);
           MixedSupport123.integerState0788 = integerLocal80 + 32;
         }
         if (this.booleanState0140) {
@@ -1248,14 +1248,14 @@ final class GameSession {
           integerLocal4 < 50) {
           if (integerLocal4 >= 20) {
             if (integerLocal4 < 30) {
-              UiComponentPart025.rgbSpriteState0045.drawAdditive(integerLocal1, integerLocal2, 256);
+              RichTextWidget.rgbSpriteState0045.drawAdditive(integerLocal1, integerLocal2, 256);
             } else {
               integerLocal5 = 256 * (-integerLocal4 + 50) / 20;
-              UiComponentPart025.rgbSpriteState0045.drawAdditive(integerLocal1, integerLocal2, integerLocal5);
+              RichTextWidget.rgbSpriteState0045.drawAdditive(integerLocal1, integerLocal2, integerLocal5);
             }
           } else {
             integerLocal5 = integerLocal4 * 256 / 20;
-            UiComponentPart025.rgbSpriteState0045.drawAdditive(integerLocal1, integerLocal2, integerLocal5);
+            RichTextWidget.rgbSpriteState0045.drawAdditive(integerLocal1, integerLocal2, integerLocal5);
           }
         }
         integerLocal7 = -140 + MixedSupport046.integerState0250;
@@ -1283,7 +1283,7 @@ final class GameSession {
         SoftwareRaster.fillRectangleAlpha(0, 0, 640, 480, 65793, this.integerState0630 << 1);
         int integerLocal1 = -(240 * this.integerState0630 * this.integerState0630 / 3600) + 240;
         SoftwareRaster.fillRectangleAlpha(175, 180 + integerLocal1, 290, 180, 0, 180);
-        GameplayControls.performAction1749(200, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 310, 170 + integerLocal1, 165);
+        GameplayControls.performAction1749(200, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 310, 170 + integerLocal1, 165);
         int integerLocal2 = this.integerState0640;
         int integerLocal3 = this.mixedSupport028State0001.bucketBoardArrayState0001[0].integerState0466 / integerLocal2;
         int integerLocal4 = this.mixedSupport028State0001.bucketBoardArrayState0001[0].integerState0464 / integerLocal2;
@@ -1307,7 +1307,7 @@ final class GameSession {
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, integerLocal1 + 280, Integer.toString(integerLocal7), 16777215, 455);
         MixedSupport042.performAction0537(integerLocal1 + 300, integerArgument1 ^ 280, 16694016, MixedSupport094.stringState0397, 185, SceneWidget.renderingSupport009State0007);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, 300 + integerLocal1, Integer.toString(integerLocal8), 16777215, 455);
-        MixedSupport042.performAction0537(320 + integerLocal1, 256, 16694016, UiComponentPart025.stringState0449, 185, SceneWidget.renderingSupport009State0007);
+        MixedSupport042.performAction0537(320 + integerLocal1, 256, 16694016, RichTextWidget.stringState0449, 185, SceneWidget.renderingSupport009State0007);
         MixedSupport072.performAction0918(SceneWidget.renderingSupport009State0007, (byte) -39, integerLocal1 + 320, Integer.toString(integerLocal9), 16777215, 455);
         SoftwareRaster.fillRectangle(183, 327 + integerLocal1, 274, 7, 0);
         SoftwareRaster.fillRectangle(185, integerLocal1 + 329, 270, 3, 16777215);
@@ -1488,7 +1488,7 @@ final class GameSession {
                 cachedStringLocal7 = this.mixedSupport028State0001.stringArrayState0009[integerArgument3].toUpperCase();
                 stringLocal34 = cachedStringLocal7;
                 stringLocal22 = cachedStringLocal7;
-                this.nodeDequeState0024.addFirst(new RenderingSupport006(NodeHashTableIterator.substituteIndexedPlaceholders(122, MixedSupport001.stringState0001, new String[]{stringLocal34}), 14, true), 2777);
+                this.nodeDequeState0024.addFirst(new RenderingSupport006(NodeHashTableIterator.substituteIndexedPlaceholders(122, DefaultTextWidgetRenderer.stringState0001, new String[]{stringLocal34}), 14, true), 2777);
               }
             }
           }
@@ -2300,7 +2300,7 @@ final class GameSession {
         integerLocal3 = integerLocal2 + 7;
         SoftwareRaster.fillRectangleVerticalGradient(-5 + integerLocal2, -5 + integerLocal1, 150, 142, 14676, 87166);
         SoftwareRaster.fillRectangleVerticalGradient(integerLocal2, integerLocal1, 140, 127, 14676, 4427445);
-        GameplayControls.performAction1749(158, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, -16 + integerLocal1, -15 + integerLocal2);
+        GameplayControls.performAction1749(158, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, -16 + integerLocal1, -15 + integerLocal2);
         integerLocal4 = integerLocal1;
         MixedSupport029.performAction0407(16777215, 70 + integerLocal2, GameAssets.stringState0503, integerLocal4 + 16, (byte) 75, UiComponentPart029.renderingSupport009State0005);
         this.performAction1301(12769767, integerLocal3 - 2, 22, integerLocal4 + 20, 0, 130, 9918);
@@ -3539,8 +3539,8 @@ final class GameSession {
                 integerLocal115 = stackIntegerLocal15;
                 SoftwareRaster.fillRectangleVerticalGradient(447, 61, 150, integerLocal115 + 15 + 27, 14676, 87166);
                 SoftwareRaster.fillRectangleVerticalGradient(452, 66, 140, integerLocal115, 14676, 4427445);
-                GameplayControls.performAction1749(16 + integerLocal115 + 15, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, 50, 437);
-                GameplayControls.performAction1749(45, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, 66 + integerLocal115 + 15 - 13, 437);
+                GameplayControls.performAction1749(16 + integerLocal115 + 15, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, 50, 437);
+                GameplayControls.performAction1749(45, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, 66 + integerLocal115 + 15 - 13, 437);
                 integerLocal116 = 66;
                 if (!this.booleanState0147) {
                   MixedSupport042.performAction0537(integerLocal116 + 16, 256, 16777215, MixedSupport103.stringState0437, 457, UiComponentPart029.renderingSupport009State0005);
@@ -3685,7 +3685,7 @@ final class GameSession {
                   } else {
                     stringLocal45 = InputAdapter003.stringArrayState0043[this.integerState0646];
                   }
-                  integerLocal47 = MixedSupport001.renderingSupport009State0001.lineCount(stringLocal42, 164);
+                  integerLocal47 = DefaultTextWidgetRenderer.renderingSupport009State0001.lineCount(stringLocal42, 164);
                   integerLocal124 = UiComponentPart029.renderingSupport009State0005.lineCount(stringLocal45, 164);
                   integerLocal51 = SceneWidget.renderingSupport009State0007.lineCount(MixedSupport006.stringState0029, 164);
                   integerLocal53 = 0;
@@ -3709,9 +3709,9 @@ final class GameSession {
                   integerLocal55 = 12 + integerLocal47 * 16 + 12 + integerLocal124 * 16 + 8 + integerLocal125 + 8 + integerLocal51 * 16 + 14;
                   integerLocal176 = (480 - integerLocal55) / 2 + integerLocal179;
                   SoftwareRaster.fillRectangleAlpha(224, integerLocal176 + 4, 192, integerLocal55 - 8, 0, 160);
-                  GameplayControls.performAction1749(integerLocal55, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 200, integerLocal176, 220);
+                  GameplayControls.performAction1749(integerLocal55, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 200, integerLocal176, 220);
                   integerLocal176 += 12;
-                  MixedSupport045.computeInteger0552(164, 0, integerLocal176, stringLocal42, 16, 180, 16777215, MixedSupport001.renderingSupport009State0001, (byte) -128, 1, 239);
+                  MixedSupport045.computeInteger0552(164, 0, integerLocal176, stringLocal42, 16, 180, 16777215, DefaultTextWidgetRenderer.renderingSupport009State0001, (byte) -128, 1, 239);
                   integerLocal176 = integerLocal176 + (integerLocal47 * 16 + 12);
                   MixedSupport045.computeInteger0552(164, 0, integerLocal176, stringLocal45, 16, 180, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -128, 1, 238);
                   integerLocal176 = integerLocal176 + (integerLocal124 * 16 + 8);
@@ -3778,7 +3778,7 @@ final class GameSession {
                       integerLocal122 = UiComponentPart029.renderingSupport009State0005.lineCount(ThemeTips.themeTips[this.integerState0603], 140);
                       integerLocal123 = 32 + integerLocal122 * 16 + 13;
                       SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, integerLocal123 - 8, 0, 150);
-                      GameplayControls.performAction1749(integerLocal123, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
+                      GameplayControls.performAction1749(integerLocal123, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                       MixedSupport042.performAction0537(integerLocal177 + 26, 256, 16777215, NodeHashTableIterator.substituteIndexedPlaceholders(102, DekoBlokoClient.stringState0095, new String[]{Integer.toString(this.integerState0603 + 1)}), 452, SceneWidget.renderingSupport009State0007);
                       MixedSupport045.computeInteger0552(140, 0, integerLocal177 + 32, ThemeTips.themeTips[this.integerState0603], 16, 120, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -126, 0, 452);
                     }
@@ -3786,17 +3786,17 @@ final class GameSession {
                   }
                   if (this.integerState0629 == -1) {
                     SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
-                    GameplayControls.performAction1749(148, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
+                    GameplayControls.performAction1749(148, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                     MixedSupport036.performAction0505(integerLocal177 + 10, (byte) 5, false, 452);
                   } else {
                     if (this.integerState0629 == -2) {
                       SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
-                      GameplayControls.performAction1749(148, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
+                      GameplayControls.performAction1749(148, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                       MixedSupport042.performAction0537(integerLocal177 + 26, 256, 16777215, NetworkSupport006.stringState0339, 452, SceneWidget.renderingSupport009State0007);
                       MixedSupport045.computeInteger0552(140, 0, integerLocal177 + 32, RenderingSupport012.stringState0443, 16, 120, 16777215, UiComponentPart029.renderingSupport009State0005, (byte) -126, 0, 452);
                     } else {
                       SoftwareRaster.fillRectangleAlpha(441, integerLocal177 + 4, 163, 140, 0, 150);
-                      GameplayControls.performAction1749(148, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 171, integerLocal177, 437);
+                      GameplayControls.performAction1749(148, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 171, integerLocal177, 437);
                       if (this.integerState0629 != 6) {
                         rgbSpriteLocal43 = MixedSupport121.computeRgbSprite1601(true, this.integerState0629);
                       } else {
@@ -3856,7 +3856,7 @@ final class GameSession {
               this.performAction1297(integerLocal167, (byte) 123, integerLocal166 != 0, integerLocal168, RichTextLayout.sceneWidgetState0021.integerState0903 - 28 + integerLocal169);
               stackIntegerLocal23 = (integerLocal166 == 0) ? 16694016 : 16777215;
               integerLocal170 = stackIntegerLocal23;
-              MixedSupport042.performAction0537(RichTextLayout.sceneWidgetState0021.integerState0903 - 6 + integerLocal169, 256, integerLocal170, GameDomainSupport003.stringState0236, integerLocal168 + 16 + 1, MixedSupport001.renderingSupport009State0001);
+              MixedSupport042.performAction0537(RichTextLayout.sceneWidgetState0021.integerState0903 - 6 + integerLocal169, 256, integerLocal170, GameDomainSupport003.stringState0236, integerLocal168 + 16 + 1, DefaultTextWidgetRenderer.renderingSupport009State0001);
               if (this.mixedSupport028State0001.integerState0170 != 0 &&
                 !this.mixedSupport028State0001.booleanState0031) {
                 integerLocal36 = 0;
@@ -4984,12 +4984,12 @@ final class GameSession {
             integerLocal84 = -84 * (integerLocal81 * integerLocal81) / 335 + 150080;
             integerLocal84 = integerLocal30 + integerLocal84 * (-integerLocal30 + integerLocal31) / 235170;
             if (integerLocal81 <= 322) {
-              MixedSupport045.computeInteger0552(88, 1, -500 + integerLocal84, stringLocal50, 16, 1000, 16777215, MixedSupport001.renderingSupport009State0001, (byte) -128, 1, integerLocal83 - 44);
+              MixedSupport045.computeInteger0552(88, 1, -500 + integerLocal84, stringLocal50, 16, 1000, 16777215, DefaultTextWidgetRenderer.renderingSupport009State0001, (byte) -128, 1, integerLocal83 - 44);
               return;
             }
             rgbSpriteLocal75 = MixedSupport089.rgbSpriteArrayState0019[-1 + (-322 + integerLocal81) >> 1];
-            integerLocal87 = MixedSupport001.renderingSupport009State0001.maxLineWidth(stringLocal50, 88);
-            integerLocal89 = MixedSupport001.renderingSupport009State0001.textHeight(stringLocal50, 88, 16);
+            integerLocal87 = DefaultTextWidgetRenderer.renderingSupport009State0001.maxLineWidth(stringLocal50, 88);
+            integerLocal89 = DefaultTextWidgetRenderer.renderingSupport009State0001.textHeight(stringLocal50, 88, 16);
             integerLocal91 = integerLocal87 / 18;
             integerLocal92 = integerLocal89 / 18;
             for (integerLocal93 = 0; integerLocal93 < integerLocal92; integerLocal93++) {
@@ -5044,7 +5044,7 @@ final class GameSession {
             integerLocal1 = integerLocal1 + (555 - integerLocal1) * integerLocal3 / integerLocal4;
           }
           integerLocal5 = !mixedSupport112Argument1.booleanState0167 ? 12 : 18;
-          renderingSupport009Local6 = mixedSupport112Argument1.booleanState0167 ? GameApplet.renderingSupport009State0002 : MixedSupport001.renderingSupport009State0001;
+          renderingSupport009Local6 = mixedSupport112Argument1.booleanState0167 ? GameApplet.renderingSupport009State0002 : DefaultTextWidgetRenderer.renderingSupport009State0001;
           integerLocal7 = mixedSupport112Argument1.booleanState0167 ? 7 : 5;
           integerLocal1 = integerLocal1 - renderingSupport009Local6.stringWidth(mixedSupport112Argument1.stringState0488) / 2;
           if (null != mixedSupport112Argument1.rgbSpriteState0053) {
@@ -5083,7 +5083,7 @@ final class GameSession {
         SoftwareRaster.fillRectangleAlpha(0, 0, 640, 480, 65793, integerArgument1);
         integerLocal2 = RichTextLayout.sceneWidgetState0021.integerState0903 / 2 - 100;
         SoftwareRaster.fillRectangleAlpha(integerArgument3 + 145, integerLocal2, 350, 177, 0, 160);
-        GameplayControls.performAction1749(197, (byte) 50, MixedSupport001.rgbSpriteArrayState0001, 370, integerLocal2 - 10, integerArgument3 + 135);
+        GameplayControls.performAction1749(197, (byte) 50, DefaultTextWidgetRenderer.rgbSpriteArrayState0001, 370, integerLocal2 - 10, integerArgument3 + 135);
         MixedSupport042.performAction0537(integerLocal2 + 17, 256, 16694016, MixedSupport126.stringState0550, 152 + integerArgument3, SceneWidget.renderingSupport009State0007);
         SoftwareRaster.drawVerticalLine(integerArgument3 + 300, 4 + integerLocal2, 170, 263172);
         SoftwareRaster.drawVerticalLine(integerArgument3 + 301, integerLocal2 + 4, 170, 6316128);

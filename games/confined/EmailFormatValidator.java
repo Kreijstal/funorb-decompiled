@@ -69,7 +69,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class EmailFormatValidator extends TextFieldValidator {
             return stackIn_5_0;
           }
           if (var3_int != 0) {
-            return nn.field_q;
+            return TextHotspotBounds.field_q;
           }
           stackIn_9_0 = fb.field_e;
           return stackIn_9_0;
@@ -105,7 +105,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

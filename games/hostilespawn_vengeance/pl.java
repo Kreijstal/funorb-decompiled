@@ -84,10 +84,10 @@ final class pl {
               }
               param1.a(false, 0, 21963, 1, rl.field_c, param1.field_j);
               param1.field_l.a(0.9, 0.9, 1);
-              mm.field_m[ProxySocketFactory.field_j] = new oj(param1.field_j, 232, rl.field_c);
-              mm.field_m[ProxySocketFactory.field_j].field_e = 250;
-              mm.field_m[ProxySocketFactory.field_j].field_b = false;
-              mm.field_m[ProxySocketFactory.field_j].field_w = 0;
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param1.field_j, 232, rl.field_c);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_e = 250;
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_b = false;
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_w = 0;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
               return;
             }
@@ -120,10 +120,10 @@ final class pl {
             param1.field_i == 24) {
             param1.a(false, 0, 21963, 1, rl.field_c, param1.field_j);
             param1.field_l.a(0.9, 0.9, 1);
-            mm.field_m[ProxySocketFactory.field_j] = new oj(param1.field_j, 232, rl.field_c);
-            mm.field_m[ProxySocketFactory.field_j].field_e = 250;
-            mm.field_m[ProxySocketFactory.field_j].field_b = false;
-            mm.field_m[ProxySocketFactory.field_j].field_w = 0;
+            TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param1.field_j, 232, rl.field_c);
+            TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_e = 250;
+            TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_b = false;
+            TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_w = 0;
             ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             return;
           }

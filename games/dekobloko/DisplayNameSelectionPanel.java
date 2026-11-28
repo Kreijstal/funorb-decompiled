@@ -384,7 +384,7 @@ final class DisplayNameSelectionPanel extends ComponentContainer implements Name
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (CallbackContract004) null);
         this.uiComponentPart021State0001 = new ValidatedTextField("", (CallbackContract006) null, 12);
-        MixedSupport001 mixedSupport001Local1 = new MixedSupport001(MixedSupport011.bitmapFontState0006, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
+        DefaultTextWidgetRenderer mixedSupport001Local1 = new DefaultTextWidgetRenderer(MixedSupport011.bitmapFontState0006, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
         UiComponent uiComponentLocal2 = new UiComponent(stringState0102, mixedSupport001Local1, (CallbackContract006) null);
         this.interactiveComponentState0002 = new InteractiveComponent(MixedSupport050.stringState0208, (CallbackContract006) null);
         this.interactiveComponentState0001 = new InteractiveComponent(MixedSupport036.stringState0167, (CallbackContract006) null);

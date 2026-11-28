@@ -23,7 +23,7 @@ abstract class rb extends GameApplet {
         int discarded$3 = 0;
         int var3 = stellarshard.field_B;
         if (vj.a(25424)) {
-          discarded$1 = this.a(pd.field_f != null ? true : false, false, true);
+          discarded$1 = this.a(RichTextLayout.field_f != null ? true : false, false, true);
         } else {
           if (DiskCacheWorker.field_f >= 10) {
             if (!gh.b((byte) 82)) {
@@ -117,7 +117,7 @@ abstract class rb extends GameApplet {
             }
             var11 = wj.g(-117);
             if (var11 != null) {
-              vk.a((byte) -122, var11.booleanValue());
+              TextLayout.a((byte) -122, var11.booleanValue());
             }
           }
           if (var4 == 2) {
@@ -152,7 +152,7 @@ abstract class rb extends GameApplet {
             }
           }
           if (4 == var4) {
-            if (uj.field_f) {
+            if (TextLineMetrics.field_f) {
               ResourceArchive.clearSessionAndReloadPage(hf.a((byte) -126), (byte) 123);
             } else {
               eg.field_d = 10;
@@ -325,13 +325,13 @@ abstract class rb extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = stellarshard.field_B;
-        if (null != ja.field_m) {
-          if (null == pd.field_f) {
+        if (null != TextHotspotBounds.field_m) {
+          if (null == RichTextLayout.field_f) {
             var6 = v.a(true);
             var4 = var6.getSize();
-            ja.field_m.a((byte) 81, var4.width, var4.height);
+            TextHotspotBounds.field_m.a((byte) 81, var4.width, var4.height);
           }
-          ja.field_m.b(0);
+          TextHotspotBounds.field_m.b(0);
         }
         FrameTimer.a(36);
         ii.g(256);
@@ -458,7 +458,7 @@ abstract class rb extends GameApplet {
               if (pg.field_db.tryLoadGroupByName("", (byte) -109)) {
                 WidgetContainer.a(pg.field_db, 1);
                 pg.field_db = null;
-                rg.g(-33);
+                RichTextWidget.g(-33);
               }
             }
           }
@@ -473,7 +473,7 @@ abstract class rb extends GameApplet {
           gk.a(false);
           am.field_i = fl.field_c;
           PcmResampler.field_d = false;
-          hc.a(am.field_g, TextFieldValidator.field_i, wf.field_e, uj.field_f, (byte) -88);
+          hc.a(am.field_g, TextFieldValidator.field_i, wf.field_e, TextLineMetrics.field_f, (byte) -88);
           if (v.field_b ||
             null != IterableNodeHashTable.field_g) {
             stackIn_100_0 = !(v.field_b);
@@ -494,7 +494,7 @@ abstract class rb extends GameApplet {
           wf.field_e = null;
           am.field_g = null;
           aa.a((java.applet.Applet) (this), -106);
-          rg.g(-33);
+          RichTextWidget.g(-33);
           DiskCacheWorker.field_f = 10;
         }
         if (DiskCacheWorker.field_f == 10) {
@@ -507,7 +507,7 @@ abstract class rb extends GameApplet {
         if (DiskCacheWorker.field_f == 11) {
           if (ld.field_G != null && (!ld.field_G.ensureIndexLoaded((byte) -36) ||
             !ld.field_G.tryLoadAllGroups((byte) -111))) {
-            rd.a((byte) -76, 0.0f, Quaternion.a(kf.field_d, ld.field_G, rg.field_I, 1));
+            rd.a((byte) -76, 0.0f, Quaternion.a(kf.field_d, ld.field_G, RichTextWidget.field_I, 1));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -684,7 +684,7 @@ abstract class rb extends GameApplet {
         nj var3;
         int var4;
         var4 = stellarshard.field_B;
-        var2 = ja.field_t;
+        var2 = TextHotspotBounds.field_t;
         if (var2 < 64 &&
           wc.field_x[var2]) {
           if (param0 != 6476) {
@@ -790,7 +790,7 @@ abstract class rb extends GameApplet {
             fa.a(2, param0 ^ 16064);
           }
           if (wc.field_x[2]) {
-            vk.a((byte) -128, 3);
+            TextLayout.a((byte) -128, 3);
           }
           if (wc.field_x[3]) {
             se.a(4, -91);

@@ -40,7 +40,7 @@ abstract class ab extends GameApplet {
         boolean stackIn_4_1 = false;
         var3 = SolKnight.field_L ? 1 : 0;
         if (!LoginPanel.h(42)) {
-          if (kj.field_R >= 10) {
+          if (RichTextWidget.field_R >= 10) {
             if (!PasswordValidator.h(250)) {
               Asteroid.c(-27347);
             } else {
@@ -232,7 +232,7 @@ abstract class ab extends GameApplet {
                 td.a(-126);
                 break;
               case 8:
-                af.a(wh.field_c, te.field_N, (byte) -110, te.field_O);
+                DefaultTextWidgetRenderer.a(wh.field_c, te.field_N, (byte) -110, te.field_O);
                 break;
               case 16:
                 WidgetContainer.a(-106);
@@ -242,7 +242,7 @@ abstract class ab extends GameApplet {
                   12 != var2) {
                   switch (var2) {
                     case 13:
-                      li.d(117);
+                      TextHotspotBounds.d(117);
                       break regionExit1;
                     case 17:
                       this.l(-73);
@@ -271,7 +271,7 @@ abstract class ab extends GameApplet {
                 pg.c((byte) -117);
                 break;
               case 1:
-                le.b(873698625);
+                TextLineMetrics.b(873698625);
                 break;
             }
           }
@@ -438,7 +438,7 @@ abstract class ab extends GameApplet {
             di.a(ia.g(-84), 63);
           }
           if (var4 == 12) {
-            kj.a(ia.g(-20), 117, te.d((byte) 18));
+            RichTextWidget.a(ia.g(-20), 117, te.d((byte) 18));
           }
           if (var4 == 13) {
             try {
@@ -651,7 +651,7 @@ abstract class ab extends GameApplet {
             dd.a((byte) 27, MatchingFieldValidator.field_k, 2);
             pk.d(true);
             ee.field_i = true;
-            kj.field_I = 15000L + je.correctedCurrentTimeMillis(1);
+            RichTextWidget.field_I = 15000L + je.correctedCurrentTimeMillis(1);
           }
         }
         if (bf.field_e == -1 ||
@@ -667,12 +667,12 @@ abstract class ab extends GameApplet {
           }
           if (bf.field_e != -1 &&
             bf.field_e != 0) {
-            kj.field_I = 15000L + je.correctedCurrentTimeMillis(1);
+            RichTextWidget.field_I = 15000L + je.correctedCurrentTimeMillis(1);
           }
         }
         if (bf.field_e != -1 &&
           bf.field_e != 0) {
-          if (kj.field_R < 10) {
+          if (RichTextWidget.field_R < 10) {
             if (bf.field_e == 3) {
               this.a("js5crc", -1);
             } else {
@@ -717,7 +717,7 @@ abstract class ab extends GameApplet {
         if ((bf.field_e != -1 &&
           0 != bf.field_e ||
           qc.a(34)) &&
-          kj.field_I <= je.correctedCurrentTimeMillis(1)) {
+          RichTextWidget.field_I <= je.correctedCurrentTimeMillis(1)) {
           ee.field_i = false;
           if (bf.field_e != -1 &&
             bf.field_e != 0) {
@@ -729,39 +729,39 @@ abstract class ab extends GameApplet {
           !qc.a(34)) {
           ib.field_o = false;
         }
-        if (kj.field_R == 0 &&
+        if (RichTextWidget.field_R == 0 &&
           tk.c(false)) {
-          kj.field_R = 1;
+          RichTextWidget.field_R = 1;
         }
-        if (kj.field_R == 1) {
+        if (RichTextWidget.field_R == 1) {
           if (vd.field_b != 0) {
-            af.field_c = IsaacRandom.a(og.field_c, 82);
+            DefaultTextWidgetRenderer.field_c = IsaacRandom.a(og.field_c, 82);
           }
           MusicPatchPcmStream.field_o = InteractiveWidget.a(vd.field_c, (byte) -30, 1, false, true);
           DelegatingCanvas.field_c = InteractiveWidget.a(AccountRequestState.field_g, (byte) -126, 1, false, true);
           AccountCreationResultPanel.field_ub = InteractiveWidget.a(aj.field_u, (byte) 52, 1, false, true);
           pl.field_d = MusicPatchPcmStream.field_o;
           ai.field_b = DelegatingCanvas.field_c;
-          kj.field_R = 2;
+          RichTextWidget.field_R = 2;
         }
-        if (kj.field_R == 2) {
-          if (af.field_c != null &&
-            af.field_c.ensureIndexLoaded((byte) -121)) {
-            if (!af.field_c.hasGroupName(param0 - 95, "")) {
-              af.field_c = null;
+        if (RichTextWidget.field_R == 2) {
+          if (DefaultTextWidgetRenderer.field_c != null &&
+            DefaultTextWidgetRenderer.field_c.ensureIndexLoaded((byte) -121)) {
+            if (!DefaultTextWidgetRenderer.field_c.hasGroupName(param0 - 95, "")) {
+              DefaultTextWidgetRenderer.field_c = null;
             } else {
-              if (af.field_c.tryLoadGroupByName(2, "")) {
-                lj.a(26708, af.field_c);
-                af.field_c = null;
+              if (DefaultTextWidgetRenderer.field_c.tryLoadGroupByName(2, "")) {
+                lj.a(26708, DefaultTextWidgetRenderer.field_c);
+                DefaultTextWidgetRenderer.field_c = null;
                 mh.a(8192);
               }
             }
           }
-          if (null == af.field_c) {
-            kj.field_R = 3;
+          if (null == DefaultTextWidgetRenderer.field_c) {
+            RichTextWidget.field_R = 3;
           }
         }
-        if (3 == kj.field_R &&
+        if (3 == RichTextWidget.field_R &&
           InteractiveWidget.a(DelegatingCanvas.field_c, -16925, MusicPatchPcmStream.field_o, AccountCreationResultPanel.field_ub) &&
           td.a(-3, AccountCreationResultPanel.field_ub)) {
           ProxyAuthenticationRequiredException.b(32);
@@ -789,19 +789,19 @@ abstract class ab extends GameApplet {
           MusicPatchPcmStream.field_o = null;
           de.a((java.applet.Applet) (this), param0 + 3);
           mh.a(8192);
-          kj.field_R = 10;
+          RichTextWidget.field_R = 10;
         }
         if (param0 != -3) {
           this.field_z = 90;
         }
-        if (10 == kj.field_R) {
+        if (10 == RichTextWidget.field_R) {
           if (vd.field_b != 0) {
             wc.field_b = IsaacRandom.a(bl.field_k, 117);
           }
-          kj.field_R = 11;
+          RichTextWidget.field_R = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (kj.field_R == 11) {
+        if (RichTextWidget.field_R == 11) {
           if (null != wc.field_b && (!wc.field_b.ensureIndexLoaded((byte) -121) ||
             !wc.field_b.tryLoadAllGroups(true))) {
             TextFieldValidator.a((byte) 102, ClientException.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
@@ -809,14 +809,14 @@ abstract class ab extends GameApplet {
           }
           else {
             RasterBuffer.field_c = true;
-            kj.field_R = 12;
+            RichTextWidget.field_R = 12;
           }
         }
-        if (12 == kj.field_R &&
+        if (12 == RichTextWidget.field_R &&
           !RasterBuffer.field_c) {
-          kj.field_R = 13;
+          RichTextWidget.field_R = 13;
         }
-        if (kj.field_R == 13) {
+        if (RichTextWidget.field_R == 13) {
           var3Lifetime2 = 1;
           if (null != ng.field_a) {
             stackIn_138_0 = (!ng.field_a.a((byte) 125)) ? 0 : 1;
@@ -824,7 +824,7 @@ abstract class ab extends GameApplet {
             TextFieldValidator.a((byte) 102, ng.field_a.field_a, ng.field_a.field_c);
           }
           if (var3Lifetime2 != 0) {
-            kj.field_R = 20;
+            RichTextWidget.field_R = 20;
           }
         }
         if (!param1 &&
@@ -947,7 +947,7 @@ abstract class ab extends GameApplet {
           sf.b(false);
           dd.a((byte) 8, DiskArchiveRequest.field_v, var2);
           ee.field_i = true;
-          kj.field_I = je.correctedCurrentTimeMillis(param0 ^ -2) + 15000L;
+          RichTextWidget.field_I = je.correctedCurrentTimeMillis(param0 ^ -2) + 15000L;
           return var2;
         }
         if (11 == fj.field_i &&

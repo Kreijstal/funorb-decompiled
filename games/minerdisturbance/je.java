@@ -1711,12 +1711,12 @@ final class je {
             var11 = var9 * 8 - ClientException.field_d;
             if (ch.field_h != 5) {
               if (var5 == 0) {
-                var12_ref_ea = eg.field_m[-tb.field_c];
+                var12_ref_ea = DefaultTextWidgetRenderer.field_m[-tb.field_c];
               } else {
                 var12_ref_ea = pk.field_h[tb.field_c];
               }
             } else {
-              var12_ref_ea = lb.field_x[tb.field_c];
+              var12_ref_ea = TextHotspotBounds.field_x[tb.field_c];
             }
             for (var13 = 0; var13 <= 5; var13++) {
               var14 = var9;
@@ -1746,7 +1746,7 @@ final class je {
               if (ch.field_h != 5) {
                 var8_ref_ea = pk.field_h[tb.field_c];
               } else {
-                var8_ref_ea = lb.field_x[tb.field_c];
+                var8_ref_ea = TextHotspotBounds.field_x[tb.field_c];
               }
               if (MidiPcmStream.field_K < 0) {
                 var8_ref_ea.copyMirroredHorizontally().drawGrayModulated(var6 - 4, var7 - 4, 9348351);

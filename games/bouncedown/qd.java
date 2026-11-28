@@ -16,7 +16,7 @@ final class qd {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = ed.a(4147, param2, param4, param0, param1, param5);
+          var8 = TextLayout.a(4147, param2, param4, param0, param1, param5);
           var6 = var8;
           if (param3 < 121) {
             field_a = false;

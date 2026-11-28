@@ -51,7 +51,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             if (var3 != null) {
               if (var3.getValidationStatus(param0 + 3453) == nc.field_bb &&
                 !param1.equals(this.field_n.field_l)) {
-                stackIn_7_0 = cc.field_i;
+                stackIn_7_0 = TextHotspotBounds.field_i;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.getValidationMessage(123);
@@ -59,7 +59,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
             }
           }
           if (!param1.equals(this.field_n.field_l)) {
-            stackIn_12_0 = cc.field_i;
+            stackIn_12_0 = TextHotspotBounds.field_i;
             return stackIn_12_0;
           }
           if (param0 == -11300) {

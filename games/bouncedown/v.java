@@ -36,7 +36,7 @@ abstract class v {
         if (param0 <= 37) {
           v.clearStaticReferences(-27);
         }
-        if (!vc.d((byte) -96)) {
+        if (!RichTextWidget.d((byte) -96)) {
           return;
         }
         EmailFormatValidator.a(false, -25698, 4);

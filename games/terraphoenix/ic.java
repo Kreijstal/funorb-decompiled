@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ic extends fd {
+final class ic extends DefaultTextWidgetRenderer {
     private Sprite[] field_y;
     private int field_w;
     private int field_u;

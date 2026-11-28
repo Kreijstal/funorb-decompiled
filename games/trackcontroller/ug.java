@@ -47,8 +47,8 @@ class ug extends ii {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           int var2_int = -53 / ((-10 - param0) / 37);
-          param1.addKeyListener(cj.field_o);
-          param1.addFocusListener(cj.field_o);
+          param1.addKeyListener(RichTextLayout.field_o);
+          param1.addFocusListener(RichTextLayout.field_o);
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ug.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

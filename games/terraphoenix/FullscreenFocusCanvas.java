@@ -29,8 +29,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
 
     final static void a(se param0, int param1) {
         try {
-          p.field_a[rd.field_t] = param0;
-          rd.field_t = rd.field_t + 1;
+          p.field_a[RichTextLayout.field_t] = param0;
+          RichTextLayout.field_t = RichTextLayout.field_t + 1;
           if (param1 != -31661) {
             field_c = (String) null;
           }

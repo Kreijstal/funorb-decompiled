@@ -97,7 +97,7 @@ final class mo extends am {
           }
           long dupTemp$0 = km.correctedCurrentTimeMillis(-1);
           ak.field_k = dupTemp$0;
-          rb.field_C = dupTemp$0;
+          RichTextWidget.field_C = dupTemp$0;
           if (1 != rh.field_b.status) {
             ef.field_a = wj.field_i;
           } else {
@@ -107,7 +107,7 @@ final class mo extends am {
               var4 = kj.field_d;
               var5 = var4;
               var5.position = 0;
-              ef.field_a = tb.field_o;
+              ef.field_a = TextHotspotBounds.field_o;
               UrlRequest.field_d = !param1 ? -1 : -2;
               eb.field_f = !param1 ? -1 : -2;
               wk.field_h = !param1 ? -1 : -2;
@@ -272,7 +272,7 @@ final class mo extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "mo.E(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "mo.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -391,7 +391,7 @@ final class mo extends am {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -526,7 +526,7 @@ final class mo extends am {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -45,7 +45,7 @@ final class ja {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param2 = df.a(param2, '_', "", (byte) 126);
+          param2 = RichTextWidget.a(param2, '_', "", (byte) 126);
           var3 = je.a(param2, 0);
           if (param1 <= 74) {
             ja.a((byte) -72, 59);

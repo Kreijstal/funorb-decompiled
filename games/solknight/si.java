@@ -12,14 +12,14 @@ abstract class si extends UiWidget implements oh {
     static int[] field_F;
     static int field_A;
 
-    String c(byte param0) {
+    String getTooltipText(byte param0) {
         String var3 = null;
         if (param0 <= 14) {
           field_E = -28;
         }
-        String var2 = super.c((byte) 89);
+        String var2 = super.getTooltipText((byte) 89);
         if (this.field_G != null) {
-          var3 = this.field_G.c((byte) 72);
+          var3 = this.field_G.getTooltipText((byte) 72);
           if (var3 != null) {
             return var3;
           }

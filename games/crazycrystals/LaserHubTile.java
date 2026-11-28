@@ -98,12 +98,12 @@ final class LaserHubTile extends bo implements Cloneable {
         }
     }
 
-    final static lb b(boolean param0) {
+    final static DefaultTextWidgetRenderer b(boolean param0) {
         if (param0) {
           LaserHubTile.clearStaticReferences(83);
         }
         if (AccountCreationResultPanel.field_lb == null) {
-          AccountCreationResultPanel.field_lb = new lb(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
+          AccountCreationResultPanel.field_lb = new DefaultTextWidgetRenderer(ba.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, ba.field_i.field_o, -1, 2147483647, true);
         }
         return AccountCreationResultPanel.field_lb;
     }

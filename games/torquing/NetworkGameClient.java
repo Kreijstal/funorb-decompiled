@@ -75,7 +75,7 @@ abstract class NetworkGameClient extends GameApplet {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = (RuntimeException) (Object) decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "tg.R(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1_ref), "tg.R(" + param0 + ')');
         }
     }
 
@@ -494,7 +494,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.readAppletConfigurationAndStart((byte) 88, param0, 480, 640, param1);
           int var4_int = 56 % ((28 - param2) / 53);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "tg.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -652,7 +652,7 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -678,7 +678,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           if (var4 == 1) {
             stackIn_6_0 = !param2;
-            var5_int = uj.a(hb.a(stackIn_6_0), (byte) 75, wp.b(-118));
+            var5_int = TextLayout.a(hb.a(stackIn_6_0), (byte) 75, wp.b(-118));
             if (-1 != var5_int) {
               wb.a(var5_int, Model.field_n, (byte) -94, pl.field_u);
               Model.field_n = null;

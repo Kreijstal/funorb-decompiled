@@ -151,7 +151,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
           }
           if (var4 == 4) {
-            if (jc.field_b) {
+            if (DefaultTextWidgetRenderer.field_b) {
               ad.a(0, uj.b((byte) -120));
             } else {
               TextFieldValidator.field_k = 10;
@@ -591,7 +591,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           IterableNodeHashTable.a(-96);
           tl.field_e = cj.field_c;
           pa.field_b = false;
-          gj.a(am.field_b, (byte) 33, DebouncedFieldValidator.field_b, jc.field_b, og.field_g);
+          gj.a(am.field_b, (byte) 33, DebouncedFieldValidator.field_b, DefaultTextWidgetRenderer.field_b, og.field_g);
           if (gj.field_k ||
             null != lg.field_b) {
             stackIn_103_0 = lg.field_b;
@@ -605,7 +605,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
           if (null == de.field_a) {
             de.field_a = fb.c(false);
-            cf.field_d = te.j(2);
+            cf.field_d = RichTextWidget.j(2);
           }
           hf.a(de.field_a, DebouncedFieldValidator.field_b, cf.field_d, 1000);
           og.field_g = null;

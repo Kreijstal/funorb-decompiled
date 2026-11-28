@@ -90,7 +90,7 @@ final class e {
             field_b = (IntrusiveDeque) null;
           }
           if (LoginPanel.a(param3 - 26108, param0, param2, param1)) {
-            return bd.b(true);
+            return RichTextLayout.b(true);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

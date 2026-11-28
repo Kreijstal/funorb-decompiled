@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends ek {
+final class ki extends DefaultTextWidgetRenderer {
     private int field_q;
     private int field_s;
     private int field_p;

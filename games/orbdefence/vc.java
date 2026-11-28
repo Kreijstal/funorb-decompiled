@@ -628,7 +628,7 @@ final class vc {
                 }
               }
               if (tc.field_b > 0) {
-                jc.field_b = true;
+                DefaultTextWidgetRenderer.field_b = true;
               }
               uk.field_b.setCipherSeed(og.field_n, 3777);
               var8 = 0;
@@ -662,7 +662,7 @@ final class vc {
             }
             if (null == p.field_d) {
               if (FullscreenFocusCanvas.field_a) {
-                if (30000L < ed.b(-1)) {
+                if (30000L < TextLineMetrics.b(-1)) {
                   kk.field_Y = ee.field_c;
                   if (var9 != 0) {
                     kk.field_Y = BufferedRandomAccessFile.field_j;

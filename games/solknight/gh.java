@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends af {
+final class gh extends DefaultTextWidgetRenderer {
     static String field_r;
     private int field_q;
     private int field_s;
@@ -169,7 +169,7 @@ final class gh extends af {
     }
 
     private gh(int param0, int param1, int param2) {
-        this.field_t = vk.field_i;
+        this.field_t = RichTextLayout.field_i;
         this.field_l = uc.field_g;
         this.field_q = param1;
         this.field_p = param2;

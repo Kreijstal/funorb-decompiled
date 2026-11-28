@@ -81,10 +81,10 @@ final class ml extends dk {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_A.field_x ? 1 : 0;
         this.field_A.field_x = this.field_x;
-        String var3 = this.field_A.g(param0);
+        String var3 = this.field_A.getTooltipText(param0);
         this.field_A.field_x = var2 != 0 ? true : false;
         return var3;
     }
@@ -146,13 +146,13 @@ final class ml extends dk {
         RuntimeException var1 = null;
         var2 = fleas.field_A ? 1 : 0;
         try {
-          var3 = (ql) (mi.field_r.beginForward((byte) 47));
+          var3 = (ql) (TextHotspotBounds.field_r.beginForward((byte) 47));
           if (param0 >= -36) {
             field_N = (String[]) null;
           }
           while (var3 != null) {
             rd.a(var3, 115, 5);
-            var3 = (ql) (mi.field_r.nextForward((byte) -105));
+            var3 = (ql) (TextHotspotBounds.field_r.nextForward((byte) -105));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

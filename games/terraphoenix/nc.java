@@ -26,7 +26,7 @@ final class nc {
         var9 = Terraphoenix.field_V;
         try {
           var10 = (CharSequence) ((Object) param1);
-          var3_int = ld.a(param2, var10, 124);
+          var3_int = TextLayout.a(param2, var10, 124);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

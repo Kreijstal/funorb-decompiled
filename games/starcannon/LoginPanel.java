@@ -327,7 +327,7 @@ final class LoginPanel extends vk implements TextFieldListener, WidgetActivation
         if (param0 != -100) {
           this.field_J = (String) null;
         }
-        if (se.d((byte) 125) ||
+        if (RichTextLayout.d((byte) 125) ||
           !(this.field_I.field_k.length() <= 0) &&
           !(this.field_G.field_k.length() <= 0)) {
           BitPacketBuffer.beginCredentialLogin(this.field_I.field_k, this.field_G.field_k, 0);

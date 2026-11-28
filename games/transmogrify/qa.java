@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qa extends h {
+final class qa extends DefaultTextWidgetRenderer {
     private int field_o;
     static int field_u;
     private Sprite[] field_q;

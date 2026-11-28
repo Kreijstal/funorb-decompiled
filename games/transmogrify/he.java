@@ -151,7 +151,7 @@ final class he extends IntrusiveNode {
               }
             }
             rc.field_c = -2147483648;
-            ue.field_a = 2147483647;
+            TextLayout.field_a = 2147483647;
             ua.field_d = 2147483647;
             MatchingFieldValidator.field_l = 0;
             vb.field_a = -2147483648;
@@ -247,7 +247,7 @@ final class he extends IntrusiveNode {
                 }
               }
               rc.field_c = -2147483648;
-              ue.field_a = 2147483647;
+              TextLayout.field_a = 2147483647;
               ua.field_d = 2147483647;
               MatchingFieldValidator.field_l = 0;
               vb.field_a = -2147483648;
@@ -377,7 +377,7 @@ final class he extends IntrusiveNode {
                 }
               }
               rc.field_c = -2147483648;
-              ue.field_a = 2147483647;
+              TextLayout.field_a = 2147483647;
               ua.field_d = 2147483647;
               MatchingFieldValidator.field_l = 0;
               vb.field_a = -2147483648;
@@ -402,7 +402,7 @@ final class he extends IntrusiveNode {
           }
         }
         rc.field_c = -2147483648;
-        ue.field_a = 2147483647;
+        TextLayout.field_a = 2147483647;
         ua.field_d = 2147483647;
         MatchingFieldValidator.field_l = 0;
         vb.field_a = -2147483648;
@@ -491,8 +491,8 @@ final class he extends IntrusiveNode {
         lb.field_d = false;
         ba.a(121, -1);
         int var1 = -100 % ((44 - param0) / 47);
-        ArchiveRequest.field_v = jh.field_n;
-        db.field_a = jh.field_n;
+        ArchiveRequest.field_v = RichTextLayout.field_n;
+        db.field_a = RichTextLayout.field_n;
     }
 
     static {

@@ -85,7 +85,7 @@ final class sd {
     }
 
     final static void a(boolean param0, int param1) {
-        bd.field_u.a(param0, (byte) -89);
+        RichTextLayout.field_u.a(param0, (byte) -89);
         if (param1 <= 15) {
           sd.resetStaticState((byte) 74);
         }

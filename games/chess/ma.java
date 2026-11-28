@@ -368,7 +368,7 @@ class ma extends mf implements ra {
         }
     }
 
-    String g(int param0) {
+    String getTooltipText(int param0) {
         qj var2;
         mf var3;
         String var4;
@@ -382,7 +382,7 @@ class ma extends mf implements ra {
         }
         var3 = (mf) (var2.c(-20229));
         while (var3 != null) {
-          var4 = var3.g(0);
+          var4 = var3.getTooltipText(0);
           if (var4 != null) {
             return var4;
           }

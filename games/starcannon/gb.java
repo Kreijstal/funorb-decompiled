@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gb extends hd {
+final class gb extends DefaultTextWidgetRenderer {
     static int field_w;
     private Sprite[] field_u;
     private int field_q;

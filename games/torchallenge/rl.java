@@ -70,7 +70,7 @@ final class rl {
         int var4_int = 0;
         Sprite var4 = null;
         int var5 = TorChallenge.field_F ? 1 : 0;
-        int var1 = MusicPatchPcmStream.field_r[0] * lg.field_e[0];
+        int var1 = MusicPatchPcmStream.field_r[0] * TextLayout.field_e[0];
         byte[] var7 = h.field_a[0];
         int[] var3 = new int[var1];
         Sprite var4Lifetime1;
@@ -79,7 +79,7 @@ final class rl {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = td.field_m[jh.a((int) var7[var4_int], 255)];
           }
-          var4 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], lg.field_e[0], var3);
+          var4 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], TextLayout.field_e[0], var3);
           p.a(0);
           return var4;
         }
@@ -87,7 +87,7 @@ final class rl {
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = td.field_m[jh.a((int) var7[var4_intLifetime1], 255)];
         }
-        var4Lifetime1 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], lg.field_e[0], var3);
+        var4Lifetime1 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], MusicPatchPcmStream.field_r[0], TextLayout.field_e[0], var3);
         p.a(0);
         return var4Lifetime1;
     }

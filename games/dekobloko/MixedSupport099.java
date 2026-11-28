@@ -541,14 +541,14 @@ final class MixedSupport099 {
     final static void performAction1230(boolean booleanArgument1) {
         GameDomainSupport004.booleanState0087 = booleanArgument1 ? true : false;
         if (null == SceneWidgetPart007.sceneWidgetPart005State0002) {
-          if (NetworkSupport010.integerState0585 != 0) {
+          if (TextHotspotBounds.integerState0585 != 0) {
             BufferedSocket.performAction1371((byte) 94);
           }
           MixedSupport073.integerState0416 = 0;
           return;
         }
         SceneWidgetPart007.sceneWidgetPart005State0002.performAction0717(0);
-        if (NetworkSupport010.integerState0585 != 0) {
+        if (TextHotspotBounds.integerState0585 != 0) {
           BufferedSocket.performAction1371((byte) 94);
         }
         MixedSupport073.integerState0416 = 0;

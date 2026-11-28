@@ -277,10 +277,10 @@ final class wh {
         if (DebouncedFieldValidator.field_b) {
           return null;
         }
-        if (Main.field_G < ek.field_e) {
+        if (Main.field_G < DefaultTextWidgetRenderer.field_e) {
           return null;
         }
-        if (Main.field_G >= ek.field_e + ra.field_e) {
+        if (Main.field_G >= DefaultTextWidgetRenderer.field_e + ra.field_e) {
           return null;
         }
         return t.field_e;

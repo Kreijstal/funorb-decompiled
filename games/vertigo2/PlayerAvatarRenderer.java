@@ -145,10 +145,10 @@ final class PlayerAvatarRenderer extends LevelRenderable {
           if (param2 <= 88) {
             PlayerAvatarRenderer.clearStaticReferences(105);
           }
-          var6_int = pk.a((byte) -14, WidgetContainer.field_D, param4, ua.field_e);
-          var7 = pk.a((byte) -14, WidgetContainer.field_D, param1, ua.field_e);
-          var8 = pk.a((byte) -14, ib.field_a, param5, ap.field_e);
-          var9 = pk.a((byte) -14, ib.field_a, param0, ap.field_e);
+          var6_int = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param4, ua.field_e);
+          var7 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param1, ua.field_e);
+          var8 = TextHotspotBounds.a((byte) -14, ib.field_a, param5, ap.field_e);
+          var9 = TextHotspotBounds.a((byte) -14, ib.field_a, param0, ap.field_e);
           for (var10 = var6_int; var7 >= var10; var10++) {
             ki.a(-112, var8, vl.field_e[var10], var9, param3);
           }
@@ -453,7 +453,7 @@ final class PlayerAvatarRenderer extends LevelRenderable {
                     nf.field_q[1] = var10;
                     nf.field_q[2] = var11;
                     ll.field_e[1] = AccountServiceResult.field_d[this.field_m];
-                    ll.field_e[2] = sl.field_u;
+                    ll.field_e[2] = RichTextLayout.field_u;
                     if (!this.field_f) {
                       this.field_h = new Model(ll.field_e, 3);
                     } else {

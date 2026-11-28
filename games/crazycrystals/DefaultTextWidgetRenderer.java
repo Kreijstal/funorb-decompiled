@@ -1,0 +1,704 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class DefaultTextWidgetRenderer implements wo, TextWidgetRenderer {
+    static jh field_l;
+    int field_b;
+    int field_c;
+    int field_n;
+    int field_o;
+    int field_e;
+    BitmapFont field_p;
+    int field_h;
+    int field_m;
+    int field_i;
+    private int field_g;
+    int field_j;
+    private boolean field_f;
+    int field_a;
+    static boolean field_k;
+    static PcmSample field_d;
+
+    public final int getPreferredHeight(qm param0, int param1) {
+        int discarded$1 = 0;
+        RuntimeException var3 = null;
+        qm var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -1) {
+            var4 = (qm) null;
+            discarded$1 = this.a(121, (byte) 95, 1, (qm) null);
+          }
+          this.getTextLayout(param0, 1);
+          stackIn_3_0 = param0.field_p.getLayoutHeight((byte) -90) + this.field_n + this.field_m;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("lb.D(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final int getTextOriginY(int param0, byte param1, qm param2) {
+        RuntimeException var4 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 == 50) {
+            stackIn_4_0 = this.a(param0, (byte) 123, 0, param2);
+            return stackIn_4_0;
+          }
+          stackIn_2_0 = -95;
+          return stackIn_2_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_7_0 = var4;
+          stackIn_7_1 = new StringBuilder().append("lb.H(").append(param0).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    private final void a(int param0, qm param1, int param2, int param3) {
+        try {
+          this.a(param2, param1, this.field_g, this.field_c, 0, param0, param3 ^ -23868, 0);
+          if (param3 != -23866) {
+            this.field_i = -47;
+          }
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.N(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+        }
+    }
+
+    String d(qm param0, int param1) {
+        RuntimeException var3 = null;
+        qm var4 = null;
+        String stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -1) {
+            var4 = (qm) null;
+            this.d((qm) null, 3);
+          }
+          stackIn_3_0 = param0.field_o;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("lb.R(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    private final int a(int param0, int param1, int param2, qm param3) {
+        RuntimeException var5 = null;
+        qm var6 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param2 <= 88) {
+            var6 = (qm) null;
+            this.getPreferredHeight((qm) null, 60);
+          }
+          stackIn_3_0 = param3.field_h + this.field_o + (param3.field_r + param0) + param1;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("lb.M(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    private final void a(int param0, qm param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var9_int = 0;
+        RuntimeException var9 = null;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        int var13 = 0;
+        int var12Lifetime1;
+        var13 = CrazyCrystals.field_B;
+        try {
+          qp.a(param0 + param1.field_r, param1.field_j + (param5 + param1.field_f), param0 + param1.field_r + param1.field_g, (byte) 73, param5 + param1.field_j);
+          if (param6 != 2) {
+            return;
+          }
+          boolean decompiledFrameRemainder0 = true;
+          var9_int = this.getTextAreaWidth(param6 ^ -78, param1);
+          var10 = this.b(115, param1);
+          if (this.field_f) {
+            this.field_p.drawParagraph(this.d(param1, param6 ^ -3), this.a(param0, param4, param6 ^ 106, param1), this.a(param5, (byte) 126, param7, param1), var9_int, var10, param3, param2, this.field_i, this.field_a, this.field_j);
+          } else {
+            var12 = this.field_a;
+            if (0 != var12) {
+              if (var12 != 2) {
+                if (var12 != 3 &&
+                  var12 != 1) {
+                }
+                var11 = (-this.field_p.field_u + var10 - this.field_p.field_o >> 1) + this.field_p.field_o;
+              } else {
+                var11 = var10 - this.field_p.field_u;
+              }
+            } else {
+              var11 = this.field_p.field_o;
+            }
+            var12Lifetime1 = this.field_i;
+            if (var12Lifetime1 != 0 &&
+              var12Lifetime1 != 3) {
+              if (var12Lifetime1 == 1) {
+                this.field_p.drawCentred(this.d(param1, param6 ^ -3), (var9_int >> 1) + this.a(param0, param4, 115, param1), this.a(param5, (byte) 123, param7, param1) + var11, param3, param2);
+              } else {
+                if ((var12Lifetime1 == 2)) {
+                  this.field_p.drawRightAligned(this.d(param1, -1), var9_int + this.a(param0, param4, 115, param1), var11 + this.a(param5, (byte) 124, param7, param1), param3, param2);
+                }
+              }
+              decompiledFrameRemainder0 = false;
+            }
+            else {
+              this.field_p.drawString(this.d(param1, -1), this.a(param0, param4, 127, param1), this.a(param5, (byte) 123, param7, param1) + var11, param3, param2);
+            }
+          }
+          lg.a(1);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var9 = decompiledCaughtException;
+          stackIn_29_0 = var9;
+          stackIn_29_1 = new StringBuilder().append("lb.S(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+        }
+    }
+
+    public final int getFontLineHeight(int param0) {
+        if (param0 <= 38) {
+          this.field_o = -1;
+        }
+        return this.field_p.field_u + this.field_p.field_o;
+    }
+
+    private final void a(byte param0, qm param1) {
+        RuntimeException stackIn_29_0 = null;
+        StringBuilder stackIn_29_1 = null;
+        String stackIn_30_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        int var5 = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var8 = 0;
+        int var6Lifetime1;
+        var8 = CrazyCrystals.field_B;
+        try {
+          if (null == param1.field_p) {
+            param1.field_p = (TextLayout) ((Object) new RichTextLayout());
+          }
+          var3_int = this.getTextAreaWidth(-114, param1);
+          var4 = this.b(97, param1);
+          var6 = -59 / ((param0 + 3) / 63);
+          var7 = this.field_a;
+          if (var7 == 0) {
+            var5 = this.field_p.field_o;
+          } else {
+            if (var7 == 2) {
+              var5 = var4 - this.field_p.field_u;
+            } else {
+              if (var7 != 3 &&
+                var7 == 1) {
+              }
+              var5 = (-this.field_p.field_u + (var4 - this.field_p.field_o) >> 1) + this.field_p.field_o;
+            }
+          }
+          var6Lifetime1 = this.field_i;
+          if (var6Lifetime1 != 0 &&
+            var6Lifetime1 != 3) {
+            if (var6Lifetime1 == 1) {
+              if (!(param1.field_p instanceof RichTextLayout)) {
+                return;
+              }
+              ((RichTextLayout) (param1.field_p)).layoutSingleLineCentered(this.d(param1, -1), this.field_p, var3_int >> 1, var5, false);
+              return;
+            }
+            if (var6Lifetime1 != 2) {
+              return;
+            }
+            if (!(param1.field_p instanceof RichTextLayout)) {
+              return;
+            }
+            ((RichTextLayout) (param1.field_p)).layoutSingleLineRightAligned((byte) 100, this.d(param1, -1), var3_int, var5, this.field_p);
+            return;
+          }
+          if (param1.field_p instanceof RichTextLayout) {
+            ((RichTextLayout) (param1.field_p)).layoutSingleLineLeftAligned(var5, this.d(param1, -1), 0, 0, this.field_p);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_29_0 = var3;
+          stackIn_29_1 = new StringBuilder().append("lb.U(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_30_2 = "null";
+          } else {
+            stackIn_30_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+        }
+    }
+
+    final static void a(String param0, int param1, int param2, int param3, int param4) {
+        try {
+          an.field_q.drawRightAligned(param0, param3 - 1, param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3 + 1, param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3, -1 + param1, 0, -1);
+          an.field_q.drawRightAligned(param0, param3, 1 + param1, 0, -1);
+          int var5_int = -89 / ((param4 - 86) / 37);
+          an.field_q.drawRightAligned(param0, param3, param1, param2, -1);
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+        }
+    }
+
+    public final int getPreferredWidth(qm param0, int param1) {
+        RuntimeException var3 = null;
+        qm var4 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != -12817) {
+            var4 = (qm) null;
+            this.a(-99, false, -73, (qm) null, false);
+          }
+          this.getTextLayout(param0, 1);
+          stackIn_3_0 = param0.field_p.getMaxLineRightX(84) + (this.field_o + this.field_h);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("lb.L(");
+          if (param0 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    final void a(byte param0, DefaultTextWidgetRenderer param1) {
+        try {
+          param1.field_m = this.field_m;
+          param1.field_i = this.field_i;
+          param1.field_c = this.field_c;
+          param1.field_g = this.field_g;
+          param1.field_n = this.field_n;
+          if (param0 != 119) {
+            qm var4 = (qm) null;
+            this.getPreferredHeight((qm) null, 49);
+          }
+          param1.field_h = this.field_h;
+          param1.field_p = this.field_p;
+          param1.field_o = this.field_o;
+          param1.field_b = this.field_b;
+          param1.field_j = this.field_j;
+          param1.field_f = this.field_f;
+          param1.field_a = this.field_a;
+          param1.field_e = this.field_e;
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final void paintCaret(int param0, int param1, qm param2, int param3, int param4) {
+        TextLayout var13 = null;
+        TextLayout var14 = null;
+        int var7 = 0;
+        TextLineMetrics var8 = null;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        int var12 = 0;
+        try {
+          if (param1 != 27310) {
+            field_l = (jh) null;
+          }
+          if (param2.e(-124)) {
+            var13 = this.getTextLayout(param2, param1 ^ 27311);
+            var14 = var13;
+            var7 = var14.getLineIndexForTextOffset(param0, 62);
+            var8 = var13.field_h[var7];
+            var9 = var14.getXForTextOffset(param0, 1);
+            var10 = this.a(param3, var9, 116, param2);
+            var11 = this.getTextOriginY(param4, (byte) 50, param2) + Math.max(0, var8.field_f);
+            var12 = this.getTextOriginY(param4, (byte) 50, param2) + Math.min(this.b(param1 ^ 27340, param2), Math.min(var8.field_b, var14.field_h.length > var7 + 1 ? var13.field_h[var7 + 1].field_f : var8.field_b));
+            qp.a(param2.field_r + param3, param4 - (-param2.field_j - param2.field_f), param2.field_g + (param2.field_r + param3), (byte) 73, param4 + param2.field_j);
+            pi.field_j.a(var11, false, this.field_e, var10, var10, var12);
+            lg.a(param1 - 27309);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+        }
+    }
+
+    public static void clearDeclaredStaticReferences(byte param0) {
+        field_d = null;
+        int var1 = -52 % ((-77 - param0) / 36);
+        field_l = null;
+    }
+
+    public final TextLayout getTextLayout(qm param0, int param1) {
+        RuntimeException var3 = null;
+        qm var4 = null;
+        TextLayout stackIn_8_0 = null;
+        RuntimeException stackIn_11_0 = null;
+        StringBuilder stackIn_11_1 = null;
+        String stackIn_12_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 1) {
+            var4 = (qm) null;
+            this.findTextOffsetAtScreenPosition(22, -1, -49, 5, -60, (qm) null);
+          }
+          if (param0.field_p == null) {
+            param0.field_p = (TextLayout) ((Object) new RichTextLayout());
+          }
+          if (!this.field_f) {
+            this.a((byte) -100, param0);
+          } else {
+            ((RichTextLayout) (param0.field_p)).layoutWrappedText((byte) 28, this.d(param0, param1 - 2), this.field_p, this.field_a, this.b(111, param0), this.getTextAreaWidth(-96, param0), this.field_i, this.field_j);
+          }
+          stackIn_8_0 = param0.field_p;
+          return stackIn_8_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_11_0 = var3;
+          stackIn_11_1 = new StringBuilder().append("lb.I(");
+          if (param0 == null) {
+            stackIn_12_2 = "null";
+          } else {
+            stackIn_12_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public final void paintSelection(byte param0, qm param1, int param2, int param3, int param4, int param5) {
+        int var12 = 0;
+        int stackIn_14_0 = 0;
+        int stackIn_19_0 = 0;
+        RuntimeException stackIn_24_0 = null;
+        StringBuilder stackIn_24_1 = null;
+        String stackIn_25_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var7 = null;
+        int var8 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int var11 = 0;
+        TextLineMetrics var13 = null;
+        int var14 = 0;
+        int var15 = 0;
+        int var16 = 0;
+        TextLayout var17 = null;
+        TextLayout var18 = null;
+        var16 = CrazyCrystals.field_B;
+        try {
+          if (param0 < 35) {
+            return;
+          }
+          if (param3 == param4) {
+            return;
+          }
+          if (param1.e(-120)) {
+            var17 = this.getTextLayout(param1, 1);
+            var18 = var17;
+            if (param4 > param3) {
+              var8 = param3;
+              var9 = param4;
+            } else {
+              var9 = param3;
+              var8 = param4;
+            }
+            var10 = var18.getLineIndexForTextOffset(var8, 62);
+            var11 = var18.getLineIndexForTextOffset(var9, 62);
+            qp.a(param2 + param1.field_r, param1.field_f + param1.field_j + param5, param1.field_r + (param2 + param1.field_g), (byte) 73, param1.field_j + param5);
+            for (var12 = var10; var12 <= var11; var12++) {
+              var13 = var17.field_h[var12];
+              if (var12 != var10) {
+                stackIn_14_0 = var13.field_e[0];
+              } else {
+                stackIn_14_0 = var18.getXForTextOffset(var8, 1);
+              }
+              var14 = stackIn_14_0;
+              if (var11 == var12) {
+                stackIn_19_0 = var18.getXForTextOffset(var9, 1);
+              } else {
+                if (var13 != null) {
+                  stackIn_19_0 = var13.field_e[var13.field_e.length - 1];
+                } else {
+                  stackIn_19_0 = 0;
+                }
+              }
+              var15 = stackIn_19_0;
+              pi.field_j.a(this.a(param2, var14, 123, param1), var13.field_b, param1.field_k + (param1.field_j + (param5 + this.field_n) + var13.field_f), this.field_b, this.field_b >>> 24, var15 - var14, (byte) 11);
+            }
+            lg.a(1);
+            return;
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_24_0 = var7;
+          stackIn_24_1 = new StringBuilder().append("lb.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_25_2 = "null";
+          } else {
+            stackIn_25_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+        }
+    }
+
+    private final int a(int param0, byte param1, int param2, qm param3) {
+        RuntimeException var5 = null;
+        String var6 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 <= 117) {
+            var6 = (String) null;
+            DefaultTextWidgetRenderer.a((String) null, -72, 126, -1, 47);
+          }
+          stackIn_3_0 = param3.field_k + this.field_n + (param3.field_j + param0 + param2);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_6_0 = var5;
+          stackIn_6_1 = new StringBuilder().append("lb.Q(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
+          if (param3 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    public final int getTextAreaWidth(int param0, qm param1) {
+        int var3_int = 0;
+        RuntimeException var3 = null;
+        int stackIn_1_0 = 0;
+        RuntimeException stackIn_4_0 = null;
+        StringBuilder stackIn_4_1 = null;
+        String stackIn_5_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3_int = 110 % ((param0 + 42) / 36);
+          stackIn_1_0 = param1.field_g + (-this.field_o - this.field_h);
+          return stackIn_1_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_4_0 = var3;
+          stackIn_4_1 = new StringBuilder().append("lb.F(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_5_2 = "null";
+          } else {
+            stackIn_5_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+        }
+    }
+
+    private final int b(int param0, qm param1) {
+        RuntimeException var3 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 <= 89) {
+            this.field_b = 57;
+          }
+          stackIn_3_0 = -this.field_m + (param1.field_f - this.field_n);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_6_0 = var3;
+          stackIn_6_1 = new StringBuilder().append("lb.T(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    public void a(int param0, boolean param1, int param2, qm param3, boolean param4) {
+        if (this.field_p == null) {
+          return;
+        }
+        try {
+          this.a(param0, param3, param2, -23866);
+          if (param1) {
+            qm var7 = (qm) null;
+            this.getTextAreaWidth(75, (qm) null);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+        }
+    }
+
+    public final int getTextOriginX(int param0, qm param1, int param2) {
+        RuntimeException var4 = null;
+        qm var5 = null;
+        int stackIn_3_0 = 0;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 != -527227295) {
+            var5 = (qm) null;
+            this.a((byte) -77, (qm) null);
+          }
+          stackIn_3_0 = this.a(param2, 0, param0 ^ -527227392, param1);
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var4 = decompiledCaughtException;
+          stackIn_6_0 = var4;
+          stackIn_6_1 = new StringBuilder().append("lb.G(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+        }
+    }
+
+    public final int findTextOffsetAtScreenPosition(int param0, int param1, int param2, int param3, int param4, qm param5) {
+        RuntimeException var7 = null;
+        int stackIn_2_0 = 0;
+        int stackIn_4_0 = 0;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 < 46) {
+            stackIn_2_0 = -59;
+            return stackIn_2_0;
+          }
+          this.getTextLayout(param5, 1);
+          stackIn_4_0 = param5.field_p.getTextOffsetAt(-this.getTextOriginY(param3, (byte) 50, param5) + param2, param0 - this.getTextOriginX(-527227295, param5, param4), (byte) 51);
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var7 = decompiledCaughtException;
+          stackIn_7_0 = var7;
+          stackIn_7_1 = new StringBuilder().append("lb.E(").append(param0).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',');
+          if (param5 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          throw dn.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+        }
+    }
+
+    protected DefaultTextWidgetRenderer() {
+    }
+
+    DefaultTextWidgetRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+        try {
+          this.field_i = param7;
+          this.field_n = param3;
+          this.field_b = param11;
+          this.field_f = param12 ? true : false;
+          this.field_e = param10;
+          this.field_o = param1;
+          this.field_p = param0;
+          this.field_m = param4;
+          this.field_c = param5;
+          this.field_a = param8;
+          this.field_g = param6;
+          this.field_j = param9;
+          this.field_h = param2;
+        } catch (RuntimeException runtimeException) {
+          throw dn.wrapClientException((Throwable) ((Object) runtimeException), "lb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
+        }
+    }
+
+    DefaultTextWidgetRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
+    }
+
+    static {
+        field_l = new jh(1);
+    }
+}

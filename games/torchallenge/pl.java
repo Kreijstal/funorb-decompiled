@@ -135,7 +135,7 @@ final class pl {
           if (param0 != 13267) {
             field_b = (int[]) null;
           }
-          ia.field_l = param1;
+          TextHotspotBounds.field_l = param1;
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

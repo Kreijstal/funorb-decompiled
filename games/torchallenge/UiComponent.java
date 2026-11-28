@@ -17,7 +17,7 @@ class UiComponent extends IntrusiveNode {
     int field_j;
     int field_p;
     int field_m;
-    lg field_t;
+    TextLayout field_t;
     int field_l;
     gg field_k;
     static hb field_x;
@@ -47,12 +47,12 @@ class UiComponent extends IntrusiveNode {
               if (vb.field_n == 0) {
                 if (0 != wh.field_e) {
                   ok.field_f = wh.field_e;
-                  je.a((byte) -109, this.b(param1));
+                  je.a((byte) -109, this.getTooltipText(param1));
                   return param3;
                 }
                 if (ok.field_f == 0) {
                   ok.field_f = wh.field_e;
-                  je.a((byte) -109, this.b(param1));
+                  je.a((byte) -109, this.getTooltipText(param1));
                   return param3;
                 }
                 this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
@@ -69,7 +69,7 @@ class UiComponent extends IntrusiveNode {
                   this.d(6064);
                 }
                 ok.field_f = wh.field_e;
-                je.a((byte) -109, this.b(param1));
+                je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
               if (this.a(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
@@ -77,12 +77,12 @@ class UiComponent extends IntrusiveNode {
                 if (var7 == 0) {
                   if (0 != wh.field_e) {
                     ok.field_f = wh.field_e;
-                    je.a((byte) -109, this.b(param1));
+                    je.a((byte) -109, this.getTooltipText(param1));
                     return param3;
                   }
                   if (ok.field_f == 0) {
                     ok.field_f = wh.field_e;
-                    je.a((byte) -109, this.b(param1));
+                    je.a((byte) -109, this.getTooltipText(param1));
                     return param3;
                   }
                   this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
@@ -99,18 +99,18 @@ class UiComponent extends IntrusiveNode {
                     this.d(6064);
                   }
                   ok.field_f = wh.field_e;
-                  je.a((byte) -109, this.b(param1));
+                  je.a((byte) -109, this.getTooltipText(param1));
                   return param3;
                 }
               }
               if (0 != wh.field_e) {
                 ok.field_f = wh.field_e;
-                je.a((byte) -109, this.b(param1));
+                je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
               if (ok.field_f == 0) {
                 ok.field_f = wh.field_e;
-                je.a((byte) -109, this.b(param1));
+                je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
               this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
@@ -127,7 +127,7 @@ class UiComponent extends IntrusiveNode {
                 this.d(6064);
               }
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
             this.a(0, bl.field_X, param0, ConfirmedEmailAvailabilityValidator.field_u, this, ph.field_d, param2);
@@ -135,12 +135,12 @@ class UiComponent extends IntrusiveNode {
           if (vb.field_n == 0) {
             if (0 != wh.field_e) {
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
             if (ok.field_f == 0) {
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
             this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
@@ -157,7 +157,7 @@ class UiComponent extends IntrusiveNode {
               this.d(6064);
             }
             ok.field_f = wh.field_e;
-            je.a((byte) -109, this.b(param1));
+            je.a((byte) -109, this.getTooltipText(param1));
             return param3;
           }
           if (this.a(AgeValidator.field_m, ik.field_a, -81, param2, param0, vb.field_n, this)) {
@@ -165,12 +165,12 @@ class UiComponent extends IntrusiveNode {
             if (var7 == 0) {
               if (0 != wh.field_e) {
                 ok.field_f = wh.field_e;
-                je.a((byte) -109, this.b(param1));
+                je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
               if (ok.field_f == 0) {
                 ok.field_f = wh.field_e;
-                je.a((byte) -109, this.b(param1));
+                je.a((byte) -109, this.getTooltipText(param1));
                 return param3;
               }
               this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
@@ -187,7 +187,7 @@ class UiComponent extends IntrusiveNode {
                 this.d(6064);
               }
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
           }
@@ -195,12 +195,12 @@ class UiComponent extends IntrusiveNode {
             this.d(6064);
             if (0 != wh.field_e) {
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
             if (ok.field_f == 0) {
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
             this.a(param2, (byte) -77, this, param0, ConfirmedEmailAvailabilityValidator.field_u, ph.field_d);
@@ -216,7 +216,7 @@ class UiComponent extends IntrusiveNode {
               this.d(6064);
             }
             ok.field_f = wh.field_e;
-            je.a((byte) -109, this.b(param1));
+            je.a((byte) -109, this.getTooltipText(param1));
             return param3;
           }
           if (0 == wh.field_e &&
@@ -234,7 +234,7 @@ class UiComponent extends IntrusiveNode {
                 this.d(6064);
               }
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
             if (var7 != 0 &&
@@ -242,13 +242,13 @@ class UiComponent extends IntrusiveNode {
               vb.field_n != 0) {
               this.d(6064);
               ok.field_f = wh.field_e;
-              je.a((byte) -109, this.b(param1));
+              je.a((byte) -109, this.getTooltipText(param1));
               return param3;
             }
           }
         }
         ok.field_f = wh.field_e;
-        je.a((byte) -109, this.b(param1));
+        je.a((byte) -109, this.getTooltipText(param1));
         return param3;
     }
 
@@ -630,7 +630,7 @@ class UiComponent extends IntrusiveNode {
 
     int e(int param0) {
         if (param0 != -15000) {
-          this.field_t = (lg) null;
+          this.field_t = (TextLayout) null;
           return 0;
         }
         return 0;
@@ -787,7 +787,7 @@ class UiComponent extends IntrusiveNode {
         return false;
     }
 
-    String b(boolean param0) {
+    String getTooltipText(boolean param0) {
         if (param0) {
           this.a('4', -20, -6);
           if (this.field_w) {
@@ -812,7 +812,7 @@ class UiComponent extends IntrusiveNode {
 
     UiComponent(String param0, j param1, gg param2) {
         RuntimeException runtimeException = null;
-        gd var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -827,10 +827,10 @@ class UiComponent extends IntrusiveNode {
           this.field_k = param2;
           this.field_q = param1;
           this.field_v = param0;
-          if (this.field_q instanceof gd) {
-            var4 = (gd) ((Object) this.field_q);
-            this.field_p = var4.c(this, (byte) -93);
-            this.field_l = var4.b(this, (byte) -4);
+          if (this.field_q instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_q);
+            this.field_p = var4.getPreferredWidth(this, (byte) -93);
+            this.field_l = var4.getPreferredHeight(this, (byte) -4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

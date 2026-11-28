@@ -103,50 +103,50 @@ final class ue extends jk {
             if (!ok.a(false)) {
               var2 = 1;
               var3 = BoundedRandomAccessFile.field_e;
-              PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3)).field_j + ((BitmapFont) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((BitmapFont) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3)).field_j + ((BitmapFont) ((Object) var3)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((BitmapFont) ((Object) var3)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3);
               return;
             }
             var2 = 0;
             var3 = BoundedRandomAccessFile.field_e;
-            PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3)).field_j + ((BitmapFont) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((BitmapFont) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+            PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3)).field_j + ((BitmapFont) ((Object) var3)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((BitmapFont) ((Object) var3)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3);
             return;
           }
           AwtRasterBuffer.field_f = qg.createFullscreenCanvas(640, 480, 0, rc.field_k, (byte) -73, 0);
           if (null == AwtRasterBuffer.field_f) {
             var2Lifetime4 = 3;
             var3Lifetime4 = BoundedRandomAccessFile.field_e;
-            PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime4)).field_j + ((BitmapFont) ((Object) var3Lifetime4)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime4, param1, 240, ((BitmapFont) ((Object) var3Lifetime4)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime4);
+            PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime4)).field_j + ((BitmapFont) ((Object) var3Lifetime4)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime4, param1, 240, ((BitmapFont) ((Object) var3Lifetime4)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3Lifetime4);
             return;
           }
           af.a(20, AwtRasterBuffer.field_f);
           var2Lifetime5 = 2;
           var3Lifetime5 = BoundedRandomAccessFile.field_e;
-          PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime5)).field_j + ((BitmapFont) ((Object) var3Lifetime5)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime5, param1, 240, ((BitmapFont) ((Object) var3Lifetime5)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime5);
+          PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime5)).field_j + ((BitmapFont) ((Object) var3Lifetime5)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime5, param1, 240, ((BitmapFont) ((Object) var3Lifetime5)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3Lifetime5);
           return;
         }
         if (af.field_c <= 0) {
           if (!ok.a(false)) {
             var2Lifetime1 = 1;
             var3Lifetime1 = BoundedRandomAccessFile.field_e;
-            PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime1)).field_j + ((BitmapFont) ((Object) var3Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1, param1, 240, ((BitmapFont) ((Object) var3Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1);
+            PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime1)).field_j + ((BitmapFont) ((Object) var3Lifetime1)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1, param1, 240, ((BitmapFont) ((Object) var3Lifetime1)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3Lifetime1);
             return;
           }
           var2Lifetime1Lifetime1 = 0;
           var3Lifetime1Lifetime1 = BoundedRandomAccessFile.field_e;
-          PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime1Lifetime1)).field_j + ((BitmapFont) ((Object) var3Lifetime1Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1Lifetime1, param1, 240, ((BitmapFont) ((Object) var3Lifetime1Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1Lifetime1);
+          PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime1Lifetime1)).field_j + ((BitmapFont) ((Object) var3Lifetime1Lifetime1)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1Lifetime1, param1, 240, ((BitmapFont) ((Object) var3Lifetime1Lifetime1)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3Lifetime1Lifetime1);
           return;
         }
         AwtRasterBuffer.field_f = qg.createFullscreenCanvas(640, 480, 0, rc.field_k, (byte) -73, 0);
         if (null == AwtRasterBuffer.field_f) {
           var2Lifetime2 = 3;
           var3Lifetime2 = BoundedRandomAccessFile.field_e;
-          PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime2)).field_j + ((BitmapFont) ((Object) var3Lifetime2)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime2, param1, 240, ((BitmapFont) ((Object) var3Lifetime2)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime2);
+          PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime2)).field_j + ((BitmapFont) ((Object) var3Lifetime2)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime2, param1, 240, ((BitmapFont) ((Object) var3Lifetime2)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3Lifetime2);
           return;
         }
         af.a(20, AwtRasterBuffer.field_f);
         var2Lifetime3 = 2;
         var3Lifetime3 = BoundedRandomAccessFile.field_e;
-        PcmOutputWorker.a(sb.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime3)).field_j + ((BitmapFont) ((Object) var3Lifetime3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime3, param1, 240, ((BitmapFont) ((Object) var3Lifetime3)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime3);
+        PcmOutputWorker.a(RichTextLayout.field_r, DelegatingCanvas.field_b, 480, ((BitmapFont) ((Object) var3Lifetime3)).field_j + ((BitmapFont) ((Object) var3Lifetime3)).field_D, (RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime3, param1, 240, ((BitmapFont) ((Object) var3Lifetime3)).field_j, RichTextLayout.field_r.field_j, 8, 320, var3Lifetime3);
     }
 
     public static void clearDeclaredStaticReferences(int param0) {

@@ -345,12 +345,12 @@ final class kd {
         field_b = null;
     }
 
-    final static jc a(boolean param0) {
+    final static DefaultTextWidgetRenderer a(boolean param0) {
         if (param0) {
-          return (jc) null;
+          return (DefaultTextWidgetRenderer) null;
         }
         if (null == ve.field_O) {
-          ve.field_O = new jc(pc.field_bb, 20, 0, 0, 0, 11579568, -1, 0, 0, pc.field_bb.field_H, -1, 2147483647, true);
+          ve.field_O = new DefaultTextWidgetRenderer(pc.field_bb, 20, 0, 0, 0, 11579568, -1, 0, 0, pc.field_bb.field_H, -1, 2147483647, true);
         }
         return ve.field_O;
     }

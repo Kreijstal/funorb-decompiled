@@ -175,7 +175,7 @@ final class OneAnimation extends EventAnimation {
         var3 = (EventEffect) (this.field_D.effects.beginForward((byte) 90));
         while (var3 != null) {
           var4 = var3.target.resolveCreatureView(param0 ^ -27455, this.screen);
-          var4.b(-1, 6);
+          var4.playAnimation(-1, 6);
           if (var3 instanceof MoveCreatureEffect) {
             var5 = (MoveCreatureEffect) (var3);
             var6 = var5.target.resolveCreatureView(-27449, this.screen);
@@ -201,7 +201,7 @@ final class OneAnimation extends EventAnimation {
           var3 = (EventEffect) (this.field_D.effects.beginForward((byte) 90));
           while (var3 != null) {
             var4 = var3.target.resolveCreatureView(-27449, this.screen);
-            var4.b(-1, 6);
+            var4.playAnimation(-1, 6);
             if (var3 instanceof DamageEffect) {
               var3.apply(var2, this.screen.field_h, 12);
               this.addChild(27799, new DamagePopupAnimation(this.screen, var4, var3.field_f));

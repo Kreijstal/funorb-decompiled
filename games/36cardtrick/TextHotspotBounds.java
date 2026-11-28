@@ -1,0 +1,41 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class TextHotspotBounds extends IntrusiveNode {
+    int field_n;
+    int field_k;
+    static String field_l;
+    static int field_h;
+    static String field_o;
+    TextHotspotBounds field_m;
+    int field_j;
+    int field_g;
+    int field_i;
+
+    final static void a(int param0, boolean param1) {
+        if (param0 != 24988) {
+          return;
+        }
+        wh.field_a.a(param0 - 8477, param1);
+    }
+
+    public static void clearStaticReferences(int param0) {
+        field_l = null;
+        field_o = null;
+        if (param0 != -30530) {
+          TextHotspotBounds.clearStaticReferences(116);
+        }
+    }
+
+    TextHotspotBounds(int param0, int param1, int param2, int param3, int param4) {
+        this.field_k = param4;
+        this.field_i = param1;
+        this.field_j = param3;
+        this.field_g = param0;
+        this.field_n = param2;
+    }
+
+    static {
+        field_l = "Visit the Account Management section on the main site to view.";
+    }
+}

@@ -192,7 +192,7 @@ final class mf {
             return;
           }
           if (10 <= dk.field_c) {
-            if (l.a(true)) {
+            if (TextLayout.a(true)) {
               if (AccountNameAvailabilityValidator.field_n == 0) {
                 mj.a(false, param1, false);
                 ob.a(0, -84, param2, 0);

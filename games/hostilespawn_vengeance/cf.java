@@ -113,7 +113,7 @@ class cf extends DualLinkNode {
         oj var6 = null;
         var5 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var6 = mm.field_m[param2];
+          var6 = TextHotspotBounds.field_m[param2];
           if (var6.field_w == 5) {
             var6.field_p = var6.field_p + 1;
             if (var6.field_p >= 8) {

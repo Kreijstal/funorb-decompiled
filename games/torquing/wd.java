@@ -151,7 +151,7 @@ final class wd extends DualLinkNode {
           } else {
             stackIn_47_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param7).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_46_1).append(stackIn_47_2).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -232,7 +232,7 @@ final class wd extends DualLinkNode {
           } else {
             stackIn_31_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_30_1).append(stackIn_31_2).append(')').toString());
         }
     }
 
@@ -325,7 +325,7 @@ final class wd extends DualLinkNode {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 

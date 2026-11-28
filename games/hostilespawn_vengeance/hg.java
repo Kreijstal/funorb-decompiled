@@ -133,7 +133,7 @@ final class hg {
           if (param0 != 64) {
             hg.clearStaticReferences(-79);
           }
-          var13 = mm.field_m[0];
+          var13 = TextHotspotBounds.field_m[0];
           var3 = AccountServiceResult.a(param1, 1, var13);
           if (var3 > 16.0) {
             return;

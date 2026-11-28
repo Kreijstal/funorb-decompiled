@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends kj implements tl, WidgetActivationListener {
+final class qh extends kj implements TextHotspotListener, WidgetActivationListener {
     static int field_J;
     static int field_P;
     private AccountCreationResultPanel field_Q;
-    private df field_N;
+    private RichTextWidget field_N;
     private InteractiveWidget field_K;
     static boolean[][][] field_O;
     static String field_L;
@@ -124,7 +124,7 @@ final class qh extends kj implements tl, WidgetActivationListener {
         SectorCacheStore.field_f.bindAsTarget(-53);
     }
 
-    public final void a(df param0, int param1, int param2, boolean param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, boolean param3) {
         int var6 = 0;
         InteractiveWidget var7 = null;
         RuntimeException stackIn_13_0 = null;
@@ -372,7 +372,7 @@ final class qh extends kj implements tl, WidgetActivationListener {
             this.field_Q.o(77);
           }
           if (param4) {
-            this.field_N = (df) null;
+            this.field_N = (RichTextWidget) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -391,8 +391,8 @@ final class qh extends kj implements tl, WidgetActivationListener {
 
     private final String c(boolean param0) {
         if (param0) {
-          df var3 = (df) null;
-          this.a((df) null, -29, 80, false);
+          RichTextWidget var3 = (RichTextWidget) null;
+          this.onTextHotspotActivated((RichTextWidget) null, -29, 80, false);
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -401,7 +401,7 @@ final class qh extends kj implements tl, WidgetActivationListener {
         super(0, 0, 288, 0, (j) null);
         String var7 = null;
         int var3 = 0;
-        bc var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -410,8 +410,8 @@ final class qh extends kj implements tl, WidgetActivationListener {
           this.field_K.field_q = (j) ((Object) new cl());
           var7 = ni.a(new String[]{this.c(false), this.a(109)}, 0, lc.field_m);
           var3 = 20;
-          var4 = new bc(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
-          this.field_N = new df(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
+          this.field_N = new RichTextWidget(var7, var4);
           this.field_N.field_r = "";
           this.field_N.a(0, false, gh.field_z);
           this.field_N.a(1, false, gh.field_z);

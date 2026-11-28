@@ -27,7 +27,7 @@ final class wq extends WidgetWrapper {
           return;
         }
         Sprite var6 = new Sprite(this.field_C.width, this.field_C.height);
-        lq.a(var6, (byte) -94);
+        TextLineMetrics.a(var6, (byte) -94);
         this.field_C.a(param0, param1, 0, 0);
         ln.d(-28558);
         var6.drawWithOpacity(this.x + param2, param3 + this.y, this.field_J);

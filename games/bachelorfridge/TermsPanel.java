@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class TermsPanel extends WidgetContainer implements pc, WidgetActionListener {
+final class TermsPanel extends WidgetContainer implements TextHotspotListener, WidgetActionListener {
     private AccountCreationResultPanel field_F;
     private InteractiveWidget field_E;
     private LinkTextWidget field_D;
@@ -58,7 +58,7 @@ final class TermsPanel extends WidgetContainer implements pc, WidgetActionListen
         }
     }
 
-    public final void a(int param0, LinkTextWidget param1, int param2, byte param3) {
+    public final void onTextHotspotActivated(int param0, LinkTextWidget param1, int param2, byte param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

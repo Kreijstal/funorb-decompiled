@@ -39,7 +39,7 @@ final class ve extends InteractiveWidget {
         }
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != 4) {
           UiWidget var3 = (UiWidget) null;
           this.a((UiWidget) null, 58);

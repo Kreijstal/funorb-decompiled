@@ -16,7 +16,7 @@ final class cf {
         MouseWheelInput.field_c = false;
         sf.a(-1, 11649);
         lc.field_h = pj.field_D;
-        fk.field_q = pj.field_D;
+        TextHotspotBounds.field_q = pj.field_D;
         if (param0 == -107) {
           return;
         }

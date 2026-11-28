@@ -200,8 +200,8 @@ final class bb {
           ao.field_a.field_ab = var14;
           hd.field_b = new ci(0L, (ci) null);
           hd.field_b.field_Ab = wh.a(66, 206, 3, 1856141, 1127256, -1);
-          hl.field_d = new ci(0L, (ci) null);
-          hl.field_d.field_Ab = wh.a(105, 290, 3, 11579568, 6052956, -1);
+          DefaultTextWidgetRenderer.field_d = new ci(0L, (ci) null);
+          DefaultTextWidgetRenderer.field_d.field_Ab = wh.a(105, 290, 3, 11579568, 6052956, -1);
           nj.field_x = new ci(0L, var15);
           nj.field_x.field_G = 1;
           nj.field_x.field_bb = 1;

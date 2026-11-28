@@ -67,8 +67,8 @@ final class GameAssets {
         try {
           integerLocal12 = 0;
           scanLoop1: while (true) {
-            if (integerLocal12 < MixedSupport001.integerArrayState0001.length) {
-              integerArgument3 = MixedSupport001.integerArrayState0001[integerLocal12];
+            if (integerLocal12 < DefaultTextWidgetRenderer.integerArrayState0001.length) {
+              integerArgument3 = DefaultTextWidgetRenderer.integerArrayState0001[integerLocal12];
               stackIntegerLocal5 = integerLocal12 << 4;
               if (integerLocal15 != 0) {
                 break scanLoop1;
@@ -600,7 +600,7 @@ final class GameAssets {
           }
           byteArrayLocal45 = MixedSupport067.computeByteArray0840(-23, "fast_drop_bonus");
           if (null != byteArrayLocal45) {
-            UiComponentPart025.stringState0449 = MixedSupport105.computeString1370(byteArrayLocal45, 2);
+            RichTextWidget.stringState0449 = MixedSupport105.computeString1370(byteArrayLocal45, 2);
           }
           byteArrayLocal46 = MixedSupport067.computeByteArray0840(-21, "press_space_or_enter");
           if (byteArrayLocal46 != null) {
@@ -632,7 +632,7 @@ final class GameAssets {
           }
           byteArrayLocal53 = MixedSupport067.computeByteArray0840(-65, "hs_theme");
           if (byteArrayLocal53 != null) {
-            MixedSupport001.stringState0002 = MixedSupport105.computeString1370(byteArrayLocal53, 2);
+            DefaultTextWidgetRenderer.stringState0002 = MixedSupport105.computeString1370(byteArrayLocal53, 2);
           }
           byteArrayLocal54 = MixedSupport067.computeByteArray0840(-33, "fruit");
           if (null != byteArrayLocal54) {
@@ -1464,7 +1464,7 @@ final class GameAssets {
           }
           byteArrayLocal261 = MixedSupport067.computeByteArray0840(-70, "name_is_out");
           if (null != byteArrayLocal261) {
-            MixedSupport001.stringState0001 = MixedSupport105.computeString1370(byteArrayLocal261, 2);
+            DefaultTextWidgetRenderer.stringState0001 = MixedSupport105.computeString1370(byteArrayLocal261, 2);
           }
           byteArrayLocal262 = MixedSupport067.computeByteArray0840(-40, "main_menu_ticker,0");
           if (null != byteArrayLocal262) {

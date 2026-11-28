@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements fp, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends WidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     static m field_D;
     NameSuggestionsPanel field_M;
-    private rb field_C;
+    private RichTextWidget field_C;
     private ValidatedTextField field_K;
     private ValidatedTextField field_E;
     private ValidatedTextField field_G;
@@ -27,7 +27,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           var4 = param1;
           ((EditableTextField) ((Object) var3)).setText(false, var4, true);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ki.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -68,7 +68,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -91,7 +91,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(byte param0, int param1, int param2, rb param3) {
+    public final void onTextHotspotActivated(byte param0, int param1, int param2, RichTextWidget param3) {
         int discarded$0 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -129,7 +129,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
         int var1 = 1;
         this.field_F = new ok("", (ca) null, var1 != 0);
         this.field_J = new InteractiveWidget(bq.field_a, (ca) null);
-        this.field_N = new InteractiveWidget(cm.field_k, (ca) null);
+        this.field_N = new InteractiveWidget(RichTextLayout.field_k, (ca) null);
         this.field_E.field_n = ag.field_d;
         this.field_K.field_n = BufferedRandomAccessFile.field_c;
         this.field_G.field_n = pf.field_j;
@@ -249,8 +249,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
         na var4 = new na(46, var3, -90 + this.width, 25, this.field_F, true, -120 + this.width, 5, sp.field_R, 11579568, ce.field_a);
         this.a(var4, -6938);
         var3 = var3 + var4.height;
-        pc var5 = new pc(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
-        this.field_C = new rb(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(TranslucentSpriteLayer.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, TranslucentSpriteLayer.field_e.field_x, -1, 2147483647, true);
+        this.field_C = new RichTextWidget(var2, var5);
         this.field_C.field_n = "";
         this.field_C.a(0, (byte) -100, Js5Transport.field_e);
         this.field_C.a(1, (byte) -91, Js5Transport.field_e);
@@ -321,7 +321,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -407,7 +407,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -472,7 +472,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -482,7 +482,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           super.a(-84, param1, param2, param3);
           this.field_J.field_x = this.canSubmitRegistration(19545);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ki.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -541,7 +541,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -581,7 +581,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -618,7 +618,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements fp, Widg
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -16,7 +16,7 @@ abstract class ul extends vd {
     boolean field_F;
 
     ul(gg param0, int param1, int param2) {
-        super(-param1 + mm.field_q >> 1, fb.field_f - param2 >> 1, param1, param2, (nn) null);
+        super(-param1 + TextHotspotBounds.field_q >> 1, fb.field_f - param2 >> 1, param1, param2, (nn) null);
         try {
           this.field_K = param0;
           this.field_I = 0;
@@ -109,7 +109,7 @@ abstract class ul extends vd {
     }
 
     final void a(int param0, int param1, int param2) {
-        this.a(param0, -param2 + fb.field_f >> 1, param1 - 15767, -param0 + mm.field_q >> 1, param2);
+        this.a(param0, -param2 + fb.field_f >> 1, param1 - 15767, -param0 + TextHotspotBounds.field_q >> 1, param2);
         if (param1 != 15767) {
           field_G = (RgbSprite) null;
         }

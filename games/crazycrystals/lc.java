@@ -84,7 +84,7 @@ final class lc {
             }
           }
           for (var1_intLifetime2 = 0; ma.field_n.length > var1_intLifetime2; var1_intLifetime2++) {
-            fo.field_m[var1_intLifetime2] = fo.field_m[var1_intLifetime2] - 1;
+            TextHotspotBounds.field_m[var1_intLifetime2] = TextHotspotBounds.field_m[var1_intLifetime2] - 1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

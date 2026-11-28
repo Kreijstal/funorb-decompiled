@@ -264,7 +264,7 @@ final class bh extends wf implements WidgetActivationListener {
           var4.field_v = this.field_v;
           var4.field_t = 50;
           var4.field_q = 80;
-          var4.field_A = (ad) ((Object) new eg(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_A = (ad) ((Object) new DefaultTextWidgetRenderer(sl.field_q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(-1, var4);
           this.field_eb = this.a(AccountServiceResult.field_f, (byte) 62, (rm) (this));
           return;

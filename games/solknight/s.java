@@ -48,8 +48,8 @@ final class s extends gf {
     }
 
     final static void n(int param0) {
-        if (null != kj.field_P) {
-          kj.field_P.dispose();
+        if (null != RichTextWidget.field_P) {
+          RichTextWidget.field_P.dispose();
         }
         if (param0 != 0) {
           s.o(-8);

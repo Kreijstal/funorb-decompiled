@@ -36,7 +36,7 @@ abstract class oh extends jj {
         try {
           AwtRasterBuffer.field_c = pk.a((byte) 68, "");
           AwtRasterBuffer.field_c.a(false, 10518);
-          j.a(param4, param1, param3 ^ 31756, param0);
+          RichTextLayout.a(param4, param1, param3 ^ 31756, param0);
           if (param3 != 28) {
             oh.c(2, -119, 119);
           }

@@ -181,7 +181,7 @@ final class DisplayNameSelectionPanel extends lc implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (fc) null);
         this.field_E = new ValidatedTextField("", (sk) null, 12);
-        jd var1 = new jd(GzipDecompressor.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(GzipDecompressor.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
         lk var2 = new lk(SectorCacheStore.field_d, var1, (sk) null);
         this.field_z = new InteractiveWidget(ClientException.field_b, (sk) null);
         this.field_D = new InteractiveWidget(qa.field_g, (sk) null);

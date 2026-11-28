@@ -1566,17 +1566,17 @@ final class LevelSession {
         int var6 = 0;
         var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = BufferedSocket.field_a * 3 * pi.field_S[0].field_c / -150;
-        var3 = (-fk.field_m.field_h + 640) / 2;
-        var4 = -(fk.field_m.field_h / 2) + 120;
+        var3 = (-TextHotspotBounds.field_m.field_h + 640) / 2;
+        var4 = -(TextHotspotBounds.field_m.field_h / 2) + 120;
         boolean decompiledSharedTail0 = !(BufferedSocket.field_a <= -25);
         if (!decompiledSharedTail0) {
-          fk.field_m.a(var3, var4);
+          TextHotspotBounds.field_m.a(var3, var4);
           decompiledSharedTail0 = (var6 != 0);
         }
         if (decompiledSharedTail0) {
           var5_int = -(BufferedSocket.field_a * 10);
           var4 = var4 - (255 - var5_int) / 2;
-          fk.field_m.a(var3, var4, var5_int);
+          TextHotspotBounds.field_m.a(var3, var4, var5_int);
         }
         SoftwareRasterizer.setClip(var3 + 94, 101 + var4, var3 + 116, var4 + 131);
         var5_int = 0;
@@ -1643,7 +1643,7 @@ final class LevelSession {
           return;
         }
         boolean decompiledFrameRemainder3 = true;
-        if (ck.field_f[em.field_e] &&
+        if (ck.field_f[TextLayout.field_e] &&
           0 != ib.field_t) {
           if (!nc.field_J[this.levelNumber][0]) {
             this.field_Z = 50;
@@ -2600,7 +2600,7 @@ final class LevelSession {
             var4 = sa.field_g + this.field_H;
             cb.field_b.drawCentredAlpha(var4, 320, 250, 16777215, -1, var2Lifetime1);
             if (0 < this.field_R) {
-              var5 = kh.field_o + this.field_T + af.field_c + this.field_X + l.field_h + this.field_R;
+              var5 = kh.field_o + this.field_T + af.field_c + this.field_X + DefaultTextWidgetRenderer.field_h + this.field_R;
               cb.field_b.drawCentredAlpha(var5, 320, 255 + cb.field_b.field_x, 16777215, -1, var2Lifetime1);
               if (var2Lifetime1 > 200) {
                 if (this.field_R <= 29) {
@@ -3111,13 +3111,13 @@ final class LevelSession {
                     this.b(var42, 57);
                     this.d((byte) -63, wh.field_x[var40.field_Q]);
                     if (!var42.a(false) &&
-                      qa.field_I[var40.field_Q] != 0) {
+                      RichTextWidget.field_I[var40.field_Q] != 0) {
                       this.field_o = this.field_o - 1;
                     }
                     if (0 == this.field_o ||
-                      !(qa.field_I[var40.field_Q] >= 0)) {
+                      !(RichTextWidget.field_I[var40.field_Q] >= 0)) {
                       this.field_o = 5 + hi.a(10, 4, this.field_l);
-                      var34 = Math.abs(qa.field_I[var40.field_Q]);
+                      var34 = Math.abs(RichTextWidget.field_I[var40.field_Q]);
                       while (var34 > 0) {
                         this.a(121, var42.field_N + (double)hi.a(var42.field_O / 2, 4, this.field_l), var42.field_o + (double)hi.a(var42.field_m, 4, this.field_l), false, cj.field_c[var40.field_Q]);
                         var34--;
@@ -3626,13 +3626,13 @@ final class LevelSession {
                       this.b(var4, 64);
                       this.d((byte) -126, wh.field_x[var4.field_Q]);
                       if (!var4.a(false) &&
-                        0 != qa.field_I[var4.field_Q]) {
+                        0 != RichTextWidget.field_I[var4.field_Q]) {
                         this.field_o = this.field_o - 1;
                       }
                       if (this.field_o == 0 ||
-                        !(qa.field_I[var4.field_Q] >= 0)) {
+                        !(RichTextWidget.field_I[var4.field_Q] >= 0)) {
                         this.field_o = hi.a(10, 4, this.field_l) + 5;
-                        var8 = Math.abs(qa.field_I[var4.field_Q]);
+                        var8 = Math.abs(RichTextWidget.field_I[var4.field_Q]);
                         while (var8 > 0) {
                           this.a(123, var4.field_N + (double)hi.a(var4.field_O / 2, 4, this.field_l), var4.field_o + (double)hi.a(var4.field_m, 4, this.field_l), false, cj.field_c[var4.field_Q]);
                           var8--;

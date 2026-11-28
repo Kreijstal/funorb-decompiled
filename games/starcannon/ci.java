@@ -108,10 +108,10 @@ final class ci implements de {
               param1 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (nh.field_h == null) {
-                nh.field_h = kj.field_E.createImage(304, 34);
+              if (TextLineMetrics.field_h == null) {
+                TextLineMetrics.field_h = kj.field_E.createImage(304, 34);
               }
-              var11 = nh.field_h.getGraphics();
+              var11 = TextLineMetrics.field_h.getGraphics();
               var11.setColor(param1);
               var11.drawRect(0, 0, 303, 33);
               var11.fillRect(2, 2, 3 * param0, 30);
@@ -121,7 +121,7 @@ final class ci implements de {
               var11.setFont(IsaacRandom.field_c);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var10.drawImage(nh.field_h, -152 + eh.field_n / 2, -18 + DiskCacheWorker.field_d / 2, (java.awt.image.ImageObserver) null);
+              var10.drawImage(TextLineMetrics.field_h, -152 + eh.field_n / 2, -18 + DiskCacheWorker.field_d / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

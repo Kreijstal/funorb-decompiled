@@ -44,7 +44,7 @@ final class nc extends UiWidget {
             SoftwareRasterizer.setPixel(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
-        id.b((byte) -58);
+        DefaultTextWidgetRenderer.b((byte) -58);
         return var3;
     }
 
@@ -72,7 +72,7 @@ final class nc extends UiWidget {
         if (this.field_K < 65536) {
           IntrusiveNode.a(20, this.field_p + var5, var6, var6 + this.field_t, (this.field_K * this.field_p >> 16) + var5);
           this.a(var5, (byte) 46, var6, this.field_C[1]);
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
         }
     }
 
@@ -107,7 +107,7 @@ final class nc extends UiWidget {
         if (param0 != 98) {
           field_H = -55;
         }
-        vk.field_b = param1;
+        TextLayout.field_b = param1;
     }
 
     final void a(int param0, boolean param1, int param2, UiWidget param3) {
@@ -196,13 +196,13 @@ final class nc extends UiWidget {
           for (var6 = -this.field_z + param0; var6 < var5_int; var6 = var6 + param3.field_v) {
             param3.draw(var6, param2);
           }
-          id.b((byte) -58);
+          DefaultTextWidgetRenderer.b((byte) -58);
           if (this.field_P.field_v + param0 >= SoftwareRasterizer.field_e) {
             hj.a(this.field_I, param1 ^ 47);
             param3.draw(-this.field_z, 0);
             param3.draw(-this.field_z + 2 * this.field_M, 0);
             this.field_E.drawMultiply(0, 0);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             this.field_I.draw(param0, param2);
           }
           if (SoftwareRasterizer.field_c >= var5_int - this.field_P.field_v) {
@@ -212,7 +212,7 @@ final class nc extends UiWidget {
             param3.draw(-var7, 0);
             param3.draw(2 * this.field_M - var7, 0);
             this.field_P.drawMultiply(0, 0);
-            id.b((byte) -58);
+            DefaultTextWidgetRenderer.b((byte) -58);
             this.field_I.draw(var5_int - this.field_P.field_v, param2);
             return;
           }
@@ -261,7 +261,7 @@ final class nc extends UiWidget {
           SoftwareRasterizer.drawHorizontalLine(var7 + this.field_M, var6, this.field_M, var12Lifetime1);
           SoftwareRasterizer.drawHorizontalLine(-this.field_M + var7, var6, this.field_M, var12Lifetime1);
         }
-        id.b((byte) -58);
+        DefaultTextWidgetRenderer.b((byte) -58);
         return var14;
     }
 

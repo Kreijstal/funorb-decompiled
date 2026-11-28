@@ -223,7 +223,7 @@ final class nj {
                   var10 = 65280 & var8;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = (255 & var8) >> 3;
-                  SoftwareRasterizer.field_a[var6_int] = ne.a(ne.a(var9 << 16, var10), var11);
+                  SoftwareRasterizer.field_a[var6_int] = TextLayout.a(TextLayout.a(var9 << 16, var10), var11);
                 }
                 var6_int++;
               }

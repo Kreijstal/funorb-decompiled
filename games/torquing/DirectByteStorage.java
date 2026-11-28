@@ -47,7 +47,7 @@ final class DirectByteStorage extends ByteStorage {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "jm.B(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "jm.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -60,7 +60,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.position(0);
           this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "jm.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

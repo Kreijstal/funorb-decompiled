@@ -76,7 +76,7 @@ class pv extends IntrusiveNode {
           if (!param1) {
             field_i = -56;
           }
-          kq.field_i = SoftwareRasterizer.field_c;
+          StopFloodEffect.field_i = SoftwareRasterizer.field_c;
           FullscreenFocusCanvas.field_b = SoftwareRasterizer.field_i;
           if (param0) {
             stackIn_6_0 = ld.field_p;
@@ -85,7 +85,7 @@ class pv extends IntrusiveNode {
           }
           stackIn_9_1 = !(param1);
           dna.c(stackIn_6_0, stackIn_9_1);
-          BitPacketBuffer.field_n.a(0, ela.field_i.field_p - 42, 0, ela.field_i.field_sb, (byte) 99);
+          BitPacketBuffer.field_n.a(0, DisableMoveSlotEffect.field_i.field_p - 42, 0, DisableMoveSlotEffect.field_i.field_sb, (byte) 99);
           StampedeSpecial.field_t.a(rg.field_h, 31407, ByteStorage.field_f.field_sb, 0, 0);
           stackIn_11_0 = FlirtEvent.field_t;
           stackIn_11_1 = 18;
@@ -98,7 +98,7 @@ class pv extends IntrusiveNode {
           ((UiComponent) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, -stackIn_12_3 + ByteStorage.field_f.field_sb, 0, rg.field_h + 2);
           ut.field_q.a(18, 31407, 42 + rj.field_j, -40 + (ByteStorage.field_f.field_sb - rj.field_j - 2), rg.field_h + 2);
           SnowEvent.field_q.a((byte) -58, -2 + (ByteStorage.field_f.field_p - (rg.field_h + 20)), 0, 22 + rg.field_h, ByteStorage.field_f.field_sb, rj.field_j, 2);
-          jj.field_wb.a(40, 31407, ela.field_i.field_sb, 0, -40 + ela.field_i.field_p);
+          jj.field_wb.a(40, 31407, DisableMoveSlotEffect.field_i.field_sb, 0, -40 + DisableMoveSlotEffect.field_i.field_p);
           GzipDecompressor.field_a.a(30, 31407, ho.field_g.field_sb, 0, 0);
           vm.field_i.a(-40 + (ho.field_g.field_p - 32), 31407, ho.field_g.field_sb, 0, 30);
           var2_int = 3 + ld.field_q;
@@ -116,7 +116,7 @@ class pv extends IntrusiveNode {
           if (var4 > 40) {
             var4 = 40;
           }
-          mh.field_j.a(var4, 31407, -5 + (vm.field_i.field_sb - 5), 5, 5);
+          CreaturePoseEffect.field_j.a(var4, 31407, -5 + (vm.field_i.field_sb - 5), 5, 5);
           var5 = var4 + 5 + 2;
           for (var6 = 0; 4 + ld.field_q > var6; var6++) {
             if ((1 != var6 ||

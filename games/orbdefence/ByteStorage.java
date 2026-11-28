@@ -13,7 +13,7 @@ abstract class ByteStorage {
 
     abstract void setBytes(int param0, byte[] param1);
 
-    final static void a(ed param0, int param1, String param2, BitmapFont param3, int param4) {
+    final static void a(TextLineMetrics param0, int param1, String param2, BitmapFont param3, int param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -36,7 +36,7 @@ abstract class ByteStorage {
           var7 = 1;
           if (param4 != 404465128) {
             var10 = (BitmapFont) null;
-            ByteStorage.a((ed) null, 108, (String) null, (BitmapFont) null, 30);
+            ByteStorage.a((TextLineMetrics) null, 108, (String) null, (BitmapFont) null, 30);
           }
           while (param2.length() > var7) {
             var8 = param2.charAt(var7);

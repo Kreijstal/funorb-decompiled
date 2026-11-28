@@ -163,7 +163,7 @@ abstract class GameShell extends GameApplet {
         f.field_g = param7;
         fg.field_b = param4;
         wc.field_s = param2;
-        ld.field_d = param3;
+        TextLayout.field_d = param3;
         ik.field_b = param0;
         this.f((byte) -95);
         bk.b(93);
@@ -185,7 +185,7 @@ abstract class GameShell extends GameApplet {
           int var5Lifetime2;
           int var5Lifetime3;
           var9 = Terraphoenix.field_V;
-          var4 = a.a(param0, vj.field_P, PasswordValidator.field_o, 81);
+          var4 = a.a(param0, RichTextWidget.field_P, PasswordValidator.field_o, 81);
           if (0 == var4) {
             throw new IllegalStateException();
           }
@@ -196,7 +196,7 @@ abstract class GameShell extends GameApplet {
               RasterBuffer.field_a = null;
               bh.field_d = null;
             }
-            var12 = rd.b((byte) 92);
+            var12 = RichTextLayout.b((byte) 92);
             if (var12 != null) {
               DebouncedFieldValidator.a(true, var12.booleanValue());
             }
@@ -337,7 +337,7 @@ abstract class GameShell extends GameApplet {
           vk.a(-8177);
         }
         if (lk.field_d != null) {
-          vj.field_P = lk.field_d.consumeWheelDelta(125);
+          RichTextWidget.field_P = lk.field_d.consumeWheelDelta(125);
         }
         if (ra.c((byte) 66)) {
           var3 = 1200 * BitPacketBuffer.getTicksPerSecond((byte) -127);
@@ -436,9 +436,9 @@ abstract class GameShell extends GameApplet {
           if (0 != PasswordValidator.field_o) {
             bl.field_a = va.a(wc.field_s, -120);
           }
-          bi.field_d = vj.a(false, true, ld.field_d, (byte) 62, 1);
-          PasswordValidator.field_q = vj.a(false, true, ik.field_b, (byte) 62, 1);
-          ch.field_g = vj.a(false, true, f.field_g, (byte) 62, 1);
+          bi.field_d = RichTextWidget.a(false, true, TextLayout.field_d, (byte) 62, 1);
+          PasswordValidator.field_q = RichTextWidget.a(false, true, ik.field_b, (byte) 62, 1);
+          ch.field_g = RichTextWidget.a(false, true, f.field_g, (byte) 62, 1);
           LoginPanel.field_H = 2;
           TextFieldValidator.field_i = PasswordValidator.field_q;
           ByteStorage.field_d = bi.field_d;
@@ -465,7 +465,7 @@ abstract class GameShell extends GameApplet {
           GameShell.a((byte) 103, ch.field_g)) {
           IntrusiveDeque.e(-119);
           hj.clearStaticReferences(-7958);
-          TutorialController.field_e = hh.field_k;
+          TutorialController.field_e = TextHotspotBounds.field_k;
           wd.field_b = false;
           NameSuggestionsPanel.a(ch.field_g, DelegatingCanvas.field_c, PasswordValidator.field_q, bi.field_d, (byte) -22);
           if (ea.field_j ||
@@ -792,7 +792,7 @@ abstract class GameShell extends GameApplet {
               if (q.field_Jb == 0) {
                 discarded$3 = this.a(false, false, -91);
               } else {
-                BitPacketBuffer.pumpClientUi(3795, vj.field_P);
+                BitPacketBuffer.pumpClientUi(3795, RichTextWidget.field_P);
               }
             }
           }

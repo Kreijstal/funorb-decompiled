@@ -264,7 +264,7 @@ final class pc {
                 }
                 case 23: {
                     try {
-                        stackIn_24_0 = mm.field_m[0].field_j;
+                        stackIn_24_0 = TextHotspotBounds.field_m[0].field_j;
                         statePc = 24;
                         continue scanLoop1;
                     } catch (Throwable stateCaught_23) {
@@ -1992,7 +1992,7 @@ final class pc {
                 }
                 case 241: {
                     try {
-                        if (stackIn_241_0 != (cj.field_I & 4)) {
+                        if (stackIn_241_0 != (RichTextWidget.field_I & 4)) {
                             /* Inlined CFG state: 244. */
                             {
                                 var16 = var1_int;

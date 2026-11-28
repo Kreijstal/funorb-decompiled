@@ -76,7 +76,7 @@ class mv extends AnimationNode {
                   if (var4_ref instanceof ClearTileFlagEffect) {
                     ((ClearTileFlagEffect) (var4_ref)).apply(var3, this.field_l.field_h, 12);
                   } else {
-                    if (var4_ref instanceof o) {
+                    if (var4_ref instanceof ChangeAllCreaturesHealthEffect) {
                       for (var7 = 0; this.field_l.field_h.width > var7; var7++) {
                         for (var8_int = 0; this.field_l.field_h.height > var8_int; var8_int++) {
                           var19 = this.field_l.field_h.tiles[var7][var8_int].occupant;
@@ -87,10 +87,10 @@ class mv extends AnimationNode {
                         }
                       }
                       this.field_l.field_s.a(-1907, 20);
-                      ((o) (var4_ref)).apply(var3, this.field_l.field_h, 12);
+                      ((ChangeAllCreaturesHealthEffect) (var4_ref)).apply(var3, this.field_l.field_h, 12);
                     } else {
-                      if (var4_ref instanceof bm) {
-                        ((bm) (var4_ref)).apply(var3, this.field_l.field_h, 12);
+                      if (var4_ref instanceof SetTileTerrainEffect) {
+                        ((SetTileTerrainEffect) (var4_ref)).apply(var3, this.field_l.field_h, 12);
                       }
                     }
                   }
@@ -113,15 +113,15 @@ class mv extends AnimationNode {
                 if (this.field_k.moveId != 61) {
                   if (this.field_k.moveId != 62) {
                     if (this.field_k.moveId != 63) {
-                      var18.b(-1, 6);
+                      var18.playAnimation(-1, 6);
                     } else {
-                      var18.b(-1, 7);
+                      var18.playAnimation(-1, 7);
                     }
                   } else {
-                    var18.b(-1, 7);
+                    var18.playAnimation(-1, 7);
                   }
                 } else {
-                  var18.b(-1, 7);
+                  var18.playAnimation(-1, 7);
                 }
                 if (!((DamageEffect) (var4_ref)).field_j) {
                   if (0 >= var4_ref.field_f) {
@@ -293,7 +293,7 @@ class mv extends AnimationNode {
             if (this.field_k.d((byte) -120)) {
               return false;
             }
-            var5.b(-1, var8_ref.field_o);
+            var5.playAnimation(-1, var8_ref.field_o);
             PizzaArenaTheme.e(49, var5.field_s.field_o.field_e);
           }
           return false;

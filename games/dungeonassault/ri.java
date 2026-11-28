@@ -10,11 +10,11 @@ final class ri {
     static int field_b;
     static String field_f;
 
-    final static hh a(byte param0) {
+    final static DefaultTextWidgetRenderer a(byte param0) {
         if (param0 <= 25) {
           field_d = (RgbSprite[]) null;
           if (null == IntrusiveNode.field_b) {
-            IntrusiveNode.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
+            IntrusiveNode.field_b = new DefaultTextWidgetRenderer(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
             return IntrusiveNode.field_b;
           }
           return IntrusiveNode.field_b;
@@ -22,7 +22,7 @@ final class ri {
         if (null != IntrusiveNode.field_b) {
           return IntrusiveNode.field_b;
         }
-        IntrusiveNode.field_b = new hh(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
+        IntrusiveNode.field_b = new DefaultTextWidgetRenderer(ta.field_e, 20, 0, 0, 0, 11579568, -1, 0, 0, ta.field_e.field_H, -1, 2147483647, true);
         return IntrusiveNode.field_b;
     }
 
@@ -61,7 +61,7 @@ final class ri {
           }
           stackIn_11_0 = -49;
           stackIn_12_1 = !(wk.field_g >= 13);
-          DualLinkNode.field_p = l.createAccountSuccessResultWithIntGuard(stackIn_11_0, stackIn_12_1);
+          DualLinkNode.field_p = TextLayout.createAccountSuccessResultWithIntGuard(stackIn_11_0, stackIn_12_1);
           var6 = (String[]) null;
           ok.a(2, (String[]) null);
           return;

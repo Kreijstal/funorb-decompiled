@@ -230,8 +230,8 @@ final class hl extends WidgetWrapper {
 
     final static void a(byte param0, java.awt.Component param1) {
         try {
-          param1.removeKeyListener(vv.field_e);
-          param1.removeFocusListener(vv.field_e);
+          param1.removeKeyListener(TextLayout.field_e);
+          param1.removeFocusListener(TextLayout.field_e);
           gfa.field_c = -1;
           if (param0 > -46) {
             field_D = (Sprite[]) null;

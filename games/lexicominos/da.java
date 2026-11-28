@@ -135,7 +135,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 break;
               }
               var7_ref_String = param1.substring(var6_int + 2, var5);
-              if (!bc.a(param2, (CharSequence) ((Object) var7_ref_String)) &&
+              if (!RichTextWidget.a(param2, (CharSequence) ((Object) var7_ref_String)) &&
                 var11 == 0) {
                 continue scanLoop1;
               }
@@ -175,7 +175,7 @@ final class da implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 break;
               }
               var9 = param1.substring(var8Lifetime1 + 2, var5Lifetime1);
-              if (!bc.a(param2, (CharSequence) ((Object) var9))) {
+              if (!RichTextWidget.a(param2, (CharSequence) ((Object) var9))) {
                 continue scanLoop3;
               }
               if (var11 == 0) {

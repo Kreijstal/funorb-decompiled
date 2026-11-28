@@ -36,7 +36,7 @@ final class dh extends IntrusiveNode {
         if (param2) {
           var4++;
         }
-        return ek.field_a[var4];
+        return DefaultTextWidgetRenderer.field_a[var4];
     }
 
     dh(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -70,6 +70,6 @@ final class dh extends IntrusiveNode {
         if (param2) {
           var4++;
         }
-        return ek.field_a[var4];
+        return DefaultTextWidgetRenderer.field_a[var4];
     }
 }

@@ -111,7 +111,7 @@ final class ab {
         RuntimeException var1_ref = null;
         var4 = MinerDisturbance.field_ab;
         try {
-          var5 = mg.field_e;
+          var5 = TextLineMetrics.field_e;
           var1 = var5;
           var2 = 0;
           if (param0 != -20707) {

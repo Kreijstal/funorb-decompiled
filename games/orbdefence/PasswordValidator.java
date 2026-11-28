@@ -55,7 +55,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
         if (oh.field_c.field_g) {
           lb.field_g = lb.field_g | oh.field_c.field_i;
-          dm.field_f = dm.field_f & ~oh.field_c.field_i;
+          TextLayout.field_f = TextLayout.field_f & ~oh.field_c.field_i;
           pc.field_cb = true;
           oh.field_c = null;
           return;
@@ -224,7 +224,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_11_0;
           }
           if (me.a(var5, (byte) -27)) {
-            stackIn_15_0 = jc.field_n;
+            stackIn_15_0 = DefaultTextWidgetRenderer.field_n;
             return stackIn_15_0;
           }
           if (this.b(param1, (byte) -99)) {

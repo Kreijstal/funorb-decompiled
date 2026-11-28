@@ -183,7 +183,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         fm.field_R[27] = ec.field_g;
         fm.field_R[15] = qa.field_b;
         fm.field_R[20] = sh.field_c;
-        fm.field_R[28] = se.field_Z;
+        fm.field_R[28] = RichTextWidget.field_Z;
         fm.field_R[6] = jg.field_L;
         fm.field_R[34] = ca.field_e;
         fm.field_R[33] = qm.field_a;
@@ -194,7 +194,7 @@ abstract class ArchiveRequest extends DualLinkNode {
         fm.field_R[3] = TextFieldValidator.field_g;
         fm.field_R[18] = dh.field_h;
         fm.field_R[29] = LoginPanel.field_P;
-        fm.field_R[22] = se.field_Z;
+        fm.field_R[22] = RichTextWidget.field_Z;
         fm.field_R[8] = hm.field_f;
         fm.field_R[24] = ma.field_H;
         fm.field_R[14] = ao.field_c;

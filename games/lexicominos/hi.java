@@ -108,7 +108,7 @@ final class hi {
           for (var3 = 0; MouseWheelInput.field_g.length > var3; var3++) {
             var4 = ni.field_a[var3];
             if (var4 >= 0) {
-              if (bc.field_H.field_d == var4) {
+              if (RichTextWidget.field_H.field_d == var4) {
                 var5 = MatchingFieldValidator.field_n;
               } else {
                 var5 = SecondaryNodeDequeIterator.field_c;
@@ -158,7 +158,7 @@ final class hi {
             var7Lifetime1 = ii.a(stackIn_37_0, stackIn_38_1, 0);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + CrossfadingMidiPcmStream.field_D;
             if (var4 >= 0) {
-              if (bc.field_H.field_d != var4) {
+              if (RichTextWidget.field_H.field_d != var4) {
                 stackIn_43_0 = sc.field_d;
               } else {
                 stackIn_43_0 = fg.field_c;
@@ -174,7 +174,7 @@ final class hi {
               pb.field_i.drawString(var6, var8Lifetime1, var1_int + sb.field_f, var5, -1);
               var1_int = var1_int + hc.field_fb;
             } else {
-              fb.field_m.drawString(var6, var8Lifetime1, var1_int + kk.field_o, var5, -1);
+              fb.field_m.drawString(var6, var8Lifetime1, var1_int + RichTextLayout.field_o, var5, -1);
               var1_int = var1_int + (oh.field_b + we.field_l + fb.field_g);
             }
           }

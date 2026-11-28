@@ -24,7 +24,7 @@ class UiComponent extends HashNode {
     TextLayout textLayoutState0001;
     CallbackContract006 callbackContract006State0001;
 
-    String computeString0223(byte byteArgument1) {
+    String getTooltipText(byte byteArgument1) {
         if (byteArgument1 == 113) {
           return !this.booleanState0018 ? null : this.stringState0080;
         }
@@ -476,7 +476,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport123.integerState0787 = DualNode.integerState0062;
-          MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+          MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
         if (HuffmanCodec.integerState0353 == 0) {
@@ -498,7 +498,7 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport123.integerState0787 = DualNode.integerState0062;
-            MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+            MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
             return booleanArgument2;
           }
           if (MixedSupport123.integerState0787 == 0) {
@@ -506,7 +506,7 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport123.integerState0787 = DualNode.integerState0062;
-            MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+            MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
             return booleanArgument2;
           }
           this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
@@ -526,7 +526,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport123.integerState0787 = DualNode.integerState0062;
-          MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+          MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
         if (integerLocal1 == 0) {
@@ -541,7 +541,7 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport123.integerState0787 = DualNode.integerState0062;
-            MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+            MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
             return booleanArgument2;
           }
           if (MixedSupport123.integerState0787 == 0) {
@@ -549,7 +549,7 @@ class UiComponent extends HashNode {
               this.integerState0104 = 110;
             }
             MixedSupport123.integerState0787 = DualNode.integerState0062;
-            MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+            MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
             return booleanArgument2;
           }
           this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
@@ -569,7 +569,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport123.integerState0787 = DualNode.integerState0062;
-          MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+          MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
         this.computeBoolean0214(MixedSupport101.integerState0590, integerArgument1, HashNode.integerState0069, this, HuffmanCodec.integerState0353, integerArgument3, false);
@@ -588,7 +588,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport123.integerState0787 = DualNode.integerState0062;
-          MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+          MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
         if (MixedSupport123.integerState0787 == 0) {
@@ -596,7 +596,7 @@ class UiComponent extends HashNode {
             this.integerState0104 = 110;
           }
           MixedSupport123.integerState0787 = DualNode.integerState0062;
-          MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+          MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
           return booleanArgument2;
         }
         this.performAction0213(MixedSupport101.integerState0590, 64, integerArgument3, this, integerArgument1, HashNode.integerState0069);
@@ -616,7 +616,7 @@ class UiComponent extends HashNode {
           this.integerState0104 = 110;
         }
         MixedSupport123.integerState0787 = DualNode.integerState0062;
-        MixedSupport112.performAction1470(this.computeString0223((byte) 113), -1);
+        MixedSupport112.performAction1470(this.getTooltipText((byte) 113), -1);
         return booleanArgument2;
     }
 
@@ -815,7 +815,7 @@ class UiComponent extends HashNode {
 
     UiComponent(String stringArgument1, CallbackContract004 callbackContract004Argument2, CallbackContract006 callbackContract006Argument3) {
         RuntimeException runtimeException = null;
-        CallbackContract012 callbackContract012Local2 = null;
+        TextWidgetRenderer callbackContract012Local2 = null;
         RuntimeException stackRuntimeExceptionLocal3 = null;
         StringBuilder stackStringBuilderLocal4 = null;
         String stackStringLocal5 = null;
@@ -830,10 +830,10 @@ class UiComponent extends HashNode {
           this.callbackContract006State0001 = callbackContract006Argument3;
           this.stringState0078 = stringArgument1;
           this.callbackContract004State0006 = callbackContract004Argument2;
-          if (this.callbackContract004State0006 instanceof CallbackContract012) {
-            callbackContract012Local2 = (CallbackContract012) ((Object) this.callbackContract004State0006);
-            this.integerState0107 = callbackContract012Local2.computeInteger0021(this, 0);
-            this.integerState0108 = callbackContract012Local2.computeInteger0012(this, -49);
+          if (this.callbackContract004State0006 instanceof TextWidgetRenderer) {
+            callbackContract012Local2 = (TextWidgetRenderer) ((Object) this.callbackContract004State0006);
+            this.integerState0107 = callbackContract012Local2.getPreferredWidth(this, 0);
+            this.integerState0108 = callbackContract012Local2.getPreferredHeight(this, -49);
           }
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal11) {

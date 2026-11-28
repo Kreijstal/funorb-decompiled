@@ -162,14 +162,14 @@ final class FishRainSpecial extends SpecialOrder {
             SoftwareRasterizer.resetClip();
           }
           jha.field_g.drawText(AgeValidator.field_g, 452, 306, 65793, -1);
-          var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, kt.field_k, true)}, vla.field_u);
+          var4 = lga.a(true, new String[]{ti.a((byte) -118, 2, (long)dea.field_n, SetMoveSlotCooldownEffect.field_k, true)}, vla.field_u);
           jha.field_g.drawRightAligned(var4, 600, 306, 16699649, -1);
           WidgetWrapper.field_z.drawRightAligned(var4, 600, 306, 65793, -1);
           jha.field_g.drawText(jla.field_c, 452, 400, 65793, -1);
           if (param1 != 36) {
             field_q = (String) null;
           }
-          var5 = lga.a(true, new String[]{ti.a((byte) -120, 2, (long)mg.field_m.field_a, kt.field_k, true)}, vla.field_u);
+          var5 = lga.a(true, new String[]{ti.a((byte) -120, 2, (long)mg.field_m.field_a, SetMoveSlotCooldownEffect.field_k, true)}, vla.field_u);
           jha.field_g.drawRightAligned(var5, 600, 400, 16699649, -1);
           WidgetWrapper.field_z.drawRightAligned(var5, 600, 400, 65793, -1);
           ClamsAnimation.field_y.draw(412, 161);

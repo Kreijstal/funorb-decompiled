@@ -20,7 +20,7 @@ abstract class k extends IntrusiveNode {
         RuntimeException var2_ref = null;
         int var3 = 0;
         EventEffect stackIn_2_0 = null;
-        kt stackIn_4_0 = null;
+        SetMoveSlotCooldownEffect stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -32,7 +32,7 @@ abstract class k extends IntrusiveNode {
           }
           var2 = qi.a(param1, (byte) 60);
           var3 = param1.readUnsignedByte(16711935);
-          stackIn_4_0 = new kt(var2, var3);
+          stackIn_4_0 = new SetMoveSlotCooldownEffect(var2, var3);
           return (EventEffect) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -160,7 +160,7 @@ abstract class k extends IntrusiveNode {
     final static void c(int param0) {
         eia.field_d = SoftwareRasterizer.field_k;
         jf.field_m = SoftwareRasterizer.field_f;
-        tq.field_r = SoftwareRasterizer.field_h;
+        RichTextLayout.field_r = SoftwareRasterizer.field_h;
         if (param0 != 3685) {
           return;
         }

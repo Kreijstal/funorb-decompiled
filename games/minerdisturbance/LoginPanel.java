@@ -200,7 +200,7 @@ final class LoginPanel extends kn implements TextFieldListener, WidgetActivation
             this.field_t = this.field_t + (5 + var7.textHeight(this.field_R, this.field_v - 40, var7.field_I));
           }
           var8 = MouseWheelInput.field_c;
-          var9 = hm.a(28, bm.c(-83));
+          var9 = hm.a(28, RichTextLayout.c(-83));
           if (var9 != ak.field_b) {
             if (var9 == hj.field_e) {
               var8 = ka.field_b;

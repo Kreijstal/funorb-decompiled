@@ -10,7 +10,7 @@ abstract class bh extends mf implements ra {
     static String field_H;
     static int field_F;
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         int var3 = 0;
         mf[] var2;
         mf var4;
@@ -26,7 +26,7 @@ abstract class bh extends mf implements ra {
         for (var3 = param0; var3 < var7.length; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var5 = var4.g(0);
+            var5 = var4.getTooltipText(0);
             if (var5 != null) {
               return var5;
             }

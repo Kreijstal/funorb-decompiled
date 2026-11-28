@@ -387,7 +387,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             !NameSuggestionsPanel.field_E) {
             v.field_b = true;
             if (FrameTimer.field_b &&
-              -nh.field_b + dd.correctedCurrentTimeMillis(82) > 1000L) {
+              -TextLineMetrics.field_b + dd.correctedCurrentTimeMillis(82) > 1000L) {
               var2 = param0.getClipBounds();
               if (var2 != null) {
                 if (var2.width < cg.field_b) {
@@ -678,7 +678,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           v.field_b = true;
           jj.field_E = false;
           var3 = -95 / ((param0 + 36) / 45);
-          nh.field_b = dd.correctedCurrentTimeMillis(63);
+          TextLineMetrics.field_b = dd.correctedCurrentTimeMillis(63);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

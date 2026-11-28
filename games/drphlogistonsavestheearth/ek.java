@@ -67,7 +67,7 @@ final class ek extends IntrusiveNode {
               var5 = var4;
               nj.field_p.position = 0;
               stackIn_10_0 = (!param1) ? -1 : -2;
-              l.field_q = stackIn_10_0;
+              DefaultTextWidgetRenderer.field_q = stackIn_10_0;
               gg.field_l = stackIn_10_0;
               field_h = stackIn_10_0;
               var5.position = 0;

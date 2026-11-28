@@ -7,7 +7,7 @@ final class AgeValidator extends TextFieldValidator {
     static RgbSprite field_p;
     static RgbSprite field_o;
 
-    final static void a(int param0, byte param1, BitmapFont param2, String param3, pm param4) {
+    final static void a(int param0, byte param1, BitmapFont param2, String param3, TextLineMetrics param4) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -79,8 +79,8 @@ final class AgeValidator extends TextFieldValidator {
         int var7 = 0;
         try {
           if (param1 != -84) {
-            pm var8 = (pm) null;
-            AgeValidator.a(-5, (byte) -60, (BitmapFont) null, (String) null, (pm) null);
+            TextLineMetrics var8 = (TextLineMetrics) null;
+            AgeValidator.a(-5, (byte) -60, (BitmapFont) null, (String) null, (TextLineMetrics) null);
           }
           var6_int = param4.field_u << 3;
           param3 = (param3 << 4) + (15 & var6_int);
@@ -151,7 +151,7 @@ final class AgeValidator extends TextFieldValidator {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        pm var9 = null;
+        TextLineMetrics var9 = null;
         p var10 = null;
         oj var11 = null;
         p var12 = null;
@@ -163,11 +163,11 @@ final class AgeValidator extends TextFieldValidator {
         int var6Lifetime1;
         var8 = HostileSpawn.field_I ? 1 : 0;
         try {
-          var11 = mm.field_m[0];
+          var11 = TextHotspotBounds.field_m[0];
           var3 = 0;
           if (param0 >= -5) {
-            var9 = (pm) null;
-            AgeValidator.a(20, (byte) 120, (BitmapFont) null, (String) null, (pm) null);
+            var9 = (TextLineMetrics) null;
+            AgeValidator.a(20, (byte) 120, (BitmapFont) null, (String) null, (TextLineMetrics) null);
           }
           var4 = 0;
           if (param1 == 1 &&
@@ -404,8 +404,8 @@ final class AgeValidator extends TextFieldValidator {
 
     final static void a(boolean param0, int param1) {
         if (param0) {
-          pm var3 = (pm) null;
-          AgeValidator.a(-17, (byte) 69, (BitmapFont) null, (String) null, (pm) null);
+          TextLineMetrics var3 = (TextLineMetrics) null;
+          AgeValidator.a(-17, (byte) 69, (BitmapFont) null, (String) null, (TextLineMetrics) null);
         }
         if (p.field_m[param1] == null) {
           p.field_m[param1] = pi.a(10, 6413, 3, EmailFormatValidator.field_p[param1], 1);

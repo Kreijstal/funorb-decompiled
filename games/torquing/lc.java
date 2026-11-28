@@ -69,7 +69,7 @@ final class lc extends ro {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -77,7 +77,7 @@ final class lc extends ro {
         if (param0 != -76) {
           return -86L;
         }
-        return km.correctedCurrentTimeMillis(-1) - rb.field_C;
+        return km.correctedCurrentTimeMillis(-1) - RichTextWidget.field_C;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -194,7 +194,7 @@ final class lc extends ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1), "lc.J(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "lc.J(" + param0 + ')');
         }
     }
 
@@ -417,7 +417,7 @@ final class lc extends ro {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "lc.A(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1_ref), "lc.A(" + param0 + ')');
         }
     }
 

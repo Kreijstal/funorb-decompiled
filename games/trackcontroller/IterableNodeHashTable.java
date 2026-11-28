@@ -30,7 +30,7 @@ final class IterableNodeHashTable implements Iterable {
         if (gl.field_I < 20) {
           return true;
         }
-        if (!ic.a(1)) {
+        if (!DefaultTextWidgetRenderer.a(1)) {
           return true;
         }
         if (0 >= si.field_d) {

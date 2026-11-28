@@ -22,7 +22,7 @@ class mf extends IntrusiveNode {
     boolean field_w;
     static int field_z;
     String field_j;
-    ub field_t;
+    TextLayout field_t;
     static rk[] field_s;
 
     boolean a(int param0, int param1, int param2, byte param3, mf param4, int param5, int param6) {
@@ -289,7 +289,7 @@ class mf extends IntrusiveNode {
                     }
                   }
                 } else {
-                  if (this.a(th.field_d, re.field_m, ag.field_f, (byte) 88, this, param1, param2)) {
+                  if (this.a(th.field_d, TextHotspotBounds.field_m, ag.field_f, (byte) 88, this, param1, param2)) {
                     param3 = false;
                   }
                   if (((wh.field_f == 0)) &&
@@ -342,7 +342,7 @@ class mf extends IntrusiveNode {
               }
               break regionExit1;
             }
-            if (!this.a(th.field_d, re.field_m, ag.field_f, (byte) 88, this, param1, param2)) {
+            if (!this.a(th.field_d, TextHotspotBounds.field_m, ag.field_f, (byte) 88, this, param1, param2)) {
               if (var5 == 0) {
                 if (((wh.field_f == 0)) &&
                   ((DiskCacheWorker.field_h != 0))) {
@@ -416,11 +416,11 @@ class mf extends IntrusiveNode {
           }
         }
         DiskCacheWorker.field_h = wh.field_f;
-        sb.a(this.g(0), true);
+        sb.a(this.getTooltipText(0), true);
         return param3;
     }
 
-    String g(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 0) {
           return (String) null;
         }
@@ -594,12 +594,12 @@ class mf extends IntrusiveNode {
           return -18;
         }
         if (param1 != 1) {
-          return fj.field_f[param1];
+          return TextLineMetrics.field_f[param1];
         }
         if (sh.a(14222, param0)) {
           return 29;
         }
-        return fj.field_f[param1];
+        return TextLineMetrics.field_f[param1];
     }
 
     int a(boolean param0) {
@@ -708,17 +708,17 @@ class mf extends IntrusiveNode {
     }
 
     mf(String param0, jm param1, rg param2) {
-        mg var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_k = 0;
         this.field_A = 0;
         try {
           this.field_p = param2;
           this.field_v = param0;
           this.field_n = param1;
-          if (this.field_n instanceof mg) {
-            var4 = (mg) ((Object) this.field_n);
-            this.field_y = var4.a((byte) -119, this);
-            this.field_C = var4.a(true, this);
+          if (this.field_n instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_n);
+            this.field_y = var4.getPreferredWidth((byte) -119, this);
+            this.field_C = var4.getPreferredHeight(true, this);
           }
         } catch (RuntimeException runtimeException) {
           throw SpriteGeometry.wrapClientException((Throwable) ((Object) runtimeException), "mf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

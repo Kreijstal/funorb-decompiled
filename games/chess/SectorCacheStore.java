@@ -189,7 +189,7 @@ final class SectorCacheStore {
           BitPacketBuffer var4 = null;
           BitPacketBuffer var5 = null;
           if (null == tl.field_Gb) {
-            tl.field_Gb = re.field_n.requestDirectSocket(am.field_d, false, qh.field_a);
+            tl.field_Gb = TextHotspotBounds.field_n.requestDirectSocket(am.field_d, false, qh.field_a);
           }
           if (0 == tl.field_Gb.status) {
             return false;
@@ -204,7 +204,7 @@ final class SectorCacheStore {
             tb.field_f = gh.field_c;
           } else {
             try {
-              ArchiveIndex.field_a = new BufferedSocket((java.net.Socket) (tl.field_Gb.result), re.field_n);
+              ArchiveIndex.field_a = new BufferedSocket((java.net.Socket) (tl.field_Gb.result), TextHotspotBounds.field_n);
               EditableTextField.field_U.position = 0;
               var4 = tk.field_h;
               var5 = var4;
@@ -213,7 +213,7 @@ final class SectorCacheStore {
               hh.field_o = param1 ? -2 : -1;
               var5.position = 0;
               tb.field_f = ca.field_h;
-              dh.a(fn.field_b, 11, cm.field_u, ub.field_e, EditableTextField.field_U);
+              dh.a(fn.field_b, 11, cm.field_u, TextLayout.field_e, EditableTextField.field_U);
               vh.a(-1, (byte) -35);
             } catch (IOException iOException) {
               tb.field_f = gh.field_c;

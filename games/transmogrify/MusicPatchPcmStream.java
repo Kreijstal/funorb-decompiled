@@ -413,7 +413,7 @@ final class MusicPatchPcmStream extends PcmStream {
           if (param4) {
             MusicPatchPcmStream.a((AccountRegistrationPanel) null, (String) null, (String) null, false, true, (String) null, 27);
           }
-          if (jh.field_n != ArchiveRequest.field_v) {
+          if (RichTextLayout.field_n != ArchiveRequest.field_v) {
             return false;
           }
           var7 = new AccountCreationResultPanel(ResourceArchive.field_f, param0);

@@ -28,12 +28,12 @@ final class lr extends InteractiveWidget {
         }
     }
 
-    final String a(boolean param0) {
+    final String getTooltipText(boolean param0) {
         if (this.field_p) {
           return this.field_R.getValidationMessage(-27183);
         }
         if (param0) {
-          this.a(true);
+          this.getTooltipText(true);
           return null;
         }
         return null;
@@ -118,7 +118,7 @@ final class lr extends InteractiveWidget {
           var10 = var15.field_B << 1;
           if (UiPanel.field_E == null) {
             UiPanel.field_E = new Sprite(var9, var10);
-            lq.a(UiPanel.field_E, (byte) -94);
+            TextLineMetrics.a(UiPanel.field_E, (byte) -94);
             var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
             UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
@@ -126,7 +126,7 @@ final class lr extends InteractiveWidget {
           }
           if (var9 > UiPanel.field_E.field_y) {
             UiPanel.field_E = new Sprite(var9, var10);
-            lq.a(UiPanel.field_E, (byte) -94);
+            TextLineMetrics.a(UiPanel.field_E, (byte) -94);
             var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
             UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
@@ -134,13 +134,13 @@ final class lr extends InteractiveWidget {
           }
           if (UiPanel.field_E.field_t < var10) {
             UiPanel.field_E = new Sprite(var9, var10);
-            lq.a(UiPanel.field_E, (byte) -94);
+            TextLineMetrics.a(UiPanel.field_E, (byte) -94);
             var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
             UiPanel.field_E.drawAdditive(var5 - var15.field_x, var6 - var15.field_B, 256);
             return;
           }
-          lq.a(UiPanel.field_E, (byte) -94);
+          TextLineMetrics.a(UiPanel.field_E, (byte) -94);
           SoftwareRasterizer.clearRaster();
           var15.drawRotatedAbout(112, 144, var15.field_x << 4, var15.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);
@@ -153,7 +153,7 @@ final class lr extends InteractiveWidget {
           var10Lifetime1 = var16.field_B << 1;
           if (UiPanel.field_E == null) {
             UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
-            lq.a(UiPanel.field_E, (byte) -94);
+            TextLineMetrics.a(UiPanel.field_E, (byte) -94);
             var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
             UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
@@ -161,7 +161,7 @@ final class lr extends InteractiveWidget {
           }
           if (var9Lifetime1 > UiPanel.field_E.field_y) {
             UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
-            lq.a(UiPanel.field_E, (byte) -94);
+            TextLineMetrics.a(UiPanel.field_E, (byte) -94);
             var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
             UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
@@ -169,13 +169,13 @@ final class lr extends InteractiveWidget {
           }
           if (UiPanel.field_E.field_t < var10Lifetime1) {
             UiPanel.field_E = new Sprite(var9Lifetime1, var10Lifetime1);
-            lq.a(UiPanel.field_E, (byte) -94);
+            TextLineMetrics.a(UiPanel.field_E, (byte) -94);
             var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
             ln.d(-28558);
             UiPanel.field_E.drawAdditive(var5 - var16.field_x, var6 - var16.field_B, 256);
             return;
           }
-          lq.a(UiPanel.field_E, (byte) -94);
+          TextLineMetrics.a(UiPanel.field_E, (byte) -94);
           SoftwareRasterizer.clearRaster();
           var16.drawRotatedAbout(112, 144, var16.field_x << 4, var16.field_B << 4, -this.field_Q << 10, 4096);
           ln.d(-28558);

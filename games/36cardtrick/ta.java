@@ -169,11 +169,11 @@ abstract class ta extends jc {
     }
 
     final static void c(boolean param0) {
-        dg.field_H.field_b = 0;
+        RichTextWidget.field_H.field_b = 0;
         if (!param0) {
           return;
         }
-        dg.field_H.field_l = 0;
+        RichTextWidget.field_H.field_l = 0;
     }
 
     public static void clearStaticReferences(byte param0) {

@@ -78,7 +78,7 @@ final class ve extends mg {
                 vl.field_h.a(false);
                 i.field_p.addListener(vl.field_h);
               } else {
-                if (bl.field_g == param3) {
+                if (TextHotspotBounds.field_g == param3) {
                   vl.field_h.a(false);
                   i.field_p.addListener(vl.field_h);
                 } else {

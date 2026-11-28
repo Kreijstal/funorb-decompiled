@@ -317,11 +317,11 @@ abstract class qg extends lk implements u {
         }
     }
 
-    String b(byte param0) {
+    String getTooltipText(byte param0) {
         String var3 = null;
-        String var2 = super.b(param0);
+        String var2 = super.getTooltipText(param0);
         if (this.field_y != null) {
-          var3 = this.field_y.b((byte) -79);
+          var3 = this.field_y.getTooltipText((byte) -79);
           if (var3 != null) {
             return var3;
           }

@@ -17,7 +17,7 @@ class lm extends IntrusiveNode {
     static int field_k;
     static int[] field_m;
     int field_x;
-    l field_t;
+    TextLayout field_t;
     static String field_p;
     ca field_o;
     int field_q;
@@ -204,7 +204,7 @@ class lm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 >= -76) {
-            this.field_t = (l) null;
+            this.field_t = (TextLayout) null;
           }
           if (this.a(param1, param0, -113, param2)) {
             this.a(param0, param2, param1, 1);
@@ -450,7 +450,7 @@ class lm extends IntrusiveNode {
         field_r = null;
     }
 
-    String c(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 <= 3) {
           this.a(12, (lm) null);
           if (this.field_u) {
@@ -570,7 +570,7 @@ class lm extends IntrusiveNode {
           if (param3 >= 55) {
             return false;
           }
-          this.field_t = (l) null;
+          this.field_t = (TextLayout) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -744,12 +744,12 @@ class lm extends IntrusiveNode {
             }
             if (0 != la.field_g) {
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             if (oe.field_i == 0) {
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.a(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -762,23 +762,23 @@ class lm extends IntrusiveNode {
               ah.field_b = null;
             }
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (var5 == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (no.field_d == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           this.e(23);
           if (var7 == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (0 != CombatState.field_r) {
@@ -795,12 +795,12 @@ class lm extends IntrusiveNode {
               }
               if (0 != la.field_g) {
                 oe.field_i = la.field_g;
-                nk.a(this.c((byte) 34), (byte) 23);
+                nk.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               if (oe.field_i == 0) {
                 oe.field_i = la.field_g;
-                nk.a(this.c((byte) 34), (byte) 23);
+                nk.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               this.a(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -812,7 +812,7 @@ class lm extends IntrusiveNode {
                 ah.field_b = null;
               }
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.a(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
@@ -825,12 +825,12 @@ class lm extends IntrusiveNode {
               param3 = false;
               if (0 != la.field_g) {
                 oe.field_i = la.field_g;
-                nk.a(this.c((byte) 34), (byte) 23);
+                nk.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               if (oe.field_i == 0) {
                 oe.field_i = la.field_g;
-                nk.a(this.c((byte) 34), (byte) 23);
+                nk.a(this.getTooltipText((byte) 34), (byte) 23);
                 return param3;
               }
               this.a(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -842,18 +842,18 @@ class lm extends IntrusiveNode {
                 ah.field_b = null;
               }
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
           }
           if (0 != la.field_g) {
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           if (oe.field_i == 0) {
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
           this.a(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -865,7 +865,7 @@ class lm extends IntrusiveNode {
             ah.field_b = null;
           }
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         this.a(param2, param0, this, true);
@@ -891,7 +891,7 @@ class lm extends IntrusiveNode {
                 }
               }
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.a(param2, param0, hj.field_S, CombatState.field_r, eh.field_h, this, (byte) -84);
@@ -934,23 +934,23 @@ class lm extends IntrusiveNode {
             }
           }
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (var5Lifetime1 == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (no.field_d == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         this.e(23);
         if (var7 == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (0 != CombatState.field_r) {
@@ -964,12 +964,12 @@ class lm extends IntrusiveNode {
             param3 = false;
             if (0 != la.field_g) {
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             if (oe.field_i == 0) {
               oe.field_i = la.field_g;
-              nk.a(this.c((byte) 34), (byte) 23);
+              nk.a(this.getTooltipText((byte) 34), (byte) 23);
               return param3;
             }
             this.a(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -982,18 +982,18 @@ class lm extends IntrusiveNode {
               ah.field_b = null;
             }
             oe.field_i = la.field_g;
-            nk.a(this.c((byte) 34), (byte) 23);
+            nk.a(this.getTooltipText((byte) 34), (byte) 23);
             return param3;
           }
         }
         if (0 != la.field_g) {
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         if (oe.field_i == 0) {
           oe.field_i = la.field_g;
-          nk.a(this.c((byte) 34), (byte) 23);
+          nk.a(this.getTooltipText((byte) 34), (byte) 23);
           return param3;
         }
         this.a(param0, true, eh.field_h, this, param2, hj.field_S);
@@ -1005,7 +1005,7 @@ class lm extends IntrusiveNode {
           ah.field_b = null;
         }
         oe.field_i = la.field_g;
-        nk.a(this.c((byte) 34), (byte) 23);
+        nk.a(this.getTooltipText((byte) 34), (byte) 23);
         return param3;
     }
 
@@ -1024,7 +1024,7 @@ class lm extends IntrusiveNode {
 
     lm(String param0, ca param1, pg param2) {
         RuntimeException runtimeException = null;
-        th var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1039,10 +1039,10 @@ class lm extends IntrusiveNode {
           this.field_n = param2;
           this.field_o = param1;
           this.field_w = param0;
-          if (this.field_o instanceof th) {
-            var4 = (th) ((Object) this.field_o);
-            this.field_x = var4.a(82, this);
-            this.field_s = var4.a(this, 8);
+          if (this.field_o instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_o);
+            this.field_x = var4.getPreferredWidth(82, this);
+            this.field_s = var4.getPreferredHeight(this, 8);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -43,7 +43,7 @@ abstract class FrameTimer {
             return (char)var2;
           }
           if (var2 < 160) {
-            var3 = sb.field_n[-128 + var2];
+            var3 = RichTextLayout.field_n[-128 + var2];
             if (var3 == 0) {
               var3 = 63;
             }
@@ -60,7 +60,7 @@ abstract class FrameTimer {
         if (var2 >= 160) {
           return (char)var2;
         }
-        var3Lifetime1 = sb.field_n[-128 + var2];
+        var3Lifetime1 = RichTextLayout.field_n[-128 + var2];
         if (var3Lifetime1 == 0) {
           var3Lifetime1 = 63;
         }

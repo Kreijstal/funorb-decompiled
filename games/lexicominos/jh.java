@@ -23,7 +23,7 @@ final class jh {
           return;
         }
         oh.field_a = NameSuggestionsPanel.field_F[param1];
-        we.field_c = bc.field_E[param1];
+        we.field_c = RichTextWidget.field_E[param1];
     }
 
     static {

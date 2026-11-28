@@ -139,9 +139,9 @@ final class ic extends jj implements WidgetActivationListener {
           var4.field_j = 80;
           var4.field_z = 50;
           var4.field_y = 0;
-          var4.field_p = (ComponentLayout) ((Object) new e(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_p = (ComponentLayout) ((Object) new DefaultTextWidgetRenderer(nb.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, (byte) -102);
-          this.field_cb = this.a(-28732, ja.field_O, (kd) (this));
+          this.field_cb = this.a(-28732, RichTextWidget.field_O, (kd) (this));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

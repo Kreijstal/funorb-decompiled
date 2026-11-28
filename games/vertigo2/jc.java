@@ -13,25 +13,25 @@ final class jc implements WidgetListener {
         if (param0 != 10) {
           field_c = (String) null;
           if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_d) != 0) {
-            sl.field_q[10] = mg.field_T;
+            RichTextLayout.field_q[10] = mg.field_T;
             return;
           }
           if (0 == ln.field_d.field_D.field_d) {
-            sl.field_q[10] = dm.field_Jb;
+            RichTextLayout.field_q[10] = dm.field_Jb;
             return;
           }
-          sl.field_q[10] = te.field_I;
+          RichTextLayout.field_q[10] = te.field_I;
           return;
         }
         if ((1 << ln.field_d.field_B & ln.field_d.field_D.field_d) != 0) {
-          sl.field_q[10] = mg.field_T;
+          RichTextLayout.field_q[10] = mg.field_T;
           return;
         }
         if (0 == ln.field_d.field_D.field_d) {
-          sl.field_q[10] = dm.field_Jb;
+          RichTextLayout.field_q[10] = dm.field_Jb;
           return;
         }
-        sl.field_q[10] = te.field_I;
+        RichTextLayout.field_q[10] = te.field_I;
     }
 
     public final void a(boolean param0, int param1, boolean param2, UiWidget param3, int param4) {

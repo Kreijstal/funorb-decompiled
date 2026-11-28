@@ -88,7 +88,7 @@ final class vf {
           }
           var5_int = hh.field_p.position;
           hh.field_p.writeInt(nb.field_f, (byte) -128);
-          hh.field_p.writeLong(252186072, mb.field_s);
+          hh.field_p.writeLong(252186072, RichTextLayout.field_s);
           var6 = 0;
           if (EditableTextField.field_B) {
             var6 = var6 | 1;

@@ -123,7 +123,7 @@ final class nm extends sj implements WidgetActivationListener {
           var4.field_x = this.field_x;
           var4.field_v = 50;
           var4.field_q = 0;
-          var4.field_o = (ca) ((Object) new hh(ta.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_o = (ca) ((Object) new DefaultTextWidgetRenderer(ta.field_e, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) -66, var4);
           this.field_kb = this.a(26414, (pg) (this), sp.field_b);
           return;

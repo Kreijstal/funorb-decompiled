@@ -22,18 +22,18 @@ final class j extends IntrusiveNode {
               field_j = (ResourceArchive) null;
             }
             var7 = null;
-            if (null != vc.field_G.field_j) {
-              jg.field_C = new BufferedRandomAccessFile(vc.field_G.field_j, 5200, 0);
-              vc.field_G.field_j = null;
-              var6 = new SectorCacheStore(255, jg.field_C, new BufferedRandomAccessFile(vc.field_G.field_m, 12000, 0), 2097152);
+            if (null != RichTextWidget.field_G.field_j) {
+              jg.field_C = new BufferedRandomAccessFile(RichTextWidget.field_G.field_j, 5200, 0);
+              RichTextWidget.field_G.field_j = null;
+              var6 = new SectorCacheStore(255, jg.field_C, new BufferedRandomAccessFile(RichTextWidget.field_G.field_m, 12000, 0), 2097152);
             }
             if (null != jg.field_C) {
               if (pd.field_a == null) {
-                pd.field_a = new BufferedRandomAccessFile[vc.field_G.field_u.length];
+                pd.field_a = new BufferedRandomAccessFile[RichTextWidget.field_G.field_u.length];
               }
               if (pd.field_a[param3] == null) {
-                pd.field_a[param3] = new BufferedRandomAccessFile(vc.field_G.field_u[param3], 12000, 0);
-                vc.field_G.field_u[param3] = null;
+                pd.field_a[param3] = new BufferedRandomAccessFile(RichTextWidget.field_G.field_u[param3], 12000, 0);
+                RichTextWidget.field_G.field_u[param3] = null;
               }
               var7 = new SectorCacheStore(param3, jg.field_C, pd.field_a[param3], 2097152);
             }

@@ -81,7 +81,7 @@ abstract class jc extends qf {
           NetworkArchiveRequest.field_r.writeInt(-246, nf.field_c);
           NetworkArchiveRequest.field_r.writeLong(BoundedRandomAccessFile.field_d, (byte) 98);
           var7 = 0;
-          if (dg.field_F) {
+          if (RichTextWidget.field_F) {
             var7 = var7 | 1;
           }
           if (bj.field_m) {

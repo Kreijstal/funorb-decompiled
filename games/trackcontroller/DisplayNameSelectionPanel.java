@@ -131,7 +131,7 @@ final class DisplayNameSelectionPanel extends td implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (t) null);
         this.field_K = new ValidatedTextField("", (tg) null, 12);
-        ic var1 = new ic(fk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(fk.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gk.field_c.field_G, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(qd.field_a, var1, (tg) null);
         this.field_F = new ButtonWidget(hb.field_a, (tg) null);
         this.field_H = new ButtonWidget(ta.field_a, (tg) null);

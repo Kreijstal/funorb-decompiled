@@ -86,7 +86,7 @@ final class wl {
           var8 = var41;
           var65 = new int[param5.field_g];
           var64 = tf.field_m;
-          var63 = sd.field_c;
+          var63 = TextLineMetrics.field_c;
           var62 = LoginPanel.field_R;
           if (param1 <= 46) {
             field_a = (String) null;
@@ -210,7 +210,7 @@ final class wl {
           } else {
             stackIn_56_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_55_0), ((StringBuilder) (Object) stackIn_55_1).append(stackIn_56_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

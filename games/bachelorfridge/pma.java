@@ -85,7 +85,7 @@ final class pma extends k {
         int stackIn_15_4;
         int stackIn_15_5;
         boolean stackIn_16_6 = false;
-        mla.b((byte) 5);
+        TextLineMetrics.b((byte) 5);
         if (param0 != 122) {
           pma.a((byte) 49, false);
         }
@@ -163,7 +163,7 @@ final class pma extends k {
         if (CreatureType.field_n <= 5) {
           bfa.field_a = false;
         }
-        if (o.d((byte) 54)) {
+        if (ChangeAllCreaturesHealthEffect.d((byte) 54)) {
           AccountRequestState.field_a = false;
         } else {
           bf.field_h[CreatureType.field_n].a(108);

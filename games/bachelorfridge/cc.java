@@ -291,7 +291,7 @@ final class cc {
         }
         try {
           ma.field_E = param6;
-          mh.field_l = param5;
+          CreaturePoseEffect.field_l = param5;
           bd.field_m = param8;
           uea.field_i = param7;
           DreamsAnimation.field_x = param3;

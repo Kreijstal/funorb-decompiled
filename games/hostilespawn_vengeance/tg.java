@@ -421,7 +421,7 @@ final class tg {
           DirectByteStorage.b(51);
           if (DebouncedFieldValidator.c((byte) -29)) {
             s.field_b.i(19319, 1);
-            mb.d(0, -22370);
+            RichTextLayout.d(0, -22370);
           }
           le.c((byte) 99);
           return;

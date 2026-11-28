@@ -210,7 +210,7 @@ final class hc {
     }
 
     final void a(int param0, BitmapFont param1) {
-        id var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         tc var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -233,7 +233,7 @@ final class hc {
         tc var14Lifetime1;
         tc var14Lifetime2;
         try {
-          var17 = new id(param1, 2, 2, 2236962, 1, param0, 1, param1.field_N - (-param1.field_r - 2));
+          var17 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, param0, 1, param1.field_N - (-param1.field_r - 2));
           this.field_r = (uk) ((Object) var17);
           var17.field_i = 16777215;
           var4 = new tc();

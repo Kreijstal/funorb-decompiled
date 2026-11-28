@@ -15,7 +15,7 @@ final class dl extends jla {
         int var5;
         var5 = BachelorFridge.field_y;
         if (!um.a(true)) {
-          ic.a(61);
+          ClearPendingPetAttackEffect.a(61);
         }
         if (rga.field_a != null) {
           var2 = rga.field_a;

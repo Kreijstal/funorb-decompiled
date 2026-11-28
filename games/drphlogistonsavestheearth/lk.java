@@ -101,7 +101,7 @@ class lk extends u {
           bd.field_O = new boolean[bd.field_M];
           ll.field_o = new byte[bd.field_M][];
           kh.field_i = new int[bd.field_M];
-          qa.field_J = new int[bd.field_M];
+          RichTextWidget.field_J = new int[bd.field_M];
           gf.field_o = new int[bd.field_M];
           var17.position = -(bd.field_M * 8) + (-7 + param0.length);
           oe.field_b = var17.readUnsignedShort(-788751192);
@@ -118,7 +118,7 @@ class lk extends u {
             gf.field_o[var4Lifetime2] = var17.readUnsignedShort(-788751192);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < bd.field_M; var4Lifetime3++) {
-            qa.field_J[var4Lifetime3] = var17.readUnsignedShort(-788751192);
+            RichTextWidget.field_J[var4Lifetime3] = var17.readUnsignedShort(-788751192);
           }
           var17.position = -(3 * var3) + (3 + (-7 + param0.length) - bd.field_M * 8);
           MouseInput.field_a = new int[var3];
@@ -131,7 +131,7 @@ class lk extends u {
           var17.position = 0;
           for (var4Lifetime5 = 0; bd.field_M > var4Lifetime5; var4Lifetime5++) {
             var5Lifetime1 = gf.field_o[var4Lifetime5];
-            var6 = qa.field_J[var4Lifetime5];
+            var6 = RichTextWidget.field_J[var4Lifetime5];
             var7 = var5Lifetime1 * var6;
             var20 = new byte[var7];
             var18 = var20;

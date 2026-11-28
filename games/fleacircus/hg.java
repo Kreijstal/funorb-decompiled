@@ -93,7 +93,7 @@ final class hg extends IntrusiveNode {
         fleas.field_L = fleas.field_L | var4;
         kh.field_b = kh.field_b | var4;
         pb.field_f.addLast(false, new kb(param1));
-        a.field_e.addLast(false, new hi(param1, param2, lj.field_h, se.field_b, dh.field_d, e.field_b));
+        a.field_e.addLast(false, new hi(param1, param2, lj.field_h, se.field_b, dh.field_d, DefaultTextWidgetRenderer.field_b));
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

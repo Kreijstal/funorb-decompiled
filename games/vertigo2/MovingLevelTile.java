@@ -128,7 +128,7 @@ final class MovingLevelTile extends LevelTile {
           if (!param4) {
             stackIn_8_0 = pl.field_n;
           } else {
-            stackIn_8_0 = pn.field_L;
+            stackIn_8_0 = RichTextWidget.field_L;
           }
           var7 = stackIn_8_0;
           if (param0 != -30) {

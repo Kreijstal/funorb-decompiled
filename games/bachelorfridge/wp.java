@@ -85,14 +85,14 @@ final class wp extends tga {
         }
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         try {
           this.a((byte) -116, this.field_o, this.field_n, param1);
           this.a((byte) -116, this.field_o, -1 + this.field_n, param1);
           this.a((byte) -116, this.field_o, 1 + this.field_n, param1);
           this.a((byte) -116, this.field_o - 1, this.field_n, param1);
           this.a((byte) -116, this.field_o + 1, this.field_n, param1);
-          super.a(param0, param1);
+          super.applyToBattle(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "wp.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -381,7 +381,7 @@ final class wp extends tga {
               var29 = gd.field_n[3][var6Lifetime2];
               if (var4_int != 0 &&
                 0 != var29.field_R) {
-                tq.field_h = var6Lifetime2;
+                RichTextLayout.field_h = var6Lifetime2;
               }
               if (var29.field_E &&
                 var6Lifetime2 > 0) {
@@ -396,7 +396,7 @@ final class wp extends tga {
                 }
               }
               stackIn_158_0 = var29;
-              stackIn_159_1 = (tq.field_h == var6Lifetime2);
+              stackIn_159_1 = (RichTextLayout.field_h == var6Lifetime2);
               stackIn_158_0.field_t = stackIn_159_1;
               stackIn_161_0 = var29;
               stackIn_162_1 = (var4_int != 0);
@@ -712,7 +712,7 @@ final class wp extends tga {
         }
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -737,7 +737,7 @@ final class wp extends tga {
           this.a(param0, this.field_o, this.field_n + 1, (byte) 83);
           this.a(param0, this.field_o - 1, this.field_n, (byte) 83);
           this.a(param0, 1 + this.field_o, this.field_n, (byte) 83);
-          super.a(false, var5.field_h);
+          super.applyToBattle(false, var5.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

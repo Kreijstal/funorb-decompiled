@@ -137,7 +137,7 @@ final class BoundedRandomAccessFile {
         int var10Lifetime1;
         int var11Lifetime1;
         try {
-          var12 = se.field_p;
+          var12 = RichTextLayout.field_p;
           var15 = var12;
           var2 = var15.readUnsignedByte(7909);
           var3 = (oj) (DebouncedFieldValidator.field_b.beginForward(-3905));
@@ -183,9 +183,9 @@ final class BoundedRandomAccessFile {
               var19[0][var10 * 4] = AwtRasterBuffer.field_f[var11];
               var19[0][1 + var10 * 4] = nf.field_b[var11];
               var19[0][2 + 4 * var10] = MouseWheelSource.field_f[var11];
-              var19[0][4 * var10 + 3] = ab.field_G[var11];
+              var19[0][4 * var10 + 3] = RichTextWidget.field_G[var11];
               if (mc.a(DiskCacheWorker.field_f[var11], 0) &&
-                0 == nf.field_b[var11] + (MouseWheelSource.field_f[var11] + ab.field_G[var11])) {
+                0 == nf.field_b[var11] + (MouseWheelSource.field_f[var11] + RichTextWidget.field_G[var11])) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -202,9 +202,9 @@ final class BoundedRandomAccessFile {
               var19[1][4 * var14] = AwtRasterBuffer.field_f[var11Lifetime1];
               var19[1][1 + 4 * var14] = nf.field_b[var11Lifetime1];
               var19[1][2 + 4 * var14] = MouseWheelSource.field_f[var11Lifetime1];
-              var19[1][4 * var14 + 3] = ab.field_G[var11Lifetime1];
+              var19[1][4 * var14 + 3] = RichTextWidget.field_G[var11Lifetime1];
               if (mc.a(DiskCacheWorker.field_f[var11Lifetime1], 0) &&
-                nf.field_b[var11Lifetime1] + MouseWheelSource.field_f[var11Lifetime1] + ab.field_G[var11Lifetime1] == 0) {
+                nf.field_b[var11Lifetime1] + MouseWheelSource.field_f[var11Lifetime1] + RichTextWidget.field_G[var11Lifetime1] == 0) {
                 var6[1][var14] = null;
                 var14--;
               }

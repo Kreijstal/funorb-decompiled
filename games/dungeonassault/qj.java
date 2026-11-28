@@ -44,7 +44,7 @@ final class qj {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (ci.a(var3, param1 ^ 91) != 0L) {
+            if (TextHotspotBounds.a(var3, param1 ^ 91) != 0L) {
               return;
             }
           }

@@ -20,8 +20,8 @@ final class im {
         if (param0 >= -58) {
           return;
         }
-        vf.a((byte) -117, -1);
-        na.field_S = ml.field_a;
+        DefaultTextWidgetRenderer.a((byte) -117, -1);
+        RichTextWidget.field_S = ml.field_a;
         oe.field_Q = ml.field_a;
     }
 
@@ -49,7 +49,7 @@ final class im {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class im {
           var1.drawHalfSize(0, 0);
           ib.b(false);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "im.D(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "im.D(" + param0 + ')');
         }
     }
 

@@ -152,10 +152,10 @@ abstract class ByteArrayStore {
               var6[0][var10] = ad.field_i[var11];
               var18[0][4 * var10] = ConfirmedEmailAvailabilityValidator.field_n[var11];
               var18[0][1 + var10 * 4] = q.field_h[var11];
-              var18[0][2 + 4 * var10] = mj.field_b[var11];
+              var18[0][2 + 4 * var10] = TextLayout.field_b[var11];
               var18[0][var10 * 4 + 3] = ij.field_c[var11];
               if (rc.a(true, ad.field_i[var11]) &&
-                ij.field_c[var11] + q.field_h[var11] + mj.field_b[var11] == 0) {
+                ij.field_c[var11] + q.field_h[var11] + TextLayout.field_b[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -170,10 +170,10 @@ abstract class ByteArrayStore {
               var6[1][var13] = ad.field_i[var11Lifetime1];
               var18[1][var13 * 4] = ConfirmedEmailAvailabilityValidator.field_n[var11Lifetime1];
               var18[1][1 + 4 * var13] = q.field_h[var11Lifetime1];
-              var18[1][2 + 4 * var13] = mj.field_b[var11Lifetime1];
+              var18[1][2 + 4 * var13] = TextLayout.field_b[var11Lifetime1];
               var18[1][4 * var13 + 3] = ij.field_c[var11Lifetime1];
               if (rc.a(true, ad.field_i[var11Lifetime1]) &&
-                q.field_h[var11Lifetime1] - (-mj.field_b[var11Lifetime1] - ij.field_c[var11Lifetime1]) == 0) {
+                q.field_h[var11Lifetime1] - (-TextLayout.field_b[var11Lifetime1] - ij.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;
               }

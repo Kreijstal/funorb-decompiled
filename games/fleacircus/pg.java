@@ -97,7 +97,7 @@ final class pg {
         int var3 = fleas.field_A ? 1 : 0;
         bi[] var1 = new bi[ef.field_l];
         for (var2 = param0; ef.field_l > var2; var2++) {
-          var1[var2] = new bi(e.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], of.field_d[var2], rd.field_d);
+          var1[var2] = new bi(DefaultTextWidgetRenderer.field_e, uf.field_k, vg.field_I[var2], b.field_b[var2], NameSuggestionsPanel.field_H[var2], ob.field_a[var2], of.field_d[var2], rd.field_d);
         }
         EditableTextField.o(-28210);
         return var1;

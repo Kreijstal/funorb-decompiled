@@ -20,7 +20,7 @@ final class cb extends AnimationNode {
         int var2 = 0;
         int var2Lifetime1;
         if (this.field_l == 0) {
-          this.field_k.b(-1, this.field_j);
+          this.field_k.playAnimation(-1, this.field_j);
           fieldTemp$0 = this.field_l + 1;
           this.field_l = this.field_l + 1;
           if (!(fieldTemp$0 < this.e((byte) 100))) {

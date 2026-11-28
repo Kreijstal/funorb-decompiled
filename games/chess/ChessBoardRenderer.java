@@ -107,7 +107,7 @@ final class ChessBoardRenderer extends ChessBoardState {
             var21 = ig.field_f[var19];
             var22 = GzipInflater.field_c[var19];
           } else {
-            var20 = se.field_N[var19];
+            var20 = RichTextWidget.field_N[var19];
             var21 = jj.field_c[var19];
             var22 = q.field_b[var19];
           }
@@ -342,7 +342,7 @@ final class ChessBoardRenderer extends ChessBoardState {
               var16 = (int[]) ((Object) this.field_H.clone());
               var15 = var16;
               var10 = var15;
-              se.a(var8, var16, 45, (byte) 49, var5_int, var7, var6);
+              RichTextWidget.a(var8, var16, 45, (byte) 49, var5_int, var7, var6);
               var11 = new bn(var16.length >> 1, 5, 0);
               for (var12_int = 0; var16.length > var12_int; var12_int += 2) {
                 var11.a(var16[var12_int], 0, var10[1 + var12_int]);
@@ -936,7 +936,7 @@ final class ChessBoardRenderer extends ChessBoardState {
         var20Lifetime1 += 22;
         var22Lifetime1 = (int)(33.0 * Math.sin((double)param2 / 10.0)) + 64;
         var30 = (int[]) ((Object) this.field_H.clone());
-        se.a(var20Lifetime1, var30, 45, (byte) 44, var19Lifetime1, var21Lifetime1, var18Lifetime1);
+        RichTextWidget.a(var20Lifetime1, var30, 45, (byte) 44, var19Lifetime1, var21Lifetime1, var18Lifetime1);
         PolygonScanlineRasterizer.fillPolygonAlpha(var30, 16711680, var22Lifetime1);
         qk.field_k.bindAsRenderTarget();
         if (param5) {

@@ -25,7 +25,7 @@ final class bh {
         String var7;
         String var8;
         var5 = stellarshard.field_B;
-        var6 = "(" + ld.field_E + " " + t.field_e + " " + InteractiveWidget.field_y + ") " + ja.field_t;
+        var6 = "(" + ld.field_E + " " + t.field_e + " " + InteractiveWidget.field_y + ") " + TextHotspotBounds.field_t;
         var1 = var6;
         if (param0 >= -94) {
           bh.a(68, '￑');

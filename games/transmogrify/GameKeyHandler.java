@@ -53,21 +53,21 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           GameKeyHandler.clearStaticReferences((byte) 110);
         }
         if (-1 == tg.field_a) {
-          if (!ue.a(1, 0)) {
+          if (!TextLayout.a(1, 0)) {
             return false;
           }
           tg.field_a = WordLanguage.field_l.readUnsignedByte((byte) 34);
           WordLanguage.field_l.position = 0;
         }
         if (tg.field_a != -2) {
-          return ue.a(tg.field_a, param0 ^ 0);
+          return TextLayout.a(tg.field_a, param0 ^ 0);
         }
-        if (!ue.a(2, 0)) {
+        if (!TextLayout.a(2, 0)) {
           return false;
         }
         tg.field_a = WordLanguage.field_l.readUnsignedShort((byte) -85);
         WordLanguage.field_l.position = 0;
-        return ue.a(tg.field_a, param0 ^ 0);
+        return TextLayout.a(tg.field_a, param0 ^ 0);
     }
 
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {

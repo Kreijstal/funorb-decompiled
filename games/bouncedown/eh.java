@@ -78,7 +78,7 @@ final class eh {
           if (null != var46.field_v &&
             var46.field_w > 1) {
             var62 = var46.field_v;
-            ed.a(oc.field_a, 0, -113, 0, var62);
+            TextLayout.a(oc.field_a, 0, -113, 0, var62);
           } else {
             w.a(-15);
           }
@@ -296,9 +296,9 @@ final class eh {
                 var10 = var10 ^ 285L;
             }
             var12 = var10 ^ var2;
-            field_a[0][var0] = jd.a(var12, jd.a(jd.a(jd.a(jd.a(jd.a(var6 << 40, jd.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16), var4 << 8));
+            field_a[0][var0] = DefaultTextWidgetRenderer.a(var12, DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(DefaultTextWidgetRenderer.a(var6 << 40, DefaultTextWidgetRenderer.a(var2 << 56, var2 << 48)), var2 << 32), var10 << 24), var8 << 16), var4 << 8));
             for (var14 = 1; var14 < 8; var14++) {
-                field_a[var14][var0] = jd.a(field_a[var14 - 1][var0] << 56, field_a[-1 + var14][var0] >>> 8);
+                field_a[var14][var0] = DefaultTextWidgetRenderer.a(field_a[var14 - 1][var0] << 56, field_a[-1 + var14][var0] >>> 8);
             }
             var0++;
         }

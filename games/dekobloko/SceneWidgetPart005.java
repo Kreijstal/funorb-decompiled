@@ -42,7 +42,7 @@ final class SceneWidgetPart005 extends SceneWidget {
           } else {
             if (this.integerArrayState0101[integerArgument2] != -1) {
               integerLocal2 = this.integerArrayState0101[integerArgument2] | 32768;
-              integerLocal3 = NetworkSupport010.integerState0585;
+              integerLocal3 = TextHotspotBounds.integerState0585;
               if (integerLocal3 == 0 &&
                 null != MixedSupport016.sceneWidgetPart013State0001) {
                 integerLocal3 = 1;
@@ -51,8 +51,8 @@ final class SceneWidgetPart005 extends SceneWidget {
                 MixedSupport031.performAction0418(integerLocal3, integerArgument1, 1, (byte) 123);
               }
               stringLocal5 = (String) null;
-              UiComponent.performAction0208(integerArgument4, (byte) -85, NetworkSupport010.integerState0585, MixedSupport029.stringState0149, integerLocal2, (String) null);
-              MixedSupport107.performAction1405(MixedSupport043.longState0017, MixedSupport029.stringState0149, -94, NetworkSupport010.integerState0585, integerLocal2);
+              UiComponent.performAction0208(integerArgument4, (byte) -85, TextHotspotBounds.integerState0585, MixedSupport029.stringState0149, integerLocal2, (String) null);
+              MixedSupport107.performAction1405(MixedSupport043.longState0017, MixedSupport029.stringState0149, -94, TextHotspotBounds.integerState0585, integerLocal2);
               MixedSupport099.performAction1230(false);
               MixedSupport051.performAction0601((byte) 11);
             } else {

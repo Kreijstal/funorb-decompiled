@@ -161,20 +161,20 @@ final class ke extends si {
               fh.field_g = true;
             }
           }
-          if (kj.field_S != null) {
-            var3 = 357 - kj.field_S.field_r / 2;
+          if (RichTextWidget.field_S != null) {
+            var3 = 357 - RichTextWidget.field_S.field_r / 2;
             var4 = 0;
             if (hg.field_F != 0 &&
               s.field_gb > var3 &&
-              s.field_gb < kj.field_S.field_t + var3) {
-              if (SpriteState.field_o > 269 - kj.field_S.field_p &&
+              s.field_gb < RichTextWidget.field_S.field_t + var3) {
+              if (SpriteState.field_o > 269 - RichTextWidget.field_S.field_p &&
                 SpriteState.field_o < 269) {
                 var4 = 1;
                 ti.field_e = uc.field_c;
                 fh.field_g = false;
               }
               if (SpriteState.field_o > 586 &&
-                kj.field_S.field_p + 586 > SpriteState.field_o) {
+                RichTextWidget.field_S.field_p + 586 > SpriteState.field_o) {
                 var4 = 1;
                 ti.field_e = uc.field_c;
                 fh.field_g = true;
@@ -183,13 +183,13 @@ final class ke extends si {
             if (var4 == 0 &&
               uc.field_e < ti.field_e &&
               var3 < BufferedSocket.field_m &&
-              BufferedSocket.field_m < var3 + kj.field_S.field_t) {
-              if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
+              BufferedSocket.field_m < var3 + RichTextWidget.field_S.field_t) {
+              if (PacketBuffer.field_j > 269 - RichTextWidget.field_S.field_p &&
                 PacketBuffer.field_j < 269) {
                 ti.field_e = uc.field_e;
               }
               if (586 < PacketBuffer.field_j &&
-                kj.field_S.field_p + 586 > PacketBuffer.field_j) {
+                RichTextWidget.field_S.field_p + 586 > PacketBuffer.field_j) {
                 ti.field_e = uc.field_e;
               }
             }
@@ -238,10 +238,10 @@ final class ke extends si {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         int var2 = this.field_G.field_v ? 1 : 0;
         this.field_G.field_v = this.field_v;
-        String var3 = this.field_G.c((byte) 45);
+        String var3 = this.field_G.getTooltipText((byte) 45);
         this.field_G.field_v = var2 != 0 ? true : false;
         if (param0 > 14) {
           return var3;

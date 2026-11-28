@@ -51,7 +51,7 @@ final class oc extends hn {
                 EditableTextField.field_L = -640;
                 tk.field_a = false;
                 if (el.field_c) {
-                  lb.field_q = false;
+                  TextHotspotBounds.field_q = false;
                   fl.field_d = true;
                   mc.field_w = -1;
                   tb.field_e = true;
@@ -172,7 +172,7 @@ final class oc extends hn {
           }
           fa.field_e = false;
           if (oj.field_J == 4 &&
-            eg.b(42)) {
+            DefaultTextWidgetRenderer.b(42)) {
             if (0 < qd.field_R) {
               qd.field_R = qd.field_R - 1;
             }
@@ -187,7 +187,7 @@ final class oc extends hn {
                 0 == qd.field_R) {
                 try {
                   qd.field_R = 25;
-                  Bzip2State.a(bm.c(-125), "http://itunes.apple.com/us/app/miner-disturbance/id374275550?mt=8", 11050, true);
+                  Bzip2State.a(RichTextLayout.c(-125), "http://itunes.apple.com/us/app/miner-disturbance/id374275550?mt=8", 11050, true);
                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var5 = (Exception) (Object) decompiledCaughtException;

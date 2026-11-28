@@ -139,7 +139,7 @@ final class FlirtAnimation extends EventAnimation {
         while (var3 != null) {
           if (var3 instanceof SetFriendlyEffect) {
             var8 = var3.target.resolveCreatureView(param0 ^ 27448, this.screen);
-            var8.b(-1, 6);
+            var8.playAnimation(-1, 6);
             var5 = new sia(this.screen, var8.field_s.tileX, var8.field_s.tileY, this.field_w.creature.resolveCreatureView(-27449, this.screen));
             ((TileEffect) ((Object) var5)).a(0);
           }

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends WidgetContainer implements re, WidgetActivationListener {
+final class qe extends WidgetContainer implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_H;
     static int[] field_G;
     static String field_F;
     private AccountCreationResultPanel field_D;
-    private kj field_E;
+    private RichTextWidget field_E;
 
-    public final void a(int param0, int param1, int param2, kj param3) {
+    public final void onTextHotspotActivated(int param0, int param1, int param2, RichTextWidget param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -31,7 +31,7 @@ final class qe extends WidgetContainer implements re, WidgetActivationListener {
           if (param2 == 50) {
             return;
           }
-          this.field_E = (kj) null;
+          this.field_E = (RichTextWidget) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class qe extends WidgetContainer implements re, WidgetActivationListener {
         super(0, 0, 288, 0, (j) null);
         String var7 = null;
         int var3 = 0;
-        af var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -90,8 +90,8 @@ final class qe extends WidgetContainer implements re, WidgetActivationListener {
           this.field_H.field_w = (j) ((Object) new gh());
           var7 = LoginPanel.a(AccountRegistrationPanel.field_F, new String[]{this.e(true), this.h(-18655)}, -63);
           var3 = 20;
-          var4 = new af(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
-          this.field_E = new kj(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(NameSuggestionsPanel.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, NameSuggestionsPanel.field_G.field_F, -1, 2147483647, true);
+          this.field_E = new RichTextWidget(var7, var4);
           this.field_E.field_z = "";
           this.field_E.a(0, mj.field_a, 1);
           this.field_E.a(1, mj.field_a, 1);
@@ -169,7 +169,7 @@ final class qe extends WidgetContainer implements re, WidgetActivationListener {
 
     private final String h(int param0) {
         if (param0 != -18655) {
-          this.field_E = (kj) null;
+          this.field_E = (RichTextWidget) null;
           return "</col></u>";
         }
         return "</col></u>";

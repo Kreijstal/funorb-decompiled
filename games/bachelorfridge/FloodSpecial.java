@@ -54,7 +54,7 @@ final class FloodSpecial extends SpecialOrder {
           if (param1 != 3) {
             field_p = false;
           }
-          var4.effects.addLast(new tfa(), true);
+          var4.effects.addLast(new StartFloodEffect(), true);
           stackIn_3_0 = var4;
           return (CreatureEvent) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

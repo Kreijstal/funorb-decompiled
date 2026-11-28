@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ea extends se {
+final class ea extends RichTextWidget {
     private FieldValidator field_fb;
     static String field_P;
     static bn field_cb;
@@ -59,10 +59,10 @@ final class ea extends se {
         RgbSprite var40;
         RgbSprite var41;
         RgbSprite var42;
-        mg var43;
-        mg var44;
-        mg var45;
-        mg var46;
+        TextWidgetRenderer var43;
+        TextWidgetRenderer var44;
+        TextWidgetRenderer var45;
+        TextWidgetRenderer var46;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -94,13 +94,13 @@ final class ea extends se {
           var17 = NetworkArchiveRequest.field_v;
           if (!var17.equals(this.field_v)) {
             this.field_v = var17;
-            this.f((byte) 105);
+            this.rebuildHotspotBounds((byte) 105);
           }
           super.a(param0, param1, -109, param3);
           var6 = this.field_fb.getValidationStatus(21314);
-          var43 = (mg) ((Object) this.field_n);
+          var43 = (TextWidgetRenderer) ((Object) this.field_n);
           var9 = param3 + this.field_u;
-          var10 = var43.a(0, param0, (mf) (this)) + (var43.a((mf) (this), -23159).a((byte) 34) >> 1);
+          var10 = var43.getTextOriginY(0, param0, (mf) (this)) + (var43.getTextLayout((mf) (this), -23159).getLayoutHeight((byte) 34) >> 1);
           if (in.field_g != var6 &&
             var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
@@ -144,13 +144,13 @@ final class ea extends se {
           var22 = NetworkArchiveRequest.field_v;
           if (!var22.equals(this.field_v)) {
             this.field_v = var22;
-            this.f((byte) 105);
+            this.rebuildHotspotBounds((byte) 105);
           }
           super.a(param0, param1, -109, param3);
           var6 = this.field_fb.getValidationStatus(21314);
-          var44 = (mg) ((Object) this.field_n);
+          var44 = (TextWidgetRenderer) ((Object) this.field_n);
           var9Lifetime1 = param3 + this.field_u;
-          var10Lifetime1 = var44.a(0, param0, (mf) (this)) + (var44.a((mf) (this), -23159).a((byte) 34) >> 1);
+          var10Lifetime1 = var44.getTextOriginY(0, param0, (mf) (this)) + (var44.getTextLayout((mf) (this), -23159).getLayoutHeight((byte) 34) >> 1);
           if (in.field_g != var6 &&
             var6 != MouseWheelInput.field_d) {
             if (var6 == qk.field_b) {
@@ -194,13 +194,13 @@ final class ea extends se {
         if (var5 != null) {
           if (!var5.equals(this.field_v)) {
             this.field_v = var5;
-            this.f((byte) 105);
+            this.rebuildHotspotBounds((byte) 105);
           }
           super.a(param0, param1, -109, param3);
           var6Lifetime1 = this.field_fb.getValidationStatus(21314);
-          var46 = (mg) ((Object) this.field_n);
+          var46 = (TextWidgetRenderer) ((Object) this.field_n);
           var9Lifetime2 = param3 + this.field_u;
-          var10Lifetime2 = var46.a(0, param0, (mf) (this)) + (var46.a((mf) (this), -23159).a((byte) 34) >> 1);
+          var10Lifetime2 = var46.getTextOriginY(0, param0, (mf) (this)) + (var46.getTextLayout((mf) (this), -23159).getLayoutHeight((byte) 34) >> 1);
           if (in.field_g != var6Lifetime1 &&
             var6Lifetime1 != MouseWheelInput.field_d) {
             if (var6Lifetime1 == qk.field_b) {
@@ -240,13 +240,13 @@ final class ea extends se {
         var5Lifetime1 = var27;
         if (!var27.equals(this.field_v)) {
           this.field_v = var27;
-          this.f((byte) 105);
+          this.rebuildHotspotBounds((byte) 105);
         }
         super.a(param0, param1, -109, param3);
         var6Lifetime2 = this.field_fb.getValidationStatus(21314);
-        var45 = (mg) ((Object) this.field_n);
+        var45 = (TextWidgetRenderer) ((Object) this.field_n);
         var9Lifetime3 = param3 + this.field_u;
-        var10Lifetime3 = var45.a(0, param0, (mf) (this)) + (var45.a((mf) (this), -23159).a((byte) 34) >> 1);
+        var10Lifetime3 = var45.getTextOriginY(0, param0, (mf) (this)) + (var45.getTextLayout((mf) (this), -23159).getLayoutHeight((byte) 34) >> 1);
         if (in.field_g == var6Lifetime2) {
           var29 = AccountNameAvailabilityValidator.field_p[0];
           var16 = var29;
@@ -313,11 +313,11 @@ final class ea extends se {
         this.field_T.drawAdditive(-(var31.field_v >> 1) + var9Lifetime3, -var31.field_u + var10Lifetime3, 256);
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 0) {
           return null;
         }
-        this.g(93);
+        this.getTooltipText(93);
         return null;
     }
 

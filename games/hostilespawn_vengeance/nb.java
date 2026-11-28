@@ -23,10 +23,10 @@ final class nb extends vd implements WidgetActivationListener {
             if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
               return 40;
             }
-            if (!mb.field_m.ensureIndexLoaded(-15879)) {
+            if (!RichTextLayout.field_m.ensureIndexLoaded(-15879)) {
               return 50;
             }
-            if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
+            if (!RichTextLayout.field_m.tryLoadGroupByName(-8088, "commonui")) {
               return 60;
             }
             if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -60,10 +60,10 @@ final class nb extends vd implements WidgetActivationListener {
             if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
               return 40;
             }
-            if (!mb.field_m.ensureIndexLoaded(-15879)) {
+            if (!RichTextLayout.field_m.ensureIndexLoaded(-15879)) {
               return 50;
             }
-            if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
+            if (!RichTextLayout.field_m.tryLoadGroupByName(-8088, "commonui")) {
               return 60;
             }
             if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -81,10 +81,10 @@ final class nb extends vd implements WidgetActivationListener {
             if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
               return 57;
             }
-            if (!mb.field_m.ensureIndexLoaded(-15879)) {
+            if (!RichTextLayout.field_m.ensureIndexLoaded(-15879)) {
               return 71;
             }
-            if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
+            if (!RichTextLayout.field_m.tryLoadGroupByName(-8088, "commonui")) {
               return 80;
             }
             if (!ll.field_b.ensureIndexLoaded(-15879)) {
@@ -111,10 +111,10 @@ final class nb extends vd implements WidgetActivationListener {
         if (!im.field_c.tryLoadGroupByName(-8088, "commonui")) {
           return 57;
         }
-        if (!mb.field_m.ensureIndexLoaded(-15879)) {
+        if (!RichTextLayout.field_m.ensureIndexLoaded(-15879)) {
           return 71;
         }
-        if (!mb.field_m.tryLoadGroupByName(-8088, "commonui")) {
+        if (!RichTextLayout.field_m.tryLoadGroupByName(-8088, "commonui")) {
           return 80;
         }
         if (!ll.field_b.ensureIndexLoaded(-15879)) {

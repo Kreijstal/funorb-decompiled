@@ -71,7 +71,7 @@ final class hb {
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = "" + fi.field_p;
+              stackIn_15_6 = "" + TextHotspotBounds.field_p;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
             while (0 == var4.status) {

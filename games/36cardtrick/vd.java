@@ -119,7 +119,7 @@ final class vd extends DualLinkNode {
             BoundedRandomAccessFile.field_d = param3;
             AwtRasterBuffer.field_g = param9;
             bj.field_m = param2;
-            dg.field_F = param13;
+            RichTextWidget.field_F = param13;
             kj.field_t = param1;
             if (param5 < 44) {
               vd.clearStaticReferences(65);

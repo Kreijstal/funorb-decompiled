@@ -22,10 +22,10 @@ final class r {
           if (i.field_t[param2] > i.field_t[param3]) {
             return false;
           }
-          if (ci.field_n[param2] < ci.field_n[param3]) {
+          if (TextHotspotBounds.field_n[param2] < TextHotspotBounds.field_n[param3]) {
             return true;
           }
-          if (ci.field_n[param3] < ci.field_n[param2]) {
+          if (TextHotspotBounds.field_n[param3] < TextHotspotBounds.field_n[param2]) {
             return false;
           }
           if (param0 == 2) {
@@ -50,10 +50,10 @@ final class r {
           }
           return !(param2 >= param3);
         }
-        if (ci.field_n[param2] < ci.field_n[param3]) {
+        if (TextHotspotBounds.field_n[param2] < TextHotspotBounds.field_n[param3]) {
           return true;
         }
-        if (ci.field_n[param2] > ci.field_n[param3]) {
+        if (TextHotspotBounds.field_n[param2] > TextHotspotBounds.field_n[param3]) {
           return false;
         }
         if (i.field_t[param2] < i.field_t[param3]) {

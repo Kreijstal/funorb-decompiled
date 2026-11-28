@@ -18,7 +18,7 @@ final class el {
     }
 
     final static void a(boolean param0, int param1) {
-        aa.field_a = param1;
+        TextLayout.field_a = param1;
         if (!param0) {
           el.resetStaticState(false);
         }

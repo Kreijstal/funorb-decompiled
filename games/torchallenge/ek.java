@@ -78,7 +78,7 @@ final class ek extends UiComponent {
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           var5_int = param0 + this.field_p;
-          bc.a(this.field_l + param3, this.field_O.storedWidth + param0, param3, -this.field_O.storedWidth + var5_int, param1 - 13469);
+          DefaultTextWidgetRenderer.a(this.field_l + param3, this.field_O.storedWidth + param0, param3, -this.field_O.storedWidth + var5_int, param1 - 13469);
           for (var6 = param0 - this.field_F; var6 < var5_int; var6 = var6 + param2.storedWidth) {
             param2.drawTransparent(var6, param3);
           }
@@ -280,7 +280,7 @@ final class ek extends UiComponent {
         }
         this.a(var5, 13470, this.field_B[0], var6);
         if (this.field_A < 65536) {
-          bc.a(var6 + this.field_l, var5 + (this.field_p * this.field_A >> 16), var6, var5 + this.field_p, 1);
+          DefaultTextWidgetRenderer.a(var6 + this.field_l, var5 + (this.field_p * this.field_A >> 16), var6, var5 + this.field_p, 1);
           this.a(var5, 13470, this.field_B[1], var6);
           ie.b((byte) -9);
         }

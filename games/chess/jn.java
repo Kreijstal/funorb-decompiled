@@ -12,7 +12,7 @@ final class jn extends InteractiveWidget {
     final void a(int param0, int param1, mf param2, int param3) {
         try {
           if (param1 >= -6) {
-            this.g(110);
+            this.getTooltipText(110);
           }
           this.field_N = this.field_N + 1;
           super.a(param0, -10, param2, param3);
@@ -266,18 +266,18 @@ final class jn extends InteractiveWidget {
               field_M = (char[]) null;
             }
             cm.field_u = param6;
-            ub.field_e = param3;
+            TextLayout.field_e = param3;
             NetworkGameClient.field_s = param13;
             fn.field_b = param12;
             am.field_d = param2;
-            re.field_n = param1;
+            TextHotspotBounds.field_n = param1;
             DiskCacheWorker.field_a = param10;
             qc.field_a = param7;
             ln.field_Kb = param0;
             bk.field_n = param11;
-            if (null != re.field_n.field_d) {
+            if (null != TextHotspotBounds.field_n.field_d) {
               try {
-                DiskArchiveRequest.field_z = new BufferedRandomAccessFile(re.field_n.field_d, 64, 0);
+                DiskArchiveRequest.field_z = new BufferedRandomAccessFile(TextHotspotBounds.field_n.field_d, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -336,7 +336,7 @@ final class jn extends InteractiveWidget {
         }
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         if (this.field_w) {
           return this.field_O.getValidationMessage(false);
         }

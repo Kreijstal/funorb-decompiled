@@ -127,9 +127,9 @@ final class sf {
             MusicPatchPcmStream.field_q = MusicPatchPcmStream.field_q - 1;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (bc.field_o != 1 && (bc.field_o != 3 ||
+          if (DefaultTextWidgetRenderer.field_o != 1 && (DefaultTextWidgetRenderer.field_o != 3 ||
             !FullscreenFocusCanvas.field_j)) {
-            if (bc.field_o == -1 &&
+            if (DefaultTextWidgetRenderer.field_o == -1 &&
               var4 == 0 &&
               ea.field_e >= 0 &&
               BufferedSocket.field_p != null &&
@@ -170,16 +170,16 @@ final class sf {
                 }
               }
             } else {
-              if (13 == bc.field_o && (var3 == 2 ||
+              if (13 == DefaultTextWidgetRenderer.field_o && (var3 == 2 ||
                 var3 == 1 ||
                 3 == var3)) {
                 var1_int = 9;
               } else {
-                if (bc.field_o == 13 &&
+                if (DefaultTextWidgetRenderer.field_o == 13 &&
                   var3 == 4) {
                   var1_int = -1;
                 } else {
-                  if (13 == bc.field_o &&
+                  if (13 == DefaultTextWidgetRenderer.field_o &&
                     var3 == 5) {
                     if (gh.field_x) {
                       var1_int = 11;
@@ -187,19 +187,19 @@ final class sf {
                       var1_int = 10;
                     }
                   } else {
-                    if ((13 != bc.field_o ||
+                    if ((13 != DefaultTextWidgetRenderer.field_o ||
                       var3 != 7) &&
-                      bc.field_o != 15) {
-                      if (13 == bc.field_o &&
+                      DefaultTextWidgetRenderer.field_o != 15) {
+                      if (13 == DefaultTextWidgetRenderer.field_o &&
                         6 == var3) {
                         var1_int = 12;
                       } else {
-                        if (bc.field_o != 0 &&
-                          12 != bc.field_o &&
-                          3 != bc.field_o &&
-                          2 != bc.field_o &&
-                          bc.field_o != 4) {
-                          if ((-1 != bc.field_o)) {
+                        if (DefaultTextWidgetRenderer.field_o != 0 &&
+                          12 != DefaultTextWidgetRenderer.field_o &&
+                          3 != DefaultTextWidgetRenderer.field_o &&
+                          2 != DefaultTextWidgetRenderer.field_o &&
+                          DefaultTextWidgetRenderer.field_o != 4) {
+                          if ((-1 != DefaultTextWidgetRenderer.field_o)) {
                             var1_int = 8;
                           }
                         } else {
@@ -229,7 +229,7 @@ final class sf {
               MusicPatchPcmStream.field_q = -1;
               if (SecondaryNodeDequeIterator.field_d != -1) {
                 var5 = ImageProducerRasterBuffer.field_n[var1_int] ? 1 : 0;
-                lg.a(var5 != 0, (byte) -79, DiskArchiveRequest.field_x[var1_int]);
+                TextLayout.a(var5 != 0, (byte) -79, DiskArchiveRequest.field_x[var1_int]);
                 return;
               }
             }

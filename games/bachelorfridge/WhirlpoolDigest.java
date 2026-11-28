@@ -190,7 +190,7 @@ final class WhirlpoolDigest {
         CreatureRef var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        ela stackIn_3_0 = null;
+        DisableMoveSlotEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -201,7 +201,7 @@ final class WhirlpoolDigest {
             WhirlpoolDigest.releaseStatics(-96);
           }
           var3 = param0.readUnsignedByte(param1 ^ 16711815);
-          stackIn_3_0 = new ela(var2, var3);
+          stackIn_3_0 = new DisableMoveSlotEffect(var2, var3);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

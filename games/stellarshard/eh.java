@@ -111,10 +111,10 @@ final class eh {
           var2 = var28.readUnsignedByte(4);
           if (param0 == ~var2) {
             var3 = var28.readUnsignedShort((byte) 26);
-            var4 = (hk) (id.field_g.beginForward(-114));
+            var4 = (hk) (DefaultTextWidgetRenderer.field_g.beginForward(-114));
             while (var4 != null) {
               if (var4.field_t != var3) {
-                var4 = (hk) (id.field_g.nextForward((byte) 80));
+                var4 = (hk) (DefaultTextWidgetRenderer.field_g.nextForward((byte) 80));
                 continue;
               }
               break;

@@ -99,7 +99,7 @@ final class al {
         String var7;
         String var8;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        var6 = "(" + l.field_q + " " + gg.field_l + " " + ek.field_h + ") " + t.field_b;
+        var6 = "(" + DefaultTextWidgetRenderer.field_q + " " + gg.field_l + " " + ek.field_h + ") " + t.field_b;
         var1 = var6;
         if (param0 > -43) {
           field_d = (he[]) null;

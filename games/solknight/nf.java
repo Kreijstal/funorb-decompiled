@@ -43,9 +43,9 @@ final class nf extends ld implements WidgetActivationListener {
           var4.field_m = 0;
           var4.field_t = this.field_t;
           var4.field_x = 80;
-          var4.field_w = (j) ((Object) new af(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_w = (j) ((Object) new DefaultTextWidgetRenderer(jh.field_g, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, 5411);
-          this.field_T = this.a(38, (dg) (this), le.field_a);
+          this.field_T = this.a(38, (dg) (this), TextLineMetrics.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

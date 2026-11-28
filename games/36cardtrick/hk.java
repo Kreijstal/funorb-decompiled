@@ -40,7 +40,7 @@ final class hk {
           var5 = 0;
           var6 = -40 % ((12 - param0) / 38);
           while (var3 > var5) {
-            if (!di.a((byte) -78, param1)) {
+            if (!TextLineMetrics.a((byte) -78, param1)) {
               var7 = param1.readBits(AccountNameAvailabilityValidator.b(-27571, -1 + var5), -1);
               var4[var5] = var4[var7];
             } else {

@@ -53,9 +53,9 @@ abstract class AsyncRequest extends DualLinkNode {
             !(param0 <= qi.field_b.length)) {
             qi.field_b = new int[param0 * 2];
           }
-          if (null == va.field_e ||
-            !(va.field_e.length >= param0)) {
-            va.field_e = new int[2 * param0];
+          if (null == TextLineMetrics.field_e ||
+            !(TextLineMetrics.field_e.length >= param0)) {
+            TextLineMetrics.field_e = new int[2 * param0];
           }
           if (null == ValidatedTextField.field_Y ||
             !(ValidatedTextField.field_Y.length >= param0 + param2)) {
@@ -88,9 +88,9 @@ abstract class AsyncRequest extends DualLinkNode {
               !(param0 <= qi.field_b.length)) {
               qi.field_b = new int[param0 * 2];
             }
-            if (null == va.field_e ||
-              !(va.field_e.length >= param0)) {
-              va.field_e = new int[2 * param0];
+            if (null == TextLineMetrics.field_e ||
+              !(TextLineMetrics.field_e.length >= param0)) {
+              TextLineMetrics.field_e = new int[2 * param0];
             }
             if (null == ValidatedTextField.field_Y) {
               ValidatedTextField.field_Y = new int[2 * (param2 + param0)];
@@ -137,9 +137,9 @@ abstract class AsyncRequest extends DualLinkNode {
                 !(param0 <= qi.field_b.length)) {
                 qi.field_b = new int[param0 * 2];
               }
-              if (null == va.field_e ||
-                !(va.field_e.length >= param0)) {
-                va.field_e = new int[2 * param0];
+              if (null == TextLineMetrics.field_e ||
+                !(TextLineMetrics.field_e.length >= param0)) {
+                TextLineMetrics.field_e = new int[2 * param0];
               }
               if (null == ValidatedTextField.field_Y ||
                 !(ValidatedTextField.field_Y.length >= param0 + param2)) {
@@ -158,9 +158,9 @@ abstract class AsyncRequest extends DualLinkNode {
                   !(param0 <= qi.field_b.length)) {
                   qi.field_b = new int[param0 * 2];
                 }
-                if (null == va.field_e ||
-                  !(va.field_e.length >= param0)) {
-                  va.field_e = new int[2 * param0];
+                if (null == TextLineMetrics.field_e ||
+                  !(TextLineMetrics.field_e.length >= param0)) {
+                  TextLineMetrics.field_e = new int[2 * param0];
                 }
                 if (null == ValidatedTextField.field_Y ||
                   !(ValidatedTextField.field_Y.length >= param0 + param2)) {
@@ -179,9 +179,9 @@ abstract class AsyncRequest extends DualLinkNode {
                   !(param0 <= qi.field_b.length)) {
                   qi.field_b = new int[param0 * 2];
                 }
-                if (null == va.field_e ||
-                  !(va.field_e.length >= param0)) {
-                  va.field_e = new int[2 * param0];
+                if (null == TextLineMetrics.field_e ||
+                  !(TextLineMetrics.field_e.length >= param0)) {
+                  TextLineMetrics.field_e = new int[2 * param0];
                 }
                 if (null == ValidatedTextField.field_Y ||
                   !(ValidatedTextField.field_Y.length >= param0 + param2)) {

@@ -131,10 +131,10 @@ final class DirectByteStorage extends ByteStorage {
     final static void c(int param0) {
         if (param0 >= -70) {
           field_l = (String) null;
-          cj.a(BufferedRandomAccessFile.c(-1), 0);
+          RichTextWidget.a(BufferedRandomAccessFile.c(-1), 0);
           return;
         }
-        cj.a(BufferedRandomAccessFile.c(-1), 0);
+        RichTextWidget.a(BufferedRandomAccessFile.c(-1), 0);
     }
 
     final byte[] getBytes(byte param0) {

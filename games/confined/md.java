@@ -66,10 +66,10 @@ final class md {
           var2 = var28.readUnsignedByte(32);
           if (var2 == 0) {
             var3 = var28.readUnsignedShort((byte) 25);
-            var4 = (qn) (na.field_T.beginForward(86));
+            var4 = (qn) (RichTextWidget.field_T.beginForward(86));
             while (var4 != null) {
               if (var3 != var4.field_w) {
-                var4 = (qn) (na.field_T.nextForward(2123));
+                var4 = (qn) (RichTextWidget.field_T.nextForward(2123));
                 continue;
               }
               break;
@@ -187,7 +187,7 @@ final class md {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "md.C(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "md.C(" + param0 + ')');
         }
     }
 
@@ -392,7 +392,7 @@ final class md {
             } else {
               stackIn_69_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
+            throw TextLineMetrics.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_68_1).append(stackIn_69_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -495,7 +495,7 @@ final class md {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "md.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "md.B(" + param0 + ')');
         }
     }
 

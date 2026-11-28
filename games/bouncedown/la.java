@@ -28,7 +28,7 @@ final class la extends InteractiveWidget {
         }
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (this.field_g) {
           return this.field_B.getValidationMessage((byte) 66);
         }
@@ -66,7 +66,7 @@ final class la extends InteractiveWidget {
         var6 = (this.field_m >> 1) + param1 + this.field_i;
         var8 = this.field_B.getValidationStatus((byte) 125);
         if (param2 >= 33) {
-          if (ui.field_o != var8 &&
+          if (TextHotspotBounds.field_o != var8 &&
             var8 != mi.field_c) {
             if (a.field_e == var8) {
               var20 = field_E[2];
@@ -106,7 +106,7 @@ final class la extends InteractiveWidget {
           return;
         }
         this.a(54, -73, 123, 16);
-        if (ui.field_o == var8) {
+        if (TextHotspotBounds.field_o == var8) {
           var15 = field_E[0];
           var9Lifetime1 = var15.field_t << 1;
           var10Lifetime1 = var15.field_o << 1;
@@ -300,7 +300,7 @@ final class la extends InteractiveWidget {
         if (param0 != 640) {
           return;
         }
-        if (ui.field_m <= 0) {
+        if (TextHotspotBounds.field_m <= 0) {
           if (jh.b(param0 ^ 767564705)) {
             var2 = 0;
             if (vd.field_b != null) {

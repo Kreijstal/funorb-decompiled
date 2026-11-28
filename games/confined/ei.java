@@ -56,13 +56,13 @@ final class ei extends ug implements WidgetActivationListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "ei.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "ei.B(" + param0 + ')');
         }
     }
 
     final static void h(byte param0) {
         he.field_f = -1;
-        vf.field_o = null;
+        DefaultTextWidgetRenderer.field_o = null;
         DampedProjectile.field_R = false;
         if (param0 > -93) {
           return;
@@ -105,7 +105,7 @@ final class ei extends ug implements WidgetActivationListener {
           var4.field_z = 80;
           var4.field_q = 0;
           var4.field_m = 50;
-          var4.field_n = (fe) ((Object) new vf(fa.field_Q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_n = (fe) ((Object) new DefaultTextWidgetRenderer(fa.field_Q, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(var4, 10);
           this.field_hb = this.a((uk) (this), s.field_J, -27167);
           return;
@@ -125,7 +125,7 @@ final class ei extends ug implements WidgetActivationListener {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw sd.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -172,7 +172,7 @@ final class ei extends ug implements WidgetActivationListener {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -186,7 +186,7 @@ final class ei extends ug implements WidgetActivationListener {
     }
 
     final static bm o(int param0) {
-        bm var1 = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], InteractiveWidget.field_I[0], sd.field_f[0], rj.field_f[0], an.field_p);
+        bm var1 = new bm(kb.field_a, em.field_e, DualLinkNode.field_p[0], ij.field_r[0], InteractiveWidget.field_I[0], TextLineMetrics.field_f[0], rj.field_f[0], an.field_p);
         StageDirector.clearIndexedSpriteDecodeBuffers(false);
         if (param0 >= 20) {
           return var1;
@@ -220,7 +220,7 @@ final class ei extends ug implements WidgetActivationListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param4).append(')').toString());
         }
     }
 

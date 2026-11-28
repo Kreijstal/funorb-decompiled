@@ -26,10 +26,10 @@ final class re implements uj {
         try {
           var5_int = param0;
           while (true) {
-            if (mg.field_e.length <= var5_int) {
+            if (TextLineMetrics.field_e.length <= var5_int) {
               return;
             }
-            param4 = mg.field_e[var5_int];
+            param4 = TextLineMetrics.field_e[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param4;
@@ -240,27 +240,27 @@ final class re implements uj {
               a.field_d = kj.field_a.readUnsignedByte((byte) -54);
               qd.field_Q = pb.field_c;
               if (tb.field_d.b(0) == hk.field_i) {
-                ak.field_b.a(bm.c(-122), 447616545);
+                ak.field_b.a(RichTextLayout.c(-122), 447616545);
               } else {
                 if (tb.field_d.b(0) == kl.field_a) {
-                  hj.field_e.a(bm.c(-116), 447616545);
+                  hj.field_e.a(RichTextLayout.c(-116), 447616545);
                 }
               }
               FrameTimer.field_c = false;
               if (var11 != null) {
-                nc.a(bm.c(-93), var11, (byte) 78);
+                nc.a(RichTextLayout.c(-93), var11, (byte) 78);
               }
               if (0 >= pj.field_a &&
                 !fa.field_b) {
                 try {
-                  JavaScriptBridge.callWithoutArguments((byte) 18, "unzap", bm.c(-96));
+                  JavaScriptBridge.callWithoutArguments((byte) 18, "unzap", RichTextLayout.c(-96));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  JavaScriptBridge.callWithArguments("zap", bm.c(-111), 16715, new Object[]{oh.a(ne.field_Q, 95)});
+                  JavaScriptBridge.callWithArguments("zap", RichTextLayout.c(-111), 16715, new Object[]{oh.a(ne.field_Q, 95)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -293,7 +293,7 @@ final class re implements uj {
               if (7 == oj.field_K) {
                 oj.field_K = 3;
               }
-              nf.field_g = kj.field_a.readString(false);
+              TextLayout.field_g = kj.field_a.readString(false);
               FrameTimer.field_c = false;
               stackIn_86_0 = oj.field_K;
               return stackIn_86_0;
@@ -301,9 +301,9 @@ final class re implements uj {
             if (null == AwtRasterBuffer.field_i) {
               if (FrameTimer.field_c) {
                 if (qa.a(-125) > 30000L) {
-                  nf.field_g = oi.field_K;
+                  TextLayout.field_g = oi.field_K;
                 } else {
-                  nf.field_g = FullscreenFocusCanvas.field_a;
+                  TextLayout.field_g = FullscreenFocusCanvas.field_a;
                 }
                 FrameTimer.field_c = false;
                 stackIn_94_0 = 3;

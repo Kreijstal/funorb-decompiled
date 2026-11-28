@@ -26,7 +26,7 @@ final class uaa extends TileEffect {
           while (var4_ref != null) {
             var5 = (var4_ref.field_i >> 4) + param2;
             var6 = -(var4_ref.field_h >> 4) + (param0 + (var4_ref.field_q >> 5));
-            mla.field_b[var4_ref.field_v].draw(var5, var6);
+            TextLineMetrics.field_b[var4_ref.field_v].draw(var5, var6);
             var4_ref = (bma) (this.field_h.nextForward(0));
           }
           return;
@@ -35,7 +35,7 @@ final class uaa extends TileEffect {
         while (var4_refLifetime1 != null) {
           var5Lifetime1 = (var4_refLifetime1.field_i >> 4) + param2;
           var6Lifetime1 = -(var4_refLifetime1.field_h >> 4) + (param0 + (var4_refLifetime1.field_q >> 5));
-          mla.field_b[var4_refLifetime1.field_v].draw(var5Lifetime1, var6Lifetime1);
+          TextLineMetrics.field_b[var4_refLifetime1.field_v].draw(var5Lifetime1, var6Lifetime1);
           var4_refLifetime1 = (bma) (this.field_h.nextForward(0));
         }
     }
@@ -95,7 +95,7 @@ final class uaa extends TileEffect {
         int var4 = var3 + var2;
         int var5 = var2 - var3;
         int var6 = DiveBomberAnimation.a(1024, GasCloudAnimation.field_I, -2147483648);
-        bma var7 = new bma(var4, var6, var5, DiveBomberAnimation.a(mla.field_b.length, GasCloudAnimation.field_I, param0 - 2147460862), 50 + DiveBomberAnimation.a(50, GasCloudAnimation.field_I, param0 ^ 2147460862));
+        bma var7 = new bma(var4, var6, var5, DiveBomberAnimation.a(TextLineMetrics.field_b.length, GasCloudAnimation.field_I, param0 - 2147460862), 50 + DiveBomberAnimation.a(50, GasCloudAnimation.field_I, param0 ^ 2147460862));
         var7.field_p = -64 + (var7.field_i >> 4);
         var7.field_g = (var7.field_q >> 4) - 32;
         var7.field_k = var7.field_h >> 4;

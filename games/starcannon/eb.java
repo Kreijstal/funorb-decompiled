@@ -110,7 +110,7 @@ final class eb {
             SoftwareRasterizer.setRasterBuffer(var28, var2, var3);
             SoftwareRasterizer.restoreClip(wc.field_b);
             mf.field_d = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
-            nh.field_f = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 231;
+            TextLineMetrics.field_f = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 231;
             g.field_a = null;
             TextFieldValidator.field_e = (-KeyboardInput.field_c.field_u + pc.field_a.field_u) / 2 + 434;
             lf.field_Z = (-KeyboardInput.field_c.field_v + pc.field_a.field_v) / 2 + 390;
@@ -207,12 +207,12 @@ final class eb {
             var2Lifetime3 = SoftwareRasterizer.field_j;
             var3Lifetime3 = SoftwareRasterizer.field_f;
             SoftwareRasterizer.saveClip(wc.field_b);
-            var4 = ah.field_d.maxLineWidth(se.field_t, 640) + 6;
+            var4 = ah.field_d.maxLineWidth(RichTextLayout.field_t, 640) + 6;
             var5Lifetime1 = 20 + (ja.field_e.field_x + var4);
             var6Lifetime2 = 427 - var5Lifetime1 / 2;
             var7Lifetime2 = 20 + (var6Lifetime2 + ja.field_e.field_x);
             ba.field_c.bindAsRenderTarget();
-            ah.field_d.drawString(se.field_t, -ba.field_c.field_w + var7Lifetime2, ah.field_d.field_q + ah.field_d.field_p + (155 - ba.field_c.field_y), 16777215, -1);
+            ah.field_d.drawString(RichTextLayout.field_t, -ba.field_c.field_w + var7Lifetime2, ah.field_d.field_q + ah.field_d.field_p + (155 - ba.field_c.field_y), 16777215, -1);
             hh.a(-4 + (var7Lifetime2 - ba.field_c.field_w), 155 - ba.field_c.field_y, 3, 50, false, 1, ba.field_c, var4);
             var8Lifetime1 = 155 - (ba.field_c.field_y + (-ah.field_d.field_q + (ja.field_e.field_q + (-3 - ah.field_d.field_p))) / 2);
             ja.field_e.draw(var6Lifetime2 - ba.field_c.field_w, var8Lifetime1);
@@ -221,8 +221,8 @@ final class eb {
             ja.field_e = null;
           }
           SoftwareRasterizer.saveClip(wc.field_b);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, jk.field_l, nh.field_i);
-          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, jk.field_l, nh.field_i);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(16, 16, 608, 112, 15, jk.field_l, TextLineMetrics.field_i);
+          SoftwareRasterizer.fillRoundedRectangleAlpha(231, 144, 393, 232, 15, jk.field_l, TextLineMetrics.field_i);
           var1_int = -21 % ((param0 - 30) / 35);
           if (DelayedPcmStream.field_k != null) {
             DelayedPcmStream.field_k.draw(0, 0);
@@ -262,7 +262,7 @@ final class eb {
             }
             stackIn_53_0 = 112;
             stackIn_54_1 = (0 == ea.field_a.field_k);
-            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_53_0, stackIn_54_1, nh.field_f, lf.field_Z);
+            m.$cfr$intArgs$a$43a9e830b5b3(stackIn_53_0, stackIn_54_1, TextLineMetrics.field_f, lf.field_Z);
           }
           if (pc.field_a != null &&
             null != KeyboardInput.field_c) {
@@ -300,10 +300,10 @@ final class eb {
                 }
               }
             }
-            ab.e(-67);
+            RichTextWidget.e(-67);
             pa.field_I[ag.field_o].draw(269, 340);
           } else {
-            ab.e(-67);
+            RichTextWidget.e(-67);
             pa.field_I[ag.field_o].draw(269, 340);
           }
           return;

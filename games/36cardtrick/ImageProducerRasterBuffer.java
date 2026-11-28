@@ -44,7 +44,7 @@ final class ImageProducerRasterBuffer extends AwtRasterBuffer implements java.aw
               var3_int = 1;
               ii.field_a = false;
             }
-            uk.a(ej.r(-6545), var3_int != 0, (byte) -96, aj.field_p, mj.a(-1));
+            uk.a(ej.r(-6545), var3_int != 0, (byte) -96, aj.field_p, TextLayout.a(-1));
             return;
           }
           if (!lc.a((byte) -82)) {

@@ -18,7 +18,7 @@ final class ShieldSpecial extends SpecialOrder {
         if (param0 != 23621) {
           return;
         }
-        if (o.d((byte) 119)) {
+        if (ChangeAllCreaturesHealthEffect.d((byte) 119)) {
           ua.field_b = false;
           AccountRequestState.field_a = false;
           return;

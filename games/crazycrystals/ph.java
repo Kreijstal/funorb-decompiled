@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ph extends og implements im, WidgetActivationListener {
+final class ph extends og implements TextHotspotListener, WidgetActivationListener {
     static FullscreenFocusCanvas field_E;
     private AccountCreationResultPanel field_z;
-    private rf field_B;
+    private RichTextWidget field_B;
     private InteractiveWidget field_C;
 
-    public final void a(int param0, int param1, rf param2, byte param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, byte param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -93,7 +93,7 @@ final class ph extends og implements im, WidgetActivationListener {
         super(0, 0, 288, 0, (wo) null);
         String var7 = null;
         int var3 = 0;
-        lb var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -102,8 +102,8 @@ final class ph extends og implements im, WidgetActivationListener {
           this.field_C.field_i = (wo) ((Object) new ve());
           var7 = AgeValidator.a(new String[]{this.a(106), this.i(64)}, cc.field_d, 3);
           var3 = 20;
-          var4 = new lb(ai.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
-          this.field_B = new rf(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(ai.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, ai.field_h.field_o, -1, 2147483647, true);
+          this.field_B = new RichTextWidget(var7, var4);
           this.field_B.field_t = "";
           this.field_B.a(47, hp.field_r, 0);
           this.field_B.a(47, hp.field_r, 1);

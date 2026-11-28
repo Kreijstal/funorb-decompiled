@@ -178,7 +178,7 @@ final class uk extends nf {
 
     final void a(byte param0) {
         int var2 = -37 % ((param0 - 29) / 42);
-        tb.field_d.playSampleWithPan(cf.field_d, 100, 48 * (gi.field_m * this.field_h), this.field_k / this.field_h);
+        TextLayout.field_d.playSampleWithPan(cf.field_d, 100, 48 * (gi.field_m * this.field_h), this.field_k / this.field_h);
         this.field_h = 0;
         this.field_k = 0;
     }

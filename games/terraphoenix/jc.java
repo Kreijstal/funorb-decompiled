@@ -12,14 +12,14 @@ abstract class jc extends UiWidget implements sf {
     static PacketBuffer field_z;
     static String[] field_C;
 
-    String f(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
         if (param0 <= 70) {
           field_D = 117;
         }
-        String var2 = super.f(125);
+        String var2 = super.getTooltipText(125);
         if (null != this.field_F) {
-          var3 = this.field_F.f(119);
+          var3 = this.field_F.getTooltipText(119);
           if (var3 != null) {
             return var3;
           }

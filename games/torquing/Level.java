@@ -330,7 +330,7 @@ final class Level {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_78_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -780,7 +780,7 @@ final class Level {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -1065,14 +1065,14 @@ final class Level {
             }
             var7 = null;
             if (jd.field_F != null) {
-              if (uj.field_b == null) {
-                uj.field_b = new BufferedRandomAccessFile[hq.field_a.field_w.length];
+              if (TextLayout.field_b == null) {
+                TextLayout.field_b = new BufferedRandomAccessFile[hq.field_a.field_w.length];
               }
-              if (uj.field_b[param2] == null) {
-                uj.field_b[param2] = new BufferedRandomAccessFile(hq.field_a.field_w[param2], 12000, 0);
+              if (TextLayout.field_b[param2] == null) {
+                TextLayout.field_b[param2] = new BufferedRandomAccessFile(hq.field_a.field_w[param2], 12000, 0);
                 hq.field_a.field_w[param2] = null;
               }
-              var7 = new SectorCacheStore(param2, jd.field_F, uj.field_b[param2], 2097152);
+              var7 = new SectorCacheStore(param2, jd.field_F, TextLayout.field_b[param2], 2097152);
             }
             var8 = BufferedSocket.field_n.a((SectorCacheStore) (var7), (byte) 101, param2, (SectorCacheStore) (var6), param0);
             if (param4) {
@@ -1149,7 +1149,7 @@ final class Level {
                 if (param1 &&
                   this.field_x[var9][1 + var6] - this.field_x[var9 + 1][1 + var6] == this.field_x[var9][var6] - this.field_x[1 + var9][var6] &&
                   -this.field_x[1 + var9][var6 + 1] + this.field_x[var9 + 1][var6] == -this.field_x[var9][var6 + 1] + this.field_x[var9][var6]) {
-                  pc.a(var7, 5265, var10, var11, var8, var4, (short) var14, (short) var13, var12);
+                  DefaultTextWidgetRenderer.a(var7, 5265, var10, var11, var8, var4, (short) var14, (short) var13, var12);
                 } else {
                   if (0 != (var6 + var9) % 2) {
                     oj.a(var12, (short) var13, 2, param1, true, var8, var7, (short) var14, var10, var4);
@@ -1189,7 +1189,7 @@ final class Level {
           this.field_i = param1;
           this.id = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "hc.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

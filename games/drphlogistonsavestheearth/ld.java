@@ -63,7 +63,7 @@ final class ld {
         var8 = var9;
         var2 = var8;
         for (var3 = -1 + AccountRegistrationPanel.field_W.length; var3 >= 0; var3--) {
-          var4 = l.field_n[sd.field_a.levelNumber][var3];
+          var4 = DefaultTextWidgetRenderer.field_n[sd.field_a.levelNumber][var3];
           var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (ul.field_d > var4) {
             var2[var3] = -var4 + ul.field_d;
@@ -124,7 +124,7 @@ final class ld {
         var8 = var9;
         var2 = var8;
         for (var3 = mk.field_g.length + param0; var3 >= 0; var3--) {
-          var4 = l.field_n[sd.field_a.levelNumber][var3];
+          var4 = DefaultTextWidgetRenderer.field_n[sd.field_a.levelNumber][var3];
           var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (var4 < ul.field_d) {
             var8[var3] = -var4 + ul.field_d;
@@ -147,7 +147,7 @@ final class ld {
             cb.field_b.drawParagraph(GzipDecompressor.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
-        if (l.field_n[sd.field_a.levelNumber][7] < ul.field_d &&
+        if (DefaultTextWidgetRenderer.field_n[sd.field_a.levelNumber][7] < ul.field_d &&
           kc.field_o[sd.field_a.levelNumber][7] > ul.field_d) {
           SoftwareRasterizer.fillRectangleAlpha(0, 0, 640, 480, 16777215, 255 - (int)(2.5 * (double)var10[7]));
         }
@@ -906,7 +906,7 @@ final class ld {
         var4 += 56;
         lc.field_s.a(50, var4);
         ki.field_b.a(83, var4 - 16);
-        fk.field_l.a(83, 17 + var4);
+        TextHotspotBounds.field_l.a(83, 17 + var4);
         si.field_D.a(116, var4);
         cb.field_b.drawString(fm.field_c, var5, var4 + var6, 4210752, -1);
         var7 = di.field_e[0];
@@ -984,7 +984,7 @@ final class ld {
           return;
         }
         while (var3 >= 0) {
-          var4 = l.field_n[sd.field_a.levelNumber][var3];
+          var4 = DefaultTextWidgetRenderer.field_n[sd.field_a.levelNumber][var3];
           var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (ul.field_d > var4) {
             var2[var3] = ul.field_d - var4;
@@ -1444,15 +1444,15 @@ final class ld {
                                           if (var7 == 16) {
                                             if (this.field_e.e(-748)) {
                                               var7 = sd.field_a.levelNumber;
-                                              var8 = l.field_n[var7].length;
+                                              var8 = DefaultTextWidgetRenderer.field_n[var7].length;
                                               if (this.field_c == 6) {
-                                                if (l.field_n[var7][-1 + var8] >= ul.field_d) {
+                                                if (DefaultTextWidgetRenderer.field_n[var7][-1 + var8] >= ul.field_d) {
                                                   var13 = 0;
                                                   var9 = var13;
                                                   while (-1 + var8 > var13) {
-                                                    if (ul.field_d > l.field_n[var7][var13] &&
-                                                      ul.field_d < l.field_n[var7][1 + var13]) {
-                                                      ul.field_d = l.field_n[var7][var13 + 1];
+                                                    if (ul.field_d > DefaultTextWidgetRenderer.field_n[var7][var13] &&
+                                                      ul.field_d < DefaultTextWidgetRenderer.field_n[var7][1 + var13]) {
+                                                      ul.field_d = DefaultTextWidgetRenderer.field_n[var7][var13 + 1];
                                                     }
                                                     var13++;
                                                   }
@@ -2054,9 +2054,9 @@ final class ld {
         if (null != sd.field_a) {
           var6 = sd.field_a.levelNumber;
         }
-        if (l.field_f.length > var6) {
+        if (DefaultTextWidgetRenderer.field_f.length > var6) {
           var9 = rc.field_a[var6][var7Lifetime1];
-          var8 = l.field_f[var6][var7Lifetime1];
+          var8 = DefaultTextWidgetRenderer.field_f[var6][var7Lifetime1];
         } else {
           var8 = al.field_c;
           var9 = DebouncedFieldValidator.field_a;
@@ -2124,7 +2124,7 @@ final class ld {
         var11 = var4.field_x + var10 + (140 + var5 * 9 / 2);
         EmailFormatValidator.field_q.drawCentred(var3, 430, var11, 4210752, -1);
         if (!oh.a(0)) {
-          stackIn_38_0 = mi.field_h;
+          stackIn_38_0 = TextLineMetrics.field_h;
         } else {
           stackIn_38_0 = ClientException.field_f;
         }

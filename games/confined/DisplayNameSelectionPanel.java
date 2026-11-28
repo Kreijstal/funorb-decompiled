@@ -15,7 +15,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           super.a(param0, param1, param2, param3);
           this.field_Q.field_L = this.canSubmitDisplayName(-106);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bf.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bf.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -30,7 +30,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           }
           ((EditableTextField) ((Object) var3)).setText(false, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bf.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -86,7 +86,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -127,14 +127,14 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (fe) null);
         this.field_O = new ValidatedTextField("", (uk) null, 12);
-        vf var1 = new vf(fa.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(fa.field_Q, 0, 0, 0, 0, 16777215, -1, 3, 0, gm.field_cb.field_C, -1, 2147483647, true);
         fj var2 = new fj(Confined.field_G, var1, (uk) null);
         this.field_Q = new InteractiveWidget(ta.field_a, (uk) null);
         this.field_P = new InteractiveWidget(AwtRasterBuffer.field_d, (uk) null);
@@ -188,7 +188,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           }
           r.a((byte) 93, false, sj.field_kb);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "bf.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "bf.GA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -225,7 +225,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -268,7 +268,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
             this.a((fj) null, (byte) -77, -37, '￳');
           }
           var4 = var3.getValidationStatus(-3621);
-          stackIn_8_0 = (nn.field_q == var4);
+          stackIn_8_0 = (TextHotspotBounds.field_q == var4);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -302,7 +302,7 @@ final class DisplayNameSelectionPanel extends ga implements NameSuggestionListen
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

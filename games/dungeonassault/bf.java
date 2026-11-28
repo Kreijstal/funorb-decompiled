@@ -55,7 +55,7 @@ final class bf {
         return;
     }
 
-    final static void a(String param0, tg param1, int param2, BitmapFont param3, int param4) {
+    final static void a(String param0, TextLineMetrics param1, int param2, BitmapFont param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

@@ -371,8 +371,8 @@ final class ia extends IntrusiveNode {
                 return;
               }
               if (1 == tg.field_d &&
-                ol.field_b >= 264 &&
-                ol.field_b < 428 &&
+                TextLineMetrics.field_b >= 264 &&
+                TextLineMetrics.field_b < 428 &&
                 nk.field_c >= 376 &&
                 nk.field_c < 407) {
                 var4Lifetime3 = 1;
@@ -514,7 +514,7 @@ final class ia extends IntrusiveNode {
           scanLoop5: while (true) {
             if (!pc.b(-122)) {
               if (WordDictionary.field_e) {
-                a.field_S.a(-127, kk.a(336, ol.field_b, nk.field_c), kk.a(336, PacketBuffer.field_j, bk.field_a));
+                a.field_S.a(-127, kk.a(336, TextLineMetrics.field_b, nk.field_c), kk.a(336, PacketBuffer.field_j, bk.field_a));
                 if (a.field_S.f(-9112)) {
                   if (0 == a.field_S.field_d) {
                     dc.submitWord(-22991, true);
@@ -527,8 +527,8 @@ final class ia extends IntrusiveNode {
               if (tg.field_d == 1 &&
                 !WordDictionary.field_e) {
                 qf.field_e = qf.field_e ^ 5 << bc.field_b;
-                DirectByteStorage.field_j = DirectByteStorage.field_j + ol.field_b;
-                EmailFormatValidator.field_n = EmailFormatValidator.field_n + ol.field_b;
+                DirectByteStorage.field_j = DirectByteStorage.field_j + TextLineMetrics.field_b;
+                EmailFormatValidator.field_n = EmailFormatValidator.field_n + TextLineMetrics.field_b;
                 nc.field_t = nc.field_t + nk.field_c;
                 bc.field_b = bc.field_b ^ 5 << bc.field_b;
                 ud.field_b = ud.field_b - nk.field_c;
@@ -676,7 +676,7 @@ final class ia extends IntrusiveNode {
             if (ConfirmedEmailAvailabilityValidator.field_j >= 2 &&
               ch.field_d == 35 &&
               ve.field_B[82]) {
-              ue.dumpRackState(31370);
+              TextLayout.dumpRackState(31370);
               continue;
             }
             if (ch.field_d == 83) {

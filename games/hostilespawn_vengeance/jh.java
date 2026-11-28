@@ -368,7 +368,7 @@ final class jh extends wb implements WidgetActivationListener {
           var4.field_x = 80;
           var4.field_v = 0;
           var4.field_m = 50;
-          var4.field_h = (nn) ((Object) new cn(jn.field_G, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_h = (nn) ((Object) new DefaultTextWidgetRenderer(jn.field_G, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(51448, var4);
           this.field_gb = this.a((mh) (this), IsaacGenerator.field_n, (byte) 50);
           return;

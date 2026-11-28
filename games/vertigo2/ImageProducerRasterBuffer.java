@@ -65,7 +65,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           return;
         }
         td.field_c.b(param0, 0);
-        ql var2 = lq.field_a;
+        ql var2 = TextLineMetrics.field_a;
         if (var2 == null) {
           return;
         }

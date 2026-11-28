@@ -220,7 +220,7 @@ abstract class FrameTimer {
           if (param0 >= -57) {
             FrameTimer.a((byte) 92);
           }
-          var2 = MouseInputHandler.a(116, lg.a(param1, -1));
+          var2 = MouseInputHandler.a(116, TextLayout.a(param1, -1));
           if (var2 == null) {
             var2 = "";
           }

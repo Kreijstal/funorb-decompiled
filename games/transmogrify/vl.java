@@ -237,12 +237,12 @@ final class vl extends fi {
             return (AccountServiceResult) (stackIn_4_0);
           }
           if (db.field_a == AchievementNotice.field_l &&
-            param1.equals(jh.field_g)) {
-            db.field_a = jh.field_n;
+            param1.equals(RichTextLayout.field_g)) {
+            db.field_a = RichTextLayout.field_n;
             stackIn_11_0 = de.field_a;
             return stackIn_11_0;
           }
-          jh.field_g = param1;
+          RichTextLayout.field_g = param1;
           db.field_a = of.field_d;
           de.field_a = null;
           stackIn_9_0 = null;

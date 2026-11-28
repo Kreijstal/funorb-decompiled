@@ -303,7 +303,7 @@ final class DisplayNameSelectionPanel extends nb implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (rd) null);
         this.field_E = new ValidatedTextField("", (vd) null, 12);
-        ik var1 = new ik(ValidatedTextField.field_T, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(ValidatedTextField.field_T, 0, 0, 0, 0, 16777215, -1, 3, 0, ql.field_Q.field_E, -1, 2147483647, true);
         w var2 = new w(oh.field_c, var1, (vd) null);
         this.field_G = new InteractiveWidget(PasswordValidator.field_l, (vd) null);
         this.field_B = new InteractiveWidget(he.field_a, (vd) null);

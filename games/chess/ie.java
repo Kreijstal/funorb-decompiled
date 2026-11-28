@@ -153,7 +153,7 @@ final class ie {
           var5_ref_String = AchievementNotification.field_m;
           var4_ref_dh.field_b.a((byte) -12, var5_ref_String, 5);
           var4_ref_dhLifetime1 = pi.field_d;
-          var5 = re.field_m;
+          var5 = TextHotspotBounds.field_m;
           var6 = ag.field_f;
           var4_ref_dhLifetime1.field_b.a(true, var5, 0, var6, 0);
         }

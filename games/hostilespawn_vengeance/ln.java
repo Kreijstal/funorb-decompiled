@@ -83,7 +83,7 @@ final class ln {
           }
           ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
           s.field_b.a(true, -var5_int + s.field_b.field_i);
-          mb.d(-1, -22370);
+          RichTextLayout.d(-1, -22370);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,7 +353,7 @@ final class ln {
         this.field_f = lb.field_b;
         this.field_k = ja.field_c;
         this.field_i = KeyboardInput.field_c;
-        this.field_d = pm.field_c;
+        this.field_d = TextLineMetrics.field_c;
         this.field_e = qa.field_e;
         this.field_n = pk.field_k;
     }

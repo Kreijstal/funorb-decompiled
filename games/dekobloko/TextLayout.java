@@ -98,7 +98,7 @@ abstract class TextLayout {
         }
     }
 
-    final int computeInteger0235(boolean booleanArgument1) {
+    final int getMaxLineRightX(boolean booleanArgument1) {
         int integerLocal1 = 0;
         int integerLocal2;
         TextLineMetrics[] textLineMetricsArrayLocal3;
@@ -125,7 +125,7 @@ abstract class TextLayout {
         return integerLocal2;
     }
 
-    final int computeInteger0238(int integerArgument1) {
+    final int getLayoutHeight(int integerArgument1) {
         int stackIntegerLocal1 = 0;
         if (integerArgument1 != -1) {
           return -39;
@@ -186,7 +186,7 @@ abstract class TextLayout {
         return TextFieldValidator.stringState0633;
     }
 
-    final int computeInteger0229(byte byteArgument1, int integerArgument2) {
+    final int getXForTextOffset(byte byteArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         TextLineMetrics textLineMetricsLocal2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;
@@ -205,7 +205,7 @@ abstract class TextLayout {
         return 0;
     }
 
-    final int computeInteger0233(int integerArgument1, int integerArgument2, int integerArgument3) {
+    final int getTextOffsetAt(int integerArgument1, int integerArgument2, int integerArgument3) {
         int integerLocal1 = 0;
         TextLineMetrics textLineMetricsLocal2 = null;
         int integerLocal3 = 0;
@@ -240,7 +240,7 @@ abstract class TextLayout {
         return -1;
     }
 
-    final int computeInteger0236(boolean booleanArgument1, int integerArgument2) {
+    final int getLineIndexForTextOffset(boolean booleanArgument1, int integerArgument2) {
         int integerLocal1 = 0;
         TextLineMetrics textLineMetricsLocal2 = null;
         int integerLocal3 = DekoBlokoClient.obfuscationControl ? 1 : 0;

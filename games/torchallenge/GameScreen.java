@@ -32,7 +32,7 @@ final class GameScreen {
           }
           if (this.screenId == 1 &&
             this.field_k.field_j != -1 &&
-            bc.field_o != -1) {
+            DefaultTextWidgetRenderer.field_o != -1) {
             var3_int = this.field_k.field_j;
           }
           if (this.screenId == 3) {
@@ -434,7 +434,7 @@ final class GameScreen {
             boolean decompiledFrameRemainder0 = true;
             if (kj.e((byte) -109)) {
               DelegatingCanvas.field_f = true;
-              stackIn_167_0 = ~fa.field_g;
+              stackIn_167_0 = ~RichTextLayout.field_g;
               stackIn_167_1 = -3;
               if (var4 != 0) {
                 break scanLoop1;
@@ -490,7 +490,7 @@ final class GameScreen {
                 FullscreenFocusCanvas.field_j = false;
                 if (rj.field_g == -1) {
                   GameApplet.field_o = 0;
-                  df.field_O = true;
+                  RichTextWidget.field_O = true;
                   if (0 <= ea.field_e - 6) {
                     GameApplet.field_o = 1;
                   }
@@ -553,7 +553,7 @@ final class GameScreen {
             this.screenId == 10) {
             AccountServiceResult.field_k = AccountServiceResult.field_k + 1;
           }
-          stackIn_230_0 = (bc.field_o == PcmOutputWorker.activeScreenId) ? 0 : 1;
+          stackIn_230_0 = (DefaultTextWidgetRenderer.field_o == PcmOutputWorker.activeScreenId) ? 0 : 1;
           var3 = stackIn_230_0;
           if (this.screenId == 10) {
             if (0 <= this.field_k.field_j &&
@@ -567,29 +567,29 @@ final class GameScreen {
               }
               if (ByteStorage.field_e <= 0) {
                 ByteStorage.field_e = 0;
-                fa.field_j = 25;
+                RichTextLayout.field_j = 25;
                 qb.field_h = NetworkArchiveRequest.field_z;
               }
             }
-            if (0 < fa.field_j) {
-              fa.field_j = fa.field_j - 1;
-              if (0 >= fa.field_j) {
-                fa.field_j = 0;
+            if (0 < RichTextLayout.field_j) {
+              RichTextLayout.field_j = RichTextLayout.field_j - 1;
+              if (0 >= RichTextLayout.field_j) {
+                RichTextLayout.field_j = 0;
               }
             }
-            if (fa.field_j < 0) {
-              fa.field_j = fa.field_j + 1;
-              if (fa.field_j >= 0) {
-                fa.field_j = 0;
+            if (RichTextLayout.field_j < 0) {
+              RichTextLayout.field_j = RichTextLayout.field_j + 1;
+              if (RichTextLayout.field_j >= 0) {
+                RichTextLayout.field_j = 0;
               }
             }
-            if (fa.field_j == 0 &&
+            if (RichTextLayout.field_j == 0 &&
               rl.field_c != qb.field_h &&
               qb.field_h >= 0 &&
               qb.field_h < 6) {
               rl.field_c = qb.field_h;
               ByteStorage.field_e = 50;
-              fa.field_j = -25;
+              RichTextLayout.field_j = -25;
               GameApplet.field_p = true;
             }
           }
@@ -684,11 +684,11 @@ final class GameScreen {
         int var27Lifetime1;
         var29 = TorChallenge.field_F ? 1 : 0;
         try {
-          var5_int = lg.field_d[this.screenId][1];
-          var6 = lg.field_d[this.screenId][3];
-          var7 = lg.field_d[this.screenId][7];
-          var8 = lg.field_d[this.screenId][8];
-          var9 = lg.field_d[this.screenId][6];
+          var5_int = TextLayout.field_d[this.screenId][1];
+          var6 = TextLayout.field_d[this.screenId][3];
+          var7 = TextLayout.field_d[this.screenId][7];
+          var8 = TextLayout.field_d[this.screenId][8];
+          var9 = TextLayout.field_d[this.screenId][6];
           var11 = 5;
           var12 = LoginPanel.field_M[0];
           var13 = LoginPanel.field_M[1];
@@ -883,7 +883,7 @@ final class GameScreen {
                 (decompiledFrameRemainder1)) {
                 NodeHashTableIterator.field_a = false;
                 o.a(4, true);
-                bc.field_o = -1;
+                DefaultTextWidgetRenderer.field_o = -1;
                 PcmOutputWorker.activeScreenId = -1;
                 cj.field_b = true;
                 this.h(30122);
@@ -903,9 +903,9 @@ final class GameScreen {
                 } else {
                   NodeHashTableIterator.field_a = false;
                   o.a(-1, true);
-                  df.field_O = true;
+                  RichTextWidget.field_O = true;
                   PcmOutputWorker.activeScreenId = -1;
-                  bc.field_o = -1;
+                  DefaultTextWidgetRenderer.field_o = -1;
                   if (gh.field_x) {
                     GameApplet.field_o = 1;
                     if (var5 == 0) {
@@ -966,7 +966,7 @@ final class GameScreen {
                   } else {
                     NodeHashTableIterator.field_a = false;
                     o.a(4, true);
-                    bc.field_o = -1;
+                    DefaultTextWidgetRenderer.field_o = -1;
                     cj.field_b = true;
                     PcmOutputWorker.activeScreenId = -1;
                     ImageProducerRasterBuffer.c(127);
@@ -980,7 +980,7 @@ final class GameScreen {
                     NodeHashTableIterator.field_a = false;
                     o.a(4, true);
                     PcmOutputWorker.activeScreenId = -1;
-                    bc.field_o = -1;
+                    DefaultTextWidgetRenderer.field_o = -1;
                     cj.field_b = true;
                     ImageProducerRasterBuffer.c(123);
                     return;
@@ -1066,7 +1066,7 @@ final class GameScreen {
                       if ((decompiledFrameRemainder2) &&
                         (decompiledFrameRemainder2 = (rj.field_g == 7))) {
                         if (RandomAccessCacheFile.field_e == 750) {
-                          bc.field_o = 15;
+                          DefaultTextWidgetRenderer.field_o = 15;
                           PcmOutputWorker.activeScreenId = 15;
                           GameApplet.screens[PcmOutputWorker.activeScreenId].a(param0 + 22313, true);
                           return;
@@ -1514,7 +1514,7 @@ final class GameScreen {
             var2_intLifetime2 = -var7[0].fullWidth + var4 + var2_intLifetime2;
             var7[2].drawTransparent(var2_intLifetime2, var3Lifetime2);
             var2_intLifetime3 = bg.field_I[var9][0];
-            var3Lifetime3 = lg.field_d[this.screenId][3] + lg.field_d[this.screenId][8];
+            var3Lifetime3 = TextLayout.field_d[this.screenId][3] + TextLayout.field_d[this.screenId][8];
             var5Lifetime1 = -var3Lifetime3 + (bg.field_I[var9][1] + bg.field_I[var9][3]);
             this.a((byte) 42, var4, var2_intLifetime3, var5Lifetime1, var9, true, var3Lifetime3);
             var9++;
@@ -1543,7 +1543,7 @@ final class GameScreen {
           }
           var3 = vj.field_d[ok.field_b];
           var4 = 320 + (320 - var3.fullWidth) / 2;
-          var5 = lg.field_d[1][param0];
+          var5 = TextLayout.field_d[1][param0];
           var3.drawAdditiveWithIntensity(var4 - 8, -8 + var5, 256);
           var3Lifetime1 = we.field_m[ok.field_b + 1];
           var3Lifetime1.drawTransparent(var4, var5);
@@ -2280,15 +2280,15 @@ final class GameScreen {
             this.field_k.a(0);
             return;
           }
-          var2_int = lg.field_d[this.screenId][20];
+          var2_int = TextLayout.field_d[this.screenId][20];
           if (var2_int >= 0) {
-            var2_int = lg.field_d[cf.field_b][20];
+            var2_int = TextLayout.field_d[cf.field_b][20];
           }
           if (var2_int < 0) {
             if (param0) {
               this.b(-105, false);
             }
-            var3 = lg.field_d[this.screenId][0];
+            var3 = TextLayout.field_d[this.screenId][0];
             if (var3 == 1) {
               this.field_k.a(0);
               if (ec.field_d != 96 &&
@@ -2390,7 +2390,7 @@ final class GameScreen {
             cf.field_b = var2_int;
             return;
           }
-          var4Lifetime1 = lg.field_d[cf.field_b][0];
+          var4Lifetime1 = TextLayout.field_d[cf.field_b][0];
           if (var4Lifetime1 == 1 && (ec.field_d == 96 ||
             ec.field_d == 97)) {
             this.field_k.a(0);
@@ -2743,10 +2743,10 @@ final class GameScreen {
                                 }
                               }
                               if (decompiledFrameRemainder1) {
-                                var2_int = lg.field_d[1][1];
-                                var3_int = lg.field_d[1][3];
-                                var4_int = -var2_int + lg.field_d[1][2];
-                                var5 = -var3_int + lg.field_d[1][4];
+                                var2_int = TextLayout.field_d[1][1];
+                                var3_int = TextLayout.field_d[1][3];
+                                var4_int = -var2_int + TextLayout.field_d[1][2];
+                                var5 = -var3_int + TextLayout.field_d[1][4];
                                 if (UiComponent.field_o > 0 &&
                                   ol.a((byte) -119, ArchiveRequest.field_u)) {
                                   var5 = var5 * 7 / 6;
@@ -2858,7 +2858,7 @@ final class GameScreen {
           if (param0 != 1014667201) {
             field_d = (String) null;
           }
-          stackIn_165_0 = (lg.field_d[this.screenId][19] != 0) ? 0 : 1;
+          stackIn_165_0 = (TextLayout.field_d[this.screenId][19] != 0) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder0 = true;
           var2_intLifetime1 = stackIn_165_0;
@@ -2952,7 +2952,7 @@ final class GameScreen {
             ue.b((byte) 123);
           }
           SecondaryNodeDequeIterator.a(116);
-          if (2 <= fa.field_g) {
+          if (2 <= RichTextLayout.field_g) {
             var3 = "FPS:" + oh.field_e;
             tf.field_x.drawRightAligned(var3, 636, 80, 0, -1);
             var4 = Runtime.getRuntime().totalMemory();
@@ -3042,10 +3042,10 @@ final class GameScreen {
             stackIn_8_0 = -120;
             return stackIn_8_0;
           }
-          var3_int = lg.field_d[this.screenId][0];
+          var3_int = TextLayout.field_d[this.screenId][0];
           if (var3_int == 1) {
-            var4 = lg.field_d[this.screenId][7];
-            var5 = lg.field_d[this.screenId][5] + var4;
+            var4 = TextLayout.field_d[this.screenId][7];
+            var5 = TextLayout.field_d[this.screenId][5] + var4;
             stackIn_11_0 = var4 + (var5 * param0 + AccountRequestState.field_b[this.screenId]);
             return stackIn_11_0;
           }
@@ -3073,7 +3073,7 @@ final class GameScreen {
           }
           rc.field_r = null;
           ji.field_m = new wl(uk.field_J, ok.field_b, bl.field_U);
-          bc.field_o = -1;
+          DefaultTextWidgetRenderer.field_o = -1;
           stackIn_7_0 = (0 < UiComponent.field_o) ? 0 : 7;
           ConfirmedEmailAvailabilityValidator.field_v = stackIn_7_0;
           PcmOutputWorker.activeScreenId = -1;
@@ -3092,7 +3092,7 @@ final class GameScreen {
         int var3_int = 0;
         RuntimeException var3 = null;
         try {
-          var3_int = lg.field_d[this.screenId][param0];
+          var3_int = TextLayout.field_d[this.screenId][param0];
           stackIn_1_0 = var3_int;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3374,7 +3374,7 @@ final class GameScreen {
         int var6Lifetime1Lifetime1;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          var4_int = ia.field_p[this.screenId][param1];
+          var4_int = TextHotspotBounds.field_p[this.screenId][param1];
           var5 = this.field_k.c((byte) 117) ? 1 : 0;
           if (param2 != 3) {
             this.a(98, -95, 10, 73, -4, true, (Sprite[]) null);
@@ -3580,7 +3580,7 @@ final class GameScreen {
                                               }
                                               if (decompiledSharedTail0) {
                                                 GameApplet.field_o = 0;
-                                                df.field_O = true;
+                                                RichTextWidget.field_O = true;
                                                 if (ea.field_e - 6 >= 0) {
                                                   GameApplet.field_o = 1;
                                                 }
@@ -4390,7 +4390,7 @@ final class GameScreen {
               }
             }
             if (this.field_k.c((byte) 48)) {
-              bc.field_o = 13;
+              DefaultTextWidgetRenderer.field_o = 13;
               PcmOutputWorker.activeScreenId = 13;
             }
           }
@@ -4767,8 +4767,8 @@ final class GameScreen {
           }
           var7 = -1;
           var8 = 7;
-          var4 = lg.field_d[8][7];
-          var5 = lg.field_d[8][8];
+          var4 = TextLayout.field_d[8][7];
+          var5 = TextLayout.field_d[8][8];
           rj.a(2, 8, var5, ba.field_b, var4);
           ll.field_b = -1;
           if (aa.field_f >> 2 <= cd.field_b) {
@@ -4918,10 +4918,10 @@ final class GameScreen {
               od.a(var11, var2_int, var3);
               SoftwareRasterizer.restoreClip(pf.field_g);
               var14 = AccountServiceResult.field_j[0];
-              var2_int = lg.field_d[8][1] + (lg.field_d[8][7] + lg.field_d[8][5]) * var13;
-              var3 = lg.field_d[8][3];
-              var4 = lg.field_d[8][7];
-              var5 = lg.field_d[8][8];
+              var2_int = TextLayout.field_d[8][1] + (TextLayout.field_d[8][7] + TextLayout.field_d[8][5]) * var13;
+              var3 = TextLayout.field_d[8][3];
+              var4 = TextLayout.field_d[8][7];
+              var5 = TextLayout.field_d[8][8];
               var15 = AccountServiceResult.field_j[1];
               var2_int = -(-var4 + var14 >> 1) + var2_int;
               var3 = var3 - (-var5 + var15 >> 1);
@@ -4953,7 +4953,7 @@ final class GameScreen {
               }
               var17 = 24;
               tf.field_x.drawCentred(var16, (var14 >> 1) + var2_int, 18 + (var3 + (-var17 + var5 >> 1)), 0, -1);
-              var3 = lg.field_d[8][3] + lg.field_d[8][8];
+              var3 = TextLayout.field_d[8][3] + TextLayout.field_d[8][8];
               var2_int = bg.field_I[var13][0];
               var4 = bg.field_I[var13][2];
               var5 = jj.field_a[ok.field_b].fullHeight;
@@ -4991,11 +4991,11 @@ final class GameScreen {
               }
               GzipDecoder.drawNineSlice(var12, var5, var4, (byte) 69, var3, var2_int);
               var14 = AccountServiceResult.field_j[0];
-              var3 = lg.field_d[8][3];
-              var5 = lg.field_d[8][8];
+              var3 = TextLayout.field_d[8][3];
+              var5 = TextLayout.field_d[8][8];
               var15 = AccountServiceResult.field_j[1];
-              var2_int = lg.field_d[8][1] + var13 * (lg.field_d[8][5] + lg.field_d[8][7]);
-              var4 = lg.field_d[8][7];
+              var2_int = TextLayout.field_d[8][1] + var13 * (TextLayout.field_d[8][5] + TextLayout.field_d[8][7]);
+              var4 = TextLayout.field_d[8][7];
               var2_int = var2_int - (-var4 + var14 >> 1);
               var10 = (-var3 + var9) * cd.field_b / (aa.field_f >> 2);
               var3 = var3 - (var15 - var5 >> 1);
@@ -5025,7 +5025,7 @@ final class GameScreen {
               }
               var17 = 24;
               tf.field_x.drawCentred(var16, var2_int + (var14 >> 1), var3 + ((var5 - var17 >> 1) + 18), 0, -1);
-              var3 = lg.field_d[8][8] + lg.field_d[8][3];
+              var3 = TextLayout.field_d[8][8] + TextLayout.field_d[8][3];
               var2_int = bg.field_I[var13][0];
               var5 = jj.field_a[ok.field_b].fullHeight;
               var4 = bg.field_I[var13][2];
@@ -5041,7 +5041,7 @@ final class GameScreen {
               var2_int = var8 + var2_int;
               SoftwareRasterizer.saveClip(pf.field_g);
               var3 = var8 + var3;
-              SoftwareRasterizer.intersectClip(var2_int, var3, -(2 * var8) + (var2_int + var4), -lg.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
+              SoftwareRasterizer.intersectClip(var2_int, var3, -(2 * var8) + (var2_int + var4), -TextLayout.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
               var2_int = bg.field_I[var13][0];
               var2_int = (var4 - (var11.fullWidth >> 1) >> 1) + var2_int;
               var3 = bg.field_I[var13][1];
@@ -5189,11 +5189,11 @@ final class GameScreen {
               }
               ah.b(var13, -22081);
             }
-            if (0 < fa.field_j) {
-              var14 = fa.field_j * 255 / 25;
+            if (0 < RichTextLayout.field_j) {
+              var14 = RichTextLayout.field_j * 255 / 25;
             }
-            if (fa.field_j < 0) {
-              var14 = (25 + fa.field_j) * 255 / 25;
+            if (RichTextLayout.field_j < 0) {
+              var14 = (25 + RichTextLayout.field_j) * 255 / 25;
             }
           }
           if (!vb.field_q) {
@@ -5358,10 +5358,10 @@ final class GameScreen {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (lg.field_d[param1][17] == 2) {
+          if (TextLayout.field_d[param1][17] == 2) {
             return;
           }
-          if (lg.field_d[param1][17] == 0) {
+          if (TextLayout.field_d[param1][17] == 0) {
             SoftwareRasterizer.fillRectangleVerticalGradient(0, 0, 25, 2048, 14022908, 10533565);
             SoftwareRasterizer.fillRectangleVerticalGradient(615, 0, 25, 2048, 14022908, 10533565);
             if (null != kd.field_m) {
@@ -5369,7 +5369,7 @@ final class GameScreen {
             }
             this.a(false, true, -15318, true, true, (Sprite) null);
           }
-          if (lg.field_d[param1][17] == 1) {
+          if (TextLayout.field_d[param1][17] == 1) {
             if (-1 != rj.field_g &&
               rj.field_g != 4 &&
               rj.field_g != 5) {
@@ -5385,7 +5385,7 @@ final class GameScreen {
           if (param0) {
             this.field_j = -41;
           }
-          if (lg.field_d[param1][17] == 3) {
+          if (TextLayout.field_d[param1][17] == 3) {
             SectorCacheStore.field_f.bindAsTarget(112);
             GzipDecoder.drawNineSlice(aa.field_k, nk.field_f[3], nk.field_f[2], (byte) 121, nk.field_f[1], nk.field_f[0]);
           }
@@ -5649,7 +5649,7 @@ final class GameScreen {
                     var3 = 10 + (129 + DebouncedFieldValidator.field_i[0].fullHeight);
                     var2_intLifetime1 = -16 + (604 - DebouncedFieldValidator.field_i[0].fullWidth - 90);
                     this.a(var2_intLifetime1, 2, var14Lifetime1Lifetime1, (byte) 13, 50, 1, 0, var3);
-                    df.field_O = true;
+                    RichTextWidget.field_O = true;
                     decompiledFrameRemainder0 = (var21 != 0);
                   }
                   if (decompiledFrameRemainder0) {
@@ -5689,7 +5689,7 @@ final class GameScreen {
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + oj.field_e[0];
                       var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x - var8 + (391 + (-DebouncedFieldValidator.field_i[0].fullHeight - ob.field_b[3] - 16));
                       SecondaryNodeDequeIterator.field_e.drawString(IntrusiveDeque.field_d[3], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
-                      df.field_O = true;
+                      RichTextWidget.field_O = true;
                       decompiledFrameRemainder0 = (var21 != 0);
                     }
                     if (decompiledFrameRemainder0) {
@@ -5929,7 +5929,7 @@ final class GameScreen {
           var6 = this.a(-111, param1);
           var7 = AccountServiceResult.field_j[0];
           var8 = AccountServiceResult.field_j[1];
-          var9 = lg.field_d;
+          var9 = TextLayout.field_d;
           if (kf.field_b == 1 &&
             null != fl.field_t[this.screenId]) {
             var9 = fl.field_t;
@@ -5938,7 +5938,7 @@ final class GameScreen {
             wj.field_c[this.screenId] != null) {
             var9 = wj.field_c;
           }
-          var10 = ia.field_p[this.screenId][param1];
+          var10 = TextHotspotBounds.field_p[this.screenId][param1];
           var11 = we.field_c[var10][0];
           if (var10 == 31) {
             stackIn_19_0 = we.field_c[var10];
@@ -5994,9 +5994,9 @@ final class GameScreen {
             tj.field_b == param1) {
             var17 = 1;
           }
-          var18 = lg.field_d[this.screenId][20];
+          var18 = TextLayout.field_d[this.screenId][20];
           if (var18 >= 0) {
-            var18 = lg.field_d[cf.field_b][20];
+            var18 = TextLayout.field_d[cf.field_b][20];
           }
           if (var18 >= 0 &&
             DelegatingCanvas.field_f &&
@@ -6614,7 +6614,7 @@ final class GameScreen {
             stackIn_8_0 = EmailFormatValidator.field_q[this.screenId];
             return stackIn_8_0;
           }
-          var3_int = lg.field_d[this.screenId][0];
+          var3_int = TextLayout.field_d[this.screenId][0];
           if (var3_int == 1) {
             stackIn_13_0 = EmailFormatValidator.field_q[this.screenId];
             return stackIn_13_0;
@@ -6645,7 +6645,7 @@ final class GameScreen {
         this.field_b = -1;
         try {
           this.screenId = param0;
-          this.field_k = new rl(ia.field_p[param0].length);
+          this.field_k = new rl(TextHotspotBounds.field_p[param0].length);
           be.field_e = param1;
           if (param0 == 8) {
             ok.field_b = 0;
@@ -6689,7 +6689,7 @@ final class GameScreen {
           }
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(ia.field_p[this.screenId].length > var4_int)))) {
+          while (!(decompiledNaturalLoopExit0 = (!(TextHotspotBounds.field_p[this.screenId].length > var4_int)))) {
             var5 = this.a(var4_int, (byte) -14);
             stackOut_6_0 = this.c(var4_int, (byte) 90);
             stackIn_26_0 = stackOut_6_0 ? 1 : 0;
@@ -6767,9 +6767,9 @@ final class GameScreen {
             return stackIn_8_0;
           }
           var4 = 99 % ((-49 - param0) / 33);
-          var3_int = lg.field_d[this.screenId][0];
+          var3_int = TextLayout.field_d[this.screenId][0];
           if (1 == var3_int) {
-            var5 = lg.field_d[this.screenId][7] + lg.field_d[this.screenId][5];
+            var5 = TextLayout.field_d[this.screenId][7] + TextLayout.field_d[this.screenId][5];
             stackIn_13_0 = AccountRequestState.field_b[this.screenId] + var5 * param1;
             return stackIn_13_0;
           }

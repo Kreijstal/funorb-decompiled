@@ -59,30 +59,30 @@ final class sj {
             field_b = (RgbSprite) null;
           }
           try {
-            if (ce.field_e == 0) {
-              PasswordValidator.field_o = AccountServiceResult.field_k.requestDirectSocket(AccountRequestState.field_a, 76, mb.field_p);
-              ce.field_e = ce.field_e + 1;
+            if (TextLayout.field_e == 0) {
+              PasswordValidator.field_o = AccountServiceResult.field_k.requestDirectSocket(AccountRequestState.field_a, 76, RichTextLayout.field_p);
+              TextLayout.field_e = TextLayout.field_e + 1;
             }
-            if (ce.field_e == 1) {
+            if (TextLayout.field_e == 1) {
               if (PasswordValidator.field_o.status == 2) {
                 stackIn_17_0 = th.a((byte) 125, -1);
                 return stackIn_17_0;
               }
               if (PasswordValidator.field_o.status == 1) {
-                ce.field_e = ce.field_e + 1;
+                TextLayout.field_e = TextLayout.field_e + 1;
               }
             }
-            if (ce.field_e == 2) {
+            if (TextLayout.field_e == 2) {
               be.field_g = new BufferedSocket((java.net.Socket) (PasswordValidator.field_o.result), AccountServiceResult.field_k);
               var2 = new PacketBuffer(13);
-              hm.a(ProxyAuthenticationRequiredException.field_c, mm.field_s, var2, ByteStorage.field_a, 4122);
+              hm.a(ProxyAuthenticationRequiredException.field_c, TextHotspotBounds.field_s, var2, ByteStorage.field_a, 4122);
               var2.d(87, 15);
               var2.b(ik.field_a, 25251);
               be.field_g.queueWrite(13, var2.field_n, (byte) -70, 0);
-              ce.field_e = ce.field_e + 1;
+              TextLayout.field_e = TextLayout.field_e + 1;
               cb.field_e = hn.correctedCurrentTimeMillis((byte) 80) + 30000L;
             }
-            if (3 == ce.field_e) {
+            if (3 == TextLayout.field_e) {
               if (be.field_g.availableBytes((byte) 53) <= 0) {
                 if (hn.correctedCurrentTimeMillis((byte) 80) > cb.field_e) {
                   stackIn_32_0 = th.a((byte) 127, -2);
@@ -94,14 +94,14 @@ final class sj {
                   stackIn_27_0 = th.a((byte) 122, var1_int);
                   return stackIn_27_0;
                 }
-                ce.field_e = ce.field_e + 1;
+                TextLayout.field_e = TextLayout.field_e + 1;
               }
             }
-            if (ce.field_e != 4) {
+            if (TextLayout.field_e != 4) {
               return -1;
             }
             EditableTextField.field_N.a(CrossfadingMidiPcmStream.field_q, (byte) 75, be.field_g);
-            ce.field_e = 0;
+            TextLayout.field_e = 0;
             PasswordValidator.field_o = null;
             be.field_g = null;
             stackIn_36_0 = 0;
@@ -148,7 +148,7 @@ final class sj {
           } else {
             stackIn_9_0 = q.field_g;
           }
-          ni.field_e = ((ql) (Object) stackIn_9_0).a(mm.field_m[0].field_j, false, (byte) 109);
+          ni.field_e = ((ql) (Object) stackIn_9_0).a(TextHotspotBounds.field_m[0].field_j, false, (byte) 109);
           stackIn_11_0 = ha.field_w;
           if (!ni.field_e) {
             stackIn_12_1 = 1048576;
@@ -158,9 +158,9 @@ final class sj {
           stackIn_11_0.field_w = stackIn_12_1;
           ha.field_w.field_r = 128;
           ha.field_w.field_l = true;
-          mb.field_s.a(256);
+          RichTextLayout.field_s.a(256);
           for (var3 = 0; var3 < 16; var3++) {
-            mb.field_s.field_n.setChannelVolumeScale(0, var3, (byte) -95);
+            RichTextLayout.field_s.field_n.setChannelVolumeScale(0, var3, (byte) -95);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

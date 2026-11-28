@@ -8,34 +8,34 @@ final class gd {
 
     final static bl a(int param0) {
         if (param0 == 0) {
-          if (ed.field_h == null) {
-            ed.field_h = new bl();
-            ed.field_h.a(lm.field_f, -2699);
-            ed.field_h.field_j = pc.field_bb;
-            ed.field_h.field_r = 7697781;
-            ed.field_h.field_d = 4;
-            ed.field_h.field_a = 5;
-            ed.field_h.field_o = 0;
-            ed.field_h.field_h = 6;
-            ed.field_h.field_i = 14;
-            ed.field_h.field_k = 2763306;
+          if (TextLineMetrics.field_h == null) {
+            TextLineMetrics.field_h = new bl();
+            TextLineMetrics.field_h.a(lm.field_f, -2699);
+            TextLineMetrics.field_h.field_j = pc.field_bb;
+            TextLineMetrics.field_h.field_r = 7697781;
+            TextLineMetrics.field_h.field_d = 4;
+            TextLineMetrics.field_h.field_a = 5;
+            TextLineMetrics.field_h.field_o = 0;
+            TextLineMetrics.field_h.field_h = 6;
+            TextLineMetrics.field_h.field_i = 14;
+            TextLineMetrics.field_h.field_k = 2763306;
           }
-          return ed.field_h;
+          return TextLineMetrics.field_h;
         }
         field_a = (String) null;
-        if (ed.field_h == null) {
-          ed.field_h = new bl();
-          ed.field_h.a(lm.field_f, -2699);
-          ed.field_h.field_j = pc.field_bb;
-          ed.field_h.field_r = 7697781;
-          ed.field_h.field_d = 4;
-          ed.field_h.field_a = 5;
-          ed.field_h.field_o = 0;
-          ed.field_h.field_h = 6;
-          ed.field_h.field_i = 14;
-          ed.field_h.field_k = 2763306;
+        if (TextLineMetrics.field_h == null) {
+          TextLineMetrics.field_h = new bl();
+          TextLineMetrics.field_h.a(lm.field_f, -2699);
+          TextLineMetrics.field_h.field_j = pc.field_bb;
+          TextLineMetrics.field_h.field_r = 7697781;
+          TextLineMetrics.field_h.field_d = 4;
+          TextLineMetrics.field_h.field_a = 5;
+          TextLineMetrics.field_h.field_o = 0;
+          TextLineMetrics.field_h.field_h = 6;
+          TextLineMetrics.field_h.field_i = 14;
+          TextLineMetrics.field_h.field_k = 2763306;
         }
-        return ed.field_h;
+        return TextLineMetrics.field_h;
     }
 
     public static void clearStaticReferences(int param0) {

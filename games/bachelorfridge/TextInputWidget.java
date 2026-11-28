@@ -203,7 +203,7 @@ class TextInputWidget extends InteractiveWidget {
           if (!(this.renderer instanceof WidgetMetrics)) {
             return false;
           }
-          var8_int = ((WidgetMetrics) ((Object) this.renderer)).a((UiWidget) (this), gd.field_m, param2, param4, mk.field_p, (byte) -86);
+          var8_int = ((WidgetMetrics) ((Object) this.renderer)).findTextOffsetAtScreenPosition((UiWidget) (this), gd.field_m, param2, param4, mk.field_p, (byte) -86);
           stackIn_5_1 = true;
           if (-1 != var8_int) {
             stackIn_6_2 = var8_int;
@@ -265,7 +265,7 @@ class TextInputWidget extends InteractiveWidget {
         this.field_A = 0L;
         this.field_J = -1;
         try {
-          this.renderer = fda.field_i.field_s;
+          this.renderer = RemoveDefeatedCreatureEffect.field_i.field_s;
           this.field_I = param2;
           this.setText((byte) -26, param0, true);
           this.field_D = true;
@@ -316,16 +316,16 @@ class TextInputWidget extends InteractiveWidget {
     }
 
     private final void scrollCaretIntoView(byte param0) {
-        vv var3;
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
         WidgetMetrics var10;
-        vv var11;
+        TextLayout var11;
         WidgetMetrics var12;
-        vv var13;
+        TextLayout var13;
         var8 = BachelorFridge.field_y;
         if (!this.field_D) {
           this.field_m = 0;
@@ -337,33 +337,33 @@ class TextInputWidget extends InteractiveWidget {
             return;
           }
           var12 = (WidgetMetrics) ((Object) this.renderer);
-          var13 = var12.b((UiWidget) (this), false);
-          var4 = var13.b((byte) 124);
-          var5 = var12.a((UiWidget) (this), false);
-          var6 = var12.a(-30983) >> 1;
+          var13 = var12.getTextLayout((UiWidget) (this), false);
+          var4 = var13.getMaxLineRightX((byte) 124);
+          var5 = var12.getTextAreaWidth((UiWidget) (this), false);
+          var6 = var12.getFontLineHeight(-30983) >> 1;
           if (-var6 + var5 > var4) {
             this.field_o = 0;
             this.field_m = 0;
             return;
           }
-          var7 = this.field_m + var13.a(this.field_H, (byte) -99);
+          var7 = this.field_m + var13.getXForTextOffset(this.field_H, (byte) -99);
         } else {
           this.field_J = -15;
           if (!(this.renderer instanceof WidgetMetrics)) {
             return;
           }
           var10 = (WidgetMetrics) ((Object) this.renderer);
-          var11 = var10.b((UiWidget) (this), false);
+          var11 = var10.getTextLayout((UiWidget) (this), false);
           var3 = var11;
-          var4 = var11.b((byte) 124);
-          var5 = var10.a((UiWidget) (this), false);
-          var6 = var10.a(-30983) >> 1;
+          var4 = var11.getMaxLineRightX((byte) 124);
+          var5 = var10.getTextAreaWidth((UiWidget) (this), false);
+          var6 = var10.getFontLineHeight(-30983) >> 1;
           if (-var6 + var5 > var4) {
             this.field_o = 0;
             this.field_m = 0;
             return;
           }
-          var7 = this.field_m + var11.a(this.field_H, (byte) -99);
+          var7 = this.field_m + var11.getXForTextOffset(this.field_H, (byte) -99);
         }
         if (var7 > var5 - var6) {
           this.field_m = -var7 + (var5 - var6 + this.field_m);
@@ -401,7 +401,7 @@ class TextInputWidget extends InteractiveWidget {
           }
           if (this.renderer instanceof WidgetMetrics) {
             var7 = (WidgetMetrics) ((Object) this.renderer);
-            var6 = var7.a((UiWidget) (this), gd.field_m, param0, param1, mk.field_p, (byte) -85);
+            var6 = var7.findTextOffsetAtScreenPosition((UiWidget) (this), gd.field_m, param0, param1, mk.field_p, (byte) -85);
             if (-1 != var6) {
               if (this.field_L &&
                 this.field_J > var6 &&
@@ -664,13 +664,13 @@ class TextInputWidget extends InteractiveWidget {
         }
         WidgetMetrics var8 = (WidgetMetrics) ((Object) this.renderer);
         if (this.field_K != this.field_H) {
-          var8.a(this.field_K, -17394, param3, this.field_H, param1, (UiWidget) (this));
+          var8.paintSelection(this.field_K, -17394, param3, this.field_H, param1, (UiWidget) (this));
           var6 = f.correctedCurrentTimeMillis((byte) 73);
           if ((-this.field_F + var6) % 1000L >= 500L) {
             var5Lifetime3 = -91 / ((-20 - param0) / 54);
             return;
           }
-          var8.a((byte) -88, param1, (UiWidget) (this), this.field_H, param3);
+          var8.paintCaret((byte) -88, param1, (UiWidget) (this), this.field_H, param3);
           var5Lifetime3Lifetime1 = -91 / ((-20 - param0) / 54);
           return;
         }
@@ -679,7 +679,7 @@ class TextInputWidget extends InteractiveWidget {
           var5Lifetime4 = -91 / ((-20 - param0) / 54);
           return;
         }
-        var8.a((byte) -88, param1, (UiWidget) (this), this.field_H, param3);
+        var8.paintCaret((byte) -88, param1, (UiWidget) (this), this.field_H, param3);
         var5Lifetime5 = -91 / ((-20 - param0) / 54);
     }
 

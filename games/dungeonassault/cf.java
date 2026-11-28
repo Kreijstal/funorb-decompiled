@@ -65,7 +65,7 @@ final class cf {
           if (param0 != 100) {
             field_c = (BufferedRandomAccessFile[]) null;
           }
-          stackIn_3_0 = l.a(PcmSampleStream.createForPlaybackRate(param1, 100, param2), 0);
+          stackIn_3_0 = TextLayout.a(PcmSampleStream.createForPlaybackRate(param1, 100, param2), 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

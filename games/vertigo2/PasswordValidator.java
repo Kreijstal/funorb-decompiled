@@ -383,7 +383,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_x_cannot_join_full", false);
                 if (null != var2) {
-                  va.field_r = in.a(0, var2);
+                  DefaultTextWidgetRenderer.field_r = in.a(0, var2);
                 }
                 var2 = tk.a("mu_x_cannot_join_inprogress", false);
                 if (var2 != null) {
@@ -455,7 +455,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("mu_lobby_name_add", false);
                 if (var2 != null) {
-                  sl.field_s = in.a(0, var2);
+                  RichTextLayout.field_s = in.a(0, var2);
                 }
                 var2 = tk.a("mu_lobby_name_rm", false);
                 if (null != var2) {
@@ -1151,7 +1151,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("rule_0_2", false);
                 if (var2 != null) {
-                  ro.field_a = in.a(0, var2);
+                  TextLayout.field_a = in.a(0, var2);
                 }
                 var2 = tk.a("rule_0_3", false);
                 if (null != var2) {
@@ -1597,7 +1597,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("create_createanaccount", false);
                 if (null != var2) {
-                  pk.field_r = in.a(0, var2);
+                  TextHotspotBounds.field_r = in.a(0, var2);
                 }
                 var2 = tk.a("create_username", false);
                 if (null != var2) {
@@ -2097,7 +2097,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("sound_colon", false);
                 if (var2 != null) {
-                  pn.field_H = in.a(0, var2);
+                  RichTextWidget.field_H = in.a(0, var2);
                 }
                 var2 = tk.a("music_colon", false);
                 if (var2 != null) {
@@ -2151,7 +2151,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("returntomainmenu", false);
                 if (var2 != null) {
-                  sl.field_x = in.a(param0 + 0, var2);
+                  RichTextLayout.field_x = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("returntopausemenu", false);
                 if (var2 != null) {
@@ -2878,7 +2878,7 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("fs_accept_countdown_pl", false);
                 if (null != var2) {
-                  ro.field_f = in.a(param0 ^ 0, var2);
+                  TextLayout.field_f = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("fs_nonmember", false);
                 if (null != var2) {
@@ -2986,11 +2986,11 @@ final class PasswordValidator extends TextFieldValidator {
                 }
                 var2 = tk.a("rating_mode_long_name,0", false);
                 if (null != var2) {
-                  lq.field_e[0] = in.a(0, var2);
+                  TextLineMetrics.field_e[0] = in.a(0, var2);
                 }
                 var2 = tk.a("rating_mode_long_name,1", false);
                 if (var2 != null) {
-                  lq.field_e[1] = in.a(0, var2);
+                  TextLineMetrics.field_e[1] = in.a(0, var2);
                 }
                 var2 = tk.a("graphics_config_fixed_size", false);
                 if (var2 != null) {

@@ -79,7 +79,7 @@ final class la extends ca {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (JavaScriptBridge.callWithoutArguments("getcookies", param0, param1 - 10419));
-              var4 = cj.a(var3, -44, ';');
+              var4 = RichTextWidget.a(var3, -44, ';');
               if (param1 != 10295) {
                 la.b(-103);
               }

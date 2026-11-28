@@ -185,7 +185,7 @@ final class gb {
             }
             if (var4 != 0) {
               if (AccountRegistrationPanel.field_I) {
-                param2 = ij.a(ol.field_e, new String[]{param2}, (byte) -113);
+                param2 = ij.a(TextLineMetrics.field_e, new String[]{param2}, (byte) -113);
               }
               if (hd.field_b) {
                 param2 = GzipDecompressor.field_c;

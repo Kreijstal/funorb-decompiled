@@ -30,7 +30,7 @@ final class hg extends hc {
           if (param3 != -38) {
             field_pb = -128;
           }
-          if (fk.field_q != pj.field_D) {
+          if (TextHotspotBounds.field_q != pj.field_D) {
             return false;
           }
           var8 = new AccountCreationResultPanel(PcmResampler.field_c, param6);
@@ -46,7 +46,7 @@ final class hg extends hc {
           rh.field_i = param1;
           ue.field_d = param5;
           rd.field_z = param2;
-          fk.field_q = field_ub;
+          TextHotspotBounds.field_q = field_ub;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

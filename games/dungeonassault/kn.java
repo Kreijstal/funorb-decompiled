@@ -22,11 +22,11 @@ final class kn {
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param0 == 100 &&
-          tg.field_g > 0) {
-          fieldTemp$3 = tg.field_g - 1;
-          tg.field_g = tg.field_g - 1;
+          TextLineMetrics.field_g > 0) {
+          fieldTemp$3 = TextLineMetrics.field_g - 1;
+          TextLineMetrics.field_g = TextLineMetrics.field_g - 1;
           var2_ref_byte__ = to.field_d[fieldTemp$3];
-          to.field_d[tg.field_g] = null;
+          to.field_d[TextLineMetrics.field_g] = null;
           return var2_ref_byte__;
         }
         if (param1) {

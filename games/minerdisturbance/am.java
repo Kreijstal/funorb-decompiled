@@ -29,10 +29,10 @@ final class am extends jc {
         }
     }
 
-    final String h(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_I.field_x ? 1 : 0;
         this.field_I.field_x = this.field_x;
-        String var3 = this.field_I.h(param0);
+        String var3 = this.field_I.getTooltipText(param0);
         this.field_I.field_x = var2 != 0 ? true : false;
         return var3;
     }

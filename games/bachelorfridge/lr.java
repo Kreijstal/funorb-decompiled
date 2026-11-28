@@ -26,7 +26,7 @@ final class lr extends IntrusiveNode {
         int var11;
         var11 = BachelorFridge.field_y;
         if (!param6 && (FullscreenFocusCanvas.field_b != SoftwareRasterizer.field_i ||
-          kq.field_i != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == hga.field_U.field_f &&
+          StopFloodEffect.field_i != SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_c == hga.field_U.field_f &&
           SoftwareRasterizer.field_i == hga.field_U.field_b)) {
           if (SnowAnimation.field_w != null) {
             pv.a(false, true);
@@ -53,7 +53,7 @@ final class lr extends IntrusiveNode {
           sr.a(true, param6, param4, param9);
         }
         if (dja.field_m > 0) {
-          mh.a(param0, param6, param9, param4, (byte) -51);
+          CreaturePoseEffect.a(param0, param6, param9, param4, (byte) -51);
         }
         if (w.field_e &&
           SnowAnimation.field_w.field_Pb <= SnowAnimation.field_w.field_Rb) {

@@ -114,7 +114,7 @@ final class sj {
         int var10_intLifetime2;
         int var10_intLifetime3;
         try {
-          sb.field_r = vd.a(true, "", param0, param3, "big_font");
+          RichTextLayout.field_r = vd.a(true, "", param0, param3, "big_font");
           BoundedRandomAccessFile.field_e = vd.a(true, "kartika13", param2, param1, "");
           ke.field_i = ma.a(param3, "background", param4 + 16711680, "");
           fi.field_a = lb.a(false, "", param3, "river_background");

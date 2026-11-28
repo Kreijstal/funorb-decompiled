@@ -341,7 +341,7 @@ final class MixedSupport118 {
               }
               SceneWidgetPart006.booleanState0083 = false;
               if (stringLocal20 != null) {
-                MixedSupport001.performAction0016(stringLocal20, false, UiComponentPart029.computeApplet1485(25144));
+                DefaultTextWidgetRenderer.performAction0016(stringLocal20, false, UiComponentPart029.computeApplet1485(25144));
               }
               if (Framebuffer.integerState0192 <= 0 &&
                 !MixedSupport094.booleanState0132) {

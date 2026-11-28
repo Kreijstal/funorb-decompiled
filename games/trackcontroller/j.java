@@ -241,8 +241,8 @@ final class j {
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeKeyListener(cj.field_o);
-          param0.removeFocusListener(cj.field_o);
+          param0.removeKeyListener(RichTextLayout.field_o);
+          param0.removeFocusListener(RichTextLayout.field_o);
           GameScreen.keyQueueWrite = -1;
           if (param1 <= 55) {
             field_c = -8;

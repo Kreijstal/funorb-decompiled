@@ -57,7 +57,7 @@ final class wb extends am {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -85,7 +85,7 @@ final class wb extends am {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -196,7 +196,7 @@ final class wb extends am {
             ik.field_k = null;
             RandomAccessCacheFile.field_f = je.field_e.copy();
             RandomAccessCacheFile.field_f.bindAsRenderTarget();
-            kp.a(SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_d / 3, 0, (byte) 16, 64, 0);
+            TextLineMetrics.a(SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_d / 3, 0, (byte) 16, 64, 0);
             SoftwareRasterizer.setRasterBuffer(var27, var2, var3);
             SoftwareRasterizer.restoreClip(mo.field_w);
             qm.field_a = null;
@@ -363,7 +363,7 @@ final class wb extends am {
             vk.field_s.draw(434, 390);
             AccountRegistrationPanel.field_H.draw(0, 0);
             if (sd.field_s.field_g == 1) {
-              kp.a(-4 + vk.field_s.field_s, vk.field_s.field_t * 7 / 12, 436, (byte) 16, 64, 392);
+              TextLineMetrics.a(-4 + vk.field_s.field_s, vk.field_s.field_t * 7 / 12, 436, (byte) 16, 64, 392);
             }
             stackIn_66_0 = nc.field_a;
             stackIn_66_1 = db.field_j;
@@ -406,7 +406,7 @@ final class wb extends am {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var1_ref), "wb.D(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1_ref), "wb.D(" + param0 + ')');
         }
     }
 
@@ -467,7 +467,7 @@ final class wb extends am {
             wb.a((String) null, 6);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "wb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "wb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

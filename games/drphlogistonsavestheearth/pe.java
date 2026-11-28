@@ -25,9 +25,9 @@ abstract class pe {
         field_e = null;
     }
 
-    final static l a(int param0) {
+    final static DefaultTextWidgetRenderer a(int param0) {
         if (null == qc.field_b) {
-          qc.field_b = new l(u.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, u.field_d.field_x, -1, 2147483647, true);
+          qc.field_b = new DefaultTextWidgetRenderer(u.field_d, 20, 0, 0, 0, 11579568, -1, 0, 0, u.field_d.field_x, -1, 2147483647, true);
         }
         if (param0 == 2147483647) {
           return qc.field_b;

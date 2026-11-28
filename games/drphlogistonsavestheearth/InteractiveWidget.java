@@ -17,7 +17,7 @@ class InteractiveWidget extends vg {
     final static String g(int param0) {
         if (param0 != -1) {
           field_D = (RgbSprite) null;
-          if (em.field_c) {
+          if (TextLayout.field_c) {
             return null;
           }
           if (dd.field_l < BufferedSocket.field_c) {
@@ -28,7 +28,7 @@ class InteractiveWidget extends vg {
           }
           return null;
         }
-        if (em.field_c) {
+        if (TextLayout.field_c) {
           return null;
         }
         if (dd.field_l < BufferedSocket.field_c) {

@@ -277,7 +277,7 @@ final class ob extends DualLinkNode {
           if (param0 != 16473) {
             ob.g(-53);
           }
-          var1 = cj.field_o;
+          var1 = RichTextLayout.field_o;
           synchronized (var1) {
             mb.field_f = mb.field_f + 1;
             GameKeyHandler.field_d = IntrusiveNode.field_d;

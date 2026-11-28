@@ -394,14 +394,14 @@ final class Asteroid {
                                             this.field_k = this.field_k - 1;
                                           }
                                           if (!(this.field_e <= 4)) {
-                                            vk.field_p = vk.field_p + 1;
+                                            RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                             mb.a(true, 30, 256);
-                                            pl.field_a = pl.field_a + vk.field_p * 1;
+                                            pl.field_a = pl.field_a + RichTextLayout.field_p * 1;
                                             ud.field_k = ud.field_k + 1;
                                             NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (lc.field_h >>> 17);
                                             this.field_c = 0;
                                             this.field_j = this.field_j - 5;
-                                            ob.field_j = vk.field_p;
+                                            ob.field_j = RichTextLayout.field_p;
                                             SectorCacheStore.field_i = SectorCacheStore.field_i + 1;
                                             ProxyAuthenticationRequiredException.field_a = 256;
                                             this.field_d = 0;
@@ -446,7 +446,7 @@ final class Asteroid {
                                               this.field_k = this.field_k - 1;
                                             }
                                             if (!(this.field_e <= 12)) {
-                                              vk.field_p = vk.field_p + 1;
+                                              RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                               for (var4 = 0; var4 < 8; var4++) {
                                                 var22 = new Asteroid(31, this);
                                                 pk.a((byte) 32, var22);
@@ -454,8 +454,8 @@ final class Asteroid {
                                               mb.a(true, 29, 256);
                                               this.field_j = this.field_j - 5;
                                               this.field_c = 0;
-                                              pl.field_a = pl.field_a + vk.field_p * 2;
-                                              ob.field_j = vk.field_p;
+                                              pl.field_a = pl.field_a + RichTextLayout.field_p * 2;
+                                              ob.field_j = RichTextLayout.field_p;
                                               ProxyAuthenticationRequiredException.field_a = 256;
                                               ud.field_k = ud.field_k + 2;
                                               SectorCacheStore.field_i = SectorCacheStore.field_i + 2;
@@ -502,7 +502,7 @@ final class Asteroid {
                                                 this.field_k = this.field_k - 1;
                                               }
                                               if (!(this.field_e <= 36)) {
-                                                vk.field_p = vk.field_p + 1;
+                                                RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                 for (var4 = 0; var4 < 12; var4++) {
                                                   var23 = new Asteroid(31, this);
                                                   pk.a((byte) 32, var23);
@@ -511,12 +511,12 @@ final class Asteroid {
                                                 this.field_d = 0;
                                                 NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + 3 * (lc.field_h >>> 17);
                                                 ud.field_k = ud.field_k + 3;
-                                                ob.field_j = vk.field_p;
+                                                ob.field_j = RichTextLayout.field_p;
                                                 SectorCacheStore.field_i = SectorCacheStore.field_i + 3;
                                                 this.field_c = 0;
                                                 this.field_e = 0;
                                                 this.field_j = this.field_j - 5;
-                                                pl.field_a = pl.field_a + 3 * vk.field_p;
+                                                pl.field_a = pl.field_a + 3 * RichTextLayout.field_p;
                                                 ProxyAuthenticationRequiredException.field_a = 256;
                                               }
                                             } else {
@@ -558,15 +558,15 @@ final class Asteroid {
                                                   this.field_k = this.field_k - 1;
                                                 }
                                                 if (!(this.field_e <= 72)) {
-                                                  vk.field_p = vk.field_p + 1;
+                                                  RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                   for (var4 = 0; 16 > var4; var4++) {
                                                     var24 = new Asteroid(31, this);
                                                     pk.a((byte) 32, var24);
                                                   }
                                                   mb.a(true, 27, 256);
                                                   this.field_e = 0;
-                                                  ob.field_j = vk.field_p;
-                                                  pl.field_a = pl.field_a + vk.field_p * 4;
+                                                  ob.field_j = RichTextLayout.field_p;
+                                                  pl.field_a = pl.field_a + RichTextLayout.field_p * 4;
                                                   ud.field_k = ud.field_k + 4;
                                                   ProxyAuthenticationRequiredException.field_a = 256;
                                                   SectorCacheStore.field_i = SectorCacheStore.field_i + 4;
@@ -614,20 +614,20 @@ final class Asteroid {
                                                     this.field_k = this.field_k - 1;
                                                   }
                                                   if (!(this.field_e <= 128)) {
-                                                    vk.field_p = vk.field_p + 1;
+                                                    RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                     for (var4 = 0; 32 > var4; var4++) {
                                                       var25 = new Asteroid(31, this);
                                                       pk.a((byte) 32, var25);
                                                     }
                                                     mb.a(true, 26, 256);
-                                                    pl.field_a = pl.field_a + 5 * vk.field_p;
+                                                    pl.field_a = pl.field_a + 5 * RichTextLayout.field_p;
                                                     ProxyAuthenticationRequiredException.field_a = 256;
                                                     this.field_c = 0;
                                                     SectorCacheStore.field_i = SectorCacheStore.field_i + 5;
                                                     this.field_j = this.field_j - 5;
                                                     NetworkArchiveRequest.field_t = NetworkArchiveRequest.field_t + (lc.field_h >>> 17) * 5;
                                                     this.field_e = 0;
-                                                    ob.field_j = vk.field_p;
+                                                    ob.field_j = RichTextLayout.field_p;
                                                     this.field_d = 0;
                                                     ud.field_k = ud.field_k + 5;
                                                   }
@@ -692,7 +692,7 @@ final class Asteroid {
                                                     this.field_k = this.field_k - 1;
                                                   }
                                                   if (!(this.field_e <= 256)) {
-                                                    vk.field_p = vk.field_p + 1;
+                                                    RichTextLayout.field_p = RichTextLayout.field_p + 1;
                                                     for (var4 = 0; var4 < 32; var4++) {
                                                       var26 = new Asteroid(31, this);
                                                       pk.a((byte) 32, var26);
@@ -702,12 +702,12 @@ final class Asteroid {
                                                     this.field_j = this.field_j - 6;
                                                     this.field_c = 0;
                                                     ProxyAuthenticationRequiredException.field_a = 256;
-                                                    ob.field_j = vk.field_p;
+                                                    ob.field_j = RichTextLayout.field_p;
                                                     ud.field_k = ud.field_k + 6;
                                                     this.field_e = 0;
                                                     this.field_d = 0;
                                                     SectorCacheStore.field_i = SectorCacheStore.field_i + 6;
-                                                    pl.field_a = pl.field_a + 6 * vk.field_p;
+                                                    pl.field_a = pl.field_a + 6 * RichTextLayout.field_p;
                                                   }
                                                 }
                                               }

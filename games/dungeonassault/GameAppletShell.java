@@ -427,8 +427,8 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             AwtRasterBuffer.field_h.getParent().remove((java.awt.Component) ((Object) AwtRasterBuffer.field_h));
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null != hh.field_k) {
-            var2 = hh.field_k;
+          if (null != DefaultTextWidgetRenderer.field_k) {
+            var2 = DefaultTextWidgetRenderer.field_k;
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -671,7 +671,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             AwtRasterBuffer.field_h.setSize(up.field_d, eg.field_d);
             AwtRasterBuffer.field_h.setVisible(true);
             if (null != ad.field_d &&
-              null == hh.field_k) {
+              null == DefaultTextWidgetRenderer.field_k) {
               var6 = ad.field_d.getInsets();
               AwtRasterBuffer.field_h.setLocation(var6.left + aj.field_Gb, rb.field_L + var6.top);
               if (DungeonAssault.field_K != 0) {
@@ -836,7 +836,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
               CipherPacketBuffer.field_s = param6;
               ba.field_c = this;
               aj.field_Gb = 0;
-              ci.field_q = DebouncedFieldValidator.c(true);
+              TextHotspotBounds.field_q = DebouncedFieldValidator.c(true);
               dupTemp$0 = new PlatformTaskDispatcher(param0, param2, param5, true);
               i.field_A = dupTemp$0;
               ImageProducerRasterBuffer.field_o = dupTemp$0;

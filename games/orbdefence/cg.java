@@ -134,7 +134,7 @@ final class cg {
 
     final static void a(PacketBuffer param0, java.math.BigInteger param1, int param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          jc.a(param0, 53, param2, param4.payload, param4.position, param1, param3);
+          DefaultTextWidgetRenderer.a(param0, 53, param2, param4.payload, param4.position, param1, param3);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "cg.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

@@ -23,7 +23,7 @@ final class gl extends ok {
           if (param1 != 0) {
             return false;
           }
-          param0 = tg.a('_', param0, 3, "");
+          param0 = TextLineMetrics.a('_', param0, 3, "");
           var3 = sh.a((byte) -124, param2);
           stackIn_8_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_8_0;

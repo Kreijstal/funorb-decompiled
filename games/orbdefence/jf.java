@@ -102,7 +102,7 @@ final class jf extends InteractiveWidget {
         return mb.field_c;
     }
 
-    final String g(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != -8235) {
           return (String) null;
         }

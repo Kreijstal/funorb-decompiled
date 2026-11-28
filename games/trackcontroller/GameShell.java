@@ -236,7 +236,7 @@ abstract class GameShell extends GameApplet {
         if (param0 >= -90) {
           return;
         }
-        if (ic.a(1)) {
+        if (DefaultTextWidgetRenderer.a(1)) {
           stackIn_11_1 = true;
           stackIn_11_2 = false;
           if (AccountCreationResultPanel.field_rb == null) {
@@ -249,7 +249,7 @@ abstract class GameShell extends GameApplet {
           discarded$0 = this.a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
         } else {
           if (gl.field_I >= 10) {
-            if (!ic.a(false)) {
+            if (!DefaultTextWidgetRenderer.a(false)) {
               kj.d(250);
             } else {
               if (0 == LoginPanel.field_N) {
@@ -363,11 +363,11 @@ abstract class GameShell extends GameApplet {
             stackIn_7_0 = !param0;
             var5_int = ta.a(ab.a(stackIn_7_0), (byte) -49, th.f(93));
             if (var5_int != -1) {
-              ed.a(ca.field_a, var5_int, fi.field_t, (byte) 105);
-              fi.field_t = null;
+              ed.a(ca.field_a, var5_int, TextHotspotBounds.field_t, (byte) 105);
+              TextHotspotBounds.field_t = null;
               ca.field_a = null;
             }
-            var11 = el.j(2);
+            var11 = RichTextWidget.j(2);
             if (var11 != null) {
               ld.a(var11.booleanValue(), true);
             }
@@ -378,8 +378,8 @@ abstract class GameShell extends GameApplet {
             stackIn_17_2 = (param0) ? false : true;
             var5_intLifetime1 = ba.a(stackIn_16_0, stackIn_16_1, qk.b(stackIn_17_2), GameApplet.c(6), EmailFormatValidator.h(0), gj.a((byte) -119), 0);
             if (var5_intLifetime1 != -1) {
-              gl.a(fi.field_t, ca.field_a, var5_intLifetime1, (byte) 113);
-              fi.field_t = null;
+              gl.a(TextHotspotBounds.field_t, ca.field_a, var5_intLifetime1, (byte) 113);
+              TextHotspotBounds.field_t = null;
               ca.field_a = null;
             }
           }
@@ -393,10 +393,10 @@ abstract class GameShell extends GameApplet {
               var5_intLifetime2 = SocketArchiveRequestConnection.a(this.field_v, false, EmailFormatValidator.h(0), qk.b(false), 113, this.field_B);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  AccountNameAvailabilityValidator.a(-114, var5_intLifetime2, fi.field_t);
-                  fi.field_t = null;
+                  AccountNameAvailabilityValidator.a(-114, var5_intLifetime2, TextHotspotBounds.field_t);
+                  TextHotspotBounds.field_t = null;
                 } else {
-                  fi.field_p = ClientException.field_e;
+                  TextHotspotBounds.field_p = ClientException.field_e;
                   ActiveLevel.e(-45);
                   LoginPanel.field_N = 10;
                   ge.field_D = false;
@@ -507,7 +507,7 @@ abstract class GameShell extends GameApplet {
           }
           var3 = 8 % ((param0 + 14) / 33);
           SecondaryNodeDequeIterator.a(-28717);
-          AccountNameAvailabilityValidator.a(-100, var2, fi.field_t);
+          AccountNameAvailabilityValidator.a(-100, var2, TextHotspotBounds.field_t);
           li.field_i = true;
           rk.field_eb = qg.correctedCurrentTimeMillis(false) + 15000L;
           return var2;
@@ -523,7 +523,7 @@ abstract class GameShell extends GameApplet {
     }
 
     final static void m(int param0) {
-        vg var1 = (vg) (cj.field_j.removeLast((byte) -82));
+        vg var1 = (vg) (RichTextLayout.field_j.removeLast((byte) -82));
         if (var1 != null) {
           int var2 = -73 % ((-24 - param0) / 38);
           SoftwareRasterizer.setRasterBuffer(var1.field_l, var1.field_j, var1.field_n);
@@ -606,7 +606,7 @@ abstract class GameShell extends GameApplet {
                 if (gj.field_c != 4) {
                   if (2 != gj.field_c) {
                     if (gj.field_c != 5) {
-                      AccountNameAvailabilityValidator.a(-107, 256, el.field_J);
+                      AccountNameAvailabilityValidator.a(-107, 256, RichTextWidget.field_J);
                     } else {
                       AccountNameAvailabilityValidator.a(-91, 5, ak.field_a);
                     }
@@ -668,7 +668,7 @@ abstract class GameShell extends GameApplet {
           ha.field_x = vh.a(rf.field_b, 98, false, 1, true);
           ok.field_G = vh.a(fk.field_b, 98, false, 1, true);
           fb.field_b = ha.field_x;
-          el.field_L = ei.field_i;
+          RichTextWidget.field_L = ei.field_i;
           gl.field_I = 2;
         }
         if (gl.field_I == 2) {

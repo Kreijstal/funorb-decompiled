@@ -498,8 +498,8 @@ class UiPanel extends fh {
         }
         if (param3 >= ap.field_e &&
           ib.field_a >= param3) {
-          param0 = pk.a((byte) -14, WidgetContainer.field_D, param0, ua.field_e);
-          param1 = pk.a((byte) -14, WidgetContainer.field_D, param1, ua.field_e);
+          param0 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param0, ua.field_e);
+          param1 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param1, ua.field_e);
           ce.a(param3, (byte) -76, param0, param4, param1);
         }
     }

@@ -13,7 +13,7 @@ final class sg {
         if (param1 != param0) {
           return true;
         }
-        int var3 = tg.field_f[3][param2];
+        int var3 = TextLineMetrics.field_f[3][param2];
         if (var3 == 23) {
           return ak.field_o[0] <= gm.field_d.field_m ? true : false;
         }

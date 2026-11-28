@@ -59,7 +59,7 @@ abstract class FrameTimer {
           } else {
             stackIn_4_0 = -49;
             stackIn_5_1 = !(13 <= wk.field_g);
-            MouseInput.field_b = l.createAccountSuccessResultWithIntGuard(stackIn_4_0, stackIn_5_1);
+            MouseInput.field_b = TextLayout.createAccountSuccessResultWithIntGuard(stackIn_4_0, stackIn_5_1);
           }
           if (param1 == 29120) {
             return;

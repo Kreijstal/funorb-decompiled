@@ -136,7 +136,7 @@ final class wj {
                 }
                 else {
                   WidgetContainer.g(-17464);
-                  vj.field_Q = false;
+                  RichTextWidget.field_Q = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
@@ -187,7 +187,7 @@ final class wj {
               } else {
                 RasterBuffer.field_g.a(dg.a(false), (byte) 117);
               }
-              vj.field_Q = false;
+              RichTextWidget.field_Q = false;
               if (var6 != null) {
                 hk.a(var6, (byte) 3, dg.a(false));
               }
@@ -222,8 +222,8 @@ final class wj {
               cm.b((byte) -39)) {
               WidgetContainer.g(-17464);
               if (qk.field_b == 7 &&
-                !vj.field_Q) {
-                vj.field_Q = true;
+                !RichTextWidget.field_Q) {
+                RichTextWidget.field_Q = true;
                 stackIn_87_0 = -1;
                 return stackIn_87_0;
               }
@@ -231,25 +231,25 @@ final class wj {
                 qk.field_b = 3;
               }
               bh.field_d = LevelEditor.field_j.readString(-1);
-              vj.field_Q = false;
+              RichTextWidget.field_Q = false;
               stackIn_85_0 = qk.field_b;
               return stackIn_85_0;
             }
             if (null == ig.field_e) {
-              if (vj.field_Q) {
+              if (RichTextWidget.field_Q) {
                 if (30000L >= IterableNodeHashTable.b(1)) {
                   bh.field_d = cl.field_I;
                 } else {
                   bh.field_d = qk.field_f;
                 }
-                vj.field_Q = false;
+                RichTextWidget.field_Q = false;
                 stackIn_95_0 = 3;
                 return stackIn_95_0;
               }
               var6_intLifetime2 = sb.field_i;
               sb.field_i = pg.field_f;
               pg.field_f = var6_intLifetime2;
-              vj.field_Q = true;
+              RichTextWidget.field_Q = true;
             }
             stackIn_97_0 = -1;
             return stackIn_97_0;

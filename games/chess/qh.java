@@ -105,7 +105,7 @@ final class qh {
           } else if (FrameTimer.field_f != 2) {
             if (3 == FrameTimer.field_f) {
               if (MatchingFieldValidator.field_l.privilegedTasksEnabled) {
-                var3_int = TextFieldValidator.a(hl.field_a, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
+                var3_int = TextFieldValidator.a(DefaultTextWidgetRenderer.field_a, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               } else {
                 var3_int = TextFieldValidator.a(Chess.field_D, -9224, AwtRasterBuffer.field_d, n.field_d, mk.field_a);
               }

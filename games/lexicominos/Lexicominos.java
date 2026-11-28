@@ -1021,7 +1021,7 @@ public final class Lexicominos extends nk {
           ArchiveRequest.clearStaticReferences(false);
           ce.a(-5602);
           ef.a(param0 ^ 79);
-          ik.b((byte) -108);
+          DefaultTextWidgetRenderer.b((byte) -108);
           MeshRasterState.clearStaticReferences();
           ne.clearStaticReferences(338);
           nj.clearStaticReferences((byte) -5);
@@ -1043,7 +1043,7 @@ public final class Lexicominos extends nk {
           fb.clearStaticReferences(2);
           ib.clearStaticReferences(false);
           og.clearStaticReferences((byte) 124);
-          ve.resetStaticState(true);
+          TextLayout.resetStaticState(true);
           w.releaseDeclaredStaticReferences(false);
           InteractiveWidget.clearStaticReferences(-85);
           mg.clearStaticReferences(false);
@@ -1078,7 +1078,7 @@ public final class Lexicominos extends nk {
           re.clearDeclaredStaticReferences((byte) -27);
           md.e(344066273);
           NameSuggestionsPanel.clearStaticReferences((byte) -26);
-          bc.clearStaticReferences(false);
+          RichTextWidget.clearStaticReferences(false);
           ld.clearDeclaredStaticReferences(6977);
           li.a((byte) 81);
           te.clearStaticReferences((byte) -122);
@@ -1088,7 +1088,7 @@ public final class Lexicominos extends nk {
           ae.clearDeclaredStaticReferences(-126);
           AudioFilter.clearStaticReferences();
           hd.a(-115);
-          kk.resetStaticState(param0 - 159);
+          RichTextLayout.resetStaticState(param0 - 159);
           gl.clearStaticReferences(-116);
           hh.clearStaticReferences(225);
           l.clearStaticReferences(4);
@@ -1130,7 +1130,7 @@ public final class Lexicominos extends nk {
           pb.clearStaticReferences((byte) -48);
           tg.a(0);
           n.clearStaticReferences(23887);
-          rj.clearStaticReferences((byte) 88);
+          TextLineMetrics.clearStaticReferences((byte) 88);
           ij.clearStaticReferences((byte) 66);
           mk.clearStaticReferences((byte) -101);
           AccountNameAvailabilityValidator.clearStaticReferences(false);
@@ -1181,9 +1181,9 @@ public final class Lexicominos extends nk {
           this.a(12, 13, false, 10, 5000, 0, 11, 2);
           AudioOutput.configureAudio(22050, true, 10);
           ce.field_b = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 0, 4096);
-          ik.field_h = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
+          DefaultTextWidgetRenderer.field_h = AudioOutput.createOutput(jh.field_a, (java.awt.Component) ((Object) ug.field_y), 1, 2048);
           wj.field_j = new PcmStreamMixer();
-          ik.field_h.setRootStream(wj.field_j);
+          DefaultTextWidgetRenderer.field_h.setRootStream(wj.field_j);
           CrossfadingMidiPcmStream.field_n = new CrossfadingMidiPcmStream();
           CrossfadingMidiPcmStream.field_n.field_s = new MidiPcmStream(CrossfadingMidiPcmStream.field_n.field_A);
           CrossfadingMidiPcmStream.field_n.field_A.a(128, true, 9);
@@ -1299,7 +1299,7 @@ public final class Lexicominos extends nk {
             discarded$1 = this.p(56);
           }
           ce.field_b.dispose();
-          ik.field_h.dispose();
+          DefaultTextWidgetRenderer.field_h.dispose();
           if (ff.field_b != null) {
             af.a(-65);
           }
@@ -1530,7 +1530,7 @@ public final class Lexicominos extends nk {
         var4 = field_L ? 1 : 0;
         try {
           ce.field_b.serviceOutput();
-          ik.field_h.serviceOutput();
+          DefaultTextWidgetRenderer.field_h.serviceOutput();
           if (null != ff.field_b &&
             ff.field_b.focusLost) {
             af.a(-53);
@@ -1624,7 +1624,7 @@ public final class Lexicominos extends nk {
                       af.a(-108);
                     }
                     if (var3 == 2) {
-                      BufferedSocket.a(0, kk.c(-14047));
+                      BufferedSocket.a(0, RichTextLayout.c(-14047));
                     }
                   }
                   if (var4 != 0) {
@@ -1848,7 +1848,7 @@ public final class Lexicominos extends nk {
                   if (SpriteGeometry.field_v != 40) {
                     break regionExit1;
                   }
-                  BufferedSocket.a(0, kk.c(-14047));
+                  BufferedSocket.a(0, RichTextLayout.c(-14047));
                   if (var4 == 0) {
                     break regionExit1;
                   }

@@ -189,7 +189,7 @@ final class ij {
           }
           var2Lifetime21 = AccountNameAvailabilityValidator.a((byte) 48, "scorehyphen");
           if (var2Lifetime21 != null) {
-            ui.field_j = c.a(0, var2Lifetime21);
+            TextHotspotBounds.field_j = c.a(0, var2Lifetime21);
           }
           var2Lifetime22 = AccountNameAvailabilityValidator.a((byte) 48, "music");
           if (var2Lifetime22 != null) {

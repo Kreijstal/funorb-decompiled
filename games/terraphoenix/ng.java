@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ng extends fd {
+class ng extends DefaultTextWidgetRenderer {
     static boolean field_s;
     static int field_x;
     static int field_v;

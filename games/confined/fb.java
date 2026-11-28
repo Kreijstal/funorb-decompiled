@@ -43,7 +43,7 @@ final class fb {
     }
 
     final static void a(int param0, int param1, int param2) {
-        c.field_t = param2;
+        RichTextLayout.field_t = param2;
         if (param1 > -5) {
           field_c = (String) null;
           AcceleratingProjectile.field_Q = param0;
@@ -79,7 +79,7 @@ final class fb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends le {
+final class ob extends RichTextWidget {
     static long field_G;
     private String field_J;
     private int field_K;
@@ -20,7 +20,7 @@ final class ob extends le {
         }
     }
 
-    final String f(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == 4) {
           return null;
         }
@@ -31,7 +31,7 @@ final class ob extends le {
         String var5;
         rc var6;
         int var7;
-        m var9;
+        TextWidgetRenderer var9;
         int var10;
         int var11;
         int var12;
@@ -65,14 +65,14 @@ final class ob extends le {
             }
           }
           this.field_k = var5;
-          this.j(-108);
+          this.rebuildHotspotBounds(-108);
         }
         var7 = 97 % ((77 - param3) / 34);
         super.a(param0, param1, param2, (byte) 111);
         var6Lifetime1 = this.field_L.getValidationStatus(27835);
-        var9 = (m) ((Object) this.field_q);
+        var9 = (TextWidgetRenderer) ((Object) this.field_q);
         var10 = param0 + this.field_p;
-        var11 = var9.a((UiWidget) (this), 68, param1) + (var9.a((UiWidget) (this), -2).a(126) >> 1);
+        var11 = var9.getTextOriginY((UiWidget) (this), 68, param1) + (var9.getTextLayout((UiWidget) (this), -2).getLayoutHeight(126) >> 1);
         if (ek.field_a != var6Lifetime1 &&
           fi.field_u != var6Lifetime1) {
           if (SocketConnector.field_d == var6Lifetime1) {
@@ -129,9 +129,9 @@ final class ob extends le {
         IndexedSprite var12 = null;
         var10 = Transmogrify.field_A ? 1 : 0;
         try {
-          if (null == ue.field_c[param1]) {
-            ue.field_c[param1] = new IndexedSprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m, 256);
-            ue.field_c[param1].field_h = hk.field_a.field_y;
+          if (null == TextLayout.field_c[param1]) {
+            TextLayout.field_c[param1] = new IndexedSprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m, 256);
+            TextLayout.field_c[param1].field_h = hk.field_a.field_y;
           }
           if (null == tj.field_s) {
             tj.field_s = new Sprite(AccountRegistrationPanel.field_K.field_n, AccountRegistrationPanel.field_K.field_m);
@@ -139,7 +139,7 @@ final class ob extends le {
           tj.field_s.bindAsRenderTarget();
           SoftwareRasterizer.clearRaster();
           param2.draw(param3, -param2.y, 1, -param2.x);
-          var11 = ue.field_c[param1];
+          var11 = TextLayout.field_c[param1];
           var12 = var11;
           var11.field_j[0] = 0;
           var5 = param0;

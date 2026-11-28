@@ -25,7 +25,7 @@ final class oa extends dg {
         Sprite var5 = new Sprite(this.field_y.field_p, this.field_y.field_t);
         hj.a(var5, 1);
         this.field_y.a(param0, param1, 0, 0);
-        id.b((byte) -58);
+        DefaultTextWidgetRenderer.b((byte) -58);
         var5.drawWithOpacity(param3 + this.field_w, this.field_k + param2, this.field_A);
     }
 

@@ -7,30 +7,30 @@ final class ft extends IntrusiveNode {
     int field_g;
 
     final static void a(int param0) {
-        kt.field_m = new UiComponent(0L, (UiComponent) null);
+        SetMoveSlotCooldownEffect.field_m = new UiComponent(0L, (UiComponent) null);
         if (IntrusiveDeque.field_c) {
-          kt.field_m.a(-1, dea.field_m);
+          SetMoveSlotCooldownEffect.field_m.a(-1, dea.field_m);
         }
-        kt.field_m.a(-1, tv.field_o);
+        SetMoveSlotCooldownEffect.field_m.a(-1, tv.field_o);
         if (param0 == 2048) {
-          lia.field_j = new lm(FlyEvent.field_r, kt.field_m);
+          ChangeHealthAndStatusEffect.field_j = new lm(FlyEvent.field_r, SetMoveSlotCooldownEffect.field_m);
           MoveInfoPanel.field_e = new UiComponent(0L, (UiComponent) null);
-          MoveInfoPanel.field_e.a(-1, lia.field_j.field_a);
+          MoveInfoPanel.field_e.a(-1, ChangeHealthAndStatusEffect.field_j.field_a);
           MoveInfoPanel.field_e.a(-1, mc.field_g);
           kf.a((byte) -6);
           return;
         }
         ft.a(93);
-        lia.field_j = new lm(FlyEvent.field_r, kt.field_m);
+        ChangeHealthAndStatusEffect.field_j = new lm(FlyEvent.field_r, SetMoveSlotCooldownEffect.field_m);
         MoveInfoPanel.field_e = new UiComponent(0L, (UiComponent) null);
-        MoveInfoPanel.field_e.a(-1, lia.field_j.field_a);
+        MoveInfoPanel.field_e.a(-1, ChangeHealthAndStatusEffect.field_j.field_a);
         MoveInfoPanel.field_e.a(-1, mc.field_g);
         kf.a((byte) -6);
     }
 
     final static void c(byte param0) {
         if (qo.field_c) {
-          lia.field_i = true;
+          ChangeHealthAndStatusEffect.field_i = true;
           int var1 = -76 % ((param0 - 32) / 42);
           OneAnimation.a(false, 19626);
           jv.field_j = 0;

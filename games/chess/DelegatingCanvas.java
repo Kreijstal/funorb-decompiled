@@ -97,7 +97,7 @@ final class DelegatingCanvas extends java.awt.Canvas {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (ah.a(param2, (byte) -29)) {
+          if (RichTextLayout.a(param2, (byte) -29)) {
             return false;
           }
           if (pd.a(param2, (byte) 94)) {

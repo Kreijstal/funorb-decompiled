@@ -134,7 +134,7 @@ final class GameDomainSupport005 {
             integerLocal17 = rgbSpriteLocal24.integerState0258 / 2;
             rgbSpriteLocal24.bindAsRenderTarget();
             NetworkSupport001.bitmapFontState0002.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(84, MixedSupport004.stringState0015, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 40, 16777215, -1);
-            MixedSupport013.bitmapFontState0007.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(90, UiComponentPart025.stringState0450, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 60, 16777215, -1);
+            MixedSupport013.bitmapFontState0007.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(90, RichTextWidget.stringState0450, new String[]{SoftwareFramebuffer.stringState0617}), integerLocal17, 60, 16777215, -1);
             NetworkSupport001.bitmapFontState0002.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(126, MixedSupport112.stringState0486, new String[]{PlayerNameAvailabilityValidator.stringState0291}), integerLocal17, 110, 16777215, -1);
             MixedSupport013.bitmapFontState0007.drawCentred(NodeHashTableIterator.substituteIndexedPlaceholders(94, SocketFactory.stringState0611, new String[]{PlayerNameAvailabilityValidator.stringState0291}), integerLocal17, 130, 16777215, -1);
             NetworkSupport001.bitmapFontState0002.drawCentred(SocketFactory.stringState0615, integerLocal17, 180, 16777215, -1);

@@ -8,19 +8,19 @@ final class oca extends BoardChange {
     static String field_o;
     private int field_m;
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         try {
           param1.tiles[this.field_q][this.field_m].field_m = true;
           if (param0) {
             PacketBuffer var4 = (PacketBuffer) null;
-            this.b((PacketBuffer) null, (byte) 17);
+            this.writePayload((PacketBuffer) null, (byte) 17);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "oca.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         try {
           param0.writeByte(this.field_q, 0);
           param0.writeByte(this.field_m, 0);
@@ -30,7 +30,7 @@ final class oca extends BoardChange {
         }
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         if (param1 > -2) {
           return;
         }

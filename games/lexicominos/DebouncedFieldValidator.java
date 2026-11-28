@@ -142,7 +142,7 @@ abstract class DebouncedFieldValidator implements FieldValidator {
             var6 = var6 | 16;
           }
           SpriteGeometry.field_q.writeByte(var6, -1);
-          var7 = pg.a(kk.c(-14047), (byte) -28);
+          var7 = pg.a(RichTextLayout.c(-14047), (byte) -28);
           if (var7 == null) {
             var7 = "";
           }

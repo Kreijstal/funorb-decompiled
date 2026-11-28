@@ -202,7 +202,7 @@ final class jd {
     }
 
     final void a(BitmapFont param0, boolean param1) {
-        e var17 = null;
+        DefaultTextWidgetRenderer var17 = null;
         hb var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -225,7 +225,7 @@ final class jd {
         hb var14Lifetime1;
         hb var14Lifetime2;
         try {
-          var17 = new e(param0, 2, 2, 2236962, 1, 1, 1, param0.field_K + param0.field_H + 2);
+          var17 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, param0.field_K + param0.field_H + 2);
           var17.field_f = 16777215;
           this.field_i = (ComponentLayout) ((Object) var17);
           var4 = new hb();

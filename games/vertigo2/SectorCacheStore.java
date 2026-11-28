@@ -192,9 +192,9 @@ final class SectorCacheStore {
 
     final static void a(int param0) {
         if (param0 == -32739) {
-          if (ce.field_b != ro.field_g.field_d) {
-            tc.field_b = tc.field_b + (ro.field_g.field_d - ce.field_b);
-            ce.field_b = ro.field_g.field_d;
+          if (ce.field_b != TextLayout.field_g.field_d) {
+            tc.field_b = tc.field_b + (TextLayout.field_g.field_d - ce.field_b);
+            ce.field_b = TextLayout.field_g.field_d;
           }
           if (!(TextFieldValidator.field_i <= 0)) {
             TextFieldValidator.field_i = TextFieldValidator.field_i - 1;

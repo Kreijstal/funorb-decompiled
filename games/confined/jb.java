@@ -715,7 +715,7 @@ final class jb {
         var6 = -76 + this.field_c;
         if (this.field_m) {
           var7 = 1023 & this.field_l;
-          var5 = 304 - (-19 + vf.countSetBits(var7, -29047) * 19);
+          var5 = 304 - (-19 + DefaultTextWidgetRenderer.countSetBits(var7, -29047) * 19);
           if (0 == var7) {
             var6 -= 19;
           }
@@ -732,7 +732,7 @@ final class jb {
             var6 += 38;
             if (this.field_m) {
               var8 = this.field_l & 1047552;
-              var5 = 304 - (vf.countSetBits(var8, -29047) * 19 - 19);
+              var5 = 304 - (DefaultTextWidgetRenderer.countSetBits(var8, -29047) * 19 - 19);
             }
             var5 += 0;
           }
@@ -827,7 +827,7 @@ final class jb {
           this.field_p.field_k = this.field_p.field_k + 1;
           this.field_h[fieldTemp$0] = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "jb.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "jb.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1018,7 +1018,7 @@ final class jb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

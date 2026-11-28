@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class og extends gj implements dc, WidgetActivationListener {
-    private ja field_H;
+final class og extends gj implements TextHotspotListener, WidgetActivationListener {
+    private RichTextWidget field_H;
     private InteractiveWidget field_G;
     private AccountCreationResultPanel field_F;
 
@@ -16,7 +16,7 @@ final class og extends gj implements dc, WidgetActivationListener {
 
     private final String a(int param0) {
         if (param0 > -78) {
-          this.field_H = (ja) null;
+          this.field_H = (RichTextWidget) null;
         }
         return "<u=2164A2><col=2164A2>";
     }
@@ -239,7 +239,7 @@ final class og extends gj implements dc, WidgetActivationListener {
         super(0, 0, 288, 0, (ComponentLayout) null);
         String var7 = null;
         int var3 = 0;
-        e var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -248,11 +248,11 @@ final class og extends gj implements dc, WidgetActivationListener {
           this.field_G.field_p = (ComponentLayout) ((Object) new ri());
           var7 = db.a(oh.field_jb, new String[]{this.a(-115), this.j(0)}, true);
           var3 = 20;
-          var4 = new e(ug.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
-          this.field_H = new ja(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(ug.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, ug.field_e.field_H, -1, 2147483647, true);
+          this.field_H = new RichTextWidget(var7, var4);
           this.field_H.field_m = "";
-          this.field_H.a(0, pi.field_f, 0);
-          this.field_H.a(0, pi.field_f, 1);
+          this.field_H.a(0, TextLineMetrics.field_f, 0);
+          this.field_H.a(0, TextLineMetrics.field_f, 1);
           this.field_H.field_u = -40 + this.field_u;
           this.field_H.field_s = (kd) (this);
           this.field_H.b(this.field_u - 40, 26, var3, -9);
@@ -269,7 +269,7 @@ final class og extends gj implements dc, WidgetActivationListener {
         }
     }
 
-    public final void a(int param0, ja param1, int param2, int param3) {
+    public final void onTextHotspotActivated(int param0, RichTextWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_10_0 = null;

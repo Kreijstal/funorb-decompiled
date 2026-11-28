@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends l {
+final class ie extends DefaultTextWidgetRenderer {
     static int field_y;
     private int field_z;
     static PcmStreamMixer field_v;

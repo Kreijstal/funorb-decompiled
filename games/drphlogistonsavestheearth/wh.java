@@ -228,7 +228,7 @@ abstract class wh extends DualLinkNode {
           if (param2 < 96) {
             field_x = (int[]) null;
           }
-          fk.field_q = wg.field_u;
+          TextHotspotBounds.field_q = wg.field_u;
           if (255 != param0) {
             if (param0 >= 100 &&
               param0 <= 105) {
@@ -306,7 +306,7 @@ abstract class wh extends DualLinkNode {
           kk.a(param0 + 168, param3, param1, param2);
           lc.c((byte) 109);
           lc.field_h = pj.field_D;
-          fk.field_q = pj.field_D;
+          TextHotspotBounds.field_q = pj.field_D;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

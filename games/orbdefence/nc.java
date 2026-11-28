@@ -31,7 +31,7 @@ final class nc extends sf {
           hf.field_k = param8;
           kg.field_h = (ge) ((Object) new a());
           ArchiveRequest.field_o = new DiskCacheWorker(param7);
-          ed.field_b = new pi(kg.field_h, ArchiveRequest.field_o);
+          TextLineMetrics.field_b = new pi(kg.field_h, ArchiveRequest.field_o);
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "nc.C(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

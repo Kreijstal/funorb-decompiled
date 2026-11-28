@@ -78,15 +78,15 @@ final class Bzip2State {
           if (!ag.a(126, 1)) {
             return false;
           }
-          il.field_g = se.field_p.readUnsignedByte(7909);
-          se.field_p.position = 0;
+          il.field_g = RichTextLayout.field_p.readUnsignedByte(7909);
+          RichTextLayout.field_p.position = 0;
         }
         if (-2 != il.field_g) {
           return ag.a(125, il.field_g);
         }
         if (ag.a(125, 2)) {
-          il.field_g = se.field_p.readUnsignedShort(-1174051992);
-          se.field_p.position = 0;
+          il.field_g = RichTextLayout.field_p.readUnsignedShort(-1174051992);
+          RichTextLayout.field_p.position = 0;
           return ag.a(125, il.field_g);
         }
         return false;

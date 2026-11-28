@@ -14,7 +14,7 @@ final class da {
         if (null != nd.field_f) {
           return (java.awt.Container) ((Object) nd.field_f);
         }
-        return (java.awt.Container) ((Object) bm.c(-74));
+        return (java.awt.Container) ((Object) RichTextLayout.c(-74));
     }
 
     final static PcmStreamMixer a(int param0) {

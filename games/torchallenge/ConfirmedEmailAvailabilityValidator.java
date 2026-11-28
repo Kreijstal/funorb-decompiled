@@ -992,7 +992,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           }
           var2Lifetime184 = MouseInputHandler.a(95, "HEALTH_POTION_MESSAGE");
           if (var2Lifetime184 != null) {
-            df.field_P = re.a(18990, var2Lifetime184);
+            RichTextWidget.field_P = re.a(18990, var2Lifetime184);
           }
           var2Lifetime185 = MouseInputHandler.a(95, "keycode_attack");
           if (null != var2Lifetime185) {

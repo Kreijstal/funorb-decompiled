@@ -103,7 +103,7 @@ final class mh extends IntrusiveNode {
         Throwable var2 = null;
         boolean stackIn_5_0 = false;
         Throwable decompiledCaughtException = null;
-        var1_ref = cj.field_o;
+        var1_ref = RichTextLayout.field_o;
         synchronized (var1_ref) {
           if (GameKeyHandler.field_d == IntrusiveNode.field_d) {
             return false;

@@ -82,7 +82,7 @@ final class jh {
             try {
               m.field_b = new BufferedSocket((java.net.Socket) (ah.field_e.result), og.field_a);
               d.field_b.position = 0;
-              var4 = se.field_p;
+              var4 = RichTextLayout.field_p;
               var5 = var4;
               stackIn_11_0 = (!param1) ? -1 : -2;
               wc.field_i = stackIn_11_0;

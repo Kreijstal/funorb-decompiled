@@ -504,7 +504,7 @@ final class FoodShopPanel {
         }
         boolean decompiledFrameCompleted0 = true;
         SoftwareRasterizer.darkenRectangle(374, 0, 266, 480);
-        pea.field_k.draw(-this.field_i + 640, 50);
+        ConsumeCreatureRemainsEffect.field_k.draw(-this.field_i + 640, 50);
         if (this.field_i >= 256) {
           this.field_q.a(true, 7802);
           if (this.field_q.field_vb.field_T) {

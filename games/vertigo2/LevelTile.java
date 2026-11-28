@@ -187,7 +187,7 @@ class LevelTile extends LevelRenderable {
           if (!param4) {
             stackIn_19_0 = pl.field_n;
           } else {
-            stackIn_19_0 = pn.field_L;
+            stackIn_19_0 = RichTextWidget.field_L;
           }
           var7 = stackIn_19_0;
           var8 = wi.field_j[var6_int][var7];

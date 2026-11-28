@@ -63,7 +63,7 @@ final class uj implements rd {
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = ik.a(-64, param1);
+              var3 = DefaultTextWidgetRenderer.a(-64, param1);
             }
             if (param0 != null) {
               if (param1 != null) {

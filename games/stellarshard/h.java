@@ -49,7 +49,7 @@ final class h {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!rg.a((byte) 19, (CharSequence) ((Object) var7_ref_String))) {
+              if (!RichTextWidget.a((byte) 19, (CharSequence) ((Object) var7_ref_String))) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -82,7 +82,7 @@ final class h {
               break;
             }
             var9 = param0.substring(2 + var8Lifetime1, var5Lifetime1);
-            if (!rg.a((byte) 19, (CharSequence) ((Object) var9))) {
+            if (!RichTextWidget.a((byte) 19, (CharSequence) ((Object) var9))) {
               continue;
             }
             if (var5Lifetime1 >= var3_int) {

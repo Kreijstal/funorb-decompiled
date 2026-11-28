@@ -193,7 +193,7 @@ final class DisplayNameSelectionPanel extends vd implements NameSuggestionListen
         if (param0 > -6) {
           return -74;
         }
-        return 512 * (-pm.field_g[var2] + var1) / (-pm.field_g[var2] + pm.field_g[1 + var2]);
+        return 512 * (-TextLineMetrics.field_g[var2] + var1) / (-TextLineMetrics.field_g[var2] + TextLineMetrics.field_g[1 + var2]);
     }
 
     public final void onNameSuggestionSelected(boolean param0, String param1) {
@@ -306,7 +306,7 @@ final class DisplayNameSelectionPanel extends vd implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (nn) null);
         this.field_G = new TextInputField("", (mh) null, 12);
-        cn var1 = new cn(jn.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(jn.field_G, 0, 0, 0, 0, 16777215, -1, 3, 0, jd.field_s.field_y, -1, 2147483647, true);
         ag var2 = new ag(bl.field_d, var1, (mh) null);
         this.field_E = new InteractiveWidget(GzipDecompressor.field_h, (mh) null);
         this.field_H = new InteractiveWidget(SpriteGeometry.field_C, (mh) null);

@@ -99,7 +99,7 @@ final class AccountRequestState {
                 return true;
               }
               if (var2_int < 0 ||
-                !(ed.b(-1) <= 30000L)) {
+                !(TextLineMetrics.b(-1) <= 30000L)) {
                 th.a(102);
               }
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -369,7 +369,7 @@ final class AccountRequestState {
           }
           var2Lifetime12 = jk.a(1, "rangetxt");
           if (var2Lifetime12 != null) {
-            ed.field_e = ProxyAuthenticationRequiredException.a(var2Lifetime12, -12465);
+            TextLineMetrics.field_e = ProxyAuthenticationRequiredException.a(var2Lifetime12, -12465);
           }
           var2Lifetime13 = jk.a(1, "boltstxt");
           if (var2Lifetime13 != null) {
@@ -381,7 +381,7 @@ final class AccountRequestState {
           }
           var2Lifetime15 = jk.a(1, "barriertxt2");
           if (var2Lifetime15 != null) {
-            ed.field_d = ProxyAuthenticationRequiredException.a(var2Lifetime15, -12465);
+            TextLineMetrics.field_d = ProxyAuthenticationRequiredException.a(var2Lifetime15, -12465);
           }
           var2Lifetime16 = jk.a(1, "tutorial_basic,0");
           if (null != var2Lifetime16) {
@@ -661,7 +661,7 @@ final class AccountRequestState {
           }
           var2Lifetime85 = jk.a(1, "norbsomewin");
           if (null != var2Lifetime85) {
-            cc.field_r = ProxyAuthenticationRequiredException.a(var2Lifetime85, -12465);
+            TextHotspotBounds.field_r = ProxyAuthenticationRequiredException.a(var2Lifetime85, -12465);
           }
           var2Lifetime86 = jk.a(1, "orbsomewin");
           if (null != var2Lifetime86) {
@@ -1021,7 +1021,7 @@ final class AccountRequestState {
           }
           var2Lifetime175 = jk.a(1, "tutorialon");
           if (var2Lifetime175 != null) {
-            cc.field_m = ProxyAuthenticationRequiredException.a(var2Lifetime175, -12465);
+            TextHotspotBounds.field_m = ProxyAuthenticationRequiredException.a(var2Lifetime175, -12465);
           }
           var2Lifetime176 = jk.a(1, "tutorialoff");
           if (var2Lifetime176 != null) {

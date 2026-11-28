@@ -62,7 +62,7 @@ final class wh {
             stackIn_4_0 = null;
             return (BinaryBitmapFont) (stackIn_4_0);
           }
-          var2 = new BinaryBitmapFont(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, ub.field_q);
+          var2 = new BinaryBitmapFont(param0, MusicPatchPcmStream.field_t, RichTextLayout.field_g, jc.field_f, jn.field_k, ub.field_q);
           sb.a(500);
           stackIn_6_0 = var2;
           return stackIn_6_0;

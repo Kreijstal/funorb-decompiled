@@ -224,7 +224,7 @@ final class tb extends uj {
                 ByteStorage.a(dg.a(false), (byte) 95);
                 bh.field_d = kj.field_e;
                 WidgetContainer.g(-17464);
-                vj.field_Q = false;
+                RichTextWidget.field_Q = false;
                 stackIn_36_0 = var9Lifetime1;
                 return stackIn_36_0;
               }
@@ -250,7 +250,7 @@ final class tb extends uj {
                   RasterBuffer.field_a[var12] = LevelEditor.field_j.readPrefixedString((byte) 46);
                 }
                 WidgetContainer.g(-17464);
-                vj.field_Q = false;
+                RichTextWidget.field_Q = false;
                 stackIn_51_0 = 100 + var11;
                 return stackIn_51_0;
               }
@@ -267,25 +267,25 @@ final class tb extends uj {
               }
             }
             WidgetContainer.g(param5 ^ -17496);
-            vj.field_Q = false;
+            RichTextWidget.field_Q = false;
             stackIn_60_0 = qk.field_b;
             return stackIn_60_0;
           }
           if (ig.field_e == null) {
-            if (vj.field_Q) {
+            if (RichTextWidget.field_Q) {
               if (30000L < IterableNodeHashTable.b(1)) {
                 bh.field_d = qk.field_f;
               } else {
                 bh.field_d = cl.field_I;
               }
-              vj.field_Q = false;
+              RichTextWidget.field_Q = false;
               stackIn_68_0 = 249;
               return stackIn_68_0;
             }
             var9Lifetime3 = sb.field_i;
             sb.field_i = pg.field_f;
             pg.field_f = var9Lifetime3;
-            vj.field_Q = true;
+            RichTextWidget.field_Q = true;
           }
           stackIn_70_0 = -1;
           return stackIn_70_0;

@@ -21,7 +21,7 @@ final class OhNoEvent extends SpecialEvent {
     final static void d(int param0) {
         ho.field_j = null;
         ConfirmedEmailAvailabilityValidator.field_h = null;
-        mla.field_b = null;
+        TextLineMetrics.field_b = null;
         SetFriendlyEffect.field_k = null;
         ls.field_a = null;
         du.field_b = null;
@@ -76,8 +76,8 @@ final class OhNoEvent extends SpecialEvent {
         cba.field_c = null;
         ff.field_u = null;
         MusicPatch.field_g = (IndexedSprite[][]) null;
-        ela.field_j = null;
-        qq.field_i = null;
+        DisableMoveSlotEffect.field_j = null;
+        ChangeCreatureStatOrHealthEffect.field_i = null;
         it.field_i = null;
         vi.field_f = null;
         as.field_a = null;

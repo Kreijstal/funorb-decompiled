@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk extends IntrusiveNode {
-    static id field_l;
+    static DefaultTextWidgetRenderer field_l;
     static int field_k;
 
     final static void a(String[] args, boolean param1) {
@@ -16,8 +16,8 @@ final class mk extends IntrusiveNode {
           if (null != LoginPanel.field_B) {
             LoginPanel.field_B.field_O.setNameSuggestions(2178, args);
           }
-          if (pd.field_e != null) {
-            pd.field_e.field_F.setNameSuggestions(2178, args);
+          if (RichTextLayout.field_e != null) {
+            RichTextLayout.field_e.field_F.setNameSuggestions(2178, args);
           }
           if (param1) {
             return;

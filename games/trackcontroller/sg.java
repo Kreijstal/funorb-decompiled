@@ -78,7 +78,7 @@ final class sg {
         qi.field_b[oe.field_c] = param3;
         int var6 = param3 + (param2 + param0);
         int var7 = var6 == 0 ? 0 : param0 * 1000 / var6;
-        va.field_e[oe.field_c] = var7;
+        TextLineMetrics.field_e[oe.field_c] = var7;
         if (var7 < mj.field_d) {
           mj.field_d = var7;
         }

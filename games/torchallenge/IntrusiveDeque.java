@@ -243,15 +243,15 @@ final class IntrusiveDeque {
             SoftwareRasterizer.setTarget(var29, var2Lifetime1, var3Lifetime1);
             SoftwareRasterizer.restoreClip(ck.field_c);
           }
-          if (null != ia.field_l &&
+          if (null != TextHotspotBounds.field_l &&
             ek.field_G != null) {
             var30 = SoftwareRasterizer.pixels;
             var2Lifetime2 = SoftwareRasterizer.width;
             var3Lifetime2 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(ck.field_c);
             var16 = new Sprite(412, 43);
-            var17 = ni.a(new String[]{ia.field_l}, 0, DualLinkNode.field_n);
-            ia.field_l = null;
+            var17 = ni.a(new String[]{TextHotspotBounds.field_l}, 0, DualLinkNode.field_n);
+            TextHotspotBounds.field_l = null;
             var16.bindAsRenderTarget();
             ek.field_G.drawParagraph(var17, 3, 3, var16.storedWidth - 6, var16.storedHeight - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
             ih.a(var16.storedWidth, 0, 4, var16.storedHeight, 3, var16, 0, 1);

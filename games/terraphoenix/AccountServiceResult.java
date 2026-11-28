@@ -124,7 +124,7 @@ final class AccountServiceResult {
         try {
           var1_int = param0 ? 1 : 0;
           var2 = 0;
-          while (fd.d(1)) {
+          while (DefaultTextWidgetRenderer.d(1)) {
             ai.field_i.b((byte) -87);
             if (ai.field_i.c((byte) -127)) {
               var1_int = 1;

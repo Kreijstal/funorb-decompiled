@@ -184,7 +184,7 @@ final class vj extends ql {
         int var4;
         GridPoint var5;
         var4 = HostileSpawn.field_I ? 1 : 0;
-        var5 = mm.field_m[0].field_j;
+        var5 = TextHotspotBounds.field_m[0].field_j;
         if (this.field_o.field_a == 1) {
           if (this.field_o.a((byte) -65)) {
             if (this.field_o.field_l + this.field_o.field_m > var5.field_e * 24 - 96) {
@@ -263,7 +263,7 @@ final class vj extends ql {
         int var4Lifetime1;
         int var5_intLifetime1;
         var7 = HostileSpawn.field_I ? 1 : 0;
-        var10 = mm.field_m[0];
+        var10 = TextHotspotBounds.field_m[0];
         var3 = var10.field_j;
         if (this.field_i != null) {
           this.field_i.field_j.copyCoordinatesFrom((byte) 46, var3);
@@ -356,7 +356,7 @@ final class vj extends ql {
               var6.field_n = true;
               fieldTemp$1 = ProxySocketFactory.field_j;
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
-              mm.field_m[fieldTemp$1] = var6;
+              TextHotspotBounds.field_m[fieldTemp$1] = var6;
             }
             var9++;
           }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends g implements cl, WidgetActivationListener {
+final class qe extends g implements TextHotspotListener, WidgetActivationListener {
     private AccountCreationResultPanel field_K;
     private InteractiveWidget field_F;
-    private dg field_D;
+    private RichTextWidget field_D;
     static de field_J;
     static int field_E;
     static de field_H;
@@ -60,7 +60,7 @@ final class qe extends g implements cl, WidgetActivationListener {
         super(0, 0, 288, 0, (ci) null);
         String var7 = null;
         int var3 = 0;
-        ek var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -69,8 +69,8 @@ final class qe extends g implements cl, WidgetActivationListener {
           this.field_F.field_v = (ci) ((Object) new ki());
           var7 = re.a(dd.field_h, new String[]{this.l(1), this.d((byte) -110)}, (byte) -50);
           var3 = 20;
-          var4 = new ek(j.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
-          this.field_D = new dg(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(j.field_C, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
+          this.field_D = new RichTextWidget(var7, var4);
           this.field_D.field_n = "";
           this.field_D.a(ni.field_b, (byte) 126, 0);
           this.field_D.a(ni.field_b, (byte) 98, 1);
@@ -191,10 +191,10 @@ final class qe extends g implements cl, WidgetActivationListener {
         return "</col></u>";
     }
 
-    public final void a(int param0, int param1, byte param2, dg param3) {
+    public final void onTextHotspotActivated(int param0, int param1, byte param2, RichTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
-        dg var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -202,8 +202,8 @@ final class qe extends g implements cl, WidgetActivationListener {
         var6 = Main.field_T;
         try {
           if (param2 != 26) {
-            var7 = (dg) null;
-            this.a(-56, -104, (byte) -34, (dg) null);
+            var7 = (RichTextWidget) null;
+            this.onTextHotspotActivated(-56, -104, (byte) -34, (RichTextWidget) null);
           }
           if (param1 == 0) {
             DualLinkNode.a(param2 - 26, "terms.ws");

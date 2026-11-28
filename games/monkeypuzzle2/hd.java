@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hd extends a {
+final class hd extends DefaultTextWidgetRenderer {
     static IntrusiveDeque field_u;
     private int field_q;
     private int field_t;

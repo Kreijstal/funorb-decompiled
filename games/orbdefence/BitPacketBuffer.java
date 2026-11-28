@@ -150,7 +150,7 @@ final class BitPacketBuffer extends PacketBuffer {
               if (IntrusiveNode.field_b) {
                 param0 = CrossfadingMidiPcmStream.a(-415993727, new String[]{param0}, kg.field_g);
               }
-              if (jc.field_j) {
+              if (DefaultTextWidgetRenderer.field_j) {
                 param0 = mh.field_f;
               }
               oj.field_q.a(-92, param2, param0);

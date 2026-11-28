@@ -43,7 +43,7 @@ abstract class SocketConnector {
         int var3;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         var2 = -50 / ((param1 + 40) / 48);
-        var4 = aa.field_a;
+        var4 = TextLayout.field_a;
         if (var4 == 1) {
           ib.field_b.drawOpaque(0, 0);
           var4 = (int)(20.0f * ProxySocketConnector.a(true, (float)param0 * 0.009999999776482582f)) + 70;

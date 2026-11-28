@@ -6,7 +6,7 @@ abstract class ByteStorage {
     static Sprite field_b;
 
     final static void b(int param0) {
-        eg.field_d[aa.field_a].b(param0, 0);
+        eg.field_d[TextLayout.field_a].b(param0, 0);
     }
 
     final static String c(int param0) {

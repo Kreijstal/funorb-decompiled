@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class w extends tn {
+final class w extends RichTextWidget {
     static BufferedRandomAccessFile field_W;
     private int field_O;
     private Sprite field_Q;
@@ -132,25 +132,25 @@ final class w extends tn {
         Sprite var16;
         String var17;
         Object var18;
-        cf var18_ref;
+        TextWidgetRenderer var18_ref;
         Sprite var19;
         Sprite var20;
         Sprite var21;
         String var22;
         Object var23;
-        cf var23_ref;
+        TextWidgetRenderer var23_ref;
         Sprite var24;
         Sprite var25;
         Sprite var26;
         String var27;
         Object var28;
-        cf var28_ref;
+        TextWidgetRenderer var28_ref;
         Sprite var29;
         Sprite var30;
         Sprite var31;
         String var32;
         Object var33;
-        cf var33_ref;
+        TextWidgetRenderer var33_ref;
         Sprite var34;
         Sprite var35;
         Sprite var36;
@@ -178,15 +178,15 @@ final class w extends tn {
           var17 = in.field_c;
           if (!var17.equals(this.field_s)) {
             this.field_s = var17;
-            this.a((byte) -108);
+            this.rebuildHotspotBounds((byte) -108);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_V.getValidationStatus(24595);
-          var18_ref = (cf) ((Object) this.field_A);
+          var18_ref = (TextWidgetRenderer) ((Object) this.field_A);
           var9 = this.field_u + param1;
-          var10 = var18_ref.b(100, (fe) (this), param2) + (var18_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
+          var10 = var18_ref.getTextOriginY(100, (fe) (this), param2) + (var18_ref.getTextLayout(param0 ^ 4, (fe) (this)).getLayoutHeight(117) >> 1);
           if (var6 != nn.field_f &&
-            var6 != bm.field_o) {
+            var6 != RichTextLayout.field_o) {
             if (fg.field_d == var6) {
               var19 = AccountServiceResult.field_g[2];
               var19.drawAdditive(var9, var10 - (var19.field_C >> 1), 256);
@@ -224,19 +224,19 @@ final class w extends tn {
           this.field_Q.drawAdditive(var9 - (var21.field_x >> 1), var10 - var21.field_A, 256);
           return;
         }
-        if (var6 == bm.field_o) {
+        if (var6 == RichTextLayout.field_o) {
           var22 = in.field_c;
           if (!var22.equals(this.field_s)) {
             this.field_s = var22;
-            this.a((byte) -108);
+            this.rebuildHotspotBounds((byte) -108);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_V.getValidationStatus(24595);
-          var23_ref = (cf) ((Object) this.field_A);
+          var23_ref = (TextWidgetRenderer) ((Object) this.field_A);
           var9Lifetime1 = this.field_u + param1;
-          var10Lifetime1 = var23_ref.b(100, (fe) (this), param2) + (var23_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
+          var10Lifetime1 = var23_ref.getTextOriginY(100, (fe) (this), param2) + (var23_ref.getTextLayout(param0 ^ 4, (fe) (this)).getLayoutHeight(117) >> 1);
           if (var6 != nn.field_f &&
-            var6 != bm.field_o) {
+            var6 != RichTextLayout.field_o) {
             if (fg.field_d == var6) {
               var24 = AccountServiceResult.field_g[2];
               var24.drawAdditive(var9Lifetime1, var10Lifetime1 - (var24.field_C >> 1), 256);
@@ -278,15 +278,15 @@ final class w extends tn {
         if (var27 != null) {
           if (!var27.equals(this.field_s)) {
             this.field_s = var27;
-            this.a((byte) -108);
+            this.rebuildHotspotBounds((byte) -108);
           }
           super.a(param0, param1, param2, param3);
           var6Lifetime1 = this.field_V.getValidationStatus(24595);
-          var28_ref = (cf) ((Object) this.field_A);
+          var28_ref = (TextWidgetRenderer) ((Object) this.field_A);
           var9Lifetime2 = this.field_u + param1;
-          var10Lifetime2 = var28_ref.b(100, (fe) (this), param2) + (var28_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
+          var10Lifetime2 = var28_ref.getTextOriginY(100, (fe) (this), param2) + (var28_ref.getTextLayout(param0 ^ 4, (fe) (this)).getLayoutHeight(117) >> 1);
           if (var6Lifetime1 != nn.field_f &&
-            var6Lifetime1 != bm.field_o) {
+            var6Lifetime1 != RichTextLayout.field_o) {
             if (fg.field_d == var6Lifetime1) {
               var29 = AccountServiceResult.field_g[2];
               var29.drawAdditive(var9Lifetime2, var10Lifetime2 - (var29.field_C >> 1), 256);
@@ -327,15 +327,15 @@ final class w extends tn {
         var32 = this.field_U;
         if (!var32.equals(this.field_s)) {
           this.field_s = var32;
-          this.a((byte) -108);
+          this.rebuildHotspotBounds((byte) -108);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime2 = this.field_V.getValidationStatus(24595);
-        var33_ref = (cf) ((Object) this.field_A);
+        var33_ref = (TextWidgetRenderer) ((Object) this.field_A);
         var9Lifetime3 = this.field_u + param1;
-        var10Lifetime3 = var33_ref.b(100, (fe) (this), param2) + (var33_ref.c(param0 ^ 4, (fe) (this)).b(117) >> 1);
+        var10Lifetime3 = var33_ref.getTextOriginY(100, (fe) (this), param2) + (var33_ref.getTextLayout(param0 ^ 4, (fe) (this)).getLayoutHeight(117) >> 1);
         if (var6Lifetime2 != nn.field_f &&
-          var6Lifetime2 != bm.field_o) {
+          var6Lifetime2 != RichTextLayout.field_o) {
           if (fg.field_d == var6Lifetime2) {
             var34 = AccountServiceResult.field_g[2];
             var34.drawAdditive(var9Lifetime3, var10Lifetime3 - (var34.field_C >> 1), 256);
@@ -385,7 +385,7 @@ final class w extends tn {
         }
     }
 
-    final String h(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 == -27867) {
           return null;
         }

@@ -39,7 +39,7 @@ final class nb {
               var1_int = 0;
               for (var2 = 0; var2 < 2; var2++) {
                 if (mf.field_a[var2] == null) {
-                  mf.field_a[var2] = pi.a(var2, 1, 5, 124);
+                  mf.field_a[var2] = TextLineMetrics.a(var2, 1, 5, 124);
                 }
                 if (mf.field_a[var2] != null &&
                   mf.field_a[var2].field_p) {

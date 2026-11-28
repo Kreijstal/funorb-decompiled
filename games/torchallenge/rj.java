@@ -192,8 +192,8 @@ final class rj {
                   var24Lifetime1Lifetime1 = param3.field_A[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param3.field_o[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param3.field_a[var23Lifetime2];
-                  fa.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 >> 16);
-                  qi.field_h[var23Lifetime2] = var10 + (var19 * var26Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 >> 16);
+                  RichTextLayout.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 >> 16);
+                  TextLineMetrics.field_h[var23Lifetime2] = var10 + (var19 * var26Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 >> 16);
                   ConfirmedEmailAvailabilityValidator.field_m[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -391,14 +391,14 @@ final class rj {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = lg.field_d[param1][9];
-          var6 = lg.field_d[param1][10];
-          var7 = lg.field_d[param1][11];
-          var8 = lg.field_d[param1][12];
-          var9 = lg.field_d[param1][13];
-          var10 = lg.field_d[param1][14];
-          var11 = lg.field_d[param1][15];
-          var12 = lg.field_d[param1][16];
+          var5_int = TextLayout.field_d[param1][9];
+          var6 = TextLayout.field_d[param1][10];
+          var7 = TextLayout.field_d[param1][11];
+          var8 = TextLayout.field_d[param1][12];
+          var9 = TextLayout.field_d[param1][13];
+          var10 = TextLayout.field_d[param1][14];
+          var11 = TextLayout.field_d[param1][15];
+          var12 = TextLayout.field_d[param1][16];
           AccountRequestState.a(param4, var8, var10, var9, param2, param4 - 2 * var5_int, var6, var5_int, param3, -(param0 * var9) + param4, -var11 + param2 - var10, var12, -var7 - var6 + param2, 128);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -122,7 +122,7 @@ final class pg {
                     var12++;
                   }
                   if (var21 != null &&
-                    kj.a(var21, (byte) -47)) {
+                    RichTextWidget.a(var21, (byte) -47)) {
                     var8[1][var13] = ne.field_g;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;

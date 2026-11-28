@@ -68,14 +68,14 @@ final class fg {
             stackIn_14_3 = null;
             stackIn_14_4 = ba.field_L.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(cg.field_a).append("&u=");
-            if (null == fj.field_h) {
+            if (null == TextLineMetrics.field_h) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
               stackIn_15_6 = "" + gi.field_e;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = fj.field_h;
+              stackIn_15_6 = TextLineMetrics.field_h;
             }
             var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).requestUrlStream((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_o).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()));
             if (param1 != -77) {

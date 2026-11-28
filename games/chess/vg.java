@@ -209,7 +209,7 @@ final class vg {
           if (param2 >= -28) {
             field_a = -76;
           }
-          stackIn_80_0 = ah.field_i;
+          stackIn_80_0 = RichTextLayout.field_i;
           stackIn_81_1 = (param3) && (!param0) && (jh.field_a);
           ((ci) (Object) stackIn_80_0).a(stackIn_81_1, (byte) 88);
           qa.field_f.field_a.f((byte) 109);

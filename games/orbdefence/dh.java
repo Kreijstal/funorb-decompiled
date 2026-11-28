@@ -65,7 +65,7 @@ class dh extends hl implements WidgetActivationListener {
         if (param0 != -15591) {
           field_bb = (tl) null;
         }
-        return te.field_N[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_e[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return RichTextWidget.field_N[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + md.field_e[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     final void d(byte param0) {

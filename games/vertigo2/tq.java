@@ -36,8 +36,8 @@ final class tq {
           }
           var7 = -param1;
           var8 = -1;
-          var9 = pk.a((byte) -14, ib.field_a, param0 + param1, ap.field_e);
-          var10 = pk.a((byte) -14, ib.field_a, param0 - param1, ap.field_e);
+          var9 = TextHotspotBounds.a((byte) -14, ib.field_a, param0 + param1, ap.field_e);
+          var10 = TextHotspotBounds.a((byte) -14, ib.field_a, param0 - param1, ap.field_e);
           ki.a(-110, var10, vl.field_e[param2], var9, param3);
           while (var6 > var5_int) {
             var8 += 2;
@@ -49,8 +49,8 @@ final class tq {
               var12 = param2 + var6;
               if (var12 >= ua.field_e &&
                 WidgetContainer.field_D >= var11) {
-                var13 = pk.a((byte) -14, ib.field_a, param0 + var5_int, ap.field_e);
-                var14 = pk.a((byte) -14, ib.field_a, param0 - var5_int, ap.field_e);
+                var13 = TextHotspotBounds.a((byte) -14, ib.field_a, param0 + var5_int, ap.field_e);
+                var14 = TextHotspotBounds.a((byte) -14, ib.field_a, param0 - var5_int, ap.field_e);
                 if (var12 <= WidgetContainer.field_D) {
                   ki.a(-123, var14, vl.field_e[var12], var13, param3);
                 }
@@ -68,8 +68,8 @@ final class tq {
             if (var11Lifetime1 > WidgetContainer.field_D) {
               continue;
             }
-            var13Lifetime1 = pk.a((byte) -14, ib.field_a, var6 + param0, ap.field_e);
-            var14Lifetime1 = pk.a((byte) -14, ib.field_a, -var6 + param0, ap.field_e);
+            var13Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, var6 + param0, ap.field_e);
+            var14Lifetime1 = TextHotspotBounds.a((byte) -14, ib.field_a, -var6 + param0, ap.field_e);
             if (WidgetContainer.field_D >= var12Lifetime1) {
               ki.a(-88, var14Lifetime1, vl.field_e[var12Lifetime1], var13Lifetime1, param3);
             }

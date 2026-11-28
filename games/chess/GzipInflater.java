@@ -95,7 +95,7 @@ final class GzipInflater {
           if (null != lf.field_N) {
             EditableTextField.field_U.writePrefixedString(true, lf.field_N);
           }
-          lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 91, se.field_M);
+          lk.a(SecondaryNodeHashTable.field_k, mn.field_h, EditableTextField.field_U, 91, RichTextWidget.field_M);
           EditableTextField.field_U.backpatchShortLength(EditableTextField.field_U.position - var5_int, 111);
           vh.a(-1, (byte) -42);
           return;

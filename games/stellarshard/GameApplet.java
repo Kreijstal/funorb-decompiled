@@ -433,7 +433,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (rg.a((byte) 19, (CharSequence) ((Object) var4)) &&
+                      if (RichTextWidget.a((byte) 19, (CharSequence) ((Object) var4)) &&
                         !(10 <= ResourceArchive.parseDecimalInt((CharSequence) ((Object) var4), (byte) 125))) {
                         this.a(1, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -492,7 +492,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 k.a(3);
                 this.c(31178);
-                pd.field_h = cg.a((java.awt.Component) ((Object) qd.field_j), false, TextFieldValidator.field_j, td.field_d);
+                RichTextLayout.field_h = cg.a((java.awt.Component) ((Object) qd.field_j), false, TextFieldValidator.field_j, td.field_d);
                 this.initializeClient(true);
                 rb.field_u = EmailFormatValidator.f(-17887);
                 do {
@@ -549,7 +549,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 <= 107) {
             GameApplet.b(-49);
           }
-          stackIn_10_0 = (ja.field_m != null) && (ja.field_m.d(2));
+          stackIn_10_0 = (TextHotspotBounds.field_m != null) && (TextHotspotBounds.field_m.d(2));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

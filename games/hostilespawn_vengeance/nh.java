@@ -16,10 +16,10 @@ final class nh extends fc {
     static we field_P;
     static RgbSprite field_C;
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_A.field_u ? 1 : 0;
         this.field_A.field_u = this.field_u;
-        String var3 = this.field_A.e((int) (char)param0);
+        String var3 = this.field_A.getTooltipText((int) (char)param0);
         this.field_A.field_u = var2 != 0 ? true : false;
         return var3;
     }
@@ -81,14 +81,14 @@ final class nh extends fc {
             tb.f((byte) -122);
             return;
           }
-          cn.a(param0, (byte) 91);
+          DefaultTextWidgetRenderer.a(param0, (byte) 91);
           return;
         }
         if (ImageProducerRasterBuffer.field_q != null) {
           tb.f((byte) -122);
           return;
         }
-        cn.a(param0, (byte) 91);
+        DefaultTextWidgetRenderer.a(param0, (byte) 91);
     }
 
     final static void a(oj param0, int param1) {

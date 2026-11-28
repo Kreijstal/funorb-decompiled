@@ -35,7 +35,7 @@ final class ne {
                 stackIn_10_0 = TunnelCamera.field_I;
               }
               var2 = stackIn_10_0;
-              var2.drawString(fb.field_d[var1_int], sc.field_d[var1_int], uh.field_g[var1_int] >> 4, 16777215, -1);
+              var2.drawString(fb.field_d[var1_int], TextLayout.field_d[var1_int], uh.field_g[var1_int] >> 4, 16777215, -1);
             }
             var1_int++;
           }
@@ -43,7 +43,7 @@ final class ne {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "ne.B(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "ne.B(" + param0 + ')');
         }
     }
 

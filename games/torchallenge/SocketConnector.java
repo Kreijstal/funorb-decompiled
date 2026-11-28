@@ -87,7 +87,7 @@ abstract class SocketConnector {
           if (param0 == null) {
             return null;
           }
-          var2 = new BinaryBitmapFont(param0, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, lg.field_e, h.field_a);
+          var2 = new BinaryBitmapFont(param0, GameApplet.field_e, ImageProducerRasterBuffer.field_t, MusicPatchPcmStream.field_r, TextLayout.field_e, h.field_a);
           p.a(0);
           if (param1 <= 107) {
             var3 = (byte[]) null;

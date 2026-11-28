@@ -114,7 +114,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             this.nameAvailable = var4.success;
           }
           if (this.nameAvailable) {
-            return fk.field_r;
+            return TextHotspotBounds.field_r;
           }
           stackIn_16_0 = FullscreenFocusCanvas.field_g;
           return stackIn_16_0;

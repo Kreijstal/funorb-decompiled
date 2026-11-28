@@ -15,20 +15,20 @@ final class la extends am {
     private int field_J;
     static ej field_M;
 
-    final String f(byte param0) {
+    final String getTooltipText(byte param0) {
         int var2 = this.field_H.field_w ? 1 : 0;
         this.field_H.field_w = this.field_w;
         if (param0 > -82) {
           la.clearDeclaredStaticReferences(13);
         }
-        String var3 = this.field_H.f((byte) -84);
+        String var3 = this.field_H.getTooltipText((byte) -84);
         this.field_H.field_w = var2 != 0 ? true : false;
         return var3;
     }
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (param2 < 36) {
-          this.f((byte) 63);
+          this.getTooltipText((byte) 63);
         }
         int var5 = param3 + this.field_q;
         int var6 = param0 + this.field_m;
@@ -110,7 +110,7 @@ final class la extends am {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 

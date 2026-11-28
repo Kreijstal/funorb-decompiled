@@ -236,7 +236,7 @@ final class ca {
           var2 = param0.getParameter("username");
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (lg.a(var3, -1) != 0L) {
+            if (TextLayout.a(var3, -1) != 0L) {
               if (param1 > -101) {
                 ca.clearStaticReferences(1);
               }

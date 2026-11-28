@@ -73,7 +73,7 @@ final class via implements WidgetRenderer {
         wka.field_a = var3 & 127;
         stackIn_5_0 = ((128 & var3) != 0);
         OneAnimation.field_x = stackIn_5_0;
-        vv.field_d = var8.readUnsignedByte(param0 ^ -16721722);
+        TextLayout.field_d = var8.readUnsignedByte(param0 ^ -16721722);
         sr.field_a = var8.readLong(-108);
         if (wka.field_a == 2) {
           CreatureActor.field_g = var8.readUnsignedShort((byte) 75);

@@ -152,8 +152,8 @@ final class qh {
             field_R = (String[]) null;
           }
           if (null == of.field_q) {
-            if (null != tg.field_l) {
-              tg.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (null != TextLineMetrics.field_l) {
+              TextLineMetrics.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
@@ -161,8 +161,8 @@ final class qh {
           var7 = var6;
           var7Lifetime1 = var6;
           if (var6 == null) {
-            if (tg.field_l != null) {
-              tg.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+            if (TextLineMetrics.field_l != null) {
+              TextLineMetrics.field_l.drawParagraph(bg.field_t, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.draw(245, 199);
@@ -179,7 +179,7 @@ final class qh {
               }
             }
           }
-          if (tg.field_l != null) {
+          if (TextLineMetrics.field_l != null) {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
@@ -198,7 +198,7 @@ final class qh {
             if (var2 == null) {
               return;
             }
-            tg.field_l.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
+            TextLineMetrics.field_l.drawParagraph("Screenshot(s) " + (String) (var2) + " is/are the wrong size! Should be " + 365 + "<times>" + 139, 245, 199, 365, 139, 16737843, 0, 1, 1, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

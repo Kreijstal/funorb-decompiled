@@ -19,7 +19,7 @@ final class ba extends InteractiveWidget {
         field_T = null;
     }
 
-    final String f(byte param0) {
+    final String getTooltipText(byte param0) {
         if (this.field_w) {
           return this.field_S.getValidationMessage((byte) 95);
         }
@@ -52,7 +52,7 @@ final class ba extends InteractiveWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ final class ba extends InteractiveWidget {
           this.field_R = this.field_R + 1;
           super.a(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ba.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ba.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -144,7 +144,7 @@ final class ba extends InteractiveWidget {
               var17.drawAdditive(-(var17.field_u >> 1) + var5, -(var17.field_w >> 1) + var6, 256);
               return;
             }
-            if (var8 != nn.field_q) {
+            if (var8 != TextHotspotBounds.field_q) {
               return;
             }
             var18 = gg.field_q[1];
@@ -187,7 +187,7 @@ final class ba extends InteractiveWidget {
             var20.drawAdditive(-(var20.field_u >> 1) + var5Lifetime1, -(var20.field_w >> 1) + var6Lifetime1, 256);
             return;
           }
-          if (var8Lifetime1 != nn.field_q) {
+          if (var8Lifetime1 != TextHotspotBounds.field_q) {
             return;
           }
           var21 = gg.field_q[1];
@@ -223,7 +223,7 @@ final class ba extends InteractiveWidget {
         try {
           this.field_S = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ba.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -29,7 +29,7 @@ final class tm extends IntrusiveNode {
     static String field_s;
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        ce.field_c = param0;
+        TextLayout.field_c = param0;
         hh.field_e = param1;
         nf.field_m = param2;
         if (!param3) {

@@ -112,7 +112,7 @@ class rg extends jk implements WidgetActivationListener {
             oj.a(3, 3);
             this.s(2121792);
           } else {
-            jk.a(bm.c(-121), 78, "tochangedisplayname.ws");
+            jk.a(RichTextLayout.c(-121), 78, "tochangedisplayname.ws");
           }
           if (param1 != 6) {
             var7 = (String) null;
@@ -185,7 +185,7 @@ class rg extends jk implements WidgetActivationListener {
             } else {
               if (param1 != 6) {
                 if (param1 == 9) {
-                  var6.a(bm.field_k, 66, (rm) (this));
+                  var6.a(RichTextLayout.field_k, 66, (rm) (this));
                 }
               } else {
                 var6.a(9, gj.field_b, -98);

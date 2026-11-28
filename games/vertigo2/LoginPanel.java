@@ -114,8 +114,8 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
 
     final static java.applet.Applet e(byte param0) {
         int var1 = 8 % ((6 - param0) / 58);
-        if (null != va.field_o) {
-          return va.field_o;
+        if (null != DefaultTextWidgetRenderer.field_o) {
+          return DefaultTextWidgetRenderer.field_o;
         }
         return (java.applet.Applet) ((Object) qe.field_T);
     }
@@ -211,7 +211,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             }
             this.field_G = new InteractiveWidget(stackIn_18_3, (uf) null);
             if (this.field_S) {
-              this.field_K = new InteractiveWidget(pk.field_r, (uf) (this));
+              this.field_K = new InteractiveWidget(TextHotspotBounds.field_r, (uf) (this));
             }
           }
           this.field_H.listener = (WidgetListener) ((Object) new ml(10000536));

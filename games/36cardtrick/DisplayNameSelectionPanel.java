@@ -137,7 +137,7 @@ final class DisplayNameSelectionPanel extends g implements NameSuggestionListene
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (ci) null);
         this.field_E = new ValidatedTextField("", (pl) null, 12);
-        ek var1 = new ek(me.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(me.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, j.field_C.field_s, -1, 2147483647, true);
         lk var2 = new lk(ui.field_F, var1, (pl) null);
         this.field_F = new InteractiveWidget(bl.field_g, (pl) null);
         this.field_H = new InteractiveWidget(cj.field_m, (pl) null);
@@ -153,7 +153,7 @@ final class DisplayNameSelectionPanel extends g implements NameSuggestionListene
         int var5 = 200;
         var3 += 50;
         this.b(var2, (byte) 118);
-        var3 = var3 + (5 + this.a(this.field_E, pk.field_c, var3, 35, mj.field_a, 170));
+        var3 = var3 + (5 + this.a(this.field_E, pk.field_c, var3, 35, TextLayout.field_a, 170));
         this.field_F.a(40, var3, var5, -var5 + 496 >> 1, true);
         this.field_H.a(40, var3 + 15, 60, var4 + 3, true);
         this.field_H.field_k = (pl) (this);
@@ -175,7 +175,7 @@ final class DisplayNameSelectionPanel extends g implements NameSuggestionListene
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 == this.field_H) {
-            ub.c(0);
+            RichTextLayout.c(0);
           } else {
             if (param3 == this.field_F) {
               this.submitDisplayName(14831);

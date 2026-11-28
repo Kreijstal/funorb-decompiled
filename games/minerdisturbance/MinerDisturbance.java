@@ -249,7 +249,7 @@ public final class MinerDisturbance extends ob {
               var3 += 30;
               ce.field_d.drawRightAligned("POINTS EARNED COVERED IN OIL: " + eb.field_b, 630, var3, 65535, -1);
               var3 += 30;
-              ce.field_d.drawRightAligned("SNOWTILES MINED: " + lb.field_r, 630, var3, 65535, -1);
+              ce.field_d.drawRightAligned("SNOWTILES MINED: " + TextHotspotBounds.field_r, 630, var3, 65535, -1);
               var3 += 30;
               ce.field_d.drawRightAligned("ICE BLOCKS CREATED: " + re.field_d, 630, var3, 65535, -1);
               var3 += 30;
@@ -395,15 +395,15 @@ public final class MinerDisturbance extends ob {
               pc.field_f = td.a("jetpack_onfire", fl.field_f, "supervolcano", (byte) 110);
               ob.field_w = td.a("miner_pickup_freezium", fl.field_f, "supervolcano", (byte) 117);
               tf.field_c = td.a("miner_pickup_freezium_oily", fl.field_f, "supervolcano", (byte) 122);
-              lb.field_x = new Sprite[ob.field_w.length];
+              TextHotspotBounds.field_x = new Sprite[ob.field_w.length];
               var2_int = 0;
               while (true) {
                 stackIn_47_0 = var2_int;
-                stackIn_47_1 = lb.field_x.length;
+                stackIn_47_1 = TextHotspotBounds.field_x.length;
                 if (stackIn_47_0 < stackIn_47_1) {
-                  lb.field_x[var2_int] = ob.field_w[var2_int].copy();
-                  ml.a((byte) 93, 16777215, lb.field_x[var2_int], ob.field_w[var2_int]);
-                  var3 = lb.field_x[var2_int].field_D;
+                  TextHotspotBounds.field_x[var2_int] = ob.field_w[var2_int].copy();
+                  ml.a((byte) 93, 16777215, TextHotspotBounds.field_x[var2_int], ob.field_w[var2_int]);
+                  var3 = TextHotspotBounds.field_x[var2_int].field_D;
                   stackIn_62_0 = -1 + var3.length;
                   if (var5 == 0) {
                     var4 = stackIn_62_0;
@@ -1135,13 +1135,13 @@ public final class MinerDisturbance extends ob {
             fh.field_c = null;
             wf.p(param0 + 4440);
           }
-          fl.field_f = lb.a(param0 - 21, 1);
-          NameSuggestionsPanel.field_Q = lb.a(1, 2);
-          pk.field_g = lb.a(1, 3);
-          ig.field_c = lb.a(1, 4);
-          ge.field_e = lb.a(1, 5);
-          ne.field_L = lb.a(param0 ^ 23, 6);
-          id.field_c = lb.a(param0 - 21, 11);
+          fl.field_f = TextHotspotBounds.a(param0 - 21, 1);
+          NameSuggestionsPanel.field_Q = TextHotspotBounds.a(1, 2);
+          pk.field_g = TextHotspotBounds.a(1, 3);
+          ig.field_c = TextHotspotBounds.a(1, 4);
+          ge.field_e = TextHotspotBounds.a(1, 5);
+          ne.field_L = TextHotspotBounds.a(param0 ^ 23, 6);
+          id.field_c = TextHotspotBounds.a(param0 - 21, 11);
           im.a(ob.field_q, (byte) 82, s.field_P);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1857,11 +1857,11 @@ public final class MinerDisturbance extends ob {
                   if (tb.field_c >= pc.field_f.length) {
                     tb.field_c = 0;
                   }
-                  if (nf.field_e <= 0) {
+                  if (TextLayout.field_e <= 0) {
                     rj.field_f = 4;
                     tc.field_s = 0;
                   } else {
-                    nf.field_e = nf.field_e - 1;
+                    TextLayout.field_e = TextLayout.field_e - 1;
                   }
                   if (qd.field_K > 0) {
                     qd.field_K = qd.field_K - 1;
@@ -1883,7 +1883,7 @@ public final class MinerDisturbance extends ob {
                     MidiPcmStream.field_K = 1;
                     rg.field_wb = 10;
                   }
-                  if ((nf.field_e & 3) == 0) {
+                  if ((TextLayout.field_e & 3) == 0) {
                     var13_ref_gf = new gf(NanoFrameTimer.field_k, hf.field_t, 16);
                     var13_ref_gf.field_g = 0;
                     var13_ref_gf.field_b = 240;
@@ -3035,8 +3035,8 @@ public final class MinerDisturbance extends ob {
                 }
                 if (decompiledSharedTail3) {
                   if (mh.field_e[this.field_db][this.field_N].field_v) {
-                    lb.field_r = lb.field_r + 1;
-                    if (200 <= lb.field_r) {
+                    TextHotspotBounds.field_r = TextHotspotBounds.field_r + 1;
+                    if (200 <= TextHotspotBounds.field_r) {
                       fn.a(24, 231, 3);
                     }
                   }
@@ -3313,7 +3313,7 @@ public final class MinerDisturbance extends ob {
             if ((var4Lifetime3 != 0 ||
               !(tc.field_s <= 0)) && (var12 != 0 &&
               !qe.field_b[15])) {
-              nf.field_e = 40;
+              TextLayout.field_e = 40;
               rj.field_f = 13;
             }
             if (var12 != 0) {
@@ -3660,7 +3660,7 @@ public final class MinerDisturbance extends ob {
           }
           regionExit5: {
             var11Lifetime2 = stackIn_2618_0;
-            if (d.field_b && (qd.field_O[lb.field_w] ||
+            if (d.field_b && (qd.field_O[TextHotspotBounds.field_w] ||
               var8Lifetime4 != 0 &&
               qd.field_O[98] &&
               !qd.field_O[96] &&
@@ -4100,18 +4100,18 @@ public final class MinerDisturbance extends ob {
                 var8_int++;
               }
             }
-            eg.field_m = new Sprite[ag.field_a.length];
+            DefaultTextWidgetRenderer.field_m = new Sprite[ag.field_a.length];
             stackIn_36_0 = 0;
             break;
           }
           var8_int = stackIn_36_0;
           while (true) {
             stackIn_38_0 = var8_int;
-            stackIn_38_1 = eg.field_m.length;
+            stackIn_38_1 = DefaultTextWidgetRenderer.field_m.length;
             if (stackIn_38_0 < stackIn_38_1) {
-              eg.field_m[var8_int] = ag.field_a[var8_int].copy();
-              ml.a((byte) 93, 16777215, eg.field_m[var8_int], ag.field_a[var8_int]);
-              var9 = eg.field_m[var8_int].field_D;
+              DefaultTextWidgetRenderer.field_m[var8_int] = ag.field_a[var8_int].copy();
+              ml.a((byte) 93, 16777215, DefaultTextWidgetRenderer.field_m[var8_int], ag.field_a[var8_int]);
+              var9 = DefaultTextWidgetRenderer.field_m[var8_int].field_D;
               stackIn_53_0 = var9.length - 1;
               if (var13 == 0) {
                 var10_int = stackIn_53_0;
@@ -4129,7 +4129,7 @@ public final class MinerDisturbance extends ob {
               }
             } else {
               pj.field_e = md.a("shadow", fl.field_f, 10, "");
-              tn.field_K = td.a("shop_illustrations", fl.field_f, "shop", (byte) 118);
+              RichTextWidget.field_K = td.a("shop_illustrations", fl.field_f, "shop", (byte) 118);
               wc.field_c[0] = td.a("powerups_volc", fl.field_f, "shop", (byte) 109);
               array$2 = new Sprite[wc.field_c[0].length];
               te.field_e[0] = array$2;
@@ -4294,7 +4294,7 @@ public final class MinerDisturbance extends ob {
             kf.field_d = null;
           }
           tl.b((byte) 101);
-          tn.c((byte) -44);
+          RichTextWidget.c((byte) -44);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4824,7 +4824,7 @@ public final class MinerDisturbance extends ob {
           ng.a(-1);
           PcmOutputWorker.clearStaticReferences(90);
           rf.clearStaticReferences((byte) -56);
-          eg.clearStaticReferences(-7709);
+          DefaultTextWidgetRenderer.clearStaticReferences(-7709);
           ck.a((byte) -100);
           mk.clearStaticReferences((byte) -91);
           on.clearDeclaredStaticReferences(-112);
@@ -4834,7 +4834,7 @@ public final class MinerDisturbance extends ob {
           fe.l(-95);
           jc.resetStaticState(0);
           cc.clearDeclaredStaticReferences((byte) 15);
-          nf.clearStaticReferences(false);
+          TextLayout.clearStaticReferences(false);
           am.clearDeclaredStaticReferences(43);
           ValidatedTextField.resetStaticState(-125);
           EditableTextField.clearDeclaredStaticReferences(param0 ^ -2);
@@ -4843,7 +4843,7 @@ public final class MinerDisturbance extends ob {
           wf.g((byte) 87);
           oi.clearStaticReferences((byte) 91);
           NameSuggestionsPanel.o(-2638);
-          tn.resetStaticState(param0 - 3);
+          RichTextWidget.resetStaticState(param0 - 3);
           qn.clearStaticReferences((byte) 84);
           w.clearDeclaredStaticReferences(256);
           ti.clearStaticReferences((byte) -53);
@@ -4890,7 +4890,7 @@ public final class MinerDisturbance extends ob {
           SoundFilter.clearStaticReferences();
           lj.resetStaticState((byte) -69);
           DirectByteStorage.clearStaticReferences(param0 - 1);
-          bm.clearStaticReferences(0);
+          RichTextLayout.clearStaticReferences(0);
           aa.clearStaticReferences((byte) -123);
           ma.clearDeclaredStaticReferences(27934);
           se.clearDeclaredStaticReferences(-13673);
@@ -4958,13 +4958,13 @@ public final class MinerDisturbance extends ob {
           th.a(-15649);
           tc.clearStaticReferences((byte) -91);
           nb.a(19);
-          mg.clearStaticReferences(125);
+          TextLineMetrics.clearStaticReferences(125);
           PasswordValidator.clearDeclaredStaticReferences(param0 - 2);
           ConfirmedEmailAvailabilityValidator.f(4);
           AgeValidator.f(-27836);
           MatchingFieldValidator.clearStaticReferences((byte) 23);
           gh.clearStaticReferences(68);
-          lb.clearDeclaredStaticReferences(param0 ^ 1);
+          TextHotspotBounds.clearDeclaredStaticReferences(param0 ^ 1);
           ag.a(false);
           DebouncedFieldValidator.clearStaticReferences(param0 + 1626);
           r.clearStaticReferences((byte) 125);
@@ -5298,7 +5298,7 @@ public final class MinerDisturbance extends ob {
                       (decompiledFrameRemainder7) &&
                       (decompiledFrameRemainder6) &&
                       (decompiledFrameRemainder5)) {
-                      var9_ref_String = mg.field_c;
+                      var9_ref_String = TextLineMetrics.field_c;
                       decompiledFrameRemainder11 = (var15 != 0);
                     }
                     if ((decompiledFrameRemainder11) &&
@@ -5571,7 +5571,7 @@ public final class MinerDisturbance extends ob {
           stackIn_189_2 = !(param0);
           this.a(stackIn_188_1, stackIn_189_2, var6, var7);
           if (64 < MidiPcmStream.field_Z) {
-            var10 = mg.field_g;
+            var10 = TextLineMetrics.field_g;
             var11 = 400;
             var12 = 408;
             mm.field_a.drawString(var10, -2 + var11, var12 + pk.field_b.field_I, 4, 8218369);
@@ -6361,7 +6361,7 @@ public final class MinerDisturbance extends ob {
           DiskCacheWorker.field_g[3] = 0;
           DiskCacheWorker.field_g[1] = 0;
           DiskCacheWorker.field_g[4] = 0;
-          lb.field_r = 0;
+          TextHotspotBounds.field_r = 0;
           DiskCacheWorker.field_g[0] = 0;
           var3 = 0;
           do {
@@ -6580,7 +6580,7 @@ public final class MinerDisturbance extends ob {
                       kf.field_d = null;
                     }
                     if (2 == var3) {
-                      uf.a(13, bm.c(-101));
+                      uf.a(13, RichTextLayout.c(-101));
                     }
                   }
                 }
@@ -7342,7 +7342,7 @@ public final class MinerDisturbance extends ob {
           SoftwareRasterizer.resetClip();
           var8Lifetime1 = pb.b(false);
           if (var8Lifetime1 == 6) {
-            bb.a(lb.field_t, 0, ce.field_d, 16513123, -6);
+            bb.a(TextHotspotBounds.field_t, 0, ce.field_d, 16513123, -6);
             if (var10 == 0) {
               return;
             }
@@ -7361,7 +7361,7 @@ public final class MinerDisturbance extends ob {
           }
           if (var8Lifetime1 != 2) {
             if (3 == var8Lifetime1) {
-              bb.a(mg.field_b, 0, ce.field_d, 16513123, -6);
+              bb.a(TextLineMetrics.field_b, 0, ce.field_d, 16513123, -6);
               if (var10 == 0) {
                 return;
               }
@@ -7491,7 +7491,7 @@ public final class MinerDisturbance extends ob {
         }
         try {
           ValidatedTextField.field_V = false;
-          mg.a((byte) -113);
+          TextLineMetrics.a((byte) -113);
           this.field_T = BufferedSocket.a((byte) -73, sl.field_u[pl.field_h].length);
         } catch (RuntimeException runtimeException) {
           throw lj.wrapClientException((Throwable) ((Object) runtimeException), "MinerDisturbance.CA(" + param0 + ')');

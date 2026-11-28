@@ -691,21 +691,21 @@ final class sg {
             }
           } else {
             if (this.field_c.d(0)) {
-              if (ve.field_a &&
+              if (TextLayout.field_a &&
                 !AccountRequestState.a((byte) -118)) {
                 if (!hh.field_N.field_k) {
-                  ve.field_a = false;
+                  TextLayout.field_a = false;
                 } else {
                   if (hh.field_N.field_n != null) {
                     if (hh.field_N.field_n[1][0] != 0) {
-                      ve.field_a = false;
+                      TextLayout.field_a = false;
                     }
                   } else {
-                    ve.field_a = false;
+                    TextLayout.field_a = false;
                   }
                 }
               }
-              if (!ve.field_a) {
+              if (!TextLayout.field_a) {
                 if (el.field_c != null &&
                   !el.field_c.a((byte) 94)) {
                   this.field_k.a((byte) -105, param1, -1, 2);
@@ -875,12 +875,12 @@ final class sg {
               var11 != 14 &&
               !param0) {
               if (param0) {
-                var13 = ik.field_s[sb.field_e[var10][var9]];
-                var14 = ik.field_b[sb.field_e[var10][var9]];
+                var13 = DefaultTextWidgetRenderer.field_s[sb.field_e[var10][var9]];
+                var14 = DefaultTextWidgetRenderer.field_b[sb.field_e[var10][var9]];
                 var9++;
               } else {
-                var13 = ik.field_s[var11];
-                var14 = ik.field_b[var11];
+                var13 = DefaultTextWidgetRenderer.field_s[var11];
+                var14 = DefaultTextWidgetRenderer.field_b[var11];
               }
               if (var12 != 0) {
                 ef.field_d[var11].drawQuarterSizeAveraged(var13, var14);
@@ -1558,7 +1558,7 @@ final class sg {
                       if (this.field_d == 8) {
                         var2_intLifetime1 = pa.field_d + (pa.field_d >> 1);
                         var3 = 40;
-                        jh.field_d.drawParagraph(kk.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                        jh.field_d.drawParagraph(RichTextLayout.field_n, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
                         mk.field_h.drawRightAligned(cb.field_D, 294, SoftwareRasterizer.field_a - 10, 0, -1);
                       } else {
                         if (this.field_d == 9) {
@@ -1576,7 +1576,7 @@ final class sg {
                             if ((this.field_d == 11)) {
                               var2_intLifetime1 = (pa.field_d >> 1) + pa.field_d;
                               var3 = 40;
-                              jh.field_d.drawParagraph(kk.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
+                              jh.field_d.drawParagraph(RichTextLayout.field_q, 40, -jh.field_d.field_E + var3, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
                               mk.field_h.drawRightAligned(eg.field_E, 294, -10 + SoftwareRasterizer.field_a, 0, -1);
                             }
                           }
@@ -1585,7 +1585,7 @@ final class sg {
                     } else {
                       var2_intLifetime1 = 18;
                       var3 = 40;
-                      var13 = ve.field_b;
+                      var13 = TextLayout.field_b;
                       for (var5 = 0; var5 < var13.length; var5++) {
                         var6_ref_String = var13[var5];
                         var3 = var3 + var2_intLifetime1 * jh.field_d.drawParagraph(var6_ref_String, 40, var3 - jh.field_d.field_E, 254, 1000, 0, -1, 0, 0, var2_intLifetime1);
@@ -2020,7 +2020,7 @@ final class sg {
             this.field_o = ef.field_a;
           }
           if (null != this.field_m) {
-            ve.field_a = false;
+            TextLayout.field_a = false;
             this.field_m.e(1);
             if (this.field_m.a((byte) 94)) {
               this.field_b = this.field_b + 1;

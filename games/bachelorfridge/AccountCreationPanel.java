@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountCreationPanel extends WidgetContainer implements pc, WidgetActionListener, NameSuggestionListener {
+final class AccountCreationPanel extends WidgetContainer implements TextHotspotListener, WidgetActionListener, NameSuggestionListener {
     private ValidatedTextField field_D;
     private ValidatedTextField field_K;
     private InteractiveWidget field_M;
@@ -124,7 +124,7 @@ final class AccountCreationPanel extends WidgetContainer implements pc, WidgetAc
         }
     }
 
-    public final void a(int param0, LinkTextWidget param1, int param2, byte param3) {
+    public final void onTextHotspotActivated(int param0, LinkTextWidget param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;

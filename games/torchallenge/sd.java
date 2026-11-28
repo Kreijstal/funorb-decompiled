@@ -71,7 +71,7 @@ final class sd {
             sd.a((byte) 28, (java.awt.Component) null);
           }
           param1.removeFocusListener(hl.field_d);
-          df.field_Q = -1;
+          RichTextWidget.field_Q = -1;
         } catch (RuntimeException runtimeException) {
           throw oj.wrapException((Throwable) ((Object) runtimeException), "sd.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

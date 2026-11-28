@@ -620,7 +620,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
             integerLocal2 = UiComponentPart018.integerState0502;
             UiComponentPart018.integerState0502 = UiComponentPart018.integerState0502 + 1;
             sceneWidgetPart014Local24.integerState0920 = integerLocal2;
-            UiComponentPart025.nodeDequeState0027.addFirst(sceneWidgetPart014Local24, 2777);
+            RichTextWidget.nodeDequeState0027.addFirst(sceneWidgetPart014Local24, 2777);
           }
           if (objectLocal21 != null) {
             objectLocal21 = ((String) (objectLocal21)).intern();
@@ -629,7 +629,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
           sceneWidgetPart014Local24.stringState0606 = stringLocal22;
           sceneWidgetPart014Local24.stringState0605 = stringLocal23;
           sceneWidgetPart014Local24.unlink((byte) 125);
-          sceneWidgetPart014Local17 = (SceneWidgetPart014) (UiComponentPart025.nodeDequeState0027.beginBackward((byte) 18));
+          sceneWidgetPart014Local17 = (SceneWidgetPart014) (RichTextWidget.nodeDequeState0027.beginBackward((byte) 18));
           scanLoop1: while (true) {
             boolean frameRemainderLocal25 = true;
             if (sceneWidgetPart014Local17 != null) {
@@ -639,7 +639,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
               frameRemainderLocal25 = (integerLocal20 == 0);
               if ((frameRemainderLocal25) &&
                 (stackBooleanLocal4)) {
-                sceneWidgetPart014Local17 = (SceneWidgetPart014) (UiComponentPart025.nodeDequeState0027.nextBackward(true));
+                sceneWidgetPart014Local17 = (SceneWidgetPart014) (RichTextWidget.nodeDequeState0027.nextBackward(true));
                 continue;
               }
             }
@@ -655,7 +655,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
             }
             break;
           }
-          UiComponentPart025.nodeDequeState0027.addFirst(sceneWidgetPart014Local24, 2777);
+          RichTextWidget.nodeDequeState0027.addFirst(sceneWidgetPart014Local24, 2777);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal26) {
           caughtExceptionLocal6 = caughtParameterLocal26;
@@ -1104,7 +1104,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
         }
     }
 
-    final String computeString0223(byte byteArgument1) {
+    final String getTooltipText(byte byteArgument1) {
         UiComponent[] uiComponentArrayLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;
@@ -1129,7 +1129,7 @@ abstract class UiComponentPart020 extends UiComponent implements CallbackContrac
             stackObjectLocal9 = null;
             if (integerLocal6 == 0) {
               if (stackObjectLocal9 != uiComponentLocal4) {
-                stringLocal5 = uiComponentLocal4.computeString0223((byte) 113);
+                stringLocal5 = uiComponentLocal4.getTooltipText((byte) 113);
                 if (stringLocal5 != null) {
                   stackStringLocal8 = stringLocal5;
                   return stackStringLocal8;

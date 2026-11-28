@@ -295,7 +295,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             }
             var10 = fj.k(-11401);
             if (var10 != null) {
-              cj.a(75, var10.booleanValue());
+              RichTextWidget.a(75, var10.booleanValue());
             }
           }
           if (var4 == 2) {
@@ -451,7 +451,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                 lb.b(-20785);
               } else {
                 if (var3 == 4) {
-                  mb.a((byte) 65);
+                  RichTextLayout.a((byte) 65);
                 } else {
                   if (var3 != 5) {
                     if (var3 == 6) {
@@ -485,7 +485,7 @@ abstract class NetworkGameClient extends GameAppletShell {
                             stackIn_22_0 = true;
                             stackIn_23_1 = (var3 == 12);
                             var4 = wk.a(stackIn_22_0, stackIn_23_1);
-                            ce.a(var4, true);
+                            TextLayout.a(var4, true);
                           }
                         } else {
                           i.a(29821, sc.field_g, gf.field_b, jd.field_q);
@@ -656,10 +656,10 @@ abstract class NetworkGameClient extends GameAppletShell {
             GameCanvas.field_d = qm.b(1, tb.field_P);
           }
           im.field_c = ByteStorage.a(param1 ^ 9811, Bzip2State.field_e, true, false, 1);
-          mb.field_m = ByteStorage.a(96, uh.field_k, true, false, 1);
+          RichTextLayout.field_m = ByteStorage.a(96, uh.field_k, true, false, 1);
           ll.field_b = ByteStorage.a(114, PcmResampler.field_i, true, false, 1);
           wd.field_a = im.field_c;
-          ResourceArchive.field_a = mb.field_m;
+          ResourceArchive.field_a = RichTextLayout.field_m;
           pb.field_Kb = 2;
         }
         if (pb.field_Kb == 2) {
@@ -680,13 +680,13 @@ abstract class NetworkGameClient extends GameAppletShell {
           }
         }
         if (pb.field_Kb == 3 &&
-          ca.a(ll.field_b, mb.field_m, im.field_c, param1 - 9768) &&
+          ca.a(ll.field_b, RichTextLayout.field_m, im.field_c, param1 - 9768) &&
           jh.a(-95, ll.field_b)) {
           GzipDecompressor.a(1);
           ni.clearDeclaredStaticReferences(-30074);
           wi.field_c = l.field_e;
           EmailFormatValidator.field_r = false;
-          lc.a(ArchiveIndex.field_g, ll.field_b, im.field_c, 12789, mb.field_m);
+          lc.a(ArchiveIndex.field_g, ll.field_b, im.field_c, 12789, RichTextLayout.field_m);
           if (rd.field_d ||
             ti.field_d != null) {
             stackIn_102_0 = !(rd.field_d);
@@ -701,7 +701,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             GameCanvas.field_b = uj.e(1);
           }
           PcmResampler.a(GameCanvas.field_b, ll.field_b, param1 - 9887, hf.field_c);
-          mb.field_m = null;
+          RichTextLayout.field_m = null;
           im.field_c = null;
           ll.field_b = null;
           bm.a((byte) -113, (java.applet.Applet) (this));

@@ -61,7 +61,7 @@ final class BananarangAnimation extends EventAnimation {
           nia.field_l = null;
           a.field_o = null;
           fba.field_a = null;
-          tq.field_g = null;
+          RichTextLayout.field_g = null;
           ZombiesAnimation.field_y = null;
           hl.field_D = null;
           rj.field_l = null;
@@ -94,7 +94,7 @@ final class BananarangAnimation extends EventAnimation {
         nia.field_l = null;
         a.field_o = null;
         fba.field_a = null;
-        tq.field_g = null;
+        RichTextLayout.field_g = null;
         ZombiesAnimation.field_y = null;
         hl.field_D = null;
         rj.field_l = null;

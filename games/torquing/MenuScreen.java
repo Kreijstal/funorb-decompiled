@@ -681,7 +681,7 @@ final class MenuScreen {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(')').toString());
         }
     }
 
@@ -1042,23 +1042,23 @@ final class MenuScreen {
               break;
           }
         }
-        if (cm.field_m >= 0) {
-          if (!(cm.field_m <= 0)) {
-            cm.field_m = cm.field_m - 5;
-            if (!(0 <= cm.field_m)) {
-              cm.field_m = 0;
+        if (RichTextLayout.field_m >= 0) {
+          if (!(RichTextLayout.field_m <= 0)) {
+            RichTextLayout.field_m = RichTextLayout.field_m - 5;
+            if (!(0 <= RichTextLayout.field_m)) {
+              RichTextLayout.field_m = 0;
               if (var8 != 0) {
-                cm.field_m = cm.field_m + 5;
-                if (cm.field_m > 0) {
-                  cm.field_m = 0;
+                RichTextLayout.field_m = RichTextLayout.field_m + 5;
+                if (RichTextLayout.field_m > 0) {
+                  RichTextLayout.field_m = 0;
                 }
               }
             }
           }
         } else {
-          cm.field_m = cm.field_m + 5;
-          if (cm.field_m > 0) {
-            cm.field_m = 0;
+          RichTextLayout.field_m = RichTextLayout.field_m + 5;
+          if (RichTextLayout.field_m > 0) {
+            RichTextLayout.field_m = 0;
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -1451,7 +1451,7 @@ final class MenuScreen {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -1595,7 +1595,7 @@ final class MenuScreen {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mh.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "mh.H(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -1859,7 +1859,7 @@ final class MenuScreen {
                           break regionExit2;
                         }
                         this.field_c.transitionGameScreen(true, 4, 1, param1);
-                        cm.field_m = 0;
+                        RichTextLayout.field_m = 0;
                         a.field_e = 0;
                         DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[23]);
                         DualLinkNode.field_n = this.field_h;
@@ -2204,7 +2204,7 @@ final class MenuScreen {
                   break regionExit1;
                 }
                 a.field_e = a.field_e + 1;
-                cm.field_m = cm.field_m - 298;
+                RichTextLayout.field_m = RichTextLayout.field_m - 298;
                 DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[23]);
                 if (~(-1 + hg.field_b.length) != ~a.field_e) {
                   break regionExit2;
@@ -2228,7 +2228,7 @@ final class MenuScreen {
                 if (a.field_e <= 0) {
                   break regionExit1;
                 }
-                cm.field_m = cm.field_m + 298;
+                RichTextLayout.field_m = RichTextLayout.field_m + 298;
                 a.field_e = a.field_e - 1;
                 DisplayNameSelectionPanel.a(100, DisplayNameSelectionPanel.field_F[23]);
                 if (0 != a.field_e) {
@@ -2560,7 +2560,7 @@ final class MenuScreen {
             break regionExit1;
           }
           if (this.field_h == 4) {
-            var2 = cm.field_m + 298 * a.field_e;
+            var2 = RichTextLayout.field_m + 298 * a.field_e;
             SoftwareRasterizer.setClip(47, 120, 583, 418);
             var3 = 120 - var2;
             var4Lifetime2 = 0;
@@ -2768,7 +2768,7 @@ final class MenuScreen {
               if ((104 == e.field_f) &&
                 (decompiledFrameRemainder1 = !(a.field_e <= 0))) {
                 a.field_e = a.field_e - 1;
-                cm.field_m = cm.field_m + 298;
+                RichTextLayout.field_m = RichTextLayout.field_m + 298;
                 decompiledFrameRemainder1 = (0 == a.field_e);
                 if ((decompiledFrameRemainder1) &&
                   (decompiledFrameRemainder1 = (this.field_a.field_g == 0))) {
@@ -2779,7 +2779,7 @@ final class MenuScreen {
               if (decompiledFrameRemainder1) {
                 if ((e.field_f == 105) &&
                   (decompiledFrameRemainder1 = !(hg.field_b.length <= (a.field_e + 1)))) {
-                  cm.field_m = cm.field_m - 298;
+                  RichTextLayout.field_m = RichTextLayout.field_m - 298;
                   a.field_e = a.field_e + 1;
                   decompiledFrameRemainder1 = (hg.field_b.length - 1 == a.field_e);
                   if ((decompiledFrameRemainder1) &&
@@ -2793,14 +2793,14 @@ final class MenuScreen {
                     (decompiledFrameRemainder1 = (103 == e.field_f))) {
                     var2 = -a.field_e + (-1 + hg.field_b.length);
                     a.field_e = a.field_e + var2;
-                    cm.field_m = cm.field_m - var2 * 298;
+                    RichTextLayout.field_m = RichTextLayout.field_m - var2 * 298;
                     if (this.field_a.field_g == 2) {
                       this.field_a.field_g = 1;
                     }
                     decompiledFrameRemainder1 = (var4 != 0);
                   }
                   if (decompiledFrameRemainder1) {
-                    cm.field_m = cm.field_m + 298 * a.field_e;
+                    RichTextLayout.field_m = RichTextLayout.field_m + 298 * a.field_e;
                     a.field_e = 0;
                     decompiledFrameRemainder1 = (this.field_a.field_g == 0);
                     if (decompiledFrameRemainder1) {
@@ -3073,7 +3073,7 @@ final class MenuScreen {
           this.field_h = param1;
           this.field_a = new db(rf.field_q[param1].length);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

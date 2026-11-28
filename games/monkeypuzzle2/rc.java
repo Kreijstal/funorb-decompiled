@@ -138,17 +138,17 @@ final class rc extends kc {
         float[] var4Lifetime1;
         float[] var3Lifetime1;
         if (0 >= param1) {
-          bl.field_f = -1;
+          TextHotspotBounds.field_f = -1;
           mh.field_D = -1;
           return;
         }
         if (param1 >= 17) {
-          bl.field_f = -1;
+          TextHotspotBounds.field_f = -1;
           mh.field_D = -1;
           return;
         }
         if (param1 == 16) {
-          bl.field_f = (int)pe.field_d[param1].field_e[0];
+          TextHotspotBounds.field_f = (int)pe.field_d[param1].field_e[0];
           mh.field_D = (int)pe.field_d[param1].field_e[1];
           return;
         }
@@ -159,7 +159,7 @@ final class rc extends kc {
           var3 = var4;
           oa.a(param0, var6, 122);
           TextFieldValidator.a(var6, -92, pe.field_d[param1 - 1].field_e);
-          bl.field_f = (int)var6[0];
+          TextHotspotBounds.field_f = (int)var6[0];
           mh.field_D = (int)var6[1];
           return;
         }
@@ -170,7 +170,7 @@ final class rc extends kc {
         var3Lifetime1 = var4Lifetime1;
         oa.a(param0, var6Lifetime1, 122);
         TextFieldValidator.a(var6Lifetime1, -92, pe.field_d[param1 - 1].field_e);
-        bl.field_f = (int)var6Lifetime1[0];
+        TextHotspotBounds.field_f = (int)var6Lifetime1[0];
         mh.field_D = (int)var6Lifetime1[1];
     }
 

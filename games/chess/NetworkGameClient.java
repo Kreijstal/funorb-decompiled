@@ -291,7 +291,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             if (!param0) {
               field_t = -94L;
             }
-            se.field_X = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            RichTextWidget.field_X = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a(param4, -117, param2, this.field_q, 32, param3, param1);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -420,7 +420,7 @@ abstract class NetworkGameClient extends GameAppletShell {
         if (ii.field_L != null) {
           fl.field_p = ii.field_L.pollRotation((byte) -91);
         }
-        if (ub.a(21549)) {
+        if (TextLayout.a(21549)) {
           var3 = qd.d(-31137) * 1200;
           if (this.field_n ||
             !(ea.h((byte) -16) <= var3) &&
@@ -515,7 +515,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           il.field_a = 1;
         }
         if (il.field_a == 1) {
-          if (se.field_V != 0) {
+          if (RichTextWidget.field_V != 0) {
             qa.field_c = BirthDateValidator.a(dh.field_c, (byte) 127);
           }
           fl.field_m = sh.a(1, BitPacketBuffer.field_q, true, 935, false);
@@ -558,7 +558,7 @@ abstract class NetworkGameClient extends GameAppletShell {
             stackIn_104_3 = !(gf.field_e);
             nj.a(stackIn_101_0, stackIn_103_1, stackIn_103_2, stackIn_104_3);
           }
-          if (se.field_X) {
+          if (RichTextWidget.field_X) {
             jg.b(true);
           }
           if (pe.field_f == null) {
@@ -574,7 +574,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           il.field_a = 10;
         }
         if (10 == il.field_a) {
-          if (se.field_V != 0) {
+          if (RichTextWidget.field_V != 0) {
             td.field_o = BirthDateValidator.a(rm.field_U, (byte) 127);
           }
           il.field_a = 11;
@@ -633,10 +633,10 @@ abstract class NetworkGameClient extends GameAppletShell {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        se.field_V = this.field_v;
-        sc.a(se.field_V, false);
-        jn.initializeNetworkState(this.field_u, MatchingFieldValidator.field_l, this.field_w, se.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
-        DebouncedFieldValidator.a(350, this.field_w, se.field_V, param4, this.field_r, MatchingFieldValidator.field_l, this.field_q, this.field_x, this.field_m);
+        RichTextWidget.field_V = this.field_v;
+        sc.a(RichTextWidget.field_V, false);
+        jn.initializeNetworkState(this.field_u, MatchingFieldValidator.field_l, this.field_w, RichTextWidget.field_V, this.field_r, 5000, this.field_x, this.field_p, (byte) -121, 5000, param5, this.field_m, param4, this.field_q);
+        DebouncedFieldValidator.a(350, this.field_w, RichTextWidget.field_V, param4, this.field_r, MatchingFieldValidator.field_l, this.field_q, this.field_x, this.field_m);
         bf.g((byte) 69);
         ii.field_L = sa.createMouseWheelInput(param6 + 28);
         ca.a(13369344, DirectByteStorage.field_h);
@@ -674,7 +674,7 @@ abstract class NetworkGameClient extends GameAppletShell {
           if (param0 < 95) {
             return -100;
           }
-          var4 = DebouncedFieldValidator.a((byte) 93, fl.field_p, param1, se.field_V);
+          var4 = DebouncedFieldValidator.a((byte) 93, fl.field_p, param1, RichTextWidget.field_V);
           if (var4 == 0) {
             throw new IllegalStateException();
           }

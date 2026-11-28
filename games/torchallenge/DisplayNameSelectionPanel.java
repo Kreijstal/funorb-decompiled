@@ -356,7 +356,7 @@ final class DisplayNameSelectionPanel extends kj implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (j) null);
         this.field_P = new ValidatedTextField("", (gg) null, 12);
-        bc var1 = new bc(GameApplet.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(GameApplet.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(kg.field_eb, var1, (gg) null);
         this.field_J = new InteractiveWidget(FrameTimer.field_g, (gg) null);
         this.field_K = new InteractiveWidget(nh.field_fb, (gg) null);

@@ -206,7 +206,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -262,7 +262,7 @@ final class BufferedSocket implements Runnable {
                 var2_int = param0 - kj.field_d.position;
               }
               vk.field_E.a(var2_int, kj.field_d.position, kj.field_d.payload, (byte) -74);
-              rb.field_C = km.correctedCurrentTimeMillis(~param1);
+              RichTextWidget.field_C = km.correctedCurrentTimeMillis(~param1);
               kj.field_d.position = kj.field_d.position + var2_int;
               if (param0 > kj.field_d.position) {
                 return false;
@@ -336,7 +336,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -398,7 +398,7 @@ final class BufferedSocket implements Runnable {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -420,12 +420,12 @@ final class BufferedSocket implements Runnable {
         this(param0, param1, 5000);
     }
 
-    final static pc b(boolean param0) {
+    final static DefaultTextWidgetRenderer b(boolean param0) {
         if (!param0) {
           field_j = (int[]) null;
         }
         if (LevelRun.field_f == null) {
-          LevelRun.field_f = new pc(sp.field_R, 20, 0, 0, 0, 11579568, -1, 0, 0, sp.field_R.field_x, -1, 2147483647, true);
+          LevelRun.field_f = new DefaultTextWidgetRenderer(sp.field_R, 20, 0, 0, 0, 11579568, -1, 0, 0, sp.field_R.field_x, -1, 2147483647, true);
         }
         return LevelRun.field_f;
     }
@@ -453,7 +453,7 @@ final class BufferedSocket implements Runnable {
           this.field_e = this.field_b.getOutputStream();
           this.field_l = param2;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "no.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

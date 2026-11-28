@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LevelRun {
-    static pc field_f;
+    static DefaultTextWidgetRenderer field_f;
     private boolean field_t;
     static String field_u;
     IntrusiveDeque field_e;
@@ -131,7 +131,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "bi.Q(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "bi.Q(" + param0 + ')');
         }
     }
 
@@ -269,7 +269,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "bi.T(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "bi.T(" + param0 + ')');
         }
     }
 
@@ -281,7 +281,7 @@ final class LevelRun {
             LevelRun.openSupportPage((java.applet.Applet) null, (byte) -76);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.N(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.N(" + param0 + ')');
         }
     }
 
@@ -292,7 +292,7 @@ final class LevelRun {
             this.field_k = -84;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.I(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -364,7 +364,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2_ref), "bi.O(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2_ref), "bi.O(" + param0 + ')');
         }
     }
 
@@ -390,7 +390,7 @@ final class LevelRun {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -417,7 +417,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3_ref), "bi.CA(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3_ref), "bi.CA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -426,7 +426,7 @@ final class LevelRun {
           int var2_int = -38 % ((param0 - 62) / 48);
           this.field_x = Math.max(10, this.field_x);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.U(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.U(" + param0 + ')');
         }
     }
 
@@ -454,7 +454,7 @@ final class LevelRun {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -503,7 +503,7 @@ final class LevelRun {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -559,7 +559,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "bi.G(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "bi.G(" + param0 + ')');
         }
     }
 
@@ -594,7 +594,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3_ref), "bi.AA(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3_ref), "bi.AA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -623,7 +623,7 @@ final class LevelRun {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -636,7 +636,7 @@ final class LevelRun {
         RuntimeException var2 = null;
         try {
           if (param0 < 77) {
-            field_f = (pc) null;
+            field_f = (DefaultTextWidgetRenderer) null;
           }
           stackIn_6_0 = (qm.a(param1, (byte) 45) != null);
           return stackIn_6_0;
@@ -650,7 +650,7 @@ final class LevelRun {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -674,7 +674,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3), "bi.C(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3), "bi.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -714,7 +714,7 @@ final class LevelRun {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -725,7 +725,7 @@ final class LevelRun {
             this.field_z = -49;
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.K(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.K(" + param0 + ')');
         }
     }
 
@@ -752,7 +752,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "bi.R(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "bi.R(" + param0 + ')');
         }
     }
 
@@ -796,13 +796,13 @@ final class LevelRun {
             }
           }
           if (param0 != 9) {
-            field_f = (pc) null;
+            field_f = (DefaultTextWidgetRenderer) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "bi.P(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "bi.P(" + param0 + ')');
         }
     }
 
@@ -836,7 +836,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var4), "bi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var4), "bi.M(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -847,7 +847,7 @@ final class LevelRun {
           }
           this.field_P.e(66);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.S(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.S(" + param0 + ')');
         }
     }
 
@@ -882,7 +882,7 @@ final class LevelRun {
             } else {
               stackIn_8_2 = "{...}";
             }
-            throw rb.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1053,7 +1053,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "bi.H(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "bi.H(" + param0 + ')');
         }
     }
 
@@ -1588,7 +1588,7 @@ final class LevelRun {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var2), "bi.E(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var2), "bi.E(" + param0 + ')');
         }
     }
 
@@ -1602,7 +1602,7 @@ final class LevelRun {
             LevelRun.createIndexedSpriteLayer((IndexedSprite) null, 58);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.V(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.V(" + param0 + ')');
         }
     }
 
@@ -1614,7 +1614,7 @@ final class LevelRun {
           ResourceArchive.field_k[param0].a(false);
           jh.a(ResourceArchive.field_k[12], param0 ^ 12);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "bi.W(" + param0 + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "bi.W(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1688,7 +1688,7 @@ final class LevelRun {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(')').toString());
         }
     }
 

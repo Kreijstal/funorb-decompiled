@@ -189,7 +189,7 @@ final class lb {
         }
     }
 
-    final static void a(nh param0, BitmapFont param1, int param2, String param3, int param4) {
+    final static void a(TextLineMetrics param0, BitmapFont param1, int param2, String param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -312,12 +312,12 @@ final class lb {
         this.field_v = var7;
     }
 
-    final static hd b(byte param0) {
+    final static DefaultTextWidgetRenderer b(byte param0) {
         if (param0 != -127) {
           lb.a(-62);
         }
         if (null == d.field_l) {
-          d.field_l = new hd(nb.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_b.field_p, -1, 2147483647, true);
+          d.field_l = new DefaultTextWidgetRenderer(nb.field_b, 20, 0, 0, 0, 11579568, -1, 0, 0, nb.field_b.field_p, -1, 2147483647, true);
         }
         return d.field_l;
     }
@@ -346,7 +346,7 @@ final class lb {
     public static void a(byte param0) {
         if (param0 != -49) {
           String var2 = (String) null;
-          lb.a((nh) null, (BitmapFont) null, -33, (String) null, -39);
+          lb.a((TextLineMetrics) null, (BitmapFont) null, -33, (String) null, -39);
         }
         field_d = null;
         field_l = null;

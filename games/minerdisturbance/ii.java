@@ -17,7 +17,7 @@ final class ii {
           if (param1) {
             ii.clearStaticReferences((byte) -103);
           }
-          stackIn_3_0 = mg.a(1963987425, RawPcmStream.createForPlaybackRate(param0, 100, 96));
+          stackIn_3_0 = TextLineMetrics.a(1963987425, RawPcmStream.createForPlaybackRate(param0, 100, 96));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

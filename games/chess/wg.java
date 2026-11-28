@@ -57,7 +57,7 @@ final class wg extends pk {
           vk.field_g = 2;
           var5 = (CharSequence) ((Object) param0);
           ec.field_f = ad.a(var5, -2);
-          re.field_p = param2;
+          TextHotspotBounds.field_p = param2;
           if (param1 > -74) {
             wg.resetStaticState(88);
           }

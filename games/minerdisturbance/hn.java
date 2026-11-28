@@ -17,7 +17,7 @@ abstract class hn {
             var1 = TextFieldValidator.a((byte) -98);
           }
           if (var1.length() == 0) {
-            var1 = bm.field_r;
+            var1 = RichTextLayout.field_r;
           }
           return var1;
         }
@@ -26,7 +26,7 @@ abstract class hn {
           var1 = TextFieldValidator.a((byte) -98);
         }
         if (var1.length() == 0) {
-          var1 = bm.field_r;
+          var1 = RichTextLayout.field_r;
         }
         return var1;
     }

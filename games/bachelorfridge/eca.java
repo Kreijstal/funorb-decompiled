@@ -140,8 +140,8 @@ final class eca extends bi {
         int var7Lifetime4;
         var10 = BachelorFridge.field_y;
         var2 = 0;
-        var3 = ri.field_b.field_k[ks.field_i];
-        var4 = ri.field_b.field_g[ks.field_i];
+        var3 = ri.field_b.field_k[ClearCreatureStatusEffect.field_i];
+        var4 = ri.field_b.field_g[ClearCreatureStatusEffect.field_i];
         var5 = this.field_k.field_u + 108;
         this.a(0, BuffVendorAnimation.field_z, param0 ^ 9);
         var6 = 0;

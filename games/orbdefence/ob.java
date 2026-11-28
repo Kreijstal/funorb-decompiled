@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends ta implements ff, WidgetActivationListener {
+final class ob extends ta implements TextHotspotListener, WidgetActivationListener {
     private AccountCreationResultPanel field_B;
     static String field_E;
     static int field_K;
@@ -11,7 +11,7 @@ final class ob extends ta implements ff, WidgetActivationListener {
     static String field_D;
     static int field_H;
     static String field_C;
-    private te field_A;
+    private RichTextWidget field_A;
     private InteractiveWidget field_G;
 
     public final void onWidgetActivated(byte param0, int param1, int param2, InteractiveWidget param3, int param4) {
@@ -39,7 +39,7 @@ final class ob extends ta implements ff, WidgetActivationListener {
         field_C = null;
     }
 
-    public final void a(int param0, int param1, byte param2, te param3) {
+    public final void onTextHotspotActivated(int param0, int param1, byte param2, RichTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -49,7 +49,7 @@ final class ob extends ta implements ff, WidgetActivationListener {
         var6 = OrbDefence.field_D ? 1 : 0;
         try {
           if (param2 != 101) {
-            this.field_A = (te) null;
+            this.field_A = (RichTextWidget) null;
           }
           if (param1 == 0) {
             DualLinkDequeIterator.a("terms.ws", 1);
@@ -82,7 +82,7 @@ final class ob extends ta implements ff, WidgetActivationListener {
         super(0, 0, 288, 0, (td) null);
         String var7 = null;
         int var3 = 0;
-        jc var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -91,8 +91,8 @@ final class ob extends ta implements ff, WidgetActivationListener {
           this.field_G.field_j = (td) ((Object) new vk());
           var7 = CrossfadingMidiPcmStream.a(-415993727, new String[]{this.m(67), this.k(-804)}, lb.field_a);
           var3 = 20;
-          var4 = new jc(lm.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
-          this.field_A = new te(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(lm.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, lm.field_f.field_H, -1, 2147483647, true);
+          this.field_A = new RichTextWidget(var7, var4);
           this.field_A.field_i = "";
           this.field_A.a(0, ConfirmedEmailAvailabilityValidator.field_p, 2);
           this.field_A.a(1, ConfirmedEmailAvailabilityValidator.field_p, 2);

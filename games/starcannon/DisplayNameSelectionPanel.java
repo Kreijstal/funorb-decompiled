@@ -237,7 +237,7 @@ final class DisplayNameSelectionPanel extends vk implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (de) null);
         this.field_A = new ValidatedTextField("", (qg) null, 12);
-        hd var1 = new hd(nb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(nb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);
         UiWidget var2 = new UiWidget(ih.field_f, var1, (qg) null);
         this.field_E = new InteractiveWidget(rc.field_b, (qg) null);
         this.field_C = new InteractiveWidget(ta.field_d, (qg) null);

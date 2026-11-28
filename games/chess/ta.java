@@ -88,7 +88,7 @@ final class ta extends pk {
         } else {
           boolean decompiledFrameRemainder0 = true;
           if (!this.a((byte) -9)) {
-            this.field_q = fj.field_c;
+            this.field_q = TextLineMetrics.field_c;
             if (!this.field_s) {
               if (!this.c((byte) -126)) {
                 this.field_d = false;

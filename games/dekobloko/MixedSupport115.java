@@ -32,11 +32,11 @@ abstract class MixedSupport115 extends DualNode {
         try {
           objectLocal4 = null;
           objectLocal5 = null;
-          if (NetworkSupport010.integerState0585 == 0 &&
+          if (TextHotspotBounds.integerState0585 == 0 &&
             UiComponentPart011.sceneWidgetPart013State0002 != null) {
             objectLocal5 = MixedSupport048.stringState0204;
           }
-          if (2 == NetworkSupport010.integerState0585 &&
+          if (2 == TextHotspotBounds.integerState0585 &&
             !MixedSupport056.computeBoolean0666((byte) -53)) {
             if (!RenderingSupport012.computeBoolean1345(TextLayout.stringState0081, 3)) {
               objectLocal5 = NodeHashTableIterator.substituteIndexedPlaceholders(96, UiComponentPart029.stringState0496, new String[]{MixedSupport029.stringState0149});
@@ -63,7 +63,7 @@ abstract class MixedSupport115 extends DualNode {
             stringLocal6 = UiComponentPart002.computeString0079(107, stringLocal6);
             stringLocal8 = "";
             stringLocal9 = "|";
-            integerLocal10 = NetworkSupport010.integerState0585;
+            integerLocal10 = TextHotspotBounds.integerState0585;
             integerLocal11 = 0;
             if (integerLocal10 == 2) {
               stringLocal8 = NodeHashTableIterator.substituteIndexedPlaceholders(81, NetworkSupport009.stringState0388, new String[]{MixedSupport029.stringState0149});

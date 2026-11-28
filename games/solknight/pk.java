@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends kj {
+final class pk extends RichTextWidget {
     static int field_ab;
     private String field_V;
     private Sprite field_W;
@@ -94,16 +94,16 @@ final class pk extends kj {
         Sprite var29;
         Sprite var30;
         Object var33;
-        eg var37;
-        eg var38;
-        eg var39;
+        TextWidgetRenderer var37;
+        TextWidgetRenderer var38;
+        TextWidgetRenderer var39;
         Sprite var16;
         Sprite var31;
         String var32;
         Sprite var34;
         Sprite var35;
         Sprite var36;
-        eg var40;
+        TextWidgetRenderer var40;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -128,13 +128,13 @@ final class pk extends kj {
           var17 = g.field_e;
           if (!var17.equals(this.field_i)) {
             this.field_i = var17;
-            this.a((byte) -21);
+            this.rebuildHotspotBounds((byte) -21);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_U.getValidationStatus(-9362);
-          var37 = (eg) ((Object) this.field_w);
+          var37 = (TextWidgetRenderer) ((Object) this.field_w);
           var9 = param2 + this.field_m;
-          var10 = var37.a((UiWidget) (this), false, param0) + (var37.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
+          var10 = var37.getTextOriginY((UiWidget) (this), false, param0) + (var37.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
           if (var6 != hg.field_E &&
             SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
@@ -178,13 +178,13 @@ final class pk extends kj {
           var22 = g.field_e;
           if (!var22.equals(this.field_i)) {
             this.field_i = var22;
-            this.a((byte) -21);
+            this.rebuildHotspotBounds((byte) -21);
           }
           super.a(param0, param1, param2, param3);
           var6 = this.field_U.getValidationStatus(-9362);
-          var38 = (eg) ((Object) this.field_w);
+          var38 = (TextWidgetRenderer) ((Object) this.field_w);
           var9Lifetime1 = param2 + this.field_m;
-          var10Lifetime1 = var38.a((UiWidget) (this), false, param0) + (var38.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
+          var10Lifetime1 = var38.getTextOriginY((UiWidget) (this), false, param0) + (var38.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
           if (var6 != hg.field_E &&
             SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
@@ -228,13 +228,13 @@ final class pk extends kj {
         if (var27 != null) {
           if (!var27.equals(this.field_i)) {
             this.field_i = var27;
-            this.a((byte) -21);
+            this.rebuildHotspotBounds((byte) -21);
           }
           super.a(param0, param1, param2, param3);
           var6Lifetime1 = this.field_U.getValidationStatus(-9362);
-          var39 = (eg) ((Object) this.field_w);
+          var39 = (TextWidgetRenderer) ((Object) this.field_w);
           var9Lifetime2 = param2 + this.field_m;
-          var10Lifetime2 = var39.a((UiWidget) (this), false, param0) + (var39.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
+          var10Lifetime2 = var39.getTextOriginY((UiWidget) (this), false, param0) + (var39.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
           if (var6Lifetime1 != hg.field_E &&
             SpriteState.field_u != var6Lifetime1) {
             if (rg.field_f == var6Lifetime1) {
@@ -278,13 +278,13 @@ final class pk extends kj {
         var32 = this.field_V;
         if (!var32.equals(this.field_i)) {
           this.field_i = var32;
-          this.a((byte) -21);
+          this.rebuildHotspotBounds((byte) -21);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime2 = this.field_U.getValidationStatus(-9362);
-        var40 = (eg) ((Object) this.field_w);
+        var40 = (TextWidgetRenderer) ((Object) this.field_w);
         var9Lifetime3 = param2 + this.field_m;
-        var10Lifetime3 = var40.a((UiWidget) (this), false, param0) + (var40.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
+        var10Lifetime3 = var40.getTextOriginY((UiWidget) (this), false, param0) + (var40.getTextLayout(-21480, (UiWidget) (this)).getLayoutHeight((byte) 126) >> 1);
         if (var6Lifetime2 != hg.field_E &&
           SpriteState.field_u != var6Lifetime2) {
           if (rg.field_f == var6Lifetime2) {
@@ -335,7 +335,7 @@ final class pk extends kj {
     final static void a(byte param0, int param1, boolean param2) {
         Throwable decompiledCaughtException = null;
         Object var3 = null;
-        var3 = kj.field_P;
+        var3 = RichTextWidget.field_P;
         synchronized (var3) {
           FullscreenFocusCanvas.a(c.field_M[param1], param0 + 182, param2);
           be.field_K = qc.field_o[param1];
@@ -347,7 +347,7 @@ final class pk extends kj {
         pk.a(-56, true, 93);
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 >= 14) {
           return null;
         }
@@ -528,10 +528,10 @@ final class pk extends kj {
     }
 
     final static void a(byte param0, int param1) {
-        vk.field_g = (param1 & 57) >> 4;
+        RichTextLayout.field_g = (param1 & 57) >> 4;
         MusicPatchPcmStream.field_q = (15 & param1) >> 2;
-        if (vk.field_g > 2) {
-          vk.field_g = 2;
+        if (RichTextLayout.field_g > 2) {
+          RichTextLayout.field_g = 2;
           if (2 < MusicPatchPcmStream.field_q) {
             MusicPatchPcmStream.field_q = 2;
           }

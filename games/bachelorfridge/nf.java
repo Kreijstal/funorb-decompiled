@@ -98,14 +98,14 @@ final class nf extends LinkTextWidget {
             }
           }
           this.text = var5;
-          this.a(21646);
+          this.rebuildHotspotBounds(21646);
         }
         var7 = -39 / ((param0 + 20) / 54);
         super.draw((byte) 86, param1, param2, param3);
         var6Lifetime1 = this.field_L.getValidationStatus(-19704);
         var9 = (WidgetMetrics) ((Object) this.renderer);
         var10 = param3 + this.x;
-        var11 = var9.a((UiWidget) (this), param1, (byte) -54) + (var9.b((UiWidget) (this), false).a(false) >> 1);
+        var11 = var9.getTextOriginY((UiWidget) (this), param1, (byte) -54) + (var9.getTextLayout((UiWidget) (this), false).getLayoutHeight(false) >> 1);
         if (var6Lifetime1 == cq.field_g) {
           var19 = fr.field_q[0];
           var12 = var19.field_n << 1;

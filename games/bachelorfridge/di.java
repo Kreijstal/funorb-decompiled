@@ -85,15 +85,15 @@ final class di extends pu {
     }
 
     final static boolean b(int param0) {
-        if (qq.field_l != null) {
+        if (ChangeCreatureStatOrHealthEffect.field_l != null) {
           return true;
         }
         if (vb.field_j.tryLoadGroupByName("benefits", 20637)) {
-          qq.field_l = hca.a("benefits", vb.field_j, param0 ^ -90, "members_benefits_borders");
+          ChangeCreatureStatOrHealthEffect.field_l = hca.a("benefits", vb.field_j, param0 ^ -90, "members_benefits_borders");
           st.field_c = hca.a("benefits", vb.field_j, 101, "members_benefits_price");
           f.field_c = hca.a("benefits", vb.field_j, param0 - 167, "members_benefits_logo");
           ik.field_l = gw.a("benefits", "members_benefits_screenshots", vb.field_j, param0 - 143);
-          EventEffect.a(qk.field_k, -84, qq.field_l);
+          EventEffect.a(qk.field_k, -84, ChangeCreatureStatOrHealthEffect.field_l);
           gd.a(param0, -2400, 40, (byte) -85, st.field_c, 16744576, 80, 2, LinkTextWidget.field_D, 80, 15);
           ResetAnimation.a(3, ik.field_l);
           TBomberSpecial.a((byte) 94, f.field_c);

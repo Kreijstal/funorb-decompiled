@@ -61,9 +61,9 @@ final class el extends wi {
         RuntimeException var6_ref = null;
         var8 = fleas.field_A ? 1 : 0;
         try {
-          pi.field_e = param0.getParameter("overxgames");
-          if (null == pi.field_e) {
-            pi.field_e = "0";
+          TextLineMetrics.field_e = param0.getParameter("overxgames");
+          if (null == TextLineMetrics.field_e) {
+            TextLineMetrics.field_e = "0";
           }
           id.field_i = param0.getParameter("overxachievements");
           if (id.field_i == null) {

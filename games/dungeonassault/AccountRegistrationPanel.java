@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ii implements pf, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends ii implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     static int[] field_P;
     private ValidatedTextField field_K;
     NameSuggestionsPanel field_W;
@@ -14,7 +14,7 @@ final class AccountRegistrationPanel extends ii implements pf, WidgetActivationL
     private ValidatedTextField field_L;
     private ValidatedTextField field_O;
     private InteractiveWidget field_N;
-    private bh field_Q;
+    private RichTextWidget field_Q;
 
     final static boolean i(byte param0) {
         if (param0 > -107) {
@@ -182,7 +182,7 @@ final class AccountRegistrationPanel extends ii implements pf, WidgetActivationL
         }
     }
 
-    public final void a(int param0, bh param1, int param2, int param3) {
+    public final void onTextHotspotActivated(int param0, RichTextWidget param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -309,10 +309,10 @@ final class AccountRegistrationPanel extends ii implements pf, WidgetActivationL
     }
 
     private final boolean canSubmitRegistration(boolean param0) {
-        bh var3;
+        RichTextWidget var3;
         if (!param0) {
-          var3 = (bh) null;
-          this.a(31, (bh) null, -50, -67);
+          var3 = (RichTextWidget) null;
+          this.onTextHotspotActivated(31, (RichTextWidget) null, -50, -67);
         }
         if (this.isFieldReadyForRegistration(23786, (FieldValidatorProvider) (this.field_R)) &&
           this.isFieldReadyForRegistration(23786, (FieldValidatorProvider) (this.field_O)) &&
@@ -478,8 +478,8 @@ final class AccountRegistrationPanel extends ii implements pf, WidgetActivationL
         dg var4 = new dg(46, var3, -90 + this.field_x, 25, this.field_T, true, this.field_x - 120, 5, ta.field_e, 11579568, lf.field_q);
         this.b((byte) -117, var4);
         var3 = var3 + var4.field_s;
-        hh var5 = new hh(lp.field_C, 0, 0, 0, 0, 16777215, -1, 0, 0, lp.field_C.field_H, -1, 2147483647, true);
-        this.field_Q = new bh(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(lp.field_C, 0, 0, 0, 0, 16777215, -1, 0, 0, lp.field_C.field_H, -1, 2147483647, true);
+        this.field_Q = new RichTextWidget(var2, var5);
         this.field_Q.field_i = "";
         this.field_Q.a(8, 0, kn.field_d);
         this.field_Q.a(8, 1, kn.field_d);

@@ -43,7 +43,7 @@ abstract class nk extends GameAppletShell {
         if (param0 != 16) {
           this.field_w = true;
         }
-        gg.a(true, kk.c(-14047), var2);
+        gg.a(true, RichTextLayout.c(-14047), var2);
     }
 
     private final void j(int param0) {
@@ -168,7 +168,7 @@ abstract class nk extends GameAppletShell {
             this.field_w = false;
             ProxyAuthenticationRequiredException.$cfr$intArgs$b$e683eeaaf5b5(-125);
             ia.a((byte) 93);
-            sc.a(2, (byte) -128, kk.field_i);
+            sc.a(2, (byte) -128, RichTextLayout.field_i);
             l.i(57);
             MusicPatchPcmStream.field_o = true;
             mc.field_i = rf.correctedCurrentTimeMillis(0) + 15000L;
@@ -468,7 +468,7 @@ abstract class nk extends GameAppletShell {
         if (MusicPatchPcmStream.field_o) {
           return -1;
         }
-        var2 = ve.a(el.b(1), (byte) -25, this.field_y, true, dg.a(false), this.field_A);
+        var2 = TextLayout.a(el.b(1), (byte) -25, this.field_y, true, dg.a(false), this.field_A);
         if (param0 >= -85) {
           this.field_s = -83;
         }
@@ -556,7 +556,7 @@ abstract class nk extends GameAppletShell {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = il.a(this.field_A, dg.a(false), el.b(param1 ^ 1), ve.b(25594), tf.a((byte) -101), 103, a.c(true));
+            var5_intLifetime1 = il.a(this.field_A, dg.a(false), el.b(param1 ^ 1), TextLayout.b(25594), tf.a((byte) -101), 103, a.c(true));
             if (var5_intLifetime1 != -1) {
               ByteStorage.a(var5_intLifetime1, -6258, wj.field_p, fc.field_S);
               fc.field_S = null;
@@ -570,7 +570,7 @@ abstract class nk extends GameAppletShell {
               ArchiveRequest.e((byte) 86);
             }
             if (!param0) {
-              var5_intLifetime2 = ve.a(el.b(1), (byte) -25, this.field_y, false, dg.a(false), this.field_A);
+              var5_intLifetime2 = TextLayout.a(el.b(1), (byte) -25, this.field_y, false, dg.a(false), this.field_A);
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
                   sc.a(var5_intLifetime2, (byte) 58, wj.field_p);
@@ -588,36 +588,36 @@ abstract class nk extends GameAppletShell {
           }
           if (4 == var4) {
             if (MidiPcmStream.field_F) {
-              lj.a(kk.c(-14047), (byte) 125);
+              lj.a(RichTextLayout.c(-14047), (byte) 125);
             } else {
               ta.field_g = 10;
               qg.field_d = true;
             }
           }
           if (var4 == 5) {
-            BufferedSocket.a(0, kk.c(param1 ^ -14047));
+            BufferedSocket.a(0, RichTextLayout.c(param1 ^ -14047));
           }
           if (var4 == 6 &&
             AccountCreationResultPanel.field_tb) {
             ta.field_g = 10;
           }
           if (7 == var4) {
-            sk.a(kk.c(-14047), 12);
+            sk.a(RichTextLayout.c(-14047), 12);
           }
           if (var4 == 8) {
-            lj.a(kk.c(-14047), (byte) 123);
+            lj.a(RichTextLayout.c(-14047), (byte) 123);
           }
           if (var4 == 9) {
-            la.a(kk.c(-14047), true);
+            la.a(RichTextLayout.c(-14047), true);
           }
           if (var4 == 10) {
             SpriteGeometry.field_q.writeCipheredByte(17, 0);
           }
           if (var4 == 11) {
-            rf.a(20104, kk.c(-14047));
+            rf.a(20104, RichTextLayout.c(-14047));
           }
           if (12 == var4) {
-            pd.a(cf.c(32), -120, kk.c(param1 - 14047));
+            pd.a(cf.c(32), -120, RichTextLayout.c(param1 - 14047));
           }
           if (13 == var4) {
             try {
@@ -759,7 +759,7 @@ abstract class nk extends GameAppletShell {
           var4 = -1 + a.field_c;
           var5 = new byte[var4];
           ig.field_a.readCipheredBytes(var4, 0, 55, var5);
-          m.a(var3 != 0, true, ni.a((byte) -55, var5), kk.c(-14047));
+          m.a(var3 != 0, true, ni.a((byte) -55, var5), RichTextLayout.c(-14047));
           return;
         }
     }

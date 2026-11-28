@@ -3,7 +3,7 @@
  */
 final class ml {
     private DualLinkNode field_a;
-    static jd field_e;
+    static DefaultTextWidgetRenderer field_e;
     static RgbSprite field_d;
     static String field_c;
     static int[] field_f;
@@ -36,7 +36,7 @@ final class ml {
           }
           return var2;
         }
-        field_e = (jd) null;
+        field_e = (DefaultTextWidgetRenderer) null;
         var3Lifetime1 = this.field_a.field_l;
         while (var3Lifetime1 != this.field_a) {
           var3Lifetime1 = var3Lifetime1.field_l;

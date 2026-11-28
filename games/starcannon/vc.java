@@ -16,14 +16,14 @@ final class vc extends IntrusiveNode {
     final static void a(int param0, byte param1, int param2) {
         if (param1 == 60) {
           ff.field_o = param0;
-          nh.field_e = 1;
+          TextLineMetrics.field_e = 1;
           IsaacRandom.field_e = 0;
           vj.field_ab = param2;
           return;
         }
         vc.clearStaticReferences((byte) 96);
         ff.field_o = param0;
-        nh.field_e = 1;
+        TextLineMetrics.field_e = 1;
         IsaacRandom.field_e = 0;
         vj.field_ab = param2;
     }

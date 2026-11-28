@@ -46,9 +46,9 @@ final class JaggrabClient implements Runnable {
         if (param3 != 10000) {
           CharSequence var5 = (CharSequence) null;
           JaggrabClient.a((CharSequence) null, -15);
-          return pk.a(1);
+          return TextHotspotBounds.a(1);
         }
-        return pk.a(1);
+        return TextHotspotBounds.a(1);
     }
 
     protected final void finalize() {

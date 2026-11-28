@@ -170,7 +170,7 @@ final class pf {
             fb.field_d[-2 + var4] = md.field_M;
             m.field_c[var4 - 2] = 0;
             ProxyAuthenticationRequiredException.field_e[0] = 4;
-            fb.field_d[-1 + var4] = ja.field_O;
+            fb.field_d[-1 + var4] = RichTextWidget.field_O;
             m.field_c[-1 + var4] = 1;
             ProxyAuthenticationRequiredException.field_e[1] = 5;
           } else if (IntrusiveDeque.field_a == 1) {
@@ -186,7 +186,7 @@ final class pf {
               fb.field_d[var5] = sc.field_d[var5];
             }
             fb.field_d[-2 + var4] = "";
-            fb.field_d[-1 + var4] = ja.field_O;
+            fb.field_d[-1 + var4] = RichTextWidget.field_O;
             m.field_c[var4 - 1] = 0;
             ProxyAuthenticationRequiredException.field_e[0] = 5;
           } else if (IntrusiveDeque.field_a != 2) {
@@ -207,7 +207,7 @@ final class pf {
                 fb.field_d[var5] = sc.field_d[var5];
               }
               fb.field_d[-2 + var4] = "";
-              fb.field_d[var4 - 1] = ja.field_O;
+              fb.field_d[var4 - 1] = RichTextWidget.field_O;
               m.field_c[-1 + var4] = 0;
               ProxyAuthenticationRequiredException.field_e[0] = 5;
             } else if (IntrusiveDeque.field_a == 4) {
@@ -223,7 +223,7 @@ final class pf {
                 fb.field_d[var5] = sc.field_d[var5];
               }
               fb.field_d[-2 + var4] = "";
-              fb.field_d[-1 + var4] = ja.field_O;
+              fb.field_d[-1 + var4] = RichTextWidget.field_O;
               m.field_c[-1 + var4] = 0;
               ProxyAuthenticationRequiredException.field_e[0] = 5;
             } else {
@@ -245,7 +245,7 @@ final class pf {
               fb.field_d[var4 - 2] = s.field_a;
               m.field_c[var4 - 2] = 0;
               ProxyAuthenticationRequiredException.field_e[0] = 3;
-              fb.field_d[-1 + var4] = ja.field_O;
+              fb.field_d[-1 + var4] = RichTextWidget.field_O;
               m.field_c[-1 + var4] = 1;
               ProxyAuthenticationRequiredException.field_e[1] = 5;
             }
@@ -262,8 +262,8 @@ final class pf {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            j.field_o = new String[var4];
-            dm.a(sc.field_d, 0, j.field_o, 0, var4);
+            RichTextLayout.field_o = new String[var4];
+            dm.a(sc.field_d, 0, RichTextLayout.field_o, 0, var4);
             oe.field_c = new String[var3_int - (var4 + 1)];
             dm.a(sc.field_d, var4 + 1, oe.field_c, 0, -var4 + (var3_int - 1));
             var4 = -1;
@@ -282,8 +282,8 @@ final class pf {
             dm.a(sc.field_d, 0, uk.field_a, 0, var4);
             SecondaryNodeDequeIterator.field_g = new String[-1 - var4 + var3_int];
             dm.a(sc.field_d, 1 + var4, SecondaryNodeDequeIterator.field_g, 0, -1 - var4 + var3_int);
-            if (j.field_o.length >= uk.field_a.length) {
-              stackIn_29_0 = j.field_o.length;
+            if (RichTextLayout.field_o.length >= uk.field_a.length) {
+              stackIn_29_0 = RichTextLayout.field_o.length;
             } else {
               stackIn_29_0 = uk.field_a.length;
             }
@@ -352,7 +352,7 @@ final class pf {
             }
           }
           if (IntrusiveDeque.field_a == 2) {
-            var10 = j.field_o;
+            var10 = RichTextLayout.field_o;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

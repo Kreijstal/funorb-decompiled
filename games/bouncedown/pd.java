@@ -16,9 +16,9 @@ final class pd {
         if (param0 == 11173) {
           var1 = fd.c((byte) 61);
           vk.field_c = new LoginPanel(var1, (String) null, true, false, false);
-          DisplayNameSelectionPanel.field_N.b(ed.field_c, false);
-          ed.field_c.a(param0 ^ 437, vk.field_c);
-          ed.field_c.i((byte) -85);
+          DisplayNameSelectionPanel.field_N.b(TextLayout.field_c, false);
+          TextLayout.field_c.a(param0 ^ 437, vk.field_c);
+          TextLayout.field_c.i((byte) -85);
           return;
         }
     }
@@ -44,19 +44,19 @@ final class pd {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (vc.field_F == qg.field_g) {
+          if (RichTextWidget.field_F == qg.field_g) {
             return null;
           }
           if (param0 != 1059) {
             field_b = (String) null;
           }
-          if (he.field_p == vc.field_F &&
+          if (he.field_p == RichTextWidget.field_F &&
             param1.equals(t.field_t)) {
-            vc.field_F = wj.field_a;
+            RichTextWidget.field_F = wj.field_a;
             stackIn_11_0 = oa.field_c;
             return stackIn_11_0;
           }
-          vc.field_F = qg.field_g;
+          RichTextWidget.field_F = qg.field_g;
           oa.field_c = null;
           t.field_t = param1;
           stackIn_9_0 = null;

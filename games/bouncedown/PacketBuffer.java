@@ -477,18 +477,18 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final static void g(int param0) {
-        mb.field_o[61] = 27;
-        mb.field_o[59] = 57;
-        mb.field_o[91] = 42;
-        mb.field_o[45] = 26;
-        mb.field_o[44] = 71;
-        mb.field_o[192] = 28;
-        mb.field_o[520] = 59;
-        mb.field_o[222] = 58;
-        mb.field_o[92] = 74;
-        mb.field_o[46] = 72;
-        mb.field_o[93] = 43;
-        mb.field_o[param0] = 73;
+        RichTextLayout.field_o[61] = 27;
+        RichTextLayout.field_o[59] = 57;
+        RichTextLayout.field_o[91] = 42;
+        RichTextLayout.field_o[45] = 26;
+        RichTextLayout.field_o[44] = 71;
+        RichTextLayout.field_o[192] = 28;
+        RichTextLayout.field_o[520] = 59;
+        RichTextLayout.field_o[222] = 58;
+        RichTextLayout.field_o[92] = 74;
+        RichTextLayout.field_o[46] = 72;
+        RichTextLayout.field_o[93] = 43;
+        RichTextLayout.field_o[param0] = 73;
     }
 
     final void writeByte(int param0, byte param1) {
@@ -519,7 +519,7 @@ class PacketBuffer extends IntrusiveNode {
         return -32768 + this.readUnsignedShort(-1640531527);
     }
 
-    final static void a(BitmapFont param0, String param1, int param2, boolean param3, bh param4) {
+    final static void a(BitmapFont param0, String param1, int param2, boolean param3, TextLineMetrics param4) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;

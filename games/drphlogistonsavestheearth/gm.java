@@ -114,7 +114,7 @@ final class gm extends InteractiveWidget {
         }
     }
 
-    final String e(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 >= -39) {
           return (String) null;
         }

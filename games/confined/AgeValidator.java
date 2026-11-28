@@ -39,7 +39,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -71,7 +71,7 @@ final class AgeValidator extends TextFieldValidator {
           var3_int = cc.a(true, var5);
           if (var3_int > 0 &&
             var3_int <= 130) {
-            return nn.field_q;
+            return TextHotspotBounds.field_q;
           }
           stackIn_10_0 = fb.field_e;
           return stackIn_10_0;
@@ -85,7 +85,7 @@ final class AgeValidator extends TextFieldValidator {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 

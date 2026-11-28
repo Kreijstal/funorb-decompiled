@@ -63,7 +63,7 @@ final class uu extends UiComponent {
         jha.field_g.drawText(this.field_Bb, 102, 26, 11796224, -1);
         WidgetWrapper.field_z.drawText(this.field_Bb, 102, 26, 65793, -1);
         g.field_g.drawParagraph(this.field_xb, 102, 36, 240, 70, 8553090, -1, 0, 0, 14);
-        String var3 = lga.a(param0, new String[]{ti.a((byte) 124, 2, (long)this.field_wb, kt.field_k, param0)}, vla.field_u);
+        String var3 = lga.a(param0, new String[]{ti.a((byte) 124, 2, (long)this.field_wb, SetMoveSlotCooldownEffect.field_k, param0)}, vla.field_u);
         jha.field_g.drawCentred(var3, 43, 86, 16699649, -1);
         WidgetWrapper.field_z.drawCentred(var3, 43, 86, 65793, -1);
         SoftwareRasterizer.fillRoundedRectangle(294, 70, 80, 20, 9, 8698113);

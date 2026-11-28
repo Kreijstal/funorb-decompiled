@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tn extends bh {
+final class tn extends RichTextWidget {
     static String field_Y;
     static String field_U;
     private String field_Z;
@@ -11,7 +11,7 @@ final class tn extends bh {
     static RgbSprite field_I;
     private int field_X;
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (param0 >= 3) {
           return null;
         }
@@ -223,7 +223,7 @@ final class tn extends bh {
     final void a(int param0, int param1, int param2, int param3) {
         String var5;
         od var6;
-        th var8;
+        TextWidgetRenderer var8;
         int var9;
         int var10;
         int var11;
@@ -257,13 +257,13 @@ final class tn extends bh {
             }
           }
           this.field_w = var5;
-          this.g((byte) 112);
+          this.rebuildHotspotBounds((byte) 112);
         }
         super.a(param0, param1, param2, param3);
         var6Lifetime1 = this.field_T.getValidationStatus((byte) -110);
-        var8 = (th) ((Object) this.field_o);
+        var8 = (TextWidgetRenderer) ((Object) this.field_o);
         var9 = this.field_q + param1;
-        var10 = var8.a((byte) 64, param3, (lm) (this)) + (var8.b(-2, (lm) (this)).b(263) >> 1);
+        var10 = var8.getTextOriginY((byte) 64, param3, (lm) (this)) + (var8.getTextLayout(-2, (lm) (this)).getLayoutHeight(263) >> 1);
         if (ub.field_s != var6Lifetime1 &&
           oc.field_A != var6Lifetime1) {
           if (var6Lifetime1 == pd.field_J) {
@@ -343,7 +343,7 @@ final class tn extends bh {
           }
           rf.field_P = new byte[dk.field_d][];
           jc.field_f = new int[dk.field_d];
-          fe.field_g = new int[dk.field_d];
+          RichTextLayout.field_g = new int[dk.field_d];
           var17.position = -7 + (param1.length - dk.field_d * 8);
           ce.field_x = var17.readUnsignedShort(0);
           tb.field_i = var17.readUnsignedShort(0);
@@ -352,7 +352,7 @@ final class tn extends bh {
             MusicPatchPcmStream.field_t[var4] = var16.readUnsignedShort(0);
           }
           for (var4Lifetime1 = 0; dk.field_d > var4Lifetime1; var4Lifetime1++) {
-            fe.field_g[var4Lifetime1] = var17.readUnsignedShort(0);
+            RichTextLayout.field_g[var4Lifetime1] = var17.readUnsignedShort(0);
           }
           for (var4Lifetime2 = 0; dk.field_d > var4Lifetime2; var4Lifetime2++) {
             jc.field_f[var4Lifetime2] = var17.readUnsignedShort(0);

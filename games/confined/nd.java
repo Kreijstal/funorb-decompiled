@@ -49,7 +49,7 @@ abstract class nd extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var2_ref), "nd.E(" + param0 + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var2_ref), "nd.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -80,7 +80,7 @@ abstract class nd extends DualLinkNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var1), "nd.A(" + param0 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var1), "nd.A(" + param0 + ')');
         }
     }
 

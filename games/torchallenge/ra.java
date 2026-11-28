@@ -1134,7 +1134,7 @@ final class ra {
         var3 = 1.2217304763960306;
         Math.tan(var3);
         be.field_b = false;
-        df.field_O = false;
+        RichTextWidget.field_O = false;
         bi.field_g = new int[64][this.field_a][3][];
         this.b(28026);
     }

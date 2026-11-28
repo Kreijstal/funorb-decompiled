@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements jf, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends WidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     static int field_P;
-    private vj field_T;
+    private RichTextWidget field_T;
     private ValidatedTextField field_R;
     private df field_W;
     private ValidatedTextField field_J;
@@ -149,8 +149,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, Widg
         j var4 = new j(46, var3, this.width - 90, 25, this.field_W, true, this.width - 120, 5, ra.field_l, 11579568, p.field_b);
         this.b((byte) 95, var4);
         var3 = var3 + var4.height;
-        fd var5 = new fd(qk.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, qk.field_e.field_s, -1, 2147483647, true);
-        this.field_T = new vj(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(qk.field_e, 0, 0, 0, 0, 16777215, -1, 0, 0, qk.field_e.field_s, -1, 2147483647, true);
+        this.field_T = new RichTextWidget(var2, var5);
         this.field_T.field_x = "";
         this.field_T.a(0, ig.field_b, (byte) -104);
         this.field_T.a(1, ig.field_b, (byte) -12);
@@ -176,7 +176,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, Widg
         boolean discarded$0 = false;
         try {
           if (param0 == this.field_M) {
-            fd.c(-113);
+            DefaultTextWidgetRenderer.c(-113);
           } else {
             if (param0 == this.field_O) {
               discarded$0 = this.submitRegistration((byte) -111);
@@ -292,7 +292,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, Widg
         return false;
     }
 
-    public final void a(byte param0, vj param1, int param2, int param3) {
+    public final void onTextHotspotActivated(byte param0, RichTextWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -305,16 +305,16 @@ final class AccountRegistrationPanel extends WidgetContainer implements jf, Widg
         try {
           if (param3 != 0) {
             if (1 == param3) {
-              ld.a((byte) -29, "privacy.ws");
+              TextLayout.a((byte) -29, "privacy.ws");
             } else {
               if (2 != param3) {
                 var5_int = -53 / ((-10 - param0) / 40);
                 return;
               }
-              ld.a((byte) -29, "conduct.ws");
+              TextLayout.a((byte) -29, "conduct.ws");
             }
           } else {
-            ld.a((byte) -29, "terms.ws");
+            TextLayout.a((byte) -29, "terms.ws");
           }
           var5_intLifetime1 = -53 / ((-10 - param0) / 40);
           return;

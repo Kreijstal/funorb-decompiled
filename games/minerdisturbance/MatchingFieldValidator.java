@@ -129,7 +129,7 @@ final class MatchingFieldValidator extends TextFieldValidator {
 
     final static void a(java.math.BigInteger param0, int param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
-          eg.a(0, (byte) 90, param2.payload, param2.position, param3, param4, param0);
+          DefaultTextWidgetRenderer.a(0, (byte) 90, param2.payload, param2.position, param3, param4, param0);
           if (param1 >= -94) {
             MatchingFieldValidator.clearStaticReferences((byte) -48);
           }

@@ -130,11 +130,11 @@ final class li {
               }
               incrementValue$1 = var6;
               var6++;
-              param1 = dm.field_g[incrementValue$1];
+              param1 = TextLayout.field_g[incrementValue$1];
               dupTemp$2 = param4[param1];
               dupTemp$3 = param2[dupTemp$2];
               param2[dupTemp$2] = dupTemp$3 + 1;
-              dm.field_g[dupTemp$3] = param1;
+              TextLayout.field_g[dupTemp$3] = param1;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

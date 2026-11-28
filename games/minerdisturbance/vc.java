@@ -529,7 +529,7 @@ final class vc extends IntrusiveNode {
               var31 = var15[1 + var29Lifetime3Lifetime1];
               var32 = var28 * (var30 - var27Lifetime6Lifetime1) + (var30 - var27Lifetime6Lifetime1) / 2;
               for (var33 = var27Lifetime6Lifetime1; var33 < var30; var33++) {
-                var34 = lb.a(false, var32, -var27Lifetime6Lifetime1 + var30);
+                var34 = TextHotspotBounds.a(false, var32, -var27Lifetime6Lifetime1 + var30);
                 var32 = var32 + (var31 - var28);
                 this.field_x[var33] = (byte)(32 + this.field_x[var33] * var34 >> 6);
               }
@@ -568,7 +568,7 @@ final class vc extends IntrusiveNode {
               var37 = var27Lifetime7Lifetime1;
               var33Lifetime1 = var37;
               while (var30Lifetime1Lifetime1 > var37) {
-                var34Lifetime1 = lb.a(false, var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1);
+                var34Lifetime1 = TextHotspotBounds.a(false, var32Lifetime1, var30Lifetime1Lifetime1 - var27Lifetime7Lifetime1);
                 var35 = var34Lifetime1 + (this.field_r[var37] & 255);
                 if (var35 < 0) {
                   var35 = 0;

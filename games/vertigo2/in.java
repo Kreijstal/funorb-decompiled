@@ -37,8 +37,8 @@ final class in {
         int var11;
         var11 = Vertigo2.field_L ? 1 : 0;
         if (!param9 && (qg.field_G != SoftwareRasterizer.field_e ||
-          SoftwareRasterizer.field_j != om.field_D) && (SoftwareRasterizer.field_j == ro.field_g.field_d &&
-          ro.field_g.field_i == SoftwareRasterizer.field_e)) {
+          SoftwareRasterizer.field_j != om.field_D) && (SoftwareRasterizer.field_j == TextLayout.field_g.field_d &&
+          TextLayout.field_g.field_i == SoftwareRasterizer.field_e)) {
           if (null != gd.field_j) {
             BlastDebrisBatch.layoutLobbyPanels(param8 ^ -66, false);
           } else {
@@ -61,7 +61,7 @@ final class in {
         if (param8 != -66) {
           in.a((byte) -46, -104);
         }
-        kk.field_f.field_R = pn.field_N.field_R;
+        kk.field_f.field_R = RichTextWidget.field_N.field_R;
         kk.field_f.field_O = 1;
         if (ko.field_P > 0) {
           an.a(param9, -86, param3, param5);
@@ -215,7 +215,7 @@ final class in {
         try {
           var4 = (qn) (te.field_z.beginBackward((byte) 100));
           while (var4 != null) {
-            pn.a(param1, (byte) -4, var4);
+            RichTextWidget.a(param1, (byte) -4, var4);
             var4 = (qn) (te.field_z.nextBackward(42));
           }
           if (param0 >= -97) {

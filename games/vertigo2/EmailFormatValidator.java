@@ -36,7 +36,7 @@ final class EmailFormatValidator extends TextFieldValidator {
           }
           while (true) {
             if (6 <= var5) {
-              ro.field_g.a(89);
+              TextLayout.field_g.a(89);
               stackIn_20_0 = var3;
               return stackIn_20_0;
             }
@@ -102,9 +102,9 @@ final class EmailFormatValidator extends TextFieldValidator {
           if (0 == var1) {
             var1 = 32;
           }
-          pk.b(-88, -var1 + DelegatingCanvas.field_e);
+          TextHotspotBounds.b(-88, -var1 + DelegatingCanvas.field_e);
         } else {
-          pk.b(-128, 0);
+          TextHotspotBounds.b(-128, 0);
         }
         var1Lifetime1 = -81 % ((-22 - param0) / 52);
     }

@@ -198,8 +198,8 @@ final class ai {
             !(param2 <= MouseWheelSource.field_f.length)) {
             MouseWheelSource.field_f = new int[2 * param2];
           }
-          if (ab.field_G == null) {
-            ab.field_G = new int[2 * param2];
+          if (RichTextWidget.field_G == null) {
+            RichTextWidget.field_G = new int[2 * param2];
             if (null == fg.field_b ||
               !(fg.field_b.length >= param2)) {
               fg.field_b = new int[2 * param2];
@@ -216,8 +216,8 @@ final class ai {
               ProxyAuthenticationRequiredException.field_d = new boolean[2 * param2];
             }
           } else {
-            if (param2 > ab.field_G.length) {
-              ab.field_G = new int[2 * param2];
+            if (param2 > RichTextWidget.field_G.length) {
+              RichTextWidget.field_G = new int[2 * param2];
               if (null == fg.field_b ||
                 !(fg.field_b.length >= param2)) {
                 fg.field_b = new int[2 * param2];
@@ -289,8 +289,8 @@ final class ai {
               !(param2 <= MouseWheelSource.field_f.length)) {
               MouseWheelSource.field_f = new int[2 * param2];
             }
-            if (ab.field_G == null) {
-              ab.field_G = new int[2 * param2];
+            if (RichTextWidget.field_G == null) {
+              RichTextWidget.field_G = new int[2 * param2];
               if (null == fg.field_b ||
                 !(fg.field_b.length >= param2)) {
                 fg.field_b = new int[2 * param2];
@@ -307,8 +307,8 @@ final class ai {
                 ProxyAuthenticationRequiredException.field_d = new boolean[2 * param2];
               }
             } else {
-              if (param2 > ab.field_G.length) {
-                ab.field_G = new int[2 * param2];
+              if (param2 > RichTextWidget.field_G.length) {
+                RichTextWidget.field_G = new int[2 * param2];
                 if (null == fg.field_b ||
                   !(fg.field_b.length >= param2)) {
                   fg.field_b = new int[2 * param2];
@@ -380,8 +380,8 @@ final class ai {
               !(param2 <= MouseWheelSource.field_f.length)) {
               MouseWheelSource.field_f = new int[2 * param2];
             }
-            if (ab.field_G == null) {
-              ab.field_G = new int[2 * param2];
+            if (RichTextWidget.field_G == null) {
+              RichTextWidget.field_G = new int[2 * param2];
               if (null == fg.field_b ||
                 !(fg.field_b.length >= param2)) {
                 fg.field_b = new int[2 * param2];
@@ -401,8 +401,8 @@ final class ai {
                 }
               }
             } else {
-              if (param2 > ab.field_G.length) {
-                ab.field_G = new int[2 * param2];
+              if (param2 > RichTextWidget.field_G.length) {
+                RichTextWidget.field_G = new int[2 * param2];
                 if (null == fg.field_b ||
                   !(fg.field_b.length >= param2)) {
                   fg.field_b = new int[2 * param2];

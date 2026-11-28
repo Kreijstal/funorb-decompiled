@@ -380,7 +380,7 @@ final class NanoFrameTimer extends FrameTimer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw sd.a((Throwable) ((Object) var3), "q.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) var3), "q.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

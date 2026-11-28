@@ -73,7 +73,7 @@ final class ek {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -104,14 +104,14 @@ final class ek {
           var4.field_M[var5] = var6 * var16;
         }
         if (param1 == -39) {
-          var20 = new gk(var4, this.field_f ? nn.field_o : an.field_q, 0);
+          var20 = new gk(var4, this.field_f ? TextHotspotBounds.field_o : an.field_q, 0);
           var20.field_w = 2.0 * this.field_n.field_C;
           var4.field_J = var20;
           ri.a(this.field_n, param1 ^ -39, var4);
           return;
         }
         this.a(false, (byte) 87);
-        gk var19 = new gk(var4, this.field_f ? nn.field_o : an.field_q, 0);
+        gk var19 = new gk(var4, this.field_f ? TextHotspotBounds.field_o : an.field_q, 0);
         var19.field_w = 2.0 * this.field_n.field_C;
         var4.field_J = var19;
         ri.a(this.field_n, param1 ^ -39, var4);
@@ -602,7 +602,7 @@ final class ek {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_37_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -654,7 +654,7 @@ final class ek {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -774,7 +774,7 @@ final class ek {
           this.field_g.field_w = param0.field_C;
           this.field_g.field_m = 0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ek.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

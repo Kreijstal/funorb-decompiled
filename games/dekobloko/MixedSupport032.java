@@ -45,13 +45,13 @@ final class MixedSupport032 {
         RuntimeException runtimeExceptionLocal2 = null;
         try {
           MixedSupport005.uiComponentPart016State0001.performAction0834(true);
-          if (NetworkSupport010.uiComponentPart026State0001 == null) {
-            NetworkSupport010.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
+          if (TextHotspotBounds.uiComponentPart026State0001 == null) {
+            TextHotspotBounds.uiComponentPart026State0001 = new UiComponentPart026(MixedSupport005.uiComponentPart016State0001, MixedSupport029.stringState0148);
           }
           if (integerArgument1 != -1199770620) {
             stringState0157 = (String) null;
           }
-          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -119, NetworkSupport010.uiComponentPart026State0001);
+          MixedSupport005.uiComponentPart016State0001.performAction0831((byte) -119, TextHotspotBounds.uiComponentPart026State0001);
           return;
         } catch (java.lang.RuntimeException caughtParameterLocal3) {
           caughtExceptionLocal1 = caughtParameterLocal3;
@@ -178,8 +178,8 @@ final class MixedSupport032 {
                       } else {
                         stackIntegerLocal3 = integerLocal23 >> integerLocal15;
                       }
-                      integerLocal24 = -stackIntegerLocal3 + MixedSupport001.integerArrayState0001.length - 1;
-                      integerLocal25 = MixedSupport001.integerArrayState0001[integerLocal24];
+                      integerLocal24 = -stackIntegerLocal3 + DefaultTextWidgetRenderer.integerArrayState0001.length - 1;
+                      integerLocal25 = DefaultTextWidgetRenderer.integerArrayState0001[integerLocal24];
                       while (true) {
                         if (integerLocal25 >> 4 != 0) {
                           integerLocal24--;
@@ -189,14 +189,14 @@ final class MixedSupport032 {
                             System.err.println("Out of range!");
                             break;
                           }
-                          integerLocal25 = MixedSupport001.integerArrayState0001[integerLocal24];
+                          integerLocal25 = DefaultTextWidgetRenderer.integerArrayState0001[integerLocal24];
                           continue;
                         }
                         stackIntegerLocal28 = integerLocal25;
                         stackIntegerLocal29 = integerLocal24 << 4;
                         integerLocal26 = stackIntegerLocal28 + stackIntegerLocal29;
                         PlayerNamePrompt.integerArrayState0053[integerLocal26] = integerLocal16;
-                        MixedSupport001.integerArrayState0001[integerLocal24] = integerLocal25 + 1;
+                        DefaultTextWidgetRenderer.integerArrayState0001[integerLocal24] = integerLocal25 + 1;
                         if (mixedSupport138Argument1.byteState0004 > 0 &&
                           mixedSupport138Argument1.byteArrayState0033 != null) {
                           cachedByteLocal1 = mixedSupport138Argument1.byteArrayState0033[integerLocal16];

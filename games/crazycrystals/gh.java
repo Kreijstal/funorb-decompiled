@@ -497,7 +497,7 @@ final class gh extends ea implements Cloneable {
             !hm.field_c.equals(param0.getParameter("session"))) {
             var4 = hm.field_c;
           }
-          stackIn_11_0 = rf.a(-1, (String) (var4), true, (String) (var3), param1);
+          stackIn_11_0 = RichTextWidget.a(-1, (String) (var4), true, (String) (var3), param1);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

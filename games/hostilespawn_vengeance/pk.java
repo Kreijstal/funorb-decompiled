@@ -68,16 +68,16 @@ final class pk extends ql {
     }
 
     final void d(int param0) {
-        GridPoint var2 = mm.field_m[0].field_j;
+        GridPoint var2 = TextHotspotBounds.field_m[0].field_j;
         if (param0 == -1) {
-          pm.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
+          TextLineMetrics.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
           if (!(ih.a(var2, (byte) -109, nh.field_E) >= 2)) {
             mf.a(false, 2);
           }
           return;
         }
         field_i = (int[]) null;
-        pm.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
+        TextLineMetrics.field_d = (ln.field_a.field_d - var2.field_e) * 26 / ln.field_a.field_d;
         if (!(ih.a(var2, (byte) -109, nh.field_E) >= 2)) {
           mf.a(false, 2);
         }
@@ -157,7 +157,7 @@ final class pk extends ql {
 
     final void b(byte param0) {
         int var3 = -118 % ((param0 + 48) / 38);
-        GridPoint var2 = mm.field_m[0].field_j;
+        GridPoint var2 = TextHotspotBounds.field_m[0].field_j;
         if (1 != this.field_h.field_a) {
           return;
         }

@@ -22,7 +22,7 @@ final class nn {
           hq.field_d[0] = ae.field_lb;
           hq.field_d[1] = qe.field_a;
           hb.field_u[0] = bm.field_l.toUpperCase();
-          hb.field_u[4] = cm.field_j.toUpperCase();
+          hb.field_u[4] = RichTextLayout.field_j.toUpperCase();
           hb.field_u[10] = l.field_a;
           hb.field_u[13] = am.field_o;
           hb.field_u[2] = vb.field_e;
@@ -64,7 +64,7 @@ final class nn {
         hq.field_d[0] = ae.field_lb;
         hq.field_d[1] = qe.field_a;
         hb.field_u[0] = bm.field_l.toUpperCase();
-        hb.field_u[4] = cm.field_j.toUpperCase();
+        hb.field_u[4] = RichTextLayout.field_j.toUpperCase();
         hb.field_u[10] = l.field_a;
         hb.field_u[13] = am.field_o;
         hb.field_u[2] = vb.field_e;
@@ -132,7 +132,7 @@ final class nn {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -223,7 +223,7 @@ final class nn {
             nn.computeCrc32(-46, (byte[]) null, -63, -109);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "nn.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

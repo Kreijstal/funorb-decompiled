@@ -104,9 +104,9 @@ final class o extends ql {
         var3 = param0;
         scanLoop1: while (true) {
           if (ProxySocketFactory.field_j > var3) {
-            if (mm.field_m[var3] != null &&
-              mm.field_m[var3].field_I > 0 && (mm.field_m[var3].field_i == 4 ||
-              24 == mm.field_m[var3].field_i)) {
+            if (TextHotspotBounds.field_m[var3] != null &&
+              TextHotspotBounds.field_m[var3].field_I > 0 && (TextHotspotBounds.field_m[var3].field_i == 4 ||
+              24 == TextHotspotBounds.field_m[var3].field_i)) {
               var2 = 1;
               break scanLoop1;
             }
@@ -123,7 +123,7 @@ final class o extends ql {
 
     final void d(int param0) {
         int var2 = 0;
-        GridPoint var3 = mm.field_m[0].field_j;
+        GridPoint var3 = TextHotspotBounds.field_m[0].field_j;
         int var2Lifetime1;
         if (param0 == ~this.field_d.field_a) {
           var2 = ih.a(var3, (byte) -126, this.field_i);
@@ -149,7 +149,7 @@ final class o extends ql {
     final void b(byte param0) {
         int var3 = 0;
         int var4 = HostileSpawn.field_I ? 1 : 0;
-        GridPoint var2 = mm.field_m[0].field_j;
+        GridPoint var2 = TextHotspotBounds.field_m[0].field_j;
         if (this.field_d.field_a == 1) {
           if (4 + this.field_i.field_e <= var2.field_e) {
             this.field_d.field_a = 2;

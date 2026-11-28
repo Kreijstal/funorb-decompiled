@@ -174,10 +174,10 @@ abstract class u {
             var10 = var6;
             var8 = var10;
             var2 = var8;
-            if (null != mi.field_f) {
+            if (null != TextLineMetrics.field_f) {
               try {
-                mi.field_f.seek(0L, (byte) -63);
-                mi.field_f.readFully((byte) -111, var9);
+                TextLineMetrics.field_f.seek(0L, (byte) -63);
+                TextLineMetrics.field_f.readFully((byte) -111, var9);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var10[var3_int] == 0) {
                     continue;

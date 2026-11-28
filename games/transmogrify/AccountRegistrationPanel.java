@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends aj implements hl, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends aj implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     static Sprite field_K;
     private ValidatedTextField field_C;
     private InteractiveWidget field_G;
     private ValidatedTextField field_x;
     private ValidatedTextField field_J;
-    private le field_z;
+    private RichTextWidget field_z;
     private bf field_w;
     private ValidatedTextField field_y;
     private ValidatedTextField field_F;
@@ -64,8 +64,8 @@ final class AccountRegistrationPanel extends aj implements hl, WidgetActivationL
         oc var4 = new oc(46, var3, -90 + this.field_l, 25, this.field_w, true, -120 + this.field_l, 5, al.field_i, 11579568, uh.field_o);
         this.a((UiWidget) (var4), (byte) -105);
         var3 = var3 + var4.field_h;
-        h var5 = new h(vd.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, vd.field_h.field_y, -1, 2147483647, true);
-        this.field_z = new le(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(vd.field_h, 0, 0, 0, 0, 16777215, -1, 0, 0, vd.field_h.field_y, -1, 2147483647, true);
+        this.field_z = new RichTextWidget(var2, var5);
         this.field_z.field_j = "";
         this.field_z.a(mk.field_E, 0, 0);
         this.field_z.a(mk.field_E, 0, 1);
@@ -106,7 +106,7 @@ final class AccountRegistrationPanel extends aj implements hl, WidgetActivationL
         }
     }
 
-    public final void a(int param0, int param1, int param2, le param3) {
+    public final void onTextHotspotActivated(int param0, int param1, int param2, RichTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -452,7 +452,7 @@ final class AccountRegistrationPanel extends aj implements hl, WidgetActivationL
 
     private final boolean canSubmitRegistration(int param0) {
         if (param0 != 15) {
-          this.field_z = (le) null;
+          this.field_z = (RichTextWidget) null;
           if (!this.isFieldReadyForRegistration((byte) 118, (FieldValidatorProvider) (this.field_J))) {
             return false;
           }

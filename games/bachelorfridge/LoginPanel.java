@@ -231,7 +231,7 @@ final class LoginPanel extends WidgetContainer implements TextFieldListener, Wid
             this.field_K = new InteractiveWidget(uda.field_ab, (WidgetListener) null);
             this.field_Q.field_z = false;
           } else {
-            this.field_M = new InteractiveWidget(tq.field_n, (WidgetListener) null);
+            this.field_M = new InteractiveWidget(RichTextLayout.field_n, (WidgetListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_F) {

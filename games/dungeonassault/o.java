@@ -89,14 +89,14 @@ final class o extends IntrusiveNode {
     }
 
     final static int a(int param0, byte param1, int param2) {
-        int var3 = tg.field_f[param0][param2];
+        int var3 = TextLineMetrics.field_f[param0][param2];
         if (ke.a(57, var3)) {
           return 439;
         }
         if (param1 < 93) {
           field_i = (ae) null;
         }
-        return param2 * tg.field_d[param0] + tg.field_h[param0];
+        return param2 * TextLineMetrics.field_d[param0] + TextLineMetrics.field_h[param0];
     }
 
     final static boolean a(int[] param0, int[] param1, int param2, PlayerDungeonProfile param3, boolean param4) {
@@ -143,7 +143,7 @@ final class o extends IntrusiveNode {
             o.a(52, -4, (int[]) null, -63, (int[]) null, -53, -87, 107, -97, 7, 14);
           }
           if (gn.field_d <= param2) {
-            stackIn_28_0 = !(ci.field_s[param2 - gn.field_d] > param3.field_z);
+            stackIn_28_0 = !(TextHotspotBounds.field_s[param2 - gn.field_d] > param3.field_z);
             return stackIn_28_0;
           }
           if (uf.field_a > param2) {

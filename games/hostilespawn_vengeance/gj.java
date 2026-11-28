@@ -19,7 +19,7 @@ final class gj {
         if (ln.field_a.field_i[param0] == 0) {
           return false;
         }
-        var4 = mm.field_m[0].field_j;
+        var4 = TextHotspotBounds.field_m[0].field_j;
         if (param2 > -89) {
           return true;
         }

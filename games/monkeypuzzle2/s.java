@@ -43,7 +43,7 @@ final class s extends nf implements WidgetActivationListener {
           var4.field_l = this.field_l;
           var4.field_p = 80;
           var4.field_r = 0;
-          var4.field_h = (ml) ((Object) new a(pf.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_h = (ml) ((Object) new DefaultTextWidgetRenderer(pf.field_c, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b((byte) -75, var4);
           this.field_P = this.a(false, (of) (this), db.field_e);
           return;

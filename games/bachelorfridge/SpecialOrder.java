@@ -67,8 +67,8 @@ class SpecialOrder extends CreatureOrder {
           var9 = new PacketBuffer(param1);
           var3 = var9.readUnsignedByte(16711935);
           var4 = var9.readInt(-52);
-          if (var4 >= 0 && (0 == kq.field_k ||
-            !(var4 > kq.field_k))) {
+          if (var4 >= 0 && (0 == StopFloodEffect.field_k ||
+            !(var4 > StopFloodEffect.field_k))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
@@ -78,8 +78,8 @@ class SpecialOrder extends CreatureOrder {
               return stackIn_10_0;
             }
             var5 = var9.readInt(-128);
-            if (var5 >= 0 && (0 == kq.field_k ||
-              !(kq.field_k < var5))) {
+            if (var5 >= 0 && (0 == StopFloodEffect.field_k ||
+              !(StopFloodEffect.field_k < var5))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;

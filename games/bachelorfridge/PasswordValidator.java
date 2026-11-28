@@ -63,7 +63,7 @@ final class PasswordValidator extends TextFieldValidator {
         if (param0) {
           return;
         }
-        lia.field_i = true;
+        ChangeHealthAndStatusEffect.field_i = true;
         OneAnimation.a(true, 19626);
         jv.field_j = 0;
     }
@@ -112,7 +112,7 @@ final class PasswordValidator extends TextFieldValidator {
             return stackIn_10_0;
           }
           var6 = 24 / ((param0 + 8) / 45);
-          if (tfa.a(-124, var5)) {
+          if (StartFloodEffect.a(-124, var5)) {
             stackIn_13_0 = uv.field_k;
             return stackIn_13_0;
           }

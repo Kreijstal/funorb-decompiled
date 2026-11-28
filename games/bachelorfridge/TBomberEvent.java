@@ -80,7 +80,7 @@ final class TBomberEvent extends SpecialEvent {
             var2 = 0;
             if (qt.field_l == null &&
               ai.field_e) {
-              tfa.a(var2, param1 ^ 3, param0);
+              StartFloodEffect.a(var2, param1 ^ 3, param0);
             }
             if (param1 == 2) {
               return;
@@ -105,7 +105,7 @@ final class TBomberEvent extends SpecialEvent {
         }
         if (qt.field_l == null &&
           ai.field_e) {
-          tfa.a(var2, param1 ^ 3, param0);
+          StartFloodEffect.a(var2, param1 ^ 3, param0);
         }
         if (param1 == 2) {
           return;

@@ -1,0 +1,327 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+abstract class TextLayout {
+    static String field_a;
+    static int field_e;
+    static String field_f;
+    static long[][] field_h;
+    static long[] field_d;
+    TextLineMetrics[] field_c;
+    static int field_i;
+    static IntrusiveDeque field_b;
+    static RasterBuffer field_g;
+
+    final int getMaxLineRightX(int param0) {
+        int var4 = 0;
+        int var2;
+        TextLineMetrics[] var3;
+        TextLineMetrics var5;
+        int var7;
+        int var6;
+        var7 = Vertigo2.field_L ? 1 : 0;
+        var2 = -1;
+        if (param0 != 8783) {
+          field_b = (IntrusiveDeque) null;
+        }
+        if (null != this.field_c) {
+          var3 = this.field_c;
+          for (var4 = 0; var4 < var3.length; var4++) {
+            var5 = var3[var4];
+            if (var5 != null) {
+              var6 = var5.getRightX(6586);
+              if (var6 > var2) {
+                var2 = var6;
+              }
+            }
+          }
+        }
+        return var2;
+    }
+
+    final int getXForTextOffset(int param0, int param1) {
+        int var5 = 0;
+        TextLineMetrics var6 = null;
+        int var7 = Vertigo2.field_L ? 1 : 0;
+        TextLineMetrics[] var8 = this.field_c;
+        TextLineMetrics[] var3 = var8;
+        int var4 = -57 / ((59 - param1) / 58);
+        for (var5 = 0; var8.length > var5; var5++) {
+          var6 = var8[var5];
+          if (!(var6.field_c.length <= param0)) {
+            return var6.field_c[param0];
+          }
+          param0 = param0 - (var6.field_c.length - 1);
+        }
+        return 0;
+    }
+
+    final int getLayoutHeight(byte param0) {
+        int stackIn_6_0 = 0;
+        if (param0 <= 88) {
+          field_i = -17;
+        }
+        if (null != this.field_c &&
+          0 < this.field_c.length) {
+          stackIn_6_0 = this.field_c[this.field_c.length - 1].field_d - this.field_c[0].field_f;
+        } else {
+          stackIn_6_0 = 0;
+        }
+        return stackIn_6_0;
+    }
+
+    public static void c(byte param0) {
+        field_d = null;
+        field_f = null;
+        field_h = (long[][]) null;
+        if (param0 != 76) {
+          TextLayout.a((byte) 24);
+        }
+        field_a = null;
+        field_b = null;
+        field_g = null;
+    }
+
+    final int getTextOffsetAt(int param0, byte param1, int param2) {
+        int var5 = 0;
+        int var4;
+        TextLineMetrics var6;
+        int var7;
+        int var8;
+        var8 = Vertigo2.field_L ? 1 : 0;
+        if (this.field_c != null &&
+          this.field_c.length != 0 &&
+          this.field_c[0].field_f <= param0) {
+          if (param1 != 42) {
+            return -43;
+          }
+          if (param0 > this.field_c[this.field_c.length - 1].field_d) {
+            return -1;
+          }
+          if (1 == this.field_c.length) {
+            return this.field_c[0].findNearestCharacterIndex(param2, false);
+          }
+          var4 = 0;
+          for (var5 = 0; this.field_c.length > var5; var5++) {
+            var6 = this.field_c[var5];
+            if (var6.field_f <= param0 &&
+              param0 <= var6.field_d) {
+              var7 = var6.findNearestCharacterIndex(param2, false);
+              if (var7 != -1) {
+                return var4 + var7;
+              }
+              return -1;
+            }
+            var4 = var4 + (-1 + var6.field_c.length);
+          }
+          return -1;
+        }
+        return -1;
+    }
+
+    final static void a(byte param0) {
+        if (RichTextLayout.field_q != null) {
+          return;
+        }
+        RichTextLayout.field_q = new String[37];
+        RichTextLayout.field_q[8] = null;
+        RichTextLayout.field_q[9] = np.field_Jb;
+        RichTextLayout.field_q[2] = gb.field_a;
+        RichTextLayout.field_q[11] = fn.field_B;
+        RichTextLayout.field_q[3] = ClientException.field_c;
+        RichTextLayout.field_q[5] = AccountCreationResultPanel.field_vb;
+        RichTextLayout.field_q[6] = mo.field_b;
+        RichTextLayout.field_q[13] = pb.field_a;
+        RichTextLayout.field_q[1] = no.field_a;
+        RichTextLayout.field_q[4] = rr.field_A;
+        RichTextLayout.field_q[7] = ArchiveRequest.field_x;
+        RichTextLayout.field_q[0] = rh.field_E;
+        RichTextLayout.field_q[22] = rb.field_a;
+        RichTextLayout.field_q[16] = bq.field_G[2];
+        RichTextLayout.field_q[20] = RichTextWidget.field_H;
+        RichTextLayout.field_q[33] = gm.field_a;
+        RichTextLayout.field_q[32] = ek.field_C;
+        RichTextLayout.field_q[17] = BirthDateValidator.field_n[0];
+        if (param0 != -52) {
+          return;
+        }
+        RichTextLayout.field_q[31] = vo.field_v;
+        RichTextLayout.field_q[19] = ld.field_a;
+        RichTextLayout.field_q[24] = AccountRegistrationPanel.field_K;
+        RichTextLayout.field_q[26] = nn.field_p + ue.field_F[1];
+        RichTextLayout.field_q[34] = ByteStorage.field_b;
+        RichTextLayout.field_q[35] = in.field_a;
+        RichTextLayout.field_q[25] = ue.field_F[0] + bb.field_y;
+        RichTextLayout.field_q[29] = vo.field_v;
+        RichTextLayout.field_q[14] = bq.field_G[0];
+        RichTextLayout.field_q[30] = vi.field_B;
+        RichTextLayout.field_q[23] = sp.field_Q;
+        RichTextLayout.field_q[21] = FullscreenFocusCanvas.field_f;
+        RichTextLayout.field_q[27] = vi.field_x;
+        RichTextLayout.field_q[15] = bq.field_G[1];
+        RichTextLayout.field_q[18] = BirthDateValidator.field_n[1];
+        RichTextLayout.field_q[28] = gm.field_a;
+        RichTextLayout.field_q[36] = ja.a(ek.field_C, (byte) -44);
+        mb.field_q = new String[23];
+        mb.field_q[7] = AccountCreationResultPanel.field_vb.toLowerCase();
+        mb.field_q[17] = RichTextLayout.field_q[29].toLowerCase();
+        mb.field_q[18] = RichTextLayout.field_q[29].toLowerCase();
+        mb.field_q[8] = rb.field_a.toLowerCase();
+        mb.field_q[9] = rb.field_a.toLowerCase();
+        mb.field_q[6] = rr.field_A.toLowerCase();
+        mb.field_q[5] = ClientException.field_c.toLowerCase();
+        mb.field_q[1] = po.field_d.toLowerCase();
+        mb.field_q[2] = po.field_d.toLowerCase();
+        mb.field_q[22] = po.field_d.toLowerCase();
+        mb.field_q[4] = po.field_d.toLowerCase();
+        mb.field_q[3] = po.field_d.toLowerCase();
+        mb.field_q[13] = DiskCacheWorker.field_i.toLowerCase();
+        mb.field_q[15] = ByteStorage.field_e.toLowerCase();
+        mb.field_q[14] = lr.field_I.toLowerCase();
+        mb.field_q[19] = ek.field_C.toLowerCase();
+        mb.field_q[21] = nb.field_E.toLowerCase();
+        td.field_l = new String[11];
+        td.field_l[9] = gr.field_ab;
+        td.field_l[6] = lr.field_I;
+        td.field_l[0] = SecondaryNodeDeque.field_c;
+        td.field_l[8] = rh.field_G;
+        td.field_l[4] = ri.field_z;
+        td.field_l[10] = rp.field_d;
+        qe.field_U = new String[10];
+        td.field_l[2] = or.field_l;
+        td.field_l[1] = wp.field_e;
+        td.field_l[5] = MenuSelectionCursor.field_e;
+        td.field_l[3] = ua.field_d;
+        td.field_l[7] = pe.field_t;
+        qe.field_U[0] = gg.field_s;
+        qe.field_U[5] = kf.field_a;
+        qe.field_U[7] = b.field_b;
+        qe.field_U[8] = pb.field_d;
+        qe.field_U[2] = jb.field_L;
+        qe.field_U[4] = GameApplet.field_c;
+        qe.field_U[1] = an.field_e;
+        qe.field_U[6] = b.field_a;
+        qe.field_U[3] = le.field_e;
+        qe.field_U[9] = to.field_d;
+    }
+
+    final int getLineIndexForTextOffset(int param0, int param1) {
+        TextLineMetrics var4 = null;
+        int var5 = Vertigo2.field_L ? 1 : 0;
+        int var3 = 0;
+        if (param1 != 22413) {
+          String var6 = (String) null;
+          this.a((String) null, false, -10, -11);
+        }
+        while (var3 < this.field_c.length) {
+          var4 = this.field_c[var3];
+          if (param0 < var4.field_c.length) {
+            return var3;
+          }
+          param0 = param0 - (-1 + var4.field_c.length);
+          var3++;
+        }
+        return this.field_c.length;
+    }
+
+    final int a(String param0, boolean param1, int param2, int param3) {
+        int var8 = 0;
+        int var5_int = 0;
+        int var6 = 0;
+        int var7 = 0;
+        int var9 = 0;
+        int var10 = 0;
+        int stackIn_16_0 = 0;
+        int stackIn_18_0 = 0;
+        RuntimeException stackIn_21_0 = null;
+        StringBuilder stackIn_21_1 = null;
+        String stackIn_22_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var5 = null;
+        var10 = Vertigo2.field_L ? 1 : 0;
+        try {
+          var5_int = 0;
+          var6 = param1 ? 1 : 0;
+          var7 = param0.length();
+          for (var8 = 0; var7 > var8; var8++) {
+            var9 = param0.charAt(var8);
+            if (60 == var9) {
+              var6 = 1;
+            } else {
+              if (var9 != 62) {
+                if (var6 == 0 &&
+                  var9 == 32) {
+                  var5_int++;
+                }
+              } else {
+                var6 = 0;
+              }
+            }
+          }
+          if (var5_int <= 0) {
+            stackIn_18_0 = 0;
+            return stackIn_18_0;
+          }
+          stackIn_16_0 = (-param2 + param3 << 8) / var5_int;
+          return stackIn_16_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var5 = decompiledCaughtException;
+          stackIn_21_0 = var5;
+          stackIn_21_1 = new StringBuilder().append("ro.J(");
+          if (param0 == null) {
+            stackIn_22_2 = "null";
+          } else {
+            stackIn_22_2 = "{...}";
+          }
+          throw wn.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+        }
+    }
+
+    static {
+        int var1 = 0;
+        long var2 = 0L;
+        long var4 = 0L;
+        long var6 = 0L;
+        long var8 = 0L;
+        long var10 = 0L;
+        long var12 = 0L;
+        int var14 = 0;
+        field_e = 0;
+        field_a = "Staff impersonation";
+        field_f = "If you do nothing the game will revert to normal view in <%0> seconds.";
+        field_i = 83;
+        field_d = new long[11];
+        field_h = new long[8][256];
+        int var0 = 0;
+        while (var0 < 256) {
+            var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
+            var2 = 0 != (1 & var0) ? (long)(var1 & 255) : (long)(var1 >>> 8);
+            var4 = var2 << 1;
+            if (var4 >= 256L) {
+                var4 = var4 ^ 285L;
+            }
+            var6 = var4 << 1;
+            if (256L <= var6) {
+                var6 = var6 ^ 285L;
+            }
+            var8 = var6 ^ var2;
+            var10 = var6 << 1;
+            if (256L <= var10) {
+                var10 = var10 ^ 285L;
+            }
+            var12 = var2 ^ var10;
+            field_h[0][var0] = bq.a(var12, bq.a(var4 << 8, bq.a(var8 << 16, bq.a(var10 << 24, bq.a(bq.a(var6 << 40, bq.a(var2 << 56, var2 << 48)), var2 << 32)))));
+            for (var14 = 1; var14 < 8; var14++) {
+                field_h[var14][var0] = bq.a(field_h[-1 + var14][var0] << 56, field_h[var14 - 1][var0] >>> 8);
+            }
+            var0++;
+        }
+        field_d[0] = 0L;
+        for (var0 = 1; 10 >= var0; var0++) {
+            var1 = (-1 + var0) * 8;
+            field_d[var0] = GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(GameApplet.a(j.a(71776119061217280L, field_h[1][var1 + 1]), j.a(-72057594037927936L, field_h[0][var1])), j.a(field_h[2][var1 + 2], 280375465082880L)), j.a(field_h[3][var1 + 3], 1095216660480L)), j.a(4278190080L, field_h[4][var1 + 4])), j.a(16711680L, field_h[5][5 + var1])), j.a(65280L, field_h[6][6 + var1])), j.a(255L, field_h[7][7 + var1]));
+        }
+        field_b = null;
+    }
+}

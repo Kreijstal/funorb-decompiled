@@ -43,7 +43,7 @@ final class oc extends kl {
         CrossfadingMidiPcmStream.field_w[lc.field_d] = param4;
         int var6 = param4 + param2 + param3;
         int var7 = var6 == 0 ? 0 : 1000 * param2 / var6;
-        ci.field_n[lc.field_d] = var7;
+        TextHotspotBounds.field_n[lc.field_d] = var7;
         if (!(var7 >= da.field_B)) {
           da.field_B = var7;
         }
@@ -68,7 +68,7 @@ final class oc extends kl {
 
     final void a(boolean param0) {
         super.a(param0);
-        if (this.field_z == hh.field_s) {
+        if (this.field_z == DefaultTextWidgetRenderer.field_s) {
           if (this.field_C < 100) {
             this.field_C = 100;
             this.d(127);

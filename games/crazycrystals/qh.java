@@ -139,13 +139,13 @@ final class qh extends hk {
 
     final void a(byte param0) {
         if (this.field_n > 0) {
-          tb.field_d.playSampleWithPan(oj.field_L[this.field_p], 100, gi.field_m * 128, this.field_m / this.field_n);
+          TextLayout.field_d.playSampleWithPan(oj.field_L[this.field_p], 100, gi.field_m * 128, this.field_m / this.field_n);
           this.field_m = 0;
           this.field_n = 0;
           this.field_p = this.field_p + 1;
         }
         if (this.field_l > 0) {
-          tb.field_d.playSampleWithPan(bp.field_a, 100, gi.field_m * 128, this.field_j / this.field_l);
+          TextLayout.field_d.playSampleWithPan(bp.field_a, 100, gi.field_m * 128, this.field_j / this.field_l);
           this.field_l = 0;
           this.field_j = 0;
         }

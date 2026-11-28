@@ -311,7 +311,7 @@ final class fb {
           if (this.field_s == va.field_j) {
             return 1;
           }
-          if (bd.field_f != 2) {
+          if (TextLayout.field_f != 2) {
             return 0;
           }
           if (AgeValidator.a((byte) 107, this.field_p)) {
@@ -328,7 +328,7 @@ final class fb {
         this.field_p = field_e;
         this.field_q = AccountRequestState.field_e;
         if (param0) {
-          this.field_a = se.field_o;
+          this.field_a = RichTextLayout.field_o;
         } else {
           this.field_a = null;
         }

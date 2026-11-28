@@ -75,7 +75,7 @@ abstract class wc extends DualLinkNode {
           if (param3 != -11669) {
             return;
           }
-          for (var4_intLifetime1 = 0; rd.field_t > var4_intLifetime1; var4_intLifetime1++) {
+          for (var4_intLifetime1 = 0; RichTextLayout.field_t > var4_intLifetime1; var4_intLifetime1++) {
             var5Lifetime1 = 1;
             var6 = 32;
             var7 = 32;
@@ -211,7 +211,7 @@ abstract class wc extends DualLinkNode {
                   var9Lifetime1 = dd.field_M;
                 }
                 regionExit2: {
-                  if (fd.field_o) {
+                  if (DefaultTextWidgetRenderer.field_o) {
                     regionExit3: {
                       if (var5Lifetime1 != 0) {
                         if (p.field_a[var4_intLifetime1].field_d == param0.field_q) {
@@ -233,7 +233,7 @@ abstract class wc extends DualLinkNode {
                   }
                 }
                 if (((p.field_a[var4_intLifetime1].field_d == param0.field_q)) &&
-                  (!(!fd.field_o))) {
+                  (!(!DefaultTextWidgetRenderer.field_o))) {
                   SoftwareRasterizer.drawCircleOutline(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 16, 16777215);
                   SoftwareRasterizer.drawCircleOutline(16 + p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e + 16, 17, 255);
                 }
@@ -257,7 +257,7 @@ abstract class wc extends DualLinkNode {
                   var8Lifetime1 = -1;
                 }
               }
-              if (fd.field_o) {
+              if (DefaultTextWidgetRenderer.field_o) {
                 if (var5Lifetime1 != 0 && (param0.field_q == null ||
                   !param0.map.a((byte) -93, param0.field_q, p.field_a[var4_intLifetime1].field_d))) {
                   rh.field_b[p.field_a[var4_intLifetime1].field_b].drawAdditive(p.field_a[var4_intLifetime1].field_f, p.field_a[var4_intLifetime1].field_e, 128);
@@ -271,7 +271,7 @@ abstract class wc extends DualLinkNode {
                 }
               }
             }
-            if (fd.field_o) {
+            if (DefaultTextWidgetRenderer.field_o) {
               if (var8Lifetime1 == 1) {
                 rh.field_b[9].draw(p.field_a[var4_intLifetime1].field_f, -8 + p.field_a[var4_intLifetime1].field_e);
               }
@@ -282,7 +282,7 @@ abstract class wc extends DualLinkNode {
             if ((!(2 < p.field_a[var4_intLifetime1].field_b) ||
               p.field_a[var4_intLifetime1].field_b == 5 ||
               p.field_a[var4_intLifetime1].field_b == 6) && (var5Lifetime1 != 0 &&
-              fd.field_o &&
+              DefaultTextWidgetRenderer.field_o &&
               eg.field_p == p.field_a[var4_intLifetime1].field_d.field_E)) {
               var9Lifetime2 = 100;
               var10Lifetime1 = 110;
@@ -327,7 +327,7 @@ abstract class wc extends DualLinkNode {
               p.field_a[var4_intLifetime1].field_d.field_Z != null &&
               IterableNodeHashTable.field_e) {
               var9Lifetime3 = 16777215;
-              if (!fd.field_o &&
+              if (!DefaultTextWidgetRenderer.field_o &&
                 p.field_a[var4_intLifetime1].field_d != param0.field_q) {
                 var9Lifetime3 = 9013641;
               }
@@ -378,7 +378,7 @@ abstract class wc extends DualLinkNode {
         if (param1 != -1) {
           field_p = -67;
         }
-        return vj.field_O[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uk.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+        return RichTextWidget.field_O[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + uk.field_a[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 
     wc(int param0) {

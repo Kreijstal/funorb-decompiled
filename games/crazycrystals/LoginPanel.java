@@ -167,7 +167,7 @@ final class LoginPanel extends og implements TextFieldListener, WidgetActivation
         if (go.field_i) {
           uo.field_o = uo.field_o + 1;
         } else {
-          fn.field_j = bh.field_c;
+          fn.field_j = TextLineMetrics.field_c;
           wd.field_j = df.field_c;
           mb.field_g = field_I;
           ob.field_l = AccountNameAvailabilityValidator.field_k;

@@ -1078,7 +1078,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 ^ -9288, "changedisplayname");
                 if (null != var2) {
-                  bm.field_k = bh.a(var2, 41);
+                  RichTextLayout.field_k = bh.a(var2, 41);
                 }
                 var2 = PasswordValidator.a(-111, "returntohomepage");
             }
@@ -1392,7 +1392,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(52, "monthnames,7");
                 if (var2 != null) {
-                  hh.field_a[7] = bh.a(var2, eg.a(param0, 9293));
+                  hh.field_a[7] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, 9293));
                 }
                 var2 = PasswordValidator.a(-107, "monthnames,8");
                 if (var2 != null) {
@@ -2549,7 +2549,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-117, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  mn.field_u[5] = bh.a(var2, eg.a(param0, -9259));
+                  mn.field_u[5] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, -9259));
                 }
                 var2 = PasswordValidator.a(param0 ^ 9269, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
@@ -2797,7 +2797,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 - 9152, "hs_mode_name,2");
                 if (null != var2) {
-                  ck.field_c[2] = bh.a(var2, eg.a(param0, -9310));
+                  ck.field_c[2] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, -9310));
                 }
                 var2 = PasswordValidator.a(param0 - 9378, "rating_mode_name,0");
                 if (null != var2) {
@@ -2809,11 +2809,11 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-104, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  nf.field_a[0] = bh.a(var2, eg.a(param0, -9311));
+                  TextLayout.field_a[0] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, -9311));
                 }
                 var2 = PasswordValidator.a(95, "rating_mode_long_name,1");
                 if (var2 != null) {
-                  nf.field_a[1] = bh.a(var2, 99);
+                  TextLayout.field_a[1] = bh.a(var2, 99);
                 }
                 var2 = PasswordValidator.a(param0 - 9387, "graphics_config_fixed_size");
                 if (null != var2) {
@@ -2869,7 +2869,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 - 9220, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  bm.field_r = bh.a(var2, -121);
+                  RichTextLayout.field_r = bh.a(var2, -121);
                 }
                 var2 = PasswordValidator.a(85, "mustlogin1");
                 if (null != var2) {
@@ -2893,7 +2893,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-127, "mustlogin2,5");
                 if (var2 != null) {
-                  EditableTextField.field_N[5] = bh.a(var2, eg.a(param0, 9246));
+                  EditableTextField.field_N[5] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, 9246));
                 }
                 var2 = PasswordValidator.a(-105, "mustlogin2,6");
                 if (var2 != null) {
@@ -2901,7 +2901,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-109, "mustlogin2,7");
                 if (var2 != null) {
-                  EditableTextField.field_N[7] = bh.a(var2, eg.a(param0, -9299));
+                  EditableTextField.field_N[7] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, -9299));
                 }
                 var2 = PasswordValidator.a(-109, "mustlogin3,1");
                 if (var2 != null) {
@@ -2961,7 +2961,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(param0 - 9380, "mustlogin4,7");
                 if (var2 != null) {
-                  DiskCacheWorker.field_f[7] = bh.a(var2, eg.a(param0, 9228));
+                  DiskCacheWorker.field_f[7] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, 9228));
                 }
                 var2 = PasswordValidator.a(param0 - 9365, "mustlogin_notloggedin");
                 if (var2 != null) {
@@ -2973,7 +2973,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-108, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  gj.field_d[2] = bh.a(var2, eg.a(param0, -9299));
+                  gj.field_d[2] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, -9299));
                 }
                 var2 = PasswordValidator.a(65, "mustlogin_alternate,3");
                 if (var2 != null) {
@@ -3001,7 +3001,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(-107, "subscription_cost_monthly,1");
                 if (var2 != null) {
-                  ub.field_a[1] = bh.a(var2, eg.a(param0, 9329));
+                  ub.field_a[1] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, 9329));
                 }
                 var2 = PasswordValidator.a(-112, "subscription_cost_monthly,2");
                 if (var2 != null) {
@@ -3021,7 +3021,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(24, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  ub.field_a[6] = bh.a(var2, eg.a(param0, 9247));
+                  ub.field_a[6] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, 9247));
                 }
                 var2 = PasswordValidator.a(-126, "subscription_cost_monthly,7");
             }
@@ -3031,7 +3031,7 @@ final class li implements uj {
                 }
                 var2 = PasswordValidator.a(28, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  ub.field_a[8] = bh.a(var2, eg.a(param0, 9277));
+                  ub.field_a[8] = bh.a(var2, DefaultTextWidgetRenderer.a(param0, 9277));
                 }
                 var2 = PasswordValidator.a(-109, "subscription_cost_monthly,9");
                 if (null != var2) {

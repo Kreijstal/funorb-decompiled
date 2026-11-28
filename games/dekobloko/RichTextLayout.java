@@ -23,7 +23,7 @@ final class RichTextLayout extends TextLayout {
     static String stringState0136;
     static MixedSupport016 mixedSupport016State0001;
 
-    final void performAction0391(int integerArgument1, int integerArgument2, String stringArgument3, byte byteArgument4, BitmapFont bitmapFontArgument5) {
+    final void layoutSingleLineCentered(int integerArgument1, int integerArgument2, String stringArgument3, byte byteArgument4, BitmapFont bitmapFontArgument5) {
         RuntimeException stackRuntimeExceptionLocal1 = null;
         StringBuilder stackStringBuilderLocal2 = null;
         String stackStringLocal3 = null;
@@ -51,7 +51,7 @@ final class RichTextLayout extends TextLayout {
             RichTextLayout.computeRgbSpriteArray0390(54, 119, -124, -51, 32, 28);
           }
           this.booleanState0030 = true;
-          textLineMetricsLocal9 = this.computeTextLineMetrics0392(-95, integerArgument1, bitmapFontArgument5, stringArgument3);
+          textLineMetricsLocal9 = this.initializeSingleLineMetrics(-95, integerArgument1, bitmapFontArgument5, stringArgument3);
           integerLocal8 = bitmapFontArgument5.stringWidth(stringArgument3);
           textLineMetricsLocal9.characterXPositions[0] = integerArgument2 - (integerLocal8 >> 1);
           textLineMetricsLocal9.characterXPositions[stringArgument3.length()] = integerArgument2 + (integerLocal8 >> 1);
@@ -130,7 +130,7 @@ final class RichTextLayout extends TextLayout {
         return (RgbSprite[]) null;
     }
 
-    final void performAction0394(int integerArgument1, BitmapFont bitmapFontArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
+    final void layoutSingleLineLeftAligned(int integerArgument1, BitmapFont bitmapFontArgument2, String stringArgument3, int integerArgument4, int integerArgument5) {
         TextLineMetrics textLineMetricsLocal1 = null;
         TextLineMetrics textLineMetricsLocal2 = null;
         if (stringArgument3 == null) {
@@ -149,7 +149,7 @@ final class RichTextLayout extends TextLayout {
           this.font = bitmapFontArgument2;
           this.stringState0134 = stringArgument3;
           this.integerState0158 = 0;
-          textLineMetricsLocal1 = this.computeTextLineMetrics0392(-27, integerArgument4, bitmapFontArgument2, stringArgument3);
+          textLineMetricsLocal1 = this.initializeSingleLineMetrics(-27, integerArgument4, bitmapFontArgument2, stringArgument3);
           textLineMetricsLocal2 = textLineMetricsLocal1;
           textLineMetricsLocal1.characterXPositions[0] = integerArgument1;
           textLineMetricsLocal2.characterXPositions[stringArgument3.length()] = bitmapFontArgument2.stringWidth(stringArgument3) + integerArgument1;
@@ -159,7 +159,7 @@ final class RichTextLayout extends TextLayout {
         }
     }
 
-    final void performAction0395(String stringArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
+    final void layoutWrappedText(String stringArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, int integerArgument4, int integerArgument5, int integerArgument6, int integerArgument7, int integerArgument8) {
         TextLineMetrics stackTextLineMetricsLocal1;
         TextLineMetrics stackTextLineMetricsLocal2;
         int stackIntegerLocal3;
@@ -320,7 +320,7 @@ final class RichTextLayout extends TextLayout {
         return null;
     }
 
-    final void performAction0393(int integerArgument1, BitmapFont bitmapFontArgument2, int integerArgument3, int integerArgument4, String stringArgument5) {
+    final void layoutSingleLineRightAligned(int integerArgument1, BitmapFont bitmapFontArgument2, int integerArgument3, int integerArgument4, String stringArgument5) {
         TextLineMetrics textLineMetricsLocal1 = null;
         TextLineMetrics textLineMetricsLocal2 = null;
         if (stringArgument5 == null) {
@@ -339,7 +339,7 @@ final class RichTextLayout extends TextLayout {
           this.font = bitmapFontArgument2;
           this.booleanState0030 = true;
           this.integerState0158 = 2;
-          textLineMetricsLocal1 = this.computeTextLineMetrics0392(88, integerArgument4, bitmapFontArgument2, stringArgument5);
+          textLineMetricsLocal1 = this.initializeSingleLineMetrics(88, integerArgument4, bitmapFontArgument2, stringArgument5);
           textLineMetricsLocal2 = textLineMetricsLocal1;
           textLineMetricsLocal2.characterXPositions[integerArgument1] = -bitmapFontArgument2.stringWidth(stringArgument5) + integerArgument3;
           textLineMetricsLocal2.characterXPositions[stringArgument5.length()] = integerArgument3;
@@ -366,7 +366,7 @@ final class RichTextLayout extends TextLayout {
     public RichTextLayout() {
     }
 
-    private final TextLineMetrics computeTextLineMetrics0392(int integerArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, String stringArgument4) {
+    private final TextLineMetrics initializeSingleLineMetrics(int integerArgument1, int integerArgument2, BitmapFont bitmapFontArgument3, String stringArgument4) {
         TextLineMetrics textLineMetricsLocal1 = null;
         RuntimeException runtimeExceptionLocal2 = null;
         int integerLocal3 = 0;

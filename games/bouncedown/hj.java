@@ -166,7 +166,7 @@ final class hj {
           if (param0 != 24777) {
             hj.$cfr$intArgs$a$d6db22f779ae(false, -24, (jk) null, 13, 72);
           }
-          stackIn_4_0 = -bb.field_b + ui.field_p;
+          stackIn_4_0 = -bb.field_b + TextHotspotBounds.field_p;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

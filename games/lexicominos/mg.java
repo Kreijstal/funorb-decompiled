@@ -439,11 +439,11 @@ abstract class mg extends w implements dh {
         return null;
     }
 
-    String b(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.b(126);
+        String var2 = super.getTooltipText(126);
         if (null != this.field_A) {
-          var3 = this.field_A.b(124);
+          var3 = this.field_A.getTooltipText(124);
           if (var3 != null) {
             return var3;
           }

@@ -15,7 +15,7 @@ class ai extends em {
           }
           param0.writeBase38String(11404, this.field_j);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ai.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -24,13 +24,13 @@ class ai extends em {
           this.field_h = param0;
           this.field_j = param1;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ai.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     si b(byte param0) {
         int var2 = -9 % ((51 - param0) / 57);
-        return vf.field_e;
+        return DefaultTextWidgetRenderer.field_e;
     }
 
     final static int a(int param0, String param1, bn param2, boolean param3, int param4, int param5, bn param6) {
@@ -147,7 +147,7 @@ class ai extends em {
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               lk.field_d = la.field_M;
-              sc.field_g = new String[var9Lifetime1 - 100];
+              TextLayout.field_g = new String[var9Lifetime1 - 100];
             } else {
               if (248 == var9Lifetime1) {
                 gb.a((byte) -94, ii.b(false));
@@ -174,9 +174,9 @@ class ai extends em {
               var10Lifetime1 = e.field_c.readUnsignedShort((byte) 25);
               e.field_c.position = 0;
               if (jj.a(var10Lifetime1, (byte) 49)) {
-                var11 = sc.field_g.length;
+                var11 = TextLayout.field_g.length;
                 for (var12 = 0; var11 > var12; var12++) {
-                  sc.field_g[var12] = e.field_c.readPrefixedString((byte) 31);
+                  TextLayout.field_g[var12] = e.field_c.readPrefixedString((byte) 31);
                 }
                 dc.d(103);
                 sg.field_y = false;
@@ -244,7 +244,7 @@ class ai extends em {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 
@@ -306,7 +306,7 @@ class ai extends em {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 

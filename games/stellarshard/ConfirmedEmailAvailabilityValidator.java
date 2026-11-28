@@ -46,7 +46,7 @@ final class ConfirmedEmailAvailabilityValidator extends TextFieldValidator {
           if (!param1.equals(this.field_l)) {
             var3 = DelegatingCanvas.a(param1, true);
             if (!var3.a(true)) {
-              stackIn_7_0 = vk.field_d;
+              stackIn_7_0 = TextLayout.field_d;
               return stackIn_7_0;
             }
             this.field_l = param1;

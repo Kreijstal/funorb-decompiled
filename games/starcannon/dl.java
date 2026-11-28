@@ -42,7 +42,7 @@ final class dl {
         if (param3) {
           var4++;
         }
-        return hd.field_g[var4];
+        return DefaultTextWidgetRenderer.field_g[var4];
     }
 
     final static lh a(ja param0, byte param1, String param2, String param3, ResourceArchive param4) {

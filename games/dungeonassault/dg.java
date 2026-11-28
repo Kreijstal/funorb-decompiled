@@ -92,10 +92,10 @@ final class dg extends da {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         int var2 = this.field_D.field_u ? 1 : 0;
         this.field_D.field_u = this.field_u;
-        String var3 = this.field_D.c((byte) 25);
+        String var3 = this.field_D.getTooltipText((byte) 25);
         this.field_D.field_u = var2 != 0 ? true : false;
         if (param0 >= 3) {
           return var3;

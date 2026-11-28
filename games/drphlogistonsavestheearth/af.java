@@ -24,7 +24,7 @@ final class af {
           if (param1 == null) {
             return null;
           }
-          var3 = new CoverageBitmapFont(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, MouseInput.field_a, a.field_e);
+          var3 = new CoverageBitmapFont(param1, kh.field_i, vi.field_b, gf.field_o, RichTextWidget.field_J, MouseInput.field_a, a.field_e);
           Bzip2State.a((byte) -21);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -107,19 +107,19 @@ final class af {
     final static RgbSprite[] a(int param0, int param1, int param2, byte param3, int param4) {
         RgbSprite[] var6 = new RgbSprite[9];
         RgbSprite[] var5 = var6;
-        RgbSprite dupTemp$0 = mi.a(param1, (byte) -96, param0);
+        RgbSprite dupTemp$0 = TextLineMetrics.a(param1, (byte) -96, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        RgbSprite dupTemp$1 = mi.a(param1, (byte) -85, param2);
+        RgbSprite dupTemp$1 = TextLineMetrics.a(param1, (byte) -85, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param3 == 32) {
           if (param4 != 0) {
-            var6[4] = mi.a(64, (byte) -109, param4);
+            var6[4] = TextLineMetrics.a(64, (byte) -109, param4);
           }
           return var5;
         }

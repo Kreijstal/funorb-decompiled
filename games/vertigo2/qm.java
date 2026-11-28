@@ -9,7 +9,7 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
 
     public qm() {
         super(0, 0, 476, 225, (WidgetListener) null);
-        this.field_F = new InteractiveWidget(pk.field_r, (uf) null);
+        this.field_F = new InteractiveWidget(TextHotspotBounds.field_r, (uf) null);
         this.field_E = new InteractiveWidget(tc.field_a, (uf) null);
         this.field_H = new InteractiveWidget(fd.field_o, (uf) null);
         vo var1 = new vo();
@@ -139,7 +139,7 @@ final class qm extends WidgetContainer implements WidgetActivationListener {
           var7 = (CharSequence) ((Object) param1);
           sm.field_Kb = rc.a(var7, 320);
           ie.field_Nb = param4;
-          var6 = ag.a(fo.field_c, mp.field_g, 40, param0, va.field_h);
+          var6 = ag.a(fo.field_c, mp.field_g, 40, param0, DefaultTextWidgetRenderer.field_h);
           hh.a(-42, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -489,7 +489,7 @@ final class nk {
         var8 = 0;
         boolean decompiledNaturalLoopExit1 = false;
         while (!(decompiledNaturalLoopExit1 = (var8 >= 99))) {
-          var28 = var4_ref_String__[jc.field_f[this.field_b][var8]];
+          var28 = var4_ref_String__[DefaultTextWidgetRenderer.field_f[this.field_b][var8]];
           var9_ref_String = var28;
           stackIn_162_0 = 10;
           stackIn_162_1 = var8 % 11;
@@ -497,7 +497,7 @@ final class nk {
             if (stackIn_162_0 == stackIn_162_1) {
               var9_ref_String = CrossfadingMidiPcmStream.a(-415993727, new String[]{var28}, ia.field_e);
             }
-            cc.field_t.drawCentredAlpha(Integer.toString(var8 + 1), -4 - var5 + (320 + 79 * var8), 387, 0, -1, 128);
+            TextHotspotBounds.field_t.drawCentredAlpha(Integer.toString(var8 + 1), -4 - var5 + (320 + 79 * var8), 387, 0, -1, 128);
             ob.field_I.drawParagraph(var9_ref_String, -4 - var5 + (320 + 79 * var8) - 39 - 1, 358, 76, 33, 0, 0, 1, 1, 12);
             ob.field_I.drawParagraph(var9_ref_String, -39 + 79 * var8 + (-var5 + 320) - 4, 357, 76, 33, 0, 0, 1, 1, 12);
             ob.field_I.drawParagraph(var9_ref_String, -43 + (79 * var8 - var5 + 320), 358, 76, 33, 16777215, -1, 1, 1, 12);
@@ -913,22 +913,22 @@ final class nk {
             jd.field_c.drawString(IntrusiveNode.field_a, 530, 440, 16777215, 0);
             jd.field_c.drawRightAligned(Integer.toString(var10), 625, 440, 16777215, 0);
             if (var20 != 0) {
-              jd.field_c.drawString(ed.field_e, 530, 440, 16777215, 0);
+              jd.field_c.drawString(TextLineMetrics.field_e, 530, 440, 16777215, 0);
               jd.field_c.drawRightAligned(Integer.toString(var9), 625, 440, 16777215, 0);
               jd.field_c.drawString(EmailFormatValidator.field_n, 530, 420, 16777215, 0);
-              jd.field_c.drawString(ed.field_d, 530, 440, 16777215, 0);
+              jd.field_c.drawString(TextLineMetrics.field_d, 530, 440, 16777215, 0);
             }
           } else {
-            jd.field_c.drawString(ed.field_e, 530, 440, 16777215, 0);
+            jd.field_c.drawString(TextLineMetrics.field_e, 530, 440, 16777215, 0);
             jd.field_c.drawRightAligned(Integer.toString(var9), 625, 440, 16777215, 0);
             if (var20 != 0) {
               jd.field_c.drawString(EmailFormatValidator.field_n, 530, 420, 16777215, 0);
-              jd.field_c.drawString(ed.field_d, 530, 440, 16777215, 0);
+              jd.field_c.drawString(TextLineMetrics.field_d, 530, 440, 16777215, 0);
             }
           }
         } else {
           jd.field_c.drawString(EmailFormatValidator.field_n, 530, 420, 16777215, 0);
-          jd.field_c.drawString(ed.field_d, 530, 440, 16777215, 0);
+          jd.field_c.drawString(TextLineMetrics.field_d, 530, 440, 16777215, 0);
         }
         if (var6 <= jk.field_j[var5]) {
           var14_int = 16777215;
@@ -945,7 +945,7 @@ final class nk {
           var14_int = -1;
           if (1 <= wf.field_c.field_x &&
             wf.field_c.field_x < 100) {
-            var14_int = jc.field_f[this.field_b][wf.field_c.field_x - 1];
+            var14_int = DefaultTextWidgetRenderer.field_f[this.field_b][wf.field_c.field_x - 1];
           }
           SoftwareRasterizer.setClip(8, 363, 172, 473);
           if (0 <= this.field_a &&
@@ -1870,7 +1870,7 @@ final class nk {
             var22 = var22;
             var22.field_o = 1;
             this.field_v.addLast(-118, var22);
-            if (jc.field_f[this.field_b][wf.field_c.field_x] == 1) {
+            if (DefaultTextWidgetRenderer.field_f[this.field_b][wf.field_c.field_x] == 1) {
               var7_int = 1;
               if (wf.field_c.field_x % 11 == 10) {
                 var7_int = 3;
@@ -2023,7 +2023,7 @@ final class nk {
             if (var19 != 0) {
               il.field_f.c(-1);
               kj.field_x = null;
-              if (dm.field_f != 0) {
+              if (TextLayout.field_f != 0) {
                 rh.a((byte) 113, 5, true);
                 rh.a((byte) -45, 2, true);
               } else {
@@ -2033,7 +2033,7 @@ final class nk {
           } else {
             il.field_f.c(-1);
             kj.field_x = null;
-            if (dm.field_f != 0) {
+            if (TextLayout.field_f != 0) {
               rh.a((byte) 113, 5, true);
               if (var19 != 0) {
                 rh.a((byte) -45, 2, true);
@@ -3125,7 +3125,7 @@ final class nk {
             stackIn_17_0 = 1;
             return stackIn_17_0;
           }
-          if (!bd.field_u.a(false)) {
+          if (!RichTextLayout.field_u.a(false)) {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }
@@ -3164,8 +3164,8 @@ final class nk {
           var2 = 6;
         }
         int var4 = wf.field_c.field_x / 11 * 11 + 11;
-        if (!(var4 > jc.field_f[wf.field_c.field_m].length)) {
-          var5 = jc.field_f[wf.field_c.field_m][var4 - 1];
+        if (!(var4 > DefaultTextWidgetRenderer.field_f[wf.field_c.field_m].length)) {
+          var5 = DefaultTextWidgetRenderer.field_f[wf.field_c.field_m][var4 - 1];
           if (var5 == 9 ||
             var5 == 10) {
             var2 = 9;
@@ -3197,7 +3197,7 @@ final class nk {
         this.field_m = -1;
         AccountNameAvailabilityValidator.field_r = 0;
         this.field_o = 0;
-        dm.field_f = 0;
+        TextLayout.field_f = 0;
         mm.field_C = 0;
         jk.field_j = new int[]{2, 2, -1, -1, -1, -1, 0};
         a.field_r = 0;

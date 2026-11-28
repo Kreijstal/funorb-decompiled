@@ -301,14 +301,14 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
           integerLocal9 -= 12;
         }
         if (UiComponentPart023.computeBoolean1242(-30146)) {
-          gameDomainSupport002Local6 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, MixedSupport001.renderingSupport009State0001);
+          gameDomainSupport002Local6 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
           gameDomainSupport002Local6.integerState0178 = integerLocal9;
           gameDomainSupport002Local6.integerState0174 = -(gameDomainSupport002Local6.integerState0176 / 2) + 320;
           renderingSupport007Local8.performAction0852(gameDomainSupport002Local6, 118);
         } else {
-          renderingSupport007Local7.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[0], MixedSupport001.renderingSupport009State0001), 123);
-          renderingSupport007Local7.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[1], MixedSupport001.renderingSupport009State0001), 118);
-          renderingSupport007Local7.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[2], MixedSupport001.renderingSupport009State0001), 111);
+          renderingSupport007Local7.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[0], DefaultTextWidgetRenderer.renderingSupport009State0001), 123);
+          renderingSupport007Local7.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[1], DefaultTextWidgetRenderer.renderingSupport009State0001), 118);
+          renderingSupport007Local7.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[2], DefaultTextWidgetRenderer.renderingSupport009State0001), 111);
           gameDomainSupport002Local1 = renderingSupport007Local7.gameDomainSupport002ArrayState0001[0];
           GameDomainSupport002 gameDomainSupport002Local10 = gameDomainSupport002Local1;
           renderingSupport007Local7.gameDomainSupport002ArrayState0001[2].integerState0176 = 185;
@@ -326,13 +326,13 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
         }
         integerLocal9 += 43;
         if (LoginPanel.booleanState0066) {
-          gameDomainSupport002Local5 = new GameDomainSupport002(3, MixedSupport089.stringState0373, MixedSupport001.renderingSupport009State0001);
+          gameDomainSupport002Local5 = new GameDomainSupport002(3, MixedSupport089.stringState0373, DefaultTextWidgetRenderer.renderingSupport009State0001);
           gameDomainSupport002Local5.integerState0178 = integerLocal9;
           gameDomainSupport002Local5.integerState0174 = -(gameDomainSupport002Local5.integerState0176 / 2) + 320;
           integerLocal9 += 28;
           renderingSupport007Local8.performAction0852(gameDomainSupport002Local5, 122);
         }
-        GameDomainSupport002 gameDomainSupport002Local11 = new GameDomainSupport002(13, MixedSupport096.stringState0411, MixedSupport001.renderingSupport009State0001);
+        GameDomainSupport002 gameDomainSupport002Local11 = new GameDomainSupport002(13, MixedSupport096.stringState0411, DefaultTextWidgetRenderer.renderingSupport009State0001);
         gameDomainSupport002Local11.integerState0174 = 320 - gameDomainSupport002Local11.integerState0176 / 2;
         gameDomainSupport002Local11.integerState0178 = integerLocal9;
         renderingSupport007Local8.performAction0852(gameDomainSupport002Local11, 126);
@@ -403,7 +403,7 @@ final class UiComponentPart014 extends UiComponentPart030 implements WidgetActiv
           uiComponentLocal2.integerState0110 = 0;
           uiComponentLocal2.integerState0108 = 80;
           uiComponentLocal2.integerState0104 = 50;
-          uiComponentLocal2.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport001(MixedSupport011.bitmapFontState0006, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          uiComponentLocal2.callbackContract004State0006 = (CallbackContract004) ((Object) new DefaultTextWidgetRenderer(MixedSupport011.bitmapFontState0006, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.performAction0895(uiComponentLocal2, (byte) -55);
           this.interactiveComponentState0006 = this.computeInteractiveComponent0699((CallbackContract006) (this), ValidatedTextField.stringState0383, (byte) -90);
           return;

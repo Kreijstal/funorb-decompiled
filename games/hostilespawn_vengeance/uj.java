@@ -105,7 +105,7 @@ final class uj extends IntrusiveNode {
           if (param1 != 18719) {
             uj.clearStaticReferences(33);
           }
-          var2 = pm.a(l.a(param0, (byte) 114), (byte) 100);
+          var2 = TextLineMetrics.a(l.a(param0, (byte) 114), (byte) 100);
           if (var2 == null) {
             var2 = "";
           }

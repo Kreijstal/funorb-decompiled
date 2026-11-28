@@ -155,7 +155,7 @@ abstract class i extends GameAppletShell {
             dc.d(param0 ^ 6);
             vh.b(-4749);
             fh.a(2, (byte) -1, ii.field_g);
-            sd.clearStaticReferences((byte) -4);
+            TextLineMetrics.clearStaticReferences((byte) -4);
             eg.field_l = true;
             ClientException.field_e = ri.correctedCurrentTimeMillis(-3) + 15000L;
           }
@@ -267,7 +267,7 @@ abstract class i extends GameAppletShell {
           }
         }
         if (we.field_c == 3 &&
-          nn.a(wc.field_Wb, tf.field_k, field_r, param0 ^ 117) &&
+          TextHotspotBounds.a(wc.field_Wb, tf.field_k, field_r, param0 ^ 117) &&
           qn.a(tf.field_k, -1)) {
           bd.b(param0 ^ -4585);
           lb.clearStaticReferences(param0 - 228);
@@ -345,7 +345,7 @@ abstract class i extends GameAppletShell {
         try {
           this.a(param2, 480, param1, (byte) -83, param0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "i.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "i.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -514,7 +514,7 @@ abstract class i extends GameAppletShell {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -753,9 +753,9 @@ abstract class i extends GameAppletShell {
           if (1 == var4) {
             var5_int = s.a(aa.a((byte) -115), md.c(97), (byte) -87);
             if (-1 != var5_int) {
-              GameCanvas.a(PasswordValidator.field_k, true, sc.field_g, var5_int);
+              GameCanvas.a(PasswordValidator.field_k, true, TextLayout.field_g, var5_int);
               PasswordValidator.field_k = null;
-              sc.field_g = null;
+              TextLayout.field_g = null;
             }
             var11 = PlayerShip.consumeLoginResponseFlag((byte) 118);
             if (var11 != null) {
@@ -765,9 +765,9 @@ abstract class i extends GameAppletShell {
           if (2 == var4) {
             var5_intLifetime1 = rd.a(mc.a(16), this.field_t, 28406, qj.a(1), va.b(8), wi.c(22), hk.a(-1));
             if (var5_intLifetime1 != -1) {
-              ud.a(false, var5_intLifetime1, PasswordValidator.field_k, sc.field_g);
+              ud.a(false, var5_intLifetime1, PasswordValidator.field_k, TextLayout.field_g);
               PasswordValidator.field_k = null;
-              sc.field_g = null;
+              TextLayout.field_g = null;
             }
           }
           if (3 == var4) {

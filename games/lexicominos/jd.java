@@ -64,7 +64,7 @@ final class jd {
         if (ProxyAuthenticationRequiredException.field_d != null) {
           return (java.awt.Container) ((Object) ProxyAuthenticationRequiredException.field_d);
         }
-        return (java.awt.Container) ((Object) kk.c(-14047));
+        return (java.awt.Container) ((Object) RichTextLayout.c(-14047));
     }
 
     final static boolean a(byte param0, char param1) {

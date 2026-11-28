@@ -113,7 +113,7 @@ final class AirstrikeSpecial extends SpecialOrder {
         int var15_int = 0;
         BattleCreature var16 = null;
         DamageEffect var17 = null;
-        bm var17_ref = null;
+        SetTileTerrainEffect var17_ref = null;
         int var18 = 0;
         BattleCreature var19 = null;
         int[][] var23 = null;
@@ -185,7 +185,7 @@ final class AirstrikeSpecial extends SpecialOrder {
                 var17 = new DamageEffect(new CreatureRef(var16), false, 1, 50, 0);
                 var4.effects.addLast(var17, true);
               } else {
-                var17_ref = new bm(21, var13Lifetime2, var14Lifetime1);
+                var17_ref = new SetTileTerrainEffect(21, var13Lifetime2, var14Lifetime1);
                 var4.effects.addLast(var17_ref, true);
               }
               fieldTemp$0 = var4.field_u;

@@ -7,7 +7,7 @@ final class ta {
 
     final static void a(String param0, boolean param1, int param2) {
         try {
-          fd.field_k = true;
+          DefaultTextWidgetRenderer.field_k = true;
           ok.field_h = param1 ? true : false;
           nb.field_b = new si(jl.field_I, be.field_x, param0, qi.field_b, ok.field_h);
           if (param2 != 10) {

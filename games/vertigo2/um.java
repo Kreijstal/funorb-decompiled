@@ -203,7 +203,7 @@ abstract class um extends UiWidget implements dq {
         }
     }
 
-    final String a(boolean param0) {
+    final String getTooltipText(boolean param0) {
         int var3 = 0;
         UiWidget[] var2;
         UiWidget var4;
@@ -219,7 +219,7 @@ abstract class um extends UiWidget implements dq {
         for (var3 = 0; var3 < var7.length; var3++) {
           var4 = var7[var3];
           if (var4 != null) {
-            var5 = var4.a(false);
+            var5 = var4.getTooltipText(false);
             if (var5 != null) {
               return var5;
             }
@@ -253,13 +253,13 @@ abstract class um extends UiWidget implements dq {
               }
               var1 = (gg) (fm.field_b.nextBackward(104));
             }
-            if (ro.field_b != null) {
-              var1Lifetime1 = (gg) (ro.field_b.beginBackward((byte) 100));
+            if (TextLayout.field_b != null) {
+              var1Lifetime1 = (gg) (TextLayout.field_b.beginBackward((byte) 100));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_q.isLinked(86)) {
                   var1Lifetime1.unlink(2);
                 }
-                var1Lifetime1 = (gg) (ro.field_b.nextBackward(96));
+                var1Lifetime1 = (gg) (TextLayout.field_b.nextBackward(96));
               }
             }
           }

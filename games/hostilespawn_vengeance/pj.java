@@ -104,7 +104,7 @@ final class pj extends ql {
             this.field_z.field_n) {
             this.field_B = true;
           }
-          var10 = mm.field_m[0].field_j;
+          var10 = TextHotspotBounds.field_m[0].field_j;
           if (this.field_s.field_l >= 0 &&
             VolumeRampingMidiPcmStream.field_Q[5]) {
             this.field_w = true;
@@ -337,13 +337,13 @@ final class pj extends ql {
           }
           var3Lifetime2 = 0;
           for (var4 = 0; var4 < ProxySocketFactory.field_j; var4++) {
-            if (mm.field_m[var4].field_i == 125) {
+            if (TextHotspotBounds.field_m[var4].field_i == 125) {
               incrementValue$1 = var3Lifetime2;
               var3Lifetime2++;
-              this.field_t[incrementValue$1] = mm.field_m[var4];
+              this.field_t[incrementValue$1] = TextHotspotBounds.field_m[var4];
             } else {
-              if (mm.field_m[var4].field_i == 27) {
-                this.field_z = mm.field_m[var4];
+              if (TextHotspotBounds.field_m[var4].field_i == 27) {
+                this.field_z = TextHotspotBounds.field_m[var4];
               }
             }
           }
@@ -369,7 +369,7 @@ final class pj extends ql {
           }
           var3Lifetime4 = 0;
           for (var4Lifetime2 = 0; var4Lifetime2 < ProxySocketFactory.field_j; var4Lifetime2++) {
-            var5 = mm.field_m[var4Lifetime2];
+            var5 = TextHotspotBounds.field_m[var4Lifetime2];
             if (20 == var5.field_i) {
               incrementValue$0 = var3Lifetime4;
               var3Lifetime4++;

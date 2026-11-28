@@ -168,7 +168,7 @@ final class fl extends vb {
 
     final static void a(int param0, boolean param1, String param2, String param3) {
         try {
-          lg.field_b = param2;
+          TextLayout.field_b = param2;
           ja.field_b = param3;
           if (param0 >= -57) {
             field_s = (Sprite[]) null;

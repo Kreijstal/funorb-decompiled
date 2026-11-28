@@ -20,7 +20,7 @@ final class bq extends BoardTile {
           if (kaa.a(param0, (byte) 63)) {
             return false;
           }
-          if (tfa.a(41, param0)) {
+          if (StartFloodEffect.a(41, param0)) {
             return false;
           }
           if (InsanoSauceSpecial.a(15, param0)) {

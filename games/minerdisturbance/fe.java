@@ -7,7 +7,7 @@ class fe extends IntrusiveNode {
     static BufferedRandomAccessFile field_z;
     static String field_C;
     rm field_y;
-    nf field_B;
+    TextLayout field_B;
     int field_o;
     int field_w;
     int field_p;
@@ -239,7 +239,7 @@ class fe extends IntrusiveNode {
             this.a(param1, param3, 34, param2);
           }
           if (param0 != -70) {
-            this.field_B = (nf) null;
+            this.field_B = (TextLayout) null;
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -350,7 +350,7 @@ class fe extends IntrusiveNode {
                 if (param3 != 0) {
                   return true;
                 }
-                tg.a(-95, this.h(-27867));
+                tg.a(-95, this.getTooltipText(-27867));
                 return param0;
               }
               if (nb.field_f == 0) {
@@ -358,7 +358,7 @@ class fe extends IntrusiveNode {
                 if (param3 != 0) {
                   return true;
                 }
-                tg.a(-95, this.h(-27867));
+                tg.a(-95, this.getTooltipText(-27867));
                 return param0;
               }
               this.a(param2, NodeHashTableIterator.field_e, nk.field_w, param1, this, 0);
@@ -373,7 +373,7 @@ class fe extends IntrusiveNode {
               if (param3 != 0) {
                 return true;
               }
-              tg.a(-95, this.h(-27867));
+              tg.a(-95, this.getTooltipText(-27867));
               return param0;
             }
             this.a(param1, ki.field_n, NodeHashTableIterator.field_e, nk.field_w, (byte) -123, this, param2);
@@ -397,7 +397,7 @@ class fe extends IntrusiveNode {
                     if (param3 != 0) {
                       return true;
                     }
-                    tg.a(-95, this.h(-27867));
+                    tg.a(-95, this.getTooltipText(-27867));
                     return param0;
                   }
                   if (!(var10.field_y instanceof cd)) {
@@ -406,7 +406,7 @@ class fe extends IntrusiveNode {
                     if (param3 != 0) {
                       return true;
                     }
-                    tg.a(-95, this.h(-27867));
+                    tg.a(-95, this.getTooltipText(-27867));
                     return param0;
                   }
                   ((cd) (var10.field_y)).a(27055, (se) null, var10);
@@ -415,14 +415,14 @@ class fe extends IntrusiveNode {
                   if (param3 != 0) {
                     return true;
                   }
-                  tg.a(-95, this.h(-27867));
+                  tg.a(-95, this.getTooltipText(-27867));
                   return param0;
                 }
                 nb.field_f = CipherPacketBuffer.field_B;
                 if (param3 != 0) {
                   return true;
                 }
-                tg.a(-95, this.h(-27867));
+                tg.a(-95, this.getTooltipText(-27867));
                 return param0;
               }
             }
@@ -441,7 +441,7 @@ class fe extends IntrusiveNode {
             if (param3 != 0) {
               return true;
             }
-            tg.a(-95, this.h(-27867));
+            tg.a(-95, this.getTooltipText(-27867));
             return param0;
           }
         }
@@ -449,7 +449,7 @@ class fe extends IntrusiveNode {
         if (param3 != 0) {
           return true;
         }
-        tg.a(-95, this.h(-27867));
+        tg.a(-95, this.getTooltipText(-27867));
         return param0;
     }
 
@@ -620,7 +620,7 @@ class fe extends IntrusiveNode {
         }
     }
 
-    String h(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != -27867) {
           return (String) null;
         }
@@ -746,7 +746,7 @@ class fe extends IntrusiveNode {
 
     fe(String param0, ad param1, rm param2) {
         RuntimeException runtimeException = null;
-        cf var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -761,10 +761,10 @@ class fe extends IntrusiveNode {
           this.field_A = param1;
           this.field_y = param2;
           this.field_s = param0;
-          if (this.field_A instanceof cf) {
-            var4 = (cf) ((Object) this.field_A);
-            this.field_v = var4.a(14463, this);
-            this.field_q = var4.b(30, this);
+          if (this.field_A instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_A);
+            this.field_v = var4.getPreferredWidth(14463, this);
+            this.field_q = var4.getPreferredHeight(30, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

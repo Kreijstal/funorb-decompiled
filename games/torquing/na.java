@@ -74,7 +74,7 @@ final class na extends jh {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -124,7 +124,7 @@ final class na extends jh {
             stackIn_5_0 = -1;
             return stackIn_5_0;
           }
-          if (ef.field_a == tb.field_o) {
+          if (ef.field_a == TextHotspotBounds.field_o) {
             jl.field_T = null;
             wa.field_d.position = 0;
             if (param1 != null) {
@@ -145,7 +145,7 @@ final class na extends jh {
               wa.field_d.writeByte(90, 18);
               wa.field_d.position = wa.field_d.position + 2;
               var10 = wa.field_d.position;
-              var11_ref_String = rb.a(-108, ip.a(9));
+              var11_ref_String = RichTextWidget.a(-108, ip.a(9));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
@@ -283,7 +283,7 @@ final class na extends jh {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class na extends jh {
     final void a(int param0, byte param1, int param2, int param3) {
         int var5 = this.x + param3;
         if (param1 >= -7) {
-          this.b(85);
+          this.getTooltipText(85);
         }
         int var6 = param2 + this.y;
         super.a(param0, (byte) -91, param2, param3);
@@ -309,10 +309,10 @@ final class na extends jh {
         this.field_L.drawParagraph(this.field_D, var5 - (-var7 - this.field_M), var6 + this.field_M, -this.field_M + this.field_H, this.height - 2 * this.field_M, this.field_F, -1, !this.field_J ? 2 : 0, 1, this.field_L.field_x);
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         int var2 = this.field_C.field_s ? 1 : 0;
         this.field_C.field_s = this.field_s;
-        String var3 = this.field_C.b(param0);
+        String var3 = this.field_C.getTooltipText(param0);
         this.field_C.field_s = var2 != 0 ? true : false;
         return var3;
     }

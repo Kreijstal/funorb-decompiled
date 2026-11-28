@@ -20,7 +20,7 @@ final class wg extends IntrusiveNode {
         float[] var5 = null;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var1_int = sb.field_r.field_C + sb.field_r.field_D;
+          var1_int = RichTextLayout.field_r.field_C + RichTextLayout.field_r.field_D;
           for (var2 = 0; 5 > var2; var2++) {
             ConfirmedEmailAvailabilityValidator.field_o[var2] = false;
             m.field_e[var2] = 272;
@@ -34,7 +34,7 @@ final class wg extends IntrusiveNode {
             vh.field_E[var2].bindAsRenderTarget();
             lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, AgeValidator.field_o[var2]);
             BoundedRandomAccessFile.field_e.drawParagraph(AgeValidator.field_n[var2], 57, 15, m.field_e[var2] - 72, AgeValidator.field_o[var2] - 30, 1, -1, 0, 0, BoundedRandomAccessFile.field_e.field_C + BoundedRandomAccessFile.field_e.field_D);
-            sb.field_r.drawString(lb.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);
+            RichTextLayout.field_r.drawString(lb.field_A, 57, AgeValidator.field_o[var2] - 15, 1, 6579300);
             var3 = var2;
             if (0 != var3) {
               if (3 != var3) {

@@ -20,8 +20,8 @@ final class lb {
           var1_int = 0;
           var2 = 0;
           while (IterableNodeHashTable.a((byte) -72)) {
-            bc.field_H.a((byte) -43);
-            if (bc.field_H.b(true)) {
+            RichTextWidget.field_H.a((byte) -43);
+            if (RichTextWidget.field_H.b(true)) {
               var1_int = 1;
             }
             if (13 != da.field_b) {
@@ -29,14 +29,14 @@ final class lb {
             }
             var2 = 1;
           }
-          bc.field_H.a(rc.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), rc.a(bk.field_b, 29532, ResourceArchive.field_e), param0 ^ -30202);
-          if (bc.field_H.b(true)) {
+          RichTextWidget.field_H.a(rc.a(ef.field_a, param0 + 59719, ProxyAuthenticationRequiredException.field_a), rc.a(bk.field_b, 29532, ResourceArchive.field_e), param0 ^ -30202);
+          if (RichTextWidget.field_H.b(true)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            bc.field_H.field_d >= 0) {
-            var3 = ik.field_g[bc.field_H.field_d];
+            RichTextWidget.field_H.field_d >= 0) {
+            var3 = DefaultTextWidgetRenderer.field_g[RichTextWidget.field_H.field_d];
             if (2 == var3) {
               aj.a((byte) 9);
             } else if (var3 == 5) {

@@ -85,7 +85,7 @@ abstract class ResultScene {
         }
     }
 
-    final static void layoutJustifiedTextOffsets(bh param0, int param1, String param2, byte param3, BitmapFont param4) {
+    final static void layoutJustifiedTextOffsets(TextLineMetrics param0, int param1, String param2, byte param3, BitmapFont param4) {
         String stackIn_30_2 = null;
         String stackIn_34_2 = null;
         String stackIn_38_2 = null;

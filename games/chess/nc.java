@@ -118,7 +118,7 @@ final class nc extends InteractiveWidget {
             return false;
           }
           if (!ad.field_b) {
-            return !ub.a(21549) ? true : false;
+            return !TextLayout.a(21549) ? true : false;
           }
           return false;
         }
@@ -126,7 +126,7 @@ final class nc extends InteractiveWidget {
           return false;
         }
         if (!ad.field_b) {
-          return !ub.a(21549) ? true : false;
+          return !TextLayout.a(21549) ? true : false;
         }
         return false;
     }

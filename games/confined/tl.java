@@ -33,7 +33,7 @@ final class tl {
             e.field_c = new CipherPacketBuffer(param2);
             vh.field_a = new CipherPacketBuffer(param13);
             ProxyAuthenticationRequiredException.field_b = param7;
-            na.field_W = param8;
+            RichTextWidget.field_W = param8;
             d.field_d = param5;
             ld.field_k = param6;
             InteractiveWidget.field_M = param12;
@@ -69,7 +69,7 @@ final class tl {
             } else {
               stackIn_19_2 = "{...}";
             }
-            throw sd.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
+            throw TextLineMetrics.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(',').append(param10).append(',').append(param11).append(',').append(param12).append(',').append(param13).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

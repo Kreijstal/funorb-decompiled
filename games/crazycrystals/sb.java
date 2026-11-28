@@ -12,7 +12,7 @@ final class sb extends InteractiveWidget {
     static volatile int field_I;
     static int field_F;
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         if (this.field_m) {
           return this.field_H.getValidationMessage(-16774);
         }

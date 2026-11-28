@@ -136,7 +136,7 @@ final class gg extends fc {
     }
 
     public gg() {
-        super(0, 0, mm.field_q, fb.field_f, (nn) null, (mh) null);
+        super(0, 0, TextHotspotBounds.field_q, fb.field_f, (nn) null, (mh) null);
         this.field_B = new IntrusiveDeque();
     }
 

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends vk implements dc, WidgetActivationListener {
-    private ab field_H;
+final class jj extends vk implements TextHotspotListener, WidgetActivationListener {
+    private RichTextWidget field_H;
     static String field_C;
     static volatile boolean field_E;
     private AccountCreationResultPanel field_z;
@@ -62,7 +62,7 @@ final class jj extends vk implements dc, WidgetActivationListener {
         g.a(21975);
     }
 
-    public final void a(int param0, byte param1, int param2, ab param3) {
+    public final void onTextHotspotActivated(int param0, byte param1, int param2, RichTextWidget param3) {
         String discarded$0 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -196,7 +196,7 @@ final class jj extends vk implements dc, WidgetActivationListener {
 
     private final String a(boolean param0) {
         if (param0) {
-          this.field_H = (ab) null;
+          this.field_H = (RichTextWidget) null;
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -214,7 +214,7 @@ final class jj extends vk implements dc, WidgetActivationListener {
         super(0, 0, 288, 0, (de) null);
         String var7 = null;
         int var3 = 0;
-        hd var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -223,8 +223,8 @@ final class jj extends vk implements dc, WidgetActivationListener {
           this.field_y.field_o = (de) ((Object) new gb());
           var7 = fb.a(field_C, -98, new String[]{this.a(false), this.j(-99)});
           var3 = 20;
-          var4 = new hd(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);
-          this.field_H = new ab(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(nb.field_c, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);
+          this.field_H = new RichTextWidget(var7, var4);
           this.field_H.field_p = "";
           this.field_H.a(pc.field_b, -5, 0);
           this.field_H.a(pc.field_b, -103, 1);

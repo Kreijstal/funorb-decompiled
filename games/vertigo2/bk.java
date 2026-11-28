@@ -36,9 +36,9 @@ final class bk {
         int var10 = 0;
         var10 = Vertigo2.field_L ? 1 : 0;
         try {
-          var1_int = qp.field_d - pk.field_o;
-          pk.field_o = ni.field_a - (var1_int >> 1);
-          qp.field_d = var1_int + pk.field_o;
+          var1_int = qp.field_d - TextHotspotBounds.field_o;
+          TextHotspotBounds.field_o = ni.field_a - (var1_int >> 1);
+          qp.field_d = var1_int + TextHotspotBounds.field_o;
           if (param0 >= -90) {
             return;
           }

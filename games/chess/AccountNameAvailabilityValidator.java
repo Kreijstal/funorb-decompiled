@@ -79,7 +79,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         if (param0 != 23156) {
           return (ChessMatchSession) null;
         }
-        if (!hl.field_h) {
+        if (!DefaultTextWidgetRenderer.field_h) {
           return MatchingFieldValidator.field_p;
         }
         return pd.field_Lb;

@@ -112,7 +112,7 @@ final class DiveBomberAnimation extends EventAnimation {
     }
 
     final static void b(boolean param0) {
-        if (!o.d((byte) 54) &&
+        if (!ChangeAllCreaturesHealthEffect.d((byte) 54) &&
           bf.field_h[CreatureType.field_n] != null) {
           bf.field_h[CreatureType.field_n].a((byte) 106);
         }
@@ -123,7 +123,7 @@ final class DiveBomberAnimation extends EventAnimation {
           ua.field_b) {
           mn.field_l.a((byte) 19);
         }
-        if (!o.d((byte) 81)) {
+        if (!ChangeAllCreaturesHealthEffect.d((byte) 81)) {
           if (!bf.field_h[CreatureType.field_n].field_i) {
             ImageProducerRasterBuffer.field_h.a((byte) 19);
           }
@@ -230,7 +230,7 @@ final class DiveBomberAnimation extends EventAnimation {
         al.a(89, this.field_v.moveId);
         while (var3 != null) {
           var4 = var3.target.resolveCreatureView(-27449, this.screen);
-          var4.b(-1, 6);
+          var4.playAnimation(-1, 6);
           var3.apply(var2, this.screen.field_h, 12);
           this.addChild(27799, new DamagePopupAnimation(this.screen, var4, 40));
           var3 = (DamageEffect) (this.field_v.effects.nextForward(0));

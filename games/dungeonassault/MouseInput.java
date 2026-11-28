@@ -168,7 +168,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           return bl.field_n.length > -ok.field_z + param1 ? true : false;
         }
         if (!(gn.field_d > param1)) {
-          return -gn.field_d + param1 < ci.field_s.length ? true : false;
+          return -gn.field_d + param1 < TextHotspotBounds.field_s.length ? true : false;
         }
         if (param0 < 76) {
           return false;

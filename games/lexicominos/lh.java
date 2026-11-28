@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lh extends ik {
+final class lh extends DefaultTextWidgetRenderer {
     private n[] field_v;
     static int field_u;
     static boolean field_w;

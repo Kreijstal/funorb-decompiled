@@ -57,7 +57,7 @@ abstract class ag extends GameApplet {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= se.field_p.position) {
+          if (param1 <= RichTextLayout.field_p.position) {
             return true;
           }
           if (m.field_b == null) {
@@ -69,16 +69,16 @@ abstract class ag extends GameApplet {
               field_o = 68;
             }
             if (var2_int > 0) {
-              if (var2_int > -se.field_p.position + param1) {
-                var2_int = -se.field_p.position + param1;
+              if (var2_int > -RichTextLayout.field_p.position + param1) {
+                var2_int = -RichTextLayout.field_p.position + param1;
               }
-              m.field_b.a(se.field_p.position, 32498, var2_int, se.field_p.payload);
+              m.field_b.a(RichTextLayout.field_p.position, 32498, var2_int, RichTextLayout.field_p.payload);
               ArchiveRequest.field_p = dd.correctedCurrentTimeMillis(115);
-              se.field_p.position = se.field_p.position + var2_int;
-              if (param1 > se.field_p.position) {
+              RichTextLayout.field_p.position = RichTextLayout.field_p.position + var2_int;
+              if (param1 > RichTextLayout.field_p.position) {
                 return false;
               }
-              se.field_p.position = 0;
+              RichTextLayout.field_p.position = 0;
               return true;
             }
             if (var2_int >= 0 &&
@@ -254,7 +254,7 @@ abstract class ag extends GameApplet {
                             FullscreenFocusCanvas.a(var3, (byte) -89);
                           }
                         } else {
-                          MouseInput.a(il.field_g, se.field_p, nb.field_e, false);
+                          MouseInput.a(il.field_g, RichTextLayout.field_p, nb.field_e, false);
                         }
                       } else {
                         this.g((byte) -47);
@@ -326,7 +326,7 @@ abstract class ag extends GameApplet {
           if (var3Lifetime1 != 0 &&
             qb.field_j == 0 &&
             11 == bl.field_a &&
-            !se.b((byte) -91)) {
+            !RichTextLayout.b((byte) -91)) {
             w.b((byte) 14);
           }
           if (-1 != qb.field_j &&
@@ -380,7 +380,7 @@ abstract class ag extends GameApplet {
         }
         if ((qb.field_j != -1 &&
           qb.field_j != 0 ||
-          se.b((byte) -91)) &&
+          RichTextLayout.b((byte) -91)) &&
           dd.correctedCurrentTimeMillis(param1 ^ -59) >= wa.field_a) {
           FrameTimer.field_h = false;
           if (qb.field_j != -1 &&
@@ -390,7 +390,7 @@ abstract class ag extends GameApplet {
           }
         }
         if (0 == qb.field_j &&
-          !se.b((byte) -91)) {
+          !RichTextLayout.b((byte) -91)) {
           kb.field_a = false;
         }
         if (IntrusiveDeque.field_d == 0 &&
@@ -611,7 +611,7 @@ abstract class ag extends GameApplet {
             }
           }
           if (var4 == 5) {
-            nh.a(ll.b(91), 337033697);
+            TextLineMetrics.a(ll.b(91), 337033697);
           }
           if (6 == var4 &&
             sh.field_t) {
@@ -772,7 +772,7 @@ abstract class ag extends GameApplet {
         if (this.field_b) {
           return -1;
         }
-        if (!se.b((byte) -91)) {
+        if (!RichTextLayout.b((byte) -91)) {
           return -1;
         }
         if (FrameTimer.field_h) {
@@ -784,7 +784,7 @@ abstract class ag extends GameApplet {
         }
         if (0 != var2 &&
           1 != var2) {
-          if (!hd.field_p) {
+          if (!DefaultTextWidgetRenderer.field_p) {
             this.a("reconnect", false);
           }
           SecondaryNodeDequeIterator.a(-88);
@@ -802,14 +802,14 @@ abstract class ag extends GameApplet {
     }
 
     private final void i(byte param0) {
-        int var2 = se.field_p.readUnsignedByte(7909);
+        int var2 = RichTextLayout.field_p.readUnsignedByte(7909);
         if (param0 < 20) {
           this.a(true, -88);
         }
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = il.field_g - 1;
         byte[] var5 = new byte[var4];
-        se.field_p.readCipheredBytes(var4, (byte) -54, var5, 0);
+        RichTextLayout.field_p.readCipheredBytes(var4, (byte) -54, var5, 0);
         ag.a(var3 != 0, DualLinkNode.a(127, var5), 64, ll.b(126));
     }
 

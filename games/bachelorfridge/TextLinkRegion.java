@@ -139,7 +139,7 @@ final class TextLinkRegion extends IntrusiveNode {
             var6Lifetime1 = ShuffleEvent.field_q.measureWrappedHeight(var14, TeleportEvent.field_r, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
             var7Lifetime1 = StatusEffectInfo.field_c + (TeleportEvent.field_r - var5) / 2;
             var5 += 6;
-            var8 = vc.field_c + (-var6Lifetime1 + kt.field_j) / 2;
+            var8 = vc.field_c + (-var6Lifetime1 + SetMoveSlotCooldownEffect.field_j) / 2;
             var7Lifetime1 -= 3;
             var8 -= 3;
             if (var7Lifetime1 < 0) {
@@ -182,7 +182,7 @@ final class TextLinkRegion extends IntrusiveNode {
             BuffVendorAnimation.field_B.normalizeCanvas();
             var9 = new Sprite(BuffVendorAnimation.field_B.field_n, BuffVendorAnimation.field_B.field_o);
             var9.bindAsRenderTarget();
-            ShuffleEvent.field_q.drawParagraph(var14, StatusEffectInfo.field_c, vc.field_c, TeleportEvent.field_r, kt.field_j, 16777215, -1, 1, 1, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
+            ShuffleEvent.field_q.drawParagraph(var14, StatusEffectInfo.field_c, vc.field_c, TeleportEvent.field_r, SetMoveSlotCooldownEffect.field_j, 16777215, -1, 1, 1, ShuffleEvent.field_q.field_B + ShuffleEvent.field_q.field_u);
             sb.a(0, 3, var9, var9.field_o, 0, var9.field_n, 1, 89);
             BuffVendorAnimation.field_B.bindAsRenderTarget();
             var9.draw(0, 0);
@@ -250,13 +250,13 @@ final class TextLinkRegion extends IntrusiveNode {
             null != ug.field_o) {
             HomingMissileAnimation.field_E.draw(231, 390);
             var1 = ai.field_a;
-            if (ic.field_i.field_g == 0) {
+            if (ClearPendingPetAttackEffect.field_i.field_g == 0) {
               var1 = BananarangAnimation.field_y;
             }
             var1.draw(0, 0);
             stackIn_50_0 = 40;
             stackIn_50_1 = InvincibleEvent.field_s;
-            if (ic.field_i.field_g == 0) {
+            if (ClearPendingPetAttackEffect.field_i.field_g == 0) {
               stackIn_51_2 = 4;
             } else {
               stackIn_51_2 = 3;
@@ -275,20 +275,20 @@ final class TextLinkRegion extends IntrusiveNode {
             stackIn_56_0 = qs.field_o;
             stackIn_56_1 = et.field_l;
             stackIn_56_2 = 91;
-            stackIn_57_3 = (ic.field_i.field_g == 0);
+            stackIn_57_3 = (ClearPendingPetAttackEffect.field_i.field_g == 0);
             rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_56_0, stackIn_56_1, stackIn_56_2, stackIn_57_3);
           }
           if (null != HomingMissileAnimation.field_E &&
             null != ug.field_o) {
             HomingMissileAnimation.field_E.draw(434, 390);
             DisableAnimation.field_y.draw(0, 0);
-            if (1 == ic.field_i.field_g) {
+            if (1 == ClearPendingPetAttackEffect.field_i.field_g) {
               AirstrikeSpecial.a(-4 + HomingMissileAnimation.field_E.field_q, 7 * HomingMissileAnimation.field_E.field_p / 12, 16711680, 64, 392, 436);
             }
             stackIn_66_0 = SnowEvent.field_u;
             stackIn_66_1 = AgeValidator.field_h;
             stackIn_66_2 = -112;
-            stackIn_67_3 = (ic.field_i.field_g == 1);
+            stackIn_67_3 = (ClearPendingPetAttackEffect.field_i.field_g == 1);
             rg.$cfr$intArgs$a$c6021a39f7cf(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3);
           }
           if (PizzaArenaTheme.field_h != null) {

@@ -110,7 +110,7 @@ final class MenuScreen {
                           fg.field_a = 0;
                           pg.field_e = false;
                           lk.field_f = 0;
-                          vk.field_p = 0;
+                          RichTextLayout.field_p = 0;
                           SectorCacheStore.field_h = 0;
                           for (var5 = 0; var5 < nf.field_W.length; var5 += 2) {
                             nf.field_W[var5] = bk.a(1280, jb.field_g, (byte) -116) - 640;
@@ -368,7 +368,7 @@ final class MenuScreen {
               ProxyAuthenticationRequiredException.field_a = 0;
               lk.field_b = 0;
               lk.field_e = 0;
-              vk.field_p = 0;
+              RichTextLayout.field_p = 0;
               ci.field_ib = 0;
               ob.field_j = 0;
               ia.field_hb = 0;
@@ -1221,7 +1221,7 @@ final class MenuScreen {
 
     final static void b(int param0) {
         String var2 = (String) null;
-        le.a(-88, SocketConnector.field_d, (String) null);
+        TextLineMetrics.a(-88, SocketConnector.field_d, (String) null);
         if (param0 > -98) {
           MenuScreen.a(-121, 32, 65);
         }

@@ -122,14 +122,14 @@ final class MixedSupport047 {
           throw new IllegalStateException();
         }
         if (byteArgument1 == -126) {
-          UiComponentPart025.booleanState0152 = true;
+          RichTextWidget.booleanState0152 = true;
           GameplayControls.performAction1753(false, 841566312);
           MixedSupport052.integerState0269 = 0;
           return;
         }
         String[] stringArrayLocal1 = (String[]) null;
         MixedSupport047.performAction0578((String[]) null, true);
-        UiComponentPart025.booleanState0152 = true;
+        RichTextWidget.booleanState0152 = true;
         GameplayControls.performAction1753(false, 841566312);
         MixedSupport052.integerState0269 = 0;
     }

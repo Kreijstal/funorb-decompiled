@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends WidgetContainer implements md, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends WidgetContainer implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_C;
     private InteractiveWidget field_I;
     private ValidatedTextField field_K;
     private nd field_D;
-    private rg field_M;
+    private RichTextWidget field_M;
     static int field_F;
     private ValidatedTextField field_H;
     NameSuggestionsPanel field_O;
@@ -232,7 +232,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, Widg
         }
     }
 
-    public final void a(int param0, int param1, rg param2, int param3) {
+    public final void onTextHotspotActivated(int param0, int param1, RichTextWidget param2, int param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -326,7 +326,7 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, Widg
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -31909) {
-            this.field_M = (rg) null;
+            this.field_M = (RichTextWidget) null;
           }
           var6 = new kg(20, param3, 120 + param4, 25, param2, false, 120, 3, si.field_V, 16777215, param1);
           this.b(param0 ^ -31905, var6);
@@ -442,8 +442,8 @@ final class AccountRegistrationPanel extends WidgetContainer implements md, Widg
         kg var4 = new kg(46, var3, this.field_p - 90, 25, this.field_D, true, this.field_p - 120, 5, de.field_c, 11579568, nf.field_o);
         this.b(4, var4);
         var3 = var3 + var4.field_t;
-        id var5 = new id(si.field_V, 0, 0, 0, 0, 16777215, -1, 0, 0, si.field_V.field_N, -1, 2147483647, true);
-        this.field_M = new rg(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(si.field_V, 0, 0, 0, 0, 16777215, -1, 0, 0, si.field_V.field_N, -1, 2147483647, true);
+        this.field_M = new RichTextWidget(var2, var5);
         this.field_M.field_x = "";
         this.field_M.a(ni.field_b, 0, 1);
         this.field_M.a(ni.field_b, 1, 1);

@@ -10,7 +10,7 @@ class UiWidget extends IntrusiveNode {
     dg field_n;
     int field_j;
     String field_i;
-    jf field_h;
+    TextLayout field_h;
     int field_k;
     boolean field_v;
     int field_q;
@@ -323,18 +323,18 @@ class UiWidget extends IntrusiveNode {
           if (!param2) {
             if (var5 == 0) {
               ne.field_j = wb.field_c;
-              RasterBuffer.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
             if (0 == hg.field_F) {
               ne.field_j = wb.field_c;
-              RasterBuffer.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
             this.g(0);
             if (var7 == 0) {
               ne.field_j = wb.field_c;
-              RasterBuffer.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
           }
@@ -353,24 +353,24 @@ class UiWidget extends IntrusiveNode {
             }
             if (wb.field_c != 0) {
               ne.field_j = wb.field_c;
-              RasterBuffer.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
             if (ne.field_j == 0) {
               ne.field_j = wb.field_c;
-              RasterBuffer.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
             this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-            var8 = jf.field_a;
+            var8 = TextLayout.field_a;
             if (var8 != null) {
               if (var8.field_n instanceof gk) {
                 ((gk) (var8.field_n)).a((th) null, -7935, var8);
               }
-              jf.field_a = null;
+              TextLayout.field_a = null;
             }
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           regionExit1: {
@@ -386,49 +386,49 @@ class UiWidget extends IntrusiveNode {
               }
               if (wb.field_c != 0) {
                 ne.field_j = wb.field_c;
-                RasterBuffer.a(125, this.c((byte) 78));
+                RasterBuffer.a(125, this.getTooltipText((byte) 78));
                 return param2;
               }
               if (ne.field_j == 0) {
                 ne.field_j = wb.field_c;
-                RasterBuffer.a(125, this.c((byte) 78));
+                RasterBuffer.a(125, this.getTooltipText((byte) 78));
                 return param2;
               }
               this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-              var9 = jf.field_a;
+              var9 = TextLayout.field_a;
               if (var9 != null) {
                 if (!(var9.field_n instanceof gk)) {
-                  jf.field_a = null;
+                  TextLayout.field_a = null;
                 } else {
                   ((gk) (var9.field_n)).a((th) null, -7935, var9);
-                  jf.field_a = null;
+                  TextLayout.field_a = null;
                 }
               }
               ne.field_j = wb.field_c;
-              RasterBuffer.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.getTooltipText((byte) 78));
               return param2;
             }
           }
           if (wb.field_c != 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           if (ne.field_j == 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-          var10 = jf.field_a;
+          var10 = TextLayout.field_a;
           if (var10 != null) {
             if (var10.field_n instanceof gk) {
               ((gk) (var10.field_n)).a((th) null, -7935, var10);
             }
-            jf.field_a = null;
+            TextLayout.field_a = null;
           }
           ne.field_j = wb.field_c;
-          RasterBuffer.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
         this.a(118, 41, -10, 127, -68);
@@ -437,18 +437,18 @@ class UiWidget extends IntrusiveNode {
         if (!param2) {
           if (var5Lifetime1 == 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           if (0 == hg.field_F) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           this.g(0);
           if (var7 == 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
         }
@@ -465,55 +465,55 @@ class UiWidget extends IntrusiveNode {
                 this.g(0);
                 if (wb.field_c != 0) {
                   ne.field_j = wb.field_c;
-                  RasterBuffer.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 if (ne.field_j == 0) {
                   ne.field_j = wb.field_c;
-                  RasterBuffer.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-                var11 = jf.field_a;
+                var11 = TextLayout.field_a;
                 if (var11 == null) {
                   ne.field_j = wb.field_c;
-                  RasterBuffer.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 if (!(var11.field_n instanceof gk)) {
-                  jf.field_a = null;
+                  TextLayout.field_a = null;
                   ne.field_j = wb.field_c;
-                  RasterBuffer.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.getTooltipText((byte) 78));
                   return param2;
                 }
                 ((gk) (var11.field_n)).a((th) null, -7935, var11);
-                jf.field_a = null;
+                TextLayout.field_a = null;
                 ne.field_j = wb.field_c;
-                RasterBuffer.a(125, this.c((byte) 78));
+                RasterBuffer.a(125, this.getTooltipText((byte) 78));
                 return param2;
               }
             }
           }
           if (wb.field_c != 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           if (ne.field_j == 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-          var12 = jf.field_a;
+          var12 = TextLayout.field_a;
           if (var12 != null) {
             if (var12.field_n instanceof gk) {
               ((gk) (var12.field_n)).a((th) null, -7935, var12);
             }
-            jf.field_a = null;
+            TextLayout.field_a = null;
           }
           ne.field_j = wb.field_c;
-          RasterBuffer.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
         if (var5Lifetime1 != 0) {
@@ -530,25 +530,25 @@ class UiWidget extends IntrusiveNode {
           }
           if (wb.field_c != 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           if (ne.field_j == 0) {
             ne.field_j = wb.field_c;
-            RasterBuffer.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.getTooltipText((byte) 78));
             return param2;
           }
           this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-          var14 = jf.field_a;
+          var14 = TextLayout.field_a;
           var6 = var14;
           if (var14 != null) {
             if (var14.field_n instanceof gk) {
               ((gk) (var14.field_n)).a((th) null, -7935, var14);
             }
-            jf.field_a = null;
+            TextLayout.field_a = null;
           }
           ne.field_j = wb.field_c;
-          RasterBuffer.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
         if (hg.field_F != 0 &&
@@ -559,24 +559,24 @@ class UiWidget extends IntrusiveNode {
         }
         if (wb.field_c != 0) {
           ne.field_j = wb.field_c;
-          RasterBuffer.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
         if (ne.field_j == 0) {
           ne.field_j = wb.field_c;
-          RasterBuffer.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.getTooltipText((byte) 78));
           return param2;
         }
         this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
-        var24 = jf.field_a;
+        var24 = TextLayout.field_a;
         if (var24 != null) {
           if (var24.field_n instanceof gk) {
             ((gk) (var24.field_n)).a((th) null, -7935, var24);
           }
-          jf.field_a = null;
+          TextLayout.field_a = null;
         }
         ne.field_j = wb.field_c;
-        RasterBuffer.a(125, this.c((byte) 78));
+        RasterBuffer.a(125, this.getTooltipText((byte) 78));
         return param2;
     }
 
@@ -637,7 +637,7 @@ class UiWidget extends IntrusiveNode {
         this.a(-1, 35, -37, -9);
     }
 
-    String c(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 <= 14) {
           this.field_i = (String) null;
           if (this.field_v) {
@@ -904,17 +904,17 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, j param1, dg param2) {
-        eg var4 = null;
+        TextWidgetRenderer var4 = null;
         this.field_k = 0;
         this.field_q = 0;
         try {
           this.field_w = param1;
           this.field_n = param2;
           this.field_i = param0;
-          if (this.field_w instanceof eg) {
-            var4 = (eg) ((Object) this.field_w);
-            this.field_t = var4.a(true, this);
-            this.field_x = var4.a(this, -125);
+          if (this.field_w instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_w);
+            this.field_t = var4.getPreferredWidth(true, this);
+            this.field_x = var4.getPreferredHeight(this, -125);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.wrapClientException((Throwable) ((Object) runtimeException), "rc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

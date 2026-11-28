@@ -94,13 +94,13 @@ final class ob {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ia.field_j = param1.readUnsignedShort(false) << 5;
+          TextHotspotBounds.field_j = param1.readUnsignedShort(false) << 5;
           var2_int = param1.readUnsignedByte(-109);
           ti.field_e = 1835008 & var2_int << 18;
           if (param0 >= -30) {
             ob.a(127, -50, -88);
           }
-          ia.field_j = ia.field_j + (var2_int >> 3);
+          TextHotspotBounds.field_j = TextHotspotBounds.field_j + (var2_int >> 3);
           ti.field_e = ti.field_e + (param1.readUnsignedShort(false) << 2);
           var2_intLifetime1 = param1.readUnsignedByte(-86);
           ti.field_e = ti.field_e + (var2_intLifetime1 >> 6);

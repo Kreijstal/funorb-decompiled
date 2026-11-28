@@ -7,7 +7,7 @@ class tga extends BoardChange {
     int field_n;
     static UiComponent field_m;
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         try {
           param0.writeByte(this.field_n, 0);
           int var3_int = -77 % ((param1 - 37) / 38);
@@ -17,21 +17,21 @@ class tga extends BoardChange {
         }
     }
 
-    void a(BoardChangeAnimation param0, int param1) {
+    void applyForAnimation(BoardChangeAnimation param0, int param1) {
         BattleScreen var3 = param0.field_o;
         param0.addChild(27799, new TileEffectAnimation(new uea(var3, this.field_n, this.field_o, 16777215)));
         if (param1 >= -2) {
           return;
         }
         try {
-          this.a(false, var3.field_h);
+          this.applyToBattle(false, var3.field_h);
           var3.field_s.d(73);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "tga.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(boolean param0, BattleState param1) {
+    void applyToBattle(boolean param0, BattleState param1) {
         int var3_int = 0;
         try {
           if (param0) {

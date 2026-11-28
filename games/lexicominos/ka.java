@@ -12,7 +12,7 @@ final class ka {
             if (param1 != -27844) {
               ka.a(-22);
             }
-            JavaScriptBridge.callWithArguments(kk.c(-14047), 22347, "resizing", new Object[]{new Integer(param0)});
+            JavaScriptBridge.callWithArguments(RichTextLayout.c(-14047), 22347, "resizing", new Object[]{new Integer(param0)});
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class MixedSupport041 extends MixedSupport001 {
+final class MixedSupport041 extends DefaultTextWidgetRenderer {
     static int integerState0234;
     private int integerState0235;
     static IndexedSprite[][] indexedSpriteArrayArrayState0002;

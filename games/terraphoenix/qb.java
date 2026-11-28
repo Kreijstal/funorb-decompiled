@@ -6,7 +6,7 @@ final class qb {
     static IntrusiveDeque field_a;
     static Sprite[] field_f;
     static String field_d;
-    static fd field_b;
+    static DefaultTextWidgetRenderer field_b;
     static rj field_h;
     static String field_e;
     static int field_g;

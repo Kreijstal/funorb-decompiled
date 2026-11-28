@@ -99,19 +99,19 @@ final class GzipInflater {
             if (!(var1.indexOf('@') < 0)) {
               var1 = "";
             }
-            return new jk(ij.a((byte) 122), dg.a(0));
+            return new jk(ij.a((byte) 122), RichTextWidget.a(0));
           }
-          return new jk(ij.a((byte) 122), dg.a(0));
+          return new jk(ij.a((byte) 122), RichTextWidget.a(0));
         }
         var1Lifetime1 = ij.a((byte) 114);
         if (var1Lifetime1 == null) {
-          return new jk(ij.a((byte) 122), dg.a(0));
+          return new jk(ij.a((byte) 122), RichTextWidget.a(0));
         }
         if (var1Lifetime1.indexOf('@') >= 0) {
           var1Lifetime1 = "";
-          return new jk(ij.a((byte) 122), dg.a(0));
+          return new jk(ij.a((byte) 122), RichTextWidget.a(0));
         }
-        return new jk(ij.a((byte) 122), dg.a(0));
+        return new jk(ij.a((byte) 122), RichTextWidget.a(0));
     }
 
     final static boolean b(byte param0) {

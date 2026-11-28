@@ -141,7 +141,7 @@ final class re extends ue {
             if (gi.field_m < 0) {
               gi.field_m = 0;
             }
-            tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+            TextLayout.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
           }
           if (var2_int == 5 &&
             this.field_b.b(108) &&
@@ -150,7 +150,7 @@ final class re extends ue {
             if (64 < gi.field_m) {
               gi.field_m = 64;
             }
-            tb.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
+            TextLayout.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
           }
           if (var2_int == 5 &&
             this.field_b.b(true) &&
@@ -161,7 +161,7 @@ final class re extends ue {
             this.field_b.e(-19741) &&
             64 > gi.field_m) {
             gi.field_m = 64;
-            tb.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
+            TextLayout.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
           }
           if (param0 < 99) {
             this.field_f = -116;
@@ -180,7 +180,7 @@ final class re extends ue {
             if (var2_int == 5 && (var3Lifetime1 != gi.field_m ||
               this.field_b.a(true))) {
               gi.field_m = var3Lifetime1;
-              tb.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
+              TextLayout.field_d.playSampleWithPan(fk.field_x[0], 100, gi.field_m * 96, 8192);
             }
             if (var2_int == 6 &&
               var3Lifetime1 != qd.field_r) {
@@ -189,7 +189,7 @@ final class re extends ue {
           } else {
             if (5 == var2_int &&
               this.field_b.a(true)) {
-              tb.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
+              TextLayout.field_d.playSampleWithPan(fk.field_x[0], 100, 96 * gi.field_m, 8192);
             }
           }
           if (var2_int == 6 &&

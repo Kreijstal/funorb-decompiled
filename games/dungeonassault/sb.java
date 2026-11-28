@@ -20,7 +20,7 @@ final class sb {
           uo.field_b = null;
           jn.field_k = null;
           jc.field_f = null;
-          fe.field_g = null;
+          RichTextLayout.field_g = null;
           ub.field_q = (byte[][]) null;
           return;
         }
@@ -29,7 +29,7 @@ final class sb {
         uo.field_b = null;
         jn.field_k = null;
         jc.field_f = null;
-        fe.field_g = null;
+        RichTextLayout.field_g = null;
         ub.field_q = (byte[][]) null;
     }
 

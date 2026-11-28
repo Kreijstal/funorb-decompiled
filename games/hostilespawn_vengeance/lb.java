@@ -197,7 +197,7 @@ final class lb {
               ml.a(s.field_b, nb.field_L, 0, NetworkArchiveRequest.field_z, ob.field_s);
               s.field_b.a(-var9 + s.field_b.field_i, -19720);
             }
-            mb.d(-1, -22370);
+            RichTextLayout.d(-1, -22370);
             rc.field_a = re.field_r;
           }
           if (re.field_r == rc.field_a &&
@@ -210,7 +210,7 @@ final class lb {
               rc.field_a = gj.field_b;
             } else {
               if (var9Lifetime1 == 248) {
-                cj.a(BufferedRandomAccessFile.c(-1), 0);
+                RichTextWidget.a(BufferedRandomAccessFile.c(-1), 0);
                 km.field_x = sg.field_g;
                 le.c((byte) 119);
                 jn.field_C = false;

@@ -5,7 +5,7 @@ import java.util.*;
 
 class UiWidget extends IntrusiveNode {
     int field_i;
-    aa field_q;
+    TextLayout field_q;
     String field_s;
     of field_o;
     ml field_h;
@@ -391,7 +391,7 @@ class UiWidget extends IntrusiveNode {
 
     void e(int param0) {
         if (param0 != 13104) {
-          this.field_q = (aa) null;
+          this.field_q = (TextLayout) null;
         }
     }
 
@@ -399,7 +399,7 @@ class UiWidget extends IntrusiveNode {
         this(param0, GzipDecompressor.field_b.field_a, param1);
     }
 
-    String a(byte param0) {
+    String getTooltipText(byte param0) {
         if (param0 == 54) {
           return !this.field_g ? null : this.field_m;
         }
@@ -554,7 +554,7 @@ class UiWidget extends IntrusiveNode {
 
     UiWidget(String param0, ml param1, of param2) {
         RuntimeException runtimeException = null;
-        ui var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -569,10 +569,10 @@ class UiWidget extends IntrusiveNode {
           this.field_o = param2;
           this.field_h = param1;
           this.field_s = param0;
-          if (this.field_h instanceof ui) {
-            var4 = (ui) ((Object) this.field_h);
-            this.field_l = var4.a(this, (byte) 103);
-            this.field_p = var4.a(this, false);
+          if (this.field_h instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_h);
+            this.field_l = var4.getPreferredWidth(this, (byte) 103);
+            this.field_p = var4.getPreferredHeight(this, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -657,12 +657,12 @@ class UiWidget extends IntrusiveNode {
             }
             if (SecondaryNodeDeque.field_a != 0) {
               q.field_a = SecondaryNodeDeque.field_a;
-              ef.a(107, this.a((byte) 54));
+              ef.a(107, this.getTooltipText((byte) 54));
               return param3;
             }
             if (0 == q.field_a) {
               q.field_a = SecondaryNodeDeque.field_a;
-              ef.a(107, this.a((byte) 54));
+              ef.a(107, this.getTooltipText((byte) 54));
               return param3;
             }
             this.a(param1, ei.field_a, this, p.field_a, 0, param0);
@@ -674,23 +674,23 @@ class UiWidget extends IntrusiveNode {
               od.field_n = null;
             }
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (var5 == 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (kc.field_d == 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           this.e(13104);
           if (var7 == 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (0 != DirectByteStorage.field_d &&
@@ -709,12 +709,12 @@ class UiWidget extends IntrusiveNode {
           }
           if (SecondaryNodeDeque.field_a != 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (0 == q.field_a) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           this.a(param1, ei.field_a, this, p.field_a, 0, param0);
@@ -726,25 +726,25 @@ class UiWidget extends IntrusiveNode {
             od.field_n = null;
           }
           q.field_a = SecondaryNodeDeque.field_a;
-          ef.a(107, this.a((byte) 54));
+          ef.a(107, this.getTooltipText((byte) 54));
           return param3;
         }
         var5Lifetime1 = this.b((byte) 74) ? 1 : 0;
         if (!param3) {
           if (var5Lifetime1 == 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (kc.field_d == 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           this.e(13104);
           if (var7 == 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (0 != DirectByteStorage.field_d &&
@@ -759,12 +759,12 @@ class UiWidget extends IntrusiveNode {
           }
           if (SecondaryNodeDeque.field_a != 0) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           if (0 == q.field_a) {
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           this.a(param1, ei.field_a, this, p.field_a, 0, param0);
@@ -776,7 +776,7 @@ class UiWidget extends IntrusiveNode {
             od.field_n = null;
           }
           q.field_a = SecondaryNodeDeque.field_a;
-          ef.a(107, this.a((byte) 54));
+          ef.a(107, this.getTooltipText((byte) 54));
           return param3;
         }
         if (0 != DirectByteStorage.field_d) {
@@ -784,12 +784,12 @@ class UiWidget extends IntrusiveNode {
             if (kc.field_d == 0) {
               if (SecondaryNodeDeque.field_a != 0) {
                 q.field_a = SecondaryNodeDeque.field_a;
-                ef.a(107, this.a((byte) 54));
+                ef.a(107, this.getTooltipText((byte) 54));
                 return param3;
               }
               if (0 == q.field_a) {
                 q.field_a = SecondaryNodeDeque.field_a;
-                ef.a(107, this.a((byte) 54));
+                ef.a(107, this.getTooltipText((byte) 54));
                 return param3;
               }
               this.a(param1, ei.field_a, this, p.field_a, 0, param0);
@@ -802,7 +802,7 @@ class UiWidget extends IntrusiveNode {
                 od.field_n = null;
               }
               q.field_a = SecondaryNodeDeque.field_a;
-              ef.a(107, this.a((byte) 54));
+              ef.a(107, this.getTooltipText((byte) 54));
               return param3;
             }
             if (this.a(param1, qg.field_c, kc.field_d, -1625, this, DirectByteStorage.field_e, param0)) {
@@ -811,12 +811,12 @@ class UiWidget extends IntrusiveNode {
             }
             if (SecondaryNodeDeque.field_a != 0) {
               q.field_a = SecondaryNodeDeque.field_a;
-              ef.a(107, this.a((byte) 54));
+              ef.a(107, this.getTooltipText((byte) 54));
               return param3;
             }
             if (0 == q.field_a) {
               q.field_a = SecondaryNodeDeque.field_a;
-              ef.a(107, this.a((byte) 54));
+              ef.a(107, this.getTooltipText((byte) 54));
               return param3;
             }
             this.a(param1, ei.field_a, this, p.field_a, 0, param0);
@@ -829,7 +829,7 @@ class UiWidget extends IntrusiveNode {
               od.field_n = null;
             }
             q.field_a = SecondaryNodeDeque.field_a;
-            ef.a(107, this.a((byte) 54));
+            ef.a(107, this.getTooltipText((byte) 54));
             return param3;
           }
           this.a(p.field_a, this, ei.field_a, param1, param0, DirectByteStorage.field_d, -118);
@@ -890,7 +890,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         q.field_a = SecondaryNodeDeque.field_a;
-        ef.a(107, this.a((byte) 54));
+        ef.a(107, this.getTooltipText((byte) 54));
         return param3;
     }
 

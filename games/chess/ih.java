@@ -14,8 +14,8 @@ final class ih extends bf {
     static String field_Y;
     static String field_V;
 
-    final String g(int param0) {
-        String var2 = this.field_P.g(param0 + param0);
+    final String getTooltipText(int param0) {
+        String var2 = this.field_P.getTooltipText(param0 + param0);
         if (var2 != null) {
           return var2;
         }

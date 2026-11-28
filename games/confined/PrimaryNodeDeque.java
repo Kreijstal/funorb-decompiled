@@ -67,7 +67,7 @@ final class PrimaryNodeDeque {
           param0.field_a.field_h = param0;
           param0.field_h.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "mn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "mn.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -80,14 +80,14 @@ final class PrimaryNodeDeque {
 
     final static void a(String param0, int param1, byte param2, int param3, int param4, int param5) {
         try {
-          nn.field_t[param4].draw(param1, param3);
+          TextHotspotBounds.field_t[param4].draw(param1, param3);
           pn.field_a.drawString(param0, 2 + param1, 14 + param3, 16777215, -1);
           if (param2 != -30) {
             PrimaryNodeDeque.clearStaticReferences(-116);
           }
           pn.field_a.drawRightAligned(Integer.toString(param5), 39 + param1, 38 + param3, 16777215, -1);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "mn.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -104,7 +104,7 @@ final class PrimaryNodeDeque {
           param0.field_a.field_h = param0;
           param0.field_h.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "mn.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "mn.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class PrimaryNodeDeque {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(')').toString());
         }
     }
 

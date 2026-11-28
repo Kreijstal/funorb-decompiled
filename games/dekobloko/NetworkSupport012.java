@@ -6,7 +6,7 @@ final class NetworkSupport012 {
     private ResourceArchive resourceArchiveState0022;
     private MixedSupport074 mixedSupport074State0002;
     private ResourceArchive resourceArchiveState0023;
-    static MixedSupport001 mixedSupport001State0001;
+    static DefaultTextWidgetRenderer mixedSupport001State0001;
     static int integerState0759;
 
     final static int computeInteger1536(LoginCredentials loginCredentialsArgument1, LoginCredentials loginCredentialsArgument2, int integerArgument3) {

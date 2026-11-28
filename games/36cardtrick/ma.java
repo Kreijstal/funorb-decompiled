@@ -159,25 +159,25 @@ final class ma {
         var2 = LoginPanel.field_O;
         LoginPanel.field_O = ej.field_kb;
         if (51 == param1) {
-          dg.field_H.field_l = 2;
+          RichTextWidget.field_H.field_l = 2;
         } else {
           if (param1 != 50) {
-            dg.field_H.field_l = 1;
+            RichTextWidget.field_H.field_l = 1;
           } else {
-            dg.field_H.field_l = 5;
+            RichTextWidget.field_H.field_l = 5;
           }
         }
         ej.field_kb = var2;
-        dg.field_H.field_b = dg.field_H.field_b + 1;
-        if (param0 <= dg.field_H.field_b &&
+        RichTextWidget.field_H.field_b = RichTextWidget.field_H.field_b + 1;
+        if (param0 <= RichTextWidget.field_H.field_b &&
           51 == param1) {
           return 2;
         }
-        if (dg.field_H.field_b >= 2 &&
+        if (RichTextWidget.field_H.field_b >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (dg.field_H.field_b < 4) {
+        if (RichTextWidget.field_H.field_b < 4) {
           return -1;
         }
         return 1;

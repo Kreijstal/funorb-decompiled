@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends lc implements ki, WidgetActivationListener {
+final class eb extends lc implements TextHotspotListener, WidgetActivationListener {
     private InteractiveWidget field_H;
     static String field_D;
     static String field_z;
     private AccountCreationResultPanel field_A;
-    private vc field_B;
+    private RichTextWidget field_B;
     static String field_F;
     static String[] field_E;
 
@@ -50,8 +50,8 @@ final class eb extends lc implements ki, WidgetActivationListener {
 
     private final String a(boolean param0) {
         if (param0) {
-          vc var3 = (vc) null;
-          this.a((vc) null, (byte) -92, 87, 66);
+          RichTextWidget var3 = (RichTextWidget) null;
+          this.onTextHotspotActivated((RichTextWidget) null, (byte) -92, 87, 66);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -105,7 +105,7 @@ final class eb extends lc implements ki, WidgetActivationListener {
         }
     }
 
-    public final void a(vc param0, byte param1, int param2, int param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, byte param1, int param2, int param3) {
         String discarded$1 = null;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -162,7 +162,7 @@ final class eb extends lc implements ki, WidgetActivationListener {
         super(0, 0, 288, 0, (fc) null);
         String var7 = null;
         int var3 = 0;
-        jd var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -171,8 +171,8 @@ final class eb extends lc implements ki, WidgetActivationListener {
           this.field_H.field_j = (fc) ((Object) new jh());
           var7 = BufferedRandomAccessFile.a(pa.field_b, new String[]{this.a(false), this.c(false)}, (byte) -126);
           var3 = 20;
-          var4 = new jd(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
-          this.field_B = new vc(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(FrameTimer.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, FrameTimer.field_a.field_s, -1, 2147483647, true);
+          this.field_B = new RichTextWidget(var7, var4);
           this.field_B.field_q = "";
           this.field_B.a(Slime.field_b, 0, (byte) 107);
           this.field_B.a(Slime.field_b, 1, (byte) 125);

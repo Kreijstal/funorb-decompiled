@@ -23,8 +23,8 @@ abstract class SpriteState extends DualLinkNode {
         var2 = stellarshard.field_B;
         try {
           if (!sf.b(false)) {
-            if (pd.field_f != null &&
-              pd.field_f.focusLost) {
+            if (RichTextLayout.field_f != null &&
+              RichTextLayout.field_f.focusLost) {
               ih.b((byte) -25);
               dg.field_z.a((byte) -111, (UiWidget) (new ia(dg.field_z, nb.field_K)));
             }

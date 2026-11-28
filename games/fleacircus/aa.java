@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class aa extends e {
+class aa extends DefaultTextWidgetRenderer {
     static va field_r;
     static String field_s;
     static boolean field_q;

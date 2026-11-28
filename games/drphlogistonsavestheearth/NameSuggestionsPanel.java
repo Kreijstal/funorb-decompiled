@@ -40,7 +40,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                fk.field_h = param1;
+                TextHotspotBounds.field_h = param1;
                 var2 = wg.a("loginm3", param0 - 7);
                 if (var2 != null) {
                   SecondaryNodeDeque.field_a = mj.a((byte) -120, var2);
@@ -1465,7 +1465,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("create_agreeterms", param0 ^ 7);
                 if (var2 != null) {
-                  fk.field_p = mj.a((byte) 0, var2);
+                  TextHotspotBounds.field_p = mj.a((byte) 0, var2);
                 }
                 var2 = wg.a("create_u13terms", param0 - 7);
                 if (null != var2) {
@@ -1585,7 +1585,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("create_username_available", param0 ^ 7);
                 if (var2 != null) {
-                  fk.field_r = mj.a((byte) 113, var2);
+                  TextHotspotBounds.field_r = mj.a((byte) 113, var2);
                 }
                 var2 = wg.a("create_alert_namelength", 0);
                 if (var2 != null) {
@@ -1785,7 +1785,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("waitingfor_levels", param0 ^ 7);
                 if (var2 != null) {
-                  l.field_s = mj.a((byte) -110, var2);
+                  DefaultTextWidgetRenderer.field_s = mj.a((byte) -110, var2);
                 }
                 var2 = wg.a("waitingfor_extradata", 0);
                 if (null != var2) {
@@ -1849,7 +1849,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("unpacking_graphics", 0);
                 if (null != var2) {
-                  qa.field_O = mj.a((byte) -125, var2);
+                  RichTextWidget.field_O = mj.a((byte) -125, var2);
                 }
                 var2 = wg.a("unpacking_models", 0);
                 if (var2 != null) {
@@ -2039,7 +2039,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("previous", 0);
                 if (var2 != null) {
-                  o.field_n = mj.a((byte) 114, var2);
+                  RichTextLayout.field_n = mj.a((byte) 114, var2);
                 }
                 var2 = wg.a("prev", param0 - 7);
                 if (null != var2) {
@@ -2475,27 +2475,27 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("quickchat_shortcut_help,0", 0);
                 if (null != var2) {
-                  l.field_e[0] = mj.a((byte) -123, var2);
+                  DefaultTextWidgetRenderer.field_e[0] = mj.a((byte) -123, var2);
                 }
                 var2 = wg.a("quickchat_shortcut_help,1", 0);
                 if (null != var2) {
-                  l.field_e[1] = mj.a((byte) 107, var2);
+                  DefaultTextWidgetRenderer.field_e[1] = mj.a((byte) 107, var2);
                 }
                 var2 = wg.a("quickchat_shortcut_help,2", 0);
                 if (var2 != null) {
-                  l.field_e[2] = mj.a((byte) -122, var2);
+                  DefaultTextWidgetRenderer.field_e[2] = mj.a((byte) -122, var2);
                 }
                 var2 = wg.a("quickchat_shortcut_help,3", 0);
                 if (null != var2) {
-                  l.field_e[3] = mj.a((byte) -7, var2);
+                  DefaultTextWidgetRenderer.field_e[3] = mj.a((byte) -7, var2);
                 }
                 var2 = wg.a("quickchat_shortcut_help,4", 0);
                 if (var2 != null) {
-                  l.field_e[4] = mj.a((byte) -24, var2);
+                  DefaultTextWidgetRenderer.field_e[4] = mj.a((byte) -24, var2);
                 }
                 var2 = wg.a("quickchat_shortcut_help,5", 0);
                 if (null != var2) {
-                  l.field_e[5] = mj.a((byte) -7, var2);
+                  DefaultTextWidgetRenderer.field_e[5] = mj.a((byte) -7, var2);
                 }
                 var2 = wg.a("quickchat_shortcut_keys,0", 0);
                 if (null != var2) {
@@ -2683,7 +2683,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("fs_button_members", 0);
                 if (var2 != null) {
-                  qa.field_N = mj.a((byte) -107, var2);
+                  RichTextWidget.field_N = mj.a((byte) -107, var2);
                 }
                 var2 = wg.a("fs_unavailable", 0);
                 if (var2 != null) {
@@ -2695,7 +2695,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("fs_focus", 0);
                 if (null != var2) {
-                  o.field_f = mj.a((byte) 5, var2);
+                  RichTextLayout.field_f = mj.a((byte) 5, var2);
                 }
                 var2 = wg.a("fs_focus_or_resolution", 0);
                 if (null != var2) {
@@ -2751,7 +2751,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 }
                 var2 = wg.a("hs_friend_tip", param0 - 7);
                 if (var2 != null) {
-                  mi.field_h = mj.a((byte) 109, var2);
+                  TextLineMetrics.field_h = mj.a((byte) 109, var2);
                 }
                 var2 = wg.a("hs_friend_tip_multi", 0);
                 if (var2 != null) {
@@ -3023,7 +3023,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
                 if (var2 != null) {
                   mj.a((byte) -118, var2);
                 }
-                fk.field_h = null;
+                TextHotspotBounds.field_h = null;
             }
             void run() {
                 var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
@@ -3105,7 +3105,7 @@ final class NameSuggestionsPanel extends pj implements WidgetActivationListener 
         try {
           a.field_c = eb.field_d[param1];
           int var2_int = 55 % ((param0 - 57) / 55);
-          mi.field_d = ph.field_f[param1];
+          TextLineMetrics.field_d = ph.field_f[param1];
           dh.field_J = tg.field_c[param1];
         } catch (RuntimeException runtimeException) {
           throw ie.wrapClientException((Throwable) ((Object) runtimeException), "jd.E(" + param0 + ',' + param1 + ')');

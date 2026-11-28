@@ -415,7 +415,7 @@ final class hg {
           }
           var2Lifetime73 = da.a((byte) -121, "world_complete");
           if (null != var2Lifetime73) {
-            pc.field_n = SecondaryNodeDeque.a(var2Lifetime73, false);
+            DefaultTextWidgetRenderer.field_n = SecondaryNodeDeque.a(var2Lifetime73, false);
           }
           var2Lifetime74 = da.a((byte) -26, "powerups_collected");
           if (null != var2Lifetime74) {
@@ -533,7 +533,7 @@ final class hg {
           } else {
             stackIn_355_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_354_0), ((StringBuilder) (Object) stackIn_354_1).append(stackIn_355_2).append(')').toString());
         }
     }
 
@@ -547,7 +547,7 @@ final class hg {
         try {
           field_d = null;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "hg.B(" + param0 + ')');
         }
     }
 
@@ -601,7 +601,7 @@ final class hg {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

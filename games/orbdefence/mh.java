@@ -103,7 +103,7 @@ final class mh {
 
     final static void b(byte param0) {
         pc.a(-1, sk.field_G, of.field_H, true);
-        jc.field_j = true;
+        DefaultTextWidgetRenderer.field_j = true;
         if (param0 == -57) {
           return;
         }

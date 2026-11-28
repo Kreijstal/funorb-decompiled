@@ -39,7 +39,7 @@ final class vh {
               param2.field_I = 1000;
               return;
             }
-            pm.field_a = true;
+            TextLineMetrics.field_a = true;
             param2.field_w = 1;
             param2.field_n = true;
             tk.a(1, jc.field_c, 31, true);
@@ -54,8 +54,8 @@ final class vh {
               Math.abs(var4) <= 512) {
               param2.field_e = param2.field_e - 1;
               if (param2.field_e < 0) {
-                mm.field_m[ProxySocketFactory.field_j] = new oj(param2.field_j, 3, rl.field_c);
-                mm.field_m[ProxySocketFactory.field_j].field_M = 0;
+                TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param2.field_j, 3, rl.field_c);
+                TextHotspotBounds.field_m[ProxySocketFactory.field_j].field_M = 0;
                 ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
                 param2.field_e = 100;
               }
@@ -140,7 +140,7 @@ final class vh {
             }
             param2.c((byte) -86);
             for (var3_intLifetime1 = 0; 10 > var3_intLifetime1; var3_intLifetime1++) {
-              mm.field_m[ProxySocketFactory.field_j] = new oj(param2.field_j, 3, rl.field_c);
+              TextHotspotBounds.field_m[ProxySocketFactory.field_j] = new oj(param2.field_j, 3, rl.field_c);
               ProxySocketFactory.field_j = ProxySocketFactory.field_j + 1;
             }
             if (bm.field_c == 0) {

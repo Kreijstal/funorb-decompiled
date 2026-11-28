@@ -70,7 +70,7 @@ final class bl extends IntrusiveNode {
     final static boolean a(byte param0) {
         if (param0 != -81) {
           bl.a((byte) -9);
-          if (kj.field_R < 20) {
+          if (RichTextWidget.field_R < 20) {
             return true;
           }
           if (!LoginPanel.h(param0 - 44)) {
@@ -84,7 +84,7 @@ final class bl extends IntrusiveNode {
           }
           return false;
         }
-        if (kj.field_R < 20) {
+        if (RichTextWidget.field_R < 20) {
           return true;
         }
         if (!LoginPanel.h(param0 - 44)) {

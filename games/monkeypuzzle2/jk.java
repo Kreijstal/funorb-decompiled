@@ -8,17 +8,17 @@ abstract class jk extends UiWidget implements ga {
     static int field_A;
     static PacketBuffer field_z;
     static PcmSampleStream[] field_C;
-    static a field_x;
+    static DefaultTextWidgetRenderer field_x;
     static String[] field_y;
     static int field_u;
     UiWidget field_v;
     static int field_w;
 
-    String a(byte param0) {
+    String getTooltipText(byte param0) {
         String var3 = null;
-        String var2 = super.a(param0);
+        String var2 = super.getTooltipText(param0);
         if (this.field_v != null) {
-          var3 = this.field_v.a((byte) 54);
+          var3 = this.field_v.getTooltipText((byte) 54);
           if (var3 != null) {
             return var3;
           }
@@ -62,7 +62,7 @@ abstract class jk extends UiWidget implements ga {
         if (param0 == -1) {
           return null;
         }
-        field_x = (a) null;
+        field_x = (DefaultTextWidgetRenderer) null;
         return null;
     }
 
@@ -449,7 +449,7 @@ abstract class jk extends UiWidget implements ga {
           wd.field_g = true;
           ud.field_b = param2;
           if (0 == ud.field_b) {
-            var3_int = aa.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
+            var3_int = TextLayout.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
             var4 = 3 + var3_int;
             gh.field_a = new int[var4];
             BoundedRandomAccessFile.field_k = new String[var4];
@@ -468,7 +468,7 @@ abstract class jk extends UiWidget implements ga {
             gh.field_a[-1 + var4] = 1;
             bi.field_B[1] = 5;
           } else if (ud.field_b == 1) {
-            var3_int = aa.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
+            var3_int = TextLayout.a(fe.field_a, rk.field_h, pc.field_P, true, vi.field_b);
             var4 = var3_int + 2;
             BoundedRandomAccessFile.field_k = new String[var4];
             gh.field_a = new int[var4];
@@ -486,9 +486,9 @@ abstract class jk extends UiWidget implements ga {
           } else if (ud.field_b != 2) {
             if (ud.field_b == 3) {
               if (rc.field_k.privilegedTasksEnabled) {
-                var3_int = aa.a(fe.field_a, rk.field_h, uc.field_d, true, vi.field_b);
+                var3_int = TextLayout.a(fe.field_a, rk.field_h, uc.field_d, true, vi.field_b);
               } else {
-                var3_int = aa.a(fe.field_a, rk.field_h, ld.field_b, true, vi.field_b);
+                var3_int = TextLayout.a(fe.field_a, rk.field_h, ld.field_b, true, vi.field_b);
               }
               var4 = 2 + var3_int;
               gh.field_a = new int[var4];
@@ -505,7 +505,7 @@ abstract class jk extends UiWidget implements ga {
               gh.field_a[-1 + var4] = 0;
               bi.field_B[0] = 5;
             } else if (ud.field_b == 4) {
-              var3_int = aa.a(fe.field_a, rk.field_h, pd.field_e, true, vi.field_b);
+              var3_int = TextLayout.a(fe.field_a, rk.field_h, pd.field_e, true, vi.field_b);
               var4 = var3_int + 2;
               BoundedRandomAccessFile.field_k = new String[var4];
               gh.field_a = new int[var4];
@@ -524,7 +524,7 @@ abstract class jk extends UiWidget implements ga {
               if (ud.field_b != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = aa.a(fe.field_a, rk.field_h, mg.field_r, true, vi.field_b);
+              var3_int = TextLayout.a(fe.field_a, rk.field_h, mg.field_r, true, vi.field_b);
               var4 = 3 + var3_int;
               gh.field_a = new int[var4];
               BoundedRandomAccessFile.field_k = new String[var4];
@@ -544,7 +544,7 @@ abstract class jk extends UiWidget implements ga {
               bi.field_B[1] = 5;
             }
           } else {
-            var3_int = aa.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, pd.field_h, true), true, vi.field_b);
+            var3_int = TextLayout.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, pd.field_h, true), true, vi.field_b);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(vi.field_b[var5])) {
@@ -560,7 +560,7 @@ abstract class jk extends UiWidget implements ga {
             gl.a(vi.field_b, 0, wi.field_b, 0, var4);
             ud.field_e = new String[-1 + var3_int - var4];
             gl.a(vi.field_b, 1 + var4, ud.field_e, 0, var3_int - var4 - 1);
-            var3_int = aa.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, wa.field_d, true), true, vi.field_b);
+            var3_int = TextLayout.a(fe.field_a, rk.field_h, gg.a(new String[]{"<br><%0><br>"}, wa.field_d, true), true, vi.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(vi.field_b[var5])) {

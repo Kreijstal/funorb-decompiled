@@ -327,7 +327,7 @@ final class da extends ue {
               } else {
                 var3_ref = go.field_k;
               }
-              var4_ref_String = me.field_d + "<br>" + vo.field_a + "<br>" + bh.field_a;
+              var4_ref_String = me.field_d + "<br>" + vo.field_a + "<br>" + TextLineMetrics.field_a;
               var3_ref = var4_ref_String;
               var3_ref = var4_ref_String;
             }

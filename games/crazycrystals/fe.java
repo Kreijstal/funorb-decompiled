@@ -151,7 +151,7 @@ final class fe extends ResultScenePhase {
         cb.field_n = new am(RawPcmStream.createForPlaybackRate(aq.field_t, 100, 0));
         tm.field_f = new am(RawPcmStream.createForPlaybackRate(qf.field_w, 100, 0));
         for (var1_int = 0; var1_int < 4; var1_int++) {
-          il.field_h[var1_int] = new am(RawPcmStream.createForPlaybackRate(fo.field_i[var1_int], 100, 0));
+          il.field_h[var1_int] = new am(RawPcmStream.createForPlaybackRate(TextHotspotBounds.field_i[var1_int], 100, 0));
         }
         if (param0 != 42806) {
           return;
@@ -167,7 +167,7 @@ final class fe extends ResultScenePhase {
           so.field_g = new am(RawPcmStream.createForPlaybackRate(oa.field_e, 100, 0));
           fn.field_h = new am(RawPcmStream.createForPlaybackRate(gk.field_j, 100, 0));
           FullscreenFocusCanvas.field_c = new am(RawPcmStream.createForPlaybackRate(MouseWheelInput.field_k, (int)(Math.random() * 11.0) + 95, 0));
-          cn.field_e = new am(RawPcmStream.createForPlaybackRate(lb.field_d, 95 + (int)(Math.random() * 11.0), 0));
+          cn.field_e = new am(RawPcmStream.createForPlaybackRate(DefaultTextWidgetRenderer.field_d, 95 + (int)(Math.random() * 11.0), 0));
           jj.field_c = new am(RawPcmStream.createForPlaybackRate(an.field_s, 100, 0));
           m.field_n = new am(RawPcmStream.createForPlaybackRate(cl.field_m, 100, 0));
           MouseInputHandler.field_d = new am(RawPcmStream.createForPlaybackRate(ab.field_z, 100, 0));

@@ -23,7 +23,7 @@ final class RaiseAnimation extends EventAnimation {
           al.a(87, this.field_w.moveId);
           while (var3_ref != null) {
             var6 = var3_ref.target.resolveCreatureView(-27449, this.screen);
-            var6.b(-1, 19);
+            var6.playAnimation(-1, 19);
             var6.a(24831, 105, gb.field_i);
             var3_ref.apply(var2, this.screen.field_h, 12);
             var3_ref = (EventEffect) (this.field_w.effects.nextForward(0));
@@ -37,7 +37,7 @@ final class RaiseAnimation extends EventAnimation {
         al.a(87, this.field_w.moveId);
         while (var3_refLifetime1 != null) {
           var7 = var3_refLifetime1.target.resolveCreatureView(-27449, this.screen);
-          var7.b(-1, 19);
+          var7.playAnimation(-1, 19);
           var7.a(24831, 105, gb.field_i);
           var3_refLifetime1.apply(var2, this.screen.field_h, 12);
           var3_refLifetime1 = (EventEffect) (this.field_w.effects.nextForward(0));
@@ -46,10 +46,10 @@ final class RaiseAnimation extends EventAnimation {
 
     final static int a(int param0, int param1, int param2, boolean param3) {
         if (param0 == 8192) {
-          return fda.b(param0 ^ 8193);
+          return RemoveDefeatedCreatureEffect.b(param0 ^ 8193);
         }
         RaiseAnimation.a(-21, 118, 114, true);
-        return fda.b(param0 ^ 8193);
+        return RemoveDefeatedCreatureEffect.b(param0 ^ 8193);
     }
 
     final boolean isFinished(byte param0) {

@@ -230,7 +230,7 @@ final class DiskCacheWorker implements Runnable {
         ok.field_a.moveAllToFront(ri.field_b, 0);
         wd.field_h.moveAllToFront(ri.field_b, 0);
         rf.field_a.moveAllToFront(aj.field_b, param0 + param0);
-        sb.field_m.bindAsRenderTarget();
+        RichTextLayout.field_m.bindAsRenderTarget();
         SoftwareRasterizer.clearRaster();
         ac.field_a.setAsRasterTarget((byte) 114);
         ek.field_b = 0;

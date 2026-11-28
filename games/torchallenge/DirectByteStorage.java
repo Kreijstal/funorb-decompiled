@@ -42,12 +42,12 @@ final class DirectByteStorage extends ByteStorage {
           if (!gh.field_x &&
             !param0) {
             k.field_b[vj.field_c] = p.a(k.field_b[vj.field_c], 1 << ea.field_e);
-            qi.a(false);
+            TextLineMetrics.a(false);
           }
           if (gh.field_x &&
             !param0) {
             hk.field_c[vj.field_c] = p.a(hk.field_c[vj.field_c], 1 << -6 + ea.field_e);
-            qi.a(false);
+            TextLineMetrics.a(false);
           }
           var3_int = 28;
           if (null == hf.field_d ||
@@ -230,7 +230,7 @@ final class DirectByteStorage extends ByteStorage {
         }
         qa.field_f = param1;
         ai.field_d = param0;
-        lg.field_f = param3;
+        TextLayout.field_f = param3;
     }
 
     final static int a(byte param0, int param1) {

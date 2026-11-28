@@ -231,12 +231,12 @@ final class vd {
 
     final static void a(boolean param0, int param1, String param2) {
         try {
-          jc.field_j = param0;
+          DefaultTextWidgetRenderer.field_j = param0;
           if (param1 != -536866817) {
             field_e = (String[]) null;
           }
           oe.field_p = true;
-          oj.field_q = new dh(bm.field_d, qc.field_b, param2, vh.field_j, jc.field_j);
+          oj.field_q = new dh(bm.field_d, qc.field_b, param2, vh.field_j, DefaultTextWidgetRenderer.field_j);
           bm.field_d.b((byte) 74, (pj) (oj.field_q));
         } catch (RuntimeException runtimeException) {
           throw dd.wrapClientException((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

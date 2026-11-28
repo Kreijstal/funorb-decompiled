@@ -13,7 +13,7 @@ final class gl extends InteractiveWidget {
         field_G = null;
     }
 
-    final String b(byte param0) {
+    final String getTooltipText(byte param0) {
         if (this.field_j) {
           return this.field_F.getValidationMessage(26766);
         }

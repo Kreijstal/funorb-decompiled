@@ -16,7 +16,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             this.onTextSubmitted((EditableTextField) null, (byte) 107);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "gf.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -38,7 +38,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
         try {
           this.field_i = param0;
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -50,7 +50,7 @@ abstract class TextFieldValidator extends DebouncedFieldValidator implements Tex
             this.onTextSubmitted((EditableTextField) null, (byte) 9);
           }
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "gf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "gf.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

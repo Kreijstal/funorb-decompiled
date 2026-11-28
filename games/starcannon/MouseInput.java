@@ -58,7 +58,7 @@ final class MouseInput implements java.awt.event.MouseListener, java.awt.event.M
           if (rc.field_d != null) {
             pg.field_g = 0;
             fb.field_j = param0.getX();
-            oi.field_f = param0.getY();
+            TextHotspotBounds.field_f = param0.getY();
             dd.correctedCurrentTimeMillis(68);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               na.field_c = 2;

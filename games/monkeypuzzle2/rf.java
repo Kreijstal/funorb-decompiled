@@ -62,11 +62,11 @@ abstract class rf {
             if (var19 == 0) {
               if (stackIn_10_0) {
                 var12 = AccountRegistrationPanel.field_L[var9];
-                var13 = sb.field_l[var9];
+                var13 = RichTextLayout.field_l[var9];
                 var14 = -var12 + AccountRegistrationPanel.field_L[var10];
                 var15 = -var12 + AccountRegistrationPanel.field_L[var11];
-                var16 = sb.field_l[var10] - var13;
-                var17 = sb.field_l[var11] - var13;
+                var16 = RichTextLayout.field_l[var10] - var13;
+                var17 = RichTextLayout.field_l[var11] - var13;
               }
               if (!stackIn_10_0 ||
                 !(var17 * var14 - var16 * var15 >= 0)) {

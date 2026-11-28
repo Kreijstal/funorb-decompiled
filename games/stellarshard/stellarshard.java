@@ -567,7 +567,7 @@ public final class stellarshard extends rb implements cf {
           } while (var12 == 0);
           do {
             if (!(var6_float <= 40.0f)) {
-              pd.field_h.a((byte) -107);
+              RichTextLayout.field_h.a((byte) -107);
               ei.field_D = new Sprite[12];
               fk.field_k = new int[48];
               break;
@@ -647,7 +647,7 @@ public final class stellarshard extends rb implements cf {
                 continue;
               }
             } else {
-              pd.field_h.a((byte) -107);
+              RichTextLayout.field_h.a((byte) -107);
               stackIn_62_0 = 22050;
               stackIn_62_1 = 0;
             }
@@ -2959,7 +2959,7 @@ public final class stellarshard extends rb implements cf {
           IsaacRandom.clearStaticReferences(124);
           tg.clearStaticReferences((byte) 0);
           dj.clearStaticReferences(4);
-          id.clearStaticReferences(param0 + 1392322593);
+          DefaultTextWidgetRenderer.clearStaticReferences(param0 + 1392322593);
           wh.b(-1);
           n.c((byte) -11);
           fl.clearStaticReferences(43);
@@ -2981,7 +2981,7 @@ public final class stellarshard extends rb implements cf {
           tc.clearDeclaredStaticReferences(-64);
           hh.clearStaticReferences(25434);
           df.clearStaticReferences(11324);
-          vk.clearDeclaredStaticReferences((byte) 112);
+          TextLayout.clearDeclaredStaticReferences((byte) 112);
           UiWidget.b(true);
           InteractiveWidget.clearDeclaredStaticReferences(-8278);
           dg.clearStaticReferences(32);
@@ -3010,7 +3010,7 @@ public final class stellarshard extends rb implements cf {
           wl.clearStaticReferences(115);
           nc.clearStaticReferences(true);
           NameSuggestionsPanel.clearStaticReferences(160);
-          rg.clearStaticReferences(true);
+          RichTextWidget.clearStaticReferences(true);
           ii.clearStaticReferences((byte) 25);
           cd.clearStaticReferences((byte) 122);
           nd.clearStaticReferences(-94);
@@ -3021,7 +3021,7 @@ public final class stellarshard extends rb implements cf {
           nb.clearStaticReferences((byte) 105);
           SoundFilter.clearStaticReferences();
           sg.clearStaticReferences(-29297);
-          pd.clearStaticReferences((byte) 117);
+          RichTextLayout.clearStaticReferences((byte) 117);
           DirectByteStorage.c(-17002);
           ol.resetStaticState(true);
           dl.clearDeclaredStaticReferences(80);
@@ -3064,7 +3064,7 @@ public final class stellarshard extends rb implements cf {
           ma.clearStaticReferences((byte) 6);
           mk.clearStaticReferences((byte) -64);
           le.a(param0 ^ 63);
-          uj.clearStaticReferences(0);
+          TextLineMetrics.clearStaticReferences(0);
           AccountNameAvailabilityValidator.clearStaticReferences(false);
           PasswordValidator.clearDeclaredStaticReferences(3988);
           EmailFormatValidator.g(21403);
@@ -3072,7 +3072,7 @@ public final class stellarshard extends rb implements cf {
           AgeValidator.clearStaticReferences((byte) -61);
           MatchingFieldValidator.g((byte) 117);
           rd.a((byte) -83);
-          ja.clearStaticReferences((byte) -121);
+          TextHotspotBounds.clearStaticReferences((byte) -121);
           cg.clearStaticReferences(param0 - 26686);
           DebouncedFieldValidator.d((byte) 37);
           wb.clearStaticReferences(param0 ^ 61);
@@ -3239,7 +3239,7 @@ public final class stellarshard extends rb implements cf {
                             oe.field_a = LevelScreen.a(576, var4_ref2, "music/Stellar_Shard_ingame", PacketBuffer.field_n, "");
                           }
                           PacketBuffer.field_n = null;
-                          rg.g(-33);
+                          RichTextWidget.g(-33);
                           return;
                         }
                         rd.a((byte) -115, 60.0f, ak.a("", he.field_o, jf.field_m, (byte) 51, DisplayNameSelectionPanel.field_B));
@@ -3289,7 +3289,7 @@ public final class stellarshard extends rb implements cf {
               wh.a(-124);
             }
             hf.field_f = true;
-            rg.g(-33);
+            RichTextWidget.g(-33);
             return;
           }
           if (null == cm.field_d[0]) {
@@ -3324,9 +3324,9 @@ public final class stellarshard extends rb implements cf {
                 return;
               }
             }
-            pd.field_h.a((byte) -107);
+            RichTextLayout.field_h.a((byte) -107);
             cg.field_c = 0;
-            rg.g(-33);
+            RichTextWidget.g(-33);
             return;
           }
           if (cg.field_c < 16) {
@@ -3467,7 +3467,7 @@ public final class stellarshard extends rb implements cf {
               break;
             }
             if (decompiledNaturalLoopExit2) {
-              pd.field_h.a((byte) -107);
+              RichTextLayout.field_h.a((byte) -107);
               stackIn_177_0 = ~cg.field_c;
               stackIn_177_1 = -16;
             }
@@ -3476,7 +3476,7 @@ public final class stellarshard extends rb implements cf {
               jf.field_m = null;
             }
             cg.field_c = cg.field_c + 1;
-            rg.g(-33);
+            RichTextWidget.g(-33);
             return;
           }
           if (null == l.field_f) {
@@ -3578,7 +3578,7 @@ public final class stellarshard extends rb implements cf {
             var4_array[6] = DiskArchiveRequest.a("keyboard_down", bh.field_a, (byte) 126, "");
             qj.field_a.setInlineSprites(var4_array, var5_ref_int__);
             l.field_f = EditableTextField.a("", "b122", bh.field_a, -117, MouseHandler.field_d);
-            rg.g(-33);
+            RichTextWidget.g(-33);
             return;
           }
           rd.a((byte) -65, 99.0f, ua.field_g);
@@ -3664,7 +3664,7 @@ public final class stellarshard extends rb implements cf {
                   }
 
                 }
-                pd.field_h.a((byte) -107);
+                RichTextLayout.field_h.a((byte) -107);
                 var5++;
                 continue;
               }
@@ -3674,7 +3674,7 @@ public final class stellarshard extends rb implements cf {
               bh.field_a = null;
               stackIn_275_0 = -33;
             }
-            rg.g(stackIn_275_0);
+            RichTextWidget.g(stackIn_275_0);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4085,7 +4085,7 @@ public final class stellarshard extends rb implements cf {
             while (var4 < 0) {
               incrementValue$0 = var3;
               var3++;
-              this.field_F.field_z[incrementValue$0] = pd.field_h.field_e[incrementValue$0];
+              this.field_F.field_z[incrementValue$0] = RichTextLayout.field_h.field_e[incrementValue$0];
               var4++;
               if (var20 != 0) {
                 decompiledFrameCompleted6 = false;
@@ -4168,7 +4168,7 @@ public final class stellarshard extends rb implements cf {
               if (this.field_G != null) {
                 this.field_G.bindAsRenderTarget();
                 SoftwareRasterizer.fillRectangle(0, 0, 640, 480, 0);
-                pd.field_h.a((byte) -107);
+                RichTextLayout.field_h.a((byte) -107);
                 if (var20 != 0) {
                   this.field_G = new Sprite(640, 480);
                 }
@@ -4322,7 +4322,7 @@ public final class stellarshard extends rb implements cf {
                       var7Lifetime1Lifetime1 = var5_int * 4;
                     }
                     var9Lifetime1 = (int)((Math.exp((double)((float)(-var5_int) / 20.0f)) - Math.exp((double)((float)(-var6_intLifetime1) / 20.0f))) * 200.0);
-                    ja.a(320, 2 * var5_int, var8Lifetime1, 240, false, var9Lifetime1, 256, 1);
+                    TextHotspotBounds.a(320, 2 * var5_int, var8Lifetime1, 240, false, var9Lifetime1, 256, 1);
                   }
                 }
               }
@@ -4480,7 +4480,7 @@ public final class stellarshard extends rb implements cf {
                 var8Lifetime3 += 5;
               }
               if (e.field_e == 9) {
-                var7_ref = ja.field_k;
+                var7_ref = TextHotspotBounds.field_k;
                 var8Lifetime3 += 5;
               }
               if (10 == e.field_e) {
@@ -4756,7 +4756,7 @@ public final class stellarshard extends rb implements cf {
               SoftwareRasterizer.fillRectangleAlpha(0, 0, 150, 480, 0, 64);
               SoftwareRasterizer.drawRectangleOutline(0, 0, 150, 480, 16777215);
             }
-            if (id.b(param0 ^ 20876) &&
+            if (DefaultTextWidgetRenderer.b(param0 ^ 20876) &&
               !fd.d((byte) -21)) {
               if (null != DualLinkDequeIterator.field_e) {
                 stackIn_511_0 = true;
@@ -4770,7 +4770,7 @@ public final class stellarshard extends rb implements cf {
             } else {
               stackIn_516_0 = DualLinkDequeIterator.field_e;
             }
-            pd.a((java.awt.Canvas) (stackIn_516_0), 0, 0, (byte) -73);
+            RichTextLayout.a((java.awt.Canvas) (stackIn_516_0), 0, 0, (byte) -73);
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4820,7 +4820,7 @@ public final class stellarshard extends rb implements cf {
           if (null != ld.field_G) {
             le.a(ld.field_G, 26949);
             ld.field_G = null;
-            rg.g(-33);
+            RichTextWidget.g(-33);
           }
           bh.field_a = wl.a(1, 1);
           wk.field_a = wl.a(1, 2);

@@ -121,7 +121,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_unable", (byte) 112);
                 if (null != var2) {
-                  nj.field_j = eg.a(126, var2);
+                  TextHotspotBounds.field_j = eg.a(126, var2);
                 }
                 var2 = kb.a("create_ineligible", (byte) 121);
                 if (null != var2) {
@@ -1159,7 +1159,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("connectionlost_withreason", (byte) 122);
                 if (null != var2) {
-                  ol.field_e = eg.a(126, var2);
+                  TextLineMetrics.field_e = eg.a(126, var2);
                 }
                 var2 = kb.a("passwordverificationrequired", (byte) 109);
                 if (null != var2) {
@@ -1498,7 +1498,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_more_suggestions", (byte) 110);
                 if (null != var2) {
-                  nj.field_p = eg.a(122, var2);
+                  TextHotspotBounds.field_p = eg.a(122, var2);
                 }
                 var2 = kb.a("create_select_alternative", (byte) 118);
                 if (null != var2) {
@@ -1946,7 +1946,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("fullscreen", (byte) 116);
                 if (null != var2) {
-                  nj.field_m = eg.a(116, var2);
+                  TextHotspotBounds.field_m = eg.a(116, var2);
                 }
                 var2 = kb.a("screensize", (byte) 106);
                 if (var2 != null) {
@@ -2544,27 +2544,27 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("quickchat_shortcut_keys,0", (byte) 119);
                 if (null != var2) {
-                  nj.field_k[0] = eg.a(99, var2);
+                  TextHotspotBounds.field_k[0] = eg.a(99, var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,1", (byte) 108);
                 if (var2 != null) {
-                  nj.field_k[1] = eg.a(110, var2);
+                  TextHotspotBounds.field_k[1] = eg.a(110, var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,2", (byte) 107);
                 if (var2 != null) {
-                  nj.field_k[2] = eg.a(SectorCacheStore.a(param0, 120), var2);
+                  TextHotspotBounds.field_k[2] = eg.a(SectorCacheStore.a(param0, 120), var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,3", (byte) 117);
                 if (var2 != null) {
-                  nj.field_k[3] = eg.a(99, var2);
+                  TextHotspotBounds.field_k[3] = eg.a(99, var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,4", (byte) 107);
                 if (null != var2) {
-                  nj.field_k[4] = eg.a(param0 + 87, var2);
+                  TextHotspotBounds.field_k[4] = eg.a(param0 + 87, var2);
                 }
                 var2 = kb.a("quickchat_shortcut_keys,5", (byte) 123);
                 if (var2 != null) {
-                  nj.field_k[5] = eg.a(param0 + 93, var2);
+                  TextHotspotBounds.field_k[5] = eg.a(param0 + 93, var2);
                 }
                 var2 = kb.a("keychar_the_character_under_questionmark", (byte) 105);
                 if (var2 != null) {
@@ -2700,7 +2700,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("fs_accept_afteraccept", (byte) 112);
                 if (null != var2) {
-                  nj.field_l = eg.a(param0 ^ 96, var2);
+                  TextHotspotBounds.field_l = eg.a(param0 ^ 96, var2);
                 }
                 var2 = kb.a("fs_button_cancel", (byte) 123);
                 if (null != var2) {

@@ -57,7 +57,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             }
           }
           this.releaseGame(84);
-          if (null != fda.field_j) {
+          if (null != RemoveDefeatedCreatureEffect.field_j) {
             try {
               System.exit(0);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
@@ -336,7 +336,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.net.URL stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fda.field_j != null) {
+          if (RemoveDefeatedCreatureEffect.field_j != null) {
             stackIn_2_0 = null;
             return (java.net.URL) (stackIn_2_0);
           }
@@ -422,7 +422,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fda.field_j != null) {
+          if (RemoveDefeatedCreatureEffect.field_j != null) {
             stackIn_4_0 = null;
             return (String) (stackIn_4_0);
           }
@@ -522,7 +522,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             if (param0 > -47) {
               this.stop();
             }
-            kt.field_i = BoardChangeAnimation.field_l;
+            SetMoveSlotCooldownEffect.field_i = BoardChangeAnimation.field_l;
           }
           this.update((byte) 120);
           return;
@@ -540,7 +540,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
         java.applet.AppletContext stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (fda.field_j != null) {
+          if (RemoveDefeatedCreatureEffect.field_j != null) {
             stackIn_4_0 = null;
             return (java.applet.AppletContext) (stackIn_4_0);
           }
@@ -576,21 +576,21 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             decompiledFrameRemainder0 = (var4 != 0);
           }
           if (decompiledFrameRemainder0) {
-            if (fda.field_j == null) {
+            if (RemoveDefeatedCreatureEffect.field_j == null) {
               if (null != ov.field_f) {
                 var2 = ov.field_f;
                 if (var4 != 0) {
                   var2 = re.field_C;
-                  var2 = fda.field_j;
+                  var2 = RemoveDefeatedCreatureEffect.field_j;
                 }
               } else {
                 var2 = re.field_C;
                 if (var4 != 0) {
-                  var2 = fda.field_j;
+                  var2 = RemoveDefeatedCreatureEffect.field_j;
                 }
               }
             } else {
-              var2 = fda.field_j;
+              var2 = RemoveDefeatedCreatureEffect.field_j;
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
@@ -598,13 +598,13 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) TBomberAnimation.field_y));
           TBomberAnimation.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
           TBomberAnimation.field_y.setVisible(true);
-          boolean decompiledSharedTail0 = (var2 == fda.field_j);
+          boolean decompiledSharedTail0 = (var2 == RemoveDefeatedCreatureEffect.field_j);
           if (!decompiledSharedTail0) {
             TBomberAnimation.field_y.setLocation(qw.field_d, wk.field_g);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
-            var3 = fda.field_j.getInsets();
+            var3 = RemoveDefeatedCreatureEffect.field_j.getInsets();
             TBomberAnimation.field_y.setLocation(var3.left + qw.field_d, var3.top + wk.field_g);
           }
           TBomberAnimation.field_y.addFocusListener((java.awt.event.FocusListener) (this));
@@ -613,7 +613,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             field_e = (String) null;
           }
           BoardChangeAnimation.field_l = true;
-          kt.field_i = true;
+          SetMoveSlotCooldownEffect.field_i = true;
           nf.field_K = true;
           daa.field_vb = false;
           gd.field_l = f.correctedCurrentTimeMillis((byte) 73);
@@ -733,7 +733,7 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
 
     public final java.net.URL getCodeBase() {
         RuntimeException var1;
-        if (fda.field_j != null) {
+        if (RemoveDefeatedCreatureEffect.field_j != null) {
           return null;
         }
         if (ov.field_f != null &&
@@ -801,9 +801,9 @@ public abstract class GameAppletShell extends java.applet.Applet implements Runn
             jc.field_v = jc.field_v - 50;
             TBomberAnimation.field_y.setSize(dda.field_j, MouseInputHandler.field_b);
             TBomberAnimation.field_y.setVisible(true);
-            if (fda.field_j != null &&
+            if (RemoveDefeatedCreatureEffect.field_j != null &&
               ve.field_n == null) {
-              var6 = fda.field_j.getInsets();
+              var6 = RemoveDefeatedCreatureEffect.field_j.getInsets();
               TBomberAnimation.field_y.setLocation(var6.left + qw.field_d, wk.field_g + var6.top);
               if (BachelorFridge.field_y != 0) {
                 TBomberAnimation.field_y.setLocation(qw.field_d, wk.field_g);

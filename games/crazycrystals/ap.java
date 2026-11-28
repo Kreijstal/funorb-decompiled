@@ -376,7 +376,7 @@ final class ap extends ob {
               }
               stackIn_67_0 = var7_ref;
             }
-            rf.a(stackIn_67_0, var6_ref, 47);
+            RichTextWidget.a(stackIn_67_0, var6_ref, 47);
             if (var8 == 0) {
               return;
             }

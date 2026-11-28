@@ -321,11 +321,11 @@ final class hh {
           if (param8 != -1) {
             hh.clearStaticReferences(114);
           }
-          mb.field_p = param1;
+          RichTextLayout.field_p = param1;
           ProxyAuthenticationRequiredException.field_c = param7;
           ByteStorage.field_a = param0;
           ik.field_a = param3;
-          mm.field_s = param5;
+          TextHotspotBounds.field_s = param5;
           EditableTextField.field_N = (ej) ((Object) new ih());
           GameCanvas.field_c = new DiskCacheWorker(param2);
           sj.field_a = new sg(EditableTextField.field_N, GameCanvas.field_c);
@@ -373,7 +373,7 @@ final class hh {
           if (param0) {
             field_d = -42;
           }
-          var7 = mm.field_m[0].field_j.getClampedTileIndex(-4);
+          var7 = TextHotspotBounds.field_m[0].field_j.getClampedTileIndex(-4);
           for (var8_int = 0; var8_int < 10; var8_int++) {
             regionExit1: {
               param1.field_l.b(var5, param1.field_c, 127);
@@ -437,7 +437,7 @@ final class hh {
             if (param1.field_e < 90) {
               for (var10Lifetime1 = 0; ProxySocketFactory.field_j > var10Lifetime1; var10Lifetime1++) {
                 boolean decompiledFrameRemainder0 = true;
-                var11 = mm.field_m[var10Lifetime1];
+                var11 = TextHotspotBounds.field_m[var10Lifetime1];
                 var12Lifetime1 = 0;
                 if (var11 != null &&
                   var11.field_b) {

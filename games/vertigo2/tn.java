@@ -181,7 +181,7 @@ final class tn {
         }
     }
 
-    final static void a(lq param0, String param1, BitmapFont param2, byte param3, int param4) {
+    final static void a(TextLineMetrics param0, String param1, BitmapFont param2, byte param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -302,7 +302,7 @@ final class tn {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$95d5eaff65e7(lq param0, String param1, BitmapFont param2, int param3, int param4) {
+    final static void $cfr$intArgs$a$95d5eaff65e7(TextLineMetrics param0, String param1, BitmapFont param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;

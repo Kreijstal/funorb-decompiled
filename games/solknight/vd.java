@@ -137,7 +137,7 @@ final class vd {
             if (var7 != 0) {
               if (var7 >= 128 &&
                 var7 < 160) {
-                var8 = vk.field_e[-128 + var7];
+                var8 = RichTextLayout.field_e[-128 + var7];
                 if (var8 == 0) {
                   var8 = 63;
                 }

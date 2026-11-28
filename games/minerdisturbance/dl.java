@@ -181,9 +181,9 @@ final class dl {
 
     final static void a(java.awt.Component param0, byte param1) {
         try {
-          param0.addMouseListener(lb.field_y);
-          param0.addMouseMotionListener(lb.field_y);
-          param0.addFocusListener(lb.field_y);
+          param0.addMouseListener(TextHotspotBounds.field_y);
+          param0.addMouseMotionListener(TextHotspotBounds.field_y);
+          param0.addFocusListener(TextHotspotBounds.field_y);
           if (param1 != 73) {
             field_a = (String) null;
           }

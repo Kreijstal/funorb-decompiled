@@ -32,24 +32,24 @@ final class EffectBatchAnimation extends AnimationNode {
           var3_ref_ad = var2.target.resolveCreatureView(-27449, this.field_l);
           if (var3_ref_ad != null) {
             var2.apply((BattleCreature) null, this.field_l.field_h, 12);
-            if (var2 instanceof mh) {
-              this.addChild(27799, new jk(this.field_l, var3_ref_ad, (mh) (var2)));
+            if (var2 instanceof CreaturePoseEffect) {
+              this.addChild(27799, new CreaturePoseAnimation(this.field_l, var3_ref_ad, (CreaturePoseEffect) (var2)));
             }
-            if (!(var2 instanceof ks)) {
-              if (var2 instanceof kt) {
-                var4 = al.a(101, var3_ref_ad.field_s.field_o.field_g.field_b[var3_ref_ad.field_s.field_m[((kt) (var2)).field_l]]);
+            if (!(var2 instanceof ClearCreatureStatusEffect)) {
+              if (var2 instanceof SetMoveSlotCooldownEffect) {
+                var4 = al.a(101, var3_ref_ad.field_s.field_o.field_g.field_b[var3_ref_ad.field_s.field_m[((SetMoveSlotCooldownEffect) (var2)).field_l]]);
                 if (this.field_l.field_n == var3_ref_ad.field_s.ownerIndex) {
                   var3_ref_ad.a(24831, 97, lga.a(true, new String[]{var4.name}, rh.field_a));
                 }
               } else {
                 if (var2.field_f >= 0) {
                   if (0 >= var2.field_f) {
-                    if (var2 instanceof lia) {
-                      if (-1 == ((lia) (var2)).field_k) {
+                    if (var2 instanceof ChangeHealthAndStatusEffect) {
+                      if (-1 == ((ChangeHealthAndStatusEffect) (var2)).field_k) {
                         var2 = (EventEffect) (this.field_j.field_m.nextForward(0));
                         continue;
                       }
-                      var3_ref_ad.a(24831, 17, kna.field_g[((lia) (var2)).field_k]);
+                      var3_ref_ad.a(24831, 17, kna.field_g[((ChangeHealthAndStatusEffect) (var2)).field_k]);
                     }
                   } else {
                     this.addChild(27799, new DamagePopupAnimation(this.field_l, var3_ref_ad, var2.field_f));

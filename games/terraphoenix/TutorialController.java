@@ -691,7 +691,7 @@ final class TutorialController {
           var5 = 1;
           var4 = 1;
         }
-        ld.field_a = MouseWheelInput.a(var5 * var2, var2 * var4, 0);
+        TextLayout.field_a = MouseWheelInput.a(var5 * var2, var2 * var4, 0);
     }
 
     final void a(boolean param0) {
@@ -1345,7 +1345,7 @@ final class TutorialController {
                         this.field_r = 4;
                         if (AccountRequestState.field_d > 0) {
                           this.field_r = ProxySocketConnector.field_i;
-                          this.field_C = ld.field_e;
+                          this.field_C = TextLayout.field_e;
                         }
                         if (!param0) {
                           this.field_A.a(29518, -2);

@@ -96,7 +96,7 @@ final class SpriteLoader {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -7351) {
-            stackIn_4_0 = df.a(param1, 0, false);
+            stackIn_4_0 = RichTextWidget.a(param1, 0, false);
             return stackIn_4_0;
           }
           return true;

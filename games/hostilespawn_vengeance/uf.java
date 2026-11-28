@@ -267,7 +267,7 @@ final class uf extends ql {
         GridPoint var4;
         int var3Lifetime1;
         int var3Lifetime2;
-        var4 = new GridPoint(mm.field_m[0].field_j);
+        var4 = new GridPoint(TextHotspotBounds.field_m[0].field_j);
         if (param0 != -1) {
           return;
         }

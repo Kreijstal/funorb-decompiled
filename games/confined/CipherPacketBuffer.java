@@ -41,7 +41,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           int var3_int = -124 % ((17 - param1) / 51);
           this.field_q = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "hb.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "hb.OA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -82,16 +82,16 @@ final class CipherPacketBuffer extends PacketBuffer {
             return;
           }
           LightningArc.field_qb = LightningArc.field_qb + 1;
-          if (-1 == c.field_t &&
+          if (-1 == RichTextLayout.field_t &&
             -1 == AcceleratingProjectile.field_Q) {
-            c.field_t = ld.field_l;
+            RichTextLayout.field_t = ld.field_l;
             AcceleratingProjectile.field_Q = jh.field_R;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
-            decompiledFrameRemainder0 = !(param1.equals(vf.field_o));
+            decompiledFrameRemainder0 = !(param1.equals(DefaultTextWidgetRenderer.field_o));
           } else {
-            decompiledFrameRemainder0 = (vf.field_o == null);
+            decompiledFrameRemainder0 = (DefaultTextWidgetRenderer.field_o == null);
           }
           if (decompiledFrameRemainder0) {
             if (!DampedProjectile.field_R) {
@@ -124,23 +124,23 @@ final class CipherPacketBuffer extends PacketBuffer {
                 DampedProjectile.field_R = true;
               }
             }
-            nm.field_I = c.field_t;
+            nm.field_I = RichTextLayout.field_t;
             he.field_f = AcceleratingProjectile.field_Q;
           }
-          vf.field_o = param1;
+          DefaultTextWidgetRenderer.field_o = param1;
           if (!DampedProjectile.field_R &&
             LightningArc.field_qb < kc.field_t &&
             GameSession.field_D) {
             LightningArc.field_qb = 0;
             he.field_f = AcceleratingProjectile.field_Q;
-            nm.field_I = c.field_t;
+            nm.field_I = RichTextLayout.field_t;
           }
           if (DampedProjectile.field_R &&
             LightningArc.field_qb == qa.field_f) {
             LightningArc.field_qb = 0;
             DampedProjectile.field_R = false;
           }
-          c.field_t = -1;
+          RichTextLayout.field_t = -1;
           AcceleratingProjectile.field_Q = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,7 +153,7 @@ final class CipherPacketBuffer extends PacketBuffer {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 

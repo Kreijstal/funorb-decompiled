@@ -3,7 +3,7 @@
  */
 final class AccountCreationResultPanel extends na implements WidgetActivationListener {
     static RgbSprite[] field_qb;
-    static lb field_lb;
+    static DefaultTextWidgetRenderer field_lb;
     private boolean field_ob;
     static am field_mb;
     private AccountRegistrationPanel field_pb;

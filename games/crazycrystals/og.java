@@ -215,7 +215,7 @@ class og extends qm implements he {
         }
     }
 
-    final String a(byte param0) {
+    final String getTooltipText(byte param0) {
         tm var2;
         qm var3;
         String var4;
@@ -227,7 +227,7 @@ class og extends qm implements he {
           return (String) null;
         }
         while (var3 != null) {
-          var4 = var3.a((byte) -110);
+          var4 = var3.getTooltipText((byte) -110);
           if (var4 != null) {
             return var4;
           }

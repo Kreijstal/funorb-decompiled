@@ -208,10 +208,10 @@ final class PasswordValidator extends TextFieldValidator {
             var7 = fb.field_d[var4];
             if (IntrusiveDeque.field_a == 2 &&
               var2 == 1) {
-              if (j.field_o.length < uk.field_a.length) {
+              if (RichTextLayout.field_o.length < uk.field_a.length) {
                 stackIn_18_0 = uk.field_a.length;
               } else {
-                stackIn_18_0 = j.field_o.length;
+                stackIn_18_0 = RichTextLayout.field_o.length;
               }
               var8 = stackIn_18_0;
               if (oe.field_c.length < SecondaryNodeDequeIterator.field_g.length) {
@@ -222,10 +222,10 @@ final class PasswordValidator extends TextFieldValidator {
               var9 = stackIn_21_0;
               if (var4 >= 6 &&
                 var4 < var8 + 6) {
-                if (-var8 + (var4 + (-6 + j.field_o.length)) < 0) {
+                if (-var8 + (var4 + (-6 + RichTextLayout.field_o.length)) < 0) {
                   stackIn_27_0 = "";
                 } else {
-                  stackIn_27_0 = j.field_o[-var8 + (j.field_o.length + (var4 - 6))];
+                  stackIn_27_0 = RichTextLayout.field_o[-var8 + (RichTextLayout.field_o.length + (var4 - 6))];
                 }
                 var7 = stackIn_27_0;
               }

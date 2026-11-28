@@ -219,7 +219,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         we.field_g[pf.field_o] = param2;
         if (rb.field_a >= param2) {
           if (param2 < DisplayNameSelectionPanel.field_D) {
-            ve.field_d = param2;
+            TextLayout.field_d = param2;
           }
           l.field_D[pf.field_o] = param5;
           oc.field_a[pf.field_o] = param0;
@@ -232,8 +232,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
           }
           var7 = stackIn_23_0;
           oj.field_j[pf.field_o] = var7;
-          if (ve.field_d > var7) {
-            ve.field_d = var7;
+          if (TextLayout.field_d > var7) {
+            TextLayout.field_d = var7;
           }
           if (var7 > l.field_G) {
             l.field_G = var7;
@@ -243,7 +243,7 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
         l.field_G = param2;
         if (param2 < DisplayNameSelectionPanel.field_D) {
-          ve.field_d = param2;
+          TextLayout.field_d = param2;
         }
         l.field_D[pf.field_o] = param5;
         oc.field_a[pf.field_o] = param0;
@@ -256,8 +256,8 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         }
         var7Lifetime1 = stackIn_7_0;
         oj.field_j[pf.field_o] = var7Lifetime1;
-        if (ve.field_d > var7Lifetime1) {
-          ve.field_d = var7Lifetime1;
+        if (TextLayout.field_d > var7Lifetime1) {
+          TextLayout.field_d = var7Lifetime1;
         }
         if (var7Lifetime1 > l.field_G) {
           l.field_G = var7Lifetime1;

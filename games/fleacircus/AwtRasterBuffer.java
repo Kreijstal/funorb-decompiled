@@ -22,7 +22,7 @@ abstract class AwtRasterBuffer {
 
     final static void a(byte param0, boolean param1, wk param2) {
         try {
-          mi.a((byte) 12, 256, param1, param2);
+          TextHotspotBounds.a((byte) 12, 256, param1, param2);
           if (param0 != 5) {
             AwtRasterBuffer.clearStaticReferences((byte) 91);
           }

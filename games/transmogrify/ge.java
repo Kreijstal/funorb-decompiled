@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ge extends aj implements hl, WidgetActivationListener {
-    private le field_z;
+final class ge extends aj implements TextHotspotListener, WidgetActivationListener {
+    private RichTextWidget field_z;
     static sh field_A;
     static boolean field_x;
     private InteractiveWidget field_y;
@@ -54,7 +54,7 @@ final class ge extends aj implements hl, WidgetActivationListener {
 
     public final void onWidgetActivated(InteractiveWidget param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        le var7 = null;
+        RichTextWidget var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -67,8 +67,8 @@ final class ge extends aj implements hl, WidgetActivationListener {
           if (param1 == 17) {
             return;
           }
-          var7 = (le) null;
-          this.a(93, -118, 33, (le) null);
+          var7 = (RichTextWidget) null;
+          this.onTextHotspotActivated(93, -118, 33, (RichTextWidget) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -104,7 +104,7 @@ final class ge extends aj implements hl, WidgetActivationListener {
         super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
-        h var4 = null;
+        DefaultTextWidgetRenderer var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -113,8 +113,8 @@ final class ge extends aj implements hl, WidgetActivationListener {
           this.field_y.field_q = (WidgetRenderer) ((Object) new qa());
           var7 = ij.a(ua.field_b, new String[]{this.l(300), this.m(-71)}, (byte) -123);
           var3 = 20;
-          var4 = new h(vd.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
-          this.field_z = new le(var7, var4);
+          var4 = new DefaultTextWidgetRenderer(vd.field_h, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
+          this.field_z = new RichTextWidget(var7, var4);
           this.field_z.field_j = "";
           this.field_z.a(mk.field_E, 0, 0);
           this.field_z.a(mk.field_E, 0, 1);
@@ -134,7 +134,7 @@ final class ge extends aj implements hl, WidgetActivationListener {
         }
     }
 
-    public final void a(int param0, int param1, int param2, le param3) {
+    public final void onTextHotspotActivated(int param0, int param1, int param2, RichTextWidget param3) {
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

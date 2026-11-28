@@ -19,7 +19,7 @@ final class ci {
           }
           int var2_int = -62 % ((param0 + 12) / 62);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "ci.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class ci {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -85,11 +85,11 @@ final class ci {
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (uj.field_b != null) {
-              for (var1_int = 0; uj.field_b.length > var1_int; var1_int++) {
-                if (uj.field_b[var1_int] != null) {
+            if (TextLayout.field_b != null) {
+              for (var1_int = 0; TextLayout.field_b.length > var1_int; var1_int++) {
+                if (TextLayout.field_b[var1_int] != null) {
                   try {
-                    uj.field_b[var1_int].close(false);
+                    TextLayout.field_b[var1_int].close(false);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;
@@ -102,7 +102,7 @@ final class ci {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw rb.wrapThrowable((Throwable) ((Object) var1), "ci.E(" + param0 + ')');
+            throw RichTextWidget.wrapThrowable((Throwable) ((Object) var1), "ci.E(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

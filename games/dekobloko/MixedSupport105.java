@@ -47,14 +47,14 @@ final class MixedSupport105 implements CallbackContract004 {
         RenderingSupport007 renderingSupport007Local6 = new RenderingSupport007(4);
         RenderingSupport007 renderingSupport007Local7 = renderingSupport007Local6;
         if (UiComponentPart023.computeBoolean1242(-30146)) {
-          gameDomainSupport002Local5 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, MixedSupport001.renderingSupport009State0001);
+          gameDomainSupport002Local5 = new GameDomainSupport002(20, UiComponentPart026.stringState0461, DefaultTextWidgetRenderer.renderingSupport009State0001);
           gameDomainSupport002Local5.integerState0174 = 320 - gameDomainSupport002Local5.integerState0176 / 2;
           gameDomainSupport002Local5.integerState0178 = 372;
           renderingSupport007Local7.performAction0852(gameDomainSupport002Local5, 122);
         } else {
-          renderingSupport007Local6.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[0], MixedSupport001.renderingSupport009State0001), 127);
-          renderingSupport007Local6.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[1], MixedSupport001.renderingSupport009State0001), 120);
-          renderingSupport007Local6.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[2], MixedSupport001.renderingSupport009State0001), 117);
+          renderingSupport007Local6.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[0], DefaultTextWidgetRenderer.renderingSupport009State0001), 127);
+          renderingSupport007Local6.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[1], DefaultTextWidgetRenderer.renderingSupport009State0001), 120);
+          renderingSupport007Local6.performAction0852(new GameDomainSupport002(22, MixedSupport115.stringArrayState0041[2], DefaultTextWidgetRenderer.renderingSupport009State0001), 117);
           gameDomainSupport002Local1 = renderingSupport007Local6.gameDomainSupport002ArrayState0001[0];
           GameDomainSupport002 gameDomainSupport002Local8 = gameDomainSupport002Local1;
           gameDomainSupport002Local2 = renderingSupport007Local6.gameDomainSupport002ArrayState0001[1];
@@ -70,7 +70,7 @@ final class MixedSupport105 implements CallbackContract004 {
           gameDomainSupport002Local4.integerState0178 = 372;
           gameDomainSupport002Local3.integerState0178 = 372;
         }
-        GameDomainSupport002 gameDomainSupport002Local9 = new GameDomainSupport002(13, MixedSupport096.stringState0411, MixedSupport001.renderingSupport009State0001);
+        GameDomainSupport002 gameDomainSupport002Local9 = new GameDomainSupport002(13, MixedSupport096.stringState0411, DefaultTextWidgetRenderer.renderingSupport009State0001);
         gameDomainSupport002Local9.integerState0174 = -(gameDomainSupport002Local9.integerState0176 / 2) + 320;
         gameDomainSupport002Local9.integerState0178 = 415;
         renderingSupport007Local7.performAction0852(gameDomainSupport002Local9, 115);

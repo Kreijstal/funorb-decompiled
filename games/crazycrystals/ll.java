@@ -78,7 +78,7 @@ final class ll {
             if (param0 >= -80) {
               return;
             }
-            bh.field_c = fn.field_j;
+            TextLineMetrics.field_c = fn.field_j;
             LoginPanel.field_I = mb.field_g;
             if (param2) {
               DebouncedFieldValidator.field_a = null;

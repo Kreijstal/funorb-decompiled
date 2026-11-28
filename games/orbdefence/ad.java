@@ -63,9 +63,9 @@ final class ad {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               uj.a((byte) -85, var15);
               if (var6_intLifetime1 != 0) {
-                a.a(var6_intLifetime1, cc.field_l, 9664, h.field_E, oh.field_b, fd.field_f);
+                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, h.field_E, oh.field_b, fd.field_f);
               } else {
-                a.a(var6_intLifetime1, cc.field_l, 9664, h.field_E, oh.field_b, fd.field_f);
+                a.a(var6_intLifetime1, TextHotspotBounds.field_l, 9664, h.field_E, oh.field_b, fd.field_f);
               }
             }
             fe.a(var5, true);

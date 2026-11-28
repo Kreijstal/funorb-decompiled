@@ -12,7 +12,7 @@ final class ej extends BoardChange {
         this.field_j = 7;
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         int var5 = 0;
         PlayerRoster var4 = null;
         int var6 = 0;
@@ -31,7 +31,7 @@ final class ej extends BoardChange {
           var8.field_T[this.field_m] = 0;
           if (param1 > -2) {
             var7 = (BattleState) null;
-            this.a(true, (BattleState) null);
+            this.applyToBattle(true, (BattleState) null);
           }
           var4 = param0.field_o.field_h.rosters[this.field_m];
           for (var5 = 0; var4.field_b.length > var5; var5++) {
@@ -39,7 +39,7 @@ final class ej extends BoardChange {
               param0.addChild(27799, new cb(param0.field_o.b(var4.field_b[var5], -23990), 5));
             }
           }
-          this.a(false, var9.field_h);
+          this.applyToBattle(false, var9.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -74,7 +74,7 @@ final class ej extends BoardChange {
         }
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         int var4 = 0;
         PlayerRoster var3 = null;
         int var5 = 0;
@@ -92,7 +92,7 @@ final class ej extends BoardChange {
           var3 = var7;
           if (param0) {
             var6 = (BattleState) null;
-            this.a(true, (BattleState) null);
+            this.applyToBattle(true, (BattleState) null);
           }
           for (var4 = 0; var3.field_b.length > var4; var4++) {
             if (null != var7.field_b[var4]) {
@@ -115,7 +115,7 @@ final class ej extends BoardChange {
         }
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -73 % ((param1 - 37) / 38);
           param0.writeByte(this.field_m, 0);

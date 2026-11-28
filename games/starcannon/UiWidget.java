@@ -11,7 +11,7 @@ class UiWidget extends IntrusiveNode {
     static String field_r;
     int field_f;
     int field_l;
-    bd field_m;
+    TextLayout field_m;
     int field_n;
     int field_j;
     boolean field_h;
@@ -456,7 +456,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    String d(int param0) {
+    String getTooltipText(int param0) {
         if (param0 != 12606) {
           return (String) null;
         }
@@ -500,7 +500,7 @@ class UiWidget extends IntrusiveNode {
           }
         }
         of.field_f = te.field_b;
-        qi.a((byte) -111, this.d(12606));
+        qi.a((byte) -111, this.getTooltipText(12606));
         if (param0 > -96) {
           this.toString();
         }
@@ -588,7 +588,7 @@ class UiWidget extends IntrusiveNode {
 
     UiWidget(String param0, de param1, qg param2) {
         RuntimeException runtimeException = null;
-        lg var4 = null;
+        TextWidgetRenderer var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -603,10 +603,10 @@ class UiWidget extends IntrusiveNode {
           this.field_g = param2;
           this.field_k = param0;
           this.field_o = param1;
-          if (this.field_o instanceof lg) {
-            var4 = (lg) ((Object) this.field_o);
-            this.field_i = var4.a(this, -26557);
-            this.field_f = var4.a(16293784, this);
+          if (this.field_o instanceof TextWidgetRenderer) {
+            var4 = (TextWidgetRenderer) ((Object) this.field_o);
+            this.field_i = var4.getPreferredWidth(this, -26557);
+            this.field_f = var4.getPreferredHeight(16293784, this);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

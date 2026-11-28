@@ -17,7 +17,7 @@ final class el {
             mm.a(false, h.field_d, 2, param1 + 5630, true, 2);
           }
           if (param0 == 1) {
-            mm.a(false, eg.field_p, 2, 1, true, 2);
+            mm.a(false, DefaultTextWidgetRenderer.field_p, 2, 1, true, 2);
           }
           return;
         }

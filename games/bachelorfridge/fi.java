@@ -827,7 +827,7 @@ final class fi extends BoardChange {
                 field_o = (String) null;
               }
               var3 = (String) (JavaScriptBridge.callWithoutArguments(param2, "getcookies", (byte) 64));
-              var4 = fda.a(-1, ';', var3);
+              var4 = RemoveDefeatedCreatureEffect.a(-1, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -867,7 +867,7 @@ final class fi extends BoardChange {
         }
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         BoardTile dupTemp$0 = null;
         try {
           if (param0) {
@@ -880,7 +880,7 @@ final class fi extends BoardChange {
         }
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         try {
           param0.writeByte(this.field_r, 0);
           param0.writeByte(this.field_q, 0);
@@ -890,7 +890,7 @@ final class fi extends BoardChange {
         }
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         BattleScreen var3 = null;
         aca var4 = null;
         try {
@@ -898,7 +898,7 @@ final class fi extends BoardChange {
           if (param1 >= -2) {
             field_o = (String) null;
           }
-          this.a(false, var3.field_h);
+          this.applyToBattle(false, var3.field_h);
           var4 = new aca(var3, this.field_r, this.field_q, false);
           ((TileEffect) ((Object) var4)).a(0);
           var3.field_s.field_F = 0;

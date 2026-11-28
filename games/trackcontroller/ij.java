@@ -56,7 +56,7 @@ final class ij implements t {
               if (param5) {
                 stackIn_26_0 = SpriteState.field_u[var12];
               } else {
-                stackIn_26_0 = va.field_e[var12];
+                stackIn_26_0 = TextLineMetrics.field_e[var12];
               }
               var13 = stackIn_26_0;
               if (var13 <= var7_int) {
@@ -360,8 +360,8 @@ final class ij implements t {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            el.field_O = new String[var4];
-            pd.a(ok.field_C, 0, el.field_O, 0, var4);
+            RichTextWidget.field_O = new String[var4];
+            pd.a(ok.field_C, 0, RichTextWidget.field_O, 0, var4);
             DisplayNameSelectionPanel.field_J = new String[-1 + var3_int - var4];
             pd.a(ok.field_C, var4 + 1, DisplayNameSelectionPanel.field_J, 0, var3_int - var4 - 1);
             var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, AccountRequestState.field_a), ok.field_C);
@@ -380,10 +380,10 @@ final class ij implements t {
             pd.a(ok.field_C, 0, jf.field_i, 0, var4);
             IntrusiveDequeCursor.field_c = new String[-var4 + var3_int - 1];
             pd.a(ok.field_C, 1 + var4, IntrusiveDequeCursor.field_c, 0, -1 + (var3_int - var4));
-            if (jf.field_i.length > el.field_O.length) {
+            if (jf.field_i.length > RichTextWidget.field_O.length) {
               stackIn_22_0 = jf.field_i.length;
             } else {
-              stackIn_22_0 = el.field_O.length;
+              stackIn_22_0 = RichTextWidget.field_O.length;
             }
             var5 = stackIn_22_0;
             if (IntrusiveDequeCursor.field_c.length <= DisplayNameSelectionPanel.field_J.length) {
@@ -443,7 +443,7 @@ final class ij implements t {
             }
           }
           if (2 == TextFieldValidator.field_h) {
-            var10 = el.field_O;
+            var10 = RichTextWidget.field_O;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];

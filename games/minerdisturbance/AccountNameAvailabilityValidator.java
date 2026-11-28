@@ -123,7 +123,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
               this.checkedName = param0;
               this.nameAvailable = var3.success;
             } else {
-              stackIn_9_0 = bm.field_o;
+              stackIn_9_0 = RichTextLayout.field_o;
               return stackIn_9_0;
             }
           }

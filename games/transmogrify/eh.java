@@ -5,12 +5,12 @@ import java.io.*;
 
 final class eh {
     private static long[] field_d;
-    static h field_e;
+    static DefaultTextWidgetRenderer field_e;
     static Sprite[] field_c;
     static int totalScore;
     static IndexedSprite[] field_b;
 
-    final static void a(ol param0, byte param1, String param2, BitmapFont param3, int param4) {
+    final static void a(TextLineMetrics param0, byte param1, String param2, BitmapFont param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -188,7 +188,7 @@ final class eh {
           }
           if (param0 < 97) {
             BitmapFont var4 = (BitmapFont) null;
-            eh.$cfr$intArgs$a$d8024809bc20((ol) null, 4, (String) null, (BitmapFont) null, -68);
+            eh.$cfr$intArgs$a$d8024809bc20((TextLineMetrics) null, 4, (String) null, (BitmapFont) null, -68);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -345,7 +345,7 @@ final class eh {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$d8024809bc20(ol param0, int param1, String param2, BitmapFont param3, int param4) {
+    final static void $cfr$intArgs$a$d8024809bc20(TextLineMetrics param0, int param1, String param2, BitmapFont param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

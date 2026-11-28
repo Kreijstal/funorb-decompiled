@@ -65,7 +65,7 @@ final class cha extends lw {
             param0 == 16) {
             this.b(1);
             this.c(98);
-            pea.d((byte) 120);
+            ConsumeCreatureRemainsEffect.d((byte) 120);
             return;
           }
           if (this.field_e == 1 &&
@@ -100,7 +100,7 @@ final class cha extends lw {
               param0 == 16) {
               this.b(1);
               this.c(98);
-              pea.d((byte) 120);
+              ConsumeCreatureRemainsEffect.d((byte) 120);
               return;
             }
             if (this.field_e != 1) {
@@ -174,7 +174,7 @@ final class cha extends lw {
             if (param0 == 16) {
               this.b(1);
               this.c(98);
-              pea.d((byte) 120);
+              ConsumeCreatureRemainsEffect.d((byte) 120);
               return;
             }
             if (this.field_e != 1) {

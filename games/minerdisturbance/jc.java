@@ -112,11 +112,11 @@ abstract class jc extends fe implements rk {
         }
     }
 
-    String h(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.h(param0);
+        String var2 = super.getTooltipText(param0);
         if (null != this.field_I) {
-          var3 = this.field_I.h(-27867);
+          var3 = this.field_I.getTooltipText(-27867);
           if (var3 != null) {
             return var3;
           }

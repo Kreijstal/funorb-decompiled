@@ -255,7 +255,7 @@ final class lfa extends k {
           pha.field_a = false;
           sia.field_h = true;
           kaa.field_m = -1;
-          dh.a((byte) 58, var2Lifetime1);
+          ArmPetAttackEffect.a((byte) 58, var2Lifetime1);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

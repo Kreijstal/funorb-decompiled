@@ -16,7 +16,7 @@ final class BirthDateTextFields extends BirthDateInput {
         CharSequence charSequenceLocal1 = null;
         try {
           MixedSupport029.stringState0149 = stringArgument3;
-          NetworkSupport010.integerState0585 = 2;
+          TextHotspotBounds.integerState0585 = 2;
           charSequenceLocal1 = (CharSequence) ((Object) stringArgument3);
           TextLayout.stringState0081 = ComponentContainer.computeString0894(charSequenceLocal1, (byte) 2);
           int integerLocal2 = -54 / ((-27 - integerArgument1) / 54);
@@ -164,8 +164,8 @@ final class BirthDateTextFields extends BirthDateInput {
         }
     }
 
-    final String computeString0223(byte byteArgument1) {
-        String stringLocal1 = this.uiComponentPart028State0004.computeString0223(byteArgument1);
+    final String getTooltipText(byte byteArgument1) {
+        String stringLocal1 = this.uiComponentPart028State0004.getTooltipText(byteArgument1);
         if (stringLocal1 != null) {
           return stringLocal1;
         }

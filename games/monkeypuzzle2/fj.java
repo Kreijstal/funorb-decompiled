@@ -83,7 +83,7 @@ final class fj extends ButtonWidget {
               if (param3 > 105) {
                 cg.field_a = lh.createAccountErrorResult(true, param1, param3);
               } else {
-                cg.field_a = jj.createAccountSuggestionsResult(args, true);
+                cg.field_a = RichTextWidget.createAccountSuggestionsResult(args, true);
               }
             }
           } else {

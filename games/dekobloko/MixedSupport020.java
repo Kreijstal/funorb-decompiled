@@ -233,7 +233,7 @@ final class MixedSupport020 extends HashNode {
                   sceneWidgetPart012Local26.sceneWidgetState0120.stringState0598 = MixedSupport036.stringState0167;
                 } else {
                   if (!sceneWidgetPart012Local26.booleanState0187) {
-                    sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598 = MixedSupport001.stringState0003;
+                    sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598 = DefaultTextWidgetRenderer.stringState0003;
                   } else {
                     sceneWidgetPart012Local26.sceneWidgetState0122.stringState0598 = NodeHashTableIterator.substituteIndexedPlaceholders(91, ResourceSupport001.stringState0010, new String[]{stringLocal34});
                     sceneWidgetPart012Local26.sceneWidgetState0124.stringState0598 = MixedSupport127.stringState0553;
@@ -613,7 +613,7 @@ final class MixedSupport020 extends HashNode {
               integerLocal10 = integerLocal10 + AccountFieldStatusIndicator.integerState0575;
             }
             if (0 <= integerLocal15) {
-              MixedSupport010.bitmapFontState0005.drawString(stringLocal17, integerLocal23, MixedSupport001.integerState0013 + integerLocal10, integerLocal16, -1);
+              MixedSupport010.bitmapFontState0005.drawString(stringLocal17, integerLocal23, DefaultTextWidgetRenderer.integerState0013 + integerLocal10, integerLocal16, -1);
               integerLocal10 = integerLocal10 + (AccountFieldStatusIndicator.integerState0575 - (-BufferedSocket.integerState0665 - NineSliceSprite.integerState0100));
             } else {
               EditableTextField.bitmapFontState0019.drawString(stringLocal17, integerLocal23, MixedSupport085.integerState0531 + integerLocal10, integerLocal16, -1);

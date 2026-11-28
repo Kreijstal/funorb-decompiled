@@ -9,7 +9,7 @@ final class ns extends BoardChange {
         this(qi.a(param0, (byte) 9));
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writePayload(PacketBuffer param0, byte param1) {
         try {
           FlirtAnimation.a(this.field_n, 108, param0);
           int var3_int = -18 / ((param1 - 37) / 38);
@@ -25,7 +25,7 @@ final class ns extends BoardChange {
         }
     }
 
-    final void a(boolean param0, BattleState param1) {
+    final void applyToBattle(boolean param0, BattleState param1) {
         BattleCreature var3 = this.field_n.resolveCreature(107, param1);
         if (var3 == null) {
           return;
@@ -110,12 +110,12 @@ final class ns extends BoardChange {
         }
     }
 
-    final void a(BoardChangeAnimation param0, int param1) {
+    final void applyForAnimation(BoardChangeAnimation param0, int param1) {
         try {
           param0.addChild(27799, new gka(param0.field_o, this));
           if (param1 > -2) {
             BattleState var4 = (BattleState) null;
-            this.a(false, (BattleState) null);
+            this.applyToBattle(false, (BattleState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "ns.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

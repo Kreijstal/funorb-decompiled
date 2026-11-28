@@ -254,14 +254,14 @@ class InteractiveWidget extends UiWidget {
     }
 
     InteractiveWidget(String param0, WidgetListener param1) {
-        this(param0, fda.field_i.field_r, param1);
+        this(param0, RemoveDefeatedCreatureEffect.field_i.field_r, param1);
     }
 
     protected InteractiveWidget() {
         this.field_C = false;
         this.field_z = true;
         this.field_y = true;
-        this.renderer = fda.field_i.field_j;
+        this.renderer = RemoveDefeatedCreatureEffect.field_i.field_j;
     }
 
     static {

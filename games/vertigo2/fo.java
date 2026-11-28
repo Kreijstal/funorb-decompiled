@@ -48,7 +48,7 @@ final class fo {
             field_d = false;
           }
           if (var4 != null) {
-            va.field_s.a((String) (var4), 16777215, -1, 320, 380, 2);
+            DefaultTextWidgetRenderer.field_s.a((String) (var4), 16777215, -1, 320, 380, 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -200,18 +200,18 @@ final class fo {
                 if (ap.field_d.field_t >= 0) {
                   if (ap.field_d.field_t <= var2Lifetime1 &&
                     ap.field_d.field_t != wi.field_f) {
-                    lq.field_b.loadLevel((byte) 74, ap.field_d.field_t, kn.field_h[0][ap.field_d.field_t]);
+                    TextLineMetrics.field_b.loadLevel((byte) 74, ap.field_d.field_t, kn.field_h[0][ap.field_d.field_t]);
                     wi.field_f = ap.field_d.field_t;
                     gm.a(29, (byte) -55);
                   }
                   if (tf.field_l != null &&
-                    lq.field_b != null) {
-                    tf.field_l.advancePreviewRenderState(lq.field_b, 0, -109);
+                    TextLineMetrics.field_b != null) {
+                    tf.field_l.advancePreviewRenderState(TextLineMetrics.field_b, 0, -109);
                   }
                 } else {
                   if (tf.field_l != null &&
-                    lq.field_b != null) {
-                    tf.field_l.advancePreviewRenderState(lq.field_b, 0, -109);
+                    TextLineMetrics.field_b != null) {
+                    tf.field_l.advancePreviewRenderState(TextLineMetrics.field_b, 0, -109);
                   }
                 }
                 ap.field_d.b(false);
@@ -245,12 +245,12 @@ final class fo {
         MatchSession var2 = var5;
         int var3 = LevelRenderer.field_b ? ln.field_d.field_B : -1;
         if (var5.getWinningPlayerIndex((byte) 115) < 0) {
-          va.field_s.a(go.field_d, 16777215, -1, 320, 350, 2);
+          DefaultTextWidgetRenderer.field_s.a(go.field_d, 16777215, -1, 320, 350, 2);
         } else {
           if (var5.getLevelIndex(-6133) >= kn.field_h[1].length - 1) {
-            va.field_s.a(NetworkArchiveRequest.field_I, 16777215, -1, 320, 380, param0 ^ 382);
+            DefaultTextWidgetRenderer.field_s.a(NetworkArchiveRequest.field_I, 16777215, -1, 320, 380, param0 ^ 382);
           } else {
-            va.field_s.a(Vertigo2.a(new String[]{Integer.toString(1 + var5.getLevelIndex(-6133))}, uh.field_lc, 105), 16777215, -1, 320, 380, 2);
+            DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{Integer.toString(1 + var5.getLevelIndex(-6133))}, uh.field_lc, 105), 16777215, -1, 320, 380, 2);
           }
         }
         this.a(var3, var5, 27670);
@@ -269,7 +269,7 @@ final class fo {
           if ((this.field_b == 5 || this.field_b == 6) &&
             2 == this.field_a.itemCount) {
             if (param0 == 0) {
-              return 24 + (320 + va.field_s.a(1, sp.field_Q) / 2);
+              return 24 + (320 + DefaultTextWidgetRenderer.field_s.a(1, sp.field_Q) / 2);
             }
             return this.b(param0, 26) + 160;
           }
@@ -302,8 +302,8 @@ final class fo {
           this.c((byte) 109);
         }
         String var2 = !ag.b(49) ? GameplayScreen.field_O : vg.field_b;
-        MusicPatchPcmStream.a(36, 32 + va.field_s.a(param0 - 11058, var2), 425, -(va.field_s.a(param0 - 11058, var2) / 2) - 16 + 320, 73, 100);
-        va.field_s.a(var2, 16777215, -1, 320, 450, 2);
+        MusicPatchPcmStream.a(36, 32 + DefaultTextWidgetRenderer.field_s.a(param0 - 11058, var2), 425, -(DefaultTextWidgetRenderer.field_s.a(param0 - 11058, var2) / 2) - 16 + 320, 73, 100);
+        DefaultTextWidgetRenderer.field_s.a(var2, 16777215, -1, 320, 450, 2);
         if (param0 != 11059) {
           this.field_b = -90;
         }
@@ -322,7 +322,7 @@ final class fo {
         }
         boolean decompiledFrameRemainder0 = true;
         if (fm.field_d < SocketConnector.field_c[GameKeyHandler.field_d]) {
-          va.field_s.a(16777215, (byte) 120, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, fa.field_r, -123), 210);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 120, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, fa.field_r, -123), 210);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-36, true, false, fm.field_d)}, wq.field_L, -121), 460, 240, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-99, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, or.field_g, -20), 460, 260, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-65, true, false, -fm.field_d + SocketConnector.field_c[GameKeyHandler.field_d])}, to.field_f, -120), 460, 280, 65280, -1);
@@ -364,7 +364,7 @@ final class fo {
             }
           }
         } else {
-          va.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, Bzip2State.field_k, -11), 210);
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, Bzip2State.field_k, -11), 210);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, wq.field_L, -127), 460, 240, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
           tk.field_c.drawRightAligned(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
@@ -470,18 +470,18 @@ final class fo {
         var7Lifetime1 = stackIn_32_0;
         if (ag.b(49)) {
           var8 = 240 + NameSuggestionsPanel.field_F[this.field_b] >> 1;
-          va.field_s.a(vg.field_b, 16777215, -1, 320, var8, 2);
+          DefaultTextWidgetRenderer.field_s.a(vg.field_b, 16777215, -1, 320, var8, 2);
         }
         if (var7Lifetime1 != -1) {
           if (!ag.b(49)) {
-            var8Lifetime1 = va.field_s.field_c + va.field_s.field_g;
-            va.field_s.a(16777215, (byte) 115, -1, 250, BlastDebrisModel.field_i[var7Lifetime1], 240);
+            var8Lifetime1 = DefaultTextWidgetRenderer.field_s.field_c + DefaultTextWidgetRenderer.field_s.field_g;
+            DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 115, -1, 250, BlastDebrisModel.field_i[var7Lifetime1], 240);
             stackIn_40_0 = ((1 << var7Lifetime1 & var5) == 0) ? 0 : 1;
             var9 = stackIn_40_0;
             if (var9 != 0) {
-              va.field_s.a(16725760, (byte) 84, -1, 250, wj.field_a, 10 + var8Lifetime1 + 240);
+              DefaultTextWidgetRenderer.field_s.a(16725760, (byte) 84, -1, 250, wj.field_a, 10 + var8Lifetime1 + 240);
             } else {
-              va.field_s.a(16725760, (byte) 91, -1, 250, UiPanel.field_Z, 240 + var8Lifetime1 + 10);
+              DefaultTextWidgetRenderer.field_s.a(16725760, (byte) 91, -1, 250, UiPanel.field_Z, 240 + var8Lifetime1 + 10);
             }
             var10 = 240;
             if (var9 == 0) {
@@ -489,10 +489,10 @@ final class fo {
             } else {
               ((ArgbSprite) (vj.field_b[var7Lifetime1])).draw(80, var10);
             }
-            var10 = var10 + (va.field_s.field_j + var8Lifetime1);
+            var10 = var10 + (DefaultTextWidgetRenderer.field_s.field_j + var8Lifetime1);
             var11 = var10;
-            var10 = var10 + va.field_s.field_j;
-            var12 = 128 + var11 - va.field_s.field_j;
+            var10 = var10 + DefaultTextWidgetRenderer.field_s.field_j;
+            var12 = 128 + var11 - DefaultTextWidgetRenderer.field_s.field_j;
             var13 = new String[16];
             var14 = IntrusiveDeque.field_i[var7Lifetime1];
             if (var9 == 0 &&
@@ -507,7 +507,7 @@ final class fo {
             tk.field_c.drawString(pl.field_j + aq.field_d[var7Lifetime1], 250, -(GzipDecompressor.field_c.field_t * 2) + var12 - tk.field_c.field_M, 16777215, -1);
             tk.field_c.drawString(vl.field_f, 250, -tk.field_c.field_M + var12, 16777215, -1);
             var16Lifetime1 = tk.field_c.stringWidth(vl.field_f) + 250;
-            var17 = -((GzipDecompressor.field_c.field_t + va.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
+            var17 = -((GzipDecompressor.field_c.field_t + DefaultTextWidgetRenderer.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
             for (var18 = 0; var18 < MouseInputHandler.field_d[var7Lifetime1]; var18++) {
               GzipDecompressor.field_c.draw(var16Lifetime1, var17);
               var16Lifetime1 = var16Lifetime1 + GzipDecompressor.field_c.field_y / 3;
@@ -515,7 +515,7 @@ final class fo {
           }
         } else {
           if (!ag.b(49)) {
-            va.field_s.a(fj.field_hb, 16777215, -1, 320, 240, 2);
+            DefaultTextWidgetRenderer.field_s.a(fj.field_hb, 16777215, -1, 320, 240, 2);
           }
         }
     }
@@ -536,20 +536,20 @@ final class fo {
         String var12 = param6;
         tk.field_c.drawString(var12, 60, param1, param7, -1);
         String var13 = "" + param4;
-        tk.field_c.drawCentred(var13, pn.field_K[0], param1, param7, -1);
+        tk.field_c.drawCentred(var13, RichTextWidget.field_K[0], param1, param7, -1);
         String var14 = var10_int < 50 ? Integer.toString(var10_int) : "50+";
         String var11 = var14;
-        tk.field_c.drawCentred(var14, pn.field_K[1], param1, param7, -1);
+        tk.field_c.drawCentred(var14, RichTextWidget.field_K[1], param1, param7, -1);
         if (param3 <= 22) {
           return;
         }
         try {
           var15 = param8 + "%";
-          tk.field_c.drawCentred(var15, pn.field_K[2], param1, param7, -1);
+          tk.field_c.drawCentred(var15, RichTextWidget.field_K[2], param1, param7, -1);
           var16 = param2 + "%";
-          tk.field_c.drawCentred(var16, pn.field_K[3], param1, param7, -1);
+          tk.field_c.drawCentred(var16, RichTextWidget.field_K[3], param1, param7, -1);
           var17 = param0 + "%";
-          tk.field_c.drawCentred(var17, pn.field_K[4], param1, param7, -1);
+          tk.field_c.drawCentred(var17, RichTextWidget.field_K[4], param1, param7, -1);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fo.P(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
@@ -570,31 +570,31 @@ final class fo {
           var5 = 190;
           var6 = 180;
           var7 = var6;
-          va.field_s.a(16777215, (byte) 64, -1, var4, CrossfadingMidiPcmStream.field_G, var6);
-          va.field_s.a(var4 + var5, -43, 16777215, var6, -1, Integer.toString(1 + param1.field_e));
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 64, -1, var4, CrossfadingMidiPcmStream.field_G, var6);
+          DefaultTextWidgetRenderer.field_s.a(var4 + var5, -43, 16777215, var6, -1, Integer.toString(1 + param1.field_e));
           var6 += 20;
-          va.field_s.a(16777215, (byte) 62, -1, var4, le.field_a, var6);
-          va.field_s.a(var5 + var4, -40, 16777215, var6, -1, Integer.toString(kn.field_h[param1.field_j].length > param1.field_e + param1.field_c ? param1.field_c + param1.field_e : kn.field_h[param1.field_j].length));
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 62, -1, var4, le.field_a, var6);
+          DefaultTextWidgetRenderer.field_s.a(var5 + var4, -40, 16777215, var6, -1, Integer.toString(kn.field_h[param1.field_j].length > param1.field_e + param1.field_c ? param1.field_c + param1.field_e : kn.field_h[param1.field_j].length));
           var6 += 20;
-          va.field_s.a(16777215, (byte) 103, -1, var4, we.field_H, var6);
-          va.field_s.a(var5 + var4, param0 ^ -27, 16777215, var6, -1, Integer.toString(1 + param1.getLevelIndex(-6133)));
+          DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 103, -1, var4, we.field_H, var6);
+          DefaultTextWidgetRenderer.field_s.a(var5 + var4, param0 ^ -27, 16777215, var6, -1, Integer.toString(1 + param1.getLevelIndex(-6133)));
           var6 += 20;
           if (!PacketBuffer.field_q) {
-            va.field_s.a(16777215, (byte) 103, -1, var4, w.field_B, var6);
-            va.field_s.a(var5 + var4, param0 - 25, 16777215, var6, -1, Integer.toString(param1.field_h));
+            DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 103, -1, var4, w.field_B, var6);
+            DefaultTextWidgetRenderer.field_s.a(var5 + var4, param0 - 25, 16777215, var6, -1, Integer.toString(param1.field_h));
             var6 += 20;
-            va.field_s.a(16777215, (byte) 74, -1, var4, sg.field_c, var6);
-            va.field_s.a(var4 + var5, -32, 16777215, var6, -1, Integer.toString(param1.getLocalTilesPainted(-89)));
+            DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 74, -1, var4, sg.field_c, var6);
+            DefaultTextWidgetRenderer.field_s.a(var4 + var5, -32, 16777215, var6, -1, Integer.toString(param1.getLocalTilesPainted(-89)));
             var6 += 20;
-            va.field_s.a(16777215, (byte) 90, -1, var4, km.field_u, var6);
-            va.field_s.a(var5 + var4, param0 ^ -53, 16777215, var6, -1, Vertigo2.a(new String[]{gl.a(-39, false, false, param1.field_q)}, tn.field_g, param0 + 22));
+            DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 90, -1, var4, km.field_u, var6);
+            DefaultTextWidgetRenderer.field_s.a(var5 + var4, param0 ^ -53, 16777215, var6, -1, Vertigo2.a(new String[]{gl.a(-39, false, false, param1.field_q)}, tn.field_g, param0 + 22));
             var6 += 20;
           } else {
-            va.field_s.a(16777215, (byte) 67, -1, var4, bs.field_Vb, var6);
-            va.field_s.a(var5 + var4, param0 ^ -72, 16777215, var6, -1, Vertigo2.a(new String[]{gl.a(-37, false, false, param1.field_q)}, tn.field_g, -117));
+            DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 67, -1, var4, bs.field_Vb, var6);
+            DefaultTextWidgetRenderer.field_s.a(var5 + var4, param0 ^ -72, 16777215, var6, -1, Vertigo2.a(new String[]{gl.a(-37, false, false, param1.field_q)}, tn.field_g, -117));
             var6 += 20;
           }
-          MusicPatchPcmStream.a(-var7 + var6 + (va.field_s.field_c + va.field_s.field_j), 220, var7 - (va.field_s.field_j + va.field_s.field_c + var3_int), var4 - var3_int * 2, -110, 200);
+          MusicPatchPcmStream.a(-var7 + var6 + (DefaultTextWidgetRenderer.field_s.field_c + DefaultTextWidgetRenderer.field_s.field_j), 220, var7 - (DefaultTextWidgetRenderer.field_s.field_j + DefaultTextWidgetRenderer.field_s.field_c + var3_int), var4 - var3_int * 2, -110, 200);
         } catch (RuntimeException runtimeException) {
           throw wn.wrapClientException((Throwable) ((Object) runtimeException), "fo.BA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -673,7 +673,7 @@ final class fo {
     }
 
     private final void b(int param0) {
-        va.field_s.a(vg.field_b, 16777215, -1, 320, 220 + (va.field_s.field_j + 120), 2);
+        DefaultTextWidgetRenderer.field_s.a(vg.field_b, 16777215, -1, 320, 220 + (DefaultTextWidgetRenderer.field_s.field_j + 120), 2);
         if (param0 < 106) {
           this.d((byte) 58);
         }
@@ -738,7 +738,7 @@ final class fo {
         }
         boolean decompiledFrameRemainder0 = true;
         var4 = NameSuggestionsPanel.field_O[this.field_b][param0];
-        var21 = sl.field_q[var4];
+        var21 = RichTextLayout.field_q[var4];
         var5 = var21;
         var5 = var21;
         var5 = var21;
@@ -746,7 +746,7 @@ final class fo {
           if (ue.field_O != 0 &&
             LevelRenderer.field_n != 0) {
             if (ue.field_O == 21) {
-              var5 = sl.field_q[34];
+              var5 = RichTextLayout.field_q[34];
             } else {
               if (ue.field_O != 1 &&
                 LevelRenderer.field_n != 1) {
@@ -769,14 +769,14 @@ final class fo {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var5 = sl.field_q[7];
+            var5 = RichTextLayout.field_q[7];
           }
         } else {
           if (var4 == 30) {
             var5 = var21 + te.field_H[m.field_B];
           }
         }
-        var6 = va.field_s.a(1, var5);
+        var6 = DefaultTextWidgetRenderer.field_s.a(1, var5);
         var7 = this.b(param0, 26);
         var8 = this.a(param0, -55);
         var9 = this.a(param0, (byte) -80) + this.c(param0, (byte) -116) / 2;
@@ -824,7 +824,7 @@ final class fo {
           stackIn_58_0 = 16777215;
         }
         var17Lifetime1 = stackIn_58_0;
-        va.field_s.a(var17Lifetime1, (byte) 112, -1, var10, var5, var9 + (-va.field_s.field_c - (va.field_s.field_g - var12[1].field_t)) / 2);
+        DefaultTextWidgetRenderer.field_s.a(var17Lifetime1, (byte) 112, -1, var10, var5, var9 + (-DefaultTextWidgetRenderer.field_s.field_c - (DefaultTextWidgetRenderer.field_s.field_g - var12[1].field_t)) / 2);
         if (var4 != 20 &&
           var4 != 21) {
           return;
@@ -897,8 +897,8 @@ final class fo {
         var4Lifetime1 = var3;
         var3Lifetime1 = var4Lifetime1;
         jq.a(63, 332, 270, 274, 150);
-        va.field_s.a(16777215, (byte) 76, -1, 348, ni.field_c, va.field_s.field_j + 280);
-        va.field_s.a(580, -34, 16777215, va.field_s.field_j + 280, -1, mo.field_f);
+        DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 76, -1, 348, ni.field_c, DefaultTextWidgetRenderer.field_s.field_j + 280);
+        DefaultTextWidgetRenderer.field_s.a(580, -34, 16777215, DefaultTextWidgetRenderer.field_s.field_j + 280, -1, mo.field_f);
         if (ue.field_J.field_s) {
           if (ue.field_J.field_x != null) {
             var3Lifetime2 = qe.field_V;
@@ -958,7 +958,7 @@ final class fo {
           this.field_b == 6) &&
           (this.field_a.itemCount == 2 &&
           param0 == 0)) {
-          return -24 - va.field_s.a(1, sp.field_Q) / 2 + 320;
+          return -24 - DefaultTextWidgetRenderer.field_s.a(1, sp.field_Q) / 2 + 320;
         }
         return param0 * NameSuggestionsPanel.field_H[this.field_b] + NameSuggestionsPanel.field_M[this.field_b];
     }
@@ -1006,12 +1006,12 @@ final class fo {
             var4 = var7.field_w[0];
             var5 = var7.field_w[1];
             if (var7.getWinningPlayerIndex((byte) 106) == 0) {
-              va.field_s.a(Vertigo2.a(new String[]{var4}, Vertigo2.field_D, param0 ^ -124), 16777215, -1, 320, 340, 2);
+              DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{var4}, Vertigo2.field_D, param0 ^ -124), 16777215, -1, 320, 340, 2);
             } else {
               if (var7.getWinningPlayerIndex((byte) 115) == 1) {
-                va.field_s.a(Vertigo2.a(new String[]{var5}, Vertigo2.field_D, 1), 16777215, -1, 320, 340, 2);
+                DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{var5}, Vertigo2.field_D, 1), 16777215, -1, 320, 340, 2);
               } else {
-                va.field_s.a(1, -1, Vertigo2.a(new String[]{var4, var5}, jp.field_u, param0 ^ -17), 80, 340, 40, 1, 560, 0, 16777215);
+                DefaultTextWidgetRenderer.field_s.a(1, -1, Vertigo2.a(new String[]{var4, var5}, jp.field_u, param0 ^ -17), 80, 340, 40, 1, 560, 0, 16777215);
               }
             }
           } else {
@@ -1030,7 +1030,7 @@ final class fo {
         if (param0 != 97) {
           field_e = (si) null;
         }
-        va.field_s.a(Vertigo2.a(new String[]{Integer.toString(var7.field_f), Integer.toString(var7.field_g)}, hd.field_c, -127), 16777215, -1, 320, 140, param0 - 95);
+        DefaultTextWidgetRenderer.field_s.a(Vertigo2.a(new String[]{Integer.toString(var7.field_f), Integer.toString(var7.field_g)}, hd.field_c, -127), 16777215, -1, 320, 140, param0 - 95);
         this.a((byte) 7, var7);
     }
 
@@ -1147,12 +1147,12 @@ final class fo {
             var2 = b.field_f;
           } else {
             if (null != var4.field_x) {
-              va.field_s.a(16777215, (byte) 95, -1, 48, ni.field_c, 120 + va.field_s.field_j);
-              stackIn_22_0 = va.field_s;
+              DefaultTextWidgetRenderer.field_s.a(16777215, (byte) 95, -1, 48, ni.field_c, 120 + DefaultTextWidgetRenderer.field_s.field_j);
+              stackIn_22_0 = DefaultTextWidgetRenderer.field_s;
               stackIn_22_1 = 360;
               stackIn_22_2 = -19;
               stackIn_22_3 = 16777215;
-              stackIn_22_4 = va.field_s.field_j + 120;
+              stackIn_22_4 = DefaultTextWidgetRenderer.field_s.field_j + 120;
               stackIn_22_5 = -1;
               if (var3 != 0) {
                 stackIn_23_6 = mo.field_f;
@@ -1198,8 +1198,8 @@ final class fo {
             var2 = sd.field_G;
           }
         }
-        var6 = va.field_s.field_j + 225;
-        va.field_s.a(var2, 16777215, -1, 210, var6, param0);
+        var6 = DefaultTextWidgetRenderer.field_s.field_j + 225;
+        DefaultTextWidgetRenderer.field_s.a(var2, 16777215, -1, 210, var6, param0);
     }
 
     private final int a(int param0, byte param1) {
@@ -1295,14 +1295,14 @@ final class fo {
                     } else {
                       jm.field_E = new PlayerState[1];
                       jm.field_E[0] = new PlayerState(0, false, 0, false, false, false);
-                      lq.field_b = new LevelSimulation(3, jm.field_E, false, false);
+                      TextLineMetrics.field_b = new LevelSimulation(3, jm.field_E, false, false);
                       if (ap.field_d.field_t < 0) {
                         stackIn_81_0 = 0;
                       } else {
                         stackIn_81_0 = ap.field_d.field_t;
                       }
                       var8 = stackIn_81_0;
-                      lq.field_b.loadLevel((byte) 63, var8, kn.field_h[0][var8]);
+                      TextLineMetrics.field_b.loadLevel((byte) 63, var8, kn.field_h[0][var8]);
                       if (!qe.field_V.equals("")) {
                         var9_ref_String = qe.field_V;
                       } else {
@@ -1423,12 +1423,12 @@ final class fo {
                         if (this.field_a.a((byte) 45) &&
                           0 < DelegatingCanvas.field_e) {
                           var7 = 1;
-                          pk.b(106, 0);
+                          TextHotspotBounds.b(106, 0);
                         }
                         if (this.field_a.c(0) &&
                           DelegatingCanvas.field_e < 256) {
                           var7 = 1;
-                          pk.b(31, 256);
+                          TextHotspotBounds.b(31, 256);
                         }
                         if (this.field_a.b((byte) 85)) {
                           var8 = this.b(param3, 26) - (-this.a(param3, 127) - GameShell.field_x) - 120 >> 1;
@@ -1437,12 +1437,12 @@ final class fo {
                           var7 = 1;
                           if (var10Lifetime1 > 0) {
                             if (256 <= var10Lifetime1) {
-                              pk.b(-79, 256);
+                              TextHotspotBounds.b(-79, 256);
                             } else {
-                              pk.b(-73, var10Lifetime1);
+                              TextHotspotBounds.b(-73, var10Lifetime1);
                             }
                           } else {
-                            pk.b(103, 0);
+                            TextHotspotBounds.b(103, 0);
                           }
                         }
                         if (this.field_a.b(-101) &&
@@ -1777,9 +1777,9 @@ final class fo {
                 } else {
                   if (19 == this.field_b) {
                     if (null != tf.field_l &&
-                      null != lq.field_b) {
+                      null != TextLineMetrics.field_b) {
                       oo.a(545, 160);
-                      tf.field_l.drawAlternateLevelPreview(false, 0, lq.field_b, (byte) 119);
+                      tf.field_l.drawAlternateLevelPreview(false, 0, TextLineMetrics.field_b, (byte) 119);
                     }
                     oo.b();
                     MusicPatchPcmStream.a(320, 280, 100, 30, 75, 150);
@@ -1830,7 +1830,7 @@ final class fo {
                                         this.a(true);
                                       } else {
                                         if ((11 == this.field_b)) {
-                                          va.field_s.a(1, -1, HuffmanCodec.field_i, 480, 0, 100, 1, 440, 1, 16777215);
+                                          DefaultTextWidgetRenderer.field_s.a(1, -1, HuffmanCodec.field_i, 480, 0, 100, 1, 440, 1, 16777215);
                                         }
                                       }
                                     }
@@ -1845,19 +1845,19 @@ final class fo {
                       var2 = this.a(0, (byte) -80) - 95;
                       MusicPatchPcmStream.a(280, 490, var2, 75, param0 ^ -10, 150);
                       var2 += 40;
-                      va.field_s.a(jl.field_f, 16777215, -1, 320, var2, 2);
+                      DefaultTextWidgetRenderer.field_s.a(jl.field_f, 16777215, -1, 320, var2, 2);
                       var2 += 40;
-                      stackIn_32_0 = va.field_s;
+                      stackIn_32_0 = DefaultTextWidgetRenderer.field_s;
                       stackIn_32_1 = true;
                       stackIn_33_2 = (jq.field_e != 0);
                       ((wn) (Object) stackIn_32_0).a(eb.a(stackIn_32_1, stackIn_33_2, 6337, true), 16777215, -1, 320, var2, 2);
                       var2 += 100;
-                      stackIn_35_0 = va.field_s;
+                      stackIn_35_0 = DefaultTextWidgetRenderer.field_s;
                       stackIn_35_1 = 116;
                       stackIn_36_2 = (0 != jq.field_e);
                       ((wn) (Object) stackIn_35_0).a(vi.$cfr$intArgs$a$c7de0d339b2a(stackIn_35_1, stackIn_36_2, true, true), 16777215, -1, 320, var2, 2);
                       var2 += 80;
-                      stackIn_38_0 = va.field_s;
+                      stackIn_38_0 = DefaultTextWidgetRenderer.field_s;
                       stackIn_39_1 = (jq.field_e != 0);
                       ((wn) (Object) stackIn_38_0).a(id.a(stackIn_39_1, 1342181375, true, true), 16777215, -1, 320, var2, 2);
                     }
@@ -1882,7 +1882,7 @@ final class fo {
           stackIn_71_2 = (~var2 == ~this.field_a.selectedIndex);
           this.c(stackIn_70_1, stackIn_71_2, 1);
         }
-        va.field_s.b(param0 ^ 72);
+        DefaultTextWidgetRenderer.field_s.b(param0 ^ 72);
         if (param0 != -114) {
           stackIn_74_0 = this;
           stackIn_74_1 = 98;
@@ -1920,18 +1920,18 @@ final class fo {
         if (wh.field_D == null) {
           wh.field_D = mb.a(0, 10, (byte) -89, 7);
         }
-        var2 = 120 + va.field_s.field_j;
+        var2 = 120 + DefaultTextWidgetRenderer.field_s.field_j;
         if (!param0) {
           this.f(1);
         }
         regionExit1: {
           var3 = 16777215;
-          va.field_s.a(var3, (byte) 123, -1, 48, ni.field_c, var2 - 10);
-          va.field_s.a(ej.field_e, var3, -1, pn.field_K[0], var2 - 10, 2);
-          va.field_s.a(jl.field_h, var3, -1, pn.field_K[1], var2 - 10, 2);
-          va.field_s.a(oq.field_D, var3, -1, pn.field_K[2], var2 - 10, 2);
-          va.field_s.a(to.field_b, var3, -1, pn.field_K[3], -10 + var2, 2);
-          va.field_s.a(sc.field_a, var3, -1, pn.field_K[4], -10 + var2, 2);
+          DefaultTextWidgetRenderer.field_s.a(var3, (byte) 123, -1, 48, ni.field_c, var2 - 10);
+          DefaultTextWidgetRenderer.field_s.a(ej.field_e, var3, -1, RichTextWidget.field_K[0], var2 - 10, 2);
+          DefaultTextWidgetRenderer.field_s.a(jl.field_h, var3, -1, RichTextWidget.field_K[1], var2 - 10, 2);
+          DefaultTextWidgetRenderer.field_s.a(oq.field_D, var3, -1, RichTextWidget.field_K[2], var2 - 10, 2);
+          DefaultTextWidgetRenderer.field_s.a(to.field_b, var3, -1, RichTextWidget.field_K[3], -10 + var2, 2);
+          DefaultTextWidgetRenderer.field_s.a(sc.field_a, var3, -1, RichTextWidget.field_K[4], -10 + var2, 2);
           var2 = 150 + tk.field_c.field_z;
           if (!wh.field_D.field_v) {
             var4 = b.field_f;
@@ -1962,8 +1962,8 @@ final class fo {
             var4 = sd.field_G;
           }
         }
-        var2Lifetime1 = va.field_s.field_j + 365;
-        va.field_s.a(var4, 16777215, -1, 335, var2Lifetime1, 2);
+        var2Lifetime1 = DefaultTextWidgetRenderer.field_s.field_j + 365;
+        DefaultTextWidgetRenderer.field_s.a(var4, 16777215, -1, 335, var2Lifetime1, 2);
         return;
     }
 

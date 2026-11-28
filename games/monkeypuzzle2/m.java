@@ -266,7 +266,7 @@ final class m extends IntrusiveNode {
             for (var6_int = 1; var6_int < var4; var6_int++) {
               SecondaryNodeDeque.field_d[var6_int] = var13.readString(-1);
             }
-            sb.b(2, var5, var4);
+            RichTextLayout.b(2, var5, var4);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               hc.a((byte) 82, var15);
               if (var6_intLifetime1 != 0) {

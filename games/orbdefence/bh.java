@@ -43,7 +43,7 @@ final class bh {
     }
 
     final static int a(byte param0) {
-        ed.field_b.b(0);
+        TextLineMetrics.field_b.b(0);
         int var1 = -118 / ((param0 - 30) / 59);
         if (!kg.field_h.e(255)) {
           return d.d((byte) -123);

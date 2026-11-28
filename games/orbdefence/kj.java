@@ -83,11 +83,11 @@ abstract class kj extends pj implements c {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    String g(int param0) {
+    String getTooltipText(int param0) {
         String var3 = null;
-        String var2 = super.g(param0);
+        String var2 = super.getTooltipText(param0);
         if (null != this.field_y) {
-          var3 = this.field_y.g(-8235);
+          var3 = this.field_y.getTooltipText(-8235);
           if (var3 != null) {
             return var3;
           }
@@ -114,7 +114,7 @@ abstract class kj extends pj implements c {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -115) {
-            this.g(-12);
+            this.getTooltipText(-12);
           }
           stackIn_6_0 = (null != this.field_y) && (this.field_y.a((byte) -125, param1, param2, param3 + this.field_s, param4, param5, this.field_n + param6));
           return stackIn_6_0;
@@ -155,7 +155,7 @@ abstract class kj extends pj implements c {
             this.field_y.a(param0 + this.field_n, param1, (byte) -128, param3, this.field_s + param4, param5);
           }
           if (param2 > -91) {
-            this.g(-88);
+            this.getTooltipText(-88);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -200,7 +200,7 @@ final class hj {
           } else {
             stackIn_57_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param9).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_56_1).append(stackIn_57_2).append(',').append(param9).append(')').toString());
         }
     }
 

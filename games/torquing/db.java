@@ -571,7 +571,7 @@ final class db {
         this.field_c = DualLinkNode.field_o;
         this.field_e = DualLinkNode.field_o;
         this.field_g = param2;
-        this.field_f = cm.field_n;
+        this.field_f = RichTextLayout.field_n;
         this.field_k = true;
         if (this.field_b != 0) {
           if (MouseInputHandler.field_d == 0) {
@@ -740,7 +740,7 @@ final class db {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

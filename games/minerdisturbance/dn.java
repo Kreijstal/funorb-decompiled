@@ -131,10 +131,10 @@ final class dn extends IntrusiveNode {
           bl.field_x = new Sprite(var3, var4 * 3 / 4);
           bl.field_x.bindAsRenderTarget();
           var2.drawOpaque(0, 0);
-          eg.field_b = new Sprite(var3, -bl.field_x.field_C + var4);
-          eg.field_b.bindAsRenderTarget();
+          DefaultTextWidgetRenderer.field_b = new Sprite(var3, -bl.field_x.field_C + var4);
+          DefaultTextWidgetRenderer.field_b.bindAsRenderTarget();
           var2.drawOpaque(0, -bl.field_x.field_C);
-          eg.field_b.field_u = bl.field_x.field_C;
+          DefaultTextWidgetRenderer.field_b.field_u = bl.field_x.field_C;
           tk.b(true);
           if (param1 == 29) {
             return;

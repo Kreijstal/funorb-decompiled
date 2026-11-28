@@ -56,7 +56,7 @@ final class ka extends IntrusiveNode {
           i.field_R = true;
           go.field_x = param0;
           if (go.field_x == 0) {
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 87, pc.field_i);
+            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 87, DefaultTextWidgetRenderer.field_i);
             var4 = var3_int + 3;
             mn.field_Z = new int[var4];
             wh.field_z = new String[var4];
@@ -75,7 +75,7 @@ final class ka extends IntrusiveNode {
             mn.field_Z[-1 + var4] = 1;
             IndexedSpriteLayer.field_e[1] = 5;
           } else if (go.field_x == 1) {
-            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, pc.field_i);
+            var3_int = rf.a(dd.field_e, bo.field_e, field_j, 74, DefaultTextWidgetRenderer.field_i);
             var4 = var3_int + 2;
             mn.field_Z = new int[var4];
             wh.field_z = new String[var4];
@@ -273,7 +273,7 @@ final class ka extends IntrusiveNode {
           for (var4Lifetime2 = 0; wh.field_z.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_116_0 = ii.field_k;
             if (0 <= mn.field_Z[var4Lifetime2]) {
-              stackIn_117_1 = kp.field_d;
+              stackIn_117_1 = TextLineMetrics.field_d;
             } else {
               stackIn_117_1 = bp.field_e;
             }
@@ -295,8 +295,8 @@ final class ka extends IntrusiveNode {
               kb.field_e[var4Lifetime3][0] = -aq.field_b + var8Lifetime1;
               kb.field_e[var4Lifetime3][1] = var5Lifetime3;
               kb.field_e[var4Lifetime3][2] = var7Lifetime2 + (aq.field_b << 1);
-              kb.field_e[var4Lifetime3][3] = (ln.field_D << 1) + kp.field_d;
-              var5Lifetime3 = var5Lifetime3 + (WidgetContainer.field_z + ((ln.field_D << 1) + kp.field_d));
+              kb.field_e[var4Lifetime3][3] = (ln.field_D << 1) + TextLineMetrics.field_d;
+              var5Lifetime3 = var5Lifetime3 + (WidgetContainer.field_z + ((ln.field_D << 1) + TextLineMetrics.field_d));
             }
             var4Lifetime3++;
           }
@@ -309,7 +309,7 @@ final class ka extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw rb.wrapThrowable((Throwable) ((Object) var3), "ka.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) var3), "ka.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -480,7 +480,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -529,7 +529,7 @@ final class ka extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

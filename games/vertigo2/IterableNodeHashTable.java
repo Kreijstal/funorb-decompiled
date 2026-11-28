@@ -17,7 +17,7 @@ final class IterableNodeHashTable implements Iterable {
         if (!param0) {
           IterableNodeHashTable.b(false);
         }
-        return (int)(1000000000L / sl.field_w);
+        return (int)(1000000000L / RichTextLayout.field_w);
     }
 
     public static void clearStaticReferences(boolean param0) {
@@ -53,23 +53,23 @@ final class IterableNodeHashTable implements Iterable {
         int var16Lifetime2;
         var18 = Vertigo2.field_L ? 1 : 0;
         try {
-          var12 = pk.a((byte) -14, WidgetContainer.field_D, param6, ua.field_e);
-          var13 = pk.a((byte) -14, WidgetContainer.field_D, param5, ua.field_e);
-          var14 = pk.a((byte) -14, ib.field_a, param3, ap.field_e);
-          var15 = pk.a((byte) -14, ib.field_a, param4, ap.field_e);
+          var12 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param6, ua.field_e);
+          var13 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param5, ua.field_e);
+          var14 = TextHotspotBounds.a((byte) -14, ib.field_a, param3, ap.field_e);
+          var15 = TextHotspotBounds.a((byte) -14, ib.field_a, param4, ap.field_e);
           if (param1 >= -122) {
             field_h = (UiPanel[]) null;
           }
-          var8_int = pk.a((byte) -14, WidgetContainer.field_D, param0 + param6, ua.field_e);
-          var9 = pk.a((byte) -14, WidgetContainer.field_D, -param0 + param5, ua.field_e);
+          var8_int = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, param0 + param6, ua.field_e);
+          var9 = TextHotspotBounds.a((byte) -14, WidgetContainer.field_D, -param0 + param5, ua.field_e);
           for (var16 = var12; var16 < var8_int; var16++) {
             ki.a(-111, var14, vl.field_e[var16], var15, param7);
           }
           for (var16Lifetime1 = var13; var9 < var16Lifetime1; var16Lifetime1--) {
             ki.a(-75, var14, vl.field_e[var16Lifetime1], var15, param7);
           }
-          var10 = pk.a((byte) -14, ib.field_a, param0 + param3, ap.field_e);
-          var11 = pk.a((byte) -14, ib.field_a, -param0 + param4, ap.field_e);
+          var10 = TextHotspotBounds.a((byte) -14, ib.field_a, param0 + param3, ap.field_e);
+          var11 = TextHotspotBounds.a((byte) -14, ib.field_a, -param0 + param4, ap.field_e);
           for (var16Lifetime2 = var8_int; var9 >= var16Lifetime2; var16Lifetime2++) {
             var22 = vl.field_e[var16Lifetime2];
             ki.a(-107, var14, var22, var10, param7);
@@ -126,7 +126,7 @@ final class IterableNodeHashTable implements Iterable {
 
     final static int a(byte param0) {
         int var1 = -92 / ((-8 - param0) / 56);
-        return -pk.field_o + qp.field_d;
+        return -TextHotspotBounds.field_o + qp.field_d;
     }
 
     IterableNodeHashTable(int param0) {

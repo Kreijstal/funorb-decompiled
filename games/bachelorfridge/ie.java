@@ -8,7 +8,7 @@ final class ie {
     final static EventEffect a(PacketBuffer param0, boolean param1) {
         RuntimeException var2 = null;
         PacketBuffer var3 = null;
-        dh stackIn_3_0 = null;
+        ArmPetAttackEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -18,7 +18,7 @@ final class ie {
             var3 = (PacketBuffer) null;
             ie.a((PacketBuffer) null, true);
           }
-          stackIn_3_0 = new dh();
+          stackIn_3_0 = new ArmPetAttackEffect();
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -160,7 +160,7 @@ final class gk {
                 EditableTextField.field_N.position = 0;
               } else {
                 GzipDecompressor.field_d = DualLinkDeque.field_c;
-                ja.field_t = var9Lifetime1;
+                TextHotspotBounds.field_t = var9Lifetime1;
                 ue.field_b = -1;
               }
             }
@@ -184,7 +184,7 @@ final class gk {
           }
           if (GzipDecompressor.field_d == DualLinkDeque.field_c &&
             cd.e((byte) 123)) {
-            if (ja.field_t == 255) {
+            if (TextHotspotBounds.field_t == 255) {
               var9_ref_String = EditableTextField.field_N.readNullableString(0);
               if (var9_ref_String != null) {
                 dj.a(false, hf.a((byte) -101), var9_ref_String);
@@ -194,7 +194,7 @@ final class gk {
             }
             IntrusiveDeque.c(-2290);
             ta.field_u = false;
-            stackIn_55_0 = ja.field_t;
+            stackIn_55_0 = TextHotspotBounds.field_t;
             return stackIn_55_0;
           }
           if (null == ob.field_b) {

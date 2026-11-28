@@ -82,14 +82,14 @@ final class mh {
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
           if (rk.field_f == null) {
             if (null != ja.field_m) {
-              ja.field_m.drawParagraph(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ja.field_m.drawParagraph(TextHotspotBounds.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
           var6 = rk.field_f[vi.field_q];
           if (var6 == null) {
             if (null != ja.field_m) {
-              ja.field_m.drawParagraph(hh.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
+              ja.field_m.drawParagraph(TextHotspotBounds.field_k, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
           } else {
             var6.draw(245, 199);

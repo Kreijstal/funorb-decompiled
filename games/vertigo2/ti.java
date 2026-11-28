@@ -15,12 +15,12 @@ final class ti {
           }
           if (DelegatingCanvas.field_e < 224) {
             var1_int = DelegatingCanvas.field_e % 32;
-            pk.b(param0 + 104, 32 + DelegatingCanvas.field_e - var1_int);
+            TextHotspotBounds.b(param0 + 104, 32 + DelegatingCanvas.field_e - var1_int);
             if (!Vertigo2.field_L) {
               return;
             }
           }
-          pk.b(param0 + 95, 256);
+          TextHotspotBounds.b(param0 + 95, 256);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class ti {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, MusicPatchPcmStream.field_t, param0, AccountRequestState.field_b, ja.field_e, ip.field_a, pn.field_N);
+          fm.a(RasterBuffer.field_a, fm.field_e, ca.field_f, ol.field_H, 12895, kb.field_c, MusicPatchPcmStream.field_t, param0, AccountRequestState.field_b, ja.field_e, ip.field_a, RichTextWidget.field_N);
           kb.field_d = gk.a(param1, "lobby", "chatfilter", true);
           ba.field_f[1] = uo.field_j;
           ba.field_f[2] = vg.field_a;
@@ -231,13 +231,13 @@ final class ti {
               stackIn_62_1 = var29;
               if (var30 != 0) {
                 if (stackIn_62_0 < stackIn_62_1) {
-                  if (var18 >= pk.field_w.length) {
+                  if (var18 >= TextHotspotBounds.field_w.length) {
                     break scanLoop1;
                   }
                   var19 = param6.field_h[var18];
                   var20 = param6.field_O[var18];
                   var21 = param6.field_a[var18];
-                  pk.field_w[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
+                  TextHotspotBounds.field_w[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
                   dp.field_A[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
                   ByteStorage.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
                   var18++;
@@ -248,7 +248,7 @@ final class ti {
               if (stackIn_62_0 <= stackIn_62_1) {
                 IntrusiveDeque.field_a[var23] = var27 / var29 + var21;
                 ml.field_t[var23] = var22 + var28 / var29;
-                pk.field_v[var23] = var29;
+                TextHotspotBounds.field_v[var23] = var29;
                 if (var8 < var29) {
                   var8 = var29;
                 }
@@ -256,7 +256,7 @@ final class ti {
                   var7_int = var29;
                 }
               } else {
-                pk.field_v[var23] = -2147483648;
+                TextHotspotBounds.field_v[var23] = -2147483648;
               }
               if (param3) {
                 te.field_F[var23] = var27 >> BlastDebrisModel.field_j;
@@ -324,13 +324,13 @@ final class ti {
               if (stackIn_62_0 >= stackIn_62_1) {
                 break;
               }
-              if (var18 >= pk.field_w.length) {
+              if (var18 >= TextHotspotBounds.field_w.length) {
                 break;
               }
               var19 = param6.field_h[var18];
               var20 = param6.field_O[var18];
               var21 = param6.field_a[var18];
-              pk.field_w[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
+              TextHotspotBounds.field_w[var18] = var21 * var15 + var20 * var12 + var19 * var9 >> 16;
               dp.field_A[var18] = var13 * var20 + var19 * var10 + var21 * var16 >> 16;
               ByteStorage.field_d[var18] = var17 * var21 + var14 * var20 + var11 * var19 >> 16;
               var18++;

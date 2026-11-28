@@ -123,9 +123,9 @@ final class MusicPatchPcmStream extends PcmStream {
           }
           if (null == CrossfadingMidiPcmStream.field_w) {
             CrossfadingMidiPcmStream.field_w = new int[param2 * 2];
-            if (null == ci.field_n ||
-              !(param2 <= ci.field_n.length)) {
-              ci.field_n = new int[param2 * 2];
+            if (null == TextHotspotBounds.field_n ||
+              !(param2 <= TextHotspotBounds.field_n.length)) {
+              TextHotspotBounds.field_n = new int[param2 * 2];
             }
             if (ol.field_k == null ||
               !(param2 + param1 <= ol.field_k.length)) {
@@ -138,9 +138,9 @@ final class MusicPatchPcmStream extends PcmStream {
           } else {
             if (param2 > CrossfadingMidiPcmStream.field_w.length) {
               CrossfadingMidiPcmStream.field_w = new int[param2 * 2];
-              if (null == ci.field_n ||
-                !(param2 <= ci.field_n.length)) {
-                ci.field_n = new int[param2 * 2];
+              if (null == TextHotspotBounds.field_n ||
+                !(param2 <= TextHotspotBounds.field_n.length)) {
+                TextHotspotBounds.field_n = new int[param2 * 2];
               }
               if (ol.field_k == null ||
                 !(param2 + param1 <= ol.field_k.length)) {
@@ -151,9 +151,9 @@ final class MusicPatchPcmStream extends PcmStream {
                 tf.field_e = new boolean[param2 * 2];
               }
             } else {
-              if (null == ci.field_n ||
-                !(param2 <= ci.field_n.length)) {
-                ci.field_n = new int[param2 * 2];
+              if (null == TextHotspotBounds.field_n ||
+                !(param2 <= TextHotspotBounds.field_n.length)) {
+                TextHotspotBounds.field_n = new int[param2 * 2];
               }
               if (ol.field_k == null) {
                 ol.field_k = new int[2 * (param1 + param2)];
@@ -199,9 +199,9 @@ final class MusicPatchPcmStream extends PcmStream {
             }
             if (null == CrossfadingMidiPcmStream.field_w) {
               CrossfadingMidiPcmStream.field_w = new int[param2 * 2];
-              if (null == ci.field_n ||
-                !(param2 <= ci.field_n.length)) {
-                ci.field_n = new int[param2 * 2];
+              if (null == TextHotspotBounds.field_n ||
+                !(param2 <= TextHotspotBounds.field_n.length)) {
+                TextHotspotBounds.field_n = new int[param2 * 2];
               }
               if (ol.field_k == null ||
                 !(param2 + param1 <= ol.field_k.length)) {
@@ -214,9 +214,9 @@ final class MusicPatchPcmStream extends PcmStream {
             } else {
               if (param2 > CrossfadingMidiPcmStream.field_w.length) {
                 CrossfadingMidiPcmStream.field_w = new int[param2 * 2];
-                if (null == ci.field_n ||
-                  !(param2 <= ci.field_n.length)) {
-                  ci.field_n = new int[param2 * 2];
+                if (null == TextHotspotBounds.field_n ||
+                  !(param2 <= TextHotspotBounds.field_n.length)) {
+                  TextHotspotBounds.field_n = new int[param2 * 2];
                 }
                 if (ol.field_k == null ||
                   !(param2 + param1 <= ol.field_k.length)) {
@@ -227,9 +227,9 @@ final class MusicPatchPcmStream extends PcmStream {
                   tf.field_e = new boolean[param2 * 2];
                 }
               } else {
-                if (null == ci.field_n ||
-                  !(param2 <= ci.field_n.length)) {
-                  ci.field_n = new int[param2 * 2];
+                if (null == TextHotspotBounds.field_n ||
+                  !(param2 <= TextHotspotBounds.field_n.length)) {
+                  TextHotspotBounds.field_n = new int[param2 * 2];
                 }
                 if (ol.field_k == null) {
                   ol.field_k = new int[2 * (param1 + param2)];
@@ -275,9 +275,9 @@ final class MusicPatchPcmStream extends PcmStream {
             }
             if (null == CrossfadingMidiPcmStream.field_w) {
               CrossfadingMidiPcmStream.field_w = new int[param2 * 2];
-              if (null == ci.field_n ||
-                !(param2 <= ci.field_n.length)) {
-                ci.field_n = new int[param2 * 2];
+              if (null == TextHotspotBounds.field_n ||
+                !(param2 <= TextHotspotBounds.field_n.length)) {
+                TextHotspotBounds.field_n = new int[param2 * 2];
               }
               if (ol.field_k == null ||
                 !(param2 + param1 <= ol.field_k.length)) {
@@ -293,9 +293,9 @@ final class MusicPatchPcmStream extends PcmStream {
             } else {
               if (param2 > CrossfadingMidiPcmStream.field_w.length) {
                 CrossfadingMidiPcmStream.field_w = new int[param2 * 2];
-                if (null == ci.field_n ||
-                  !(param2 <= ci.field_n.length)) {
-                  ci.field_n = new int[param2 * 2];
+                if (null == TextHotspotBounds.field_n ||
+                  !(param2 <= TextHotspotBounds.field_n.length)) {
+                  TextHotspotBounds.field_n = new int[param2 * 2];
                 }
                 if (ol.field_k == null ||
                   !(param2 + param1 <= ol.field_k.length)) {
@@ -306,9 +306,9 @@ final class MusicPatchPcmStream extends PcmStream {
                   tf.field_e = new boolean[param2 * 2];
                 }
               } else {
-                if (null == ci.field_n ||
-                  !(param2 <= ci.field_n.length)) {
-                  ci.field_n = new int[param2 * 2];
+                if (null == TextHotspotBounds.field_n ||
+                  !(param2 <= TextHotspotBounds.field_n.length)) {
+                  TextHotspotBounds.field_n = new int[param2 * 2];
                 }
                 if (ol.field_k == null) {
                   ol.field_k = new int[2 * (param1 + param2)];

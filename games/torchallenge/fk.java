@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class fk extends bc {
+class fk extends DefaultTextWidgetRenderer {
     static int[] field_u;
     static int[] field_v;
     static int[][] field_s;

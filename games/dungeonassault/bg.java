@@ -247,7 +247,7 @@ final class bg extends DungeonAssaultScreen {
 
     private final void a(byte param0) {
         this.resetScreenWidgets();
-        le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, l.field_d);
+        le.field_g = tn.a(-jm.field_i.field_y + 164 >> 1, 8 + (32 - jm.field_i.field_v >> 1), IntrusiveNode.field_c, jm.field_i, -62, TextLayout.field_d);
         wf.field_w = tn.a(580 - jm.field_i.field_y, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -52, ia.field_Y);
         ic.field_y = tn.a(60, (-jm.field_i.field_v + 56 >> 1) + 424, IntrusiveNode.field_c, jm.field_i, -61, Raider.field_l.toUpperCase());
         wf.field_w.field_w = false;
@@ -807,11 +807,11 @@ final class bg extends DungeonAssaultScreen {
         if (no.field_d == 1) {
           var3 = this.b(-119, AchievementIconEntry.field_k, lc.field_c);
         }
-        if (hh.field_s == le.field_g) {
+        if (DefaultTextWidgetRenderer.field_s == le.field_g) {
           gd.a(Bzip2State.field_z, 0, 0, true);
         } else {
-          if (hh.field_s != wf.field_w) {
-            if (ic.field_y == hh.field_s &&
+          if (DefaultTextWidgetRenderer.field_s != wf.field_w) {
+            if (ic.field_y == DefaultTextWidgetRenderer.field_s &&
               !ed.c(true)) {
               this.field_b = (kl) ((Object) new ce(CrossfadingMidiPcmStream.field_u.toLowerCase()));
             }

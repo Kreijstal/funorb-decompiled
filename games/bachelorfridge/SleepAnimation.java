@@ -13,7 +13,7 @@ final class SleepAnimation extends EventAnimation {
         if (param0 != 1071140296) {
           SleepAnimation.e(-20);
         }
-        return ReportAbusePanel.field_G == kq.field_j ? true : false;
+        return ReportAbusePanel.field_G == StopFloodEffect.field_j ? true : false;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -39,7 +39,7 @@ final class SleepAnimation extends EventAnimation {
         al.a(107, this.field_x.moveId);
         while (var3 != null) {
           var4 = var3.target.resolveCreatureView(-27449, this.screen);
-          var4.b(param0 + 10648, 6);
+          var4.playAnimation(param0 + 10648, 6);
           var4.a(24831, 95, kna.field_g[29]);
           var3.apply(var2, this.screen.field_h, 12);
           var3 = (DamageEffect) (this.field_x.effects.nextForward(0));

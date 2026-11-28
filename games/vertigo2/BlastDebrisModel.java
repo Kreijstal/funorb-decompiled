@@ -272,7 +272,7 @@ final class BlastDebrisModel extends LevelRenderable {
         var9 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param4) {
-            stackIn_4_0 = pn.field_L;
+            stackIn_4_0 = RichTextWidget.field_L;
           } else {
             stackIn_4_0 = pl.field_n;
           }

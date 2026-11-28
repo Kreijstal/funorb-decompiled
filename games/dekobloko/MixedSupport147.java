@@ -77,7 +77,7 @@ final class MixedSupport147 {
           if (!LoginCredentials.booleanState0085) {
             return false;
           }
-          if (NetworkSupport010.integerState0585 == 2 &&
+          if (TextHotspotBounds.integerState0585 == 2 &&
             TextLayout.stringState0081 != null) {
             charSequenceLocal3 = (CharSequence) ((Object) stringArgument2);
             if (TextLayout.stringState0081.equals(ComponentContainer.computeString0894(charSequenceLocal3, (byte) 2))) {

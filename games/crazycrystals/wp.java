@@ -130,7 +130,7 @@ final class wp {
             if (0 > var4) {
               var5 = ao.field_e;
             } else {
-              if (var4 == lb.field_l.field_c) {
+              if (var4 == DefaultTextWidgetRenderer.field_l.field_c) {
                 var5 = PasswordValidator.field_i;
               } else {
                 var5 = SpriteGeometry.field_s;
@@ -178,7 +178,7 @@ final class wp {
             var7Lifetime1 = vm.$cfr$intArgs$a$62abead39cee(stackIn_38_0, stackIn_39_1, var6);
             var8Lifetime1 = oa.field_b - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
-              if (lb.field_l.field_c == var4) {
+              if (DefaultTextWidgetRenderer.field_l.field_c == var4) {
                 stackIn_44_0 = qo.field_k;
               } else {
                 stackIn_44_0 = qh.field_h;

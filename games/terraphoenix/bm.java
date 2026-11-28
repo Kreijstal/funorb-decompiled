@@ -14,7 +14,7 @@ final class bm {
     }
 
     final static void a(int param0) {
-        vj.a(-24517);
+        RichTextWidget.a(-24517);
         int var1 = -35 / ((-83 - param0) / 35);
         bm.a(4, (byte) 1);
     }

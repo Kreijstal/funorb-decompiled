@@ -32,10 +32,10 @@ final class cl {
         var3 = stellarshard.field_B;
         try {
           ArchiveRequest.field_v = ArchiveRequest.field_v + 1;
-          if (vk.field_b == -1 &&
+          if (TextLayout.field_b == -1 &&
             -1 == ClientException.field_c) {
             ClientException.field_c = KeyHandler.field_a;
-            vk.field_b = ni.field_e;
+            TextLayout.field_b = ni.field_e;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
@@ -67,7 +67,7 @@ final class cl {
                 }
               }
             }
-            am.field_f = vk.field_b;
+            am.field_f = TextLayout.field_b;
             if (param0 == null) {
               if (var2_int != 0) {
                 wk.field_c = true;
@@ -80,7 +80,7 @@ final class cl {
           if (!wk.field_c &&
             BufferedRandomAccessFile.field_g > ArchiveRequest.field_v &&
             qc.field_a) {
-            am.field_f = vk.field_b;
+            am.field_f = TextLayout.field_b;
             ArchiveRequest.field_v = 0;
             h.field_c = ClientException.field_c;
           }
@@ -90,7 +90,7 @@ final class cl {
             ArchiveRequest.field_v = 0;
             wk.field_c = false;
           }
-          vk.field_b = -1;
+          TextLayout.field_b = -1;
           ClientException.field_c = -1;
           if (param1 > 79) {
             return;

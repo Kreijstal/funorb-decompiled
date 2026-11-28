@@ -165,7 +165,7 @@ abstract class rj extends IntrusiveNode {
             stackIn_2_0 = null;
             return (CoverageBitmapFont) (stackIn_2_0);
           }
-          var2 = new CoverageBitmapFont(param0, MusicPatchPcmStream.field_t, fe.field_g, jc.field_f, jn.field_k, uo.field_b, ub.field_q);
+          var2 = new CoverageBitmapFont(param0, MusicPatchPcmStream.field_t, RichTextLayout.field_g, jc.field_f, jn.field_k, uo.field_b, ub.field_q);
           if (param1 != 18118) {
             stackIn_5_0 = (CoverageBitmapFont) null;
             return stackIn_5_0;

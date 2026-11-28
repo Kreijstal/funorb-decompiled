@@ -184,8 +184,8 @@ final class nb implements ci {
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = di.a((byte) -115, param1) ? 1 : 0;
-          var4 = di.a((byte) -117, param1) ? 1 : 0;
+          var3 = TextLineMetrics.a((byte) -115, param1) ? 1 : 0;
+          var4 = TextLineMetrics.a((byte) -117, param1) ? 1 : 0;
           var5 = new mg();
           var5.field_C = (short)param1.readBits(16, -1);
           var5.field_r = jc.a(param1, 16, 21, var5.field_r);
@@ -215,11 +215,11 @@ final class nb implements ci {
           if (param0 < 105) {
             field_e = -87;
           }
-          if (di.a((byte) -79, param1)) {
+          if (TextLineMetrics.a((byte) -79, param1)) {
             var5.field_N = jc.a(param1, 16, 21, var5.field_N);
           }
-          if (di.a((byte) -97, param1)) {
-            var5.field_D = di.a(var5.field_D, param1, 17259, 16);
+          if (TextLineMetrics.a((byte) -97, param1)) {
+            var5.field_D = TextLineMetrics.a(var5.field_D, param1, 17259, 16);
             var6 = 0;
             for (var7 = 0; var5.field_D.length > var7; var7++) {
               if (var6 < (255 & var5.field_D[var7])) {

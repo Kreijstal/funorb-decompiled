@@ -693,13 +693,13 @@ class ci extends ei {
         if (!fg.field_b &&
           param1 &&
           th.field_d != 0 &&
-          SoftwareRasterizer.field_i <= re.field_m &&
-          re.field_m < SoftwareRasterizer.field_j &&
+          SoftwareRasterizer.field_i <= TextHotspotBounds.field_m &&
+          TextHotspotBounds.field_m < SoftwareRasterizer.field_j &&
           ag.field_f >= SoftwareRasterizer.field_a &&
           SoftwareRasterizer.field_b > ag.field_f) {
           this.field_L = th.field_d;
           this.field_kb = th.field_d;
-          this.field_qb = -this.field_U + re.field_m;
+          this.field_qb = -this.field_U + TextHotspotBounds.field_m;
           this.field_lb = ag.field_f - this.field_wb;
           var12 = 1;
         } else {

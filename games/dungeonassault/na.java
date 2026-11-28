@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class na extends hh {
+final class na extends DefaultTextWidgetRenderer {
     static ji field_D;
     static RgbSprite field_A;
     static DiskCacheWorker field_y;

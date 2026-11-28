@@ -8,7 +8,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     private FieldValidator field_N;
     private int field_M;
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 != 0) {
           lk var3 = (lk) null;
           this.a(57, 60, -66, (lk) null);
@@ -244,7 +244,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
               EditableTextField.field_E.drawString(var6, var8Lifetime1, qd.field_b + var1_int, var5, -1);
               var1_int = var1_int + k.field_D;
             } else {
-              jc.field_h.drawString(var6, var8Lifetime1, ed.field_d + var1_int, var5, -1);
+              jc.field_h.drawString(var6, var8Lifetime1, TextLayout.field_d + var1_int, var5, -1);
               var1_int = var1_int + (ConfirmedEmailAvailabilityValidator.field_m + hj.field_a + pb.field_j);
             }
           }

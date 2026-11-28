@@ -134,7 +134,7 @@ final class rb {
 
     final static void a(byte param0) {
         pi.field_Q = -1;
-        em.field_c = false;
+        TextLayout.field_c = false;
         dd.field_l = 0;
         ie.field_C = null;
         if (param0 != -102) {

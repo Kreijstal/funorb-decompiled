@@ -68,7 +68,7 @@ abstract class oe {
         for (var2Lifetime1 = 0; il.field_g > var2Lifetime1; var2Lifetime1++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
-          var3 = 255 & se.field_p.payload[var2Lifetime1];
+          var3 = 255 & RichTextLayout.field_p.payload[var2Lifetime1];
           var4 = var3 >> 4;
           var3 = var3 & 15;
           if (var4 >= 10) {

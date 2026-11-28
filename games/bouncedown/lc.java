@@ -65,13 +65,13 @@ class lc extends lk implements ik {
         return ch.field_j;
     }
 
-    final String d(int param0) {
+    final String getTooltipText(int param0) {
         String var4 = null;
         int var5 = Bounce.field_N;
         ea var2 = new ea(this.field_w);
         lk var3 = (lk) (var2.a(22092));
         while (var3 != null) {
-          var4 = var3.d(0);
+          var4 = var3.getTooltipText(0);
           if (var4 != null) {
             return var4;
           }

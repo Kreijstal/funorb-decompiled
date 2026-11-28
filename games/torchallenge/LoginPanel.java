@@ -174,7 +174,7 @@ final class LoginPanel extends kj implements TextFieldListener, WidgetActivation
             this.field_i = this.field_i + (5 + var7.textHeight(this.field_U, -40 + this.field_p, var7.field_x));
           }
           var8 = ea.field_b;
-          var9 = lg.a(gi.b(12476), 126);
+          var9 = TextLayout.a(gi.b(12476), 126);
           if (sd.field_e == var9) {
             var8 = wl.field_d;
           } else {

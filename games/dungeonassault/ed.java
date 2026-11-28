@@ -348,7 +348,7 @@ final class ed extends np {
           var22 = null;
           var12 = DungeonAssault.field_K;
           try {
-            var13 = (oe) (fe.field_k.beginBackward(-24172));
+            var13 = (oe) (RichTextLayout.field_k.beginBackward(-24172));
             var18 = var13;
             if (var18 == null) {
               return;

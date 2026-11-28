@@ -69,7 +69,7 @@ abstract class SessionGameApplet extends GameApplet {
                             }
                             stackIn_28_0 = (var2 == 12);
                             var3 = id.a(stackIn_28_0, (byte) 9);
-                            jh.a(var3, 16);
+                            RichTextLayout.a(var3, 16);
                           } else {
                             uc.a((byte) 98);
                           }
@@ -168,7 +168,7 @@ abstract class SessionGameApplet extends GameApplet {
         this.setBackground(java.awt.Color.black);
         NodeHashTableIterator.field_f = this.field_o;
         cf.a(1856642, NodeHashTableIterator.field_f);
-        ol.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, NodeHashTableIterator.field_f, this.field_s);
+        TextLineMetrics.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, NodeHashTableIterator.field_f, this.field_s);
         TextFieldValidator.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
         wh.e((byte) -42);
         ga.field_a = nh.createMouseWheelInput(1);
@@ -675,13 +675,13 @@ abstract class SessionGameApplet extends GameApplet {
               Transmogrify.field_B = null;
               wh.field_F = null;
             }
-            var11 = le.d(true);
+            var11 = RichTextWidget.d(true);
             if (var11 != null) {
               sc.a(var11.booleanValue(), -24522);
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = ProxySocketConnector.a(this.field_n, le.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(param0 ^ 2616), DiskCacheWorker.b(76));
+            var5_intLifetime1 = ProxySocketConnector.a(this.field_n, RichTextWidget.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(param0 ^ 2616), DiskCacheWorker.b(76));
             if (var5_intLifetime1 != -1) {
               el.a(var5_intLifetime1, (byte) 33, Transmogrify.field_B, wh.field_F);
               Transmogrify.field_B = null;
@@ -742,7 +742,7 @@ abstract class SessionGameApplet extends GameApplet {
             LoginPanel.field_D.writeCipheredByte(false, 17);
           }
           if (var4 == 11) {
-            ol.a(ha.b(param0 ^ 2581), param0 + 27569);
+            TextLineMetrics.a(ha.b(param0 ^ 2581), param0 + 27569);
           }
           if (12 == var4) {
             ia.a(ha.b(109), 6, hd.a(param0 ^ 2625));

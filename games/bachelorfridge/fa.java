@@ -67,9 +67,9 @@ final class fa extends TileEffect {
         }
         if (ld.field_p > 0) {
           if (nda.field_l != null) {
-            nda.field_l.drawOpaque(ela.field_i.field_kb, 0);
+            nda.field_l.drawOpaque(DisableMoveSlotEffect.field_i.field_kb, 0);
           }
-          stackIn_36_0 = ela.field_i;
+          stackIn_36_0 = DisableMoveSlotEffect.field_i;
           stackIn_37_1 = (param0) && (!w.field_e);
           ((UiComponent) (Object) stackIn_36_0).a(stackIn_37_1, 7802);
           stackIn_40_0 = ho.field_g;
@@ -78,9 +78,9 @@ final class fa extends TileEffect {
         } else {
           if (0 < dja.field_m) {
             if (nda.field_l != null) {
-              nda.field_l.drawOpaque(ela.field_i.field_kb, 0);
+              nda.field_l.drawOpaque(DisableMoveSlotEffect.field_i.field_kb, 0);
             }
-            stackIn_21_0 = ela.field_i;
+            stackIn_21_0 = DisableMoveSlotEffect.field_i;
             stackIn_22_1 = (param0) && (!w.field_e);
             ((UiComponent) (Object) stackIn_21_0).a(stackIn_22_1, 7802);
             stackIn_25_0 = ho.field_g;

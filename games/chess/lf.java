@@ -290,7 +290,7 @@ final class lf extends kn {
         if ((0 < AccountServiceResult.field_c || AccountRequestState.field_c > 0) &&
           jh.field_a) {
           SoftwareRasterizer.darkenRectangleHalf(0, 0, SoftwareRasterizer.field_h, AccountNameAvailabilityValidator.field_m.field_wb);
-          ah.field_i.a(false, param1);
+          RichTextLayout.field_i.a(false, param1);
         }
     }
 
@@ -314,7 +314,7 @@ final class lf extends kn {
           var2 = (em) null;
           lf.a(40, (em) null, 32, -29, 40, -127, 89, -102);
         }
-        if (se.field_V == 0) {
+        if (RichTextWidget.field_V == 0) {
           if (!fl.field_m.ensureIndexLoaded((byte) 123)) {
             return 20;
           }

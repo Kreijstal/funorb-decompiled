@@ -7,7 +7,7 @@ final class um {
     private static String field_z;
 
     final static void a(byte param0) {
-        vf.a((byte) -123, 4);
+        DefaultTextWidgetRenderer.a((byte) -123, 4);
         if (param0 > -115) {
           um.a((byte) -83);
         }

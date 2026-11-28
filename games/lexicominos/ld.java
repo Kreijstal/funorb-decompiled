@@ -38,7 +38,7 @@ final class ld extends InteractiveWidget {
         }
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         if (param0 <= 121) {
           ld.i(55);
           if (this.field_m) {

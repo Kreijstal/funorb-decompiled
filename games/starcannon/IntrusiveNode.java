@@ -11,9 +11,9 @@ class IntrusiveNode {
     final static String c(int param0) {
         if (param0 != 1) {
           IntrusiveNode.clearDeclaredStaticReferences(false);
-          return se.field_p.readString(param0 ^ -14);
+          return RichTextLayout.field_p.readString(param0 ^ -14);
         }
-        return se.field_p.readString(param0 ^ -14);
+        return RichTextLayout.field_p.readString(param0 ^ -14);
     }
 
     final boolean isLinked(byte obfuscationGuard) {

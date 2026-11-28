@@ -233,12 +233,12 @@ final class BufferedSocket implements Runnable {
         if (param0 > -46) {
           field_a = (hm) null;
         }
-        if (null == lb.field_y) {
+        if (null == TextHotspotBounds.field_y) {
           return;
         }
-        var1 = lb.field_y;
+        var1 = TextHotspotBounds.field_y;
         synchronized (var1) {
-          lb.field_y = null;
+          TextHotspotBounds.field_y = null;
         }
         return;
     }

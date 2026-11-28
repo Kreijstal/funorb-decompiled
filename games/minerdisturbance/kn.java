@@ -88,7 +88,7 @@ class kn extends fe implements rk {
         }
     }
 
-    final String h(int param0) {
+    final String getTooltipText(int param0) {
         hh var2;
         fe var3;
         String var4;
@@ -100,7 +100,7 @@ class kn extends fe implements rk {
         }
         var3 = (fe) (var2.d(-19864));
         while (var3 != null) {
-          var4 = var3.h(-27867);
+          var4 = var3.getTooltipText(-27867);
           if (var4 != null) {
             return var4;
           }

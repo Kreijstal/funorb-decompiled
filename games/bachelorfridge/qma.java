@@ -18,10 +18,10 @@ final class qma extends pu {
             try {
               var6 = null;
               var7 = null;
-              if (null != mh.field_l.field_h) {
-                f.field_a = new BufferedCacheFile(mh.field_l.field_h, 5200, 0);
-                mh.field_l.field_h = null;
-                var6 = new SectorCacheStore(255, f.field_a, new BufferedCacheFile(mh.field_l.field_n, 12000, 0), 2097152);
+              if (null != CreaturePoseEffect.field_l.field_h) {
+                f.field_a = new BufferedCacheFile(CreaturePoseEffect.field_l.field_h, 5200, 0);
+                CreaturePoseEffect.field_l.field_h = null;
+                var6 = new SectorCacheStore(255, f.field_a, new BufferedCacheFile(CreaturePoseEffect.field_l.field_n, 12000, 0), 2097152);
               }
               if (param1 != 2097152) {
                 stackIn_5_0 = (ResourceArchive) null;
@@ -29,11 +29,11 @@ final class qma extends pu {
               }
               if (f.field_a != null) {
                 if (null == fr.field_m) {
-                  fr.field_m = new BufferedCacheFile[mh.field_l.field_v.length];
+                  fr.field_m = new BufferedCacheFile[CreaturePoseEffect.field_l.field_v.length];
                 }
                 if (null == fr.field_m[param5]) {
-                  fr.field_m[param5] = new BufferedCacheFile(mh.field_l.field_v[param5], 12000, 0);
-                  mh.field_l.field_v[param5] = null;
+                  fr.field_m[param5] = new BufferedCacheFile(CreaturePoseEffect.field_l.field_v[param5], 12000, 0);
+                  CreaturePoseEffect.field_l.field_v[param5] = null;
                 }
                 var7 = new SectorCacheStore(param5, f.field_a, fr.field_m[param5], 2097152);
               }

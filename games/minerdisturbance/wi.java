@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi extends eg {
+final class wi extends DefaultTextWidgetRenderer {
     private int field_y;
     private int field_B;
     static boolean field_C;

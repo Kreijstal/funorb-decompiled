@@ -339,7 +339,7 @@ final class MixedSupport108 {
         RuntimeException runtimeExceptionLocal7 = null;
         integerLocal4 = DekoBlokoClient.obfuscationControl ? 1 : 0;
         try {
-          integerArrayLocal5 = MixedSupport001.integerArrayState0001;
+          integerArrayLocal5 = DefaultTextWidgetRenderer.integerArrayState0001;
           integerArrayLocal1 = integerArrayLocal5;
           integerLocal2 = integerArgument1;
           integerLocal3 = integerArrayLocal5.length;

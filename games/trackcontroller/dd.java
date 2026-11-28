@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class dd extends ic {
+class dd extends DefaultTextWidgetRenderer {
     static int field_o;
     static String field_p;
 
@@ -35,7 +35,7 @@ class dd extends ic {
         if (param0 <= 82) {
           return (AccountServiceResult) null;
         }
-        if (IndexedSpriteState.field_h == cj.field_e) {
+        if (IndexedSpriteState.field_h == RichTextLayout.field_e) {
           IndexedSpriteState.field_h = DiskArchiveStore.field_f;
           return MouseWheelInput.field_c;
         }

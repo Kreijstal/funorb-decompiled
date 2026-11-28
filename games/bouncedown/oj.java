@@ -142,7 +142,7 @@ final class oj {
         if (var6.length != 65) {
           throw new RuntimeException();
         }
-        var15 = jd.a(var3.payload, 5, -5 + (var3.position - var13.length), 0);
+        var15 = DefaultTextWidgetRenderer.a(var3.payload, 5, -5 + (var3.position - var13.length), 0);
         for (var8 = 0; var8 < 64; var8++) {
           if (var15[var8] != var6[var8 + 1]) {
             throw new RuntimeException();

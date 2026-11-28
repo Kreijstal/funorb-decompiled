@@ -452,7 +452,7 @@ class WidgetContainer extends UiWidget implements oh {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         ck var2;
         UiWidget var3;
         String var4;
@@ -460,11 +460,11 @@ class WidgetContainer extends UiWidget implements oh {
         var5 = SolKnight.field_L ? 1 : 0;
         var2 = new ck(this.field_B);
         if (param0 < 14) {
-          this.c((byte) 48);
+          this.getTooltipText((byte) 48);
         }
         var3 = (UiWidget) (var2.a((byte) -122));
         while (var3 != null) {
-          var4 = var3.c((byte) 106);
+          var4 = var3.getTooltipText((byte) 106);
           if (var4 != null) {
             return var4;
           }

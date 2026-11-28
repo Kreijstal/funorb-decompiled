@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class AccountRegistrationPanel extends ga implements ge, WidgetActivationListener, NameSuggestionListener {
+final class AccountRegistrationPanel extends ga implements TextHotspotListener, WidgetActivationListener, NameSuggestionListener {
     private ValidatedTextField field_H;
     static String field_ab;
     static double field_Z;
     static PcmSample field_cb;
     private ValidatedTextField field_R;
     NameSuggestionsPanel field_O;
-    private na field_T;
+    private RichTextWidget field_T;
     static String field_L;
     private ValidatedTextField field_X;
     private fa field_bb;
@@ -50,7 +50,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -70,7 +70,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
         return ByteStorage.a(30692, this.field_U.field_B, this.field_bb.field_O, this, this.field_H.field_B, this.field_R.field_B, var2);
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3) {
+    public final void onTextHotspotActivated(RichTextWidget param0, int param1, int param2, boolean param3) {
         int discarded$0 = 0;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -108,7 +108,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -117,7 +117,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           super.a(param0, param1, param2, param3);
           this.field_S.field_L = this.canSubmitRegistration((byte) -66);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ke.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ke.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -209,7 +209,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -269,15 +269,15 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
         int var3 = 20;
         var3 = var3 + this.a(this.field_U, oh.field_d, 170, var3, 120);
         var3 = var3 + (this.a(this.field_W, 170, var3, fj.field_A, "", 20, 20) + 5);
-        var3 = var3 + this.a(this.field_H, sc.field_b, 170, var3, 120);
+        var3 = var3 + this.a(this.field_H, TextLayout.field_b, 170, var3, 120);
         var3 = var3 + (5 + this.a(CipherPacketBuffer.field_t, jj.field_hb, 150, 170, var3, this.field_X));
         var3 = var3 + (5 + this.a(rc.field_a, va.field_d, 150, 170, var3, this.field_R));
         var3 = var3 + this.a(170, var3, qi.field_j, (byte) 59, this.field_V);
         la var4 = new la(46, var3, -90 + this.field_F, 25, this.field_bb, true, -120 + this.field_F, 5, fa.field_Q, 11579568, ag.field_j);
         this.b(var4, 10);
         var3 = var3 + var4.field_z;
-        vf var5 = new vf(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 0, 0, gm.field_cb.field_C, -1, 2147483647, true);
-        this.field_T = new na(var2, var5);
+        DefaultTextWidgetRenderer var5 = new DefaultTextWidgetRenderer(gm.field_cb, 0, 0, 0, 0, 16777215, -1, 0, 0, gm.field_cb.field_C, -1, 2147483647, true);
+        this.field_T = new RichTextWidget(var2, var5);
         this.field_T.field_C = "";
         this.field_T.a(0, (byte) 9, om.field_o);
         this.field_T.a(1, (byte) 9, om.field_o);
@@ -342,7 +342,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -379,7 +379,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -421,7 +421,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -465,7 +465,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -500,7 +500,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw sd.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw TextLineMetrics.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -515,7 +515,7 @@ final class AccountRegistrationPanel extends ga implements ge, WidgetActivationL
           var4 = param1;
           ((EditableTextField) ((Object) var3)).setText(false, false, var4);
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "ke.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "ke.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

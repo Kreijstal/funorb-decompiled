@@ -37,7 +37,7 @@ final class gf {
             field_e = (String) null;
           }
           LoginPanel.field_B = fb.field_j;
-          kc.field_Q = oi.field_f;
+          kc.field_Q = TextHotspotBounds.field_f;
           na.field_c = 0;
         }
     }

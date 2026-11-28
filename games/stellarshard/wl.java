@@ -64,7 +64,7 @@ abstract class wl extends tb {
 
     final static void l(int param0) {
         o.field_g = null;
-        pd.field_g = null;
+        RichTextLayout.field_g = null;
         PcmResampler.field_g = false;
         if (param0 == -12128) {
           bb.field_k = null;

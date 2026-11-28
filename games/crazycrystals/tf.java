@@ -74,7 +74,7 @@ final class tf {
           }
           tp.field_f.position = tp.field_f.position + 2;
           var5_int = tp.field_f.position;
-          tp.field_f.writeInt(tb.field_g, -16384);
+          tp.field_f.writeInt(TextLayout.field_g, -16384);
           tp.field_f.writeLong(vb.field_m, (byte) 13);
           var6 = 0;
           if (fj.field_d) {

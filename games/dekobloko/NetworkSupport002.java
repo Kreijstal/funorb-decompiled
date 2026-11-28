@@ -89,7 +89,7 @@ final class NetworkSupport002 {
     }
 
     final void performAction0179(int integerArgument1, BitmapFont bitmapFontArgument2) {
-        MixedSupport001 mixedSupport001Local1 = null;
+        DefaultTextWidgetRenderer mixedSupport001Local1 = null;
         MixedSupport009 mixedSupport009Local2 = null;
         RgbSprite[] rgbSpriteArrayLocal3 = null;
         ArgbSprite renderingSupport008Local4 = null;
@@ -112,7 +112,7 @@ final class NetworkSupport002 {
         MixedSupport009 mixedSupport009Local21;
         MixedSupport009 mixedSupport009Local22;
         try {
-          mixedSupport001Local1 = new MixedSupport001(bitmapFontArgument2, 2, 2, 2236962, 1, 1, 1, 2 + bitmapFontArgument2.integerState0523 + bitmapFontArgument2.integerState0518);
+          mixedSupport001Local1 = new DefaultTextWidgetRenderer(bitmapFontArgument2, 2, 2, 2236962, 1, 1, 1, 2 + bitmapFontArgument2.integerState0523 + bitmapFontArgument2.integerState0518);
           mixedSupport001Local1.integerState0002 = 16777215;
           this.callbackContract004State0005 = (CallbackContract004) ((Object) mixedSupport001Local1);
           mixedSupport009Local2 = new MixedSupport009();

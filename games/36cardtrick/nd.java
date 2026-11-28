@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends ek {
+final class nd extends DefaultTextWidgetRenderer {
     private oc field_p;
     private oc[] field_q;
 
@@ -205,7 +205,7 @@ final class nd extends ek {
             stackIn_3_0 = null;
           }
           var10 = (InteractiveWidget) (stackIn_3_0);
-          ek.a(param1.field_i + param3, param1.field_h + param1.field_o + param0, param0 + param1.field_o, (byte) 43, param1.field_q + (param1.field_i + param3));
+          DefaultTextWidgetRenderer.a(param1.field_i + param3, param1.field_h + param1.field_o + param0, param0 + param1.field_o, (byte) 43, param1.field_q + (param1.field_i + param3));
           if (var10 != null) {
             param4 = param4 & var10.field_B;
           }

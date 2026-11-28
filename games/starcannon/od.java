@@ -183,7 +183,7 @@ class od extends hh {
 
     final static void c(byte param0) {
         fb.field_c = null;
-        se.field_n = null;
+        RichTextLayout.field_n = null;
         rd.field_q = null;
         m.field_c = false;
         ri.field_b = null;

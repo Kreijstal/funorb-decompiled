@@ -21,7 +21,7 @@ final class fh {
     rd field_m;
 
     final void a(BitmapFont param0, int param1) {
-        ik var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         lh var4 = null;
         RgbSprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -44,7 +44,7 @@ final class fh {
         lh var15Lifetime1;
         lh var15Lifetime2;
         try {
-          var18 = new ik(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_G + param0.field_E));
+          var18 = new DefaultTextWidgetRenderer(param0, 2, 2, 2236962, 1, 1, 1, 2 + (param0.field_G + param0.field_E));
           this.field_m = (rd) ((Object) var18);
           var18.field_e = 16777215;
           var4 = new lh();

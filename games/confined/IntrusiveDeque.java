@@ -31,7 +31,7 @@ final class IntrusiveDeque implements Iterable {
           param0.field_q.field_o = param0;
           param0.field_o.field_q = param0;
         } catch (RuntimeException runtimeException) {
-          throw sd.a((Throwable) ((Object) runtimeException), "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw TextLineMetrics.a((Throwable) ((Object) runtimeException), "lm.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

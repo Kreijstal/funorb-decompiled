@@ -67,8 +67,8 @@ final class ClientException extends RuntimeException {
             var6 = sa.field_I[var3];
             if (TextFieldValidator.field_h == 2 &&
               1 == var2) {
-              if (jf.field_i.length <= el.field_O.length) {
-                stackIn_19_0 = el.field_O.length;
+              if (jf.field_i.length <= RichTextWidget.field_O.length) {
+                stackIn_19_0 = RichTextWidget.field_O.length;
               } else {
                 stackIn_19_0 = jf.field_i.length;
               }
@@ -81,10 +81,10 @@ final class ClientException extends RuntimeException {
               var8 = stackIn_22_0;
               if (var3 >= 6 &&
                 var3 < 6 + var7) {
-                if (0 > -var7 + var3 - (6 - el.field_O.length)) {
+                if (0 > -var7 + var3 - (6 - RichTextWidget.field_O.length)) {
                   stackIn_27_0 = "";
                 } else {
-                  stackIn_27_0 = el.field_O[-var7 + (el.field_O.length + var3) - 6];
+                  stackIn_27_0 = RichTextWidget.field_O[-var7 + (RichTextWidget.field_O.length + var3) - 6];
                 }
                 var6 = stackIn_27_0;
               }

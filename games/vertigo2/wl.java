@@ -147,11 +147,11 @@ final class wl {
               }
               if (!stackIn_13_0 ||
                 -(var15 * var16) + var14 * var17 < 0) {
-                var12Lifetime1 = pk.field_v[var9];
+                var12Lifetime1 = TextHotspotBounds.field_v[var9];
                 if (-2147483648 != var12Lifetime1) {
-                  var13Lifetime1 = pk.field_v[var10];
+                  var13Lifetime1 = TextHotspotBounds.field_v[var10];
                   if (-2147483648 != var13Lifetime1) {
-                    var14 = pk.field_v[var11];
+                    var14 = TextHotspotBounds.field_v[var11];
                     if (var14 != -2147483648) {
                       var15 = -var6 + (var13Lifetime1 + var12Lifetime1 + var14);
                       if (var7 < 0) {

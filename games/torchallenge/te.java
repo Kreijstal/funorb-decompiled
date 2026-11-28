@@ -45,7 +45,7 @@ final class te {
               } else {
                 param2 = k.field_f;
               }
-              MidiPcmStream.field_O.a(lg.field_b, 10);
+              MidiPcmStream.field_O.a(TextLayout.field_b, 10);
             }
             if (param1 == 10) {
               qk.d((byte) -80);
@@ -97,13 +97,13 @@ final class te {
               te.a(-52);
             }
             MouseInputHandler.field_a = MouseInputHandler.field_a + 1;
-            if (df.field_Q < 0) {
+            if (RichTextWidget.field_Q < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 nj.field_c[var2] = false;
               }
-              df.field_Q = qa.field_a;
+              RichTextWidget.field_Q = qa.field_a;
             } else {
-              while (qa.field_a != df.field_Q) {
+              while (qa.field_a != RichTextWidget.field_Q) {
                 var2 = PcmOutputWorker.field_g[qa.field_a];
                 qa.field_a = qa.field_a + 1 & 127;
                 if (0 <= var2) {

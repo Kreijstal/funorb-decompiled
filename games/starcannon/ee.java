@@ -34,7 +34,7 @@ final class ee {
           } else {
             if (m.a(param0 - 436)) {
               if (bl.field_a != 0) {
-                oi.a(param1, (byte) 67);
+                TextHotspotBounds.a(param1, (byte) 67);
               } else {
                 ai.a(param2, false, (byte) 114);
                 dd.a(param1, 0, 0, -23466);

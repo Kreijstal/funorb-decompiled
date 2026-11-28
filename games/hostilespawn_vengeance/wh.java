@@ -58,12 +58,12 @@ final class wh {
           }
           if (ln.field_a.field_c[param1] == 3) {
             for (var2_int = 0; var2_int < ProxySocketFactory.field_j; var2_int++) {
-              if (mm.field_m[var2_int] != null &&
-                !mm.field_m[var2_int].field_b &&
-                mm.field_m[var2_int].field_i != 0 &&
-                mm.field_m[var2_int].field_i != 231 &&
-                param1 == mm.field_m[var2_int].field_j.getClampedTileIndex(-4)) {
-                mm.field_m[var2_int].field_I = 0;
+              if (TextHotspotBounds.field_m[var2_int] != null &&
+                !TextHotspotBounds.field_m[var2_int].field_b &&
+                TextHotspotBounds.field_m[var2_int].field_i != 0 &&
+                TextHotspotBounds.field_m[var2_int].field_i != 231 &&
+                param1 == TextHotspotBounds.field_m[var2_int].field_j.getClampedTileIndex(-4)) {
+                TextHotspotBounds.field_m[var2_int].field_I = 0;
                 ln.field_a.field_c[param1] = 0;
                 break;
               }

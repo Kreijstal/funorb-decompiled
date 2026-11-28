@@ -234,7 +234,7 @@ class ha extends pc implements WidgetActivationListener {
         this.field_gb.a((byte) -115, 2121792, 4210752);
         sk var2 = new sk(this, this.field_ib, sg.field_h);
         int var3 = 123 % ((11 - param0) / 43);
-        var2.a((byte) -10, 15, a.field_d);
+        var2.a((byte) -10, 15, DefaultTextWidgetRenderer.field_d);
         this.c((byte) 50, var2);
     }
 

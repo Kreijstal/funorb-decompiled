@@ -9,7 +9,7 @@ final class re extends WidgetWrapper {
 
     final static void a(int param0, PcmStreamMixer param1, ResourceArchive param2, boolean param3) {
         try {
-          fa.field_l = param0 * fda.a(0) / 1000;
+          fa.field_l = param0 * RemoveDefeatedCreatureEffect.a(0) / 1000;
           PizzaArenaTheme.a(param2, 64);
           FullscreenFocusCanvas.a(param2, 112);
           sha.a(param2, param3);

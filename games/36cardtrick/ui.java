@@ -76,8 +76,8 @@ final class ui extends g implements WidgetActivationListener {
           int var1_int = 0;
           int var3 = Main.field_T;
           try {
-            if (dg.field_H != null) {
-              dg.field_H.a(82);
+            if (RichTextWidget.field_H != null) {
+              RichTextWidget.field_H.a(82);
             }
             if (param0 >= -49) {
               ui.clearDeclaredStaticReferences(-66);

@@ -19,9 +19,9 @@ final class dj {
 
     final static void a(int param0, boolean param1) {
         BitPacketBuffer.field_n = !param1 ? new lm(WidgetWrapper.field_B, ByteStorage.field_f) : new lm(dea.field_l, sr.field_b);
-        ela.field_i = new UiComponent(0L, (UiComponent) null);
-        ela.field_i.a(-1, BitPacketBuffer.field_n.field_a);
-        ela.field_i.a(param0 - 1, jj.field_wb);
+        DisableMoveSlotEffect.field_i = new UiComponent(0L, (UiComponent) null);
+        DisableMoveSlotEffect.field_i.a(-1, BitPacketBuffer.field_n.field_a);
+        DisableMoveSlotEffect.field_i.a(param0 - 1, jj.field_wb);
         qw.field_b = new UiComponent(0L, BoundedRandomAccessFile.field_d);
         ArchiveIndex.field_q = new UiComponent((long)param0, (UiComponent) null);
         qw.field_b.a(-1, saa.field_f);

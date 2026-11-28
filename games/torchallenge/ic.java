@@ -172,7 +172,7 @@ abstract class ic extends UiComponent implements gk {
         UiComponent var2 = this.field_A;
         if (var2 == null) {
           if (param0 >= -24) {
-            this.b(false);
+            this.getTooltipText(false);
             return null;
           }
           return null;
@@ -181,7 +181,7 @@ abstract class ic extends UiComponent implements gk {
           return var2;
         }
         if (param0 >= -24) {
-          this.b(false);
+          this.getTooltipText(false);
           return null;
         }
         return null;
@@ -477,14 +477,14 @@ abstract class ic extends UiComponent implements gk {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    String b(boolean param0) {
+    String getTooltipText(boolean param0) {
         String var3 = null;
-        String var2 = super.b(param0);
+        String var2 = super.getTooltipText(param0);
         String var3Lifetime1;
         if (param0) {
           field_C = (ResourceArchive) null;
           if (null != this.field_A) {
-            var3 = this.field_A.b(false);
+            var3 = this.field_A.getTooltipText(false);
             if (var3 != null) {
               return var3;
             }
@@ -495,7 +495,7 @@ abstract class ic extends UiComponent implements gk {
         if (null == this.field_A) {
           return var2;
         }
-        var3Lifetime1 = this.field_A.b(false);
+        var3Lifetime1 = this.field_A.getTooltipText(false);
         if (var3Lifetime1 == null) {
           return var2;
         }

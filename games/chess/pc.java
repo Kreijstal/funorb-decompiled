@@ -131,7 +131,7 @@ final class pc extends ci {
         this.field_Gb = -2;
         try {
           this.field_Lb = param12;
-          this.field_Nb = new ci(0L, param6, se.field_W.toUpperCase());
+          this.field_Nb = new ci(0L, param6, RichTextWidget.field_W.toUpperCase());
           this.field_Nb.field_fb = 1;
           this.a((byte) 125, this.field_Nb);
           this.field_Fb = new ci(0L, param7);
@@ -187,10 +187,10 @@ final class pc extends ci {
             this.field_Eb.a((byte) 126, var28[1]);
             var28[2] = new ci(0L, (ci) null);
             this.field_Eb.a((byte) 124, var28[2]);
-            this.field_Jb = new ci[re.field_j];
+            this.field_Jb = new ci[TextHotspotBounds.field_j];
             var16 = 0;
             boolean decompiledNaturalLoopExit0 = false;
-            while (!(decompiledNaturalLoopExit0 = (!(var16 < re.field_j)))) {
+            while (!(decompiledNaturalLoopExit0 = (!(var16 < TextHotspotBounds.field_j)))) {
               stackIn_19_0 = null;
               stackIn_19_1 = MusicPatchPcmStream.field_t[var16];
               if (var27 == 0) {
@@ -230,7 +230,7 @@ final class pc extends ci {
             }
             var17Lifetime4 = 0;
             while (true) {
-              if (!(var17Lifetime4 < re.field_j)) {
+              if (!(var17Lifetime4 < TextHotspotBounds.field_j)) {
                 if (var16Lifetime2 > 140) {
                   var16Lifetime2 = 140;
                 }
@@ -461,7 +461,7 @@ final class pc extends ci {
             stackIn_6_0.field_gb = stackIn_7_1;
           }
           var3 = 0;
-          while (!(var3 >= re.field_j)) {
+          while (!(var3 >= TextHotspotBounds.field_j)) {
             if (var4 != 0) {
               decompiledFrameCompleted0 = false;
               break;
@@ -786,7 +786,7 @@ final class pc extends ci {
                 if (decompiledNaturalLoopExit0) {
                   var16 = 0;
                 }
-                var17 = se.field_S.field_Kb.field_I;
+                var17 = RichTextWidget.field_S.field_Kb.field_I;
                 var18_ref = (r) (var17.beginBackward(-18110));
                 scanLoop3: while (true) {
                   boolean decompiledFrameRemainder1 = true;
@@ -963,7 +963,7 @@ final class pc extends ci {
           stackIn_189_0 = BirthDateValidator.field_k;
           stackIn_190_1 = (param0) && (!param3) && (!jh.field_a);
           ((ci) (Object) stackIn_189_0).a(stackIn_190_1, (byte) 88);
-          stackIn_194_0 = ah.field_i;
+          stackIn_194_0 = RichTextLayout.field_i;
           stackIn_195_1 = (param0) && (!param3) && (jh.field_a);
           ((ci) (Object) stackIn_194_0).a(stackIn_195_1, (byte) 88);
           qa.field_f.field_a.f((byte) 109);

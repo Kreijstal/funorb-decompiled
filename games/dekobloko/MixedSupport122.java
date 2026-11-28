@@ -29,7 +29,7 @@ final class MixedSupport122 {
         UiComponent.performAction0227(116);
         booleanArgument14 = BucketBoard.computeBoolean0968(integerArgument9, -121, integerArgument2, integerArgument11, booleanArgument14, integerArgument10, integerArgument4);
         UiComponentPart023.performAction1240(booleanArgument6, integerArgument13, integerArgument8, booleanArgument7, booleanArgument14, booleanArgument3, booleanArgument5, -1, integerArgument1, integerArgument11);
-        MixedSupport001.performAction0010(integerArgument13, booleanArgument6, true);
+        DefaultTextWidgetRenderer.performAction0010(integerArgument13, booleanArgument6, true);
         if (byteArgument12 <= 42) {
           stringState0530 = (String) null;
         } else {

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class UiComponentPart018 extends ComponentContainer implements CallbackContract015, WidgetActivationListener {
+final class UiComponentPart018 extends ComponentContainer implements TextHotspotListener, WidgetActivationListener {
     static String stringState0343;
     static String[] stringArrayState0021;
     static int integerState0502;
-    private UiComponentPart025 uiComponentPart025State0001;
+    private RichTextWidget uiComponentPart025State0001;
     private InteractiveComponent interactiveComponentState0010;
     private UiComponentPart033 uiComponentPart033State0001;
     static String stringState0344;
     static SceneWidget sceneWidgetState0079;
 
-    public final void performAction1034(UiComponentPart025 uiComponentPart025Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
+    public final void onTextHotspotActivated(RichTextWidget uiComponentPart025Argument1, int integerArgument2, int integerArgument3, int integerArgument4) {
         RuntimeException runtimeExceptionLocal1 = null;
         int integerLocal2 = 0;
         RuntimeException stackRuntimeExceptionLocal3 = null;
@@ -54,7 +54,7 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
         super(0, 0, 288, 0, (CallbackContract004) null);
         String stringLocal1 = null;
         int integerLocal2 = 0;
-        MixedSupport001 mixedSupport001Local3 = null;
+        DefaultTextWidgetRenderer mixedSupport001Local3 = null;
         int integerLocal4 = 0;
         int integerLocal5 = 0;
         try {
@@ -63,8 +63,8 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
           this.interactiveComponentState0010.callbackContract004State0006 = (CallbackContract004) ((Object) new MixedSupport041());
           stringLocal1 = NodeHashTableIterator.substituteIndexedPlaceholders(118, MixedSupport057.stringState0247, new String[]{this.computeString1036((byte) 60), this.computeString1035((byte) 57)});
           integerLocal2 = 20;
-          mixedSupport001Local3 = new MixedSupport001(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
-          this.uiComponentPart025State0001 = new UiComponentPart025(stringLocal1, mixedSupport001Local3);
+          mixedSupport001Local3 = new DefaultTextWidgetRenderer(GameDomainSupport003.bitmapFontState0015, 0, 0, 0, 0, 16777215, -1, 3, 0, GameDomainSupport003.bitmapFontState0015.integerState0518, -1, 2147483647, true);
+          this.uiComponentPart025State0001 = new RichTextWidget(stringLocal1, mixedSupport001Local3);
           this.uiComponentPart025State0001.stringState0080 = "";
           this.uiComponentPart025State0001.performAction1362(MixedSupport107.stringState0464, 0, 1);
           this.uiComponentPart025State0001.performAction1362(MixedSupport107.stringState0464, 1, 1);
@@ -120,9 +120,9 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
             stackStringLocal3 = NodeHashTableIterator.substituteIndexedPlaceholders(94, MixedSupport144.stringState0607, new String[]{stringArgument2});
             return stackStringLocal3;
           }
-          UiComponentPart025.nodeDequeState0027.beginBackwardFrom(64, sceneWidgetPart014Local17);
+          RichTextWidget.nodeDequeState0027.beginBackwardFrom(64, sceneWidgetPart014Local17);
           while (true) {
-            sceneWidgetPart014Local16 = (SceneWidgetPart014) (UiComponentPart025.nodeDequeState0027.nextBackward(true));
+            sceneWidgetPart014Local16 = (SceneWidgetPart014) (RichTextWidget.nodeDequeState0027.nextBackward(true));
             if (sceneWidgetPart014Local16 != null) {
               sceneWidgetPart014Local16.integerState0920 = sceneWidgetPart014Local16.integerState0920 - 1;
               continue;
@@ -164,8 +164,8 @@ final class UiComponentPart018 extends ComponentContainer implements CallbackCon
 
     private final String computeString1035(byte byteArgument1) {
         if (byteArgument1 != 57) {
-          UiComponentPart025 uiComponentPart025Local1 = (UiComponentPart025) null;
-          this.performAction1034((UiComponentPart025) null, -92, 49, 97);
+          RichTextWidget uiComponentPart025Local1 = (RichTextWidget) null;
+          this.onTextHotspotActivated((RichTextWidget) null, -92, 49, 97);
           return "</col></u>";
         }
         return "</col></u>";

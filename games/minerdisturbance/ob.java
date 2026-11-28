@@ -238,7 +238,7 @@ abstract class ob extends GameAppletShell {
         }
         if (af.field_u == 1) {
           if (kb.field_c != 0) {
-            PacketBuffer.field_r = lb.a(1, s.field_Q);
+            PacketBuffer.field_r = TextHotspotBounds.a(1, s.field_Q);
           }
           hj.field_i = eb.a(true, fn.field_p, false, 1, true);
           pb.field_r = eb.a(true, se.field_N, false, 1, true);
@@ -265,7 +265,7 @@ abstract class ob extends GameAppletShell {
           }
         }
         if (3 == af.field_u &&
-          eg.a(pb.field_r, 4, hj.field_i, oh.field_C) &&
+          DefaultTextWidgetRenderer.a(pb.field_r, 4, hj.field_i, oh.field_C) &&
           eb.a(oh.field_C, (byte) 124)) {
           bh.h((byte) 123);
           ArchiveRequest.g(-1719110238);
@@ -273,10 +273,10 @@ abstract class ob extends GameAppletShell {
           jb.field_q = false;
           mj.a(v.field_e, hj.field_i, 43, oh.field_C, pb.field_r);
           if (nc.field_e ||
-            null != bm.field_q) {
+            null != RichTextLayout.field_q) {
             stackIn_96_0 = param1 + 1123;
             stackIn_97_1 = !(nc.field_e);
-            stackIn_99_2 = bm.field_q;
+            stackIn_99_2 = RichTextLayout.field_q;
             stackIn_100_3 = !(nc.field_e);
             bb.a(stackIn_96_0, stackIn_97_1, stackIn_99_2, stackIn_100_3);
           }
@@ -297,7 +297,7 @@ abstract class ob extends GameAppletShell {
         }
         if (af.field_u == 10) {
           if (kb.field_c != 0) {
-            fh.field_c = lb.a(1, mg.field_f);
+            fh.field_c = TextHotspotBounds.a(1, TextLineMetrics.field_f);
           }
           af.field_u = 11;
         }
@@ -366,11 +366,11 @@ abstract class ob extends GameAppletShell {
         }
         if (var2 != 0 &&
           var2 != 1) {
-          if (!tn.field_M) {
+          if (!RichTextWidget.field_M) {
             this.a((byte) -120, "reconnect");
           }
           eb.a((byte) -33);
-          da.a(true, nf.field_g, var2);
+          da.a(true, TextLayout.field_g, var2);
           nd.field_e = true;
           PcmOutputWorker.field_f = 15000L + sf.correctedCurrentTimeMillis((byte) -89);
           return var2;
@@ -478,7 +478,7 @@ abstract class ob extends GameAppletShell {
         int var4 = rj.field_d - 1;
         byte[] var5 = new byte[var4];
         kj.field_a.a(var5, 113, var4, param0);
-        Bzip2State.a(bm.c(-98), bh.a(var5, 88), 11050, var3 != 0);
+        Bzip2State.a(RichTextLayout.c(-98), bh.a(var5, 88), 11050, var3 != 0);
     }
 
     final static boolean l(int param0) {
@@ -529,7 +529,7 @@ abstract class ob extends GameAppletShell {
 
     private final void g(int param0) {
         String var2 = NanoFrameTimer.b((byte) -124);
-        tk.a(var2, bm.c(-116), (byte) -15);
+        tk.a(var2, RichTextLayout.c(-116), (byte) -15);
         if (param0 != -18) {
           this.c((byte) 99);
         }
@@ -553,7 +553,7 @@ abstract class ob extends GameAppletShell {
         se.field_N = param5;
         da.field_c = param7;
         fn.field_p = param4;
-        mg.field_f = param6;
+        TextLineMetrics.field_f = param6;
         s.field_Q = param3;
         this.c(false);
         MouseWheelInput.a(true);
@@ -584,8 +584,8 @@ abstract class ob extends GameAppletShell {
           if (var4 == 1) {
             var5_int = ob.a((byte) 112, IsaacRandom.a(15), fe.f(0));
             if (-1 != var5_int) {
-              ImageProducerRasterBuffer.a(-21614, nf.field_g, var5_int, vh.field_i);
-              nf.field_g = null;
+              ImageProducerRasterBuffer.a(-21614, TextLayout.field_g, var5_int, vh.field_i);
+              TextLayout.field_g = null;
               vh.field_i = null;
             }
             var10 = aj.a(103);
@@ -596,8 +596,8 @@ abstract class ob extends GameAppletShell {
           if (var4 == 2) {
             var5_intLifetime1 = dn.a(DisplayNameSelectionPanel.n(-124), fa.a(true), mb.b((byte) -95), fc.b((byte) 123), ii.b((byte) 63), this.field_A, -14543);
             if (-1 != var5_intLifetime1) {
-              NetworkArchiveRequest.a(nf.field_g, vh.field_i, (byte) -98, var5_intLifetime1);
-              nf.field_g = null;
+              NetworkArchiveRequest.a(TextLayout.field_g, vh.field_i, (byte) -98, var5_intLifetime1);
+              TextLayout.field_g = null;
               vh.field_i = null;
             }
           }
@@ -613,8 +613,8 @@ abstract class ob extends GameAppletShell {
               var5_intLifetime2 = re.a(this.field_A, false, this.field_p, fc.b((byte) 127), false, ii.b((byte) 126));
               if (var5_intLifetime2 != -1) {
                 if (var5_intLifetime2 != 0) {
-                  da.a(true, nf.field_g, var5_intLifetime2);
-                  nf.field_g = null;
+                  da.a(true, TextLayout.field_g, var5_intLifetime2);
+                  TextLayout.field_g = null;
                 } else {
                   jn.field_n = ne.field_Q;
                   mc.c(-100);
@@ -629,36 +629,36 @@ abstract class ob extends GameAppletShell {
               SecondaryNodeDeque.field_b = true;
               fh.field_b = 10;
             } else {
-              kn.a(13569, bm.c(-89));
+              kn.a(13569, RichTextLayout.c(-89));
             }
           }
           if (5 == var4) {
-            uf.a(13, bm.c(-84));
+            uf.a(13, RichTextLayout.c(-84));
           }
           if (var4 == 6 &&
             jb.field_q) {
             fh.field_b = 10;
           }
           if (var4 == 7) {
-            tg.a((byte) -114, bm.c(-112));
+            tg.a((byte) -114, RichTextLayout.c(-112));
           }
           if (var4 == 8) {
-            kn.a(13569, bm.c(-112));
+            kn.a(13569, RichTextLayout.c(-112));
           }
           if (var4 == 9) {
-            dk.a(bm.c(-77), (byte) -27);
+            dk.a(RichTextLayout.c(-77), (byte) -27);
           }
           if (var4 == 10) {
             sn.field_c.d((byte) -51, 17);
           }
           if (var4 == 11) {
-            ne.a(bm.c(-108), 30433);
+            ne.a(RichTextLayout.c(-108), 30433);
           }
           if (!param0) {
             return 19;
           }
           if (12 == var4) {
-            jk.a(bm.c(-86), 68, kn.a(0));
+            jk.a(RichTextLayout.c(-86), 68, kn.a(0));
           }
           if (13 == var4) {
             try {

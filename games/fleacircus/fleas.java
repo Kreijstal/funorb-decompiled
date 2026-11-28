@@ -547,7 +547,7 @@ public final class fleas extends NetworkGameClient {
                         var6 = var2[0][var5] >> 16 & 255;
                         var7_int = (65376 & var2[0][var5]) >> 8;
                         var8_int = var2[0][var5] & 255;
-                        var2[var4_int][var5] = ne.a(var8_int / 2, ne.a(var6 / 2 << 16, var7_int / 2 << 8));
+                        var2[var4_int][var5] = TextLayout.a(var8_int / 2, TextLayout.a(var6 / 2 << 16, var7_int / 2 << 8));
                       }
                     } else {
                       var2[var4_int][var5] = var2[0][var5];
@@ -864,10 +864,10 @@ public final class fleas extends NetworkGameClient {
               if (-1 == ValidatedTextField.field_V) {
                 fc.c(126);
                 if (var4 != 0) {
-                  pi.field_b[ValidatedTextField.field_V].f(2);
+                  TextLineMetrics.field_b[ValidatedTextField.field_V].f(2);
                 }
               } else {
-                pi.field_b[ValidatedTextField.field_V].f(2);
+                TextLineMetrics.field_b[ValidatedTextField.field_V].f(2);
               }
               var3 = -DiskCacheWorker.field_g + 32 + 1;
               var3 = var3 * 16;
@@ -881,10 +881,10 @@ public final class fleas extends NetworkGameClient {
               if (ab.field_b == -1) {
                 fc.c(-21);
                 if (var4 != 0) {
-                  pi.field_b[ab.field_b].f(2);
+                  TextLineMetrics.field_b[ab.field_b].f(2);
                 }
               } else {
-                pi.field_b[ab.field_b].f(2);
+                TextLineMetrics.field_b[ab.field_b].f(2);
               }
               var3Lifetime2 = 1 + DiskCacheWorker.field_g;
               var3Lifetime2 = var3Lifetime2 * 16;
@@ -895,9 +895,9 @@ public final class fleas extends NetworkGameClient {
               if (var4 != 0) {
                 if (-1 == ab.field_b) {
                   fc.c(126);
-                  pi.field_b[ab.field_b].f(2);
+                  TextLineMetrics.field_b[ab.field_b].f(2);
                 } else {
-                  pi.field_b[ab.field_b].f(2);
+                  TextLineMetrics.field_b[ab.field_b].f(2);
                 }
               }
             }
@@ -905,10 +905,10 @@ public final class fleas extends NetworkGameClient {
             if (-1 == ab.field_b) {
               fc.c(126);
               if (var4 != 0) {
-                pi.field_b[ab.field_b].f(2);
+                TextLineMetrics.field_b[ab.field_b].f(2);
               }
             } else {
-              pi.field_b[ab.field_b].f(2);
+              TextLineMetrics.field_b[ab.field_b].f(2);
             }
           }
           if (!hi.a((byte) -72)) {
@@ -1072,7 +1072,7 @@ public final class fleas extends NetworkGameClient {
           ek.clearStaticReferences((byte) -42);
           ic.discardDeclaredStaticReferences(-101);
           mc.clearStaticReferences((byte) 87);
-          e.clearStaticReferences((byte) -92);
+          DefaultTextWidgetRenderer.clearStaticReferences((byte) -92);
           bl.clearStaticReferences();
           sd.a(9330);
           re.clearStaticReferences((byte) -56);
@@ -1097,7 +1097,7 @@ public final class fleas extends NetworkGameClient {
           hb.clearDeclaredStaticReferences((byte) 116);
           ee.clearStaticReferences(1);
           ib.a(-111);
-          ne.clearStaticReferences((byte) -84);
+          TextLayout.clearStaticReferences((byte) -84);
           UiComponent.clearDeclaredStaticReferences(0);
           InteractiveWidget.releaseDeclaredStaticReferences(-1);
           dk.clearStaticReferences((byte) 2);
@@ -1124,7 +1124,7 @@ public final class fleas extends NetworkGameClient {
           oh.f((byte) -110);
           lk.clearStaticReferences(true);
           NameSuggestionsPanel.clearDeclaredStaticReferences((byte) -20);
-          ja.discardDeclaredStaticReferences(-91);
+          RichTextWidget.discardDeclaredStaticReferences(-91);
           je.i(93);
           v.resetDeclaredStaticReferences(-8011);
           vk.resetStaticState(false);
@@ -1134,7 +1134,7 @@ public final class fleas extends NetworkGameClient {
           d.discardDeclaredStaticReferences(-1);
           SoundFilter.clearStaticReferences();
           dh.resetStaticState(120);
-          j.a(-113);
+          RichTextLayout.a(-113);
           DirectByteStorage.c(-1);
           id.clearStaticReferences((byte) 110);
           pk.clearDeclaredStaticReferences((byte) 89);
@@ -1183,14 +1183,14 @@ public final class fleas extends NetworkGameClient {
           kf.clearDeclaredStaticReferences(param0 ^ 116);
           oa.clearStaticReferences((byte) -88);
           te.clearStaticReferences(false);
-          pi.clearStaticReferences((byte) 11);
+          TextLineMetrics.clearStaticReferences((byte) 11);
           AccountNameAvailabilityValidator.resetStaticState(false);
           EmailFormatValidator.clearStaticReferences((byte) -10);
           ConfirmedEmailAvailabilityValidator.clearStaticReferences((byte) 2);
           AgeValidator.resetStaticState((byte) 113);
           MatchingFieldValidator.clearStaticReferences((byte) 115);
           ak.clearStaticReferences(false);
-          mi.a((byte) 27);
+          TextHotspotBounds.a((byte) 27);
           wd.a(false);
           DebouncedFieldValidator.clearStaticReferences(param0 ^ -125);
           ob.clearStaticReferences(param0 ^ 73);
@@ -1310,7 +1310,7 @@ public final class fleas extends NetworkGameClient {
                         jj.a(25.0f, sa.a(hm.field_g, "", bf.field_f, IterableNodeHashTable.field_e, (byte) 46), true);
                         return false;
                       }
-                      jj.a(20.0f, sa.a(jc.field_e, "", tj.field_b, mi.field_p, (byte) 46), true);
+                      jj.a(20.0f, sa.a(jc.field_e, "", tj.field_b, TextHotspotBounds.field_p, (byte) 46), true);
                       return false;
                     }
                     jj.a(18.0f, re.a((byte) 127, 0, ob.field_d, kk.field_c, cf.field_b), true);
@@ -1389,7 +1389,7 @@ public final class fleas extends NetworkGameClient {
                 var3_int = 3072;
                 break;
               }
-              pi.field_b[var3_int] = new t(var3_int);
+              TextLineMetrics.field_b[var3_int] = new t(var3_int);
               var3_int++;
             } while (var10 == 0);
             var4 = 30;
@@ -1643,7 +1643,7 @@ public final class fleas extends NetworkGameClient {
                 }
                 decompiledFrameRemainder0 = !(hi.a((byte) -72));
                 if (decompiledFrameRemainder0) {
-                  pi.field_b[ab.field_b].a(true, true);
+                  TextLineMetrics.field_b[ab.field_b].a(true, true);
                   decompiledFrameRemainder0 = (var3 != 0);
                 }
               }
@@ -1698,7 +1698,7 @@ public final class fleas extends NetworkGameClient {
             } while (var3 == 0);
           }
           do {
-            if (!tb.a(-55, ne.field_b)) {
+            if (!tb.a(-55, TextLayout.field_b)) {
               dk.b((byte) 41, 0);
               break;
             }
@@ -1733,7 +1733,7 @@ public final class fleas extends NetworkGameClient {
                 decompiledFrameRemainder0 = (var3 != 0);
               }
               if (decompiledFrameRemainder0) {
-                pi.field_b[ab.field_b].a((byte) 26);
+                TextLineMetrics.field_b[ab.field_b].a((byte) 26);
                 decompiledFrameRemainder0 = (var3 != 0);
               }
             }
@@ -1744,7 +1744,7 @@ public final class fleas extends NetworkGameClient {
                 BufferedSocket.b(94);
               }
               if (ab.field_b >= 0) {
-                pi.field_b[ab.field_b].e(-400);
+                TextLineMetrics.field_b[ab.field_b].e(-400);
               }
               decompiledFrameRemainder0 = (DiskCacheWorker.field_g == 32);
               if (decompiledFrameRemainder0) {
@@ -1821,9 +1821,9 @@ public final class fleas extends NetworkGameClient {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (ne.field_a != null) {
-            uh.a((byte) -128, ne.field_a);
-            ne.field_a = null;
+          if (TextLayout.field_a != null) {
+            uh.a((byte) -128, TextLayout.field_a);
+            TextLayout.field_a = null;
             fleas.h((byte) 79);
           }
           hm.field_g = q.a(8192, 1);

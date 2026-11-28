@@ -14,7 +14,7 @@ final class p {
         h.field_a = (byte[][]) null;
         GameApplet.field_e = null;
         td.field_m = null;
-        lg.field_e = null;
+        TextLayout.field_e = null;
         MusicPatchPcmStream.field_r = null;
         if (param0 != 0) {
           field_c = (String[][]) null;

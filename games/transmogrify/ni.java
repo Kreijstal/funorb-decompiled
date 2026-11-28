@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ni extends h {
+class ni extends DefaultTextWidgetRenderer {
     static sh field_o;
 
     final static int scoreSubmittedWord(byte param0) {

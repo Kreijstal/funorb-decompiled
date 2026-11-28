@@ -78,7 +78,7 @@ final class AccountCreationResultPanel extends dh implements WidgetActivationLis
         try {
           this.field_lb = true;
           if (param2.success) {
-            var4 = bd.field_m;
+            var4 = RichTextLayout.field_m;
           } else {
             if (param2.suggestions != null) {
               var4 = j.field_c;

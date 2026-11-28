@@ -186,7 +186,7 @@ final class tk extends InteractiveWidget {
         }
     }
 
-    final String b(boolean param0) {
+    final String getTooltipText(boolean param0) {
         if (param0) {
           tk.b(-20, -30, -128, 99, -33);
         }

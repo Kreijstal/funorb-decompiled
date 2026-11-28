@@ -331,15 +331,15 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
           uj.a(var4, 95);
         }
         regionExit1: {
-          if (hh.field_s != sn.field_b) {
-            if (hh.field_s == MouseWheelInput.field_a) {
+          if (DefaultTextWidgetRenderer.field_s != sn.field_b) {
+            if (DefaultTextWidgetRenderer.field_s == MouseWheelInput.field_a) {
               this.reloadRecruitmentRoster(param0 + 26693);
               this.a((byte) -125, true);
             } else {
-              if (NetworkGameClient.field_y != hh.field_s) {
-                if (hh.field_s != null &&
-                  hh.field_s instanceof u) {
-                  var18 = ((u) (hh.field_s)).field_Q;
+              if (NetworkGameClient.field_y != DefaultTextWidgetRenderer.field_s) {
+                if (DefaultTextWidgetRenderer.field_s != null &&
+                  DefaultTextWidgetRenderer.field_s instanceof u) {
+                  var18 = ((u) (DefaultTextWidgetRenderer.field_s)).field_Q;
                   this.a((byte) -112, -1);
                   if (null == this.field_F ||
                     var18.field_t != this.field_F.field_n) {
@@ -351,17 +351,17 @@ final class RaiderRecruitmentScreen extends DungeonAssaultScreen {
                   }
                   break regionExit1;
                 }
-                if (hh.field_s == hl.field_b) {
+                if (DefaultTextWidgetRenderer.field_s == hl.field_b) {
                   this.a(0, 0);
                 } else {
-                  if (hh.field_s == hi.field_a) {
+                  if (DefaultTextWidgetRenderer.field_s == hi.field_a) {
                     this.a(1, 0);
                   } else {
-                    if (hh.field_s != kl.field_h) {
-                      if (cd.field_d == hh.field_s) {
+                    if (DefaultTextWidgetRenderer.field_s != kl.field_h) {
+                      if (cd.field_d == DefaultTextWidgetRenderer.field_s) {
                         this.a(5, 0);
                       } else {
-                        if (hh.field_s == am.field_f) {
+                        if (DefaultTextWidgetRenderer.field_s == am.field_f) {
                           this.a(6, 0);
                         } else {
                           stackIn_49_0 = no.field_d;

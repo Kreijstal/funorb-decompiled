@@ -693,7 +693,7 @@ final class BattleScreen extends dfa {
           } else {
             if (3 == this.field_h.field_o) {
               for (var6 = 0; var6 < this.field_h.field_C[var4]; var6++) {
-                ela.field_j[0].draw(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
+                DisableMoveSlotEffect.field_j[0].draw(var6 * 14 + var3 + (var5 + 10), 12 + i.field_a.field_rb + (-ScavengerAnimation.field_w.field_p + 10));
               }
             }
           }
@@ -772,7 +772,7 @@ final class BattleScreen extends dfa {
           return;
         }
         if (AccountRequestState.field_a) {
-          ic.a(69);
+          ClearPendingPetAttackEffect.a(69);
         }
         if (this.field_e.field_a) {
           this.field_p = this.field_p - 1;
@@ -1785,7 +1785,7 @@ final class BattleScreen extends dfa {
                 this.field_K = this.field_K + 1;
               }
               if (0 >= var4.hp) {
-                this.field_o[var2][var3].b(-1, 5);
+                this.field_o[var2][var3].playAnimation(-1, 5);
                 this.field_o[var2][var3].field_f.field_u.a((byte) -84);
               }
             }

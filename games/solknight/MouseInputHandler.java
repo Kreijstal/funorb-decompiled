@@ -160,7 +160,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (ee.field_j != null) {
             cf.field_e = 0;
-            le.field_f = -1;
+            TextLineMetrics.field_f = -1;
             c.field_J = -1;
             pe.field_n = true;
           }
@@ -173,7 +173,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (ee.field_j != null) {
             cf.field_e = 0;
-            le.field_f = param0.getX();
+            TextLineMetrics.field_f = param0.getX();
             c.field_J = param0.getY();
             pe.field_n = true;
           }
@@ -186,7 +186,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ee.field_j) {
             cf.field_e = 0;
-            le.field_f = param0.getX();
+            TextLineMetrics.field_f = param0.getX();
             c.field_J = param0.getY();
             pe.field_n = true;
           }
@@ -199,7 +199,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != ee.field_j) {
             cf.field_e = 0;
-            le.field_f = param0.getX();
+            TextLineMetrics.field_f = param0.getX();
             c.field_J = param0.getY();
             pe.field_n = true;
           }

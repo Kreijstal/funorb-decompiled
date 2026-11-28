@@ -36,20 +36,20 @@ class EditableTextField extends InteractiveWidget {
           this.field_p = 0;
           return;
         }
-        if (!(this.field_A instanceof cf)) {
+        if (!(this.field_A instanceof TextWidgetRenderer)) {
           return;
         }
-        cf var9 = (cf) ((Object) this.field_A);
-        nf var3 = var9.c(0, (fe) (this));
-        int var4 = var3.a(-1);
-        int var5 = var9.a((fe) (this), param0);
-        int var6 = var9.a(123) >> 1;
+        TextWidgetRenderer var9 = (TextWidgetRenderer) ((Object) this.field_A);
+        TextLayout var3 = var9.getTextLayout(0, (fe) (this));
+        int var4 = var3.getMaxLineRightX(-1);
+        int var5 = var9.getTextAreaWidth((fe) (this), param0);
+        int var6 = var9.getFontLineHeight(123) >> 1;
         if (var4 < -var6 + var5) {
           this.field_p = 0;
           this.field_o = 0;
           return;
         }
-        int var7 = this.field_p + var3.a(this.field_J, (byte) -124);
+        int var7 = this.field_p + var3.getXForTextOffset(this.field_J, (byte) -124);
         if (-var6 + var5 < var7) {
           this.field_p = this.field_p - var7 + (-var6 + var5);
         } else {
@@ -155,10 +155,10 @@ class EditableTextField extends InteractiveWidget {
           if (!super.a(param0, param1, param2, param3, param4, param5, param6)) {
             return false;
           }
-          if (!(this.field_A instanceof cf)) {
+          if (!(this.field_A instanceof TextWidgetRenderer)) {
             return false;
           }
-          var8_int = ((cf) ((Object) this.field_A)).a((fe) (this), param6, false, NodeHashTableIterator.field_e, nk.field_w, param1);
+          var8_int = ((TextWidgetRenderer) ((Object) this.field_A)).findTextOffsetAtScreenPosition((fe) (this), param6, false, NodeHashTableIterator.field_e, nk.field_w, param1);
           stackIn_5_1 = 82;
           if (-1 != var8_int) {
             stackIn_6_2 = var8_int;
@@ -448,7 +448,7 @@ class EditableTextField extends InteractiveWidget {
     }
 
     void a(int param0, int param1, byte param2, fe param3) {
-        cf var7 = null;
+        TextWidgetRenderer var7 = null;
         int var6 = 0;
         try {
           super.a(param0, param1, (byte) 75, param3);
@@ -457,9 +457,9 @@ class EditableTextField extends InteractiveWidget {
           }
           this.scrollCaretIntoView(false);
           if (this.field_w == 1) {
-            if (this.field_A instanceof cf) {
-              var7 = (cf) ((Object) this.field_A);
-              var6 = var7.a((fe) (this), param1, false, NodeHashTableIterator.field_e, nk.field_w, param0);
+            if (this.field_A instanceof TextWidgetRenderer) {
+              var7 = (TextWidgetRenderer) ((Object) this.field_A);
+              var6 = var7.findTextOffsetAtScreenPosition((fe) (this), param1, false, NodeHashTableIterator.field_e, nk.field_w, param0);
               if (var6 != -1) {
                 if (this.field_R && var6 < this.field_I &&
                   this.field_O < var6) {
@@ -476,19 +476,19 @@ class EditableTextField extends InteractiveWidget {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        cf var8 = null;
+        TextWidgetRenderer var8 = null;
         long var6 = 0L;
         if (this.field_A != null &&
           param3 == 0) {
           this.field_A.a(param0 ^ 12092, param1, (fe) (this), param2, this.field_E);
-          if (this.field_A instanceof cf) {
-            var8 = (cf) ((Object) this.field_A);
+          if (this.field_A instanceof TextWidgetRenderer) {
+            var8 = (TextWidgetRenderer) ((Object) this.field_A);
             if (this.field_J != this.field_O) {
-              var8.a(this.field_J, (fe) (this), param2, param1, this.field_O, false);
+              var8.paintSelection(this.field_J, (fe) (this), param2, param1, this.field_O, false);
             }
             var6 = sf.correctedCurrentTimeMillis((byte) 107);
             if ((var6 - this.field_K) % 1000L < 500L) {
-              var8.a(param0 + 13030, param1, this.field_J, param2, (fe) (this));
+              var8.paintCaret(param0 + 13030, param1, this.field_J, param2, (fe) (this));
             }
           }
         }

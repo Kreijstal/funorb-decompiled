@@ -151,10 +151,10 @@ final class fu extends AnimationNode {
           ada.field_l = BagpipeSpecial.a(param0, -1, "basic", "scrollarrow_hover");
           oaa.field_a = ada.field_l.copy();
           oaa.field_a.flipVertically();
-          fda.field_m = FullHealEvent.a("stain", param0, "basic", (byte) -64);
+          RemoveDefeatedCreatureEffect.field_m = FullHealEvent.a("stain", param0, "basic", (byte) -64);
           pr.field_h = pi.a(param0, -8845, "basic", "stains");
-          vv.field_c = pi.a(param0, -8845, "basic", "cursors");
-          var6 = vv.field_c;
+          TextLayout.field_c = pi.a(param0, -8845, "basic", "cursors");
+          var6 = TextLayout.field_c;
           Sprite[] var2 = var6;
           for (var3 = 0; var6.length > var3; var3++) {
             var4 = var6[var3];

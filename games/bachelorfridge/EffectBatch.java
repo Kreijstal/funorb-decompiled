@@ -188,19 +188,19 @@ final class EffectBatch extends BattleUpdate {
           }
           var3 = (EventEffect) (this.field_m.beginForward((byte) 90));
           while (var3 != null) {
-            if (!(var3 instanceof lia)) {
-              if (!(var3 instanceof qq)) {
-                if (var3 instanceof ks) {
+            if (!(var3 instanceof ChangeHealthAndStatusEffect)) {
+              if (!(var3 instanceof ChangeCreatureStatOrHealthEffect)) {
+                if (var3 instanceof ClearCreatureStatusEffect) {
                   param0.writeByte(3, 0);
                 } else {
-                  if (!(var3 instanceof mh)) {
-                    if (var3 instanceof kt) {
+                  if (!(var3 instanceof CreaturePoseEffect)) {
+                    if (var3 instanceof SetMoveSlotCooldownEffect) {
                       param0.writeByte(5, 0);
                     } else {
-                      if (var3 instanceof fda) {
+                      if (var3 instanceof RemoveDefeatedCreatureEffect) {
                         param0.writeByte(6, param1 ^ -9);
                       } else {
-                        if (!(var3 instanceof ic)) {
+                        if (!(var3 instanceof ClearPendingPetAttackEffect)) {
                           throw new RuntimeException();
                         }
                         param0.writeByte(7, 0);

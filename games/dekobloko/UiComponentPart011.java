@@ -39,7 +39,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         integerLocal1 = (this.integerState0107 >> 1) + (this.integerState0110 + integerArgument1);
         integerLocal2 = integerArgument4 - (-this.integerState0104 - (this.integerState0108 >> 1));
         if (integerArgument2 > -103) {
-          this.computeString0223((byte) -60);
+          this.getTooltipText((byte) -60);
           validationStatusLocal3 = this.callbackContract011State0001.getValidationStatus(20350);
           if (MixedSupport076.validationStatusState0004 == validationStatusLocal3) {
             rgbSpriteLocal8 = ConfirmedEmailAvailabilityValidator.rgbSpriteArrayState0028[0];
@@ -204,7 +204,7 @@ final class UiComponentPart011 extends InteractiveComponent {
         }
     }
 
-    final String computeString0223(byte byteArgument1) {
+    final String getTooltipText(byte byteArgument1) {
         if (this.booleanState0018) {
           return this.callbackContract011State0001.getValidationMessage((byte) 69);
         }

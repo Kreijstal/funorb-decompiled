@@ -13,7 +13,7 @@ final class DisplayNameSelectionPanel extends pj implements NameSuggestionListen
     public DisplayNameSelectionPanel() {
         super(0, 0, 496, 0, (cg) null);
         this.field_M = new ValidatedTextField("", (fd) null, 12);
-        l var1 = new l(u.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
+        DefaultTextWidgetRenderer var1 = new DefaultTextWidgetRenderer(u.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
         vg var2 = new vg(ue.field_c, var1, (fd) null);
         this.field_P = new InteractiveWidget(DebouncedFieldValidator.field_b, (fd) null);
         this.field_N = new InteractiveWidget(vi.field_f, (fd) null);

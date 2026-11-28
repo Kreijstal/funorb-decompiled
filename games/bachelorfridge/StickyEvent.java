@@ -151,2486 +151,2486 @@ final class StickyEvent extends SpecialEvent {
                 ft.field_h = param1;
                 var2 = qba.a(17602, "loginm3");
                 if (var2 != null) {
-                  nca.field_b = qq.a(var2, param0);
+                  nca.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "loginm2");
                 if (null != var2) {
-                  qd.field_n = qq.a(var2, false);
+                  qd.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loginm1");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "idlemessage20min");
                 if (null != var2) {
-                  bja.field_m = qq.a(var2, false);
+                  bja.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "error_js5crc");
                 if (null != var2) {
-                  mw.field_i = qq.a(var2, false);
+                  mw.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "error_js5io");
                 if (null != var2) {
-                  dc.field_u = qq.a(var2, false);
+                  dc.field_u = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "error_js5connect_full");
                 if (var2 != null) {
-                  OneEvent.field_r = qq.a(var2, false);
+                  OneEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "error_js5connect");
                 if (var2 != null) {
-                  gfa.field_g = qq.a(var2, false);
+                  gfa.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_gameupdated");
                 if (var2 != null) {
-                  cl.field_o = qq.a(var2, false);
+                  cl.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_unable");
                 if (null != var2) {
-                  oja.field_e = qq.a(var2, false);
+                  oja.field_e = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_ineligible");
                 if (var2 != null) {
-                  lda.field_b = qq.a(var2, false);
+                  lda.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "usernameprompt");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "passwordprompt");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "andagainprompt");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_read");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_ignore");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_oneunread");
                 if (null != var2) {
-                  qw.field_a = qq.a(var2, false);
+                  qw.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_xunread");
                 if (null != var2) {
-                  ra.field_j = qq.a(var2, false);
+                  ra.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_gotowebsite");
                 if (null != var2) {
-                  DualLinkNode.field_j = qq.a(var2, false);
+                  DualLinkNode.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ticketing_waitingformessages");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_on");
                 if (var2 != null) {
-                  UiWidget.field_x = qq.a(var2, false);
+                  UiWidget.field_x = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_friends");
                 if (null != var2) {
-                  de.field_K = qq.a(var2, false);
+                  de.field_K = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_off");
                 if (null != var2) {
-                  PlaceCreatureEffect.field_i = qq.a(var2, false);
+                  PlaceCreatureEffect.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_lobby");
                 if (null != var2) {
-                  FlyEvent.field_r = qq.a(var2, param0);
+                  FlyEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_chat_public");
                 if (var2 != null) {
-                  uha.field_Vb = qq.a(var2, false);
+                  uha.field_Vb = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_ignore");
                 if (null != var2) {
-                  HailEvent.field_v = qq.a(var2, false);
+                  HailEvent.field_v = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_tips");
                 if (var2 != null) {
-                  dea.field_l = qq.a(var2, false);
+                  dea.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game");
                 if (null != var2) {
-                  WidgetWrapper.field_B = qq.a(var2, false);
+                  WidgetWrapper.field_B = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_private");
                 if (var2 != null) {
-                  dha.field_d = qq.a(var2, false);
+                  dha.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_entered_game");
                 if (null != var2) {
-                  DisableEvent.field_r = qq.a(var2, false);
+                  DisableEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_joined_your_game");
                 if (var2 != null) {
-                  HuffmanCodec.field_e = qq.a(var2, param0);
+                  HuffmanCodec.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_x_entered_other_game");
                 if (var2 != null) {
-                  BoardTile.field_c = qq.a(var2, param0);
+                  BoardTile.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_x_left_lobby");
                 if (null != var2) {
-                  GameClock.field_b = qq.a(var2, false);
+                  GameClock.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_lost_con");
                 if (null != var2) {
-                  gw.field_c = qq.a(var2, false);
+                  gw.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_cannot_join_full");
                 if (null != var2) {
-                  fr.field_s = qq.a(var2, false);
+                  fr.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
-                  AttackOrder.field_i = qq.a(var2, param0);
+                  AttackOrder.field_i = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_x_declined_invite");
                 if (var2 != null) {
-                  NanoGameClock.field_j = qq.a(var2, false);
+                  NanoGameClock.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_withdrew_request");
                 if (var2 != null) {
-                  DamagePopupAnimation.field_o = qq.a(var2, param0);
+                  DamagePopupAnimation.field_o = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_x_removed");
                 if (null != var2) {
-                  rr.field_x = qq.a(var2, false);
+                  rr.field_x = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_x_dropped_out");
                 if (null != var2) {
-                  PcmOutputWorker.field_a = qq.a(var2, false);
+                  PcmOutputWorker.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_entered_other_game");
                 if (null != var2) {
-                  lda.field_d = qq.a(var2, param0);
+                  lda.field_d = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_game_is_full");
                 if (var2 != null) {
-                  ed.field_c = qq.a(var2, false);
+                  ed.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_game_has_started");
                 if (null != var2) {
-                  vc.field_b = qq.a(var2, false);
+                  vc.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_you_declined_invite");
                 if (null != var2) {
-                  DelegatingCanvas.field_e = qq.a(var2, false);
+                  DelegatingCanvas.field_e = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_invite_withdrawn");
                 if (var2 != null) {
-                  bm.field_m = qq.a(var2, false);
+                  SetTileTerrainEffect.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_request_declined");
                 if (null != var2) {
-                  wm.field_l = qq.a(var2, false);
+                  wm.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_request_withdrawn");
                 if (var2 != null) {
-                  nla.field_e = qq.a(var2, param0);
+                  nla.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_all_players_have_left");
                 if (null != var2) {
-                  ClamsSpecial.field_r = qq.a(var2, false);
+                  ClamsSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_lobby_name");
                 if (var2 != null) {
-                  bs.field_j = qq.a(var2, param0);
+                  bs.field_j = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_lobby_rating");
                 if (null != var2) {
-                  tv.field_m = qq.a(var2, false);
+                  tv.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_lobby_friend_add");
                 if (null != var2) {
-                  BananarangAnimation.field_A = qq.a(var2, false);
+                  BananarangAnimation.field_A = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_lobby_friend_rm");
                 if (null != var2) {
-                  cd.field_p = qq.a(var2, param0);
+                  cd.field_p = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_lobby_name_add");
                 if (var2 != null) {
-                  ClamsAnimation.field_z = qq.a(var2, false);
+                  ClamsAnimation.field_z = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_lobby_name_rm");
                 if (null != var2) {
-                  SleepEvent.field_r = qq.a(var2, false);
+                  SleepEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_lobby_location");
                 if (null != var2) {
-                  te.field_f = qq.a(var2, false);
+                  te.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_all_games");
                 if (null != var2) {
-                  vl.field_b = qq.a(var2, false);
+                  vl.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_status");
                 if (var2 != null) {
-                  MoveDefinition.field_e = qq.a(var2, false);
+                  MoveDefinition.field_e = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_owner");
                 if (null != var2) {
-                  iia.field_n = qq.a(var2, false);
+                  iia.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_players");
                 if (var2 != null) {
-                  DreamsAnimation.field_z = qq.a(var2, false);
+                  DreamsAnimation.field_z = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_avg_rating");
                 if (null != var2) {
-                  oda.field_a = qq.a(var2, false);
+                  oda.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gamelist_options");
                 if (var2 != null) {
-                  iga.field_b = qq.a(var2, param0);
+                  iga.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_gamelist_elapsed_time");
                 if (var2 != null) {
-                  fu.field_s = qq.a(var2, param0);
+                  fu.field_s = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_play_rated");
                 if (var2 != null) {
-                  si.field_d = qq.a(var2, false);
+                  si.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_create_unrated");
                 if (var2 != null) {
-                  mv.field_m = qq.a(var2, param0);
+                  mv.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_options");
                 if (var2 != null) {
-                  IterableDualLinkDeque.field_c = qq.a(var2, param0);
+                  IterableDualLinkDeque.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_options_whocanjoin");
                 if (var2 != null) {
-                  BitPacketBuffer.field_k = qq.a(var2, false);
+                  BitPacketBuffer.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_options_players");
                 if (var2 != null) {
-                  gb.field_j = qq.a(var2, false);
+                  gb.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_options_dontmind");
                 if (null != var2) {
-                  WhirlpoolDigest.field_j = qq.a(var2, false);
+                  WhirlpoolDigest.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_options_allow_spectate");
                 if (var2 != null) {
-                  SauceOfFlameSpecial.field_q = qq.a(var2, param0);
+                  SauceOfFlameSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_options_ratedgametype");
                 if (var2 != null) {
-                  MassPoisonAnimation.field_w = qq.a(var2, false);
+                  MassPoisonAnimation.field_w = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "yes");
                 if (null != var2) {
-                  vj.field_l = qq.a(var2, false);
+                  vj.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "no");
                 if (var2 != null) {
-                  fl.field_l = qq.a(var2, param0);
+                  fl.field_l = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_invite_players");
                 if (null != var2) {
-                  pe.field_l = qq.a(var2, false);
+                  pe.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "close");
                 if (null != var2) {
-                  HomingMissileEvent.field_t = qq.a(var2, false);
+                  HomingMissileEvent.field_t = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "add_x_to_friends");
                 if (var2 != null) {
-                  faa.field_a = qq.a(var2, false);
+                  faa.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "add_x_to_ignore");
                 if (null != var2) {
-                  hba.field_v = qq.a(var2, param0);
+                  hba.field_v = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rm_x_from_friends");
                 if (null != var2) {
-                  BirthDateValidator.field_g = qq.a(var2, false);
+                  BirthDateValidator.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rm_x_from_ignore");
                 if (null != var2) {
-                  oj.field_n = qq.a(var2, false);
+                  oj.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "send_pm_to_x");
                 if (null != var2) {
-                  jv.field_m = qq.a(var2, false);
+                  jv.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "send_qc_to_x");
                 if (var2 != null) {
-                  lga.field_i = qq.a(var2, false);
+                  lga.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "send_pm");
                 if (var2 != null) {
-                  oka.field_t = qq.a(var2, param0);
+                  oka.field_t = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "invite_accept_xs_game");
                 if (var2 != null) {
-                  WidgetTheme.field_a = qq.a(var2, param0);
+                  WidgetTheme.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "invite_decline_xs_game");
                 if (var2 != null) {
-                  cc.field_a = qq.a(var2, false);
+                  cc.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "join_xs_game");
                 if (null != var2) {
-                  o.field_i = qq.a(var2, false);
+                  ChangeAllCreaturesHealthEffect.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "join_request_xs_game");
                 if (null != var2) {
-                  p.field_m = qq.a(var2, false);
+                  p.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "join_withdraw_request_xs_game");
                 if (var2 != null) {
-                  MidiNote.field_s = qq.a(var2, false);
+                  MidiNote.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
-                  gka.field_m = qq.a(var2, param0);
+                  gka.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
-                  HailAnimation.field_w = qq.a(var2, false);
+                  HailAnimation.field_w = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gameopt_accept_x_into_game");
                 if (null != var2) {
-                  BattleState.field_q = qq.a(var2, false);
+                  BattleState.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
-                  CreatureProfile.field_r = qq.a(var2, false);
+                  CreatureProfile.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_gameopt_invite_x_to_game");
                 if (null != var2) {
-                  vca.field_m = qq.a(var2, false);
+                  vca.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "report_x_for_abuse");
                 if (null != var2) {
-                  wba.field_d = qq.a(var2, param0);
+                  wba.field_d = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "unable_to_send_message_password_a");
                 if (null != var2) {
-                  qo.field_b = qq.a(var2, param0);
+                  qo.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "unable_to_send_message_password_b");
                 if (null != var2) {
-                  mi.field_n = qq.a(var2, false);
+                  mi.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_lobby_show_all");
                 if (var2 != null) {
-                  pr.field_e = qq.a(var2, false);
+                  pr.field_e = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_lobby_friends_only");
                 if (null != var2) {
-                  eea.field_c = qq.a(var2, false);
+                  eea.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_lobby_friends");
                 if (var2 != null) {
-                  hw.field_wb = qq.a(var2, false);
+                  hw.field_wb = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_lobby_hide");
                 if (null != var2) {
-                  d.field_D = qq.a(var2, false);
+                  d.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game_show_all");
                 if (var2 != null) {
-                  IntrusiveDeque.field_f = qq.a(var2, false);
+                  IntrusiveDeque.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game_friends_only");
                 if (null != var2) {
-                  ffa.field_i = qq.a(var2, false);
+                  ffa.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game_friends");
                 if (null != var2) {
-                  mn.field_n = qq.a(var2, false);
+                  mn.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_game_hide");
                 if (null != var2) {
-                  GasCloudAnimation.field_B = qq.a(var2, false);
+                  GasCloudAnimation.field_B = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_pm_show_all");
                 if (var2 != null) {
-                  sh.field_H = qq.a(var2, false);
+                  sh.field_H = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_pm_friends_only");
                 if (var2 != null) {
-                  iea.field_c = qq.a(var2, false);
+                  iea.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_pm_friends");
                 if (null != var2) {
-                  AttackUpAllEvent.field_t = qq.a(var2, false);
+                  AttackUpAllEvent.field_t = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mu_chat_invisible_and_silent_mode");
                 if (null != var2) {
-                  ho.field_f = qq.a(var2, param0);
+                  ho.field_f = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
-                  MouseInputHandler.field_a = qq.a(var2, false);
+                  MouseInputHandler.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "your_rating_is_x");
                 if (var2 != null) {
-                  RageSpecial.field_q = qq.a(var2, false);
+                  RageSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "you_are_on_x_server");
                 if (var2 != null) {
-                  qg.field_c = qq.a(var2, false);
+                  qg.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rated_game");
                 if (var2 != null) {
-                  tw.field_d = qq.a(var2, false);
+                  tw.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unrated_game");
                 if (null != var2) {
-                  uf.field_a = qq.a(var2, false);
+                  uf.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rated_game_tips");
                 if (null != var2) {
-                  ShieldEvent.field_q = qq.a(var2, false);
+                  ShieldEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "searching_for_opponent_singular");
                 if (null != var2) {
-                  sk.field_p = qq.a(var2, false);
+                  sk.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "searching_for_opponents_plural");
                 if (var2 != null) {
-                  wk.field_e = qq.a(var2, param0);
+                  wk.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "find_opponent_singular");
                 if (null != var2) {
-                  fka.field_h = qq.a(var2, false);
+                  fka.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "find_opponents_plural");
                 if (null != var2) {
-                  bg.field_m = qq.a(var2, false);
+                  bg.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rated_game_tips_setup_singular");
                 if (var2 != null) {
-                  ffa.field_h = qq.a(var2, false);
+                  ffa.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rated_game_tips_setup_plural");
                 if (var2 != null) {
-                  AttackUpAllEvent.field_r = qq.a(var2, false);
+                  AttackUpAllEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waiting_to_start_hint");
                 if (null != var2) {
-                  lo.field_a = qq.a(var2, false);
+                  lo.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "your_game");
                 if (var2 != null) {
-                  AccountCreationResultPanel.field_lb = qq.a(var2, param0);
+                  AccountCreationResultPanel.field_lb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "game_full");
                 if (null != var2) {
-                  oia.field_i = qq.a(var2, param0);
+                  oia.field_i = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "join_requests_one");
                 if (var2 != null) {
-                  mu.field_m = qq.a(var2, false);
+                  mu.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "join_requests_many");
                 if (var2 != null) {
-                  mk.field_y = qq.a(var2, false);
+                  mk.field_y = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "xs_game");
                 if (var2 != null) {
-                  HomingMissileSpecial.field_r = qq.a(var2, false);
+                  HomingMissileSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waiting_for_x_to_start_game");
                 if (null != var2) {
-                  ne.field_n = qq.a(var2, false);
+                  ne.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "game_options_changed");
                 if (var2 != null) {
-                  jk.field_p = qq.a(var2, false);
+                  CreaturePoseAnimation.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "players_x_of_y");
                 if (null != var2) {
-                  gfa.field_b = qq.a(var2, param0);
+                  gfa.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "message_lobby");
                 if (var2 != null) {
-                  or.field_j = qq.a(var2, false);
+                  or.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_lobby");
                 if (null != var2) {
-                  gea.field_f = qq.a(var2, param0);
+                  gea.field_f = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "message_game");
                 if (null != var2) {
-                  ama.field_k = qq.a(var2, false);
+                  ama.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "message_team");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_game");
                 if (null != var2) {
-                  ma.field_k = qq.a(var2, false);
+                  ma.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "kick");
                 if (null != var2) {
-                  FullHealSpecial.field_p = qq.a(var2, false);
+                  FullHealSpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "inviting_x");
                 if (null != var2) {
-                  vla.field_t = qq.a(var2, false);
+                  vla.field_t = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "x_wants_to_join");
                 if (null != var2) {
-                  HailSpecial.field_p = qq.a(var2, false);
+                  HailSpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "accept");
                 if (null != var2) {
-                  mc.field_i = qq.a(var2, false);
+                  mc.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reject");
                 if (var2 != null) {
-                  im.field_b = qq.a(var2, false);
+                  im.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "invite");
                 if (null != var2) {
-                  SpriteState.field_r = qq.a(var2, param0);
+                  SpriteState.field_r = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "status_concluded");
                 if (null != var2) {
-                  jca.field_b = qq.a(var2, param0);
+                  jca.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "status_spectate");
                 if (null != var2) {
-                  pu.field_k = qq.a(var2, false);
+                  pu.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "status_playing");
                 if (null != var2) {
-                  gf.field_h = qq.a(var2, false);
+                  gf.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "status_join");
                 if (null != var2) {
-                  rea.field_f = qq.a(var2, param0);
+                  rea.field_f = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "status_private");
                 if (null != var2) {
-                  an.field_s = qq.a(var2, false);
+                  an.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "status_full");
                 if (var2 != null) {
-                  hja.field_g = qq.a(var2, false);
+                  hja.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "players_in_game");
                 if (null != var2) {
-                  gfa.field_k = qq.a(var2, param0);
+                  gfa.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "you_are_invited_to_xs_game");
                 if (null != var2) {
-                  MusicPatch.field_o = qq.a(var2, false);
+                  MusicPatch.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "asking_to_join_xs_game");
                 if (var2 != null) {
-                  wn.field_l = qq.a(var2, false);
+                  wn.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "who_can_join");
                 if (null != var2) {
-                  jk.field_j = qq.a(var2, false);
+                  CreaturePoseAnimation.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "you_can_join");
                 if (var2 != null) {
-                  lm.field_c = qq.a(var2, false);
+                  lm.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "you_can_ask_to_join");
                 if (null != var2) {
-                  dp.field_m = qq.a(var2, param0);
+                  dp.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "you_cannot_join_in_progress");
                 if (null != var2) {
-                  bja.field_p = qq.a(var2, false);
+                  bja.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "you_can_spectate");
                 if (var2 != null) {
-                  StatusEffectInfo.field_h = qq.a(var2, param0);
+                  StatusEffectInfo.field_h = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "you_can_not_spectate");
                 if (null != var2) {
-                  aa.field_n = qq.a(var2, false);
+                  aa.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "spectate_xs_game");
                 if (var2 != null) {
-                  ClamsEvent.field_s = qq.a(var2, param0);
+                  ClamsEvent.field_s = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "hide_players_in_xs_game");
                 if (var2 != null) {
-                  wl.field_wb = qq.a(var2, false);
+                  wl.field_wb = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "show_players_in_xs_game");
                 if (var2 != null) {
-                  jh.field_k = qq.a(var2, false);
+                  jh.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
-                  DamagePopupAnimation.field_m = qq.a(var2, false);
+                  DamagePopupAnimation.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading");
                 if (var2 != null) {
-                  ema.field_Ab = qq.a(var2, false);
+                  ema.field_Ab = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "offline");
                 if (null != var2) {
-                  HomingMissileAnimation.field_y = qq.a(var2, param0);
+                  HomingMissileAnimation.field_y = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "multiconst_invite_only");
                 if (null != var2) {
-                  cd.field_m = qq.a(var2, false);
+                  cd.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "multiconst_clan");
                 if (null != var2) {
-                  oja.field_d = qq.a(var2, false);
+                  oja.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "multiconst_friends");
                 if (var2 != null) {
-                  FullscreenFocusCanvas.field_c = qq.a(var2, false);
+                  FullscreenFocusCanvas.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "multiconst_similar_rating");
                 if (var2 != null) {
-                  pv.field_h = qq.a(var2, false);
+                  pv.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "multiconst_open");
                 if (null != var2) {
-                  OneEvent.field_s = qq.a(var2, false);
+                  OneEvent.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "no_options_available");
                 if (var2 != null) {
-                  hba.field_u = qq.a(var2, param0);
+                  hba.field_u = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "reportabuse");
                 if (null != var2) {
-                  sv.field_b = qq.a(var2, false);
+                  sv.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "presstabtochat");
                 if (null != var2) {
-                  qg.field_a = qq.a(var2, false);
+                  qg.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pressf10toquickchat");
                 if (var2 != null) {
-                  uda.field_eb = qq.a(var2, param0);
+                  uda.field_eb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "dob_chatdisabled");
                 if (var2 != null) {
-                  kna.field_h = qq.a(var2, false);
+                  kna.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "dob_enterforchat");
                 if (var2 != null) {
-                  DreamsAnimation.field_y = qq.a(var2, param0);
+                  DreamsAnimation.field_y = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "tab_hidechattemporarily");
                 if (var2 != null) {
-                  FlySpecial.field_s = qq.a(var2, false);
+                  FlySpecial.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "esc_cancelprivatemessage");
                 if (null != var2) {
-                  NanoGameClock.field_l = qq.a(var2, false);
+                  NanoGameClock.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "esc_cancelthisline");
                 if (var2 != null) {
-                  ClearTileFlagEffect.field_k = qq.a(var2, false);
+                  ClearTileFlagEffect.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "privatequickchat_from_x");
                 if (null != var2) {
-                  wla.field_n = qq.a(var2, false);
+                  wla.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "privatequickchat_to_x");
                 if (var2 != null) {
-                  iia.field_q = qq.a(var2, param0);
+                  iia.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "privatechat_blankarea_explanation");
                 if (null != var2) {
-                  nl.field_a = qq.a(var2, param0);
+                  nl.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "publicchat_unavailable_ratedgame");
                 if (var2 != null) {
-                  iu.field_l = qq.a(var2, param0);
+                  iu.field_l = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "privatechat_friend_offline");
                 if (var2 != null) {
-                  uma.field_O = qq.a(var2, false);
+                  uma.field_O = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "privatechat_friend_notlisted");
                 if (var2 != null) {
-                  ResetSpecial.field_r = qq.a(var2, false);
+                  ResetSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "chatviewscrolledup");
                 if (null != var2) {
-                  cd.field_l = qq.a(var2, param0);
+                  cd.field_l = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "thisisrunescapeclan");
                 if (var2 != null) {
-                  qd.field_p = qq.a(var2, param0);
+                  qd.field_p = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "thisisrunescapeclan_notowner");
                 if (var2 != null) {
-                  wa.field_o = qq.a(var2, false);
+                  wa.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "runescapeclan");
                 if (var2 != null) {
-                  lt.field_c = qq.a(var2, false);
+                  lt.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rated_membersonly");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_membersonly");
                 if (null != var2) {
-                  LoginPanel.field_N = qq.a(var2, false);
+                  LoginPanel.field_N = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_1moreratedgame");
                 if (var2 != null) {
-                  afa.field_k = qq.a(var2, false);
+                  afa.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_moreratedgames");
                 if (null != var2) {
-                  tv.field_p = qq.a(var2, false);
+                  tv.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_needrating");
                 if (var2 != null) {
-                  oca.field_o = qq.a(var2, false);
+                  oca.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_unratedonly");
                 if (var2 != null) {
-                  hk.field_a = qq.a(var2, false);
+                  hk.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_notunlocked");
                 if (var2 != null) {
-                  MoveEvent.field_q = qq.a(var2, false);
+                  MoveEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_cannotbecombined1");
                 if (null != var2) {
-                  SplitEvent.field_s = qq.a(var2, false);
+                  SplitEvent.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  gf.field_i = qq.a(var2, false);
+                  gf.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_playernotmember");
                 if (var2 != null) {
-                  DualLinkDeque.field_d = qq.a(var2, false);
+                  DualLinkDeque.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_younotmember");
                 if (var2 != null) {
-                  ShieldSpecial.field_p = qq.a(var2, false);
+                  ShieldSpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_playerneedsrating");
                 if (var2 != null) {
-                  IntrusiveNode.field_d = qq.a(var2, param0);
+                  IntrusiveNode.field_d = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_youneedrating");
                 if (var2 != null) {
-                  pda.field_q = qq.a(var2, param0);
+                  pda.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
-                  pi.field_h = qq.a(var2, false);
+                  pi.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_youneedratedgames");
                 if (null != var2) {
-                  rj.field_o = qq.a(var2, param0);
+                  rj.field_o = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
-                  UiComponent.field_C = qq.a(var2, false);
+                  UiComponent.field_C = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_youneed1ratedgame");
                 if (var2 != null) {
-                  SpiltMilkAnimation.field_w = qq.a(var2, param0);
+                  SpiltMilkAnimation.field_w = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_playerhasntunlocked");
                 if (var2 != null) {
-                  bh.field_s = qq.a(var2, false);
+                  bh.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_youhaventunlocked");
                 if (null != var2) {
-                  BirthDateValidator.field_f = qq.a(var2, false);
+                  BirthDateValidator.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_trychanging1");
                 if (var2 != null) {
-                  cb.field_n = qq.a(var2, param0);
+                  cb.field_n = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_trychanging2");
                 if (var2 != null) {
-                  qn.field_h = qq.a(var2, false);
+                  qn.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_needchanging1");
                 if (null != var2) {
-                  jn.field_a = qq.a(var2, false);
+                  jn.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_needchanging2");
                 if (null != var2) {
-                  ra.field_l = qq.a(var2, false);
+                  ra.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_mightchange");
                 if (var2 != null) {
-                  ef.field_m = qq.a(var2, false);
+                  ef.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_playersdontqualify");
                 if (null != var2) {
-                  bma.field_t = qq.a(var2, param0);
+                  bma.field_t = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
-                  n.field_c = qq.a(var2, param0);
+                  n.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_unselectedoptions");
                 if (var2 != null) {
-                  LinkTextWidget.field_H = qq.a(var2, false);
+                  LinkTextWidget.field_H = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_pleaseselectoption1");
                 if (var2 != null) {
-                  qk.field_p = qq.a(var2, param0);
+                  qk.field_p = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_pleaseselectoption2");
                 if (null != var2) {
-                  ag.field_k = qq.a(var2, false);
+                  ag.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_badnumplayers");
                 if (var2 != null) {
-                  CreatureRef.field_h = qq.a(var2, false);
+                  CreatureRef.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
-                  ec.field_b = qq.a(var2, param0);
+                  ec.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_inviteplayers_or_trychanging2");
                 if (var2 != null) {
-                  oda.field_b = qq.a(var2, param0);
+                  oda.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "gameopt_novalidcombos");
                 if (null != var2) {
-                  iha.field_k = qq.a(var2, false);
+                  iha.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  BoardChange.field_l = qq.a(var2, false);
+                  BoardChange.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_title");
                 if (var2 != null) {
-                  ReportAbusePanel.field_D = qq.a(var2, false);
+                  ReportAbusePanel.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_mutethisplayer");
                 if (var2 != null) {
-                  FlySpecial.field_r = qq.a(var2, false);
+                  FlySpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_suggestmute");
                 if (null != var2) {
-                  lq.field_z = qq.a(var2, false);
+                  lq.field_z = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_intro");
                 if (var2 != null) {
-                  dia.field_D = qq.a(var2, false);
+                  dia.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ra_intro_no_name");
                 if (var2 != null) {
-                  InsanoSauceSpecial.field_r = qq.a(var2, false);
+                  InsanoSauceSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
             }
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = qba.a(17602, "ra_explanation");
                 if (null != var2) {
-                  vj.field_q = qq.a(var2, param0);
+                  vj.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_pillar_0");
                 if (null != var2) {
-                  oe.field_a = qq.a(var2, param0);
+                  oe.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_0_0");
                 if (var2 != null) {
-                  on.field_p = qq.a(var2, false);
+                  on.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_0_1");
                 if (var2 != null) {
-                  bda.field_o = qq.a(var2, false);
+                  bda.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_0_2");
                 if (null != var2) {
-                  CranberryEvent.field_r = qq.a(var2, false);
+                  CranberryEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_0_3");
                 if (null != var2) {
-                  BuffVendorEvent.field_q = qq.a(var2, param0);
+                  BuffVendorEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_0_4");
                 if (var2 != null) {
-                  qc.field_e = qq.a(var2, param0);
+                  qc.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_0_5");
                 if (null != var2) {
-                  ByteStorage.field_a = qq.a(var2, false);
+                  ByteStorage.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_pillar_1");
                 if (var2 != null) {
-                  RageAnimation.field_y = qq.a(var2, false);
+                  RageAnimation.field_y = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_1_0");
                 if (null != var2) {
-                  PetAttackEvent.field_q = qq.a(var2, false);
+                  PetAttackEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_1_1");
                 if (var2 != null) {
-                  GzipDecompressor.field_c = qq.a(var2, param0);
+                  GzipDecompressor.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_1_2");
                 if (null != var2) {
-                  saa.field_r = qq.a(var2, false);
+                  saa.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_1_3");
                 if (var2 != null) {
-                  HailSpecial.field_q = qq.a(var2, false);
+                  HailSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_1_4");
                 if (null != var2) {
-                  DisableSpecial.field_q = qq.a(var2, param0);
+                  DisableSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_pillar_2");
                 if (null != var2) {
-                  WhirlpoolDigest.field_p = qq.a(var2, false);
+                  WhirlpoolDigest.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_2_0");
                 if (null != var2) {
-                  FloodAnimation.field_y = qq.a(var2, false);
+                  FloodAnimation.field_y = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rule_2_1");
                 if (null != var2) {
-                  us.field_d = qq.a(var2, param0);
+                  us.field_d = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rule_2_2");
                 if (null != var2) {
-                  RaiseSpecial.field_r = qq.a(var2, param0);
+                  RaiseSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "createafreeaccount");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "cancel");
                 if (null != var2) {
-                  bga.field_f = qq.a(var2, param0);
+                  bga.field_f = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "pleaselogintoplay");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pleaselogin");
                 if (var2 != null) {
-                  gba.field_Ib = qq.a(var2, false);
+                  gba.field_Ib = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pleaselogin_member");
                 if (null != var2) {
-                  im.field_a = qq.a(var2, false);
+                  im.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "invaliduserorpass");
                 if (null != var2) {
-                  TeleportSpecial.field_q = qq.a(var2, false);
+                  TeleportSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pleasetryagain");
                 if (var2 != null) {
-                  kda.field_a = qq.a(var2, param0);
+                  kda.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "pleasereenterpass");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "playfreeversion");
                 if (null != var2) {
-                  SpecialMoveDefinition.field_r = qq.a(var2, false);
+                  SpecialMoveDefinition.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reloadgame");
                 if (null != var2) {
-                  AccountNameAvailabilityValidator.field_h = qq.a(var2, param0);
+                  AccountNameAvailabilityValidator.field_h = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "toserverlist");
                 if (var2 != null) {
-                  pr.field_c = qq.a(var2, false);
+                  pr.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "tocustomersupport");
                 if (null != var2) {
-                  IterableNodeHashTable.field_b = qq.a(var2, param0);
+                  IterableNodeHashTable.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "changedisplayname");
                 if (var2 != null) {
-                  AccountServiceResult.field_i = qq.a(var2, param0);
+                  AccountServiceResult.field_i = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "returntohomepage");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "justplay");
                 if (var2 != null) {
-                  tja.field_b = qq.a(var2, false);
+                  tja.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "justplay_excl");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login");
                 if (var2 != null) {
-                  tq.field_n = qq.a(var2, param0);
+                  RichTextLayout.field_n = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "goback");
                 if (var2 != null) {
-                  SuperSpeedAllAnimation.field_x = qq.a(var2, false);
+                  SuperSpeedAllAnimation.field_x = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "otheroptions");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "proceed");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "connectingtoserver");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pleasewait");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "logging_in");
                 if (null != var2) {
-                  oc.field_m = qq.a(var2, false);
+                  oc.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "backtoerror");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pleasecheckinternet");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "attemptingtoreconnect");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "connectionlost_reconnecting");
                 if (var2 != null) {
-                  RaiseEvent.field_r = qq.a(var2, false);
+                  RaiseEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "connectionlost_withreason");
                 if (var2 != null) {
-                  ok.field_Cb = qq.a(var2, false);
+                  ok.field_Cb = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "passwordverificationrequired");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "invalidpass");
                 if (var2 != null) {
-                  ClamsSpecial.field_q = qq.a(var2, false);
+                  ClamsSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "retry");
                 if (null != var2) {
-                  bga.field_k = qq.a(var2, param0);
+                  bga.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "back");
                 if (var2 != null) {
-                  ina.field_s = qq.a(var2, false);
+                  ina.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "exitfullscreenmode");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quittowebsite");
                 if (var2 != null) {
-                  uda.field_ab = qq.a(var2, false);
+                  uda.field_ab = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "connectionrestored");
                 if (null != var2) {
-                  fr.field_r = qq.a(var2, false);
+                  fr.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "warning_ifyouquit");
                 if (var2 != null) {
-                  IterableNodeHashTable.field_e = qq.a(var2, false);
+                  IterableNodeHashTable.field_e = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "warning_ifyouquitorleavepage");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "resubscribe_withoutlosing_fs");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "resubscribe_withoutlosing");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "customersupport_withoutlosing_fs");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "customersupport_withoutlosing");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "js5help_withoutlosing_fs");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "js5help_withoutlosing");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "checkinternet_withoutlosing_fs");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "checkinternet_withoutlosing");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_intro");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_sameaccounttip_unnamed");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "dateofbirthprompt");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fetchingcountrylist");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "countryprompt");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "countrylisterror");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "theonlypersonalquestions");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_submittingdata");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "check");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_pleasechooseausername");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_usernameblurb");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "checkingavailability");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "checking");
                 if (null != var2) {
-                  mr.field_h = qq.a(var2, false);
+                  mr.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_namealreadytaken");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_sameaccounttip_named");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_nosuggestions");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alternativelygoback");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_available");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_willnowshowtermsandconditions");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fetchingterms");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "termserror");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_iagree");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_idisagree");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_pleasescrolldowntoaccept");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_linkaddress");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "openinpopupwindow");
                 if (var2 != null) {
-                  rt.field_b = qq.a(var2, false);
+                  rt.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create");
                 if (null != var2) {
-                  dp.field_p = qq.a(var2, false);
+                  dp.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_pleasechooseapassword");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_passwordblurb");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_nevergivepassword");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "creatingyouraccount");
                 if (var2 != null) {
-                  SocketConnector.field_c = qq.a(var2, param0);
+                  SocketConnector.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_youmustaccept");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_passwordsdifferent");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_success");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "day");
                 if (var2 != null) {
-                  JaggrabDownloader.field_b = qq.a(var2, false);
+                  JaggrabDownloader.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "month");
                 if (null != var2) {
-                  ao.field_c = qq.a(var2, param0);
+                  ao.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "year");
                 if (null != var2) {
-                  ca.field_d = qq.a(var2, false);
+                  ca.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,0");
                 if (var2 != null) {
-                  uda.field_cb[0] = qq.a(var2, false);
+                  uda.field_cb[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,1");
                 if (var2 != null) {
-                  uda.field_cb[1] = qq.a(var2, false);
+                  uda.field_cb[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,2");
                 if (null != var2) {
-                  uda.field_cb[2] = qq.a(var2, false);
+                  uda.field_cb[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,3");
                 if (null != var2) {
-                  uda.field_cb[3] = qq.a(var2, false);
+                  uda.field_cb[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,4");
                 if (null != var2) {
-                  uda.field_cb[4] = qq.a(var2, false);
+                  uda.field_cb[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,5");
                 if (var2 != null) {
-                  uda.field_cb[5] = qq.a(var2, false);
+                  uda.field_cb[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,6");
                 if (var2 != null) {
-                  uda.field_cb[6] = qq.a(var2, false);
+                  uda.field_cb[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,7");
                 if (null != var2) {
-                  uda.field_cb[7] = qq.a(var2, false);
+                  uda.field_cb[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,8");
                 if (var2 != null) {
-                  uda.field_cb[8] = qq.a(var2, false);
+                  uda.field_cb[8] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,9");
                 if (null != var2) {
-                  uda.field_cb[9] = qq.a(var2, false);
+                  uda.field_cb[9] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,10");
                 if (var2 != null) {
-                  uda.field_cb[10] = qq.a(var2, false);
+                  uda.field_cb[10] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "monthnames,11");
                 if (null != var2) {
-                  uda.field_cb[11] = qq.a(var2, false);
+                  uda.field_cb[11] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_welcome");
                 if (null != var2) {
-                  FullHealEvent.field_q = qq.a(var2, param0);
+                  FullHealEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_u13_welcome");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_createanaccount");
                 if (null != var2) {
-                  MouseWheelInput.field_b = qq.a(var2, false);
+                  MouseWheelInput.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_username");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_displayname");
                 if (null != var2) {
-                  DreamsAnimation.field_v = qq.a(var2, false);
+                  DreamsAnimation.field_v = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_password");
                 if (null != var2) {
-                  MassPoisonSpecial.field_r = qq.a(var2, false);
+                  MassPoisonSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_password_confirm");
                 if (var2 != null) {
-                  hm.field_a = qq.a(var2, param0);
+                  hm.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_email");
                 if (var2 != null) {
-                  ua.field_a = qq.a(var2, false);
+                  ua.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_email_confirm");
                 if (null != var2) {
-                  rm.field_b = qq.a(var2, false);
+                  rm.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_age");
                 if (null != var2) {
-                  ResourceArchive.field_h = qq.a(var2, false);
+                  ResourceArchive.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_u13_email");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_u13_email_confirm");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_dob");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_country");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alternatives_header");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alternatives_select");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_suggestions");
                 if (null != var2) {
-                  oja.field_b = qq.a(var2, param0);
+                  oja.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_more_suggestions");
                 if (null != var2) {
-                  ScavengerSpecial.field_t = qq.a(var2, param0);
+                  ScavengerSpecial.field_t = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_select_alternative");
                 if (null != var2) {
-                  a.field_p = qq.a(var2, false);
+                  a.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_optin_news");
                 if (var2 != null) {
-                  ona.field_vb = qq.a(var2, false);
+                  ona.field_vb = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_agreeterms");
                 if (var2 != null) {
-                  ZombiesAnimation.field_x = qq.a(var2, false);
+                  ZombiesAnimation.field_x = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_u13terms");
                 if (null != var2) {
-                  aja.field_m = qq.a(var2, false);
+                  aja.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_username_email");
                 if (var2 != null) {
-                  rw.field_b = qq.a(var2, false);
+                  rw.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_username");
                 if (null != var2) {
-                  ji.field_g = qq.a(var2, false);
+                  ji.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_email");
                 if (null != var2) {
-                  kr.field_zb = qq.a(var2, param0);
+                  kr.field_zb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "login_username_tooltip");
                 if (var2 != null) {
-                  ba.field_r = qq.a(var2, false);
+                  ba.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_password_tooltip");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_login_tooltip");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "login_create_tooltip");
                 if (var2 != null) {
-                  qha.field_h = qq.a(var2, false);
+                  qha.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_justplay_tooltip");
                 if (null != var2) {
-                  lna.field_h = qq.a(var2, false);
+                  lna.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_back_tooltip");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_no_displayname");
                 if (var2 != null) {
-                  AccountServiceResult.field_f = qq.a(var2, param0);
+                  AccountServiceResult.field_f = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_username_tooltip");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_username_hint");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_displayname_tooltip");
                 if (var2 != null) {
-                  FloodAnimation.field_z = qq.a(var2, param0);
+                  FloodAnimation.field_z = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_displayname_hint");
                 if (null != var2) {
-                  saa.field_u = qq.a(var2, false);
+                  saa.field_u = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_password_tooltip");
                 if (var2 != null) {
-                  UiWidget.field_r = qq.a(var2, false);
+                  UiWidget.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_password_hint");
                 if (var2 != null) {
-                  ug.field_m = qq.a(var2, param0);
+                  ug.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_password_confirm_tooltip");
                 if (var2 != null) {
-                  eu.field_a = qq.a(var2, param0);
+                  eu.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_email_tooltip");
                 if (var2 != null) {
-                  MoveEventAnimation.field_w = qq.a(var2, false);
+                  MoveEventAnimation.field_w = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_email_confirm_tooltip");
                 if (var2 != null) {
-                  Bzip2State.field_d = qq.a(var2, false);
+                  Bzip2State.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_age_tooltip");
                 if (null != var2) {
-                  wq.field_m = qq.a(var2, false);
+                  wq.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_optin_news_tooltip");
                 if (null != var2) {
-                  ala.field_c = qq.a(var2, param0);
+                  ala.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_u13_email_tooltip");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_u13_email_confirm_tooltip");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_dob_tooltip");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_country_tooltip");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_optin_tooltip");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_continue");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_username_unavailable");
                 if (null != var2) {
-                  FullHealAnimation.field_A = qq.a(var2, false);
+                  FullHealAnimation.field_A = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_username_available");
                 if (var2 != null) {
-                  su.field_a = qq.a(var2, param0);
+                  su.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_alert_namelength");
                 if (null != var2) {
-                  tb.field_a = qq.a(var2, false);
+                  tb.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_namechars");
                 if (null != var2) {
-                  TileEffectAnimation.field_k = qq.a(var2, false);
+                  TileEffectAnimation.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_nameleadingspace");
                 if (var2 != null) {
-                  FlirtEvent.field_r = qq.a(var2, param0);
+                  FlirtEvent.field_r = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_alert_doublespace");
                 if (null != var2) {
-                  jr.field_a = qq.a(var2, false);
+                  jr.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_passchars");
                 if (var2 != null) {
-                  sh.field_D = qq.a(var2, false);
+                  sh.field_D = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_passrepeated");
                 if (null != var2) {
-                  uv.field_k = qq.a(var2, param0);
+                  uv.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_alert_passlength");
                 if (var2 != null) {
-                  AirstrikeAnimation.field_E = qq.a(var2, false);
+                  AirstrikeAnimation.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_passcontainsname");
                 if (null != var2) {
-                  BuffVendorEvent.field_s = qq.a(var2, false);
+                  BuffVendorEvent.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_passcontainsemail");
                 if (var2 != null) {
-                  um.field_b = qq.a(var2, false);
+                  um.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  pka.field_a = qq.a(var2, false);
+                  pka.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_checkname");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_invalidemail");
                 if (var2 != null) {
-                  bu.field_g = qq.a(var2, false);
+                  bu.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_email_unavailable");
                 if (var2 != null) {
-                  CranberrySpecial.field_p = qq.a(var2, false);
+                  CranberrySpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_invaliddate");
                 if (var2 != null) {
-                  FishRainSpecial.field_s = qq.a(var2, false);
+                  FishRainSpecial.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_invalidage");
                 if (null != var2) {
-                  ug.field_k = qq.a(var2, false);
+                  ug.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_yearrange");
                 if (null != var2) {
-                  vo.field_c = qq.a(var2, false);
+                  vo.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_alert_mismatch");
                 if (var2 != null) {
-                  sa.field_l = qq.a(var2, param0);
+                  sa.field_l = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "create_passwordvalid");
                 if (var2 != null) {
-                  FlySpecial.field_q = qq.a(var2, false);
+                  FlySpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_emailvalid");
                 if (var2 != null) {
-                  Bzip2State.field_j = qq.a(var2, false);
+                  Bzip2State.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "create_account_success");
                 if (var2 != null) {
-                  dla.field_m = qq.a(var2, false);
+                  dla.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "invalid_name");
                 if (var2 != null) {
-                  mk.field_f = qq.a(var2, false);
+                  mk.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "cannot_add_yourself");
                 if (null != var2) {
-                  cea.field_a = qq.a(var2, false);
+                  cea.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unable_to_add_friend");
                 if (null != var2) {
-                  ama.field_l = qq.a(var2, false);
+                  ama.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unable_to_add_ignore");
                 if (var2 != null) {
-                  DreamsEvent.field_q = qq.a(var2, false);
+                  DreamsEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unable_to_delete_friend");
                 if (var2 != null) {
-                  nha.field_d = qq.a(var2, param0);
+                  nha.field_d = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "unable_to_delete_ignore");
                 if (var2 != null) {
-                  cia.field_n = qq.a(var2, param0);
+                  cia.field_n = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "friendlistfull");
                 if (null != var2) {
-                  he.field_m = qq.a(var2, false);
+                  he.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "friendlistdupe");
                 if (null != var2) {
-                  rt.field_c = qq.a(var2, false);
+                  rt.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "friendnotfound");
                 if (var2 != null) {
-                  OneSpecial.field_q = qq.a(var2, false);
+                  OneSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ignorelistfull");
                 if (null != var2) {
-                  c.field_i = qq.a(var2, false);
+                  c.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ignorelistdupe");
                 if (null != var2) {
-                  ByteStorage.field_d = qq.a(var2, false);
+                  ByteStorage.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ignorenotfound");
                 if (null != var2) {
-                  vc.field_e = qq.a(var2, param0);
+                  vc.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "removeignorefirst");
                 if (null != var2) {
-                  bda.field_p = qq.a(var2, false);
+                  bda.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "removefriendfirst");
                 if (null != var2) {
-                  fja.field_b = qq.a(var2, false);
+                  fja.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "enterfriend_add");
                 if (null != var2) {
-                  uea.field_g = qq.a(var2, false);
+                  uea.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "enterfriend_del");
                 if (var2 != null) {
-                  vc.field_f = qq.a(var2, false);
+                  vc.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "enterignore_add");
                 if (null != var2) {
-                  SuperSpeedAllSpecial.field_p = qq.a(var2, false);
+                  SuperSpeedAllSpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "enterignore_del");
                 if (var2 != null) {
-                  kma.field_p = qq.a(var2, false);
+                  kma.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "text_removed_from_game");
                 if (null != var2) {
-                  GameAppletShell.field_f = qq.a(var2, false);
+                  GameAppletShell.field_f = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "text_lobby_pleaselogin_free");
                 if (null != var2) {
-                  he.field_n = qq.a(var2, false);
+                  he.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "opengl");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "sse");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "purejava");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "waitingfor_graphics");
                 if (null != var2) {
-                  TileEffect.field_a = qq.a(var2, false);
+                  TileEffect.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_models");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_fonts");
                 if (var2 != null) {
-                  is.field_d = qq.a(var2, false);
+                  is.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_soundeffects");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "waitingfor_music");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_instruments");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_levels");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_extradata");
                 if (var2 != null) {
-                  AirstrikeSpecial.field_p = qq.a(var2, param0);
+                  AirstrikeSpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "waitingfor_languages");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_textures");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "waitingfor_animations");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "loading_graphics");
                 if (var2 != null) {
-                  iea.field_b = qq.a(var2, param0);
+                  iea.field_b = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "loading_models");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading_fonts");
                 if (null != var2) {
-                  jh.field_m = qq.a(var2, param0);
+                  jh.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "loading_soundeffects");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "loading_music");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading_instruments");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading_levels");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading_extradata");
                 if (null != var2) {
-                  SetFriendlyEffect.field_i = qq.a(var2, param0);
+                  SetFriendlyEffect.field_i = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "loading_languages");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading_textures");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "loading_animations");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_graphics");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_models");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_soundeffects");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_music");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_levels");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_languages");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_animations");
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unpacking_toolkit");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "instructions");
                 if (null != var2) {
-                  ll.field_l = qq.a(var2, param0);
+                  ll.field_l = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "tutorial");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "playtutorial");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "sound_colon");
                 if (null != var2) {
-                  HomingMissileSpecial.field_q = qq.a(var2, false);
+                  HomingMissileSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "music_colon");
                 if (var2 != null) {
-                  BananarangSpecial.field_t = qq.a(var2, false);
+                  BananarangSpecial.field_t = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fullscreen");
                 if (var2 != null) {
-                  GasCloudEvent.field_t = qq.a(var2, false);
+                  GasCloudEvent.field_t = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "screensize");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "highscores");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rankings");
                 if (null != var2) {
-                  wa.field_l = qq.a(var2, param0);
+                  wa.field_l = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "achievements");
                 if (var2 != null) {
-                  rc.field_k = qq.a(var2, false);
+                  rc.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "achievementsthisgame");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "achievementsthissession");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "watchintroduction");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quit");
                 if (var2 != null) {
-                  WidgetWrapper.field_y = qq.a(var2, false);
+                  WidgetWrapper.field_y = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "login_createaccount");
                 if (var2 != null) {
-                  SuperSpeedAnimation.field_x = qq.a(var2, false);
+                  SuperSpeedAnimation.field_x = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "tohighscores");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "returntomainmenu");
                 if (null != var2) {
-                  pja.field_f = qq.a(var2, param0);
+                  pja.field_f = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "returntopausemenu");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "returntooptionsmenu_notpaused");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mainmenu");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pausemenu");
                 if (null != var2) {
-                  BananarangAnimation.field_E = qq.a(var2, false);
+                  BananarangAnimation.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "optionsmenu_notpaused");
                 if (var2 != null) {
-                  MassPoisonSpecial.field_t = qq.a(var2, false);
+                  MassPoisonSpecial.field_t = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "menu");
                 if (null != var2) {
-                  nha.field_b = qq.a(var2, false);
+                  nha.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "selectlevel");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "nextlevel");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "startgame");
                 if (var2 != null) {
-                  SplitEvent.field_q = qq.a(var2, false);
+                  SplitEvent.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "newgame");
                 if (null != var2) {
-                  mg.field_o = qq.a(var2, false);
+                  mg.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "resumegame");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "resumetutorial");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "skip");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "skiptutorial");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "skipending");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "restartlevel");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "endtest");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "endgame");
                 if (var2 != null) {
-                  ul.field_o = qq.a(var2, false);
+                  ul.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "endtutorial");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "ok");
                 if (null != var2) {
-                  ne.field_m = qq.a(var2, false);
+                  ne.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "on");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "off");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "previous");
                 if (var2 != null) {
-                  BagpipeSpecial.field_q = qq.a(var2, false);
+                  BagpipeSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "prev");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "next");
                 if (null != var2) {
-                  si.field_c = qq.a(var2, param0);
+                  si.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "graphics_colon");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hotseatmultiplayer");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "entermultiplayerlobby");
                 if (null != var2) {
-                  BoundedRandomAccessFile.field_a = qq.a(var2, param0);
+                  BoundedRandomAccessFile.field_a = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "singleplayergame");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "returntogame");
                 if (var2 != null) {
-                  wk.field_i = qq.a(var2, param0);
+                  wk.field_i = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "endgameresign");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "offerdraw");
                 if (var2 != null) {
-                  SuperSpeedAllAnimation.field_w = qq.a(var2, false);
+                  SuperSpeedAllAnimation.field_w = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "canceldraw");
                 if (var2 != null) {
-                  cd.field_k = qq.a(var2, false);
+                  cd.field_k = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "acceptdraw");
                 if (null != var2) {
-                  gt.field_r = qq.a(var2, param0);
+                  gt.field_r = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "resign");
                 if (null != var2) {
-                  EffectBatchAnimation.field_m = qq.a(var2, param0);
+                  EffectBatchAnimation.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "returntolobby");
                 if (var2 != null) {
-                  dh.field_i = qq.a(var2, false);
+                  ArmPetAttackEffect.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "cont");
                 if (var2 != null) {
-                  tj.field_a = qq.a(var2, false);
+                  tj.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "continue_spectating");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "messages");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "graphics_fastest");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_medium");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_best");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_directx");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "graphics_opengl");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_java");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_quality_high");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_quality_low");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_mode");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_quality");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mode");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quality");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "keys");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "objective");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "currentobjective");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pressescforpausemenu");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pressescforpausemenuortoskiptutorial");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pressescforoptionsmenu_doesntpause");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pressescforoptionsmenu_doesntpause_short");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "powerups");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "latestlevel_suffix");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "unreachedlevel_name");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unreachedlevel_cannotplayreason");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unreachedlevel_cannotplayreason_shorter");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unreachedworld_cannotplayreason");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "memberslevel_name");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "memberslevel_cannotplayreason");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "membersworld_cannotplayreason");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unreachedlevel_createtip");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "unreachedlevel_createtip_line1");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "unreachedlevel_createtip_line2");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "unreachedlevel_logintip");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "memberslevel_logintip");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "displayname_none");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "levelxofy1");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "levelxofy2");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "levelxofy");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ingame_level");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mouseoveranicon");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "notyetachieved");
                 if (var2 != null) {
-                  ed.field_e = qq.a(var2, param0);
+                  ed.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "achieved");
                 if (var2 != null) {
-                  DualLinkNode.field_g = qq.a(var2, param0);
+                  DualLinkNode.field_g = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "orbpoints");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "orbcoins");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "orbpoints_colon");
                 if (var2 != null) {
-                  vl.field_a = qq.a(var2, false);
+                  vl.field_a = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "orbcoins_colon");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "achieved_colon_description");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "secretachievement");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "no_highscores");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_name");
                 if (var2 != null) {
-                  BuffVendorAnimation.field_z = qq.a(var2, false);
+                  BuffVendorAnimation.field_z = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_level");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_fromlevel");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_tolevel");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_score");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_end");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "ingame_score");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "score_colon");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_leavegame");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_offerrematch");
                 if (null != var2) {
-                  mw.field_g = qq.a(var2, param0);
+                  mw.field_g = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_offerrematch_unrated");
                 if (null != var2) {
-                  IntrusiveDequeCursor.field_b = qq.a(var2, false);
+                  IntrusiveDequeCursor.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_acceptrematch");
                 if (null != var2) {
-                  iia.field_o = qq.a(var2, false);
+                  iia.field_o = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_acceptrematch_unrated");
                 if (var2 != null) {
-                  IterableNodeHashTable.field_g = qq.a(var2, false);
+                  IterableNodeHashTable.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_cancelrematch");
                 if (null != var2) {
-                  IncomingSpecial.field_q = qq.a(var2, false);
+                  IncomingSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_cancelrematch_unrated");
                 if (null != var2) {
-                  as.field_b = qq.a(var2, false);
+                  as.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_rematchnewgame");
                 if (null != var2) {
-                  dda.field_k = qq.a(var2, param0);
+                  dda.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_rematchnewgame_unrated");
                 if (null != var2) {
-                  ama.field_m = qq.a(var2, false);
+                  ama.field_m = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_wantstodraw");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_offersrematch");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_offersrematch_unrated");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_youofferrematch");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_youofferrematch_unrated");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_youofferdraw");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_youresigned");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_youresigned_rematch");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_hasresignedandleft");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_hasresigned_rematch");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_hasresigned");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_hasleft");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_haswon");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_youhavewon");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_gamedrawn");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_timeremaining");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_x_turn");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_yourturn");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "gameover");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_hidechat");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mp_showchat_nounread");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_showchat_unread1");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mp_showchat_unread2");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "click_to_quickchat");
                 if (param0) {
                   StickyEvent.a(true, (ResourceArchive) null);
                 }
                 if (var2 != null) {
-                  qca.field_m = qq.a(var2, param0);
+                  qca.field_m = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "autorespond");
                 if (null != var2) {
-                  pe.field_n = qq.a(var2, false);
+                  pe.field_n = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_help");
                 if (null != var2) {
-                  PizzaPartySpecial.field_p = qq.a(var2, param0);
+                  PizzaPartySpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_help_title");
                 if (null != var2) {
-                  qd.field_k = qq.a(var2, param0);
+                  qd.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_help,0");
                 if (var2 != null) {
-                  jd.field_d[0] = qq.a(var2, param0);
+                  jd.field_d[0] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_help,1");
                 if (null != var2) {
-                  jd.field_d[1] = qq.a(var2, false);
+                  jd.field_d[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_help,2");
                 if (null != var2) {
-                  jd.field_d[2] = qq.a(var2, param0);
+                  jd.field_d[2] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_help,3");
                 if (var2 != null) {
-                  jd.field_d[3] = qq.a(var2, false);
+                  jd.field_d[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_help,4");
                 if (null != var2) {
-                  jd.field_d[4] = qq.a(var2, false);
+                  jd.field_d[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_help,5");
                 if (null != var2) {
-                  jd.field_d[5] = qq.a(var2, false);
+                  jd.field_d[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  ij.field_l[0] = qq.a(var2, false);
+                  ij.field_l[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_keys,1");
                 if (var2 != null) {
-                  ij.field_l[1] = qq.a(var2, param0);
+                  ij.field_l[1] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  ij.field_l[2] = qq.a(var2, false);
+                  ij.field_l[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
-                  ij.field_l[3] = qq.a(var2, param0);
+                  ij.field_l[3] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  ij.field_l[4] = qq.a(var2, false);
+                  ij.field_l[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  ij.field_l[5] = qq.a(var2, false);
+                  ij.field_l[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "keychar_the_character_under_questionmark");
                 if (var2 != null) {
@@ -2638,501 +2638,501 @@ final class StickyEvent extends SpecialEvent {
                 }
                 var2 = qba.a(17602, "rating_noratings");
                 if (null != var2) {
-                  gea.field_g = qq.a(var2, false);
+                  gea.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_rating");
                 if (var2 != null) {
-                  BananarangSpecial.field_q = qq.a(var2, false);
+                  BananarangSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_played");
                 if (var2 != null) {
-                  aj.field_b = qq.a(var2, false);
+                  aj.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_won");
                 if (var2 != null) {
-                  ej.field_n = qq.a(var2, param0);
+                  ej.field_n = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "rating_lost");
                 if (var2 != null) {
-                  es.field_h = qq.a(var2, false);
+                  es.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_drawn");
                 if (null != var2) {
-                  LevitateSpecial.field_q = qq.a(var2, param0);
+                  LevitateSpecial.field_q = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "benefits_fullscreen");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "benefits_noadverts");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "benefits_price");
                 if (null != var2) {
-                  Crc32Table.field_c = qq.a(var2, param0);
+                  Crc32Table.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "members_expansion_benefits,0");
                 if (null != var2) {
-                  bda.field_n[0] = qq.a(var2, false);
+                  bda.field_n[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  bda.field_n[1] = qq.a(var2, param0);
+                  bda.field_n[1] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "members_expansion_benefits,2");
                 if (var2 != null) {
-                  bda.field_n[2] = qq.a(var2, false);
+                  bda.field_n[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "members_expansion_price_top");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "members_expansion_price_bottom");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,0");
                 if (null != var2) {
-                  i.field_e[0] = qq.a(var2, false);
+                  i.field_e[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,1");
                 if (var2 != null) {
-                  i.field_e[1] = qq.a(var2, false);
+                  i.field_e[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,2");
                 if (var2 != null) {
-                  i.field_e[2] = qq.a(var2, param0);
+                  i.field_e[2] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "reconnect_lost_seq,3");
                 if (var2 != null) {
-                  i.field_e[3] = qq.a(var2, false);
+                  i.field_e[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_lost");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_restored");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_please_check");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_wait");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_retry");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_resume");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "reconnect_or");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_exitfs");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "reconnect_exitfs_quit");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_quit");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "reconnect_check_fs");
                 if (null != var2) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "reconnect_check_nonfs");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_accept_beforeaccept");
                 if (var2 != null) {
-                  AirstrikeEvent.field_s = qq.a(var2, false);
+                  AirstrikeEvent.field_s = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_button_accept");
                 if (null != var2) {
-                  StampedeSpecial.field_r = qq.a(var2, false);
+                  StampedeSpecial.field_r = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  BattleUpdate.field_g = qq.a(var2, false);
+                  BattleUpdate.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_button_cancel");
                 if (var2 != null) {
-                  hk.field_b = qq.a(var2, false);
+                  hk.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_accept_aftercancel");
                 if (var2 != null) {
-                  GameAppletShell.field_e = qq.a(var2, false);
+                  GameAppletShell.field_e = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_accept_countdown_sing");
                 if (var2 != null) {
-                  vv.field_b = qq.a(var2, false);
+                  TextLayout.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_accept_countdown_pl");
                 if (var2 != null) {
-                  sc.field_l = qq.a(var2, false);
+                  sc.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_nonmember");
                 if (null != var2) {
-                  oa.field_wb = qq.a(var2, param0);
+                  oa.field_wb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "fs_button_close");
                 if (null != var2) {
-                  ala.field_d = qq.a(var2, false);
+                  ala.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_button_members");
                 if (var2 != null) {
-                  IsaacRandom.field_h = qq.a(var2, false);
+                  IsaacRandom.field_h = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_unavailable");
                 if (null != var2) {
-                  ej.field_o = qq.a(var2, param0);
+                  ej.field_o = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  qca.field_l = qq.a(var2, false);
+                  qca.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_focus");
                 if (var2 != null) {
-                  PlaceCreatureEffect.field_k = qq.a(var2, param0);
+                  PlaceCreatureEffect.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "fs_focus_or_resolution");
                 if (var2 != null) {
-                  ProxySocketConnector.field_e = qq.a(var2, param0);
+                  ProxySocketConnector.field_e = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "fs_timeout");
                 if (var2 != null) {
-                  jia.field_l = qq.a(var2, false);
+                  jia.field_l = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "fs_button_tryagain");
                 if (null != var2) {
-                  DiveBomberSpecial.field_p = qq.a(var2, false);
+                  DiveBomberSpecial.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_ui_fs_countdown");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_caption_title");
                 if (null != var2) {
-                  fja.field_c = qq.a(var2, false);
+                  fja.field_c = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_including_gamename");
                 if (var2 != null) {
-                  kr.field_wb = qq.a(var2, false);
+                  kr.field_wb = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_full_access_1");
                 if (var2 != null) {
-                  LevitateAnimation.field_x = qq.a(var2, false);
+                  LevitateAnimation.field_x = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_full_access_2");
                 if (null != var2) {
-                  ni.field_k = qq.a(var2, param0);
+                  ni.field_k = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mb_achievement_count_1");
                 if (var2 != null) {
-                  ra.field_p = qq.a(var2, false);
+                  ra.field_p = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_achievement_count_2");
                 if (var2 != null) {
-                  vca.field_i = qq.a(var2, false);
+                  vca.field_i = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_exclusive_1");
                 if (var2 != null) {
-                  MatchingFieldValidator.field_g = qq.a(var2, false);
+                  MatchingFieldValidator.field_g = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mb_exclusive_2");
                 if (var2 != null) {
-                  ema.field_Lb = qq.a(var2, param0);
+                  ema.field_Lb = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "me_extra_benefits");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_friend_tip");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_friend_tip_multi");
                 if (var2 != null) {
-                  qq.a(var2, param0);
+                  ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "hs_mode_name,0");
                 if (null != var2) {
-                  DebouncedFieldValidator.field_a[0] = qq.a(var2, false);
+                  DebouncedFieldValidator.field_a[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_mode_name,1");
                 if (var2 != null) {
-                  DebouncedFieldValidator.field_a[1] = qq.a(var2, false);
+                  DebouncedFieldValidator.field_a[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "hs_mode_name,2");
                 if (var2 != null) {
-                  DebouncedFieldValidator.field_a[2] = qq.a(var2, false);
+                  DebouncedFieldValidator.field_a[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_mode_name,0");
                 if (var2 != null) {
-                  oe.field_b[0] = qq.a(var2, false);
+                  oe.field_b[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_mode_name,1");
                 if (var2 != null) {
-                  oe.field_b[1] = qq.a(var2, false);
+                  oe.field_b[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_mode_long_name,0");
                 if (var2 != null) {
-                  gja.field_i[0] = qq.a(var2, false);
+                  gja.field_i[0] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "rating_mode_long_name,1");
                 if (null != var2) {
-                  gja.field_i[1] = qq.a(var2, false);
+                  gja.field_i[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_fixed_size");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_resizable");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_fullscreen");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_done");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_apply");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_title");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_instruction");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "graphics_config_need_memory");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "pleasewait_dotdotdot");
                 if (null != var2) {
-                  fo.field_b = qq.a(var2, false);
+                  fo.field_b = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "serviceunavailable");
                 if (var2 != null) {
-                  qe.field_d = qq.a(var2, false);
+                  qe.field_d = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "createtouse");
                 if (var2 != null) {
-                  d.field_E = qq.a(var2, false);
+                  d.field_E = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "achievementsoffline");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "warning");
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
-                  qfa.field_t = qq.a(var2, param0);
+                  qfa.field_t = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin1");
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin2,1");
                 if (null != var2) {
-                  bd.field_h[1] = qq.a(var2, param0);
+                  bd.field_h[1] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin2,2");
                 if (null != var2) {
-                  bd.field_h[2] = qq.a(var2, false);
+                  bd.field_h[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin2,3");
                 if (var2 != null) {
-                  bd.field_h[3] = qq.a(var2, param0);
+                  bd.field_h[3] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin2,4");
                 if (null != var2) {
-                  bd.field_h[4] = qq.a(var2, false);
+                  bd.field_h[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin2,5");
                 if (null != var2) {
-                  bd.field_h[5] = qq.a(var2, false);
+                  bd.field_h[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin2,6");
                 if (null != var2) {
-                  bd.field_h[6] = qq.a(var2, false);
+                  bd.field_h[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin2,7");
                 if (null != var2) {
-                  bd.field_h[7] = qq.a(var2, false);
+                  bd.field_h[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin3,1");
                 if (null != var2) {
-                  GasCloudAnimation.field_v[1] = qq.a(var2, false);
+                  GasCloudAnimation.field_v[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin3,2");
                 if (var2 != null) {
-                  GasCloudAnimation.field_v[2] = qq.a(var2, false);
+                  GasCloudAnimation.field_v[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin3,3");
                 if (null != var2) {
-                  GasCloudAnimation.field_v[3] = qq.a(var2, param0);
+                  GasCloudAnimation.field_v[3] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin3,4");
                 if (null != var2) {
-                  GasCloudAnimation.field_v[4] = qq.a(var2, param0);
+                  GasCloudAnimation.field_v[4] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin3,5");
                 if (null != var2) {
-                  GasCloudAnimation.field_v[5] = qq.a(var2, false);
+                  GasCloudAnimation.field_v[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin3,6");
                 if (var2 != null) {
-                  GasCloudAnimation.field_v[6] = qq.a(var2, false);
+                  GasCloudAnimation.field_v[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin3,7");
                 if (var2 != null) {
-                  GasCloudAnimation.field_v[7] = qq.a(var2, false);
+                  GasCloudAnimation.field_v[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "discard");
                 if (null != var2) {
-                  nla.field_c = qq.a(var2, param0);
+                  nla.field_c = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin4,1");
                 if (null != var2) {
-                  AnimationNode.field_g[1] = qq.a(var2, false);
+                  AnimationNode.field_g[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin4,2");
                 if (null != var2) {
-                  AnimationNode.field_g[2] = qq.a(var2, false);
+                  AnimationNode.field_g[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin4,3");
                 if (var2 != null) {
-                  AnimationNode.field_g[3] = qq.a(var2, false);
+                  AnimationNode.field_g[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin4,4");
                 if (var2 != null) {
-                  AnimationNode.field_g[4] = qq.a(var2, false);
+                  AnimationNode.field_g[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin4,5");
                 if (null != var2) {
-                  AnimationNode.field_g[5] = qq.a(var2, false);
+                  AnimationNode.field_g[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin4,6");
                 if (null != var2) {
-                  AnimationNode.field_g[6] = qq.a(var2, false);
+                  AnimationNode.field_g[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin4,7");
                 if (var2 != null) {
-                  AnimationNode.field_g[7] = qq.a(var2, false);
+                  AnimationNode.field_g[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin_notloggedin");
                 if (null != var2) {
-                  nga.field_j = qq.a(var2, false);
+                  nga.field_j = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,1");
                 if (null != var2) {
-                  HailSpecial.field_r[1] = qq.a(var2, false);
+                  HailSpecial.field_r[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  HailSpecial.field_r[2] = qq.a(var2, false);
+                  HailSpecial.field_r[2] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,3");
                 if (null != var2) {
-                  HailSpecial.field_r[3] = qq.a(var2, false);
+                  HailSpecial.field_r[3] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,4");
                 if (null != var2) {
-                  HailSpecial.field_r[4] = qq.a(var2, false);
+                  HailSpecial.field_r[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,5");
                 if (null != var2) {
-                  HailSpecial.field_r[5] = qq.a(var2, param0);
+                  HailSpecial.field_r[5] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,6");
                 if (var2 != null) {
-                  HailSpecial.field_r[6] = qq.a(var2, param0);
+                  HailSpecial.field_r[6] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "mustlogin_alternate,7");
                 if (null != var2) {
-                  HailSpecial.field_r[7] = qq.a(var2, param0);
+                  HailSpecial.field_r[7] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,0");
                 if (null != var2) {
-                  aa.field_m[0] = qq.a(var2, param0);
+                  aa.field_m[0] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,1");
                 if (var2 != null) {
-                  aa.field_m[1] = qq.a(var2, false);
+                  aa.field_m[1] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,2");
                 if (var2 != null) {
-                  aa.field_m[2] = qq.a(var2, param0);
+                  aa.field_m[2] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,3");
                 if (var2 != null) {
-                  aa.field_m[3] = qq.a(var2, param0);
+                  aa.field_m[3] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,4");
                 if (var2 != null) {
-                  aa.field_m[4] = qq.a(var2, false);
+                  aa.field_m[4] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,5");
                 if (null != var2) {
-                  aa.field_m[5] = qq.a(var2, false);
+                  aa.field_m[5] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,6");
                 if (null != var2) {
-                  aa.field_m[6] = qq.a(var2, false);
+                  aa.field_m[6] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,7");
                 if (null != var2) {
-                  aa.field_m[7] = qq.a(var2, false);
+                  aa.field_m[7] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,8");
                 if (var2 != null) {
-                  aa.field_m[8] = qq.a(var2, false);
+                  aa.field_m[8] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,9");
                 if (null != var2) {
-                  aa.field_m[9] = qq.a(var2, false);
+                  aa.field_m[9] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,10");
                 if (var2 != null) {
-                  aa.field_m[10] = qq.a(var2, false);
+                  aa.field_m[10] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,11");
                 if (var2 != null) {
-                  aa.field_m[11] = qq.a(var2, param0);
+                  aa.field_m[11] = ChangeCreatureStatOrHealthEffect.a(var2, param0);
                 }
                 var2 = qba.a(17602, "subscription_cost_monthly,12");
                 if (var2 != null) {
-                  aa.field_m[12] = qq.a(var2, false);
+                  aa.field_m[12] = ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 var2 = qba.a(17602, "sentence_separator");
                 if (null != var2) {
-                  qq.a(var2, false);
+                  ChangeCreatureStatOrHealthEffect.a(var2, false);
                 }
                 ft.field_h = null;
             }

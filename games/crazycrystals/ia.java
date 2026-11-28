@@ -81,14 +81,14 @@ final class ia extends ScoreModifier {
                 co.field_F = true;
               }
             }
-            rf.field_G = ce.field_gb;
+            RichTextWidget.field_G = ce.field_gb;
             DiskCacheWorker.field_b = pe.field_i;
           }
           kf.field_f = param1;
           if (!co.field_F &&
             cl.field_o < GzipDecompressor.field_a &&
             DualLinkNode.field_h) {
-            rf.field_G = ce.field_gb;
+            RichTextWidget.field_G = ce.field_gb;
             DiskCacheWorker.field_b = pe.field_i;
             cl.field_o = 0;
           }

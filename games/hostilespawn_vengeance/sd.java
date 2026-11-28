@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sd extends cn {
+class sd extends DefaultTextWidgetRenderer {
     static String field_v;
     static int field_s;
     static RgbSprite field_w;

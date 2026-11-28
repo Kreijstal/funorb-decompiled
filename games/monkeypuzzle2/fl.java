@@ -21,7 +21,7 @@ final class fl {
             pe.field_d[var1_int].field_f[1] = 1000.0f;
           }
           var1_intLifetime1 = -38 / ((param0 - 78) / 46);
-          bl.field_f = 640;
+          TextHotspotBounds.field_f = 640;
           mh.field_D = 640;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "fl.C(" + param0 + ')');

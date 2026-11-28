@@ -130,19 +130,19 @@ abstract class BoardChange extends IntrusiveNode {
         }
     }
 
-    final void a(PacketBuffer param0, byte param1) {
+    final void write(PacketBuffer param0, byte param1) {
         try {
           param0.writeByte(this.field_j, 0);
           if (param1 != -63) {
             field_f = (Sprite[]) null;
           }
-          this.b(param0, (byte) 87);
+          this.writePayload(param0, (byte) 87);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jm.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void b(PacketBuffer param0, byte param1) {
+    void writePayload(PacketBuffer param0, byte param1) {
         try {
           int var3_int = -10 / ((37 - param1) / 38);
         } catch (RuntimeException runtimeException) {
@@ -153,7 +153,7 @@ abstract class BoardChange extends IntrusiveNode {
     BoardChange() {
     }
 
-    abstract void a(boolean param0, BattleState param1);
+    abstract void applyToBattle(boolean param0, BattleState param1);
 
     final static String a(byte param0, int param1) {
         if (param0 > -15) {
@@ -300,12 +300,12 @@ abstract class BoardChange extends IntrusiveNode {
         }
     }
 
-    void a(BoardChangeAnimation param0, int param1) {
+    void applyForAnimation(BoardChangeAnimation param0, int param1) {
         try {
           if (param1 > -2) {
             field_i = (lna) null;
           }
-          this.a(false, param0.field_o.field_h);
+          this.applyToBattle(false, param0.field_o.field_h);
         } catch (RuntimeException runtimeException) {
           throw pe.wrapException((Throwable) ((Object) runtimeException), "jm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

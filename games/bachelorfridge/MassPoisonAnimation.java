@@ -27,7 +27,7 @@ final class MassPoisonAnimation extends EventAnimation {
             while (var3_ref != null) {
               var3_ref.apply(var7, this.screen.field_h, 12);
               var8 = var3_ref.target.resolveCreatureView(param0 - 27450, this.screen);
-              var8.b(-1, 6);
+              var8.playAnimation(-1, 6);
               var8.a(24831, param0 ^ 98, kna.field_g[1]);
               var3_ref = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 1));
             }
@@ -42,7 +42,7 @@ final class MassPoisonAnimation extends EventAnimation {
           while (var3_refLifetime1 != null) {
             var3_refLifetime1.apply(var9, this.screen.field_h, 12);
             var10 = var3_refLifetime1.target.resolveCreatureView(param0 - 27450, this.screen);
-            var10.b(-1, 6);
+            var10.playAnimation(-1, 6);
             var10.a(24831, param0 ^ 98, kna.field_g[1]);
             var3_refLifetime1 = (DamageEffect) (this.field_v.effects.nextForward(param0 ^ 1));
           }

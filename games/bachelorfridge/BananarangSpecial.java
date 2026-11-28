@@ -193,7 +193,7 @@ final class BananarangSpecial extends SpecialOrder {
     final static EventEffect b(int param0, PacketBuffer param1) {
         CreatureRef var2 = null;
         RuntimeException var2_ref = null;
-        ks stackIn_3_0 = null;
+        ClearCreatureStatusEffect stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -203,7 +203,7 @@ final class BananarangSpecial extends SpecialOrder {
             BananarangSpecial.b(20);
           }
           var2 = qi.a(param1, (byte) 74);
-          stackIn_3_0 = new ks(var2);
+          stackIn_3_0 = new ClearCreatureStatusEffect(var2);
           return (EventEffect) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,7 +223,7 @@ final class BananarangSpecial extends SpecialOrder {
         if (!vs.a(23864)) {
           return;
         }
-        tfa.a(param0, param0 - 3, false);
+        StartFloodEffect.a(param0, param0 - 3, false);
     }
 
     public static void releaseStatics(int param0) {

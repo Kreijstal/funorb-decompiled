@@ -260,7 +260,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
               SocketFactory.cipherPacketBufferState0002.writeByte(true, 18);
               SocketFactory.cipherPacketBufferState0002.position = SocketFactory.cipherPacketBufferState0002.position + 2;
               integerLocal27 = SocketFactory.cipherPacketBufferState0002.position;
-              stringLocal37 = MixedSupport001.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 121);
+              stringLocal37 = DefaultTextWidgetRenderer.computeString0015(UiComponentPart029.computeApplet1485(25144), (byte) 121);
               if (stringLocal37 == null) {
                 stringLocal37 = "";
               }
@@ -321,7 +321,7 @@ final class NetworkArchiveRequestManager extends NetworkSupport003 {
             if (255 == HashNode.integerState0070) {
               stringLocal26 = UiComponentPart006.cipherPacketBufferState0001.readNullableString(-16829);
               if (stringLocal26 != null) {
-                MixedSupport001.performAction0016(stringLocal26, false, UiComponentPart029.computeApplet1485(25144));
+                DefaultTextWidgetRenderer.performAction0016(stringLocal26, false, UiComponentPart029.computeApplet1485(25144));
               }
             } else {
               EditableTextField.stringState0483 = UiComponentPart006.cipherPacketBufferState0001.readNullTerminatedString((byte) -38);

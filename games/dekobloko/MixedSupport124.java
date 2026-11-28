@@ -33,7 +33,7 @@ final class MixedSupport124 {
         try {
           MixedSupport029.stringState0149 = stringArgument2;
           int integerLocal2 = -67 % ((73 - byteArgument1) / 38);
-          NetworkSupport010.integerState0585 = 2;
+          TextHotspotBounds.integerState0585 = 2;
           charSequenceLocal1 = (CharSequence) ((Object) stringArgument2);
           TextLayout.stringState0081 = ComponentContainer.computeString0894(charSequenceLocal1, (byte) 2);
           LoginCredentials.booleanState0085 = true;

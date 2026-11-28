@@ -49,7 +49,7 @@ final class ScavengerSpecial extends SpecialOrder {
                   var9.tileX == var7.tileX &&
                   var7.tileY == var9.tileY) {
                   var4.effects.addLast(new DamageEffect(new CreatureRef(var9), false, 1, -var7.field_t, 0), true);
-                  var4.effects.addLast(new pea(new CreatureRef(var7), var7.tileX, var7.tileY), true);
+                  var4.effects.addLast(new ConsumeCreatureRemainsEffect(new CreatureRef(var7), var7.tileX, var7.tileY), true);
                 }
               }
             }

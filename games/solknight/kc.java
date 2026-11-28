@@ -154,7 +154,7 @@ final class kc extends InteractiveWidget {
         }
     }
 
-    final String c(byte param0) {
+    final String getTooltipText(byte param0) {
         if (this.field_v) {
           return this.field_J.getValidationMessage(-96);
         }

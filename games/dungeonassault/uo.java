@@ -39,7 +39,7 @@ final class uo {
           if (param0 >= -41) {
             uo.a(false, 29, true, -7, 35, false);
           }
-          param1 = tg.a('_', param1, 3, "");
+          param1 = TextLineMetrics.a('_', param1, 3, "");
           var3 = sh.a((byte) -121, param1);
           stackIn_7_0 = (param2.indexOf(param1) != -1) || (param2.indexOf(var3) != -1);
           return stackIn_7_0;

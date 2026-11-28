@@ -90,7 +90,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param1);
-          if (!rg.a((byte) 19, var4)) {
+          if (!RichTextWidget.a((byte) 19, var4)) {
             stackIn_3_0 = qj.field_c;
             return stackIn_3_0;
           }

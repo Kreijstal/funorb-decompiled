@@ -38,7 +38,7 @@ final class AccountCreationResultPanel extends jj implements ButtonListener {
     }
 
     final static void f(byte param0) {
-        fi.field_o = false;
+        TextHotspotBounds.field_o = false;
         if (param0 != -83) {
           return;
         }

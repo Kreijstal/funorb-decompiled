@@ -222,7 +222,7 @@ class nb extends w implements dh {
         }
     }
 
-    final String b(int param0) {
+    final String getTooltipText(int param0) {
         ta var2;
         w var3;
         String var4;
@@ -234,7 +234,7 @@ class nb extends w implements dh {
         }
         var3 = (w) (var2.a(250));
         while (var3 != null) {
-          var4 = var3.b(125);
+          var4 = var3.getTooltipText(125);
           if (var4 != null) {
             return var4;
           }

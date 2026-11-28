@@ -1660,7 +1660,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("create_password_tooltip", 4);
                 if (null != var2) {
-                  kj.field_K = Archive.decodeCp1252(true, var2);
+                  RichTextWidget.field_K = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("create_password_hint", 4);
                 if (null != var2) {
@@ -1964,7 +1964,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("loading_extradata", 4);
                 if (var2 != null) {
-                  li.field_j = Archive.decodeCp1252(true, var2);
+                  TextHotspotBounds.field_j = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("loading_languages", param0 ^ 26704);
                 if (var2 != null) {
@@ -1980,7 +1980,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("unpacking_graphics", param0 ^ 26704);
                 if (null != var2) {
-                  kj.field_N = Archive.decodeCp1252(true, var2);
+                  RichTextWidget.field_N = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("unpacking_models", 4);
                 if (null != var2) {
@@ -2810,7 +2810,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("fs_button_close", 4);
                 if (null != var2) {
-                  le.field_a = Archive.decodeCp1252(true, var2);
+                  TextLineMetrics.field_a = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("fs_button_members", 4);
                 if (var2 != null) {
@@ -2870,7 +2870,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
                 }
                 var2 = vd.a("mb_exclusive_1", 4);
                 if (var2 != null) {
-                  le.field_b = Archive.decodeCp1252(true, var2);
+                  TextLineMetrics.field_b = Archive.decodeCp1252(true, var2);
                 }
                 var2 = vd.a("mb_exclusive_2", param0 - 26704);
                 if (null != var2) {
@@ -3191,7 +3191,7 @@ final class lj extends WidgetContainer implements WidgetActivationListener {
         RuntimeException var1 = null;
         var2 = SolKnight.field_L ? 1 : 0;
         try {
-          if (!af.b(-3)) {
+          if (!DefaultTextWidgetRenderer.b(-3)) {
             if (null != dj.field_k &&
               dj.field_k.field_a) {
               ProxySocketConnector.d(14995);

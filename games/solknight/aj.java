@@ -190,7 +190,7 @@ final class aj {
     }
 
     final void a(int param0, BitmapFont param1) {
-        af var18 = null;
+        DefaultTextWidgetRenderer var18 = null;
         ql var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var17 = null;
@@ -213,7 +213,7 @@ final class aj {
         ql var14Lifetime1;
         ql var14Lifetime2;
         try {
-          var18 = new af(param1, 2, 2, 2236962, 1, 1, 1, param1.field_s + param1.field_F + 2);
+          var18 = new DefaultTextWidgetRenderer(param1, 2, 2, 2236962, 1, 1, 1, param1.field_s + param1.field_F + 2);
           this.field_a = (j) ((Object) var18);
           var18.field_o = 16777215;
           var4 = new ql();

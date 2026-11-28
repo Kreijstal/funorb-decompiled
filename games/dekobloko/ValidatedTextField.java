@@ -9,7 +9,7 @@ final class ValidatedTextField extends EditableTextField implements FieldValidat
     static String stringState0384;
     private int integerState0557;
 
-    final String computeString0223(byte byteArgument1) {
+    final String getTooltipText(byte byteArgument1) {
         if (!this.booleanState0018) {
           return null;
         }

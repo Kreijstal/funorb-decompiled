@@ -134,7 +134,7 @@ final class op extends wk implements ec {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw rb.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class op extends wk implements ec {
           this.field_o = param4 ? true : false;
           this.field_l = new cf(this.field_n);
         } catch (RuntimeException runtimeException) {
-          throw rb.wrapThrowable((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
+          throw RichTextWidget.wrapThrowable((Throwable) ((Object) runtimeException), "op.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -243,6 +243,6 @@ final class op extends wk implements ec {
     }
 
     static {
-        tb.a(50, -128);
+        TextHotspotBounds.a(50, -128);
     }
 }

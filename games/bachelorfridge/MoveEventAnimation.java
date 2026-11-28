@@ -151,7 +151,7 @@ final class MoveEventAnimation extends MovementAnimation {
           return false;
         }
         if (32 != var7.field_s.statusId) {
-          var7.b(-1, this.field_t);
+          var7.playAnimation(-1, this.field_t);
         }
         this.field_s.field_s.a(var7, 107);
         if (this.field_q < this.field_n) {

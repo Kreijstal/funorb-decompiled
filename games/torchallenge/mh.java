@@ -162,7 +162,7 @@ final class mh {
             var4 = (String) null;
             mh.a(66, (ResourceArchive) null, (String) null, (String) null);
           }
-          if (bc.a((byte) -128, param2, param0)) {
+          if (DefaultTextWidgetRenderer.a((byte) -128, param2, param0)) {
             return false;
           }
           if (!ja.a(param2, 119, param0)) {

@@ -12,9 +12,9 @@ class DualLinkNode extends IntrusiveNode {
         int var2 = -12 % ((-73 - param0) / 47);
         param1 = param1 & 8191;
         if (param1 < 4096) {
-          return param1 < 2048 ? nj.field_r[-param1 + 2048] : -nj.field_r[-2048 + param1];
+          return param1 < 2048 ? TextHotspotBounds.field_r[-param1 + 2048] : -TextHotspotBounds.field_r[-2048 + param1];
         }
-        return param1 < 6144 ? -nj.field_r[-param1 + 6144] : nj.field_r[-6144 + param1];
+        return param1 < 6144 ? -TextHotspotBounds.field_r[-param1 + 6144] : TextHotspotBounds.field_r[-6144 + param1];
     }
 
     final void unlinkSecondary(byte param0) {

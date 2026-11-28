@@ -65,7 +65,7 @@ final class am {
         if (tg.field_c == PacketBuffer.field_m) {
           return pg.field_a;
         }
-        if (bd.field_u.a(false)) {
+        if (RichTextLayout.field_u.a(false)) {
           int var1 = 8 % ((55 - param0) / 40);
           return vh.field_k;
         }

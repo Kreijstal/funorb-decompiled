@@ -1301,7 +1301,7 @@ abstract class tl {
           }
           var2Lifetime245 = LevelProgressUpdate.loadRootArchiveFile("tutorial_1_9", 1);
           if (null != var2Lifetime245) {
-            tb.field_f = fa.a((byte) -71, var2Lifetime245);
+            TextLayout.field_f = fa.a((byte) -71, var2Lifetime245);
           }
           var2Lifetime246 = LevelProgressUpdate.loadRootArchiveFile("tutorial_1_14", 1);
           if (null != var2Lifetime246) {
